@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 276533dcda2cf4524ee23f07ac2f102a56c3b788
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 449afccc298437aa289c1a4d5bd4d9c847f8e225
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974727"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926678"
 ---
 # <a name="setdate-method-int-javasqldate"></a>setDate 方法 (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

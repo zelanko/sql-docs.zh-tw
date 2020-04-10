@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 218ff486-3f31-49e4-ad81-a423246a8307
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd2208d2a82a9376438b61e144665cbda5152bb8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1580b659bf23b638cc0c2cebae8781ee80a792d0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975054"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928812"
 ---
 # <a name="setblob-method-sqlserverpreparedstatement"></a>setBlob 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe32325caccebd0e85204bbbc11b7a0cbe4eefca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9aa896cf8af60167bb1903002d292d48c2c476c9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972990"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924902"
 ---
 # <a name="setsendstringparametersasunicode-method-sqlserverdatasource"></a>setSendStringParametersAsUnicode 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

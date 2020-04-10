@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11d0a2c40462784558f4d618c7e3d0a206d6d382
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 71fac2e8febc9959dc6790d06f1eac097895476f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953293"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928185"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>getCharacterStream 方法 () (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4f57b300cb402f422b92330bfe33f1e3c61cf4f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 995cede3675199112253311089d59cfadd8f208d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67984184"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923261"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

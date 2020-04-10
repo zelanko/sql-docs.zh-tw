@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d238ca9d3e9410d520051a5c0dfeb820a8197c9c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 989b6d0d5df630776894bba39ff611d1cfc30d35
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973683"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923267"
 ---
 # <a name="setnclob-method-sqlservercallablestatement"></a>setNClob 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

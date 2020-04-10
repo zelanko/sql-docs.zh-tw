@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b7dd44915a066753e367beb82d88258c3a0d3abf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f8684d05a5a3a059df663240b168260d0a345e2e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968569"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908594"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>supportsUnion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

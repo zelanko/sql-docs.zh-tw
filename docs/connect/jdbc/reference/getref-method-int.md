@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7796b766ac8593f557e64d2ebb6e324abf0ec82
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6a3103b7a6c9119d2c3892e8bca744f0d216263
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980597"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925161"
 ---
 # <a name="getref-method-int"></a>getRef 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

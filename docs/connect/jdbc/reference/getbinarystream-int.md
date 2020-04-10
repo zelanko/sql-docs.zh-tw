@@ -13,14 +13,14 @@ apilocation:
 - SQLServerCallableStatement.getBinaryStream(int paramIndex)
 apitype: Assembly
 ms.assetid: a766818e-cd05-4a07-a1ae-88966017448c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0e5e2a85e2db6dd89e571185712514a27621e835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4a7fb65620f619f0bd6f83208be707cd165e4b58
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953752"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920545"
 ---
 # <a name="getbinarystream-int"></a>getBinaryStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

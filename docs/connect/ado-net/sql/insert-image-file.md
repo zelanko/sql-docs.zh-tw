@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9d80f5eec2c33fed635c18937185e2e21798e93b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ee951094ad3042e1d2fa31bdf35fa7e5b32f1d2c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896727"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924352"
 ---
 # <a name="inserting-an-image-from-a-file"></a>從檔案插入影像
 

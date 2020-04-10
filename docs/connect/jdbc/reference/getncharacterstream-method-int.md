@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6ae704f5-823c-4dfe-8c08-07b547c61a3c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ed91df645edd7083e0d91346dfdf6d39bebd91d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e5f0aac7395093a38eb50672aa954106713076be
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981656"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905916"
 ---
 # <a name="getncharacterstream-method-int"></a>getNCharacterStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

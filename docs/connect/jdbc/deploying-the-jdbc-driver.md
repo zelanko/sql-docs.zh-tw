@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d7e66360e08646a623aec5ed6f0b0f92d6ac62bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36eb8896a18a6dd87e9b75818f6e4aae2c336905
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79433795"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922435"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 

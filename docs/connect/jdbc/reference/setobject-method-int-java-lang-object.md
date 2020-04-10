@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e4ab210a30080472a777d151695a04ec49ff1041
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 77e5b4c13d6ff298f1a12127dffba8be2bda8c5b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973377"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920845"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject 方法 (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

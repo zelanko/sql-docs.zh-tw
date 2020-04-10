@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17c0024e75dacc56b2f5a10d26a899256dbad7fc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935809"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902784"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

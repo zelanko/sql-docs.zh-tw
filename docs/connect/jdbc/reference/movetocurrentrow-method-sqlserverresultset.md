@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9a7c754c-2d72-4207-b3bd-2afc6047fb3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11a92c879995d198658853ef9b5cec9d00449230
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8957ed221a3d06669100d139b87af0427d0b00af
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976834"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914824"
 ---
 # <a name="movetocurrentrow-method-sqlserverresultset"></a>moveToCurrentRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

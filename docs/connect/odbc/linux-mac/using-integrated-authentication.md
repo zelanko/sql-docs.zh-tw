@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - integrated authentication
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68008698"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921165"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c71763fcd3d51138ac35cabd207cc39c268ceed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b82c2758dbc796ec29dd7304ee821a1a018af0a8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027997"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920741"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>改善 JDBC 驅動程式的效能與可靠性
 

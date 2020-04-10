@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c9e116ad3a3804642a32c1d2d0e19fb2777da946
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 955da60d47c90a653f9c6ec912226fa993e83f00
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028054"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923752"
 ---
 # <a name="getting-started-with-the-jdbc-driver"></a>開始使用 JDBC 驅動程式
 

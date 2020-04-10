@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - support
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d227b5d6b6681ecebbef9c2b910f9525e877cad8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 111700744e046547f43e88fbd02a214438a6b397
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72907873"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926878"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的支援資源
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

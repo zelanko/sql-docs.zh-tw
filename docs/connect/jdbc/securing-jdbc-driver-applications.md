@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bb59afd2044fc1614bdf0303702d72a5435728ea
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027749"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928433"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC 驅動程式應用程式
 

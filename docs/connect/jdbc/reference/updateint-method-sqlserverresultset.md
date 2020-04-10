@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 013b5e011c9a2dfd7e263a2b04f926abff02a2df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6345c9fb9f4dbc7ccb007b82267c2e0a2437ae95
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998819"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80900994"
 ---
 # <a name="updateint-method-sqlserverresultset"></a>updateInt 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

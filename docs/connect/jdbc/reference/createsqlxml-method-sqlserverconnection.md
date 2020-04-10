@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d1265a48fbe07bdf59616026a069fda05723f10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 533fcfc93946714d957fb7e410864f0c6d27f3ed
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955338"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927682"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>createSQLXML 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

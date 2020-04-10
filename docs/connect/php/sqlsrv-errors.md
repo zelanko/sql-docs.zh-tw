@@ -15,14 +15,14 @@ helpviewer_keywords:
 - sqlsrv_errors
 - errors and warnings
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015058"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928221"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

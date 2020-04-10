@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1c05eb3-8465-46fd-99bc-5e8effcafee5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c47ca9fc50031e08479bfc78ffacbc66be73e14f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 21cfb0df256208522a7e32881352fa000799070a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982110"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906854"
 ---
 # <a name="getmaxprocedurenamelength-method-sqlserverdatabasemetadata"></a>getMaxProcedureNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

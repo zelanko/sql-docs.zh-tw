@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 77b0899d6bc0a73db5e0cfa7794209ab74ed25ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 245cdc56e47c87bc5c31435e1967ecb74a8c05bc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76918648"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918762"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

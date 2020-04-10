@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014797"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926858"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3：使用 PHP 連線到 SQL 的概念證明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

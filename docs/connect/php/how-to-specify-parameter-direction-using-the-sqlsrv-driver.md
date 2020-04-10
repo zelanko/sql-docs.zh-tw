@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf8169b2efa1c3016e98b61b34e9710635ac0d76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993375"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915924"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定參數方向
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
