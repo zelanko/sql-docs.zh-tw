@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1ffa599c-d0c8-43b6-8e9b-7c856a846630
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f5fa0433b801ed9a0a3fc92cb3768b4cd727424
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 89d4364a94d7ac123c147f4784130d8d56aee08a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969898"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925577"
 ---
 # <a name="storesmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

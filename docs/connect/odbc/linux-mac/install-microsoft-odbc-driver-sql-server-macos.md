@@ -7,15 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - driver, installing
-author: rothja
-ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 7ad2b810092fae850a667a1611880f4b03b6a9a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61bbc198c695ba6e1a0b6a339bfb110108435de8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79078951"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921913"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>安裝 Microsoft ODBC Driver for SQL Server (macOS)
 

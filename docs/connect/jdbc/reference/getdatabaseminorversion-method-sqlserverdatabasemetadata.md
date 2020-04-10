@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 18163668-60d6-4d54-aaf1-c338b8c90f2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e333f1d5d3f4463589407b7911fa90b6f2b7abf0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f0dc89feb46c0210a07730e00cda84e3008387e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67984125"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923231"
 ---
 # <a name="getdatabaseminorversion-method-sqlserverdatabasemetadata"></a>getDatabaseMinorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

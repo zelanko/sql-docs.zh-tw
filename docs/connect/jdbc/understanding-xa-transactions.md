@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286512"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916994"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b78165b8c199a04d716d18614e6fb56232eca429
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976018"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923115"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 432901eb-57b6-44ad-98b4-43164bcbc2b6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5957c26c25f03d5c2c8369bf5279861384733df7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68ee925b520a51d9bc955cb1af371d548473a4c2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981437"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905474"
 ---
 # <a name="getnclob-method-sqlserverresultset"></a>getNClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

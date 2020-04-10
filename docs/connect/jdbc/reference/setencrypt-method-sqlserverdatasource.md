@@ -13,14 +13,14 @@ apilocation:
 - setEncrypt Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 84499024a5e4dbd158c54624a4ae1c03af9832b1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974284"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922382"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

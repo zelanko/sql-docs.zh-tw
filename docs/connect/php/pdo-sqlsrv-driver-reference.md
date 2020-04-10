@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8aa5f04ab9ae510ec0a7c3ead0c30600ebb9b48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2e440a1ecbdcc7ae6d504b475367872467a9fb98
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936186"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918932"
 ---
 # <a name="pdo_sqlsrv-driver-reference"></a>PDO_SQLSRV 驅動程式參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

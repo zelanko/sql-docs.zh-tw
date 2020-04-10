@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028099"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922423"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>診斷 JDBC 驅動程式的問題
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

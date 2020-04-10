@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2dd99b2195cb4f44725ff813bc79c70ec5ffc44b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 050197fe67724dba3ab2cb3c0de53661487b9ef5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935896"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928400"
 ---
 # <a name="retrieving-data"></a>擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

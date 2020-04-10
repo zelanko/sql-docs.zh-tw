@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3d6decae-2570-4ca5-8ff6-57a2cc3e921f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bdb05e7d538de461596e1e7bc4b2db715825fae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c4a21fd8c35919e28d4b5981860a4b55043b663f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978061"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910174"
 ---
 # <a name="getwarnings-method-sqlserverstatement"></a>getWarnings 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

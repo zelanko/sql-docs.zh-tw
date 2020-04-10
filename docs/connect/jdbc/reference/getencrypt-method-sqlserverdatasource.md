@@ -13,14 +13,14 @@ apilocation:
 - getEncrypt Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3764ff5b9308b4b370dda14e98787513c28458c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 031c56f7389fef6afefd2e0b61e07117fce0b6d5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983372"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924947"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>getEncrypt 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

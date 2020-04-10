@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc923e3f6e24290f7f2c869fa15dfa4305776452
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0754ca6d02e92ec5d0eea66854c76111c7722ff5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014870"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927212"
 ---
 # <a name="step-1-configure-environment-for-php-development"></a>步驟 1:設定 PHP 開發的環境
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

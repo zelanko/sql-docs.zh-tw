@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4f95be8e0a45f3d2d01e66ae0d38411a5bdd7830
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5bea37a90689fe5d0a9dd9d27964fc0bcd5a76e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79433805"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909602"
 ---
 # <a name="setting-the-connection-properties"></a>設定連線屬性
 

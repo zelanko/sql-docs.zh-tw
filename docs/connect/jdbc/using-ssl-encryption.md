@@ -8,14 +8,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 83d723939b9dab10a3662dc7c7b7c9778b2f7417
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71712968"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923993"
 ---
 # <a name="using-encryption"></a>使用加密
 

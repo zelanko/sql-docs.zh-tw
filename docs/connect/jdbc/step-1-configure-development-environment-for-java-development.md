@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0e9e7a1d440a724ed7c6415a3499bbc6db5688e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee43294f88a00dc6294872020610268ccd53b74d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68004359"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909268"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>步驟 1:設定開發環境以進行 Java 開發
   

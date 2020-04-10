@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4551e5a058e03d7a45d2dd21d91821a628e1da3a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026367"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924025"
 ---
 # <a name="using-connection-pooling"></a>使用連接共用
 

@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 20ca1afc5261c2a03a10b2f146cb9aad9b67a315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bd33097d1024e7fc98574e35f34f0aa96a1d292a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028473"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922644"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault 範例版本 6.0.0
 

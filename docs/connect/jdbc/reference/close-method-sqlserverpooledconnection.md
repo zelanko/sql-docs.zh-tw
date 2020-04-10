@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e04edd22f354440d1ef3704090f3d3c0b8189f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d9205ad146dc4ad170281d351d8e13d0b64e554
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955579"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923651"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>close 方法 (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2f7bb89f-ace7-41cb-b596-5aa8d0dd9e3c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b9d568f5e79ee548c92305378cc7e285c2bb3a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 023ec113704b9b602049f5ae707d08fe742020e6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972427"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926503"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp"></a>setTimestamp 方法 (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

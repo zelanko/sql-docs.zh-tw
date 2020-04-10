@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f4f651b0-a822-4bd4-b391-cc2355154a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd4863cf2121eece7d431cb9a4e9a120cf3c9a7e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae2b49f04f36b43d63eeb287e10ac52556f8fe44
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998863"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927841"
 ---
 # <a name="updateint-method-int-int"></a>updateInt 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

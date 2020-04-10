@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45361c22d1e453b12f8bedf2fba2a4c10f02de0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2a4afa586e060b5e05d1f3d9f5ace8f0ce41d9d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974191"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922260"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>setInt 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: feadeaffb5fd74ebc6b2d273dca263cac16c14ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55709acd48aec185d06a09acd48951424cf8cc90
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954199"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925422"
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

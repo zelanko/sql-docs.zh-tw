@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3336d4c1-d999-43cc-b36b-ff1532e899bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2c1a5a30c6bc303f7e2caf094e9c1d803ab6781
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f86809112c7eb156772c85f639944f8390f3e587
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980687"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925200"
 ---
 # <a name="getprocedureterm-method-sqlserverdatabasemetadata"></a>getProcedureTerm 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

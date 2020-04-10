@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 829370c413614c6cb2d5a38ff1e3dcc8b40c5ab8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 38d0016f4a7e1635b3e4c29a2f080d9f2cd05e45
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78866468"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916734"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>下載 Microsoft Drivers for PHP for SQL Server
 

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6da7f1aed956c8b2f5c71496c9c121f6006eabb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7d31758d437ad8b175fca86bd5e25b0aff2c9989
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935952"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909134"
 ---
 # <a name="support-for-localdb"></a>LocalDB 的支援
 

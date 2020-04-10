@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f9233d6e4224e33d9d9c71b1352a792ba19cff2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975779"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904035"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

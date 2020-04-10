@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a6b68caa4abff00f113176791d06c6361c5da1e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 678e28915faefafa832f4f9795b8e9b008681a3a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953111"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907420"
 ---
 # <a name="getclientinfo-method-"></a>getClientInfo 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

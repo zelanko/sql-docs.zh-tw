@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f3acffe6a922084fd63e38a8e212b5cf86d6b278
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7bd2254d1725220a3334e1de6c39343c9a6c6582
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71096911"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908500"
 ---
 # <a name="tostring-method-datetimeoffset"></a>toString 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

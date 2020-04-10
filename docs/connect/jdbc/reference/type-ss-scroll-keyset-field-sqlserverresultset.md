@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2b16123e-07ab-4c73-9509-e0425910680b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 51c00329a51bba6a1b2b94d6b3a15fd1c147c301
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 616915821b61144ebe48cc91e68198f2b5f5e902
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968435"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908346"
 ---
 # <a name="type_ss_scroll_keyset-field-sqlserverresultset"></a>TYPE_SS_SCROLL_KEYSET 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

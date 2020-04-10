@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 253934056218c36d21694869dcc51707e8ab8b5d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971518"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928698"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

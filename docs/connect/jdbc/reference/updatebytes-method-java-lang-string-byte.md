@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2471b9c8d3aa33882b0494842011386043e16d78
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67996899"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924594"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>updateBytes 方法 (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

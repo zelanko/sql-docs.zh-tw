@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a60f1d7fb137c18761c630d5c69c3ea4328b5a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 45d77963651ee5d7c796204c02bb65d88c60fcb8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271344"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920284"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
 

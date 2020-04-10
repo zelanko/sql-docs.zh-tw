@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 30c06a9d-3513-42d0-8b2a-5a20ac31eb0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2259a68458b6ec1d82019bec7167ca167aa99d9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d5d9a65a626d5ff09551d66265e5d17e9c075a58
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976640"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923061"
 ---
 # <a name="nullsaresortedlow-method-sqlserverdatabasemetadata"></a>nullsAreSortedLow 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

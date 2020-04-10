@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd2162d5e3dff58624b8fb8638734403dbb01bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f99377b67bd3a6de720509cce36b1ad36a03c975
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74200388"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926814"
 ---
 # <a name="python-sql-driver---pymssql"></a>Python SQL 驅動程式 - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

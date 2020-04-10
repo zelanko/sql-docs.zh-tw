@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 20403133-7a6a-4a03-8cbb-ccf9b3ab19d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6ec69aa6bef5f0a9faee3d1115fb1978f7a32cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b2be538c541ba9672c0b8a996660a847ada1737f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974347"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927524"
 ---
 # <a name="setdescription-method-sqlserverdatasource"></a>setDescription 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

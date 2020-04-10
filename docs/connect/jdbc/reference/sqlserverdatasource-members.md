@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 800f87c82987396743ec4c0c278444c4ba61d49b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8fd4c6c324c8f25ab9b3630aaf565671261115c5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971416"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927631"
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b26eee3bcb7a182cd6ce3d71a013fc44d61c3137
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 83dcca17bdd2741cadb2a71631db5f5158217478
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975359"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927812"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>setAsciiStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - bcp
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67996614"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924548"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

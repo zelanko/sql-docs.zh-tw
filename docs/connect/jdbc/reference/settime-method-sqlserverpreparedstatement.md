@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4b11b2d25abec8717604948101ca81d651fe822
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e51be70ac4d6d17a953a401807306f16a60d6553
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972456"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926555"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>setTime 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
