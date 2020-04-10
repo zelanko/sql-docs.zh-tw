@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b2754366a8272785ddfc9e11053d3b805ce6938
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ce0b738d9295cf294e59d85744d57e48a8b6ecc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976527"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914474"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>ownUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

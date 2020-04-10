@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd3027348673bfb85d9ab512a3f89f2e278edde9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a7decbdd9052e1fbaa5f03804bb10ec87a698274
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969789"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915214"
 ---
 # <a name="supportsbatchupdates-method-sqlserverdatabasemetadata"></a>supportsBatchUpdates 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

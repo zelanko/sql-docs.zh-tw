@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f4610ac2be4976fdab75c91b4827e4f9adaf6d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ad1b96d7c0f54cd95de6dd378eb2dd4869373c6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978886"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927333"
 ---
 # <a name="gettimestamp-method-datetimeoffset"></a>getTimestamp 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

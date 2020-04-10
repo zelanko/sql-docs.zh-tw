@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f66746b15e96f49d96b428e8cf8844eeea12a12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a29b2d8124f0714a6201d88fbdd0a61d580a5429
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972926"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927619"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

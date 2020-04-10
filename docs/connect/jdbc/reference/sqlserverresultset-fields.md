@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 30b8fbee-8818-4217-95be-ab1aa9230062
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84c3869410f6a09b7e05d6b2960be4d14b3d4a9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e887a73f63f03f5190cce965f77351a5b0d3398d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970576"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925882"
 ---
 # <a name="sqlserverresultset-fields"></a>SQLServerResultSet 欄位
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81e533e32504df219155259e9639c83c3be4c647
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2bf081c567ad828c9696e05c65f80976416878d6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67985599"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926094"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>unwrap 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

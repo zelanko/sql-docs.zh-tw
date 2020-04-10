@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 952947ce-7c6e-4364-b035-46cb7fe621b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1543d6412df3370bd25d89a47dc60f915e286fd3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7a03d76b19bd14ed3b1af172419c71a517ba7a8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67999052"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919813"
 ---
 # <a name="updatedatetimeoffsetstring-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(string, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

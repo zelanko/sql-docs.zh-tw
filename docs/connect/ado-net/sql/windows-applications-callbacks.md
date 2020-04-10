@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af2873f80a48cab28c0604d9dd5c6f79a2796bbf
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896015"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918471"
 ---
 # <a name="windows-applications-using-callbacks"></a>使用回撥的 Windows 應用程式
 

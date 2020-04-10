@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9dd19257-b120-4b74-8055-6570a343fc8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e79d93030bc8bafbc569e8bbcd289479c760750e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 968e41860b1afe7d783228382a112c974ef88920
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969036"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923038"
 ---
 # <a name="supportsouterjoins-method-sqlserverdatabasemetadata"></a>supportsOuterJoins 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

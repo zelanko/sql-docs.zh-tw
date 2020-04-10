@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf88e18d8b68bff0f2d82d589e5760bfbb25d12e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 33a0686a891a592f37a8ebd57f341df35db48894
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67986273"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925571"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-long"></a>updateAsciiStream 方法 (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

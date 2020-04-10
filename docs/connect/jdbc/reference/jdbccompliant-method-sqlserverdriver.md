@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ae5ac88d0427a605493bc19786bdd5f23dc93b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976955"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915060"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>jdbcCompliant 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

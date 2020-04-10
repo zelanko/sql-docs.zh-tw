@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0c0ee81adc6b278cbd20bfa51658c702008203e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 311aed0e3efd6d365a7327e0196adcc30d3a601e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970543"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927072"
 ---
 # <a name="sqlserverresultset-methods"></a>SQLServerResultSet 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

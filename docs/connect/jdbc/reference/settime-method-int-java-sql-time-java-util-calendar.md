@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6388ea031c6cbd5c492b5af03bd37a091592868
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 26411ba7d2e6445c324d7967dce3ad54ad28c88b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972565"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926594"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime 方法 (int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

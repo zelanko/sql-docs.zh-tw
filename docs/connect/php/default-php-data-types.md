@@ -11,14 +11,14 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993674"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928023"
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

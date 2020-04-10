@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5ab385c2-e18c-4b75-ac2d-2402af5c52a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f56893764392236d563fa2b9a236f55e67e13595
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73a507e48b4ecc7f1ead7e33fe6936f5ed73f424
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983249"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924832"
 ---
 # <a name="getfetchdirection-method-sqlserverresultset"></a>getFetchDirection 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
