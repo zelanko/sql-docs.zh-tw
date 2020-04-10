@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f5409040a5f7bb8cf7c03923da8ff976e4ab08ce
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979331"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926173"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

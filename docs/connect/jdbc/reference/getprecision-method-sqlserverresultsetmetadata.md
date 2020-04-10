@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: de46c96e-6ad6-4946-883e-807123658500
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 332b230730d9f9bb53a8e06856d1f2d7308401fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f49e65585aa9834a5df8890e243d8feb5b38834b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980775"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925202"
 ---
 # <a name="getprecision-method-sqlserverresultsetmetadata"></a>getPrecision 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0cae969212f6bff5b0f8c2e51190927a1f3a7c1f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970170"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926932"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

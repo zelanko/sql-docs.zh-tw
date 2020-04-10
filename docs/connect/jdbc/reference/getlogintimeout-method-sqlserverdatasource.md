@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5fe82d2709aa8efa32408a9d9d86f0f660bed823
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: db1ee4d76dede5b8249852f5ef0fcf91591c3e96
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982553"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921373"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>getLoginTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

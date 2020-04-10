@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63416d8d6fcc5eb43fe71645877aae9e4a50ebb5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5250e5dc1d16e83107d92b24131294a74f2efdb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976661"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914594"
 ---
 # <a name="nullsaresortedatstart-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtStart 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

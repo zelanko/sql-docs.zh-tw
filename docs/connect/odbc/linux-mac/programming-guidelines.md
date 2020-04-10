@@ -8,13 +8,13 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
-ms.author: genemi
-ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285862"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80912374"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ecb8ca48f9f4b76a9d3bf22aff3930eec63667dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44672d73e7bd99a83dd0e74559c718d63693bc45
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976557"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914548"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

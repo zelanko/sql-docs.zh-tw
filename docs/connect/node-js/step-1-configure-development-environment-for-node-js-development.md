@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68003756"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923832"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1︰設定 Node.js 開發的開發環境
 您必須使用必要條件設定您的開發環境，才能使用 Node.js Driver for SQL Server 開發應用程式。  最常見的方法是使用節點套件管理員 (npm) 安裝 Tedious 模組，但是您可以視需要，直接在 [Github](https://github.com/pekim/tedious) 下載 Tedious 模組。  

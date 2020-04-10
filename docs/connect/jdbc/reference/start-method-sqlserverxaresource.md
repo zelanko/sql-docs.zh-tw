@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 33c90213-92f7-416b-b2fa-67a1afe64e97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cef1af2c416231892ea74a7def90237f84b036d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c15f96b8375904a42d7f246212db264d1801899a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970030"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925641"
 ---
 # <a name="start-method-sqlserverxaresource"></a>start 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

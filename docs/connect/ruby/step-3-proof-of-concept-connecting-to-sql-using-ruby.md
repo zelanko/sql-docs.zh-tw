@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9724fb48f6ae896d9026bfec63056070e2180a8e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 10ff3f651695b172396b89dc7de97d62a2824e84
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992495"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926712"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3：使用 Ruby 連線到 SQL 的概念證明
 

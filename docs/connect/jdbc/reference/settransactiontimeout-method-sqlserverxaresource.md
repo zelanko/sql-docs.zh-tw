@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 481843393f15998df059bb7a732c64010b2c8bf0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d234c7a30553b44fa9ad13c992e3e49116b01505
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972286"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926442"
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>setTransactionTimeout 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

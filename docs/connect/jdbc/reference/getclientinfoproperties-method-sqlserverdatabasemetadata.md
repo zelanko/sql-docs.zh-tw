@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08b919ec6b626cd61b757b380d24efffcada0d55
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6a84002f7b44644ee5ba86ee277925e5f482b412
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953109"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925997"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>getClientInfoProperties 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

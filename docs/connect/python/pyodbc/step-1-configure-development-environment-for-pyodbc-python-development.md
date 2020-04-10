@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a1a43540d866faaf79b1c020eb255689862e6d97
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7dd2063a527d782833f2abfcbd635de30aa27117
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992517"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926781"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步驟 1:設定 pyodbc Python 開發的開發環境
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0f1c5684ac655d0fa2b653138ff55042e9266048
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993065"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928602"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

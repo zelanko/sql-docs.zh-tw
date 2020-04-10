@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55e306b2fe7b8f52655f504d63f02ffc26e04ea1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d69a32f3822a82d2395d51a375fedf0867b3f3e5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971778"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909588"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

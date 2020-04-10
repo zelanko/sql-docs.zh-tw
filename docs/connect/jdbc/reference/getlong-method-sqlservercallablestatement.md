@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d6c1a8a4-5647-439f-87b8-310b6e9b778a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd79beffea0558c68208c43a9f10633f9bb4c591
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 211ca3db1fc2784c06d0a5a0108a37df5b3d83fe
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982415"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921321"
 ---
 # <a name="getlong-method-sqlservercallablestatement"></a>getLong 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

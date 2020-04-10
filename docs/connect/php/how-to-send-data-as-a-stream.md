@@ -11,14 +11,14 @@ helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936402"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915944"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>如何：以資料流形式傳送資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

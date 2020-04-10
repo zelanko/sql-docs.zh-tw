@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 24866ea9-804a-442f-94e2-475c11dd8b9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14a9a0fb47c56427564629bf82ca22d8d7e8bdee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1d052e515bbb49fbc731daf43226ed8be6e5e549
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975071"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928823"
 ---
 # <a name="setbinarystream-sqlservercallablestatement"></a>setBinaryStream (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

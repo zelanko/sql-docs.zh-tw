@@ -13,14 +13,14 @@ apilocation:
 - SQLServerCallableStatement.getCharacterStream(String paramName)
 apitype: Assembly
 ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e52ff3e9bc9da36d3874382341a1f46eb722ad3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 57b92b502aa940fb9aebca653856782ab1c6b2e1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953540"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924932"
 ---
 # <a name="getcharacterstream-javalangstring"></a>getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

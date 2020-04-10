@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fe91c601-9bb3-4364-9131-575a94d3a1b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f6fd9ac18586c72d1be1a6a4ae5c545b0633d94
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fab3c3e2d735356d6298145ebe3195c4d9f0d0f4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969529"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924421"
 ---
 # <a name="supportsdatadefinitionanddatamanipulationtransactions-method-sqlserverdatabasemetadata"></a>supportsDataDefinitionAndDataManipulationTransactions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

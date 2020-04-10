@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee90c33b2b546a3eaf48d52b7577200b7c23306b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a1fac23bf7ff998d971fdc05557839c6b230a89
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998275"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919626"
 ---
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>updateSQLXML 方法 (int, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

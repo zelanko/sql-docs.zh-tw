@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76a07cf83f7b4356443d2180a48870b80dba4c69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e3adc8469720ec87343325afd552b5630d3c3b39
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970404"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927025"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

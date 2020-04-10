@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4abac6b892ae5960e8cafc5f265d6a81081e878b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 93c2559555748ce18d0e77040fa9d737829c5466
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973778"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901089"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>setNClob 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

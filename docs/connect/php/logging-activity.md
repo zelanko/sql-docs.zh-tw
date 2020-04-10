@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logging activity
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5486f32894b04a211be26bd7c55d58294ad36367
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993335"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922861"
 ---
 # <a name="logging-activity"></a>記錄活動
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

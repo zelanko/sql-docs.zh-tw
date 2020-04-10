@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - what's new in version 1.1
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 30b4b646beda19bb36eb4e046fce86379f9242df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe4a5b0b9d336ad02cb7fdf8431f9e3754bd8d35
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80345419"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923808"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的版本資訊
 

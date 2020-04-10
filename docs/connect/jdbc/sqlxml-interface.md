@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 58fb89e88169a5ebabd63a39b9d2427fa63d5a9d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027694"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909404"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 介面
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f02c3aecda4c4d346b72c236156dd2b250ef63a2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028010"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924678"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驅動程式的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

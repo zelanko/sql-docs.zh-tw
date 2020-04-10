@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9a7f5f4a806905f2eea3ce6f8e0c723fdef2347a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 189d0a2997b256f9c9b615fc81b5b9ed3ef46a5c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896310"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918726"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 對 LocalDB 的支援
 

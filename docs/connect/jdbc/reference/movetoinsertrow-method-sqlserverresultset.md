@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bc8420b9f79ce61874dbb03e73924e7be6eca96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 285bbb91734132f1ca74d739ec2a63394ace5108
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976781"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914782"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2195ec6b-3cd1-4e57-90ba-89d111e20ea4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3bed8e642cb480c403c3cb1596a6e0e0fd0a9c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1d5093396c556f1d55d8e852bfb17438c20d4b6c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972616"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926604"
 ---
 # <a name="setstring-method-sqlservernclob"></a>setString 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

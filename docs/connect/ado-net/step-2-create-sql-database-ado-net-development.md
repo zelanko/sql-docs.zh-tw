@@ -8,15 +8,15 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e3e6a76e1404f8b75fcf54b9f0eda94eb967a281
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93e5c9de532908b5b371fac5aff08a28af91d585
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78895968"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918181"
 ---
 # <a name="step-2-create-a-sql-database-for-adonet-development"></a>步驟 2︰建立 ADO.NET 開發的 SQL 資料庫
 

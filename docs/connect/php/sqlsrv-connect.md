@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connection pooling support
 - sqlsrv_connect
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1804d84913a97c114dddf3ae3cbb6e401f4fa949
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015045"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902739"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

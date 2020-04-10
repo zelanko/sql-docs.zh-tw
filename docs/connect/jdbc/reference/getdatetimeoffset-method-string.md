@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d831ff519f72fb5b68cec3c7dc359f1d54106c0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a8aaa3e0d75bdea1817cccf65ce71f88361a1359
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983786"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917788"
 ---
 # <a name="getdatetimeoffset-method-string"></a>getDateTimeOffset 方法 (String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

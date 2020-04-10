@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b51cbe470169459469959448208b3aa53b18cce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0c6f1b51509f73858093c2d208cf2c9012fb219d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976251"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923152"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

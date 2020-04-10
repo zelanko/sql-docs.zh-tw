@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c171e8fb78553275d6a1f5d4bcce485a470f94a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e533001c334f9f448a39f31cbfc34ef93f46f08d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973195"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920764"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
