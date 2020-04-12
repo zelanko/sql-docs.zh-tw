@@ -137,3 +137,5 @@
       href: global-settings-logging-sybasetosql.md
     - name: 測試人員
       href: global-settings-tester-sybasetosql.md
+- name: 轉換訊息
+  href: messages/toc.yml

@@ -107,7 +107,7 @@
     - name: 使用 ADOMD.NET 來開發
       href: 'https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net'
     - name: ADOMD.NET 用戶端程式設計
-      href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming'
+      href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming'
       items:
         - name: ADOMD.NET 用戶端功能
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality'
@@ -116,13 +116,13 @@
         - name: 在 ADOMD.NET 中建立連接
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net'
         - name: 在 ADOMD.NET 中建立安全連接
-          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections'
+          href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections'
         - name: 使用連接和 ADOMD.NET 中的工作階段
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions'
         - name: 在 ADOMD.NET 中執行交易
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions'
         - name: 從分析資料來源擷取中繼資料
-          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source'
+          href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source'
         - name: 使用 ADOMD.NET 物件模型
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model'
         - name: 使用 ADOMD.NET 中的結構描述資料列集
@@ -145,9 +145,9 @@
         - name: ADOMD.NET 伺服器物件架構
           href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture'
         - name: 使用者定義函數和預存程序
-          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures'
+          href: 'https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures'
     - name: 轉散發 ADOMD.NET
-      href: 'https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net'
+      href: 'https://docs.microsoft.com/analysis-services/adomd/redistributing-adomd-net'
     - name: 使用分析管理物件 (AMO) 來開發
       href: 'https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo'
     - name: AMO 概念和物件模型
