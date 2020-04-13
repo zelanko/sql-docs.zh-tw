@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71bda739146d1729cdf09d510c8d8c7dfb835a84
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984864"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664615"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 **int** 與 **varchar**。 如同其他內建類型，當您建立資料表作為變數類型、參數類型、函數傳回類型，或是在 **CAST 和 CONVERT** 中建立資料表時，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)資料類型作為資料行類型。  
   
 ## <a name="creating-columns-and-variables"></a>建立資料行和變數  

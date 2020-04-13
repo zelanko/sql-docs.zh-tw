@@ -1,7 +1,7 @@
 ---
 title: 形成傳回之 XML 的 AUTO 模式啟發學習法 | Microsoft Docs
 ms.custom: fresh2019may
-ms.date: 05/22/2019
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, heuristics in shaping returned XML
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
-author: MightyPen
-ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 408589a38ae9b01777110bbab1fb3b20c380a6c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 68fec5b01fc88fba356c0091066850908804a88d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68029345"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664738"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>用來形成傳回之 XML 的 AUTO 模式啟發式方法
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402663"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002777"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本及支援功能
 
@@ -152,7 +152,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 |動態資料遮罩|是|是|是|是|   
 |基本稽核|是|是|是|是| 
 |細部稽核|是|是|是|是| 
-|透明資料庫加密|是|否|否|否|   
+|透明資料庫加密|是|是|否|否|   
 |使用者定義角色|是|是|是|是| 
 |自主資料庫|是|是|是|是| 
 |備份的加密|是|是|否|否|  
@@ -227,7 +227,6 @@ Linux 上的 SQL Server 2019 不支援下列功能和服務。 這些功能的�
 | **SQL Server Agent** |  子系統：CmdExec、PowerShell、佇列讀取器、SSIS、SSAS、SSRS |
 | &nbsp; | 警示 |
 | &nbsp; | 受控備份 |
-| &nbsp; | 使用 MSX/TSX 的多伺服器管理 |
 | **高可用性** | 資料庫鏡像  |
 | **安全性** | 可延伸金鑰管理 |
 | &nbsp; | 適用於連結伺服器的 AD 驗證 | 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fcabc89e268e9ce5ed93211ccf89eed53e245c07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3720cfa4ee72df832b77ad4cab08013ddc8e0c7
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68029356"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664763"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>標準格式與模式限制
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XSD 模式 Facet 允許簡單類型的語彙空間限制。 當在有一個以上的可能語彙表示法之類型上設置模式限制時，有些值可能會在驗證時造成非預期的行為。  
   
  因為這些值的語彙表示法並未儲存在資料庫中，就會發生此行為。 因此，當序列化為輸出時，這些值會轉換成其標準的表示法。 當文件包含一個值，而值的標準格式不符合其類型的模式限制時，如果使用者嘗試重新插入它，將會拒絕該文件。  

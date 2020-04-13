@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 64b11563f05347e772d7979c3cb07c9a31f306e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40c91548b4bf106f938f4bce8298a162937e7ffc
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112893"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664601"
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以使用 **xml** 類型的資料行建立檢視。 下列範例會建立一個檢視，而在此檢視中會使用 `xml` xml **資料類型的** value() **方法，擷取** 類型資料行中的值。  
   
 ```  

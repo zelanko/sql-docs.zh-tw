@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001794"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665018"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如 [使用 FOR XML 建構 XML](../../relational-databases/xml/for-xml-sql-server.md)主題中所述，RAW 和 AUTO 模式對從查詢結果產生之 XML 形式的控制不大。 但是，EXPLICIT 模式在由查詢結果產生想要的 XML 方面，可提供的彈性最大。  
   
  EXPLICIT 模式詢必須以特定方式寫入，如此一來有關所需 XML 的額外資訊 (例如 XML 中將會構成的巢狀結構 )，就可以明確指定在查詢內。 根據您要求使用的 XML，撰寫 EXPLICIT 模式查詢會相當繁雜。 您可能會發現對撰寫 EXPLICIT 模式查詢而言， [使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md) 搭配巢狀結構是較為簡單的替代方法。  

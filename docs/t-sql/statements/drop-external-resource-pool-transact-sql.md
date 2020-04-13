@@ -18,12 +18,12 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: f4326901f40c580e869cae11ed184ca70cd7b442
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49435cad63eda8b09873c247ad2c378a1c4d33
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892747"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664327"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68892747"
 刪除 Resource Governor 用來定義外部處理序資源的外部資源集區。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-若是 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 中的 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
+若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -40,7 +40,7 @@ ms.locfileid: "68892747"
 
 外部資源集區是使用 [CREATE EXTERNAL RESOURCE POOL & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 建立的，並使用 [ALTER EXTERNAL RESOURCE POOL & #40;TRANSACT-SQL & #41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) 加以修改。  
   
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -79,8 +79,6 @@ GO
 ## <a name="see-also"></a>另請參閱
 
 + [外部指令碼已啟用伺服器組態選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-+ [SQL Server R 服務](../../advanced-analytics/r-services/sql-server-r-services.md)
-+ [SQL Server R Services 已知問題](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)
 + [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
 + [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)

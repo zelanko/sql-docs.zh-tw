@@ -1,21 +1,20 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2020
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65f805c0d2467f3b4301ed1d237284cb61224b97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77520891"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664207"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "77520891"
 從指定的檔案路徑或位元組資料流，註冊資料庫中的外部延伸模組。 此陳述式可作為一般機制，供資料庫管理員在 SQL Server 支援的任何 OS 平台上註冊新外部語言延伸模組。 如需詳細資訊，請參閱[語言延伸模組](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 
 > [!NOTE]
-> 目前只支援 **Java** 作為外部語言。 **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。 如需如何使用 **R** 和 **Python** 的詳細資訊，請參閱 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/)。
+> 目前只支援 **Java** 作為外部語言。 **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。 如需如何使用 **R** 和 **Python** 的詳細資訊，請參閱 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/)。
 
 ## <a name="syntax"></a>語法
 
@@ -106,10 +105,6 @@ FROM <file_spec> [ ,...2 ]
 **平台**
 
 混合式作業系統案例需要此參數。 在混合式架構中，語言需要在每個平台註冊一次。 平台和語言名稱會是每種外部語言的唯一索引鍵。 如未指定任何平台，則假設為目前的作業系統。
-
-## <a name="remarks"></a>備註
-
-目前，不支援 **PARAMETERS** 和 **ENVIRONMENT_VARIABLES**。
 
 ## <a name="permissions"></a>權限
 

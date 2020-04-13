@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9bef65845acd2e81cfea0910e81443d7e4bc390f
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042526"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80891149"
 ---
 # <a name="spatial-types---geography"></a>空間類型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68042526"
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. 示範如何加入及查詢地理資料  
  下列範例示範如何加入及查詢地理位置資料。 第一個範例會建立具有識別資料行及 `geography` 資料行 `GeogCol1` 的資料表。 第三個資料行會將 `geography` 資料行轉譯成它的開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法，並使用 `STAsText()` 方法。 然後會插入兩個資料列：一個資料列包含 `LineString` 的 `geography`執行個體，另一個資料列包含 `Polygon` 執行個體。  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -64,7 +64,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. 傳回兩個地理位置執行個體的交集  
  下列範例使用 `STIntersection()` 方法傳回之前插入之兩個 `geography` 執行個體相交的點。  
   
-```  
+```sql  
 DECLARE @geog1 geography;  
 DECLARE @geog2 geography;  
 DECLARE @result geography;  
@@ -78,7 +78,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 在計算資料行中使用地理  
  下列範例會以使用 **geography** 型別的保存計算資料行來建立資料表。  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -88,7 +88,7 @@ CREATE TABLE SpatialTable
     locationId int IDENTITY(1,1),  
     location geography,  
     deliveryArea as location.STBuffer(10) persisted  
-)  
+);  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

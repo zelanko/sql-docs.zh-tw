@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7d8162a8eef652a14993f67e4e3931be7362e6f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5c638e405f7f2d15b5b48a483a5e46ea58b694e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929669"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664557"
 ---
 # <a name="drop-xml-indexes"></a>卸除 XML 索引
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可用以卸除現有的主要或次要 XML 及非 XML 索引。 不過，DROP INDEX 沒有任何選項會套用至 XML 索引。 如果您卸除主要 XML 索引，也會刪除任何存在的次要索引。  
   
  具有 *TableName.IndexName* 的 DROP 語法已捨棄不用，XML 索引也不支援它。  

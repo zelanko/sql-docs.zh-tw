@@ -1,5 +1,6 @@
 ---
 title: 使用格式檔案以略過資料表資料行 (SQL Server) | Microsoft 文件
+description: 本文說明當跳過的資料行資料不存在於來源資料檔案中時，如何使用格式檔案來跳過資料表資料行的匯入。
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909260"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980408"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "72909260"
 -   跳過的資料行有預設值。  
   
 ## <a name="sample-table-and-data-file"></a>範例資料表與資料檔案  
- 本文中的範例要求 `myTestSkipCol`dbo**結構描述下名為** 的資料表。 您可以在範例資料庫 (例如 *WideWorldImporters* 或 *AdventureWorks*) 或任何其他資料庫中建立此資料表。 使用如下陳述式建立此資料表：  
+ 本文中的範例要求 **dbo** 結構描述下名為 `myTestSkipCol` 的資料表。 您可以在範例資料庫 (例如 *WideWorldImporters* 或 *AdventureWorks*) 或任何其他資料庫中建立此資料表。 使用如下陳述式建立此資料表：  
   
 ```sql
 USE WideWorldImporters;  
@@ -66,7 +67,7 @@ GO
 ## <a name="option-1---use-a-non-xml-format-file"></a>選項 1：使用非 XML 格式檔案  
   
 ### <a name="step-1---create-a-default-non-xml-format-file"></a>步驟 1 - 建立預設的非 XML 格式檔案  
-在命令提示字元中，執行下列 `myTestSkipCol`bcp**命令以建立** 範例資料表的預設非 XML 格式檔案：  
+在命令提示字元中，執行下列 **bcp** 命令以建立 `myTestSkipCol` 範例資料表的預設非 XML 格式檔案：  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
@@ -140,7 +141,7 @@ GO
   
 ### <a name="step-1---create-a-default-xml-format-file"></a>步驟 1 - 建立預設的 XML 格式檔案   
 
-在命令提示字元中，執行下列 `myTestSkipCol`bcp**命令以建立** 範例資料表的預設 XML 格式檔案：  
+在命令提示字元中，執行下列 **bcp** 命令以建立 `myTestSkipCol` 範例資料表的預設 XML 格式檔案：  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
@@ -172,7 +173,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 ### <a name="step-2---modify-an-xml-format-file"></a>步驟 2 - 修改 XML 格式檔案
 
-以下是修改的 XML 格式檔案 `myTestSkipCol2.xml`，其跳過了 `Col2`。 `FIELD` 的 `ROW` 和 `Col2` 項目已移除，且項目已重新編號。 第一個欄位之後分隔的符號也已從 `\t` 變更為 `,`。
+以下是修改的 XML 格式檔案 `myTestSkipCol2.xml`，其跳過了 `Col2`。 `Col2` 的 `FIELD` 和 `ROW` 項目已移除，且項目已重新編號。 第一個欄位之後分隔的符號也已從 `\t` 變更為 `,`。
 
 ```xml
 <?xml version="1.0"?>  
@@ -197,7 +198,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 如果使用 XML 格式檔案，您就不能在使用 **bcp** 命令或 `BULK INSERT` 陳述式直接匯入資料表時，跳過資料行。 不過，您可以匯入資料表最後一個資料行以外的所有資料行。 如果您必須略過最後一個資料行以外的任何資料行，就必須建立只有包含資料檔案中包含之資料行的目標資料表檢視。 然後，您就可以從該檔案將大量資料匯入檢視。  
   
-下列範例會在 `v_myTestSkipCol` 資料表上建立 `myTestSkipCol` 檢視。 這個檢視會略過第二個資料表資料行 `Col2`。 然後，此範例會使用 `BULK INSERT` ，將 `myTestSkipCol2.dat` 資料檔案匯入這個檢視。  
+下列範例會在 `myTestSkipCol` 資料表上建立 `v_myTestSkipCol` 檢視。 這個檢視會略過第二個資料表資料行 `Col2`。 然後，此範例會使用 `BULK INSERT` ，將 `myTestSkipCol2.dat` 資料檔案匯入這個檢視。  
   
 請在 SSMS 中執行下列程式碼。 更新您電腦上範例檔案位置的檔案系統路徑。 
   

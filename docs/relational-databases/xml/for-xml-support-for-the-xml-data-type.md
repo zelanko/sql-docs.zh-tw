@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fdf9bda5ddf8f3fdd0012c8f8fffced6f8f9b19
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943253"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665307"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 資料類型的 FOR XML 支援
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如果 FOR XML 查詢在 SELECT 子句中指定 **xml** 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 **xml** 類型資料行中的任何 XML 宣告都沒有序列化。  
   
  例如，下列查詢會從 `BusinessEntityID`XML `FirstName`類型的 `LastName` 資料行擷取客戶連絡資訊，例如 `AdditionalContactInfo` 、 **和** 資料行，以及電話號碼。  

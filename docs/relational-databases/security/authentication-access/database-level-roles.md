@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287332"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664457"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
@@ -96,7 +96,7 @@ ms.locfileid: "79287332"
 |**loginmanager** | 可以建立及刪除虛擬 master 資料庫的登入。|
 
 > [!NOTE]
-> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
+> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取權](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
   
 ## <a name="msdb-roles"></a>msdb 角色  
  msdb 資料庫含有下表所示的特殊用途角色。  
@@ -112,18 +112,6 @@ ms.locfileid: "79287332"
 > [!IMPORTANT]  
 >  **db_ssisadmin** 角色和 **dc_admin** 角色的成員可以將其權限提高為系統管理員。 之所以能夠進行此權限提高，是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝，而且 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 的 sysadmin 安全性內容由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將 **系統管理員** 成員加入 **db_ssisadmin** 和 **dc_admin** 角色。  
 
-## <a name="working-with-r-services"></a>使用 R 服務  
-
-**適用於：** SQL Server (從 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
-
-安裝 R 服務時，可使用額外的資料庫角色來管理封裝。 如需詳細資訊，請參閱 [SQL Server 的 R 封裝管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
-
-|角色名稱 |描述|  
-|-------------|-----------------|
-|**rpkgs-users** |可讓使用者使用 rpkgs-shared 角色成員所安裝的任何共用封裝。|
-|**rpkgs-private** |提供與 rpkgs-users 角色相同的權限來存取共用封裝。 此角色成員也可以安裝、移除和使用具有私用範圍的封裝。|
-|**rpkgs-shared** |提供與 rpkgs-private 角色相同的權限。 屬於此角色成員的使用者也可以安裝或移除共用封裝。|
-  
 ## <a name="working-with-database-level-roles"></a>使用資料庫層級角色  
  下表說明用於使用資料庫層級角色的命令、檢視及函數。  
   

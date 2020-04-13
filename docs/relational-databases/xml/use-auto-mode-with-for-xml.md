@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d8d3674766bfa6cb96a23e53b9f2aee440beb37
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078005"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665200"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>搭配 FOR XML 使用 AUTO 模式
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   如同 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)中所述，AUTO 模式會將查詢結果當作巢狀 XML 元素傳回。 這對於從查詢結果產生出來的 XML 外觀，並未提供很大的控制權。 如果您想要產生簡單的階層，AUTO 模式查詢會很有用。 不過， [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) 和 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md) 提供更多控制權和彈性來從查詢結果決定 XML 的形狀。  
   
  FROM 子句中的每個資料表都至少有一資料行是列在 SELECT 子句中，這些資料表是以 XML 元素表示。 若在 FOR XML 子句中指定選用性的 ELEMENTS 選項，SELECT 子句中所列的資料行就會對應至屬性或子元素。  

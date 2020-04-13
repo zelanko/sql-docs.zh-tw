@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006713"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662973"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>範例：指定 ELEMENTXSINIL 指示詞
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   當您指定 ELEMENT 指示詞來擷取元素中心的 XML 時，如果資料行有 NULL 值，EXPLICIT 模式就不會產生與其對應的元素。 您可以在 **xsi:nil** 屬性設為值 TRUE 之處，選擇性地指定 ELEMENTXSINIL 指示詞，要求產生 NULL 值的元素。  
   
  以下查詢會建構包括員工地址在內的 XML。 對於 `AddressLine2` 及 `City` 資料行，資料行名稱會指定 `ELEMENTXSINIL` 指示詞。 這會在資料列集中，為 `AddressLine2` 及 `City` 資料行中的 NULL 值產生元素。  

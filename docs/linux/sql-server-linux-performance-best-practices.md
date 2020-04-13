@@ -8,12 +8,12 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ffd00cfafe232f73e66a884617e3e07b15e979b
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286842"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550204"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上 SQL Server 的效能最佳作法和設定方針
 
@@ -162,7 +162,7 @@ vm.transparent_hugepages=madvice
 接著，讓 MSSQL 設定檔在修改之後生效
 ```bash
 tuned-adm off
-tuned-amd profile mssql
+tuned-adm profile mssql
 ```
 
 ### <a name="swapfile"></a>交換檔

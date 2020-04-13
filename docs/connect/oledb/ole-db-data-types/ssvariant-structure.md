@@ -2,11 +2,11 @@
 title: SSVARIANT 結構 | Microsoft Docs
 description: OLE DB Driver for SQL Server 中的 SSVARIANT 結構
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: connectivity
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 09ff4af7026ce75a8668db22910e550dc0c72857
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995166"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219247"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +79,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BinaryVal|沒有對應的 OLE DB 類型指標。|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支援 **binary** 和 **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**SHORT**) 指定 *prgbBinaryVal* 指向之資料的實際長度。<br /><br /> *sMaxLength* (**SHORT**) 指定 *prgbBinaryVal* 指向之資料的最大長度。<br /><br /> *prgbBinaryVal* (**BYTE** \*) 指向二進位資料的指標。<br /><br /> 未使用的成員：*dwReserved*。|  
 |UnknownType|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  

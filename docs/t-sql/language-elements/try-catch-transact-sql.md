@@ -29,12 +29,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca4bfd07491b25659253ca56eb1c16adb414544b
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121563"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809843"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,9 +70,14 @@ END CATCH
   
  TRY...CATCH 建構不能跨越多個批次。 TRY...CATCH 建構不能跨越多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式區塊。 例如，TRY...CATCH 建構不能跨越 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的兩個 BEGIN...END 區塊，也不能跨越 IF...ELSE 建構。  
   
- 如果 TRY 區塊所含括的程式碼沒有錯誤，當 TRY 區塊中的最後一個陳述式完成執行時，控制權會傳給緊接在相關聯的 END CATCH 陳述式之後的陳述式。 如果 TRY 區塊所含括的程式碼發生錯誤，控制權會傳給相關聯的 CATCH 區塊中的第一個陳述式。 如果 END CATCH 陳述式是預存程序或觸發程序中的最後一個陳述式，控制權便會傳回呼叫預存程序或引發觸發程序的陳述式。  
-  
- 當 CATCH 區塊中的程式碼完成時，控制權會傳給緊接在 END CATCH 陳述式之後的陳述式。 CATCH 區塊擷取的錯誤不會傳回發出呼叫的應用程式。 如果有任何錯誤資訊必須傳回應用程式，CATCH 區塊中的程式碼便必須利用 SELECT 結果集或 RAISERROR 和 PRINT 陳述式之類的機制來執行這個動作。  
+ 如果 TRY 區塊所含括的程式碼沒有錯誤，當 TRY 區塊中的最後一個陳述式完成執行時，控制權會傳給緊接在相關聯的 END CATCH 陳述式之後的陳述式。
+ 
+ 如果 TRY 區塊所含括的程式碼發生錯誤，控制權會傳給相關聯的 CATCH 區塊中的第一個陳述式。 當 CATCH 區塊中的程式碼完成時，控制權會傳給緊接在 END CATCH 陳述式之後的陳述式。 
+ 
+ > [!NOTE] 
+ > 如果 END CATCH 陳述式是預存程序或觸發程序中的最後一個陳述式，控制權便會傳回呼叫預存程序或引發觸發程序的陳述式。 
+ 
+ CATCH 區塊擷取的錯誤不會傳回發出呼叫的應用程式。 如果有任何錯誤資訊必須傳回應用程式，CATCH 區塊中的程式碼便必須利用 SELECT 結果集或 RAISERROR 和 PRINT 陳述式之類的機制來執行這個動作。  
   
  TRY...CATCH 建構可以有巢狀結構。 TRY 區塊或 CATCH 區塊可以包含巢狀的 TRY...CATCH 建構。 例如，CATCH 區塊可以包含內嵌的 TRY...CATCH 建構，以便處理 CATCH 程式碼所發現的錯誤。  
   
@@ -133,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 函數也可在`CATCH`原生編譯之預存程序[的 ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 區塊中運作。  
+ ERROR\_\* 函數也可在[原生編譯之預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)的 `CATCH` 區塊中運作。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY...CATCH 建構影響的錯誤  
  TRY...CATCH 建構不會擷取下列狀況：  

@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df7cf2a11b25f3eaac69374cf28b843e5552e956
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75924959"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80464367"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +101,6 @@ ALTER INDEX { index_name | ALL } ON <object>
     | ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
     | MAXDOP = max_degree_of_parallelism  
-    | COMPRESSION_DELAY = {0 | delay [Minutes]}  
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }   
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]  
 }  
@@ -112,7 +111,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAXDOP = max_degree_of_parallelism  
     | RESUMABLE = { ON | OFF } 
     | MAX_DURATION = <time> [MINUTES}     
-    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE} }  
+    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE } }  
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
 }  
   
@@ -126,10 +125,10 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
-    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
-    | COMPRESSION_DELAY= {0 | delay [Minutes]}  
+    | COMPRESSION_DELAY= { 0 | delay [Minutes] }  
 }  
 
 <resumable_index_option> ::=
@@ -507,8 +506,7 @@ COMPRESSION_DELAY **=** { **0** |*持續時間 [分鐘]* }
 
 **適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)  
   
- 至於磁碟資料表，延遲會指定關閉 狀態下的差異資料列群組，必須在差異資料列群組中至少保留多少分鐘的時間，然後 SQL Server 才能將它壓縮到壓縮的資料列群組。 因為磁碟資料表不會追蹤個別資料列的插入和更新時間，因此 SQL Server 會將這段延遲時間套用於關閉狀態下的差異資料列群組。  
-預設值是 0 分鐘。  
+ 針對磁碟型資料表，延遲會指定處於「關閉」狀態的差異資料列群組必須在差異資料列群組中至少保留多少分鐘的時間，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才能將它壓縮到壓縮的資料列群組。 由於磁碟型資料表不會追蹤個別資料列的插入和更新時間，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將這段延遲時間套用於「關閉」狀態下的差異資料列群組。  
   
  預設值是 0 分鐘。  
   

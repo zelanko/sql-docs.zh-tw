@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0d8fb8fc597fd0562640821769e3314b4f3020bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 685be1c7e6c43e28500dd1ee96ea6fe696ad8e20
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112912"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664633"
 ---
 # <a name="columns-without-a-name"></a>沒有名稱的資料行
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   任何沒有名稱的資料行都將予以內嵌。 例如，未指定資料行別名的計算資料行或巢狀純量查詢將會產生沒有任何名稱的資料行。 如果此資料行是 **xml** 類型，就會插入該資料類型執行個體的內容。 否則，就會以文字節點的形式插入資料行內容。  
   
 ```  

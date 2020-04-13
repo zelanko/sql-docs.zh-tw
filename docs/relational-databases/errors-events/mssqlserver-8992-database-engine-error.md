@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479669"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531069"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+|Item|值|
+|:---|:---|
 |產品名稱|SQL Server|  
 |事件識別碼|8992|  
 |事件來源|MSSQLSERVER|  
@@ -43,9 +43,9 @@ DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中
 根據已經從 SQL Server 2000 升級到 SQL Server 2005 或更新版本的資料庫執行 DBCC CHECKDB 時，可能會發生這個錯誤。 在 SQL Server 2000 中，DBCC CHECKDB 不包含 DBCC CHECKCATALOG 功能，因此，除非特別針對 SQL Server 2000 中的資料庫執行 DBCC CHECKCATALOG，否則在升級前不會造成錯誤。  
   
 您可能會看到下列任一種錯誤和錯誤 8992 一起出現：  
-|||
-|-|-| 
+
 |訊息識別碼|訊息文字|
+|:---|:---|
 |3851|在系統資料表 sys.%ls%ls 上發現無效的資料列 (%ls)。|
 |3852|sys.%ls%ls 中的資料列 (%ls) 在 sys.%ls%ls 之中並沒有相符的資料列 (%ls)。|
 |3853|sys.%ls%ls 中資料列 (%ls) 的屬性 (%ls) 在 sys.%ls%ls 中並沒有相符的資料列 (%ls)。|

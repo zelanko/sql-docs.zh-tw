@@ -11,12 +11,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca93055e20dc550e4c9d4ee4122828529a3b3a9b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70929691"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980640"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
 
@@ -88,7 +88,7 @@ ms.locfileid: "70929691"
     )  
         WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA\_AND_DATA);  
+        DURABILITY = SCHEMA_AND_DATA);  
     go  
         
         --------------------  

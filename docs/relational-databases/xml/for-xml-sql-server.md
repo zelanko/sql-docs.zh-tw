@@ -1,7 +1,7 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
 ms.custom: fresh2019may
-ms.date: 05/22/2019
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,15 +17,14 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: MightyPen
-ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 5d497064378b7fe34c95ffe9c886144bb3523256
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 6b59b52321f9c4e9489617bb8da9edf58f78b588
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943337"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665144"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 

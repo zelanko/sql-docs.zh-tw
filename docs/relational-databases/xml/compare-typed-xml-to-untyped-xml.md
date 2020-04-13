@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907201"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664678"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以建立 **XML** 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 **XML** 類型的變數、參數和資料行建立關聯。 在此情況下，此 **XML** 資料類型的執行個體即稱為「具類型」  。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正確的 XML 和 xml 資料類型  

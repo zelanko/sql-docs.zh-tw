@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912374"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219223"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -22,7 +22,7 @@ ms.locfileid: "80912374"
 
 macOS 和 Linux 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式設計功能以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的 ODBC 為基礎。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以 Windows Data Access Components ([ODBC 程式設計人員的參考](https://go.microsoft.com/fwlink/?LinkID=45250)) 中的 ODBC 為基礎。  
 
-ODBC 應用程式可在納入 unixODBC 標頭 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、`/usr/local/include/msodbcsql.h`、`sql.h` 和 `sqlext.h`) 之後納入 `sqltypes.h`，藉以使用 Multiple Active Result Sets (MARS) 和其他 `sqlucode.h` 特定功能。 接著，請針對您要在 Windows ODBC 應用程式中使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬項目，使用相同的符號名稱。
+ODBC 應用程式可在納入 unixODBC 標頭 (`sql.h`、`sqlext.h`、`sqltypes.h` 和 `sqlucode.h`) 之後納入 `/usr/local/include/msodbcsql.h`，藉以使用 Multiple Active Result Sets (MARS) 和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定功能。 接著，請針對您要在 Windows ODBC 應用程式中使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬項目，使用相同的符號名稱。
 
 ## <a name="available-features"></a>可用的功能  
 在 macOS 和 Linux 上使用 ODBC 驅動程序時，您可參考 ODBC 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 文件 ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 內的下列章節：  
@@ -39,7 +39,7 @@ ODBC 應用程式可在納入 unixODBC 標頭 ([!INCLUDE[ssNoVersion](../../../i
 -   [處理結果 (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [執行預存程序](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [疏鬆資料行支援 (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL 加密](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [使用加密而不需驗證](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [資料表值參數](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [命令和資料 API 的 UTF-8 和 UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [使用目錄函式](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
@@ -75,7 +75,7 @@ macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能：
 若為 ODBC Driver 17，支援其中一種下列字元集/編碼的 SQLCHAR 資料：
 
 > [!NOTE]  
-> 由於 `iconv` 和 `musl` 之間的 `glibc` 差異，因此，Alpine Linux 不支援這其中許多地區設定。
+> 由於 `musl` 和 `glibc` 之間的 `iconv` 差異，因此，Alpine Linux 不支援這其中許多地區設定。
 >
 > 如需詳細資訊，請參閱[與 glibc 的功能差異](https://wiki.musl-libc.org/functional-differences-from-glibc.html) \(英文\)。
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3e6a69d61f65cb755fd96d8b0a310f002ab85a5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000761"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664844"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤銷 XML 結構描述集合上的權限
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   建立 XML 結構描述集合的權限可以使用下列其中一種方式來撤銷：  
   
 -   撤銷關聯式結構描述的 ALTER 權限。 然後，主體便無法在關聯式結構描述中建立 XML 結構描述集合。 但是，主體仍然可以在同一資料庫的其他關聯式結構描述中建立 XML 結構描述集合。  

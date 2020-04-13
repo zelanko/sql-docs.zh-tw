@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91a8515417d25c2ef9f23d1698811a5f872227db
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70148044"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664273"
 ---
 # <a name="install-sql-server-database-engine"></a>安裝 SQL Server Database Engine
 
@@ -39,15 +39,15 @@ ms.locfileid: "70148044"
 -   [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md) - 這是選擇性元件  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [機器學習服務](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R 和 Python) 和[語言擴充功能](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - 是選擇性元件
+-   [機器學習服務](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R 和 Python) 和[語言擴充功能](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - 是選擇性元件
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
--   [機器學習服務 (資料庫內)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R 和 Python) - 是選擇性元件
+-   [機器學習服務 (資料庫內)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R 和 Python) - 是選擇性元件
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
--   [R 服務 (資料庫內)](../../advanced-analytics/install/sql-r-services-windows-install.md) - 是選擇性元件
+-   [R 服務 (資料庫內)](../../machine-learning/install/sql-r-services-windows-install.md) - 是選擇性元件
 ::: moniker-end
 
 -   全文檢索搜尋 (選擇性元件)  

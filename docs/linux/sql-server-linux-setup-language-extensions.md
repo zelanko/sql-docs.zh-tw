@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971227"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664343"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安裝 SQL Server 語言延伸模組
 
@@ -30,7 +30,7 @@ Java 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如�
 
 Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充功能的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
 
-根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組與[機器學習服務](../advanced-analytics/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
+根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組與[機器學習服務](../machine-learning/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="uninstall-preview-version"></a>解除安裝預覽版本
 

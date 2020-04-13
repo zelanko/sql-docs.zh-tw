@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ff3072b84334f16395c7687c1baaf511cd1fd53
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000702"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664819"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定中繼屬性
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 文件的中繼屬性 (Metaproperty) 之屬性 (Attribute)，是描述 XML 項目 (例如元素、屬性或任何其他 DOM 節點) 屬性 (Property) 的屬性 (Attribute)。 這些屬性實際上不存在於 XML 文件文字中。 不過，OPENXML 會提供這些中繼屬性給所有的 XML 項目。 這些中繼屬性可讓您擷取 XML 節點的資訊，例如本機定位和命名空間資訊。 此資訊可提供您所呈現文字以外更詳細的資料。  
   
  您可以使用 *ColPattern* 參數，將這些中繼屬性對應至 OPENXML 陳述式的資料列集資料行。 這些資料行將會包括其所對應的中繼屬性值。 如需 OPENXML 語法的詳細資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  

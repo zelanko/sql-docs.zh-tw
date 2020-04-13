@@ -1,7 +1,7 @@
 ---
 title: XML 資料 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: MightyPen
-ms.author: genemi
-monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0365bed92a23b3261d3e45232369c32bbdbf521e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: a46dd56f8891235b7caae471bd4801b27bfc4306
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77125265"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664928"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

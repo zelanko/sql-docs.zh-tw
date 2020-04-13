@@ -1,7 +1,7 @@
 ---
 title: 使用 BINARY BASE64 選項 | Microsoft 文件
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: MightyPen
-ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: eb192cdb9a7e9ffb43561b3b642f60144861c6df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 42b2e41bedbce625d38b9d73a06b62817419c92c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71199451"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665246"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 選項
 

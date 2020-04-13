@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257662"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530940"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "75257662"
   
 使用 [SELECT](../../t-sql/queries/select-transact-sql.md) 陳述式來呼叫 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 函數。 在函數呼叫中，使用 OBJECT_ID 函數，將資料表的名稱 (*table_name*) 轉換成資料表識別碼、指定資料表之唯一索引的名稱，以及指定 **IsFulltextKey** 索引屬性，如下所示：  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -119,7 +119,7 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  下列範例會查詢 `PK_Document_DocumentID` 索引是否用來強制全文檢索索引鍵資料行的唯一性，如下所示：  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
 SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
@@ -133,7 +133,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
  
 若要取得這個識別碼，您可以使用 SELECT 陳述式來呼叫 OBJECTPROPERTYEX 函數。 請使用 OBJECT_ID 函數，將資料表的名稱 (*table_name*) 轉換成資料表識別碼，並且指定 **TableFulltextKeyColumn** 屬性，如下所示：  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  下列範例會傳回全文檢索索引鍵資料行的識別碼或 NULL。 NULL 表示您正在使用無效的索引名稱、索引名稱沒有對應至資料表，或者資料表不存在等。  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -150,7 +150,7 @@ GO
   
  下列範例顯示如何使用唯一索引鍵資料行的識別碼，以取得資料行的名稱。  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  

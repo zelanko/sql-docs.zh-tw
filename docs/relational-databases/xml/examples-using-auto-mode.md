@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 782da9544dd1cf6e084793754fb31f81109d1810
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943418"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662941"
 ---
 # <a name="examples-using-auto-mode"></a>範例：使用 AUTO 模式
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   下列範例說明 AUTO 模式的用法。 這些查詢中有許多是針對自行車製造說明的 XML 文件來指定的，而這些文件儲存在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中 ProductModel 資料表的 Instructions 資料行中。  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>範例：擷取客戶、訂單及訂單詳細資訊  

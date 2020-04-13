@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8115350b3ead26a28c03fce975d058f393e0411b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c83cf778439ed8508c3c0128d90b085ae358c60
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984792"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664587"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   此主題描述如何建立主要和次要 XML 索引。  
   
 ## <a name="creating-a-primary-xml-index"></a>建立主要 XML 索引  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beda0b49ffeac5646f1e9ddf9ac92bbdc400e1a8
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981944"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607813"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   修改先前建立的檢視。 其中包括索引檢視。 ALTER VIEW 不會影響相依的預存程序或觸發程序，且不會變更權限。  
   
@@ -48,7 +48,16 @@ AS select_statement
     [ SCHEMABINDING ]  
     [ VIEW_METADATA ]       
 }   
+```
+
 ```  
+-- Syntax for Azure Synapse Analytics (SQL DW) and Parallel Data Warehouse  
+  
+ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
+AS <select_statement>   
+[;]  
+
+``` 
   
 ## <a name="arguments"></a>引數  
  *schema_name*  

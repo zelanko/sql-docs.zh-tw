@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402632"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809722"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具 (預覽)
 
@@ -172,7 +172,7 @@ SSIS 目錄組態 JSON 檔案的來源。 可以是「檔案路徑」或「內�
 
 SSIS 目錄組態 JSON 檔案的路徑。 只有當選取 [檔案路徑] 作為組態檔來源時，才會顯示此屬性。
 
-若要在組態 JSON 檔案中使用[管線變數](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)，則必須在這項工作之前新增[檔案轉換工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以將組態值替代為管線變數。 如需詳細資訊，請參閱 [JSON 變數替代](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution) (英文)。
+若要在組態 JSON 檔案中使用[管線變數](/azure/devops/pipelines/process/variables)，則必須在這項工作之前新增[檔案轉換工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以將組態值替代為管線變數。 如需詳細資訊，請參閱 [JSON 變數替代](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution) (英文)。
 
 #### <a name="inline-configuration-json"></a>內嵌組態 JSON
 

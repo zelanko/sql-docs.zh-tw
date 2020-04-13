@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 743ed3d936a51bf3c94f0bbd28ef490093edd570
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112926"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664673"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   這個主題描述如何產生 XML 執行個體。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，您可以用下列方式產生 XML 執行個體：  

@@ -12,15 +12,15 @@ ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 98b28f2115634c8dd173adb22e76ec6a92cd8928
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ea398c3f4f29182122e6147d4b437bd7e715bb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254122"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664923"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例：使用 ELEMENTS 指示詞指定 XSINIL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   下列查詢會指定 `ELEMENTS` 指示詞，從查詢結果產生元素中心的 XML。  
   
 ## <a name="example"></a>範例  

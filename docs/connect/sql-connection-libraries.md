@@ -1,23 +1,23 @@
 ---
 title: Microsoft SQL Databases 的連線程式庫 | Microsoft Docs
 description: 提供模組下載連結，這些模組可供從各種用戶端程式設計語言連線到 Microsoft SQL Server 與 Azure SQL Database。
-author: RothJa
+author: David-Engel
 ms.prod: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.custom: ''
 ms.topic: article
-ms.date: 03/05/2020
-ms.author: JRoth
-ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/06/2020
+ms.author: v-daenge
+ms.openlocfilehash: a60c1314164ddc6b662914d828e4bf5973f38d2f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79434115"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219377"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連線模組
 
-此文章提供連線模組或驅動程式  的下載連結，這些可讓您的用戶端程式用來與 [Microsoft SQL Server](../relational-databases/database-features.md)互動，以及其在雲端的對應項 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) 互動。 驅動程式適用於在下列作業系統上執行的各種程式設計語言：
+此文章提供連線模組或驅動程式  的下載連結，這些可讓您的用戶端程式用來與 [Microsoft SQL Server](../relational-databases/database-features.md)互動，以及其在雲端的對應項 [Azure SQL Database](/azure/sql-database/) 互動。 驅動程式適用於在下列作業系統上執行的各種程式設計語言：
 
 - Linux
 - macOS
@@ -44,7 +44,7 @@ ms.locfileid: "79434115"
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc，安裝指示](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[下載 ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby 驅動程式，安裝指示](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby 下載頁面](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -60,7 +60,7 @@ ms.locfileid: "79434115"
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 
