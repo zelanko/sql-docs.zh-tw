@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 2017 和更新版本的版本資訊 | Microsoft Docs
-ms.date: 12/04/2019
+ms.date: 04/06/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 39049ee5a2561821e0a2284ed66b9b04730998bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9227aa7ad22b64da499020d0c4bc561de00c14f4
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834254"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809853"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 與更新版本的版本資訊
 
@@ -50,7 +50,17 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
-## <a name="1406001451-20191113"></a>14.0.600.1451 2019/11/13 
+## <a name="1406001572-20200406"></a>14.0.600.1572，2020/04/06 
+
+| 已修正的問題 | 詳細資料 |
+| :---------- | :------ |
+| 已將 JQuery UI 更新至 1.12  | &nbsp; |
+| 已修正 URL 區分大小寫  | &nbsp; |
+| 已修正有許多參數時的參數位置  | &nbsp; |
+| 已修正 FindString 無法在 HTML5 轉譯中運作  | &nbsp; |
+| Analysis Services 用戶端程式庫已更新，以解決 TLS 1.0/1.1 的淘汰 | &nbsp; |
+
+## <a name="1406001451-20191113"></a>14.0.600.1451，2019/11/13 
 
 | 已修正的問題 | 詳細資料 |
 | :---------- | :------ |
@@ -140,7 +150,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 編輯報表參數的屬性之後，它在連結的報表中的可見性會被還原。 | &nbsp; |
 | URL 參數 rc:Toolbar=false 無法在 Express 版本中使用。 | &nbsp; |
 | 在文字方塊中將運算式的 CanGrow 屬性設定為 False 會導致不顯示值。 | &nbsp; |
-| 在安裝程式中新增產品金鑰的 [深入了解]  連結。 | &nbsp; |
+| 在安裝程式中新增產品金鑰的 [深入了解] 連結。 | &nbsp; |
 | 含自訂表單驗證的 Web 入口網站會忽略變動到期 Cookie。 | &nbsp; |
 | 如果資料列的內容是空的，匯出到 Word 會建立不相等的資料列高度。 | &nbsp; |
 | &nbsp; | &nbsp; |

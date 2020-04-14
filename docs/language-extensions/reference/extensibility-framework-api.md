@@ -1,22 +1,22 @@
 ---
-title: Microsoft SQL Server 的擴充性架構 API
+title: 擴充性架構 API
 titleSuffix: SQL Server Language Extensions
-description: ''
+description: 您可使用擴充性架構來撰寫 SQL Server 的程式設計語言延伸模組。 Microsoft SQL Server 擴充性架構 API 是一種可供語言延伸模組用來與 SQL Server 互動及交換資料的 API。
 author: dphansen
 ms.author: davidph
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba2405be5b4bb4805c524197bbac4ee9baa73ce
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517709"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012424"
 ---
-# <a name="extensibility-framework-api-for-microsoft-sql-server"></a>Microsoft SQL Server 的擴充性架構 API
+# <a name="extensibility-framework-api-for-sql-server"></a>SQL Server 的擴充性架構 API
 
 您可使用擴充性架構來撰寫 SQL Server 的程式設計語言延伸模組。 Microsoft SQL Server 擴充性架構 API 是一種可供語言延伸模組用來與 SQL Server 互動及交換資料的 API。
 
@@ -139,7 +139,7 @@ SQLRETURN InitSession(
 
 您可從 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中的 `@input_data_1`，針對結果集的每個資料行呼叫此函數。
 
-此結果集的資料行結構會稱為「輸入結構描述」  。
+此結果集的資料行結構會稱為「輸入結構描述」。
 
 ### <a name="syntax"></a>語法
 
