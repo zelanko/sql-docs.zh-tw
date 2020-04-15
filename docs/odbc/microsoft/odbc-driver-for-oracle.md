@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298128"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用[Oracle 提供的 ODBC 驅動程式](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html)。  
+>  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
   
  Microsoft® Oracle 的 ODBC 驅動程式允許您將符合 ODBC 的應用程式連接到 Oracle 資料庫。 Oracle 的 ODBC 驅動程式符合*ODBC 程式師參考*中所述的開放資料庫連接 (ODBC) 規範。 它允許從 Internet 資訊服務 (IIS) 存取 PL/SQL 包、XA/DTC 整合和 Oracle 存取。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics （Access 驅動程式） |Microsoft Docs
+title: SQL統計(存取驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Access Driver
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 523f44924858af182e953aa1ce2b72e20cf97a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f75f41bf63cbf224772955effa0f120b5d384111
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68047085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299358"
 ---
 # <a name="sqlstatistics-access-driver"></a>SQLStatistics (Access 驅動程式)
 > [!NOTE]  
->  本主題提供存取驅動程式特定的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題提供特定於訪問驅動程序的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
 |資料行|註解|  
 |------------|--------------|  
-|TABLE_QUALIFIER|針對 Microsoft Access，會傳回資料庫檔案的路徑。<br /><br /> *SzTableQualifier*引數中不支援模式比對。|  
-|TABLE_OWNER|此資料行中會傳回 Null，因為不支援擁有者名稱。|  
-|TABLE_NAME|未分隔資料表名稱。<br /><br /> *SzTableName*引數中不支援模式比對。|  
-|INDEX_QUALIFIER|一律會傳回 Null。|  
-|INDEX_NAME|索引相依。|  
-|TYPE|只有 SQL_TABLE_STAT 或 SQL_INDEX_OTHER 會針對類型傳回。|  
-|SEQ_IN_INDEX|索引相依。|  
-|COLUMN_NAME|索引相依。|  
-|COLLATION|索引相依。|  
-|CARDINALITY|僅針對 Microsoft Access 傳回。|  
-|PAGES|一律會傳回 Null。|  
+|TABLE_QUALIFIER|返回資料庫檔的路徑以用於Microsoft Access。<br /><br /> *szTable限定符*參數不支援模式匹配。|  
+|TABLE_OWNER|NULL 在此列中返回,因為不支援所有者名稱。|  
+|TABLE_NAME|未限制的表名稱。<br /><br /> *szTableName*參數不支援模式匹配。|  
+|INDEX_QUALIFIER|NULL始終返回。|  
+|INDEX_NAME|依賴於索引。|  
+|TYPE|只有SQL_TABLE_STAT或SQL_INDEX_OTHER將返回 TYPE。|  
+|SEQ_IN_INDEX|依賴於索引。|  
+|COLUMN_NAME|依賴於索引。|  
+|COLLATION|依賴於索引。|  
+|CARDINALITY|僅為 Microsoft 訪問返回。|  
+|PAGES|NULL始終返回。|  
   
- 篩選是以唯一性（ *fUnique*引數）為基礎。 *FAccuracy*參數會被忽略。
+ 篩選基於唯一性 *(f唯一*參數)。 *fAccuracy*參數將被忽略。

@@ -1,5 +1,5 @@
 ---
-title: 支援的資料類型（ODBC Driver for Oracle） |Microsoft Docs
+title: 支援的資料型態(Oracle 的 ODBC 驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915674"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301113"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>支援的資料類型 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
+>  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
   
- ODBC Driver for Oracle 支援所有 Oracle 7.3 資料類型;不過，它不支援此處所列的任何新 Oracle8 資料類型。  
+ Oracle 的 ODBC 驅動程式支援所有 Oracle 7.3 資料類型;但是,它不支援此處列出的任何新的 Oracle8 資料類型。  
   
-|資料類型|Oracle 7。3|Oracle8|  
+|資料類型|甲骨文 7.3|甲骨文8|  
 |---------------|----------------|-------------|  
 |BFILE|n/a|不支援|  
 |BLOB|n/a|不支援|  
@@ -46,4 +46,4 @@ ms.locfileid: "67915674"
 |MLSLABEL|不支援。|不支援。|  
   
 > [!NOTE]  
->  如需 VARCHAR 資料行之允許大小的詳細資訊，請參閱本指南中的[Varchar 資料行大小](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)。
+>  有關 VARCHAR 列允許大小的詳細資訊,請參閱本指南中的[VARCHAR 欄位](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)大小 。

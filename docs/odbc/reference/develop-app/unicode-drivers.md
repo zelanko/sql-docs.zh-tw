@@ -1,5 +1,5 @@
 ---
-title: Unicode 驅動程式 |Microsoft Docs
+title: Unicode 驅動程式 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca9b70ee6a96759e496b831f7c12dc3ee78419b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aabdd899d78c1141716725d57e343dc002dc96ad
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087875"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284350"
 ---
 # <a name="unicode-drivers"></a>Unicode 驅動程式
-驅動程式是否應為 Unicode 驅動程式或 ANSI 驅動程式，完全取決於資料來源的本質。 如果資料來源支援 Unicode 資料，驅動程式應該是 Unicode 驅動程式。 如果資料來源僅支援 ANSI 資料，驅動程式應該會保留 ANSI 驅動程式。  
+驅動程式是 Unicode 驅動程式還是 ANSI 驅動程式完全取決於資料源的性質。 如果數據源支援 Unicode 數據,則驅動程式應為 Unicode 驅動程式。 如果資料來源僅支援 ANSI 資料,則驅動程式應仍為 ANSI 驅動程式。  
   
- Unicode 驅動程式必須匯出**SQLConnectW** ，才能由驅動程式管理員識別為 Unicode 驅動程式。  
+ Unicode 驅動程式必須匯出**SQLConnectW**才能被驅動程式管理員識別為 Unicode 驅動程式。  
   
- Unicode 驅動程式必須接受 Unicode 函式（尾碼為*W*）並儲存 unicode 資料。 它也可以接受 ANSI 函式，但不需要這麼做。 （驅動程式管理員不會將具有後置*詞的 ansi*函數呼叫傳遞給驅動程式，但會將它轉換成不含尾碼的 ansi 函式呼叫，然後將它傳遞給驅動程式）。  
+ Unicode 驅動程式必須接受 Unicode 函數(後綴為*W)* 並存儲 Unicode 資料。 它也可以接受 ANSI 函數,但不是必需的。 (驅動程式管理員不會將帶有*A*後綴的 ANSI 函數呼叫傳遞給驅動程式,而是將其轉換為沒有後綴的 ANSI 函數調用,然後將其傳遞給驅動程式。  
   
- Unicode 驅動程式必須能夠以 Unicode 或 ANSI 傳回結果集，端視應用程式的系結而定。 如果應用程式系結至 SQL_C_CHAR，Unicode 驅動程式必須將 SQL_WCHAR 資料轉換成 SQL_CHAR。 驅動程式管理員會將 SQL_C_WCHAR 對應到 ANSI 驅動程式 SQL_C_CHAR，但不會對應 Unicode 驅動程式。  
+ Unicode 驅動程式必須能夠返回 Unicode 或 ANSI 中的結果集,具體取決於應用程式的綁定。 如果應用程式綁定到SQL_C_CHAR,Unicode 驅動程式必須將SQL_WCHAR數據轉換為SQL_CHAR。 驅動程式管理員將SQL_C_WCHAR映射到 ANSI 驅動程式SQL_C_CHAR,但不映射 Unicode 驅動程式。  
   
 > [!NOTE]  
->  在決定驅動程式類型時，驅動程式管理員會呼叫**SQLSetConnectAttr** ，並在連接時設定 SQL_ATTR_ANSI_APP 屬性。 如果應用程式使用 ANSI Api，SQL_ATTR_ANSI_APP 將會設定為 SQL_AA_TRUE，而如果使用 Unicode，則會設定為 SQL_AA_FALSE 的值。 此屬性是用來讓驅動程式根據應用程式類型來展現不同的行為。 應用程式無法直接設定屬性，而且**SQLGetConnectAttr**不支援。 如果驅動程式在 ANSI 和 Unicode 應用程式中都有相同的行為，它應該會傳回這個屬性的 SQL_ERROR。 如果驅動程式傳回 SQL_SUCCESS，則使用連接共用時，驅動程式管理員將會分隔 ANSI 和 Unicode 連接。
+>  確定驅動程式類型時,驅動程式管理員將調用**SQLSetConnectAttr**並在連接時設定SQL_ATTR_ANSI_APP屬性。 如果應用程式使用 ANSI API,SQL_ATTR_ANSI_APP將設定為SQL_AA_TRUE,如果應用程式使用 Unicode,則它將設置為SQL_AA_FALSE的值。 使用此屬性,以便驅動程式可以基於應用程式類型顯示不同的行為。 該屬性不能由應用程式直接設置,並且**SQLGetConnectAttr**不支援該屬性。 如果驅動程式對 ANSI 和 Unicode 應用程式都表現出相同的行為,則應傳回此屬性SQL_ERROR。 如果驅動程式返回SQL_SUCCESS,則驅動程式管理器將在使用連接池時分離 ANSI 和 Unicode 連接。

@@ -1,5 +1,5 @@
 ---
-title: 保存的資料來源物件 |Microsoft Docs
+title: 保存的資料來源物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3355b086d884d68f829c34fb461589e4a46e05fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73771477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297251"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援使用**IPersistFile**介面保存的資料來源物件。  
+  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式支援具有**IPersistFile**介面的持久化數據來源物件。  
   
 ## <a name="examples"></a>範例  
  **A. 保存資料來源初始化：**  
@@ -228,8 +228,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- 
-  **IPersistFile::Save** 方法可以在呼叫 **IDBInitialize::Initialize** 之前或之後呼叫。 當從 **IDBInitialize::Initialize** 成功傳回之後呼叫此方法時，可確保已保存有效的資料來源規格。  
+ **IPersistFile::Save** 方法可以在呼叫 **IDBInitialize::Initialize** 之前或之後呼叫。 當從 **IDBInitialize::Initialize** 成功傳回之後呼叫此方法時，可確保已保存有效的資料來源規格。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源物件 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

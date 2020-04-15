@@ -1,5 +1,5 @@
 ---
-title: 手動認可模式 |Microsoft Docs
+title: 手動提交模式 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a00ff373e374d0940b3e7259eeb01e26b620cae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036397"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287872"
 ---
 # <a name="manual-commit-mode"></a>手動認可模式
-*在手動認可模式中，* 應用程式必須藉由呼叫**SQLEndTran**來認可或回復交易，以明確完成交易。 這是大部分關係資料庫的一般交易模式。  
+*在手動提交模式下,* 應用程式必須通過調用**SQLEndTran**來顯式完成事務,以提交它們或回滾它們。 這是大多數關係資料庫的正常事務模式。  
   
- ODBC 中的交易不一定要明確起始。 相反地，每當應用程式在資料庫上啟動作業時，交易就會隱含開始。 如果資料來源需要明確的交易起始，則每當應用程式執行需要交易的語句，而且沒有目前的交易時，驅動程式就必須提供它。
+ ODBC 中的事務不必顯式啟動。 相反,每當應用程式開始在資料庫上運行時,事務都會隱式啟動。 如果數據源需要顯式事務啟動,則每當應用程式執行需要事務的語句並且沒有當前事務時,驅動程式必須提供它。

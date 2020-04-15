@@ -1,5 +1,5 @@
 ---
-title: 時間和日期函式（Visual FoxPro ODBC Driver） |Microsoft Docs
+title: 時間和日期功能(可視化福克斯Pro ODBC驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,59 +15,59 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912407"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303059"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時間和日期函式 (Visual FoxPro ODBC Driver)
-下表列出 Visual FoxPro ODBC 驅動程式所支援的 ODBC 時間和日期函數;當相同函式的 Visual FoxPro 文法與 ODBC 語法不同時，會列出對等的 Visual FoxPro。  
+下表列出了 Visual FoxPro ODBC 驅動程式支援的 ODBC 時間和日期函數;當相同函數的 Visual FoxPro 語法與 ODBC 語法不同時,將列出 Visual FoxPro 等效項。  
   
-|ODBC 文法|Visual FoxPro 文法|  
+|ODBC 語法|視覺化 FoxPro 語法|  
 |------------------|---------------------------|  
-|CURDATE *（）*|DATE *（）*|  
-|CURTIME *（）*|時間 *（）*|  
-|DAYNAME *（date_exp）*|CDOW *（date_exp）*|  
-|DAYOFMONTH （*date_exp）*|DAY *（）*|  
-|小時 *（time_exp）*||  
-|分鐘 *（time_exp）*||  
-|月份 *（time_exp）*||  
-|MONTHNAME *（date_exp）*|CMONTH *（date_exp）*|  
-|NOW *（）*|DATETIME *（）*|  
-|SECOND *（time_exp）*|秒 *（time_exp）*|  
-|周 *（date_exp）*||  
-|年 *（date_exp）*||  
+|CURDATE *( )*|日期 *( )*|  
+|CURTIME *( )*|時間 *( )*|  
+|天名 *(date_exp)*|CDOW *(date_exp)*|  
+|一月 *(date_exp日)*|日 *( )*|  
+|小時 *(time_exp)*||  
+|分鐘 *(time_exp)*||  
+|月 *(time_exp)*||  
+|月名稱 *(date_exp)*|CMONTH *(date_exp)*|  
+|現在 *( )*|日期時間 *( )*|  
+|秒 *(time_exp)*|SEC *(time_exp)*|  
+|週 *(date_exp)*||  
+|年份 *(date_exp)*||  
   
- 下列時間和日期函數不受支援：  
+ 不支援以下時間與日期函數:  
   
- DAYOFYEAR *（date_exp）*  
+ 一天 *(date_exp)*  
   
- 季 *（date_exp）*  
+ *(date_exp)*  
   
- TIMESTAMPADD *（interval，integer_exp，timestamp_exp）*  
+ 時間戳(*間隔、integer_exp、timestamp_exp)*  
   
- TIMESTAMPDIFF *（interval，timestamp_exp1，timestamp_exp2）*  
+ 時間戳 *(間隔、timestamp_exp1、timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>ODBC 逸出序列  
- 此驅動程式也支援日期和時間戳記資料的 ODBC 轉義順序。 Escape 子句語法如下所示：  
+ 驅動程式還支援日期和時間戳數據的 ODBC 轉義序列。 逸出子句語法如下所示:  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)-  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- 在此語法中， **d**表示*值*是*yyyy-mm-dd*格式的日期，而**ts**表示*該值*是*yyyy-mm-dd hh： mm： ss*[中的時間戳記。*f ...*]編排. 日期和時間戳記資料的縮寫語法如下：  
+ 在此文法中 **,d**指示*值*是*yyyy-mm-dd*格式的日期 **,ts**表示*值*是*yyyy-mm-dhh:mm:ss*中的時間戳 。*f...* 格式。 日期和時間戳資料的速記語法如下所示:  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- 例如，下列每個語句都會在支援的 SQL UPDATE 命令中使用 date 和 timestamp 簡寫語法來更新 ALLTYPES.FROMASSEMBLY 資料表：  
+ 例如,以下每個語句都使用受支援的 SQL UPDATE 命令中的日期和時間戳速記語法更新 ALLTYPES 表:  
   
 ```  
 UPDATE alltypes  
@@ -80,4 +80,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>備註  
- 如需有關 escape 序列的詳細資訊，請參閱 Odbc 程式設計*人員參考*中的 odbc 中的[逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。
+ 有關逸出序列的詳細資訊,請參閱*ODBC 程式者參考*[中的 ODBC 中的逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。

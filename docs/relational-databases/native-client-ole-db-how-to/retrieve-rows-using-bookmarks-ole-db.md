@@ -1,5 +1,5 @@
 ---
-title: 使用書簽（OLE DB）取出資料列 |Microsoft Docs
+title: 使用書籤擷取資料列 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - bookmarks [OLE DB]
 - rows [OLE DB]
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67509c447134edd816c06ac57e7714efd16c7359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9f12644175b20d9055d3a5a73a4ad1e1b003805b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73766392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302169"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用書籤擷取資料列 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  取用者會將繫結結構的 **dwFlag** 欄位值設定為 DBCOLUMNSINFO_ISBOOKMARK，表示該資料行會當做書籤使用。 取用者也會將資料列集屬性 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE。 這可讓資料行 0 出現在資料列集中。 然後使用**IRowsetLocate：： GetRowsAt**來提取資料列，從書簽中指定位移的資料列開始。  
+  取用者會將繫結結構的 **dwFlag** 欄位值設定為 DBCOLUMNSINFO_ISBOOKMARK，表示該資料行會當做書籤使用。 取用者也會將資料列集屬性 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE。 這可讓資料行 0 出現在資料列集中。 然後使用 **IRowsetLocate::GetRowsAt** 來擷取資料列，從書籤中指定為位移的資料列開始。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果必須保留認證,則應使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)對其進行加密。  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>使用書籤擷取資料列  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73766392"
   
 4.  針對當做書籤使用的資料行，將繫結結構的 **dwFlag** 欄位設定為 DBCOLUMNSINFO_ISBOOKMARK 旗標。  
   
-5.  請使用**IRowsetLocate：： GetRowsAt**來提取資料列，從書簽的位移所指定的資料列開始。  
+5.  使用 **IRowsetLocate::GetRowsAt** 來擷取資料列，從來自書籤的位移所指定的資料列開始。  
 
 ## <a name="example"></a>範例  
  此範例顯示如何使用書籤提取資料列。 IA64 不支援此範例。  

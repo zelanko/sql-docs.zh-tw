@@ -1,5 +1,5 @@
 ---
-title: OLE DB 服務主體名稱連接
+title: OLE DB 服務主體名稱連線
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 974e5e6c03c32b0457295b749604323e7f1b870e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: de214361ce06c6f0ff103c4e591ff4e5e53d887c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75254618"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295624"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>用戶端連接中的服務主要名稱 (SPN) (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需用戶端應用程式中 SPN 的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[&#40;OLE DB&#41;的整合式 Kerberos 驗證](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
+  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需用戶端應用程式中 SPN 的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式 Kerberos 驗證 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>提供者初始化字串關鍵字  
  下列提供者初始化字串關鍵字可支援 OLE DB 應用程式內的 SPN。 在下表中，關鍵字欄中的值會用於 IDBInitialize::Initialize 的提供者字串。 當使用 ADO 或 IDataInitialize::GetDataSource 連接時，描述欄中的值會在初始化字串中使用。  
@@ -32,7 +32,7 @@ ms.locfileid: "75254618"
 |FailoverPartnerSPN|容錯移轉夥伴 SPN|容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
   
 ## <a name="data-source-initialization-properties"></a>資料來源初始化屬性  
- **DBPROPSET_SQLSERVERDBINIT**屬性集中的下列屬性可讓應用程式指定 spn。  
+ **DBPROPSET_SQLSERVERDBINIT** 屬性集中的以下屬性可讓應用程式指定 SPN。  
   
 |名稱|類型|使用量|  
 |----------|----------|-----------|  
@@ -40,7 +40,7 @@ ms.locfileid: "75254618"
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，讀取/寫入|指定容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
   
 ## <a name="data-source-properties"></a>資料來源屬性  
- **DBPROPSET_SQLSERVERDATASOURCEINFO**屬性集中的下列屬性可讓應用程式探索驗證方法。  
+ **DBPROPSET_SQLSERVERDATASOURCEINFO** 屬性集中的以下屬性可讓應用程式探索驗證方法。  
   
 |名稱|類型|使用量|  
 |----------|----------|-----------|  
@@ -52,9 +52,9 @@ ms.locfileid: "75254618"
   
 |成員函數|描述|  
 |---------------------|-----------------|  
-|IDataInitialize::GetDataSource|*pwszInitializationString*可以包含新的關鍵字**ServerSPN**和**FailoverPartnerSPN**。|  
+|IDataInitialize::GetDataSource|*pwszInitializationString* 可以包含新的關鍵字 **ServerSPN** 和 **FailoverPartnerSPN**。|  
 |IDataInitialize::GetInitializationString|如果 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 有非預設值，將會透過 *ppwszInitString* 將它們當做 **ServerSPN** 和 **FailoverPartnerSPN** 的關鍵字值包含在初始化字串中。 否則，這些關鍵字將不會包含在初始化字串中。|  
-|IDBInitialize::Initialize|如果在資料來源初始化屬性內設定 DBPROP_INIT_PROMPT 來啟用提示，將會顯示 [OLE DB 登入] 對話方塊。 如此可允許同時針對主體伺服器和它的容錯移轉夥伴來輸入 SPN。<br /><br /> DPPROP_INIT_PROVIDERSTRING 中的提供者字串 (如果有設定的話) 將會辨識新的關鍵字 **ServerSPN** 和 **FailoverPartnerSPN**，並使用它們的值 (如果有的話) 來初始化 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。<br /><br /> 您可以呼叫 IDBProperties：： SetProperties 來設定 SSPROP_INIT_SERVER_SPN 的屬性，並在呼叫 IDBInitialize：： Initialize 之前 SSPROP_INIT_FAILOVER_PARTNER_SPN。 這是使用提供者字串的替代方式。<br /><br /> 如果在一個以上的地方設定屬性，以程式設計方式設定的值會優先於提供者字串中設定的值。 在初始化字串中設定的值會優先於登入對話方塊內設定的值。<br /><br /> 如果相同的關鍵字在提供者字串內出現一次以上，第一次出現的值會優先於其他的值。|  
+|IDBInitialize::Initialize|如果在資料來源初始化屬性內設定 DBPROP_INIT_PROMPT 來啟用提示，將會顯示 [OLE DB 登入] 對話方塊。 如此可允許同時針對主體伺服器和它的容錯移轉夥伴來輸入 SPN。<br /><br /> DPPROP_INIT_PROVIDERSTRING 中的提供者字串 (如果有設定的話) 將會辨識新的關鍵字 **ServerSPN** 和 **FailoverPartnerSPN**，並使用它們的值 (如果有的話) 來初始化 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。<br /><br /> 呼叫 IDBInitialize::Initialize 之前，可以呼叫 IDBProperties::SetProperties 來設定 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN 屬性。 這是使用提供者字串的替代方式。<br /><br /> 如果在一個以上的地方設定屬性，以程式設計方式設定的值會優先於提供者字串中設定的值。 在初始化字串中設定的值會優先於登入對話方塊內設定的值。<br /><br /> 如果相同的關鍵字在提供者字串內出現一次以上，第一次出現的值會優先於其他的值。|  
 |IDBProperties::GetProperties|可以呼叫 IDBProperties::GetProperties 來取得新資料來源初始化屬性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 以及新資料來源屬性 SSPROP_AUTHENTICATIONMETHOD 和 SSPROP_MUTUALLYAUTHENTICATED 的值。|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo 將會包含新的資料來源初始化屬性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 或是新的資料來源屬性 SSPROP_AUTHENTICATION_METHOD 和 SSPROP_MUTUALLYAUTHENTICATED。|  
 |IDBProperties::SetProperties|可以呼叫 IDBProperties::SetProperties 來設定新資料來源初始化屬性 SSPROP_INITSERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值。<br /><br /> 這些屬性可以在任何時間設定，但是如果資料來源已經開啟，將會傳回下列錯誤：DB_E_ERRORSOCCURRED --「多重步驟的 OLE DB 作業已產生錯誤。 請檢查每個 OLE DB 狀態值 (如果有的話)。 未完成任何工作」。|  

@@ -1,5 +1,5 @@
 ---
-title: 非同步執行（通知方法） |Microsoft Docs
+title: 非同步執行(通知方法) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,56 +8,56 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077058"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306409"
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同步執行 (通知方法)
-ODBC 允許非同步執行連接和語句作業。 應用程式執行緒可以在非同步模式中呼叫 ODBC 函式，而函式可以在作業完成之前傳回，讓應用程式執行緒執行其他工作。 在 Windows 7 SDK 中，針對非同步語句或連接作業，應用程式會使用輪詢方法判定非同步作業已完成。 如需詳細資訊，請參閱[非同步執行（輪詢方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 從 Windows 8 SDK 開始，您可以使用通知方法來判斷非同步作業是否已完成。  
+ODBC 允許非同步執行連接和語句操作。 應用程式線程可以在非同步模式下調用 ODBC 函數,並且該函數可以在操作完成之前返回,從而允許應用程式線程執行其他任務。 在 Windows 7 SDK 中,對於非同步語句或連接操作,應用程式確定非同步操作是否已完成使用輪詢方法。 有關詳細資訊,請參閱[非同步執行(輪詢方法)。](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md) 從 Windows 8 SDK 開始,可以使用通知方法確定非同步操作是否已完成。  
   
- 在輪詢方法中，應用程式需要在每次想要作業的狀態時呼叫非同步函式。 通知方法類似于回呼，並在 ADO.NET 中等候。 不過，ODBC 會使用 Win32 事件做為通知物件。  
+ 在輪詢方法中,應用程式每次需要操作的狀態時都需要調用異步函數。 通知方法類似於回調和等待ADO.NET。 但是,ODBC 使用 Win32 事件作為通知物件。  
   
- ODBC 資料指標程式庫和 ODBC 非同步通知不能同時使用。 同時設定這兩個屬性將會傳回錯誤，其中包含 SQLSTATE S1119 （資料指標程式庫和非同步通知無法同時啟用）。  
+ ODBC 游標庫和 ODBC 同步通知不能同時使用。 設置這兩個屬性將返回 SQLSTATE S1119 的錯誤(無法同時啟用游標庫和非同步通知)。  
   
- 如需驅動程式開發人員的資訊，請參閱非同步函式[完成的通知](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md)。  
+ 有關驅動程式開發人員的資訊[,請參閱非同步功能完成通知](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md)。  
   
 > [!NOTE]  
->  資料指標程式庫不支援通知方法。 當啟用通知方法時，如果應用程式嘗試透過 SQLSetConnectAttr 啟用資料指標程式庫，將會收到錯誤訊息。  
+>  游標庫不支援通知方法。 如果應用程式嘗試在啟用通知方法時通過 SQLSetConnectAttr 啟用游標庫,則會收到錯誤消息。  
   
 ## <a name="overview"></a>概觀  
- 在非同步模式中呼叫 ODBC 函式時，控制項會立即傳回呼叫應用程式，並將傳回碼 SQL_STILL_EXECUTING。 應用程式必須重複輪詢函式，直到它傳回 SQL_STILL_EXECUTING 以外的專案。 輪詢迴圈會增加 CPU 使用率，導致許多非同步案例中的效能不佳。  
+ 當以非同步模式調用ODBC函數時,控制項將立即返回調用應用程式,返回代碼SQL_STILL_EXECUTING。 應用程式必須重複輪詢函數,直到返回SQL_STILL_EXECUTING以外的內容。 輪詢環路提高了 CPU 利用率,導致許多非同步方案中性能不佳。  
   
- 每當使用通知模型時，就會停用輪詢模型。 應用程式不應該再次呼叫原始的函式。 呼叫[SQLCompleteAsync 函數](../../../odbc/reference/syntax/sqlcompleteasync-function.md)來完成非同步作業。 如果應用程式在非同步作業完成之前再次呼叫原始函式，則呼叫會傳回 SQLSTATE IM017 SQL_ERROR （在非同步通知模式中為停用輪詢）。  
+ 每當使用通知模型時,輪詢模型都會被禁用。 應用程式不應再次調用原始函數。 調用[SQLCompleteAsync 函數](../../../odbc/reference/syntax/sqlcompleteasync-function.md)以完成非同步操作。 如果應用程式在非同步操作完成之前再次調用原始函數,則調用將返回SQL_ERROR SQLSTATE IM017(在非同步通知模式下禁用輪詢)。  
   
- 當使用通知模型時，應用程式可以呼叫**SQLCancel**或**SQLCancelHandle**來取消語句或連接作業。 如果取消要求成功，ODBC 將會傳回 SQL_SUCCESS。 此訊息不表示已實際取消函式;這表示已處理取消要求。 函式是否實際取消是與驅動程式相關，以及與資料來源相關的。 當作業取消時，驅動程式管理員仍然會對事件發出信號。 驅動程式管理員會傳回傳回碼緩衝區中的 SQL_ERROR，且狀態為 SQLSTATE HY008 （作業已取消），表示取消成功。 如果函式已完成正常處理，驅動程式管理員會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO。  
+ 使用通知模型時,應用程式可以調用**SQLCancel**或**SQLCancelHandle**來取消語句或連接操作。 如果取消請求成功,ODBC 將返回SQL_SUCCESS。 此消息不指示該函數實際上已取消;因此,該功能未表示該函數已取消。它表示已處理取消請求。 函數是否實際取消取決於驅動程序和數據源。 當操作被取消時,驅動程式管理員仍將發出事件信號。 驅動程式管理員返回返回代碼緩衝區中的SQL_ERROR,狀態為 SQLSTATE HY008(操作已取消),以指示取消成功。 如果函數完成正常處理,驅動程式管理員將返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO。  
   
-### <a name="downlevel-behavior"></a>下層行為  
- 在完成時支援此通知的 ODBC 驅動程式管理員版本為 ODBC 3.81。  
+### <a name="downlevel-behavior"></a>下級行為  
+ ODBC 驅動程式管理員版本支援此通知的完整是 ODBC 3.81。  
   
 |應用程式 ODBC 版本|驅動程式管理員版本|驅動程式版本|行為|  
 |------------------------------|----------------------------|--------------------|--------------|  
-|任何 ODBC 版本的新應用程式|ODBC 3.81|ODBC 3.80 驅動程式|如果驅動程式支援這項功能，應用程式可以使用這項功能，否則驅動程式管理員將會發生錯誤。|  
-|任何 ODBC 版本的新應用程式|ODBC 3.81|ODBC 之前的3.80 驅動程式|如果驅動程式不支援此功能，驅動程式管理員將會發生錯誤。|  
-|任何 ODBC 版本的新應用程式|預先 ODBC 3.81|任意|當應用程式使用這項功能時，舊的驅動程式管理員會將新的屬性視為驅動程式特有的屬性，而驅動程式應該會錯誤。新的驅動程式管理員不會將這些屬性傳遞給驅動程式。|  
+|任何 ODBC 版本的新應用|ODBC 3.81|ODBC 3.80 驅動程式|如果驅動程式支援此功能,應用程式可以使用此功能,否則驅動程式管理器將出錯。|  
+|任何 ODBC 版本的新應用|ODBC 3.81|ODBC 前 3.80 驅動程式|如果驅動程式不支援此功能,驅動程式管理器將出錯。|  
+|任何 ODBC 版本的新應用|ODBC 前 3.81|任意|當應用程式使用此功能時,舊的驅動程式管理器會將新屬性視為特定於驅動程式的屬性,驅動程式應出錯。新的驅動程式管理員不會將這些屬性傳遞給驅動程式。|  
   
- 應用程式必須先檢查驅動程式管理員版本，才能使用這項功能。 否則，如果編寫不良的驅動程式不會發生錯誤，且驅動程式管理員版本為預先 ODBC 3.81，則行為是未定義的。  
+ 在使用此功能之前,應用程式應檢查驅動程式管理器版本。 否則,如果編寫不良的驅動程式未出錯,並且驅動程式管理器版本是 ODBC 3.81 前版本,則行為未定義。  
   
 ## <a name="use-cases"></a>使用案例  
- 本節顯示非同步執行和輪詢機制的使用案例。  
+ 本節顯示異步執行的用例和輪詢機制。  
   
-### <a name="integrate-data-from-multiple-odbc-sources"></a>整合多個 ODBC 來源的資料  
- 資料整合應用程式會以非同步方式從多個資料來源提取資料。 有些資料來自遠端資料源，有些資料來自本機檔案。 在非同步作業完成之前，應用程式無法繼續。  
+### <a name="integrate-data-from-multiple-odbc-sources"></a>整合來自多個 ODBC 源的資料  
+ 數據集成應用程式非多個資料來源取得資料。 某些數據來自遠端數據來源,有些數據來自本地檔案。 在完成非同步操作之前,應用程式無法繼續。  
   
- 應用程式可以建立事件物件，並將它與 ODBC 連接控制碼或 ODBC 語句控制碼建立關聯，而不是重複輪詢作業來判斷作業是否已完成。 然後，應用程式會呼叫作業系統同步處理 Api，以等待一個事件物件或多個事件物件（ODBC 事件和其他 Windows 事件）。 當對應的 ODBC 非同步作業完成時，ODBC 會對事件物件發出信號。  
+ 應用程式可以建立事件物件並將其與 ODBC 連接句柄或 ODBC 語句句柄相關聯,而不是重複輪詢操作以確定它是否已完成。 然後,應用程式調用作業系統同步 API 以等待一個事件物件或多個事件物件(包括 ODBC 事件和其他 Windows 事件)。 當相應的 ODBC 非同步操作完成時,ODBC 將發出事件物件信號。  
   
- 在 Windows 上，系統會使用 Win32 事件物件，並提供使用者統一的程式設計模型。 其他平臺上的驅動程式管理員可以使用這些平臺特有的事件物件執行。  
+ 在 Windows 上,將使用 Win32 事件物件,這將為使用者提供統一的程式設計模型。 其他平臺上的驅動程式管理器可以使用特定於這些平臺的事件對象實現。  
   
- 下列程式碼範例將示範如何使用連接和語句非同步通知：  
+ 以下代碼範例展示與語句非同步通知的使用:  
   
 ```  
 // This function opens NUMBER_OPERATIONS connections and executes one query on statement of each connection.  
@@ -295,8 +295,8 @@ Cleanup:
   
 ```  
   
-### <a name="determining-if-a-driver-supports-asynchronous-notification"></a>判斷驅動程式是否支援非同步通知  
- ODBC 應用程式可以藉由呼叫[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)來判斷 odbc 驅動程式是否支援非同步通知。 接著，ODBC 驅動程式管理員會使用 SQL_ASYNC_NOTIFICATION 來呼叫驅動程式的**SQLGetInfo** 。  
+### <a name="determining-if-a-driver-supports-asynchronous-notification"></a>確定驅動程式是否支援非同步通知  
+ ODBC 應用程式可以通過調用[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)來確定 ODBC 驅動程式是否支援非同步通知。 因此,ODBC 驅動程式管理器將調用驅動程式的**SQLGetInfo,SQL_ASYNC_NOTIFICATION。**  
   
 ```  
 SQLUINTEGER InfoValue;  
@@ -321,31 +321,31 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 }  
 ```  
   
-### <a name="associating-a-win32-event-handle-with-an-odbc-handle"></a>建立 Win32 事件控制碼與 ODBC 控制碼的關聯  
- 應用程式會負責使用對應的 Win32 函式來建立 Win32 事件物件。 應用程式可以將一個 Win32 事件控制碼與一個 ODBC 連接控制碼或一個 ODBC 語句控制碼產生關聯。  
+### <a name="associating-a-win32-event-handle-with-an-odbc-handle"></a>將 Win32 事件句柄與 ODBC 句柄關聯  
+ 應用程式負責使用相應的 Win32 函數創建 Win32 事件物件。 應用程式可以將一個 Win32 事件句柄與一個 ODBC 連接句柄或一個 ODBC 語句句柄相關聯。  
   
- 連接屬性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 和 SQL_ATTR_ASYNC_DBC_EVENT 會決定 ODBC 是否以非同步模式執行，以及 ODBC 是否針對連接控制碼啟用通知模式。 語句屬性 SQL_ATTR_ASYNC_ENABLE 和 SQL_ATTR_ASYNC_STMT_EVENT 判斷 ODBC 是否會在非同步模式中執行，以及 ODBC 是否針對語句控制碼啟用通知模式。  
+ 連接屬性SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE,SQL_ATTR_ASYNC_DBC_EVENT確定 ODBC 是否以非同步模式執行,以及 ODBC 是否啟用連接句柄的通知模式。 語句屬性SQL_ATTR_ASYNC_ENABLE和SQL_ATTR_ASYNC_STMT_EVENT確定 ODBC 是否以非同步模式執行,以及 ODBC 是否啟用語句句柄的通知模式。  
   
-|SQL_ATTR_ASYNC_ENABLE 或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|模式|  
+|SQL_ATTR_ASYNC_ENABLE或SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT或SQL_ATTR_ASYNC_DBC_EVENT|[模式]|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|啟用|非 null|非同步通知|  
+|啟用|非空|非同步通知|  
 |啟用|null|非同步輪詢|  
-|停用|any|同步|  
+|停用|任意|同步|  
   
- 應用程式可以暫時停用非同步作業模式。 如果已停用連接層級非同步作業，ODBC 會忽略 SQL_ATTR_ASYNC_DBC_EVENT 的值。 如果語句層級非同步作業已停用，ODBC 會忽略 SQL_ATTR_ASYNC_STMT_EVENT 的值。  
+ 應用程式可以暫時禁用非同步操作模式。 如果關閉連接級非同步操作,ODBC將忽略SQL_ATTR_ASYNC_DBC_EVENT值。 如果禁用語句級非同步操作,ODBC將忽略SQL_ATTR_ASYNC_STMT_EVENT值。  
   
- **SQLSetStmtAttr**和**SQLSetConnectAttr**的同步呼叫  
- -   **SQLSetConnectAttr**支援非同步作業，但是將**SQLSetConnectAttr**的調用設定 SQL_ATTR_ASYNC_DBC_EVENT 一律是同步的。  
+ **SQLSetStmtAttr**與**SQLSetConnectAttr**同步呼叫  
+ -   **SQLSetConnectAttr**支援非同步操作,但調用**SQLSetConnectAttr**來設定SQL_ATTR_ASYNC_DBC_EVENT始終是同步的。  
   
 -   **SQLSetStmtAttr**不支援非同步執行。  
   
- 錯誤輸出案例  
- 在建立連接之前呼叫**SQLSetConnectAttr**時，驅動程式管理員無法判斷要使用哪個驅動程式。 因此，驅動程式管理員會傳回**SQLSetConnectAttr**的成功，但屬性可能不會準備好在驅動程式中設定。 當應用程式呼叫連接功能時，驅動程式管理員會設定這些屬性。 驅動程式管理員可能會發生錯誤，因為驅動程式不支援非同步作業。  
+ 錯誤宣告機制  
+ 在建立連接之前調用**SQLSetConnectAttr**時,驅動程式管理器無法確定要使用的驅動程式。 因此,驅動程式管理器返回**SQLSetConnectAttr**的成功,但屬性可能尚未準備好在驅動程式中設置。 驅動程式管理員將在應用程式呼叫連接函數時設置這些屬性。 驅動程式管理器可能會出錯,因為驅動程式不支援非同步操作。  
   
- 連接屬性的繼承  
- 通常，連接的語句將會繼承連接屬性。 不過，SQL_ATTR_ASYNC_DBC_EVENT 的屬性不是可繼承的，而且只會影響連接作業。  
+ 連線屬性的繼承  
+ 通常,連接的語句將繼承連接屬性。 但是,屬性SQL_ATTR_ASYNC_DBC_EVENT不可繼承,並且僅影響連接操作。  
   
- 為了讓事件控制碼與 ODBC 連接控制碼產生關聯，ODBC 應用程式會呼叫 ODBC API **SQLSetConnectAttr** ，並指定 SQL_ATTR_ASYNC_DBC_EVENT 做為屬性和事件控制碼做為屬性值。 新的 ODBC 屬性 SQL_ATTR_ASYNC_DBC_EVENT 的類型為 SQL_IS_POINTER。  
+ 要將事件句柄與 ODBC 連接句柄關聯,ODBC 應用程式呼叫 ODBC API **SQLSetConnectAttr**並將SQL_ATTR_ASYNC_DBC_EVENT指定為屬性,並將事件句柄指定為屬性值。 新的 ODBC 屬性SQL_ATTR_ASYNC_DBC_EVENT類型為SQL_IS_POINTER。  
   
 ```  
 HANDLE hEvent;  
@@ -357,7 +357,7 @@ hEvent = CreateEvent(
             );  
 ```  
   
- 通常，應用程式會建立自動重設的事件物件。 ODBC 不會重設事件物件。 在呼叫任何非同步 ODBC 函式之前，應用程式必須先確定物件不是處於已通知狀態。  
+ 通常,應用程式創建自動重置事件物件。 ODBC 不會重置事件物件。 在調用任何異步 ODBC 函數之前,應用程式必須確保物件未處於信號狀態。  
   
 ```  
 SQLRETURN retcode;  
@@ -367,17 +367,17 @@ retcode = SQLSetConnectAttr ( hDBC,
                               SQL_IS_POINTER);          // Length Indicator  
 ```  
   
- SQL_ATTR_ASYNC_DBC_EVENT 是驅動程式管理員專用的屬性，不會在驅動程式中設定。  
+ SQL_ATTR_ASYNC_DBC_EVENT是驅動程式中不會設置的僅驅動程式管理員屬性。  
   
- SQL_ATTR_ASYNC_DBC_EVENT 的預設值為 Null。 如果驅動程式不支援非同步通知，取得或設定 SQL_ATTR_ASYNC_DBC_EVENT 將會傳回具有 SQLSTATE HY092 的 SQL_ERROR （不正確屬性/選項識別碼）。  
+ SQL_ATTR_ASYNC_DBC_EVENT的預設值為 NULL。 如果驅動程式不支援非同步通知,獲取或設定SQL_ATTR_ASYNC_DBC_EVENT將返回SQL_ERROR SQLSTATE HY092(無效屬性/選項識別符)。  
   
- 如果 ODBC 連接控制碼上設定的最後一個 SQL_ATTR_ASYNC_DBC_EVENT 值不是 Null，而且應用程式已藉由設定具有 SQL_ASYNC_DBC_ENABLE_ON 的屬性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 來啟用非同步模式，則會呼叫任何 ODBC 連接支援非同步模式的函式會取得完成通知。 如果 ODBC 連接控制碼上設定的最後一個 SQL_ATTR_ASYNC_DBC_EVENT 值是 Null，則不論非同步模式是否已啟用，ODBC 都不會傳送任何通知給應用程式。  
+ 如果 ODBC 連接句柄上設置的最後一個SQL_ATTR_ASYNC_DBC_EVENT值不是 NULL,並且應用程式通過設置SQL_ASYNC_DBC_ENABLE_ON的屬性SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE啟用了非同步模式,則呼叫支援非同步模式的任何 ODBC 連接函數都將收到完成通知。 如果 ODBC 連接句柄上設定的最後一個SQL_ATTR_ASYNC_DBC_EVENT值為 NULL,則無論是否啟用非同步模式,ODBC 不會向應用程式發送任何通知。  
   
- 應用程式可以在設定屬性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 之前或之後設定 SQL_ATTR_ASYNC_DBC_EVENT。  
+ 應用程式可以在設置屬性之前或之後設置SQL_ATTR_ASYNC_DBC_EVENTSQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE。  
   
- 應用程式可以在呼叫連接函數（**SQLConnect**、 **SQLBrowseConnect**或**SQLDriverConnect**）之前，先在 ODBC 連接控制碼上設定 SQL_ATTR_ASYNC_DBC_EVENT 屬性。 由於 ODBC 驅動程式管理員不知道應用程式將使用哪個 ODBC 驅動程式，因此會傳回 SQL_SUCCESS。 當應用程式呼叫連接函數時，ODBC 驅動程式管理員會檢查驅動程式是否支援非同步通知。 如果驅動程式不支援非同步通知，ODBC 驅動程式管理員會傳回具有 SQLSTATE S1_118 的 SQL_ERROR （驅動程式不支援非同步通知）。 如果驅動程式支援非同步通知，ODBC 驅動程式管理員將會呼叫驅動程式，並將對應的屬性 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 和 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT。  
+ 在調用連接函數 **(SQLConnect、SQLBrowseConnect**或**SQLDriverConnect)** 之前,應用程式**SQLBrowseConnect**可以在 ODBC 連接句柄上設置SQL_ATTR_ASYNC_DBC_EVENT屬性。 由於 ODBC 驅動程式管理員不知道應用程式將使用哪個 ODBC 驅動程式,因此它將返回SQL_SUCCESS。 當應用程式呼叫連接函數時,ODBC 驅動程式管理員將檢查驅動程式是否支援非同步通知。 如果驅動程式不支援非同步通知,則 ODBC 驅動程式管理員將返回SQL_ERROR,S1_118 SQLSTATE(驅動程式不支援非同步通知)。 如果驅動程式支援非同步通知,ODBC 驅動程式管理員將調用驅動程式,並設置相應的屬性SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK和SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT。  
   
- 同樣地，應用程式會在 ODBC 語句控制碼上呼叫**SQLSetStmtAttr** ，並指定 SQL_ATTR_ASYNC_STMT_EVENT 屬性來啟用或停用語句層級非同步通知。 由於在建立連接之後一律會呼叫語句函式，因此，如果對應的驅動程式不支援非同步作業，或驅動程式支援非同步作業，但不支援非同步通知，則**SQLSetStmtAttr**會傳回具有 SQLSTATE S1_118 （驅動程式不支援非同步通知） SQL_ERROR。  
+ 同樣,應用程式在 ODBC 語句句柄上調用**SQLSetStmtAttr,** 並指定SQL_ATTR_ASYNC_STMT_EVENT屬性以啟用或禁用語句級別的非同步通知。 由於在建立連接後始終調用語句函數,因此如果相應的驅動程式不支援非同步操作或驅動程式支援非同步操作但不支援非同步通知 **,SQLSetStmtAttr**將立即返回具有 SQLSTATE S1_118(驅動程式不支援非同步通知)SQL_ERROR。  
   
 ```  
 SQLRETURN retcode;  
@@ -387,19 +387,19 @@ retcode = SQLSetStmtAttr ( hSTMT,
                            SQL_IS_POINTER);           // length Indicator  
 ```  
   
- SQL_ATTR_ASYNC_STMT_EVENT （可以設定為 Null）是驅動程式管理員專用的屬性，不會在驅動程式中設定。  
+ SQL_ATTR_ASYNC_STMT_EVENT(可以設置為 NULL)是驅動程式中不會設置的僅驅動程式管理員屬性。  
   
- SQL_ATTR_ASYNC_STMT_EVENT 的預設值為 Null。 如果驅動程式不支援非同步通知，取得或設定 SQL_ATTR_ASYNC_ STMT_EVENT 屬性將會傳回使用 SQLSTATE HY092 的 SQL_ERROR （不正確屬性/選項識別碼）。  
+ SQL_ATTR_ASYNC_STMT_EVENT的預設值為 NULL。 如果驅動程式不支援非同步通知,獲取或設定SQL_ATTR_ASYNC_STMT_EVENT屬性將返回SQL_ERROR SQLSTATE HY092(無效屬性/選項識別符)。  
   
- 應用程式不應該將相同的事件控制碼與一個以上的 ODBC 控制碼產生關聯。 否則，如果兩個共用相同事件控制碼的控制碼上完成兩個非同步 ODBC 函式呼叫，則會遺失一個通知。 為了避免語句控制碼從連接控制碼繼承相同的事件控制碼，如果應用程式在連接控制碼上設定 SQL_ATTR_ASYNC_STMT_EVENT，ODBC 會傳回 SQL_ERROR，其中包含 SQLSTATE IM016 （無法將語句屬性設定為連接控制碼）。  
+ 應用程式不應將同一事件句柄與多個 ODBC 句柄相關聯。 否則,如果兩個異步 ODBC 函數調用在共用同一事件句柄的兩個句柄上完成,則一個通知將丟失。 為了避免語句句柄從連接句柄繼承同一事件句柄,如果應用程式在連接句柄上設置SQL_ATTR_ASYNC_STMT_EVENT,則 ODBC 返回 SQL_ERROR SQLSTATE IM016(無法將語句屬性設置為連接句柄)。  
   
-### <a name="calling-asynchronous-odbc-functions"></a>呼叫非同步 ODBC 函數  
- 啟用非同步通知並啟動非同步作業之後，應用程式就可以呼叫任何 ODBC 函數。 如果函式屬於支援非同步作業的函數集，應用程式將會在作業完成時收到完成通知，不論函數失敗或成功。  唯一的例外是應用程式使用不正確連接或語句控制碼來呼叫 ODBC 函數。 在此情況下，ODBC 不會取得事件控制碼，並將它設定為已發出信號的狀態。  
+### <a name="calling-asynchronous-odbc-functions"></a>呼叫非同步 ODBC 函式  
+ 啟用非同步通知並啟動非同步操作後,應用程式可以調用任何ODBC函數。 如果函數屬於支援非同步操作的函數集,則無論函數是失敗還是成功,應用程式都將在操作完成後收到完成通知。  唯一的例外是應用程式調用具有無效連接或語句句柄的 ODBC 函數。 在這種情況下,ODBC 將不會獲取事件句柄並將其設置為信號狀態。  
   
- 應用程式必須確保關聯的事件物件處於非信號狀態，然後才在對應的 ODBC 控制碼上啟動非同步作業。 ODBC 不會重設事件物件。  
+ 在對相應的 ODBC 句柄啟動非同步操作之前,應用程式必須確保關聯的事件物件處於非信號狀態。 ODBC 不會重置事件物件。  
   
 ### <a name="getting-notification-from-odbc"></a>從 ODBC 取得通知  
- 應用程式執行緒可以呼叫**WaitForSingleObject**來等候一個事件控制碼，或呼叫**WaitForMultipleObjects**來等候事件控制碼的陣列，並暫停直到一個或所有事件物件變成信號或逾時間隔。  
+ 應用程式線程可以調用**WaitForSingleObject**等待一個事件句柄,或調用**WaitForMultiObjects**等待事件句柄陣列,並掛起,直到一個或所有事件物件發出信號或超時間隔結束。  
   
 ```  
 DWORD dwStatus = WaitForSingleObject(  

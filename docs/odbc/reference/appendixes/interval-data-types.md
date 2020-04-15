@@ -1,5 +1,5 @@
 ---
-title: 間隔資料類型 |Microsoft Docs
+title: 間隔資料類型 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,39 +23,39 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947550"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304964"
 ---
 # <a name="interval-data-types"></a>間隔資料類型
-間隔會定義為兩個日期和時間之間的差異。 間隔是以兩種不同方式的其中一種來表示。 一個*月*的間隔是以年為單位，而整數個月的月份表示間隔。 另一個則是以天、分鐘和秒為單位來表示間隔的*日期時間*間隔。 這兩種間隔類型是相異的，不能混用，因為月份可能會有不同的天數。  
+間隔定義為兩個日期和時間之間的差異。 間隔以兩種不同的方式之一表示。 一個是*年月*間隔,以年數表示間隔,以月數表示整數。 另一個是以天、分鐘和秒表示間隔的*日間*間隔。 這兩種類型的間隔是截然不同的,不能混合,因為月份可以有不同的天數。  
   
- 間隔是由一組欄位所組成。 欄位之間有隱含的順序。 例如，在年到月的間隔中，年份會先出現，後面接著月份。 同樣地，在每分鐘的間隔中，欄位的順序為日、小時和分鐘。 間隔類型中的第一個欄位稱為「*前置*欄位」，或「*高序位*」欄位。 最後一個欄位稱為*尾端*欄位。  
+ 間隔由一組欄位組成。 欄位之間存在隱含排序。 例如,在一年到月之間,年份先到一個,然後是月份。 同樣,在一天的到分鐘的間隔中,欄位按順序按天、小時和分鐘的順序排列。 間隔類型中的第一個字段稱為*前導*欄位或*高階*欄位。 最後一個字段稱為*尾隨*欄位。  
   
- 在所有間隔中，前置欄位不會受到西曆規則的限制。 例如，在一個小時到分鐘的間隔中，小時欄位不會限制為介於0和23（含）之間，因為它通常是。 前置欄位後面的尾端欄位會遵循西曆的一般條件約束。 如需詳細資訊，請參閱本附錄稍後的[西曆條件約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)。  
+ 在所有間隔中,前導欄位不受公曆規則的約束。 例如,在小時到分鐘的間隔內,小時欄位不限制為 0 和 23(包括)之間,因為它通常如此。 前導欄位後面的尾隨字段遵循公曆的通常約束。 有關詳細資訊,請參閱[公曆的約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md),請參閱本附錄後面的限制。  
   
- 有13個間隔的 SQL 資料類型和13個 interval C 資料類型。 每個間隔 C 資料類型都會使用相同的結構（SQL_INTERVAL_STRUCT）來包含間隔資料。 （如需詳細資訊，請參閱下一節[C Interval 結構](../../../odbc/reference/appendixes/c-interval-structure.md)）。如需 SQL 資料類型的詳細資訊，請參閱[Sql 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)。如需 C 資料類型的詳細資訊，請參閱[c 資料類型](../../../odbc/reference/appendixes/c-data-types.md)。  
+ 有 13 個間隔 SQL 資料類型和 13 個間隔 C 數據類型。 每個間隔 C 數據類型都使用相同的結構,SQL_INTERVAL_STRUCT,以包含間隔數據。 (有關詳細資訊,請參閱下一節 C[間隔結構](../../../odbc/reference/appendixes/c-interval-structure.md)。有關 SQL 資料類型的詳細資訊,請參考[SQL 資料型態](../../../odbc/reference/appendixes/sql-data-types.md)。關於 C 資料型態的詳細資訊,請參考[C 資料型態](../../../odbc/reference/appendixes/c-data-types.md)。  
   
-|類型識別碼|類別|描述|  
+|型態識別碼|類別|描述|  
 |---------------------|-----------|-----------------|  
-|月|年-月|兩個日期之間的月數。|  
-|年|年-月|兩個日期之間的年數。|  
-|YEAR_TO_MONTH|年-月|兩個日期之間的年份和月份數。|  
-|DAY|日期時間|兩個日期之間的天數。|  
-|HOUR|日期時間|兩個日期/時間之間的時數。|  
-|MINUTE|日期時間|兩個日期/時間之間的分鐘數。|  
-|SECOND|日期時間|兩個日期/時間之間的秒數。|  
-|DAY_TO_HOUR|日期時間|兩個日期/時間之間的天數/小時數。|  
-|DAY_TO_MINUTE|日期時間|兩個日期/時間之間的天數/小時/分鐘數。|  
-|DAY_TO_SECOND|日期時間|兩個日期/時間之間的天數/小時/分鐘數/秒。|  
-|HOUR_TO_MINUTE|日期時間|兩個日期/時間之間的小時/分鐘數。|  
-|HOUR_TO_SECOND|日期時間|兩個日期/時間之間的小時/分鐘數/秒。|  
-|MINUTE_TO_SECOND|日期時間|兩個日期/時間之間的分鐘數/秒。|  
+|月|年月|兩個日期之間的月數。|  
+|年|年月|兩個日期之間的年數。|  
+|YEAR_TO_MONTH|年月|兩個日期之間的年數和月數。|  
+|DAY|白天|兩個日期之間的天數。|  
+|HOUR|白天|兩個日期/時間之間的小時數。|  
+|MINUTE|白天|兩個日期/時間之間的分鐘數。|  
+|SECOND|白天|兩個日期/時間之間的秒數。|  
+|DAY_TO_HOUR|白天|兩個日期/時間之間的天數/小時數。|  
+|DAY_TO_MINUTE|白天|兩個日期/時間之間的天數/小時/分鐘數。|  
+|DAY_TO_SECOND|白天|兩個日期/時間之間的天數/小時/分鐘/秒數。|  
+|HOUR_TO_MINUTE|白天|兩個日期/時間之間的小時/分鐘數。|  
+|HOUR_TO_SECOND|白天|兩個日期/時間之間的小時/分鐘/秒數。|  
+|MINUTE_TO_SECOND|白天|兩個日期/時間之間的分鐘/秒數。|  
   
  此章節包含下列主題。  
   

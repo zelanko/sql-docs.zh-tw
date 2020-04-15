@@ -1,5 +1,5 @@
 ---
-title: 使用可滾動的資料指標 |Microsoft Docs
+title: 使用可滾動游標 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079573"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289129"
 ---
 # <a name="using-scrollable-cursors"></a>使用可捲動的資料指標
-使用可滾動的資料指標需要下列三個步驟：  
+使用可捲軸游標需要以下三步驟:  
   
-1.  判斷資料指標功能。  
+1.  確定游標功能。  
   
-2.  設定資料指標。  
+2.  設置游標。  
   
-3.  Scroll 和 fetch 資料列。  
+3.  滾動和提取行。  
   
  此章節包含下列主題。  
   

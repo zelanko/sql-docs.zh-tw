@@ -1,5 +1,5 @@
 ---
-title: DROP TABLE 語句限制 |Microsoft Docs
+title: DROP TABLE 語句限制 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, DROP TABLE statement limitations
 - DROP TABLE statement limitations [ODBC]
 ms.assetid: 0a1c80f5-c9f2-4655-9bfd-0131b2f015a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49ee96941c69da962e7c000c33d6eb14f66d4dab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c296108b9ab26a6361d12ad71a1f21b21d5bea1e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68031156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303399"
 ---
 # <a name="drop-table-statement-limitations"></a>DROP TABLE 陳述式限制
-使用 Microsoft Excel 5.0、7.0 或97驅動程式時，DROP TABLE 語句會清除工作表，但不會刪除工作表名稱。 因為工作表名稱仍然存在於活頁簿中，所以無法以相同的名稱建立另一個工作表。
+使用 Microsoft Excel 5.0、7.0 或 97 驅動程式時,DROP TABLE 語句將清除工作表,但不會刪除工作表名稱。 由於工作表名稱仍然存在於工作簿中,因此無法使用相同的名稱創建另一個工作表。

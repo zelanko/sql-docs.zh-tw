@@ -1,5 +1,5 @@
 ---
-title: 資料行取向的系結 |Microsoft Docs
+title: 列-威斯綁定 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083377"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299148"
 ---
 # <a name="column-wise-binding"></a>資料行取向的繫結
-使用資料行取向系結時，應用程式會系結其中一個或兩個，或在某些情況下，將陣列系結至要傳回資料的每個資料行。 第一個陣列會保存資料值，而第二個數組則保留長度/指標緩衝區。 指標和長度值可以藉由將 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述項欄位設定為不同的值，儲存在不同的緩衝區中;如果這樣做，則會系結第三個數組。 每個陣列包含的元素數目與資料列集中的資料列數相同。  
+使用按列綁定時,應用程式將一個或兩個陣列綁定,或者在某些情況下將三個陣列綁定到要為其返回資料的每列。 第一個陣列保存資料值,第二個陣列保存長度/指示器緩衝區。 指標和長度值可以通過將SQL_DESC_INDICATOR_PTR和SQL_DESC_OCTET_LENGTH_PTR描述符欄位設置為不同的值存儲在單獨的緩衝區中;如果完成此操作,則綁定第三個陣列。 每個陣列包含的元素數與行集中的行數相同。  
   
- 應用程式會宣告它使用資料行取向的系結搭配 SQL_ATTR_ROW_BIND_TYPE 語句屬性，這會決定資料列集緩衝區的系結類型，而不是參數集緩衝區。 驅動程式會在每個陣列的後續元素中傳回每個資料列的資料。 下圖顯示資料行取向系結的運作方式。  
+ 應用程式聲明它使用SQL_ATTR_ROW_BIND_TYPE語句屬性的按列綁定,該屬性確定行集緩衝區的綁定類型,而不是參數集緩衝區。 驅動程式返回每個陣列的連續元素中每行的數據。 下圖顯示了按列綁定的工作原理。  
   
- ![三個數據行的資料行&#45;取向系結](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![列&#45;三列的明智綁定](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- 例如，下列程式碼會將10個元素的陣列系結至「訂單」、「銷售人員」和「狀態」資料行：  
+ 例如,以下代碼將 10 個元素陣列結合到 OrderID、銷售人員和狀態列:  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

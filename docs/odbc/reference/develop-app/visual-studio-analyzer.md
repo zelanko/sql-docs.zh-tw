@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Analyzer |Microsoft Docs
+title: 視覺工作室分析儀 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], about Visual Studio Analyzer
 - Visual Studio Analyzer [ODBC]
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 94f7e944c53c2b4930a3c77b2866cea7b892a6ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15ce9a18f37b8a1e47dcb7c7557a4d8af2318e93
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078993"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306696"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  
->  從 Windows 8 開始已移除 Visual Studio Analyzer 的支援（Visual Studio Analyzer 僅包含在舊版的 Visual Studio 中）。 如需替代的疑難排解機制，請使用出價追蹤。  
+>  從 Windows 8 開始刪除了對可視化工作室分析器的支援(視覺工作室分析器僅包含在舊版本的 Visual Studio 中)。 對於其他故障排除機制,請使用 BID 跟蹤。  
   
- Microsoft® Visual Studio™分析器提供 ODBC 應用程式的高階觀點。 開發人員可以從應用程式的觀點來評估、分析和偵測結構、效能和互動，而不是從元件或程式碼觀點來進行。 Visual Studio Analyzer 所收集的資訊是以事件的形式呈現，這表示應用程式的兩個元件之間有某種互動。 事件可以由函式呼叫組成，並從函式傳回，例如連接、資料庫查詢和交易。  
+ Microsoft®可視化工作室™分析器提供了 ODBC 應用程式的高級視圖。 開發人員可以從應用程式的角度而不是從元件或代碼的角度評估、分析和調試結構、性能和交互。 Visual Studio 分析器收集的資訊以事件的形式表示應用程式的兩個元件之間的某種交互。 事件可以由函數調用和函數(如連接、資料庫查詢和事務)返回組成。  
   
- 本章節包含下列主題。  
+ 本節包含以下主題。  
   
 -   [啟用 Visual Studio Analyzer](../../../odbc/reference/develop-app/enabling-visual-studio-analyzer.md)

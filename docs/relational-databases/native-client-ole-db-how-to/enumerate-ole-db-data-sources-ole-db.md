@@ -1,5 +1,5 @@
 ---
-title: 列舉 OLE DB 的資料來源（OLE DB） |Microsoft Docs
+title: 列舉 OLE DB 資料來源 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 803e3de97115bea9c467044d59a1a5a305836fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f15092bd515ed16a470c854168b228d5445e3d6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790105"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300948"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此範例會示範如何使用列舉值物件來列出可用的資料來源。  
   
- 為了列出 SQLOLEDB 列舉值可見的資料來源，取用者會呼叫[ISourcesRowset：： GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
+ 要列出 SQLOLEDB 枚舉器可見的數據源,消費者調用[ISourcesRowset::getSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
   
  根據所使用的網路程式庫而定，將會搜尋適當的網域來找出資料來源。 如果是具名管道，這就是用戶端登入的網域。 如果是 AppleTalk，這就是預設區域。 如果是 SPX/IPX，這就是連結中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝清單。 如果是 Banyan VINES，這就是本機網路上找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。 不支援多重通訊協定和 TCP/IP 通訊端。  
   
@@ -34,19 +34,19 @@ ms.locfileid: "73790105"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果必須保留認證,則應使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)對其進行加密。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>若要列舉 OLE DB 資料來源  
   
-1.  藉由呼叫**ISourceRowset：： GetSourcesRowset**來取出來來源資料列集。  
+1.  呼叫 **ISourceRowset::GetSourcesRowset** 來擷取來源資料列集。  
   
-2.  藉由呼叫**GetColumnInfo：： IColumnInfo**，尋找列舉值資料列集的描述。  
+2.  呼叫 **GetColumnInfo::IColumnInfo** 來尋找列舉程式資料列集的描述。  
   
 3.  從資料行資訊建立繫結結構。  
   
-4.  藉由呼叫**IAccessor：： CreateAccessor**來建立資料列集存取子。  
+4.  呼叫 **IAccessor::CreateAccessor** 來建立資料列集存取子。  
   
-5.  藉由呼叫**IRowset：： GetNextRows**來提取資料列。  
+5.  呼叫 **IRowset::GetNextRows** 來擷取資料列。  
   
 6.  呼叫 **IRowset::GetData** 來從資料列集的資料列複本擷取資料，然後加以處理。  
   

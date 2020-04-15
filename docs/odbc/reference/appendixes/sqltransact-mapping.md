@@ -1,5 +1,5 @@
 ---
-title: SQLTransact 對應 |Microsoft Docs
+title: SQLTransact 對應 ( P)微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLTransact
 - SQLTransact function [ODBC], mapping
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6aaa056fca860a70f81ad7c3a4cd8539512bc25d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070115"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304879"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 對應
-**SQLTransact**現在已由**SQLEndTran**取代。 這兩個函式的主要差異在於， **SQLEndTran**包含引數*HandleType*，這會指定要執行之工作的範圍。 *HandleType*引數可以指定環境或連接控制碼。 下列對**SQLTransact**的呼叫：  
+**SQLTransact**現在被**SQLEndTran**替換。 這兩個函數之間的主要區別是**SQLEndTran**包含一個參數*HandleType,* 它指定要完成的工作範圍。 *HandleType*參數可以指定環境或連接句柄。 以下調**SQLTransact**:  
   
 ```  
 SQLTransact(henv, hdbc, fType)  
 ```  
   
- 對應至  
+ 對應  
   
 ```  
 SQLEndTran(SQL_HANDLE_DBC, ConnectionHandle, CompletionType);  
 ```  
   
- 如果*ConnectionHandle*不等於 SQL_Null_HDBC。 *ConnectionHandle*引數會設定為*hdbc*的值。  
+ 如果*連接句柄*不等於SQL_NULL_HDBC。 *ConnectHandle*參數設置為*hdbc*的值。  
   
- **SQL_Transact**對應至  
+ **SQL_Transact**映射到  
   
 ```  
 SQLEndTran (SQL_HANDLE_ENV, EnvironmentHandle, CompletionType);  
 ```  
   
- 如果*ConnectionHandle*等於 SQL_Null_HDBC。 *EnvironmentHandle*引數會設定為*henv*的值。  
+ 如果*連接句柄*等於SQL_NULL_HDBC。 *環境句柄*參數設置為*henv*的值。  
   
- 在上述兩種情況中， *CompletionType*引數會設定為與*fType*相同的值。
+ 在前面的兩種情況下,*完成類型*參數設定為與*fType*相同的值。

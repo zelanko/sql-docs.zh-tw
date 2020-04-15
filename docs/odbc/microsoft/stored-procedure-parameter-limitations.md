@@ -1,5 +1,5 @@
 ---
-title: 預存程式參數限制 |Microsoft Docs
+title: 儲存過程參數限制 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36f1c5a18eb9f0b1939a2c3602f1ebe7695741f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bbd748884575791d5f170e95bc5aa465b61624b7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299198"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>預存程序參數限制
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
+>  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
   
- 執行使用10個或更多輸出參數的 Oracle 預存程式時，預存程序呼叫將會失敗，因而導致發生存取違規或 ActiveX Data Objects （ADO）錯誤。 使用適用于 Oracle 的 Microsoft ODBC 驅動程式搭配 Oracle 用戶端軟體的版本8.0.4.0.0 和8.0.4.0.4 時，可能會發生這種情況。  
+ 當執行使用 10 個或更多輸出參數的 Oracle 儲存過程時,儲存過程呼叫將失敗,從而導致存取衝突或 ActiveX 資料物件 (ADO) 錯誤。 當使用適用於 Oracle 的 Microsoft ODBC 驅動程式(適用於 Oracle 用戶端軟體的版本 8.0.4.0.0 和 8.0.4.0.4)時,可能會發生這種情況。  
   
- 若要修正此問題，必須將 Oracle 用戶端軟體升級為8.0.4.2.0 或更高版本。 如需[修補程式](../../odbc/microsoft/oracle-software-patches.md)的詳細資訊，請洽詢 Oracle Corporation。  
+ 要更正此問題,必須將 Oracle 用戶端軟體升級到版本 8.0.4.2.0 或更高版本。 有關[修補程式](../../odbc/microsoft/oracle-software-patches.md)的更多資訊,請聯繫甲骨文公司。  
   
 > [!NOTE]  
->  早期版本的 Oracle 用戶端軟體版本8.0.3.0.0 不會發生此問題。
+>  早期發佈 Oracle 用戶端軟體版本 8.0.3.0.0 時不會出現此問題。

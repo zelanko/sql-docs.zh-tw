@@ -1,5 +1,5 @@
 ---
-title: 使用預存程式時撤銷和授與許可權 |Microsoft Docs
+title: 使用儲存過程時撤銷和授予許可權 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91fcf722554fe1840465329e707c792a6bbab6db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 469e6f0fdc6794e3bd163844e43821798aa4a617
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987950"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303984"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>在使用預存程序時撤銷和授與權限
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
+>  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
   
- 當授與使用者權限，然後撤銷預存程式所存取的資料表時，Microsoft ODBC Driver for Oracle 會傳回下列錯誤訊息：  
+ 當授予使用者權限然後在儲存過程存取的表上復原時,Oracle 的 Microsoft ODBC 驅動程式將傳回以下錯誤訊息:  
   
- SQL_ERROR =-1  
+ SQL_ERROR=-1  
   
- szErrorMsg = "[Microsoft] [ODBC driver for Oracle] 錯誤的參數數目"  
+ szErrorMsg_"[微軟][Oracle的ODBC驅動程式]錯誤數量的參數"  
   
- szErrorMsg = "[Microsoft] [ODBC driver for Oracle] 語法錯誤或存取違規"  
+ szErrorMsg_"[微軟][Oracle的ODBC驅動程式]語法錯誤或訪問衝突"  
   
- 在此情況下，對 Oracle OCI 函數 Odessp （）的呼叫會失敗，但必須要有才能執行預設參數。 修改基礎資料表許可權之後，必須重新編譯預存程式，然後再執行一次。
+ 在這種情況下,對 Oracle OCI 函數 Odessp() 的調用失敗,但為了實現預設參數是必要的。 修改基礎表許可權后,必須先重新編譯存儲過程,然後再運行它。

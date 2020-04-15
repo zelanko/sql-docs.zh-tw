@@ -1,5 +1,5 @@
 ---
-title: 函數一致性 |Microsoft Docs
+title: 功能一致性 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,43 +13,43 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069748"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305589"
 ---
 # <a name="function-conformance"></a>函式一致性
-下表指出每個 ODBC 函式的一致性層級，其中已妥善定義此功能。  
+下表指示每個 ODBC 函數的一致性級別,其中定義良好。  
   
 |函式|一致性層級|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|核心|  
 |**SQLBindCol**|核心|  
-|**SQLBindParameter**|核心 [1]|  
+|**SQLBindParameter**|核心[1]|  
 |**SQLBrowseConnect**|層級 1|  
-|**SQLBulkOperations**|層級 1|  
-|**SQLCancel**|核心 [1]|  
+|**SQLBulk 操作**|層級 1|  
+|**SQLCancel**|核心[1]|  
 |**SQLCloseCursor**|核心|  
-|**SQLColAttribute**|核心 [1]|  
+|**SQLColAttribute**|核心[1]|  
 |**SQLColumnPrivileges**|層級 2|  
 |**SQLColumns**|核心|  
 |**SQLConnect**|核心|  
 |**SQLCopyDesc**|核心|  
-|**SQLDataSources**|核心|  
-|**SQLDescribeCol**|核心 [1]|  
+|**SQLData來源**|核心|  
+|**SQLDescribeCol**|核心[1]|  
 |**SQLDescribeParam**|層級 2|  
-|**SQLDisconnect**|核心|  
+|**SQL 斷線**|核心|  
 |**SQLDriverConnect**|核心|  
 |**SQLDrivers**|核心|  
-|**SQLEndTran**|核心 [1]|  
+|**SQLEndTran**|核心[1]|  
 |**SQLExecDirect**|核心|  
 |**SQLExecute**|核心|  
 |**SQLFetch**|核心|  
-|**SQLFetchScroll**|核心 [1]|  
+|**SQLFetchScroll**|核心[1]|  
 |**SQLForeignKeys**|層級 2|  
 |**SQLFreeHandle**|核心|  
 |**SQLFreeStmt**|核心|  
@@ -76,18 +76,18 @@ ms.locfileid: "68069748"
 |**SQLProcedures**|層級 1|  
 |**SQLPutData**|核心|  
 |**SQLRowCount**|核心|  
-|**SQLSetConnectAttr**|核心 [2]|  
-|**SQLSetCursorName**|核心|  
-|**SQLSetDescField**|核心 [1]|  
+|**SQLSetConnectAttr**|核心[2]|  
+|**SQLSetCursor 名稱**|核心|  
+|**SQLSetDescField**|核心[1]|  
 |**SQLSetDescRec**|核心|  
-|**SQLSetEnvAttr**|核心 [2]|  
-|**SQLSetPos**|層級 1 [1]|  
-|**SQLSetStmtAttr**|核心 [2]|  
-|**SQLSpecialColumns**|核心 [1]|  
+|**SQLSetEnvAttr**|核心[2]|  
+|**SQLSetPos**|等級 1[1]|  
+|**SQLSetStmtAttr**|核心[2]|  
+|**SQLSpecialColumns**|核心[1]|  
 |**SQLStatistics**|核心|  
 |**SQLTablePrivileges**|層級 2|  
 |**SQLTables**|核心|  
   
- [1] 此函式的重要功能僅適用于較高的一致性層級。  
+ [1] 此功能的重要功能僅在較高的一致性級別可用。  
   
- [2] 將某些屬性設定為非預設值取決於一致性層級。 如需詳細資訊，請參閱下一節[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。
+ [2] 將某些屬性設置為非預設值取決於一致性級別。 有關詳細資訊,請參閱下一節"[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)"。

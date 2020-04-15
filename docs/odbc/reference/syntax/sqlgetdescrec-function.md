@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescRec 函式 |Microsoft Docs
+title: SQLGetDescRec 函數 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetDescRec function [ODBC]
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 87d7b971b379f19f8451e924932a5e699e9b9983
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285483"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 函式
-**合規性**  
- 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
+**一致性**  
+ 推出版本: ODBC 3.0 標準合規性: ISO 92  
   
  **摘要**  
- **SQLGetDescRec**傳回目前的設定或多個欄位的描述項記錄的值。 傳回的欄位描述的名稱、 資料類型和資料行或參數資料的儲存體。  
+ **SQLGetDescRec**傳回描述符記錄的多個字段的當前設置或值。 傳回的欄位描述列或參數資料的名稱、資料類型和存儲。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,73 +53,73 @@ SQLRETURN SQLGetDescRec(
   
 ## <a name="arguments"></a>引數  
  *DescriptorHandle*  
- [輸入]描述項控制代碼。  
+ [輸入]描述符句柄。  
   
  *RecNumber*  
- [輸入]指出從中應用程式搜尋資訊的描述項記錄。 描述項記錄與記錄編號 0 表示書籤記錄編號從 1。 *RecNumber*引數必須小於或等於 SQL_DESC_COUNT 的值。 如果*RecNumber*小於或等於 SQL_DESC_COUNT，但資料列不包含資料的資料行或參數，呼叫**SQLGetDescRec**會傳回欄位的預設值。 (如需詳細資訊，請參閱 [初始設定的描述元的欄位] 中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
+ [輸入]指示應用程式從中查找資訊的描述符記錄。 描述符記錄從 1 編號,記錄編號 0 是書籤記錄。 *RecNumber*參數必須小於或等於SQL_DESC_COUNT的值。 如果*RecNumber*小於或等於SQL_DESC_COUNT但該行不包含列或參數的數據,則對**SQLGetDescRec**的調用將返回欄位的預設值。 (有關詳細資訊,請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中的"描述欄位的初始化"。  
   
  *名稱*  
- [輸出]在其中傳回與 SQL_DESC_NAME 欄位的描述項記錄緩衝區的指標。  
+ 【輸出]指向要返回描述符記錄SQL_DESC_NAME欄位的緩衝區的指標。  
   
- 如果*名稱*為 NULL，就*StringLengthPtr*仍會傳回 （不含字元資料的 null 終止字元） 的字元總數可用來傳回中指向緩衝區*名稱*。  
+ 如果*名稱*為 NULL,*則 StringLengthPtr*仍將傳回字元總數(不包括字元資料的空終止字元),這些字元可用於*返回名稱*指向的緩衝區中。  
   
- *BufferLength*  
- [輸入]長度 **名稱*緩衝區，以字元為單位。  
+ *緩衝區長度*  
+ [輸入]**名稱*緩衝區的長度(以字元表示)。  
   
- *StringLengthPtr*  
- [輸出]在其中傳回的資料可用來傳回中的字元數的緩衝區的指標\**名稱*緩衝區，但不包括 null 結束字元。 字元數目是否大於或等於*Columnsize*中的資料\**名稱*會被截斷成*Columnsize*減去的長度null 結束字元，以及是以 null 終止的驅動程式。  
+ *字串長度 Ptr*  
+ 【輸出]指向緩衝區的指標,用於返回\**名稱*緩衝區中可返回的數據字元數,不包括空終止字元。 如果字元數大於或等於*BufferLength,* 則\**名稱*中的數據將被截斷為*BufferLength*減去空終止字元的長度,並且被驅動程式終止為 null。  
   
- *TypePtr*  
- [輸出]在其中傳回描述項記錄的 SQL_DESC_TYPE 欄位值的緩衝區指標。  
+ *類型 Ptr*  
+ 【輸出]指向緩衝區的指標,用於在其中返回描述符記錄的SQL_DESC_TYPE欄位的值。  
   
- *SubTypePtr*  
- [輸出]型別是 SQL_DATETIME 或 SQL_INTERVAL 的記錄，這是在其中傳回 SQL_DESC_DATETIME_INTERVAL_CODE 欄位的值之緩衝區的指標。  
+ *子型別的 Ptr*  
+ 【輸出]對於類型為SQL_DATETIME或SQL_INTERVAL的記錄,這是指向緩衝區的指標,用於返回SQL_DESC_DATETIME_INTERVAL_CODE字段的值。  
   
- *LengthPtr*  
- [輸出]在其中傳回描述項記錄的 SQL_DESC_OCTET_LENGTH 欄位值的緩衝區指標。  
+ *長度Ptr*  
+ 【輸出]指向緩衝區的指標,用於在其中返回描述符記錄的SQL_DESC_OCTET_LENGTH欄位的值。  
   
- *PrecisionPtr*  
- [輸出]在其中傳回描述項記錄的 SQL_DESC_PRECISION 欄位值的緩衝區指標。  
+ *精密Ptr*  
+ 【輸出]指向緩衝區的指標,用於在其中返回描述符記錄的SQL_DESC_PRECISION欄位的值。  
   
- *ScalePtr*  
- [輸出]在其中傳回描述項記錄的 SQL_DESC_SCALE 欄位值的緩衝區指標。  
+ *縮放器*  
+ 【輸出]指向緩衝區的指標,用於在其中返回描述符記錄的SQL_DESC_SCALE欄位的值。  
   
- *NullablePtr*  
- [輸出]在其中傳回描述項記錄的 SQL_DESC_NULLABLE 欄位值的緩衝區指標。  
+ *空可點*  
+ 【輸出]指向緩衝區的指標,用於在其中返回描述符記錄的SQL_DESC_NULLABLE欄位的值。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR、 sql_no_data 之後或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_NO_DATA或SQL_INVALID_HANDLE。  
   
- 如果，則會傳回 SQL_NO_DATA *RecNumber*大於目前的描述項記錄的數目。  
+ 如果*RecNumber*大於當前描述符記錄數,則返回SQL_NO_DATA。  
   
- 如果，則會傳回 SQL_NO_DATA *DescriptorHandle* IRD 的控制代碼和陳述式是在已備妥或已執行的狀態，但沒有任何與其相關聯的開啟資料指標。  
+ 如果*描述符句柄*是 IRD 句柄,並且語句處於準備或執行狀態,但沒有與其關聯的打開游標,則返回SQL_NO_DATA。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLGetDescRec**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值，可由呼叫**SQLGetDiagRec**具有*HandleType*的 SQL_HANDLE_DESC 並*處理*的*DescriptorHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetDescRec** ，並說明每個內容中的此函式; 標記法 」 (DM) 」 之前描述的驅動程式管理員所傳回的 Sqlstate。 傳回每個 SQLSTATE 值相關聯的程式碼會是 SQL_ERROR，除非另有指示。  
+ 當**SQLGetDescRec**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有*Handle*SQL_HANDLE_DESC的*句柄類型*和*描述符句柄*。 下表列出了**SQLGetDescRec**通常傳回的 SQLSTATE 值,並在此函數的上下文中解釋了每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01004|字串資料，右邊已截斷|緩衝區\**名稱*仍不夠大，無法傳回完整的描述項欄位。 因此，已截斷的欄位。 中會傳回未截斷的描述項欄位的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|07009|描述項索引無效|*FieldIdentifier*引數就是 [記錄] 欄位中， *RecNumber*引數設定為 0，而*DescriptorHandle*引數為 IPD 控點。<br /><br /> (DM) *RecNumber*引數設定為 0，且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性已設定為 SQL_UB_OFF，而*DescriptorHandle*引數為 IRD 控制代碼。<br /><br /> *RecNumber*引數為小於 0。|  
-|08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成函式。|  
-|HY007|尚未備妥相關聯的陳述式|*DescriptorHandle*聯 IRD 和相關聯的陳述式控制代碼不是處於已備妥或已執行的狀態。|  
-|HY010|函數順序錯誤|(DM) *DescriptorHandle*與建立關聯*StatementHandle*以非同步方式執行的函式 （不這一個） 的呼叫和仍在呼叫此函式時所執行。<br /><br /> (DM) *DescriptorHandle*與建立關聯*StatementHandle*讓**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**已呼叫且傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*DescriptorHandle*。 此非同步函式仍在執行時**SQLGetDescRec**呼叫。|  
-|HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*DescriptorHandle*不支援此函式。|  
+|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|01004|字串資料,右截斷|緩衝區\**名稱*不夠大,無法返回整個描述符欄位。 因此,該欄位被截斷。 未壓縮的描述符位的長度在 #*StringLengthPtr*中傳回。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|07009|不合法的描述符索引|*欄位識別符*參數是記錄欄位 *,RecNumber*參數設定為 0,*描述符句柄*參數是 IPD 句柄。<br /><br /> (DM) *RecNumber*參數設定為 0,SQL_ATTR_USE_BOOKMARKS語句屬性設置為SQL_UB_OFF,*描述符句柄*參數是 IRD 句柄。<br /><br /> *RecNumber*參數小於 0。|  
+|08S01|通訊連結|在函數完成處理之前,驅動程式與驅動程式連接到的數據源之間的通信鏈路失敗。|  
+|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
+|HY007|未準備關聯語句|*描述符句柄*與 IRD 相關聯,關聯的語句句柄未處於準備或執行狀態。|  
+|HY010|函式序列錯誤|(DM)*描述符處理*與*語句句柄*相關聯,在調用此函數時,調用了非同步執行函數(不是此函數),並且仍在執行。<br /><br /> (DM)*描述符句柄*與*語句句柄*相關聯,SQL_NEED_DATA調用並返回 SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLExecute****SQLExecDirect****SQLSetPos。** 在發送所有執行時數據參數或列的數據之前,調用了此功能。<br /><br /> (DM) 對於與*描述符句柄*關聯的連接句柄,調用了非同步執行函數。 調用**SQLGetDescRec**時,此異步函數仍在執行。|  
+|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
+|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
+|IM001|驅動程式不支援此功能|(DM) 與*描述符處理*關聯的驅動程式不支援該函數。|  
   
 ## <a name="comments"></a>註解  
- 應用程式可以呼叫**SQLGetDescRec**來擷取單一資料行或參數的下列描述項欄位的值：  
+ 應用程式可以呼叫**SQLGetDescRec**來檢索單列或參數的以下描述符位的值:  
   
 -   SQL_DESC_NAME  
   
 -   SQL_DESC_TYPE  
   
--   SQL_DESC_DATETIME_INTERVAL_CODE （適用於記錄型別是 SQL_DATETIME 或 SQL_INTERVAL）  
+-   SQL_DESC_DATETIME_INTERVAL_CODE(對於其類型為SQL_DATETIME或SQL_INTERVAL的記錄)  
   
 -   SQL_DESC_OCTET_LENGTH  
   
@@ -129,24 +129,24 @@ SQLRETURN SQLGetDescRec(
   
 -   SQL_DESC_NULLABLE  
   
- **SQLGetDescRec**不會擷取標頭欄位的值。  
+ **SQLGetDescRec**不檢索標頭欄位的值。  
   
- 應用程式可以將對應的引數設定為 null 指標的欄位，以避免傳回欄位的設定。  
+ 應用程式可以通過設置與字段對應的空指標的參數來阻止欄位設置的返回。  
   
- 當應用程式呼叫**SQLGetDescRec**擷取未定義特定的描述元類型欄位的值，此函式都會傳回 SQL_SUCCESS，但是傳回欄位的值會是未定義。 例如，呼叫**SQLGetDescRec** APD 或 ARD 與 SQL_DESC_NAME 或 SQL_DESC_NULLABLE 欄位將會傳回 SQL_SUCCESS，但未定義欄位的值。  
+ 當應用程式呼叫**SQLGetDescRec**檢索特定描述符類型未定義的欄位的值時,該函數將返回SQL_SUCCESS但返回該欄位的值未定義。 例如,為 APD 或 ARD 的SQL_DESC_NAME或SQL_DESC_NULLABLE欄位調用**SQLGetDescRec**將返回SQL_SUCCESS但字段的未定義值。  
   
- 當應用程式呼叫**SQLGetDescRec**若要擷取特定的描述元類型定義但沒有預設值而且尚未設定欄位的值，此函式都會傳回 SQL_SUCCESS，但是傳回值未定義的欄位。 如需詳細資訊，請參閱 [初始設定的描述元的欄位] 中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。  
+ 當應用程式呼叫**SQLGetDescRec**檢索為特定描述符類型定義但尚未設置預設值但尚未設置的欄位的值時,該函數將返回SQL_SUCCESS但返回該字段的值未定義。 有關詳細資訊,請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中的「描述欄位的初始化」。。  
   
- 欄位的值也可以擷取個別的呼叫所**SQLGetDescField**。 如需描述項標頭或記錄中欄位的說明，請參閱 < [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 如需描述項的詳細資訊，請參閱[描述元](../../../odbc/reference/develop-app/descriptors.md)。  
+ 還可以通過調用**SQLGetDescField**單獨檢索欄位的值。 有關描述符標題或記錄中的欄位的說明,請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 有關描述符的詳細資訊,請參閱[描述子](../../../odbc/reference/develop-app/descriptors.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|資料行繫結|[SQLBindCol 函式](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|將參數繫結|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|取得描述項欄位|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|設定多個描述項欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|繫結欄|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|繫結參數|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|取得描述字列|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|設定多個描述符位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

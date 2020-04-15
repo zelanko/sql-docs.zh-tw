@@ -1,5 +1,5 @@
 ---
-title: SQLTables （dBASE 驅動程式） |Microsoft Docs
+title: SQLTables (dBASE 驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLTables
 - SQLTables function [ODBC], dBASE Driver
 ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 599dbebd8701913b71a482045be121298e39e8c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 242be06eafc7657f37f55ce266af471cbc72597f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132454"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306069"
 ---
 # <a name="sqltables-dbase-driver"></a>SQLTables (dBASE 驅動程式)
 > [!NOTE]  
->  本主題提供 dBASE 驅動程式特定的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題提供特定於 dBASE 驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
 |引數|註解|  
 |--------------|--------------|  
-|*szTableOwner*|*SzTableOwner*的唯一有效引數為 Null，因為沒有任何驅動程式支援擁有者名稱。 當*szTableOwner*設為 Null 時，就會傳回所有資料表。 TABLE_OWNER 資料行中傳回 Null。|  
-|*szTableQualifier*|在 [TABLE_QUALIFIER] 資料行中， **SQLTables**會傳回目錄的路徑。|  
-|*SzTableType*|對於 dBASE 檔案，"TABLE" 是唯一支援的資料表類型。|
+|*szTable 擁有者*|*szTableOwner*的唯一有效參數是 NULL,因為沒有一個驅動程式支援擁有者名稱。 將*szTableOwner*設定為 NULL 時,將傳回所有表。 NULL 在TABLE_OWNER列中返回。|  
+|*szTable限定*|在TABLE_QUALIFIER列中 **,SQLTables**將路徑傳回到目錄。|  
+|*SzTable 類型*|對於 dBASE 檔,"TABLE"是唯一支援的表類型。|

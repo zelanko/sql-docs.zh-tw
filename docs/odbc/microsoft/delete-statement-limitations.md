@@ -1,5 +1,5 @@
 ---
-title: DELETE 子句限制 |Microsoft Docs
+title: 刪除語句限制 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - DELETE statement limitations [ODBC]
 - ODBC SQL grammar, DELETE statement limitations
 ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 365b54ab8c0678253e184b397f1f71e39aed3b9b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096316"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303529"
 ---
 # <a name="delete-statement-limitations"></a>DELETE 陳述式限制
-Microsoft Excel 或文字驅動程式不支援 DELETE 子句。 請注意，Text 驅動程式支援 INSERT 語句。  
+Microsoft Excel 或文字驅動程式不支援 DELETE 語句。 請注意,文本驅動程式支援 INSERT 語句。  
   
- DBASE 驅動程式不支援封裝資料表來移除「已刪除」的值。  
+ dBASE 驅動程式不支援打包表以刪除"已刪除"值。  
   
- 若要讓 Paradox 驅動程式從資料表中刪除資料列，資料表必須有唯一的索引（Paradox 主鍵）。
+ 要從表中刪除行,表必須具有唯一索引(Paradox 主鍵)。

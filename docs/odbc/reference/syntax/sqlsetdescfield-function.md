@@ -1,5 +1,5 @@
 ---
-title: SQLSetDescField 函式 |Microsoft Docs
+title: SQLSetDescfield 函數 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,22 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetDescField function [ODBC]
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cca223510ebb6838048e3babbf8fdcada42f87a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 122d4b26d1d75811d4a8e252378ce8f81ca2c66b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039744"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299548"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函式
 
-**合規性**  
- 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
+**一致性**  
+ 推出版本: ODBC 3.0 標準合規性: ISO 92  
   
  **摘要**  
- **SQLSetDescField**設定描述項記錄的單一欄位的值。  
+ **SQLSetDescField**設定描述符記錄的單個字段的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,505 +47,505 @@ SQLRETURN SQLSetDescField(
   
 ## <a name="arguments"></a>引數  
  *DescriptorHandle*  
- [輸入]描述項控制代碼。  
+ [輸入]描述符句柄。  
   
  *RecNumber*  
- [輸入]表示包含應用程式試圖設定之欄位的描述項記錄。 描述項記錄編號為 0，0 表示書籤記錄的記錄號碼。 *RecNumber*標頭欄位會忽略引數。  
+ [輸入]指示包含應用程式要設置的欄位的描述符記錄。 描述符記錄從 0 編號,記錄編號 0 是書籤記錄。 對於標頭欄位,將忽略*RecNumber*參數。  
   
  *FieldIdentifier*  
- [輸入]表示要設定其值的描述元的欄位。 如需詳細資訊，請參閱 「*FieldIdentifier*引數""註解 」 一節。  
+ [輸入]指示要設置其值的描述符的欄位。 有關詳細資訊,請參閱"註釋"部分中的"*欄位識別符*參數"。  
   
  *ValuePtr*  
- [輸入]包含描述元資訊或整數值之緩衝區的指標。 資料類型而定的值*FieldIdentifier*。 如果*ValuePtr*是整數值，它可能會被視為 8 個位元組 (SQLLEN)、 4 個位元組 (SQLINTEGER) 或 2 個位元組 (SQLSMALLINT，) 的值而定*FieldIdentifier*引數。  
+ [輸入]指向包含描述符資訊的緩衝區或整數值的指標。 資料類型取決於*字段標識碼*的值。 如果*ValuePtr*是整數值,則根據*字段標識符*參數的值,它可以被視為 8 個字節 (SQLLEN)、4 個字節 (SQLINTEGER) 或 2 個字節 (SQLSMALLINT)。  
   
- *BufferLength*  
- [輸入]如果*FieldIdentifier*是 ODBC 定義欄位並*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度 **ValuePtr*。 字元字串資料，這個引數應該包含在字串中的位元組數目。  
+ *緩衝區長度*  
+ [輸入]如果*Field 識別碼*是 ODBC 定義的欄位 *,ValuePtr*指向字串或二進位緩衝區,則此參數應為 **ValuePtr*的長度。 對於字串資料,此參數應包含字串中的位元組數。  
   
- 如果*FieldIdentifier*是 ODBC 定義欄位並*ValuePtr*是一個整數， *Columnsize*會被忽略。  
+ 如果*欄位識別碼*是 ODBC 定義的欄位 *,ValuePtr*是整數,則忽略*緩衝區長度*。  
   
- 如果*FieldIdentifier*驅動程式定義的欄位，應用程式設定指出欄位給驅動程式管理員性質*Columnsize*引數。 *BufferLength*可以有下列值：  
+ 如果*Field 識別碼*是驅動程式定義的欄位,則應用程式透過設定*BufferLength*參數向驅動程式管理員指示該欄位的性質。 *緩衝區長度*可以具有以下值:  
   
--   如果*ValuePtr*是字元字串的指標，則*Columnsize*是 sql_nts; 之字串的長度。  
+-   如果*ValuePtr*是指向字串的指標,則*緩衝區長度*是字串的長度或SQL_NTS。  
   
--   如果*ValuePtr*為二進位的緩衝區的指標，則應用程式會放 SQL_LEN_BINARY_ATTR 的結果 (*長度*) 中的巨集*Columnsize*。 這會放在負值*Columnsize*。  
+-   如果*ValuePtr*是指向二進位緩衝區的指標,則應用程式將SQL_LEN_BINARY_ATTR(*長度*)宏的結果放在*緩衝區長度*中。 這將在*緩衝區長度*中放置負值。  
   
--   如果*ValuePtr*是字元字串或二進位字串以外的值的指標，則*Columnsize*應有 SQL_IS_POINTER 的值。  
+-   如果*ValuePtr*是指向字串或二進位元字串以外的值的指標,則*BufferLength*應具有該值SQL_IS_POINTER。  
   
--   如果*ValuePtr*包含固定長度的值，則*Columnsize*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT，還是 SQL_IS_USMALLINT，適當地。  
+-   如果*ValuePtr*包含固定長度值,則*緩衝區長度*為SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT或SQL_IS_USMALLINT(視適用)。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR或SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLSetDescField**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值，可由呼叫**SQLGetDiagRec**具有*HandleType*的SQL_HANDLE_DESC 並*處理*的*DescriptorHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetDescField** ，並說明每個內容中的此函式; 標記法 」 (DM) 」 之前描述的驅動程式管理員所傳回的 Sqlstate。 傳回每個 SQLSTATE 值相關聯的程式碼會是 SQL_ERROR，除非另有指示。  
+ 當**SQLSetDescField**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有*Handle*SQL_HANDLE_DESC的*句柄類型*和*描述符句柄*。 下表列出了**SQLSetDescField**通常傳回的 SQLSTATE 值,並在此函數的上下文中解釋了每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02|選項值已變更|驅動程式不支援指定的值 *\*ValuePtr* (如果*ValuePtr*是指標) 或中的值*ValuePtr* (如果*ValuePtr*是整數值)，或是 *\*ValuePtr*無效，因為實作運作的情況，因此驅動程式取代成類似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|07009|描述項索引無效|*FieldIdentifier*引數就是 [記錄] 欄位中， *RecNumber*引數為 0，而*DescriptorHandle* IPD 的控制代碼的參考引數。<br /><br /> *RecNumber*引數為小於 0，而*DescriptorHandle* ARD 或 APD 指引數。<br /><br /> *RecNumber*引數為大於最大數目的資料行或參數可支援資料來源，而*DescriptorHandle* APD 或 ARD 參考的引數。<br /><br /> (DM) *FieldIdentifier*引數為 SQL_DESC_COUNT，及 *\*ValuePtr*引數為小於 0。<br /><br /> *RecNumber*引數是等於 0，而*DescriptorHandle*隱含配置 APD 參考引數。 （這個錯誤就不需要明確配置的應用程式描述項，因為不知道應用程式明確配置描述元是 APD 或 ARD 直到執行時間。）|  
-|08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|22001|字串資料，右邊已截斷|*FieldIdentifier*引數是與 SQL_DESC_NAME，而*Columnsize*引數為大於 SQL_MAX_IDENTIFIER_LEN 的值。|  
-|HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成函式。|  
-|HY010|函數順序錯誤|(DM) *DescriptorHandle*與建立關聯*StatementHandle*以非同步方式執行的函式 （不這一個） 的呼叫和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*與其*DescriptorHandle*已相關聯，並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*DescriptorHandle*。 此非同步函式仍在執行時**SQLSetDescField**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對其中一個相關聯的陳述式控制代碼呼叫*DescriptorHandle*且傳回 SQL_PARAM_DATA_AVAILABLE。 資料已擷取所有的資料流參數前呼叫此函式。|  
-|HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY016|無法修改實作資料列描述項|*DescriptorHandle*引數為相關聯的 IRD，而*FieldIdentifier*引數不是 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。|  
-|HY021|不一致的描述元資訊|電子郵件地址 和 SQL_DESC_DATETIME_INTERVAL_CODE SQL_DESC_TYPE 欄位並非來自有效的 ODBC SQL 類型的有效驅動程式專屬 SQL 型別 （Ipd) 或有效的 ODBC C 類型 （適用於 Apd 或 ARDs）。<br /><br /> 描述項一致性檢查期間檢查的資訊不一致。 (請參閱 「 一致性檢查 」 中的**SQLSetDescRec**。)|  
-|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，以及*Columnsize*小於零，但不是等於 SQL_NTS。<br /><br /> (DM) 驅動程式的 ODBC 2 *.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，並指定引數的值*Columnsize*已不等於 4。|  
-|HY091|無效的描述項欄位識別碼|指定的值*FieldIdentifier*引數不是 ODBC 定義的欄位，而並沒有實作定義的值。<br /><br /> *FieldIdentifier*引數無效*DescriptorHandle*引數。<br /><br /> *FieldIdentifier*引數為唯讀、 ODBC 定義的欄位。|  
-|HY092|屬性/選項識別碼無效|中的值 *\*ValuePtr*不是適用於*FieldIdentifier*引數。<br /><br /> *FieldIdentifier*引數是將 SQL_DESC_UNNAMED，及*ValuePtr*已 SQL_NAMED。|  
-|HY105|無效的參數類型|(DM) 指定 SQL_DESC_PARAMETER_TYPE 欄位的值無效。 (如需詳細資訊，請參閱 「*了*引數 」 一節**SQLBindParameter**。)|  
-|HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。|  
-|HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*DescriptorHandle*不支援此函式。|  
+|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|01S02|選項值已變更|驅動程式不支援*\*ValuePtr*中指定的值(如果*ValuePtr*是指針)或*ValuePtr*中的值(如果*ValuePtr*是整數值),或者*\*ValuePtr*由於實現工作條件而無效,因此驅動程式替換了類似的值。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|07009|不合法的描述符索引|*欄位識別符*參數是記錄欄位 *,RecNumber*參數為 0,*描述符句柄*參數引用 IPD 句柄。<br /><br /> *RecNumber*參數小於 0,*描述符處理*參數引用 ARD 或 APD。<br /><br /> *RecNumber*參數大於資料來源可以支援的最大欄或參數數,*描述符處理*參數引用 APD 或 ARD。<br /><br /> (DM)*字段識別符*參數*\*SQL_DESC_COUNT,ValuePtr*參數小於 0。<br /><br /> *RecNumber*參數等於 0,*描述符句柄*參數引用隱式分配的 APD。 (顯式分配的應用程式描述符不會發生此錯誤,因為在執行時間之前,不知道顯式分配的應用程式描述符是 APD 還是 ARD。|  
+|08S01|通訊連結|在函數完成處理之前,驅動程式與驅動程式連接到的數據源之間的通信鏈路失敗。|  
+|22001|字串資料,右截斷|*字段識別符*參數SQL_DESC_NAME,*緩衝區長度*參數的值大於SQL_MAX_IDENTIFIER_LEN。|  
+|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
+|HY010|函式序列錯誤|(DM)*描述符處理*與*語句句柄*相關聯,在調用此函數時,調用了非同步執行函數(不是此函數),並且仍在執行。<br /><br /> (DM) SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**被調用用於**SQLExecute***語句句柄*,其中*描述符句柄*SQL_NEED_DATA關聯並返回。 **SQLExecDirect** 在發送所有執行時數據參數或列的數據之前,調用了此功能。<br /><br /> (DM) 對於與*描述符句柄*關聯的連接句柄,調用了非同步執行函數。 呼叫**SQLSetDescField**函數時,此異步函數仍在執行。<br /><br /> (DM) **SQLExecute、SQLExecDirect**或**SQLMore 結果**被呼叫為與*描述符句柄*關聯的語句句柄**SQLExecute**之一,並返回SQL_PARAM_DATA_AVAILABLE。 在檢索所有流參數的數據之前,已調用此函數。|  
+|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
+|HY016|無法變更行描述子|*描述符句柄*參數與 IRD 相關聯,*並且欄位識別符*參數未SQL_DESC_ARRAY_STATUS_PTR或SQL_DESC_ROWS_PROCESSED_PTR。|  
+|HY021|描述符資訊不一致|SQL_DESC_TYPE和SQL_DESC_DATETIME_INTERVAL_CODE欄位不形成有效的 ODBC SQL 類型或有效的特定於驅動程式的 SQL 類型(對於 IPD)或有效的 ODBC C 類型(對於 AD 或 AD)。<br /><br /> 在一致性檢查期間檢查的描述符資訊不一致。 (請參閱**SQLSetDescRec**中的"一致性檢查"|  
+|HY090|不合法的字串或緩衝區長度|(DM) * \*ValuePtr*是一個字串,*緩衝區長度*小於零,但不等於SQL_NTS。<br /><br /> (DM) 驅動程式是 ODBC 2 *.x*驅動程式,描述符是 ARD,*列號*參數設置為 0,為參數*BufferLength*指定的值不等於 4。|  
+|HY091|不合法的字段識別碼|為*FieldIdentifier 參數*指定的值不是 ODBC 定義的欄位,不是實現定義的值。<br /><br /> 對於*描述符處理*參數,*字段識別符*參數無效。<br /><br /> *欄位識別符*參數是一個唯讀的 ODBC 定義的欄位。|  
+|HY092|不合法屬性/選項識別碼|ValuePtr 中的值對*字段識別符*參數無效。 * \**<br /><br /> *字段標識符*參數SQL_DESC_UNNAMED,ValuePtr *ValuePtr* SQL_NAMED。|  
+|HY105|不合法參數型態|(DM) 為SQL_DESC_PARAMETER_TYPE欄位指定的值無效。 (有關詳細資訊,請參閱**SQLBind 參數**中的「*輸入輸出類型*參數」 部分。|  
+|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[ODBC 3.8 中的新增功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。|  
+|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
+|IM001|驅動程式不支援此功能|(DM) 與*描述符處理*關聯的驅動程式不支援該函數。|  
   
 ## <a name="comments"></a>註解  
- 應用程式可以呼叫**SQLSetDescField**一次設定其中任何描述項欄位。 若要一次呼叫**SQLSetDescField**單一的描述項中設定的單一欄位。 此函式可以呼叫以設定任何欄位中任何描述項類型，提供可設定的欄位。 （請參閱本節稍後的表格）。  
+ 應用程式可以調用**SQLSetDescField**來一次設置一個描述符欄位。 對**SQLSetDescField 的**一次調用在單個描述符中設置單個字段。 可以調用此函數來設置任何描述符類型中的任何欄位,前提是可以設置該欄位。 (請參閱本節後面的表。  
   
 > [!NOTE]  
->  如果呼叫**SQLSetDescField**失敗時，所識別的描述項記錄的內容*RecNumber*引數是未定義。  
+>  如果對**SQLSetDescField**的調用失敗,則*RecNumber*參數標識的描述符記錄的內容將未定義。  
   
- 若要設定透過單一呼叫的函式的多個描述項欄位，可以呼叫其他函式。 **SQLSetDescRec**函式會設定各種不同的欄位資料型別和緩衝區繫結至資料行或參數 （SQL_DESC_TYPE、 SQL_DESC_DATETIME_INTERVAL_CODE、 SQL_DESC_OCTET_LENGTH、 SQL_DESC_PRECISION、 SQL_ 影響DESC_SCALE、 SQL_DESC_DATA_PTR、 SQL_DESC_OCTET_LENGTH_PTR 和 SQL_DESC_INDICATOR_PTR 欄位）。 **SQLBindCol**或是**SQLBindParameter**可用來進行繫結的資料行或參數的完整規格。 這些函式會將特定群組的一個函式呼叫的描述項欄位。  
+ 可以調用其他函數來設置具有函數單個調用的多個描述符欄位。 **SQLSetDescRec**函數設置各種欄位,這些欄位會影響綁定到列或參數的數據類型和緩衝區(SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE、SQL_DESC_OCTET_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE、SQL_DESC_DATA_PTR、SQL_DESC_OCTET_LENGTH_PTR和SQL_DESC_INDICATOR_PTR欄位)。 **SQLBindCol**或**SQLBind參數**可用於為列或參數的綁定制定完整的規範。 這些函數設置具有一個函數調用的特定描述符欄位組。  
   
- **SQLSetDescField**可以呼叫以將位移新增至繫結指標 （SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 或 SQL_DESC_OCTET_LENGTH_PTR） 來變更繫結緩衝區。 這會變更繫結緩衝區，而不會呼叫**SQLBindCol**或是**SQLBindParameter**，可讓應用程式而不需要變更其他欄位，例如 SQL_DESC_DATA_ 變更 SQL_DESC_DATA_PTR型別。  
+ 可以調用**SQLSetDescField**來透過綁定指標(SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR或SQL_DESC_OCTET_LENGTH_PTR)添加偏移量來更改綁定緩衝區。 這將更改綁定緩衝區而不調用**SQLBindCol**或**SQLBindparameter**,這允許應用程式更改SQL_DESC_DATA_PTR而不更改其他欄位,如SQL_DESC_DATA_TYPE。  
   
- 如果應用程式呼叫**SQLSetDescField**為設定 SQL_DESC_COUNT 以外的任何欄位或延後的欄位 SQL_DESC_DATA_PTR、 SQL_DESC_OCTET_LENGTH_PTR 或 SQL_DESC_INDICATOR_PTR，記錄就會變成未繫結。  
+ 如果應用程式調用**SQLSetDescField**來設置SQL_DESC_COUNT以外的任何欄位,或者SQL_DESC_DATA_PTR、SQL_DESC_OCTET_LENGTH_PTR或SQL_DESC_INDICATOR_PTR的延遲欄位,則記錄將變為未綁定。  
   
- 描述項標頭欄位會設定藉由呼叫**SQLSetDescField**適當*FieldIdentifier*。 許多標頭欄位也是陳述式屬性，因此也可以設定由呼叫**SQLSetStmtAttr**。 這可讓應用程式設定不含第一個取得描述項控制代碼的描述項欄位。 當**SQLSetDescField**來設定標頭欄位中，會呼叫*RecNumber*引數會被忽略。  
+ 描述符標頭欄位是透過使用相應的*字段識別碼*調用**SQLSetDescField**來設定的。 許多標頭欄位也是語句屬性,因此也可以通過調用**SQLSetStmtAttr**來設置它們。 這允許應用程式在不首先獲取描述符句柄的情況下設置描述符欄位。 當調用**SQLSetDescField**來設置標頭欄位時,將忽略*RecNumber*參數。  
   
- A *RecNumber*為 0 用來設定書籤的欄位。  
+ *RecNumber* 0 用於設置書籤欄位。  
   
 > [!NOTE]  
->  陳述式屬性 SQL_ATTR_USE_BOOKMARKS 應一律設定之前先呼叫**SQLSetDescField**設定書籤欄位。 雖然這不是必要項目，強烈建議。  
+>  在調用**SQLSetDescField**來設置書籤欄位之前,應始終設置語句屬性SQL_ATTR_USE_BOOKMARKS。 雖然這不是強制性的,但強烈建議這樣做。  
   
-## <a name="sequence-of-setting-descriptor-fields"></a>設定描述項欄位的順序  
- 當設定描述項欄位，藉由呼叫**SQLSetDescField**，應用程式必須遵循特定的順序：  
+## <a name="sequence-of-setting-descriptor-fields"></a>設定描述符位的順序  
+ 使用**SQLSetDescField**設定描述符位時,應用程式必須遵循特定順序:  
   
-1.  應用程式必須先設定的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 或 SQL_DESC_DATETIME_INTERVAL_CODE 欄位。  
+1.  應用程式必須首先設置SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE或SQL_DESC_DATETIME_INTERVAL_CODE欄位。  
   
-2.  設定其中一個欄位之後，應用程式可設定的資料類型，屬性和驅動程式設定資料類型的屬性欄位的資料類型的適當的預設值。 自動將預設型別屬性欄位，可確保的描述元一律可供使用後具有指定的資料類型的應用程式。 如果應用程式明確地設定資料型別屬性，它會覆寫預設的屬性。  
+2.  設置這些欄位之一後,應用程式可以設置數據類型的屬性,並且驅動程式將數據類型屬性欄位設置為數據類型的相應預設值。 類型屬性欄位的自動預設可確保描述符始終準備好在應用程式指定數據類型後使用。 如果應用程式顯示式設定資料類型屬性,則它將重寫預設屬性。  
   
-3.  已設定其中一個步驟 1 中所列的欄位，並已設定資料型別屬性之後，應用程式可以設定 SQL_DESC_DATA_PTR。 這會提示描述項欄位的一致性檢查。 如果應用程式變更的資料型別或屬性，設定 SQL_DESC_DATA_PTR 欄位之後，驅動程式會設定為 null 指標，解除繫結資料錄的 SQL_DESC_DATA_PTR。 這會強制應用程式，依序完成適當的步驟，可描述項記錄之前。  
+3.  在步驟 1 中列出的一個字段被設置並設置了數據類型屬性後,應用程式可以SQL_DESC_DATA_PTR設置。 這提示對描述符欄位進行一致性檢查。 如果應用程式在設置SQL_DESC_DATA_PTR欄位後更改數據類型或屬性,則驅動程式將SQL_DESC_DATA_PTR設置為空指標,取消綁定記錄。 這將強制應用程式在描述符記錄可用之前按順序完成正確的步驟。  
   
 ## <a name="initialization-of-descriptor-fields"></a>描述項欄位的初始設定  
- 當配置描述元時，描述元中的欄位可以初始化為預設值，沒有預設值，初始化或是未定義類型的描述元。 下表指出每種類型的描述元，使用"D"表示該欄位預設值，初始化和"ND"表示該欄位沒有預設值初始化的每個欄位的初始化。 如果會顯示數字，該欄位的預設值是該數字。 資料表也會指出欄位是否為讀取/寫入 (R/W) 或唯讀狀態 (R)。  
+ 分配描述符時,描述符中的欄位可以初始化為預設值,在沒有預設值的情況下初始化,或者未定義描述符的類型。 下表指示每種描述符類型每個欄位的初始化,其中"D"指示該欄位用預設值初始化,而"ND"表示該欄位在沒有預設值的情況下初始化。 如果顯示數位,則欄位的預設值為該數位。 這些表還指示欄位是讀/寫 (R/W) 還是唯讀 (R)。  
   
- IRD 欄位的預設值之後才有尚未準備或執行陳述式和 IRD 填入之後，不會在已配置的陳述式控制代碼或描述元。 直到 IRD 填入之後，任何嘗試存取的 IRD 欄位會傳回錯誤。  
+ IRD 的欄位僅在準備或執行語句並填充 IRD 之後才具有預設值,而不是在分配語句句柄或描述符後。 在填充 IRD 之前,任何嘗試存取 IRD 欄位的嘗試都將傳回錯誤。  
   
- 某些描述項欄位會定義一個或多個，但不是全部的描述項類型 （ARDs 和 IRDs，和 Apd 和 Ipd）。 未定義類型的描述項欄位時，它就不需要任何使用該描述元的函式。  
+ 某些描述符位是為描述符類型的一個或多個(但不是全部)定義的(AD 和 IRD 以及 AD 和 IPD)。 當一個字段未為描述符類型定義時,使用該描述符的任何函數都不需要該欄位。  
   
- 可以存取的欄位**SQLGetDescField**一定無法由設定**SQLSetDescField**。 可藉由設定欄位**SQLSetDescField**詳列於下表。  
+ **SQLGetDescField**可以造訪的欄位不一定由**SQLSetDescField**設置。 下表列出了**SQLSetDescField**可以設置的欄位。  
   
- 下表概述標頭欄位的初始化。  
+ 標題欄位的初始化在下表中概述。  
   
-|標頭欄位名稱|type|R/W|預設|  
+|標題欄位名稱|類型|R/W|預設|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD:R APD 中：R IRD:R IPD:R|ARD:針對 SQL_DESC_ALLOC_AUTO 隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> APD 中：針對 SQL_DESC_ALLOC_AUTO 隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> IRD:SQL_DESC_ALLOC_AUTO<br /><br /> IPD:SQL_DESC_ALLOC_AUTO|  
-|SQL_DESC_ARRAY_SIZE|SQLULEN|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD: [1] APD: [1] 的 IRD:未使用的 IPD:未使用|  
-|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD:R/W APD 中：R/W IRD:R/W IPD:R/W|ARD:Null ptr APD:Null ptr IRD:Null ptr IPD:Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
-|SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:SQL_BIND_BY_COLUMN<br /><br /> APD 中：SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
-|SQL_DESC_COUNT|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:0 APD:0 IRD:D IPD:0|  
-|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ARD:未使用的 APD:未使用的 IRD:R/W IPD:R/W|ARD:未使用的 APD:未使用的 IRD:Null ptr IPD:Null ptr|  
+|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R APD: R IRD: R IPD: R|ARD:SQL_DESC_ALLOC_AUTO隱式或SQL_DESC_ALLOC_USER為顯式<br /><br /> APD:SQL_DESC_ALLOC_AUTO隱式或SQL_DESC_ALLOC_USER為顯式<br /><br /> 國際復興開發銀行:SQL_DESC_ALLOC_AUTO<br /><br /> IPD:SQL_DESC_ALLOC_AUTO|  
+|SQL_DESC_ARRAY_SIZE|SQLULEN|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD:[1] APD:[1] IRD:未使用的 IPD:未使用|  
+|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|ARD:R/W APD:R/W IRD:R/W IPD:R/W|ARD: 空點子 APD: 空點 ptr IRD: 空點 IPD: 空點子|  
+|SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD: 空點子 APD: 空點子 IRD: 未使用的 IPD: 未使用|  
+|SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD: SQL_BIND_BY_COLUMN<br /><br /> APD:SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
+|SQL_DESC_COUNT|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: 0 APD: 0 IRD: D IPD: 0|  
+|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|ARD:未使用的 APD:未使用的 IRD:R/W IPD:R/W|ARD:未使用的 APD:未使用的 IRD:空點 IPD:空點子|  
   
- [只有當驅動程式會自動填入 IPD 時，會定義 1] 這些欄位。 如果沒有，也就是未定義。 如果應用程式嘗試設定這些欄位，SQLSTATE HY091 （無效的描述項欄位識別碼） 將會傳回。  
+ [1] 僅當驅動程式自動填充 IPD 時,才會定義這些欄位。 如果沒有,它們未定義。 如果應用程式嘗試設置這些欄位,將返回 SQLSTATE HY091(無效描述符欄位識別碼)。  
   
- 記錄欄位的初始化是下表所示。  
+ 記錄欄位的初始化如下表所示。  
   
-|記錄欄位名稱|type|R/W|預設|  
+|記錄欄位名稱|類型|R/W|預設|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_BASE_TABLE_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
 |SQL_DESC_CASE_SENSITIVE|SQLINTEGER|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D[1]|  
-|SQL_DESC_CATALOG_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:SQL_C_ 預設 APD:SQL_C_ 預設 IRD:D IPD:ND|  
-|SQL_DESC_DATA_PTR|SQLPOINTER|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用 [2]|  
-|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_CATALOG_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: SQL_C_ DEFAULT APD: SQL_C_ DEFAULT IRD: D IPD: ND|  
+|SQL_DESC_DATA_PTR|SQLPointer|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD: 空點子 APD: 空點子 IRD: 未使用的 IPD: 未使用 [2]|  
+|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
 |SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D[1]|  
-|SQL_DESC_INDICATOR_PTR|SQLLEN *|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
-|SQL_DESC_LABEL|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_LENGTH|SQLULEN|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D[1]|  
-|SQL_DESC_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_NULLABLE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_OCTET_LENGTH|SQLLEN|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
+|SQL_DESC_INDICATOR_PTR|SQLLEN ||ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD: 空點子 APD: 空點子 IRD: 未使用的 IPD: 未使用|  
+|SQL_DESC_LABEL|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_LENGTH|SQLULEN|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_LITERAL_PREFIX|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_LITERAL_SUFFIX|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D[1]|  
+|SQL_DESC_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_NULLABLE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH|SQLLEN|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN ||ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD: 空點子 APD: 空點子 IRD: 未使用的 IPD: 未使用|  
 |SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:未使用的 IPD:R/W|ARD:未使用的 APD:未使用的 IRD:未使用的 IPD:D=SQL_PARAM_INPUT|  
-|SQL_DESC_PRECISION|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_ROWVER|SQLSMALLINT|ARD:未使用<br /><br /> APD 中：未使用<br /><br /> IRD:R<br /><br /> IPD:R|ARD:未使用<br /><br /> APD 中：未使用<br /><br /> IRD:ND<br /><br /> IPD:ND|  
-|SQL_DESC_SCALE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
-|SQL_DESC_SCHEMA_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_PRECISION|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_ROWVER|SQLSMALLINT|ARD:未使用<br /><br /> APD:未使用<br /><br /> IRD: R<br /><br /> IPD: R|ARD:未使用<br /><br /> APD:未使用<br /><br /> IRD: ND<br /><br /> IPD: ND|  
+|SQL_DESC_SCALE|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_SCHEMA_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
 |SQL_DESC_SEARCHABLE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_TABLE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
-|SQL_DESC_TYPE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:SQL_C_DEFAULT APD 中：SQL_C_DEFAULT IRD:D IPD:ND|  
-|SQL_DESC_TYPE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D[1]|  
-|SQL_DESC_UNNAMED|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_TABLE_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_TYPE|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
+|SQL_DESC_TYPE_NAME|SQLCHAR ||ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D[1]|  
+|SQL_DESC_UNNAMED|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R/W|ARD: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_UNSIGNED|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D[1]|  
 |SQL_DESC_UPDATABLE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
   
- [只有當驅動程式會自動填入 IPD 時，會定義 1] 這些欄位。 如果沒有，也就是未定義。 如果應用程式嘗試設定這些欄位，SQLSTATE HY091 （無效的描述項欄位識別碼） 將會傳回。  
+ [1] 僅當驅動程式自動填充 IPD 時,才會定義這些欄位。 如果沒有,它們未定義。 如果應用程式嘗試設置這些欄位,將返回 SQLSTATE HY091(無效描述符欄位識別碼)。  
   
- [IPD 中的 2] 的 SQL_DESC_DATA_PTR 欄位可以設定來強制執行一致性檢查。 在後續呼叫**SQLGetDescField**或是**SQLGetDescRec**，驅動程式不需要傳回 SQL_DESC_DATA_PTR 已設為值。  
+ [2] IPD 中的SQL_DESC_DATA_PTR欄位可以設置為強制一致性檢查。 在隨後調用**SQLGetDescField**或**SQLGetDescRec 時**,不需要驅動程式返回SQL_DESC_DATA_PTR設置為的值。  
   
-## <a name="fieldidentifier-argument"></a>FieldIdentifier 引數  
- *FieldIdentifier*引數表示要設定描述項欄位。 描述元包含*描述項標頭*下一節中，「 標頭欄位 」，以及零或多個描述的標頭欄位所組成*描述項記錄*記錄欄位所組成一節下 「 標頭欄位 」 一節所述。  
+## <a name="fieldidentifier-argument"></a>欄位識別子參數  
+ *欄位識別符*參數指示要設置的描述符位。 描述符包含*描述符標頭,* 由下一節中描述的標題欄位「標題欄位」和零個或多個*描述元記錄組成,* 由「標題欄位」部分後部分中描述的記錄欄位組成。  
   
-## <a name="header-fields"></a>標頭欄位  
- 每個描述項有標頭包含下列欄位：  
+## <a name="header-fields"></a>標題欄位  
+ 每個描述符都有一個標頭,其中包含以下欄位:  
   
- **SQL_DESC_ALLOC_TYPE [All]**  
- 這個唯讀 SQLSMALLINT 標頭欄位會指定是否描述項配置會自動由驅動程式或明確的應用程式。 應用程式可以取得，但不是能修改此欄位。 欄位是設為 SQL_DESC_ALLOC_AUTO 驅動程式所驅動程式會自動配置描述元。 它是如果設定為 SQL_DESC_ALLOC_USER 驅動程式應用程式所明確配置描述元。  
+ **SQL_DESC_ALLOC_TYPE [全部]**  
+ 此唯讀 SQLSMALLINT 標頭欄位指定描述碼是由驅動程式自動分配還是由應用程式顯式分配。 應用程式可以獲取而不是修改此欄位。 如果描述符由驅動程式自動分配,則該欄位設置為由驅動程式SQL_DESC_ALLOC_AUTO。 如果描述符由應用程式顯式分配,則驅動程式將其設置為SQL_DESC_ALLOC_USER。  
   
- **SQL_DESC_ARRAY_SIZE [應用程式描述項]**  
- ARDs，在此 SQLULEN 標頭欄位會指定資料列集中的資料列數目。 這是藉由呼叫傳回資料列數目**SQLFetch**或是**SQLFetchScroll** ，或藉由呼叫來操作**SQLBulkOperations**或**SQLSetPos**.  
+ **SQL_DESC_ARRAY_SIZE [應用程式描述符]**  
+ 在ARD中,此 SQLULEN 標頭欄位指定行集中的行數。 這是調用**SQLFetch**或**SQLFetchScroll**或透過呼叫**SQLBulk 操作**或**SQLSetPos**返回的行數。  
   
- Apd，在此 SQLULEN 標頭欄位會指定每個參數的值數目。  
+ 在 AD 中,此 SQLULEN 標頭欄位指定每個參數的值數。  
   
- 此欄位的預設值為 1。 如果 SQL_DESC_ARRAY_SIZE 大於 1，SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR APD 或 ARD 指向陣列。 每個陣列的基數等於這個欄位的值。  
+ 此欄位的預設值為 1。 如果SQL_DESC_ARRAY_SIZE大於 APD 或 ARD 指向陣列的 1、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR和SQL_DESC_OCTET_LENGTH_PTR。 每個陣列的基數等於此欄位的值。  
   
- 也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr**使用 SQL_ATTR_ROW_ARRAY_SIZE 屬性。 APD 中的這個欄位也可以藉由呼叫設定**SQLSetStmtAttr** SQL_ATTR_PARAMSET_SIZE 屬性。  
+ ARD 中的此欄位也可以通過使用SQL_ATTR_ROW_ARRAY_SIZE屬性調用**SQLSetStmtAttr**來設置。 APD 中的此欄位也可以通過使用SQL_ATTR_PARAMSET_SIZE屬性調用**SQLSetStmtAttr**來設置。  
   
- **SQL_DESC_ARRAY_STATUS_PTR [All]**  
- 針對每個描述項類型，而此 SQLUSMALLINT * 標頭欄位會指向陣列的 SQLUSMALLINT 值。 這些陣列的命名方式如下： 資料列狀態陣列 (IRD) 中，參數狀態陣列 (IPD) 中，資料列作業陣列 (ARD) 和參數作業陣列 (APD)。  
+ **SQL_DESC_ARRAY_STATUS_PTR [全部]**  
+ 對於每種描述符類型,此 SQLUSMALLINT = 標頭欄位指向 SQLUSMALLINT 值陣列。 這些陣列的命名方式如下:行狀態陣列 (IRD)、參數狀態陣列 (IPD)、行操作陣列 (ARD) 和參數操作陣列 (APD)。  
   
- 在 IRD 此標頭欄位會指向資料列狀態陣列，包含在呼叫之後的狀態值**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 陣列的資料列集內有資料列的項目數。 應用程式必須配置 SQLUSMALLINTs 的陣列，並設定為指向陣列的這個欄位。 根據預設，欄位是設為 null 指標。 驅動程式將會填入陣列-除非 SQL_DESC_ARRAY_STATUS_PTR 欄位設定為 null 指標，在此情況下產生沒有狀態值，而且不會填入陣列。  
+ 在 IRD 中,此標頭欄位指向在調用**SQLBulk 操作**、SQLFetch、SQLFetchScroll**SQLFetch**或**SQLFetchScroll****SQLSetPos**後包含狀態值的行狀態陣列。 陣列具有與行集中的行一樣多的元素。 應用程式必須分配 SQLUSMALLINT 陣列,並將此欄位設置為指向陣列。 默認情況下,該欄位設置為空指標。 驅動程式將填充陣列 ─ 除非SQL_DESC_ARRAY_STATUS_PTR欄位設定為空指標,在這種情況下不會生成狀態值,並且陣列未填充。  
   
 > [!CAUTION]  
->  如果應用程式設定的資料列狀態陣列 IRD SQL_DESC_ARRAY_STATUS_PTR 欄位所指的項目，則驅動程式行為是未定義。  
+>  如果應用程式設定 IRD SQL_DESC_ARRAY_STATUS_PTR 欄位指向的行狀態陣列的元素,則驅動程式行為未定義。  
   
- 在一開始填入陣列的呼叫所**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 如果呼叫未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，此欄位所指陣列的內容為未定義。 陣列中的項目可以包含下列值：  
+ 陣列最初由對**SQLBulk 操作****、SQLFetch、SQLFetchScroll**或**SQLSetPos****SQLFetchScroll**的調用填充。 如果調用未返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO,則此欄位指向的陣列的內容將未定義。 陣列的元素可以包含以下值:  
   
--   SQL_ROW_SUCCESS:資料列已成功擷取，而且尚未變更，因為它一次擷取。  
+-   SQL_ROW_SUCCESS:該行已成功提取,自上次提取以來未更改。  
   
--   SQL_ROW_SUCCESS_WITH_INFO:資料列已成功擷取，而且尚未變更，因為它一次擷取。 不過，資料列相關的已傳回警告。  
+-   SQL_ROW_SUCCESS_WITH_INFO:該行已成功提取,自上次提取以來未更改。 但是,返回了有關該行的警告。  
   
--   SQL_ROW_ERROR:提取資料列時發生錯誤。  
+-   SQL_ROW_ERROR:獲取行時出錯。  
   
--   SQL_ROW_UPDATED:已成功擷取的資料列，以及已經更新過一次擷取。 如果再次擷取資料列，其狀態會是 SQL_ROW_SUCCESS。  
+-   SQL_ROW_UPDATED:該行已成功提取,自上次提取以來已更新。 如果再次提取該行,則其狀態為SQL_ROW_SUCCESS。  
   
--   SQL_ROW_DELETED:因為一次擷取已刪除資料列。  
+-   SQL_ROW_DELETED:自上次提取行以來,該行已被刪除。  
   
--   SQL_ROW_ADDED:已插入資料列**SQLBulkOperations**。 如果再次擷取資料列，其狀態會是 SQL_ROW_SUCCESS。  
+-   SQL_ROW_ADDED:該行由**SQLBulk 操作**插入。 如果再次提取該行,則其狀態為SQL_ROW_SUCCESS。  
   
--   SQL_ROW_NOROW:重疊的資料列集結果集的結尾，並傳回任何資料列，對應至資料列狀態陣列的這個項目。  
+-   SQL_ROW_NOROW:行集與結果集的末尾重疊,並且不會返回對應於行狀態陣列的此元素的行。  
   
- 也可以藉由呼叫設定此欄位在 IRD **SQLSetStmtAttr** sql_attr_row_status_ptr 設定屬性。  
+ IRD 中的此欄位也可以通過使用SQL_ATTR_ROW_STATUS_PTR屬性調用**SQLSetStmtAttr**來設置。  
   
- 只有在傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 之後，才有效 IRD 的 SQL_DESC_ARRAY_STATUS_PTR 欄位。 如果傳回的程式碼不是其中一種，SQL_DESC_ROWS_PROCESSED_PTR 所指向的位置會是未定義。  
+ IRD 的SQL_DESC_ARRAY_STATUS_PTR欄位僅在返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO後才有效。 如果返回代碼不是其中之一,則SQL_DESC_ROWS_PROCESSED_PTR指向的位置未定義。  
   
- 在 IPD，此標頭欄位會指向包含每一組參數值之後呼叫的狀態資訊的參數狀態陣列**SQLExecute**或是**SQLExecDirect**。 如果在呼叫**SQLExecute**或是**SQLExecDirect**未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，此欄位所指陣列的內容為未定義。 應用程式必須配置 SQLUSMALLINTs 的陣列，並設定為指向陣列的這個欄位。 驅動程式將會填入陣列-除非 SQL_DESC_ARRAY_STATUS_PTR 欄位設定為 null 指標，在此情況下產生沒有狀態值，而且不會填入陣列。 陣列中的項目可以包含下列值：  
+ 在 IPD 中,此標頭欄位指向一個參數狀態陣列,其中包含對 SQLExecute 或**SQLExecDirect**調用**SQLExecDirect**後每組參數值的狀態資訊。 如果對 SQLExecute 或**SQLExecDirect**的呼叫未返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO,則此欄位指向的陣列**SQLExecDirect**的內容未定義。 應用程式必須分配 SQLUSMALLINT 陣列,並將此欄位設置為指向陣列。 驅動程式將填充陣列 ─ 除非SQL_DESC_ARRAY_STATUS_PTR欄位設定為空指標,在這種情況下不會生成狀態值,並且陣列未填充。 陣列的元素可以包含以下值:  
   
--   SQL_PARAM_SUCCESS:SQL 陳述式成功執行這一集的參數。  
+-   SQL_PARAM_SUCCESS:已成功為這組參數執行 SQL 語句。  
   
--   SQL_PARAM_SUCCESS_WITH_INFO:這一集的參數，成功執行的 SQL 陳述式不過，警告資訊可在診斷資料結構。  
+-   SQL_PARAM_SUCCESS_WITH_INFO:已成功為這組參數執行 SQL 語句;但是,診斷數據結構中提供了警告資訊。  
   
--   SQL_PARAM_ERROR:處理這組參數時發生錯誤。 使用診斷資料結構中的其他錯誤資訊。  
+-   SQL_PARAM_ERROR:在處理這組參數時出錯。 診斷數據結構中提供了其他錯誤資訊。  
   
--   SQL_PARAM_UNUSED:此參數集為未使用，可能是因為，一些先前的參數集而造成錯誤中止進一步處理，或因為 SQL_PARAM_IGNORE 設定為該集合中的 SQL_DESC_ARRAY_STATUS_PTR 欄位所指定之陣列的參數APD 中。  
+-   SQL_PARAM_UNUSED:此參數集未使用,可能是因為以前的一些參數集導致錯誤中止進一步處理,或者因為 aPD 的SQL_DESC_ARRAY_STATUS_PTR欄位指定的陣列中為該參數集設置了SQL_PARAM_IGNORE。  
   
--   SQL_PARAM_DIAG_UNAVAILABLE:無法使用的診斷資訊。 這個範例是資訊的當驅動程式會將參數陣列視為單一單位，因此不會產生此層級時發生錯誤。  
+-   SQL_PARAM_DIAG_UNAVAILABLE:診斷資訊不可用。 例如,當驅動程式將參數陣列視為單片單元,因此不會生成此級別的錯誤資訊。  
   
- 也可以藉由呼叫設定此欄位在 IPD **SQLSetStmtAttr** SQL_ATTR_PARAM_STATUS_PTR 屬性。  
+ IPD 中的此欄位也可以通過使用SQL_ATTR_PARAM_STATUS_PTR屬性調用**SQLSetStmtAttr**來設置。  
   
- 在 ARD，此標頭欄位會指向一個值，可以設定應用程式，以指出此資料列是否要忽略的資料列作業陣列**SQLSetPos**作業。 陣列中的項目可以包含下列值：  
+ 在 ARD 中,此標頭欄位指向一個行操作陣列,該陣列的值可以由應用程式設置,以指示是否為**SQLSetPos**操作忽略此行。 陣列的元素可以包含以下值:  
   
--   SQL_ROW_PROCEED:該資料列會包含在大量作業中使用**SQLSetPos**。 （此設定並不保證此作業會在資料列上進行。 如果資料列狀態 SQL_ROW_ERROR IRD 資料列狀態陣列中的，驅動程式可能無法執行作業的資料列中。）  
+-   SQL_ROW_PROCEED:該行包含在使用**SQLSetPos**的批量操作中。 (此設置不保證該操作將在行上發生。 如果該行的狀態SQL_ROW_ERROR IRD 行狀態陣列中,則驅動程式可能無法在行中執行操作。  
   
--   SQL_ROW_IGNORE:從大量作業使用排除的資料列**SQLSetPos**。  
+-   SQL_ROW_IGNORE: 使用**SQLSetPos**將該行從批量操作中排除。  
   
- 如果不設定陣列的任何項目，在大量作業中包含的所有資料列。 如果 ARD SQL_DESC_ARRAY_STATUS_PTR 欄位中的值是 null 指標，所有資料列會包含在大量作業。指標指向有效的陣列且陣列的所有項目已 SQL_ROW_PROCEED 解譯都是相同的。 如果陣列中的項目設定為 SQL_ROW_IGNORE，已忽略的資料列的資料列狀態陣列中的值不會變更。  
+ 如果未設置陣列的元素,則所有行都包含在批量操作中。 如果 ARD SQL_DESC_ARRAY_STATUS_PTR 欄位中的值為空指標,則所有行都包含在批量操作中;如果 ARD 欄位中的值為空指標,則所有行都包含在批量操作中。"解釋與指標指向有效陣列和陣列的所有元素都SQL_ROW_PROCEED相同。 如果陣列中的元素設置為SQL_ROW_IGNORE,則忽略行的行狀態陣列中的值不會更改。  
   
- 也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr** SQL_ATTR_ROW_OPERATION_PTR 屬性。  
+ ARD 中的此欄位也可以通過使用SQL_ATTR_ROW_OPERATION_PTR屬性調用**SQLSetStmtAttr**來設置。  
   
- APD 中，在此標頭欄位會指向參數作業陣列的值可以設定應用程式，以表示這組參數是否要忽略的時機**SQLExecute**或**SQLExecDirect**呼叫。 陣列中的項目可以包含下列值：  
+ 在 APD 中,此標頭欄位指向應用程式可以設置的值的參數操作陣列,以指示在調用 SQLExecute 或**SQLExecDirect**時是否忽略這組**SQLExecDirect**參數。 陣列的元素可以包含以下值:  
   
--   SQL_PARAM_PROCEED:一組參數納入**SQLExecute**或是**SQLExecDirect**呼叫。  
+-   SQL_PARAM_PROCEED:SQLExecute 或**SQLExecDirect**呼**SQLExecDirect**叫中包含 一組參數。  
   
--   SQL_PARAM_IGNORE:參數集排除**SQLExecute**或是**SQLExecDirect**呼叫。  
+-   SQL_PARAM_IGNORE:從 SQLExecute 或**SQLExecDirect**調用**SQLExecDirect**中排除參數集。  
   
- 如果不設定陣列的任何項目，在中使用的參數陣列中的所有組**SQLExecute**或是**SQLExecDirect**呼叫。 如果 APD 中的 [SQL_DESC_ARRAY_STATUS_PTR] 欄位中的值是 null 指標，則會使用所有的參數集;指標指向有效的陣列且陣列的所有項目已 SQL_PARAM_PROCEED 解譯都是相同的。  
+ 如果未設置陣列的元素,則 SQLExecute 或**SQLExecDirect**調用中將使用陣列中**SQLExecDirect**的所有參數集。 如果 APD SQL_DESC_ARRAY_STATUS_PTR欄位中的值為空指標,則使用所有參數集;如果使用 aPD 欄位中的值,則使用所有參數集。解釋與指標指向有效陣列和陣列的所有元素SQL_PARAM_PROCEED相同。  
   
- APD 中的這個欄位也可以藉由呼叫設定**SQLSetStmtAttr** SQL_ATTR_PARAM_OPERATION_PTR 屬性。  
+ APD 中的此欄位也可以通過使用SQL_ATTR_PARAM_OPERATION_PTR屬性調用**SQLSetStmtAttr**來設置。  
   
- **SQL_DESC_BIND_OFFSET_PTR [應用程式描述項]**  
- 這是 SQLLEN * 標頭欄位會指向繫結位移。 根據預設，它會設定為 null 指標。 如果此欄位不是 null 指標，驅動程式會取值指標，並將已取值的值加入至每個延遲欄位 （SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 描述項記錄中具有非 null 值在擷取的時間，並使用新的指標值繫結時。  
+ **SQL_DESC_BIND_OFFSET_PTR [應用程式描述符]**  
+ 此 SQLLEN = 標頭欄位指向綁定偏移量。 默認情況下,它設置為空指標。 如果此欄位不是空指標,則驅動程式將引用指標,並將已引用的值添加到在提取時描述符記錄中具有非空值(SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR 和SQL_DESC_OCTET_LENGTH_PTR)的每個延遲欄位,並在綁定時使用新的指標值。  
   
- 繫結位移是一律直接新增至 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 欄位中的值。 如果位移變更為不同的值，新的值是仍然直接新增至每個描述項欄位中的值。 新的位移不會加入至欄位值，加上任何先前的位移。  
+ 綁定偏移量始終直接添加到SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR和SQL_DESC_OCTET_LENGTH_PTR欄位中的值。 如果偏移更改為其他值,則新值仍直接添加到每個描述符欄位中的值。 新偏移量不會添加到欄位值加上任何較早的偏移量中。  
   
- 這個欄位是*延後的欄位*:它不會在其設定，但可在稍後由驅動程式需要判斷資料緩衝區的位址時的時間。  
+ 此欄位是*延遲欄位*:在設置時不使用它,但在需要確定數據緩衝區的位址時,驅動程式稍後會使用它。  
   
- 也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr** SQL_ATTR_ROW_BIND_OFFSET_PTR 屬性。 也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr** SQL_ATTR_PARAM_BIND_OFFSET_PTR 屬性。  
+ ARD 中的此欄位也可以通過使用SQL_ATTR_ROW_BIND_OFFSET_PTR屬性調用**SQLSetStmtAttr**來設置。 ARD 中的此欄位也可以通過使用SQL_ATTR_PARAM_BIND_OFFSET_PTR屬性調用**SQLSetStmtAttr**來設置。  
   
- 如需詳細資訊，請參閱中的資料列取向繫結的描述[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)並[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。  
+ 有關詳細資訊,請參閱[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)和[SQLBind 參數](../../../odbc/reference/syntax/sqlbindparameter-function.md)中行綁定的說明。  
   
- **SQL_DESC_BIND_TYPE [應用程式描述項]**  
- 此 SQLUINTEGER 標頭欄位會設定要用於繫結資料行或參數的繫結方向。  
+ **SQL_DESC_BIND_TYPE [應用程式描述符]**  
+ 此 SQLUINTEGER 標頭欄位設置綁定方向,用於綁定列或參數。  
   
- ARDs，在此欄位會指定繫結方向時**SQLFetchScroll**或是**SQLFetch**相關聯的陳述式控制代碼上呼叫。  
+ 在 AD 中,此欄位指定在關聯語句句柄上調用**SQLFetchScroll**或**SQLFetch**時綁定方向。  
   
- 若要選取資料行的資料行取向繫結，此欄位設為 SQL_BIND_BY_COLUMN （預設值）。  
+ 要為列選擇按列方向的綁定,此欄位設置為SQL_BIND_BY_COLUMN(預設值)。  
   
- 也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr**使用 SQL_ATTR_ROW_BIND_TYPE*屬性*。  
+ ARD 中的此欄位也可以通過使用 SQL_ATTR_ROW_BIND_TYPE*屬性*調用**SQLSetStmtAttr**來設置。  
   
- Apd 中，在此欄位會指定要用於動態參數的繫結方向。  
+ 在 AD 中,此欄位指定用於動態參數的綁定方向。  
   
- 若要選取資料行取向的繫結參數，此欄位設為 SQL_BIND_BY_COLUMN （預設值）。  
+ 要為參數選擇按列綁定,此欄位設置為SQL_BIND_BY_COLUMN(預設值)。  
   
- APD 中的這個欄位也可以藉由呼叫設定**SQLSetStmtAttr**與 SQL_ATTR_PARAM_BIND_TYPE*屬性*。  
+ APD 中的此欄位也可以通過使用 SQL_ATTR_PARAM_BIND_TYPE*屬性*呼叫**SQLSetStmtAttr**來設置。  
   
- **SQL_DESC_COUNT [All]**  
- 此 SQLSMALLINT 標頭欄位會指定包含資料的最高編號記錄 1 為基底的索引。 當驅動程式設定的描述元的資料結構時，它也必須設定 SQL_DESC_COUNT 欄位，以顯示多少筆記錄都很重要。 當應用程式配置此資料結構的執行個體時，它並沒有指定要保留的空間的多少筆記錄。 如應用程式指定記錄的內容，驅動程式會接受任何必要的動作，以確保描述項控制代碼會參考適當大小的資料結構。  
+ **SQL_DESC_COUNT [全部]**  
+ 此 SQLSMALLINT 標頭欄位指定包含數據的最高編號記錄的基於 1 的索引。 當驅動程式為描述符設定數據結構時,它還必須設置SQL_DESC_COUNT欄位以顯示有多少記錄很重要。 當應用程式分配此數據結構的實例時,它不必指定要為其保留多少記錄。 當應用程式指定記錄的內容時,驅動程式會執行任何必需的操作,以確保描述符句柄引用大小適當的數據結構。  
   
- SQL_DESC_COUNT 不是計數 （如果欄位是 ARD） 繫結的所有資料行或所有的參數會繫結 （如果欄位是 APD 中），但最高編號的記錄數目。 如果最高編號的資料行或參數未繫結時，則會變更 SQL_DESC_COUNT 的下一個最高編號的資料行或參數數目。 如果資料行或參數，以數字小於最高編號的資料行數目是未繫結 (藉由呼叫**SQLBindCol**具有*TargetValuePtr*引數設定為 null 指標或**SQLBindParameter**具有*ParameterValuePtr*引數設定為 null 指標)，則不會變更 SQL_DESC_COUNT。 如果其他資料行或參數數字大於最高編號的記錄，其中包含資料繫結，驅動程式會自動增加 SQL_DESC_COUNT 欄位中的值。 如果所有資料行藉由呼叫未繫結**SQLFreeStmt**使用 SQL_UNBIND 選項時，在 IRD 中 ARD SQL_DESC_COUNT 欄位會設定為 0。 如果**SQLFreeStmt**稱為 SQL_RESET_PARAMS 選項時，在 APD 和 IPD SQL_DESC_COUNT 欄位會設定為 0。  
+ SQL_DESC_COUNT不是綁定的所有數據列(如果欄位位於ARD中)或綁定的所有參數(如果欄位位於APD中)的計數,而是編號最高的記錄數。 如果最高編號的列或參數未綁定,則SQL_DESC_COUNT更改為下一個編號最高的列或參數的編號。 如果數位小於最高編號列數的列或參數未綁定(透過呼叫**SQLBindCol,** 將*TargetValuePtr*參數設定為空指標,或將*參數ValuePtr*參數設定為空指針的**SQLBindparameter),** 則不會更改SQL_DESC_COUNT。 如果附加列或參數的編號大於包含數據的最高編號記錄,則驅動程式會自動增加SQL_DESC_COUNT欄位中的值。 如果使用"SQL_UNBIND"選項調用**SQLFreeStmt**取消綁定所有列,則 ARD 和 IRD 中的SQL_DESC_COUNT欄位設置為 0。 如果使用SQL_RESET_PARAMS選項調用**SQLFreeStmt,** 則 APD 和 IPD 中的SQL_DESC_COUNT欄位設置為 0。  
   
- SQL_DESC_COUNT 中的值可以明確設定的應用程式藉由呼叫**SQLSetDescField**。 如果明確地減少 SQL_DESC_COUNT 中的值，有效地移除大於 SQL_DESC_COUNT 中的新值的數字的所有記錄。 如果 SQL_DESC_COUNT 中的值明確設定為 0，且欄位處於 ARD，會釋放繫結的書籤資料行除外的所有資料緩衝區。  
+ SQL_DESC_COUNT中的值可以通過調用**SQLSetDescField**由應用程式顯式設置。 如果顯式減小SQL_DESC_COUNT中的值,則有效刪除SQL_DESC_COUNT中數位大於新值的所有記錄。 如果SQL_DESC_COUNT中的值顯式設置為 0,並且該欄位位於 ARD 中,則釋放除綁定書簽列之外的所有數據緩衝區。  
   
- 在此欄位的 ARD 中的記錄計數不包含繫結的書籤資料行。 書籤資料行解除繫結的唯一方法是設定 SQL_DESC_DATA_PTR 欄位為 null 指標。  
+ ARD 此欄位中的記錄計數不包括綁定書簽列。 取消綁定書籤列的唯一方法是將SQL_DESC_DATA_PTR欄位設置為空指標。  
   
- **SQL_DESC_ROWS_PROCESSED_PTR [實作描述元]**  
- 在 IRD 此 SQLULEN\*標頭欄位會指向包含在呼叫之後擷取的資料列數目的緩衝區**SQLFetch**或是**SQLFetchScroll**，或大量作業中受影響的資料列數目由呼叫**SQLBulkOperations**或是**SQLSetPos**，包括錯誤資料列。  
+ **SQL_DESC_ROWS_PROCESSED_PTR [實作描述符]**  
+ 在 IRD 中\*,此 SQLULEN 標頭欄位指向一個緩衝區,其中包含調用**SQLFetch**或**SQLFetchScroll**後獲取的行數,或調用**SQLBulk 操作**或**SQLSetPos(** 包括錯誤行)在批量操作中受影響的行數。  
   
- 在 IPD，此 SQLUINTEGER * 標頭欄位會指向包含集合的已處理，包括錯誤集的參數數目的緩衝區。 如果這是 null 指標，則會不傳回任何數字。  
+ 在 IPD 中,此 SQLUINTEGER = 標頭欄位指向一個緩衝區,其中包含已處理的參數集數,包括錯誤集。 如果這是空指標,則不會返回任何數位。  
   
- 只有在已呼叫後傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 之後，才是有效 SQL_DESC_ROWS_PROCESSED_PTR **SQLFetch**或**SQLFetchScroll** （適用於一個 IRD 欄位中） 或**SQLExecute**， **SQLExecDirect**，或**SQLParamData** （適用於 IPD 欄位）。 如果呼叫，以填滿緩衝區中所指的這個欄位不會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，緩衝區的內容會未定義，除非它傳回 sql_no_data 為止，案例在緩衝區中的值設定為 0。  
+ SQL_DESC_ROWS_PROCESSED_PTR僅在調用**SQLFetch**或**SQLFetchScroll(** 對於 IRD 欄位)或 SQLExecute、SQLExecDirect**SQLExecute**或**SQLParamData(** 對於 IPD**SQLExecDirect**欄位)後返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO後才有效。 如果填充此字段指向的緩衝區的調用未返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO,則緩衝區的內容將未定義,除非返回SQL_NO_DATA,在這種情況下緩衝區中的值設置為 0。  
   
- 也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr** SQL_ATTR_ROWS_FETCHED_PTR 屬性。 APD 中的這個欄位也可以藉由呼叫設定**SQLSetStmtAttr** SQL_ATTR_PARAMS_PROCESSED_PTR 屬性。  
+ ARD 中的此欄位也可以通過使用SQL_ATTR_ROWS_FETCHED_PTR屬性調用**SQLSetStmtAttr**來設置。 APD 中的此欄位也可以通過使用SQL_ATTR_PARAMS_PROCESSED_PTR屬性調用**SQLSetStmtAttr**來設置。  
   
- 此欄位所指向的緩衝區會配置應用程式。 它是驅動程式所設定的延後的輸出緩衝區。 根據預設，它會設定為 null 指標。  
+ 此欄位指向的緩衝區由應用程式分配。 它是驅動程式設置的延遲輸出緩衝區。 默認情況下,它設置為空指標。  
   
 ## <a name="record-fields"></a>記錄欄位  
- 每個描述元會包含資料行的資料或動態參數，根據描述元的類型定義的欄位所組成的一或多個記錄。 每一筆記錄是單一資料行或參數的完整定義。  
+ 每個描述符包含一個或多個記錄,這些記錄由定義列數據或動態參數的欄位組成,具體取決於描述符的類型。 每個記錄都是單個列或參數的完整定義。  
   
- **SQL_DESC_AUTO_UNIQUE_VALUE [IRDs]**  
- 此唯讀 SQLINTEGER 記錄欄位包含 SQL_TRUE，資料行是否自動遞增資料行或 SQL_FALSE 如果資料行不是自動遞增資料行。 此欄位是唯讀的但基礎的自動遞增資料行不是一定是唯讀的。  
+ **SQL_DESC_AUTO_UNIQUE_VALUE [紅外點]**  
+ 此唯讀 SQLINTEGER 記錄欄位包含SQL_TRUE如果列是自動遞增列,則SQL_FALSE列不是自動遞增列。 此欄位是唯讀的,但基礎自動遞增列不一定是唯讀的。  
   
- **SQL_DESC_BASE_COLUMN_NAME [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含基底資料行名稱，結果集資料行。 如果基底的資料行名稱不存在 （如所示的是運算式的資料行的情況下），此變數包含空字串。  
+ **SQL_DESC_BASE_COLUMN_NAME [紅外點]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含結果集列的基本列名稱。 如果基本列名稱不存在(如表達式的列),此變數包含一個空字串。  
   
- **SQL_DESC_BASE_TABLE_NAME [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含基底資料表名稱，結果集資料行。 如果基底資料表名稱不能定義，或不適用，則此變數包含空字串。  
+ **SQL_DESC_BASE_TABLE_NAME [IRD]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含結果集列的基表名稱。 如果無法定義基表名稱或不適用,則此變數包含一個空字串。  
   
- **SQL_DESC_CASE_SENSITIVE [實作描述元]**  
- 這個唯讀 SQLINTEGER 記錄欄位包含 SQL_TRUE，如果資料行或參數來處理為區分大小寫的定序和比較或 SQL_FALSE 如果資料行也不會處理定序和比較為區分大小寫，或就非字元資料行。  
+ **SQL_DESC_CASE_SENSITIVE [實作描述符]**  
+ 此唯讀 SQLINTEGER 記錄欄位包含SQL_TRUE如果列或參數被視爲區分大小寫(用於排序規則和比較);如果該列不被視爲區分大小寫(用於排序規則和比較)或該列是否被視為非字元列,則SQL_FALSE。  
   
- **SQL_DESC_CATALOG_NAME [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含基底資料表包含資料行的目錄。 如果資料行是運算式或資料行是否屬於檢視，傳回的值會是驅動程式相關。 如果資料來源不支援目錄，或無法判斷目錄，此變數包含空字串。  
+ **SQL_DESC_CATALOG_NAME [紅外指示]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含包含欄位的基表的目錄。 如果列是表達式或列是視圖的一部分,則返回值與驅動程序相關。 如果數據來源不支援目錄或無法確定目錄,則此變數包含一個空字串。  
   
- **SQL_DESC_CONCISE_TYPE [All]**  
- 這個 SQLSMALLINT 標頭欄位會指定所有的資料類型，包括 datetime 和間隔資料類型的精確資料類型。  
+ **SQL_DESC_CONCISE_TYPE [全部]**  
+ 此 SQLSMALLINT 標頭欄位指定所有資料類型(包括日期時間和間隔數據類型)的簡明數據類型。  
   
- 橫條、 的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE，SQL_DESC_DATETIME_INTERVAL_CODE 欄位中的值都相互依賴。 設定每次一個欄位，另也必須設定。 可以藉由呼叫設定 SQL_DESC_CONCISE_TYPE **SQLBindCol**或是**SQLBindParameter**，或**SQLSetDescField**。 可以藉由呼叫設定 SQL_DESC_TYPE **SQLSetDescField**或是**SQLSetDescRec**。  
+ SQL_DESC_CONCISE_TYPE、SQL_DESC_TYPE和SQL_DESC_DATETIME_INTERVAL_CODE欄位中的值是相互依賴的。 每次設置其中一個字段時,還必須設置另一個字段。 SQL_DESC_CONCISE_TYPE可以通過調用**SQLBindCol**或**SQLBind 參數**(或**SQLSetDescField)** 來設置。 SQL_DESC_TYPE可以通過調用**SQLSetDescField**或**SQLSetDescRec**來設置。  
   
- 如果 SQL_DESC_CONCISE_TYPE 設定為精簡的資料類型的間隔或 datetime 資料類型以外的 SQL_DESC_TYPE 欄位設定為相同的值和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位設定為 0。  
+ 如果SQL_DESC_CONCISE_TYPE設置為間隔或日期時間數據類型以外的簡明數據類型,則SQL_DESC_TYPE欄位設置為相同的值,SQL_DESC_DATETIME_INTERVAL_CODE欄位設置為 0。  
   
- SQL_DESC_CONCISE_TYPE 設定為精簡的日期時間或間隔資料類型，如果 SQL_DESC_TYPE 欄位設定為對應的詳細資訊型別 （如果是 SQL_DATETIME 或 SQL_INTERVAL） 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位設定為適當的次要代碼。  
+ 如果SQL_DESC_CONCISE_TYPE設置為簡明日期時間或間隔數據類型,則SQL_DESC_TYPE欄位設置為相應的詳細類型(SQL_DATETIME或SQL_INTERVAL),並將SQL_DESC_DATETIME_INTERVAL_CODE欄位設置為相應的子代碼。  
   
- **[應用程式描述項和 Ipd] 的 SQL_DESC_DATA_PTR**  
- 此 SQLPOINTER 資料錄的欄位會指向將包含的參數值 （Apd) 或 （適用於 ARDs) 的資料行值的變數。 這個欄位是*延後的欄位*。 它不會在其設定，但在稍後由驅動程式用來擷取資料的時間。  
+ **SQL_DESC_DATA_PTR [應用程式描述符與 IPD]**  
+ 此 SQLPOINTER 記錄欄位指向將包含參數值(對於 AD)或列值(用於 AD)的變數。 此欄位是*遞延欄位*。 它在設置時不使用,但驅動程式稍後使用它來檢索數據。  
   
- ARD 的 SQL_DESC_DATA_PTR 欄位所指定的資料行是未繫結，如果*TargetValuePtr*呼叫中的引數**SQLBindCol**為 null 指標，或如果 SQL_DESC_DATA_PTR 欄位中設定 ARD若要呼叫**SQLSetDescField**或是**SQLSetDescRec**為 null 指標。 如果設定 SQL_DESC_DATA_PTR 欄位為 null 指標，不會影響其他欄位。  
+ 如果調用**SQLBindCol**中的*TargetValuePtr*參數為空指標,或者 ARD 中的SQL_DESC_DATA_PTR欄位由對**SQLSetDescField**或**SQLSetDescRec**的調用設置為空指標,則 ARD SQL_DESC_DATA_PTR欄位指定的列將取消綁定。 如果SQL_DESC_DATA_PTR欄位設置為空指標,則其他欄位不受影響。  
   
- 如果在呼叫**SQLFetch**或是**SQLFetchScroll** ，在此欄位所指向緩衝區的填滿未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，緩衝區的內容為未定義。  
+ 如果對**SQLFetch**或**SQLFetchScroll**的調用填充此欄位指向的緩衝區未返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO,則緩衝區的內容未定義。  
   
- 每當設定 APD、 ARD 或 IPD 的 SQL_DESC_DATA_PTR 欄位時，驅動程式會檢查中的 SQL_DESC_TYPE 欄位的值包含其中一個有效的 ODBC C 資料類型或驅動程式特定資料類型，以及其他會影響的資料類型的所有欄位都一致。 IPD 的 SQL_DESC_DATA_PTR 欄位只能使用會提示一致性檢查。 具體來說，如果應用程式在設定 SQL_DESC_DATA_PTR 欄位 IPD 和更新版本呼叫**SQLGetDescField**此欄位中，它不一定會傳回設定一樣的值。 如需詳細資訊，請參閱 「 一致性檢查 」，在[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)。  
+ 每當設定 APD、ARD 或 IPD 的SQL_DESC_DATA_PTR欄位時,驅動程式都會檢查SQL_DESC_TYPE欄位中的值是否包含有效的 ODBC C 資料類型或特定於驅動程式的數據類型,並且影響數據類型的所有其他欄位是否一致。 提示一致性檢查是 IPD SQL_DESC_DATA_PTR欄位的唯一用途。 具體而言,如果應用程式設置 IPD 的SQL_DESC_DATA_PTR欄位,並在此欄位上調用**SQLGetDescField,** 則不一定返回它設置的值。 有關詳細資訊,請參閱[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)中的「一致性檢查」。  
   
- **SQL_DESC_DATETIME_INTERVAL_CODE [All]**  
- 如果是 SQL_DATETIME 或 SQL_INTERVAL 的 SQL_DESC_TYPE 欄位時，此 SQLSMALLINT 記錄欄位就會包含特定的日期時間或間隔資料類型的子代碼。 這是針對 SQL 和 C 資料類型，則為 true。 程式碼所組成的資料類型名稱"CODE"（針對 datetime 類型），取代 「 類型 」 或 「 C_TYPE 」 或 「 程式碼 」 取代 「 間隔 」 或 「 C_INTERVAL"（針對間隔類型）。  
+ **SQL_DESC_DATETIME_INTERVAL_CODE [全部]**  
+ 當SQL_DESC_TYPE欄位SQL_DATETIME或SQL_INTERVAL時,此 SQLSMALLINT 記錄欄位包含特定日期時間或間隔數據類型的子代碼。 SQL 和 C 數據類型都是如此。 代碼由資料類型名稱組成,其中"CODE"代替了"TYPE"或"C_TYPE"(用於日期時間類型),或"CODE"代替"INTERVAL"或"C_INTERVAL"(對於間隔類型)。  
   
- 如果 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 中的應用程式描述元會設定為 SQL_C_DEFAULT，描述項不是陳述式控制代碼相關聯的 SQL_DESC_DATETIME_INTERVAL_CODE 內容為未定義。  
+ 如果應用程式描述符中的SQL_DESC_TYPE和SQL_DESC_CONCISE_TYPE設置為SQL_C_DEFAULT,並且描述符不與語句句柄關聯,則SQL_DESC_DATETIME_INTERVAL_CODE的內容未定義。  
   
- 下表所列的日期時間資料類型時，可以設定此欄位。  
+ 此欄位可用於下表中列出的日期時間數據類型。  
   
 |日期時間類型|DATETIME_INTERVAL_CODE|  
 |--------------------|------------------------------|  
 |SQL_TYPE_DATE/SQL_C_TYPE_DATE|SQL_CODE_DATE|  
 |SQL_TYPE_TIME/SQL_C_TYPE_TIME|SQL_CODE_TIME|  
-|SQL_TYPE_TIMESTAMP/ SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
+|SQL_TYPE_TIMESTAMP/SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
   
- 下表所列的間隔資料類型，可以設定此欄位。  
+ 此欄位可用於下表中列出的間隔數據類型。  
   
 |間隔類型|DATETIME_INTERVAL_CODE|  
 |-------------------|------------------------------|  
-|SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
-|SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
-|SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
-|SQL_INTERVAL_DAY_TO_SECOND / SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
-|SQL_INTERVAL_HOUR / SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-|SQL_INTERVAL_HOUR_TO_MINUTE / SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
-|SQL_INTERVAL_HOUR_TO_SECOND / SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
-|SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
-|SQL_INTERVAL_MINUTE_TO_SECOND / SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
-|SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-|SQL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
-|SQL_INTERVAL_YEAR / SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
-|SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
+|SQL_INTERVAL_DAY/ SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY_TO_HOUR/SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
+|SQL_INTERVAL_DAY_TO_MINUTE/SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
+|SQL_INTERVAL_DAY_TO_SECOND/SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_HOUR/SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
+|SQL_INTERVAL_HOUR_TO_MINUTE/SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_SECOND/SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
+|SQL_INTERVAL_MINUTE/SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
+|SQL_INTERVAL_MINUTE_TO_SECOND/SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
+|SQL_INTERVAL_MONTH/SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
+|SQL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
+|SQL_INTERVAL_YEAR_TO_MONTH/SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
- 如需有關資料間隔，而此欄位的詳細資訊，請參閱[資料類型識別碼和描述元](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)。  
+ 關於資料間隔與此欄位的詳細資訊,請參考[資料類型識別碼與描述符](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)號 。  
   
- **SQL_DESC_DATETIME_INTERVAL_PRECISION [All]**  
- 此 SQLINTEGER 記錄欄位包含間隔開頭有效位數，如果 SQL_DESC_TYPE 欄位為 SQL_INTERVAL。 當 SQL_DESC_DATETIME_INTERVAL_CODE 欄位設定為間隔資料類型時，此欄位設為預設間隔開頭有效位數。  
+ **SQL_DESC_DATETIME_INTERVAL_PRECISION [全部]**  
+ 如果SQL_DESC_TYPE字段SQL_INTERVAL,則此 SQLINTEGER 記錄欄位包含間隔前導精度。 當SQL_DESC_DATETIME_INTERVAL_CODE欄位設置為間隔數據類型時,此欄位設置為預設間隔前導精度。  
   
- **SQL_DESC_DISPLAY_SIZE [IRDs]**  
- 此唯讀 SQLINTEGER 記錄欄位包含顯示資料行的資料所需的字元的數上限。  
+ **SQL_DESC_DISPLAY_SIZE [IRD]**  
+ 此唯讀 SQLINTEGER 記錄欄位包含顯示列中資料所需的最大字元數。  
   
- **SQL_DESC_FIXED_PREC_SCALE [實作描述元]**  
- 此唯讀 SQLSMALLINT 記錄欄位設為 SQL_TRUE，如果資料行是精確數值資料行，且具有固定有效位數和非零值的小數位數或 SQL_FALSE 如果資料行不是確切的數值資料行具有固定有效位數和小數位數。  
+ **SQL_DESC_FIXED_PREC_SCALE [實作描述符]**  
+ 如果列是精確數值列且具有固定精度和非零比例,則此唯讀 SQLSMALLINT 記錄欄位設定為SQL_TRUE,如果列不是具有固定精度和刻度的精確數位列,則SQL_FALSE。  
   
- **SQL_DESC_INDICATOR_PTR [應用程式描述項]**  
- 在 ARDs，這是 SQLLEN * 記錄欄位會指向指標變數。 如果資料行的值是 NULL，此變數會包含 SQL_NULL_DATA。 Apd，如這個指標變數來指定 NULL 的動態引數將設定為 SQL_NULL_DATA。 否則，變數會是零 （除非 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 中的值都是相同的指標）。  
+ **SQL_DESC_INDICATOR_PTR [應用程式描述符]**  
+ 在 ARD 中,此 SQLLEN = 記錄欄位指向指標變數。 如果列值為 NULL,則此變數包含SQL_NULL_DATA。 對於 AD,指標變數設定為SQL_NULL_DATA指定 NULL 動態參數。 否則,變數為零(除非SQL_DESC_INDICATOR_PTR和SQL_DESC_OCTET_LENGTH_PTR中的值是相同的指標)。  
   
- 如果 ARD SQL_DESC_INDICATOR_PTR 欄位會是 null 指標，驅動程式無法傳回資料行是否為 NULL 的相關資訊。 如果資料行為 NULL 和 SQL_DESC_INDICATOR_PTR 為 null 指標，SQLSTATE 22002 （指標變數所需但未提供） 時，會傳回驅動程式會嘗試在呼叫之後填入緩衝區**SQLFetch**或**SQLFetchScroll**。 如果在呼叫**SQLFetch**或是**SQLFetchScroll**未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，緩衝區的內容為未定義。  
+ 如果ARD中的SQL_DESC_INDICATOR_PTR欄位為空指標,則阻止驅動程式返回有關列是否為NULL的資訊。 如果列為 NULL 且SQL_DESC_INDICATOR_PTR為空指標,則當驅動程式嘗試在調用**SQLFetch**或**SQLFetchScroll**後填充緩衝區時,將返回 SQLSTATE 22002(需要但未提供指標變數)。 如果對**SQLFetch**或**SQLFetchScroll**的調用未返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO,則緩衝區的內容未定義。  
   
- SQL_DESC_INDICATOR_PTR 欄位會決定是否要設定 SQL_DESC_OCTET_LENGTH_PTR 所指的欄位。 如果資料行的資料值為 NULL，驅動程式會將指標變數設定為 SQL_NULL_DATA。 然後不設定 SQL_DESC_OCTET_LENGTH_PTR 所指的欄位。 如果 NULL 值就不會發生在擷取期間，SQL_DESC_INDICATOR_PTR 所指向緩衝區設定為零和 SQL_DESC_OCTET_LENGTH_PTR 所指向緩衝區設為資料的長度。  
+ SQL_DESC_INDICATOR_PTR欄位確定是否設置了SQL_DESC_OCTET_LENGTH_PTR指向的欄位。 如果列的資料值為 NULL,則驅動程式將指示器變數設定為SQL_NULL_DATA。 然後不設置SQL_DESC_OCTET_LENGTH_PTR指向的欄位。 如果在提取過程中未遇到 NULL 值,則SQL_DESC_INDICATOR_PTR指向的緩衝區設置為零,SQL_DESC_OCTET_LENGTH_PTR指向的緩衝區設置為數據的長度。  
   
- APD 中的 [SQL_DESC_INDICATOR_PTR] 欄位為 null 指標，如果應用程式無法使用此描述項記錄，來指定 NULL 引數。  
+ 如果 APD 中的SQL_DESC_INDICATOR_PTR欄位是空指標,則應用程式不能使用此描述符記錄指定 NULL 參數。  
   
- 這個欄位是*延後的欄位*:它不會在其設定，但會在稍後驅動程式用來表示 null 屬性 （適用於 ARDs)，或決定 null 屬性 （Apd) 的時間。  
+ 此欄位是*遞延欄位*:在設定時不使用它,但驅動程式稍後使用它來指示 null(對於 AD)或確定 null(對於 AD)。  
   
- **SQL_DESC_LABEL [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含資料行標籤或標題。 如果資料行沒有標籤，此變數會包含資料行名稱。 如果是未命名的資料行，而且沒有標籤，此變數包含空字串。  
+ **SQL_DESC_LABEL [紅外指示]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含列標籤或標題。 如果列沒有標籤,則此變數包含列名稱。 如果列未命名且未標記,則此變數包含一個空字串。  
   
- **SQL_DESC_LENGTH [All]**  
- 此 SQLULEN 記錄欄位會是最大頁數或實際長度字元字串中字元或二進位資料類型，以位元組為單位。 這是固定長度資料類型的最大長度或可變長度資料類型的實際長度。 其值一律不包括結束的字元字串的 null 終止字元。 類型為 SQL_TYPE_DATE、 SQL_TYPE_TIME、 SQL_TYPE_TIMESTAMP，或其中一個 SQL 間隔資料類型的值，此欄位會有以字元為單位的日期時間或間隔值代表的字元字串的長度。  
+ **SQL_DESC_LENGTH [全部]**  
+ 此 SQLULEN 記錄欄位是字元字串的最大長度或實際長度,或以位元組為單位的二進位資料類型。 它是固定長度數據類型的最大長度,或可變長度數據類型的實際長度。 其值始終排除結束字元字串的 null 終止字元。 對於類型為SQL_TYPE_DATE、SQL_TYPE_TIME、SQL_TYPE_TIMESTAMP或 SQL 間隔數據類型之一的值,此欄位具有日期時間或間隔值的字串表示的字元長度。  
   
- 此欄位中的值可能不同於 「 長度 」 做為 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能與 ODBC 2 *.x*中定義的「長度」值不同。 關於詳細資訊,請參閱附錄[D:資料型態](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
- **SQL_DESC_LITERAL_PREFIX [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含驅動程式會辨識為此資料類型的常值的前置詞的字元。 此變數包含空字串資料類型不適用的常值的前置詞。  
+ **SQL_DESC_LITERAL_PREFIX [紅外點]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含驅動程式識別為此資料類型文本的前置字元或字元。 此變數包含不適用於文本前置資料類型的空字串。  
   
- **SQL_DESC_LITERAL_SUFFIX [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含驅動程式會辨識為此資料類型的常值後置詞的字元。 此變數包含空字串資料類型不適用的文字尾碼。  
+ **SQL_DESC_LITERAL_SUFFIX [IRD]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含驅動程式識別為此資料類型文本的後綴的字元或字元。 此變數包含不適用於文本後綴的資料類型的空字串。  
   
- **SQL_DESC_LOCAL_TYPE_NAME [實作描述元]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含任何當地語系化 （原生語言） 的名稱可能不同於一般的資料型別名稱的資料類型。 如果沒有當地語系化的名稱，則會傳回空字串。 這個欄位是僅供顯示。  
+ **SQL_DESC_LOCAL_TYPE_NAME [實作描述符]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含資料類型可能與資料類型的常規名稱不同的任何當地語系化(母語)名稱。 如果沒有當地語系化名稱,則返回一個空字串。 此欄位僅用於顯示目的。  
   
- **與 SQL_DESC_NAME [實作描述元]**  
- 此 SQLCHAR * 資料列描述項記錄欄位包含的資料行別名，如果它適用於。 如果不適用資料行別名，則會傳回資料行名稱。 在任一情況下，驅動程式會將 SQL_DESC_UNNAMED 欄位設定為 SQL_NAMED 時它會設定與 SQL_DESC_NAME 欄位。 如果沒有任何資料行名稱或資料行別名，驅動程式中與 SQL_DESC_NAME 欄位會傳回空字串，並將 SQL_DESC_UNNAMED 欄位設定為 sql_unnamed 時。  
+ **SQL_DESC_NAME [實作描述符]**  
+ 此 SQLCHAR = 行描述符中的記錄欄位包含列別名(如果適用)。 如果列別名不適用,則返回列名稱。 在這兩種情況下,驅動程式在設置SQL_DESC_NAME欄位時將SQL_DESC_UNNAMED欄位設置為SQL_NAMED。 如果沒有列名或列別名,驅動程式將返回SQL_DESC_NAME欄位中的空字串,並將SQL_DESC_UNNAMED欄位設置為SQL_UNNAMED。  
   
- 應用程式可以設定與 SQL_DESC_NAME 欄位 IPD 的參數名稱或別名，以依名稱指定預存程序參數。 (如需詳細資訊，請參閱 <<c0> [ 依名稱 （具名參數） 的繫結參數](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)。)IRD 的與 SQL_DESC_NAME 欄位是唯讀的欄位;SQLSTATE HY091 如果應用程式嘗試將它設定，則會傳回 （無效的描述項欄位識別碼）。  
+ 應用程式可以將 IPD 的SQL_DESC_NAME欄位設定為參數名稱或別名,以便按名稱指定儲存的過程參數。 ( 關於詳細資訊,請參考[此名稱(命名參數)綁定參數](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)。IRD 的SQL_DESC_NAME欄位是唯讀字段;如果應用程式嘗試設定 SQLSTATE HY091(無效描述符位元號),將返回它。  
   
- 在 Ipd，這個欄位是未定義的如果驅動程式不支援具名的參數。 如果驅動程式支援具名的參數，而且能夠描述參數，參數名稱會傳回此欄位中。  
+ 在 ID 中,如果驅動程式不支援命名參數,則此欄位未定義。 如果驅動程式支援命名參數並能夠描述參數,則參數名稱將在此欄位中返回。  
   
- **SQL_DESC_NULLABLE [實作描述元]**  
- IRDs，在此唯讀 SQLSMALLINT 記錄欄位會是 SQL_NULLABLE，如果資料行可以有 NULL 值，SQL_NO_NULLS 如果資料行不具有 NULL 值或 SQL_NULLABLE_UNKNOWN，如果不知道資料行是否接受 NULL 值。 此欄位屬於結果集資料行，不是基底的資料行。  
+ **SQL_DESC_NULLABLE [實作描述符]**  
+ 在 IRD 中,如果列可以具有 NULL 值,則此唯讀 SQLSMALLINT 記錄欄位SQL_NULLABLE,如果列沒有 NULL 值,則SQL_NO_NULLS列是否具有 NULL 值,或者如果不知道列是否接受 NULL 值,則SQL_NULLABLE_UNKNOWN。 此欄位與結果集列相關,而不是與基本列相關。  
   
- 在 Ipd，這個欄位是一律設定為 SQL_NULLABLE 因為動態參數都可為 null，而且無法設定應用程式。  
+ 在 IID 中,此欄位始終設置為SQL_NULLABLE,因為動態參數始終為空,並且不能由應用程式設置。  
   
- **SQL_DESC_NUM_PREC_RADIX [All]**  
- SQLINTEGER 當這個欄位包含值為 2 中的 SQL_DESC_TYPE 欄位的資料類型是近似的數值資料類型，因為 SQL_DESC_PRECISION 欄位包含的位元數。 當這個欄位包含值為 10 中的 SQL_DESC_TYPE 欄位的資料類型是精確數值資料類型，因為 SQL_DESC_PRECISION 欄位包含的小數位數。 此欄位設為 0 表示所有非數值資料類型。  
+ **SQL_DESC_NUM_PREC_RADIX [全部]**  
+ 如果SQL_DESC_TYPE欄位中的數據類型是近似數值數據類型,則此 SQLINTEGER 欄位包含值 2,因為SQL_DESC_PRECISION欄位包含位數。 如果SQL_DESC_TYPE欄位中的數據類型是精確數位資料類型,則此欄位包含值10,因為SQL_DESC_PRECISION欄位包含小數位數。 此欄位設置為 0,用於所有非數位數據類型。  
   
- **SQL_DESC_OCTET_LENGTH [All]**  
- 這是 SQLLEN 記錄欄位包含的長度，以位元組為單位的字元字串或二進位資料類型。 固定長度的字元或二進位類型，這是以位元組為單位的實際長度。 可變長度的字元或二進位類型，這是以位元組為單位的最大長度。 這個值一律會排除實作描述項之 null 結束字元的空間，而且永遠會包含應用程式描述項之 null 結束字元的空間。 應用程式資料，此欄位會包含緩衝區的大小。 Apd，這個欄位被定義僅適用於輸出或輸入/輸出參數。  
+ **SQL_DESC_OCTET_LENGTH [全部]**  
+ 此 SQLLEN 記錄欄位包含字串或二進位資料類型的長度(以位元組為單位)。 對於固定長度字元或二進位類型,這是以位元組為單位的實際長度。 對於可變長度字元或二進位類型,這是以位元組為單位的最大長度。 此值始終排除實現描述符的 null 終止字元的空間,並且始終包含應用程式描述符的 null 終止字元的空間。 對於應用程式數據,此欄位包含緩衝區的大小。 對於 AD,此欄位僅為輸出或輸入/輸出參數定義。  
   
- **SQL_DESC_OCTET_LENGTH_PTR [應用程式描述項]**  
- 這是 SQLLEN * 記錄欄位，將包含的總長度以位元組為單位的動態引數 （參數描述項） 或 （適用於資料列描述項） 的繫結的資料行值的變數會指向。  
+ **SQL_DESC_OCTET_LENGTH_PTR [應用程式描述符]**  
+ 此 SQLLEN = 記錄欄位指向一個變數,該變數將包含動態參數(對於參數描述符)或綁定列值(對於行描述符)的總長度。  
   
- APD 中，是會忽略這個值的字元字串和二進位檔; 以外的所有引數如果此欄位會指向 SQL_NTS，動態引數必須以 null 結束。 若要表示繫結的參數是資料在執行中參數，應用程式設定此欄位中適當的記錄 APD 中的變數，，請在執行階段，將會包含值 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 巨集的結果. 如果有多個這類欄位，可以用來唯一識別參數的值設定 SQL_DESC_DATA_PTR，以協助判斷哪一個參數所要求的應用程式。  
+ 對於 APD,除字串和二進位之外的所有參數,此值都將被忽略;如果此欄位指向SQL_NTS,則動態參數必須為 null 終止。 為了指示綁定參數將是執行時的數據參數,應用程式將 APD 的適當記錄中的此欄位設置為變數,在執行時,該變數將包含值SQL_DATA_AT_EXEC或SQL_LEN_DATA_AT_EXEC宏的結果。 如果有多個此類欄位,則可以將SQL_DESC_DATA_PTR設置為唯一標識參數的值,以説明應用程式確定請求的參數。  
   
- 如果 ARD OCTET_LENGTH_PTR 欄位為 null 指標，驅動程式不會傳回資料行長度資訊。 APD 中的 SQL_DESC_OCTET_LENGTH_PTR 欄位為 null 指標，如果驅動程式會假設字元字串和二進位的值都是 null 結束。 （二進位值不得以 null 結尾的但應有的長度，以避免截斷）。  
+ 如果ARD的OCTET_LENGTH_PTR欄位為空指標,則驅動程式不會返回列的長度資訊。 如果 APD 的SQL_DESC_OCTET_LENGTH_PTR欄位為空指標,則驅動程式假定字串和二進位值為 null 終止。 (二進位值不應為null終止,而應為長度指定以避免截斷。  
   
- 如果在呼叫**SQLFetch**或是**SQLFetchScroll** ，在此欄位所指向緩衝區的填滿未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，緩衝區的內容為未定義。 這個欄位是*延後的欄位*。 它不會在其設定，但在稍後由驅動程式用來判斷或表示八位元長度的資料的時間。  
+ 如果對**SQLFetch**或**SQLFetchScroll**的調用填充此欄位指向的緩衝區未返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO,則緩衝區的內容未定義。 此欄位是*遞延欄位*。 它在設置時不使用,但驅動程式稍後使用它來確定或指示數據的八進位長度。  
   
- **SQL_DESC_PARAMETER_TYPE [IPDs]**  
- 此 SQLSMALLINT 記錄欄位設定為 SQL_PARAM_INPUT 的輸入參數，輸入/輸出參數，輸出參數，針對輸入/輸出資料流處理的參數，SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_ SQL_PARAM_OUTPUT SQL_PARAM_INPUT_OUTPUTPARAM_OUTPUT_STREAM 做為輸出資料流處理參數。 根據預設，它會設定為 SQL_PARAM_INPUT。  
+ **SQL_DESC_PARAMETER_TYPE [IPD]**  
+ 此 SQLSMALLINT 記錄欄位設定為輸入參數SQL_PARAM_INPUT、輸入/輸出參數SQL_PARAM_INPUT_OUTPUT、輸出參數SQL_PARAM_OUTPUT、輸入/輸出流參數SQL_PARAM_INPUT_OUTPUT_STREAM或輸出流參數的SQL_PARAM_OUTPUT_STREAM。 默認情況下,它設置為SQL_PARAM_INPUT。  
   
- IPD 中，為欄位設定為 SQL_PARAM_INPUT 預設如果 （SQL_ATTR_ENABLE_AUTO_IPD 陳述式屬性是 SQL_FALSE） 驅動程式不會自動填入 IPD。 應用程式應該不是輸入的參數的參數 IPD 中設定此欄位。  
+ 對於 IPD,如果驅動程式未自動填充 IPD(SQL_ATTR_ENABLE_AUTO_IPD語句屬性SQL_FALSE),則默認情況下,該欄位設置為SQL_PARAM_INPUT。 應用程式應在 IPD 中為不是輸入參數的參數設置此欄位。  
   
- **SQL_DESC_PRECISION [All]**  
- 此 SQLSMALLINT 記錄欄位包含是精確數值類型，在 （二進位精確度） 的近似數值類型，則表示尾數的位元數或 SQL_TYPE_TIME SQL_TYPE 的小數秒數元件中的數字的數字的數字的數目_TIMESTAMP 或 SQL_INTERVAL_SECOND 資料型別。 這個欄位是未定義的所有其他資料類型。  
+ **SQL_DESC_PRECISION [全部]**  
+ 此 SQLSMALLINT 記錄欄位包含精確數值類型的位數、近似數值類型的 mantissa 中的位數(二進位元),或SQL_TYPE_TIME、SQL_TYPE_TIMESTAMP或SQL_INTERVAL_SECOND數據類型的小數秒分量中的位數。 此欄位對於所有其他數據類型未定義。  
   
- 此欄位中的值可能不同於 「 精確度 」 做為 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能與 ODBC 2 *.x*中定義的「精度」值不同。 關於詳細資訊,請參閱附錄[D:資料型態](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
- **SQL_DESC_ROWVER [實作描述元]**  
- 這個 SQLSMALLINTrecord 欄位會指示是否修改資料行是自動和 dbms 的資料列更新 （例如，類型為"timestamp"SQL Server 中的資料行） 時。 此記錄欄位的值是設定為 SQL_TRUE，如果資料行是資料列版本設定資料行，以及 SQL_FALSE 否則。 此資料行屬性是類似於呼叫**SQLSpecialColumns** IdentifierType 的 SQL_ROWVER 來判斷是否會自動更新的資料行使用。  
+ **SQL_DESC_ROWVER [實作描述符]**  
+ 此 SQLSMALLINTrecord 欄位指示在更新行時 DBMS 是否自動修改列(例如,SQL Server 中類型"時間戳"類型的列)。 如果列是行版本控制列,則此記錄欄位的值設置為SQL_TRUE,否則SQL_FALSE。 此列屬性類似於使用SQL_ROWVER識別碼類型呼叫**SQL 特別列**,以確定列是否自動更新。  
   
- **SQL_DESC_SCALE [All]**  
- 此 SQLSMALLINT 記錄欄位包含 decimal 與 numeric 資料類型的定義小數位數。 對於所有其他資料類型未定義的欄位。  
+ **SQL_DESC_SCALE [全部]**  
+ 此 SQLSMALLINT 記錄欄位包含小數點和數位數據類型的已定義比例。 對於所有其他數據類型,該欄位未定義。  
   
- 此欄位中的值可能不同於 「 調整 」 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能與 ODBC 2 *.x*中定義的「縮放」值不同。 關於詳細資訊,請參閱附錄[D:資料型態](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
- **SQL_DESC_SCHEMA_NAME [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含基底資料表包含資料行的結構描述名稱。 如果資料行是運算式或資料行是否屬於檢視，傳回的值會是驅動程式相關。 如果資料來源不支援結構描述，或無法判斷結構描述名稱，此變數包含空字串。  
+ **SQL_DESC_SCHEMA_NAME [紅外指示]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含包含欄位的基表的架構名稱。 如果列是表達式或列是視圖的一部分,則返回值與驅動程序相關。 如果數據源不支援架構或無法確定架構名稱,則此變數包含一個空字串。  
   
- **SQL_DESC_SEARCHABLE [IRDs]**  
- 這個唯讀 SQLSMALLINT 記錄欄位會設定為下列值之一：  
+ **SQL_DESC_SEARCHABLE [紅外點]**  
+ 此唯讀 SQLSMALLINT 記錄欄位設定為以下值之一:  
   
--   如果資料行不能在 SQL_PRED_NONE**其中**子句。 (這是 ODBC 2 SQL_UNSEARCHABLE 值相同 *.x*。)  
+-   如果列不能在**WHERE**子句中使用,則SQL_PRED_NONE。 (這與 ODBC 2 *.x 中的*SQL_UNSEARCHABLE值相同。  
   
--   SQL_PRED_CHAR 如果資料行可以用於**何處**子句，但僅限於有**像**述詞。 (這是 ODBC 2 SQL_LIKE_ONLY 值相同 *.x*。)  
+-   SQL_PRED_CHAR該列是否可以在**WHERE**子句中使用,但只能與**LIKE**謂詞一起使用。 (這與 ODBC 2 *.x 中的*SQL_LIKE_ONLY值相同。  
   
--   SQL_PRED_BASIC 如果資料行可以用於**何處**子句以外的所有比較運算子搭配**像**。 (這是 ODBC 2 SQL_EXCEPT_LIKE 值相同 *.x*。)  
+-   SQL_PRED_BASIC該列是否可以在**WHERE**子句中使用,與除**LIKE**之外的所有比較運算符。 (這與 ODBC 2 *.x 中的*SQL_EXCEPT_LIKE值相同。  
   
--   如果資料行可以用於 SQL_PRED_SEARCHABLE**其中**搭配任何比較運算子的子句。  
+-   SQL_PRED_SEARCHABLE該列是否可以在任何比較運算符的**WHERE**子句中使用。  
   
- **SQL_DESC_TABLE_NAME [IRDs]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含基底資料表包含此資料行的名稱。 如果資料行是運算式或資料行是否屬於檢視，傳回的值會是驅動程式相關。  
+ **SQL_DESC_TABLE_NAME [IRD]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含包含此列的基表的名稱。 如果列是表達式或列是視圖的一部分,則返回值與驅動程序相關。  
   
- **SQL_DESC_TYPE [All]**  
- 此 SQLSMALLINT 記錄欄位指定的精簡 SQL 或 C 資料類型以外的日期時間和間隔資料類型的所有資料類型。 日期時間和間隔資料類型，此欄位會指定是 SQL_DATETIME 或 SQL_INTERVAL 的詳細資訊的資料類型。  
+ **SQL_DESC_TYPE [全部]**  
+ 此 SQLSMALLINT 記錄欄位指定除日期時間和間隔數據類型之外的所有數據類型的簡明 SQL 或 C 資料類型。 對於日期時間和間隔數據類型,此欄位指定SQL_DATETIME或SQL_INTERVAL的詳細數據類型。  
   
- 此欄位包含如果是 SQL_DATETIME 或 SQL_INTERVAL，每當 SQL_DESC_DATETIME_INTERVAL_CODE 欄位必須包含精簡類型的適當子代碼。 Datetime 資料類型的 SQL_DESC_TYPE 包含 SQL_DATETIME，而 SQL_DESC_DATETIME_INTERVAL_CODE 欄位包含特定的日期時間資料型別的子代碼。 間隔資料類型的 SQL_DESC_TYPE 包含 SQL_INTERVAL 而 SQL_DESC_DATETIME_INTERVAL_CODE 欄位包含特定間隔資料類型的次要代碼。  
+ 每當此欄位包含SQL_DATETIME或SQL_INTERVAL時,SQL_DESC_DATETIME_INTERVAL_CODE欄位必須包含簡潔類型的相應子代碼。 對於日期時間數據類型,SQL_DESC_TYPE包含SQL_DATETIME,並且SQL_DESC_DATETIME_INTERVAL_CODE欄位包含特定日期時間數據類型的子代碼。 對於間隔數據類型,SQL_DESC_TYPE包含SQL_INTERVAL,並且SQL_DESC_DATETIME_INTERVAL_CODE欄位包含特定間隔數據類型的子代碼。  
   
- 中的 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 欄位的值都相互依賴。 設定每次一個欄位，另也必須設定。 可以藉由呼叫設定 SQL_DESC_TYPE **SQLSetDescField**或是**SQLSetDescRec**。 可以藉由呼叫設定 SQL_DESC_CONCISE_TYPE **SQLBindCol**或是**SQLBindParameter**，或**SQLSetDescField**。  
+ SQL_DESC_TYPE和SQL_DESC_CONCISE_TYPE欄位中的值是相互依賴的。 每次設置其中一個字段時,還必須設置另一個字段。 SQL_DESC_TYPE可以通過調用**SQLSetDescField**或**SQLSetDescRec**來設置。 SQL_DESC_CONCISE_TYPE可以通過調用**SQLBindCol**或**SQLBind 參數**(或**SQLSetDescField)** 來設置。  
   
- 如果 SQL_DESC_TYPE 設定為精簡的資料類型的間隔或 datetime 資料類型以外，SQL_DESC_CONCISE_TYPE 欄位設定為相同的值和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位設定為 0。  
+ 如果SQL_DESC_TYPE設置為間隔或日期時間數據類型以外的簡明數據類型,則SQL_DESC_CONCISE_TYPE欄位設置為相同的值,SQL_DESC_DATETIME_INTERVAL_CODE欄位設置為 0。  
   
- 如果 SQL_DESC_TYPE 設定的詳細資訊的日期時間或間隔資料類型 （如果是 SQL_DATETIME 或 SQL_INTERVAL） 為 SQL_DESC_DATETIME_INTERVAL_CODE 欄位設定為適當的子代碼，SQL_DESC_CONCISE 類型 欄位設為相對應的精簡型別。 嘗試將 SQL_DESC_TYPE 設定為其中一種簡潔的日期時間或是間隔類型，則會傳回 SQLSTATE HY021 （不一致的描述元資訊）。  
+ 如果SQL_DESC_TYPE設置為詳細日期時間或間隔數據類型(SQL_DATETIME 或SQL_INTERVAL),並且SQL_DESC_DATETIME_INTERVAL_CODE欄位設置為相應的子代碼,則SQL_DESC_CONCISE TYPE 欄位設置為相應的簡潔類型。 嘗試將SQL_DESC_TYPE設置為其中一個簡潔的日期時間或間隔類型將返回 SQLSTATE HY021(描述符資訊不一致)。  
   
- 當呼叫所設定的 SQL_DESC_TYPE 欄位**SQLBindCol**， **SQLBindParameter**，或**SQLSetDescField**，下列欄位會設定為下列的預設值，下表所示。 相同的資料錄的其餘欄位的值是未定義。  
+ 當SQL_DESC_TYPE欄位由對**SQLBindCol、SQLBind****參數**或**SQLSetDescField**的調用設置時,以下欄位將設置為以下預設值,如下表所示。 未定義同一記錄的剩餘欄位的值。  
   
-|SQL_DESC_TYPE 值|隱含地設定其他欄位|  
+|SQL_DESC_TYPE值|其他欄位隱式設定|  
 |------------------------------|---------------------------------|  
-|SQL_CHAR、 SQL_VARCHAR、 SQL_C_CHAR SQL_C_VARCHAR|SQL_DESC_LENGTH 設為 1。 SQL_DESC_PRECISION 設為 0。|  
-|SQL_DATETIME|SQL_DESC_DATETIME_INTERVAL_CODE 設 SQL_CODE_DATE 或 SQL_CODE_TIME，SQL_DESC_PRECISION 設為 0。 當它設定為 SQL_DESC_TIMESTAMP 時，SQL_DESC_PRECISION 設為 6。|  
-|SQL_DECIMAL，SQL_NUMERIC，SQL_C_NUMERIC|SQL_DESC_SCALE 設為 0。 SQL_DESC_PRECISION 會設定為個別的資料類型的實作定義的有效位數。<br /><br /> 請參閱[SQL 到 c:數值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)如需有關如何以手動方式將繫結 SQL_C_NUMERIC 值資訊。|  
-|SQL_FLOAT、 SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 是設定為實作定義的預設有效位數。|  
-|SQL_INTERVAL|當 SQL_DESC_DATETIME_INTERVAL_CODE 設定間隔資料類型時，會將 SQL_DESC_DATETIME_INTERVAL_PRECISION 設定為 2 （預設間隔開頭有效位數）。 時的間隔秒數元件，則會將 SQL_DESC_PRECISION 設定為 6 （預設間隔秒數有效位數）。|  
+|SQL_CHAR、SQL_VARCHAR、SQL_C_CHAR、SQL_C_VARCHAR|SQL_DESC_LENGTH設置為 1。 SQL_DESC_PRECISION設置為 0。|  
+|SQL_DATETIME|當SQL_DESC_DATETIME_INTERVAL_CODE設置為SQL_CODE_DATE或SQL_CODE_TIME時,SQL_DESC_PRECISION設置為 0。 當它設置為SQL_DESC_TIMESTAMP時,SQL_DESC_PRECISION設置為 6。|  
+|SQL_DECIMAL,SQL_NUMERIC,SQL_C_NUMERIC|SQL_DESC_SCALE設置為 0。 SQL_DESC_PRECISION設置為相應數據類型的實現定義的精度。<br /><br /> 有關如何手動綁定SQL_C_NUMERIC值的資訊,請參閱[SQL 到 C:數位](../../../odbc/reference/appendixes/sql-to-c-numeric.md)。|  
+|SQL_FLOAT,SQL_C_FLOAT|SQL_DESC_PRECISION設置為SQL_FLOAT的實現定義的預設精度。|  
+|SQL_INTERVAL|當SQL_DESC_DATETIME_INTERVAL_CODE設置為間隔數據類型時,SQL_DESC_DATETIME_INTERVAL_PRECISION設置為 2(預設間隔前導精度)。 當間隔具有秒分量時,SQL_DESC_PRECISION設置為 6(預設間隔秒精度)。|  
   
- 當應用程式呼叫**SQLSetDescField**來設定欄位的描述元，而不是呼叫**SQLSetDescRec**，應用程式必須先宣告的資料類型。 載入時，會隱含地設定，如上表所示的其他欄位。 值的隱含集是否有任何無法接受，應用程式接著可以呼叫**SQLSetDescField**或是**SQLSetDescRec**明確地設定無法接受的值。  
+ 當應用程式呼叫**SQLSetDescField**來設定描述符的欄位,而不是調用**SQLSetDescRec**時,應用程式必須首先聲明數據類型。 當它這樣做時,上一個表中指示的其他欄位將隱式設置。 如果隱式設置的任何值是不可接受的,則應用程式可以調用**SQLSetDescField**或**SQLSetDescRec**顯式設定不可接受的值。  
   
- **SQL_DESC_TYPE_NAME [實作描述元]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含的資料來源相依類型名稱 （例如，"CHAR"、"VARCHAR"，等等）。 如果資料類型名稱未知時，此變數包含空字串。  
+ **SQL_DESC_TYPE_NAME [實作描述符]**  
+ 此唯讀 SQLCHAR = 記錄欄位包含與資料源相關的類型名稱(例如,"CHAR"、"VARCHAR"等)。 如果資料類型名稱未知,則此變數包含一個空字串。  
   
- **將 SQL_DESC_UNNAMED [實作描述元]**  
- 此 SQLSMALLINT 記錄中欄位的資料列描述項是由 SQL_NAMED 或 sql_unnamed 時驅動程式時設定其設定與 SQL_DESC_NAME 欄位。 如果與 SQL_DESC_NAME 欄位包含資料行別名或不適用資料行別名，驅動程式將 SQL_DESC_UNNAMED 將欄位設定為 SQL_NAMED。 如果應用程式會將 IPD 與 SQL_DESC_NAME 欄位設定的參數名稱或別名，驅動程式會設定為 SQL_NAMED IPD SQL_DESC_UNNAMED 欄位。 如果沒有任何資料行名稱或資料行別名，則驅動程式會將 SQL_DESC_UNNAMED 欄位設 sql_unnamed 時。  
+ **SQL_DESC_UNNAMED [實作描述符]**  
+ 行描述符中的此 SQLSMALLINT 記錄欄位由驅動程式設定為SQL_NAMED或SQL_UNNAMED設定SQL_DESC_NAME欄位時。 如果SQL_DESC_NAME欄位包含列別名,或者列別名不適用,則驅動程式將SQL_DESC_UNNAMED欄位設置為SQL_NAMED。 如果應用程式將 IPD 的SQL_DESC_NAME欄位設置為參數名稱或別名,則驅動程式將 IPD 的SQL_DESC_UNNAMED欄位設置為SQL_NAMED。 如果沒有列名稱或列別名,驅動程式將SQL_DESC_UNNAMED欄位設置為SQL_UNNAMED。  
   
- 應用程式可以設定 IPD SQL_DESC_UNNAMED 欄位為 sql_unnamed 時。 驅動程式會傳回 SQLSTATE HY091 （無效的描述項欄位識別碼），如果應用程式嘗試 IPD SQL_DESC_UNNAMED 欄位設為 SQL_NAMED。 IRD SQL_DESC_UNNAMED 欄位是唯讀的;SQLSTATE HY091 如果應用程式嘗試將它設定，則會傳回 （無效的描述項欄位識別碼）。  
+ 應用程式可以將 IPD 的SQL_DESC_UNNAMED欄位設置為SQL_UNNAMED。 如果應用程式嘗試將 IPD 的SQL_DESC_UNNAMED欄位設定為SQL_NAMED,則驅動程式將返回 SQLSTATE HY091(無效描述符位元識別碼)。 IRD 的SQL_DESC_UNNAMED欄位是唯讀的;如果應用程式嘗試設定 SQLSTATE HY091(無效描述符位元號),將返回它。  
   
- **SQL_DESC_UNSIGNED [實作描述元]**  
- 如果資料行類型簽章時，這個唯讀 SQLSMALLINT 記錄欄位設為 SQL_TRUE，如果資料行類型是不帶正負號或非數值或 SQL_FALSE。  
+ **SQL_DESC_UNSIGNED [實作描述符]**  
+ 如果列類型未簽名或非數位,則此唯讀 SQLSMALLINT 記錄欄位設置為SQL_TRUE,如果列類型已簽名,則SQL_FALSE。  
   
- **SQL_DESC_UPDATABLE [IRDs]**  
- 這個唯讀 SQLSMALLINT 記錄欄位會設定為下列值之一：  
+ **SQL_DESC_UPDATABLE [紅外點]**  
+ 此唯讀 SQLSMALLINT 記錄欄位設定為以下值之一:  
   
--   如果結果集資料行的 SQL_ATTR_READ_ONLY 處於唯讀狀態。  
+-   如果結果集列是唯讀的,SQL_ATTR_READ_ONLY。  
   
--   如果結果集資料行的 SQL_ATTR_WRITE 是讀寫。  
+-   如果結果集列是讀寫列,SQL_ATTR_WRITE。  
   
--   SQL_ATTR_READWRITE_UNKNOWN 如果不知道是否在結果集資料行可更新。  
+-   如果不知道結果集列是否可更新,SQL_ATTR_READWRITE_UNKNOWN。  
   
- SQL_DESC_UPDATABLE 描述結果集中資料行中，不是基底資料表中的資料行的可更新性。 此結果集資料行所依據的基底資料表中的資料行的可更新性可能會不同於此欄位中的值。 資料行是否可更新可以根據資料類型、 使用者權限，以及結果集本身的定義。 如果是不明確的資料行是否可更新，應該會傳回 SQL_ATTR_READWRITE_UNKNOWN。  
+ SQL_DESC_UPDATABLE描述結果集中列的升數據度,而不是基表中的列。 此結果集列所基於的基表中列的升數據度可能與此欄位中的值不同。 列是否可更新可以基於數據類型、使用者許可權和結果集本身的定義。 如果不清楚列是否可更新,則應返回SQL_ATTR_READWRITE_UNKNOWN。  
   
 ## <a name="consistency-checks"></a>一致性檢查  
- 一致性檢查是由驅動程式自動執行應用程式傳遞值 ARD、 APD 或 IPD 的 SQL_DESC_DATA_PTR 欄位時。 任何欄位是否具有其他欄位中，不一致**SQLSetDescField**會傳回 SQLSTATE HY021 （不一致的描述元資訊）。 如需詳細資訊，請參閱 「 一致性檢查 」，在[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)。  
+ 每當應用程式通過ARD、APD或IPDSQL_DESC_DATA_PTR欄位的值時,驅動程式會自動執行一致性檢查。 如果任何欄位與其他欄位不一致 **,SQLSetDescField**將返回 SQLSTATE HY021(描述符資訊不一致)。 有關詳細資訊,請參閱[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)中的「一致性檢查」。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|資料行繫結|[SQLBindCol 函式](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|將參數繫結|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|取得描述項欄位|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|取得多個描述項欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|設定多個描述項欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|繫結欄|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|繫結參數|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|取得描述字列|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|取得多個描述符位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|設定多個描述符位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC 標題檔案](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)

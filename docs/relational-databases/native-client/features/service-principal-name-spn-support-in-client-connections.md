@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd5de2c8ebb163fce7287f49df35c2bc5e88f438
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dfbd03d5a964ea9e997e2d5900b4b762d4dad49c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247427"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303801"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "75247427"
 >  用戶端應用程式所指定的 SPN 僅能在建立與 Windows 整合式安全性的連接時使用。  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **Kerberos 設定管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]員 是一種診斷工具,可幫助解決 Kerberos[!INCLUDE[msCoName](../../../includes/msconame-md.md)]相關連接問題。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
  如需有關 Kerberos 的詳細資訊，請參閱下列文件：  
   
@@ -53,8 +53,7 @@ ms.locfileid: "75247427"
 |ODBC 應用程式會將 SPN 指定為主體伺服器或容錯移轉夥伴伺服器的連接屬性。|連接屬性 **SQL_COPT_SS_SERVER_SPN** 可用於指定連接到主體伺服器的 SPN。<br /><br /> 連接屬性 **SQL_COPT_SS_FAILOVER_PARTNER_SPN** 可用於指定容錯移轉夥伴伺服器的 SPN。|  
 |OLE DB 應用程式會將 SPN 指定為主體伺服器或容錯移轉夥伴伺服器的資料來源初始化屬性。|**SSPROP_INIT_SERVER_SPN** 屬性集中的連接屬性 **DBPROPSET_SQLSERVERDBINIT** 可用於指定連接的 SPN。<br /><br /> **SSPROP_INIT_FAILOVER_PARTNER_SPN** 中的連接屬性 **DBPROPSET_SQLSERVERDBINIT** 可用於指定容錯移轉夥伴伺服器的 SPN。|  
 |使用者會在 ODBC 資料來源名稱 (DSN) 中指定伺服器或容錯移轉夥伴伺服器的 SPN。|SPN 可以在 ODBC DSN 中，透過 DSN 設定對話方塊指定。|  
-|使用者會在 OLE DB 的 **[資料連結]** 或 **[登入]** 對話方塊中指定伺服器或容錯移轉夥伴伺服器的 SPN。|SPN 可以在 **[資料連結]** 或 **[登入]** 對話方塊中指定。 
-  **[登入]** 對話方塊可以搭配 ODBC 或 OLE DB 使用。|  
+|使用者會在 OLE DB 的 **[資料連結]** 或 **[登入]** 對話方塊中指定伺服器或容錯移轉夥伴伺服器的 SPN。|SPN 可以在 **[資料連結]** 或 **[登入]** 對話方塊中指定。 **[登入]** 對話方塊可以搭配 ODBC 或 OLE DB 使用。|  
 |ODBC 應用程式會決定用於建立連接的驗證方法。|當連接成功開啟時，應用程式可以查詢連接屬性 **SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD** 來決定所使用的驗證方法。 這些值將包含 (但不限於) **NTLM** 和 **Kerberos**。|  
 |OLE DB 應用程式會決定用於建立連接的驗證方法。|當連接成功開啟時，應用程式可以查詢 **SSPROP_AUTHENTICATION_METHOD** 屬性集中的連接屬性 **DBPROPSET_SQLSERVERDATASOURCEINFO** 來決定所使用的驗證方法。 這些值將包含 (但不限於) **NTLM** 和 **Kerberos**。|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "75247427"
  新的連接行為會由用戶端實作，因此，該行為對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本而言不是專屬的。  
   
 ## <a name="linked-servers-and-delegation"></a>連結的伺服器與委派  
- 建立連結的伺服器時，可以使用 **sp_addlinkedserver\@ 的** [provstr](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 參數來指定伺服器和容錯移轉夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
+ 建立連結伺服器時,[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)**\@可以使用sp_addlinkedserver的參數**來指定伺服器和故障轉移夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
   
  利用連結的伺服器委派需要 Kerberos 驗證。  
   
@@ -94,13 +93,13 @@ ms.locfileid: "75247427"
   
 |語法|描述|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn* 是完整網域名稱。|  
-|MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。<br /><br /> *port* 是 TCP 通訊埠編號。|  
-|MSSQLSvc/*fqdn*:*InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。<br /><br /> *InstanceName* 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
+|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn*是一個完全合格的功能變數名稱。|  
+|MSSQLSvc/*fqdn*:*連接埠*|使用 TCP 時，此為提供者產生的預設 SPN。<br /><br /> *埠*是 TCP 埠號。|  
+|MSSQLSvc/*fqdn*:*實體名稱*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。<br /><br /> *InstanceName* 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|對應到 Windows 自動註冊之內建電腦帳戶的 SPN。|  
-|*Username*@*Domain*|網域帳戶的直接規格。<br /><br /> *Username* 是 Windows 使用者帳戶名稱。<br /><br /> *Domain* 是 Windows 網域名稱或完整的網域名稱。|  
-|*MachineName*$@*Domain*|電腦帳戶的直接規格。<br /><br /> (如果您所連接的伺服器是以 LOCAL SYSTEM 或 NETWORK SERVICE 帳戶執行，若要取得 Kerberos 驗證， **ServerSPN** 可以是 *MachineName*$@*Domain* 格式)。|  
-|*KDCKey*/*MachineName*|使用者指定的 SPN。<br /><br /> *KDCKey* 是符合 KDC 金鑰規則的英數字串。|  
+|*使用者名稱*@*網域*|網域帳戶的直接規格。<br /><br /> *Username* 是 Windows 使用者帳戶名稱。<br /><br /> *Domain* 是 Windows 網域名稱或完整的網域名稱。|  
+|*機器名稱*$@*網域*|電腦帳戶的直接規格。<br /><br /> (如果您所連接的伺服器是以 LOCAL SYSTEM 或 NETWORK SERVICE 帳戶執行，若要取得 Kerberos 驗證， **ServerSPN** 可以是 *MachineName*$@*Domain* 格式)。|  
+|*KDCKey*/*機器名稱*|使用者指定的 SPN。<br /><br /> *KDCKey* 是符合 KDC 金鑰規則的英數字串。|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>支援 SPN 的 ODBC 和 OLE DB 語法  
  如需語法專屬的資訊，請參閱下列主題：  

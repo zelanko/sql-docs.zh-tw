@@ -1,5 +1,5 @@
 ---
-title: 使用資料指標（ODBC） |Microsoft Docs
+title: 使用游標 (ODBC) |微軟文件
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 45190660a75fed82f339ec845ee2b40faaf14c02
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781622"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294189"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73781622"
   
 4.  執行 SQL 陳述式。  
   
-5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 提供，可以選擇呼叫 [SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 來設定資料指標名稱。  
+5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，可以選擇呼叫 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 來設定資料指標名稱。  
   
 6.  呼叫 [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) 來取得資料列集中的資料行 (C) 數目。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73781622"
   
      請注意，當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   
-9. 或者也可以使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
+9. 您可以選擇使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
   
 10. 如果有其他可用的結果集，請到步驟 6。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "73781622"
      您可以透過設定 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或是設定 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE，控制所使用的資料指標類型。 您不應該混合使用這兩種指定資料指標行為的方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料指標的 how to 主題 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [使用游標操作主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

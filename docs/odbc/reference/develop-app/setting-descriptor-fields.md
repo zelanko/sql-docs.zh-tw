@@ -1,5 +1,5 @@
 ---
-title: 設定描述項欄位 |Microsoft Docs
+title: 設定描述符位 ( 1) :微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 04f9520e2ef462df481bb104e389aeb57b5dd457
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304149"
 ---
 # <a name="setting-descriptor-fields"></a>設定描述項欄位
-若要修改描述項的欄位，應用程式可以呼叫**SQLSetDescField**。 有些欄位是唯讀的，而且無法設定。 （請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函數描述）。  
+要修改描述符號, 應用程式可以呼叫**SQLSetDescField**。 某些欄位是唯讀的,無法設置。 (請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函數說明。  
   
- 描述項記錄欄位是以1或更高的記錄號碼（*RecNumber*）設定，而描述項標頭欄位則是以0的記錄號碼來設定。 記錄號碼0也會用來設定書簽欄位，這是根據書簽包含在資料行0中的慣例。 這可能會讓您覺得書簽欄位包含在描述元標頭中，但這不是這種情況。 書簽欄位與標頭欄位不同。  
+ 描述符記錄欄位的設定紀錄編號 (*RecNumber*) 為 1 或更高,而描述符標頭欄位的設定記錄數為 0。 記錄數為 0 也用於設置書簽欄欄位,根據第 0 列中包含的書籤的約定。 這可能會給人留下書籤欄位包含在描述符標頭中的印象,但事實並非如此。 書籤欄位與標題欄位不同。  
   
- 個別設定欄位時，應用程式應遵循[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中定義的順序。 設定某些欄位會導致驅動程式設定其他欄位。 這可確保在應用程式指定資料類型後，描述項一律可供使用。 當應用程式設定 [SQL_DESC_TYPE] 欄位時，驅動程式會檢查指定類型的其他欄位是否有效且一致。  
+ 單獨設置欄位時,應用程式應遵循[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中定義的順序。 設置某些欄位會導致驅動程式設置其他欄位。 這可確保描述符始終準備好在應用程式指定數據類型后使用。 當應用程式設置SQL_DESC_TYPE欄位時,驅動程式會檢查指定類型的其他欄位是否有效且一致。  
   
- 如果會設定描述項欄位的函式呼叫失敗，則描述元欄位的內容會在失敗函數呼叫之後未定義。
+ 如果將設置描述符位的函數調用失敗,則描述符欄位的內容在函數調用失敗後未定義。

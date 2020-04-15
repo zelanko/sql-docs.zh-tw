@@ -1,5 +1,5 @@
 ---
-title: 取得大型資料 |Microsoft Docs
+title: 取得大型資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0922ed161eb691386b1870f03a8597b6a4872f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73775504"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303619"
 ---
 # <a name="getting-large-data"></a>取得大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  一般而言，取用者應該隔離的程式碼會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從處理不透過**ISequentialStream**介面指標參考之資料的其他程式碼，建立原生用戶端 OLE DB 提供者儲存物件。  
+  通常,消費者應將創建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式儲存物件的代碼與處理未透過**I 順序流**介面指標引用的數據的其他代碼隔離。  
   
  本主題會參考可供下列函數使用的功能：  
   
@@ -36,9 +36,9 @@ ms.locfileid: "73775504"
   
 -   ICommand::Execute  
   
- 如果 DBPROP_ACCESSORDER 屬性（在資料列集屬性群組中）設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的其中一個值，取用者應該只在呼叫**GetNextRows**方法時提取單一資料列，因為 BLOB 資料不會經過緩衝處理。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
+ 如果DBPROP_ACCESSORDER屬性(在行集屬性組中)設置為DBPROPVAL_AO_SEQUENTIAL或DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS的值之一,則消費者應在對**GetNextRows**方法的調用中僅獲取一行數據,因為 BLOB 數據不會緩衝。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取得大型資料，直到取用者要求這麼做為止。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
+ 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式在消費者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]請求之前不會從中檢索大數據。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
   
 ## <a name="example"></a>範例  
  此範例會從單一資料行擷取大型資料值：  
@@ -149,7 +149,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blob 和 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大數值類型](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

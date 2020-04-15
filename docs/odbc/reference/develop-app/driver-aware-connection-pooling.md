@@ -1,5 +1,5 @@
 ---
-title: 驅動程式感知的連接共用 |Microsoft Docs
+title: 驅動程式感知連接池 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,34 +8,34 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5dee7ee2b08e4b3b0249ede7f999cfb23d8db944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70b70c841f37bd69179137c807c0dadcfd932d2b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68047050"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287598"
 ---
 # <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用
-驅動程式感知連接共用是 Windows 8 中驅動程式管理員的新功能。 驅動程式感知連接共用可讓驅動程式寫入器自訂其 ODBC 驅動程式中的連接共用行為。  
+驅動程式感知連接池是 Windows 8 中的驅動程式管理器的新功能。 驅動程式感知連接池允許驅動程式編寫器在其ODBC驅動程式中自定義連接池行為。  
   
 > [!NOTE]  
->  資料指標程式庫不支援可感知驅動程式的連接共用。 當啟用驅動程式感知連接共用時，如果應用程式嘗試透過 SQLSetConnectAttr 啟用資料指標程式庫，將會收到錯誤訊息。  
+>  游標庫不支援驅動程式感知連接池。 如果應用程式嘗試透過 SQLSetConnectAttr 啟用游標庫,則應用程式在啟用驅動程式感知連接池時將收到錯誤訊息。  
   
- 驅動程式感知連線共用可解決下列與驅動程式管理員連接共用相關的問題：  
+ 驅動程式感知連接池解決了與驅動程式管理員連接池相關的以下問題:  
   
- **集區片段**只有當驅動程式管理員與新連線要求的連接字串完全相符時，才會傳回該集區的連接。  驅動程式管理員需要完全相符的原因之一，是驅動程式管理員不會瞭解每個驅動程式特定的連接字串關鍵字和其值。  不過，某些連接字串關鍵字值（例如資料庫名稱）可能不需要完全相符，因為驅動程式可以在不到開啟新連接所需的時間內變更資料庫（確切的時間差異視資料來源而定）。 此外，某些連接屬性（例如 SQL_ATTR_CURRENT_CATALOG）的差異，可能需要更多時間來變更，而不是其他屬性的差異（例如 SQL_ATTR_LOGIN_TIMEOUT）。 這也可能導致驅動程式管理員無法使用集區中的最低成本、可重複使用的連接。 當驅動程式必須建立許多新的連線時，應用程式的效能可能會降低，而且資料來源的擴充性可能會降低。 可以使用可感知驅動程式的連接共用來降低集區片段，因為驅動程式可以更精確地估計在集區中重複使用連接要求的連線成本。  
+ **池碎片**驅動程式管理員僅從池中返回連接,如果它與新連接請求的連接字串完全匹配。  驅動程式管理員需要完全匹配的一個原因是驅動程式管理員不瞭解每個特定於驅動程式的連接字串關鍵字及其值。  但是,某些連接字串關鍵字值(如資料庫的名稱)可能不需要完全匹配,因為驅動程式可以在不到打開新連接所需的時間內更改資料庫(確切的時差取決於數據源)。 而且,某些連接屬性(如SQL_ATTR_CURRENT_CATALOG)的差異可能需要比其他屬性(如SQL_ATTR_LOGIN_TIMEOUT)的差異更多的時間來更改。 這也可以阻止驅動程式管理器使用池中成本最低的可重用連接。 當驅動程式必須創建許多新連接時,應用程式的性能可能會降低,數據源的可伸縮性也會降低。 通過驅動程式感知連接池可以減少池碎片,因為驅動程式可以更好地估計在池中重用連接請求的成本。  
   
- **不考慮應用程式喜好**設定某些資料來源可以有效率地開啟新的連接（相較于重設某些屬性），因此，應用程式可能會想要開啟新的連接，而不是嘗試從集區重複使用稍微不相符的連接，然後重設一些值（不過，在連接集區初始化片語期間這可能會變得較慢）。 但是有些應用程式可能會讓伺服器負載變得更小並開啟較少的連線，雖然修正不相符的問題可能會有較大的成本以確保正確的行為。 如果沒有可感知驅動程式的連接共用，您就無法有效地指定這種喜好設定，因為驅動程式管理員無法辨識所有驅動程式特定的連接屬性。 驅動程式感知的連線共用可讓驅動程式取得使用者喜好設定（具有 SQLSetConnectAttr 的驅動程式專屬屬性），讓它能夠根據使用者的喜好設定，更精確地預估從集區重複使用連接的成本。  
+ **不考慮申請偏好**某些數據源可以有效地打開新連接(與重置某些屬性相比),因此,應用程式可能更喜歡打開新連接,而不是嘗試從池中重用稍微不匹配的連接並重置某些值(儘管在連接池初始化短語中這可能較慢)。 但是,某些應用程式可能會使伺服器負載變小,打開較少的連接,儘管修復不匹配的正確行為的成本可能更大。 如果沒有驅動程式感知連接池,則無法有效地指定此類首選項,因為驅動程式管理器無法識別所有特定於驅動程式的連接屬性。 驅動程式感知連接池允許驅動程式獲取使用者首選項(具有 SQLSetConnect Attr 的特定於驅動程式的屬性),以便根據使用者的首選項更好地估計從池中重用連接的成本。  
   
- 如需可感知驅動程式的連接共用的詳細資訊，請參閱[在 ODBC 驅動程式中開發連接集區感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
+ 關於驅動程式感知連線池的詳細資訊,請參閱[在 ODBC 驅動程式中開發連接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
   
-## <a name="determining-driver-support"></a>判斷驅動程式支援  
- 驅動程式感知的連接共用是驅動程式可能不支援的選用功能。 若要判斷驅動程式是否支援，請使用[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)的 SQL_DRIVER_AWARE_POOLING_SUPPORTED *InfoType* 。  
+## <a name="determining-driver-support"></a>確定驅動程式支援  
+ 驅動程式感知連接池是驅動程式可能不支援的可選功能。 要確定驅動程式是否支援它,請使用[SQL_DRIVER_AWARE_POOLING_SUPPORTED SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)*的資訊類型*。  
   
-## <a name="how-to-enable-driver-aware-connection-pooling"></a>如何啟用可感知驅動程式的連接共用  
- 應用程式可以藉由將 SQL_ATTR_CONNECTION_POOLING 屬性設定為使用[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)SQL_CP_DRIVER_AWARE，來使用驅動程式的連接共用感知。 如果驅動程式不支援連接集區感知，則會使用驅動程式管理員連接共用（與指定 SQL_CP_ONE_PER_HENV，而不是 SQL_CP_DRIVER_AWARE）。 ODBC 2.x 和3.x 應用程式可以啟用這項功能。  
+## <a name="how-to-enable-driver-aware-connection-pooling"></a>如何開啟驅動程式感知連接池  
+ 應用程式可以通過將SQL_ATTR_CONNECTION_POOLING屬性設置為使用[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)SQL_CP_DRIVER_AWARE來使用驅動程式的連接池感知。 如果驅動程式不支援連接池感知,將使用驅動程式管理器連接池(與指定SQL_CP_ONE_PER_HENV相同,而不是SQL_CP_DRIVER_AWARE)。 ODBC 2.x 和 3.x 應用程式可以啟用此功能。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

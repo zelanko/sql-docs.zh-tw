@@ -1,5 +1,5 @@
 ---
-title: 認可模式 |Microsoft Docs
+title: 提交模式 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - commit modes [ODBC]
 ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22519e6d3be8ab4474fd88309da1b7e8be0fb49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0bdff581ed20ffd2768f4ebd2a033476873dcfec
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083329"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299118"
 ---
 # <a name="commit-mode"></a>認可模式
-ODBC 中的交易可以是下列兩種模式的其中一種：自動認可模式或手動認可模式。  
+ODBC 中的事務可以採用兩種模式之一:自動提交模式或手動提交模式。  
   
  此章節包含下列主題。  
   
--   [自動認可模式](../../../odbc/reference/develop-app/auto-commit-mode.md)  
+-   [自動提交模式](../../../odbc/reference/develop-app/auto-commit-mode.md)  
   
--   [手動認可模式](../../../odbc/reference/develop-app/manual-commit-mode.md)  
+-   [手動提交模式](../../../odbc/reference/develop-app/manual-commit-mode.md)  
   
 -   [設定認可模式](../../../odbc/reference/develop-app/setting-the-commit-mode.md)

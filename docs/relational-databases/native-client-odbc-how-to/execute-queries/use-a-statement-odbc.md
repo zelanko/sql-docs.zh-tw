@@ -1,5 +1,5 @@
 ---
-title: 使用語句（ODBC） |Microsoft Docs
+title: 使用敘述 (ODBC) |微軟文件
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 62c422e0fb5c5afe481b2d11a477523ca1466df3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781183"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284358"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "73781183"
     
 ### <a name="to-use-a-statement"></a>使用陳述式  
   
-1.  利用 SQL_HANDLE_STMT 的 [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) 來呼叫 *SQLAllocHandle*，以配置陳述式控制代碼。  
+1.  利用 SQL_HANDLE_STMT 的 *HandleType* 來呼叫 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)，以配置陳述式控制代碼。  
   
 2.  您可以選擇呼叫 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 來設定陳述式選項，或是呼叫 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 來取得陳述式屬性。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "73781183"
   
     -   若要重複使用陳述式控制代碼，請移至步驟 2。  
   
-8.  使用 SQL_HANDLE_STMT 的 [HandleType](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 呼叫 *SQLFreeHandle*，以釋放陳述式控制代碼。  
+8.  使用 SQL_HANDLE_STMT 的 *HandleType* 呼叫 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)，以釋放陳述式控制代碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢 &#40;ODBC&#41;的使用說明主題](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [執行查詢「如何」主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

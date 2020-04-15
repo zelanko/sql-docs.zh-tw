@@ -1,5 +1,5 @@
 ---
-title: SQLWriteDSNToIni 函式 |Microsoft Docs
+title: SQLwriteSntoini 函數 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b8bb141c8f54c49ca3a5c6fc4bc15d434f91795c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039516"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286958"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 函式
-**標準**  
- 引進的版本： ODBC 1。0  
+**一致性**  
+ 版本介紹: ODBC 1.0  
   
  **摘要**  
- **SQLWriteDSNToIni**會將資料來源新增至系統資訊。  
+ **SQLWriteDSNToini**向系統資訊添加了數據源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,38 +44,38 @@ BOOL SQLWriteDSNToIni(
   
 ## <a name="arguments"></a>引數  
  *lpszDSN*  
- 源要加入之資料來源的名稱。  
+ [輸入]要添加的數據源的名稱。  
   
  *lpszDriver*  
- 源驅動程式描述（通常是相關 DBMS 的名稱）會呈現給使用者，而不是實體驅動程式名稱。  
+ [輸入]向使用者而不是物理驅動程式名稱顯示的驅動程式描述(通常是關聯的 DBMS 的名稱)。  
   
 ## <a name="returns"></a>傳回值  
- 如果成功，函式會傳回 TRUE，如果失敗，則傳回 FALSE。  
+ 如果成功,則函數返回 TRUE,如果失敗,則返回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLWriteDSNToIni**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
+ 當**SQLWriteDSNToini**傳回 FALSE 時,可以透過呼叫**SQL 安裝程式錯誤**獲得關聯的*\*pfErrorCode*值。 下表列出了**SQL 安裝程式錯誤**可以返回的*\*pfErrorCode*值,並在此函數的上下文中解釋了每個值。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfError 碼*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_INVALID_DSN|不正確 DSN|*LpszDSN*引數包含對 DSN 不正確字串。|  
-|ODBC_ERROR_INVALID_NAME|驅動程式或 translator 名稱無效|*LpszDriver*引數無效。|  
-|ODBC_ERROR_REQUEST_FAILED|要求失敗|安裝程式無法在登錄中建立 DSN。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生沒有特定安裝程式錯誤的錯誤。|  
+|ODBC_ERROR_INVALID_DSN|不合法的 DSN|*lpszDSN*參數包含一個對 DSN 無效的字串。|  
+|ODBC_ERROR_INVALID_NAME|不合法的驅動程式或翻譯者名稱|*lpszDriver*參數無效。|  
+|ODBC_ERROR_REQUEST_FAILED|要求失敗|安裝程式未能在註冊表中創建 DSN。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足,安裝程式無法執行該功能。|  
   
 ## <a name="comments"></a>註解  
- **SQLWriteDSNToIni**會將資料來源新增至系統資訊的 [ODBC 資料來源] 區段。 接著，它會建立資料來源的規格區段，並新增一個具有驅動程式 DLL 名稱的單一關鍵字（**驅動程式**）作為其值。 如果資料來源規格區段已經存在， **SQLWriteDSNToIni**會先移除舊的區段，再建立新的區段。  
+ **SQLWriteDSNToI**將資料源添加到系統資訊的 [ODBC 資料源] 部分。 然後,它為資料源創建一個規範節,並添加一個關鍵字 (**驅動程式**), 其值為驅動程式 DLL 的名稱。 如果數據源規範部分已存在,則**SQLWriteDSNToi 會在**創建新節之前刪除舊節。  
   
- 此函式的呼叫端必須將任何驅動程式特有的關鍵字和值新增至系統資訊的資料來源規格區段。  
+ 此函數的調用方必須向系統資訊的數據源規範部分添加任何特定於驅動程式的關鍵字和值。  
   
- 如果資料來源的名稱是預設值， **SQLWriteDSNToIni**也會在系統資訊中建立預設的驅動程式規格區段。  
+ 如果數據源的名稱為"預設 **",SQLWriteDSNToi**還會在系統資訊中創建預設驅動程序規範部分。  
   
- 此函式只能從安裝程式 DLL 呼叫。  
+ 此函數應僅從設置 DLL 調用。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|加入、修改或移除資料來源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)（在安裝程式 DLL 中）|  
-|加入、修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|從系統資訊移除資料來源名稱|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
+|新增、修改或移除資料來源|[設定DSN(](../../../odbc/reference/syntax/configdsn-function.md)在安裝程式 DLL 中 )|  
+|新增、修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
+|從系統資訊中移除資料來源名稱|[SQLRemoveDSNfromini](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

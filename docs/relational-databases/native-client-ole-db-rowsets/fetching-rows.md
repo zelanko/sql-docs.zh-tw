@@ -1,5 +1,5 @@
 ---
-title: 提取資料列 |Microsoft Docs
+title: 擷取資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,27 +14,24 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2dee6b8b6967046bb8ce69984fe29b71f223789d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761708"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298879"
 ---
 # <a name="fetching-rows"></a>提取資料列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
-  **IRowset** 介面是基底資料列集介面。 
-  **IRowset** 介面提供的方法會循序擷取資料列、從這些資料列中取得資料，以及管理資料列。 取用者會使用 **IRowset** 中的方法，進行所有基本資料列集作業。 這包括提取與釋放資料列，以及取得資料行值。  
+  **IRowset** 介面是基底資料列集介面。 **IRowset** 介面提供的方法會循序擷取資料列、從這些資料列中取得資料，以及管理資料列。 取用者會使用 **IRowset** 中的方法，進行所有基本資料列集作業。 這包括提取與釋放資料列，以及取得資料行值。  
   
  當取用者取得資料列集的介面指標時，第一個步驟通常是使用 **IRowsetInfo::GetProperties** 方法，決定資料列集的功能。 這會傳回由資料列集公開之介面的相關資訊，同時也會傳回不當做不同介面顯示之資料列集的功能，例如，使用中資料列的數目上限，以及可以同時擁有擱置中更新之資料列的數目。  
   
- 取用者的下一個步驟是決定資料列集中資料行的特性或中繼資料。 因此，他們會針對簡單的資料行資訊使用 **IColumnsInfo** 方法，或針對擴充的資料行資訊使用 **IColumnsRowset** 方法。 
-  **GetColumnInfo** 方法會傳回下列資訊：  
+ 取用者的下一個步驟是決定資料列集中資料行的特性或中繼資料。 因此，他們會針對簡單的資料行資訊使用 **IColumnsInfo** 方法，或針對擴充的資料行資訊使用 **IColumnsRowset** 方法。 **GetColumnInfo** 方法會傳回下列資訊：  
   
 -   結果集中的資料行數目。  
   
@@ -46,9 +43,7 @@ ms.locfileid: "73761708"
   
  取用者會從中繼資料，或根據產生資料列集的文字命令，決定所需的資料行。 它會從 **IColumnsInfo** 所傳回之資料行資訊的順序，或從 **IColumnsRowset** 所傳回之資料行中繼資料資料列集中的序數，決定所需資料行的序數。  
   
- 
-  **IColumnsInfo** 和 **IColumnsRowset** 介面用於擷取資料列集中資料行的相關資訊。 
-  **IColumnsInfo** 介面會傳回一組有限的資訊，而 **IColumnsRowset** 則會提供所有中繼資料。  
+ **IColumnsInfo** 和 **IColumnsRowset** 介面用於擷取資料列集中資料行的相關資訊。 **IColumnsInfo** 介面會傳回一組有限的資訊，而 **IColumnsRowset** 則會提供所有中繼資料。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和更早版本中，**IColumnsInfo::GetColumnsInfo** 所傳回的選擇性中繼資料行 DBCOLUMN_COMPUTEMODE 會傳回 DBSTATUS_S_ISNULL (而非描述資料行是否經過計算的值)，因為無法判斷基礎資料行是否經過計算。  
@@ -59,7 +54,7 @@ ms.locfileid: "73761708"
   
  若要從資料庫擷取資料列，取用者會呼叫一個方法，例如 **IRowset::GetNextRows** 或 **IRowsetLocate::GetRowsAt**。 這些提取作業會將伺服器中的原始資料放入提供者的資料列緩衝區中。 取用者無法直接存取提供者的資料列緩衝區。 取用者會使用 **IRowset::GetData**，將提供者緩衝區的資料複製到取用者緩衝區，並使用 **IRowsetChange::SetData**，將取用者緩衝區的資料變更複製到提供者緩衝區。  
   
- 取用者會呼叫 **GetData** 方法，並將控制代碼傳遞到資料列、將控制代碼傳遞到存取子，以及將指標傳遞到取用者配置的緩衝區中。 [（）]**會轉換資料**，並傳回用來建立存取子的系結中所指定的資料行。 取用者可以使用不同的存取子和緩衝區，針對資料列呼叫多次 **GetData**，讓取用者可以取得相同資料的多個複本。  
+ 取用者會呼叫 **GetData** 方法，並將控制代碼傳遞到資料列、將控制代碼傳遞到存取子，以及將指標傳遞到取用者配置的緩衝區中。 **GetData** 會轉換資料，並依照建立存取子所使用之繫結的指定，傳回資料行。 取用者可以使用不同的存取子和緩衝區，針對資料列呼叫多次 **GetData**，讓取用者可以取得相同資料的多個複本。  
   
  可變長度資料行的資料可以用數種方式處理。 首先，此類資料行可以繫結至有限的取用者結構區段。 這在資料長度超過緩衝區長度時，會造成截斷。 取用者可以檢查 DBSTATUS_S_TRUNCATED 狀態來判斷截斷已發生。 傳回的長度永遠是真實的位元組長度，讓取用者也可以決定要截斷多少資料。  
   
@@ -69,7 +64,7 @@ ms.locfileid: "73761708"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [下一個提取位置](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
+-   [下一個擷取位置](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

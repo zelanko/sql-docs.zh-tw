@@ -1,5 +1,5 @@
 ---
-title: 錯誤和批次 |Microsoft Docs
+title: 錯誤和批次 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - sql_error [ODBC]
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36a402686a695a08748df24a7b40a228d7a2ca7f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68051127"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300428"
 ---
 # <a name="errors-and-batches"></a>錯誤和批次
-執行 SQL 語句批次時發生錯誤時，可能會發生下列四種結果的其中一種。 （每個可能的結果都是資料來源特有，甚至可能會取決於批次中所包含的語句）。  
+當執行一批 SQL 語句時發生錯誤時,可能會出現以下四個結果之一。 (每個可能的結果都是特定於數據源的,甚至可能取決於批處理中包含的語句。  
   
--   不會執行批次中的任何語句。  
+-   未執行批處理中的語句。  
   
--   不會執行批次中的任何語句，而且會回復交易。  
+-   未執行批處理中的語句,並且事務將回滾。  
   
--   在執行 error 語句之前的所有語句。  
+-   執行錯誤語句之前的所有語句。  
   
--   除了 error 語句之外，所有的語句都會執行。  
+-   除錯誤語句之外的所有語句都執行。  
   
- 在前兩個案例中， **SQLExecute**和**SQLExecDirect**會傳回 SQL_ERROR。 在後面兩個案例中，它們可能會傳回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS，視執行而定。 在所有情況下，可以使用**SQLGetDiagField**、 **SQLGetDiagRec**或**SQLError**來抓取進一步的錯誤資訊。 不過，這項資訊的本質和深度是資料來源特有的。 此外，這項資訊不太可能會確切地識別錯誤中的語句。
+ 在前兩種情況下 **,SQLExecute**和**SQLExecDirect**返回SQL_ERROR。 在後兩種情況下,它們可能返回SQL_SUCCESS_WITH_INFO或SQL_SUCCESS,具體取決於實現。 在所有情況下,可以使用**SQLGetDiagField、SQLGetDiagRec**或**SQLGetDiagRec** **SQLError**檢索進一步的錯誤資訊。 但是,此資訊的性質和深度是特定於數據源的。 此外,此資訊不可能準確識別錯誤語句。

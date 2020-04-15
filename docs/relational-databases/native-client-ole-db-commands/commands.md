@@ -1,5 +1,5 @@
 ---
-title: 命令 |Microsoft Docs
+title: 命令 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f2f603a610291b9b0ad70b2960302a73e16e759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a8f1d969c49665b1384aa3ae938f1b0d8a8e4d82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790441"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304469"
 ---
 # <a name="commands"></a>命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ICommand**介面和命令物件，本節將會加以說明：  
+  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式公開**ICommand**介面和命令物件,本節將介紹這些物件:  
   
 -   [命令語法](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   

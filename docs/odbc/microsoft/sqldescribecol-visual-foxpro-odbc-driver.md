@@ -1,5 +1,5 @@
 ---
-title: SQLDescribeCol （Visual FoxPro ODBC Driver） |Microsoft Docs
+title: SQLDescribeCol (視覺福克斯 Pro ODBC 驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDescribeCol function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c78e75981031b1e91dbb31ba0c07ccbee3ac26e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d41ecca15b7c363782f4b7b4f59bac9efc5d4d3c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283851"
 ---
 # <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題包含 Visual FoxPro ODBC 特定於驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
- 支援：完整  
+ 支援: 完整  
   
- ODBC API 一致性：核心層級  
+ ODBC API 一致性:核心等級  
   
- 傳回給定結果資料行的名稱、類型、有效位數、小數位數和 null 屬性。  
+ 返回給定結果列的名稱、類型、精度、比例和空度。  
   
- 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) 。
+ 有關詳細資訊,請參閱*ODBC 程式師參考*中的[SQLDescribeCol。](../../odbc/reference/syntax/sqldescribecol-function.md)

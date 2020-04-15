@@ -1,5 +1,5 @@
 ---
-title: SQLPrepare （Visual FoxPro ODBC Driver） |Microsoft Docs
+title: SQL準備(可視化福克斯Pro ODBC驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,29 +10,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLPrepare function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5835ddaf27d097dcfff608649f50c1f7f41a93df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 14c9358d04e539eb2c77a00e195e8216cd0f5496
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301554"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題包含 Visual FoxPro ODBC 特定於驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
- 支援：完整  
+ 支援: 完整  
   
- ODBC API 一致性：核心層級  
+ ODBC API 一致性:核心等級  
   
- 藉由規劃如何優化和執行語句來準備 SQL 語句。 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)會編譯 SQL 語句以供執行。  
+ 通過規劃如何優化和執行該語句來準備 SQL 語句。 SQL 語句編譯供[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)執行。  
   
- 如果您的資料表、視圖或功能變數名稱包含空格，請將名稱括在後引號（'）標記中。 例如，如果您的資料庫包含名為「我的資料表」的資料表和「我的欄位」欄位，請將識別碼的每個元素括起來，如下所示：  
+ 如果表、檢視或欄位名稱包含空格,請將名稱包含在後引號 (『) 標記中。 例如,如果資料庫包含名為「我的表」的表和欄位「我的欄位」,請按照如下方式包含標識符的每個元素:  
   
 ```  
 SELECT * FROM `My Table`.`My Field`  
 ```  
   
- 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) 。
+ 有關詳細資訊,請參閱*ODBC 程式師參考中的* [SQLPrepare。](../../odbc/reference/syntax/sqlprepare-function.md)
