@@ -11,21 +11,21 @@ helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b7e464963471b0cad41c5b93d50507d0fa9bf96
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135626"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306509"
 ---
 # <a name="data-sources"></a>資料來源
-*資料來源*就是資料的來源。 它可以是檔案、DBMS 上的特定資料庫，甚至是即時的資料摘要。 資料可能位於與程式相同的電腦上，或位於網路上某處的另一部電腦上。 例如，資料來源可能是在作業系統/2®作業系統上執行的 Oracle DBMS，由 Novell® Netware 存取;透過閘道存取的 IBM DB2 DBMS;伺服器目錄中的 Xbase 檔案集合;或本機 Microsoft® Access 資料庫檔案。  
+*數據源*只是數據源。 它可以是檔、DBMS 上的特定資料庫,甚至是即時數據饋送。 數據可能位於與程式相同的電腦上,或者位於網路上的另一台電腦上。 例如,資料源可能是運行在 OS/2® 作業系統上的 Oracle DBMS,由 Novell® Netware 訪問;通過閘道存取的 IBM DB2 DBMS;伺服器目錄中的 Xbase 檔的集合;或本地 Microsoft®訪問資料庫檔。  
   
- 資料來源的目的是要收集存取資料所需的所有技術資訊（驅動程式名稱、網路位址、網路軟體等等），並將其隱藏在使用者的位置。 使用者應該能夠查看包含薪資、庫存和人員的清單、從清單中選擇 [薪資]，然後讓應用程式連接到薪資資料，而不需要知道薪資資料所在的位置或應用程式如何到達。  
+ 數據來源的目的是將資料(驅動程式名稱、網路位址、網路軟體等)收集到單個位置,並將其隱藏到單個位置,並將其隱藏到使用者位置。 用戶應該能夠查看包含工資單、庫存和人員的清單,從清單中選擇"工資單",讓應用程式連接到工資單數據,而不知道工資數據駐留的位置或應用程式如何訪問它。  
   
- 「*資料來源*」一詞不應該與類似的詞彙混淆。 在此手冊中， *DBMS*或*資料庫*是指資料庫程式或引擎。 在*桌面資料庫（* 專為在個人電腦上執行，且通常缺乏完整的 SQL 和交易支援）和*伺服器資料庫（* 設計成在用戶端/伺服器的情況下執行，並以獨立的資料庫引擎和豐富的 sql 和交易支援）來表示）之間，會有進一步的區別。 *資料庫*也會參考特定的資料集合，例如目錄中的 Xbase 檔案集合或 SQL Server 上的資料庫。 這通常等同于在此手冊中的其他地方使用的「*目錄*」一詞，或舊版 ODBC 中的「詞彙辨識*符號*」。  
+ 術語*數據源*不應與類似的術語混淆。 在本手冊中 *,DBMS*或*資料庫*是指資料庫程式或引擎。 *桌面資料庫*(設計為在個人電腦上運行且通常缺乏完整的 SQL 和事務支援)和*伺服器資料庫*(旨在在用戶端/伺服器情況下運行,其特點是獨立資料庫引擎和豐富的 SQL 和事務支援)之間進一步進行了區分。 *資料庫*還引用特定的數據集合,例如目錄中的 Xbase 檔集合或 SQL Server 上的資料庫。 它通常等效於本手冊其他部分使用的術語*目錄*,或早期版本的 ODBC 中的字語*修飾詞*。  
   
  此章節包含下列主題。  
   

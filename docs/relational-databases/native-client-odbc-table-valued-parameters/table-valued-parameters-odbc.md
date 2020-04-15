@@ -1,5 +1,5 @@
 ---
-title: 資料表值參數（ODBC） |Microsoft Docs
+title: 表值參數 (ODBC) |微軟文件
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297742"
 ---
 # <a name="table-valued-parameters-odbc"></a>資料表值參數 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   ODBC 對資料表值參數的支援可讓用戶端應用程式有效率地將參數化資料傳送給伺服器，其方式是使用一個呼叫來傳送多個資料列給伺服器。  
   
- 如需伺服器上資料表值參數的詳細資訊，請參閱[使用資料表值參數 &#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 關於伺服器上的表值參數的資訊,請參閱[使用表值參數&#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
  在 ODBC 中，這是您可以將資料表值參數傳送給伺服器的兩種方式：  
   
--   呼叫 SQLExecDirect 或 SQLExecute 時，所有資料表值參數資料都可以在記憶體中。 如果資料表值中有多個資料列，這些資料會儲存在陣列中。  
+-   在調用 SQLExecDirect 或 SQLExecute 時,所有表值參數數據都可以在記憶體中。 如果資料表值中有多個資料列，這些資料會儲存在陣列中。  
   
--   呼叫 SQLExecDirect 或 SQLExecute 時，應用程式可以指定資料表值參數的資料執行中。 在此情況下，可以在批次中提供資料表值的資料列，或是一次一個來減少記憶體需求。  
+-   調用 SQLExecDirect 或 SQLExecute 時,應用程式可以為表值參數指定執行時的數據。 在此情況下，可以在批次中提供資料表值的資料列，或是一次一個來減少記憶體需求。  
   
  第一個選項可讓預存程序封裝更多商務邏輯。 例如，將其他項目當做資料表值參數傳遞時，單一預存程序可封裝整個訂單輸入交易。 這個選項非常有效率，因為只需要單一次往返伺服器。 另外，您也可以使用不同程序來個別處理訂單標頭和訂單項目，這樣需要在用戶端與伺服器之間有更多的程式碼和更複雜的合約。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73790474"
  描述應用程式要如何針對預備好的程序呼叫取得中繼資料。  
   
  [其他資料表值參數中繼資料](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- 描述如何使用 SQLProcedureColumns、SQLTables 和 SQLColumns 來取得資料表值參數的中繼資料。  
+ 介紹如何使用 SQL 過程列、SQLTables 和 SQLColumns 檢索表值參數的中繼資料。  
   
  [資料表值參數資料轉換及其他錯誤和警告](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  描述如何處理有關資料表值參數資料行值的錯誤。  
@@ -81,7 +81,7 @@ ms.locfileid: "73790474"
  描述如何執行一般工作。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [資料表值參數 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [SQL 伺服器本機用戶端&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [&#40;SQL 伺服器本機客戶端&#41;表值參數](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

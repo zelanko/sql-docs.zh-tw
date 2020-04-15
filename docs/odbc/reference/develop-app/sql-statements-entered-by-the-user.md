@@ -1,5 +1,5 @@
 ---
-title: 使用者所輸入的 SQL 語句 |Microsoft Docs
+title: 使用者輸入的 SQL 語句 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf2f8cf36be392cb42a970fa2fb0b19c35daeb39
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086068"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301959"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>使用者所輸入的 SQL 陳述式
-執行臨機操作分析的應用程式通常也會允許使用者直接輸入 SQL 語句。 例如：  
+執行暫時分析的應用程式通常還允許使用者直接輸入 SQL 語句。 例如：  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -48,4 +48,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- 這種方法可簡化應用程式編碼;應用程式會依賴使用者來建立 SQL 語句和資料來源，以檢查語句的有效性。 因為很難以撰寫可充分公開 SQL 複雜性的圖形化使用者介面，所以只要要求使用者輸入 SQL 語句文字，可能是較好的替代方案。 不過，這會要求使用者不僅知道 SQL，也需要瞭解所查詢之資料來源的架構。 有些應用程式會提供圖形化使用者介面，供使用者用來建立基本的 SQL 語句，同時提供文字介面供使用者修改。
+ 此方法簡化了應用程式編碼;應用程式依賴於使用者生成 SQL 語句和數據源來檢查該語句的有效性。 由於很難編寫能夠充分暴露 SQL 的複雜性的圖形使用者介面,因此只需要求使用者輸入 SQL 語句文本可能是一種更可取的選擇。 但是,這要求用戶不僅瞭解 SQL,還知道要查詢的數據源的架構。 某些應用程式提供圖形使用者介面,使用者可以通過該介面創建基本的 SQL 語句,並提供文本介面,使用者可以使用該介面對其進行修改。

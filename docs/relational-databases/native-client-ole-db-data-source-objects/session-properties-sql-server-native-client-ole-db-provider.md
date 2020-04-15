@@ -1,5 +1,5 @@
 ---
-title: 會話屬性，SQL Native Client OLE DB
+title: 工作階段屬性,SQL 本機客戶端 OLE 資料庫
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6b0a6b512798e4da90555f7a7e195bfbcfbe97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 4d4b2bef0bf37b4400ac2cfcb672e43ba4f5abcb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75231774"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297077"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>工作階段屬性 - SQL Server Native Client OLE DB 提供者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會解讀 OLE DB 會話屬性，如下所示。  
+  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式解釋 OLE DB 會話屬性,如下所示。  
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|除了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]混亂層級 DBPROPVAL_TI_CHAOS 以外，Native Client OLE DB 提供者支援所有的自動認可交易隔離等級。|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式支援所有自動提交事務隔離等級,但混沌級別DBPROPVAL_TI_CHAOS除外。|  
 |||
 
- 在提供者特定的屬性集 DBPROPSET_SQLSERVERSESSION 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義下列額外的會話屬性。  
+ 在特定於提供程式的屬性集中DBPROPSET_SQLSERVERSESSION,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式定義以下附加作業階段屬性。  
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  

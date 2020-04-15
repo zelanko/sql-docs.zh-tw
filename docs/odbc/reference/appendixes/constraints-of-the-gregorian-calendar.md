@@ -1,5 +1,5 @@
 ---
-title: 西曆的條件約束 |Microsoft Docs
+title: 公曆的約束 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f88842c7426e17af1fdc0533b8b97e2c559de237
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284758"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>西曆條件約束
-日期和日期時間資料類型，以及間隔資料類型的尾端欄位必須符合西曆的條件約束。 這些條件約束如下所示：  
+日期和日期時間數據類型以及間隔數據類型的尾隨欄位必須符合公曆的約束。 這些限制如下:  
   
--   [Month] 欄位的值必須介於1到12（含）之間。  
+-   月欄位的值必須介於 1 和 12 之間(包括)。  
   
--   [日] 欄位的值必須在1到當月的天數範圍內。 該月份的天數取決於 [年] 和 [月] 欄位的值，而且可以是28、29、30或31。 （月份中的天數也可以取決於是否為閏年）。  
+-   日欄位的值必須在 1 到月份天數的範圍內。 當月中的天數根據年份和月份欄位的值確定,可以為 28、29、30 或 31。 (當月中的天數還取決於它是否是閏年。  
   
--   [小時] 欄位的值必須介於0到23（含）之間。  
+-   小時欄位的值必須介於 0 和 23 之間(包括)。  
   
--   分鐘欄位的值必須介於0到59（含）之間。  
+-   分鐘欄位的值必須介於 0 和 59 之間(包括)。  
   
--   針對間隔資料類型的尾端秒欄位，[秒] 欄位的值必須介於0到59.9 （*n*）（含）之間，其中*n*是小數秒數精確度的位數。  
+-   對於間隔數據類型的尾隨秒欄位,秒欄位的值必須介於 0 和 59.9(n )*n*之間,其中*n*是小數秒精度中的位數。  
   
--   針對 datetime 資料類型的尾端秒欄位，[秒數] 欄位的值必須介於0到61.9 （*n*）（含）之間，其中*n*指定 "9" 數位的數位，而*n*的值是小數秒有效位數。 （秒的範圍最多允許兩個閏秒，以維持恒星時間的同步處理）。
+-   對於日期時間數據類型的尾隨秒欄位,秒欄位的值必須介於 0 和 61.9(n )*n*之間,其中*n*指定"9"位數 *,n*的值為小數秒精度。 (秒的範圍允許多達兩個閏秒來保持次真時間的同步。

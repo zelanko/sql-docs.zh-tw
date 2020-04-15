@@ -1,5 +1,5 @@
 ---
-title: 產品支援 |Microsoft Docs
+title: 產品支援 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - product support [ODBC]
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09e62da5bf1f68ddf5ad2ab974d85cfb8dec859a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: baabb4b5beb1c089ae1d53b7de08d14955d83158
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988099"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304849"
 ---
 # <a name="product-support"></a>產品支援
-ODBC 的產品支援是由 Microsoft 產品支援服務所提供。 因為許多 Microsoft 產品都使用 ODBC 做為核心元件，同時也會轉散發 ODBC 驅動程式，所以 Microsoft 產品支援服務會將 ODBC 視為將 ODBC 納入為元件之每項產品的一部分。 根據該產品的支援合約，會提供 ODBC 的支援。 如需詳細資訊，請參閱個別產品檔。
+對 ODBC 的產品支援由 Microsoft 產品支援服務提供。 由於許多 Microsoft 產品使用 ODBC 作為核心元件,並且還重新分配了 ODBC 驅動程式,因此 Microsoft 產品支援服務認為 ODBC 是每個產品中整合 ODBC 的一部分。 根據該產品的支援協定,提供對ODBC的支援。 有關詳細資訊,請參閱各個產品文檔。

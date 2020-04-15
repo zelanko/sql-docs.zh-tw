@@ -1,5 +1,5 @@
 ---
-title: SQLTablePrivileges |Microsoft Docs
+title: SQLTable 特權 |微軟文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLTablePrivileges function
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a295df72be56343cdca65591a147adf173b36059
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d7a77eb5ea151c3a85f2235f48bb03d0e98dd9ce
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291898"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLTablePrivileges**可以在靜態資料指標上執行。 嘗試在可更新的（索引鍵集驅動或動態）上執行**SQLTablePrivileges**時，會傳回 SQL_SUCCESS_WITH_INFO 表示資料指標類型已變更。  
+  **SQLTable 特權**可以在靜態游標上執行。 嘗試在可提升的(鍵集驅動或動態)上執行**SQLTable 特權**,SQL_SUCCESS_WITH_INFO指示游標類型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式藉由接受*CatalogName*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 ODBC 驅動程式通過接受*目錄名稱*參數的兩部分名稱 *(Linked_Server_Name.Catalog_Name)* 支援報告連結伺服器上的表的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLTablePrivileges 函式](https://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [SQLTable 特權函數](https://go.microsoft.com/fwlink/?LinkId=59373\)   
  [ODBC API 實作詳細資料](~/relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLRemoveDriverManager 函式 |Microsoft Docs
+title: SQL移除驅動程式管理員功能 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDriverManager function function [ODBC]
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 27b32c1c4e0f3f4d5359af287ba07d40b033af00
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024546"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301809"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函式
-**標準**  
- 引進的版本： ODBC 3.0：已在 Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 及更新版本的作業系統中被取代。  
+**一致性**  
+ 介紹的版本:ODBC 3.0:在 Windows XP 服務包 2、Windows 伺服器 2003 服務包 1 和更高版本的操作系統中棄用。  
   
  **摘要**  
- **SQLRemoveDriverManager**會在系統資訊的 Odbcinst 專案中變更或移除 ODBC core 元件的相關資訊。  
+ **SQLRemoveDriverManager**更改或刪除系統資訊中的Odbcinst.ini條目中有關ODBC核心元件的資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,26 +42,26 @@ BOOL SQLRemoveDriverManager(
 ```  
   
 ## <a name="arguments"></a>引數  
- *pdwUsageCount*  
- 輸出在呼叫此函式之後，驅動程式管理員的使用量計數。  
+ *pdwUsage( S) Count*  
+ 【輸出]調用此函數後驅動程式管理器的使用計數。  
   
 ## <a name="returns"></a>傳回值  
- 如果成功，函式會傳回 TRUE，如果失敗，則傳回 FALSE。 如果在呼叫此函式時，系統資訊中沒有任何專案存在，此函數會傳回 FALSE。  
+ 如果成功,則函數返回 TRUE,如果失敗,則返回 FALSE。 如果在調用此函數時系統資訊中不存在條目,則函數將返回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLRemoveDriverManager**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
+ 當**SQLRemove 驅動程式管理員**傳回 FALSE 時,可以透過呼叫**SQL 安裝程式獲取**關聯的*\*pfError 程式*碼值。 下表列出了**SQL 安裝程式錯誤**可以返回的*\*pfErrorCode*值,並在此函數的上下文中解釋了每個值。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfError 碼*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到元件|安裝程式無法移除驅動程式管理員資訊，因為它不存在於登錄中，或在登錄中找不到。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|無法遞增或遞減元件使用量計數|安裝程式無法遞減驅動程式管理員的使用量計數。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生沒有特定安裝程式錯誤的錯誤。|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|註冊表中找不到元件|安裝程式無法刪除驅動程式管理員資訊,因為它要麼不存在在註冊表中,要麼在註冊表中找不到。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|無法增加或遞減元件使用量計數|安裝程式未能減少驅動程式管理器的使用計數。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足,安裝程式無法執行該功能。|  
   
 ## <a name="comments"></a>註解  
- **SQLRemoveDriverManager**會補充**SQLInstallDriverManager**函數，並更新系統資訊中的元件使用計數。 此函式只能從安裝應用程式呼叫。  
+ **SQLRemoveDriverManager**補充**SQLInstallDriverManager**功能,並更新系統資訊中的元件使用方式計數。 應僅從設置應用程式調用此功能。  
   
- **SQLRemoveDriverManager**會將核心元件使用計數遞減1。 如果元件使用計數變成0，將會移除專案系統資訊。 [核心元件] 專案位於系統資訊的下列位置中，標題為 "ODBC Core"：  
+ **SQLRemoveDriverManager**將核心元件使用計數減少 1。 如果元件使用計數為 0,則入口系統資訊將被刪除。 核心元件項目位於系統資訊中的以下位置,標題為「ODBC 核心」:  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -72,28 +72,28 @@ BOOL SQLRemoveDriverManager(
  `Odbcinst.ini`  
   
 > [!CAUTION]  
->  當元件使用計數和檔案使用量計數達到零時，應用程式應該不會實際移除驅動程式管理員檔案。  
+>  當元件使用計數和檔使用計數達到零時,應用程式不應物理刪除驅動程式管理器檔。  
   
- **SQLRemoveDriverManager**實際上不會移除任何檔案。 呼叫程式會負責刪除檔案及維護檔案使用計數。 不過，如果元件使用計數和檔案使用量計數都已達到零，則不應該移除驅動程式管理員檔案，因為這些檔案可能是其他未遞增檔案使用計數的應用程式所使用。  
+ **SQLRemove驅動程式管理員**實際上不會刪除任何檔。 呼叫程式負責刪除檔案和維護檔案使用方式計數。 但是,當元件使用計數和檔使用計數都達到零時,不應刪除驅動程式管理器檔,因為這些檔案可能由未增加檔使用計數的其他應用程式使用。  
   
- **SQLRemoveDriverManager**是在卸載過程中呼叫。 ODBC core 元件（包括驅動程式管理員、資料指標程式庫、安裝程式、語言程式庫、系統管理員、Thunking 檔等等）會全部卸載。 當您在卸載過程中呼叫**SQLRemoveDriverManager**時，不會移除下列檔案：  
+ **SQLRemoveDriverManager**是作為卸載過程的一部分調用的。 ODBC 核心元件(包括驅動程式管理員、遊標庫、安裝程式、語言庫、管理員、檔等)作為一個整體卸載。 在作為卸載過程的一部分呼叫**SQLRemoveDriverManager**時,不會刪除以下檔:  
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32.URLMON.DLL|  
-|ODBCCR32.URLMON.DLL|ODBC16GT.URLMON.DLL|  
-|ODBCCU32.URLMON.DLL|ODBC32GT.URLMON.DLL|  
-|ODBCINT.URLMON.DLL|DS16GT.URLMON.DLL|  
-|ODBCTRAC.URLMON.DLL|DS32GT.URLMON.DLL|  
-|MSVCRT40.URLMON.DLL|ODBCAD32.EXE.CONVERT.EXE|  
-|ODBCCP32.CPL||  
+|ODBC32DLL|ODBCCP32.Dll|  
+|ODBCCR32.Dll|ODBC16GT.Dll|  
+|ODBCCU32.Dll|ODBC32GT.Dll|  
+|ODBCINT.Dll|DS16GT.Dll|  
+|ODBCTRAC。Dll|DS32GT.Dll|  
+|MSVCRT40。Dll|ODBCAD32.Exe|  
+|ODBCCP32.Cpl||  
   
- **SQLRemoveDriverManager**也會在升級過程中呼叫。 如果應用程式偵測到它必須執行升級，而且先前已安裝驅動程式，則應該移除該驅動程式，然後重新安裝。  
+ **SQLRemoveDriverManager**也稱為升級過程的一部分。 如果應用程式檢測到必須執行升級,並且以前已安裝驅動程式,則應刪除驅動程式,然後重新安裝驅動程式。  
   
- 應該先呼叫**SQLRemoveDriverManager**以遞減元件使用計數。 接著，應呼叫**SQLInstallDriverEx**來遞增元件使用計數。 應用程式安裝程式必須以新的檔案取代舊的核心元件檔案。 檔案使用計數會維持不變，而使用舊版核心元件檔案的其他應用程式現在會使用較新版本的檔案。  
+ 應首先調用**SQLRemoveDriverManager**來減少元件使用計數。 然後應調用**SQLInstallDriverEx**以增加元件使用計數。 應用程式安裝程式必須用新檔替換舊的核心元件檔。 檔案使用方式計數將保持不變,使用舊版本核心元件檔的其他應用程式現在將使用較新版本的檔。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|安裝驅動程式管理員|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|
+|安裝驅動程式管理員|[SQLInstall 驅動程式管理員](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|

@@ -1,5 +1,5 @@
 ---
-title: 在具有稀疏資料行的資料表上呼叫 SQLColumns |Microsoft Docs
+title: 在具有稀疏列的表上調用 SQL 列 |微軟文件
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781704"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298309"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>在具有疏鬆資料行的資料表上呼叫 SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "73781704"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關「稀疏資料行」功能的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 有關稀疏列功能的詳細資訊,請參閱 SQL [Server 本機客戶端中的稀疏列支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  第一個清單是 C++ 原始程式碼。 請將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
@@ -35,7 +35,7 @@ ms.locfileid: "73781704"
   
  使用 /EHsc /D、"UNICODE" 和 odbc32.lib 編譯。  
   
- 第二個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所建立的資料表。  
+ 第二個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 代碼清單將刪除此範例建立的表。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

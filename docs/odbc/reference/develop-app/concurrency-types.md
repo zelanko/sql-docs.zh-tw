@@ -1,5 +1,5 @@
 ---
-title: 並行類型 |Microsoft Docs
+title: 併發類型 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63d7c7dce51fe4f514232cfd0d5ae2e5abeb5b70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 642301d09c5aa189276db534e58aca0c5e00e3ce
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299098"
 ---
 # <a name="concurrency-types"></a>並行類型
-為了解決資料指標中減少平行存取的問題，ODBC 會公開四種不同類型的資料指標並行：  
+為了解決游標中併發性降低的問題,ODBC 公開了四種不同類型的游標併發:  
   
--   **唯讀**游標可以讀取資料，但無法更新或刪除資料。 這是預設的並行類型。 雖然 DBMS 可能會鎖定資料列，以強制執行可重複讀取和可序列化的隔離等級，但是它可以使用讀取鎖定，而不是寫入鎖定。 這會導致平行存取較高，因為其他交易至少可以讀取資料。  
+-   **唯讀**游標可以讀取數據,但不能更新或刪除數據。 這是默認併發類型。 儘管 DBMS 可能會鎖定行以強制實施可重複讀取和可序列化隔離級別,但它可以使用讀取鎖而不是寫入鎖。 這將導致更高的併發性,因為其他事務至少可以讀取數據。  
   
--   **鎖定**資料指標會使用所需的最低層級鎖定，確保它可以更新或刪除結果集中的資料列。 這通常會導致非常低的並行層級，特別是在可重複讀取和可序列化的交易隔離等級。  
+-   **鎖定**游標使用所需的最低鎖定級別,以確保它可以更新或刪除結果集中的行。 這通常會導致非常低的併發級別,尤其是在可重複讀取和可序列化事務隔離級別。  
   
--   **使用資料列版本的開放式平行存取和使用值的開放式並行**存取資料指標使用開放式平行存取：它會更新或刪除資料列，但只有在上次讀取之後，才會進行變更。 若要偵測變更，它會比較資料列版本或值。 不保證資料指標可以更新或刪除資料列，但是並行處理的速度遠高於使用鎖定的時間。 如需詳細資訊，請參閱下一節[開放式並行](../../../odbc/reference/develop-app/optimistic-concurrency.md)存取。  
+-   **使用行版本進行樂觀併發,並使用值進行樂觀併發**游標使用樂觀併發:它僅在行自上次讀取以來未更改時更新或刪除行。 為了檢測更改,它會比較行版本或值。 不能保證游標能夠更新或刪除行,但併發性遠遠高於使用鎖定時。 有關詳細資訊,請參閱以下部分"[樂觀併發](../../../odbc/reference/develop-app/optimistic-concurrency.md)"。  
   
- 應用程式會指定要讓資料指標與 SQL_ATTR_CONCURRENCY 語句屬性搭配使用的並行類型。 為了判斷支援哪些類型，它會使用 SQL_SCROLL_CONCURRENCY 選項來呼叫**SQLGetInfo** 。
+ 應用程式指定希望游標與SQL_ATTR_CONCURRENCY語句屬性一起使用的併發類型。 要確定支援哪些類型,它使用SQL_SCROLL_CONCURRENCY選項調用**SQLGetInfo。**

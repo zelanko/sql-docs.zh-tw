@@ -1,5 +1,5 @@
 ---
-title: 資料類型（OLE DB） |Microsoft Docs
+title: 資料類型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770749"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304432"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  若要[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者來執行語句並處理結果，您必須知道[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者在系結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列集中的參數或資料行時，如何將資料類型對應到 OLE DB 的資料類型，以及當它使用**ITableDefinition**介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在中建立資料表時。  
+  為了[!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 本機用戶端 OLE DB 提供程式執行敘述和處理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結果,您必須知道 本機用戶端 OLE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB 提供程式如何在行集中 綁定參數或列時將資料類型映射到 OLE DB[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型,以及何時使用**ITable 定義**介面在中創建表。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [資料列集和參數中的資料類型對應](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md)  
+-   [行集與參數中的資料類型對應](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md)  
   
 -   [ITableDefinition 中的資料類型對應](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md)  
   

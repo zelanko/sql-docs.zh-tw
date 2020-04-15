@@ -1,5 +1,5 @@
 ---
-title: DELETE-SQL 命令 |Microsoft Docs
+title: 刪除 - SQL 指令 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DELETE [ODBC]
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9757fd57d999815964266c035963de1129eaf5e8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096336"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303549"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL 命令
-標示要刪除的記錄。  
+標記記錄以進行刪除。  
   
- Visual FoxPro ODBC 驅動程式支援此命令的原生 Visual FoxPro 語言語法。 如需驅動程式特定的資訊，請參閱備註。  
+ Visual FoxPro ODBC 驅動程式支援此命令的本機 Visual FoxPro 語言文法。 有關特定於驅動程序的資訊,請參閱備註。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,23 +33,23 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>引數  
- FROM [ *DatabaseName！*]*TableName*  
- 指定記錄已標示為要刪除的資料表。  
+ 從資料庫*名稱!**表格名稱*  
+ 指定在其中標記記錄以進行刪除的表。  
   
- *名稱!* 如果包含的資料庫不是與資料來源一起指定的資料庫，則指定包含資料表的資料庫名稱。 如果資料庫不是使用資料來源所指定的資料庫，您就必須加入包含資料表的資料庫名稱。 在資料庫名稱後面和資料表名稱前面加上驚嘆號（！）分隔符號。  
+ *資料庫名稱!* 指定包含表的資料庫的名稱,如果包含的資料庫不是使用數據來源指定的資料庫。 如果資料庫不是使用數據源指定的資料庫,則必須包含包含表的資料庫的名稱。 包括資料庫名稱後和表名稱之前的感嘆號 (!) 分隔符。  
   
- 其中*FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
- 指定 Visual FoxPro 只標示要刪除的特定記錄。  
+ 其中*篩選準則1*[和&#124;或*過濾器條件2*...]  
+ 指定 Visual FoxPro 僅標記某些記錄以進行刪除。  
   
- *FilterCondition*指定記錄必須符合才能標示為刪除的準則。 您可以視需要包含多個篩選準則，並使用 AND 或 OR 運算子來連接它們。 您也可以使用 NOT 運算子來反轉邏輯運算式的值，也可以使用**empty**（）來檢查空白欄位。  
+ *篩選器條件*指定記錄必須滿足的條件才能標記為刪除。 您可以根據需要包含盡可能多的篩選器條件,將它們與 AND 或 OR 運算元連接。 您還可以使用 NOT 運算子反轉邏輯表示式的值,也可以使用**EMPTY**( ) 檢查空欄位。  
   
 ## <a name="remarks"></a>備註  
- 如果 [設定已刪除] 設定為 [開啟]，則包含範圍的所有命令都會忽略標記為刪除的記錄。  
+ 如果 SET DELETED 設定為「打開」,則標記為刪除的記錄將被包含作用域的所有命令忽略。  
   
- DELETE-SQL 會在針對共用存取所開啟的資料表中標記多個要刪除的記錄時，使用記錄鎖定。 這可減少多使用者情況的記錄爭用，但可能會降低效能。 為了達到最大效能，請開啟資料表以供獨佔使用。  
+ 刪除 - SQL 在標記多個記錄以在打開的用於共用訪問的表中刪除時使用記錄鎖定。 這減少了多使用者情況下的記錄爭用,但會降低性能。 為了達到最佳性能,打開表以專供獨佔使用。  
   
 ## <a name="driver-remarks"></a>驅動程式備註  
- 當您的應用程式將 ODBC SQL 語句 DELETE 傳送到資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxPro DELETE 命令，而不會轉譯。  
+ 當您的應用程式將 ODBC SQL 語句 DELETE 發送到資料來源時,Visual FoxPro ODBC 驅動程式將該命令轉換為 Visual FoxPro DELETE 命令,無需翻譯。  
   
 ## <a name="see-also"></a>另請參閱  
  [SET DELETED 命令](../../odbc/microsoft/set-deleted-command.md)

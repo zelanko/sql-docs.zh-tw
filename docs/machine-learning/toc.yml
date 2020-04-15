@@ -61,7 +61,7 @@
           href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
-        - name: 建立 R 指令碼
+        - name: 執行 R 指令碼
           href: ../machine-learning/tutorials/quickstart-r-create-script.md
         - name: 資料類型與物件
           href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
@@ -74,7 +74,7 @@
     - name: Python
       items:
         - name: Python 教學課程
-          href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+          href: ../machine-learning/tutorials/python-tutorials.md
         - name: 滑雪板租賃業 (線性迴歸)
           items:
             - name: 1 - 簡介
@@ -112,7 +112,7 @@
     - name: R
       items:
         - name: R 教學課程
-          href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+          href: ../machine-learning/tutorials/r-tutorials.md
         - name: 建立資料分割型模型
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: 在 T-SQL 中使用 R

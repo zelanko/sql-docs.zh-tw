@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo （Excel 驅動程式） |Microsoft Docs
+title: SQLGetTypeInfo(Excel 驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLGetTypeInfo
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 227fef1ecd28e5099b599e86c82c3cc42fbacd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 64befe30be9ed7988e0c9348e9335eb632dd975c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898703"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295068"
 ---
 # <a name="sqlgettypeinfo-excel-driver"></a>SQLGetTypeInfo (Excel 驅動程式)
 > [!NOTE]  
->  本主題提供 Excel 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題提供特定於 Excel 驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
- **SQLGetTypeInfo**所產生之資料表中所傳回的類型名稱（TYPE_NAME）將會是資料來源最常使用的名稱。  
+ **SQLGetTypeInfo**生成的表中返回的類型(TYPE_NAME)的名稱將是數據源最常用的名稱。  
   
- 在 Byte、Counter、Double、Single、Long 和 Short 資料類型的可搜尋資料行中，將會傳回 SQL_ALL_EXCEPT_LIKE。 （您可以使用 ODBC 標準轉換函式將值轉換為字元，然後執行比較）來達到類似的功能。  
+ SQL_ALL_EXCEPT_LIKE將在位元組、計數器、雙、單、長和短資料類型的 SEARCHABLE 列中返回。 (可以通過使用 ODBC 規範轉換函數將值轉換為字元,然後執行比較來實現 LIKE 功能。  
   
- 使用 Microsoft Excel 驅動程式時，ODBC 類型名稱會在**SQLGetTypeInfo**傳回的 TYPE_NAME 資料行中傳回。
+ 使用 Microsoft Excel 驅動程式時,ODBC 類型名稱將傳回**在 SQLGetTypeInfo**返回的TYPE_NAME列中。

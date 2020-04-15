@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt 對應 |Microsoft Docs
+title: SQLFreeStmt 映射 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a92af35d8a1b1e98a484c69d7d2e66bf5bef3196
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9d187db4d40132385b9ae4564fddbf89987e3e97
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302009"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 對應
-當應用程式以 SQL_DROP 的*Option*引數呼叫**SQLFreeStmt**時，透過*ODBC 3.x*驅動程式，呼叫  
+當應用程式透過 ODBC *3.x*驅動程式呼叫**SQLFreeStmt** *選項參數SQL_DROP*時,呼叫  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
 ```  
   
- 對應至  
+ 對應  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- 將*Handle*引數設定為*hstmt*中的值。
+ 將*Handle*參數設置為*hstmt*中的值。

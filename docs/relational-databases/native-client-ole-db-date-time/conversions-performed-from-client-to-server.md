@@ -9,16 +9,16 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 54ab88302c14e9dc0aa405756bdf2e5b1ba75be5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096003"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304390"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "74096003"
 ## <a name="conversions"></a>轉換  
  本主題描述針對用戶端所進行的轉換。 如果用戶端針對參數所指定的小數秒有效位數與伺服器上所定義的小數秒有效位數不同，在伺服器允許作業成功的情況下，用戶端轉換可能會造成失敗。 特別是，用戶端會將任何截斷的小數秒視為錯誤，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將時間值捨去為最接近的整秒。  
   
- 如果未呼叫 ICommandWithParameters：： SetParameterInfo，DBTYPE_DBTIMESTAMP 系結會轉換成**datetime2**。  
+ 如果未呼叫 ICommandWithParameters::SetParameterInfo，就會將 DBTYPE_DBTIMESTAMP 繫結轉換為 **datetime2**。  
   
 |目標 -><br /><br /> 從|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "74096003"
   
 |符號|意義|  
 |------------|-------------|  
-|-|不支援轉換。 如果在呼叫 IAccessor：： CreateAccessor 時驗證系結，則會在*rgStatus*中傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
+|-|不支援轉換。 如果繫結在呼叫 IAccessor::CreateAccessor 時通過驗證，則會在 *rgStatus* 中傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
 |N/A|不適用。|  
 |1|如果提供的資料無效，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 輸入資料會在套用轉換之前進行驗證，因此，即使在後續轉換忽略元件時，該資料仍然必須有效，轉換才會成功。|  
 |2|忽略時間欄位。|  
@@ -65,8 +65,8 @@ ms.locfileid: "74096003"
 |11|根據下表，小數秒的位數 (小數位數) 會從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> 不過，如果來源類型為 DBTIMESTAMP 而且小數秒為零，則不會產生任何小數秒位數或小數點。 此行為可確保使用舊版 OLE DB 提供者所開發之應用程式的回溯相容性。<br /><br /> 資料行大小 ~0 在 OLE DB 中隱含為大小無限制 (除非 DBTIMESTAMP 套用 3 位數規則，否則為 9 位數)。|  
 |12|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的轉換語意。 小數秒會截斷到零。|  
 |13|系統會針對 DBTYPE_FILETIME 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的轉換語意。 如果您使用 Windows FileTimeToSystemTime API，小數秒有效位數會限制為 1 毫秒。|  
-|14|系統會針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]smalldatetime** 維護 ** 之前的轉換語意。 秒數會設定為零。|  
-|15|系統會針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]datetime** 維護 ** 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
+|14|系統會針對 **smalldatetime** 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的轉換語意。 秒數會設定為零。|  
+|15|系統會針對 **datetime** 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
 |16|內嵌在 SSVARIANT 用戶端架構中之值 (屬於給定類型) 的轉換行為與未內嵌在 SSVARIANT 用戶端架構時之值和類型的行為相同。|  
   
 ||||  
@@ -77,6 +77,6 @@ ms.locfileid: "74096003"
 |DBTIMESTAMPOFFSET|26, 28..36|0、1..9|  
   
 ## <a name="see-also"></a>另請參閱  
- [系結和轉換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [繫結和轉換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

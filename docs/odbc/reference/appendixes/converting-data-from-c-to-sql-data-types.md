@@ -1,5 +1,5 @@
 ---
-title: 將資料從 C 轉換成 SQL 資料類型 |Microsoft Docs
+title: 將資料從 C 轉換為 SQL 資料類型 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,42 +18,42 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304657"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>將資料從 C 轉換成 SQL 資料類型
-當應用程式呼叫**SQLExecute**或**SQLExecDirect**時，此驅動程式會從應用程式中的儲存位置，抓取任何與**SQLBindParameter**系結之參數的資料。 當應用程式呼叫**SQLSetPos**時，驅動程式會從與**SQLBindCol**系結的資料行抓取更新或加入作業的資料。 對於資料執行中參數，應用程式會使用**SQLPutData**傳送參數資料。 如有必要，驅動程式會將**SQLBindParameter**中*ValueType*引數所指定之資料類型的資料，轉換為**SQLBindParameter**中的*ParameterType*引數所指定的資料類型，然後將資料傳送至資料來源。  
+當應用程式呼叫**SQLExecute**或**SQLExecDirect**時,驅動程式從應用程式中的儲存位置檢索與**SQLBind 參數**綁定的任何參數的數據。 當應用程式呼叫**SQLSetPos**時,驅動程式檢索更新的數據,或從綁定**到 SQLBindCol**的列中添加操作。 對於執行時的數據參數,應用程式使用**SQLPutData**發送參數數據。 如有必要,驅動程式將數據從**SQLBind 參數**中*ValueType*參數指定的數據類型轉換為**SQLBind 參數**中的*參數類型*參數指定的數據類型,然後將數據發送到數據源。  
   
- 下表顯示從 ODBC C 資料類型到 ODBC SQL 資料類型的支援轉換。 實心圓圈表示 SQL 資料類型的預設轉換（當*ValueType*的值或 SQL_DESC_CONCISE_TYPE 描述項欄位 SQL_C_DEFAULT 時，資料會轉換成的 C 資料類型）。 空心圓形表示支援的轉換。  
+ 下表顯示了支援的從 ODBC C 資料類型到 ODBC SQL 資料類型的轉換。 填充圓指示 SQL 資料類型的預設轉換(當*ValueType*的值或SQL_DESC_CONCISE_TYPE描述符欄位SQL_C_DEFAULT時,將轉換數據的 C 資料類型)。 空心圓表示支援的轉換。  
   
- 已轉換資料的格式不會受到 Windows®國家（地區）設定的影響。  
+ 轉換資料的格式不受 Windows ® 國家 / 地區設置的影響。  
   
  ![支援的轉換：ODBC C 至 SQL 資料類型](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
- 下列各節中的資料表描述驅動程式或資料來源如何轉換傳送至資料來源的資料;需要驅動程式才能支援從所有 ODBC C 資料類型到其支援的 ODBC SQL 資料類型的轉換。 若為指定的 ODBC C 資料類型，資料表的第一欄會列出**SQLBindParameter**中*ParameterType*引數的合法輸入值。 第二個數據行列出驅動程式執行的測試結果，以判斷它是否可以轉換資料。 第三個數據行會列出**SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、 **SQLSetPos**或**SQLPutData**針對每個結果所傳回的 SQLSTATE。 只有在傳回 SQL_SUCCESS 時，才會將資料傳送至資料來源。  
+ 以下各節中的表描述了驅動程式或數據源如何轉換發送到數據源的數據;需要驅動程式來支援從所有 ODBC C 資料類型轉換為他們支援的 ODBC SQL 資料類型。 對於給定的 ODBC C 資料類型,表的第一列在**SQLBind 參數**中列出了*參數類型*參數的合法輸入值。 第二列列出了驅動程式執行以確定是否可以轉換數據的測試的結果。 第三列列出了 SQLExecDirect、SQLExecute、SQLBulk**操作****、SQLSetPos**或**SQLPutData**為每個結果傳**SQLExecDirect****SQLExecute**回的 SQLSTATE。 僅當返回SQL_SUCCESS時,才會將數據發送到數據源。  
   
- 如果**SQLBindParameter**中的*ParameterType*引數包含在給定 C 資料類型的資料表中未顯示之 ODBC SQL 資料類型的識別碼，則**SQLBindParameter**會傳回 SQLSTATE 07006 （限制的資料類型屬性違規）。 如果*ParameterType*引數包含驅動程式專屬的識別碼，而驅動程式不支援從特定的 ODBC C 資料類型轉換成該驅動程式特定的 SQL 資料類型，則**SQLBINDPARAMETER**會傳回 SQLSTATE HYC00 （未執行的選擇性功能）。  
+ 如果**SQLBind 參數**中的*參數類型*參數包含未在給定 C 資料類型的表中顯示的 ODBC SQL 資料類型的識別碼,則**SQLBind 參數**將傳回 SQLSTATE 07006(受限資料類型屬性衝突)。 如果*參數類型*參數包含特定於驅動程式的識別碼,並且驅動程式不支援從特定的 ODBC C 資料類型轉換為該驅動程式特定的 SQL 資料類型,**則 SQLBind 參數**將傳回 SQLSTATE HYC00(未實現可選功能)。  
   
- 如果**SQLBindParameter**中指定的*ParameterValuePtr*和*StrLen_or_IndPtr*引數都是 null 指標，則該函式會傳回 SQLSTATE HY009 （不正確 null 指標用法）。 雖然它不會顯示在資料表中，但應用程式會將**SQLBindParameter**的*StrLen_or_IndPtr*引數所指向的長度/指標緩衝區值，或**SQLPutData**的*StrLen_or_IndPtr*引數值設定為 SQL_Null_DATA 以指定 Null SQL 資料值。 （ *StrLen_or_IndPtr*引數會對應至 APD 的 [SQL_DESC_OCTET_LENGTH_PTR] 欄位）。應用程式會將這些值設定為 SQL_NTS 以指定**SQLPutData**中\* **SQLBindParameter**或\* *DataPtr*中*ParameterValuePtr*的值（由 APD 的 SQL_DESC_DATA_PTR 欄位所指向）是以 null 結束的字串。  
+ 如果**SQLBind 參數**中指定的*參數 ValuePtr*和*StrLen_or_IndPtr*參數都是空指標,則該函數將返回 SQLSTATE HY009(無效使用空指標)。 儘管表中未顯示,但應用程式會設置**SQLBind 參數***StrLen_or_IndPtr*參數指向的長度/ 指示器緩衝區的值,或者**SQLPutData** *StrLen_or_IndPtr*參數的值SQL_NULL_DATA以指定 NULL SQL 資料值。 (StrLen_or_IndPtr*StrLen_or_IndPtr*參數對應於 APD 的SQL_DESC_OCTET_LENGTH_PTR欄位。應用程式將這些值設置為SQL_NTS,以指定**SQLBind**\*參數 或**SQLPutData**中的\**DataPtr*中的*參數 ValuePtr*中的值(由 APD 的SQL_DESC_DATA_PTR字段指向)是一個空端字串。  
   
- 下列是在資料表中使用的詞彙：  
+ 下表中使用了以下術語:  
   
--   **資料的位元組長度**-可用來傳送至資料來源之 SQL 資料的位元組數目，不論資料是否會在傳送至資料來源之前截斷。 針對字串資料，這不包含 null 終止字元的空間。  
+-   **數據位元組長度**- 可用於發送到資料來源的 SQL 資料位元組數,無論資料在發送到資料來源之前是否會被截斷。 對於字串資料,這不包括 null 終止字元的空間。  
   
--   資料**行位元組長度**-將資料儲存在資料來源所需的位元組數目。  
+-   **欄位長度**- 將資料儲存在資料來源中所需的位元組數。  
   
--   **字元位元組長度**-以字元形式顯示資料所需的最大位元組數目。 這是針對 [[顯示大小](../../../odbc/reference/appendixes/display-size.md)] 中的每個 SQL 資料類型所定義，但 [字元位元組長度] 是以位元組為單位，而顯示大小為 [字元]。  
+-   **字元位元組長度**- 以字元形式顯示資料所需的最大位元組數。 這是為[顯示大小](../../../odbc/reference/appendixes/display-size.md)中的每個 SQL 數據類型定義的,但字元位元組長度以位元組為單位,而顯示大小以字元為單位。  
   
--   **位數**-用來表示數位的字元數，包括負號、小數點和指數（如有需要）。  
+-   **數位數**- 用於表示數位的字元數,包括減號、小數點和指數(如果需要)。  
   
--   **中的單字**   
-     ***斜體***-SQL 文法的元素。 如需文法元素的語法，請參閱[附錄 C： SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
+-   **單詞在**   
+     ***斜體***- SQL 語法的元素。 有關語法元素的語法,請參閱[附錄 C:SQL 語法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
   
  此章節包含下列主題。  
   

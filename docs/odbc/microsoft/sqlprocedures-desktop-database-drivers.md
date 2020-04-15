@@ -1,5 +1,5 @@
 ---
-title: SQLProcedures （桌面資料庫驅動程式） |Microsoft Docs
+title: SQL程式 (桌面資料庫驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLProcedures function [ODBC], Desktop Database Drivers
 ms.assetid: c996ad6f-e790-40f4-a962-843422496149
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d778f53f2d82be88aa62489f49712048991b579f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: baad3dc667104000dac9f09e59c12c7670361177
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909964"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299448"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (桌面資料庫驅動程式)
-**SQLProcedures**只會針對具有至少一個引數的程式傳回資料列。 沒有引數的程式會視為 views。  
+**SQL程式**將僅返回具有至少一個參數的過程的行。 沒有參數的過程將被視為視圖。  
   
 |資料行|註解|  
 |------------|--------------|  
 |PROCEDURE_QUALIFIER|資料庫檔案的路徑。|  
 |PROCEDURE_OWNER|NULL|  
-|PROCEDURE_NAME|未分隔程式名稱|  
+|PROCEDURE_NAME|未限制程序名稱|  
 |PROCEDURE_TYPE|SQL_PT_PROCEDURE|

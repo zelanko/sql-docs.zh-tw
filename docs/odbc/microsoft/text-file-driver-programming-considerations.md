@@ -1,5 +1,5 @@
 ---
-title: 文字檔驅動程式設計考慮 |Microsoft Docs
+title: 文字檔案驅動程式程式設計注意事項 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba56db60d38f6babc52f81f65f9b94e2c3a2f531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 72f624f65cadd6d7cbd5eb9d9354c84200733de0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939690"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81279838"
 ---
 # <a name="text-file-driver-programming-considerations"></a>文字檔驅動程式的程式設計考量
 本節包含下列主題：  
@@ -31,4 +31,4 @@ ms.locfileid: "67939690"
   
 -   [文字檔的 SQLGetInfo 傳回值](../../odbc/microsoft/sqlgetinfo-returned-values-for-text-files.md)  
   
--   [其他文字檔驅動程式的程式設計詳細資料](../../odbc/microsoft/other-text-file-driver-programming-details.md)
+-   [其他文字檔驅動程式設計詳細資料](../../odbc/microsoft/other-text-file-driver-programming-details.md)
