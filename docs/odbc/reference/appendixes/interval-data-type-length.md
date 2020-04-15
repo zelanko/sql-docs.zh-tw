@@ -1,5 +1,5 @@
 ---
-title: 間隔資料類型長度 |Microsoft Docs
+title: 間隔資料類型長度 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - length of data types [ODBC]
 - interval data type [ODBC], length
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a456db12ddb2594dc7b4c9e4f5c26e9cb4245621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68bb4daa47cb58d5a0ff7b680a2d2154fb14b345
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947583"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284317"
 ---
 # <a name="interval-data-type-length"></a>間隔資料類型長度
-下列規則是用來判斷 interval 資料類型的長度（以字元為單位）。 長度以字元數表示。 位元組數目取決於字元集。 長度包含下列新增的值：  
+以下規則用於確定以字元為單位的間隔數據類型的長度。 長度以字元數表示。 位元組數取決於字元集。 長度包括新增在一起的以下值:  
   
--   間隔中不是前置欄位的每個欄位都有兩個字元。  
+-   間隔中每個欄位的兩個字元,而不是前導欄位。  
   
--   對於前置欄位，這是快速或隱含前置精確度的字元數。 如果未指定前置精確度，預設值為2。  
+-   對於前導欄位,表示表示或隱式前導精度的字元數。 如果未指定前導精度,則預設值為 2。  
   
--   欄位之間分隔符號的一個字元。  
+-   欄位之間的分隔符的一個字元。  
   
--   一個加上快速或隱含的秒數有效位數。 如果未指定秒數有效位數，則預設值為6。  
+-   一加上明示或隱含秒精度。 如果未指定秒精度,則預設值為 6。  
   
- 每個間隔資料類型的特定資料行長度值會包含在資料[行大小](../../../odbc/reference/appendixes/column-size.md)中。
+ 每個間隔數據類型的特定列長度值包含在[列大小](../../../odbc/reference/appendixes/column-size.md)中。

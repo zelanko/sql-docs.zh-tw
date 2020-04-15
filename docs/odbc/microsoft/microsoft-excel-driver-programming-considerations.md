@@ -1,5 +1,5 @@
 ---
-title: Microsoft Excel 驅動程式設計考慮 |Microsoft Docs
+title: 微軟 Excel 驅動程式程式設計注意事項 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adb76a40b9f8ed79af41fd122ac94f8a0d9ee7c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5e0eec3f6cfc8b4c0e761ec0eea9b1dfd42005df
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045045"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283758"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Microsoft Excel 驅動程式的程式設計考量
 此章節包含下列主題。  
@@ -31,4 +31,4 @@ ms.locfileid: "68045045"
   
 -   [Excel 的 SQLGetInfo 傳回值](../../odbc/microsoft/sqlgetinfo-returned-values-for-excel.md)  
   
--   [其他 Excel 驅動程式的程式設計詳細資料](../../odbc/microsoft/other-excel-driver-programming-details.md)
+-   [其他 Excel 驅動程式設計詳細資料](../../odbc/microsoft/other-excel-driver-programming-details.md)

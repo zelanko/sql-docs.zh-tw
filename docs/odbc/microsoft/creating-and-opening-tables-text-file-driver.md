@@ -1,5 +1,5 @@
 ---
-title: 建立和開啟資料表（文字檔驅動程式） |Microsoft Docs
+title: 建立與開啟表(文字檔案驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], creating and opening tables
 ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b36c02d772682088a799cfca66f5bbf3e169a67f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae13312299f131d1957557db28bbe4db0bf7b4c7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096537"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280918"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>建立和開啟資料表 (文字檔驅動程式)
-使用文字驅動程式時，會使用 Odbcinst 中指定的格式來建立新的資料表。 如果未指定，則會以 CSVDELIMITED 格式建立資料表。 根據預設，整數資料行預設為11個字元，而 FLOAT 資料行的預設值為22個字元。 日期資料行使用 YYYY-MM-DD 格式。 CHAR 和 LONGCHAR 資料行是 CREATE 語句中所指定的寬度。
+使用文字驅動程式時,將使用 Odbcinst.ini 中指定的格式創建新錶。 如果未指定,則以 CSVDELIMITED 格式建立表。 默認情況下,INTEGER 列預設為 11 個字元,FLOAT 列預設為 22 個字元。 日期列使用 YYYY-MM-DD 格式。 CHAR 和 LONGCHAR 列是 CREATE 語句中指定的寬度。

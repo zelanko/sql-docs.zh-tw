@@ -1,5 +1,5 @@
 ---
-title: 取得相互 Kerberos 驗證 |Microsoft Docs
+title: 取得相互 Kerberos 認證微軟文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782811"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301108"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>取得相互 Kerberos 驗證
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73782811"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需詳細資訊，請參閱[用戶端連線中的服務主體名稱 &#40;SPN&#41; 支援](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有關詳細資訊,請參閱[服務主體名稱&#40;SPN&#41;客户端连接中的支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>範例  
  如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  

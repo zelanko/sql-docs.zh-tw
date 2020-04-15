@@ -1,5 +1,5 @@
 ---
-title: 會話 |Microsoft Docs
+title: 工作階段 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e5896456f3c4f8074b62f6e1d4707cc7c41d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 27df569ba94cd5acb22ba2ee974751bd5d80d1b6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296993"
 ---
 # <a name="sessions"></a>工作階段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話代表實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]單一連接。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式作業階段表示到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例的 單個連接。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者需要會話分隔資料來源的交易空間。 所有從特定工作階段物件建立而來的命令物件，都會參與工作階段物件的本機或分散式交易。  
+ 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式要求工作階段為資料源分隔事務空間。 所有從特定工作階段物件建立而來的命令物件，都會參與工作階段物件的本機或分散式交易。  
   
  在初始化資料來源上建立的第一個工作階段物件會接收在初始化時所建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接。 當工作階段物件介面上的所有參考被釋放時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接就可供資料來源上建立的另一個工作階段物件使用。  
   
  在資料來源上建立的其他工作階段物件會依照資料來源的指示，對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體建立本身的連接。 當應用程式釋放對該工作階段所建立物件的所有參考時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接就會卸除。  
   
- 下列範例示範如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫：  
+ 下面的範例展示如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機客戶端 OLE 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供者連接到資料庫:  
   
 ```  
 int main()  
@@ -181,7 +181,7 @@ EXIT:
 }  
 ```  
   
- 將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話物件連接到實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可能會為持續建立和釋放會話物件的應用程式產生相當大的負擔。 有效率地管理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話物件，可將額外負荷降到最低。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者應用程式可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]藉由維護至少一個物件介面上的參考，讓會話物件的連接保持使用中狀態。  
+ 將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]軟體連接到的實例可以為不斷創建和釋放工作階段物件的應用程式帶來大量開銷。 通過高效管理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式作業軟體,可以最大限度地減少開銷。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供程式應用程式 可以通過在物件的至少一個介面上維護引用來保持作業物件的連接處於活動狀態。  
   
  例如，維持命令建立物件參考的集區，可以將集區中這些工作階段物件的連接保持為使用中。 在需要工作階段物件時，集區維護程式碼會將有效的 **IDBCreateCommand** 介面指標傳遞到需要該工作階段的應用程式方法。 當應用程式方法不再需要工作階段時，該方法會將介面指標傳回給集區維護程式碼，而不是釋放應用程式對命令建立物件的參考。  
   

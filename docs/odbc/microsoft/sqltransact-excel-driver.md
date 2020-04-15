@@ -1,5 +1,5 @@
 ---
-title: SQLTransact （Excel 驅動程式） |Microsoft Docs
+title: SQLTransact(Excel 驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - SQLTransact function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLTransact
 ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5362c8da9edca2b35c9049c12be0f44e4fa30fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8e78d79f1c96018d90df39e445553e450616957
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948933"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299248"
 ---
 # <a name="sqltransact-excel-driver"></a>SQLTransact (Excel 驅動程式)
 > [!NOTE]  
->  本主題提供 Excel 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題提供特定於 Excel 驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
- 此函式支援 SQL_COMMIT，但不能 SQL_ROLLBACK。
+ 此功能支援SQL_COMMIT,但不支援SQL_ROLLBACK。

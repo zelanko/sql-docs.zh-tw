@@ -1,5 +1,5 @@
 ---
-title: 非同步執行（輪詢方法） |Microsoft Docs
+title: 非同步執行(輪詢方法) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,36 +10,36 @@ ms.topic: conceptual
 helpviewer_keywords:
 - asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca7b3d5fa16be44bf4c2ef8f8df8953ae081235d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293398"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同步執行 (輪詢方法)
-在 ODBC 3.8 和 Windows 7 SDK 之前，只允許在語句函式上進行非同步作業。 如需詳細資訊，請參閱本主題稍後的**以非同步方式執行語句作業**。  
+在 ODBC 3.8 和 Windows 7 SDK 之前,僅允許在語句函數上執行非同步操作。 關於詳細資訊,請參閱本主題後面的**執行敘述 。**  
   
- Windows 7 SDK 中的 ODBC 3.8 在連接相關的作業上引進了非同步執行。 如需詳細資訊，請參閱本主題稍後的**非同步執行連接作業**一節。  
+ Windows 7 SDK 中的 ODBC 3.8 引入了連接相關操作的非同步執行。 有關詳細資訊,請參閱本主題後面的 **「同步執行連接操作**」部分。  
   
- 在 Windows 7 SDK 中，針對非同步語句或連接作業，應用程式會使用輪詢方法判定非同步作業已完成。 從 Windows 8 SDK 開始，您可以使用通知方法來判斷非同步作業是否已完成。 如需詳細資訊，請參閱[非同步執行（通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)。  
+ 在 Windows 7 SDK 中,對於非同步語句或連接操作,應用程式確定非同步操作是否已完成使用輪詢方法。 從 Windows 8 SDK 開始,可以使用通知方法確定非同步操作是否已完成。 有關詳細資訊,請參閱[非同步執行(通知方法)。](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
- 根據預設，驅動程式會以同步方式執行 ODBC 函數;也就是說，應用程式會呼叫函式，而驅動程式不會將控制權傳回給應用程式，直到它完成執行函數為止。 不過，有些函數可以非同步執行;也就是說，應用程式會呼叫函式，而驅動程式會在最少處理之後，將控制權傳回給應用程式。 然後，應用程式可以在第一個函式仍在執行時呼叫其他函式。  
+ 默認情況下,驅動程式同步執行ODBC函數;也就是說,應用程式調用一個函數,驅動程式在完成執行函數之前不會將控制件返回到應用程式。 但是,某些函數可以非同步執行;也就是說,應用程式調用函數,驅動程式在最少的處理后返回對應用程式的控制。 然後,應用程式可以在第一個函數仍在執行時調用其他函數。  
   
- 大部分大部分在資料來源上執行的函式都支援非同步執行，例如建立連接、準備和執行 SQL 語句、抓取中繼資料、提取資料和認可交易的函數。 在資料來源上執行的工作需要很長的時間，例如登入程式或對大型資料庫的複雜查詢時，這是最有用的。  
+ 大多數主要在數據源上執行的函數都支援非同步執行,例如建立連接、準備和執行 SQL 語句、檢索元資料、提取資料和提交事務的函數。 當在數據源上執行的任務需要很長時間(如登錄過程或針對大型資料庫的複雜查詢)時,它最有用。  
   
- 當應用程式使用已啟用非同步處理的語句或連接來執行函式時，驅動程式會執行最少量的處理（例如，檢查引數的錯誤）、對資料來源進行手動處理，然後傳回使用 SQL_STILL_EXECUTING 傳回碼來控制應用程式。 然後，應用程式會執行其他工作。 若要判斷非同步函式何時完成，應用程式會呼叫函式，並以原先使用的相同引數，以定期輪詢驅動程式。 如果函數仍在執行，它會傳回 SQL_STILL_EXECUTING;如果它已經完成執行，它會傳回它所傳回的程式碼，它會以同步方式執行，例如 SQL_SUCCESS、SQL_ERROR 或 SQL_NEED_DATA。  
+ 當應用程式執行具有為非同步處理啟用的語句或連接的函數時,驅動程式執行最少的處理量(例如檢查錯誤參數)、對資料源的句柄處理,以及使用SQL_STILL_EXECUTING返回代碼將控制權返回到應用程式。 然後,應用程式執行其他任務。 要確定非同步函數何時完成,應用程式透過呼叫與最初使用的參數相同的參數,定期輪詢驅動程式。 如果函數仍在執行,它將返回SQL_STILL_EXECUTING;如果已完成執行,它將返回如果同步執行的代碼,例如SQL_SUCCESS、SQL_ERROR或SQL_NEED_DATA。  
   
- 函數是否以同步或非同步方式執行，是驅動程式特有的。 例如，假設驅動程式中快取了結果集中繼資料。 在此情況下，執行**SQLDescribeCol**需要很少的時間，而驅動程式應該只執行函式，而不是人為順延強制。 另一方面，如果驅動程式需要從資料來源抓取中繼資料，它應該會在執行此作業時將控制權傳回給應用程式。 因此，在第一次以非同步方式執行函式時，應用程式必須能夠處理 SQL_STILL_EXECUTING 以外的傳回碼。  
+ 函數是同步執行還是非同步執行是特定於驅動程式的。 例如,假設結果集元數據緩存在驅動程式中。 在這種情況下,執行**SQLDescribeCol**的時間非常少,驅動程式應該簡單地執行該函數,而不是人為地延遲執行。 另一方面,如果驅動程式需要從數據源檢索元數據,則應在執行此操作時將控制權返回到應用程式。 因此,應用程式在首次非同步執行函數時必須能夠處理SQL_STILL_EXECUTING以外的返回代碼。  
   
-## <a name="executing-statement-operations-asynchronously"></a>以非同步方式執行語句作業  
- 下列語句函式會在資料來源上運作，而且可以非同步執行：  
+## <a name="executing-statement-operations-asynchronously"></a>非同步執行敘述  
+ 以下語句函數對資料來源運行,可以非同步執行:  
   
 ||||  
 |-|-|-|  
-|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
+|[SQLBulk 操作](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
 |[SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|[SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
 |[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
@@ -49,15 +49,15 @@ ms.locfileid: "68077054"
 |[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
 |[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
   
- 視資料來源而定，非同步語句執行是根據每個語句或每個連接來控制。 也就是說，應用程式不會指定要以非同步方式執行特定函式，但在特定語句上執行的任何函式都會以非同步方式執行。 若要找出支援哪一個，應用程式會使用 SQL_ASYNC_MODE 的選項來呼叫[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 。 如果支援連接層級的非同步執行（適用于語句控制碼），則會傳回 SQL_AM_CONNECTION;如果支援語句層級非同步執行，SQL_AM_STATEMENT。  
+ 非同步語句執行基於每個語句或每個連接進行控制,具體取決於資料源。 也就是說,應用程式指定的不是要非同步執行特定函數,而是指定對特定語句執行的任何函數都將異步執行。 要瞭解支援哪個應用程式,應用程式呼叫[SQLGetInfo,](../../../odbc/reference/syntax/sqlgetinfo-function.md)選項為 SQL_ASYNC_MODE。 如果支援連接級非同步執行(對於語句句柄),則返回SQL_AM_CONNECTION;如果支援語句級非同步執行,SQL_AM_STATEMENT。  
   
- 若要指定以特定語句執行的函式要以非同步方式執行，應用程式會使用 SQL_ATTR_ASYNC_ENABLE 屬性來呼叫**SQLSetStmtAttr** ，並將它設定為 SQL_ASYNC_ENABLE_ON。 如果支援連接層級的非同步處理，則 SQL_ATTR_ASYNC_ENABLE 語句屬性會是唯讀的，而且其值會與配置語句之連接的連接屬性相同。 無論語句屬性的值是在語句配置時間或更新版本中設定，它都是驅動程式特定的。 嘗試設定它會傳回 SQL_ERROR 和 SQLSTATE HYC00 （未實作為選擇性功能）。  
+ 要指定使用特定語句執行的函數要非同步執行,應用程式使用SQL_ATTR_ASYNC_ENABLE屬性調用**SQLSetStmtAttr**並將其設置為SQL_ASYNC_ENABLE_ON。 如果支援連接級非同步處理,則SQL_ATTR_ASYNC_ENABLE語句屬性為唯讀,其值與分配語句的連接的連接屬性相同。 它是特定於驅動程式的,無論語句屬性的值是在語句分配時間設置還是更高版本。 嘗試設置它將返回SQL_ERROR和 SQLSTATE HYC00(未實現可選功能)。  
   
- 若要指定以特定連接執行的函式要以非同步方式執行，應用程式會使用 SQL_ATTR_ASYNC_ENABLE 屬性來呼叫**SQLSetConnectAttr** ，並將它設定為 SQL_ASYNC_ENABLE_ON。 在連接上配置的所有未來語句控制碼都將啟用非同步執行;無論此動作是否會啟用現有的語句控制碼，都是由驅動程式定義的。 如果 SQL_ATTR_ASYNC_ENABLE 設定為 SQL_ASYNC_ENABLE_OFF，則連接上的所有語句都會處於同步模式。 當連接上有作用中的語句時，如果啟用非同步執行，則會傳回錯誤。  
+ 要指定使用特定連接執行的函數要非同步執行,應用程式使用SQL_ATTR_ASYNC_ENABLE屬性調用**SQLSetConnectAttr**並將其設定為SQL_ASYNC_ENABLE_ON。 將在連接上分配的所有語句句柄都將啟用以進行非同步執行;它是驅動程式定義的,是否將此操作啟用現有語句句柄。 如果將SQL_ATTR_ASYNC_ENABLE設置為SQL_ASYNC_ENABLE_OFF,則連接上的所有語句都處於同步模式。 如果在連接上有活動語句時啟用了非同步執行,則返回錯誤。  
   
- 若要判斷驅動程式可在指定的連接上支援之非同步模式中的作用中並行語句數目上限，應用程式會使用 SQL_MAX_ASYNC_CONCURRENT_STATEMENTS 選項來呼叫**SQLGetInfo** 。  
+ 要確定驅動程式在給定連接上可以支援的非同步模式下活動並發語句的最大數量,應用程式使用SQL_MAX_ASYNC_CONCURRENT_STATEMENTS選項呼叫**SQLGetInfo。**  
   
- 下列程式碼示範輪詢模型的運作方式：  
+ 以下代碼演示了輪詢模型的工作原理:  
   
 ```  
 SQLHSTMT  hstmt1;  
@@ -75,11 +75,11 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
 // When the statement has finished executing, retrieve the results.  
 ```  
   
- 當函式以非同步方式執行時，應用程式可以在任何其他語句上呼叫函數。 應用程式也可以呼叫任何連接上的函式，但與非同步語句關聯的函式除外。 但是，在語句作業傳回 SQL_STILL_EXECUTING 之後，應用程式只能呼叫原始函式和下列函數（使用語句控制碼或其相關聯的連接，環境控制碼）：  
+ 當函數非同步執行時,應用程式可以在任何其他語句上調用函數。 應用程式還可以調用任何連接上的函數,但與非同步語句關聯的連接除外。 但是,在語句操作返回SQL_STILL_EXECUTING后,應用程式只能調用原始函數和以下函數(具有語句句柄或其關聯的連接、環境句柄):  
   
 -   [SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)  
   
--   [SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) （在語句控制碼上）  
+-   [SQLCancelHandle(](../../../odbc/reference/syntax/sqlcancelhandle-function.md)在語句句柄上)  
   
 -   [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
   
@@ -91,7 +91,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
   
 -   [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
--   [SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)  
+-   [SQLData來源](../../../odbc/reference/syntax/sqldatasources-function.md)  
   
 -   [SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)  
   
@@ -101,7 +101,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
   
 -   [SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
- 如果應用程式使用非同步語句或與該語句相關聯的連接來呼叫任何其他函式，此函式會傳回 SQLSTATE HY010 （函數順序錯誤），例如。  
+ 如果應用程式使用非同步語句或與該語句關聯的連接呼叫任何其他函數,則函數將返回 SQLSTATE HY010(函數序列錯誤)。  
   
 ```  
 SQLHDBC       hdbc1, hdbc2;  
@@ -134,59 +134,59 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- 當應用程式呼叫函式以判斷它是否仍以非同步方式執行時，它必須使用原始的語句控制碼。 這是因為非同步執行是根據每個語句來追蹤。 應用程式也必須提供其他引數的有效值，原始引數會執行，以在驅動程式管理員中取得過去的錯誤檢查。 不過，在驅動程式檢查語句控制碼並判斷語句是以非同步方式執行之後，它會忽略所有其他引數。  
+ 當應用程式調用函數以確定它是否仍在非同步執行時,它必須使用原始語句句柄。 這是因為非同步執行是按語句追蹤的。 應用程式還必須為其他參數(原始參數將執行)提供有效值,以在驅動程式管理器中通過錯誤檢查。 但是,在驅動程式檢查語句句柄並確定語句以非同步方式執行後,它將忽略所有其他參數。  
   
- 當函式以非同步方式執行時，也就是在它傳回 SQL_STILL_EXECUTING 之後，而且在傳回不同的程式碼之前，應用程式可以使用相同的語句控制碼呼叫**SQLCancel**或**SQLCancelHandle**來取消它。 這不保證會取消函式執行。 例如，函數可能已經完成。 此外， **SQLCancel**或**SQLCancelHandle**所傳回的程式碼只會指出是否已成功嘗試取消函式，而不是真的是否已取消函數。 為了判斷函式是否已取消，應用程式會再次呼叫函式。 如果已取消函式，它會傳回 SQL_ERROR 並 SQLSTATE HY008 （作業已取消）。 如果未取消函式，它會傳回另一個程式碼，例如 SQL_SUCCESS、SQL_STILL_EXECUTING 或具有不同 SQLSTATE 的 SQL_ERROR。  
+ 當函數以非同步方式執行時(即,在返回SQL_STILL_EXECUTING後,並在返回其他代碼之前,應用程式可以透過使用相同的語句句柄呼叫**SQLCancel**或**SQLCancelHandle**來取消它。 這不能保證取消函數執行。 例如,函數可能已完成。 此外 **,SQLCancel**或**SQLCancelHandle**返回的代碼僅指示取消函數的嘗試是否成功,而不是是否實際取消了該函數。 要確定函數是否已取消,應用程式將再次調用該函數。 如果函數已取消,它將返回SQL_ERROR和 SQLSTATE HY008(操作已取消)。 如果未取消該函數,它將返回另一個代碼,如SQL_SUCCESS、SQL_STILL_EXECUTING或具有其他 SQLSTATE 的SQL_ERROR。  
   
- 當驅動程式支援語句層級非同步處理時，若要停用特定語句的非同步執行，應用程式會使用 SQL_ATTR_ASYNC_ENABLE 屬性呼叫**SQLSetStmtAttr** ，並將它設定為 SQL_ASYNC_ENABLE_OFF。 如果驅動程式支援連接層級的非同步處理，則應用程式會呼叫**SQLSetConnectAttr** ，將 SQL_ATTR_ASYNC_ENABLE 設定為 SQL_ASYNC_ENABLE_OFF，這會停用連接上所有語句的非同步執行。  
+ 要禁用在驅動程式支援語句級非同步處理時對特定語句的非同步執行,應用程式使用SQL_ATTR_ASYNC_ENABLE屬性調用**SQLSetStmtAttr**並將其設置為SQL_ASYNC_ENABLE_OFF。 如果驅動程式支援連接級非同步處理,應用程式將調用**SQLSetConnectAttr**將SQL_ATTR_ASYNC_ENABLE設定為SQL_ASYNC_ENABLE_OFF,從而禁用對連接上所有語句的非同步執行。  
   
- 應用程式應該在原始函數的重複迴圈中處理診斷記錄。 如果在非同步函式執行時呼叫**SQLGetDiagField**或**SQLGetDiagRec** ，它會傳回目前的診斷記錄清單。 每當原始函式呼叫重複時，就會清除先前的診斷記錄。  
+ 應用程式應在原始函數的重複迴圈中處理診斷記錄。 如果在執行非同步函數時呼叫**SQLGetDiagField**或**SQLGetDiagRec,** 它將返回當前診斷記錄清單。 每次重複原始函數調用時,它都會清除以前的診斷記錄。  
   
-## <a name="executing-connection-operations-asynchronously"></a>以非同步方式執行連接作業  
- 在 ODBC 3.8 之前，允許非同步執行用於語句相關的作業，例如準備、執行和提取，以及目錄中繼資料作業。 從 ODBC 3.8 開始，也可以對連接相關的作業（例如 connect、disconnect、commit 和 rollback）進行非同步執行。  
+## <a name="executing-connection-operations-asynchronously"></a>非同步執行連線操作  
+ 在 ODBC 3.8 之前,允許非同步執行語句相關操作,如準備、執行和提取,以及目錄中資料操作。 從 ODBC 3.8 開始,對於連接相關操作(如連接、斷開連接、提交和回滾)也可以執行異步執行。  
   
- 如需 ODBC 3.8 的詳細資訊，請參閱[odbc 3.8 的新功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。  
+ 有關 ODBC 3.8 的詳細資訊,請參閱[ODBC 3.8 中的新增功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。  
   
- 在下列案例中，非同步執行連接作業非常有用：  
+ 在以下情況下,非同步執行連線操作非常有用:  
   
--   當少數的執行緒以非常高的資料速率來管理大量的裝置時。 若要將回應能力和擴充性最大化，所有作業都是非同步。  
+-   當少量線程管理具有極高數據速率的大量設備時。 為了最大限度地提高回應性和可擴充性,所有操作都是異步的。  
   
--   當您想要在多個連接上重迭資料庫作業，以減少經過的傳輸時間。  
+-   如果要在多個連接上重疊資料庫操作以減少已用傳輸時間。  
   
--   有效率的非同步 ODBC 呼叫和取消連接作業的功能，可讓應用程式允許使用者取消任何緩慢的操作，而不需要等候超時。  
+-   高效的非同步ODBC調用和取消連接操作的能力使應用程式允許使用者取消任何慢速操作,而無需等待超時。  
   
- 下列在連接控制碼上運作的函式現在可以非同步執行：  
+ 以下函數在連接句柄上操作,現在可以非同步執行:  
   
 ||||  
 |-|-|-|  
-|[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
+|[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQL 斷線](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
- 為了判斷驅動程式是否支援這些函式的非同步作業，應用程式會使用 SQL_ASYNC_DBC_FUNCTIONS 來呼叫**SQLGetInfo** 。 如果支援非同步作業，則會傳回 SQL_ASYNC_DBC_CAPABLE。 如果不支援非同步作業，則會傳回 SQL_ASYNC_DBC_NOT_CAPABLE。  
+ 要確定驅動程式是否支援對這些函數的非同步操作,應用程式使用SQL_ASYNC_DBC_FUNCTIONS調用**SQLGetInfo。** 如果支援非同步操作,則返回SQL_ASYNC_DBC_CAPABLE。 如果不支援非同步操作,則返回SQL_ASYNC_DBC_NOT_CAPABLE。  
   
- 若要指定以特定連接執行的函式要以非同步方式執行，應用程式會呼叫**SQLSetConnectAttr** ，並將 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 屬性設為 SQL_ASYNC_DBC_ENABLE_ON。 在建立連接之前設定連接屬性一律會以同步方式執行。 此外，使用**SQLSetConnectAttr**設定連接屬性 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 的作業，一律會以同步方式執行。  
+ 要指定使用特定連接執行的函數要非同步執行,應用程式將調用**SQLSetConnectAttr**並將SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE屬性設置為SQL_ASYNC_DBC_ENABLE_ON。 在建立連接之前設置連接屬性始終同步執行。 此外,使用**SQLSetConnectAttr** SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE連接屬性設置的操作始終同步執行。  
   
- 應用程式可以在建立連接之前啟用非同步作業。 因為驅動程式管理員無法在建立連線之前判斷要使用哪一個驅動程式，所以驅動程式管理員在**SQLSetConnectAttr**中一律會傳回成功。 不過，如果 ODBC 驅動程式不支援非同步作業，它可能會無法連接。  
+ 應用程式可以在建立連接之前啟用非同步操作。 由於驅動程式管理員無法確定在建立連接之前要使用的驅動程式,因此驅動程式管理員將始終在**SQLSetConnectAttr**中傳回成功。 但是,如果 ODBC 驅動程式不支援非同步操作,則可能無法連接。  
   
- 一般來說，最多隻能有一個與特定連接控制碼或語句控制碼相關聯的非同步執行函數。 不過，連接控制碼可以有一個以上關聯的語句控制碼。 如果沒有在連接控制碼上執行的非同步作業，相關聯的語句控制碼就可以執行非同步作業。 同樣地，如果任何相關聯的語句控制碼上沒有進行中的非同步作業，您可以在連接控制碼上進行非同步作業。 嘗試使用目前正在執行非同步作業的控制碼來執行非同步作業，將會傳回 HY010，「函數順序錯誤」。  
+ 通常,最多只能有一個與特定連接句柄或語句句柄關聯的非同步執行函數。 但是,連接句柄可以有多個關聯的語句句柄。 如果連接句柄上沒有執行非同步操作,則關聯的語句句柄可以執行非同步操作。 同樣,如果任何關聯的語句句柄上沒有正在進行的非同步操作,則可以對連接句柄執行異步操作。 嘗試使用當前正在執行非同步操作的句柄執行非同步操作將返回 HY010,「函數序列錯誤」。  
   
- 如果連接作業傳回 SQL_STILL_EXECUTING，應用程式只能針對該連接控制碼呼叫原始函式和下列函數：  
+ 如果連線操作傳回SQL_STILL_EXECUTING,則應用程式只能呼叫該連線句柄的原始函數和以下函數:  
   
--   **SQLCancelHandle** （在連接控制碼上）  
+-   **SQLCancelHandle(** 在連接句柄上)  
   
 -   **SQLGetDiagField**  
   
 -   **SQLGetDiagRec**  
   
--   **SQLAllocHandle** （配置 ENV/DBC）  
+-   **SQLAllocHandle(** 分配 ENV/DBC)  
   
--   **SQLAllocHandleStd** （配置 ENV/DBC）  
+-   **SQLAllocHandleStd(** 分配 ENV/ DBC )  
   
 -   **SQLGetEnvAttr**  
   
 -   **SQLGetConnectAttr**  
   
--   **SQLDataSources**  
+-   **SQLData來源**  
   
 -   **SQLDrivers**  
   
@@ -194,25 +194,25 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 -   **SQLGetFunctions**  
   
- 應用程式應該在原始函數的重複迴圈中處理診斷記錄。 如果在非同步函式執行時呼叫 SQLGetDiagField 或 SQLGetDiagRec，它會傳回目前的診斷記錄清單。 每當原始函式呼叫重複時，就會清除先前的診斷記錄。  
+ 應用程式應在原始函數的重複迴圈中處理診斷記錄。 如果在執行非同步函數時呼叫 SQLGetDiagField 或 SQLGetDiagRec,它將返回當前診斷記錄清單。 每次重複原始函數調用時,它都會清除以前的診斷記錄。  
   
- 如果以非同步方式開啟或關閉連接，當應用程式接收到原始函數呼叫 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 時，作業就會完成。  
+ 如果以非同步方式打開或關閉連接,則當應用程式在原始函數調用中收到SQL_SUCCESS或SQL_SUCCESS_WITH_INFO時,操作將完成。  
   
- ODBC 3.8 （ **SQLCancelHandle**）已加入新函數。 此函式會取消六個連接函式（**SQLBrowseConnect**、 **SQLConnect**、 **SQLDisconnect**、 **SQLDriverConnect**、 **SQLEndTran**和**SQLSetConnectAttr**）。 應用程式應該呼叫**SQLGetFunctions**來判斷驅動程式是否支援**SQLCancelHandle**。 如同**SQLCancel**，如果**SQLCancelHandle**傳回 success，則不表示作業已取消。 應用程式應該再次呼叫原始函式，以判斷作業是否已取消。 **SQLCancelHandle**可讓您取消連接控制碼或語句控制碼上的非同步作業。 使用**SQLCancelHandle**取消語句控制碼上的作業，與呼叫**SQLCancel**相同。  
+ 新函數已新增到 ODBC **3.8,SQLCancelHandle**。 此函數取消六個連接函數 **(SQLBrowseConnect、SQLConnect、SQL****斷開連接****、SQLDriverConnect、SQLEndTran**和**SQLSetConnectAttr)。** **SQLConnect** **SQLEndTran** 應用程式應呼叫**SQLGet 函數**以確定驅動程式是否支援**SQLCancelHandle**。 與**SQLCancel**一樣,如果**SQLCancelHandle**返回成功,並不意味著操作已取消。 應用程式應再次調用原始函數以確定操作是否已取消。 **SQLCancelHandle**允許您取消連接句柄或語句句柄上的非同步操作。 使用**SQLCancelHandle**取消文句句柄上的操作與調用**SQLCancel**相同。  
   
- 不需要同時支援**SQLCancelHandle**和非同步連接作業。 驅動程式可以支援非同步連接作業，但不能**SQLCancelHandle**，反之亦然。  
+ 不必同時支援**SQLCancelHandle**和非同步連接操作。 驅動程式可以支援非同步連接操作,但不能支援**SQLCancelHandle,** 反之亦然。  
   
- ODBC 3.x 和 odbc 2.x 應用程式也可以使用非同步連接作業和**SQLCancelHandle**搭配 odbc 3.8 驅動程式和 Odbc 3.8 驅動程式管理員。 如需如何讓繼承應用程式在稍後的 ODBC 版本中使用新功能的相關資訊，請參閱[相容性對照表](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
+ 具有 ODBC 3.8 驅動程式和 ODBC 3.8 驅動程式管理員的 ODBC 3.x 和 ODBC 2.x 應用程式也可以使用非同步連線操作和**SQLCancelHandle。** 有關如何啟用較舊的應用程式在更高版本的 ODBC 版本中使用新功能的資訊,請參閱[相容性矩陣](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
 ### <a name="connection-pooling"></a>連接共用  
- 每當啟用連接共用時，僅支援非同步作業來建立連接（使用**SQLConnect**和**SQLDriverConnect**），並關閉與**SQLDisconnect**的連接。 但是，應用程式仍然可以處理來自**SQLConnect**、 **SQLDriverConnect**和**SQLDisconnect**的 SQL_STILL_EXECUTING 傳回值。  
+ 每當啟用連接池時,非同步操作僅受最小支援,用於建立連接(使用**SQLConnect**和**SQLDriverConnect),** 並關閉與**SQLDisconnect**的連接。 但是,應用程式仍然能夠處理來自 SQLConnect、SQLDriverConnect**SQLConnect**和**SQLDisconnect**的**SQLDriverConnect**SQL_STILL_EXECUTING返回值。  
   
- 啟用連接共用時，非同步作業會支援**SQLEndTran**和**SQLSetConnectAttr** 。  
+ 啟用連接池後,非同步操作支援**SQLEndTran**和**SQLSetConnectAttr。**  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 下列範例示範如何使用**SQLSetConnectAttr** ，為連接相關的函式啟用非同步執行功能。  
+ 下面的範例展示如何使用**SQLSetConnectAttr**為連接相關的函數啟用非同步執行。  
   
 ### <a name="code"></a>程式碼  
   
@@ -266,7 +266,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例會顯示非同步認可作業。 復原作業也可以透過這種方式來完成。  
+ 此示例顯示非同步提交操作。 回滾操作也可以以這種方式完成。  
   
 ### <a name="code"></a>程式碼  
   
@@ -295,4 +295,4 @@ BOOL AsyncCommit ()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行陳述式 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+ [執行敘述的 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)

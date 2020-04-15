@@ -1,5 +1,5 @@
 ---
-title: 資料指標程式庫程式碼範例 |Microsoft Docs
+title: 游標庫代碼範例 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019068"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284678"
 ---
 # <a name="cursor-library-code-example"></a>資料指標程式庫程式碼範例
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
   
- 下列範例會使用資料指標程式庫來抓取 ORDERS 資料表中的每個訂單識別碼、開啟日期和狀態。 然後，它會顯示20個數據列。 如果使用者更新此資料，則程式碼會更新資料列集緩衝區，並執行定位的 update 語句。 最後，它會提示使用者滾動並重複處理常式。  
+ 下面的範例使用游標庫從 ORDERS 表檢索每個訂單的 ID、打開日期和狀態。 然後,它顯示 20 行數據。 如果使用者更新此數據,代碼將更新行集緩衝區並執行定位的更新語句。 最後,它提示使用者方向滾動並重複該過程。  
   
 ```  
 #define ROWS 20  

@@ -1,5 +1,5 @@
 ---
-title: 相對和絕對滾動 |Microsoft Docs
+title: 相對和絕對滾動 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae0ed5af8d116a3038b55b1e3d68231154c2a35c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138063"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300098"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相對與絕對的捲動
-**SQLFetchScroll**中的大部分滾動選項會將游標放在相對於目前位置或絕對位置的位置。 **SQLFetchScroll**支援提取下一個、上一個、第一個和最後一個資料列集，以及相對提取（從目前資料列集的開頭提取資料列集*n*個數據列）和絕對提取（提取從第*n*行開始的資料列集）。 如果*n*在絕對提取中為負數，則會從結果集的結尾計算資料列。 因此，從結果集中的最後一個資料列開始，資料列1的絕對提取方法就是提取資料列集。  
+**SQLFetchScroll**中的大多數滾動選項將游標相對於當前位置或絕對位置的位置放置。 **SQLFetchScroll**支援提取下一個、先行、第一行和最後一個行集,以及相對提取(從當前行集的開頭提取行*n*行)和絕對提取(從行*n*開始提取行集)。 如果*n*在絕對提取中為負數,則行將從結果集的末尾計數。 因此,行 -1 的絕對提取意味著獲取以結果集中的最後一行開頭的行集。  
   
- 動態資料指標會偵測從結果集插入和刪除的資料列，因此，動態資料指標沒有簡單的方法可以從結果集開頭讀取的特定數位來抓取資料列，這可能會很慢。 此外，在動態資料指標中，絕對提取並沒有太大説明，因為插入和刪除資料列時，資料列編號會變更;因此，連續提取相同的資料列數目可能會產生不同的資料列。  
+ 動態游標檢測插入的結果集並從中刪除的行,因此,除了從結果集的開頭讀取行之外,動態游標無法輕鬆檢索行,這可能很慢。 此外,絕對提取在動態游標中不是很有用,因為行號會隨著行的插入和刪除而變化;因此,連續獲取同一行號可以產生不同的行。  
   
- 僅針對其區塊資料指標功能使用**SQLFetchScroll**的應用程式（例如報表）可能會通過單一時間的結果集，而只會使用提取下一個資料列集的選項。 另一方面，以螢幕為基礎的應用程式可以利用**SQLFetchScroll**的所有功能。 如果應用程式將資料列集大小設定為螢幕上顯示的資料列數目，並將螢幕緩衝區系結至結果集，則可以直接將捲軸作業轉譯為呼叫**SQLFetchScroll**。  
+ 僅對其塊游標功能(如報表)使用**SQLFetchScroll**的應用程式可能會通過結果集一次,僅使用該選項獲取下一個行集。 另一方面,基於螢幕的應用程式可以利用**SQLFetchScroll**的所有功能。 如果應用程式將行集大小設置為螢幕上顯示的行數,並將螢幕緩衝區綁定到結果集,則可以將滾動條操作直接轉換為對**SQLFetchScroll**的調用。  
   
 |捲軸作業|SQLFetchScroll 捲動選項|  
 |--------------------------|-------------------------------------|  
 |向上捲動一頁|SQL_FETCH_PRIOR|  
 |向下捲動一頁|SQL_FETCH_NEXT|  
-|向上捲動一行|*FetchOffset*等於-1 的 SQL_FETCH_RELATIVE|  
-|向下捲動一行|*FetchOffset*等於1的 SQL_FETCH_RELATIVE|  
-|在頂端捲動方塊|SQL_FETCH_FIRST|  
-|在底部捲動方塊|SQL_FETCH_LAST|  
+|向上捲動一行|SQL_FETCH_RELATIVE*提取偏移*量等於 -1|  
+|向下捲動一行|SQL_FETCH_RELATIVE*擷取位移*等於 1|  
+|頂端捲軸|SQL_FETCH_FIRST|  
+|底部捲軸框|SQL_FETCH_LAST|  
 |隨機捲動方塊位置|SQL_FETCH_ABSOLUTE|  
   
- 這類應用程式也需要在滾動作業之後放置捲動方塊，這需要目前的資料列數目和資料列數目。 對於目前的資料列數目，應用程式可以追蹤目前的資料列數目，或使用 SQL_ATTR_ROW_NUMBER 屬性來呼叫**SQLGetStmtAttr** ，以抓取它。  
+ 此類應用程式還需要在滾動操作后定位滾動框,此操作需要當前行號和行數。 對於當前行號,應用程式可以跟蹤當前行號,也可以使用SQL_ATTR_ROW_NUMBER屬性調用**SQLGetStmtAttr**來檢索它。  
   
- 資料指標中的資料列數目（也就是結果集的大小）會以診斷標頭的 [SQL_DIAG_CURSOR_ROW_COUNT] 欄位的形式提供。 只有在呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResult**之後，才會定義此欄位中的值。 視驅動程式的功能而定，此計數可以是大約計數或確切計數。 藉由呼叫**SQLGetInfo**與 cursor 屬性資訊類型，並檢查是否傳回資料指標類型的 SQL_CA2_CRC_APPROXIMATE 或 SQL_CA2_CRC_EXACT 位，即可判斷驅動程式的支援。  
+ 游標中的行數(結果集的大小)可作為診斷標頭的SQL_DIAG_CURSOR_ROW_COUNT欄位提供。 此欄位中的值僅在調用**SQLExecute、SQLExecDirect**或**SQLMoreResult**後定義。 **SQLExecute** 此計數可以是近似計數或精確計數,具體取決於驅動程式的功能。 可以通過調用**SQLGetInfo**與游標屬性資訊類型並檢查是否為游標類型返回SQL_CA2_CRC_APPROXIMATE位或SQL_CA2_CRC_EXACT位來確定驅動程式的支援。  
   
- 動態資料指標永遠不支援精確的資料列計數。 對於其他類型的資料指標，此驅動程式可以支援精確或近似的資料列計數，但不能兩者都支援。 如果驅動程式針對特定資料指標類型不支援精確或近似的資料列計數，SQL_DIAG_CURSOR_ROW_COUNT 欄位會包含到目前為止已提取的資料列數目。 無論驅動程式支援何種功能， **SQLFetchScroll**作業** SQL_FETCH_LAST 都會導致 SQL_DIAG_CURSOR_ROW_COUNT 欄位包含精確的資料列計數。
+ 動態游標從不支援確切的行計數。 對於其他類型的游標,驅動程式可以支援精確或近似行計數,但不能同時支援這兩者。 如果驅動程式既不支援特定游標類型的精確行計數,也不支援近似行計數,則SQL_DIAG_CURSOR_ROW_COUNT欄位包含到目前為止已提取的行數。 無論驅動程式支援什麼,具有 SQL_FETCH_LAST*操作*的**SQLFetchScroll**都將導致SQL_DIAG_CURSOR_ROW_COUNT欄位包含確切的行計數。

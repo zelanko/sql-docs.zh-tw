@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics （Visual FoxPro ODBC Driver） |Microsoft Docs
+title: SQL統計(可視化福克斯Pro ODBC驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLStatistics function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cab23cb3f470ed9a0b0a1bb6dc15b411fb9b69b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f225e37fd8bace25c90782d6a35b0eab09ea82cb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306107"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題包含 Visual FoxPro ODBC 特定於驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
- 支援：完整  
+ 支援: 完整  
   
- ODBC API 一致性：層級1  
+ ODBC API 符合性:1 級  
   
- 抓取關於單一資料表的統計資料清單，以及與資料表相關聯的索引或標記名稱。 驅動程式會以結果集的形式傳回信息。  
+ 檢索有關單個表以及與表關聯的索引或標記名稱的統計資訊清單。 驅動程式將返回結果集。  
   
- 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) 。
+ 有關詳細資訊,請參閱*ODBC 程式者參考中的* [SQL 統計](../../odbc/reference/syntax/sqlstatistics-function.md)。

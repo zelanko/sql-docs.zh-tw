@@ -1,5 +1,5 @@
 ---
-title: 配置和釋放緩衝區 |Microsoft Docs
+title: 分配和釋放緩衝區 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288398"
 ---
 # <a name="allocating-and-freeing-buffers"></a>配置及釋放緩衝區
-所有緩衝區都是由應用程式所配置和釋放。 如果緩衝區未延後，只需要在函式的呼叫期間存在。 例如， **SQLGetInfo**會傳回與*InfoValuePtr*引數所指向之緩衝區中特定選項相關聯的值。 這個緩衝區可以在呼叫**SQLGetInfo**之後立即釋放，如下列程式碼範例所示：  
+所有緩衝區都由應用程式分配和釋放。 如果緩衝區未延遲,則它只需要在調用函數的持續時間記憶體在。 例如 **,SQLGetInfo**傳回*與 InfoValuePtr*參數指向的緩衝區中特定選項關聯的值。 此緩衝區可以在調用**SQLGetInfo**後立即釋放,如下代碼範例所示:  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -34,7 +34,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- 因為延遲的緩衝區是在一個函式中指定，並用於另一個函數中，所以它是應用程式設計錯誤，可在驅動程式仍預期它存在時釋放延遲的緩衝區。 例如， \* *valueptr 是*緩衝區的位址會傳遞至**SQLBindCol** ，供**SQLFetch**稍後使用。 在資料行解除系結之前，無法釋放這個緩衝區，例如呼叫**SQLBindCol**或**SQLFreeStmt** ，如下列程式碼範例所示：  
+ 由於延遲緩衝區在一個函數中指定,在另一個函數中使用,因此在驅動程式仍希望它存在時釋放延遲緩衝區是應用程式程式程式程式錯誤。 例如\**,ValuePtr*緩衝區的位址將傳遞給**SQLBindCol,** 供**SQLFetch**以後使用。 在取消結合的音效之前無法釋放此緩衝區,例如呼叫**SQLBindCol**或**SQLFreeStmt,** 如以下代碼範例所示:  
   
 ```  
 SQLRETURN    rc;  
@@ -59,7 +59,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- 這類錯誤很容易透過在函式的本機宣告緩衝區來完成：當應用程式離開函數時，就會釋放緩衝區。 例如，下列程式碼會導致驅動程式中未定義且可能出現嚴重的行為：  
+ 通過在函數中本地聲明緩衝區,很容易出現此類錯誤;當應用程式離開函數時,將釋放緩衝區。 例如,以下代碼會導致驅動程式中未定義且可能致命的行為:  
   
 ```  
 SQLRETURN   rc;  

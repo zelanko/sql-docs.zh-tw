@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter （Excel 驅動程式） |Microsoft Docs
+title: SQLBind參數(Excel驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLBindParameter
 - SQLBindParameter function [ODBC], Excel Driver
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b33200e0628566bc88f770ca1fe8fd895ecbf2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3a2d0a03bded3ec909cd158b36f52ee9007647e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063247"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300628"
 ---
 # <a name="sqlbindparameter-excel-driver"></a>SQLBindParameter (Excel 驅動程式)
 > [!NOTE]  
->  本主題提供 Excel 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題提供特定於 Excel 驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
- 當使用 Microsoft Excel 驅動程式時，執行使用參數將 Null 插入 SQL_CHAR 資料行中的 INSERT 語句，將會傳回具有 SQLSTATE 01004 的 SQL_SUCCESS_WITH_INFO 「資料已截斷」。
+ 使用 Microsoft Excel 驅動程式時,執行使用參數將 NULL 插入到SQL_CHAR列的 INSERT 語句將返回 SQLSTATE 01004 SQL_SUCCESS_WITH_INFO,「數據已截斷」。

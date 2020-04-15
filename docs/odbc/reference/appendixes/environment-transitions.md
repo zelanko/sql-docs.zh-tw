@@ -1,5 +1,5 @@
 ---
-title: 環境轉換 |Microsoft Docs
+title: 環境轉換 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,122 +12,122 @@ helpviewer_keywords:
 - transitioning states [ODBC], environment
 - state transitions [ODBC], environment
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b1de2f2147357f9e2ed4f71657b9298c4a13684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ebfb5475d24d5fc70c4cb46a666b2573066565a1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67910437"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283298"
 ---
 # <a name="environment-transitions"></a>環境轉換
-ODBC 環境具有下列三種狀態。  
+ODBC 環境具有以下三種狀態。  
   
 |State|描述|  
 |-----------|-----------------|  
 |E0|未配置的環境|  
-|E1|配置的環境，未配置的連接|  
-|E2|配置的環境，配置的連接|  
+|E1|已配置的環境,未分配的連線|  
+|E2|已配置的環境,已分配的連線|  
   
- 下表顯示每個 ODBC 函數如何影響環境狀態。  
+ 下表顯示了每個 ODBC 函數如何影響環境狀態。  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|E1 [1]|--[4]|--[4]|  
-|(IH)2|E2 [5]<br />HY0107|--[4]|  
-|(IH)第|(IH)|--[4]|  
+|E1[1]|--[4]|--[4]|  
+|(IH)[2]|E2[5]<br />(HY010)[6]|--[4]|  
+|(IH)[3]|(IH)|--[4]|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當 SQL_HANDLE_DBC *HandleType*時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC時的過渡。  
   
- [3] 此資料列會顯示*HandleType* SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 時的轉換。  
+ [3] 此行顯示*HandleType* SQL_HANDLE_STMT或SQL_HANDLE_DESC時的過渡。  
   
- [4] 以指向有效控制碼的*OutputHandlePtr*呼叫**SQLAllocHandle**會覆寫該控制碼。 這可能是應用程式設計錯誤。  
+ [4] 使用*OutputHandlePtr*調用**SQLAllocHandle,** 指向有效的句柄覆蓋該句柄。 這可能是應用程式程式設計錯誤。  
   
- [5] 已在環境上設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [5] SQL_ATTR_ODBC_VERSION環境屬性已設置在環境中。  
   
- [6] 尚未在環境上設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [6] 未在環境中設置SQL_ATTR_ODBC_VERSION環境屬性。  
   
-## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources 和 SQLDrivers  
+## <a name="sqldatasources-and-sqldrivers"></a>SQLData 源及 SQL 驅動程式  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />HY0102|--[1]<br />HY0102|  
+|(IH)|--[1]<br />(HY010)[2]|--[1]<br />(HY010)[2]|  
   
- [1] 環境上已設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [1] SQL_ATTR_ODBC_VERSION環境屬性已設置在環境中。  
   
- [2] 環境上尚未設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [2] 未在環境中設置SQL_ATTR_ODBC_VERSION環境屬性。  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)sha-1|--[3]<br />HY0104gb|--[3]<br />HY0104gb|  
-|(IH)2|(IH)|--|  
+|(IH)[1]|--[3]<br />(HY010)[4]|--[3]<br />(HY010)[4]|  
+|(IH)[2]|(IH)|--|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當 SQL_HANDLE_DBC *HandleType*時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC時的過渡。  
   
- [3] 環境上已設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [3] SQL_ATTR_ODBC_VERSION環境屬性已設置在環境中。  
   
- [4] 尚未在環境上設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [4] 未在環境中設置SQL_ATTR_ODBC_VERSION環境屬性。  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)sha-1|E0|HY010|  
-|(IH)2|(IH)|--[4]<br />E1 [5]|  
-|(IH)第|(IH)|--|  
+|(IH)[1]|E0|(HY010)|  
+|(IH)[2]|(IH)|--[4]<br />E1[5]|  
+|(IH)[3]|(IH)|--|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當 SQL_HANDLE_DBC *HandleType*時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC時的過渡。  
   
- [3] 此資料列會顯示*HandleType* SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 時的轉換。  
+ [3] 此行顯示*HandleType* SQL_HANDLE_STMT或SQL_HANDLE_DESC時的過渡。  
   
- [4] 有其他已配置的連接控制碼。  
+ [4] 還有其他已分配的連接句柄。  
   
- [5]*句*柄中指定的連接控制碼是唯一配置的連接控制碼。  
+ [5]*在句柄*中指定的連接句柄是唯一分配的連接句柄。  
   
-## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField 和 SQLGetDiagRec  
+## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField 與 SQLGetDiagRec  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)sha-1|--|--|  
-|(IH)2|(IH)|--|  
+|(IH)[1]|--|--|  
+|(IH)[2]|(IH)|--|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當*HandleType*是 SQL_HANDLE_DBC、SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC、SQL_HANDLE_STMT 或SQL_HANDLE_DESC時的過渡。  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />HY0102|--|  
+|(IH)|--[1]<br />(HY010)[2]|--|  
   
- [1] 環境上已設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [1] SQL_ATTR_ODBC_VERSION環境屬性已設置在環境中。  
   
- [2] 環境上尚未設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [2] 未在環境中設置SQL_ATTR_ODBC_VERSION環境屬性。  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />HY0102|HY011|  
+|(IH)|--[1]<br />(HY010)[2]|(HY011)|  
   
- [1] 環境上已設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [1] SQL_ATTR_ODBC_VERSION環境屬性已設置在環境中。  
   
- [2] 未 SQL_ATTR_ODBC_VERSION*屬性*引數，且環境上尚未設定 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ [2]*屬性*參數未SQL_ATTR_ODBC_VERSION,並且未在環境中設置SQL_ATTR_ODBC_VERSION環境屬性。  
   
-## <a name="all-other-odbc-functions"></a>所有其他 ODBC 函數  
+## <a name="all-other-odbc-functions"></a>所有其他 ODBC 功能  
   
-|E0<br /><br /> 未配置|E1<br /><br /> 已|E2<br /><br /> Connection|  
+|E0<br /><br /> 未配置|E1<br /><br /> 已配置|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|(IH)|--|

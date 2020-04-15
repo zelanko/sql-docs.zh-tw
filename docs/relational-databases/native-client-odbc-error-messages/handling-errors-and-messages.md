@@ -1,5 +1,5 @@
 ---
-title: 處理錯誤和訊息 |Microsoft Docs
+title: 處理錯誤和消息 |微軟文件
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - errors [ODBC], about error handling
 - messages [ODBC]
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 779a06881d49cf7853f20a5241c52b25d4ccfc24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 59bb40dbfc7f8596968d2dc441396dc9c076bb82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291658"
 ---
 # <a name="handling-errors-and-messages"></a>處理錯誤與訊息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "73783472"
   
  診斷資訊會在開發時間用於捕捉程式設計錯誤，例如，在硬式編碼 SQL 陳述式中發生無效的控制代碼和語法錯誤。 該資訊也會在執行階段用於捕捉執行階段錯誤和警告，例如，使用者傳回的 SQL 陳述式中發生資料截斷、規則違規和語法錯誤。 程式邏輯通常會以傳回碼為基礎。  
   
- 例如，在應用程式呼叫**SQLFetch**以抓取結果集中的資料列之後，傳回碼會指出是否已達到結果集的結尾（SQL_NO_DATA）、是否已傳回任何參考用訊息（SQL_SUCCESS_WITH_INFO），或者是否發生錯誤（SQL_ERROR）。  
+ 例如,在應用程式調用**SQLFetch**檢索結果集中的行後,返回代碼指示是否到達結果集的末尾(SQL_NO_DATA),是否返回任何資訊性消息(SQL_SUCCESS_WITH_INFO),或者是否發生錯誤(SQL_ERROR)。  
   
- 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式傳回 SQL_SUCCESS 以外的任何專案，應用程式可以呼叫**SQLGetDiagRec**來取得任何資訊或錯誤訊息。 如果有一個以上的訊息，請使用**SQLGetDiagRec**來向上和向下移動訊息集。  
+ 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 ODBC 驅動程式返回SQL_SUCCESS以外的任何內容,則應用程式可以調用**SQLGetDiagRec**來檢索任何資訊或錯誤消息。 如果消息集有多個消息,請使用**SQLGetDiagRec**向上和向下滾動消息集。  
   
  傳回碼 SQL_INVALID_HANDLE 永遠會指出程式設計錯誤，而且絕不會在執行階段發生。 雖然 SQL_ERROR 可能會指出程式設計錯誤，其他所有傳回碼還是會提供執行階段資訊。  
   
- 原始的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生 API （適用于 C 的 db-library）可讓應用程式安裝回呼錯誤處理，以及傳回錯誤或訊息的訊息處理函式。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如，PRINT、RAISERROR、DBCC 和 SET) 會將其結果傳回 DB-Library 訊息處理常式函數，而非結果集。 不過，ODBC API 沒有此種回撥能力。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式偵測到來自的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訊息時，它會將 ODBC 傳回碼設定為 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，並傳回訊息做為一或多個診斷記錄。 因此，ODBC 應用程式必須仔細測試這些傳回碼，並呼叫**SQLGetDiagRec**來捕獲訊息資料。  
+ 原始[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機 API DB-Library 表示 C,允許應用程式安裝回調錯誤處理和消息處理功能,這些函數返回錯誤或消息。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如，PRINT、RAISERROR、DBCC 和 SET) 會將其結果傳回 DB-Library 訊息處理常式函數，而非結果集。 不過，ODBC API 沒有此種回撥能力。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端ODBC驅動程式檢測到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從返回的消息時,它將ODBC返回代碼設置為SQL_SUCCESS_WITH_INFO或SQL_ERROR,並將消息作為一個或多個診斷記錄返回。 因此,ODBC 應用程式必須仔細測試這些返回代碼,並調用**SQLGetDiagRec**檢索消息數據。  
   
- 如需追蹤錯誤的資訊，請參閱 [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (資料存取追蹤)。 如需中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]新增的錯誤追蹤增強功能的詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 如需追蹤錯誤的資訊，請參閱 [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (資料存取追蹤)。 如需有關 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中加入之錯誤追蹤增強功能的詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73783472"
   
 -   [原生錯誤號碼](../../relational-databases/native-client-odbc-error-messages/native-error-numbers.md)  
   
--   [SQLSTATE &#40;ODBC 錯誤碼&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)  
+-   [SQLSTATE &#40;ODBC 錯誤代碼&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)  
   
 -   [錯誤訊息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)  
   

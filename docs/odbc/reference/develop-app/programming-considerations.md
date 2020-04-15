@@ -1,5 +1,5 @@
 ---
-title: 程式設計考慮 |Microsoft Docs
+title: 程式設計注意事項 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023262"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282178"
 ---
 # <a name="programming-considerations"></a>程式設計考量
-本節將簡短討論一些與撰寫 ODBC 應用程式和驅動程式相關的主題。  
+本節簡要討論了與編寫 ODBC 應用程式和驅動程式相關的許多主題。  
   
  此章節包含下列主題。  
   
 -   [多執行緒](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [Alignment](../../../odbc/reference/develop-app/alignment.md)  
+-   [對準](../../../odbc/reference/develop-app/alignment.md)  
   
--   [消除](../../../odbc/reference/develop-app/unicode.md)  
+-   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   
 -   [轉譯 DLL](../../../odbc/reference/develop-app/translation-dlls.md)  
   

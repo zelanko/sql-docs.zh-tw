@@ -1,5 +1,5 @@
 ---
-title: 其他文字檔驅動程式設計詳細資料 |Microsoft Docs
+title: 其他文字檔案驅動程式程式設計詳細資訊 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5565c5682e8e33fbadd6ffdd66a89098098bea6d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290938"
 ---
 # <a name="other-text-file-driver-programming-details"></a>其他文字檔驅動程式的程式設計詳細資料
 > [!NOTE]  
->  本節提供有關 ODBC 函式和其他程式設計詳細資料的文字檔驅動程式特定資訊。 如需函式的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本節提供有關 ODBC 函數和其他程式設計詳細資訊的文本文件驅動程式特定資訊。 有關函數的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
  本節包含下列主題：  
   

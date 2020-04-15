@@ -1,5 +1,5 @@
 ---
-title: 支援大型 Udt |Microsoft Docs
+title: 支援大型 UDT |微軟文件
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780480"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281750"
 ---
 # <a name="support-for-large-udts"></a>支援大型 UDT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,12 +25,12 @@ ms.locfileid: "73780480"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需大型 Udt 支援的詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ 有關支援大型 UDT 的詳細資訊,請參閱大型[CLR 使用者定義類型&#40;ODBC&#41;。](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
 ## <a name="example"></a>範例  
  第一個程式碼清單是 C# 原始程式碼。 請將它貼入名為 LargeStringUDT.cs 的檔案，然後將它編譯成 DLL。 接著，將 LargeStringUDT.dll 複製到 C 磁碟機的根目錄。  
   
- 第二個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會在 master 資料庫中建立元件。  
+ 第二個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 代碼清單在主資料庫中創建程式集。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73780480"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第四個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會從 master 資料庫中刪除元件。  
+ 第四個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 代碼清單從主資料庫中移除程式集。  
   
 ```  
 // LargeStringUDT.cs  

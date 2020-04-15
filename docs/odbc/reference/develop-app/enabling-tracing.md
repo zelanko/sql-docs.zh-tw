@@ -1,5 +1,5 @@
 ---
-title: 啟用追蹤 |Microsoft Docs
+title: 開啟追蹤 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], enabling
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 24f80e0e81e4be8895d59256492b868c53aab7b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80bd4023a0260b67d11d7b4ded1bb810b81e0ab2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046787"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287348"
 ---
 # <a name="enabling-tracing"></a>啟用追蹤
-您可以透過下列三種方式來啟用追蹤：  
+可使用以下三種方式開啟追蹤:  
   
--   在 Odbc .ini 登錄專案中設定**Trace**和**TraceFile**關鍵字。 這會在呼叫**SQLAllocHandle**時，啟用或停用*HandleType*為 SQL_HANDLE_ENV 的追蹤。 這些選項是在資料來源設定期間顯示的 [ODBC 資料來源管理員] 對話方塊的 [追蹤] 索引標籤中設定。 如需詳細資訊，請參閱[資料來源的登錄專案](../../../odbc/reference/install/registry-entries-for-data-sources.md)。  
+-   在 Odbc.ini 註冊表條目中設定**追蹤**和**追蹤檔**關鍵字。 當調用具有*SQL_HANDLE_ENV的* **SQLAllocHandle**時,這將啟用或禁用跟蹤。 這些選項設置在資料來源設定期間顯示的 ODBC 資料來源管理員對話方塊的「追蹤」選項卡中。 有關詳細資訊,請參閱[資料來源的註冊表項](../../../odbc/reference/install/registry-entries-for-data-sources.md)。  
   
--   呼叫**SQLSetConnectAttr** ，將 SQL_ATTR_TRACE 連接屬性設定為 SQL_OPT_TRACE_ON。 這會啟用或停用連接期間的追蹤。 如需詳細資訊，請參閱[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函數描述。  
+-   調用**SQLSetConnect Attr**將SQL_ATTR_TRACE連接屬性設置為SQL_OPT_TRACE_ON。 這將啟用或禁用連接持續時間的跟蹤。 有關詳細資訊,請參閱[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函數說明。  
   
--   使用**ODBCSharedTraceFlag** ，以動態方式開啟或關閉追蹤。 （如需詳細資訊，請參閱下一個主題：[動態追蹤](../../../odbc/reference/develop-app/dynamic-tracing.md)）。
+-   使用**ODBC 共用追蹤 Flag**動態打開或關閉追蹤。 (有關詳細資訊,請參閱下一個主題["動態跟蹤](../../../odbc/reference/develop-app/dynamic-tracing.md)"。)

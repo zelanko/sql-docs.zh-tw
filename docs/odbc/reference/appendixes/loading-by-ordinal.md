@@ -1,5 +1,5 @@
 ---
-title: 依序數載入 |Microsoft Docs
+title: 按 Ordinal 載入 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compatibility [ODBC], loading by ordinal
 - loading by ordinal [ODBC]
 ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fdc7728fe06df708efd973423f5c8c05333ce189
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 64bff8dcdd3802f75dc402c9ada60f82580aca5c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041597"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288718"
 ---
 # <a name="loading-by-ordinal"></a>依序數載入
-在 ODBC *2.x 中，* 可以執行以序數來載入，以改善連接程式的效能。 *ODBC 2.x*驅動程式會匯出具有序數199的虛擬函式。當驅動程式管理員偵測到它時，它會依序數（而不是依名稱）解析 ODBC 函式的位址。 ODBC 2.x 驅動程式仍然支援這種功能，*但 odbc 3.x* *驅動程式並*不支援。
+在 ODBC *2.x*中,可以執行序號載入以提高連接過程的性能。 ODBC *2.x*驅動程式匯出帶有假函數的虛擬函數 199;當驅動程式管理員檢測到它時,它按位數而不是名稱解析 ODBC 函數的位址。 ODBC *2.x*驅動程式仍然支援此功能,但 ODBC *3.x*驅動程式不支援此功能。

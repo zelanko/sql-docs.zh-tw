@@ -1,5 +1,5 @@
 ---
-title: 直接執行 ODBC |Microsoft Docs
+title: 直接執行 ODBC |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc5d942ac0c2af54168248d8e416ca233b2c69e6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039804"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305159"
 ---
 # <a name="direct-execution-odbc"></a>直接執行 ODBC
-直接執行是執行語句最簡單的方式。 提交語句以進行執行時，資料來源會將它編譯成存取計畫，然後執行該存取計畫。  
+直接執行是執行語句的最簡單方法。 提交語句執行時,數據源將其編譯為訪問計劃,然後執行該訪問計劃。  
   
- 直接執行通常是由在執行時間建立和執行語句的泛型應用程式所使用。 例如，下列程式碼會建立 SQL 語句，並一次執行它：  
+ 直接執行通常用於在運行時生成和執行語句的通用應用程式。 例如,以下代碼產生 SQL 語句並執行一次:  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- 直接執行最適用于只會執行一次的語句。 其主要缺點是每次執行時都會剖析 SQL 語句。 此外，應用程式無法抓取語句所建立之結果集的相關資訊（如果有的話），直到執行語句為止。如果語句是以兩個不同的步驟來準備和執行，就可能發生這種情況。  
+ 直接執行最適合將執行一次的語句。 它的主要缺點是每次執行 SQL 語句時都會對其進行分析。 此外,在執行語句之前,應用程式無法檢索有關語句創建的結果集(如果有)的資訊;如果語句以兩個單獨的步驟準備和執行,則這是可能的。  
   
- 若要直接執行語句，應用程式會執行下列動作：  
+ 要直接執行敘述,應用程式將執行以下操作:  
   
-1.  設定任何參數的值。 如需詳細資訊，請參閱本節稍後的[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
+1.  設置任何參數的值。 有關詳細資訊,請參閱本節後面的[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-2.  呼叫**SQLExecDirect** ，並將包含 SQL 語句的字串傳遞給它。  
+2.  呼叫**SQLExecDirect**並傳遞包含 SQL 語句的字串。  
   
-3.  呼叫**SQLExecDirect**時，驅動程式：  
+3.  呼叫**SQLExecDirect**時,驅動程式:  
   
-    -   修改 SQL 語句，以使用資料來源的 SQL 文法，而不剖析語句;這包括取代 ODBC 中的[Escape 序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)中所討論的逸出序列。 應用程式可以藉由呼叫**SQLNativeSql**來捕獲 SQL 語句的修改形式。 如果已設定 SQL_ATTR_NOSCAN 語句屬性，則不會取代逸出序列。  
+    -   修改 SQL 語句以使用數據源的 SQL 語法,而不分析 語句;這包括替換[ODBC 中的轉義序列中](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)討論的轉義序列。 應用程式可以通過調用**SQLNativeSql**來檢索 SQL 語句的修改形式。 如果設置了SQL_ATTR_NOSCAN語句屬性,則不會替換轉義序列。  
   
-    -   抓取目前的參數值，並視需要加以轉換。 如需詳細資訊，請參閱本節稍後的[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
+    -   檢索當前參數值並根據需要轉換它們。 有關詳細資訊,請參閱本節後面的[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-    -   將語句和已轉換的參數值傳送至資料來源以便執行。  
+    -   將語句和轉換後的參數值發送到數據源以執行。  
   
-    -   傳回任何錯誤。 這些包括排序或狀態診斷，例如 SQLSTATE 24000 （不正確資料指標狀態）、語法錯誤（例如 SQLSTATE 42000 （語法錯誤或存取違規））和語意錯誤（例如 SQLSTATE 42S02 （基表或找不到 view））。
+    -   返回任何錯誤。 這些包括排序或狀態診斷,如 SQLSTATE 24000(無效游標狀態)、語法錯誤(如 SQLSTATE 42000(語法錯誤或存取衝突)以及語義錯誤,如 SQLSTATE 42S02(找不到基表或視圖)。

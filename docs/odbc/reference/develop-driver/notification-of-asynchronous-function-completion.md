@@ -1,5 +1,5 @@
 ---
-title: 非同步函式完成的通知 |Microsoft Docs
+title: 非同步功能完成通知 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,32 +8,32 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de3496661f2ab329e5bf662a9cb8fa749cb81bfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a453967f2ffdda4af2a44429737f700f4a994cf8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129317"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287818"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>非同步函式完成的通知
-在 Windows 8 SDK 中，ODBC 新增了一種機制，可在非同步作業完成時通知應用程式，我們會將其稱為「完成時通知」。 （如需詳細資訊，請參閱[非同步執行（通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) ）。本主題討論驅動程式開發人員的一些問題。  
+在 Windows 8 SDK 中,ODBC 添加了一種機制,以便在非同步操作完成時通知應用程式,我們將將其稱為"完成通知」。 (有關詳細資訊,請參閱[非同步執行(通知方法)。](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)本主題討論驅動程式開發人員的一些問題。  
   
 ## <a name="the-interface-between-the-driver-manager-and-driver"></a>驅動程式管理員和驅動程式之間的介面  
- 驅動程式管理員在內部提供回呼函式[SQLAsyncNotificationCallback](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md)函式。 **SQLAsyncNotificationCallback**只能由驅動程式呼叫--應用程式無法直接呼叫它。 每當在最後一次傳回 SQL_STILL_EXECUTING 之後收到伺服器的新資料時，驅動程式就會呼叫**SQLAsyncNotificationCallback** 。  
+ 驅動程式管理員內部提供回檔函數[SQLAsync 通知回檔函數](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md)。 **SQLAsync 通知回調**只能由驅動程式呼叫 - 應用程式不能直接呼叫它。 每當上次返回SQL_STILL_EXECUTING後從伺服器收到新數據時,驅動程序都會調用**SQLAsync 通知回撥。**  
   
- 驅動程式管理員會提供回呼機制，讓驅動程式可以在對應的函式傳回之後執行非同步作業的某個進度時通知驅動程式管理員 SQL_STILL_EXECUTING  
+ 驅動程式管理員提供回調機制,這樣當相應的函數返回SQL_STILL_EXECUTING后,在執行非同步操作方面取得了一些進展時,驅動程式可以通知驅動程式管理器SQL_STILL_EXECUTING  
   
- 驅動程式管理員會使用非 Null 函式指標（屬於 SQL_ASYNC_NOTIFICATION_CALLBACK 類型）在驅動程式連接控制碼上設定 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 屬性，讓驅動程式在任何非同步通知模式下運作。該控制碼上的作業。 同樣地，驅動程式管理員會將驅動程式語句控制碼上的 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 屬性設定為非 Null 函式指標（也是 SQL_ASYNC_NOTIFICATION_CALLBACK 類型），以讓驅動程式在的通知模式下運作。該控制碼上的任何非同步作業。  
+ 驅動程式管理器使用非 NULL 函數指標在驅動程式連接句柄上設定SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK屬性,該指標的類型為SQL_ASYNC_NOTIFICATION_CALLBACK,以便驅動程式在該句柄上的任何異步操作在通知模式下工作。 同樣,Driver Manager 使用非 NULL 函數指標(也屬於SQL_ASYNC_NOTIFICATION_CALLBACK類型)在驅動程式語句句柄上設置SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK屬性,以便驅動程式在該句柄上的任何異步操作在通知模式下工作。  
   
- 如果非同步作業是在驅動程式控制碼上執行，非同步驅動程式函式應該會以非封鎖樣式運作。 如果作業無法立即完成，驅動程式函式應該會傳回 SQL_STILL_EXECUTING。 這項需求在輪詢模式和通知模式中都是如此。  
+ 如果在驅動程式句柄上執行非同步操作,非同步驅動程式函數應以非阻塞樣式工作。 如果操作無法立即完成,則驅動程式功能應返回SQL_STILL_EXECUTING。 輪詢模式和通知模式都要求此要求為 true。  
   
- 如果控制碼處於通知非同步模式，則驅動程式必須呼叫通知回呼函式，其位址為 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 或 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 屬性的值，之後一次傳回 SQL_STILL_EXECUTING。 換句話說，傳回 SQL_STILL_EXECUTING 的一個必須與通知回呼函式的一個調用配對。 驅動程式應該使用 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT 或 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT handle 屬性的目前值，做為回撥函式參數*pCoNtext*的值。  
+ 如果句柄處於通知異步模式,驅動程式必須在返回SQL_STILL_EXECUTING后調用通知回調函數,該函數的位址是SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK或SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK屬性的值。 換句話說,一個返回SQL_STILL_EXECUTING必須與通知回調函數的一個調用配對。 驅動程式應使用SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT的當前值或SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT句柄屬性作為回調函數參數*pContext*的值。  
   
- 驅動程式不能在呼叫驅動程式函式的執行緒中回呼。沒有理由在函式傳回之前通知進度。 驅動程式應該使用自己的執行緒來回呼。 驅動程式管理員不會使用驅動程式的回呼執行緒來執行大量處理邏輯。  
+ 驅動程式不得在調用驅動程式函數的線程中回調;沒有理由在函數返回之前通知進度。 驅動程式應使用自己的線程進行回調。 驅動程式管理員不會使用驅動程序的回調線程執行廣泛的處理邏輯。  
   
- 驅動程式管理員會在驅動程式回呼之後再次呼叫原始的函式。 驅動程式管理員可能會使用既不是應用程式執行緒，也不是驅動程式執行緒的執行緒。 如果驅動程式使用與執行緒相關聯的某些資訊（例如，安全性權杖或使用者識別碼），則驅動程式應將所需的資訊儲存在初始非同步呼叫中，並在整個非同步作業之前使用儲存的值。後. 通常，只有**SQLDriverConnect**、 **SQLConnect**或**SQLBrowseConnect**需要使用該類型的資訊。  
+ 驅動程式管理器將在驅動程式回電后再次調用原始函數。 驅動程式管理員可以使用既不是應用程式線程也不是驅動程式線程的線程。 如果驅動程式使用與線程關聯的某些資訊(例如,安全令牌或用戶識別符),驅動程式應在初始異步調用中保存所需資訊,並在整個非同步操作完成之前使用保存的值。 通常,只有**SQLDriverConnect、SQLConnect**或**SQLBrowse Connect****SQLConnect**需要使用此類資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

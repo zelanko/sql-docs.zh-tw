@@ -1,5 +1,5 @@
 ---
-title: 處理傳回碼和輸出參數（ODBC） |Microsoft Docs
+title: 過程返回代碼和輸出參數 (ODBC) |微軟文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,50 +11,48 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780658"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281878"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>執行預存程序 - 處理傳回碼和輸出參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式支援將預存程序當做遠端預存程序執行。 將預存程序當做遠端預存程序執行可讓驅動程式和伺服器最佳化執行程序的效能。  
   
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，而且在[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)傳回 SQL_NO_DATA 之前，都無法供應用程式使用。 如果從預存程式傳回錯誤，請呼叫 SQLMoreResults 以前進到下一個結果，直到傳回 SQL_NO_DATA 為止。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 返回代碼和輸出參數從伺服器發送到最後一個數據包中,在[SQLMore 結果](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)返回SQL_NO_DATA之前,應用程式不可用。 如果從存儲過程返回錯誤,請致電 SQLMoreResult 以前進到下一個結果,直到返回SQL_NO_DATA。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果必須保留認證,則應使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)對其進行加密。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>若要處理傳回碼和輸出參數  
   
 1.  建構使用 ODBC CALL 逸出序列的 SQL 陳述式。 此陳述式應該會針對每個輸入、輸入/輸出和輸出參數，以及程序傳回值 (若有) 使用參數標記。  
   
-2.  針對每個輸入、輸入/輸出和輸出參數，以及程式傳回值（如果有的話），呼叫[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 。  
+2.  為每個輸入、輸入/輸出與輸出參數以及過程傳回值(如果有)呼叫[SQLBind 參數](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)。  
   
 3.  使用**SQLExecDirect**執行語句。  
   
-4.  在處理最後一個結果集或**SQLMoreResults**傳回 SQL_NO_DATA 之前，會先處理結果集， **SQLFetch**或**SQLFetchScroll**才會傳回 SQL_NO_DATA。 此時，繫結至傳回碼和輸出參數的變數會填入傳回的資料值。  
+4.  進程結果集,直到**SQLFetch**或**SQLFetchScroll**在處理最後一個結果集時返回SQL_NO_DATA,或者直到**SQLMore 結果**返回SQL_NO_DATA。 此時，繫結至傳回碼和輸出參數的變數會填入傳回的資料值。  
 
 ## <a name="example"></a>範例  
  此範例顯示處理傳回碼和輸出參數。 IA64 不支援此範例。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (可以從[Microsoft SQL 伺服器範例和社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)主頁下載 AdventureWorks 範例資料庫。此資料源必須基於作業系統提供的 ODBC 驅動程式(驅動程式名稱為" SQL Server" 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的預存程式。  
+ 第一個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 程式碼清單建立此範例使用的儲存過程。  
   
  使用 odbc32.lib 編譯第二個 (C++) 程式碼清單。 然後，執行此程式。  
   
- 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所使用的預存程式。  
+ 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 代碼清單將刪除此範例使用的儲存過程。  
   
 ```  
 use AdventureWorks  
@@ -196,6 +194,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[&#40;ODBC&#41;呼叫預存程式](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[通話儲存程式&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   
