@@ -1,5 +1,5 @@
 ---
-title: 執行定位的 Update 和 Delete 語句 |Microsoft Docs
+title: 執行定位更新與刪除語句 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,54 +13,54 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 96a1aa891ef8ba26c6c239cf35e62a8f36018e65
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913624"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306999"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>執行定點更新和刪除陳述式
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
   
- 在應用程式使用**SQLFetchScroll**提取資料區塊之後，它就可以更新或刪除區塊中的資料。 若要執行定位的更新或刪除，應用程式：  
+ 應用程式使用**SQLFetchScroll**獲取數據塊後,可以更新或刪除區塊中的資料。 要執行定位的更新或移除, 應用程式:  
   
-1.  呼叫**SQLSetPos** ，將資料指標置於要更新或刪除的資料列上。  
+1.  呼叫**SQLSetPos**將游標放置在要更新或刪除的行上。  
   
-2.  使用下列語法來構造定位的 update 或 delete 語句：  
+2.  使用以下語法建構定位的更新或移除語句:  
   
-     **更新***資料表-名稱*  
+     **更新***表格名稱*  
   
-     **設定**資料*行識別碼* **=** {*expression* &#124; **Null**}  
+     **設定***欄識別碼***=**= &#124; **NULL**的*表示式*|  
   
-     [**，** 資料*行識別碼* **=** {*expression* &#124; **Null**}]  
+     【**,***列識別子***=**】*表示式*&#124; **NULL**]  
   
-     **其中目前的**資料*指標名稱*  
+     **其中***游標名稱的*目前  
   
-     **從***資料表名稱*中刪除**目前的**資料*指標名稱*  
+     **從***表格名稱移除**游標名稱***的目前**位置  
   
-     在定位 update 語句中建立**SET**子句最簡單的方式，是使用每個要更新之資料行的參數標記，並使用**SQLBindParameter**將這些資料系結至資料列集緩衝區，以便更新資料列。 在此情況下，參數的 C 資料型別將與資料列集緩衝區的 C 資料型別相同。  
+     在定位更新語句中建構**SET**子句的最簡單方法是對要更新的每個列使用參數標記,並使用**SQLBind 參數**將這些參數綁定到要更新行的行集緩衝區。 在這種情況下,參數的 C 數據類型將與行集緩衝區的 C 數據類型相同。  
   
-3.  如果要執行定位的 update 語句，則更新目前資料列的資料列集緩衝區。 成功執行定位的 update 語句之後，資料指標程式庫會將目前資料列中每個資料行的值複製到其快取。  
-  
-    > [!CAUTION]  
-    >  如果應用程式在執行定位的 update 語句之前未正確更新資料列集緩衝區，則在執行語句之後，快取中的資料將會不正確。  
-  
-4.  使用與資料指標相關聯的語句，執行定位的 update 或 delete 語句。  
+3.  如果當前行將執行定位的更新語句,則更新當前行的行集緩衝區。 成功執行定位的更新語句后,游標庫將當前行中每列的值複製到其緩存。  
   
     > [!CAUTION]  
-    >  用來識別目前資料列的資料指標程式庫所建立的**WHERE**子句，可能無法識別任何資料列、識別不同的資料列，或識別一個以上的資料列。 如需詳細資訊，請參閱[建立搜尋的語句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
+    >  如果應用程式在執行定位的更新語句之前未正確更新行集緩衝區,則在執行語句后,緩存中的數據將不正確。  
   
- 所有定位的 update 和 delete 語句都需要資料指標名稱。 若要指定資料指標名稱，應用程式會在開啟資料指標之前呼叫**SQLSetCursorName** 。 若要使用驅動程式所產生的資料指標名稱，應用程式會在開啟資料指標之後呼叫**SQLGetCursorName** 。  
+4.  使用與游標關聯的語句不同的語句執行定位的更新或刪除語句。  
   
- 在資料指標程式庫執行定位的 update 或 delete 語句之後，資料指標程式庫所維護的狀態陣列、資料列集緩衝區和快取，會包含下表中顯示的值。  
+    > [!CAUTION]  
+    >  游標庫為標識當前行而構造的**WHERE**子句可能無法標識任何行、標識其他行或標識多行。 有關詳細資訊,請參閱[建構搜尋語句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
   
-|使用的語句|資料列狀態陣列中的值|中的值<br /><br /> 資料列集緩衝區|中的值<br /><br /> 快取緩衝區|  
+ 所有定位的更新和刪除語句都需要游標名稱。 要指定游標名稱,應用程式在打開游標之前調用**SQLSetCursorName。** 要使用驅動程式生成的游標名稱,應用程式在打開游標後調用**SQLGetCursorName。**  
+  
+ 游標庫執行定位的更新或刪除語句后,游標庫維護的狀態陣列、行集緩衝區和緩存包含下表中顯示的值。  
+  
+|使用敘述|列狀態陣列中的值|中的值<br /><br /> 排集緩衝區|中的值<br /><br /> 快取緩衝區|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
-|定點更新|SQL_ROW_UPDATED|新值 [1]|新值 [1]|  
-|已定位刪除|SQL_ROW_DELETED|舊值|舊值|  
+|定點更新|SQL_ROW_UPDATED|新值[1]|新值[1]|  
+|請找到刪除|SQL_ROW_DELETED|舊值|舊值|  
   
- [1] 應用程式必須在執行定位的 update 語句之前，更新資料列集緩衝區中的值;在執行定位的 update 語句之後，游標程式庫會將資料列集緩衝區中的值複製到其快取。
+ [1] 應用程式在執行定位的更新語句之前必須更新行集緩衝區中的值;執行定位的更新語句后,游標庫將行集緩衝區中的值複製到其緩存。

@@ -1,5 +1,5 @@
 ---
-title: 環境、連接和語句屬性 |Microsoft Docs
+title: 環境、連接和語句屬性 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - statement attributes [ODBC]
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4606b4345cc52d1371649449890400e01dbc5f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86cecaf0b82c7b6d15b3f37262507d2cff0c3c10
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300928"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>環境、連線和陳述式屬性
-ODBC 會定義一些與環境、連接或語句相關聯的屬性。  
+ODBC 定義了許多與環境、連接或語句關聯的屬性。  
   
- 環境屬性會影響整個環境，例如是否啟用連接共用。 環境屬性是以**SQLSetEnvAttr**設定，並使用**SQLGetEnvAttr**來抓取。  
+ 環境屬性會影響整個環境,例如是否啟用了連接池。 環境屬性使用**SQLSetEnvAttr**設置,並使用**SQLGetEnvAttr**檢索。  
   
- 連接屬性會分別影響每個連接，例如，在超時之前，驅動程式在嘗試連接到資料來源時，應該等待的時間長度。連接屬性是以**SQLSetConnectAttr**設定，並使用**SQLGetConnectAttr**來抓取。 如需連接屬性的詳細資訊，請參閱[連接屬性](../../../odbc/reference/develop-app/connection-attributes.md)。  
+ 連接屬性會單獨影響每個連接,例如驅動程式在嘗試連接到數據源時應等待多長時間,然後再超時。連接屬性使用**SQLSetConnect Attr**設置,並使用**SQLGetConnectAttr**檢索。 有關連線屬性的詳細資訊,請參閱[連接屬性](../../../odbc/reference/develop-app/connection-attributes.md)。  
   
- 語句屬性會個別影響每個語句，例如是否應該以非同步方式執行語句。 語句屬性是以**SQLSetStmtAttr**設定，並使用**SQLGetStmtAttr**來抓取。 有些語句屬性是唯讀屬性，無法設定。 例如，SQL_ATTR_ROW_NUMBER 語句屬性（用來取出資料指標中的目前資料列數目）是唯讀的。 如需語句屬性的詳細資訊，請參閱[語句屬性](../../../odbc/reference/develop-app/statement-attributes.md)。  
+ 語句屬性單獨影響每個語句,例如是否應非同步執行語句。 語句屬性使用**SQLSetStmtAttr**設置,並使用**SQLGetStmtAttr**檢索。 少數語句屬性是唯讀屬性,無法設置。 例如,用於檢索游標中當前行數SQL_ATTR_ROW_NUMBER語句屬性是唯讀的。 關於敘述屬性的詳細資訊,請參考[敘述屬性](../../../odbc/reference/develop-app/statement-attributes.md)。  
   
- 除了 ODBC 所定義的屬性之外，驅動程式也可以定義自己的連接和語句屬性。 驅動程式定義的屬性必須向開啟的群組註冊，以確保兩個驅動程式廠商不會將相同的整數值指派給不同的專屬屬性。 如需詳細資訊，請參閱[驅動程式特有的資料類型、描述項類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
+ 除了由 ODBC 定義的屬性外,驅動程式還可以定義其自己的連接和語句屬性。 驅動程式定義的屬性必須註冊到 Open Group,以確保兩個驅動程式供應商不會將相同的整數值分配給不同的專有屬性。 有關詳細資訊,請參閱[特定於驅動程式的資料類型、描述符類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
- 如需屬性的完整清單，請參閱[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。 大部分的屬性也會在其影響的 ODBC 函數描述中加以描述。
+ 有關屬性的完整清單,請參閱[SQLSetEnvAttr、SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)和[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。 大多數屬性在它們影響的 ODBC 函數的描述中也作了描述。

@@ -1,5 +1,5 @@
 ---
-title: SQLParamData 函式 |Microsoft Docs
+title: SQLParamData 功能 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamData function [ODBC]
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41cb718b5425315856fe4db27658cce873f90e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ed149e125e3231d670c6ddbd4569ff5ccee5c15
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018937"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306919"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 函式
-**合規性**  
- 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
+**一致性**  
+ 推出版本: ODBC 1.0 標準合規性: ISO 92  
   
  **摘要**  
- **SQLParamData**可搭配使用**SQLPutData**來提供參數資料在陳述式執行時，與**SQLGetData**來擷取資料流的輸出參數資料。  
+ **SQLParamData**與**SQLPutData**一起使用,在語句執行時提供參數數據,並與**SQLGetData**一起檢索流式輸出參數數據。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,80 +43,80 @@ SQLRETURN SQLParamData(
 ```  
   
 ## <a name="arguments"></a>引數  
- *StatementHandle*  
- [輸入]陳述式控制代碼。  
+ *語句句柄*  
+ [輸入]語句句柄。  
   
- *ValuePtrPtr*  
- [輸出]緩衝區中要傳回的位址指標*ParameterValuePtr*中所指定的緩衝區**SQLBindParameter** （適用於參數的資料） 或位址*TargetValuePtr*中指定的緩衝區**SQLBindCol** （適用於資料行的資料），人事 SQL_DESC_DATA_PTR 描述項記錄欄位。  
+ *價值PtrPtr*  
+ 【輸出]指向用於返回**SQLBind 參數**中指定的*參數 ValuePtr*緩衝區的位址(用於參數數據)或**SQLBindCol**中指定的*TargetValuePtr*緩衝區的位址(對於列資料)的緩衝區的指標,SQL_DESC_DATA_PTR描述符記錄欄位中所包含。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NEED_DATA、 SQL_NO_DATA、 SQL_STILL_EXECUTING、 SQL_ERROR、 SQL_INVALID_HANDLE，還是 SQL_PARAM_DATA_AVAILABLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、SQL_INVALID_HANDLE或SQL_PARAM_DATA_AVAILABLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLParamData**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值，可由呼叫**SQLGetDiagRec**具有*HandleType*的 SQL_HANDLE_STMT 並*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLParamData** ，並說明每個內容中的此函式; 標記法 」 (DM) 」 之前描述的驅動程式管理員所傳回的 Sqlstate。 傳回每個 SQLSTATE 值相關聯的程式碼會是 SQL_ERROR，除非另有指示。  
+ 當**SQLParamData**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有SQL_HANDLE_STMT的*句柄類型*和*敘述的句**柄*。 下表列出了**SQLParamData**通常傳回的 SQLSTATE 值,並在此函數的上下文中解釋每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|07006|受限制的資料類型屬性違規|所識別的資料值*ValueType*中的引數**SQLBindParameter**繫結的參數無法轉換成資料類型所識別的*ParameterType*中的引數**SQLBindParameter**。<br /><br /> 資料傳回的值繫結為 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT 無法轉換成所識別的資料型別參數*ValueType*中的引數**SQLBindParameter**。<br /><br /> （如果無法轉換一或多個資料列的資料值，但一或多個資料列已成功地傳回，此函式會傳回 SQL_SUCCESS_WITH_INFO。）|  
-|08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|22026|字串資料，長度不符|SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo** "Y"，並於指定長度的參數 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型） 傳送較少的資料具有*StrLen_or_IndPtr*中的引數**SQLBindParameter**。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**是"Y"，以及比中已指定，將已傳送長資料行 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型） 的較少的資料對應到已加入或更新的資料列中的資料行長度的緩衝區**SQLBulkOperations**或更新的**SQLSetPos**。|  
-|40001|序列化失敗|交易已回復，因為與另一個交易資源鎖死。|  
-|40003|未知的陳述式完成|此函式執行期間失敗的相關聯的連接，並無法判斷交易的狀態。|  
-|HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成函式。|  
-|HY008|已取消作業|非同步處理已啟用*StatementHandle*。 呼叫函式，和之前已完成執行時， **SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*; 呼叫的函式已再一次*StatementHandle*。<br /><br /> 呼叫函式，和之前已完成執行時， **SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
-|HY010|函數順序錯誤|(DM) 先前的函式呼叫不是呼叫**SQLExecDirect**， **SQLExecute**， **SQLBulkOperations**，或**SQLSetPos**位置程式碼在 SQL_NEED_DATA，或是先前的函式呼叫的呼叫會傳回**SQLPutData**。<br /><br /> 先前的函式呼叫已呼叫**SQLParamData**。<br /><br /> (DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此非同步函式仍在執行時**SQLParamData**呼叫函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*和傳回的 SQL_NEED_DATA。 **SQLCancel**呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
-|HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此函式|(DM) 至對應的磁碟機*StatementHandle*不支援此函式。|  
-|IM017|輪詢已停用非同步通知模式|每次使用通知模型時，會停用輪詢。|  
-|IM018|**SQLCompleteAsync**尚未完成先前的非同步作業，此控制代碼上呼叫。|如果控制代碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 和通知模式已啟用，如果**SQLCompleteAsync**必須在執行後置處理，並完成作業的控制代碼上呼叫。|  
+|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|07006|受限資料類型屬性衝突|綁定參數的**SQLBind 參數**中*的值類型*參數識別的資料值無法轉換為**SQLBind 參數**中的*參數類型*參數識別的資料類型。<br /><br /> 返回為SQL_PARAM_INPUT_OUTPUT或SQL_PARAM_OUTPUT綁定的參數的數據值無法轉換為**SQLBind 參數**中*ValueType*參數標識的數據類型。<br /><br /> (如果無法轉換一個或多個行的數據值,但成功返回一個或多個行,則此函數將返回SQL_SUCCESS_WITH_INFO。|  
+|08S01|通訊連結|在函數完成處理之前,驅動程式與驅動程式連接到的數據源之間的通信鏈路失敗。|  
+|22026|字串資料，長度不符|**SQLGetInfo**中的SQL_NEED_LONG_DATA_LEN資訊類型為"Y",對於長參數(資料類型為SQL_LONGVARCHAR、SQL_LONGVARBINARY或長資料來源特定資料類型)發送的數據少於**SQLBind 參數**中*StrLen_or_IndPtr*參數中指定的數據。<br /><br /> **SQLGetInfo**中的SQL_NEED_LONG_DATA_LEN資訊類型為"Y",對於長列(數據類型SQL_LONGVARCHAR、SQL_LONGVARBINARY或長數據來源特定資料類型)發送的數據比在與使用**SQLBulk 操作**添加或更新或使用**SQLSetPos**更新的數據列中的列對應的長度緩衝區中指定的數據較少。|  
+|40001|序列化失敗|由於資源與另一個事務死鎖,事務被回滾。|  
+|40003|報表完成未知|執行此函數期間,關聯的連接失敗,無法確定事務的狀態。|  
+|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
+|HY008|已取消作業|非同步處理已開啟*敘述的句柄*。 呼叫該函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**調用了*語句句柄*;然後,在*語句句柄*上再次調用該函數。<br /><br /> 呼叫此函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**是從多線程式中的不同線程呼叫*的敘述的句柄*。|  
+|HY010|函式序列錯誤|(DM) 以前的函數調用不是對 SQLExecDirect、SQLExecute、SQLBulk**操作**或**SQLSetPos**的呼叫,其中返回代碼SQL_NEED_DATA,或者以前的**SQLExecDirect**函數調用是對**SQLPutData**的調用。 **SQLExecute**<br /><br /> 前面的函數調用是對**SQLParamData**的調用。<br /><br /> (DM) 為與*語句句柄*關聯的連接句柄調用非同步執行函數。 調用**SQLParamData**函數時,此異步函數仍在執行。<br /><br /> (DM) 為*語句句柄*調用了非同步執行函數(不是此函數),並且在調用此函數時仍在執行。<br /><br /> ** **SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**被調用用於*語句句柄*並返回SQL_NEED_DATA。 **SQLExecDirect** **SQLCancel**是在為執行時的所有數據參數或列發送數據之前調用的。|  
+|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
+|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
+|IM001|驅動程式不支援此功能|(DM) 對應於*語句句柄*的驅動程式不支援該函數。|  
+|IM017|在非同步通知模式下禁用輪詢|每當使用通知模型時,都會禁用輪詢。|  
+|IM018|尚未調用**SQLCompleteAsync**以完成對此句柄的先前異步操作。|如果句柄上的上一個函數調用返回SQL_STILL_EXECUTING,並且啟用了通知模式,則必須在句柄上調用**SQLCompleteAsync**以執行後處理並完成操作。|  
   
- 如果**SQLParamData**稱為時傳送的 SQL 陳述式參數的資料，它會傳回任何可執行陳述式所呼叫的函式所傳回的 SQLSTATE (**SQLExecute** 或**SQLExecDirect**)。 如果呼叫傳送的資料行的資料時正在更新或加上**SQLBulkOperations**或更新**SQLSetPos**，它會傳回任何可傳回的 SQLSTATE **SQLBulkOperations**或是**SQLSetPos**。  
+ 如果在 SQL 語句中為參數傳送資料時呼叫**SQLParamData,** 它可以傳回執行敘述 **(SQLExecute**或**SQLExecDirect)** 的函數可以傳回的任何 SQLSTATE。 如果在發送使用**SQLBulk 操作**更新或添加的列的數據或使用**SQLSetPos**更新時調用它,則可以返回**SQLBulk 操作**或**SQLSetPos**可以傳回的任何 SQLSTATE。  
   
 ## <a name="comments"></a>註解  
- **SQLParamData**可以呼叫以提供兩種用途的資料在執行資料： 將用於呼叫的參數資料**SQLExecute**或**SQLExecDirect**，或資料行的資料將會使用的時機資料列更新或新增藉由呼叫**SQLBulkOperations**或更新的呼叫所**SQLSetPos**。 在執行階段**SQLParamData**傳回的資料指標的驅動程式需要應用程式。  
+ **SQLParamData**可以調用提供執行時的數據,用於兩個用途:參數數據,用於 SQLExecute 或**SQLExecDirect**的**SQLExecDirect**呼叫,或者列數據,這些資料將在調用**SQLBulk 操作**或透過呼叫**SQLSetPos**更新或更新行時使用。 在執行時 **,SQLParamData**會向應用程式返回驅動程式所需的數據的指示器。  
   
- 當應用程式呼叫**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**，驅動程式會傳回 SQL_NEED_如果在需要資料在執行資料的資料。 應用程式，然後呼叫**SQLParamData**來決定要傳送的資料。 如果驅動程式需要參數的資料，驅動程式會傳回在 *\*ValuePtrPtr*輸出緩衝處理的應用程式放在資料列集的緩衝區中的值。 應用程式可以使用此值來判斷哪一個驅動程式要求的參數資料。 如果驅動程式需要的資料行資料，驅動程式會傳回在 *\*ValuePtrPtr*緩衝區資料行原本繫結，如下所示的位址：  
+ 當應用程式呼叫**SQLExecute**SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**時,驅動程式在需要執行資料的數據**SQLExecDirect**時返回SQL_NEED_DATA。 然後,應用程式調用**SQLParamData**以確定要發送的數據。 如果驅動程式需要參數數據,驅動程式在*\*ValuePtrPtr*輸出緩衝區中返回應用程式在行集緩衝區中放置的值。 應用程式可以使用此值來確定驅動程式請求的參數數據。 如果驅動程式需要列資料,驅動程式將返回*\*ValuePtrPtr*緩衝區中該列最初綁定到的位址,如下所示:  
   
- *繫結位址* + *繫結位移*+ ((*資料列編號*-1) x*項目大小*)  
+ *繫結位址* + *繫結位位移*量 = ((*行號*- 1) x*元素大小*)  
   
- 下表所示，其中會定義變數。  
+ 其中變數定義如下表所示。  
   
 |變數|描述|  
 |--------------|-----------------|  
-|*繫結位址*|使用指定的地址*TargetValuePtr*中的引數**SQLBindCol**。|  
-|*繫結位移*|SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性與指定的位址儲存的值。|  
-|*資料列數目*|1 為基底的資料列集中的資料列數目。 針對單一資料列擷取，也就是預設值，這會是 1。|  
-|*項目大小*|資料和長度/指標緩衝區的 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性的值。|  
+|*繫結位址*|在**SQLBindCol**中使用*TargetValuePtr*參數指定的位址。|  
+|*繫結位移*|儲存在使用SQL_ATTR_ROW_BIND_OFFSET_PTR語句屬性指定的位址的值。|  
+|*Row Number*|行集中的行的 1 個基於的編號。 對於預設的單行提取,這是 1。|  
+|*元素大小*|數據和長度/指標緩衝區SQL_ATTR_ROW_BIND_TYPE語句屬性的值。|  
   
- 它也會傳回 SQL_NEED_DATA，這是應用程式，它應該呼叫指示器**SQLPutData**來傳送資料。  
+ 它還返回SQL_NEED_DATA,這是應用程式應呼叫**SQLPutData**發送數據的指示器。  
   
- 應用程式會呼叫**SQLPutData**所需的資料在執行資料的資料行或參數傳送的次數。 資料行或參數傳送的所有資料之後，應用程式會呼叫**SQLParamData**一次。 如果**SQLParamData**一次會傳回 SQL_NEED_DATA，必須將資料傳送另一個參數或資料行。 因此，應用程式會再次呼叫**SQLPutData**。 如果所有資料在執行資料已都傳送的所有參數或資料行，然後**SQLParamData** SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 中的值會傳回 *\*ValuePtrPtr*是未定義，而且可以執行的 SQL 陳述式或**SQLBulkOperations**或是**SQLSetPos**可以處理呼叫。  
+ 應用程式根據需要多次調用**SQLPutData**以發送列或參數的執行數據。 為列或參數發送所有數據后,應用程式將再次調用**SQLParamData。** 如果**SQLParamData**再次返回SQL_NEED_DATA,則必須為另一個參數或列發送數據。 因此,應用程式再次呼叫**SQLPutData**。 如果已為所有參數或列發送了所有執行數據數據,則**SQLParamData**返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO,*\*則 ValuePtrPtr*中的值未定義,可以執行 SQL 語句或處理**SQLBulk 操作**或**SQLSetPos**呼叫。  
   
- 如果**SQLParamData**提供的參數資料搜尋的 update 或 delete 陳述式，並不會影響任何資料來源，呼叫端的資料列**SQLParamData**傳回 sql_no_data 為止。  
+ 如果**SQLParamData**為搜尋的更新或刪除語句提供參數數據,而該語句不會影響數據來源上的任何行,則對**SQLParamData**的調用將返回SQL_NO_DATA。  
   
- 陳述式執行階段會傳遞如何資料在執行參數資料的詳細資訊，請參閱 「 傳遞參數值 」 中[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)並[傳送長資料](../../../odbc/reference/develop-app/sending-long-data.md)。 更新或新增如何資料在執行資料行資料的詳細資訊，請參閱 「 使用 SQLSetPos 」 一節中[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)、 「 執行大量更新使用中的書籤 」 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，並[長資料和 SQLSetPos 與 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
+ 有關如何在語句執行時傳遞數據執行時參數資料的詳細資訊,請參閱[SQLBind 參數](../../../odbc/reference/syntax/sqlbindparameter-function.md)中的"傳遞參數值"和["發送長數據](../../../odbc/reference/develop-app/sending-long-data.md)"。 有關如何更新或添加數據執行列資料的詳細資訊,請參閱 SQLSetPos 中的「使用[SQLSetPos」](../../../odbc/reference/syntax/sqlsetpos-function.md)部分[、SQLBulk 操作](../../../odbc/reference/syntax/sqlbulkoperations-function.md)中的「使用書籤執行批量更新」以及[長數據和 SQLSetPos 和 SQLBulk 操作](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)節。  
   
- **SQLParamData**可以呼叫以擷取資料流的輸出參數。 當**SQLMoreResults**， **SQLExecute**， **SQLGetData**，或**SQLExecDirect**傳回 SQL_PARAM_DATA_AVAILABLE，呼叫**SQLParamData**來判斷哪一個參數提供的值。 如需有關 SQL_PARAM_DATA_AVAILABLE 和資料流的輸出參數的詳細資訊，請參閱[使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
+ 可以調用**SQLParamData**來檢索流式輸出參數。 當**SQLMore 結果****、SQLExecute、SQLGetData**或**SQLExecDirect**返回SQL_PARAM_DATA_AVAILABLE時,調用**SQLParamData**以**SQLGetData**確定哪個參數具有可用的值。 有關SQL_PARAM_DATA_AVAILABLE和串流式輸出參數的詳細資訊,請參閱使用[SQLGetData 偵測參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
 ## <a name="code-example"></a>程式碼範例  
- 請參閱[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)。  
+ 請參考[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|繫結至參數的緩衝區|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|取消陳述式處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|陳述式中傳回參數的相關資訊|[SQLDescribeParam 函式](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
-|執行 SQL 陳述式|[SQLExecDirect 函式](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|執行已備妥的 SQL 陳述式|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|在執行階段傳送參數資料|[SQLPutData 函式](../../../odbc/reference/syntax/sqlputdata-function.md)|  
+|將緩衝區繫結到參數|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|解除敘述處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|傳回敘述中有關參數的資訊|[SQLDescribeParam 函數](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
+|執行 SQL 語句|[SQLExecDirect 函式](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|執行準備好的 SQL 語句|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|在執行時傳送參數資料|[SQLPutData 函式](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC 標題檔案](../../../odbc/reference/install/odbc-header-files.md)   
  [使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

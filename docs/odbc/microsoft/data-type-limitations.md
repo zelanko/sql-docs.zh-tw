@@ -1,5 +1,5 @@
 ---
-title: 資料類型限制 |Microsoft Docs
+title: 資料類型限制 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - data types [ODBC], desktop database drivers
 - desktop database drivers [ODBC], data types
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4beaf91a4ead743e3e8a2e32578796baba3c17be
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096457"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280668"
 ---
 # <a name="data-type-limitations"></a>資料類型限制
-Microsoft ODBC 桌面資料庫驅動程式會對資料類型施加下列限制：  
+Microsoft ODBC 桌面資料庫驅動程式對資料類型施加了以下限制:  
   
 |資料類型|描述|  
 |---------------|-----------------|  
-|所有資料類型|類型轉換失敗可能會導致受影響的資料行設定為 Null。|  
-|BINARY|建立長度為零的二進位資料行實際上會傳回255位元組的二進位資料行。|  
-|日期|DATE 資料類型無法透過 CONVERT 函數轉換成另一個資料類型（或其本身）。|  
-|DECIMAL （精確數值）|不支援。|  
-|浮點資料類型|浮點數中的小數位數，可能會受限於 Windows [控制台] 的 [國際] 區段中設定的數位格式。|  
-|NUMERIC|支援最大有效位數和小數位數28。|  
-|timestamp|TIMESTAMP 資料類型無法透過 CONVERT 函數轉換成本身。|  
-|TINYINT|TINYINT 值一律不帶正負號。|  
-|長度為零的字串|使用 dBASE、Microsoft Excel、Paradox 或 Textdriver 時，將長度為零的字串插入資料行中，實際上會改為插入 Null。|
+|所有資料類型|類型轉換失敗可能導致受影響的列設定為 NULL。|  
+|BINARY|創建零長度的 BINARY 列實際上返回一個 255 位元組的 BINARY 列。|  
+|日期|轉換函數不能將 DATE 資料類型轉換為其他資料類型(或本身)。|  
+|DECIMAL(精確數字)|不支援。|  
+|浮點資料類型|浮點數位中的小數位數可能受 Windows 控制面板國際部分中設置的數位格式的限制。|  
+|NUMERIC|支援最大精度和 28 級。|  
+|timestamp|轉換函數不能將時間 STAMP 資料類型轉換為自身。|  
+|TINYINT|TINYINT 值始終未簽名。|  
+|零長度字串|當使用 dBASE、Microsoft Excel、悖論或文本驅動程式時,將零長度字串插入列實際上插入 NULL。|
