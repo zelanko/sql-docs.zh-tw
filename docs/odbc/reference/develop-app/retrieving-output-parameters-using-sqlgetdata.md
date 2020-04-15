@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLGetData 來抓取輸出參數 |Microsoft Docs
+title: 使用 SQLGetData 檢索輸出參數 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,76 +12,76 @@ helpviewer_keywords:
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294588"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>使用 SQLGetData 擷取輸出參數
-在 ODBC 3.8 之前，應用程式只能使用系結輸出緩衝區來抓取查詢的輸出參數。 不過，當參數值的大小非常大（例如，大型影像）時，很難以配置非常大的緩衝區。 ODBC 3.8 引進了一種新方法來抓取元件中的輸出參數。 應用程式現在可以多次呼叫具有小型緩衝區的**SQLGetData** ，以取出大型參數值。 這類似于抓取大型資料行資料。  
+在 ODBC 3.8 之前,應用程式只能檢索具有綁定輸出緩衝區的查詢的輸出參數。 但是,當參數值的大小非常大(例如,大圖像)時,很難分配非常大的緩衝區。 ODBC 3.8 引入了一種檢索零件輸出參數的新方法。 應用程式現在可以多次使用小緩衝區調用**SQLGetData**來檢索大型參數值。 這類似於檢索大型列數據。  
   
- 若要系結要在元件中取出的輸出參數或輸入/輸出參數，請呼叫**SQLBindParameter** ，並將*InputOutputType*引數設定為 SQL_PARAM_OUTPUT_STREAM 或 SQL_PARAM_INPUT_OUTPUT_STREAM。 使用 SQL_PARAM_INPUT_OUTPUT_STREAM，應用程式可以使用**SQLPutData**將資料輸入參數，然後使用**SQLGetData**來抓取輸出參數。 輸入資料必須是資料執行中（DAE）表單，使用**SQLPutData** ，而不是將它系結至預先配置的緩衝區。  
+ 要綁定要在零件中檢索的輸出參數或輸入/輸出參數,請調用**SQLBind 參數**,並將*輸入輸出類型*參數設置為SQL_PARAM_OUTPUT_STREAM或SQL_PARAM_INPUT_OUTPUT_STREAM。 使用SQL_PARAM_INPUT_OUTPUT_STREAM,應用程式可以使用**SQLPutData**將數據輸入到參數中,然後使用**SQLGetData**檢索輸出參數。 輸入數據必須採用執行時的數據 (DAE) 窗體,使用**SQLPutData**而不是將其綁定到預分配的緩衝區。  
   
- 這項功能可供 ODBC 3.8 應用程式使用，或是重新編譯 ODBC 3.x 和 ODBC 2.x 應用程式，而且這些應用程式必須具有 ODBC 3.8 驅動程式，以支援使用**SQLGetData**和 ODBC 3.8 驅動程式管理員來抓取輸出參數。 如需如何讓繼承應用程式使用新 ODBC 功能的相關資訊，請參閱[相容性矩陣](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
+ 此功能可用於 ODBC 3.8 應用程式或重新編譯的 ODBC 3.x 和 ODBC 2.x 應用程式,並且這些應用程式必須具有一個 ODBC 3.8 驅動程式,支援使用**SQLGetData**和 ODBC 3.8 驅動程式管理器檢索輸出參數。 有關如何啟用較舊的應用程式使用新的 ODBC 功能的資訊,請參閱[相容性矩陣](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
 ## <a name="usage-example"></a>使用範例  
- 例如，請考慮執行預存程式 **{CALL sp_f （?,?）}**，其中兩個參數都系結為 SQL_PARAM_OUTPUT_STREAM，而預存程式不會傳回任何結果集（稍後在本主題中，您會發現更複雜的案例）：  
+ 例如,請考慮執行儲存過程 **[CALL sp_f(?,?)],** 其中兩個參數都綁定為SQL_PARAM_OUTPUT_STREAM,並且存儲過程不會返回任何結果集(在本主題的後面部分,您將發現更複雜的方案):  
   
-1.  針對每個參數，呼叫**SQLBindParameter**並將*InputOutputType*設為 SQL_PARAM_OUTPUT_STREAM，並將*ParameterValuePtr*設定為權杖，例如參數編號、資料指標，或應用程式用來系結輸入參數之結構的指標。 這個範例會使用參數序數作為 token。  
+1.  對於每個參數,調用**SQLBind 參數**,其中*輸入輸出類型*設置為*SQL_PARAM_OUTPUT_STREAM,參數 ValuePtr*設定為權杖,如參數編號、指向資料的指標或指向應用程式用於綁定輸入參數的結構的指標。 此示例將使用參數代數作為權杖。  
   
-2.  使用**SQLExecDirect**或**SQLExecute**執行查詢。 系統會傳回 SQL_PARAM_DATA_AVAILABLE，表示有可供抓取的資料流程輸出參數。  
+2.  使用**SQLExecDirect**或**SQLExecute 執行**查詢。 將返回SQL_PARAM_DATA_AVAILABLE,指示有流輸出參數可供檢索。  
   
-3.  呼叫**SQLParamData**以取得可供抓取的參數。 **SQLParamData**將會傳回 SQL_PARAM_DATA_AVAILABLE，其中包含第一個可用參數的 token，其會在**SQLBindParameter**中設定（步驟1）。 權杖會在*ValuePtrPtr*指向的緩衝區中傳回。  
+3.  呼叫**SQLParamData**取得可供檢索的參數。 **SQLParamData**將返回SQL_PARAM_DATA_AVAILABLE,該參數將在**SQLBind 參數**(步驟 1)中設置,該參數的權杖。 令牌在*ValuePtrPtr*指向的緩衝區中返回。  
   
-4.  使用引數資料行來呼叫\_ **SQLGetData** _or*Param_Num*設定*為參數序數*，以取出第一個可用參數的資料。 如果**SQLGetData**傳回 SQL_SUCCESS_WITH_INFO 和 SQLState 01004 （資料已截斷），且類型在用戶端和伺服器上都是可變的長度，則會有更多資料可從第一個可用的參數抓取。 您可以繼續呼叫**SQLGetData** ，直到它以不同的**SQLState**傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 為止。  
+4.  使用參數*Col*Col\__or*Param_Num*將**SQLGetData**設置為參數 ddinal 以檢索第一個可用參數的數據。 如果**SQLGetData**傳回SQL_SUCCESS_WITH_INFO和 SQLState 01004(數據截斷),並且該類型在用戶端和伺服器上都是可變長度,則從第一個可用參數中檢索的數據更多。 您可以繼續呼叫**SQLGetData,** 直到它傳回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO使用不同的**SQLState**。  
   
-5.  重複步驟3和步驟4，以取得目前的參數。  
+5.  重複步驟 3 和步驟 4 以檢索當前參數。  
   
-6.  再次呼叫**SQLParamData** 。 如果它傳回 SQL_PARAM_DATA_AVAILABLE 以外的任何內容，則不會有更多串流參數資料可供抓取，而傳回碼會是下一個執行之語句的傳回碼。  
+6.  再次調用**SQLParamData。** 如果它返回除SQL_PARAM_DATA_AVAILABLE以外的任何內容,則沒有要檢索的流式處理參數數據,並且返回代碼將是執行的下一個語句的返回代碼。  
   
-7.  呼叫**SQLMoreResults**來處理下一組參數，直到它傳回 SQL_NO_DATA 為止。 如果 SQL_ATTR_PARAMSET_SIZE 的語句屬性設為1， **SQLMoreResults**會在此範例中傳回 SQL_NO_DATA。 否則， **SQLMoreResults**會傳回 SQL_PARAM_DATA_AVAILABLE，表示有可供下一組參數抓取的資料流程輸出參數。  
+7.  調用**SQLMore 結果**來處理下一組參數,直到返回SQL_NO_DATA。 如果語句屬性SQL_ATTR_PARAMSET_SIZE設置為 1,**則 SQLMore 結果**將返回此示例中的SQL_NO_DATA。 否則 **,SQLMore結果**將返回SQL_PARAM_DATA_AVAILABLE,以指示有流輸出參數可用於下一組要檢索的參數。  
   
- 類似于 DAE 輸入參數，在**SQLBindParameter**的引數*ParameterValuePtr*中使用的權杖（步驟1）可以是指向應用程式資料結構的指標，其中包含參數的序數和更多應用程式特定的資訊（如有需要）。  
+ 與 DAE 輸入參數類似 **,SQLBind 參數**(步驟 1) 中參數*參數 ValuePtr*中使用的權杖可以是指向應用程式資料結構的指標,該結構包含參數的表位和更多特定於應用程式的資訊(如有必要)。  
   
- 傳回的資料流程輸出或輸入/輸出參數的順序是驅動程式特定的，而且可能不一定與查詢中所指定的順序相同。  
+ 返回的流輸出或輸入/輸出參數的順序特定於驅動程式,可能並不總是與查詢中指定的順序相同。  
   
- 如果應用程式未在步驟4中呼叫**SQLGetData** ，則會捨棄參數值。 同樣地，如果應用程式在**SQLGetData**讀取所有參數值之前呼叫**SQLParamData** ，則會捨棄值的其餘部分，而且應用程式可以處理下一個參數。  
+ 如果應用程式在步驟 4 中不調用**SQLGetData,** 則將丟棄參數值。 同樣,如果應用程式在 SQLGetData 讀取所有參數值之前調用**SQLParamData,** 則將丟棄該值的其餘部分,並且應用程式可以處理下**SQLParamData**一個參數。  
   
- 如果應用程式在處理所有資料流程輸出參數之前呼叫**SQLMoreResults** （**SQLParamData**仍會傳回 SQL_PARAM_DATA_AVAILABLE），則會捨棄所有剩餘的參數。 同樣地，如果應用程式在**SQLGetData**讀取所有參數值之前呼叫**SQLMoreResults** ，則會捨棄值和其餘所有參數的其餘部分，而且應用程式可以繼續處理下一個參數集。  
+ 如果應用程式在處理所有流輸出參數之前調用**SQLMore 結果****(SQLParamData**仍返回SQL_PARAM_DATA_AVAILABLE),則將丟棄所有剩餘的參數。 同樣,如果應用程式在**SQLGetData**讀取所有參數值之前調用**SQLMore 結果**,則將丟棄該值的剩餘部分和所有剩餘參數,並且應用程式可以繼續處理下一個參數集。  
   
- 請注意，應用程式可以在**SQLBindParameter**和**SQLGetData**中指定 C 資料類型。 以**SQLGetData**指定的 c 資料類型會覆寫**SQLBindParameter**中指定的 c 資料類型，除非**SQLGetData**中指定的 c 資料類型是 SQL_APD_TYPE。  
+ 請注意,應用程式可以在**SQLBind 參數**和**SQLGetData**中指定 C 數據類型。 使用**SQLGetData**指定的 C 資料類型覆**寫 SQLBind 參數**中指定的 C 資料類型,除非在**SQLGetData**中指定的 C 資料類型SQL_APD_TYPE。  
   
- 雖然當輸出參數的資料類型是 BLOB 類型時，資料流程輸出參數會更有用，但這項功能也可以搭配任何資料類型使用。 驅動程式中指定了資料流程輸出參數所支援的資料類型。  
+ 儘管當輸出參數的數據類型為 BLOB 類型時,流式輸出參數更有用,但此功能也可以與任何數據類型一起使用。 流式輸出參數支援的數據類型在驅動程式中指定。  
   
- 如果有 SQL_PARAM_INPUT_OUTPUT_STREAM 參數要處理， **SQLExecute**或**SQLExecDirect**會先傳回 SQL_NEED_DATA。 應用程式可以呼叫**SQLParamData**和**SQLPUTDATA**來傳送 DAE 參數資料。 當處理所有的 DAE 輸入參數時， **SQLParamData**會傳回 SQL_PARAM_DATA_AVAILABLE 以指出資料流程輸出參數可供使用。  
+ 如果有要處理SQL_PARAM_INPUT_OUTPUT_STREAM參數 **,SQLExecute**或**SQLExecDirect**將首先返回SQL_NEED_DATA。 應用程式可以調用**SQLParamData**和**SQLPutData**來發送 DAE 參數數據。 處理所有 DAE 輸入參數時 **,SQLParamData**將返回SQL_PARAM_DATA_AVAILABLE以指示流輸出參數可用。  
   
- 當有要處理的資料流程輸出參數和系結輸出參數時，驅動程式會決定處理輸出參數的順序。 因此，如果輸出參數系結至緩衝區（ **SQLBindParameter**參數*InputOutputType*設定為 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT），則在**SQLParamData**傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 之前，可能不會填入緩衝區。 應用程式應該只在**SQLParamData**傳回處理所有資料流程輸出參數之後的 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 之後，才讀取系結緩衝區。  
+ 當有要處理的流式輸出參數和綁定輸出參數時,驅動程式確定處理輸出參數的順序。 因此,如果輸出參數綁定到緩衝區 **(SQLBind參數**參數*InputOutputType*設置為SQL_PARAM_INPUT_OUTPUT或SQL_PARAM_OUTPUT),則在**SQLParamData**返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO之前可能無法填充緩衝區。 只有在**SQLParamData**傳回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO後,應用程式才能讀取綁定緩衝區,該緩衝區是處理所有流輸出參數之後。  
   
- 除了資料流程輸出參數之外，資料來源還可以傳回警告和結果集。 一般而言，警告和結果集會藉由呼叫**SQLMoreResults**，與資料流程輸出參數分開處理。 處理資料流程輸出參數之前的處理警告和結果集。  
+ 數據源除了流式輸出參數外,還可以返回警告和結果集。 通常,通過調用**SQLMoreResult,** 將警告和結果集與流式輸出參數分開處理。 在處理流輸出參數之前,處理警告和結果集。  
   
- 下表描述傳送至伺服器之單一命令的不同案例，以及應用程式的使用方式。  
+ 下表描述了發送到伺服器的單個命令的不同方案,以及應用程式應如何工作。  
   
-|狀況|從 SQLExecute 或 SQLExecDirect 傳回值|接下來該怎麼做|  
+|狀況|從 SQLExecute 或 SQLExecDirect 傳回值|後續步驟|  
 |--------------|---------------------------------------------------|---------------------|  
-|資料僅包含資料流程輸出參數|SQL_PARAM_DATA_AVAILABLE|使用**SQLParamData**和**SQLGetData**來取出資料流程輸出參數。|  
-|資料包含結果集和資料流程輸出參數|SQL_SUCCESS|使用**SQLBindCol**和**SQLGetData**取出結果集。<br /><br /> 呼叫**SQLMoreResults**以開始處理資料流程輸出參數。 它應該會傳回 SQL_PARAM_DATA_AVAILABLE。<br /><br /> 使用**SQLParamData**和**SQLGetData**來取出資料流程輸出參數。|  
-|資料包含警告訊息和資料流程輸出參數|SQL_SUCCESS_WITH_INFO|使用**SQLGetDiagRec**和**SQLGetDiagField**來處理警告訊息。<br /><br /> 呼叫**SQLMoreResults**以開始處理資料流程輸出參數。 它應該會傳回 SQL_PARAM_DATA_AVAILABLE。<br /><br /> 使用**SQLParamData**和**SQLGetData**來取出資料流程輸出參數。|  
-|資料包含警告訊息、結果集和資料流程輸出參數|SQL_SUCCESS_WITH_INFO|使用**SQLGetDiagRec**和**SQLGetDiagField**來處理警告訊息。 然後呼叫**SQLMoreResults**以開始處理結果集。<br /><br /> 使用**SQLBindCol**和**SQLGetData**取出結果集。<br /><br /> 呼叫**SQLMoreResults**以開始處理資料流程輸出參數。 **SQLMoreResults**應該會傳回 SQL_PARAM_DATA_AVAILABLE。<br /><br /> 使用**SQLParamData**和**SQLGetData**來取出資料流程輸出參數。|  
-|使用 DAE 輸入參數進行查詢，例如資料流程輸入/輸出（DAE）參數|SQL NEED_DATA|呼叫**SQLParamData**和**SQLPUTDATA**來傳送 DAE 輸入參數資料。<br /><br /> 在處理所有的 DAE 輸入參數之後， **SQLParamData**可能會傳回**SQLExecute**和**SQLExecDirect**可以傳回的任何傳回碼。 然後可以套用此資料表中的案例。<br /><br /> 如果傳回碼 SQL_PARAM_DATA_AVAILABLE，則可以使用資料流程輸出參數。 應用程式必須再次呼叫**SQLParamData**來取得資料流程輸出參數的 token，如本表的第一列中所述。<br /><br /> 如果傳回碼為 SQL_SUCCESS，則表示有要處理的結果集，或處理已完成。<br /><br /> 如果傳回碼為 SQL_SUCCESS_WITH_INFO，則會有要處理的警告訊息。|  
+|資料僅包含串流輸出參數|SQL_PARAM_DATA_AVAILABLE|使用**SQLParam 資料和** **SQLGetData**檢索流式輸出參數。|  
+|資料包含結果集和串流輸出參數|SQL_SUCCESS|使用**SQLBindCol**和**SQLGetData**檢索結果集。<br /><br /> 調用**SQLMore 結果**開始處理流式處理輸出參數。 它應該返回SQL_PARAM_DATA_AVAILABLE。<br /><br /> 使用**SQLParam 資料和** **SQLGetData**檢索流式輸出參數。|  
+|資料包括警告訊息與串流輸出參數|SQL_SUCCESS_WITH_INFO|使用**SQLGetDiagRec**和**SQLGetDiagField**處理警告消息。<br /><br /> 調用**SQLMore 結果**開始處理流式處理輸出參數。 它應該返回SQL_PARAM_DATA_AVAILABLE。<br /><br /> 使用**SQLParam 資料和** **SQLGetData**檢索流式輸出參數。|  
+|資料包括警告訊息、結果集和串流輸出參數|SQL_SUCCESS_WITH_INFO|使用**SQLGetDiagRec**和**SQLGetDiagField**處理警告消息。 然後調用**SQLMore 結果**開始處理結果集。<br /><br /> 使用**SQLBindCol**和**SQLGetData**檢索結果集。<br /><br /> 調用**SQLMore 結果**開始處理流式處理輸出參數。 **SQLMore 結果**應返回SQL_PARAM_DATA_AVAILABLE。<br /><br /> 使用**SQLParam 資料和** **SQLGetData**檢索流式輸出參數。|  
+|使用 DAE 輸入參數查詢,例如串流式輸入/輸出 (DAE) 參數|SQL NEED_DATA|呼叫**SQLParamData**和**SQLPutData**傳送 DAE 輸入參數資料。<br /><br /> 處理完所有 DAE 輸入參數後 **,SQLParamData**可以返回**SQLExecute**和**SQLExecDirect**可以返回的任何返回代碼。 然後可以應用此表中的案例。<br /><br /> 如果返回代碼SQL_PARAM_DATA_AVAILABLE,則流式輸出參數可用。 應用程式必須再次調用**SQLParamData**以檢索流式輸出參數的權杖,如此表的第一行所述。<br /><br /> 如果返回代碼SQL_SUCCESS,則有要處理的結果集或處理已完成。<br /><br /> 如果返回代碼SQL_SUCCESS_WITH_INFO,則有要處理的警告消息。|  
   
- **SQLExecute**、 **SQLExecDirect**或**SQLMoreResults**傳回 SQL_PARAM_DATA_AVAILABLE 之後，如果應用程式呼叫的函式不在下列清單中，就會產生函式順序錯誤：  
+ 在**SQLExecute、SQLExecDirect**或**SQLMoreResult**傳回SQL_PARAM_DATA_AVAILABLE後,如果應用程式呼叫不在以下清單中的函數,則將導致**SQLExecute**函式序列錯誤:  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **SQLAllocHandle** / **SQLallocHandleStd**  
   
 -   **SQLDataSources** / **SQLDrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions**  
+-   **SQLGetInfo** / **SQLGet 函數**  
   
--   **SQLGetConnectAttr** / **** SQLGetEnvAttr / **** SQLGetDescField / **SQLGetDescRec**  
+-   **SQLGetConnectAttr** / **SQLGetEnvAttr** / **SQLGetDescfield** / **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -97,22 +97,22 @@ ms.locfileid: "68020508"
   
 -   **SQLCancel**  
   
--   **SQLCancelHandle** （with 語句控制碼）  
+-   **SQLCancelHandle(** 帶語句句柄)  
   
--   **SQLFreeStmt** （with Option = SQL_CLOSE，SQL_DROP 或 SQL_UNBIND）  
+-   **SQLFreeStmt(** 含選項 = SQL_CLOSE、SQL_DROP或SQL_UNBIND)  
   
 -   **SQLCloseCursor**  
   
--   **SQLDisconnect**  
+-   **SQL 斷線**  
   
--   **SQLFreeHandle** （含 HandleType = SQL_HANDLE_STMT）  
+-   **SQLFreeHandle(** 帶手柄類型 = SQL_HANDLE_STMT)  
   
 -   **SQLGetStmtAttr**  
   
- 應用程式仍然可以使用**SQLSetDescField**或**SQLSetDescRec**來設定系結資訊。 欄位對應將不會變更。 不過，描述元內的欄位可能會傳回新的值。 例如，SQL_DESC_PARAMETER_TYPE 可能會傳回 SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_PARAM_OUTPUT_STREAM。  
+ 應用程式仍可以使用**SQLSetDescField**或**SQLSetDescRec**來設置綁定資訊。 欄位映射不會更改。 但是,描述符中的欄位可能會返回新值。 例如,SQL_DESC_PARAMETER_TYPE可能會返回SQL_PARAM_INPUT_OUTPUT_STREAM或SQL_PARAM_OUTPUT_STREAM。  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用案例：從結果集取出元件中的影像  
- 當預存程式傳回的結果集包含一個影像相關中繼資料的資料列，而且影像是以大型輸出參數傳回時，可以使用**SQLGetData**來取得部分中的資料。  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用專案:從結果集中檢索零件中的映像  
+ 當儲存過程返回包含一行有關圖像的中資料的結果集並在大型輸出參數中返回圖像時 **,SQLGetData**可用於獲取部分資料。  
   
 ```  
 // CREATE PROCEDURE SP_TestOutputPara  
@@ -193,8 +193,8 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用案例：以資料流程處理輸入/輸出參數的形式傳送和接收大型物件  
- 當預存程式傳遞大型物件做為輸入/輸出參數時，可以使用**SQLGetData**來取得和傳送元件中的資料，並將值與資料庫進行資料流程處理。 您不需要將所有資料儲存在記憶體中。  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用專案:作為串流式輸入/輸出參數傳送和接收大型物件  
+ 當儲存過程將大型物件作為輸入/輸出參數傳遞,並將值流式傳輸到資料庫或從資料庫中流出時 **,SQLGetData**可用於分段獲取和發送數據。 您不必將所有數據存儲在記憶體中。  
   
 ```  
 // CREATE PROCEDURE SP_TestInOut  

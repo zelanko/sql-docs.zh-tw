@@ -1,5 +1,5 @@
 ---
-title: 連接 SQLDriverConnect |Microsoft Docs
+title: 使用 SQLDriverConnect 連線 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b8285ca9fddf0e1b77ca171414e4c00b0029d110
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299068"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>使用 SQLDriverConnect 進行連線
-**SQLDriverConnect**是用來連接到使用連接字串的資料來源。 **SQLDriverConnect**是用來取代**SQLConnect** ，原因如下：  
+**SQLDriverConnect**用於使用連接字串連接到數據源。 **SQLDriverConnect**的使用而不是**SQLConnect,** 原因如下:  
   
--   讓應用程式使用驅動程式特定的連接資訊。  
+-   讓應用程式使用特定於驅動程式的連接資訊。  
   
 -   要求驅動程式提示使用者輸入連接資訊。  
   
--   連接而不指定資料來源。  
+-   在不指定數據源的情況下進行連接。  
   
  此章節包含下列主題。  
   

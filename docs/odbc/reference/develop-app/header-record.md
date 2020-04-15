@@ -1,5 +1,5 @@
 ---
-title: 標頭記錄 |Microsoft Docs
+title: 標題記錄 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - header records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: d0fff1ed-5616-422a-a394-7ea1d2486f89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f5fe5cf6aae0d5953cc82b845396dd4164c7fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 372185966cc1644147feb2683177ae3a5b69e788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139018"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300178"
 ---
 # <a name="header-record"></a>標頭記錄
-標頭記錄中的欄位包含函式執行的一般資訊，包括傳回碼、資料列計數、狀態記錄的數目，以及執行的語句類型。 除非函數傳回 SQL_INVALID_HANDLE，否則一律會建立標頭記錄。 如需標頭記錄中的完整欄位清單，請參閱[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數描述。
+標頭記錄中的欄位包含有關函數執行的一般資訊,包括返回代碼、行計數、狀態記錄數和執行的語句類型。 除非函數返回SQL_INVALID_HANDLE,否則始終會創建標頭記錄。 有關標頭記錄中欄位的完整清單,請參閱[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數說明。

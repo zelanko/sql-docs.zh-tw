@@ -1,5 +1,5 @@
 ---
-title: 內嵌 SQL |Microsoft Docs
+title: 嵌入式 SQL |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6a7fa2b3105aedee6cb054c5d5dfa76f3c430f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915419"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306671"
 ---
 # <a name="embedded-sql"></a>內嵌 SQL
-將 SQL 語句傳送至 DBMS 的第一個技術是內嵌 SQL。 由於 SQL 不會使用變數和流程式控制制語句，因此通常會使用它做為可新增至以傳統程式設計語言（例如 C 或 COBOL）撰寫之程式的資料庫語言。 這是內嵌 SQL 的主要概念：將 SQL 語句放在以主機程式設計語言撰寫的程式中。 簡單地說，下列技巧是用來以主機語言內嵌 SQL 語句：  
+向 DBMS 發送 SQL 語句的第一種技術是嵌入式 SQL。 由於 SQL 不使用變數和流控制語句,因此它通常用作資料庫子語言,可以添加到使用傳統程式設計語言(如 C 或 COBOL)編寫的程式中。 這是嵌入式 SQL 的核心思想:將 SQL 語句放在用主機編程語言編寫的程式中。 簡而言之,以下技術用於將 SQL 語句嵌入到宿主語言中:  
   
--   內嵌 SQL 語句是由特殊的 SQL 先行編譯器處理。 所有 SQL 語句的開頭都是 introducer，結尾是結束字元，這兩者都是用來標示先行編譯器的 SQL 語句。 Introducer 和結束字元會隨著主機語言而有所不同。 例如，introducer 是 C 中的 "EXEC SQL" 和 "&SQL （" 在 MUMPS 中，而結束字元是分號（;)在 C 中，在 MUMPS 中是右括弧。  
+-   嵌入式 SQL 語句由特殊的 SQL 預編譯器處理。 所有 SQL 語句都以介紹器開頭,以終止符結尾,兩者都標記預編譯器的 SQL 語句。 介紹器和終止符隨宿主語言而變化。 例如,介紹器在 C 中為「EXEC SQL」,在 MUMPS 中為「&SQL」,終止符為分號(;)在 C 和 MUMPS 中的右括弧。  
   
--   應用程式中的變數（稱為「主機變數」）可以在允許常數的任何位置，用於內嵌 SQL 語句中。 這些可用於輸入，以將 SQL 語句自訂為特定狀況，並在輸出上用來接收查詢結果。  
+-   應用程式中的變數稱為主機變數,可以在允許常量的嵌入式 SQL 語句中使用。 這些可用於輸入,以根據特定情況定製 SQL 語句,並在輸出上用於接收查詢結果。  
   
--   傳回單一資料列的查詢會使用單一 SELECT 語句來處理;這個語句會指定要在其中傳回資料的查詢和主機變數。  
+-   返回一行數據的查詢使用單例 SELECT 語句處理;此語句指定要在其中返回數據的查詢和主機變數。  
   
--   傳回多個資料列的查詢會使用資料指標來處理。 資料指標會持續追蹤結果集內的目前資料列。 DECLARE CURSOR 語句定義了查詢，OPEN 語句會開始查詢處理，FETCH 語句會抓取連續的資料列，而 CLOSE 語句則結束查詢處理。  
+-   返回多行數據的查詢使用游標處理。 游標跟蹤結果集中的當前行。 DECLARE CURSOR 語句定義查詢,OPEN 語句開始查詢處理,FETCH 語句檢索連續的數據行,CLOSE 語句結束查詢處理。  
   
--   當資料指標開啟時，定點更新和定位 delete 語句可以用來更新或刪除資料指標目前選取的資料列。  
+-   開啟游標時,定位更新和定位刪除語句可用於更新或刪除游標當前選擇的行。  
   
  此章節包含下列主題。  
   

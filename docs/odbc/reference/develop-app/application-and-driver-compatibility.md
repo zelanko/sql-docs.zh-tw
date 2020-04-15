@@ -1,5 +1,5 @@
 ---
-title: 應用程式和驅動程式相容性 |Microsoft Docs
+title: 應用程式和驅動程式相容性 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - compatibility [ODBC], application and driver compatibility
 - application compatibility issues [ODBC]
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d803c2ad63d19ddd21d620233148dad7f7ca420
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304359"
 ---
 # <a name="application-and-driver-compatibility"></a>應用程式和驅動程式相容性
-除了版本外，ODBC 應用程式和驅動程式也會分成許多類別。 其中一些應用程式與某些驅動程式不相容;在其他情況下，應用程式或驅動程式的型別可能會與它們之間的回溯相容性問題有關。  
+ODBC 應用程式和驅動程式除了其版本外,還分為多個類別。 其中一些應用程式與某些驅動程式不相容;在其他情況下,應用程式或驅動程序的類型可能與它們之間的向後相容性問題有關。  
   
  此章節包含下列主題。  
   

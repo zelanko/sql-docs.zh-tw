@@ -1,5 +1,5 @@
 ---
-title: SQLSetCursorName 函式 |Microsoft Docs
+title: SQLSetCursor 名稱函數 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetCursorName function [ODBC]
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6a3bcd07a39401d49be04d141e50c671179efb16
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68092993"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287338"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函式
-**標準**  
- 引進的版本： ODBC 1.0 標準合規性： ISO 92  
+**一致性**  
+ 推出版本: ODBC 1.0 標準合規性: ISO 92  
   
  **摘要**  
- **SQLSetCursorName**會將資料指標名稱與現用語句產生關聯。 如果應用程式未呼叫**SQLSetCursorName**，驅動程式會視需要產生 SQL 語句處理的資料指標名稱。  
+ **SQLSetCursorName**將游標名稱與活動語句關聯起來。 如果應用程式不呼叫**SQLSetCursorName,** 驅動程式將根據需要生成 SQL 語句處理所需的遊標名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,49 +44,49 @@ SQLRETURN SQLSetCursorName(
 ```  
   
 ## <a name="arguments"></a>引數  
- *StatementHandle*  
- 源語句控制碼。  
+ *語句句柄*  
+ [輸入]語句句柄。  
   
- *CursorName*  
- 源資料指標名稱。 若要有效率地處理，資料指標名稱不應包含資料指標名稱中的任何前置或尾端空格，而且如果資料指標名稱包含分隔的識別碼，則分隔符號應定位為游標名稱中的第一個字元。  
+ *游標名稱*  
+ [輸入]游標名稱。 為了進行有效的處理,游標名稱不應在游標名稱中包括任何前導空格或尾隨空格,如果游標名稱包含分隔標識符,則分隔符應定位為游標名稱中的第一個字元。  
   
  *NameLength*  
- 源**CursorName*的長度（以字元為單位）。  
+ [輸入]長度以 =*游標名稱*的字元為 。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR或SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLSetCursorName**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle**控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出**SQLSetCursorName**常傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
+ 當**SQLSetCursorName**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有SQL_HANDLE_STMT的*句柄類型*和*敘述的句**柄*。 下表列出了**SQLSetCursorName**通常傳回的 SQLSTATE 值,並解釋了此函式中內容中的每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01004|字串資料，右邊已截斷|資料指標名稱超過上限，因此只會使用允許的最大字元數。|  
-|24000|指標狀態無效|對應至*StatementHandle*的語句已是已執行或游標位置的狀態。|  
-|34000|指標名稱無效|**CursorName*中指定的資料指標名稱無效，因為它超過驅動程式所定義的最大長度，或是以 "SQLCUR" 或 "SQL_CUR" 開頭。|  
-|3C000|重複的資料指標名稱|**CursorName*中指定的資料指標名稱已存在。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
-|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
-|HY009|Null 指標的使用不正確|（DM）引數*CursorName*是 null 指標。|  
-|HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLSetCursorName**函式時，此 aynchronous 函數仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式，且在呼叫此函式時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  
-|HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
-|HY090|不正確字串或緩衝區長度|（DM）引數*NameLength*小於0，但不等於 SQL_NTS。|  
-|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|（DM）如需暫停狀態的詳細資訊，請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
-|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此功能|（DM）與*StatementHandle*相關聯的驅動程式不支援此功能。|  
+|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|01004|字串資料,右截斷|游標名稱超過最大限制,因此只使用允許的最大字元數。|  
+|24000|指標狀態無效|與*語句句柄*對應的語句已處於已執行或游標定位狀態。|  
+|34000|指標名稱無效|在[*CursorName 中*指定的游標名稱無效,因為它超過了驅動程式定義的最大長度,或者以"SQLCUR"或"SQL_CUR"開始。|  
+|3C000|重覆的游標名稱|在游*標名稱 中*指定的游標名稱已存在。|  
+|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
+|HY009|不合法的空白指標|(DM) 參數*CursorName*是一個空指標。|  
+|HY010|函式序列錯誤|(DM) 為與*語句句柄*關聯的連接句柄調用非同步執行函數。 呼叫**SQLSetCursorName**函數時,此 aynchronous 函數仍在執行。<br /><br /> (DM) 為*語句句柄*調用了非同步執行函數,並且在調用此函數時仍在執行。<br /><br /> (DM) SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**被調用用於**SQLExecute***語句句柄*並返回SQL_NEED_DATA。 **SQLExecDirect** 在發送所有執行時數據參數或列的數據之前,調用了此功能。|  
+|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
+|HY090|不合法的字串或緩衝區長度|(DM) 參數*NameLength*小於 0,但不等於SQL_NTS。|  
+|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
+|IM001|驅動程式不支援此功能|(DM) 與*語句句柄*關聯的驅動程式不支援該函數。|  
   
 ## <a name="comments"></a>註解  
- 資料指標名稱只會在定位 update 和 delete 語句中使用（例如，**更新**_資料表名稱_.。。**其中目前的**資料_指標名稱_）。 如需詳細資訊，請參閱[定位 Update 和 Delete 語句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式未呼叫**SQLSetCursorName**來定義資料指標名稱，則在執行查詢語句時，驅動程式會產生開頭為字母 SQL_CUR 的名稱，而且長度不超過18個字元。  
+ 游標名稱只有定位的更新與移除語句(例如,**更新**_表名_...**其中游**_標名稱_的目前 。 有關詳細資訊,請參閱[位置更新與刪除語句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式不呼叫**SQLSetCursorName**來定義游標名稱,則在執行查詢語句時,驅動程式將生成以字母SQL_CUR開頭且長度不超過 18 個字元的名稱。  
   
- 連接內的所有資料指標名稱都必須是唯一的。 資料指標名稱的最大長度是由驅動程式所定義。 為了達到最大的互通性，建議應用程式將資料指標名稱限制為不超過18個字元。 在 ODBC 3.x*中，如果*資料指標名稱是加上引號的識別碼，則會以區分大小寫的方式來處理它，而且它可以包含 SQL 語法不允許或特別處理的字元，例如空白或保留的關鍵字。 如果必須以區分大小寫的方式來處理資料指標名稱，則必須以引號識別碼傳遞。  
+ 連接中的所有遊標名稱都必須是唯一的。 游標名稱的最大長度由驅動程式定義。 為了達到最大互操作性,建議應用程式將游標名稱限制為不超過 18 個字元。 在 ODBC 3 *.x*中,如果游標名稱是參考標識符,則以區分大小寫的方式處理它,並且它可以包含 SQL 語法不允許或將特殊處理的字元,例如空白或保留關鍵字。 如果必須以區分大小寫的方式處理游標名稱,則必須將其作為引號標識符傳遞。  
   
- 已明確或隱含設定的資料指標名稱，會在與它關聯的語句卸載之前，使用**SQLFreeHandle**。 只要資料指標處於已配置或備妥的狀態，就可以呼叫**SQLSetCursorName**來重新命名語句上的資料指標。  
+ 顯式設定或隱式設置的游標名稱將保持設置,直到使用**SQLFreeHandle**刪除與其關聯的語句。 只要游標處於已分配或準備狀態,就可以調用**SQLSetCursorName**在語句上重新命名游標。  
   
 ## <a name="code-example"></a>程式碼範例  
- 在下列範例中，應用程式會使用**SQLSetCursorName**來設定語句的資料指標名稱。 然後，它會使用該語句來抓取 CUSTOMERS 資料表的結果。 最後，它會執行定點更新，以變更 John Smith 的電話號碼。 請注意，應用程式會針對**SELECT**和**UPDATE**語句使用不同的語句控制碼。  
+ 在下面的範例中,應用程式使用**SQLSetCursorName**為語句設置游標名稱。 然後,它使用該語句從 CUSTOMERS 表檢索結果。 最後,它執行定位更新以更改約翰·史密斯的電話號碼。 請注意,應用程式對**SELECT**和**UPDATE**語句使用不同的語句句柄。  
   
- 如需其他程式碼範例，請參閱[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ 有關另一個代碼範例,請參閱[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
 ```cpp  
 #define NAME_LEN 50  
@@ -135,9 +135,9 @@ if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |執行 SQL 語句|[SQLExecDirect 函式](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|執行備妥的 SQL 語句|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|傳回資料指標名稱|[SQLGetCursorName 函數](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|  
-|設定資料指標滾動選項|[SQLSetScrollOptions 函式](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
+|執行準備好的 SQL 語句|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|返回游標名稱|[SQLGetCursorName 函式](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|  
+|設定游標滾動選項|[SQLSetScrollOptions 函式](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

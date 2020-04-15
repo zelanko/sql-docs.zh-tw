@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client （OLE DB）參考 |Microsoft Docs
+title: SQL 伺服器本機用戶端 (OLE DB) 參考 |微軟文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - SQLNCLI, OLE DB
 - SQL Server Native Client, OLE DB
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 719e5d374929417771f69e2d51e47abc606727e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bc5fb3b05d4bb91b71e74bf68eb5ac2ec583a083
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789245"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289766"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) 介面
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將介面公開給想要在執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一或多部電腦上存取資料的取用者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
+  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供者向[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]希望存取運行的一台或多台電腦上的數據的消費者公開介面。 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式是符合 OLE DB 版本 2.0 的提供程式。  
   
- 這個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者程式設計參考不會記載所有 OLE DB 介面和方法，只會記載使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，顯示提供者特定行為的介面和方法。  
+ 此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式編程引用不記錄所有 OLE DB 介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和方法,只記錄在使用 本機用戶端 OLE DB 提供程式時表現出提供程式特定行為的介面和方法。  
   
  如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45232)。  
   

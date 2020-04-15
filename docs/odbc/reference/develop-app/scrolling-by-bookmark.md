@@ -1,5 +1,5 @@
 ---
-title: 依書簽滾動 |Microsoft Docs
+title: 按書籤滾動 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - scrolling rows [ODBC]
 ms.assetid: 4862f098-41a4-4bd2-894e-f71bb97f9bc0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d27c46407e2994960af4f6abddd6cdc6f08ec852
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 454e29abdf848fdf4f4eaae090e7cc326f0048df
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68055544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304189"
 ---
 # <a name="scrolling-by-bookmark"></a>依書籤捲動
-使用**SQLFetchScroll**來提取資料列時，應用程式可以使用書簽做為選取起始資料列的基礎。 這是一個絕對位址的形式，因為它不相依於目前的資料指標位置。 若要滾動到已加入書簽的資料列，應用程式會使用 SQL_FETCH_BOOKMARK 的*FetchOrientation*來呼叫**SQLFetchScroll** 。 這項作業會使用 SQL_ATTR_FETCH_BOOKMARK_PTR 語句屬性所指向的書簽。 它會傳回資料列集，從該書籤識別的資料列開始。 應用程式可以在呼叫**SQLFetchScroll**的*FetchOffset*引數中，指定此作業的位移。 當指定位移時，會藉由將*FetchOffset*引數中的數位加入書簽所識別的資料列數目來決定所傳回之資料列集的第一個資料列。 搭配 ODBC 2 使用時，不支援使用*FetchOffset*引數。*x*驅動程式;當應用程式在 ODBC 2 中呼叫**SQLFetchScroll**時。*x*驅動程式，並將*FetchOrientation*設定為 SQL_FETCH_BOOKMARK， *FetchOffset*引數必須設定為0。
+使用**SQLFetchScroll**提取行時,應用程式可以使用書籤作為選擇起始行的基礎。 這是一個絕對位址的形式，因為它不相依於目前的資料指標位置。 要滾動到書籤行,應用程式調用**SQLFetchScroll,** 獲取*方向*為 SQL_FETCH_BOOKMARK。 此操作使用SQL_ATTR_FETCH_BOOKMARK_PTR語句屬性指向的書籤。 它會傳回資料列集，從該書籤識別的資料列開始。 應用程式可以在調用**SQLFetchScroll**的*FetchOffset*參數中指定此操作的偏移量。 指定偏移量時,通過將*FetchOffset*參數中的數位添加到書籤標識的行數來確定返回的行集的第一行。 與 ODBC 2 一起使用時,不支援使用*FetchOffset*參數。*x*驅動程式;當應用程式在 ODBC 2 中呼叫**SQLFetchScroll**時。*將**取取方向*設置為SQL_FETCH_BOOKMARK的 x 驅動程式必須將*FetchOffset*參數設置為 0。

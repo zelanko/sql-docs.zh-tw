@@ -1,5 +1,5 @@
 ---
-title: 描述項欄位 |Microsoft Docs
+title: 描述符欄位 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94e70de7d237c2eca9aee81979cb19d5295561b5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305919"
 ---
 # <a name="descriptor-fields"></a>描述項欄位
-描述項包含*標頭*和*記錄*欄位，可完整描述資料行或參數。  
+描述符包含完全描述列或參數*的標頭*和*記錄*欄位。  
   
- 描述項包含下列標頭欄位的單一複本。 變更標頭欄位會影響所有的資料行或參數。  
+ 描述符包含以下標頭欄位的單個複本。 更改標題欄位會影響所有列或參數。  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "68106176"
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- 描述項包含零個或多個描述項記錄。 根據描述項的類型，每一筆記錄都有一個資料行或參數。 系結新的資料行或參數時，會將新的記錄新增至描述元。 未系結資料行或參數時，會從描述項中移除記錄。 每一筆記錄都包含下欄欄位的單一複本：  
+ 描述符包含零個或多個描述符記錄。 每個記錄描述一列或參數,具體取決於描述符的類型。 綁定新列或參數時,將新記錄添加到描述符中。 當列或參數未綁定時,將從描述符中刪除記錄。 每個紀錄包含以下欄位的單一副本:  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ ms.locfileid: "68106176"
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- 許多語句屬性會對應至描述元的標頭欄位。 透過呼叫**SQLSetStmtAttr**來設定這些屬性，並藉由呼叫**SQLSetDescField**來設定對應的描述元標頭欄位具有相同的效果。 這也適用于**SQLGetStmtAttr**和**SQLGetDescField**，這兩種情況都會抓取相同的資訊。 呼叫語句函式，而不是描述項函式，其優點是不需要抓取描述項控制碼。  
+ 許多語句屬性對應於描述符的標頭欄位。 通過調用**SQLSetStmtAttr**設定這些屬性,並透過呼叫**SQLSetDescField**設定相應的描述符標頭欄位具有相同的效果。 **SQLGetStmtAttr**和**SQLGetDescField**也是如此,它們檢索相同的資訊。 呼叫敘述函數而不是描述符函數的優點是不需要檢索描述符句柄。  
   
- 您可以藉由設定語句屬性來設定下列標頭欄位：  
+ 可以通過設定語句屬性來設定以下標頭欄位:  
   
 |||  
 |-|-|  
