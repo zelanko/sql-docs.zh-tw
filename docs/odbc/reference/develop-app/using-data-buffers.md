@@ -1,5 +1,5 @@
 ---
-title: 使用資料緩衝區 |Microsoft Docs
+title: 使用資料緩衝區 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079577"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306769"
 ---
 # <a name="using-data-buffers"></a>使用資料緩衝區
-資料緩衝區是由三項資訊所描述：其類型、位址和位元組長度。 每當函式需要其中一項資訊，而且還不知道它時，它就會有應用程式傳遞它的引數。  
+數據緩衝區由三條資訊描述:其類型、位址和位元組長度。 每當函數需要這些資訊之一,但不知道它時,它都有一個參數,應用程式通過它。  
   
  此章節包含下列主題。  
   

@@ -1,5 +1,5 @@
 ---
-title: 配置和釋放描述元 |Microsoft Docs
+title: 分配和釋放描述符 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - allocating and freeing descriptors [ODBC]
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5eaf5b7d4dcf335636d8f8b3d5e3ac9b4b5f481f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 692c339af26b96aef3ffe4ba20f592c49b05d85e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288316"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>配置及釋放描述項
-描述項會隱含或明確配置，如下列各節所述。  
+描述符是隱式或顯式分配的,如以下各節所述。  
   
 -   [隱含配置描述項](../../../odbc/reference/develop-app/implicitly-allocated-descriptors.md)  
   

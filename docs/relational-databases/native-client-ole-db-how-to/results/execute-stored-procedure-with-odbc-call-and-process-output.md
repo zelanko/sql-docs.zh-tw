@@ -1,5 +1,5 @@
 ---
-title: 預存程式、ODBC 呼叫、輸出
+title: 儲存過程,ODBC 呼叫輸出
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11e50e3937137b44c273d10914968dde2cfefdc5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244488"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302211"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 及處理輸出執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果此命令傳回多個結果，則當 **IMultipleResults::GetResult** 傳回 DB_S_NORESULT 或是 **IMultipleResults** 介面完全釋放時 (以先發生者為準)，便可使用輸出參數資料。  
   
 > [!IMPORTANT]  
@@ -36,13 +35,13 @@ ms.locfileid: "75244488"
   
 2.  使用 DBBINDING 結構的陣列來建立一組繫結 (每一個參數標記各一個)。  
   
-3.  使用**IAccessor：： CreateAccessor**方法，為已定義的參數建立存取子。 **CreateAccessor**會從一組系結建立存取子。  
+3.  使用 **IAccessor::CreateAccessor** 方法來建立已定義之參數的存取子。 **CreateAccessor** 會從一組繫結建立存取子。  
   
 4.  填入 DBPARAMS 結構。  
   
 5.  呼叫 **Execute** 命令 (在此情況下，為預存程序的呼叫)。  
   
-6.  處理資料列集，並使用**IRowset：： release**方法加以釋放。  
+6.  處理資料列集，並使用 **IRowset::Release** 方法加以釋放。  
   
 7.  處理從預存程序收到的傳回碼和輸出參數值。  
   
@@ -358,6 +357,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果 how to 主題 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [處理結果操作說明主題 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

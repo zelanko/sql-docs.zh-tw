@@ -1,5 +1,5 @@
 ---
-title: ODBC 架構 |Microsoft Docs
+title: ODBC 架構 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], components
 - ODBC architecture [ODBC]
 ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 781a214d3ca059a442680c332d79aad48914976c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 07435dc1a5fbe800f2260e914f315cfe93dd8d1b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111225"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305129"
 ---
 # <a name="odbc-architecture"></a>ODBC 架構
-ODBC 架構有四個元件：  
+ODBC 架構結構有四個元件:  
   
--   **應用程式**執行處理並呼叫 ODBC 函式，以提交 SQL 語句並取得結果。  
+-   **套用**執行處理並調用 ODBC 函數以提交 SQL 語句並檢索結果。  
   
--   **驅動程式管理員**代表應用程式載入及卸載驅動程式。 會處理 ODBC 函數呼叫，或將它們傳遞至驅動程式。  
+-   **驅動程式管理員**代表應用程式載入和卸載驅動程式。 處理ODBC函數調用或將其傳遞給驅動程式。  
   
--   **驅動程式**會處理 ODBC 函式呼叫、將 SQL 要求提交至特定資料來源，並將結果傳回給應用程式。 必要時，驅動程式會修改應用程式的要求，使要求符合相關 DBMS 所支援的語法。  
+-   **驅動程式**處理 ODBC 函數調用,向特定數據來源提交 SQL 請求,並將結果返回給應用程式。 如有必要,驅動程式將修改應用程式的請求,以便請求符合關聯的 DBMS 支援的語法。  
   
--   **資料來源**包含使用者想要存取的資料，以及其相關聯的作業系統、DBMS 和用來存取 DBMS 的網路平臺（如果有的話）。  
+-   **資料來源**由使用者想要訪問的數據及其關聯的作業系統、DBMS 和網路平臺(如果有)組成,用於訪問 DBMS。  
   
- 請注意下列有關 ODBC 架構的要點。 首先，可以存在多個驅動程式和資料來源，讓應用程式能夠同時存取多個資料來源中的資料。 第二，ODBC API 用於兩個位置：應用程式和驅動程式管理員之間，以及驅動程式管理員與每個驅動程式之間。 驅動程式管理員和驅動程式之間的介面，有時稱為「*服務提供者介面*」或*SPI*。 若為 ODBC，應用程式開發介面（API）和服務提供者介面（SPI）是相同的;也就是說，驅動程式管理員和每個驅動程式都具有相同功能的相同介面。  
+ 請注意有關 ODBC 體系結構的以下幾點。 首先,可以存在多個驅動程式和數據源,這允許應用程序同時訪問來自多個數據源的數據。 其次,ODBC API 在兩個位置使用:在應用程式和驅動程式管理器之間,以及驅動程式管理器和每個驅動程序之間。 驅動程式管理員與驅動程式之間的介面有時稱為*服務提供者介面或* *SPI*。 對於 ODBC,應用程式程式設計介面 (API) 和服務提供者介面 (SPI) 相同;即,驅動程式管理器和每個驅動程式具有相同的函數介面。  
   
  此章節包含下列主題。  
   

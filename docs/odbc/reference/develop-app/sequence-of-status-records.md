@@ -1,5 +1,5 @@
 ---
-title: 狀態記錄的順序 |Microsoft Docs
+title: 狀態記錄序列 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bb26731a85d1d6313658fe9c24a32167b351d2d9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094354"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304169"
 ---
 # <a name="sequence-of-status-records"></a>狀態記錄的順序
-如果傳回兩個或以上的狀態記錄，驅動程式管理員和驅動程式會根據下列規則將它們排序。 具有最高等級的記錄是第一筆記錄。 記錄的來源（驅動程式管理員、驅動程式、閘道等）不會在排名記錄時考慮。  
+如果返回兩個或多個狀態記錄,驅動程式管理器和驅動程式會根據以下規則對它們進行排名。 排名最高的記錄是第一條記錄。 在排名記錄時,不考慮記錄的來源(驅動程式管理器、驅動程式、閘道等)。  
   
--   **錯誤**描述錯誤的狀態記錄具有最高等級。 在錯誤記錄中，表示交易失敗或可能發生交易失敗的記錄會 outrank 所有其他記錄。 如果有兩個以上的記錄描述相同的錯誤狀況，則 SQLSTATEs 由 Open Group CLI 規格（類別03到 HZ）定義，outrank ODBC 定義和驅動程式定義的 SQLSTATEs。  
+-   **錯誤**描述錯誤的狀態記錄的排名最高。 在錯誤記錄中,指示事務失敗或可能事務失敗的記錄超過所有其他記錄。 如果兩個或多個記錄描述相同的錯誤條件,則由開放組 CLI 規範定義的 SQLSTAT(類 03 到 HZ)比 ODBC 定義和驅動程式定義的 SQLSTATEs 高。  
   
--   **執行-未定義任何資料值**描述驅動程式定義的無資料值（類別02）的狀態記錄具有第二個最高等級。  
+-   **設定定義的無資料值**描述驅動程式定義的無資料值(類 02)的狀態記錄具有第二高的排名。  
   
--   **警告**描述警告的狀態記錄（類別01）具有最低的排名。 如果有兩個或多筆記錄描述相同的警告條件，則「開啟群組 CLI」規格所定義的警告 SQLSTATEs 會 outrank ODBC 定義和驅動程式定義的 SQLSTATEs。  
+-   **警告**描述警告的狀態記錄(類 01)的排名最低。 如果兩個或多個記錄描述相同的警告條件,則 Open Group CLI 規範定義的警告 SQLSTAT 比 ODBC 定義和驅動程式定義的 SQLSTATA 高。  
   
- 如果有兩個以上的記錄具有最高等級，則會未定義哪一筆記錄是第一筆記錄。 所有其他記錄的順序都未定義。 特別是，因為警告可能會在錯誤發生之前出現，所以應用程式應該在函式傳回 SQL_SUCCESS 以外的值時，檢查所有狀態記錄。
+ 如果有兩個或多個排名最高的記錄,則未定義哪個記錄是第一條記錄。 所有其他記錄的順序未定義。 特別是,由於警告可能出現在錯誤之前,因此當函數返回SQL_SUCCESS以外的值時,應用程式應檢查所有狀態記錄。

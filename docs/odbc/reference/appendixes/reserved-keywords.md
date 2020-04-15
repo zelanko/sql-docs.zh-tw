@@ -1,5 +1,5 @@
 ---
-title: 保留關鍵字 |Microsoft Docs
+title: 保留關鍵字 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057216"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307989"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
-以下是 ODBC 函數呼叫所用的保留字。 這些單字不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式相容，應用程式應該避免使用任何這些關鍵字。 #**Define**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
+以下是 ODBC 函數呼叫所用的保留字。 這些單詞不限制最低 SQL 語法;因此,這些單詞不會限制這些單詞。但是,為了確保與支援核心 SQL 語法的驅動程式相容,應用程式應避免使用這些關鍵字中的任何一個。 #**定義**值SQL_ODBC_KEYWORDS包含這些關鍵字的逗號分隔清單。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|動作|ISOLATION|  
+|ACTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -66,9 +66,9 @@ ms.locfileid: "68057216"
 |CONNECT|OUTPUT|  
 |CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|條件約束|PARTIAL|  
+|CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|移動|  
+|CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -94,7 +94,7 @@ ms.locfileid: "68057216"
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|大小|  
+|DISTINCT|SIZE |  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
@@ -127,7 +127,7 @@ ms.locfileid: "68057216"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|身分識別|USER|  
+|IDENTITY|USER|  
 |IMMEDIATE|USING|  
 |IN|值|  
 |INCLUDE|VALUES|  

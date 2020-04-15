@@ -8,14 +8,14 @@ ms.devlang: cpp
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/14/2017
-ms.author: genemi
-author: MightyPen
-ms.openlocfilehash: ec2b68b918cbc79a245fe639108e94165be729c8
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: 63575c952feb8fc21d56f48540a7cd4e54d5e11f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219097"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305119"
 ---
 # <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>使用 SQL\_NUMERIC\_STRUCT 檢索數字資料
 

@@ -1,5 +1,5 @@
 ---
-title: ODBC 中的逸出序列 |Microsoft Docs
+title: ODBC 中的逸出序列 :微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68051117"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300418"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的逸出序列
-Dbms 通常會執行一些語言功能，例如外部聯結和純量函式呼叫。 不過，這些功能的語法傾向于 DBMS 專屬，即使標準語法是由各種標準本文所定義。 因此，ODBC 會定義包含下列語言功能之標準語法的 escape 序列：  
+許多語言功能(如外部聯接和標量函數調用)通常由 DBMS 實現。 但是,這些功能的語法往往特定於 DBMS,即使標準語法由各種標準機構定義也是如此。 因此,ODBC 定義了包含以下語言功能的標準語法的轉義序列:  
   
--   日期、時間、時間戳記和日期時間間隔常值  
+-   日期、時間、時間戳和日期時間間隔文字  
   
--   純量函數，例如數值、字串和資料類型轉換函數  
+-   標量函數,如數位、字串和資料類型轉換函數  
   
--   LIKE 述詞 escape 字元  
+-   喜歡謂詞轉義字元  
   
 -   外部聯結  
   
 -   程序呼叫  
   
- ODBC 所使用的轉義順序如下所示：  
+ ODBC 使用的逸出序列的標題:  
   
 ```  
   
@@ -43,18 +43,18 @@ Dbms 通常會執行一些語言功能，例如外部聯結和純量函式呼叫
 ```  
   
 ## <a name="remarks"></a>備註  
- 逸出序列是由驅動程式辨識和剖析，這會以 DBMS 特定的文法取代逸出序列。 如需有關轉義順序語法的詳細資訊，請參閱附錄 C： SQL 文法中的[ODBC Escape 序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)。  
+ 轉義序列由驅動程式識別和解析,這些驅動程式將轉義序列替換為特定於 DBMS 的語法。 有關轉義序列語法的詳細資訊,請參閱附錄 C 中的[ODBC 轉義序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md):SQL 語法。  
   
 > [!NOTE]  
->  在 ODBC 2 中。*x*，這是逸出序列的標準語法： **--\*（廠商（**_廠商名稱_**），產品（**_產品名稱_**）**_延伸_ ** \*模組）--**  
+>  在 ODBC 2 中。*x*,這是轉義序列的標準語法: **-- (\*供應商(供應商**_名稱_**),產品(**_產品名稱_**)**_擴展_**\*) --**  
 >   
->  除了此語法之外，也定義了格式為 **{**_extension_**}** 的速記語法。  
+>  除了此語法之外,還定義了表單的速記語法: {**擴展**_extension_**}**  
 >   
->  在 ODBC 3 中。*x*，逸出序列的長格式已被取代，而且會以獨佔方式使用速記格式。  
+>  在 ODBC 3 中。*x*,轉義序列的長形式已被棄用,速記形式被專門使用。  
   
- 由於逸出序列是由驅動程式對應到 DBMS 特定的語法，因此應用程式可以使用 escape 序列或 DBMS 特定的語法。 不過，使用 DBMS 特定語法的應用程式將無法互通。 使用 escape 序列時，應用程式應該確定已關閉 SQL_ATTR_NOSCAN 語句屬性，這是預設值。 否則，會將 escape 序列直接傳送至資料來源，通常會導致語法錯誤。  
+ 由於轉義序列由驅動程式映射到特定於 DBMS 的語法,因此應用程式可以使用轉義序列或特定於 DBMS 的語法。 但是,使用特定於 DBMS 的語法的應用程式將不可互通。 使用轉義序列時,應用程式應確保SQL_ATTR_NOSCAN語句屬性已關閉,預設情況下,該屬性是關閉的。 否則,轉義序列將直接發送到數據源,它通常會導致語法錯誤。  
   
- 驅動程式只支援可對應至基礎語言功能的逸出序列。 例如，如果資料來源不支援外部聯結，驅動程式也不會。 為了判斷支援哪些 escape 序列，應用程式會呼叫**SQLGetTypeInfo**和**SQLGetInfo**。 如需詳細資訊，請參閱下一節、[日期、時間和時間戳記常](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)值。  
+ 驅動程式僅支援可以映射到基礎語言要素的轉義序列。 例如,如果數據源不支援外部聯接,則驅動程式也不會。 要確定哪些轉義序列受支援,應用程式呼叫**SQLGetTypeInfo**和**SQLGetInfo**。 有關詳細資訊,請參閱下一節"[日期、時間和時間戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)"。  
   
  此章節包含下列主題。  
   

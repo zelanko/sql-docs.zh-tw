@@ -1,5 +1,5 @@
 ---
-title: SQLEndTran （資料指標程式庫） |Microsoft Docs
+title: SQLEndTran(游標庫) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f713f9a0c96aaf3798cf160e648404470e3a4363
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c2277a67cd5410ea3c2a5d5b03b16d4533ed6ee1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064503"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304768"
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (資料指標程式庫)
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
   
- 本主題討論如何在資料指標程式庫中使用**SQLEndTran**函數。 如需有關**SQLEndTran**的一般資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。  
+ 本主題討論在遊標庫中使用**SQLEndTran**函數。 有關**SQLEndTran**的一般資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。  
   
- 資料指標程式庫不支援交易，而且會直接將呼叫傳遞給驅動程式**SQLEndTran** 。 不過，資料指標程式庫會以 SQL_CURSOR_ROLLBACK_BEHAVIOR 和 SQL_CURSOR_COMMIT_BEHAVIOR 資訊類型，支援資料來源傳回的資料指標認可和回復行為：  
+ 游標庫不支援事務,並將對**SQLEndTran**的調用直接傳遞給驅動程式。 但是,游標庫確實支援數據源返回的帶有SQL_CURSOR_ROLLBACK_BEHAVIOR和SQL_CURSOR_COMMIT_BEHAVIOR資訊類型的游標提交和回滾行為:  
   
--   對於在交易中保留資料指標的資料來源，資料來源中復原的變更不會在資料指標程式庫的快取中復原。 若要讓快取符合資料來源中的資料，應用程式必須關閉並重新開啟游標。  
+-   對於跨事務保留游標的數據源,在數據源中回滾的更改不會在游標庫的緩存中回滾。 要使緩存與資料源中的數據匹配,應用程式必須關閉並重新打開遊標。  
   
--   對於在交易界限處關閉資料指標的資料來源，資料指標程式庫會關閉資料指標，並刪除連接上所有語句的快取。  
+-   對於在事務邊界關閉游標的數據源,游標庫將關閉游標並刪除連接上所有語句的緩存。  
   
--   對於在交易界限刪除備妥之語句的資料來源，應用程式必須先 reprepare 連接上所有已備妥的語句，再進行暫停。
+-   對於在事務邊界刪除已準備好的語句的數據源,應用程式必須在重新執行連接之前重新準備連接上的所有準備好的語句。

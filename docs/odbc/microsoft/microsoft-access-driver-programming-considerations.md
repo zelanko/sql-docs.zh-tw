@@ -1,5 +1,5 @@
 ---
-title: Microsoft Access 驅動程式設計考慮 |Microsoft Docs
+title: 微軟存取驅動程式編程注意事項 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Access driver [ODBC]
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045119"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308049"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access 驅動程式的程式設計考量
 此章節包含下列主題。  
@@ -31,4 +31,4 @@ ms.locfileid: "68045119"
   
 -   [Access 的 SQLGetInfo 傳回值](../../odbc/microsoft/sqlgetinfo-returned-values-for-access.md)  
   
--   [其他 Access 驅動程式的程式設計詳細資料](../../odbc/microsoft/other-access-driver-programming-details.md)
+-   [其他 Access 驅動程式設計詳細資料](../../odbc/microsoft/other-access-driver-programming-details.md)

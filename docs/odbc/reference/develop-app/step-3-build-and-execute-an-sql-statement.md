@@ -1,5 +1,5 @@
 ---
-title: 步驟3：建立和執行 SQL 語句 |Microsoft Docs
+title: 第 3 步:生成並執行 SQL 語句 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f0e369b74ef629c5fd7136b9098f579b5ad2b1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e8322cf5e7b4a91bfc5f5f0204cfb25fa4bdad92
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114256"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306829"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>步驟 3：建立和執行 SQL 陳述式
-第三個步驟是建立並執行 SQL 語句，如下圖所示。 用來執行此步驟的方法可能會有極大的差異。 應用程式可能會提示使用者輸入 SQL 語句、根據使用者輸入建立 SQL 語句，或使用硬式編碼的 SQL 語句。 如需詳細資訊，請參閱[建立 SQL 語句](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  
+第三步是生成並執行 SQL 語句,如下圖所示。 用於執行此步驟的方法可能會有很大差異。 應用程式可能會提示使用者輸入 SQL 語句、基於使用者輸入生成 SQL 語句或使用硬編碼 SQL 語句。 有關詳細資訊,請參閱建構[SQL 語句](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  
   
  ![顯示 SQL 陳述式的建置和執行](../../../odbc/reference/develop-app/media/pr13.gif "pr13")  
   
- 如果 SQL 語句包含參數，應用程式會藉由呼叫每個參數的**SQLBindParameter** ，將它們系結至應用程式變數。 如需詳細資訊，請參閱[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
+ 如果 SQL 語句包含參數,則應用程式通過為每個參數調用**SQLBind 參數**將它們綁定到應用程式變數。 有關詳細資訊,請參閱[敘述參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
- 在建立 SQL 語句並系結任何參數之後，就會使用**SQLExecDirect**來執行語句。 如果語句會多次執行，它可以使用**SQLPrepare**來準備，並使用**SQLExecute**來執行。 如需詳細資訊，請參閱[執行語句](../../../odbc/reference/develop-app/executing-a-statement.md)。  
+ 生成 SQL 語句並綁定任何參數後,該語句將使用**SQLExecDirect**執行。 如果文句將執行多次,則可以使用**SQLPrepare 準備**,並使用**SQLExecute 執行**。 有關詳細資訊,請參閱[執行語句](../../../odbc/reference/develop-app/executing-a-statement.md)。  
   
- 應用程式可能也會放棄執行 SQL 語句，而改為呼叫函數來傳回包含目錄資訊的結果集，例如可用的資料行或資料表。 如需詳細資訊，請參閱[目錄資料的使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)。  
+ 應用程式還可能完全放棄執行 SQL 語句,而是調用函數來返回包含目錄資訊的結果集,如可用的列或表。 關於詳細資訊,請參考[目錄資料的使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)。  
   
- 應用程式的下一個動作取決於所執行的 SQL 語句類型。  
+ 應用程式的下一個操作取決於所執行的 SQL 語句的類型。  
   
-|SQL 語句的類型|繼續進行|  
+|SQL 語句的類型|繼續|  
 |---------------------------|----------------|  
-|**選取**或類別目錄函式|[步驟 4a：擷取結果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**選擇**或目錄功能|[步驟 4a：擷取結果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**更新**、**刪除**或**插入**|[步驟 4b：擷取資料列計數](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|所有其他 SQL 語句|步驟3：建立和執行 SQL 語句（本主題）或[步驟5：認可交易](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|所有其他 SQL 語句|步驟 3:生成和執行 SQL 語句(本主題)或[步驟 5:提交事務](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

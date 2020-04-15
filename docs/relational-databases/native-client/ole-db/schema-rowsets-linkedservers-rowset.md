@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 資料列集（OLE DB） |Microsoft Docs
+title: LINKEDSERVERS 資料列集 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,24 +11,22 @@ helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a109f663ade5c1b52f9e6d6ca9cd83efac4b3ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 130cfb23f1d0a1eefa90868cf4c59f4c6d3f1e8e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759358"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304949"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>結構描述資料列集 - LINKEDSERVERS 資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   **LINKEDSERVERS** 資料列集會列舉可以參與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢的組織資料來源。  
   
- 
-  **LINKEDSERVERS** 資料列集包含下列資料行。  
+ **LINKEDSERVERS** 資料列集包含下列資料行。  
   
 |資料行名稱|類型指標|描述|  
 |-----------------|--------------------|-----------------|  
@@ -42,6 +40,6 @@ ms.locfileid: "73759358"
  資料列集會根據 SRV_NAME 排序，而且 SRV_NAME 上可支援單一限制。  
   
 ## <a name="see-also"></a>另請參閱  
- [架構資料列集支援 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+ [結構描述資料列集支援 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
   

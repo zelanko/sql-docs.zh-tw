@@ -1,5 +1,5 @@
 ---
-title: 區塊資料指標、可滾動游標和回溯相容性 |Microsoft Docs
+title: 塊游標、可滾動游標和向后相容性 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 433647481b2b73c22e00657c430d98177d3d4524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe24362f1a49577a7fb494f768947080d0ab6e9e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292308"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>區塊資料指標、可捲動的資料指標和回溯相容性
-**SQLFetchScroll**和**SQLExtendedFetch**兩者都代表應用程式開發介面（API）之間的第一次明確分割，也就是應用程式所呼叫的函式集，以及服務提供者介面（SPI），這是驅動程式所執行的一組函數。 這是必要的分割，如此一來，使用**SQLFetchScroll**、bealigned 與標準，而且也與使用**SQLExtendedFetch***的 odbc 2.x*相容*的 odbc 3.x。*  
+**SQLFetchScroll**和**SQLExtendedFetch**的存在代表了在 ODBC 中,應用程式程式設計介面 (API) 和服務提供者介面 (SPI) 之間的第一個明確拆分,這是驅動程式實現的函數集。 這種分割是必要的,以便使用**SQLFetchScroll**的 ODBC *3.x*與標準保持一致,並且與使用**SQLAt2.x**的 ODBC *2.x*相容 。  
   
- *ODBC 3.X* API，這是應用程式所呼叫的一組函式，包括**SQLFetchScroll**和相關的語句屬性。 *ODBC 3.X* SPI，這是驅動程式所實作用的一組函式，包括**SQLFetchScroll**、 **SQLExtendedFetch**和相關的語句屬性。 因為 ODBC 不會在 API 與 SPI 之間正式地強制執行這種分割，所以 ODBC 3.x*應用程式*可能會呼叫**SQLExtendedFetch**和相關的語句屬性。 不過 *，ODBC 3.x*應用程式沒有理由這麼做。 如需 Api 和 SPIs 的詳細資訊，請參閱[ODBC 架構](../../../odbc/reference/odbc-architecture.md)簡介。  
+ ODBC *3.x* API 是應用程式呼叫的功能集,包括**SQLFetchScroll**和相關語句屬性。 ODBC *3.x* SPI 是驅動程式實現的函數集,包括**SQLFetchScroll、SQL****擴展獲取**和相關語句屬性。 由於 ODBC 未正式強制 API 和 SPI 之間的此拆分,因此 ODBC *3.x*應用程式可以呼叫**SQLExtendedFetch**和相關語句屬性。 但是,ODBC *3.x*應用程式沒有理由這樣做。 有關 API 和 API 的詳細資訊,請參閱[ODBC 體系結構](../../../odbc/reference/odbc-architecture.md)的簡介。  
   
- 如需 ODBC *3.x 應用程式*應該搭配區塊和可滾動資料指標使用之函數和語句屬性的相關資訊，請參閱[Odbc 3.x 應用程式的區塊資料指標、可滾動游標和回溯相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)。  
+ 有關 ODBC *3.x*應用程式應使用哪些函數和敘述屬性的資訊,請參閱[區塊游標、可滾動游標和 ODBC 3.x 應用程式的向後相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)。  
   
  此章節包含下列主題。  
   
--   [驅動程式管理員的用途](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
+-   [驅動程式管理員的作用](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
   
 -   [驅動程式的用途](../../../odbc/reference/appendixes/what-the-driver-does.md)

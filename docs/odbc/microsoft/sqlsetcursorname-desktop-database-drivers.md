@@ -1,5 +1,5 @@
 ---
-title: SQLSetCursorName （桌面資料庫驅動程式） |Microsoft Docs
+title: SQLSetCursor 名稱(桌面資料庫驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetCursorName function [ODBC], Desktop Database Drivers
 ms.assetid: 9bd7c87b-d99d-4e23-b2db-868d3b461c94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 53ef01423ad14cb5606e14ca004ca614e68101e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d618a7f845a87394c2fc3c7978a7aef5716e21f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301479"
 ---
 # <a name="sqlsetcursorname-desktop-database-drivers"></a>SQLSetCursorName (桌面資料庫驅動程式)
-因為驅動程式不支援定點更新或刪除，其中目前的*cursorname*語法，所以支援**SQLSetCursorName** ，但不能用於定點更新。 只有在已啟用資料指標程式庫，且應用程式使用**SQLExtendedFetch**時，才可以使用它。
+由於驅動程式不支援由 WHERE CURRENT OF*游標名*語法進行定位更新或刪除,因此支援**SQLSetCursorName,** 但不能用於定位更新。 它只能在啟用遊標庫且應用程式使用**SQLExtendedFetch**時使用。

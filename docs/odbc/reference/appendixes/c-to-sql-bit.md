@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL：位 |Microsoft Docs
+title: C 到 SQL:位 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - bit data type [ODBC]
 - data conversions from C to SQL types [ODBC], bit
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cc5e26b30816d0989dca90566a1a5de008b71c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a96982573d83cf01947f82dc2014ee2c470931e3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019417"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292041"
 ---
 # <a name="c-to-sql-bit"></a>C 到 SQL：位元
-Bit ODBC C 資料類型的識別碼為：  
+位元 ODBC C 資料類型的識別碼是:  
   
  SQL_C_BIT  
   
- 下表顯示可能轉換位 C 資料的 ODBC SQL 資料類型。 如需資料表中的資料行和詞彙的說明，請參閱將[資料從 C 轉換成 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表顯示了可轉換為位 C 數據的 ODBC SQL 資料類型。 有關表中列與字語的說明,請參考[資料從 C 轉換為 SQL 資料型態](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 類型識別碼|測試|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|n/a|  
-|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|None|n/a|  
+|SQL_CHARSQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHARSQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|n/a|  
+|SQL_DECIMALSQL_NUMERIC<br /><br /> SQL_TINYINTSQL_SMALLINT<br /><br /> SQL_INTEGERSQL_BIGINT<br /><br /> SQL_REALSQL_FLOAT<br /><br /> SQL_DOUBLE|None|n/a|  
 |SQL_BIT|None|n/a|  
   
- 從 bit C 資料類型轉換資料時，驅動程式會忽略長度/指標值，並假設資料緩衝區的大小是位 C 資料類型的大小。 長度/指標值會傳入**SQLPutData**中的*StrLen_or_Ind*引數，以及在**SQLBindParameter**中使用*StrLen_or_IndPtr*引數指定的緩衝區。 資料緩衝區會使用**SQLPutData**中的*DataPtr*引數和**SQLBindParameter**中的*ParameterValuePtr*引數來指定。
+ 驅動程式在從位 C 資料類型轉換數據時忽略長度/ 指示器值,並假定數據緩衝區的大小是位 C 資料類型的大小。 長度/指標值在**SQLPutData**中的*StrLen_or_Ind*參數中傳遞,在**SQLBind 參數**中用*StrLen_or_IndPtr*參數指定的緩衝區中傳遞。 數據緩衝區使用**SQLPutData**中的*DataPtr*參數和**SQLBind 參數**中的*參數 ValuePtr*參數指定。

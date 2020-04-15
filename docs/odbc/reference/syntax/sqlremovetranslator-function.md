@@ -1,5 +1,5 @@
 ---
-title: SQLRemoveTranslator 函式 |Microsoft Docs
+title: SQL刪除轉換器功能 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveTranslator function [ODBC]
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a577a868f7b56a6677da3cb12cfb29057ea66f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 348d2c5da0731ba88ccd4dd6406d3754890f7906
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024517"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301785"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 函式
-**標準**  
- 引進的版本： ODBC 3。0  
+**一致性**  
+ 版本介紹: ODBC 3.0  
   
  **摘要**  
- **SQLRemoveTranslator**會從系統資訊的 Odbcinst 區段移除翻譯工具的相關資訊，並將翻譯工具的元件使用量計數遞減1。  
+ **SQLRemove 翻譯器**從系統資訊的 Odbcinst.ini 部分中刪除有關轉換器的資訊,並將轉換器的元件使用量計數減少 1。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,30 +43,30 @@ BOOL SQLRemoveTranslator(
 ```  
   
 ## <a name="arguments"></a>引數  
- *lpszTranslator*  
- 源在系統資訊的 Odbcinst 機碼中註冊的翻譯工具名稱。  
+ *lpsz 翻譯*  
+ [輸入]在系統資訊的 Odbcinst.ini 密鑰中註冊的翻譯人員的姓名。  
   
- *lpdwUsageCount*  
- 輸出在呼叫此函式之後，翻譯工具的使用計數。  
+ *lpdwUsage( M) Counts*  
+ 【輸出]呼叫此函數後轉換器的使用計數。  
   
 ## <a name="returns"></a>傳回值  
- 如果成功，函式會傳回 TRUE，如果失敗，則傳回 FALSE。 如果在呼叫此函式時，系統資訊中沒有任何專案存在，此函數會傳回 FALSE。  
+ 如果成功,則函數返回 TRUE,如果失敗,則返回 FALSE。 如果在調用此函數時系統資訊中不存在條目,則函數將返回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLRemoveTranslator**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
+ 當**SQLRemove 轉換器**傳回 FALSE 時,可以透過呼叫**SQL 安裝程式獲取**關聯的*\*pfError 程式*。 下表列出了**SQL 安裝程式錯誤**可以返回的*\*pfErrorCode*值,並在此函數的上下文中解釋了每個值。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfError 碼*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到元件|安裝程式無法移除翻譯工具資訊，因為它不存在於登錄中，或在登錄中找不到。|  
-|ODBC_ERROR_INVALID_NAME|驅動程式或 translator 名稱無效|*LpszTranslator*引數無效。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|無法遞增或遞減元件使用量計數|安裝程式無法遞減驅動程式的使用計數。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生沒有特定安裝程式錯誤的錯誤。|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|註冊表中找不到元件|安裝程式無法刪除轉換器資訊,因為它要麼不存在在註冊表中,要麼在註冊表中找不到。|  
+|ODBC_ERROR_INVALID_NAME|不合法的驅動程式或翻譯者名稱|*lpsz 轉換器*參數無效。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|無法增加或遞減元件使用量計數|安裝程式未能減少驅動程式的使用計數。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足,安裝程式無法執行該功能。|  
   
 ## <a name="comments"></a>註解  
- **SQLRemoveTranslator**會補充[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)函數，並更新系統資訊中的元件使用計數。 此函式只能從安裝應用程式呼叫。  
+ **SQLRemove 轉換器**補充[SQLInstall 翻譯器Ex](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)功能,並更新系統資訊中的元件使用方式計數。 應僅從設置應用程式調用此功能。  
   
- **SQLRemoveTranslator**會將元件使用計數遞減1。 如果元件使用計數設為0，系統資訊中的 translator 專案就會被移除。 Translator 專案位於系統資訊的下列位置中，位於 translator 名稱底下：  
+ **SQLRemove 轉換器**將元件使用計數減少 1。 如果元件使用計數為 0,則系統資訊中的轉換器條目將被刪除。 轉換器項目位於系統資訊中的以下位置,以轉換器名稱命名:  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -76,12 +76,12 @@ BOOL SQLRemoveTranslator(
   
  `Odbcinst.ini`  
   
- **SQLRemoveTranslator**實際上不會移除任何檔案。 呼叫程式會負責刪除檔案，並維護檔案使用計數。 只有在元件使用計數和檔案使用量計數都達到零之後，才會實際刪除檔案。 元件中的某些檔案可以刪除，而其他檔案則不會刪除，這取決於是否有其他應用程式使用檔案使用計數而增加。  
+ **SQLRemove 轉換器**實際上不會刪除任何檔。 呼叫程式負責刪除檔案和維護檔案使用方式計數。 只有在元件使用計數和檔使用計數都達到零后,才會物理刪除檔。 元件中的某些檔可以刪除,而其他檔不會刪除,具體取決於其他應用程式是否使用檔案,這些應用程式增加了檔使用量計數。  
   
- **SQLRemoveTranslator**也會在升級過程中呼叫。 如果應用程式偵測到它必須執行升級，而且先前已安裝驅動程式，則應該移除該驅動程式，然後重新安裝。 應該先呼叫**SQLRemoveTranslator**以遞減元件使用計數，然後再呼叫**SQLInstallTranslatorEx**以遞增元件使用計數。 應用程式安裝程式必須實際以新的檔案取代舊的檔案。 檔案使用計數會維持不變，而使用舊版檔案的其他應用程式現在會使用較新的版本。  
+ **SQLRemove 轉換器**也稱為升級過程的一部分。 如果應用程式檢測到必須執行升級,並且以前已安裝驅動程式,則應刪除驅動程式,然後重新安裝驅動程式。 應首先調用**SQLRemove 轉換器**來遞減元件使用計數,然後調用**SQLInstall 翻譯器 Ex**以增加元件使用計數。 應用程式安裝程式必須用新檔案物理替換舊檔。 檔使用方式計數將保持不變,使用舊版本檔的其他應用程式現在將使用較新版本。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|安裝翻譯工具|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|
+|安裝翻譯器|[SQL安裝翻譯器Ex](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|

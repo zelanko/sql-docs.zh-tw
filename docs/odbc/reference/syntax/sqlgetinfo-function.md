@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo 函式 |Microsoft Docs
+title: SQLGetInfo 功能 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetInfo function [ODBC]
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e62e7aaba276643a2874a22e74a08214cfe51e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 514922fd085cfd2ba19eb5c07dd844db82d55202
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030665"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303340"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 函數
-**標準**  
- 引進的版本： ODBC 1.0 標準合規性： ISO 92  
+**一致性**  
+ 推出版本: ODBC 1.0 標準合規性: ISO 92  
   
  **摘要**  
- **SQLGetInfo**會傳回與連接相關聯的驅動程式和資料來源的一般資訊。  
+ **SQLGetInfo**傳回有關與連接關聯的驅動程式和資料來源的一般資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,83 +46,83 @@ SQLRETURN SQLGetInfo(
 ```  
   
 ## <a name="arguments"></a>引數  
- *ConnectionHandle*  
+ *連接句柄*  
  [輸入] 連線控制代碼。  
   
- *InfoType*  
- 源資訊的類型。  
+ *資訊類型*  
+ [輸入]資訊類型。  
   
- *InfoValuePtr*  
- 輸出要傳回信息的緩衝區指標。 根據所要求的*InfoType*而定，傳回的資訊將會是下列其中一項：以 null 結束的字元字串、SQLUSMALLINT 值、SQLUINTEGER 位元遮罩、SQLUINTEGER 旗標、SQLUINTEGER 二進位值或 SQLULEN 值。  
+ *資訊價值Ptr*  
+ 【輸出]指向要返回資訊的緩衝區的指標。 根據請求*的資訊類型*,傳回的資訊將如下:空端字元字串、SQLUSMALLINT 值、SQLUINTEGER 位罩、SQLUINTEGER 標誌、SQLUINTEGER 二進位值或 SQLULEN 值。  
   
- 如果*InfoType*引數 SQL_DRIVER_HDESC 或 SQL_DRIVER_HSTMT，則*InfoValuePtr*引數為輸入和輸出。 （如需詳細資訊，請參閱此函式描述中稍後的 SQL_DRIVER_HDESC 或 SQL_DRIVER_HSTMT 描述元）。  
+ 如果*InfoType*參數是SQL_DRIVER_HDESC或SQL_DRIVER_HSTMT,*則 InfoValuePtr*參數既是輸入參數,也是輸出參數。 (有關詳細資訊,請參閱此函數說明中的SQL_DRIVER_HDESC或SQL_DRIVER_HSTMT描述符。  
   
- 如果*InfoValuePtr*為 Null， *StringLengthPtr*仍會傳回*InfoValuePtr*所指向的緩衝區中可傳回的位元組總數（不包括字元資料的 Null 終止字元）。  
+ 如果*InfoValuePtr*為 NULL,*則 StringLengthPtr*仍將返回可用在*InfoValuePtr*指向的緩衝區中返回的位元總數(不包括字元資料的空終止字元)。  
   
- *BufferLength*  
- 源\* *InfoValuePtr*緩衝區的長度。 如果* \*InfoValuePtr*中的值不是字元字串，或如果*InfoValuePtr*是 null 指標，則會忽略*BufferLength*引數。 驅動程式會假設* \*InfoValuePtr*的大小為 SQLUSMALLINT 或 SQLUINTEGER （根據*InfoType*）。 如果* \*InfoValuePtr*是 Unicode 字串（在呼叫**SQLGetInfoW**時），則*BufferLength*引數必須是偶數;如果不是，則會傳回 SQLSTATE HY090 （不正確字串或緩衝區長度）。  
+ *緩衝區長度*  
+ [輸入]\**資訊值Ptr*緩衝區的長度。 如果*\*InfoValuePtr*中的值不是字串,或者如果*InfoValuePtr*是空指標,則忽略*緩衝區長度*參數。 驅動程式假定*\*InfoValuePtr*的大小是 SQLUSMALLINT 或 SQLUINTEGER,具體取決於*資訊類型*。 如果*\*InfoValuePtr*是 Unicode 字串(在呼叫**SQLGetInfoW**時),*則緩衝區長度*參數必須是偶數;否則,將返回 SQLSTATE HY090(無效字串或緩衝區長度)。  
   
- *StringLengthPtr*  
- 輸出緩衝區的指標，要在其中傳回 **InfoValuePtr*中可傳回的位元組總數（不包括字元資料的 null 終止字元）。  
+ *字串長度 Ptr*  
+ 【輸出]指向一個緩衝區的指標,用於返回可在 #*InfoValuePtr*中傳回的位元組總數(不包括字元資料的空終止字元)。  
   
- 若是字元資料，如果傳回的位元組數目大於或等於*BufferLength*，則\* *InfoValuePtr*中的資訊會截斷為*BufferLength*位元組減去 null 終止字元的長度，並由驅動程式以 null 終止。  
+ 對於字元資料,如果可供返回的位元組數大於或等於*BufferLength,*\**則 InfoValuePtr*中的資訊將被截斷為*BufferLength*位元組減去空終止字元的長度,並且由驅動程式終止。  
   
- 對於所有其他類型的資料，會忽略*BufferLength*的值，而驅動程式會假設\* *InfoValuePtr*的大小為 SQLUSMALLINT 或 SQLUINTEGER，視*InfoType*而定。  
+ 對所有其他類型的資料,*會忽略緩衝區長度*的值,並且驅動程式\*假定*InfoValuePtr*的大小為 SQLUSMALLINT 或 SQLUINTEGER,具體取決於*InfoType*。  
   
 ## <a name="return-value"></a>傳回值  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR或SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLGetInfo**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_DBC *HandleType*和*ConnectionHandle**控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出通常由**SQLGetInfo**所傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
+ 當**SQLGetInfo**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有SQL_HANDLE_DBC的*句柄類型*和*連接句柄*的*句柄*。 下表列出了**SQLGetInfo**通常傳回的 SQLSTATE 值,並在此函數的上下文中解釋了每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01004|字串資料，右邊已截斷|緩衝區\* *InfoValuePtr*不夠大，無法傳回所有要求的資訊。 因此，此資訊已遭截斷。 在 **StringLengthPtr*中，會傳回其 untruncated 表單中所要求的資訊長度。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|08003|連接未開啟|（DM） *InfoType*中要求的資訊類型需要開啟連接。 在 ODBC 所保留的資訊類型中，只有在沒有開啟連接的情況下，才會傳回 SQL_ODBC_VER。|  
-|08S01|通訊連結失敗|在函式完成處理之前，驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
-|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
-|HY010|函數順序錯誤|（DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並 SQL_PARAM_DATA_AVAILABLE 傳回。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。|  
-|HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
-|HY024|不正確屬性值|（DM）已 SQL_DRIVER_HSTMT *InfoType*引數，且*InfoValuePtr*所指向的值不是有效的語句控制碼。<br /><br /> （DM）已 SQL_DRIVER_HDESC *InfoType*引數，且*InfoValuePtr*所指向的值不是有效的描述項控制碼。|  
-|HY090|不正確字串或緩衝區長度|（DM）為引數*BufferLength*指定的值小於0。<br /><br /> （DM）為*BufferLength*指定的值是奇數，而* \*InfoValuePtr*是 Unicode 資料類型。|  
-|HY096|資訊類型超出範圍|為引數*InfoType*指定的值對驅動程式所支援的 ODBC 版本無效。|  
-|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|（DM）如需暫停狀態的詳細資訊，請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
-|HYC00|未執行選擇性欄位|針對引數*InfoType*所指定的值，是驅動程式不支援的驅動程式特定值。|  
-|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此功能|（DM）對應至*ConnectionHandle*的驅動程式不支援函數。|  
+|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|01004|字串資料,右截斷|緩衝區\* *InfoValuePtr*不夠大,無法返回所有請求的資訊。 因此,資訊被截斷。 在其未壓縮形式中請求的資訊的長度在 #*StringLengthPtr*中返回。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|08003|連線未開啟|(DM)*資訊類型*中請求的資訊類型需要打開的連接。 在 ODBC 保留的資訊類型中,只有SQL_ODBC_VER無需打開的連接即可返回。|  
+|08S01|通訊連結|在函數完成處理之前,驅動程式與驅動程式連接到的數據源之間的通信鏈路失敗。|  
+|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
+|HY010|函式序列錯誤|(DM) **SQLExecute、SQLExecDirect**或**SQLMore 結果**被調用語句**SQLExecDirect***句柄*並返回SQL_PARAM_DATA_AVAILABLE。 在檢索所有流參數的數據之前,已調用此函數。|  
+|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
+|HY024|不合法屬性值|(DM)*資訊類型*參數*SQL_DRIVER_HSTMT,InfoValuePtr*指向的值不是有效的語句句柄。<br /><br /> (DM) *infoType*參數*SQL_DRIVER_HDESC,InfoValuePtr*指向的值不是有效的描述符句柄。|  
+|HY090|不合法的字串或緩衝區長度|(DM) 為參數*BufferLength*指定的值小於 0。<br /><br /> (DM) 為*BufferLength*指定的值是奇數*\*,InfoValuePtr*為 Unicode 資料類型。|  
+|HY096|資訊類型範圍外|為參數*InfoType*指定的值對驅動程式支援的 ODBC 版本無效。|  
+|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYC00|沒有選擇性的欄位|為參數*InfoType*指定的值是驅動程式不支援的特定於驅動程式的值。|  
+|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
+|IM001|驅動程式不支援此功能|(DM) 對應於*連接句柄*的驅動程式不支援該功能。|  
   
 ## <a name="comments"></a>註解  
- 本章節稍後的「資訊類型」中會顯示目前定義的資訊類型;預期會有更多的定義，以利用不同的資料來源。 資訊類型的範圍是由 ODBC 所保留;驅動程式開發人員必須從開啟的群組中，保留自己的驅動程式特有的值。 **SQLGetInfo**不會針對驅動程式定義的*InfoTypes*執行任何 Unicode 轉換或*Thunking* （請參閱[附錄 A：](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) odbc 程式設計*人員參考*的 odbc 錯誤碼）。 如需詳細資訊，請參閱[驅動程式特有的資料類型、描述項類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。 \* *InfoValuePtr*中傳回的資訊格式取決於所要求的*InfoType* 。 **SQLGetInfo**會以五種不同格式的其中一種來傳回信息：  
+ 當前定義的信息類型顯示在「信息類型」中,本節後面的部分將顯示這些類型;預計將定義更多,以利用不同的數據源。 ODBC 保留一系列信息類型;驅動程式開發人員必須從 Open Group 為其特定於驅動程式使用保留值。 **SQLGetInfo**不執行用於驅動程式定義的*InfoType 的*Unicode 轉換或*分項*(參見[附錄 A:ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) *程式設計師參考的*ODBC 錯誤代碼)。 有關詳細資訊,請參閱[特定於驅動程式的資料類型、描述符類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。 \**在 InfoValuePtr*中傳回的資訊格式來取得*的資訊型態*。 **SQLGetInfo**將以五種不同格式之一傳回資訊:  
   
--   以 null 結束的字元字串  
+-   空終止字串  
   
 -   SQLUSMALLINT 值  
   
--   SQLUINTEGER 位元遮罩  
+-   SQLUINTEGER 位罩  
   
--   SQLUINTEGER 值  
+-   SQLUinTEGER 值  
   
--   SQLUINTEGER 二進位值  
+-   SQLUinTEGER 二進位值  
   
- 類型的描述中會注明下列每個資訊類型的格式。 應用程式必須據以轉換 **InfoValuePtr*中傳回的值。 如需應用程式如何從 SQLUINTEGER 的位元遮罩取得資料的範例，請參閱「程式碼範例」。  
+ 以下每種資訊類型的格式都記錄在類型的描述中。 應用程式必須相應地在 #*InfoValuePtr*中轉換傳回的值。 有關應用程式如何從 SQLUINTEGER 位掩碼檢索數據的範例,請參閱「代碼示例」。  
   
- 驅動程式必須針對下表中定義的每個資訊類型傳回值。 如果資訊類型不適用於驅動程式或資料來源，驅動程式會傳回下表所列的其中一個值。  
+ 驅動程式必須為下表中定義的每種資訊類型返回一個值。 如果資訊類型不適用於驅動程式或數據源,則驅動程式將返回下表中列出的值之一。  
   
- 字元字串（"Y" 或 "N"）  
+ 字串("Y"或"N")  
  "N"  
   
- 字元字串（不是 "Y" 或 "N"）  
+ 字串(不是"Y"或"N")  
  空字串  
   
  SQLUSMALLINT  
  0  
   
- SQLUINTEGER 位元遮罩或 SQLUINTEGER 二進位值  
+ SQLUinteGER 位罩或 SQLUINTEGER 二進位值  
  0L  
   
- 例如，如果資料來源不支援程式， **SQLGetInfo**會針對與程式相關的*InfoType*值，傳回下表所列的值。  
+ 例如,如果資料源不支援過程 **,SQLGetInfo**將返回下表中列出的與過程相關的*InfoType*值的值。  
   
  SQL_PROCEDURES  
  "N"  
@@ -136,15 +136,15 @@ SQLRETURN SQLGetInfo(
  SQL_PROCEDURE_TERM  
  空字串  
   
- **SQLGetInfo**會針對*InfoType*的值傳回 SQLSTATE HY096 （不正確引數值），這是保留供 ODBC 使用的資訊類型範圍內，但不是由驅動程式所支援的 ODBC 版本所定義。 為了判斷驅動程式符合哪個版本的 ODBC，應用程式會使用 SQL_DRIVER_ODBC_VER 資訊類型來呼叫**SQLGetInfo** 。 **SQLGetInfo**會針對*InfoType*的值傳回 SQLSTATE HYC00 （未實作為選擇性功能），這是保留給驅動程式特定使用但不受驅動程式支援的資訊類型範圍。  
+ **SQLGetInfo**傳回 SQLSTATE HY096(無效參數值),用於*InfoType*的值,這些值位於為 ODBC 保留以供使用的資訊類型範圍內,但不受驅動程式支援的 ODBC 版本定義。 要確定驅動程式符合的 ODBC 版本,應用程式使用SQL_DRIVER_ODBC_VER資訊類型呼叫**SQLGetInfo。** **SQLGetInfo**傳回 SQLSTATE HYC00(未實現可選功能)*的資訊類型*值,這些值在為特定於驅動程式使用而保留的資訊類型範圍內,但驅動程式不支援。  
   
- 所有對**SQLGetInfo**的呼叫都需要開啟的連接，但當*InfoType*是 SQL_ODBC_VER 時，會傳回驅動程式管理員的版本。  
+ 對**SQLGetInfo**的所有呼叫都需要開啟的連接,除非*資訊類型*SQL_ODBC_VER,這將返回驅動程式管理器的版本。  
   
 ## <a name="information-types"></a>資訊類型  
- 本節列出**SQLGetInfo**所支援的資訊類型。 資訊類型會分組 categorically，並依字母順序列出。 也會列出針對 ODBC 3.x 加入或重新命名*的資訊*類型。  
+ 本節列出了**SQLGetInfo**支援的資訊類型。 資訊類型按分類和按字母順序列出。 還列出了為 ODBC 3 *.x*添加或重命名的資訊類型。  
   
 ## <a name="driver-information"></a>驅動程式資訊  
- 下列*InfoType*引數的值會傳回 ODBC 驅動程式的相關資訊，例如使用中語句的數目、資料來源名稱和介面標準合規性層級：  
+ *InfoType*參數的以下值傳回有關 ODBC 驅動程式的資訊,例如活動敘述的數量、資料源名稱和介面標準符合性級別:  
   
 |||  
 |-|-|  
@@ -169,15 +169,15 @@ SQLRETURN SQLGetInfo(
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_STATIC_CURSOR_ATTRIBUTES2|  
   
 > [!NOTE]  
->  在執行**SQLGetInfo**時，驅動程式可以將資訊從伺服器傳送或要求的次數減至最少，藉此改善效能。  
+>  實現**SQLGetInfo**時,驅動程式可以通過最小化從伺服器發送或請求資訊的次數來提高性能。  
   
 ## <a name="dbms-product-information"></a>DBMS 產品資訊  
- 下列*InfoType*引數的值會傳回 dbms 產品的相關資訊，例如 dbms 名稱和版本：  
+ *InfoType*參數的以下值傳回有關 DBMS 產品的資訊,例如 DBMS 名稱和版本:  
   
  SQL_DATABASE_NAMESQL_DBMS_NAMESQL_DBMS_VER  
   
 ## <a name="data-source-information"></a>資料來源資訊  
- 下列*InfoType*引數的值會傳回資料來源的相關資訊，例如資料指標特性和交易功能：  
+ *InfoType*參數的以下值傳回有關資料來源的資訊,例如游標特徵和事務功能:  
   
 |||  
 |-|-|  
@@ -195,9 +195,9 @@ SQLRETURN SQLGetInfo(
 |SQL_DESCRIBE_PARAMETER||  
   
 ## <a name="supported-sql"></a>支援的 SQL  
- 下列*InfoType*引數的值會傳回資料來源所支援之 SQL 語句的相關資訊。 這些資訊類型所描述之每項功能的 SQL 語法都是 SQL-92 語法。 這些資訊類型並不會詳盡說明整個 SQL-92 文法。 相反地，它們會描述文法中的那些部分，其中的資料來源通常會提供不同層級的支援。 具體而言，SQL-92 中大部分的 DDL 語句都會涵蓋在內。  
+ *InfoType*參數的以下值傳回有關資料來源支援的 SQL 語句的資訊。 這些資訊類型描述的每個功能的 SQL 語法是 SQL-92 語法。 這些資訊類型不能詳盡地描述整個 SQL-92 語法。 相反,它們描述了數據源通常為其提供不同級別的支援的語法部分。 具體來說,SQL-92 中的大多數 DDL 語句都包括在內。  
   
- 應用程式應該從 SQL_SQL_CONFORMANCE 資訊類型判斷支援的文法一般層級，並使用其他資訊類型來判斷來自所述標準合規性層級的變化。  
+ 應用程式應從SQL_SQL_CONFORMANCE資訊類型確定支援的語法的一般級別,並使用其他資訊類型來確定與規定標準合規性級別的變體。  
   
 |||  
 |-|-|  
@@ -227,7 +227,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DROP_SCHEMA||  
   
 ## <a name="sql-limits"></a>SQL 限制  
- 下列*InfoType*引數的值會傳回套用至 SQL 語句中的識別碼和子句之限制的相關資訊，例如識別碼的最大長度和選取清單中的最大資料行數目。 驅動程式或資料來源可能會加諸限制。  
+ *InfoType*參數的以下值傳回有關應用於 SQL 語句中的識別碼和子句的限制的資訊,例如識別符的最大長度和選擇清單中的最大欄數。 驅動程序或數據源都可以施加限制。  
   
 |||  
 |-|-|  
@@ -242,8 +242,8 @@ SQLRETURN SQLGetInfo(
 |SQL_MAX_COLUMNS_IN_TABLE|SQL_MAX_TABLES_IN_SELECT|  
 |SQL_MAX_CURSOR_NAME_LEN|SQL_MAX_USER_NAME_LEN|  
   
-## <a name="scalar-function-information"></a>純量函數資訊  
- 下列*InfoType*引數的值會傳回資料來源和驅動程式所支援之純量函數的相關資訊。 如需純量函式的詳細資訊，請參閱[附錄 E：](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)純量函數。  
+## <a name="scalar-function-information"></a>標點函數資訊  
+ *InfoType*參數的以下值返回有關資料源和驅動程式支援的標量函數的資訊。 有關標量函數的詳細資訊,請參閱附錄[E:標點函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。  
   
 |||  
 |-|-|  
@@ -253,7 +253,7 @@ SQLRETURN SQLGetInfo(
 |SQL_SYSTEM_FUNCTIONS||  
   
 ## <a name="conversion-information"></a>轉換資訊  
- *InfoType*引數的下列值會傳回 sql 資料類型的清單，資料來源可以使用**convert**純量函數來轉換指定的 sql 資料類型：  
+ *InfoType*參數的以下值傳回 SQL 資料型態的清單,資料來源可以使用**CONVERT**標量函數會指定的 SQL 資料型態轉換為這些類型:  
   
 |||  
 |-|-|  
@@ -269,8 +269,8 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_YEAR_MONTH|SQL_CONVERT_VARCHAR|  
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
-## <a name="information-types-added-for-odbc-3x"></a>為 ODBC 3.x 新增的資訊類型  
- ODBC 3.x 已加入下列*InfoType*引數的*值：*  
+## <a name="information-types-added-for-odbc-3x"></a>為 ODBC 3.x 新增的資訊型態  
+ 為 ODBC 3 *.x*新增了*InfoType*參數的以下值:  
   
 |||  
 |-|-|  
@@ -300,8 +300,8 @@ SQLRETURN SQLGetInfo(
 |SQL_DESCRIBE_PARAMETER|SQL_STATIC_CURSOR_ATTRIBUTES2|  
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
-## <a name="information-types-renamed-for-odbc-3x"></a>為 ODBC 3.x 重新命名的資訊類型  
- ODBC 3.x 的下列*InfoType*引數值已經重新*命名。*  
+## <a name="information-types-renamed-for-odbc-3x"></a>為 ODBC 3.x 重新命名的資訊型態  
+ *InfoType*參數的以下值已重新命名為 ODBC 3 *.x*。  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -336,8 +336,8 @@ SQLRETURN SQLGetInfo(
  SQL_QUALIFIER_USAGE  
  SQL_CATALOG_USAGE  
   
-## <a name="information-types-deprecated-in-odbc-3x"></a>ODBC 3.x 中已淘汰的資訊類型  
- ODBC 3.x 中的下列*InfoType*引數值已被*取代。* ODBC 3.x*驅動程式*必須繼續支援這些資訊類型，以提供與 ODBC*2.x 應用程式*的回溯相容性。 （如需這些類型的詳細資訊，請參閱附錄 G：驅動程式指導方針中的[SQLGetInfo 支援](../../../odbc/reference/appendixes/sqlgetinfo-support.md)以取得回溯相容性）。  
+## <a name="information-types-deprecated-in-odbc-3x"></a>在 ODBC 3.x 中棄用的資訊型態  
+ 在 ODBC 3 *.x*中,已棄用*InfoType*參數的以下值。 ODBC 3 *.x*驅動程式必須繼續支援這些資訊類型,以便與 ODBC 2 *.x*應用程式向後相容。 (有關這些類型的的詳細資訊,請參閱附錄 G 中的[SQLGetInfo 支援](../../../odbc/reference/appendixes/sqlgetinfo-support.md):向後相容性的驅動程式指南。  
   
 |||  
 |-|-|  
@@ -347,801 +347,801 @@ SQLRETURN SQLGetInfo(
 |SQL_ODBC_SQL_CONFORMANCE|SQL_STATIC_SENSITIVITY|  
   
 ## <a name="information-type-descriptions"></a>資訊類型描述  
- 下表依字母順序列出每種資訊類型、引進它的 ODBC 版本，以及其描述。  
+ 下表按字母順序出了每種資訊類型、介紹其內容的ODBC版本及其說明。  
   
- SQL_ACCESSIBLE_PROCEDURES （ODBC 1.0）  
- 字元字串：如果使用者可以執行**SQLProcedures**所傳回的所有程式，則為 "Y";如果可能會傳回使用者無法執行的程式，則為 "N"。  
+ SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
+ 字串字串:「Y」,如果用戶可以執行**SQL 程式**傳回的所有過程;如果返回過程時可能返回使用者無法執行,則為"N"。  
   
- SQL_ACCESSIBLE_TABLES （ODBC 1.0）  
- 字元字串： "Y"，如果使用者保證對**SQLTables**所傳回的所有資料表具有**SELECT**許可權，如果可能會傳回使用者無法存取的資料表，則為 "N"。  
+ SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
+ 字串字串:「Y」,**如果使用者保證選擇** **SQLTables**傳回的所有表的許可權;如果返回的表是使用者無法訪問的表,則為"N"。  
   
- SQL_ACTIVE_ENVIRONMENTS （ODBC 3.0）  
- SQLUSMALLINT 值，指定驅動程式可支援的作用中環境數目上限。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
+ 指定驅動程式可以支援的最大活動環境數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- SQL_AGGREGATE_FUNCTIONS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩列舉彙總函式的支援：  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
+ SQLUINTEGER 位罩對聚合函數支援:  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ SQL-92 符合入門級的驅動程序將始終返回所有這些選項(如支援)。  
   
- SQL_ALTER_DOMAIN （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，用來列舉**ALTER DOMAIN**語句中的子句（如 SQL-92 中所定義，由資料來源所支援）。 SQL-92 完整層級相容的驅動程式一律會傳回所有的位元遮罩。 傳回值 "0" 表示不支援**ALTER DOMAIN**語句。  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**了在**SQL-92 中定義的 ALTER DOMAIN 語句中子句,數據源支援。 SQL-92 完全符合級別的驅動程序將始終返回所有位掩碼。 返回值"0"表示不支援 ALTER **DOMAIN**語句。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
- SQL_AD_ADD_DOMAIN_CONSTRAINT = 支援新增網域條件約束（完整層級）  
+ SQL_AD_ADD_DOMAIN_CONSTRAINT = 支援新增網域約束(完整等級)  
   
- 支援 SQL_AD_ADD_DOMAIN_DEFAULT \<= alter domain \<> set domain DEFAULT 子句> （完整層級）  
+ SQL_AD_ADD_DOMAIN_DEFAULT \<=\<變更網域>>受支援的網域預設子句(完整等級)  
   
- SQL_AD_CONSTRAINT_NAME_DEFINITION = \<條件約束名稱定義子句> 支援命名網域條件約束（中繼層級）  
+ SQL_AD_CONSTRAINT_NAME_DEFINITION \<=>为命名域约束(中間等級)支援規範名稱定義子句  
   
- SQL_AD_DROP_DOMAIN_CONSTRAINT = \<DROP DOMAIN CONSTRAINT 子句> 受到支援（完整層級）  
+ SQL_AD_DROP_DOMAIN_CONSTRAINT \<= 支援>刪除網域  
   
- 支援 SQL_AD_DROP_DOMAIN_DEFAULT \<= alter domain \<> DROP domain DEFAULT 子句> （完整層級）  
+ SQL_AD_DROP_DOMAIN_DEFAULT \<=\<變更網域>刪除網域預設子句>支援(完整等級)  
   
- 如果\<支援新增網域條件約束\<>，下列位會指定支援的條件約束屬性> （已設定 SQL_AD_ADD_DOMAIN_CONSTRAINT 位）：  
+ 如果\<支援>添加域\<約束 (設定SQL_AD_ADD_DOMAIN_CONSTRAINT位),以下位指定支援的約束屬性>:  
   
- SQL_AD_ADD_CONSTRAINT_DEFERRABLE （完整層級） SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE （完整層級） SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED （完整層級） SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE （完整層級）  
+ SQL_AD_ADD_CONSTRAINT_DEFERRABLE(全級別)SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE(全級別)SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED(全級別)SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE(全級別)  
   
- SQL_ALTER_TABLE （ODBC 2.0）  
- SQLUINTEGER 位元遮罩，列舉資料來源所支援之**ALTER TABLE**語句中的子句。  
+ SQL_ALTER_TABLE(ODBC 2.0)  
+ SQLUINTEGER 位罩,枚舉資料來源支援的**ALTER TABLE**語句中子句。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
- SQL_AT_ADD_COLUMN_COLLATION = \<新增資料行> 子句，並提供設備來指定資料行定序（完整層級）（ODBC 3.0）  
+ SQL_AT_ADD_COLUMN_COLLATION \<= 支援新增欄>子句,具有指定欄位規則(完整等級)(ODBC 3.0)的功能  
   
- SQL_AT_ADD_COLUMN_DEFAULT = \<新增資料行> 子句，並可指定資料行預設值（FIPS 過渡層級）（ODBC 3.0）  
+ SQL_AT_ADD_COLUMN_DEFAULT \<= 支援新增欄>子句,具有指定列預設值(FIPS 過渡等級)(ODBC 3.0)的功能  
   
- SQL_AT_ADD_COLUMN_SINGLE = \<支援新增資料行> （FIPS 過渡層級）（ODBC 3.0）  
+ SQL_AT_ADD_COLUMN_SINGLE \<= 支援新增欄>(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_ADD_CONSTRAINT = \<新增資料行> 子句，並可指定資料行條件約束（FIPS 過渡層級）（ODBC 3.0）  
+ SQL_AT_ADD_CONSTRAINT \<= 支援新增欄>子句,具有指定欄位約束(FIPS 過渡等級)(ODBC 3.0)的功能  
   
- 支援 SQL_AT_ADD_TABLE_CONSTRAINT \<= 新增資料表條件約束> 子句（FIPS 轉換層級）（ODBC 3.0）  
+ SQL_AT_ADD_TABLE_CONSTRAINT \<= 支援>項(FIPS過渡等級)(ODBC 3.0)新增表約束  
   
- SQL_AT_CONSTRAINT_NAME_DEFINITION = \<條件約束名稱定義> 支援命名資料行和資料表條件約束（中繼層級）（ODBC 3.0）  
+ SQL_AT_CONSTRAINT_NAME_DEFINITION \<=>为命名列和表约束(中間等級)(ODBC 3.0)支援規範名稱定義  
   
- SQL_AT_DROP_COLUMN_CASCADE = \<卸載資料行> CASCADE 支援（FIPS 轉換層級）（ODBC 3.0）  
+ 支援SQL_AT_DROP_COLUMN_CASCADE \<= 丟棄列> CASCADE(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_DROP_COLUMN_DEFAULT = \<alter column> \<卸載資料行 DEFAULT 子句> 支援（中繼層級）（ODBC 3.0）  
+ SQL_AT_DROP_COLUMN_DEFAULT \<=\<變更欄>刪除列預設子句>支援(中級級別)(ODBC 3.0)  
   
- SQL_AT_DROP_COLUMN_RESTRICT = \<卸載資料行> 限制（FIPS 過渡層級）（ODBC 3.0）  
+ 支援SQL_AT_DROP_COLUMN_RESTRICT \<= 下拉列>限制(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_DROP_TABLE_CONSTRAINT_CASCADE （ODBC 3.0）  
+ SQL_AT_DROP_TABLE_CONSTRAINT_CASCADE (ODBC 3.0)  
   
- SQL_AT_DROP_TABLE_CONSTRAINT_RESTRICT = \<卸載資料行> 限制（FIPS 過渡層級）（ODBC 3.0）  
+ 支援SQL_AT_DROP_TABLE_CONSTRAINT_RESTRICT \<=>约束的放置列(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_SET_COLUMN_DEFAULT = \<alter column> \<SET column DEFAULT 子句> 是支援的（中繼層級）（ODBC 3.0）  
+ SQL_AT_SET_COLUMN_DEFAULT \<=\<更改欄>設定列預設子句>支援(中級級別)(ODBC 3.0)  
   
- 如果支援指定資料行或\<資料表條件約束，下列位會指定支援條件約束屬性> （已設定 SQL_AT_ADD_CONSTRAINT 位）：  
+ 如果支援指定欄或表\<約束(設定SQL_AT_ADD_CONSTRAINT位),以下位將指定支援約束屬性>:  
   
- SQL_AT_CONSTRAINT_INITIALLY_DEFERRED （完整層級）（ODBC 3.0） SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE （完整層級）（ODBC 3.0） SQL_AT_CONSTRAINT_DEFERRABLE （完整層級）（ODBC 3.0） SQL_AT_CONSTRAINT_NON_DEFERRABLE （完整層級）（ODBC 3.0）  
+ SQL_AT_CONSTRAINT_INITIALLY_DEFERRED(全級) (ODBC 3.0) SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE (全級別) (ODBC 3.0)SQL_AT_CONSTRAINT_DEFERRABLE(完整級別)(ODBC 3.0)SQL_AT_CONSTRAINT_NON_DEFERRABLE(全級)(ODBC 3.0)  
   
- SQL_ASYNC_DBC_FUNCTIONS （ODBC 3.8）  
- SQLUINTEGER 值，指出驅動程式能否以非同步方式在連接控制碼上執行函數。  
+ SQL_ASYNC_DBC_FUNCTIONS (ODBC 3.8)  
+ SQLUINTEGER 值,指示驅動程式是否可以在連接句柄上異步執行函數。  
   
- SQL_ASYNC_DBC_CAPABLE = 驅動程式可以非同步執行連接功能。  
+ SQL_ASYNC_DBC_CAPABLE = 驅動程式可以非同步執行連接函數。  
   
- SQL_ASYNC_DBC_NOT_CAPABLE = 驅動程式無法以非同步方式執行連接功能。  
+ SQL_ASYNC_DBC_NOT_CAPABLE = 驅動程式無法非同步執行連接函數。  
   
- SQL_ASYNC_MODE （ODBC 3.0）  
- 指出驅動程式中非同步支援層級的 SQLUINTEGER 值：  
+ SQL_ASYNC_MODE(ODBC 3.0)  
+ 指示驅動程式中非同步支援等級的 SQLUINTEGER 值:  
   
- SQL_AM_CONNECTION = 支援連接層級非同步執行。 所有與給定連接控制碼相關聯的語句控制碼都處於非同步模式或全都處於同步模式。 連接上的語句控制碼不能處於非同步模式，而相同連接上的另一個語句控制碼處於同步模式，反之亦然。  
+ SQL_AM_CONNECTION = 支援連接級非同步執行。 與給定連接句柄關聯的所有語句句柄都處於非同步模式,或者所有語句句柄都處於同步模式。 連接上的語句句柄不能處於非同步模式,而同一連接上的另一個語句句柄處於同步模式,反之亦然。  
   
- 支援 SQL_AM_STATEMENT = 語句層級非同步執行。 某些與連接控制碼相關聯的語句控制碼可以處於非同步模式，而相同連接上的其他語句控制碼則處於同步模式。  
+ SQL_AM_STATEMENT = 支援語句級非同步執行。 與連接句柄關聯的某些語句句柄可能處於異步模式,而同一連接上的其他語句句柄處於同步模式。  
   
- SQL_AM_NONE = 不支援非同步模式。  
+ 不支援SQL_AM_NONE = 不支援非同步模式。  
   
  SQL_ASYNC_NOTIFICATION  
- 指出驅動程式是否支援非同步通知的 SQLUINTEGER 值：  
+ 指示驅動程式是否支援非同步通知的 SQLUINTEGER 值:  
   
 -   **SQL_ASYNC_NOTIFICATION_CAPABLE**驅動程式支援非同步執行通知。  
   
 -   **SQL_ASYNC_NOTIFICATION_NOT_CAPABLE**驅動程式不支援非同步執行通知。  
   
- ODBC 非同步作業有兩種類別：連接層級非同步作業和語句層級非同步作業。  如果驅動程式傳回 SQL_ASYNC_NOTIFICATION_CAPABLE，它必須支援可非同步執行之所有 Api 的通知。  
+ ODBC 非同步操作分為兩類:連接級非同步操作和語句級非同步操作。  如果驅動程式返回SQL_ASYNC_NOTIFICATION_CAPABLE,它必須支援它可以通過非同步執行的所有API的通知。  
   
- SQL_BATCH_ROW_COUNT （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，可列舉與資料列計數可用性有關的驅動程式行為。 下列位元遮罩會與資訊類型一起使用：  
+ SQL_BATCH_ROW_COUNT (ODBC 3.0)  
+ SQLUINTEGER 位掩碼,用於枚舉驅動程序相對於行計數的可用性的行為。 以下位遮罩與資訊型態使用:  
   
- SQL_BRC_ROLLED_UP = 連續 INSERT、DELETE 或 UPDATE 語句的資料列計數會匯總成一個。 如果未設定此位，每個語句都可以使用資料列計數。  
+ SQL_BRC_ROLLED_UP = 連續插入、刪除或更新語句的行計數匯總為一個。 如果未設置此位,則行計數可用於每個語句。  
   
- SQL_BRC_PROCEDURES = 在預存程式中執行批次時，可以使用資料列計數（如果有的話）。 如果有可用的資料列計數，視 SQL_BRC_ROLLED_UP 位而定，您可以匯總或個別使用它們。  
+ SQL_BRC_PROCEDURES = 在存儲過程中執行批處理時,行計數(如果有)可用。 如果行計數可用,則它們可以匯總或單獨可用,具體取決於SQL_BRC_ROLLED_UP位。  
   
- SQL_BRC_EXPLICIT = 當直接呼叫**SQLExecute**或**SQLExecDirect**來執行批次時，可以使用資料列計數（如果有的話）。 如果有可用的資料列計數，視 SQL_BRC_ROLLED_UP 位而定，您可以匯總或個別使用它們。  
+ SQL_BRC_EXPLICIT = 當通過調用 SQLExecute 或**SQLExecDirect**直接執行批處理時**SQLExecDirect**,行計數(如果有)可用。 如果行計數可用,則它們可以匯總或單獨可用,具體取決於SQL_BRC_ROLLED_UP位。  
   
- SQL_BATCH_SUPPORT （ODBC 3.0）  
- SQLUINTEGER 的位元遮罩，列舉驅動程式對批次的支援。 下列位元遮罩是用來判斷支援的層級：  
+ SQL_BATCH_SUPPORT (ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式對批處理的支援。 以下位遮罩支援哪個等級:  
   
- SQL_BS_SELECT_EXPLICIT = 驅動程式支援可產生結果集產生語句的明確批次。  
+ SQL_BS_SELECT_EXPLICIT = 驅動程式支援具有結果集生成語句的顯式批處理。  
   
- SQL_BS_ROW_COUNT_EXPLICIT = 驅動程式支援可擁有資料列計數產生語句的明確批次。  
+ SQL_BS_ROW_COUNT_EXPLICIT = 驅動程式支援具有行計數生成語句的顯式批處理。  
   
- SQL_BS_SELECT_PROC = 驅動程式支援可產生結果集產生語句的明確程式。  
+ SQL_BS_SELECT_PROC = 驅動程式支援具有結果集生成語句的顯式過程。  
   
- SQL_BS_ROW_COUNT_PROC = 驅動程式支援可讓資料列計數產生語句的明確程式。  
+ SQL_BS_ROW_COUNT_PROC = 驅動程式支援具有行計數生成語句的顯式過程。  
   
- SQL_BOOKMARK_PERSISTENCE （ODBC 2.0）  
- SQLUINTEGER 的位元遮罩，可列舉書簽保存的作業。  
+ SQL_BOOKMARK_PERSISTENCE(ODBC 2.0)  
+ SQLUINTEGER 位掩碼,枚舉書簽持續存在的操作。  
   
- 下列位元遮罩會與旗標一起使用，以判斷書簽會保存哪些選項：  
+ 以下位遮罩與標誌一起使用,以確定書籤保留的選項:  
   
- SQL_BP_CLOSE = 當應用程式使用 SQL_CLOSE 選項呼叫**SQLFreeStmt** ，或是**SQLCloseCursor**關閉與語句相關聯的資料指標之後，書簽是有效的。  
+ SQL_BP_CLOSE = 書籤在應用程式使用SQL_CLOSE選項呼叫**SQLFreeStmt**後有效,或者**SQLCloseCursor**關閉與語句關聯的遊標。  
   
- SQL_BP_DELETE = 資料列的書簽在刪除該資料列之後有效。  
+ SQL_BP_DELETE = 刪除該行后,行的書籤有效。  
   
- SQL_BP_DROP = 當應用程式呼叫具有*HandleType* SQL_HANDLE_STMT 的**SQLFreeHandle**來卸載語句之後，書簽是有效的。  
+ SQL_BP_DROP = 書籤在應用程式呼叫**SQLFreeHandle**且*具有SQL_HANDLE_STMT的句柄類型*以刪除文句後有效。  
   
- SQL_BP_TRANSACTION = 在應用程式認可或回復交易之後，書簽是有效的。  
+ SQL_BP_TRANSACTION = 書籤在應用程式提交或回滾事務後有效。  
   
- SQL_BP_UPDATE = 在更新該資料列中的任何資料行之後，資料列的書簽是有效的，包括索引鍵資料行。  
+ SQL_BP_UPDATE = 該行的書籤在該行中的任何列(包括鍵列)更新后有效。  
   
- SQL_BP_OTHER_HSTMT = 與一個語句相關聯的書簽可以與另一個語句搭配使用。 除非指定 SQL_BP_CLOSE 或 SQL_BP_DROP，否則第一個語句上的資料指標必須是開啟的。  
+ SQL_BP_OTHER_HSTMT = 與一個語句關聯的書籤可以與另一個語句一起使用。 除非指定SQL_BP_CLOSE或SQL_BP_DROP,否則第一個語句上的游標必須打開。  
   
- SQL_CATALOG_LOCATION （ODBC 2.0）  
- SQLUSMALLINT 值，指出目錄在限定資料表名稱中的位置：  
+ SQL_CATALOG_LOCATION(ODBC 2.0)  
+ 指示目錄在限定表名稱中的位置的 SQLUSMALLINT 值:  
   
  SQL_CL_STARTSQL_CL_END  
   
- 例如，Xbase 驅動程式會傳回 SQL_CL_START，因為目錄（目錄）名稱是在資料表名稱的開頭，如 \EMPDATA\EMP。DBF. ORACLE 伺服器驅動程式會傳回 SQL_CL_END，因為目錄位於資料表名稱的結尾，如所示ADMIN.EMP@EMPDATA。  
+ 例如,Xbase 驅動程式返回SQL_CL_START因為目錄(目錄)名稱位於表名稱的開頭,如 [EMPDATA_EMP] 中所示。Dbf。 ORACLE 伺服器驅動程式傳回SQL_CL_END因為目錄位於表格中的末尾,ADMIN.EMP@EMPDATA如中 。  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回 SQL_CL_START。 如果資料來源不支援目錄，則會傳回0值。 為了判斷是否支援目錄，應用程式會使用 SQL_CATALOG_NAME 資訊類型來呼叫**SQLGetInfo** 。  
+ SQL-92 完全符合級別的驅動程序將始終返回SQL_CL_START。 如果數據源不支援目錄,則返回值 0。 要確定是否支援目錄,應用程式使用SQL_CATALOG_NAME資訊類型呼叫**SQLGetInfo。**  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_QUALIFIER_LOCATION 重新命名為 odbc 3.0。  
+ 此*資訊類型*已重命名為 ODBC 3.0 從 ODBC 2.0*資訊類型*SQL_QUALIFIER_LOCATION。  
   
- SQL_CATALOG_NAME （ODBC 3.0）  
- 字元字串：如果伺服器支援目錄名稱，則為 "Y"，否則為 "N"。  
+ SQL_CATALOG_NAME(ODBC 3.0)  
+ 字串字串:「Y」,如果伺服器支援目錄名稱,則不支援"N"。  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回 "Y"。  
+ SQL-92 完全符合級別的驅動程序將始終返回"Y"。  
   
- SQL_CATALOG_NAME_SEPARATOR （ODBC 1.0）  
- 字元字串：資料來源在目錄名稱與其後或之前的限定名稱元素之間定義為分隔符號的字元。  
+ SQL_CATALOG_NAME_SEPARATOR(ODBC 1.0)  
+ 字串:資料來源定義為目錄名稱與目錄名稱之後或其後面的限定名稱元素之間的分隔符的字元或字元。  
   
- 如果資料來源不支援目錄，則會傳回空字串。 為了判斷是否支援目錄，應用程式會使用 SQL_CATALOG_NAME 資訊類型來呼叫**SQLGetInfo** 。 符合 SQL 92 完整層級的驅動程式一律會傳回 "."。  
+ 如果數據源不支援目錄,則返回空字串。 要確定是否支援目錄,應用程式使用SQL_CATALOG_NAME資訊類型呼叫**SQLGetInfo。** SQL-92 完全符合級別的驅動程序將始終返回。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_QUALIFIER_NAME_SEPARATOR 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_QUALIFIER_NAME_SEPARATOR重新命名為 ODBC 3.0。  
   
- SQL_CATALOG_TERM （ODBC 1.0）  
- 具有目錄之資料來源廠商名稱的字元字串;例如，"database" 或 "directory"。 這個字串可以是大寫、小寫或混合大小寫。  
+ SQL_CATALOG_TERM(ODBC 1.0)  
+ 具有目錄數據源供應商名稱的字串;例如,"資料庫"或"目錄"。 此字串可以是上部、下部或混合大小寫。  
   
- 如果資料來源不支援目錄，則會傳回空字串。 為了判斷是否支援目錄，應用程式會使用 SQL_CATALOG_NAME 資訊類型來呼叫**SQLGetInfo** 。 符合 SQL 92 完整層級的驅動程式一律會傳回「目錄」。  
+ 如果數據源不支援目錄,則返回空字串。 要確定是否支援目錄,應用程式使用SQL_CATALOG_NAME資訊類型呼叫**SQLGetInfo。** SQL-92 符合電平的驅動程序將始終返回"目錄"。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_QUALIFIER_TERM 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_QUALIFIER_TERM重新命名為 ODBC 3.0。  
   
- SQL_CATALOG_USAGE （ODBC 2.0）  
- SQLUINTEGER 的位元遮罩，列舉可以使用目錄的語句。  
+ SQL_CATALOG_USAGE(ODBC 2.0)  
+ SQLUINTEGER 位掩碼,枚舉了可以使用目錄的語句。  
   
- 下列位元遮罩可用來判斷目錄的使用位置：  
+ 以下位遮罩目錄的使用位置:  
   
- SQL_CU_DML_STATEMENTS = 所有資料操作語言語句都支援目錄： **select**、 **INSERT**、 **UPDATE**、 **DELETE**和 if 支援，請**選取以取得 update**和定位 update 和 DELETE 子句。  
+ SQL_CU_DML_STATEMENTS = 所有資料操作語言語句都支援目錄:**選擇**、**插入**、**更新**、**刪除**等,如果支援,**請選擇更新**並定位更新和刪除語句。  
   
- SQL_CU_PROCEDURE_INVOCATION = ODBC 程序呼叫語句中支援目錄。  
+ SQL_CU_PROCEDURE_INVOCATION = ODBC 過程呼叫語句中支援目錄。  
   
- SQL_CU_TABLE_DEFINITION = 所有資料表定義語句都支援目錄： **CREATE TABLE**、 **CREATE VIEW**、 **ALTER TABLE**、 **drop table**和**drop VIEW**。  
+ SQL_CU_TABLE_DEFINITION = 所有表定義語片都支援目錄:**建立表**,**建立檢視**,**變更表****、 DROP TABLE**與 DROP**檢視**。  
   
- SQL_CU_INDEX_DEFINITION = 所有索引定義語句中都支援目錄： **CREATE INDEX**和**DROP INDEX**。  
+ SQL_CU_INDEX_DEFINITION = 所有索引定義語句都支援目錄:**建立索引**與**DROP INDEX**。  
   
- SQL_CU_PRIVILEGE_DEFINITION = 擁有權限定義語句中都支援目錄： **GRANT**和**REVOKE**。  
+ SQL_CU_PRIVILEGE_DEFINITION = 所有權限定義語句都支援目錄 **:GRANT**和**REVOKE**。  
   
- 如果資料來源不支援目錄，則會傳回0值。 為了判斷是否支援目錄，應用程式會使用 SQL_CATALOG_NAME 資訊類型來呼叫**SQLGetInfo** 。 符合 SQL 92 完整層級的驅動程式一律會傳回具有所有這些位集的位元遮罩。  
+ 如果數據源不支援目錄,則返回值 0。 要確定是否支援目錄,應用程式使用SQL_CATALOG_NAME資訊類型呼叫**SQLGetInfo。** SQL-92 符合電平的驅動程序將始終返回具有所有這些位集的位掩碼。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_QUALIFIER_USAGE 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_QUALIFIER_USAGE重命名為 ODBC 3.0。  
   
- SQL_COLLATION_SEQ （ODBC 3.0）  
- 定序順序的名稱。 這是一個字元字串，表示此伺服器預設字元集的預設定序名稱（例如，' ISO 8859-1 ' 或 EBCDIC）。 如果這是未知的，則會傳回空字串。 符合 SQL 92 完整層級的驅動程式一律會傳回非空白字串。  
+ SQL_COLLATION_SEQ(ODBC 3.0)  
+ 排序規則序列的名稱。 這是一個字串,指示此伺服器的預設字元集的預設排序規則的名稱(例如,ISO 8859-1'或 EBCDIC)。 如果未知,將返回一個空字串。 SQL-92 符合電平的驅動程序將始終返回非空字串。  
   
- SQL_COLUMN_ALIAS （ODBC 2.0）  
- 字元字串：如果資料來源支援資料行別名，則為 "Y";否則為 "N"。  
+ SQL_COLUMN_ALIAS(ODBC 2.0)  
+ 字串字串:「Y」,如果數據源支援列別名;如果數據源支援列別名,則為「Y」;否則,"N"。  
   
- 資料行別名是可以使用 AS 子句，針對選取清單中的資料行指定的替代名稱。 符合 SQL 92 專案層級的驅動程式一律會傳回 "Y"。  
+ 列別名是可以使用 AS 子句為選擇清單中的列指定的替代名稱。 SQL-92 符合入門級的驅動程序將始終返回"Y"。  
   
- SQL_CONCAT_Null_BEHAVIOR （ODBC 1.0）  
- SQLUSMALLINT 值，指出資料來源如何處理 Null 值字元資料類型資料行與非 Null 值字元資料類型資料行的串連：  
+ SQL_CONCAT_NULL_BEHAVIOR(ODBC 1.0)  
+ SQLUSMALLINT 值,指示資料來源如何處理 NULL 值字元資料類型列與非 NULL 值字元資料類型列的串聯:  
   
- SQL_CB_Null = 結果為 Null 值。  
+ SQL_CB_NULL = 結果為 NULL 值。  
   
- SQL_CB_NON_Null = Result 會串連非 Null 值的資料行或資料行。  
+ SQL_CB_NON_NULL = 結果是非 NULL 值列或列的串聯。  
   
- 符合 SQL 92 專案層級的驅動程式一律會傳回 SQL_CB_Null。  
+ SQL-92 符合入門級的驅動程序將始終返回SQL_CB_NULL。  
   
- SQL_CONVERT_BIGINTSQL_CONVERT_BINARYSQL_CONVERT_BIT SQL_CONVERT_CHAR SQL_CONVERT_GUIDSQL_CONVERT_DATESQL_CONVERT_DECIMALSQL_CONVERT_DOUBLESQL_CONVERT_FLOATSQL_CONVERT_INTEGERSQL_CONVERT_INTERVAL_YEAR_MONTHSQL_CONVERT_INTERVAL_DAY_TIMESQL_CONVERT_LONGVARBINARYSQL_CONVERT_LONGVARCHARSQL_CONVERT_NUMERICSQL_CONVERT_REALSQL_CONVERT_SMALLINTSQL_CONVERT_TIMESQL_CONVERT_TIMESTAMPSQL_CONVERT_TINYINTSQL_CONVERT_VARBINARYSQL_CONVERT_VARCHAR （ODBC 1.0）  
- SQLUINTEGER 位元遮罩。 位元遮罩指出資料來源所支援的轉換，以及*InfoType*中名為之型別資料的**CONVERT**純量函數。 如果位元遮罩等於零，則資料來源不支援從已命名類型的資料進行任何轉換，包括轉換成相同的資料類型。  
+ SQL_CONVERT_BIGINTSQL_CONVERT_BINARYSQL_CONVERT_BITSQL_CONVERT_CHARSQL_CONVERT_GUIDSQL_CONVERT_DATESQL_CONVERT_DECIMALSQL_CONVERT_DOUBLESQL_CONVERT_FLOATSQL_CONVERT_INTEGERSQL_CONVERT_INTERVAL_YEAR_MONTHSQL_CONVERT_INTERVAL_DAY_TIMESQL_CONVERT_LONGVARBINARYSQL_CONVERT_LONGVARCHARSQL_CONVERT_NUMERICSQL_CONVERT_REALSQL_CONVERT_SMALLINTSQL_CONVERT_TIMESQL_CONVERT_TIMESTAMPSQL_CONVERT_TINYINTSQL_CONVERT_VARBINARYSQL_CONVERT_VARCHAR(ODBC 1.0)  
+ SQLUINTEGER 位掩碼。 位遮罩資料來源支援的轉換,該函數具有**CONVERT**標量函數,用於*在 InfoType*中命名的類型的資料。 如果位掩碼等於零,數據源不支援從命名類型的數據進行任何轉換,包括轉換為相同的數據類型。  
   
- 例如，若要判斷資料來源是否支援將 SQL_INTEGER 資料轉換成 SQL_BIGINT 資料類型，應用程式會以 SQL_CONVERT_INTEGER 的*InfoType*呼叫**SQLGetInfo** 。 應用程式會使用傳回的位元遮罩和 SQL_CVT_BIGINT 來執行**AND**運算。 如果產生的值不是零，則會支援轉換。  
+ 例如,要確定數據來源是否支援將SQL_INTEGER資料轉換為SQL_BIGINT資料類型,應用程式使用SQL_CONVERT_INTEGER*的資訊類型*呼叫**SQLGetInfo。** 應用程式對返回的位掩碼和SQL_CVT_BIGINT執行**AND**操作。 如果生成的值為非零,則支援轉換。  
   
- 下列位元遮罩是用來決定支援的轉換：  
+ 以下位遮罩支援哪些轉換:  
   
- SQL_CVT_BIGINT （ODBC 1.0） SQL_CVT_BINARY （ODBC 1.0） SQL_CVT_BIT （ODBC 1.0） SQL_CVT_GUID （ODBC 3.5） SQL_CVT_CHAR （ODBC 1.0） SQL_CVT_DATE （ODBC 1.0） SQL_CVT_DECIMAL （ODBC 1.0） SQL_CVT_DOUBLE （ODBC 1.0） SQL_CVT_FLOAT （ODBC 1.0） SQL_CVT_INTEGER （ODBC 1.0） SQL_CVT_INTERVAL_YEAR_MONTH （ODBC 3.0） SQL_CVT_INTERVAL_DAY_TIME （ODBC 3.0） SQL_CVT_LONGVARBINARY （ODBC 1.0） SQL_CVT_LONGVARCHAR （ODBC 1.0） SQL_CVT_NUMERIC （ODBC 1.0） SQL_CVT_REAL ODBC 1.0） SQL_CVT_SMALLINT （ODBC 1.0） SQL_CVT_TIME （ODBC 1.0） SQL_CVT_TIMESTAMP （ODBC 1.0） SQL_CVT_TINYINT （ODBC 1.0） SQL_CVT_VARBINARY （ODBC 1.0） SQL_CVT_VARCHAR （ODBC 1.0）  
+ SQL_CVT_BIGINT (ODBC 1.0) SQL_CVT_BINARY (ODBC 1.0) SQL_CVT_BIT (ODBC 1.0) SQL_CVT_GUID (ODBC 3.5) SQL_CVT_CHAR (ODBC 1.0) SQL_CVT_DATE (ODBC 1.0)SQL_CVT_DECIMAL (ODBC 1.0)SQL_CVT_DOUBLE (ODBC 1 .0)SQL_CVT_FLOAT (ODBC 1.0)SQL_CVT_INTEGER (ODBC 1.0)SQL_CVT_INTERVAL_YEAR_MONTH (ODBC 3.0)SQL_CVT_INTERVAL_DAY_TIME (ODBC 3.0)SQL_CVT_LONGVARBINARY (ODBC 1.0)SQL_CVT_LONGVARCHAR (ODBC 1.0)SQL_CVT_NUMERIC (ODBC 1.0)SQL_CVT_REAL ODBC 1.0)SQL_CVT_SMALLINT (ODBC 1.0)SQL_CVT_TIME (ODBC 1.0)SQL_CVT_TIMESTAMP (ODBC 1.0)SQL_CVT_TINYINT (ODBC 1.0)SQL_CVT_VARBINARY (ODBC 1.0)SQL_CVT_VARCHAR (ODBC 1.0)  
   
- SQL_CONVERT_FUNCTIONS （ODBC 1.0）  
- SQLUINTEGER 位元遮罩，列舉驅動程式和相關聯資料來源所支援的純量轉換函式。  
+ SQL_CONVERT_FUNCTIONS(ODBC 1.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式和相關數據源支援的標量轉換函數。  
   
- 下列位元遮罩是用來決定支援的轉換函式：  
+ 以下位遮罩支援哪些轉換函數:  
   
  SQL_FN_CVT_CASTSQL_FN_CVT_CONVERT  
   
- SQL_CORRELATION_NAME （ODBC 1.0）  
- SQLUSMALLINT 值，指出是否支援資料表相互關聯名稱：  
+ SQL_CORRELATION_NAME(ODBC 1.0)  
+ 指示是否支援表關聯名稱的 SQLUSMALLINT 值:  
   
- SQL_CN_NONE = 不支援相互關聯名稱。  
+ SQL_CN_NONE = 不支援關聯名稱。  
   
- SQL_CN_DIFFERENT = 支援相互關聯名稱，但必須與它們所代表的資料表名稱不同。  
+ SQL_CN_DIFFERENT = 關聯名稱受支援,但必須不同於它們表示的表的名稱。  
   
- SQL_CN_ANY = 相互關聯名稱是支援的，而且可以是任何有效的使用者定義名稱。  
+ SQL_CN_ANY = 關聯名稱受支援,可以是任何有效的使用者定義的名稱。  
   
- 符合 SQL 92 專案層級的驅動程式一律會傳回 SQL_CN_ANY。  
+ SQL-92 符合入門級的驅動程序將始終返回SQL_CN_ANY。  
   
- SQL_CREATE_ASSERTION （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**CREATE**判斷提示語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_CREATE_ASSERTION(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了**創建 ASSERTION**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_CA_CREATE_ASSERTION  
   
- 如果支援明確指定條件約束屬性的能力，下列位會指定支援的條件約束屬性（請參閱 SQL_ALTER_TABLE 和 SQL_CREATE_TABLE 資訊類型）：  
+ 如果支援顯示式指定約束屬性的能力(請參閱SQL_ALTER_TABLE和SQL_CREATE_TABLE資訊類型),則以下位指定受支援的約束屬性:  
   
  SQL_CA_CONSTRAINT_INITIALLY_DEFERREDSQL_CA_CONSTRAINT_INITIALLY_IMMEDIATESQL_CA_CONSTRAINT_DEFERRABLESQL_CA_CONSTRAINT_NON_DEFERRABLE  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回所有這些選項，並受到支援。 傳回值 "0" 表示不支援**CREATE ASSERTION**語句。  
+ SQL-92 完全符合級別的驅動程式將始終返回所有這些選項(如支援)。 返回值"0"表示不支援 CREATE **ASSERTION**語句。  
   
- SQL_CREATE_CHARACTER_SET （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**CREATE CHARACTER SET**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_CREATE_CHARACTER_SET(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了在 SQL-92 中定義的**CREATE 字元集**語句中子句,數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_CCS_CREATE_CHARACTER_SETSQL_CCS_COLLATE_CLAUSESQL_CCS_LIMITED_COLLATION  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回所有這些選項，並受到支援。 傳回值 "0" 表示不支援**CREATE CHARACTER SET**語句。  
+ SQL-92 完全符合級別的驅動程式將始終返回所有這些選項(如支援)。 返回值"0"表示不支援 CREATE**字元集**語句。  
   
- SQL_CREATE_COLLATION （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，用來列舉**CREATE 定序**語句中的子句（如 SQL-92 中所定義），資料來源所支援。  
+ SQL_CREATE_COLLATION(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了**創建拼貼**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來判斷支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_CCOL_CREATE_COLLATION  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回此選項支援。 傳回值 "0" 表示不支援 CREATE 定**序**語句。  
+ SQL-92 完全符合級別的驅動程式將始終返回此選項作為支援。 返回值"0"表示不支援 CREATE**拼貼**語句。  
   
- SQL_CREATE_DOMAIN （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**CREATE DOMAIN**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_CREATE_DOMAIN(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了 CREATE **DOMAIN**語句中的條款,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
- SQL_CDO_CREATE_DOMAIN = 支援 CREATE DOMAIN 語句（中繼層級）。  
+ SQL_CDO_CREATE_DOMAIN = 支援 CREATE DOMAIN 語句(中級級別)。  
   
- SQL_CDO_CONSTRAINT_NAME_DEFINITION = \<條件約束名稱定義> 支援命名網域條件約束（中繼層級）。  
+ SQL_CDO_CONSTRAINT_NAME_DEFINITION \<= 命名域約束(中間級別)>支持约束名称定义。  
   
- 下列位指定建立資料行條件約束的能力： SQL_CDO_DEFAULT = 指定支援的網域條件約束（中繼層級） SQL_CDO_CONSTRAINT = 支援指定網域預設值（中繼層級） SQL_CDO_COLLATION =支援指定定義域定序（完整層級）  
+ 以下位指定建立欄約束的能力:SQL_CDO_DEFAULT = 支援指定網域約束(中間等級)SQL_CDO_CONSTRAINT = 指定網域預設值(中間等級)SQL_CDO_COLLATION = 支援指定網列規則(完整等級)  
   
- 如果支援指定網域條件約束，下列位會指定支援的條件約束屬性（已設定 SQL_CDO_DEFAULT）：  
+ 如果支援指定網域約束(SQL_CDO_DEFAULT設定),則以下位指定受支援的約束屬性:  
   
- SQL_CDO_CONSTRAINT_INITIALLY_DEFERRED （完整層級） SQL_CDO_CONSTRAINT_INITIALLY_IMMEDIATE （完整層級） SQL_CDO_CONSTRAINT_DEFERRABLE （完整層級） SQL_CDO_CONSTRAINT_NON_DEFERRABLE （完整層級）  
+ SQL_CDO_CONSTRAINT_INITIALLY_DEFERRED(全級別)SQL_CDO_CONSTRAINT_INITIALLY_IMMEDIATE(全級別)SQL_CDO_CONSTRAINT_DEFERRABLE(全級別)SQL_CDO_CONSTRAINT_NON_DEFERRABLE(全級)  
   
- 傳回值 "0" 表示不支援**CREATE DOMAIN**語句。  
+ 返回值"0"表示不支援 CREATE **DOMAIN**語句。  
   
- SQL_CREATE_SCHEMA （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，用來列舉**CREATE SCHEMA**語句中的子句（如 SQL-92 中所定義），資料來源支援。  
+ SQL_CREATE_SCHEMA(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了**創建 SCHEMA**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_CS_CREATE_SCHEMASQL_CS_AUTHORIZATIONSQL_CS_DEFAULT_CHARACTER_SET  
   
- 符合 SQL 92 中繼層級的驅動程式一律會傳回所支援的 SQL_CS_CREATE_SCHEMA 和 SQL_CS_AUTHORIZATION 選項。 這些也必須在 SQL-92 專案層級支援，但不一定是 SQL 語句。 符合 SQL 92 完整層級的驅動程式一律會傳回所有這些選項，並受到支援。  
+ SQL-92 符合級別的中間驅動程序將始終返回SQL_CS_CREATE_SCHEMA,並SQL_CS_AUTHORIZATION選項。 在 SQL-92 條目級別也必須支援這些語句,但不一定作為 SQL 語句。 SQL-92 完全符合級別的驅動程式將始終返回所有這些選項(如支援)。  
   
- SQL_CREATE_TABLE （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉在**CREATE TABLE**語句中的子句，如 SQL-92 中所定義，由資料來源支援。  
+ SQL_CREATE_TABLE(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了**創建表**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
- SQL_CT_CREATE_TABLE = 支援 CREATE TABLE 語句。 （進入層級）  
+ SQL_CT_CREATE_TABLE = 支援建立表語句。 (入門級)  
   
- SQL_CT_TABLE_CONSTRAINT = 支援指定資料表條件約束（FIPS 過渡層級）  
+ SQL_CT_TABLE_CONSTRAINT = 支援指定表規範(FIPS 過渡等級)  
   
- SQL_CT_CONSTRAINT_NAME_DEFINITION = \<條件約束名稱定義> 子句支援命名資料行和資料表條件約束（中繼層級）  
+ SQL_CT_CONSTRAINT_NAME_DEFINITION\<= 命名欄與表約束(中間等級)支援規範名稱定義>子句  
   
- 下列位指定建立臨時表的能力：  
+ 以下位指定建立暫存表的能力:  
   
- SQL_CT_COMMIT_PRESERVE = 已刪除的資料列會在認可時保留。 （完整層級）SQL_CT_COMMIT_DELETE = 已刪除的資料列會在認可時刪除。 （完整層級）SQL_CT_GLOBAL_TEMPORARY = 可以建立全域臨時表。 （完整層級）SQL_CT_LOCAL_TEMPORARY = 可以建立本機臨時表。 （完整層級）  
+ SQL_CT_COMMIT_PRESERVE = 刪除的行在提交時保留。 (全階)SQL_CT_COMMIT_DELETE = 刪除的行在提交時被刪除。 (全階)SQL_CT_GLOBAL_TEMPORARY = 可以建立全域臨時表。 (全階)SQL_CT_LOCAL_TEMPORARY = 可以創建本地臨時表。 (全階)  
   
- 下列位指定建立資料行條件約束的能力：  
+ 以下位指定建立欄位的限制的能力:  
   
- SQL_CT_COLUMN_CONSTRAINT = 支援指定資料行條件約束（FIPS 過渡層級） SQL_CT_COLUMN_DEFAULT = 支援指定資料行預設值（FIPS 過渡層級） SQL_CT_COLUMN_COLLATION = 指定資料行定序為支援（完整層級）  
+ SQL_CT_COLUMN_CONSTRAINT = 支援指定欄位約束(FIPS 過渡等級)SQL_CT_COLUMN_DEFAULT = 支援指定欄預設值 (FIPS 過渡等級) SQL_CT_COLUMN_COLLATION = 支援指定欄位規則(完整等級)  
   
- 如果支援指定資料行或資料表條件約束，下列位會指定支援的條件約束屬性：  
+ 如果支援指定欄位或表約束,則以下位指定受支援的約束屬性:  
   
- SQL_CT_CONSTRAINT_INITIALLY_DEFERRED （完整層級） SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE （完整層級） SQL_CT_CONSTRAINT_DEFERRABLE （完整層級） SQL_CT_CONSTRAINT_NON_DEFERRABLE （完整層級）  
+ SQL_CT_CONSTRAINT_INITIALLY_DEFERRED(全級別)SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE(全級別)SQL_CT_CONSTRAINT_DEFERRABLE(全級別)SQL_CT_CONSTRAINT_NON_DEFERRABLE(全級)  
   
- SQL_CREATE_TRANSLATION （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**CREATE 轉譯**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_CREATE_TRANSLATION(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了**創建轉換**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來判斷支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_CTR_CREATE_TRANSLATION  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回這些選項，並受到支援。 傳回值 "0" 表示不支援**CREATE 轉譯**語句。  
+ SQL-92 完全符合級別的驅動程式將始終返回這些選項(如支援)。 返回值"0"表示不支援 CREATE**轉換**語句。  
   
- SQL_CREATE_VIEW （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**CREATE VIEW**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_CREATE_VIEW(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉了**創建視圖**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_CV_CREATE_VIEWSQL_CV_CHECK_OPTIONSQL_CV_CASCADEDSQL_CV_LOCAL  
   
- 傳回值 "0" 表示不支援**CREATE VIEW**語句。  
+ 返回值"0"表示不支援 CREATE **VIEW**語句。  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回 SQL_CV_CREATE_VIEW 並支援 SQL_CV_CHECK_OPTION 選項。  
+ SQL-92 符合入門級的驅動程式將始終返回SQL_CV_CREATE_VIEW,並SQL_CV_CHECK_OPTION選項(  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回所有這些選項，並受到支援。  
+ SQL-92 完全符合級別的驅動程式將始終返回所有這些選項(如支援)。  
   
- SQL_CURSOR_COMMIT_BEHAVIOR （ODBC 1.0）  
- SQLUSMALLINT 值，指出**commit**作業如何影響資料來源中的資料指標和已備妥的語句（當您認可交易時，資料來源的行為）。  
+ SQL_CURSOR_COMMIT_BEHAVIOR(ODBC 1.0)  
+ SQLUSMALLINT 值,指示**COMMIT**操作如何影響數據源中的游標和已準備的語句(提交事務時數據源的行為)。  
   
- 這個屬性的值會反映下一個設定的目前狀態： SQL_COPT_SS_PRESERVE_CURSORS。  
+ 此屬性的值將反映下一個設置的當前狀態:SQL_COPT_SS_PRESERVE_CURSORS。  
   
- SQL_CB_DELETE = 關閉資料指標並刪除備妥的語句。 若要再次使用資料指標，應用程式必須 reprepare 和重新執行語句。  
+ SQL_CB_DELETE = 關閉遊標並刪除準備好的語句。 要再次使用遊標,應用程式必須重新準備並重新執行語句。  
   
- SQL_CB_CLOSE = 關閉資料指標。 對於備妥的語句，應用程式可以在語句上呼叫**SQLExecute** ，而不需要再次呼叫**SQLPrepare** 。 SQL ODBC 驅動程式的預設值為 SQL_CB_CLOSE。 這表示當您認可交易時，SQL ODBC 驅動程式會關閉您的資料指標。  
+ SQL_CB_CLOSE = 關閉游標。 對於準備好的語句,應用程式可以在語句上調用**SQLExecute,** 而無需再次調用**SQLPrepare。** SQL ODBC 驅動程式的預設值為SQL_CB_CLOSE。 這意味著 SQL ODBC 驅動程式將在提交事務時關閉游標。  
   
- SQL_CB_PRESERVE = 保留與**認可**作業之前相同位置的資料指標。 應用程式可以繼續提取資料，也可以在不重新準備語句的情況下，關閉資料指標並重新執行。  
+ SQL_CB_PRESERVE = 將游標保留在與**COMMIT**操作之前相同的位置。 應用程式可以繼續提取數據,也可以關閉游標並重新執行語句,而無需重新準備它。  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR （ODBC 1.0）  
- SQLUSMALLINT 值，指出**復原**作業如何影響資料來源中的資料指標和已備妥的語句：  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR(ODBC 1.0)  
+ SQLUSMALLINT 值,指示**ROLLBACK**操作如何影響資料來源中的遊標和已準備的語句:  
   
- SQL_CB_DELETE = 關閉資料指標並刪除備妥的語句。 若要再次使用資料指標，應用程式必須 reprepare 和重新執行語句。  
+ SQL_CB_DELETE = 關閉遊標並刪除準備好的語句。 要再次使用遊標,應用程式必須重新準備並重新執行語句。  
   
- SQL_CB_CLOSE = 關閉資料指標。 對於備妥的語句，應用程式可以在語句上呼叫**SQLExecute** ，而不需要再次呼叫**SQLPrepare** 。  
+ SQL_CB_CLOSE = 關閉游標。 對於準備好的語句,應用程式可以在語句上調用**SQLExecute,** 而無需再次調用**SQLPrepare。**  
   
- SQL_CB_PRESERVE = 保留與**復原**作業之前相同位置的資料指標。 應用程式可以繼續提取資料，或者可以在不 repreparing 的情況下，關閉游標並再次執行語句。  
+ SQL_CB_PRESERVE = 將游標保留在與**ROLLBACK**操作之前相同的位置。 應用程式可以繼續提取數據,也可以關閉游標並重新執行語句,而無需重新準備它。  
   
- SQL_CURSOR_SENSITIVITY （ODBC 3.0）  
- 指出資料指標敏感度支援的 SQLUINTEGER 值：  
+ SQL_CURSOR_SENSITIVITY (ODBC 3.0)  
+ 指示對游標敏感度的支援的 SQLUINTEGER 值:  
   
- SQL_INSENSITIVE = 語句控制碼上的所有資料指標都會顯示結果集，而不會反映相同交易內任何其他資料指標所做的任何變更。  
+ SQL_INSENSITIVE = 語句句柄上的所有遊標都顯示結果集,而不反映同一事務中任何其他游標對它所做的任何更改。  
   
- SQL_UNSPECIFIED = 未指定語句控制碼上的資料指標是否會讓相同交易內的另一個資料指標看到對結果集所做的變更。 語句控制碼上的資料指標可能會使無、部分或所有這類變更變成可見。  
+ SQL_UNSPECIFIED = 未指定語句句柄上的游標是否使同一事務中另一個游標對結果集所做的更改可見。 語句句柄上的游標可能使任何、某些或所有此類更改都變得可見。  
   
- SQL_SENSITIVE = 資料指標對於相同交易內的其他資料指標所做的變更很敏感。  
+ SQL_SENSITIVE = 游標對同一事務中其他游標所做的更改很敏感。  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回 SQL_UNSPECIFIED 選項（如受支援）。  
+ SQL-92 符合入門級的驅動程序將始終返回支援SQL_UNSPECIFIED選項。  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回支援的 SQL_INSENSITIVE 選項。  
+ SQL-92 完全符合級別的驅動程式將始終返回支援SQL_INSENSITIVE選項。  
   
- SQL_DATA_SOURCE_NAME （ODBC 1.0）  
- 具有連接期間所使用之資料來源名稱的字元字串。 如果應用程式呼叫**SQLConnect**，這就是*szDSN*引數的值。 如果應用程式呼叫**SQLDriverConnect**或**SQLBrowseConnect**，這就是傳遞給驅動程式之連接字串中的 DSN 關鍵字值。 如果連接字串未包含**DSN**關鍵字（例如，當它包含**DRIVER**關鍵字時），這就是空字串。  
+ SQL_DATA_SOURCE_NAME(ODBC 1.0)  
+ 連線期間使用的具有資料源名稱的字串。 如果應用程式稱為**SQLConnect**,則這是*szDSN*參數的值。 如果應用程式稱為**SQLDriverConnect**或**SQLBrowseConnect,** 則這是傳遞給驅動程式的連接字串中的 DSN 關鍵字的值。 如果連接字串不包含**DSN**關鍵字(例如,當它包含**DRIVER**關鍵字時),則這是一個空字串。  
   
- SQL_DATA_SOURCE_READ_ONLY （ODBC 1.0）  
- 字元字串。 如果資料來源設定為唯讀模式，則為 "Y"，否則為 "N"。  
+ SQL_DATA_SOURCE_READ_ONLY(ODBC 1.0)  
+ 字元字串。 如果數據源設置為"唯讀"模式,"N"(如果是否則)。  
   
- 此特性僅適用于資料來源本身;它不是可讓您存取資料來源之驅動程式的特性。 讀取/寫入的驅動程式可以搭配唯讀的資料來源使用。 如果驅動程式是唯讀的，其所有資料來源都必須是唯讀的，而且必須傳回 SQL_DATA_SOURCE_READ_ONLY。  
+ 此特性僅與數據源本身有關;它不是啟用對數據源的驅動程式的特徵。 讀/寫驅動程式可與唯讀的資料來源一起使用。 如果驅動程式是唯讀的,則其所有資料源都必須為唯讀,並且必須返回SQL_DATA_SOURCE_READ_ONLY。  
   
- SQL_DATABASE_NAME （ODBC 1.0）  
- 如果資料來源定義名為 "database" 的命名物件，則為具有目前使用中資料庫名稱的字元字串。  
+ SQL_DATABASE_NAME(ODBC 1.0)  
+ 如果數據來源定義名為「資料庫」的命名物件,則具有目前資料庫名稱的字串。  
   
 > [!NOTE]
->  在 ODBC 3.x*中，也*可以藉由呼叫具有 SQL_ATTR_CURRENT_CATALOG 之*屬性*引數的**SQLGetConnectAttr** ，來傳回此*InfoType*傳回的值。  
+>  在 ODBC 3 *.x*中,還可以透過呼叫**SQLGetConnectAttr**傳回此*InfoType*傳回的值,該*參數的屬性*參數為SQL_ATTR_CURRENT_CATALOG。  
   
- SQL_DATETIME_LITERALS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉資料來源所支援的 SQL-92 日期時間常值。 請注意，這些是以 SQL-92 規格列出的日期時間常值，而且與 ODBC 所定義的日期時間常值 escape 子句不同。 如需 ODBC datetime 常值 escape 子句的詳細資訊，請參閱[日期、時間和時間戳記常](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)值。  
+ SQL_DATETIME_LITERALS(ODBC 3.0)  
+ 一個 SQLUINTEGER 位罩,枚舉資料來源支援的 SQL-92 約會時間文本。 請注意,這些是 SQL-92 規範中列出的日期時間文本,與 ODBC 定義的日期時間文本轉義子句是分開的。 有關 ODBC 日期時間文字轉義子句的詳細資訊,請參閱[日期、時間和時間戳文字](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
   
- 符合 FIPS 轉換等級的驅動程式一律會針對下列清單中的位，傳回位元遮罩中的 "1" 值。 值為 "0" 表示不支援 SQL-92 日期時間常值。  
+ FIPS 過渡電平一致性驅動程式將始終返回位掩碼中以下清單中位的"1"值。 值"0"表示不支援 SQL-92 約會時間文本。  
   
- 下列位元遮罩是用來決定支援的常值：  
+ 以下位遮罩支援哪些文字:  
   
  SQL_DL_SQL92_DATESQL_DL_SQL92_TIMESQL_DL_SQL92_TIMESTAMPSQL_DL_SQL92_INTERVAL_YEARSQL_DL_SQL92_INTERVAL_MONTHSQL_DL_SQL92_INTERVAL_DAYSQL_DL_SQL92_INTERVAL_HOURSQL_DL_SQL92_INTERVAL_MINUTESQL_DL_SQL92_INTERVAL_SECONDSQL_DL_SQL92_INTERVAL_YEAR_TO_MONTHSQL_DL_SQL92_INTERVAL_DAY_TO_HOUR  
   
  SQL_DL_SQL92_INTERVAL_DAY_TO_MINUTESQL_DL_SQL92_INTERVAL_DAY_TO_SECONDSQL_DL_SQL92_INTERVAL_HOUR_TO_MINUTESQL_DL_SQL92_INTERVAL_HOUR_TO_SECONDSQL_DL_SQL92_INTERVAL_MINUTE_TO_SECOND  
   
- SQL_DBMS_NAME （ODBC 1.0）  
- 具有驅動程式所存取之 DBMS 產品名稱的字元字串。  
+ SQL_DBMS_NAME(ODBC 1.0)  
+ 驅動程式訪問的帶有 DBMS 產品名稱的字串。  
   
- SQL_DBMS_VER （ODBC 1.0）  
- 表示驅動程式所存取之 DBMS 產品版本的字元字串。 版本的格式為 # #. # #. # # # #，其中前兩個數字是主要版本，接下來兩個數字是次要版本，而最後四個數字是發行版本。 驅動程式必須以這種形式轉譯 DBMS 產品版本，但也可以附加 DBMS 產品特定版本。 例如，"04.01.0000 Rdb 4.1"。  
+ SQL_DBMS_VER(ODBC 1.0)  
+ 指示驅動程式訪問的 DBMS 產品版本的字串。 版本是表單[.]*,其中前兩位數位是主要版本,后兩位數位是次要版本,最後四位數位是發佈版本。 驅動程序必須在此窗體中呈現 DBMS 產品版本,但還可以追加特定於 DBMS 的產品版本。 例如,"04.01.0000 Rdb 4.1"。  
   
- SQL_DDL_INDEX （ODBC 3.0）  
- 表示支援建立和卸載索引的 SQLUINTEGER 值：  
+ SQL_DDL_INDEX(ODBC 3.0)  
+ 指示對索引建立與刪除的 SQLUINTEGER 值:  
   
  SQL_DI_CREATE_INDEXSQL_DI_DROP_INDEX  
   
- SQL_DEFAULT_TXN_ISOLATION （ODBC 1.0）  
- SQLUINTEGER 值，指出驅動程式或資料來源所支援的預設交易隔離等級，如果資料來源不支援交易，則為零。 下列詞彙可用來定義交易隔離等級：  
+ SQL_DEFAULT_TXN_ISOLATION(ODBC 1.0)  
+ 一個 SQLUINTEGER 值,指示驅動程式或數據源支援的預設事務隔離等級,如果數據源不支援事務,則為零。 以下字語用於定義事務隔離等級:  
   
- 中途**讀取**交易1會變更資料列。 交易2會在交易1認可變更之前讀取已變更的資料列。 如果交易1回復變更，交易2就會讀取被視為從未存在的資料列。  
+ **髒讀**事務 1 更改一行。 事務 2 在事務 1 提交更改之前讀取已更改的行。 如果事務 1 回滾更改,事務 2 將讀取被認為從未存在的行。  
   
- **不可重複讀取**交易1讀取資料列。 Transaction 2 會更新或刪除該資料列，並認可這種變更。 如果交易1嘗試重新讀取資料列，則會收到不同的資料列值，或發現資料列已被刪除。  
+ **無法重複讀取**事務 1 讀取一行。 事務2 更新或刪除該行並提交此更改。 如果事務 1 嘗試重讀該行,它將接收不同的行值或發現該行已被刪除。  
   
- **** 虛設交易1會讀取符合某些搜尋條件的一組資料列。 交易2會產生符合搜尋條件的一或多個資料列（透過插入或更新）。 如果交易 1 reexecutes 讀取資料列的語句，就會收到一組不同的資料列。  
+ **幻影**事務 1 讀取一組滿足某些搜尋條件的行。 事務 2 生成一個或多個行(通過插入或更新)與搜索條件匹配。 如果事務 1 重新執行讀取行的語句,它將接收一組不同的行。  
   
- 如果資料來源支援交易，驅動程式會傳回下列其中一個位元遮罩：  
+ 如果資料來源支援事務,驅動程式將傳回以下位遮罩之一:  
   
- SQL_TXN_READ_UNCOMMITTED = 可能是中途讀取、不可重複讀取及幻像。  
+ SQL_TXN_READ_UNCOMMITTED = 髒讀、不可重複讀取和幻像是可能的。  
   
- SQL_TXN_READ_COMMITTED = 不可能進行中途讀取。 不可重複讀取和幻像是可行的。  
+ SQL_TXN_READ_COMMITTED = 無法進行髒讀。 不可重複讀取和幻像是可能的。  
   
- SQL_TXN_REPEATABLE_READ = 不可能發生中途讀取和不可重複讀取。 可以是幻像。  
+ SQL_TXN_REPEATABLE_READ = 無法進行髒讀和不可重複讀取。 幻影是可能的。  
   
- SQL_TXN_SERIALIZABLE = 交易可序列化。 Serializable 交易不允許中途讀取、不可重複讀取或幻像。  
+ SQL_TXN_SERIALIZABLE = 事務是可序列化的。 可序列化事務不允許髒讀、不可重複讀取或幻象。  
   
- SQL_DESCRIBE_PARAMETER （ODBC 3.0）  
- 字元字串：如果可以描述參數，則為 "Y";"N"，否則為。  
+ SQL_DESCRIBE_PARAMETER(ODBC 3.0)  
+ 字元字串:「Y」,如果參數可以描述;"N",如果不是。  
   
- SQL-92 完整層級一致的驅動程式通常會傳回 "Y"，因為它會支援**描述輸入**語句。 不過，這並不會直接指定基礎 SQL 支援，但可能不支援描述參數，即使是在符合 SQL-92 的完整層級驅動程式中也一樣。  
+ SQL-92 完全符合電平的驅動程式通常會返回"Y",因為它將支援 DESCRIBE **INPUT**語句。 但是,由於這不能直接指定基礎 SQL 支援,因此即使在 SQL-92 完全符合級別的驅動程式中,也不支援描述參數。  
   
- SQL_DM_VER （ODBC 3.0）  
- 具有驅動程式管理員版本的字元字串。 版本的格式為 # #. # #. # # # #. # # # #，其中：  
+ SQL_DM_VER(ODBC 3.0)  
+ 具有驅動程式管理器版本的字串。 版本是表單 [.]*,其中:  
   
- 第一組的兩個數字是主要的 ODBC 版本，如同常數 SQL_SPEC_MAJOR 所提供的。  
+ 第一組兩位數位是主要 ODBC 版本,由常量SQL_SPEC_MAJOR給出。  
   
- 第二組的兩個數字是次要的 ODBC 版本，如同常數 SQL_SPEC_MINOR 所提供的。  
+ 第二組兩位數位是次要 ODBC 版本,由常量SQL_SPEC_MINOR給出。  
   
- 第三組的四個數字是驅動程式管理員的主要組建編號。  
+ 第三組四位數位是驅動程式管理器的主要內部版本號。  
   
- 最後一組四個數字是驅動程式管理員的次要組建編號。  
+ 最後一組四位數位是驅動程式管理員的次要內部版本號。  
   
- Windows 7 驅動程式管理員版本為03.80。 Windows 8 驅動程式管理員版本為03.81。  
+ Windows 7 驅動程式管理器版本是 03.80。 Windows 8 驅動程式管理器版本是 03.81。  
   
- SQL_DRIVER_AWARE_POOLING_SUPPORTED （ODBC 3.8）  
- SQLUINTEGER 值，指出驅動程式是否支援可感知驅動程式的共用。 （如需詳細資訊，請參閱可[感知驅動程式的連接](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)共用。  
+ SQL_DRIVER_AWARE_POOLING_SUPPORTED (ODBC 3.8)  
+ 一個 SQLUINTEGER 值,指示驅動程式是否支援驅動程式感知池。 (有關詳細資訊,請參閱[驅動程式感知連接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。  
   
- SQL_DRIVER_AWARE_POOLING_CAPABLE 指出驅動程式可以支援可感知驅動程式的共用機制。  
+ SQL_DRIVER_AWARE_POOLING_CAPABLE表示驅動程式可以支援驅動程式感知池機制。  
   
- SQL_DRIVER_AWARE_POOLING_NOT_CAPABLE 指出驅動程式無法支援可感知驅動程式的共用機制。  
+ SQL_DRIVER_AWARE_POOLING_NOT_CAPABLE表示驅動程式不支援驅動程式感知池機制。  
   
- 驅動程式不需要執行 SQL_DRIVER_AWARE_POOLING_SUPPORTED，驅動程式管理員將不會接受驅動程式的傳回值。  
+ 驅動程式不需要實現SQL_DRIVER_AWARE_POOLING_SUPPORTED,駕駛員管理器將不尊重驅動程式的返回值。  
   
- SQL_DRIVER_HDBCSQL_DRIVER_HENV （ODBC 1.0）  
- SQLULEN 值，驅動程式的環境控制碼或連接控制碼，由引數*InfoType*決定。  
+ SQL_DRIVER_HDBCSQL_DRIVER_HENV(ODBC 1.0)  
+ SQLULEN 值,驅動程式的環境句柄或連接句柄,由參數*InfoType*確定。  
   
- 這些資訊類型是由驅動程式管理員單獨執行。  
+ 這些信息類型僅由驅動程式管理員實現。  
   
- SQL_DRIVER_HDESC （ODBC 3.0）  
- 驅動程式管理員的描述項控制碼所決定的 SQLULEN 值，其必須從應用程式傳入\* *InfoValuePtr*中的輸入。 在此情況下， *InfoValuePtr*同時為輸入和輸出引數。 傳入\* *InfoValuePtr*的輸入描述元控制碼必須已明確或隱含配置在*ConnectionHandle*上。  
+ SQL_DRIVER_HDESC(ODBC 3.0)  
+ SQLULEN 值,驅動程式的描述符句柄由驅動程式管理員的描述符句柄確定,必須\*在*應用程式中的 InfoValuePtr*中的輸入傳遞該值。 在這種情況下 *,InfoValuePtr*既是輸入參數,也是輸出參數。 在\**InfoValuePtr*中傳遞的輸入描述符句柄必須在*ConnectHandle*上顯式或隱式分配。  
   
- 應用程式應該在使用此資訊類型呼叫**SQLGetInfo**之前，建立驅動程式管理員的描述項控制碼複本，以確保在輸出時不會覆寫該控制碼。  
+ 應用程式應在使用此資訊類型呼叫**SQLGetInfo**之前複製驅動程式管理器的描述符句柄,以確保該句柄不會在輸出時覆蓋。  
   
- 此資訊類型是由驅動程式管理員單獨執行。  
+ 此資訊類型僅由驅動程式管理員實現。  
   
- SQL_DRIVER_HLIB （ODBC 2.0）  
- SQLULEN 值、載入程式庫中的*hinst*在載入 Microsoft Windows 作業系統上的驅動程式 DLL 時傳回給驅動程式管理員，或在另一個作業系統上的對等。 控制碼僅適用于呼叫**SQLGetInfo**時所指定的連接控制碼。  
+ SQL_DRIVER_HLIB(ODBC 2.0)  
+ SQLULEN 值,載入庫中*的 hinst*在 Microsoft Windows 作業系統上載入驅動程式 DLL 或在另一個作業系統上載入驅動程式 DLL 時傳回到驅動程式管理器。 該句柄僅對**SQLGetInfo**呼叫中指定的連接句柄有效。  
   
- 此資訊類型是由驅動程式管理員單獨執行。  
+ 此資訊類型僅由驅動程式管理員實現。  
   
- SQL_DRIVER_HSTMT （ODBC 1.0）  
- 驅動程式管理員語句控制碼所決定的 SQLULEN 值，驅動程式的語句控制碼，必須從應用程式傳入\* *InfoValuePtr*中的輸入。 在此情況下， *InfoValuePtr*同時為輸入和輸出引數。 傳入\* *InfoValuePtr*的輸入語句控制碼必須已配置在引數*ConnectionHandle*上。  
+ SQL_DRIVER_HSTMT(ODBC 1.0)  
+ SQLULEN 值,驅動程式語句句柄由驅動程式管理器語句句柄確定,必須\*在*應用程式中的 InfoValuePtr*中的輸入傳遞該值。 在這種情況下 *,InfoValuePtr*既是輸入參數,也是輸出參數。 \**在 InfoValuePtr*中傳遞的輸入語句句柄必須在參數*ConnectHandle*上分配。  
   
- 應用程式應該在使用此資訊類型呼叫**SQLGetInfo**之前，建立驅動程式管理員的語句控制碼複本，以確保在輸出時不會覆寫該控制碼。  
+ 應用程式應在使用此資訊類型調用**SQLGetInfo**之前複製驅動程式管理器的語句句柄,以確保該句柄不會在輸出時被覆蓋。  
   
- 此資訊類型是由驅動程式管理員單獨執行。  
+ 此資訊類型僅由驅動程式管理員實現。  
   
- SQL_DRIVER_NAME （ODBC 1.0）  
- 含有用來存取資料來源之驅動程式檔案名的字元字串。  
+ SQL_DRIVER_NAME(ODBC 1.0)  
+ 具有用於存取資料來源的驅動程式的檔案名的字串。  
   
- SQL_DRIVER_ODBC_VER （ODBC 2.0）  
- 具有驅動程式支援之 ODBC 版本的字元字串。 版本的格式為 # #. # #，其中前兩個數字是主要版本，而後面兩個數字是次要版本。 SQL_SPEC_MAJOR 和 SQL_SPEC_MINOR 定義主要和次要版本號碼。 針對本手冊中所述的 ODBC 版本，這些是3和0，而驅動程式應該會傳回 "03.00"。  
+ SQL_DRIVER_ODBC_VER(ODBC 2.0)  
+ 具有驅動程式支援的 ODBC 版本的字串。 版本是表單 #.#,其中前兩位數位是主要版本,後兩位數位是次要版本。 SQL_SPEC_MAJOR和SQL_SPEC_MINOR定義主要版本號和次要版本號。 對於本手冊中描述的 ODBC 版本,這些版本為 3 和 0,驅動程式應返回"03.00"。  
   
- ODBC 驅動程式管理員不會修改 SQLGetInfo （SQL_DRIVER_ODBC_VER）的傳回值，以維持現有應用程式的回溯相容性。 驅動程式會指定要傳回的值。 不過，當應用程式呼叫**SQLSetEnvAttr**以將 SQL_ATTR_ODBC_VERSION 設定為3.8 時，支援 C 資料類型擴充性的驅動程式必須傳回3.8 （或更高版本）。 如需詳細資訊，請參閱[ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
+ ODBC 驅動程式管理員不會修改 SQLGetInfo(SQL_DRIVER_ODBC_VER) 的傳回值,以保持現有應用程式的向後相容性。 驅動程式指定將返回的值。 但是,當應用程式調用**SQLSetEnvAttr**將SQL_ATTR_ODBC_VERSION設置為 3.8 時,支援 C 資料類型擴展性的驅動程式必須返回 3.8(或更高)。 關於詳細資訊,請參閱[ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
- SQL_DRIVER_VER （ODBC 1.0）  
- 含有驅動程式版本的字元字串，以及選擇性的驅動程式描述。 版本至少是 # #. # #. # # # # 形式，其中前兩個數字是主要版本，接下來兩個數字是次要版本，而最後四個數字是發行版本。  
+ SQL_DRIVER_VER(ODBC 1.0)  
+ 具有驅動程式版本和可選的驅動程式說明的字串。 至少,版本是窗體 [.]*,其中前兩位數位是主要版本,接下來的兩位數位是次要版本,最後四位數位是發佈版本。  
   
- SQL_DROP_ASSERTION （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP**判斷提示語句中的子句（如 SQL-92 中所定義，由資料來源所支援）。  
+ SQL_DROP_ASSERTION(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉在 SQL-92 中定義的**DROP ASSERTION**語句中子句,數據源支援。  
   
- 下列位元遮罩是用來判斷支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DA_DROP_ASSERTION  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回此選項支援。  
+ SQL-92 完全符合級別的驅動程式將始終返回此選項作為支援。  
   
- SQL_DROP_CHARACTER_SET （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP CHARACTER SET**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_DROP_CHARACTER_SET(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉在 SQL-92 中定義的**DROP 字元集**語句中子句,數據源支援。  
   
- 下列位元遮罩是用來判斷支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DCS_DROP_CHARACTER_SET  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回此選項支援。  
+ SQL-92 完全符合級別的驅動程式將始終返回此選項作為支援。  
   
- SQL_DROP_COLLATION （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP 定序**語句中的子句（如 SQL-92 中所定義，由資料來源所支援）。  
+ SQL_DROP_COLLATION(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉在 SQL-92 中定義的**DROP COLLATION**語句中子句,數據源支援。  
   
- 下列位元遮罩是用來判斷支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DC_DROP_COLLATION  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回此選項支援。  
+ SQL-92 完全符合級別的驅動程式將始終返回此選項作為支援。  
   
- SQL_DROP_DOMAIN （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP DOMAIN**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_DROP_DOMAIN(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**DROP DOMAIN**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DD_DROP_DOMAINSQL_DD_CASCADESQL_DD_RESTRICT  
   
- 符合 SQL 92 中繼層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ SQL-92 中間等級一致性驅動程序將始終返回所有這些選項(如支援)。  
   
- SQL_DROP_SCHEMA （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP SCHEMA**語句中的子句，如 SQL-92 中所定義，資料來源所支援。  
+ SQL_DROP_SCHEMA(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**DROP SCHEMA**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DS_DROP_SCHEMASQL_DS_CASCADESQL_DS_RESTRICT  
   
- 符合 SQL 92 中繼層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ SQL-92 中間等級一致性驅動程序將始終返回所有這些選項(如支援)。  
   
- SQL_DROP_TABLE （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP TABLE**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_DROP_TABLE(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**DROP TABLE**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DT_DROP_TABLESQL_DT_CASCADESQL_DT_RESTRICT  
   
- 符合 FIPS 轉換層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ FIPS 過渡電平符合性驅動程式將始終返回支援的所有這些選項。  
   
- SQL_DROP_TRANSLATION （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP 轉譯**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_DROP_TRANSLATION(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**DROP 轉換**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來判斷支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DTR_DROP_TRANSLATION  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回此選項支援。  
+ SQL-92 完全符合級別的驅動程式將始終返回此選項作為支援。  
   
- SQL_DROP_VIEW （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DROP VIEW**語句中的子句（如 SQL-92 中所定義），由資料來源支援。  
+ SQL_DROP_VIEW(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**DROP VIEW**語句中子句,如 SQL-92 中定義,由數據源支援。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
  SQL_DV_DROP_VIEWSQL_DV_CASCADESQL_DV_RESTRICT  
   
- 符合 FIPS 轉換層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ FIPS 過渡電平符合性驅動程式將始終返回支援的所有這些選項。  
   
- SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，描述驅動程式支援之動態資料指標的屬性。 此位元遮罩包含屬性的第一個子集;如需第二個子集，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES2。  
+ SQL_DYNAMIC_CURSOR_ATTRIBUTES1(ODBC 3.0)  
+ 一個 SQLUINTEGER 位罩,用於描述驅動程式支援的動態游標的屬性。 此位掩碼包含屬性的第一個子集;對於第二個子集,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES2。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
- SQL_CA1_NEXT = 當資料指標是動態資料指標時， **SQLFetchScroll**呼叫中支援 SQL_FETCH_NEXT 的*FetchOrientation*引數。  
+ SQL_CA1_NEXT = 當游標是動態游標時,對**SQLFetchScroll**的調用中支援SQL_FETCH_NEXT的*提取方向*參數。  
   
- 當資料指標是動態資料指標時， **SQLFetchScroll**呼叫中支援 SQL_FETCH_FIRST、SQL_FETCH_LAST 和 SQL_FETCH_ABSOLUTE 的*FetchOrientation*引數。 SQL_CA1_ABSOLUTE （將提取的資料列集與目前的資料指標位置無關）。  
+ SQL_CA1_ABSOLUTE = 當游標是動態游標時,對**SQLFetchScroll**的調用中支援 SQL_FETCH_FIRST、SQL_FETCH_LAST和SQL_FETCH_ABSOLUTE的*Fetch 方向*參數。 (要提取的行集與當前游標位置無關。  
   
- SQL_CA1_RELATIVE = 當資料指標是動態資料指標時， **SQLFetchScroll**呼叫中支援的 SQL_FETCH_PRIOR 和 SQL_FETCH_RELATIVE 的*FetchOrientation*引數。 （將會提取的資料列集取決於目前的資料指標位置。 請注意，這會與 SQL_FETCH_NEXT 分開，因為在順向資料指標中，只支援 SQL_FETCH_NEXT）。  
+ SQL_CA1_RELATIVE = 當游標是動態游標時,對**SQLFetchScroll**的調用中支援SQL_FETCH_PRIOR和SQL_FETCH_RELATIVE的*Fetch 方向*參數。 (要提取的行集取決於當前游標位置。 請注意,這與SQL_FETCH_NEXT分開,因為在僅轉發游標中,僅支援SQL_FETCH_NEXT。  
   
- SQL_CA1_BOOKMARK = 當資料指標是動態資料指標時， **SQLFetchScroll**呼叫中支援 SQL_FETCH_BOOKMARK 的*FetchOrientation*引數。  
+ SQL_CA1_BOOKMARK = 當游標是動態游標時,對**SQLFetchScroll**的調用中支援SQL_FETCH_BOOKMARK的*提取方向*參數。  
   
- SQL_CA1_LOCK_EXCLUSIVE = 當資料指標是動態資料指標時， **SQLSetPos**呼叫中支援 SQL_LOCK_EXCLUSIVE 的*LockType*引數。  
+ SQL_CA1_LOCK_EXCLUSIVE = 當游標是動態游標時,對**SQLSetPos**的調用中支援 SQL_LOCK_EXCLUSIVE的*LockType*參數。  
   
- SQL_CA1_LOCK_NO_CHANGE = 當資料指標是動態資料指標時， **SQLSetPos**呼叫中支援 SQL_LOCK_NO_CHANGE 的*LockType*引數。  
+ SQL_CA1_LOCK_NO_CHANGE = 當游標是動態游標時,對**SQLSetPos**的調用中支援 SQL_LOCK_NO_CHANGE的*LockType*參數。  
   
- SQL_CA1_LOCK_UNLOCK = 當資料指標是動態資料指標時， **SQLSetPos**呼叫中支援 SQL_LOCK_UNLOCK 的*LockType*引數。  
+ SQL_CA1_LOCK_UNLOCK = 當游標是動態游標時,對**SQLSetPos**的調用中支援 SQL_LOCK_UNLOCK的*LockType*參數。  
   
- SQL_CA1_POS_POSITION = 當資料指標是動態資料指標時，呼叫**SQLSetPos**時支援*SQL_POSITION 的作業引數*。  
+ SQL_CA1_POS_POSITION = 當游標是動態游標時,對**SQLSetPos**的調用中支援SQL_POSITION*的操作*參數。  
   
- SQL_CA1_POS_UPDATE = 當資料指標是動態資料指標時，呼叫**SQLSetPos**時支援*SQL_UPDATE 的作業引數*。  
+ SQL_CA1_POS_UPDATE = 當游標是動態游標時,對**SQLSetPos**的調用中支援SQL_UPDATE*的操作*參數。  
   
- SQL_CA1_POS_DELETE = 當資料指標是動態資料指標時，呼叫**SQLSetPos**時支援*SQL_DELETE 的作業引數*。  
+ SQL_CA1_POS_DELETE = 當游標是動態游標時,對**SQLSetPos**的調用中支援SQL_DELETE*的操作*參數。  
   
- SQL_CA1_POS_REFRESH = 當資料指標是動態資料指標時，呼叫**SQLSetPos**時支援*SQL_REFRESH 的作業引數*。  
+ SQL_CA1_POS_REFRESH = 當游標是動態游標時,對**SQLSetPos**的調用中支援SQL_REFRESH*的操作*參數。  
   
- SQL_CA1_POSITIONED_UPDATE = 當資料指標是動態資料指標時，支援目前 SQL 語句的更新。 （符合 SQL-92 專案層級的驅動程式一律會傳回此選項支援）。  
+ SQL_CA1_POSITIONED_UPDATE = 當游標是動態游標時,支援 SQL 語句的更新。 (SQL-92 符合入門級的驅動程序將始終返回此選項作為支援。  
   
- SQL_CA1_POSITIONED_DELETE = 刪除，當資料指標是動態資料指標時，就會支援目前的 SQL 語句。 （符合 SQL-92 專案層級的驅動程式一律會傳回此選項支援）。  
+ SQL_CA1_POSITIONED_DELETE = 當游標是動態游標時,支援 SQL 語句的刪除。 (SQL-92 符合入門級的驅動程序將始終返回此選項作為支援。  
   
- SQL_CA1_SELECT_FOR_UPDATE = 當資料指標是動態資料指標時，支援 UPDATE SQL 語句的 SELECT。 （符合 SQL-92 專案層級的驅動程式一律會傳回此選項支援）。  
+ SQL_CA1_SELECT_FOR_UPDATE = 當游標是動態游標時,支援選擇更新 SQL 語句。 (SQL-92 符合入門級的驅動程序將始終返回此選項作為支援。  
   
- SQL_CA1_BULK_ADD = 當資料指標是動態資料指標時，呼叫**SQLBulkOperations**時支援*SQL_ADD 的作業引數*。  
+ SQL_CA1_BULK_ADD = 當游標是動態游標時,對**SQLBulk 操作**的調用中支援SQL_ADD*的操作*參數。  
   
- SQL_CA1_BULK_UPDATE_BY_BOOKMARK = 當資料指標是動態資料指標時，呼叫**SQLBulkOperations**時支援*SQL_UPDATE_BY_BOOKMARK 的作業引數*。  
+ SQL_CA1_BULK_UPDATE_BY_BOOKMARK = 當游標是動態游標時,對**SQLBulk 操作**的調用支援SQL_UPDATE_BY_BOOKMARK*的操作*參數。  
   
- SQL_CA1_BULK_DELETE_BY_BOOKMARK = 當資料指標是動態資料指標時，呼叫**SQLBulkOperations**時支援*SQL_DELETE_BY_BOOKMARK 的作業引數*。  
+ SQL_CA1_BULK_DELETE_BY_BOOKMARK = 當游標是動態游標時,對**SQLBulk 操作**的調用中支援SQL_DELETE_BY_BOOKMARK*的操作*參數。  
   
- SQL_CA1_BULK_FETCH_BY_BOOKMARK = 當資料指標是動態資料指標時，呼叫**SQLBulkOperations**時支援*SQL_FETCH_BY_BOOKMARK 的作業引數*。  
+ SQL_CA1_BULK_FETCH_BY_BOOKMARK = 當游標是動態游標時,對**SQLBulk 操作**的調用中支援SQL_FETCH_BY_BOOKMARK*的操作*參數。  
   
- 符合 SQL 92 中繼層級的驅動程式通常會傳回所支援的 SQL_CA1_NEXT、SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 選項，因為它支援透過內嵌 SQL FETCH 語句的可滾動資料指標。 由於這不會直接判斷基礎 SQL 支援，因此，即使是 SQL-92 中繼層級一致的驅動程式，也可能不支援可滾動的資料指標。  
+ SQL-92 中間等級一致性驅動程式通常會返回支援SQL_CA1_NEXT、SQL_CA1_ABSOLUTE 和SQL_CA1_RELATIVE選項,因為它支援通過嵌入式 SQL FETCH 語句滾動遊標。 但是,由於這不能直接確定基礎 SQL 支援,因此即使對於 SQL-92 符合級別的驅動程式,也不支援可滾動遊標。  
   
- SQL_DYNAMIC_CURSOR_ATTRIBUTES2 （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，描述驅動程式支援之動態資料指標的屬性。 此位元遮罩包含屬性的第二個子集;如需第一個子集，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES1。  
+ SQL_DYNAMIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
+ 一個 SQLUINTEGER 位罩,用於描述驅動程式支援的動態游標的屬性。 此位掩碼包含屬性的第二個子集;有關第一個子集,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES1。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
- SQL_CA2_READ_ONLY_CONCURRENCY = 不允許任何更新的唯讀動態資料指標。 （SQL_ATTR_CONCURRENCY 語句屬性可以 SQL_CONCUR_READ_ONLY 動態資料指標）。  
+ SQL_CA2_READ_ONLY_CONCURRENCY = 支援唯讀動態遊標,不允許更新。 (可以SQL_CONCUR_READ_ONLY動態游標SQL_ATTR_CONCURRENCY語句屬性)。  
   
- SQL_CA2_LOCK_CONCURRENCY = 使用最低鎖定層級來確保可更新資料列的動態資料指標。 （SQL_ATTR_CONCURRENCY 語句屬性可以 SQL_CONCUR_LOCK 動態資料指標）。這些鎖定必須與 SQL_ATTR_TXN_ISOLATION 連接屬性所設定的交易隔離等級一致。  
+ SQL_CA2_LOCK_CONCURRENCY = 支援使用足夠確保可以更新行的最低水平的動態游標。 (可以SQL_CONCUR_LOCK動態游標SQL_ATTR_CONCURRENCY語句屬性。這些鎖必須與SQL_ATTR_TXN_ISOLATION連接屬性設置的事務隔離級別一致。  
   
- SQL_CA2_OPT_ROWVER_CONCURRENCY = 支援使用開放式並行存取控制來比較資料列版本的動態資料指標。 （SQL_ATTR_CONCURRENCY 語句屬性可以 SQL_CONCUR_ROWVER 動態資料指標）。  
+ SQL_CA2_OPT_ROWVER_CONCURRENCY = 支援使用比較行版本的樂觀併發控件的動態游標。 (可以SQL_CONCUR_ROWVERSQL_ATTR_CONCURRENCY語句屬性。  
   
- SQL_CA2_OPT_VALUES_CONCURRENCY = 支援使用開放式並行存取控制比較值的動態資料指標。 （SQL_ATTR_CONCURRENCY 語句屬性可以 SQL_CONCUR_VALUES 動態資料指標）。  
+ SQL_CA2_OPT_VALUES_CONCURRENCY = 支援使用樂觀併發控件比較值的動態游標。 (可以SQL_CONCUR_VALUESSQL_ATTR_CONCURRENCY語句屬性。  
   
- SQL_CA2_SENSITIVITY_ADDITIONS = 動態資料指標可以看到已加入的資料列;游標可以滾動到那些資料列。 （這些資料列會加入至與驅動程式相關的資料指標）。  
+ SQL_CA2_SENSITIVITY_ADDITIONS = 添加的行對動態游標可見;游標可以滾動到這些行。 (將這些行添加到游標的位置與驅動程序相關。  
   
- SQL_CA2_SENSITIVITY_DELETIONS = 已刪除的資料列無法再供動態資料指標使用，而且不會在結果集中留下「洞」;動態資料指標從已刪除的資料列中滾動之後，就無法返回該資料列。  
+ SQL_CA2_SENSITIVITY_DELETIONS = 已刪除的行不再可用於動態游標,並且不會在結果集中留下「孔」;動態游標從已刪除的行滾動後,無法返回到該行。  
   
- SQL_CA2_SENSITIVITY_UPDATES = 動態資料指標可以看到資料列的更新;如果動態資料指標從中滾動並返回更新的資料列，則資料指標所傳回的資料就是更新的資料，而不是原始資料。  
+ SQL_CA2_SENSITIVITY_UPDATES = 對行的更新對動態游標可見;如果動態游標從中滾動並返回到更新的行,則游標返回的數據是更新的數據,而不是原始數據。  
   
- SQL_CA2_MAX_ROWS_SELECT = 當資料指標是動態資料指標時，SQL_ATTR_MAX_ROWS 語句屬性會影響**SELECT**語句。  
+ SQL_CA2_MAX_ROWS_SELECT = 當游標是動態游標時,SQL_ATTR_MAX_ROWS語句屬性會影響**SELECT**語句。  
   
- SQL_CA2_MAX_ROWS_INSERT = 當資料指標是動態資料指標時，SQL_ATTR_MAX_ROWS 語句屬性會影響**INSERT**語句。  
+ SQL_CA2_MAX_ROWS_INSERT = 當游標是動態游標時,SQL_ATTR_MAX_ROWS語句屬性會影響**INSERT**語句。  
   
- SQL_CA2_MAX_ROWS_DELETE = 當資料指標是動態資料指標時，SQL_ATTR_MAX_ROWS 語句屬性會影響**DELETE**語句。  
+ SQL_CA2_MAX_ROWS_DELETE = 當游標是動態游標時,SQL_ATTR_MAX_ROWS語句屬性會影響**DELETE**語句。  
   
- SQL_CA2_MAX_ROWS_UPDATE = 當資料指標是動態資料指標時，SQL_ATTR_MAX_ROWS 語句屬性會影響**UPDATE**語句。  
+ SQL_CA2_MAX_ROWS_UPDATE = 當游標是動態游標時,SQL_ATTR_MAX_ROWS語句屬性會影響**UPDATE**語句。  
   
- SQL_CA2_MAX_ROWS_CATALOG = 當資料指標是動態資料指標時，SQL_ATTR_MAX_ROWS 語句屬性會影響**目錄**結果集。  
+ SQL_CA2_MAX_ROWS_CATALOG = 當游標是動態游標時,SQL_ATTR_MAX_ROWS語句屬性會影響**CATALOG**結果集。  
   
- SQL_CA2_MAX_ROWS_AFFECTS_ALL = 當資料指標是動態資料指標時，SQL_ATTR_MAX_ROWS 語句屬性會影響**SELECT**、 **INSERT**、 **DELETE**和**UPDATE**語句，以及**目錄**結果集。  
+ SQL_CA2_MAX_ROWS_AFFECTS_ALL = 當游標是動態游標時,SQL_ATTR_MAX_ROWS語句屬性**CATALOG****SELECT**會影響**SELECT、INSERT、DELETE**和**UPDATE**語句以及**DELETE**CATALOG 結果集。  
   
- SQL_CA2_CRC_EXACT = 當資料指標是動態資料指標時，[SQL_DIAG_CURSOR_ROW_COUNT 診斷] 欄位中可以使用精確的資料列計數。  
+ SQL_CA2_CRC_EXACT = 當游標是動態游標時,SQL_DIAG_CURSOR_ROW_COUNT診斷欄位中提供準確的行計數。  
   
- SQL_CA2_CRC_APPROXIMATE = 當資料指標是動態資料指標時，[SQL_DIAG_CURSOR_ROW_COUNT 診斷] 欄位中提供大約的資料列計數。  
+ SQL_CA2_CRC_APPROXIMATE = 當游標是動態游標時,SQL_DIAG_CURSOR_ROW_COUNT診斷欄位中有近似行計數可用。  
   
- SQL_CA2_SIMULATE_NON_UNIQUE = 驅動程式不保證當資料指標是動態資料指標時，模擬的定點更新或刪除語句將只會影響一個資料列;應用程式必須負責確保這一點。 （如果語句會影響一個以上的資料列， **SQLExecute**或**SQLEXECDIRECT**會傳回 SQLSTATE 01001 [資料指標作業衝突]）。若要設定此行為，應用程式會呼叫**SQLSetStmtAttr** ，並將 SQL_ATTR_SIMULATE_CURSOR 屬性設為 SQL_SC_NON_UNIQUE。  
+ SQL_CA2_SIMULATE_NON_UNIQUE = 驅動程式不保證當游標是動態游標時,類比定位更新或刪除語句僅影響一行;保證這是應用程序的責任。 (如果語句影響多行 **,SQLExecute**或**SQLExecDirect**將返回 SQLSTATE 01001 [Cursor 操作衝突]。要設置此行為,應用程式調用**SQLSetStmtAttr,SQL_ATTR_SIMULATE_CURSOR**屬性設置為SQL_SC_NON_UNIQUE。  
   
- SQL_CA2_SIMULATE_TRY_UNIQUE = 驅動程式會嘗試保證當資料指標是動態資料指標時，模擬的定點更新或刪除語句將只會影響一個資料列。 驅動程式一律會執行這類語句，即使它們可能會影響一個以上的資料列，例如沒有唯一索引鍵時。 （如果語句會影響一個以上的資料列， **SQLExecute**或**SQLEXECDIRECT**會傳回 SQLSTATE 01001 [資料指標作業衝突]）。若要設定此行為，應用程式會呼叫**SQLSetStmtAttr** ，並將 SQL_ATTR_SIMULATE_CURSOR 屬性設為 SQL_SC_TRY_UNIQUE。  
+ SQL_CA2_SIMULATE_TRY_UNIQUE = 驅動程式嘗試保證當游標是動態游標時,類比定位更新或刪除語句僅影響一行。 驅動程序始終執行此類語句,即使它們可能會影響多個行,例如沒有唯一鍵時。 (如果語句影響多行 **,SQLExecute**或**SQLExecDirect**將返回 SQLSTATE 01001 [Cursor 操作衝突]。要設置此行為,應用程式將**SQLSetStmtAttr**調用,SQL_ATTR_SIMULATE_CURSOR屬性設置為SQL_SC_TRY_UNIQUE。  
   
- SQL_CA2_SIMULATE_UNIQUE = 驅動程式保證當資料指標是動態資料指標時，模擬的定點更新或刪除語句將只會影響一個資料列。 如果驅動程式無法保證指定語句的這個， **SQLExecDirect**或**SQLPREPARE**會傳回 SQLSTATE 01001 （資料指標操作衝突）。 若要設定此行為，應用程式會呼叫**SQLSetStmtAttr** ，並將 SQL_ATTR_SIMULATE_CURSOR 屬性設為 SQL_SC_UNIQUE。  
+ SQL_CA2_SIMULATE_UNIQUE = 驅動程式保證當游標是動態游標時,類比定位更新或刪除語句將僅影響一行。 如果驅動程式無法保證給定語句的此操作 **,SQLExecDirect**或**SQLPrepare**返回 SQLSTATE 01001(Cursor 操作衝突)。 要設置此行為,應用程式調用**SQLSetStmtAttr,SQL_ATTR_SIMULATE_CURSOR**屬性設置為SQL_SC_UNIQUE。  
   
- SQL_EXPRESSIONS_IN_ORDERBY （ODBC 1.0）  
- 字元字串：如果資料來源支援**ORDER BY**清單中的運算式，則為 "Y";如果不是，則為 "N"。  
+ SQL_EXPRESSIONS_IN_ORDERBY(ODBC 1.0)  
+ 字串:如果資料源支援 ORDER BY 列表中的運算式,則為"Y";如果數據源支援**ORDER BY**列表中的運算式,則為"Y";"N",如果它沒有。  
   
- SQL_FILE_USAGE （ODBC 2.0）  
- SQLUSMALLINT 值，指出單一層驅動程式如何直接處理資料來源中的檔案：  
+ SQL_FILE_USAGE(ODBC 2.0)  
+ SQLUSMALLINT 值,指示單層驅動程式如何直接處理資料來源中的檔案:  
   
- SQL_FILE_NOT_SUPPORTED = 驅動程式不是一層式驅動程式。 例如，ORACLE 驅動程式是兩層式的驅動程式。  
+ SQL_FILE_NOT_SUPPORTED = 驅動程式不是單層驅動程式。 例如,ORACLE 驅動程式是雙層驅動程式。  
   
- SQL_FILE_TABLE = 單一層驅動程式會將資料來源中的檔案視為資料表。 例如，Xbase 驅動程式會將每個 Xbase 檔案視為一個資料表。  
+ SQL_FILE_TABLE = 單層驅動程式將資料來源中的檔案視為表。 例如,Xbase 驅動程式將每個 Xbase 檔案視為表。  
   
- SQL_FILE_CATALOG = 單一層驅動程式會將資料來源中的檔案視為目錄。 例如，Microsoft Access 驅動程式會將每個 Microsoft Access 檔案視為完整的資料庫。  
+ SQL_FILE_CATALOG = 單層驅動程式將資料來源中的檔案視為目錄。 例如,Microsoft Access 驅動程式將每個 Microsoft Access 檔案視為一個完整的資料庫。  
   
- 應用程式可能會使用此來判斷使用者如何選取資料。 例如，Xbase 使用者通常會將資料視為儲存在檔案中，而 ORACLE 和 Microsoft Access 使用者通常會將資料視為儲存在資料表中。  
+ 應用程式可能用它來確定使用者如何選擇數據。 例如,Xbase 使用者通常認為數據存儲在檔中,而 ORACLE 和 Microsoft Access 使用者通常認為數據存儲在表中。  
   
- 當使用者選取 Xbase 資料來源時，應用程式可能會顯示 [Windows 檔案**開啟**通用] 對話方塊;當使用者選取 Microsoft Access 或 ORACLE 資料來源時，應用程式可能會顯示自訂的 [**選取資料表**] 對話方塊。  
+ 當使用者選擇 Xbase 資料來源時,應用程式可以顯示 Windows 檔打開通用對話框;當使用者選擇 Xbase 資料來源時,應用程式可以顯示「Windows**檔案打開**」通用對話框。當使用者選擇 Microsoft Access 或 ORACLE 數據源時,應用程式可以顯示自定義**選擇表**對話方塊。  
   
- SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1 （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，描述驅動程式所支援之順向資料指標的屬性。 此位元遮罩包含屬性的第一個子集;如需第二個子集，請參閱 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2。  
+ SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1(ODBC 3.0)  
+ 一個 SQLUINTEGER 位罩,用於描述驅動程式支援的僅轉發游標的屬性。 此位掩碼包含屬性的第一個子集;對於第二個子集,請參閱SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
  SQL_CA1_NEXTSQL_CA1_LOCK_EXCLUSIVESQL_CA1_LOCK_NO_CHANGESQL_CA1_LOCK_UNLOCKSQL_CA1_POS_POSITIONSQL_CA1_POS_UPDATESQL_CA1_POS_DELETESQL_CA1_POS_REFRESHSQL_CA1_POSITIONED_UPDATESQL_CA1_POSITIONED_DELETESQL_CA1_SELECT_FOR_UPDATESQL_CA1_BULK_ADDSQL_CA1_BULK_UPDATE_BY_BOOKMARKSQL_CA1_BULK_DELETE_BY_BOOKMARKSQL_CA1_BULK_FETCH_BY_BOOKMARK  
   
- 如需這些位元遮罩的說明，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （並在描述中，將「順向資料指標」替換為「動態資料指標」）。  
+ 有關這些位掩碼的說明,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES1(並在說明中用"僅前進游標"代替"動態游標")。  
   
- SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2 （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，描述驅動程式所支援之順向資料指標的屬性。 此位元遮罩包含屬性的第二個子集;如需第一個子集，請參閱 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1。  
+ SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2(ODBC 3.0)  
+ 一個 SQLUINTEGER 位罩,用於描述驅動程式支援的僅轉發游標的屬性。 此位掩碼包含屬性的第二個子集;對於第一個子集,請參閱SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
  SQL_CA2_READ_ONLY_CONCURRENCYSQL_CA2_LOCK_CONCURRENCYSQL_CA2_OPT_ROWVER_CONCURRENCYSQL_CA2_OPT_VALUES_CONCURRENCYSQL_CA2_SENSITIVITY_ADDITIONSSQL_CA2_SENSITIVITY_DELETIONSSQL_CA2_SENSITIVITY_UPDATESSQL_CA2_MAX_ROWS_SELECTSQL_CA2_MAX_ROWS_INSERTSQL_CA2_MAX_ROWS_DELETESQL_CA2_MAX_ROWS_UPDATESQL_CA2_MAX_ROWS_CATALOGSQL_CA2_MAX_ROWS_AFFECTS_ALLSQL_CA2_CRC_EXACTSQL_CA2_CRC_APPROXIMATESQL_CA2_SIMULATE_NON_UNIQUESQL_CA2_SIMULATE_TRY_UNIQUESQL_CA2_SIMULATE_UNIQUE  
   
- 如需這些位元遮罩的說明，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES2 （並在描述中，將「順向資料指標」替換為「動態資料指標」）。  
+ 有關這些位掩碼的說明,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES2(並在說明中用"僅前進游標"代替"動態游標")。  
   
- SQL_GETDATA_EXTENSIONS （ODBC 2.0）  
- SQLUINTEGER 的位元遮罩，列舉要**SQLGetData**的延伸。  
+ SQL_GETDATA_EXTENSIONS(ODBC 2.0)  
+ SQLUINTEGER 位掩碼枚舉到**SQLGetData**上。  
   
- 下列位元遮罩會與旗標一起使用，以判斷驅動程式支援哪些通用延伸模組來進行**SQLGetData**：  
+ 以下位遮罩與旗標一起使用,以確定驅動程式支援**SQLGetData**的通用延伸:  
   
- SQL_GD_ANY_COLUMN = **SQLGetData**可以針對任何未系結的資料行呼叫，包括最後一個系結資料行之前的資料行。 請注意，除非也傳回 SQL_GD_ANY_ORDER，否則必須以遞增的資料行編號順序來呼叫資料行。  
+ SQL_GD_ANY_COLUMN = **SQLGetData**可以調用任何未綁定列,包括最後一個綁定列之前的列。 請注意,除非還返回SQL_GD_ANY_ORDER,否則必須按升序按列數的順序調用列。  
   
- 您可以依任何順序，針對未系結的資料行呼叫 SQL_GD_ANY_ORDER = **SQLGetData** 。 請注意，除非也傳回 SQL_GD_ANY_COLUMN，否則只能針對最後一個系結資料行之後的資料行呼叫**SQLGetData** 。  
+ SQL_GD_ANY_ORDER = **SQLGetData**可以按任意順序調用未綁定列。 請注意,除非還返回SQL_GD_ANY_COLUMN,否則只能為最後一個綁定列之後的列調用**SQLGetData。**  
   
- 在使用**SQLSetPos**定位至該資料列之後，可以針對區塊中的任何資料列中的未系結資料行呼叫 SQL_GD_BLOCK = **SQLGetData** （其中資料列集大小大於1）。  
+ SQL_GD_BLOCK = **SQLGetData**在使用**SQLSetPos**定位到該行後,可以調用數據塊中的任何行中的未綁定列(其中行集大小大於 1) 的數據。  
   
- 除了未系結的資料行之外，也可以針對系結的資料行呼叫 SQL_GD_BOUND = **SQLGetData** 。 驅動程式無法傳回此值，除非它也會傳回 SQL_GD_ANY_COLUMN。  
+ SQL_GD_BOUND = 除了未綁定列之外,還可以為綁定列調用**SQLGetData。** 驅動程式無法返回此值,除非它還返回SQL_GD_ANY_COLUMN。  
   
- SQL_GD_OUTPUT_PARAMS = **SQLGetData**可以呼叫以傳回輸出參數值。 如需詳細資訊，請參閱[使用 SQLGetData 抓取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
+ 可以調用 SQL_GD_OUTPUT_PARAMS = **SQLGetData**來傳回輸出參數值。 有關詳細資訊,請參閱使用[SQLGetData 檢索輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
- 只有在最後一個系結資料行之後所呼叫的未系結資料行中，才需要**SQLGetData** ，才會傳回資料。  
+ **SQLGetData**需要僅從最後一個綁定列之後發生的未綁定列返回數據,按增加列數的順序調用,並且不在行塊中的行中。  
   
- 如果驅動程式支援書簽（固定長度或可變長度），它必須支援在資料行0上呼叫**SQLGetData** 。 無論使用 SQL_GETDATA_EXTENSIONS *InfoType*呼叫**SQLGetInfo**時，驅動程式傳回的內容為何，都需要這項支援。  
+ 如果驅動程式支援書籤(固定長度或可變長度),則必須支援在列 0 上調用**SQLGetData。** 無論驅動程式返回什麼來調用**SQLGetInfo,SQL_GETDATA_EXTENSIONS** *InfoType*都需要什麼,都需要這種支援。  
   
- SQL_GROUP_BY （ODBC 2.0）  
- SQLUSMALLINT 值，指定**GROUP BY**子句中的資料行與選取清單中的非匯總資料行之間的關聯性：  
+ SQL_GROUP_BY(ODBC 2.0)  
+ SQLUSMALLINT 值,用於指定**GROUP BY**子句中的列與選擇清單中的非聚合列之間的關係:  
   
- SQL_GB_COLLATE = 可以在每個群組資料行的結尾指定**COLLATE**子句。 （ODBC 3.0）  
+ SQL_GB_COLLATE = 可以在每個分組列的末尾指定**COLLATE**子句。 (ODBC 3.0)  
   
- SQL_GB_NOT_SUPPORTED = **GROUP BY**子句不受支援。 （ODBC 2.0）  
+ 不支援SQL_GB_NOT_SUPPORTED =**組 BY**子句。 (ODBC 2.0)  
   
- SQL_GB_GROUP_BY_EQUALS_SELECT = **GROUP by**子句必須包含選取清單中的所有非匯總資料行。 它不能包含任何其他資料行。 例如，**選取 [員工] 群組中的 [部門]、[最大值（薪資）**]。 （ODBC 2.0）  
+ SQL_GB_GROUP_BY_EQUALS_SELECT = **GROUP BY**子句必須包含選擇清單中的所有非聚合列。 它不能包含任何其他列。 例如,**按部門從員工組中選擇部門、最大值(工資)。** (ODBC 2.0)  
   
- SQL_GB_GROUP_BY_CONTAINS_SELECT = **GROUP by**子句必須包含選取清單中的所有非匯總資料行。 它可以包含不在選取清單中的資料行。 例如，**選取 [員工] 群組中的 [部門]、[最大值（薪資）]、[年齡**]。 （ODBC 2.0）  
+ SQL_GB_GROUP_BY_CONTAINS_SELECT = **GROUP BY**子句必須包含選擇清單中的所有非聚合列。 它可以包含不在選擇清單中的欄。 例如,**按部門、年齡從員工組中選擇部門、最高(工資)。** (ODBC 2.0)  
   
- SQL_GB_NO_RELATION = **GROUP by**子句中的資料行與選取清單不相關。 在選取清單中，nongrouped、非匯總資料行的意義與資料來源相關。 例如，**選取 [部門]、[員工] 群組中的 [薪資]、[年齡**]。 （ODBC 2.0）  
+ SQL_GB_NO_RELATION = GROUP **BY**子句中的列和選擇清單中的列不相關。 選擇清單中非分組的非聚合列的含義與數據源相關。 例如,**依單位、年齡從員工群組中選擇部門、薪酬**。 (ODBC 2.0)  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回 SQL_GB_GROUP_BY_EQUALS_SELECT 選項（如受支援）。 符合 SQL 92 完整層級的驅動程式一律會傳回支援的 SQL_GB_COLLATE 選項。 如果不支援任何選項，則資料來源不支援**GROUP by**子句。  
+ SQL-92 符合入門級的驅動程序將始終返回支援SQL_GB_GROUP_BY_EQUALS_SELECT選項。 SQL-92 完全符合級別的驅動程式將始終返回支援SQL_GB_COLLATE選項。 如果沒有支援任何選項,資料源不支援**GROUP BY**子句。  
   
- SQL_IDENTIFIER_CASE （ODBC 1.0）  
- SQLUSMALLINT 值，如下所示：  
+ SQL_IDENTIFIER_CASE(ODBC 1.0)  
+ SQLUSMALLINT 值如下所示:  
   
- SQL_IC_UPPER = SQL 中的識別碼不區分大小寫，而且會以大寫儲存在系統目錄中。  
+ SQL_IC_UPPER = SQL 中的識別碼不區分大小寫,儲存在系統目錄中的大寫中。  
   
- SQL_IC_LOWER = SQL 中的識別碼不區分大小寫，而且在系統目錄中是以小寫的方式儲存。  
+ SQL_IC_LOWER = SQL 中的識別碼不區分大小寫,儲存在系統目錄中的小寫中。  
   
- SQL_IC_SENSITIVE = SQL 中的識別碼會區分大小寫，並以混合大小寫儲存在系統目錄中。  
+ SQL_IC_SENSITIVE = SQL 中的識別碼區分大小寫,儲存在系統目錄中的混合情況下。  
   
- SQL_IC_MIXED = SQL 中的識別碼不區分大小寫，而且會以混合大小寫儲存在系統目錄中。  
+ SQL_IC_MIXED = SQL 中的識別碼不區分大小寫,儲存在系統目錄中的混合情況下。  
   
- 由於 SQL-92 中的識別碼永遠不會區分大小寫，因此嚴格符合 SQL-92 （任何層級）的驅動程式將永遠不會傳回所支援的 SQL_IC_SENSITIVE 選項。  
+ 由於 SQL-92 中的標識符從不區分大小寫,因此嚴格遵循 SQL-92(任何級別)的驅動程式永遠不會返回受支援的SQL_IC_SENSITIVE選項。  
   
- SQL_IDENTIFIER_QUOTE_CHAR （ODBC 1.0）  
- 在 SQL 語句中用來當做加上引號（分隔）識別碼之開始和結束分隔符號的字元字串。 （當做引數傳遞至 ODBC 函式的識別碼不需要加上引號）。如果資料來源不支援引號識別碼，則會傳回空白。  
+ SQL_IDENTIFIER_QUOTE_CHAR(ODBC 1.0)  
+ 用作 SQL 語句中引用(分隔)識別符的開始和結束分隔符號的字串。 (作為 ODBC 函數的參數傳遞給的標識符不必引用。如果數據源不支援引號標識符,則返回空白。  
   
- 當連接屬性 SQL_ATTR_METADATA_ID 設定為 SQL_TRUE 時，這個字元字串也可以用來括住目錄函式引數。  
+ 當連接屬性SQL_ATTR_METADATA_ID設置為SQL_TRUE時,此字串還可用於引用目錄函數參數。  
   
- 由於 SQL-92 中的識別碼引號字元是雙引號（"），因此嚴格符合 SQL-92 的驅動程式一律會傳回雙引號字元。  
+ 由於 SQL-92 中的標識符引號字元是雙引號 (),因此嚴格遵守 SQL-92 的驅動程式將始終返回雙引號字元。  
   
- SQL_INDEX_KEYWORDS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，可列舉驅動程式所支援之 CREATE INDEX 語句中的關鍵字：  
+ SQL_INDEX_KEYWORDS(ODBC 3.0)  
+ SQLUINTEGER 位罩,用於枚舉驅動程式支援的 CREATE INDEX 語句中的關鍵字:  
   
  SQL_IK_NONE = 不支援任何關鍵字。  
   
- 支援 SQL_IK_ASC = ASC 關鍵字。  
+ SQL_IK_ASC = 支援 ASC 關鍵字。  
   
- 支援 SQL_IK_DESC = DESC 關鍵字。  
+ SQL_IK_DESC = 支援 DESC 關鍵字。  
   
- SQL_IK_ALL = 支援所有關鍵詞。  
+ SQL_IK_ALL = 支援所有關鍵字。  
   
- 若要查看是否支援 CREATE INDEX 語句，應用程式會使用 SQL_DLL_INDEX 資訊類型來呼叫**SQLGetInfo** 。  
+ 要查看是否支援 CREATE INDEX 語句,應用程式使用SQL_DLL_INDEX資訊類型呼叫**SQLGetInfo。**  
   
- SQL_INFO_SCHEMA_VIEWS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉驅動程式支援的 INFORMATION_SCHEMA 中的 views。 中的 views 和的內容，INFORMATION_SCHEMA 如 SQL-92 中所定義。  
+ SQL_INFO_SCHEMA_VIEWS(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式支援的INFORMATION_SCHEMA中的視圖。 INFORMATION_SCHEMA中的檢視和內容在 SQL-92 中定義。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來決定支援的視圖：  
+ 以下位遮罩支援哪些檢視:  
   
- SQL_ISV_ASSERTIONS = 識別指定使用者所擁有的目錄判斷提示。 （完整層級）  
+ SQL_ISV_ASSERTIONS = 標識由給定用戶擁有的目錄斷言。 (全階)  
   
- SQL_ISV_CHARACTER_SETS = 識別可由指定使用者存取的目錄字元集。 （中繼層級）  
+ SQL_ISV_CHARACTER_SETS = 識別給定使用者可以存取的目錄的字元集。 (中級)  
   
- SQL_ISV_CHECK_CONSTRAINTS = 識別指定使用者所擁有的 CHECK 條件約束。 （中繼層級）  
+ SQL_ISV_CHECK_CONSTRAINTS = 標識給定用戶擁有的 CHECK 約束。 (中級)  
   
- SQL_ISV_COLLATIONS = 識別可由指定使用者存取之類別目錄的字元定序。 （完整層級）  
+ SQL_ISV_COLLATIONS = 標識給定使用者可以存取的目錄的字元排序規則。 (全階)  
   
- SQL_ISV_COLUMN_DOMAIN_USAGE = 識別目錄的資料行，其相依于目錄中定義且由指定使用者所擁有的網域。 （中繼層級）  
+ SQL_ISV_COLUMN_DOMAIN_USAGE = 標識目錄的列,這些列取決於目錄中定義的域,並且由給定用戶擁有。 (中級)  
   
- SQL_ISV_COLUMN_PRIVILEGES = 識別可由指定使用者存取或授與之持續性資料表的資料行許可權。 （FIPS 過渡層級）  
+ SQL_ISV_COLUMN_PRIVILEGES = 標識給定使用者可用或授予的持久表列上的許可權。 (FIPS 過渡等級)  
   
- SQL_ISV_COLUMNS = 識別可由指定使用者存取之持續性資料表的資料行。 （FIPS 過渡層級）  
+ SQL_ISV_COLUMNS = 標識給定使用者可以存取的持久表的列。 (FIPS 過渡等級)  
   
- SQL_ISV_CONSTRAINT_COLUMN_USAGE = 類似 CONSTRAINT_TABLE_USAGE view，會針對指定使用者所擁有的各種條件約束來識別資料行。 （中繼層級）  
+ SQL_ISV_CONSTRAINT_COLUMN_USAGE = 與CONSTRAINT_TABLE_USAGE視圖類似,列標識給定用戶擁有的各種約束。 (中級)  
   
- SQL_ISV_CONSTRAINT_TABLE_USAGE = 識別由條件約束（參考、唯一和判斷提示）所使用的資料表，且由指定使用者所擁有。 （中繼層級）  
+ SQL_ISV_CONSTRAINT_TABLE_USAGE = 標識約束(引用、唯一和斷言)使用的表,並且由給定用戶擁有。 (中級)  
   
- SQL_ISV_DOMAIN_CONSTRAINTS = 識別可由指定使用者存取的網域條件約束（屬於目錄中的網域）。 （中繼層級）  
+ SQL_ISV_DOMAIN_CONSTRAINTS = 標識給定使用者可以存取的網域約束(目錄中的網域)。 (中級)  
   
- SQL_ISV_DOMAINS = 識別在目錄中所定義的網域，而使用者可以存取該目錄。 （中繼層級）  
+ SQL_ISV_DOMAINS = 識別目錄中定義的使用者可以存取的網域。 (中級)  
   
- SQL_ISV_KEY_COLUMN_USAGE = 識別目錄中定義的資料行，這些資料行會受到指定使用者的索引鍵限制。 （中繼層級）  
+ SQL_ISV_KEY_COLUMN_USAGE = 標識目錄中定義的由給定用戶作為鍵約束的列。 (中級)  
   
- SQL_ISV_REFERENTIAL_CONSTRAINTS = 識別指定使用者所擁有的參考條件約束。 （中繼層級）  
+ SQL_ISV_REFERENTIAL_CONSTRAINTS = 標識給定用戶擁有的引用約束。 (中級)  
   
- SQL_ISV_SCHEMATA = 識別指定使用者所擁有的架構。 （中繼層級）  
+ SQL_ISV_SCHEMATA = 標識給定用戶擁有的架構。 (中級)  
   
- SQL_ISV_SQL_LANGUAGES = 識別 sql 執行所支援的 SQL 一致性層級、選項和方言。 （中繼層級）  
+ SQL_ISV_SQL_LANGUAGES = 識別 SQL 支援支援的 SQL 一致性等級、選項和方言。 (中級)  
   
- SQL_ISV_TABLE_CONSTRAINTS = 識別指定使用者所擁有的資料表條件約束。 （中繼層級）  
+ SQL_ISV_TABLE_CONSTRAINTS = 標識給定用戶擁有的表約束。 (中級)  
   
- SQL_ISV_TABLE_PRIVILEGES = 識別可由指定使用者存取或授與之持續性資料表的許可權。 （FIPS 過渡層級）  
+ SQL_ISV_TABLE_PRIVILEGES = 標識給定使用者可用或授予的持久表上的許可權。 (FIPS 過渡等級)  
   
- SQL_ISV_TABLES = 識別在目錄中所定義且可由指定使用者存取的持續性資料表。 （FIPS 過渡層級）  
+ SQL_ISV_TABLES = 標識目錄中定義的持久表,該表可以由給定用戶訪問。 (FIPS 過渡等級)  
   
- SQL_ISV_TRANSLATIONS = 識別可由指定使用者存取之目錄的字元翻譯。 （完整層級）  
+ SQL_ISV_TRANSLATIONS = 標識給定使用者可以存取的目錄的字元轉換。 (全階)  
   
- SQL_ISV_USAGE_PRIVILEGES = 識別指定的使用者可以使用或擁有之目錄物件的許可權。 （FIPS 過渡層級）  
+ SQL_ISV_USAGE_PRIVILEGES = 識別給定使用者可用或擁有的目錄物件的 USAGE 許可權。 (FIPS 過渡等級)  
   
- SQL_ISV_VIEW_COLUMN_USAGE = 識別由指定使用者所擁有之目錄的瀏覽器所相依的資料行。 （中繼層級）  
+ SQL_ISV_VIEW_COLUMN_USAGE = 標識給定用戶擁有的目錄視圖所依賴的列。 (中級)  
   
- SQL_ISV_VIEW_TABLE_USAGE = 識別由指定使用者所擁有之目錄的瀏覽器所相依的資料表。 （中繼層級）  
+ SQL_ISV_VIEW_TABLE_USAGE = 標識給定用戶擁有的目錄視圖所依賴的表。 (中級)  
   
- SQL_ISV_VIEWS = 識別此目錄中所定義且可由指定使用者存取的已查看資料表。 （FIPS 過渡層級）  
+ SQL_ISV_VIEWS = 識別此目錄中定義的由給定使用者可以訪問的已查看的表。 (FIPS 過渡等級)  
   
- SQL_INSERT_STATEMENT （ODBC 3.0）  
- 指出**INSERT**語句支援的 SQLUINTEGER 位元遮罩：  
+ SQL_INSERT_STATEMENT(ODBC 3.0)  
+ 指示對**插入**語句支援的 SQLUINTEGER 位元遮罩:  
   
  SQL_IS_INSERT_LITERALS  
   
@@ -1149,660 +1149,660 @@ SQLRETURN SQLGetInfo(
   
  SQL_IS_SELECT_INTO  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ SQL-92 符合入門級的驅動程序將始終返回所有這些選項(如支援)。  
   
- SQL_INTEGRITY （ODBC 1.0）  
- 字元字串： "Y" （如果資料來源支援完整性增強功能）。如果不是，則為 "N"。  
+ SQL_INTEGRITY(ODBC 1.0)  
+ 字串:如果數據源支援完整性增強工具,則為「Y」;"N",如果它沒有。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_ODBC_SQL_OPT_IEF 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_ODBC_SQL_OPT_IEF重命名為 ODBC 3.0。  
   
- SQL_KEYSET_CURSOR_ATTRIBUTES1 （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，描述驅動程式支援的索引鍵集資料指標的屬性。 此位元遮罩包含屬性的第一個子集;如需第二個子集，請參閱 SQL_KEYSET_CURSOR_ATTRIBUTES2。  
+ SQL_KEYSET_CURSOR_ATTRIBUTES1(ODBC 3.0)  
+ 一個 SQLUINTEGER 位罩,用於描述驅動程式支援的鍵集游標的屬性。 此位掩碼包含屬性的第一個子集;對於第二個子集,請參閱SQL_KEYSET_CURSOR_ATTRIBUTES2。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
  SQL_CA1_NEXTSQL_CA1_ABSOLUTESQL_CA1_RELATIVESQL_CA1_BOOKMARKSQL_CA1_LOCK_EXCLUSIVESQL_CA1_LOCK_NO_CHANGESQL_CA1_LOCK_UNLOCKSQL_CA1_POS_POSITIONSQL_CA1_POS_UPDATESQL_CA1_POS_DELETESQL_CA1_POS_REFRESHSQL_CA1_POSITIONED_UPDATESQL_CA1_POSITIONED_DELETESQL_CA1_SELECT_FOR_UPDATESQL_CA1_BULK_ADDSQL_CA1_BULK_UPDATE_BY_BOOKMARKSQL_CA1_BULK_DELETE_BY_BOOKMARKSQL_CA1_BULK_FETCH_BY_BOOKMARK  
   
- 如需這些位元遮罩的說明，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （並在描述中，將「金鑰集驅動資料指標」取代為「動態資料指標」）。  
+ 有關這些位掩碼的說明,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES1(並在說明中用"鍵集驅動游標"代替"動態游標")。  
   
- SQL-92 中繼層級一致的驅動程式通常會傳回所支援的 SQL_CA1_NEXT、SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 選項，因為驅動程式支援透過內嵌 SQL FETCH 語句的可滾動資料指標。 由於這不會直接判斷基礎 SQL 支援，因此，即使是 SQL-92 中繼層級一致的驅動程式，也可能不支援可滾動的資料指標。  
+ SQL-92 中間等級一致性驅動程式通常會返回SQL_CA1_NEXT、SQL_CA1_ABSOLUTE和SQL_CA1_RELATIVE選項(如支援),因為驅動程式支援通過嵌入式 SQL FETCH 語句滾動遊標。 但是,由於這不能直接確定基礎 SQL 支援,因此即使對於 SQL-92 符合級別的驅動程式,也不支援可滾動遊標。  
   
- SQL_KEYSET_CURSOR_ATTRIBUTES2 （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，描述驅動程式支援的索引鍵集資料指標的屬性。 此位元遮罩包含屬性的第二個子集;如需第一個子集，請參閱 SQL_KEYSET_CURSOR_ATTRIBUTES1。  
+ SQL_KEYSET_CURSOR_ATTRIBUTES2(ODBC 3.0)  
+ 一個 SQLUINTEGER 位罩,用於描述驅動程式支援的鍵集游標的屬性。 此位掩碼包含屬性的第二個子集;有關第一個子集,請參閱SQL_KEYSET_CURSOR_ATTRIBUTES1。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
  SQL_CA2_READ_ONLY_CONCURRENCYSQL_CA2_LOCK_CONCURRENCYSQL_CA2_OPT_ROWVER_CONCURRENCYSQL_CA2_OPT_VALUES_CONCURRENCYSQL_CA2_SENSITIVITY_ADDITIONSSQL_CA2_SENSITIVITY_DELETIONSSQL_CA2_SENSITIVITY_UPDATESSQL_CA2_MAX_ROWS_SELECTSQL_CA2_MAX_ROWS_INSERTSQL_CA2_MAX_ROWS_DELETESQL_CA2_MAX_ROWS_UPDATESQL_CA2_MAX_ROWS_CATALOGSQL_CA2_MAX_ROWS_AFFECTS_ALLSQL_CA2_CRC_EXACTSQL_CA2_CRC_APPROXIMATESQL_CA2_SIMULATE_NON_UNIQUESQL_CA2_SIMULATE_TRY_UNIQUESQL_CA2_SIMULATE_UNIQUE  
   
- 如需這些位元遮罩的說明，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （並在描述中，將「金鑰集驅動資料指標」取代為「動態資料指標」）。  
+ 有關這些位掩碼的說明,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES1(並在說明中用"鍵集驅動游標"代替"動態游標")。  
   
- SQL_KEYWORDS （ODBC 2.0）  
- 包含所有資料來源特定關鍵字之逗號分隔清單的字元字串。 此清單不包含資料來源和 ODBC 所使用之 ODBC 或關鍵字特有的關鍵字。 此清單代表所有保留關鍵字;互通的應用程式不應該在物件名稱中使用這些字。  
+ SQL_KEYWORDS(ODBC 2.0)  
+ 包含所有資料來源特定關鍵字的逗號分隔清單的字串。 此清單不包含特定於 ODBC 的關鍵字或資料源和 ODBC 使用的關鍵字。 此清單表示所有保留的關鍵字;可互通的應用程式不應在物件名稱中使用這些單詞。  
   
- 如需 ODBC 關鍵字的清單，請參閱[附錄 C： SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)中的[保留關鍵字](../../../odbc/reference/appendixes/reserved-keywords.md)。 **#Define**值 SQL_ODBC_KEYWORDS 包含以逗號分隔的 ODBC 關鍵字清單。  
+ 有關 ODBC 關鍵字的清單,請參閱附錄 C 中的[保留關鍵字](../../../odbc/reference/appendixes/reserved-keywords.md)[:SQL 語法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 **#define**值SQL_ODBC_KEYWORDS包含 ODBC 關鍵字的逗號分隔清單。  
   
  附錄 C：SQL 文法  
   
- SQL_LIKE_ESCAPE_CLAUSE （ODBC 2.0）  
- 字元字串：如果資料來源支援百分比字元（%）的 escape 字元，則為 "Y"**like**述詞中的和底線字元（_），而驅動程式支援 ODBC 語法來定義**like**述詞 escape 字元;否則為 "N"。  
+ SQL_LIKE_ESCAPE_CLAUSE(ODBC 2.0)  
+ 字串:如果數據源支援百分比字元 (%) 的轉義字元,"Y"和下劃線字元 (*) 在**LIKE**謂詞和驅動程式支援 ODBC 語法定義**LIKE**謂詞轉義字元;否則為"N"。  
   
- SQL_MAX_ASYNC_CONCURRENT_STATEMENTS （ODBC 3.0）  
- SQLUINTEGER 值，指定在非同步模式中，驅動程式可以在指定連接上支援的作用中並行語句數目上限。 如果沒有特定限制，或限制不明，則此值為零。  
+ SQL_MAX_ASYNC_CONCURRENT_STATEMENTS(ODBC 3.0)  
+ SQLUINTEGER 值,用於指定驅動程式在給定連接上支援的最大活動併發語句數。 如果沒有特定限制或限制未知,則此值為零。  
   
- SQL_MAX_BINARY_LITERAL_LEN （ODBC 2.0）  
- SQLUINTEGER 值，指定 SQL 語句中二進位常值的最大長度（十六進位字元數，但不包括**SQLGetTypeInfo**所傳回的常值前置詞和尾碼）。 例如，二進位常值0xFFAA 的長度為4。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_BINARY_LITERAL_LEN(ODBC 2.0)  
+ SQLUINTEGER 值,用於指定 SQL 語句中二進位元文字的最大長度(十六進位元數,不包括**SQLGetTypeInfo**返回的文本首碼和後綴)。 例如,二進位文本 0xFFAA 的長度為 4。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- SQL_MAX_CATALOG_NAME_LEN （ODBC 1.0）  
- SQLUSMALLINT 值，指定資料來源中目錄名稱的最大長度。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_CATALOG_NAME_LEN(ODBC 1.0)  
+ 指定數據源中目錄名稱的最大長度的 SQLUSMALLINT 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- 符合 FIPS 的完整層級驅動程式至少會傳回128。  
+ FIPS 全電平符合性驅動程式將返回至少 128。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_MAX_QUALIFIER_NAME_LEN 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_MAX_QUALIFIER_NAME_LEN重新命名為 ODBC 3.0。  
   
- SQL_MAX_CHAR_LITERAL_LEN （ODBC 2.0）  
- SQLUINTEGER 值，指定 SQL 語句中字元常值的最大長度（字元數，但不包括**SQLGetTypeInfo**所傳回的常值前置詞和尾碼）。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_CHAR_LITERAL_LEN(ODBC 2.0)  
+ SQLUINTEGER 值,用於指定 SQL 語句中字元文字的最大長度(字元數,不包括**SQLGetTypeInfo**傳回的文字前置碼和後綴)。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- SQL_MAX_COLUMN_NAME_LEN （ODBC 1.0）  
- SQLUSMALLINT 值，指定資料來源中資料行名稱的最大長度。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_COLUMN_NAME_LEN(ODBC 1.0)  
+ 指定數據源中列名的最大長度的 SQLUSMALLINT 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式將會傳回至少18個。 符合 FIPS 中繼層級的驅動程式至少會傳回128。  
+ FIPS 符合等級的驅動程式將返回至少 18 個。 FIPS 中級電平符合性驅動程式將返回至少 128。  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY （ODBC 2.0）  
- SQLUSMALLINT 值，指定**GROUP BY**子句中允許的最大資料行數目。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_COLUMNS_IN_GROUP_BY(ODBC 2.0)  
+ 指定**GROUP BY**子句中允許的最大列數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式至少會傳回6。 符合 FIPS 中繼層級的驅動程式會傳回至少15個。  
+ FIPS 符合等級的驅動程式將返回至少6個。 FIPS 中級級別符合要求的驅動程式將返回至少 15 個。  
   
- SQL_MAX_COLUMNS_IN_INDEX （ODBC 2.0）  
- SQLUSMALLINT 值，指定索引中允許的最大資料行數目。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_COLUMNS_IN_INDEX(ODBC 2.0)  
+ 指定索引中允許的最大列數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY （ODBC 2.0）  
- SQLUSMALLINT 值，指定**ORDER BY**子句中所允許的最大資料行數目。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_COLUMNS_IN_ORDER_BY(ODBC 2.0)  
+ 指定**ORDER BY**子句中允許的最大列數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式至少會傳回6。 符合 FIPS 中繼層級的驅動程式會傳回至少15個。  
+ FIPS 符合等級的驅動程式將返回至少6個。 FIPS 中級級別符合要求的驅動程式將返回至少 15 個。  
   
- SQL_MAX_COLUMNS_IN_SELECT （ODBC 2.0）  
- SQLUSMALLINT 值，指定選取清單中所允許的最大資料行數目。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_COLUMNS_IN_SELECT(ODBC 2.0)  
+ 指定選擇清單中允許的最大列數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式至少會傳回100。 符合 FIPS 中繼層級的驅動程式至少會傳回250。  
+ FIPS 符合等級的驅動程式將返回至少 100 個。 FIPS 中級電平符合性驅動程式將返回至少 250 個。  
   
- SQL_MAX_COLUMNS_IN_TABLE （ODBC 2.0）  
- SQLUSMALLINT 值，指定資料表中允許的最大資料行數目。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_COLUMNS_IN_TABLE(ODBC 2.0)  
+ 指定表中允許的最大列數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式至少會傳回100。 符合 FIPS 中繼層級的驅動程式至少會傳回250。  
+ FIPS 符合等級的驅動程式將返回至少 100 個。 FIPS 中級電平符合性驅動程式將返回至少 250 個。  
   
- SQL_MAX_CONCURRENT_ACTIVITIES （ODBC 1.0）  
- SQLUSMALLINT 值，指定驅動程式可支援連接的最大使用中語句數目。 如果語句具有暫止的結果，且「結果」一詞表示**選取**作業的資料列，或受**插入**、**更新**或**刪除**作業影響的資料列（例如資料列計數），或如果處於 NEED_DATA 狀態，就會定義為使用中。 這個值可以反映驅動程式或資料來源所加諸的限制。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_CONCURRENT_ACTIVITIES(ODBC 1.0)  
+ SQLUSMALLINT 值,用於指定驅動程式可以支援連接的最大活動語句數。 如果語句的結果掛起,則語句定義為活動,術語"結果"表示**SELECT**操作中的行或受**INSERT、UPDATE**或**DELETE**操作(如行計數)影響的行,或者如果該**UPDATE**語句處於NEED_DATA狀態。 此值可以反映驅動程式或數據源施加的限制。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_ACTIVE_STATEMENTS 重新命名為 odbc 3.0。  
+ 此*資訊類型*已重新命名為 ODBC 3.0 從 ODBC 2.0*資訊類型*SQL_ACTIVE_STATEMENTS。  
   
- SQL_MAX_CURSOR_NAME_LEN （ODBC 1.0）  
- SQLUSMALLINT 值，指定資料來源中游標名稱的最大長度。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_CURSOR_NAME_LEN(ODBC 1.0)  
+ 指定數據源中游標名稱的最大長度的 SQLUSMALLINT 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式將會傳回至少18個。 符合 FIPS 中繼層級的驅動程式至少會傳回128。  
+ FIPS 符合等級的驅動程式將返回至少 18 個。 FIPS 中級電平符合性驅動程式將返回至少 128。  
   
- SQL_MAX_DRIVER_CONNECTIONS （ODBC 1.0）  
- SQLUSMALLINT 值，指定驅動程式可以為環境支援的作用中連接數目上限。 這個值可以反映驅動程式或資料來源所加諸的限制。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_DRIVER_CONNECTIONS(ODBC 1.0)  
+ SQLUSMALLINT 值,用於指定驅動程式可以支援環境的最大活動連接數。 此值可以反映驅動程式或數據源施加的限制。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_ACTIVE_CONNECTIONS 重新命名為 odbc 3.0。  
+ 此*資訊類型*已重新命名為 ODBC 3.0 從 ODBC 2.0*資訊類型*SQL_ACTIVE_CONNECTIONS。  
   
- SQL_MAX_IDENTIFIER_LEN （ODBC 3.0）  
- SQLUSMALLINT，指出資料來源針對使用者定義名稱所支援的大小上限（以字元為單位）。  
+ SQL_MAX_IDENTIFIER_LEN(ODBC 3.0)  
+ 一種 SQLUSMALLINT,用於指示數據來源支援使用者定義名稱的最大大小字元。  
   
- 符合 FIPS 專案等級的驅動程式將會傳回至少18個。 符合 FIPS 中繼層級的驅動程式至少會傳回128。  
+ FIPS 符合等級的驅動程式將返回至少 18 個。 FIPS 中級電平符合性驅動程式將返回至少 128。  
   
- SQL_MAX_INDEX_SIZE （ODBC 2.0）  
- SQLUINTEGER 值，指定索引之合併欄位中所允許的最大位元組數目。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_INDEX_SIZE(ODBC 2.0)  
+ 指定索引組合欄位中允許的最大位元組數的 SQLUINTEGER 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- SQL_MAX_PROCEDURE_NAME_LEN （ODBC 1.0）  
- SQLUSMALLINT 值，指定資料來源中程式名稱的最大長度。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_PROCEDURE_NAME_LEN(ODBC 1.0)  
+ 指定數據源中過程名稱的最大長度的 SQLUSMALLINT 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- SQL_MAX_ROW_SIZE （ODBC 2.0）  
- SQLUINTEGER 值，指定資料表中單一資料列的最大長度。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_ROW_SIZE(ODBC 2.0)  
+ 指定表中單個行的最大長度的 SQLUINTEGER 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式至少會傳回2000。 符合 FIPS 中繼層級的驅動程式至少會傳回8000。  
+ FIPS 入門級符合要求的驅動程式將返回至少 2,000。 FIPS 中級級別符合要求的驅動程式將返回至少 8,000。  
   
- SQL_MAX_ROW_SIZE_INCLUDES_LONG （ODBC 3.0）  
- 字元字串：如果 SQL_MAX_ROW_SIZE 資訊類型傳回的最大資料列大小包含資料列中所有 SQL_LONGVARCHAR 和 SQL_LONGVARBINARY 資料行的長度，則為 "Y";否則為 "N"。  
+ SQL_MAX_ROW_SIZE_INCLUDES_LONG(ODBC 3.0)  
+ 字串:如果為SQL_MAX_ROW_SIZE資訊類型返回的最大行大小包括行中所有SQL_LONGVARCHAR和SQL_LONGVARBINARY列的長度,"Y";否則為"N"。  
   
- SQL_MAX_SCHEMA_NAME_LEN （ODBC 1.0）  
- SQLUSMALLINT 值，指定資料來源中架構名稱的最大長度。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_SCHEMA_NAME_LEN(ODBC 1.0)  
+ 指定數據源中架構名稱的最大長度的 SQLUSMALLINT 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式將會傳回至少18個。 符合 FIPS 中繼層級的驅動程式至少會傳回128。  
+ FIPS 符合等級的驅動程式將返回至少 18 個。 FIPS 中級電平符合性驅動程式將返回至少 128。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_MAX_OWNER_NAME_LEN 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_MAX_OWNER_NAME_LEN重新命名為 ODBC 3.0。  
   
- SQL_MAX_STATEMENT_LEN （ODBC 2.0）  
- SQLUINTEGER 值，指定 SQL 語句的最大長度（字元數目，包括空白字元）。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_STATEMENT_LEN(ODBC 2.0)  
+ 指定 SQL 語句的最大長度(字元數,包括空格)的 SQLUINTEGER 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- SQL_MAX_TABLE_NAME_LEN （ODBC 1.0）  
- SQLUSMALLINT 值，指定資料來源中資料表名稱的最大長度。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_TABLE_NAME_LEN(ODBC 1.0)  
+ 指定數據源中表名稱的最大長度的 SQLUSMALLINT 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式將會傳回至少18個。 符合 FIPS 中繼層級的驅動程式至少會傳回128。  
+ FIPS 符合等級的驅動程式將返回至少 18 個。 FIPS 中級電平符合性驅動程式將返回至少 128。  
   
- SQL_MAX_TABLES_IN_SELECT （ODBC 2.0）  
- SQLUSMALLINT 值，指定**SELECT**語句的**from**子句中所允許的最大資料表數目。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_MAX_TABLES_IN_SELECT(ODBC 2.0)  
+ 指定**SELECT**語句 FROM 的**FROM**子句中允許的最大表數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- 符合 FIPS 專案等級的驅動程式會傳回至少15個。 符合 FIPS 中繼層級的驅動程式至少會傳回50。  
+ FIPS 符合等級的驅動程式將返回至少 15 個。 FIPS 中級級別符合要求的驅動程式將返回至少 50 個。  
   
- SQL_MAX_USER_NAME_LEN （ODBC 2.0）  
- SQLUSMALLINT 值，指定資料來源中使用者名稱的最大長度。 如果沒有最大長度，或長度不明，則此值會設定為零。  
+ SQL_MAX_USER_NAME_LEN(ODBC 2.0)  
+ 指定數據源中使用者名的最大長度的 SQLUSMALLINT 值。 如果沒有最大長度或長度未知,則此值設置為零。  
   
- SQL_MULT_RESULT_SETS （ODBC 1.0）  
- 字元字串：如果資料來源支援多個結果集，則為 "Y"，否則為 "N"。  
+ SQL_MULT_RESULT_SETS(ODBC 1.0)  
+ 字串字串:「Y」,如果數據源支援多個結果集,則"N"(如果不支援)。  
   
- 如需多個結果集的詳細資訊，請參閱[多個結果](../../../odbc/reference/develop-app/multiple-results.md)。  
+ 有關多個結果集的詳細資訊,請參閱[多個結果](../../../odbc/reference/develop-app/multiple-results.md)集。  
   
- SQL_MULTIPLE_ACTIVE_TXN （ODBC 1.0）  
- 字元字串：如果驅動程式同時支援一個以上的使用中交易，則為 "Y"，如果每次只能有一個交易可以使用，則為 "N"。  
+ SQL_MULTIPLE_ACTIVE_TXN(ODBC 1.0)  
+ 字串字串:「Y」如果驅動程式同時支援多個活動事務,「N」如果在任何時候只能有一個事務處於活動狀態。  
   
- 針對此資訊類型傳回的資訊，在分散式交易的情況下並不適用。  
+ 為此資訊類型返回的資訊不適用於分散式事務。  
   
- SQL_NEED_LONG_DATA_LEN （ODBC 2.0）  
- 字元字串：如果資料來源需要 long 資料值的長度（資料類型是 SQL_LONGVARCHAR、SQL_LONGVARBINARY 或 long 資料來源特定資料類型），則在該值傳送至資料來源之前，請使用 "N" （如果不是的話）。 如需詳細資訊，請參閱[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)函式和[SQLSetPos 函數](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ SQL_NEED_LONG_DATA_LEN(ODBC 2.0)  
+ 字串:如果數據源需要長數據值的長度(數據類型為SQL_LONGVARCHAR、SQL_LONGVARBINARY 或長數據源特定的數據類型)的長度,則"Y"將該值發送到數據源,如果沒有,則為"N"。 有關詳細資訊,請參閱[SQLBind 參數函數](../../../odbc/reference/syntax/sqlbindparameter-function.md)與[SQLSetPos 函數](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
- SQL_NON_NullABLE_COLUMNS （ODBC 1.0）  
- SQLUSMALLINT 值，指定資料來源在資料行中是否支援 NOT Null：  
+ SQL_NON_NULLABLE_COLUMNS(ODBC 1.0)  
+ SQLUSMALLINT 值,用於指定資料來源是否支援列中的非 NULL:  
   
- SQL_NNC_Null = 所有資料行都必須是可為 null。  
+ SQL_NNC_NULL = 所有列都必須為空。  
   
- SQL_NNC_NON_Null = 資料行不可為 null。 （資料來源支援**CREATE TABLE**語句中的**NOT Null**資料行條件約束）。  
+ SQL_NNC_NON_NULL = 列不能為空。 (資料來源支援**CREATE TABLE**語句中的 **'非 NULL"** 欄位約束。  
   
- 符合 SQL-92 專案層級的驅動程式將會傳回 SQL_NNC_NON_Null。  
+ SQL-92 符合入門級的驅動程式將返回SQL_NNC_NON_NULL。  
   
- SQL_Null_COLLATION （ODBC 2.0）  
- SQLUSMALLINT 值，指定在結果集中排序 Null 的位置：  
+ SQL_NULL_COLLATION(ODBC 2.0)  
+ SQLUSMALLINT 值,用於指定在結果集中對 NUL 的排序位置:  
   
- SQL_NC_END = Null 會在結果集的結尾進行排序，不論 ASC 或 DESC 關鍵字為何。  
+ SQL_NC_END = NUL 在結果集的末尾排序,而不考慮 ASC 或 DESC 關鍵字。  
   
- SQL_NC_HIGH = Null 會在結果集的高階處排序，視 ASC 或 DESC 關鍵字而定。  
+ SQL_NC_HIGH = NUL 在結果集的高端排序,具體取決於 ASC 或 DESC 關鍵字。  
   
- SQL_NC_LOW = Null 會在結果集的低端排序，視 ASC 或 DESC 關鍵字而定。  
+ SQL_NC_LOW = NUL 在結果集的低端排序,具體取決於 ASC 或 DESC 關鍵字。  
   
- SQL_NC_START = Null 會在結果集的開頭進行排序，不論 ASC 或 DESC 關鍵字為何。  
+ SQL_NC_START = NUL 在結果集的開頭進行排序,而不考慮 ASC 或 DESC 關鍵字。  
   
- SQL_NUMERIC_FUNCTIONS （ODBC 1.0）  
- 注意：此資訊類型是在 ODBC 1.0 中引進的;每個位元遮罩都會標示其引進的版本。  
+ SQL_NUMERIC_FUNCTIONS(ODBC 1.0)  
+ 注意:資訊類型在 ODBC 1.0 中引入;每個位掩碼都標有引入它的版本。  
   
- SQLUINTEGER 位元遮罩，列舉驅動程式和相關聯資料來源所支援的純量數值函數。  
+ SQLUINTEGER 位掩碼,枚舉驅動程式和相關數據源支援的標量數位函數。  
   
- 下列位元遮罩是用來決定支援的數值函數：  
+ 以下位遮罩支援哪些數值函數:  
   
- SQL_FN_NUM_ABS （ODBC 1.0） SQL_FN_NUM_ACOS （ODBC 1.0） SQL_FN_NUM_ASIN （ODBC 1.0） SQL_FN_NUM_ATAN （ODBC 1.0） SQL_FN_NUM_ATAN2 （ODBC 1.0） SQL_FN_NUM_CEILING （ODBC 1.0） SQL_FN_NUM_COS （ODBC 1.0） SQL_FN_NUM_COT （ODBC 1.0） SQL_FN_NUM_DEGREES （ODBC 2.0） SQL_FN_NUM_EXP （ODBC 1.0） SQL_FN_NUM_FLOOR （ODBC 1.0） SQL_FN_NUM_LOG （ODBC 1.0） SQL_FN_NUM_LOG10 （ODBC 2.0） SQL_FN_NUM_MOD （ODBC 1.0） SQL_FN_NUM_PI （ODBC 1.0） SQL_FN_NUM_POWER （ODBC 2.0） SQL_FN_NUM_RADIANS （ODBC 2.0） SQL_FN_NUM_RAND （ODBC 1.0） SQL_FN_NUM_ROUND （ODBC 2.0） SQL_FN_NUM_SIGN （ODBC 1.0） SQL_FN_NUM_SIN （ODBC 1.0） SQL_FN_NUM_SQRT （ODBC 1.0） SQL_FN_NUM_TAN （ODBC 1.0） SQL_FN_NUM_TRUNCATE （ODBC 2.0）  
+ SQL_FN_NUM_ABS (ODBC 1.0)SQL_FN_NUM_ACOS (ODBC 1.0)SQL_FN_NUM_ASIN (ODBC 1.0)SQL_FN_NUM_ATAN (ODBC 1.0)SQL_FN_NUM_ATAN2 (ODBC 1.0)SQL_FN_NUM_CEILING (ODBC 1.0)SQL_FN_NUM_COS (ODBC 1.0)SQL_FN_NUM_COT (ODBC 1 .0)SQL_FN_NUM_DEGREES (ODBC 1.0)SQL_FN_NUM_EXP (ODBC 1.0)SQL_FN_NUM_FLOOR(ODBC 1.0)SQL_FN_NUM_LOG(ODBC 1.0)SQL_FN_NUM_LOG10(ODBC 1.0)SQL_FN_NUM_LOG10(ODBC 1.0)SQL_FN_NUM_LOG10(ODBC 1.0)SQL_FN_NUM_MOD (ODBC 1.0)SQL_FN_NUM_PI (ODBC 1.0)SQL_FN_NUM_POWER (ODBC 2.0)SQL_FN_NUM_RADIANS (ODBC 2.0)SQL_FN_NUM_RAND (ODBC 1.0)SQL_FN_NUM_ROUND (ODBC 2.0)SQL_FN_NUM_SIGN (ODBC 1.0)SQL_FN_NUM_SIN (ODBC 1.0)SQL_FN_NUM_SQRT (ODBC 1.0)SQL_FN_NUM_TAN(ODBC 1.0)SQL_FN_NUM_TRUNCATE(ODBC 1.0)SQL_FN_NUM_TRUNCATE(ODBC 2.0)  
   
- SQL_ODBC_INTERFACE_CONFORMANCE （ODBC 3.0）  
- SQLUINTEGER 值，表示驅動程式符合之 ODBC*3.x 介面的層級。*  
+ SQL_ODBC_INTERFACE_CONFORMANCE(ODBC 3.0)  
+ 一個 SQLUINTEGER 值,指示驅動程式符合的 ODBC 3 *.x*介面的級別。  
   
- SQL_OIC_CORE：所有 ODBC 驅動程式預期會符合的最低層級。 此層級包含基本介面專案，例如連接函數、準備和執行 SQL 語句的函式、基本結果集中繼資料函數、基本目錄函數等等。  
+ SQL_OIC_CORE:所有 ODBC 驅動程式應遵守的最低水準。 此級別包括基本介面元素,如連接函數、用於準備和執行 SQL 語句的函數、基本結果集元數據函數、基本目錄函數等。  
   
- SQL_OIC_LEVEL1：包含核心標準合規性層級功能的層級，以及可滾動的資料指標、書簽、定點更新和刪除等。  
+ SQL_OIC_LEVEL1:包含核心標準合規性級別功能的級別,以及可滾動的游標、書籤、定位更新和刪除等。  
   
- SQL_OIC_LEVEL2：層級，包括層級1標準合規性層級功能，以及敏感性資料指標之類的先進功能。依書簽更新、刪除和重新整理;預存程式支援;主鍵和外鍵的目錄函數;多目錄支援;以此類推。  
+ SQL_OIC_LEVEL2:包括 1 級標準符合性級別功能以及高級功能(如敏感游標)的級別;按書籤更新、刪除和刷新;存儲程式支援;主鍵和外鍵的目錄函數;多目錄支援;等等。  
   
- 如需詳細資訊，請參閱[介面一致性層級](../../../odbc/reference/develop-app/interface-conformance-levels.md)。  
+ 有關詳細資訊,請參閱[介面一致性級別](../../../odbc/reference/develop-app/interface-conformance-levels.md)。  
   
- SQL_ODBC_VER （ODBC 1.0）  
- 具有驅動程式管理員所符合之 ODBC 版本的字元字串。 版本的格式為 # #. # #. 0000，其中前兩個數字是主要版本，而後面兩個數字是次要版本。 這只會在驅動程式管理員中執行。  
+ SQL_ODBC_VER(ODBC 1.0)  
+ 具有驅動程式管理員符合的 ODBC 版本的字串。 版本是表單 #._._.0000,其中前兩位數位是主要版本,後兩位數位是次要版本。 這僅在驅動程式管理器中實現。  
   
- SQL_OJ_CAPABILITIES （ODBC 2.01）  
- SQLUINTEGER 的位元遮罩，列舉驅動程式和資料來源所支援的外部聯結類型。 下列位元遮罩是用來決定支援的類型：  
+ SQL_OJ_CAPABILITIES(ODBC 2.01)  
+ 一個 SQLUINTEGER 位元遮罩,枚舉驅動程式和資料來源支援的外部聯接的類型。 以下位遮罩要決定哪些型態受支援:  
   
- SQL_OJ_LEFT = 支援左方外部聯結。  
+ SQL_OJ_LEFT = 支援左外部聯接。  
   
- SQL_OJ_RIGHT = 支援右方外部聯結。  
+ SQL_OJ_RIGHT = 支援右外部聯接。  
   
- SQL_OJ_FULL = 支援完整外部聯結。  
+ SQL_OJ_FULL = 支援完全外部聯接。  
   
- SQL_OJ_NESTED = 支援嵌套的外部聯結。  
+ SQL_OJ_NESTED = 支援嵌套外部聯接。  
   
- SQL_OJ_NOT_ORDERED = 外部聯結之 ON 子句中的資料行名稱，其順序不一定要與**外部聯結**子句中各自的資料表名稱相同。  
+ SQL_OJ_NOT_ORDERED = 外部聯接的 ON 子句中的列名稱不必與**OUTER JOIN**子句中的相應表名的順序相同。  
   
- SQL_OJ_INNER = 內部資料表（左方外部聯結中的右資料表或右外部聯結中的左資料表）也可以在內部聯結中使用。 這並不適用于沒有內部資料表的完整外部聯結。  
+ SQL_OJ_INNER = 內部表(左外部聯接中的右表或右外部聯接中的左表)也可以在內部聯接中使用。 這不適用於沒有內部表的完整外部聯接。  
   
- SQL_OJ_ALL_COMPARISON_OPS = ON 子句中的比較運算子可以是任何 ODBC 比較運算子。 如果未設定此位，則只有 equals （=）比較運算子可以用於外部聯結。  
+ SQL_OJ_ALL_COMPARISON_OPS = ON 子句中的比較運算元可以是任何 ODBC 比較運算符。 如果未設置此位,則外部聯接中只能使用等 (*) 比較運算符。  
   
- 如果這些選項都不是以支援的方式傳回，則不支援任何外部聯結子句。  
+ 如果未返回這些選項作為支援,則不支援外部聯接子句。  
   
- 如需 SELECT 語句（如 SQL-92 所定義）中關聯式聯結運算子支援的詳細資訊，請參閱 SQL_SQL92_RELATIONAL_JOIN_OPERATORS。  
+ 有關 SQL-92 定義的 SELECT 語句中關係聯接運算符的支援的資訊,請參閱SQL_SQL92_RELATIONAL_JOIN_OPERATORS。  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT （ODBC 2.0）  
- 字元字串：如果**ORDER BY**子句中的資料行必須在選取清單中，則為 "Y";否則為 "N"。  
+ SQL_ORDER_BY_COLUMNS_IN_SELECT(ODBC 2.0)  
+ 字串:如果 ORDER BY 子句中的列必須位於選擇清單中,則為"Y";如果**ORDER BY**子句中的列必須位於選擇清單中,則為"Y";否則,"N"。  
   
- SQL_PARAM_ARRAY_ROW_COUNTS （ODBC 3.0）  
- SQLUINTEGER，列舉與參數化執行中的資料列計數可用性有關的驅動程式屬性。 具有下列值：  
+ SQL_PARAM_ARRAY_ROW_COUNTS(ODBC 3.0)  
+ 在參數化執行中,對驅動程式的屬性進行枚舉,瞭解行計數的可用性。 具有以下值:  
   
- SQL_PARC_BATCH = 每個參數集都有個別的資料列計數。 這在概念上相當於產生 SQL 語句批次的驅動程式，陣列中的每個參數集各一個。 您可以使用 [SQL_PARAM_STATUS_PTR 描述元] 欄位來抓取擴充的錯誤資訊。  
+ SQL_PARC_BATCH = 每個參數集都可用於單個行計數。 這在概念上等效於生成一批 SQL 語句的驅動程式,該語句針對陣列中設置的每個參數一個。 可以使用SQL_PARAM_STATUS_PTR描述符欄位檢索擴展的錯誤資訊。  
   
- SQL_PARC_NO_BATCH = 只有一個可用的資料列計數，這是針對整個參數陣列執行語句所產生的累計資料列計數。 這在概念上相當於將語句連同完整的參數陣列視為一個不可部分完成的單位。 錯誤的處理方式與執行一個語句相同。  
+ SQL_PARC_NO_BATCH = 只有一個行計數可用,即執行整個參數陣列的語句所產生的累積行計數。 這在概念上等效於將語句與完整參數陣列一起作為一個原子單元處理。 錯誤的處理方式與執行一個語句相同。  
   
- SQL_PARAM_ARRAY_SELECTS （ODBC 3.0）  
- SQLUINTEGER，列舉有關參數化執行中結果集可用性的驅動程式屬性。 具有下列值：  
+ SQL_PARAM_ARRAY_SELECTS(ODBC 3.0)  
+ 一個 SQLUINTEGER,枚舉驅動程式的屬性,說明參數化執行中結果集的可用性。 具有以下值:  
   
- SQL_PAS_BATCH = 每個參數集都有一個可用的結果集。 這在概念上相當於產生 SQL 語句批次的驅動程式，陣列中的每個參數集各一個。  
+ SQL_PAS_BATCH = 每組參數都有一個結果集可用。 這在概念上等效於生成一批 SQL 語句的驅動程式,該語句針對陣列中設置的每個參數一個。  
   
- SQL_PAS_NO_BATCH = 只有一個可用的結果集，這代表針對完整參數陣列執行語句所產生的累計結果集。 這在概念上相當於將語句連同完整的參數陣列視為一個不可部分完成的單位。  
+ SQL_PAS_NO_BATCH = 只有一個結果集可用,它表示執行整個參數陣列的語句所產生的累積結果集。 這在概念上等效於將語句與完整參數陣列一起作為一個原子單元處理。  
   
- SQL_PAS_NO_SELECT = 驅動程式不允許以參數陣列執行結果集產生的語句。  
+ SQL_PAS_NO_SELECT = 驅動程式不允許使用參數陣列執行結果集生成語句。  
   
- SQL_PROCEDURE_TERM （ODBC 1.0）  
- 包含程式之資料來源廠商名稱的字元字串;例如，「資料庫程式」、「預存程式」、「程式」、「封裝」或「預存查詢」。  
+ SQL_PROCEDURE_TERM(ODBC 1.0)  
+ 具有過程的數據源供應商名稱的字串;例如,"數據庫過程"、"存儲過程"、"過程"、"包"或"存儲查詢"。  
   
- SQL_PROCEDURES （ODBC 1.0）  
- 字元字串：如果資料來源支援程式，而且驅動程式支援 ODBC 程序呼叫語法，則為 "Y";否則為 "N"。  
+ SQL_PROCEDURES(ODBC 1.0)  
+ 字串字串:「Y」,如果數據源支援過程,並且驅動程式支援 ODBC 過程呼叫語法;如果資料源支援過程呼叫語法,則為「Y」,否則為"N"。  
   
- SQL_POS_OPERATIONS （ODBC 2.0）  
- SQLINTEGER 位元遮罩，列舉**SQLSetPos**中的支援作業。  
+ SQL_POS_OPERATIONS(ODBC 2.0)  
+ 在**SQLSetPos**中枚舉支援操作的 SQLINTEGER 位掩碼。  
   
- 下列位元遮罩會與旗標一起使用，以判斷支援的選項。  
+ 以下位掩碼與標誌一起使用,以確定支援哪些選項。  
   
- SQL_POS_POSITION （ODBC 2.0） SQL_POS_REFRESH （ODBC 2.0） SQL_POS_UPDATE （ODBC 2.0） SQL_POS_DELETE （ODBC 2.0） SQL_POS_ADD （ODBC 2.0）  
+ SQL_POS_POSITION (ODBC 2.0) SQL_POS_REFRESH (ODBC 2.0) SQL_POS_UPDATE (ODBC 2.0) SQL_POS_DELETE (ODBC 2.0) SQL_POS_ADD (ODBC 2.0)  
   
- SQL_QUOTED_IDENTIFIER_CASE （ODBC 2.0）  
- SQLUSMALLINT 值，如下所示：  
+ SQL_QUOTED_IDENTIFIER_CASE(ODBC 2.0)  
+ SQLUSMALLINT 值如下所示:  
   
- SQL_IC_UPPER = SQL 中的引號識別碼不區分大小寫，而且會以大寫儲存在系統目錄中。  
+ SQL_IC_UPPER = SQL 中的參考識別子不區分大小寫,儲存在系統目錄中的大寫中。  
   
- SQL_IC_LOWER = SQL 中的引號識別碼不區分大小寫，而且在系統目錄中會以小寫儲存。  
+ SQL_IC_LOWER = SQL 中的參考識別碼不區分大小寫,儲存在系統目錄中小寫。  
   
- SQL_IC_SENSITIVE = SQL 中以引號括住的識別碼會區分大小寫，而且會以混合大小寫儲存在系統目錄中。 （在 SQL-92 相容的資料庫中，加上引號的識別碼一律會區分大小寫）。  
+ SQL_IC_SENSITIVE = SQL 中的參考識別符區分大小寫,存儲在系統目錄中的混合情況下。 (在符合 SQL-92 的資料庫中,引用的標識符始終對大小寫敏感。  
   
- SQL_IC_MIXED = SQL 中的引號識別碼不區分大小寫，而且會以混合大小寫儲存在系統目錄中。  
+ SQL_IC_MIXED = SQL 中的引用識別碼不區分大小寫,儲存在系統目錄中的混合情況下。  
   
- 符合 SQL 92 專案層級的驅動程式一律會傳回 SQL_IC_SENSITIVE。  
+ SQL-92 符合入門級的驅動程序將始終返回SQL_IC_SENSITIVE。  
   
- SQL_ROW_UPDATES （ODBC 1.0）  
- 字元字串：如果索引鍵集驅動或混合資料指標針對所有提取的資料列維護資料列版本或值，因此可以偵測自上次提取資料列之後，任何使用者對資料列所做的任何更新。 （這只適用于更新，而不會刪除或插入）。呼叫**SQLFetchScroll**時，驅動程式可以將 SQL_ROW_UPDATED 旗標傳回給資料列狀態陣列。 否則為 "N"。  
+ SQL_ROW_UPDATES(ODBC 1.0)  
+ 字串:「Y」,如果鍵集驅動或混合游標維護所有提取行的行版本或值,因此可以檢測自上次提取該行以來任何使用者對行所做的任何更新。 (這僅適用於更新,不適用於刪除或插入。呼叫**SQLFetchScroll**時,驅動程式可以將SQL_ROW_UPDATED標誌返回到行狀態陣列。 否則,"N"。  
   
- SQL_SCHEMA_TERM （ODBC 1.0）  
- 具有架構之資料來源廠商名稱的字元字串;例如，「擁有者」、「授權識別碼」或「架構」。  
+ SQL_SCHEMA_TERM(ODBC 1.0)  
+ 具有數據源供應商名稱的架構的字串;例如,"擁有者"、"授權ID"或"架構"。  
   
- 字元字串可以用大寫、小寫或混合大小寫的方式傳回。  
+ 字元字串可以在上部、下部或混合情況下返回。  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回 "schema"。  
+ SQL-92 符合入門級的驅動程序將始終返回"架構"。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_OWNER_TERM 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_OWNER_TERM重命名為 ODBC 3.0。  
   
- SQL_SCHEMA_USAGE （ODBC 2.0）  
- SQLUINTEGER 位元遮罩，列舉可以使用架構的語句：  
+ SQL_SCHEMA_USAGE(ODBC 2.0)  
+ SQLUINTEGER 位元,enk:enctt,可以使用架構的語句:  
   
- SQL_SU_DML_STATEMENTS = 所有資料操作語言語句都支援架構： **select**、 **INSERT**、 **UPDATE**、 **DELETE**和 if 支援，請**選取以取得 update**和定位 update 和 DELETE 子句。  
+ SQL_SU_DML_STATEMENTS = 架構在所有資料操作語言語句中都受支援:**選擇**、**插入**、**更新**、**刪除**等,如果支援,**請選擇更新**並定位更新和刪除語句。  
   
- SQL_SU_PROCEDURE_INVOCATION = ODBC 程序呼叫語句中支援的架構。  
+ SQL_SU_PROCEDURE_INVOCATION = ODBC 過程呼叫敘述支援架構。  
   
- SQL_SU_TABLE_DEFINITION = 所有資料表定義語句都支援架構： **CREATE TABLE**、 **CREATE VIEW**、 **ALTER TABLE**、 **drop table**和**drop VIEW**。  
+ SQL_SU_TABLE_DEFINITION = 所有表定義語片都支援架構:**建立表**,**建立檢視**、**變更表****、DROP TABLE**與 DROP**檢視**。  
   
- SQL_SU_INDEX_DEFINITION = 所有索引定義語句中都支援架構： **CREATE INDEX**和**DROP INDEX**。  
+ SQL_SU_INDEX_DEFINITION = 所有索引定義語句都支援架構:**建立索引**與**DROP INDEX**。  
   
- SQL_SU_PRIVILEGE_DEFINITION = 擁有權限定義語句中都支援架構： **GRANT**和**REVOKE**。  
+ SQL_SU_PRIVILEGE_DEFINITION = 所有權限定義語句都支援架構 **:GRANT**和**REVOKE**。  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回 SQL_SU_DML_STATEMENTS、SQL_SU_TABLE_DEFINITION 和 SQL_SU_PRIVILEGE_DEFINITION 選項（如受支援）。  
+ SQL-92 符合入門級的驅動程序將始終返回SQL_SU_DML_STATEMENTS、SQL_SU_TABLE_DEFINITION和SQL_SU_PRIVILEGE_DEFINITION選項(如支援)。  
   
- 此*InfoType*已從 Odbc 2.0 *InfoType* SQL_OWNER_USAGE 重新命名為 odbc 3.0。  
+ 此*資訊類型*已從 ODBC 2.0*資訊類型*SQL_OWNER_USAGE重新命名為 ODBC 3.0。  
   
- SQL_SCROLL_OPTIONS （ODBC 1.0）  
- 注意：此資訊類型是在 ODBC 1.0 中引進的;每個位元遮罩都會標示其引進的版本。  
+ SQL_SCROLL_OPTIONS(ODBC 1.0)  
+ 注意:資訊類型在 ODBC 1.0 中引入;每個位掩碼都標有引入它的版本。  
   
- SQLUINTEGER 位元遮罩，用來列舉可滾動資料指標所支援的捲軸選項。  
+ SQLUINTEGER 位掩碼,枚舉可滾動游標支援的滾動選項。  
   
- 下列位元遮罩是用來決定支援的選項：  
+ 以下位遮罩要決定哪些選項受支援:  
   
- SQL_SO_FORWARD_ONLY = 資料指標只向前滾動。 （ODBC 1.0）  
+ SQL_SO_FORWARD_ONLY = 游標僅向前滾動。 (ODBC 1.0)  
   
- SQL_SO_STATIC = 結果集中的資料是靜態的。 （ODBC 2.0）  
+ SQL_SO_STATIC = 結果集中的數據是靜態的。 (ODBC 2.0)  
   
- SQL_SO_KEYSET_DRIVEN = 驅動程式會儲存並使用結果集中每個資料列的索引鍵。 （ODBC 1.0）  
+ SQL_SO_KEYSET_DRIVEN = 驅動程式保存並使用結果集中每行的鍵。 (ODBC 1.0)  
   
- SQL_SO_DYNAMIC = 驅動程式會保留資料列集內每個資料列的索引鍵（索引鍵集大小與資料列集大小相同）。 （ODBC 1.0）  
+ SQL_SO_DYNAMIC = 驅動程式保留行集中每行的鍵(鍵集大小與行集大小相同)。 (ODBC 1.0)  
   
- SQL_SO_MIXED = 驅動程式會針對索引鍵集中的每個資料列保留金鑰，而索引鍵集大小則大於資料列集大小。 資料指標是索引鍵集內的索引鍵集驅動，而且在索引鍵集外的動態。 （ODBC 1.0）  
+ SQL_SO_MIXED = 驅動程式保留鍵集中每行的鍵,並且鍵集大小大於行集大小。 游標在鍵集中內鍵集驅動,在鍵集外部動態。 (ODBC 1.0)  
   
- 如需可滾動資料指標的詳細資訊，請參閱可[滾動資料指標](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
+ 有關可滾動游標的資訊,請參閱[可捲軸游標](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
   
- SQL_SEARCH_PATTERN_ESCAPE （ODBC 1.0）  
- 指定驅動程式支援的字元字串做為 escape 字元，允許使用模式比對元字元底線（_）和百分比符號（%）做為搜尋模式中的有效字元。 此 escape 字元僅適用于支援搜尋字串的目錄函數引數。 如果這個字串是空的，則驅動程式不支援搜尋模式的 escape 字元。  
+ SQL_SEARCH_PATTERN_ESCAPE(ODBC 1.0)  
+ 指定驅動程式支援哪些內容的字串,允許使用模式符合元字元下劃線 (*) 和百分比符號 (%)作為搜索模式中的有效字元。 此轉義字元僅適用於支援搜索字串的目錄函數參數。 如果此字串為空,則驅動程式不支援搜索模式轉義字元。  
   
- 因為此資訊類型不表示一般支援**LIKE**述詞中的 escape 字元，所以 SQL-92 不會包含此字元字串的需求。  
+ 由於此資訊類型不表示**LIKE**謂詞中轉義字元的一般支援,因此 SQL-92 不包括對此字元字串的要求。  
   
- 此*InfoType*僅限於目錄功能。 如需在搜尋模式字串中使用 escape 字元的說明，請參閱[模式值引數](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
+ 此資訊*類型*僅限於目錄函數。 有關在搜尋模式字串中使用轉義元的說明,請參閱[模式值參數](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
   
- SQL_SERVER_NAME （ODBC 1.0）  
- 具有實際資料來源特定伺服器名稱的字元字串;在**SQLConnect**、 **SQLDriverConnect**和**SQLBrowseConnect**期間使用資料來源名稱時很有用。  
+ SQL_SERVER_NAME(ODBC 1.0)  
+ 具有實際數據來源特定伺服器名稱的字串;在**SQLConnect** **、SQLDriverConnect****和**( .  
   
- SQL_SPECIAL_CHARACTERS （ODBC 2.0）  
- 包含所有特殊字元的字元字串（也就是 a 到 z、A 到 Z、0到9和底線以外的所有字元），可以在資料來源的識別碼名稱中使用，例如資料表名稱、資料行名稱或索引名稱。 例如，"# $ ^"。 如果識別碼包含其中一或多個字元，則識別碼必須是分隔的識別碼。  
+ SQL_SPECIAL_CHARACTERS(ODBC 2.0)  
+ 一個字串,其中包含數據源上可用於標識符名稱(如表名、列名或索引名稱)的所有特殊字元(即除 z、A 到 Z、0 到 Z 和下劃線之外的所有字元)。 例如,"$+"。 如果標識碼包含一個或多個這些字元,則標識碼必須是分隔識別元。  
   
- SQL_SQL_CONFORMANCE （ODBC 3.0）  
- SQLUINTEGER 值，指出驅動程式支援的 SQL-92 層級：  
+ SQL_SQL_CONFORMANCE(ODBC 3.0)  
+ 指示驅動程式支援的 SQL-92 的 SQLUINTEGER 值:  
   
- SQL_SC_SQL92_ENTRY = 進入層級 SQL-92 相容。  
+ SQL_SC_SQL92_ENTRY = 符合入門級 SQL-92。  
   
- SQL_SC_FIPS127_2_TRANSITIONAL = FIPS 127-2 過渡層級相容。  
+ SQL_SC_FIPS127_2_TRANSITIONAL = 符合 FIPS 127-2 過渡電平。  
   
- SQL_SC_SQL92_FULL = 完整層級的 SQL-92 相容。  
+ SQL_SC_SQL92_FULL = 符合全級別 SQL-92。  
   
- SQL_SC_ SQL92_INTERMEDIATE = 中繼層級 SQL-92 相容。  
+ SQL_SC_SQL92_INTERMEDIATE = 符合中級 SQL-92 標準。  
   
- SQL_SQL92_DATETIME_FUNCTIONS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉驅動程式和相關聯資料來源所支援的 datetime 純量函數，如 SQL-92 中所定義。  
+ SQL_SQL92_DATETIME_FUNCTIONS(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式和相關數據源支援的約會時間標量函數,如 SQL-92 中定義的那樣。  
   
- 下列位元遮罩是用來決定支援的日期時間函數：  
+ 以下位遮罩檔用於確定哪些日期時間函數受支援:  
   
  SQL_SDF_CURRENT_DATESQL_SDF_CURRENT_TIMESQL_SDF_CURRENT_TIMESTAMP  
   
- SQL_SQL92_FOREIGN_KEY_DELETE_RULE （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**DELETE**語句中的外鍵所支援的規則，如 SQL-92 中所定義。  
+ SQL_SQL92_FOREIGN_KEY_DELETE_RULE(ODBC 3.0)  
+ SQLUINTEGER 位元遮罩 **,Enrle DeLETE**語句中支援的規則,如 SQL-92 中定義的那樣。  
   
- 下列位元遮罩是用來判斷資料來源所支援的子句：  
+ 以下位遮罩資料來源支援哪些子句:  
   
- SQL_SFKD_CASCADESQL_SFKD_NO_ACTIONSQL_SFKD_SET_DEFAULTSQL_SFKD_SET_Null  
+ SQL_SFKD_CASCADESQL_SFKD_NO_ACTIONSQL_SFKD_SET_DEFAULTSQL_SFKD_SET_NULL  
   
- 符合 FIPS 轉換層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ FIPS 過渡電平符合性驅動程式將始終返回支援的所有這些選項。  
   
- SQL_SQL92_FOREIGN_KEY_UPDATE_RULE （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**UPDATE**語句中的外鍵支援的規則，如 SQL-92 中所定義。  
+ SQL_SQL92_FOREIGN_KEY_UPDATE_RULE(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**更新**語句中支援的規則,如 SQL-92 中定義的那樣。  
   
- 下列位元遮罩是用來判斷資料來源所支援的子句：  
+ 以下位遮罩資料來源支援哪些子句:  
   
- SQL_SFKU_CASCADESQL_SFKU_NO_ACTIONSQL_SFKU_SET_DEFAULTSQL_SFKU_SET_Null  
+ SQL_SFKU_CASCADESQL_SFKU_NO_ACTIONSQL_SFKU_SET_DEFAULTSQL_SFKU_SET_NULL  
   
- 符合 SQL 92 完整層級的驅動程式一律會傳回所有這些選項，並受到支援。  
+ SQL-92 完全符合級別的驅動程式將始終返回所有這些選項(如支援)。  
   
- SQL_SQL92_GRANT （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**GRANT**語句中支援的子句，如 SQL-92 中所定義。  
+ SQL_SQL92_GRANT(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**在 GRANT**語句中支援的子句,如 SQL-92 中定義的那樣。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來判斷資料來源所支援的子句：  
+ 以下位遮罩資料來源支援哪些子句:  
   
- SQL_SG_DELETE_TABLE （進入層級） SQL_SG_INSERT_COLUMN （中繼層級） SQL_SG_INSERT_TABLE （進入層級） SQL_SG_REFERENCES_TABLE （進入層級） SQL_SG_REFERENCES_COLUMN （進入層級） SQL_SG_SELECT_TABLE （Entry level） SQL_SG_UPDATE_COLUMN （進入層級） SQL_SG_UPDATE_TABLE （進入層級） SQL_SG_USAGE_ON_DOMAIN （FIPS 轉換層級） SQL_SG_USAGE_ON_CHARACTER_SET （fips 過渡層級） SQL_SG_USAGE_ON_COLLATION （fips 轉換層級） SQL_SG_USAGE_ON_TRANSLATION （FIPS過渡層級） SQL_SG_WITH_GRANT_OPTION （進入層級）  
+ SQL_SG_DELETE_TABLE(入門級)SQL_SG_INSERT_COLUMN(中級)SQL_SG_INSERT_COLUMN(中級)SQL_SG_INSERT_TABLE(入門級)SQL_SG_REFERENCES_TABLE(入門級)SQL_SG_REFERENCES_COLUMN(入門級)SQL_SG_SELECT_TABLE(入門級)SQL_SG_UPDATE_COLUMN(入門級)SQL_SG_UPDATE_TABLE(入門級)SQL_SG_USAGE_ON_DOMAIN(FIPS過渡級別)SQL_SG_USAGE_ON_CHARACTER_SET(FIPS過渡級別)SQL_SG_USAGE_ON_COLLATION(FIPS過渡級別)SQL_SG_USAGE_ON_TRANSLATION(FIPS過渡級別)等級)SQL_SG_WITH_GRANT_OPTION(入門級)  
   
- SQL_SQL92_NUMERIC_VALUE_FUNCTIONS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉驅動程式和相關聯的資料來源所支援的數值純量函數（如 SQL-92 中所定義）。  
+ SQL_SQL92_NUMERIC_VALUE_FUNCTIONS(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式和相關數據源支援的數位值標量函數,如 SQL-92 中定義的那樣。  
   
- 下列位元遮罩是用來決定支援的數值函數：  
+ 以下位遮罩支援哪些數值函數:  
   
  SQL_SNVF_BIT_LENGTHSQL_SNVF_CHAR_LENGTHSQL_SNVF_CHARACTER_LENGTHSQL_SNVF_EXTRACTSQL_SNVF_OCTET_LENGTHSQL_SNVF_POSITION  
   
- SQL_SQL92_PREDICATES （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**SELECT**語句中支援的述詞，如 SQL-92 中所定義。  
+ SQL_SQL92_PREDICATES(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**SELECT**語句中支援的謂詞,如 SQL-92 中定義的那樣。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來判斷資料來源所支援的選項：  
+ 以下位遮罩資料來源支援哪些選項:  
   
- SQL_SP_BETWEEN （進入層級） SQL_SP_COMPARISON （進入層級） SQL_SP_EXISTS （進入層級） SQL_SP_IN （進入層級） SQL_SP_ISNOTNull （進入層級） SQL_SP_ISNull （進入層級） SQL_SP_LIKE （專案層級） SQL_SP_MATCH_FULL （完整層級） SQL_SP_MATCH_PARTIAL（完整層級）SQL_SP_MATCH_UNIQUE_FULL （完整層級） SQL_SP_MATCH_UNIQUE_PARTIAL （完整層級） SQL_SP_OVERLAPS （FIPS 過渡層級） SQL_SP_QUANTIFIED_COMPARISON （進入層級） SQL_SP_UNIQUE （進入層級）  
+ SQL_SP_BETWEEN(入門級)SQL_SP_COMPARISON(入門級)SQL_SP_EXISTS(入門級)SQL_SP_IN(入門級)SQL_SP_ISNOTNULL SQL_SP_IN(入門級)SQL_SP_ISNULL(入門級)SQL_SP_LIKE(入門級)SQL_SP_MATCH_FULL(滿級)SQL_SP_MATCH_PARTIAL(滿級)SQL_SP_MATCH_UNIQUE_FULL(滿級)SQL_SP_MATCH_UNIQUE_PARTIAL(滿級)SQL_SP_OVERLAPS(FIPS 過渡級別)SQL_SP_QUANTIFIED_COMPARISON(入門級)SQL_SP_UNIQUE(入門級)  
   
- SQL_SQL92_RELATIONAL_JOIN_OPERATORS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**SELECT**語句中所支援的關聯式聯結運算子，如 SQL-92 中所定義。  
+ SQL_SQL92_RELATIONAL_JOIN_OPERATORS(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**SELECT**語句中支持的關係聯接運算符,如 SQL-92 中定義的那樣。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來判斷資料來源所支援的選項：  
+ 以下位遮罩資料來源支援哪些選項:  
   
- SQL_SRJO_CORRESPONDING_CLAUSE （中繼層級） SQL_SRJO_CROSS_JOIN （完整層級） SQL_SRJO_EXCEPT_JOIN （中繼層級） SQL_SRJO_FULL_OUTER_JOIN （中繼層級） SQL_SRJO_INNER_JOIN （FIPS 過渡層級） SQL_SRJO_INTERSECT_JOIN（中繼層級）SQL_SRJO_LEFT_OUTER_JOIN （FIPS 過渡層級） SQL_SRJO_NATURAL_JOIN （fips 過渡層級） SQL_SRJO_RIGHT_OUTER_JOIN （FIPS 過渡層級） SQL_SRJO_UNION_JOIN （完整層級）  
+ SQL_SRJO_CORRESPONDING_CLAUSE(中級)SQL_SRJO_CROSS_JOIN(全級)SQL_SRJO_EXCEPT_JOIN(中級)SQL_SRJO_FULL_OUTER_JOIN(中級)SQL_SRJO_INNER_JOIN(中級)SQL_SRJO_INNER_JOIN(中級過渡級別)SQL_SRJO_INTERSECT_JOIN(中級)SQL_SRJO_LEFT_OUTER_JOIN(FIPS過渡級別)SQL_SRJO_NATURAL_JOIN(FIPS過渡級別)SQL_SRJO_RIGHT_OUTER_JOIN(FIPS過渡級別)SQL_SRJO_UNION_JOIN(全級)  
   
- SQL_SRJO_INNER_JOIN 表示**內部聯結**語法的支援，而不是內部聯結功能的支援。 **內部聯結**語法的支援是 FIPS 過渡，而內部聯結功能的支援則是**專案**。  
+ SQL_SRJO_INNER_JOIN表示對內部**JOIN**語法的支援,而不是內部聯接功能的支援。 對內部**JOIN**語法的支援是 FIPS 過渡,而對內部聯接功能的支援是**ENTRY**。  
   
- SQL_SQL92_REVOKE （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉由資料來源支援的**REVOKE**語句（如 SQL-92 中所定義）所支援的子句。  
+ SQL_SQL92_REVOKE(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**了 REVOKE**語句中支援的子句,如 SQL-92 中定義,數據源支援。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來判斷資料來源所支援的子句：  
+ 以下位遮罩資料來源支援哪些子句:  
   
- SQL_SR_CASCADE （FIPS 轉換層級） SQL_SR_DELETE_TABLE （進入 SQL_SR_GRANT_OPTION_FOR 層級） SQL_SR_INSERT_COLUMN （中繼層級） SQL_SR_INSERT_TABLE （進入層級） SQL_SR_REFERENCES_COLUMN （進入層級） SQL_SR_REFERENCES_TABLE （進入層級） SQL_SR_RESTRICT （FIPS 過渡層級） SQL_SR_SELECT_TABLE （進入層級） SQL_SR_UPDATE_COLUMN （進入層級） SQL_SR_UPDATE_TABLE （進入層級） SQL_SR_USAGE_ON_DOMAIN （FIPS 過渡層級） SQL_SR_USAGE_ON_CHARACTER_SET （FIPS 過渡層級） SQL_SR_USAGE_ON_COLLATION （fips 過渡層級） SQL_SR_USAGE_ON_TRANSLATION （FIPS 過渡層級）  
+ SQL_SR_CASCADE(FIPS過渡級別)SQL_SR_DELETE_TABLE(入門級)SQL_SR_GRANT_OPTION_FOR(中級)SQL_SR_INSERT_COLUMN(中級)SQL_SR_INSERT_TABLE(入門級)SQL_SR_REFERENCES_COLUMN(入門級)SQL_SR_REFERENCES_TABLE(入門級)SQL_SR_RESTRICT(FIPS過渡級別)SQL_SR_SELECT_TABLE(入門級)SQL_SR_UPDATE_COLUMN(入門級)SQL_SR_UPDATE_TABLE(入門級)SQL_SR_USAGE_ON_DOMAIN(FIPS過渡級別)SQL_SR_USAGE_ON_CHARACTER_SET(FIPS過渡等級)SQL_SR_USAGE_ON_COLLATION(FIPS過渡等級)SQL_SR_USAGE_ON_TRANSLATION(FIPS過渡等級)  
   
- SQL_SQL92_ROW_VALUE_CONSTRUCTOR （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉**SELECT**語句中支援的資料列值函數運算式，如 SQL-92 中所定義。 下列位元遮罩是用來判斷資料來源所支援的選項：  
+ SQL_SQL92_ROW_VALUE_CONSTRUCTOR(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**SELECT**語句中支援的行值構造函數運算式,如 SQL-92 中定義的那樣。 以下位遮罩資料來源支援哪些選項:  
   
- SQL_SRVC_VALUE_EXPRESSION SQL_SRVC_Null SQL_SRVC_DEFAULT SQL_SRVC_ROW_SUBQUERY  
+ SQL_SRVC_VALUE_EXPRESSIONSQL_SRVC_NULLSQL_SRVC_DEFAULTSQL_SRVC_ROW_SUBQUERY  
   
- SQL_SQL92_STRING_FUNCTIONS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，用來列舉驅動程式支援的字串純量函數和相關聯的資料來源（如 SQL-92 中所定義）。  
+ SQL_SQL92_STRING_FUNCTIONS(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式和相關數據源支援的字串標量函數,如 SQL-92 中定義的那樣。  
   
- 下列位元遮罩是用來決定支援的字串函數：  
+ 以下位遮罩支援哪些字串函數:  
   
  SQL_SSF_CONVERTSQL_SSF_LOWERSQL_SSF_UPPERSQL_SSF_SUBSTRINGSQL_SSF_TRANSLATESQL_SSF_TRIM_BOTHSQL_SSF_TRIM_LEADINGSQL_SSF_TRIM_TRAILING  
   
- SQL_SQL92_VALUE_EXPRESSIONS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，列舉支援的值運算式（如 SQL-92 中所定義）。  
+ SQL_SQL92_VALUE_EXPRESSIONS(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉 SQL-92 中定義的受支援的值運算式。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來判斷資料來源所支援的選項：  
+ 以下位遮罩資料來源支援哪些選項:  
   
- SQL_SVE_CASE （中繼層級） SQL_SVE_CAST （FIPS 過渡等級） SQL_SVE_COALESCE （中繼層級） SQL_SVE_NullIF （中繼層級）  
+ SQL_SVE_CASE(中級)SQL_SVE_CAST(FIPS過渡級別)SQL_SVE_COALESCE(中級)SQL_SVE_NULLIF(中級)  
   
- SQL_STANDARD_CLI_CONFORMANCE （ODBC 3.0）  
- SQLUINTEGER 的位元遮罩，列舉驅動程式符合的 CLI 標準或標準。 下列位元遮罩是用來判斷驅動程式符合的層級：  
+ SQL_STANDARD_CLI_CONFORMANCE(ODBC 3.0)  
+ 一個 SQLUINTEGER 位元遮罩,枚舉驅動程式符合的 CLI 標準或標準。 以下位遮罩驅動程式符合的等級:  
   
- SQL_SCC_XOPEN_CLI_VERSION1：此驅動程式符合 Open Group CLI 第1版。  
+ SQL_SCC_XOPEN_CLI_VERSION1:驅動程式符合開放組 CLI 版本 1。  
   
- SQL_SCC_ISO92_CLI：此驅動程式符合 ISO 92 CLI。  
+ SQL_SCC_ISO92_CLI:驅動程式符合 ISO 92 CLI。  
   
- SQL_STATIC_CURSOR_ATTRIBUTES1 （ODBC 3.0）  
- SQLUINTEGER 的位元遮罩，描述驅動程式所支援之靜態資料指標的屬性。 此位元遮罩包含屬性的第一個子集;如需第二個子集，請參閱 SQL_STATIC_CURSOR_ATTRIBUTES2。  
+ SQL_STATIC_CURSOR_ATTRIBUTES1(ODBC 3.0)  
+ 描述驅動程式支援的靜態游標的屬性的 SQLUINTEGER 位元遮罩。 此位掩碼包含屬性的第一個子集;對於第二個子集,請參閱SQL_STATIC_CURSOR_ATTRIBUTES2。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
  SQL_CA1_NEXTSQL_CA1_ABSOLUTESQL_CA1_RELATIVESQL_CA1_BOOKMARKSQL_CA1_LOCK_NO_CHANGESQL_CA1_LOCK_EXCLUSIVESQL_CA1_LOCK_UNLOCKSQL_CA1_POS_POSITIONSQL_CA1_POS_UPDATESQL_CA1_POS_DELETESQL_CA1_POS_REFRESHSQL_CA1_POSITIONED_UPDATESQL_CA1_POSITIONED_DELETESQL_CA1_SELECT_FOR_UPDATESQL_CA1_BULK_ADDSQL_CA1_BULK_UPDATE_BY_BOOKMARKSQL_CA1_BULK_DELETE_BY_BOOKMARKSQL_CA1_BULK_FETCH_BY_BOOKMARK  
   
- 如需這些位元遮罩的說明，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （並在描述中，將「靜態資料指標」替換為「動態資料指標」）。  
+ 有關這些位掩碼的說明,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES1(並在說明中用"靜態游標"代替"動態游標")。  
   
- SQL-92 中繼層級一致的驅動程式通常會傳回所支援的 SQL_CA1_NEXT、SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 選項，因為驅動程式支援透過內嵌 SQL FETCH 語句的可滾動資料指標。 由於這不會直接判斷基礎 SQL 支援，因此，即使是 SQL-92 中繼層級一致的驅動程式，也可能不支援可滾動的資料指標。  
+ SQL-92 中間等級一致性驅動程式通常會返回SQL_CA1_NEXT、SQL_CA1_ABSOLUTE和SQL_CA1_RELATIVE選項(如支援),因為驅動程式支援通過嵌入式 SQL FETCH 語句滾動遊標。 但是,由於這不能直接確定基礎 SQL 支援,因此即使對於 SQL-92 符合級別的驅動程式,也不支援可滾動遊標。  
   
- SQL_STATIC_CURSOR_ATTRIBUTES2 （ODBC 3.0）  
- SQLUINTEGER 的位元遮罩，描述驅動程式所支援之靜態資料指標的屬性。 此位元遮罩包含屬性的第二個子集;如需第一個子集，請參閱 SQL_STATIC_CURSOR_ATTRIBUTES1。  
+ SQL_STATIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
+ 描述驅動程式支援的靜態游標的屬性的 SQLUINTEGER 位元遮罩。 此位掩碼包含屬性的第二個子集;對於第一個子集,請參閱SQL_STATIC_CURSOR_ATTRIBUTES1。  
   
- 下列位元遮罩是用來決定支援的屬性：  
+ 以下位遮罩要確定哪些屬性受支援:  
   
  SQL_CA2_READ_ONLY_CONCURRENCYSQL_CA2_LOCK_CONCURRENCYSQL_CA2_OPT_ROWVER_CONCURRENCYSQL_CA2_OPT_VALUES_CONCURRENCYSQL_CA2_SENSITIVITY_ADDITIONSSQL_CA2_SENSITIVITY_DELETIONSSQL_CA2_SENSITIVITY_UPDATESSQL_CA2_MAX_ROWS_SELECTSQL_CA2_MAX_ROWS_INSERTSQL_CA2_MAX_ROWS_DELETESQL_CA2_MAX_ROWS_UPDATESQL_CA2_MAX_ROWS_CATALOGSQL_CA2_MAX_ROWS_AFFECTS_ALLSQL_CA2_CRC_EXACTSQL_CA2_CRC_APPROXIMATESQL_CA2_SIMULATE_NON_UNIQUESQL_CA2_SIMULATE_TRY_UNIQUESQL_CA2_SIMULATE_UNIQUE  
   
- 如需這些位元遮罩的說明，請參閱 SQL_DYNAMIC_CURSOR_ATTRIBUTES2 （並在描述中，將「靜態資料指標」替換為「動態資料指標」）。  
+ 有關這些位掩碼的說明,請參閱SQL_DYNAMIC_CURSOR_ATTRIBUTES2(並在說明中用"靜態游標"代替"動態游標")。  
   
- SQL_STRING_FUNCTIONS （ODBC 1.0）  
- 注意：此資訊類型是在 ODBC 1.0 中引進的;每個位元遮罩都會標示其引進的版本。  
+ SQL_STRING_FUNCTIONS(ODBC 1.0)  
+ 注意:資訊類型在 ODBC 1.0 中引入;每個位掩碼都標有引入它的版本。  
   
- SQLUINTEGER 位元遮罩，用來列舉驅動程式和相關聯資料來源所支援的純量字串函數。  
+ SQLUINTEGER 位罩,枚舉驅動程式和相關資料來源支援的標量字串函數。  
   
- 下列位元遮罩是用來決定支援的字串函數：  
+ 以下位遮罩支援哪些字串函數:  
   
- SQL_FN_STR_ASCII （ODBC 1.0） SQL_FN_STR_BIT_LENGTH （ODBC 3.0） SQL_FN_STR_CHAR （ODBC 1.0） SQL_FN_STR_CHAR_LENGTH （ODBC 3.0） SQL_FN_STR_CHARACTER_LENGTH （ODBC 3.0） SQL_FN_STR_CONCAT （ODBC 1.0） SQL_FN_STR_DIFFERENCE （ODBC 2.0） SQL_FN_STR_INSERT （ODBC1.0） SQL_FN_STR_LCASE （ODBC 1.0） SQL_FN_STR_LEFT （ODBC 1.0） SQL_FN_STR_LENGTH （ODBC 1.0） SQL_FN_STR_LOCATE （ODBC 1.0） SQL_FN_STR_LTRIM （ODBC 1.0） SQL_FN_STR_OCTET_LENGTH （ODBC 3.0） SQL_FN_STR_POSITION （ODBC 3.0） SQL_FN_STR_REPEAT （ODBC 1.0） SQL_FN_STR_REPLACE （ODBC 1.0） SQL_FN_STR_RIGHT （ODBC 1.0） SQL_FN_STR_RTRIM （ODBC 1.0） SQL_FN_STR_SOUNDEX （ODBC 2.0） SQL_FN_STR_SPACE （ODBC 2.0） SQL_FN_STR_SUBSTRING （ODBC 1.0） SQL_FN_STR_UCASE （ODBC 1.0）  
+ SQL_FN_STR_ASCII (ODBC 1.0)SQL_FN_STR_BIT_LENGTH (ODBC 3.0)SQL_FN_STR_CHAR (ODBC 1.0)SQL_FN_STR_CHAR_LENGTH (ODBC 3.0)SQL_FN_STR_CHARACTER_LENGTH (ODBC 3.0)SQL_FN_STR_CONCAT (ODBC 3.0)SQL_FN_STR_CONCAT (ODBC 1.0)SQL_FN_STR_DIFFERENCE (ODBC 1 .0)SQL_FN_STR_INSERT (ODBC 1.0)SQL_FN_STR_LCASE (ODBC 1.0)SQL_FN_STR_LEFT (ODBC 1.0)SQL_FN_STR_LENGTH(ODBC 1.0)SQL_FN_STR_LOCATE(ODBC 1.0)SQL_FN_STR_LTRIM(ODBC 1.0)SQL_FN_STR_LTRIM(ODBC 1.0)1.0) SQL_FN_STR_OCTET_LENGTH (ODBC 3.0) SQL_FN_STR_POSITION (ODBC 3.0) SQL_FN_STR_REPEAT (ODBC 1.0)SQL_FN_STR_REPLACE (ODBC 1.0)SQL_FN_STR_RIGHT (ODBC 1.0)SQL_FN_STR_RTRIM (ODBC 1.0)SQL_FN_STR_SOUNDEX (ODBC 2.0)SQL_FN_STR_SPACE (ODBC 2.0)SQL_FN_STR_SUBSTRING (ODBC 1.0)SQL_FN_STR_UCASE(ODBC 1.0)  
   
- 如果應用程式可以使用*string_exp1*、 *string_exp2*和*Start*引數來呼叫**尋找**純量函數，驅動程式會傳回 SQL_FN_STR_LOCATE 的位元遮罩。 如果應用程式可以呼叫僅具有*string_exp1*和*string_exp2*引數的尋找純量函數，則驅動程式會傳回 SQL_FN_STR_LOCATE_2 的位元遮罩。 完全支援「**尋找**純量函數」的驅動程式會傳回這兩個位遮罩。  
+ 如果應用程式可以使用*string_exp1**string_exp1、string_exp2*呼叫**LOCATE**標量函數和*啟動*參數,則驅動程式返回SQL_FN_STR_LOCATE位掩碼。 如果應用程式只能調用 STRING_EXP1*和**string_exp2*參數的 LOCATE 標量函數,則驅動程式將返回SQL_FN_STR_LOCATE_2位掩碼。 完全支援**LOCATE**標量函數的驅動程式將返回兩個位掩碼。  
   
- （如需詳細資訊，請參閱附錄 E 的「純量函式」中的[字串函數](../../../odbc/reference/appendixes/string-functions.md)）。  
+ (有關詳細資訊,請參閱附錄 E 中的[字串函數](../../../odbc/reference/appendixes/string-functions.md)"斯卡拉爾函數"。  
   
- SQL_SUBQUERIES （ODBC 2.0）  
- SQLUINTEGER 位元遮罩，列舉支援子查詢的述詞：  
+ SQL_SUBQUERIES(ODBC 2.0)  
+ SQLUINTEGER 位掩碼,枚舉支援子查詢的謂詞:  
   
  SQL_SQ_CORRELATED_SUBQUERIESSQL_SQ_COMPARISONSQL_SQ_EXISTSSQL_SQ_INSQL_SQ_QUANTIFIED  
   
- SQL_SQ_CORRELATED_SUBQUERIES 位元遮罩表示支援子查詢的所有述詞都支援相互關聯的子查詢。  
+ SQL_SQ_CORRELATED_SUBQUERIES位掩碼表示支援子查詢的所有謂詞都支持相關的子查詢。  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回所有這些位都已設定的位元遮罩。  
+ SQL-92 符合入門級的驅動程序將始終返回一個位掩碼,其中設置所有這些位。  
   
- SQL_SYSTEM_FUNCTIONS （ODBC 1.0）  
- SQLUINTEGER 位元遮罩，列舉驅動程式和相關聯資料來源所支援的純量系統函數。  
+ SQL_SYSTEM_FUNCTIONS(ODBC 1.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式和相關數據源支援的標量系統函數。  
   
- 下列位元遮罩是用來判斷支援哪些系統函數：  
+ 以下位遮罩支援哪些系統功能:  
   
- SQL_FN_SYS_DBNAMESQL_FN_SYS_IFNullSQL_FN_SYS_USERNAME  
+ SQL_FN_SYS_DBNAMESQL_FN_SYS_IFNULLSQL_FN_SYS_USERNAME  
   
- SQL_TABLE_TERM （ODBC 1.0）  
- 具有資料表之資料來源廠商名稱的字元字串;例如，"table" 或 "file"。  
+ SQL_TABLE_TERM(ODBC 1.0)  
+ 具有表的數據源供應商名稱的字串;例如,"表"或"檔"。  
   
- 這個字元字串可以是大寫、小寫或混合大小寫。  
+ 此字串可以是上部、下部或混合大小寫。  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回 "table"。  
+ SQL-92 符合入門級的驅動程序將始終返回"表"。  
   
- SQL_TIMEDATE_ADD_INTERVALS （ODBC 2.0）  
- SQLUINTEGER 位元遮罩，列舉 TIMESTAMPADD 純量函數的驅動程式所支援的時間戳記間隔和相關聯的資料來源。  
+ SQL_TIMEDATE_ADD_INTERVALS(ODBC 2.0)  
+ SQLUINTEGER 位掩碼,枚舉了 TIMESTAMPADD 標量函數的驅動程式和相關數據源支援的時間戳間隔。  
   
- 下列位元遮罩是用來決定支援的間隔：  
-  
- SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
-  
- 符合 FIPS 轉換等級的驅動程式一律會傳回位元遮罩，其中所有的位都已設定。  
-  
- SQL_TIMEDATE_DIFF_INTERVALS （ODBC 2.0）  
- SQLUINTEGER 位元遮罩，列舉 TIMESTAMPDIFF 純量函數的驅動程式所支援的時間戳記間隔和相關聯的資料來源。  
-  
- 下列位元遮罩是用來決定支援的間隔：  
+ 以下位遮罩支援哪些間隔:  
   
  SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- 符合 FIPS 轉換等級的驅動程式一律會傳回位元遮罩，其中所有的位都已設定。  
+ FIPS 過渡電平一致性驅動程式將始終返回一個位掩碼,其中設置所有這些位。  
   
- SQL_TIMEDATE_FUNCTIONS （ODBC 1.0）  
- 注意：此資訊類型是在 ODBC 1.0 中引進的;每個位元遮罩都會標示其引進的版本。  
+ SQL_TIMEDATE_DIFF_INTERVALS(ODBC 2.0)  
+ SQLUINTEGER 位掩碼,枚舉了 TIMESTAMPDIFF 標量函數的驅動程式和相關數據源支援的時間戳間隔。  
   
- SQLUINTEGER 位元遮罩，列舉驅動程式和相關聯資料來源所支援的純量日期和時間函數。  
+ 以下位遮罩支援哪些間隔:  
   
- 下列位元遮罩是用來決定支援的日期和時間函數：  
+ SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- SQL_FN_TD_CURRENT_DATE ODBC 3.0） SQL_FN_TD_CURRENT_TIME （ODBC 3.0） SQL_FN_TD_CURRENT_TIMESTAMP （ODBC 3.0） SQL_FN_TD_CURDATE （ODBC 1.0） SQL_FN_TD_CURTIME （ODBC 1.0） SQL_FN_TD_DAYNAME （ODBC 2.0） SQL_FN_TD_DAYOFMONTH （ODBC 1.0） SQL_FN_TD_DAYOFWEEK （ODBC 1.0） SQL_FN_TD_DAYOFYEAR （ODBC 1.0） SQL_FN_TD_EXTRACT （ODBC 3.0） SQL_FN_TD_HOUR （ODBC 1.0） SQL_FN_TD_MINUTE （ODBC 1.0） SQL_FN_TD_MONTH （ODBC 1.0） SQL_FN_TD_MONTHNAME （ODBC 2.0） SQL_FN_TD_NOW （ODBC 1.0） SQL_FN_TD_QUARTER （ODBC 1.0） SQL_FN_TD_SECOND （ODBC 1.0） SQL_FN_TD_TIMESTAMPADD （ODBC 2.0） SQL_FN_TD_TIMESTAMPDIFF （ODBC 2.0） SQL_FN_TD_WEEK （ODBC 1.0） SQL_FN_TD_YEAR （ODBC 1.0）  
+ FIPS 過渡電平一致性驅動程式將始終返回一個位掩碼,其中設置所有這些位。  
   
- SQL_TXN_CAPABLE （ODBC 1.0）  
- 注意：此資訊類型是在 ODBC 1.0 中引進的;每個傳回值都會標示其引進的版本。  
+ SQL_TIMEDATE_FUNCTIONS(ODBC 1.0)  
+ 注意:資訊類型在 ODBC 1.0 中引入;每個位掩碼都標有引入它的版本。  
   
- 描述驅動程式或資料來源中交易支援的 SQLUSMALLINT 值：  
+ SQLUINTEGER 位掩碼,枚舉驅動程式和相關數據源支援的標量日期和時間函數。  
   
- SQL_TC_NONE = 不支援的交易。 （ODBC 1.0）  
+ 以下位遮罩支援哪些日期和時間函數:  
   
- SQL_TC_DML = 交易只能包含資料操作語言（DML）語句（**SELECT**、 **INSERT**、 **UPDATE**、 **DELETE**）。 在交易中遇到的資料定義語言（DDL）語句會造成錯誤。 （ODBC 1.0）  
+ SQL_FN_TD_CURRENT_DATE ODBC 3.0)SQL_FN_TD_CURRENT_TIME (ODBC 3.0)SQL_FN_TD_CURRENT_TIMESTAMP (ODBC 3.0)SQL_FN_TD_CURDATE (ODBC 1.0)SQL_FN_TD_CURTIME (ODBC 1.0) SQL_FN_TD_DAYNAME (ODBC 1.0) SQL_FN_TD_DAYOFMONTH (ODBC 1.0)SQL_FN_TD_DAYOFWEEK (ODBC 1 .0)SQL_FN_TD_DAYOFYEAR (ODBC 1.0) SQL_FN_TD_EXTRACT (ODBC 3.0)SQL_FN_TD_HOUR (ODBC 1.0)SQL_FN_TD_MINUTE(ODBC 1.0)SQL_FN_TD_MONTH(ODBC 1.0)SQL_FN_TD_MONTH(ODBC 1.0)SQL_FN_TD_MONTH(ODBC 1.0)1.0)SQL_FN_TD_MONTHNAME (ODBC 2.0)SQL_FN_TD_NOW (ODBC 1.0)SQL_FN_TD_QUARTER (ODBC 1.0)SQL_FN_TD_SECOND (ODBC 1.0)SQL_FN_TD_TIMESTAMPADD (ODBC 2.0)SQL_FN_TD_TIMESTAMPDIFF (ODBC 2.0)SQL_FN_TD_WEEK (ODBC 1.0)SQL_FN_TD_YEAR(ODBC 1.0)  
   
- SQL_TC_DDL_COMMIT = 交易只能包含 DML 語句。 在交易中遇到的 DDL 語句（**CREATE TABLE**、 **DROP INDEX**等等）會導致交易被認可。 （ODBC 2.0）  
+ SQL_TXN_CAPABLE(ODBC 1.0)  
+ 注意:資訊類型在 ODBC 1.0 中引入;每個返回值都標有引入該值的版本。  
   
- SQL_TC_DDL_IGNORE = 交易只能包含 DML 語句。 在交易中遇到的 DDL 語句會被忽略。 （ODBC 2.0）  
+ 描述驅動程式或資料來源中的事務支援的 SQLUSMALLINT 值:  
   
- SQL_TC_ALL = 交易可以包含 DDL 語句和 DML 語句（依任何順序）。 （ODBC 1.0）  
+ SQL_TC_NONE = 不支援事務。 (ODBC 1.0)  
   
- （由於 SQL-92 中的交易支援是必要的，因此符合 SQL-92 的驅動程式 [任何層級] 永遠不會傳回 SQL_TC_NONE）。  
+ SQL_TC_DML = 事務只能包含資料操作語言 (DML) 語句 **(SELECT,****插入**、**更新**、**刪除**). 事務中遇到的數據定義語言 (DDL) 語句會導致錯誤。 (ODBC 1.0)  
   
- SQL_TXN_ISOLATION_OPTION （ODBC 1.0）  
- SQLUINTEGER 的位元遮罩，列舉驅動程式或資料來源中可用的交易隔離等級。  
+ SQL_TC_DDL_COMMIT = 事務只能包含 DML 語句。 事務中遇到的 DDL 語句(**創建表****、DROP INDEX**等)會導致提交事務。 (ODBC 2.0)  
   
- 下列位元遮罩會與旗標一起使用，以判斷支援的選項：  
+ SQL_TC_DDL_IGNORE = 事務只能包含 DML 語句。 忽略事務中遇到的 DDL 語句。 (ODBC 2.0)  
+  
+ SQL_TC_ALL = 事務可以按任何順序包含 DDL 語句和 DML 語句。 (ODBC 1.0)  
+  
+ (由於 SQL-92 中必須支援事務,因此 SQL-92 符合的驅動程式[任何級別]永遠不會返回SQL_TC_NONE。  
+  
+ SQL_TXN_ISOLATION_OPTION(ODBC 1.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程式或數據源中可用的事務隔離級別。  
+  
+ 以下位遮罩與標誌一起使用,以確定支援哪些選項:  
   
  SQL_TXN_READ_UNCOMMITTEDSQL_TXN_READ_COMMITTEDSQL_TXN_REPEATABLE_READSQL_TXN_SERIALIZABLE  
   
- 如需這些隔離等級的說明，請參閱 SQL_DEFAULT_TXN_ISOLATION 的描述。  
+ 有關這些隔離級別的說明,請參閱SQL_DEFAULT_TXN_ISOLATION的說明。  
   
- 若要設定交易隔離等級，應用程式會呼叫**SQLSetConnectAttr**來設定 SQL_ATTR_TXN_ISOLATION 屬性。 如需詳細資訊，請參閱[SQLSetConnectAttr 函數](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
+ 要設置事務隔離等級,應用程式調用**SQLSetConnectAttr**來設置SQL_ATTR_TXN_ISOLATION屬性。 有關詳細資訊,請參閱[SQLSetConnectAttr 函數](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
- 符合 SQL 92 專案層級的驅動程式一律會傳回 SQL_TXN_SERIALIZABLE 支援。 符合 FIPS 轉換層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ SQL-92 符合入門級的驅動程序將始終返回SQL_TXN_SERIALIZABLE支援。 FIPS 過渡電平符合性驅動程式將始終返回支援的所有這些選項。  
   
- SQL_UNION （ODBC 2.0）  
- 列舉**UNION**子句支援的 SQLUINTEGER 位元遮罩：  
+ SQL_UNION(ODBC 2.0)  
+ Enting SQLUINTEGER 位元遮罩:**UNION**  
   
- SQL_U_UNION = 資料來源支援**UNION**子句。  
+ SQL_U_UNION = 資料源支援**UNION**子句。  
   
- SQL_U_UNION_ALL = 資料來源支援**UNION**子句中的**ALL**關鍵字。 （在此情況下，**SQLGetInfo**會傳回 SQL_U_UNION 和 SQL_U_UNION_ALL。）  
+ SQL_U_UNION_ALL = 資料來源支援**UNION**子句中的**ALL**關鍵字。 (在這種情況下 **,SQLGetInfo**將返回SQL_U_UNION和SQL_U_UNION_ALL。  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回這兩個選項的支援。  
+ SQL-92 符合入門級的驅動程序將始終返回這兩個選項作為支援。  
   
- SQL_USER_NAME （ODBC 1.0）  
- 在特定資料庫中使用名稱的字元字串，可以與登入名稱不同。  
+ SQL_USER_NAME(ODBC 1.0)  
+ 具有特定資料庫中使用的名稱的字串,該字串可能不同於登錄名。  
   
- SQL_XOPEN_CLI_YEAR （ODBC 3.0）  
- 字元字串，指出發行群組規格的發行年份，而此版本的 ODBC 驅動程式管理員會完全符合此標準。  
+ SQL_XOPEN_CLI_YEAR(ODBC 3.0)  
+ 指示 OPENGROUP 規範發佈年份的字串,ODBC 驅動程式管理器的版本完全符合該規範。  
   
- SQL_ACCESSIBLE_PROCEDURES （ODBC 1.0）  
- 字元字串：如果使用者可以執行**SQLProcedures**所傳回的所有程式，則為 "Y";如果可能會傳回使用者無法執行的程式，則為 "N"。  
+ SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
+ 字串字串:「Y」,如果用戶可以執行**SQL 程式**傳回的所有過程;如果返回過程時可能返回使用者無法執行,則為"N"。  
   
- SQL_ACCESSIBLE_TABLES （ODBC 1.0）  
- 字元字串： "Y"，如果使用者保證對**SQLTables**所傳回的所有資料表具有**SELECT**許可權，如果可能會傳回使用者無法存取的資料表，則為 "N"。  
+ SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
+ 字串字串:「Y」,**如果使用者保證選擇** **SQLTables**傳回的所有表的許可權;如果返回的表是使用者無法訪問的表,則為"N"。  
   
- SQL_ACTIVE_ENVIRONMENTS （ODBC 3.0）  
- SQLUSMALLINT 值，指定驅動程式可支援的作用中環境數目上限。 如果沒有指定的限制，或限制不明，此值會設定為零。  
+ SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
+ 指定驅動程式可以支援的最大活動環境數的 SQLUSMALLINT 值。 如果沒有指定限制或限制未知,則此值設置為零。  
   
- SQL_AGGREGATE_FUNCTIONS （ODBC 3.0）  
- SQLUINTEGER 位元遮罩列舉彙總函式的支援：  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
+ SQLUINTEGER 位罩對聚合函數支援:  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- 符合 SQL-92 專案層級的驅動程式一律會傳回所有這些選項（如有支援）。  
+ SQL-92 符合入門級的驅動程序將始終返回所有這些選項(如支援)。  
   
- SQL_ALTER_DOMAIN （ODBC 3.0）  
- SQLUINTEGER 位元遮罩，用來列舉**ALTER DOMAIN**語句中的子句（如 SQL-92 中所定義，由資料來源所支援）。 SQL-92 完整層級相容的驅動程式一律會傳回所有的位元遮罩。 傳回值 "0" 表示不支援**ALTER DOMAIN**語句。  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉**了在**SQL-92 中定義的 ALTER DOMAIN 語句中子句,數據源支援。 SQL-92 完全符合級別的驅動程序將始終返回所有位掩碼。 返回值"0"表示不支援 ALTER **DOMAIN**語句。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
- SQL_AD_ADD_DOMAIN_CONSTRAINT = 支援新增網域條件約束（完整層級）  
+ SQL_AD_ADD_DOMAIN_CONSTRAINT = 支援新增網域約束(完整等級)  
   
- 支援 SQL_AD_ADD_DOMAIN_DEFAULT \<= alter domain \<> set domain DEFAULT 子句> （完整層級）  
+ SQL_AD_ADD_DOMAIN_DEFAULT \<=\<變更網域>>受支援的網域預設子句(完整等級)  
   
- SQL_AD_CONSTRAINT_NAME_DEFINITION = \<條件約束名稱定義子句> 支援命名網域條件約束（中繼層級）  
+ SQL_AD_CONSTRAINT_NAME_DEFINITION \<=>为命名域约束(中間等級)支援規範名稱定義子句  
   
- SQL_AD_DROP_DOMAIN_CONSTRAINT = \<DROP DOMAIN CONSTRAINT 子句> 受到支援（完整層級）  
+ SQL_AD_DROP_DOMAIN_CONSTRAINT \<= 支援>刪除網域  
   
- 支援 SQL_AD_DROP_DOMAIN_DEFAULT \<= alter domain \<> DROP domain DEFAULT 子句> （完整層級）  
+ SQL_AD_DROP_DOMAIN_DEFAULT \<=\<變更網域>刪除網域預設子句>支援(完整等級)  
   
- 如果\<支援新增網域條件約束\<>，下列位會指定支援的條件約束屬性> （已設定 SQL_AD_ADD_DOMAIN_CONSTRAINT 位）：  
+ 如果\<支援>添加域\<約束 (設定SQL_AD_ADD_DOMAIN_CONSTRAINT位),以下位指定支援的約束屬性>:  
   
- SQL_AD_ADD_CONSTRAINT_DEFERRABLE （完整層級） SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE （完整層級） SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED （完整層級） SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE （完整層級）  
+ SQL_AD_ADD_CONSTRAINT_DEFERRABLE(全級別)SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE(全級別)SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED(全級別)SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE(全級別)  
   
- SQL_ALTER_TABLE （ODBC 2.0）  
- SQLUINTEGER 位元遮罩，列舉資料來源所支援之**ALTER TABLE**語句中的子句。  
+ SQL_ALTER_TABLE(ODBC 2.0)  
+ SQLUINTEGER 位罩,枚舉資料來源支援的**ALTER TABLE**語句中子句。  
   
- 這項功能必須受到支援的 SQL-92 或 FIPS 一致性層級會顯示在每個位元遮罩旁邊的括弧中。  
+ 必須支援此功能的 SQL-92 或 FIPS 一致性級別顯示在每個位掩碼旁邊的括弧中。  
   
- 下列位元遮罩是用來決定支援的子句：  
+ 以下位遮罩用於確定哪些子句受支援:  
   
- SQL_AT_ADD_COLUMN_COLLATION = \<新增資料行> 子句，並提供設備來指定資料行定序（完整層級）（ODBC 3.0）  
+ SQL_AT_ADD_COLUMN_COLLATION \<= 支援新增欄>子句,具有指定欄位規則(完整等級)(ODBC 3.0)的功能  
   
- SQL_AT_ADD_COLUMN_DEFAULT = \<新增資料行> 子句，並可指定資料行預設值（FIPS 過渡層級）（ODBC 3.0）  
+ SQL_AT_ADD_COLUMN_DEFAULT \<= 支援新增欄>子句,具有指定列預設值(FIPS 過渡等級)(ODBC 3.0)的功能  
   
- SQL_AT_ADD_COLUMN_SINGLE = \<支援新增資料行> （FIPS 過渡層級）（ODBC 3.0）  
+ SQL_AT_ADD_COLUMN_SINGLE \<= 支援新增欄>(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_ADD_CONSTRAINT = \<新增資料行> 子句，並可指定資料行條件約束（FIPS 過渡層級）（ODBC 3.0）  
+ SQL_AT_ADD_CONSTRAINT \<= 支援新增欄>子句,具有指定欄位約束(FIPS 過渡等級)(ODBC 3.0)的功能  
   
- 支援 SQL_AT_ADD_TABLE_CONSTRAINT \<= 新增資料表條件約束> 子句（FIPS 轉換層級）（ODBC 3.0）  
+ SQL_AT_ADD_TABLE_CONSTRAINT \<= 支援>項(FIPS過渡等級)(ODBC 3.0)新增表約束  
   
- SQL_AT_CONSTRAINT_NAME_DEFINITION = \<條件約束名稱定義> 支援命名資料行和資料表條件約束（中繼層級）（ODBC 3.0）  
+ SQL_AT_CONSTRAINT_NAME_DEFINITION \<=>为命名列和表约束(中間等級)(ODBC 3.0)支援規範名稱定義  
   
- SQL_AT_DROP_COLUMN_CASCADE = \<卸載資料行> CASCADE 支援（FIPS 轉換層級）（ODBC 3.0）  
+ 支援SQL_AT_DROP_COLUMN_CASCADE \<= 丟棄列> CASCADE(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_DROP_COLUMN_DEFAULT = \<alter column> \<卸載資料行 DEFAULT 子句> 支援（中繼層級）（ODBC 3.0）  
+ SQL_AT_DROP_COLUMN_DEFAULT \<=\<變更欄>刪除列預設子句>支援(中級級別)(ODBC 3.0)  
   
- SQL_AT_DROP_COLUMN_RESTRICT = \<卸載資料行> 限制（FIPS 過渡層級）（ODBC 3.0）  
+ 支援SQL_AT_DROP_COLUMN_RESTRICT \<= 下拉列>限制(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_DROP_TABLE_CONSTRAINT_CASCADE （ODBC 3.0）  
+ SQL_AT_DROP_TABLE_CONSTRAINT_CASCADE (ODBC 3.0)  
   
- SQL_AT_DROP_TABLE_CONSTRAINT_RESTRICT = \<卸載資料行> 限制（FIPS 過渡層級）（ODBC 3.0）  
+ 支援SQL_AT_DROP_TABLE_CONSTRAINT_RESTRICT \<=>约束的放置列(FIPS 過渡等級)(ODBC 3.0)  
   
- SQL_AT_SET_COLUMN_DEFAULT = \<alter column> \<SET column DEFAULT 子句> 是支援的（中繼層級）（ODBC 3.0）  
+ SQL_AT_SET_COLUMN_DEFAULT \<=\<更改欄>設定列預設子句>支援(中級級別)(ODBC 3.0)  
   
- 如果支援指定資料行或\<資料表條件約束，下列位會指定支援條件約束屬性> （已設定 SQL_AT_ADD_CONSTRAINT 位）：  
+ 如果支援指定欄或表\<約束(設定SQL_AT_ADD_CONSTRAINT位),以下位將指定支援約束屬性>:  
   
- SQL_AT_CONSTRAINT_INITIALLY_DEFERRED （完整層級）（ODBC 3.0） SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE （完整層級）（ODBC 3.0） SQL_AT_CONSTRAINT_DEFERRABLE （完整層級）（ODBC 3.0） SQL_AT_CONSTRAINT_NON_DEFERRABLE （完整層級）（ODBC 3.0）  
+ SQL_AT_CONSTRAINT_INITIALLY_DEFERRED(全級) (ODBC 3.0) SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE (全級別) (ODBC 3.0)SQL_AT_CONSTRAINT_DEFERRABLE(完整級別)(ODBC 3.0)SQL_AT_CONSTRAINT_NON_DEFERRABLE(全級)(ODBC 3.0)  
   
- SQL_ASYNC_MODE （ODBC 3.0）  
- SQLUINTEGER 值，指出驅動程式中的非同步支援層級：  
+ SQL_ASYNC_MODE(ODBC 3.0)  
+ 指示驅動程式中非同步支援等級的 SQLUINTEGER 值:  
   
- SQL_AM_CONNECTION = 支援連接層級非同步執行。 所有與給定連接控制碼相關聯的語句控制碼都處於非同步模式或全都處於同步模式。 連接上的語句控制碼不能處於非同步模式，而相同連接上的另一個語句控制碼處於同步模式，反之亦然。  
+ SQL_AM_CONNECTION = 支援連接級非同步執行。 與給定連接句柄關聯的所有語句句柄都處於非同步模式,或者所有語句句柄都處於同步模式。 連接上的語句句柄不能處於非同步模式,而同一連接上的另一個語句句柄處於同步模式,反之亦然。  
   
- 支援 SQL_AM_STATEMENT = 語句層級非同步執行。 某些與連接控制碼相關聯的語句控制碼可以處於非同步模式，而相同連接上的其他語句控制碼則處於同步模式。  
+ SQL_AM_STATEMENT = 支援語句級非同步執行。 與連接句柄關聯的某些語句句柄可以處於異步模式,而同一連接上的其他語句句柄處於同步模式。  
   
- SQL_AM_NONE = 不支援非同步模式。  
+ 不支援SQL_AM_NONE = 不支援非同步模式。  
   
- SQL_BATCH_ROW_COUNT （ODBC 3.0）  
- SQLUINTEGER 的位元遮罩，列舉與資料列計數可用性有關的驅動程式行為。 下列位元遮罩會與資訊類型一起使用：  
+ SQL_BATCH_ROW_COUNT (ODBC 3.0)  
+ SQLUINTEGER 位掩碼,枚舉驅動程序相對於行計數的可用性的行為。 以下位遮罩與資訊型態使用:  
   
- SQL_BRC_ROLLED_UP = 連續 INSERT、DELETE 或 UPDATE 語句的資料列計數會匯總成一個。 如果未設定此位，每個語句都可以使用資料列計數。  
+ SQL_BRC_ROLLED_UP = 連續插入、刪除或更新語句的行計數匯總為一個。 如果未設置此位,則行計數可用於每個語句。  
   
- SQL_BRC_PROCEDURES = 在預存程式中執行批次時，可以使用資料列計數（如果有的話）。 如果有可用的資料列計數，視 SQL_BRC_ROLLED_UP 位而定，您可以匯總或個別使用它們。  
+ SQL_BRC_PROCEDURES = 在存儲過程中執行批處理時,行計數(如果有)可用。 如果行計數可用,則它們可以匯總或單獨可用,具體取決於SQL_BRC_ROLLED_UP位。  
   
- SQL_BRC_EXPLICIT = 當直接呼叫**SQLExecute**或**SQLExecDirect**來執行批次時，可以使用資料列計數（如果有的話）。 如果有可用的資料列計數，視 SQL_BRC_ROLLED_UP 位而定，您可以匯總或個別使用它們。  
+ SQL_BRC_EXPLICIT = 當通過調用 SQLExecute 或**SQLExecDirect**直接執行批處理時**SQLExecDirect**,行計數(如果有)可用。 如果行計數可用,則它們可以匯總或單獨可用,具體取決於SQL_BRC_ROLLED_UP位。  
   
 ## <a name="example"></a>範例  
- **SQLGetInfo**會傳回支援的選項清單，做為 **INFOVALUEPTR*中的 SQLUINTEGER 位元遮罩。 每個選項的位元遮罩會與旗標一起使用，以判斷是否支援此選項。  
+ **SQLGetInfo**在 #*InfoValuePtr*中傳回支援的選項清單作為 SQLUINTEGER 位罩。 每個選項的位掩碼與標誌一起使用,以確定該選項是否受支援。  
   
- 例如，應用程式可以使用下列程式碼來判斷與連接相關聯的驅動程式是否支援 SUBSTRING 純量函數。  
+ 例如,應用程式可以使用以下代碼來確定與連接關聯的驅動程式是否支援 SUBSTRING 標量函數。  
   
- 如需使用**SQLGetInfo**的另一個範例，請參閱[SQLTables 函數](../../../odbc/reference/syntax/sqltables-function.md)。  
+ 有關使用**SQLGetInfo**的另一個範例,請參閱[SQLTables 函數](../../../odbc/reference/syntax/sqltables-function.md)。  
   
 ```cpp  
 SQLUINTEGER fFuncs;  
@@ -1823,17 +1823,17 @@ else
 ```  
   
 ## <a name="related-functions"></a>相關函數  
- 傳回連接屬性的設定  
+ 傳回連線屬性的設定  
  [SQLGetConnectAttr 函數](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
- 判斷驅動程式是否支援函數  
- [SQLGetFunctions 函數](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
+ 確定驅動程式是否支援函數  
+ [SQLGetFunctions 函式](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
   
- 傳回語句屬性的設定  
- [SQLGetStmtAttr 函數](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
+ 傳回敘述屬性的設定  
+ [SQLGetStmtAttr 函式](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
   
- 傳回資料來源資料類型的相關資訊  
- [SQLGetTypeInfo 函數](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+ 傳回關於資料來源資料型態的資訊  
+ [SQLGetTypeInfo 函式](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

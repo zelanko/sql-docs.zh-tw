@@ -1,5 +1,5 @@
 ---
-title: 資料指標程式庫未執行的 ODBC 函式 |Microsoft Docs
+title: 游標庫未執行的 ODBC 函數 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62fcf860aba5c9f0be80e575428a362a7f3ca588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ff9d685cf4a509b84142d91f76d41eb7ca3508ee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100656"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308039"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>資料指標程式庫未執行的 ODBC 函式
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
   
- 資料指標程式庫不會執行下列函數。 當應用程式呼叫其中一個函式時，驅動程式管理員會叫用該驅動程式，而不是資料指標程式庫。  
+ 游標庫不執行以下函數。 當應用程式調用這些函數之一時,驅動程式管理器調用驅動程式,而不是游標庫。  
   
 |||  
 |-|-|  
