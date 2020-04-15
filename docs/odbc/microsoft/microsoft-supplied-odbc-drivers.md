@@ -1,5 +1,5 @@
 ---
-title: Microsoft 提供的 ODBC 驅動程式 |Microsoft Docs
+title: 微軟提供的ODBC驅動程式 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - drivers [ODBC], about ODBC drivers
 - ODBC drivers [ODBC]
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dadbc638219803562ef376a44abb37e9f85802cc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298198"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供的 ODBC 驅動程式
-*驅動程式*是在 ODBC API 中執行函式的程式庫。 每個驅動程式都是特定的資料庫管理系統（DBMS）所特有。 在大部分情況下，驅動程式會公開基礎 DBMS 的功能;不需要它們來執行 DBMS 所不支援的功能。 驅動程式會執行特定的工作，並可分為兩個類別：以檔案為基礎和以 DBMS 為基礎。 如需驅動程式和驅動程式架構的詳細資訊，請參閱[驅動程式](../../odbc/reference/drivers.md)。  
+*驅動程式*是在 ODBC API 中實現函數的庫。 每個驅動程式都特定於特定的資料庫管理系統 (DBMS)。 在大多數情況下,驅動程式公開基礎 DBMS 的功能;但是,驅動程式會公開基礎資料庫MS的功能。它們不需要實現 DBMS 不支援的功能。 驅動程式執行特定任務,可以分為兩類:基於檔和基於 DBMS。 有關驅動程式和驅動程式架構結構的詳細資訊,請參閱[驅動程式](../../odbc/reference/drivers.md)。  
   
  此章節包含下列主題。  
   

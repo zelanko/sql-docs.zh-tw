@@ -1,5 +1,5 @@
 ---
-title: 安裝程式 DLL API 參考函式 |Microsoft Docs
+title: 安裝程式 DLL API 參考功能 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3502dfe6cdf54214041e3654d20e1b6dd2ff6f21
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67906216"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298778"
 ---
 # <a name="installer-dll-api-reference-function"></a>安裝程式 DLL API 參考函式
-本節說明安裝程式 DLL API 中的函數語法。 安裝程式 DLL API 包含20個函數。 其中三個函式（ **SQLGetTranslator**、 **SQLRemoveDSNFromIni**和**SQLWriteDSNToIni**）只會由安裝程式 dll 呼叫。 安裝程式和管理程式會呼叫其他函式。  
+本節介紹安裝程式 DLL API 中函數的語法。 安裝程式 DLL API 由 20 個函數組成。 其中三個函數 **,SQLGet轉換器****、SQLRemoveDSNFromini**和**SQLWriteDSNToini,** 僅由設置 DLL 調用。 其他函數由設置和管理程式調用。  
   
- 每個函式都會標示其引進的 ODBC 版本。  
+ 每個函數都標有引入該函數的 ODBC 版本。  
   
  此章節包含下列主題。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67906216"
   
 -   [SQLInstallTranslatorEx 函式](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)  
   
--   [SQLManageDataSources 函式](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
+-   [SQL管理資料來源函式](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
   
 -   [SQLPostInstallerError 函式](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)  
   

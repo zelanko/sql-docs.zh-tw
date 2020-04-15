@@ -1,5 +1,5 @@
 ---
-title: 處理結果（ODBC） |Microsoft Docs
+title: 流程結果 (ODBC) |微軟文件
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebd41c30d72b86fe5344a15767648371a14f7a2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: de9adbcc2d89895a4162b5c7f7b2921f024d03e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780913"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300398"
 ---
 # <a name="processing-results---process-results"></a>處理結果 - 處理結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-在 ODBC 應用程式中處理結果時，必須先決定結果集的特性，然後使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)，將資料抓取到程式變數中。  
+處理 ODBC 應用程式中的結果首先涉及確定結果集的特徵,然後使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)將數據檢索到程式變數中。  
   
 ### <a name="to-process-results"></a>處理結果  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73780913"
     > [!NOTE]  
     >  當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   
-5.  或者也可以使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
+5.  您可以選擇使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
   
 6.  如果有其他可用的結果集，請到步驟 1。  
 
@@ -62,6 +62,6 @@ ms.locfileid: "73780913"
 >  若要在 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 傳回 SQL_NO_DATA 之前取消結果集的處理，請呼叫 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[&#40;ODBC&#41;中取出結果集資訊](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[檢索結果集資訊&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

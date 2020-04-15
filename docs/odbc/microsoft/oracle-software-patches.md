@@ -1,5 +1,5 @@
 ---
-title: Oracle 軟體修補程式 |Microsoft Docs
+title: 甲骨文軟體補丁 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], Oraclesoftware patches
 - Oracle software patches [ODBC]
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fce38aabddfc3891314940d4b7cb21f02965c083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b1fb577e7b08f6ef332ed35f6d275a5f7ce543ba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100771"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292948"
 ---
 # <a name="oracle-software-patches"></a>Oracle 軟體修補程式
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
+>  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
   
- 需要 Oracle 伺服器產品及其用戶端元件的修補程式，才能正常運作數種 Microsoft 產品和技術，包括 Microsoft ODBC Driver for Oracle、Microsoft OLE DB Provider for Oracle、Internet Information服務（IIS）、元件服務（或 Microsoft 交易伺服器，如果您使用的是 Windows NT）等等。  
+ Oracle 伺服器產品及其用戶端元件的修補程式是幾種 Microsoft 產品和技術正常運行所必需的,包括 Oracle 的 Microsoft ODBC 驅動程式、Oracle 的 Microsoft OLE DB 供應商、互聯網資訊服務 (IIS)、元件服務(或 Microsoft 事務伺服器,如果您使用的是 Windows NT),等等。  
   
 > [!NOTE]  
->  下列指示可能不完全精確，因為 Oracle FTP 網站可能會有所變更。  
+>  以下說明可能不完全準確,因為 Oracle FTP 網站可能會更改。  
   
 ### <a name="to-download-the-oracle-software-patches"></a>下載 Oracle 軟體修補程式  
   
-1.  連接到公用 FTP 網站，網址為 oracle-ftp.oracle.com。 使用者識別碼是「匿名」，而密碼則是您的電子郵件地址。  
+1.  oracle-ftp.oracle.com連接到公共 FTP 網站。 使用者 ID 是「匿名的」,密碼是您的電子郵件位址。  
   
-2.  流覽至下列目錄：/server/wgt_tech/server/windowsNT。  
+2.  導覽到以下目錄:/伺服器/wgt_tech/伺服器/視窗NT。  
   
-3.  若要下載與 Windows 95、Windows 98 和 Windows NT/Windows 2000 相關的修補程式，請流覽至您的 Oracle 版本的子目錄-7.3 或8.0。 這兩個子目錄是/73patchsets 和/80patchsets。  
+3.  要下載與 Windows 95、Windows 98 和 Windows NT/Windows 2000 最相關的修補程式,請瀏覽到版本的 Oracle 的子目錄 - 7.3 或 8.0。 兩個子目錄是 /73 修補程式集和 /80 個修補程式集。  
   
-4.  若要下載 Oracle 網路技術（SQL * Net 或 Net8）的修補程式，請流覽至下列目錄：/network。  
+4.  要下載 Oracle 網路技術的修補程式(SQL_Net 或 Net8),請導航到以下目錄:/網路。  
   
- 從您的網頁瀏覽器存取此 FTP 網站可能無法正常執行。 如果您遇到問題，請嘗試使用「傳統」 FTP 用戶端，或使用 DOS 命令提示字元。  
+ 從 Web 瀏覽器訪問此 FTP 網站可能不起作用。 如果遇到問題,請嘗試使用"傳統"FTP 用戶端或使用 DOS 命令提示符。  
   
 > [!NOTE]  
->  因為 Oracle 會修正目前版本中的 bug，然後使用軟體修補程式將其 retrofits 到舊版，建議您下載可用的最新修補程式。 這對於 Oracle 伺服器用戶端元件而言更是如此。 如果您有關于安裝這些修補程式的問題，請洽詢 Oracle 支援。
+>  由於 Oracle 修復了當前版本中的錯誤,然後使用軟體修補程式將它們改裝為早期版本,因此建議您下載可用的最新修補程式。 對於 Oracle 伺服器客戶端元件尤其如此。 如果您對安裝這些修補程式有疑問,請聯繫 Oracle 支援。

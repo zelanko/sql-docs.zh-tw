@@ -1,5 +1,5 @@
 ---
-title: 可滾動的資料指標類型 |Microsoft Docs
+title: 可捲軸型態 :微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 63f29269ea209875a2e775cf8d523302fcb9a976
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304229"
 ---
 # <a name="scrollable-cursor-types"></a>可捲動的資料指標類型
-這四種類型的可滾動資料指標為靜態、動態、索引鍵集驅動和混合。 靜態資料指標會偵測到幾個或沒有變更，但執行的成本相對較低。 動態資料指標會偵測所有變更，但執行成本高昂。 索引鍵集驅動和混合資料指標之間的差異在於偵測大部分的變更，但代價比動態資料指標少。  
+四種類型的可滾動游標是靜態的、動態的、按鍵集驅動的和混合的。 靜態游標檢測到很少或沒有更改,但實現成本相對較低。 動態游標可檢測所有更改,但實現成本高昂。 鍵集驅動和混合游標位於兩者之間,檢測大多數更改,但費用低於動態游標。  
   
- 下列詞彙可用來定義每個可滾動資料指標類型的特性：  
+ 以下字語用於定義每種類型的可捲軸游標的特徵:  
   
--   **自己的更新、刪除和插入。** 藉由呼叫**SQLBulkOperations**或**SQLSetPos** ，或使用定位 update 或 delete 語句，來更新、刪除和插入資料指標。  
+-   **擁有更新、刪除和插入。** 通過游標進行更新、刪除和插入,無論是調用**SQLBulk 操作還是** **SQLSetPos,** 要麼使用定位的更新或刪除語句。  
   
--   **其他更新、刪除和插入。** 不是由資料指標所進行的更新、刪除和插入，包括在相同交易中由其他作業所建立的資料、透過其他交易所建立的資料，以及其他應用程式所建立的資料。  
+-   **其他更新、刪除和插入。** 更新、刪除和插入游標未進行的更新、刪除和插入,包括同一事務中其他操作所做的更新、刪除和插入、通過其他事務進行的操作以及其他應用程式所做的操作。  
   
--   **所屬.** 結果集中的資料列集合。  
+-   **會員。** 結果集中的行集。  
   
--   **即可.** 資料指標傳回資料列的順序。  
+-   **以。** 游標返回行的順序。  
   
--   **閾值.** 結果集中每個資料列的值。  
+-   **值。** 結果集中的每行中的值。  
   
- 如需有關如何更新、刪除和插入資料的詳細資訊，請參閱[更新資料總覽](../../../odbc/reference/develop-app/updating-data-overview.md)。  
+ 有關如何更新、刪除和插入資料的資訊,請參閱[更新資料概述](../../../odbc/reference/develop-app/updating-data-overview.md)。  
   
  此章節包含下列主題。  
   

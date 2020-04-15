@@ -1,5 +1,5 @@
 ---
-title: SQLAsyncNotificationCallback 函式 |Microsoft Docs
+title: SQLSync 通知回撥功能 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,27 +8,27 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6c182c48b8e5ddb70204ddd3a94d9651f97595d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294535"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 函式
-**標準**  
- 引進的版本： ODBC 3。8  
+**一致性**  
+ 版本介紹: ODBC 3.8  
   
- 標準合規性：無  
+ 標準合規性:無  
   
  **摘要**  
- **SQLAsyncNotificationCallback**可讓驅動程式在驅動程式傳回 SQL_STILL_EXECUTING 之後，將目前非同步作業的某個進度回呼給驅動程式管理員。 **SQLAsyncNotificationCallback**只能由驅動程式呼叫。  
+ **SQLAsync 通知回撥**允許驅動程式在驅動程式返回SQL_STILL_EXECUTING後當前非同步操作有一些進展時回調到驅動程式管理器。 **SQLAsync 通知回調**只能由驅動程式調用。  
   
- 驅動程式不會使用函式名稱**SQLAsyncNotificationCallback**來呼叫**SQLAsyncNotificationCallback** 。 相反地，驅動程式管理員會將函式指標傳遞至驅動程式，做為對應之連接控制碼或語句控制碼之 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 或 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 屬性的值。各自. 不同的控制碼可能會被指派不同的函式指標值。 函數指標的類型定義為 SQL_ASYNC_NOTIFICATION_CALLBACK。  
+ 驅動程式不呼叫**SQLAsync 通知回**檔 ,功能名稱**SQLAsync 通知回檔**。 相反,驅動程式管理器將函數指標傳遞給驅動程式,作為相應連接句柄或語句句柄SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK或SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK屬性的值。 可以分配不同的句柄,以指示不同的函數指標值。 函數指標的類型定義為SQL_ASYNC_NOTIFICATION_CALLBACK。  
   
- **SQLAsyncNotificationCallback**是安全線程。 驅動程式可以選擇使用多個執行緒，同時在不同的控制碼上呼叫**SQLAsyncNotificationCallback** 。  
+ **SQLSync 通知回調**是線程安全的。 驅動程式可以選擇在不同的句柄上同時使用調用**SQLAsync 通知回調**的多個線程。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,24 +39,24 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ```  
   
 ## <a name="arguments"></a>引數  
- *pContex*  
- 驅動程式管理員所定義之資料結構的指標。 此值會透過 SQLSetConnectAttr （SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT）或 SQLSetStmtAttr （SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT）傳遞給驅動程式。  驅動程式沒有值的存取權。  
+ *普康特克斯*  
+ 指向驅動程式管理員定義的數據結構的指標。 該值透過 SQLSetConnectAttr(SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT)或 SQLSetStmtAttr(SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT)傳遞給驅動程式。  驅動程式無法訪問該值。  
   
  *fLast*  
- 驅動程式用來表示此回呼函數調用是目前非同步作業的最後一個。 驅動程式管理員再次呼叫函式時，驅動程式會傳回 SQL_STILL_EXECUTING 以外的傳回碼。 例如，驅動程式管理員可能會使用這項資訊，以便事先通知應用程式，非同步作業將會完成。  
+ 驅動程式用於指示此回調函數調用是當前非同步操作的最後一個調用。 當驅動程式管理器再次調用該函數時,驅動程式將返回SQL_STILL_EXECUTING以外的返回代碼。 例如,驅動程式管理器可以使用此資訊提前通知應用程式非同步操作將完成。  
   
- 如果*handle*不是*HandleType*所指定之類型的有效控制碼， **SQLCancelHandle**會傳回 SQL_INVALID_HANDLE。  
+ 如果*句柄*不是*HandleType*指定的類型的有效句柄 **,SQLCancelHandle**將返回SQL_INVALID_HANDLE。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS 或 SQL_ERROR。  
+ SQL_SUCCESS或SQL_ERROR。  
   
 ## <a name="diagnostics"></a>診斷  
- 在下列兩種情況下， **SQLAsyncNotificationCallback**可能會傳回 SQL_ERROR （這表示驅動程式或驅動程式管理員中的執行問題。  
+ **SQLAsync 通知回撥**可以返回以下兩種情況SQL_ERROR(這些表示驅動程式或驅動程式管理器中的實現問題)。  
   
 |錯誤|描述|  
 |-----------|-----------------|  
-|連接或語句未要求通知。||  
-|不正確*控制碼*|驅動程式傳入了不正確控制碼，而導致內部驅動程式管理員驗證測試失敗。|  
+|連接或語句未請求通知。||  
+|句柄*無效*|驅動程式在無效的句柄中傳遞,這未通過內部驅動程式管理器驗證測試。|  
   
 ## <a name="see-also"></a>另請參閱  
  [非同步執行 (輪詢方法)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

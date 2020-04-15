@@ -1,5 +1,5 @@
 ---
-title: 檔案資料來源 |Microsoft Docs
+title: 檔案資料來源 :微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306649"
 ---
 # <a name="file-data-sources"></a>檔案資料來源
-檔案*資料來源*會儲存在檔案中，並允許單一使用者重複使用連接資訊，或在數個使用者之間共用。 使用檔案資料來源時，驅動程式管理員會使用 .dsn 檔案中的資訊來建立與資料來源的連接。 這個檔案可以像任何其他檔案一樣地操作。 檔案資料來源的資料來源名稱不是電腦資料來源，而且未註冊到任何一部使用者或電腦。  
+*檔案數據來源*儲存在檔案中,並允許單個使用者重複使用連接資訊或在多個用戶之間共用。 使用檔案資料來源時,驅動程式管理器使用 .dsn 檔案中的資訊與數據源建立連接。 此檔可以像任何其他檔一樣作。 檔資料來源沒有資料來源名稱,電腦數據來源也是如此,並且不註冊給任何一個使用者或電腦。  
   
- 檔案資料來源會簡化連接程式，因為該 dsn 檔案包含的連接字串必須針對**SQLDriverConnect**函數的呼叫而建立。 Dsn 檔案的另一個優點是它可以複製到任何電腦，因此許多電腦都可以使用相同的資料來源，只要它們已安裝適當的驅動程式即可。 檔案資料來源也可以由應用程式共用。 可共用的檔案資料來源可以放在網路上，並由多個應用程式同時使用。  
+ 檔案資料來源簡化了連接過程,因為 .dsn 檔包含連接字串,否則必須為呼叫**SQLDriverConnect**函數生成連接字串。 .dsn 檔的另一個優點是它可以複製到任何計算機,因此只要安裝了適當的驅動程式,許多計算機就可以使用相同的數據源。 應用程式也可以共用文件數據來源。 可共用的文件數據源可以放置在網路上,並由多個應用程式同時使用。  
   
- 您也可以 unshareable 一個. dsn 檔案。 Unshareable 位於單一機器上，並指向機器資料來源。 Unshareable 檔資料來源主要是為了讓機器資料來源能夠輕鬆地轉換成檔案資料來源，讓應用程式可以設計成僅與檔案資料來源搭配使用。 當驅動程式管理員傳送 unshareable 檔資料來源中的資訊時，它會視需要連接到 .dsn 檔案所指向的機器資料來源。  
+ .dsn 檔也可以不可共用。 不可共用的 .dsn 檔案駐留在一台電腦上,並指向計算機數據源。 存在不可共用的文件數據來源主要是為了允許將計算機數據源輕鬆轉換為檔數據來源,以便應用程式可以設計為僅處理檔資料來源。 當驅動程式管理員在不可共用的檔案數據來源中發送資訊時,它將根據需要連接到 .dsn 檔指向的計算機數據來源。  
   
- 如需有關檔案資料來源的詳細資訊，請參閱[使用檔案資料來源連接](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)或[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)函數描述。
+ 有關文件資料來源的詳細資訊,請參閱[使用檔案資料源進行連接](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)或[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)函數描述。

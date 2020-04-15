@@ -1,5 +1,5 @@
 ---
-title: 使用 ODBC 資料指標程式庫 |Microsoft Docs
+title: 使用 ODBC 游標庫 ( 1) ( 1)微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], using cursor library
 - cursor library [ODBC], using cursor library
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdddf2e757c549de460f5e22c2ea76ce91a2a969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c740ed78de51684eac38ad0c54ab2224986018d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069974"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301399"
 ---
 # <a name="using-the-odbc-cursor-library"></a>使用 ODBC 資料指標程式庫
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
   
- 若要使用 ODBC 資料指標程式庫，應用程式：  
+ 要使用 ODBC 游標庫應用程式:  
   
-1.  使用 SQL_ATTR_ODBC_CURSORS 的*屬性*呼叫**SQLSetConnectAttr** ，以指定資料指標程式庫應該如何與特定連接搭配使用。 資料指標程式庫可以一律使用（SQL_CUR_USE_ODBC），只有在驅動程式不支援可滾動的資料指標（SQL_CUR_USE_IF_NEEDED），或從未使用過（SQL_CUR_USE_DRIVER）時才使用。  
+1.  使用SQL_ATTR_ODBC_CURSORS*屬性*調用**SQLSetConnectAttr,** 以指定如何將游標庫與特定連接一起使用。 游標庫始終可以使用(SQL_CUR_USE_ODBC),僅當驅動程式不支援可滾動的游標(SQL_CUR_USE_IF_NEEDED)或從未使用過(SQL_CUR_USE_DRIVER)時才使用。  
   
-2.  呼叫**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**以連接到資料來源。  
+2.  調用**SQLConnect** **、SQLDriverConnect**或**SQLBrowse Connect**以連接到資料來源。  
   
-3.  呼叫**SQLSetStmtAttr**來指定資料指標類型（SQL_ATTR_CURSOR_TYPE）、平行存取（SQL_ATTR_CONCURRENCY）和資料列集大小（SQL_ATTR_ROW_ARRAY_SIZE）。 資料指標程式庫支援順向和靜態資料指標。 順向資料指標必須是唯讀的，靜態資料指標可以是唯讀的，或可以使用開放式並行存取控制比較值。  
+3.  調用**SQLSetStmtAttr**指定游標類型(SQL_ATTR_CURSOR_TYPE)、併發(SQL_ATTR_CONCURRENCY)和行集大小(SQL_ATTR_ROW_ARRAY_SIZE)。 游標庫支援僅轉發和靜態游標。 僅轉發遊標必須是唯讀的,而靜態游標可以是唯讀的,或者可以使用樂觀併發控件比較值。  
   
-4.  配置一或多個資料列集緩衝區，並呼叫**SQLBindCol**一次或多次，以將這些緩衝區系結至結果集資料行。  
+4.  分配一個或多個行集緩衝區,並調用**SQLBindCol**一次或多次將這些緩衝區綁定到結果集列。  
   
-5.  藉由執行**SELECT**語句或程式，或藉由呼叫目錄函數來產生結果集。 如果應用程式將執行定位 update 語句，則應該執行**SELECT FOR update**語句來產生結果集。  
+5.  通過執行**SELECT**語句或過程或調用目錄函數生成結果集。 如果應用程式將執行定位更新語句,則應執行 **「選擇更新**」語句以生成結果集。  
   
-6.  呼叫**SQLFetch**或**SQLFetchScroll**一次或多次，以流覽結果集。  
+6.  調用**SQLFetch**或**SQLFetch 滾動**一次或多次以滾動瀏覽結果集。  
   
- 應用程式可以變更資料列集緩衝區中的資料值。 若要使用資料指標程式庫快取中的資料來重新整理資料列集緩衝區，應用程式會呼叫**SQLFetchScroll** ，並將*FetchOrientation*引數設為 SQL_FETCH_RELATIVE，並將*FetchOffset*引數設定為0。  
+ 應用程式可以更改行集緩衝區中的數據值。 要使用游標庫緩存中的數據刷新行集緩衝區,應用程式將**SQLFetchScroll 調用 SQLFetchScroll,** 其中*Fetch 定向*參數設置為SQL_FETCH_RELATIVE,FetchOffset 參數設置為 0。 *FetchOffset*  
   
- 若要從未系結的資料行抓取資料，應用程式會呼叫**SQLSetPos** ，將游標放在所需的資料列上。 然後，它會呼叫**SQLGetData**來取得資料。  
+ 若要從未綁定列檢索數據,應用程式將調用**SQLSetPos**將游標定位到所需的行上。 然後調用**SQLGetData**來檢索數據。  
   
- 為了判斷已從資料來源中取得的資料列數目，應用程式會呼叫**SQLRowCount**。
+ 若要確定從資料來源索的行數,應用程式將呼叫**SQLRowCount**。

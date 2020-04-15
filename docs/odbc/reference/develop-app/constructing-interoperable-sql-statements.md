@@ -1,5 +1,5 @@
 ---
-title: 建立可互通的 SQL 語句 |Microsoft Docs
+title: 建構可互操作的 SQL 語句 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002238"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282510"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>建構可互通的 SQL 陳述式
-如上一節所述，互通的應用程式應該使用 ODBC SQL 文法。 不過，除了使用此文法以外，還有一些其他問題是由互通的應用程式所面臨。 例如，如果應用程式想要使用不受所有資料來源支援的功能（例如外部聯結），該怎麼辦？  
+如前一節所述,可互通的應用程式應使用ODBC SQL語法。 但是,除了使用此語法之外,可互操作的應用程式還面臨著許多其他問題。 例如,如果應用程式想要使用並非所有數據源都支援的功能(如外部聯接),它該怎麼辦?  
   
- 此時，應用程式撰寫者必須決定哪些語言功能是必要的，哪些是選擇性的。 在大多數情況下，如果特定驅動程式不支援應用程式所需的功能，應用程式就會拒絕使用該驅動程式來執行。 不過，如果這是選擇性的功能，應用程式可以解決此功能。 例如，它可能會停用介面的這些部分，讓使用者能夠使用此功能。  
+ 此時,應用程式編寫器必須做出一些決定,確定哪些語言功能是必需的,哪些是可選的。 在大多數情況下,如果特定驅動程式不支援應用程式所需的功能,則應用程式只是拒絕使用該驅動程式運行。 但是,如果該功能是可選的,則應用程式可以圍繞該功能進行處理。 例如,它可能會禁用允許使用者使用該功能的介面部分。  
   
- 為了判斷支援哪些功能，應用程式一開始會使用 SQL_SQL_CONFORMANCE 選項來呼叫**SQLGetInfo** 。 SQL 一致性層級會為應用程式提供支援 SQL 的廣泛觀點。 若要精簡此視圖，應用程式會使用其他許多選項來呼叫**SQLGetInfo** 。 如需這些選項的完整清單，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函數描述。 最後， **SQLGetTypeInfo**會傳回資料來源所支援之資料類型的相關資訊。 下列各節列出當您在建立可互通的 SQL 語句時，應用程式應該監看的一些可能因素。  
+ 要確定支援哪些功能,應用程式首先使用SQL_SQL_CONFORMANCE選項調用**SQLGetInfo。** SQL 一致性級別為應用程式提供了支援 SQL 的廣泛檢視。 要優化此檢視,應用程式使用許多其他選項中的任何一個調用**SQLGetInfo。** 有關這些選項的完整清單,請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函數說明。 最後 **,SQLGetTypeInfo**返回有關數據源支援的數據類型的資訊。 以下各節列出了應用程式在建構可互操作 SQL 語句時應注意的一些可能因素。  
   
  此章節包含下列主題。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLBulkOperations 函式 |Microsoft Docs
+title: SQLBulk 操作函數 |微軟文件
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,21 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60bcb6851adeba08105dabd6fb0800d2e969a04e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301328"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函式
-**標準**  
- 引進的版本： ODBC 3.0 標準合規性： ODBC  
+**一致性**  
+ 版本介紹: ODBC 3.0 標準合規性: ODBC  
   
  **摘要**  
- **SQLBulkOperations**會執行大量插入和大量書簽作業，包括依書簽的更新、刪除和提取。  
+ **SQLBulk操作**執行批量插入和批量書籤操作,包括按書籤更新、刪除和提取。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,222 +44,222 @@ SQLRETURN SQLBulkOperations(
 ```  
   
 ## <a name="arguments"></a>引數  
- *StatementHandle*  
- 源語句控制碼。  
+ *語句句柄*  
+ [輸入]語句句柄。  
   
- *運算*  
- 源要執行的作業：  
+ *操作*  
+ [輸入]操作執行:  
   
- SQL_ADD SQL_UPDATE_BY_BOOKMARK SQL_DELETE_BY_BOOKMARK SQL_FETCH_BY_BOOKMARK  
+ SQL_ADD SQL_UPDATE_BY_BOOKMARKSQL_DELETE_BY_BOOKMARKSQL_DELETE_BY_BOOKMARKSQL_ADDSQL_FETCH_BY_BOOKMARK  
   
- 如需詳細資訊，請參閱「批註」。  
+ 有關詳細資訊,請參閱"註釋"。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR或SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLBulkOperations**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle**控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出通常由**SQLBulkOperations**所傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
+ 當**SQLBulk 操作**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有SQL_HANDLE_STMT的*句柄類型*和*敘述的句**柄*。 下表列出了**SQLBulk 操作**通常傳回的 SQLSTATE 值,並在此函數的上下文中解釋了每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
   
- 對於可以傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除了 01xxx SQLSTATEs）的所有 SQLSTATEs，如果一個或多個（但不是全部）多資料列作業的資料列發生錯誤，則會傳回 SQL_SUCCESS_WITH_INFO，而如果發生錯誤，則會傳回 SQL_ERROR單一資料列作業。  
+ 對於可以返回SQL_SUCCESS_WITH_INFO或SQL_ERROR的所有 SQLSTAT(01xxx SQLSTATEs 除外),如果多行操作的一個或多個行發生錯誤(但不是全部)發生錯誤,則返回SQL_SUCCESS_WITH_INFO,如果單行操作發生錯誤,則返回SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01004|字串資料右側截斷|*Operation*引數已 SQL_FETCH_BY_BOOKMARK，且資料類型為 SQL_C_CHAR 或 SQL_C_BINARY 的資料行傳回的字串或二進位資料，導致截斷非空白字元或非 Null 的二進位資料。|  
-|01S01|資料列發生錯誤|作業*引數*已 SQL_ADD，而且在執行作業但至少已成功加入一個資料列時，在一或多個資料列中發生錯誤。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> （只有在應用程式與 ODBC 2 搭配使用時，才會引發此錯誤。*x*驅動程式）。|  
-|01S07|小數截斷|作業*引數*已 SQL_FETCH_BY_BOOKMARK、應用程式緩衝區的資料類型未 SQL_C_CHAR 或 SQL_C_BINARY，而且已截斷一或多個資料行的應用程式緩衝區傳回的資料。 （對於數值 C 資料類型，數位的小數部分已截斷。 若為包含時間元件的 time、timestamp 和 interval C 資料類型，則會截斷時間的小數部分）。<br /><br /> （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|07006|限制的資料類型屬性違規|作業*引數*已 SQL_FETCH_BY_BOOKMARK，而且結果集中資料行的資料值無法轉換成**SQLBindCol**的呼叫中*TargetType*引數所指定的資料類型。<br /><br /> *Operation*引數已 SQL_UPDATE_BY_BOOKMARK 或 SQL_ADD，而且應用程式緩衝區中的資料值無法轉換成結果集中資料行的資料類型。|  
-|07009|不正確描述項索引|已 SQL_ADD*引數*作業，且資料行的資料行編號大於結果集內的資料行數目。|  
-|21S02|衍生資料表的程度與資料行清單不符|*引數*作業已 SQL_UPDATE_BY_BOOKMARK;而且沒有任何資料行是可更新的，因為所有資料行都是未系結或唯讀，或系結長度/指標緩衝區中的值已 SQL_COLUMN_IGNORE。|  
-|22001|字串資料右側截斷|將字元或二進位值指派給結果集中的資料行，會造成截斷非空白（字元）或非 null （二進位）字元或位元組。|  
-|22003|數值超出範圍|*Operation*引數已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK，而將數值指派給結果集中的資料行時，會導致整個（而不是小數）部分的數位截斷。<br /><br /> *引數*作業已 SQL_FETCH_BY_BOOKMARK，而傳回一個或多個系結資料行的數值可能會造成有效位數遺失。|  
-|22007|不正確日期時間格式|*Operation*引數已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK，而將日期或時間戳記值指派給結果集中的資料行，導致 year、month 或 day 欄位超出範圍。<br /><br /> SQL_FETCH_BY_BOOKMARK 自*變數*作業，而傳回一或多個系結資料行的日期或時間戳記值，會導致 year、month 或 day 欄位超出範圍。|  
-|22008|日期/時間欄位溢位|*Operation*引數已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK，而傳送至結果集中資料行之資料的 datetime 算術效能，導致欄位的日期時間欄位（年、月、日、小時、分鐘或第二個欄位）超出允許的域值範圍，或根據西曆的日期時間自然規則而無效。<br /><br /> *Operation*引數已 SQL_FETCH_BY_BOOKMARK，而從結果集取得之資料的 datetime 算術效能，導致欄位的日期時間欄位（年、月、日、小時、分鐘或第二個欄位）在允許的值範圍外，或根據西曆的日期時間自然規則而無效。|  
-|22015|間隔欄位溢位|*Operation*引數已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK，而將精確數值或間隔 C 類型指派給 interval SQL 資料類型會造成有效位數遺失。<br /><br /> *Operation*引數已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK;指派至間隔 SQL 類型時，不會在 interval SQL 類型中表示 C 類型的值。<br /><br /> *Operation*引數已 SQL_FETCH_BY_BOOKMARK，且從精確的數值或間隔 SQL 類型指派到間隔 C 類型，導致前置欄位中的有效位數遺失。<br /><br /> *Operation*引數已 SQL_FETCH_BY_BOOKMARK;指派至間隔 C 類型時，不會在間隔 C 類型中表示 SQL 類型的值。|  
-|22018|轉換規格的字元值無效|*Operation*引數已 SQL_FETCH_BY_BOOKMARK;C 類型是精確或近似的數值、日期時間或間隔資料類型;資料行的 SQL 類型是字元資料類型;而資料行中的值不是系結 C 類型的有效常值。<br /><br /> *引數*作業已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK;SQL 類型是精確或近似的數值、日期時間或間隔資料類型;C 類型已 SQL_C_CHAR;而資料行中的值不是系結 SQL 類型的有效常值。|  
-|23000|完整性條件約束違規|*Operation*引數已 SQL_ADD、SQL_DELETE_BY_BOOKMARK 或 SQL_UPDATE_BY_BOOKMARK，但違反了完整性條件約束。<br /><br /> *Operation*引數已 SQL_ADD，且未系結的資料行定義為 not Null 且沒有預設值。<br /><br /> 已 SQL_ADD*作業引數*，已 SQL_COLUMN_IGNORE 系結*StrLen_or_IndPtr*緩衝區中指定的長度，且資料行沒有預設值。|  
-|24000|指標狀態無效|*StatementHandle*處於已執行狀態，但沒有與*StatementHandle*相關聯的結果集。|  
-|40001|序列化失敗|交易已回復，因為有另一個交易的資源鎖死。|  
-|40003|語句完成不明|此函式執行期間相關聯的連接失敗，無法判斷交易的狀態。|  
-|42000|語法錯誤或存取違規|驅動程式無法視需要鎖定資料列，以執行*operation*引數中要求的作業。|  
-|44000|WITH CHECK OPTION 違規|*Operation*引數已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK，而 insert 或 update 已在已查看的資料表（或衍生自已查看資料表的資料表）上執行，這是透過指定**WITH CHECK OPTION**來建立的，如此一來，插入或更新所影響的一個或多個資料列將不再出現于已查看的資料表中。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
-|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
-|HY008|已取消作業|已啟用*StatementHandle*的非同步處理。 已呼叫函式，在完成執行之前，會在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。 然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式，並在完成執行之前，從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
-|HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLBulkOperations**函數時，這個非同步函式仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並 SQL_PARAM_DATA_AVAILABLE 傳回。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。<br /><br /> （DM）指定的*StatementHandle*不是處於執行中狀態。 在未先呼叫**SQLExecDirect**、 **SQLExecute**或目錄函式的情況下呼叫函數。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式（而非這個函式），而且在呼叫這個函數時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLSetPos** ，並 SQL_NEED_DATA 傳回。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。<br /><br /> （DM）驅動程式是 ODBC 2。在呼叫**SQLFetchScroll**或**SQLFetch**之前，已針對*StatementHandle*呼叫*x*驅動程式和**SQLBulkOperations** 。<br /><br /> 在*StatementHandle*上呼叫**SQLExtendedFetch**之後，已呼叫（DM） **SQLBulkOperations** 。|  
-|HY011|無法立即設定屬性|（DM）驅動程式是 ODBC 2。*x*驅動程式，而且 SQL_ATTR_ROW_STATUS_PTR 語句屬性是在呼叫**SQLFetch**或**SQLFetchScroll**和**SQLBulkOperations**之間設定。|  
-|HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
-|HY090|不正確字串或緩衝區長度|*Operation*引數已 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK;資料值不是 null 指標;C 資料類型已 SQL_C_BINARY 或 SQL_C_CHAR;而資料行長度值小於0，但不等於 SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS 或 SQL_Null_DATA，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指標緩衝區中的值已 SQL_DATA_AT_EXEC;SQL 類型是 SQL_LONGVARCHAR、SQL_LONGVARBINARY，或是長資料來源特定的資料類型;而**SQLGetInfo**中的 SQL_NEED_LONG_DATA_LEN 資訊類型是 "Y"。<br /><br /> 作業*引數*已 SQL_ADD，SQL_ATTR_USE_BOOKMARK 語句屬性已設定為 SQL_UB_VARIABLE，而資料行0已系結至緩衝區，其長度不等於此結果集之書簽的最大長度。 （此長度可在 IRD 的 [SQL_DESC_OCTET_LENGTH] 欄位中使用，而且可以藉由呼叫**SQLDescribeCol**、 **SQLColAttribute**或**SQLGetDescField**來取得）。|  
-|HY092|不正確屬性識別碼|（DM）為*Operation*引數指定的值無效。<br /><br /> *Operation*引數已 SQL_ADD、SQL_UPDATE_BY_BOOKMARK 或 SQL_DELETE_BY_BOOKMARK，而且 SQL_ATTR_CONCURRENCY 語句屬性已設定為 SQL_CONCUR_READ_ONLY。<br /><br /> *Operation*引數已 SQL_DELETE_BY_BOOKMARK、SQL_FETCH_BY_BOOKMARK 或 SQL_UPDATE_BY_BOOKMARK，而書簽資料行未系結，或 SQL_ATTR_USE_BOOKMARKS 語句屬性已設定為 SQL_UB_OFF。|  
-|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|（DM）如需暫停狀態的詳細資訊，請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
-|HYC00|未執行的選擇性功能|驅動程式或資料來源不支援*operation*引數中要求的作業。|  
-|HYT00|已超過逾時的設定|在資料來源傳回結果集之前，查詢超時時間已過期。 您可使用 SQL_ATTR_QUERY_TIMEOUT 的*屬性*引數，透過**SQLSetStmtAttr**設定超時時間。|  
-|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此功能|（DM）與*StatementHandle*相關聯的驅動程式不支援此功能。|  
-|IM017|非同步通知模式中的輪詢已停用|每當使用通知模型時，就會停用輪詢。|  
-|IM018|尚未呼叫**SQLCompleteAsync**來完成這個控制碼上先前的非同步作業。|如果控制碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 而且如果啟用通知模式，則必須在控制碼上呼叫**SQLCompleteAsync** ，才能執行後置處理並完成作業。|  
+|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
+|01004|字串資料右截斷|*SQL_FETCH_BY_BOOKMARK操作*參數,為資料類型為SQL_C_CHAR或SQL_C_BINARY的列返回的字串或二進位資料會導致非空白字元或非 NULL 二進位資料的截斷。|  
+|01S01|行中的錯誤|*操作*參數SQL_ADD,在執行操作時,一個或多個行中發生錯誤,但至少已成功添加一行。 (函數返回SQL_SUCCESS_WITH_INFO。<br /><br /> (僅當應用程式使用 ODBC 2 時,才會引發此錯誤。*x*驅動程式。|  
+|01S07|分數截斷|*操作*參數SQL_FETCH_BY_BOOKMARK,應用程式緩衝區的數據類型未SQL_C_CHAR或SQL_C_BINARY,返回到一個或多個列的應用程序緩衝區的數據被截斷。 (對於數位 C 數據類型,數位的小數部分被截斷。 對於包含時間元件的時間、時間戳和間隔 C 數據類型,時間的小數部分被截斷。<br /><br /> (函數返回SQL_SUCCESS_WITH_INFO。|  
+|07006|受限資料類型屬性衝突|*操作*參數SQL_FETCH_BY_BOOKMARK,並且結果集中列的數據值無法轉換為對**SQLBindCol**調用中*的目標類型*參數指定的數據類型。<br /><br /> *操作*參數SQL_UPDATE_BY_BOOKMARK或SQL_ADD,並且應用程式緩衝區中的數據值無法轉換為結果集中列的數據類型。|  
+|07009|不合法的描述符索引|參數*操作*SQL_ADD,並且對列綁定的列數大於結果集中的列數。|  
+|21S02|衍生表的程度與列清單不符合|參數*操作*是SQL_UPDATE_BY_BOOKMARK;並且沒有列是可向上的,因為所有列都是未綁定的或唯讀的,或者綁定長度/指示器緩衝區中的值SQL_COLUMN_IGNORE。|  
+|22001|字串資料右截斷|將字元或二進位值分配給結果集中的列會導致截斷非空白(對於字元)或非空字元(二進位元字元或字節)。|  
+|22003|數值超範圍|*操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK,並將數值分配給結果集中的列會導致數字的整個(而不是小數)部分被截斷。<br /><br /> 參數*操作*SQL_FETCH_BY_BOOKMARK,返回一個或多個綁定列的數值將導致重要數位的損失。|  
+|22007|不合法日期時間格式|*操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK,並將日期或時間戳值分配給結果集中的列會導致年份、月份或日欄段超過範圍。<br /><br /> 參數*操作*SQL_FETCH_BY_BOOKMARK,傳回一個或多個綁定列的日期或時間戳值將導致年份、月份或日欄位超出範圍。|  
+|22008|日期/時間欄位溢出|*操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK,並且對發送到結果集中的列的數據執行日期時間算術,導致結果超出欄位允許的值範圍或根據公曆的約會時間的自然規則無效的約會時間欄位(年份、月份、日、小時、分鐘或第二個字段)。<br /><br /> *操作*參數SQL_FETCH_BY_BOOKMARK,並且對從結果集中檢索的數據執行日期時間算術,導致結果的日期時間欄位(年份、月份、天、小時、分鐘或第二個字段)超出欄位的允許值範圍,或者根據公曆的約會時間自然規則無效。|  
+|22015|間隔欄位溢出|*操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK,將精確數位或間隔 C 類型分配給間隔 SQL 資料類型會導致重要數位丟失。<br /><br /> *操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK;當分配給間隔 SQL 類型時,間隔 SQL 類型中沒有 C 類型的值表示形式。<br /><br /> *操作*參數SQL_FETCH_BY_BOOKMARK,並將精確的數位或間隔 SQL 類型分配給間隔 C 類型會導致前導欄位中的重要數位丟失。<br /><br /> *行動*論點SQL_FETCH_BY_BOOKMARK;當分配給間隔 C 類型時,間隔 C 類型中沒有 SQL 類型的值表示形式。|  
+|22018|強制轉換規範的不合法字元值|*行動*論點SQL_FETCH_BY_BOOKMARK;C 類型是精確或近似的數位、日期時間或間隔數據類型;列的 SQL 類型是字元數據類型;列中的值不是綁定 C 型態的有效文字。<br /><br /> 參數*操作*SQL_ADD或SQL_UPDATE_BY_BOOKMARK;SQL 類型是精確或近似的數位、日期時間或間隔數據類型;C 類型為SQL_C_CHAR;列中的值不是綁定 SQL 類型的有效文本。|  
+|23000|完整性約束衝突|*操作*參數SQL_ADD、SQL_DELETE_BY_BOOKMARK或SQL_UPDATE_BY_BOOKMARK,並且違反了完整性約束。<br /><br /> *操作*參數SQL_ADD,未綁定的列定義為非 NULL 且沒有預設值。<br /><br /> *操作*參數SQL_ADD,在綁定*StrLen_or_IndPtr*緩衝區中指定的長度SQL_COLUMN_IGNORE,並且列沒有預設值。|  
+|24000|指標狀態無效|*語句句柄*處於已執行狀態,但沒有與*語句句柄*關聯的結果集。|  
+|40001|序列化失敗|由於資源與另一個事務死鎖,事務被回滾。|  
+|40003|報表完成未知|執行此函數期間,關聯的連接失敗,無法確定事務的狀態。|  
+|42000|語法錯誤或存取衝突|驅動程式無法根據需要鎖定該行,以執行*操作*參數中請求的操作。|  
+|44000|WITH CHECK OPTION 違規|*操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK,插入或更新是在通過指定 **「使用 CHECK 選項**」創建的已查看表(或從已查看表派生的表)上執行的,這樣受插入或更新影響的一個或多個行將不再存在於查看的表中。|  
+|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
+|HY008|已取消作業|非同步處理已開啟*敘述的句柄*。 呼叫此函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**呼叫到*敘述 。* 然後在*語句處理*上再次調用該函數。<br /><br /> 呼叫此函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**是從多線程式中的不同線程呼叫*的敘述的句柄*。|  
+|HY010|函式序列錯誤|(DM) 為與*語句句柄*關聯的連接句柄調用非同步執行函數。 調用**SQLBulk 操作**函數時,此異步函數仍在執行。<br /><br /> (DM) **SQLExecute、SQLExecDirect**或**SQLMore 結果**被調用語句**SQLExecDirect***句柄*並返回SQL_PARAM_DATA_AVAILABLE。 在檢索所有流參數的數據之前,已調用此函數。<br /><br /> (DM) 指定的*語句句柄*未處於執行狀態。 調用該函數時沒有首先調用**SQLExecDirect、SQLExecute**或目錄函**SQLExecute**數。<br /><br /> (DM) 為*語句句柄*調用了非同步執行函數(不是此函數),並且在調用此函數時仍在執行。<br /><br /> (DM) **SQLExecute、SQLExecDirect**或**SQLSetPos**被調用用於*語句句柄*並返回SQL_NEED_DATA。 **SQLExecDirect** 在發送所有執行時數據參數或列的數據之前,調用了此功能。<br /><br /> (DM) 驅動程式是 ODBC 2。*x*驅動程式,在呼叫**SQLFetchScroll**或**SQLFetch**之前,呼叫**SQLBulk 操作**為*敘述的句柄*。<br /><br /> (DM) **SQLBulk操作**是在語句*句柄*上調用**SQL 擴展獲取**後調用的。|  
+|HY011|無法立即設定屬性|(DM) 驅動程式是 ODBC 2。*x*驅動程式,並在對**SQLFetch**或**SQLFetchScroll**和**SQLBulk 操作**的調用之間設置了SQL_ATTR_ROW_STATUS_PTR語句屬性。|  
+|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
+|HY090|不合法的字串或緩衝區長度|*操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK;數據值不是空指標;數據值不是空指標。C 數據類型為SQL_C_BINARY或SQL_C_CHAR;並且列長度值小於 0,但不等於SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS或SQL_NULL_DATA,或小於或等於SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指示器緩衝區中的值SQL_DATA_AT_EXEC;SQL 類型要麼是SQL_LONGVARCHAR、SQL_LONGVARBINARY,要麼是長數據源特定的數據類型;**SQLGetInfo**中SQL_NEED_LONG_DATA_LEN資訊類型為"Y"。<br /><br /> *操作*參數SQL_ADD,SQL_ATTR_USE_BOOKMARK語句屬性設置為SQL_UB_VARIABLE,第 0 列綁定到長度不等於此結果集書簽的最大長度的緩衝區。 (此長度在 IRD 的SQL_DESC_OCTET_LENGTH欄位中可用,可以通過呼叫**SQLDescribeCol、SQLColattribute**或**SQLGetDescField**獲得。 **SQLColAttribute**|  
+|HY092|不合法屬性識別碼|(DM) 為*操作*參數指定的值無效。<br /><br /> *操作*參數SQL_ADD、SQL_UPDATE_BY_BOOKMARK 或SQL_DELETE_BY_BOOKMARK,SQL_ATTR_CONCURRENCY語句屬性設置為SQL_CONCUR_READ_ONLY。<br /><br /> *操作*參數SQL_DELETE_BY_BOOKMARK、SQL_FETCH_BY_BOOKMARK或SQL_UPDATE_BY_BOOKMARK,書簽列未綁定,或者SQL_ATTR_USE_BOOKMARKS語句屬性設置為SQL_UB_OFF。|  
+|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYC00|沒有選擇選擇功能|驅動程式或數據源不支援*操作*參數中請求的操作。|  
+|HYT00|已超過逾時的設定|查詢超時期限在數據源返回結果集之前已過期。 超時期間通過**SQLSetStmtAttr**設置,*屬性*參數為SQL_ATTR_QUERY_TIMEOUT。|  
+|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
+|IM001|驅動程式不支援此功能|(DM) 與*語句句柄*關聯的驅動程式不支援該函數。|  
+|IM017|在非同步通知模式下禁用輪詢|每當使用通知模型時,都會禁用輪詢。|  
+|IM018|尚未調用**SQLCompleteAsync**以完成對此句柄的先前異步操作。|如果句柄上的上一個函數調用返回SQL_STILL_EXECUTING,並且啟用了通知模式,則必須在句柄上調用**SQLCompleteAsync**以執行後處理並完成操作。|  
   
 ## <a name="comments"></a>註解  
   
 > [!CAUTION]  
->  如需有關如何在中呼叫哪些語句狀態**SQLBulkOperations** ，以及它必須如何做以與 ODBC 2 相容的詳細資訊。*x*應用程式，請參閱附錄 G：驅動程式方針中的[區塊資料指標、可滾動游標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)一節，以取得回溯相容性。  
+>  有關哪些語句聲明**SQLBulk 操作**可以調用,以及它必須做什麼才能與 ODBC 2 相容。*x*應用程式,請參閱附錄 G:向後相容性的驅動程式指南中的[塊游標、可滾動游標和向後相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)部分。  
   
- 應用程式會使用**SQLBulkOperations** ，在對應至目前查詢的基表或視圖上執行下列作業：  
+ 應用程式使用**SQLBulk 操作**對目前查詢對應的基表或檢視執行以下操作:  
   
--   加入新的資料列。  
+-   添加新行。  
   
--   更新一組資料列，其中的每個資料列都是由書簽所識別。  
+-   更新一組行,其中每行由書簽標識。  
   
--   刪除一組資料列，其中的每個資料列都是由書簽所識別。  
+-   刪除一組行,其中每行由書籤標識。  
   
--   提取一組資料列，其中的每個資料列都是由書簽所識別。  
+-   獲取一組行,其中每行由書簽標識。  
   
- 呼叫**SQLBulkOperations**之後，區塊資料指標位置會是未定義的。 應用程式必須呼叫**SQLFetchScroll**來設定游標位置。 應用程式應該只使用 SQL_FETCH_FIRST、SQL_FETCH_LAST、SQL_FETCH_ABSOLUTE 或 SQL_FETCH_BOOKMARK 的*FetchOrientation*引數來呼叫**SQLFetchScroll** 。 如果應用程式使用 SQL_FETCH_PRIOR、SQL_FETCH_NEXT 或 SQL_FETCH_RELATIVE 的*FetchOrientation*引數呼叫**SQLFetch**或**SQLFetchScroll** ，游標位置就會是未定義的。  
+ 調用**SQLBulk 操作**後,塊游標位置未定義。 應用程式必須調用**SQLFetchScroll**來設置游標位置。 應用程式應僅使用SQL_FETCH_FIRST、SQL_FETCH_LAST、SQL_FETCH_ABSOLUTE或SQL_FETCH_BOOKMARK的 Fetch 方向參數調用**SQLFetchScroll。** *FetchOrientation* 如果應用程式呼叫**SQLFetch**或**SQLFetchScroll,** 並帶有SQL_FETCH_PRIOR、SQL_FETCH_NEXT或SQL_FETCH_RELATIVE*的提取方向*參數,則游標位置未定義。  
   
- 藉由將呼叫**SQLBindCol**中指定的資料行長度/指標緩衝區設定為 SQL_COLUMN_IGNORE，可以忽略**SQLBulkOperations**呼叫所執行的大量作業中的資料行。  
+ 通過將調用**SQLBindCol**中指定的列長度/ 指示器緩衝區設置為SQL_COLUMN_IGNORE,可以在對**SQLBulk 操作**執行的批量操作中忽略列。  
   
- 應用程式在呼叫**SQLBulkOperations**時，不需要設定 SQL_ATTR_ROW_OPERATION_PTR 語句屬性，因為使用此函數執行大量作業時無法忽略資料列。  
+ 應用程式在調用**SQLBulk 操作**時不必設置SQL_ATTR_ROW_OPERATION_PTR語句屬性,因為使用此函數執行批量操作時不能忽略行。  
   
- SQL_ATTR_ROWS_FETCHED_PTR 語句屬性所指向的緩衝區包含呼叫**SQLBulkOperations**所影響的資料列數目。  
+ SQL_ATTR_ROWS_FETCHED_PTR 語句屬性指向的緩衝區包含受對**SQLBulk 操作**的調用影響的行數。  
   
- 當作業*引數*SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK，而且與資料指標相關聯的查詢規格的選取清單包含相同資料行的多個參考時，就會由驅動程式定義是否產生錯誤，或驅動程式忽略重複的參考並執行要求的作業。  
+ 當*操作*參數SQL_ADD或SQL_UPDATE_BY_BOOKMARK,並且與游標關聯的查詢規範的選擇清單包含對同一列的多個引用時,它是驅動程式定義的,無論是生成錯誤還是驅動程式忽略重複的引用並執行請求的操作。  
   
- 如需有關如何使用**SQLBulkOperations**的詳細資訊，請參閱[使用 SQLBulkOperations 更新資料](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md)。  
+ 有關如何使用**SQLBulk 操作**的詳細資訊,請參閱使用[SQLBulk 操作更新資料](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md)。  
   
-## <a name="performing-bulk-inserts"></a>執行大量插入  
- 若要使用**SQLBulkOperations**插入資料，應用程式會執行下列一連串的步驟：  
+## <a name="performing-bulk-inserts"></a>執行批次插入  
+ 若要使用**SQLBulk 操作**插入資料,應用程式將執行以下步驟序列:  
   
-1.  執行傳回結果集的查詢。  
+1.  執行返回結果集的查詢。  
   
-2.  將 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性設定為它想要插入的資料列數目。  
+2.  將SQL_ATTR_ROW_ARRAY_SIZE語句屬性設置為要插入的行數。  
   
-3.  呼叫**SQLBindCol**來系結它想要插入的資料。 資料會系結至大小等於 SQL_ATTR_ROW_ARRAY_SIZE 值的陣列。  
-  
-    > [!NOTE]  
-    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性所指向的陣列大小應該等於 SQL_ATTR_ROW_ARRAY_SIZE 或 SQL_ATTR_ROW_STATUS_PTR 應為 null 指標。  
-  
-4.  呼叫**SQLBulkOperations**（*StatementHandle，* SQL_ADD）以執行插入。  
-  
-5.  如果應用程式已設定 SQL_ATTR_ROW_STATUS_PTR 語句屬性，它就可以檢查此陣列，以查看作業的結果。  
-  
- 如果應用程式在呼叫具有 SQL_ADD 之*作業引數*的**SQLBulkOperations**之前，先系結資料行0，驅動程式將會使用新插入之資料列的書簽值來更新系結的資料行0緩衝區。 若要進行這種情況，應用程式必須先將 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_VARIABLE，才能執行語句。 （這無法與 ODBC 2 搭配使用。*x*驅動程式）。  
-  
- 您可以使用 SQLParamData 和 SQLPutData 的呼叫，以 SQLBulkOperations 的方式將長資料新增至元件。 如需詳細資訊，請參閱本函數參考後面的「提供大量插入和更新的長資料」。  
-  
- 應用程式在呼叫**SQLBulkOperations**之前，不需要呼叫**SQLFetch**或**SQLFetchScroll** （除了針對 ODBC 2 進行時除外）。*x*驅動程式;請參閱回溯[相容性和標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)）。  
-  
- 如果**SQLBulkOperations**（具有 SQL_ADD 的*Operation*引數）在包含重復資料行的資料指標上呼叫，則此行為是由驅動程式定義的。 驅動程式可以傳回驅動程式定義的 SQLSTATE、將資料新增至結果集內出現的第一個資料行，或執行其他驅動程式定義的行為。  
-  
-## <a name="performing-bulk-updates-by-using-bookmarks"></a>使用書簽執行大量更新  
- 若要使用書簽搭配**SQLBulkOperations**來執行大量更新，應用程式會依序執行下列步驟：  
-  
-1.  將 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_VARIABLE。  
-  
-2.  執行傳回結果集的查詢。  
-  
-3.  將 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性設定為它想要更新的資料列數目。  
-  
-4.  呼叫**SQLBindCol**來系結它想要更新的資料。 資料會系結至大小等於 SQL_ATTR_ROW_ARRAY_SIZE 值的陣列。 它也會呼叫**SQLBindCol**來系結資料行0（書簽資料行）。  
-  
-5.  將想要更新之資料列的書簽複製到系結至資料行0的陣列。  
-  
-6.  更新系結緩衝區中的資料。  
+3.  調用**SQLBindCol**以綁定要插入的數據。 數據綁定到大小等於SQL_ATTR_ROW_ARRAY_SIZE值的陣列。  
   
     > [!NOTE]  
-    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性所指向的陣列大小應該等於 SQL_ATTR_ROW_ARRAY_SIZE 或 SQL_ATTR_ROW_STATUS_PTR 應為 null 指標。  
+    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性指向的陣列的大小應等於SQL_ATTR_ROW_ARRAY_SIZE,SQL_ATTR_ROW_STATUS_PTR應為空指標。  
   
-7.  呼叫**SQLBulkOperations**（*StatementHandle，* SQL_UPDATE_BY_BOOKMARK）。  
+4.  呼叫**SQLBulk 操作**(*語句句柄,SQL_ADD)* 以執行插入。  
   
-    > [!NOTE]  
-    >  如果應用程式已設定 SQL_ATTR_ROW_STATUS_PTR 語句屬性，它就可以檢查此陣列，以查看作業的結果。  
+5.  如果應用程式設置了SQL_ATTR_ROW_STATUS_PTR語句屬性,則可以檢查此陣列以查看操作的結果。  
   
-8.  選擇性地呼叫**SQLBulkOperations**（*StatementHandle*，SQL_FETCH_BY_BOOKMARK）將資料提取到系結的應用程式緩衝區中，以確認是否已發生更新。  
+ 如果應用程式在調用**SQLBulk 操作**之前綁定列 0,該*參數*為 SQL_ADD,則驅動程式將使用新插入行的書籤值更新綁定列 0 緩衝區。 為此,應用程式必須在執行語句之前將SQL_ATTR_USE_BOOKMARKS語句屬性設置為SQL_UB_VARIABLE。 (這不適用於 ODBC 2。*x*驅動程式。  
   
-9. 如果資料已更新，驅動程式會將資料列狀態陣列中的值變更為適當的資料列，以 SQL_ROW_UPDATED。  
+ 通過使用對 SQLParamData 和 SQLPutData 的調用,SQLBulk 操作可以分部分添加長數據。 有關詳細資訊,請參閱此函數引用後面的"為批量插入和更新提供長數據"。  
   
- **SQLBulkOperations**所執行的大量更新可以使用**SQLParamData**和**SQLPutData**的呼叫來包含長資料。 如需詳細資訊，請參閱本函數參考後面的「提供大量插入和更新的長資料」。  
+ 應用程式無需在調用**SQLBulk 操作**之前調用**SQLFetch**或**SQLFetchScroll(** 與 ODBC 2 相比除外)。*x*驅動程式;請參閱[向後相容性和標準合規性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
   
- 如果書簽保存在資料指標之間，則應用程式不需要呼叫**SQLFetch**或**SQLFetchScroll** ，就可以由書簽進行更新。 它可以使用從上一個資料指標儲存的書簽。 如果書簽不會跨資料指標保存，應用程式必須呼叫**SQLFetch**或**SQLFetchScroll**來取得書簽。  
+ 如果**SQLBulk 操作**(*操作參數為*SQL_ADD)在包含重複列的游標上調用,則該行為是驅動程式定義的。 驅動程式可以返回驅動程式定義的 SQLSTATE,將數據添加到結果集中顯示的第一列,或執行其他驅動程式定義的行為。  
   
- 如果**SQLBulkOperations**（具有 SQL_UPDATE_BY_BOOKMARK 的*Operation*引數）在包含重復資料行的資料指標上呼叫，則此行為是由驅動程式定義的。 驅動程式可以傳回驅動程式定義的 SQLSTATE、更新結果集中顯示的第一個資料行，或執行其他驅動程式定義的行為。  
+## <a name="performing-bulk-updates-by-using-bookmarks"></a>使用書籤執行批次更新  
+ 要使用帶有**SQLBulk 操作**的書籤執行大量更新,應用程式按順序執行以下步驟:  
   
-## <a name="performing-bulk-fetches-using-bookmarks"></a>使用書簽執行大量提取  
- 若要使用書簽搭配**SQLBulkOperations**來執行大量提取，應用程式會依序執行下列步驟：  
+1.  將SQL_ATTR_USE_BOOKMARKS語句屬性設置到SQL_UB_VARIABLE。  
   
-1.  將 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_VARIABLE。  
+2.  執行返回結果集的查詢。  
   
-2.  執行傳回結果集的查詢。  
+3.  將SQL_ATTR_ROW_ARRAY_SIZE語句屬性設置為要更新的行數。  
   
-3.  將 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性設定為它想要提取的資料列數目。  
+4.  調用**SQLBindCol**以綁定要更新的數據。 數據綁定到大小等於SQL_ATTR_ROW_ARRAY_SIZE值的陣列。 它還調用**SQLBindCol**來綁定列 0(書籤列)。  
   
-4.  呼叫**SQLBindCol**來系結它想要提取的資料。 資料會系結至大小等於 SQL_ATTR_ROW_ARRAY_SIZE 值的陣列。 它也會呼叫**SQLBindCol**來系結資料行0（書簽資料行）。  
+5.  複製它有興趣更新到綁定到列 0 的陣列中的行的書籤。  
   
-5.  將想要提取的資料列書簽複製到系結至資料行0的陣列。 （這會假設應用程式已分別取得書簽）。  
-  
-    > [!NOTE]  
-    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性所指向的陣列大小應該等於 SQL_ATTR_ROW_ARRAY_SIZE 或 SQL_ATTR_ROW_STATUS_PTR 應為 null 指標。  
-  
-6.  呼叫**SQLBulkOperations**（*StatementHandle，* SQL_FETCH_BY_BOOKMARK）。  
-  
-7.  如果應用程式已設定 SQL_ATTR_ROW_STATUS_PTR 語句屬性，它就可以檢查此陣列，以查看作業的結果。  
-  
- 如果書簽保存在資料指標之間，則應用程式不需要呼叫**SQLFetch**或**SQLFetchScroll** ，就可以由書簽提取。 它可以使用從上一個資料指標儲存的書簽。 如果書簽不會跨資料指標保存，應用程式必須呼叫**SQLFetch**或**SQLFetchScroll**一次來抓取書簽。  
-  
-## <a name="performing-bulk-deletes-using-bookmarks"></a>使用書簽執行大量刪除  
- 若要使用書簽搭配**SQLBulkOperations**來執行大量刪除，應用程式會依序執行下列步驟：  
-  
-1.  將 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_VARIABLE。  
-  
-2.  執行傳回結果集的查詢。  
-  
-3.  將 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性設定為它想要刪除的資料列數目。  
-  
-4.  呼叫**SQLBindCol**來系結資料行0（書簽資料行）。  
-  
-5.  將想要刪除之資料列的書簽複製到系結至資料行0的陣列。  
+6.  更新綁定緩衝區中的數據。  
   
     > [!NOTE]  
-    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性所指向的陣列大小應該等於 SQL_ATTR_ROW_ARRAY_SIZE 或 SQL_ATTR_ROW_STATUS_PTR 應為 null 指標。  
+    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性指向的陣列的大小應等於SQL_ATTR_ROW_ARRAY_SIZE,或者SQL_ATTR_ROW_STATUS_PTR應為空指標。  
   
-6.  呼叫**SQLBulkOperations**（*StatementHandle，* SQL_DELETE_BY_BOOKMARK）。  
-  
-7.  如果應用程式已設定 SQL_ATTR_ROW_STATUS_PTR 語句屬性，它就可以檢查此陣列，以查看作業的結果。  
-  
- 如果書簽跨游標保存，應用程式就不需要在書簽刪除之前呼叫**SQLFetch**或**SQLFetchScroll** 。 它可以使用從上一個資料指標儲存的書簽。 如果書簽不會跨資料指標保存，應用程式必須呼叫**SQLFetch**或**SQLFetchScroll**一次來抓取書簽。  
-  
-## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>提供大量插入和更新的長資料  
- 長資料可提供給**SQLBulkOperations**的呼叫所執行的大量插入和更新。 若要插入或更新長資料，應用程式會執行下列步驟，以及本主題前面「執行大量插入」和「使用書簽執行大量更新」一節中所述的步驟。  
-  
-1.  當它使用**SQLBindCol**來系結資料時，應用程式會將* \** 應用程式定義的值（例如資料行編號）放在 TargetValuePtr 緩衝區中，以用於資料執行中的資料行。 稍後可以使用此值來識別資料行。  
-  
-     應用程式會將 SQL_LEN_DATA_AT_EXEC （*長度*）宏的結果放在* \*StrLen_or_IndPtr*緩衝區中。 若資料行的 SQL 資料類型為 SQL_LONGVARBINARY、SQL_LONGVARCHAR，或 long 資料來源特定的資料類型，且驅動程式針對**SQLGetInfo**中的 SQL_NEED_LONG_DATA_LEN 資訊類型傳回 "Y"，則*length*是要為參數傳送的資料位元組數目。否則，它必須是非負值，而且會被忽略。  
-  
-2.  呼叫**SQLBulkOperations**時，如果有執行中的資料行，此函式會傳回 SQL_NEED_DATA 並繼續進行步驟3，如下所示。 （如果沒有任何執行中的資料行，則程式已完成）。  
-  
-3.  應用程式會呼叫**SQLParamData** ，以取得要處理之第一個資料執行中資料行的* \*TargetValuePtr*緩衝區位址。 **SQLParamData**會傳回 SQL_NEED_DATA。 應用程式會從* \*TargetValuePtr*緩衝區捕獲應用程式定義的值。  
+7.  呼叫**SQLBulk 操作**(*語句句柄,* SQL_UPDATE_BY_BOOKMARK)。  
   
     > [!NOTE]  
-    >  雖然資料執行中的參數與資料執行中的資料行相似，但每個**SQLParamData**所傳回的值都不同。  
+    >  如果應用程式設置了SQL_ATTR_ROW_STATUS_PTR語句屬性,則可以檢查此陣列以查看操作的結果。  
   
-     資料執行中的資料行是資料列集中的資料行，當使用**SQLBulkOperations**更新或插入資料列時，資料會與**SQLPutData**一起傳送。 它們會與**SQLBindCol**系結。 **SQLParamData**傳回的值是要處理之 **TargetValuePtr*緩衝區中資料列的位址。  
+8.  可選地調用**SQLBulk 操作**(*語句處理*,SQL_FETCH_BY_BOOKMARK),將數據提取到綁定的應用程式緩衝區中,以驗證是否發生了更新。  
   
-4.  應用程式會呼叫**SQLPutData**一次或多次來傳送資料行的資料。 如果無法在**SQLPutData**中指定的* \*TargetValuePtr*緩衝區內傳回所有資料值，則需要多個呼叫。只有在將字元 C 資料傳送至具有字元、二進位或資料來源特定資料類型的資料行，或是將二進位 C 資料傳送至具有字元、二進位或資料來源特定資料類型的資料行時，才允許多個**SQLPutData**的呼叫。  
+9. 如果數據已更新,驅動程式將相應行的行狀態陣列中的值更改為SQL_ROW_UPDATED。  
   
-5.  應用程式會再次呼叫**SQLParamData** ，表示資料行已傳送所有資料。  
+ **SQLBulk 操作**執行的量產更新可以透過調用**SQLParamData**和**SQLPutData**來包括長數據。 有關詳細資訊,請參閱此函數引用後面的"為批量插入和更新提供長數據"。  
   
-    -   如果有更多資料執行中的資料行， **SQLParamData**會傳回 SQL_NEED_DATA 和*TargetValuePtr*緩衝區的位址，以用於下一個要處理的資料執行中資料行。 應用程式會重複步驟4和5。  
+ 如果書籤在游標之間保留,則應用程式不需要在按書籤更新之前調用**SQLFetch**或**SQLFetchScroll。** 它可以使用從前一個游標存儲的書籤。 如果書籤不保留在游標上,則應用程式必須調用**SQLFetch**或**SQLFetchScroll**來檢索書籤。  
   
-    -   如果沒有其他資料執行中的資料行，則程式已完成。 如果成功執行語句，則**SQLParamData**會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO;如果執行失敗，則會傳回 SQL_ERROR。 此時， **SQLParamData**可以傳回**SQLBulkOperations**所能傳回的任何 SQLSTATE。  
+ 如果**SQLBulk 操作**(*操作參數為*SQL_UPDATE_BY_BOOKMARK)在包含重複列的游標上調用,則該行為是驅動程式定義的。 驅動程式可以返回驅動程式定義的 SQLSTATE、更新結果集中顯示的第一列或執行其他驅動程式定義的行為。  
   
- 如果作業已取消，或**SQLParamData**或**SQLPutData**在 SQL_NEED_DATA **SQLBulkOperations**傳回之後發生錯誤，且在傳送所有資料執行中資料行的資料之前，應用程式只能針對語句或與語句相關聯的連接呼叫**SQLCancel**、 **SQLGetDiagField**、 **SQLGetDiagRec** **、SQLGetFunctions**、 **SQLParamData**或**SQLPutData** 。 如果它針對語句或與語句相關聯的連接呼叫任何其他函式，此函式會傳回 SQL_ERROR 並 SQLSTATE HY010 （函數序列錯誤）。  
+## <a name="performing-bulk-fetches-using-bookmarks"></a>使用書籤執行批次  
+ 要使用**SQLBulk 操作**中的書籤執行批次提取,應用程式按順序執行以下步驟:  
   
- 如果應用程式在驅動程式仍然需要資料執行中資料行的資料時呼叫**SQLCancel** ，驅動程式會取消作業。 然後，應用程式就可以再次呼叫**SQLBulkOperations** ;取消不會影響資料指標狀態或目前的資料指標位置。  
+1.  將SQL_ATTR_USE_BOOKMARKS語句屬性設置到SQL_UB_VARIABLE。  
+  
+2.  執行返回結果集的查詢。  
+  
+3.  將SQL_ATTR_ROW_ARRAY_SIZE語句屬性設置為要提取的行數。  
+  
+4.  調用**SQLBindCol**以綁定要獲取的數據。 數據綁定到大小等於SQL_ATTR_ROW_ARRAY_SIZE值的陣列。 它還調用**SQLBindCol**來綁定列 0(書籤列)。  
+  
+5.  複製它有興趣提取到綁定到列 0 的陣列中的行的書籤。 (這假定應用程式已單獨獲取書籤。  
+  
+    > [!NOTE]  
+    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性指向的陣列的大小應等於SQL_ATTR_ROW_ARRAY_SIZE,或者SQL_ATTR_ROW_STATUS_PTR應為空指標。  
+  
+6.  呼叫**SQLBulk 操作**(*語句句柄,* SQL_FETCH_BY_BOOKMARK)。  
+  
+7.  如果應用程式設置了SQL_ATTR_ROW_STATUS_PTR語句屬性,則可以檢查此陣列以查看操作的結果。  
+  
+ 如果書籤在游標之間保留,則應用程式不需要在通過書籤獲取之前調用**SQLFetch**或**SQLFetchScroll。** 它可以使用從前一個游標存儲的書籤。 如果書籤不保留在游標上,則應用程式必須調用**SQLFetch**或**SQLFetchScroll**一次才能檢索書籤。  
+  
+## <a name="performing-bulk-deletes-using-bookmarks"></a>使用書籤執行批次刪除  
+ 要使用**SQLBulk 操作**中的書籤執行批次刪除,應用程式按順序執行以下步驟:  
+  
+1.  將SQL_ATTR_USE_BOOKMARKS語句屬性設置到SQL_UB_VARIABLE。  
+  
+2.  執行返回結果集的查詢。  
+  
+3.  將SQL_ATTR_ROW_ARRAY_SIZE語句屬性設置為要刪除的行數。  
+  
+4.  調用**SQLBindCol**綁定欄 0(書籤列)。  
+  
+5.  複製它有興趣刪除到列 0 列的陣列中的行的書籤。  
+  
+    > [!NOTE]  
+    >  SQL_ATTR_ROW_STATUS_PTR 語句屬性指向的陣列的大小應等於SQL_ATTR_ROW_ARRAY_SIZE,或者SQL_ATTR_ROW_STATUS_PTR應為空指標。  
+  
+6.  呼叫**SQLBulk 操作**(*語句句柄,* SQL_DELETE_BY_BOOKMARK)。  
+  
+7.  如果應用程式設置了SQL_ATTR_ROW_STATUS_PTR語句屬性,則可以檢查此陣列以查看操作的結果。  
+  
+ 如果書籤在游標之間保留,則應用程式不必在按書籤刪除之前調用**SQLFetch**或**SQLFetchScroll。** 它可以使用從前一個游標存儲的書籤。 如果書籤不保留在游標上,則應用程式必須調用**SQLFetch**或**SQLFetchScroll**一次才能檢索書籤。  
+  
+## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>為批次插入及更新提供長資料  
+ 可以為通過調用**SQLBulk 操作**執行的批量插入和更新提供長數據。 若要插入或更新長數據,應用程式除了在本主題前面"執行批量插入"和"使用書籤執行批量更新"部分中描述的步驟外,還執行以下步驟。  
+  
+1.  當應用程式使用**SQLBindCol**綁定數據時,應用程式將應用程式定義的值(如列號)放在*\*TargetValuePtr*緩衝區中,用於執行時的數據列。 該值以後可用於標識列。  
+  
+     應用程式將SQL_LEN_DATA_AT_EXEC(*長度*)宏*\** 的結果放在 StrLen_or_IndPtr 緩衝區中。 如果列的 SQL 資料類型SQL_LONGVARBINARY、SQL_LONGVARCHAR 或長數據來源特定的資料類型,並且驅動程式返回**SQLGetInfo**中SQL_NEED_LONG_DATA_LEN資訊類型的「Y」,*則長度*是要為參數發送的數據位元;否則,它必須是非負值,並且被忽略。  
+  
+2.  當調用**SQLBulk 操作時**,如果存在執行時的數據列,則函數將返回SQL_NEED_DATA並繼續執行步驟 3,如下所示。 (如果沒有執行時的數據列,則該過程已完成。  
+  
+3.  應用程式呼叫**SQLParamData***\** 檢索 要處理的第一個執行資料列的 TargetValuePtr 緩衝區的位址。 **SQLParamData**返回SQL_NEED_DATA。 應用程式從*\*TargetValuePtr*緩衝區檢索應用程式定義的值。  
+  
+    > [!NOTE]  
+    >  儘管執行時的數據參數類似於執行時的數據列,但**SQLParamData**返回的值因每個參數而異。  
+  
+     執行時的資料列是行集中的欄,當使用**SQLBulk 操作**更新或插入行時,將隨**SQLPutData**一起發送數據。 它們與**SQLBindCol**綁定。 **SQLParamData**傳回的值是正在處理的 @*TargetValuePtr*緩衝區中的行的位址。  
+  
+4.  應用程式呼叫**SQLPutData**一次或多次以發送列的資料。 如果在**SQLPutData**中指定的*\*TargetValuePtr*緩衝區中無法返回所有數據值,則需要多個調用。僅當將字元 C 資料發送到具有字元、二進位或資料來源特定資料類型的列或將二進位C資料發送到具有字元、二進位或資料來源特定資料類型的列時,才允許對同一列的**SQLPutData**進行多次調用。  
+  
+5.  應用程式再次調用**SQLParamData**以發出已為該列發送所有數據的信號。  
+  
+    -   如果有更多的執行數據列 **,SQLParamData**將返回要處理的下一個執行數據列的SQL_NEED_DATA和目標*ValuePtr*緩衝區的位址。 應用程式重複步驟 4 和 5。  
+  
+    -   如果沒有更多的數據執行列,該過程將完成。 如果語句成功執行 **,SQLParamData**將返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO;如果執行失敗,它將返回SQL_ERROR。 此時 **,SQLParamData**可以返回**SQLBulk 操作**可以返回的任何 SQLSTATE。  
+  
+ 如果**SQLBulk 操作**傳回SQL_NEED_DATA後**SQLParamData**或**SQLPutData**中發生錯誤,並且在發送所有資料執行列的資料之前,應用程式只能調用 SQLCancel、SQLGetDiagField、SQLGetDiagRec、SQLGet**函數****、SQLParamData**或**SQLPutData**的語句或與語句關聯的連接。 **SQLCancel** **SQLGetDiagField** **SQLGetDiagRec** 如果它調用語句或與 語句關聯的連接的任何其他函數,則函數將返回SQL_ERROR和 SQLSTATE HY010(函數序列錯誤)。  
+  
+ 如果應用程式調用**SQLCancel,** 而驅動程式仍然需要執行時的數據列,則驅動程式將取消該操作。 然後,應用程式可以再次調用**SQLBulk 操作**;取消不會影響游標狀態或當前游標位置。  
   
 ## <a name="row-status-array"></a>資料列狀態陣列  
- 在呼叫**SQLBulkOperations**之後，資料列狀態陣列會包含資料列集中每個資料列的狀態值。 驅動程式會在呼叫**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**或**SQLBulkOperations**之後，設定此陣列中的狀態值。 如果**SQLFetch**或**SQLFetchScroll**在**SQLBulkOperations**之前尚未呼叫，此陣列一開始會填入**SQLBulkOperations**的呼叫。 SQL_ATTR_ROW_STATUS_PTR 語句屬性會指向這個陣列。 資料列狀態陣列中的元素數目必須等於資料列集中的資料列數目（如 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性所定義）。 如需有關此資料列狀態陣列的詳細資訊，請參閱[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)。  
+ 行狀態陣列包含行集中每行數據在調用**SQLBulk 操作**後的狀態值。 呼叫**SQLFetch**SQLFetch、SQLFetchScroll、SQLSetPos 或**SQLBulk 操作**後**SQLSetPos**,驅動程式將設定此**SQLFetchScroll**陣列中的狀態值。 如果**SQLFetch**或**SQLFetchScroll**尚未在**SQLBulk 操作**之前調用,則此陣列最初由對**SQLBulk 操作的**呼叫填充。 此陣列由SQL_ATTR_ROW_STATUS_PTR語句屬性指向。 行狀態陣列中的元素數必須等於行集中的行數(由SQL_ATTR_ROW_ARRAY_SIZE語句屬性定義)。 有關此行狀態陣列的資訊,請參閱[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)。  
   
 ## <a name="code-example"></a>程式碼範例  
- 下列範例會從 Customers 資料表一次提取10個數據列。 接著，它會提示使用者輸入要採取的動作。 為了減少網路流量，範例緩衝區會在系結陣列中本機更新、刪除和插入，但會在超過資料列集資料的位移上進行。 當使用者選擇將更新、刪除和插入傳送至資料來源時，程式碼會適當地設定系結位移，並呼叫**SQLBulkOperations**。 為了簡單起見，使用者無法緩衝超過10個更新、刪除或插入。  
+ 下面的範例一次從"客戶"表中獲取10行資料。 然後,它會提示使用者執行操作。 為了減少網路流量,示例緩衝區在綁定陣列中本地更新、刪除和插入,但在偏移量超過行集數據時。 當使用者選擇資料來源傳送更新、刪除與插入時,代碼會將適當地設定結合的偏移量並呼叫**SQLBulk 。** 為簡單起見,使用者不能緩衝超過 10 個更新、刪除或插入。  
   
 ```cpp  
 // SQLBulkOperations_Function.cpp  
@@ -451,15 +451,15 @@ int main() {
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|將緩衝區系結至結果集內的資料行|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|取消語句處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|提取資料區塊或透過結果集進行滾動|[SQLFetchScroll 函數](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|取得描述項的單一欄位|[SQLGetDescField 函數](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|取得描述項的多個欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|設定描述項的單一欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|設定描述項的多個欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
-|定位游標、重新整理資料列集中的資料，或更新或刪除資料列集中的資料|[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
-|設定語句屬性|[SQLSetStmtAttr 函數](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|將緩衝區繫結到結果集中的欄|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|解除敘述處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|取得資料塊或捲動瀏覽結果集|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|取得描述符的單欄位|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|取得描述符的多個字段|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|設定描述符的單欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|設定描述符的多個字欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|定位游標、刷新列集中中的資料或更新或移除列集中中的資料|[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
+|設定敘述屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

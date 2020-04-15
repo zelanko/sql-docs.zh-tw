@@ -1,5 +1,5 @@
 ---
-title: SQLTransact （Visual FoxPro ODBC Driver） |Microsoft Docs
+title: SQLTransact(可視化福克斯Pro ODBC驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLTransact function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e554a8669b6e6e95e234a5b939477a8bb2f7b8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3910f24578bcbc409a84573e994c0680ed5949b2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299218"
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題包含 Visual FoxPro ODBC 特定於驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
   
- 支援：完整  
+ 支援: 完整  
   
- ODBC API 一致性：核心層級  
+ ODBC API 一致性:核心等級  
   
- 針對與連接相關聯之所有語句控制碼（*hstmt*s）上的所有作用中作業，或與該環境控制碼*henv*相關聯的所有連接，要求認可或回復操作。 **SQLTransact**僅適用于[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)的資料來源。  
+ 請求所有與連接關聯的語句句柄 *(hstmt*s) 或與環境句柄關聯的所有連接*henv*的所有活動操作的提交或回滾操作。 **SQLTransact**僅適用於[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)的數據源。  
   
- 如果在手動模式下認可失敗，則交易會保持作用中狀態;您可以選擇復原交易，或重試認可作業。 如果在自動交易模式中，認可作業失敗，則會自動回復交易。交易不可為非使用中。  
+ 如果在手動模式下提交失敗,則事務將保持活動狀態;如果提交處於手動模式下,則事務將保持活動狀態。您可以選擇回滾事務或重試提交操作。 如果在自動事務模式下提交操作失敗,則事務將自動回滾;事務不能處於非活動狀態。  
   
- 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLTransact](../../odbc/reference/syntax/sqltransact-function.md) 。
+ 有關詳細資訊,請參閱*ODBC 程式師參考*中的[SQLTransact。](../../odbc/reference/syntax/sqltransact-function.md)

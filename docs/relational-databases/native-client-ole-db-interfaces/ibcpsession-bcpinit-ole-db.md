@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPInit （OLE DB） |Microsoft Docs
+title: IBCPSession::BCPInit (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99c11795cb51e66b9fc1590351445ffcd14aeb34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f37a23f89ca7fcb2b3e0a60a7f4813891317b3f5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763565"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307369"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,15 +40,11 @@ HRESULT BCPInit(
 ```  
   
 ## <a name="remarks"></a>備註  
- 
-  **BCPInit** 方法應該在任何其他的大量複製方法之前呼叫。 
-  **BCPInit** 方法會針對工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間資料的大量複製，執行必要的初始化。  
+ **BCPInit** 方法應該在任何其他的大量複製方法之前呼叫。 **BCPInit** 方法會針對工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間資料的大量複製，執行必要的初始化。  
   
- 
-  **BCPInit** 方法會檢查資料庫來源或目標資料表的結構，而不會檢查資料檔案的結構。 此方法會根據資料庫資料表、檢視或 SELECT 結果集中的每個資料行，指定資料檔的資料格式值。 這個指定包括每個資料行的資料類型、資料中是否有長度或 null 指標和結束字元位元組字串，以及固定長度資料類型的寬度。 
-  **BCPInit** 方法會設定這些值，如下所示：  
+ **BCPInit** 方法會檢查資料庫來源或目標資料表的結構，而不會檢查資料檔案的結構。 此方法會根據資料庫資料表、檢視或 SELECT 結果集中的每個資料行，指定資料檔的資料格式值。 這個指定包括每個資料行的資料類型、資料中是否有長度或 null 指標和結束字元位元組字串，以及固定長度資料類型的寬度。 **BCPInit** 方法會設定這些值，如下所示：  
   
--   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料類型是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client 標頭檔（sqlncli）中指定的原生資料類型所列舉。 其值會採用 BCP_TYPE_XXX 的模式。 資料會以其電腦格式表示。 也就是說，來自 integer 資料類型之資料行的資料會根據建立資料檔案之電腦，以四個位元組由大到小或由小到大的順序表示。  
+-   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 數據類型由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機客戶端標頭檔 (sqlncli.h) 中指定的本機數據類型枚舉。 其值會採用 BCP_TYPE_XXX 的模式。 資料會以其電腦格式表示。 也就是說，來自 integer 資料類型之資料行的資料會根據建立資料檔案之電腦，以四個位元組由大到小或由小到大的順序表示。  
   
 -   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製方法 (例如 [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) 會剖析資料列，期望資料在資料檔案中的長度與資料在資料庫資料表、檢視或 SELECT 資料行清單中指定的長度相同。 例如，定義為 `char(13)` 之資料庫資料行的資料，對於檔案中資料的每個資料列，必須以 13 個字元表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
   
@@ -56,14 +52,12 @@ HRESULT BCPInit(
   
 -   複製資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複製資料時，**BCPExec** 方法會根據資料行在資料庫資料表中的位置來放置資料。  
   
--   如果資料庫資料類型的長度是變數 (例如，`varbinary(22)`)，或者如果資料庫資料行可以包含 Null 值，資料檔案中資料的前置詞為長度/Null 指標。 指標的寬度會根據資料類型和大量複製的版本而改變。 
-  [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 方法選項 BCP_OPTION_FILEFMT 會在資料中的指標寬度比預期窄時指出，藉以提供舊版大量複製資料檔案與執行新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器之間的相容性。  
+-   如果資料庫資料類型的長度是變數 (例如，`varbinary(22)`)，或者如果資料庫資料行可以包含 Null 值，資料檔案中資料的前置詞為長度/Null 指標。 指標的寬度會根據資料類型和大量複製的版本而改變。 [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 方法選項 BCP_OPTION_FILEFMT 會在資料中的指標寬度比預期窄時指出，藉以提供舊版大量複製資料檔案與執行新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器之間的相容性。  
   
 > [!NOTE]  
 >  若要變更針對資料檔案而指定的資料格式值，請使用 [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是設定資料庫選項 **select into/bulkcopy**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是設定資料庫選項 **select into/bulkcopy**。  
   
 ## <a name="arguments"></a>引數  
  *pwszTable*[in]  
@@ -77,7 +71,7 @@ HRESULT BCPInit(
  這是要來回複製之使用者檔案的名稱。  
   
  *pwszErrorFile*[in]  
- 這是錯誤檔案的名稱，該檔案會以進度訊息、錯誤訊息，以及因為任何原因而無法從使用者檔案複製到資料表之任何資料列的複本。 如果*pwszErrorFile*引數設定為 Null，則不會使用任何錯誤檔案。  
+ 這是錯誤檔案的名稱，該檔案會以進度訊息、錯誤訊息，以及因為任何原因而無法從使用者檔案複製到資料表之任何資料列的複本。 如果 *pwszErrorFile* 引數設定為 NULL，則不會使用任何錯誤檔案。  
   
  *eDirection*[in]  
  這是複製的方向，BCP_DIRECTION_IN 或 BCP_DIRECTION _OUT。 BCP_DIRECTION _IN 代表從使用者檔案複製到資料庫資料表；BCP_DIRECTION _OUT 則代表從資料庫資料表複製到使用者檔案。  
@@ -87,7 +81,7 @@ HRESULT BCPInit(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤。如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 對於詳細資訊,請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面進行提供程式特定的錯誤。  
   
  E_OUTOFMEMORY  
  記憶體不足錯誤  
@@ -96,7 +90,7 @@ HRESULT BCPInit(
  未正確指定一個或多個引數。 例如，指定了無效的檔案名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCP會話&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

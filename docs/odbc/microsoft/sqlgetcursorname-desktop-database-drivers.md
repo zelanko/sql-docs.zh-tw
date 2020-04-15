@@ -1,5 +1,5 @@
 ---
-title: SQLGetCursorName （桌面資料庫驅動程式） |Microsoft Docs
+title: SQLGetCursor 名稱(桌面資料庫驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetCursorName function [ODBC], Desktop Database Drivers
 ms.assetid: 76399d74-1121-4c63-92ee-7d2984ac74af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63c5dd6cd20f30281e9cf83c920b85e4f024ad35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6c1d0879b84e6d39d8e92c560775f5fef38d4990
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003438"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298618"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName (桌面資料庫驅動程式)
-支援**SQLGetCursorName** ，但只能在使用資料指標程式庫時使用，因為驅動程式不支援定位作業。
+**SQLGetCursorName**受支援,但只能在使用游標庫時使用,因為驅動程式中不支援定位操作。

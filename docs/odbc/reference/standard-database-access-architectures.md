@@ -1,5 +1,5 @@
 ---
-title: 標準資料庫存取架構 |Microsoft Docs
+title: 標準資料庫存取體系結構 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b2113167bb3440c0d772a99b4b8098104d7ed11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6e78202eff69e6b30dc1e97d80f464dad75bb201
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129251"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280031"
 ---
 # <a name="standard-database-access-architectures"></a>標準資料庫存取架構
-在查看上一節所述的資料庫存取元件時，這兩個程式設計介面和資料流程通訊協定都是理想的標準化候選項目。 其他兩個元件-IPC 機制和網路通訊協定-不僅位於層級太低，但兩者都是高度相依于網路和作業系統。 另外還有第三種方法-閘道，可提供標準化的可能性。  
+在查看上一節中描述的資料庫訪問元件時,發現其中兩個元件(程式設計介面和資料流協定)是標準化的良好候選者。 其他兩個元件 - IPC 機制和網路協定 - 不僅駐留在太低的水準,但它們都高度依賴於網路和作業系統。 還有第三種方法 - 閘道 - 為標準化提供了可能性。  
   
  此章節包含下列主題。  
   
