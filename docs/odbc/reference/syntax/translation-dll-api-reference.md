@@ -1,5 +1,5 @@
 ---
-title: 轉譯 DLL API 參考 |Microsoft Docs
+title: 翻譯 DLL API 參考 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - translation DLLs [ODBC]
 ms.assetid: 69033376-c315-4f52-8ee5-f23f07694bf8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 951545c9b72af4a432265d611e02b0a8ebe9e0c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 11889082fd9eb989f696520ef19749aff2be9f75
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286826"
 ---
 # <a name="translation-dll-api-reference"></a>轉譯 DLL API 參考
-本節說明轉譯 DLL API 的語法，其中包含兩個函數： **SQLDriverToDataSource**和**SQLDataSourceToDriver**。 這些函式必須包含在執行驅動程式轉譯的 DLL 中。  
+本節介紹翻譯 DLL API 的語法,它由兩個函數組成 **:SQLDriverToDataSource 和** **SQLDataSourceToDriver**。 這些函數必須包含在執行驅動程式轉換的 DLL 中。  
   
  此章節包含下列主題。  
   

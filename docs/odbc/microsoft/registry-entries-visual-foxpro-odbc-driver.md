@@ -1,5 +1,5 @@
 ---
-title: 登錄專案（Visual FoxPro ODBC Driver） |Microsoft Docs
+title: 註冊表條目(可視化福克斯Pro ODBC驅動程式) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,47 +13,47 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00a24ffca764c029b87470b7aa07d15f33b4c673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bd2d419a94c45a872789e095b014159b41d7c217
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996450"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304835"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>登錄項目 (Visual FoxPro ODBC Driver)
-當您安裝 Visual FoxPro ODBC 驅動程式時，安裝程式會在登錄機碼 HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCInst.ini 中更新系統的登錄，以新增名為 Microsoft Visual FoxPro Driver 的新機碼。 在該索引鍵底下，會加入下表所描述的值。  
+安裝 Visual FoxPro ODBC 驅動程式時,安裝程式在註冊表HKEY_LOCAL_MACHINE_SOFTWARE_ODBC_ODBCInst.ini 中更新系統的註冊表,以添加新金鑰,稱為 Microsoft Visual FoxPro 驅動程式。 在該鍵下,將添加下表中描述的值。  
   
 |值名稱|值類型|值|  
 |----------------|----------------|-----------|  
-|APILevel|REG_SZ|「1」|  
-|ConnectFunctions|REG_SZ|"YYN"|  
-|驅動程式|REG_SZ|Vfpodbc .dll 檔案的系統路徑|  
+|API 等級|REG_SZ|「1」|  
+|連線功能|REG_SZ|"YYN"|  
+|驅動程式|REG_SZ|vfpodbc.dll 檔案的系統路徑|  
 |DriverODBCVer|REG_SZ|"02.50"|  
-|FileExtns|REG_SZ|"* .dbf，\*cdx，\*. fpt"|  
-|FileUsage|REG_SZ|「1」|  
-|安裝程式|REG_SZ|Vfpodbc .dll 檔案的系統路徑|  
+|檔案 Extns|REG_SZ|".dbf,\*.cdx,\*.fpt"|  
+|檔案使用|REG_SZ|「1」|  
+|安裝程式|REG_SZ|vfpodbc.dll 檔案的系統路徑|  
 |SQLLevel|REG_SZ|"0"|  
   
- 安裝程式也會將代表預設 Visual FoxPro 驅動程式的「Visual FoxPro Files」金鑰新增至系統的 HKEY_CURRENT_USER \SOFTWARE\ODBC\Odbc.ini 機碼。 在此機碼下，安裝程式會新增下表所述的值。  
+ 安裝程式還將代表預設 Visual FoxPro 驅動程式的密鑰「Visual FoxPro 檔案」添加到系統的HKEY_CURRENT_USER_SOFTWARE_ODBC_Odbc.ini 密鑰。 在此鍵下,安裝程式將添加下表中描述的值。  
   
 |值名稱|值類型|值|  
 |----------------|----------------|-----------|  
-|驅動程式|REG_SZ|Vfpodbc .dll 檔案的系統路徑|  
+|驅動程式|REG_SZ|vfpodbc.dll 檔案的系統路徑|  
   
- 每次您將 Visual FoxPro ODBC 資料來源加入至 ODBC 設定時，就會為該資料來源名稱新增新的索引鍵。 資料來源的值會對應至您在 [ **ODBC Visual FoxPro 設定**] 對話方塊中設定的值，如下表所列。  
+ 每次將 Visual FoxPro ODBC 資料來源加入 ODBC 設定時,都會為該資料來源名稱添加新密鑰。 數據源的值對應於您在**ODBC Visual FoxPro 安裝程式**對話方塊中設置的值,如下表中列出的。  
   
-|值名稱（關鍵字）|值類型|值|  
+|值名稱(關鍵字)|值類型|值|  
 |----------------------------|----------------|-----------|  
-|自動分頁|REG_SQ|任何支援的排序次序|  
+|自動分頁|REG_SQ|任何支援的整理序列|  
 |描述|REG_SZ|資料來源的使用者描述|  
-|驅動程式||Vfpodbc .dll 檔案的系統路徑|  
+|驅動程式||vfpodbc.dll 檔案的系統路徑|  
 |獨佔||[是] 或 [否]|  
-|BackgroundFetch||[是] 或 [否]|  
-|SourceDB|REG_SZ|的路徑。DBC 檔案|  
-|SourceType|REG_SZ|"DBC" 或 "DBF"|  
+|背景擷取||[是] 或 [否]|  
+|SourceDB|REG_SZ|到的路徑。DBC 檔案|  
+|SourceType|REG_SZ|"DBC"或"DBF"|  
   
- 您不應該直接存取此資訊;當您加入、修改或刪除資料來源時，ODBC 系統管理員會處理登錄的任何管理。  
+ 您不應直接存取此資訊;因此,您不應直接存取此資訊。當您添加、修改或刪除數據源時,註冊的任何管理將由 ODBC 管理員處理。  
   
- 您可以使用其中一些關鍵字和值做為[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 函式中的參數。
+ 您可以在[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 函數中將其中一些關鍵字和值用作參數。

@@ -10,26 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bda4abf9802bd58e81f35bd4223b28f687e89b4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ea0aa81188e5e58d3a66032af38700ece2d4e5b4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286498"
 ---
 # <a name="what-is-odbc"></a>什麼是 ODBC？
-關於 ODBC 的許多誤解都存在於運算環境中。 對使用者而言，這是 Microsoft® Windows®控制台中的圖示。 對應用程式設計人員來說，它是包含資料存取常式的程式庫。 對許多人來說，這是所有資料庫存取問題的答案。  
+計算領域存在許多關於ODBC的誤解。 對於最終使用者,它是Microsoft ® Windows ®控制面板中的圖示。 對於應用程式程式師來說,它是一個包含數據訪問例程的庫。 對許多其他人來說,這是所有資料庫訪問問題的答案。  
   
- 首先和最重要的是，ODBC 是資料庫 API 的規格。 此 API 與任何一個 DBMS 或作業系統無關;雖然此手冊使用 C，但 ODBC API 與語言無關。 ODBC API 是以 Open Group 和 ISO/IEC 的 CLI 規格為基礎。 ODBC 3。*x*完全實作為這兩種規格-舊版 ODBC 是根據這些規格的初步版本，但未完全執行，並加入以螢幕為基礎的資料庫應用程式開發人員經常需要的功能，例如可滾動的資料指標。  
+ 首先,ODBC 是資料庫 API 的規範。 此 API 獨立於任何一個 DBMS 或作業系統;儘管本手冊使用 C,但 ODBC API 與語言無關。 ODBC API 基於開放組和 ISO/IEC 的 CLI 規範。 ODBC 3.*x*完全實現這兩種規範 - 早期版本的 ODBC 基於這些規範的初步版本,但沒有完全實現它們 - 並添加了基於螢幕的資料庫應用程式的開發人員通常需要的功能,例如可滾動的游標。  
   
- ODBC API 中的函式是由 DBMS 特定驅動程式的開發人員所執行。 應用程式會呼叫這些驅動程式中的函數，以 DBMS 獨立的方式存取資料。 驅動程式管理員會管理應用程式和驅動程式之間的通訊。  
+ ODBC API 中的函數由特定於 DBMS 的驅動程式的開發人員實現。 應用程式呼叫這些驅動程式中的函數以獨立於 DBMS 的方式存取數據。 驅動程式管理員管理應用程式和驅動程式之間的通信。  
   
- 雖然 Microsoft 為執行 Microsoft Windows®95和更新版本的電腦提供驅動程式管理員，但已撰寫數個 ODBC 驅動程式，並從它的某些應用程式呼叫 ODBC 函式，但任何人都可以撰寫 ODBC 應用程式和驅動程式。 事實上，現今提供的大部分 ODBC 應用程式和驅動程式都是由 Microsoft 以外的公司所撰寫。 此外，ODBC 驅動程式和應用程式都存在於 Macintosh®和各種 UNIX 平臺上。  
+ 儘管 Microsoft 為運行 Microsoft Windows 的電腦提供了驅動程式管理器® 95 及更高版本,但已編寫了多個 ODBC 驅動程式,並從某些應用程式中調用 ODBC 函數,但任何人都可以編寫 ODBC 應用程式和驅動程式。 事實上,目前提供的絕大多數ODBC應用程式和驅動程式是由微軟以外的公司編寫的。 此外,ODBC 的驅動程式和應用程式存在於 Macintosh ®和各種 UNIX 平臺上。  
   
- 為了協助應用程式和驅動程式開發人員，Microsoft 為執行 Windows 95 和更新版本的電腦提供了 ODBC 軟體發展工具組（SDK），以提供驅動程式管理員、安裝程式 DLL、測試控管和範例應用程式。 Microsoft 結合了 Visigenic Software，將這些 Sdk 移植到 Macintosh 和各種 UNIX 平臺。  
+ 為了説明應用程式和驅動程式開發人員,Microsoft 為運行 Windows 95 及更高版本的電腦提供了一個 ODBC 軟體開發工具套件 (SDK),該工具套件提供驅動程式管理器、安裝程式 DLL、測試工具和示例應用程式。 微軟與Visigenic軟體公司合作,將這些SDK移植到Macintosh和各種UNIX平臺。  
   
- 請務必瞭解，ODBC 的設計是要公開資料庫功能，而不是補充它們。 因此，應用程式寫入器應該不會預期使用 ODBC 會突然將簡單的資料庫轉換成功能完整的關係資料庫引擎。 或驅動程式寫入器預期無法執行基礎資料庫中找不到的功能。 唯一的例外是，撰寫直接存取檔案資料的驅動程式（例如 Xbase 檔案中的資料）的開發人員，必須撰寫至少支援最少 SQL 功能的資料庫引擎。 另一個例外狀況是，先前包含在 Microsoft Data Access Components （MDAC） SDK 中的 Windows SDK ODBC 元件會提供資料指標程式庫，以模擬執行特定功能層級之驅動程式的可滾動資料指標。  
+ 請務必瞭解,ODBC 旨在公開資料庫功能,而不是補充它們。 因此,應用程式編寫者不應期望使用 ODBC 會突然將簡單資料庫轉換為功能齊全的關係資料庫引擎。 驅動程式編寫器也不期望實現基礎資料庫中找不到的功能。 例外情況是,編寫直接存取檔資料的驅動程式(如 Xbase 檔中的數據)的開發人員需要編寫至少支援最少 SQL 功能的資料庫引擎。 另一個例外是,以前包含在 Microsoft 數據存取元件 (MDAC) SDK 中的 Windows SDK 的 ODBC 元件提供了一個游標庫,用於類比實現特定級別功能的驅動程式的可滾動游標。  
   
- 使用 ODBC 的應用程式會負責任何跨資料庫的功能。 例如，ODBC 不是異類聯結引擎，也不是分散式交易處理器。 不過，因為它與 DBMS 無關，所以可以用來建立這類跨資料庫工具。
+ 使用 ODBC 的應用程式負責任何跨資料庫功能。 例如,ODBC 不是異構聯接引擎,也不是分散式事務處理器。 但是,由於它與 DBMS 無關,因此可用於構建此類跨資料庫工具。

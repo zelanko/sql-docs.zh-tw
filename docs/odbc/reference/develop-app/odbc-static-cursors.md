@@ -1,5 +1,5 @@
 ---
-title: ODBC 靜態資料指標 |Microsoft Docs
+title: ODBC 靜態游標 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b99566c473e88684e8b092a5ac9fc899e7dce177
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282440"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 靜態資料指標
-靜態資料指標是結果集似乎是靜態的。 在開啟資料指標之後，它通常不會偵測到結果集的成員資格、順序或值所做的變更。 例如，假設靜態資料指標提取一個資料列，然後另一個應用程式更新該資料列。 如果靜態資料指標 refetches 資料列，則不論另一個應用程式所做的變更為何，它所看到的值都會保持不變。  
+靜態游標是結果集顯示為靜態的游標。 它通常不會檢測打開游標后對結果集的成員身份、順序或值所做的更改。 例如,假設靜態游標獲取一行,然後另一個應用程式更新該行。 如果靜態游標重新提取行,則它看到的值將保持不變,儘管其他應用程序進行了更改。  
   
- 靜態資料指標可以偵測自己的更新、刪除和插入，但不需要這麼做。 特定靜態資料指標是否偵測到這些變更是透過**SQLGetInfo**中的 SQL_STATIC_SENSITIVITY 選項來報告。 靜態資料指標永遠不會偵測到其他更新、刪除和插入。  
+ 靜態游標可以檢測自己的更新、刪除和插入,儘管它們不需要這樣做。 特定靜態游標是否檢測到這些更改將通過**SQLGetInfo**中的SQL_STATIC_SENSITIVITY選項進行報告。 靜態游標永遠不會檢測到其他更新、刪除和插入。  
   
- SQL_ATTR_ROW_STATUS_PTR 語句屬性所指定的資料列狀態陣列可以包含任何資料列的 SQL_ROW_SUCCESS、SQL_ROW_SUCCESS_WITH_INFO 或 SQL_ROW_ERROR。 它會針對資料指標所更新、刪除或插入的資料列，傳回 SQL_ROW_UPDATED、SQL_ROW_DELETED 或 SQL_ROW_ADDED，假設資料指標可以偵測這類變更。  
+ SQL_ATTR_ROW_STATUS_PTR語句屬性指定的行狀態陣列可以包含任何行的SQL_ROW_SUCCESS、SQL_ROW_SUCCESS_WITH_INFO或SQL_ROW_ERROR。 它返回SQL_ROW_UPDATED、SQL_ROW_DELETED或SQL_ROW_ADDED,用於游標更新、刪除或插入的行,前提是游標可以檢測到此類更改。  
   
- 靜態資料指標通常是藉由鎖定結果集內的資料列，或製作結果集的複本或快照集來執行。 雖然鎖定資料列相當容易，但它具有大幅減少並行的缺點。 建立複本可提供更高的平行存取權，並可讓游標藉由修改複本來追蹤自己的更新、刪除和插入。 不過，複製的成本較高，而且可以與基礎資料分離，因為其他人會變更資料。
+ 靜態游標通常是通過鎖定結果集中的行或複製結果集或快照實現的。 儘管鎖定行相對容易操作,但它有顯著減少併發的缺點是顯著減少併發性。 製作副本允許更大的併發性,並允許游標通過修改副本來跟蹤其自己的更新、刪除和插入。 但是,複製的製作成本更高,並且可能會由於其他數據被其他人更改而偏離基礎數據。

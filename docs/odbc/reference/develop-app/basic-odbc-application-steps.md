@@ -1,5 +1,5 @@
 ---
-title: 基本 ODBC 應用程式步驟 |Microsoft Docs
+title: 基本 ODBC 應用步驟 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 524c4b8f8c9467358a3868f191f8a0d527ca3d70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 29abb0ec5bbfa9b423290e3354d9455b639f8f59
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306049"
 ---
 # <a name="basic-odbc-application-steps"></a>基本的 ODBC 應用程式步驟
-本節說明 ODBC 應用程式的一般流程。 任何應用程式不太可能會完全以這種順序來呼叫所有的函式。 不過，大部分的應用程式會使用這些步驟的某種變化。 下圖顯示基本的應用程式步驟。  
+本節介紹 ODBC 應用程式的一般流。 任何應用程式都不可能按此順序調用所有這些函數。 但是,大多數應用程式使用這些步驟的某些變體。 基本應用步驟如下圖所示。  
   
  ![ODBC 應用程式的基本步驟](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  
   

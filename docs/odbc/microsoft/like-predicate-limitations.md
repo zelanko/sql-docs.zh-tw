@@ -1,5 +1,5 @@
 ---
-title: LIKE 述詞限制 |Microsoft Docs
+title: 喜歡謂詞限制 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6d596d688956d7bdbf3d9125184d81c16249781c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68119713"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298958"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 述詞限制
-如果資料行中的資料長度超過255個字元，則 LIKE 比較只會以前255個字元為基礎。  
+如果列中的數據長於 255 個字元,則 LIKE 比較將僅基於前 255 個字元。  
   
- 只有常數模式才支援在程式中使用的 LIKE。 桌面資料庫驅動程式支援類似模式比對的 SQL-92。  
+ 過程中使用的 LIKE 僅支援常量模式。 桌面資料庫驅動程式支援 SQL-92 LIKE 模式匹配。  
   
- 在 LIKE 述詞中不支援使用 escape 子句。  
+ 不支援在 LIKE 謂詞中使用轉義子句。  
   
- 您不應該在包含數值或 float 資料類型之資料的資料行上執行 LIKE 比較。 結果可能無法預測。 如需詳細資訊，請參閱《 *Microsoft Jet 資料庫引擎程式設計人員指南》*。
+ 不應在包含數位或浮點數據類型數據的列上執行類似數據比較。 結果可能是不可預測的。 有關詳細資訊,請參閱 Microsoft*噴氣資料庫引擎程式師指南*。

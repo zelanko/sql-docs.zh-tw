@@ -1,5 +1,5 @@
 ---
-title: 純量函數限制 |Microsoft Docs
+title: Scalar 功能限制 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea36de05f813fc32a90a855bd0c08d020cf1f9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2466fefd76b4e285ec2df6e79992e8cf3f33e4e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292878"
 ---
 # <a name="scalar-function-limitations"></a>純量函式限制
-純量函數僅支援使用 ODBC 標準格式。
+只有使用 ODBC 規範格式,才能支援 Scalar 函數。

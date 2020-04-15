@@ -1,5 +1,5 @@
 ---
-title: ODBC 總覽 |Microsoft Docs
+title: ODBC 概述 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 945ebced0703c109ac64c374e31d2e76b556e7ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a0515a882cd7d1c97a60e9262942bd7c397b0b2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67944831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298288"
 ---
 # <a name="odbc-overview"></a>ODBC 概觀
-開放式資料庫連接（ODBC）是廣為接受的應用程式開發介面（API），可用於資料庫存取。 它是以開放式群組的呼叫層級介面（CLI）規格，以及適用于資料庫 Api 的 ISO/IEC 為基礎，並使用結構化查詢語言 (SQL) （SQL）作為其資料庫存取語言。  
+開放資料庫連接 (ODBC) 是一個被廣泛接受的應用程式程式設計介面 (API) 用於資料庫訪問。 它基於開放組和 ISO/IEC 的資料庫 API 的呼叫級介面 (CLI) 規範,並使用結構化查詢語言 (SQL) 作為其資料庫訪問語言。  
   
- ODBC 是針對最大的*互通性*所設計，也就是單一應用程式使用相同的原始程式碼存取不同的資料庫管理系統（dbms）的能力。 資料庫應用程式會呼叫 ODBC 介面中的函式，這些函數會在稱為*驅動程式*的資料庫特定模組中執行。 使用驅動程式會將應用程式與資料庫特定的呼叫隔離，方式與印表機驅動程式會從印表機特定的命令隔離文字處理程式。 因為驅動程式是在執行時間載入，所以使用者只需要加入新的驅動程式，就能存取新的 DBMS。不需要重新編譯或重新連結應用程式。  
+ ODBC 旨在實現最大的*互通性*,即單個應用程式能夠使用相同的原始碼存取不同的資料庫管理系統 (DBMS)。 資料庫應用程式調用 ODBC 介面中的函數,這些函數在稱為*驅動程式*的特定於資料庫的模組中實現。 使用驅動程式將應用程式與特定於資料庫的調用隔離開來,就像印表機驅動程式將字處理程式與特定於印表機的命令隔離一樣。 由於驅動程式在運行時載入,因此使用者只需添加新驅動程式才能存取新的 DBMS;因此,使用者只需添加新驅動程式,使用者就只需添加新驅動程式,使用者就只需添加新的 DBMS。無需重新編譯或重新連結應用程式。  
   
  此章節包含下列主題。  
   

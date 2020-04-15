@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagField |Microsoft Docs
+title: SQLGetDiagField |微軟文件
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,33 +11,32 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0d704d76caa3f2a70744a3f2cb4358251f26e55
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299688"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會針對**SQLGetDiagField**指定下列額外的診斷欄位。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
+  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 ODBC 驅動程式為**SQLGetDiagField**指定以下其他診斷欄位。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
   
 |診斷記錄欄位|描述|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|報告產生錯誤的預存程序的行號。 SQL_DIAG_SS_LINE 的值只有在 SQL_DIAG_SS_PROCNAME 傳回值時才有意義。 值會以不帶正負號的 16 位元整數傳回。|  
-|SQL_DIAG_SS_MSGSTATE|錯誤訊息的狀態。 如需錯誤訊息狀態的詳細資訊，請參閱[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)。 值會以帶正負號的 32 位元整數傳回。|  
-|SQL_DIAG_SS_PROCNAME|產生錯誤的預存程序的名稱 (如果適用)。 值會以字元字串傳回。 字串的長度 (以字元為單位) 是依 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本而定， 您可以藉由呼叫[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)來要求 SQL_MAX_PROCEDURE_NAME_LEN 的值來判斷它。|  
+|SQL_DIAG_SS_MSGSTATE|錯誤訊息的狀態。 有關錯誤訊息狀態的資訊,請參閱[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)。 值會以帶正負號的 32 位元整數傳回。|  
+|SQL_DIAG_SS_PROCNAME|產生錯誤的預存程序的名稱 (如果適用)。 值會以字元字串傳回。 字串的長度 (以字元為單位) 是依 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本而定， 可以通過調用[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)請求SQL_MAX_PROCEDURE_NAME_LEN值來確定。|  
 |SQL_DIAG_SS_SEVERITY|相關錯誤訊息的嚴重性層級。 值會以帶正負號的 32 位元整數傳回。|  
 |SQL_DIAG_SS_SRVNAME|錯誤發生所在之伺服器的名稱。 值會以字元字串傳回。 字串長度 (以字元表示) 是由 SQL_MAX_SQLSERVERNAME 巨集在 sqlncli.h 中定義。|  
   
  包含字元資料、SQL_DIAG_SS_PROCNAME 和 SQL_DIAG_SS_SRVNAME 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定診斷欄位，會將該資料以 ANSI、Unicode 或以 Null 結束的字元傳回給用戶端。 如有必要，字元計數可依字元寬度進行調整。 或者，TCHAR 或 SQLTCHAR 之類的可攜式 C 資料類型可用來確保正確的程式變數長度。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會支援下列其他的動態函數程式碼，以識別最後所嘗試的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式。 動態函數程式碼會以診斷記錄集的標頭 (記錄 0) 傳回，因此會在每次執行時使用 (不論成功與否)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會支援下列其他的動態函數程式碼，以識別最後所嘗試的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式。 動態函數程式碼會以診斷記錄集的標頭 (記錄 0) 傳回，因此會在每次執行時使用 (不論成功與否)。  
   
 |動態函數程式碼|來源|  
 |---------------------------|------------|  
@@ -63,7 +62,7 @@ ms.locfileid: "73786479"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER 陳述式|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP 或 DUMP DATABASE 陳述式|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE 陳述式|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 陳述式。 如果**chkpt 上的 trunc** ，也會針對 CHECKPOINT 語句傳回。 資料庫選項為 on。|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 陳述式。 如果**trunc. 登入 chkpt,** 則也傳回 CHECKPOINT 語句。 資料庫選項處於打開。|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 流程控制陳述式|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK 陳述式|  
 |SQL_DIAG_DFC_SS_KILL|KILL 陳述式|  
@@ -98,12 +97,12 @@ ms.locfileid: "73786479"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT 陳述式|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 和資料表值參數  
- SQLGetDiagField 可以用來取出兩個診斷欄位： SQL_DIAG_SS_TABLE_COLUMN_NUMBER 和 SQL_DIAG_SS_TABLE_ROW_NUMBER。 這些欄位可協助您判斷哪些值導致與診斷記錄相關聯的錯誤或警告。  
+ SQLGetDiagField 可用於檢索兩個診斷欄位:SQL_DIAG_SS_TABLE_COLUMN_NUMBER和SQL_DIAG_SS_TABLE_ROW_NUMBER。 這些欄位可協助您判斷哪些值導致與診斷記錄相關聯的錯誤或警告。  
   
- 如需資料表值參數的詳細資訊，請參閱[ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有關表值參數的詳細資訊,請參閱[&#40;ODBC&#41;的表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetDiagField 函式](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagfield 函數](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

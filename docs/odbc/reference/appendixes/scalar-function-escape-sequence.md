@@ -1,5 +1,5 @@
 ---
-title: 純量函數 Escape 序列 |Microsoft Docs
+title: Scalar 函數轉義序列 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - scalar functions [ODBC], escape sequences
 - ODBC escape sequences [ODBC], scalar function
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8347b8e6f0fab6dffc5295fb3b8260a6a56ed123
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305071"
 ---
 # <a name="scalar-function-escape-sequence"></a>純量函式逸出序列
-ODBC 會針對純量函數使用 escape 序列。 此 escape 序列的語法如下：  
+ODBC 使用轉義序列進行標量函數。 此逸出序列的語法如下:  
   
 ```  
 {fn scalar-function}  
 ```  
   
 ## <a name="remarks"></a>備註  
- 在 BNF 標記法中，語法如下所示：  
+ 在 BNF 符號中,語法如下所示:  
   
- *ODBC-純量函數-escape* ：： =  
+ *ODBC-標點-功能轉義*::*  
   
- *ODBC-esc-啟動器*fn 純量*函數 ODBC-esc-結束字元*  
+ *ODBC-esc-開始器*fn*標量函數 ODBC-esc 終結器*  
   
- 純量*函數*：： =*函數名稱*（*引數清單*）  
+ *標量函數*::**函式名稱*(*參數清單*)  
   
- （非終端項函*式名稱*和函*式名稱*（*引數清單*）的定義衍生自[附錄 E：](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)純量函數中的純量函數清單）。  
+ ( 非終端*函數名稱*與*函數名稱*(*參數清單*)的定義派生自附錄 E 中的標量函數清單[:Scalar 函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。  
   
- *ODBC-esc-啟動器*：： = {  
+ *ODBC-esc -發物人*::*  
   
- *ODBC-esc-結束字元*：： =}  
+ *ODBC-esc 終結器*:*|  
   
- 若要判斷資料來源是否支援程式，而且該驅動程式支援 ODBC 程序呼叫語法，應用程式可以呼叫**SQLGetInfo**。 如需詳細資訊，請參閱[附錄 E：](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)純量函數。
+ 要確定資料來源是否支援程序,驅動程式支援 ODBC 程序呼叫語法,應用程式可以呼叫**SQLGetInfo**。 有關詳細資訊,請參閱附錄[E:Scalar 函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。

@@ -1,5 +1,5 @@
 ---
-title: ALTER TABLE-SQL 命令 |Microsoft Docs
+title: 變更表 - SQL 指令 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 587d721522503f9b392bb8be7433850fd7449efb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901375"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304709"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 命令
-以程式設計方式修改資料表的結構。  
+以程式設計方式修改表的結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,137 +60,137 @@ ALTER TABLE TableName1
 ```  
   
 ## <a name="arguments"></a>引數  
- *TableName1*  
- 指定其結構已修改之資料表的名稱。  
+ *表格名稱1*  
+ 指定其結構被修改的表的名稱。  
   
- ADD [COLUMN] *FieldName1*  
- 指定要加入之欄位的名稱。  
+ 新增 [COLUMN]*欄位名稱1*  
+ 指定要新增的欄位的名稱。  
   
- ALTER [COLUMN] *FieldName1*  
- 指定要修改之現有欄位的名稱。  
+ 變更 [COLUMN]*欄位名稱1*  
+ 指定要修改的現有欄位的名稱。  
   
- *FieldType* [（ *NFieldWidth* [， *nPrecision*]]）  
- 針對新的或修改過的欄位，指定欄位類型、欄位寬度和欄位有效位數（小數位數）。  
+ *欄位型態* *[(n欄位寬度* *[,n 精度*])  
+ 指定新欄位或修改欄位的欄位類型、欄位寬度和欄位精度(小數位數)。  
   
- *FieldType*是單一字母，表示欄位的[資料類型](../../odbc/microsoft/visual-foxpro-field-data-types.md)。 某些欄位資料類型需要您指定*nFieldWidth*或*nPrecision*或兩者。  
+ *欄位型態*是指示欄位[資料類型](../../odbc/microsoft/visual-foxpro-field-data-types.md)的單個字母。 某些欄位資料類型要求您指定*nFieldWidth*或*nPrecision*或兩者。  
   
- D、G、I、L、M、P、T 和 Y 類型都會忽略*nFieldWidth*和*nPrecision* 。 根據預設，如果 B、F 或 N 類型未包含*nPrecision* ，則*nPrecision*為零（沒有小數位數）。  
+ *nFieldWidth*和*nPrecision*被忽略 D、G、I、L、M、P、T 和 Y 類型。 預設情況下,如果 B、F 或 N 類型不包括*nPrecision,**則 nPrecision*為零(無小數位數)。  
   
  NULL &#124; NOT NULL  
- 允許或防止欄位中出現 null 值。  
+ 允許或阻止欄位中的空值。  
   
- 如果您省略 Null 和 NOT Null，則 SET Null 的目前設定會決定欄位中是否允許 Null 值。 不過，如果您省略 Null 和 NOT Null 並包含 PRIMARY KEY 或 UNIQUE 子句，則會忽略 SET Null 的目前設定，而欄位預設為非 Null。  
+ 如果省略 NULL 和 NOT NULL,則"設置 NULL"的當前設定將確定欄位中是否允許空值。 但是,如果省略 NULL 和 NOT NULL 並包含「主密鑰」或「獨立」子句,則將忽略 SET NULL 的目前設定,預設情況下該欄位不是 NULL。  
   
- 檢查*lExpression1*  
- 指定欄位的驗證規則。 *lExpression1*必須評估為邏輯運算式，而且可以是使用者定義函數或預存程式。 每當附加空白記錄時，就會檢查驗證規則。 如果驗證規則不允許附加記錄中的空白域值，則會產生錯誤。  
+ CHECK *lExpression1*  
+ 指定欄位的驗證規則。 *lExpression1*必須計算到邏輯運算式,並且可以是使用者定義的函數或存儲過程。 每當追加空白記錄時,都會檢查驗證規則。 如果驗證規則不允許追加記錄中的空白欄位值,則生成錯誤。  
   
- 錯誤*cMessageText1*  
- 指定當欄位驗證規則產生錯誤時所顯示的錯誤訊息。  
+ 錯誤*cMessage 文字1*  
+ 指定欄位驗證規則產生錯誤時顯示的錯誤訊息。  
   
- 預設*eExpression1*  
- 指定欄位的預設值。 *EExpression1*的資料類型必須與欄位的資料類型相同。  
+ DEFAULT *eExpression1*  
+ 指定欄位的預設值。 *eExpression1*的數據類型必須與欄位的數據類型相同。  
   
  PRIMARY KEY  
- 建立主要索引標記。 索引標記的名稱與欄位相同。  
+ 建立主索引標記。 索引標記的名稱與欄位相同。  
   
  UNIQUE  
- 使用與欄位相同的名稱來建立候選索引標記。  
+ 創建與欄位同名的候選索引標記。  
   
 > [!NOTE]  
->  候選索引（藉由包含 ALTER TABLE 或 CREATE TABLE 中 ANSI 相容性所建立的唯一選項）不同于在 INDEX 命令中使用 UNIQUE 選項所建立的索引。 在 INDEX 命令中使用 UNIQUE 建立的索引，允許重複的索引鍵;候選索引不允許重複的索引鍵。  
+>  候選索引(透過包含'唯一'選項(在 ALTER TABLE 或 CREATE TABLE 中提供 ANSI 相容性)與在 INDEX 命令中使用「唯一」選項創建的索引不同。 在 INDEX 命令中使用 UNIQUE 創建的索引允許重複索引鍵;候選索引不允許重複的索引鍵。  
   
- 在用於主要或候選索引的欄位中，不允許 Null 值和重複的記錄。  
+ 對於用於主索引或候選索引的欄位,不允許使用空值和重複記錄。  
   
- 如果您要使用 [加入資料行] 來建立新的欄位，如果您為支援 null 值的欄位建立主要或候選索引，Visual FoxPro 就不會產生錯誤。 不過，如果您嘗試在用於主要或候選索引的欄位中輸入 null 或重複的值，Visual FoxPro 將會產生錯誤。  
+ 如果使用 ADD COLUMN 創建新欄位,則如果為支援空值的欄位創建主索引或候選索引,Visual FoxPro 將不會生成錯誤。 但是,如果您嘗試在用於主索引或候選索引的欄位中輸入空值或重複值,則 Visual FoxPro 將生成錯誤。  
   
- 如果您要修改現有的欄位，而且主要或候選索引運算式包含資料表中的欄位，則 Visual FoxPro 會檢查欄位，以查看它們是否包含 null 值或重複的記錄。 如果有的話，Visual FoxPro 會產生錯誤，而且不會改變數據表。  
+ 如果要修改現有欄位,並且主索引表示式由表中的欄位組成,Visual FoxPro 將檢查欄位以查看這些欄位是否包含空值或重複記錄。 如果這樣做,Visual FoxPro 將生成錯誤,並且表不會更改。  
   
- 參考*TableName2*標記*TagName1*  
- 指定要建立持續性關聯性的父資料表。 TAG *TagName1*指定以關聯性為基礎的父資料表的索引標記。 索引標記名稱最多可包含10個字元。  
+ 參考*表格名稱2* *標籤名稱1*  
+ 指定建立持久關係的父表。 TAG *TagName1*指定關係所基於的父表的索引標記。 索引標記名稱最多可以包含 10 個字元。  
   
  NOCPTRANS  
- 防止轉譯成字元和備忘欄位的不同字碼頁。 如果資料表轉換成另一個字碼頁，則不會轉譯已指定 NOCPTRANS 的欄位。 只能針對字元和備忘欄位指定 NOCPTRANS。  
+ 防止將字元和備忘錄欄位翻譯成其他代碼頁。 如果表轉換為另一個代碼頁,則不會轉換指定 NOCPTRANS 的欄位。 NOCPTRANS 只能為字元和備忘錄欄位指定。  
   
- 下列範例會建立名為 mytable 的資料表，其中包含兩個字元欄位和兩個備忘欄位。 第二個字元欄位 char2 和第二個備忘欄位 memo2 包括 NOCPTRANS，以防止轉譯。  
+ 下面的範例創建一個名為 mytable 的表,其中包含兩個字元欄位和兩個備忘錄欄位。 第二個字元字段 char2 和第二個備忘錄欄位備忘錄 2 包括 NOCPTRANS 以防止翻譯。  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- ALTER [COLUMN] *FieldName2*  
- 指定要修改之現有欄位的名稱。  
+ 變更 [COLUMN]*欄位名稱2*  
+ 指定要修改的現有欄位的名稱。  
   
- 設定預設*eExpression2*  
- 為現有的欄位指定新的預設值。 *EExpression2*的資料類型必須與欄位的資料類型相同。  
+ 設定預設*e 運算式2*  
+ 為現有欄位指定新的預設值。 *eExpression2*的資料類型必須與欄位的數據類型相同。  
   
- 設定檢查*lExpression2*  
- 為現有的欄位指定新的驗證規則。 *lExpression2*必須評估為邏輯運算式，而且可以是使用者定義函數或預存程式。  
+ 設定 CHECK *l 表示式2*  
+ 為現有欄位指定新的驗證規則。 *lExpression2*必須計算到邏輯運算式,並且可能是使用者定義的函數或存儲過程。  
   
- 錯誤*cMessageText2*  
- 指定當欄位驗證規則產生錯誤時所顯示的錯誤訊息。 只有在 [流覽] 或 [編輯] 視窗中變更資料時，才會顯示此訊息。  
+ 錯誤*cMessage 文字2*  
+ 指定欄位驗證規則產生錯誤時顯示的錯誤訊息。 僅當在「瀏覽」或「編輯」視窗中更改數據時,才會顯示該消息。  
   
  DROP DEFAULT  
- 移除現有欄位的預設值。  
+ 刪除現有欄位的預設值。  
   
- 捨棄檢查  
- 移除現有欄位的驗證規則。  
+ 掉落檢查  
+ 刪除現有欄位的驗證規則。  
   
- DROP [COLUMN] *FieldName3*  
- 指定要從資料表中移除的欄位。 從資料表中移除欄位也會移除欄位的預設值設定和欄位驗證規則。  
+ DROP (欄位)*欄位名稱3*  
+ 指定要從表中移除的欄位。 從表中刪除欄位還會刪除欄位的預設值設置和欄位驗證規則。  
   
- 如果索引鍵或觸發程式運算式參考欄位，當移除欄位時，運算式就會變成無效。 在此情況下，當移除欄位但不正確索引鍵或觸發程式運算式在執行時間產生錯誤時，不會產生錯誤。  
+ 如果索引鍵或觸發器表達式引用該欄位,則刪除該欄位時,表達式將變為無效。 在這種情況下,刪除欄位時不會生成錯誤,但無效的索引鍵或觸發器表達式將在運行時生成錯誤。  
   
- 設定檢查*lExpression3*  
- 指定資料表驗證規則。 *lExpression3*必須評估為邏輯運算式，而且可以是使用者定義函數或預存程式。  
+ 設定 CHECK *l 表示式3*  
+ 指定表驗證規則。 *lExpression3*必須計算到邏輯運算式,並且可能是使用者定義的函數或存儲過程。  
   
- 錯誤*cMessageText3*  
- 指定當資料表驗證規則產生錯誤時所顯示的錯誤訊息。 只有在 [流覽] 或 [編輯] 視窗中變更資料時，才會顯示此訊息。  
+ 錯誤*cMessage 文字3*  
+ 指定表驗證規則產生錯誤時顯示的錯誤訊息。 僅當在「瀏覽」或「編輯」視窗中更改數據時,才會顯示該消息。  
   
- 捨棄檢查  
- 移除資料表的驗證規則。  
+ 掉落檢查  
+ 刪除表的驗證規則。  
   
- 新增主要金鑰*eExpression3*標記*TagName2*  
- 將主要索引加入至資料表。 *eExpression3*指定主要索引鍵運算式，而*TagName2*指定主要索引標記的名稱。 索引標記名稱最多可包含10個字元。 如果省略了 TAG *TagName2* ，而且*eExpression3*是單一欄位，則主要索引標籤的名稱與*eExpression3*中指定的欄位相同。  
+ 新增主鍵*eExpression3*標籤*名稱2*  
+ 向表添加主索引。 *eExpression3*指定主索引鍵運算式 *,TagName2*指定主索引標記的名稱。 索引標記名稱最多可以包含 10 個字元。 如果省略*了 TAG TagName2,* 並且*eExpression3*是單個字段,則主索引標記的名稱與*eExpression3*中指定的欄位的名稱相同。  
   
- 捨棄主要金鑰  
- 移除主要索引和其索引標記。 因為一個資料表只能有一個主鍵，所以不需要指定主鍵的名稱。 移除主要索引也會刪除以主要金鑰為基礎的任何持續性關聯。  
+ 刪除主鍵  
+ 刪除主索引及其索引標記。 由於表只能有一個主鍵,因此不必指定主鍵的名稱。 刪除主索引還會刪除基於主鍵的任何持久關係。  
   
- 新增唯一的*eExpression4*[TAG *TagName3*]  
- 將候選索引加入至資料表。 *eExpression4*指定候選索引鍵運算式，而*TagName3*指定候選索引標記的名稱。 索引標記名稱最多可包含10個字元。 如果您省略 TAG *TagName3* ，而且如果*eExpression4*是單一欄位，則候選索引標記的名稱與*eExpression4*中指定的欄位相同。  
+ 新增獨立*電子運算式4* *[TAG 標籤名稱3*]  
+ 向表添加候選索引。 *eExpression4*指定候選索引鍵運算式 *,TagName3*指定候選索引標記的名稱。 索引標記名稱最多可以包含 10 個字元。 如果省略 TAG *TagName3,* 並且*eExpression4*是單個字段,則候選索引標記的名稱與*eExpression4*中指定的欄位的名稱相同。  
   
- DROP UNIQUE TAG *TagName4*  
- 移除候選索引和其索引標記。 因為資料表可以有多個候選索引鍵，所以您必須指定候選索引標記的名稱。  
+ 刪除唯一*標籤名稱4*  
+ 刪除候選索引及其索引標記。 由於表可以有多個候選鍵,因此必須指定候選索引標記的名稱。  
   
- 新增外鍵 [ *eExpression5*] 標記*TagName4*  
- 將外部（非主要）索引加入至資料表。 *eExpression5*指定外部索引鍵運算式，而*TagName4*指定外部索引標記的名稱。 索引標記名稱最多可包含10個字元。  
+ 新增外鍵 = *eExpression5*[TAG*標籤名稱4*  
+ 向表添加外來(非主)索引。 *eExpression5*指定外索引鍵運算式 *,TagName4*指定外索引標記的名稱。 索引標記名稱最多可以包含 10 個字元。  
   
- 參考*TableName2*[TAG *TagName5*]  
- 指定要建立持續性關聯性的父資料表。 包含標記*TagName5* ，可根據父資料表的現有索引標記來建立關聯性。 索引標記名稱最多可包含10個字元。 如果您省略 TAG *TagName5*，則會使用父資料表的主要索引標記來建立關聯性。  
+ 參考*表格名稱2*[TAG*標籤名稱5*]  
+ 指定建立持久關係的父表。 包括 TAG *TagName5,* 以基於父表的現有索引標記建立關係。 索引標記名稱最多可以包含 10 個字元。 如果省略 TAG *TagName5,* 則使用父表的主索引標記建立關係。  
   
- 卸載外鍵標記*TagName6*[儲存]  
- 刪除索引標籤為*TagName6*的外鍵。 如果您省略 [儲存]，則會從結構化索引中刪除索引標記。 包含 [儲存] 以防止從結構化索引中刪除索引標記。  
+ 刪除外國鍵*標籤名稱6*[儲存]  
+ 刪除索引標記為*TagName6*的外鍵。 如果省略 SAVE,索引標記將從結構索引中刪除。 包括 SAVE 以防止從結構索引中刪除索引標記。  
   
- 將資料行*FieldName4*重新命名為*FieldName5*  
- 可讓您變更資料表中的功能變數名稱。 *FieldName4*指定重新命名的功能變數名稱。 *FieldName5*指定欄位的新名稱。  
+ 重新命名欄*位名稱4*到*欄位名稱5*  
+ 允許您更改表中欄位的名稱。 *FieldName4*指定重新命名的欄位的名稱。 *欄位Name5*指定欄位的新名稱。  
   
 > [!CAUTION]  
->  在重新命名資料表欄位時請小心，因為索引運算式、欄位和資料表驗證規則、命令和函式可能會參考原始的功能變數名稱。  
+>  重命名表欄位時要小心謹慎,因為索引運算式、欄位和表驗證規則、命令和函數可能引用原始字段名稱。  
   
- NOVALIDATE  
- 指定 Visual FoxPro 允許對資料表的結構進行變更;這些變更可能會違反資料表中資料的完整性。 根據預設，Visual FoxPro 會防止 ALTER TABLE 進行變更，違反資料表中資料的完整性。 包含 NOVALIDATE 以覆寫此預設行為。  
+ 沒有認證  
+ 指定 Visual FoxPro 允許對表的結構進行更改;這些更改可能會違反表中數據的完整性。 默認情況下,Visual FoxPro 可防止 ALTER TABLE 進行更改,這些更改會違反表中數據的完整性。 包括 NOVALIDATE 以覆蓋此默認行為。  
   
 ## <a name="remarks"></a>備註  
- ALTER TABLE 可用來修改尚未加入至資料庫之資料表的結構。 不過，如果您在修改免費資料表時包含 DEFAULT、FOREIGN KEY、PRIMARY KEY、REFERENCES 或 SET 子句，Visual FoxPro 會產生錯誤。  
+ ALTER TABLE 可用於修改尚未添加到資料庫的表的結構。 但是,如果在修改可用表時包含 DEFAULT、外鍵、主密鑰、參考或 SET 子句,則 Visual FoxPro 將生成錯誤。  
   
- ALTER TABLE 可能會建立新的資料表標頭，並將記錄附加至資料表標頭，以重建資料表。 例如，變更欄位的類型或寬度可能會造成資料表重建。  
+ ALTER TABLE 可以通過創建新的錶標頭並將記錄追加到錶標頭來重建表。 例如,更改欄位的類型或寬度可能會導致重建表。  
   
- 重建資料表之後，會針對其類型或寬度變更的任何欄位執列欄位驗證規則。 如果您變更資料表中任何欄位的類型或寬度，就會執行資料表規則。  
+ 重建表後,將針對任何類型或寬度更改的欄位執行欄位驗證規則。 如果更改表中任何欄位的類型或寬度,則執行表規則。  
   
- 如果您針對具有記錄的資料表修改欄位或資料表驗證規則，Visual FoxPro 會針對現有的資料測試新的欄位或資料表驗證規則，並在第一次出現的欄位或資料表驗證規則或觸發程式違規時發出警告。  
+ 如果修改具有記錄的表的欄位或表驗證規則,Visual FoxPro 會針對現有資料測試新的欄位或表驗證規則,並針對首次出現欄位或表驗證規則或觸發器衝突發出警告。  
   
- 如果您修改的資料表是在資料庫中，則 ALTER TABLE-SQL 需要獨佔使用資料庫。 若要開啟資料庫以供獨佔使用，請在開啟的資料庫中包含獨佔的。  
+ 如果修改的表位於資料庫中,則 ALTER TABLE - SQL 需要獨佔使用資料庫。 要打開資料庫供獨佔使用,請在 OPEN 資料庫中包括獨佔。  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE TABLE-SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
+ [建立表 - SQL 指令](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 命令](../../odbc/microsoft/index-command.md)

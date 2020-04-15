@@ -1,5 +1,5 @@
 ---
-title: 核心介面一致性 |Microsoft Docs
+title: 核心介面一致性 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,59 +12,59 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002114"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302130"
 ---
 # <a name="core-interface-conformance"></a>核心介面一致性
-所有 ODBC 驅動程式都必須展現至少核心層級的介面一致性。 由於核心層級中的功能是大部分一般互通應用程式所需的功能，因此驅動程式可以使用這類應用程式。 核心層級中的功能也會對應至 ISO CLI 規格中定義的功能，以及「開啟群組 CLI」規格中所定義的 nonoptional 功能。 符合核心層級介面的 ODBC 驅動程式可讓應用程式執行下列所有動作：  
+所有 ODBC 驅動程式必須至少顯示核心級介面一致性。 由於 Core 級別的功能是大多數通用可互通應用程式所需的功能,因此驅動程式可以使用此類應用程式。 核心等級的功能也對應於 ISO CLI 規範中定義的功能以及開放組 CLI 規範中定義的非可選功能。 核心級介面一致的 ODBC 驅動程式允許應用程式執行以下所有操作:  
   
--   藉由呼叫**SQLAllocHandle**和**SQLFreeHandle**，配置並釋放所有類型的控制碼。  
+-   通過調用**SQLAllocHandle**和**SQLFreeHandle**來分配和釋放所有類型的句柄。  
   
 -   使用**SQLFreeStmt**函數的所有形式。  
   
--   藉由呼叫**SQLBindCol**來系結結果集資料行。  
+-   通過調用**SQLBindCol**綁定結果集列。  
   
--   藉由呼叫**SQLBindParameter**和**SQLNumParams**，僅在輸入方向處理動態參數（包括參數陣列）。 （輸出方向的參數是[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能203）。  
+-   僅透過呼叫**SQLBind 參數**和**SQLNumParams**處理動態參數(包括參數陣列)。 (輸出方向的參數是[2 級介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的要素 203 。  
   
--   指定系結位移。  
+-   指定綁定偏移量。  
   
--   使用 [資料執行中] 對話方塊，其中涉及對**SQLParamData**和**SQLPutData**的呼叫。  
+-   使用執行時的數據對話框,涉及對**SQLParamData**和**SQLPutData**的調用。  
   
--   藉由呼叫**SQLCloseCursor**、 **SQLGetCursorName**和**SQLSetCursorName**來管理資料指標和資料指標名稱。  
+-   通過呼叫**SQLCloseCursor、SQLGetCursorName**和**SQLSetCursorName**來管理游標和**SQLCloseCursor**游標名稱。  
   
--   藉由呼叫**SQLColAttribute**、 **SQLDescribeCol**、 **SQLNumResultCols**和**SQLRowCount**，取得結果集的描述（中繼資料）存取權。 （在資料行編號0上使用這些函數，以取得[第2層介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能204。）  
+-   通過調用 SQLColattribute、SQLDescribeCol、SQLNumResultCols**SQLDescribeCol**和**SQLRowCount,** 訪問結果集的描述(**SQLColAttribute****SQLNumResultCols**中繼資料)。 (在列號 0 上使用這些函數來檢索書簽元數據是[2 級介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能 204 。  
   
--   藉由呼叫目錄函數**SQLColumns**、 **SQLGetTypeInfo**、 **SQLStatistics**和**SQLTables**來查詢資料字典。  
+-   通過調用目錄函數**SQLColumns、SQLGetTypeInfo、SQL****SQLColumns****統計**和**SQLTables**查詢資料字典。  
   
-     驅動程式不需要支援資料庫資料表和 views 的多部分名稱。 （如需詳細資訊，請參閱[層級1介面一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的功能101和[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能201）。不過，SQL-92 規格的某些功能（例如資料行限定性和索引名稱）在語法上相當於多部分命名。 ODBC 功能的目前清單並不是為了在 SQL-92 的這些層面引進新的選項。  
+     不需要驅動程式來支援資料庫表和檢視的多部分名稱。 (有關詳細資訊,請參閱[級別 1 介面一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的要素 101 和 2[級介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能 201 。但是,SQL-92 規範的某些功能(如列限定和索引名稱)在語法上可與多部分命名相媲美。 本 ODBC 功能清單無意在 SQL-92 的這些方面引入新選項。  
   
--   藉由呼叫**SQLConnect**、 **SQLDataSources**、 **SQLDisconnect**和**SQLDriverConnect**來管理資料來源和連接。 藉由呼叫**SQLDrivers**，取得驅動程式的相關資訊，不論它們支援哪個 ODBC 層級。  
+-   通過調用**SQLConnect** **、SQLDataSources、SQL****斷開連接**和**SQLDriverConnect**來管理數據源和連接。 通過調用**SQLDrivers**獲取有關驅動程式的資訊,無論他們支援哪個 ODBC 級別。  
   
--   藉由呼叫**SQLExecDirect**、 **SQLExecute**和**SQLPREPARE**來準備和執行 SQL 語句。  
+-   通過調用**SQLExecDirect、SQLExecute**和**SQLExecute****SQLPrepare**來準備和執行 SQL 語句。  
   
--   藉由呼叫**SQLFetch**或呼叫**SQLFetchScroll**並將*FetchOrientation*引數設定為 SQL_FETCH_NEXT，只提取結果集的一個資料列或多個資料列。  
+-   僅按正向方向獲取結果集的一行或多行,通過調用**SQLFetch**或調用**SQLFetchScroll,** 將*Fetch 方向*參數設置為SQL_FETCH_NEXT。  
   
--   藉由呼叫**SQLGetData**，取得部分中未系結的資料行。  
+-   通過調用**SQLGetData,** 獲取部分未綁定列。  
   
--   藉由呼叫**SQLGetConnectAttr**、 **SQLGetEnvAttr**和**SQLGetStmtAttr**，取得所有屬性的目前值，並將所有屬性設為其預設值，並藉由呼叫**SQLSetConnectAttr**、 **SQLSetEnvAttr**和**SQLSetStmtAttr**，將某些屬性設定為非預設值。  
+-   通過調用**SQLGetConnectAttr、SQLGetEnvAttr**和**SQLGetStmtAttr**獲取所有屬性的當前值,並將所有屬性設置為其預設值,並透過調用**SQLSetConnectAttr、SQLSetEnv Attr**和**SQLGetEnvAttr****SQLSetStmtAttr****SQLSetEnvAttr**將某些屬性設置為非預設值。  
   
--   藉由呼叫**SQLCopyDesc**、 **SQLGetDescField**、 **SQLGetDescRec**、 **SQLSetDescField**和**SQLSetDescRec**來操作描述項的特定欄位。  
+-   用 SQLCopyDesc、SQLGetDescField、SQLGetDescRec、SQLSetDescField 與**SQLSetDescRec,** 操作描述符號的某些**SQLCopyDesc****SQLGetDescField****SQLGetDescRec****欄位**。  
   
--   藉由呼叫**SQLGetDiagField**和**SQLGetDiagRec**來取得診斷資訊。  
+-   通過調用**SQLGetDiagField**和**SQLGetDiagRec**獲取診斷資訊。  
   
--   藉由呼叫**SQLGetFunctions**和**SQLGetInfo**來偵測驅動程式功能。 此外，也會藉由呼叫**SQLNativeSql**，在將 SQL 語句傳送至資料來源之前，偵測任何文字替換的結果。  
+-   通過調用**SQLGet 函數**和**SQLGetInfo 來**檢測驅動程式功能。 此外,通過調用**SQLNativeSql,** 在 SQL 語句發送到數據源之前,檢測對 SQL 語句所做的任何文本替換的結果。  
   
--   使用**SQLEndTran**的語法來認可交易。 核心層級的驅動程式不需要支援真正的交易;因此，應用程式無法為 SQL_ATTR_AUTOCOMMIT 連接屬性指定 SQL_ROLLBACK 或 SQL_AUTOCOMMIT_OFF。 （如需詳細資訊，請參閱[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能109）。  
+-   使用**SQLEndTran**的語法提交事務。 核心級驅動程式不需要支援真正的事務;因此,應用程式不能為SQL_ATTR_AUTOCOMMIT連接屬性指定SQL_ROLLBACK或SQL_AUTOCOMMIT_OFF。 (有關詳細資訊,請參閱[2 級介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能 109 。  
   
--   呼叫**SQLCancel**以取消資料執行中的對話方塊，並在多執行緒環境中取消在另一個執行緒中執行的 ODBC 函數。 核心層級介面一致性不會強制支援非同步執行函式，也不會使用**SQLCancel**來取消以非同步方式執行的 ODBC 函數。 平臺或 ODBC 驅動程式都不需要多執行緒，驅動程式也可以同時執行獨立的活動。 不過，在多執行緒環境中，ODBC 驅動程式必須是安全線程。 來自應用程式的要求序列化是執行此規格的一致方式，即使它可能會造成嚴重的效能問題也一樣。  
+-   調用**SQLCancel**以取消執行時的資料對話框,並在多線程環境中取消在另一個線程中執行的 ODBC 函數。 核心級介面一致性不要求支援非同步執行函數,也不要求使用**SQLCancel**取消非同步執行的 ODBC 函數。 平臺和ODBC驅動程式都不需要多線程,以便驅動程式同時進行獨立活動。 但是,在多線程環境中,ODBC 驅動程式必須是線程安全的。 應用程式請求的序列化是實現此規範的一種一致方法,即使它可能會造成嚴重的性能問題。  
   
--   藉由呼叫**SQLSpecialColumns**，取得資料表的 SQL_BEST_ROWID 資料列識別資料行。 （支援 SQL_ROWVER 是[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能208）。  
+-   通過調用**SQL 特別列**獲取表的SQL_BEST_ROWID行標識列。 ( 支援SQL_ROWVER是[2 層介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能 208 。  
   
     > [!IMPORTANT]  
-    >  ODBC 驅動程式必須實作用於核心介面一致性層級中的函式。
+    >  ODBC 驅動程式必須實現核心介面一致性級別的功能。

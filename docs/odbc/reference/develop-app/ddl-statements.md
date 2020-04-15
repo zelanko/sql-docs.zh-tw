@@ -1,5 +1,5 @@
 ---
-title: DDL 語句 |Microsoft Docs
+title: DDL 語句 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], DDL statements
 - DDL statements [ODBC]
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97541c9d594b282b871cb7869d0e8c2d2224205d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cae06efe6dd11e651e8553fa5c1004c2fa145478
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076858"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302989"
 ---
 # <a name="ddl-statements"></a>DDL 陳述式
-資料定義語言（DDL）語句在 Dbms 之間有極大的差異。 ODBC SQL 會定義最常見資料定義作業的語句：建立和卸載資料表、索引和視圖;改變數據表;以及授與及撤銷許可權。 所有其他 DDL 語句都是資料來源特有的。 因此，互通的應用程式無法執行某些資料定義作業。 一般來說，這不是問題，因為這類作業傾向于高度 DBMS 特定，而且最好留給隨附于驅動程式的大部分 Dbms 或安裝程式所提供的專屬資料庫管理軟體。  
+數據定義語言 (DDL) 語句在 DBMS 之間差異很大。 ODBC SQL 為最常見的數據定義操作定義語句:創建和刪除表、索引和視圖;更改表;授予和撤銷特權。 所有其他 DDL 語句都是特定於數據源的。 因此,可互通的應用程式無法執行某些數據定義操作。 通常,這不是問題,因為此類操作往往高度特定於 DBMS,最好留給大多數 DBMS 附帶的專有資料庫管理軟體或驅動程式附帶的安裝程式。  
   
- 資料定義中的另一個問題是，Dbms 之間的資料類型名稱會有極大的差異。 **SQLGetTypeInfo**會提供一種方法，讓應用程式探索 dbms 特定的資料類型名稱，而不是定義標準資料類型名稱和強制驅動程式，將它們轉換成 dbms 特定的名稱。 互通的應用程式應該在 SQL 語句中使用這些名稱來建立和改變數據表;[附錄 C： SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)和[附錄 D：資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)中所列的名稱僅為範例。
+ 數據定義中的另一個問題是數據類型名稱在 DBMS 之間差異很大。 **SQLGetTypeInfo**不是定義標準數據類型名稱,而是強制驅動程式將其轉換為特定於 DBMS 的名稱,而是為應用程式提供了一種發現特定於 DBMS 的數據類型名稱的方法。 可互通的應用程式應在 SQL 語句中使用這些名稱來創建和更改表;附錄 C[中列出的名稱:SQL 語法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)和附錄[D:數據類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)僅是範例。

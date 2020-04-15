@@ -1,5 +1,5 @@
 ---
-title: 大量複製、增強的類型、OLE DB
+title: 批次複製,增強類型,OLE DB
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301829"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增強型日期和時間類型的大量複製變更 (OLE DB 和 ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,9 +64,9 @@ ms.locfileid: "75225259"
 ```  
   
 ## <a name="character-data-files"></a>字元資料類型  
- 在字元資料檔中，日期和時間值會以 odbc[日期和時間改善的資料類型支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)的「資料格式：字串和常值」一節中所述的方式表示，或是 OLE DB 的[OLE DB 日期和時間改善的資料類型支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 在字元資料檔中,日期和時間值表示,如「資料格式:字串和文字」部分中所述的「資料格式:字串和文字」部分[,支援 ODBC 的 ODBC 日期和時間改進](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md),或 OLE [DB 的 OLE DB 日期和時間改進的資料類型支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
- 在原生資料檔中，四個新類型的日期和時間值會表示為其 TDS 標記法，其小數位數為7（因為這[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是所支援的最大值，而且 bcp 資料檔案不會儲存這些資料行的小數位數）。 現有 **datetime** 和 **smalldatetime** 類型的儲存或其表格式資料流 (TDS) 表示法沒有變更。  
+ 在本機數據 fles 中,四個新類型的日期和時間值表示為其 TDS 表示形式,比例為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7(因為這是 bcp 數據檔支援的最大值,不存儲這些列的比例)。 現有 **datetime** 和 **smalldatetime** 類型的儲存或其表格式資料流 (TDS) 表示法沒有變更。  
   
  對於 OLE DB，不同儲存類型的儲存大小如下所示：  
   
@@ -93,9 +93,9 @@ ms.locfileid: "75225259"
 ||||
 
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 中的 BCP 類型  
- 下列類型是在 sqlncli.h 中定義的，可與 ODBC 的 BCP API 延伸模組搭配使用。 這些類型會以 OLE DB 中 IBCPSession：： BCPColFmt 的*eUserDataType*參數傳遞。  
+ 下列類型是在 sqlncli.h 中定義的，可與 ODBC 的 BCP API 延伸模組搭配使用。 這些類型會利用 OLE DB 中 IBCPSession::BCPColFmt 的 *eUserDataType* 參數來傳遞。  
   
-|檔案儲存類型|主檔案資料類型|輸入 sqlncli 以搭配 IBCPSession：： BCPColFmt 使用|值|  
+|檔案儲存類型|主檔案資料類型|鍵入 sqlncli.h,用於 IBCPSession::BCPColFmt|值|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
@@ -108,7 +108,7 @@ ms.locfileid: "75225259"
 ## <a name="bcp-data-type-conversions"></a>BCP 資料類型轉換  
  下表提供轉換資訊。  
   
- **OLE DB 注意事項**下列轉換是由 IBCPSession 所執行。 IRowsetFastLoad 使用[從用戶端到伺服器執行的轉換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)中所定義的 OLE DB 轉換。 請注意，datetime 值會捨入為一秒的 1/300，而 smalldatetime 值在執行以下所描述的用戶端轉換之後，會將其秒數設定為零。 Datetime 捨入會透過小時和分鐘 (但非日期) 傳播。  
+ **OLE DB 注意**：下列轉換是由 IBCPSession 所執行。 IRowsetFastLoad 會使用如[從用戶端到伺服器執行的轉換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)中所定義的 OLE DB 轉換。 請注意，datetime 值會捨入為一秒的 1/300，而 smalldatetime 值在執行以下所描述的用戶端轉換之後，會將其秒數設定為零。 Datetime 捨入會透過小時和分鐘 (但非日期) 傳播。  
   
 |目標 --><br /><br /> 從|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
@@ -131,7 +131,7 @@ ms.locfileid: "75225259"
 |-|不支援轉換。<br /><br /> 系統會產生含有 SQLSTATE 07006 和訊息「限制的資料類型屬性違規」的 ODBC 診斷記錄。|  
 |1|如果提供的資料無效，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的 ODBC 診斷記錄。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
 |2|忽略時間元件。|  
-|3|若為 ODBC，如果截斷時發生資料遺失，就會產生含有 SQLSTATE 22001 和訊息「字串資料，右邊已截斷」的診斷記錄。小數秒位數（小數位數）的數目是根據目的地資料行的大小來決定下表。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 7。 此轉換應該最多允許九個小數秒位數，也就是 ODBC 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數值 0** 8<br /><br /> **隱含的小數值 1. 7** 10，16<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數值0：** 19<br /><br /> **隱含的小數值 1 .. 7：** 21. 27<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數值0：** 26<br /><br /> **隱含的小數值 1 .. 7：** 28. 34<br /><br /> 對於 OLE DB，如果截斷時發生資料損失，則會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數值 0** 8<br /><br /> **隱含的小數值 1. 9** 1. 9<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數值0：** 19<br /><br /> **隱含的小數值 1. 9：** 21. 29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數值0：** 26<br /><br /> **隱含的小數值 1 .. 9：** 28. 36|  
+|3|對於 ODBC,如果發生資料丟失的截斷,則使用 SQLSTATE 22001 生成診斷記錄,並顯示消息「字串數據,右截斷」分數秒數(比例)根據下表從目標列的大小確定。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 7。 此轉換應該最多允許九個小數秒位數，也就是 ODBC 所允許的最大值。<br /><br /> **類型:** DBTIME2<br /><br /> **隱含的小數位數 0：** 8<br /><br /> **隱含比例 1..7** 10,16<br /><br /> <br /><br /> **類型:** DBTIMESTAMP<br /><br /> **隱含的小數位數 0：** 19<br /><br /> **隱含比額表 1..7:** 21..27<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0：** 26<br /><br /> **隱含比額表 1..7:** 28...34<br /><br /> 對於 OLE DB，如果截斷時發生資料損失，則會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型:** DBTIME2<br /><br /> **隱含的小數位數 0：** 8<br /><br /> **隱含的小數位數 1..9：** 1..9<br /><br /> <br /><br /> **類型:** DBTIMESTAMP<br /><br /> **隱含的小數位數 0：** 19<br /><br /> **隱含的小數位數 1..9：** 21..29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0：** 26<br /><br /> **隱含的小數位數 1..9：** 28..36|  
 |4|忽略日期元件。|  
 |5|時區會設定為 UTC (例如，00:00)。|  
 |6|時間會設定為零。|  
@@ -145,5 +145,5 @@ ms.locfileid: "75225259"
 |||
 
 ## <a name="see-also"></a>另請參閱  
- [ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
- [&#40;OLE DB 的日期和時間改善&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和時間改進&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
+ [日期和時間改善 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

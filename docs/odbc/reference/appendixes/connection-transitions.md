@@ -1,5 +1,5 @@
 ---
-title: 連接轉換 |Microsoft Docs
+title: 連接轉換 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,291 +12,291 @@ helpviewer_keywords:
 - connection transitions [ODBC]
 - state transitions [ODBC], connection
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019195"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284768"
 ---
 # <a name="connection-transitions"></a>連線轉換
-ODBC 連接具有下列狀態。  
+ODBC 連接具有以下狀態。  
   
 |State|描述|  
 |-----------|-----------------|  
-|C0|未配置的環境，未配置的連接|  
-|C1|配置的環境，未配置的連接|  
-|C2|配置的環境，配置的連接|  
-|C3|連接功能需要資料|  
-|C4|連接的連線|  
-|C5|連接的連接，配置的語句|  
-|C6|連線的連接，進行中的交易。 連接可能會在狀態 C6 中，而不會在連接上配置任何語句。 例如，假設連線處於手動認可模式，且處於狀態 C4。 如果語句已配置、執行（啟動交易），然後釋出，則交易會保持作用中，但不會有任何語句在連接上。|  
+|C0|未配置的環境,未分配的連線|  
+|C1|已配置的環境,未分配的連線|  
+|C2|已配置的環境,已分配的連線|  
+|C3|連線函數需要資料|  
+|C4|連線連線|  
+|C5|連接連線,已分配敘述|  
+|C6|連接連接,事務正在進行中。 連接可能處於狀態 C6,連接上未分配語句。 例如,假設連接處於手動提交模式,並且處於狀態 C4。 如果分配、執行(啟動事務),然後釋放,則事務將保持活動狀態,但連接上沒有語句。|  
   
- 下表顯示每個 ODBC 函數如何影響連接狀態。  
+ 下表顯示了每個 ODBC 函數如何影響連接狀態。  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|C0<br /><br /> 沒有 Env。|C1 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1 未分配|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)2|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)第|(IH)|（08003）|（08003）|C5|--[5]|--[5]|  
-|(IH)4gb|(IH)|（08003）|（08003）|--[5]|--[5]|--[5]|  
+|C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|(IH)[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|(IH)[3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
+|(IH)[4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當 SQL_HANDLE_DBC *HandleType*時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC時的過渡。  
   
- [3] 當 SQL_HANDLE_STMT *HandleType*時，此資料列會顯示轉換。  
+ [3] 此行顯示*HandleType* SQL_HANDLE_STMT時的過渡。  
   
- [4] 當 SQL_HANDLE_DESC *HandleType*時，此資料列會顯示轉換。  
+ [4] 此行顯示*handleType* SQL_HANDLE_DESC時的過渡。  
   
- [5] 以指向有效控制碼的*OutputHandlePtr*呼叫**SQLAllocHandle**時，會覆寫該控制碼，而不考慮先前的內容 ofthat 控制碼，而且可能會造成 ODBC 驅動程式的問題。 不正確的 ODBC 應用程式設計會呼叫**SQLAllocHandle**兩次，並針對* \*OutputHandlePtr*所定義的相同應用程式變數，而不需要呼叫**SQLFreeHandle**來釋放控制碼，然後再重新配置。 以這種方式覆寫 ODBC 控制碼，可能會導致 ODBC 驅動程式不一致的行為或錯誤。  
+ [5] 使用*OutputHandlePtr*調用**SQLAllocHandle,** 指向一個有效的句柄,該句柄在不考慮該句柄的先前內容的情況下進行處理,並且可能會給 ODBC 驅動程式帶來問題。 使用為*\*OutputHandlePtr*定義的相同應用程式變數調用**SQLAllocHandle**兩次,而不調用**SQLFreeHandle**以釋放句柄,然後再重新分配該句柄,這是不正確的 ODBC 應用程式程式設計。 以這種方式覆蓋 ODBC 句柄可能會導致 ODBC 驅動程式的行為不一致或錯誤。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C3 [d] C4 [s]|--[d] C2 [e] C4 [s]|（08002）|（08002）|（08002）|  
+|(IH)|(IH)|C3 [d] C4 [s]|-- [d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5 [2]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5[2]|  
   
- [1] 連接處於手動認可模式。  
+ [1] 連接處於手動提交模式。  
   
- [2] 連接處於自動認可模式。  
+ [2] 連接處於自動提交模式。  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges、SQLColumns、SQLForeignKeys、SQLGetTypeInfo、SQLPrimaryKeys、SQLProcedureColumns、SQLProcedures、SQLSpecialColumns、SQLStatistics、SQLTablePrivileges 和 SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumn 特權、SQLColumn、SQL 外鍵、SQLGetTypeInfo、SQL 主鍵、SQL過程列、SQL 過程程式、SQL 特殊列、SQLStatistics、SQLTable 特權和 SQLTables  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
   
- [1] 連接處於自動認可模式，或資料來源未開始交易。  
+ [1] 連接處於自動提交模式,或者數據源未開始事務。  
   
- [2] 連接在手動認可模式下，且資料來源開始交易。  
+ [2] 連接處於手動提交模式,數據源開始事務。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4|（08002）|（08002）|（08002）|（08002）|  
+|(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc、SQLGetDescField、SQLGetDescRec、SQLSetDescField 和 SQLSetDescRec  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|--[1]|--|--|  
   
- [1] 在此狀態中，應用程式可用的唯一描述項是明確配置的描述元。  
+ [1] 在此狀態下,應用程式唯一可用的描述符被顯式分配描述符。  
   
-## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources 和 SQLDrivers  
+## <a name="sqldatasources-and-sqldrivers"></a>SQLData 源及 SQL 驅動程式  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|--|--|--|--|--|--|  
   
-## <a name="sqldisconnect"></a>SQLDisconnect  
+## <a name="sqldisconnect"></a>SQL 斷線  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|（08003）|C2|C2|C2|25000|  
+|(IH)|(IH)|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4 s--n [f]|（08002）|（08002）|（08002）|（08002）|  
+|(IH)|(IH)|C4 s -- n[f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)sha-1|--[3]|--[3]|--[3]|--|--|--[4] 或（[5]，[6]，和 [8]） C4 [5] 和 [7] C5 [5]，[6]，和 [9]|  
-|(IH)2|(IH)|（08003）|（08003）|--|--|C5|  
+|(IH)[1]|--[3]|--[3]|--[3]|--|--|--[4] 或([5]、[6]和[8])C4[5]和[7]C5[5]、[6]和[9]|  
+|(IH)[2]|(IH)|(08003)|(08003)|--|--|C5|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當 SQL_HANDLE_DBC *HandleType*時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC時的過渡。  
   
- [3] 因為連接不是處於已線上狀態，所以不會受到交易的影響。  
+ [3] 由於連接未處於連接狀態,因此不受事務的影響。  
   
- [4] 連接上的認可或復原失敗。 在此情況下，函數會傳回 SQL_ERROR。  
+ [4] 連接上的提交或回滾失敗。 在這種情況下,函數返回SQL_ERROR。  
   
- [5] 連接上的認可或復原成功。 如果認可或復原在另一個連接上失敗，此函式會傳回 SQL_ERROR; 如果在所有連接上成功認可或復原，此函數會傳回 SQL_SUCCESS。  
+ [5] 在連接上成功提交或回滾。 如果另一個連接上的提交或回滾失敗,則函數返回SQL_ERROR,或者如果所有連接上提交或回滾成功,則函數返回SQL_SUCCESS。  
   
- [6] 連接上至少有一個已配置的語句。  
+ [6] 連接上至少分配了一個語句。  
   
- [7] 連接上沒有配置任何語句。  
+ [7] 連接上未分配任何語句。  
   
- [8] 連接至少有一個語句，其中有一個開啟的資料指標，而資料來源會在認可或回復交易時保留游標，視何者而定（取決於*CompletionType*是否 SQL_COMMIT 或 SQL_ROLLBACK）。 如需詳細資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 屬性。  
+ [8] 連接至少有一個語句,其中存在打開的游標,並且數據源在提交或回滾事務時保留游標,以適用者為準(取決於*完成類型*是SQL_COMMIT還是SQL_ROLLBACK)。 有關詳細資訊,請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)中SQL_CURSOR_COMMIT_BEHAVIOR和SQL_CURSOR_ROLLBACK_BEHAVIOR屬性。  
   
- [9] 如果連接有任何已開啟資料指標的語句，則在認可或回復交易時，不會保留資料指標。  
+ [9] 如果連接具有任何具有打開游標的語句,則在提交或回滾事務時不會保留游標。  
   
-## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect 和 SQLExecute  
+## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect 與 SQLExecute  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2] C6 [3]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2] C6[3]|--|  
   
- [1] 連接處於自動認可模式，而執行的語句不是資料*指標**規格*（例如 SELECT 語句）;或是連接處於手動認可模式，而執行的語句並未開始交易。  
+ [1] 連接處於自動提交模式,所執行的語句不是*游標**規範*(如 SELECT 語句);或連接處於手動提交模式,並且執行的語句未開始事務。  
   
- [2] 連接處於自動認可模式，而執行的語句是資料*指標**規格*（例如 SELECT 語句）。  
+ [2] 連接處於自動提交模式,所執行的語句是*游標**規範*(如 SELECT 語句)。  
   
- [3] 連接在手動認可模式下，且資料來源開始交易。  
+ [3] 連接處於手動提交模式,數據源開始事務。  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)sha-1|C0|HY010|HY010|HY010|HY010|HY010|  
-|(IH)2|(IH)|C1|HY010|HY010|HY010|HY010|  
-|(IH)第|(IH)|(IH)|(IH)|(IH)|C4 [5]--[6]|--[7] C4 [5] 和 [8] C5 [6] 和 [8]|  
-|(IH)4gb|(IH)|(IH)|(IH)|--|--|--|  
+|(IH)[1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(IH)[2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|--[7] C4[5]和[8]C5[6]和[8]|  
+|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當 SQL_HANDLE_DBC *HandleType*時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC時的過渡。  
   
- [3] 當 SQL_HANDLE_STMT *HandleType*時，此資料列會顯示轉換。  
+ [3] 此行顯示*HandleType* SQL_HANDLE_STMT時的過渡。  
   
- [4] 當 SQL_HANDLE_DESC *HandleType*時，此資料列會顯示轉換。  
+ [4] 此行顯示*handleType* SQL_HANDLE_DESC時的過渡。  
   
- [5] 連接上只有一個已配置的語句。  
+ [5] 連接上只分配了一個語句。  
   
- [6] 連接上已配置多個語句。  
+ [6] 連接上分配了多個語句。  
   
- [7] 連接處於手動認可模式。  
+ [7] 連接處於手動提交模式。  
   
- [8] 連接處於自動認可模式。  
+ [8] 連接處於自動提交模式。  
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)sha-1|(IH)|(IH)|(IH)|(IH)|--|C5 [3]--[4]|  
-|(IH)2|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(IH)[1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
+|(IH)[2]|(IH)|(IH)|(IH)|(IH)|--|--|  
   
- [1] 當 SQL_CLOSE*選項*引數時，此資料列會顯示交易。  
+ [1] 當*option*參數SQL_CLOSE時,此行顯示事務。  
   
- [2] 當*Option*引數 SQL_UNBIND 或 SQL_RESET_PARAMS 時，此資料列會顯示交易。  
+ [2] 當*Option*參數SQL_UNBIND或SQL_RESET_PARAMS時,此行顯示事務。  
   
- [3] 連接處於自動認可模式，而且沒有任何資料指標在此例外的語句中開啟。  
+ [3] 連接處於自動提交模式,除此語句外,任何語句上未打開任何游標。  
   
- [4] 連接處於手動認可模式，或處於自動認可模式，而且至少有一個其他語句已開啟資料指標。  
+ [4] 連接處於手動提交模式,或者處於自動提交模式,並且至少在其他一個語句上打開了游標。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003 [2]|HY010|--|--|--|  
+|Ih|Ih|--[1] 08003[2]|HY010|--|--|--|  
   
- [1]*屬性*引數已 SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE 或 SQL_ATTR_TRACEFILE，或已設定連接屬性的值。  
+ [1]*屬性*參數SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE 或SQL_ATTR_TRACEFILE,或者已為連接屬性設置了值。  
   
- [2]*屬性*引數不是 SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE 或 SQL_ATTR_TRACEFILE，而且尚未設定連接屬性的值。  
+ [2]*屬性*參數不是SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE或SQL_ATTR_TRACEFILE,並且尚未為連接屬性設置值。  
   
-## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField 和 SQLGetDiagRec  
+## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField 與 SQLGetDiagRec  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)sha-1|--|--|--|--|--|--|  
-|(IH)2|(IH)|--|--|--|--|--|  
-|(IH)第|(IH)|(IH)|(IH)|(IH)|--|--|  
-|(IH)4gb|(IH)|(IH)|(IH)|--|--|--|  
+|(IH)[1]|--|--|--|--|--|--|  
+|(IH)[2]|(IH)|--|--|--|--|--|  
+|(IH)[3]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
   
- [1] 當 SQL_HANDLE_ENV *HandleType*時，此資料列會顯示轉換。  
+ [1] 此行顯示*HandleType* SQL_HANDLE_ENV時的過渡。  
   
- [2] 當 SQL_HANDLE_DBC *HandleType*時，此資料列會顯示轉換。  
+ [2] 此行顯示*HandleType* SQL_HANDLE_DBC時的過渡。  
   
- [3] 當 SQL_HANDLE_STMT *HandleType*時，此資料列會顯示轉換。  
+ [3] 此行顯示*HandleType* SQL_HANDLE_STMT時的過渡。  
   
- [4] 當 SQL_HANDLE_DESC *HandleType*時，此資料列會顯示轉換。  
+ [4] 此行顯示*handleType* SQL_HANDLE_DESC時的過渡。  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|--|--|--|--|--|--|  
+|Ih|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|HY010|HY010|--|--|--|  
+|Ih|Ih|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003 [2]|08003|--|--|--|  
+|Ih|Ih|--[1] 08003[2]|08003|--|--|--|  
   
- [1] *InfoType*引數已 SQL_ODBC_VER。  
+ [1]*資訊類型*參數SQL_ODBC_VER。  
   
- [2] 未 SQL_ODBC_VER *InfoType*引數。  
+ [2]*資訊類型*參數未SQL_ODBC_VER。  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2]|--[3] C5 [1]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--[3] C5[1]|  
   
- [1] 連接處於自動認可模式，而且對**SQLMoreResults**的呼叫尚未初始化資料指標規格結果集的處理。  
+ {1} 連接處於自動提交模式,並且對**SQLMoreResult 的**調用尚未初始化了游標規範的結果集的處理。  
   
- [2] 連接處於自動認可模式，而且對**SQLMoreResults**的呼叫已初始化資料指標規格結果集的處理。  
+ [2] 連接處於自動提交模式,對**SQLMore結果**的調用已初始化了游標規範的結果集的處理。  
   
- [3] 連接處於手動認可模式。  
+ [3] 連接處於手動提交模式。  
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|（08003）|（08003）|--|--|--|  
+|(IH)|(IH)|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
   
- [1] 連接處於自動認可模式，或資料來源未開始交易。  
+ [1] 連接處於自動提交模式,或者數據源未開始事務。  
   
- [2] 連接在手動認可模式下，且資料來源開始交易。  
+ [2] 連接處於手動提交模式,數據源開始事務。  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003 [2]|HY010|--[3] 08002 [4] HY011 [5]|--[3] 08002 [4] HY011 [5]|--[3] 和 [6] C5 [8] 08002 [4] HY011 [5] 或 [7]|  
+|Ih|Ih|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|--[3] 和 [6] C5[8] 08002[4] HY011[5] 或 [7]|  
   
- [1]*屬性*引數不 SQL_ATTR_TRANSLATE_LIB 或 SQL_ATTR_TRANSLATE_OPTION。  
+ [1]*屬性*參數未SQL_ATTR_TRANSLATE_LIB或SQL_ATTR_TRANSLATE_OPTION。  
   
- [2]*屬性*引數已 SQL_ATTR_TRANSLATE_LIB 或 SQL_ATTR_TRANSLATE_OPTION。  
+ [2]*屬性*參數SQL_ATTR_TRANSLATE_LIB或SQL_ATTR_TRANSLATE_OPTION。  
   
- [3]*屬性*引數不 SQL_ATTR_ODBC_CURSORS 或 SQL_ATTR_PACKET_SIZE。  
+ [3]*屬性*參數未SQL_ATTR_ODBC_CURSORS或SQL_ATTR_PACKET_SIZE。  
   
- [4]*屬性*引數已 SQL_ATTR_ODBC_CURSORS。  
+ [4]*屬性*參數SQL_ATTR_ODBC_CURSORS。  
   
- [5]*屬性*引數已 SQL_ATTR_PACKET_SIZE。  
+ [5]*屬性*參數SQL_ATTR_PACKET_SIZE。  
   
- [6] 未 SQL_ATTR_AUTOCOMMIT*屬性*引數，或*屬性*引數已 SQL_ATTR_AUTOCOMMIT，而且設定此屬性未認可交易。  
+ {6}*屬性*參數未SQL_ATTR_AUTOCOMMIT,或者*屬性*參數SQL_ATTR_AUTOCOMMIT,並且設置此屬性未提交事務。  
   
- [7]*屬性*引數已 SQL_ATTR_TXN_ISOLATION。  
+ [7]*屬性*參數SQL_ATTR_TXN_ISOLATION。  
   
- [8]*屬性*引數已 SQL_ATTR_AUTOCOMMIT，且設定此屬性已認可交易。  
+ [8]*屬性*參數SQL_ATTR_AUTOCOMMIT,設置此屬性已提交事務。  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|HY010|--|--|--|  
+|(IH)|--|--|(HY010)|--|--|--|  
   
-## <a name="all-other-odbc-functions"></a>所有其他 ODBC 函數  
+## <a name="all-other-odbc-functions"></a>所有其他 ODBC 功能  
   
-|C0<br /><br /> 沒有 Env。|C1<br /><br /> 未配置|C2<br /><br /> 已|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
+|C0<br /><br /> 沒有恩夫|C1<br /><br /> 未配置|C2<br /><br /> 已配置|C3<br /><br /> 需要資料|C4<br /><br /> 連線|C5<br /><br /> 引數|C6<br /><br /> 交易|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--|--|

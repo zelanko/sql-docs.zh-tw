@@ -1,5 +1,5 @@
 ---
-title: 使用 IRowsetFastLoad （OLE DB）進行大量資料複製 |Microsoft Docs
+title: 使用 IRowsetFastLoad 大量複製資料 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5f597b739f4fd121d1c4174039dae5379122f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37be3d529c1d219318af2743d854a6d1b67f0cee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73768268"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300964"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此範例會示範如何使用 IRowsetFastLoad，將記錄大量複製到資料表中。  
   
- 取用者會將其大量複製的需求通知 SQLOLEDB，方法是將 SQLOLEDB 提供者特有的屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 在資料來源上設定該屬性後，取用者會建立 SQLOLEDB 工作階段。 新的會話允許取用者存取**IRowsetFastLoad**。  
+ 取用者會將其大量複製的需求通知 SQLOLEDB，方法是將 SQLOLEDB 提供者特有的屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 在資料來源上設定該屬性後，取用者會建立 SQLOLEDB 工作階段。 新的工作階段可以讓取用者存取 **IRowsetFastLoad**。  
   
- 完整的範例會示範使用 **IRowsetFastLoad** 將記錄大量複製到資料表中。 在這個範例中，10 筆記錄會加入至資料表 **IRFLTable**。 您必須在資料庫中建立資料表**IRFLTable** 。  
+ 完整的範例會示範使用 **IRowsetFastLoad** 將記錄大量複製到資料表中。 在這個範例中，10 筆記錄會加入至資料表 **IRFLTable**。 您需要在資料庫中建立表**IRFLTable。**  
   
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果必須保留認證,則應使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)對其進行加密。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>若要大量複製資料到 SQL Server 資料表中  
   
@@ -43,15 +43,15 @@ ms.locfileid: "73768268"
   
 2.  將 SQLOLEDB 提供者特有的資料來源屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 當這個屬性設定為 VARIANT_TRUE 之後，新建立的工作階段就會允許取用者存取 **IRowsetFastLoad**。  
   
-3.  建立要求**IOpenRowset**介面的會話。  
+3.  建立要求 **IOpenRowset** 介面的工作階段。  
   
 4.  呼叫 **IOpenRowset::OpenRowset**，以便開啟包含資料表中所有資料列的資料列集 (使用大量複製作業複製資料)。  
   
-5.  執行必要的系結，並使用**IAccessor：： CreateAccessor**建立存取子。  
+5.  進行必要的繫結，並且使用 **IAccessor::CreateAccessor** 來建立存取子。  
   
 6.  設定要將資料複製到資料表的來源記憶體緩衝區。  
   
-7.  呼叫**IRowsetFastLoad：： InsertRow** ，將資料大量複製到資料表中。  
+7.  呼叫 **IRowsetFastLoad::InsertRow** 來將資料大量複製到資料表中。  
 
 ## <a name="example"></a>範例  
  在這個範例中，10 筆記錄會加入至資料表 IRFLTable。 您必須在資料庫中建立資料表 IRFLTable。 IA64 不支援此範例。  

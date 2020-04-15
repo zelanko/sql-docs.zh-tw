@@ -1,5 +1,5 @@
 ---
-title: 正在抓取結果（Advanced） |Microsoft Docs
+title: 檢索結果(高級) |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,30 +12,30 @@ helpviewer_keywords:
 - result sets [ODBC], about result sets
 - bind offsets [ODBC]
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22a88a96b856ba0976dcb8600d26f78b772654bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca02b4ff911c8edff06b38d5341eeaa288cc194c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294638"
 ---
 # <a name="retrieving-results-advanced"></a>擷取結果 (進階)
-應用程式可以指定在呼叫**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**或**SQLSetPos**時，將位移新增至系結的資料緩衝區位址，以及對應的長度/指標緩衝區位址。 這些新增專案的結果會決定這些作業中使用的位址。  
+應用程式可以指定在調用**SQLBulk 操作****、SQLFetch、SQLFetchScroll**或**SQLSetPos**時,將偏移**SQLFetchScroll**量添加到綁定的數據 緩衝區位址和相應的長度/指示器緩衝區位址。 這些添加的結果確定這些操作中使用的位址。  
   
- 系結位移可讓應用程式變更系結，而不需要針對先前系結的資料行呼叫**SQLBindCol** 。 呼叫**SQLBindCol**以重新系結資料會變更緩衝區位址和長度/指示器指標。 另一方面，以位移重新系結，就只會將位移新增至現有的系結資料緩衝區位址和長度/指標緩衝區位址。 使用位移時，系結會是應用程式緩衝區配置方式的「範本」，而應用程式可以藉由變更位移，將此「範本」移至不同的記憶體區域。 可以隨時指定新的位移，而且一律會加入至原始系結的值。  
+ 綁定偏移允許應用程式更改綁定,而無需為以前綁定的列調用**SQLBindCol。** 調用**SQLBindCol**以重新綁定數據會更改緩衝區位址和長度/ 指示器指標。 另一方面,使用偏移重新綁定只需向現有綁定數據緩衝區位址和長度/指示器緩衝區位址添加偏移。 使用偏移時,綁定是應用程式緩衝區佈局方式的"範本",應用程式可以通過更改偏移量將此"範本"移動到不同的記憶體區域。 可以隨時指定新的偏移量,並且始終添加到最初綁定的值。  
   
- 若要指定系結位移，應用程式會將 SQL_ATTR_ROW_BIND_OFFSET_PTR 語句屬性設定為 SQLINTEGER 緩衝區的位址。 在應用程式呼叫使用系結的函式（例如**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**或**SQLSetPos**）之前，只要資料緩衝區位址或長度/指標緩衝區位址都不是0，而且只要系結的資料行位於結果集中，它就會將位移以位元組為單位放置在這個緩衝區中。 位址和位移的總和必須是有效的位址。 （這表示只要或兩者的總和是有效的位址，就會將位移和加入位移的位址設為無效。）SQL_ATTR_ROW_BIND_OFFSET_PTR 語句屬性是一個指標，因此，位移值可以套用至一組以上的系結資料，而這些都可以藉由變更一個位移值來變更。 應用程式必須確定指標保持有效，直到游標關閉為止。  
+ 要指定綁定偏移量,應用程式將SQL_ATTR_ROW_BIND_OFFSET_PTR語句屬性設置到 SQLINTEGER 緩衝區的位址。 在應用程式呼叫使用綁定的函數(如**SQLBulk 操作****、SQLFetch、SQLFetchScroll**或**SQLSetPos)** 之前,它會在此緩衝區中的位元組中放置偏移量,只要數據緩衝區位址和長度/ 指示器緩衝區位址都不是 0,**SQLFetchScroll**只要綁定列位於結果集中。 位址和偏移量的總和必須為有效位址。 (這意味著偏移量和添加到偏移的位址都無效,只要其總和是有效的位址。SQL_ATTR_ROW_BIND_OFFSET_PTR語句屬性是一個指標,因此偏移值可以應用於多組綁定數據,所有這些數據都可以通過更改一個偏移值來更改。 應用程式必須確保指標保持有效,直到游標關閉。  
   
 > [!NOTE]  
->  ODBC 2 不支援系結位移。*x*驅動程式。  
+>  ODBC 2 不支援綁定偏移。*x*驅動程式。  
   
  此章節包含下列主題。  
   
 -   [區塊資料指標](../../../odbc/reference/develop-app/block-cursors.md)  
   
--   [可捲動的資料指標](../../../odbc/reference/develop-app/scrollable-cursors.md)  
+-   [可捲軸游標](../../../odbc/reference/develop-app/scrollable-cursors.md)  
   
 -   [ODBC 資料指標程式庫](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
   

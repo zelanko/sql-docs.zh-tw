@@ -1,5 +1,5 @@
 ---
-title: SQL 最小文法 |Microsoft Docs
+title: SQL 最小語法 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,73 +11,73 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20eee34feadb8e3140f25019ec6b0d036ff02e14
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304989"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最小文法
-本節說明 ODBC 驅動程式必須支援的最低 SQL 語法。 本節中所述的語法是 SQL-92 專案層級語法的子集。  
+本節介紹 ODBC 驅動程式必須支援的最低 SQL 語法。 本節中描述的語法是 SQL-92 的入門級語法的子集。  
   
- 應用程式可以使用本節中的任何語法，並確保任何符合 ODBC 規範的驅動程式都能支援該語法。 若要判斷是否支援不在本節中的其他 SQL-92 功能，應用程式應該使用 SQL_SQL_CONFORMANCE 資訊類型來呼叫**SQLGetInfo** 。 即使驅動程式不符合任何 SQL-92 一致性層級，應用程式仍然可以使用本節所述的語法。 另一方面，如果驅動程式符合 SQL-92 層級，則支援包含在該層級中的所有語法。 這包括本節中的語法，因為此處所述的最小文法是最低 SQL-92 一致性層級的純粹子集。 一旦應用程式知道支援的 SQL-92 層級，它就可以藉由呼叫**SQLGetInfo**與對應于該功能的個別資訊類型，來判斷是否支援較高層級的功能（如果有的話）。  
+ 應用程式可以使用本節中的任何語法,並確保任何符合 ODBC 的驅動程式都將支援該語法。 要確定是否不支援本節中不支援 SQL-92 的其他功能,應用程式應使用SQL_SQL_CONFORMANCE資訊類型調用**SQLGetInfo。** 即使驅動程式不符合任何 SQL-92 符合性級別,應用程式仍可以使用本節中描述的語法。 另一方面,如果驅動程式符合 SQL-92 級別,則驅動程式支援該級別中包含的所有語法。 這包括本節中的語法,因為此處描述的最小語法是最低 SQL-92 符合性級別的純子集。 一旦應用程式知道 SQL-92 級別受支援,它可以通過調用**SQLGetInfo**與與該功能對應的單個資訊類型來確定是否支援更高級別的功能(如果有)。  
   
- 僅適用于唯讀資料來源的驅動程式，可能不支援本節中所包含的文法部分，以處理變更的資料。 應用程式可以藉由呼叫具有 SQL_DATA_SOURCE_READ_ONLY 資訊類型的**SQLGetInfo** ，判斷資料來源是否為唯讀。  
+ 僅使用唯讀數據源的驅動程式可能不支援本節中有關更改數據的語法部分。 應用程式可以通過使用SQL_DATA_SOURCE_READ_ONLY資訊類型調用**SQLGetInfo**來確定數據來源是否為唯讀。  
   
 ## <a name="statement"></a>引數  
- *create-table 語句*：： =  
+ *建立表語句*::*  
   
- CREATE TABLE*的基礎-資料表名稱*  
+ 建立表*格表名稱*  
   
- （*資料行識別碼資料類型*[*，資料行識別碼資料類型*] ...）  
+ (*列識別子資料類型**=,列識別子資料類型**...  
   
 > [!IMPORTANT]  
->  作為*create-table 語句*中的*資料類型*，應用程式必須使用**SQLGetTypeInfo**所傳回之結果集的 TYPE_NAME 資料行中的資料類型。  
+>  作為*創建表語句*中的*資料類型*,應用程式必須使用**SQLGetTypeInfo**返回的結果集TYPE_NAME列中的數據類型。  
   
- *delete 語句-搜尋*：： =  
+ *刪除敘述搜尋*::*  
   
- 從*資料表名稱*[WHERE*搜尋-條件*] 刪除  
+ 從*表名中移除*[WHERE*搜尋條件*]  
   
- *drop-table 語句*：： =  
+ *下拉錶語句*::*  
   
- 卸載資料表*基底-資料表名稱*  
+ DROP TABLE*基表名稱*  
   
- *insert 語句*：： =  
+ *插入敘述*::*  
   
- 插入*資料表名稱*[（資料*行識別碼*[，資料*行識別碼*] ...）]     值（*插入-值*[，*插入值*] ...）  
+ 插入表*名*[(*列識別子*[,*列識別子*))     值 (*插入值**,*插入值*#...  
   
- *select 語句*：： =  
+ *select-statement* ::=  
   
- 選取 [所有 &#124; 相異]*選取清單*  
+ 選擇 [所有&#124; *select-list*  
   
- 從*資料表參考清單*  
+ 從*表參考清單*  
   
  [WHERE*搜尋條件*]  
   
- [*依子句排序*]  
+ [*逐項訂購*]  
   
- *語句*：： = *create-table 語句*  
+ *語句*::**建立表語句*  
   
- &#124; *delete 語句搜尋*  
+ &#124;*刪除敘述搜尋*  
   
- &#124;*的 drop table 語句*  
+ &#124;*下表語句*  
   
- &#124; *insert 語句*  
+ &#124;*插入敘述*  
   
- &#124; *select 語句*  
+ &#124;*選擇敘述*  
   
- &#124;*更新語句搜尋*  
+ &#124;*更新敘述搜尋*  
   
- *update 語句-搜尋*  
+ *更新敘述搜尋*  
   
- 更新*資料表-名稱*  
+ 更新*表格名稱*  
   
- 設定資料*行識別碼*= {*expression* &#124; Null}  
+ 設定*欄位代碼*( &#124;空*表示式*]  
   
- [，資料*行識別碼*= {*expression* &#124; Null}] .。。  
+ [,*列識別子*] [*運算式*&#124; NULL]...  
   
  [WHERE*搜尋條件*]  
   

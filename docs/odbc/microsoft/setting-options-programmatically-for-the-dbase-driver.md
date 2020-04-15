@@ -1,5 +1,5 @@
 ---
-title: 針對 dBASE 驅動程式以程式設計方式設定選項 |Microsoft Docs
+title: 以程式設計方式設定 dBASE 驅動程式的選項 |微軟文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27f675cca5115a8336f2be4b7fa96c091aee1b62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 75889d9ff3ccfe01f9b8d5141df7774205522815
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300778"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>以程式設計方式設定 dBASE 驅動程式的選項
 
 |選項|描述|方法|  
 |------------|-----------------|------------|  
-|大約的資料列計數|判斷資料表大小統計資料是否近似。 此選項適用于使用 ODBC 驅動程式的所有資料來源。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**STATISTICS**關鍵字。|  
-|排序次序|排序欄位的順序。<br /><br /> 順序可以是： ASCII （預設值）或國際。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**COLLATINGSEQUENCE**關鍵字。|  
-|資料來源名稱|識別資料來源的名稱，例如薪資或人員。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**DSN**關鍵字。|  
-|資料庫|您可以設定 Microsoft Access 資料來源，而不需要選取或建立資料庫。 如果在安裝時未提供任何資料庫，當使用者連接到資料來源時，系統會提示他們選取資料庫檔案。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**DBQ**關鍵字。|  
-|描述|資料來源中資料的選擇性描述;例如，「雇用日期、薪資歷程記錄，以及所有員工的目前評論」。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**DESCRIPTION**關鍵字。|  
-|獨佔|如果選取 [**獨佔**] 方塊，資料庫將會以獨佔模式開啟，而且一次只能由一個使用者存取。 在獨佔模式中執行時，效能會增強。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**EXCLUSIVE**關鍵字。|  
-|頁面超時|指定在移除之前，頁面（如果未使用）保留在緩衝區中的一段時間（以十分之一秒為限）。 預設值為600十分之一秒（60秒）。 此選項適用于使用 ODBC 驅動程式的所有資料來源。<br /><br /> 頁面超時不可以是0，因為有固有的延遲。 頁面超時不能小於固有的延遲，即使 page timeout 選項設為低於該值也一樣。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**PAGETIMEOUT**關鍵字。|  
-|唯讀|將資料庫指定為唯讀。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**READONLY**關鍵字。|  
-|選取目錄|顯示對話方塊，您可以在其中選取目錄，其中包含您想要存取的檔案。<br /><br /> 當您定義資料來源目錄時，請指定最常使用的檔案所在的目錄。 ODBC 驅動程式會使用此目錄做為預設目錄。 如果經常使用檔案，請將其他檔案複製到這個目錄中。 或者，您也可以在 SELECT 語句中，使用目錄名稱來限定檔案名：<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> 或者，您可以使用**SQLSetConnectOption**函數搭配 SQL_CURRENT_QUALIFIER 選項來指定新的預設目錄。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**DEFAULTDIR**關鍵字。|  
-|顯示已刪除的資料列|指定是否可以抓取或定位已標示為已刪除的資料列。 如果清除此選項，則不會顯示已刪除的資料列;如果選取此選項，刪除的資料列就會被視為與非刪除的資料列相同。 預設值為清除此核取方塊。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中使用**DELETED**關鍵字。|
+|近似行計數|確定表大小統計資訊是否近似。 此選項適用於使用 ODBC 驅動程式的所有資料來源。|要動態設定此選項,請使用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)調用中的**STATISTICS**關鍵字。|  
+|整理序列|欄位排序的順序。<br /><br /> 序列可以是:ASCII(預設值)或國際。|要動態設定此選項,請使用調用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)中的**COLLATINGSEQUENCE**關鍵字。|  
+|資料來源名稱|標識數據源的名稱,如工資單或人員。|要動態設定此選項,請使用調用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)中的**DSN**關鍵字。|  
+|資料庫|無需選擇或創建資料庫即可設置 Microsoft Access 資料來源。 如果在設置時未提供資料庫,則使用者在連接到數據源時將提示他們選擇資料庫檔。|要動態設定這個選項,請使用**DBQ**關鍵字呼叫[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
+|描述|數據源中數據的可選說明;例如,「僱用日期、工資歷史記錄和所有員工的當前審核。|要動態設定此選項,請使用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)調用中的 **「描述**」關鍵字。|  
+|獨佔|如果選擇了 **「獨佔」** 框,則資料庫將在獨佔模式下打開,並且一次只能由一個用戶訪問。 在獨佔模式下運行時,性能會增強。|要動態設定此選項,請使用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)調用中的**EXCLUSIVE**關鍵字。|  
+|頁面逾時|指定頁面(如果不使用)在刪除之前保留在緩衝區中的時間段(以十分之一秒表示)。 默認值為 600 秒(60 秒)。 此選項適用於使用 ODBC 驅動程式的所有資料來源。<br /><br /> 由於固有的延遲,頁面超時不能為 0。 即使頁面超時選項設置為低於該值,頁面超時也不能小於固有的延遲。|要動態設定此選項,請使用調用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)中的**PAGETIMEOUT**關鍵字。|  
+|唯讀|將資料庫指定為唯讀資料庫。|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的調用中的**READONLY**關鍵字。|  
+|選擇目錄|顯示一個對話框,您可以在其中選擇包含要存取的檔案的目錄。<br /><br /> 定義數據源目錄時,請指定最常用的檔案所在的目錄。 ODBC 驅動程式使用此目錄作為預設目錄。 如果經常使用其他檔,則將其複製到此目錄中。 或,您可以在 SELECT 語句中限定具有目錄名稱的檔名:<br /><br /> 從\*C 選擇:[MYDIR_EMP<br /><br /> 或者,您可以使用**SQLSetConnectOption**函數使用SQL_CURRENT_QUALIFIER選項來指定新的預設目錄。|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的調用中的**DEFAULTDIR**關鍵字。|  
+|顯示已移除的列|指定是否可以檢索或定位已標記為已刪除的行。 如果清除,則不顯示已刪除的行;如果清除,則不顯示已刪除的行。如果選中,則刪除的行將被視為與未刪除的行相同。 預設值為清除此核取方塊。|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的呼叫中的**DELETED**關鍵字。|

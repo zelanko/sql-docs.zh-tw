@@ -1,5 +1,5 @@
 ---
-title: ConnectionValidSharedMemory dbmslpcn .dll
+title: 連線有效共用記憶體 dbmslpcn.dll
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c64fe0020ca6c406cadd5b5b71ade1641919a81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1f3bb097965563afb458b4529676d1e9967e4899
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244204"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303878"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>dbmslpcn.dll 共用記憶體中的 ConnectionValidSharedMemory 函式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  函式會判斷是否已安裝和使用 SQL Server 的共用記憶體。  
+  該函數確定是否安裝 SQL Server 共用記憶體並處於活動狀態。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,15 +29,15 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
 ```  
   
 ## <a name="parameters"></a>參數  
- *szServerName*  
+ *szServer名稱*  
   
--   類型： **char\* **  
+-   型態:**\*字元**  
   
--   SQL server 的名稱。  
+-   SQL 伺服器的名稱。  
   
 ## <a name="return-value"></a>傳回值  
- 類型： **BOOL**  
+ 型態: **BOOL**  
   
- 如果無效，則傳回 0;否則會傳回非零值。  
+ 返回 0(如果無效);否則返回非零。  
   
   
