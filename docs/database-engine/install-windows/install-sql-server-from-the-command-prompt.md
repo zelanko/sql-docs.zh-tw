@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f1e6d89848da95ab71cc6153faa55b50fc7452b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288612"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925480"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -261,7 +261,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |Python/機器學習服務 (資料庫內)|/MPYCACHEDIRECTORY|保留供未來使用。 請使用 %TEMP% 來儲存 Python .CAB 檔案，以便在沒有網際網路連線的電腦上進行安裝。 |  
-|R/機器學習服務 (資料庫內)|/MRCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Server (獨立式) 中的 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)時。|  
+|R/機器學習服務 (資料庫內)|/MRCACHEDIRECTORY|使用此參數來指定 SQL Server 機器學習服務或 Machine Learning Server (獨立式) 中 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-component-install-without-internet-access)時。|  
 |Java/語言延伸模組| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **選擇性** | 從 SQL Server 2019 開始，會指定使用語言延伸模組來安裝 Java。 如果在未使用 /SQLJAVADIR 參數的情況下提供 /SQL_INST_JAVA，系統會假設您希望安裝由安裝媒體提供的 Zulu Open JRE。 <br /><br /> 提供 /SQLJAVADIR 的路徑，表示您希望使用已安裝的 JRE 或 JDK。 |
   
 ###### <a name="sample-syntax"></a>範例語法：  
@@ -843,10 +843,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBase |安裝 PolyBase 元件。|
 ||PolyBaseCore | 從 SQL Server 2019 開始，與 **PolyBase** 配對來安裝 Polybase 技術，讓您能夠使用標準 T-SQL 陳述式，跨 Oracle、Teradata、SQL Server 及其他關聯式和非關聯式資料進行真正的整合查詢。 |
 || PolyBaseJava | 從 SQL Server 2019 開始，與 **PolyBase** 配對來安裝 PolyBase Java 連接器，讓您能夠使用標準 T-SQL 陳述式，跨 HDFS 資料進行真正的整合查詢。
-||AdvancedAnalytics |安裝 [SQL Server 2017 機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)或 [SQL Server 2016 R Services (資料庫內)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)。|  
-||SQL_INST_MR |適用於 [SQL Server 2017 和更新版本的機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝 R Open 與專屬的 R 套件。|  
-||SQL_INST_MPY|適用於 [SQL Server 2017 和更新版本的機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝 Anaconda 和專屬的 Python 套件。|  
-||SQL_INST_JAVA |適用於 [SQL Server 2017 和更新版本的機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝延伸模組，以使用標準 T-SQL 陳述式來與 Java 整合。|  
+||AdvancedAnalytics |安裝 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)或 [SQL Server 2016 R Services (資料庫內)](https://docs.microsoft.com/sql/machine-learning/install/sql-r-services-windows-install)。|  
+||SQL_INST_MR |適用於 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝 R Open 與專屬的 R 套件。|  
+||SQL_INST_MPY|適用於 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝 Anaconda 和專屬的 Python 套件。|  
+||SQL_INST_JAVA |適用於 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝延伸模組，以使用標準 T-SQL 陳述式來與 Java 整合。|  
 |AS||安裝所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 元件。|  
 |RS||安裝所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件。 從 SQL Server 2017 開始移除。 |  
 |RS_SHP||安裝 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件。 從 SQL Server 2017 開始移除。|  
@@ -856,8 +856,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Master|包含適用於 Integration Services 擴增的擴增主機。| 
 ||IS_Worker|包含適用於 Integration Services 擴增的擴增背景工作角色。| 
 |MDS||安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|  
-|SQL_SHARED_MPY||安裝適用於 [SQL Server 2017 Machine Learning Server (獨立式)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install) 的 Python 套件 |  
-|SQL_SHARED_MR||安裝適用於 [SQL Server 2016 R Server (獨立式)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) 或 SQL Server 2017 Machine Learning Server (獨立式) 的 R 套件 |  
+|SQL_SHARED_MPY||安裝適用於 [SQL Server 2017 Machine Learning Server (獨立式)](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) 的 Python 套件 |  
+|SQL_SHARED_MR||安裝適用於 [SQL Server 2016 R Server (獨立式)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install?view=sql-server-2016) 或 [SQL Server Machine Learning Server (獨立式)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) 的 R 套件 |  
 |工具*||安裝用戶端工具和《SQL Server 線上叢書》元件。|  
 ||BC|安裝回溯相容性元件。|  
 ||Conn|安裝連接元件。|

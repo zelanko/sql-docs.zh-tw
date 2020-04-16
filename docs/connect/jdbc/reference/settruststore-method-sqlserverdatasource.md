@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3d229e9e9c4758f43a090c1481d751560d072da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 30af86d585602c730dfe49e1a5f6b557b065f6cc
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901914"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219153"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  如需詳細資訊，請參閱 Sun Microsystems 網站上的 SunX509 TrustManager 介面文件。  
   
- 如果 trustStore 屬性設定為字串或是空字串 ""，驅動程式將會使用該值來找出 trustStore 檔案，以便驗證伺服器 SSL 憑證。  
+ 如果 trustStore 屬性設定為字串或是空字串 ""，則驅動程式將會使用該值來找出 trustStore 檔案，以驗證伺服器 TLS/SSL 憑證。  
   
  trustStorePassword 屬性可以隨著 trustStore 屬性一起指定，而其值可用來開啟 trustStore 檔案。 如需詳細資訊，請參閱 [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)。  
   

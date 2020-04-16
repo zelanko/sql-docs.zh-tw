@@ -1,6 +1,6 @@
 ---
 title: int、bigint、smallint 和 tinyint (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: int、bigint、smallint 和 tinyint 資料類型的 Transact-SQL 參考。 這些資料類型用於表示整數資料。
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -28,12 +28,12 @@ ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c65b8673b40c648ef930cd08b46dfaa249af603
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077905"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517570"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e13bab7b3a5b97195a1fd57e30cd2f5bf514b315
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287872"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809704"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "79287872"
 > [!IMPORTANT]  
 > 由較新版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立的資料庫無法附加在舊版本中。 這可防止實際使用的資料庫搭配舊版的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]。 不過，這與中繼資料狀態相關，不會影響[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。   
   
-將資料庫附加至另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能會需要在其他伺服器執行個體上為資料庫重新建立部分或所有中繼資料，例如登入和作業。 如需詳細資訊，請參閱[管理在另一個伺服器執行個體上提供資料庫時所需的中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+將資料庫附加至另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能會需要在其他伺服器執行個體上為資料庫重新建立部分或所有中繼資料，例如登入和作業。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
 **若要卸離資料庫**  

@@ -1,6 +1,6 @@
 ---
 title: FORMAT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: FORMAT 函式的 Transact-SQL 參考。
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc64f97123a14d971a531b489eeddbec42f3931b
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155801"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517646"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 數值類型的 FORMAT
 
- 下列範例會從 **資料庫的**Sales.CurrencyRate[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表傳回 5 個資料列。 **EndOfDateRate** 資料行會以 **money** 類型，儲存在資料表中。 在此範例中，資料行會以未格式化的狀態傳回，然後藉由指定 .NET Number 格式、General 格式和 Currency 格式類型進行格式化。 如需有關這些數值格式和其他數值格式的詳細資訊，請參閱[標準數值格式字串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
+ 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 **Sales.CurrencyRate** 資料表傳回 5 個資料列。 **EndOfDateRate** 資料行會以 **money** 類型，儲存在資料表中。 在此範例中，資料行會以未格式化的狀態傳回，然後藉由指定 .NET Number 格式、General 格式和 Currency 格式類型進行格式化。 如需有關這些數值格式和其他數值格式的詳細資訊，請參閱[標準數值格式字串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

@@ -17,12 +17,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123604"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928168"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68123604"
 ## <a name="built-in-function-determinism"></a>內建函數決定性  
  您無法影響任何內建函數的決定論。 每個內建函數屬於具決定性或不具決定性，主要取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實作函數的方式。 例如，在查詢中指定 ORDER BY 子句不會變更該查詢所使用之函式的決定性。  
   
- 所有的字串內建函數都具有決定性。 如需這些函數的清單，請參閱[字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)。  
+ 所有的字串內建函式都具有決定性，除了 [FORMAT](../../t-sql/functions/format-transact-sql.md) 以外。 如需這些函數的清單，請參閱[字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)。  
   
  在下列內建函數類別目錄中，不屬於字串函數的內建函數一律會視為具有決定性。  
   

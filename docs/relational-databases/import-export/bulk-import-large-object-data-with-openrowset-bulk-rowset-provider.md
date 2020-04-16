@@ -1,5 +1,6 @@
 ---
 title: 使用 OPENROWSET 大量資料列集提供者大量匯入大型物件資料
+description: SQL Server OPENROWSET BULK 資料列集提供者可以大型物件資料的方式進行大量匯入。 支援類型：varbinary(max)、varchar(max) 和 nvarchar(max)。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +20,12 @@ ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 845b552762574aa6a75a7ad00a1ce93aabff35c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91dbe991241e9cf837fe325a76fd0e1ae3242d7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056042"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980500"
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider-sql-server"></a>使用 OPENROWSET 大量資料列集提供者大量匯入大型物件資料 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

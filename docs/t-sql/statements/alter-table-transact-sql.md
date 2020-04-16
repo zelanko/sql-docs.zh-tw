@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61329dcaeb7972382e9385b723f5be889470c3c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288302"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002846"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -245,6 +245,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 }
 ```
 
+> [!NOTE]
+> 如需相關資訊，請參閱：
+>
+> - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)
+> - [ALTER TABLE column_definition](alter-table-column-definition-transact-sql.md)
+> - [ALTER TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
+> - [ALTER TABLE index_option](alter-table-index-option-transact-sql.md)
+> - [ALTER TABLE table_constraints](alter-table-table-constraint-transact-sql.md)
+
 ## <a name="syntax-for-memory-optimized-tables"></a>記憶體最佳化資料表的語法
 
 ```
@@ -341,8 +350,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 ```
 
 ```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -374,8 +382,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
@@ -407,8 +419,21 @@ ALTER COLUMN
 - 資料類型為 **timestamp** 的資料行。
 - 資料表的 ROWGUIDCOL。
 - 計算資料行，或用於計算資料行。
-- 用於 CREATE STATISTICS 陳述式所產生的統計資料。 除非資料行是 **varchar**、**nvarchar** 或 **varbinary**資料類型，否則資料類型不會變更。 並且，新大小會等於或大於舊大小。 或者，如果資料行已從非 null 變為 null。 首先，利用 DROP STATISTICS 陳述式移除統計資料。
+- 用於 CREATE STATISTICS 陳述式所產生的統計資料。 使用者需要先執行 DROP STATISTICS 來卸除統計資料，ALTER COLUMN 才能成功。  執行此查詢，以取得使用者所建立所有統計資料及資料表的統計資料行。
 
+``` sql
+
+SELECT s.name AS statistics_name  
+      ,c.name AS column_name  
+      ,sc.stats_column_id  
+FROM sys.stats AS s  
+INNER JOIN sys.stats_columns AS sc   
+    ON s.object_id = sc.object_id AND s.stats_id = sc.stats_id  
+INNER JOIN sys.columns AS c   
+    ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
+WHERE s.object_id = OBJECT_ID('<table_name>'); 
+
+```
    > [!NOTE]
    > ALTER COLUMN 會自動卸除查詢最佳化工具自動產生的統計資料。
 
@@ -1058,11 +1083,11 @@ ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料
 
 |類別|代表性語法元素|
 |--------------|------------------------------|
-|[加入資料行和條件約束](#add)|ADD • 含索引選項的 PRIMARY KEY • 疏鬆資料行和資料行集 •|
+|[加入資料行和條件約束](#add)|ADD * 含索引選項的 PRIMARY KEY * 疏鬆資料行和資料行集 *|
 |[卸除資料行和條件約束](#Drop)|DROP|
-|[修改資料行定義](#alter_column)|變更資料類型 • 變更資料行大小 • 定序|
-|[修改資料表定義](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • 變更追蹤|
-|[停用和啟用條件約束與觸發程序](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
+|[修改資料行定義](#alter_column)|變更資料類型 * 變更資料行大小 * 定序|
+|[修改資料表定義](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * 變更追蹤|
+|[停用和啟用條件約束與觸發程序](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
 ### <a name="adding-columns-and-constraints"></a><a name="add"></a>加入資料行和條件約束

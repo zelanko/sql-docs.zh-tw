@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d323481aaf3e12da9786a3b02f21f47c3c98f7cf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924535"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219390"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -62,8 +62,8 @@ Server = [protocol:]server[,port]
 您可以使用 `isql` 測試連接，以確認您的驅動程式可運作，或者您可以使用下列命令：
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
-## <a name="using-secure-sockets-layer-ssl"></a>使用安全通訊端層 (SSL)  
-您可以使用安全通訊端層 (SSL) 加密與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的連線。 SSL 會保護網路上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼。 SSL 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  
+## <a name="using-tlsssl"></a>使用 TLS/SSL  
+您可使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 來加密對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的連線。 TLS 會保護網路上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼。 TLS 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  
 
 啟用加密可提高安全性，但會犧牲效能。
 
@@ -74,7 +74,7 @@ Server = [protocol:]server[,port]
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|  
-|**Encrypt=yes**|會檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 憑證內主體一般名稱 (CN) 或主體別名 (SAN) 中的名稱 (或 IP 位址) 應完全符合指定在連接字串中的伺服器名稱 (或 IP 位址)。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。|  
+|**Encrypt=yes**|會檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TLS/SSL 憑證內主體一般名稱 (CN) 或主體別名 (SAN) 中的名稱 (或 IP 位址) 應完全符合指定在連接字串中的伺服器名稱 (或 IP 位址)。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。|  
 
 根據預設，加密的連線一律會驗證伺服器的憑證。 不過，如果您連接到具有自我簽署憑證的伺服器，也請新增 `TrustServerCertificate` 選項，以略過檢查憑證是否符合受信任憑證授權單位的清單：  
 
@@ -82,7 +82,7 @@ Server = [protocol:]server[,port]
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
-SSL 會使用 OpenSSL 程式庫。 下表顯示 OpenSSL 的最低支援版本，以及每個平台的預設憑證信任存放區位置：
+TLS 會使用 OpenSSL 程式庫。 下表顯示 OpenSSL 的最低支援版本，以及每個平台的預設憑證信任存放區位置：
 
 |平台|最低 OpenSSL 版本|預設憑證信任存放區位置|  
 |------------|---------------------------|--------------------------------------------|

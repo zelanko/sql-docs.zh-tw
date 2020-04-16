@@ -1,5 +1,6 @@
 ---
 title: 建立格式檔案 (SQL Server) | Microsoft 文件
+description: 當大量匯入或匯出 SQL Server 資料表時，格式檔案可供寫入資料檔案，幾乎不需要編輯或讀取其他程式的資料檔案。
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035824"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980480"
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -151,7 +152,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 ```  
   
- 如果您嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ..." 或 "`bcp in -c -C65001 -f format_file``BULK INSERT`/ ... `OPENROWSET` ..."，將資料匯入至 `FORMATFILE='format_file' CODEPAGE=65001`，則定序/字碼頁的相關資訊將會優先於 65001 選項。  
+ 如果您嘗試使用 `bcp in -c -C65001 -f format_file` ..." 或 "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..."，將資料匯入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則定序/字碼頁的相關資訊將會優先於 65001 選項。  
 因此，如果您產生格式檔案，則必須從產生的格式檔案手動刪除定序資訊，然後才開始將資料匯回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 下列範例為不具定序資訊的格式檔案。  
   
@@ -195,7 +196,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式檔案。|  
 |**-c**|指定字元資料。|  
-|**-t** `,`|指定逗號 ( **,** ) 作為欄位結束字元。<br /><br /> 注意：如果資料檔案使用預設欄位結束字元 (`\t`)，則不需要 **-t** 參數。|  
+|**-t** `,`|指定逗號 ( **,** ) 作為欄位結束字元。<br /><br /> 注意:如果資料檔使用預設欄位結束字元 (`\t`)，則不需要 **-t** 參數。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  

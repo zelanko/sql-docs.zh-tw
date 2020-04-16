@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286672"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550215"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 
@@ -47,7 +47,7 @@ ms.locfileid: "79286672"
 
 -   **縮減記錄：** 將資料直接載入壓縮資料列群組時，會導致記錄大小大幅減少。 例如，如果將資料壓縮 10 倍，則對應的交易記錄會大約縮小 10 倍，而不需要 TABLOCK 或大量記錄/簡單復原模式。 進入差異資料列群組的所有資料則會完整記錄。 這包括任何少於 102,400 個資料列的批次大小。  最佳做法是使用 batchsize >= 102400。 因為不需要 TABLOCK，所以您可以平行載入資料。 
 
--   **最低限度記錄：** 如果您遵循[最低限度記錄](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的必要條件，則可以進一步縮減記錄。 不過，與將資料載入資料列存放區不同的是，TABLOCK 會導致資料表的 X 鎖定，而不是 BU (大量更新) 鎖定，因此無法執行平行資料載入。 如需鎖定的詳細資訊，請參閱 [鎖定與資料列版本設定[(../sql-server-transaction-locking-and-row-versioning-guide.md)。
+-   **最低限度記錄：** 如果您遵循[最低限度記錄](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的必要條件，則可以進一步縮減記錄。 不過，與將資料載入資料列存放區不同的是，TABLOCK 會導致資料表的 X 鎖定，而不是 BU (大量更新) 鎖定，因此無法執行平行資料載入。 如需鎖定的詳細資訊，請參閱[鎖定和資料列版本設定](../sql-server-transaction-locking-and-row-versioning-guide.md)。
 
 -   **鎖定最佳化：** 將資料載入壓縮資料列群組時，會自動取得資料列群組的 X 鎖定。 不過，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **記錄最佳化︰** 將資料載入壓縮資料列群組時會縮減記錄。   
 -   **鎖定最佳化：** 載入壓縮資料列群組時，會取得資料列群組的 X 鎖定。 然而，有了差異資料列群組時，會取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定 PAGE/EXTENT 的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
- 如果您有一或多個非叢集索引，對於索引本身而言，沒有任何鎖定或記錄最佳化，但仍然會有如上所述的叢集資料行存放區索引最佳化。  
+ 如果您有一或多個非叢集索引，對於索引本身而言，不會有任何鎖定或記錄最佳化，但仍然會有如上所述的叢集資料行存放區索引最佳化。  
   
 ## <a name="what-is-trickle-insert"></a>什麼是緩慢插入？
 

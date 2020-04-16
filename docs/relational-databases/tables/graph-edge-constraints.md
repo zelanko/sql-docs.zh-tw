@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70873878"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625556"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
 
@@ -39,7 +39,7 @@ ms.locfileid: "70873878"
 
 每個邊緣條件約束都是由一或多個邊緣條件約束子句所組成。 邊緣條件約束子句是由一對 FROM 與指定邊緣可連線的 TO 節點所組成。
 
-假設您的圖形中有 `Product` 和 `Customer` 節點，而且您使用 `Bought` 邊緣來連線這些節點。 邊緣條件約束子句指定 FROM 和 TO 節點配對以及邊緣方向。 在此情況下，邊緣條件約束子句會是 `Customer` TO `Product`。 亦即，允許插入從 `Bought` 流向 `Customer` 的 `Product`。 嘗試插入從 `Product` 流向 `Customer` 的邊緣失敗。
+假設您的圖形中有 `Product` 和 `Customer` 節點，而且您使用 `Bought` 邊緣來連線這些節點。 邊緣條件約束子句指定 FROM 和 TO 節點配對以及邊緣方向。 在此情況下，邊緣條件約束子句會是 `Customer` TO `Product`。 亦即，允許插入從 `Customer` 流向 `Product` 的 `Bought`。 嘗試插入從 `Product` 流向 `Customer` 的邊緣失敗。
 
 - 邊緣條件約束子句包含強制執行邊緣條件約束的一對 FROM 與 TO 節點資料表。
 - 使用者可以為每個邊緣條件約束指定將套用為分離的多個邊緣條件約束子句。
@@ -50,7 +50,7 @@ ms.locfileid: "70873878"
 建立邊緣條件約束並不會自動在邊緣資料表的 `$from_id` 和 `$to_id` 資料行上建立對應的索引。 如果您有點查閱查詢或 OLTP 工作負載，則建議在 `$from_id` 和 `$to_id` 配對上手動建立索引。
 
 ### <a name="on-delete-referential-actions-on-edge-constraints"></a>邊緣條件約束的 ON DELETE 參考動作
-邊緣條件約束串聯式動作可讓使用者定義當使用者刪除指定邊緣所連接節點時，資料庫引擎將採取的動作。 可以定義下列參考動作：  
+邊緣條件約束串聯式動作可讓使用者定義當使用者刪除指定邊緣所連接的節點時，資料庫引擎將採取的動作。 可以定義下列參考動作：  
 *NO ACTION*   
 當您嘗試刪除具有連接邊緣的節點時，資料庫引擎會引發錯誤。  
 
@@ -59,7 +59,7 @@ ms.locfileid: "70873878"
 
 ## <a name="working-with-edge-constraints"></a>使用邊緣條件約束
 
-您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中定義邊緣條件約束。 邊緣條件約束只能定義在圖形邊緣資料表上。 若要建立、刪除或修改邊緣條件約束，您必須擁有資料表的 **ALTER** 權限。
+您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中定義邊緣條件約束。 邊緣條件約束只能定義在圖形邊緣資料表上。 若要建立、刪除或修改邊緣條件約束，您必須擁有資料表的 **ALTER** 權限。
 
 ### <a name="create-edge-constraints"></a>建立邊緣條件約束
 

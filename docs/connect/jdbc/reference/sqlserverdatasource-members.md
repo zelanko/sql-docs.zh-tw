@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fd4c6c324c8f25ab9b3630aaf565671261115c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26d778c5d75686a3de61064037fd0ade492f998b
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927631"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219277"
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "80927631"
   
 |名稱|描述|  
 |----------|-----------------|  
-|[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|傳回 **applicationIntent** 連線屬性的值。|  
+|[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|傳回 **applicationIntent** 連接屬性的值。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|傳回應用程式名稱。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|嘗試與這個 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 物件所代表的資料來源建立連線。|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|傳回資料庫名稱。|  
-|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|傳回 **disableStatementPooling** 連接屬性的值。 此設定能控制陳述式共用是否已針對此連線啟用。|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|傳回 **disableStatementPooling** 連接屬性的值。 此設定控制陳述式共用是否已針對此連線啟用。|  
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|傳回 **enablePrepareOnFirstPreparedStatementCall** 連接屬性的值。|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|傳回 **Boolean** 值，這個值會指出是否啟用 encrypt 屬性。|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|傳回資料來源的描述。|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|傳回用於資料庫鏡像組態的容錯移轉伺服器名稱。|  
-|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|傳回用於驗證 SQL Server 安全通訊端層 (SSL) 憑證的主機名稱。|  
+|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|傳回用於驗證 SQL Server 傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 憑證的主機名稱。|  
 |[getInstanceName](../../../connect/jdbc/reference/getinstancename-method-sqlserverdatasource.md)|傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |[getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md)|傳回 **boolean** 值，這個值會指出是否啟用 lastUpdateCount 屬性。|  
 |[getLockTimeout](../../../connect/jdbc/reference/getlocktimeout-method-sqlserverdatasource.md)|傳回 **int** 值，這個值指出資料庫在報告鎖定逾時之前所要等候的毫秒數。|  
@@ -62,8 +62,8 @@ ms.locfileid: "80927631"
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|傳回 **Boolean** 值，這個值指出是否啟用以 UNICODE 格式傳送字串參數到伺服器。|  
 |[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|傳回 **SendTimeAsDatetime** 連接屬性的設定。|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|傳回執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的電腦名稱。|  
-|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|傳回 **serverPreparedStatementDiscardThreshold** 連線屬性的值。|  
-|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|傳回此連線之備妥陳述式快取的大小。|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|傳回 **serverPreparedStatementDiscardThreshold** 連接屬性的值。|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|傳回此連線備妥陳述式快取的大小。|  
 |[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|傳回 TrustManagerClass 連接屬性的字串值。|  
 |[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|傳回 TrustManagerConstructorArg 連接屬性的字串值。|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|傳回 **Boolean** 值，這個值會指出是否啟用 trustServerCertificate 屬性。|  
@@ -83,7 +83,7 @@ ms.locfileid: "80927631"
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|指定 **enablePrepareOnFirstPreparedStatementCall** 連接屬性的新值。|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|設定 **Boolean** 值，這個值會指出是否啟用 encrypt 屬性。|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|設定用於資料庫鏡像組態的容錯移轉伺服器名稱。|  
-|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|設定用於驗證 SQL Server 安全通訊端層 (SSL) 憑證的主機名稱。|  
+|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|設定要用於驗證 SQL Server 傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 憑證的主機名稱。|  
 |[setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md)|設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|設定 **Boolean** 值，這個值會指出是否啟用 integratedSecurity 屬性。|  
 |[setLastUpdateCount](../../../connect/jdbc/reference/setlastupdatecount-method-sqlserverdatasource.md)|設定 **Boolean** 值，這個值會指出是否啟用 lastUpdateCount 屬性。|  

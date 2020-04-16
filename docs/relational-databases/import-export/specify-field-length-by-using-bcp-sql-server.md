@@ -1,5 +1,6 @@
 ---
 title: 使用 BCP 指定欄位長度 (SQL Server) | Microsoft Docs
+description: 在 SQL Server 中，如有必要，bcp 會提示輸入欄位長度、預設欄位長度，以及欄位長度對包含 char 資料的檔案中資料儲存有何影響。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 96fd9d883a115de64f0b1b8eb3879c941bc37b8a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062528"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980520"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

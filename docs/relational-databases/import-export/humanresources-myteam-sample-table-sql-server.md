@@ -1,5 +1,6 @@
 ---
 title: HumanResources.myTeam 範例資料表 (SQL Server) | Microsoft Docs
+description: 若要在 SQL Server 中執行匯入與匯出大量資料的程式碼範例，則必須在 HumanResources 結構描述中建立名為 myTeam 的測試資料表。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73ec7e3d639d49fd12a0c0b6708278702a423f0e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035680"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980446"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 範例資料表 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

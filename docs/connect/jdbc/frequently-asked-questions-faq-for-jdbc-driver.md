@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924668"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219147"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驅動程式常見問題集 (FAQ)
 
@@ -113,8 +113,8 @@ JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合�
 **我可以使用此驅動程式從 Linux 電腦存取 Microsoft SQL Server 嗎？**  
 可以！ 您可以使用此驅動程式從 Linux、 Unix 及其他非 Windows 平台存取 SQL Server。 如需詳細資料，請參閱 [Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
 
-**此驅動程式支援安全通訊端層 (SSL) 加密嗎？**  
-此驅動程式自 1.2 版起，即支援安全通訊端層 (SSL) 加密。 如需詳細資訊，請參閱 [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。
+**驅動程式是否支援 TLS 加密？**  
+從 1.2 版開始，驅動程式支援傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 加密。 如需詳細資訊，請參閱[使用加密](../../connect/jdbc/using-ssl-encryption.md)。
 
 **Microsoft JDBC Driver for SQL Server 支援哪些驗證類型？**  
 下表列出可用的驗證選項。 只有 4.0 版以後的驅動程式，才能使用純 Java Kerberos 驗證。

@@ -3,7 +3,7 @@ title: 已淘汰的資料庫引擎功能 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: 了解 SQL Server 2017 (14.x) 中仍然可以使用，但由於已淘汰，因此不應在新應用程式中使用的資料庫引擎功能。
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402598"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550167"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-本主題描述 SQL Server 2017 (14.x) 中仍然可用但已淘汰的 SQL Server 資料庫引擎功能。 您不應該在新的應用程式中使用已淘汰功能。  
-
-當功能標示為已淘汰時，即表示：
+  本主題描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]功能。 已被取代的功能不應在新應用程式中使用。  
+  
+當功能標示為已淘汰時，即表示：\
 
 - 功能僅限維護模式。 不會進行任何新的變更，包括與新功能互通的相關變更。
+- 為了讓升級更容易，我們盡量不從未來版本中移除已淘汰的功能。 不過，在極少數的情況下，如果該功能限制未來創新，我們可能會選擇從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 永久移除這些功能。
+- 若要進行新的開發工作，不建議使用已淘汰的功能。      
 
-- 為了讓升級更容易，我們盡量不從未來版本中移除已淘汰的功能。 不過，在極少數的情況下，如果該功能限制未來創新，則我們可能會選擇從 SQL Server 永久移除該功能。
+您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object 效能計數器和追蹤事件來監視已被取代之功能的使用。 如需詳細資訊，請參閱 [使用 SQL Server 物件](../relational-databases/performance-monitor/use-sql-server-objects.md)。  
 
-- 若要進行新的開發工作，不建議使用已淘汰的功能。
-
-您可使用 SQL Server Deprecated Features Object 效能計數器和追蹤事件來監視已淘汰功能的使用。 如需詳細資訊，請參閱 [使用 SQL Server 物件](../relational-databases/performance-monitor/use-sql-server-objects.md)。
-
-您也可以透過執行下列陳述式來使用這些計數器的值：
+您也可以透過執行下列陳述式來使用這些計數器的值：  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 已被取代的功能 | 取代 | 功能名稱 | 功能識別碼 |
 |--------------------|-------------|--------------|------------|
 | 使用 RC4 或 RC4_128 的加密已被取代，並預計在下一版移除。 不會淘汰解密 RC4 和 RC4_128 的功能。 | 請使用其他加密演算法，例如 AES。 | 已被取代的加密演算法 | 253 |
-
-### <a name="hash-algorithms"></a>雜湊演算法
-
-| 已被取代的功能 | 取代 | 功能名稱 | 功能識別碼 |
-|--------------------|-------------|--------------|------------|
 | 使用 MD2、MD4、MD5、SHA 和 SHA1 已淘汰。 | 請改用 SHA2_256 或 SHA2_512。 較舊的演算法會繼續運作，但會引發淘汰事件。 |已被取代的雜湊演算法 | None |
 
 ### <a name="remote-servers"></a>遠端伺服器
 
 | 已被取代的功能 | 取代 | 功能名稱 | 功能識別碼 |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|使用連結的伺服器取代遠端伺服器。 sp_addserver 只能搭配本機選項使用。 | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|使用連結的伺服器取代遠端伺服器。 sp_addserver 只能搭配本機選項使用。 | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | 使用連結的伺服器取代遠端伺服器。 | None | None |
 | SET REMOTE_PROC_TRANSACTIONS|使用連結的伺服器取代遠端伺服器。 | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>Set 選項
+### <a name="transact-sql"></a>Transact-SQL
 
 | 已被取代的功能 | 取代 | 功能名稱 | 功能識別碼 |
 |--------------------|-------------|--------------|------------|
 | 用於**SET ROWCOUNT** 、 **INSERT**, **UPDATE**陳述式的 **DELETE** | TOP 關鍵字 | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>資料表提示
-
-| 已被取代的功能 | 取代 | 功能名稱 | 功能識別碼 |
-|--------------------|-------------|--------------|------------|
 | 沒有括號的 HOLDLOCK 資料表提示。 | 請使用有括號的 HOLDLOCK。 | 沒有括號的 HOLDLOCK 資料表提示。 | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本中已淘汰的功能
@@ -131,12 +119,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Hindi <br /><br /> 馬其頓文 | 這些定序存在於 SQL Server 2005 (9.x) 和更高版本，但無法透過 fn_helpcollations 顯示出來。 請改用 Macedonian_FYROM_90 和 Indic_General_90。|Hindi <br /><br /> 馬其頓文 |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>組態
-
-| 已被取代的功能 | 取代 | 功能名稱 |
-|--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF 和 ANSI_NULLS OFF 資料庫選項<br /><br />SET ANSI_PADDING OFF 和 ANSI_PADDING OFF 資料庫選項<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF 和 CONCAT_NULL_YIELDS_NULL OFF 資料庫選項<br /><br />SET OFFSETS | 無。 <br /><br /> ANSI_NULLS、ANSI_PADDING 和 CONCAT_NULLS_YIELDS_NULL 一律會設定為 ON。 SET OFFSETS 則無法使用。 | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>資料類型
 
 | 已被取代的功能 | 取代 | 功能名稱 |
@@ -152,6 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 已被取代的功能 | 取代 | 功能名稱 |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|具有 FOR ATTACH 選項的 CREATE DATABASE 陳述式。 當一個或多個記錄檔有新位置時，若要重建多個記錄檔，請使用 FOR ATTACH_REBUILD_LOG 選項。 | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | ALTER DATABASE 中的 MODIFY NAME | sp_renamedb |
 
 ### <a name="database-objects"></a>資料庫物件
 
@@ -161,7 +146,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | CREATE TABLE 和 ALTER TABLE 中的 CHECK 關鍵字 | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | 請使用 ALTER USER。 | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities 和 sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | ALTER DATABASE 中的 MODIFY NAME | sp_renamedb |
 | sp_getbindtoken | 使用 MARS 或分散式交易。 | sp_getbindtoken |
 
 ### <a name="database-options"></a>資料庫選項
@@ -201,12 +185,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | 請改用 CLR 整合。 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|使用 CREATE LOGIN<br /><br /> 使用 SERVERPROPERTY 的 DROP LOGIN IsIntegratedSecurityOnly 引數 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig |
 
-### <a name="function"></a>函式
-
-| 已被取代的功能 | 取代 | 功能名稱 |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>高可用性
 
 | 已被取代的功能 | 取代 | 功能名稱 |
@@ -235,12 +213,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | 為連結的伺服器指定 SQLOLEDB 提供者。 | SQL Server Native Client (SQLNCLI) | 連結的伺服器適用的 SQLOLEDDB |
 
-### <a name="locking"></a>鎖定
-
-| 已被取代的功能 | 取代 | 功能名稱 |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>中繼資料
 
 | 已被取代的功能 | 取代 | 功能名稱 |
@@ -258,13 +230,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 已被取代的功能 | 取代 | 功能名稱 |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL for C|雖然資料庫引擎仍支援使用 DB-Library 和內嵌式 SQL API 的現有應用程式連線，但不包含要在使用這些 API 的應用程式上執行程式設計工作所需檔案或文件。 SQL Server 資料庫引擎未來版本將卸除對 DB-Library 或內嵌式 SQL 應用程式連線的支援。 請勿使用 DB-Library 或內嵌式 SQL 來開發新的應用程式。 在修改現有的應用程式時，請移除對 DB-Library 或內嵌式 SQL 的相依性。 如果不想要使用這些 API，請使用 SQLClient 命名空間或 API (例如 ODBC)。 SQL Server 2019 (15.x) 不包含執行這些應用程式所需的 DB-Library DLL。 若要執行 DB-Library 或內嵌式 SQL 應用程式，則必須可從 SQL Server 6.5 版、SQL Server 7.0 或 SQL Server 2000 (8.x) 使用 DB-Library DLL。 | None |
-
-### <a name="removable-databases"></a>可移式資料庫
-
-| 已被取代的功能 | 取代 | 功能名稱 |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### <a name="security"></a>安全性
 
@@ -288,12 +253,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | PERMISSIONS 內建函數 | 請改為查詢 sys.fn_my_permissions。 | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | RC4 和 DESX 加密演算法|請使用其他演算法，例如 AES。 | DESX 演算法 |
-
-### <a name="set-options"></a>Set 選項
-
-| 已被取代的功能 | 取代 | 功能名稱 |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 和 [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。 | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>伺服器組態選項
 
@@ -319,11 +278,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | SQL Server Management Studio 中的 [方案總管] 整合 | | None |
 
-### <a name="system-stored-procedures"></a>系統預存程序
+### <a name="system-stored-procedures-and-functions"></a>系統預存程序和函式
 
 | 已被取代的功能 | 取代 | 功能名稱 |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | 無。 SQL Server 2019 (15.x) 預設可支援增加的分割區。 | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>系統資料表
 
@@ -338,12 +300,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[擴充事件](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>系統函式
-
-| 已被取代的功能 | 取代 | 功能名稱 |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>系統檢視表
 
 | 已被取代的功能 | 取代 | 功能名稱 |
@@ -357,14 +313,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 使用 Vardecimal 儲存格式。 | Vardecimal 儲存格式已被取代。 SQL Server 2019 (15.x) 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。 | Vardecimal 儲存格式 |
 | 使用 sp_db_vardecimal_storage_format 程序。|Vardecimal 儲存格式已被取代。 SQL Server 2019 (15.x) 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。 | sp_db_vardecimal_storage_format |
 | 使用 sp_estimated_rowsize_reduction_for_vardecimal 程序。|請改用資料壓縮和 sp_estimate_data_compression_savings 程序。 |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>資料表提示
-
-| 已被取代的功能 | 取代 | 功能名稱 |
-|--------------------|-------------|--------------|
-| 在 UPDATE 或 DELETE 陳述式的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。 | 請從 FROM 子句中移除 NOLOCK 或 READUNCOMMITTED 資料表提示。 | UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED |
-| 指定資料表提示，而不使用 WITH 關鍵字。|使用 WITH。|沒有 WITH 的資料表提示 |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>文字指標
 
@@ -386,13 +334,18 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | GROUP BY ALL|搭配 UNION 或衍生資料表使用自訂的依案例方案。 | GROUP BY ALL |
 | 當做 DML 陳述式中之資料行名稱的 ROWGUIDCOL。|使用 $rowguid。|ROWGUIDCOL |
 | 當做 DML 陳述式中之資料行名稱的 IDENTITYCOL。|使用 $identity。|IDENTITYCOL |
-| 使用 # 和 ## 當做暫存資料表和暫存預存程序名稱。|請至少使用一個其他字元。|做為暫存資料表和預存程序名稱的 '#' 和 '##'。|185|  
-| 使用 \@、\@\@ 或 \@\@ 作為 Transact-SQL 識別碼。|請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。|'\@' 和以 '\@\@' 開頭的名稱作為 Transact-SQL 識別碼 |
+| 使用 # 和 ## 當做暫存資料表和暫存預存程序名稱。 | 請至少使用一個其他字元。|做為暫存資料表和預存程序名稱的 '#' 和 '##'。
+| 使用 \@、\@\@ 或 \@\@ 作為 Transact-SQL 識別碼。 | 請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。 | '\@' 和以 '\@\@' 開頭的名稱作為 Transact-SQL 識別碼 |
 | 使用 DEFAULT 關鍵字當做預設值。|請勿使用 DEFAULT 字當做預設值。 | 當做預設值的 DEFAULT 關鍵字 |
 | 使用空格當做資料表提示之間的分隔符號。|使用逗號來分隔資料表提示。 | 沒有逗號的多個資料表提示 |
-| 在 90 相容性模式中，彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (\*) | 請使用 COUNT_BIG (\*)。 | 沒有 COUNT_BIG(\*) 的索引檢視表 SELECT 清單|2|  
+| 在 90 相容性模式中，彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (\*) | 請使用 COUNT_BIG (\*)。 | 沒有 COUNT_BIG(\*) 的索引檢視表 SELECT 清單 |
 | 透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程。|無。|間接 TVF 提示 |
-| ALTER DATABASE 語法：<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| ALTER DATABASE 語法：<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| SET ANSI_NULLS OFF 和 ANSI_NULLS OFF 資料庫選項<br /><br />SET ANSI_PADDING OFF 和 ANSI_PADDING OFF 資料庫選項<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF 和 CONCAT_NULL_YIELDS_NULL OFF 資料庫選項<br /><br />SET OFFSETS | 無。 <br /><br /> ANSI_NULLS、ANSI_PADDING 和 CONCAT_NULLS_YIELDS_NULL 一律會設定為 ON。 SET OFFSETS 則無法使用。 | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 和 [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。 | SET FMTONLY |
+| 在 UPDATE 或 DELETE 陳述式的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。 | 請從 FROM 子句中移除 NOLOCK 或 READUNCOMMITTED 資料表提示。 | UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED |
+| 指定資料表提示，而不使用 WITH 關鍵字。 | 使用 WITH。 | 沒有 WITH 的資料表提示 |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>工具
 
@@ -415,7 +368,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 > [!NOTE]
 > **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)** 。 如果開發人員已配置 **varbinary(50)** ，則未來版本的 Cookie 傳回大小如有增加，應用程式可能需要變更。 雖然這不是取代問題，但是由於應用程式調整很類似，因此在本主題中提及。 如需詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [SQL Server 2016 中已停止的 Database Engine 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>另請參閱
-
- [SQL Server 2016 中已停止的 Database Engine 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)

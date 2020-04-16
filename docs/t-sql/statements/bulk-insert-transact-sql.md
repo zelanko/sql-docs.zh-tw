@@ -1,6 +1,6 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: BULK INSERT 陳述式的 Transact-SQL 參考。
 ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c84ed8db76a2f6841b70910fd94fb513fc2ce1da
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448404"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517463"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 

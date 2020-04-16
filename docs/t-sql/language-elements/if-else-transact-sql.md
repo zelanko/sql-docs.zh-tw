@@ -1,6 +1,6 @@
 ---
 title: IF...ELSE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: IF-ELSE 陳述式的 Transact-SQL 語言參考，用於提供 Transact-SQL 陳述式中的控制流程。
 ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd1a2617af761a900dc6fa7085f8343d0b4fa505
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71823607"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517653"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

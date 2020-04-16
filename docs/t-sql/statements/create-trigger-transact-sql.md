@@ -1,10 +1,9 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CREATE TRIGGER 陳述式的 Transact-SQL 參考用於建立 DML、DDL 或登入觸發程序。
 ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: mathoma
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +27,13 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: mathoma
+ms.openlocfilehash: 93f97568bbdc2d640e947311acd90152a9ddf4ca
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287682"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517467"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>引數
 OR ALTER  
-**適用對象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)。 
+**適用於**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)。 
   
 只有在觸發程序已存在時，才能有條件地更改它。 
   
@@ -231,7 +231,7 @@ WITH APPEND
 在啟動之後會引發 DDL 觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件名稱。 有效的 DDL 觸發程序事件會列在 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中。  
   
 *event_group*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件的預先定義群組名稱。 在啟動屬於 [!INCLUDE[tsql](../../includes/tsql-md.md)]event_group*的任何* 語言事件之後，便會引發 DDL 觸發程序。 有效的 DDL 觸發程序事件群組會列在 [DDL 事件群組](../../relational-databases/triggers/ddl-event-groups.md)中。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件的預先定義群組名稱。 在啟動屬於 *event_group* 的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件之後，便會引發 DDL 觸發程序。 有效的 DDL 觸發程序事件群組會列在 [DDL 事件群組](../../relational-databases/triggers/ddl-event-groups.md)中。  
   
 在完成執行 CREATE TRIGGER 之後，您也可以將其所涵蓋的事件類型新增至 sys.trigger_events 目錄檢視，以將 *event_group* 作為巨集。  
   
@@ -260,7 +260,7 @@ DDL 和登入觸發程序會使用 [EVENTDATA &#40;Transact-SQL&#41;](../../t-sq
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許使用資料表或檢視表的 INSTEAD OF 觸發程序來更新 **text**、**ntext** 或 **image** 資料行。  
   
 > [!IMPORTANT]
->   的未來版本將會移除 **ntext**、**text** 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)]image[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 兩個觸發程序都支援插入和刪除資料表中的 **varchar(MAX)** 、**nvarchar(MAX)** 和 **varbinary(MAX)** 資料。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本將會移除 **ntext**、**text** 及 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 兩個觸發程序都支援插入和刪除資料表中的 **varchar(MAX)** 、**nvarchar(MAX)** 和 **varbinary(MAX)** 資料。  
   
 針對經記憶體最佳化資料表上的觸發程序，唯一允許的最上層 *sql_statement* 是 ATOMIC 區塊。 ATOMIC 區塊內允許使用哪些 T-SQL 則受限於原生程序內允許使用的 T-SQL 而定。  
   
@@ -269,7 +269,7 @@ DDL 和登入觸發程序會使用 [EVENTDATA &#40;Transact-SQL&#41;](../../t-sq
 對於 CLR 觸發程序，指定繫結觸發程序的組件方法。 此方法不可使用任何引數，且必須傳回空值。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須以類別的形式存在於可以顯示的組件中。 如果該類別的名稱符合命名空間規定，利用 '.' 來分隔命名空間的各個部分，您就必須用 [ ] 或 " " 分隔字元來分隔類別名稱。 這個類別不能是巢狀類別。  
   
 > [!NOTE]  
->  依預設，會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 CLR 程式碼的能力。 您可以建立、修改及卸除參考受控碼模組的資料庫物件，但除非您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[ 來啟用 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled 選項[；否則，這些參考就不會在 ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 執行個體中執行。  
+>  依預設，會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 CLR 程式碼的能力。 您可以建立、修改及卸除參考受控碼模組的資料庫物件，但除非您使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)；否則，這些參考就不會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中執行。  
   
 ## <a name="remarks-for-dml-triggers"></a>DML 觸發程序的備註  
 DML 觸發程序常會用於執行商務規則與資料完整性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 ALTER TABLE 及 CREATE TABLE 陳述式提供宣告式參考完整性 (DRI)。 不過，DRI 並不提供跨資料庫的參考完整性。 參考完整性是指資料表主索引鍵和外部索引鍵之間的關聯性規則。 若要強制執行參考完整性，請在 ALTER TABLE 和 CREATE TABLE 中，使用 PRIMARY KEY 和 FOREIGN KEY 條件約束。 如果觸發程序資料表有條件約束，便會在 INSTEAD OF 觸發程序執行之後、AFTER 觸發程序執行之前，檢查這些條件約束。 如果違反條件約束，便會回復 INSTEAD OF 觸發程序動作，而不會引發 AFTER 觸發程序。  
@@ -414,7 +414,7 @@ SQL Server 的未來版本將移除從觸發程序傳回結果的功能。 如�
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. 使用包含提示訊息的 DML 觸發程序  
-當任何人嘗試在 `Customer` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中新增或變更資料時，以下 DML 觸發程序會向用戶端列印一則訊息。  
+當任何人嘗試在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Customer` 資料表中新增或變更資料時，以下 DML 觸發程序會向用戶端列印一則訊息。  
   
 ```sql  
 CREATE TRIGGER reminder1  
@@ -528,7 +528,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. 使用登入觸發程序  
-在以下登入觸發程序範例中，如果已有三個使用者工作階段以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_test*登入執行，則嘗試以該登入的成員身分登入* 時會遭拒。  
+在以下登入觸發程序範例中，如果已有三個使用者工作階段以 *login_test* 登入執行，則嘗試以該登入的成員身分登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時會遭拒。  
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
@@ -555,7 +555,7 @@ END;
 ```  
   
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. 檢視引發觸發程序的事件  
-以下範例會查詢 `sys.triggers` 及 `sys.trigger_events` 目錄檢視，判別引發 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序的 `safety` 語言事件。 觸發程序 `safety` 是在上面的範例 'D' 中所建立。  
+以下範例會查詢 `sys.triggers` 及 `sys.trigger_events` 目錄檢視，判別引發 `safety` 觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件。 觸發程序 `safety` 是在上面的範例 'D' 中所建立。  
   
 ```sql  
 SELECT TE.*  

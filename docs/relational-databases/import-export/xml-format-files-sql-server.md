@@ -1,5 +1,6 @@
 ---
 title: XML 格式檔案 (SQL Server) | Microsoft Docs
+description: SQL Server 2019 提供 XML 結構描述，其定義可撰寫 XML 格式檔案的語法，以用於將資料大量匯入 SQL Server 資料表。
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -15,18 +16,18 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091427"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980370"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 XML 結構描述，以定義撰寫 *「XML 格式檔案」* (XML format file) 用於將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。 XML 格式檔案必須遵守以 XML 結構描述定義語言 (XSDL) 定義的這個結構描述。 只有在同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，才能支援 XML 格式檔案。  
   
- 您可以搭配使用 XML 格式檔案與 **bcp** 命令、BULK INSERT 陳述式或 INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式。 **bcp** 命令可讓您自動產生資料表的 XML 格式檔案；如需詳細資訊，請參閱＜ [bcp Utility](../../tools/bcp-utility.md)＞。  
+ 您可以搭配使用 XML 格式檔案與 **bcp**命令、BULK INSERT 陳述式或 INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式。 **bcp** 命令可讓您自動產生資料表的 XML 格式檔案；如需詳細資訊，請參閱＜ [bcp Utility](../../tools/bcp-utility.md)＞。  
   
 > [!NOTE]  
 >  有兩種類型的格式檔案支援大量匯出和匯入：「非 XML 格式檔案」  和「XML 格式檔案」  。 相較於非 XML 格式檔案而言，XML 格式檔案是較彈性且功能強大的替代方案。 如需非 XML 格式檔案的相關資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)＞。  
@@ -204,7 +205,7 @@ ms.locfileid: "68091427"
 |ID **="** _fieldID_ **"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> \<欄位識別碼 **="** _fieldID_ **"** /> 對應到 \<資料行來源 **="** _fieldID_ **"** />|必要|  
 |xsi:type **="** _fieldType_ **"**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
 |LENGTH **="** _n_ **"**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
-|PREFIX_LENGTH **="** _p_ **"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p*必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
+|PREFIX_LENGTH **="** _p_ **"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p* 必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
 |MAX_LENGTH **="** _m_ **"**|此屬性是可儲存在給定欄位中的最大位元組數。 若沒有目標資料表，則無法取得資料行最大長度。 MAX_LENGTH 屬性會限制輸出字元資料行的最大長度，因而限制為資料行值配置的儲存區。 在 ELECT FROM 子句中使用 OPENROWSET 函數的 BULK 選項時，這樣做特別方便。<br /><br /> *m* 的值必須為正整數。 根據預設， **char** 資料行的最大長度是 8000 個字元，而 **nchar** 資料行的最大長度是 4000 個字元。|選用|  
 |COLLATION **="** _collationName_ **"**|COLLATION 只能用於字元欄位。 如需 SQL 定序名稱的清單，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|選用|  
 |TERMINATOR **= "** _terminator_ **"**|此屬性會指定資料欄位的結束字元。 結束字元可以是任何字元。 結束字元必須是不包含於資料之任何部分的唯一字元。<br /><br /> 根據預設，欄位結束字元是定位字元 (以 \t 表示)。 若要表示段落標記，請使用 \r\n。|只能搭配字元資料的 xsi:type 使用，字元資料需要此屬性。|  
@@ -256,7 +257,7 @@ ms.locfileid: "68091427"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|指定對應到資料行的欄位識別碼。<br /><br /> \<資料行來源 **="** _fieldID_ **"** /> 對應到 \<欄位識別碼 **="** _fieldID_ **"** />|必要|  
 |NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要|  
-|xsi **:** type **="** _ColumnType_ **"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意：*ColumnType* 的可能值與關聯的屬性，如 \<[資料行&lt; 項目的 xsi:type 值&gt;一節的 ](#XsiTypeValuesOfCOLUMN)資料行> 項目資料表所示。|選用|  
+|xsi **:** type **="** _ColumnType_ **"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意:[&lt;COLUMN&gt; 元素的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<COLUMN> 元素資料表列出了 *ColumnType* 的可能值及其相關屬性。|選用|  
 |LENGTH **="** _n_ **"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
 |PRECISION **="** _n_ **"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
 |SCALE **="** _int_ **"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
@@ -277,7 +278,7 @@ ms.locfileid: "68091427"
 |字元字串|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR**和 **SQLNVARCHAR**|無。|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
->  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR、SQLNVARCHAR (資料會以 Unicode 傳送)、SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
+>  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR 或 SQLNVARCHAR (資料會以 Unicode 傳送)，或是 SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)＞。  
   
@@ -350,9 +351,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> A. 以與資料表資料行相同的方式排序字元資料欄位  
  下列範例顯示 XML 格式檔案，其中描述包含三個字元資料欄位的資料檔。 格式檔案將資料檔對應到包含三個資料行的資料表。 資料欄位是以一對一的方式，來對應資料表的資料行。  
   
- **Table (row):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **資料表 (資料列)：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Data file (record):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **資料檔 (記錄)：** Age\<tab>Firstname\<tab>Lastname\<return>  
   
  下列 XML 格式檔案會將資料檔中的資料讀入資料表。  
   
@@ -388,9 +389,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> B. 以不同的方式排序資料欄位與資料表資料行  
  下列範例顯示 XML 格式檔案，其中描述包含三個字元資料欄位的資料檔。 格式檔案會將資料檔對應到包含三個資料行 (排序方式與資料檔的欄位不同) 的資料表。  
   
- **Table (row):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **資料表 (資料列)：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Data file** (record): Age\<tab>Lastname\<tab>Firstname\<return>  
+ **資料檔 (記錄)：** Age\<tab>Lastname\<tab>Firstname\<return>  
   
  在 `<RECORD>` 元素中，格式檔案是以字元資料來表示這三個欄位內的資料值。  
   
@@ -423,9 +424,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="c-omitting-a-data-field"></a><a name="OmitField"></a> C. 省略資料欄位  
  下列範例顯示 XML 格式檔案，其中描述包含四個字元資料欄位的資料檔。 格式檔案將資料檔對應到包含三個資料行的資料表。 第二個資料欄位不對應到任何資料表資料行。  
   
- **Table (row):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **資料表 (資料列)：** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **Data file (record):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **資料檔 (記錄)：** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   
  在 `<RECORD>` 元素中，格式檔案是以字元資料來表示這四個欄位內的資料值。 每一個欄位的 TERMINATOR 屬性，都會指出跟在資料值後面的結束字元。  
   

@@ -1,5 +1,6 @@
 ---
 title: 準備資料以進行大量匯出或匯入
+description: 本文描述如何規劃大量匯入與大量匯出作業，包含資料檔案格式需求，以及使用 bcp 公用程式的時機。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0248ca835794b71531a2d2f8c0b75b6b75911929
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056407"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980390"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>準備資料以進行大量匯出或匯入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,13 +71,13 @@ ms.locfileid: "74056407"
   
      若要從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro 或 Visual FoxPro 資料表 (.dbf) 檔案或 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作表 (.xls) 檔案大量匯入資料，您必須將該資料轉換成符合前述限制的 CSV 檔案。 副檔名通常為 .csv。 然後，您就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業中，將此 .csv 檔案當做資料檔使用。  
   
-     在 32 位元系統上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入](../../t-sql/functions/openrowset-transact-sql.md) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  若是 CSV 資料，schema.ini 檔中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Test IISAMm 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等等)。  此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱 [初始化文字資料來源驅動程式](https://msdn.microsoft.com/library/office/ff834391.aspx)、 [如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](https://go.microsoft.com/fwlink/?LinkId=128504)、 [如何：使用 Jet OLE DB Provider 4.0 連接到 ISAM 資料庫](https://go.microsoft.com/fwlink/?LinkId=128505)以及 [如何使用 Jet 提供者的文字 IIsam 開啟分隔的文字檔案](https://go.microsoft.com/fwlink/?LinkId=128501)。  
+     在 32 位元系統上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入](../../t-sql/functions/openrowset-transact-sql.md) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  若是 CSV 資料，schema.ini 檔中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Test IISAMm 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等等)。  此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱[初始化文字資料來源驅動程式](https://msdn.microsoft.com/library/office/ff834391.aspx)、[如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](https://go.microsoft.com/fwlink/?LinkId=128504)、[如何：使用 Jet OLE DB Provider 4.0 連線到 ISAM 資料庫 ](https://go.microsoft.com/fwlink/?LinkId=128505)，以及[如何使用 Jet 提供者的文字 IIsam 開啟分隔的文字檔](https://go.microsoft.com/fwlink/?LinkId=128501)。  
   
  此外，將資料從資料檔大量匯入到資料表中需要下列：  
   
 -   使用者必須具有該資料表的 INSERT 與 SELECT 權限。 使用者在使用需要資料定義語言 (DDL) 作業的選項 (如停用條件約束) 時，也需要 ALTER TABLE 權限。  
   
--   當您使用 BULK INSERT 或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 來大量匯入資料時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔 (若使用者利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的登入來登入) 和用於委託安全性的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入，必須可存取資料檔以進行讀取作業。 此外，使用者必須具有 ADMINISTER BULK OPERATIONS 權限才能讀取檔案。  
+-   當您使用 BULK INSERT 或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 來大量匯入資料時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔 (若使用者利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的登入來登入) 和用於委託安全性的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入，必須可存取資料檔以進行讀取作業。 此外，使用者必須具有 ADMINISTER BULK OPERATIONS 權限才能讀取檔案。  
   
 > [!NOTE]  
 >  系統並不支援大量匯入到資料分割檢視，而嘗試將資料大量匯入到資料分割檢視會失敗。  

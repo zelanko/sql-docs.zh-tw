@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568081"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607867"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -193,6 +193,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-1180"></a>版本 1.18.0
+
+#### <a name="improvements"></a>改善項目
+
+1. 針對彈性檔案工作的三項功能改善：(1) 已新增複製/刪除作業的萬用字元支援；(2) 使用者可以啟用/停用刪除作業的遞迴搜尋；(3) 複製作業的目的地檔案名稱可為空白，以便保留來源檔案名稱。
 
 ### <a name="version-1170"></a>1\.17.0 版
 

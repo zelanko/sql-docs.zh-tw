@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909114"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219357"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "80909114"
 |WARNING|表示潛在問題。|  
 |INFO|提供參考訊息。|  
 |FINE|提供追蹤資訊，包括基本物件建立和解構。 此外，還提供了公用方法所擲回的所有例外狀況。|  
-|FINER|提供詳細的追蹤資訊，包括所有公用方法的進入和結束點 (包含相關聯的參數資料類型)，以及公用類別的所有公用屬性。 此外，還提供輸入參數、輸出參數和方法傳回值 (CLOB、BLOB、NCLOB、Reader、\<stream> 傳回值類型除外)。<br /><br /> 下列記錄類別目錄存在於 JDBC 驅動程式 1.2 版中，而且具有 FINE 記錄層級：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 和 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 從 2.0 版開始，這些項目已升級為 FINER 層級。|  
-|FINEST|提供非常詳細的追蹤資訊。 這是最低的記錄層級。<br /><br /> 下列記錄類別目錄存在 JDBC Driver 1.2 版中，而且具有 FINEST 記錄層級：TDS.DATA 和 TDS.TOKEN。 從 2.0 版開始，它們保留 FINEST 記錄層級。|  
+|FINER|提供詳細的追蹤資訊，包括所有公用方法的進入和結束點 (包含相關聯的參數資料類型)，以及公用類別的所有公用屬性。 此外，還提供輸入參數、輸出參數和方法傳回值 (CLOB、BLOB、NCLOB、Reader、\<stream> 傳回值類型除外)。<br /><br /> 下列記錄類別存在於 JDBC 驅動程式 1.2 版中，而且具有 FINE 記錄層級：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 及 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 從 2.0 版開始，這些項目已升級為 FINER 層級。|  
+|FINEST|提供非常詳細的追蹤資訊。 這是最低的記錄層級。<br /><br /> 下列記錄類別存在於 JDBC 驅動程式 1.2 版中，而且具有 FINEST 記錄層級：TDS.DATA 和 TDS.TOKEN。 從 2.0 版開始，它們保留 FINEST 記錄層級。|  
 |OFF|關閉記錄。|  
 |ALL|啟用所有訊息的記錄。|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "80909114"
 |XA|記錄 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別中所有 XA 交易的訊息。 應用程式可以將記錄層級設定為 FINE 和 FINER。|  
 |KerbAuthentication|記錄有關類型 4 Kerberos 驗證的訊息 (當 **authenticationScheme** 連線屬性設定為 **JavaKerberos** 時)。 此應用程式可以將記錄層級設定為 FINE 或 FINER。|  
 |TDS.DATA|記錄包含此驅動程式與 SQL Server 之間 TDS 通訊協定層級交談的訊息。 每個所傳送和接收之 TDS 封包的詳細內容都會以 ASCII 和十六進位的格式記錄。 但是，系統不會記錄登入認證 (使用者名稱和密碼)， 只會記錄所有其他資料。<br /><br /> 這個類別目錄會建立非常詳細的訊息，並只能透過將記錄層次設為 FINEST 而啟用。|  
-|TDS.Channel|這個類別目錄會追蹤與 SQL Server 進行 TCP 通訊通道的動作。 記錄的訊息包括通訊端開啟和關閉，以及讀取和寫入。 此外，它也會追蹤有關與 SQL Server 建立安全通訊端層 (SSL) 連接的訊息。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINE、FINER 或 FINEST 而啟用。|  
+|TDS.Channel|這個類別目錄會追蹤與 SQL Server 進行 TCP 通訊通道的動作。 記錄的訊息包括通訊端開啟和關閉，以及讀取和寫入。 此外，也會追蹤與 SQL Server 建立傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 連線的相關訊息。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINE、FINER 或 FINEST 而啟用。|  
 |TDS.Writer|這個類別目錄會追蹤 TDS 通道的寫入作業。 請注意，系統只會追蹤寫入的長度，而非內容。 當注意訊號傳送至伺服器以取消陳述式的執行時，這個類別目錄也會追蹤問題。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
 |TDS.Reader|這個類別目錄會在 FINEST 層級中追蹤來自 TDS 通道的特定讀取作業。 在 FINEST 層級中，追蹤可能會很詳細。 在 WARNING 和 SEVERE 層級中，這個類別目錄會追蹤此驅動程式關閉連接之前，從 SQL Server 收到無效 TDS 通訊協定的時間。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINER 和 FINEST 而啟用。|  
 |TDS.Command|這個類別目錄會追蹤低層級的狀態轉換以及與執行 TDS 命令建立關聯的其他資訊，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行、ResultSet 資料指標擷取、認可等等。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  

@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807418"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607860"
 ---
 # <a name="flexible-file-task"></a>彈性檔案工作
 
@@ -44,18 +44,19 @@ ms.locfileid: "72807418"
 - **SourceConnectionType：** 指定來源連線管理員類型。
 - **SourceConnection：** 指定來源連線管理員。
 - **SourceFolderPath：** 指定來源資料夾路徑。
-- **SourceFileName：** 指定來源檔案名稱。 如果保留空白，將會複製來源資料夾。
+- **SourceFileName：** 指定來源檔案名稱。 如果保留空白，將會複製來源資料夾。 來源檔案名稱允許使用下列萬用字元：`*` (符合零或多個字元)、`?` (符合零或單一字元) 和 `^` (逸出字元)。
 - **SearchRecursively：** 指定是否要以遞迴方式複製子資料夾。
 - **DestinationConnectionType：** 指定目的地連線管理員類型。
 - **DestinationConnection：** 指定目的地連線管理員。
 - **DestinationFolderPath：** 指定目的地資料夾路徑。
-- **DestinationFileName：** 指定目的地檔案名稱。
+- **DestinationFileName：** 指定目的地檔案名稱。 如果保留空白，則會使用來源檔案名稱。
 
 目前已針對**刪除**作業提供下列屬性。
 - **ConnectionType：** 指定連線管理員類型。
 - **Connection：** 指定連線管理員。
 - **FolderPath：** 指定資料夾路徑。
-- **FileName：** 指定檔案名稱。 若維持空白，將會刪除資料夾。 針對 Azure Blob 儲存體，不支援刪除資料夾。
+- **FileName：** 指定檔案名稱。 若維持空白，將會刪除資料夾。 針對 Azure Blob 儲存體，不支援刪除資料夾。 檔案名稱允許使用下列萬用字元：`*` (符合零或多個字元)、`?` (符合零或單一字元) 和 `^` (逸出字元)。
+- **DeleteRecursively：** 指定是否要以遞迴方式刪除檔案。
 
 ***服務主體權限設定的注意事項***
 

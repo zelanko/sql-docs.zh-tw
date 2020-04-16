@@ -15,16 +15,16 @@ ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e41abc4ab3f798a3ee970061ddc21539403ef6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb3c4075471394652fa5952fa60f8da9a367d834
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907503"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550233"
 ---
 # <a name="modify-data-through-a-view"></a>透過檢視修改資料
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改基礎基底資料表的資料。  
+  您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 SQL Server 中修改基礎基底資料表的資料。  
   
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  

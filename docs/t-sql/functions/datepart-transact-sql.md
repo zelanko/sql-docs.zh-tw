@@ -1,6 +1,6 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: DATEPART 函式的 Transact-SQL 參考。 此函式會傳回對應指定日期的 datepart 整數。
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c72963612448db732e768c0df93c5215fb651d9
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255809"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517528"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

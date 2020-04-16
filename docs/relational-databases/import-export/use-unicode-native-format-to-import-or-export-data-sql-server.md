@@ -1,5 +1,6 @@
 ---
 title: 使用 Unicode 原生格式匯入或匯出資料 (SQL Server) | Microsoft 文件
+description: 使用 Unicode 原生格式在 SQL Server 的執行個體之間大量傳輸資料，可免除資料類型與字元格式之間的轉換。
 ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4b9aefe7e8350eef1990a6a37dbf0266cd11464
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091459"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980338"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

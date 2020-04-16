@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165225"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809863"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - **PERIOD** 資料行一律假定為不可為 Null，即使未指定可 Null 性亦同。 如果 **PERIOD** 資料行明確定義為可為 Null，則 **CREATE TABLE** 陳述式會失敗。
 - 記錄資料表和目前資料表或時態表的結構描述，在資料行數量、資料行名稱、順序和資料類型上必須一致。
 - 匿名的記錄資料表會自動使用與目前資料表或時態表相同的結構描述建立。
-- 匿名的記錄資料表名稱具有下列格式︰MSSQL_TemporalHistoryFor_<目前時態表物件識別碼>_[後置詞]  。 後置詞是選用的，只有在資料表名稱前半部分不是唯一的時候，才會加入。
+- 匿名的記錄資料表名稱格式如下：MSSQL_TemporalHistoryFor_<現有暫存料表物件識別碼>_[尾碼]  。 後置詞是選用的，只有在資料表名稱前半部分不是唯一的時候，才會加入。
 - 記錄資料表會建立為資料列存放區資料表。 如果可能，會套用 PAGE 壓縮，否則不壓縮記錄資料表。 例如，有些資料表組態，像 SPARSE 資料行，就不允許壓縮。
 - 為記錄資料表建立的預設叢集索引，會使用自動產生的名稱，格式為：IX_<記錄資料表名稱 >  。 叢集索引包含 **PERIOD** 資料行 (結尾、開頭)。
 - 若要將目前的資料表建立為記憶體最佳化資料表，請參閱 [系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - 將使用預設值不可為 Null 的資料行加入現有的資料表時，其大小是所有版本的資料作業大小，(中繼資料作業的) SQL Server Enterprise Edition 除外。 使用具有 SQL Server Standard Edition 資料的大型現有記錄資料表，加入一個非 Null 資料行會是很昂貴的作業。
 - 必須小心選擇時段開始和時段結束資料行的條件約束︰
-
   - 開始資料行的預設值會指定您認為現有資料列有效的時間點。 它不能指定為未來的日期時間點。
-  - 結束時間必須指定為給定 datetime2 精確度的最大值
+  - 結束時間必須指定為所指定 datetime2 精確度的最大值，例如 `9999-12-31 23:59:59` 或 `9999-12-31 23:59:59.9999999`。
 - 加入時段時，系統會執行目前資料表的資料一致性檢查，以確定時段資料行的預設值為有效。
 - 在啟用 **SYSTEM_VERSIONING**時指定現有的記錄資料表，系統會對目前的資料表和記錄資料表執行資料一致性檢查。 如果您將 **DATA_CONSISTENCY_CHECK = OFF** 指定為額外的參數，即可略過此檢查。
 

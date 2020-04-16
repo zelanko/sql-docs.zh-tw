@@ -1,5 +1,6 @@
 ---
 title: 資料的大量匯入及匯出 (SQL Server) | Microsoft Docs
+description: SQL Server 支援從 SQL Server 資料表匯出大量資料，以及將大量資料匯入 SQL Server 資料表或未分割的檢視。
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74c9d7286363984825d51fb3598f246da422f88d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71680813"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980490"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>資料的大量匯入及匯出 (SQL Server)
 

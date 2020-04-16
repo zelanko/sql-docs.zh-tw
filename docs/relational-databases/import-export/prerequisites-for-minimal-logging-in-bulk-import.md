@@ -1,5 +1,6 @@
 ---
 title: 大量匯入採用最低限度記錄的必要條件 | Microsoft Docs
+description: 在簡單復原或大量記錄復原模式之下大量匯入作業的最少記錄，會減少作業填滿記錄空間的機會。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69872eeb356ff4dbd530bf0c752cdf02706d8344
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70910839"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980116"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>大量匯入中最低限度記錄的先決條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

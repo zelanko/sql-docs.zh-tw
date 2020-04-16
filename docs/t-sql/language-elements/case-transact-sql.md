@@ -1,6 +1,6 @@
 ---
 title: CASE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CASE 運算式的 Transact-SQL 參考。 CASE 會評估要傳回特定結果的條件清單。
 ms.date: 06/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62366f21c1b909348910ed3b72f0afbb3e5cfc15
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950353"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517698"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ END
   
 -   依指定的順序來評估每個 WHEN 子句的 input_expression = when_expression。  
   
--   傳回第一個評估為 TRUE 之 *input_expression*  when_expression =  的 *result_expression*。  
+-   傳回第一個評估為 TRUE 之 *input_expression* = *when_expression* 的 *result_expression*。  
   
 -   如果沒有任何 *input_expression* = *when_expression* 評估為 TRUE，若指定了 ELSE 子句，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會傳回 *else_result_expression*，若未指定 ELSE 子句，則會傳回 NULL 值。  
   
@@ -219,7 +219,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. 在 SET 陳述式中使用 CASE  
- 下列範例會在資料表值函式 `dbo.GetContactInfo` 的 SET 陳述式中使用 CASE 運算式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，與人員相關的所有資料都會儲存在 `Person.Person` 資料表中。 例如，該人員可能是員工、廠商代表或客戶。 此函數會傳回給定之 `BusinessEntityID` 的姓名，以及該人員的連絡類型。SET 陳述式中的 CASE 運算式會根據 `ContactType`、`BusinessEntityID` 或 `Employee` 資料表中的 `Vendor` 資料行是否存在，來決定要針對 `Customer` 資料行顯示的值。  
+ 下列範例會在資料表值函式 `dbo.GetContactInfo` 的 SET 陳述式中使用 CASE 運算式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，與人員相關的所有資料都會儲存在 `Person.Person` 資料表中。 例如，該人員可能是員工、廠商代表或客戶。 此函數會傳回給定之 `BusinessEntityID` 的姓名，以及該人員的連絡類型。SET 陳述式中的 CASE 運算式會根據 `Employee`、`Vendor` 或 `Customer` 資料表中的 `BusinessEntityID` 資料行是否存在，來決定要針對 `ContactType` 資料行顯示的值。  
   
 ```  
   

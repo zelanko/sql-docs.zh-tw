@@ -1,7 +1,7 @@
 ---
 title: 使用查詢存放區監視效能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448171"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012414"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 
@@ -34,9 +34,9 @@ ms.locfileid: "79448171"
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> 啟用查詢存放區
 
- 新的資料庫預設不會啟用查詢存放區。
+ 新的 SQL Server 與 Azure Synapse Analytics (SQL DW) 資料庫依預設不會啟用查詢存放區，但新的 Azure SQL Database 資料庫則會依預設啟用此功能。
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢存放區] 頁面
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢存放區] 頁面
 
 1. 在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  。
 
@@ -47,7 +47,7 @@ ms.locfileid: "79448171"
 
 3. 在 [作業模式 (要求)]  方塊中，選取 [讀取寫入]  。
 
-## <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式
+### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式
 
 使用 **ALTER DATABASE** 陳述式可啟用指定資料庫的查詢存放區。 例如：
 

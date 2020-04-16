@@ -12,12 +12,12 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5a6c25db072de12c5f011e33bda8017b6d5658a
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434095"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873124"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>適用於 Microsoft SQL Server 的最新更新
 
@@ -35,8 +35,8 @@ ms.locfileid: "79434095"
 
 |產品版本   | 最新的 Service Pack |  最新的 GDR | 最新的累積更新 | CU 發行日期 | 一般指導方針  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4538853](https://support.microsoft.com/help/4517790)|CU 3 [(KB 4538853)](https://support.microsoft.com/help/4538853)|3/12/2020|[SQL Server 2019 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 19 [(KB 4535007)](https://support.microsoft.com/help/4535007)|2/5/2020|[SQL Server 2017 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 4 [(KB 4548597)](https://support.microsoft.com/help/4548597)|3/31/2020|[SQL Server 2019 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 20 [(KB 4541283)](https://support.microsoft.com/help/4541283)|2/5/2020|[SQL Server 2017 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 12 [(KB 4536648)](https://support.microsoft.com/kb/4536648)|2/25/2020|[SQL Server 2016 安裝](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|2019/7/9|[SQL Server 2016 安裝](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|N/A|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|2017/11/22|[SQL Server 2016 安裝](https://technet.microsoft.com/library/bb500469.aspx)|

@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761651"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517520"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -67,6 +67,7 @@ SERVERPROPERTY ( 'propertyname' )
 |InstanceDefaultLogPath|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 執行個體記錄檔的預設路徑名稱。|  
 |InstanceName|使用者所連接之執行個體的名稱。<br /><br /> 如果執行個體名稱是預設執行個體、輸入無效，或發生錯誤，便傳回 NULL。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|若在設定時已安裝 [進階分析] 功能，則會傳回 1；否則會傳回 0。|  
+|IsBigDataCluster| 從 CU4 開始在 [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 中引進。<br /><br />如果執行個體是 SQL Server 巨量資料叢集，則傳回 1；否則傳回 0。|  
 |IsClustered|伺服器執行個體設定在容錯移轉叢集中。<br /><br /> 1 = 叢集。<br /><br /> 0 = 非叢集。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |IsFullTextInstalled|全文檢索和語意索引元件安裝在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。<br /><br /> 1 = 已安裝全文檢索和語意索引元件。<br /><br /> 0 = 未安裝全文檢索和語意索引元件。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |IsHadrEnabled|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 在這個伺服器執行個體上已啟用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已停用。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已啟用。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**<br /><br /> 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體上建立及執行可用性複本，必須在此伺服器執行個體上啟用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱[啟用和停用 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。<br /><br /> **注意：** IsHadrEnabled 屬性只與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相關。 此伺服器屬性不影響其他高可用性或災害復原功能，例如資料庫鏡像或記錄傳送。|  

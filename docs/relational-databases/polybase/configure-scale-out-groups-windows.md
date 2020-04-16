@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216077"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443372"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上設定 PolyBase 相應放大群組
 
@@ -87,7 +87,10 @@ ms.locfileid: "80216077"
 3. 在計算節點 (PQTH4A-CMP02) 上執行 services.msc。
   
 4. 關閉 PolyBase Engine 並重新啟動 PolyBase Data Movement Service。
-  
+
+> [!NOTE] 
+> 當 Polybase 引擎服務在前端節點中重新開機或停止時，資料移動服務 (DMS) 服務會在 DMS 與 Polybase 引擎服務 (DW) 之間關閉通道時立即停止。 如果 DW 引擎重新開機超過 2 次，則 DMS 會進入 90分鐘的無訊息週期，且必須等候 90 分鐘才能進行下一次自動啟動嘗試。 在這種情況下，您應該在所有節點上手動啟動此服務。
+
 ## <a name="optional-remove-a-compute-node"></a>選擇性：移除計算節點  
   
 1. 連接到計算節點 SQL Server (PQTH4A-CMP02)。

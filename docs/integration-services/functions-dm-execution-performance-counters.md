@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02892e3768a01ee834598d620300962f1a2bbb56
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037052"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742323"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>函式 - dm_execution_performance_counters
 
@@ -51,7 +51,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Flat buffers in use|資料流程引擎所使用的一般緩衝區數目。 所有一般緩衝區都是私用緩衝區。|  
 |Private buffer memory|所有私用緩衝區使用中的記憶體數目。 私用緩衝區是轉換用於暫存工作的緩衝區。<br /><br /> 如果資料流程引擎建立緩衝區來支援資料流程，該緩衝區就不是私用緩衝區。|  
 |Private buffers in use|轉換用於暫存工作的緩衝區數目。|  
-|Rows read|準備用於執行的資料列總數。|  
+|Rows read|執行讀取的資料列總數。|  
 |Rows written|執行寫入的資料列總數。|  
   
 ## <a name="return"></a>傳回  

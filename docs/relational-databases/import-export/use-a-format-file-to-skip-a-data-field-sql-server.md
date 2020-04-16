@@ -1,5 +1,6 @@
 ---
 title: 使用格式檔案跳過資料欄位
+description: 您可搭配資料檔案使用格式檔案，其擁有比資料表資料行更多的欄位。 格式檔案會將資料表資料行對應至相對應的資料欄位，並忽略額外的欄位。
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f936706a855e810eefc8749a6c9296e855a9d57
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056324"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980650"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案跳過資料欄位 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "74056324"
 |[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />[建立格式檔案](#create_format_file)<br />&emsp;&#9679;&emsp;[建立非 XML 格式檔案](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[修改非 XML 格式檔案](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[建立 XML 格式檔案](#xml_format_file)<br />&emsp;&#9679;&emsp;[修改 XML 格式檔案](#modify_xml_format_file)<br />[使用格式檔案略過資料欄位來匯入資料](#import_data)<br />&emsp;&#9679;&emsp;[使用 BCP 和非 XML 格式檔案](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[使用 BCP 和 XML 格式檔案](#bcp_xml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和非 XML 格式檔案](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和 XML 格式檔案](#bulk_xml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和非 XML 格式檔案](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和 XML 格式檔案](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
 > [!NOTE]
->  您可以透過下列項目，使用非 XML 或 XML 格式檔案，將資料檔案大量匯入至資料表： [bcp 公用程式](../../tools/bcp-utility.md) 命令、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式或 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。
+>  您可以透過下列項目，使用非 XML 或 XML 格式檔案，將資料檔案大量匯入至資料表：[bcp 公用程式](../../tools/bcp-utility.md)命令、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式或 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。
 
 ## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
 本主題中的修改格式檔案範例是以下面定義的資料表和資料檔案為基礎。

@@ -1,5 +1,6 @@
 ---
 title: 從舊版 SQL Server 匯入原生與字元格式資料
+description: 在 SQL Server 2019 中，您可藉由利用 -V 參數與限定詞，使用 bcp 從其他版本的 SQL Server 來匯入原生與字元格式資料。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ae89c263008c035dc7cd8e0050b50a5cdd9cc705
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581888db5b930ce6f2b44a991e3ef1ef2f08525a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056002"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980558"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

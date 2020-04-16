@@ -1,5 +1,5 @@
 ---
-title: SQL 伺服器本機客戶端 ODBC 資料來源 |微軟文件
+title: ODBC 資料來源
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46f0a6bf7fae4ba94395bb228066684faad23b96
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: c1abed1c564a2d9c2587592f9eb34d02e35fae9f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81305409"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387378"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 資料來源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

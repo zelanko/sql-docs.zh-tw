@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 49276dd1d3e4f868a2f1fce7a521bba9d31545c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510209"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80464385"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -3034,7 +3034,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-執行此命令來檢查所執行查詢的結果快取是否有命中。  如果快取命中，result_cache_hit 將傳回 1。
+執行此命令來檢查查詢是否使用快取的結果來執行。  result_set_cache 資料行會針對快取命中傳回 1、針對快取遺漏傳回 0，並因未使用結果集快取的原因而傳回負值。  檢查 [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7) 以取得詳細資料。  
 
 ```sql
 SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests

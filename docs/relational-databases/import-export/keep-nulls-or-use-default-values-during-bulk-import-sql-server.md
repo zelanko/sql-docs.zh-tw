@@ -1,5 +1,6 @@
 ---
 title: 在大量匯入期間保留 Null 或預設值
+description: 對於在 SQL Server 中大量匯入，bcp 與 BULK INSERT 都會載入預設值來取代 Null 值。 在這兩種情況下，您可以選擇保留 Null 值。
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,23 +22,23 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055962"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980376"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在大量匯入期間保留 Null 或預設值 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 根據預設，當資料匯入資料表時， [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式會查看資料表中的資料行是否已定義預設值。  例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。  [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式都可讓您指定保留 Null 值。
 
-相對地，一般的 INSERT 陳述式會保留 Null 值，而不會插入預設值。 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式所提供的基本行為與一般 INSERT 陳述式相同，但它還支援用於插入預設值的 [資料表提示](../../t-sql/queries/hints-transact-sql-table.md) 。
+相對地，一般的 INSERT 陳述式會保留 Null 值，而不會插入預設值。 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式所提供的基本行為與一般 INSERT 陳述式相同，但它還支援用於插入預設值的[資料表提示](../../t-sql/queries/hints-transact-sql-table.md)。
 
 |外框|
 |---|
-|[保留 Null 值](#keep_nulls)<br />[透過 INSERT 使用預設值 ...SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />&emsp;&#9679;&emsp;[範例非 XML 格式檔案](#nonxml_format_file)<br />[大量匯入期間保留 Null 或使用預設值](#import_data)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 bcp 並保留 Null 值](#bcp_null)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 bcp 並保留 Null 值](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 bcp 並使用預設值](#bcp_default)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 bcp 並使用預設值](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 並保留 Null 值](#bulk_null)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 BULK INSERT 並保留 Null 值](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 並使用預設值](#bulk_default)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 BULK INSERT 並使用預設值](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 OPENROWSET(BULK...) 並保留 Null 值](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 OPENROWSET(BULK...) 並使用預設值](#openrowset__default_fmt)
+|[保留 Null 值](#keep_nulls)<br />[使用預設值與 INSERT ...SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />&emsp;&#9679;&emsp;[範例非 XML 格式檔案](#nonxml_format_file)<br />[大量匯入期間保留 Null 或使用預設值](#import_data)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 bcp 並保留 Null 值](#bcp_null)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 bcp 並保留 Null 值](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 bcp 並使用預設值](#bcp_default)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 bcp 並使用預設值](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 並保留 Null 值](#bulk_null)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 BULK INSERT 並保留 Null 值](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 並使用預設值](#bulk_default)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 BULK INSERT 並使用預設值](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 OPENROWSET(BULK...) 並保留 Null 值](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 OPENROWSET(BULK...) 並使用預設值](#openrowset__default_fmt)
 
 ## <a name="keeping-null-values"></a>保留 Null 值<a name="keep_nulls"></a>  
 下列限定詞 (qualifier) 可指定資料檔中的空白欄位，在大量匯入作業期間保留其 Null 值，而不要繼承資料表資料行的預設值 (若有的話)。  若是 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)，根據預設，在大量載入作業中未指定的資料行都會設定為 NULL。
