@@ -1,5 +1,5 @@
 ---
-title: 將 ADO 與 SQL 伺服器本機客戶端一起使用 |微軟文件
+title: 使用 ADO
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81f7ff71643776eb3116dab0157a4f2cd32b788a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 94c241e4dd089b0db667e5b24dbde541584bba41
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302460"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388261"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>使用 ADO 搭配 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

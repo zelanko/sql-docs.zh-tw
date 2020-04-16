@@ -1,5 +1,5 @@
 ---
-title: 本機客戶端,連線關鍵字 SQL
+title: 使用連接字串關鍵字
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6dd4f0cecc7b2772e82386d552e8b391d6dfd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 86e615d22284c5e22f3c6281caa683becfc35bb0
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303907"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388589"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>搭配 SQL Server Native Client 使用連接字串關鍵字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "81303907"
 |**AttachDBFileName**|可附加資料庫的主要檔案名稱。 包含完整路徑，而且會使用 C 字元字串變數逸出任何 \ 字元：<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 此資料庫會附加，而且變成連接的預設資料庫。 要使用**AttachDBFileName,** 還必須在[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)資料庫參數或SQL_COPT_CURRENT_CATALOG連接屬性中指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它，它會使用附加的資料庫當做連接的預設值。|  
 |**AutoTranslate**|當為 "yes" 時，如果要轉譯用戶端與伺服器之間傳送的 ANSI 字元字串，則會透過 Unicode 來進行轉換，好讓用戶端與伺服器之字碼頁之間的比對擴充字元問題減至最少。<br /><br /> 用戶端SQL_C_CHAR發送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**字元****、varchar**或**文字**變數、參數或列的資料使用客戶端 ANSI 代碼頁 (ACP) 從字元轉換為 Unicode,然後使用伺服器的 ACP 從 Unicode 轉換為字元。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**字元****、varchar**或發送到用戶端**的文本**資料SQL_C_CHAR變數使用伺服器 ACP 從字元轉換為 Unicode,然後使用用戶端 ACP 從 Unicode 轉換為字元。<br /><br /> 這些轉換會由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式在用戶端上執行。 這會要求在伺服器上使用的相同 ANSI 字碼頁 (ACP) 必須也可以在用戶端上使用。<br /><br /> 這些設定對於進行下列傳輸時所發生的轉換沒有作用：<br /><br /> \*UnicodeSQL_C_WCHAR客戶端資料傳送到**伺服器上的字元****、varchar**或**文字**。<br /><br /> &#42;**字元****、varchar**或**文本**伺服器數據發送到用戶端上的 Unicode SQL_C_WCHAR變數。<br /><br /> \*ANSISQL_C_CHAR客戶端資料發送到伺服器上的 Unicode **nchar、nvarchar**或**nchar****ntext。**<br /><br /> \*Unicode **nchar、nvarchar**或**ntext**伺服器數據發送到用戶端上的 ANSI SQL_C_CHAR變數。 **nvarchar**<br /><br /> 當為 "no" 時，不會執行字元轉譯。<br /><br /> 本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端 ODBC 驅動程式不轉換用戶端 ANSI 字元SQL_C_CHAR發送到**伺服器上的字元****、varchar**或**文字**變數、參數或列的數據。 對從伺服器發送到用戶端上的SQL_C_CHAR變數的**字元****、varchar**或**文本**資料不執行任何轉換。<br /><br /> 如果用戶端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用不同的 ACP，可能會將擴充字元解譯錯誤。|  
 |**Database**|用於連接的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫名稱。 如果未指定**資料庫**,則使用為登錄定義的預設資料庫。 ODBC 資料來源中的預設資料庫會覆寫針對此登入所定義的預設資料庫。 除非您指定**了附加DBFileName,** 否則資料庫必須是現有資料庫。 如果也指定**了 AttachDBFileName,** 則它指向的主檔將附加並指定**資料庫**指定的資料庫名稱。|  
-|**司機**|[SQLDriver](../../../relational-databases/native-client-odbc-api/sqldrivers.md)傳回的驅動程式的名稱。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式的關鍵字值是 "{SQL Server Native Client 11.0}"。 如果指定**了驅動程式**,並且**驅動程式完成**設置為SQL_DRIVER_NOPROMPT,則需要**伺服器**關鍵字。<br /><br /> 有關驅動程式名稱的詳細資訊,請參閱使用[SQL Server 本機客戶端標頭和函式庫檔案](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)。|  
+|**驅動程式**|[SQLDriver](../../../relational-databases/native-client-odbc-api/sqldrivers.md)傳回的驅動程式的名稱。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式的關鍵字值是 "{SQL Server Native Client 11.0}"。 如果指定**了驅動程式**,並且**驅動程式完成**設置為SQL_DRIVER_NOPROMPT,則需要**伺服器**關鍵字。<br /><br /> 有關驅動程式名稱的詳細資訊,請參閱使用[SQL Server 本機客戶端標頭和函式庫檔案](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)。|  
 |**Dsn**|現有 ODBC 使用者或系統資料來源的名稱。 此關鍵字覆蓋可能在**伺服器**、**網路和****位址**關鍵字中指定的任何值。|  
 |**Encrypt**|指定當透過網路傳送資料以前，是否應該先加密資料。 可能的值為 "yes" 和 "no"。 預設值為 "no"。|  
 |**後備**|這個關鍵字已被取代，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會忽略它的設定。|  

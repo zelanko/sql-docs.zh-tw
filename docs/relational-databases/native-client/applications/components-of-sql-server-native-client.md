@@ -1,5 +1,5 @@
 ---
-title: SQL 伺服器本機客戶端的元件 |微軟文件
+title: 元件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bae5a3871750791d3339e2b98b715ec3779d105d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: 0c824d145b6353f96a3756f28b7446799b303889
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302504"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388211"
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client 的元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

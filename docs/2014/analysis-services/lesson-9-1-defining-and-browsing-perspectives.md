@@ -1,5 +1,5 @@
 ---
-title: 定義和流覽透視圖 |Microsoft Docs
+title: 定義和瀏覽透視 |微軟文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "69493768"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定義和瀏覽檢視方塊
@@ -41,48 +41,48 @@ ms.locfileid: "69493768"
   
      ![檢視方塊名稱資料行中的檢視方塊](../../2014/tutorials/media/l9-perspectives-2.gif "檢視方塊名稱資料行中的檢視方塊")  
   
-3.  將 [觀點名稱] `Internet Sales`變更為。  
+3.  將透視名稱變更為`Internet Sales`。  
   
 4.  在下一個資料列上，將 [DefaultMeasure] 設定為 [網際網路銷售 - 銷售量]****。  
   
      當使用者利用這個檢視方塊來瀏覽 Cube 時，這就是使用者會看到的量值 (除非他們另外指定其他量值)。  
   
     > [!NOTE]  
-    >  您也可以在 Cube 的 [Cube 結構][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]** 索引標籤之 [屬性] 視窗中，為整個 ** 教學課程 Cube 設定預設量值。  
+    >  您也可以在 Cube 的 [Cube 結構]**** 索引標籤之 [屬性] 視窗中，為整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 設定預設量值。  
   
 5.  清除下列物件的核取方塊：  
   
-    -   `Reseller Sales`量值群組  
+    -   `Reseller Sales`量組  
   
-    -   **銷售配額**量值群組  
+    -   [銷售配額]**** 量值群組  
   
-    -   **銷售配額 1**量值群組  
+    -   [銷售配額 1]**** 量值群組  
   
-    -   **轉售商**cube 維度  
+    -   [轉售商]**** Cube 維度  
   
-    -   **轉銷商地理位置**cube 維度  
+    -   [轉售商地理位置]**** Cube 維度  
   
-    -   **銷售領域**cube 維度  
+    -   [銷售領域]**** Cube 維度  
   
-    -   **Employee** cube 維度  
+    -   [員工]**** Cube 維度  
   
-    -   **升級**cube 維度  
+    -   [促銷]**** Cube 維度  
   
-    -   **轉售商收益**KPI  
+    -   [轉售商收入]**** KPI  
   
-    -   **大型轉售商**命名集  
+    -   [大型轉售商]**** 命名集  
   
-    -   **總銷售金額**匯出成員  
+    -   [總銷售量]**** 導出成員  
   
-    -   **產品成本總計**匯出成員  
+    -   [總產品成本]**** 導出成員  
   
-    -   **轉售商毛利率**匯出成員  
+    -   [轉售商毛利率]**** 導出成員  
   
-    -   **毛利率**匯出成員總數  
+    -   [總毛利率]**** 導出成員  
   
-    -   [**轉售商銷售與所有產品的比率**] 匯出成員  
+    -   [轉售商銷售與所有產品的比率]**** 導出成員  
   
-    -   **總銷售與所有產品的比率**導出成員  
+    -   [總銷售與所有產品的比率]**** 導出成員  
   
      這些物件與網際網路銷售無關。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493768"
   
 1.  在 [檢視方塊]**** 索引標籤的工具列上，按一下 [新增檢視方塊]**** 按鈕。  
   
-2.  將新觀點的名稱變更為`Reseller Sales`。  
+2.  將新透檢視的名稱變更為`Reseller Sales`。  
   
 3.  將 [轉售商銷售 - 銷售量]**** 設為預設量值。  
   
@@ -101,29 +101,29 @@ ms.locfileid: "69493768"
   
 4.  清除下列物件的核取方塊：  
   
-    -   `Internet Sales`量值群組  
+    -   `Internet Sales`量組  
   
-    -   [**網際網路銷售原因**] 量值群組  
+    -   [網際網路銷售原因]**** 量值群組  
   
-    -   **客戶**cube 維度  
+    -   [客戶]**** Cube 維度  
   
-    -   [**網際網路銷售訂單詳細**資料] cube 維度  
+    -   [網際網路銷售訂單的詳細資料]**** Cube 維度  
   
-    -   [**銷售原因**] cube 維度  
+    -   [銷售原因]**** Cube 維度  
   
-    -   **網際網路銷售詳細資料的鑽取動作**鑽取動作  
+    -   [網際網路銷售詳細資訊鑽研動作]**** 鑽研動作  
   
-    -   **總銷售金額**匯出成員  
+    -   [總銷售量]**** 導出成員  
   
-    -   **產品成本總計**匯出成員  
+    -   [總產品成本]**** 導出成員  
   
-    -   **網際網路毛利率**匯出成員  
+    -   [網際網路毛利率]**** 導出成員  
   
-    -   **毛利率**匯出成員總數  
+    -   [總毛利率]**** 導出成員  
   
-    -   [**網際網路銷售與所有產品的比率**] 匯出成員  
+    -   [網際網路銷售與所有產品的比率]**** 導出成員  
   
-    -   **總銷售與所有產品的比率**導出成員  
+    -   [總銷售與所有產品的比率]**** 導出成員  
   
      這些物件與轉售商銷售無關。  
   
@@ -131,34 +131,34 @@ ms.locfileid: "69493768"
   
 1.  在 [檢視方塊]**** 索引標籤的工具列上，按一下 [新增檢視方塊]**** 按鈕。  
   
-2.  將新觀點的名稱變更為`Sales Summary`。  
+2.  將新透檢視的名稱變更為`Sales Summary`。  
   
     > [!NOTE]  
     >  您不可以將導出量值指定為預設量值。  
   
 3.  清除下列物件的核取方塊：  
   
-    -   `Internet Sales`量值群組  
+    -   `Internet Sales`量組  
   
-    -   `Reseller Sales`量值群組  
+    -   `Reseller Sales`量組  
   
-    -   [**網際網路銷售原因**] 量值群組  
+    -   [網際網路銷售原因]**** 量值群組  
   
-    -   **銷售配額**量值群組  
+    -   [銷售配額]**** 量值群組  
   
-    -   **Sales 配額 1]** 量值群組  
+    -   [銷售配額1]**** 量值群組  
   
-    -   [**網際網路銷售訂單詳細**資料] cube 維度  
+    -   [網際網路銷售訂單的詳細資料]**** Cube 維度  
   
-    -   [**銷售原因**] cube 維度  
+    -   [銷售原因]**** Cube 維度  
   
-    -   **網際網路銷售詳細資料的鑽取動作**鑽取動作  
+    -   [網際網路銷售詳細資訊鑽研動作]**** 鑽研動作  
   
 4.  選取下列物件的核取方塊：  
   
-    -   **網際網路銷售計數**量值  
+    -   [網際網路銷售計數]**** 量值  
   
-    -   **轉售商銷售計數**量值  
+    -   [轉售商銷售計數]**** 量值  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>透過每一個檢視方塊來瀏覽  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493768"
   
      ![Excel 中的資料連線精靈](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel 中的資料連線精靈")  
   
-6.  在`Internet Sales` [**透視圖**] 清單中選取，然後在 [中繼資料] 窗格中檢查量值和維度。  
+6.  在`Internet Sales`**透視清單**中選擇,然後查看元資料窗格中的度量值和維度。  
   
      請注意，只有那些針對 [網際網路銷售] 檢視方塊所指定的物件才會顯示出來。  
   
 7.  在 [中繼資料] 窗格中，展開 [量值]****。  
   
-     請注意，只有`Internet Sales`量值群組會出現，以及 [**網際網路毛利率**] 和 [**網際網路銷售與所有產品的比率**] 導出成員。  
+     請注意,只顯示`Internet Sales`度量值組,以及**Internet GPM**和**Internet 銷售比率到所有產品**計算成員。  
   
 8.  在模型中，再次選取 Excel。 選取 `Sales Summary`。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493768"
  [定義和瀏覽翻譯](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [視角](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
- [多維度模型中的觀點](multidimensional-models/perspectives-in-multidimensional-models.md)  
+ [觀點](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [多維度模型中的檢視方塊](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 工作階段屬性,SQL 本機客戶端 OLE 資料庫
+title: 工作階段屬性 OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d4b2bef0bf37b4400ac2cfcb672e43ba4f5abcb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: 799d007dea8063486e836f47032fc3177c890168
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81297077"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388590"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>工作階段屬性 - SQL Server Native Client OLE DB 提供者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

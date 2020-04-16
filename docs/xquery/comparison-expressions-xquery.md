@@ -1,5 +1,6 @@
 ---
-title: 比較運算式（XQuery） |Microsoft Docs
+title: 比較運算式 (XQuery) |微軟文件
+description: 瞭解如何使用包含常規、值、節點和節點順序比較運算符的 XQuery 比較運算式。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039027"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388161"
 ---
 # <a name="comparison-expressions-xquery"></a>比較運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 下列查詢會從 AdventureWorks 範例資料庫所提供的產品目錄，傳回產品型號的小型圖片。 該查詢會將 `PD:ProductDescription/PD:Picture/PD:Size` 所傳回的不可部份完成值序列與單一序列 "small" 進行比較。 如果比較結果為 True，則會傳回 <Picture\>元素。  
+ 下列查詢會從 AdventureWorks 範例資料庫所提供的產品目錄，傳回產品型號的小型圖片。 該查詢會將 `PD:ProductDescription/PD:Picture/PD:Size` 所傳回的不可部份完成值序列與單一序列 "small" 進行比較。 如果比較為 True,則返回<\>圖片 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -90,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 下列查詢會將 <數位元素中的一系列電話\>號碼，與字串常值 "112-111-1111" 進行比較。 該查詢會比較 AdditionalContactInfo 資料行中電話號碼元素的序列，以判斷在文件中是否存在特定客戶的特定電話號碼。  
+ 以下查詢將<編號\>元素中的電話號碼序列與字串文本"112-111-1111"進行比較。 該查詢會比較 AdditionalContactInfo 資料行中電話號碼元素的序列，以判斷在文件中是否存在特定客戶的特定電話號碼。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -103,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- 此查詢會傳回 True。 這表示文件中存在該號碼。 下列查詢是前一個查詢的稍微修改版。 在此查詢中，將從文件中擷取的電話號碼值與兩個電話號碼值之序列進行比較。 如果比較結果為 True，則會傳回\> <number 元素。  
+ 此查詢會傳回 True。 這表示文件中存在該號碼。 下列查詢是前一個查詢的稍微修改版。 在此查詢中，將從文件中擷取的電話號碼值與兩個電話號碼值之序列進行比較。 如果比較為 True,則返回<\>編號元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -152,7 +153,7 @@ WHERE ContactID=1
   
  這些運算子只能在單一不可部份完成值上運算。 也就是，您無法將某個序列指定為其中一個運算元。  
   
- 例如，下列查詢會抓取產品\<型號的圖片> 元素，其中的圖片大小為「小型：  
+ 例如,以下查詢檢索\<圖片大小為「小」的產品模型的「圖片>元素:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -167,12 +168,11 @@ WHERE ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
--   
-  `declare namespace` 定義後續用於查詢中的命名空間前置詞。  
+-   `declare namespace` 定義後續用於查詢中的命名空間前置詞。  
   
--   \<大小> 元素值會與指定的不可部份完成值 "small" 進行比較。  
+-   大小\<>元素值与指定的原子值"小"進行比較。  
   
--   請注意，因為值運算子僅適用于不可部分完成的值，所以會隱含地使用**data （）** 函數來抓取節點值。 也就是，`data($P/PD:Size) eq "small"` 會產生相同的結果。  
+-   請注意,由於值運算元僅適用於原子值,**因此資料()** 函數隱式用於檢索節點值。 也就是，`data($P/PD:Size) eq "small"` 會產生相同的結果。  
   
  以下是結果：  
   
@@ -188,7 +188,7 @@ WHERE ProductModelID=19
  請注意值比較的類型升級規則與一般比較的類型升級規則相同。 另外，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在進行值比較時為不具類型的值使用與進行一般比較時所使用的轉換規則相同的規則。 相對的，XQuery 規格永遠會在進行值比較時，將不具類型的值轉換為 xs:string。  
   
 ## <a name="node-comparison-operator"></a>節點比較運算子  
- 節點比較運算子**為**，只適用于節點類型。 它所傳回的結果會指出，以運算元傳遞的兩個節點是否代表來源文件中的相同節點。 如果兩個運算元是相同的節點，則此運算子此會傳回 True。 否則它會傳回 False。  
+ 節點比較運算符**是**,僅適用於節點類型。 它所傳回的結果會指出，以運算元傳遞的兩個節點是否代表來源文件中的相同節點。 如果兩個運算元是相同的節點，則此運算子此會傳回 True。 否則它會傳回 False。  
   
  下列查詢會檢查工作中心位置 10 在製造特定產品型號的過程中是否為第一個。  
   
@@ -221,11 +221,11 @@ ProductModelID       Result
   
  這些是根據文件順序所做的比較：  
   
--   `<<`：**運算元 1**會在檔順序中的**運算元 2**前面。  
+-   `<<`:**操作數 1**在文件順序中**操作符 2**之前嗎?  
   
--   `>>`：**運算元 1**會遵循檔順序中的**運算元 2** 。  
+-   `>>`:**操作符 1**是否遵循文件順序中的**操作數 2。**  
   
- 如果產品目錄描述的瑕疵\<擔保> 專案出現在特定產品之檔順序中的\<維護> 元素之前，則下列查詢會傳回 True。  
+ 如果產品目錄說明的\<保修>元素出現在特定產品的文檔\<訂單中的 維護>元素之前,則以下查詢將返回 True。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -241,14 +241,14 @@ where ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
--   **Xml**資料類型的**value （）** 方法會在查詢中使用。  
+-   查詢中使用了**xml**數據類型**的值()** 方法。  
   
--   查詢的布林結果會轉換成**Nvarchar （10）** 並傳回。  
+-   查詢的布爾結果將轉換為**nvarchar (10)** 並返回。  
   
 -   此查詢會傳回 True。  
   
 ## <a name="see-also"></a>另請參閱  
- [輸入 System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
+ [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 運算式](../xquery/xquery-expressions.md)  
   
   

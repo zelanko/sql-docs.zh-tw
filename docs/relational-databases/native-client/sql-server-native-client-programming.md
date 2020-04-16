@@ -1,5 +1,5 @@
 ---
-title: SQL 伺服器本機客戶端程式設計 |微軟文件
+title: 程式設計
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327a0333915e5b93347438104e7af1006ffffc91
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 08232e07550d77f01661eb9bc5b383da3fb23e9c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81305049"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388696"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

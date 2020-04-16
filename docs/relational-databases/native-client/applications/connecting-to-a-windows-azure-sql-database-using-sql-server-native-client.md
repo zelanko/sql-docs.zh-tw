@@ -1,5 +1,5 @@
 ---
-title: 本機客戶端,連線到 Azure SQL DB
+title: 連線到 Azure SQL DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ae1bfbd26e8accee85c001a84a817256daa370d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: 474db6d714d770ed5bfe0e509b79efc543ff1866
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302515"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388206"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 連線到 Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

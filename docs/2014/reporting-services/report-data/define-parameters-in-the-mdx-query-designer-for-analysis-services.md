@@ -1,5 +1,5 @@
 ---
-title: 在 Analysis Services 的 MDX 查詢設計工具中定義參數（報表產生器和 SSRS） |Microsoft Docs
+title: 在 MDX 查詢設計器中定義分析服務(報表產生器和 SSRS)中的參數 |微軟文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd352eccbe0cba2d29c7c446eef00bea5415084d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176905"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388538"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數 (報表產生器及 SSRS)
   若要將 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源的 MDX 查詢參數化，您必須將查詢參數加入查詢中。 在 MDX 查詢設計工具中，您可以透過指定篩選，在 [設計] 模式和 [查詢] 模式中加入查詢參數。 在您使用查詢參數來定義查詢之後，Reporting Services 會自動建立報表參數和資料集來提供有效值的清單。 如此可讓使用者指定直接傳遞給查詢的值。
@@ -59,9 +59,9 @@ ms.locfileid: "78176905"
 
 2.  在工具列上按一下 **[設計]** ，切換至 [查詢] 模式。
 
-3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數]  (![[查詢參數] 對話方塊圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。
+3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數]  (![[查詢參數] 對話方塊圖示](../../analysis-services/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。
 
-4.  在 [參數]  資料行中，按一下 [\<輸入參數>]  ，然後鍵入參數名稱。
+4.  在 [參數]  資料行中，按一下 [**輸入參數>]\<** ，然後鍵入參數名稱。
 
 5.  在 [維度]  資料行中，從下拉式清單選擇一個值。
 
@@ -82,6 +82,6 @@ ms.locfileid: "78176905"
      若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]** 。 [報表資料] 窗格會顯示報表中的所有資料集。
 
 ## <a name="see-also"></a>另請參閱
- [Mdx &#40;SSRS&#41;Analysis Services 連線類型](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services mdx 查詢設計工具使用者介面](analysis-services-mdx-query-designer-user-interface.md)
+ [MDX 分析服務連線型態 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)[分析服務 MDX 查詢設計器使用者介面](analysis-services-mdx-query-designer-user-interface.md)
 
 

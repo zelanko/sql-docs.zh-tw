@@ -14,12 +14,12 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b7453be98f6877f77eb61af4bbd429704816a219
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78172775"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388328"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>以文字為基礎的查詢設計工具使用者介面 (報表產生器)
   使用以文字為基礎的查詢設計工具，可透過資料來源支援的查詢語言來指定查詢、執行查詢，並在設計階段檢視結果。 您可以指定多個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式、自訂資料處理延伸模組的查詢或命令語法，以及指定為運算式的查詢。 以文字為基礎的查詢設計工具不會前置處理查詢，而且可以容納各種查詢語法，所以這是許多資料來源類型的預設查詢設計工具。
@@ -40,13 +40,13 @@ ms.locfileid: "78172775"
 |------------|-----------------|
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 並非所有的資料來源類型都支援圖形化查詢設計工具。|
 |**匯入**|從檔案或報表匯入現有的查詢。 只支援 sql 和 rdl 檔案類型|
-|![執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢，並將結果集顯示在 [結果] 窗格中。|
+|![執行查詢](../../analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢，並將結果集顯示在 [結果] 窗格中。|
 |**命令類型**|選取 [Text]  、[StoredProcedure]  或 [TableDirect]  。 如果預存程序含有參數，當您按一下工具列上的 [執行]  時，便會顯示 [定義查詢參數]  對話方塊，您可以依照需要填入值。<br /><br /> 注意：若預存程序傳回一個以上的結果集，則只會使用第一個結果集填入資料集。|
 
 ### <a name="command-type-text"></a>Text 命令類型
  當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料集時，預設會開啟關聯式查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯]**** 切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。
 
- ![一般查詢設計工具，適用於關聯式資料查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "一般查詢設計工具，適用於關聯式資料查詢")
+ ![一般查詢設計工具，適用於關聯式資料查詢](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "一般查詢設計工具，適用於關聯式資料查詢")
 
  下表會描述各個窗格的功能。
 
@@ -56,7 +56,7 @@ ms.locfileid: "78172775"
 |結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]****，或是按一下工具列上的 [執行]**** 按鈕。|
 
 #### <a name="example"></a>範例
- 下列查詢[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]會從`Person`架構的**2008**資料庫`ContactType`資料表中傳回姓氏清單。
+ 以下查詢`ContactType`返回`Person`架構的**2008**[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫表中的姓氏清單。
 
 ```
 SELECT Name FROM Person.ContactType
@@ -69,7 +69,7 @@ SELECT Name FROM Person.ContactType
 
  下圖會在您執行預存程序時，顯示 [查詢] 和 [結果] 窗格。 在此情況下，輸入參數是常數。
 
- ![以文字為基礎的查詢設計工具中的預存程序](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "以文字為基礎的查詢設計工具中的預存程序")
+ ![在以文字為基礎查詢設計工具中的預存程序](../../analysis-services/media/rs-relational-text-sp.gif "在以文字為基礎查詢設計工具中的預存程序")
 
  下表會描述各個窗格的功能。
 
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]****，或是按一下工具列上的 [執行]**** 按鈕。|
 
 #### <a name="example"></a>範例
- 下列查詢會呼叫[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**預存程式`uspGetWhereUsedProductID`。 當您執行查詢時，必須為產品識別碼參數輸入值。
+ 以下查詢呼叫[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**`uspGetWhereUsedProductID`儲存過程 。 當您執行查詢時，必須為產品識別碼參數輸入值。
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  當您選取 [命令類型] [TableDirect]**** 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行]**** 按鈕時，便會傳回該資料表的所有資料行。
 
 #### <a name="example"></a>範例
- 針對 OLE DB 的資料來源類型，下列資料集查詢會傳回[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**資料庫中所有連絡人類型的結果集。
+ 對於數據源類型 OLE DB,以下數據集查詢[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]將返回**2008**資料庫中所有聯繫人類型的結果集。
 
  `Person.ContactType`
 
  當您輸入資料表名稱 Person.ContactType 時，就等於建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式 `SELECT * FROM Person.ContactType`。
 
 ## <a name="see-also"></a>另請參閱
- [關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](relational-query-designer-user-interface-report-builder.md) [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)
+ [關聯設計器使用者介面&#40;報表產生器&#41;](relational-query-designer-user-interface-report-builder.md)[查詢設計器&#40;報表產生器&#41;](../query-designers-report-builder.md)
 
 

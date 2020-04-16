@@ -1,5 +1,5 @@
 ---
-title: 本機客戶端、標頭和庫檔案
+title: 標題與庫檔案
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91c5d5bdac12e99a74f21a54d1303d90435f7534
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 57e4b7c27ed32beaa1139300fdb83c4fb79583df
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303880"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388460"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 標頭檔與程式庫檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

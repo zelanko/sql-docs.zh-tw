@@ -1,5 +1,5 @@
 ---
-title: SQL 伺服器本機用戶端 (ODBC) |微軟文件
+title: ODBC
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 913e5387d0104fcc37c562592514801a0e2dc234
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1b5aec5d77f7355b601644907034bce0996080ab
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303639"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388376"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

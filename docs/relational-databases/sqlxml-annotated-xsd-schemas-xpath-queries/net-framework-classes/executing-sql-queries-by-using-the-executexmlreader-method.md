@@ -1,5 +1,6 @@
 ---
 title: 使用 ExecuteXMLReader 方法執行 SQL 查詢
+description: 瞭解如何使用 SqlXmlCommand 物件的 ExecuteXmlReader 方法運行 SQL 查詢以執行命令。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23b28209db43753b7185a87311ec6d338bcaccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9acfa4eecb97902f20a0ba25762e2b14f2d5c756
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251522"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387992"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法執行 SQL 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  您可以使用 SqlXmlCommand 物件的 ExecuteXmlReader 方法來執行命令，而不是使用 ExecuteToStream 方法。 這個方法會傳回可用於進一步處理結果的 XmlReader 物件（在此範例中，會列印元素或屬性名稱和值）。  
+  您可以使用 SqlXmlCommand 物件的 ExecuteXmlReader 方法來執行命令,而不是使用 ExecuteToStream 方法。 此方法返回一個 XmlReader 物件,該物件可用於進一步處理結果(在此範例中,該物件是列印元素或屬性名稱和值)。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

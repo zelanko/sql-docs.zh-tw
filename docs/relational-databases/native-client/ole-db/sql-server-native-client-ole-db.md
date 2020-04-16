@@ -1,5 +1,5 @@
 ---
-title: SQL 伺服器本機用戶端 (OLE DB) |微軟文件
+title: OLE DB
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 424565f5eb1b0e9ee0770f988090ecb16788c585
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81307266"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387746"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

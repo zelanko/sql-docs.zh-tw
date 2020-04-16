@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "62767557"
 ---
-# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步驟 7：加入及設定 OLE DB 目的地
+# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步驟 7：新增和設定 OLE DB 目的地
   現在，封裝可以從一般檔案來源中擷取資料，再將資料轉換成與目的地相容的格式。 下一項工作是要把已轉換的資料實際載入到目的地。 若要載入資料，您必須將 OLE DB 目的地加入資料流程中。 OLE DB 目的地可使用資料庫資料表、檢視或 SQL 命令，將資料載入到各種 OLE DB 相容資料庫中。  
   
  在這個程序中，您加入和設定 OLE DB 目的地來使用您先前建立的 OLE DB 連接管理員。  
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>若要加入和設定範例 OLE DB 目的地  
   
-1.  在 [ **SSIS 工具箱**] 中，展開 [**其他目的地**]，然後將 [ **OLE DB 目的地**] 拖曳至 **[資料流程]** 索引標籤的設計介面上。將 OLE DB 目的地直接放在 [**查閱日期索引鍵**] 轉換底下。  
+1.  在**SSIS 工具箱**中,展開**其他目標**,並將**OLE DB 目標**拖動到**資料串**流選項卡的設計圖面上。 **Lookup Date Key**  
   
 2.  按一下 [查閱日期索引鍵]**** 轉換，將綠色箭頭拖曳至新加入的 [OLE DB 目的地]****，來連接這兩個元件。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767557"
   
 13. 以滑鼠右鍵按一下 [範例 OLE DB 目的地]**** 目的地，然後按一下 [屬性]****。  
   
-14. 在 [屬性視窗中，確認屬性`LocaleID`是設為 [**英文（美國）** ]，且`DefaultCodePage`屬性設定為**1252**。  
+14. `LocaleID`在「屬性」視窗中,驗證屬性是否設定為**英語(美國),**`DefaultCodePage`屬性設定為**1252**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 8：使第 1 課的封裝更容易了解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

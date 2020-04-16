@@ -1,5 +1,5 @@
 ---
-title: SQL 本機客戶端 OLE 資料庫提供程式應用程式
+title: 建立 OLE DB 應用
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8459fb3d906be6efca0e47d83418fb70bdebdb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cf15d32e162dfd7881e6d0418a28e1f10212a44d
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81289658"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388565"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>建立 SQL Server Native Client OLE DB 提供者應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

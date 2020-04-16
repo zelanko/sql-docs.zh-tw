@@ -1,5 +1,5 @@
 ---
-title: 表值參數,本機用戶端 SQL
+title: 資料表值參數
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4505593df677a4f82afc1fd579172b73ea626f7e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 7134f0689701c663133e52dd9face50e99ef3102
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303194"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388429"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>資料表值參數 (SQL Server Native Client)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

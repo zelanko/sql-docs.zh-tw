@@ -1,5 +1,5 @@
 ---
-title: SAP NetWeaver BI 查詢設計工具使用者介面（報表產生器） |Microsoft Docs
+title: SAP NetWeaver BI 查詢設計器使用者介面(報表產生器) |微軟文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aebffe75cf3644717315cd80c82cc753e3256f57
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: d3dc9e21a9bea5c188b32ccc01b7d1fa6d15fa98
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78174946"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388649"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>SAP NetWeaver BI 查詢設計工具使用者介面 (報表產生器)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立適用於 SAP NetWeaver® Business Intelligence 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：「設計」模式和「查詢」模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從資料來源上定義的 InfoCube、MultiProvider 或 Web 查詢中拖曳成員，從而建立 MDX 查詢，在處理報表時擷取資料。
 
 > [!IMPORTANT]
@@ -51,17 +50,17 @@ ms.locfileid: "78174946"
 
 |按鈕|描述|
 |------------|-----------------|
-|**當做文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 無法用於這種資料來源類型。|
-|**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|
+|**[當成文字編輯]**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 無法用於這種資料來源類型。|
+|[匯入]****|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|
 |![重新整理資料集欄位](media/rsqdicon-refreshfields.gif "重新整理資料集欄位")|重新整理資料來源中的中繼資料。|
-|![加入導出成員](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|
-|![切換以顯示空資料格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|
-|![自動執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更 (例如刪除 [資料] 窗格中的資料行) 時自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|
-|![刪除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|
-|![[查詢參數] 對話方塊圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示")|顯示 **[變數]** 對話方塊。 只有當選取的 Cube 是查詢 Cube 時，才會啟用這個按鈕 (因為只有查詢 Cube 才支援變數)。 當您指派預設值給變數時，就會建立對應的報表參數。|
-|![執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢並將結果顯示在 [資料] 窗格中。|
-|![取消查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "取消查詢")|取消查詢。|
-|![切換到設計模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "切換到設計模式")|在「設計」模式與「查詢」模式之間切換。|
+|![新增導出成員](../analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|
+|![切換以顯示空資料格](../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|
+|![自動執行查詢](../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更 (例如刪除 [資料] 窗格中的資料行) 時自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|
+|![刪除](../analysis-services/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|
+|![[查詢參數] 對話方塊圖示](../analysis-services/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示")|顯示 **[變數]** 對話方塊。 只有當選取的 Cube 是查詢 Cube 時，才會啟用這個按鈕 (因為只有查詢 Cube 才支援變數)。 當您指派預設值給變數時，就會建立對應的報表參數。|
+|![執行查詢](../analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢並將結果顯示在 [資料] 窗格中。|
+|![取消查詢](../analysis-services/media/rsqdicon-cancel.gif "取消查詢")|取消查詢。|
+|![切換到設計模式](../analysis-services/media/rsqdicon-designmode.gif "切換到設計模式")|在「設計」模式與「查詢」模式之間切換。|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>查詢模式中的圖形化查詢設計工具
  若要將圖形化查詢設計工具變更為「查詢」模式，請按一下工具列上的 **[設計模式]** 切換按鈕。
@@ -89,15 +88,15 @@ ms.locfileid: "78174946"
 ### <a name="toolbar-for-the-graphical-query-designer-in-query-mode"></a>查詢模式中的圖形化查詢設計工具工具列
  查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 MDX 查詢。 「設計」模式與「查詢」模式的工具列按鈕完全相同，唯一不同的是在「查詢」模式中未啟用下列按鈕：
 
--   **當做文字編輯**
+-   **[當成文字編輯]**
 
--   **加入匯出成員**（![加入匯出成員](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出成員")）
+-   **新增導出成員** (![新增導出成員](../analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出成員"))
 
--   **顯示空白資料格**（![切換以顯示空的資料格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空資料格")）
+-   **顯示空資料格** (![切換以顯示空資料格](../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空資料格"))
 
--   **自動執行**（![自動執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")）
+-   **自動執行** (![自動執行查詢](../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢"))
 
--   **刪除**（![delete](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "刪除")）
+-   **刪除** (![刪除](../analysis-services/media/rsqdicon-delete.gif "刪除"))
 
 ## <a name="see-also"></a>另請參閱
  [查詢設計工具 &#40;報表產生器&#41;](../../2014/reporting-services/query-designers-report-builder.md)

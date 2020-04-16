@@ -1,5 +1,6 @@
 ---
-title: XML 大量載入範例（SQLXML）
+title: XML 大容量載入範例 (SQLXML)
+description: 查看 SQKXML 4.0 中 XML 大容量載入功能的詳細範例,每個範例都使用 XSD 和 XDR 架構。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,19 +33,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70e66a02637b65e96cccc6001c9702d5253d5cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e79be936942d9d66d52d5a1c1eb9fa2d94318bd3
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257371"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388340"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大量載入範例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   下列範例說明 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 XML 大量載入功能。 每個範例都會提供一個 XSD 結構描述及其等同的 XDR 結構描述。  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>大量載入程式指令碼 (ValidateAndBulkload.vbs)  
- 下列腳本是以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition （VBScript）撰寫，會將 xml 檔載入到 xml DOM;針對架構進行驗證。而且，如果檔有效，會執行 XML 大量載入，以將 XML 載入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。 此指令碼可以搭配本主題稍後所參考的每個個別範例使用。  
+ 以下文本在[!INCLUDE[msCoName](../../../includes/msconame-md.md)]可視化基本文本版本 (VBScript) 中編寫,將 XML 文件載入到 XML DOM 中;根據架構驗證它;如果文件有效,則執行 XML 大容量載入以將 XML[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]載入到 表中。 此指令碼可以搭配本主題稍後所參考的每個個別範例使用。  
   
 > [!NOTE]  
 >  如果沒有從資料檔上傳任何內容，XML 大量載入不會擲回警告或錯誤。 因此，最好在執行大量載入作業之前，先驗證您的 XML 資料檔。  
@@ -113,7 +114,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. 將 XML 大量載入到資料表中  
- 這個範例會建立 ConnectionString 屬性（MyServer） [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中所指定之實例的連接。 此範例也會指定 ErrorLogFile 屬性。 因此，錯誤輸出會儲存在指定的檔案 ("C:\error.log") 中，您也可以決定變更到不同的位置。 同時也請注意，Execute 方法的參數都是對應架構檔案（Sampleschema.xml）和 XML 資料檔（Samplexmldata.xml）。 當大量載入執行時，您在**tempdb**資料庫中建立的「使用者」資料表會根據 XML 資料檔案的內容包含新的記錄。  
+ 本示例建立與連接字串屬性 (MyServer) 中指定的實[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]例 的連接。 該示例還指定 ErrorLogFile 屬性。 因此，錯誤輸出會儲存在指定的檔案 ("C:\error.log") 中，您也可以決定變更到不同的位置。 另請注意,Execute 方法具有映射架構檔 (sampleSchema.xml) 和 XML 資料檔 (sampleXMLData.xml) 的參數。 執行大容量載入時,在**tempdb**資料庫中建立的 Cust 表將包含基於 XML 資料檔內容的新記錄。  
   
 #### <a name="to-test-a-sample-bulk-load"></a>測試大量載入範例  
   
@@ -171,7 +172,7 @@ End Function
     </ROOT>  
     ```  
   
-4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將本主題開頭提供的 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器名稱。 針對指定為 Execute 方法參數的檔案指定適當的路徑。  
+4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將本主題開頭提供的 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器名稱。 為指定為 Execute 方法的參數的檔指定適當的路徑。  
   
 5.  執行 VBScript 程式碼。 XML 大量載入會將 XML 載入到 Cust 資料表中。  
   
@@ -201,7 +202,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 將 XML 資料大量載入到多個資料表中  
- 在此範例中，XML 檔是由** \<Customer>** 和** \<Order>** 元素所組成。  
+ 在此範例中,XML 文件由**\<客戶>** 和**\<訂購>** 元素組成。  
   
 ```xml  
 <ROOT>  
@@ -226,13 +227,13 @@ End Function
 </ROOT>  
 ```  
   
- 這個範例會將 XML 資料大量載入到兩個**** **資料表：**  
+ 此範例批次將 XML 資料載入到兩個表中 **,Cust**和**CustOrder**:  
   
--   客戶（CustomerID、公司名稱、城市）  
+-   Cust (客戶識別碼、公司名稱、城市)  
   
--   CustOrder （訂單，CustomerID）  
+-   訂單(訂單ID,客戶ID)  
   
- 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 架構會指定** \<客戶>** 與** \<Order>** 元素之間的父子式關聯性。  
+ 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 架構指定**\<客戶>** 和**\<訂單>** 元素之間的父子關係。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -271,11 +272,11 @@ End Function
 </xsd:schema>  
 ```  
   
- XML 大量載入會使用在** \<客戶>** 和** \<CustOrder>** 元素之間指定的主鍵/外鍵關聯性，將資料大量載入到這兩個數據表。  
+ XML 大量載入使用上述**\<Cust>** 和**\<CustOrder>** 元素之間指定的主鍵/外鍵關係將數據批量載入到兩個表中。  
   
 #### <a name="to-test-a-sample-bulk-load"></a>測試大量載入範例  
   
-1.  在**tempdb**資料庫中建立兩個數據表：  
+1.  在**tempdb**資料庫建立兩個表:  
   
     ```sql  
     USE tempdb;  
@@ -291,7 +292,7 @@ End Function
   
 3.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 SampleData.xml。 將這個範例先前所提供的 XML 文件加入到此檔案中。  
   
-4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將本主題開頭提供的 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 針對指定為 Execute 方法參數的檔案指定適當的路徑。  
+4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將本主題開頭提供的 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 為指定為 Execute 方法的參數的檔指定適當的路徑。  
   
 5.  執行上述的 VBScript 程式碼。 XML 大量載入會將 XML 文件載入到 Cust 和 CustOrder 資料表中。  
   
@@ -384,7 +385,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 架構會指定具有** \<產品>** 子專案的** \<Order>** 元素。 Order>元素會對應到 Ord 資料表，而** \<Product>** 元素則會對應至資料庫中的 product 資料表。 ** \< ** 在** \<Product>** 專案上指定的鏈關聯性會識別 OrderDetail 資料表所代表的 M:N 關聯性。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
+ 架構指定具有**\<****\<產品>** 子元素的訂單>元素。 "訂單>元素映射到 Ord 表,"**\<產品>"** 元素映射到資料庫中的產品表。 ** \<** 在**\<產品>** 元素上指定的鏈關係標識由 OrderDetail 表表示的 M:N 關係。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
   
  當您要使用此結構描述大量載入 XML 文件時，會將記錄加入到 Ord、Product 和 OrderDetail 資料表中。  
   
@@ -453,7 +454,7 @@ Product (ProductID, ProductName)
 OrderDetail (OrderID, ProductID)  
 ```  
   
- 在此 XML 大量載入範例中，BulkLoad 物件模型的 KeepIdentity 屬性會設定為 false。 因此，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會分別在 Product 和 Ord 資料表中，為 ProductID 和 OrderID 資料行產生識別值 (系統會忽略要大量載入之文件所提供的任何值)。  
+ 在此示例中的 XML 批量載入中,BulkLoad 物件模型的保留標識屬性設置為 false。 因此，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會分別在 Product 和 Ord 資料表中，為 ProductID 和 OrderID 資料行產生識別值 (系統會忽略要大量載入之文件所提供的任何值)。  
   
  在此情況下，XML 大量載入會在資料表之間識別主索引鍵/外部索引鍵關聯性。 大量載入會先將記錄插入具有主索引鍵的資料表，然後再將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所產生的識別值傳播到具有外部索引鍵資料行的資料表中。 在下列範例中，XML 大量載入會以下列順序，將資料插入資料表中。  
   
@@ -542,7 +543,7 @@ OrderDetail (OrderID, ProductID)
     </ROOT>  
     ```  
   
-4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將下列 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 針對做為**Execute**方法參數的檔案指定適當的路徑。  
+4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將下列 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 為充當**執行**方法的參數的檔指定適當的路徑。  
   
     ```  
     Set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -559,13 +560,13 @@ OrderDetail (OrderID, ProductID)
 5.  執行 VBScript 程式碼。 XML 大量載入會將資料載入到適當的資料表中。  
   
 ## <a name="e-generating-table-schemas-before-bulk-loading"></a>E. 大量載入前產生資料表結構描述  
- 如果大量載入前資料表不存在，XML 大量載入可以選擇性地產生資料表。 將 Sqlxmlbulkload.sqlxmlbulkload.4.0 物件的 SchemaGen 屬性設定為 TRUE 會執行此工作。 您也可以選擇性地要求 XML 大量載入來卸載任何現有的資料表，並藉由將 SGDropTables 屬性設定為 TRUE 來重新建立它們。 下列 VBScript 範例說明這些屬性的用法。  
+ 如果大量載入前資料表不存在，XML 大量載入可以選擇性地產生資料表。 將 SQLXMLBulkLoad 物件的架構Gen 屬性設置為 TRUE 可以這樣做。 您還可以選擇請求 XML 批量載入以刪除任何現有表,並透過將 SGDropTables 屬性設定為 TRUE 來重新建立它們。 下列 VBScript 範例說明這些屬性的用法。  
   
  同時，此範例會將兩個額外的屬性設定為 TRUE：  
   
--   CheckConstraints. 將此屬性設定為 TRUE 可確保要插入資料表的資料沒有違反已經在資料表上指定的任何條件約束 (在此情況下為 Cust 和 CustOrder 資料表之間指定的 PRIMARY KEY/FOREIGN KEY 條件約束)。 如果有條件約束違規，大量載入便會失敗。  
+-   檢查約束。 將此屬性設定為 TRUE 可確保要插入資料表的資料沒有違反已經在資料表上指定的任何條件約束 (在此情況下為 Cust 和 CustOrder 資料表之間指定的 PRIMARY KEY/FOREIGN KEY 條件約束)。 如果有條件約束違規，大量載入便會失敗。  
   
--   XMLFragment. 此屬性必須設定為 TRUE，因為 XML 文件 (資料來源) 範例不包含單一的最上層元素 (因此為片段)。  
+-   XML碎片。 此屬性必須設定為 TRUE，因為 XML 文件 (資料來源) 範例不包含單一的最上層元素 (因此為片段)。  
   
  這是 VBScript 程式碼：  
   
@@ -588,14 +589,14 @@ Set objBL = Nothing
   
 1.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 SampleSchema.xml。 將稍早範例「使用結構描述中的鏈結關聯性大量載入 XML」中提供的 XSD 結構描述加入到檔案中。  
   
-2.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 SampleXMLData.xml。 將稍早範例「使用結構描述中的鏈結關聯性大量載入 XML」中提供的 XML 文件加入到檔案中。 從檔\<中移除根> 元素（使其成為片段）。  
+2.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 SampleXMLData.xml。 將稍早範例「使用結構描述中的鏈結關聯性大量載入 XML」中提供的 XML 文件加入到檔案中。 從文件\<中刪除 ROOT>元素(使其成為片段)。  
   
-3.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將此範例中的 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 針對指定為 Execute 方法參數的檔案指定適當的路徑。  
+3.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將此範例中的 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 為指定為 Execute 方法的參數的檔指定適當的路徑。  
   
 4.  執行 VBScript 程式碼。 XML 大量載入會根據所提供的對應結構描述建立所需的資料表，並在其中大量載入資料。  
   
 ## <a name="f-bulk-loading-from-a-stream"></a>F. 從資料流大量載入  
- XML 大量載入物件模型的 Execute 方法會接受兩個參數。 第一個參數是對應的結構描述檔案。 第二個參數會提供要載入到資料庫中的 XML 資料。 有兩種方式可將 XML 資料傳遞給 XML 大量載入的 Execute 方法：  
+ XML 大容量載入物件模型的執行方法採用兩個參數。 第一個參數是對應的結構描述檔案。 第二個參數會提供要載入到資料庫中的 XML 資料。 有兩種方法可以將 XML 資料傳遞到 XML 大容量載入的執行方法:  
   
 -   將檔案名稱指定為參數。  
   
@@ -614,9 +615,9 @@ Set objBL = Nothing
 ...  
 ```  
   
- 接著，腳本會將 XML 當做資料流程傳遞至 Execute 方法，做為它的第二個參數。 Execute 方法會將資料大量載入至 [加入] 資料表。  
+ 然後,文稿將 XML 作為流傳遞到 Execute 方法作為其第二個參數。 執行方法批量將數據載入到 Cust 表中。  
   
- 因為此腳本會將 SchemaGen 屬性設為 TRUE，並將 SGDropTables 屬性設定為 TRUE，所以 XML 大量載入會在指定的資料庫中建立 [加入] 資料表。 (如果此資料表已存在，它會先卸除資料表，然後再重新建立它)。  
+ 由於此文本將 SchemaGen 屬性設定為 TRUE,SGDropTables 屬性將設置為 TRUE,因此 XML 批量載入會在指定的資料庫中創建 Cust 表。 (如果此資料表已存在，它會先卸除資料表，然後再重新建立它)。  
   
  這是 VBScript 範例：  
   
@@ -707,7 +708,7 @@ Set objBL = Nothing
 ```  
   
 ### <a name="opening-a-stream-on-an-existing-file"></a>開啟現有檔案上的資料流  
- 您也可以在現有的 XML 資料檔案上開啟資料流程，並將資料流程當做參數傳遞至 Execute 方法（而不是傳遞檔案名做為參數）。  
+ 您還可以打開現有 XML 資料檔上的流,並將流作為參數傳遞給 Execute 方法(而不是將檔名作為參數傳遞)。  
   
  這是將資料流當做參數傳遞的 Visual Basic 範例：  
   
@@ -809,7 +810,7 @@ End Sub
 ```  
   
 ## <a name="g-bulk-loading-in-overflow-columns"></a>G. 大量載入溢位資料行  
- 如果對應架構使用**sql：溢位欄位**注釋來指定溢位資料行，XML 大量載入就會將來源文件中所有未耗用的資料複製到此資料行。  
+ 如果映射架構通過使用**sql:溢出欄位**註釋指定溢出列,XML 批量載入會將原始文件中的所有未使用的資料複製到此列中。  
   
  請考慮使用這個 XSD 結構描述：  
   
@@ -846,14 +847,14 @@ End Sub
 </xsd:schema>  
 ```  
   
- 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 因此，每個** \<>客戶**的所有未耗用的 XML 資料都會新增至此資料行。  
+ 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 因此,每個**\<客戶>** 元素的所有未消耗的 XML 資料都添加到此列中。  
   
 > [!NOTE]  
->  所有的抽象元素（已指定**abstract = "true"** 的專案）和所有禁止的屬性（指定**禁止 = "true"** 的屬性）都會被 XML 大量載入視為溢位，而且會加入至溢位資料行（如果有指定的話）。 (否則便會予以忽略)。  
+>  所有抽象元素(指定**抽象="true"** 的元素)和所有禁止的屬性(指定**禁止的屬性="true")** 都被視為 XML 批量載入溢出,如果指定,則添加到溢出列中。 (否則便會予以忽略)。  
   
 #### <a name="to-test-a-working-sample"></a>測試工作範例  
   
-1.  在**tempdb**資料庫中建立兩個數據表：  
+1.  在**tempdb**資料庫建立兩個表:  
   
     ```  
     USE tempdb;  
@@ -900,7 +901,7 @@ End Sub
     </ROOT>  
     ```  
   
-4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將下列 Microsoft Visual Basic Scripting Edition (VBScript) 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 針對指定為 Execute 方法參數的檔案指定適當的路徑。  
+4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將下列 Microsoft Visual Basic Scripting Edition (VBScript) 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 為指定為 Execute 方法的參數的檔指定適當的路徑。  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -953,13 +954,13 @@ End Sub
 ```  
   
 ## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>H. 在交易模式下指定暫存檔案的檔案路徑  
- 當您以交易模式大量載入時（也就是當 Transaction 屬性設定為 TRUE 時），當下列任一條件成立時，您也必須設定 TempFilePath 屬性：  
+ 當您在事務模式下批次載入時(即,當事務屬性設定為 TRUE 時),還必須在以下任一條件為 true 時設定 TempFilePath 屬性:  
   
 -   您要大量載入到遠端伺服器。  
   
 -   您想要使用替代的本機磁碟或資料夾 (非 TEMP環境變數所指定的路徑) 來儲存交易模式下所建立的暫存檔案。  
   
- 例如，下列 VBScript 程式碼會在交易模式下，將資料從 SampleXMLData.xml 檔大量載入到資料庫資料表。 已指定 TempFilePath 屬性，以設定在交易模式中產生之暫存檔案的路徑。  
+ 例如，下列 VBScript 程式碼會在交易模式下，將資料從 SampleXMLData.xml 檔大量載入到資料庫資料表。 指定 TempFilePath 屬性是為了設置在事務模式下生成的暫存檔的路徑。  
   
 ```  
 set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -973,11 +974,11 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  暫存檔案路徑必須是一個共用位置，可存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體之服務帳戶以及執行大量載入應用程式的帳戶。 除非您是在本機伺服器上大量載入，否則暫存檔案路徑必須是 UNC 路徑（例如\\\servername\sharename ....）。  
+>  暫存檔案路徑必須是一個共用位置，可存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體之服務帳戶以及執行大量載入應用程式的帳戶。 除非在本地伺服器上批量載入,否則臨時檔路徑必須是 UNC 路徑\\(如 [servername]共用名稱)。  
   
 #### <a name="to-test-a-working-sample"></a>測試工作範例  
   
-1.  在**tempdb**資料庫中建立此資料表：  
+1.  在**tempdb**資料庫建立此表:  
   
     ```  
     USE tempdb;  
@@ -1017,7 +1018,7 @@ set objBL=Nothing
     </ROOT>  
     ```  
   
-4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將下列 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 針對指定為 Execute 方法參數的檔案指定適當的路徑。 也請為 TempFilePath 屬性指定適當的路徑。  
+4.  以慣用的文字編輯器或 XML 編輯器建立一個檔案，然後將其儲存為 ValidateAndBulkload.vbs。 將下列 VBScript 程式碼加入到此檔案中。 修改連接字串以提供適當的伺服器和資料庫名稱。 為指定為 Execute 方法的參數的檔指定適當的路徑。 還要為 TempFilePath 屬性指定適當的路徑。  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -1032,7 +1033,7 @@ set objBL=Nothing
   
 5.  執行 VBScript 程式碼。  
   
-     當**customerid**的值指定為包含大括弧（{和}）的 GUID 時，架構必須指定**customerid**屬性的對應**sql： datatype** ，例如：  
+     當**CustomerID**的值指定為包含大括號 ( +) 的 GUID 時,架構必須為**CustomerID**屬性指定相應的**sql:資料類型**,例如:  
   
     ```  
     <ROOT>  
@@ -1064,7 +1065,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     當**sql： datatype**指定將資料行類型識別為**uniqueidentifier**時，大量載入作業會先從**CustomerID**值中移除大括弧（{和}），再將它插入到資料行中。  
+     當指定**sql:Datatype**將列類型識別為**唯一識別符**時,批量載入操作會在將大括弧 (* 和 *) 從**CustomerID**值中刪除,然後再將其插入列中。  
   
  這是相等的 XDR 結構描述：  
   
@@ -1089,7 +1090,7 @@ set objBL=Nothing
 ## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>I. 搭配 ConnectionCommand 屬性使用現有的資料庫連接  
  您可以使用現有的 ADO 連接來大量載入 XML。 這在 XML 大量載入只是將在資料來源上執行之許多作業中的一個時相當實用。  
   
- ConnectionCommand 屬性可讓您藉由使用 ADO command 物件，來使用現有的 ADO 連接。 這會在下列 Visual Basic 範例中加以說明：  
+ ConnectCommand 屬性使您能夠使用 ADO 命令物件使用現有的 ADO 連接。 這會在下列 Visual Basic 範例中加以說明：  
   
 ```  
 Private Sub Form_Load()  
@@ -1115,7 +1116,7 @@ End Sub
   
 #### <a name="to-test-a-working-sample"></a>測試工作範例  
   
-1.  在**tempdb**資料庫中建立兩個數據表：  
+1.  在**tempdb**資料庫建立兩個表:  
   
     ```  
     USE tempdb;  
@@ -1244,9 +1245,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. 大量載入到 xml 資料類型資料行  
- 如果對應架構使用**sql： datatype = "xml"** 注釋來指定[xml 資料類型](../../../t-sql/xml/xml-transact-sql.md)資料行，則 xml 大量載入可以將來源文件中的對應欄位之 xml 子專案複製到這個資料行。  
+ 如果映射架構通過使用**sql:datatype_"xml"** 註釋指定[xml 資料類型](../../../t-sql/xml/xml-transact-sql.md)列,則 XML 批量載入可以將映射欄位的 XML 子元素從源文件複製到此列。  
   
- 請考慮使用下列 XSD 結構描述，該結構描述會對應 AdventureWorks 範本資料庫中的 Production.ProductModel 資料表檢視。 在此資料表中， **xml**資料類型的 CatalogDescription 欄位會使用**sql： field**和**sql： datatype = "xml"** 注釋對應到** \<Desc>** 專案。  
+ 請考慮使用下列 XSD 結構描述，該結構描述會對應 AdventureWorks 範本資料庫中的 Production.ProductModel 資料表檢視。 在此表中 **,xml**資料類型的目錄描述欄位使用**sql:欄位和 sql:datatype_"xml"****sql:datatype="xml"** 註釋映射到**\<Desc>** 元素。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

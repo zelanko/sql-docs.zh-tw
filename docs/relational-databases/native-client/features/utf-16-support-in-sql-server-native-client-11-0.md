@@ -1,5 +1,5 @@
 ---
-title: SQL 伺服器本機用戶端 11.0 中的 UTF-16 支援 |微軟文件
+title: UTF-16 支援
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: f2520424-8ef4-409f-8147-d83da5076e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56a368c8b01e1afec2fab5de5eb3c575c6ebdf14
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e81de975a3f8e2d5549ee968fc7e47bb5e3746c3
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303159"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388409"
 ---
 # <a name="utf-16-support-in-sql-server-native-client-110"></a>SQL Server Native Client 11.0 中的 UTF-16 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

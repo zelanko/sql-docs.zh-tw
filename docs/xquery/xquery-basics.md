@@ -1,5 +1,6 @@
 ---
-title: XQuery 基本概念 |Microsoft Docs
+title: XQuery 基礎知識 |微軟文件
+description: 瞭解 XQuery 語言的基礎知識,包括序列和 QNames、運算式上下文、霧化、類型系統、錯誤處理和註解。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81a506c9f7b079dc86062976fca1b8785c1a80dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 92882722baab0284f421989ba4906e60e777049e
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946058"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388131"
 ---
 # <a name="xquery-basics"></a>XQuery 基本概念
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -27,22 +28,22 @@ ms.locfileid: "67946058"
   本節描述 XQuery 的基礎觀念。  
   
 ## <a name="in-this-section"></a>本節內容  
- [Sequence 和 QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
+ [序列與 QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  描述時序以及 QNames 與預先定義的命名空間。  
   
- [運算式內容和查詢評估 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [運算式上下文和查詢評估&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  描述評估 XQuery 的兩個內容。 這兩個內容是靜態和動態的。  
   
- [不可部分完成 &#40;XQuery&#41;](../xquery/atomization-xquery.md)  
+ [原子化&#40;XQuery&#41;](../xquery/atomization-xquery.md)  
  描述自動化，這是擷取項目的具類型值之處理序。  
   
- [&#40;XQuery&#41;的有效布林值](../xquery/effective-boolean-value-xquery.md)  
+ [&#40;XQuery&#41;的有效布尔值](../xquery/effective-boolean-value-xquery.md)  
  描述有效的布林值。 運算式可用此值來計算，以傳回單一布林值、節點時序或空白時序。  
   
- [輸入 System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  描述有各種預先定義類型的 XQuery 類型系統。 XQuery 是結構描述類型的強型語言，且為不具類型的資料之弱型語言。  
   
- [處理 &#40;XQuery&#41;時發生錯誤](../xquery/error-handling-xquery.md)  
+ [&#40;XQuery&#41;的错误处理](../xquery/error-handling-xquery.md)  
  描述 XQuery 中靜態、動態和類型錯誤的處理。  
   
  [XQuery 中的註解](../xquery/comments-in-xquery.md)  
