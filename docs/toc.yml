@@ -1385,6 +1385,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: 查詢存放區頁面
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: 事件通知
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: 實作
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: 設定對話方塊安全性
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: 取得資訊
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: Filestream、Filetable 與 BLOB
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1540,14 +1549,7 @@
         - name: 順序屬性
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
     - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: 實作
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: 設定對話方塊安全性
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: 取得資訊
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: 空間資料
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4372,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: SQL Server 監視器概觀
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: 緩衝集區擴充
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: 伺服器組態選項
