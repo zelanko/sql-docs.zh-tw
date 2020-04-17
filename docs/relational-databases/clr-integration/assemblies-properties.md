@@ -1,5 +1,6 @@
 ---
-title: 元件屬性（一般頁面） |Microsoft Docs
+title: 裝配屬性(通用頁面) |微軟文件
+description: 您可以查看或修改 SQL Server 上託管的程式集的屬性。 其中包括程式集名稱和擁有者、許可權集和其他屬性。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027969"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488017"
 ---
 # <a name="assemblies---properties"></a>組件 - 屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,21 +30,21 @@ ms.locfileid: "68027969"
  **組件擁有者**  
  鍵入擁有者名稱或結構描述名稱，或者從清單中選取。  
   
- **權限集合**  
- 設定組件的安全性層級。 提供的安全性層級有三種：**安全**、**外部存取**和**不安全**的存取。  
+ **權限集**  
+ 設定組件的安全性層級。 提供了三個級別的安全:**安全**、**外部訪問**和**不安全**訪問。  
   
  **組件的路徑**  
  鍵入組件檔的路徑。  
   
  **瀏覽**  
- 導覽至您要加入的組件。 如果您不想要輸入元件檔的路徑，請按一下 **[流覽]** 。  
+ 導覽至您要加入的組件。 如果不想鍵入程式集檔的路徑,請按**下「瀏覽**」。  
   
 ## <a name="additional-properties-grid"></a>其他屬性方格  
  **建立日期**  
  顯示建立/註冊組件的日期。  
   
  **強式名稱**  
- 如果元件已數位簽署，則顯示**True** ，如果尚未數位簽署，則**為 False** 。  
+ 如果程式集已進行數字簽名,則顯示**為 True;** 如果未對程式集進行數位簽名,則**顯示為「False」。。**  
   
  **版本**  
  顯示組件的版本號碼。  

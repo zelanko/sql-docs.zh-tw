@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012434"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488532"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,14 +64,14 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
-要建立和訓練模型,請使用[SQL Server 機器學習服務 (R 或 Python)、SQL](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [Server 2016 R 服務](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[、SQL Server 機器學習伺服器(獨立)(R 或 Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)或[SQL Server 2016 R 伺服器(獨立)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)提供的 R 或 Python 支援的演演演算法之一。
+要建立和訓練模型,請使用[SQL Server 機器學習服務 (R 或 Python)、SQL](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services) [Server 2016 R 服務](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[、SQL Server 機器學習伺服器(獨立)(R 或 Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)或[SQL Server 2016 R 伺服器(獨立)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)提供的 R 或 Python 支援的演演演算法之一。
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR 模型
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees \(英文\) ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
-  + [rxDtree \(英文\) ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxd森林](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
 #### <a name="r-microsoftml-models"></a>R: 微軟ML模型
@@ -93,11 +93,11 @@ sp_rxPredict  ( @model, @input )
 
 #### <a name="python-revoscalepy-models"></a>Python:重度模型
 
-  + [rx_lin_mod \(英文\) ](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
-  + [rx_logit \(英文\) ](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit)
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit)
   + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees)
   + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree)
-  + [rx_dforest \(英文\) ](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest)
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest)
 
 
 #### <a name="python-microsoftml-models"></a>Python:微軟模型

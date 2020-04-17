@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19eaefc6fcd6615b74614893a37aa1722095e63d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9597b55eabb247dc4a95ed83fe04abac5067a269
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664307"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488173"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "80664307"
 逐資料列傳回各種類型的外部指令碼要求。 外部指令碼要求會依支援的外部指令碼語言分組。 針對每個註冊的外部指令碼函數，會產生一個資料列。 除非是由父處理序 (例如 `rxExec`) 送出，否則不會記錄任何外部指令碼函數。
   
 > [!NOTE]  
-> 此動態管理檢視 (DMV) 僅在安裝並啟用支援外部文本執行的功能時才可用。 有關詳細資訊,請參閱[SQL Server 2016 中的 R 服務和](../../machine-learning/r/sql-server-r-services.md)SQL Server [2017 及更高版本中的機器學習服務 (R、Python)。](../../machine-learning/what-is-sql-server-machine-learning.md)  
+> 此動態管理檢視 (DMV) 僅在安裝並啟用支援外部文本執行的功能時才可用。 有關詳細資訊,請參閱[SQL Server 2016 中的 R 服務和](../../machine-learning/r/sql-server-r-services.md)SQL Server [2017 及更高版本中的機器學習服務 (R、Python)。](../../machine-learning/sql-server-machine-learning-services.md)  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

@@ -1,6 +1,6 @@
 ---
-title: Common Language Runtime （CLR）程式設計
-description: Common Language Runtime （CLR）程式設計文章的連結
+title: 通用語言執行時 (CLR) 程式設計
+description: 本文提供了使用 CLR 與 SQL Server 整合的資源,它允許您使用任何 .NET 框架語言編寫伺服器端模組。
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c314745122f0735b2b26ac2bb021f20f637b2a28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c44e777e78e9d2a6ded97e5bff2ec61e4c7f8391
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75256186"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488111"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Common Language Runtime (CLR) 整合程式設計概念
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,20 +30,20 @@ ms.locfileid: "75256186"
  Microsoft.SqlServer.Server 命名空間在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含用於 CLR 程式設計的核心功能。 不過，Microsoft.SqlServer.Server 命名空間會記載在 .NET Framework SDK 中。 此文件不包含在《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中。  
   
 > [!IMPORTANT]  
->  根據預設，.NET Framework 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安裝，但是 .NET Framework SDK 則不會。 如果 SDK 未安裝在電腦上，也不包含在線上叢書集合中，本節中的 SDK 內容連結將不會有任何作用。 請安裝 .NET Framework SDK。 安裝之後，請遵循[安裝 .NET FRAMEWORK sdk](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)中的指示，將 SDK 新增至線上叢書集合和目錄。  
+>  根據預設，.NET Framework 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安裝，但是 .NET Framework SDK 則不會。 如果 SDK 未安裝在電腦上，也不包含在線上叢書集合中，本節中的 SDK 內容連結將不會有任何作用。 請安裝 .NET Framework SDK。 安裝完成後,按照[安裝 .NET 框架 SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)中的說明將 SDK 添加到圖書連線集合和目錄。  
   
 > [!NOTE]  
->  Azure SQL Database*不*支援 clr 功能（例如 clr 使用者函數）。  
+>  Azure SQL 資料庫*不支援*CLR 功能(如 CLR 使用者函數)。  
   
  下表列出本節的主題。  
   
- [Common Language Runtime &#40;CLR&#41; 整合總覽](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [通用語言執行時&#40;CLR&#41;集成概述](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  提供 CLR 的簡短概觀，並描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用此技術的方法和原因。 描述使用 CLR 建立資料庫物件的優點。  
   
- [元件 &#40;資料庫引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
+ [組件 &#40;Database Engine&#41](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  描述如何使用組件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中部署以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) 主控的其中一種 Managed 程式碼語言 (非 [!INCLUDE[tsql](../../includes/tsql-md.md)]) 所編寫的函數、預存程序、觸發程序、使用者定義彙總，以及使用者定義型別。  
   
- [使用 Common Language Runtime 建立資料庫物件 &#40;CLR&#41; 整合](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [使用通用語言執行時建譯資料庫物件 &#40;CLR&#41;集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  描述可以使用 CLR 建立的物件種類，並檢閱建立 CLR 資料庫物件的需求。  
   
  [從 CLR 資料庫物件進行資料存取](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -64,11 +64,11 @@ ms.locfileid: "75256186"
  [監視與疑難排解 Managed 資料庫物件](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  提供可用於監視和疑難排解 Managed 資料庫物件以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行之組件的工具相關資訊。  
   
- [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  描述使用 CLR 物件的使用狀況和程式碼範例。  
   
 ## <a name="see-also"></a>另請參閱  
- [元件 &#40;資料庫引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [程式集&#40;資料庫引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [安裝 .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

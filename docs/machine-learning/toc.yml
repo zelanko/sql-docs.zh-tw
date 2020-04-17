@@ -6,7 +6,7 @@
   expanded: true
   items:
     - name: 什麼是機器學習服務 (Python 和 R)？
-      href: ../machine-learning/what-is-sql-server-machine-learning.md
+      href: ../machine-learning/sql-server-machine-learning-services.md
     - name: 什麼是 R 服務？
       href: ../machine-learning/r/sql-server-r-services.md
     - name: 獨立伺服器

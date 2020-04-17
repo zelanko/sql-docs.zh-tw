@@ -362,7 +362,7 @@
         - name: 複寫至 SQL Database +
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: 使用 SQL Database MI + 複寫
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: 重新發行資料
           href: republish-data.md
         - name: 透過網際網路的複寫

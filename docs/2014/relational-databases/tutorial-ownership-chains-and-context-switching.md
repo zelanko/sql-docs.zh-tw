@@ -13,12 +13,12 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62524364"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487727"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   這個教學課程利用案例來說明涉及擁有權鏈結和使用者內容切換的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念。  
@@ -48,7 +48,7 @@ ms.locfileid: "62524364"
  此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。  
   
 ## <a name="1-configure-the-environment"></a>1.設定環境  
- 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和下列程式碼來開啟`AdventureWorks2012`資料庫，然後使用`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)]語句來檢查 dbo 使用者是否顯示為內容。  
+ 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和以下代碼開啟`AdventureWorks2012`資料庫,並使用語句`CURRENT_USER`[!INCLUDE[tsql](../includes/tsql-md.md)]檢查 dbo 使用者是否顯示為上下文。  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,8 +80,7 @@ GO
   
  如需 CREATE USER 陳述式的詳細資訊，請參閱 [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)。 如需 CREATE LOGIN 陳述式的詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)。  
   
- 使用下列陳述式，將 `Purchasing` 結構描述的擁有權變更為 `TestManagerUser` 帳戶。 這樣一來，該帳戶對結構描述內含物件就具備了所有的資料操作語言 (DML) 陳述式存取權 (例如 `SELECT` 和 `INSERT` 權限)。 
-  `TestManagerUser` 也已獲授與建立預存程序的能力。  
+ 使用下列陳述式，將 `Purchasing` 結構描述的擁有權變更為 `TestManagerUser` 帳戶。 這樣一來，該帳戶對結構描述內含物件就具備了所有的資料操作語言 (DML) 陳述式存取權 (例如 `SELECT` 和 `INSERT` 權限)。 `TestManagerUser` 也已獲授與建立預存程序的能力。  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -96,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- 如需 GRANT 陳述式的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)。 如需預存程序的詳細資訊，請參閱[預存程序 &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md)。 如需所有[!INCLUDE[ssDE](../includes/ssde-md.md)]許可權的海報，請[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)參閱。  
+ 如需 GRANT 陳述式的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)。 如需預存程序的詳細資訊，請參閱[預存程序 &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md)。 有關所有[!INCLUDE[ssDE](../includes/ssde-md.md)]權限的海報,請[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)參閱 。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.建立預存程序來存取資料  
  若要在資料庫內切換內容，請使用 EXECUTE AS 陳述式。 EXECUTE AS 則需要 IMPERSONATE 權限。  
@@ -157,8 +156,7 @@ GO
  如需 REVERT 陳述式的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql)。  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3.透過預存程序存取資料  
- 
-  `TestEmployeeUser` 除了在 public 資料庫角色中具備登入身分及受指派的權限外，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫物件毫無任何權限。 下列程式碼將因 `TestEmployeeUser` 試圖存取基底資料表而傳回錯誤。  
+ `TestEmployeeUser` 除了在 public 資料庫角色中具備登入身分及受指派的權限外，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫物件毫無任何權限。 下列程式碼將因 `TestEmployeeUser` 試圖存取基底資料表而傳回錯誤。  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -202,7 +200,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a>完整範例  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>完整範例  
  本節顯示完整的範例程式碼。  
   
 > [!NOTE]  

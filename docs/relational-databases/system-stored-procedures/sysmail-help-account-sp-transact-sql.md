@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_account_sp （Transact-sql） |Microsoft Docs
+title: sysmail_help_account_sp(轉算-SQL) |微軟文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 857e4139081833980ee6c90eca9d90d16d4c0ad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305149"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528407"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @account_id = ] account_id`要列出資訊之帳戶的帳戶識別碼。 *account_id*是**int**，預設值是 Null。  
+`[ @account_id = ] account_id`要列出其資訊的帳戶 ID。 *account_id* **為 int,** 預設值為 NULL。  
   
-`[ @account_name = ] 'account_name'`要列出資訊的帳戶名稱。 *account_name*是**sysname**，預設值是 Null。  
+`[ @account_name = ] 'account_name'`要為其列出資訊的帳戶的名稱。 *account_name*是**sysname,** 預設值為 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0(** 成功 )或**1(** 失敗 )  
   
 ## <a name="result-sets"></a>結果集  
  傳回包含下列資料行的結果集。  
@@ -58,20 +58,20 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**email_address**|**nvarchar(128)**|傳送訊息的來源電子郵件地址。|  
 |**display_name**|**nvarchar(128)**|帳戶的顯示名稱。|  
 |**replyto_address**|**nvarchar(128)**|這個帳戶發出的訊息之回應所要送往的地址。|  
-|**servertype**|**sysname**|帳戶的電子郵件伺服器類型。|  
-|**servername**|**sysname**|帳戶的電子郵件伺服器名稱。|  
-|**移植**|**int**|電子郵件伺服器所用的通訊埠編號。|  
-|**username**|**nvarchar(128)**|如果電子郵件伺服器使用驗證的話，用來登入電子郵件伺服器的使用者名稱。 當**username**為 Null 時，Database Mail 不會對此帳戶使用驗證。|  
-|**use_default_credentials**|**bit**|指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials**是 bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證。 當此參數為0時，Database Mail 會在 SMTP 伺服器上使用使用者** \@名稱**和** \@密碼**進行驗證。 如果** \@username**和** \@password**是 Null，則 Database Mail 使用匿名驗證。 在指定此參數之前，請洽詢 SMTP 管理員。|  
-|**enable_ssl**|**bit**|指定 Database Mail 是否使用安全通訊端層 (SSL) 加密通訊。 如果 SMTP 伺服器上需要 SSL，則使用此選項。 **enable_ssl**是 bit，沒有預設值。 1 表示 Database Mail 會使用 SSL 加密通訊。 0 表示 Database Mail 傳送郵件時不使用 SSL 加密。|  
+|**伺服器類型**|**sysname**|帳戶的電子郵件伺服器類型。|  
+|**伺服器名稱**|**sysname**|帳戶的電子郵件伺服器名稱。|  
+|**連接埠**|**int**|電子郵件伺服器所用的通訊埠編號。|  
+|**使用者**|**nvarchar(128)**|如果電子郵件伺服器使用驗證的話，用來登入電子郵件伺服器的使用者名稱。 當**使用者名**為 NULL 時,資料庫郵件不會為此帳戶使用身份驗證。|  
+|**use_default_credentials**|**bit**|指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials**位,沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證。 當此參數為 0 時**\@**,資料庫郵件使用**\@使用者名和密碼**在 SMTP 伺服器上進行身份驗證。 如果**\@使用者名和密碼****\@為**NULL,則資料庫郵件使用匿名身份驗證。 在指定此參數之前，請洽詢 SMTP 管理員。|  
+|**enable_ssl**|**bit**|指定資料庫郵件是否使用傳輸層安全 (TLS)加密通訊,以前稱為安全套接字層 (SSL)。 如果您的 SMTP 伺服器上需要 TLS,請使用此選項。 **enable_ssl**位,沒有預設值。 1 指示資料庫郵件使用 TLS 加密通信。 0指示資料庫郵件發送郵件時沒有 TLS 加密。|  
   
 ## <a name="remarks"></a>備註  
- 未提供*account_id*或*account_name*時， **sysmail_help_account**會列出 Microsoft SQL Server 實例中所有 Database Mail 帳戶的資訊。  
+ 當未提供*account_id*或*account_name*時 **,sysmail_help_account**列出 Microsoft SQL Server 實例中所有資料庫郵件帳戶的資訊。  
   
- 預存程式**sysmail_help_account_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
+ 儲存過程**sysmail_help_account_sp**位於**msdb**資料庫中,由**dbo**架構所有。 如果目前資料庫不是**msdb,** 則必須使用三部分名稱執行該過程。  
   
 ## <a name="permissions"></a>權限  
- 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 將此過程的許可權預設為**sysadmin**固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  **A. 列出所有帳戶的資訊**  
@@ -109,8 +109,8 @@ account_id  name                         description                            
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [資料庫郵件](../../relational-databases/database-mail/database-mail.md)   
+ [建立資料庫郵件帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [資料庫郵件儲存過程&#40;處理-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

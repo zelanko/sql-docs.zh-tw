@@ -1,5 +1,6 @@
 ---
-title: SqlPipe 物件 |Microsoft Docs
+title: SqlPipe 物件 |微軟文件
+description: 對於在 SQL Server 中執行的 CLR 資料庫物件,可以使用 SqlPipe 物件的「發送」方法將結果發送到連接的管道。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913551"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487508"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，通常會撰寫將結果或輸出參數傳送至呼叫用戶端的預存程序 (或擴充的預存程序)。  
   
- 在[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程式中，傳回零或多個資料列的任何**SELECT**語句都會將結果傳送至已連線的呼叫端的「管道」。  
+ 在[!INCLUDE[tsql](../../includes/tsql-md.md)]存儲過程中,返回零行或更多行的任何**SELECT**語句都會將結果發送到連接的調用方的"管道"。  
   
- 若是在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行的 common language RUNTIME （CLR）資料庫物件，您可以使用**SqlPipe**物件的**send**方法，將結果傳送至連接的管道。 存取**SqlCoNtext**物件的**Pipe**屬性，以取得**SqlPipe**物件。 **SqlPipe**類別在概念上類似于 ASP.NET 中找到的**回應**類別。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的 SqlPipe 類別參考文件集。  
+ 對於在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中 運行的常見語言運行時 (CLR) 資料庫物件,可以使用**SqlPipe**物件的**Send**方法將結果發送到連接的管道。 訪問**SqlContext**物件的**Pipe**屬性以獲取**SqlPipe**物件。 **SqlPipe**類在概念上類似於ASP.NET中的**回應**類。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的 SqlPipe 類別參考文件集。  
   
 ## <a name="returning-tabular-results-and-messages"></a>傳回表格式結果和訊息  
- **SqlPipe**有一個**Send**方法，其中有三個多載。 如下：  
+ **SqlPipe**具有一個**Send**方法,該方法有三個重載。 其中包括：  
   
 -   `void Send(string message)`  
   
@@ -38,24 +39,24 @@ ms.locfileid: "67913551"
   
 -   `void Send(SqlDataRecord record)`  
   
- Send 方法會將資料直接**傳送**至用戶端或呼叫者。 這通常是取用**SqlPipe**輸出的用戶端，但在嵌套 CLR 預存程式的情況下，輸出取用者也可以是預存程式。 例如，Procedure1 會使用命令文字 "EXEC Procedure2" 呼叫 SqlCommand.ExecuteReader()。 而 Procedure2 也是 Managed 預存程序。 如果 Procedure2 此時呼叫 SqlPipe.Send( SqlDataRecord )，資料列便會傳送至 Procedure1 的讀取器 (Reader)，而非用戶端。  
+ **Send**方法將數據直接發送到用戶端或調用方。 它通常是使用**SqlPipe**輸出的用戶端,但在嵌套 CLR 儲存過程中,輸出消費者也可以是一個儲存過程。 例如，Procedure1 會使用命令文字 "EXEC Procedure2" 呼叫 SqlCommand.ExecuteReader()。 而 Procedure2 也是 Managed 預存程序。 如果 Procedure2 此時呼叫 SqlPipe.Send( SqlDataRecord )，資料列便會傳送至 Procedure1 的讀取器 (Reader)，而非用戶端。  
   
- Send 方法會將出現在用戶端上的字串訊息**傳送**為資訊訊息，相當於在中[!INCLUDE[tsql](../../includes/tsql-md.md)]列印。 它也可以使用**SqlDataRecord**來傳送單一資料列結果集，或使用**SqlDataReader**的多資料列結果集。  
+ **Send**方法發送一個字串消息,該字串消息作為資訊消息顯示在用戶端上,等效於[!INCLUDE[tsql](../../includes/tsql-md.md)]中的 PRINT。 它還可以使用**SqlDataRecord**發送單行結果集,也可以使用**SqlDataReader**發送多行結果集。  
   
- **SqlPipe**物件也具有**ExecuteAndSend**方法。 這個方法可用來執行命令（以**SqlCommand**物件的形式傳遞），並將結果直接傳送回呼叫端。 如果已提交的命令中出現錯誤，便會將例外狀況 (Exception) 傳送至管道，但也會傳送複本給呼叫的 Managed 程式碼。 如果呼叫程式碼未攔截到例外狀況，它會將堆疊向上傳播至 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，並在輸出中出現兩次。 如果呼叫程式碼攔截到例外狀況，管道取用者還是會看到錯誤，但是不會有重複的錯誤。  
+ **SqlPipe**物件還具有**Execute 和Send**方法。 此方法可用於執行命令(作為**SqlCommand**物件傳遞)並將結果直接發送回調用方。 如果已提交的命令中出現錯誤，便會將例外狀況 (Exception) 傳送至管道，但也會傳送複本給呼叫的 Managed 程式碼。 如果呼叫程式碼未攔截到例外狀況，它會將堆疊向上傳播至 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，並在輸出中出現兩次。 如果呼叫程式碼攔截到例外狀況，管道取用者還是會看到錯誤，但是不會有重複的錯誤。  
   
- 它只能接受與內容連接相關聯的**SqlCommand** 。它無法接受與非內容連接相關聯的命令。  
+ 它只能採用與上下文連接關聯的 SqlCommand;它只能使用與上下文連接關聯的**SqlCommand;** 它不能採用與非上下文連接關聯的命令。  
   
 ## <a name="returning-custom-result-sets"></a>傳回自訂結果集  
- Managed 預存程式可以傳送不是來自**SqlDataReader**的結果集。 **SendResultsStart**方法連同**SendResultsRow**和**SendResultsEnd**，可讓預存程式將自訂結果集傳送至用戶端。  
+ 託管儲存過程可以發送並非來自**SqlDataReader**的結果集。 **SendResultStart**方法以及**SendResultRow**和**SendResultEnd**允許儲存過程將自定義結果集發送到用戶端。  
   
- **SendResultsStart**接受**SqlDataRecord**做為輸入。 它會標示結果集的開頭，並使用記錄中繼資料來建構說明結果集的中繼資料。 它不會使用**SendResultsStart**傳送記錄的值。 所有使用**SendResultsRow**傳送的後續資料列，都必須符合該元資料定義。  
+ **發送結果開始**將**SqlDataRecord**作為輸入。 它會標示結果集的開頭，並使用記錄中繼資料來建構說明結果集的中繼資料。 它不發送具有**Send 結果開始**的記錄值。 使用**Send 結果行**發送的所有後續行必須與該元數據定義匹配。  
   
 > [!NOTE]  
->  呼叫**SendResultsStart**方法之後，只能呼叫**SendResultsRow**和**SendResultsEnd** 。 在相同的**SqlPipe**實例中呼叫任何其他方法，會導致**InvalidOperationException**。 **SendResultsEnd**會將**SqlPipe**設定回初始狀態，以便呼叫其他方法。  
+>  呼叫 **「發送結果開始」** 方法後,只能呼叫 **「發送結果行**」和 **「發送結果結束」。** 呼叫**SqlPipe**同一個實體中的任何其他方法會導致**不合法操作異常**。 **Send結果End**將**SqlPipe**設置回可以調用其他方法的初始狀態。  
   
 ### <a name="example"></a>範例  
- **UspGetProductLine**預存程式會傳回指定產品線內所有產品的名稱、產品編號、色彩和標價。 這個預存程式會接受與*prodLine*完全相符的專案。  
+ **uspGetProductLine**儲存過程返回指定產品線中所有產品的名稱、產品編號、顏色和標價。 此存儲過程接受*prodLine*的精確匹配。  
   
  C#  
   
@@ -133,7 +134,7 @@ End Sub
 End Class  
 ```  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會執行**uspGetProduct**程式，此程式會傳回一份旅行自行車產品的清單。  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]語句執行**uspGetProduct**過程,該過程返回旅遊自行車產品的清單。  
   
 ```  
 EXEC uspGetProductLineVB 'T';  
@@ -141,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>另請參閱  
  [SqlDataRecord 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [CLR 預存程式](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [CLR 預存程序](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [ADO.NET 的 SQL Server 同處理序特定擴充](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

@@ -10,19 +10,19 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 09/12/2019
-  ms.openlocfilehash: 8f218580a9a2f4e7a9744987b6dd7fca2f1f4107
-  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.openlocfilehash: 94675074f4c9399f3192253a294ff8df8bd6c722
+  ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/04/2020
-  ms.locfileid: "80665439"
+  ms.lasthandoff: 04/16/2020
+  ms.locfileid: "81487519"
 landingContent:
 - title: 關於機器學習服務
   linkLists:
   - linkListType: overview
     links:
     - text: 什麼是 SQL Server 機器學習服務 (Python 和 R)？
-      url: what-is-sql-server-machine-learning.md
+      url: sql-server-machine-learning-services.md
   - linkListType: whats-new
     links:
     - text: 機器學習服務的新功能

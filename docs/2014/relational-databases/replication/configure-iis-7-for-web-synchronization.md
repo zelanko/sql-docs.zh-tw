@@ -13,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721534"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486987"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
   本主題中的程序將逐步引導您完成手動設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 7 及更新版本的程序，以搭配使用 Web 同步處理，並進行合併式複寫。 
@@ -28,11 +28,11 @@ ms.locfileid: "62721534"
  如需完整組態處理序的概觀，請參閱[設定 Web 同步處理](configure-web-synchronization.md)。  
   
 > [!IMPORTANT]  
->  確定您的應用程式只使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更新版本，而且 IIS 伺服器上未安裝較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。 舊版 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能會導致錯誤，例如：「Web 同步處理期間，訊息的格式無效。 請確認已在 Web 伺服器正確地設定複寫元件」。  
+>  確定您的應用程式只使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更新版本，而且 IIS 伺服器上未安裝較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。 較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能導致錯誤，例如：「Web 同步處理期間的訊息格式無效。 請確認已在 Web 伺服器正確地設定複寫元件」。  
   
  若要使用 Web 同步處理，您必須完成下列步驟來設定 IIS 7。 本主題中有每個步驟的詳細描述。  
   
-1.  在執行 IIS 的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]電腦上安裝並設定複寫接聽程式。  
+1.  在執行 IIS 的電腦上安裝並設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener。  
   
 2.  設定安全通訊端層 (SSL)。 IIS 與所有訂閱者之間的通訊都需要 SSL。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62721534"
   
 ## <a name="installing-the-sql-server-replication-listener"></a>安裝 SQL Server Replication Listener  
 
-IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 IIS 5 和 IIS 6 版的 [設定 Web 同步處理精靈]。 **從 SQL Server 2012 開始，若要在 IIS 伺服器上使用 web 同步處理元件，您應該安裝具有複寫的 SQL Server。這可以是免費的 SQL Server Express 版本。**
+IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 IIS 5 和 IIS 6 版的 [設定 Web 同步處理精靈]。 **從 SQL Server 2012 開始，若要在 IIS 伺服器上使用 Web 同步處理元件，您應該安裝具有複寫功能的 SQL Server。例如，免費的 SQL Server Express Edition。**
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>若要安裝和設定 SQL Server Replication Listener  
   
@@ -54,7 +54,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 4.  註冊 replisapi.dll：  
   
-    1.  按一下 [開始]****，然後按一下 [執行]****。 在 [**開啟**] 方塊中`cmd`，輸入，然後按一下 **[確定]**。  
+    1.  按一下 **[開始]** ，然後按一下 **[執行]** 。 在 **"打開'** 框`cmd`中, 輸入 ,然後按一下 **「 確定**」。  
   
     2.  在步驟 1 中建立的目錄中，執行下列命令：  
   
@@ -66,7 +66,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     1.  在 **[Internet Information Services (IIS) 管理員]** 的 **[連線]** 窗格中，以滑鼠右鍵按一下 **[預設的網站]**，然後選取 **[新增虛擬目錄]**。  
   
-    2.  針對 [**別名**] `SQLReplication`，輸入。  
+    2.  對**別名**,輸入`SQLReplication`。  
   
     3.  針對 [實體路徑]****，輸入 **\<磁碟機>:\Inetpub\SQLReplication\\**，然後按一下 [確定]****。  
   
@@ -78,13 +78,13 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     3.  在 **[動作]** 窗格中，按一下 **[新增模組對應]**。  
   
-    4.  針對 [**要求**路徑] `replisapi.dll`，輸入。  
+    4.  對**要求**路徑,輸入`replisapi.dll`。  
   
     5.  從 **[模組]** 下拉式清單中選取 **[IsapiModule]**。  
   
     6.  針對 [可執行檔]****，輸入 **\<磁碟機>:\Inetpub\SQLReplication\replisapi.dll**。  
   
-    7.  針對 [名稱]**** 輸入 `Replisapi`。  
+    7.  針對 [名稱]  輸入 `Replisapi`。  
   
     8.  按一下 **[要求限制]** 按鈕、按一下 **[存取]** 索引標籤，然後按一下 **[執行]**。  
   
@@ -147,8 +147,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 1.  在 **[連線]** 窗格中，按一下 **[預設的網站]** (或是您的 Web 同步處理網站，如果它與預設的網站不同的話)。  
   
-2.  在 **[動作]** 窗格中，按一下 **[繫結]**，然後按一下 **[新增]**。 
-  **[新增站台繫結]** 對話方塊將會出現。  
+2.  在 **[動作]** 窗格中，按一下 **[繫結]**，然後按一下 **[新增]**。 **[新增站台繫結]** 對話方塊將會出現。  
   
 3.  從 **[類型]** 下拉式清單中選取 **[https]**。 保留 **[IP 位址]** 和 **[連接埠]** 的預設設定。  
   
@@ -156,9 +155,9 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 ###### <a name="to-test-the-certificate"></a>若要測試憑證  
   
-1.  在**Internet Information Services （IIS）管理員**中，按一下 [**預設的網站]。**  
+1.  在**互聯網資訊服務 (IIS) 管理員**中,按一下**預設網站。**  
   
-2.  在 [動作]**** 窗格中，按一下 [瀏覽 **:443(https)]\***。  
+2.  在 [動作]**** 窗格中，按一下 [瀏覽 \*:443(https)]****。  
   
 3.  Internet Explorer 將開啟並顯示一則訊息：「此網站的安全性憑證有問題」。 這則警告是要告知您，相關聯的憑證是由無法辨識的 CA 所核發，而且可能不值得信任。 這是預期的警告，因此請按一下 **[繼續瀏覽此網站 (不建議)]**。  
   
@@ -171,7 +170,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
  除了執行下列步驟之外，請確保所需的登入位於發行集存取清單 (PAL) 中。 如需 PAL 的詳細資訊，請參閱[保護發行者](security/secure-the-publisher.md)。  
   
- **重要事項**在此區段中建立的帳戶是在同步處理期間連接到發行者和散發者的帳戶。 這個帳戶必須新增為散發和發行集伺服器的 SQL 登入帳戶。  
+ **重要事項** ：在本節中建立的帳戶就是在同步處理期間連接至發行者和散發者的帳戶。 這個帳戶必須新增為散發和發行集伺服器的 SQL 登入帳戶。  
   
  用於 SQL Server Replication Listener 的帳戶必須擁有如＜合併代理程式安全性＞主題中＜連接到發行者或散發者＞一節底下所描述的權限。  
   
@@ -189,7 +188,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 1.  在執行 IIS 的電腦上建立本機帳戶：  
   
-    1.  開啟 [伺服器管理員] ****。 在 [開始] 功能表中，以滑鼠右鍵按一下 **[電腦]**，然後按一下 **[管理]**。  
+    1.  開啟**伺服器管理員**。 在 [開始] 功能表中，以滑鼠右鍵按一下 **[電腦]**，然後按一下 **[管理]**。  
   
     2.  在 **[伺服器管理員]** 中，展開 **[設定]**，然後展開 **[本機使用者和群組]**。  
   
@@ -219,7 +218,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     2.  在 **[安全性]** 索引標籤上，按一下 **[編輯]**。  
   
-    3.  在 [**資料夾名稱> 的權限]\<** 對話方塊中，按一下 [新增]**** 以新增步驟 1 建立的帳戶。  
+    3.  在 [\<資料夾名稱> 的權限]**** 對話方塊中，按一下 [新增]**** 以新增步驟 1 建立的帳戶。  
   
     4.  確認 **[從這個位置]** 顯示本機電腦的名稱 (而非網域)。 如果此欄位沒有顯示本機電腦名稱，請按一下 **[位置]**。 在 **[位置]** 對話方塊中，選取本機電腦，然後按一下 **[確定]**。  
   
@@ -273,7 +272,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 1.  確定訂閱者端的區域網路 (LAN) 設定正確：  
   
-    1.  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 的 [**工具**] 功能表上，按一下 [**網際網路選項**]。  
+    1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 的 **[工具]** 功能表中，按一下 **[網際網路選項]**。  
   
     2.  在 **[連接]** 索引標籤中，按一下 **[LAN 設定]**。  
   
@@ -281,10 +280,10 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     4.  如果使用 Proxy 伺服器，請按一下 **[在您的區域網路使用 Proxy 伺服器]** 和 **[近端網址不使用 Proxy]**，然後按一下 **[確定]**。  
   
-2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： **https://server.domain.com/directory/replisapi.dll?diag**。  
+2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： `https://server.domain.com/directory/replisapi.dll?diag` 。  
   
     > [!NOTE]  
-    >  在上述範例中，您應該將 **server.domain.com** 取代成 IIS 管理員中 **[伺服器憑證]** 區段底下所列的確切 **[發行給]** 名稱。  
+    >   在上述範例中，您應該將 **server.domain.com** 取代成 IIS 管理員中 **[伺服器憑證]** 區段底下所列的確切 **[發行給]** 名稱。  
   
 3.  如果 Windows 作業系統無法辨識您先前為 IIS 指定的憑證，則會出現 **[安全性警示]** 對話方塊。 發生此警示的可能是因為該憑證是測試憑證，或者該憑證是由 Windows 無法辨識的憑證授權單位 (CA) 所發行。  
   
@@ -308,7 +307,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
     > [!NOTE]  
     >  將為使用者安裝憑證。 這項處理序必須針對將與 IIS 同步處理的每位使用者執行。  
   
-4.  在 [連接到 **伺服器名稱>]\<** 對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
+4.  在 [連接到 \<伺服器名稱>]**** 對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
   
 5.  在稱為 **[SQL Websync 診斷資訊]** 的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]**。  
   
@@ -319,7 +318,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
     2.  在診斷模式下連接到伺服器。 如果憑證已正確安裝，就不會出現 **[安全性警示]** 對話方塊。 如果出現此對話方塊，合併代理程式將在嘗試連接到執行 IIS 的電腦時失敗。 您必須確定要存取的伺服器憑證已做為信任憑證加入訂閱者端的憑證存放區中。 如需有關匯入憑證的詳細資訊，請參閱 IIS 文件集。  
   
 ## <a name="see-also"></a>另請參閱  
- [合併式複寫的 Web 同步處理](web-synchronization-for-merge-replication.md)   
- [設定 Web 同步處理](configure-web-synchronization.md)  
+ [合併複製的 Web 同步](web-synchronization-for-merge-replication.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)  
   
   

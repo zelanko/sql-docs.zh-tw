@@ -16,12 +16,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900908"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486974"
 ---
 # <a name="raw-file-source"></a>原始檔案來源
   「原始檔案」來源會從檔案讀取原始資料。 由於資料的表示法對於來源而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」來源可比其他來源更快讀取資料，例如「一般檔案」和 OLE DB 來源。  
@@ -51,10 +51,10 @@ ms.locfileid: "62900908"
   
 ## <a name="related-content"></a>相關內容  
   
--   sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(原始檔案太酷了)  
+-   sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)(原始檔案太酷了)  
   
 ## <a name="see-also"></a>另請參閱  
- [原始檔案目的地](raw-file-destination.md)   
+ [原始檔案目標](raw-file-destination.md)   
  [資料流程](data-flow.md)  
   
   

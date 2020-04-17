@@ -10,12 +10,12 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "68888660"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487389"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 安裝
   本主題中的程序會引導您完成 SharePoint 部署模式之 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 2013 管理中心的設定工作。  
@@ -70,7 +70,7 @@ ms.locfileid: "68888660"
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> SQL Server Edition 需求  
  並非在所有版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中都提供商業智慧功能。 有關詳細資訊,請參閱[SQL Server 2012 版本https://go.microsoft.com/fwlink/?linkid=232473)支援的功能(](https://go.microsoft.com/fwlink/?linkid=232473)以及[SQL Server 2014 的版和元件](../../../sql-server/editions-and-components-of-sql-server-2016.md))。  
   
- 當前發行說明可在[SQL Server 2012 SP1 發行說明](ttp://go.microsoft.com/fwlink/?LinkID=248389)()https://go.microsoft.com/fwlink/?LinkID=248389)中找到。  
+ 當前發行說明可在[SQL Server 2012 SP1 發行說明](https://go.microsoft.com/fwlink/?LinkID=248389)()https://go.microsoft.com/fwlink/?LinkID=248389)中找到。  
   
  [微軟 SQL 伺服器 2012https://go.microsoft.com/fwlink/?LinkId=236893)發行說明 ( .](https://go.microsoft.com/fwlink/?LinkId=236893)  
   

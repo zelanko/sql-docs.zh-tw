@@ -156,12 +156,12 @@
 - name: Database Engine 教學課程
   href: database-engine-tutorials.md
   items:
-    - name: 教學課程：Database Engine 使用者入門
+    - name: 教學課程：資料庫引擎使用者入門
       href: tutorial-getting-started-with-the-database-engine.md
       items:
-        - name: 第 1 課：連接到 Database Engine
+        - name: 第 1 課：連線到資料庫引擎
           href: lesson-1-connecting-to-the-database-engine.md
-        - name: 第 2 課：從另一部電腦連接
+        - name: 第 2 課：從另一部電腦連線
           href: lesson-2-connecting-from-another-computer.md
     - name: 教學課程：使用 hierarchyid 資料類型
       href: tables/tutorial-using-the-hierarchyid-data-type.md
@@ -192,9 +192,9 @@
               href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
     - name: 教學課程：使用憑證簽署預存程序
       href: tutorial-signing-stored-procedures-with-a-certificate.md
-    - name: 'Tutorial: Ownership Chains and Context Switching'
+    - name: 教學課程：擁有權鏈結和環境切換
       href: tutorial-ownership-chains-and-context-switching.md
-    - name: 教學課程：使用以原則為基礎的管理來管理伺服器
+    - name: 教學課程：使用原則式管理來管理伺服器
       href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
       items:
         - name: 第 1 課：建立和套用 Off By Default 原則
@@ -208,9 +208,9 @@
           href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
           items:
             - name: 建立 Finance Name 原則
-              href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: 訂閱和檢查 Finance Name 原則
-              href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
     - name: 教學課程：使用原則式管理來評估最佳做法
       href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
       items:
@@ -235,7 +235,7 @@
       items:
         - name: 第 1 課：建立 Azure 儲存體物件
           href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
-        - name: 'Lesson 2: Create a SQL Server Credential'
+        - name: 第 2 課：建立 SQL Server 認證
           href: ../tutorials/lesson-2-create-a-sql-server-credential.md
         - name: 第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務
           href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md
