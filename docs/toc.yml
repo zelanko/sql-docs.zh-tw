@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: 參考
       items:
+        - name: BDC 合作夥伴
+          href: sql-server/partner-big-data-cluster.md
         - name: 部署參考
           items:
             - name: 部署組態檔
@@ -10073,8 +10075,6 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: 合作夥伴
       items:
-        - name: 巨量資料叢集
-          href: sql-server/partner-big-data-cluster.md
         - name: 監視
           href: sql-server/partner-monitor-sql-server.md
         - name: 高可用性與災害復原
@@ -10354,6 +10354,8 @@
                   href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
             - name: 錯誤 5000 到 8000
               items:
+                - name: 5120
+                  href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
                 - name: 5228
                   href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
                 - name: 5229
@@ -10626,6 +10628,8 @@
                   href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
                 - name: 17204
                   href: relational-databases/errors-events/mssqlserver-17204-database-engine-error.md
+                - name: 17207
+                  href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
                 - name: 17300
                   href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
                 - name: 17660

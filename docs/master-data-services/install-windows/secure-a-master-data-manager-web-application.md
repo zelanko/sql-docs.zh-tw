@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729177"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728494"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
 
@@ -23,8 +23,7 @@ ms.locfileid: "73729177"
   您可以使用 HTTPS 保護 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式可以使用 HTTP 或 HTTPS，但不能同時使用兩者。  
+>  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式可以使用 HTTP 或 HTTPS，但不能同時使用兩者。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
@@ -45,7 +44,7 @@ ms.locfileid: "73729177"
   
 5.  從清單中選取 [https]****。  
   
-6.  選取 SSL 憑證。  
+6.  選擇 TLS/SSL 憑證。  
   
 7.  按一下 [確定]  。  
   
