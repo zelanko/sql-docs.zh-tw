@@ -1,5 +1,6 @@
 ---
 title: '&lt;xsd:redefine&gt; 項目 | Microsoft Docs'
+description: 了解 W3C XSD redefine 元素的支援，以及如何更新 XML 結構描述或其元件。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f8d55c435b7d37478b3dddbd7010d3a8babf32af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8b222cf1105fbe8121e9c9738a79257c59fc3abf
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665218"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388141"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

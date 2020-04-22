@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903206"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529124"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67903206"
   
 1.  在執行 IIS 的電腦上安裝並設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener。  
   
-2.  設定安全通訊端層 (SSL)。 IIS 與所有訂閱者之間的通訊都需要 SSL。  
+2.  設定傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL))。 IIS 與所有訂閱者之間的通訊需要 TLS。  
   
 3.  設定 IIS 驗證。  
   
@@ -97,9 +97,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
 ## <a name="configuring-iis-authentication"></a>設定 IIS 驗證  
  當訂閱者電腦連接到 IIS 時，訂閱者必須經過 IIS 驗證才能存取資源和處理序。 驗證可套用至整個網站或您建立的虛擬目錄。  
   
- 我們建議您搭配 SSL 使用基本驗證。 不論採用哪一種驗證類型，都需要 SSL。  
-  
- 我們建議您搭配 SSL 使用基本驗證。 不論採用哪一種驗證類型，都需要 SSL。  
+ 我們建議您搭配 TLS 使用基本驗證。 不論採用哪一種驗證類型，都需要 TLS。
   
 #### <a name="to-configure-iis-authentication"></a>若要設定 IIS 驗證  
   
@@ -112,7 +110,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
 4.  以滑鼠右鍵按一下 [基本驗證]，然後選擇 [啟用]。  
   
 ## <a name="configuring-secure-sockets-layer"></a>設定安全通訊端層  
- 若要設定 SSL，請指定要由執行 IIS 之電腦使用的憑證。 合併式複寫的 Web 同步處理支援使用伺服器憑證，但不支援用戶端憑證。 若要設定 IIS 以進行部署，必須先從憑證授權中心 (CA) 獲得憑證。 如需有關憑證的詳細資訊，請參閱 IIS 文件集。  
+ 若要設定 TLS，請指定要由執行 IIS 之電腦使用的憑證。 合併式複寫的 Web 同步處理支援使用伺服器憑證，但不支援用戶端憑證。 若要設定 IIS 以進行部署，必須先從憑證授權中心 (CA) 獲得憑證。 如需有關憑證的詳細資訊，請參閱 IIS 文件集。  
   
  在您安裝憑證之後，必須將憑證與 Web 同步處理所使用的網站相關聯。 如果是為了開發和測試，您可以指定自我簽署憑證。 IIS 7 可以為您建立憑證並在電腦上註冊此憑證。  
   
@@ -121,9 +119,9 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
 > [!IMPORTANT]  
 >  若為實際執行安裝，則不建議使用自我簽署憑證。 自我簽署憑證並不安全。 如果只是為了開發和測試，請使用自我簽署憑證。  
   
- 若要設定 SSL，您將執行下列步驟：  
+ 若要設定 TLS，您將必須執行下列步驟：  
   
-1.  將網站設定為要求 SSL 並忽略用戶端憑證。  
+1.  將網站設定為要求 TLS 並忽略用戶端憑證。  
   
 2.  從 CA 取得憑證，或建立自我簽署憑證。  
   
@@ -268,7 +266,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
     5.  再次按一下 **[確定]** 關閉 [進階設定]。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>測試與 replisapi.dll 的連接  
- 在診斷模式下執行 Web 同步處理，以測試執行 IIS 之電腦的連接，並確定安全通訊端層 (SSL) 憑證已正確安裝。 若要在診斷模式下執行 Web 同步處理，您必須是執行 IIS 之電腦上的管理員。  
+ 在診斷模式下執行 Web 同步處理，以測試執行 IIS 的電腦連接，並確定 TLS/SSL 憑證已正確安裝。 若要在診斷模式下執行 Web 同步處理，您必須是執行 IIS 之電腦上的管理員。  
   
 #### <a name="to-test-the-connection-to-replisapidll"></a>若要測試與 replisapi.dll 的連接  
   

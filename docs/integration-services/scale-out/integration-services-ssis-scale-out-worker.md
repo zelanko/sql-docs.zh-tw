@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082076"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488243"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 擴增背景工作
 
@@ -33,7 +33,7 @@ Scale Out Worker 會執行 Scale Out Worker 服務，以從 Scale Out Master 提
 |DisplayName|擴增背景工作的顯示名稱。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|電腦名稱|
 |描述|擴增背景工作的描述。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|空白|
 |MasterEndpoint|要連接到擴增主機的端點。|在擴增背景工作安裝期間設定的端點|
-|MasterHttpsCertThumbprint|驗證擴增主機所使用的用戶端 SSL 憑證指紋|在擴增背景工作安裝期間指定的用戶端憑證指紋。|
+|MasterHttpsCertThumbprint|驗證擴增主機所使用的用戶端 TLS/SSL 憑證指紋|在擴增背景工作安裝期間指定的用戶端憑證指紋。|
 |WorkerHttpsCertThumbprint|擴增主機驗證擴增背景工作所使用的憑證指紋。|在擴增背景工作安裝期間自動建立並安裝的憑證指紋|
 |StoreLocation|背景工作憑證的儲存位置。|LocalMachine|
 |StoreName|背景工作憑證所在的存放區名稱。|My|

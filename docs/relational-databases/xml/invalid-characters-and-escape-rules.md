@@ -1,5 +1,6 @@
 ---
 title: 無效的字元和逸出規則 | Microsoft Docs
+description: 了解 FOR XML 子句如何處理無效的 XML 字元，並了解 XML 名稱中無效字元的逸出規則。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0b908d83bad116ea42ce9cfe4845b86e7d367857
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e723e3f50db5090279ec6531906018471076af7f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665183"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388630"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無效的字元和逸出規則
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

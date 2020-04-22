@@ -1,5 +1,6 @@
 ---
-title: 了解 XA 交易 | Microsoft Docs
+title: 了解 XA 交易
+description: Microsoft JDBC Driver for SQL Server 提供對 Java 平台企業版/JDBC 2.0 選擇性分散式交易的支援。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916994"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528732"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -46,9 +47,9 @@ ms.locfileid: "80916994"
 
 - 當您將 XA 交易與 Microsoft 分散式交易協調器 (MS DTC) 一起使用時，可能會注意到目前版本的 MS DTC 不支援緊密繫結的 XA 分支行為。 例如，MS DTC 在 XA 分支交易識別碼 (XID) 與 MS DTC 交易識別碼之間擁有一對一的對應，而且由鬆散繫結之 XA 分支所執行的工作會彼此隔離。  
   
-- MSDTC 也支援緊密耦合的 XA 分支，其中具有相同全域交易識別碼 (GTRID) 的多個 XA 分支會對應到單一 MS DTC 交易識別碼。 此支援讓多個緊密結合的 XA 分支可以在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中查看彼此的變更。
+- MS DTC 也支援緊密結合的 XA 分支，其中具有相同全域交易識別碼 (GTRID) 的多個 XA 分支均會對應到單一 MS DTC 交易識別碼。 此支援讓多個緊密結合的 XA 分支可以在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中查看彼此的變更。
   
-- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標允許應用程式使用緊密結合的 XA 交易，但這些交易的 XA 分支交易識別碼 (BQUAL) 各不相同，只有全域交易識別碼 (GTRID) 及格式識別碼 (FormatID) 相同。 若要使用該功能，您必須在 XAResource.start 方法的 flags 參數上，設定 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)：
+- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標允許應用程式使用緊密結合的 XA 交易，這些交易的 XA 分支交易識別碼 (BQUAL) 各不相同，但具有相同的全域交易識別碼 (GTRID) 和格式識別碼 (FormatID)。 若要使用該功能，您必須在 XAResource.start 方法的 flags 參數上，設定 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)：
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -140,19 +141,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 0`
   
-     表示不使用預設的逾時，在用戶端上將不強制執行最大逾時。 在此情況下，只有當用戶端使用 XAResource.setTransactionTimeout 設定逾時，此交易才會有逾時。  
+     表示不使用預設的逾時，在用戶端上將不強制執行最大逾時。 在此情況下，只有當用戶端使用 XAResource.setTransactionTimeout 設定逾時，交易才會有逾時。  
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     表示如果用戶端未指定任何逾時，則所有交易都會都有 60 秒逾時。 如果用戶端指定了逾時，則會使用該逾時值。 不會強制執行逾時最大值。  
+     表示如果用戶端未指定任何逾時，所有交易都將有 60 秒逾時。 如果用戶端指定了逾時，則會使用該逾時值。 不會強制執行逾時最大值。  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     表示如果用戶端未指定任何逾時，則所有交易都會都有 30 秒逾時。 用戶端如有指定逾時，除非該值小於 60 秒 (最大值)，否則將會使用用戶端的逾時值。  
+     表示如果用戶端未指定任何逾時，所有交易都將有 30 秒逾時。 用戶端如有指定逾時，除非該值小於 60 秒 (最大值)，否則將會使用用戶端的逾時值。  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     表示如果用戶端未指定任何逾時，則所有交易都會都有 30 秒逾時 (最大值)。 用戶端如有指定逾時，除非該值小於 30 秒 (最大值)，否則將會使用用戶端的逾時值。  
+     表示如果用戶端未指定任何逾時，所有交易都將有 30 秒逾時 (最大值)。 用戶端如有指定逾時，除非該值小於 30 秒 (最大值)，否則將會使用用戶端的逾時值。  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>升級 sqljdbc_xa.dll
 

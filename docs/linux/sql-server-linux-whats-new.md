@@ -3,16 +3,16 @@ title: Linux 上的 SQL Server 2017 新功能
 description: 本文特別介紹 Linux 上的 SQL Server 2017 新功能。
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/23/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a400a7b40f388fcc47f3a0d73c6917559afb069
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72890548"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308059"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 新功能
 
@@ -22,6 +22,14 @@ ms.locfileid: "72890548"
 
 > [!NOTE]
 > 除了本文中的功能，之後還會定期發行累積更新。 這些累積更新提供許多改善和修正程式。 如需最新 CU 版本的詳細資訊，請參閱 [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu)。 如需套件下載和已知問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。
+
+## <a name="ubuntu-1804-supported"></a>支援 Ubuntu 18.04
+
+從 SQL Server 2017 CU20 開始，現在支援 Ubuntu 18.04。 請參閱[安裝 SQL Server，並在 Ubuntu 上建立資料庫](quickstart-install-connect-ubuntu.md?view=sql-server-2017)中的快速入門。
+
+## <a name="rhel-8-supported"></a>支援 RHEL 8
+
+從 SQL Server 2017 CU20 開始，現在支援 RHEL 8。 請參閱[安裝 SQL Server，並在 Red Hat 上建立資料庫](quickstart-install-connect-red-hat.md?view=sql-server-2017)中的快速入門。
 
 ## <a name="sql-server-database-engine"></a>SQL Server Database Engine
 

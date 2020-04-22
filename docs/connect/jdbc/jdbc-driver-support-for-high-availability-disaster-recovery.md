@@ -1,5 +1,6 @@
 ---
-title: JDBC 驅動程式對於高可用性、災害復原的支援 | Microsoft Docs
+title: JDBC 驅動程式對於高可用性、災害復原的支援
+description: 此主題將討論 Microsoft JDBC Driver for SQL Server 對於高可用性、災害復原 (AlwaysOn 可用性群組) 的支援。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7035ebdab328abd33c4648754ebaba6b80efb54
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 941136eb74d217f0af7b2687e618bf93f2454b8f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219191"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635059"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驅動程式對於高可用性、災害復原的支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   本主題討論 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 對於高可用性、災害復原的支援 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 如需有關 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 線上叢書》。  
   
- 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您可以在連線屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中已新增下列[連線屬性](../../connect/jdbc/setting-the-connection-properties.md)：  
+ 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您可以在連線屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式連線到容錯移轉的 AlwaysOn 資料庫，則原始連線會中斷，而應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中已新增下列[連線屬性](setting-the-connection-properties.md)：  
   
 -   **multiSubnetFailover**  
   
@@ -51,9 +52,9 @@ ms.locfileid: "81219191"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 multiSubnetFailover 進行連線  
  在連線到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **multiSubnetFailover=true**。 對於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的所有可用性群組和容錯移轉叢集執行個體，**multiSubnetFailover** 可促進更快的容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會積極重試 TCP 連線。  
   
- **multiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線嘗試。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
+ **multiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線嘗試。 這種行為可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
- 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中連接字串關鍵字的詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中連接字串關鍵字的詳細資訊，請參閱[設定連線屬性](setting-the-connection-properties.md)。  
   
  當連線到可用性群組接聽程式或容錯移轉叢集執行個體以外的某個項目時，指定 **multiSubnetFailover=true** 會導致降低效能，所以不支援此方式。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "81219191"
   
  請使用下列指導方針，連接到可用性群組或容錯移轉叢集執行個體中的伺服器：  
   
--   如果在與 **multiSubnetFailover** 連線屬性相同的連接字串中使用 **instanceName** 連線屬性，驅動程式將會產生錯誤。 這反映以下事實：可用性群組中並未使用 SQL Browser。 但是，如果同時指定了 **portNumber** 連線屬性，驅動程式將會忽略 **instanceName** 並使用 **portNumber**。  
+-   如果在與 **multiSubnetFailover** 連線屬性相同的連接字串中使用 **instanceName** 連線屬性，驅動程式將會產生錯誤。 此錯誤反映以下事實：可用性群組中並未使用 SQL Browser。 但是，如果同時指定了 **portNumber** 連線屬性，驅動程式將會忽略 **instanceName** 並使用 **portNumber**。  
   
 -   如果在連線到單一子網路或多重子網路時使用 **multiSubnetFailover** 連線屬性，則會提高兩者的效能。  
   
@@ -84,7 +85,7 @@ ms.locfileid: "81219191"
  如果設定主要複本拒絕唯讀工作負載，而且連接字串包含 **ApplicationIntent=ReadOnly**，則連接會失敗。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>從資料庫鏡像升級到使用多重子網路叢集  
- 如果您將目前使用資料庫鏡像的 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式升級為多重子網路案例，則應移除 **failoverPartner** 連線屬性，並取代成設定為 **true** 的 **multiSubnetFailover**，然後將連接字串中的伺服器名稱取代為可用性群組接聽程式。 如果連接字串使用 **failoverPartner** 和 **multiSubnetFailover=true**，驅動程式會產生錯誤。 不過，如果連接字串使用 **failoverPartner** 和 **multiSubnetFailover=false** (或 **ApplicationIntent=ReadWrite**)，應用程式會使用資料庫鏡像。  
+ 如果您將目前使用資料庫鏡像的 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式升級為多重子網路案例，則應移除 **failoverPartner** 連線屬性，並使用設定為 **true** 的 **multiSubnetFailover** 來取代，然後將連接字串中的伺服器名稱取代為可用性群組接聽程式。 如果連接字串使用 **failoverPartner** 和 **multiSubnetFailover=true**，驅動程式會產生錯誤。 不過，如果連接字串使用 **failoverPartner** 和 **multiSubnetFailover=false** (或 **ApplicationIntent=ReadWrite**)，應用程式會使用資料庫鏡像。  
   
  如果在可用性群組中的主要資料庫上使用資料庫鏡像，而且如果在連線到主要資料庫 (而不是可用性群組接聽程式) 的連接字串中使用 **multiSubnetFailover=true**，驅動程式會傳回錯誤。  
 
@@ -95,27 +96,27 @@ ms.locfileid: "81219191"
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>支援 multiSubnetFailover 和 applicationIntent 的新方法  
  下列方法可讓您以程式設計方式存取 **multiSubnetFailover**、**applicationIntent** 和 **transparentNetworkIPResolution** 連接字串關鍵字：  
   
--   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getApplicationIntent](reference/getapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setApplicationIntent](../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setApplicationIntent](reference/setapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.getMultiSubnetFailover](../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getMultiSubnetFailover](reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setMultiSubnetFailover](../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setMultiSubnetFailover](reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDriver.getPropertyInfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
+-   [SQLServerDriver.getPropertyInfo](reference/getpropertyinfo-method-sqlserverdriver.md)  
 
 -   SQLServerDataSource.setTransparentNetworkIPResolution
 
 -   SQLServerDataSource.getTransparentNetworkIPResolution
   
- **getMultiSubnetFailover**、**setMultiSubnetFailover**、**getApplicationIntent**、**setApplicationIntent**、**getTransparentNetworkIPResolution** 和 **setTransparentNetworkIPResolution** 方法也會新增到 [SQLServerDataSource 類別](../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource 類別](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)和 [SQLServerXADataSource 類別](../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
+ **getMultiSubnetFailover**、**setMultiSubnetFailover**、**getApplicationIntent**、**setApplicationIntent**、**getTransparentNetworkIPResolution** 和 **setTransparentNetworkIPResolution** 方法也會新增到 [SQLServerDataSource 類別](reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource 類別](reference/sqlserverconnectionpooldatasource-class.md)和 [SQLServerXADataSource 類別](reference/sqlserverxadatasource-class.md)。  
   
 ## <a name="tlsssl-certificate-validation"></a>TLS/SSL 憑證驗證  
- 可用性群組是由多個實體伺服器所組成。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 已在 TLS/SSL 憑證中新增對**主體別名**的支援，以便讓多個主機可以與相同憑證建立關聯。 如需 TLS 的詳細資訊，請參閱[了解加密支援](../../connect/jdbc/understanding-ssl-support.md)。  
+ 可用性群組是由多個實體伺服器所組成。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 已在 TLS/SSL 憑證中新增對**主體別名**的支援，以便讓多個主機可以與相同憑證建立關聯。 如需 TLS 的詳細資訊，請參閱[了解加密支援](understanding-ssl-support.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
- [設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)  
+ [使用 JDBC 驅動程式連線到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [設定連接屬性](setting-the-connection-properties.md)  
   
   

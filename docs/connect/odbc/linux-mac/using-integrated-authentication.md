@@ -1,5 +1,6 @@
 ---
-title: 使用整合式驗證 | Microsoft Docs
+title: 使用整合式驗證
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921165"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629618"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -34,7 +35,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 使用 DSN 連線時，您也可以將 **Trusted_Connection = yes** 新增至 `odbc.ini` 中的 DSN 項目。
   
-`-E` 的 `sqlcmd` 選項和 `-T` 的 `bcp` 選項也可以用來指定整合式驗證；如需詳細資訊，請參閱[使用 **sqlcmd** 進行連線](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 **bcp** 進行連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
+`sqlcmd` 的 `-E` 選項和 `bcp` 的 `-T` 選項也可以用來指定整合式驗證；如需詳細資訊，請參閱[使用 **sqlcmd** 進行連線](connecting-with-sqlcmd.md)和[使用 **bcp** 進行連線](connecting-with-bcp.md)。
 
 請確定要連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用戶端主體已經過 Kerberos KDC 驗證。
   
@@ -87,10 +88,10 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 在設定整合式驗證之後，認證將會傳遞至連結的伺服器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>整合式驗證和 sqlcmd
-若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `-E` 的 `sqlcmd` 選項。 請確定執行 `sqlcmd` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。
+若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `sqlcmd` 的 `-E` 選項。 請確定執行 `sqlcmd` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。
 
 ## <a name="integrated-authentication-and-bcp"></a>整合式驗證和 bcp
-若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `-T` 的 `bcp` 選項。 請確定執行 `bcp` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。 
+若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `bcp` 的 `-T` 選項。 請確定執行 `bcp` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。 
   
 `-T` 與 `-U` 或 `-P` 選項搭配使用是錯誤的。
   
@@ -104,7 +105,7 @@ SPN 在連接字串或連線屬性中使用的語法如下：
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>使用 Active Directory 驗證 Linux 或 macOS 電腦
 
-若要設定 Kerberos，請輸入資料到 `krb5.conf` 檔案。 `krb5.conf` 位於 `/etc/` 中，但是您可以使用語法範例 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` 參考另一個檔案。 下列為 `krb5.conf` 檔案範例：  
+若要設定 Kerberos，請輸入資料到 `krb5.conf` 檔案。 `krb5.conf` 位於 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` 中，但是您可以使用語法範例 `/etc/` 參考另一個檔案。 下列為 `krb5.conf` 檔案範例：  
   
 ```  
 [libdefaults]  
@@ -125,11 +126,11 @@ Linux 或 macOS 電腦上時間與 Kerberos 金鑰發佈中心 (KDC) 上的時�
 
 如果 Kerberos 驗證失敗， Linux 或 macOS 上的 ODBC 驅動程式不會使用 NTLM 驗證。  
 
-如需使用 Active Directory 驗證 Linux 或 macOS 電腦的詳細資訊，請參閱[使用 Active Directory 驗證 Linux 用戶端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[整合 OS X 與 Active Directory 的最佳做法](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)。 如需設定 Kerberos 的詳細資訊，請參閱 [MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+如需使用 Active Directory 驗證 Linux 或 macOS 電腦的詳細資訊，請參閱[使用 Active Directory 驗證 Linux 用戶端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)。 如需設定 Kerberos 的詳細資訊，請參閱 [MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另請參閱  
-[程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[程式設計指導方針](programming-guidelines.md)
 
-[版本資訊](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[版本資訊](release-notes-odbc-sql-server-linux-mac.md)
 
-[使用 Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[使用 Azure Active Directory](../using-azure-active-directory.md)

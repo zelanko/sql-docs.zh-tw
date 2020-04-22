@@ -1,6 +1,6 @@
 ---
 title: SQL 用戶端程式設計的首頁 | Microsoft Docs
-description: 適用於連線到 SQL Server 或 Azure SQL Database 的中樞頁面，包含各種語言和作業系統組合的下載項目和文件已註解連結。
+description: 包含適用於連線到 SQL Server 或 Azure SQL Database 的不同語言和作業系統的下載項目和文件之已註解連結的頁面。
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924888"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529042"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server 用戶端程式設計的首頁
 
@@ -23,7 +23,7 @@ ms.locfileid: "80924888"
 歡迎來到我們的首頁，了解如何以用戶端程式設計與 Microsoft SQL Server 及在雲端的 Azure SQL Database 互動。 本文提供下列資訊：
 
 - 列出並描述可用的語言和驅動程式組合。
-    - 提供的作業系統資訊包括 Linux (Ubuntu 和其他)、MacOS 和 Windows。
+  - 提供的作業系統資訊包括 Linux (Ubuntu 和其他)、macOS 和 Windows。
 - 提供每個組合的詳細文件連結。
 - 在適當情況下，顯示特定語言階層式文件的區域和子區域。
 
@@ -35,7 +35,7 @@ ms.locfileid: "80924888"
 如需連線至 Azure SQL Database 連接字串的詳細資訊，請參閱：
 
 - [使用 .NET Core (C#) 查詢 Azure SQL 資料庫](/azure/sql-database/sql-database-connect-query-dotnet-core)。
-- 在目錄中，先前文章附近的其他 Azure SQL Database 是與其他語言相關的內容。 例如，請參閱[使用 PHP 查詢 Azure SQL 資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
+- 在目錄中位於先前文章附近，關於其他語言的其他 Azure SQL Database 文章。 例如，請參閱[使用 PHP 查詢 Azure SQL 資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
 
 
 #### <a name="build-an-app-webpages"></a>Build-an-app 網頁
@@ -105,12 +105,12 @@ EF 與下列技術有直接或間接關聯性：
 - .NET Framework
 - [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/) \(部分機器翻譯\) 或 [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities) \(部分機器翻譯\)
 - 語言語法增強功能，例如 C# 中的 **=>** 運算子。
-- 方便的程式，可產生對應至您 SQL 資料庫中資料表的類別原始程式碼。 例如，[EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe) \(部分機器翻譯\)。
+- 方便的程式，可產生對應至您 SQL 資料庫中資料表之類別的原始程式碼。 例如，[EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe) \(部分機器翻譯\)。
 
 
 #### <a name="original-ef-and-new-ef"></a>原始的 EF 和新的 EF
 
-[Entity Framework 的起始頁面](https://docs.microsoft.com/ef/)，包含介紹 EF 的描述如下所示：
+[Entity Framework 的起始頁面](https://docs.microsoft.com/ef/) \(英文\) 介紹 EF 的描述如下所示：
 
 - Entity Framework 是物件關聯式對應程式 (O/RM)，可讓 .NET 開發人員使用 .NET 物件來處理資料庫。 有了 Entity Framework，開發人員便不再需要撰寫通常必須撰寫的資料存取原始程式碼。
 
@@ -118,7 +118,7 @@ EF 與下列技術有直接或間接關聯性：
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 在 2008 年 8 月首次發行 EF。 在 2015 年 3 月，Microsoft 宣佈 EF 6.x 是 Microsoft 開發的最終版本。 Microsoft 已將原始程式碼發行公眾領域。<br /><br />EF 起初是 .NET Framework 的一部分。 但 EF 6.x 已從 .NET Framework 中移除。<br /><br />[Github 上的 EF 6.x 原始程式碼在 *aspnet/EntityFramework6* 存放庫](https://github.com/aspnet/EntityFramework6) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 在 2008 年 8 月首次發行 EF。 在 2015 年 3 月，Microsoft 宣佈 EF 6.x 是 Microsoft 開發的最終版本。 Microsoft 已將原始程式碼發行公眾領域。<br /><br />EF 起初是 .NET Framework 的一部分。 但 EF 6.x 已從 .NET Framework 中移除。<br /><br />[GitHub 上的 EF 6.x 原始程式碼，位於 *aspnet/EntityFramework6* 存放庫](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft 在 2016 年 6 月發行新開發的 EF Core。 EF Core 是針對更佳的彈性和可攜性而設計的。 EF Core 能在 Microsoft Windows 以外的作業系統上執行。 而且 EF Core 可以互動的資料庫，不僅限於 Microsoft SQL Server 和其他關聯式資料庫。<br /><br />**C&#x23; 程式碼範例：**<br />[Entity Framework Core 使用者入門](https://docs.microsoft.com/ef/core/get-started/index)<br />[以現有資料庫在 .NET Framework 上開始使用 EF Core](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
@@ -132,7 +132,7 @@ EF 和相關技術有很強的功能，想要精通整個領域的開發人員�
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java 標誌][image-ref-330-java] Java 與 JDBC
 
-Microsoft 提供 Java 資料庫連線 (JDBC) 驅動程式來搭配 SQL Server (當然還有 Azure SQL Database) 使用。 這是類型 4 JDBC 驅動程式，可以透過標準 JDBC 應用程式介面 (API) 來提供資料庫連接。
+Microsoft 提供 Java 資料庫連線 (JDBC) 驅動程式來搭配 SQL Server (以及 Azure SQL Database) 使用。 這是類型 4 JDBC 驅動程式，可以透過標準 JDBC 應用程式介面 (API) 來提供資料庫連接。
 
 #### <a name="code-examples"></a>程式碼範例
 
@@ -162,9 +162,9 @@ JDBC 文件包含下列主要區域：
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js 標誌][image-ref-340-node] Node.js
 
-您可以在 Windows、Linux 或 Mac 上使用 Node.js 連線到 SQL Server。 我們的 Node.js 文件根頁面在[這裡](./node-js/index.md)。
+您可以在 Windows、Linux 或 macOS 上使用 Node.js 連線到 SQL Server。 我們的 Node.js 文件根頁面在[這裡](./node-js/index.md)。
 
-適用於 SQL Server 的 Node.js 連線驅動程式是使用 JavaScript 實作。 該驅動程式使用 TDS 通訊協定，所有現代化版本的 SQL Server 皆予支援。 驅動程式是開放原始碼專案，[可在 Github 上取得](https://tediousjs.github.io/tedious/) \(英文\)。
+適用於 SQL Server 的 Node.js 連線驅動程式是使用 JavaScript 實作。 該驅動程式使用 TDS 通訊協定，所有現代化版本的 SQL Server 皆予支援。 驅動程式是開放原始碼專案，[可在 GitHub 上找到](https://tediousjs.github.io/tedious/) \(英文\)。
 
 #### <a name="code-examples"></a>程式碼範例
 
@@ -179,7 +179,7 @@ JDBC 文件包含下列主要區域：
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>適用於 C++ 的 ODBC 
+## <a name="odbc-for-c"></a>適用於 C++ 的 ODBC
 
 ![ODBC 標誌][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ JDBC 文件包含下列主要區域：
 | 區域 | 子區域 | 描述 |
 | :--- | :------ | :---------- |
 | [適用於 C++ 的 ODBC](./odbc/index.md) | 我們文件的根頁面。 |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | 在 Linux 或 MacOS 作業系統上使用 ODBC 的資訊。 |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | 在 Linux 或 macOS 作業系統上使用 ODBC 的相關資訊。 |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | 在 Windows 作業系統上使用 ODBC 的資訊。 |
 | [管理](../odbc/admin/index.md) | &nbsp; | 管理 ODBC 資料來源的系統管理工具。 |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | 由 Microsoft 建立及提供的各種 ODBC 驅動程式。 |
@@ -255,7 +255,7 @@ JDBC 文件包含下列主要區域：
 | :--- | :---------- |
 | [Python 連線到 SQL Server](./python/index.md) | 我們文件的根頁面。 |
 | [pymssql 驅動程式](./python/pymssql/index.md) | Microsoft 不維護或測試 pymssql 驅動程式。<br /><br />pymssql 連線驅動程式是對 SQL 資料庫的簡單介面，可在 Python 程式中使用。 Pymssql 建置在 FreeTDS 之上，提供對 Microsoft SQL Server 的 Python DB-API (PEP-249) 介面。 |
-| [pyodbc 驅動程式](./python/pyodbc/index.md)   | pyodbc 連線驅動程式是開放原始碼的 Python 模組，讓存取 ODBC 資料庫變簡單。 其實作 DB API 2.0 規格，但還包含更類似 Python 的便利性。 |
+| [pyodbc 驅動程式](./python/pyodbc/index.md)   | pyodbc 連線驅動程式是開放原始碼的 Python 模組，可讓存取 ODBC 資料庫變簡單。 其實作 DB API 2.0 規格，但還包含更類似 Python 的便利性。 |
 | &nbsp; | <br /> |
 
 
@@ -271,7 +271,7 @@ JDBC 文件包含下列主要區域：
 | :-- | :-- |
 | [使用 Ruby 連接到 SQL 的概念證明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 著重在連線和查詢 SQL Server 的一小段程式碼範例。 |
 | [Azure SQL 資料庫：使用 Ruby 查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 範例。 |
-| [在 MacOS 上建立 Ruby 應用程式來使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) \(英文\) | 設定資訊，以及程式碼範例。 |
+| [在 macOS 上建立 Ruby 應用程式來使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) \(英文\) | 設定資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 
@@ -293,7 +293,7 @@ JDBC 文件包含下列主要區域：
 
 接著是網站上所提供詳細資料的約略大綱：
 
-#### <a name="java-on-ubuntu"></a>Ubuntu 上的 Java：
+#### <a name="java-on-ubuntu"></a>Ubuntu 上的 Java
 
 1. 設定您的環境
     - 步驟 1.1 安裝 SQL Server
@@ -306,7 +306,7 @@ JDBC 文件包含下列主要區域：
 3. 讓您的 Java 應用程式加快達 100 倍
     - 步驟 3.1 建立 Java 應用程式來示範資料行存放區索引
 
-#### <a name="python-on-windows"></a>Windows 上的 Python：
+#### <a name="python-on-windows"></a>Windows 上的 Python
 
 1. 設定您的環境
     - 步驟 1.1 安裝 SQL Server
@@ -325,13 +325,13 @@ JDBC 文件包含下列主要區域：
 
 下列螢幕擷取畫面提供您我們 SQL 開發文件網站外觀的概念。
 
-#### <a name="choose-a-language"></a>選擇語言：
+#### <a name="choose-a-language"></a>選擇語言
 
 ![SQL Dev 網站，開始使用][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>選擇作業系統：
+#### <a name="choose-an-operating-system"></a>選擇作業系統
 
 ![SQL Dev 網站，Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

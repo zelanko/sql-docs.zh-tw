@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286622"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487791"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
 
@@ -116,7 +116,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> 安裝資料警示  
  資料警示功能只有在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是以 SharePoint 模式安裝時才可使用。 當您以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，安裝程式會自動建立儲存警示定義和警示中繼資料的警示資料庫，以及兩個用於管理警示的 SharePoint 頁面，並且將 [資料警示設計工具] 加入 SharePoint 網站。 在安裝期間不需要針對警示執行特殊步驟或是設定特殊選項。  
   
- 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) \(機器翻譯\)。  
+ 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的新 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) \(機器翻譯\)。  
   
  如本主題前段的圖中所示，資料警示會使用 SQL Server Agent 作業。 若要建立作業，必須執行 SQL Server Agent。 您可能已將 SQL Server Agent 設定為在安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時自動啟動。 否則，您可以手動啟動 SQL Server Agent。 如需詳細資訊，請參閱[設定 SQL Server Agent](../ssms/agent/configure-sql-server-agent.md)及[及啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
@@ -270,12 +270,12 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的效能計數器。 如需詳細資訊，請參閱 [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)、[MSRS 2011 Web 服務和 MSRS 2011 Windows 服務效能物件的效能計數器&#40;原生模式&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) 和 [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> 支援 SSL  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器或 SharePoint 網站的加密連接。  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> TLS 的支援  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以使用 HTTP SSL 服務來建立與報表伺服器或 SharePoint 網站的加密連線。 傳輸層安全性 (TLS) 先前稱為安全通訊端層 (SSL)。
   
- 警示執行階段服務和資料警示使用者介面支援 SSL，而且無論您使用 SSL 或 HTTP 的運作方式都很類似，不過還是有些微的差異。 使用 SSL 連接建立資料警示定義時，從資料警示訊息連結回 SharePoint 文件庫的 URL 也會使用 SSL。 您可以識別 SSL 連接，因為它的 URL 中是使用 HTTPS，而不是 HTTP。 同樣地，如果是使用 HTTP 連接件例資料警示定義，則返回 SharePoint 網站的連結會使用 HTTP。 無論警示定義是使用 SSL 或 HTTP 所建立，使用者和警示系統管理員使用 [資料警示設計工具] 或 [資料警示管理員] 時的體驗都是一樣的。 如果在資料定義建立、更新再儲存期間應變更通訊協定 (HTTP 或 SSL)，則會保留原始通訊協定並且在連結 URL 中使用。  
+ 警示執行階段服務和資料警示使用者介面皆支援 TLS，而且無論您使用 TLS 或 HTTP，其運作方式都很類似 (不過還是有些微的差異)。 使用 TLS 連線建立資料警示定義時，從資料警示訊息連結回 SharePoint 文件庫的 URL 也會使用 TLS。 您可以識別 TLS 連線，因為其 URL 中是使用 HTTPS，而不是 HTTP。 同樣地，如果是使用 HTTP 連接件例資料警示定義，則返回 SharePoint 網站的連結會使用 HTTP。 無論警示定義是使用 TLS 或 HTTP 來建立，使用者和警示系統管理員使用 [資料警示設計工具] 或 [資料警示管理員] 時的體驗都是一樣的。 如果在建立資料定義之後，以及在更新並儲存該資料定義之前的這段期間變更通訊協定 (HTTP 或 TLS)，則會保留原始通訊協定並在連結 URL 中加以使用。  
   
- 如果您在 SharePoint 網站上建立設定為使用 SSL 的資料警示，然後移除 SSL 需求，警示會繼續在網站上運作。 如果網站遭到刪除，則會改用預設的區域網站。  
+ 如果您在 SharePoint 網站上建立設定為使用 TLS 的資料警示，然後移除 TLS 需求，該警示會繼續在網站上運作。 如果網站遭到刪除，則會改用預設的區域網站。  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> 資料警示使用者介面  
  資料警示提供了管理警示的 SharePoint 頁面，以及建立和編輯資料警示定義的設計工具。  

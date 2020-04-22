@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244077"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634952"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>在 IntelliJ 中於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上提交 Spark 作業
 
@@ -33,9 +33,9 @@ ms.locfileid: "75244077"
 ## <a name="link-sql-server-big-data-cluster"></a>連結 SQL Server 巨量資料叢集
 1. 開啟 IntelliJ IDEA 工具。
 
-2. 如果您使用自我簽署憑證，請從 [Tools]  \(工具\) 功能表中停用 SSL 憑證驗證，選取 [Azure]  、[Validate Spark Cluster SSL Certificate]  \(驗證 Spark 叢集 SSL 憑證\)，然後 [Disable]  \(停用\)。
+2. 如果您使用自我簽署憑證，請從 [Tools]  \(工具\) 功能表中，依序選取 [Azure]  、[Validate Spark Cluster SSL Certificate]  \(驗證 Spark 叢集 SSL 憑證\) 及 [Disable]  \(停用\) 來停用 TLS/SSL 憑證驗證。
 
-    ![連結 SQL Server 巨量資料叢集 - 停用 SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![連結 SQL Server 巨量資料叢集 - 停用 TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. 從 [View]  \(檢視\) 功能表開啟 Azure Explorer，選取 [Tool Windows]  \(工具視窗\)，然後選取 [Azure Explorer]  。
 4. 以滑鼠右鍵按一下 [SQL Server Big Data Cluster]  \(SQL Server 巨量資料叢集\)，然後選取 [Link SQL Server Big Data Cluster]  \(連結 SQL Server 巨量資料叢集\)。 輸入 [Server]  \(伺服器\)、[User Name]  \(使用者名稱\) 和 [Password]  \(密碼\)，然後按一下 [OK]  \(確定\)。

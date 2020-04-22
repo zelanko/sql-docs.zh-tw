@@ -1,5 +1,6 @@
 ---
-title: 搭配 JDBC 驅動程式使用大量複製 |Microsoft Docs
+title: 搭配 JDBC 驅動程式使用大量複製
+description: SQLServerBulkCopy 類別讓您能夠在 Java 中撰寫資料載入解決方案，透過標準 JDBC API 提供顯著的效能優勢。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9cc73888791f4fb1c4aab58b60fec51119a2408a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 945bdaf05c9a10e3ab72b11e0049c6053dd108b5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924032"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634018"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC 驅動程式使用大量複製
 
@@ -117,7 +118,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 > [!NOTE]  
 > 當錯誤發生時，如果您需要復原全部或部分大量複製，您可以使用 SQLServerBulkCopy 受管理的交易，或執行現有交易中的大量複製作業。  
-> 如需詳細資訊，請參閱[交易和大量複製作業](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations)  
+> 如需詳細資訊，請參閱[交易和大量複製作業](#transaction-and-bulk-copy-operations)  
   
  執行大量複製作業的一般步驟如下：  
   
@@ -143,7 +144,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 下列應用程式示範如何使用 SQLServerBulkCopy 類別載入資料。 在此範例中，將使用一個結果集將資料從 SQL Server AdventureWorks 資料庫的 Production.Product 資料表複製到相同資料庫中的類似資料表。  
   
 > [!IMPORTANT]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
+> 除非您已如[資料表設定](#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
 
 ```java
 import java.sql.Connection;
@@ -237,7 +238,7 @@ try (Connection con = DriverManager.getConnection(connectionUrl);
 如果您使用相同的 SQLServerBulkCopy 物件執行數項大量複製作業時，並無限制來源或目標資訊在每項作業中是否相等或不同。 不過，當您每次寫入到伺服器時，必須確定資料行關聯資訊已正確設定。  
   
 > [!IMPORTANT]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
+> 除非您已如[資料表設定](#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
 
 ```java
 import java.sql.Connection;
@@ -366,7 +367,7 @@ public class BulkCopyMultiple {
 此大量複製作業執行時的 **BatchSize** 屬性設定為 10。 當此作業遇到無效的資料列時，就會擲回例外狀況。 在第一個範例中，大量複製作業會為非交易作業。 發生錯誤前複製的所有批次均已認可；包含重複索引鍵的批次已回復，而且大量複製作業會在處理任何其他批次之前暫止。  
   
 > [!NOTE]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
+> 除非您已如[資料表設定](#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
 
 ```java
 import java.sql.Connection;
@@ -475,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 下列應用程式與 **BulkCopyNonTransacted** 類似，但有一個例外：在此範例中，大量複製作業包含在較大的外部交易中。 當發生主要索引鍵違規錯誤時，整個交易便會回復，並且沒有任何資料列會加入目的地資料表。
 
 > [!NOTE]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
+> 除非您已如[資料表設定](#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式以複製資料。  
 
 ```java
 import java.sql.Connection;
@@ -570,7 +571,7 @@ public class BulkCopyExistingTransactions {
  下列應用程式示範如何使用 SQLServerBulkCopy 類別載入資料。 在此範例中，將使用一個 CSV 檔案將從 SQL Server AdventureWorks 資料庫的 Production.Product 資料表匯出的資料複製到該資料庫中的類似資料表。  
   
 > [!IMPORTANT]  
-> 除非您已如[資料表設定](../../ssms/download-sql-server-management-studio-ssms.md) 中所述建立工作資料表來取得它，否則此範例不會執行。  
+> 除非您已如[資料表設定](#table-setup) 中所述建立工作資料表來取得它，否則此範例不會執行。  
   
 1. 開啟 **SQL Server Management Studio**，並連線到具有 AdventureWorks 資料庫的 SQL Server。  
   
@@ -658,7 +659,7 @@ public class BulkCopyCSV {
   
 根據大量複製選項，以及來源和目的地資料表的加密類型，JDBC 驅動程式可能會以透明的方式解密然後加密資料，或是它可能會依現狀傳送加密的資料。 例如，當從加密資料行將資料大量複製到未加密的資料行時，驅動程式會先以透明的方式解密資料，然後才傳送到 SQL Server。 同樣地，當從未加密資料行 (或從 CSV 檔案) 將資料大量複製到加密資料行時，驅動程式會先以透明的方式加密資料，然後才傳送到 SQL Server。 如果來源和目的地都已加密，則視 **allowEncryptedValueModifications** 大量複製選項而定，驅動程式會依現狀傳送資料，或是先解密資料再將它加密，然後才傳送到 SQL Server。  
   
-如需詳細資訊，請參閱底下的 **allowEncryptedValueModifications** 大量複製選項，以及[搭配使用 Always Encrypted 與 JDBC 驅動程式](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。  
+如需詳細資訊，請參閱底下的 **allowEncryptedValueModifications** 大量複製選項，以及[搭配使用 Always Encrypted 與 JDBC 驅動程式](using-always-encrypted-with-the-jdbc-driver.md)。  
   
 > [!IMPORTANT]  
 > Microsoft JDBC Driver 6.0 for SQL Server 在從 CSV 檔案大量複製資料到加密資料行時的限制：  
@@ -723,7 +724,7 @@ SQLServerBulkCopy 類別只可以用來將資料寫入 SQL Server 資料表。 �
 | Boolean UseInternalTransaction           | 若已指定，則大量複製作業的每個批次將在交易內發生。 如果 SQLServerBulkCopy 使用現有的連接 (如建構函式所指定)，將會發生 SQLServerException。  如果 SQLServerBulkCopy 建立了專用的連接，將會啟用交易。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - 無交易                                               |
 | Int BatchSize                            | 每個批次中的資料列數。 在每個批次的結尾，會將該批次中的資料列傳送到伺服器。<br /><br /> 當 BatchSize 資料列都已處理，或沒有更多資料列要傳送至目的地資料來源時，就會完成批次。  如果 SQLServerBulkCopy 執行個體在 UseInternalTransaction 選項未作用中的狀態下即已宣告，則資料列會一次傳送至該伺服器 BatchSize 資料列，但不採取任何交易相關的動作。 如果 UseInternalTransaction 處於作用中時，則每個資料列批次都是以個別的交易插入。                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - 表示每個 writeToServer 作業是單一批次。    |
 | Int BulkCopyTimeout                      | 作業要在此秒數之前完成，之後即逾時。值為 0 表示沒有限制；大量複製則會無限期等候。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 秒。                                                          |
-| Boolean allowEncryptedValueModifications | 此選項是 Microsoft JDBC Driver 6.0 for SQL Server (或更高版本) 的功能。<br /><br /> 指定時，**allowEncryptedValueModifications** 可讓您無須解密資料即可在資料表或資料庫之間大量複製加密資料。 一般而言，應用程式會從一個資料表的加密資料行選取資料而不會解密資料 (應用程式會連線到資料庫，並將資料行加密設定關鍵字設定為停用)，接著會使用這個選項來大量插入資料，資料仍然加密。 如需詳細資訊，請參閱[搭配使用 Always Encrypted 與 JDBC 驅動程式](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 **allowEncryptedValueModifications** 時請小心，這可能會導致資料庫損毀，因為驅動程式不會檢查資料是否確實加密，或是否使用與目標資料行相同的加密類型、演算法和金鑰正確加密。 |
+| Boolean allowEncryptedValueModifications | 此選項是 Microsoft JDBC Driver 6.0 for SQL Server (或更高版本) 的功能。<br /><br /> 指定時，**allowEncryptedValueModifications** 可讓您無須解密資料即可在資料表或資料庫之間大量複製加密資料。 一般而言，應用程式會從一個資料表的加密資料行選取資料而不會解密資料 (應用程式會連線到資料庫，並將資料行加密設定關鍵字設定為停用)，接著會使用這個選項來大量插入資料，資料仍然加密。 如需詳細資訊，請參閱[搭配使用 Always Encrypted 與 JDBC 驅動程式](using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 **allowEncryptedValueModifications** 時請小心，這可能會導致資料庫損毀，因為驅動程式不會檢查資料是否確實加密，或是否使用與目標資料行相同的加密類型、演算法和金鑰正確加密。 |
   
  Getter 和 setter：  
   
@@ -796,4 +797,4 @@ ISQLServerBulkRecord 介面的簡單實作，可用於從分隔的檔案中讀�
   
 ## <a name="see-also"></a>另請參閱  
 
-[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](overview-of-the-jdbc-driver.md)  

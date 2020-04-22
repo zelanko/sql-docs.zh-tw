@@ -1,5 +1,6 @@
 ---
-title: Installing the Driver Manager (ODBC Driver for SQL Server) |Microsoft Docs
+title: 安裝驅動程式管理員
+description: 此文章包含在 Linux 和 macOS 上安裝 unixODBC 驅動程式管理員，以便與所有 Microsoft ODBC Driver for SQL Server 版本搭配使用的指示。
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2179df0018d227fc12dd545f4e846c475b120ca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ba758f3c95ef3285424cafe676df46e5d3df7b34
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921907"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528242"
 ---
 # <a name="installing-the-driver-manager"></a>安裝驅動程式管理員
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

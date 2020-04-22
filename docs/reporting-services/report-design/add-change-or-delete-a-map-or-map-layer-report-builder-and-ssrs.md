@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080646"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488245"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
@@ -220,7 +220,7 @@ ms.locfileid: "77080646"
   
 3.  在 [屬性] 窗格中，將 UseSecureConnection 設定為 **True**。  
   
- Bing Maps Web 服務的連接將會使用 HTTP SSL (安全通訊端層) 服務來擷取這個圖層的 Bing 地圖底圖。  
+ Bing Maps Web 服務的連線將會使用 HTTP SSL 服務來擷取這個圖層的 Bing 地圖底圖。 傳輸層安全性 (TLS) 先前稱為安全通訊端層 (SSL)。
   
 ##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> 為圖格標籤指定語言  
   

@@ -1,5 +1,6 @@
 ---
 title: 拒絕 XML 結構描述集合的權限 | Microsoft 文件
+description: 了解如何拒絕建立新 XML 結構描述集合或使用現有結構描述集合的權限。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b20aa168defac0e42c81336581fb61641443c8a1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4084b87320da45e4cff3aa37ba852f708da8976c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664556"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388483"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>拒絕 XML 結構描述集合的權限
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

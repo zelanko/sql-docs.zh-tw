@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252044"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630781"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> **RAISERROR** 陳述式不受 **SET XACT_ABORT** 影響。 新的應用程式應該使用 **THROW**，而非 **RAISERROR**。
 
   產生錯誤訊息並起始工作階段的錯誤處理。 RAISERROR 可以參考儲存在 sys.messages 目錄檢視表的使用者自訂訊息，或是動態建立訊息。 訊息以伺服器錯誤訊息傳回給呼叫應用程式，或傳回給 TRY...CATCH 建構的相關聯 CATCH 區塊。 新應用程式應該改用 [THROW](../../t-sql/language-elements/throw-transact-sql.md)。  
   
@@ -45,7 +48,7 @@ ms.locfileid: "72252044"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  

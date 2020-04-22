@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8aa3ac86bfd7754117af98ab1bc9d3b421ecca6f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500415"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487827"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -68,7 +68,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**LogonUser, LogonDomain, LogonCred**|儲存報表伺服器用於連接至報表伺服器資料庫所使用之網域帳戶的網域、使用者名稱和密碼。 當報表伺服器連接設定使用網域帳戶時，會建立 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 如需報表伺服器資料庫連接的詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
 |**InstanceID**|報表伺服器執行個體的識別碼。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 此值會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 根據預設，這個值為 **MSRS12**\<執行個體名稱>  。 請勿修改此設定。 以下為完整值的範例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的範例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|安裝程式建立之報表伺服器安裝的識別碼。 此值會設定為 GUID。 請勿修改此設定。|N|  
-|**SecureConnectionLevel**|指定 Web 服務呼叫必須使用安全通訊端層 (SSL) 的程度。 這項設定同時用於報表伺服器 Web 服務和入口網站。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中設定使用 HTTP 或 HTTPS 的 URL 時，就會設定這個值。 在 SQL Server 2008 R2 中，SecureConnectionLevel 會變成 on/off 開關。 對於 SQL Server 2008 R2 之前的版本，有效值範圍是從 0 到 3，其中 0 是最不安全的值。 如需詳細資訊，請參閱 [ConfigurationSetting 方法 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)、[使用安全的 Web 服務方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)和[在原生模式報表伺服器上設定 SSL 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N、S|
+|**SecureConnectionLevel**|指定 Web 服務呼叫必須使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 的程度。 這項設定同時用於報表伺服器 Web 服務和入口網站。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中設定使用 HTTP 或 HTTPS 的 URL 時，就會設定這個值。 在 SQL Server 2008 R2 中，SecureConnectionLevel 會變成 on/off 開關。 對於 SQL Server 2008 R2 之前的版本，有效值範圍是從 0 到 3，其中 0 是最不安全的值。 如需詳細資訊，請參閱 [ConfigurationSetting 方法 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)、[使用安全的 Web 服務方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)和[在原生模式報表伺服器上設定 TLS 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N、S|
 |**DisableSecureFormsAuthenticationCookie**|預設值為 False。<br /><br /> 指定是否停用強制將表單和自訂驗證所使用的 Cookie 標記為安全。 從 SQL Server 2012 開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會自動將搭配自訂驗證延伸模組所使用的表單驗證 Cookie (在傳送給用戶端時) 標示為安全 Cookie。 藉由變更這個屬性，報表伺服器管理員和自訂安全性延伸模組作者可以還原成之前的行為，該行為可讓自訂安全性延伸模組作者判斷是否將 Cookie 標示為安全 Cookie。 建議針對表單驗證使用安全 Cookie，以防止網路探查和重新執行攻擊。|N|  
 |**CleanupCycleMinutes**|指定一個時限 (分鐘)，超過此時限後，舊有的工作階段和過期的快照集，便會從報表伺服器資料庫中移除。 有效值範圍是從 0 到最大整數。 預設值為 10。 將值設定為 0，則會停用資料庫清除處理序。|N、S|  
 |**MaxActiveReqForOneUser**|指定一個使用者同時可以處理的報表最大數目。 一旦達到限制，系統就會拒絕進一步的報表處理要求。 有效值為 1 到最大整數。 預設值為 20。<br /><br /> 請注意，大部分要求的處理速度很快，因此單一使用者不太可能同時擁有 20 個以上的開啟連接。 如果使用者同時開啟超過 15 個密集處理的報表，您可能需要增加此值。<br /><br /> 以 SharePoint 整合模式執行的報表伺服器會忽略這項設定。|N、S|  
@@ -135,7 +135,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**RSWindowsNegotiate**|報表伺服器接受 Kerberos 或 NTLM 安全性 Token。 當報表伺服器在原生模式下執行，而且服務帳戶為網路服務時，此為預設值。 當報表伺服器在原生模式下執行，而且服務帳戶設定成網域使用者帳戶時，會省略此設定。<br /><br /> 如果網域帳戶設定成報表伺服器服務帳戶，而且服務主要名稱 (SPN) 未設定成報表伺服器，此設定可能會防止使用者登入伺服器。|N|  
 |**EnableAuthPersistance**|伺服器接受 NTLM 安全性 Token。<br /><br /> 如果您移除此設定，瀏覽器支援會受到某些支援之瀏覽器類型的限制。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N、S|  
 |**RSWindowsKerberos**|伺服器接受 Kerberos 安全性 Token。<br /><br /> 當您在限制委派驗證配置中使用 Kerberos 驗證時，請使用此設定或 RSWindowsNegotiate。|N|  
-|**RSWindowsBasic**|不使用認證建立連線時，伺服器會接受基本認證並發出挑戰/回應。<br /><br /> 基本驗證會以清楚的文字，將認證傳入 HTTP 要求中。 如果您使用基本驗證，請使用 SSL 加密進出報表伺服器的網路流量。 若要檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本驗證的範例組態語法，請參閱 [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)。|N|  
+|**RSWindowsBasic**|不使用認證建立連線時，伺服器會接受基本認證並發出挑戰/回應。<br /><br /> 基本驗證會以清楚的文字，將認證傳入 HTTP 要求中。 如果您使用基本驗證，請使用 TLS 來加密進出報表伺服器的網路流量。 若要檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本驗證的範例組態語法，請參閱 [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)。|N|  
 |**Custom**|如果您在報表伺服器電腦上部署了自訂安全性延伸模組，請指定這個值。 如需詳細資訊，請參閱＜ [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)＞。|N|  
 |**LogonMethod**|這個值會指定 **RSWindowsBasic**的登入類型。 如果您指定了 **RSWindowsBasic**，這個值就是必要項目。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> **2** = 網路登入，用於驗證純文字密碼的高效能伺服器<br /><br /> **3** = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> <br /><br /> 注意:[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|N|  
 |**Realm**|這個值是用於 **RSWindowsBasic**。 它會指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|N|  
@@ -162,7 +162,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**RecycleTime**|指定應用程式網域的回收時間，以分鐘測量。 有效值範圍是從 0 到最大整數。 預設值是 720。|N、S|  
 |**MaxAppDomainUnloadTime**|指定在回收作業過程中，允許應用程式網域卸載的時間間隔。 如果回收未在此時間週期內完成，應用程式網域中的所有處理都會停止。 如需詳細資訊，請參閱＜ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)＞。<br /><br /> 此值的單位是分鐘。 有效值範圍是從 0 到最大整數。 預設值是 **30**。|N、S|  
 |**MaxQueueThreads**|指定報表伺服器 Windows 服務用於同時處理訂閱和通知的執行緒數目。 有效值範圍是從 0 到最大整數。 預設值是 0。 如果您選擇 0，則報表伺服器會決定最大的執行緒數目。 如果您指定整數，您所指定的值會設定一次可以建立的執行緒數目上限。 如需報表伺服器 Windows 服務如何管理記憶體來執行處理的詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N、S|  
-|**UrlRoot**|報表伺服器傳遞延伸模組所使用，用於撰寫以電子郵件和檔案共用訂閱傳遞之報表所使用的 URL。 此值必須是可從中存取已發行報表之報表伺服器的有效 URL 位址。 報表伺服器所使用，用於產生離線或自動存取的 URL。 這些 URL 會在匯出的報表中，由傳遞延伸模組所使用，用於撰寫包含在傳遞訊息中的 URL，例如電子郵件中的連結。 報表伺服器會根據下列行為，決定報表中的 URL：<br /><br /> 當 **UrlRoot** 是空的 (預設值)，而且有 URL 保留項目時，報表伺服器會自動以針對 ListReportServerUrls 方法產生 URL 的相同方式決定 URL。 系統會使用 ListReportServerUrls 方法所傳回第一個 URL。 或者，如果 SecureConnectionLevel 大於零 (0)，則會使用第一個 SSL URL。<br /><br /> 當 **UrlRoot** 設定為特定的值時，系統會使用明確值。<br /><br /> 當 **UrlRoot** 是空的，而且沒有設定任何 URL 保留項目時，轉譯報表與電子郵件連結中的 URL 會不正確。|N、S|  
+|**UrlRoot**|報表伺服器傳遞延伸模組所使用，用於撰寫以電子郵件和檔案共用訂閱傳遞之報表所使用的 URL。 此值必須是可從中存取已發行報表之報表伺服器的有效 URL 位址。 報表伺服器所使用，用於產生離線或自動存取的 URL。 這些 URL 會在匯出的報表中，由傳遞延伸模組所使用，用於撰寫包含在傳遞訊息中的 URL，例如電子郵件中的連結。 報表伺服器會根據下列行為，決定報表中的 URL：<br /><br /> 當 **UrlRoot** 是空的 (預設值)，而且有 URL 保留項目時，報表伺服器會自動以針對 ListReportServerUrls 方法產生 URL 的相同方式決定 URL。 系統會使用 ListReportServerUrls 方法所傳回第一個 URL。 或者，如果 SecureConnectionLevel 大於零 (0)，則會使用第一個 TLS URL。<br /><br /> 當 **UrlRoot** 設定為特定的值時，系統會使用明確值。<br /><br /> 當 **UrlRoot** 是空的，而且沒有設定任何 URL 保留項目時，轉譯報表與電子郵件連結中的 URL 會不正確。|N、S|  
 |**UnattendedExecutionAccount**|指定報表伺服器為執行報表所使用的使用者名稱、密碼和網域。 這些值經過加密。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具或 **rsconfig** 公用程式即可設定這些值。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> SharePoint 模式中，您集合執行帳戶的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式使用 SharePoint 集中管理。 如需詳細資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|N|  
 |**PolicyLevel**|指定安全性原則組態檔。 有效的值為 Rssrvrpolicy.config。如需詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|N、S|  
 |**IsWebServiceEnabled**|指定報表伺服器 Web 服務是否回應 SOAP 與 URL 存取要求。 當您使用原則型式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用服務時，將會設定這個值。|N、S|  
@@ -247,7 +247,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SMTPAccountName**|包含指派 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook Express 帳戶名稱的字串值。 如果您的 SMTP 伺服器設定來做某些用途，您可以設定此值；否則可以將它保留空白。 使用 [寄件者]  ，以指定用於傳送報表的電子郵件帳戶。|  
 |**SMTPConnectionTimeout**|指定表示有效通訊端在連接到 SMTP 服務逾時前，所等待之秒數的整數值。預設值是 30 秒，但是如果 **SendUsing** 設定為 2，就會忽略此值。|  
 |**SMTPServerPickupDirectory**|指定表示本機 SMTP 服務收取目錄的字串值。 此值必須是完整本機資料夾路徑 (例如，d:\rs-emails)。|  
-|**SMTPUseSSL**|指定可以設定在透過網路傳送 SMTP 訊息時，使用安全通訊端層 (SSL) 的布林值。 預設值是 0 (或 False)。 當 **[SendUsing]** 元素設定為 2 時，可使用此設定。|  
+|**SMTPUseSSL**|指定在透過網路傳送 SMTP 訊息時，可以設定來使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 的布林值。 預設值是 0 (或 False)。 當 **[SendUsing]** 元素設定為 2 時，可使用此設定。|  
 |**SendUsing**|指定用於傳送訊息的方法。 有效值為：<br /><br /> 1=從本機 SMTP 服務收取目錄傳送訊息。<br /><br /> 2=從網路 SMTP 服務傳送訊息。|  
 |**SMTPAuthenticate**|指定表示在透過 TCP/IP 連接傳送訊息到 SMTP 服務時，要使用之驗證種類的整數值。 有效值為：<br /><br /> 0=無驗證。<br /><br /> 1= (不支援)。<br /><br /> 2= NTLM (NT LanMan) 驗證。 使用報表伺服器 Windows 服務的安全性內容，連接到網路 SMTP 伺服器。|  
 |**From**|以 *abc@host.xyz* 。 地址會在外寄電子郵件訊息的 [寄件者]  行上出現。 如果您使用的是遠端 SMTP 伺服器，則此值是必要的。 它應該是擁有傳送郵件之權限的有效電子郵件帳戶。|  

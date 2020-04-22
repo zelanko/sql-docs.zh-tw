@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 Windows 驗證進行連線 | Microsoft Docs
+title: 如何：使用 Windows 驗證進行連接
+description: 了解使用 Windows 整合式驗證透過 Drivers for PHP for SQL Server 進行連線的意義。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066c58d9ee72f1160b84d4f4a3de9f7156a47d6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916500"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634832"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>如何：使用 Windows 驗證進行連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "80916500"
 -   如果 SQL Server 和 Web 伺服器位於不同的電腦，必須設定 SQL Server 以啟用遠端連接。  
   
 > [!NOTE]  
-> 當您建立連接時，可以設定 *Database* 和 *ConnectionPooling* 等連接屬性。 如需支援之連接屬性的完整清單，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
+> 當您建立連接時，可以設定 *Database* 和 *ConnectionPooling* 等連接屬性。 如需支援之連接屬性的完整清單，請參閱 [Connection Options](connection-options.md)。  
   
 可能的話，Windows 驗證應該用來連接 SQL Server，原因如下：  
   
@@ -39,7 +40,7 @@ ms.locfileid: "80916500"
   
 -   使用者受制於集中式帳戶管理；會強制執行安全性原則，例如；密碼到期日、最小密碼長度，以及帳戶在多次無效登入要求後鎖定。  
   
-如果 Windows 驗證不是可行的選項，請參閱[如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
+如果 Windows 驗證不是可行的選項，請參閱[如何：使用 SQL Server 驗證進行連線](how-to-connect-using-sql-server-authentication.md)。  
   
 ## <a name="example"></a>範例  
 使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驅動程式，下列範例會使用 Windows 驗證來連接 SQL Server 的本機執行個體。 建立連接之後，會向伺服器查詢正在存取資料庫之使用者的登入。  
@@ -105,11 +106,11 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[操作說明：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[操作說明：使用 SQL Server 驗證進行連線](how-to-connect-using-sql-server-authentication.md)
 
-[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](programming-guide-for-php-sql-driver.md)
 
-[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
+[關於文件中的程式碼範例](about-code-examples-in-the-documentation.md)
 
 [操作說明：建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
 

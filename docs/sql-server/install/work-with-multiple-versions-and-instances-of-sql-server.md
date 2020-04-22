@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258973"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528399"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本與執行個體
 
@@ -38,9 +38,8 @@ ms.locfileid: "75258973"
 
 - Analysis Services
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- Reporting Services
-::: moniker-end
+- Reporting Services (在 SQL Server 2016 和先前版本中)。 從 SQL Server 2016 開始。 SQL Server Reporting Services (SSRS) 有個別的安裝。 
+
 
 您可以在已安裝其他版本 SQL Server 的電腦上升級舊版 SQL Server。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。
   
@@ -64,7 +63,7 @@ ms.locfileid: "75258973"
 
  所有已安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的所有執行個體會共用某些元件。 當您在同一部機器上並存安裝不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，這些元件會自動升級到最新的版本。 當解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最後一個執行個體時，通常會自動解除安裝這類元件。
   
- 範例： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 和 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer。
+ 範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 和 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer。
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>在相同主要版本的所有執行個體之間共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -88,30 +87,31 @@ ms.locfileid: "75258973"
 
 某些元件會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間安裝，但是與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本無關。 這些元件可能會在主要版本之間共用，或是由所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本共用。  
 
-範例：Microsoft Sync Framework、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
+範例：Microsoft Sync Framework、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
   
 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 安裝的詳細資訊，請參閱 [從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。 如需如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的詳細資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>並存使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 您可以在已執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果預設執行個體已存在於電腦上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須安裝成具名執行個體。  
+
+下表顯示在已安裝必要 .NET 版本的常見受支援 Windows 上，每個 SQL Server 版本的並存支援：
+
+| 現有執行個體 | 並存支援| 
+|-------------------|----------------------------|
+| SQL Server 2019 | SQL Server 2008 到 SQL Server 2017| 
+| SQL Server 2017 | SQL Server 2008 到 SQL Server 2016| 
+| SQL Server 2016 | SQL Server 2008 到 SQL Server 2014| 
+
+如需詳細資訊，請參閱[在 Windows 8 和更新版本中使用 SQL Server](https://support.microsoft.com/help/2681562/using-sql-server-in-windows-8-and-later-versions-of-windows-operating) \(機器翻譯\)。 
+
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 不支援在同一部電腦上並存安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的備妥執行個體和舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，您無法在並存準備 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體和備妥的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]執行個體。 不過，您可以在同一部電腦上合併安裝屬於相同主要版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多個備妥執行個體。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。  
 >
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法在執行 Windows Server 2008 R2 Server Core SP1 的電腦上，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並存安裝。 如需 Server Core 安裝的詳細資訊，請參閱 [在 Server Core 上安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+> SQL Server 2016 無法在執行 Windows Server 2008 R2 Server Core SP1 的電腦上，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並存安裝。 如需 Server Core 安裝的詳細資訊，請參閱 [在 Server Core 上安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
-下表顯示對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的並存支援：
-  
-|現有的執行個體 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|並存支援|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 
-下表顯示對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 先前版本的並存支援：
-
-|現有的執行個體 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|對先前版本的並存支援|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32 位元)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 位元) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
 ## <a name="preventing-ip-address-conflicts"></a>防止 IP 位址衝突
 

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286882"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487987"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -53,7 +53,7 @@ ms.locfileid: "79286882"
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3.在次要節點上安裝 Scale Out Master
 在 Scale Out Master 的次要節點上，安裝 SQL Server Database Engine Services、Integration Services 和 Scale Out Master。 
 
-使用與主要節點上所使用的相同 Scale Out Master 憑證。 使用私密金鑰來匯出主要節點上的 Scale Out Master SSL 憑證，並將它安裝至次要節點上本機電腦的根憑證存放區。 在次要節點上安裝 Scale Out Master 時選取此憑證。
+使用與主要節點上所使用的相同 Scale Out Master 憑證。 使用私密金鑰來匯出主要節點上的擴增主機 TLS/SSL 憑證，並將它安裝至次要節點上本機電腦的根憑證存放區。 在次要節點上安裝 Scale Out Master 時選取此憑證。
 
 ![HA 主要設定 2](media/ha-master-config2.PNG)
 

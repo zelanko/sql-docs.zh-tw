@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68770752"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528752"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,16 +135,16 @@ distrib [-?]
  指定散發者的安全性模式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 值為 0 表示  驗證模式，而值為 1 則表示 Windows 驗證模式 (預設值)。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 這是建立連接時，散發代理程式所使用的安全通訊端層 (SSL) 加密層級。  
+ 這是建立連線時，散發代理程式所使用的傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 加密層級。  
   
 |EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
-|**0**|指定不使用 SSL。|  
-|**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
-|**2**|指定要使用 SSL，而且憑證會經過驗證。|  
+|**0**|指定不使用 TLS。|  
+|**1**|指定要使用 TLS，但是代理程式不會驗證 TLS/SSL 伺服器憑證是否由受信任的簽發者簽署。|  
+|**2**|指定要使用 TLS，而且憑證會經過驗證。|  
  
  > [!NOTE]  
- >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
+ >  定義的 TLS/SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
 
  如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   

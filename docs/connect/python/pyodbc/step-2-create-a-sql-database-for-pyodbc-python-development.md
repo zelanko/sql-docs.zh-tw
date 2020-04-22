@@ -1,5 +1,6 @@
 ---
-title: 步驟 2︰建立用於 pyodbc Python 開發的 SQL 資料庫 | Microsoft Docs
+title: 步驟 2:建立適用於 pyodbc 的 SQL 資料庫
+description: 此使用者入門指南的步驟 2 說明如何在 SQL Server 或 Azure SQL Database 中建立資料庫。
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99ce25f56f13ee1c02be1543304f72bda73f5882
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7d5a2eaf376fe8d7d70a52909bd4836ab221e2f2
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926763"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528442"
 ---
-# <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>步驟 2︰建立用於 pyodbc Python 開發的 SQL 資料庫
+# <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>步驟 2:建立 pyodbc Python 開發的 SQL 資料庫
 
 [!INCLUDE[CreateDatabase](../../../includes/createdatabase.md)]

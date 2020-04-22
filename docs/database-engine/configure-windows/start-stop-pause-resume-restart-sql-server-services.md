@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78946726"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287858"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
 
@@ -131,7 +131,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 4. 在結果窗格中，以滑鼠右鍵按一下 [SQL Server (MSSQLServer)]  或具名執行個體，然後按一下 [啟動]  、[停止]  、[暫停]  、[繼續]  或 [重新啟動]  。
 
-5. 按一下 [確定]  以關閉 SQL Server 組態管理員。
+5. 按一下 [確定]  來關閉 SQL Server 組態管理員。
 
 > [!NOTE]
 > 若要使用啟動選項啟動 SQL Server 資料庫引擎的執行個體，請參閱[設定伺服器啟動選項 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
@@ -187,7 +187,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 ### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> 啟動資料庫引擎的具名執行個體
 
-- 從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 *執行個體名稱>\<* 。  
+- 從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 \<執行個體名稱>  。  
   
     **net start "SQL Server (** *instancename* **)"**
   
@@ -338,6 +338,10 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
     # Display the state of the service.
     $DfltInstance
     ```  
+  
+##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> 使用服務控制站類別
+
+您可以使用 ServiceController 類別來控制 SQL 伺服器服務或任何其他 Windows 服務。 如需如何執行此操作的範例，請參閱 [ServiceController 類別](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8) \(部分機器翻譯\)。
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>管理 Linux 上的 SQL Server 服務
 

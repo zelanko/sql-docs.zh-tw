@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c07a5b8d3e1b34c0bb33f44a20ab5fff867db922
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f431d1598038d0789579697fccbaeffe5ef1fd0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117621"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487837"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何在 SQL Server 中使用機器學習模型產生各種預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CLR 和 C++ 擴充功能的重要性就是與資料庫引擎本身的鄰近程�
 
 | 產品版本和平台 | 方法 |
 |------------------------------|-------------|
-| Windows 上的 SQL Server 2017、SQL Server 2017 Linux 及 Azure SQL Database | 使用 T-SQL PREDICT 的**原生評分** |
+| Windows 和 Linux 上的 SQL Server 2017 或更新版本 | 使用 T-SQL PREDICT 的**原生評分** |
 | SQL Server 2017 (僅限 Windows)、SQL Server 2016 R Services (位於 SP1 或更新版本) | 使用 sp\_rxPredict 預存程序的**即時評分** |
 
 建議您使用 PREDICT 函式進行原生評分。 您必須啟用 SQLCLR 整合，才能使用 sp\_rxPredict。 啟用此選項之前，請先考慮對安全性的影響。

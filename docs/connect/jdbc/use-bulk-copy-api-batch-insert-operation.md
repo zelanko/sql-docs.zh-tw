@@ -1,5 +1,6 @@
 ---
-title: 使用大量複製 API 進行 MSSQL JDBC 驅動程式的批次插入作業 | Microsoft Docs
+title: 在 JDBC 中進行批次插入的大量複製 API
+description: Microsoft JDBC Driver for SQL Server 支援使用大量複製 API，針對 Azure 資料倉儲進行批次插入作業。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62843af006d730c3994519fe4c31182805923478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916884"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633988"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>使用大量複製 API 執行批次插入作業
 
@@ -141,4 +142,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>另請參閱
 
-[改善JDBC 驅動程式的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[改善JDBC 驅動程式的效能與可靠性](improving-performance-and-reliability-with-the-jdbc-driver.md)

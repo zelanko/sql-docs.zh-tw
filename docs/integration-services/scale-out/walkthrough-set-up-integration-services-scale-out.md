@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288742"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487997"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說：設定 Integration Services (SSIS) Scale Out
 
@@ -66,9 +66,9 @@ ms.locfileid: "79288742"
 
     ![主機組態](media/master-config.PNG "主機設定")
 
-4.  執行下列其中一項，以指定用來保護擴增主機與擴增背景工作間之通訊的 SSL 憑證。
-    * 按一下 [建立新的 SSL 憑證]  ，讓安裝程序建立預設自我簽署 SSL 憑證。  預設憑證會安裝到 [受信任的根憑證授權單位] 的 [本機電腦] 下方。 您可以在此憑證中指定 CN。 主要端點的主機名稱應該併入 CN 中。 預設會包含 Master 節點的電腦名稱和 IP。
-    * 按一下 [使用現有的 SSL 憑證]  ，然後按一下 [瀏覽]  選取憑證，以選取本機電腦上的現有 SSL 憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
+4.  執行下列其中一個動作，以指定用來保護擴增主機與擴增背景工作角色間之通訊的 TLS/SSL 憑證。
+    * 按一下 [建立新的 SSL 憑證]  ，讓安裝程序建立預設自我簽署 TLS/SSL 憑證。  預設憑證會安裝到 [受信任的根憑證授權單位] 的 [本機電腦] 下方。 您可以在此憑證中指定 CN。 主要端點的主機名稱應該併入 CN 中。 預設會包含 Master 節點的電腦名稱和 IP。
+    * 按一下 [使用現有的 SSL 憑證]  ，然後按一下 [瀏覽]  選取憑證，以選取本機電腦上的現有 TLS/SSL 憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
 
     ![主機組態 2](media/master-config-2.PNG "主機組態 2")
   
@@ -118,14 +118,14 @@ ms.locfileid: "79288742"
     > [!NOTE]
     > 您可以在這裡略過背景工作節點設定，並在安裝之後使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 建立 Scale Out Worker 與 Scale Out Master 的關聯。
 
-4. 針對**多部電腦**環境，指定用來驗證 Scale Out Master 的用戶端 SSL 憑證。 針對**單一電腦**環境中，您不需要指定用戶端 SSL 憑證。 
+4. 針對**多部電腦**環境，指定用來驗證擴增主機的用戶端 TLS/SSL 憑證。 針對**單一電腦**環境，您不需要指定用戶端 TLS/SSL 憑證。 
   
-    按一下 [瀏覽]  找出憑證檔案 (*.cer)。 若要使用預設 SSL 憑證，請選取 Scale Out Master 安裝所在電腦的 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 下方的 `SSISScaleOutMaster.cer` 檔案。   
+    按一下 [瀏覽]  找出憑證檔案 (*.cer)。 若要使用預設 TLS/SSL 憑證，請選取擴增主機安裝所在電腦的 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 下的 `SSISScaleOutMaster.cer` 檔案。   
 
     ![背景工作組態 2](media/worker-config-2.PNG "背景工作組態 2")
 
     > [!NOTE]
-    > 自我簽署 Scale Out Master 所使用的 SSL 憑證時，需要在具有 Scale Out Worker 的電腦上安裝對應的用戶端 SSL 憑證。 如果您在 [Integration Services 擴增背景工作設定]  頁面上提供用戶端 SSL 憑證的檔案路徑，則會自動安裝憑證；否則，您稍後必須手動安裝憑證。 
+    > 自我簽署擴增主機所使用的 TLS/SSL 憑證時，需要在具有擴增背景工作角色的電腦上安裝對應的用戶端 TLS/SSL 憑證。 如果您在 [Integration Services 相應放大背景工作組態]  頁面上提供用戶端 TLS/SSL 憑證的檔案路徑，則會自動安裝憑證；否則，您稍後必須手動安裝憑證。 
      
 5. 完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝精靈。
 

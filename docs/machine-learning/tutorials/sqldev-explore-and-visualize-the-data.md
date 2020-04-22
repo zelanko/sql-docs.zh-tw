@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116101"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632108"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課：探索及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "81116101"
 > 從 SQL Server 2019 開始，隔離機制已經變更。 因此您必須授與繪圖檔案所在目錄的適當權限。 如需有關如何設定這些權限的詳細資訊，請參閱 [Windows 上 SQL Server 2019 中的檔案權限區段：機器學習服務的隔離變更](../install/sql-server-machine-learning-services-2019.md#file-permissions)
 ::: moniker-end
 
-若要建立繪圖，請使用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，這是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的一個增強型 R 函數。 此步驟會根據 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢提供的資料繪製長條圖。 您可以將此函數包裝在預存程序中 (**PlotRxHistogram**)。
+若要建立繪圖，請使用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，這是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的一個增強型 R 函數。 此步驟會根據 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢提供的資料繪製長條圖。 您可以將此函式包裝在預存程序 (**RxPlotHistogram**) 中。
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下 **NYCTaxi_Sample** 資料庫，然後選取 [新查詢]  。
 
-2. 貼上下列指令碼，建立繪製長條圖的預存程序。 此範例的名稱是 **RPlotRxHistogram*。
+2. 貼上下列指令碼，建立繪製長條圖的預存程序。 此範例的名稱是 **RxPlotHistogram**。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

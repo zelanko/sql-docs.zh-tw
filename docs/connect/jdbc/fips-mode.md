@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efa536024021e1182ad565fe534d3e706f4e7eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917953"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293378"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 
@@ -25,7 +25,7 @@ Microsoft JDBC Driver for SQL Server 支援在已設定為「符合 FIPS 140 規
 #### <a name="prerequisites"></a>Prerequisites
 
 - 已設定 FIPS 的 JVM
-- 適當的 SSL 憑證
+- 適當的 TLS/SSL 憑證
 - 適當的原則檔案
 - 適當的設定參數
 
@@ -38,11 +38,11 @@ Microsoft JDBC Driver for SQL Server 支援在已設定為「符合 FIPS 140 規
 廠商可能需要進行一些額外的步驟以搭配 FIPS 設定 JVM。
 
 ## <a name="appropriate-ssl-certificate"></a>適當的 SSL 憑證
-若要在 FIPS 模式中連線到 SQL Server，需要有效的 SSL 憑證。 將其安裝或匯入到已啟用 FIPS 之用戶端電腦 (JVM) 的 Java Key Store 上。
+若要在 FIPS 模式中連線到 SQL Server，需要有效的 TLS/SSL 憑證。 將其安裝或匯入到已啟用 FIPS 之用戶端電腦 (JVM) 的 Java Key Store 上。
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>將 SSL 憑證匯入 Java KeyStore
 針對 FIPS，您很可能需要以 PKCS 或提供者特定的格式來匯入憑證 (.cert)。
-使用下列程式碼片段來匯入 SSL 憑證，並搭配適當的 KeyStore 格式將其儲存在工作目錄中。 _TRUST\_STORE\_PASSWORD_ 是您針對 Java KeyStore 的密碼。
+使用下列程式碼片段來匯入 TLS/SSL 憑證，並搭配適當的金鑰儲存區格式以將其儲存於工作目錄中。 _TRUST\_STORE\_PASSWORD_ 是您針對 Java KeyStore 的密碼。
 
 ```java
 public void saveGenericKeyStore(
@@ -72,7 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-下列範例會搭配 BouncyCastle 提供者以 PKCS12 格式匯入 Azure SSL 憑證。 透過使用下列程式碼片段，可將該憑證匯入到名為 _MyTrustStore\_PKCS12_ 的工作目錄中：
+下列範例會搭配 BouncyCastle 提供者，以 PKCS12 格式匯入 Azure TLS/SSL 憑證。 透過使用下列程式碼片段，可將該憑證匯入到名為 _MyTrustStore\_PKCS12_ 的工作目錄中：
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117081"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487687"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用 PREDICT T-SQL 函式進行原生評分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 原生評分會在 SQL Server 2017 中使用 [PREDICT T-SQL 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和 C++ 擴充功能，近乎即時地產生新資料輸入的預測值或「分數」  。 此方法可以為預測工作負載提供最快的可能處理速度，但附帶平台和程式庫需求：只有來自 RevoScaleR 和 revoscalepy 的函式具有 C++ 實作。
 
-原生評分需要您具有已定型的模型。 在 SQL Server 2017 Windows 或 Linux 中，或是在 Azure SQL Database 中，您可以透過 Transact-SQL 呼叫 PREDICT 函式，以針對您提供為輸入參數的新資料叫用原生評分。 PREDICT 函式會傳回您所提供資料輸入的分數。
+原生評分需要您具有已定型的模型。 在 SQL Server 2017 Windows 或 Linux 中，您可以透過 Transact-SQL 呼叫 PREDICT 函式，以針對您提供為輸入參數的新資料叫用原生評分。 PREDICT 函式會傳回您所提供資料輸入的分數。
 
 ## <a name="how-native-scoring-works"></a>原生評分的運作方式
 
@@ -36,7 +36,7 @@ ms.locfileid: "81117081"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-PREDICT 適用於所有版本的 SQL Server 2017 資料庫引擎，且預設為啟用，包括 Windows 上的 SQL Server 機器學習服務、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL Database。 您不需要安裝 R、Python 或啟用其他功能。
+PREDICT 適用於所有版本的 SQL Server 2017 和更新版本資料庫引擎且會預設啟用，這包括 Windows 上的 SQL Server 機器學習服務、Windows 和 Linux 上的 SQL Server 2017 和更新版本。 您不需要安裝 R、Python 或啟用其他功能。
 
 + 必須預先使用下列其中一個支援的 **rx** 演算法來定型模型。
 

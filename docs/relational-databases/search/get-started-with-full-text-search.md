@@ -1,6 +1,6 @@
 ---
 title: 全文檢索搜尋使用者入門 | Microsoft Docs
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288136"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ ms.locfileid: "72903830"
 2.  針對 Document 資料表建立全文檢索索引之前，請確定此資料表具有唯一、單一資料行且不可為 Null 的索引。 下列 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 陳述式會針對 Document 資料表的 DocumentID 資料行建立唯一索引 `ui_ukDoc`：  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  在您擁有唯一索引鍵之後，就可以使用下列 `Document` CREATE FULLTEXT INDEX [陳述式，針對](../../t-sql/statements/create-fulltext-index-transact-sql.md) 資料表建立全文檢索索引。  
+3.  透過使用下列 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 陳述式，以捨棄 `Document` 資料表上的現有全文檢索索引。 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  在您擁有唯一索引鍵之後，就可以使用下列 `Document` CREATE FULLTEXT INDEX [陳述式，針對](../../t-sql/statements/create-fulltext-index-transact-sql.md) 資料表建立全文檢索索引。  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ ms.locfileid: "72903830"
     GO  
   
     ```  
+    
+  
   
      在這個範例中定義的 TYPE COLUMN 會在資料表中指定類型資料行，其中在 'Document' 資料行的每個資料列中包含文件類型 (二進位類型)。 這個類型資料行會在給定的資料列中儲存使用者提供的文件副檔名，例如 ".doc" 和 ".xls" 等等。 全文檢索引擎會使用給定資料列中的副檔名來叫用正確的篩選，以便用於剖析該資料列中的資料。 在此篩選已經剖析資料列的二進位資料之後，指定的斷詞工具會剖析內容 (在此範例中，將會使用英式英文的斷詞工具)。如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
 

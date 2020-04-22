@@ -1,5 +1,6 @@
 ---
-title: 使用進階資料類型 | Microsoft Docs
+title: 使用進階資料類型
+description: 了解如何使用 JDBC 進階資料類型，利用 Microsoft JDBC Driver for SQL Server，從 SQL Server 資料類型轉換為 Java 資料類型。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924078"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528722"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 
@@ -57,7 +58,7 @@ JDBC 驅動程式會實作 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 介�
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>從資料庫擷取大數值類型
 
-當您從資料庫擷取非二進位大型數值的資料類型 (例如 **varchar(max)** 資料類型) 時，方法之一就是以字元串流的形式讀取資料。 在下列範例中，[SQLServerStatement](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 類別的 [executeQuery](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法可用於從資料庫擷取資料，並將該資料當成結果集傳回。 而 [SQLServerResultSet](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 類別的 [getCharacterStream](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法可用於從結果集讀取大數值資料。  
+當您從資料庫擷取非二進位大型數值的資料類型 (例如 **varchar(max)** 資料類型) 時，方法之一就是以字元串流的形式讀取資料。 在下列範例中，[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法可用於從資料庫擷取資料，並將該資料當成結果集傳回。 而 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法可用於從結果集讀取大數值資料。  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -122,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>修改資料庫中的大數值類型
 
-在多數情況下，在資料庫上更新或修改大數值的建議方法是使用 [、](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [ 這類 ](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 命令，透過 [!INCLUDE[tsql](../../includes/tsql-md.md)]SQLServerPreparedStatement`UPDATE` 和 `WRITE`SQLServerCallableStatement`SUBSTRING` 類別來傳遞參數。  
+在多數情況下，在資料庫上更新或修改大數值的建議方法是使用 `UPDATE`、`WRITE` 和 `SUBSTRING` 這類 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，透過 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別來傳遞參數。  
 
 如果您必須在大型文字檔 (例如封存的 HTML 檔案) 中取代文字的執行個體，則可以使用 Clob 物件，如下所示：  
 
@@ -148,7 +149,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的 **xml** 資料類型，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存 XML 文件和片段。 **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如同其他內建類型，您可以將 **xml** 資料類型當成建立資料表時的資料行類型；當成變數類型、參數類型或函式傳回類型使用；或者在 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 和 CONVERT 函式中使用。  
   
-在 JDBC 驅動程式中，**xml** 資料類型可以對應為字串、位元組陣列、資料流、CLOB、BLOB 或 SQLXML 物件。 字串為預設值。 從 JDBC Driver 2.0 版開始，JDBC Driver 提供了 JDBC 4.0 API 的支援，其中導入 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML** 資料類型會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** 資料類型。 如需如何在具有 **SQLXML** Java 資料類型的關聯式資料庫中讀取和寫入 XML 資料的詳細資訊，請參閱[支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)。  
+在 JDBC 驅動程式中，**xml** 資料類型可以對應為字串、位元組陣列、資料流、CLOB、BLOB 或 SQLXML 物件。 字串為預設值。 從 JDBC Driver 2.0 版開始，JDBC Driver 提供了 JDBC 4.0 API 的支援，其中導入 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML** 資料類型會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 資料類型。 如需如何在具有 **SQLXML** Java 資料類型的關聯式資料庫中讀取和寫入 XML 資料的詳細資訊，請參閱[支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)。  
   
 JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：  
   

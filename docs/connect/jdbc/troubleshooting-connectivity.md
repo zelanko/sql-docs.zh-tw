@@ -1,5 +1,6 @@
 ---
-title: 連線能力疑難排解 | Microsoft Docs
+title: 連線能力疑難排解
+description: 了解 JDBC 連線能力，以及如何針對使用 Microsoft JDBC Driver for SQL Server 時可能發生的連線問題進行疑難排解。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ef0a0e1a261996c71b3b75add30ee2f28899484
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928121"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528332"
 ---
 # <a name="troubleshooting-connectivity"></a>連線能力疑難排解
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,13 +27,13 @@ ms.locfileid: "80928121"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未啟用 TCP/IP，或者指定的伺服器或連接埠號碼不正確。 確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽指定伺服器與連接埠上的 TCP/IP。 可能會報告類似以下的例外狀況：「登入失敗。 TCP/IP 連接至主機已失敗。」 此訊息會指出下列其中一項：  
   
-    -   已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但未使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路公用程式，或是 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 及更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 安裝為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的網路通訊協定。  
+    -   已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但未使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路公用程式，或是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路通訊協定。  
   
     -   TCP/IP 已安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊協定，但未在 JDBC 連線 URL 中指定的連接埠上接聽。 預設連接埠為 1433，但可在產品安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為在任何連接埠上接聽。 請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正於連接埠 1433 上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需 JDBC 連線 URL 的詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md)。  
   
     -   JDBC 連線 URL 中指定的電腦位址並不是指已安裝並啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器。  
   
-    -   用戶端與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器間的 TCP/IP 網路作業無法運作。 您可使用 telnet 檢查 TCP/IP 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線能力。 例如，在命令提示字元中鍵入 `telnet 192.168.0.0 1433`，其中 192.168.0.0 是執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦位址，而 1433 則是目前接聽所在的連接埠。 如果您收訊息，內容指出「Telnet 無法連線」，即表示 TCP/IP 沒有在該連接埠上接聽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線。 請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 網路公用程式，或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 組態管理員，來確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已設定為在連接埠 1433 上使用 TCP/IP。  
+    -   用戶端與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器間的 TCP/IP 網路作業無法運作。 您可使用 telnet 檢查 TCP/IP 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線能力。 例如，在命令提示字元中鍵入 `telnet 192.168.0.0 1433`，其中 192.168.0.0 是執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦位址，而 1433 則是目前接聽所在的連接埠。 如果您收訊息，內容指出「Telnet 無法連線」，即表示 TCP/IP 沒有在該連接埠上接聽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線。 請使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路公用程式，或是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，來確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已設定為在連接埠 1433 上使用 TCP/IP。  
   
     -   伺服器所使用的通訊埠尚未在防火牆內開啟。 這包括伺服器所使用的通訊埠，或與具名的伺服器執行個體相關聯的選用通訊埠。  
   

@@ -1,5 +1,6 @@
 ---
-title: 步驟 3：使用 PHP 連線到 SQL 的概念證明 | Microsoft Docs
+title: 步驟 3：使用 PHP 連線至 SQL
+description: 步驟 3 是一個概念證明，說明如何使用 PHP 連線至 SQL Server。 基本範例示範如何選取和插入資料。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926858"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528582"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3：使用 PHP 連線到 SQL 的概念證明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "80926858"
   
 ## <a name="step-2--execute-query"></a>步驟 2:執行查詢  
   
-[sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) \(英文\) 函式可用來擷取對 SQL Database 執行之查詢的結果集。 這個函式基本上會接受任何查詢和連線物件並傳回結果集，其可以使用 [cursor.fetchone()](https://php.net/manual/en/function.sqlsrv-fetch-array.php) \(英文\) 來反覆查詢。  
+[sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) 函式可用來擷取對 SQL Database 執行之查詢的結果集。 這個函式基本上會接受任何查詢和連線物件並傳回結果集，其可以使用 [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php) \(英文\) 來反覆查詢。  
   
 ```php  
     function ReadData()  
@@ -79,8 +80,7 @@ ms.locfileid: "80926858"
   
 ## <a name="step-3--insert-a-row"></a>步驟 3：插入資料列  
   
-在這個範例中，您將了解如何安全地執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式，傳遞可保護您應用程式來防禦 [SQL 插入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
-  
+在此範例中，您將了解如何安全地執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式，並傳遞參數。 參數值可協助您的應用程式防禦 [SQL 插入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ ms.locfileid: "80926858"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步驟 4：復原交易  
+## <a name="step-4--roll-back-a-transaction"></a>步驟 4：復原交易  
   
   
 這個程式碼範例示範如何使用交易，您將：  
@@ -118,7 +118,7 @@ ms.locfileid: "80926858"
   
 -插入一列資料，更新另一列資料  
   
--確認您的交易中插入與更新是否成功，如果其中一項沒有成功就復原交易  
+-確認您的交易中插入與更新是否成功，如果其中一個沒有成功就復原交易  
   
   
 ```php 

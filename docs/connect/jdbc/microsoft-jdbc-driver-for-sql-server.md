@@ -1,5 +1,6 @@
 ---
 title: Microsoft JDBC Driver for SQL Server | Microsoft Docs
+description: Microsoft 提供 JDBC 驅動程式來與 SQL Server 和 Azure SQL Database 搭配使用，可讓您從任何 Java 應用程式、伺服器或 Applet 進行連線。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be47bcad4526a65012fdd94e5dfe6b79d780985a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928228"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487805"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 
@@ -27,9 +28,9 @@ Microsoft JDBC Driver for SQL Server 已在主要的應用程式伺服器上經�
   
 ## <a name="getting-started"></a>開始使用  
 
-* [步驟 1︰設定 Java 開發的開發環境](step-1-configure-development-environment-for-java-development.md)  
-* [步驟 2︰建立 Java 開發的 SQL 資料庫](step-2-create-a-sql-database-for-java-development.md)  
-* [步驟 3︰使用 Java 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [步驟 1：設定開發環境以進行 Java 開發](step-1-configure-development-environment-for-java-development.md)  
+* [步驟 2：建立 SQL 資料庫以進行 Java 開發](step-2-create-a-sql-database-for-java-development.md)  
+* [步驟 3：使用 Java 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>文件  
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b39009d020d906837f4ca4ae4091d12d83cc94c5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579940"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630633"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting 方法 - ListIPAddresses
   列出報表伺服器電腦的 IP 位址。  
@@ -56,7 +56,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="remarks"></a>備註  
  *IPVersion* 字串為 V4 或 V6。  
   
- 如果 *IsDhcpEnabled* 為 **True**，表示 *IPAddress* 是動態的。 它就不應該用於 SSL 繫結。  
+ 如果 *IsDhcpEnabled* 為 **True**，表示 *IPAddress* 是動態的。 就不應將其用於 TLS 繫結。  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

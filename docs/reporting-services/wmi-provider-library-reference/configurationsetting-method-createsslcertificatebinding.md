@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570761"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630644"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
-  建立 SSL 憑證繫結。  
+  建立 TLS/SSL 憑證繫結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  應用程式的 IP 位址。  
   
  *通訊埠*  
- 與繫結相關聯的 SSL 通訊埠。  
+ 與繫結相關聯的 TLS 連接埠。  
   
  *Lcid*  
  要用於傳回之錯誤訊息的地區設定。  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>備註  
  這個方法會加入應用程式之 rsreportserver.config 的繫結。 如果繫結尚未存在 HTTP.SYS 中，就會在該處建立繫結。  
   
- 建立繫結之前，此方法呼叫會檢查指定之應用程式的 URL 保留項目，以便判斷 SSL 憑證繫結是否有效。  
+ 建立繫結之前，此方法呼叫會檢查指定之應用程式的 URL 保留項目，以便判斷 TLS/SSL 憑證繫結是否有效。  
   
  下列條件會進行驗證而且可能會產生錯誤：  
   

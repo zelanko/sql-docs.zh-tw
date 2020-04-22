@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580012"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487021"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 來使用主體別名
 
@@ -20,11 +20,11 @@ ms.locfileid: "65580012"
 
 這些指示適用於 Reporting Service URL 和 Web 服務 URL。
 
-如果要使用 SAN，必須在伺服器上註冊 SSL 憑證、必須簽署 SSL 憑證，且 SSL 憑證需有私密金鑰。 您不能使用自我簽署憑證。  
+如果要使用 SAN，TLS/SSL 憑證必須在伺服器上註冊、簽署，且具有私密金鑰。 您不能使用自我簽署憑證。  
   
- Reporting Services 中的 URL 可設定使用 SSL 憑證。 憑證通常只有一個主體名稱，因此一個 SSL (安全通訊端層) 工作階段只允許一個 URL。 SAN 是憑證中的一個額外欄位，它可以允許 SSL 服務接聽許多 URL，並可和其他應用程式共用 SSL 連線埠。 SAN 看起來像 `www.s2.com`。  
+ Reporting Services 中的 URL 可設定為使用 TLS/SSL 憑證。 憑證通常只有一個主體名稱，因此一個傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 工作階段只允許一個 URL。 SAN 是憑證中的一個額外欄位，其可以允許 TLS 服務接聽許多 URL，並可和其他應用程式共用 TLS 連線埠。 SAN 看起來像 `www.s2.com`。  
   
- 如需 Reporting Services 之 SSL 設定的詳細資訊，請參閱[在原生模式報表伺服器上設定 SSL 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 如需 Reporting Services 之 TLS 設定的詳細資訊，請參閱[在原生模式報表伺服器上設定 TLS 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 ## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>設定 SSRS 以針對 Web 服務 URL 使用主體別名
   
@@ -32,11 +32,11 @@ ms.locfileid: "65580012"
   
      如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [Web 服務 URL]  頁面中，選取 SSL 連接埠和 SSL 憑證。  
+2.  在 [Web 服務 URL]  頁面上，選取 TLS/SSL 連接埠和 TLS/SSL 憑證。  
   
      ![Reporting Services 組態管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 組態管理員")  
   
-     組態管理員會針對通訊埠註冊 SSL 憑證。  
+     Configuration Manager 會針對連接埠註冊 TLS/SSL 憑證。  
   
 3.  開啟 rsreportserver.config 檔案。  
   

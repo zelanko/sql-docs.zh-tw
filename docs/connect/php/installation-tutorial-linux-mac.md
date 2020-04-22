@@ -1,6 +1,7 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程 | Microsoft Docs
-ms.date: 12/12/2019
+title: Drivers for PHP 的 Linux 和 macOS 安裝
+description: 在這些指示中，您將了解如何在 Linux 或 macOS 上安裝 Microsoft Drivers for PHP for SQL Server。
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 987534339a6eff11b775d9f54563d158fa5653e9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79058572"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529016"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程
-下列指示假設一個全新的環境，並示範如何在 Ubuntu 16.04、18.04 及 19.10；RedHat 7 和 8；Debian 8、9 和 10；Suse 12 和 15；Alpine 3.11 (實驗性)，以及 macOS 10.13、10.14 及 10.15 上安裝 PHP 7.x、Microsoft ODBC 驅動程式、Apache Web 伺服器，以及 Microsoft Drivers for PHP for SQL Server。 這些指示建議使用 PECL 安裝驅動程式，但您也可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面中下載預先建置的二進位檔，並遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的指示進行安裝。 如需載入延伸模組以及我們未將延伸模組新增至 php.ini 的原因說明，請參閱關於[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)的小節。
+下列指示假設一個全新的環境，並示範如何在 Ubuntu 16.04、18.04 及 19.10；RedHat 7 和 8；Debian 8、9 和 10；Suse 12 和 15；Alpine 3.11，以及 macOS 10.13、10.14 及 10.15 上安裝 PHP 7.x、Microsoft ODBC 驅動程式、Apache Web 伺服器，以及 Microsoft Drivers for PHP for SQL Server。 這些指示建議使用 PECL 安裝驅動程式，但您也可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面中下載預先建置的二進位檔，並遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的指示進行安裝。 如需載入延伸模組以及我們未將延伸模組新增至 php.ini 的原因說明，請參閱關於[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)的小節。
 
-這些指示預設會安裝 PHP 7.4。 請注意，部分支援的 Linux 發行版本會預設為 PHP 7.1 或更早版本，但最新版本的 PHP drivers for SQL Server 並不支援這些版本。請參閱每節開頭的注意事項以改為安裝 PHP 7.2 或 7.3。
+這些指示預設會使用 `pecl install` 安裝 PHP 7.4。 您可能需要先執行 `pecl channel-update pecl.php.net`。 請注意，部分支援的 Linux 發行版本會預設為 PHP 7.1 或更早版本，但最新版本的 PHP drivers for SQL Server 並不支援這些版本。請參閱每節開頭的注意事項以改為安裝 PHP 7.2 或 7.3。
 
 同時包含在 Ubuntu 上安裝 PHP FastCGI Process Manager (PHP-FPM) 的指示。 如果使用 nginx Web 伺服器而非 Apache，便會需要此項目。
 
@@ -308,13 +309,10 @@ sudo systemctl restart apache2
 ## <a name="installing-the-drivers-on-alpine-311"></a>在 Alpine 3.11 上安裝驅動程式
 
 > [!NOTE]
-> Arch 支援為實驗性。
-
-> [!NOTE]
-> PHP 的預設版本為 7.3。 Alpine 3.11 的其他存放庫並無法提供替代版本的 PHP。 您可以改為從來源編譯 PHP。
+> PHP 的預設版本為 7.3。 Alpine 3.11 的其他存放庫可能會提供其他版本的 PHP。 您可以改為從來源編譯 PHP。
 
 ### <a name="step-1-install-php"></a>步驟 1： 安裝 PHP
-適用於 Alpine 的 PHP 套件可以在 `edge/community` 存放庫中找到。 將下列行新增至 `/etc/apt/repositories`，並以 Alpine 存放庫鏡像的 URL 取代 `<mirror>`：
+適用於 Alpine 的 PHP 套件可以在 `edge/community` 存放庫中找到。 請在其 WIKI 頁面上查看[啟用社群存放庫](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) \(英文\)。 將下列行新增至 `/etc/apt/repositories`，並以 Alpine 存放庫鏡像的 URL 取代 `<mirror>`：
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -335,10 +333,7 @@ sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/10_pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/00_sqlsrv.ini
 ```
-您可能需要定義地區設定：
-```
-export LC_ALL=C
-```
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步驟 4： 安裝 Apache 並設定驅動程式載入
 ```
 sudo apk add php7-apache2 apache2
@@ -358,7 +353,7 @@ sudo rc-service apache2 restart
 ```
 
 > [!NOTE]
-> 若要安裝 PHP 7.2 或 7.3，請在下列命令中分別使用 php@7.4 或 php@7.2 來取代 php@7.3。
+> 若要安裝 PHP 7.2 或 7.3，請在下列命令中分別使用 php@7.2 或 php@7.3 來取代 php@7.4。
 
 ### <a name="step-1-install-php"></a>步驟 1： 安裝 PHP
 
@@ -406,7 +401,7 @@ sudo apachectl restart
 
 ## <a name="testing-your-installation"></a>測試您的安裝
 
-若要測試此範例指令碼，在系統的文件根目錄中建立名為 testsql.php 的檔案。 這在 Ubuntu、Debian 和 Redhat 上為 `/var/www/html/`、在 SUSE 上為 `/srv/www/htdocs`、在 Alpine 上為 `/var/www/localhost/htdocs`，或是在 macOS 上為 `/usr/local/var/www`。 將下列指令碼複製到其中，適當地取代伺服器、資料庫、使用者名稱和密碼。 在 Alpine 3.11 上，您可能也需要在 **陣列中，將**CharacterSet`$connectionOptions` 指定為 'UTF-8'。
+若要測試此範例指令碼，在系統的文件根目錄中建立名為 testsql.php 的檔案。 這在 Ubuntu、Debian 和 Redhat 上為 `/var/www/html/`、在 SUSE 上為 `/srv/www/htdocs`、在 Alpine 上為 `/var/www/localhost/htdocs`，或是在 macOS 上為 `/usr/local/var/www`。 將下列指令碼複製到其中，適當地取代伺服器、資料庫、使用者名稱和密碼。
 ```
 <?php
 $serverName = "yourServername";

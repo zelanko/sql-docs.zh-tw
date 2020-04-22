@@ -1,18 +1,18 @@
 ---
 title: 下載 Microsoft OLE DB Driver for SQL Server | Microsoft Docs
-description: Microsoft OLE DB Driver for SQL Server 的下載位置
+description: 下載 Microsoft OLE DB Driver for SQL Server，以開發連線到 SQL Server 和 Azure SQL Database 的原生 Windows 應用程式。
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25080491fee53fccf83645f83b7984676c8d0bd8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 626cc125d3bbf0603e8e27f26592a831920f35ef
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921092"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488375"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下載 Microsoft OLE DB Driver for SQL Server
 

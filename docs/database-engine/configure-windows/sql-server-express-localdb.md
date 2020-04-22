@@ -16,29 +16,31 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342917"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528262"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Microsoft SQL Server Express LocalDB 是 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) 的功能，專供開發人員使用。 SQL Server Express with Advanced Services 中也會提供。
+Microsoft SQL Server Express LocalDB 是 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) 的功能，專供開發人員使用。 SQL Server Express with Advanced Services 中也會提供。
 
 LocalDB 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所需的最少檔案。 安裝 LocalDB 後，您可以使用特殊連接字串來起始連線。 連接時，就會自動建立及啟動必要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構，應用程式不需複雜的組態工作即可開始使用資料庫。 Developer Tools 為開發人員提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，讓他們撰寫和測試 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，而不需要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的完整伺服器執行個體。 
 
-## <a name="try-it-out"></a>立即試用！ 
+## <a name="installation-media"></a>安裝媒體 
 
-- 若要下載並安裝 SQL Server Express LocalDB，請移至 **[SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)** 。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 **Express Advanced** 或 LocalDB 套件。 在 Visual Studio 安裝程式  中，您可以安裝 SQL Server Express LocalDB 作為 **.NET 桌面開發**工作負載的一部分，或是作為個別的元件。
+LocalDB 是您在安裝 SQL Server Express 期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 **Express Advanced** 或 LocalDB 套件。 
 
- >[!TIP]
- > 您也可以安裝 LocalDB 作為 Visual Studio 的一部分。 在 Visual Studio 安裝期間，選取 [.NET 桌面開發]  工作負載，它包含了 SQL Server Express LocalDB。
+- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
+- [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
+- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-- 有 Azure 帳戶嗎？ [開始使用](https://azure.microsoft.com/services/virtual-machines/sql-server/)並啟動已安裝 SQL Server 的虛擬機器。
+或者，您可以透過 [Visual Studio 安裝程式](https://visualstudio.microsoft.com/downloads/)安裝 LocalDB，作為**資料儲存和處理**工作負載、**ASP.NET 與網頁程式開發**工作負載的一部分，或作為個別元件的一部分。
+
 
 ## <a name="install-localdb"></a>安裝 LocalDB
 
@@ -92,8 +94,11 @@ LocalDB 支援兩種類型的執行個體：自動執行個體和具名執行個
 
 使用 LocalDB 最簡單的方式是透過使用連接字串 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`，連線到目前使用者所擁有的自動執行個體。 若要使用檔案名稱來連接到特定的資料庫，請使用類似於 `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf` 的連接字串進行連接。
 
+LocalDB 格式的命名慣例和連接字串在 SQL Server 2014 中已變更。 先前，執行個體名稱是單一 v 字元，後面接著 LocalDB 和版本號碼。 從 SQL Server 2014 開始，已不再支援此執行個體名稱格式，應改為使用先前所述的連接字串。  
+
 >[!NOTE]
->電腦使用者初次嘗試連線至 LocalDB 時，自動執行個體必須已建立及啟動。 建立執行個體所需的額外時間可能會導致連接嘗試失敗並顯示逾時訊息。 發生這種情況時，請等候幾秒鐘，讓建立程序完成，然後再重新連接。
+> - 電腦使用者初次嘗試連線至 LocalDB 時，自動執行個體必須已建立及啟動。 建立執行個體所需的額外時間可能會導致連接嘗試失敗並顯示逾時訊息。 發生這種情況時，請等候幾秒鐘，讓建立程序完成，然後再重新連接。
+
 
 ### <a name="create-and-connect-to-a-named-instance"></a>建立並連線到具名執行個體
 

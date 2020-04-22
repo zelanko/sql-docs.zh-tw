@@ -13,22 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f36317fd3572b0fd3b8e7f45cecd735c26da8f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866107"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388079"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定及變更資料庫定序。 如果沒有指定定序，會使用伺服器定序。  
   
 > [!IMPORTANT]
-> 在 Azure SQL Database 中，不會明確禁止變更資料庫定序。 不過，變更資料庫定序會要求在資料庫與其他使用者或背景處理序 (例如，正在進行備份的背景) 上的獨佔鎖定可能會持有資料庫鎖定，並防止定序變更。 如果 Azure SQL Database 上的 `ALTER DATABASE COLLATE` 陳述式在背景處理序正在存取資料庫時執行，則會失敗。 如果您遇到鎖定逾時錯誤，則必須重試該陳述式。 
- 
-> [!NOTE]
-> 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
+> 在 Azure SQL Database 中，不會明確禁止變更資料庫定序。 不過，變更資料庫定序會要求在資料庫與其他使用者或背景處理序 (例如，正在進行備份的背景) 上的獨佔鎖定可能會持有資料庫鎖定，並防止定序變更。 Azure SQL Database 不支援 `ALTER DATABASE COLLATE` 陳述式。
 
  **本主題內容**  
   
@@ -54,7 +51,7 @@ ms.locfileid: "78866107"
   
 -   如果指定的定序或所參考物件所用的定序使用 Windows 不支援的字碼頁， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會顯示錯誤。  
 
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
+-   在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
@@ -68,12 +65,12 @@ ms.locfileid: "78866107"
   
 -   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**或 **ntext** 系統資料類型，以及以這些系統資料類型為基礎的所有使用者定義資料類型，都會變更為新的預設定序。  
   
-您可以使用 `COLLATE`ALTER DATABASE[ 陳述式的 ](../../t-sql/statements/alter-database-transact-sql.md) 子句，變更在使用者資料庫中建立之任何新物件的定序。 此陳述式**不會變更**現有使用者定義資料表中的資料行定序。 您可以使用 `COLLATE`ALTER TABLE[ 的 ](../../t-sql/statements/alter-table-transact-sql.md) 子句進行變更。  
+您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式的 `COLLATE` 子句，變更在使用者資料庫中建立之任何新物件的定序。 此陳述式**不會變更**現有使用者定義資料表中的資料行定序。 您可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 `COLLATE` 子句進行變更。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
- 若要建立新資料庫，需要 `CREATE DATABASE`master**資料庫中的** 權限，或需要 `CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 權限。  
+ 若要建立新資料庫，需要 **master** 資料庫中的 `CREATE DATABASE` 權限，或需要 `CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 權限。  
   
  若要變更現有資料庫的定序，需要資料庫的 `ALTER` 權限。  
   

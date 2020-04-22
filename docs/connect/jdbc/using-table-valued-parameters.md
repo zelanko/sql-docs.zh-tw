@@ -1,5 +1,6 @@
 ---
-title: 使用資料表值參數 | Microsoft Docs
+title: 使用資料表值參數
+description: 資料表值參數提供一種有效率的方式，可在單一參數化命令中將多列資料從用戶端傳送到 SQL Server。
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a4a46120991400f8e76c91e8a0e9b00ada2eac0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923857"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631936"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 
@@ -46,9 +47,9 @@ ms.locfileid: "80923857"
   
 - 將多個資料值組合成分隔字串或 XML 文件，然後將那些文字值傳遞給程序或陳述式。 這需要程序或陳述式包含驗證資料結構及拆開值所需的邏輯。  
   
-- 針對會影響多個資料列的資料修改建立一系列的獨立 SQL 陳述式。 變更能以個別方式，或以批次處理成群組的方式提交到伺服器。 不過，即使是以包含多個陳述式的批次方式提交，每個陳述式還是會在伺服器上個別執行。  
+- 針對會影響多個資料列的資料修改建立一系列的獨立 SQL 陳述式。 變更可以以個別方式，或以批次處理成群組的方式提交給伺服器。 不過，即使是以包含多個陳述式的批次方式提交，每個陳述式都會在伺服器上個別執行。  
   
-- 使用 bcp 公用程式或 [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)，將許多資料列載入至資料表。 雖然此技術非常有效率，但除非將資料載入暫存資料表或資料表變數中，否則不支援伺服器端處理。
+- 使用 bcp 公用程式或 [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md)，將許多資料列載入至資料表。 雖然此技術非常有效率，但除非將資料載入暫存資料表或資料表變數中，否則不支援伺服器端處理。
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數類型  
 
@@ -88,7 +89,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 
 ## <a name="limitations-of-table-valued-parameters"></a>資料表值參數的限制
 
-資料表值參數有幾個限制：  
+資料表值參數有幾項限制：  
   
 - 您無法將資料表值參數傳遞至使用者定義函式。  
   
@@ -314,4 +315,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>另請參閱
 
-[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](overview-of-the-jdbc-driver.md)  

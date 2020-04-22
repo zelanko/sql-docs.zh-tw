@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742082"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632522"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了電子郵件傳遞延伸模組，可讓您透過電子郵件傳送報表給個別使用者或群組。 若要透過電子郵件散發報表，您可以 1) 設定報表伺服器的電子郵件傳遞以及 2) 定義標準訂閱或資料驅動訂閱。 單一訂閱無法在單一電子郵件訊息中傳遞多個報表。 不過，您可以建立多個訂閱。  
   
- 報表伺服器會透過標準連線來與電子郵件伺服器連接。 並未使用以安全通訊端層 (SSL) 加密的通訊。 電子郵件伺服器必須是與報表伺服器在相同網路中的遠端或本機 Simple Mail Transport Protocol (SMTP) 伺服器。  
+ 報表伺服器會透過標準連線來與電子郵件伺服器連接。 其不會使用已透過傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 加密的通訊。 電子郵件伺服器必須是與報表伺服器在相同網路中的遠端或本機 Simple Mail Transport Protocol (SMTP) 伺服器。  
   
  如需逐步引導您建立訂閱的詳細步驟，請參閱下方項目︰  
   

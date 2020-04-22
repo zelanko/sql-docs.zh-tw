@@ -1,5 +1,6 @@
 ---
-title: ODBC 驅動程式的 DSN 和連接字串關鍵字 - SQL Server | Microsoft Docs
+title: ODBC DSN 和連接字串關鍵字
+description: 此頁面會列出連接字串和 DSN 的關鍵字，以及 ODBC Driver for SQL Server 中可用的 SQLSetConnectAttr 和 SQLGetConnectAttr 連接屬性。
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911242"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528980"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
 
@@ -22,7 +23,7 @@ ms.locfileid: "76911242"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支援的 DSN/連接字串關鍵字和連接屬性
 
-下表列出每個平台可用的關鍵字和屬性 (L: Linux；M: Mac；W: Windows)。 按一下關鍵字或屬性，以查看詳細資料。
+下表列出每個平台可用的關鍵字和屬性 (L:Linux；M：macOS；W：Windows)。 按一下關鍵字或屬性，以查看詳細資料。
 
 | DSN/連接字串關鍵字 | 連線屬性 | 平台 |
 |-|-|-|
@@ -246,7 +247,7 @@ ms.locfileid: "76911242"
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-若要啟用與 XA 相容交易處理器 (TP) 的 XA 交易，應用程式需要呼叫 **SQLSetConnectAttr**，且使用 SQL_COPT_SS_ENLIST_IN_XA 與 `XACALLPARAM` 物件的指標。 這個選項在 Windows、(17.3 和更新版本) Linux 和 Mac 上受到支援。
+若要啟用與 XA 相容交易處理器 (TP) 的 XA 交易，應用程式需要呼叫 **SQLSetConnectAttr**，且使用 SQL_COPT_SS_ENLIST_IN_XA 與 `XACALLPARAM` 物件的指標。 這個選項在 Windows、(17.3 和更新版本) Linux 和 macOS 上受到支援。
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -257,7 +258,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 |值|描述|平台|  
 |-----------|-----------------|-----------------|  
-|XACALLPARAM 物件*|指向 `XACALLPARAM` 物件的指標。|Windows、Linux 和 Mac|
+|XACALLPARAM 物件*|指向 `XACALLPARAM` 物件的指標。|Windows、Linux 和 macOS|
 |TRUE|建立 XA 交易與 ODBC 連接的關聯。 所有相關的資料庫活動都將在 XA 交易的保護底下進行。|Windows|  
 |FALSE|取消 XA 交易與 ODBC 連接的關聯。|Windows|
 

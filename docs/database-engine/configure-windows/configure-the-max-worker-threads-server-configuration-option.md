@@ -1,7 +1,7 @@
 ---
 title: 設定 max worker threads 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776417"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488314"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "75776417"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   當實際的查詢要求數目小於 **max worker threads**的設定值時，就會由一個執行緒處理每一個查詢要求。 然而，當實際的查詢要求數目超過 **max worker threads**的設定值時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會將工作者執行緒納入集區中，好讓下一個可用的工作者執行緒來處理要求。  
+-   當實際的查詢要求數目小於 **max worker threads**的設定值時，就會由一個執行緒處理每一個查詢要求。 然而，當實際的查詢要求數目超過 [最大工作者執行緒]  中設定的值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會將背景工作執行緒納入集區中，以便下一個可用背景工作執行緒能處理要求。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
@@ -55,35 +55,43 @@ ms.locfileid: "75776417"
   
 -   當大量用戶端連接到伺服器時，執行緒集區有助於最佳化效能。 通常，會針對每一個查詢要求建立個別的作業系統執行緒。 然而，在數以百計的伺服器連接之下，若每個查詢要求都使用一個執行緒，反而會耗用大量的系統資源。 **max worker threads** 選項可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立工作者執行緒集區，以服務更多的查詢要求數量，進而改善效能。  
   
--   下表顯示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的不同 CPU 和版本組合自動設定的最大工作者執行緒數。  
+-   下表顯示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的不同 CPU、電腦架構和版本組合自動設定的最大背景工作執行緒數目，使用的公式為：**預設最大背景工作角色  + ((邏輯 CPU 數目** - 4) * 每個 CPU 的背景工作角色  )**。  
   
-    |CPU 數|32 位元電腦|64 位元電腦|  
-    |------------|------------|------------|  
-    |\<= 4 個處理器|256|512|  
-    |8 個處理器|288|576|  
-    |16 個處理器|352|704|  
-    |32 個處理器|480|960|  
-    |64 個處理器|736|1472|  
-    |128 個處理器|4224|4480|  
-    |256 個處理器|8320|8576| 
+    |CPU 數|32 位元電腦 (最多為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64 位元電腦 (最多為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|64 位元電腦 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始)|   
+    |------------|------------|------------|------------|  
+    |\<= 4|256|512|512|   
+    |8|288|576|576|   
+    |16|352|704|704|   
+    |32|480|960|960|   
+    |64|736|1472|2432|   
+    |128|1248|2496|4480|   
+    |256|2272|4544|8576|   
     
-    使用下列公式：
+    最多為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1，每個 CPU 的「背景工作角色」  只取決於架構 (32 位元或 64 位元)：
     
-    |CPU 數|32 位元電腦|64 位元電腦|  
-    |------------|------------|------------| 
-    |\<= 4 個處理器|256|512|
-    |\> 4 個處理器和 \<= 64 個處理器|256 + ((邏輯 CPU 數 - 4) * 8)|512 + ((邏輯 CPU 數目 - 4) * 16)|
-    |\>64 個處理器|256 + ((邏輯 CPU 數目 - 4) * 32)|512 + ((邏輯 CPU 數目 - 4) * 32)|
+    |CPU 數|32 位元電腦 <sup>1</sup>|64 位元電腦|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4|256 + ((邏輯 CPU 數 - 4) * 8)|512 <sup>2</sup> + ((邏輯 CPU 數目 - 4) * 16)|   
+    
+    從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，「每個 CPU 的背景工作角色」  取決於架構和處理器數目 (介於 4 到 64，或大於 64)：
+    
+    |CPU 數|32 位元電腦 <sup>1</sup>|64 位元電腦|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4 和 \<= 64|256 + ((邏輯 CPU 數 - 4) * 8)|512 <sup>2</sup> + ((邏輯 CPU 數目 - 4) * 16)|   
+    |\> 64|256 + ((邏輯 CPU 數目 - 4) * 32)|512 <sup>2</sup> + ((邏輯 CPU 數目 - 4) * 32)|   
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不可以安裝在 32 位元作業系統上。 列出 32 位元電腦值以協助客戶執行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更早版本。 建議在 32 位元電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的背景工作執行緒最大數目設為 1,024。  
+    <sup>1</sup> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不可以安裝在 32 位元作業系統上。 列出 32 位元電腦值以協助客戶執行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更早版本。 建議在 32 位元電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的背景工作執行緒最大數目設為 1,024。
+    
+    <sup>2</sup> 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，針對記憶體小於 2GB 的機器，「預設最大背景工作角色」  值會除以 2。
   
-    > [!NOTE]  
+    > [!TIP]  
     > 如需有關使用超過 64 個 CPU 的建議事項，請參閱 [在超過 64 個 CPU 之電腦上執行 SQL Server 的最佳作法](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)。  
   
 -   當所有的工作者執行緒都在進行長時間執行的查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會反應遲緩，直到工作者執行緒完成並恢復為可用狀態為止。 雖然這不算是瑕疵，但有時卻讓人困擾。 若處理序反應遲緩，而且無法處理新查詢，請使用專用管理員連接 (DAC) 來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後清除處理序。 若要避免這個問題，請增加 max worker threads 的最大數目。  
   
- [最大工作者執行緒]  伺服器設定選項不會限制系統中可能繁衍的所有執行緒。 可用性群組、Service Broker、鎖定管理員等工作所需的執行緒，或在此限制外繁衍的執行緒。 如果超過設定的執行緒數目，下列查詢會提供已繁衍其他執行緒之系統工作的相關資訊。  
+ [最大工作者執行緒]  伺服器組態選項不會限制系統中可能繁衍的所有執行緒。 可用性群組、Service Broker、鎖定管理員等工作所需的執行緒，或在此限制外繁衍的執行緒。 如果超過設定的執行緒數目，下列查詢會提供已繁衍其他執行緒之系統工作的相關資訊。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  

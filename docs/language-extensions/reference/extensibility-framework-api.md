@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: cd1ab5402383681172ff111b7daf5fcea675beaa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012424"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298208"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server 的擴充性架構 API
 
@@ -139,7 +139,7 @@ SQLRETURN InitSession(
 
 您可從 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中的 `@input_data_1`，針對結果集的每個資料行呼叫此函數。
 
-此結果集的資料行結構會稱為「輸入結構描述」。
+此結果集的資料行結構會稱為「輸入結構描述」  。
 
 ### <a name="syntax"></a>語法
 
@@ -587,7 +587,7 @@ SQLRETURN InstallExternalLibrary(
 *LibraryErrorLength*  
 \[輸出\] LibraryError 字串的長度。
 
-## <a name="uninstalllibrary"></a>UninstallLibrary
+## <a name="uninstallexternallibrary"></a>UninstallExternalLibrary
 
 解除安裝程式庫。 此函數為選擇性，不需要實作。 預設實作是復原 InstallExternalLibrary 預設實作所完成的工作。 預設實作會刪除 *LibraryInstallDirectory* 下 *LibraryName* 檔案的內容。
 

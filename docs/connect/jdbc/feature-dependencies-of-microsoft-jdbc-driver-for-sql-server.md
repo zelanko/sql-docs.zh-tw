@@ -1,5 +1,6 @@
 ---
-title: Microsoft JDBC Driver for SQL Server 的功能相依性 | Microsoft Docs
+title: Microsoft JDBC Driver 的功能相依性
+description: 了解 Microsoft JDBC Driver for SQL Server 的相依性，以及如何滿足這些相依性。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8aa9b287d6d04b8ea21e8a8fd76460005edc5cd5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917985"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631198"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能相依性
 
@@ -94,13 +95,13 @@ ms.locfileid: "80917985"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供者：
 
-- JDBC 驅動程式 8.2.2 版 - 相依性版本：Azure-Keyvault (1.2.2 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.7.0) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC 驅動程式版本 7.4.1 - 相依性版本：Azure-Keyvault (1.2.1 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.6.10) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC 驅動程式版本 7.2.2 - 相依性版本：Azure-Keyvault (1.2.0 版)、Azure-Keyvault-Webkey (1.2.0 版)、 Adal4j (1.6.3 版)、Client-Runtime-for-AutoRest (1.6.5) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC 驅動程式版本 7.0.0 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.6.0 版) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC 驅動程式版本 6.4.0 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.4.0 版) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC 驅動程式版本 6.2.2 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.4.0 版) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC 驅動程式版本 6.0.0 - 相依性版本：Azure-Keyvault (0.9.7 版)、Adal4j (1.3.0 版) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC 驅動程式 8.2.2 版 - 相依性版本：Azure-Keyvault (1.2.2 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.7.0) 與其相依性 ([範例應用程式](azure-key-vault-sample-version-7.0.md))
+- JDBC 驅動程式版本 7.4.1 - 相依性版本：Azure-Keyvault (1.2.1 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.6.10) 與其相依性 ([範例應用程式](azure-key-vault-sample-version-7.0.md))
+- JDBC 驅動程式版本 7.2.2 - 相依性版本：Azure-Keyvault (1.2.0 版)、Azure-Keyvault-Webkey (1.2.0 版)、 Adal4j (1.6.3 版)、Client-Runtime-for-AutoRest (1.6.5) 與其相依性 ([範例應用程式](azure-key-vault-sample-version-7.0.md))
+- JDBC 驅動程式版本 7.0.0 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.6.0 版) 與其相依性 ([範例應用程式](azure-key-vault-sample-version-7.0.md))
+- JDBC 驅動程式版本 6.4.0 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.4.0 版) 與其相依性 ([範例應用程式](azure-key-vault-sample-version-6.2.2.md))
+- JDBC 驅動程式版本 6.2.2 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.4.0 版) 與其相依性 ([範例應用程式](azure-key-vault-sample-version-6.2.2.md))
+- JDBC 驅動程式版本 6.0.0 - 相依性版本：Azure-Keyvault (0.9.7 版)、Adal4j (1.3.0 版) 與其相依性 ([範例應用程式](azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > 透過 6.2.2 和 6.4.0 驅動程式版本，已將 azure-keyvault-java 相依性更新為 1.0.0 版。 不過，新版本與先前版本 (0.9.7) 不相容，並且會中斷驅動程式中現有的實作。 驅動程式中的新實作需要 API 變更，接著會中斷使用 Azure Key Vault Provider 的用戶端程式。
@@ -117,15 +118,15 @@ ms.locfileid: "80917985"
 - JDBC 驅動程式版本 6.2.2 - 相依性版本：Adal4j (1.4.0 版) 及其相依性
 - JDBC 驅動程式版本 6.0.0 - 相依性版本：Adal4j (1.3.0 版) 及其相依性。 在此版本的驅動程式中，您可以藉由只在 Windows 作業系統上使用 _ActiveDirectoryIntegrated_ 驗證模式，以及使用 sqljdbc_auth.dll 和適用於 SQL Server 的 Active Directory 驗證程式庫 (ADALSQL.DLL) 來連線。
 
-從驅動程式 6.4.0 版開始，應用程式不一定需要在 Windows 作業系統上使用 ADALSQL.DLL。 針對*非 Windows 作業系統*，驅動程式需要 Kerberos 票證，才能使用 ActiveDirectoryIntegrated 驗證。 如需如何使用 Kerberos 連線至 Active Directory 的詳細資訊，請參閱[在 Windows、Linux 和 Mac 上設定 Kerberos 票證](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) \(機器翻譯\)。
+從驅動程式 6.4.0 版開始，應用程式不一定需要在 Windows 作業系統上使用 ADALSQL.DLL。 針對*非 Windows 作業系統*，驅動程式需要 Kerberos 票證，才能使用 ActiveDirectoryIntegrated 驗證。 如需如何使用 Kerberos 連線至 Active Directory 的詳細資訊，請參閱[在 Windows、Linux 和 macOS 上設定 Kerberos 票證](connecting-using-azure-active-directory-authentication.md#set-kerberos-ticket-on-windows-linux-and-macos)。
 
 針對 *Windows 作業系統*，驅動程式預設會尋找 sqljdbc_auth.dll，而且不需要設定 Kerberos 票證或 Azure 程式庫相依性。 如果 sqljdbc_auth.dll 無法使用，驅動程式就會尋找可用來向 Active Directory 進行驗證的 Kerberos 票證，就像在其他作業系統上一樣。
 
 自驅動程式 8.2.2 版起，'sqljdbc_auth.dll' 將重新命名為 'mssql-jdbc_auth-\<版本>-\<架構>.dll'。 例如 'mssql-jdbc_auth-8.2.2.x64.dll'。
 
-您可以取得使用此功能的[範例應用程式](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。
+您可以取得使用此功能的[範例應用程式](connecting-using-azure-active-directory-authentication.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [JDBC Driver GitHub 存放庫](https://github.com/microsoft/mssql-jdbc) \(英文\)  
-[JDBC Driver API 參考](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC Driver API 參考](reference/jdbc-driver-api-reference.md)

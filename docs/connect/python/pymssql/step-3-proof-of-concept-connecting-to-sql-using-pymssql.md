@@ -1,5 +1,6 @@
 ---
-title: 步驟 3：使用 pymssql 連線到 SQL 的概念證明 | Microsoft Docs
+title: 步驟 3：使用 pymssql 連線至 SQL
+description: 步驟 3 是一個概念證明，說明如何使用 Python 和 pymssql 連線至 SQL Server。 基本範例示範如何選取和插入資料。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913094"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528562"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3：使用 pymssql 連線到 SQL 的概念證明
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80913094"
   
 ## <a name="step-2--execute-query"></a>步驟 2:執行查詢  
   
-[cursor.execute](https://pypi.org/project/pymssql/) 函式可用來擷取對 SQL Database 查詢的結果集。 這個函式基本上會接受任何查詢並傳回結果集，您可以使用 [cursor.fetchone()](https://pypi.org/project/pymssql/)反覆查詢結果集。  
+[cursor.execute](https://pypi.org/project/pymssql/) 函式可用來擷取對 SQL Database 查詢的結果集。 這個函式基本上會接受任何查詢並傳回結果集，您可以使用 [cursor.fetchone()](https://pypi.org/project/pymssql/) 反覆查詢結果集。  
   
   
 ```python
@@ -50,7 +51,7 @@ ms.locfileid: "80913094"
   
 ## <a name="step-3--insert-a-row"></a>步驟 3：插入資料列  
   
-在這個範例中，您將了解如何安全地執行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 陳述式，傳遞可保護您應用程式來防禦 [SQL 插入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
+在此範例中，您將了解如何安全地執行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 陳述式，並傳遞參數。 將參數作為值傳遞，可協助您的應用程式防禦 [SQL 插入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
   
   
 ```python
@@ -66,13 +67,13 @@ ms.locfileid: "80913094"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步驟 4：復原交易  
+## <a name="step-4-roll-back-a-transaction"></a>步驟 4：復原交易  
   
 這個程式碼範例示範如何使用交易，您將：  
   
 * 開始交易  
 * 插入一列資料  
-* 回復您的交易以復原插入  
+* 復原您的交易以復原插入  
   
 ```python
     import pymssql  

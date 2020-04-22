@@ -1,5 +1,6 @@
 ---
-title: 程式設計指導方針 (ODBC Driver for SQL Server) | Microsoft Docs
+title: 程式設計指導方針 (ODBC 驅動程式)
+description: macOS 和 Linux 上 Microsoft ODBC Driver for SQL Server 的程式設計功能以 SQL Native Client (ODBC) 中的 ODBC 為基礎。
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219223"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632788"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -49,7 +50,7 @@ ODBC 應用程式可在納入 unixODBC 標頭 (`sql.h`、`sqlext.h`、`sqltypes.
 下列功能並未經確認可在 macOS 和 Linux 上此版本的 ODBC 驅動程式正確運作：
 
 -   容錯移轉叢集連接
--   [透明網路 IP 解析](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (在 ODBC Driver 17 以前)
+-   [透明網路 IP 解析](../using-transparent-network-ip-resolution.md) (在 ODBC Driver 17 以前)
 -   [進階驅動程式追蹤](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能： 
@@ -108,7 +109,7 @@ macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能：
 
 連接時，驅動程式會偵測載入它的目前處理序地區設定。 如果使用上述編碼方式之一，驅動程式會針對 SQLCHAR (窄字元) 資料使用該編碼，否則它會預設為 UTF-8。 因為所有處理序預設都以 "C" 地區設定啟動 (因此導致驅動程式預設為 UTF-8)，如果應用程式需要使用上述編碼方式之一，它應該使用 **setlocale** 函式先適當地設定地區設定，然後才進行連線；藉由明確地指定所需的地區設定，或使用空字串，例如 `setlocale(LC_ALL, "")`，以使用環境的地區設定。
 
-因此，在編碼為 UTF-8 的一般 Linux 或 Mac 環境中，從 13 或 13.1 升級而來的 ODBC Driver 17 使用者不會發現任何差異。 不過，透過 `setlocale()` 使用上述清單中非 UTF-8 編碼的應用程式，需要針對與驅動程式之間資料使用該編碼，而不是 UTF-8。
+因此，在編碼為 UTF-8 的一般 Linux 或 macOS 環境中，從 13 或 13.1 升級而來的 ODBC Driver 17 使用者將不會發現任何差異。 不過，透過 `setlocale()` 使用上述清單中非 UTF-8 編碼的應用程式，需要針對與驅動程式之間資料使用該編碼，而不是 UTF-8。
 
 SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 
@@ -147,8 +148,8 @@ Windows 與 Linux 和 macOS 上的數個 iconv 程式庫版本之間有一些編
 3.  搭配高度多執行緒的應用程式使用驅動程式時，unixODBC 的控制代碼驗證可能會變成效能瓶頸。 在這種情況下，您可以使用 `--enable-fastvalidate` 選項來編譯 unixODBC，以獲得大幅提高的效能。 不過，請注意，這可能導致將無效控制代碼傳遞給 ODBC API 的應用程式損毀，而不會傳回 `SQL_INVALID_HANDLE` 錯誤。
 
 ## <a name="see-also"></a>另請參閱  
-[常見問題集](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[常見問題集](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[此驅動程式版本的已知問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[此驅動程式版本的已知問題](known-issues-in-this-version-of-the-driver.md)
 
-[版本資訊](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[版本資訊](release-notes-odbc-sql-server-linux-mac.md)

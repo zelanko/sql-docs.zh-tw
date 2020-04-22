@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077065"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487167"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器]  選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
@@ -84,20 +84,20 @@ ms.locfileid: "77077065"
   
 6.  如果您尚未這樣做，請確認 IIS (如果已安裝) 並沒有與您打算使用之名稱相同的虛擬目錄。  
   
-7.  如果您安裝了 SSL 憑證，您可以現在選取它，以便將此 URL 繫結至電腦上所安裝的 SSL 憑證。  
+7.  如果您已安裝 TLS/SSL 憑證，您現在可以加已選取，以便將此 URL 繫結至電腦上所安裝的 TLS/SSL 憑證。  
   
-8.  如果您選擇性地選取 SSL 憑證，您就可以指定自訂通訊埠。 預設值是 443，但是您可以使用任何可用的通訊埠。  
+8.  選擇性地，如果您選取 TLS/SSL 憑證，您可以指定自訂連接埠。 預設值是 443，但是您可以使用任何可用的通訊埠。  
   
 9. 按一下 **[套用]** ，即可建立此 URL。  
   
 10. 按一下頁面 **[URL]** 區段中的連結來測試此 URL。 請注意，在您可以測試此 URL 之前，必須先建立及設定報表伺服器資料庫。 如需指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
 > [!NOTE]
->  如果您有現有的 SSL 繫結和 URL 保留項目，而您想要變更 SSL 繫結，例如使用不同的憑證或主機標頭，則建議您依序完成以下步驟：  
+>  如果您有現有的 TLS 繫結和 URL 保留項目，而您想要變更 TLS 繫結 (例如使用不同的憑證或主機標頭)，則建議您依序完成以下步驟：  
 > 
 >  1.  先移除所有 URL 保留項目。  
-> 2.  然後移除所有 SSL 繫結。  
-> 3.  然後重新建立 URL 和 SSL 繫結。  
+> 2.  然後移除所有 TLS 繫結。  
+> 3.  然後重新建立 URL 和 TLS 繫結。  
 > 
 >  前述步驟可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成。  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077065"
   
 3.  指定虛擬目錄。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 會接聽與報表伺服器 Web 服務相同的 IP 位址和通訊埠。 如果您設定 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 指向不同的報表伺服器 Web 服務，您必須修改 RSReportServer.config 檔案中的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL 設定。  
   
-4.  如果您安裝了 SSL 憑證，就可以選取它，以便要求送給 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的所有要求都透過 HTTPS 路由傳送。  
+4.  如果您已安裝 TLS/SSL 憑證，就可以加以選取，以便要求針對 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的所有要求都需透過 HTTPS 路由傳送。  
   
-     如果您選擇性地選取 SSL 憑證，您就可以指定自訂通訊埠。 預設值是 443，但是您可以使用任何可用的通訊埠。  
+     選擇性地，如果您選取 TLS/SSL 憑證，您可以指定自訂連接埠。 預設值是 443，但是您可以使用任何可用的通訊埠。  
   
 5.  按一下 **[套用]** ，即可建立此 URL。  
   
@@ -136,14 +136,14 @@ ms.locfileid: "77077065"
  主機標頭是可讓多個網站共用單一 IP 位址和通訊埠的唯一名稱。 主機標頭名稱要比 IP 位址和通訊埠編號更容易記得和輸入。 主機標頭名稱的一個範例為 www.adventure-works.com 。  
   
  **SSL 通訊埠**  
- 為 SSL 連接指定通訊埠。 SSL 的預設通訊埠是 443。  
+ 為 TLS/SSL 連線指定連接埠。 TLS 的預設連接埠是 443。  
   
  **SSL 憑證**  
- 指定您安裝在這部電腦上之 SSL 憑證的憑證名稱。 如果此憑證對應到萬用字元，您可以將它用於報表伺服器連接。  
+ 指定您已在這部電腦上安裝之 TLS/SSL 憑證的憑證名稱。 如果此憑證對應到萬用字元，您可以將它用於報表伺服器連接。  
   
  指定註冊憑證的完整電腦名稱。 所指定的名稱必須與註冊的憑證名稱相同。  
   
- 您必須安裝了憑證，才能使用此選項。 您也必須修改 RSReportServer.config 檔案中的 UrlRoot 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 您必須安裝了憑證，才能使用此選項。 您也必須修改 RSReportServer.config 檔案中的 UrlRoot 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱[在原生模式報表伺服器上設定 TLS 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>設定 URL 的進階屬性  
   

@@ -1,5 +1,6 @@
 ---
-title: 範例：指定 ID 和 IDREFS 指示詞 | Microsoft Docs
+title: 範例：指定識別碼和 IDREFS 指示詞 | Microsoft Docs
+description: 了解如何在 SQL 查詢中指定 ID 與 IDREFS 指示詞可啟用文件內連結。
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 29468af968f8e4ffd92e52258b12eb4aece3793b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2a05de3b0fbdec71ec15f221158dc9f2e362da8f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662979"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388660"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>範例：指定 ID 和 IDREFS 指示詞
 
@@ -39,7 +40,7 @@ ms.locfileid: "80662979"
 </Customer>  
 ```  
   
-`SalesOrderIDList` 項目的 `<Customer>` 屬性是一項多重值屬性，參考 `SalesOrderID` 項目的 `<SalesOrder>` 屬性。 若要建立此連結，`SalesOrderID` 屬性必須宣告為 `ID` 類型，且 `SalesOrderIDList` 項目的 `<Customer>` 屬性必須宣告為 `IDREFS` 類型。 因為一位客戶可以下多份訂單，所以要使用 `IDREFS` 類型。
+`<Customer>` 項目的 `SalesOrderIDList` 屬性是一項多重值屬性，參考 `<SalesOrder>` 項目的 `SalesOrderID` 屬性。 若要建立此連結，`SalesOrderID` 屬性必須宣告為 `ID` 類型，且 `<Customer>` 項目的 `SalesOrderIDList` 屬性必須宣告為 `IDREFS` 類型。 因為一位客戶可以下多份訂單，所以要使用 `IDREFS` 類型。
   
  **IDREFS** 類型的元素也會有一個以上的值。 因此，您必須使用個別的 select 子句，以重複使用相同的標記、父系及索引鍵資料行資訊。 然後 `ORDER BY` 必須確定構成 **IDREFS** 值的資料列順序，在它們的父元素下會分在同一組。  
   

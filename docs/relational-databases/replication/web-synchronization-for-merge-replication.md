@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136972"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529111"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68136972"
   
  例如，旅行途中的銷售代表可以使用 Web 同步處理。 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]公司有許多銷售代表需要訪問他們所在地區的各店鋪及供應商。 長途旅行時，這些銷售代表會在旅館中停宿，他們需要一個便利的方式可以讓他們在每日結束時上傳銷售資料並下載產品更新。  
   
- [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部門用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對每台可攜式電腦進行了設定，可以讓合併式複寫使用 Web 同步處理。 每台可攜式電腦上的合併代理程式都有一個指向複寫元件的網際網路 URL，這些複寫元件安裝在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦上。 這些元件會利用發行者來同步處理訂閱者。 現在每個銷售代表都可以透過任何可用的網際網路連接進行連線，而不需要使用遠端撥號連接，並能夠上傳及下載適當的資料。 網際網路連接使用了「安全通訊端層」(SSL)，因此不需要使用虛擬私人網路 (VPN)。  
+ [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部門用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對每台可攜式電腦進行了設定，可以讓合併式複寫使用 Web 同步處理。 每台可攜式電腦上的合併代理程式都有一個指向複寫元件的網際網路 URL，這些複寫元件安裝在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦上。 這些元件會利用發行者來同步處理訂閱者。 現在每個銷售代表都可以透過任何可用的網際網路連接進行連線，而不需要使用遠端撥號連接，並能夠上傳及下載適當的資料。 網際網路連線使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL))；因此不需要使用虛擬私人網路 (VPN)。  
   
  如需設定 Web 同步處理所需元件的資訊，請參閱[設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)、[針對 Web 同步處理設定 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md) 和[針對 Web 同步處理設定 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
   

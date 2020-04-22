@@ -1,5 +1,6 @@
 ---
-title: 連線到 SQL Server │ Microsoft Docs
+title: 使用 ODBC 連線
+description: 了解如何使用 Microsoft ODBC Driver for SQL Server，從 Linux 或 macOS 建立與資料庫的連線。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219390"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632800"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "81219390"
   
 ## <a name="connection-properties"></a>Connection Properties  
 
-如需 Linux 和 Mac 上支援的所有連接字串關鍵字和屬性，請參閱 [DSN 和連接字串關鍵字和屬性](../../../connect/odbc/dsn-connection-string-attribute.md)
+如需 Linux 和 macOS 上支援的所有連接字串關鍵字和屬性，請參閱 [DSN 和連接字串關鍵字和屬性](../dsn-connection-string-attribute.md)。
 
 > [!IMPORTANT]  
 > 連接到使用資料庫鏡像的資料庫 (具有容錯移轉夥伴) 時，請不要在連接字串中指定資料庫名稱。 但是，請傳送 **use** _database_name_ 命令，以便在執行查詢前先連線到資料庫。  
@@ -113,6 +114,6 @@ TLS 會使用 OpenSSL 程式庫。 下表顯示 OpenSSL 的最低支援版本，
 
 ## <a name="see-also"></a>另請參閱
 
-- [在 Linux 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [在 macOS 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [在 Linux 上安裝 Microsoft ODBC Driver for SQL Server](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [在 macOS 上安裝 Microsoft ODBC Driver for SQL Server](install-microsoft-odbc-driver-sql-server-macos.md)
+- [程式設計指導方針](programming-guidelines.md)

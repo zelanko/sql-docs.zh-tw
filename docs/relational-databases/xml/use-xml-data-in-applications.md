@@ -1,5 +1,6 @@
 ---
 title: 在應用程式中使用 XML 資料 | Microsoft 文件
+description: 了解在您的應用程式中使用 xml 資料類型時可用的選項。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa573c4d824d8a1f419335fa0c7b3d451b80f96e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7e4811d4c79a167efbf7f5b40ecf6270caff38df
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664980"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388316"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -146,7 +147,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 處理 xml 類型資料行的 XML  
- 若要使用 ADO.NET 和   處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ML[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料類型資料行中的 XML，您可以使用 **SqlCommand** 類別的標準行為。 例如，使用 **SqlDataReader** 擷取 **xml**資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
+ 若要使用 ADO.NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 處理 **ML** 資料類型資料行中的 XML，您可以使用 **SqlCommand** 類別的標準行為。 例如，使用 **SqlDataReader** 擷取 **xml**資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
   
  如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件中的＜資料讀取器中的 XML 資料行值＞。  
   

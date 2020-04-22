@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903805"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488122"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) 擴增主機
 
@@ -55,7 +55,7 @@ Scale Out Master 服務是一種 Windows 服務，負責與 Scale Out Worker 通
 |組態  |描述  |預設值  |
 |---------|---------|---------|
 |PortNumber|用來與擴增背景工作通訊的網路連接埠號碼。|8391|
-|SSLCertThumbprint|用來保護與擴增背景工作通訊的 SSL 憑證指紋。|在擴增主機安裝期間指定的 SSL 憑證指紋|
+|SSLCertThumbprint|用來保護與擴增背景工作角色通訊的 TLS/SSL 憑證指紋。|在擴增主機安裝期間指定的 TLS/SSL 憑證指紋|
 |SqlServerName|包含 SSISDB 目錄的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 名稱。 例如，ServerName\\InstanceName。|使用 Scale Out Master 安裝的 SQL Server 名稱。|
 |CleanupCompletedJobsIntervalInMs|已完成執行工作的清除間隔，以毫秒為單位。|43200000|
 |DealWithExpiredTasksIntervalInMs|過期執行工作的處理間隔，以毫秒為單位。|300000|

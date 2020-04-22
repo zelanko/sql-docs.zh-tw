@@ -1,5 +1,6 @@
 ---
 title: 安裝 Microsoft ODBC Driver for SQL Server (macOS)
+description: 了解如何在 macOS 用戶端上安裝 Microsoft ODBC Driver for SQL Server，以啟用資料庫連線能力。
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61bbc198c695ba6e1a0b6a339bfb110108435de8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921913"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488516"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>安裝 Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -69,7 +70,7 @@ macOS 上的 ODBC 驅動程式包含下列元件：
 
 ## <a name="troubleshooting"></a>疑難排解
 
-如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的 [針對連線問題進行疑難排解](known-issues-in-this-version-of-the-driver.md#connectivity)。
+如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的[針對連線問題進行疑難排解](known-issues-in-this-version-of-the-driver.md#connectivity)。
 
 ## <a name="next-steps"></a>後續步驟
 

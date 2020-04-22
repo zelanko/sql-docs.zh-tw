@@ -1,5 +1,6 @@
 ---
 title: rrRenderingError - Reporting Services 錯誤 | Microsoft Docs
+description: 在此錯誤參考頁面中，了解事件識別碼 'rrRenderingError'：轉譯報表期間發生錯誤。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fcfe999a7cfaf41cc4b6b9fad437ea14dfe2613
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 143520a4bb62df4f38ed0d1d116fd6dc1df22f2c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575558"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487737"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤
     
@@ -48,7 +49,7 @@ ms.locfileid: "65575558"
   
  當指定的框線樣式無效時，通常會產生一個訊息，指出不支援此框線樣式。 請指定支援的框線樣式，然後重試一遍。  
   
- 當影像報表項目的指定 mimetype 無效時，通常會產生一個訊息，指出不支援該影像 mimetype。 請為此報表項目指定支援的 mimetype，然後重試一遍。  
+ 當影像報表項目的指定 MIME 類型無效時，通常會產生一個訊息，指出不支援該影像 MIME 類型。 請為此報表項目指定支援的 MIME 類型，然後重試一遍。  
   
  當超出 Excel 工作表內的資料列數時，通常會產生一個訊息，指出資料列數超出每一工作表的最大可能資料列數。 Excel 最多支援 65,000 個資料列。  
   

@@ -1,7 +1,8 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 支援對照表 | Microsoft Docs
+title: Microsoft Drivers for PHP 支援矩陣
+description: 此頁面包含 Microsoft PHP Drivers for SQL Server 的支援對照表與支援週期原則。
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922831"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632751"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支援對照表
 
@@ -106,7 +107,7 @@ Microsoft PHP Driver 不提供延長支援與自訂支援選項。
 |Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-下列 Linux 和 Mac 作業系統版本 (僅限 64 位元) 支援搭配所列出版本的 Microsoft PHP 驅動程式使用：
+下列 Linux 和 macOS 作業系統版本 (僅限 64 位元) 支援搭配所列出版本的 Microsoft PHP 驅動程式使用：
 
 |適用於 SQL Server 的 PHP 驅動程式版本 &#8594;<br />&#8595; 作業系統|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,12 +133,12 @@ Microsoft PHP Driver 不提供延長支援與自訂支援選項。
 |macOS El Capitan (64 位元)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> 5.8 版的 Alpine Linux 支援是實驗性的。
+<sup>1</sup> Alpine Linux 支援針對 5.8.0 版為實驗性。 版本 5.8.1 引進了生產環境支援。
 
 ## <a name="see-also"></a>另請參閱
 
-[版本資訊](../../connect/php/release-notes-php-sql-driver.md)
+[版本資訊](release-notes-php-sql-driver.md)
 
-[支援資源](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[支援資源](support-resources-for-the-php-sql-driver.md)
 
-[系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[系統需求](system-requirements-for-the-php-sql-driver.md)

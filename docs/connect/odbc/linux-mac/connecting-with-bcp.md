@@ -1,5 +1,6 @@
 ---
-title: 連線 bcp | Microsoft Docs
+title: 連接 bcp
+description: 了解如何在 Linux 和 macOS 上搭配使用 bcp 公用程式與 Microsoft ODBC Driver for SQL Server。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924548"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632801"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 此頁面記錄了與 Windows 版本 `bcp` 的差異。
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 上與 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起使用。 此頁面記錄了與 Windows 版本 `bcp` 的差異。
   
 - 欄位結束字元是定位字元 ("\t")。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "80924548"
 > -   -r"\n"  
 > -   -r'\n'  
   
-以下是將資料表資料列複製到文字檔的 `bcp` 範例命令呼叫：  
+下列範例是將資料表資料列複製到文字檔的 `bcp` 命令引動過程：  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -61,7 +62,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要連接的資料庫。  
   
 - -d  
-使傳遞至 `bcp` -S 選項的值解譯為資料來源名稱 (DSN)。 如需詳細資訊，請參閱[使用 sqlcmd 進行連線](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的＜sqlcmd 和 bcp 中的 DSN 支援＞。  
+使傳遞至 `bcp` -S 選項的值解譯為資料來源名稱 (DSN)。 如需詳細資訊，請參閱[使用 sqlcmd 進行連線](connecting-with-sqlcmd.md)中的＜sqlcmd 和 bcp 中的 DSN 支援＞。  
   
 - -e *error_file* 指定錯誤檔的完整路徑，該錯誤檔用來儲存 `bcp` 公用程式無法從檔案傳送至資料庫的任何資料列。  
   
@@ -84,7 +85,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。  
   
 - -m *max_errors*  
-指定 `bcp` 作業取消前，可以出現的語法錯誤數上限。  
+指定可在 `bcp` 作業取消前發生的語法錯誤數上限。  
   
 - -n  
 使用資料的原生 (資料庫) 資料類型來執行大量複製作業。  
@@ -147,4 +148,4 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
   
 ## <a name="see-also"></a>另請參閱
 
-[使用 **sqlcmd** 進行連線](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[使用 **sqlcmd** 進行連線](connecting-with-sqlcmd.md)  

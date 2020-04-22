@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134425"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529423"
 ---
 # <a name="database-mail-configuration-objects"></a>Database Mail 組態物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Database Mail 包含兩個組態物件：這些資料庫組態物件提供您方法，來設定 Database Mail 從資料庫應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 傳送電子郵件時應使用的設定。  
+  Database Mail 包含兩個設定物件：這些資料庫設定物件提供您方法，用來設定 Database Mail 從資料庫應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 傳送電子郵件時應使用的設定。  
   
 -   Database Mail 帳戶  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134425"
   
 -   電子郵件伺服器的通訊埠編號。  
   
--   位元資料行會指出 SMTP 郵件伺服器的連接是否使用安全通訊端層 (SSL) 來建立。  
+-   位元資料行會指出 SMTP 郵件伺服器的連線是否使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 來建立。  
   
 -   位元資料行會指出 SMTP 伺服器的連接是否使用為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所設定的憑證來建立。  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571280"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634568"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting 方法 - RemoveSSLCertificateBinding
-  移除 SSL 憑證繫結。  
+  移除 TLS/SSL 憑證繫結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ public void RemoveSSLCertificateBindings(string Application,
  應用程式的 IP 位址。  
   
  *通訊埠*  
- 與繫結相關聯的 SSL 通訊埠。  
+ 與繫結相關聯的 TLS 連接埠。  
   
  *lcid*  
  要用於傳回之錯誤訊息的地區設定。  

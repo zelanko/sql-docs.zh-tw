@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907239"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529108"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "72907239"
   
  IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設定 Web 同步處理精靈」。 從 SQL Server 2012 開始，若要在 IIS 伺服器上使用 Web 同步處理元件，我們建議使用者安裝具有複寫功能的 SQL Server。 例如，免費的 SQL Server Express Edition。  
   
- Web 同步處理需要使用 SSL。 您需要擁有憑證授權單位所核發的安全性憑證。 如果只是為了測試，您可以使用自行核發的安全性憑證。  
+ Web 同步處理需要使用 TLS。 您需要擁有憑證授權單位所核發的安全性憑證。 如果只是為了測試，您可以使用自行核發的安全性憑證。  
    
   
  **若要設定 Web 同步處理的 IIS**  
@@ -144,7 +144,7 @@ ms.locfileid: "72907239"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者和發行者可在同一部電腦上 (適用於合併式複寫的一般設定)。 不過，IIS 應該安裝在另一部電腦上。  
   
--   利用安全通訊端層 (SSL) 來加密訂閱者與執行 IIS 的電腦之間的連接。 Web 同步處理要求這一操作。  
+-   利用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 來加密訂閱者與執行 IIS 的電腦之間的連線。 Web 同步處理要求這一操作。  
   
 -   對訂閱者與 IIS 之間的連接使用「基本驗證」。 IIS 可以利用基本驗證來代替「訂閱者」建立到「發行者」/「散發者」的連接，而不需要委派。 如果使用「整合式驗證」，則需要委派。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72907239"
   
 -   如果複寫拓撲中的伺服器在防火牆後面，您可能需要在防火牆中開啟通訊埠，才能啟用 Web 同步處理。  
   
-    -   訂閱者電腦會使用 SSL 透過 HTTPS 連接到執行 IIS 的電腦，而這部電腦通常設定為使用通訊埠 443。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者也可透過 HTTP 進行連接，這通常設定為使用通訊埠 80。  
+    -   訂閱者電腦會使用 TLS 透過 HTTPS 連線到執行 IIS 的電腦，而這部電腦通常設定為使用連接埠 443。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者也可透過 HTTP 進行連接，這通常設定為使用通訊埠 80。  
   
     -   執行 IIS 的電腦通常會使用通訊埠 1433 連接到發行者或散發者 (預設執行個體)。 當發行者或散發者為伺服器上的具名執行個體 (此伺服器具有另一個預設執行個體) 時，通常會使用通訊埠 1500 來連接至此具名執行個體。  
   

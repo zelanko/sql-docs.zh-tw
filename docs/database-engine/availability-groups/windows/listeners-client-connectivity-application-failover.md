@@ -1,6 +1,6 @@
 ---
 title: 連線到可用性群組接聽程式
-description: 包含連線到 Always On 可用性群組接聽程式的資訊；例如，如何連線到主要複本和唯讀次要複本，以及如何使用 SSL 和 Kerberos。
+description: 包含連線到 Always On 可用性群組接聽程式的資訊；例如，如何連線到主要複本和唯讀次要複本，以及如何使用 TLS/SSL 和 Kerberos。
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433735"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528492"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>連線到 Always On 可用性群組接聽程式 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  **MultiSubnetFailover** 連接選項應該設定為 **True** ，即使可用性群組只跨越單一子網路也一樣。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然 **MultiSubnetFailover** 連接選項不是必要，但是它提供更快子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> 接聽程式與 SSL 憑證  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> 接聽程式與 TLS/SSL 憑證  
 
- 連接到可用性群組接聽程式時，如果參與的 SQL Server 執行個體同時使用 SSL 憑證和工作階段加密，連接的用戶端驅動程式需要支援 SSL 憑證中的主體替代名稱，才能強制加密。  我們已計劃針對 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)，提供憑證主體替代名稱的 SQL Server 驅動程式支援。  
+連線到可用性群組接聽程式時，如果參與的 SQL Server 執行個體同時使用 TLS/SSL 憑證和工作階段加密，連線的用戶端驅動程式需要支援 TLS/SSL 憑證中的主體替代名稱，才能強制加密。  我們已計劃針對 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)，提供憑證主體替代名稱的 SQL Server 驅動程式支援。  
   
- 您必須針對容錯移轉叢集中的每個參與伺服器節點來設定 X.509 憑證，並在憑證的主體替代名稱中設定所有可用性群組接聽程式清單。  
-  
- 例如，如果 WSFC 有三個可用性群組接聽程式，名為 `AG1_listener.Adventure-Works.com`、 `AG2_listener.Adventure-Works.com`和 `AG3_listener.Adventure-Works.com`，憑證的主體替代名稱設定應如下：  
-  
+您必須針對容錯移轉叢集中的每個參與伺服器節點來設定 X.509 憑證，並在憑證的主體替代名稱中設定所有可用性群組接聽程式清單。 
+
+憑證值的格式為： 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+例如，您有下列值： 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+針對有單一可用性群組的 WSFC，憑證應有伺服器的完整網域名稱 (FQDN)，以及接聽程式的 FQDN： 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+若使用此設定，連線到執行個體 (`WIN2019\SQL2019`) 或接聽程式 (`Listener2019`) 時，系統將會加密您的連線。 
+
+取決於網路設定的方式而定，有一小部分的客戶可能也需要將 NetBIOS 新增至 SAN。 在此情況下，憑證值應該是： 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+如果 WSFC 有三個可用性群組接聽程式，例如：Listener1、Listener2、Listener3
+
+則憑證值應該為： 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> 接聽程式與 Kerberos (SPN) 
 

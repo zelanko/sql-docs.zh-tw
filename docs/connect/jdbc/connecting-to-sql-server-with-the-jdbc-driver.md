@@ -1,5 +1,6 @@
 ---
 title: 使用 JDBC 驅動程式連線到 SQL Server | Microsoft Docs
+description: 使用 Microsoft JDBC Driver for SQL Server 連線到資料庫時，所有與該資料庫的互動都會經由 SQLServerConnection 物件。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab487442feb91ce49698d554168cd36bf2c7a16
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922478"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487962"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>使用 JDBC 驅動程式連線到 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

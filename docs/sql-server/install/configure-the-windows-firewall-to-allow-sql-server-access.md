@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253470"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528789"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "75253470"
 |專用管理員連接|TCP 通訊埠 1434 (預設執行個體)。 其他通訊埠則用於具名執行個體。 請檢查錯誤記錄檔，以取得通訊埠編號。|根據預設，系統不會啟用專用管理員連接 (DAC) 的遠端連接。 若要啟用遠端 DAC，請使用介面區組態 Facet。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務|UDP 通訊埠 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務會接聽具名執行個體的內送連接，並且將對應至該具名執行個體的 TCP 通訊埠編號提供給用戶端。 每當使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體時，通常就會啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 服務。 如果用戶端設定成連接至具名執行個體的特定通訊埠，就不需要啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。|  
 |含 HTTP 端點的執行個體。|可以在建立 HTTP 端點時指定。 預設值為 TCP 通訊埠 80 (用於 CLEAR_PORT 傳輸) 和 443 (用於 SSL_PORT 傳輸)。|用於透過 URL 進行 HTTP 連接。|  
-|含 HTTP 端點的預設執行個體 |TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。|  
+|含 HTTP 端點的預設執行個體 |TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 的 HTTP 連線。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 通訊埠 4022。 若要確認使用的通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]沒有預設連接埠，但這是線上叢書範例中的傳統組態。|  
 |資料庫鏡像|管理員所選擇的通訊埠。 若要判斷此通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|雖然資料庫鏡像沒有預設通訊埠，不過《線上叢書》範例會使用 TCP 通訊埠 5022 或 7022。 請務必避免中斷使用中的鏡像端點，尤其是在具有自動容錯移轉的高安全性模式中。 您的防火牆組態必須避免中斷仲裁。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
 |複寫|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的複寫連接會使用一般的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通訊埠 (例如，預設執行個體的 TCP 通訊埠 1433)。<br /><br /> 複寫快照集的 Web 同步處理和 FTP/UNC 存取需要在防火牆上開啟其他通訊埠。 為了將初始資料和結構描述從某個位置傳送至另一個位置，複寫可能會使用 FTP (TCP 通訊埠 21)、透過 HTTP 同步處理 (TCP 通訊埠 80) 或檔案共用。 檔案共用會使用 UDP 通訊埠 137 和 138，以及 TCP 通訊埠 139 (如果使用 NetBIOS)。 檔案共用使用 TCP 通訊埠 445。|若為透過 HTTP 同步處理，複寫會使用 IIS 端點 (其通訊埠可設定，但預設為通訊埠 80)，不過 IIS 處理序會透過預設執行個體的標準通訊埠 (1433) 連接至後端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 在使用 FTP 進行 Web 同步處理期間，FTP 傳送是介於 IIS 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者之間，而非介於訂閱者與 IIS 之間。|  
@@ -155,7 +155,7 @@ ms.locfileid: "75253470"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|TCP 通訊埠 2383 (預設執行個體)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]預設執行個體的標準通訊埠。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務|TCP 通訊埠 2382 (只有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 具名執行個體需要)|沒有指定通訊埠編號之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 具名執行個體的用戶端連接要求會被導向至通訊埠 2382，亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 所接聽的通訊埠。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會將要求重新導向至具名執行個體所使用的通訊埠。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設定成可透過 IIS/HTTP 使用<br /><br /> (PivotTable® 服務會使用 HTTP 或 HTTPS)|TCP 通訊埠 80|用於透過 URL 進行 HTTP 連接。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設定成可透過 IIS/HTTPS 使用<br /><br /> (PivotTable® 服務會使用 HTTP 或 HTTPS)|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設定成可透過 IIS/HTTPS 使用<br /><br /> (PivotTable® 服務會使用 HTTP 或 HTTPS)|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用 TLS 的 HTTP 連線。|  
   
  如果使用者透過 IIS 和網際網路存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您就必須開啟 IIS 所接聽的通訊埠，並且在用戶端連接字串中指定該通訊埠。 在此情況下，針對直接存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則不必開啟任何通訊埠。 不過，您應該限制預設通訊埠 2389 和通訊埠 2382 與所有不需要的其他通訊埠。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "75253470"
 |功能|連接埠|註解|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服務|TCP 通訊埠 80|用於透過 URL 進行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 HTTP 連接。 建議您不要使用預先設定的規則 **World Wide Web 服務 (HTTP)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定成可透過 HTTPS 使用|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。 建議您不要使用預先設定的規則 **Secure World Wide Web 服務 (HTTPS)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定成可透過 HTTPS 使用|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用 TLS 的 HTTP 連線。 建議您不要使用預先設定的規則 **Secure World Wide Web 服務 (HTTPS)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
   
 當 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體時，您也必須針對這些服務開啟適當的通訊埠。 如需設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Windows 防火牆的逐步指示， [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)(設定報表伺服器存取的防火牆)。  
   

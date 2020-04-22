@@ -1,5 +1,6 @@
 ---
 title: JDBC 驅動程式概觀 | Microsoft Docs
+description: Microsoft JDBC Driver for SQL Server 是與類型 4 Java 資料庫連線 (JDBC) 4.2 相容的驅動程式，可提供對 SQL 資料庫的資料存取。
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e22698cc939b3ad3d5cea70583ee97166869d19a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920352"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529332"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 驅動程式概觀
 
@@ -25,9 +26,9 @@ Microsoft JDBC Driver for SQL Server 是類型 4 Java 資料庫連線 (JDBC) 4.2
 
 ## <a name="redistribution"></a>可轉散發
 
-JDBC Driver 6.0、6.2、6.4 與 7.0 版都是可轉散發的。 檢閱授權合約中的「可轉散發程式碼」  條款。
+JDBC 驅動程式 6.0、6.2、6.4 與 7.0 版均為可轉散發。 檢閱授權合約中的「可轉散發程式碼」  條款。
 
-JDBC 驅動程式 4.x 版已過時且已淘汰。 對 4.x 的支援已於 2018 年之前過期。
+JDBC 驅動程式 4.x 版已過時且已淘汰。 對 4.x 的支援將於 2018 之前到期。
 
 ## <a name="in-this-section"></a>本節內容  
 

@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70958341"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487447"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 
@@ -50,9 +50,9 @@ ms.locfileid: "70958341"
 - 能使用的複寫技術有限：
 
   - **Always On：** 完全支援
-  - **異動資料擷取和變更資料追蹤︰** 僅支援目前的資料表
-  - **快照集與異動複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 'AS OF' 查詢)。 不支援使用多位訂閱者，這是因為在此案例中每個時態資料皆取決於本機系統時鐘，因此會導致這些資料出現不一致。
-  - **合併式複寫︰** 不支援時態表
+  - **異動資料擷取與變更資料追蹤：** 僅在目前資料表上獲得支援
+  - **快照集與交易複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 'AS OF' 查詢)。 當散發代理程式啟動時，其會開啟在散發代理程式停止之前皆保持開啟的交易。 由於此行為的緣故，SysStartTime 與 SysEndTime 會填入散發代理程式開始進行第一筆交易的開始時間。 因此，最好是依排程執行散發代理程式，而不是依預設持續加以執行。 不支援使用多位訂閱者，因為這可能會由於本機系統時鐘而導致不一致的時態性資料。
+  - **合併式複寫：** 不支援時態表
 
 - 一般查詢只會影響目前資料表中的資料。 若要查詢歷程記錄資料表中的資料，您必須使用時態查詢。 我們會在本文件後面的＜查詢時態資料＞一節中加以詳述。
 - 最佳的索引策略，是在目前的資料表上加入叢集資料行存放區索引和/或 B 型樹狀結構資料列存放區索引，以及在歷程記錄資料表上加入叢集資料行存放區索引，藉以取得最佳儲存大小和效能。 若您建立 / 使用專屬的歷程記錄資料表，強烈建議您建立由期間資料行組成的索引類型，其會以期間資料行結尾開頭來加速 時態查詢，並可加速屬於資料一致性檢查作業的查詢。 預設的歷程記錄資料表已根據期間資料行 (結尾、開頭)，為您建立叢集資料列存放區索引。 建議您至少使用非叢集資料列存放區索引。

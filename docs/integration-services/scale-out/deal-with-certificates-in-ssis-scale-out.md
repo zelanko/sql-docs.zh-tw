@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896958"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488127"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的憑證
 
@@ -29,20 +29,20 @@ ms.locfileid: "67896958"
 
 在大部分情況下，系統會在 Scale Out Master 安裝期間設定 Scale Out Master 憑證。
 
-在 [SQL Server 安裝精靈] 的 [Integration Services 擴增設定 - 主要節點]  頁面中，您可以選擇建立新的自我簽署 SSL 憑證，或使用現有的 SSL 憑證。
+在 [SQL Server 安裝精靈] 的 [Integration Services 擴增設定 - 主要節點]  頁面中，您可以選擇建立新的自我簽署 TLS/SSL 憑證，或使用現有的 TLS/SSL 憑證。
 
 ![主機設定](media/master-config.PNG)
 
-**新憑證**。 如果您對憑證沒有特殊需求，可以選擇建立新的自我簽署 SSL 憑證。 您可以進一步在憑證中指定 CN。 請確定 CN 中包含 Scale Out Worker 稍後要使用的主要端點主機名稱。 預設會包含主要節點的電腦名稱和 IP 位址。 
+**新憑證**。 如果您對憑證沒有特殊需求，可以選擇建立新的自我簽署 TLS/SSL 憑證。 您可以進一步在憑證中指定 CN。 請確定 CN 中包含 Scale Out Worker 稍後要使用的主要端點主機名稱。 預設會包含主要節點的電腦名稱和 IP 位址。 
 
-**現有憑證**。 如果您選擇使用現有的憑證，請按一下 [瀏覽]  從本機電腦的**根**憑證存放區中選取 SSL 憑證。
+**現有憑證**。 如果您選擇使用現有的憑證，請按一下 [瀏覽]  從本機電腦的**根**憑證存放區中選取 TLS/SSL 憑證。
 
 ### <a name="change-the-scale-out-master-certificate"></a>變更 Scale Out Master 憑證
 
 您可能會因憑證到期或其他原因而需要變更 Scale Out Master 憑證。 若要變更 Scale Out Master 憑證，請執行下列動作：
 
-#### <a name="1-create-an-ssl-certificate"></a>1.建立 SSL 憑證。
-使用下列命令，在主要節點上建立並安裝新的 SSL 憑證：
+#### <a name="1-create-a-tlsssl-certificate"></a>1.建立 TLS/SSL 憑證。
+使用下列命令，在主要節點上建立並安裝新的 TLS/SSL 憑證：
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -70,7 +70,7 @@ netsh http show sslcert ipport=0.0.0.0:8391
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 例如：
@@ -81,18 +81,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3.更新 Scale Out Master 服務設定檔
-更新主要節點上的 Scale Out Master 服務設定檔 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 將 **SSLCertThumbprint** 更新為新的 SSL 憑證指紋。
+更新主要節點上的 Scale Out Master 服務設定檔 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 將 **SSLCertThumbprint** 更新為新的 TLS/SSL 憑證指紋。
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4.重新啟動 Scale Out Master 服務
 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5.將 Scale Out Worker 重新連線至 Scale Out Master
 針對每個 Scale Out Worker，刪除 Worker，然後使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 將其重新新增，或執行下列動作：
 
-a.  將用戶端 SSL 憑證安裝至背景工作節點上本機電腦的根存放區。
+a.  將用戶端 TLS/SSL 憑證安裝至背景工作角色節點上本機電腦的根存放區。
 
 b.  更新 Scale Out Worker 服務設定檔。
 
-更新背景工作節點上的 Scale Out Worker 服務設定檔 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`。 將 **MasterHttpsCertThumbprint** 更新為新的 SSL 憑證指紋。
+更新背景工作節點上的 Scale Out Worker 服務設定檔 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`。 將 **MasterHttpsCertThumbprint** 更新為新的 TLS/SSL 憑證指紋。
 
 c.  重新啟動 Scale Out Worker 服務。
 

@@ -1,5 +1,6 @@
 ---
-title: 步驟 1︰設定 Node.js 開發的開發環境 | Microsoft Docs
+title: 步驟 1:設定適用於 Node.js 的開發環境
+description: 您必須使用必要條件設定您的開發環境，才能使用 Node.js Driver for SQL Server 開發應用程式。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 38337772d9ec9db2503637122d0d1b616dc6ef5f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923832"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528132"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1︰設定 Node.js 開發的開發環境
-您必須使用必要條件設定您的開發環境，才能使用 Node.js Driver for SQL Server 開發應用程式。  最常見的方法是使用節點套件管理員 (npm) 安裝 Tedious 模組，但是您可以視需要，直接在 [Github](https://github.com/pekim/tedious) 下載 Tedious 模組。  
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1:設定 Node.js 開發的開發環境
+您必須使用必要條件設定您的開發環境，才能使用 Node.js Driver for SQL Server 開發應用程式。  最常見的方法是使用節點套件管理員 (npm) 來安裝 Tedious 模組，但是您可以視需要，直接在 [GitHub](https://github.com/pekim/tedious) \(英文\) 下載 Tedious 模組。  
   
-請注意，Node.js 驅動程式會使用預設在 SQL Server 和 Azure SQL Database 中啟用的 TDS 通訊協定。  不需要進行其他組態設定。  
+Node.js 驅動程式會使用預設在 SQL Server 和 Azure SQL Database 中啟用的 TDS 通訊協定。  不需要進行其他組態設定。  
   
 ## <a name="windows"></a>Windows  
   
-1. **安裝 Node.js 執行階段和 npm 套件管理員**  
+1. **安裝 Node.js 執行階段和 npm 套件管理員。**  
 a. 移至 [Node.js](https://nodejs.org/en/download/)  
 b. 按一下適當的 Windows Installer msi 連結。   
 c. 下載完成後，請執行 msi 以安裝 Node.js  
@@ -41,7 +42,7 @@ c. 下載完成後，請執行 msi 以安裝 Node.js
 > npm init  
 ```  
   
-5. **在您的專案中安裝 Tedious 模組。**  這是驅動程式用來與 SQL Server 進行通訊之 TDS 通訊協定的實作。  
+5. **在您的專案中安裝 Tedious 模組。**  Tedious 是用來與 SQL Server 進行通訊之 TDS 通訊協定的實作。  
 ```  
 > npm install tedious  
 ```  
@@ -50,11 +51,11 @@ c. 下載完成後，請執行 msi 以安裝 Node.js
   
 1.  **開啟終端機**  
   
-2. **安裝 Node.js 執行階段**  
+2. **安裝 Node.js 執行階段。**  
 ```  
 >sudo apt-get install node  
 ```  
-3. **安裝 npm (節點套件管理員)**  
+3. **安裝 npm (節點套件管理員)。**  
 ```  
 > sudo apt-get install npm  
 ```  
@@ -69,17 +70,17 @@ c. 下載完成後，請執行 msi 以安裝 Node.js
 > sudo npm init  
 ```  
   
-6. **在您的專案中安裝 Tedious 模組。**  這是驅動程式用來與 SQL Server 進行通訊之 TDS 通訊協定的實作。  
+6. **在您的專案中安裝 Tedious 模組。**  Tedious 是用來與 SQL Server 進行通訊之 TDS 通訊協定的實作。  
 ```  
 > sudo npm install tedious  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-1. **安裝 Node.js 執行階段和 npm 套件管理員**  
+1. **安裝 Node.js 執行階段和 npm 套件管理員。**  
 a. 移至 [Node.js](https://nodejs.org/en/download/)  
-b. 按一下適當的 Mac OS 安裝程式連結。  
-c. 下載完成後，請執行 dmg 以安裝 Node.js  
+b. 按一下適當的 macOS 安裝程式連結。  
+c. 下載完成後，執行 'dmg' 以安裝 Node.js  
   
 2. **開啟終端機**  
   
@@ -98,4 +99,3 @@ c. 下載完成後，請執行 dmg 以安裝 Node.js
 ```  
 > npm install tedious  
 ```  
-  

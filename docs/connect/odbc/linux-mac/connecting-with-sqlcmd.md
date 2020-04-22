@@ -1,5 +1,6 @@
 ---
-title: 使用 sqlcmd 連接 | Microsoft Docs
+title: 使用 sqlcmd 連接
+description: 了解如何在 Linux 和 macOS 上搭配使用 sqlcmd 公用程式與 Microsoft ODBC Driver for SQL Server。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d2493e3ba903c44cf25bf98a10ddf6f52a56dd7c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924552"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632818"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) 公用程式可在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux 和 macOS 上使用。
+[sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) 公用程式可在 Linux 和 macOS 上與 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起使用。
   
 下列命令分別說明如何使用 Windows 驗證 (Kerberos) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證：
   
@@ -51,7 +52,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -e 將輸入指令碼寫入至標準輸出裝置 (stdout)。
 
-- -E 使用信任連接 (整合式驗證)。如需有關如何從 Linux 或 macOS 用戶端建立使用整合式驗證的信任連接的詳細資訊，請參閱[使用整合式驗證](../../../connect/odbc/linux-mac/using-integrated-authentication.md)。
+- -E 使用信任連接 (整合式驗證)。如需有關如何從 Linux 或 macOS 用戶端建立使用整合式驗證的信任連接的詳細資訊，請參閱[使用整合式驗證](using-integrated-authentication.md)。
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 指定輸入和輸出字碼頁。 字碼頁碼是一個數值，指定已安裝的 Linux 字碼頁。
 (自 17.5.1.1 起提供)
@@ -67,7 +68,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k 移除或取代控制字元。  
   
 - **-K**_應用程式\_意圖_  
-宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，`sqlcmd` 即不支援對 AlwaysOn 可用性群組中的次要複本進行連線。 如需詳細資訊，請參閱 [Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，`sqlcmd` 即不支援對 AlwaysOn 可用性群組中的次要複本進行連線。 如需詳細資訊，請參閱 [Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > CTP for SUSE Linux 不支援 **-K** 。 不過，您可以在傳遞至 `sqlcmd` 的 DSN 檔案中指定 **ApplicationIntent=ReadOnly** 關鍵字。 如需詳細資訊，請參閱本主題結尾處的＜`sqlcmd` 和 `bcp` 中的 DSN 支援＞。  
@@ -77,7 +78,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -m *error_level* 控制哪些錯誤訊息會傳送至 stdout。  
   
 - **-M**_多重子網路\_容錯移轉_  
-在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **-M**，則會關閉 **-M**。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] 的詳細資訊，請參閱 [Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **-M**，則會關閉 **-M**。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] 的詳細資訊，請參閱 [Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > CTP for SUSE Linux 不支援 **-M** 。 不過，您可以在傳遞至 `sqlcmd` 的 DSN 檔案中指定 **MultiSubnetFailover=Yes** 關鍵字。 如需詳細資訊，請參閱本主題結尾處的＜`sqlcmd` 和 `bcp` 中的 DSN 支援＞。  
@@ -161,7 +162,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 ## <a name="unavailable-options"></a>無法使用的選項
 在目前版本中，下列選項無法使用：  
 
-- -A 使用專用管理員連線 (DAC) 來登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需如何建立專用管理員連線 (DAC) 的資訊，請參閱[程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)。  
+- -A 使用專用管理員連線 (DAC) 來登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需如何建立專用管理員連線 (DAC) 的資訊，請參閱[程式設計指導方針](programming-guidelines.md)。  
   
 - -L 列出設定在本機的伺服器電腦，以及在網路中進行廣播的伺服器電腦名稱。  
   
@@ -227,5 +228,5 @@ DSN 中只需要 DRIVER 項目，但若要連線到伺服器，`sqlcmd` 或 `bcp
 叫用 `isql` 的現有指令碼，可藉由定義下列別名修改成使用 `sqlcmd`：`alias isql="sqlcmd -D"`。  
 
 ## <a name="see-also"></a>另請參閱  
-[使用 **bcp** 進行連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[使用 **bcp** 進行連線](connecting-with-bcp.md)  
  

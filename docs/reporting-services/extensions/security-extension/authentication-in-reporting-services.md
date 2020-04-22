@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193860"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488583"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的驗證
   驗證是建立使用者對識別的權限之程序。 您可以使用許多技術來驗證使用者。 最常見的方式是使用密碼。 例如，當您實作表單驗證時，想要查詢使用者是否有認證 (通常是透過某個介面來要求登入名稱與密碼)，然後針對資料存放區來驗證使用者，例如資料庫資料表或是組態檔。 如果無法驗證認證，驗證程序會失敗，而且使用者將假設匿名識別。  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  當 Web 服務透過安全性延伸模組成功地驗證使用者時，它會產生用於後續要求的 Cookie。 在自訂安全性授權中可能無法保存 Cookie，因為報表伺服器並未擁有安全性授權。 Cookie 會從 <xref:ReportService2010.ReportingService2010.LogonUser%2A> Web 服務方法傳回，而且是用於後續的 Web 服務方法呼叫和 URL 存取中。  
   
 > [!NOTE]  
->  為了避免在傳輸期間破壞 Cookie，應該使用安全通訊端層 (SSL) 加密，安全地傳輸從 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 傳回的驗證 Cookie。  
+>  為了避免在傳輸期間破壞 Cookie，應該使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 加密，安全地傳輸從 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 傳回的驗證 Cookie。  
   
  當有安裝自訂安全性延伸模組時，如果您透過 URL 來存取報表伺服器，Internet Information Services (IIS) 與 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 會自動管理驗證 Ticket 的傳輸。 如果您透過 SOAP API 存取報表伺服器，Proxy 類別的實作必須包括其他支援，以管理驗證 Ticket。 如需有關使用 SOAP API 以及管理驗證 Ticket 的詳細資訊，請參閱「透過自訂安全性使用 Web 服務」。  
   
 ## <a name="forms-authentication"></a>表單驗證  
  表單驗證是一種 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 驗證類型，它會將未驗證的使用者導向 HTML 表單。 一旦使用者提供認證，系統會發出包含驗證 Ticket 的 Cookie。 對於之後的要求，系統會先檢查 Cookie 來查看報表伺服器是否已驗證使用者。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可加以擴充，以便透過 Reporting Services API 使用可用的安全性擴充性介面。 如果您擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 來使用表單驗證，請為所有與報表伺服器的通訊使用安全通訊端層 (SSL)，以防止惡意的使用者存取其他使用者的 Cookie。 SSL 允許用戶端和報表伺服器驗證彼此，並確保沒有其他的電腦可以讀取兩台電腦之間的通訊內容。 所有透過 SSL 連接從用戶端傳送的資料都會經過加密，因此惡意的使用者將無法攔截傳送到報表伺服器的密碼或是資料。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可加以擴充，以便透過 Reporting Services API 使用可用的安全性擴充性介面。 如果您擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 來使用表單驗證，請為所有與報表伺服器的通訊使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL))，以防止惡意的使用者存取其他使用者的 Cookie。 TLS 允許用戶端和報表伺服器驗證彼此，並確保沒有其他的電腦可以讀取兩部電腦之間的通訊內容。 所有透過 TLS 連線從用戶端傳送的資料都會經過加密，因此惡意的使用者將無法攔截傳送到報表伺服器的密碼或是資料。  
   
  通常會實作表單驗證以支援 Windows 之外的平台其帳戶和驗證。 對於要求存取報表伺服器的使用者會顯示圖形介面，而且會將提供的認證提交到安全性授權以進行驗證。  
   

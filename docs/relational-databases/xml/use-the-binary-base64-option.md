@@ -1,5 +1,6 @@
 ---
 title: 使用 BINARY BASE64 選項 | Microsoft 文件
+description: 了解如何在 SQL 查詢中使用 BINARY BASE64 選項，以使用 base64 編碼格式傳回二進位資料。
 ms.custom: ''
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 42b2e41bedbce625d38b9d73a06b62817419c92c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fffd3833256ee6afa9dd3731d5cf02e99913e565
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665246"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388351"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 選項
 

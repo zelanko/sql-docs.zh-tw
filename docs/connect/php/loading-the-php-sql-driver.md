@@ -1,5 +1,6 @@
 ---
-title: 載入 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+title: 載入 Microsoft Drivers for PHP
+description: 本頁提供將 Microsoft Drivers for PHP for SQL Server 載入 PHP 處理序空間的指示。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce26b4800250cab25a6db6f5b3ed7ebf0b1d9bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73899b2ea917c3981b0c696b78de453eacbf894d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922865"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632770"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>載入 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本頁提供將 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 載入 PHP 處理序空間的指示。  
   
-您可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面，下載適用於您的平台的預先建置驅動程式。 每個安裝套件都包含執行緒和非執行緒形式變體的 SQLSRV 和 PDO_SQLSRV 驅動程式檔案。 在 Windows 上，其也以 32 位元與 64 位元變體提供。 請參閱 [Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)以取得包含在每個套件中的驅動程式檔案清單。 驅動程式檔案必須符合您 PHP 環境的 PHP 版本、架構及執行緒狀態。
+您可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面，下載適用於您的平台的預先建置驅動程式。 每個安裝套件都包含執行緒和非執行緒形式變體的 SQLSRV 和 PDO_SQLSRV 驅動程式檔案。 在 Windows 上，其也以 32 位元與 64 位元變體提供。 請參閱 [Microsoft Drivers for PHP for SQL Server 的系統需求](system-requirements-for-the-php-sql-driver.md)以取得包含在每個套件中的驅動程式檔案清單。 驅動程式檔案必須符合您 PHP 環境的 PHP 版本、架構及執行緒狀態。
 
-在 Linux 和 macOS 上，可以改為使用 PECL 來安裝驅動程式，如[安裝教學課程](../../connect/php/installation-tutorial-linux-mac.md)中所述。
+在 Linux 和 macOS 上，可以改為使用 PECL 來安裝驅動程式，如[安裝教學課程](installation-tutorial-linux-mac.md)中所述。
 
 您也可以在建置 PHP 時，或是使用 `phpize` 來從來源建置驅動程式。 如果您選擇從來源建置驅動程式，您可以透過在建置 PHP 時將 `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (於 Linux 和 macOS 上) 或 `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (於 Windows 上) 命令新增至 `./configure` 命令，來選擇以靜態方式將其建置到 PHP 中，而非將其建置為共用擴充。 如需 PHP 建置系統和 `phpize` 的詳細資訊，請參閱 [PHP 文件](http://php.net/manual/install.php) \(英文\)。
   
@@ -63,7 +64,7 @@ extension_dir = "c:\PHP\ext"
     ```
     在 Linux 上，如果您已使用系統的套件管理員安裝 PHP，PDO 可能已經以名為 pdo.so 之動態載入擴充的形式安裝。 PDO 擴充必須在 PDO_SQLSRV 擴充之前載入，否則載入將會失敗。 擴充通常會使用個別的 .ini 檔案載入，且這些檔案會在 php.ini 之後讀取。 因此，如果 pdo.so is 是透過其自己的 .ini 檔案載入，在 PDO 之後便需要載入 PDO_SQLSRV 驅動程式的個別檔案。 
 
-    若要找出擴充特定的 .ini 檔案位於哪個目錄，請執行 `php --ini` 並記下列於 `Scan for additional .ini files in:` 底下的目錄。 找出載入 pdo.so 的檔案，其名稱前端很可能會有號碼，例如 10-pdo.ini。 數值前置詞會指出 .ini 檔案的載入順序，而不具有數值前置詞的檔案則會以字母順序載入。 建立載入 PDO_SQLSRV 驅動程式檔案的檔案，並將其命名為 30-pdo_sqlsrv.ini (大於 pdo.ini 數值前置詞的任何數字皆可) 或 pdo_sqlsrv.ini (如果 pdo.ini 沒有數值前置詞的話)，然後為其新增下列行，並適當地變更檔案名稱：  
+    若要找出擴充特定的 .ini 檔案位於哪個目錄，請執行 `php --ini` 並記下列於 `Scan for additional .ini files in:` 底下的目錄。 尋找載入 pdo.so 的檔案。 其名稱前端很可能會有號碼，例如 10-pdo.ini。 數值前置詞會指出 .ini 檔案的載入順序，而不具有數值前置詞的檔案則會以字母順序載入。 建立載入 PDO_SQLSRV 驅動程式檔案的檔案，並將其命名為 30-pdo_sqlsrv.ini (大於 pdo.ini 數值前置詞的任何數字皆可) 或 pdo_sqlsrv.ini (如果 pdo.ini 沒有數值前置詞的話)，然後為其新增下列行，並適當地變更檔案名稱：  
     ```
     extension=php_pdo_sqlsrv_72_nts.so
     ```
@@ -83,13 +84,13 @@ extension_dir = "c:\PHP\ext"
 如需 **php.ini** 指示詞的詳細資訊，請參閱[核心 php.ini 指示詞的描述](https://php.net/manual/en/ini.core.php)。  
   
 ## <a name="see-also"></a>另請參閱  
-[開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[開始使用 Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
 
-[Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的系統需求](system-requirements-for-the-php-sql-driver.md)
 
-[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](programming-guide-for-php-sql-driver.md)
 
-[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)
+[SQLSRV 驅動程式 API 參考](sqlsrv-driver-api-reference.md)
 
-[PDO_SQLSRV 驅動程式 API 參考](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[PDO_SQLSRV 驅動程式 API 參考](pdo-sqlsrv-driver-reference.md)  
   

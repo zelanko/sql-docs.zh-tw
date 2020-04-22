@@ -1,5 +1,6 @@
 ---
-title: 搭配 PHP Drivers for SQL Server 的具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
+title: 搭配 PHP Drivers 且具有安全記憶體保護區的 Always Encrypted
+description: 了解如何搭配 Microsoft Drivers for PHP for SQL Server 使用具有安全記憶體保護區的 Always Encrypted。
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,15 +8,14 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ''
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
-ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941089"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632088"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>搭配 PHP Drivers for SQL Server 使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "76941089"
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>啟用具有安全記憶體保護區的 Always Encrypted
 
-從 PHP Drivers for SQL Server 5.8.0 版開始，便支援具有安全記憶體保護區的 Always Encrypted。 具有安全記憶體保護區的 Always Encrypted 需要 SQL Server 2019 或更新版本，以及 ODBC 驅動程式 17.4 版及更新版本。 [這裡](../../connect/php/using-always-encrypted-php-drivers.md)提供搭配 PHP Drivers for SQL Server 使用 Always Encrypted 之一般需求的詳細資料。
+從 PHP Drivers for SQL Server 5.8.0 版開始，便支援具有安全記憶體保護區的 Always Encrypted。 具有安全記憶體保護區的 Always Encrypted 需要 SQL Server 2019 或更新版本，以及 ODBC 驅動程式 17.4 版及更新版本。 [這裡](using-always-encrypted-php-drivers.md)提供搭配 PHP Drivers for SQL Server 使用 Always Encrypted 之一般需求的詳細資料。
 
 具有安全記憶體保護區的 Always Encrypted 能透過對記憶體保護區進行證明來確保加密資料的安全性，也就是針對外部證明服務驗證記憶體保護區。 若要使用安全記憶體保護區，`ColumnEncryption` 關鍵字必須識別證明類型及通訊協定，以及相關聯的證明資料 (以逗號分隔)。 ODBC 驅動程式的 17.4 版針對記憶體保護區類型及通訊協定，僅支援虛擬化型安全性 (VBS) 及主機守護者服務 (HGS) 通訊協定。 相關聯的證明資料是證明伺服器的 URL。 因此，會將下列項目新增至連接字串：
 
@@ -46,9 +46,9 @@ ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
 
 - 搭配 `ALTER TABLE` 對資料表進行加密時，每次呼叫 `ALTER TABLE` 時只能對單一資料行進行加密，因此需要進行多次呼叫才能將多個資料行加密。
 - 以參數形式傳遞比較閾值來比較 char 和 nchar 類型時，必須在對應的 `SQLSRV_SQLTYPE_*` 中指定資料行寬度，否則將會傳回 `HY104`、`Invalid precision value`錯誤。
-- 針對模式比對，必須使用 `Latin1_General_BIN2` 子句將定序指定為 `COLLATE`。
-- 以參數形式傳遞模式比對字串來比對 char 和 nchar 類型時，傳遞至 `SQLSRV_SQLTYPE_*` 或 `sqlsrv_query` 的 `sqlsrv_prepare` 應該指定要比對的字串長度，而非資料行的大小，因為 char 和 nchar 類型會在字串結尾處填補空格。 例如，針對 char(10) 資料行比對字串 `%abc%` 時，請指定 `SQLSRV_SQLTYPE_CHAR(5)`。 如果您改為指定 `SQLSRV_SQLTYPE_CHAR(10)`，查詢將會比對 `%abc%     ` (具有附加的五個空格)，而資料行中具有少於五個附加空格的任何資料都不會相符 (因此 `abcdef` 將不會符合 `%abc%`，因為其具有四個空格的填補)。 針對 Unicode 字串，請使用 `mb_strlen` 或 `iconv_strlen` 函式來取得字元數目。
-- PDO 介面不允許指定參數的長度。 相反地，請指定 0 的長度，或在 `null` 中指定 `PDOStatement::bindParam`。 如果長度已明確設定為另一個數字，系統會將參數視為輸出參數。
+- 針對模式比對，必須使用 `COLLATE` 子句將定序指定為 `Latin1_General_BIN2`。
+- 以參數形式傳遞模式比對字串來比對 char 和 nchar 類型時，傳遞至 `sqlsrv_query` 或 `sqlsrv_prepare` 的 `SQLSRV_SQLTYPE_*` 應該指定要比對的字串長度，而非資料行的大小，因為 char 和 nchar 類型會在字串結尾處填補空格。 例如，針對 char(10) 資料行比對字串 `%abc%` 時，請指定 `SQLSRV_SQLTYPE_CHAR(5)`。 如果您改為指定 `SQLSRV_SQLTYPE_CHAR(10)`，查詢將會比對 `%abc%     ` (具有附加的五個空格)，而資料行中具有少於五個附加空格的任何資料都不會相符 (因此 `abcdef` 將不會符合 `%abc%`，因為其具有四個空格的填補)。 針對 Unicode 字串，請使用 `mb_strlen` 或 `iconv_strlen` 函式來取得字元數目。
+- PDO 介面不允許指定參數的長度。 相反地，請指定 0 的長度，或在 `PDOStatement::bindParam` 中指定 `null`。 如果長度已明確設定為另一個數字，系統會將參數視為輸出參數。
 - 在 Always Encrypted 中，模式比對無法針對非字串類型運作。
 - 為了清楚起見，已排除錯誤檢查。 
 
@@ -391,8 +391,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## <a name="see-also"></a>另請參閱  
-[PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV 驅動程式 API 參考](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[搭配 PHP Drivers for SQL Server 使用 Always Encrypted | Microsoft Docs](../../connect/php/using-always-encrypted-php-drivers.md)
+[PHP SQL 驅動程式程式設計指南](programming-guide-for-php-sql-driver.md)  
+[SQLSRV 驅動程式 API 參考](sqlsrv-driver-api-reference.md)  
+[PDO_SQLSRV 驅動程式 API 參考](pdo-sqlsrv-driver-reference.md)  
+[搭配 PHP Drivers for SQL Server 使用 Always Encrypted](using-always-encrypted-php-drivers.md)
   

@@ -23,12 +23,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034517"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528152"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,8 +106,8 @@ FROM ExpenseQueue;
 
 - 不支援跨執行個體服務代理程式 
  - `sys.routes` - 必要條件：從 sys.routes 選取位址。 位址在每個路由上都必須是 LOCAL。 請參閱 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)。
- - `CREATE ROUTE` - 您只能使用 `CREATE ROUTE` 的 `ADDRESS` 來執行 `LOCAL`。 請參閱 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
- - `ALTER ROUTE` 無法使用 `ALTER ROUTE` 來搭配 `ADDRESS` 以外的 `LOCAL`。 請參閱 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)。  
+ - `CREATE ROUTE` - 您只能使用 `LOCAL` 的 `ADDRESS` 來執行 `CREATE ROUTE`。 請參閱 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
+ - `ALTER ROUTE` 無法使用 `ALTER ROUTE` 來搭配 `LOCAL` 以外的 `ADDRESS`。 請參閱 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>訊息可以傳送至多個目標服務 (多點傳送)  
  [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) 陳述式的語法已延伸，可透過支援多個交談控制代碼進行多點傳送。  
@@ -122,4 +122,8 @@ FROM ExpenseQueue;
  如需詳細資訊，請參閱 [Service Broker 與 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)。  
   
   
+## <a name="next-steps"></a>後續步驟
+
+Service Broker 最常見的用法是[事件通知](../../relational-databases/service-broker/event-notifications.md)。 了解如何[實作事件通知](../../relational-databases/service-broker/implement-event-notifications.md)、[設定安全性對話方塊](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)，或[取得更多資訊](../../relational-databases/service-broker/get-information-about-event-notifications.md)。 
+
 

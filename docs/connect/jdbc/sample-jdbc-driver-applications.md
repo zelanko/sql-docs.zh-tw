@@ -1,5 +1,6 @@
 ---
-title: 範例 JDBC 驅動程式應用程式 | Microsoft Docs
+title: 範例 JDBC 驅動程式應用程式
+description: JDBC Driver for SQL Server 範例應用程式示範您可以在使用 JDBC 驅動程式時遵循的各種功能和良好的程式設計作法。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a7b3befd16e81f8717adf710ec926f123761eb41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e55eb9d0e710ba41089dcb014e9e626343ea4e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928486"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634257"
 ---
 # <a name="sample-jdbc-driver-applications"></a>範例 JDBC 驅動程式應用程式
 
@@ -35,8 +36,8 @@ ms.locfileid: "80928486"
   
 | 主題                                                                                                        | 描述                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [連接及擷取資料](../../connect/jdbc/connecting-and-retrieving-data.md)                       | 這些範例應用程式示範如何連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 它們也示範從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫擷取資料的不同方法。 |
-| [使用資料類型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | 這些範例應用程式示範如何使用 JDBC 驅動程式資料類型方法，來使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料。                                                                                           |
+| [連接及擷取資料](connecting-and-retrieving-data.md)                       | 這些範例應用程式示範如何連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 它們也示範從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫擷取資料的不同方法。 |
+| [使用資料類型 &#40;JDBC&#41;](working-with-data-types-jdbc.md)                 | 這些範例應用程式示範如何使用 JDBC 驅動程式資料類型方法，來使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料。                                                                                           |
 | [使用結果集](../../connect/jdbc/working-with-result-sets.md)                                   | 這些範例應用程式示範如何使用結果集，來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中包含的資料。                                                                                                         |
 | [使用大型資料](../../connect/jdbc/working-with-large-data.md)                                     | 這些範例應用程式會示範如何使用自適性緩衝來擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的大數值資料，而沒有伺服器資料指標的負擔。                                                      |
 | [SQL 資料探索與分類](../../connect/jdbc/data-discovery-classification-sample.md) | 這個範例應用程式示範如何使用 JDBC Driver，從 ResultSet 物件擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所含的資料探索與分類資訊。                                      |

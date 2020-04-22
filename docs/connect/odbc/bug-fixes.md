@@ -1,5 +1,6 @@
 ---
-title: 已修正的錯誤 (Bug) 清單 | Microsoft Docs
+title: 已修正的錯誤 (Bug) 清單
+description: 此頁面包含每個版本中已修正的錯誤 (Bug) 清單 (從 Microsoft ODBC Driver 17 for SQL Server 開始)。
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896770"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629718"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的錯誤 (Bug) 清單
 
-此頁面包含每個版本中已修正的錯誤 (Bug) 清單 (從 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始)
+此頁面包含每個版本中已修正的錯誤 (Bug) 清單 (從 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始)。
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的錯誤 (Bug) 修正
 
@@ -30,10 +31,10 @@ ms.locfileid: "78896770"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的錯誤 (Bug) 修正
 
-- 修正 Linux/Mac 上的 AKV CMK 中繼資料雜湊計算
+- 修正 Linux/macOS 上的 AKV CMK 中繼資料雜湊計算
 - 修正載入 OpenSSL 1.0.0 時發生的錯誤
 - 修正使用 ISO-8859-1 和 ISO-8859-2 字碼頁時的轉換問題
-- 修正 Mac 上的內部程式庫名稱以包含版本號碼
+- 修正 macOS 上的內部程式庫名稱以包含版本號碼
 - 修正使用個別長度和指標繫結時，Null 指標的設定
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的錯誤 (Bug) 修正
@@ -82,7 +83,7 @@ ms.locfileid: "78896770"
 - 已修正截斷的 ADAL 錯誤訊息
 - 已修正將浮點數轉換成整數時，32 位元 Windows 上罕見的錯誤 (Bug)
 - 已修正將雙精確度插入具有 Always Encrypted 的十進位欄位時，傳回資料截斷錯誤的問題
-- 已修正 MacOS 安裝程式上的警告
+- 已修正 macOSS 安裝程式上的警告
 - 已修正在工作階段復原嘗試期間，同時啟用 [連線復原] 和 [連線共用] 時，將不正確的狀態傳送至 SQL Server，進而導致伺服器卸除工作階段的問題
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的錯誤 (Bug) 修正

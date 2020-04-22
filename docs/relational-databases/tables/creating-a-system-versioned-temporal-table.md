@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 8797219e96083d65d2bad83c83c8aebba783b207
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809863"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299051"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 
@@ -134,7 +134,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 - 更好的 DML 效能
 - 最低的維護成本
 
- 當轉換現有的資料表時，請考慮使用 **HIDDEN** 子句隱藏新的 **PERIOD** 資料行 (datetime2 資料行 **SysStartTime** 和 **SysEndTime**)，以免影響無處理新資料行設計的現有應用程式。
+ 當轉換現有的資料表時，請考慮使用 **HIDDEN** 子句隱藏新的 **PERIOD** 資料行 (datetime2 資料行 **SysStartTime** 和 **SysEndTime**)，以免影響未明確指定資料行名稱 (亦即沒有資料行清單的 SELECT * 或 INSERT) 且無處理新資料行設計的現有應用程式。
 
 ### <a name="adding-versioning-to-non-temporal-tables"></a>在非時態表中加入版本控制
 

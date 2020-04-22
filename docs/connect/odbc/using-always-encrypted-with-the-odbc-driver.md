@@ -1,5 +1,6 @@
 ---
-title: 搭配使用 Always Encrypted 與 ODBC Driver for SQL Server | Microsoft Docs
+title: 搭配使用 Always Encrypted 與 ODBC 驅動程式
+description: 了解如何使用 Always Encrypted 與 Microsoft ODBC Driver for SQL Server 來開發 ODBC 應用程式。
 ms.custom: ''
 ms.date: 09/01/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285842"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635425"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "79285842"
 
 ### <a name="introduction"></a>簡介
 
-此文章提供有關如何使用 [Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 與 [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 來開發 ODBC 應用程式的資訊。
+此文章提供有關如何使用 [Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 與 [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md) 來開發 ODBC 應用程式的資訊。
 
 [永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 ODBC Driver for SQL Server 等啟用了 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料來達成此目的。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 「具有安全記憶體保護區的 Always Encrypted」  會延伸此功能以啟用更豐富的敏感性資料功能，同時保持資料的機密性。
 
@@ -60,7 +61,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>啟用具有安全記憶體保護區的 Always Encrypted
 
 > [!NOTE]
-> 在 Linux 與 Mac 上，需要 OpenSSL 1.0.1 版或更新版本，才能使用具有安全記憶體保護區的 Always Encrypted。
+> 在 Linux 與 macOS 上，需要 OpenSSL 1.0.1 版或更新版本，才能使用具有安全記憶體保護區的 Always Encrypted。
 
 從 17.4 版開始，驅動程式支援具有安全記憶體保護區的 Always Encrypted。 若要在連線到 SQL Server 2019 或更新版本時啟用及使用記憶體保護區，請將 `ColumnEncryption` DSN、連接字串或連接屬性設定為記憶體保護區類型與證明通訊協定以及相關聯證明資料的名稱，並以逗號分隔。 在 17.4 版中，只支援[虛擬化型安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) \(英文\) 記憶體保護區類型與[主機守護者服務](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)證明通訊協定 (由 `VBS-HGS` 表示)；若要加以使用，請指定證明伺服器的 URL，例如：
 
@@ -431,16 +432,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 無須進行其他 ODBC 應用程式變更，即可使用 AKV 來儲存 CMK。
 
 > [!NOTE]
-> 驅動程式包含其信任的 AKV 端點清單。 從驅動程式 17.5.2 版開始，您可設定這份清單：在驅動程式或 DSN 的 ODBCINST.INI 或 ODBC.INI 登錄機碼 (Windows)，或在 `odbcinst.ini`、`odbc.ini` 檔案區段 (Linux/Mac) 中，將 `AKVTrustedEndpoints` 屬性設定為以分號分隔的清單。 在 DSN 中設定該屬性會優先於驅動程式中的設定。 如果值以分號開頭，則會延伸預設清單；否則會取代預設清單。 預設清單 (從 17.5 版開始) 為 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。
+> 驅動程式包含其信任的 AKV 端點清單。 從驅動程式 17.5.2 版開始，您可設定這份清單：在驅動程式或 DSN 的 ODBCINST.INI 或 ODBC.INI 登錄機碼 (Windows)，或在 `odbcinst.ini`、`odbc.ini` 檔案區段 (Linux/macOS) 中，將 `AKVTrustedEndpoints` 屬性設定為以分號分隔的清單。 在 DSN 中設定該屬性會優先於驅動程式中的設定。 如果值以分號開頭，則會延伸預設清單；否則會取代預設清單。 預設清單 (從 17.5 版開始) 為 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
 
-Windows 上的 ODBC Driver for SQL Server 包含「Windows 憑證存放區」的內建資料行主要金鑰存放區提供者，名為 `MSSQL_CERTIFICATE_STORE`。 (macOS 或 Linux 上無法使用此提供者)。使用此提供者時，CMK 會儲存在本機用戶端電腦上，應用程式無須進行任何額外設定，即可將它與驅動程式搭配使用。 不過，應用程式必須能夠存取存放區中的憑證及其私密金鑰。 如需詳細資訊，請參閱[建立及儲存資料行主要金鑰 (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)。
+Windows 上的 ODBC Driver for SQL Server 包含「Windows 憑證存放區」的內建資料行主要金鑰存放區提供者，名為 `MSSQL_CERTIFICATE_STORE`。 (macOS 或 Linux 上無法使用此提供者)。使用此提供者時，CMK 會儲存在本機用戶端電腦上，應用程式無須進行任何額外設定，即可將它與驅動程式搭配使用。 不過，應用程式必須能夠存取存放區中的憑證及其私密金鑰。 如需詳細資訊，請參閱[建立及儲存資料行主要金鑰 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ### <a name="using-custom-keystore-providers"></a>使用自訂金鑰儲存區提供者
 
-ODBC Driver for SQL Server 也支援使用 CEKeystoreProvider 介面來自訂協力廠商金鑰存放區提供者。 這可讓應用程式載入、查詢及設定金鑰存放區提供者，以便供驅動程式用來存取加密資料行。 應用程式也可以直接與金鑰存放區提供者進行互動，來加密 CEK 以儲存在 SQL Server 中，以及執行以 ODBC 存取加密資料行以外的工作；如需詳細資訊，請參閱[自訂金鑰存放區提供者](../../connect/odbc/custom-keystore-providers.md)。
+ODBC Driver for SQL Server 也支援使用 CEKeystoreProvider 介面來自訂協力廠商金鑰存放區提供者。 這可讓應用程式載入、查詢及設定金鑰存放區提供者，以便供驅動程式用來存取加密資料行。 應用程式也可以直接與金鑰存放區提供者進行互動，來加密 CEK 以儲存在 SQL Server 中，以及執行以 ODBC 存取加密資料行以外的工作；如需詳細資訊，請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)。
 
 有兩個連線屬性會用來與自訂金鑰存放區提供者進行互動。 其中包括：
 
@@ -543,7 +544,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 額外的詳細錯誤資訊可透過 [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx) 取得。
 
 > [!NOTE]
-> 如果需要，提供者可以使用連線控制代碼將寫入的資料與特定連線建立關聯。 這對於實作個別連線設定來說，相當實用。 它也可以忽略連線內容，而不論用來傳送資料的連線為何，都以一致的方式處理資料。 如需詳細資訊，請參閱[內容關聯](../../connect/odbc/custom-keystore-providers.md#context-association)。
+> 如果需要，提供者可以使用連線控制代碼將寫入的資料與特定連線建立關聯。 這對於實作個別連線設定來說，相當實用。 它也可以忽略連線內容，而不論用來傳送資料的連線為何，都以一致的方式處理資料。 如需詳細資訊，請參閱[內容關聯](custom-keystore-providers.md#context-association)。
 
 #### <a name="reading-data-from-a-provider"></a>從提供者讀取資料
 
@@ -565,7 +566,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 此介面對於在應用程式與金鑰存放區提供者之間傳輸的資料格式沒有任何額外需求。 每個提供者都可以依據其需求，定義自己的通訊協定/資料格式。
 
-如需有關實作您自己金鑰存放區提供者的範例，請參閱[自訂金鑰存放區提供者](../../connect/odbc/custom-keystore-providers.md)
+如需有關實作您自己金鑰存放區提供者的範例，請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>使用 Always Encrypted 時的 ODBC 驅動程式限制
 

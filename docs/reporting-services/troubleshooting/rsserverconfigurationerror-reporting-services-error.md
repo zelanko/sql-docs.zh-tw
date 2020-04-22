@@ -1,5 +1,6 @@
 ---
 title: rsServerConfigurationError - Reporting Services 錯誤 | Microsoft Docs
+description: 在此錯誤參考頁面中，了解事件識別碼 'rsServerConfigurationError'：報表伺服器發生組態錯誤。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572138"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487207"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 錯誤
     

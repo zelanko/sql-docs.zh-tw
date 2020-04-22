@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256721"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488342"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什麼是 SQL Server 的延伸安全性更新？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -206,6 +206,25 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
    ![檢查 [安全性更新] 窗格中的可用更新](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. 從這裡下載安全性更新 (如果適用的話)。 
+
+## <a name="configure-regional-redundancy"></a>設定區域備援 
+
+需要針對其 **SQL Server 登錄**區域備援的客戶可以在兩個不同區域中建立註冊資料。 客戶接著可以根據 **SQL Server 登錄**服務可用性，從任一區域下載安全性更新。 
+
+針對區域備援，必須在兩個不同的區域中建立 **SQL Server registry** 服務，而且您的 SQL Server 清查必須在這兩個服務之間分割。 如此一來，您的 SQL Server 其中一半會向一個區域的登錄服務中註冊，然後您的 SQL Server 其中另一半會向另一個區域中的登錄服務註冊。 
+
+若要設定區域備援，請遵循這些步驟：
+
+1. 將您的 SQL Server 2008 或 2008 R2 清查分割成兩個檔案，例如 upload1.csv 和 upload2.csv。 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="範例上傳檔案":::
+
+1. 在一個區域中建立第一個 **SQL Server 登錄**服務，然後向其大量註冊其中一個 CSV 檔案。 例如，在**美國西部**區域中建立第一個 **SQL Server 登錄**服務，然後使用 upload1.csv 檔案來大量註冊您的 SQL 伺服器。 
+1. 在第二個區域中建立第二個 **SQL Server 登錄**服務，然後向其大量註冊另一個 CSV 檔案。 例如，在**美國東部**區域中建立第二個 **SQL Server 登錄**服務，然後使用 upload2.csv 檔案大量註冊您的 SQL Server。 
+
+
+當您的資料註冊了兩個不同的 **SQL Server 登錄**資源之後，您就能夠根據服務可用性從任一區域下載安全性更新。 
+
 
 ## <a name="faq"></a>常見問題集
 

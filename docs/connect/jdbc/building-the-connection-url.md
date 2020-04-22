@@ -1,5 +1,6 @@
 ---
 title: 建立連線 URL | Microsoft Docs
+description: 了解 Microsoft JDBC Driver for SQL Server 所使用的連接字串格式。
 ms.custom: ''
 ms.date: 01/29/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 889571da70eaf43878d4226751b2b031853f802f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 59949c80c565cca03c42b453659117abd69c8e7e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922622"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486910"
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "80922622"
 > [!NOTE]  
 >  雖然先前的範例是在連接字串中使用使用者名稱及密碼，但是您應該使用整合式安全性，因為它更安全。 如需詳細資訊，請參閱本主題稍後的[使用整合式驗證連線](#Connectingintegrated)。  
   
- 下列連接字串示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的任何作業系統上執行的應用程式，使用整合式驗證和 Kerberos 連線到 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 資料庫：  
+ 下列連接字串示範如何從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援的任何作業系統上執行的應用程式，使用整合式驗證和 Kerberos 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫：  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  

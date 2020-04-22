@@ -1,6 +1,6 @@
 ---
-title: 搭配使用 ADO 與 OLE DB Driver for SQL Server | Microsoft Docs
-description: 利用 OLE DB Driver for SQL Server 使用 ADO
+title: 利用 OLE DB Driver 使用 ADO
+description: 了解如何搭配 OLE DB Driver 使用 ADO，包括 Multiple Active Result Set、查詢通知、使用者定義型別或 xml 資料型別等新功能。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72d82433e04ead61ec71eecd3c8771cbe744b751
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989244"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633888"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>利用 OLE DB Driver for SQL Server 使用 ADO
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67989244"
 
 -   `DataTypeCompatibility=80`  
 
- 如需 OLE DB Driver for SQL Server 中支援之 ADO 連接字串關鍵字的詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 如需 OLE DB Driver for SQL Server 中支援之 ADO 連接字串關鍵字的詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
 
  下列範例會建立完全啟用成可使用 OLE DB Driver for SQL Server 的 ADO 連接字串，包括啟用 MARS 功能：  
 
@@ -167,4 +167,4 @@ Set con = Nothing
  在舊版 OLE DB 提供者中，此程式碼會導致系統在第二次執行時建立隱含連接，因為每個單一連接只能開啟一個作用中結果集。 由於隱含連接不會在 OLE DB 連接集區中共用，所以這會產生額外的負擔。 使用 OLE DB Driver for SQL Server 所公開的 MARS 功能時，您會在單一連接上收到多個作用中結果。  
 
 ## <a name="see-also"></a>另請參閱  
- [利用 OLE DB Driver for SQL Server 建置](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [利用 OLE DB Driver for SQL Server 建置](building-applications-with-oledb-driver-for-sql-server.md)  

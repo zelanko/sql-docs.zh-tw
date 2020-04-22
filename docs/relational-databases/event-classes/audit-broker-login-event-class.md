@@ -12,12 +12,12 @@ ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: babd96ee665a589456d3fda7ed7e2a5a13366d36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa7eb86c744206c0501cf98ecdb56423d734799c
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903521"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529418"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "67903521"
 |**EventClass**|**int**|擷取的事件類別類型。 **Audit Broker Login** 永遠是 **159**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
 |**EventSubClass**|**int**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 下表列出此事件的事件子類別值。|21|是|  
-|**FileName**|**nvarchar**|遠端 Broker 驗證層級。 在遠端 Broker 結束點上設定的支援驗證方法。 可用的方法超過一種時，接受 (目標) 端點會判斷要先嘗試哪種方法。 可能的值包括：<br /><br /> **None**： 未設定任何驗證方法。<br /><br /> **NTLM**。 需要 NTLM 驗證。<br /><br /> **KERBEROS**。 需要 Kerberos 驗證。<br /><br /> **NEGOTIATE**。 Windows 會交涉驗證方法。<br /><br /> **CERTIFICATE**。 需要為端點設定的憑證，它是儲存在 **master** 資料庫中。<br /><br /> **NTLM、CERTIFICATE**。 接受 NTLM 或 SSL 憑證驗證。<br /><br /> **KERBEROS、CERTIFICATE**。 接受 Kerberos 或結束點憑證驗證。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 交涉要使用的驗證方法，或可以使用端點憑證來進行驗證。<br /><br /> **CERTIFICATE、NTLM**。 接受使用端點憑證或 NTLM 來進行驗證。<br /><br /> **CERTIFICATE、KERBEROS**。 接受使用端點憑證或 Kerberos 來進行驗證。<br /><br /> **CERTIFICATE、NEGOTIATE**。 接受用以驗證的結束點憑證或由 Windows 交涉驗證方法。|36|否|  
+|**FileName**|**nvarchar**|遠端 Broker 驗證層級。 在遠端 Broker 結束點上設定的支援驗證方法。 可用的方法超過一種時，接受 (目標) 端點會判斷要先嘗試哪種方法。 可能的值包括：<br /><br /> **None**： 未設定任何驗證方法。<br /><br /> **NTLM**。 需要 NTLM 驗證。<br /><br /> **KERBEROS**。 需要 Kerberos 驗證。<br /><br /> **NEGOTIATE**。 Windows 會交涉驗證方法。<br /><br /> **CERTIFICATE**。 需要為端點設定的憑證，它是儲存在 **master** 資料庫中。<br /><br /> **NTLM、CERTIFICATE**。 接受 NTLM 或 TLS/SSL 憑證驗證。<br /><br /> **KERBEROS、CERTIFICATE**。 接受 Kerberos 或結束點憑證驗證。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 交涉要使用的驗證方法，或可以使用端點憑證來進行驗證。<br /><br /> **CERTIFICATE、NTLM**。 接受使用端點憑證或 NTLM 來進行驗證。<br /><br /> **CERTIFICATE、KERBEROS**。 接受使用端點憑證或 Kerberos 來進行驗證。<br /><br /> **CERTIFICATE、NEGOTIATE**。 接受用以驗證的結束點憑證或由 Windows 交涉驗證方法。|36|否|  
 |**HostName**|**nvarchar**|在此事件類別中未使用。|8|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|否|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|用於此連接的連接字串。|34|否|  
-|**OwnerName**|**nvarchar**|在本機 Broker 結束點上設定的支援驗證方法。 可用的方法超過一種時，接受 (目標) 端點會判斷要先嘗試哪種方法。 可能的值包括：<br /><br /> **None**： 未設定任何驗證方法。<br /><br /> **NTLM**。 需要 NTLM 驗證。<br /><br /> **KERBEROS**。 需要 Kerberos 驗證。<br /><br /> **NEGOTIATE**。 Windows 會交涉驗證方法。<br /><br /> **CERTIFICATE**。 需要為端點設定的憑證，它是儲存在 **master** 資料庫中。<br /><br /> **NTLM、CERTIFICATE**。 接受 NTLM 或 SSL 憑證驗證。<br /><br /> **KERBEROS、CERTIFICATE**。 接受 Kerberos 或結束點憑證驗證。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 交涉要使用的驗證方法，或可以使用端點憑證來進行驗證。<br /><br /> **CERTIFICATE、NTLM**。 接受結束點憑證或供 NTLM 驗證之用。<br /><br /> **CERTIFICATE、KERBEROS**。 接受使用端點憑證或 Kerberos 來進行驗證。<br /><br /> **CERTIFICATE、NEGOTIATE**。 接受用以驗證的結束點憑證或由 Windows 交涉驗證方法。|37|否|  
+|**OwnerName**|**nvarchar**|在本機 Broker 結束點上設定的支援驗證方法。 可用的方法超過一種時，接受 (目標) 端點會判斷要先嘗試哪種方法。 可能的值包括：<br /><br /> **None**： 未設定任何驗證方法。<br /><br /> **NTLM**。 需要 NTLM 驗證。<br /><br /> **KERBEROS**。 需要 Kerberos 驗證。<br /><br /> **NEGOTIATE**。 Windows 會交涉驗證方法。<br /><br /> **CERTIFICATE**。 需要為端點設定的憑證，它是儲存在 **master** 資料庫中。<br /><br /> **NTLM、CERTIFICATE**。 接受 NTLM 或 TLS/SSL 憑證驗證。<br /><br /> **KERBEROS、CERTIFICATE**。 接受 Kerberos 或結束點憑證驗證。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 交涉要使用的驗證方法，或可以使用端點憑證來進行驗證。<br /><br /> **CERTIFICATE、NTLM**。 接受結束點憑證或供 NTLM 驗證之用。<br /><br /> **CERTIFICATE、KERBEROS**。 接受使用端點憑證或 Kerberos 來進行驗證。<br /><br /> **CERTIFICATE、NEGOTIATE**。 接受用以驗證的結束點憑證或由 Windows 交涉驗證方法。|37|否|  
 |**ProviderName**|**nvarchar**|此連接所使用的驗證方法|46|否|  
 |**RoleName**|**nvarchar**|連接的角色。 為 **initiator** 或 **target**其中一個角色。|38|否|  
 |**ServerName**|**nvarchar**|被追蹤的 SQL Server 執行個體名稱。|26|否|  
