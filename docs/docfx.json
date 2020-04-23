@@ -117,7 +117,6 @@
         "tools/**/*.md": "GitHub",
         "t-sql/**/*.md": "GitHub"
       },
-      "disable_contribution_on_translation_quality": {},
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/",
         "big-data-cluster/**/*.md": "https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/"
