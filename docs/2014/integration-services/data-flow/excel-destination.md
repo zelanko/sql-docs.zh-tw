@@ -15,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827221"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087158"
 ---
 # <a name="excel-destination"></a>Excel 目的地
   Excel 目的地會將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍。  
@@ -48,10 +48,9 @@ ms.locfileid: "62827221"
   
      如需如何避免包含單引號的資訊，請參閱 msdn.com 上的此篇部落格文章 [使用 SSIS 封裝中 Excel 資料流程目的地元件將資料轉換至 Excel 時，附加至所有字串的單引號](https://go.microsoft.com/fwlink/?LinkId=400876)(英文)。  
   
--   **正在儲存備忘（Ntext） da**ta。 在 Excel 資料行中成功儲存長於 255 個字元的字串之前，驅動程式必須能將目的地資料行的資料類型辨識為 **備忘** ，而不是 **字串**。 如果目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。 如果目的地資料表是在封裝設計期間或在執行時間建立的，則 CREATE TABLE 語句必須使用 LONGTEXT （或其同義字之一）作為備忘資料行的資料類型。  
+-   **正在儲存備忘 (ntext) 資料**。 在 Excel 資料行中成功儲存長於 255 個字元的字串之前，驅動程式必須能將目的地資料行的資料類型辨識為 **備忘** ，而不是 **字串**。 如果目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。 如果目標表是在包設計期間或在運行時創建的,則 CREATE TABLE 語句必須使用 LONGTEXT(或其同義詞之一)作為備忘錄列的數據類型。  
   
--   **資料類型**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
+-   **資料型態**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
   
     -   數值 - 雙精確度浮點數 (DT_R8)  
   
@@ -59,14 +58,13 @@ ms.locfileid: "62827221"
   
     -   布林值 - 布林值 (DT_BOOL)  
   
-    -   日期/時間`datetime` （DT_DATE）  
+    -   日期/時間`datetime`(DT_DATE)  
   
     -   字串 - Unicode 字串，長度 255 (DT_WSTR)  
   
     -   備忘錄 - Unicode 文字資料流 (DT_NTEXT)  
   
--   **資料類型和長度轉換**。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不會隱含地轉換資料類型。 因此，您可能必須使用衍生的資料行轉換或資料轉換，在將 Excel 資料載入到非 Excel 目的地之前明確轉換 Excel 資料，或是在將非 Excel 資料載入到 Excel 目的地之前轉換資料。 在這種情況下，使用「匯入和匯出精靈」建立初始封裝可能很有用，因為這個精靈會為您設定必要的轉換。 某些轉換範例可能必須包含下列各項：  
+-   **資料類型和長度轉換**： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不會隱含地轉換資料類型。 因此，您可能必須使用衍生的資料行轉換或資料轉換，在將 Excel 資料載入到非 Excel 目的地之前明確轉換 Excel 資料，或是在將非 Excel 資料載入到 Excel 目的地之前轉換資料。 在這種情況下，使用「匯入和匯出精靈」建立初始封裝可能很有用，因為這個精靈會為您設定必要的轉換。 某些轉換範例可能必須包含下列各項：  
   
     -   Unicode Excel 字串資料行與具有特定字碼頁之非 Unicode 字串資料行之間的轉換。  
   
@@ -85,12 +83,11 @@ ms.locfileid: "62827221"
   
 -   [Excel 目的地編輯器 &#40;連線管理員頁面&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [[Excel 目的地編輯器 &#40;對應] 頁面&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Excel 目的地編輯器 &#40;對應頁面&#41;](../excel-destination-editor-mappings-page.md)  
   
 -   [Excel 目的地編輯器 &#40;錯誤輸出頁面&#41;](../excel-destination-editor-error-output-page.md)  
   
- 
-  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
+ **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [Common Properties](../common-properties.md)  
   
@@ -105,14 +102,6 @@ ms.locfileid: "62827221"
 -   [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../control-flow/foreach-loop-container.md)  
   
 -   [設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)  
-  
-## <a name="related-content"></a>相關內容  
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第一部分，共三部分)：連接與元件](https://go.microsoft.com/fwlink/?LinkId=217674)  
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第二部分，共三部分)：資料表與資料類型](https://go.microsoft.com/fwlink/?LinkId=217675)。  
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第三部分，共三部分)：問題與替代方案](https://go.microsoft.com/fwlink/?LinkId=217676)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Excel 來源](excel-source.md)   

@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14153d38d53a87729231b60b2b2846dc12401fc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37eb17ccaa418a6d81ef4caa461af50e505a8747
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67624359"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087148"
 ---
 # <a name="excel-source"></a>Excel 來源
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
@@ -49,14 +49,13 @@ ms.locfileid: "67624359"
   
  下列使用 Excel 驅動程式之 Jet 提供者的行為，在從 Excel 資料來源讀取資料時，可能導致未預期的結果。  
   
--   **資料來源**。 Excel 活頁簿中資料的來源可以是工作表 (必須附加 $ 符號，例如 Sheet1$) 或已命名的範圍 (例如 MyRange)。 在 SQL 陳述式中，工作表的名稱必須加以分隔 (例如 [Sheet1$])，以避免 $ 符號造成的語法錯誤。 「查詢產生器」會自動加入這些分隔符號。 當您指定工作表或範圍時，驅動程式會讀取連續的資料格區塊，從工作表或範圍左上角的第一個非空白資料格開始。 因此，來源資料的資料列不可以空白，或標題或標頭資料列與資料列之間不可以有空白資料列。  
+-   **資料來源**. Excel 活頁簿中資料的來源可以是工作表 (必須附加 $ 符號，例如 Sheet1$) 或已命名的範圍 (例如 MyRange)。 在 SQL 陳述式中，工作表的名稱必須加以分隔 (例如 [Sheet1$])，以避免 $ 符號造成的語法錯誤。 「查詢產生器」會自動加入這些分隔符號。 當您指定工作表或範圍時，驅動程式會讀取連續的資料格區塊，從工作表或範圍左上角的第一個非空白資料格開始。 因此，來源資料的資料列不可以空白，或標題或標頭資料列與資料列之間不可以有空白資料列。  
   
--   **遺漏值**。 Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為 8 個資料列)，以猜測各資料行的資料類型。 當資料行可能包含混合資料類型，尤其是數值資料與文字資料混合時，驅動程式會做出有利於大部分資料類型的決定，並於包含其他類型資料的資料格中傳回 Null 值。 (在繫結中，以數值類型優先)。Excel 工作表中大部分的資料格格式化選項，似乎都不會影響這項資料類型決定。 您可以藉由指定「匯入模式」來修改 Excel 驅動程式的這項行為。 若要指定匯入模式`IMEX=1` ，請在 [**屬性**] 視窗中，將加入至 Excel 連接管理員之連接字串中的 [擴充屬性] 的值。 如需詳細資訊，請參閱 [PRB: Excel Values Returned as NULL Using DAO OpenRecordset](https://support.microsoft.com/kb/194124)(PRB：使用 DAO OpenRecordset 以 NULL 形式傳回的 Excel 值)。  
+-   **遺失值**。 Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為 8 個資料列)，以猜測各資料行的資料類型。 當資料行可能包含混合資料類型，尤其是數值資料與文字資料混合時，驅動程式會做出有利於大部分資料類型的決定，並於包含其他類型資料的資料格中傳回 Null 值。 (在繫結中，以數值類型優先)。Excel 工作表中大部分的資料格格式化選項，似乎都不會影響這項資料類型決定。 您可以藉由指定「匯入模式」來修改 Excel 驅動程式的這項行為。 要指定匯入模式,請在`IMEX=1`**「屬性」** 視窗中的 Excel 連接管理器的連接字串中添加「擴展屬性」的值。 如需詳細資訊，請參閱 [PRB: Excel Values Returned as NULL Using DAO OpenRecordset](https://support.microsoft.com/kb/194124)(PRB：使用 DAO OpenRecordset 以 NULL 形式傳回的 Excel 值)。  
   
 -   **截斷的文字**。 當驅動程式判斷出某個 Excel 資料行包含文字資料時，驅動程式將會根據其取樣的最長值來選取資料類型 (字串或備忘錄)。 如果驅動程式未在其取樣的資料列中發現任何長度超過 255 個字元的值，則會將該資料行視為 255 個字元字串資料行而非備忘錄資料行 因此，長度超過 255 個字元的值可能會被截斷。 若要以不截斷的方式從備忘資料行匯入資料，您必須確保至少在其中一個取樣資料列中的備忘錄資料行包含長度超過 255 個字元的值，否則您就必須增加驅動程式取樣的資料列數目，使其包含這類資料列。 您可以提高 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** 登錄機碼底下 **TypeGuessRows** 的值，藉以增加取樣的資料列數目。 如需詳細資訊，請參閱 [PRB︰從 Jet 4.0 OLEDB 來源傳送資料失敗，發生緩衝區溢位錯誤](https://support.microsoft.com/kb/281517)(PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error)。  
   
--   **資料類型**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
+-   **資料型態**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
   
     -   數值 - 雙精確度浮點數 (DT_R8)  
   
@@ -64,14 +63,13 @@ ms.locfileid: "67624359"
   
     -   布林值 - 布林值 (DT_BOOL)  
   
-    -   日期/時間- `datetime` （DT_DATE）  
+    -   日期/時間`datetime`─ (DT_DATE)  
   
     -   字串 - Unicode 字串，長度 255 (DT_WSTR)  
   
     -   備忘錄 - Unicode 文字資料流 (DT_NTEXT)  
   
--   **資料類型和長度轉換**。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不會隱含地轉換資料類型。 因此，您可能必須使用衍生的資料行轉換或資料轉換，在將 Excel 資料載入到非 Excel 目的地之前明確轉換 Excel 資料，或是在將非 Excel 資料載入到 Excel 目的地之前轉換資料。 在這種情況下，使用「匯入和匯出精靈」建立初始封裝可能很有用，因為這個精靈會為您設定必要的轉換。 某些轉換範例可能必須包含下列各項：  
+-   **資料類型和長度轉換**： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不會隱含地轉換資料類型。 因此，您可能必須使用衍生的資料行轉換或資料轉換，在將 Excel 資料載入到非 Excel 目的地之前明確轉換 Excel 資料，或是在將非 Excel 資料載入到 Excel 目的地之前轉換資料。 在這種情況下，使用「匯入和匯出精靈」建立初始封裝可能很有用，因為這個精靈會為您設定必要的轉換。 某些轉換範例可能必須包含下列各項：  
   
     -   Unicode Excel 字串資料行與具有特定字碼頁之非 Unicode 字串資料行之間的轉換  
   
@@ -86,12 +84,11 @@ ms.locfileid: "67624359"
   
 -   [Excel 來源編輯器 &#40;連線管理員頁面&#41;](../excel-source-editor-connection-manager-page.md)  
   
--   [Excel 來源編輯器 &#40;資料行] 頁面&#41;](../excel-source-editor-columns-page.md)  
+-   [Excel 來源編輯器 &#40;資料行頁面&#41;](../excel-source-editor-columns-page.md)  
   
 -   [Excel 來源編輯器 &#40;錯誤輸出頁面&#41;](../excel-source-editor-error-output-page.md)  
   
- 
-  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
+ **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [Common Properties](../common-properties.md)  
   
@@ -115,12 +112,6 @@ ms.locfileid: "67624359"
   
 -   hrvoje.piasevoli.com 上的部落格文章： [Importing data from 64-bit Excel in SSIS](https://go.microsoft.com/fwlink/?LinkId=217673)(從 SSIS 中的 64 位元 Excel 匯入資料)  
   
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第一部分，共三部分)：連接與元件](https://go.microsoft.com/fwlink/?LinkId=217674)  
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第二部分，共三部分)：資料表與資料類型](https://go.microsoft.com/fwlink/?LinkId=217675)。  
-  
--   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第三部分，共三部分)：問題與替代方案](https://go.microsoft.com/fwlink/?LinkId=217676)。  
-  
--   [在 SSIS 中連接到 Excel （.xlsx）](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html)的 Blog 專案。  
+-   部落格目,[連接到 SSIS 中的 Excel (XLSX)。](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html)  
   
   

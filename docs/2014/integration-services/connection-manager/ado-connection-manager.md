@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fda014196d933ef9d5391ab4db798d821e43610
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "62833801"
 ---
 # <a name="ado-connection-manager"></a>ADO 連接管理員
   ADO 連接管理員可讓封裝連接到 ActiveX Data Objects (ADO) 物件，例如資料錄集。 這個連接管理員一般用在以舊版語言 (例如 Microsoft Visual Basic 6.0) 所撰寫的自訂工作中，或用於做為使用 ADO 連接到資料來源之現有應用程式一部份的自訂工作中。  
   
- 當您將 ADO 連線管理員加入封裝時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會建立在執行時間解析為 ADO 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上`Connections`的集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `ADO`。  
+ 將 ADO 連接[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]管理員 添加到套件時,創建將在執行時解析為 ADO 連接的連接管理員,設定連接管理員屬性,並將連接管理`Connections`器添加到包上的集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `ADO`。  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>疑難排解 ADO 連接管理員  
  由 ADO 連接管理員讀取時，某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期資料類型會產生如下表所示結果。  

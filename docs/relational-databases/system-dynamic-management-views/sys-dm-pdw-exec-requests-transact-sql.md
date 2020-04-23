@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 851c138e00300a303b1618041a16e2c38516968e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301210"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087558"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>系統dm_pdw_exec_requests(轉算-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "81301210"
 |database_id|**int**|顯式上下文(例如,使用DB_X)使用的資料庫標識碼。|請參考系統資料庫中的 ID [&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |命令|**nvarchar(4000)**|保存使用者提交的請求的全文。|任何有效的查詢或請求文本。 超過 4000 位元組的查詢將被截斷。|  
 |resource_class|**恩瓦爾查爾 (20)**|用於此請求的工作負載組。 |靜態資源類別</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>靜態資源類別</br>小RC</br>中RC</br>大RC</br>XLargeRC|
-|importance|**恩瓦爾查爾 (128)**|在執行時設置請求的重要性。  這是此工作負荷組和跨工作負荷組中共享資源的請求的相對重要性。  分類器中指定的重要性將覆蓋工作負載組重要性設置。</br>適用對象：Azure SQL 資料倉儲|NULL</br>low</br>below_normal</br>正常(預設)</br>above_normal</br>high|
+|importance|**nvarchar(128)**|在執行時設置請求的重要性。  這是此工作負荷組和跨工作負荷組中共享資源的請求的相對重要性。  分類器中指定的重要性將覆蓋工作負載組重要性設置。</br>適用對象：Azure SQL 資料倉儲|NULL</br>low</br>below_normal</br>正常(預設)</br>above_normal</br>high|
 |group_name|**sysname** |對於使用資源的請求,group_name是請求運行下的工作負荷組的名稱。  如果請求不利用資源,group_name為空。</br>適用對象：Azure SQL 資料倉儲|
 |classifier_name|**sysname**|對於使用資源的請求,用於分配資源和重要性的分類器的名稱。||
 |resource_allocation_percentage|**小數(5,2)**|分配給請求的資源的百分比量。</br>適用對象：Azure SQL 資料倉儲|
@@ -62,7 +62,7 @@ ms.locfileid: "81301210"
 |-**0x08**|由於行級安全謂詞,結果集緩存被禁用。|  
 |-**0 x 10**|由於在查詢中使用系統表、臨時表或外部表,結果集緩存被禁用。|  
 |-**0 x 20**|結果集緩存被禁用,因為查詢包含運行時常量、使用者定義的函數或非確定性函數。|  
-|-**0 x 40**|由於估計結果集大小過大(> 100 萬行),結果集緩存被禁用。|  
+|-**0 x 40**|結果集緩存由於估計的結果集大小為 10GB >而禁用。|  
 |-**0 x 80**|結果集緩存被禁用,因為結果集包含大尺寸(>64kb)的行。|  
   
 ## <a name="permissions"></a>權限

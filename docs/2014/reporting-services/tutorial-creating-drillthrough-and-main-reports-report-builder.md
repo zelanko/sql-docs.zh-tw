@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9fe67c3fe0656924ea8e53c4c937a99b588b46b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388491"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086879"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
   本教學課程將教導您如何建立兩種報表：鑽研報表與主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 下圖顯示您將建立的報表。  
@@ -153,7 +153,7 @@ ms.locfileid: "81388491"
 2.  在 [選取 Cube]**** 對話方塊中，按一下 [Sales]，然後按一下 [確定]****。  
   
     > [!TIP]  
-    >  如果您不想要手動建置 MDX 查詢，請按一下![切換到設計模式](../analysis-services/media/rsqdicon-designmode.gif "切換到設計模式")圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具，然後繼續進行[建立資料集](#DSkip)中的步驟 6。  
+    >  如果您不想要手動建置 MDX 查詢，請按一下![切換到設計模式](media/rsqdicon-designmode.gif "切換到設計模式")圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具，然後繼續進行[建立資料集](#DSkip)中的步驟 6。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
