@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2f375de9db1cce966206402b99d3e54724cbf2bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adf0c9e3b67ee67b9372eb4d39640eef43486958
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065613"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633782"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT 組件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68065613"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name  
     TO database_principal [ ,...n ]  
     [ WITH GRANT OPTION ]  

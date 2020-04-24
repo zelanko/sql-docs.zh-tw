@@ -20,12 +20,12 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adafa9fcbb8bb3130fc4d52c6c9ca49a5e638a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b5f1967f86a150747a0158a68a159f2c5a73953
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040306"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633476"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68040306"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 ASIN ( float_expression )  
 ```  
   

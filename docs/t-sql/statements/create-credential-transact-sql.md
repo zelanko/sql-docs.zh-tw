@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45c76487f9165da37d0c5383826b00e85ddf27df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94b2e39d9767a8f75660b533231e5fe4ac16d8de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286497"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633255"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "76286497"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 CREATE CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]

@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d727044455bcee06155848aee2bd6749bd475ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2d2ddb02927d63ceea9a6fb31bfd5e3b7bd39619
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79315052"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633583"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "79315052"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET TRANSACTION ISOLATION LEVEL
@@ -56,11 +56,12 @@ SET TRANSACTION ISOLATION LEVEL
     }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+
 >[!NOTE]
 > SQL 資料倉儲實作 ACID 交易。 交易式支援的隔離等級預設為 READ UNCOMMITTED。  您可在連線至 master 資料庫時，開啟使用者資料庫的 [READ_COMMITTED_SNAPSHOT] 資料庫選項，將其變更為 [READ COMMITTED SNAPSHOT ISOLATION]。  啟用之後，此資料庫中所有交易都會在 READ COMMITTED SNAPSHOT ISOLATION 的狀態下執行，且將不會接受在工作階段層級上設定為 READ UNCOMMITTED。 如需詳細資料，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
 
@@ -170,7 +171,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ## <a name="examples"></a>範例  
  下列範例會設定工作階段的 `TRANSACTION ISOLATION LEVEL`。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會保留後來每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的所有共用鎖定，直到交易完成為止。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  

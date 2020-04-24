@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ca1044bf5f748aee304ebd5ac95f12813b6ebe6
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929119"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634438"
 ---
 # <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67929119"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
@@ -62,7 +62,7 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  若要檢視此設定的目前設定，請執行下列查詢。  
   
-```  
+```sql
 DECLARE @CURSOR_CLOSE VARCHAR(3) = 'OFF';  
 IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';  
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
@@ -74,7 +74,7 @@ SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;
 ## <a name="examples"></a>範例  
  下列範例定義交易中的資料指標，且在交易認可之後，會嘗試使用它。  
   
-```  
+```sql
 -- SET CURSOR_CLOSE_ON_COMMIT  
 -------------------------------------------------------------------------------  
 SET NOCOUNT ON;  

@@ -25,12 +25,12 @@ ms.assetid: 514ab042-c53e-4d96-be71-fb08fcc6ef3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9fff28fd4f4d47c68dfd86eaa7de450ff5e79d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 069bc3ebb8423b24664a9b144471678a80c5ec95
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008883"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632979"
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68008883"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET PARSEONLY { ON | OFF }  
 ```  

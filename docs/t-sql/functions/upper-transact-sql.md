@@ -23,12 +23,12 @@ ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91870e53e5976ba5d52b83f086a57fa552ad1ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afaaca4fb8897fc3afaaa9efb32848bf934e4769
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927621"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632711"
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67927621"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 UPPER ( character_expression )  
 ```  
   

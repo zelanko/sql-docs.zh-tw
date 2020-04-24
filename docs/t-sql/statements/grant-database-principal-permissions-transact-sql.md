@@ -27,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 473166d89ec44c9f5fa2c13ad9da6031f951da57
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246164"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633725"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "75246164"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 GRANT permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  

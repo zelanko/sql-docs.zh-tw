@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6fcbf78c03bd1f4d9f880abf216c977fcfc309d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050846"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633738"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端點權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68050846"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
         TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  

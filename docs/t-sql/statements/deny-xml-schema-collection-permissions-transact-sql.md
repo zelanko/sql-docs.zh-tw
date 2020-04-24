@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3996a89355ba9a3346c9751f011db24ae6757fb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cb1bdea194ffa898ec3aa75f0d8380e13e6f28b
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244535"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630985"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "75244535"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  
     XML_schema_collection_name  

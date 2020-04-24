@@ -18,12 +18,12 @@ ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: ace985045db2bf10b1ef0e80a2b05ea3e0cb85ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25ad0382942300663df7aaf729357d157c8c107f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70151958"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632731"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "70151958"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  

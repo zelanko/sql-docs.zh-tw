@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982674"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634847"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982674"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  `Server1` 的分割區檢視定義如下：  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  一般而言，如果檢視的形式如下，它便是一份分割區檢視：  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          `C1` 資料表所定義之 `T1` 條件約束的形式必須如下：  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   條件約束的方式必須讓 `<col>` 的任何指定值都能夠滿足 `C1, ..., Cn` 等條件約束中的最多一項條件約束；因此，這些條件約束會形成一組無關聯或不重疊的間隔。 定義無關聯的條件約束之 `<col>` 資料行稱為分割區資料行。 請注意，在基礎資料表中，分割區資料行可能會有不同的名稱。 條件約束必須在已啟用和受信任的狀態中，才能符合先前所提到的分割資料行條件。 如果條件約束是停用的，請利用 ALTER TABLE 的 CHECK CONSTRAINT *constraint_name* 選項來重新啟用條件約束檢查，並利用 WITH CHECK 選項來進行驗證。  
   
          下列範例會顯示各組有效的條件約束：  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ FROM Tn;
 ### <a name="a-using-a-simple-create-view"></a>A. 使用簡單的 CREATE VIEW  
  下列範例會利用簡單的 `SELECT` 陳述式來建立檢視。 當資料行組合的查詢頻率很高時，簡單檢視非常有用。 這份檢視的資料來自 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `HumanResources.Employee` 和 `Person.Person` 資料表。 這項資料提供 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的員工名稱和雇用日期資訊。 您可以為主管追蹤工作週年記錄的人建立這份檢視，但不提供他存取這些資料表所有資料的權利。  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. 使用 WITH CHECK OPTION  
  下列範例會顯示一份名稱為 `SeattleOnly` 的檢視，這份檢視參考五份資料表，可讓資料修改只套用在居住在 Seattle 的員工。  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. 在檢視內使用內建函數  
  下列範例會顯示包括內建函數的檢視定義。 當您使用函數時，您必須指定衍生資料行的資料行名稱。  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. 使用分割區的資料  
  下列範例會使用名稱為 `SUPPLY1`、`SUPPLY2`、`SUPPLY3` 和 `SUPPLY4` 的資料表。 這些資料表對應於四個辦公室的供應者資料表，這些辦公室在不同國家 (地區)。  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>F. 建立簡單檢視  
  下列範例僅會選取來源資料表的某些資料行，藉此建立檢視。  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. 聯結兩個資料表以建立檢視  
  下列範例會利用 `SELECT` 陳述式與 `OUTER JOIN` 來建立檢視。 將聯結查詢的結果填入檢視。  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

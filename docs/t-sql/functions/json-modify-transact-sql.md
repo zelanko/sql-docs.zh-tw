@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 36e6f8f630439baddf1fb3a88ab8df7eb6687e4c
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002817"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635108"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -97,7 +97,7 @@ JSON_MODIFY 會逸出所有類型為 NVARCHAR 或 VARCHAR 新值中的特殊字�
   
  **查詢**
   
-```sql  
+```syntaxsql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +156,7 @@ PRINT @info
   
  **查詢**
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -250,7 +250,7 @@ PRINT @stats
   
  **查詢**  
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -278,7 +278,7 @@ PRINT @info
   
  **查詢**  
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7293db962cb8e74e234a0a168afa1600ee29fd67
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076439"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633559"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68076439"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
@@ -67,7 +67,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## <a name="examples"></a>範例  
  下列範例會顯示資料庫擁有者可以如何採用另一位使用者的識別。 `mary` 使用者建立了稱為 `computer_types` 的資料表。 藉由使用 SETUSER，資料庫擁有者模擬 `mary` 來授與 `joe` 使用者存取 `computer_types` 資料表的權利，然後再重設他們自己的識別。  
   
-```  
+```sql
 SETUSER 'mary';  
 GO  
 GRANT SELECT ON computer_types TO joe;  

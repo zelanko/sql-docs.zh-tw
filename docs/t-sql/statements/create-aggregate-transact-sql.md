@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1af7d13c9bee8d3ba46fc940467d8f13a2d40e45
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064635"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631984"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73064635"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 CREATE AGGREGATE [ schema_name . ] aggregate_name  
         (@param_name <input_sqltype>   

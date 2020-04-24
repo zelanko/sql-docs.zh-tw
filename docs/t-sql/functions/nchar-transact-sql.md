@@ -19,12 +19,12 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad1087522e634f075a9f3398cb5c3f5d3a6d65b8
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130157"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634973"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68130157"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 NCHAR ( integer_expression )  
 ```  
   

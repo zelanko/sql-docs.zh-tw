@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5d79f02237a380a9431e8269875d93a79bd9d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c7e46b1225c63bc0c84b9474abed55a89896571
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243351"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634154"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "75243351"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 GRANT permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  

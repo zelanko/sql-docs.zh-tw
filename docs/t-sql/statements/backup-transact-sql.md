@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf17a0731b34c382186ec9b4e9bed9bd240df628
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249734"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632658"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -80,7 +80,7 @@ ms.locfileid: "74249734"
 
 ## <a name="syntax"></a>語法
 
-```sql
+```syntaxsql
 --Backing Up a Whole Database
 BACKUP DATABASE { database_name | @database_name_var }
   TO <backup_device> [ ,...n ]
@@ -942,7 +942,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 ## <a name="syntax"></a>語法
 
-```sql
+```syntaxsql
 BACKUP DATABASE { database_name | @database_name_var }
   TO URL = { 'physical_device_name' | @physical_device_name_var }[ ,...n ]
   WITH COPY_ONLY [, { <general_WITH_options> } ]
@@ -1130,7 +1130,7 @@ WITH STATS = 5, COPY_ONLY;
 
 ## <a name="syntax"></a>語法
 
-```sql
+```syntaxsql
 --Create a full backup of a user database or the master database.
 BACKUP DATABASE database_name
     TO DISK = '\\UNC_path\backup_directory'

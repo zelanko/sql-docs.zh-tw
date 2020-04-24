@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6060fdf1819750e0ec0faa00d0e82ab8f76fa52c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3655effe5c77938af28079391d8f6e7fa800699
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77004652"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632549"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "77004652"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 CREATE SERVER AUDIT SPECIFICATION audit_specification_name  
 FOR SERVER AUDIT audit_name  

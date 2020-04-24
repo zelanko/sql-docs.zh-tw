@@ -12,12 +12,12 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7eb8bb64e79fbd575e3b470c8e5312e58c0544ac
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117204"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633904"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68117204"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CREATE SELECTIVE XML INDEX index_name  
     ON <table_object> (xml_column_name)  
     [WITH XMLNAMESPACES (<xmlnamespace_list>)]  

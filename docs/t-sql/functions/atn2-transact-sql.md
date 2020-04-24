@@ -20,12 +20,12 @@ ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 993020892a992800a8fb8fab2c7801fe7caf9493
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c1da7c9cf92342ddc700d346e5216d6acd2de1
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040190"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632053"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68040190"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 ATN2 ( float_expression , float_expression )  
 ```  
   

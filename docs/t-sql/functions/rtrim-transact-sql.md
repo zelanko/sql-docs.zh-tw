@@ -21,12 +21,12 @@ ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42fc593c953df13800a0ba49177f5fa71347acd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9dc0305d1d136fbe55369706946cc7163acd447f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089893"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632573"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68089893"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 RTRIM ( character_expression )  
 ```  
   

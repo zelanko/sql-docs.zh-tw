@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8d0f9c50b5d89926f370f9059a1cbce6c246e216
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab39b255fdb60fac42357c61df0eb15675aebede
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141158"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632648"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68141158"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }  
 ```  
   

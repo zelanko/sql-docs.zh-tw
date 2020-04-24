@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89ee76f44006227500cdb9e160256800e6a62929
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112258"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634576"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "79112258"
   
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     (   WORKLOAD_GROUP = 'name'  

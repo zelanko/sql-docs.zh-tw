@@ -13,12 +13,12 @@ ms.assetid: 8cf9009b-59f9-4aac-bef1-dcf2cf0708b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81df5ad2e93925334149d3fbea37e4612f5a384a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a18bb7c90e241b42a627ec1753642942c412ff77
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086690"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632834"
 ---
 # <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68086690"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Drop an external file format  
 DROP EXTERNAL FILE FORMAT external_file_format_name  
 [;]  

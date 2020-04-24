@@ -22,12 +22,12 @@ ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 761e6f43f1199d4eb16060cd769a30ebba220ef8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b83a3dbe28848a335e414a0dd39ef1fafdffff17
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914248"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634909"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67914248"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   

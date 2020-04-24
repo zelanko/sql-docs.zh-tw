@@ -24,12 +24,12 @@ ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e8eef3588b742e8e3b11d46b1bf3d95e11cae50
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929056"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634401"
 ---
 # <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67929056"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var | @deadlock_intvar }  
   
@@ -83,7 +83,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 ## <a name="examples"></a>範例  
  下列範例會利用變數，將死結優先權設為 `LOW`。  
   
-```  
+```sql
 DECLARE @deadlock_var NCHAR(3);  
 SET @deadlock_var = N'LOW';  
   
@@ -93,7 +93,7 @@ GO
   
  下列範例將死結優先權設為 `NORMAL`。  
   
-```  
+```sql
 SET DEADLOCK_PRIORITY NORMAL;  
 GO  
 ```  

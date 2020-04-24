@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4352a1b050bc27be18d490c8790f793f57e1839
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902828"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632172"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "67902828"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CREATE ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  
 AS { TCP } (  

@@ -18,12 +18,12 @@ ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05093c47ea7e05845f237e0e7c9c3df2c7d59fd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 586f9ea683374f47ddf8c115bd3a3bb3b898899c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914247"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634877"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67914247"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 RADIANS ( numeric_expression )  
 ```  
   

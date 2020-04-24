@@ -21,12 +21,12 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df627a035e679571ca5a9f4128cfc5f8c2511f5f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914900"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633832"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67914900"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   

@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 8575a966dba903b17a6c5dcb015eb4471faf28a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73fcf068c55b28448d87245b380281b461ef36b0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80290751"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633608"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -56,7 +56,7 @@ ms.locfileid: "80290751"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
     WITH (  
       <distribution_option>

@@ -19,12 +19,12 @@ ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbcf7c136bfe9ff80b1ea9129e5c6d453aec9e01
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d049a9ca902cf19808419cfd421e23c403ae14cf
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114857"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633143"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 資料庫範圍認證 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68114857"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DENY permission  [ ,...n ]   
     ON DATABASE SCOPED CREDENTIAL :: credential_name   

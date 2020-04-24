@@ -24,12 +24,12 @@ ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3593709dfbae0406e9952392ef82e184f205208
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb582717e0a98e8aaba60b4d7a100a09d0076f1a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034949"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634693"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68034949"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET NOCOUNT { ON | OFF }   
 ```  
@@ -56,7 +56,7 @@ SET NOCOUNT { ON | OFF }
   
  若要檢視此設定的目前設定，請執行下列查詢。  
   
-```  
+```sql
 DECLARE @NOCOUNT VARCHAR(3) = 'OFF';  
 IF ( (512 & @@OPTIONS) = 512 ) SET @NOCOUNT = 'ON';  
 SELECT @NOCOUNT AS NOCOUNT;  
@@ -69,7 +69,7 @@ SELECT @NOCOUNT AS NOCOUNT;
 ## <a name="examples"></a>範例  
  下列範例會防止顯示受影響之資料列數的相關訊息。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT OFF;  

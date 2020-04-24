@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9bfc21987ff4a556796ce53ef8ae0c6f3733d53
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941841"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634708"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67941841"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET STATISTICS IO { ON | OFF }  
 ```  
@@ -75,7 +75,7 @@ SET STATISTICS IO { ON | OFF }
 ## <a name="examples"></a>範例  
  這個範例會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在處理陳述式時，使用多少邏輯和實體讀取。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS IO ON;  

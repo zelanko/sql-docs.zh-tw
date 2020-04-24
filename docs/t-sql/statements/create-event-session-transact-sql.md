@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 089725c52c2f65a9e1edb45a6afadd01ff2ace79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76910191"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632125"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "76910191"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 CREATE EVENT SESSION event_session_name
 ON { SERVER | DATABASE }
 {  

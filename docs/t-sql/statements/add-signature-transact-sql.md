@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066105"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634916"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68066105"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
     BY <crypto_list> [ ,...n ]  
   

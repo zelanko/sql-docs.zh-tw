@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a322934e89cb0b7b0c7959d3078c52a4a3fac65a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952419"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632198"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "75952419"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER USER userName
@@ -216,7 +216,7 @@ GO
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 
 ALTER USER userName
@@ -391,7 +391,7 @@ GO
 > 套用至使用 Azure AD 登入的使用者時，Azure SQL Database 受控執行個體只支援下列選項：`DEFAULT_SCHEMA = { schemaName | NULL }` 和 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 > </br> </br> 已新增新的語法延伸模組，可協助重新對應已移轉至受控執行個體資料庫中的使用者。 ALTER USER 語法可協助將具有 Azure AD 同盟及同步網域中的資料庫使用者對應到 Azure AD 登入。
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
@@ -641,7 +641,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse
 
 ALTER USER userName
@@ -752,7 +752,7 @@ GO
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 ALTER USER userName

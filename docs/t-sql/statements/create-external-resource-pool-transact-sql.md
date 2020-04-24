@@ -22,12 +22,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59dba483b5c8de6ba46634cfb40816ff8e01ee9b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 97a33107ec7f03d6c797b9fc0271e5aa5f78f4ac
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664239"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633438"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "80664239"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
     [ MAX_CPU_PERCENT = value ]  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0982bb3ffaf6c21ee8bff0b7cffc0bc472fb1d9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948250"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634217"
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67948250"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 VALUES ( <row value expression list> ) [ ,...n ]   
   

@@ -22,12 +22,12 @@ ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 549d1e478c15999dec12c5cd170d94e5d0ec0804
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928939"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634333"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67928939"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
@@ -59,7 +59,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ## <a name="examples"></a>範例  
  下列範例會將預設語言設為 `Italian`，顯示月份名稱，再切換回 `us_english` 並重新顯示月份名稱。  
   
-```  
+```sql
 DECLARE @Today DATETIME;  
 SET @Today = '12/5/2007';  
   

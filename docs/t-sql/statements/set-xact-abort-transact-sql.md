@@ -26,12 +26,12 @@ ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 805b13301cad748331bc571a70cc77ffe8c8c27e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c251fcb47b58e3f5b7664bab7ac95efa8b0d487
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71952353"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634642"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "71952353"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 SET XACT_ABORT { ON | OFF }
 ```
 

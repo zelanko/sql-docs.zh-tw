@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c4cbb43048e9dff683b510d958e3e25d87e823
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fe7a6cd5d42c73307462df8c711fdac57e7febb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77507500"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633229"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "77507500"
 
 ## <a name="syntax"></a>語法
 
-``` 
+```syntaxsql
 CREATE DATABASE SCOPED CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]

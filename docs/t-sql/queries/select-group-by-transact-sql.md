@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e93f24bcd2b136cdc055faf3a100a76fa5bb4db
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258295"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634245"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "75258295"
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database   
 -- ISO-Compliant Syntax  
   
@@ -84,7 +84,7 @@ GROUP BY
 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
@@ -95,7 +95,7 @@ GROUP BY {
 
 ```
 
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 GROUP BY {

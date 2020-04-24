@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941696"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634277"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941696"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**型別**|節點類型。 對每項查詢的父節點而言，這都是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式類型 (如 SELECT、INSERT、EXECUTE 等等)。 對於代表執行計畫的子節點而言，類型是 PLAN_ROW。|  
 |**Parallel**|**0** = 運算子並未並行執行。<br /><br /> **1** = 運算子正在並行執行。|  
 |**EstimateExecutions**|執行目前查詢時，將執行這個運算子的估計次數。|  
-  
+|||
+
  *表示成本單位是根據內部時間度量，而不是根據時鐘的時間。 成本單位是用來判斷計畫的相對成本 (相較於其他計畫而言)。  
   
 ## <a name="permissions"></a>權限  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  第一個索引查詢的 **EstimateRows** 和 **TotalSubtreeCost** 資料行中的值比較小，這表示它的處理速度比較快，使用的資源比非索引查詢少。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

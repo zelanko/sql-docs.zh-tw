@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02bfcaecc3038da1404287d7b016dfbc779a1fcf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19296d2f926e9297bdfbc84783714c35a11a1ff9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008906"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632985"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68008906"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  

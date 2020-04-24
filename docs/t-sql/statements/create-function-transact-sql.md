@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcd15e1601c4514b815cd310fa556e27a72937cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433765"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631484"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -78,7 +78,7 @@ ms.locfileid: "79433765"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type
@@ -96,7 +96,7 @@ RETURNS return_data_type
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
@@ -111,7 +111,7 @@ RETURNS TABLE
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Multi-Statement Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
@@ -130,7 +130,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Function Clauses
 <function_option>::=
 {
@@ -191,7 +191,7 @@ column_name AS computed_column_expression
 }
 ```
 
-```
+```syntaxsql
 -- CLR Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
@@ -204,7 +204,7 @@ RETURNS { return_data_type }
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- CLR Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
@@ -218,7 +218,7 @@ RETURNS TABLE <clr_table_type_definition>
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- CLR Function Clauses
 <order_clause> ::=
 {
@@ -239,7 +239,7 @@ RETURNS TABLE <clr_table_type_definition>
 ( { column_name data_type } [ ,...n ] )
 ```
 
-```
+```syntaxsql
 -- In-Memory OLTP: Syntax for natively compiled, scalar user-defined function
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type

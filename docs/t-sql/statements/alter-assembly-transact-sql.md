@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d389b0de6e00095729fdf3636ed7a0db872c7055
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066107"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634817"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68066107"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  

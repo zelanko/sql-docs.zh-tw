@@ -27,12 +27,12 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81bdd9f2077a3fb773e36399aedc9c2323169f2f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ba990b7438201d459be8052bd119f5689b9af88
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929062"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634358"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67929062"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SET DATEFORMAT { format | @format_var }   
 ```  
   
@@ -70,7 +70,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="examples"></a>範例  
  下列範例會使用不同的日期字串當做工作階段的輸入，並搭配相同的 `DATEFORMAT` 設定。  
   
-```  
+```sql
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  

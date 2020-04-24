@@ -20,12 +20,12 @@ ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83f9735ca8a40997e88430810cf4119c060f0c36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ddd68c4c8a62344f298f2766ac921dd1ce721819
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844486"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633594"
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73844486"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CEILING ( numeric_expression )  
 ```  
   

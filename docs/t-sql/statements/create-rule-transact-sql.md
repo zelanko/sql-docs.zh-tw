@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bdac95bb120fc56366eb6cfd5ed80f4c60b04e2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006483"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632576"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68006483"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  

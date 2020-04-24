@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903815"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631962"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -36,7 +36,7 @@ ms.locfileid: "77903815"
 
 ## <a name="syntax"></a>語法  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -364,7 +364,7 @@ WITH (
 在此功能公開推出時，COPY 命令會有更好的效能。 為了在公開預覽期間獲得最佳的載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。 使用 INSERT SELECT 時，目前的 COPY 在校能方面與 PolyBase 一樣重要。 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>COPY 命令載入 CSV 檔案的檔案分割指導方針為何？
-下表列出檔案數目的指導方針。 一旦達到建議的檔案數目，檔案越大，您的效能就會越好。 當 COPY 命令公開推出時，您不需要分割非壓縮檔案。 
+下表列出檔案數目的指導方針。 一旦達到建議的檔案數目，檔案越大，您的效能就會越好。 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |
