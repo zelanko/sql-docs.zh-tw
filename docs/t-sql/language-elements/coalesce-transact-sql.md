@@ -21,12 +21,12 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e3692da70cf2d503dc994646a6cb2e92a05fe94
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: d2ab069a4cba04666651ed785d636784749f3da5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517677"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636049"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "80517677"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 COALESCE ( expression [ ,...n ] )   
 ```  
   

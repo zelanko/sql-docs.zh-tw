@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b7649fe184382fe7a5b1a5f38b28e6b0982284
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056807"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635989"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74056807"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
@@ -142,7 +142,7 @@ CREATE USER user_name
 > [!NOTE]
 > 建立完成後的受控執行個體 Azure AD 管理員已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
   
 CREATE USER user_name   
@@ -157,7 +157,7 @@ CREATE USER Azure_Active_Directory_principal FROM EXTERNAL PROVIDER
 [;]
 ``` 
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 CREATE USER user_name   

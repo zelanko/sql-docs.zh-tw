@@ -21,12 +21,12 @@ ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf46cd6f2ce89553d846c0322d0f8866f05921f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 625ff6da9712c3e446e56506c82197ed16ca1e70
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086137"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635706"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68086137"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 USE { database_name }   
 [;]  
 ```  

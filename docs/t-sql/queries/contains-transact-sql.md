@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2aaad92d3e90d460426c12f6b0a6f5a695bc901
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517630"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635854"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "80517630"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CONTAINS (   
      {   
         column_name | ( column_list )   

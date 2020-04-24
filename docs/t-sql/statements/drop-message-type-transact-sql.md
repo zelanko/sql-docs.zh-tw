@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48c1a96998adf9fddd8ffd8da0e6f6711b9277b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab3e0f08811d1e2fa330070f5186c145083947b5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70745317"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635326"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "70745317"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP MESSAGE TYPE message_type_name  
 [ ; ]  

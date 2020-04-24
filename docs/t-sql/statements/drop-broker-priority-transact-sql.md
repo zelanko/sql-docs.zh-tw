@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb80bf30529c8948b164735b21eaf3025c386a40
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b5308ac813b948dea45acf24751e3ada453a4d19
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898289"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635791"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67898289"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP BROKER PRIORITY ConversationPriorityName  
 [;]  

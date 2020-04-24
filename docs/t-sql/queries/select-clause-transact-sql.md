@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25eefb7a795034893bdf520be7b8645811443b13
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141058"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635522"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68141058"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   

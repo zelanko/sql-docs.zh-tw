@@ -12,12 +12,12 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058490"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635467"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選擇性 XML 索引)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68058490"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  

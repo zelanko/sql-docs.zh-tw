@@ -24,12 +24,12 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e278e41fa2f27684b1ce249bb45b1dc78356753
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9ebf9aeb394d5540b5f50bb30013ce5c45093b9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325560"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635597"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "75325560"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 BEGIN  
     { sql_statement | statement_block }   
 END  

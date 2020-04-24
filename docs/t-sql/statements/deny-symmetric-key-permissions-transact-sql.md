@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb7f4808261b142a39a976bea8d6dc803a25af76
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984422"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635462"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY 對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67984422"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         TO <database_principal> [ ,...n ] [ CASCADE ]  

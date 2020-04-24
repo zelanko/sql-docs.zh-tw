@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af7ce381b1a0fdef6db197e8e764d137cf641b7c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075333"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635397"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68075333"
 此函式會傳回透過以端對端方式串連 (或聯結) 兩個以上字串值所產生的字串。 它使用第一個函數引數中指定的分隔符號來分隔這些串連的字串值。 (`CONCAT_WS` 指出 *與分隔符號的串連*。)
 
 ##  <a name="syntax"></a>語法   
-```sql
+```syntaxsql
 CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 ```
 

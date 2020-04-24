@@ -25,12 +25,12 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b81ad6e2a092f51af1f71d15c366a0cc1e22f6d2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044036"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635294"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "68044036"
   
 ## <a name="syntax"></a>語法  
   
-```sql  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]  
 ```  
   
-```sql  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  

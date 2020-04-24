@@ -25,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: efdde7e7e57e61b1c26a041a20155cf9ea0b8faa
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68223590"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635217"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68223590"
 
 ## <a name="syntax"></a>語法
 
-```sql
+```syntaxsql
 DROP SENSITIVITY CLASSIFICATION FROM
     <object_name> [, ...n ]
 

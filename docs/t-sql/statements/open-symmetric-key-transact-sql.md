@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4aa7a1e05b41b0bb152ea42b000e4d386749ef33
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68129391"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636102"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68129391"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   

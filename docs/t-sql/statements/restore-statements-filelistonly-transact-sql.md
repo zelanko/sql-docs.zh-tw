@@ -22,12 +22,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68742983"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635733"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 陳述式 - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "68742983"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 RESTORE FILELISTONLY   
 FROM <backup_device>   

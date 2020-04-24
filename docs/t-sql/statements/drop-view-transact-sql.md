@@ -23,12 +23,12 @@ ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9488a509bbe07d54c377a9aa32801f4c21396ec4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072106"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635125"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "68072106"
   
 ## <a name="syntax"></a>語法  
   
-```sql  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
   
-```sql
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 DROP VIEW [ schema_name . ] view_name [ ; ]  

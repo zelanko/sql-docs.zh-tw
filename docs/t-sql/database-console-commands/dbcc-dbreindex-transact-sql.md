@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b063b6f02a63292d4d43d1f276aa887cf02c201
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101992"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635884"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68101992"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DBCC DBREINDEX   
 (   
     table_name   

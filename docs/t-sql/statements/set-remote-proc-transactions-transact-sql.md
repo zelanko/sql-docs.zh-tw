@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d94799898517b2d75ce6a1add308f0831b112ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d347d93b0fbad68494d6e45d7067a0d822f4d02
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132816"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635776"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68132816"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  

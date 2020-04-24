@@ -27,12 +27,12 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 151ca986f2705479567d8b9d5133ff1ad623a8b9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984396"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635593"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "67984396"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Simplified syntax for DENY  
@@ -62,7 +62,7 @@ DENY   { ALL [ PRIVILEGES ] }
 { see the tables below }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DENY   

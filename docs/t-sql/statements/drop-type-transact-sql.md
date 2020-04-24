@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84df28edf6187a53e54edd3f3fcc2283bcaa3e7a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072116"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635126"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68072116"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]  
 ```  
   

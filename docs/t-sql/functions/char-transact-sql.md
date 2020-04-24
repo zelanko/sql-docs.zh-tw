@@ -27,12 +27,12 @@ ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c726d8f441a95950a06cc8a4883df7f30b54c28
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113704"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635572"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68113704"
   
 ## <a name="syntax"></a>語法  
   
-```
+```syntaxsql
 CHAR ( integer_expression )  
 ```  
   

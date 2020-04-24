@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5874c8714706e760f40c1862d18b94b3c28952b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 72bbe67c63867b932944412f220d07d360ee1c95
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664417"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636125"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "80664417"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 PREDICT  
 (  
   MODEL = @model | model_literal,  

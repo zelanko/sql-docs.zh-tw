@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63234f9f337bd6427c4c5ed33c146e2ed3a714c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8516e207b0e74469072722970f1e0412a60e004
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950320"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636078"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67950320"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   

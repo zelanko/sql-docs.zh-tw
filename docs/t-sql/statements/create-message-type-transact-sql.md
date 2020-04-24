@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77e601f46f5d829cbd5a6f05ec027dbb347dfbf3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70745465"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635808"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "70745465"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CREATE MESSAGE TYPE message_type_name  
     [ AUTHORIZATION owner_name ]  
     [ VALIDATION = {  NONE  

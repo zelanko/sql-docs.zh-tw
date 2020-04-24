@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00a313c6edfc9f8088d8cb19f62b51144fcc159b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 01199ad96dfc5ef34188e95afc3cd3707eaf57fb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140247"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635817"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68140247"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 COMMIT [ WORK ]  
 [ ; ]  

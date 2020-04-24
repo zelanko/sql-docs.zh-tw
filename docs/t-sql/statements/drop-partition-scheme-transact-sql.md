@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5443e982d82374cc5ba7848a3792c4162397f26e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044024"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635305"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68044024"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  

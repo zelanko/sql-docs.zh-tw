@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 486a4f9e3a74bdcea59a92919fce285395c75eba
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135848"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636332"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68135848"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }  
     [, { add_authenticator | @add_authenticator }  

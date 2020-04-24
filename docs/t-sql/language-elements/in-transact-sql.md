@@ -23,12 +23,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c5468523de26425926a600128010c4ca713d06e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075065"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636011"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68075065"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 test_expression [ NOT ] IN   
     ( subquery | expression [ ,...n ]  
     )   

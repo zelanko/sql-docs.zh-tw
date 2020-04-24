@@ -21,12 +21,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1266097e82f5db84f5a91951adc784d6d9580ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bc11d6d52fa0fb2040cd751b523202b43914c24
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901847"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636136"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67901847"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ OPTION ( <query_hint> [ ,...n ] ) ]   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 OPTION ( <query_option> [ ,...n ] )  

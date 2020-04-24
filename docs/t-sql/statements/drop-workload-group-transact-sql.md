@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e75e84884bca1fef4d42a64056e2ef38111e6db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0f50ecd1b6cb74367512822b0257094aa3e3d5b
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952334"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636396"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "75952334"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 DROP WORKLOAD GROUP group_name
 [;]
 ```

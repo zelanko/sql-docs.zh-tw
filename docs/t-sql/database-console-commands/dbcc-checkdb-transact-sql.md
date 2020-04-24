@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982415"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635912"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "73982415"
     
 ## <a name="syntax"></a>語法    
     
-```    
+```syntaxsql
 DBCC CHECKDB     
     [ ( database_name | database_id | 0    
         [ , NOINDEX     

@@ -17,12 +17,12 @@ ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adcdc5c9c33a0a62d9922b0d6c4f9fdec7906abe
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983284"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635835"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 資料庫權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73983284"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ]    
     { TO | FROM } <database_principal> [ ,...n ]   

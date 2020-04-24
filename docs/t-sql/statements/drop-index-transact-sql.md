@@ -32,12 +32,12 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dab01be570e871cfb1aed5c28bba91f81b55c559
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982168"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635312"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "73982168"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server (All options except filegroup and filestream apply to Azure SQL Database.)  
   
 DROP INDEX [ IF EXISTS ]   
@@ -85,7 +85,7 @@ DROP INDEX [ IF EXISTS ]
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Database  
   
 DROP INDEX  
@@ -99,7 +99,7 @@ DROP INDEX
 { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  

@@ -28,12 +28,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 93f97568bbdc2d640e947311acd90152a9ddf4ca
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517467"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635545"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DDL 觸發程序的執行目的是回應各種資料定義語言 (DDL) 事件。
   
 ## <a name="sql-server-syntax"></a>SQL Server 語法  
   
-``` 
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -77,7 +77,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-``` 
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -96,7 +96,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-``` 
+```syntaxsql
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -112,7 +112,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```syntaxsql
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -129,7 +129,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="azure-sql-database-syntax"></a>Azure SQL Database 語法  
   
-``` 
+```syntaxsql
 -- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -145,7 +145,7 @@ ON { table | view }
   
 ```  
   
-```  
+```syntaxsql
 -- Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   

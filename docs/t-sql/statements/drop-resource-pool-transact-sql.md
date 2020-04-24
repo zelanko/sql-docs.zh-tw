@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab6a901d2c1eafc2469f0e1307e5d2db71186fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d501c2bd82d06a27574920b24cbd107e846d1b4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043870"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635258"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68043870"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP RESOURCE POOL pool_name  
 [ ; ]  

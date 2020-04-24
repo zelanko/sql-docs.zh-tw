@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ce516784e49723f46feb7e73dbfd2bf034a1070
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68102027"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635899"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68102027"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
   
 DBCC CHECKFILEGROUP   
 [  

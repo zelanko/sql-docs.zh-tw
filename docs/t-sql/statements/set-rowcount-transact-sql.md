@@ -27,12 +27,12 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f79e7931e0e1fd04a699620f65c1dc2566347202
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e46257d1853ee8aa744c805be424b13f2f9f34bb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140234"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635745"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68140234"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SET ROWCOUNT { number | @number_var }   
 ```  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="examples"></a>範例  
  SET ROWCOUNT 會在指定的資料列數之後停止處理。 在下列範例中，請注意超過 500 個資料列符合 `Quantity` 小於 `300` 的準則。 不過在套用 SET ROWCOUNT 之後，您會看出並未傳回所有資料列。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT count(*) AS Count  
@@ -91,20 +91,20 @@ GO
   
  現在將 `ROWCOUNT` 設為 `4`，而傳回所有資料列，則示範只傳回 4 個資料列。  
   
-```  
+```sql
 SET ROWCOUNT 4;  
 SELECT *  
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
   
-(4 row(s) affected)
+-- (4 row(s) affected)
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT 會在指定的資料列數之後停止處理。 在下列範例中，請注意，有超過 20 個資料列符合 `AccountType = 'Assets'` 的準則。 不過在套用 SET ROWCOUNT 之後，您會看出並未傳回所有資料列。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 5;  
@@ -114,7 +114,7 @@ WHERE AccountType = 'Assets';
   
  若要傳回所有資料列，請將 ROWCOUNT 設為 0。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 0;  

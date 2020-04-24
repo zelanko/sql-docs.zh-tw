@@ -22,12 +22,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cc1eb2d3c2953fd2bdf24fdf3c13c94872f6632
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e7754da5821f3531ac8db359ae95668681f94b0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77144191"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636056"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "77144191"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
  -- SQL Server, Azure SQL Database 
 
 DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]   
 [;]
 ```
 
-```  
+```syntaxsql
  -- Azure SQL Data Warehouse, Parallel Data Warehouse 
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name

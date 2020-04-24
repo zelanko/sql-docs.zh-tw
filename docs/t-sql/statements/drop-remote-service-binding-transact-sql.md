@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54890859e9ec27ebfb91009632245d4807f6897a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5285b3a80ddb54d2956d4c38e72db5efd256547
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044040"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635285"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68044040"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP REMOTE SERVICE BINDING binding_name  
 [ ; ]  

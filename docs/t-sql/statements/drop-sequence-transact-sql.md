@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 45624adffc44fe54110fe2dc217a195d0615583e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077718"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635199"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68077718"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_name.sequence_name | sequence_name } [ ,...n ]  
  [ ; ]  
 ```  

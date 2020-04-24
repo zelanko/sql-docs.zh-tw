@@ -25,12 +25,12 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8fea00776176f66f53ec8f20d2420980ba5c0b06
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100069"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635447"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68100069"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -54,7 +54,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  

@@ -25,12 +25,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f49a731b57b56c5c4499d6d46f7fe8a70875ec1d
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 6afaa847b141b8622a19295881ea585c34ffef1a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550180"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635766"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -42,13 +42,13 @@ ms.locfileid: "80550180"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET QUOTED_IDENTIFIER ON

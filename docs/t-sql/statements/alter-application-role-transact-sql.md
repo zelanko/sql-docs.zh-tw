@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064669"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636075"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73064669"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER APPLICATION ROLE application_role_name   
     WITH <set_item> [ ,...n ]  

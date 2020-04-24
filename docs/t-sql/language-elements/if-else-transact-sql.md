@@ -21,12 +21,12 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd1a2617af761a900dc6fa7085f8343d0b4fa505
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 802189e7718f8a17e7d95c7837742c8c5c664d45
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517653"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636029"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "80517653"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   

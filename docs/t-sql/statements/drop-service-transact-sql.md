@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7eb203139cf96489fae74ada678400dad861ef18
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73791305"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635172"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73791305"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP SERVICE service_name  
 [ ; ]  

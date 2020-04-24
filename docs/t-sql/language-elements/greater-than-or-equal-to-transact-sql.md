@@ -24,12 +24,12 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a661006b04f5af7116d03bf736bdabc70cf421c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 606e8515131d71172f5086553269bbff02fd3456
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075159"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636267"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (大於或等於) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68075159"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 expression >= expression  
 ```  
   

@@ -22,12 +22,12 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50e367fc28639c305d3da669048640aabe19a9a7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67907073"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635649"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67907073"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SOUNDEX ( character_expression )  
 ```  
   

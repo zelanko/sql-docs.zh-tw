@@ -20,12 +20,12 @@ ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cb8be487b665e49a79a74d398ff2e3fbabd3a2e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70123179"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635684"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "70123179"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 RIGHT ( character_expression , integer_expression )  
 ```  
   

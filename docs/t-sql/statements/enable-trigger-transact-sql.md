@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd6c1ce26dc17f9dc82ebc6f9a5e3284ba29372a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73980940"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635958"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "73980940"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  

@@ -16,12 +16,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0a3e8235159268461b2b90ed1644711a8a678dec
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77478486"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635615"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "77478486"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
@@ -50,7 +50,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 <order_clause>   
 選擇性地使用 `WITHIN GROUP` 子句指定串連結果的順序：
 
-```
+```syntaxsql
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   

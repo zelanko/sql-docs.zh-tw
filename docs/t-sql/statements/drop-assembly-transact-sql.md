@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c9766ee7bf37a1f342a94e10437806e3d4bd9a5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984288"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635796"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67984288"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]  
 [ WITH NO DEPENDENTS ]  
 [ ; ]  

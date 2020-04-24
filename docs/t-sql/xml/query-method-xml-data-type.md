@@ -1,7 +1,7 @@
 ---
 title: query() 方法 (xml 資料類型) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/26/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9501e1cf2b6c34ba3cf0ff4494866e2a32d16366
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278168"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636108"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "72278168"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 query ('XQuery')  
 ```  
@@ -45,7 +45,7 @@ XQuery
   
 查詢會擷取 <`Features`> 元素的 <`ProductDescription`> 子元素：  
   
-```  
+```sql
 declare @myDoc xml  
 set @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
@@ -70,7 +70,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. 使用針對 XML 類型資料行的 query() 方法  
 在下列查詢中，**query()** 方法是用以指定 XQuery，以針對 **AdventureWorks** 資料庫中 **xml** 類型的 **CatalogDescription** 資料行進行查詢：  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -100,7 +100,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 請注意，query() 與 exist() 方法都會宣告 PD 前置詞。 在此情況下，您可以使用 WITH XMLNAMESPACES 先定義前置詞並在查詢中使用它。  
   
-```  
+```sql
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  

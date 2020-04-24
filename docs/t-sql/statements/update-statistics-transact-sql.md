@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b33e22b3d6575e7f83572eeca5692d538b58a16b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0aa0779fda49749c2ab3c35cbb5ccc37e94526cd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77253323"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636255"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "77253323"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 UPDATE STATISTICS table_or_indexed_view_name   
@@ -71,7 +71,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_contant ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
@@ -211,7 +211,7 @@ EXEC sp_updatestats;
 ### <a name="pdw--sql-data-warehouse"></a>PDW / SQL 資料倉儲  
  PDW / SQL 資料倉儲不支援下列語法  
   
-```sql  
+```syntaxsql
 update statistics t1 (a,b);   
 ```  
   

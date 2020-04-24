@@ -37,12 +37,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b35445b9b04eafb6d8d302c8627c08ca90bd745e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68027656"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635535"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68027656"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 <search_condition> ::=  
@@ -93,7 +93,7 @@ ms.locfileid: "68027656"
     edge_table_name | edge_table_alias
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 < search_condition > ::=   

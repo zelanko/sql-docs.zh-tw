@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90062e6297aa29fb9cab5d00d02d7768cc154969
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314585"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635662"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "71314585"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  

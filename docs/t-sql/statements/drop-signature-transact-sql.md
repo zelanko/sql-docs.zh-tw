@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f36f0bc8b70a371e61f309ac61b7b0d769135429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d30eb8ff3b4d07fc890fd9c0392a843faefa5bb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929209"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635187"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67929209"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP [ COUNTER ] SIGNATURE FROM module_name   
     BY <crypto_list> [ ,...n ]  

@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 51b327832b5ad5cae52791efdbf1df756aade3a5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981949"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636324"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "73981949"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 Execute a stored procedure or function  
@@ -108,7 +108,7 @@ Execute a pass-through command against a linked server
 }  
 ```  
   
-```  
+```syntaxsql
 -- In-Memory OLTP   
 
 Execute a natively compiled, scalar user-defined function  
@@ -132,7 +132,7 @@ Execute a natively compiled, scalar user-defined function
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Database   
   
 Execute a stored procedure or function  
@@ -181,7 +181,7 @@ Execute a character string
   
 ```  
   
-```sql  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  

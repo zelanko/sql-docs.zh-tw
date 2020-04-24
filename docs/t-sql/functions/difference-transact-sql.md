@@ -20,12 +20,12 @@ ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe01e0d9465495cbf4943ba7867ebf262a1f3dd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 09e8cfbb79e615fea56f6d75222d906555b6a617
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135933"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636365"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68135933"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DIFFERENCE ( character_expression , character_expression )  
 ```  
   

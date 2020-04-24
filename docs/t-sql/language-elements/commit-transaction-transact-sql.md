@@ -29,12 +29,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a3e654527c1672f9b26d5e36d198ee860c9ffa0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278102"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635862"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,14 +45,14 @@ ms.locfileid: "72278102"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Applies to SQL Server (starting with 2008) and Azure SQL Database
   
 COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 -- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 

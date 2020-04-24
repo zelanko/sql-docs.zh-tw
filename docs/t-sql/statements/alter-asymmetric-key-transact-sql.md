@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6ab1fd9a4b56e79df19c5268df4c6be2ea1544c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066067"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636308"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68066067"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>  
   
 <alter_option> ::=  
