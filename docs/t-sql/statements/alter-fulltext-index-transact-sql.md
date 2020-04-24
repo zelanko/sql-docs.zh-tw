@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67da1af502e52e31e4e96709250ac27b681c7fe4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981810"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628095"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73981810"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   

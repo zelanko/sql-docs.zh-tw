@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b97033c391c3c80eedb95f9db92b09b44d28b0e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 47898e97b678478528c6359487efe70817127706
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662916"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628212"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "80662916"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]

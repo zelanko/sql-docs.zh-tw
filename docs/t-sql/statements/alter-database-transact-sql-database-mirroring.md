@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065823"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628838"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像
 
@@ -42,7 +42,7 @@ ms.locfileid: "68065823"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 
 ALTER DATABASE database_name
 SET { <partner_option> | <witness_option> }

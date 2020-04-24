@@ -13,12 +13,12 @@ ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54922dc96874142d216e7aedb8c80a44ce40ab31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4a1ea2729261ee6ecbe5659286aed03c2a2a2527
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898039"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626268"
 ---
 # <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67898039"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Drop an external data source  
 DROP EXTERNAL DATA SOURCE external_data_source_name  
 [;]  

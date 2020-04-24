@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119111"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487108"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
 
@@ -37,7 +37,7 @@ ms.locfileid: "81119111"
 
 ### <a name="other-considerations"></a>其他考量
 
-+ 套件必須與您擁有的 Python 版本相容。 如需每個 SQL Server 版本所隨附 Python 版本的詳細資訊，請參閱[什麼是 SQL Server 機器學習服務 (Python 與 R) 中的 Python 與 R 版本](../what-is-sql-server-machine-learning.md#versions)
++ 套件必須與您擁有的 Python 版本相容。 如需每個 SQL Server 版本所隨附 Python 版本的詳細資訊，請參閱[什麼是 SQL Server 機器學習服務 (Python 與 R) 中的 Python 與 R 版本](../sql-server-machine-learning-services.md#versions)
 
 + Python 套件程式庫位於 SQL Server 執行個體的 Program Files 資料夾中，而且根據預設，在此資料夾中安裝需要系統管理員權限。 如需詳細資訊，請參閱[套件程式庫位置](../package-management/python-package-information.md#default-python-library-location)。
 

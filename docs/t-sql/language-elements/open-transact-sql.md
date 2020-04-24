@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c10d9b9b77a052d52a91ffec8b51da035b02355b
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121930"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630920"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68121930"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  

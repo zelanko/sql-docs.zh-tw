@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 769db958d51c5b86b9a021c0de7142735651f0a2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065888"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629276"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68065888"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  

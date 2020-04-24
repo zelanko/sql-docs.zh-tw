@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f07c056e903f1036bfba15398f7cf54a1985f2d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 877b9ece1fb88f8e46b4d986645fe051fba5fdd7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116411"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487417"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Python 教學課程：在 SQL Server 機器學習服務中使用線性迴歸來預測滑雪工具租用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在這個教學課程系列中 (總共四個部分)，您將在 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)中使用 Python 和線性迴歸來預測滑雪工具租用的數目。 本教學課程使用 [Azure Data Studio 中的 Python 筆記本](../../azure-data-studio/sql-notebooks.md)，但您也可以使用自己的 Python 整合式開發環境 (IDE)。
+在這個教學課程系列中 (總共四個部分)，您將在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中使用 Python 和線性迴歸來預測滑雪工具租用的數目。 本教學課程使用 [Azure Data Studio 中的 Python 筆記本](../../azure-data-studio/sql-notebooks.md)，但您也可以使用自己的 Python 整合式開發環境 (IDE)。
 
 假設您擁有滑雪工具租用公司，而且想要預測未來日期的租用次數。 此資訊可協助您準備好庫存、員工和設備。
 

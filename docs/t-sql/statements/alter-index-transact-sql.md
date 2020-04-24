@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df7cf2a11b25f3eaac69374cf28b843e5552e956
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: aad9f7204073590927cdbecdf237038311bb686d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80464367"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627958"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "80464367"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER INDEX { index_name | ALL } ON <object>  
@@ -146,7 +146,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  

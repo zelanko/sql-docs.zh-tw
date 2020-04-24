@@ -9,12 +9,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 13488d4ab9fe2622322eb6e66c653391ff4415b3
-ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
+ms.openlocfilehash: 084296bdca618bdf2810aab9e03c2dae4061fb68
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80625513"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630128"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "80625513"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse
 
 -- Rename a table.
@@ -35,7 +35,7 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 
 ```
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 -- Rename a table

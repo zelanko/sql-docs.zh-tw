@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ac49128d0f619700fa70c333017d386a3b96b2b
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001631"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626685"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68001631"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  

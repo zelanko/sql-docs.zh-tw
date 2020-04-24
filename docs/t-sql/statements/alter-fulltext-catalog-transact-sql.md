@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef51acaadef3f0d483607c588086a597688c1e2f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065587"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628069"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68065587"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER FULLTEXT CATALOG catalog_name   
 { REBUILD [ WITH ACCENT_SENSITIVITY = { ON | OFF } ]  

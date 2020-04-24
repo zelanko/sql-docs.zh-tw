@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bcad612caa703a8100a03d401085013f559bfb3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982079"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627221"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982079"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER RESOURCE POOL { pool_name | "default" }  
 [WITH  
     ( [ MIN_CPU_PERCENT = value ]  

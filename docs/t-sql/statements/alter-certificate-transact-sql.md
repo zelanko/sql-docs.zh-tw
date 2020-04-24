@@ -23,12 +23,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30f81401f3f322f44d71df139e4f9cfafa6c9de8
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75871118"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629434"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "75871118"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER CERTIFICATE certificate_name   

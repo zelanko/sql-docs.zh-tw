@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118661"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487557"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 語言延伸模組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 延伸模組是 SQL Server 機器學習服務對關聯式資料庫引擎的附加元件之一。 此延伸模組會新增 R 執行環境、基底 R 發行版本 (含標準程式庫和工具)，以及 Microsoft R 程式庫：適用於大規模分析的 [RevoScaleR](../r/ref-r-revoscaler.md)、適用於機器學習演算法的 [MicrosoftML](../r/ref-r-microsoftml.md)，以及用來在 SQL Server 中存取資料或 R 程式碼的其他程式庫。
 
-[SQL Server R 服務](../r/sql-server-r-services.md)和 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)均提供 R 整合。
+[SQL Server R 服務](../r/sql-server-r-services.md)和 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)均提供 R 整合。
 
 ## <a name="r-components"></a>R 元件
 

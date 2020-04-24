@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 417fce6637f17b428f0e4d45404760088a8c0e20
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292183"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488579"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 
@@ -136,7 +136,7 @@ ms.locfileid: "71292183"
  如需如何設定此元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-content"></a>相關內容  
- Sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(原始檔案令人敬畏)。  
+ Sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)(原始檔案令人敬畏)。  
   
 ## <a name="raw-file-destination-editor-connection-manager-page"></a>原始檔案目的地編輯器 (連接管理員頁面)
   使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  

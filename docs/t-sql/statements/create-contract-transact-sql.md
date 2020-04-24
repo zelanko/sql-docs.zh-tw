@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2dfa25c21592affd2b348b14c32c12d7751aeb9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064643"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626118"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73064643"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 CREATE CONTRACT contract_name  
    [ AUTHORIZATION owner_name ]  

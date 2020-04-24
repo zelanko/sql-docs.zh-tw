@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f55e679b9e715dc4319b548c18acdb9aaad297c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1c81434a2ba9d20dd4d39b258534cd9c8bf32222
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118711"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487577"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 語言延伸模組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Python 延伸模組是 SQL Server 機器學習服務對關聯式資料庫引擎的附加元件之一。 該延伸模組會新增 Python 執行環境、Anaconda 散發與 Python 3.5 執行時間和解譯器、標準程式庫和工具，以及適用於 Python 的 Microsoft 產品程式庫：適用於大規模分析的 [revoscalepy](../python/ref-py-revoscalepy.md) 以及適用於機器學習演算法的 [microsoftml](../python/ref-py-microsoftml.md)。 
 
-Python 整合會安裝為 [SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)。
+Python 整合會安裝為 [SQL Server Machine Learning 服務](../sql-server-machine-learning-services.md)。
 
 安裝 Python 3.5 執行階段和解譯器可確保與標準 Python 解決方案幾乎完全相容。 Python 會在與 SQL Server 不同的程序中執行，以確保資料庫作業不會受到危害。
 

@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116221"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487305"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server 機器學習服務中使用 R 的資料結構、資料類型與物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -308,4 +308,4 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 如需在 SQL Server 機器學習服務中使用 R 的詳細資訊，請參閱下列文章：
 
 - [使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](quickstart-r-train-score-model.md)
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../what-is-sql-server-machine-learning.md)
+- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)

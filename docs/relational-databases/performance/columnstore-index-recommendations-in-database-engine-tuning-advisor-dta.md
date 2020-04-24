@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1d0086a6698c45d5c24d89f8e6a681d14051e11f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81481c540d1d9beee820e30120dfffba8a9cfe0f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74166002"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486797"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "74166002"
 ## <a name="see-also"></a>另請參閱
 [資料行存放區索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)      
-[教學課程：Database Engine Tuning Advisor](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
+[教學課程：Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
 
 
 

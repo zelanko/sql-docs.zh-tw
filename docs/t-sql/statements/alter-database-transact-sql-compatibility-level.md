@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba279273a8e0a477f24cc204abee7f29e2420e1e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288662"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629099"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -41,7 +41,7 @@ ms.locfileid: "79288662"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 ```

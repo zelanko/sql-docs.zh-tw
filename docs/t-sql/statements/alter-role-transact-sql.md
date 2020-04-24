@@ -22,12 +22,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2adf7404e80a0a04932c14b598011c1799b5611
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2af9386dc25fec5309d13d64f02ec8997f60792d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75546575"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626918"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "75546575"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server (starting with 2012) and Azure SQL Database  
   
 ALTER ROLE  role_name  
@@ -54,7 +54,7 @@ ALTER ROLE  role_name
 ```  
   
  
-```  
+```syntaxsql
 -- Syntax for SQL Server 2008, Azure SQL Data Warehouse and Parallel Data Warehouse
   
 -- Change the name of a user-defined database role  

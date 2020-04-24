@@ -1,5 +1,6 @@
 ---
 title: Microsoft SQL Server 的驅動程式歷程記錄 | Microsoft Docs
+description: 本頁面說明用來連線到 SQL Server 的 Microsoft 歷程記錄資料連線技術。
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
@@ -7,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 858e22e0f8ff3992e0a499c245255e2cc03ec12e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3724e9c616a17e490946888d2acc8c886a57545a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927761"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529065"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server 的驅動程式歷程記錄
 

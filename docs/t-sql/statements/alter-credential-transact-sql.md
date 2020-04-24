@@ -20,12 +20,12 @@ ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f6ac23553500fbf3092d9450b6f5a222863dc1dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d44c48ec6ca00a75aba7e2789de9314b1646e84d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065917"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629049"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68065917"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  

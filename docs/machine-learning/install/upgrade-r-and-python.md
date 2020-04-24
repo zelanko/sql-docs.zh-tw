@@ -7,13 +7,13 @@ ms.date: 04/03/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2958fcb3d1d64f43f0b463a3145e2c580e6792e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
+ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81119131"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487364"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 (Python 和 R) 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

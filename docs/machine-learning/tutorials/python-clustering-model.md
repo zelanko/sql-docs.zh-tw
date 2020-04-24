@@ -11,18 +11,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7112b89375251244ba54182197855e0bed412455
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4117596621141ced75e3cf013bfbc6048dbf52c4
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116521"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487360"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>教學課程：將 K-Means 叢集搭配 SQL Server 機器學習服務使用來分類客戶
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本教學課程系列中 (總共四個部分)，您將使用 Python 在 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)中開和部署 K-Means叢集模型，以叢集客戶資料。
+在本教學課程系列中 (總共四個部分)，您將使用 Python 在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中開和部署 K-Means叢集模型，以叢集客戶資料。
 
 在此系列的第一部分中，您將設定本教學課程的必要條件，然後將範例資料集還原至 SQL 資料庫。 在本系列稍後，您將使用 SQL Server 機器學習服務，在 Python 中定型和部署叢集模型。
 
@@ -44,7 +44,7 @@ K-Means 叢集是*非監督式學習*演算法，會根據相似性找出資料�
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)與 Python 語言選項 - 請遵循 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)中的安裝指示。
+* [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)與 Python 語言選項 - 請遵循 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)中的安裝指示。
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md)。 您會在 Azure Data Studio 中使用適用於 Python 與 SQL 的筆記本。 如需筆記本的詳細資訊，請參閱[如何在 Azure Data Studio 中使用筆記本](../../azure-data-studio/sql-notebooks.md)。
 

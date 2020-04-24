@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9ec1a44a84392ef0331e9fe243817bd782e6b1e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072376"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630857"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68072376"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 RETURN [ integer_expression ]   
 ```  

@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 33baeba807711c1eb65b3a9c972066bb384e2542
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116241"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487293"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務執行簡單的 R 指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此快速入門中，您將會使用 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)來執行一組簡單的 R 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
+在此快速入門中，您將會使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)來執行一組簡單的 R 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -249,4 +249,4 @@ WITH result sets((
 
 - [使用 SQL Server 機器學習服務撰寫進階 R 函數](quickstart-r-functions.md)
 - [使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](quickstart-r-train-score-model.md)
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../what-is-sql-server-machine-learning.md)
+- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)

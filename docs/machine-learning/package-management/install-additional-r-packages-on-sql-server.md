@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118111"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487106"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
@@ -250,4 +250,4 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 - 如需已安裝之 R 套件的詳細資訊，請參閱[取得 R 套件資訊](r-package-information.md)
 - 如需有關使用 R 套件的說明，請參閱[使用 R 套件的祕訣](tips-for-using-r-packages.md)
 - 如需有關安裝 Python 套件的詳細資訊，請參閱[使用 pip 安裝 Python 套件](install-additional-python-packages-on-sql-server.md)
-- 如需 SQL Server 機器學習服務的詳細資訊，請參閱 [什麼是 SQL Server 機器學習服務 (Python 與 R)？](../what-is-sql-server-machine-learning.md)
+- 如需 SQL Server 機器學習服務的詳細資訊，請參閱 [什麼是 SQL Server 機器學習服務 (Python 與 R)？](../sql-server-machine-learning-services.md)

@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116141"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487268"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此快速入門中，您將會使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後透過 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)使用該模型來從新資料預測值。
+在此快速入門中，您將會使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後透過 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)使用該模型來從新資料預測值。
 
 您將建立並執行在 SQL 中執行的兩個預存程序。 第一個預存程序使用 R 隨附的 **mtcars** 資料集，並產生簡易的一般化線性模型 (GLM)，預測車輛已裝有手排變速箱的可能性。 第二個程序為評分用，會呼叫在第一個程式中產生的模型，並根據新資料輸出一組預測。 將 R 程式碼放入 SQL 預存程序後，作業會包含在 SQL 中、可重複使用，而且可由其他預存程序和用戶端應用程式呼叫。
 
@@ -222,4 +222,4 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 如需 SQL Server 機器學習服務的詳細資訊，請參閱：
 
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../what-is-sql-server-machine-learning.md)
+- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)

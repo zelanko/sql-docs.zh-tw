@@ -25,12 +25,12 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121783"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630230"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68121783"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } 
     [ ,...n ] [ ; ]  
 ```  

@@ -23,12 +23,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7469e9b19650c88986d4f0658d28a7e0481abf2a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121767"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630236"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>設定運算子 - EXCEPT 和 INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ INTERSECT 會傳回左右兩側輸入查詢運算子所輸出的相異資料列�
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { EXCEPT | INTERSECT }  
 { <query_specification> | ( <query_expression> ) }  

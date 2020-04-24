@@ -21,12 +21,12 @@ ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d91954b0533a2af86a8afefdf54ea16ada28286d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68742954"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625813"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 陳述式 - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +39,7 @@ ms.locfileid: "68742954"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 RESTORE LABELONLY   
 FROM <backup_device>   

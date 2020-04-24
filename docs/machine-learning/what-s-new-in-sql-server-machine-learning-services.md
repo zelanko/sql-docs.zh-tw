@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6042621491bfd26cb175b1a50d5a68374be41aa9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdb358c2414d40aa39ead1323eff90aefbb3081e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115701"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487013"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的新功能
 
@@ -43,7 +43,7 @@ ms.locfileid: "81115701"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 
-此版本新增 [Python 支援和領先業界的機器學習演算法](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) \(英文\)。 SQL Server 2017 引進為了反映新範圍而重新命名的 [SQL Server 機器學習服務 (資料庫內)](what-is-sql-server-machine-learning.md)，並針對 Python 和 R 提供語言支援。 
+此版本新增 [Python 支援和領先業界的機器學習演算法](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) \(英文\)。 SQL Server 2017 引進為了反映新範圍而重新命名的 [SQL Server 機器學習服務 (資料庫內)](sql-server-machine-learning-services.md)，並針對 Python 和 R 提供語言支援。 
 
 如需完整的功能公告，請參閱 [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)。
 
@@ -112,12 +112,6 @@ SQL Server 2019 會在您安裝具有資料庫引擎執行個體的機器學習�
 
 在 Linux 上，SQL Server 2017 不會有 R 或 Python 整合，但您可以在 Linux 上使用[原生評分](sql-native-scoring.md)，因為該功能是透過 (可在 Linux 上執行的) T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 提供。 原生評分可從預先定型的模型中進行高效能的評分，而不需要呼叫甚至要求 R 執行階段。
 ::: moniker-end
-
-<a name="azure-sql-database-roadmap"></a>
-
-## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL Database 中的機器學習服務
-
-Azure SQL Database 中的機器學習服務目前處於公開預覽狀態。 如需詳細資訊，請參閱 [Azure SQL Database 機器學習服務 (預覽)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) \(部分機器翻譯\)。
 
 ## <a name="next-steps"></a>後續步驟
 

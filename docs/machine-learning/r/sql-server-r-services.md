@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 25b21944db46a5054ad8765b83fe7e2985f8d894
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117221"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486697"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什麼是 SQL Server 2016 R Services？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "81117221"
 R 服務是 SQL Server 2016 中的一項功能，可讓您使用關聯式資料來執行 R 指令碼。 您可以使用開放原始碼套件和架構及 [Microsoft R 套件](#packages)，來進行預測性分析和機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server R Services 的基本概念。
 
 > [!Note]
-> 在 SQL Server 2017 和更新版本中，R 服務已重新命名為[機器學習服務](../what-is-sql-server-machine-learning.md)，並且同時支援 Python 與 R。
+> 在 SQL Server 2017 和更新版本中，R 服務已重新命名為[機器學習服務](../sql-server-machine-learning-services.md)，並且同時支援 Python 與 R。
 
 ## <a name="what-is-r-services"></a>什麼是 R 服務？
 
@@ -60,7 +60,7 @@ R 服務使用擴充性架構在 SQL Server 中執行 R 指令碼。 深入了�
 
 ## <a name="r-version"></a>R 版本
 
-R 3.2.2 版包含在 SQL Server 2016 R Services 中。 針對較新版本的 R，請使用 [SQL Server 2017 和更新版本的機器學習服務](../what-is-sql-server-machine-learning.md)。
+R 3.2.2 版包含在 SQL Server 2016 R Services 中。 針對較新版本的 R，請使用 [SQL Server 2017 和更新版本的機器學習服務](../sql-server-machine-learning-services.md)。
 
 <a name="packages"></a>
 

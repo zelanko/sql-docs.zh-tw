@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fecaea37ca01f7d005934c8b371d228bc0bb6b93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080936"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487704"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
 了解如何藉由設定 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的軸間隔，在圖表中變更類別 (x) 軸中標籤及刻度的數目。
@@ -22,7 +22,7 @@ ms.locfileid: "77080936"
 
 但在類別軸上 (通常是 x 軸)，有時自動軸間隔會產生沒有軸標籤的類別。 您可以在軸 Interval 屬性中指定所需間隔數。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會根據結果集中的資料，在執行階段計算間隔數。 如需如何計算軸間隔的詳細資訊，請參閱 [格式化圖表上的軸標籤](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
 
-若要嘗試使用範例資料設定軸間隔，請參閱[教學課程︰將直條圖新增至報表 (報表產生器)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)。
+若要嘗試使用範例資料設定軸間隔，請參閱[教學課程︰將直條圖新增至報表 (報表產生器)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)。
   
 > [!NOTE]  
 >  類別目錄軸通常是水平軸或 X 軸。 不過，如果是長條圖，類別目錄軸會是垂直軸或 Y 軸。  

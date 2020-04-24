@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117341"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486703"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>與 R 搭配使用的 SQL Server 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ SQL Server 的優點之一，就是能夠平行處理大量的資料列。 沒�
 
 您也可以將輸入資料當作單一查詢來傳送，然後由 SQL Server 分析查詢。 如果可以為輸入資料建立平行查詢計劃，該計劃就會自動分割指派給節點的資料，並以平行方式執行所需的聯結和彙總。
 
-如果您想要詳細了解如何定義用於評分的預存程序，請參閱 [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) 上的專案範例，並尋找 "step5_score_for_matching.sql" 檔案。 指令碼範例也會追蹤查詢的開始和結束時間，並將時間寫入到 SQL 主控台，以便您評估效能。
+如果您想要詳細了解如何定義用於評分的預存程序，請參閱 [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) 上的專案範例，並尋找 "step5_score_for_matching.sql" 檔案。 指令碼範例也會追蹤查詢的開始和結束時間，並將時間寫入到 SQL 主控台，以便您評估效能。
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>使用資源群組進行並行評分
 
@@ -214,7 +214,7 @@ SQL Server 的優點之一，就是能夠平行處理大量的資料列。 沒�
 
 - 每個工作負載群組都必須處理兩個評分工作。 一旦有工作完成資料讀取並開始評分，另一個工作就可以開始從資料庫讀取資料。
 
-若要查看此案例的 PowerShell 指令碼，請開啟 [Github 專案](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)中的 experiment.ps1 檔案。
+若要查看此案例的 PowerShell 指令碼，請開啟 [Github 專案](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)中的 experiment.ps1 檔案。
 
 ### <a name="storing-models-for-prediction"></a>儲存用於預測的模型
 

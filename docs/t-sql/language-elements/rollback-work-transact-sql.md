@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa0687784a5a0a48ea2c7c610c6553391254c836
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072347"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630532"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68072347"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ROLLBACK [ WORK ]  
 [ ; ]  

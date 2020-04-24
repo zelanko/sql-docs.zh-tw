@@ -22,12 +22,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f88189f20d30795c563f48a40a6779a8d032ebfa
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927181"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627018"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67927181"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER ROUTE route_name  
 WITH    

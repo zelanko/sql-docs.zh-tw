@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b08bd61a0150b0e3711219eea783985f80ffd72f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c06f82cd14eab26a7b49d754b767f6b48d52d351
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70745305"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627282"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70745305"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  

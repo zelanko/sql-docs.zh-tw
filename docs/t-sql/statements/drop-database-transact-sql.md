@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 33d646e553f10b10e0dcae65bc931b250f5900e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982195"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626433"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -42,12 +42,12 @@ ms.locfileid: "73982195"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- SQL Server Syntax
 DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ] [;]
 ```
 
-```
+```syntaxsql
 -- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```

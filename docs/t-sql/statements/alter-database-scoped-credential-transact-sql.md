@@ -17,12 +17,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d4fc71583bf972b2def20d78a69001f00d14966d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea1b71ee9cce9124427c5d23e46d5d123826c98b
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065828"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628695"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68065828"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  

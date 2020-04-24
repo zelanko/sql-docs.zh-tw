@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80a1df40d0c7bd5122d64ccc0d63fa2753844804
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927220"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627105"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67927220"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER REMOTE SERVICE BINDING binding_name   
    WITH [ USER = <user_name> ] [ , ANONYMOUS = { ON | OFF } ]   

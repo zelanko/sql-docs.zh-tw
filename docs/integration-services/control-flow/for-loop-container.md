@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294147"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488165"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
 
@@ -72,8 +72,6 @@ ms.locfileid: "71294147"
 
 ##  <a name="configure-the-for-loop-container"></a>設定 For 迴圈容器
 此程序描述如何使用 [For 迴圈編輯器]  對話方塊設定「For 迴圈」容器。  
-  
- 如需 For 迴圈容器的範例，請參閱 bimonkey.com 上的 [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295)。  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，按兩下「For 迴圈」容器以開啟 [For 迴圈編輯器]  。  
   

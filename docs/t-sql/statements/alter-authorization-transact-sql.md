@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01fc7ed0e32df7c5c3465f85b5358c2c359fc767
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 953faba1da7f4fbe1283d3aacf74a1c3e902ed2f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215909"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629948"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "80215909"
     
 ## <a name="syntax"></a>語法    
     
-```    
+```syntaxsql
 -- Syntax for SQL Server  
 ALTER AUTHORIZATION    
    ON [ <class_type>:: ] entity_name    
@@ -60,7 +60,7 @@ ALTER AUTHORIZATION
     }    
 ```    
 
-```
+```syntaxsql
 -- Syntax for SQL Database  
   
 ALTER AUTHORIZATION    
@@ -79,7 +79,7 @@ ALTER AUTHORIZATION
 ```    
 
     
-```    
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -99,7 +99,7 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-```    
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER AUTHORIZATION ON    

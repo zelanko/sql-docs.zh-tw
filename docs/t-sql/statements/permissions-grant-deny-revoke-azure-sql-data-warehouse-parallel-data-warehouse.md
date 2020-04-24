@@ -14,12 +14,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2aa15e60680419fc2f6c74034ce7063ecabdbf77
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255472"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626028"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "75255472"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Azure SQL Data Warehouse and Parallel Data Warehouse  
 GRANT   
     <permission> [ ,...n ]  

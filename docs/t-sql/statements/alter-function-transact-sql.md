@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62b4b1a9d98e289590b35e463add7125f6421cc5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982855"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628346"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73982855"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax    
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -54,7 +54,7 @@ RETURNS return_data_type
 [ ; ]
 ```  
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -69,7 +69,7 @@ RETURNS TABLE
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- Transact-SQL Multistatement Table-valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -87,7 +87,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 [ ; ]  
 ```
 
-```  
+```syntaxsql
 -- Transact-SQL Function Clauses   
 <function_option>::=   
 {  
@@ -147,7 +147,7 @@ column_name AS computed_column_expression
 }  
 ```
   
-```
+```syntaxsql
 -- CLR Scalar and Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type   
@@ -160,7 +160,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- CLR Function Clauses
 <method_specifier>::=  
     assembly_name.class_name.method_name  
@@ -177,7 +177,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for In-Memory OLTP: Natively compiled, scalar user-defined function  
 ALTER FUNCTION [ schema_name. ] function_name    
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   

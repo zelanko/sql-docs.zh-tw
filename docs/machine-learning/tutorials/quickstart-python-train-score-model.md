@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116291"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487317"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測以 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)所產生新資料的值。
+在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測以 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)所產生新資料的值。
 
 您將建立並執行在 SQL 中執行的兩個預存程序。 第一個預存程序使用傳統的鳶尾花資料集，並產生貝氏機率分類模型，以根據花卉特徵來預測鳶尾花的品種。 第二個程序為評分用，會呼叫在第一個程式中產生的模型，並根據新資料輸出一組預測。 將 Python 程式碼放入 SQL 預存程序後，作業會包含在 SQL 中、可重複使用，而且可由其他預存程序和用戶端應用程式呼叫。
 
@@ -186,4 +186,4 @@ ms.locfileid: "81116291"
 
 如需 SQL Server 機器學習服務的詳細資訊，請參閱：
 
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../what-is-sql-server-machine-learning.md)
+- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)

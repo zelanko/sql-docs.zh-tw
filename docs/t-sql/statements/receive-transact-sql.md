@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c507b1f78ff46df62c6326eddb6df11e8fe2960
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211436"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630133"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "70211436"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   

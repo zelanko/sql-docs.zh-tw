@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 655a11c718cc26a2816e1583357194a827e9cf97
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982027"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627156"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "73982027"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER RESOURCE GOVERNOR   
       { DISABLE | RECONFIGURE }  
     | WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  

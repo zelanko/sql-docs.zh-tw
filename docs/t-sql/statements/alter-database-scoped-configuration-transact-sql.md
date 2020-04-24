@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c43d6da25aa93b146346ff45057edba9445ebab
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288970"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629048"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -64,7 +64,7 @@ ms.locfileid: "78288970"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 ALTER DATABASE SCOPED CONFIGURATION
@@ -110,7 +110,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 變更為 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 變更為 `BATCH_MODE_ADAPTIVE_JOINS`
 
-```
+```syntaxsql
 -- Synatx for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION

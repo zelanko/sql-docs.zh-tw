@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a28f86d1e5a87f41a8894dad22f4cf887602af02
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71227162"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628096"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71227162"
 
 ## <a name="syntax"></a>語法  
 
-```  
+```syntaxsql
 -- Modify an external data source
 -- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET

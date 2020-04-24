@@ -10,12 +10,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbd815ee666f4f3a2fd144dd08161bbbf57d0fbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75623255"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488344"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "75623255"
  使用 SQL Server 2016 Upgrade Advisor 的 Stretch Database Advisor 功能來識別適用於 Stretch Database 的資料庫和資料表。 如需詳細資訊，請參閱 [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。 若要深入了解潛在的封鎖問題，請參閱 [Stretch Database 的介面區限制和封鎖問題](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
 
 ## <a name="test-drive-stretch-database"></a>試用 Stretch Database  
- **透過 AdventureWorks 範例資料庫試用 Stretch Database。** 若要取得 AdventureWorks 範例資料庫，至少要從 [這裡](https://www.microsoft.com/download/details.aspx?id=49502)。 將範例資料庫還原到 SQL Server 2016 的執行個體後，請將範例檔案解壓縮，然後從 Stretch DB 資料夾開啟 Stretch DB 範例檔案。 執行此檔案中的指令碼，以檢查您的資料在啟用 Stretch Database 前後所使用的空間，進而追蹤資料遷移的進度，並確認您可在資料遷移期間和遷移後繼續查詢現有資料和插入新資料。  
+ **透過 AdventureWorks 範例資料庫試用 Stretch Database。** 若要取得 AdventureWorks 範例資料庫，至少要從 [這裡](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。 將範例資料庫還原到 SQL Server 2016 的執行個體後，請將範例檔案解壓縮，然後從 Stretch DB 資料夾開啟 Stretch DB 範例檔案。 執行此檔案中的指令碼，以檢查您的資料在啟用 Stretch Database 前後所使用的空間，進而追蹤資料遷移的進度，並確認您可在資料遷移期間和遷移後繼續查詢現有資料和插入新資料。  
   
 ## <a name="next-step"></a>後續步驟  
  **識別屬於 Stretch Database 對象的資料庫和資料表。** 下載並執行 Data Migration Assistant，以識別可用於 Stretch Database 的資料庫與資料表。 如需詳細資訊，請參閱 [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  

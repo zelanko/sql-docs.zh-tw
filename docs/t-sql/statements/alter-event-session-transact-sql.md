@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08454c76591d7cfb12eff07d3a05d706bd7bfe44
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065665"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628366"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68065665"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  

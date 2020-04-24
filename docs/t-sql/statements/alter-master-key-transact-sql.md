@@ -27,12 +27,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 595ee690e4b0fdeadd3fd4d9651a1d3b46c16597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071290"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627708"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "68071290"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER MASTER KEY <alter_option>
@@ -61,7 +61,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { SERVICE MASTER KEY | PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 -- Note: DROP ENCRYPTION BY SERVICE MASTER KEY is not supported on Azure SQL Database.
 
@@ -79,7 +79,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
 ALTER MASTER KEY <alter_option>

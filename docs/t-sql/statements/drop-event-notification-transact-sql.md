@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: befa0085a7fc1a52ae02ba9443617b0593bb14ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ca49dc2a1e58653f3a860e2ed8ff2c479d62d43
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910054"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626316"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67910054"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 DROP EVENT NOTIFICATION notification_name [ ,...n ]  
 ON { SERVER | DATABASE | QUEUE queue_name }  

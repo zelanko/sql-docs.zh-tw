@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 19935bbcaba9b856ff04b5c618de3b3643e48732
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117571"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486767"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的效能：結果和資源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -351,7 +351,7 @@ CPU 親和性會在繼續比對案例中強制執行，以評估對 R 作業的�
 
 + 描述繼續比對解決方案的文章：[適用於 SQL Server R Services 的最佳化秘訣和訣竅](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/) \(英文\)
 
-+ 繼續比對解決方案之 SQL 最佳化中所使用的指令碼：[GitHub 存放庫](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ 繼續比對解決方案之 SQL 最佳化中所使用的指令碼：[GitHub 存放庫](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)
 
 ### <a name="learn-about-windows-server-management"></a>了解 Windows Server 管理
 

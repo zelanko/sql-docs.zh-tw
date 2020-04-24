@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a3906278e7d4770fa71a8931b3889f9f03d955a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594396"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629376"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73594396"
   
 ## <a name="syntax"></a>語法  
   
-```sql  
+```syntaxsql
 ALTER COLUMN ENCRYPTION KEY key_name   
     [ ADD | DROP ] VALUE   
     (  

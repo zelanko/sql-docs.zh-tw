@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d2fc50b3c22e309194cfdbb880219f04dcc69d6
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071251"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627411"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68071251"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER PARTITION FUNCTION partition_function_name()  
 {   

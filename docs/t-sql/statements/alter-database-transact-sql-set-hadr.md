@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0407934e060a6398bbe862ba7c208ece37496732
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065729"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628716"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68065729"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER DATABASE database_name  
    SET HADR   

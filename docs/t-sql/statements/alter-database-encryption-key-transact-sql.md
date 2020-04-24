@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0d802610bd6aa56cb847313e413b0826ce32832
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065867"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628946"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68065867"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER DATABASE ENCRYPTION KEY  
@@ -47,7 +47,7 @@ ALTER DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  

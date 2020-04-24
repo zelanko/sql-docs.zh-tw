@@ -18,12 +18,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1096fab5377ff448ba4ea17b6444cca16b71f8f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072278"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630316"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68072278"
 ## <a name="syntax"></a>語法  
 SQL Server 和 Azure SQL Database 的語法：
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -61,7 +61,7 @@ SET
 }   
 ```  
 Azure SQL 資料倉儲和平行處理資料倉儲的語法：  
-```sql  
+```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   

@@ -23,12 +23,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007172"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488007"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>啟用資料表或索引的壓縮
 
@@ -211,7 +211,7 @@ ms.locfileid: "68007172"
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會先執行 `sp_estimate_data_compression_savings` 預存程序以傳回物件的估計大小 (如果要使用 ROW 壓縮設定的話)。 然後，此範例會針對指定資料表中的所有資料分割啟用 ROW 壓縮。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
@@ -229,7 +229,7 @@ ms.locfileid: "68007172"
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會先查詢 `sys.indexes` 目錄檢視以傳回 `index_id` 資料表上每個索引的名稱和 `Production.TransactionHistory` 。 然後，它會執行 `sp_estimate_data_compression_savings` 預存程序以傳回指定索引識別碼的估計大小 (若要使用 PAGE 壓縮設定)。 最後，此範例會重建索引識別碼 2 (`IX_TransactionHistory_ProductID`)，並指定 PAGE 壓縮。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, index_id  

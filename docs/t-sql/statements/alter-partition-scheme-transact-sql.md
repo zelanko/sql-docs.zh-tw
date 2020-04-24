@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c701ad852eb7c33dbf2721be765d2df9fe36f1cd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071245"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627155"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "68071245"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 ALTER PARTITION SCHEME partition_scheme_name   
 NEXT USED [ filegroup_name ] [ ; ]  

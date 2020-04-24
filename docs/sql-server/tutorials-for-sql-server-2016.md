@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fde2b4aa622d420795422dd614ad313106dd586e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665387"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488347"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供可協助您了解新技術和功能的教學課程。 舊版的教學課程通常可用於較新版本。 當教學課程提及較新的功能時，將指出完成該教學課程所需的最低版本。  
      
--   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。    
+-   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。    
 -   若要下載 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表搭配 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 教學課程使用，請前往 [SQL Server 2012 的 Power View 範例](https://go.microsoft.com/fwlink/?LinkId=220734)。  
 - 查看 [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub 存放庫上提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 範例。 
 

@@ -23,12 +23,12 @@ ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93760cce943a9898797b79daab53a3d0f064f5e6
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026487"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626417"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68026487"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  

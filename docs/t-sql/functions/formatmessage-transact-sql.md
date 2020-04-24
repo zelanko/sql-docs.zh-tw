@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e445d123ca23564dfbd7a922a3bed5657d91760
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843760"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625689"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73843760"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )  
 ```  
   

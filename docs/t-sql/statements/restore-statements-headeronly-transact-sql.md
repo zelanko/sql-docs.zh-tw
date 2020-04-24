@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 373499b03384d44baa5a96cf49527aaf45063c5c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486586"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625817"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "79486586"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 RESTORE HEADERONLY   
 FROM <backup_device>   

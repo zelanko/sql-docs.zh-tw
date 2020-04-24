@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7151d375385cc7af54a68a141274a033011759e6
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 87cea1d05376669292edb824631c3834328763f0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "81119071"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487177"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的已知問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-此文章說明機器學習元件的已知問題或限制，這類元件會在 [SQL Server 機器學習服務](what-is-sql-server-machine-learning.md)和 [SQL Server 2016 R Services](r/sql-server-r-services.md) 中提供來作為選項。
+此文章說明機器學習元件的已知問題或限制，這類元件會在 [SQL Server 機器學習服務](sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](r/sql-server-r-services.md) 中提供來作為選項。
 
 ## <a name="setup-and-configuration-issues"></a>安裝和設定問題
 
