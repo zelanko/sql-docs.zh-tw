@@ -10083,8 +10083,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 部署
           href: sql-server/partner-dev-sql-server.md
-    - name: 使用 Help Viewer 的本機內容
-      href: sql-server/sql-server-help-installation.md
+    - name: 離線 SQL Server 文件
+      href: sql-server/sql-server-offline-documentation.md
 - name: 參考
   items:
     - name: 封存的內容 (SQL 2005 - 2012) >
