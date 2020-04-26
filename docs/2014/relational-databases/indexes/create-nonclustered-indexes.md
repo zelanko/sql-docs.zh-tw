@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62651487"
 ---
 # <a name="create-nonclustered-indexes"></a>建立非叢集索引
@@ -30,39 +30,39 @@ ms.locfileid: "62651487"
   
 -   **開始之前：**  
   
-     [一般的實現](#Implementations)  
+     [一般實作](#Implementations)  
   
      [安全性](#Security)  
   
--   **若要建立非叢集索引，請使用：**  
+-   **若要建立非叢集索引，使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Implementations"></a>一般的實現  
+###  <a name="typical-implementations"></a><a name="Implementations"></a>一般的實現  
  非叢集索引的實作方法如下：  
   
 -   **UNIQUE 條件約束**  
   
-     當您建立 UNIQUE 條件約束時，依預設會建立唯一的非叢集索引，以強制 UNIQUE 條件約束。 若資料表上還沒有叢集索引，您可以指定唯一叢集索引。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+     當您建立 UNIQUE 條件約束時，依預設會建立唯一的非叢集索引，以強制 UNIQUE 條件約束。 若資料表上還沒有叢集索引，您可以指定唯一叢集索引。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
--   **與條件約束無關的索引**  
+-   **獨立於條件限制之外的索引**  
   
      依預設，若是未指定叢集索引，則會建立非叢集索引。 每個資料表可建立的最大非叢集索引數目是 999 個。 這包含 PRIMARY KEY 或 UNIQUE 條件約束所建立的任何索引，但不包含 XML 索引。  
   
--   **索引視圖上的非叢集索引**  
+-   **索引檢視上的非叢集索引**  
   
      在檢視上建立唯一的叢集索引後，就可以建立非叢集索引。 如需詳細資訊，請參閱 [建立索引檢視表](../views/views.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>若要使用資料表設計工具建立非叢集索引  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62651487"
   
 7.  在方格中，選取 [建立成 CLUSTERED]****，然後從屬性右邊的下拉式清單中選擇 [否]****。  
   
-8.  按一下 [關閉]  。  
+8.  按一下 **關閉**。  
   
-9. **在 [檔案**] 功能表上，按一下 [**儲存**_table_name_]。  
+9. 在 [檔案]**** 功能表上，按一下 [儲存 _資料表名稱_]****。  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>若要使用物件總管建立非叢集索引  
   
@@ -92,19 +92,19 @@ ms.locfileid: "62651487"
   
 3.  展開您要建立非叢集索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
+4.  以滑鼠右鍵按一下 [**索引**] 資料夾，指向 [**新增索引**]，然後選取 [**非叢集索引**]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
 6.  在 [**索引鍵資料行**] 下，按一下 [**新增**]。  
   
-7.  在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至非叢集索引之資料表資料行或資料行的核取方塊。  
+7.  在 [從 _資料表名稱_ 選取資料行]**** 對話方塊中，選取要加入非叢集索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 [確定]  。  
   
-9. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
+9. 在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>若要在資料表上建立非叢集索引  
   

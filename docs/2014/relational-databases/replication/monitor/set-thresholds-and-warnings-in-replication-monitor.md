@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667181"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
@@ -49,13 +49,13 @@ ms.locfileid: "62667181"
   
  **本主題內容**  
   
--   [設定交易式發行集的臨界值和警告](#Transactional)  
+-   [設定交易式發行集的臨界值與警告](#Transactional)  
   
 -   [設定合併式發行集的臨界值和警告](#Merge)  
   
 -   [設定快照式發行集的臨界值和警告](#Snapshot)  
   
-##  <a name="Transactional"></a>若要設定交易式發行集的臨界值和警告  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> 若要設定交易式發行集的臨界值與警告  
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62667181"
   
 4.  在 **[臨界值]** 資料行中設定警告的臨界值。 例如，如果您在步驟 3 選取 **[若延遲超過臨界值，就發出警告]** ，便可以在 **[臨界值]** 資料行中選取 **[60 秒]** 的延遲。  
   
-5.  按一下 [儲存變更]****。  
+5.  按一下 **[儲存變更]** 。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>若要設定臨界值的警示  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62667181"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
-##  <a name="Merge"></a>設定合併式發行集的臨界值和警告  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>設定合併式發行集的臨界值和警告  
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
@@ -95,19 +95,19 @@ ms.locfileid: "62667181"
   
 3.  透過選取適當的核取方塊啟用警告：  
   
-    -   **如果訂用帳戶將在閾值內過期，就發出警告**  
+    -   **[若訂閱將在臨界值內過期，就發出警告]**  
   
-    -   **如果撥號連線的合併長度超過臨界值，則發出警告**  
+    -   **如果撥號連接的合併長度超過臨界值，則發出警告**  
   
     -   **如果 LAN 連接的合併長度超過臨界值，則發出警告**  
   
     -   **如果 LAN 連接的每秒合併資料列少於臨界值，則發出警告**  
   
-    -   **如果撥號連線的每秒合併資料列少於臨界值，則發出警告**  
+    -   **如果撥號連接之每秒的合併資料列少於臨界值，則發出警告**  
   
 4.  在 **[臨界值]** 資料行中設定警告的臨界值。 例如，如果您在步驟 3 選取 **[若撥號連接的合併長度超過臨界值，就發出警告]** ，便可以在 **[臨界值]** 資料行中選取 **[10 分鐘]** 的時間。  
   
-5.  按一下 [儲存變更]****。  
+5.  按一下 **[儲存變更]** 。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>若要設定臨界值的警示  
   
@@ -127,9 +127,9 @@ ms.locfileid: "62667181"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
-##  <a name="Snapshot"></a>設定快照式發行集的臨界值和警告  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a>設定快照式發行集的臨界值和警告  
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62667181"
   
 4.  在 **[臨界值]** 資料行中設定警告的臨界值。 例如，可在 **[臨界值]** 資料行中選取值 **[70%]** 。  
   
-5.  按一下 [儲存變更]****。  
+5.  按一下 **[儲存變更]** 。  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>若要設定臨界值的警示  
   
@@ -159,7 +159,7 @@ ms.locfileid: "62667181"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../monitoring-replication.md)  

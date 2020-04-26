@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721035"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 課：建立合併式發行集的訂閱
@@ -58,7 +58,7 @@ ms.locfileid: "62721035"
   
 ### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>為訂閱建立已篩選資料快照集  
   
-1.  連接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，展開伺服器節點，然後展開 [複寫]**資料夾。**  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
 2.  在 [本機發行集]**** 資料夾中，以滑鼠右鍵按一下 [AdvWorksSalesOrdersMerge]**** 發行集，然後按一下 [屬性]****。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "62721035"
  您已順利建立合併式發行集的訂閱，並為新訂閱的資料分割產生已篩選快照集，因此在訂閱初始化時，即可使用此快照集。 下一步，您將授與權限給訂閱資料庫上的合併代理程式，並執行合併代理程式以啟動同步處理並初始化訂閱。 請參閱 [第 3 課：同步處理合併式發行集的訂閱](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [訂閱發行集](subscribe-to-publications.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [具有參數化篩選之合併式發行集的快照集](snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [含參數化篩選之合併式發行集的快照集](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

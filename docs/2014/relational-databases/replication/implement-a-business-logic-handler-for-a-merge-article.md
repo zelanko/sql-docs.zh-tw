@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721199"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
@@ -48,9 +48,9 @@ ms.locfileid: "62721199"
   
      [複寫程式設計](#ReplProg)  
   
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+     [Replication Management Objects （RMO）](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> 使用複寫程式設計  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> 使用複寫程式設計  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>建立及部署商務邏輯處理常式  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62721199"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|Location|  
+    |組件參考|位置|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  
@@ -112,7 +112,7 @@ ms.locfileid: "62721199"
   
 1.  執行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)、 **@publication**指定、 **@article**、的**article_resolver**值**@property**，以及的商務邏輯處理常式的易記名稱。 **@value**  
   
-###  <a name="TsqlExample"></a> 範例 (複寫程式設計)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 範例 (複寫程式設計)  
  這個範例會示範建立稽核記錄的商務邏輯處理常式。  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -123,7 +123,7 @@ ms.locfileid: "62721199"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../snippets/tsql/SQL15/replication/howto/tsql/registerblh_10.sql#sp_registerblh_10)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>建立商務邏輯處理常式  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62721199"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|Location|  
+    |組件參考|位置|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  
@@ -182,8 +182,7 @@ ms.locfileid: "62721199"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 當您存取商務邏輯處理常式時所要使用的易記名稱。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - `true` 的值。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - `true` 的值。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>部署商務邏輯處理常式  
   
@@ -219,7 +218,7 @@ ms.locfileid: "62721199"
   
 6.  將 <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>設定為商務邏輯處理常式的易記名稱。 這是當註冊商務邏輯處理常式時，所指定之 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 屬性的值。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  這個範例是一個商務邏輯處理常式，它會記錄有關在訂閱者上插入、更新和刪除的資訊。  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -239,9 +238,9 @@ ms.locfileid: "62721199"
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
 ## <a name="see-also"></a>另請參閱  
- [針對合併發行項實作自訂衝突解析程式](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [偵錯商務邏輯處理常式 &#40;複寫程式設計&#41;](debug-a-business-logic-handler-replication-programming.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [為合併發行項執行自訂衝突解析程式](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
+ [&#40;複寫程式設計中的商務邏輯處理常式進行 Debug&#41;](debug-a-business-logic-handler-replication-programming.md)   
+ [複寫安全性最佳作法](security/replication-security-best-practices.md)   
  [複寫管理物件概念](concepts/replication-management-objects-concepts.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638231"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 擴充的事件引擎
@@ -38,7 +38,7 @@ ms.locfileid: "62638231"
   
  請注意：  
   
--   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、 **Win32 模組**)。 這些也稱為「二進位檔」  或「可執行模組」  。  
+-   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、 **Win32 模組**)。 這些也稱為「二進位檔」** 或「可執行模組」**。  
   
 -   每一個 Windows 處理序模組都可包含一或多個擴充的事件封裝 (**Package**)，其中包含一或多個擴充的事件物件 (**Type**、 **Target**、 **Action**、 **Map**、 **Predicate**和 **Event**)。  
   

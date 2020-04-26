@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721105"
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 課：設定散發
@@ -49,7 +49,7 @@ ms.locfileid: "62721105"
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 [**安全性** **]，以滑鼠右鍵按一下 [** 登入]，然後選取 **[新增登**入]。  
   
-2.  在 [**一般**] 頁面上****，按一下 [ \<搜尋]，在 [**輸入要選取的物件名稱**] 方塊中輸入\< _Machine_Name>_ **\ repl_snapshot** ，其中*Machine_Name>* 是本機發行者伺服器的名稱，按一下 [**檢查名稱**]，然後按一下 **[確定]**。  
+2.  在 [一般]**** 頁面上，按一下 [搜尋]****，並在 [輸入要選取的物件名稱]**** 方塊中輸入 \<_電腦名稱>_**\repl_snapshot** (其中 \<*電腦名稱>* 是本機「發行者」伺服器的名稱)，按一下 [檢查名稱]****，然後按一下 [確定]****。  
   
 3.  在 [**使用者對應**] 頁面的 [**對應到此登**入的使用者] 清單中， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]選取 [**散發**] 和 [資料庫]。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721105"
 7.  重複執行步驟 1-4，以建立本機 repl_merge 帳戶的登入。 此登入必須在 **distribution** 和 **AdventureWorks** 資料庫中有使用者對應。  
   
 ## <a name="see-also"></a>另請參閱  
- [[設定散發]](configure-distribution.md)   
+ [設定散發](configure-distribution.md)   
  [複寫代理程式安全性模型](security/replication-agent-security-model.md)  
   
   

@@ -15,28 +15,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721489"
 ---
 # <a name="distribution-agent-security"></a>散發代理程式安全性
-  [**散發代理程式安全性**] 對話方塊可讓您指定用來執行散發代理程式的 Windows 帳戶。 若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶亦稱為 *處理帳戶*，因為代理程式處理序會以此帳戶執行。 對話方塊中其他可用的選項會視您存取的方式而定：  
+  **[散發代理程式安全性]** 對話方塊，可以讓您指定散發代理程式執行用的 Windows 帳戶。 若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶亦稱為 *處理帳戶*，因為代理程式處理序會以此帳戶執行。 對話方塊中其他可用的選項會視您存取的方式而定：  
   
--   如果是從新增訂閱精靈中存取對話方塊，它還可以讓您指定散發代理程式連接到訂閱者 (適用於發送訂閱) 或散發者 (適用於提取訂閱) 所用的內容。 連接可以藉由模擬 Windows 帳戶，或在您指定之[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]帳戶的內容下進行。  
+-   如果是從新增訂閱精靈中存取對話方塊，它還可以讓您指定散發代理程式連接到訂閱者 (適用於發送訂閱) 或散發者 (適用於提取訂閱) 所用的內容。 此連線可以藉由模擬 Windows 帳戶，或用您指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶內容來進行。  
   
--   如果是從 **[訂閱屬性]** 對話方塊中存取對話方塊，請按一下 **[訂閱者連接]** 中的屬性按鈕 ( **...** )，或該對話方塊的 **[散發者連接]** 資料列，即可指定散發代理程式進行連接所用的內容。 如需存取 [訂閱屬性]**** 對話方塊的詳細資訊，請參閱[檢視及修改發送訂閱屬性](view-and-modify-push-subscription-properties.md)和[如何：檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
+-   如果是從 **[訂閱屬性]** 對話方塊中存取對話方塊，請按一下 **[訂閱者連接]** 中的屬性按鈕 ( **...** )，或該對話方塊的 **[散發者連接]** 資料列，即可指定散發代理程式進行連接所用的內容。 如需存取 [訂閱屬性]  對話方塊的詳細資訊，請參閱[檢視及修改發送訂閱屬性](view-and-modify-push-subscription-properties.md)和[如何：檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
   
  所有帳戶都必須有效，並且每個帳戶皆有指定正確的密碼。 等到代理程式執行時，才會驗證帳戶與密碼。  
   
 ## <a name="options"></a>選項。  
- **處理帳戶**  
+ **Process Account**  
  輸入散發代理程式執行用的 Windows 帳戶：  
   
 -   針對發送訂閱，帳戶必須：  
   
-    -   至少是散發資料庫中**db_owner**固定資料庫角色的成員。  
+    -   至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。  
   
     -   是發行存取清單 (PAL) 的成員。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62721489"
   
  如果是在進行連接時模擬處理帳戶，則需要其他的權限。 請參閱以下的＜ **連接到散發者** ＞和＜ **連接到訂閱者** ＞章節。  
   
- 無法為的提取[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]訂閱指定[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]**處理帳戶**，因為散發代理程式不是在的實例上執行。  
+ 無法為   的提取訂閱指定 [處理帳戶][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，因為散發代理程式無法在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的執行個體上執行。  
   
- **密碼**和**確認密碼**  
+ **[密碼]** 與 **[確認密碼]**  
  輸入 Windows 帳戶的密碼。  
   
  **連接到散發者**  
@@ -91,12 +91,12 @@ Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBM
 Persist Security Info=False;Connection Pooling=True;  
 ```  
   
- 字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False] ****。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。 如需相關資訊，請參閱 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
+ 字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False]  。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。 如需相關資訊，請參閱 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [管理複寫中的登入和密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [複寫代理程式安全性模型](security/replication-agent-security-model.md)   
- [複寫代理程式總覽](agents/replication-agents-overview.md)   
+ [複寫代理程式概觀](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [訂閱發行集](subscribe-to-publications.md)  
   

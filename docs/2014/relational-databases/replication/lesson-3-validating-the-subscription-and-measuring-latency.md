@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6968331bc7699334f61997ec6a16e521c158078a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721054"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>第 3 課：驗證訂閱及測量延遲
@@ -32,9 +32,9 @@ ms.locfileid: "62721054"
   
 3.  按一下 **[追蹤 Token]** 索引標籤。  
   
-4.  按一下 **[插入追蹤]** 。  
+4.  按一下 **[插入追蹤]**。  
   
-5.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]** 、 **[散發者到訂閱者]** 、 **[延遲總計]** 。 **[暫止]** 表示 Token 尚未到達給定點。  
+5.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 值為 [**暫**止] 表示 token 尚未到達指定的點。  
   
 ## <a name="next-steps"></a>後續步驟  
  在這一課，您已順利使用追蹤 Token，驗證資料變更正從「發行者」複寫至「訂閱者」。 您也可以在「發行者」端插入、更新或刪除 **Product** 資料表中的資料，並在複寫之後，在「訂閱者」端查詢 **Product** 資料表，檢視這些變更。  
@@ -42,6 +42,6 @@ ms.locfileid: "62721054"
  如此即已完成＜在連續連接的伺服器之間複寫資料＞教學課程。 如需使用合併式複寫的類似教學課程，請參閱 [教學課程：利用行動用戶端複寫資料](tutorial-replicating-data-with-mobile-clients.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對異動複寫測量延遲及驗證連接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [針對異動複寫測量延遲及驗證連線](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

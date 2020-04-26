@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721680"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
@@ -31,9 +31,9 @@ ms.locfileid: "62721680"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+     [Replication Management Objects （RMO）](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  依預設，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行中，則在使用「新增發行集精靈」建立發行集之後，快照集代理程式便會立即產生快照集。 隨後，「散發代理程式」(針對快照式複寫和異動複寫) 或「合併代理程式」(針對合併訂閱) 預設會為所有訂閱套用該快照集。 也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和複寫監視器來產生快照集。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>若要在 Management Studio 中建立快照集  
@@ -44,7 +44,7 @@ ms.locfileid: "62721680"
   
 3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]** 。  
   
-4.  在 [檢視快照集代理程式的狀態 - **發行集>]\<** 對話方塊中，按一下 [啟動]  。  
+4.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
   
  快照集代理程式產生完快照集後，就會顯示一個訊息，例如「[100%] 已產生 17 個發行項的快照集」。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62721680"
   
      如需有關同步處理訂閱的資訊，請參閱＜ [Synchronize a Push Subscription](synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)資料夾中可用。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以透過程式設計方式建立初始快照集，其方式是建立及執行快照集代理程式作業，或是從批次檔執行快照集代理程式的可執行檔。 在產生初始快照集之後，此快照集會在第一次同步處理訂閱時，傳送及套用到訂閱者。 如果您從命令提示字元或批次檔執行快照集代理程式，每當現有的快照集無效時，您將需要重新執行此代理程式。  
   
 > [!IMPORTANT]  
@@ -80,9 +80,9 @@ ms.locfileid: "62721680"
   
 2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和下列參數：  
   
-    -   ，指定在散發者端執行快照集代理程式時所用的 Windows 驗證認證。 ** @job_login **  
+    -   **@job_login，它會指定**散發者上的快照集代理程式執行時所用的 Windows 驗證認證。  
   
-    -   ，這是所提供之 Windows 認證的密碼。 ** @job_password **  
+    -   **@job_password**，它是提供之 Windows 認證的密碼。  
   
     -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須指定**@publisher_login**和**@publisher_password**的 SQL Server Authentication 登入資訊。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "62721680"
   
 3.  從命令提示字元或批次檔中，執行 [snapshot.exe](agents/replication-snapshot-agent.md) 來啟動 **複寫合併代理程式**，並指定下列命令列引數：  
   
-    -   **-發行集**  
+    -   **-Publication**  
   
-    -   **-發行者**  
+    -   **-Publisher**  
   
-    -   **-散發者**  
+    -   **-Distributor**  
   
     -   **-PublisherDB**  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62721680"
   
     -   **-PublisherSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會示範如何建立交易式發行集，並針對新的發行集加入快照集代理程式作業 (使用 **sqlcmd** 指令碼變數)。 此範例也會啟動此作業。  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  
@@ -143,7 +143,7 @@ ms.locfileid: "62721680"
   
  [!code-sql[HowTo#startmergesnapshot_10](../../snippets/tsql/SQL15/replication/howto/tsql/createmergesnapshot_10.bat)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  快照集代理程式會在發行集建立之後產生快照集。 您可以使用 Replication Management Objects (RMO) 和對複寫代理程式功能的直接 Managed 程式碼存取，以程式設計的方式產生這些快照集。 您使用的物件取決於複寫的類型而定。 您可以使用 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 物件同步啟動快照集代理程式，或是使用代理程式作業以非同步方式啟動它。 在產生初始快照集之後，此快照集會在第一次同步處理訂閱時，傳送及套用到訂閱者。 每當現有的快照集不再包含有效且最新的資料時，您就需要重新執行此代理程式。 如需詳細資訊，請參閱[維護發行集](publish/maintain-publications.md)。  
   
 > [!IMPORTANT]  
@@ -175,11 +175,9 @@ ms.locfileid: "62721680"
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 散發者的名稱  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
 2.  針對 <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 設定 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> 或 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>的值。  
   
@@ -211,17 +209,15 @@ ms.locfileid: "62721680"
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 散發者的名稱  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
 2.  為 <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 設定 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>的值。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 方法。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  這個範例會同步執行快照集代理程式，以針對交易式發行集產生初始快照集。  
   
  [!code-csharp[HowTo#rmo_GenerateSnapshot](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_generatesnapshot)]  
@@ -237,13 +233,13 @@ ms.locfileid: "62721680"
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](publish/create-a-publication.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [建立發送訂閱](create-a-push-subscription.md)   
  [指定同步處理排程](specify-synchronization-schedules.md)   
  [建立並套用快照集](create-and-apply-the-snapshot.md)   
  [使用快照集初始化訂閱](initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [複寫安全性最佳作法](security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [以指令碼變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
+ [搭配腳本變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

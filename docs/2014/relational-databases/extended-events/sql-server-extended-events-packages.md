@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638754"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
@@ -42,7 +42,7 @@ ms.locfileid: "62638754"
   
 -   動作  
   
--   類型  
+-   型別  
   
 -   述詞  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62638754"
 #### <a name="event-categorization"></a>事件分類  
  擴充的事件會使用類似於 Windows 事件追蹤 (ETW) 的事件分類模型。 會有兩個事件屬性用於分類，也就是通道和關鍵字。 使用這些屬性可支援將擴充的事件與 ETW 及其工具整合。  
   
- **通路**  
+ **頻道**  
   
  通道會識別事件的使用者。 下表將描述這些通道。  
   
@@ -134,7 +134,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  如果稍早的述詞檢查失敗，可能就無法評估有副作用的述詞。  
   
-### <a name="types"></a>類型  
+### <a name="types"></a>型別  
  由於資料是串連在一起的位元組集合，所以需要此位元組集合的長度和特性，以便能夠解譯資料。 這項資訊會封裝在類型物件中。 下列是針對封裝物件所提供的類型：  
   
 -   event  
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   型別  
   
  如需詳細資訊，請參閱 [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)。  
   
@@ -214,7 +214,7 @@ where name = 'lock_mode'
  使用這個表格當做範例，假設您有一個名為 mode 的資料行，而且它的值為 5。 此表格指出 5 對應到 X，這表示鎖定類型為獨佔。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 擴充的事件工作階段](sql-server-extended-events-sessions.md)   
+ [SQL Server 擴充事件會話](sql-server-extended-events-sessions.md)   
  [SQL Server 擴充的事件引擎](sql-server-extended-events-engine.md)   
  [SQL Server 擴充的事件目標](../../database-engine/sql-server-extended-events-targets.md)  
   

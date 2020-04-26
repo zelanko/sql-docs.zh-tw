@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721089"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 課：使用異動複寫發行資料
-  在這一課，您將使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立交易式發行集，以發行[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]範例資料庫中**Product**資料表的篩選子集。 此外，您也會將散發代理程式所使用的 SQL Server 登入加入至發行集存取清單 (PAL)。 開始進行此教學課程之前，必須先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
+   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立交易式發行集，以發行 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中 **Product** 資料表的篩選子集。 此外，您也會將散發代理程式所使用的 SQL Server 登入加入至發行集存取清單 (PAL)。 開始進行此教學課程之前，必須先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721089"
   
 10. 在 [代理程式安全性] 頁面上，清除 [使用快照集代理程式的安全性設定]**** 核取方塊。  
   
-11. 按一下 [快照集代理程式的 [**安全性設定**] \<，在 [**處理帳戶**] 方塊中輸入_Machine_Name>_ **\ repl_snapshot** ，提供此帳戶的密碼，然後按一下 **[確定]**。  
+11. 按一下快照集代理程式的 [安全性設定]****，在 [處理帳戶]**** 方塊中輸入 \<_電腦名稱>_**\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]****。  
   
 12. 重複執行先前的步驟，將 repl_logreader 設定為記錄讀取器代理程式的處理帳戶，然後按一下 [完成]****。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62721089"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>檢視快照集產生的狀態  
   
-1.  連接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，展開伺服器節點，然後展開 [複寫]**資料夾。**  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
 2.  在 [本機發行集]**** 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]****，然後按一下 [檢視快照集代理程式狀態]****。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62721089"
   
 ### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>將散發代理程式登入加入 PAL  
   
-1.  連接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，展開伺服器節點，然後展開 [複寫]**資料夾。**  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
 2.  在 [本機發行集]**** 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]****，然後按一下 [屬性]****。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62721089"
   
 3.  選取 [發行集存取清單]**** 頁面，然後按一下 [新增]****。  
   
-4.  \In [**加入發行集存取**] 對話方塊中，選取 _<Machine_Name>_ **\ Repl_distribution** ，然後按一下 **[確定]**。 按一下 [確定]  。  
+4.  在 [新增發行集存取]**** 對話方塊中，選取 [<電腦名稱>__ \repl_distribution]****，然後按一下 [確定]****。 按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
  您已順利建立交易式發行集。 下一步，您將訂閱此發行集。 請參閱 [第 2 課：建立交易式發行集的訂閱](lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  

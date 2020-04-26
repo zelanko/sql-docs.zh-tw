@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638777"
 ---
 # <a name="developer39s-guide-analysis-services"></a>開發人員&#39;s 指南（Analysis Services）
@@ -32,7 +32,7 @@ ms.locfileid: "62638777"
  [多維度模型程式設計](multidimensional-models/multidimensional-model-programming.md)  
  描述在自訂方案中整合多維度模型物件的開發工作與方法。  
   
- [Analysis Services 架構資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
+ [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  描述可提供有關伺服器狀態、伺服器作業和資料庫物件之資訊的結構描述資料列集。  
   
  [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  

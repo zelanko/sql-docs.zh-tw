@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721185"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 課：使用合併式複寫發行資料
-  在這一課，您將使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立合併式發行集，以發行[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]範例資料庫中**Employee**、 **SalesOrderHeader**和**SalesOrderDetail**資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至發行集存取清單 (PAL)。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
+  在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立合併式發行集，以發行 **範例資料庫中**Employee **、** SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至發行集存取清單 (PAL)。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62721185"
   
 13. 在 [篩選資料表的資料列] 頁面上，依序按一下 [SalesOrderHeader]****、[加入]**** 和 [加入聯結以擴充選取的篩選]****。  
   
-14. 在 [加入聯結]  對話方塊中，選取 [聯結的資料表]  之下的 [Sales.SalesOrderDetail]  。  
+14. 在 [加入聯結]**** 對話方塊中，選取 [聯結的資料表]**** 之下的 [Sales.SalesOrderDetail]****。  
   
 15. 按一下 [手動寫入聯結陳述式]****。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721185"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>檢視快照集產生的狀態  
   
-1.  連接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，展開伺服器節點，然後展開 [複寫]**資料夾。**  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
 2.  在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 [AdvWorksSalesOrdersMerge]****，然後按一下 [檢視快照集代理程式的狀態]****。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721185"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>將合併代理程式登入加入 PAL  
   
-1.  連接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，展開伺服器節點，然後展開 [複寫]**資料夾。**  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
 2.  在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 [AdvWorksSalesOrdersMerge]****，然後按一下 [屬性]****。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62721185"
   
 3.  選取 [發行集存取清單]**** 頁面，然後按一下 [新增]****。  
   
-4.  在 [加入發行集存取] 對話方塊中，選取 _<Machine_Name>_ **\ repl_merge** ，然後按一下 **[確定]**。 按一下 [確定]  。  
+4.  在 [加入發行集存取] 對話方塊中，選取 <電腦名稱>__**\repl_merge**，然後按一下 [確定]****。 按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
  您已順利建立合併式發行集。 下一步，您將訂閱此發行集。 請參閱 [第 2 課：建立合併式發行集的訂閱](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653878"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server Agent 主要作業
@@ -32,6 +32,6 @@ ms.locfileid: "62653878"
   
  [從 SQL Server Agent 主要作業中移除步驟](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [修改與 SQL Server Agent 主要作業相關聯的目標伺服器&#40;s&#41;](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [修改與 SQL Server Agent 主要作業相關聯的目標伺服器](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   

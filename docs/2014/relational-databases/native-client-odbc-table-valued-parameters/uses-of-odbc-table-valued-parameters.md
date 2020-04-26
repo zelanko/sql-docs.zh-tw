@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80eb3fe73754a53d5a947c565ae945029d1cdff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62625942"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
@@ -55,12 +55,12 @@ ms.locfileid: "62625942"
   
  應用程式會使用 SQLPutData 做為資料表值參數，以指出資料表值參數組成資料行的資料可用性。 針對資料表值參數呼叫 SQLPutData 時， *DataPtr*必須一律為 null，而且*StrLen_or_Ind*必須是0或小於或等於為數據表值參數緩衝區指定之陣列大小的數位（SQLBindParameter 的*ColumnSize*參數）。 0 表示資料表值參數沒有其他資料列，而且此驅動程式將會繼續處理下一個實際程序參數。 當*StrLen_or_Ind*不是0時，驅動程式將會以與非資料表值參數系結參數相同的方式來處理資料表值參數組成資料行：每個資料表值參數資料行都可以指定其實際的資料長度，SQL_Null_DATA，或可以透過其長度/指標緩衝區來指定執行中的資料。 資料表值參數資料行值可透過重複呼叫 SQLPutData 的方式傳遞，如同平常傳遞字元或二進位值時一樣。  
   
- 當所有資料表值參數資料行都已經處理過之後，此驅動程式會回到資料表值參數來進一步處理資料表值參數資料的資料列。 因此，如果是資料執行中的資料表值參數，此驅動程式不會遵循一般的繫結參數循序掃描。 系結資料表值參數將會輪詢，直到*StrLen_Or_IndPtr*等於0的 SQLPutData 呼叫為止，此時驅動程式會略過資料表值參數資料行，並移至下一個實際的預存程式參數。  當 SQLPutData 傳遞大於或等於1的指標值時，驅動程式會依序處理資料表值參數資料行和資料列，直到它具有所有系結的資料列和資料行的值為止。 然後此驅動程式會回到資料表值參數。 在從 SQLParamData 接收資料表值參數的 token，並針對資料表值參數呼叫 SQLPutData （hstmt，Null，n）時，應用程式必須設定資料表值參數組成資料行資料和指標緩衝區內容，以供要傳遞至伺服器的下一個或多個資料列。  
+ 當所有資料表值參數資料行都已經處理過之後，此驅動程式會回到資料表值參數來進一步處理資料表值參數資料的資料列。 因此，如果是資料執行中的資料表值參數，此驅動程式不會遵循一般的繫結參數循序掃描。 系結資料表值參數將會輪詢，直到*StrLen_Or_IndPtr*等於0的 SQLPutData 呼叫為止，此時驅動程式會略過資料表值參數資料行，並移至下一個實際的預存程式參數。  當 SQLPutData 傳遞大於或等於1的指標值時，驅動程式會依序處理資料表值參數資料行和資料列，直到它具有所有系結的資料列和資料行的值為止。 然後此驅動程式會回到資料表值參數。 在從 SQLParamData 接收資料表值參數的 token，並針對資料表值參數呼叫 SQLPutData （hstmt，Null，n）時，應用程式必須針對要傳遞至伺服器的下一個或多個資料列，設定資料表值參數組成資料行資料和指標緩衝區內容。  
   
  此案例的範例程式碼位於`demo_variable_TVP_binding` [使用資料表值參數 &#40;ODBC&#41;](../native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的常式中。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>從系統目錄擷取資料表值參數中繼資料  
- 當應用程式針對具有資料表值參數參數的程式呼叫 SQLProcedureColumns 時，會以 SQL_SS_TABLE 傳回 DATA_TYPE，而 TYPE_NAME 是資料表值參數之資料表類型的名稱。 SQLProcedureColumns 傳回的結果集中會加入兩個額外的資料行： SS_TYPE_CATALOG_NAME 會傳回定義資料表值參數之資料表類型的目錄名稱，SS_TYPE_SCHEMA_NAME 傳回架構的名稱，其中定義資料表值參數之資料表類型的位置。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式特有資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
+ 當應用程式針對具有資料表值參數參數的程式呼叫 SQLProcedureColumns 時，會以 SQL_SS_TABLE 傳回 DATA_TYPE，而 TYPE_NAME 是資料表值參數之資料表類型的名稱。 SQLProcedureColumns 傳回的結果集中會加入兩個額外的資料行： SS_TYPE_CATALOG_NAME 會傳回定義資料表值參數之資料表類型的目錄名稱，而 SS_TYPE_SCHEMA_NAME 會傳回架構的名稱，其中定義了資料表值參數的資料表類型。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式特有資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
  新的資料行不但會針對資料表值參數擴展，也會針對 CLR 使用者定義型別參數擴展。 仍然會擴展 UDT 參數現有的結構描述和目錄資料行，但是讓需要的資料類型擁有共同的結構描述和目錄資料行將會簡化未來的應用程式開發過程  (請注意，XML 結構描述集合會有些不同，而且未包含在這項變更中)。  
   

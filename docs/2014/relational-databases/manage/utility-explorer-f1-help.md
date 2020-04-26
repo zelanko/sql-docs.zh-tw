@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467852"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
@@ -31,7 +31,7 @@ ms.locfileid: "62467852"
   
  [公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  [建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [連接至 SQL Server 公用程式](connect-to-a-sql-server-utility.md)  

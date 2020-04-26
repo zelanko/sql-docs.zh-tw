@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62650368"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (未編碼) 事件類別
-  執行 SQL 語句時[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，會發生顯示計畫文字（未編碼）事件類別。 除了會將事件資訊格式設定為字串而非二進位資料外，此事件類別與 Showplan Text 事件類別相同。  
+  當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan Text (未編碼) 事件類別。 除了會將事件資訊格式設定為字串而非二進位資料外，此事件類別與 Showplan Text 事件類別相同。  
   
  包含的資訊是 Showplan All、Showplan XML 或 Showplan XML Statistics Profile 事件類別中可用資訊的子集。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62650368"
 |ApplicationName|`nvarchar`|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |BinaryData|`image`|這是一個二進位值，會隨著追蹤所擷取的事件類別而不同。|2|是|  
 |ClientProcessID|`int`|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
-|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在追蹤中捕捉到 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|`nvarchar`|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類別 = 68。|27|否|  
 |EventSequence|`int`|要求中的給定事件順序。|51|否|  
@@ -63,7 +63,7 @@ ms.locfileid: "62650368"
   
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [執行程序邏輯和實體運算子參考](../showplan-logical-and-physical-operators-reference.md)   
+ [執行程式邏輯和實體運算子參考](../showplan-logical-and-physical-operators-reference.md)   
  [執行程式表 All 事件類別](showplan-all-event-class.md)   
  [執行程式表 XML 事件類別](showplan-xml-event-class.md)   
  [Showplan XML Statistics Profile 事件類別](showplan-xml-statistics-profile-event-class.md)  

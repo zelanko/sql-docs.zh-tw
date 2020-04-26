@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468188"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
@@ -84,7 +84,7 @@ ms.locfileid: "62468188"
   
     -   在 [物件總管]  中，以滑鼠右鍵按一下資料庫，按一下 [屬性]  ，然後按一下 [一般]  頁面。 [配置給記憶體最佳化物件的記憶體]  屬性的值表示配置給資料庫中記憶體最佳化物件的記憶體。 [由記憶體最佳化物件所使用的記憶體]  屬性的值表示資料庫中記憶體最佳化物件所用的記憶體。  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援具有最佳化資料的檔案群組、記憶體最佳化的資料表、索引與原生編譯的預存程序之資料庫的 Database Engine 所支援的功能和作業。  
   
  下列 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能已針對資料庫、資料表、預存程序、使用者定義資料表類型或索引物件更新或擴充，可支援 In-Memory OLTP。  
@@ -150,7 +150,7 @@ ms.locfileid: "62468188"
   
 -   範本總管  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  對於記憶體中 OLTP 物件， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援 Database Engine 所不支援的功能和作業。  
   
  如需不支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能的詳細資訊，請參閱支援的[SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  

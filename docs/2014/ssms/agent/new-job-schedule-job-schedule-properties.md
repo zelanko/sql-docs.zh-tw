@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704619"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>新增作業排程：作業排程屬性
@@ -37,7 +37,7 @@ ms.locfileid: "62704619"
  核取以啟用或停用排程。  
   
 ## <a name="recurring-schedule-types-options"></a>重複執行排程類型選項  
- **操作**  
+ **發生於**  
  選取排程重複執行的間隔。  
   
  **重複頻率**  
@@ -49,7 +49,7 @@ ms.locfileid: "62704619"
  **星期二**  
  設定作業於星期二發生。 只有每週重複執行的排程可以使用。  
   
- **Wednesday**  
+ **星期三**  
  設定作業於星期三發生。 只有每週重複執行的排程可以使用。  
   
  **星期四**  
@@ -61,19 +61,19 @@ ms.locfileid: "62704619"
  **星期六**  
  設定作業於星期六發生。 只有每週重複執行的排程可以使用。  
   
- **星期天**  
+ **星期日**  
  設定作業於星期日發生。 只有每週重複執行的排程可以使用。  
   
  **勞動節**  
  請選取排程每月在哪一日發生。 只有每月重複執行的排程可以使用。  
   
- **每個**  
+ **重複間隔**  
  請選取排程出現間隔的月數。 只有每月重複執行的排程可以使用。  
   
- **該**  
+ **此**  
  指定排程，選擇月份中特定週數的特定星期幾。 只有每月重複執行的排程可以使用。  
   
- **發生一次於**  
+ **執行一次於**  
  請設定作業每日發生的時間。  
   
  **發生間隔**  
@@ -92,11 +92,11 @@ ms.locfileid: "62704619"
  **日期**  
  選取作業要執行的日期。  
   
- **Time**  
+ **時間**  
  選取作業要執行的時間。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立排程並將其附加至作業](create-and-attach-schedules-to-jobs.md)   
- [排定作業執行時間](schedule-a-job.md)  
+ [排程作業](schedule-a-job.md)  
   
   

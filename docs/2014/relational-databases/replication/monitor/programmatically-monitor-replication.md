@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667244"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
@@ -54,7 +54,7 @@ ms.locfileid: "62667244"
   
  [Replication Management Objects (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>若要從散發者監視發行者、發行集和訂閱  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667244"
   
     -   針對 **@shouldalert** ，指定 **@mode** 的值以啟用監視臨界值標準；或指定 **2** 的值加以停用。  
   
-##  <a name="RMO"></a> Replication Management Objects (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Replication Management Objects (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>若要監視訂閱者端合併式發行集的訂閱  
   
@@ -268,20 +268,13 @@ ms.locfileid: "62667244"
   
         |值|描述|  
         |-----------|-----------------|  
-        |1|
-  `expiration` - 監視交易式發行集的訂閱是否即將到期。|  
-        |2|
-  `latency` - 監視交易式發行集的訂閱效能。|  
-        |4|
-  `mergeexpiration` - 監視合併式發行集的訂閱是否即將到期。|  
-        |5|
-  `mergeslowrunduration` - 監視透過低頻寬 (撥號) 連接進行合併同步處理的持續時間。|  
-        |6|
-  `mergefastrunduration` - 監視透過高頻寬 (LAN) 連接進行合併同步處理的持續時間。|  
-        |7|
-  `mergefastrunspeed` - 監視透過高頻寬 (LAN) 連接進行合併同步處理的同步處理速率。|  
-        |8|
-  `mergeslowrunspeed` - 監視透過低頻寬 (撥號) 連接進行合併同步處理的同步處理速率。|  
+        |1|`expiration` - 監視交易式發行集的訂閱是否即將到期。|  
+        |2|`latency` - 監視交易式發行集的訂閱效能。|  
+        |4|`mergeexpiration` - 監視合併式發行集的訂閱是否即將到期。|  
+        |5|`mergeslowrunduration` - 監視透過低頻寬 (撥號) 連接進行合併同步處理的持續時間。|  
+        |6|`mergefastrunduration` - 監視透過高頻寬 (LAN) 連接進行合併同步處理的持續時間。|  
+        |7|`mergefastrunspeed` - 監視透過高頻寬 (LAN) 連接進行合併同步處理的同步處理速率。|  
+        |8|`mergeslowrunspeed` - 監視透過低頻寬 (撥號) 連接進行合併同步處理的同步處理速率。|  
   
     -   *enable* - <xref:System.Boolean> 值，代表是否已針對發行集啟用標準。  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695652"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>作業屬性：新增作業 (步驟頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "62695652"
  **移動步驟**  
  在清單中向上或向下移動一個作業步驟。  
   
- **開始步驟**  
+ **起始步驟**  
  選取作業開始時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的第一個步驟。  
   
  **新增**  

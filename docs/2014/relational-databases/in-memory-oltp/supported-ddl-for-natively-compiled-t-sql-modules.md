@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467872"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>原生編譯的預存程序上支援的建構
@@ -45,6 +45,6 @@ ms.locfileid: "62467872"
 -   資料表和程序的 GRANT 和 DENY 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](natively-compiled-stored-procedures.md)  
+ [原生編譯的預存程式](natively-compiled-stored-procedures.md)  
   
   

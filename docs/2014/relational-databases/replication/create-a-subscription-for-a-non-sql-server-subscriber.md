@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721670"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
@@ -26,13 +26,13 @@ ms.locfileid: "62721670"
   
  **本主題內容**  
   
--   **若要為非 SQL Server 的訂閱者建立訂閱，請使用：**  
+-   **若要針對非 SQL Server 訂閱者建立訂閱，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  若要為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立訂閱：  
   
 1.  在「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者」上安裝並設定適當的用戶端軟體和 OLE DB 提供者。 如需相關資訊，請參閱 [Oracle Subscribers](non-sql/oracle-subscribers.md) 及 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "62721670"
   
          為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用發行集後建立快照集，以確定「快照集代理程式」會產生適用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的快照集與初始化指令碼。  
   
-3.  使用 [發行集屬性 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集名稱>]**\< 對話方塊，啟用非 ** 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
+3.  使用 [發行集屬性 - \<發行集名稱>]**** 對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
   
 4.  使用「新增訂閱精靈」建立訂閱。 本主題提供有關這個步驟的詳細資訊。  
   
@@ -68,8 +68,7 @@ ms.locfileid: "62721670"
     > [!NOTE]  
     >  選取 **[True]** 會將 **pre_creation_cmd** 發行項屬性值設為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在「訂閱者」端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 預存程序，並為 **pre_creation_cmd**指定 'none' 值： `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
   
-5.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 將會提示您為發行集建立新快照集。 如果不想此時建立快照集，請稍後使用下一個「如何」程序中描述的步驟。  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 將會提示您為發行集建立新快照集。 如果不想此時建立快照集，請稍後使用下一個「如何」程序中描述的步驟。  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱  
   
@@ -138,11 +137,11 @@ ms.locfileid: "62721670"
   
 2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]**。  
   
-3.  在 [檢視快照集代理程式的狀態 - **發行集>]\<** 對話方塊中，按一下 [啟動]  。  
+3.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序，以程式設計的方式建立非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發送訂閱。  
   
 > [!IMPORTANT]  
@@ -152,7 +151,7 @@ ms.locfileid: "62721670"
   
 1.  同時在發行者和散發者上針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者安裝最近的 OLE DB 提供者。 如需 OLE DB 提供者的複寫需求，請參閱＜ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)＞、＜ [Oracle Subscribers](non-sql/oracle-subscribers.md)＞、＜ [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)＞。  
   
-2.  在發行集資料庫的發行者端，藉由執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ 來確認發行集支援非 ](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 訂閱者。  
+2.  在發行集資料庫的發行者端，藉由執行 [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 來確認發行集支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
     -   如果 `enabled_for_het_sub` 的值為 1，表示支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
@@ -167,7 +166,7 @@ ms.locfileid: "62721670"
   
     -   **@subscriber**和**@publication**參數。  
   
-    -   的 **（預設目的地）** 值**@subscriber_db**，  
+    -   (選擇性) **[訂閱資料庫]** @property **@subscriber_db**、  
   
     -   **@subscriber_provider**、 **@subscriber_datasrc**、 **@subscriber_location**、 **@subscriber_provider_string**和**@subscriber_catalog**之非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源的屬性。  
   
@@ -176,7 +175,7 @@ ms.locfileid: "62721670"
         > [!NOTE]  
         >  使用「Windows 整合式驗證」建立的連接一律使用由**@job_login**和**@job_password**指定的 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   的值為**0** ， **@subscriber_security_mode**且和的 OLE DB 提供者登**@subscriber_login**入**@subscriber_password**資訊。  
+    -   (選擇性) **@subscriber_security_mode** @property **@subscriber_security_mode** ，以及 **@subscriber_login** 及 **@subscriber_password**中針對非 SQL Server 訂閱者建立訂閱。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   

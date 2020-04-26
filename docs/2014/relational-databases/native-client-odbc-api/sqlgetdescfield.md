@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657777"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
@@ -39,8 +39,7 @@ ms.locfileid: "62657777"
  從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，如果您的`SQL_C_SS_TIME2` `SQL_C_BINARY`應用程式`time`使用 ODBC 3.8，SQLGetDescField 可以傳回（適用于類型）或`SQL_C_SS_TIMESTAMPOFFSET` （適用于`datetimeoffset`）而不是。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLGetDescField 支援  
- 
-  `SQLGetDescField` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLGetDescField` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>疏鬆資料行的 SQLGetDescField 支援  
  SQLGetDescField 可以用來查詢新的 IRD 欄位 SQL_CA_SS_IS_COLUMN_SET 來判斷資料行是否為`column_set`資料行。  

@@ -14,21 +14,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721156"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 課：建立用於複寫的 Windows 帳戶
   在這一課，您將建立 Windows 帳戶，以執行複寫代理程式。 您將在本機伺服器上，另外為下列代理程式建立 Windows 帳戶：  
   
-|代理程式|Location|帳戶名稱|  
+|代理程式|位置|帳戶名稱|  
 |-----------|--------------|------------------|  
-|快照集代理程式|發行者|\<*machine_name*> \ repl_snapshot|  
-|記錄讀取器代理程式|發行者|\<*machine_name*> \ repl_logreader|  
-|散發代理程式|發行者和訂閱者|\<*machine_name*> \ repl_distribution|  
-|合併代理程式|發行者和訂閱者|\<*machine_name*> \ repl_merge|  
+|快照集代理程式|發行者|\<*電腦名稱*>\repl_snapshot|  
+|記錄讀取器代理程式|發行者|\<*電腦名稱*>\repl_logreader|  
+|散發代理程式|發行者和訂閱者|\<*電腦名稱*>\repl_distribution|  
+|合併代理程式|發行者和訂閱者|\<*電腦名稱*>\repl_merge|  
   
 > [!NOTE]  
 >  在複寫教學課程中，發行者和散發者會共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，但這不是必要條件。 如果發行者和訂閱者共用相同的執行個體，則不需要在訂閱者上建立帳戶的步驟。  
@@ -45,7 +45,7 @@ ms.locfileid: "62721156"
   
 5.  重複執行先前的步驟，以建立 repl_logreader、repl_distribution 和 repl_merge 帳戶。  
   
-6.  按一下 [關閉]  。  
+6.  按一下 **關閉**。  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>在訂閱者端建立複寫代理程式的本機 Windows 帳戶  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62721156"
   
 5.  重複執行先前的步驟，以建立 repl_merge 帳戶。  
   
-6.  按一下 [關閉]  。  
+6.  按一下 **關閉**。  
   
 ## <a name="next-steps"></a>後續步驟  
  您已順利建立複寫代理程式的 Windows 帳戶。 下一步，您將設定快照集資料夾。 請參閱 [第 2 課：準備快照集資料夾](lesson-2-preparing-the-snapshot-folder.md)。  

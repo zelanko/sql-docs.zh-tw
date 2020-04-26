@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721730"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
@@ -28,7 +28,7 @@ ms.locfileid: "62721730"
   
   
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增訂閱精靈」在「發行者」或「訂閱者」端建立發送訂閱。 依照精靈中各頁面進行：  
   
 -   指定發行者和發行集。  
@@ -43,7 +43,7 @@ ms.locfileid: "62721730"
   
     -   針對合併式發行集的訂閱，請於 **[合併代理程式安全性]** 頁面指定認證。  
   
-     如需各代理程式需要的權限資訊，請參閱[複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
+     如需有關各代理程式需要的權限資訊，請參閱＜ [複寫代理程式安全性模型](security/replication-agent-security-model.md)＞。  
   
 -   指定同步處理排程，以及訂閱者要初始化的時間。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "62721730"
   
 2.  展開 **[複寫]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]** 。  
+3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]**。  
   
-4.  在 [新增訂閱精靈] 的 [發行集]**** 頁面上，從 [發行者]**\< 下拉式清單中選取 [** 尋找 SQL Server 發行者>]**\< 或 [** 尋找 Oracle 發行者>]****。  
+4.  在 [新增訂閱精靈] 的 [發行集]**** 頁面上，從 [發行者]**** 下拉式清單中選取 [\<尋找 SQL Server 發行者>]**** 或 [\<尋找 Oracle 發行者>]****。  
   
 5.  連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62721730"
   
 7.  在新增訂閱精靈中完成頁面。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序以程式設計的方式建立發送訂閱。 使用哪些預存程序要依訂閱所屬的發行集類型而定。  
   
 > [!IMPORTANT]  
@@ -147,7 +147,7 @@ ms.locfileid: "62721730"
     > [!IMPORTANT]  
     >  利用遠端「散發者」來建立「發行者」上的發送訂閱時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字格式傳給「散發者」。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會建立交易式發行集的發送訂閱。 登入和密碼值是在執行階段使用 **sqlcmd** 指令碼變數所提供。  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpushsub.sql#sp_addtranpushsubscription_agent)]  
@@ -156,7 +156,7 @@ ms.locfileid: "62721730"
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepushsub.sql#sp_addmergepushsubscriptionagent)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式建立發送訂閱。 用於建立發送訂閱的 RMO 類別依該訂閱所屬的發行集類型而定。  
   
 > [!IMPORTANT]  
@@ -170,7 +170,7 @@ ms.locfileid: "62721730"
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，則表示步驟 2 中指定的屬性不正確，或伺服器上不存在該發行集。  
   
-4.  在 `&` 屬性和 `And` 之間執行位元運算邏輯 AND (Visual C# 中的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 Visual Basic 中的 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>)。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 `|` 和 `Or` 之間位元運算邏輯 OR (Visual C# 中的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 Visual Basic 中的 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
+4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 屬性和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間執行位元運算邏輯 AND (Visual C# 中的 `&` 和 Visual Basic 中的 `And`)。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間位元運算邏輯 OR (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
   
 5.  如果訂閱資料庫不存在，可使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 類別建立它。 如需詳細資訊，請參閱[建立、改變和移除資料庫](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -188,13 +188,12 @@ ms.locfileid: "62721730"
   
     -   將 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>設為發行集的名稱。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 欄位，為「散發代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 欄位，為「散發代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
   
         > [!NOTE]  
-        >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 `sysadmin`，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
+        >  當訂閱是由 `sysadmin` 固定伺服器角色的成員建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
   
-    -   (選擇性) `true` 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 `false`，則只能以程式設計的方式同步處理訂閱。  
+    -   (選擇性) <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 `true` 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 `false`，則只能以程式設計的方式同步處理訂閱。  
   
     -   (選擇性) 在使用「SQL Server 驗證」連接到「訂閱者」時，設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> ) 欄位。  
   
@@ -211,7 +210,7 @@ ms.locfileid: "62721730"
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，則表示步驟 2 中指定的屬性不正確，或伺服器上不存在該發行集。  
   
-4.  在 `&` 屬性和 `And` 之間執行位元運算邏輯 AND (Visual C# 中的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 Visual Basic 中的 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>)。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 `|` 和 `Or` 之間位元運算邏輯 OR (Visual C# 中的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 Visual Basic 中的 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
+4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 屬性和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間執行位元運算邏輯 AND (Visual C# 中的 `&` 和 Visual Basic 中的 `And`)。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間位元運算邏輯 OR (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
   
 5.  如果訂閱資料庫不存在，可使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 類別建立它。 如需詳細資訊，請參閱[建立、改變和移除資料庫](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -229,13 +228,12 @@ ms.locfileid: "62721730"
   
     -   將 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>設為發行集的名稱。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 欄位，為「合併代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 欄位，為「合併代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
   
         > [!NOTE]  
-        >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 `sysadmin`，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
+        >  當訂閱是由 `sysadmin` 固定伺服器角色的成員建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
   
-    -   (選擇性) `true` 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 `false`，則只能以程式設計的方式同步處理訂閱。  
+    -   (選擇性) <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 `true` 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 `false`，則只能以程式設計的方式同步處理訂閱。  
   
     -   (選擇性) 在使用「SQL Server 驗證」連接到「訂閱者」時，設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> ) 欄位。  
   
@@ -246,7 +244,7 @@ ms.locfileid: "62721730"
     > [!IMPORTANT]  
     >  利用遠端「散發者」來建立「發行者」上的發送訂閱時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 都會以純文字的方式傳給「散發者」。 您應該先加密「發行者」及其遠端「散發者」之間的連線，然後再呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例會建立交易式發行集的新發送訂閱。 用於執行「散發代理程式」作業的 Windows 帳戶認證是在執行階段傳遞的。  
   
  [!code-csharp[HowTo#rmo_CreateTranPushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpushsub)]  
@@ -260,12 +258,12 @@ ms.locfileid: "62721730"
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改發送訂閱屬性](view-and-modify-push-subscription-properties.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [查看和修改發送訂閱屬性](view-and-modify-push-subscription-properties.md)   
+ [複寫安全性最佳作法](security/replication-security-best-practices.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [同步處理發送訂閱](synchronize-a-push-subscription.md)   
- [訂閱發行集](subscribe-to-publications.md)   
- [以指令碼變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [搭配腳本變數使用 sqlcmd](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

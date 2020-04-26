@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac041e19aeb5948a644a9fcf82b3e687472b7259
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468291"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>在原生編譯預存程序中模擬 EXISTS 子句
@@ -27,7 +27,7 @@ IF @exists = 1
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯預存程序的移轉問題](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [原生編譯預存程式的遷移問題](migration-issues-for-natively-compiled-stored-procedures.md)   
  [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

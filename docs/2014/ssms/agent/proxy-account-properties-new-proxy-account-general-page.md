@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650199"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proxy 帳戶屬性及新增 Proxy 帳戶 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "62650199"
  **Proxy 名稱**  
  鍵入 Proxy 的名稱。  
   
- **認證名稱**  
+ **Credential name (認證名稱)**  
  鍵入 Proxy 的認證名稱。  
   
 > [!NOTE]  
@@ -35,13 +35,13 @@ ms.locfileid: "62650199"
  **...**  
  啟動 [選取認證]**** 對話方塊。  
   
- **說明**  
+ **描述**  
  輸入 Proxy 的描述。  
   
  **對下列子系統有效**  
  選取 Proxy 帳戶可以存取的子系統。  
   
- **將作業步驟重新指派給**  
+ **重新指派作業步驟給**  
  選取要被重新指派作業步驟的 Proxy。 當撤銷存取 Proxy 先前已存取過的子系統時，會啟用此清單。  
   
 ## <a name="see-also"></a>另請參閱  

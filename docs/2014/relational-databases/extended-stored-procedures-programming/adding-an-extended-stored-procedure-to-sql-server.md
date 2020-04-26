@@ -15,18 +15,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512346"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>將擴充預存程序加入至 SQL Server
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
- 包含擴充預存程序的 DLL 會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的延伸模組。 若要安裝 DLL，請將檔案複製到包含標準[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 檔案的目錄（C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.** 預設為 x \MSSQL\Binn）。  
+ 包含擴充預存程序的 DLL 會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的延伸模組。 若要安裝 DLL，請將檔案複製到包含標準[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 檔案的目錄（C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.*x*預設為 x \MSSQL\Binn）。  
   
  在擴充預存程序 DLL 已經複製到伺服器之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員必須向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊 DLL 中的每個擴充預存程序函數。 這項作業是使用 sp_addextendedproc 系統預存程序完成的。  
   

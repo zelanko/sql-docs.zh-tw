@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667366"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>快取、重新整理和複寫監視器效能
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器設計成能有效地監視生產環境系統中的大量電腦。 會定期快取和重新整理「複寫監視器」用作執行計算和收集資料的查詢。 快取可減少您在「複寫監視器」中檢視不同頁面時的查詢和計算次數，並可使監視範圍擴大到多個使用者。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 「複寫監視器」的設計目的是要有效率地監視生產系統中的大量電腦。 會定期快取和重新整理「複寫監視器」用作執行計算和收集資料的查詢。 快取可減少您在「複寫監視器」中檢視不同頁面時的查詢和計算次數，並可使監視範圍擴大到多個使用者。  
   
  快取重新整理由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業 (即 **散發的複寫監視重新整理器**) 處理。 此作業連續執行，但快取重新整理排程需要在上一次重新整理後等候一段時間：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62667366"
   
 -   依預設，透過「複寫監視器」啟動的詳細資料視窗不會自動重新整理，正在同步處理的合併訂閱的相關視窗除外。 如果您將詳細資料視窗指定為應自動重新整理，則它們將按照與「複寫監視器」主視窗相同的排程重新整理。  
   
--   可以透過按 F5 或以滑鼠右鍵按一下「複寫監視器」樹狀目錄中的節點，再按一下 **[重新整理]** ，手動重新整理所有視窗。 手動重新整理會強制重新整理快取。  
+-   可以透過按 F5 或以滑鼠右鍵按一下「複寫監視器」樹狀目錄中的節點，再按一下 **[重新整理]**，手動重新整理所有視窗。 手動重新整理會強制重新整理快取。  
   
  如需詳細資訊，請參閱[在複寫監視器中重新整理資料](refresh-data-in-replication-monitor.md)。  
   

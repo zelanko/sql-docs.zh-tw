@@ -11,20 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467888"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求
   除了[安裝 SQL Server 2014 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)以外，以下是使用記憶體內部 OLTP 的需求：  
   
--   
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]64 位元 Enterprise、Developer 或 Evaluation Edition。  
+-   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]64 位元 Enterprise、Developer 或 Evaluation Edition。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要足夠的記憶體，以容納記憶體最佳化的資料表和索引中的資料。 為了說明資料列版本，您應該提供記憶體最佳化的資料表和索引預期大小兩倍的記憶體數量。 但是所需的實際記憶體數目將取決於您的工作負載。 您應該監視記憶體使用量並視需要進行調整。 記憶體最佳化資料表的資料大小不得超過集區所允許的百分比。 若要探索記憶體優化資料表的大小，請參閱[sys.databases &#40;transact-sql&#41;的 dm_db_xtp_table_memory_stats ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要足夠的記憶體，以容納記憶體最佳化的資料表和索引中的資料。 為了說明資料列版本，您應該提供記憶體最佳化的資料表和索引預期大小兩倍的記憶體數量。 但是所需的實際記憶體數目將取決於您的工作負載。 您應該監視記憶體使用量並視需要進行調整。 記憶體最佳化資料表的資料大小不得超過集區所允許的百分比。 若要探索記憶體優化資料表的大小，請參閱[sys.databases &#40;transact-sql&#41;的 dm_db_xtp_table_memory_stats ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)。  
   
      如果資料庫中有以磁碟為基礎的資料表，您需要提供足夠的記憶體，讓緩衝集區和查詢能夠在這些資料表上進行處理。  
   
@@ -40,14 +38,13 @@ ms.locfileid: "62467888"
   
      若要安裝報表產生[（判斷是否應將資料表或預存程式移植到記憶體內部 oltp](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] （透過[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]物件總管來管理記憶體內部 oltp），請在安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]時選取 [**管理工具-基本**] 或 [**管理工具-Advanced** ]。  
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要注意事項  
+## <a name="important-notes-on-using-hek_2"></a>使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要注意事項  
   
 -   資料庫中所有持久資料表的記憶體中大小總計不應該超過 250 GB。 如需詳細資訊，請參閱[記憶體優化資料表的持久性](durability-for-memory-optimized-tables.md)。  
   
 -   這個 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 版本的目標是在含有 2 或 4 個通訊端且少於 60 個核心的系統上可以最佳化方式執行。  
   
--   檢查點檔案無法手動刪除。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會對不需要的檢查點檔案自動執行記憶體回收。 如需詳細資訊，請參閱在[記憶體優化資料表的持久性](durability-for-memory-optimized-tables.md)中合併資料和差異檔案的討論。  
+-   檢查點檔案無法手動刪除。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會對不需要的檢查點檔案自動執行記憶體回收。 如需詳細資訊，請參閱在[記憶體優化資料表的持久性](durability-for-memory-optimized-tables.md)中合併資料和差異檔案的討論。  
   
 -   在此第一版記憶體中 OLTP (在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]裡) 中，移除記憶體最佳化檔案群組唯一的方式就是卸除資料庫。  
   

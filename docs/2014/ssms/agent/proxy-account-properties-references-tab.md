@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714558"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxy 帳戶屬性 (參考索引標籤)
@@ -29,7 +29,7 @@ ms.locfileid: "62714558"
  **作業步驟**  
  使用此 Proxy 帳戶之作業中的各作業步驟名稱  
   
- **Subsystem**  
+ **子系統**  
  此 Proxy 帳戶使用的子系統。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 614c35992be2f85ef15afd0645140746041d083d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62656369"
 ---
 # <a name="modify-a-job"></a>Modify a Job
@@ -26,13 +26,13 @@ ms.locfileid: "62656369"
   
  **本主題內容**  
   
--   **開始之前：** 、  
+-   **開始之前：**  
   
      [限制事項](#Restrictions)  
   
      [安全性](#Security)  
   
--   **若要修改作業，請使用：**  
+-   **若要使用下列項目修改作業：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -40,32 +40,31 @@ ms.locfileid: "62656369"
   
      [SQL Server 管理物件](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業無法同時存在於本機和遠端伺服器內。  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業無法同時存在於本機和遠端伺服器內。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  除非您是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員，否則您只能修改您所擁有的作業。 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-job"></a>若要修改作業  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在 [物件總管]**** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開 [SQL Server Agent]****，展開 [作業]****，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]****。  
   
 3.  在 **[作業屬性]** 對話方塊中，利用相對應的頁面更新作業的屬性、步驟、排程、警示及通知。  
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-a-job"></a>若要修改作業  
   
 1.  在 [物件總管] 中，連接到 Database Engine 的執行個體，然後展開該執行個體。  
   
-2.  在工具列上，按一下 [新增查詢]****。  
+2.  在工具列上，按一下 **[新增查詢]**。  
   
 3.  在查詢視窗中，使用下列系統預存程序修改作業。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62656369"
   
         -   執行[sp_add_jobserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) ，讓伺服器與目前的作業產生關聯。  
   
-##  <a name="SMO"></a>使用 SQL Server 管理物件  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
  **若要修改作業**  
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `Job` 類別。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

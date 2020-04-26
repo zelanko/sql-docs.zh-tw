@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721315"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在散發者端啟用遠端發行者 (SQL Server Management Studio)
-  讓發行者能夠在 [**發行者**] 頁面上使用遠端「散發者」。 在 [設定散發精靈] 與 [散發者屬性 - **散發者>]\<** 對話方塊中可取得這個頁面。 如需使用精靈以及存取對話方塊的詳細資訊，請參閱[設定發行和散發](configure-publishing-and-distribution.md)和[檢視和修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)。  
+  在 **[發行者]** 頁面中讓「發行者」使用遠端「散發者」。 在 [設定散發精靈] 與 [散發者屬性 - \<散發者>]**** 對話方塊中可取得這個頁面。 如需使用精靈以及存取對話方塊的詳細資訊，請參閱[設定發行和散發](configure-publishing-and-distribution.md)和[檢視和修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>若要在設定散發精靈中啟用發行者  
   
@@ -33,13 +33,13 @@ ms.locfileid: "62721315"
   
 4.  在 **[散發者密碼]** 頁面的 **[密碼]** 和 **[確認密碼]** 文字方塊中，為 **distributor_admin** 帳戶 (複寫將用其從「發行者」連接到「散發者」以執行管理工作) 指定增強式密碼。  
   
-5.  若要查看及修改發行者的設定，請按一下屬性按鈕（**...**）。  
+5.  若要檢視和修改發行者的設定，請按一下屬性按鈕 ([...]****)。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>若要在散發者屬性對話方塊中啟用發行者  
   
-1.  在 [散發者屬性 - **散發者>]**** 對話方塊的 [發行者]\<** 頁面上，按一下 [新增]****。  
+1.  在 [散發者屬性 - \<散發者>]**** 對話方塊的 [發行者]**** 頁面上，按一下 [新增]****。  
   
 2.  按一下 **[加入 SQL Server 發行者]**。 如需有關啟用 Oracle 發行者以使用散發者的資訊，請參閱＜ [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md)＞。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "62721315"
   
 4.  在 **[發行者]** 頁面的 **[密碼]** 和 **[確認密碼]** 文字方塊中，為 **distributor_admin** 帳戶 (複寫將用其從「發行者」連接到「散發者」以執行管理工作) 指定增強式密碼。  
   
-5.  若要查看及修改發行者的設定，請按一下屬性按鈕（**...**）。  
+5.  若要檢視和修改發行者的設定，請按一下屬性按鈕 ([...]****)。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [設定發行和散發](configure-publishing-and-distribution.md)   
- [[設定散發]](configure-distribution.md)   
+ [設定發行與散發](configure-publishing-and-distribution.md)   
+ [設定散發](configure-distribution.md)   
  [保護散發者](security/secure-the-distributor.md)  
   
   

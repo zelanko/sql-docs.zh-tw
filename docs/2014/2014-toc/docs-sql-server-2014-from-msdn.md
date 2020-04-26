@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62473636"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>SQL Server 2014 的文件即將移往 Docs
@@ -27,7 +27,7 @@ ms.locfileid: "62473636"
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
-- *SQL Server 2014 的《線上叢書》*
+- *SQL Server 2014 的線上叢書*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
 MSDN 是*Microsoft Developer Network*的 initialism。

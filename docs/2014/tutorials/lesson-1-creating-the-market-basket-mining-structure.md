@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676261"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>第 1 課：建立購物籃採礦結構
@@ -117,7 +117,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     [mining structure name]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Market Basket]  
@@ -129,7 +129,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     <key column>  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     OrderNumber TEXT KEY  
@@ -143,7 +143,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
        <nested mining structure columns> )  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Products] TABLE (  
@@ -187,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  在下一課，您會將採礦模型加入剛才建立的購物籃採礦結構中。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：將採礦模型加入購物籃採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [第 2 課：將採礦模型新增至購物籃採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510952"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>作業步驟屬性：新增作業步驟 (一般頁面)
@@ -28,7 +28,7 @@ ms.locfileid: "62510952"
  **步驟名稱**  
  設定作業步驟的名稱。  
   
- **型別**  
+ **類型**  
  設定作業步驟使用的子系統。 根據您選擇的子系統，會顯示定義作業步驟變更的選項。  
   
  **執行身分**  
@@ -83,7 +83,7 @@ ms.locfileid: "62510952"
  貼上剪貼簿的內容。  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>作業系統 (CmdExec) 作業步驟的選項  
- **成功命令的進程結束代碼**  
+ **成功命令的處理序結束碼**  
  輸入命令傳回表示成功的結束碼。  
   
  **開啟**  
@@ -216,15 +216,14 @@ ms.locfileid: "62510952"
  **Server**  
  輸入儲存 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的伺服器名稱。 唯有當 [套件來源]**** 指定 [SQL Server]**** 或 [SSIS 套件存放區]**** 時，才能使用此選項。  
   
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 驗證登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
- **使用 SQL Server 驗證**  
+ **[使用 SQL Server 驗證]**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱]**** 和 [密碼]****。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
   
  **套件**  
  輸入封裝的位置。  
@@ -235,7 +234,7 @@ ms.locfileid: "62510952"
 ### <a name="configurations-tab"></a>組態索引標籤  
  指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的組態選項。 當選取這個索引標籤時，可以使用下列選項。  
   
- **設定檔**  
+ **組態檔**  
  列出封裝的組態檔。  
   
  **加入**  
@@ -274,7 +273,7 @@ ms.locfileid: "62510952"
  **連線管理員**  
  檢視資料來源的名稱。  
   
- **說明**  
+ **描述**  
  檢視資料來源的描述。  
   
  **連接字串**  
@@ -283,13 +282,13 @@ ms.locfileid: "62510952"
 ### <a name="execution-options-tab"></a>執行選項索引標籤  
  檢視或變更在此索引標籤上之封裝的執行選項。  
   
- **驗證警告時失敗的封裝**  
+ **發生驗證警告時封裝就失敗**  
  如果發生驗證警告時要使封裝執行失敗，請選取此選項。  
   
- **驗證封裝而不執行**  
+ **驗證封裝但不執行**  
  作業步驟要驗證但不執行封裝時，請選取此選項。  
   
- **並行可執行檔數目上限**  
+ **最大並行可執行檔數目**  
  可以同時執行的最大可執行檔數目。  
   
  **啟用封裝檢查點**  
@@ -301,10 +300,10 @@ ms.locfileid: "62510952"
  **...**  
  瀏覽以尋找封裝檢查點檔案。  
   
- **覆寫重新開機選項**  
+ **覆寫重新啟動選項**  
  若要為此作業步驟指定不同於封裝中所指定的重新啟動選項時，請選取此選項。  
   
- **重新開機選項**  
+ **重新啟動選項**  
  選取封裝重新啟動時要採取的動作。  
   
 ### <a name="logging-tab"></a>記錄索引標籤  
@@ -313,7 +312,7 @@ ms.locfileid: "62510952"
  **記錄提供者**  
  選取記錄提供者的 ClassID。  
   
- **設定字串**  
+ **組態字串**  
  輸入記錄提供者的組態字串。  
   
  **移除**  
@@ -334,19 +333,19 @@ ms.locfileid: "62510952"
 ### <a name="verification-tab"></a>驗證索引標籤  
  選取在此索引標籤上之作業步驟的驗證選項。  
   
- **僅執行已簽署的套件**  
+ **只執行簽署的封裝**  
  只執行已經簽署的封裝。 選取此選項時，如果封裝未簽署，作業步驟就會失敗。  
   
  **確認封裝組建**  
  只執行具有特定組建編號的封裝。 選取此選項時，如果封裝沒有指定的組建編號，作業步驟就會失敗。  
   
- **Build**  
+ **建置**  
  輸入封裝的組建編號。  
   
- **確認套件識別碼**  
+ **確認封裝識別碼**  
  只執行具有特定識別碼的封裝。 選取此選項時，如果封裝沒有指定的識別碼，作業步驟就會失敗。  
   
- **套件識別碼**  
+ **封裝識別碼**  
  輸入封裝識別碼。  
   
  **確認版本識別碼**  
@@ -361,7 +360,7 @@ ms.locfileid: "62510952"
  **還原原始選項**  
  使用此對話方塊中所設定的命令列選項。  
   
- **手動編輯命令行**  
+ **手動編輯命令列**  
  指定命令列視窗中的選項。  
   
  **命令列**  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721082"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 課：建立交易式發行集的訂閱
@@ -24,7 +24,7 @@ ms.locfileid: "62721082"
   
 ### <a name="to-create-the-subscription"></a>建立訂閱  
   
-1.  連接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，展開伺服器節點，然後展開 [複寫]**資料夾。**  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
 2.  在 **[本機發行集]** 資料夾中，以滑鼠右鍵按一下 **[AdvWorksProductTrans]** 發行集，然後按一下 **[新增訂閱]**。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62721082"
   
 5.  在 [訂閱者] 頁面上，如果未顯示訂閱者執行個體的名稱，請按一下 **[加入訂閱者]**，再按 **[加入 SQL Server 訂閱者]**，在 **[連接到伺服器]** 對話方塊中輸入訂閱者執行個體名稱，然後按一下 **[連接]**。  
   
-6.  在 [訂閱者] 頁面上，選取訂閱者伺服器的實例名稱，然後選取**** ** \< ** [訂閱資料庫] 下的 [新增資料庫>]。  
+6.  在 [訂閱者] 頁面上，選取訂閱者伺服器的實例名稱，然後選取**Subscription Database** ** \< ** [訂閱資料庫] 下的 [新增資料庫>]。  
   
 7.  在 **[新增資料庫]** 對話方塊的 **[資料庫名稱]** 方塊中，輸入 **ProductReplica** ，然後按一下 **[確定]**，再按 **[下一步]**。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62721082"
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>檢視訂閱的同步處理狀態  
   
-1.  連接到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，展開伺服器節點，然後展開 [複寫]**資料夾。**  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
 2.  在 **[本機訂閱]** 資料夾中，展開 **[AdvWorksProductTrans]** 發行集，以滑鼠右鍵按一下 **ProductReplica** 資料庫中的訂閱，然後按一下 **[檢視同步處理狀態]**。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62721082"
   
 ## <a name="see-also"></a>另請參閱  
  [使用快照集初始化訂閱](initialize-a-subscription-with-a-snapshot.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
- [訂閱發行集](subscribe-to-publications.md)  
+ [建立發送訂閱](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

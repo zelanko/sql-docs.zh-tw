@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720133"
 ---
 # <a name="monitor-and-respond-to-events"></a>監視及回應事件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 可以監視和自動回應*事件*，例如來自[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的訊息、特定效能狀況和 Windows Management Instrumentation （WMI）事件。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會監視及自動回應「事件」**(Event)，例如：來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的訊息、特定效能狀況與 Windows Management Instrumentation (WMI) 事件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [警示](alerts.md)  
@@ -44,14 +44,11 @@ ms.locfileid: "62720133"
 ## <a name="about-monitoring-and-responding-to-events"></a>關於監視及回應事件  
  對於事件的自動回應稱之為「警示」**。 您可以在一或多個事件上定義警示，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 回應事件的方式。 警示可透過通知管理員或執行作業 (或兩者) 來回應事件。 警示也可以將事件轉送到在另一部電腦上登入的 Microsoft Windows 應用程式。 例如，如果發生嚴重性 19 的事件，您可以指定要立即通知操作員。 透過定義警示，資料庫管理員就可以更有效率地監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 只會回應已定義警示的事件。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來監視事件的方法會取決於事件的類型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 只會回應已定義警示的事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來監視事件的方法會取決於事件的類型。  
   
  對效能計數器定義了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就會直接監視效能計數器。 若是 WMI 事件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會登錄 WMI 事件的事件查詢。  
   
- 若要回應來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的訊息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 只會回應出現在這個記錄檔中的訊息。 根據預設，SQL Server 會將下列訊息記錄在 Windows 應用程式記錄檔中：  
+ 若要回應來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的訊息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 只會回應出現在這個記錄檔中的訊息。 根據預設，SQL Server 會將下列訊息記錄在 Windows 應用程式記錄檔中：  
   
 -   嚴重性 19 或更高的 sysmessages 錯誤。  
   

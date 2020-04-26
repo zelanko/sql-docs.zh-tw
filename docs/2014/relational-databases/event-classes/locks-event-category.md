@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ebbd488cd85fde3003f6e54c5f08fd05c601d3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62662312"
 ---
 # <a name="locks-event-category"></a>Locks 事件類別目錄
-  使用 [**鎖定**] 事件類別目錄中的事件類別，監視實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中的鎖定活動。 這些事件類別可協助您調查，因多位使用者同時讀取和修改資料而造成的鎖定問題。  
+  使用 **Locks** 事件類別目錄中事件類別來監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中的鎖定活動。 這些事件類別可協助您調查，因多位使用者同時讀取和修改資料而造成的鎖定問題。  
   
  因為「 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 」經常要處理許多鎖定，於追蹤期間擷取 **Locks** 事件類別，會帶來大量負擔，而且導致產生龐大的追蹤檔案或資料表。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62662312"
 |[Lock:Deadlock 事件類別](lock-deadlock-event-class.md)|追蹤交易何時要求鎖定已由其他交易鎖定的資源，而造成死結。|  
 |[Lock:Escalation 事件類別](lock-escalation-event-class.md)|指出細粒鎖定已經轉換成粗粒鎖定。|  
 |[Lock:Released 事件類別](lock-released-event-class.md)|追蹤何時釋放鎖定。|  
-|[Lock： Timeout &#40;timeout &#62; 0&#41; 事件類別](lock-timeout-timeout-0-event-class.md)|追蹤何時因為其他交易在所需資源上具有封鎖的鎖定，而無法完成鎖定要求。 只有在鎖定的逾時值大於零的狀況發生時，才會發生此事件。|  
+|[Lock:Timeout &#40;timeout &#62; 0&#41; 事件類別](lock-timeout-timeout-0-event-class.md)|追蹤何時因為其他交易在所需資源上具有封鎖的鎖定，而無法完成鎖定要求。 只有在鎖定的逾時值大於零的狀況發生時，才會發生此事件。|  
 |[Lock:Timeout 事件類別](lock-timeout-event-class.md)|追蹤何時因為其他交易在所需資源上具有封鎖的鎖定，而無法完成鎖定要求。|  
   
   

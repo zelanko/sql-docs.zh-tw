@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721498"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>偵錯商務邏輯處理常式 (複寫程式設計)
@@ -33,7 +33,7 @@ ms.locfileid: "62721498"
   
 1.  設定發行和散發、建立發行集，以及建立發行集的訂閱。 如需詳細資訊，請參閱[設定發行和散發](configure-publishing-and-distribution.md)及[建立發行集](publish/create-a-publication.md)。  
   
-2.  建立及註冊商務邏輯處理常式。 如需詳細資訊，請參閱執行合併發行項的[商務邏輯處理常式](implement-a-business-logic-handler-for-a-merge-article.md)。  
+2.  建立及註冊商務邏輯處理常式。 如需詳細資訊，請參閱 [為合併發行項實作商務邏輯處理常式](implement-a-business-logic-handler-for-a-merge-article.md)。  
   
 3.  在以程式設計方式同步啟動合併代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中，建立 Replication Management Objects (RMO) 專案。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721498"
   
 1.  設定發行和散發、建立發行集，以及建立發行集的提取訂閱。 此發行集必須支援 Web 同步處理或 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者。  
   
-2.  建立及註冊商務邏輯處理常式。 如需詳細資訊，請參閱執行合併發行項的[商務邏輯處理常式](implement-a-business-logic-handler-for-a-merge-article.md)。  
+2.  建立及註冊商務邏輯處理常式。 如需詳細資訊，請參閱 [為合併發行項實作商務邏輯處理常式](implement-a-business-logic-handler-for-a-merge-article.md)。  
   
 3.  在商務邏輯處理常式程式碼中設定中斷點 (在所偵錯的方法中或是類別建構函式中)。 如需有關可以在商務邏輯處理常式中實作之方法的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主題。  
   

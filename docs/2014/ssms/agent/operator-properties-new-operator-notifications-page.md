@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62630697"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>操作員屬性：新增操作員 (通知頁面)
@@ -40,7 +40,7 @@ ms.locfileid: "62630697"
  **位址**  
  使用電子郵件通知此操作員。  
   
- **尋呼**  
+ **呼叫器**  
  將電子郵件傳送至呼叫器位址，來通知此操作員。  
   
  **Net send**  

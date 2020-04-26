@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721402"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server 複寫散發者屬性
 本主題討論 [散發者**屬性**] 視窗中 [**一般**]、[**發行者**] 和 [**散發資料庫**] 頁面上找到的屬性。 
 
 ## <a name="general"></a>一般
-  [散發者**屬性**] 對話方塊的 [**一般**] 頁面，可讓您加入和刪除散發資料庫，以及設定散發資料庫屬性。  
+  **[散發者屬性]** 對話方塊的 **[一般]** 頁面可讓您加入和刪除散發資料庫，以及設定散發資料庫屬性。  
   
  散發資料庫會儲存所有複寫類型的中繼資料和記錄資料，以及異動複寫的交易。 在許多情況下，單一散發資料庫即已足夠。 但是如果多個發行者使用單一散發者，請考慮為每個發行者建立散發資料庫。 這樣可以確保流經每個散發資料庫的資料都不同。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "62721402"
   
 ### <a name="options"></a>選項。  
  **發行者**  
- 選取可使用這個散發者的伺服器。 按一下發行者旁的屬性按鈕 **（...）** ，即可查看及設定其他屬性。  
+ 選取可使用這個散發者的伺服器。 按一下發行者旁的 [屬性] 按鈕 **(...)** ，以檢視和設定其他屬性。  
   
  **加入**  
- 如果未列出您要允許的伺服器，請按一下 [加入]  ，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。 如果您加入的伺服器是第一部使用此散發者作為遠端散發者的伺服器，系統會提示您提供管理連結密碼。  
+ 如果未列出您要允許的伺服器，請按一下 [加入]****，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。 如果您加入的伺服器是第一部使用此散發者作為遠端散發者的伺服器，系統會提示您提供管理連結密碼。  
   
- **系統管理連結密碼**  
+ **管理連結密碼**  
  使用 **distributor_admin** 登入進行發行者和遠端散發者的連接複寫時，這可用來指定或更新該連接複寫的密碼：  
   
 -   如果散發者伺服器只是當成本機散發者，這個密碼會隨機產生並自動設定。  
@@ -66,7 +66,7 @@ ms.locfileid: "62721402"
  如需散發者安全性的詳細資訊，請參閱[保護散發者](security/secure-the-distributor.md)。  
 
 ## <a name="distribution-database"></a>散發資料庫
- [**散發資料庫屬性**] 對話方塊可讓您查看數個屬性，並設定資料庫的交易保留期限和記錄保留期限。  
+  [散發資料庫屬性]**** 對話方塊可讓您檢視許多屬性，並設定資料庫的交易保留期限和記錄保留期限。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -94,7 +94,7 @@ ms.locfileid: "62721402"
 
   
 ## <a name="see-also"></a>另請參閱  
- [[設定散發]](configure-distribution.md)   
+ [設定散發](configure-distribution.md)   
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
 
   

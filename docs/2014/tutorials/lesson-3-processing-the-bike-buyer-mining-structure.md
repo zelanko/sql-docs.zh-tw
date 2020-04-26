@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62655803"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>第 3 課：處理自行車買主採礦結構
@@ -86,7 +86,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     [<mining structure name>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     Bike Buyer  
@@ -98,7 +98,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     <mining structure columns>  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Customer Key],  
@@ -123,7 +123,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     OPENQUERY([<datasource>],'<SELECT statement>')  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     OPENQUERY([Adventure Works DW],  
@@ -177,6 +177,6 @@ OPENQUERY([<datasource>],'<SELECT statement>')
  在下一課，您將探索這一課加入採礦結構中的採礦模型內容。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課：瀏覽 Bike Buyer 採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [第 4 課：瀏覽自行車買主採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519302"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
@@ -54,7 +54,7 @@ ms.locfileid: "62519302"
 |default_etw_session_logfile_path|最多 256 個字元的任何字串。 此為選用值。|擴充事件工作階段之記錄檔的路徑。 根據預設，這個路徑是 %TEMP%\ XEEtw.etl。|  
 |default_etw_session_logfile_size_mb|任何不帶正負號的整數。 此為選用值。|擴充事件工作階段的記錄檔案大小 (以 MB 為單位)。 預設值是 20 MB。|  
 |default_etw_session_buffer_size_kb|任何不帶正負號的整數。 此為選用值。|擴充事件工作階段的記憶體中緩衝區大小 (以 KB 為單位)。 預設值是 128 KB。|  
-|重試|任何不帶正負號的整數。|在卸除事件之前，重試將此事件發行給 ETW 子系統的次數。 預設值是 0。|  
+|重試|任何不帶正負號的整數。|在卸除事件之前，重試將此事件發行給 ETW 子系統的次數。 預設值為 0。|  
   
  這些設定都是選擇性的。 ETW 目標會使用這些設定的預設值。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62519302"
     > [!IMPORTANT]  
     >  當第一個工作階段啟動之後，將無法變更檔案路徑。  
   
--   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
+-   受控物件格式（MOF）檔案位於* \<您的安裝路徑>* \Microsoft SQL server\shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
   
 ## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  
  若要將 ETW 目標加入至擴充事件工作階段，您必須在建立或改變事件工作階段時，加入下列陳述式：  
@@ -87,9 +87,9 @@ ADD TARGET package0.etw_classic_sync_target
  如需示範如何使用 ETW 目標 (包括如何檢視資料) 之完整範例的詳細資訊，請參閱 [使用擴充事件監視系統活動](monitor-system-activity-using-extended-events.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 擴充的事件目標](../../database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server 擴充事件目標](../../database-engine/sql-server-extended-events-targets.md)   
+ [dm_xe_session_targets &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [&#40;Transact-sql&#41;建立事件會話](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

@@ -19,10 +19,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666862"
 ---
 # <a name="monitoring-replication"></a>監視 (複寫)
@@ -34,11 +34,9 @@ ms.locfileid: "62666862"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     
-  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供「複寫監視器」的存取權。 還允許您檢視下列代理程式記錄的目前狀態和上一條訊息，並允許您啟動及停止每一個代理程式：「記錄讀取器代理程式」、「快照代理程式」、「合併代理程式」及「散發代理程式」。 如需相關資訊，請參閱 [Monitor Replication Agents](monitor/monitor-replication-agents.md)。  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供「複寫監視器」的存取權。 還允許您檢視下列代理程式記錄的目前狀態和上一條訊息，並允許您啟動及停止每一個代理程式：「記錄讀取器代理程式」、「快照代理程式」、「合併代理程式」及「散發代理程式」。 如需相關資訊，請參閱 [Monitor Replication Agents](monitor/monitor-replication-agents.md)。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Replication Management Objects (RMO)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Replication Management Objects (RMO)  
   
      兩個介面均可讓您監視「散發者」端所有類型的複寫。 合併式複寫還提供了監視「訂閱者」端複寫的能力。  
   

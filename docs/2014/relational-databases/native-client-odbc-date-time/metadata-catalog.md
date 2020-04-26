@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62511522"
 ---
 # <a name="catalog-metadata"></a>目錄中繼資料
   本主題描述 `SQLColumns` 和 `SQLProcedureColumns` 所傳回的資料行中繼資料，以及 `SQLGetTypeInfo` 所傳回的資料類型中繼資料。  
   
 ## <a name="remarks"></a>備註  
- 
-  `SQLColumns` 和 `SQLProcedureColumns` 會傳回日期/時間類型的下列資料行值。  
+ `SQLColumns` 和 `SQLProcedureColumns` 會傳回日期/時間類型的下列資料行值。  
   
 |參數類型|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -39,8 +38,7 @@ ms.locfileid: "62511522"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 
-  `SQLGetTypeInfo` 會傳回日期/時間類型的下列資料行值：  
+ `SQLGetTypeInfo` 會傳回日期/時間類型的下列資料行值：  
   
 |參數類型|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  

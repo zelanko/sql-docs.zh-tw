@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678516"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 課：建立 RDL 結構描述 Visual Studio 專案
@@ -63,7 +63,7 @@ ms.locfileid: "62678516"
   
      您也必須加入 <xref:System.Web.Services> 命名空間的參考，才能讓 Web 參考運作。  
   
-9. 在 [專案] 功能表上，按一下 [**加入參考**]。  
+9. 在 [專案] 功能表上，按一下 [加入參考]****。  
   
      在 [**加入參考**] 對話方塊的 [ **.net** ] 索引標籤中，選取 [ **System.web**]，然後按一下 **[確定]**。  
   

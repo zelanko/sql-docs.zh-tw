@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695442"
 ---
 # <a name="job-properties-new-job-targets-page"></a>作業屬性：新增作業 (目標頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "62695442"
  **目標本機伺服器**  
  在本機伺服器上執行作業。 如果沒有編列目標伺服器，這是唯一可用的選項。  
   
- **以多部伺服器為目標**  
+ **目標多個伺服器**  
  在一個或多個目標伺服器上執行作業。 選取此選項之後，選擇要執行作業的伺服器。 可用的目標伺服器會被列出。 在目標伺服器上按一下加以選取。  
   
 ## <a name="see-also"></a>另請參閱  

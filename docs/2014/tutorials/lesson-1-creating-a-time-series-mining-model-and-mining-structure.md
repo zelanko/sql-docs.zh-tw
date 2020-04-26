@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678444"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>第 1 課：建立時間序列採礦模型和採礦結構
@@ -100,7 +100,7 @@ CREATE MINING MODEL [Mining Model Name]
     [mining model name]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Forecasting_MIXED]  
@@ -112,18 +112,16 @@ CREATE MINING MODEL [Mining Model Name]
     <key columns>  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Reporting Date] DATE KEY TIME,  
     [Model Region] TEXT KEY  
     ```  
   
-     
-  `TIME KEY` 關鍵字指示 ReportingDate 資料行包含用來排序值的時間步驟值。 時間步驟可以是日期和時間、整數，或是任何排序的資料類型，只要這些值是唯一而且可排序資料即可。  
+     `TIME KEY` 關鍵字指示 ReportingDate 資料行包含用來排序值的時間步驟值。 時間步驟可以是日期和時間、整數，或是任何排序的資料類型，只要這些值是唯一而且可排序資料即可。  
   
-     
-  `TEXT` 和 `KEY` 關鍵字指示 ModelRegion 資料行包含其他數列索引鍵。 您只能有一個數列索引鍵，而且此資料行中的值必須相異。  
+     `TEXT` 和 `KEY` 關鍵字指示 ModelRegion 資料行包含其他數列索引鍵。 您只能有一個數列索引鍵，而且此資料行中的值必須相異。  
   
 4.  取代下列項目：  
   
@@ -131,7 +129,7 @@ CREATE MINING MODEL [Mining Model Name]
     < predictable attribute columns> )  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Quantity] LONG CONTINUOUS PREDICT,  
@@ -146,7 +144,7 @@ CREATE MINING MODEL [Mining Model Name]
     WITH DRILLTHROUGH  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     USING Microsoft_Time_Series(AUTO_DETECT_PERIODICITY = 0.8, FORECAST_METHOD = 'MIXED')  
@@ -157,8 +155,7 @@ CREATE MINING MODEL [Mining Model Name]
   
      演算法參數 `FORECAST_METHOD` 指示您是否想要使用 ARTXP、ARIMA 或混用這兩者來分析資料。  
   
-     
-  `WITH DRILLTHROUGH` 關鍵字指定您希望在完成此模型之後，能夠檢視來源資料中的詳細統計資料。 如果您想要使用 Microsoft 時間序列檢視器來瀏覽此模型，必須加入這個子句。 預測時則不需要使用它。  
+     `WITH DRILLTHROUGH` 關鍵字指定您希望在完成此模型之後，能夠檢視來源資料中的詳細統計資料。 如果您想要使用 Microsoft 時間序列檢視器來瀏覽此模型，必須加入這個子句。 預測時則不需要使用它。  
   
      現在，完整的陳述式應該如下所示：  
   
@@ -198,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  在下一課中，您會將「採礦模型」新增至您剛才建立的**Forecasting_MIXED**的「採礦結構」中。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：將採礦模型加入時間序列採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [第 2 課：將採礦模型新增至時間序列採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [時間序列模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

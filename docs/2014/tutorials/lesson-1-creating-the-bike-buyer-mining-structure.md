@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678495"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>第 1 課：建立自行車買主採礦結構
@@ -113,7 +113,7 @@ WITH HOLDOUT (<holdout specifier>)
     [<mining structure>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Bike Buyer]  
@@ -125,7 +125,7 @@ WITH HOLDOUT (<holdout specifier>)
     <key column>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     CustomerKey LONG KEY  
@@ -137,7 +137,7 @@ WITH HOLDOUT (<holdout specifier>)
     <mining structure columns>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Age] LONG DISCRETIZED(Automatic,10),  
@@ -161,7 +161,7 @@ WITH HOLDOUT (<holdout specifier>)
     WITH HOLDOUT (holdout specifier>)  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     WITH HOLDOUT (30 PERCENT or 1000 CASES)  
@@ -214,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  在下一課，您會將採礦模型加入剛才建立的結構中。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：將採礦模型加入 Bike Buyer 採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [第 2 課：將採礦模型新增至自行車買主採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

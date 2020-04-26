@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657701"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -34,8 +34,7 @@ ms.locfileid: "62657701"
   
  包含字元資料、SQL_DIAG_SS_PROCNAME 和 SQL_DIAG_SS_SRVNAME 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定診斷欄位，會將該資料以 ANSI、Unicode 或以 Null 結束的字元傳回給用戶端。 如有必要，字元計數可依字元寬度進行調整。 或者，TCHAR 或 SQLTCHAR 之類的可攜式 C 資料類型可用來確保正確的程式變數長度。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會支援下列其他的動態函數程式碼，以識別最後所嘗試的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式。 動態函數程式碼會以診斷記錄集的標頭 (記錄 0) 傳回，因此會在每次執行時使用 (不論成功與否)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會支援下列其他的動態函數程式碼，以識別最後所嘗試的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式。 動態函數程式碼會以診斷記錄集的標頭 (記錄 0) 傳回，因此會在每次執行時使用 (不論成功與否)。  
   
 |動態函數程式碼|來源|  
 |---------------------------|------------|  
