@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250373"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用僅限下載的發行項最佳化合併式複寫效能
@@ -48,6 +48,6 @@ ms.locfileid: "63250373"
   
 ## <a name="see-also"></a>另請參閱  
  [合併式複寫的發行項選項](article-options-for-merge-replication.md)   
- [使用條件式刪除追蹤優化合併式複寫效能](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [使用條件式刪除追蹤最佳化合併式複寫效能](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

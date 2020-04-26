@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076565"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在連線模式下連接至 Analysis Services 資料庫
@@ -40,6 +40,6 @@ ms.locfileid: "66076565"
   
 ## <a name="see-also"></a>另請參閱  
  [在開發階段使用 Analysis Services 專案和資料庫](work-with-analysis-services-projects-and-databases-in-development.md)   
- [使用 SQL Server Data Tools &#40;SSDT&#41;建立多維度模型](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [使用 SQL Server 資料工具 &#40;SSDT&#41; 建立多維度模型](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

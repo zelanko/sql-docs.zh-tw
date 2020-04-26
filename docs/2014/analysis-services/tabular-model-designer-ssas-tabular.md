@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067830"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>表格式模型設計師 (SSAS 表格式)
@@ -32,18 +32,18 @@ ms.locfileid: "66067830"
   
 -   [Visual Studio 整合](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a> 優點  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]時，用來建立表格式模型的專案範本會加入至可用的專案類型中。 在使用其中一個範本建立新的表格式模型專案之後，您可以使用表格式模型設計師工具和精靈開始撰寫模型。  
   
  除了用於撰寫專業多維度和表格式模型方案的新範本和工具之外， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境也提供偵錯和專案週期功能，確保您能為組織建立最強大的 BI 方案。 如需 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的詳細資訊，請參閱 [Visual Studio 使用者入門](https://go.microsoft.com/fwlink/?LinkId=206389)。  
   
-##  <a name="bkmk_proj_temp"></a>專案範本  
+##  <a name="project-templates"></a><a name="bkmk_proj_temp"></a>專案範本  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]時，下列表格式模型專案範本會加入至商業智慧專案類型中：  
   
  **Analysis Services 表格式專案**  
  這個範本可用來建立新的空白表格式模型專案。  
   
- **從伺服器匯入（表格式）**  
+ **從伺服器匯入 (表格式)**  
  這個範本可用來從 Analysis Services 中的現有表格式模型擷取中繼資料，以建立新的表格式模型專案。  
   
  **從 PowerPivot 匯入**  
@@ -52,9 +52,8 @@ ms.locfileid: "66067830"
 > [!NOTE]  
 >  表格式模型專案要求表格式模式的 Analysis Services 伺服器執行個體必須在本機或在網路上執行。  
   
-##  <a name="bkmk_wind_men"></a>視窗和功能表  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 表格式模型撰寫環境包含下列項目：  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a> 視窗和功能表  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 表格式模型撰寫環境包含下列項目：  
   
 ### <a name="designer-window"></a>設計師視窗  
  設計師視窗可透過提供模型的視覺表示法，用來撰寫表格式模型。 當您開啟 Model.bim 檔案時，會在設計師視窗中開啟模型。 您可以在設計師視窗中使用兩種不同的檢視模式撰寫模型：  
@@ -62,7 +61,7 @@ ms.locfileid: "66067830"
  **資料檢視**  
  資料檢視以表格式的方格格式顯示資料表。 您也可以使用量值方格定義量值，僅針對 [資料檢視] 中的每個資料表顯示。  
   
- **圖表檢視**  
+ **圖表視圖**  
  此圖表檢視以圖形格式顯示資料表，以及資料表之間的關聯性。 您可以篩選資料行、量值、階層及 KPI，也可以選擇使用定義的檢視方塊來檢視模型。  
   
  您可以在上述任一檢視中，執行大部分的模型撰寫工作。  
@@ -115,11 +114,11 @@ ms.locfileid: "66067830"
 ### <a name="toolbar"></a>工具列  
  Analysis Services 工具列可輕鬆快速地存取最常用的模型撰寫命令。  
   
-##  <a name="bkmk_vsint"></a>Visual Studio 整合  
+##  <a name="visual-studio-integration"></a><a name="bkmk_vsint"></a> Visual Studio 整合  
  **原始檔控制**  
  Analysis Services 專案會與選取的原始檔控制外掛程式整合。 如果您已設定 Visual Studio 使用原始檔控制，則可以從 [方案總管] 使用簽入/簽出。 若要設定使用 Team Foundation Server，請參閱 [Configure Visual Studio with Team Foundation Version Control](https://msdn.microsoft.com/library/ms253064.aspx)(使用 Team Foundation 版本控制設定 Visual Studio)。 此外，也支援許多協力廠商原始檔控制外掛程式。  
   
- **字體**  
+ **字型**  
  表格式模型使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境字型來控制顯示的字型。 如果預設 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 字型不含您的語言所需的全部 Unicode 字元，您可能必須變更此字型。 若要變更字型，請依序按一下 [工具]**** 功能表、[選項]**** 及 [字型和色彩]****。  
   
  **鍵盤快速鍵**  
@@ -127,6 +126,6 @@ ms.locfileid: "66067830"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的表格式模型專案](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [SSAS 表格式&#41;&#40;屬性](tabular-models/properties-ssas-tabular.md)  
+ [屬性 &#40;SSAS 表格式&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067603"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>相容性層級 (SSAS 表格式 SP1)
@@ -25,8 +25,7 @@ ms.locfileid: "66067603"
 ## <a name="compatibility-level"></a>相容性層級  
  將新版本和 Service Pack 安裝到實際作業電腦上之前，通常會先安裝到開發和測試電腦上。 在這類情況下，務必了解為新的以及已部署到生產環境的表格式模型專案設定相容性層級的重要。  
   
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services 執行個體支援下列相容性層級 (資料庫版本)：  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services 執行個體支援下列相容性層級 (資料庫版本)：  
   
 -   SQL Server 2012 （1100）  
   
@@ -52,6 +51,6 @@ ms.locfileid: "66067603"
  您可以在 [**資料庫屬性**] 中查看 [**相容性層級**] 屬性（的[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]新功能），以檢查 SSMS 中表格式模型資料庫的相容性層級。  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>在 SSMS 中檢查 Analysis Services 執行個體支援的相容性層級  
- 您可以在**Analysis Services**內容] 中的 [**資訊**] 頁面上，查看**支援的相容**性層級屬性， [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]以檢查 SSMS 中支援的相容性層級（中的新功能）。 支援的相容性層級 1103 表示已安裝 SQL Server SP1 或更新版本。 支援的相容性層級不能變更。  
+ 您可以在**Analysis Services**內容] 中的 [**資訊**] 頁面上，查看**支援的相容**性層級屬性， [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]以檢查 SSMS 中支援的相容性層級（中的新功能）。 支援的相容性層級 1103 表示已安裝 SQL Server SP1 或更新版本。 支援的相容性層級無法變更。  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822310"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>第 5 課：執行預測查詢
@@ -88,7 +88,7 @@ ORDER BY <expression>
     <select list>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
@@ -102,7 +102,7 @@ ORDER BY <expression>
     [<mining model>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Decision Tree]  
@@ -114,7 +114,7 @@ ORDER BY <expression>
     (SELECT '<value>' AS [<column name>], ...)  AS t  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     (SELECT 35 AS [Age],  
@@ -207,7 +207,7 @@ ORDER BY <expression> [DESC|ASC]
     <select list>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     SELECT  

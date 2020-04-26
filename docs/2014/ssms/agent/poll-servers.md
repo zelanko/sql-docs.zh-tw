@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062193"
 ---
 # <a name="poll-servers"></a>輪詢伺服器
@@ -51,7 +51,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   不會修改作業排程或作業步驟的作業預存程序。  
   
- **強制目標伺服器輪詢主伺服器**  
+ **若要強制目標伺服器輪詢主要伺服器**  
   
 -   [Transact-SQL](force-a-target-server-to-poll-the-master-server.md)  
   

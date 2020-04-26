@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190819"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>建立購物籃結構和模型 (中繼資料採礦教學課程)
@@ -64,8 +64,7 @@ ms.locfileid: "63190819"
 12. 在 [**建立測試集**] 頁面上，[**測試資料的百分比**] 選項的預設值為30%。 將此變更為**0**。 按 [下一步]  。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會提供不同的圖表來測量模型精確度。 不過，有些圖表類型 (例如增益圖和交叉驗證報告)，是專為分類和估計而設計。 這些方法不支援用於關聯式預測。  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會提供不同的圖表來測量模型精確度。 不過，有些圖表類型 (例如增益圖和交叉驗證報告)，是專為分類和估計而設計。 這些方法不支援用於關聯式預測。  
   
 13. 在 [**正在完成嚮導]** 頁面的 [**採礦結構名稱**] `Association`中，輸入。  
   
@@ -80,6 +79,6 @@ ms.locfileid: "63190819"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 關聯分析演算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [&#40;資料採礦&#41;的內容類型](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [內容類型 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

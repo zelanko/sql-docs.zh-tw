@@ -11,29 +11,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067963"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>設定 Power View 報表的報表屬性
   在此補充課程中，我們將會針對 Adventure Works Internet Sales Model 專案設定報表屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。  
   
- 在完成本課並將模型重新部署至與 SharePoint 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 整合的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 執行個體之後，您可以建立資料來源、指定資料連接資訊、啟動 Power View 並針對模型設計報表。  
+ 在完成本課並將模型重新部署至與 SharePoint 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 整合的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]執行個體之後，您可以建立資料來源、指定資料連接資訊、啟動 Power View 並針對模型設計報表。  
   
- 本課將不會描述如何建立及使用 Power View 報表。 本課的目的是要針對表格式模型作者提供將影響模型資料顯示於 Power View 中之方式的屬性和設定簡介。 若要了解如何建立 Power View 報表，請參閱[教學課程：在 Power View 中建立範例報表](https://go.microsoft.com/fwlink/?LinkId=221204)。  
+ 本課將不會描述如何建立及使用 Power View 報表。 本課的目的是要針對表格式模型作者提供將影響模型資料顯示於 Power View 中之方式的屬性和設定簡介。 若要了解如何建立 Power View 報表，請參閱 [教學課程：在 Power View 中建立範例報表](https://go.microsoft.com/fwlink/?LinkId=221204)。  
   
- 完成本課程的估計時間： **30 分鐘**  
+ 這堂課的預估完成時間：**30 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在此補充課程中執行工作之前，您必須已完成所有前面的課程。  
   
  為了完成這個特殊補充課程，您也必須具備以下條件：  
   
 -   Adventure Works Internet Sales Model (透過本教學課程完成) 已準備要部署或是已經部署至於表格式模式下執行的 Analysis Services 執行個體。  
   
--   將 SharePoint 網站與表格式模式下執行的 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 和 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 整合，並設定為可支援 Power View 報表。  
+-   將 SharePoint 網站與表格式模式下執行的 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 和 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]整合，並設定為可支援 Power View 報表。  
   
 -   您必須具備充分的權限，才能在 SharePoint 網站上建立指向 Adventure Works Internet Sales Model 的資料連接。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66067963"
   
 -   **加入新的資料**-使用 DAX 公式在計算結果欄中加入新的資料，會以較容易在圖表中顯示的格式建立日期資訊。  
   
--   **隱藏對使用者而言不實用的資料表和資料行**-[**隱藏**] 屬性會控制資料表和資料表資料行是否會顯示在報表用戶端中。 隱藏的項目依然是模型的一部分，而且可供查詢和計算。  
+-   **隱藏對使用者無用的資料表和資料行** - [隱藏]**** 屬性會控制資料表和資料表資料行是否會顯示在報表用戶端。 隱藏的項目依然是模型的一部分，而且可供查詢和計算。  
   
 -   **啟用單鍵資料表**-根據預設，如果使用者按一下欄位清單中的資料表，就不會發生任何動作。 若要變更這個行為，使得按一下資料表時會將資料表加入至報表中，請在每一個要併入資料表的資料行上設定 [預設欄位集]。 這個屬性會在使用者最可能想要使用的資料表資料行上設定。  
   
--   視**需要設定群組**-[**保留唯一**資料列] 屬性會決定資料行中的值是否應該依據不同欄位中的值來分組，例如識別碼欄位。 如果是包含類似客戶名稱之重複值的資料行 (例如，有多位客戶命名為 John Smith)，一定要在 [資料列識別碼]**** 欄位上分組 (保留唯一資料列)，才能為使用者提供正確的結果。  
+-   **視需要設定群組** - [保留唯一資料列]**** 屬性會決定資料行中的值是否應該依據另一個欄位 (如識別碼欄位) 中的值來分組。 如果是包含類似客戶名稱之重複值的資料行 (例如，有多位客戶命名為 John Smith)，一定要在 [資料列識別碼]**** 欄位上分組 (保留唯一資料列)，才能為使用者提供正確的結果。  
   
--   **設定資料類型和資料格式**-根據預設，Power View 會依據資料行資料類型套用規則，以判斷欄位是否可以當做量值使用。 因為 Power View 中的每一個資料視覺效果皆具有量值與非量值放置位置的相關規則，所以請務必在模型中設定資料類型或是覆寫預設值，以便達成您希望使用者具備的行為。  
+-   **設定資料類型和資料格式** - 根據預設，Power View 會根據資料行資料類型套用規則，以判斷此欄位是否可以當做量值使用。 因為 Power View 中的每一個資料視覺效果皆具有量值與非量值放置位置的相關規則，所以請務必在模型中設定資料類型或是覆寫預設值，以便達成您希望使用者具備的行為。  
   
 -   **設定 [依資料行排序**] 屬性-[**依資料行排序**] 屬性會指定資料行中的值是否應該依據不同欄位中的值來排序。 例如，在包含月份名稱的 [Month Calendar] 資料行上，依據 [Month Number] 資料行排序。  
   
@@ -88,11 +88,11 @@ ms.locfileid: "66067963"
   
 3.  在 [預設欄位集]**** 對話方塊的 [資料表中的欄位]**** 清單方塊內按 Ctrl 鍵，並選取以下欄位，然後按一下 [新增]****：  
   
-     **出生日期**、**客戶替代識別碼**、**名字**、**姓氏**。  
+     [Birth Date]****、[Customer Alternate Id]****、[First Name]****、[Last Name]****。  
   
 4.  在 [預設欄位，依照順序]**** 視窗中，使用上移和下移按鈕進行以下排序：  
   
-     **客戶替代識別碼**  
+     **Customer Alternate Id**  
   
      **名字**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66067963"
   
 7.  最後，針對 [Product]**** 資料表執行以上相同步驟，選取以下欄位並依照以下順序排列。  
   
-     **產品替代識別碼**、**產品名稱**。  
+     [Product Alternate Id]****、[Product Name]****。  
   
 ## <a name="table-behavior"></a>資料表行為  
  您可以使用 [資料表行為] 屬性來變更不同視覺效果類型的預設行為，以及變更 Power View 報表中使用之資料表的群組行為。 如此可讓識別資訊 (如名稱、影像或標題) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
@@ -164,7 +164,7 @@ ms.locfileid: "66067963"
   
     |資料行|屬性|值|  
     |------------|--------------|-----------|  
-    |Date|資料格式|簡短日期|  
+    |日期|資料格式|簡短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|依資料行排序|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -177,14 +177,14 @@ ms.locfileid: "66067963"
     |Fiscal Year|Hidden|True|  
     |Fiscal Semester|Hidden|True|  
   
-     **區域**  
+     **地理位置**  
   
     |資料行|屬性|值|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Products**  
+     **基礎**  
   
     |資料行|屬性|值|  
     |------------|--------------|-----------|  
@@ -195,7 +195,7 @@ ms.locfileid: "66067963"
     |Product End Date|資料格式|簡短日期|  
     |Large Photo|Hidden|True|  
   
-     **網際網路銷售**  
+     **Internet Sales**  
   
     |資料行|屬性|值|  
     |------------|--------------|-----------|  
@@ -210,7 +210,7 @@ ms.locfileid: "66067963"
     |Ship Date|資料類型|簡短日期|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>重新部署 Adventure Works Internet Sales 表格式模型  
- 因為您已變更此模型，所以必須重新部署。 基本上來說，您將會重複[第 14 課：部署](lesson-13-deploy.md)中所執行的工作。  
+ 因為您已變更此模型，所以必須重新部署。 基本上來說，您將會重複 [第 14 課：部署](lesson-13-deploy.md)中所執行的工作。  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>若要重新部署 Adventure Works Internet Sales 表格式模型  
   

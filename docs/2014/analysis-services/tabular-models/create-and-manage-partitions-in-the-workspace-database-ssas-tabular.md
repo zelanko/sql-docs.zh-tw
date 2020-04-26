@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067454"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>在工作空間資料庫中建立及管理資料分割 (SSAS 表格式)
-  分割區會將一個資料表分割成多個邏輯部分。 每個資料分割可以不受其他資料分割的影響，單獨處理 (重新整理) 或平行處理。 資料分割可以改善大型資料庫的可調適性和管理能力。 依預設，每個資料表都包含一個資料分割，其中包含所有資料行。 本主題中的工作說明如何使用 **中的** [資料分割管理員] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  分割區會將一個資料表分割成多個邏輯部分。 每個資料分割可以不受其他資料分割的影響，單獨處理 (重新整理) 或平行處理。 資料分割可以改善大型資料庫的可調適性和管理能力。 依預設，每個資料表都包含一個資料分割，其中包含所有資料行。 本主題中的工作描述如何使用中的 [資料**分割管理員**] 對話方塊，建立及管理模型工作空間資料庫中的資料分割[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  將模型部署至其他 Analysis Services 執行個體之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來建立及管理 (已部署) 模型中的資料分割。 如需詳細資訊，請參閱[建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)。  
   
  本主題也包括下列工作：  
   
--   [若要建立新的磁碟分割](#bkmk_create_new)  
+-   [建立新的資料分割](#bkmk_create_new)  
   
 -   [複製資料分割](#bkmk_copy)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66067454"
 ## <a name="tasks"></a>工作  
  若要建立和管理資料分割，您要使用 **[資料分割管理員]** 對話方塊。 若要檢視 **[資料分割管理員]** 對話方塊，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，按一下 **[資料表]** 功能表，然後按一下 **[資料分割]**。  
   
-###  <a name="bkmk_create_new"></a>若要建立新的磁碟分割  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>若要建立新的磁碟分割  
   
 1.  在模型設計師中，選取您要定義資料分割的資料表。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66067454"
   
      若要使用 SQL 陳述式，請按一下預覽視窗右上角附近的 [查詢編輯器]**** 按鈕，然後將 SQL 查詢陳述式輸入或貼到查詢視窗中。 若要驗證您的陳述式，請按一下 **[驗證]**。 若要使用查詢設計工具，請按一下 **[設計]**。  
   
-###  <a name="bkmk_copy"></a>複製資料分割  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a> 複製資料分割  
   
 1.  在 **[資料分割管理員]** 的 **[資料表]** 清單方塊中，確認或選取含有要複製之資料分割的資料表。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067454"
   
 3.  在 **[資料分割名稱]** 中，輸入資料分割的新名稱。  
   
-###  <a name="bkmk_delete"></a>若要刪除資料分割  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a> 若要刪除資料分割  
   
 1.  在 **[資料分割管理員]** 的 **[資料表]** 清單方塊中，確認或選取含有要刪除之資料分割的資料表。  
   

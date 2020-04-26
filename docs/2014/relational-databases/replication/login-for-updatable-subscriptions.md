@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058092"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
@@ -36,7 +36,7 @@ ms.locfileid: "63058092"
  此精靈中可以指定前兩個選項。 您只能使用[sp_link_publication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)來指定最後一個選項;為參數**@security_mode**指定**1**的值。  
   
 ## <a name="options"></a>選項。  
- **使用下列 SQL Server Authentication 登入來建立連接的連結伺服器：**  
+ **建立使用下列 SQL Server 驗證登入進行連接的連結伺服器：**  
  複寫會使用 **[登入]** 和 **[密碼]** 欄位中指定的認證，來建立連結伺服器。  
   
  **登入**  
@@ -53,8 +53,8 @@ ms.locfileid: "63058092"
   
 ## <a name="see-also"></a>另請參閱  
  [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [檢視及修改複寫安全性設定](security/view-and-modify-replication-security-settings.md)   
- [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)   
- [訂閱發行集](subscribe-to-publications.md)  
+ [查看及修改複寫安全性設定](security/view-and-modify-replication-security-settings.md)   
+ [異動複寫的可更新訂閱](transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

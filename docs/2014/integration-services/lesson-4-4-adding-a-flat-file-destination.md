@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767370"
 ---
-# <a name="step-4-adding-a-flat-file-destination"></a>步驟 4：加入一般檔案目的地
+# <a name="step-4-adding-a-flat-file-destination"></a>步驟 4：新增一般檔案目的地
   [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
   
- 在這項工作中，您將失敗資料列的所有資訊儲存至分隔檔案中供以後處理。 若要儲存失敗的資料列，您必須為包含該錯誤資料的文字檔加入及設定一般檔案連接管理員和一般檔案目的地。 透過設定「一般檔案」目的地使用之「一般檔案」連接管理員上的屬性，您可以指定「一般檔案」目的地如何格式化並寫入文字檔。 如需詳細資訊，請參閱＜ [Flat File Connection Manager](connection-manager/file-connection-manager.md) ＞和＜ [Flat File Destination](data-flow/flat-file-destination.md)＞。  
+ 在這項工作中，您將失敗資料列的所有資訊儲存至分隔檔案中供以後處理。 若要儲存失敗的資料列，您必須為包含該錯誤資料的文字檔加入及設定一般檔案連接管理員和一般檔案目的地。 透過設定「一般檔案」目的地使用之「一般檔案」連接管理員上的屬性，您可以指定「一般檔案」目的地如何格式化並寫入文字檔。 如需詳細資訊，請參閱一般檔案[連線管理員](connection-manager/file-connection-manager.md)和一般檔案[目的地](data-flow/flat-file-destination.md)。  
   
 ### <a name="to-add-and-configure-a-flat-file-destination"></a>加入和設定一般檔案目的地  
   

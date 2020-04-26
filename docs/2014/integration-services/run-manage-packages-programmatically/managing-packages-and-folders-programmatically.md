@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6ede05e340cbd2822cd72ceee514f6ce31a2755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766850"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以程式設計方式管理封裝與資料夾
   當您以程式設計方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，您可能想要判斷個別的封裝或資料夾是否存在，或是管理儲存封裝的資料夾。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。  
   
-##  <a name="exists"></a> 判斷套件或資料夾是否存在  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> 判斷套件或資料夾是否存在  
  若要以程式設計方式判斷儲存的封裝是否存在，請在嘗試載入和執行封裝之前，呼叫下列其中一個方法：  
   
 |儲存位置|要呼叫的方法|  
@@ -41,10 +41,10 @@ ms.locfileid: "62766850"
   
 
   
-##  <a name="managing"></a> 管理套件與資料夾  
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> 管理套件與資料夾  
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供管理封裝及儲存封裝之資料夾的其他方法。  
   
-###  <a name="managing_rempkg"></a> 移除套件  
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> 移除套件  
  若要以程式設計方式移除儲存的封裝，請呼叫下列其中一個方法：  
   
 |儲存位置|要呼叫的方法|  
@@ -54,7 +54,7 @@ ms.locfileid: "62766850"
   
 
   
-###  <a name="managing_create"></a> 建立資料夾  
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> 建立資料夾  
  若要以程式設計方式建立儲存資料夾，請呼叫下列其中一個方法：  
   
 |儲存位置|要呼叫的方法|  
@@ -64,7 +64,7 @@ ms.locfileid: "62766850"
   
 
   
-###  <a name="managing_remfldr"></a> 移除資料夾  
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> 移除資料夾  
  若要以程式設計方式移除儲存資料夾，請呼叫下列其中一個方法：  
   
 |儲存位置|要呼叫的方法|  
@@ -74,7 +74,7 @@ ms.locfileid: "62766850"
   
   
   
-###  <a name="managing_rename"></a> 重新命名資料夾  
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> 重新命名資料夾  
  若要以程式設計方式重新命名儲存資料夾，請呼叫下列其中一個方法：  
   
 |儲存位置|要呼叫的方法|  

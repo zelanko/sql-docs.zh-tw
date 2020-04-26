@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757781"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 介面
@@ -38,7 +38,7 @@ ms.locfileid: "62757781"
   
 -   將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自 `IPersistStream`。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  下列參考記載**msmd.h**頭`IMDEmbedded`檔中所提供的介面。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>來源檔案：PXOEmbeddedData.idl  

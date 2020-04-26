@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476745"
 ---
-# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>工作 11：加入條件式分割轉換來篩選重複項
+# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>工作 11：新增條件式分割轉換來篩選重複項
   在這項工作中，您會將條件式分割轉換加入至資料流程。 此轉換可幫助您篩選傳入記錄集中的重複項。 模糊群組轉換會將它找到的相符記錄群組在一起，並挑選其中一筆記錄當做樞紐記錄。 群組中的所有記錄都有相同的 _key_out 值。 群組中的樞紐記錄的 _key_in 值與 _key_out 值相同。 群組中其他記錄的 _key_in 和 _key_out 值不同。 因此，當您使用 _key_in==_key_out 條件篩選時，您只會得到群組中的樞紐資料列。  
   
 1.  從 [ **SSIS 工具箱**] 中的 [**通用**] 區段將 [**條件式分割**轉換] 拖放至 [**資料流程**] 索引標籤。  
@@ -41,6 +41,6 @@ ms.locfileid: "65476745"
 9. 按一下 **[確定]** 以關閉 [**條件式分割轉換編輯器**] 對話方塊。  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 12：加入衍生的資料行轉換，以加入 MDS 需要的資料行](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
+ [工作 12：新增衍生的資料行轉換來新增 MDS 需要的資料行](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
   
   

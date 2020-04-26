@@ -17,17 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137454"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>第五課：建立類神經網路和羅吉斯迴歸模型 (中繼資料採礦教學課程)
   
   
- 
-  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 的營業部門正在負責處理一個專案，目標是提升撥接中心的客戶滿意度。 他們雇用廠商來管理撥接中心、回報撥接中心績效的數據，並要求您分析廠商所提供的一些初步資料。 他們想要知道是否有任何有趣的發現。 他們尤其想知道這些資料是否反映出有關人員雇用的任何問題，或改善客戶滿意度的方式。  
+ [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 的營業部門正在負責處理一個專案，目標是提升撥接中心的客戶滿意度。 他們雇用廠商來管理撥接中心、回報撥接中心績效的數據，並要求您分析廠商所提供的一些初步資料。 他們想要知道是否有任何有趣的發現。 他們尤其想知道這些資料是否反映出有關人員雇用的任何問題，或改善客戶滿意度的方式。  
   
  這個資料集很小，只包含期限為 30 天的撥接中心作業。 這些資料會追蹤每個排班的新進和資深操作員數目、來電數目、訂單數目、必須解決的問題數目，以及客戶等候電話回應的平均時間。 資料也包含以 *「放棄率」*(Abandon Rate) (這是客戶挫折度的指標) 為基礎的服務品質標準。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "63137454"
   
  [第2課：建立預測案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
  [第4課：建立時序群集案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   

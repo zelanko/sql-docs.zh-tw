@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315075"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>探索撥接中心模型 (中繼資料採礦教學課程)
@@ -24,7 +24,7 @@ ms.locfileid: "63315075"
   
 -   [Microsoft 一般內容樹狀檢視器](#bkmk_genviewer) **：** 這個標準檢視器可提供在產生模型時，演算法發現的模式和統計資料的深入詳細資料。  
   
-##  <a name="bkmk_NNviewer"></a>Microsoft 類神經網路檢視器  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Microsoft 類神經網路檢視器  
  檢視器有三個窗格-**輸入**、**輸出**和**變數**。  
   
  藉由使用 [**輸出**] 窗格，您可以為可預測的屬性或相依變數選取不同的值。 如果您的模型包含多個可預測的屬性，您可以從 [**輸出屬性**] 清單中選取屬性。  
@@ -114,7 +114,7 @@ ms.locfileid: "63315075"
   
  [回到頁首](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Microsoft 一般內容樹狀檢視器  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Microsoft 一般內容樹狀檢視器  
  此檢視器可用於在處理模型時，檢視由演算法所建立的更詳細資訊。 **MicrosoftGeneric 內容樹狀檢視器**會以一系列節點來表示「採礦模型」，其中每個節點都代表學習到有關定型資料的知識。 此檢視器可以搭配所有模型使用，但是節點的內容會隨著模型類型而有所不同。  
   
  在類神經網路模型或羅吉斯迴歸模型中，您可能會發現 `marginal statistics node` 特別實用。 此節點包含關於資料中值分佈的衍生統計資料。 如果您想要得到資料的摘要，但是不想撰寫許多 T-SQL 查詢，此資訊就非常有幫助。 在前一個主題中分類收納值的圖表便是衍生自臨界統計資料節點。  
@@ -154,6 +154,6 @@ WHERE NODE_NAME = '10000000000000000'
  [類神經網路模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [類神經網路模型查詢範例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft 類神經網路演算法技術參考](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [變更採礦模型中的資料行離散化](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
+ [變更採礦模型中的資料行分隔](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
   

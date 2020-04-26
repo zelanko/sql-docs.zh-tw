@@ -19,21 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185647"
 ---
 # <a name="market-basket-dmx-tutorial"></a>購物籃 DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、定型和探索採礦模型。 您將使用這些採礦模型來建立預測，說明哪些產品有可能同時被購買。  
   
- 這些採礦模型將從 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中包含的資料來建立，該資料庫儲存了虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的資料。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司。 該公司製造金屬類及複合型自行車，並銷售到北美、歐洲及亞洲的商業市場。 公司的基地位於美國華盛頓州的 Bothell 市，有 290 位員工，另外還有數個區域銷售團隊，分別位於國際銷售市場所在地。  
+ 這些採礦模型將從 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中包含的資料來建立，該資料庫儲存了虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的資料。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司。 該公司製造金屬類及複合型自行車，並銷售到北美、歐洲及亞洲的商業市場。 公司的基地位於美國華盛頓州的 Bothell 市，有 290 位員工，另外還有數個區域銷售團隊，分別位於國際銷售市場所在地。  
   
 ## <a name="tutorial-scenario"></a>教學課程案例  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 已決定要建立自訂應用程式，運用資料採礦功能來預測其客戶可能同時購買的產品類型。 自訂應用程式的目標是要能夠指定一組產品，並預測將與指定的產品一起購買的其他產品有哪些。 然後，[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 將使用此資訊將「建議」功能加入其網站中，並為呈現給其客戶的資訊提供更佳的組織方法。  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 已決定要建立自訂應用程式，運用資料採礦功能來預測其客戶可能同時購買的產品類型。 自訂應用程式的目標是要能夠指定一組產品，並預測將與指定的產品一起購買的其他產品有哪些。 然後，[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 將使用此資訊將「建議」功能加入其網站中，並為呈現給其客戶的資訊提供更佳的組織方法。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供數個可用來完成這項工作的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]工具：  
   
@@ -41,7 +39,7 @@ ms.locfileid: "63185647"
   
 -   [Microsoft 關聯分析演算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)  
   
--   中的查詢編輯器[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+-    中的查詢編輯器  
   
  資料採礦延伸模組 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一種查詢語言，您可以使用它來建立及處理採礦模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)]關聯分析演算法會建立模型來預測可能一起購買的產品。  
   
@@ -91,7 +89,7 @@ ms.locfileid: "63185647"
  [第 1 課：建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE` 陳述式來建立採礦結構。  
   
- [第 2 課：將採礦模型加入購物籃採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [第 2 課：將採礦模型新增至購物籃採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  在這一課，您將學會如何使用 `ALTER` 陳述式將採礦模型加入至採礦結構。  
   
  [第 3 課：處理購物籃採礦結構](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
@@ -107,8 +105,7 @@ ms.locfileid: "63185647"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫  
+-    資料庫  
   
  為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請移[http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417)至或 Microsoft SQL Server 產品範例一節中的 Microsoft SQL Server 範例和 [社區專案] 首頁。 按一下 [**資料庫**]，然後按一下 [**發行**] 索引標籤，並選取您想要的資料庫。  
   
@@ -118,6 +115,6 @@ ms.locfileid: "63185647"
 ## <a name="see-also"></a>另請參閱  
  [自行車購買者 DMX 教學課程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

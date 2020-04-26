@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076534"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>設定維度及分割區的字串存放區
@@ -34,15 +34,15 @@ ms.locfileid: "66076534"
   
  本主題包含下列幾節：  
   
--   [關於字串存放區](#bkmk_background)  
+-   [關於字串存放](#bkmk_background)  
   
 -   [必要條件](#bkmk_prereq)  
   
--   [步驟1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性](#bkmk_step1)  
+-   [步驟 1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性](#bkmk_step1)  
   
--   [步驟2：處理物件](#bkmk_step2)  
+-   [步驟 2：處理物件](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a>關於字串存放區  
+##  <a name="about-string-stores"></a><a name="bkmk_background"></a>關於字串存放區  
  字串存放區組態為選擇性，亦即，即使您建立新的資料庫，也會使用預設字串存放區架構 (檔案大小上限為 4 GB)。 使用較大的字串存放區架構對效能的影響雖然小但也顯著。 只有在您的字串存放區檔案接近或達到最大 4 GB 限制時，才使用它。  
   
 > [!NOTE]  
@@ -54,14 +54,14 @@ ms.locfileid: "66076534"
   
  與限制實體檔案大小的預設字串存放區架構相比，較大的字串存放區是以字串數目上限為基礎。 較大的字串存放區的最大限制為 40 億個唯一字串，或 40 億筆記錄，以先發生者為準。 較大的字串存放區會針對偶數大小建立記錄，其中每筆記錄等於 64K 的頁面。 如果您有非常長，而且無法納入單一記錄的字串，則有效限制將少於 40 億個字串。  
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
  您也必須有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
  維度和分割區必須使用 MOLAP 儲存。  
   
  資料庫相容性層級必須設定為 1100。 如果您使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立或部署資料庫，則資料庫相容性層級已經設定為 1100。 如果您將使用舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料庫移到 ssSQL11 或更新版本，必須更新相容性層級。 如果是移動但未重新部署的資料庫，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定相容性層級。 如需詳細資訊，請參閱[將多維度資料庫的相容性層級設定 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
-##  <a name="bkmk_step1"></a>步驟1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性  
+##  <a name="step-1-set-the-stringstorecompatiblitylevel-property-in-sql-server-data-tools"></a><a name="bkmk_step1"></a>步驟1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性  
   
 1.  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]開啟包含您要修改之維度或資料分割的專案。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66076534"
   
 8.  儲存檔案。  
   
-##  <a name="bkmk_step2"></a>步驟2：處理物件  
+##  <a name="step-2-process-the-objects"></a><a name="bkmk_step2"></a>步驟2：處理物件  
  處理物件之後，將會使用新的儲存體架構。 處理物件也會證明您已經成功解決儲存限制問題，因為先前回報字串存放溢位情況的錯誤應該不會再發生。  
   
 -   在方案總管中，以滑鼠右鍵按一下您剛修改的維度，然後選取 [處理]****。  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767380"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀檔案
+# <a name="step-2-creating-a-corrupted-file"></a>步驟 2:建立損毀的檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
   
  在這項工作中，您會建立現有的範例一般檔案的副本。 然後您會在記事本開啟檔案及編輯 [CurrencyID]**** 資料行，以確定在轉換查閱期間，它無法產生相符者。 在處理新檔案時，查閱失敗會造成 [貨幣索引鍵查閱] 轉換失敗，因而使得其餘的封裝也失敗。 在您建立損毀範例檔案之後，將執行封裝來檢視封裝失敗。  
@@ -30,7 +30,7 @@ ms.locfileid: "62767380"
   
     1.  流覽至[Integration Services 的產品範例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
   
-    2.  按一下 **[下載]** 索引標籤。  
+    2.  按一下 [**下載**] 索引標籤。  
   
     3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "62767380"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>若要確認在執行階段會發生錯誤  
   
-1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
+1.  在 [**調試**] 功能表上，按一下 [**開始調試**]。  
   
      在資料流程的第三次反覆運算中，[查閱貨幣索引鍵] 轉換會嘗試處理 Currency_BAD.txt 檔，但轉換會失敗。 轉換失敗將造成整個封裝失敗。  
   
-2.  在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
+2.  在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
   
 3.  在設計介面中，按一下 [執行結果]**** 索引標籤。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62767380"
     >  數字 27 是元件的識別碼。 當您建立資料流程時會指派此值，您封裝中的值可能不同。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 3：加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
+ [步驟 3：新增錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
   
   

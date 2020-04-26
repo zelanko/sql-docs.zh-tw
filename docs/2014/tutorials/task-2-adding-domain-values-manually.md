@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488379"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>工作 2：手動加入定義域值
+# <a name="task-2-adding-domain-values-manually"></a>工作 2：手動新增定義域值
   在這項工作中，您會手動新增**Country**網域的值。 如需此頁面上欄位的詳細資訊，請參閱[變更定義域值](https://msdn.microsoft.com/library/hh510408.aspx)主題。  
   
 1.  按一下 [**定義域] 清單**中的 [**國家/地區**網域]。  

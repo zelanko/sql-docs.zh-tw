@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62795339"
 ---
 # <a name="understanding-the-tabular-object-model"></a>了解表格式物件模型
@@ -46,7 +46,7 @@ ms.locfileid: "62795339"
  導出量值是在部署模型之後根據要求評估的預存運算式。 就 AMO 物件而言，導出量值具有一對多的對應關聯性。 導出資料行是使用下列 AMO 物件來表示：<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 和 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 是主要的必備物件。 請務必注意，這並不表示上述 AMO 物件中包含的所有物件都可以在進行模型化時使用。  
   
 > [!NOTE]  
->  這些<xref:Microsoft.AnalysisServices.Measure>物件與表格式模型中的匯出量值沒有關聯性，表格式模型中並不支援。  
+>   物件與表格式模型中的導出量值之間沒有任何關聯性，而且表格式模型不支援這類物件。  
   
  如需如何建立及操作匯出量值標記法的詳細說明，請參閱[&#40;表格式&#41;的匯出量值標記法](tables-calculated-measure-representation.md)。  
   

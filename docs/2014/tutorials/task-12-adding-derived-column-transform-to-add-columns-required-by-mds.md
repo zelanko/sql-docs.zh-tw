@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65485244"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>工作 12：加入衍生的資料行轉換，以加入 MDS 需要的資料行
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>工作 12：新增衍生的資料行轉換來新增 MDS 需要的資料行
   在這項工作中，您會將衍生的資料行轉換加入至資料流程。 您可以將兩個衍生的資料行**ImportType**和**BatchTag**加入至傳遞給此轉換的記錄。 您應該先加入這兩個資料行，然後再將資料上傳至 MDS 中的暫存資料表。 這兩個是 MDS 中暫存資料表的必要資料行。 如需詳細資訊，請參閱分[葉成員臨時表](../master-data-services/leaf-member-staging-table-master-data-services.md)。  
   
 1.  從 [ **SSIS 工具箱**] 的 [**一般**] 區段，將 [衍生的**資料****行轉換**] 拖放至 [資料流程] 索引標籤  
@@ -57,6 +57,6 @@ ms.locfileid: "65485244"
 15. 按一下 **[確定]** 以關閉 [衍生的資料**行轉換**] 對話方塊。  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 13：加入 OLE DB 目的地，以便將資料寫入 MDS 暫存資料表](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [工作 13：新增 OLE DB 目的地來將資料寫入 MDS 暫存資料表](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

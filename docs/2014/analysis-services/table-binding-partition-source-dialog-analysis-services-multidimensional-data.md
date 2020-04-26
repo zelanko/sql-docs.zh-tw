@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067873"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>資料表繫結詳細資料 (資料分割來源對話方塊) (Analysis Services - 多維度資料)
@@ -26,7 +26,7 @@ ms.locfileid: "66067873"
  **量值群組**  
  顯示此資料分割的量值群組。  
   
- **Look in**  
+ [查詢]****  
  選取包含此資料分割之來源資料表的資料來源或資料來源檢視。 依預設，會選取所選量值群組使用的資料來源檢視。  
   
  **篩選資料表**  

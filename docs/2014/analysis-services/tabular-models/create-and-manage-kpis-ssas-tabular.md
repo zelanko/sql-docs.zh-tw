@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067504"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>建立及管理 KPI (SSAS 表格式)
@@ -37,7 +37,7 @@ ms.locfileid: "66067504"
 > [!IMPORTANT]  
 >  在建立 KPI 之前，您必須先建立判斷為值的基底量值。 接著將此基底量值延伸至 KPI。 在另一個主題中將說明如何建立量值， [建立及管理量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)。 KPI 也需要目標值。 此值可來自另一個預先定義的量值或絕對值。 一旦將基底量值延伸至 KPI 之後，您就可以在 [關鍵效能指標] 對話方塊中選取目標值及定義狀態臨界值。  
   
-###  <a name="bkmk_create_KPI"></a>建立 KPI  
+###  <a name="to-create-a-kpi"></a><a name="bkmk_create_KPI"></a>建立 KPI  
   
 1.  在量值方格中，以滑鼠右鍵按一下將作為基底量值 (值) 使用的量值，然後按一下 [建立 KPI]****。  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66067504"
 > [!TIP]  
 >  您可以使用 [在 Excel 中進行分析] 功能測試 KPI。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
   
-###  <a name="bkmk_edit_KPI"></a>編輯 KPI  
+###  <a name="to-edit-a-kpi"></a><a name="bkmk_edit_KPI"></a>編輯 KPI  
   
 -   在量值方格中，以滑鼠右鍵按一下作為 KPI 基底量值 (值) 的量值，然後按一下 [編輯 KPI 設定]****。  
   
-###  <a name="bkmk_delete"></a>若要刪除 KPI 和基底量值  
+###  <a name="to-delete-a-kpi-and-the-base-measure"></a><a name="bkmk_delete"></a> 刪除 KPI 和基底量值  
   
 -   在量值方格中，以滑鼠右鍵按一下作為 KPI 基底量值 (值) 的量值，然後按一下 [刪除]****。  
   
-###  <a name="bkmk_delete_KPI"></a>刪除 KPI，但保留基底量值  
+###  <a name="to-delete-a-kpi-but-keep-the-base-measure"></a><a name="bkmk_delete_KPI"></a>刪除 KPI，但保留基底量值  
   
 -   在量值方格中，以滑鼠右鍵按一下作為 KPI 基底量值 (值) 的量值，然後按一下 [刪除 KPI]****。  
   
@@ -73,18 +73,18 @@ ms.locfileid: "66067504"
 |UI 區段|按鍵命令|  
 |----------------|-----------------|  
 |KPI 基準量值|ALT+B|  
-|KPI 狀態|ALT 鍵 + S|  
+|KPI 狀態|ALT+S|  
 |Measure|ALT+M|  
 |[絕對值]|ALT+A|  
 |[定義狀態臨界值]|ALT+U|  
 |[選取圖示樣式]|ALT+I|  
 |趨勢|ALT+T|  
-|說明|ALT 鍵 + D|  
+|說明|ALT+D|  
 |趨勢|ALT+T|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的 Kpi](kpis-ssas-tabular.md)   
  [&#40;SSAS 表格式&#41;的量值](measures-ssas-tabular.md)   
- [建立和管理 &#40;SSAS 表格式&#41;的量值](create-and-manage-measures-ssas-tabular.md)  
+ [建立及管理量值 &#40;SSAS 表格式&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

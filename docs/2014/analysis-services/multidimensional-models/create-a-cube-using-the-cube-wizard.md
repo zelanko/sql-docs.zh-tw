@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076496"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>使用 Cube 精靈來建立 Cube
@@ -24,7 +24,7 @@ ms.locfileid: "66076496"
   
 ### <a name="to-create-a-new-cube"></a>建立新的 Cube  
   
-1.  在方案總管**** 中，以滑鼠右鍵按一下 [Cube]****，然後按一下 [新增 Cube]****。  
+1.  在**方案總管**中，以滑鼠右鍵按一下 [ **cube**]，然後按一下 [**新增 Cube**]。  
   
 2.  在 [Cube 精靈] 的 [選取建立方法]**** 頁面上，選取 [使用現有的資料表]****，然後按一下 [下一步]****。  
   

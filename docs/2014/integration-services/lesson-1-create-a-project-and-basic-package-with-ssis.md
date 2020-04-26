@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767500"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 課：建立專案和基本封裝
@@ -58,8 +58,7 @@ ms.locfileid: "62767500"
  使用一般檔案來源資料時，一定要了解一般檔案連接管理員如何解譯一般檔案資料。 如果一般檔案來源是 Unicode，一般檔案連接管理員會將所有資料行定義為 [DT_WSTR]，預設資料行寬度為 50。 如果一般檔案來源是以 ANSI 編碼，資料行會定義為 [DT_STR]，且資料行寬度為 50。 您或許必須變更這些預設值，好讓字串資料行類型更適合您的資料。 若要這麼做，您必須查看要在其中寫入資料的目的地之資料類型，然後在一般檔案連接管理員內選擇正確類型。  
   
 ### <a name="looking-at-the-destination"></a>查看目的地  
- 來源資料的最終目的地是 **AdventureWorksDW** 中的 **FactCurrency**事實資料表。 
-  **FactCurrency** 事實資料表有 4 個資料行，而且與兩個維度資料表之間有關聯性，如下表所示。  
+ 來源資料的最終目的地是 **AdventureWorksDW** 中的 **FactCurrency**事實資料表。 **FactCurrency** 事實資料表有 4 個資料行，而且與兩個維度資料表之間有關聯性，如下表所示。  
   
 |資料行名稱|資料類型|查閱資料表|「查閱資料行」|  
 |-----------------|---------------|------------------|-------------------|  
@@ -81,25 +80,25 @@ ms.locfileid: "62767500"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1：建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [步驟 1:建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [步驟 2：加入和設定一般檔案連接管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [步驟 2:新增和設定一般檔案連線管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [步驟 3：加入和設定 OLE DB 連接管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [步驟 3：新增和設定 OLE DB 連線管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [步驟 4：將資料流程工作加入至封裝中](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [步驟 4：將資料流程工作新增至封裝](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [步驟 5：加入和設定一般檔案來源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [步驟 5：新增和設定一般檔案來源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [步驟 6：加入及設定查閱轉換](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [步驟 6：新增和設定查閱轉換](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [步驟 7：加入及設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [步驟 7：新增和設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 -   [步驟 8：使第 1 課的封裝更容易了解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [步驟 9：測試第 1 課的教學課程封裝](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1：建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [步驟 1:建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

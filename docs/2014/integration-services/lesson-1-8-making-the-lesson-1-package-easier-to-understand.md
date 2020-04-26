@@ -11,17 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767590"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步驟 8：使第 1 課的封裝更容易了解
   現在您已完成第 1 課封裝的組態，不妨整理一下封裝配置。 如果控制流程配置和資料流程配置中的形狀是隨機大小，或形狀沒有對齊或分組，則封裝功能可能更難以了解。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 會提供方便而快速格式化封裝配置的工具。 格式化功能包括使形狀變成相同大小、對齊形狀和操控形狀之間水平和垂直距離的能力。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 會提供方便而快速格式化封裝配置的工具。 格式化功能包括使形狀變成相同大小、對齊形狀和操控形狀之間水平和垂直距離的能力。  
   
  進一步了解封裝的另一個方法是加入描述封裝功能的註解。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62767590"
   
 2.  在註解方塊中輸入或貼上下列文字。  
   
-     **資料流程會從檔案中解壓縮資料，並在 DimCurrency 資料表的 CurrencyKey 資料行和 DimDate 資料表中的 DateKey 資料行中查閱值，並將資料寫入 NewFactCurrencyRate 資料表。**  
+     **資料流程會從檔案中擷取資料，在 DimCurrency 資料表的 CurrencyKey 資料行和 DimDate 資料表的 DateKey 資料行中查閱值，然後將資料寫入至 NewFactCurrencyRate 資料表中。**  
   
      若要使註解方塊中的文字換行，請將游標放在您要開始新行的位置，然後按 Enter 鍵。  
   

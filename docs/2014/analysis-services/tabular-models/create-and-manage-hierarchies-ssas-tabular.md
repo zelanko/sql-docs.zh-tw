@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067501"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>建立及管理階層 (SSAS 表格式)
@@ -28,7 +28,7 @@ ms.locfileid: "66067501"
   
 -   [刪除階層](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a>建立階層  
+##  <a name="create-a-hierarchy"></a><a name="bkmk_create"></a> 建立階層  
  您可以使用資料行和資料表內容功能表建立階層。 當您建立階層時會顯示新的父層級，而所選的資料行則做為子層級。  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>從內容功能表建立階層  
@@ -46,7 +46,7 @@ ms.locfileid: "66067501"
 > [!NOTE]  
 >  如果您複選量值及一個或多個資料行，或者選取多個資料表的資料行，即會停用內容功能表中的 [建立階層] 命令。  
   
-##  <a name="bkmk_edit"></a>編輯階層  
+##  <a name="edit-a-hierarchy"></a><a name="bkmk_edit"></a>編輯階層  
  您可以重新命名階層、重新命名子層級、變更子層級順序、加入其他資料行做為子層級、從階層移除子層級、顯示子層級的來源名稱 (資料行名稱)，以及隱藏子層級 (如果它與階層父層級同名)。  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>若要變更階層或子層級的名稱  
@@ -85,7 +85,7 @@ ms.locfileid: "66067501"
   
 -   以滑鼠右鍵按一下階層子層級，然後按一下 [顯示來源名稱]****。 即會顯示其複製來源資料行的名稱。  
   
-##  <a name="bkmk_delete"></a>刪除階層  
+##  <a name="delete-a-hierarchy"></a><a name="bkmk_delete"></a>刪除階層  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>刪除階層及移除其子層級  
   
@@ -96,6 +96,6 @@ ms.locfileid: "66067501"
 ## <a name="see-also"></a>另請參閱  
  [表格式模型設計師 &#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)   
  [SSAS 表格式&#41;的階層 &#40;](hierarchies-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;的量值](measures-ssas-tabular.md)  
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)  
   
   

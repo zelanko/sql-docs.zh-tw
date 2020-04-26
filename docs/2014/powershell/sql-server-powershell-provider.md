@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762840"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
@@ -33,8 +33,7 @@ ms.locfileid: "62762840"
 ## <a name="the-sql-server-powershell-hierarchy"></a>SQL Server PowerShell 階層  
  可以在階層中表示資料或物件模型的產品會使用 Windows PowerShell 提供者來公開階層。 這個階層是使用與 Windows 檔案系統所使用之磁碟機和路徑結構類似的結構公開。  
   
- 每個 Windows PowerShell 提供者都會實作一或多個磁碟機， 每一個磁碟機都是相關物件階層的根節點。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作 SQLSERVER: 磁碟機。 該提供者也會針對 SQLSERVER: 磁碟機定義一組主要資料夾。 每個資料夾及其子資料夾都代表可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型存取的一組物件。 當您將焦點放在以其中一個主資料夾為開頭之路徑的子資料夾上時，就可以使用相關聯物件模型中的方法，針對此節點所表示的物件來執行動作。 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供者實作的 Windows PowerShell 資料夾列在下表中。  
+ 每個 Windows PowerShell 提供者都會實作一或多個磁碟機， 每一個磁碟機都是相關物件階層的根節點。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作 SQLSERVER: 磁碟機。 該提供者也會針對 SQLSERVER: 磁碟機定義一組主要資料夾。 每個資料夾及其子資料夾都代表可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型存取的一組物件。 當您將焦點放在以其中一個主資料夾為開頭之路徑的子資料夾上時，就可以使用相關聯物件模型中的方法，針對此節點所表示的物件來執行動作。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供者實作的 Windows PowerShell 資料夾列在下表中。  
   
 |資料夾|SQL Server 物件模型命名空間|物件|  
 |------------|---------------------------------------|-------------|  
@@ -47,7 +46,7 @@ ms.locfileid: "62762840"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件，例如專案、封裝和環境。|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件，例如 Cube、彙總和維度。|  
   
- 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」  或「檢視」  ) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
+ 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 Sqlserver： \ sql 路徑的前置部分是 sqlserver： \ sql\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」** 或「檢視」**) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
   
  這是本機電腦上預設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體中 AdventureWorks2012 資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  
   

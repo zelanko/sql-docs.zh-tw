@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767430"
 ---
-# <a name="step-3-modifying-the-flat-file-connection-manager"></a>步驟 3：修改一般檔案連接管理員
+# <a name="step-3-modifying-the-flat-file-connection-manager"></a>步驟 3：修改一般檔案連線管理員
   在這項工作中，您將會修改您在第 1 課建立及設定的一般檔案連接管理員。 一開始建立時，已設定一般檔案連接管理員來以靜態方式載入單一檔案。 若要讓一般檔案連線管理員反覆載入檔案，您必須修改連線管理員的 ConnectionString 屬性來接受使用者定義變數 `User:varFileName`，這個變數包含在執行階段要載入的檔案路徑。  
   
  透過將連線管理員修改為使用該使用者定義變數 `User::varFileName`的值，來擴展連線管理員的 ConnectionString 屬性，使連線管理員能夠連接到不同的一般檔案。 在執行階段，Foreach 迴圈容器的每一個反覆運算將動態更新 `User::varFileName` 變數。 更新這個變數會造成連接管理員連接到不同的一般檔案，並使資料流程工作處理不同的資料集。  
@@ -26,11 +26,11 @@ ms.locfileid: "62767430"
   
 1.  在 **[連接管理員]** 窗格中，以滑鼠右鍵按一下 **[範例一般檔案來源資料]** ，並選取 **[屬性]** 。  
   
-2.  在 [屬性] 視窗的 [運算式]**** 中，按一下空白資料格，然後按一下省略符號按鈕 **(...)**。  
+2.  在 [屬性視窗中，針對 [**運算式**]，按一下空白資料格，然後按一下省略號按鈕 **（...）**。  
   
 3.  在 [**屬性運算式編輯器**] 對話方塊的 [**屬性**] 資料行中，輸入`ConnectionString`或選取。  
   
-4.  在 [運算式]**** 資料行中，按一下省略符號按鈕 **(…)** 來開啟 [運算式產生器]**** 對話方塊。  
+4.  在 [**運算式**] 資料行中，按一下省略號按鈕 **（...）** ，以開啟 [**運算式**產生器] 對話方塊。  
   
 5.  在 **[運算式產生器]** 對話方塊中，展開 **[變數]** 節點。  
   

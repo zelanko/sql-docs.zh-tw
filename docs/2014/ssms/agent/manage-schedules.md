@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255066"
 ---
 # <a name="manage-schedules"></a>管理排程
@@ -32,7 +32,7 @@ ms.locfileid: "63255066"
  **已啟用**  
  選取此選項來啟用排程。  
   
- **說明**  
+ **描述**  
  描述排程執行作業所用的條件。  
   
  **排程中的作業**  

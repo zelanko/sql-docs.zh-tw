@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83ac5bb1b811c23b782b01167c437e9b989518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767360"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>步驟 3：修改 Directory 屬性組態值
@@ -28,8 +28,7 @@ ms.locfileid: "62767360"
   
      `<?xml version="1.0"?><DTSConfiguration><DTSConfigurationHeading><DTSConfigurationFileInfo GeneratedBy="DOMAIN\UserName" GeneratedFromPackageName="Lesson 5" GeneratedFromPackageID="{F4475E73-59E3-478F-8EB2-B10AFA61D3FA}" GeneratedDate="6/10/2012 8:16:50 AM"/></DTSConfigurationHeading><Configuration ConfiguredType="Property" Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"><ConfiguredValue></ConfiguredValue></Configuration></DTSConfiguration>`  
   
-     當然，您的`GeneratedBy`檔案`GeneratedFromPackageID`中的標題資訊、、和**GeneratedDate**會有所不同。 要注意的元素是 `Configuration` 元素。 
-  `Value` 變數的 `User::varFolderName` 屬性現在將會包含 C:\New Sample Data。  
+     當然，您的`GeneratedBy`檔案`GeneratedFromPackageID`中的標題資訊、、和**GeneratedDate**會有所不同。 要注意的元素是 `Configuration` 元素。 `Value` 變數的 `User::varFolderName` 屬性現在將會包含 C:\New Sample Data。  
   
 3.  儲存變更，然後關閉文字編輯器。  
   

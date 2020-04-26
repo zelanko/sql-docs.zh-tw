@@ -24,15 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189023"
 ---
 # <a name="operators"></a>操作員
-  操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的通知和監視功能。  
+  操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的通知和監視功能。  
   
 ## <a name="operator-attributes-and-concepts"></a>操作員屬性和概念  
  操作員的主要屬性如下：  
@@ -44,7 +43,7 @@ ms.locfileid: "68189023"
 ### <a name="naming-an-operator"></a>為操作員命名  
  每個操作員都必須要有一個名稱。 操作員名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中唯一的名稱，而且不可長於 **128** 個字元。  
   
-### <a name="contact-information"></a>連絡人資訊  
+### <a name="contact-information"></a>連絡資訊  
  操作員的連絡資訊會定義如何通知操作員。 您可以透過電子郵件、呼叫器或 **net send** 命令來通知操作員：  
   
 > [!IMPORTANT]  
@@ -54,7 +53,7 @@ ms.locfileid: "68189023"
   
      電子郵件通知會傳送電子郵件訊息給操作員。 若是使用電子郵件通知，您需提供操作員的電子郵件地址。  
   
--   **呼機通知**  
+-   **呼叫器通知**  
   
      呼叫是透過電子郵件來實作的。 若是使用呼叫器通知，您需提供操作員用來接收呼叫器訊息的電子郵件地址。 若要設定呼叫器通知，您必須將軟體安裝在郵件伺服器上，以便處理傳入郵件，並將其轉換為呼叫器訊息。 該軟體可以採取幾種方法之一，包括：  
   
@@ -74,9 +73,9 @@ ms.locfileid: "68189023"
   
          **主題：**  
   
-         **Cc**：  
+         **副本**：  
   
-         **：**  
+         **收件者**：  
   
     > [!NOTE]  
     >  如果使用低容量的英數字元呼叫系統，您可以將呼叫器通知中的錯誤文字排除，以縮短所傳送的文字。 例如，有一種低容量英數字元呼叫系統，每頁限制為 64 個字元。  
@@ -86,8 +85,7 @@ ms.locfileid: "68189023"
      這是利用 **net send** 命令來將訊息傳送給操作員。 若是使用 **net send**，請指定網路訊息的收件者 (電腦或使用者)。  
   
     > [!NOTE]  
-    >  
-  **Net send** 命令會使用 Microsoft Windows Messenger。 為了順利傳送警示，執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦和操作員所使用的電腦上，都必須執行此服務。  
+    >  **Net send** 命令會使用 Microsoft Windows Messenger。 為了順利傳送警示，執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦和操作員所使用的電腦上，都必須執行此服務。  
   
 ## <a name="alerting-and-fail-safe-operators"></a>警示及保全操作員  
  您可以選擇要告知的操作員來回應警示。 例如，您可以排定警示，來指派操作員通知的輪替責任區分。 例如，發生於星期一、星期三或星期五的警示會告知「人員 A」，而發生於星期二、星期四或星期六的警示則會告知「人員 B」。  
@@ -100,10 +98,9 @@ ms.locfileid: "68189023"
   
      連絡主要操作員會失敗的原因，包括：呼叫器號碼錯誤，以及操作員已下班。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 無法存取**msdb**資料庫中的系統資料表。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 無法存取 **msdb** 資料庫中的系統資料表。  
   
-     
-  **sysnotifications** 系統資料表指定負責警示的操作員。  
+     **sysnotifications** 系統資料表指定負責警示的操作員。  
   
  保全操作員是一種安全功能。 若您要刪除負有保全任務的操作員，您必須先將保全任務重新指派給另一個操作員，或是刪除整個保全指派任務。  
   
@@ -121,7 +118,7 @@ ms.locfileid: "68189023"
 |||  
 |-|-|  
 |**工作**|**主題**|  
-|與建立操作員相關的工作|[建立操作員](create-an-operator.md)<br /><br /> [指定保全操作員](designate-a-fail-safe-operator.md)|  
+|與建立操作員相關的工作|[建立操作員](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
 |與指派警示相關的工作|[指派警示給操作員](assign-alerts-to-an-operator.md)<br /><br /> [定義對警示的回應 &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [指派警示給操作員](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另請參閱  

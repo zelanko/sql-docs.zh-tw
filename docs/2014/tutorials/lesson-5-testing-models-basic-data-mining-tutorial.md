@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185435"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>第 5 課：測試模型 (基本資料採礦教學課程)
@@ -41,13 +41,13 @@ ms.locfileid: "63185435"
  [第4課：探索目標郵寄模型 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第6課：建立和使用預測 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 課：建立及處理預測 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [增益圖索引標籤 &#40;&#41;的 [挖掘準確度] 圖表視圖](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
  [增益圖 &#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [測試和驗證 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [[分類矩陣] 索引標籤 &#40;&#41;的挖掘精確度圖表視圖](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
- [分類矩陣 &#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

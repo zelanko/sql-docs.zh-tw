@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185392"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>第 6 課：建立及處理預測 (基本資料採礦教學課程)
@@ -26,7 +26,7 @@ ms.locfileid: "63185392"
   
  這個課程包含下列主題：  
   
- [&#40;基本資料採礦教學課程建立預測&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [建立預測 &#40;資料採礦基本教學課程&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [在結構資料上使用鑽取 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63185392"
  [第5課： &#40;基本資料採礦教學課程來測試模型&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [&#40;基本資料採礦教學課程建立預測&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [建立預測 &#40;資料採礦基本教學課程&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Analysis Services 的決策樹模型的模型內容-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

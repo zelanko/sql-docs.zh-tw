@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186117"
 ---
 # <a name="start-sql-server-profiler"></a>啟動 SQL Server Profiler
@@ -35,20 +35,19 @@ ms.locfileid: "68186117"
 1.  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 **[工具]** 功能表上，按一下 **[SQL Server Profiler]**。  
   
 ## <a name="starting-sql-server-profiler-in-management-studio"></a>在 Management Studio 中啟動 SQL Server Profiler  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在自己的執行個體中啟動每個分析工具工作階段，並在關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]後繼續執行。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在自己的執行個體中啟動每個分析工具工作階段，並在關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]後繼續執行。  
   
  您可以從 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的數個位置啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，如下列程序所示。 當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 啟動時，它會載入連接內容、追蹤範本及其啟動點的篩選內容。  
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>從工具功能表啟動 SQL Server Profiler  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Tuning Advisor 中的** 功能表上，按一下 **[SQL Server Profiler]**。  
+1.  在  [工具][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **** 功能表中，按一下 [SQL Server Profiler]****。  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>從查詢編輯器啟動 SQL Server Profiler  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表列上，按一下 **[新增查詢]**。  
   
-2.  在查詢編輯器中按一下滑鼠右鍵，然後選取 [在 SQL Server Profiler 中追蹤查詢]****。  
+2.  在查詢編輯器中按一下滑鼠右鍵，然後選取 [在 SQL Server Profiler 中追蹤查詢]  。  
   
     > [!NOTE]  
     >  連接內容是編輯器連接、追蹤範本為 TSQL_SPs，而套用的篩選為 SPID = 查詢視窗 SPID。  
@@ -68,7 +67,7 @@ ms.locfileid: "68186117"
  若要利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來執行追蹤，使用者也必須有 ALTER TRACE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [[SQL Server Profiler]](sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [使用 SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937191"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>作業步驟屬性：新增作業步驟 (進階頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "62937191"
  **重試次數**  
  設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 嘗試重試失敗之作業步驟的次數。  
   
- **重試間隔（分鐘）**  
+ **重試間隔 (分鐘)**  
  設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 嘗試重試之間要等候的時間。  
   
  **失敗時的動作**  
@@ -45,7 +45,7 @@ ms.locfileid: "62937191"
  **檢視**  
  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
- **將輸出附加至現有的檔案**  
+ **將輸出附加至現有檔案**  
  將輸出附加至現有的檔案內容。 否則，每次執行作業步驟時會覆寫先前的檔案內容。  
   
  **記錄至資料表**  
@@ -54,13 +54,13 @@ ms.locfileid: "62937191"
  **檢視**  
  至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
- **將輸出附加至資料表中的現有專案**  
+ **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
   
- **在歷程記錄中包含步驟輸出**  
+ **包含步驟輸出於記錄中**  
  選取此選項即可將作業步驟的輸出包含於作業記錄中。  
   
- **以使用者身分執行**  
+ **指定執行時的身分**  
  如果您是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，就可以選取另一個 SQL 登入來執行此作業步驟。  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>作業系統 (CmdExec) 作業步驟的選項  
@@ -73,7 +73,7 @@ ms.locfileid: "62937191"
  **檢視**  
  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
- **將輸出附加至現有的檔案**  
+ **將輸出附加至現有檔案**  
  每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  
   
  **記錄至資料表**  
@@ -82,10 +82,10 @@ ms.locfileid: "62937191"
  **檢視**  
  至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
- **將輸出附加至資料表中的現有專案**  
+ **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
   
- **在歷程記錄中包含步驟輸出**  
+ **包含步驟輸出於記錄中**  
  選取此選項即可將作業步驟的輸出包含於作業記錄中。  
   
 ## <a name="options-for-powershell-job-steps"></a>PowerShell 作業步驟的選項  
@@ -98,7 +98,7 @@ ms.locfileid: "62937191"
  **檢視**  
  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，已停用此按鈕來查看輸出檔案。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
- **將輸出附加至現有的檔案**  
+ **將輸出附加至現有檔案**  
  每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  
   
  **記錄至資料表**  
@@ -107,10 +107,10 @@ ms.locfileid: "62937191"
  **檢視**  
  至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
- **將輸出附加至資料表中的現有專案**  
+ **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
   
- **在歷程記錄中包含步驟輸出**  
+ **包含步驟輸出於記錄中**  
  選取此選項即可將作業步驟的輸出包含於作業記錄中。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>複寫佇列讀取器作業步驟的選項  
@@ -130,7 +130,7 @@ ms.locfileid: "62937191"
  **檢視**  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
- **將輸出附加至現有的檔案**  
+ **將輸出附加至現有檔案**  
  將輸出附加至現有的檔案內容。 否則，每次執行作業步驟時會覆寫先前的檔案內容。  
   
  **記錄至資料表**  
@@ -139,10 +139,10 @@ ms.locfileid: "62937191"
  **檢視**  
  至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
- **將輸出附加至資料表中的現有專案**  
+ **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
   
- **在歷程記錄中包含步驟輸出**  
+ **包含步驟輸出於記錄中**  
  選取此選項即可將作業步驟的輸出包含於作業記錄中。  
   
 ## <a name="see-also"></a>另請參閱  

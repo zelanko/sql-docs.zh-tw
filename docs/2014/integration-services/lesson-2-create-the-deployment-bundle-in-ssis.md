@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767510"
 ---
-# <a name="lesson-2-creating-the-deployment-bundle"></a>第 2 課：建立部署配套
+# <a name="lesson-2-creating-the-deployment-bundle"></a>第 2 課：建立部署套件組合
   在 [第 1 課：準備建立部署配套](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，您建立了名稱為「部署教學課程」的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、在專案中加入了套件和支援檔案，並且已在套件中實作組態。  
   
  在這一課中，您會建立部署配套，這是一個資料夾，其中包含您必須在其他電腦上安裝封裝的項目。 部署配套將會包含「部署教學課程」專案中的部署資訊清單、封裝的副本，以及支援檔案的副本。 部署資訊清單會列出部署配套中的封裝、其他檔案和組態。  

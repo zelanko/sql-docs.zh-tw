@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076430"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用維度精靈建立維度
@@ -24,7 +24,7 @@ ms.locfileid: "66076430"
   
 ### <a name="to-create-a-new-dimension"></a>建立新維度  
   
-1.  在**方案總管**中，以滑鼠右鍵按一下 [維度]****，再按一下 [新增維度]****。  
+1.  在**方案總管**中，以滑鼠右鍵按一下 [**維度**]，然後按一下 [**新增維度**]。  
   
 2.  在「維度精靈」的 [選取建立方法]**** 頁面上，選取 [使用現有的資料表]****，然後按一下 [下一步]****。  
   

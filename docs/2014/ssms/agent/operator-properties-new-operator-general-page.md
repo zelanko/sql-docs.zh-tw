@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211342"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>操作員屬性及新增操作員 (一般頁面)
@@ -32,22 +32,22 @@ ms.locfileid: "68211342"
  **電子郵件名稱**  
  指定操作員的電子郵件地址。  
   
- **Net send 位址**  
+ **Net Send 位址**  
  指定用於 **net send**的位址。  
   
- **呼機電子郵件名稱**  
+ **呼叫器電子郵件名稱**  
  指定操作員呼叫器所用的電子郵件地址。  
   
- **呼機待命排程**  
+ **傳呼待命排程**  
  設定呼叫器使用中的時間。  
   
- **星期一-星期日**  
+ **星期一至星期日**  
  選取呼叫器使用中的日子。  
   
- **Workday 開始**  
+ **工作日開始**  
  選取時間，在該時間之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就會傳送訊息給呼叫器。  
   
- **Workday 結束**  
+ **工作日結束**  
  選取時間，在該時間之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就不再傳送訊息給呼叫器。  
   
 ## <a name="see-also"></a>另請參閱  

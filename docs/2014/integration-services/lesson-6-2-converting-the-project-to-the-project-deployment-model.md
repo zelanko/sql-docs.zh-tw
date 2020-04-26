@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767350"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步驟 2：將專案轉換成專案部署模型
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步驟 2:將專案轉換成專案部署模型
   在這個工作中，您將使用 Integration Services 專案轉換精靈，將專案轉換為專案部署模型。  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>將專案轉換成專案部署模型  
@@ -51,6 +51,6 @@ ms.locfileid: "62767350"
 13. 按一下 [參數] 索引標籤，並確認封裝現在包含 VarFolderName 參數，而值的路徑同於從第 5 課組態檔的新範例資料資料夾所指定的路徑。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 3：測試第 6 課的套件](lesson-6-3-testing-the-lesson-6-package.md)  
+ [步驟 3：測試第 6 課的封裝](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

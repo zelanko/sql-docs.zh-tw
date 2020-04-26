@@ -19,17 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185962"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
-  
   **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
   
--   做為複寫發行者之[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例中的來源資料表，與做為複寫訂閱者之[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]一個或多個實例的目的地資料表之間的資料列比較。  
+-   在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的來源資料表 (作為複寫發行者) 與一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的目的地資料表 (作為複寫訂閱者) 之間，逐一進行資料列比較。  
   
 -   執行快速比較，只比較資料列計數和結構描述。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "68185962"
  **-destinationschema** *destination_schema_name*  
  目的地資料表的結構描述擁有者。 依預設，資料表擁有者假設為 dbo。  
   
- **-」 destinationpassword** *destination_password*  
+ **-destinationpassword** *destination_password*  
  這是用來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之目的地伺服器的登入密碼。  
   
 > [!IMPORTANT]  
@@ -126,7 +125,7 @@ ms.locfileid: "68185962"
  在比較期間，目的地資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
  **-b** *large_object_bytes*  
- 這是用來進行下列大型物件資料類型之資料行比較的位元組數目，其中包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes*預設為數據行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
+ 這是用來進行下列大型物件資料類型之資料行比較的位元組數目，其中包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
   
  **-bf**  *number_of_statements*  
  這是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 選項時要寫入目前 **指令碼檔案中的** 陳述式數目。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數目超出 *number_of_statements*時，會建立新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案。  
@@ -178,8 +177,8 @@ ms.locfileid: "68185962"
   
 |來源資料類型|目的地資料類型|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`、 `int`或`bigint`|  
-|`smallint`|`int`或`bigint`|  
+|`tinyint`|`smallint`、`int` 或 `bigint`|  
+|`smallint`|`int` 或 `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -203,7 +202,7 @@ ms.locfileid: "68185962"
   
 -   `timestamp`  
   
--   **stl**  
+-   **xml**  
   
 -   `text`  
   

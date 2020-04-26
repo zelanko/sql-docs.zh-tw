@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076560"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用資料來源檢視建立 Cube
@@ -59,9 +59,9 @@ ms.locfileid: "66076560"
  建立 Cube 之後，您可以使用 [商業智慧精靈] 將時間智慧增強功能加入 Cube。 這些增強功能包括某週期至今、滾動平均及某週期至另一週期檢視。  
   
 ## <a name="selecting-dimensions"></a>選取維度  
- 使用精靈的 [Select Dimensions (選取維度)]**** 頁面，將現有的維度加入 Cube。 只有當新 Cube 中已含有對應至維度資料表的共用維度時，才會顯示此頁面。  
+ 使用精靈的 [選取維度]**** 頁面，將現有的維度加入 Cube。 只有當新 Cube 中已含有對應至維度資料表的共用維度時，才會顯示此頁面。  
   
- 若要加入現有的維度，請在 [Shared dimensions (共用維度)]**** 清單中選取一個或多個維度，然後按一下向右箭頭 (**>**) 按鈕將其移至 [Cube 維度]**** 清單中。 按一下雙箭號（**>>**）按鈕以移動清單中的所有維度。  
+ 若要加入現有的維度，請在 [共用維度]**** 清單中選取一個或多個維度，然後按一下向右箭頭 (**>**) 按鈕將其移至 [Cube 維度]**** 清單中。 按一下雙箭號（**>>**）按鈕以移動清單中的所有維度。  
   
  如果清單中未顯示現有的維度，但是您認為應該顯示，則可以按一下 [上一步]**** 並變更一個或多個資料表的資料表類型設定。 現有維度也必須與 Cube 中至少一個事實資料表相關，才會出現在 [共用維度]**** 清單中。  
   

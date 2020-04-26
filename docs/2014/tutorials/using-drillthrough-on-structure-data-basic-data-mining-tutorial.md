@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745539"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>在結構資料上使用鑽研 (基本資料採礦教學課程)
@@ -24,7 +24,7 @@ ms.locfileid: "62745539"
   
 1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，于資料採礦設計師的 [**採礦模型**] 索引標籤上，以滑鼠右鍵按一下 [ **TM_Decision_Tree** ] 模型，然後選取 [**屬性**]。  
   
-2.  在 [屬性] 視窗中，按一下 [AllowDrillThrough]****，然後選取 [True]****。  
+2.  在 [屬性] 視窗中，按一下 **[AllowDrillThrough]**，然後選取 **[True]**。  
   
 3.  在 [採礦模型] 索引標籤中，以滑鼠右鍵按一下模型，然後選取 [處理模型]****。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62745539"
  恭喜！您已順利完成基本資料採礦教學課程。 現在您可以輕鬆地使用資料採礦工具，我們建議您最好也完成中繼資料採礦教學課程，其中會示範如何建立模型以供預測、購物籃分析和時序群集。  
   
 ## <a name="previous-task-in-lesson"></a>本課程的前一項工作  
- [&#40;基本資料採礦教學課程建立預測&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [建立預測 &#40;資料採礦基本教學課程&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [使用預測查詢產生器來建立預測查詢](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

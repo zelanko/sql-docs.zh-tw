@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53e0424f15818903e913fc41e4a5a4a3fdade41d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316545"
 ---
 # <a name="organize-jobs"></a>組織作業
@@ -30,7 +30,7 @@ ms.locfileid: "63316545"
   
 |||  
 |-|-|  
-|**說明**|**主題**|  
+|**描述**|**主題**|  
 |描述如何建立作業類別目錄。|[建立作業類別目錄](create-a-job-category.md)|  
 |描述如何刪除作業類別目錄。|[刪除作業類別目錄](delete-a-job-category.md)|  
 |描述如何將作業指派給作業類別目錄。|[將作業指派至作業類別目錄](assign-a-job-to-a-job-category.md)|  

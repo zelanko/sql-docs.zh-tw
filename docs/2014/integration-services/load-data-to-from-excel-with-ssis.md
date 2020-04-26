@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767310"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
@@ -25,21 +25,19 @@ ms.locfileid: "62767310"
 您可以藉由建立 SSIS 套件，並使用 Excel 連線管理員和 Excel 來源或 Excel 目的地，從 Excel 匯入資料，或將資料匯出至 Excel。 您也可以使用建立在 SSIS 上的 [SQL Server 匯入和匯出精靈]。
 
 本文包含成功從 SSIS 使用 Excel，或要了解及針對常見問題進行疑難排解所需的三組資訊：
-1.  [您需要的](#files-you-need)檔案。
+1.  [您需要的檔案](#files-you-need)。
 2.  當您使用 Excel 載入或取出資料時，您必須提供的資訊。
-    -   將[Excel 指定](#specify-excel)為您的資料來源。
+    -   [指定 Excel](#specify-excel) 作為資料來源。
     -   提供 [Excel 檔案名稱和路徑](#excel-file)。
     -   選取 [Excel 版本](#excel-version)。
     -   指定是否在[第一個資料列包含資料行名稱](#first-row)。
     -   提供[包含資料的工作表或範圍](#sheets-ranges)。
 3.  已知問題和限制。
-    -   
-  [資料類型](#issues-types)的問題。
-    -   
-  [匯入](#issues-importing)的問題。
+    -   [資料類型](#issues-types)的問題。
+    -   匯[入](#issues-importing)的問題。
     -   [匯出](#issues-exporting)的問題。
 
-## <a name="files-you-need"></a>取得連接至 Excel 所需的檔案
+## <a name="get-the-files-you-need-to-connect-to-excel"></a><a name="files-you-need"></a>取得連接至 Excel 所需的檔案
 
 您可能必須下載適用於 Excel 的連線元件，如果它們尚未安裝的話，然後才能從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
@@ -57,7 +55,7 @@ ms.locfileid: "62767310"
 
 如果您無法安裝 2016 可轉散發套件，請改為從這裡安裝 2010 可轉散發套件：[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (Microsoft Access 資料庫引擎 2010 可轉散發套件)。 (沒有任何適用於 Excel 2013 的可轉散發套件。)
 
-## <a name="specify-excel"></a>指定 Excel
+## <a name="specify-excel"></a><a name="specify-excel"></a> 指定 Excel
 
 第一個步驟是指出您想要連接至 Excel。
 
@@ -75,7 +73,7 @@ ms.locfileid: "62767310"
 
 如果您在資料來源清單中看不到 Excel，請確定是否執行 32 位元精靈。 Excel 連線元件均通常是 32 位元檔案，在 64 位元精靈中不會顯示。
 
-## <a name="excel-file"></a>Excel 檔案和檔案路徑
+## <a name="excel-file-and-file-path"></a><a name="excel-file"></a>Excel 檔案和檔案路徑
 
 要提供資訊的第一項資訊是 Excel 檔案的路徑和檔案名稱。 提供此資訊的方式是使用 [Excel 連線管理員編輯器]**** 中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面。
 
@@ -90,16 +88,15 @@ ms.locfileid: "62767310"
 > [!IMPORTANT]
 > 您不能連接至受密碼保護的 Excel 檔案。
 
-## <a name="excel-version"></a>Excel 版本
+## <a name="excel-version"></a><a name="excel-version"></a> Excel 版本
 
 要提供的第二項資訊是 Excel 檔案的版本。 提供此資訊的方式是使用 [Excel 連線管理員編輯器]**** 中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面。
 
 選取用於建立檔案的 Microsoft Excel 版本，或另一個相容版本。 例如，如果您無法安裝 2016 連線元件，您可以安裝 2010 元件並選取此清單中的 [Microsoft Excel 2007-2010]****。
 
-如果您只安裝了較舊版本的連線元件，可能無法選取清單中的較新 Excel 版本。 
-  **Excel 版本**清單包含 SSIS 支援的所有 Excel 版本。 這份清單中的項目存在並不表示已安裝必要的連線元件。 例如，即使您尚未安裝 2016 連線元件，**Microsoft Excel 2016** 也會出現在清單中。
+如果您只安裝了較舊版本的連線元件，可能無法選取清單中的較新 Excel 版本。 **Excel 版本**清單包含 SSIS 支援的所有 Excel 版本。 這份清單中的項目存在並不表示已安裝必要的連線元件。 例如，即使您尚未安裝 2016 連線元件，**Microsoft Excel 2016** 也會出現在清單中。
 
-## <a name="first-row"></a>第一個資料列有資料行名稱
+## <a name="first-row-has-column-names"></a><a name="first-row"></a> 第一個資料列具有資料行名稱
 
 如果您從 Excel 匯入資料，下一個步驟就是指出資料的第一個資料列是否包含資料行名稱。 提供此資訊的方式是使用 [Excel 連線管理員編輯器]**** 中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源]**** 頁面上。
 
@@ -109,15 +106,15 @@ ms.locfileid: "62767310"
 
 如果您要從 Excel 匯出資料，且啟用了此選項，則匯出資料的第一列會包含資料行名稱。
 
-## <a name="sheets-ranges"></a>工作表和範圍
+## <a name="worksheets-and-ranges"></a><a name="sheets-ranges"></a>工作表和範圍
 
 有三種 Excel 物件可以作為資料的來源或目的地：工作表、您指定位址的資料格具名範圍或未具名範圍。
 
 -   **表格.** 若要指定工作表，請在工作表名稱結尾加上 `$` 字元，並以分隔符號括住字串，例如 **[Sheet1$]**。 或者，在現有資料表和檢視的清單中，尋找結尾為 `$` 字元的名稱。
 
--   **已命名的範圍。** 若要指定命名範圍，請提供範圍名稱，例如 **MyDataRange**。 或者，在現有資料表和檢視的清單中，尋找結尾不是 `$` 字元的名稱。
+-   **命名範圍。** 若要指定命名範圍，請提供範圍名稱，例如 **MyDataRange**。 或者，在現有資料表和檢視的清單中，尋找結尾不是 `$` 字元的名稱。
     
--   **未命名的範圍。** 若要指定尚未命名的儲存格範圍，請在工作表名稱結尾加上 $ 字元、指定範圍，再以分隔符號括住字串，例如 **[Sheet1$A1:B4]**。
+-   **未命名範圍。** 若要指定尚未命名的儲存格範圍，請在工作表名稱結尾加上 $ 字元、指定範圍，再以分隔符號括住字串，例如 **[Sheet1$A1:B4]**。
 
 若要選取或指定您想要用作資料來源或目的地的 Excel 物件類型，請執行下列事項之一：
 
@@ -158,7 +155,7 @@ ms.locfileid: "62767310"
 
 -   預覽範例資料，選取 [預覽]**** 以確定它如您的預期。
 
-## <a name="issues-types"></a>資料類型的問題
+## <a name="issues-with-data-types"></a><a name="issues-types"></a>資料類型的問題
 
 ### <a name="data-types"></a>資料類型
 
@@ -191,7 +188,7 @@ SSIS 不會隱含地轉換資料類型。 因此，您可能必須使用衍生�
 > [!TIP]
 > 如果您使用 [匯入和匯出精靈]，且您的資料需要這其中的某些轉換，精靈會為您設定所需的轉換。 因此，即使是您想要使用 SSIS 套件時，使用 [匯入和匯出精靈] 來建立初始套件可能會很實用。 讓精靈為您建立並設定連線管理員、來源、轉換和目的地。
 
-## <a name="issues-importing"></a>匯入的問題
+## <a name="issues-with-importing"></a><a name="issues-importing"></a>匯入的問題
 
 ### <a name="empty-rows"></a>空的資料列
 
@@ -221,7 +218,7 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-exporting"></a>匯出的問題
+## <a name="issues-with-exporting"></a><a name="issues-exporting"></a>匯出的問題
 
 ### <a name="create-a-new-destination-file"></a>建立新的目的地檔案
 
@@ -243,7 +240,7 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 
 -   如果現有目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。
 
--   如果在套件設計期間或在執行階段或由 [匯入和匯出精靈] 建立新的目的地資料表，則 `CREATE TABLE` 陳述式必須使用 LONGTEXT (或其同義字之一) 作為目的地備忘資料行的資料類型。 在精靈中，按一下 [資料行對應]`CREATE TABLE`** 頁面的 [建立目的地資料表]**** 選項旁邊的 [編輯 SQL]****，檢查 ** 陳述式並做必要的修訂。
+-   如果在套件設計期間或在執行階段或由 [匯入和匯出精靈] 建立新的目的地資料表，則 `CREATE TABLE` 陳述式必須使用 LONGTEXT (或其同義字之一) 作為目的地備忘資料行的資料類型。 在精靈中，按一下 [資料行對應]**** 頁面的 [建立目的地資料表]**** 選項旁邊的 [編輯 SQL]****，檢查 `CREATE TABLE` 陳述式並做必要的修訂。
 
 ## <a name="related-content"></a>相關內容
 
@@ -258,8 +255,8 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>關於 SQL Server 匯入和匯出精靈
 [連接至 Excel 資料來源](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
-[透過匯入和匯出精靈的簡單範例開始使用](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
+[開始使用這個匯入和匯出精靈的簡單範例](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>其他文章
-[將資料從 Excel 匯入 SQL Server 或 Azure SQL Database](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
+[將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

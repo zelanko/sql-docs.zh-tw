@@ -11,19 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224601"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>瀏覽決策樹模型 (基本資料採礦教學課程)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法會根據定型集中的其餘資料行，預測哪些資料行影響了自行車的購買決策。  
   
 
   
-##  <a name="Decision_Tree_Tab"></a>決策樹索引標籤  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>決策樹索引標籤  
  在 [**決策樹**] 索引標籤上，您可以針對資料集內的每個可預測屬性來查看決策樹。  
   
  在此情況下，此模型只會預測一個資料行 [自行車購買者]，因此只會顯示一個樹狀結構。 如果有更多樹狀結構，您可以使用 [**樹狀結構**] 方塊來選擇另一個樹狀目錄。  
@@ -64,7 +63,7 @@ ms.locfileid: "63224601"
   
  由於您在建立結構和模型時已啟用鑽研，因此您可以從模型案例和採礦結構中擷取詳細資訊，包括未包含在採礦模型中的資料行 (例如 emailAddress 和 FirstName)。  
   
- 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如需詳細資訊，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 #### <a name="to-drill-through-to-case-data"></a>若要鑽研案例資料  
   
@@ -77,7 +76,7 @@ ms.locfileid: "63224601"
      隨即顯示相同的資料表，且結尾附加結構資料行。  
   
   
-###  <a name="Dependency_Network_Tab"></a>相依性網路索引標籤  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>相依性網路索引標籤  
  [相依性**網路**] 索引標籤會顯示構成採礦模型預測能力的屬性之間的關聯性。 相依性網路檢視器更加印證我們的發現，也就是在預測自行車購買行為時，年齡和地區是重要的因素。  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>若要在相依性網路索引標籤中瀏覽模型  

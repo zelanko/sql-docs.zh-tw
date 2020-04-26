@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62824494"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>利用 Visual Basic 或 Visual C# 存取報表伺服器 Web 服務 (SSRS 教學課程)
@@ -56,7 +56,7 @@ ms.locfileid: "62824494"
 ## <a name="tasks"></a>工作  
  [第 1 課：建立 Web 服務用戶端專案](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [第 2 課：加入 Web 參考](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [第 2 課：新增 Web 參考](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
  [第 3 課：存取 Web 服務](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   

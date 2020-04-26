@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488959"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>工作 7：建立複合定義域
@@ -30,7 +30,7 @@ ms.locfileid: "65488959"
   
 3.  從 [網域] 清單中選取 [**位址行**]、[**城市**]、[**州**] 和 [**郵遞區號**]，然後按一下**向右箭**號，將它們加入 [**複合定義域中的定義域**]  
   
-4.  按一下 **[確定]** ，關閉對話方塊。  
+4.  按一下 [確定]**** 關閉對話方塊。  
   
 ## <a name="next-step"></a>後續步驟  
  [工作 8：建立複合定義域規則](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  

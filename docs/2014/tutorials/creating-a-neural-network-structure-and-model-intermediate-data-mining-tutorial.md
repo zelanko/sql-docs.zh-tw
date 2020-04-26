@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856309"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>建立類神經網路結構和模型 (中繼資料採礦教學課程)
@@ -42,7 +42,7 @@ ms.locfileid: "62856309"
   
  [處理所有模型](#bkmk_SeedProcess)  
   
-## 建立預設的撥置中心結構<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>建立預設的撥置中心結構<a name="bkmk_defaul"></a>  
   
 1.  在的方案總管[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，以滑鼠右鍵按一下 [**採礦結構**]，然後選取 [**新增採礦結構**]。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "62856309"
     |IssuesRaised|輸入|  
     |LevelOneOperators|輸入/預測|  
     |LevelTwoOperators|輸入|  
-    |訂單|輸入/預測|  
+    |Orders|輸入/預測|  
     |ServiceGrade|輸入/預測|  
-    |移位|輸入|  
+    |Shift|輸入|  
     |TotalOperators|請勿使用|  
     |WageType|輸入|  
   
@@ -101,9 +101,9 @@ ms.locfileid: "62856309"
     |IssuesRaised|連續|long|  
     |LevelOneOperators|連續|long|  
     |LevelTwoOperators|連續|long|  
-    |訂單|連續|long|  
-    |ServiceGrade|連續|DOUBLE|  
-    |移位|Discrete|Text|  
+    |Orders|連續|long|  
+    |ServiceGrade|連續|Double|  
+    |Shift|Discrete|Text|  
     |WageType|Discrete|Text|  
   
 13. 在 [**建立測試集**] 頁面上，清除 [**要測試的資料的百分比**] 選項的文字方塊。 按 [下一步]  。  
@@ -136,14 +136,14 @@ ms.locfileid: "62856309"
   
  預設模型 (連續)  
   
-|值|支援|  
+|值|SUPPORT|  
 |-----------|-------------|  
 |Missing|0|  
 |0.09875|120|  
   
  透過叢集進行分類收納  
   
-|值|支援|  
+|值|SUPPORT|  
 |-----------|-------------|  
 |\<0.0748051948|34|  
 |0.0748051948-0.09716216215 範圍|27|  
@@ -153,7 +153,7 @@ ms.locfileid: "62856309"
   
  透過同等區域進行分類收納  
   
-|值|支援|  
+|值|SUPPORT|  
 |-----------|-------------|  
 |\<0.07|26|  
 |0.07-0.00|22|  
@@ -181,12 +181,12 @@ ms.locfileid: "62856309"
   
  或者，您可以新增個別的衍生資料行，將服務等級分類成預先定義的目標範圍，例如**最佳**（ServiceGrade \<= 0.05）、**可接受**（0.10 > ServiceGrade > 0.05）和**差**（ServiceGrade >= 0.10）。  
   
-###  <a name="bkmk_newColumn"></a>建立資料行的複本並變更離散化方法  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>建立資料行的複本並變更離散化方法  
  您將建立一個包含目標屬性的「挖掘」資料行複本，ServiceGrade 並變更數位的分組方式。 您可以在採礦結構中建立任何資料行的多個複本，包括可預測的屬性。  
   
  在此教學課程中，您將會使用離散化的 Equal Areas 方法，並指定四個貯體。 這個方法所產生的群組與商務使用者感興趣的目標值非常接近。  
   
-####  <a name="bkmk_ColumnCopy"></a>若要在採礦結構中建立資料行的自訂複本  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>若要在採礦結構中建立資料行的自訂複本  
   
 1.  在 [方案總管] 中，按兩下您剛剛建立的採礦結構。  
   
@@ -216,14 +216,13 @@ ms.locfileid: "62856309"
     |`DiscretizationBucketCount`|沒有值|4|  
   
     > [!NOTE]  
-    >  
-  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 的預設值實際上是 0，這表示演算法會自動決定最佳的貯體數目。 因此，如果您想要將此屬性的值重設為其預設值，請輸入 0。  
+    >  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 的預設值實際上是 0，這表示演算法會自動決定最佳的貯體數目。 因此，如果您想要將此屬性的值重設為其預設值，請輸入 0。  
   
 9. 在資料採礦設計工具中，按一下 [**採礦模型**] 索引標籤。  
   
      請注意，當您加入採礦結構資料行的複本時，此複本的使用旗標會自動設定為 `Ignore`。 通常當您在採礦結構中加入資料行的複本時，您不會搭配原始資料行來使用此複本進行分析，否則演算法將會在兩個資料行之間尋找很強的關聯，這樣可能會遮蔽其他關聯性。  
   
-##  <a name="bkmk_NewModel"></a>將新的採礦模型加入至採礦結構  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>將新的採礦模型加入至採礦結構  
  現在您已經針對目標屬性建立新的群組，所以需要加入一個新的採礦模型來使用離散化資料行。 當您完成時，CallCenter 採礦結構將會有兩個採礦模型：  
   
 -   「撥接中心預設 NN」採礦模型會將 ServiceGrade 值當做連續範圍來處理。  
@@ -244,10 +243,10 @@ ms.locfileid: "62856309"
   
 6.  同樣地，找出 ServiceGrade Binned，然後將使用方式從 `Ignore` 變更為 `Predict`。  
   
-##  <a name="bkmk_Alias2"></a>建立目標資料行的別名  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>建立目標資料行的別名  
  一般來說，您無法比較使用不同可預測屬性的採礦模型。 但是您可以為採礦模型資料行建立別名。 也就是說，您可以在採礦模型內重新命名資料行 ServiceGrade 分類收納，使其與原始資料行具有相同的名稱。 然後您可以在精確度圖表中直接比較這兩個模型，即使資料是以不同方式離散化也可以。  
   
-###  <a name="bkmk_Alias"></a>若要在「採礦模型」中加入「採礦結構」資料行的別名  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>若要在「採礦模型」中加入「採礦結構」資料行的別名  
   
 1.  在 [**採礦模型**] 索引標籤的 [**結構**] 底下，選取 [ServiceGrade 分類收納]。  
   
@@ -265,8 +264,8 @@ ms.locfileid: "62856309"
   
     |屬性|值|  
     |--------------|-----------|  
-    |**說明**|暫時資料行別名|  
-    |**ID**|ServiceGrade Binned|  
+    |**描述**|暫時資料行別名|  
+    |**識別碼**|ServiceGrade Binned|  
     |**模型旗標**||  
     |**名稱**|服務等級|  
     |**SourceColumn 識別碼**|服務等級 1|  
@@ -287,10 +286,10 @@ ms.locfileid: "62856309"
     |IssuesRaised|輸入|輸入|  
     |LevelOneOperators|輸入|輸入|  
     |LevelTwoOperators|輸入|輸入|  
-    |訂單|輸入|輸入|  
+    |Orders|輸入|輸入|  
     |ServceGrade Binned|略過|Predict (ServiceGrade)|  
     |ServiceGrade|Predict|略過|  
-    |移位|輸入|輸入|  
+    |Shift|輸入|輸入|  
     |Total Operators|輸入|輸入|  
     |WageType|輸入|輸入|  
   
@@ -300,7 +299,7 @@ ms.locfileid: "62856309"
 > [!NOTE]  
 >  如果您沒有為種子參數指定一個數值，SQL Server Analysis Services 將會根據模型的名稱產生一個種子。 因為模型的名稱永遠不同，因此您必須設定一個初始值，以確保它們會以相同順序處理資料。  
   
-###  <a name="bkmk_SeedProcess"></a>若要指定種子並處理模型  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>若要指定種子並處理模型  
   
 1.  在 [**採礦模型**] 索引標籤中，以滑鼠右鍵按一下名為 [撥接中心-LR] 之模型的資料行，然後選取 [**設定演算法參數]**。  
   
@@ -321,6 +320,6 @@ ms.locfileid: "62856309"
  [流覽撥打電話中心模型 &#40;元資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Analysis Services 的採礦結構-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

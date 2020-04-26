@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035397"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
@@ -43,37 +43,37 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>引數  
- [**建立** | **c** ]實例-名稱* \<>實例-版本>* [**-s** ] * \< *  
+ [ **create** | **c** ] *執行個體名稱>\<* *\<* 執行個體版本> [ **-s** ]  
  建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 的新執行個體。 `SqlLocalDB`*使用\<實例版本*所[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]指定的二進位檔版本>引數。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為`SqlLocalDB`公用程式的版本。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
   
  [ **share** | **h** ]  
  使用指定的共用名稱來共用指定的 **LocalDB** 私用執行個體。 如果省略使用者 SID 或帳戶名稱，會預設為目前的使用者。  
   
- [**非共用** | **u** ]  
+ [ **unshared** | **u** ]  
  停止共用指定的 **LocalDB**共用執行個體。  
   
- [ **delete** | **d** ]* \<實例名稱>*  
+ [ **delete** | **d** ] *\<執行個體名稱>*  
  刪除指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。  
   
- [**開始時間** | **]**「*\<實例名稱>*」  
+ [ **start** | **s** ] " *\<執行個體名稱>* "  
  啟動指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。 當成功的陳述式傳回 **LocalDB**的具名管道位址時。  
   
- [**停止** | **p** ]實例名稱>[**-i** ] [**-k** ] * \< *  
+ [ **stop** | **p** ] *\<執行個體名稱>* [ **-i** ] [ **-k** ]  
  停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。 新增 **-i**會使用`NOWAIT`選項來要求關閉實例。 加入 **-k** 會在未經連絡的情況下終止執行個體處理序。  
   
- [ **info** | **i** ][ * \<instance-name>* ]  
+ [ **info** | **i** ] [ *\<執行個體名稱>* ]  
  列出目前使用者擁有的所有 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。  
   
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] * \<實例名稱>* 會傳回名稱、版本、狀態（執行中或已停止）、指定之**localdb**實例的上次啟動時間，以及**localdb**的本機管道名稱。  
+ *\<執行個體名稱>* 會傳回名稱、版本、狀態 (執行中或已停止)、指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體的上次啟動時間，以及 **LocalDB** 的本機管道名稱。  
   
- [ **trace** | **t** ]** **  | **關閉**時  
- **追蹤 on**會針對目前使用者`SqlLocalDB`啟用 API 呼叫的追蹤。 **trace off**停用追蹤。  
+ [ **trace** | **t** ] **on** | **off**  
+ **追蹤 on**會針對目前使用者`SqlLocalDB`啟用 API 呼叫的追蹤。 **trace off** 停用追蹤。  
   
  **-?**  
  傳回每個`SqlLocalDB`選項的簡短描述。  
   
 ## <a name="remarks"></a>備註  
- <執行個體名稱>** 引數必須遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼的規則，或者必須以雙引號括住。  
+ <執行個體名稱>  引數必須遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼的規則，或者必須以雙引號括住。  
   
  不使用任何引數執行 SqlLocalDB 會傳回說明文字。  
   

@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea0abd8387b638ce7d51f0fb2f40424adce10187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267447"
 ---
 # <a name="sql-server-profiler-f1-help"></a>SQL Server Profiler F1 說明
-  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是從伺服器捕獲[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件的工具。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
+  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一種會從伺服器擷取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
   
  下一節包含 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的即時線上說明主題。 只要按下 F1 鍵或按一下對話方塊中的 [說明] **，即可從**使用者介面取得這些主題。  
   
 ## <a name="see-also"></a>另請參閱  
- [[SQL Server Profiler]](sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [伺服器效能與活動監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

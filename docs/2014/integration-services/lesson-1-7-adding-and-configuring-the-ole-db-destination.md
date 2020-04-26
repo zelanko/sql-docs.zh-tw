@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767557"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步驟 7：新增和設定 OLE DB 目的地
@@ -24,7 +24,7 @@ ms.locfileid: "62767557"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>若要加入和設定範例 OLE DB 目的地  
   
-1.  在**SSIS 工具箱**中,展開**其他目標**,並將**OLE DB 目標**拖動到**資料串**流選項卡的設計圖面上。 **Lookup Date Key**  
+1.  在 [ **SSIS 工具箱**] 中，展開 [**其他目的地**]，然後將 [ **OLE DB 目的地**] 拖曳至 **[資料流程]** 索引標籤的設計介面上。將 OLE DB 目的地直接放在 [**查閱日期索引鍵**] 轉換底下。  
   
 2.  按一下 [查閱日期索引鍵]**** 轉換，將綠色箭頭拖曳至新加入的 [OLE DB 目的地]****，來連接這兩個元件。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767557"
   
 13. 以滑鼠右鍵按一下 [範例 OLE DB 目的地]**** 目的地，然後按一下 [屬性]****。  
   
-14. `LocaleID`在「屬性」視窗中,驗證屬性是否設定為**英語(美國),**`DefaultCodePage`屬性設定為**1252**。  
+14. 在 [屬性視窗中，確認屬性`LocaleID`是設為 [**英文（美國）** ]，且`DefaultCodePage`屬性設定為**1252**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 8：使第 1 課的封裝更容易了解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

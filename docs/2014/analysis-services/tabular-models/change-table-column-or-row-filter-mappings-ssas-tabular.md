@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067640"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>變更資料表、資料行或資料列篩選對應 (SSAS 表格式)
@@ -33,7 +33,7 @@ ms.locfileid: "66067640"
   
 2.  在 **[編輯資料表屬性]** 對話方塊中，找出包含您所要篩選之準則的資料行，再按一下資料行標題右邊的向下箭號。  
   
-3.  在 **[自動篩選]** 功能表中，執行下列其中一項：  
+3.  在 [**自動篩選**] 功能表中，執行下列其中一項：  
   
     -   在資料行值清單中，選取或清除做為篩選依據的一個或多個值，然後按一下 [確定]。  
   
@@ -44,6 +44,6 @@ ms.locfileid: "66067640"
          如果發生錯誤而需要從頭開始，請按一下 **[清除資料列篩選]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SSAS&#41;的 [編輯資料表屬性] 對話方塊](../edit-table-properties-dialog-box-ssas.md)  
+ [編輯資料表屬性對話方塊 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

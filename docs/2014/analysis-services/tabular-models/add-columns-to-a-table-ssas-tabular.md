@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067773"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>將資料行加入至資料表 (SSAS 表格式)
@@ -63,6 +63,6 @@ ms.locfileid: "66067773"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS&#41;的 [編輯資料表屬性] 對話方塊](../edit-table-properties-dialog-box-ssas.md)   
- [變更 &#40;SSAS 表格式&#41;的資料表、資料行或資料列篩選對應](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [變更資料表、資料行或資料列篩選對應 &#40;SSAS 表格式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

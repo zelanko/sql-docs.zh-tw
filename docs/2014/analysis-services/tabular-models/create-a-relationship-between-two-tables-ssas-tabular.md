@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067542"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>建立兩個資料表之間的關聯性 (SSAS 表格式)
@@ -49,7 +49,7 @@ ms.locfileid: "66067542"
   
 6.  針對 **[相關查閱資料行]** 選取資料行，其唯一值與針對 **[資料行]** 選取之資料行中的值相符。  
   
-7.  按一下 **[建立]**。  
+7.  按一下 [建立]  。  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>在資料檢視中建立兩個資料表之間的關聯性  
   
@@ -67,10 +67,10 @@ ms.locfileid: "66067542"
   
 5.  針對 **[相關查閱資料行]** 選取資料行，其唯一值與針對 **[資料行]** 選取之資料行中的值相符。  
   
-6.  按一下 **[建立]**。  
+6.  按一下 [建立]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;中刪除關聯性](delete-relationships-ssas-tabular.md)   
- [SSAS 表格式&#41;的關聯性 &#40;](relationships-ssas-tabular.md)  
+ [關聯性 &#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)  
   
   

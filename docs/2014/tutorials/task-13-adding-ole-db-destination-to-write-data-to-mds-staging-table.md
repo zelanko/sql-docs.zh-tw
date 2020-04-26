@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476989"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13：加入 OLE DB 目的地，以便將資料寫入 MDS 暫存資料表
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13：新增 OLE DB 目的地來將資料寫入 MDS 暫存資料表
   現在您已將**ImportType**和**BatchTag**值新增至所有記錄，您已準備好將它們傳送至 MDS 進行預備。 在這項工作中，您會使用 OLE DB 目的地，將資料寫入**stg.< 中。 supplier_Leaf**臨時表。  
   
 1.  將 [ **SSIS 工具箱**] 中 [**其他目的地**] 區段的 [ **OLE DB 目的地**] 拖曳至 [**資料流程**] 索引標籤，然後將它放置在 [**加入 MDS 所需的欄位**  
@@ -49,6 +49,6 @@ ms.locfileid: "65476989"
      ![完成的資料流程](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "完成的資料流程")  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 14：將執行 SQL 工作加入到控制流程，為 MDS 執行預存程序](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [工作 14：將執行 SQL 工作新增至控制流程，為 MDS 執行預存程序](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

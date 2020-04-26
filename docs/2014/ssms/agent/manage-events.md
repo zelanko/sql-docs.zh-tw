@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188206"
 ---
 # <a name="manage-events"></a>管理事件
@@ -35,14 +35,14 @@ ms.locfileid: "63188206"
   
 -   **集中化**。 可從單一伺服器集中控制和合併檢視多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的事件。  
   
--   擴充**性**。 能以一個邏輯伺服器的方式管理很多實體的伺服器。 您可以依照需要對這個實體的伺服器群組新增或移除伺服器。  
+-   **延展性**。 能以一個邏輯伺服器的方式管理很多實體的伺服器。 您可以依照需要對這個實體的伺服器群組新增或移除伺服器。  
   
 -   **效率**。 組態時間減少，因為您只需要定義一次警示和運算子。  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>使用警示管理伺服器的缺點  
  設定警示管理伺服器的缺點包括：  
   
--   **增加的流量**。 將事件轉送至警示管理伺服器會增加網路傳輸量。 將事件轉送限制在高於指定嚴重性層級的事件，可減緩流量增加的情況。  
+-   **網路流量增加**。 將事件轉送至警示管理伺服器會增加網路傳輸量。 將事件轉送限制在高於指定嚴重性層級的事件，可減緩流量增加的情況。  
   
 -   **單一失敗點**。 如果警示管理伺服器離線，則不會對受管理伺服器群組上的任何事件發出警示。  
   

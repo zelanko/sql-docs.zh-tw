@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188177"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>管理整個企業的作業
@@ -32,13 +32,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  若要通知目標伺服器多伺服器作業已有修改，您必須在使用下列任一程序後，叫用先前的命令：  
   
--   [sp_add_jobstep （Transact-sql）](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_update_jobstep （Transact-sql）](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)  
+-   [sp_update_jobstep (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)  
   
--   [sp_delete_jobstep （Transact-sql）](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)  
+-   [sp_delete_jobstep (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
 -   [sp_detach_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
   
@@ -53,7 +53,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server 管理物件 (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **變更作業的目標伺服器**  
+ **若要變更作業的目標伺服器**  
   
 -   [Transact-SQL](modify-the-target-servers-for-a-job.md)  
   
@@ -61,7 +61,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server 管理物件 (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **變更目標伺服器的位置**  
+ **若要變更目標伺服器的位置**  
   
 -   [Transact-SQL](../sql-server-management-studio-ssms.md)  
   
@@ -69,13 +69,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server 管理物件 (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **同步處理目標伺服器時鐘**  
+ **若要將目標伺服器的時鐘同步化**  
   
 -   [Transact-SQL](synchronize-target-server-clocks-sql-server-management-studio.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)  
   
- **強制目標伺服器輪詢主伺服器**  
+ **若要強制目標伺服器輪詢主要伺服器**  
   
 -   [Transact-SQL](force-a-target-server-to-poll-the-master-server.md)  
   

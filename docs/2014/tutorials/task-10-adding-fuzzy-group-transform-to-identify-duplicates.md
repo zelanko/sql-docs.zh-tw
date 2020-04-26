@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481255"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10：加入模糊群組轉換來識別重複項
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10：新增模糊群組轉換來識別重複項
   在這項工作中，您會將模糊群組轉換加入至資料流程。 模糊群組轉換有助於識別來源資料中的重複項。 如需詳細資訊，請參閱[模糊群組轉換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
 1.  將 [ **SSIS 工具箱**] 的**其他轉換**中的 [**模糊群組**轉換] 拖放到 [**結合正確和更正的記錄**] 底下的 [**資料流程**] 索引標籤。  
@@ -55,6 +55,6 @@ ms.locfileid: "65481255"
 15. 按一下 **[確定]** 以關閉 [**模糊群組轉換編輯器**]。  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 11：加入條件式分割轉換來篩選重複項](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [工作 11：新增條件式分割轉換來篩選重複項](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

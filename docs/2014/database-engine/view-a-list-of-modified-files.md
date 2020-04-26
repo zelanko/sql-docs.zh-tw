@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62773424"
 ---
 # <a name="view-a-list-of-modified-files"></a>檢視修改檔案清單
@@ -32,7 +32,7 @@ ms.locfileid: "62773424"
   
 2.  若要簽入選取的檔案，請按一下 [**簽入**]。 或者，您可以將 [**暫止簽入**] 視窗停駐在[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]環境的右側，讓您可以在工作完成時簽入檔案。  
   
-     **登記**  
+     **簽入**  
      簽入方案。  
   
      **註解**  

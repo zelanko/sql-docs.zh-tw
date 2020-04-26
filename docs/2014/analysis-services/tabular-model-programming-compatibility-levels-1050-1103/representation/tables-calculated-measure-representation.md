@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757657"
 ---
 # <a name="calculated-measure-representation-tabular"></a>導出量值表示法 (表格式)
@@ -23,7 +23,7 @@ ms.locfileid: "62757657"
 ## <a name="calculated-measure-representation"></a>導出量值表示法  
   
 ### <a name="calculated-measure-in-amo"></a>AMO 中的導出量值  
- 當您使用 AMO 管理表格式模型導出量值時，邏輯導出量值物件與 <xref:Microsoft.AnalysisServices.Command> 物件的 <xref:Microsoft.AnalysisServices.MdxScript> 物件中所定義的量值之間會有一對一的相符關係。 每個匯出**量值**會定義`CREATE MEASURE`為<xref:Microsoft.AnalysisServices.Command>物件內的運算式，並以分號分隔。 表格式模型中的所有導出量值都對應到 `CREATE MEASURE` 物件內某一個命令物件中的 <xref:Microsoft.AnalysisServices.MdxScript> 字串集合。 每一個導出量值與 <xref:Microsoft.AnalysisServices.CalculationProperty> 之間都有一對一的對應。  
+ 當您使用 AMO 管理表格式模型導出量值時，邏輯導出量值物件與 <xref:Microsoft.AnalysisServices.Command> 物件的 <xref:Microsoft.AnalysisServices.MdxScript> 物件中所定義的量值之間會有一對一的相符關係。 每個匯出**量值**會定義`CREATE MEASURE`為<xref:Microsoft.AnalysisServices.Command>物件內的運算式，並以分號分隔。 表格式模型中的所有導出量值都對應到 <xref:Microsoft.AnalysisServices.MdxScript> 物件內某一個命令物件中的 `CREATE MEASURE` 字串集合。 每一個導出量值與 <xref:Microsoft.AnalysisServices.CalculationProperty> 之間都有一對一的對應。  
   
  下列程式碼片段示範如何建立導出量值。  
   

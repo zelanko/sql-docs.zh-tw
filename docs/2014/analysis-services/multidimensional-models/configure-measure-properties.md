@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076611"
 ---
 # <a name="configure-measure-properties"></a>設定量值屬性
@@ -58,8 +58,7 @@ ms.locfileid: "66076611"
   
 |屬性|定義|  
 |--------------|----------------|  
-|`AggregateFunction`|必要。 決定如何彙總量值。 
-  `Sum` 為預設彙總。 如需詳細資訊，請參閱 [使用彙總函式](use-aggregate-functions.md) 中每個函數的描述。|  
+|`AggregateFunction`|必要。 決定如何彙總量值。 `Sum` 為預設彙總。 如需詳細資訊，請參閱 [使用彙總函式](use-aggregate-functions.md) 中每個函數的描述。|  
 |`DataType`|必要。 指定量值所繫結之基礎事實資料表資料行的資料類型。 這個值預設從來源資料行繼承而來。|  
 |`Description`|提供量值的描述，可以在用戶端應用程式中公開。|  
 |`DisplayFolder`|指定使用者連接到 Cube 時，可在其中看到量值的資料夾。 Cube 具有許多量值時，您可使用顯示資料夾來分類量值，並改進使用者瀏覽經驗。|  

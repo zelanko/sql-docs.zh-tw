@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067663"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>連接到表格式模型資料庫 (SSAS)
@@ -31,9 +31,9 @@ ms.locfileid: "66067663"
   
  [從 Excel 或 SharePoint 連接](#bkmk_excelconn)  
   
- [疑難排解連接問題](#bkmk_Tshoot)  
+ [連接問題的疑難排解](#bkmk_Tshoot)  
   
-##  <a name="bkmk_userpermissions"></a>資料庫的使用者權限  
+##  <a name="user-permissions-on-the-database"></a><a name="bkmk_userpermissions"></a>資料庫的使用者權限  
  連接到在表格式資料庫的使用者必須擁有指定讀取權限的資料庫角色成員資格。  
   
  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫模型時定義角色，對於已部署的模型，則透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]定義角色，有時也要定義角色成員資格。 如需使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的角色管理員建立角色的詳細資訊，請參閱[建立及管理角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)。 如需為已部署的模型建立及管理角色的詳細資訊，請參閱[表格式模型角色 &#40;SSAS 表格式&#41;](tabular-model-roles-ssas-tabular.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "66067663"
 > [!CAUTION]  
 >  透過在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中使用 [角色管理員] 定義的角色重新部署表格式模型專案，將會覆寫已部署表格式模型中定義的角色。  
   
-##  <a name="bkmk_admin"></a>伺服器上的系統管理許可權  
+##  <a name="administrative-permissions-on-the-server"></a><a name="bkmk_admin"></a> 伺服器的管理權限  
  對於使用 SharePoint 來裝載 Excel 活頁簿或 Reporting Services 報表的組織，需要其他設定，才能將表格式模型資料提供給 SharePoint 使用者。 如果您並未使用 SharePoint，請略過本節。  
   
  用來執行 Excel Services 或 Reporting Services 的帳戶需要擁有 Analysis Services 執行個體的系統管理員權限，才能檢視包含表格式資料的 Excel 活頁簿或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表。 需要管理員權限，Analysis Services 執行個體才會信任這些服務。  
@@ -62,7 +62,7 @@ ms.locfileid: "66067663"
   
 5.  按一下 [加入]****，然後輸入 Excel Service 所使用的帳戶，後面接著 Reporting Services 所使用的帳戶。  
   
-##  <a name="bkmk_excelconn"></a>從 Excel 或 SharePoint 連接  
+##  <a name="connecting-from-excel-or-sharepoint"></a><a name="bkmk_excelconn"></a>從 Excel 或 SharePoint 連接  
  提供 Analysis Services 資料庫存取權的用戶端程式庫可以用來連接到在表格式模式伺服器上執行的模型資料庫。 程式庫包含 Analysis Services OLE DB 提供者、ADOMD.NET 和 AMO。  
   
  Excel 使用 OLE DB 提供者。 如果您有來自 SQL Server 2008 R2 的 MSOLAP.4 (檔案名稱為 msolap100.dll，10.50.1600.1 版)，或與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版 PowerPivot for Excel 一起安裝的 MSOLAP.5 (檔案名稱為 msolap110.dll)，您就有將連接至表格式資料庫的版本。  
@@ -87,17 +87,17 @@ ms.locfileid: "66067663"
   
 4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]****。 否則，請選擇 [使用下列的使用者名稱和密碼]****，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按 [下一步]  。  
   
-5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型]**** Cube。 然後依序按一下 [下一步]**** 和 [完成]****。  
+5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型]**** Cube。 按 [下一步]****，然後按一下 [完成]****。  
   
  建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
   
-##  <a name="bkmk_sharepoint"></a>從 SharePoint 連接  
+##  <a name="connect-from-sharepoint"></a><a name="bkmk_sharepoint"></a> 從 SharePoint 連接  
  如果您要使用 PowerPivot for SharePoint，可以在 SharePoint 中建立 BI 語意模型連接檔案，這個檔案會重新導向至 Analysis Services 表格式模式伺服器上執行的資料庫。 BI 語意模型連接會提供 HTTP 端點給資料庫。 它也會針對例行使用 SharePoint 網站之文件的知識工作者，簡化表格式模型存取。 知識工作者只需要知道 BI 語意模型連接檔案的位置或其 URL，就可以存取表格式模型資料庫。 關於伺服器位置或資料庫名稱的詳細資料，都會封裝在 BI 語意模型連接中。 如需建立和使用 BI 語義模型連接檔案的詳細資訊，請參閱[POWERPIVOT BI 語義模型連接 &#40; bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)並[建立與表格式模型資料庫的 BI 語義模型連接](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
-##  <a name="bkmk_Tshoot"></a>疑難排解連接問題  
+##  <a name="troubleshooting-connection-problems"></a><a name="bkmk_Tshoot"></a>疑難排解連接問題  
  本節提供連接到表格式模型資料庫時發生之問題的原因和解決步驟。  
   
- **資料連線嚮導無法從指定的資料來源取得資料庫清單。**  
+ **「資料連線精靈」無法從指定的資料來源取得資料庫清單。**  
   
  匯入資料時，如果您嘗試使用此精靈連接到遠端 Analysis Services 伺服器上的表格式模型資料庫，而且您沒有足夠的權限，就會發生這個 Microsoft Excel 錯誤。 若要解決這個錯誤，您必須擁有資料庫的使用者存取權限。 如需授與使用者對資料的存取權，請參閱本主題稍早所提供的指示。  
   
@@ -109,9 +109,9 @@ ms.locfileid: "66067663"
   
  在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤發生的原因，是因為部署模型資料所在的 Analysis Services 執行個體不信任 Excel Services。 若要解決這個錯誤，請在 Analysis Services 執行個體上，授與 Excel Services 管理權限。 如需授與系統管理員權限，請參閱本主題稍早所提供的指示。 如果錯誤仍然存在，請回收 Excel Services 應用程式集區。  
   
- **嘗試建立與活頁簿中所使用之外部資料源的連接時發生錯誤**  
+ **嘗試建立與活頁簿中所使用之外部資料來源間的連接時，發生錯誤。**  
   
- 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取]**** (含) 以上的權限。 **僅限 View**許可權不足以進行資料存取。  
+ 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取]**** (含) 以上的權限。 [僅供檢視]**** 權限不足以進行資料存取。  
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
