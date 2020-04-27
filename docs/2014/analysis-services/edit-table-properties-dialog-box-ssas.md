@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081440"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>編輯資料表屬性對話方塊 (SSAS)
-  
   **[編輯資料表屬性]** 對話方塊可讓您檢視與修改使用 [資料表匯入精靈] 匯入至模型設計師之資料表的屬性。 若要存取此對話方塊，請在模型設計師中選取資料表，然後按一下 **[資料表]** 功能表，再按一下 **[資料表屬性]**。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
@@ -47,7 +46,7 @@ ms.locfileid: "66081440"
  **資料行名稱來自**  
  |||  
 |-|-|  
-|**Source**|選取此選項，以所選來源資料表的資料行名稱取代目前的資料行名稱。|  
+|**來源**|選取此選項，以所選來源資料表的資料行名稱取代目前的資料行名稱。|  
 |**模組**|選取此選項，以使用目前資料行在模型中顯示的名稱。|  
   
  **重新整理預覽**  
@@ -87,7 +86,7 @@ ms.locfileid: "66081440"
 |**資料表預覽**|選取此選項，以預覽所選資料表及少數資料列。|  
 |**查詢編輯器**|選取此選項，以檢視將對所選資料來源發出的查詢。|  
   
- **Sql 語句**  
+ **SQL 陳述式**  
  顯示依目前資料來源發出以擷取資料列的 SQL 陳述式。 在預設情況下會擷取所有資料列，但是您可以設計篩選器或以手動方式編輯 SQL 陳述式，只擷取資料列的子集。  
   
  **Validate**  
@@ -100,6 +99,6 @@ ms.locfileid: "66081440"
  按一下以套用所做的全部變更，包括取代資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SSAS 表格式&#41;的資料表和資料行](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [資料表與資料行 &#40;SSAS 表格式&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

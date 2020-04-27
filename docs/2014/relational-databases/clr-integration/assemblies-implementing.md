@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874464"
 ---
 # <a name="implementing-assemblies"></a>實作組件
@@ -77,7 +77,7 @@ ms.locfileid: "62874464"
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
-##  <a name="_managing"></a>管理元件版本  
+##  <a name="managing-assembly-versions"></a><a name="_managing"></a>管理元件版本  
  在將組件上傳至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，組件是在資料庫系統目錄中儲存和管理。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]對元件定義所做的任何變更，都應該傳播至儲存在資料庫目錄中的元件。  
   
  當您必須修改組件時，您必須發出 ALTER ASSEMBLY 陳述式來更新資料庫中的組件。 這將會使組件更新至保存其實作的最新 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組副本。  
@@ -93,9 +93,7 @@ ms.locfileid: "62874464"
   
  只有**db_owner**和**db_ddlowner**固定資料庫角色的成員，才能使用 WITH UNCHECKED DATA 子句來執行 run ALTER ASSEMBLY。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在 Windows 應用程式事件記錄公佈訊息，說明已使用資料表中未檢查的資料修改過組件。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著會在有未檢查的資料時，標示任何包含與組件相依的資料之資料表。 **Sys.databases**目錄檢視的**has_unchecked_assembly_data**資料行包含值1，適用于包含未檢查資料的資料表，而0代表沒有未檢查資料的資料表。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在 Windows 應用程式事件記錄公佈訊息，說明已使用資料表中未檢查的資料修改過組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著會在有未檢查的資料時，標示任何包含與組件相依的資料之資料表。 **Sys.databases**目錄檢視的**has_unchecked_assembly_data**資料行包含值1，適用于包含未檢查資料的資料表，而0代表沒有未檢查資料的資料表。  
   
  若要解決未檢查資料的完整性，請針對未檢查資料的每個資料表執行 DBCC CHECKTABLE。 如果 DBCC CHECKTABLE 失敗，您必須刪除無效的資料表資料列或修改組件程式碼來處理問題，然後發出其他的 ALTER ASSEMBLY 陳述式。  
   

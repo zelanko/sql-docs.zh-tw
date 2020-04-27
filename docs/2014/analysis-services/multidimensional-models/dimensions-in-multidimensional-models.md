@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075183"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多維度模型中的維度
@@ -27,7 +27,7 @@ ms.locfileid: "66075183"
  Cube 包含使用者的事實資料分析所根據的所有維度； Cube 中資料庫維度的執行個體稱為 Cube 維度，與 Cube 中的一個或多個量值群組相關。 資料庫維度可在 Cube 中使用多次。 例如，事實資料表可以有多個時間相關的事實，而且可以定義個別 Cube 維度來協助分析每一個時間相關的事實； 但是，只需要存在一個時間相關的資料庫維度，這也表示只需要存在一個時間相關的關聯式資料庫資料表，就可以支援以時間為根據的多個 Cube 維度。  
   
 > [!NOTE]  
->  如需了解與維度設計相關的效能問題，請參閱 [SQL Server 2008 R2 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=306717)(SQL Server 2008 R2 Analysis Services 效能指南)。  
+>   如需了解與維度設計相關的效能問題，請參閱 [SQL Server 2008 R2 Analysis Services 效能指南](https://go.microsoft.com/fwlink/?LinkId=306717)。  
   
 ## <a name="defining-dimensions-attributes-and-hierarchies"></a>定義維度、屬性和階層  
  定義資料庫和 Cube 維度、屬性和階層最簡單的方法，就是使用 [Cube 精靈]，在定義 Cube 的同時建立維度。 Cube 精靈會根據精靈在資料來源檢視中找到的維度資料表，或您指定要用於 Cube 的維度資料表，來建立維度。 然後，精靈會建立資料庫維度，並將其加入新的 Cube，以建立 Cube 維度。  
@@ -56,6 +56,6 @@ ms.locfileid: "66075183"
  描述如何使用 [商業智慧精靈] 來增強資料庫維度。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
   
   

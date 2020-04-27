@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074636"
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理範圍及內容 (MDX)
@@ -47,7 +47,7 @@ ms.locfileid: "66074636"
 >  如果指令碼包含了內含 `This` 函數的 SCOPE 陳述式，MDX 會評估 SCOPE 陳述式定義之 Subcube 的內容內的 `This` 函數，而不是評估整個 Cube。  
   
 ### <a name="this-function-example"></a>This 函數範例  
- 在 `This` 範例 Cube 的 Finance 量值群組中，下列 MDX 指令碼命令範例是使用 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 函數增加 Amount 量值的值，其比 Customer 維度中 Redmond 成員的子系高出 10%：  
+ 在 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 範例 Cube 的 Finance 量值群組中，下列 MDX 指令碼命令範例是使用 `This` 函數增加 Amount 量值的值，其比 Customer 維度中 Redmond 成員的子系高出 10%：  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -116,6 +116,6 @@ END SCOPE;
 ## <a name="see-also"></a>另請參閱  
  [Mdx 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [基本 MDX 腳本 &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
- [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

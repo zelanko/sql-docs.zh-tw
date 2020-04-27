@@ -11,22 +11,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891787"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步驟 2：加入和設定一般檔案連接管理員
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步驟 2:新增和設定一般檔案連線管理員
   在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型]  對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
   
  您必須為您要使用的每一個檔案格式建立新的一般檔案連接管理員。 因為這個教學課程是從多個具有相同資料格式的一般檔案擷取資料，所以您只需要在封裝中加入和設定一個一般檔案連接管理員。  
   
  在此教學課程中，您將在一般檔案連接管理員中設定下列屬性：  
   
--   資料**行名稱：** 因為一般檔案沒有資料行名稱，所以「一般檔案」連接管理員會建立預設的資料行名稱。 這些預設名稱無助於識別每一個資料行所代表的內容。 若要使這些預設名稱有所幫助，您必須將預設名稱變更為符合一般檔案資料即將載入的事實資料表的名稱。  
+-   **資料行名稱** ：因為一般檔案沒有資料行名稱，所以一般檔案連接管理員會建立預設資料行名稱。 這些預設名稱無助於識別每一個資料行所代表的內容。 若要使這些預設名稱有所幫助，您必須將預設名稱變更為符合一般檔案資料即將載入的事實資料表的名稱。  
   
--   **資料對應：** 所有參考連接管理員的一般檔案資料來源元件，將使用您為一般檔案連接管理員指定的資料類型對應。 您可以使用一般檔案連接管理員來手動對應資料類型，或使用 [建議資料行類型]  對話方塊。 在此教學課程中，您將檢視在 [建議資料行類型]**** 對話方塊中建議的對應，然後在 [一般檔案連接管理員編輯器]**** 對話方塊中手動做一些必要的對應。  
+-   **資料對應** ：所有參考連接管理員的一般檔案資料來源元件，將使用您為一般檔案連接管理員指定的資料類型對應。 您可以使用一般檔案連接管理員來手動對應資料類型，或使用 [建議資料行類型]  對話方塊。 在此教學課程中，您將檢視在 [建議資料行類型]**** 對話方塊中建議的對應，然後在 [一般檔案連接管理員編輯器]**** 對話方塊中手動做一些必要的對應。  
   
  一般檔案連接管理員提供有關資料檔的地區設定資訊。 如果您的電腦未設定為使用地區選項 [英文（美國）]，則必須在 [一般檔案**連接管理員編輯器**] 對話方塊中設定其他屬性。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62891787"
   
 2.  在 [一般檔案連接管理員編輯器]**** 對話方塊中，對 [連接管理員名稱]**** 輸入 [範例一般檔案來源資料]****。  
   
-3.  按一下 **[瀏覽]** 。  
+3.  按一下 [瀏覽]****。  
   
 4.  在 [開啟]**** 對話方塊中，尋找電腦上的 SampleCurrencyData.txt 檔案。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62891787"
   
     1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  按一下 **[下載]** 索引標籤。  
+    2.  按一下 [**下載**] 索引標籤。  
   
     3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
@@ -77,8 +77,7 @@ ms.locfileid: "62891787"
   
 1.  在 [一般檔案連接管理員編輯器]**** 對話方塊中，按一下 [建議類型]****。  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會依據最前面的 200 個資料列，自動建議最適合的資料類型。 您也可以變更這些建議選項，以增加或減少取樣資料、指定整數或布林資料的預設資料類型，或是加入空格以填補字串資料行。  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會依據最前面的 200 個資料列，自動建議最適合的資料類型。 您也可以變更這些建議選項，以增加或減少取樣資料、指定整數或布林資料的預設資料類型，或是加入空格以填補字串資料行。  
   
      目前請暫時不要對 [建議資料行類型]**** 對話方塊中的選項做任何變更，並按一下 [確定]****，由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建議適合資料行的資料類型。 這時會回到 [一般檔案連接管理員編輯器]**** 對話方塊的 [進階]**** 窗格，您可以在此檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建議的資料行資料類型。 (如果按一下 [取消]****，則不會對資料行中繼資料做出任何建議，而是使用預設的字串 (DT_STR) 資料類型)。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62891787"
 4.  按一下 [確定]  。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 3：加入和設定 OLE DB 連接管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [步驟 3：新增和設定 OLE DB 連線管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [一般檔案連線管理員](connection-manager/file-connection-manager.md)   

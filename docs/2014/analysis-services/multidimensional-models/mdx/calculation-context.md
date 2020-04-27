@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074693"
 ---
 # <a name="calculation-context"></a>計算內容
@@ -30,8 +30,7 @@ ms.locfileid: "66074693"
 2.  WHERE 子句 (如果有的話) - 這個子句也稱為「slicer 軸」**，用來指定集合、Tuple 或成員，可限制查詢所傳回之欄軸和列軸上的成員。 概念上，資料行或資料列軸上沒有明確指定之每個屬性階層的預設成員都是 slicer 座標軸的一部分。  
   
     > [!NOTE]  
-    >  當 slicer 座標軸和另一個座標軸上指定了特定屬性的資料格座標時，函數中指定的座標會優先使用來決定座標軸上的成員集合。 
-  [Filter (MDX)](/sql/mdx/filter-mdx) 和 [Order (MDX)](/sql/mdx/order-mdx) 函數是這類函數的範例 - 您可以使用 WHERE 子句，或 FROM 子句的 SELECT 陳述式，依據從計算內容排除的屬性成員來篩選或排序結果。  
+    >  當 slicer 座標軸和另一個座標軸上指定了特定屬性的資料格座標時，函數中指定的座標會優先使用來決定座標軸上的成員集合。 [Filter (MDX)](/sql/mdx/filter-mdx) 和 [Order (MDX)](/sql/mdx/order-mdx) 函數是這類函數的範例 - 您可以使用 WHERE 子句，或 FROM 子句的 SELECT 陳述式，依據從計算內容排除的屬性成員來篩選或排序結果。  
   
 3.  在查詢或運算式中定義的命名集和導出成員。  
   
@@ -73,6 +72,6 @@ WHERE (Customer.Country.France,
 ## <a name="see-also"></a>另請參閱  
  [在查詢中建立 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 中的重要概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

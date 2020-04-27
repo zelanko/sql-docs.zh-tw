@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e65fce75803445e233ee40890cdefefe8cdd96d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066213"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (動作索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
@@ -26,7 +26,7 @@ ms.locfileid: "66066213"
 |------------|-----------------|  
 |**加入商業智慧**|按一下以顯示 **[商業智慧精靈]** ，並將商業智慧功能加入至 Cube。|  
 |**處理程序**|按一下以顯示 **[處理]** 對話方塊，並處理 Cube。|  
-|**地**|如果 [動作]**** 索引標籤的工作階段因為連接遺失或逾時而中斷連接，按一下即可將 [動作] 索引標籤重新連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**** 執行個體和包含 Cube 的資料庫。|  
+|**重新連接**|如果 [動作]**** 索引標籤的工作階段因為連接遺失或逾時而中斷連接，按一下即可將 [動作]**** 索引標籤重新連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和包含 Cube 的資料庫。|  
 |**新增動作**|按一下以顯示 [動作表單編輯器]**** 窗格並建立新的動作。|  
 |**新增鑽研動作**|按一下以顯示 [Drillthrough Action Form Editor (鑽研動作表單編輯器)]****，然後建立新的鑽研動作。|  
 |**新增報表動作**|按一下以顯示 [Report Action Form Editor (報表動作表單編輯器)]****，然後建立新的報表動作。|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077966"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>手動處理資料 (SSAS 表格式)
@@ -30,7 +30,7 @@ ms.locfileid: "66077966"
   
 -   [資料處理進度](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a>手動處理資料  
+##  <a name="manually-process-data"></a><a name="bkmk_mahually_process"></a>手動處理資料  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>處理模型中單一資料表或所有資料表的資料  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66077966"
   
 2.  在 **[處理資料分割]** 對話方塊的 **[模式]** 中，選取下列其中一個處理模式：  
   
-    |模式|描述|  
+    |[模式]|描述|  
     |----------|-----------------|  
-    |**進程預設值**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
+    |**處理預設**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  
     |**處理資料**|將資料載入資料分割或資料表，而不重新建立階層或關聯性，或重新計算導出資料行和量值。|  
     |**處理清除**|移除資料分割中的所有資料。|  
@@ -60,9 +60,8 @@ ms.locfileid: "66077966"
   
 3.  在資料分割清單中，選取要處理的資料分割，然後按一下 **[確定]**。  
   
-##  <a name="bkmk_data_process_progress"></a>資料處理進度  
- 
-  **[資料處理進度]** 對話方塊可讓您監視您已經從外部來源匯入模型之資料的處理作業。 若要存取此對話方塊，請按一下 **[模型]** 功能表，然後按一下 **[處理資料分割]**、 **[處理資料表]** 或 **[處理全部]**。  
+##  <a name="data-process-progress"></a><a name="bkmk_data_process_progress"></a>資料處理進度  
+ **[資料處理進度]** 對話方塊可讓您監視您已經從外部來源匯入模型之資料的處理作業。 若要存取此對話方塊，請按一下 **[模型]** 功能表，然後按一下 **[處理資料分割]**、 **[處理資料表]** 或 **[處理全部]**。  
   
  **狀態**  
  指出處理作業是否成功。  
@@ -75,6 +74,6 @@ ms.locfileid: "66077966"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;處理資料](process-data-ssas-tabular.md)   
- [針對 &#40;SSAS 表格式&#41;處理資料進行疑難排解](troubleshoot-process-data-ssas-tabular.md)  
+ [疑難排解處理資料 (SSAS 表格式)](troubleshoot-process-data-ssas-tabular.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873099"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
@@ -123,7 +123,7 @@ ms.locfileid: "62873099"
 |描述如何使用 SQL Server 公用程式來檢視目前已部署 DAC 的健全狀態。|[監視資料層應用程式](data-tier-applications.md)|  
 |描述如何建立包含在 DAC 中的資料和中繼資料之封存的 .bacpac 檔案。|[匯出資料層應用程式](export-a-data-tier-application.md)|  
 |描述如何使用 DAC 封存檔案 (.bacpac) 執行 DAC 的邏輯還原，或將 DAC 移轉至另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的執行個體。|[匯入 BACPAC 檔案以建立新的使用者資料庫](import-a-bacpac-file-to-create-a-new-user-database.md)|  
-|描述如何匯入 BACPAC 檔案，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內建立新的使用者資料庫。|[從資料庫中擷取 DAC](extract-a-dac-from-a-database.md)|  
+|描述如何匯入 BACPAC 檔案，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內建立新的使用者資料庫。|[從資料庫解壓縮 DAC](extract-a-dac-from-a-database.md)|  
 |描述如何將現有的資料庫升級為 DAC 執行個體。 DAC 定義會建立並儲存在系統資料庫中。|[將資料庫註冊為 DAC](register-a-database-as-a-dac.md)|  
 |描述如何先檢閱 DAC 封裝的內容以及 DAC 升級要執行的動作，再於實際執行系統中使用該封裝。|[驗證 DAC 封裝](validate-a-dac-package.md)|  
 |描述如何先將 DAC 封裝的內容放入資料庫管理員可以檢閱 DAC 作用的資料夾，再將它部署至實際伺服器。|[解除封裝 DAC 封裝](unpack-a-dac-package.md)|  

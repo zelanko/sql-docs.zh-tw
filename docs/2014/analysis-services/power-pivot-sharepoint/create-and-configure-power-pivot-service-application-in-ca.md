@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071577"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>在管理中心建立及設定 PowerPivot 服務應用程式
@@ -32,7 +32,7 @@ ms.locfileid: "66071577"
   
  [編輯服務應用程式屬性](#EditGSA)  
   
-##  <a name="determine"></a>判斷是否要建立新的 PowerPivot 服務應用程式  
+##  <a name="determine-whether-to-create-a-new-powerpivot-service-application"></a><a name="determine"></a>判斷是否要建立新的 PowerPivot 服務應用程式  
  PowerPivot for SharePoint 安裝必須在伺服陣列中至少有一個 PowerPivot 服務應用程式。 如果您使用 PowerPivot 組態工具設定伺服器，便會自動建立服務應用程式。 否則，您必須在管理中心手動建立 PowerPivot 服務應用程式。  
   
  建立服務應用程式可讓服務變成可用，並產生服務應用程式資料庫。 視建立服務應用程式時所選取的選項而定，會將 PowerPivot 服務連接加入預設的服務連接群組。 所有訂閱預設服務連接群組的 SharePoint Web 應用程式，都會自動立即取得 PowerPivot 服務應用程式的存取權。  
@@ -49,9 +49,9 @@ ms.locfileid: "66071577"
   
  如果您沒有建立其他 PowerPivot 服務應用程式的特定理由，則應該為伺服陣列中的所有 Web 應用程式，使用單一的服務應用程式。  
   
-##  <a name="CreateApp"></a>建立 PowerPivot 服務應用程式  
+##  <a name="create-a-powerpivot-service-application"></a><a name="CreateApp"></a>建立 PowerPivot 服務應用程式  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  在 **[服務應用程式]** 功能區中，按一下 **[新增]**。  
   
@@ -77,10 +77,10 @@ ms.locfileid: "66071577"
   
 10. 按一下 [確定]****。 此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
   
-##  <a name="ConfigApp"></a>設定 PowerPivot 服務應用程式  
+##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>設定 PowerPivot 服務應用程式  
  使用預設組態建立 PowerPivot 服務應用程式。 在大部分的情況下建議使用預設值。 只有在您遇到回應時間變慢或連接已卸除時，或是如果您要改變特定 SharePoint Web 應用程式的 PowerPivot 服務組態時，才變更它們。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
      在服務應用程式的清單中，您應該會看到剛才建立和命名的服務應用程式。 預設值是 **[PowerPivotServiceApplication1]**。  
   
@@ -122,17 +122,16 @@ ms.locfileid: "66071577"
   
      對載入逾時或配置方法的變更只會套用至新的內送要求。 已在進行中的要求受限於接收要求時生效的值。  
   
-##  <a name="AssignGSA"></a>將 PowerPivot 服務應用程式指派給 Web 應用程式  
+##  <a name="assign-a-powerpivot-service-application-to-a-web-application"></a><a name="AssignGSA"></a>將 PowerPivot 服務應用程式指派給 Web 應用程式  
  設定 PowerPivot 服務應用程式後，即可將它指派給 Web 應用程式，其方法是將它加入該 Web 應用程式的服務應用程式連接清單。 作法有二：  
   
--   將它加入 **預設** 連接群組。 
-  *「預設連接群組」* (Default Connection Group) 是服務應用程式連接的集合，可供任何參考它的 Web 應用程式使用。 您必須將 PowerPivot 服務應用程式加入到這個清單中。  
+-   將它加入 **預設** 連接群組。 *「預設連接群組」* (Default Connection Group) 是服務應用程式連接的集合，可供任何參考它的 Web 應用程式使用。 您必須將 PowerPivot 服務應用程式加入到這個清單中。  
   
 -   為特定的 Web 應用程式建立 **[自訂]** 連接清單。 如果您建立了多個 PowerPivot 服務應用程式，則可以在自訂清單中選取要使用哪一個。  
   
  預設的連接群組將可接受相同類型的多個服務應用程式。 不過請注意，將一個以上的 PowerPivot 服務應用程式加入到這個清單並不是支援的組態。  
   
-1.  在 [管理中心] 的 [**應用程式管理**] 中，按一下 [**管理 web 應用程式**]。  
+1.  在 [管理中心] 的 **[應用程式管理]** 中，按一下 **[管理 Web 應用程式]**。  
   
 2.  選取您要指派連接的應用程式 (例如 SharePoint-80)。  
   
@@ -140,20 +139,20 @@ ms.locfileid: "66071577"
   
 4.  在 [Edit the following group of associations (編輯下列關聯群組)]**** 中，選取 **default** 或 **[custom]**。  
   
-5.  若是 **[custom]**，請選取您想要使用的每個服務應用程式連接旁邊的核取方塊。 如果您具有多個 PowerPivot 服務應用程式 (由 [類型] 設定為 `PowerPivot Service Application Proxy` 來表示)，請務必只選擇一個。  
+5.  針對 **[自訂]**，選取您想要使用之每個服務應用程式連線旁的核取方塊。 如果您具有多個 PowerPivot 服務應用程式 (由 [類型] 設定為 `PowerPivot Service Application Proxy` 來表示)，請務必只選擇一個。  
   
 6.  按一下 [確定]  。  
   
-##  <a name="EditGSA"></a>編輯服務應用程式屬性  
+##  <a name="edit-service-application-properties"></a><a name="EditGSA"></a>編輯服務應用程式屬性  
  使用下列指示來重新開啟屬性頁，以指定服務的應用程式名稱、應用程式集區、資料庫設定以及服務關聯。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  選取 PowerPivot 服務應用程式，但是不要在上面按一下。 您可以按一下類型名稱來選取整列。  
   
 3.  在功能區上按一下 **[屬性]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

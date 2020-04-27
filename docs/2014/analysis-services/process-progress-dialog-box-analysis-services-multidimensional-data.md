@@ -13,15 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070683"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>處理進度對話方塊 (Analysis Services - 多維度資料)
-  使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [處理進度] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可監視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的處理。 
-  **[處理進度]** 對話方塊會在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件上開始處理時出現。  
+  使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [處理進度] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可監視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的處理。 **[處理進度]** 對話方塊會在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件上開始處理時出現。  
   
 ## <a name="options"></a>選項。  
  **狀態樹狀檢視**  

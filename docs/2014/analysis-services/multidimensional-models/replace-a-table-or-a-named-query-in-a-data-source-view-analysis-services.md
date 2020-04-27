@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073133"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>取代資料來源檢視中的資料表或具名查詢 (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66073133"
 > [!IMPORTANT]  
 >  如果您在資料來源中重新命名資料表，請遵循取代資料表的步驟，並在重新整理 DSV 之前，將重新命名的資料表指定 DSV 中的相對應資料表的來源。 完成取代及重新命名程序會在 DSV 中保留資料表、資料表的參考和資料表的關聯性。 否則，當您重新整理 DSV 時，資料來源中重新命名的資料表會被解譯為已刪除。 如需詳細資訊，請參閱[在資料來源檢視中重新整理結構描述 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)。  
   
-##  <a name="bkmk_nq"></a>以已命名的查詢取代資料表  
+##  <a name="replace-a-table-with-a-named-query"></a><a name="bkmk_nq"></a> 以具名查詢取代資料表  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中取代資料表或具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   

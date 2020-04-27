@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891400"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>步驟 3：加入錯誤流程重新導向
+# <a name="step-3-adding-error-flow-redirection"></a>步驟 3：新增錯誤流程重新導向
   如上一項工作所示範的，當 [查閱貨幣索引鍵] 轉換試圖處理已損毀範例一般檔案 (其產生錯誤) 時，不會產生相符者。 因為轉換使用錯誤輸出的預設值，所以任何錯誤都會造成轉換失敗。 當轉換失敗時，封裝的其餘部分也會失敗。  
   
  若不要讓轉換失敗，您可以設定元件利用錯誤輸出將失敗的資料列重新導向至另一個處理路徑。 使用個別錯誤處理路徑可讓您做一些事。 例如，您可以試著清除資料，然後重新處理失敗的資料列。 或者，您可以儲存失敗的資料列及其他錯誤資訊，供以後驗證及重新處理。  
@@ -52,7 +52,7 @@ ms.locfileid: "62891400"
   
 10. 在 [**腳本**] 頁面上，確認`LocaleID`屬性是設為 [**英文（美國**）]。  
   
-11. 按一下 **[編輯指令碼]** 開啟 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 `Input0_ProcessInputRow` 方法中，輸入或剖析下列程式碼。  
+11. 按一下 [編輯指令碼]**** 以開啟 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 `Input0_ProcessInputRow` 方法中，輸入或剖析下列程式碼。  
   
      [Visual Basic]  
   

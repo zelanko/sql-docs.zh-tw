@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074270"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>使用 RollupChildren 函數 (MDX)
@@ -28,8 +28,7 @@ ms.locfileid: "66074270"
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 函數範例  
  要說明使用多維度運算式 (MDX) 陳述式的 `RollupChildren` 函數是很簡單，但此函數對 MDX 查詢的影響相當廣泛。  
   
- 
-  `RollupChildren` 函數會對為了對現有的 Cube 資料，執行選擇性分析而設計 MDX 查詢的產生影響。 例如，下表包含 Net Sales 父成員的子成員清單，以及在括號中顯示它們的一元運算子 (以 `UNARY_OPERATOR` 成員屬性代表)。  
+ `RollupChildren` 函數會對為了對現有的 Cube 資料，執行選擇性分析而設計 MDX 查詢的產生影響。 例如，下表包含 Net Sales 父成員的子成員清單，以及在括號中顯示它們的一元運算子 (以 `UNARY_OPERATOR` 成員屬性代表)。  
   
 |父成員|子成員|  
 |-------------------|------------------|  
@@ -74,6 +73,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  MDX 陳述式會檢查子成員的一元運算子。 如果一元運算子用於減法 (如同在處理國內外退貨量成員的情況下)，則 `IIf` 函數會取代波狀符號 (~) 一元運算子。 否則，`IIf` 函數會使用子成員的一元運算子。 最後，傳回的積存總計會乘以 1.1，做為國內外銷售總額的預測值。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;MDX&#41;運算元據](mdx-data-manipulation-manipulating-data.md)  
+ [操作資料 &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

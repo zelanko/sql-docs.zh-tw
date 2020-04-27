@@ -54,14 +54,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068922"
 ---
 # <a name="log-properties"></a>記錄屬性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的記錄伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
 ## <a name="general"></a>一般  
@@ -88,11 +87,9 @@ ms.locfileid: "66068922"
  **ErrorLog\KeyErrorAction**  
  指定伺服器在 錯誤發生時所採取的動作`KeyNotFound`。 此錯誤的有效回應包括：  
   
--   
-  `ConvertToUnknown` 會要求伺服器將錯誤索引鍵值配置給未知的成員。  
+-   `ConvertToUnknown` 會要求伺服器將錯誤索引鍵值配置給未知的成員。  
   
--   
-  `DiscardRecord` 會要求伺服器排除這個記錄。  
+-   `DiscardRecord` 會要求伺服器排除這個記錄。  
   
  **ErrorLog\KeyErrorLogFile**  
  這是副檔名必須為 .log 的使用者定義檔案名稱，位於服務帳戶具有讀寫權限的資料夾內。 此記錄檔只會包含處理期間產生的錯誤。 如果需要更詳細的資訊，請使用飛行記錄器。  
@@ -103,44 +100,35 @@ ms.locfileid: "66068922"
  **ErrorLog\KeyErrorLimitAction**  
  指定伺服器在索引鍵錯誤數目達到上限時所採取的動作。 此動作的有效回應包括：  
   
--   
-  `StopProcessing` 告知伺服器應於達到錯誤限制時停止處理。  
+-   `StopProcessing` 告知伺服器應於達到錯誤限制時停止處理。  
   
--   
-  `StopLogging` 告知伺服器應於達到錯誤限制時停止記錄錯誤，但仍讓處理作業繼續進行。  
+-   `StopLogging` 告知伺服器應於達到錯誤限制時停止記錄錯誤，但仍讓處理作業繼續進行。  
   
- **錯誤記錄 \ Errorlog\ logerrortypes\keynotfound**  
+ **ErrorLog\ LogErrorTypes\KeyNotFound**  
  指定伺服器在 錯誤發生時所採取的動作`KeyNotFound`。 此錯誤的有效回應包括：  
   
--   
-  `IgnoreError` 會要求伺服器繼續處理，但不記錄錯誤或將其計入索引鍵錯誤限制。 如果忽略錯誤，您僅允許繼續處理，而不將錯誤加入錯誤計數，或將其記錄至畫面或記錄檔。 有問題的記錄發生資料完整性問題，無法加入資料庫。 依據 `KeyErrorAction` 屬性的判斷，該記錄將會被捨棄或彙總至未知的成員。  
+-   `IgnoreError` 會要求伺服器繼續處理，但不記錄錯誤或將其計入索引鍵錯誤限制。 如果忽略錯誤，您僅允許繼續處理，而不將錯誤加入錯誤計數，或將其記錄至畫面或記錄檔。 有問題的記錄發生資料完整性問題，無法加入資料庫。 依據 `KeyErrorAction` 屬性的判斷，該記錄將會被捨棄或彙總至未知的成員。  
   
--   
-  `ReportAndContinue` 告知伺服器應記錄錯誤並將其計數算入索引鍵錯誤限制，接著繼續處理。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
+-   `ReportAndContinue` 告知伺服器應記錄錯誤並將其計數算入索引鍵錯誤限制，接著繼續處理。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
--   
-  `ReportAndStop` 告知伺服器應記錄錯誤並立即停止處理，而無視於索引鍵錯誤限制。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
+-   `ReportAndStop` 告知伺服器應記錄錯誤並立即停止處理，而無視於索引鍵錯誤限制。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
- **錯誤記錄 \ Errorlog\ logerrortypes\keyduplicate**  
- 指定伺服器在發現索引鍵重複狀況時所採取的動作。 
-  `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
+ **ErrorLog\ LogErrorTypes\KeyDuplicate**  
+ 指定伺服器在發現索引鍵重複狀況時所採取的動作。 `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
   
- **錯誤記錄 \ Errorlog\ logerrortypes\nullkeyconvertedtounknown**  
- 指定伺服器在 Null 索引鍵轉換為未知的成員時所採取的動作。 
-  `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
+ **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
+ 指定伺服器在 Null 索引鍵轉換為未知的成員時所採取的動作。 `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
   
- **錯誤記錄 \ Errorlog\ logerrortypes\nullkeynotallowed**  
- 
-  `NullProcessing`指定伺服器在維度屬性的 `Error` 設為 時所採取的動作。 當給定的屬性中不允許 Null 值時，會產生錯誤。 此錯誤組態屬性會通知下一個步驟，也就是報告錯誤並繼續處理，直到達到錯誤限制為止。 
-  `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
+ **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
+ `NullProcessing`指定伺服器在維度屬性的 `Error` 設為 時所採取的動作。 當給定的屬性中不允許 Null 值時，會產生錯誤。 此錯誤組態屬性會通知下一個步驟，也就是報告錯誤並繼續處理，直到達到錯誤限制為止。 `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
   
- **錯誤記錄 \ Errorlog\ logerrortypes\calculationerror**  
+ **ErrorLog\ LogErrorTypes\CalculationError**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  
   
  **ErrorLog\IgnoreDataTruncation**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  
   
-## <a name="exception"></a>Exception  
+## <a name="exception"></a>例外狀況  
  **Exception\CreateAndSendCrashReports**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -212,7 +200,7 @@ ms.locfileid: "66068922"
 > [!NOTE]  
 >  如需設定查詢記錄的詳細資訊，請參閱[Analysis Services 中的記錄作業](../instances/log-operations-in-analysis-services.md)。  
   
-## <a name="trace"></a>Trace  
+## <a name="trace"></a>追蹤  
  **Trace\TraceBackgroundDistributionPeriod**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -245,6 +233,6 @@ ms.locfileid: "66068922"
   
 ## <a name="see-also"></a>另請參閱  
  [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
- [判斷 Analysis Services 實例的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

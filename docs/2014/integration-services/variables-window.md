@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877873"
 ---
 # <a name="variables-window"></a>變數視窗
@@ -29,8 +29,7 @@ ms.locfileid: "62877873"
  您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
   
 > [!NOTE]
->  
-  `Name` 和 `Namespace` 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
+>  `Name` 和 `Namespace` 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
   
 ## <a name="options"></a>選項。  
  **新增變數**  
@@ -50,7 +49,7 @@ ms.locfileid: "62877873"
  `Name`  
  檢視變數名稱。 您可以更新使用者定義變數的名稱。  
   
- **影響範圍**  
+ **範圍**  
  檢視變數的範圍。 變數會具有整個封裝的範圍，或是容器或工作的範圍。 變數的範圍必須足夠，讓需要讀取或設定其值的任何其他工作或元件都看得到該變數。  
   
  您可以透過按一下變數，然後按一下 [變數]**** 視窗中的 [移動變數]**** 來變更範圍。  
@@ -70,7 +69,7 @@ ms.locfileid: "62877873"
  **引發變更事件**  
  指出某個值變更時，是否要引發 `OnVariableValueChanged` 事件。 您可以更新使用者定義及系統變數的值。 依預設，[變數]**** 視窗不會列出此資料行。 若要顯示此資料行，請按一下 [方格選項]****。  
   
- **說明**  
+ **描述**  
  檢視變數描述。 您可以變更使用者定義變數的描述。 依預設，[變數]**** 視窗不會列出此資料行。 若要顯示此資料行，請按一下 [方格選項]****。  
   
  **運算式**  
@@ -82,6 +81,6 @@ ms.locfileid: "62877873"
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
  [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)   
- [產生套件執行的傾印檔案](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [產生封裝執行的傾印檔案](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

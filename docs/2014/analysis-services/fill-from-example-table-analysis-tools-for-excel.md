@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081322"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>根據範例填滿 (適用於 Excel 的資料表分析工具)
@@ -43,7 +43,7 @@ ms.locfileid: "66081322"
   
      按一下 [確定]  。  
   
-5.  按一下 **[執行]** 。  
+5.  按一下 [執行]****。  
   
      分析完成時，工具會建立新的**模式**工作表，其中包含分析的結果。 此報表會列出找到的規則或關鍵影響因數，並且顯示每個規則的機率。  
   

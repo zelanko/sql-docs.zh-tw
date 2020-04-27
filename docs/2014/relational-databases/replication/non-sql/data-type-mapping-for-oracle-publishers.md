@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022647"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 發行者的資料類型對應
-  Oracle 資料類型和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型不一定會完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  
+  Oracle 資料類型與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型並非一律完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  
   
  下表顯示了將資料從「Oracle 發行者」移至「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」時，資料類型在 Oracle 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間的預設對應方式。 「替代方案」一欄會指示替代對應是否可用。  
   
-|Oracle 資料類型|SQL Server 資料類型|替代項目|  
+|Oracle 資料類型|SQL Server 資料類型|替代方案|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|是|  
 |BLOB|VARBINARY(MAX)|是|  
@@ -76,8 +76,7 @@ ms.locfileid: "63022647"
 -   使用 REF 的資料行  
   
 ### <a name="the-date-data-type"></a>DATE 資料類型  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的日期範圍是從 1753 A.D. 到 9999 A.D.，而 Oracle 的日期範圍則是從 4712 B.C. 到 4712 A.D. 如果 DATE 類型的資料行包含的值超出 SQL Server 的範圍，請為此資料行選取替代資料類型，也就是 VARCHAR(19)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的日期範圍是從 1753 A.D. 到 9999 A.D.，而 Oracle 的日期範圍則是從 4712 B.C. 到 4712 A.D. 如果 DATE 類型的資料行包含的值超出 SQL Server 的範圍，請為此資料行選取替代資料類型，也就是 VARCHAR(19)。  
   
 ### <a name="float-and-number-types"></a>FLOAT 和 NUMBER 類型  
  在對應 FLOAT 和 NUMBER 資料類型期間指定的小數位數與有效位數，取決於為使用 Oracle 資料庫中資料類型的資料行指定的小數位數與有效位數。 位數 (Precision) 是指數字中總共的位數。 小數位數 (Scale) 則是指數字中小數點右方的位數。 例如 123.45 的位數是 5，小數位數是 2。  

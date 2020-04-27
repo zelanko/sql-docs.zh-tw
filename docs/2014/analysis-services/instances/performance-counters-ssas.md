@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079704"
 ---
 # <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
@@ -32,21 +32,21 @@ ms.locfileid: "66079704"
   
 |群組|描述|  
 |-----------|-----------------|  
-|[高速](#bkmk_Cache)|與 Analysis Services 彙總快取相關的統計資料。|  
-|[[連接]](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
-|[資料採礦預測](#bkmk_DataMiningPrediction)|與處理資料採礦模型相關的統計資料。|  
-|[資料採礦模型處理](#bkmk_DataMiningModelProcessing)|與根據資料採礦模型建立預測相關的統計資料。|  
+|[快取](#bkmk_Cache)|與 Analysis Services 彙總快取相關的統計資料。|  
+|[建立](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
+|[Data Mining Prediction](#bkmk_DataMiningPrediction)|與處理資料採礦模型相關的統計資料。|  
+|[Data Mining Model Processing](#bkmk_DataMiningModelProcessing)|與根據資料採礦模型建立預測相關的統計資料。|  
 |[鎖定](#bkmk_Locks)|與 Microsoft Analysis Services 內部伺服器鎖定相關的統計資料。|  
 |[MDX](#bkmk_MDX)|與 Microsoft Analysis Services MDX 計算相關的統計資料。|  
 |[記憶體](#bkmk_Memory)|與 Microsoft Analysis Services 內部伺服器記憶體相關的統計資料。|  
 |[主動式快取](#bkmk_ProactiveCaching)|與 Microsoft Analysis Services 主動式快取相關的統計資料。|  
-|[處理匯總](#bkmk_ProcAggregations)|與處理 MOLAP 資料檔之彙總相關的統計資料。|  
-|[處理索引](#bkmk_ProcIndexes)|與處理 MOLAP 資料檔之索引相關的統計資料。|  
-|[流程](#bkmk_Processing)|與處理資料相關的統計資料。|  
-|[儲存引擎查詢](#bkmk_StorageEngineQuery)|與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。|  
-|[串接](#bkmk_Threads)|與 Microsoft Analysis Services 執行緒相關的統計資料。|  
+|[Processing Aggregations](#bkmk_ProcAggregations)|與處理 MOLAP 資料檔之彙總相關的統計資料。|  
+|[Processing Indexes](#bkmk_ProcIndexes)|與處理 MOLAP 資料檔之索引相關的統計資料。|  
+|[Processing](#bkmk_Processing)|與處理資料相關的統計資料。|  
+|[Storage Engine Query](#bkmk_StorageEngineQuery)|與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。|  
+|[執行緒](#bkmk_Threads)|與 Microsoft Analysis Services 執行緒相關的統計資料。|  
   
-###  <a name="bkmk_Cache"></a>高速  
+###  <a name="cache"></a><a name="bkmk_Cache"></a>高速  
  與 Microsoft Analysis Services 彙總快取相關的統計資料。  
   
 |計數器|描述|  
@@ -68,21 +68,21 @@ ms.locfileid: "66079704"
 |Total filtered iterator cache hits|快取點擊總數，會傳回篩選結果上的索引 Iterator。|  
 |Total filtered iterator cache misses|快取點擊總數，這類叫用因為無法在篩選的結果上建立索引 Iterator，所以必須用篩選的結果建立新的快取。|  
   
-###  <a name="bkmk_Connection"></a>建立  
+###  <a name="connection"></a><a name="bkmk_Connection"></a>建立  
  與 Microsoft Analysis Services 連接相關的統計資料。  
   
 |計數器|描述|  
 |-------------|-----------------|  
 |目前的連線數|目前已建立的用戶端連接數目。|  
 |個要求/秒|連接要求的速率。  這些是達到的。|  
-|Total requests|連線要求的總計。  這些是達到的。|  
+|要求總數|連線要求的總計。  這些是達到的。|  
 |Successes/sec|成功完成連線的速率。|  
 |Total successes|連接成功的總計。|  
 |Failures/sec|連接失敗的速率。|  
 |Total failures|連線嘗試失敗的總計。|  
 |Current user sessions|目前建立的使用者工作階段數目。|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a>資料採礦模型處理  
+###  <a name="data-mining-model-processing"></a><a name="bkmk_DataMiningModelProcessing"></a>資料採礦模型處理  
  與 Microsoft Analysis Services 資料採礦模型處理相關的統計資料。  
   
 |計數器|描述|  
@@ -90,7 +90,7 @@ ms.locfileid: "66079704"
 |Cases/sec|處理案例的速率。|  
 |Current models processing|目前正在處理的模型數目。|  
   
-###  <a name="bkmk_DataMiningPrediction"></a>資料採礦預測  
+###  <a name="data-mining-prediction"></a><a name="bkmk_DataMiningPrediction"></a>資料採礦預測  
  與 Microsoft Analysis Services 資料採礦預測相關的統計資料。  
   
 |計數器|描述|  
@@ -103,7 +103,7 @@ ms.locfileid: "66079704"
 |總計資料列|資料採礦查詢傳回的資料列總計。|  
 |Total Predictions|伺服器收到的資料採礦預測查詢總數。|  
   
-###  <a name="bkmk_Locks"></a>鎖定  
+###  <a name="locks"></a><a name="bkmk_Locks"></a>鎖定  
  與 Microsoft Analysis Services 內部伺服器鎖定相關的統計資料。  
   
 |計數器|描述|  
@@ -119,7 +119,7 @@ ms.locfileid: "66079704"
 |Unlock requests/sec|每秒解除鎖定要求的數目。|  
 |Total deadlocks detected|偵測到的死結總數。|  
   
-###  <a name="bkmk_MDX"></a>並用  
+###  <a name="mdx"></a><a name="bkmk_MDX"></a>並用  
  與 Microsoft Analysis Services MDX 計算相關的統計資料。  
   
 |計數器|描述|  
@@ -152,7 +152,7 @@ ms.locfileid: "66079704"
 |Total Autoexist|自動存在執行的總次數。|  
 |Total EXISTING|執行 EXISTING 集合運算的總次數。|  
   
-###  <a name="bkmk_Memory"></a>快閃記憶體  
+###  <a name="memory"></a><a name="bkmk_Memory"></a>快閃記憶體  
  與 Microsoft Analysis Services 內部伺服器記憶體相關的統計資料。  
   
 |計數器|描述|  
@@ -229,7 +229,7 @@ ms.locfileid: "66079704"
 |Memory Limit Hard KB|組態檔中的固定記憶體限制。|  
 |Memory Limit VertiPaq KB|來自組態檔的記憶體內部限制。|  
   
-###  <a name="bkmk_ProactiveCaching"></a>主動式快取  
+###  <a name="proactive-caching"></a><a name="bkmk_ProactiveCaching"></a>主動式快取  
  與 Microsoft Analysis Services 主動式快取相關的統計資料。  
   
 |計數器|描述|  
@@ -239,7 +239,7 @@ ms.locfileid: "66079704"
 |Proactive Caching Begin/sec|主動式快取開始的速率。|  
 |Proactive Caching Completion/sec|主動式快取完成的速率。|  
   
-###  <a name="bkmk_ProcAggregations"></a>處理匯總  
+###  <a name="processing-aggregations"></a><a name="bkmk_ProcAggregations"></a>處理匯總  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之彙總相關的統計資料。  
   
 |計數器|描述|  
@@ -253,7 +253,7 @@ ms.locfileid: "66079704"
 |Temp file rows written/sec|將資料列寫入至暫存檔的速率。  彙總超過記憶體限制時會寫入暫存檔。|  
 |Temp file bytes written/sec|將位元組寫入至暫存檔的速率。  彙總超過記憶體限制時會寫入暫存檔。|  
   
-###  <a name="bkmk_ProcIndexes"></a>處理索引  
+###  <a name="processing-indexes"></a><a name="bkmk_ProcIndexes"></a>處理索引  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之索引相關的統計資料。  
   
 |計數器|描述|  
@@ -263,7 +263,7 @@ ms.locfileid: "66079704"
 |Rows/sec|使用從 MOLAP 檔案資料列建立索引的速率。|  
 |總計資料列|來自 MOLAP 檔案、用來建立索引的資料列總計。|  
   
-###  <a name="bkmk_Processing"></a>流程  
+###  <a name="processing"></a><a name="bkmk_Processing"></a>流程  
  與 Microsoft Analysis Services 處理資料相關的統計資料。  
   
 |計數器|描述|  
@@ -275,7 +275,7 @@ ms.locfileid: "66079704"
 |Rows written/sec|處理期間資料列寫入的速率。|  
 |Total rows written|處理期間資料列寫入的計數。|  
   
-###  <a name="bkmk_StorageEngineQuery"></a>儲存引擎查詢  
+###  <a name="storage-engine-query"></a><a name="bkmk_StorageEngineQuery"></a>儲存引擎查詢  
  與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。  
   
 |計數器|描述|  
@@ -318,7 +318,7 @@ ms.locfileid: "66079704"
 |Aggregation lookups/sec|彙總查閱率。|  
 |Aggregation hits/sec|彙總叫用率。|  
   
-###  <a name="bkmk_Threads"></a>串接  
+###  <a name="threads"></a><a name="bkmk_Threads"></a>串接  
  與 Microsoft Analysis Services 執行緒相關的統計資料。  
   
 |計數器|描述|  

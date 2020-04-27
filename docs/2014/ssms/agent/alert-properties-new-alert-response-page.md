@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062156"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警示屬性-新增警示（回應頁面）
@@ -41,7 +41,7 @@ ms.locfileid: "63062156"
  **位址**  
  使用電子郵件通知操作員。  
   
- **尋呼**  
+ **呼叫器**  
  使用呼叫器電子郵件地址通知操作員。  
   
  **Net send**  
@@ -50,13 +50,13 @@ ms.locfileid: "63062156"
  **New 運算子**  
  顯示 [新增操作員]**** 對話方塊，可讓您建立新的操作員。  
   
- **View 運算子**  
+ **檢視操作員**  
  顯示目前選取之操作員的 [屬性]**** 對話方塊。 您可以在 [操作員屬性]**** 對話方塊上檢視及修改操作員屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [警示](alerts.md)   
+ [Alerts](alerts.md)   
  [使用嚴重性層級建立警示](create-an-alert-using-severity-level.md)   
- [警示](alerts.md)   
+ [Alerts](alerts.md)   
  [編輯警示](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  
   

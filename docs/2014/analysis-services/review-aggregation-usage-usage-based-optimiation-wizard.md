@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070164"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>檢閱彙總使用方式 (基於使用方式的最佳化精靈)
@@ -26,13 +26,13 @@ ms.locfileid: "66070164"
  **預設**  
  選取此選項，即可將屬性的彙總使用方式設定設為 Default。 透過使用這項設定，設計工具會根據屬性和維度的類型來套用預設規則。  
   
- **完整**  
+ **寫**  
  選取此選項，即可將屬性的彙總使用方式設定設為 Full。 透過使用這項設定，Cube 的每個彙總都必須包含這個屬性或在屬性鏈結中較低的相關屬性。 當某個屬性包含許多成員時，您就應該避免使用 Full 彙總使用方式設定。 如果針對多個屬性或具有許多成員的屬性指定，這項設定可能會讓彙總無法設計，因為大小過大。  
   
- **無**  
+ **None**  
  選取此選項，即可將屬性的彙總使用方式設定設為 None。 透過使用這項設定，Cube 的任何彙總都無法包含這個屬性。  
   
- **Unrestricted**  
+ **L**  
  選取此選項，即可將屬性的彙總使用方式設定設為 Unrestricted。 透過使用這項設定，系統將不會對彙總設計師設定任何限制。 不過，此屬性仍然必須經過評估，以便判斷它是否為重要的彙總候選。  
   
  **全部設定為預設值**  

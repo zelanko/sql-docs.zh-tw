@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081844"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>設計窗格 (採礦模型預測檢視)
-  
   **[設計]** 窗格包含預測查詢產生器，可用來建立資料採礦預測。 您可以設計預測查詢來使用資料來源檢視中輸入資料的資料表，以便產生大量預測，或者可以建立單一預測查詢，好讓您提供個別值。  
   
  若要執行查詢及檢視結果，請切換到查詢結果檢視。  
@@ -30,7 +29,7 @@ ms.locfileid: "66081844"
 > [!NOTE]  
 >  如果您對查詢做了任何手動變更，當您切換回 [設計] 檢視時，您的變更將會遺失。 如果您想要儲存 DMX 查詢，可以將此查詢複製到 Windows 剪貼簿，然後貼到文字檔中。  
   
- **如需詳細資訊：** [資料採礦查詢](data-mining/data-mining-queries.md)  
+ **如需詳細資訊，請參閱** [資料採礦查詢](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>選項。  
  **切換到查詢結果檢視**  
@@ -74,7 +73,7 @@ ms.locfileid: "66081844"
 |**採礦模型資料行**|列出在 **[採礦模型]** 資料表中所選取、包含在採礦模型中的採礦模型資料行。|  
 |**ReplTest1**|從包含所選取採礦模型之每一可能狀態的清單中選取值。<br /><br /> 如果資料行是巢狀資料表資料行，按一下值資料格即可開啟 **[巢狀資料表輸入]** 對話方塊。|  
   
- **Source**  
+ **來源**  
  選取來源，其中包含用於資料表的欄位。 您可以使用 [採礦模型]**** 資料表中選取的採礦模型、[選取輸入資料表]**** 資料表中選取的一或多個輸入資料表、預測函數或自訂演算式。  
   
  可以從包含採礦模型的資料表和輸入資料表，將資料行拖曳到資料格。  
@@ -82,11 +81,11 @@ ms.locfileid: "66081844"
  **欄位**  
  從衍生自來源資料表的資料行清單中，選取一個資料行。 如果您在 **[來源]** 中選取 **[預測函數]**，這就會包含所選取採礦模型可以使用的預測函數。  
   
- **小組**  
- 配合 [及/或]**** 資料行，即可將運算式群組在一起。 例如： `(expr1 Or expr2) And expr3` 。  
+ **群組**  
+ 配合 [及/或]**** 資料行，即可將運算式群組在一起。 例如，`(expr1 Or expr2) And expr3`。  
   
  **和/或**  
- 用於建立邏輯查詢。 例如： `(expr1 Or expr2) And expr3` 。  
+ 用於建立邏輯查詢。 例如，`(expr1 Or expr2) And expr3`。  
   
  **準則/引數**  
  指定套用至資料行的條件或使用者運算式。 可以從包含採礦模型的資料表和輸入資料表，將資料行拖曳到資料格。  

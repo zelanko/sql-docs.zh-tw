@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874484"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函數
@@ -40,6 +40,6 @@ ms.locfileid: "62874484"
  描述如何實作及使用使用者定義彙總。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用者定義的函式](../user-defined-functions/user-defined-functions.md)  
+ [使用者定義函數](../user-defined-functions/user-defined-functions.md)  
   
   

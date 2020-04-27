@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066336"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>表格式模型專案 (SSAS 表格式)
@@ -25,7 +25,7 @@ ms.locfileid: "66066336"
 |主題|描述|  
 |-----------|-----------------|  
 |[&#40;SSAS 表格式&#41;建立新表格式模型專案](create-a-new-tabular-model-project-analysis-services.md)|此主題描述如何建立一個新的空白表格式模型專案。|  
-|[從 Analysis Services &#40;SSAS 表格式匯入&#41;](import-from-analysis-services-ssas-tabular.md)|此主題描述如何以 Analysis Services 中現有的模型為基礎，建立新的表格式模型專案。 會擷取現有模型的中繼資料並將其用來建立新的模型。|  
+|[從 Analysis Services 匯入 &#40;SSAS 表格式&#41;](import-from-analysis-services-ssas-tabular.md)|此主題描述如何以 Analysis Services 中現有的模型為基礎，建立新的表格式模型專案。 會擷取現有模型的中繼資料並將其用來建立新的模型。|  
 |[從 PowerPivot 匯入 &#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)|此主題描述如何擷取 PowerPivot for Excel 檔案 (.xlsx) 中的中繼資料與資料，以建立新的表格式模型專案。|  
   
   

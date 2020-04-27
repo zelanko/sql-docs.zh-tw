@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070776"
 ---
 # <a name="prediction-query-builder-data-mining"></a>預測查詢產生器 (資料採礦)
@@ -24,14 +24,13 @@ ms.locfileid: "66070776"
   
 -   [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [使用 DMX 建立和查詢資料採礦模型：教學課程 &#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [使用 DMX 建立並查詢資料採礦模型：教學課程 &#40;Analysis Services - 資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [資料採礦查詢](data-mining/data-mining-queries.md)  
   
 -   [資料採礦查詢工作和使用說明](data-mining/data-mining-query-tasks-and-how-tos.md)  
   
- 
-  **[採礦模型預測]** 檢視擁有下列工具和對話方塊：  
+ **[採礦模型預測]** 檢視擁有下列工具和對話方塊：  
   
 -   [[設計] 窗格 &#40;[採礦模型預測] 視圖&#41;](design-pane-mining-model-prediction-view.md)  
   

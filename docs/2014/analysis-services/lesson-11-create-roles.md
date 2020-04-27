@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079273"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 課：建立角色
   在這一課，您將建立角色。 角色會藉由僅限身為角色成員的 Windows 使用者存取的方式，提供模型資料庫物件和資料安全性。 每個角色都定義有單一權限︰「無」、「讀取」、「讀取和處理」、「處理」或「系統管理員」。 您可以使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的 [角色管理員] 對話方塊，在模型撰寫期間定義角色。 部署模型之後，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](tabular-models/roles-ssas-tabular.md)。  
   
 > [!NOTE]  
->  完成本教學課程並不需要建立角色。 根據預設，您目前登入的帳戶將擁有模型的「系統管理員」權限。 不過，為了讓組織中的其他使用者能夠使用報表用戶端應用程式瀏覽模型，您必須至少建立一個具有「讀取」權限的角色，並將這些使用者加入為成員。  
+>  建立角色不是完成本教學課程的必要工作。 根據預設，您目前登入的帳戶將擁有模型的「系統管理員」權限。 不過，為了讓組織中的其他使用者能夠使用報表用戶端應用程式瀏覽模型，您必須至少建立一個具有「讀取」權限的角色，並將這些使用者加入為成員。  
   
  您將建立三個角色︰  
   
@@ -31,11 +31,11 @@ ms.locfileid: "66079273"
   
 -   系統管理員-此角色可包含您想要擁有系統管理員許可權的使用者，這允許無限制的存取權和許可權，在 model 資料庫上執行管理工作。  
   
- 因為組織中的 Windows 使用者和群組帳戶都是獨一無二，您可以將特定組織中的帳戶新增至成員。 不過，在本教學課程中，您也可以將成員留白。 稍後在「第 12 課︰在 Excel 中進行分析」中，您仍然可以測試每個角色的效果。  
+ 因為組織中的 Windows 使用者和群組帳戶都是獨一無二，您可以將特定組織中的帳戶新增至成員。 不過，針對此教學課程，您也可以將成員留空。 您稍後仍然能夠在第 12 課：「在 Excel 中進行分析」中測試每個角色的效用。  
   
- 這堂課的預估完成時間：**15 分鐘**  
+ 完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 11 課：建立資料分割](lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>建立角色  

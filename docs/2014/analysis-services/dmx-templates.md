@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081554"
 ---
 # <a name="dmx-templates"></a>DMX 範本
@@ -52,7 +52,7 @@ ms.locfileid: "66081554"
 ## <a name="list-of-dmx-templates"></a>DMX 範本的清單  
  適用於 Excel 的資料採礦用戶端中包括下列 DMX 範本。  
   
- **翻**  
+ **預測**  
   
  使用這些範本可建立進階預測查詢，包括增益集精靈不支援的查詢，例如，使用巢狀資料表或外部資料來源的查詢。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66081554"
   
 -   離散資料行的值  
   
- **管理性**  
+ **管理**  
   
  使用這些範本可執行 DMX 支援的所有管理工作，包括匯入與匯出模型、刪除模型，以及清除模型或資料結構。  
   

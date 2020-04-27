@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891324"
 ---
-# <a name="lesson-4-adding-error-flow-redirection"></a>「課程 4：加入錯誤流程重新導向
+# <a name="lesson-4-adding-error-flow-redirection"></a>第 4 課：新增錯誤流程重新導向
   為了處理轉換程式中可能發生的錯誤， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]讓您能夠決定每個元件和每個資料行如何處理無法轉換的資料。 您可以選擇忽略特定資料行的失敗、將整個失敗的資料列重新導向，或僅使該元件失敗。 依預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的所有元件都設定為發生錯誤時失敗。 使元件失敗會造成封裝失敗及所有後續處理停止。  
   
  若不要因為失敗而停止封裝執行，則設定及處理在轉換中可能發生的處理錯誤，是不錯的作法。 與其選擇忽略失敗以確保封裝可順利執行，不如將失敗的資料列重新導向至另一個處理路徑，讓資料和錯誤都可以保存、檢查及稍後再重新處理。  
@@ -34,17 +34,17 @@ ms.locfileid: "62891324"
 ## <a name="tasks-in-lesson"></a>本課程的工作  
  這一課包含下列工作：  
   
--   [步驟 1：複製第 3 課的套件](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [步驟 1:複製第 3 課的封裝](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [步驟 2：建立損毀檔案](lesson-4-2-creating-a-corrupted-file.md)  
+-   [步驟 2:建立損毀的檔案](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [步驟 3：加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
+-   [步驟 3：新增錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [步驟 4：加入一般檔案目的地](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [步驟 4：新增一般檔案目的地](lesson-4-4-adding-a-flat-file-destination.md)  
   
 -   [步驟 5：測試第 4 課的教學課程封裝](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1：複製第 3 課的套件](lesson-4-1-copying-the-lesson-3-package.md)  
+ [步驟 1:複製第 3 課的封裝](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

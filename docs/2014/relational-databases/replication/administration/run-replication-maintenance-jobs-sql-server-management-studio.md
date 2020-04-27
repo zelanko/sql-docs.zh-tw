@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127058"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>執行複寫維護作業 (SQL Server Management Studio)
@@ -27,9 +27,9 @@ ms.locfileid: "63127058"
 -   **散發的複寫監視重新整理器。**
 -   **檢查複寫代理程式**
 -   **散發清除：散發**
--   **清除已過期的訂閱**  
+-   **清除過期的訂閱**  
   
- 請從 **** 中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。 在 [作業屬性 - **作業>]\<** 對話方塊中檢視及修改各作業的屬性，該對話方塊位於相同的資料夾和索引標籤中。  
+ 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [作業]**** 資料夾，以及從複寫監視器的 [代理程式]**** 索引標籤啟動和停止這些作業。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。 在 [作業屬性 - \<作業>]**** 對話方塊中檢視及修改各作業的屬性，該對話方塊位於相同的資料夾和索引標籤中。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>在 Management Studio 中啟動或停止複寫維護作業  
   
@@ -53,9 +53,9 @@ ms.locfileid: "63127058"
   
 2.  展開 **[SQL Server Agent]** 資料夾，然後展開 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]** 。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]**。  
   
-4.  在 [作業屬性 - **作業>]\<** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]****。  
+4.  在 [作業屬性 - \<作業>]**** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]****。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>在複寫監視器中檢視及修改複寫維護作業的屬性  
   
@@ -65,11 +65,11 @@ ms.locfileid: "63127058"
   
 3.  以滑鼠右鍵按一下方格中的作業，再按一下 **[屬性]**。  
   
-4.  在 [作業屬性 - **作業>]\<** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]****。  
+4.  在 [作業屬性 - \<作業>]**** 對話方塊中，視需要修改任何屬性，然後按一下 [確定]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [使用複寫監視器來查看資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [複寫代理程式管理](../agents/replication-agent-administration.md)  
   
   

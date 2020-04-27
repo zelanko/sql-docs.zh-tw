@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63075178"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>連接至資料來源 (ODBC)
@@ -78,7 +78,7 @@ ms.locfileid: "63075178"
   
  當**SQLBrowseConnect**完成成功的連接時，它會傳回可在後續呼叫**SQLDriverConnect**時使用的連接字串。  
   
- Native Client ODBC 驅動程式一律會傳回成功**SQLConnect**、 **SQLDriverConnect**或 SQLBrowseConnect 上的 SQL_SUCCESS_WITH_INFO。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 ODBC 應用程式在取得 SQL_SUCCESS_WITH_INFO 之後呼叫**SQLGetDiagRec**時，它會收到下列訊息：  
+ Native Client ODBC 驅動程式一律會傳回成功**SQLConnect**、 **SQLDriverConnect**或 SQLBrowseConnect 上的 SQL_SUCCESS_WITH_INFO。 **SQLBrowseConnect** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 ODBC 應用程式在取得 SQL_SUCCESS_WITH_INFO 之後呼叫**SQLGetDiagRec**時，它會收到下列訊息：  
   
  5701  
  表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將使用者的內容放入資料來源中定義的預設資料庫，或在資料來源沒有預設資料庫時，放入針對連接中所使用之登入識別碼所定義的預設資料庫中。  
@@ -109,7 +109,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- 連接之應用程式的錯誤處理函式應該會呼叫 SQLGetDiagRec，直到它傳回 SQL_NO_DATA 為止。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著，它應該對*pfNative*碼為5701或5703的任何訊息採取動作。  
+ 連接之應用程式的錯誤處理函式應該會呼叫 SQLGetDiagRec，直到它傳回 SQL_NO_DATA 為止。 **SQLGetDiagRec** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著，它應該對*pfNative*碼為5701或5703的任何訊息採取動作。  
   
 ## <a name="see-also"></a>另請參閱  
  [與 SQL Server &#40;ODBC&#41;通訊](communicating-with-sql-server-odbc.md)  

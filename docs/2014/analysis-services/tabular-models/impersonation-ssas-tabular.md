@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067054"
 ---
 # <a name="impersonation-ssas-tabular"></a>模擬 (SSAS 表格式)
   本主題讓表格式模型作者了解連接到資料來源匯入與處理 (重新整理) 資料時，Analysis Services 如何使用登入認證。  
   
- 本文包含下列章節：  
+ 本文包含下列各節：  
   
 -   [優點](#bkmk_how_imper)  
   
@@ -28,18 +28,18 @@ ms.locfileid: "66067054"
   
 -   [安全性](#bkmk_impers_sec)  
   
--   [匯入模型時的模擬](#bkmk_imp_newmodel)  
+-   [匯入模型模擬](#bkmk_imp_newmodel)  
   
--   [正在設定模擬](#bkmk_conf_imp_info)  
+-   [設定模擬](#bkmk_conf_imp_info)  
   
-##  <a name="bkmk_how_imper"></a> 優點  
- 模擬*是伺服器*應用程式（例如 Analysis Services）採用用戶端應用程式身分識別的能力。 Analysis Services 會使用服務帳戶執行，不過，當伺服器建立與資料來源的連接時，它會使用模擬，以便執行用於資料匯入和處理的存取檢查。  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a>各種  
+ *「模擬」* (Impersonation) 是伺服器應用程式 (例如 Analysis Services) 假設用戶端應用程式身分識別的功能。 Analysis Services 會使用服務帳戶執行，不過，當伺服器建立與資料來源的連接時，它會使用模擬，以便執行用於資料匯入和處理的存取檢查。  
   
  用於模擬的認證與目前登入之使用者的認證不同。 製作模型時，已登入的使用者認證可用於特定的用戶端作業。  
   
  請務必瞭解如何指定和保護模擬認證，以及目前登入的使用者認證和使用其他認證時的內容之間的差異。  
   
- **瞭解伺服器端認證**  
+ **了解伺服器端認證**  
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，您可以使用 [資料表匯入精靈] 中的 [模擬資訊]**** 頁面，或在 [現有連接]**** 對話方塊中編輯現有的資料來源連接，藉以指定每個資料來源的認證。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66067054"
   
  當部署的模型處理資料來源的資料時，保存在記憶體中資料庫的模擬認證會用來連接資料來源並提取資料。 此程序是由管理模型資料庫的 Analysis Services 伺服器所處理，因此這也是伺服器端作業。  
   
- **瞭解用戶端認證**  
+ **了解用戶端認證**  
   
  製作新模型或將資料來源加入至現有的模型時，您可以使用 [資料表匯入精靈] 連接到資料來源，然後選取要匯入到模型中的資料表和檢視表。 在 [資料表匯入精靈] 的 [選取資料表和檢視表]**** 頁面上，您可以使用 [預覽和篩選]**** 功能來檢視您要匯入之資料的範例 (限制為 50 個資料列)。 您也可以指定篩選，來排除不需要包含在模型中的資料。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067054"
 > [!IMPORTANT]  
 >  製作模型時，請確認目前登入之使用者的認證和針對模擬所指定的認證都有從資料來源提取資料的足夠權限。  
   
-##  <a name="bkmk_imp_info_options"></a>選項  
+##  <a name="options"></a><a name="bkmk_imp_info_options"></a>選項  
  設定模擬時，或在 Analysis Services 中編輯現有資料來源連接的屬性時，您可以指定下列其中一個選項：  
   
 |選項|ImpersonationMode<sup>1</sup>|描述|  
@@ -74,20 +74,20 @@ ms.locfileid: "66067054"
   
  <sup>2</sup>使用此選項時，如果工作空間資料庫已從記憶體中移除（由於重新開機或 [**工作空間保留**] 屬性設為 **[從記憶體**卸載] 或 [**從工作區刪除**]），而且在後續的會話中關閉模型專案，則當您嘗試處理資料表資料時，系統會提示您輸入每個資料來源的認證。 同樣地，如果部署的模型資料庫已從記憶體中移除，系統將提示您輸入每個資料來源的認證。  
   
-##  <a name="bkmk_impers_sec"></a> Security  
+##  <a name="security"></a><a name="bkmk_impers_sec"></a> Security  
  搭配模擬使用的認證是透過與管理工作空間資料庫或已部署模型之 Analysis Services 伺服器相關聯的 xVelocity 記憶體中分析引擎 (VertiPaq)™ 引擎，保存在記憶體中。  認證絕不會寫入到磁碟中。 如果工作空間資料庫在部署模型時不在記憶體中，系統將會提示使用者輸入用來連接資料來源並提取資料的認證。  
   
 > [!NOTE]  
 >  建議您針對模擬認證指定 Windows 使用者帳戶和密碼。 Windows 使用者帳戶可以設定為使用在資料來源中連接與讀取資料所需的最低權限。  
   
-##  <a name="bkmk_imp_newmodel"></a>匯入模型時的模擬  
+##  <a name="impersonation-when-importing-a-model"></a><a name="bkmk_imp_newmodel"></a>匯入模型時的模擬  
  PowerPivot 不像可以使用數個不同模擬模式支援跨處理序資料收集的表格式模型，前者僅使用一個模式，也就是 ImpersonateCurrentUser。 由於 PowerPivot 一律執行同處理序，因此它會使用目前登入之使用者的認證，連接到資料來源。 使用表格式模型時，目前登入之使用者的認證僅能搭配 [資料表匯入精靈] 中的 [預覽和篩選]**** 功能，並在檢視 [資料表屬性]**** 時使用。 將資料匯入或處理到工作空間資料庫時，或將資料匯入或處理到已部署的模型時，會使用模擬認證。  
   
  匯入現有的 PowerPivot 活頁簿來建立新模型時，模型設計師預設會設定模擬使用服務帳戶 (ImpersonateServiceAccount)。 建議您變更模型上從 PowerPivot 匯入到 Windows 使用者帳戶的模擬認證。 在匯入 PowerPivot 活頁簿並在模型設計師中建立新模型之後，您可以使用 [**現有連接**] 對話方塊來變更認證。  
   
  從 Analysis Services 伺服器上的現有模型匯入來建立新模型時，會將模擬認證從現有的模型資料庫傳遞到新的模型工作空間資料庫。 必要時，您可以在新模型上使用 [現有連接]**** 對話方塊來變更認證。  
   
-##  <a name="bkmk_conf_imp_info"></a>正在設定模擬  
+##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>正在設定模擬  
  模型存在的位置及其內容，將會決定設定模擬資訊的方式。 針對在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中製作的模型，您可以在 [資料表匯入精靈] 的 [模擬資訊]**** 頁面上設定模擬資訊，或者透過編輯 [現有連接]**** 對話方塊上的資料來源連接來設定。 若要檢視現有連接，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [模型]**** 功能表上，按一下 [現有連接]****。  
   
  對於部署到 Analysis Services 伺服器的模型，可以在的 [**資料庫屬性**] 對話方塊中，按一下 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**資料來源模擬資訊**] 屬性的省略號（...）來設定模擬資訊。  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075580"
 ---
 # <a name="define-linked-dimensions"></a>定義連結維度
@@ -30,7 +30,7 @@ ms.locfileid: "66075580"
 > [!NOTE]  
 >  因為無法使用重新整理，所以大多數的 Analysis Services 開發人員都會複製維度而不是連結維度。 您可以在相同方案內複製不同專案中的維度。 如需詳細資訊，請參閱 [Refresh of a linked dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)(在 SSAS 中重新整理連結維度)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  提供維度的來源資料庫和使用該維度的目前資料庫都必須具有相同的版本和相容性層級。 如需詳細資訊，請參閱[將多維度資料庫的相容性層級設定 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
  來源資料庫必須已部署並處於線上。 您必須將發行或取用連結物件的伺服器設定為允許該作業 (如下所示)。  
@@ -47,7 +47,7 @@ ms.locfileid: "66075580"
   
 ## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中建立連結維度  
   
-1.  啟動精靈。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 ** 資料庫或專案中的 [維度]**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料夾，然後按一下 [新增連結維度]****。  
+1.  啟動精靈。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫或專案中的 [維度]**** 資料夾，然後按一下 [新增連結維度]****。  
   
 2.  連接至提供維度的 Analysis Services 資料庫。 在連結物件精靈會的 [選取資料來源]**** 頁面上，選擇 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源或建立新的資料來源。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66075580"
   
 4.  在 [正在完成精靈]**** 頁面上，您可以預覽連結物件。 如果您連結的維度與已存在的維度具有相同名稱，則會在名稱後附加序號 (第一個重複的名稱會從 '1' 開始)。 當您完成精靈時，維度會加入至 [維度]**** 資料夾。  
   
-##  <a name="bkmk_CreateNew"></a>建立與 Analysis Services 資料庫的新資料來源連接  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a> 建立新的資料來源與 Analysis Services 資料庫的連接  
  使用 [建立新的資料來源] 精靈，以將提供維度之 Analysis Services 資料庫相關資訊加入您的專案連接。 您可以在 [連結物件精靈] 中的 [選取資料來源] 頁面上，按一下 [新增資料來源]**** 以啟動精靈。  
   
 1.  在 [資料來源精靈] 中的 [選取如何定義連接] 頁面上，按一下 [新增]****。  

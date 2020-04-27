@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081460"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>鑽研動作表單編輯器 (動作索引標籤，設計師) (Analysis Services - 多維度資料)
@@ -35,12 +35,12 @@ ms.locfileid: "66081460"
  **量值群組成員**  
  選取要與鑽研動作建立關聯的量值群組。  
   
- **條件（選擇性）**  
+ **條件 (選擇性)**  
  輸入描述選擇性條件的多維度運算式 (MDX) 運算式，搭配 [量值群組成員]**** 一起使用，進一步限制何時可以使用動作。 此運算式必須傳回布林值，如果此值為 True，則表示可使用該動作。  
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
- **鑽取資料行**  
+ **鑽研資料行**  
  展開即可顯示方格，以指出使用者執行此動作時傳回的屬性。  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ ms.locfileid: "66081460"
  **最大資料列數**  
  鍵入鑽研動作要傳回的最大資料列數。 將此選項設定為零或空的值，表示鑽研動作將會傳回該動作擷取的所有資料列給用戶端應用程式。  
   
- **啟動**  
+ **引動過程**  
  選取設定，以指出何時該執行此動作。  
   
 > [!NOTE]  
@@ -75,13 +75,13 @@ ms.locfileid: "66081460"
   
  下表描述可用的設定。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |Batch|此動作應該當作批次作業的一部份或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工作來執行。|  
-|互動式|此動作會在使用者叫用動作時執行。|  
+|Interactive (互動式)|此動作會在使用者叫用動作時執行。|  
 |開啟時|此動作會在第一次開啟 Cube 時執行。|  
   
- **Application**  
+ **應用程式**  
  鍵入可以執行鑽研動作的應用程式名稱。  
   
  您也可以使用此選項來識別哪一個用戶端應用程式最常使用這個動作，以及在快顯功能表的該動作旁邊顯示適當的圖示。  
@@ -89,10 +89,10 @@ ms.locfileid: "66081460"
 > [!NOTE]  
 >  此選項只提供用戶端應用程式應該執行哪些動作的建議，並不會直接控制動作的存取。 用戶端應用程式應隱藏與其他用戶端應用程式相關聯的動作。  
   
- **說明**  
+ **描述**  
  鍵入動作的選擇性描述。  
   
- **Caption**  
+ **字幕**  
  如果 [標題是 MDX]**** 設為 [False]****，則請鍵入要顯示在用戶端應用程式中的動作標題。  
   
  如果 [標題是 MDX]**** 設定為 [True]****，則請鍵入會傳回標題字串的多維度運算式 (MDX) 運算式。  

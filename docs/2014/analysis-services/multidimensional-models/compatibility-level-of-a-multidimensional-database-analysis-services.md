@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076693"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>設定多維度資料庫的相容性層級 (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "66076693"
 > [!WARNING]  
 >  將資料庫相容性設為更高的層級將無法回復。 將相容性層級增加到`1100`之後，您必須在較新的伺服器上繼續執行資料庫。 您無法回復至`1050`。 您無法在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前的`1100`伺服器版本上附加或還原資料庫。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  資料庫相容性層級是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進。 您必須有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更新版本，才能檢視或設定資料庫相容性層級。  
   
  資料庫不可為本機 Cube。 本機 Cube 不支援 `CompatibilityLevel` 屬性。  
@@ -89,7 +89,7 @@ ms.locfileid: "66076693"
 3.  只有共用相同版本與資料庫相容性層級的伺服器，才支援同步處理伺服器。  
   
 ## <a name="next-steps"></a>後續步驟  
- 在您提高資料庫相容性層級之後，就可以在 `StringStoresCompatibilityLevel` 中設定 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 屬性。 這樣做會增加量值和維度的字串儲存體。 如需這項功能的詳細資訊，請參閱 [設定維度及資料分割的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)。  
+ 在您提高資料庫相容性層級之後，就可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中設定 `StringStoresCompatibilityLevel` 屬性。 這樣做會增加量值和維度的字串儲存體。 如需這項功能的詳細資訊，請參閱 [設定維度及資料分割的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [備份、還原和同步處理資料庫 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  

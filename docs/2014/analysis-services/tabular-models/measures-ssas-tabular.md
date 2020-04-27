@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067005"
 ---
 # <a name="measures-ssas-tabular"></a>量值 (SSAS 表格式)
@@ -28,11 +28,11 @@ ms.locfileid: "66067005"
   
 -   [量值屬性](#bkmk_properties)  
   
--   [在 KPI 中使用量值](#bkmk_KPI)  
+-   [使用 KPI 中的量值](#bkmk_KPI)  
   
 -   [相關工作](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a> 優點  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a>各種  
  量值可以用標準彙總函式 (例如 AVERAGE、COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 除了公式以外，每個量值都具備由量值資料類型定義的屬性，如名稱、資料表詳細資料、格式及小數位數。  
   
  若模型中已定義量值，使用者即可將其加入報表或樞紐分析表。 視檢視方塊與角色而定，量值會與其相關聯的資料表一起出現在欄位清單中，且可供模型中的所有使用者使用。 量值通常會在事實資料表中建立；不過，量值也可以獨立於其相關聯的資料表之外。  
@@ -61,7 +61,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |電視及錄影機|$946,989,702.51|  
 |**總計**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a>使用量值方格定義量值  
+##  <a name="defining-measures-by-using-the-measure-grid"></a><a name="bkmk_def_mg"></a>使用量值方格定義量值  
  量值是在設計階段透過使用模型設計師中的量值方格而建立的。 每一個資料表都有量值方格。 根據預設，量值方格會顯示在模型設計師中的每一個資料表下方。 您也可以選擇不檢視特定資料表的量值方格。 若要切換資料表的量值方格顯示，請按一下 [**資料表**] 功能表，然後按一下 [**顯示量值方格**]。  
   
  在量值方格中，您可用下列方式建立量值：  
@@ -79,30 +79,30 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  若模型已定義檢視方塊，量值不會自動加入這些檢視方塊中。 您必須使用 [檢視方塊] 對話方塊，手動將量值加入檢視方塊中。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)。  
   
-##  <a name="bkmk_properties"></a>量值屬性  
+##  <a name="measure-properties"></a><a name="bkmk_properties"></a>量值屬性  
  每個量值都有定義的屬性。 您可在 [屬性] 視窗中，編輯量值屬性以及相關聯的資料行屬性。 量值具有下列屬性：  
   
 |屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
-|**說明**|Blank|量值的說明。 報表用戶端中不會顯示量值說明。|  
+|**描述**|Blank|量值的說明。 報表用戶端中不會顯示量值說明。|  
 |**編排**|在公式運算式中，自動從參考資料行的資料類型來判斷。|量值的格式。 例如，貨幣或百分比。|  
 |**公式**|量值建立時，在公式列中輸入的公式。|量值的公式。|  
-|**量值名稱**|若使用自動加總，量值名稱後面會接著資料行名稱和冒號。 若是輸入自訂公式，請輸入名稱，後面接著冒號，然後再輸入公式。|量值名稱就是報表用戶端欄位清單中顯示的名稱。|  
+|**[量值名稱]**|若使用自動加總，量值名稱後面會接著資料行名稱和冒號。 若是輸入自訂公式，請輸入名稱，後面接著冒號，然後再輸入公式。|量值名稱就是報表用戶端欄位清單中顯示的名稱。|  
   
-##  <a name="bkmk_KPI"></a>在 KPI 中使用量值  
+##  <a name="using-a-measure-in-a-kpi"></a><a name="bkmk_KPI"></a>在 KPI 中使用量值  
  KPI (關鍵效能指標) 是由「基底」** 值定義，而基底值是由「目標」** 值 (由量值或絕對值定義) 對應的量值來定義。 KPI 也包括 *「狀態」*(Status)，其為計算基底值和目標值之間的臨界值，且會以圖形格式顯示。 商務專業人士常常利用 KPI 來識別重要商務標準中的趨勢。  
   
  任何量值都可以做為 KPI 的基底量值。 若要建立 KPI，請在量值方格中，以滑鼠右鍵按一下量值，然後按一下 [建立 KPI]****。 [關鍵效能指標] 對話方塊隨即出現，您即可在其中指定目標值 (由量值或絕對值來定義)，及定義狀態臨界值和圖形類型。 如需詳細資訊，請參閱 [KPI &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)。  
   
-##  <a name="bkmk_rel_tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> 相關工作  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立和管理 &#40;SSAS 表格式&#41;的量值](measures-ssas-tabular.md)|描述如何使用模型設計師中的量值方格，建立及管理量值。|  
+|[建立及管理量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)|描述如何使用模型設計師中的量值方格，建立及管理量值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的 Kpi](kpis-ssas-tabular.md)   
  [建立和管理 &#40;SSAS 表格式&#41;的 Kpi](create-and-manage-kpis-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;的計算結果欄](ssas-calculated-columns.md)  
+ [導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns.md)  
   
   

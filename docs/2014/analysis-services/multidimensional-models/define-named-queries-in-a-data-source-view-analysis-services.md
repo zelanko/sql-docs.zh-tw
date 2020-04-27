@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075555"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名查詢 (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66075555"
   
  SQL 查詢中被參考的資料表和資料行不應該限定，或應該只以資料表名稱來限定。 例如，若要參考資料表中的 SaleAmount 資料行， `SaleAmount` 或 `Sales.SaleAmount` 為有效，但 `dbo.Sales.SaleAmount` 會產生錯誤。  
   
- **注意**定義查詢[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 資料來源的命名查詢時，包含相互關聯子查詢和 GROUP by 子句的已命名查詢將會失敗。 如需詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/kb/274729) Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY [!INCLUDE[msCoName](../../includes/msconame-md.md)] (包含相互關聯之子查詢和 GROUP BY 的 SELECT 陳述式發生內部錯誤)。  
+ **注意** ：定義查詢 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 資料來源的具名查詢時，包含相關子查詢與 GROUP BY 子句的具名查詢將會失敗。 如需詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/kb/274729) Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY [!INCLUDE[msCoName](../../includes/msconame-md.md)] (包含相互關聯之子查詢和 GROUP BY 的 SELECT 陳述式發生內部錯誤)。  
   
 ## <a name="add-or-edit-a-named-query"></a>加入或編輯具名查詢  
   
@@ -62,6 +62,6 @@ ms.locfileid: "66075555"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
- [定義資料來源視圖中的已命名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080701"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>模擬資訊對話方塊 (資料表匯入精靈)
@@ -42,6 +42,6 @@ ms.locfileid: "66080701"
  選取此選項，可使用與管理模型之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服務相關聯的安全性認證。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SSAS 表格式&#41;的模擬](tabular-models/impersonation-ssas-tabular.md)  
+ [模擬 &#40;SSAS 表格式&#41;](tabular-models/impersonation-ssas-tabular.md)  
   
   

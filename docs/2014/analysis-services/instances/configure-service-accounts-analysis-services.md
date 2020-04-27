@@ -16,23 +16,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080192"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
-  
   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
   
  本主題提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的補充資訊，包含表格式和叢集安裝所需的其他權限。 其中也涵蓋支援伺服器作業所需的權限。 例如，您可以在服務帳戶底下設定要排除的處理和查詢作業 - 在這個情況下，您將需要授與其他權限來讓這個動作生效。  
   
--   [指派給 Analysis Services 的 Windows 許可權](#bkmk_winpriv)  
+-   [指派給 Analysis Services 的 Windows 權限](#bkmk_winpriv)  
   
--   [指派給 Analysis Services 的檔案系統許可權](#bkmk_FilePermissions)  
+-   [指派給 Analysis Services 的檔案系統權限](#bkmk_FilePermissions)  
   
--   [授與特定伺服器作業的其他許可權](#bkmk_tasks)  
+-   [授與特定伺服器作業的其他權限](#bkmk_tasks)  
   
  另一個設定步驟 (此處未記載) 是註冊 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和服務帳戶的服務主要名稱 (SPN)。 這個步驟可在雙躍點狀況下啟用從用戶端應用程式到後端資料來源的傳遞驗證。 這個步驟僅適用於針對 Kerberos 限制委派設定的服務。 如需進一步指示，請參閱＜ [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) ＞。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66080192"
   
  群組的唯一成員是個別服務 SID。 旁邊就是登入帳戶。 登入帳戶名稱是表面，在此提供內容給個別服務 SID。 如果您後續變更登入帳戶，然後返回此頁面，會發現安全性群組和個別服務 SID 不會變更，但是登入帳戶標籤則不同。  
   
-##  <a name="bkmk_winpriv"></a>指派給 Analysis Services 服務帳戶的 Windows 許可權  
+##  <a name="windows-privileges-assigned-to-the-analysis-services-service-account"></a><a name="bkmk_winpriv"></a> 指派給 Analysis Services 服務帳戶的 Windows 權限  
  Analysis Services 需要來自作業系統的權限，才能進行服務啟動，以及要求系統資源。 需求會依照伺服器模式以及執行個體是否已叢集而改變。 如果您不熟悉 Windows 權限，請參閱 [Privileges](https://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) (權限) 和 [Privilege Constants (Windows)](/windows/desktop/SecAuthZ/privilege-constants) (權限常數 (Windows)) 以了解詳細資訊。  
   
  Analysis Services 的所有執行個體都需有 **[以服務方式登入]** (SeServiceLogonRight) 權限。 SQL Server 安裝程式會為您指派安裝期間所指定之服務帳戶的權限。 對於以多維度和資料採礦模式執行的伺服器而言，這對獨立伺服器安裝而言是 Analysis Services 服務帳戶所需的唯一 Windows 權限，而且它是安裝程式為 Analysis Services 所設定的唯一權限。 至於叢集和表格式執行個體，則是必須手動新增其他 Windows 權限。  
@@ -67,11 +66,9 @@ ms.locfileid: "66080192"
   
 |||  
 |-|-|  
-|**增加處理常式工作集**（工作組 seincreaseworkingsetprivilege）|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限來鎖定伺服器，Analysis Services 可能會無法啟動，並會記錄以下錯誤：「用戶端沒有這項特殊權限。」 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
-|**調整進程的記憶體配額**（SeIncreaseQuotaSizePrivilege）|如果處理程序擁有的資源不足以完成它的執行 (受限於針對執行個體所建立的記憶體臨界值)，則可使用這個權限來要求更多記憶體。|  
-|**鎖定記憶體中的分頁**（分頁 selockmemoryprivilege）|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體會使用 Windows 分頁檔，但是您可以藉由將 `VertiPaqPagingPolicy` 設為 0，來防止它使用 Windows 分頁。<br /><br /> 
-  `VertiPaqPagingPolicy` 為 1 (預設值)，指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定（其中`VertiPaqPagingPolicy` = 1），您不需要將 [**鎖定記憶體中的分頁**] 許可權授與表格式實例。<br /><br /> 
-  `VertiPaqPagingPolicy` 為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 Analysis Services 依賴 [**鎖定記憶體中的分頁**] 許可權做為後面`VertiPaqPagingPolicy`的強制執行 = 0。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 如需的詳細資訊，請`VertiPaqPagingPolicy`參閱[記憶體屬性](../server-properties/memory-properties.md)。|  
+|**增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限來鎖定伺服器，Analysis Services 可能會無法啟動，並會記錄以下錯誤：「用戶端沒有這項特殊權限。」 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
+|**調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)|如果處理程序擁有的資源不足以完成它的執行 (受限於針對執行個體所建立的記憶體臨界值)，則可使用這個權限來要求更多記憶體。|  
+|**鎖定記憶體中的分頁** (SeLockMemoryPrivilege)|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體會使用 Windows 分頁檔，但是您可以藉由將 `VertiPaqPagingPolicy` 設為 0，來防止它使用 Windows 分頁。<br /><br /> `VertiPaqPagingPolicy` 為 1 (預設值)，指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定（其中`VertiPaqPagingPolicy` = 1），您不需要將 [**鎖定記憶體中的分頁**] 許可權授與表格式實例。<br /><br /> `VertiPaqPagingPolicy` 為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 Analysis Services 依賴 [**鎖定記憶體中的分頁**] 許可權做為後面`VertiPaqPagingPolicy`的強制執行 = 0。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 如需的詳細資訊，請`VertiPaqPagingPolicy`參閱[記憶體屬性](../server-properties/memory-properties.md)。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>檢視或新增服務帳戶的 Windows 權限  
   
@@ -96,12 +93,12 @@ ms.locfileid: "66080192"
 > [!NOTE]  
 >  舊版安裝程式不小心將 Analysis Services 服務帳戶加入 **Performance Log Users** 群組。 雖然已修正此缺點，但是現有的安裝可能會具有此不必要的群組成員資格。 由於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶不需要 **[Performance Log Users]** 群組中的成員資格，因此您可以從群組中移除。  
   
-##  <a name="bkmk_FilePermissions"></a>指派給 Analysis Services 服務帳戶的檔案系統許可權  
+##  <a name="file-system-permissions-assigned-to-the-analysis-services-service-account"></a><a name="bkmk_FilePermissions"></a> 指派給 Analysis Services 服務帳戶的檔案系統權限  
   
 > [!NOTE]  
 >  如需與每個程式資料夾相關聯的權限清單，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
 >   
->  如需與 IIS 組態和 [ 相關的檔案權限資訊，請參閱](configure-http-access-to-analysis-services-on-iis-8-0.md)設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+>  如需與 IIS 組態和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 相關的檔案權限資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
  伺服器作業所需的所有檔案系統權限 (包括從指定的資料夾載入及卸載資料庫所需的權限) 會在安裝期間由 SQL Server 安裝程式指派。  
   
@@ -130,7 +127,7 @@ ms.locfileid: "66080192"
 > [!NOTE]  
 >  請勿移除或修改 SID。 若要還原不小心刪除的個別服務 SID，請參閱[https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)。  
   
- **深入瞭解每個服務的 Sid**  
+ **更多關於個別服務 SID 的資訊**  
   
  每個 Windows 帳戶都有相關聯的 [SID](http://en.wikipedia.org/wiki/Security_Identifier)，但服務也可能有 SID，因此稱為個別服務 SID。 個別服務 SID 是在安裝服務執行個體時所建立，做為服務的唯一、永久固定項目。 個別服務 SID 是自服務名稱產生的本機電腦層級 SID。 在預設執行個體上，其使用者易記名稱是 NT SERVICE\MSSQLServerOLAPService。  
   
@@ -138,9 +135,8 @@ ms.locfileid: "66080192"
   
  由於 SID 是不可變的，因此，不論您變更服務帳戶的頻率為何，都能永遠使用服務安裝期間建立的檔案系統 ACL。 身為新增的安全性措施，ACL 透過 SID 指定權限，即使其他服務在相同帳戶下執行，也能確保只有一個服務執行個體存取程式可執行檔和資料夾，因此可提高安全性。  
   
-##  <a name="bkmk_tasks"></a>授與特定伺服器作業的其他 Analysis Services 許可權  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在用來啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之服務帳戶 (或登入帳戶) 的安全性內容中執行一些工作，並在要求工作之使用者的安全性內容中執行其他工作。  
+##  <a name="granting-additional-analysis-services-permissions-for-specific-server-operations"></a><a name="bkmk_tasks"></a> 為特定伺服器作業授與其他 Analysis Services 權限  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在用來啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之服務帳戶 (或登入帳戶) 的安全性內容中執行一些工作，並在要求工作之使用者的安全性內容中執行其他工作。  
   
  下表描述支援以服務帳戶執行工作所需的其他權限。  
   
@@ -150,8 +146,7 @@ ms.locfileid: "66080192"
 |DirectQuery|建立服務帳戶的資料庫登入|DirectQuery 是用來查詢外部資料集的表格式功能，這些資料集可能太大，而無法容納在表格式模型內，或者具有其他特性，使得 DirectQuery 比預設的記憶體中儲存選項更適合。 DirectQuery 模式中可用的其中一個連接選項是使用服務帳戶。 同樣地，只有在服務帳戶具有資料庫登入和目標資料來源的讀取權限時，此選項才有效。 如需如何針對此工作使用服務帳戶選項的詳細資訊，請參閱[設定模擬選項 &#40;SSAS - 多維度&#41;](../multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。 或者，您可以使用目前使用者的認證來擷取資料。 在大多數情況下，此選項需要雙躍點連線，因此請務必設定服務帳戶進行 Kerberos 限制委派，以便服務帳戶可以將識別委派給下游伺服器。 如需詳細資訊，請參閱 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)。|  
 |遠端存取其他 SSAS 執行個體|將服務帳戶新增到在遠端伺服器上定義的 Analysis Services 資料庫角色|遠端分割區及其他遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的參考連結物件，都是需要遠端電腦或裝置權限的系統功能。 當使用者建立及擴展遠端分割區，或者設定連結物件時，該作業會在目前使用者的安全性內容中執行。 如果您之後自動化這些作業， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在其服務帳戶的安全性內容中存取遠端執行個體。 若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的遠端執行個體上存取連結物件，登入帳戶必須具有在遠端執行個體上讀取適當物件的權限，例如對特定維度的「讀取」權限。 同樣地，使用遠端分割區需要在遠端執行個體上具有管理權限的服務帳戶。 您可以透過將允許的作業關聯到特定物件的角色，來授與遠端 Analysis Services 執行個體的這類權限。 請參閱[授與資料庫權限 &#40;Analysis Services&#41;](../multidimensional-models/grant-database-permissions-analysis-services.md)，以取得如何授與完整控制權限以允許處理和查詢作業的相關指示。 如需遠端資料分割的詳細資訊，請參閱[建立及管理遠端資料分割 &#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)。|  
 |回寫|將服務帳戶新增到在遠端伺服器上定義的 Analysis Services 資料庫角色|在用戶端應用程式中啟用時，回寫是多維度模型功能，可在資料分析期間建立新的資料值。 如果已在維度或 Cube 內啟用回寫， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶就必須針對來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的回寫資料表具備寫入權限。 如果這個資料表不存在而需要建立，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，也必須有建立資料表的權限。|  
-|寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的查詢記錄資料表|建立服務帳戶的資料庫登入並指派查詢記錄表格的寫入權限|您可以啟用查詢記錄，以收集資料庫資料表中的使用量資料進行後續分析。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶對指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的查詢記錄資料表，必須具有寫入權限。 如果這個資料表不存在而需要建立，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登入帳戶在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，也必須有建立資料表的權限。 如需詳細資訊，請參閱 [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (部落格)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) 和 [Query Logging in Analysis Services (部落格)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)。|  
+|寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的查詢記錄資料表|建立服務帳戶的資料庫登入並指派查詢記錄表格的寫入權限|您可以啟用查詢記錄，以收集資料庫資料表中的使用量資料進行後續分析。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶對指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的查詢記錄資料表，必須具有寫入權限。 如果這個資料表不存在而需要建立，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登入帳戶在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，也必須有建立資料表的權限。 如需詳細資訊，請參閱 [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (部落格)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) 和 [Query Logging in Analysis Services (部落格)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Windows 服務帳戶和許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
@@ -160,6 +155,6 @@ ms.locfileid: "66080192"
  [存取權杖（MSDN）](/windows/desktop/SecAuthZ/access-tokens)   
  [安全識別碼（MSDN）](/windows/desktop/SecAuthZ/security-identifiers)   
  [存取權杖（維琪百科）](http://en.wikipedia.org/wiki/Access_token)   
- [存取控制清單（維琪百科）](http://en.wikipedia.org/wiki/Access_control_list)  
+ [存取控制清單 (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

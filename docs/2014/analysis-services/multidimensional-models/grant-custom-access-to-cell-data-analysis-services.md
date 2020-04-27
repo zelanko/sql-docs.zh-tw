@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074974"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授與資料格資料的自訂存取權 (Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "66074974"
 ## <a name="allow-access-to-specific-measures"></a>允許存取特定量值  
  您可以使用資料格安全性，明確選擇要使用哪些量值。 一旦明確識別允許的成員之後，所有其他成員就會變成無法使用。 這可能是透過 MDX 指令碼實作的最簡單案例，如同下列步驟所述。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，選取資料庫，開啟 [角色]**** 資料夾，然後按一下資料庫角色 (或建立新的資料庫角色)。 成員資格應該已經指定，而角色應該擁有 Cube 的 `Read` 存取權。 如需設定維度權限的詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，選取資料庫，開啟 [角色]**** 資料夾，然後按一下資料庫角色 (或建立新的資料庫角色)。 成員資格應該已經指定，而角色應該擁有 Cube 的 `Read` 存取權。 如需詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
   
 2.  在 **[資料格資料]** 中，檢查 Cube 選取項目以確定您已選擇正確的選項，然後選取 **[啟用讀取權限]**。  
   
@@ -58,8 +58,7 @@ ms.locfileid: "66074974"
     (Measures.CurrentMember IS [Measures].[Reseller Sales Amount]) OR (Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])  
     ```  
   
-     這個運算式會明確識別使用者可看見的量值。 透過這個角色連線的使用者將無法使用其他任何量值。 請注意，[CurrentMember &#40;MDX&#41;](/sql/mdx/current-mdx) 會設定內容，且後面會接著允許的量值。 若目前的成員包含 **Reseller Sales Amount** 或 **Reseller Total Product Cost**，則此運算式會顯示值。 否則，便會拒絕存取。 運算式含有多個部分，每個部分都會以括號括起來。 
-  `OR` 運算子可用來指定多個量值。  
+     這個運算式會明確識別使用者可看見的量值。 透過這個角色連線的使用者將無法使用其他任何量值。 請注意，[CurrentMember &#40;MDX&#41;](/sql/mdx/current-mdx) 會設定內容，且後面會接著允許的量值。 若目前的成員包含 **Reseller Sales Amount** 或 **Reseller Total Product Cost**，則此運算式會顯示值。 否則，便會拒絕存取。 運算式含有多個部分，每個部分都會以括號括起來。 `OR` 運算子可用來指定多個量值。  
   
 ## <a name="deny-access-to-specific-measures"></a>拒絕存取特定量值  
  下列 MDX 運算式（也在**Create Role** | **Cell Data** | **允許讀取 cube 內容**中指定）具有相反的效果，因而無法使用某些量值。 在此範例中，**折扣金額**和**折扣百分比**無法使用`NOT`和`AND`運算子來取得。 透過這個角色連接的使用者將可看見所有其他量值。  
@@ -103,6 +102,6 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [授與處理許可權 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
  [授與維度的許可權 &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
  [將維度資料的自訂存取權授與 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與 cube 或模型許可權 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

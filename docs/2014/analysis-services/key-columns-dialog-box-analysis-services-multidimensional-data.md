@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079468"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>索引鍵資料行對話方塊 (Analysis Services - 多維度資料)
@@ -48,7 +48,7 @@ ms.locfileid: "66079468"
 > [!NOTE]  
 >  只有當清單包含一個以上的資料行而且選取了資料行時，才會啟用此選項。  
   
- **按住**  
+ **向下**  
  按一下即可將 [索引鍵資料行]**** 中選取的資料行向下移動一個位置。  
   
 > [!NOTE]  

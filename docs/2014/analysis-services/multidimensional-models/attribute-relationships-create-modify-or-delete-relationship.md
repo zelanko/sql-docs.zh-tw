@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077085"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>建立、修改或刪除屬性關聯性
@@ -30,7 +30,7 @@ ms.locfileid: "66077085"
 2.  在 [屬性關聯性]**** 索引標籤上，以滑鼠右鍵按一下圖表中或 [屬性]**** 窗格中的屬性，然後選取 [新增屬性關聯性]****。  
   
     > [!NOTE]  
-    >  若要顯示 [屬性]**** 窗格，請按一下工具列上的 [顯示清單檢視]****。  
+    >   若要顯示 **[屬性]** 窗格，按一下工具列上的 **[顯示清單檢視]** 。  
   
 3.  在 **[建立屬性關聯性]** 對話方塊中，選取來源屬性和相關聯的屬性。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66077085"
 3.  在圖表或 [屬性關聯性]**** 窗格中，以滑鼠右鍵按一下屬性關聯性，然後選取 [編輯屬性關聯性]****。  
   
     > [!NOTE]  
-    >  若要顯示 [屬性關聯性]**** 窗格，按一下工具列上的 [顯示清單檢視]****。  
+    >   若要顯示 **[屬性關聯性]** 窗格，按一下工具列上的 **[顯示清單檢視]** 。  
   
 4.  在 **[編輯屬性關聯性]** 對話方塊中，選取來源屬性和相關聯的屬性。  
   

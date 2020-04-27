@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079134"
 ---
 # <a name="lesson-14-deploy"></a>第 14 課：部署
   在這一課，您將設定部署屬性：指定以 [表格式] 模式執行之 Analysis Services 的部署伺服器執行個體，以及您所部署模型的名稱。 接著將模型部署至該執行個體。 部署完成後，使用者就可以使用報表用戶端應用程式連接到此模型。 如需詳細資訊，請參閱[表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
- 這堂課的預估完成時間：**5 分鐘**  
+ 完成本課程的估計時間： **5 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
- 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課程的工作之前，您應已完成上一課：[第 13 課：在 Excel 中進行分析](lesson-12-analyze-in-excel.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課程的工作之前，您應已完成上一課： [第 13 課：在 Excel 中進行分析](lesson-12-analyze-in-excel.md)。  
   
 ## <a name="deploy-the-model"></a>部署模型  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66079134"
      [部署] 對話方塊隨即出現，並且顯示中繼資料以及模型中每個資料表的部署狀態。  
   
 ## <a name="conclusion"></a>結論  
- 恭喜！ 您已完成撰寫和部署第一個 Analysis Services 表格式模型。 本教學課程協助引導您完成建立表格式模型的常見工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者可以使用報表用戶端應用程式 (例如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]) 連接到此模型。  
+ 恭喜！ 您已完成撰寫和部署第一個 Analysis Services 表格式模型。 本教學課程已幫助您完成建立表格式模型最常執行的工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者可以使用報表用戶端應用程式 (例如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]) 連接到此模型。  
   
 ## <a name="additional-resources"></a>其他資源  
  若要深入了解支援 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的表格式模型屬性，請參閱 [Power View 報表屬性 &#40;SSAS 表格式&#41;](tabular-models/properties-ssas-tabular.md)。  

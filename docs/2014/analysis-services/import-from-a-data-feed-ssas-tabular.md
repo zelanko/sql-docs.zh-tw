@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080564"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>從資料摘要匯入 (SSAS 表格式)
@@ -22,7 +22,7 @@ ms.locfileid: "66080564"
   
  本主題包含下列幾節：  
   
--   [瞭解從資料摘要匯入](#prereq)  
+-   [了解從資料摘要匯入](#prereq)  
   
 -   [從 Azure DataMarket 資料集匯入資料](#azure)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66080564"
   
 -   [從 Reporting Services 報表匯入資料摘要](#importreport)  
   
-##  <a name="prereq"></a>瞭解從資料摘要匯入  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>瞭解從資料摘要匯入  
  您可以從下列類型的資料摘要，將資料匯入表格式模型：  
   
  **Reporting Services 報表**  
@@ -46,7 +46,7 @@ ms.locfileid: "66080564"
   
  在匯入期間，資料摘要的資料只會加入模型一次。 若要從摘要取得已更新的資料，您可從模型設計師重新整理資料，或者在將模型部署到 Analysis Services 的實際執行個體之後，為模型設定資料重新整理排程。 如需詳細資訊，請參閱 [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)。  
   
-##  <a name="azure"></a>從 Azure DataMarket 資料集匯入資料  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>從 Azure DataMarket 資料集匯入資料  
  您可以從 Azure DataMarket 匯入資料做為模型中的資料表。  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>從 Azure DataMarket 資料集匯入資料  
@@ -73,7 +73,7 @@ ms.locfileid: "66080564"
   
 11. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
-##  <a name="importdata"></a>從公用或公司資料來源匯入資料摘要  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>從公用或公司資料來源匯入資料摘要  
  您可以存取公用摘要，或建立自訂摘要服務，從專屬或舊版資料庫系統產生 Atom 摘要。  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>從公用或公司資料摘要匯入資料  
@@ -111,7 +111,7 @@ ms.locfileid: "66080564"
   
 10. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
-##  <a name="importlist"></a>從 SharePoint 清單匯入資料摘要  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>從 SharePoint 清單匯入資料摘要  
  您可以匯入 (SharePoint) 功能區上有 [匯出為資料摘要]**** 按鈕的任何 SharePoint 清單。 您可以按一下此按鈕，將清單匯出為摘要。  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>從 SharePoint 清單匯入資料摘要  
@@ -143,7 +143,7 @@ ms.locfileid: "66080564"
   
 10. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
-##  <a name="importreport"></a>從 Reporting Services 報表匯入資料摘要  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>從 Reporting Services 報表匯入資料摘要  
  如果您具備 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services 部署，則可以使用 Atom 轉譯延伸模組，從現有的報表中產生資料摘要。  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>從已發行的 Reporting Services 報表匯入報表資料  
@@ -194,6 +194,6 @@ ms.locfileid: "66080564"
  [&#40;SSAS 表格式&#41;支援的資料類型](tabular-models/data-types-supported-ssas-tabular.md)   
  [&#40;SSAS 表格式&#41;的模擬](tabular-models/impersonation-ssas-tabular.md)   
  [&#40;SSAS 表格式&#41;處理資料](process-data-ssas-tabular.md)   
- [將資料匯入 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)  
+ [匯入資料 (SSAS 表格式)](import-data-ssas-tabular.md)  
   
   

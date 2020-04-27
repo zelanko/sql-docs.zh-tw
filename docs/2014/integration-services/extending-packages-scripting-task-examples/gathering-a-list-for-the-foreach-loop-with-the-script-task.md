@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894977"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單
@@ -32,8 +32,7 @@ ms.locfileid: "62894977"
  下列範例使用 `System.IO` 命名空間的方法，蒐集電腦上的 Excel 活頁簿清單，這些活頁簿比使用者在變數中所指定的天數還要新或是還要舊。 它會在磁碟 C 上以遞迴方式搜尋目錄中有 .xls 副檔名的檔案，並檢查檔案最後修改的日期，以判斷檔案是否應歸屬於清單中。 它會將符合的檔案加入 `ArrayList`，並將 `ArrayList` 儲存到變數，以供稍後使用於 Foreach 迴圈容器。 Foreach Loop 容器是設定為從 Variable 列舉值使用 Foreach。  
   
 > [!NOTE]  
->  從 Variable 列舉值與 Foreach 搭配使用的變數必須是 `Object` 類型。 您放置在變數中的物件，必須實作下列其中一個介面：`System.Collections.IEnumerable`, `System.Runtime.InteropServices.ComTypes.IEnumVARIANT`、`System.ComponentModel IListSource` 或 `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost`。 常用的是 `Array` 或 `ArrayList`。 
-  `ArrayList` 需要參考以及 `Imports` 命名空間的 `System.Collections` 陳述式。  
+>  從 Variable 列舉值與 Foreach 搭配使用的變數必須是 `Object` 類型。 您放置在變數中的物件，必須實作下列其中一個介面：`System.Collections.IEnumerable`, `System.Runtime.InteropServices.ComTypes.IEnumVARIANT`、`System.ComponentModel IListSource` 或 `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost`。 常用的是 `Array` 或 `ArrayList`。 `ArrayList` 需要參考以及 `Imports` 命名空間的 `System.Collections` 陳述式。  
   
  您可以透過為 `FileAge` 封裝變數使用不同的正值與負值，來試驗這項工作。 例如，您可以輸入 5 以搜尋在過去五天內建立的檔案，或是輸入 3 搜尋已建立超過三天的檔案。 這項工作可能需要花費一兩分鐘，以搜尋磁碟機上的許多資料夾。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "62894977"
   
 1.  建立名為 `FileAge` 且類型為整數的封裝孌數，並輸入正整數值或負整數值。 當值為正數時，程式碼會搜尋比指定天數還要新的檔案，當值為負數時，會搜尋比指定的天數還要舊的檔案。  
   
-2.  建立類型為 `FileList` 且名為 `Object` 的變數，以接收指令碼工作蒐集的檔案清單，以便稍後供 Variable 列舉值的 Foreach 使用。  
+2.  建立類型為 `Object` 且名為 `FileList` 的變數，以接收指令碼工作蒐集的檔案清單，以便稍後供 Variable 列舉值的 Foreach 使用。  
   
 3.  將 `FileAge` 變數加入指令碼工作的 `ReadOnlyVariables` 屬性，然後將 `FileList` 變數加入 `ReadWriteVariables` 屬性。  
   

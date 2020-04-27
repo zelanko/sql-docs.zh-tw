@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 860025d25b106964add87b77e95e1e4107af2ef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072494"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>在維度設計師中檢視樹狀目錄、清單或方格中的屬性

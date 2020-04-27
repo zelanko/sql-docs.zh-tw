@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900557"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
@@ -83,11 +83,11 @@ ms.locfileid: "62900557"
   
  如需可在 [模糊群組轉換編輯器]**** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [[模糊群組轉換編輯器] &#40;[連接管理員] 索引標籤&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [模糊群組轉換編輯器 &#40;連線管理員索引標籤&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [[模糊群組轉換編輯器] &#40;[資料行] 索引標籤&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [模糊群組轉換編輯器 &#40;資料行索引標籤&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [[模糊群組轉換編輯器] &#40;[Advanced] 索引標籤&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [模糊群組轉換編輯器 &#40;進階索引標籤&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078933"
 ---
 # <a name="modifying-the-customer-dimension"></a>修改 [客戶] 維度
@@ -25,7 +25,7 @@ ms.locfileid: "66078933"
   
 #### <a name="to-rename-an-attribute"></a>重新命名屬性  
   
-1.  針對 ** 中的 [客戶] 維度，切換至 [維度設計師]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [客戶]**** 維度。  
+1.  針對 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [客戶] 維度，切換至 [維度設計師]****。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [客戶]**** 維度。  
   
 2.  在 [屬性]**** 窗格中，以滑鼠右鍵按一下 [英文國家地區名稱]****，然後按一下 [重新命名]****。 將屬性的名稱變更為`Country-Region`。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66078933"
 5.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="adding-a-named-calculation"></a>加入具名計算  
- 具名計算是以導出資料行表示的 SQL 運算式，您可以將它加入資料來源檢視的資料表中。 這個運算式以資料表的資料行呈現及運作。 具名計算可讓您延伸資料來源檢視中現有資料表的關聯式結構描述，而不必修改基礎資料來源中的資料表。 如需詳細資訊，請參閱 [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ 具名計算是以導出資料行表示的 SQL 運算式，您可以將它加入資料來源檢視的資料表中。 這個運算式以資料表的資料行呈現及運作。 具名計算可讓您延伸資料來源檢視中現有資料表的關聯式結構描述，而不必修改基礎資料來源中的資料表。 如需詳細資訊，請參閱[在資料來源 View 中定義指名的計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>加入具名計算  
   
@@ -122,11 +122,11 @@ ms.locfileid: "66078933"
   
 2.  在 [屬性]**** 窗格中，按住 CTRL 鍵，同時按一下每個屬性，藉以選取下列屬性：  
   
-    -   **City**  
+    -   **城市**  
   
     -   `Country-Region`  
   
-    -   **郵遞區號**  
+    -   **Postal Code**  
   
     -   `State-Province`  
   
@@ -142,19 +142,19 @@ ms.locfileid: "66078933"
   
     -   **性別**  
   
-    -   **房屋擁有者旗標**  
+    -   **House Owner Flag**  
   
     -   **Marital Status**  
   
-    -   **擁有的 Cars 數**  
+    -   **Number Cars Owned**  
   
-    -   **在家中的子女數**  
+    -   **Number Children At Home**  
   
     -   `Occupation`  
   
     -   **Total Children**  
   
-    -   **年收入**  
+    -   **Yearly Income**  
   
 6.  在 [屬性視窗中，按一下頂端的 [ **attributehierarchydisplayfolder]** ] 屬性欄位，然後輸入`Demographic`。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66078933"
   
 3.  在 [屬性]**** 視窗中靠近底部的 [KeyColumns]**** 欄位中按一下，然後按一下瀏覽 (**...**) 按鈕。  
   
-4.  在 [索引鍵資料行]**** 對話方塊的 [可用的資料行]**** 清單中，選取 [StateProvinceName]**** 資料行，然後按一下 [**]>** 按鈕。  
+4.  在 [索引鍵資料行]**** 對話方塊的 [可用的資料行]**** 清單中，選取 [StateProvinceName]**** 資料行，然後按一下 [>]**** 按鈕。  
   
      [City]**** 和 [StateProvinceName]**** 資料行現在會顯示在 [索引鍵資料行]**** 清單中。  
   
@@ -199,13 +199,13 @@ ms.locfileid: "66078933"
   
 3.  在 [屬性]**** 視窗的 [KeyColumns]**** 欄位中按一下，然後按一下瀏覽 (**...**) 按鈕。  
   
-4.  在 [索引鍵資料行]**** 對話方塊的 [可用的資料行]**** 清單中，選取 [EnglishCountryRegionName]**** 資料行，然後按一下 [**]>** 按鈕。  
+4.  在 [索引鍵資料行]**** 對話方塊的 [可用的資料行]**** 清單中，選取 [EnglishCountryRegionName]**** 資料行，然後按一下 [>]**** 按鈕。  
   
      [EnglishCountryRegionName]**** 和 [StateProvinceName]**** 資料行現在會顯示在 [索引鍵資料行]**** 清單中。  
   
 5.  按一下 [確定]  。  
   
-6.  若要設定**** `State-Province`屬性的 namecolumn 屬性，請按一下 [屬性視窗中的 [ **namecolumn** ] 欄位，然後按一下 [流覽] （**...**）按鈕。  
+6.  若要設定**NameColumn** `State-Province`屬性的 namecolumn 屬性，請按一下 [屬性視窗中的 [ **namecolumn** ] 欄位，然後按一下 [流覽] （**...**）按鈕。  
   
 7.  在 [名稱資料行]**** 對話方塊的 [來源資料行]**** 清單中，選取 [StateProvinceName]****，然後按一下 [確定]****。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "66078933"
   
 #### <a name="to-deploy-the-changes-process-the-objects-and-view-the-changes"></a>部署變更、處理物件及檢視變更  
   
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
 2.  當您收到 [已成功地完成部署]**** 訊息之後，請針對 [客戶] 維度按一下 [維度設計師] 的 [瀏覽器]**** 索引標籤，然後按一下設計師工具列左側的 [重新連接] 按鈕。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66078933"
   
      瀏覽器就會顯示該縣 (市) 的客戶。  
   
-4.  針對 ** 教學課程 Cube 切換至 [Cube 設計師]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 若要這麼做，請在**方案總管**的 [ **cube** ] 節點中，按兩下 [ **Analysis Services 教學**課程] cube。  
+4.  針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 切換至 [Cube 設計師]****。 若要這樣做，請在**方案總管**的 [Cube]**** 節點中，按兩下 [Analysis Services 教學課程]**** Cube。  
   
 5.  按一下 [瀏覽器]**** 索引標籤，然後按一下設計師工具列上的 [重新連接] 按鈕。  
   
@@ -262,12 +262,12 @@ ms.locfileid: "66078933"
 7.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [修改 [產品] 維度](lesson-3-3-modifying-the-product-dimension.md)  
+ [修改產品維度](lesson-3-3-modifying-the-product-dimension.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度屬性屬性參考](multidimensional-models/dimension-attribute-properties-reference.md)   
  [從維度中移除屬性](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [重新命名屬性](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [定義資料來源視圖中的已命名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

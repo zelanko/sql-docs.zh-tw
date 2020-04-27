@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078554"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 課：建立導出資料行
-  在這一課，您將在模型中新增導出資料行來建立新資料。 導出資料行是以已存在模型中的資料為基礎。 如需詳細資訊，請參閱[導出資料行 &#40;SSAS 表格式&#41;](tabular-models/ssas-calculated-columns.md)。  
+  在這一課，您將藉由加入導出資料行的方式在模型中建立新資料。 導出資料行是以已存在模型中的資料為基礎。 如需詳細資訊，請參閱[導出資料行 &#40;SSAS 表格式&#41;](tabular-models/ssas-calculated-columns.md)。  
   
- 您將在三個不同資料表中建立五個新的導出資料行。 每個工作的步驟稍有不同。 這是為了說明有幾種方式可以建立新的資料行、重新命名，以及將它們放在資料表中的不同位置。  
+ 您將在三個不同資料表中建立五個新的導出資料行。 各項工作的步驟稍有不同。 這樣做的目的在於說明，您可以透過數種方式建立新的資料行、重新命名資料行，以及將它們放到資料表中的不同位置。  
   
- 這堂課的預估完成時間：**15 分鐘**  
+ 完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
- 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 5 課：建立關聯性](lesson-4-create-relationships.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 5 課：建立關聯性](lesson-4-create-relationships.md)。  
   
 ## <a name="create-calculated-columns"></a>建立導出資料行  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66078554"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型]**** 功能表，然後指向 [模型檢視]****，再按一下 [資料檢視]****。  
   
-     只有在資料檢視中使用模型設計師，才能建立計算結果欄。  
+     導出資料行只能使用模型設計師在「資料檢視」中建立。  
   
 2.  在模型設計師中，按一下 [Date]**** 資料表 (索引標籤)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66078554"
      接著，計算結果欄的所有資料列就會填入值。 如果您在資料表中向下捲動，根據每個資料列中的資料，您會看到各資料列在此資料行中會有不同的值。  
   
     > [!NOTE]  
-    >  如果您收到錯誤，請確認公式中的資料行名稱與您在[第 3 課：重新命名資料行](rename-columns.md)中變更的資料行名稱相符。  
+    >  如果您收到錯誤，請確認公式中的資料行名稱與您在 [第 3 課：重新命名資料行](rename-columns.md)中變更的資料行名稱相符。  
   
 5.  將此資料行`Month Calendar`重新命名為。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66078554"
 4.  按一下欄位標題，然後將資料行拖曳到 [Day Name]**** 資料行和 [Day of Month]**** 資料行之間。  
   
     > [!TIP]  
-    >  移動資料表中的資料行可讓您更輕鬆地瀏覽。  
+    >  移動資料表中的資料行可使導覽更方便。  
   
  [Day of Week] 導出資料行會提供可排序的星期日期名稱。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66078554"
  [Margin] 導出資料行可用來分析每個 (產品) 資料列的利率。  
   
 ## <a name="next-step"></a>後續步驟  
- 若要繼續進行這一課，請前往下一課：[第 7 課：建立量值](lesson-6-create-measures.md)。  
+ 若要繼續進行這一課，請前往下一課： [第 7 課：建立量值](lesson-6-create-measures.md)。  
   
   

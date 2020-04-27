@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074403"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>FORMATED_VALUE 上的 LANGUAGE 及 FORMAT_STRING
@@ -76,7 +76,7 @@ ms.locfileid: "66074403"
   
  在伺服器上使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來執行上述 MDX 查詢，而且用戶端的地區設定為 1033 時，調換的結果如下所示：  
   
-|成員|FORMATTED_VALUE|說明|  
+|member|FORMATTED_VALUE|說明|  
 |------------|----------------------|-----------------|  
 |A|$5,040.00|FORMAT_STRING 設定為 `Currency` 而且 LANGUAGE 為 `1033`(從系統地區設定值繼承而來)。|  
 |B|5.040,00|FORMAT_STRING 設定為 `Currency` (繼承自 A) 而且 LANGUAGE 明確設定為 `1034` (西班牙)，因此是歐元符號、不同的小數分隔符號和不同的千位分隔符號。|  
@@ -126,7 +126,7 @@ ms.locfileid: "66074403"
   
  在伺服器上使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來執行上述 MDX 查詢，而且用戶端的地區設定為 1033 時，調換的結果如下所示：  
   
-|成員|FORMATTED_VALUE|說明|  
+|member|FORMATTED_VALUE|說明|  
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|FORMAT_STRING 由 CDate() 運算式隱含地設定為 `General Date` ，而且 LANGUAGE 是 `1033` (英文)，這是從系統地區設定值繼承而來。|  
 |B|Thursday, March 12, 1959|FORMAT_STRING 明確設定為 `Long Date` 而且 LANGUAGE 為 `1033` (英文)，這是從系統地區設定值繼承而來。|  
@@ -145,6 +145,6 @@ ms.locfileid: "66074403"
  [FORMAT_STRING &#40;MDX 的內容&#41;](mdx-cell-properties-format-string-contents.md)   
  [使用資料格屬性 &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [&#40;MDX&#41;建立和使用屬性值](../../creating-and-using-property-values-mdx.md)   
- [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137509"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>自動修復頁面 (適用於可用性群組和資料庫鏡像)
@@ -32,7 +32,7 @@ ms.locfileid: "63137509"
   
   
   
-##  <a name="ErrorTypes"></a>導致嘗試自動修復頁面的錯誤類型  
+##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a>導致嘗試自動修復頁面的錯誤類型  
  資料庫鏡像的自動修復頁面僅會嘗試修復在操作資料檔案時，因為下表列出的其中一個錯誤而失敗的頁面。  
   
 |錯誤號碼|描述|造成嘗試自動修復頁面的執行個體|  
@@ -45,7 +45,7 @@ ms.locfileid: "63137509"
   
   
   
-##  <a name="UnrepairablePageTypes"></a>無法自動修復的頁面類型  
+##  <a name="page-types-that-cannot-be-automatically-repaired"></a><a name="UnrepairablePageTypes"></a>無法自動修復的頁面類型  
  自動修復頁面無法修復下列控制頁類型：  
   
 -   檔案標頭頁面 (頁面識別碼 0)。  
@@ -56,7 +56,7 @@ ms.locfileid: "63137509"
   
 
   
-##  <a name="PrimaryIOErrors"></a>處理主體/主資料庫上的 i/o 錯誤  
+##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a>處理主體/主資料庫上的 i/o 錯誤  
  在主體/主要資料庫上，只有當資料庫處於 SYNCHRONIZED 狀態，而且主體/主要資料庫仍在將資料庫的記錄檔記錄傳送到鏡像/次要資料庫時，才會嘗試自動修復頁面。 自動修復頁面的基本動作順序如下所示：  
   
 1.  在主體/主要資料庫的資料頁面上發生讀取錯誤時，主體/主要資料庫會在 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料表中插入一個資料列，列出適當的錯誤狀態。 如果是資料庫鏡像，主體資料庫接著就會向鏡像資料庫要求頁面的副本。 如果是 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主要資料庫會向所有次要資料庫廣播要求，並從第一個回應的次要資料庫取得頁面。 此要求會指定目前在已排清記錄檔結尾的頁面識別碼和 LSN。 該頁面會標示為 *還原暫止*。 這樣就無法在嘗試進行自動修復頁面期間存取該頁面。 在嘗試修復期間存取此頁面的嘗試將會失敗，其錯誤為 829 (還原暫止)。  
@@ -71,7 +71,7 @@ ms.locfileid: "63137509"
   
 
   
-##  <a name="SecondaryIOErrors"></a>處理鏡像/次要資料庫上的 i/o 錯誤  
+##  <a name="handling-io-errors-on-the-mirrorsecondary-database"></a><a name="SecondaryIOErrors"></a>處理鏡像/次要資料庫上的 i/o 錯誤  
  資料庫鏡像與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]通常會以相同方式處理鏡像/次要資料庫上發生的資料頁面 I/O 錯誤。  
   
 1.  對於資料庫鏡像，如果鏡像資料庫在重做記錄檔記錄時遇到一個或多個頁面 I/O 錯誤，鏡像工作階段會進入 SUSPENDED 狀態。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，如果次要複本在重做記錄檔記錄時遇到一個或多個頁面 I/O 錯誤，次要資料庫會進入 SUSPENDED 狀態。 此時，鏡像/次要資料庫會在 **suspect_pages** 資料表中插入一個資料列，列出適當的錯誤狀態。 鏡像/次要資料庫接著就會向主體/主要資料庫要求頁面的副本。  
@@ -83,23 +83,23 @@ ms.locfileid: "63137509"
      如果鏡像/次要資料庫沒有收到向主體/主要資料庫要求的頁面，自動修復頁面嘗試會失敗。 對於資料庫鏡像，鏡像工作階段保持暫停。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，次要資料庫也會保持暫停。 如果手動繼續鏡像工作階段或次要資料庫，在同步處理階段期間，將會再次叫用損毀的頁面。  
 
   
-##  <a name="DevBP"></a>開發人員最佳做法  
+##  <a name="developer-best-practice"></a><a name="DevBP"></a>開發人員最佳做法  
  自動修復頁面是在背景中執行的非同步程序。 因此，要求無法讀取之頁面的資料庫作業也會失敗，而且會針對造成失敗的情況，傳回錯誤碼。 開發鏡像資料庫或可用性資料庫的應用程式時，您應該攔截失敗作業的例外狀況。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤碼為 823、824 或 829，您應該稍後重試該作業。  
   
 
   
-##  <a name="ViewAPRattempts"></a>如何：查看自動修復頁面嘗試  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a>如何：查看自動修復頁面嘗試  
  下列動態管理檢視會針對給定可用性資料庫或鏡像資料庫上進行的最新自動修復頁面嘗試行為傳回資料列，每個資料庫最多 100 個資料列。  
   
 -   **AlwaysOn 可用性群組：**  
   
-     [dm_hadr_auto_page_repair &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
+     [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
   
      針對可用性複本上的任何可用性資料庫進行的每個自動修復頁面嘗試行為，各傳回一個資料列，該可用性複本是針對伺服器執行個體的任何可用性群組所裝載。  
   
 -   **資料庫鏡像：**  
   
-     [dm_db_mirroring_auto_page_repair &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair)  
+     [sys.dm_db_mirroring_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair)  
   
      針對在伺服器執行個體之任何鏡像資料庫上進行的每個自動修復頁面嘗試行為，各傳回一個資料列。  
   

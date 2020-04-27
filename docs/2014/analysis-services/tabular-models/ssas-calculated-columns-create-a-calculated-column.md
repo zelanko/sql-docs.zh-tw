@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066515"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>建立導出資料行 (SSAS 表格式)
@@ -26,7 +26,7 @@ ms.locfileid: "66066515"
   
 1.  在模型設計師的 [資料檢視] 中，選取您要加入導出資料行的資料表，然後按一下 **[資料行]** 功能表，再按一下 **[加入資料行]**。  
   
-     [**加入資料行**] 會反白顯示于最右側空白資料行，而游標會移到公式列。  
+     **[加入資料行]** 將反白顯示於最右側空白資料行，而且游標會移到公式列。  
   
      若要在兩個現有的資料行之間建立新資料行，請以滑鼠右鍵按一下現有的資料行，然後按一下 [插入資料行]****。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66066515"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的計算結果欄](ssas-calculated-columns.md)   
- [&#40;SSAS 表格式&#41;的量值](measures-ssas-tabular.md)  
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)  
   
   

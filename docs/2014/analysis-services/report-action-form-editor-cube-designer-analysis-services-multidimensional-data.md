@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070301"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>報表動作表單編輯器 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -44,9 +44,9 @@ ms.locfileid: "66070301"
 |層級成員|選取了 [目標物件]**** 中之層級內的成員。|  
   
  **目標物件**  
- 選取要與動作相關聯的物件。 [!INCLUDE[msCoName](../includes/msconame-md.md)]會將套用至所選物件的動作傳回給客戶[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]端。 可用物件的清單受到 [目標類型]**** 之選擇的限制。  
+ 選取要與動作相關聯的物件。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體只會將套用至所選物件的動作傳回用戶端。 可用物件的清單受到 [目標類型]**** 之選擇的限制。  
   
- **條件（選擇性）**  
+ **條件 (選擇性)**  
  輸入描述選擇性條件的多維度運算式 (MDX) 運算式，這要配合 [目標物件]**** 使用，也因此將進一步限制動作可用的時機。 此運算式必須傳回布林值，如果此值為 True，則表示可使用該動作。  
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
@@ -63,14 +63,14 @@ ms.locfileid: "66070301"
  **報表格式**  
  選取傳回報表時使用的格式。 下表描述可用的格式。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |HTML5|報表會以 HTML 5.0 相容的格式傳回。|  
 |HTML3|報表會以 HTML 3.2 相容的格式傳回。|  
 |Excel|報表會以 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 活頁簿 (.xls) 檔案的形式傳回。|  
 |PDF|報表會以 Adobe Portable Document Format (.pdf) 檔案傳回。|  
   
- **參數（選擇性）**  
+ **參數 (選擇性)**  
  展開即可檢視方格，您可以在其中提供 [報表]**** 所指定報表的報表參數。 方格包含下列資料行：  
   
 |資料行|描述|  
@@ -81,7 +81,7 @@ ms.locfileid: "66070301"
  **其他屬性**  
  展開以檢視 [引動過程]****、[應用程式]****、[描述]****、[標題]**** 和 [標題是 MDX]**** 選項。  
   
- **啟動**  
+ **引動過程**  
  選取設定，以指出何時該執行此動作。  
   
 > [!NOTE]  
@@ -89,13 +89,13 @@ ms.locfileid: "66070301"
   
  下表描述可用的設定。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |Batch|動作應該當做批次作業或工作[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的一部分來執行。|  
-|互動式|此動作會在使用者叫用動作時執行。|  
+|Interactive (互動式)|此動作會在使用者叫用動作時執行。|  
 |開啟時|此動作會在第一次開啟 Cube 時執行。|  
   
- **Application**  
+ **應用程式**  
  鍵入可解譯 [動作運算式**** 傳回之字串的應用程式名稱。  
   
  您也可以使用此選項來識別哪一個用戶端應用程式最常使用這個動作，以及在快顯功能表的該動作旁邊顯示適當的圖示。  
@@ -103,10 +103,10 @@ ms.locfileid: "66070301"
 > [!NOTE]  
 >  此選項只提供用戶端應用程式應該執行哪些動作的建議，並不會直接控制動作的存取。 用戶端應用程式應隱藏與其他用戶端應用程式相關聯的動作。  
   
- **說明**  
+ **描述**  
  鍵入動作的選擇性描述。  
   
- **Caption**  
+ **字幕**  
  如果 [標題是 MDX]**** 設為 [False]****，則請鍵入要顯示在用戶端應用程式中的動作標題。  
   
  如果 [標題是 MDX]**** 設為 [True]****，請鍵入會傳回標題字串的 MDX 運算式。  

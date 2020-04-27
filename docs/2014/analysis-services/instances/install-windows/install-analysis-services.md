@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079905"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>以表格模式安裝 Analysis Services
@@ -45,15 +45,13 @@ ms.locfileid: "66079905"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- 
-  `INSTANCENAME` 必須少於 17 個字元。  
+ `INSTANCENAME` 必須少於 17 個字元。  
   
  所有預留位置帳戶值都必須取代成有效的帳戶和密碼。  
   
  使用所提供的範例命令列語法時，不會安裝 SQL Server Management Studio 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 之類的工具。 如需新增功能的詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
- 
-  `ASSERVERMODE` 會區分大小寫。  所有值都必須以大寫形式表示。 下表描述 `ASSERVERMODE` 的有效值。  
+ `ASSERVERMODE` 會區分大小寫。  所有值都必須以大寫形式表示。 下表描述 `ASSERVERMODE` 的有效值。  
   
 |值|描述|  
 |-----------|-----------------|  

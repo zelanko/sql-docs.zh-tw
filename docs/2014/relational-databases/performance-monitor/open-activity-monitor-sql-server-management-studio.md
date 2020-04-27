@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032002"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>開啟活動監視器 (SQL Server Management Studio)
@@ -35,23 +35,23 @@ ms.locfileid: "63032002"
   
      [Transact-SQL](#SSMSProcedure)  
   
--   **若要使用下列內容設定重新整理間隔：**  [SQL Server Management Studio](#Refresh)  
+-   **使用下列項目，設定重新整理間隔：**  [SQL Server Management Studio](#Refresh)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  [活動監視器] 會在監視的執行個體上執行查詢，以便取得 [活動監視器] 顯示窗格的資訊。 當重新整理間隔的設定小於 10 秒時，用來執行這些查詢的時間就可能會影響伺服器效能。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要檢視 [活動監視器]，使用者必須擁有 VIEW SERVER STATE 權限。 若要檢視活動監視器的 [資料檔案 I/O] 區段，除了 VIEW SERVER STATE 之外，您也必須具有 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION 權限。  
   
  若要針對處理序執行 KILL 命令，使用者必須是系統管理員 (sysadmin) 或處理序管理員 (processadmin) 固定伺服器角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟活動監視器  
   
-1.  在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]標準] 工具列上，按一下 [**活動監視器**]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 標準工具列上，按一下 **[活動監視器]**。  
   
 2.  在 **[連接到伺服器]** 對話方塊中，選取伺服器名稱和驗證模式，然後按一下 **[連接]**。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63032002"
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>若要在開啟 SQL Server Management Studio 時開啟活動監視器  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
 2.  在 **[選項]** 對話方塊中，展開 **[環境]**，然後選取 **[一般]**。  
   
@@ -71,10 +71,10 @@ ms.locfileid: "63032002"
   
 4.  若要啟動這些變更，請關閉並重新開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-###  <a name="Refresh"></a>若要設定活動監視器的重新整理間隔  
+###  <a name="to-set-the-activity-monitor-refresh-interval"></a><a name="Refresh"></a>若要設定活動監視器的重新整理間隔  
   
 -   開啟 [活動監視器]。  
   
--   以滑鼠右鍵按一下 [概觀]  ，選取 [重新整理間隔]  ，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
+-   以滑鼠右鍵按一下 [概觀]****，選取 [重新整理間隔]****，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
   
   

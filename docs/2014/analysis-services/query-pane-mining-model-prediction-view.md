@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070521"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>查詢窗格 (採礦模型預測檢視)
   [查詢]**** 窗格會顯示預測查詢產生器所建立的資料採礦運算式 (DMX) 陳述式。 您可以修改陳述式，然後按一下 [切換到查詢結果檢視]**** 按鈕，以傳回結果。 如果切換到 [設計]**** 檢視，您對陳述式所做的任何變更將會遺失。  
   
- **如需詳細資訊：** [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](/sql/dmx/dmx-statements-data-manipulation)，請[在中建立 DMX 查詢 SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **如需詳細資訊，請參閱** [資料採礦延伸模組 &#40;DMX&#41; 資料操作陳述式](/sql/dmx/dmx-statements-data-manipulation)[在 SQL Server Management Studio 中建立 DMX 查詢](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>選項。  
  **切換到查詢結果檢視**  

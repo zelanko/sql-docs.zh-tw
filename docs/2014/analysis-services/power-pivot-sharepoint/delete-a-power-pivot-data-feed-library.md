@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071476"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>刪除 PowerPivot 資料摘要庫
@@ -24,9 +24,9 @@ ms.locfileid: "66071476"
   
 ### <a name="delete-a-data-feed-library"></a>刪除資料摘要庫  
   
-1.  按一下 **[網站動作]**。  
+1.  按一下 **[網站動作]** 。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
 3.  在 [網站管理] 之下，按一下 [網站文件庫和清單]****。  
   

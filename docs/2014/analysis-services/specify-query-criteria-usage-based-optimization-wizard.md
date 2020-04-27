@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068216"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>指定查詢準則 (基於使用方式的最佳化精靈)
@@ -40,13 +40,13 @@ ms.locfileid: "66068216"
  依據開始日期和時間篩選查詢記錄中的查詢。 在下拉式清單中選擇或輸入日期。  
   
 > [!NOTE]  
->  如果未選取 [結束日期]****，則會考量查詢記錄中，符合此選項指定的日期和時間或之後的所有查詢。  
+>   如果未選取 **[結束日期]** ，則會考量查詢記錄中，符合此選項指定的日期和時間或之後的所有查詢。  
   
  **結束日期**  
  依據結束日期和時間篩選查詢記錄中的查詢。 在下拉式清單中選擇或輸入日期。  
   
 > [!NOTE]  
->  如果未選取 [開始日期]****，則會考量查詢記錄中，符合在此選項指定的日期和時間或之前的所有查詢。  
+>   如果未選取 **[開始日期]** ，則會考量查詢記錄中，符合在此選項指定的日期和時間或之前的所有查詢。  
   
  **使用者**  
  依據指定的使用者集合篩選查詢記錄中的查詢。 按一下省略符號 (**...**) 按鈕，即可顯示 [使用者選取]**** 對話方塊，並選擇用來篩選查詢的使用者。 如需 [使用者選取]**** 對話方塊的詳細資訊，請參閱[使用者選取對話方塊 &#40;Analysis Services - 多維度資料&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071886"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
@@ -38,14 +38,14 @@ ms.locfileid: "66071886"
   
  如需有關如何建立 PowerPivot 服務應用程式的指示，請參閱[在管理中心建立和設定 Powerpivot 服務應用程式](create-and-configure-power-pivot-service-application-in-ca.md)。  
   
-##  <a name="LoadingData"></a>資料載入超時  
+##  <a name="data-load-timeout"></a><a name="LoadingData"></a> 資料載入逾時  
  PowerPivot 資料是由在伺服陣列中的 Analysis Services 伺服器執行個體擷取及載入。 依上次存取資料的時間與方式而定，會從內容庫或本機檔案快取載入。 只要接到查詢或處理要求，資料就會載入記憶體中。 為了提供最大的整體伺服器可用性，如果無法在配置的時間內完成，您可以設定逾時值，指示伺服器停止載入資料要求。  
   
-|名稱|預設|有效值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |資料載入逾時|1800 (秒)|1 到 3600|指定 PowerPivot 服務應用程式等候特定 Analysis Services 伺服器執行個體回應的時間。<br /><br /> 在預設情況下，服務應用程式會在將特定要求轉送給 Engine 後等待 30 分鐘，讓 Engine 服務執行個體傳來資料裝載。<br /><br /> 如果 PowerPivot 資料來源無法在這段時間內載入，執行緒將會停止，並啟動新的執行緒。|  
   
-##  <a name="ConnectionPool"></a>連接集區  
+##  <a name="connection-pools"></a><a name="ConnectionPool"></a>連接集區  
  PowerPivot 服務應用程式會建立並管理連接集區，以便重複使用連接。 連接集區有兩種類型：一種是唯讀資料的資料連接，另一種是伺服器連接。  
   
  資料連接集區包含 PowerPivot 資料來源的快取連接。 每個連接集區都是以載入資料庫時設定的內容為根據。 此內容包含實體服務執行個體的識別、資料庫識別碼，以及要求資料之 SharePoint 使用者的識別。 每個組合都會建立不同的連接集區。 例如，不同使用者對相同伺服器上所執行相同資料庫的要求會取用不同集區的連接。  
@@ -56,21 +56,20 @@ ms.locfileid: "66071886"
   
  每一種連接集區都有您可以設定的上限，確保以最佳方式使用系統記憶體來管理連接。  
   
-|名稱|預設|有效值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |連接集區逾時|1800 (秒)|1 到 3600。|此設定會套用至資料連接集區。<br /><br /> 它會指定閒置的連接在移除之前，可以保留在連接集區中的時間。<br /><br /> 在預設情況下，如果連接閒置超過五分鐘，服務應用程式就會移除連接。|  
 |最大使用者連接集區大小|1000|-1、0 或 1 到 10000。<br /><br /> -1 指定無限數目的閒置連接。<br /><br /> 0 表示不保留閒置的連接。 每次都必須建立新的 PowerPivot 資料來源連接。|此設定會套用至為特定 PowerPivot 服務應用程式執行個體建立之所有資料連接集區中的閒置連接數。<br /><br /> 個別連接集區是針對 SharePoint 使用者、PowerPivot 資料和服務執行個體之獨特組合所建立。 如果您有許多使用者存取各種不同的 PowerPivot 資料來源，伺服器的效能可能會因連接集區大小增加而受益。<br /><br /> 如果有超過 100 個閒置的 PowerPivot 服務執行個體連接，則新閒置的連接會中斷連接，而不會再傳回集區。|  
 |最大管理連接集區大小|200|-1、0 或 1 到 10000。<br /><br /> -1 指定無限數目的閒置連接。|在所有管理連接集區中，針對 PowerPivot 服務應用程式與 Analysis Services 伺服器執行個體之連接所建立的閒置伺服器連接數上限。 伺服器連接是用於載入資料庫的要求，並將變更存回 SharePoint 資料庫。|  
   
-##  <a name="AllocationScheme"></a>負載平衡  
- PowerPivot 服務執行的其中一項功能是，判斷在可用 PowerPivot 服務執行個體中，Analysis Services 資料將載入的位置。 
-  `AllocationMethod` 設定會指定選取服務執行個體的準則。  
+##  <a name="load-balancing"></a><a name="AllocationScheme"></a>負載平衡  
+ PowerPivot 服務執行的其中一項功能是，判斷在可用 PowerPivot 服務執行個體中，Analysis Services 資料將載入的位置。 `AllocationMethod` 設定會指定選取服務執行個體的準則。  
   
-|名稱|預設|有效值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |配置方法|循環配置資源|循環配置資源<br /><br /> 依據健全狀態|在兩個或多個 Analysis Services 伺服器執行個體中，配置載入要求的方案。<br /><br /> 根據預設，PowerPivot 服務將會根據伺服器健全狀況替代要求。 依據健全狀況則根據可用的記憶體和 CPU 使用率，配置要求給具有最多可用系統資源的伺服器。<br /><br /> 循環配置資源會依照順序在可用伺服器之間輪流配置要求，而不考慮目前的負載或伺服器健全狀況。|  
   
-##  <a name="DataRefresh"></a>資料重新整理  
+##  <a name="data-refresh"></a><a name="DataRefresh"></a>資料重新整理  
  指定時間範圍定義您組織中正常或一般工作日。 這些組態設定會決定下班後資料處理進行資料重新整理作業的時間。 下班後處理可以從工作日結束時間開始。 文件擁有者若想要利用在正常上班時間內所產生的交易資料重新整理 PowerPivot 資料來源，下班後處理就是這些文件擁有者的排程選項。  
   
 |名稱|預設|有效值|描述|  
@@ -81,7 +80,7 @@ ms.locfileid: "66071886"
 |允許使用者輸入自訂的 Windows 認證|啟用|Boolean|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱[設定 PowerPivot 資料重新整理的預存認證 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
 |最大處理記錄長度|365|1 到 5000 天|決定資料重新整理記錄要保留在 PowerPivot 服務應用程式資料庫中的時間長度。 如需詳細資訊，請參閱 [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)。|  
   
-##  <a name="UsageData"></a>使用量資料收集  
+##  <a name="usage-data-collection"></a><a name="UsageData"></a>使用量資料收集  
  出現在 PowerPivot 管理儀表板中的使用方式報表可以提供有關如何使用啟用 PowerPivot 功能之活頁簿的重要資訊用。 下列組態設定會控制 (呈現於後續使用方式或活動報表中) PowerPivot 伺服器事件的使用量資料收集層面。  
   
 |名稱|預設|有效值|描述|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079494"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 瀏覽器 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -29,7 +29,7 @@ ms.locfileid: "66079494"
  **Subcube 方格**  
  這可用來定義 Subcube 和限制 [結果]**** 窗格中顯示的 KPI 結果。 方格包含下列資料行：  
   
- **維度**  
+ **Dimension**  
  選取要套用此篩選的維度。  
   
  **階層**  
@@ -44,7 +44,7 @@ ms.locfileid: "66079494"
 |**不等於**|結果會限制為 **[篩選運算式]** 中定義之集合所排除的成員。|  
 |**在**|結果會限制為 **[篩選運算式]** 中選擇的命名集。|  
 |**不在**|結果會限制為 **[篩選運算式]** 中選擇之命名集所排除的成員。|  
-|**Contains**|結果會限制為成員名稱中包含 **[篩選運算式]** 中的字串之成員。|  
+|**包含**|結果會限制為成員名稱中包含 **[篩選運算式]** 中的字串之成員。|  
 |**Begins With**|結果會限制為成員名稱是以 **[篩選運算式]** 中的字串開頭之成員。|  
 |**Range (Inclusive)**|結果會限制為 **[篩選運算式]** 中選擇的範圍。|  
 |**Range (Exclusive)**|結果會限制為 **[篩選運算式]** 中選擇之範圍所排除的成員。|  
@@ -74,7 +74,7 @@ ms.locfileid: "66079494"
  **趨勢**  
  顯示 KPI 的趨勢圖形。  
   
- **權**  
+ **Weight**  
  顯示 KPI 的加權因數。  
   
  **描述**  

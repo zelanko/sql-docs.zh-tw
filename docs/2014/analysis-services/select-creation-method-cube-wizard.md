@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069625"
 ---
 # <a name="select-creation-method-cube-wizard"></a>選取建立方法 (Cube 精靈)
@@ -40,7 +40,7 @@ ms.locfileid: "66069625"
   
  選取此選項將使 **[範本]** 選項成為可用。  
   
- **Template**  
+ **範本**  
  選取您想要用來建立 Cube 的範本。 範本會提供一組以特定商業用途為目標的定義。  
   
 > [!NOTE]  

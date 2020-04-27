@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079063"
 ---
 # <a name="defining-a-cube"></a>定義 Cube
@@ -22,7 +22,7 @@ ms.locfileid: "66079063"
   
 ### <a name="to-define-a-cube-and-its-properties"></a>若要定義 Cube 及其屬性  
   
-1.  在方案總管中，以滑鼠右鍵按一下 [ **cube**]，然後按一下 [**新增 Cube**]。 [Cube 精靈] 隨即出現。  
+1.  在方案總管中，以滑鼠右鍵按一下 [Cube]****，然後按一下 [新增 Cube]****。 [Cube 精靈] 隨即出現。  
   
 2.  在 [歡迎使用 Cube 精靈]**** 頁面上，按一下 [下一步]****。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "66079063"
   
 7.  在 [選取量值]**** 頁面上，檢閱 [網際網路銷售]**** 量值群組中的所選取量值，再清除下列量值的核取方塊：  
   
-    -   **促銷金鑰**  
+    -   **升級索引鍵**  
   
     -   **貨幣索引鍵**  
   
-    -   **銷售領域金鑰**  
+    -   **銷售領域索引鍵**  
   
-    -   **修訂編號**  
+    -   **修訂號碼**  
   
      根據預設，此精靈會選取事實資料表中所有未連結到維度的數值資料行當做量值。 不過，這 4 個資料行不是實際量值。 前 3 個是連結事實資料表與維度資料表的索引鍵值，它們不使用於這個 Cube 的初始版本。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66079063"
   
 12. 在 [**正在完成嚮導]** 頁面上，將 cube 的名稱變更`Analysis Services Tutorial`為。 在 [預覽] 窗格中，您可以看見 [InternetSales]**** 量值群組及其量值。 此外，您也可以看見 [Date]****、[Customer]**** 和 [Product]**** 維度。  
   
-13. 按一下 [完成] **** 來完成精靈。  
+13. 按一下 [完成]**** 以完成程序。  
   
      在方案總管的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 會出現在 [Cube]**** 資料夾內，而 [Customer] 和 [Product] 資料庫維度則出現在 [維度]**** 資料夾內。 另外，在開發環境中心，[Cube 結構] 索引標籤會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066654"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>排序資料表中的資料 (SSAS 表格式)
@@ -49,6 +49,6 @@ ms.locfileid: "66066654"
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;篩選和排序資料](../filter-and-sort-data-ssas-tabular.md)   
  [SSAS 表格式 &#40;的觀點&#41;](perspectives-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;的角色](roles-ssas-tabular.md)  
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
   
   

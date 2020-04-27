@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074011"
 ---
 # <a name="implement-jobs"></a>實作作業
@@ -33,7 +33,7 @@ ms.locfileid: "63074011"
   
 |||  
 |-|-|  
-|**說明**|**主題**|  
+|**描述**|**主題**|  
 |包含有關建立作業及指派擁有權的資訊。|[建立作業](create-jobs.md)|  
 |包含有關將作業組織成類別目錄的資訊。|[組織作業](organize-jobs.md)|  
 |包含關於您可以建立的不同種類作業步驟及如何管理它們的資訊。|[管理作業步驟](manage-job-steps.md)|  

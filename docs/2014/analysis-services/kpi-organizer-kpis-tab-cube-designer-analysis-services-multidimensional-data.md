@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079397"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 組合管理 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -26,12 +26,12 @@ ms.locfileid: "66079397"
 >  表單檢視中不會顯示這個窗格。  
   
 ## <a name="options"></a>選項。  
- **清單**  
+ **名單**  
  顯示 KPI 的名稱。  
   
  選取 KPI 即可以表單檢視顯示 [KPI 表單編輯器]****。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [KPI 組合管理]**** 窗格中的 KPI，即可顯示提供下列選項的內容功能表：  
   
 |選項|定義|  

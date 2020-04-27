@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081488"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>鑽研對話方塊 (採礦模型檢視器)
@@ -34,7 +34,7 @@ ms.locfileid: "66081488"
  **資料行清單**  
  顯示模型中的資料行，後面接著結構資料行。  
   
- **注意**只有在已啟用採礦結構的鑽取，而且您已選取 [**模型和結構資料行**] 選項時，才會顯示結構資料行。 此外，您必須同時擁有採礦模型和採礦結構的鑽研權限，才能檢視資料行。  
+ **注意** —只有在採礦結構上啟用鑽研，而且選取 **[模型和結構資料行]** 選項時，才會顯示結構資料行。 此外，您必須同時擁有採礦模型和採礦結構的鑽研權限，才能檢視資料行。  
   
  不包含在模型中的結構資料行會顯示為**結構\< 。資料行名稱>**。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66081488"
 ## <a name="see-also"></a>另請參閱  
  [資料採礦&#41;&#40;的鑽取查詢](data-mining/drillthrough-queries-data-mining.md)   
  [&#40;資料採礦模型設計工具的採礦模型檢視器&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [採礦模型檢視器工作和使用說明](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和操作說明](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

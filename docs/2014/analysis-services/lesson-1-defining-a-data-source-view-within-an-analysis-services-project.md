@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079213"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
@@ -37,13 +37,13 @@ ms.locfileid: "66079213"
  將您的結果與在這一課中建立的範例專案檔案相比較。 如需下載此教學課程隨附之範例專案的詳細資訊，請參閱 CodePlex 之產品範例頁面上的 [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) (適用於 SQL Server 2012 的 SSAS 多維度模型專案)。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
+ [第2課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [&#40;SSAS 多維度&#41;支援的資料來源](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多維度模型中的資料來源視圖](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   
- [多維度模型化 &#40;的艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多維度模型化 &#40;Adventure Works 教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -19,15 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dec93494dd21412c067af293832066087ca3ed37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075407"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>了解用來建立部署指令碼的輸入檔
-  當[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]您建立專案時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]會為專案產生 XML 檔案。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會將這些 XML 檔案放置在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的輸出資料夾中。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
+  當[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]您建立專案時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]會為專案產生 XML 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會將這些 XML 檔案放置在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的輸出資料夾中。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
   
 |XMLA 檔案|描述|  
 |---------------|-----------------|  
@@ -37,8 +36,7 @@ ms.locfileid: "66075407"
 |\<*專案名稱*>. d|包含部署選項，例如部署是否為交易式，以及部署之後是否應處理部署的物件。|  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 絕不會將密碼儲存在專案檔中。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 絕不會將密碼儲存在專案檔中。  
   
 ## <a name="modifying-the-input-files"></a>修改輸入檔  
  修改輸入檔中的值，或從輸入檔中抓取的值，可讓您變更部署目的地、設定和部署選項，而不需編輯整個\<*專案名稱*> .asdatabase 檔案（如果是從現有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的資料庫產生腳本，則為整個 XMLA 腳本檔案）。 您可以修改個別的檔案，以輕鬆地針對各種用途建立不同的部署指令碼。  

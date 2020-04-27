@@ -11,32 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071849"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint)
-  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業、事件與訊息都會記錄在 SharePoint 記錄檔中。 使用本主題的資訊來設定記錄層級及檢視記錄檔資訊。 您可以控制要記錄到檔案中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器事件。 您也可以控制所記錄之訊息的嚴重性。 如需詳細資訊，請參閱[設定 &#40;PowerPivot for SharePoint 的使用量資料收集](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
  本主題內容：  
   
 -   [記錄檔位置](#bkmk_filelocation)  
   
--   [修改個別事件類別目錄的診斷記錄層級](#bkmk_modifyloglevels)  
+-   [為個別的事件類別目錄修改診斷記錄層次](#bkmk_modifyloglevels)  
   
--   [如何查看 SharePoint 記錄檔](#bkmk_how2viewlogfiles)  
+-   [如何檢視 SharePoint 記錄檔](#bkmk_how2viewlogfiles)  
   
-##  <a name="bkmk_filelocation"></a>記錄檔位置  
+##  <a name="log-file-location"></a><a name="bkmk_filelocation"></a>記錄檔位置  
  根據預設，SharePoint 記錄檔會儲存到下列位置：  
   
  `C:\Program files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS`  
   
  LOGS 資料夾中包含記錄檔 (`.log`)、資料檔 (`.txt`) 與使用方式檔案 (`.usage`)。 SharePoint 追蹤記錄的檔案命名慣例為伺服器名稱後面緊接著日期和時間戳記。 SharePoint 追蹤記錄會定期以及有 IISRESET 時建立。 通常在 24 小時的週期內會有許多追蹤記錄。  
   
-##  <a name="bkmk_modifyloglevels"></a>修改個別事件類別目錄的診斷記錄層級  
+##  <a name="modify-diagnostic-logging-levels-for-individual-event-categories"></a><a name="bkmk_modifyloglevels"></a>修改個別事件類別目錄的診斷記錄層級  
  根據預設，PowerPivot 事件的 ULS 記錄是設為 *「中」*。 這是 SQL Server 2012 的新設定。 如果您從舊版升級伺服器，記錄層次可能仍然設為 *「詳細資訊」*(SQL Server 2008 R2 的預設層次)。 如果您習慣檢閱 ULS 記錄檔中的 PowerPivot 伺服器使用資訊，會注意到因為此變更，PowerPivot 伺服器作業相關資訊變少了。  
   
  除了例外狀況 (類型為 *「高」*) 以外，所有的 PowerPivot 訊息都會歸類為「詳細資訊」類別目錄。 如果您想要例行伺服器作業 (例如連接、要求或查詢報告) 的記錄項目，必須將記錄層次變更為「詳細資訊」。  
@@ -51,11 +50,11 @@ ms.locfileid: "66071849"
   
 4.  展開類別目錄，然後選取個別的類別目錄。  
   
-     **應用程式頁面要求**指定在尋找[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]以載入 PowerPivot 資料源，並與伺服器陣列中的其他伺服器通訊時，由服務應用程式所觸發的事件。  
+     **[應用程式頁面要求]** 會指定尋找 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 以載入 PowerPivot 資料來源以及和伺服陣列中的其他伺服器通訊時，由服務應用程式所觸發的事件。  
   
-     [**要求處理**] 會針對在伺服器陣列中的伺服器上所載入的 PowerPivot 資料庫，指定由查詢要求所觸發的事件。  
+     **[要求處理]** 會指定針對位於伺服器陣列中伺服器上所載入的 PowerPivot 資料庫，由查詢要求所觸發的事件。  
   
-     [**使用量**] 指定與 PowerPivot 使用量資料收集相關的事件。  
+     **[使用量]** 指定與 PowerPivot 使用量資料收集相關的事件。  
   
 5.  在 [回報至事件記錄的最低緊急事件] 中，選取 **[無]** 以停用類別目錄的事件記錄，或是選取 **[錯誤]** 以限制僅針對錯誤進行記錄。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66071849"
   
 9. 按一下 [確定]  。  
   
-##  <a name="bkmk_how2viewlogfiles"></a>如何查看 SharePoint 記錄檔  
+##  <a name="how-to-view-sharepoint-log-files"></a><a name="bkmk_how2viewlogfiles"></a>如何查看 SharePoint 記錄檔  
  記錄檔是文字檔。 您可以使用任何文字編輯器來開啟它們。 您也可以使用協力廠商的記錄檢視器應用程式。  
   
 #### <a name="use-a-text-editor"></a>使用文字編輯器  
@@ -88,7 +87,7 @@ ms.locfileid: "66071849"
   
 1.  移至 Codeplex 網站上的 [SharePoint 記錄檢視器](http://sharepointlogviewer.codeplex.com) 或 [SharePoint ULS 記錄檢視器](https://go.microsoft.com/fwlink/?LinkId=150052) 。  
   
-2.  按一下 [**下載**] 索引標籤。  
+2.  按一下 **[Downloads]** 索引標籤。  
   
 3.  按一下可執行檔。 此可執行檔是 **SharePointLogViewer.exe** 或 **ULS Viewer 2.0 Binary**。  
   
@@ -117,17 +116,17 @@ ms.locfileid: "66071849"
 #### <a name="entries-for-powerpivot-services"></a>PowerPivot 服務的項目  
  下表描述很可能在 SharePoint 記錄檔中找到之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業的項目。  
   
-|處理程序|區域|類別|層級|訊息|詳細資料|  
+|Process|區域|類別|層級|訊息|詳細資料|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[PowerPivot 服務]|使用量|Verbose|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
-|w3wp.exe|[PowerPivot 服務]|Web 前端|Verbose|開始尋找資料來源 =\<*路徑*的應用程式伺服器>|當它收到連接要求時， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  
-|w3wp.exe|[PowerPivot 服務]|Web 前端|Verbose|尋找應用程式伺服器成功。|此要求會配置到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。|  
-|w3wp.exe|[PowerPivot 服務]|Web 前端|Verbose|將\< *PowerPivotdata 來源*> 的要求重新導向至[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|此要求會轉送至 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
-|w3wp.exe|[PowerPivot 服務]|[要求處理]|Verbose|將 UserName\<*SharePoint 使用者*> 的要求重新導向至資料庫|系統會代表 SharePoint 使用者建立模擬的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源連接。|  
+|w3wp.exe|[PowerPivot 服務]|使用量|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
+|w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|開始尋找資料來源 =\<*路徑*的應用程式伺服器>|當它收到連接要求時， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  
+|w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|尋找應用程式伺服器成功。|此要求會配置到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。|  
+|w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|將\< *PowerPivotdata 來源*> 的要求重新導向至[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|此要求會轉送至 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
+|w3wp.exe|[PowerPivot 服務]|[要求處理]|「詳細資訊」|將 UserName\<*SharePoint 使用者*> 的要求重新導向至資料庫|系統會代表 SharePoint 使用者建立模擬的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源連接。|  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)   
- [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [查看和讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [設定 &#40;PowerPivot for SharePoint 的使用量資料收集](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

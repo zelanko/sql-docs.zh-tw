@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078990"
 ---
 # <a name="deploying-an-analysis-services-project"></a>部署 Analysis Services 專案
-  若要檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中物件的 Cube 和維度資料，您必須將此專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，然後處理 Cube 及其維度。 *部署* [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案時，會在的實例中建立已[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定義的物件。 *處理*實例中的物件時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]會將資料從基礎資料來源複製到 cube 物件中。 如需詳細資訊，請參閱 [部署 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) 和 [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+  若要檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中物件的 Cube 和維度資料，您必須將此專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，然後處理 Cube 及其維度。 「部署」**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案會在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體中建立已定義的物件。 「處理」**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體中的物件會將資料從基礎資料來源複製到 Cube 物件中。 如需詳細資訊，請參閱 [部署 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) 和 [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
  在開發過程的這個階段中，您通常會將 Cube 部署到開發伺服器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 一旦您完成開發商業智慧專案之後，通常會使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 部署精靈，將此專案從開發伺服器部署到實際伺服器。 如需詳細資訊，請參閱[多維度模型方案部署](multidimensional-models/multidimensional-model-solution-deployment.md)[使用部署精靈部署模型方案](multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)。  
   
@@ -44,8 +44,7 @@ ms.locfileid: "66078990"
     > [!NOTE]  
     >  如果部署期間遇到錯誤，請使用 SQL Server Management Studio 檢查資料庫權限。 您為資料來源連接所指定的帳戶必須有 SQL Server 執行個體的登入。 按兩下登入以檢視 [使用者對應] 屬性。 此帳戶必須有 **AdventureWorksDW2012** 資料庫的 db_datareader 權限。  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會先建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案，然後使用部署指令碼將該專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 部署的進度會顯示在兩個視窗中： [**輸出**] 視窗和 [**部署進度-Analysis Services 教學**課程] 視窗。  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會先建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案，然後使用部署指令碼將該專案部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 部署的進度會顯示在兩個視窗中： [**輸出**] 視窗和 [**部署進度-Analysis Services 教學**課程] 視窗。  
   
      如有必要，請按一下 [檢視]**** 功能表上的 [輸出]****，開啟 [輸出] 視窗。 [輸出]**** 視窗會顯示整體部署進度。 [**部署進度-Analysis Services 教學**課程] 視窗會顯示部署期間所執行之每個步驟的詳細資料。 如需詳細資訊，請參閱[建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) 和[部署 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   

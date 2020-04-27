@@ -11,21 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478932"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>建立實體 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，系統管理員可以建立新的實體來儲存資料。 當您建立實體時，應該至少載入要儲存的資料樣本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理]**** 和總管**** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)。  
   
 -   您必須有要在其中建立實體的現有模型。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65478932"
   
     -   資料應該具有標頭資料列。  
   
-    -   具有 **Name** 和 **Code** 資料行是有幫助的。 **Code**是每個資料列的唯一識別碼。  
+    -   具有 **Name** 和 **Code** 資料行是有幫助的。 **Code** 是每個資料列的唯一識別碼。  
   
     -   除了標頭以外，應該至少還有一個資料列。 並不是所有資料行都需要值，但資料應該有代表性，可代表實體中的未來資料。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "65478932"
 -   確認屬性已建立為預期的資料類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;適用于 Excel 的 MDS 增益集建立網域屬性&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+ [建立網域屬性 &#40;適用於 Excel 的 MDS 增益集&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   
