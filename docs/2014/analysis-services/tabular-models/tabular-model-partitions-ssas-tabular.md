@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066391"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>表格式模型資料分割 (SSAS 表格式)
@@ -32,7 +32,7 @@ ms.locfileid: "66066391"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> 優點  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
  有效的模型設計能善加利用分割區，以避免不必要的處理及 Analysis Services 伺服器上之後續處理器的負載，同時，還可確保資料的處理和重新整理頻率能反映資料來源的最新資料。  
   
  例如，表格式模型可能會有「銷售」資料表，其中包括目前 2011 會計年度的銷售資料與之前會計年度的每份銷售資料。 模型的 Sales 資料表具有下列三個數據分割：  
@@ -51,21 +51,21 @@ ms.locfileid: "66066391"
   
  您針對組織的表格式模型執行資料分割策略的方式，主要取決於您特定的模型資料處理需求和可用的資源。  
   
-##  <a name="bkmk_permissions"></a> 權限  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> 權限  
  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立、管理及處理資料分割，您必須具備在安全性角色中定義的適當 Analysis Services 權限。 每個安全性角色都具有下列其中一個權限：  
   
 |權限|動作|  
 |----------------|-------------|  
 |系統管理員|讀取、處理、建立、複製、合併、刪除|  
-|處理程序|讀取、處理|  
+|Process|讀取、處理|  
 |唯讀|讀取|  
   
  若要深入了解使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在模型撰寫期間建立角色，請參閱 [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md) (角色 (SSAS 表格式))。 若要深入了解使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理已部署表格式模型角色的角色成員，請參閱 [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md) (表格式模型角色 (SSAS 表格式))。  
   
-##  <a name="bkmk_process_partitions"></a>處理資料分割  
+##  <a name="process-partitions"></a><a name="bkmk_process_partitions"></a>處理資料分割  
  您可使用 **的** [資料分割] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 對話方塊或指令碼，讓資料分割可以不受其他資料分割的影響，單獨處理 (重新整理)。 處理的選項如下：  
   
-|模式|描述|  
+|[模式]|描述|  
 |----------|-----------------|  
 |處理預設|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
 |完整處理|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  
@@ -73,11 +73,11 @@ ms.locfileid: "66066391"
 |處理清除|移除資料分割中的所有資料。|  
 |處理加入|以新資料累加地更新資料分割。|  
   
-##  <a name="bkmk_related_tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相關工作  
   
-|Task|描述|  
+|工作|描述|  
 |----------|-----------------|  
 |[建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中建立及管理資料分割。|  
-|[處理 &#40;SSAS 表格式&#41;的表格式模型資料分割](process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中處理資料分割。|  
+|[處理表格式模型資料分割 &#40;SSAS 表格式&#41;](process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中處理資料分割。|  
   
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065192"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>導致 Database Engine 錯誤的原因和解決方案
@@ -23,7 +23,7 @@ ms.locfileid: "66065192"
 ## <a name="in-this-section"></a>本節內容  
  本節中的錯誤訊息主題提供錯誤訊息的說明、可能的原因，以及您可以採取哪些動作以更正問題。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  [了解 Database Engine 錯誤](../relational-databases/native-client-ole-db-errors/errors.md)  
   
 ## <a name="see-also"></a>另請參閱  

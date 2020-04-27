@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059063"
 ---
 # <a name="execute-package-task-editor"></a>執行封裝工作編輯器
@@ -30,27 +30,27 @@ ms.locfileid: "66059063"
   
 -   [設定 [一般] 頁面上的選項](#general)  
   
--   [設定 [封裝] 頁面上的選項](#package)  
+-   [設定 [封裝] 頁面上的 [選項]](#package)  
   
--   [在 [參數系結] 頁面上設定選項](#parameter)  
+-   [設定 [參數繫結] 頁面上的 [選項]](#parameter)  
   
-##  <a name="open"></a>開啟 [執行封裝工作編輯器]  
+##  <a name="open-the-execute-package-task-editor"></a><a name="open"></a>開啟 [執行封裝工作編輯器]  
   
 1.  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中開啟包含 [執行封裝] 工作的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 專案。  
   
 2.  以滑鼠右鍵按一下 SSIS 設計師中的工作，然後按一下 [編輯]****。  
   
-##  <a name="general"></a>設定 [一般] 頁面上的選項  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a>設定 [一般] 頁面上的選項  
  **名稱**  
  為執行封裝工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入「執行封裝」工作的描述。  
   
-##  <a name="package"></a>設定 [封裝] 頁面上的選項  
+##  <a name="set-the-options-on-the-package-page"></a><a name="package"></a>設定 [封裝] 頁面上的選項  
  **ReferenceType**  
  為專案中的子封裝選取 [專案參考]****。 為封裝外部的子封裝選取 [外部參考]****  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66059063"
 |**SQL Server**|設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的位置。|  
 |**檔案系統**|設定檔案系統的位置。|  
   
- **[連接]**  
+ **建立**  
  選取子封裝的儲存位置類型。  
   
  **PackageNameReadOnly**  
@@ -87,24 +87,24 @@ ms.locfileid: "66059063"
 ### <a name="location-dynamic-options"></a>位置動態選項  
   
 #### <a name="location--sql-server"></a>位置 = SQL Server  
- **[連接]**  
+ **建立**  
  在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>]**** 建立新的連線管理員。  
   
- **相關主題：** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、[設定 OLE DB 連線管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相關主題** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、 [設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  輸入子封裝的名稱，或按一下省略符號 ([...])，然後找出該封裝。  
   
 #### <a name="location--file-system"></a>位置 = 檔案系統  
- **[連接]**  
+ **建立**  
  在清單中選取檔案連線管理員，或按一下\<[**新增連接 ...** ]> 建立新的連線管理員。  
   
- **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  顯示封裝名稱。  
   
-##  <a name="parameter"></a>在 [參數系結] 頁面上設定選項  
+##  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a>在 [參數系結] 頁面上設定選項  
  您可以將值從父封裝或專案傳遞至子封裝。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。  
   
  如需將專案轉換為專案部署模型的資訊，請參閱 [將專案部署至 Integration Services 伺服器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
@@ -112,7 +112,7 @@ ms.locfileid: "66059063"
  **子封裝參數**  
  輸入或選取子封裝參數的名稱。  
   
- **系結參數或變數**  
+ **繫結參數或變數**  
  選取包含您要傳遞到子封裝之值的參數或變數。  
   
  **加入**  

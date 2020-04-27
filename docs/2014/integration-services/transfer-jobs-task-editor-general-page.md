@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055004"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>傳送作業工作編輯器 (一般頁面)
@@ -34,7 +34,7 @@ ms.locfileid: "66055004"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入傳送作業工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

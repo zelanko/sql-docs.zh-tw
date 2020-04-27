@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062062"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>加入資料流程效能計數器的記錄檔
@@ -49,9 +49,9 @@ ms.locfileid: "66062062"
   
     -   選取 [從清單選取計數器]****，並選取要使用的效能計數器。  
   
-9. 按一下 [新增]  。  
+9. 按一下 **[新增]** 。  
   
-10. 按一下 [關閉]  。  
+10. 按一下 **關閉**。  
   
 11. 在 [MyLog]**** 對話方塊中，檢閱 [計數器]**** 清單中記錄效能計數器的清單。  
   

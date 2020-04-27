@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055104"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>傳送資料庫工作編輯器 (資料庫頁面)
@@ -48,14 +48,14 @@ ms.locfileid: "66055104"
 > [!NOTE]  
 >  如果您是使用瀏覽按鈕找到資料庫檔案，就可以使用本機磁碟機代號來輸入檔案位置：例如 c:\\。 您必須以網路共用標記來取代此檔案位置，其中包含電腦名稱和共用名稱。 如果使用預設管理共用，您就必須使用 $ 標記，並具有管理權限存取該共用。  
   
- **Destinationoverwrite 此舉**  
+ **DestinationOverwrite**  
  指定是否可以覆寫目的地伺服器上的資料庫。  
   
  此屬性具有下表所列的選項：  
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|覆寫目的地伺服器資料庫。|  
+|**真正**|覆寫目的地伺服器資料庫。|  
 |**False**|請勿覆寫目的地伺服器資料庫。|  
   
 > [!CAUTION]  
@@ -84,7 +84,7 @@ ms.locfileid: "66055104"
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|重新附加來源資料庫。|  
+|**真正**|重新附加來源資料庫。|  
 |**False**|請勿重新附加來源資料庫。|  
   
 ## <a name="see-also"></a>另請參閱  

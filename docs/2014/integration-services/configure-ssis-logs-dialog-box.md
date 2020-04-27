@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060584"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>設定 SSIS 記錄對話方塊
@@ -28,7 +28,7 @@ ms.locfileid: "66060584"
   
  **您想要做什麼事？**  
   
-1.  [開啟 [設定 SSIS 記錄] 對話方塊](#open_dialog)  
+1.  [開啟 [設定 SSIS 記錄] 對話方塊。](#open_dialog)  
   
 2.  [設定 [容器] 窗格中的選項](#container)  
   
@@ -36,12 +36,12 @@ ms.locfileid: "66060584"
   
 4.  [設定 [詳細資料] 索引標籤上的選項](#detail)  
   
-##  <a name="open_dialog"></a>開啟 [設定 SSIS 記錄] 對話方塊  
+##  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a>開啟 [設定 SSIS 記錄] 對話方塊  
  **開啟 [設定 SSIS 記錄] 對話方塊**  
   
 -   在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 **[SSIS]** 功能表上的 **[記錄]** 。  
   
-##  <a name="container"></a>設定 [容器] 窗格中的選項  
+##  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a>設定 [容器] 窗格中的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[容器]** 窗格，即可啟用封裝及其容器以進行記錄。  
   
 ### <a name="options"></a>選項。  
@@ -56,7 +56,7 @@ ms.locfileid: "66060584"
   
  如果容器呈暗灰色，而您要在容器上設定記錄選項，請按兩下其核取方塊。 第一次點選時會清除核取方塊，而第二次點選則會選取核取方塊，讓您可以選擇要使用的記錄提供者和選取要記錄的資訊。  
   
-##  <a name="provider"></a>設定 [提供者與記錄] 索引標籤上的選項  
+##  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a>設定 [提供者與記錄] 索引標籤上的選項  
  使用 [設定 SSIS 記錄]**** 對話方塊的 [提供者與記錄]**** 索引標籤，即可建立和設定用於擷取執行階段事件的記錄。  
   
 ### <a name="options"></a>選項。  
@@ -69,26 +69,25 @@ ms.locfileid: "66060584"
  **名稱**  
  使用這些核取方塊，啟用或停用容器的記錄，或是 [設定 SSIS 記錄]**** 對話方塊的 [容器]**** 窗格中選取之工作的記錄。 名稱欄位是可編輯的。 使用提供者的預設名稱，或輸入唯一的描述性名稱。  
   
- **說明**  
+ **描述**  
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
- **組態**  
- 在清單中選取現有連線管理員，或按一下 [\<新增連線...>]****，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
+ **設定**  
+ 在清單中選取現有的連線管理員，或\<按一下 [**新增連接 ...** ]> 建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
  相關主題： [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](connection-manager/file-connection-manager.md)  
   
  **刪除**  
  選取記錄提供者，然後按一下 [刪除]****。  
   
-##  <a name="detail"></a>設定 [詳細資料] 索引標籤上的選項  
+##  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a>設定 [詳細資料] 索引標籤上的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[詳細資料]** 索引標籤，即可指定要啟用記錄的事件以及要記錄的資訊詳細資料。 您選取的資訊適用於封裝中的所有記錄提供者。 例如，您無法寫入部份資訊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，而寫入不同資訊到文字檔。  
   
 ### <a name="options"></a>選項。  
  **事件**  
  啟用或停用記錄事件。  
   
- **說明**  
+ **描述**  
  檢視事件的描述。  
   
  **進階**  
@@ -96,7 +95,7 @@ ms.locfileid: "66060584"
   
 |值|描述|  
 |-----------|-----------------|  
-|**台**|記錄事件發生所在之電腦的名稱。|  
+|**電腦**|記錄事件發生所在之電腦的名稱。|  
 |**運算子**|啟動封裝之人員的使用者名稱。|  
 |**SourceName**|記錄事件發生所在之封裝、容器或工作的名稱。|  
 |**源**|記錄事件發生所在之封裝、容器或工作的全域唯一識別碼 (GUID)。|  
@@ -110,7 +109,7 @@ ms.locfileid: "66060584"
  **載入**  
  指定現有的 XML 檔案，即可用來作為設定記錄選項的範本。  
   
- **另**  
+ **儲存**  
  將組態詳細資料儲存為 XML 檔案的範本。  
   
   

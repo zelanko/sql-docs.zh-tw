@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059272"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
-  使用 [Excel 連線管理員編輯器]  對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 活頁簿檔案。  
+  使用 [Excel 連線管理員編輯器]**** 對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 活頁簿檔案。  
   
  若要深入了解快取連線管理員，請參閱 [Excel 連線管理員](connection-manager/excel-connection-manager.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66059272"
 |Excel 5。0|檔案是使用 Excel 95 (7.0) 建立的。|  
   
  **第一個資料列有資料行名稱**  
- 指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]** 。  
+ 指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

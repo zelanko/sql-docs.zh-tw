@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055266"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
@@ -36,23 +36,23 @@ ms.locfileid: "66055266"
  **名詞和名詞片語**  
  指定轉換同時擷取名詞和名詞片語。  
   
- **Frequency**  
+ **頻率**  
  指定分數是詞彙的頻率。  
   
  **TFIDF**  
  指定分數是詞彙的 TFIDF 值。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為︰詞彙 T 的 TFIDF = (T 的頻率) * log((輸入中的資料列數) / (具有 T 的資料列數))  
   
- **頻率閾值**  
+ **頻率臨界值**  
  指定擷取單字或片語前，該單字或片語必須出現的次數。 預設值為 2。  
   
- **詞彙的最大長度**  
+ **詞彙最大長度**  
  指定在文字中，片語的最大長度。 此選項只會影響名詞片語。 預設值為 12。  
   
- **使用區分大小寫的詞彙解壓縮**  
+ **使用區分大小寫的詞彙擷取**  
  指定擷取是否區分大小寫。 預設值為 `False`。  
   
  **設定錯誤輸出**  
- 使用 [設定錯誤輸出](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出]](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

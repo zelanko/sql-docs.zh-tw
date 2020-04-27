@@ -11,14 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059911"
 ---
 # <a name="data-flow-taps"></a>資料流程點選
-  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 導入了一項新功能，可讓您在執行階段於封裝的資料流程路徑上加入資料點選，然後從資料點選將輸出導向至外部檔案。 若要使用此功能，您必須使用專案部署模型將 SSIS 專案部署至 SSIS 伺服器。 將封裝部署至伺服器之後，您需要對 SSISDB 資料庫執行 T-SQL 指令碼先加入資料點選，然後再執行該封裝。 範例狀況如下：  
   
 1.  使用 [catalog.create_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) 預存程序建立封裝的執行執行個體。  
@@ -83,6 +82,6 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ## <a name="related-tasks"></a>相關工作  
  [偵錯資料流程](troubleshooting/debugging-data-flow.md)  
   
- [套件執行的疑難排解工具](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [封裝執行的疑難排解工具](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

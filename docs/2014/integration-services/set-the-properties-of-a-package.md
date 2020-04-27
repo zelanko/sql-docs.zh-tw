@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055794"
 ---
 # <a name="set-the-properties-of-a-package"></a>設定封裝的屬性
@@ -39,7 +39,7 @@ ms.locfileid: "66055794"
   
     -   以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-    -   在 [檢視]  功能表上，按一下 [屬性視窗]  。  
+    -   在 [檢視] **** 功能表上，按一下 [屬性視窗] ****。  
   
 4.  在 **[屬性]** 視窗中編輯封裝屬性。  
   

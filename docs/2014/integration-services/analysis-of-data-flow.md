@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061595"
 ---
 # <a name="analysis-of-data-flow"></a>資料流程分析
@@ -36,11 +36,11 @@ order by source_component_name, destination_component_name
   
  下列範例計算針對特定執行，每個元件每毫秒所傳送的資料列數目。 計算值包括：  
   
--   **total_rows** -元件傳送的所有資料列總和  
+-   **total_rows** - 元件傳送的所有資料列總和  
   
--   **wall_clock_time_ms** -每個元件的已耗用執行時間總計（以毫秒為單位）  
+-   **wall_clock_time_ms** - 每個元件經過的執行時間總計 (以毫秒為單位)  
   
--   **num_rows_per_millisecond** -每個元件每毫秒傳送的資料列數目  
+-   **num_rows_per_millisecond** - 每個元件每毫秒傳送的資料列數  
   
  `HAVING`子句是用來防止計算中發生零除的錯誤。  
   
@@ -61,7 +61,7 @@ order by source_component_name desc
 ## <a name="related-tasks"></a>相關工作  
  [偵錯資料流程](troubleshooting/debugging-data-flow.md)  
   
- [套件執行的疑難排解工具](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [封裝執行的疑難排解工具](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程中的資料](data-flow/data-in-data-flows.md)  

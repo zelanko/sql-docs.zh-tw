@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069243"
 ---
 # <a name="select-tables-and-views-ssas"></a>選取資料表和檢視表 (SSAS)
@@ -39,7 +39,7 @@ ms.locfileid: "66069243"
  **來源資料表**  
  根據資料來源的類型指定來源資料表的名稱。  
   
- **Schema**  
+ **結構描述**  
  指定其中包含來源資料表的結構描述。 視資料庫的類型而定，結構描述具有做為其他物件 (例如資料表) 之容器的作用，而且也表示這些物件的擁有權。  
   
  **易記名稱**  

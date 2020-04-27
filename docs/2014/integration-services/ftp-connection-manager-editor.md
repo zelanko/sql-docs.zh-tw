@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058492"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
@@ -33,7 +33,7 @@ ms.locfileid: "66058492"
  **伺服器名稱**  
  提供 FTP 伺服器的名稱。  
   
- **伺服器埠**  
+ **伺服器通訊埠**  
  指定 FTP 伺服器上用來連接的通訊埠編號。 這個屬性的預設值為 **21**。  
   
  **使用者名稱**  
@@ -42,7 +42,7 @@ ms.locfileid: "66058492"
  **密碼**  
  提供存取 FTP 伺服器的密碼。  
   
- **超時時間（以秒為單位）**  
+ **逾時 (以秒為單位)**  
  指定工作超時前所花費的秒數。值為**0**表示無限的時間量。 這個屬性的預設值為 **60**。  
   
  **使用被動模式**  
@@ -51,7 +51,7 @@ ms.locfileid: "66058492"
  **重試**  
  指定工作嘗試連接的次數。 值為 **0** 指出不限制嘗試次數。  
   
- **區塊大小（以 KB 為單位）**  
+ **區塊大小 (以 KB 為單位)**  
  提供以 KB 為單位的傳輸資料區塊大小。  
   
  **測試連接**  

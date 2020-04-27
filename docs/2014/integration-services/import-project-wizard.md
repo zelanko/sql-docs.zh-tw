@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058053"
 ---
 # <a name="import-project-wizard"></a>匯入專案精靈
@@ -44,9 +44,8 @@ ms.locfileid: "66058053"
   
 7.  按一下 **[匯入]** ，根據您所選取的 Integration Services 專案建立新的專案。  
   
-8.  
-  **[結果]** 頁面應該會顯示精靈已執行之匯入作業的結果。 按一下 **[儲存報表]** ，將報表儲存至 XML 檔案。  
+8.  **[結果]** 頁面應該會顯示精靈已執行之匯入作業的結果。 按一下 **[儲存報表]** ，將報表儲存至 XML 檔案。  
   
-9. 按一下 [關閉]  即可關閉精靈。  
+9. 按一下 [關閉]**** 以關閉精靈。  
   
   

@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060820"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在資料流程元件中設定錯誤輸出
-  許多資料流程元件都支援錯誤輸出，因元件的不同，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會以不同的方式設定錯誤輸出。 除了設定錯誤輸出以外，您也可以設定錯誤輸出的資料行。 其中包括設定此元件所加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
+  許多資料流程元件都支援錯誤輸出，因元件的不同， [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會以不同的方式設定錯誤輸出。 除了設定錯誤輸出以外，您也可以設定錯誤輸出的資料行。 其中包括設定此元件所加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
   
 ## <a name="configuring-an-error-output"></a>設定錯誤輸出  
  若要設定錯誤輸出，您有兩個選項：  
@@ -82,7 +82,7 @@ ms.locfileid: "66060820"
   
 4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]****。  
   
-5.  按一下 [輸入與輸出屬性]**** 索引標籤，並展開 [**元件名稱> 錯誤輸出]\<**，然後展開 [輸出資料行]****。  
+5.  按一下 [**輸入和輸出屬性**] 索引標籤，然後展開** \<[元件名稱> 錯誤輸出**]，然後展開 [**輸出資料行**]。  
   
 6.  按一下資料行並更新其屬性。  
   
@@ -94,6 +94,6 @@ ms.locfileid: "66060820"
 8.  若要儲存已更新的封裝，請按一下 [檔案]**** 功能表上的 [儲存選取項目]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
   
   

@@ -22,17 +22,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056832"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>封裝安裝精靈 UI 參考
   使用 [封裝安裝精靈]**** 來部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
   
- 在部署封裝之前，可以建立組態，然後將其隨封裝部署。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用組態，在執行階段以動態方式更新封裝及封裝物件的屬性。 例如，OLE DB 連接的連接字串可提供對應值與包含連接字串屬性的組態，藉此於執行階段進行動態設定。  
+ 在部署封裝之前，可以建立組態，然後將其隨封裝部署。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用組態，在執行階段以動態方式更新封裝及封裝物件的屬性。 例如，OLE DB 連接的連接字串可提供對應值與包含連接字串屬性的組態，藉此於執行階段進行動態設定。  
   
  您必須先建置 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案並建立部署公用程式，才能執行 [封裝安裝精靈]。 如需詳細資訊，請參閱 [使用部署公用程式來部署封裝](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66056832"
  **不要再顯示此起始頁**  
  選取再次執行精靈時要略過開始頁面。  
   
- **下一個**  
+ **下一步**  
  移至精靈的下一頁。  
   
  **[完成]**  
@@ -57,18 +56,18 @@ ms.locfileid: "66056832"
  **組態檔**  
  從清單中選取檔案來編輯組態檔的內容。  
   
- **相關主題：** [建立封裝](../../2014/integration-services/create-package-configurations.md)設定  
+ **相關主題：** [建立封裝組態](../../2014/integration-services/create-package-configurations.md)  
   
- **Path**  
+ **路徑**  
  檢視要設定之屬性的路徑。  
   
- **型別**  
+ **類型**  
  檢視屬性的資料類型。  
   
  **ReplTest1**  
  指定組態的值。  
   
- **下一個**  
+ **下一步**  
  移至精靈的下一頁。  
   
  **[完成]**  
@@ -77,7 +76,7 @@ ms.locfileid: "66056832"
 ## <a name="confirm-installation-page"></a>確認安裝頁面  
  使用 [確認安裝]**** 頁面，即可開始安裝封裝、檢視狀態，以及檢視精靈用以從指定專案中安裝檔案的資訊。  
   
- **下一個**  
+ **下一步**  
  安裝封裝及其相依檔案，並在安裝完成時移到下一個精靈頁面。  
   
  **狀態**  
@@ -96,10 +95,10 @@ ms.locfileid: "66056832"
  **SQL Server 部署**  
  將封裝及相依性部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體中。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在伺服器之間共用封裝，請使用此選項。 所有的封裝相依性都會安裝到檔案系統的指定資料夾中。  
   
- **在安裝後驗證套件**  
+ **安裝之後驗證封裝**  
  指出是否在安裝之後驗證封裝。  
   
- **下一個**  
+ **下一步**  
  移至精靈的下一頁。  
   
  **[完成]**  
@@ -108,7 +107,7 @@ ms.locfileid: "66056832"
 ## <a name="packages-validation-page"></a>封裝驗證頁面  
  使用 [封裝驗證]**** 頁面，即可檢視封裝驗證的進度與結果。  
   
- **下一個**  
+ **下一步**  
  移至精靈的下一頁。  
   
 ## <a name="select-installation-folder-page"></a>選取安裝資料夾頁面  
@@ -121,7 +120,7 @@ ms.locfileid: "66056832"
  **瀏覽**  
  使用 [瀏覽資料夾]**** 對話方塊，即可瀏覽至目標資料夾。  
   
- **下一個**  
+ **下一步**  
  移至精靈的下一頁。  
   
  **[完成]**  
@@ -134,10 +133,10 @@ ms.locfileid: "66056832"
  **伺服器名稱**  
  指定部署封裝目的地之伺服器的名稱。  
   
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
  指定是否使用 Windows 驗證來登入伺服器。 建議使用 Windows 驗證，以獲得較佳的安全性。  
   
- **使用 SQL Server 驗證**  
+ **[使用 SQL Server 驗證]**  
  指定封裝是否應使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來登入伺服器。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
  **使用者名稱**  
@@ -157,7 +156,7 @@ ms.locfileid: "66056832"
  **依賴伺服器儲存體進行加密**  
  選取即可使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的安全性功能來保護封裝的安全。  
   
- **下一個**  
+ **下一步**  
  移至精靈的下一頁。  
   
  **[完成]**  

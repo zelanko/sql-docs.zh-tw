@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061079"
 ---
 # <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
@@ -35,14 +35,14 @@ ms.locfileid: "66061079"
   
  若要深入瞭解快取連線管理員，請參閱快取[連線管理員](connection-manager/cache-connection-manager.md)。  
   
-##  <a name="generaltab"></a>[一般] 索引標籤  
+##  <a name="general-tab"></a><a name="generaltab"></a>[一般] 索引標籤  
  使用 [快取連線管理員編輯器]**** 對話方塊的 [一般]**** 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
   
 ### <a name="options"></a>選項。  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的快取連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **說明**  
+ **描述**  
  描述連接。 最佳作法是根據其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **使用檔案快取**  
@@ -57,7 +57,7 @@ ms.locfileid: "66061079"
   
 -   從快取檔案中讀取資料。  
   
- **檔案名稱**  
+ [檔案名稱]****  
  輸入快取檔案的路徑和檔案名稱。  
   
  **瀏覽**  
@@ -66,7 +66,7 @@ ms.locfileid: "66061079"
  **重新整理中繼資料**  
  在快取連接管理員中，刪除資料行中繼資料，然後將選取快取檔案的資料行中繼資料重新填入快取連接管理員。  
   
-##  <a name="columnstab"></a>資料行索引標籤  
+##  <a name="columns-tab"></a><a name="columnstab"></a>資料行索引標籤  
  使用 **[快取連接管理員編輯器]** 對話方塊的 **[資料行]** 索引標籤即可設定快取中每個資料行的屬性。  
   
 ### <a name="options"></a>選項。  
@@ -83,7 +83,7 @@ ms.locfileid: "66061079"
 > [!NOTE]  
 >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。  
   
- **型別**  
+ **類型**  
  指定資料行的資料類型。  
   
  `Length`  

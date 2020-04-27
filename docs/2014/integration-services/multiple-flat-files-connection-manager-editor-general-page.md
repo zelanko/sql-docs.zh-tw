@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057477"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多個一般檔案連線管理員編輯器 (一般頁面)
@@ -30,7 +30,7 @@ ms.locfileid: "66057477"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **說明**  
+ **描述**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **檔案名**  
@@ -39,10 +39,10 @@ ms.locfileid: "66057477"
  **瀏覽**  
  瀏覽檔案名稱，以便於多個一般檔案連接中使用。 您可以選取多個檔案。 所有檔案必須有相同的資料格式。  
   
- **地區設定**  
+ **語言**  
  指定地區，以提供排序以及時間和日期的轉換資訊。  
   
- **消除**  
+ **Unicode**  
  指出是否使用 Unicode。 使用 Unicode 即無需指定字碼頁。  
   
  **字碼頁**  
@@ -65,16 +65,16 @@ ms.locfileid: "66057477"
   
 |值|描述|  
 |-----------|-----------------|  
-|**符分行符號**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
-|**符**|標頭資料列是以歸位字元分隔。|  
+|**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
+|**{CR}**|標頭資料列是以歸位字元分隔。|  
 |**分行符號**|標頭資料列是以換行字元分隔。|  
 |**分號 {;}**|標頭資料列是以分號分隔。|  
-|**冒號 {：}**|標頭資料列是以冒號分隔。|  
+|**冒號 {:}**|標頭資料列是以冒號分隔。|  
 |**千{,}**|標頭資料列是以逗號分隔。|  
 |**定位字元 {t}**|標頭資料列是以定位字元分隔。|  
 |**分隔號 {&#124;}**|標頭資料列是以分隔號 (&#124;) 分隔。|  
   
- **要略過的標頭資料列**  
+ **略過的標頭資料列數**  
  指定要略過的標頭列數 (如果有的話)。  
   
  **第一個資料列中的資料行名稱**  
@@ -84,6 +84,6 @@ ms.locfileid: "66057477"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [多個一般檔案連線管理員編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [多個一般檔案連線管理員編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [&#40;預覽頁面中的多個一般檔案連線管理員編輯器&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多個一般檔案連線管理員編輯器 &#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

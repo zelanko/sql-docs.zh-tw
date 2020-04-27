@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057214"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>ODBC 來源編輯器 (連接管理員頁面)
@@ -29,12 +29,12 @@ ms.locfileid: "66057214"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
+-   在 [資料流程]**** 索引標籤上，按兩下 ODBC 來源。  
   
 ## <a name="options"></a>選項。  
   
 ### <a name="connection-manager"></a>[ODBC 來源編輯器]  
- 從清單中選取現有的 ODBC 連接管理員，或按一下 **[新增]** 建立新的連接。 此連接可以指向任何 ODBC 支援的資料庫。  
+ 從清單中選取現有的 ODBC 連接管理員，或按一下 [**新增**] 以建立新的連接。 此連接可以指向任何 ODBC 支援的資料庫。  
   
 ### <a name="new"></a>新增  
  按一下 **[新增]** 。 **[設定 ODBC 連接管理員編輯器]** 對話方塊隨即開啟，讓您能夠建立新的 ODBC 連接管理員。  
@@ -57,7 +57,7 @@ ms.locfileid: "66057214"
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 來源自訂屬性](data-flow/odbc-source-custom-properties.md)   
- [ODBC 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
+ [ODBC 來源編輯器 &#40;資料行] 頁面&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

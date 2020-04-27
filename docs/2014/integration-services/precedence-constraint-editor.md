@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056691"
 ---
 # <a name="precedence-constraint-editor"></a>優先順序條件約束編輯器
@@ -32,12 +32,12 @@ ms.locfileid: "66056691"
  指定下列條件約束值：[成功]****、[失敗]**** 或 [完成]****。  
   
 > [!NOTE]  
->  優先順序條件約束線條若是綠色代表 [成功]****，反白顯示代表 [失敗]****，而藍色代表 [完成]****。  
+>   優先順序條件約束線條若是綠色代表 **[成功]**，反白顯示代表 **[失敗]**，而藍色代表 **[完成]**。  
   
  **運算式**  
  如果使用 [運算式]****、[運算式與條件約束]**** 或 [運算式或條件約束]**** 作業，請輸入運算式或啟動運算式產生器以建立運算式。 運算式必須評估為布林。  
   
- **測驗**  
+ **測試**  
  驗證運算式。  
   
  **邏輯 AND**  

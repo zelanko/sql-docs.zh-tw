@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057666"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
@@ -41,7 +41,7 @@ ms.locfileid: "66057666"
   
 |值|描述|  
 |-----------|-----------------|  
-|**資料檔案訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
+|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
 |**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]**。|  
 |**字串訊息至變數**|訊息<br /><br /> 選取此值會顯示動態選項 **[StringMessage]**。|  
@@ -49,10 +49,10 @@ ms.locfileid: "66057666"
 ## <a name="messagetype-dynamic-options"></a>MessageType 動態選項  
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
- **Savefileas 並**  
+ **SaveFileAs**  
  鍵入要使用的檔案路徑，或按一下省略符號按鈕 **(...)**，然後尋找檔案。  
   
- **Overwrite**  
+ **改寫**  
  指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設值為 `False`。  
   
  **Filter**  
@@ -61,7 +61,7 @@ ms.locfileid: "66057666"
 |值|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
-|**從封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
+|**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
   
 ### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66057666"
  此選項是唯讀的。 當先前有設定篩選屬性時，此選項可能是空白或包含封裝的 GUID。  
   
 #### <a name="filter--from-package"></a>篩選 = 來自封裝  
- **識別碼**  
+ **標識**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
  **相關主題：** [選取封裝](control-flow/select-a-package.md)  
@@ -82,12 +82,12 @@ ms.locfileid: "66057666"
 |值|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
-|**從封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
+|**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
   
  **變數**  
- 輸入變數名稱，或按一下\<[**新增變數 ...** ]> 然後設定新的變數。  
+ 鍵入變數名稱，或按一下 [\<新增變數…>]****，然後設定新的變數。  
   
- **相關主題：** [新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -96,43 +96,43 @@ ms.locfileid: "66057666"
  此選項是空白。  
   
 #### <a name="filter--from-package"></a>篩選 = 來自封裝  
- **識別碼**  
+ **標識**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
  **相關主題：** [選取封裝](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
- **何**  
+ **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**無**|不會比較訊息。|  
+|**None**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
 |**忽略大小寫**|訊息必須與 **CompareString** 選項中的字串相符，但是比較時不會區分大小寫。|  
-|**容器**|訊息必須包含 **CompareString** 選項中的字串。|  
+|**包含**|訊息必須包含 **CompareString** 選項中的字串。|  
   
  **CompareString**  
  除非 [比較]**** 選項設定為 [無]****，否則請提供訊息要比較的字串。  
   
 ### <a name="messagetype--string-message-to-variable"></a>MessageType = 字串訊息至變數  
- **何**  
+ **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**無**|不會比較訊息。|  
+|**None**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
 |**忽略大小寫**|訊息必須與 **CompareString** 選項中的字串相符，但是比較時不會區分大小寫。|  
-|**容器**|訊息必須包含 **CompareString** 選項中的字串。|  
+|**包含**|訊息必須包含 **CompareString** 選項中的字串。|  
   
  **CompareString**  
  除非 [比較]**** 選項設定為 [無]****，否則請提供訊息要比較的字串。  
   
  **變數**  
- 輸入要保存已接收之訊息的變數名稱，或按一下\<[**新增變數 ...** ]> 然後設定新的變數。  
+ 鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]****，然後設定新的變數。  
   
- **相關主題：** [新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

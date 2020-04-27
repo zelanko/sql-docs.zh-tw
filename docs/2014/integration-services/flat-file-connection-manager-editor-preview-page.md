@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058743"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>一般檔案連接管理員編輯器 (預覽頁面)
@@ -30,13 +30,13 @@ ms.locfileid: "66058743"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **說明**  
+ **描述**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
- **要略過的資料列**  
+ **略過的資料列數**  
  指定在一般檔案開頭要略過的資料列數。  
   
- **[重新整理]**  
+ **重新整理**  
  按一下 [重新整理]****，即可檢視變更要略過之資料列數的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
   
  **預覽資料列**  
@@ -46,6 +46,6 @@ ms.locfileid: "66058743"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [一般檔案連線管理員編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [一般檔案連接管理員編輯器 &#40;資料行] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [一般檔案連線管理員編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ [一般檔案連線管理員編輯器 &#40;進階頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

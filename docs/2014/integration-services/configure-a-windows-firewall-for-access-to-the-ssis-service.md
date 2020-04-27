@@ -19,24 +19,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060847"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>針對 SSIS 服務的存取設定 Windows 防火牆
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支援服務，以提供與舊版的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容性。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
  Windows 防火牆系統有助於防止未經授權的使用者透過網路連接來存取電腦資源。 若要透過此防火牆存取 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，必須設定防火牆來啟用存取。  
   
 > [!IMPORTANT]  
 >  若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務執行個體， 而是要編輯 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](configuring-the-integration-services-service-ssis-service.md)回溯相容。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需 DCOM 通訊協定如何透過防火牆運作的詳細資訊，請參閱「搭配[防火牆使用分散式 COM](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)」一文。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需 DCOM 通訊協定如何透過防火牆運作的詳細資訊，請參閱「搭配[防火牆使用分散式 COM](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)」一文。  
   
  有許多防火牆系統可用。 如果您是執行 Windows 防火牆以外的其他防火牆，請參閱該防火牆的文件以獲取您正在使用之系統的特定資訊。  
   
@@ -75,8 +74,7 @@ ms.locfileid: "66060847"
 5.  在 [新增連接埠]**** 對話方塊的 [名稱]**** 方塊中，輸入 **RPC(TCP/135)** 或其他描述性名稱，在 [連接埠編號]**** 方塊中輸入 **135**，然後選取 [TCP]****。  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會一直使用通訊埠 135。 您無法指定不同的通訊埠。  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會一直使用通訊埠 135。 您無法指定不同的通訊埠。  
   
 6.  在 **[新增連接埠]** 對話方塊中，可以選擇性地按一下 **[變更範圍]** 以修改預設範圍。  
   
@@ -87,8 +85,7 @@ ms.locfileid: "66060847"
 9. 若要關閉 **[Windows 防火牆]** 對話方塊，請按一下 **[確定]**。  
   
     > [!NOTE]  
-    >  此程序是使用 [控制台] 中的 **[Windows 防火牆]** 項目設定 Windows 防火牆。 
-  **[Windows 防火牆]** 項目只會針對目前網路位置設定檔來設定防火牆。 但若要設定 Windows 防火牆，您也可以使用 **netsh** 命令列工具或是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) 嵌入式管理單元，名為「具有進階安全性的 Windows 防火牆」。 如需這些工具的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+    >  此程序是使用 [控制台] 中的 **[Windows 防火牆]** 項目設定 Windows 防火牆。 **[Windows 防火牆]** 項目只會針對目前網路位置設定檔來設定防火牆。 但若要設定 Windows 防火牆，您也可以使用 **netsh** 命令列工具或是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) 嵌入式管理單元，名為「具有進階安全性的 Windows 防火牆」。 如需這些工具的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)   

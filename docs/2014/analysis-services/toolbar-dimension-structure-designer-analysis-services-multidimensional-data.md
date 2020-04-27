@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066044"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -38,7 +38,7 @@ ms.locfileid: "66066044"
   
      顯示目前維度之屬性的樹狀檢視，其中給定屬性的成員屬性會顯示為該屬性的從屬附註。  
   
--   方格  
+-   Grid  
   
      顯示屬性的詳細清單，包含 [名稱]****、[使用方式]**** 和 [類型]**** 屬性、索引鍵資料行的資料類型 (如果適用的話)，以及針對目前維度，名稱資料行是否符合索引鍵資料行。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66066044"
  **尋找資料表**  
  顯示 [尋找資料表]**** 對話方塊，即可在 [資料來源檢視]**** 窗格中尋找資料表。  
   
- **Zoom**  
+ **縮放**  
  按一下即可循環顯示比例百分比，或選取可用的顯示比例選項。  
   
  **顯示**  

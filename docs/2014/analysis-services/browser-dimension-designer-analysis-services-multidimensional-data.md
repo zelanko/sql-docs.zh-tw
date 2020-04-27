@@ -15,20 +15,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064633"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>瀏覽器 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師的 **[瀏覽器]** 索引標籤，即可瀏覽維度資料與維度的中繼資料。 如果目前選取的維度有啟用維度回寫，請使用此檢視來變更維度的成員資料。  
   
 ## <a name="panes"></a>窗格  
- 
-  **[瀏覽器]** 索引標籤包含下列窗格：  
+ **[瀏覽器]** 索引標籤包含下列窗格：  
   
- [工具列](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  使用工具列即可執行 [維度設計師] 之 [瀏覽器]**** 索引標籤中的一般動作。  
   
  [層級與成員](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

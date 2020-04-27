@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067375"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   此主題描述可以搭配表格式模型使用之資料來源的類型。  
   
- 本文包含下列章節：  
+ 本文包含下列各節：  
   
 -   [支援的資料來源](#bkmk_supported_ds)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66067375"
   
 -   [選擇資料來源的秘訣](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a>支援的資料來源  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>支援的資料來源  
  您可以從下表的資料來源匯入資料。 當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，安裝程式不會安裝所列每種資料來源的提供者。 某些提供者可能已經隨著其他應用程式安裝在您的電腦上。在其他情況下，您將需要下載和安裝提供者。  
   
 |||||  
@@ -45,7 +45,7 @@ ms.locfileid: "66067375"
 |其他關聯式資料庫|(不適用)|(不適用)|OLE DB 提供者或 ODBC 驅動程式|  
 |文字檔|(不適用)|.txt、.tab、.csv|Microsoft Access 的 ACE 14 OLE DB 提供者|  
 |Microsoft Excel 檔案|Excel 97-2003、2007、2010|.xlsx、xlsm、.xlsb、.xltx、.xltm|ACE 14 OLE DB 提供者|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿|Microsoft SQL Server 2008 R2 Analysis Services|.xlsx、xlsm、.xlsb、.xltx、.xltm|ASOLEDB 10.5<br /><br /> (僅搭配發行至已安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 之 SharePoint 伺服陣列的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 活頁簿使用)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿|Microsoft SQL Server 2008 R2 Analysis Services|.xlsx、xlsm、.xlsb、.xltx、.xltm|ASOLEDB 10.5<br /><br /> (僅搭配發行至已安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 之 SharePoint 伺服陣列的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 活頁簿使用)|  
 |Analysis Services Cube|Microsoft SQL Server 2005、2008、2008 R2 Analysis Services|(不適用)|ASOLEDB 10|  
 |資料摘要<br /><br /> (用來匯入 Reporting Services 報表、Atom 服務文件、Microsoft Azure Marketplace DataMarket 和單一資料摘要的資料)|Atom 1.0 格式<br /><br /> 任何公開為 Windows Communication Foundation (WCF) Data Service (先前稱為 ADO.NET Data Services) 的資料庫或文件。|定義一個或多個摘要之服務文件的 .atomsvc<br /><br /> Atom Web 摘要文件的 .atom|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> 適用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office 資料庫連線檔案||.odc||  
@@ -58,12 +58,12 @@ ms.locfileid: "66067375"
   
  <sup>4</sup>在某些情況下，使用 MSDAORA OLE DB 提供者可能會造成連接錯誤，特別是較新版本的 Oracle。 若一旦遭遇任何錯誤，建議您改用列於 Oracle 底下的任一其他提供者。  
   
-##  <a name="bkmk_unsupported_ds"></a>不支援的來源  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>不支援的來源  
  目前不支援下列資料來源：  
   
 -   無法匯入伺服器文件，例如，已發行到 SharePoint 的 Access 資料庫。  
   
-##  <a name="bkmk_tips"></a>選擇資料來源的秘訣  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>選擇資料來源的秘訣  
   
 1.  從關聯式資料庫匯入資料表可以省去一些步驟，因為在匯入期間，會使用 *外部索引鍵* (Foreign key) 關聯性來建立模型設計師中資料表之間的關聯性。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "66067375"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的資料來源](../data-sources-ssas-tabular.md)   
- [將資料匯入 &#40;SSAS 表格式&#41;](../import-data-ssas-tabular.md)  
+ [匯入資料 (SSAS 表格式)](../import-data-ssas-tabular.md)  
   
   

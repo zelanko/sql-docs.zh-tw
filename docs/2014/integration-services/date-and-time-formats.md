@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059650"
 ---
 # <a name="date-and-time-formats"></a>日期和時間格式
@@ -52,7 +52,7 @@ ms.locfileid: "66059650"
   
  快速剖析會以 DT_DBDATE 輸出資料。 將填補以截斷格式表示的日期值。 例如，YYYY 會變為 YYYY0101。  
   
- 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
 ## <a name="time-data-type"></a>時間資料類型  
  快速剖析支援下列字串格式的時間資料：  
@@ -80,7 +80,7 @@ ms.locfileid: "66059650"
     |-HH|截斷格式，指出要從 UTC 減去以取得本地時間的小時數。|  
     |Z|0 的值，指出時間是以 UTC 表示。|  
   
-     所有時間和日期/時間資料的格式都可以包含時區元素。 不過，除非資料是 DT_DBTIMESTAMPOFFSET 類型，否則系統會忽略時區值。 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+     所有時間和日期/時間資料的格式都可以包含時區元素。 不過，除非資料是 DT_DBTIMESTAMPOFFSET 類型，否則系統會忽略時區值。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
      在包含時區元素的格式中，在時間元素和時區元素之間沒有空格，如以下範例所示：  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66059650"
   
  快速剖析會以 DT_DBTIME 和 DT_DBTIME2 輸出字串。 將填補以截斷格式表示的時間值。 例如，HH:MI 會變為 HH:MM:00.000。  
   
- 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
 ## <a name="datetime-data-type"></a>日期/時間資料類型  
  快速剖析支援下列字串格式的日期/時間資料：  
@@ -124,10 +124,10 @@ ms.locfileid: "66059650"
 |---------------------|-------------|  
 |秒|加入 00。|  
 |分鐘|加入 00:00。|  
-|小時|加入 00:00:00。|  
+|Hour|加入 00:00:00。|  
 |Day|加入 01 做為此月的某個日期。|  
 |Month|加入 01 做為此年份的某個月份。|  
   
- 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
   

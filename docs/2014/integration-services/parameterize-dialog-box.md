@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056866"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,22 +29,22 @@ ms.locfileid: "66056866"
  **使用現有的參數**  
  選取此選項可讓任務屬性與某個現有的參數產生關聯，然後從下拉式清單中選取該參數。  
   
- **不使用參數**  
+ **請勿使用參數**  
  選取此選項以移除參數的參考。 未刪除參數。  
   
- **建立新的參數**  
+ **建立新參數**  
  選取此選項可建立要與任務屬性產生關聯的新參數。  
   
  **名稱**  
  指定您要建立之參數的名稱。  
   
- **說明**  
+ **描述**  
  指定參數的描述。  
   
  **ReplTest1**  
  指定參數的預設值。 這也稱作設計預設值，以後在部署時可以覆蓋該值。  
   
- **影響範圍**  
+ **範圍**  
  選取 [專案]**** 或 [封裝]**** 選項來指定參數的範圍。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
   
  **大小**  

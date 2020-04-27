@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062510"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 查詢設計工具 (SSAS)
@@ -46,13 +46,13 @@ ms.locfileid: "66062510"
 |[篩選] 窗格|用來選擇維度和相關階層，以便篩選來源端的資料和限制傳回的資料。|  
 |[資料] 窗格|在您從 [中繼資料] 窗格和 [導出成員] 窗格中拖曳項目時，顯示結果集的資料行標題。 如果已選取 **[自動執行]** 按鈕，便會自動更新結果集。|  
   
- 您可以將 [中繼資料] 窗格中的維度、量值和 KPI 以及 [導出成員] 窗格中的導出成員，拖曳至 [資料] 窗格中。 在 [篩選] 窗格中，則可以選取維度和相關階層，以及設定篩選運算式來限制查詢可使用的資料。 如果已選取工具列上的 [**自動執行**（![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")）] 切換按鈕，則每次您將中繼資料物件放到 [資料] 窗格時，查詢設計工具就會執行查詢。 您可以使用工具列上的 [**執行**（![執行查詢](media/rsqdicon-run.gif "執行查詢")）] 按鈕，以手動方式執行查詢。  
+ 您可以將 [中繼資料] 窗格中的維度、量值和 KPI 以及 [導出成員] 窗格中的導出成員，拖曳至 [資料] 窗格中。 在 [篩選] 窗格中，則可以選取維度和相關階層，以及設定篩選運算式來限制查詢可使用的資料。 如果已選取工具列上的 [自動執行]**** (![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")) 切換按鈕，則每次您將中繼資料物件放到 [資料] 窗格中時，查詢設計工具便會執行查詢。 您可以使用工具列上的 [執行]**** (![執行查詢](media/rsqdicon-run.gif "執行查詢")) 按鈕，以手動方式執行查詢。  
   
  當您在此模式下建立 MDX 查詢時，查詢中會自動包含下列其他屬性：  
   
- **成員屬性**MEMBER_CAPTION，MEMBER_UNIQUE_NAME  
+ **成員屬性** ：MEMBER_CAPTION、MEMBER_UNIQUE_NAME  
   
- 資料**格屬性**VALUE、BACK_COLOR、FORE_COLOR、FORMATTED_VALUE、FORMAT_STRING、FONT_NAME、FONT_SIZE、FONT_FLAGS  
+ **資料格屬性** ：VALUE、BACK_COLOR、FORE_COLOR、FORMATTED_VALUE、FORMAT_STRING、FONT_NAME、FONT_SIZE、FONT_FLAGS  
   
  若要指定您自己的其他屬性，您必須在 [查詢] 模式下手動編輯 MDX 查詢。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "66062510"
   
 |按鈕|描述|  
 |------------|-----------------|  
-|**當做文字編輯**|這種資料來源類型不啟用|  
-|**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
+|**[當成文字編輯]**|這種資料來源類型不啟用|  
+|[匯入]****|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
 |![變更為 MDX 查詢檢視](media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|  
 |![重新整理結果資料](media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
-|![加入導出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![新增導出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|  
 |![切換以顯示空資料格](media/rsqdicon-showemptycells.gif "切換以顯示空資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  
@@ -106,14 +106,14 @@ ms.locfileid: "66062510"
   
  「設計」模式與「查詢」模式的工具列按鈕完全相同，唯一不同的是在「查詢」模式中未啟用下列按鈕：  
   
--   **當做文字編輯**  
+-   **[當成文字編輯]**  
   
--   **加入匯出成員**（![加入匯出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員")）  
+-   **新增導出成員** (![新增導出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員"))  
   
--   **顯示空白資料格**（![切換以顯示空的資料格](media/rsqdicon-showemptycells.gif "切換以顯示空資料格")）  
+-   **顯示空資料格** (![切換以顯示空資料格](media/rsqdicon-showemptycells.gif "切換以顯示空資料格"))  
   
--   **自動執行**（![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")）  
+-   **自動執行** (![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢"))  
   
--   **顯示**匯總（![顯示匯總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕")）  
+-   **顯示彙總** (![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕"))  
   
   

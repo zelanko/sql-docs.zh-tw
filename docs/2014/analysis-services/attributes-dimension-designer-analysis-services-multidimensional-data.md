@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064395"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -62,7 +62,7 @@ ms.locfileid: "66064395"
 |父系|代表父子式關聯性的父屬性。 此關聯性中的子屬性必須永遠為索引鍵屬性。|  
 |AccountType|代表帳戶類型屬性。 當量值的彙總函式設定為「依帳戶」時，會由伺服器或引擎使用此屬性。|  
   
- **型別**  
+ **類型**  
  設定屬性的類型。 按一下向下箭號，即可從可用的選擇中選取。  
   
  **索引鍵資料行**  

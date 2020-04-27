@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058686"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>一般檔案來源編輯器 (連接管理員頁面)
@@ -39,8 +39,8 @@ ms.locfileid: "66058686"
  **新增**  
  使用 [一般檔案連線管理員編輯器]**** 對話方塊建立新的連線管理員。  
   
- **將來源的 null 值保留為數據流中的 null 值**  
- 指定擷取資料時是否保留 Null 值。 這個屬性的預設值為**false**。 當此值為 `alse` 時，一般檔案來源會以各資料行適當的預設值取代來源資料的 Null 值，例如字串資料行的空白字串和數值資料行的零。  
+ **將來源的 Null 值保留為資料流程中的 Null 值**  
+ 指定擷取資料時是否保留 Null 值。 此屬性的預設值為 **false**。 當此值為 `alse` 時，一般檔案來源會以各資料行適當的預設值取代來源資料的 Null 值，例如字串資料行的空白字串和數值資料行的零。  
   
  **預覽**  
  使用 [資料檢視]**** 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
@@ -49,6 +49,6 @@ ms.locfileid: "66058686"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[一般檔案來源編輯器] &#40;[資料行] 頁面&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [一般檔案來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [一般檔案連線管理員](connection-manager/file-connection-manager.md)  
+ [一般檔案連接管理員](connection-manager/file-connection-manager.md)  
   
   

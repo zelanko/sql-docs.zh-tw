@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060136"
 ---
 # <a name="create-parameters"></a>Create Parameters
@@ -29,7 +29,7 @@ ms.locfileid: "66060136"
   
 1.  開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的封裝，然後按一下 SSIS 設計師中的 **[參數]** 索引標籤。  
   
-     ![封裝參數索引標籤](media/denali-package-parameters.gif "封裝參數索引標籤")  
+     ![套件的 [參數] 索引標籤](media/denali-package-parameters.gif "套件的 [參數] 索引標籤")  
   
 2.  按一下工具列上的 **[加入參數]** 按鈕。  
   

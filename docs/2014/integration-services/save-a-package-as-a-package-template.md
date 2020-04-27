@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056335"
 ---
 # <a name="save-a-package-as-a-package-template"></a>將封裝儲存為封裝範本
@@ -41,14 +41,14 @@ ms.locfileid: "66056335"
   
 2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]****，然後按一下 [新增項目]****。  
   
-3.  在 [新增新項目 -**專案名稱>]\<** 對話方塊中，按一下要當作範本使用的套件。  
+3.  在 [**加入新專案-\<專案名稱>** ] 對話方塊中，按一下您要作為範本使用的封裝。  
   
      範本清單中包含名稱為 [新增 SSIS 封裝] 的預設封裝範本。 封裝圖示識別可當作封裝範本使用的範本。  
   
-4.  按一下 [新增]  。  
+4.  按一下 **[新增]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)   
+ [在 SQL Server Data Tools 中建立套件](create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; 封裝](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

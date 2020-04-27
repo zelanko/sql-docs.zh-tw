@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056152"
 ---
 # <a name="schema-restrictions-dialog-box"></a>結構描述限制對話方塊
@@ -31,9 +31,9 @@ ms.locfileid: "66056152"
  **變數**  
  使用變數以定義限制。 在清單中選取變數，或按一下 [**新增變數 ...** ] 以建立新的變數。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
   
- **文字**  
+ **Text**  
  提供文字以定義限制。  
   
 ## <a name="see-also"></a>另請參閱  

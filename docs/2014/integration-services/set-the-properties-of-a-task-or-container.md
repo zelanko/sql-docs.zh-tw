@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055665"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>設定工作或容器的屬性
@@ -55,7 +55,7 @@ ms.locfileid: "66055665"
   
      如需如何設定「For 迴圈」容器的資訊，請參閱[設定 For 迴圈容器](control-flow/for-loop-container.md)。  
   
-     如需如何設定「Foreach 迴圈」容器的詳細資訊，請參閱[設定 Foreach 迴圈容器](control-flow/foreach-loop-container.md)。  
+     如需如何設定Foreach 迴圈容器的資訊，請參閱 [設定 Foreach 迴圈容器](control-flow/foreach-loop-container.md)。  
   
     > [!NOTE]  
     >  「時序」容器沒有任何自訂編輯器。  
@@ -70,6 +70,6 @@ ms.locfileid: "66055665"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [Integration Services 容器](control-flow/integration-services-containers.md)  
+ [整合服務容器](control-flow/integration-services-containers.md)  
   
   

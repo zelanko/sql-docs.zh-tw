@@ -16,20 +16,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058144"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>匯入和匯出封裝 (SSIS 服務)
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支援服務，以提供與舊版的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容性。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
  封裝可以儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 資料庫的 sysssispackages 資料表中，也可以儲存在檔案系統中。  
   
- 封裝存放區 ([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所監視和管理的邏輯儲存體) 可以同時包含在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務之組態檔中指定的 msdb 資料庫和檔案系統資料夾。  
+ 封裝存放區 ( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所監視和管理的邏輯儲存體) 可以同時包含在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務之組態檔中指定的 msdb 資料庫和檔案系統資料夾。  
   
  您可以在下列儲存體類型之間匯入和匯出封裝：  
   
@@ -37,39 +37,36 @@ ms.locfileid: "66058144"
   
 -   「SSIS 封裝存放區」中的資料夾。 兩個預設資料夾名為 File System 和 MSDB。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 資料庫。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 資料庫。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可讓您匯入和匯出封裝，並藉此變更封裝的儲存格式和位置。 使用匯入和匯出功能，可以將封裝加入檔案系統、封裝存放區或 msdb 資料庫，並將封裝從一個儲存體複製到另一個儲存體。 例如，可以將 msdb 中儲存的封裝複製到檔案系統，反之亦然。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可讓您匯入和匯出封裝，並藉此變更封裝的儲存格式和位置。 使用匯入和匯出功能，可以將封裝加入檔案系統、封裝存放區或 msdb 資料庫，並將封裝從一個儲存體複製到另一個儲存體。 例如，可以將 msdb 中儲存的封裝複製到檔案系統，反之亦然。  
   
  您也可以使用 **dtutil** 命令提示公用程式 (dtutil.exe)，將封裝複製成其他格式。 如需詳細資訊，請參閱 [dtutil Utility](dtutil-utility.md)。  
   
 ## <a name="to-import-or-export-a-package"></a>匯入或匯出封裝  
   
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]服務。 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，可回溯相容於 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]。 如需在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中管理封裝的資訊，請參閱 [Integration Services &#40;SSIS&#41; 伺服器](catalog/integration-services-ssis-server-and-catalog.md)。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，可回溯相容於 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]。 如需在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中管理封裝的資訊，請參閱 [Integration Services &#40;SSIS&#41; 伺服器](catalog/integration-services-ssis-server-and-catalog.md)。  
   
  您可以在下列位置之間匯入或匯出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝：  
   
 -   您可以匯入儲存在實例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、檔案系統或[!INCLUDE[ssIS](../includes/ssis-md.md)]封裝存放區中的封裝。 匯入的封裝將儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區內的資料夾中。  
   
--   您可以將儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體、檔案系統或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區內的封裝匯出至不同的儲存格式和位置。  
+-   您可以將儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體、檔案系統或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區內的封裝匯出至不同的儲存格式和位置。  
   
- 不過，在不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本之間匯入和匯出封裝有一些限制：  
+ 不過，在不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本之間匯入和匯出封裝有一些限制：  
   
--   在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 的執行個體上，雖然您可以從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 的執行個體匯入封裝，但是無法將封裝匯出至 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 的執行個體。  
+-   在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]的執行個體上，雖然您可以從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]的執行個體匯入封裝，但是無法將封裝匯出至 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]的執行個體。  
   
--   在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 的執行個體上，您無法在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 的執行個體之間匯入封裝或匯出封裝。  
+-   在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]的執行個體上，您無法在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]的執行個體之間匯入封裝或匯出封裝。  
   
  下列程序將描述如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來匯入或匯出封裝。  
   
 #### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯入封裝  
   
-1.  按一下 [開始]****、指向 [Microsoft **]** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，然後按一下 [SQL Server Management Studio]****。  
+1.  按一下 [**開始**]，指向 [ **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]]，然後按一下 [ **SQL Server Management Studio**]。  
   
-2.  在 [**連接到伺服器**] 對話方塊中，設定下列選項：  
+2.  在 [連接到伺服器]**** 對話方塊上，設定下列選項：  
   
     -   在 [伺服器類型]**** 方塊中，選取 [Integration Services]****。  
   
@@ -77,7 +74,7 @@ ms.locfileid: "66058144"
   
 3.  如果物件總管尚未開啟，請在 [檢視]**** 功能表上，按一下物件總管****。  
   
-4.  在物件總管中，展開 [**儲存的封裝**] 資料夾。  
+4.  在物件總管中，展開 [存放的封裝]**** 資料夾。  
   
 5.  展開子資料夾以尋找您要匯入封裝的資料夾。  
   
@@ -85,15 +82,15 @@ ms.locfileid: "66058144"
   
     -   若要從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體匯入，請選取 [SQL Server]**** 選項，然後指定伺服器並選取驗證模式。 如果選取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱和密碼。  
   
-         按一下瀏覽按鈕 ([...])****，選取要匯入的封裝，然後按一下 [確定]****。  
+         按一下瀏覽按鈕 **（[...]）**，選取要匯入的套件，然後按一下 **[確定]。**  
   
     -   若要從檔案系統匯入，請選取 [檔案系統]**** 選項。  
   
-         按一下瀏覽按鈕 ([...])****，選取要匯入的封裝，然後按一下 [開啟]****。  
+         按一下瀏覽按鈕 **（[...]）**，選取要匯入的套件，然後按一下 [**開啟]。**  
   
     -   若要從 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區匯入，請選取 [SSIS 封裝存放區]**** 選項並指定伺服器。  
   
-         按一下瀏覽按鈕 ([...])****，選取要匯入的封裝，然後按一下 [確定]****。  
+         按一下瀏覽按鈕 **（[...]）**，選取要匯入的套件，然後按一下 **[確定]。**  
   
 7.  (選擇性) 更新封裝名稱。  
   
@@ -103,9 +100,9 @@ ms.locfileid: "66058144"
   
 #### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯出封裝  
   
-1.  按一下 [開始]****、指向 [Microsoft **]** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，然後按一下 [SQL Server Management Studio]****。  
+1.  按一下 [**開始**]，指向 [ **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]]，然後按一下 [ **SQL Server Management Studio**]。  
   
-2.  在 [連接到伺服器]**** 對話方塊上，設定下列選項：  
+2.  在 [**連接到伺服器**] 對話方塊中，設定下列選項：  
   
     -   在 [伺服器類型]**** 方塊中，選取 [Integration Services]****。  
   

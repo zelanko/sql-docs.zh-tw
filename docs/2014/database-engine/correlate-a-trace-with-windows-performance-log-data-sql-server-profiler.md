@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065044"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>使追蹤與 Windows 效能記錄資料產生相互關聯 (SQL Server Profiler)
@@ -49,8 +49,7 @@ ms.locfileid: "66065044"
   
 4.  在 [一般]**** 索引標籤上，按一下 [新增計數器]****。  
   
-5.  在 [效能物件]**** 清單中，選取您要監視的效能物件。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 效能物件名稱會以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作為開頭，而具名執行個體則會以 MSSQL$*instanceName*作為開頭。  
+5.  在 [效能物件]**** 清單中，選取您要監視的效能物件。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 效能物件名稱會以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作為開頭，而具名執行個體則會以 MSSQL$*instanceName*作為開頭。  
   
 6.  盡可能為您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體加入所需的計數器以及其他重要的值，如處理器時間與磁碟時間。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66065044"
 11. 按一下 [確定]**** 建立效能記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [啟動 SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

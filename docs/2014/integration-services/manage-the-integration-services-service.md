@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057784"
 ---
 # <a name="manage-the-integration-services-service"></a>管理 Integration Services 服務
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支援服務，以提供與舊版的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容性。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
  當安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]元件時，也會安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。 根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會啟動，而且服務的啟動類型會設為自動。 不過，您也必須安裝 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 才能使用此服務來管理已儲存和執行中的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
@@ -34,16 +34,15 @@ ms.locfileid: "66057784"
   
  您可以使用下列其中一個 Microsoft Management Console (MMC) 嵌入式管理單元來管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務：SQL Server 組態管理員或服務。 您必須先確定服務已啟動，然後才能管理 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的封裝。  
   
- 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 同時安裝。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體並未同時安裝，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝。 若要管理儲存在 [!INCLUDE[ssDE](../includes/ssde-md.md)]具名或遠端執行個體中的封裝，或儲存在多個 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體中的封裝，您就必須修改此服務的組態檔。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。  
+ 根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]同時安裝。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體並未同時安裝， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。 若要管理儲存在 [!INCLUDE[ssDE](../includes/ssde-md.md)]具名或遠端執行個體中的封裝，或儲存在多個 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體中的封裝，您就必須修改此服務的組態檔。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。  
   
  依預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會設定為在服務停止時停止執行中的封裝。 不過， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不會等待封裝停止，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務停止後，仍可能有部份封裝在執行中。  
   
- 如果 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務已停止，可以使用 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈]、[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師、執行封裝公用程式及 **dtexec** 命令提示字元公用程式 (dtexec.exe) 繼續執行封裝。 不過，您無法監視執行中的封裝。  
+ 如果 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務已停止，可以使用 [ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師、執行封裝公用程式及 **dtexec** 命令提示字元公用程式 (dtexec.exe) 繼續執行封裝。 不過，您無法監視執行中的封裝。  
   
  根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會在 NETWORK SERVICE 帳戶內容中執行。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會寫入 Windows 事件記錄檔。 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中檢視服務事件。 此外，您也可以使用「Windows 事件檢視器」來檢視服務事件。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會寫入 Windows 事件記錄檔。 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中檢視服務事件。 此外，您也可以使用「Windows 事件檢視器」來檢視服務事件。  
   
 ### <a name="to-set-properties-of-integration-services-service-using-the-services-snap-in"></a>若要使用「服務」嵌入式管理單元設定 Integration Services 服務的屬性  
   

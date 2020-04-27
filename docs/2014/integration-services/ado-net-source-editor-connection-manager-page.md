@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061693"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 來源編輯器 (連接管理員頁面)
@@ -33,7 +33,7 @@ ms.locfileid: "66061693"
 3.  在 [ADO NET 來源編輯器]**** 中，按一下 [連線管理員]****。  
   
 ## <a name="static-options"></a>靜態選項  
- **ADO.NET 連線管理員**  
+ **ADO.NET 連接管理員**  
  從清單中選取現有的連線管理員，或按一下 [新增]**** 來建立新的連線。  
   
  **新增**  
@@ -48,7 +48,7 @@ ms.locfileid: "66061693"
 |SQL (命令)|使用 SQL 查詢從 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 資料來源中擷取資料。|  
   
  **預覽**  
- 使用 [資料檢視]**** 對話方塊來預覽結果。 **預覽**最多可顯示200個數據列。  
+ 使用 [資料檢視]**** 對話方塊來預覽結果。 [預覽]**** 最多可顯示 200 個資料列。  
   
 > [!NOTE]  
 >  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
@@ -56,7 +56,7 @@ ms.locfileid: "66061693"
 ## <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
 ### <a name="data-access-mode--table-or-view"></a>資料存取模式 = 資料表或檢視  
- **資料表或視圖的名稱**  
+ **資料表或檢視的名稱**  
  從資料來源中可用的清單中選取資料表或檢視名稱。  
   
 ### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063103"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性關聯性圖表 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -24,7 +24,7 @@ ms.locfileid: "66063103"
   
  **檢視包含屬性關聯圖表的窗格**  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟維度設計師，然後按一下 [屬性關聯性]**** 索引標籤。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]**** 索引標籤。  
   
 ## <a name="using-the-attribute-relationship-diagram"></a>使用屬性關聯性圖表  
  使用屬性關聯性圖表，即可建立、編輯或刪除屬性關聯性。 此外，屬性關聯性圖表也會反白顯示有問題的屬性關聯性並於工具提示中顯示問題的描述。  
@@ -60,7 +60,7 @@ ms.locfileid: "66063103"
 > [!NOTE]  
 >  如果您按一下這個選項，[維度設計師] 就會讓屬性關聯性圖表中的形狀返回設計師所使用的預設配置。  
   
- **Zoom**  
+ **縮放**  
  顯示可用顯示比例選項的清單。  
   
 ### <a name="attribute-shortcut-menu"></a>屬性快速鍵功能表  

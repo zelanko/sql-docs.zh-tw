@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067020"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>從 PowerPivot 匯入 (SSAS 表格式)
@@ -48,6 +48,6 @@ ms.locfileid: "66067020"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的工作空間資料庫](workspace-database-ssas-tabular.md)   
- [複製並貼上資料 &#40;SSAS 表格式&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [複製及貼上資料 &#40;SSAS 表格式&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

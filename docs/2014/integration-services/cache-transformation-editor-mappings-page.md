@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061180"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>快取轉換編輯器 (對應頁面)
@@ -47,6 +47,6 @@ ms.locfileid: "66061180"
  檢視每個可用的目的地資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [[快取轉換編輯器] &#40;連線管理員頁面&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [快取轉換編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069171"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>時序叢集的叢集特性索引標籤 (採礦模型檢視器)
-  
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集特性]** 索引標籤提供定義時序叢集之特性的詳細清單。 這些特性可包括簡單屬性/值組以及狀態之間的轉換。  
   
  可以使用此時序叢集模型檢視，向下鑽研叢集內容，以及查看代表叢集的時序。  
   
- **如需詳細資訊：** [Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md)時序群集演算法、[使用 microsoft 時序叢集檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **如需詳細資訊，請參閱 ** [Microsoft 時序叢集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 時序叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -37,7 +36,7 @@ ms.locfileid: "66069171"
  **檢視器**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用自訂檢視器，或 **[Microsoft 一般內容樹狀檢視器]**。 還可以使用外掛程式檢視器 (如果有)。  
   
- **叢集**  
+ **該群**  
  選擇要檢視的叢集。  
   
  **叢集>\<的特性**  

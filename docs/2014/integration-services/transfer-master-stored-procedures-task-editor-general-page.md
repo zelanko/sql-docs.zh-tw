@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cab36a851c5ef50f0690e9bc0a1a18676d335e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054923"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>傳送主要預存程序工作編輯器 (一般頁面)
@@ -34,13 +34,13 @@ ms.locfileid: "66054923"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入傳送主要預存程序工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送主要預存程序工作編輯器 &#40;預存程序頁面&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+ [傳送主要預存程式工作編輯器 &#40;預存程式頁面&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   
   

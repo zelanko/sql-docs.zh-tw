@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060418"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>連接到遠端 Integration Services 伺服器 (SSIS 服務)
     
 > [!IMPORTANT] 
-> 本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支援服務，以提供與舊版的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容性。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+> 本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
  從 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或其他管理應用程式連接到遠端伺服器上的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行個體時，應用程式的使用者必須具備一組特定的伺服器權限。  
   
@@ -42,11 +42,10 @@ ms.locfileid: "66060418"
   
 3.  選取 [伺服器類型]**** 清單中的 [Integration Services]****。  
   
-4.  在 [伺服器名稱][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 文字方塊中，輸入 **** 伺服器的名稱。  
+4.  在 [伺服器名稱]**** 文字方塊中鍵入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的名稱。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不是執行個體特定的。 您可以使用 Integration Services 服務執行所在的電腦名稱來連接此服務。  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不是執行個體特定的。 您可以使用 Integration Services 服務執行所在的電腦名稱來連接此服務。  
   
 5.  按一下 [ **連接**]。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66060418"
   
 #### <a name="to-configure-rights-for-remote-users-on-windows-2000-with-the-latest-service-packs"></a>設定具有最新 Service Pack 版本的 Windows 2000 遠端使用者權限  
   
-1.  在命令提示字元執行 **dcomcnfg.exe**。  
+1.  在命令提示字元執行 **dcomcnfg.exe** 。  
   
 2.  在 [分散式 COM 組態內容]**** 對話方塊的 [應用程式]**** 頁面上，選取 SQL Server Integration Services 11.0，然後按一下 [內容]****。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66060418"
  如果您是在用戶端電腦上使用本機 Windows 帳戶工作，那麼只有當遠端電腦上存在和本機帳戶相同名稱與密碼以及適當權限的帳戶，您才能連接到遠端電腦上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>SSIS 服務預設不支援委派  
-根據預設[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，服務不支援認證的委派，或有時稱為雙躍點。 在這種情況中，您是在用戶端電腦上工作、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務是在第二部電腦上執行， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 則是在第三部電腦上執行。 首先， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 已順利將認證從用戶端電腦傳遞至正在其上執行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的第二部電腦。 接著，不過，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務無法將認證從第二部電腦委派至正在其上執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的第三部電腦。
+根據預設[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，服務不支援認證的委派，或有時稱為雙躍點。 在這種情況中，您是在用戶端電腦上工作、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務是在第二部電腦上執行， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 則是在第三部電腦上執行。 首先， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 已順利將認證從用戶端電腦傳遞至正在其上執行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的第二部電腦。 接著，不過， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務無法將認證從第二部電腦委派至正在其上執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的第三部電腦。
 
 將 [信任這個使用者，可委派任何服務 (只限 Kerberos)]**** 權限授與 SQL Server 服務帳戶 (可將 Integration Services 服務 (ISServerExec.exe) 啟動為子處理序)，即可啟用認證委派。 在授與此權限之前，請考慮它是否符合您組織的安全性需求。
 

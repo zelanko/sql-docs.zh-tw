@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054725"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子封裝中使用變數和參數的值
@@ -38,9 +38,9 @@ ms.locfileid: "66054725"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
+3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
-    -   若要將範圍設為封裝，按一下 [控制流程]**** 索引標籤之設計介面上的任意位置。  
+    -   若要將範圍設為封裝，請按一下 [控制流程]**** 索引標籤之設計介面上的任意位置。  
   
     -   若要將範圍設定為「執行封裝」工作的父容器，請按一下該容器。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66054725"
   
 4.  在 [封裝組態組合管理]**** 對話方塊中，選取 [啟用封裝組態]****，然後按一下 [加入]****。  
   
-5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]****。  
+5.  在 [套件設定向導] 的 [歡迎使用] 頁面上，按 **[下一步]。**  
   
 6.  在 [選取組態類型] 頁面的 [組態類型]**** 清單中，選取 [父封裝變數]****，然後執行下列其中之一：  
   
@@ -101,12 +101,12 @@ ms.locfileid: "66054725"
   
 12. 在 [封裝組態組合管理]**** 對話方塊中，[組態]**** 方塊會列出新的組態。  
   
-13. 按一下 [關閉]  。  
+13. 按一下 **關閉**。  
   
 ## <a name="see-also"></a>另請參閱  
  [套件設定](../../2014/integration-services/package-configurations.md)   
  [建立套件設定](../../2014/integration-services/create-package-configurations.md)   
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
- [在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
+ [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
   
   

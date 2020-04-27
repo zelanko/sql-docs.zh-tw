@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055824"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>傳送郵件工作編輯器 (郵件頁面)
@@ -33,9 +33,9 @@ ms.locfileid: "66055824"
 > [!IMPORTANT]  
 >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
   
- **相關主題：** [SMTP 連線管理員](connection-manager/smtp-connection-manager.md)  
+ **相關主題** [SMTP 連線管理員](connection-manager/smtp-connection-manager.md)  
   
- **從**  
+ **From**  
  指定寄件者的電子郵件地址。  
   
  **自**  
@@ -47,7 +47,7 @@ ms.locfileid: "66055824"
  **密件副本**  
  指定也會收到訊息密件副本 (Bcc) 之個人的電子郵件地址，以分號分隔。  
   
- **主題**  
+ **主旨**  
  提供電子郵件訊息的主旨。  
   
  **MessageSourceType**  
@@ -71,18 +71,18 @@ ms.locfileid: "66055824"
 ## <a name="messagesourcetype-dynamic-options"></a>MessageSourceType 動態選項  
   
 ### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接輸入  
- **Messagesource]**  
+ **MessageSource**  
  輸入訊息文字或按一下瀏覽按鈕 ([...])，然後在 [訊息來源]**** 對話方塊中輸入訊息。  
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
- **Messagesource]**  
- 在清單中選取檔案連線管理員，或\<按一下 [**新增連接 ...** ]> 建立新的連線管理員。  
+ **MessageSource**  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]****，即可建立新的連線管理員。  
   
- **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
- **Messagesource]**  
- 在清單中選取變數，或按一下\<[**新增變數 ...** ]> 建立新的變數。  
+ **MessageSource**  
+ 在清單中選取變數，或按一下 [\<新增變數...>]**** 建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   

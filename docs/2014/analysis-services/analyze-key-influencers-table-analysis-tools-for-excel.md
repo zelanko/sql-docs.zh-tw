@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062254"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析關鍵影響因數 (適用於 Excel 的資料表分析工具)
@@ -40,7 +40,7 @@ ms.locfileid: "66062254"
   
 4.  （選擇性）按一下 **[選擇要用於分析的資料行**]。 在 [**高級資料行選取**] 對話方塊中，選擇最有可能包含相關資料的資料行。 若要提升效能和精確度，請取消選取對於模式分析不重要的資料行，如識別碼或名稱。 按一下 **[確定]** 以關閉 [**高級資料行選取**] 對話方塊。  
   
-5.  按一下 **[執行]** 。  
+5.  按一下 [執行]****。  
   
      [**分析關鍵影響**因數] 工具會進行資料的分析，以判斷最佳設定，並自動設定所有參數。  
   

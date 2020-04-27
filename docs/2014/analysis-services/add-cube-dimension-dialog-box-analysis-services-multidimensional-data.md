@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062950"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>加入 Cube 維度對話方塊 (Analysis Services - 多維度資料)
-  使用 ** 中的 [加入 Cube 維度]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度]**** 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入 Cube 維度]**** 對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度]**** 對話方塊：  
   
 -   在 Cube 設計師之 [Cube 結構]**** 或 [維度使用方式]**** 索引標籤的 [工具列]**** 窗格中，按一下 [加入 Cube 維度]****。  
   

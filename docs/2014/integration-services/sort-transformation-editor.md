@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055486"
 ---
 # <a name="sort-transformation-editor"></a>排序轉換編輯器
@@ -33,7 +33,7 @@ ms.locfileid: "66055486"
  **名稱**  
  檢視每個可用輸入資料行的名稱。  
   
- **Ssh**  
+ **通過**  
  指出排序的輸出中是否包含資料行。  
   
  **輸入資料行**  

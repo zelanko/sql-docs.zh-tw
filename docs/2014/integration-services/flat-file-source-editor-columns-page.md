@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058605"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>一般檔案來源編輯器 (資料行頁面)
@@ -43,6 +43,6 @@ ms.locfileid: "66058605"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[一般檔案來源編輯器] &#40;連線管理員頁面&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [一般檔案來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [一般檔案連線管理員](connection-manager/file-connection-manager.md)  
+ [一般檔案連接管理員](connection-manager/file-connection-manager.md)  
   
   

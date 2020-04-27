@@ -17,17 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056270"
 ---
 # <a name="save-a-copy-of-a-package"></a>儲存封裝的複本
   此程序描述如何將封裝的複本儲存至檔案系統、封裝存放區，或 **** 中的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 當您指定儲存封裝副本的位置時，也可以更新封裝名稱。  
   
- 封裝存放區可以包含 **msdb** 資料庫和檔案系統中的資料夾、或者只有包含 **msdb**，或只有包含檔案系統中的資料夾。 在 **msdb**中，封裝是儲存至 **sysssispackages** 資料表。 這個資料表包含了識別封裝所屬之邏輯資料夾的 **folderid** 資料行。 邏輯資料夾會以相同的方式為 **msdb** 中所儲存的封裝提供實用的分組方法，就像檔案系統中的資料夾為檔案系統中所儲存的封裝提供實用的分組方法一樣。 
-  **msdb** 中 **sysssispackagefolders** 資料表的資料列會定義資料夾。  
+ 封裝存放區可以包含 **msdb** 資料庫和檔案系統中的資料夾、或者只有包含 **msdb**，或只有包含檔案系統中的資料夾。 在 **msdb**中，封裝是儲存至 **sysssispackages** 資料表。 這個資料表包含了識別封裝所屬之邏輯資料夾的 **folderid** 資料行。 邏輯資料夾會以相同的方式為 **msdb** 中所儲存的封裝提供實用的分組方法，就像檔案系統中的資料夾為檔案系統中所儲存的封裝提供實用的分組方法一樣。 **msdb** 中 **sysssispackagefolders** 資料表的資料列會定義資料夾。  
   
  如果 **msdb** 不是定義為封裝存放區的一部分，那麼當您在 **[封裝路徑]** 選項中選取 SQL Server 時，可以繼續讓封裝與現有邏輯資料夾產生關聯。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66056270"
   
 1.  在 [方案總管] 中，按兩下要儲存副本的封裝。  
   
-2.  在 [檔案]**** 功能表上，按一下 [另存**套件檔案> 的副本為]\<**。  
+2.  在 [檔案]**** 功能表上，按一下 [另存\<套件檔案> 的副本為]****。  
   
 3.  在 **[儲存封裝的副本]** 對話方塊中，從 **[封裝位置]** 清單選取封裝位置。  
   

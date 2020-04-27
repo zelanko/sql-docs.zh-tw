@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054680"
 ---
 # <a name="variable-grid-options"></a>變數方格選項
@@ -38,17 +38,17 @@ ms.locfileid: "66054680"
 ## <a name="options-for-columns"></a>資料行選項  
  選取您想要在 **[變數]** 視窗中顯示的資料行。  
   
--   **影響範圍**  
+-   **範圍**  
   
 -   **資料類型**  
   
 -   **ReplTest1**  
   
--   **命名空間**  
+-   **Namespace**  
   
 -   **變數值變更時引發事件**  
   
--   **說明**  
+-   **描述**  
   
 -   **運算式**  
   

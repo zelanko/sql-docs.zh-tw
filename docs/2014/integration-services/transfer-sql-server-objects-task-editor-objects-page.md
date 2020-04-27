@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054870"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>傳送 SQL Server 物件工作編輯器 (物件頁面)
@@ -55,7 +55,7 @@ ms.locfileid: "66054870"
 |值|描述|  
 |-----------|-----------------|  
 |**取代**|目的地伺服器上的資料會被覆寫。|  
-|**附加**|從來源伺服器複製的資料會附加至目的地伺服器上的現有資料。|  
+|**追加**|從來源伺服器複製的資料會附加至目的地伺服器上的現有資料。|  
   
 > [!NOTE]  
 >  只有 [CopyData]**** 設定為 [True]**** 時，才能使用 [ExistingData]**** 選項。  
@@ -64,7 +64,7 @@ ms.locfileid: "66054870"
  選取在傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件工作期間是否複製結構描述。  
   
 > [!NOTE]  
->  **CopySchema**僅適用于[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+>  **CopySchema** 只適用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **UseCollation**  
  選取物件的傳送是否應該包含在來源伺服器上所指定的定序。  
@@ -75,11 +75,11 @@ ms.locfileid: "66054870"
  **CopyAllObjects**  
  選取工作會複製指定之來源資料庫中的所有物件，或僅複製選取的物件。  將此選項設定為 False，可讓您選擇在 [CopyAllObjects]**** 區段中選取要傳送的物件以及顯示動態選項。  
   
- **[Objectstocopy**  
+ **ObjectsToCopy**  
  展開 [ObjectsToCopy]****，即可指定應從來源資料庫複製到目的地資料庫的物件。  
   
 > [!NOTE]  
->  只有在**CopyAllObjects**設為**False**時，才可以使用 **[objectstocopy** 。  
+>  只有 **CopyAllObjects** 設定為 **False** 時，才能使用 **ObjectsToCopy**。  
   
  只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]才支援用來複製下列類型之物件的選項：  
   

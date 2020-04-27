@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062924"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>動作組合管理 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[動作]** 索引標籤的 **[動作組合管理]** 窗格，即可存取所指定 Cube 中包含的動作。  
   
 ## <a name="options"></a>選項。  
- **清單**  
+ **名單**  
  顯示動作的名稱。  
   
  選取動作以顯示 **[動作表單編輯器]**，選取鑽研動作以顯示 **[鑽研動作表單編輯器]**，或選取報表動作以顯示 **[報表動作表單編輯器]**。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [動作組合管理]**** 窗格中的動作，即可顯示提供下列選項的內容功能表：  
   
  **新增動作**  

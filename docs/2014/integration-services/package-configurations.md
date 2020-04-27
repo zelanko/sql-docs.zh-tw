@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056887"
 ---
 # <a name="package-configurations"></a>封裝組態
@@ -44,8 +44,7 @@ ms.locfileid: "66056887"
   
 -   組態使封裝更有彈性。 例如，組態可以更新屬性運算式中使用的變數值。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援使用幾種不同的方法儲存封裝組態，例如 XML 檔案、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表，以及環境和封裝變數。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援使用幾種不同的方法儲存封裝組態，例如 XML 檔案、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表，以及環境和封裝變數。  
   
  每個組態都是屬性/值配對。 XML 組態檔和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態類型可以包含多重組態。  
   
@@ -56,8 +55,7 @@ ms.locfileid: "66056887"
   
  當此公用程式載入及執行此封裝時，事件會依照下列順序發生：  
   
-1.  
-  **dtexec** 公用程式會載入此封裝。  
+1.  **dtexec** 公用程式會載入此封裝。  
   
 2.  此公用程式會套用您在設計階段於封裝內所指定的組態，而且會依照封裝內所指定的順序 (唯一的例外是父封裝變數組態。 此公用程式只會在稍後於處理序中套用這些組態一次)。  
   
@@ -69,8 +67,7 @@ ms.locfileid: "66056887"
   
 6.  此公用程式會執行此封裝。  
   
- 
-  **dtexec** 公用程式套用組態的方式會影響下列命令列選項：  
+ **dtexec** 公用程式套用組態的方式會影響下列命令列選項：  
   
 -   您可以在執行階段使用 **/Connection** 或 **/Set** 選項，從不同於設計時所指定的位置載入封裝組態。  
   
@@ -93,8 +90,7 @@ ms.locfileid: "66056887"
 |環境變數|環境變數包含組態。|  
 |登錄項目|登錄項目包含組態。|  
 |父封裝變數|封裝中的變數包含組態。 這個組態類型通常用來更新子封裝中的屬性。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]目錄|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
   
 ### <a name="xml-configuration-files"></a>XML 組態檔  
  如果選取 [XML 組態檔]**** 組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
@@ -148,13 +144,12 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  您提供給組態的名稱為 **ConfigurationFilter** 資料行中儲存的值。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接和間接組態  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供直接和間接組態。 如果您直接指定組態， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 便會在組態項目和封裝物件屬性之間建立直接的連結。 來源的位置沒有變更時，使用直接組態是較好的選擇。 例如，如果您確定封裝中的所有部署都使用相同的檔案路徑，便可指定 XML 組態檔。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供直接和間接組態。 如果您直接指定組態， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 便會在組態項目和封裝物件屬性之間建立直接的連結。 來源的位置沒有變更時，使用直接組態是較好的選擇。 例如，如果您確定封裝中的所有部署都使用相同的檔案路徑，便可指定 XML 組態檔。  
   
  間接組態會使用環境變數。 與直接指定組態設定的方法不同，間接組態會指向包含組態值的環境變數。 如果組態的位置可以針對封裝的每個部署變更，則使用間接組態是較好的選擇。  
   
 ## <a name="related-tasks"></a>相關工作  
- [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
+ [建立套件設定](../../2014/integration-services/create-package-configurations.md)  
   
 ## <a name="related-content"></a>相關內容  
   

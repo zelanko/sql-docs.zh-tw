@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059959"
 ---
 # <a name="data-flow-path-editor-general-page"></a>資料流程路徑編輯器 (一般頁面)
@@ -30,13 +30,13 @@ ms.locfileid: "66059959"
  **名稱**  
  提供路徑的唯一名稱。  
   
- **ID**  
+ **識別碼**  
  路徑的歷程識別碼。 這個屬性是唯讀的。  
   
  **IdentificationString**  
  識別路徑的字串。 根據前面輸入的名稱自動產生。  
   
- **說明**  
+ **描述**  
  描述路徑。  
   
  **PathAnnotation**  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054993"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>傳送作業工作編輯器 (作業頁面)
@@ -41,7 +41,7 @@ ms.locfileid: "66054993"
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|複製所有作業。|  
+|**真正**|複製所有作業。|  
 |**False**|只複製指定的作業。|  
   
  **JobsList**  
@@ -60,8 +60,8 @@ ms.locfileid: "66054993"
 |值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的作業己經存在於目的地伺服器上，工作就會失敗。|  
-|**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
-|**Skip**|工作會略過存在於目的地伺服器上具有相同名稱的作業。|  
+|**改寫**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
+|**過**|工作會略過存在於目的地伺服器上具有相同名稱的作業。|  
   
  **EnableJobsAtDestination**  
  選取是否應啟用已複製到目的地伺服器的作業。  
@@ -70,13 +70,13 @@ ms.locfileid: "66054993"
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|啟用目的地伺服器上的作業。|  
+|**真正**|啟用目的地伺服器上的作業。|  
 |**False**|停用目的地伺服器上的作業。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送作業工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [[傳送作業工作編輯器] &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [SMO 連線管理員](connection-manager/smo-connection-manager.md)  
   

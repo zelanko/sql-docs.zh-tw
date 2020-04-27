@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061034"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 來源編輯器 (錯誤輸出頁面)
-  使用 [CDC 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，即可選取錯誤處理選項。  
+  使用 [CDC 來源編輯器]  對話方塊的 [錯誤輸出]  頁面，即可選取錯誤處理選項。  
   
  若要了解有關 CDC 來源的詳細資訊，請參閱＜ [CDC Source](data-flow/cdc-source.md)＞。  
   
@@ -29,16 +29,16 @@ ms.locfileid: "66061034"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程]**** 索引標籤中，按兩下 CDC 來源。  
+2.  在 [資料流程]  索引標籤中，按兩下 CDC 來源。  
   
-3.  在 [CDC 來源編輯器]**** 中，按一下 [錯誤輸出]****。  
+3.  在 [CDC 來源編輯器]  中，按一下 [錯誤輸出]  。  
   
 ## <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [CDC 來源編輯器]**** 對話方塊的 [連線管理員]**** 頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [CDC 來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  選取 CDC 來源應該如何處理流程中的錯誤：忽略失敗、重新導向資料列，或使元件失效。  

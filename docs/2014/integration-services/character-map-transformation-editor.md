@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060976"
 ---
 # <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
-  使用 [字元對應表轉換編輯器]  對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
+  使用 [字元對應表轉換編輯器]**** 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
   
  若要深入了解字元對應表轉換，請參閱＜ [Character Map Transformation](data-flow/transformations/character-map-transformation.md)＞。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66060976"
  **輸入資料行**  
  從上述資料表檢視選取的輸入資料行。 您也可以藉由使用可用的輸入資料行之清單來變更或移除選擇。  
   
- **目的地**  
+ **Destination**  
  指定字串作業之結果的儲存方式為就地儲存、使用現有的資料行儲存，或將修改的資料儲存為新的資料行。  
   
 |值|描述|  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062215"
 ---
 # <a name="active-operations-dialog-box"></a>作用中的作業對話方塊
@@ -31,18 +31,18 @@ ms.locfileid: "66062215"
   
 2.  [設定選項](#options)  
   
-##  <a name="open_dialog"></a> 開啟 [作用中的作業] 對話方塊  
+##  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a>開啟 [作用中的作業] 對話方塊  
   
 1.  開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]  
   
 2.  連接 Microsoft SQL Server Database Engine  
   
-3.  在 [物件總管] 中，展開 **[Integration Services]** 節點，再以滑鼠右鍵按一下 **[SSISDB]** ，然後按一下 **[作用中的作業]** 。  
+3.  在 [物件總管] 中，展開 **[Integration Services]** 節點，再以滑鼠右鍵按一下 **[SSISDB]**，然後按一下 **[作用中的作業]**。  
   
-##  <a name="options"></a> 設定選項  
+##  <a name="configure-the-options"></a><a name="options"></a>設定選項  
   
 ### <a name="options"></a>選項。  
- **型別**  
+ **類型**  
  指定作業的類型。 以下是 [**類型**] 欄位的可能值，以及 transact-sql `catalog.operations`視圖的 [operations_type] 資料行中的對應值。  
   
 |||  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064482"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -24,13 +24,12 @@ ms.locfileid: "66064482"
   
  **檢視屬性窗格**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟維度設計師，然後按一下 [屬性關聯性]**** 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]**** 索引標籤。  
   
 2.  在工具列上，按一下 **[顯示清單檢視]** 圖示。  
   
 ## <a name="using-the-attributes-list"></a>使用屬性清單  
- 
-  **[屬性]** 清單會顯示維度中的所有屬性。  
+ **[屬性]** 清單會顯示維度中的所有屬性。  
   
  若要在屬性關聯性圖表中找到特定屬性，請按兩下清單中的屬性。 該屬性 (Attribute) 將在屬性關聯性圖表中反白顯示，而且其屬性 (Property) 會顯示在 [屬性] 視窗中。 如果該屬性 (Attribute) 沒有顯示於屬性關聯性圖表中，就只有該屬性的屬性 (Property) 會顯示在 **[屬性]** 視窗中。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66064482"
   
  如需詳細資訊，請參閱[建立屬性關聯性和編輯屬性關聯性對話方塊 &#40;屬性關聯性設計師索引標籤，維度設計師&#41; &#40;Analysis Services - 多維度資料&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) 和[定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)。  
   
- **Rename**  
+ **重新命名**  
  在清單中反白顯示屬性的名稱，然後讓您修改此文字。  
   
  **屬性**  

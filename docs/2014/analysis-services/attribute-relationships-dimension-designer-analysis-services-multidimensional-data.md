@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063193"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>屬性關聯性 (維度設計師) (Analysis Services - 多維度資料)
   使用 [維度設計師] 中的 **[屬性關聯性]** ，即可建立、修改或刪除選取維度的屬性關聯性。  
   
 ## <a name="panes"></a>窗格  
- 
-  **[屬性關聯性]** 頁面包含下列窗格：  
+ **[屬性關聯性]** 頁面包含下列窗格：  
   
- [工具列](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  使用工具列，即可執行維度設計師之 [屬性關聯性]**** 索引標籤上的作業。  
   
  [屬性關聯性圖表](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

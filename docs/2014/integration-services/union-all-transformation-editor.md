@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054825"
 ---
 # <a name="union-all-transformation-editor"></a>聯集全部轉換編輯器
@@ -40,6 +40,6 @@ ms.locfileid: "66054825"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [使用聯集全部轉換來合併資料](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [合併轉換](data-flow/transformations/merge-transformation.md)   
- [合併聯結轉換](data-flow/transformations/merge-join-transformation.md)  
+ [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)  
   
   

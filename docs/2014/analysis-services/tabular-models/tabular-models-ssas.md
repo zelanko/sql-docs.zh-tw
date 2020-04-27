@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066293"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>表格式模型化 (SSAS 表格式)
@@ -25,7 +25,7 @@ ms.locfileid: "66066293"
  您可以使用新的表格式模型專案範本，在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中撰寫表格式模型。 您可以從多個來源匯入資料，然後透過加入關聯性、導出資料行、量值、KPI 及階層，來充實模型。 接著可將模型部署至 Analysis Services 的執行個體，再由其中的用戶端報表應用程式連接至模型。 您可以在 SQL Server Management Studio 中管理已部署的模型，就像是管理多維度模型一樣。 您也可以對其進行資料分割以最佳化處理，並使用以角色為基礎的安全性提供資料列層級的安全性。  
   
 ## <a name="in-this-section"></a>本節內容  
- [&#40;SSAS 表格式&#41;的表格式模型方案](../tabular-model-solutions-ssas-tabular.md)  
+ [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [表格式模型資料庫 &#40;SSAS 表格式&#41;](tabular-model-databases-ssas-tabular.md)  
   

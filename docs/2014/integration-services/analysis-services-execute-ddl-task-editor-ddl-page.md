@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061610"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
@@ -27,8 +27,8 @@ ms.locfileid: "66061610"
  若要了解這個工作，請參閱＜ [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)＞。  
   
 ## <a name="static-options"></a>靜態選項  
- **[連接]**  
- 選取清單中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員，或是按一下 [\<新增連線...>]**** 並使用 [新增 Analysis Services 連線管理員]**** 對話方塊，即可建立新的連線。  
+ **建立**  
+ 選取清單[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的專案[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]或連接管理員，或按一下\<[**新增連接 ...** ]> 並使用 [**加入 Analysis Services 連線管理員**] 對話方塊來建立新的連接。  
   
  **相關主題：** [加入 Analysis Services 連線管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、 [Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)  
   
@@ -44,17 +44,17 @@ ms.locfileid: "66061610"
 ## <a name="dynamic-options"></a>動態選項  
   
 ### <a name="sourcetype--direct-input"></a>SourceType = 直接輸入  
- **Source**  
- 鍵入 DDL 陳述式或按一下省略符號 **(...)**，然後在 [DDL 陳述式]**** 對話方塊中鍵入陳述式。  
+ **來源**  
+ 輸入 ddl 語句或按一下省略號 **（...）** ，然後在 [ **DDL 語句**] 對話方塊中輸入語句。  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = 檔案連接  
- **Source**  
- 選取清單中的 [檔案連線]，或是按一下 [\<新增連線...>]**** 再使用 [檔案連線管理員]**** 對話方塊，即可建立新的連線。  
+ **來源**  
+ 在清單中選取檔案連接，或按一下\<[**新增連接 ...** ]> 並使用 [檔案**連線管理員**] 對話方塊來建立新的連接。  
   
- **相關主題：** 檔案[連線管理員](connection-manager/file-connection-manager.md)  
+ **相關主題：** [檔案連線管理員](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = 變數  
- **Source**  
+ **來源**  
  在清單中選取變數，或按一下 [\<新增變數...>]**** 並使用 [新增變數]**** 對話方塊，以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  

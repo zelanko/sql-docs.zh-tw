@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068414"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>指定資料行對應對話方塊 (採礦精確度圖表)
   使用 [指定資料行對應]**** 索引標籤可從外部資料來源選取資料表，並且將資料行對應至資料採礦模型。 接著您就可以使用該外部資料來測試採礦模型的精確度，並將結果顯示在精確度圖表中。  
   
- **如需詳細資訊：** [&#40;資料採礦&#41;的測試和驗證](data-mining/testing-and-validation-data-mining.md)  
+ **如需詳細資訊，請參閱：** [測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>選項。  
  **採礦結構**  
@@ -43,7 +43,7 @@ ms.locfileid: "66068414"
  **選取案例資料表**  
  按一下即可開啟 [選取資料表]**** 對話方塊，並選取資料來源檢視。  
   
- **注意**只有在未選取案例資料表時，才會出現此按鈕。 若要啟用按鈕而使您可以選取不同的案例資料表，請選取所有現有的資料表，然後再按一下 [移除資料表]****。  
+ **注意**：只有當未選取案例資料表時，才會顯示這個按鈕。 若要啟用按鈕而使您可以選取不同的案例資料表，請選取所有現有的資料表，然後再按一下 [移除資料表]****。  
   
  **選取巢狀資料表**  
  開啟 [選取資料表]**** 對話方塊。 唯有選取了案例資料表時，才會顯示這個按鈕。 如果關聯的採礦結構未包含巢狀資料表，這個按鈕就會停用。  

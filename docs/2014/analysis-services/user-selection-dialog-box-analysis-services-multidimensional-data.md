@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065484"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>使用者選取對話方塊 (Analysis Services - 多維度資料)
-  在 ** 和 ** 中，使用 [使用者選取][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可選取使用者，並針對這些使用者，從 [基於使用方式的最佳化精靈] 的查詢記錄中篩選查詢。  
+  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，使用 [使用者選取]**** 對話方塊，即可選取使用者，並針對這些使用者，從 [基於使用方式的最佳化精靈] 的查詢記錄中篩選查詢。  
   
  若要開啟 [使用者選取]**** 對話方塊，請在基於使用方式的最佳化精靈中，於 [指定查詢準則]**** 頁面上，針對 [使用者]**** 選項按一下省略符號 (...) 按鈕。  
   

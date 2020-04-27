@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062088"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>將資料檢視器加入資料流程
@@ -49,7 +49,7 @@ ms.locfileid: "66062088"
 9. 在 [要顯示的資料行] 區域中，選取要在資料檢視器中顯示的資料行。 根據預設，所有可用的資料行都會選取，並且在 [顯示的資料行]**** 清單中列出。 將不想使用的資料行移至 [未使用的資料行]**** 清單，方法是選取它們然後按一下向左箭號。  
   
     > [!NOTE]  
-    >  在此方格中，代表 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值會以 ISO 8601 格式化字串的形式出現，而且空格分隔符號會取代 `T` 分隔符號。 代表 DT_DATE 和 DT_FILETIME 資料類型的值包括小數秒的七位數。 由於 DT_FILETIME 資料類型只會儲存小數秒的三位數，所以此方格會將其餘四位數顯示為零。 代表 DT_DBTIMESTAMP 資料類型的值包括小數秒的三位數。 如果是代表 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值，則小數秒的位數會對應到針對資料行資料類型指定的小數位數。 如需 ISO 8601 格式的詳細資訊，請參閱 [日期和時間格式](../../2014/integration-services/date-and-time-formats.md)。 如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](data-flow/integration-services-data-types.md)＞。  
+    >  在此方格中，代表 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值會以 ISO 8601 格式化字串的形式出現，而且空格分隔符號會取代 `T` 分隔符號。 代表 DT_DATE 和 DT_FILETIME 資料類型的值包括小數秒的七位數。 由於 DT_FILETIME 資料類型只會儲存小數秒的三位數，所以此方格會將其餘四位數顯示為零。 代表 DT_DBTIMESTAMP 資料類型的值包括小數秒的三位數。 如果是代表 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值，則小數秒的位數會對應到針對資料行資料類型指定的小數位數。 如需 ISO 8601 格式的詳細資訊，請參閱 [日期和時間格式](../../2014/integration-services/date-and-time-formats.md)。 如需資料類型的詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
 10. 按一下 [確定]  。  
   

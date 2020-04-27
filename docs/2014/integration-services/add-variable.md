@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061790"
 ---
 # <a name="add-variable"></a>加入變數
@@ -31,10 +31,10 @@ ms.locfileid: "66061790"
  **名稱**  
  鍵入變數名稱。  
   
- **命名空間**  
+ **Namespace**  
  指定變數的命名空間。 依預設，使用者定義變數是在 **User** 命名空間中。  
   
- **實值型別**  
+ **值類型**  
  選取資料類型。  
   
  **ReplTest1**  
@@ -46,6 +46,6 @@ ms.locfileid: "66061790"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
  [Integration Services 資料類型](data-flow/integration-services-data-types.md)   
- [在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
+ [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
   
   

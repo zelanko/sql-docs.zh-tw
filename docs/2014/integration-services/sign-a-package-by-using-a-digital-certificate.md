@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055619"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用數位憑證來簽署封裝
@@ -50,13 +50,13 @@ ms.locfileid: "66055619"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]**。  
+3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]** 。  
   
-4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]**。  
+4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]** 。  
   
 5.  在 **[選取憑證]** 對話方塊中，選取憑證。  
   
-6.  (選擇性) 按一下 [檢視憑證]**** 檢視憑證資訊。  
+6.  (選擇性) 按一下 [檢視憑證]  檢視憑證資訊。  
   
 7.  按一下 **[確定]** 關閉 **[選取憑證]** 對話方塊。  
   

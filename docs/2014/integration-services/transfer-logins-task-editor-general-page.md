@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054955"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>傳送登入工作編輯器 (一般頁面)
@@ -31,7 +31,7 @@ ms.locfileid: "66054955"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入傳送登入工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

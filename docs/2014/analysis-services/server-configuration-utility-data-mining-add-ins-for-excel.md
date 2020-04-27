@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069065"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>伺服器組態公用程式 (適用於 Excel 的資料採礦增益集)
@@ -22,7 +22,7 @@ ms.locfileid: "66069065"
   
 
   
-##  <a name="bkmk_step1"></a>步驟1：連接到 Analysis Services  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>步驟1：連接到 Analysis Services  
  選擇提供資料採礦演算法並儲存資料採礦模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器。  
   
  當您建立啟用資料採礦的連接時，應該選擇可以試驗各種資料採礦模型的伺服器。 建議您在伺服器上建立新的資料庫，並且將其做為資料採礦專用的資料庫，或是請系統管理員為您準備資料採礦伺服器。 如此您就能在不影響其他服務之效能的情況下建立模型。  
@@ -35,7 +35,7 @@ ms.locfileid: "66069065"
  **驗證**  
  指定驗證方法。 除非您的系統管理員已設定透過 HTTPPump 存取伺服器，否則需要使用 Windows 驗證才能連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
-##  <a name="bkmk_step2"></a>步驟2：允許暫時模型  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>步驟2：允許暫時模型  
  您必須先將 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器屬性變更為允許暫時性採礦模型，才能使用增益集。  
   
  暫時的採礦模型也稱為*會話模型*。 這是因為這些模型只能在您目前的工作階段開啟時儲存。 當您關閉與伺服器的連接時，工作階段會結束，而工作階段期間所使用的任何模型都會遭到刪除。  
@@ -44,7 +44,7 @@ ms.locfileid: "66069065"
   
  精靈首先會偵測您所指定之伺服器上的設定。 如果伺服器已允許暫時性的採礦模型，您可以按 **[下一步]** 繼續進行。 此精靈還提供如何在指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器上啟用暫時性採礦模型的指示，或是如何對您的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 系統管理員提出要求。  
   
-##  <a name="bkmk_step3"></a>步驟3：為增益集使用者建立資料庫  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>步驟3：為增益集使用者建立資料庫  
  在安裝和組態精靈的這個頁面上，您可以建立資料採礦專用的新資料庫，或選取現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
   
 > [!WARNING]  
@@ -54,7 +54,7 @@ ms.locfileid: "66069065"
   
  如果您選擇 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上現有的資料庫，請注意，如果您使用增益集建立模型，而已有該名稱的模型存在，則可能會覆寫現有的模型。  
   
- **Create new database**  
+ **建立新的資料庫**  
  選取這個選項可在選取的伺服器上建立新的資料庫。 資料採礦資料庫將儲存您的資料來源、採礦結構和採礦模型。  
   
  **資料庫名稱**  
@@ -66,7 +66,7 @@ ms.locfileid: "66069065"
  **Database**  
  如果您已選擇此選項使用現有的資料庫，則必須從清單中選取資料庫名稱。  
   
-##  <a name="bkmk_step4"></a>步驟4：授與增益集使用者適當的許可權  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>步驟4：授與增益集使用者適當的許可權  
  您必須確定您 (和增益集的其他使用者) 必須具有必要的權限，才能瀏覽、編輯、處理或建立資料採礦結構和模型。  
   
  根據預設，使用增益集需要有整合式 Windows 驗證。  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058813"
 ---
 # <a name="file-connection-manager-editor"></a>檔案連接管理員編輯器
@@ -30,7 +30,7 @@ ms.locfileid: "66058813"
  若要深入了解檔案連接管理員，請參閱＜ [File Connection Manager](connection-manager/file-connection-manager.md)＞。  
   
 ## <a name="options"></a>選項。  
- **使用量類型**  
+ **使用類型**  
  指定 [檔案連線管理員]**** 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
   
 |值|描述|  
@@ -40,7 +40,7 @@ ms.locfileid: "66058813"
 |建立資料夾|在執行階段建立新資料夾。|  
 |現有的資料夾|使用現有的資料夾。|  
   
- **檔案/資料夾**  
+ **檔案 / 資料夾**  
  若為 [檔案]****，請指定要使用的檔案。  
   
  若為 **[資料夾]**，請指定要使用的資料夾。  

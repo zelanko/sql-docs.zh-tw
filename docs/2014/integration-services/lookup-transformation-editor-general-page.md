@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057835"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>查閱轉換編輯器 (一般頁面)
@@ -40,7 +40,7 @@ ms.locfileid: "66057835"
  **OLE DB 連線管理員**  
  將查閱轉換設定為使用 OLE DB 連接管理員。  
   
- **指定如何處理無相符專案的資料列**  
+ **指定如何處理無相符項目的資料列**  
  選取選項以處理沒有至少符合參考資料集中一個項目的資料列。  
   
  當您選取 **[將資料列重新導向無相符結果輸出]** 時，資料列會重新導向無相符結果輸出，且不當做錯誤處理。 無法使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  

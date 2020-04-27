@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062605"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>演算法參數對話方塊 (採礦模型檢視)
-  使用 [演算法參數]**** 對話方塊，即可調整所選取模型特定的演算法參數。 當您變更演算法參數時，您通常會變更採礦模型的結果。 每一個參數影響結果的方式取決於您所使用的演算法和資料而定。 如需詳細資訊，請參閱[自訂採礦模型和結構](data-mining/customize-mining-models-and-structure.md)。  
+  使用 [演算法參數]**** 對話方塊，即可調整所選取模型特定的演算法參數。 當您變更演算法參數時，您通常會變更採礦模型的結果。 每一個參數影響結果的方式取決於您所使用的演算法和資料而定。 如需詳細資訊，請參閱 [自訂採礦模型和結構](data-mining/customize-mining-models-and-structure.md)。  
   
 ## <a name="options"></a>選項。  
  **參數**  
@@ -35,9 +35,9 @@ ms.locfileid: "66062605"
 |**參數**|列出參數的名稱。|  
 |**ReplTest1**|只有當您要變更參數的預設值時，才輸入值。|  
 |**預設**|如果您在 [值]**** 資料行中並未提供值，則會列出演算法使用之參數的預設值。|  
-|**範圍**|列出可以輸入到 [值]**** 資料行之可能值的範圍。 範圍可以是下列其中一項：<br /><br /> 離散清單，例如1、2、3<br /><br /> 內含範圍，例如 [0，100]<br /><br /> 專有範圍，例如（0,...）<br /><br /> 組合，例如 [0,...）|  
+|**格或**|列出可以輸入到 [值]**** 資料行之可能值的範圍。 範圍可以是下列其中一項：<br /><br /> 離散清單，例如1、2、3<br /><br /> 內含範圍，例如 [0，100]<br /><br /> 專有範圍，例如（0,...）<br /><br /> 組合，例如 [0,...）|  
   
- **說明**  
+ **描述**  
  描述 [參數]**** 清單中選取的參數。  
   
  **加入**  

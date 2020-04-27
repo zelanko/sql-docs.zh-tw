@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057115"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 目的地編輯器 (錯誤輸出頁面)
@@ -36,12 +36,12 @@ ms.locfileid: "66057115"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：** [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  未使用。  
   
- **說明**  
+ **描述**  
  檢視作業的描述。  
   
  **將這個值設定到選取的資料格**  

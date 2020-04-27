@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057085"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 目的地編輯器 (對應頁面)
@@ -34,7 +34,7 @@ ms.locfileid: "66057085"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視所選取的輸入資料行。 您可以選取 [**忽略>]\<** 移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可以選取** \<[略過>** ] 來移除對應，以排除輸出中的資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

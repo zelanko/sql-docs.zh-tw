@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064856"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -28,7 +28,7 @@ ms.locfileid: "66064856"
   
 |選項|允許的值|描述|  
 |------------|--------------------|-----------------|  
-|檔名|最多 260 個字元的任何字串。 這是必要的值。|檔案位置和檔案名稱。<br /><br /> 您可以使用任何副檔名。|  
+|filename|最多 260 個字元的任何字串。 這是必要的值。|檔案位置和檔案名稱。<br /><br /> 您可以使用任何副檔名。|  
 |max_file_size|任何 64 位元整數。 此為選用值。|最大檔案大小 (以 MB 為單位)。 如果未指定 max_file_size，檔案可以成長到磁碟已滿。 預設的檔案大小為 1GB。<br /><br /> max_file_size 必須大於工作階段緩衝區的目前大小。 如果沒有，檔案目標將無法初始化，而且系統會報告 max_file_size 無效。 若要檢視緩衝區的目前大小，請在 [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) 動態管理檢視中查詢 buffer_size 資料行。<br /><br /> 如果預設的檔案大小小於工作階段緩衝區大小，我們建議您將 max_file_size 設定為 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) 目錄檢視中 max_memory 資料行所指定的值。<br /><br /> 當 max_file_size 的大小設定為大於工作階段緩衝區的大小時，它可能會向下捨入到最接近工作階段緩衝區大小的倍數。 這樣做可能會建立小於指定之 max_file_size 值的目標檔案。 例如，如果緩衝區大小是 100MB 而且 max_file_size 設定為 150MB，則產生的檔案就會向下捨入到 100MB，因為其餘 50MB 的空間無法容納第二個緩衝區。<br /><br /> 如果預設的檔案大小小於工作階段緩衝區大小，我們建議您將 max_file_size 設定為 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) 目錄檢視中 max_memory 資料行的值。|  
 |max_rollover_files|任何 32 位元整數。 此為選用值。|要保留在檔案系統中的最大檔案數。 預設值為 5。|  
 |increment|任何 32 位元整數。 此為選用值。|檔案的累加成長 (以 MB 為單位)。 如果未指定，increment 的預設值就是工作階段緩衝區大小的兩倍。|  
@@ -58,9 +58,9 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 擴充的事件目標](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [SQL Server 擴充事件目標](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [fn_xe_file_target_read_file &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [&#40;Transact-sql&#41;建立事件會話](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

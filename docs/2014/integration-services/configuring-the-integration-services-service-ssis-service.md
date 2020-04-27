@@ -16,19 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060502"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>設定 Integration Services 服務 (SSIS 服務)
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]支援服務，以提供與舊版的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容性。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會仰賴組態檔進行設定。 根據預設，此設定檔的名稱為 Msdtssrvr.exe，而檔案位於%ProgramFiles%\Microsoft SQL Server\120\dts\binn 資料夾中。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會仰賴組態檔進行設定。 根據預設，此設定檔的名稱為 Msdtssrvr.exe，而檔案位於%ProgramFiles%\Microsoft SQL Server\120\dts\binn 資料夾中。  
   
  一般來說，您不必為這個組態檔做任何變更，也不必變更此檔案的預設位置。 但是，如果您的封裝儲存在 [!INCLUDE[ssDE](../includes/ssde-md.md)]的具名執行個體或遠端執行個體中，或是儲存在多個 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體中，您就必須修改此組態檔。 另外，如果您將此組態檔移到預設位置以外的位置，就必須修改指定其檔案位置的登錄機碼。  
   
@@ -41,21 +40,20 @@ ms.locfileid: "66060502"
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服務所管理之檔案系統中的封裝位於%ProgramFiles%\Microsoft SQL Server\120\DTS\Packages。  
   
- 此組態檔也會指定哪一個 msdb 資料庫包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務將會管理的封裝。 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 同時安裝。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體並未同時安裝，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝。  
+ 此組態檔也會指定哪一個 msdb 資料庫包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務將會管理的封裝。 根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]同時安裝。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體並未同時安裝， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。  
   
 ### <a name="default-configuration-file-example"></a>預設組態檔範例  
  下列範例會顯示可指定以下設定的預設組態檔：  
   
 -   當 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務停止時，封裝會停止執行。  
   
--   
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中封裝儲存體的根資料夾為 MSDB 和檔案系統。  
+-   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中封裝儲存體的根資料夾為 MSDB 和檔案系統。  
   
 -   此服務會管理儲存於本機預設 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體之 msdb 資料庫內的封裝。  
   
 -   此服務會管理儲存於檔案系統 [封裝] 資料夾內的封裝。  
   
- **預設設定檔的範例**  
+ **預設組態檔的範例**  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -100,7 +98,7 @@ ms.locfileid: "66060502"
 ### <a name="modified-configuration-file-example"></a>修改過的組態檔範例  
  下列範例會顯示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的已修改組態檔。 此檔案適用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，該執行個體稱為 `InstanceName` 且位在名為 `ServerName`的伺服器上。  
   
- **已修改之實例的設定檔範例 SQL Server**  
+ **SQL Server 具名執行個體之已修改組態檔的範例**  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -124,10 +122,8 @@ ms.locfileid: "66060502"
   
   
 > [!CAUTION]  
->  不當地編輯登錄可能會造成嚴重問題，並導致您必須重新安裝作業系統。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 不保證能夠解決不當編輯登錄所產生的問題。 在編輯登錄之前，請先備份重要資料。 如需有關如何備份、還原及編輯登錄的詳細資訊，請參閱 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知識庫文件： [Microsoft Windows 登錄說明](https://support.microsoft.com/kb/256986)。  
+>  不當地編輯登錄可能會造成嚴重問題，並導致您必須重新安裝作業系統。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 不保證能夠解決不當編輯登錄所產生的問題。 在編輯登錄之前，請先備份重要資料。 如需有關如何備份、還原及編輯登錄的詳細資訊，請參閱 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知識庫文件： [Microsoft Windows 登錄說明](https://support.microsoft.com/kb/256986)。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務啟動時會載入組態檔。 登錄項目如有任何變更，就必須重新啟動服務。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務啟動時會載入組態檔。 登錄項目如有任何變更，就必須重新啟動服務。  
   
   

@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069106"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>時序叢集的叢集圖表索引標籤 (採礦模型檢視器)
-  
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集圖表]** 索引標籤會提供時序叢集模型所包含之所有叢集的圖形檢視。  
   
  可以使用此時序叢集模型檢視，從每個叢集鑽研至支援案例 (如果已啟用鑽研)。 還可以為叢集指派描述性名稱，以及變更陰影變數，讓值分佈一目了然。  
   
- **如需詳細資訊：** [Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md)時序群集演算法、[使用 microsoft 時序叢集檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **如需詳細資訊，請參閱 ** [Microsoft 時序叢集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 時序叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -60,7 +59,7 @@ ms.locfileid: "66069106"
  **修訂版面配置**  
  重新排序圖表中的叢集，以修訂版面配置。  
   
- **濃度**  
+ **密度**  
  密度橫條圖的外觀及其包含的值取決於您在 [陰影變數]**** 中選取的屬性。  
   
 -   如果未將任何屬性狀態選定為陰影變數，則根據預設套用至每個叢集的密度陰影表示對該叢集的支援 (相較於案例整體母體擴展)。  

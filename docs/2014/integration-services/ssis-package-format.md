@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055344"
 ---
 # <a name="ssis-package-format"></a>SSIS 封裝格式
@@ -30,8 +30,7 @@ ms.locfileid: "66055344"
   
 -   封裝內可由其他物件參考的大多數物件現在擁有封裝 XML 中所定義的 `refId` 屬性。 現在會保存 `refID`，而不會保存歷程識別碼。 歷程識別碼依然會在執行階段內使用，而且載入封裝時會重新產生。  
   
-     
-  `refId` 值是可讀取及可了解的唯一字串 (相較於 GUID 或整數值)。 此字串類似於在舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中用於封裝組態的路徑值。  
+     `refId` 值是可讀取及可了解的唯一字串 (相較於 GUID 或整數值)。 此字串類似於在舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中用於封裝組態的路徑值。  
   
      如果您要合併兩個封裝版本之間的變更，則 `refId` 可用於尋找/取代作業，以確保該物件的所有參考都已經正確更新。  
   

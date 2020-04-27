@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058700"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>一般檔案目的地編輯器 (連接管理員頁面)
@@ -40,7 +40,7 @@ ms.locfileid: "66058700"
  **覆寫檔案中的資料**  
  指出是要覆寫現有的檔案，還是將資料附加至檔案中。  
   
- **頁首**  
+ **標頭**  
  在寫入任何資料之前，輸入要插入檔案中的文字區塊。 使用此選項來包含其他資訊，例如資料行標題。  
   
  **預覽**  
@@ -48,6 +48,6 @@ ms.locfileid: "66058700"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[一般檔案目的地編輯器] &#40;對應] 頁面&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ [一般檔案目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057051"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 來源編輯器 (連接管理員頁面)
@@ -55,12 +55,12 @@ ms.locfileid: "66057051"
 |選項|描述|  
 |------------|-----------------|  
 |資料表或檢視|從 OLE DB 資料來源中的資料表或檢視擷取資料。|  
-|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊：** [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊︰** [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL (命令)|使用 SQL 查詢從 OLE DB 資料來源中擷取資料。|  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   
  **預覽**  
- 使用 [資料檢視]**** 對話方塊來預覽結果。 **預覽**最多可顯示200個數據列。  
+ 使用 [資料檢視]**** 對話方塊來預覽結果。 [預覽]**** 最多可顯示 200 個資料列。  
   
 > [!NOTE]  
 >  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
@@ -68,7 +68,7 @@ ms.locfileid: "66057051"
 ## <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
 ### <a name="data-access-mode--table-or-view"></a>資料存取模式 = 資料表或檢視  
- **資料表或視圖的名稱**  
+ **資料表或檢視的名稱**  
  從資料來源中可用的清單中選取資料表或檢視名稱。  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>資料存取模式 = 資料表名稱或檢視名稱變數  

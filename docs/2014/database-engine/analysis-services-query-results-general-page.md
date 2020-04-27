@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04dd01f5a91e95152b66247182027c0ba8b5025c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065249"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Analysis Services 查詢結果 (一般頁面)
   使用此頁面可指定執行 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查詢的選項。  
   
- **執行超時**  
+ **執行逾時**  
  指出取消查詢之前要等候的秒數。  
   
  值為 0 表示無盡的等候，或沒有逾時。  

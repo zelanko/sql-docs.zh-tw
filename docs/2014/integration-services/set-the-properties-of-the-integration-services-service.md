@@ -14,19 +14,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055642"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>設定 Integration Services 服務的屬性
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支援服務，以提供與舊版的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容性。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會管理並監視 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的封裝。 當您第一[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]次安裝[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]時，服務就會啟動，而且服務的啟動類型會設定為 [自動]。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會管理並監視 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的封裝。 當您第一[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]次安裝[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]時，服務就會啟動，而且服務的啟動類型會設定為 [自動]。  
   
  在您已經安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務之後，就可以使用 [SQL Server 組態管理員] 或 [服務] MMC 嵌入式管理單元來設定服務的屬性。  
   
@@ -34,11 +33,11 @@ ms.locfileid: "66055642"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>使用 SQL Server 組態管理員來設定 Integration Services 服務的屬性  
   
-1.  在 **[開始]** 功能表上，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
+1.  在 **[開始]** 功能表上，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
 2.  在 [SQL Server 組態管理員]**** 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]****，以滑鼠右鍵按一下 [SQL Server Integration Services]****，然後按一下 [屬性]****。  
   
-3.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，可以執行下列操作：  
+3.  在 [ **SQL Server Integration Services 屬性**] 對話方塊中，您可以執行下列動作：  
   
     -   按一下 **[登入]** 索引標籤，以檢視登入資訊 (例如帳戶名稱)。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66055642"
   
 3.  在 [服務]**** 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]****，以滑鼠右鍵按一下 [SQL Server Integration Services]****，然後按一下 [屬性]****。  
   
-4.  在 [ **SQL Server Integration Services 屬性**] 對話方塊中，您可以執行下列動作：  
+4.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，您可以執行下列動作：  
   
     -   按一下 [**一般**] 索引標籤。若要啟用服務，請選取 [手動] 或 [自動] 啟動類型。 若要停用服務，請在 **[啟動類型]** 方塊中選取 [停用]。 選取 [停用] 不會停止目前正在執行的服務。  
   
@@ -69,8 +68,7 @@ ms.locfileid: "66055642"
   
     -   按一下 **[復原]** 索引標籤，以檢視服務失敗的預設電腦回應。 您可以修改這些選項，以配合您的環境。  
   
-    -   按一下 **[相依性]** 索引標籤，以檢視相依性服務的清單。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不具有相依性。  
+    -   按一下 **[相依性]** 索引標籤，以檢視相依性服務的清單。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不具有相依性。  
   
 5.  按一下 [確定]  。  
   

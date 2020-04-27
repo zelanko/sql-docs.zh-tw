@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316263c823c371d4c90415d694adcadef26f2030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065934"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (翻譯索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
@@ -26,7 +26,7 @@ ms.locfileid: "66065934"
 |------------|-----------------|  
 |**加入商業智慧**|按一下以顯示 **[商業智慧精靈]** ，並將商業智慧功能加入至 Cube。|  
 |**處理程序**|按一下即可顯示 **[處理]** 對話方塊，並處理選取的 Cube。|  
-|**新增翻譯**|按一下即可在所選取 Cube 中建立新的翻譯。|  
+|**新翻譯**|按一下即可在所選取 Cube 中建立新的翻譯。|  
 |**刪除翻譯**|按一下即可顯示 **[刪除物件]** 對話方塊，並刪除選取的翻譯。<br /><br /> 注意：只有在 [翻譯詳細資料] **** 窗格中選取翻譯時，才會啟用此選項。|  
   
   

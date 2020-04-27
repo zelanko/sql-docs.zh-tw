@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058248"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 連接管理員編輯器 (伺服器頁面)
@@ -44,19 +44,19 @@ ms.locfileid: "66058248"
  **密碼**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
- **網域**  
+ **Domain**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
  **使用用戶端憑證**  
  指定 HTTP 連接管理員是否使用用戶端憑證進行驗證。  
   
- **證書**  
+ **憑證**  
  使用 [選取憑證]**** 對話方塊，即可從清單中選取憑證。 文字方塊會顯示與此憑證相關聯的名稱。  
   
- **超時時間（以秒為單位）**  
+ **逾時 (以秒為單位)**  
  提供連接到 Web 伺服器的逾時設定。 此屬性的預設值為 30 秒。  
   
- **區塊大小（以 KB 為單位）**  
+ **區塊大小 (以 KB 為單位)**  
  提供寫入資料的區塊大小。  
   
  **測試連接**  
@@ -64,6 +64,6 @@ ms.locfileid: "66058248"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 連線管理員編輯器 &#40;Proxy 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+ [HTTP 連接管理員編輯器 &#40;Proxy 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066415"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>表格式模型資料庫 (SSAS 表格式)
@@ -24,14 +24,14 @@ ms.locfileid: "66066415"
  表格式模型資料庫比多維度資料庫更容易建置，尤其是當您擁有關聯式資料庫背景時。 除此之外，管理工作與多維度資料庫的資料庫管理很相似，但不完全相同。 相同的工具和方法都適用。  
   
 ## <a name="related-content"></a>相關內容  
- [&#40;SSAS 表格式&#41;的表格式模型方案](../tabular-model-solutions-ssas-tabular.md)  
+ [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [表格式模型資料存取](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>相關工作  
  [處理資料庫、資料表或資料分割](process-database-table-or-partition-analysis-services.md)  
   
- [&#40;SSAS 表格式&#41;的表格式模型角色](tabular-model-roles-ssas-tabular.md)  
+ [表格式模型角色 &#40;SSAS 表格式&#41;](tabular-model-roles-ssas-tabular.md)  
   
  [表格式模型資料分割 &#40;SSAS 表格式&#41;](tabular-model-partitions-ssas-tabular.md)  
   

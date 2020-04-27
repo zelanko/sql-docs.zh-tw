@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062141"
 ---
 # <a name="add-a-source-using-source-assistant"></a>使用來源小幫手加入來源
@@ -28,7 +28,7 @@ ms.locfileid: "66062141"
   
 3.  在 [類型]**** 清單中選取目的地的類型。  
   
-4.  在 [連線管理員]**** 清單中選取現有的連線管理員，或選取 [**新增>]\<**，以建立新的連線管理員。  
+4.  在 [**連接管理員**] 清單中選取現有的連線管理員，或選取** \<[新增>** ] 來建立新的連線管理員。  
   
 5.  如果您選取現有的連線管理員，請按一下 [確定]****，以關閉 [加入新目的地]**** 對話方塊。 您應該會看到目的地和連線管理員已加入資料流程。  
   

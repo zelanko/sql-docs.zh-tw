@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058012"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 部署精靈
@@ -44,7 +44,7 @@ ms.locfileid: "66058012"
   
  如果您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中啟動精靈，則該精靈預設會選取已連接的伺服器執行個體，並輸入所選專案的路徑。 您可以變更這些值，以便將專案部署至不同的位置。  
   
-## <a name="review"></a>審核  
+## <a name="review"></a>檢閱  
  此精靈可讓您在部署專案之前，先檢閱您所選取的設定。 您可以按一下 **[上一步]**，或按一下左窗格中的任何步驟來變更您的選取項目。  
   
 ## <a name="deployresults"></a>部署/結果  

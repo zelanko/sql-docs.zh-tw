@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056063"
 ---
 # <a name="script-transformation-editor-script-page"></a>指令碼轉換編輯器 (指令碼頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[指令碼]** 索引標籤，來指定指令碼和相關的屬性。  
   
- 若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ## <a name="options"></a>選項。  
  **屬性**  
@@ -32,15 +32,14 @@ ms.locfileid: "66056063"
   
 |值|描述|  
 |-----------|-----------------|  
-|**說明**|以其用途來描述指令碼轉換。|  
+|**描述**|以其用途來描述指令碼轉換。|  
 |**LocaleID**|指定地區設定以提供排序和日期和時間轉換的特定區域資訊。|  
 |**名稱**|輸入元件的描述性名稱。|  
-|**ValidateExternalMetadata**|指出指令碼轉換在設計階段是否對外部資料來源驗證資料行中繼資料。 
-  `false` 的值將會延遲到執行時間才驗證。|  
+|**ValidateExternalMetadata**|指出指令碼轉換在設計階段是否對外部資料來源驗證資料行中繼資料。 `false` 的值將會延遲到執行時間才驗證。|  
 |**ReadOnlyVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行唯讀存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
 |**ReadWriteVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行可讀寫存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
-|**ScriptLanguage**|選取指令碼元件所要使用的指令碼語言。<br /><br /> 若要為腳本元件和腳本工作設定預設指令碼語言，請使用 [**選項**] 對話方塊之 [**一般**] 頁面上的 [**指令碼語言**] 選項。 如需相關資訊，請參閱 [General Page](general-page-of-integration-services-designers-options.md)。|  
-|**UserComponentTypeName**|指定支援 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 基礎結構的 `Microsoft.SqlServer.TxScript` 類別和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組件。|  
+|**ScriptLanguage**|選取指令碼元件所要使用的指令碼語言。<br /><br /> 若要為指令碼元件和指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。 如需相關資訊，請參閱 [General Page](general-page-of-integration-services-designers-options.md)。|  
+|**UserComponentTypeName**|指定支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 基礎結構的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 類別和 `Microsoft.SqlServer.TxScript` 組件。|  
   
  **編輯指令碼**  
  使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications （VSTA）來建立或修改腳本。  

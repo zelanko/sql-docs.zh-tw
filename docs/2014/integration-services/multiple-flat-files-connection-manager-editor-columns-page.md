@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057501"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>多個一般檔案連接管理員編輯器 (資料行頁面)
@@ -30,7 +30,7 @@ ms.locfileid: "66057501"
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **說明**  
+ **描述**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
 ## <a name="flat-file-format-dynamic-options"></a>一般檔案格式動態選項  
@@ -41,11 +41,11 @@ ms.locfileid: "66057501"
   
 |值|描述|  
 |-----------|-----------------|  
-|**符分行符號**|資料列是以歸位字元和換行字元的組合分隔。|  
-|**符**|資料列是以歸位字元分隔。|  
+|**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
+|**{CR}**|資料列是以歸位字元分隔。|  
 |**分行符號**|資料列是以換行字元分隔。|  
 |**分號 {;}**|資料列是以分號分隔。|  
-|**冒號 {：}**|資料列是以冒號分隔。|  
+|**冒號 {:}**|資料列是以冒號分隔。|  
 |**千{,}**|資料列是以逗號分隔。|  
 |**定位字元 {t}**|資料列是以定位字元分隔。|  
 |**分隔號 {&#124;}**|資料列是以分隔號分隔。|  
@@ -55,11 +55,11 @@ ms.locfileid: "66057501"
   
 |值|描述|  
 |-----------|-----------------|  
-|**符分行符號**|資料行是以歸位字元和換行字元的組合分隔。|  
-|**符**|資料行是以歸位字元分隔。|  
+|**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
+|**{CR}**|資料行是以歸位字元分隔。|  
 |**分行符號**|資料行是以換行字元分隔。|  
 |**分號 {;}**|資料行是以分號分隔。|  
-|**冒號 {：}**|資料行是以冒號分隔。|  
+|**冒號 {:}**|資料行是以冒號分隔。|  
 |**千{,}**|資料行是以逗號分隔。|  
 |**定位字元 {t}**|資料行是以定位字元分隔。|  
 |**分隔號 {&#124;}**|資料行是以分隔號分隔。|  
@@ -68,7 +68,7 @@ ms.locfileid: "66057501"
  按一下 [重設資料行]****，即可將原始資料行以外的資料行全部移除。  
   
 ### <a name="format--fixed-width"></a>格式 = 固定寬度  
- **字體**  
+ **字型**  
  選取要顯示預覽資料的字型。  
   
  **來源資料行**  
@@ -85,7 +85,7 @@ ms.locfileid: "66057501"
 > [!NOTE]  
 >  不齊右檔案是除了最後一個資料行以外，每一個資料行都有固定寬度。 它是以資料列分隔符號分隔。  
   
- **字體**  
+ **字型**  
  選取要顯示預覽資料的字型。  
   
  **來源資料行**  
@@ -96,11 +96,11 @@ ms.locfileid: "66057501"
   
 |值|描述|  
 |-----------|-----------------|  
-|**符分行符號**|資料列是以歸位字元和換行字元的組合分隔。|  
-|**符**|資料列是以歸位字元分隔。|  
+|**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
+|**{CR}**|資料列是以歸位字元分隔。|  
 |**分行符號**|資料列是以換行字元分隔。|  
 |**分號 {;}**|資料列是以分號分隔。|  
-|**冒號 {：}**|資料列是以冒號分隔。|  
+|**冒號 {:}**|資料列是以冒號分隔。|  
 |**千{,}**|資料列是以逗號分隔。|  
 |**定位字元 {t}**|資料列是以定位字元分隔。|  
 |**分隔號 {&#124;}**|資料列是以分隔號分隔。|  
@@ -112,6 +112,6 @@ ms.locfileid: "66057501"
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [多個一般檔案連線管理員編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [多個一般檔案連線管理員編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [&#40;預覽頁面中的多個一般檔案連線管理員編輯器&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多個一般檔案連線管理員編輯器 &#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

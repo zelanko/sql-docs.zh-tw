@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055420"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 封裝基本功能
-  封裝是實作 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以擷取、轉換和載入資料的物件。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 設計師來建立封裝。 您也可以執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接專案精靈來建立封裝。 如需詳細資訊，請在 SSIS 設計師的[SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)和匯[入專案嚮導](../../2014/integration-services/import-project-wizard.md)。  
+  封裝是實作 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以擷取、轉換和載入資料的物件。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]設計師來建立封裝。 您也可以執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接專案精靈來建立封裝。 如需詳細資訊，請在 SSIS 設計師的[SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)和匯[入專案嚮導](../../2014/integration-services/import-project-wizard.md)。  
   
  基本的套件包含下列項目：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66055420"
   
 ## <a name="related-content"></a>相關內容  
   
-1.  MSDN.Microsoft.com 上的影片：[建立基本封裝 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131023)  
+1.  MSDN.Microsoft.com 上的影片： [建立基本封裝 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131023)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 封裝](../../2014/integration-services/integration-services-ssis-packages.md)   

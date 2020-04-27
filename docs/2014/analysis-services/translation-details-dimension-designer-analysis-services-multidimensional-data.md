@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065847"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -37,43 +37,38 @@ ms.locfileid: "66065847"
   
 -   維度  
   
-     
-  `Caption` 和 `AttributeAllMember` 屬性  
+     `Caption` 和 `AttributeAllMember` 屬性  
   
 -   屬性  
   
-     
-  `Caption`、`AttributeHierarchyDisplayFolder` 和 `NamingTemplate` 屬性  
+     `Caption`、`AttributeHierarchyDisplayFolder` 和 `NamingTemplate` 屬性  
   
     > [!NOTE]  
-    >  
-  `NamingTemplate` 屬性 (Property) 僅適用於父屬性 (Attribute)。  
+    >  `NamingTemplate` 屬性 (Property) 僅適用於父屬性 (Attribute)。  
   
 -   階層  
   
-     
-  `Caption` 和 `AllMemberName` 屬性  
+     `Caption` 和 `AllMemberName` 屬性  
   
 -   層級  
   
-     `Caption`property  
+     `Caption` 屬性  
   
  **\<語言>**  
  以選取的語言鍵入或選取維度物件的屬性值。 按一下省略符號按鈕 (**...**) 會依據所編輯的屬性開啟其他對話方塊：  
   
--   `NamingTemplate`property  
+-   `NamingTemplate` 屬性  
   
      顯示 [[層級命名範本] 對話方塊 &#40;Analysis Services - 多維度資料&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md)。  
   
--   
-  `Caption` 屬性 (Property) (適用於屬性 (Attribute))  
+-   `Caption` 屬性 (Property) (適用於屬性 (Attribute))  
   
      顯示 [[屬性資料翻譯] 對話方塊 &#40;Analysis Services - 多維度資料&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
   
 ## <a name="shortcut-menu"></a>快速鍵功能表  
  以滑鼠右鍵按一下 [翻譯詳細資料]**** 窗格中的翻譯，即可顯示提供下列選項的捷徑功能表：  
   
- **新增翻譯**  
+ **新翻譯**  
  選取即可顯示 [選取語言]**** 對話方塊並建立新的翻譯。 翻譯將會在 **[翻譯詳細資料]** 方格中顯示為新的資料行。  
   
  **刪除翻譯**  
@@ -92,7 +87,7 @@ ms.locfileid: "66065847"
  在 [翻譯詳細資料]**** 方格中修改屬性時，選取即可顯示 [屬性資料翻譯]**** 對話方塊，並修改現有的標題資料行。  
   
 > [!NOTE]  
->  唯有選取 [翻譯詳細資料]**** 方格中的翻譯資料行中、包含屬性標題資料行的資料格時，才會啟用此選項。  
+>   唯有選取 **[翻譯詳細資料]** 方格中的翻譯資料行中、包含屬性標題資料行的資料格時，才會啟用此選項。  
   
  **刪除標題資料行**  
  選取即可刪除 [翻譯詳細資料]**** 方格中所選取屬性的標題資料行。  

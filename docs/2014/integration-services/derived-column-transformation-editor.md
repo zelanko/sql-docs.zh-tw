@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059573"
 ---
 # <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
@@ -44,15 +44,15 @@ ms.locfileid: "66059573"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題**： [Integration Services &#40;ssis&#41; 運算式](expressions/integration-services-ssis-expressions.md)、 [&#40;ssis 運算式&#41;的運算子](expressions/operators-ssis-expression.md)，以及[&#40;ssis 運算式的函數](expressions/functions-ssis-expression.md)&#41;  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
   
  **資料類型**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
  **長度**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動評估運算式，並且設定字串資料的資料行長度。 這個資料行的值是唯讀的。  
   
- **Precision**  
+ **有效位數**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
   
  **調整**  

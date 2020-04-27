@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056274"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
@@ -25,7 +25,7 @@ ms.locfileid: "66056274"
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
   
- **若要開啟 SAP BW 連線管理員編輯器**  
+ **若要開啟 SAP BW 連接管理員編輯器**  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 連線管理員的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66056274"
 > [!NOTE]  
 >  如果您不知道設定連接管理員的所有必要值，可能必須詢問 SAP 系統管理員。  
   
- **Client**  
+ **用戶端**  
  指定系統的用戶端編號。  
   
  **語言**  
@@ -59,7 +59,7 @@ ms.locfileid: "66056274"
   
  若要連接到負載平衡的伺服器群組，請改用 [使用負載平衡]**** 選項。  
   
- **Host**  
+ **主機**  
  如果要連接到單一應用程式伺服器，請指定主機名稱。  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "66056274"
 > [!NOTE]  
 >  只有當您已選取 [使用負載平衡]**** 選項時，才能使用此選項。  
   
- **小組**  
+ **群組**  
  如果要連接到負載平衡的伺服器群組，請指定伺服器群組的名稱。  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ ms.locfileid: "66056274"
 > [!NOTE]  
 >  只有當您已選取 [使用負載平衡]**** 選項時，才能使用此選項。  
   
- **記錄檔目錄**  
+ **記錄目錄**  
  針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 的元件啟用記錄。  
   
  若要啟用記錄，請針對每個 RFC 函數呼叫前後建立的記錄檔指定目錄 (這項記錄功能會使用 XML 格式來建立許多記錄檔。 因為這些記錄檔也包含所有傳輸的資料列，所以這些記錄檔可能會耗用大量磁碟空間)。  

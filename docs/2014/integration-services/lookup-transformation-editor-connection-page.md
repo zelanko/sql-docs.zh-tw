@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057946"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查閱轉換編輯器 (連接頁面)
@@ -43,8 +43,8 @@ ms.locfileid: "66057946"
  **新增**  
  使用 [設定 OLE DB 連接管理員]**** 對話方塊來建立新的連接。  
   
- **使用資料表或視圖**  
- 從清單中選取現有的資料表或檢視，或按一下 [新增]**** 來建立新的資料表。  
+ **使用資料表或檢視**  
+ 從清單中選取現有的資料表或視圖，或按一下 [**新增**] 來建立新的資料表。  
   
 > [!NOTE]  
 >  如果在 **[查閱轉換編輯器]** 的 **[進階]** 頁面上指定 SQL 陳述式，則該 SQL 陳述式會覆寫並取代此處所選取的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)＞。  

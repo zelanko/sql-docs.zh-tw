@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055428"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 連接管理員編輯器 (連接頁面)
@@ -27,17 +27,17 @@ ms.locfileid: "66055428"
  若要深入了解 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition 連線管理員，請參閱 [SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
 ## <a name="options"></a>選項。  
- **輸入資料庫檔案名和路徑**  
+ **輸入資料庫檔案名稱與路徑**  
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 資料庫的路徑與檔名。  
   
  **瀏覽**  
- 使用 [選取 SQL Server Compact Edition 資料庫][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** 對話方塊，尋找所要的 ** Compact 資料庫檔案。  
+ 使用 [選取 SQL Server Compact Edition 資料庫]**** 對話方塊，尋找所要的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 資料庫檔案。  
   
  **輸入資料庫密碼**  
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 資料庫的密碼。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Edition 連線管理員編輯器 &#40;所有頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ [SQL Server Compact Edition 連線管理員編輯器 &#40;全部頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
   

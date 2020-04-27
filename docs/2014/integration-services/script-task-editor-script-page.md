@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056192"
 ---
 # <a name="script-task-editor-script-page"></a>指令碼工作編輯器 (指令碼頁面)
@@ -37,19 +37,19 @@ ms.locfileid: "66056192"
   
  若要為指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。 如需相關資訊，請參閱 [General Page](general-page-of-integration-services-designers-options.md)。  
   
- **EntryPoint**  
- 將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段呼叫的方法指定為指令碼工作程式碼的進入點。 指定的方法必須位於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 專案的 ScriptMain 類別內。ScriptMain 類別是指令碼範本所產生的預設類別。  
+ **入口**  
+ 將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段呼叫的方法指定為指令碼工作程式碼的進入點。 指定的方法必須位於[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications （VSTA）專案的 ScriptMain 類別中。 ScriptMain 類別是腳本範本所產生的預設類別。  
   
  如果您在 VSTA 專案內變更此方法的名稱，您就必須變更 **[EntryPoint]** 屬性的值。  
   
  **ReadOnlyVariables**  
- 鍵入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 ( **...** ) 按鈕，並在 [選取變數]  對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數]**** 對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  
   
  **ReadWriteVariables**  
- 鍵入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 ( **...** ) 按鈕，並在 [選取變數]  對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數]**** 對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  

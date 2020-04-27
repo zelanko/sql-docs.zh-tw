@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057675"
 ---
 # <a name="merge-transformation-editor"></a>合併轉換編輯器
-  使用 [合併轉換編輯器]  ，即可指定來自兩個已排序資料集的資料行，以進行合併。  
+  使用 [合併轉換編輯器]****，即可指定來自兩個已排序資料集的資料行，以進行合併。  
   
 > [!IMPORTANT]  
 >  合併轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  

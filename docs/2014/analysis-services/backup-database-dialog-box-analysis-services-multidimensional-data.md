@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064374"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>備份資料庫對話方塊 (Analysis Services - 多維度資料)
-  透過 ** 中的 [備份資料庫]**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 備份檔 (.abf) 格式，將 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫備份至備份檔案中。  
+  透過 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫]**** 對話方塊，即可使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 備份檔 (.abf) 格式，將 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫備份至備份檔案中。  
   
 > [!IMPORTANT]  
 >  對於每個備份檔案，執行備份命令的使用者必須擁有寫入針對每個檔案所指定之備份位置的權限。 此外，使用者必須具有下列其中一個角色： [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將備份之資料庫上擁有「完整控制 (系統管理員)」權限的資料庫角色成員。  
   
  **顯示備份資料庫對話方塊**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 ** 執行個體的 [資料庫]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料夾或物件總管**** 中的資料庫，然後按一下 [備份]****。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫]**** 資料夾或物件總管**** 中的資料庫，然後按一下 [備份]****。  
   
 ## <a name="options"></a>選項。  
- **文字**  
+ **指令碼**  
  根據在對話方塊中選取的選項，建立備份指令碼。 此還原指令碼是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 撰寫而成。  
   
  依預設，按一下**指令碼**圖示就會將備份指令碼傳送至新的查詢視窗中。  

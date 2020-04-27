@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59c8690a9b71f8a6fecf98e64007eecfbd339b82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064484"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>瀏覽資料來源檢視 (資料採礦精靈)
@@ -25,10 +25,10 @@ ms.locfileid: "66064484"
 > [!NOTE]  
 >  唯有您在精靈的 [選取定義方法]**** 頁面上選取了 [從現有的關聯式資料庫或資料倉儲]**** 後，才會顯示此頁面。  
   
- **如需詳細資訊：多**[維度模型中的資料來源視圖](multidimensional-models/data-source-views-in-multidimensional-models.md)、[資料採礦嚮導 &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，請[建立關聯式的採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊，請參閱** [多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
- **Zoom**  
+ **縮放**  
  使用即可變更圖表中所顯示之詳細資料的層級。  
   
 ## <a name="see-also"></a>另請參閱  

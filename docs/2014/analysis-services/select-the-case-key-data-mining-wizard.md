@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069256"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>選取案例索引鍵 (資料採礦精靈)
@@ -25,7 +25,7 @@ ms.locfileid: "66069256"
 > [!NOTE]  
 >  唯有在精靈的 [選取定義方法] **** 頁面上選取了 [從現有的 Cube] **** 之後，才會顯示這個頁面。  
   
- **如需詳細資訊：** [資料採礦 Wizard &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，請[建立關聯式的採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊，請參閱** [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **屬性**  

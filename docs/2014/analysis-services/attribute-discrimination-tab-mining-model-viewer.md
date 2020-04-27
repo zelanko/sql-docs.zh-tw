@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063126"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>屬性辨識索引標籤 (採礦模型檢視器)
   使用 [屬性辨識]**** 索引標籤，即可比較輸入屬性的狀態以及查看它們與結果屬性如何相關。 先列出造成兩個選取的可預測屬性狀態之間最大差異的屬性值。  
   
- **如需詳細資訊：** [Microsoft 貝氏貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 microsoft 貝氏貝氏機率分類檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **如需詳細資訊，請參閱 ** [Microsoft 貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -34,10 +34,10 @@ ms.locfileid: "66063126"
  **檢視器**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以為每個模型選擇自訂檢視器，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用外掛程式檢視器 (如果有)。  
   
- **Attribute**  
+ **屬性**  
  選擇可預測屬性。  
   
- **值1**  
+ **值 1**  
  選擇一種可預測屬性狀態，和 **[值 2]** 裡包含的狀態進行比較。  
   
  **值2**  

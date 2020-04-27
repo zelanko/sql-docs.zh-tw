@@ -39,17 +39,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069024"
 ---
 # <a name="general-properties"></a>一般屬性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用物件：** 多維度和表格式伺服器模式（除非另有指示）  
+ **適用於** ：多維度與表格式伺服器模式 (除非另有指示)  
   
 ## <a name="non-specific-category"></a>非特定類別目錄  
  `AdminTimeout`  
@@ -77,14 +76,12 @@ ms.locfileid: "66069024"
  `CoordinatorCancelCount`  
  此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。  
   
- 
-  `CoordinatorCancelCount` 在表格式伺服器模式下將會遭到忽略。  
+ `CoordinatorCancelCount` 在表格式伺服器模式下將會遭到忽略。  
   
  `CoordinatorExecutionMode`  
  此為帶正負號的 32 位元整數屬性，定義伺服器會嘗試的最大平行作業數目，包含處理和查詢作業。 零 (0) 表示伺服器會依據內部演算法決定。 正數表示總計的最大作業數目。 具有反轉符號的負數，表示每個處理器的最大作業數目。  
   
- 
-  `CoordinatorExecutionMode` 在表格式伺服器模式下將會遭到忽略。  
+ `CoordinatorExecutionMode` 在表格式伺服器模式下將會遭到忽略。  
   
  此屬性的預設值為 -4，表示伺服器限制為每個處理器 4 個平行作業。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
@@ -134,8 +131,7 @@ ms.locfileid: "66069024"
  如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout` 適用於 Cube 處理命令和回寫作業。  
+>  `ForceCommitTimeout` 適用於 Cube 處理命令和回寫作業。  
   
  `IdleConnectionTimeout`  
  整數屬性，指定處於非使用狀態之連接的逾時 (以秒為單位)。  
@@ -182,6 +178,6 @@ ms.locfileid: "66069024"
   
 ## <a name="see-also"></a>另請參閱  
  [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
- [判斷 Analysis Services 實例的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

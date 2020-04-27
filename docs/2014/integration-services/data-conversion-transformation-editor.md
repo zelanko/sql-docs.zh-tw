@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060046"
 ---
 # <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
@@ -40,12 +40,12 @@ ms.locfileid: "66060046"
  輸入每一個新資料行的別名。 預設為 `Copy of`，後面接著輸入資料行的名稱；但是您也可以選擇任何唯一的描述性名稱。  
   
  **資料類型**  
- 從清單中選取可用的資料類型。 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 從清單中選取可用的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
  **長度**  
  設定字串資料的資料行長度。  
   
- **Precision**  
+ **有效位數**  
  設定數值資料的有效位數。  
   
  **調整**  

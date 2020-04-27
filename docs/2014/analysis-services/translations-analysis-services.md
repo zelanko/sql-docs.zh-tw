@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065874"
 ---
 # <a name="translations-analysis-services"></a>翻譯 (Analysis Services)
@@ -34,7 +34,7 @@ ms.locfileid: "66065874"
  翻譯是由地區設定識別碼 (LCID)、物件的翻譯標題 (例如維度或屬性名稱)，以及 (選擇性) 以目標語言提供資料值的資料行繫結所組成。 您可以有多個翻譯，但任何一個指定的連接只能使用一個翻譯。 理論上，您可以內嵌在模型中的翻譯數目沒有限制，但每個翻譯都會增加測試的複雜性，且所有翻譯都必須共用相同的定序，因此當您設計方案時，請記住這些原本就有的條件約束。  
   
 > [!TIP]  
->  您可以使用用戶端應用程式 (例如 Excel、Management Studio 以及 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ) 來傳回翻譯的字串。 如需詳細資訊，請參閱＜ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) ＞。  
+>  您可以使用用戶端應用程式 (例如 Excel、Management Studio 以及 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ) 來傳回翻譯的字串。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。  
   
 ## <a name="setting-up-a-model-to-support-translated-members"></a>設定模型以支援翻譯的成員  
  多語系方案中所使用的資料模型不只需要翻譯的標籤 (欄位名稱和描述)， 也必須提供以各種字集表示的資料值。 您必須具有繫結至外部資料庫中資料行並傳回資料的個別屬性，才能取得多語系方案。  
@@ -53,7 +53,7 @@ ms.locfileid: "66065874"
   
  日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 `FormatString` 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
- 第[9 課：在 Analysis Services 教學課程中定義觀點和翻譯](lesson-9-defining-perspectives-and-translations.md)，會逐步引導您建立及測試翻譯的步驟。  
+ Analysis Services 教學課程中的[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 將逐步引導您完成建立及測試翻譯的步驟。  
   
 ## <a name="defining-translations"></a>定義翻譯  
  定義翻譯會建立 `Translation` 物件做為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫、維度或 Cube 物件的子系。 使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 開啟方案並定義翻譯。  
@@ -71,7 +71,7 @@ ms.locfileid: "66065874"
   
 4.  建立及部署專案。  
   
-5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱＜ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) ＞。  
+5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>將翻譯加入維度和屬性  
  您可以將翻譯加入資料庫維度、屬性、階層和階層內的層級。  
@@ -100,7 +100,7 @@ ms.locfileid: "66065874"
   
 4.  建立及部署專案。  
   
-5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱＜ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) ＞。  
+5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。  
   
 ### <a name="add-a-translation-of-the-database-name"></a>加入資料庫名稱的翻譯  
  在資料庫層級，您可以加入資料庫名稱和描述的翻譯。 您可能會在指定語言 LCID 的用戶端連接上看到翻譯的資料庫名稱，但這會視工具而定。 例如，即使您指定連接上的地區設定識別碼，在 Management Studio 中檢視資料庫也不會顯示翻譯的名稱。 Management Studio 用來連接至 Analysis Services 的 API 不會讀取 `Language` 屬性。  
@@ -120,6 +120,6 @@ ms.locfileid: "66065874"
  [Analysis Services Multiidimensional 的全球化案例](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [設定或變更資料行定序](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [&#40;Analysis Services 的全球化秘訣和最佳作法&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068828"
 ---
 # <a name="set-advanced-properties-ssas"></a>設定進階屬性 (SSAS)
-  
   **[資料表匯入精靈]** 的這個頁面可讓您指定資料來源連接的其他屬性設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **都會**  
+ **提供者**  
  選取要用於資料來源連接的提供者。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   
  **連接字串**  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49225fac4cc54548b31e262a7ed6899ed4d00e31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061363"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure Resource Manager 連線管理員
@@ -25,7 +25,7 @@ ms.locfileid: "66061363"
 
 若要建立及設定 **Azure Resource Manager 連線管理員**，請遵循下列步驟：
 
-1. 在 [新增 SSIS 連線管理員]  對話方塊中，選取 [AzureResourceManager]  ，然後按一下 [新增]  。
-2. 在 [Azure Resource Manager Connection Manager Editor] (Azure Resource Manager 連線管理員編輯器)  對話方塊中，指定**應用程式識別碼**、**應用程式金鑰**和**租用戶識別碼**服務主體。 如需這些屬性的詳細資訊，請參閱[這篇](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)文章。
-3. 按一下 **[確定]** ，關閉對話方塊。
-4. 您可以在 [屬性]  視窗中看到您建立的連線管理員屬性。
+1. 在 [新增 SSIS 連線管理員]**** 對話方塊中，選取 [AzureResourceManager]****，然後按一下 [新增]****。
+2. 在 [Azure Resource Manager Connection Manager Editor] (Azure Resource Manager 連線管理員編輯器)**** 對話方塊中，指定**應用程式識別碼**、**應用程式金鑰**和**租用戶識別碼**服務主體。 如需這些屬性的詳細資訊，請參閱[這篇](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)文章。
+3. 按一下 [確定]**** 關閉對話方塊。
+4. 您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。

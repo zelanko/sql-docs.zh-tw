@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055647"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>設定使用者定義變數的屬性
@@ -28,8 +28,7 @@ ms.locfileid: "66055647"
 -   [屬性] 視窗。 [屬性]**** 視窗會列出屬性，以供您設定 [變數]**** 視窗中無法使用的變數：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供一組無法更新屬性的系統變數，但屬性 RaiseChangedEvent 除外。  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供一組無法更新屬性的系統變數，但屬性 RaiseChangedEvent 除外。  
   
  **設定變數上的運算式**  
   
@@ -53,8 +52,7 @@ ms.locfileid: "66055647"
   
  **設定命名空間及名稱屬性**  
   
- 
-  `Name` 和 `Namespace` 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
+ `Name` 和 `Namespace` 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>使用變數視窗來設定屬性  
   
@@ -84,7 +82,7 @@ ms.locfileid: "66055647"
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下封裝將其開啟。  
   
-3.  在 [檢視]  功能表上，按一下 [屬性視窗]  。  
+3.  在 [檢視] **** 功能表上，按一下 [屬性視窗] ****。  
   
 4.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [封裝總管]**** 索引標籤，並展開 [封裝] 節點。  
   

@@ -15,15 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061422"
 ---
 # <a name="audit-transformation-editor"></a>稽核轉換編輯器
-  稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
+  稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
   
  若要深入了解稽核轉換，請參閱＜ [Audit Transformation](data-flow/transformations/audit-transformation.md)＞。  
   
@@ -36,8 +35,8 @@ ms.locfileid: "66061422"
   
 |值|描述|  
 |-----------|-----------------|  
-|**執行實例 GUID**|插入唯一識別封裝之執行執行個體的 GUID。|  
-|**套件識別碼**|插入唯一識別封裝的 GUID。|  
+|**執行執行個體 GUID**|插入唯一識別封裝之執行執行個體的 GUID。|  
+|**封裝識別碼**|插入唯一識別封裝的 GUID。|  
 |**封裝名稱**|插入封裝名稱。|  
 |**版本識別碼**|插入唯一識別封裝版本的 GUID。|  
 |**執行開始時間**|插入封裝開始執行的時間。|  

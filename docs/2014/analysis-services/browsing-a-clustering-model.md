@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064674"
 ---
 # <a name="browsing-a-clustering-model"></a>瀏覽群集模型
   當您使用 **[流覽]** 開啟群集模型時，該模型會顯示在互動式檢視器中，類似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的群集檢視器。 此檢視器可協助您探索已建立的叢集，並且了解叢集特性。 您也可以將個別的區段與其他區段或母體進行比較與對照。  
   
-##  <a name="BKMK_Tabs"></a>探索模型  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>探索模型  
  [**流覽**] 視窗包含下列工具，可協助您瞭解您的群集模型並探索基礎資料群組的屬性：  
   
 -   [群集圖表](#BKMK_ClusterDiagram)  
@@ -38,7 +38,7 @@ ms.locfileid: "66064674"
   
  若要試驗叢集模型，您可以使用範例資料活頁簿之 [定型] 索引標籤上的範例資料，然後使用 [叢集[Wizard] 建立群集模型 &#40;適用于 Excel 的資料採礦增益集&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)和所有預設值。  
   
-###  <a name="BKMK_ClusterDiagram"></a>群集圖表  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>群集圖表  
  [**群集圖表**] 索引標籤會顯示所有位於「採礦模型」中的叢集。 您可以在此查看資料集包含多少個不同的群組，以及每個群組彼此之間的遠近程度。  
   
 ##### <a name="explore-the-cluster-diagram"></a>探索叢集圖表  
@@ -85,7 +85,7 @@ ms.locfileid: "66064674"
   
  [回到頁首](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>叢集設定檔  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a>叢集設定檔  
  [**群集設定檔**] 索引標籤可讓您一眼就比較所有叢集的構成。 這是熟悉模型的絕佳起點。 之後，如果您已經在探索特定叢集並且決定需要尋找相關的叢集，這個檢視也很有用。  
   
  叢集**設定檔**也能讓您大致瞭解叢集彼此之間的差異。 因此，您可能會發現使用這個檢視來指定每個叢集的描述性名稱很方便。  
@@ -148,7 +148,7 @@ ms.locfileid: "66064674"
   
  [回到頁首](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>叢集特性  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a> 群集特性  
  [叢集特性] 檢視可讓您實際探索單一叢集，以便找出哪些屬性最能代表這個資料群組的特性。  
   
 ##### <a name="explore-the-cluster-characteristics"></a>探索叢集特性  
@@ -185,7 +185,7 @@ ms.locfileid: "66064674"
   
  [回到頁首](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>群集辨識  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>群集辨識  
  您可以使用 **[叢集**辨識] 索引標籤來比較兩個叢集之間的屬性，或叢集與資料集內所有其他案例之間的屬性。  
   
  為了強調此檢視器的功能，我們會將它與您根據 [叢集**特性**] 視圖所建立之 Excel 中的並列資料表做比較。  

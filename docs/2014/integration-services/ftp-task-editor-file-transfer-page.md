@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058440"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 工作編輯器 (檔案傳輸頁面)
@@ -32,7 +32,7 @@ ms.locfileid: "66058440"
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
+|**真正**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]**。|  
   
  **OverwriteFileAtDestination**  
@@ -43,7 +43,7 @@ ms.locfileid: "66058440"
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
+|**真正**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]**。|  
   
  **運算**  
@@ -66,16 +66,16 @@ ms.locfileid: "66058440"
 ## <a name="isremotepathvariable-dynamic-options"></a>IsRemotePathVariable 動態選項  
   
 ### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
- **[Remotevariable]**  
+ **[RemoteVariable]**  
  選取現有的使用者定義變數，或按一下 [\<新增變數...>]**** 來建立使用者定義變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、新增變數  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
- **RemotePath**  
+ **[RemotePath]**  
  選取現有的 FTP 連線管理員，或\<按一下 [**新增連接 ...** ]> 建立連線管理員。  
   
- **相關主題：** [Ftp 連線管理員](connection-manager/ftp-connection-manager.md)、 [ftp 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **相關主題** [FTP 連線管理員](connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 動態選項  
   
@@ -86,10 +86,10 @@ ms.locfileid: "66058440"
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、新增變數  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
- **LocalPath**  
+ **[LocalPath]**  
  選取現有的檔案連線管理員，或\<按一下 [**新增連接 ...** ]> 建立連線管理員。  
   
- **相關主題**：一般檔案[連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題**： [一般檔案連線管理員](connection-manager/file-connection-manager.md)、 [檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

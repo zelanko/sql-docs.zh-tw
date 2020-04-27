@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058373"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊群組轉換編輯器 (進階索引標籤)
@@ -31,20 +31,18 @@ ms.locfileid: "66058373"
   
 ## <a name="options"></a>選項。  
  **輸入索引鍵資料行名稱**  
- 針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 
-  `_key_in` 資料行具有能唯一識別每個資料列的值。  
+ 針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 `_key_in` 資料行具有能唯一識別每個資料列的值。  
   
  **輸出索引鍵資料行名稱**  
- 針對由一組重複資料列組成的標準資料列，指定包含標準資料列之唯一識別碼的輸出資料行名稱。 
-  `_key_out` 資料行會對應至標準資料之資料列的 `_key_in` 值。  
+ 針對由一組重複資料列組成的標準資料列，指定包含標準資料列之唯一識別碼的輸出資料行名稱。 `_key_out` 資料行會對應至標準資料之資料列的 `_key_in` 值。  
   
- **相似性分數資料行名稱**  
+ **相似度分數資料行名稱**  
  指定包含相似度分數之資料行的名稱。 相似度分數是介於 0 與 1 的值，以表示輸入資料列與標準資料列的相似度。 分數愈接近於 1，資料列與標準資料列的相符程度就愈高。  
   
- **相似性閾值**  
+ **相似度臨界值**  
  使用滑桿來設定相似度臨界值。 臨界值越接近 1，資料列就必須彼此更相似才能判定為重複。 增加臨界值可以改善比對的速度，因為需要考慮的候選記錄比較少。  
   
- **標記分隔符號**  
+ **Token 分隔符號**  
  此項轉換提供了 Token 化資料所用的預設分隔符號集，但您可以依需要編輯清單來新增或移除分隔符號。  
   
 ## <a name="see-also"></a>另請參閱  

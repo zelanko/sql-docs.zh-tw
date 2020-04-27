@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055455"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
@@ -27,10 +27,10 @@ ms.locfileid: "66055455"
  若要深入了解 SQL Server 目的地，請參閱＜ [SQL Server Destination](data-flow/sql-server-destination.md)＞。  
   
 ## <a name="options"></a>選項。  
- **保留身分識別**  
+ **保留識別**  
  指定工作是否應該將值插入識別欄位中。 此屬性的預設值為 `False`。  
   
- **保留 null**  
+ **保留 Null**  
  指定工作是否應該保留 Null 值。 此屬性的預設值為 `False`。  
   
  **表鎖**  
@@ -39,7 +39,7 @@ ms.locfileid: "66055455"
  **檢查條件約束**  
  指定工作是否應該檢查條件約束。 此屬性的預設值為 `True`。  
   
- **引發觸發程式**  
+ **引發觸發程序**  
  指定大量插入是否應該引發資料表上的觸發程序。 此屬性的預設值為 `False`。  
   
  **第一個資料列**  

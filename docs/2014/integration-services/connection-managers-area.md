@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060394"
 ---
 # <a name="connection-managers-area"></a>連接管理員區域
@@ -28,6 +28,6 @@ ms.locfileid: "66060394"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)   
- [SSIS 設計工具](ssis-designer.md)  
+ [SSIS 設計師](ssis-designer.md)  
   
   

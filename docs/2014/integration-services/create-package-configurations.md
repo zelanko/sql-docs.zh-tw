@@ -19,17 +19,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060171"
 ---
 # <a name="create-package-configurations"></a>Create Package Configurations
-  使用 [封裝組態組合管理]**** 對話方塊和「封裝組態精靈」，可以建立封裝組態。 若要存取這些工具，請在 ** 的 [SSIS]**** 功能表中，按一下 [封裝組態]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+  使用 [封裝組態組合管理]**** 對話方塊和「封裝組態精靈」，可以建立封裝組態。 若要存取這些工具，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [SSIS]**** 功能表中，按一下 [封裝組態]****。  
   
 > [!NOTE]  
->  您也可以按一下 [設定 **] 屬性旁的省略號**按鈕，以存取 [**套件設定召集人**]。 [組態] 屬性會顯示在封裝的屬性視窗中。  
+>  您也可以按一下 [組態]**** 屬性旁邊的省略符號按鈕，藉以存取 [封裝組態組合管理]****。 [組態] 屬性會顯示在封裝的屬性視窗中。  
   
 > [!NOTE]  
 >  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
@@ -75,9 +75,9 @@ ms.locfileid: "66060171"
   
 |資料行|描述|  
 |------------|-----------------|  
-|**設定名稱**|組態的名稱。|  
-|**設定類型**|組態類型。|  
-|**設定字串**|組態的位置。 此位置可以是路徑、環境變數、登錄機碼、父封裝變數名稱或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表。|  
+|**組態名稱**|組態的名稱。|  
+|**組態類型**|組態類型。|  
+|**組態字串**|組態的位置。 此位置可以是路徑、環境變數、登錄機碼、父封裝變數名稱或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表。|  
 |**目標物件**|具有擁有組態之屬性的物件名稱。 如果組態為 XML 組態檔，則資料行是空白的，因為該組態可更新多個物件。|  
 |**目標屬性**|屬性的名稱。 如果組態寫入 XML 組態檔或 SQL Server 資料表，則資料行是空白的，因為該組態可更新多個物件。|  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66060171"
   
 10. 檢視 [封裝組態組合管理]**** 對話方塊中的組態。  
   
-11. 按一下 [關閉]  。  
+11. 按一下 **關閉**。  
   
 ## <a name="external-resources"></a>外部資源  
   

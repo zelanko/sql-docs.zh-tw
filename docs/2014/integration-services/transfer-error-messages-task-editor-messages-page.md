@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055042"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>傳送錯誤訊息工作編輯器 (訊息頁面)
@@ -41,17 +41,17 @@ ms.locfileid: "66055042"
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|複製所有的使用者自訂訊息。|  
+|**真正**|複製所有的使用者自訂訊息。|  
 |**False**|只複製指定的使用者自訂訊息。|  
   
  **ErrorMessagesList**  
- 按一下瀏覽按鈕 **(...)** 來選取要複製的錯誤訊息。  
+ 按一下瀏覽按鈕 **（[...]）** 以選取要複製的錯誤訊息。  
   
 > [!NOTE]  
 >  您必須先指定 [SourceConnection]****，才能選取要複製的錯誤訊息。  
   
  **ErrorMessageLanguagesList**  
- 按一下瀏覽按鈕 **(...)**，來選取將使用者定義之錯誤訊息複製到目的地伺服器所用的語言。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，us_english (字碼頁 1033) 版的訊息必須存在於該伺服器上。  
+ 按一下瀏覽按鈕 **（[...]）** ，以選取要將使用者定義的錯誤訊息複製到目的地伺服器的語言。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，us_english (字碼頁 1033) 版的訊息必須存在於該伺服器上。  
   
 > [!NOTE]  
 >  您必須先指定 [SourceConnection]****，才能選取要複製的錯誤訊息。  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065534"
 ---
 # <a name="user-interface-reference-analysis-services"></a>使用者介面參考 (Analysis Services)
@@ -25,13 +25,9 @@ ms.locfileid: "66065534"
 |區段|包含|  
 |-------------|--------------|  
 |[Analysis Services 的 &#40;多維度資料的嚮導&#41;](analysis-services-wizards-multidimensional-data.md)|[[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 精靈] 的說明主題 (多維度)。|  
-|[資料採礦設計工具與對話方塊](data-mining-designers-and-dialog-boxes.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 精靈的說明主題 (資料採礦)。|  
-|[Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中之 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師和對話方塊的說明主題。 (多維度)|  
-|[Analysis Services 的設計工具和對話方塊 &#40;表格式&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 表格式模型中之 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師和對話方塊的說明主題。|  
-|[資料採礦設計工具與對話方塊](data-mining-designers-and-dialog-boxes.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中之 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師和對話方塊的說明主題。 (資料採礦)|  
+|[資料採礦設計工具與對話方塊](data-mining-designers-and-dialog-boxes.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 精靈的說明主題 (資料採礦)。|  
+|[Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 設計師和對話方塊的說明主題。 (多維度)|  
+|[Analysis Services 的設計工具和對話方塊 &#40;表格式&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 表格式模型中之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 設計師和對話方塊的說明主題。|  
+|[資料採礦設計工具與對話方塊](data-mining-designers-and-dialog-boxes.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 設計師和對話方塊的說明主題。 (資料採礦)|  
   
   

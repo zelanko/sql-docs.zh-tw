@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063070"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>屬性資料翻譯對話方塊 (Analysis Services - 多維度資料)
@@ -29,7 +29,7 @@ ms.locfileid: "66063070"
 -   以滑鼠右鍵按一下 [維度設計師]**** 之 [翻譯]**** 索引標籤上的 [翻譯詳細資料]**** 窗格，然後選取 [新增標題資料行]**** 或 [編輯標題資料行]****。  
   
 ## <a name="options"></a>選項。  
- **Attribute**  
+ **屬性**  
  顯示選取的屬性。  
   
  **語言**  

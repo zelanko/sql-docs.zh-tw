@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064423"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的重大變更
@@ -33,10 +33,10 @@ ms.locfileid: "66064423"
   
 -   [SQL Server 2008/SQL Server 2008 R2 中的重大變更](#bkmk_sql10)  
   
-##  <a name="bkmk_sql2014"></a>中的重大變更[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="breaking-changes-in-sssql14"></a><a name="bkmk_sql2014"></a>中的重大變更[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  此版本中的多維度、表格式、資料採礦或 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 功能未宣告任何新的重大變更。  不過，因為  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 很類似 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 版本，所以在此為您提供這兩個舊版的重大變更，以便您從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]升級。  
   
-##  <a name="bkmk_2012Sp1"></a>SQL Server 2012 SP1 中的重大變更  
+##  <a name="breaking-changes-in-sql-server-2012-sp1"></a><a name="bkmk_2012Sp1"></a>SQL Server 2012 SP1 中的重大變更  
  全球化相關的程式碼變更也會中斷某些應用程式。 已知問題包括：  
   
  **物件識別碼的區分大小寫**  
@@ -46,14 +46,14 @@ ms.locfileid: "66064423"
   
  對於斯拉夫文和使用大小寫慣例的其他雙制度語言指令碼 (希臘文、亞美尼亞文和科普特文)，物件識別碼現在則區分大小寫。 當物件識別碼和參考之間有大小寫差異時，最有可能發生重大變更 (例如，全使用小寫參考物件識別碼的處理指令碼)。 此行為可能在未來變更，但做為這個問題的暫時解決辦法，我們建議您修改指令碼，以使用與物件識別碼相同的大小寫。  
   
-##  <a name="bkmk_sql11"></a>中的重大變更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="breaking-changes-in-sssql11"></a><a name="bkmk_sql11"></a>中的重大變更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  本章節記載針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能所報告的重大變更。  
   
 |問題|描述|  
 |-----------|-----------------|  
 |已針對 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 安裝移除安裝命令。|安裝程式會安裝 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]，但是不再設定。 現在已經移除用於組態動作之收集值的安裝命令。 其中包括 /FARMACCOUNT、/FARMPASSWORD、/PASSPHRASE 和 /FARMADMINPORT。<br /><br /> 如果您已經針對自動安裝建立安裝指令碼，您需要為 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 安裝修改這些指令碼。 替代方法是使用 PowerShell 指令程式，在自動安裝模式下設定伺服器。 如需詳細資訊，請參閱[使用 Windows PowerShell](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)[從命令提示字元安裝 powerpivot](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)和 powerpivot 設定。|  
   
-##  <a name="bkmk_sql10"></a>中的重大變更[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+##  <a name="breaking-changes-in-sskatmaisskilimanjaro"></a><a name="bkmk_sql10"></a>中的重大變更[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
  本章節包含舊版的重大變更。 如果您是從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]升級，則應該檢閱 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中導入的重大變更。  
   
 |問題|描述|  
@@ -65,6 +65,6 @@ ms.locfileid: "66064423"
 |如果是在 ProClarity Analytics Server 和 Microsoft Office PerformancePoint Server 2007 中使用 "EXISTING" MDX 關鍵字的查詢，則可能會獲得非預期的結果。|在特定的狀況下，ProClarity Analytics Server 和 Microsoft Office PerformancePoint Server 2007 會錯誤地使用 MDX 的 "EXISTING" 關鍵字。 由於 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Analysis Services 中所做的變更之緣故，這些查詢可能會傳回非預期的結果。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
+ [Analysis Services 回溯相容性](analysis-services-backward-compatibility.md)  
   
   

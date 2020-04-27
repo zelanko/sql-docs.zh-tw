@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062881"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>將模型加入結構 (適用於 Excel 的資料採礦增益集)
@@ -82,19 +82,18 @@ ms.locfileid: "66062881"
   
          如需詳細資訊，請參閱[對採礦模型的鑽](data-mining/drillthrough-on-mining-models.md)看。  
   
-10. 按一下 **[完成]** 儲存您的變更。 當您這樣做時，會將新模型部署到伺服器並進行處理。  
+10. 按一下 [完成]**** 以儲存您的變更。 當您這樣做時，會將新模型部署到伺服器並進行處理。  
   
 ### <a name="related-options"></a>相關的選項  
   
-|選項|註解|  
+|選項|評價|  
 |------------|--------------|  
 |[**選取結構或模型**] 對話方塊|選擇現有的採礦結構，以做為建立新模型的基礎。  您挑選的結構必須位於目前的連接中。 如果沒有，請使用 [[連接到來源資料] &#40;[適用于 Excel&#41;工具的資料採礦用戶端] 來](connect-to-source-data-data-mining-client-for-excel.md)變更連接。|  
-|[**選取挖掘演算法**] 對話方塊|此資料採礦演算法清單會視您連接的伺服器而不同。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Standard Edition 和 Enterprise Edition 提供不同的演算法。 您的管理員可能還加入了自訂演算法。<br /><br /> 如果您看不到任何演算法，請確認您已連接到的實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。|  
+|[**選取挖掘演算法**] 對話方塊|此資料採礦演算法清單會視您連接的伺服器而不同。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Standard Edition 和 Enterprise Edition 提供不同的演算法。 您的管理員可能還加入了自訂演算法。<br /><br /> 如果您看不到任何演算法，請確認您已連接到的實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。|  
 |**演算法參數**對話方塊|在這些設定中，您可以使用分析方法特定的參數來自訂每個演算法。 您也可以設定種子，以確保可跨多個定型傳遞重現模型的結果。<br /><br /> 如需詳細資訊，請參閱[演算法參數 &#40;SQL Server 資料採礦增益集&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)。|  
 |**設定資料行模型旗標**對話方塊|模型旗標可透過指定遺漏資料的處理方式來改善您的模型。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](data-mining/modeling-flags-data-mining.md)。|  
   
-###  <a name="Bkmk_mdlcolumn"></a>設定資料行使用方式  
+###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>設定資料行使用方式  
  當您將新模型加入現有的採礦結構時，必須指定模型將如何在採礦結構中使用每個資料行。 您可能會發現，此 wizard 中的選項遠比在「採礦結構」上的選項更詳細。 原因為何？  
   
  這是因為當您使用精靈同時建立模型和結構時，會自動設定控制演算法如何使用資料的許多選項。 不過，當您將新模型加入現有的結構時，您需要手動檢視這些選項，並指定資料是否應用於分析、資料類型是否正確等等。  

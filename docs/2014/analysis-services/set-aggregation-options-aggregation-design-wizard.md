@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068804"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>設定彙總選項 (彙總設計精靈)
@@ -35,7 +35,7 @@ ms.locfileid: "66068804"
  **不要設計彙總 (0%)**  
  指定彙總設計沒有包含彙總。 使用此選項來清除資料分割、量值群組或 Cube 的現有彙總設計。  
   
- **Start**  
+ **啟動**  
  啟動彙總設計處理。  
   
  **停止**  

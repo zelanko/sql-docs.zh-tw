@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061772"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目的地編輯器 (錯誤輸出頁面)
@@ -42,12 +42,12 @@ ms.locfileid: "66061772"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：** [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  未使用。  
   
- **說明**  
+ **描述**  
  檢視作業的描述。  
   
  **將這個值設定到選取的資料格**  
@@ -58,6 +58,6 @@ ms.locfileid: "66061772"
   
 ## <a name="see-also"></a>另請參閱  
  [ADO NET 目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 目的地編輯器 &#40;對應] 頁面&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [ADO NET 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

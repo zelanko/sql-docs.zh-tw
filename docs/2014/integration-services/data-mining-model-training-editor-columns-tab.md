@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059884"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>資料採礦模型培訓編輯器 (資料行索引標籤)
@@ -41,6 +41,6 @@ ms.locfileid: "66059884"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料採礦模型定型編輯器 &#40;連接] 索引標籤&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [資料採礦模型培訓編輯器 &#40;連接索引標籤&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

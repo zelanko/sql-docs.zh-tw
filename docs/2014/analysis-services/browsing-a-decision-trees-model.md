@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064664"
 ---
 # <a name="browsing-a-decision-trees-model"></a>瀏覽決策樹模型
   當您使用 **[流覽]** 開啟分類模型時，該模型會顯示在互動式決策樹檢視器中， [!INCLUDE[msCoName](../includes/msconame-md.md)]類似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的決策樹檢視器。 此檢視器會將分類的結果顯示成圖形，而這個圖形是設計來反白顯示區分不同資料群組的準則。 您也可以向下鑽研個別的樹狀結構子集，並且擷取基礎資料。  
   
-##  <a name="bkmk_Top"></a>探索模型  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>探索模型  
  以決策樹演算法為基礎的模型具有許多有趣的資訊可探索。 [**流覽**] 視窗包含下列索引標籤和窗格，可協助您瞭解模式並使用圖表預測結果：  
   
 -   [決策樹](#BKMK_DecisionTree)  
@@ -36,7 +36,7 @@ ms.locfileid: "66064664"
   
  若要試驗決策樹模型，您可以使用範例資料活頁簿之 [定型資料] (或 [來源資料]) 索引標籤上的範例資料，然後使用 Bike Buyer 做為可預測的屬性，建立決策樹模型。  
   
-###  <a name="BKMK_DecisionTree"></a>決策樹  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>決策樹  
  這個檢視是要協助您了解並探索導致結果的因數。  
   
  您可以依照下列順序，由左至右讀取決策樹圖形：  
@@ -119,7 +119,7 @@ ms.locfileid: "66064664"
   
  [回到頁首](#bkmk_Top)  
   
-###  <a name="BKMK_DNetwork"></a>相依性網路  
+###  <a name="dependency-network"></a><a name="BKMK_DNetwork"></a>相依性網路  
  [相依性**網路**] 視圖會顯示模型中的輸入屬性和可預測屬性之間的連接。  
   
 1.  按一下並拖曳檢視器左側的滑動軸。  

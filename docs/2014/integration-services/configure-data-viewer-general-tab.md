@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060673"
 ---
 # <a name="configure-data-viewer-general-tab"></a>設定資料檢視器 (一般索引標籤)
@@ -30,10 +30,10 @@ ms.locfileid: "66060673"
  **名稱**  
  提供資料檢視器的唯一名稱。  
   
- **型別**  
+ **類型**  
  列出資料檢視器的類型。 按一下某個類型，即可顯示範例圖表。  
   
- **說明**  
+ **描述**  
  顯示範例圖表，後面接著描述。  
   
 ## <a name="see-also"></a>另請參閱  

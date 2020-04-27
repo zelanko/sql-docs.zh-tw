@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061548"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
@@ -33,7 +33,7 @@ ms.locfileid: "66061548"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

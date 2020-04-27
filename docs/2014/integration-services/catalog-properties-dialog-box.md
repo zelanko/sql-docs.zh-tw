@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061106"
 ---
 # <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
@@ -29,11 +29,11 @@ ms.locfileid: "66061106"
   
  **您想要做什麼事？**  
   
--   [開啟 [目錄屬性] 對話方塊](#open_dialog)  
+-   [開啟目錄屬性對話方塊](#open_dialog)  
   
 -   [設定選項](#options)  
   
-##  <a name="open_dialog"></a>開啟 [目錄屬性] 對話方塊  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>開啟 [目錄屬性] 對話方塊  
   
 1.  開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]  
   
@@ -41,14 +41,14 @@ ms.locfileid: "66061106"
   
 3.  在物件總管中，展開 [Integration Services]**** 節點，並以滑鼠右鍵按一下 [SSISDB]****，然後按一下 [屬性]****。  
   
-##  <a name="options"></a> 設定選項  
+##  <a name="configure-the-options"></a><a name="options"></a>設定選項  
   
 ### <a name="options"></a>選項。  
  下表描述對話方塊中的特定屬性，以及 catalog.catalog_property 檢視表中的對應屬性。  
   
 |屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|描述|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|加密演算法名稱|ENCRYPTION_CLEANUP_ENABLED|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** （預設值）|  
+|加密演算法名稱|ENCRYPTION_CLEANUP_ENABLED|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> **3DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** （預設值）|  
 |驗證逾時 (秒)|VALIDATION_TIMEOUT|指定專案驗證或封裝驗證在停止之前，可以執行的秒數上限。 預設值為 300 秒。<br /><br /> 執行驗證是非同步作業。 專案或封裝愈大，驗證所需時間愈長。<br /><br /> 如需有關驗證專案和封裝的詳細資訊，請參閱＜ [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md)＞。|  
 |定期清除記錄檔|OPERATION_CLEANUP_ENABLED|將屬性設為 True，指出 SQL Server Agent 作業 (作業清除) 會執行。 否則請將屬性設為 False。|  
 |保留週期 (天)|RETENTION_WINDOW|指定可允許的作業資料存在時間上限 (以天為單位)。 SQL Agent 作業 (作業清除) 會移除比指定天數還舊的資料。|  

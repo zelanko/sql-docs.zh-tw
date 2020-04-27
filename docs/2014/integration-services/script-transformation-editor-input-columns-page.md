@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056085"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
@@ -27,7 +27,7 @@ ms.locfileid: "66056085"
 > [!NOTE]  
 >  針對來源元件不會顯示 [輸入資料行]**** 頁面，因為來源元件只有輸出沒有輸入。  
   
- 若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ## <a name="options"></a>選項。  
  **輸入名稱**  
@@ -42,7 +42,7 @@ ms.locfileid: "66056085"
  **輸出別名**  
  輸入每一個輸出資料行的別名。 預設是輸入資料行的名稱；但是，您可以選擇任何唯一的、描述性名稱。  
   
- **使用量類型**  
+ **使用類型**  
  指定指令碼轉換是否要將每個資料行設定為 `ReadOnly` 或是 `ReadWrite`。  
   
 ## <a name="see-also"></a>另請參閱  

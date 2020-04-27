@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059034"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>執行 SQL 工作編輯器 (參數對應頁面)
@@ -43,7 +43,7 @@ ms.locfileid: "66059034"
   
  您必須根據工作所使用的連接管理員類型，來使用數字或參數名稱。 某些連線管理員類型要求參數名稱的第一個字元是 \@ 符號、特定名稱 (如 \@Param1) 或資料行名稱作為參數名稱。  
   
- **相關主題：** [執行 SQL 工作中的參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
+ **相關主題：** [在執行 SQL 工作中設定參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   
  **參數大小**  
  提供具有可變長度之參數的大小，例如字串和二進位欄位。  

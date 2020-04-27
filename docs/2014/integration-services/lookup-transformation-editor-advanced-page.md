@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f78c568d467601b2f23ae8952036764ea2b464d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057875"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>查閱轉換編輯器 (進階頁面)
@@ -27,19 +27,19 @@ ms.locfileid: "66057875"
  若要深入了解查閱轉換，請參閱＜ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
 ## <a name="options"></a>選項。  
- **快取大小（32位）**  
+ **快取大小 (32 位元)**  
  調整 32 位元電腦的快取大小 (以 MB 為單位)。 預設值是 5 MB。  
   
- **快取大小（64位）**  
+ **快取大小 (64 位元)**  
  調整 64 位元電腦的快取大小 (以 MB 為單位)。 預設值是 5 MB。  
   
- **針對沒有相符專案的資料列啟用快取**  
+ **針對無相符項目的資料列啟用快取**  
  將參考資料集中沒有相符項目的資料列存入快取。  
   
- **從快取配置**  
+ **來自快取的配置**  
  指定針對在資料集中沒有相符項目的資料列所配置的快取百分比。  
   
- **修改 SQL 語句**  
+ **修改 SQL 陳述式**  
  修改用來產生參考資料集的 SQL 陳述式。  
   
 > [!NOTE]  

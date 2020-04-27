@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055232"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
@@ -36,14 +36,14 @@ ms.locfileid: "66055232"
  **新增**  
  使用 [設定 OLE DB 連線管理員]**** 對話方塊，來建立新的資料庫連接。  
   
- **資料表或檢視**  
+ **資料表或視圖**  
  選取包含排除詞彙的資料表或檢視。  
   
  **資料行**  
  選取包含排除詞彙之資料表或檢視中的資料行。  
   
  **設定錯誤輸出**  
- 使用 [設定錯誤輸出](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出]](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

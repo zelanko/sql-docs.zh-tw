@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068183"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>指定來源資訊 (維度精靈)
@@ -24,7 +24,7 @@ ms.locfileid: "66068183"
   
  **開啟維度精靈**  
   
--   在方案總管[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]**的 ** 中，以滑鼠右鍵按一下 ** 專案的 [維度]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料夾，然後按一下 [新增維度]****。  
+-   在方案總管**** 的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]**** 資料夾，然後按一下 [新增維度]****。  
   
 ## <a name="options"></a>選項。  
  **資料來源視圖**  

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060955"
 ---
 # <a name="common-properties"></a>通用屬性
@@ -59,9 +59,9 @@ ms.locfileid: "66060955"
   
 -   [一般檔案自訂屬性](data-flow/flat-file-custom-properties.md)  
   
--   [ODBC 目的地自訂屬性](data-flow/odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](data-flow/odbc-destination-custom-properties.md)  
   
--   [ODBC 來源自訂屬性](data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](data-flow/odbc-source-custom-properties.md)  
   
 -   [OLE DB 自訂屬性](data-flow/ole-db-custom-properties.md)OLE DB 自訂屬性  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66060955"
   
 -   [XML 來源自訂屬性](data-flow/xml-source-custom-properties.md)  
   
-##  <a name="components"></a>元件屬性  
+##  <a name="component-properties"></a><a name="components"></a>元件屬性  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中，資料流程中的元件會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面。  
   
  下表將描述資料流程中的元件屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -89,7 +89,7 @@ ms.locfileid: "66060955"
 |ComponentClassID|String|元件的 CLSID。|  
 |ContactInfo|String|元件開發人員的連絡資訊。|  
 |描述|String|資料流程元件的描述。 這個屬性的預設值為資料流程元件的名稱。|  
-|ID|整數|可唯一識別這個元件執行個體的值。|  
+|識別碼|整數|可唯一識別這個元件執行個體的值。|  
 |IdentificationString|String|識別此元件。|  
 |IsDefaultLocale|Boolean|指示元件是否使用其所屬之資料流程工作的地區設定。|  
 |LocaleID|整數|當封裝執行時，資料流程元件所使用的地區設定。 所有的 Windows 地區設定都可用於資料流程元件。|  
@@ -99,7 +99,7 @@ ms.locfileid: "66060955"
 |ValidateExternalMetadata|Boolean|指示是否會驗證外部資料行的中繼資料。 此屬性的預設值為 `True`。|  
 |版本|整數|元件的版本。|  
   
-##  <a name="inputs"></a>輸入屬性  
+##  <a name="input-properties"></a><a name="inputs"></a>輸入屬性  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中，轉換和目的地都有輸入。 資料流程中元件的輸入會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 介面。  
   
  下表將描述資料流程中元件輸入的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -110,7 +110,7 @@ ms.locfileid: "66060955"
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |HasSideEffects|Boolean|指出當元件未附加到下游元件且為`RunInOptimizedMode` `true`時，是否可以從資料流程的執行計畫中移除它。|  
-|ID|整數|可唯一識別輸入的值。|  
+|識別碼|整數|可唯一識別輸入的值。|  
 |IdentificationString|String|識別輸入的字串。|  
 |IsSorted|Boolean|指示是否要排序輸入中的資料。|  
 |名稱|String|輸入的名稱。|  
@@ -119,7 +119,7 @@ ms.locfileid: "66060955"
   
  目的地和某些轉換不支援錯誤輸出，而且這些元件的 ErrorRowDisposition 和 TruncationRowDisposition 屬性是唯讀的。  
   
-###  <a name="inputcolumns"></a>輸入資料行屬性  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a>輸入資料行屬性  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中，輸入包含輸入資料行的集合。 資料流程中元件的輸入資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> 介面。  
   
  下表將描述資料流程中元件輸入資料行的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -131,7 +131,7 @@ ms.locfileid: "66060955"
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|指派給輸入資料行之外部中繼資料行的識別碼。|  
-|ID|整數|可唯一識別輸入資料行的值。|  
+|識別碼|整數|可唯一識別輸入資料行的值。|  
 |IdentificationString|String|識別輸入資料行的字串。|  
 |LineageID|整數|上游資料行的識別碼。|  
 |名稱|String|輸入資料行的名稱。|  
@@ -142,7 +142,7 @@ ms.locfileid: "66060955"
   
  輸入資料行也具有資料類型屬性 (如「資料類型屬性」底下所述)。  
   
-##  <a name="outputs"></a>輸出屬性  
+##  <a name="output-properties"></a><a name="outputs"></a>輸出屬性  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中，來源和轉換都有輸出。 資料流程中元件的輸出會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 介面。  
   
  下表將描述資料流程中元件輸出的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -155,7 +155,7 @@ ms.locfileid: "66060955"
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |ExclusionGroup|整數|識別一組互斥輸出的值。|  
 |HasSideEffects|Boolean|指示當元件未附加到上游元件以及當 `RunInOptimizedMode` 為 `true` 時，是否可以從資料流程的執行計畫中移除此元件的值‧|  
-|ID|整數|可唯一識別輸出的值。|  
+|識別碼|整數|可唯一識別輸出的值。|  
 |IdentificationString|String|識別輸出的字串。|  
 |IsErrorOut|Boolean|指示輸出是否為錯誤輸出。|  
 |IsSorted|Boolean|指示是否要排序輸出。 預設值是 `False`。<br /><br /> ** \* \*重要\*事項**將`IsSorted`屬性的值設定為`True`時，不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
@@ -163,7 +163,7 @@ ms.locfileid: "66060955"
 |SynchronousInputID|整數|與輸出同步之輸入的識別碼。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
   
-###  <a name="outputcolumns"></a>輸出資料行屬性  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a>輸出資料行屬性  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中，輸出包含輸出資料行的集合。 資料流程中元件的輸出資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 介面。  
   
  下表將描述資料流程中元件輸出資料行的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -175,7 +175,7 @@ ms.locfileid: "66060955"
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。 預設值是 `Fail component`。|  
 |ExternalMetadataColumnID|整數|指派給輸入資料行之外部中繼資料行的識別碼。|  
-|ID|整數|可唯一識別輸出資料行的值。|  
+|識別碼|整數|可唯一識別輸出資料行的值。|  
 |IdentificationString|String|識別輸出資料行的字串。|  
 |LineageID|整數|輸出資料行的識別碼。 下游元件會使用這個值來參考此資料行。|  
 |名稱|String|輸出資料行的名稱。|  
@@ -193,7 +193,7 @@ ms.locfileid: "66060955"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |描述|String|描述外部資料行。|  
-|ID|整數|可唯一識別此資料行的值。|  
+|識別碼|整數|可唯一識別此資料行的值。|  
 |IdentificationString|String|識別此資料行的字串。|  
 |名稱|String|外部資料行的名稱。|  
   
@@ -207,7 +207,7 @@ ms.locfileid: "66060955"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |CodePage|整數|指定字串資料的字碼頁不是 Unicode。|  
-|DataType|整數 (列舉)|資料行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
+|DataType|整數 (列舉)|資料行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
 |長度|整數|資料行的長度 (以字元為測量單位)。|  
 |Precision|整數|數值資料行的有效位數。|  
 |調整|整數|數值資料行的小數位數。|  

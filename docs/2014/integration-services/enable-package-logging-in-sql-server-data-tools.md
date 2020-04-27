@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059275"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中啟用封裝記錄功能
@@ -31,20 +31,19 @@ ms.locfileid: "66059275"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
   
 3.  在 [提供者類型]**** 清單中選取記錄提供者，然後按一下 [加入]****。  
   
-4.  在 [設定]**** 資料行中，選取連線管理員，或按一下 [**新增連線>]\<**，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
+4.  在 [**設定**] 資料行中，選取連接管理員，或按一下** \<[新增連接>** ]，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
   
-    -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱 [檔案連線管理員](connection-manager/file-connection-manager.md)  
+    -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱檔案[連線管理員](connection-manager/file-connection-manager.md)  
   
     -   若為 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]，請使用檔案連線管理員。  
   
     -   若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請使用 OLE DB 連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)。  
   
-    -   若為 Windows 事件記錄檔，不需任何動作。 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 會自動建立記錄檔。  
+    -   若為 Windows 事件記錄檔，不需任何動作。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 會自動建立記錄檔。  
   
     -   若為 XML 檔案，請使用「檔案」連接管理員。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66059275"
     > [!NOTE]  
     >  依預設，會記錄所有資訊。  
   
-9. 在 [詳細資料]**** 索引標籤上，按一下 [儲存]****。 [另存新檔]  對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]****。  
+9. 在 [詳細資料]**** 索引標籤上，按一下 [儲存]****。 [另存新檔]**** 對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]****。  
   
 10. 按一下 [確定]  。  
   

@@ -16,22 +16,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059458"
 ---
 # <a name="development-of-an-integration-services-project"></a>部署 Integration Services 專案
   您可以將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝加入專案。 若要建立及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，您必須安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境。 如需詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。  
   
- 當您在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案時，[新增專案]**** 對話方塊將包含 [Integration Services 專案]**** 範本。 此專案範本會建立包含單一封裝的新專案。  
+ 當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，[新增專案]**** 對話方塊將包含 [Integration Services 專案]**** 範本。 此專案範本會建立包含單一封裝的新專案。  
   
-## <a name="projects-and-solutions"></a>專案與解決方案  
+## <a name="projects-and-solutions"></a>專案和方案  
  專案會儲存在方案中。 您可以先建立方案，然後將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案加入方案。 如果沒有方案存在， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會在您第一次建立專案時自動為您建立一個方案。 方案可以包含多個不同類型的專案。  
   
 > [!NOTE]  
->  依預設，當您在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立新的 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 專案時，方案不會顯示在方案總管**** 窗格中。 若要變更這個預設行為，請按一下 [工具]**** 功能表上的 [選項]****。 在 [選項]**** 對話方塊中，展開 [專案和方案]****，然後按一下 [一般]****。 在 [一般]**** 頁面上，選取 [永遠顯示方案]****。  
+>  依預設，當您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，方案不會顯示在方案總管**** 窗格中。 若要變更這個預設行為，請按一下 [工具]**** 功能表上的 [選項]****。 在 [選項]**** 對話方塊中，展開 [專案和方案]****，然後按一下 [一般]****。 在 [一般]**** 頁面上，選取 [永遠顯示方案]****。  
   
 ## <a name="related-tasks"></a>相關工作  
   

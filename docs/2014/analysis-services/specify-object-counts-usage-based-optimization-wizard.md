@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068240"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>指定物件計數 (基於使用方式的最佳化精靈)
@@ -32,7 +32,7 @@ ms.locfileid: "66068240"
  **分割區計數**  
  (選擇性) 輸入量值群組中估計的資料列數目以及資料分割中估計的屬性成員計數。  
   
- **計數**  
+ **Count**  
  針對所有空白欄位，計算並重新填入 [估計計數]**** 資料行的值。 已經顯示計數的欄位不會更新。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058970"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>執行 SQL 工作編輯器 (結果集頁面)
@@ -34,7 +34,7 @@ ms.locfileid: "66058970"
   
  如果結果集類型為 **完整結果集** 或 **XML**，則必須使用 0 作為結果集名稱。  
   
- **相關主題**：[執行 SQL 工作中的結果集](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
+ **相關主題**： [執行 SQL 工作中的結果集](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **變數名稱**  
  選取變數來將結果集對應至變數，或是按一下 [\<新增變數...>]****，使用 [新增變數]**** 對話方塊來新增新的變數。  

@@ -13,15 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054740"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>升級封裝 (SSIS 封裝升級精靈)
-  使用 **[正在升級封裝]** 頁面，即可檢視封裝升級的進度，並在必要時中斷升級程序。 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈會逐一升級選取的封裝。  
+  使用 **[正在升級封裝]** 頁面，即可檢視封裝升級的進度，並在必要時中斷升級程序。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈會逐一升級選取的封裝。  
   
  **檢視儲存到 SQL Server 資料庫或封裝存放區的升級封裝**  
   
@@ -59,6 +58,6 @@ ms.locfileid: "66054740"
 -   以電子郵件訊息傳送報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages.md)  
+ [升級 Integration Services 套件](install-windows/upgrade-integration-services-packages.md)  
   
   

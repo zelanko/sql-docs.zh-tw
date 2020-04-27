@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055920"
 ---
 # <a name="select-variables"></a>選取變數
@@ -31,16 +31,16 @@ ms.locfileid: "66055920"
  **選取的變數**  
  選取一個或多個變數。  
   
- **向右箭號**  
+ **向右鍵**  
  將選取的變數移至 [選取的變數]**** 清單。  
   
- **向左箭號**  
+ **向左鍵**  
  將選取的變數移回到 [可用的變數]**** 清單。  
   
- **New Variable**  
+ **新增變數**  
  建立新變數。  
   
- **相關主題：** [新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：** [加入變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Message Queue Task](control-flow/message-queue-task.md)  

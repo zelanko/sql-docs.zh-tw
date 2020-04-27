@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055846"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>設定或變更封裝的保護等級
@@ -30,7 +30,7 @@ ms.locfileid: "66055846"
  本主題中的程序說明如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 dtutil 命令提示字元公用程式來變更 `ProtectionLevel` 屬性。  
   
 > [!NOTE]  
->  除了本主題中的程序之外，您通常可以在匯入或匯出封裝時，設定或變更封裝的 `ProtectionLevel` 屬性。 您也可以在使用 [`ProtectionLevel` 匯入和匯出精靈] 來儲存封裝時，變更封裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 屬性。  
+>  除了本主題中的程序之外，您通常可以在匯入或匯出封裝時，設定或變更封裝的 `ProtectionLevel` 屬性。 您也可以在使用 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈] 來儲存封裝時，變更封裝的 `ProtectionLevel` 屬性。  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>若要在 SQL Server 資料工具中設定或變更封裝的保護等級  
   
@@ -73,6 +73,6 @@ ms.locfileid: "66055846"
          如果您要對批次檔使用類似命令，請將檔案預留位置 "%f" 改輸入為批次檔適用的 "%%f"。  
   
 ## <a name="see-also"></a>另請參閱  
- [dtutil 公用程式](dtutil-utility.md)  
+ [Encrypt](dtutil-utility.md)  
   
   

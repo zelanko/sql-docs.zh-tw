@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059413"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>維度處理目的地編輯器 (對應頁面)
@@ -42,6 +42,6 @@ ms.locfileid: "66059413"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [維度處理目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [維度處理目的地編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [維度處理目的地編輯器 &#40;進階頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

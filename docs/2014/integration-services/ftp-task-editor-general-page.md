@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058425"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
@@ -33,7 +33,7 @@ ms.locfileid: "66058425"
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題**： [Ftp 連線管理員](connection-manager/ftp-connection-manager.md)、 [ftp 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **相關主題**： [FTP 連線管理員](connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  指出當 FTP 作業失敗時，FTP 工作是否結束。  
@@ -44,7 +44,7 @@ ms.locfileid: "66058425"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入 FTP 工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

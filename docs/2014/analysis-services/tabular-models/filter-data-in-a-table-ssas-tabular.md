@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067133"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>篩選資料表中的資料 (SSAS 表格式)
@@ -33,7 +33,7 @@ ms.locfileid: "66067133"
   
 2.  在 [自動篩選] 功能表中，執行下列其中一項：  
   
-    -   在資料行值清單中，選取或清除要用來篩選的一個或多個值，然後按一下 **[確定]**。  
+    -   在資料行值清單中，選取或清除做為篩選依據的一個或多個值，然後按一下 **[確定]**。  
   
          如果值的數量非常大，在清單中可能不會顯示個別的項目。 但是您會看到「要顯示的項目太多」這個訊息。  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66067133"
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;篩選和排序資料](../filter-and-sort-data-ssas-tabular.md)   
  [SSAS 表格式 &#40;的觀點&#41;](perspectives-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;的角色](roles-ssas-tabular.md)  
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
   
   

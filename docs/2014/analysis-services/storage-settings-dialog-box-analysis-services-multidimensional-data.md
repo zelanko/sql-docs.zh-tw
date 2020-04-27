@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068032"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>儲存設定對話方塊 (Analysis Services - 多維度資料)
-  使用 ** 中的 [儲存設定]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可設定維度、Cube、量值群組或資料分割的主動式快取、儲存和通知設定。 您可藉由下列方式在 ** 中顯示 [儲存設定]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [儲存設定]**** 對話方塊，即可設定維度、Cube、量值群組或資料分割的主動式快取、儲存和通知設定。 您可藉由下列方式在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示 [儲存設定]**** 對話方塊：  
   
 -   在的 [**屬性**] 視窗[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，針對維度、 `ProactiveCaching` cube、量值群組或資料分割的屬性值，按一下省略號按鈕（**...**）。  
   

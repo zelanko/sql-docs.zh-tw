@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066230"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -32,7 +32,7 @@ ms.locfileid: "66066230"
   
  **檢視屬性關聯性索引標籤上的工具列**  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟維度設計師，然後按一下 [屬性關聯性]**** 索引標籤。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]**** 索引標籤。  
   
 ## <a name="options"></a>選項。  
  **加入商業智慧**  
@@ -44,7 +44,7 @@ ms.locfileid: "66066230"
  **新增屬性關聯性**  
  開啟 [建立屬性關聯性]**** 對話方塊，而且您可以在其中定義新的屬性關聯性。  
   
- **Zoom**  
+ **縮放**  
  循環顯示比例百分比，或顯示可用顯示比例選項的清單。  
   
  **展開所有形狀**  

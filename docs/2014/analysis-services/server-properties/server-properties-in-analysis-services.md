@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068894"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中設定伺服器屬性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，可以在同一部伺服器上與其他執行個體分開設定。  
   
  若要設定伺服器屬性，請使用 SQL Server Management Studio，或是編輯特定執行個體的 msmdsrv.ini 檔。  
@@ -37,7 +36,7 @@ ms.locfileid: "66068894"
   
  [伺服器屬性參考](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>設定伺服器（實例）屬性  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>設定伺服器（實例）屬性  
  SQL Server Management Studio 中的屬性頁包含可用屬性的子集，其中只會顯示較可能修改的屬性。 完整的屬性集可以在 msmdsrv.ini 檔中找到。  
   
 > [!NOTE]  
@@ -73,9 +72,8 @@ ms.locfileid: "66068894"
   
 4.  在您儲存檔案之後，必須重新啟動服務。  
   
-##  <a name="bkmk_ref"></a>伺服器屬性參考  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性對於微調您的系統而言很重要。 例如，若要使查詢記錄行為與您的需求一致，您可以設定相關屬性。  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a> 伺服器屬性參考  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性對於微調您的系統而言很重要。 例如，若要使查詢記錄行為與您的需求一致，您可以設定相關屬性。  
   
  下列主題說明各種 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性：  
   
@@ -85,7 +83,7 @@ ms.locfileid: "66068894"
 |[資料採礦屬性](data-mining-properties.md)|資料採礦屬性控制要啟用和停用哪些資料採礦演算法。 依預設，會啟用所有的演算法。|  
 |DSO|不再支援 DSO。 DSO 屬性會遭到忽略。|  
 |[功能屬性](feature-properties.md)|與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。|  
-|[FileStore 屬性](filestore-properties.md)|檔案存放區屬性僅供進階使用。 其中包含進階記憶體管理設定。|  
+|[[內容] 屬性](filestore-properties.md)|檔案存放區屬性僅供進階使用。 其中包含進階記憶體管理設定。|  
 |[鎖定管理員屬性](lock-manager-properties.md)|鎖定管理員屬性定義與鎖定和逾時有關的伺服器行為。 這些屬性大部分僅供進階使用。|  
 |[記錄屬性](log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
 |[記憶體屬性](memory-properties.md)|記憶體屬性控制伺服器如何使用記憶體。 這些屬性主要是供進階使用。|  

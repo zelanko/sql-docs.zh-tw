@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4cabfe4f0d28bb74ae1fae0b84de758e7dca565
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066825"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>處理表格式模型資料分割 (SSAS 表格式)
-  分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 此主題中的工作描述如何使用 ** 中的 [處理資料分割]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊，處理模型資料庫中的資料分割。  
+  分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 此主題中的工作描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [處理資料分割]**** 對話方塊，處理模型資料庫中的資料分割。  
   
-###  <a name="bkmk_create_new"></a>若要處理資料分割  
+###  <a name="to-process-a-partition"></a><a name="bkmk_create_new"></a> 處理資料分割  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下含有您要處理之資料分割的資料表，然後按一下 [資料分割]****。  
   
@@ -28,9 +28,9 @@ ms.locfileid: "66066825"
   
 3.  在 [**處理資料分割**] 對話方塊的 [**模式**] 清單方塊中，選取下列其中一個處理模式：  
   
-    |模式|描述|  
+    |[模式]|描述|  
     |----------|-----------------|  
-    |**進程預設值**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
+    |**處理預設**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  
     |**處理資料**|將資料載入資料分割或資料表，而不重新建立階層或關聯性，或重新計算導出資料行和量值。|  
     |**處理清除**|移除資料分割中的所有資料。|  

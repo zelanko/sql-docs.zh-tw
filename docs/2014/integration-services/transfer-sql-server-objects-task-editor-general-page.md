@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054887"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>傳送 SQL Server 物件工作編輯器 (一般頁面)
@@ -34,7 +34,7 @@ ms.locfileid: "66054887"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件工作的描述。  
   
 ## <a name="see-also"></a>另請參閱  

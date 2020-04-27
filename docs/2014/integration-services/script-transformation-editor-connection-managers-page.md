@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056194"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
   使用 [指令碼轉換編輯器]**** 的 [連線管理員]**** 頁面，即可指定指令碼將要使用的任何連接。  
   
- 若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱＜ [Script Component](data-flow/transformations/script-component.md) ＞和＜ [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ## <a name="options"></a>選項。  
  **連接管理員**  
@@ -36,7 +36,7 @@ ms.locfileid: "66056194"
  **連線管理員**  
  從可用的連線管理員清單中選取，或選取** \<[新增連接>** ] 以開啟 [**加入 SSIS 連線管理員**] 對話方塊。  
   
- **說明**  
+ **描述**  
  輸入連接的描述。  
   
  **加入**  

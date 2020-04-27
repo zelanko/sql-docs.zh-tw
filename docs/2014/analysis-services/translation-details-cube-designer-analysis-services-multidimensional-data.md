@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065863"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -31,47 +31,45 @@ ms.locfileid: "66065863"
   
 -   量值群組  
   
-     `Caption`property  
+     `Caption` 屬性  
   
 -   Measure  
   
-     
-  `Caption` 和 `DisplayFolder` 屬性  
+     `Caption` 和 `DisplayFolder` 屬性  
   
 -   維度  
   
-     `Caption`property  
+     `Caption` 屬性  
   
 -   檢視方塊  
   
-     `Caption`property  
+     `Caption` 屬性  
   
 -   關鍵效能指標 (KPI)  
   
-     
-  `Caption`、`Description` 和 `DisplayFolder` 屬性  
+     `Caption`、`Description` 和 `DisplayFolder` 屬性  
   
 -   動作  
   
-     `Caption`property  
+     `Caption` 屬性  
   
 -   命名集  
   
-     `Caption`property  
+     `Caption` 屬性  
   
 -   「導出成員」  
   
-     `Caption`property  
+     `Caption` 屬性  
   
  **\<語言>**  
  鍵入所選語言中 Cube 物件的屬性值。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [翻譯詳細資料]**** 窗格中的翻譯，即可顯示提供下列選項的操作功能表：  
   
 |詞彙|定義|  
 |----------|----------------|  
-|**新增翻譯**|選取即可顯示 [選取語言]**** 對話方塊並建立新的翻譯。 翻譯將會在 **[翻譯詳細資料]** 方格中顯示為新的資料行。|  
+|**新翻譯**|選取即可顯示 [選取語言]**** 對話方塊並建立新的翻譯。 翻譯將會在 **[翻譯詳細資料]** 方格中顯示為新的資料行。|  
 |**刪除翻譯**|選取以刪除選取的翻譯。|  
   
   

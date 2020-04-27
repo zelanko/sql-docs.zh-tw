@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059550"
 ---
 # <a name="destination-database-files"></a>目的地資料庫檔案
@@ -30,13 +30,13 @@ ms.locfileid: "66059550"
   
  輸入檔案名稱，或是按一下檔案名稱來編輯它。  
   
- **目的地資料夾**  
+ **目的資料夾**  
  目的地伺服器上的資料夾，用於存放將傳送的資料庫檔案。  
   
  輸入資料夾路徑，按一下該資料夾路徑來編輯它，或是按一下瀏覽來找出在目的地伺服器上的資料夾，以存放要傳送的資料庫檔案。  
   
  **網路檔案共用**  
- 在目的地伺服器上的網路共用資料夾，其中存放要傳送的資料庫檔案。 當您在 **[傳送資料庫工作編輯器]** 對話方塊的 **[資料庫]** 頁面中，將 **[方法]** 指定為 **[DatabaseOffline]** ，以離線模式傳送資料庫時，請使用 **[網路檔案共用]** 。  
+ 在目的地伺服器上的網路共用資料夾，其中存放要傳送的資料庫檔案。 當您在離線模式中傳送資料庫時，請在 [**傳送資料庫工作編輯器**] 對話方塊的 [**資料庫**] 頁面中指定 [**為 [databaseoffline** For **Method** ]，以使用**網路檔案共用**。  
   
  輸入網路檔案共用位置，或是按一下瀏覽來找出網路檔案共用位置。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "66059550"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[傳送資料庫工作編輯器] &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [[傳送資料庫工作編輯器 &#40;資料庫] 頁面&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [傳送資料庫工作編輯器 &#40;資料庫頁面&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

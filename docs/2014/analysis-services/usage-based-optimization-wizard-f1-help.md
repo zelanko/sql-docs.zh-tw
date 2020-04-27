@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065564"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基於使用方式的最佳化精靈 F1 說明
@@ -38,13 +38,12 @@ ms.locfileid: "66065564"
   
 -   儲存和選擇性地處理資料分割、量值群組或 Cube，以產生定義的彙總。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的彙總設計精靈，可以依據資料分割結構的統計分析來設計彙總，以提供可受儲存體大小或估計之效能改善限制的彙總設計。 您可以使用彙總設計精靈來改善資料分割的整體效能，但是其中的彙總設計不一定適用於商務使用者的特定需求。 基於使用方式的最佳化精靈可以提供針對這些特定需求的彙總設計，但前提是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的查詢記錄檔必須包含足以建構這種查詢的資訊。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的彙總設計精靈，可以依據資料分割結構的統計分析來設計彙總，以提供可受儲存體大小或估計之效能改善限制的彙總設計。 您可以使用彙總設計精靈來改善資料分割的整體效能，但是其中的彙總設計不一定適用於商務使用者的特定需求。 基於使用方式的最佳化精靈可以提供針對這些特定需求的彙總設計，但前提是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的查詢記錄檔必須包含足以建構這種查詢的資訊。  
   
  通常這兩種精靈都會搭配使用，以改善部署之初以及經過一段時間之後的效能。 在最初部署資料分割 (或包含資料分割的 Cube 或量值群組) 時，應先使用彙總設計精靈，才能提供整體效能上的益處。 在查詢記錄檔中記錄了商務使用者針對資料分割的查詢一段時間之後，您就可以使用基於使用方式的最佳化精靈，進一步改善彙總設計，將重點放在滿足商務使用者對於效能及查詢的需求上。  
   
 > [!NOTE]  
->  如需設定查詢記錄的相關資訊，請參閱 [設定 Analysis Services 查詢記錄](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog)。  
+>   如需有關設定查詢記錄的詳細資訊，請參閱＜ [設定 Analysis Services 查詢記錄](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog)＞(英文)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

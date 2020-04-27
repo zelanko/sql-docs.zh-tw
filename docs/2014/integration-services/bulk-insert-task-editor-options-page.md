@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061185"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大量插入工作編輯器 (選項頁面)
@@ -27,7 +27,7 @@ ms.locfileid: "66061185"
  若要了解如何使用大量插入，請參閱[大量插入工作](control-flow/bulk-insert-task.md)和 [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
 ## <a name="options"></a>選項。  
- **CodePage**  
+ **頁**  
  指定資料檔中之資料的字碼頁。  
   
  **DataFileType**  
@@ -46,10 +46,10 @@ ms.locfileid: "66061185"
  |詞彙|定義|  
 |----------|----------------|  
 |**檢查條件約束**|選取此選項可檢查資料表與資料行條件約束。|  
-|**保留 null**|選取此選項可在大量插入作業期間保留 Null 值，而不是在空白資料行插入任何預設值。|  
-|**啟用身分識別插入**|選取此選項可將現有的值插入識別欄位。|  
+|**保留 Null**|選取此選項可在大量插入作業期間保留 Null 值，而不是在空白資料行插入任何預設值。|  
+|**啟用識別插入**|選取此選項可將現有的值插入識別欄位。|  
 |**表鎖**|選取此選項可在大量插入期間鎖定資料表。|  
-|**引發觸發程式**|選取即可引發資料表上的任何插入、更新或刪除觸發程序。|  
+|**引發觸發程序**|選取即可引發資料表上的任何插入、更新或刪除觸發程序。|  
   
  **SortedData**  
  在大量插入陳述式中指定 ORDER BY 子句。 您所提供的資料行名稱必須是目的資料表中的有效資料行。 預設值為 `false`。 這表示資料並未依 ORDER BY 子句排序。  

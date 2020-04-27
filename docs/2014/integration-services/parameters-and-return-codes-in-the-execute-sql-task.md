@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056793"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>執行 SQL 工作中的參數和傳回碼
@@ -38,13 +38,13 @@ ms.locfileid: "66056793"
   
 -   [在 WHERE 子句中使用參數](#WHERE_clauses)  
   
--   [搭配預存程式使用參數](#Stored_procedures)  
+-   [搭配預存程序使用參數](#Stored_procedures)  
   
 -   [取得傳回碼的值](#Return_codes)  
   
 -   [在執行 SQL 工作編輯器中設定參數和傳回碼](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a>使用參數名稱和標記  
+##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>使用參數名稱和標記  
  依據執行 SQL 工作使用的連接類型，SQL 命令的語法會使用不同的參數標記。 例如， [!INCLUDE[vstecado](../includes/vstecado-md.md)]連線管理員類型要求 SQL 命令使用格式** \@為 varParameter**的參數標記，而 OLE DB 連線類型需要問號（？）參數標記。  
   
  在變數與參數的對應中，可以用來當做參數名稱的名稱也會隨著連線管理員的類型而異。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員類型使用具有 \@ 前置詞的使用者定義名稱，而 OLE DB 連線管理員類型則要求您使用以 0 為基底的序數數值作為參數名稱。  
@@ -59,11 +59,9 @@ ms.locfileid: "66056793"
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### <a name="using-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連線管理員使用參數  
- 
-  [!INCLUDE[vstecado](../includes/vstecado-md.md)] 和 ADO 連線管理員對於使用參數的 SQL 命令，擁有特定的需求：  
+ [!INCLUDE[vstecado](../includes/vstecado-md.md)] 和 ADO 連線管理員對於使用參數的 SQL 命令，擁有特定的需求：  
   
--   
-  [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員要求 SQL 命令必須使用參數名稱作為參數標記。 這表示變數可以直接對應到參數。 例如，`@varName` 變數會對應到名為 `@parName` 的參數，並提供值給 `@parName` 參數。  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員要求 SQL 命令必須使用參數名稱作為參數標記。 這表示變數可以直接對應到參數。 例如， `@varName` 變數會對應到名為 `@parName` 的參數，並提供值給 `@parName`參數。  
   
 -   ADO 連接管理員要求 SQL 命令必須使用問號 (?) 做為參數標記。 不過，您可以使用整數值之外的任何使用者自訂名稱做為參數名稱。  
   
@@ -81,7 +79,7 @@ ms.locfileid: "66056793"
   
  您在使用 OLE DB 連接管理員時無法使用參數化的子查詢，因為執行 SQL 工作無法透過 OLE DB 提供者衍生參數資訊。 不過，您可以使用運算式，將參數值串連到查詢字串，並設定工作的 SqlStatementSource 屬性。  
   
-##  <a name="Date_and_time_data_types"></a>搭配日期和時間資料類型使用參數  
+##  <a name="using-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a>搭配日期和時間資料類型使用參數  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連接管理員使用日期和時間參數  
  讀取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 類型、`time` 和 `datetimeoffset` 的資料時，使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 或 ADO 連接管理員的執行 SQL 工作具有下列額外需求：  
@@ -105,7 +103,7 @@ ms.locfileid: "66056793"
   
 -   具有適當資料類型的輸出參數，如下表所列示。  
   
-    |`Output`參數類型|日期資料類型|  
+    |`Output` 參數類型|日期資料類型|  
     |-------------------------------|--------------------|  
     |DBDATE|`date`|  
     |DBTIME2|`time`|  
@@ -121,7 +119,7 @@ ms.locfileid: "66056793"
   
 -   具有適當資料類型的 `output` 參數，如下表所列示。  
   
-    |`Output`參數類型|日期資料類型|  
+    |`Output` 參數類型|日期資料類型|  
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
@@ -130,7 +128,7 @@ ms.locfileid: "66056793"
   
  如果資料沒有以適當的輸入或輸出參數儲存，則封裝會失敗。  
   
-##  <a name="WHERE_clauses"></a>在 WHERE 子句中使用參數  
+##  <a name="using-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a>在 WHERE 子句中使用參數  
  SELECT、INSERT、UPDATE 和 DELETE 命令經常包含 WHERE 子句，以指定篩選條件，用以定義來源資料表中每個資料列必須符合才能做為 SQL 命令的條件。 參數會在 WHERE 子句中提供篩選值。  
   
  您可以使用參數標記，動態提供參數值。 SQL 陳述式中可以使用的參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定。  
@@ -149,26 +147,25 @@ ms.locfileid: "66056793"
   
 -   ADO 連接類型可以使用任何兩個參數名稱，例如 Param1 和 Param2，但這些名稱必須對應它們在參數清單中的序數位置。  
   
--   
-  [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連接類型使用參數名稱 \@parmMinProductID 和 \@parmMaxProductID。  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連接類型使用參數名稱 \@parmMinProductID 和 \@parmMaxProductID。  
   
-##  <a name="Stored_procedures"></a>搭配預存程式使用參數  
+##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>搭配預存程式使用參數  
  執行預存程序的 SQL 命令亦可使用參數對應。 如何使用參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定，這一點與參數化查詢的規則相同。  
   
- 下表依照連接管理員類型列出 EXEC 命令的範例。 這些範例會執行 ** 中的 **uspGetBillOfMaterials[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] 預存程序。 預存程式會使用`@StartProductID`和`@CheckDate` `input`參數。  
+ 下表依照連接管理員類型列出 EXEC 命令的範例。 這些範例會執行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]預存程序。 預存程式會使用`@StartProductID`和`@CheckDate` `input`參數。  
   
 |連線類型|EXEC 語法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題[程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
 |ADO|如果 Isquerystoredprocedure 設設定為`False`，`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 Isquerystoredprocedure 設設定為`True`，`uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|如果 Isquerystoredprocedure 設設定為`False`，`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 Isquerystoredprocedure 設設定為`True`，`uspGetBillOfMaterials`|  
   
- 若要使用輸出參數，此語法要求您必須在每個參數標記後面加上 OUTPUT 關鍵字。 例如，下列輸出參數語法是正確的：`EXEC myStoredProcedure ? OUTPUT`。  
+ 若要使用輸出參數，此語法要求您必須在每個參數標記後面加上 OUTPUT 關鍵字。 例如，下列輸出參數語法是正確的： `EXEC myStoredProcedure ? OUTPUT`。  
   
  如需搭配 Transact-SQL 預存程序使用輸入和輸出參數的詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)。  
   
-##  <a name="Return_codes"></a>取得傳回碼的值  
+##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>取得傳回碼的值  
  預存程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要在執行 SQL 工作中實作傳回碼，請使用 `ReturnValue` 類型的參數。  
   
  下表依據連接類型列出實作傳回碼的部分 EXEC 命令範例。 所有的範例都使用 `input` 參數。 所有參數類型（`Input`、 `Output`和`ReturnValue`）的使用參數標記和參數名稱的規則都相同。  
@@ -178,7 +175,7 @@ ms.locfileid: "66056793"
 |連線類型|EXEC 語法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題[程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
 |ADO|如果 Isquerystoreprocedure 設設定為`False`，`EXEC ? = myStoredProcedure 1`<br /><br /> 如果 Isquerystoreprocedure 設設定為`True`，`myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set Isquerystoreprocedure 設設定為`True`。<br /><br /> `myStoredProcedure`|  
   
@@ -186,7 +183,7 @@ ms.locfileid: "66056793"
   
  如需搭配 Transact-SQL 預存程序使用傳回碼的詳細資訊，請參閱 [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)。  
   
-##  <a name="Configure_parameters_and_return_codes"></a>在執行 SQL 工作中設定參數和傳回碼  
+##  <a name="configuring-parameters-and-return-codes-in-the-execute-sql-task"></a><a name="Configure_parameters_and_return_codes"></a>在執行 SQL 工作中設定參數和傳回碼  
  如需可以在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中設定之參數和傳回碼屬性的詳細資訊，請按一下下列主題：  
   
 -   [[執行 SQL 工作編輯器] &#40;[參數對應] 頁面&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  

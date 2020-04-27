@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063165"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>屬性設定檔索引標籤 (採礦模型檢視器)
   可以使用 **[屬性設定檔]** 索引標籤，來查看貝氏機率分類模型狀態中輸入值的分佈如何影響結果屬性的每個狀態。 值的分佈會顯示為彩色長條圖，而且所有分佈都會以表格格式呈現，以便更輕鬆地比較值。  
   
- **如需詳細資訊：** [Microsoft 貝氏貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 microsoft 貝氏貝氏機率分類檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **如需詳細資訊，請參閱 ** [Microsoft 貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

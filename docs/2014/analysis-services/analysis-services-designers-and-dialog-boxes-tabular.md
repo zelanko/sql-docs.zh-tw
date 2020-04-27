@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062565"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services 設計師與對話方塊 (表格式)
-  
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的表格式專案撰寫環境和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的表格式模型管理工具包含數個對話方塊、屬性頁和精靈頁面。 您可以按一下 [說明] 按鈕或按 F1，以取得詳細資訊。  
   
  本節主題：  

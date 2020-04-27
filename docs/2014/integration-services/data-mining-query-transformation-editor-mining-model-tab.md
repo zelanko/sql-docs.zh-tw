@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059773"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>資料採礦查詢轉換編輯器 (採礦模型索引標籤)
@@ -27,7 +27,7 @@ ms.locfileid: "66059773"
  若要深入了解資料採礦查詢轉換，請參閱＜ [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md)＞。  
   
 ## <a name="options"></a>選項。  
- **[連接]**  
+ **建立**  
  使用清單方塊來選取現有的 Analysis Services 連接，或使用 [新增]**** 按鈕來建立新的連接，如下所述。  
   
  **新增**  

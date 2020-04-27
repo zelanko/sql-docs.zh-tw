@@ -24,14 +24,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068887"
 ---
 # <a name="memory-properties"></a>記憶體屬性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器記憶體屬性。 如需設定這些屬性的指引，請參閱《 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)》。  
   
  1 - 100 之間的值代表 **實體記憶體總計** 或 **虛擬位址空間**的百分比，以較少者為準。 超過 100 的值代表記憶體限制 (位元組)。  
@@ -58,7 +57,7 @@ ms.locfileid: "66068887"
   
  零（**0**）會停用分頁。 如果記憶體不足，處理會失敗，且會出現記憶體不足的錯誤。 如果您停用分頁，就必須授與 Windows 權限給服務帳戶。 如需指示，請參閱[設定服務帳戶 &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)。  
   
- 預設值為**1** 。 此屬性允許使用作業系統分頁檔 (pagefile.sys)，在磁碟中分頁。  
+ **1** 是預設值。 此屬性允許使用作業系統分頁檔 (pagefile.sys)，在磁碟中分頁。  
   
  當 `VertiPaqPagingPolicy` 設為 1 時，處理比較不可能因為記憶體限制而失敗，因為伺服器將會嘗試使用您指定的方法，在磁碟中分頁。 設定 `VertiPaqPagingPolicy` 屬性並不能保證記憶體錯誤永遠不會發生。 在下列狀況下，記憶體不足錯誤仍然可能發生：  
   
@@ -113,6 +112,6 @@ ms.locfileid: "66068887"
   
 ## <a name="see-also"></a>另請參閱  
  [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
- [判斷 Analysis Services 實例的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

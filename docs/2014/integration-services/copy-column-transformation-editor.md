@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060297"
 ---
 # <a name="copy-column-transformation-editor"></a>複製資料行轉換編輯器
@@ -37,7 +37,7 @@ ms.locfileid: "66060297"
  從可用輸入資料行的清單中選取要複製的資料行。 您的選擇會反映在 **[可用的輸入資料行]** 資料表的核取方塊選擇中。  
   
  **輸出別名**  
- 輸入每個新輸出資料行的別名。 預設為 **[的副本]** ，後面緊接著輸入資料行的名稱，但是您也可以選擇任何唯一的描述性名稱。  
+ 輸入每個新輸出資料行的別名。 預設為 **[的副本]**，後面緊接著輸入資料行的名稱，但是您也可以選擇任何唯一的描述性名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066033"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -37,7 +37,7 @@ ms.locfileid: "66066033"
 |**顯示資料表**|按一下即可顯示 [顯示資料表]**** 對話方塊，並在 [資料來源檢視]**** 窗格中，顯示與 Cube 相關聯之資料來源檢視的資料表。|  
 |**隱藏資料表**|按一下即可隱藏在 [資料來源檢視]**** 窗格中選取的資料表。<br /><br /> 注意：如果 [資料來源檢視]**** 窗格中沒有選取資料表，此選項會停用。|  
 |**尋找資料表**|按一下即可顯示 [尋找資料表]**** 對話方塊，並在 [資料來源檢視]**** 窗格中尋找資料表。|  
-|**Zoom**|按一下即可循環瀏覽顯示比例的百分比選項，或為 [資料來源檢視]**** 窗格選取可用的顯示比例之百分比選項。|  
+|**縮放**|按一下即可循環瀏覽顯示比例的百分比選項，或為 [資料來源檢視]**** 窗格選取可用的顯示比例之百分比選項。|  
 |**顯示**|按一下即可循環瀏覽下列選項，或選取下列選項之一來變更 [資料來源檢視]**** 窗格的檢視：<br /><br /> **樹狀檢視**：在樹狀檢視中顯示資料表、命名查詢、資料行、命名計算和關聯性。<br /><br /> **圖表視圖**：在資料庫關係圖中顯示資料表、命名查詢、資料行、命名計算和關聯性。|  
   
   

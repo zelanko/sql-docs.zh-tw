@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067074"
 ---
 # <a name="hierarchies-ssas-tabular"></a>階層 (SSAS 表格式)
@@ -28,7 +28,7 @@ ms.locfileid: "66067074"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> 優點  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
  資料表可以包含數十個或甚至數百個具有不常見資料行名稱的資料行，且沒有明顯的順序。 這可能會導致未排序的報表用戶端欄位清單外觀，讓使用者很難在報表中尋找及包含資料。 階層可以針對複雜的資料結構，提供簡單直覺式的檢視。  
   
  例如，您可以在 Date 資料表中建立 Calendar 階層。 Calendar Year 做為最上層的父層級，而 Month、Week 和 Day 則加入做為子層級 (Calendar Year->Month->Week->Day)。 此階層顯示從 [日曆年度] 到 [天] 的邏輯關聯性。 用戶端使用者可以接著從 [欄位清單] 中選取 [日曆年度]，以在樞紐分析表中包含所有層級，或者展開階層，然後僅選取要包含在樞紐分析表中的特定層級。  
@@ -37,9 +37,9 @@ ms.locfileid: "66067074"
   
  階層可以包含在檢視方塊中。 檢視方塊會定義可檢視之模型子集，對模型提供具體的商務特有或應用程式特有視點。 例如，檢視方塊可以根據使用者特定的報表需求，提供必要資料項目的可檢視清單 (階層)。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)。  
   
- 階層並非用來做為安全性機制，而是用來提供較佳使用者體驗的工具。 特定階層的所有安全性，都是繼承自基礎模型。 如果使用者沒有模型物件的存取權，階層也無法提供這些存取權。 必須先解決模型資料庫的安全性，才能透過階層提供模型中物件的存取權。 您可使用安全性角色來保護模型中繼資料和資料的安全。 如需詳細資訊，請參閱 [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)。  
+ 階層並非用來做為安全性機制，而是用來提供較佳使用者體驗的工具。 特定階層的所有安全性，都是繼承自基礎模型。 如果使用者沒有模型物件的存取權，階層也無法提供這些存取權。 必須先解決模型資料庫的安全性，才能透過階層提供模型中物件的存取權。 您可使用安全性角色來保護模型中繼資料和資料的安全。 如需詳細資訊，請參閱 [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)中撰寫的表格式模型專案。  
   
-##  <a name="bkmk_define"></a>定義階層  
+##  <a name="defining-hierarchies"></a><a name="bkmk_define"></a>定義階層  
  您可以在 [圖表檢視] 中，使用模型設計師建立及管理階層。 不支援在模型設計師的 [資料檢視] 中建立及管理階層。 若要在 [圖表檢視] 中檢視模型設計師，請按一下 **[模型]** 功能表，指向 **[模型檢視]**，然後按一下 **[圖表檢視]**。  
   
  若要建立階層，請以滑鼠右鍵按一下您要指定為父層級的資料行，然後按一下 [建立階層]****。 您可以 (在單一資料表內) 複選要包含的任意資料行數目，您也可稍後按一下資料行並拖曳至父層級，以將資料行加入為子層級。 選取多個資料行時，會根據基數順序自動加入資料行。 您可以按一下資料行 (層級) 並拖曳至其他順序，或使用操作功能表上的 [向上] 和 [向下] 導覽控制項，來變更順序。 您可以透過將資料行拖放至父層級上，使用自動偵測將資料行加入為子層級。  
@@ -50,15 +50,15 @@ ms.locfileid: "66067074"
   
  建立階層之後，您可以使用 [在 Excel 中進行分析] 功能測試階層的功效。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
   
-##  <a name="bkmk_related_tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相關工作  
   
-|Task|描述|  
+|工作|描述|  
 |----------|-----------------|  
-|[建立和管理 &#40;SSAS 表格式&#41;的階層](hierarchies-ssas-tabular.md)|描述如何在 [圖表檢視] 中，使用模型設計師建立及管理階層。|  
+|[建立及管理階層 &#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)|描述如何在 [圖表檢視] 中，使用模型設計師建立及管理階層。|  
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型設計師 &#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)   
  [SSAS 表格式 &#40;的觀點&#41;](perspectives-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;的角色](roles-ssas-tabular.md)  
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
   
   

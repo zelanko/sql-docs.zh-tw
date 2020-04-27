@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054823"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>在資料流程元件中使用運算式
@@ -66,8 +66,8 @@ ms.locfileid: "66054823"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)   
- [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
- [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
+ [條件式分割轉換](data-flow/transformations/conditional-split-transformation.md)   
+ [衍生的資料行轉換](data-flow/transformations/derived-column-transformation.md)   
  [資料流程工作](control-flow/data-flow-task.md)   
  [資料流程](data-flow/data-flow.md)  
   

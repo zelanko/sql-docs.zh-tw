@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056433"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>執行 SQL 工作中的結果集
@@ -33,30 +33,25 @@ ms.locfileid: "66056433"
   
 -   [在執行 SQL 工作編輯器中設定結果集](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a>指定結果集類型  
+##  <a name="specifying-a-result-set-type"></a><a name="Result_set_type"></a>指定結果集類型  
  執行 SQL 工作支援下列類型的結果集︰  
   
--   
-  **無** ：結果集是在查詢未傳回任何結果時使用。 例如，此結果集用於加入、變更和刪除資料表中記錄的查詢。  
+-   **無** ：結果集是在查詢未傳回任何結果時使用。 例如，此結果集用於加入、變更和刪除資料表中記錄的查詢。  
   
--   
-  **單一資料列** ：結果集是在查詢只傳回一個資料列時使用。 例如，此結果集用於傳回計數或總和的 SELECT 陳述式。  
+-   **單一資料列** ：結果集是在查詢只傳回一個資料列時使用。 例如，此結果集用於傳回計數或總和的 SELECT 陳述式。  
   
--   
-  **完整結果集** ：結果集是在查詢傳回多個資料列時使用。 例如，此結果集用於擷取資料表中所有資料列的 SELECT 陳述式。  
+-   **完整結果集** ：結果集是在查詢傳回多個資料列時使用。 例如，此結果集用於擷取資料表中所有資料列的 SELECT 陳述式。  
   
--   
-  **XML** ：結果集是在查詢傳回 XML 格式的結果集時使用。 例如，此結果集用於包含 FOR XML 子句的 SELECT 陳述式。  
+-   **XML** ：結果集是在查詢傳回 XML 格式的結果集時使用。 例如，此結果集用於包含 FOR XML 子句的 SELECT 陳述式。  
   
  如果執行 SQL 工作使用 **[完整結果集]** 結果集，且查詢傳回多個資料列集，則工作只會傳回第一個資料列集。 如果此資料列集產生錯誤，則工作會報告該錯誤。 如果其他資料列集產生錯誤，則工作不會報告它們。  
   
-##  <a name="Populate_variable_with_result_set"></a>以結果集填入變數  
+##  <a name="populating-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>以結果集填入變數  
  如果查詢傳回的結果集類型為單一資料列、資料列集或 XML，則您可將結果集繫結至使用者自訂的變數。  
   
  如果結果集類型為 **Single row**，則可以藉由使用資料行名稱做為結果集名稱將傳回結果中的資料行繫結至變數，或者可以使用資料行清單中資料行的序數位置做為結果集名稱。 例如，查詢 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的結果集名稱可以為 **Color** 或 **0**。 如果查詢傳回多個資料行，並且您要存取所有資料行中的值，則您必須將每個資料行繫結至不同的變數。 如果您透過使用數字做為結果集名稱將資料行對應至變數，則該數字會反映資料行在查詢的資料行清單中所顯示的順序。 例如，在查詢 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，您將 0 用於 **Color** 資料行，將 1 用於 **ListPrice** 資料行。 使用資料行名稱做為結果集名稱的功能取決於將該工作設定為使用的提供者。 並非所有的提供者可以使用資料行名稱做為結果集名稱。  
   
- 部分傳回單一值的查詢可能不包含資料行名稱。 例如， `SELECT COUNT (*) FROM Production.Product` 陳述式不會傳回任何資料行名稱。 您可以使用序數位置 0 做為結果名稱來存取傳回的結果。 若要依據資料行名稱存取傳回的結果，查詢必須包含用來提供資料行名稱的 AS \<別名名稱> 子句。 
-  `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`陳述式會提供 **CountOfProduct** 資料行。 接著您可以使用 **CountOfProduct** 資料行名稱或序數位置 0 來存取傳回結果資料行。  
+ 部分傳回單一值的查詢可能不包含資料行名稱。 例如， `SELECT COUNT (*) FROM Production.Product` 陳述式不會傳回任何資料行名稱。 您可以使用序數位置 0 做為結果名稱來存取傳回的結果。 若要依據資料行名稱存取傳回的結果，查詢必須包含用來提供資料行名稱的 AS \<別名名稱> 子句。 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`陳述式會提供 **CountOfProduct** 資料行。 接著您可以使用 **CountOfProduct** 資料行名稱或序數位置 0 來存取傳回結果資料行。  
   
  如果結果集類型為 **完整結果集** 或 **XML**，則必須使用 0 作為結果集名稱。  
   
@@ -77,16 +72,15 @@ ms.locfileid: "66056433"
   
  變數可在執行 SQL 工作或封裝範圍內定義。 如果變數包含封裝範圍，則結果集可用於該封裝內的其他工作和容器，並可用於「執行封裝」或「執行 DTS 2000 封裝」工作所執行的任何封裝。  
   
- 將變數對應到**單一資料列**結果集時，如果符合下列條件，SQL 陳述式傳回的非字串值就會轉換為字串：  
+ 將變數對應到 **單一資料列** 結果集時，如果符合下列條件，SQL 陳述式傳回的非字串值就會轉換為字串：  
   
--   
-  **TypeConversionMode** 屬性設為 True。 您可以在 [屬性] 視窗中設定屬性值，也可以使用 **[執行 SQL 工作編輯器]**。  
+-   **TypeConversionMode** 屬性設為 True。 您可以在 [屬性] 視窗中設定屬性值，也可以使用 **[執行 SQL 工作編輯器]**。  
   
 -   轉換不會導致資料截斷。  
   
- 如需將結果集載入變數中的資訊，請參閱[在執行 SQL 工作中將結果集對應至變數](control-flow/execute-sql-task.md)。  
+ 如需將結果集載入變數中的資訊，請參閱 [在執行 SQL 工作中將結果集對應至變數](control-flow/execute-sql-task.md)。  
   
-##  <a name="Configure_result_sets"></a>在執行 SQL 工作中設定結果集  
+##  <a name="configuring-result-sets-in-the-execute-sql-task"></a><a name="Configure_result_sets"></a>在執行 SQL 工作中設定結果集  
  如需有關可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中設定之結果集屬性的詳細資訊，請按下列主題：  
   
 -   [[執行 SQL 工作編輯器] &#40;[結果集] 頁面&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

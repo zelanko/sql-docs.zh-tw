@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068157"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>指定資料行&#39;的內容和資料類型（資料採礦 Wizard）
   使用 [指定資料行的內容和資料類型]**** 頁面，即可修改精靈已經設定的資料行和內容類型。 精靈會使用來源資料行的資料類型和選取之演算法的功能，來決定每個資料行的預設資料和內容類型。  
   
- **如需詳細資訊：** [資料採礦 Wizard &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，請[建立關聯式的採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊，請參閱** [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **資料行**  

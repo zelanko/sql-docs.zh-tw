@@ -25,17 +25,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069091"
 ---
 # <a name="filestore-properties"></a>FileStore 屬性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 Filestore 伺服器屬性。 這些全部都是進階屬性，除非是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援人員的指導之下，否則不應隨意變更。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用物件：** 多維度和表格式伺服器模式  
+ **適用於：** 多維度與表格式伺服器模式  
   
 ## <a name="properties"></a>屬性  
  `MemoryLimit`  
@@ -80,6 +79,6 @@ ms.locfileid: "66069091"
   
 ## <a name="see-also"></a>另請參閱  
  [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
- [判斷 Analysis Services 實例的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

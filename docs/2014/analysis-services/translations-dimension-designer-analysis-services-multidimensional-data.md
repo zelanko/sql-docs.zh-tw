@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065732"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>翻譯 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師中的 **[翻譯]** 索引標籤，即可定義和管理維度的翻譯，以及維度的階層和屬性。  
   
 ## <a name="panes"></a>窗格  
- 
-  **[翻譯]** 索引標籤包含下列窗格：  
+ **[翻譯]** 索引標籤包含下列窗格：  
   
- [工具列](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  在維度設計師的 [翻譯]**** 索引標籤中，使用工具列來執行一般動作。  
   
  [翻譯詳細資料](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  

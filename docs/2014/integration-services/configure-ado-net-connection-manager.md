@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060842"
 ---
 # <a name="configure-adonet-connection-manager"></a>設定 ADO.NET 連接管理員
@@ -34,7 +34,7 @@ ms.locfileid: "66060842"
  檢視選取之 ADO.NET 資料連接的屬性和值。  
   
  **新增**  
- 使用 [連線管理員]  對話方塊來建立 ADO.NET 資料連接。  
+ 使用 [連線管理員]**** 對話方塊來建立 ADO.NET 資料連接。  
   
  **刪除**  
  請選取一個連接，然後使用 [刪除]**** 按鈕刪除它。  

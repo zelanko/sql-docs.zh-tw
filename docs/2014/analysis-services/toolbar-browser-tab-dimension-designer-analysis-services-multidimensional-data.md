@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066160"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (瀏覽器索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -24,10 +24,10 @@ ms.locfileid: "66066160"
  **處理程序**  
  按一下即可開啟 [處理]**** 對話方塊，並處理選取的維度。  
   
- **地**  
- 如果由於連接中斷或逾時，因而造成 [瀏覽器]**** 索引標籤的工作階段中斷連接，則按一下即可將 [瀏覽器][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]** 索引標籤，重新連接到包含維度的 ** 執行個體和資料庫。  
+ **重新連接**  
+ 如果由於連接中斷或逾時，因而造成 [瀏覽器]**** 索引標籤的工作階段中斷連接，則按一下即可將 [瀏覽器]**** 索引標籤，重新連接到包含維度的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和資料庫。  
   
- **[重新整理]**  
+ **重新整理**  
  按一下即可使用維度的資料和中繼資料，重新載入 [瀏覽器]**** 索引標籤。  
   
  **成員屬性**  

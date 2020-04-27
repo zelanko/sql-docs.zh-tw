@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060424"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用預設的優先順序條件約束來連接工作和容器
@@ -32,7 +32,7 @@ ms.locfileid: "66060424"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
+2.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
 3.  在 [選項]**** 對話方塊中，展開 [商業智慧設計師]****，然後展開 [Integration Services 設計師]****。  
   

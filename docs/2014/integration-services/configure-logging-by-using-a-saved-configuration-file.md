@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060594"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>使用已儲存的組態檔來設定記錄
@@ -29,14 +29,14 @@ ms.locfileid: "66060594"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
   
 3.  展開封裝樹狀檢視，並選取要設定的容器。  
   
 4.  在 [提供者與記錄]**** 索引標籤上，選取要用於容器的記錄檔。  
   
     > [!NOTE]  
-    >  您只可在封裝層級建立記錄檔。 如需詳細資訊，請參閱[在 SQL Server Data Tools 中啟用封裝記錄功能](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)。  
+    >  您只可在封裝層級建立記錄檔。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)。  
   
 5.  按一下 [詳細資料]**** 索引標籤，然後按一下 [載入]****。  
   

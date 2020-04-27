@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055936"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
@@ -25,9 +25,9 @@ ms.locfileid: "66055936"
 > [!NOTE]  
 >  只有當您從 [!INCLUDE[ssIS](../includes/ssis-md.md)] 或命令提示字元執行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 封裝升級精靈時，才可使用此頁面。  
   
- **執行 SSIS 封裝升級嚮導**  
+ **執行 SSIS 封裝升級精靈**  
   
--   [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [使用 SSIS 套件升級精靈來升級 Integration Services 套件](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="static-options"></a>靜態選項  
  **封裝來源**  
@@ -40,7 +40,7 @@ ms.locfileid: "66055936"
 |**Microsoft SQL Server**|指示要升級的封裝是來自現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽]**** 並尋找資料夾。  
+ 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找包含您要升級之封裝的資料夾。  
@@ -68,6 +68,6 @@ ms.locfileid: "66055936"
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證將用來連接伺服器的密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages.md)  
+ [升級 Integration Services 套件](install-windows/upgrade-integration-services-packages.md)  
   
   

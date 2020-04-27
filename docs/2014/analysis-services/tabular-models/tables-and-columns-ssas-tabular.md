@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066504"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>資料表與資料行 (SSAS 表格式)
@@ -28,7 +28,7 @@ ms.locfileid: "66066504"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> 優點  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>各種  
  表格式模型中的資料表提供定義資料行及其他中繼資料的架構。 資料表包括：  
   
  **資料表定義**  
@@ -40,7 +40,7 @@ ms.locfileid: "66066504"
  **Data**  
  當您透過 [資料表匯入精靈] 或在導出資料行中建立新資料，第一次匯入資料表時，會在資料表資料行中擴展資料。 變更來源中的資料，或從記憶體中移除模型時，您必須執行處理作業將資料重新擴展到資料表中。  
   
-##  <a name="bkmk_working"></a>使用資料表和資料行  
+##  <a name="working-with-tables-and-columns"></a><a name="bkmk_working"></a>使用資料表和資料行  
  在模型設計師中，您不會直接建立新的模型資料表。 每當從其他資料來源匯入或複製資料時，都會為您自動建立新的索引標籤。 模型設計師中的每個索引標籤都包含一個資料表，其中可以包括以下項目：  
   
 -   來自關聯式資料庫或其他非關聯式來源 (如 Analysis Services Cube) 的單一資料表或檢視表。  
@@ -55,20 +55,20 @@ ms.locfileid: "66066504"
   
  如果您使用非常大型的資料集，您可能需要篩選而不顯示特定資料。 您可能也需要依不同順序排序資料。 透過模型設計師，您可以使用篩選、排序及隱藏功能顯示或隱藏整個資料行或特定資料。  
   
-##  <a name="bkmk_related_tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相關工作  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[將資料行新增至 &#40;SSAS 表格式&#41;的資料表](add-columns-to-a-table-ssas-tabular.md)|描述如何將來源資料行加入至資料表定義。|  
-|[刪除 &#40;SSAS 表格式&#41;的資料行](delete-a-column-ssas-tabular.md)|描述如何使用模型設計師或 [資料表屬性] 對話方塊，刪除模型資料表資料行。|  
-|[變更 &#40;SSAS 表格式&#41;的資料表、資料行或資料列篩選對應](change-table-column-or-row-filter-mappings-ssas-tabular.md)|描述如何使用資料表預覽或 [編輯資料表屬性] 對話方塊中的 SQL 查詢編輯器，變更資料表、資料行或資料列篩選對應。|  
+|[將資料行加入至資料表 &#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)|描述如何將來源資料行加入至資料表定義。|  
+|[刪除資料行 &#40;SSAS 表格式&#41;](delete-a-column-ssas-tabular.md)|描述如何使用模型設計師或 [資料表屬性] 對話方塊，刪除模型資料表資料行。|  
+|[變更資料表、資料行或資料列篩選對應 &#40;SSAS 表格式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|描述如何使用資料表預覽或 [編輯資料表屬性] 對話方塊中的 SQL 查詢編輯器，變更資料表、資料行或資料列篩選對應。|  
 |[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|描述如何使用 [標記為日期資料表] 對話方塊來指定日期資料表和唯一識別碼資料行。 DAX 公式中使用時間智慧函數時，必須指定日期資料表和唯一識別碼。|  
-|[新增 &#40;SSAS 表格式&#41;的資料表](add-a-table-ssas-tabular.md)|描述如何透過使用現有的資料來源連接，從資料來源中加入資料表。|  
-|[刪除 &#40;SSAS 表格式&#41;的資料表](delete-a-table-ssas-tabular.md)|描述如何刪除模型工作空間資料庫中不再需要的資料表。|  
-|[&#40;SSAS 表格式&#41;重新命名資料表或資料行](rename-a-table-or-column-ssas-tabular.md)|描述如何重新命名資料表或資料行，以在模型中更容易識別。|  
+|[加入資料表 &#40;SSAS 表格式&#41;](add-a-table-ssas-tabular.md)|描述如何透過使用現有的資料來源連接，從資料來源中加入資料表。|  
+|[刪除資料表 (SSAS 表格式)](delete-a-table-ssas-tabular.md)|描述如何刪除模型工作空間資料庫中不再需要的資料表。|  
+|[重新命名資料表或資料行 &#40;SSAS 表格式&#41;](rename-a-table-or-column-ssas-tabular.md)|描述如何重新命名資料表或資料行，以在模型中更容易識別。|  
 |[設定資料行的資料類型 &#40;SSAS 表格式&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|描述如何變更資料行的資料類型。 資料類型定義資料行中資料的儲存及呈現方式。|  
-|[隱藏或凍結 &#40;SSAS 表格式&#41;的資料行](hide-or-freeze-columns-ssas-tabular.md)|描述如何隱藏您不想要顯示的資料行，以及當您在某個區域中凍結（鎖定）特定資料行時，如何讓模型區域保持可見狀態。|  
-|[&#40;SSAS 表格式&#41;的計算結果欄](ssas-calculated-columns.md)|本節中的主題描述如何使用導出資料行將彙總資料加入至模型。|  
-|[&#40;SSAS 表格式&#41;篩選和排序資料](../filter-and-sort-data-ssas-tabular.md)|本節中的主題描述如何使用模型設計師中的控制項篩選或排序資料。|  
+|[隱藏或凍結資料行 &#40;SSAS 表格式&#41;](hide-or-freeze-columns-ssas-tabular.md)|描述如何隱藏您不想要顯示的資料行，以及當您在某個區域中凍結（鎖定）特定資料行時，如何讓模型區域保持可見狀態。|  
+|[導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns.md)|本節中的主題描述如何使用導出資料行將彙總資料加入至模型。|  
+|[篩選與排序資料 &#40;SSAS 表格式&#41;](../filter-and-sort-data-ssas-tabular.md)|本節中的主題描述如何使用模型設計師中的控制項篩選或排序資料。|  
   
   

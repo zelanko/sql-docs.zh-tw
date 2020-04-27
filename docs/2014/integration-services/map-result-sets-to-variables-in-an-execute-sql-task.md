@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057763"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將結果集對應至變數
@@ -51,7 +51,7 @@ ms.locfileid: "66057763"
   
      如需可對應至不同結果集之變數資料類型的描述，請參閱 [執行 SQL 工作中的結果集](result-sets-in-the-execute-sql-task.md)。  
   
-     如需如何將變數對應至單一資料行以及將多個變數對應至多個資料行的相關資訊，請參閱**執行 SQL 工作中的結果集**中的[以結果集填入變數](control-flow/execute-sql-task.md)一節。  
+     如需如何將變數對應至單一資料行以及將多個變數對應至多個資料行的相關資訊，請參閱[執行 SQL 工作中的結果集](control-flow/execute-sql-task.md)中的**以結果集填入變數**一節。  
   
 10. 在 [結果名稱]**** 清單中，選擇性地修改結果集的名稱。  
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065024"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>使用查詢編輯器建立擴充事件工作階段
@@ -35,7 +35,7 @@ ms.locfileid: "66065024"
   
  如需如何使用 [新增工作階段精靈] 建立擴充事件工作階段的相關資訊，請參閱[使用精靈建立擴充事件工作階段 &#40;物件總管&#41;](../ssms/object/object-explorer.md)。 如需如何使用 [新增工作階段] UI 建立擴充事件工作階段的相關資訊，請參閱 [Quick Start: Extended events in SQL Server](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) (快速入門：SQL Server擴充事件)。  
   
-##  <a name="BeforeYouBegin"></a> 權限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 權限  
  若要建立「擴充事件」工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>使用查詢編輯器建立擴充事件工作階段  
@@ -186,8 +186,7 @@ ms.locfileid: "66065024"
     > [!NOTE]  
     >  如需不同目標類型的相關資訊，請參閱 [SQL Server 擴充的事件目標](../../2014/database-engine/sql-server-extended-events-targets.md)。  
   
-6.  檢閱並加入任何其他組態選項。 例如，您可以設定選項，例如事件保留模式、事件在記憶體中緩衝處理多久，或是當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動時事件工作階段是否應該自動啟動。 
-  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql) 主題會描述這些選項。 請注意，如果未指定這些選項，就會指派預設值。  
+6.  檢閱並加入任何其他組態選項。 例如，您可以設定選項，例如事件保留模式、事件在記憶體中緩衝處理多久，或是當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動時事件工作階段是否應該自動啟動。 [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql) 主題會描述這些選項。 請注意，如果未指定這些選項，就會指派預設值。  
   
 7.  啟動工作階段。  
   
@@ -220,8 +219,8 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [SQL Server 擴充的事件目標](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [&#40;Transact-sql&#41;建立事件會話](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server 擴充事件目標](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server 擴充的事件套件](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

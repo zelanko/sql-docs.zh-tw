@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057563"
 ---
 # <a name="move-ssis-toolbox-items"></a>移動 SSIS 工具箱項目
@@ -24,17 +24,17 @@ ms.locfileid: "66057563"
   
 1.  以滑鼠右鍵按一下 SSIS 工具箱中的項目，然後按下列其中一項：  
   
-    -   **移至我的最愛**  
+    -   **移到我的最愛**  
   
-    -   **移至通用**  
+    -   **移到通用**  
   
-    -   **移至其他來源**  
+    -   **移到其他來源**  
   
-    -   **移至其他目的地**  
+    -   **移到其他目的地**  
   
-    -   **移至其他轉換**  
+    -   **移到其他轉換**  
   
-    -   **移至其他工作**  
+    -   **移到其他工作**  
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>若要重新整理 SSIS 工具箱  
   

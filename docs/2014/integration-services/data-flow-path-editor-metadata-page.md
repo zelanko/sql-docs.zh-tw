@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059993"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
@@ -34,7 +34,7 @@ ms.locfileid: "66059993"
  **資料類型**  
  列出資料行的資料類型。  
   
- **Precision**  
+ **有效位數**  
  列出數值中的位數。  
   
  **調整**  
@@ -58,7 +58,7 @@ ms.locfileid: "66059993"
  **來源元件**  
  列出是資料行來源的資料流程元件。  
   
- **複製到剪貼簿**  
+ **複製至剪貼簿**  
  將資料行中繼資料複製到剪貼簿。 依預設，所有中繼資料列都會加以複製，就像依目前顯示的順序加以排序一般。  
   
 ## <a name="see-also"></a>另請參閱  

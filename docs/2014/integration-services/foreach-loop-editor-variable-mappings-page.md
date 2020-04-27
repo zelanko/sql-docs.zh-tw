@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058529"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 迴圈編輯器 (變數對應頁面)
@@ -35,13 +35,13 @@ ms.locfileid: "66058529"
   
  **相關主題**： [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
- **指數**  
+ **索引**  
  如果使用 Foreach 項目列舉值，請指定集合值中要對應至變數的資料行索引。 針對其他列舉值類型，此索引是唯讀的。  
   
 > [!NOTE]  
 >  索引是以 0 為基底。  
   
- **相關主題**：[使用 Foreach 迴圈容器來執行 Excel 檔案和資料表的迴圈](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **相關主題**： [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **刪除**  
  選取變數，然後按一下 [刪除]****。  

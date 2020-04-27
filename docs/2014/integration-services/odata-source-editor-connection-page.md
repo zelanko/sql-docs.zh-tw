@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057321"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 來源編輯器 (連接頁面)
@@ -40,11 +40,11 @@ ms.locfileid: "66057321"
  **查詢選項**  
  指定查詢的選項。  例如：$top=5  
   
- **摘要 URL**  
+ **摘要 url**  
  根據您在此對話方塊中選取的選項顯示唯讀摘要 URL。  
   
  **預覽**  
- 使用 [預覽]**** 對話方塊來預覽結果。 **預覽**最多可顯示20個數據列。  
+ 使用 [預覽]**** 對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
   
 ## <a name="dynamic-options"></a>動態選項  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66057321"
  從下拉式清單中選取集合。  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或資源路徑 = 資源路徑  
- **資源路徑**  
+ **Resource path**  
  輸入資源路徑。 例如：員工  
   
 ## <a name="see-also"></a>另請參閱  

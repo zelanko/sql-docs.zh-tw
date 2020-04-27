@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059234"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目的地編輯器 (連接管理員頁面)
@@ -42,7 +42,7 @@ ms.locfileid: "66059234"
 |選項|描述|  
 |------------|-----------------|  
 |資料表或檢視|將資料載入 Excel 資料來源中的工作表或具名範圍。|  
-|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊**：[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL (命令)|使用 SQL 查詢將資料載入 Excel 目的地。|  
   
  **Excel 工作表的名稱**  
@@ -55,7 +55,7 @@ ms.locfileid: "66059234"
  使用 [預覽查詢結果]**** 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
 > [!WARNING]  
->  如果您選取的 [Excel 連線管理員]**** 指向不存在的 Excel 檔，則在您按一下此按鈕時將看到一條錯誤消息。  
+>   如果您選取的 **[Excel 連接管理員]** 指向不存在的 Excel 檔，則在您按一下此按鈕時將看到一條錯誤消息。  
   
 ## <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   

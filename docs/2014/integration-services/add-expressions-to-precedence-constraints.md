@@ -18,15 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061899"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>將運算式加入優先順序條件約束
-  優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 `Success`、`Failure` 或 `Completion`。 
-  `Success` 表示優先順序可執行檔必須執行成功；`Failure` 表示優先順序可執行檔必須執行失敗；`Completion` 則指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [優先順序條件約束](control-flow/precedence-constraints.md)。  
+  優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 `Success`、`Failure` 或 `Completion`。 `Success` 表示優先順序可執行檔必須執行成功；`Failure` 表示優先順序可執行檔必須執行失敗；`Completion` 則指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [優先順序條件約束](control-flow/precedence-constraints.md)。  
   
  運算式必須評估為 `True` 或 `False`，且必須是有效的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 運算式。 運算式可以使用常值、系統及自訂變數，以及 [!INCLUDE[ssIS](../includes/ssis-md.md)] 運算式文法提供的函數與運算子。 例如，運算式 `@Count == SQRT(144) + 10` 使用變數 `Count`、SQRT 函數及等於 (==) 和加 (+) 運算子。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)為止。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66061899"
   
  ![優先順序條件約束上的運算式](media/mw-dts-04.gif "優先順序條件約束上的運算式")  
   
- 使用 [** 設計師] 中的 [優先順序條件約束編輯器]**[!INCLUDE[ssIS](../includes/ssis-md.md)] 及 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗，可以新增或修改運算式。 然而，[屬性] 視窗不提供運算式語法的驗證。  
+ 使用 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中的 [優先順序條件約束編輯器]**** 及 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗，可以新增或修改運算式。 然而，[屬性] 視窗不提供運算式語法的驗證。  
   
  如果優先順序條件約束包含運算式，則會在 [控制流程]**** 索引標籤之設計介面上優先順序條件約束的旁邊出現圖示，且圖示上的工具提示會顯示運算式。  
   
@@ -47,10 +46,10 @@ ms.locfileid: "66061899"
   
 |評估作業|條件約束評估為|運算式評估為|受條件約束的可執行檔執行|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|條件約束|True|N/A|True|  
-|條件約束|False|N/A|False|  
-|運算是|N/A|True|True|  
-|運算是|N/A|False|False|  
+|條件約束|True|不適用|True|  
+|條件約束|False|不適用|False|  
+|運算是|不適用|True|True|  
+|運算是|不適用|False|False|  
 |條件約束與運算式|True|True|True|  
 |條件約束與運算式|True|False|False|  
 |條件約束與運算式|False|True|False|  

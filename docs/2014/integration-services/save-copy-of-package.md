@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056323"
 ---
 # <a name="save-copy-of-package"></a>儲存封裝的副本
@@ -55,13 +55,13 @@ ms.locfileid: "66056323"
  **封裝路徑**  
  輸入封裝路徑，或按一下流覽 **（...）** 按鈕，並找出要儲存封裝的資料夾。  
   
- **保護層級**  
+ **保護等級**  
  按一下 [流覽] **（...）** 按鈕，並更新 [**封裝保護等級**] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [匯入封裝對話方塊 UI 參考](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [匯出封裝對話方塊 UI 參考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [儲存封裝](save-packages.md)   
- [&#40;SSIS 服務匯入和匯出套件&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [匯入和匯出封裝 &#40;SSIS 服務&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066005"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -27,8 +27,8 @@ ms.locfileid: "66066005"
  **處理程序**  
  按一下以顯示 **[處理]** 對話方塊，並處理 Cube。  
   
- **地**  
- 如果由於連接遺失或逾時，因而造成 [KPI]**** 索引標籤的工作階段連接中斷，則按一下即可將 [KPI][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]** 索引標籤重新連接到包含 Cube 的 ** 執行個體和資料庫。  
+ **重新連接**  
+ 如果由於連接遺失或逾時，因而造成 [KPI]**** 索引標籤的工作階段連接中斷，則按一下即可將 [KPI]**** 索引標籤重新連接到包含 Cube 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和資料庫。  
   
  **新增 KPI**  
  按一下即可顯示 [KPI 表單編輯器]****，並建立新的關鍵效能指標 (KPI)。  

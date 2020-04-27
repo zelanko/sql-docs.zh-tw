@@ -14,15 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062370"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中進行分析 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
-  [**在 Excel 中進行分析**] 提供 cube 開發人員一種方式，可讓您快速查看專案對使用者的外觀。 
-  **[在 Excel 中進行分析]** 功能可開啟 Microsoft Excel、建立工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 此功能取代舊版 [瀏覽器] 索引標籤中提供內嵌樞紐分析表的 Office Web 元件。  
+  **[在 Excel 中進行分析]** 提供 Cube 開發人員一種方式，可快速檢閱使用者所看到的專案外觀。 **[在 Excel 中進行分析]** 功能可開啟 Microsoft Excel、建立工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 此功能取代舊版 [瀏覽器] 索引標籤中提供內嵌樞紐分析表的 Office Web 元件。  
   
  **若要檢視 Cube 資料：**  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66062370"
   
  如需有關 **[在 Excel 中進行分析]** 功能的詳細資訊，請參閱以下資源：  
   
- [在 Excel 中分析 &#40;SSAS 表格式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [在 Excel 中分析方格式模型 &#40;SSAS 表格式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析表格式模型 &#40;SSAS 表格式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [瀏覽 Cube 中的資料和中繼資料](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

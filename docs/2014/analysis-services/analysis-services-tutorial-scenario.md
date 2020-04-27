@@ -11,16 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062434"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教學課程案例
-  這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美、歐洲和亞洲的商場。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
+  這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美洲、歐洲和亞洲的商場。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
   
  在最近幾年， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 購買了一間墨西哥的小型製造工廠 Importadores Neptuno。 Importadores Neptuno 為 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 產品線製造幾項重要的子零件。 這些子零件運送到 Bothell 地點進行最後產品組裝。 在 2005 年，Importadores Neptuno 成為自行車產品類的唯一製造商和批發商。  
   
@@ -65,6 +63,6 @@ ms.locfileid: "66062434"
  Analysis Services 教學課程中的課程提供建立符合這些所有目標之 Cube 資料庫的指導方針。 若要開始使用，請繼續進行第一課： [第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型化 &#40;的艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多維度模型化 &#40;Adventure Works 教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

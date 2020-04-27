@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062311"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>關聯精靈 (適用於 Excel 的資料採礦用戶端)
@@ -84,8 +84,7 @@ ms.locfileid: "66062311"
 9. 精靈會分析所有可能的組合，並且建立包含項目集和規則的報表。  
   
 ## <a name="more-about-association-models"></a>進一步了解關聯模型  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯規則演算法會檢查定型資料來尋找一起出現在交易中的項目。 每個專案群組都會構成*一個專案*集。 接著，演算法會計算每個項目集出現的次數，以及每個項目集在所有交易中的相對重要性。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯規則演算法會檢查定型資料來尋找一起出現在交易中的項目。 每個專案群組都會構成*一個專案*集。 接著，演算法會計算每個項目集出現的次數，以及每個項目集在所有交易中的相對重要性。  
   
  演算法會使用關於項目集的這個資訊產生可用於預測關聯或進行建議的規則。 例如，規則可以如下：「如果使用者購買作者 1 和作者 2 的書，則這位使用者也可能會購買作者 3 的書」。 系統會根據關聯的強度來為每個建議指派機率。  
   

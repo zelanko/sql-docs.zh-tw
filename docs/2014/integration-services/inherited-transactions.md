@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058058"
 ---
 # <a name="inherited-transactions"></a>繼承的交易
@@ -37,11 +37,11 @@ ms.locfileid: "66058058"
   
  封裝和工作具有下列交易屬性：  
   
--   在封裝 A 和 C 上， **TransactionOption**設為**Required**  
+-   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**  
   
--   在封裝 B 和 D 上，以及在「執行封裝 B」、「執行封裝 D」和「執行封裝 F」工作上，會將**TransactionOption**設定為「**支援**」。  
+-   在封裝 B 和 D 上，以及在「執行封裝 B」、「執行封裝 D」和「執行封裝 F」工作上，**TransactionOption** 設為 **Supported** 。  
   
--   在封裝 E 上，以及在「執行封裝 C」和「執行封裝 E」工作上， **TransactionOption**設為**NotSupported** 。  
+-   在封裝 E 上，以及在「執行封裝 C」和「執行封裝 E」工作上，**TransactionOption** 設為 **NotSupported** 。  
   
  ![繼承的交易流程](media/mw-dts-executepack.gif "繼承的交易流程")  
   

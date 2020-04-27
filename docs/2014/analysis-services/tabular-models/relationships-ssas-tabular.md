@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066703"
 ---
 # <a name="relationships-ssas-tabular"></a>關聯性 (SSAS 表格式)
@@ -43,7 +43,7 @@ ms.locfileid: "66066703"
   
 -   [相關工作](#bkmk_related_tasks)  
   
-##  <a name="what"></a> 優點  
+##  <a name="benefits"></a><a name="what"></a>各種  
  關聯性是在兩個資料表之間，以每個資料表中的一個或多個資料行為基礎的連接。 若要了解為什麼關聯性是有用的，請假設您在追蹤自己商務中的客戶訂單資料。 您可以在具有類似下列結構的單一資料表中追蹤所有資料：  
   
 |CustomerID|名稱|EMail|DiscountRate|OrderID|OrderDate|Products|數量|  
@@ -68,7 +68,7 @@ ms.locfileid: "66066703"
 |1|.05|  
 |2|.10|  
   
-### <a name="orders"></a>訂單  
+### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Products|數量|  
 |--------------------|-------------|---------------|-------------|--------------|  
@@ -83,13 +83,13 @@ ms.locfileid: "66066703"
   
  在關聯式資料庫中，有幾種類型的 *「索引鍵」*(Key)，這些通常只是具有特殊屬性的資料行。 在關聯式資料庫中，可以使用下列四種類型的索引鍵：  
   
--   *主鍵*：唯一識別資料表中的資料列，例如 Customers 資料表中的 CustomerID。  
+-   「主索引鍵」**：可以唯一識別資料表中的資料列，例如 Customers 資料表中的 CustomerID。  
   
--   *替代索引鍵*（或*候選索引鍵*）：唯一的主鍵以外的資料行。 例如，「員工」資料表可能儲存員工 ID 和社會保險號碼，兩者都是唯一的。  
+-   「其他索引鍵」**(又稱「候選索引鍵」**)：不同於主索引鍵的唯一資料行。 例如，「員工」資料表可能儲存員工 ID 和社會保險號碼，兩者都是唯一的。  
   
--   *外鍵*：參考另一個資料表中唯一資料行的資料行，例如 Orders 資料表中的 customerid，這會參考 Customers 資料表中的 customerid。  
+-   「外部索引鍵」**：參考另一個資料表中唯一資料行的資料行，例如 Orders 資料表中的 CustomerID，這指的是 Customers 資料表中的 CustomerID。  
   
--   *複合索引鍵*：由一個以上的資料行所組成的索引鍵。 表格式模型不支援複合索引鍵。 如需詳細資訊，請參閱本主題中的＜複合索引鍵與查閱資料行＞。  
+-   *「複合索引鍵」*(Composite Key)：由一個以上資料行所組成的索引鍵。 表格式模型不支援複合索引鍵。 如需詳細資訊，請參閱本主題中的＜複合索引鍵與查閱資料行＞。  
   
  在表格式模型中，主索引鍵或替代索引鍵稱為 *「相關查閱資料行」*(Related lookup column)，或簡稱 *「查閱資料行」*(Lookup column)。 如果資料表同時具有主索引鍵和替代索引鍵，您就可以使用其中任一種做為查閱資料行。 外部索引鍵又稱為 *「來源資料行」* (Source Column) 或簡稱 *「資料行」*(Column)。 在我們的範例中，會在「訂單」資料表中的 CustomerID (資料行) 與「客戶」資料表中的 CustomerID (查閱資料行) 之間定義關聯性。 如果從關聯式資料庫匯入資料，模型設計師就會依預設從一個資料表選擇外部索引鍵，並從另一個資料表選擇對應的主索引鍵。 不過，您可以使用在查閱資料行具有唯一值的任何資料行。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66066703"
 ### <a name="relationships-and-performance"></a>關聯性與效能  
  建立任何關聯性之後，模型設計師通常都必須重新計算使用新建立關聯性中資料表之資料行的任何公式。 視資料量與關聯性的複雜度而定，可能需要一些時間進行處理。  
   
-##  <a name="requirements"></a>關聯性的需求  
+##  <a name="requirements-for-relationships"></a><a name="requirements"></a>關聯性的需求  
  模型設計師在建立關聯性時，具有多項必須遵循的需求：  
   
 ### <a name="single-active-relationship-between-tables"></a>資料表之間的單一使用中關聯性  
@@ -137,7 +137,7 @@ ms.locfileid: "66066703"
   
  若您想在模型設計師中建立兩個資料表之間的關聯性，但其中有多個資料行定義主索引鍵及外部索引鍵，您就必須在建立關聯性之前，先合併這些值以建立單一索引鍵資料行。 您可以在匯入資料之前執行這項作業，也可以在模型設計師中透過建立導出資料行來執行。  
   
-###  <a name="bkmk_many_to_many"></a>多對多關聯性  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a>多對多關聯性  
  表格式模型不支援多對多關聯性，而且您無法直接在模型設計師中加入 *「聯合資料表」* (Junction table)。 不過，您可以使用 DAX 函數來塑造多對多關聯性。  
   
 ### <a name="self-joins-and-loops"></a>自我聯結與迴圈  
@@ -153,7 +153,7 @@ ms.locfileid: "66066703"
   
  如果您嘗試建立的關聯性會建立迴圈，則會產生錯誤。  
   
-##  <a name="detection"></a>關聯性的推斷  
+##  <a name="inference-of-relationships"></a><a name="detection"></a>關聯性的推斷  
  在某些情況下，資料表之間的關聯性會自動鏈結。 例如，如果您在以下前兩組資料表之間建立關聯性，就會推斷另外兩個資料表之間也有關聯性，然後自動建立關聯性。  
   
  產品和類別 -- 手動建立  
@@ -164,17 +164,17 @@ ms.locfileid: "66066703"
   
  為了讓關聯性能夠自動鏈結，如上所示，關聯性都必走向同一個方向。 如果初始的關聯性是在「銷售」和「產品」，以及「銷售」和「客戶」之間，就不會推斷出關聯性。 這是因為「產品」和「客戶」之間的關聯性是多對多關聯性。  
   
-##  <a name="bkmk_detection"></a>在匯入資料時偵測關聯性  
+##  <a name="detection-of-relationships-when-importing-data"></a><a name="bkmk_detection"></a>在匯入資料時偵測關聯性  
  當您從關聯式資料來源資料表匯入時，資料表匯入精靈會根據來源結構描述資料來偵測這些來源資料表內的現有關聯性。 如果匯入相關資料表，將會在模型中複製這些關聯性。  
   
-##  <a name="bkmk_manually_create"></a>手動建立關聯性  
+##  <a name="manually-create-relationships"></a><a name="bkmk_manually_create"></a>手動建立關聯性  
  雖然單一關聯式資料來源中資料表之間的大多數關聯性都會被自動偵測到並在表格式模型中建立，但在許多情況下必須手動建立模型資料表之間的關聯性。  
   
  如果您的模型包含來自多個資料來源的資料，則可能需要手動建立關聯性。 例如，您可以從關聯式資料來源匯入 Customers、CustomerDiscounts 和 Orders 資料表。 來源中這些資料表之間的現有關聯式會在模型中自動建立。 然後，您可以從不同來源新增其他資料表，例如，從 Microsoft Excel 活頁簿中的 Geography 資料表匯入地區資料。 接著手動建立 Customers 資料表中的資料行和 Geography 資料表中的資料行之間的關聯性。  
   
  若要在表格式模型中手動建立關聯性，您可以使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 此圖表檢視以圖形格式顯示資料表，以及資料表之間的關聯性。 您可以按一下一個資料表中的資料行，將游標拖曳到另一個資料表中，輕鬆地在兩個資料表之間以正確順序建立關聯性。 [管理關聯性] 對話方塊以簡單的表格格式顯示資料表之間的關聯性。 若要了解如何手動建立關聯性，請參閱 [建立兩個資料表之間的關聯性 &#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)(Relational databases) 中使用的方法。  
   
-##  <a name="bkmk_dupl_errors"></a>重複的值和其他錯誤  
+##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>重複的值和其他錯誤  
  如果您選擇不能用於關聯性的資料行，資料行旁邊就會出現紅色的 X。 您可以將游標暫停在錯誤圖示上方，以檢視訊息，其中提供有關此問題的詳細資訊。 以下列出的問題，可能會使得所選資料行之間無法建立關聯性：  
   
 |問題或訊息|解決方法|  
@@ -182,15 +182,15 @@ ms.locfileid: "66066703"
 |由於所選取的兩個資料行包含重複值，無法建立關聯性。|若要建立有效的關聯性，您所選取的一對中至少有一個資料行必須只包含唯一值。<br /><br /> 您可以編輯資料行以移除重複項目，也可以反轉資料行的順序，以便使用包含唯一值的資料行做為 **[相關查閱資料行]**。|  
 |資料行包含 Null 值或空白值。|資料行無法以 Null 值，彼此進行聯結。 針對每個資料列，在兩個資料行中都必須有在關聯性中用到的值。|  
   
-##  <a name="bkmk_related_tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 相關工作  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[在 &#40;SSAS 表格式&#41;的兩個數據表之間建立關聯性](create-a-relationship-between-two-tables-ssas-tabular.md)|描述如何手動建立兩個資料表之間的關聯性。|  
-|[&#40;SSAS 表格式&#41;中刪除關聯性](relationships-ssas-tabular.md)|描述如何刪除關聯性和刪除關聯性的後果。|  
+|[建立兩個資料表之間的關聯性 &#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|描述如何手動建立兩個資料表之間的關聯性。|  
+|[刪除關聯性 &#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)|描述如何刪除關聯性和刪除關聯性的後果。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的資料表和資料行](tables-and-columns-ssas-tabular.md)   
- [將資料匯入 &#40;SSAS 表格式&#41;](../import-data-ssas-tabular.md)  
+ [匯入資料 (SSAS 表格式)](../import-data-ssas-tabular.md)  
   
   

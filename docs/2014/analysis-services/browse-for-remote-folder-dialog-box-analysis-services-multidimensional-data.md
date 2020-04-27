@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064524"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>瀏覽遠端資料夾對話方塊 (Analysis Services - 多維度資料)
-  
   **[瀏覽遠端資料夾]** 對話方塊會顯示為 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體定義之可用記錄和資料的資料夾清單。 您可以選取列出的資料夾，或視需要指定不同的資料夾。 執行下列其中一個步驟，即可顯示 **[瀏覽遠端資料夾]** 對話方塊：  
   
 -   在 [資料分割精靈] 中，按一下 [處理與儲存位置]**** 頁面上的省略符號按鈕 (**...**)。  

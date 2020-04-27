@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060153"
 ---
 # <a name="create-and-map-a-server-environment"></a>建立和對應伺服器環境
@@ -28,7 +28,7 @@ ms.locfileid: "66060153"
 > [!IMPORTANT]  
 >  對於某個特定執行，封裝只能藉由單一伺服器環境中包含的值執行。  
   
- 您可以透過查詢檢視表，取得伺服器環境、環境參考和環境變數的清單。 您也可以呼叫預存程序來加入、刪除及修改環境、環境參考和環境變數。 如需詳細資訊，請參閱[SSIS 目錄](catalog/ssis-catalog.md)中的伺服器**環境、伺服器變數和伺服器環境參考**一節。  
+ 您可以透過查詢檢視表，取得伺服器環境、環境參考和環境變數的清單。 您也可以呼叫預存程序來加入、刪除及修改環境、環境參考和環境變數。 如需詳細資訊，請參閱 [SSIS 目錄](catalog/ssis-catalog.md)中的＜伺服器環境、伺服器變數和伺服器環境參考＞**** 一節。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>若要建立和使用伺服器環境  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66060153"
   
 5.  在 [變數]**** 頁面上執行下列動作，以加入變數。  
   
-    1.  選取變數的 [類型]****。 變數的名稱**不**需要符合您對應至變數之專案參數的名稱。  
+    1.  選取變數的 [類型]****。 變數的名稱 **無須** 與對應至該變數之專案參數的名稱相符。  
   
     2.  選擇性地輸入變數的 [描述]****。  
   
     3.  輸入環境變數的 [值]****。  
   
-         如需環境變數名稱規則的資訊，請參閱 **SSIS 目錄**中的＜環境變數＞[](catalog/ssis-catalog.md)一節。  
+         如需環境變數名稱規則的資訊，請參閱 [SSIS 目錄](catalog/ssis-catalog.md)中的＜環境變數＞**** 一節。  
   
     4.  選取或清除 [區分]**** 核取方塊，以指出此變數是否包含機密值。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060153"
   
 13. 若要將環境變數對應至連線管理員屬性，請執行下列操作。 SSIS 伺服器上會自動產生連接管理員屬性的參數。  
   
-    1.  在 [參數]**** 頁面的 [連線管理員]**** 索引標籤中，按一下 [值] 欄位的 [瀏覽]**** 按鈕。  
+    1.  在 [參數]**** 頁面的 [連線管理員]**** 索引標籤中，按一下 [值]**** 欄位旁的瀏覽按鈕。  
   
     2.  按一下 [使用環境變數]****，然後選取您建立的環境變數。  
   

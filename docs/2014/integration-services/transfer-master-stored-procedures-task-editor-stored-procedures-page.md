@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054854"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>傳送主要預存程序工作編輯器 (預存程序頁面)
-  使用 [傳送主要預存程序工作編輯器]**** 對話方塊的 [預存程序]**** 頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 ** 執行個體之某個執行個體的 **master[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，複製到 ** 之另一個執行個體的 **master[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中。 如需這項工作的詳細資訊，請參閱 [傳送主要預存程序工作](control-flow/transfer-master-stored-procedures-task.md)。  
+  使用 [傳送主要預存程序工作編輯器]**** 對話方塊的 [預存程序]**** 頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體之某個執行個體的 **master** 資料庫，複製到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之另一個執行個體的 **master** 資料庫中。 如需這項工作的詳細資訊，請參閱 [傳送主要預存程序工作](control-flow/transfer-master-stored-procedures-task.md)。  
   
 > [!NOTE]  
 >  此工作只會從來源伺服器上的 **master** 資料庫，將 **dbo** 擁有的使用者定義預存程序，傳送到目的地伺服器上的 **master** 資料庫。 使用者必須有目的地伺服器上之 **master** 資料庫的 CREATE PROCEDURE 權限，或是目的地伺服器上之 **sysadmin** 固定伺服器角色的成員，才能在目的地伺服器建立預存程序。  
@@ -42,15 +42,15 @@ ms.locfileid: "66054854"
 |值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果目的地伺服器上的 **master** 資料庫中已經存在有相同名稱的預存程序，則工作失敗。|  
-|**Overwrite**|工作會覆寫目的地伺服器上的 **master** 資料庫中有相同名稱的預存程序。|  
-|**Skip**|工作會略過目的地伺服器上的 **master** 資料庫中存在有相同名稱的預存程序。|  
+|**改寫**|工作會覆寫目的地伺服器上的 **master** 資料庫中有相同名稱的預存程序。|  
+|**過**|工作會略過目的地伺服器上的 **master** 資料庫中存在有相同名稱的預存程序。|  
   
- **[Transferallstoredprocedures**  
+ **TransferAllStoredProcedures**  
  選取是否應將來源伺服器上之 **master** 資料庫中的所有使用者定義預存程序，複製到目的地伺服器。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**True**|複製 **master** 資料庫中的所有使用者定義預存程序。|  
+|**真正**|複製 **master** 資料庫中的所有使用者定義預存程序。|  
 |**False**|只複製指定的預存程序。|  
   
  **StoredProceduresList**  

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059936"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用運算式設定的資料流程屬性
@@ -70,12 +70,12 @@ ms.locfileid: "66059936"
 |----------------------|--------------|  
 |ADO NET 目的地|TableOrViewName 屬性<br /><br /> BatchSize 屬性<br /><br /> CommandTimeout 屬性|  
 |一般檔案目的地|Header 屬性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compact 目的地|TableName 屬性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]位置|BulkInsertTableName 屬性<br /><br /> BulkInsertFirstRow 屬性<br /><br /> BulkInsertLastRow 屬性<br /><br /> BulkInsertOrder 屬性<br /><br /> Timeout 屬性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 目的地|TableName 屬性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的地|BulkInsertTableName 屬性<br /><br /> BulkInsertFirstRow 屬性<br /><br /> BulkInsertLastRow 屬性<br /><br /> BulkInsertOrder 屬性<br /><br /> Timeout 屬性|  
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [新增或變更屬性運算式](expressions/add-or-change-a-property-expression.md)  
+-   [加入或變更屬性運算式](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>相關內容  
  pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
