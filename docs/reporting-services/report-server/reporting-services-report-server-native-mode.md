@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 報表伺服器 (原生模式) | Microsoft Docs
-ms.date: 06/06/2019
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826900"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086837"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   針對原生模式設定的報表伺服器會當做應用程式伺服器執行，並透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件專門提供所有處理和管理能力。  
@@ -50,9 +50,13 @@ ms.locfileid: "66826900"
 -   報表伺服器電腦上本機管理員群組中的成員資格。 如果您的安裝包含在遠端電腦上執行的伺服器功能，則當您想要透過遠端連接來管理這些伺服器時，必須具備這些電腦上的管理員權限。  
   
 -   主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料庫管理員權限。  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   如果您將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝在網域控制站上，您必須是網域管理員。  
-  
+
+::: moniker-end
+
 ##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> 管理內容  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指報表、模型、資料夾、資源和共用資料來源的管理。 所有的這些項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。  
   

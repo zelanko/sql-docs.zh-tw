@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "77507518"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
@@ -47,7 +47,7 @@ fn_get_audit_file ( file_pattern,
  *file_pattern*  
  針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 類型為**Nvarchar （260）**。 
  
- - **SQL Server**：
+ - SQL Server****：
     
     這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 您可以使用單一星號（*），從 audit 檔案集收集多個檔案。 例如：  
   
@@ -85,13 +85,13 @@ fn_get_audit_file ( file_pattern,
   
 | 資料行名稱 | 類型 | 描述 |  
 |-------------|------|-------------|  
-| action_id | **Varchar （4）** | 動作的識別碼。 不可為 Null。 |  
+| action_id | **varchar(4)** | 動作的識別碼。 不可為 Null。 |  
 | additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會被剖析，以轉義不正確 xml `'\<'`字元`'>'`， `'/'`例如`'_x'`、、、。 它們會被轉義為`_xHHHH\_`。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |
 | affected_rows | **bigint** | **適用**于：僅限 AZURE SQL DB<br /><br /> 受執行語句影響的資料列數目。 |  
 | application_name | **nvarchar(128)** | **適用**于： AZURE SQL DB + SQL Server （從2017開始）<br /><br /> 執行導致 audit 事件之語句的用戶端應用程式名稱 |  
 | audit_file_offset | **bigint** | **適用于**：僅 SQL Server<br /><br /> 檔案中包含稽核記錄的緩衝區位移。 不可為 Null。 |  
 | audit_schema_version | **int** | 一律為1 |  
-| class_type | **Varchar （2）** | 稽核發生所在之可稽核的實體類型。 不可為 Null。 |  
+| class_type | **varchar(2)** | 稽核發生所在之可稽核的實體類型。 不可為 Null。 |  
 | client_ip | **nvarchar(128)** | **適用**于： AZURE SQL DB + SQL Server （從2017開始）<br /><br />    用戶端應用程式的來源 IP |  
 | connection_id | GUID | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 伺服器中的連接識別碼 |
 | data_sensitivity_information | nvarchar(4000) | **適用**于：僅限 AZURE SQL DB<br /><br /> 由經過審核的查詢所傳回的資訊類型和敏感度標籤，是根據資料庫中的分類資料行。 深入瞭解[Azure SQL Database 資料探索與分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
@@ -100,11 +100,11 @@ fn_get_audit_file ( file_pattern,
 | database_principal_name | **sysname** | 目前的使用者。 可為 Null。 如果無法使用則傳回 NULL。 |  
 | duration_milliseconds | **bigint** | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 查詢執行持續時間（毫秒） |
 | event_time | **datetime2** | 可稽核的動作引發時的日期和時間。 不可為 Null。 |  
-| file_name | **Varchar （260）** | 記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。 |
+| file_name | **varchar(260)** | 記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。 |
 | is_column_permission | **bit** | 指出這是否為資料行層級權限的旗標。 不可為 Null。 當 permission_bitmask = 0 時會傳回 0。<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | 稽核發生所在之實體的識別碼。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 不可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 0。 例如驗證。 |  
 | object_name | **sysname** | 稽核發生所在之實體的名稱。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。 |
-| permission_bitmask | **Varbinary （16）** | 在某些動作中，這就是已授與、拒絕或撤銷的權限。 |
+| permission_bitmask | **varbinary(16)** | 在某些動作中，這就是已授與、拒絕或撤銷的權限。 |
 | response_rows | **bigint** | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 結果集中傳回的資料列數目。 |  
 | schema_name | **sysname** | 動作發生所在的結構描述環境。 可為 Null。 針對在架構外發生的審核傳回 Null。 |  
 | sequence_group_id | **varbinary** | **適用于**：僅限 SQL Server （從2016開始）<br /><br />  唯一識別碼 |  
@@ -185,7 +185,7 @@ fn_get_audit_file ( file_pattern,
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT 規格 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
@@ -197,7 +197,7 @@ fn_get_audit_file ( file_pattern,
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [dm_audit_class_type_map &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [建立伺服器稽核與伺服器稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

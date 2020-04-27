@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022597"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
@@ -26,20 +26,20 @@ ms.locfileid: "63022597"
   
 2.  對於您將發行的資料表，則在每個資料表上直接 (不透過角色) 將 SELECT 權限授與您在步驟一中建立的 Oracle 管理使用者。  
   
-3.  在「散發者」上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]並重新啟動實例。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
+3.  在「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
   
 4.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫設為「發行者」。  
   
  如需可以從 Oracle 資料庫複寫的物件清單，請參閱 [Oracle 發行者的設計考量與限制](design-considerations-and-limitations-for-oracle-publishers.md)。  
   
 > [!NOTE]  
->  您必須是 **sysadmin** 固定伺服器角色的成員，才能啟用「發行者」或「散發者」並建立 Oracle 發行集或從 Oracle 發行集建立訂閱。  
+>   您必須是 **sysadmin** 固定伺服器角色的成員，才能啟用「發行者」或「散發者」並建立 Oracle 發行集或從 Oracle 發行集建立訂閱。  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>在 Oracle 資料庫中建立複寫管理的使用者結構描述  
- 複寫代理程式連接到 Oracle 資料庫並在您必須建立的使用者結構描述內容中執行作業。 此結構描述必須被授與許多權限，這些權限會列示在下一節中。 此結構描述在「Oracle 發行者」上擁有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫處理所建立的所有物件，但公用同義字 **MSSQLSERVERDISTRIBUTOR**除外。 如需 Oracle 資料庫中建立的物件的詳細資訊，請參閱＜ [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)＞。  
+ 複寫代理程式連接到 Oracle 資料庫並在您必須建立的使用者結構描述內容中執行作業。 此結構描述必須被授與許多權限，這些權限會列示在下一節中。 此結構描述在「Oracle 發行者」上擁有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫處理所建立的所有物件，但公用同義字 **MSSQLSERVERDISTRIBUTOR** 除外。 如需 Oracle 資料庫中建立的物件的詳細資訊，請參閱＜ [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)＞。  
   
 > [!NOTE]  
->  用 **CASCADE** 選項來卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，會從「Oracle 發行者」移除所有的複寫物件。  
+>   用 **CASCADE** 選項來卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，會從「Oracle 發行者」移除所有的複寫物件。  
   
  在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝之後，可在下列目錄中取得此腳本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]： * \<磁片磁碟機>*：\\\Program Files\Microsoft\\SQL Server*\<InstanceName>* \mssql\install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)＞主題中。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63022597"
   
  如果成功連接到「Oracle 發行者」，則嘗試使用與您建立之複寫管理使用者結構描述相關聯的帳戶和密碼登入資料庫。 當以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務使用的 Windows 帳戶執行時，必須執行下列項目：  
   
-1.  按一下 [開始]****，然後按一下 [執行]****。  
+1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
   
 2.  輸入 `cmd` ，然後按一下 **[確定]**。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63022597"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     例如： `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     例如：`sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  如果網路組態成功，登入將會成功，您也會看到 `SQL` 提示字元。  
   
@@ -129,9 +129,9 @@ ms.locfileid: "63022597"
  若要設定 Oracle 發行者並建立發行集，請參閱＜ [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [Oracle 發行者的管理考量](administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
- [Oracle 發行相關術語字彙](glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle 發行者的管理考慮](administrative-considerations-for-oracle-publishers.md)   
+ [Oracle 發行者的資料類型對應](data-type-mapping-for-oracle-publishers.md)   
+ [Oracle 發行的詞彙詞彙](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle 發行概觀](oracle-publishing-overview.md)  
   
   

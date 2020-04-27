@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061990"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>加入、刪除、變更封裝中使用者定義變數的範圍
@@ -24,8 +24,7 @@ ms.locfileid: "66061990"
   
  如需變數範圍的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供了讓系統資訊在執行階段可用的系統變數，而且可以在封裝和事件處理常式等容器中使用。 您無法刪除系統變數。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供了讓系統資訊在執行階段可用的系統變數，而且可以在封裝和事件處理常式等容器中使用。 您無法刪除系統變數。  
   
 ### <a name="to-add-a-variable"></a>加入變數  
   
@@ -33,9 +32,9 @@ ms.locfileid: "66061990"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
+3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
-    -   若要將範圍設為封裝，按一下 [控制流程]**** 索引標籤之設計介面上的任意位置。  
+    -   若要將範圍設為封裝，請按一下 [控制流程]**** 索引標籤之設計介面上的任意位置。  
   
     -   若要將範圍設為事件處理常式，在 [事件處理常式]**** 索引標籤的設計介面上，選取可執行檔和事件處理常式。  
   
@@ -43,11 +42,11 @@ ms.locfileid: "66061990"
   
 4.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項]**** 對話方塊的 [鍵盤]**** 頁面中所選擇的組合鍵，以選擇性地顯示 [變數]**** 視窗。  
   
-5.  在 [變數]**** 視窗中，按一下**加入變數**圖示。 新變數便會加入清單。  
+5.  在 [**變數**] 視窗中，按一下 [**加入變數**] 圖示。 新變數便會加入清單。  
   
 6.  選擇性地按一下**方格選項**圖示，在 [變數方格選項]**** 對話方塊中選取要顯示的其他資料行，然後按一下 [確定]****。  
   
-7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)。  
+7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)定義。  
   
 8.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66061990"
   
 4.  選取要刪除的變數，然後按一下 [刪除變數]****。  
   
-     若您在 [變數] 視窗中沒看到變數，請按一下 [方格選項]****，然後選取 [顯示所有範圍的變數]****。  
+     如果您在 [變數] 視窗中看不到變數，請按一下 [**方格選項**]，然後選取 [**顯示所有範圍的變數**]。  
   
 5.  如果 [確認刪除變數]**** 對話方塊開啟，按一下 [是]**** 確認。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66061990"
   
 4.  選取變數，然後按一下 [移動變數]****。  
   
-     若您在 [變數] 視窗中沒看到變數，請按一下 [方格選項]****，然後選取 [顯示所有範圍的變數]****。  
+     如果您在 [變數] 視窗中看不到變數，請按一下 [**方格選項**]，然後選取 [**顯示所有範圍的變數**]。  
   
 5.  在 [選取新的範圍]**** 對話方塊中，選取封裝或容器、工作或是封裝中的事件處理常式，以變更變數範圍。  
   

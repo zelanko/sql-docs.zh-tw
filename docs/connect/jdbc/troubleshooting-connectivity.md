@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 12abdfd169aaea9f2108d2b4776eb99cc4bd2ce7
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528332"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728383"
 ---
 # <a name="troubleshooting-connectivity"></a>連線能力疑難排解
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "81528332"
 -   當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，JDBC 驅動程式需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證一同安裝，這不是預設。 請確定當您安裝或設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，已包含此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [診斷 JDBC 驅動程式的問題](diagnosing-problems-with-the-jdbc-driver.md)   
+ [使用 JDBC 驅動程式連線到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

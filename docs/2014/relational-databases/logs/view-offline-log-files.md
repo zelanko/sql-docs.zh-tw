@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144594"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
@@ -45,7 +45,7 @@ ms.locfileid: "63144594"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (此主題會示範如何擷取有關指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔的資訊)。  
   
-##  <a name="BeforeYouBegin"></a> 權限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 權限  
  若要連接至離線記錄檔，您必須在本機和遠端電腦上具有下列權限：  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空間的讀取權限。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。 如需詳細資訊，請參閱本節後面的＜若要確認 WMI 權限＞程序。  
@@ -74,7 +74,7 @@ ms.locfileid: "63144594"
   
     3.  輸入遠端電腦名稱，然後按一下 [確定]  。  
   
-3.  以滑鼠右鍵按一下 **[Wmi 控制（本機）** ] 或 **[Wmi 控制（***RemoteComputerName***）**]，然後按一下 [**屬性**]。  
+3.  以滑鼠右鍵按一下 [WMI 控制 (本機)]**** 或 **[WMI 控制 (***遠端電腦名稱***)]**，然後按一下 [內容]****。  
   
 4.  在 [WMI Control Properties (WMI 控制內容)]  對話方塊中，按一下 [安全性]  索引標籤。  
   

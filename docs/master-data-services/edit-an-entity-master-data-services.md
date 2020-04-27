@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729295"
 ---
 # <a name="edit-an-entity-master-data-services"></a>編輯實體 (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "73729295"
 
   您可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中編輯實體。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-edit-an-entity"></a>編輯實體  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73729295"
   
 8.  選取或取消選取 [自動建立代碼值]**** 核取方塊。  
   
-     如需詳細資訊，請參閱[自動建立程式碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
+     如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。  
   
 9. 選取或取消選取 [啟用資料壓縮]**** 核取方塊。 依預設會開啟資料列壓縮。  
   

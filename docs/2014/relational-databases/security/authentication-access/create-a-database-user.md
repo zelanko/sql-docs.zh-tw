@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211961"
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立對應到登入的資料庫使用者。 連接到資料庫時，資料庫使用者是登入的識別。 資料庫使用者可以使用相同的名稱做為登入，但是並非必要。 本主題假設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中已有登入存在。 如需如何建立登入的詳細資訊，請參閱[建立登](create-a-login.md)入。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立對應到登入的資料庫使用者。 連接到資料庫時，資料庫使用者是登入的識別。 資料庫使用者可以使用相同的名稱做為登入，但是並非必要。 本主題假設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已有登入存在。 如需如何建立登入的詳細資訊，請參閱[建立登](create-a-login.md)入。  
   
  **本主題內容**  
   
@@ -47,9 +47,9 @@ ms.locfileid: "68211961"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 背景  
+###  <a name="background"></a><a name="Restrictions"></a> 背景  
  使用者是資料庫層級的安全性主體。 登入必須對應到資料庫使用者，才能連接到資料庫。 登入可以做為不同的使用者對應到不同的資料庫，但在每一個資料庫中只能對應為一位使用者。 在部分自主資料庫中，可以建立沒有登入的使用者。 如需自主資料庫使用者的詳細資訊，請參閱 [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)。 如果資料庫中啟用 guest 使用者，則未對應到資料庫使用者的登入就可以用 guest 使用者的身分進入資料庫。  
   
 > [!IMPORTANT]  
@@ -57,12 +57,12 @@ ms.locfileid: "68211961"
   
  使用者做為安全性主體時，可以將權限授與使用者。 使用者的範圍為資料庫。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 `ALTER ANY USER` 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>若要建立資料庫使用者  
   
@@ -76,24 +76,22 @@ ms.locfileid: "68211961"
   
 5.  在 **[使用者名稱]** 方塊中，輸入新使用者的名稱。 如果您已經從 [使用者類型]**** 清單中選擇 [Windows 使用者]****，也可以按一下省略符號 **(...)** 開啟 [選取使用者或群組]**** 對話方塊。  
   
-6.  在 **[登入名稱]** 方塊中，輸入使用者的登入。 或者，按一下省略符號 **(...)**，開啟 [選取登入]**** 對話方塊。 如果您從 [**使用者類型**] 清單中選取 [**具有登入的 SQL 使用者**] 或 [ **Windows 使用者**]，即可使用**登入名稱**。  
+6.  在 **[登入名稱]** 方塊中，輸入使用者的登入。 或者，按一下省略符號 **(...)**，開啟 [選取登入]**** 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]** 或 **[Windows 使用者]** ， **[登入名稱]** 就是可用的。  
   
-7.  在 **[預設結構描述]** 方塊中，指定擁有此使用者建立的物件之結構描述。 或者，按一下省略符號 **(...)**，開啟 [選取結構描述]**** 對話方塊。 如果您選取 [**具有登**入的 sql 使用者]、[**沒有登入的 sql 使用者**] 或 [**使用者類型**] 清單中的 [ **Windows 使用者**]，則可以使用**預設架構**  
+7.  在 **[預設結構描述]** 方塊中，指定擁有此使用者建立的物件之結構描述。 或者，按一下省略符號 **(...)**，開啟 [選取結構描述]**** 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]**, **[沒有登入的 SQL 使用者]** 或 **[Windows 使用者]** ， **[預設結構描述]** 就是可用的。  
   
-8.  在 **[憑證名稱]** 方塊中，輸入要用於資料庫使用者的憑證。 或者，按一下省略符號 **(...)**，開啟 [選取憑證]**** 對話方塊。 如果您從 [**使用者類型**] 清單中選取 [**對應到憑證的使用者**]，就可以使用 [**憑證名稱**]。  
+8.  在 **[憑證名稱]** 方塊中，輸入要用於資料庫使用者的憑證。 或者，按一下省略符號 **(...)**，開啟 [選取憑證]**** 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[對應到憑證的使用者]** ， **[憑證名稱]** 就是可用的。  
   
-9. 在 **[非對稱金鑰名稱]**  方塊中，輸入要用於資料庫使用者的金鑰。 或者，按一下省略符號 **(...)**，開啟 [選取非對稱金鑰]**** 對話方塊。 如果您從 [**使用者類型**] 清單中選取 [**對應到非對稱金鑰的使用者**]，則可以使用**非對稱金鑰名稱**。  
+9. 在 **[非對稱金鑰名稱]**  方塊中，輸入要用於資料庫使用者的金鑰。 或者，按一下省略符號 **(...)**，開啟 [選取非對稱金鑰]**** 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[對應到非對稱金鑰的使用者]** ， **[非對稱金鑰名稱]** 就是可用的。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
  [資料庫使用者 - 新增]**** 對話方塊也在其他四個頁面上提供選項：[擁有的結構描述]****、[成員資格]****、[安全性實體]**** 和 [擴充屬性]****。  
   
--   
-  **[擁有的結構描述]** 頁面列出新資料庫使用者可擁有的所有可能結構描述。 若要在資料庫使用者中加入或移除結構描述，請在 **[這個使用者擁有的結構描述]** 底下選取或清除結構描述旁邊的核取方塊。  
+-   **[擁有的結構描述]** 頁面列出新資料庫使用者可擁有的所有可能結構描述。 若要在資料庫使用者中加入或移除結構描述，請在 **[這個使用者擁有的結構描述]** 底下選取或清除結構描述旁邊的核取方塊。  
   
--   
-  **[成員資格]** 頁面列出新資料庫使用者可擁有的所有可能的資料庫角色成員資格。 若要在資料庫使用者中加入或移除角色，請在 **[資料庫角色成員資格]** 底下選取或清除角色旁邊的核取方塊。  
+-   **[成員資格]** 頁面列出新資料庫使用者可擁有的所有可能的資料庫角色成員資格。 若要在資料庫使用者中加入或移除角色，請在 **[資料庫角色成員資格]** 底下選取或清除角色旁邊的核取方塊。  
   
 -   **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   
@@ -114,7 +112,7 @@ ms.locfileid: "68211961"
      **刪除**  
      移除選取的擴充屬性。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>若要建立資料庫使用者  
   

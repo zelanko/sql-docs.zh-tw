@@ -1,5 +1,5 @@
 ---
-title: 使用大數數值型別 |Microsoft Docs
+title: 使用大數值類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206993"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
@@ -30,7 +30,7 @@ ms.locfileid: "68206993"
 > [!NOTE]  
 >  大數值資料類型的最大大小可介於 1 和 8 KB 之間，或者也可以指定為無限制。  
   
- 先前，只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]text **、** ntext** 和 **image** 之類的 ** 資料類型可以達到此種長度。 **Varchar**、 **Nvarchar**和**Varbinary**的**max**規範使這些資料類型成為多餘的。 不過，因為 long 資料類型仍可使用，所以大部分 OLE DB 和 ODBC 資料存取元件的介面都仍保持原樣。 為了與先前的版本保持回溯相容性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中的 DBCOLUMNFLAGS_ISLONG 旗標以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式中的 SQL_LONGVARCHAR 仍會繼續使用。 當新類型設定為無限制的最大長度時，針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本所撰寫的提供者和驅動程式仍會為其繼續使用這些詞彙。  
+ 先前，只有 **text**、**ntext** 和 **image** 之類的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型可以達到此種長度。 **Varchar**、 **Nvarchar**和**Varbinary**的**max**規範使這些資料類型成為多餘的。 不過，因為 long 資料類型仍可使用，所以大部分 OLE DB 和 ODBC 資料存取元件的介面都仍保持原樣。 為了與先前的版本保持回溯相容性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中的 DBCOLUMNFLAGS_ISLONG 旗標以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式中的 SQL_LONGVARCHAR 仍會繼續使用。 當新類型設定為無限制的最大長度時，針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本所撰寫的提供者和驅動程式仍會為其繼續使用這些詞彙。  
   
 > [!NOTE]  
 >  您也可以將 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型指定為預存程序的輸入和輸出參數類型、函數傳回型別，或者指定於 [CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql) 函數。  
@@ -43,7 +43,7 @@ ms.locfileid: "68206993"
   
  在 **max** 大小設定為無限制的資料行中，**varchar(max)**、**varbinary(max)** 和 **nvarchar(max)** 資料類型會在傳回資料行資料類型的核心 OLE DB 結構描述資料列集和介面中表示為 ISLONG。  
   
- 命令物件的 **IAccessor** 實作已變更為允許以 DBTYPE_IUNKNOWN 的形式進行繫結。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
+ 命令物件的**IAccessor**實已變更為允許系結為 DBTYPE_IUNKNOWN。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
   
  以資料流傳輸的輸出參數值會在任何結果資料列之後傳回。 如果應用程式藉由呼叫 **IMultipleResults::GetResult** (而不取用所有的傳回輸出參數值) 嘗試繼續前往下一個結果集，就會傳回 DB_E_OBJECTOPEN。  
   

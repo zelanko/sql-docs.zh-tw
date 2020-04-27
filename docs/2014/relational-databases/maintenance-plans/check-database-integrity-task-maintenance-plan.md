@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144674"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>檢查資料庫完整性工作 (維護計畫)
-  使用 [**檢查資料庫完整性**工作] 對話方塊，即可藉由`DBCC CHECKDB` [!INCLUDE[tsql](../../includes/tsql-md.md)]執行語句來檢查使用者和系統資料表的配置和結構完整性，以及資料庫中的索引。 執行 `DBCC` 以確實回報任何有關資料庫完整性的問題，以便系統管理員或資料庫擁有者稍後解決。  
+  使用 [檢查資料庫完整性工作]  對話方塊，並執行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以檢查使用者和系統資料表的配置和結構完整性以及資料庫的索引。 執行 `DBCC` 以確實回報任何有關資料庫完整性的問題，以便系統管理員或資料庫擁有者稍後解決。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -37,7 +37,7 @@ ms.locfileid: "63144674"
   
 -   **所有資料庫**  
   
-     產生維護計畫，針對所有[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫執行維護工作，但**tempdb**除外。  
+     產生維護計畫，針對所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行維護工作，但 **tempdb** 除外。  
   
 -   **所有系統資料庫**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63144674"
  **包含索引**  
  檢查所有的索引頁面以及資料表資料頁面的完整性。  
   
- **View T-sql**  
+ **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
@@ -70,17 +70,17 @@ ms.locfileid: "63144674"
  **選取或輸入伺服器名稱**  
  選取執行此工作時要連接的伺服器。  
   
- **[重新整理]**  
+ **重新整理**  
  重新整理可用的伺服器清單。  
   
- **輸入資訊以登入伺服器**  
+ **輸入要登入到伺服器的資訊**  
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
  使用 Windows 驗證連接到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]實例。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 驗證，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證連接到的實例。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

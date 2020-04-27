@@ -14,31 +14,31 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211999"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立資源集區。  
   
--   **開始之前：**  [限制](#LimitationsRestrictions)事項、[許可權](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **若要建立資源集區，請使用：**  [SQL Server Management Studio](#CreRPProp)、 [transact-sql](#CreRPTSQL)  
+-   **To create a resource pool, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  最大 CPU 百分比必須大於或等於最小 CPU 百分比。 最大記憶體百分比必須大於或等於最小記憶體百分比。  
   
  所有資源集區之最小 CPU 百分比和最小記憶體百分比的總和不得超過 100。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  建立資源集區需要 CONTROL SERVER 權限。  
   
-##  <a name="CreRPProp"></a>使用 SQL Server Management Studio 建立資源集區  
- **若要使用來建立資源集區[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立資源集區  
+ **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
@@ -52,12 +52,12 @@ ms.locfileid: "68211999"
   
 6.  若要儲存變更，請按一下 **[確定]**。  
   
-##  <a name="CreRPTSQL"></a>使用 Transact-sql 建立資源集區  
- **若要使用來建立資源集區[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a>使用 Transact-sql 建立資源集區  
+ **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  執行 `CREATE RESOURCE POOL` 陳述式，並指定要設定的屬性值。  
   
-2.  執行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 陳述式。  
+2.  執行**ALTER RESOURCE GOVERNOR 重新**設定語句。  
   
 ### <a name="example-transact-sql"></a>範例 &#40;Transact-SQL&#41;  
  下列範例會建立名稱為 `poolAdhoc`的資源集區。  

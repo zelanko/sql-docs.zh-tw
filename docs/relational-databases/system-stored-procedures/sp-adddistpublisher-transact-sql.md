@@ -16,10 +16,10 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771393"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
@@ -56,9 +56,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |值|描述|  
 |-----------|-----------------|  
 |**0**|散發者的複寫代理程式利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連接到發行者。|  
-|**1** （預設值）|散發者的複寫代理程式利用 Windows 驗證來連接到發行者。|  
+|**1** (預設值)|散發者的複寫代理程式利用 Windows 驗證來連接到發行者。|  
   
-`[ @login = ] 'login'`這是登入。 如果*security_mode*為**0**，則需要此參數。 *login*是**sysname**，預設值是 Null。 複寫代理程式利用這個參數來連接發行者。  
+`[ @login = ] 'login'`這是登入。 如果*security_mode*為**0**，則需要此參數。 *login* 是預設值為 NULL 的 **sysname**。 複寫代理程式利用這個參數來連接發行者。  
   
 `[ @password = ] 'password']`這是密碼。 *password*是**sysname**，預設值是 Null。 複寫代理程式利用這個參數來連接發行者。  
   
@@ -81,9 +81,8 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料.|  
-|**1**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的資料庫。|  
+|**0** (預設)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
+|**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的資料庫。|  
   
 `[ @publisher_type = ] 'publisher_type'`指定發行者不[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是時的發行者類型。 *publisher_type*是 sysname，而且可以是下列其中一個值。  
   
@@ -108,11 +107,11 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_adddistpublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [設定散發](../../relational-databases/replication/configure-distribution.md)  
   
   

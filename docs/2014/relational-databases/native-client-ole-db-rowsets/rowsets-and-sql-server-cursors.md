@@ -1,5 +1,5 @@
 ---
-title: 資料列集和 SQL Server 資料指標 |Microsoft Docs
+title: 資料列集和 SQL Server 資料指標 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207005"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用兩個方法將結果集傳回給取用者：  
   
 -   具有以下功能的預設結果集：  
@@ -86,12 +85,11 @@ ms.locfileid: "68207005"
   
  T = VARIANT_TRUE  
   
- 
-  \- = VARIANT_TRUE 或 VARIANT_FALSE  
+ \- = VARIANT_TRUE 或 VARIANT_FALSE  
   
  若要使用某種類型的資料指標模型，請找出對應至此資料指標模型的資料行，並尋找此資料行中具有 'T' 值的所有資料列集屬性。 將這些資料列集屬性設定為 VARIANT_TRUE，以便使用特定的資料指標模型。 具有 '-' 值的資料列集屬性可以設定為 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|資料列集屬性/資料指標模型|預設<br /><br /> 結果<br /><br /> set<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|靜態<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
+|資料列集屬性/資料指標模型|預設<br /><br /> result<br /><br /> 設定<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|Static<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

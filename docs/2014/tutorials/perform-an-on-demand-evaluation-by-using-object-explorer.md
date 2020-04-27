@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210949"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>使用物件總管執行視需要評估
@@ -23,7 +23,7 @@ ms.locfileid: "68210949"
 > [!NOTE]  
 >  您也可以透過已註冊的伺服器評估單一執行個體的原則。 如需詳細資訊，請參閱[使用已註冊的伺服器執行隨選評估](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  這一課是以 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本為基礎。  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "68210949"
   
 3.  在 [**評估原則**] 對話方塊中，按一下 [**來源**] 方塊旁的省略號（**...**）按鈕。  
   
-4.  在 [**選取來源**] 對話方塊中，您可以選取 [檔案 **] 或 [** **伺服器**] 做為要評估之原則檔案的來源。 如果您按一下 [**伺服器**]，可以針對先前匯入本機或遠端伺服器上以原則為基礎之管理的任何最佳作法原則，執行視需要評估。 在本教學課程**中，您將按一下 [** 檔案]，然後選取您想要評估的個別原則檔案。 若要這樣做，請遵循下列步驟：  
+4.  在 [**選取來源**] 對話方塊中，您可以選取 [檔案 **] 或 [** **伺服器**] 做為要評估之原則檔案的來源。 如果您按一下 [**伺服器**]，可以針對先前匯入本機或遠端伺服器上以原則為基礎之管理的任何最佳作法原則，執行視需要評估。 在本教學課程**中，您將按一下 [** 檔案]，然後選取您想要評估的個別原則檔案。 若要這樣做，請執行下列步驟：  
   
     1.  按一下 **[** 檔案]。  
   

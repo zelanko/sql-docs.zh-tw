@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058994"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
@@ -30,16 +30,16 @@ ms.locfileid: "66058994"
  **名稱**  
  提供唯一的名稱給工作流程中的執行 SQL 工作。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
- **說明**  
+ **描述**  
  描述執行 SQL 工作。 最佳作法是以其用途描述工作，使封裝可以自我記錄並易於維護。  
   
  **限制**  
- 指定工作將在超時前執行的最大秒數。值為0表示無限時間。 預設值是 0。  
+ 指定工作將在超時前執行的最大秒數。值為0表示無限時間。 預設值為 0。  
   
 > [!NOTE]  
 >  如果預存程序藉由提供大於 [逾時]**** 指定的秒數之連接時間與交易完成時間，使預存程序模擬睡眠功能，就不會發生逾時。 不過，執行查詢的預存程序一律會受到 [逾時]**** 所指定的時間限制。  
   
- **CodePage**  
+ **頁**  
  指定翻譯變數中的 Unicode 值時要使用的字碼頁。 預設值是本機電腦的字碼頁。  
   
 > [!NOTE]  
@@ -54,10 +54,10 @@ ms.locfileid: "66058994"
  **ConnectionType**  
  選擇用來連接到資料來源的連接管理員類型。 可用的連接類型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相關主題：** [OLE DB 連接管理](connection-manager/ole-db-connection-manager.md)器、 [ODBC 連線管理員](connection-manager/odbc-connection-manager.md)、 [ADO 連接管理](connection-manager/ado-connection-manager.md)器、 [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)、 [SQL Server Compact 版本連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **相關主題** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、 [ODBC 連線管理員](connection-manager/odbc-connection-manager.md)、 [ADO 連線管理員](connection-manager/ado-connection-manager.md)、 [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)、 [SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **[連接]**  
- 從已定義的連接管理員清單中選擇連接。 若要建立新的連接， \<請選取 [**新增連接 ...** ]>。  
+ **建立**  
+ 從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]****。  
   
  **SQLSourceType**  
  選取工作執行之 SQL 陳述式的來源類型。  
@@ -72,16 +72,15 @@ ms.locfileid: "66058994"
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 Transact-SQL 陳述式。 選取此值會顯示動態選項 [SQLStatement]****。|  
 |**檔案連接**|選取包含 Transact-SQL 陳述式的檔案。 選取此選項會顯示動態選項 [FileConnection]****。|  
-|**變數**|將來源設定為定義 Transact-SQL 陳述式的變數。 選取此值會顯示動態選項 [SourceVariable]  。|  
+|**變數**|將來源設定為定義 Transact-SQL 陳述式的變數。 選取此值會顯示動態選項 [SourceVariable]****。|  
   
  **QueryIsStoredProcedure**  
  指出要執行之指定的 SQL 陳述式是否為預存程序。 只有工作使用 ADO 連接管理員時，此屬性才會是讀取/寫入。 否則此屬性是唯讀的，且其值為 `false`。  
   
  **BypassPrepare**  
- 指出 SQL 陳述式是否已備妥。  
-  `true` 會略過準備；`false` 會在執行它之前備妥 SQL 陳述式。 只有搭配支援準備的 OLE DB 連接，才能使用此選項。  
+ 指出 SQL 陳述式是否已備妥。  `true` 會略過準備；`false` 會在執行它之前備妥 SQL 陳述式。 只有搭配支援準備的 OLE DB 連接，才能使用此選項。  
   
- **相關主題：**[備](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)妥的執行    
+ **相關主題**  [備妥的執行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **瀏覽**  
  使用 [開啟]**** 對話方塊，以尋找包含 SQL 陳述式的檔案。 選取要將檔案內容以 SQL 陳述式複製到 **SQLStatement** 屬性的檔案。  
@@ -96,15 +95,15 @@ ms.locfileid: "66058994"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = 直接輸入  
  **SQLStatement**  
- 在選項方塊中鍵入要執行的 SQL 陳述式，或者按一下瀏覽按鈕 (...) 在 [輸入 SQL 查詢]**** 對話方塊中鍵入 SQL 陳述式，或按一下 [建置查詢]**** 使用 [查詢產生器]**** 對話方塊來撰寫陳述式。  
+ 在 [選項] 方塊中輸入要執行的 SQL 語句，或按一下瀏覽按鈕（...）在 [**輸入 Sql 查詢**] 對話方塊中輸入 sql 語句，或按一下 [**建立查詢**]，使用 [**查詢**產生器] 對話方塊來撰寫語句。  
   
- **相關主題：** [查詢](../../2014/integration-services/query-builder.md)產生器  
+ **相關主題︰** [查詢產生器](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 檔案連接  
  **FileConnection**  
  選取現有的檔案連線管理員，或按一下 [\<新增連線...>]**** 建立新的連線管理員。  
   
- **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 變數  
  **SourceVariable**  

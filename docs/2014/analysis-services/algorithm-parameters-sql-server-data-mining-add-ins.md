@@ -48,10 +48,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062602"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>演算法參數 (SQL Server 資料採礦增益集)
@@ -74,7 +74,7 @@ ms.locfileid: "66062602"
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Microsoft 時間序列演算法|指定 0 和 1 之間的數值，用來偵測週期性。 將這個值設定為愈接近 1，就會探索更多接近週期性的模式，並自動產生週期性提示。 處理大量週期性提示時，可能會造成更長的模型定型時間及更精確的模型。 如果將此值設定為愈接近 0，則只會偵測到週期性很強的資料。<br /><br /> 預設值為 0.6。|  
 |CLUSTER_COUNT|Microsoft 群集演算法<br /><br /> Microsoft 時序叢集演算法|指定演算法要建立的大約群集數目。 如果無法從資料建立大約群集數目，則演算法會盡可能建立最多的群集。 將 CLUSTER_COUNT 設定為 0 會造成演算法使用啟發式決定，對於建立的群集數做出最好的決定。<br /><br /> 預設值為 10。|  
-|CLUSTER_SEED|Microsoft 群集演算法|指定在模型建立的初始階段，用於隨機產生群集的種子號碼。<br /><br /> 預設值是 0。|  
+|CLUSTER_SEED|Microsoft 群集演算法|指定在模型建立的初始階段，用於隨機產生群集的種子號碼。<br /><br /> 預設值為 0。|  
 |CLUSTERING_METHOD|Microsoft 群集演算法|指定演算法要使用的群集方法。 可用的群集方法有：可擴充的 EM (1)、不可擴充的 EM (2)、可擴充的 K-means (3) 和不可擴充的 K-means (4)。<br /><br /> 預設值是 1。|  
 |COMPLEXITY_PENALTY|Microsoft 決策樹演算法<br /><br /> Microsoft 時間序列演算法|控制決策樹的成長。 低值會增加分岔數目，而高值會減少分岔數目。 預設值是依據特定模型的屬性數目，如下列清單所述：<br /><br /> 1 到 9 個屬性，預設值為 0.5。<br /><br /> 10 到 99 個屬性，預設值為 0.9。<br /><br /> 100 個以上的屬性，預設值為 0.99。<br /><br /> 注意：在時間序列模型中，這個參數只適用于使用 ARTxp 演算法或混合模型所建立的模型。|  
 |FORCED_REGRESSOR|Microsoft 決策樹演算法<br /><br /> Microsoft 線性迴歸演算法|強制演算法使用指定的資料行作為迴歸輸入變數，不考慮演算法計算出來之資料行的重要性。<br /><br /> 注意：這個參數僅用於預測連續屬性的決策樹。 根據定義，線性迴歸模型是一種特殊案例的決策樹，可預測持續的屬性。 但是，任何決策樹模型都可以包含一個代表線性迴歸公式的節點。|  
@@ -113,7 +113,7 @@ ms.locfileid: "66062602"
 |SPLIT_METHOD|Microsoft 決策樹演算法|決定用來分岔節點的方法。 可用的選項如下：二元分岔 (1)、完整分岔 (2) 或根據演算法判斷 (3)。<br /><br /> 預設值為 3。|  
 |STOPPING_TOLERANCE|Microsoft 群集演算法技術參考|指定用來決定何時到達聚合以及演算法完成模型建立的值。 當群集機率的整體變更小於 STOPPING_TOLERANCE 參數除以模型大小的比率時，就到達聚合。<br /><br /> 預設值為 10。|  
   
-### <a name="comments"></a>註解  
+### <a name="comments"></a>評價  
  如需有關演算法的詳細資料，請參閱《SQL Server 線上叢書》。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -17,19 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211099"
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
-  
   **profiler** 公用程式會啟動 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 這個主題稍後列出的選擇性引數可讓您控制應用程式啟動的方式。  
   
 > [!NOTE]  
->  
-  **profiler** 公用程式的用途不在於編寫追蹤的指令碼。 如需詳細資訊，請參閱 [SQL Server Profiler](sql-server-profiler/sql-server-profiler.md)。  
+>  **profiler** 公用程式的用途不在於編寫追蹤的指令碼。 如需詳細資訊，請參閱 [SQL Server Profiler](sql-server-profiler/sql-server-profiler.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,34 +60,34 @@ ms.locfileid: "68211099"
  這是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的使用者登入識別碼。 登入識別碼會區分大小寫。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
- **/P** *密碼*  
+ **/P** *password*  
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之使用者指定的密碼。  
   
  **/E**  
  利用目前使用者的認證來指定以 Windows 驗證進行連接。  
   
  **/S**  *sql_server_name*  
- 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/S <SQL Server 名稱>** **\\<執行個體名稱>**。  
+ 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連線到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/S** *sql_server_name*\\*instance_name*。  
   
  **/A**  *analysis_services_server_name*  
- 指定 Analysis Services 的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/A <Analysis Services 伺服器名稱>\<執行個體名稱>** ** 的格式。  
+ 指定 Analysis Services 的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連線到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/A** *analysis_services_server_name\instance_name*。  
   
- **/D** *資料庫*  
+ **/D** *database*  
  指定連接要用的資料庫名稱。 如果未指定任何資料庫，這個選項會選取指定使用者的預設資料庫。  
   
  **/B "** *trace_table_name* **"**  
  指定啟動 Profiler 時所載入的追蹤資料表。 您必須指定資料庫、使用者或結構描述，以及資料表。  
   
- **/T "** *template_name* **"**  
- 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱>** 中，不應指定範本的副檔名 (.tdf)。 例如：  
+ **/T"** *template_name* **"**  
+ 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱>  中，不應指定範本的副檔名 (.tdf)。 例如：  
   
 ```  
 /T "standard"  
 ```  
   
- **/F "** *filename* **"**  
+ **/F"** *filename* **"**  
  指定啟動 Profiler 時所載入之追蹤檔的路徑和檔案名稱。 整個路徑和檔案名稱必須用引號括住。 這個選項不能搭配 **/O**一起使用。  
   
  **/O "** *filename*  **"**  
@@ -98,7 +96,7 @@ ms.locfileid: "68211099"
  **/L** *locale_ID*  
  無法使用。  
   
- **/M "** *MM-DD-YY hh： MM： ss* **"**  
+ **/M "** *MM-DD-YY hh:mm:ss* **"**  
  指定停止追蹤的日期和時間。 停止時間必須用引號括住。 請根據下表中的參數來指定停止時間：  
   
 |參數|定義|  
@@ -111,7 +109,7 @@ ms.locfileid: "68211099"
 |ss|兩位數的秒鐘|  
   
 > [!NOTE]  
->  只有當 ** 中已啟用 [使用地區設定顯示日期與時間值]**[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
+>  只有當  **中已啟用 [使用地區設定顯示日期與時間值]** [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
   
  **/R**  
  啟用追蹤檔的換用。  
@@ -127,6 +125,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [命令提示字元公用程式參考 &#40;資料庫引擎&#41;](command-prompt-utility-reference-database-engine.md)  
+ [命令提示字元公用程式參考 &#40;Database Engine&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

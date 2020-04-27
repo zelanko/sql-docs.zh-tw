@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206828"
 ---
 # <a name="using-data-files-and-format-files"></a>使用資料檔案與格式檔案
@@ -41,8 +41,7 @@ ms.locfileid: "68206828"
   
 3.  呼叫**bcp_exec**以執行大量複製作業。  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可能是會產生結果集的任何陳述式。 系統會建立包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式第一個結果集的資料檔案。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式產生多個結果集，則大量複製會忽略第一個結果集後的任何結果集。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可能是會產生結果集的任何陳述式。 系統會建立包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式第一個結果集的資料檔案。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式產生多個結果集，則大量複製會忽略第一個結果集後的任何結果集。  
   
  若要建立資料檔，其中的資料行資料是以與資料表不同的格式儲存，請呼叫[bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)來指定要變更多少資料行，然後針對您想要變更其格式的每個資料行呼叫[bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 。 這會在呼叫**bcp_init**之後，但在呼叫**bcp_exec**之前完成。 **bcp_colfmt**指定資料行的資料儲存在資料檔案中的格式。 在大量複製或輸出時，可以使用它。您也可以使用**bcp_colfmt**來設定資料列和資料行結束字元。 例如，如果您的資料未包含定位字元，您可以使用**bcp_colfmt**來建立 tab 鍵分隔的檔案，將定位字元設定為每個資料行的結束字元。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "68206828"
   
  從格式檔案所描述的資料檔案中大量複製時，請在**bcp_init**之後，但在**bcp_exec**之前呼叫[bcp_readfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) ，以讀取格式檔案。  
   
- 從**** 資料檔案大量複製到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，bcp_control 函數會控制數個選項。 **bcp_control**設定選項，例如終止前的錯誤最大數目、開始大量複製之檔案中的資料列、停止的資料列，以及批次大小。  
+ 從**bcp_control**資料檔案大量複製到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，bcp_control 函數會控制數個選項。 **bcp_control**設定選項，例如終止前的錯誤最大數目、開始大量複製之檔案中的資料列、停止的資料列，以及批次大小。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;ODBC&#41;執行大量複製作業](performing-bulk-copy-operations-odbc.md)  

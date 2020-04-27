@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070878"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>排序及群組查詢結果 (Visual Database Tools)
@@ -35,10 +35,10 @@ ms.locfileid: "63070878"
  如需認識建立此種查詢的詳細資訊，請參閱下列表格所列的主題。  
   
 ## <a name="in-this-section"></a>本節內容  
- [排序 &#40;Visual Database Tools&#41;的資料列](visual-database-tools.md)  
+ [排序資料列 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  描述您可以排序資料列的各種方式，以及使用的原因。  
   
- [折迭 &#40;Visual Database Tools&#41;的資料列群組](collapse-groups-of-rows-visual-database-tools.md)  
+ [摺疊資料列群組 &#40;Visual Database Tools&#41;](collapse-groups-of-rows-visual-database-tools.md)  
  描述摺疊資料列的各種方式，例如計算或排除重複。  
   
  [使用 ORDER BY 排序 &#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
@@ -47,16 +47,16 @@ ms.locfileid: "63070878"
  [以遞增或遞減順序排序 &#40;Visual Database Tools&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
  提供變更或設定排序方向的步驟。  
   
- [在查詢中排序多個資料行 &#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
+ [排序查詢中的多個資料行 &#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
  提供針對結果集中的多個欄位進行排序的步驟。  
   
- [將查詢結果中的資料列分組 &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
+ [群組查詢結果中的資料列 &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
  藉由將資料組成群組以建立摘要資訊子集合的步驟。  
   
- [指定 &#40;Visual Database Tools 的群組條件&#41;](specify-conditions-for-groups-visual-database-tools.md)  
+ [指定群組條件 &#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  
  提供建立套用到資料列群組之搜尋條件的步驟。  
   
- [重新排列輸出資料行 &#40;Visual Database Tools&#41;](reorder-output-columns-visual-database-tools.md)  
+ [重新排列輸出資料行順序 &#40;Visual Database Tools&#41;](reorder-output-columns-visual-database-tools.md)  
  提供變更欄位輸出順序的步驟。  
   
 ## <a name="related-sections"></a>相關章節  

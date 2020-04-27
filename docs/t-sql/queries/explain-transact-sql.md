@@ -10,20 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3523b88b978bb2e08a9c712a30daf14b11fab299
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636215"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138236"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查口詢計劃，而不執行陳述式。 使用 EXPLAIN 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲 (預覽)。
-  
- 如需查詢計劃的詳細資訊，請參閱 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)] 中的＜了解查詢計劃＞。  
   
 ## <a name="syntax"></a>語法  
   

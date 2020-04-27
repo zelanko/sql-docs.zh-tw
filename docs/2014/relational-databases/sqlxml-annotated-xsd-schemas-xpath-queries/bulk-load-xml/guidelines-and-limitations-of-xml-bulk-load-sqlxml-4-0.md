@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013452"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大量載入的指導方針和限制 (SQLXML 4.0)
@@ -171,7 +171,6 @@ ms.locfileid: "66013452"
   
 -   如果您要使用 XML 大量載入來插入日期值，必須以 (-)CCYY-MM-DD((+-)TZ) 格式指定這些值。 這是用於日期的標準 XSD 格式。  
   
--   某些屬性旗標與其他屬性旗標不相容。 例如，大量載入不同時支援 `Ignoreduplicatekeys=true` 及 `Keepidentity=false`。 
-  `Keepidentity=false` 時，大量載入需要伺服器才能產生索引鍵值。 資料表在索引鍵上應該要有 `IDENTITY` 條件約束。 伺服器不會產生重複的索引鍵，這表示不需要將 `Ignoreduplicatekeys` 設定為 `true`。 只有在下列兩種情況下才需要將 `Ignoreduplicatekeys` 設定為 `true`：從內送資料上傳主索引鍵值到具有資料列的資料表以及可能會發生主索引鍵值衝突時。  
+-   某些屬性旗標與其他屬性旗標不相容。 例如，大量載入不同時支援 `Ignoreduplicatekeys=true` 及 `Keepidentity=false`。 `Keepidentity=false` 時，大量載入需要伺服器才能產生索引鍵值。 資料表在索引鍵上應該要有 `IDENTITY` 條件約束。 伺服器不會產生重複的索引鍵，這表示不需要將 `Ignoreduplicatekeys` 設定為 `true`。 只有在下列兩種情況下才需要將 `Ignoreduplicatekeys` 設定為 `true`：從內送資料上傳主索引鍵值到具有資料列的資料表以及可能會發生主索引鍵值衝突時。  
   
   

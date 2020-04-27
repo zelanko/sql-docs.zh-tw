@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057210"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目的地編輯器 (連接管理員頁面)
@@ -30,9 +30,9 @@ ms.locfileid: "66057210"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 目的地的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程]  索引標籤中，按兩下 ODBC 目的地。  
+-   在 [資料流程]**** 索引標籤中，按兩下 ODBC 目的地。  
   
--   在 **[ODBC 目的地編輯器]** 中，按一下 **[連接管理員]** 。  
+-   在 **[ODBC 目的地編輯器]** 中，按一下 **[連接管理員]**。  
   
 ## <a name="options"></a>選項。  
   

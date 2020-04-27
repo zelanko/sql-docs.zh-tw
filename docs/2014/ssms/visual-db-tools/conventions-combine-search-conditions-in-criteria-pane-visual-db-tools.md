@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140401"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
@@ -123,9 +123,9 @@ WHERE
   
  一般而言，這些規則指示了 AND 和 OR 子句在 [準則窗格] 中顯示的方式：  
   
--   所有使用 AND 連結的條件都會顯示在 [篩選]**** 格線欄或同一個 [或...]**** 資料欄中。  
+-   所有使用 AND 連結的條件都會顯示在 [篩選]  格線欄或同一個 [或...]  資料欄中。  
   
--   所有使用 OR 連結的條件都會顯示在不同的 [或...]**** 資料欄中。  
+-   所有使用 OR 連結的條件都會顯示在不同的 [或...]  資料欄中。  
   
 -   如果 AND 和 OR 子句合併的邏輯結果是 AND 分散至數個 OR 子句，[準則窗格] 會以需要的次數重複 AND 子句，以明確表示這一點。  
   
@@ -139,7 +139,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  查詢和檢視設計工具會在 [準則窗格] 中如下顯示此 WHERE 子句：  
   
- ![條件窗格中的 OR 子句優先順序](../../database-engine/media//vs-criteriapane1.gif "條件窗格中的 OR 子句優先順序")  
+ ![準則窗格中的 OR 子句優先順序](../../database-engine/media//vs-criteriapane1.gif "準則窗格中的 OR 子句優先順序")  
   
  但是，如果連結的 OR 子句優先於 AND 子句，將會為每一個 OR 子句重複 AND 子句。 這會使得 AND 子句分散至每一個 OR 子句。 例如，您可以在 [SQL 窗格] 中建立如下所示的 WHERE 子句：  
   
@@ -151,7 +151,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  查詢和檢視設計工具會在 [準則窗格] 中如下顯示此 WHERE 子句：  
   
- ![條件窗格中的多個 AND 和 OR 子句](../../database-engine/media//vs-criteriapane2.gif "條件窗格中的多個 AND 和 OR 子句")  
+ ![準則窗格中的多個 AND 和 OR 子句](../../database-engine/media//vs-criteriapane2.gif "準則窗格中的多個 AND 和 OR 子句")  
   
  如果連結的 OR 子句只牽涉到一個資料行，查詢和檢視設計工具可以將整個 OR 子句放入方格的單一資料格內，避免重複 AND 子句的必要。 例如，您可以在 [SQL 窗格] 中建立如下所示的 WHERE 子句：  
   
@@ -162,7 +162,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  查詢和檢視設計工具會在 [準則窗格] 中如下顯示此 WHERE 子句：  
   
- ![條件窗格中定義的連結 OR 子句](../../database-engine/media//vs-criteriapane3.gif "條件窗格中定義的連結 OR 子句")  
+ ![準則窗格中定義的連結 OR 子句](../../database-engine/media//vs-criteriapane3.gif "準則窗格中定義的連結 OR 子句")  
   
  如果您變更查詢 (例如變更 [準則窗格] 中的其中一個值)，查詢和檢視設計工具會在 [SQL 窗格] 中重建 SQL 陳述式。 重建的 SQL 陳述式和 [準則窗格] 中顯示的內容類似，而不是和原始陳述式類似。 例如，[準則窗格] 中如果包含了分散式 AND 子句，[SQL 窗格] 中產生的陳述式將會以明確的分散式 AND 子句重建。 如需詳細資訊，請參閱此主題中的＜AND 和多個 OR 子句配合的方式＞。  
   

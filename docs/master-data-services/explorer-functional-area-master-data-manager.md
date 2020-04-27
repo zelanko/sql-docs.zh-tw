@@ -11,10 +11,10 @@ ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ea15c85d3591bf573945d06c49903ee2869aaa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729462"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>總管功能區域 (主資料管理員)
@@ -24,23 +24,23 @@ ms.locfileid: "73729462"
   在 [總管] 功能區域中，您可以更新資料，並使用階層和集合。  
   
 ## <a name="data-management"></a>資料管理  
- [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
- [變更適用于 Excel 的 MDS 增益集的屬性類型 &#40;&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
+ [變更屬性類型 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   
  [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
  [建立分葉成員 &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)  
   
- [&#40;Master Data Services 刪除成員或集合&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)  
+ [刪除成員或集合 &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)  
   
- [&#40;Master Data Services 重新啟用成員或集合&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [重新啟用成員或集合 &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
- [批註 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
+ [註解 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
  [交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
- [標注交易 &#40;Master Data Services&#41;](../master-data-services/annotate-a-transaction-master-data-services.md)  
+ [為交易加上註解 &#40;Master Data Services&#41;](../master-data-services/annotate-a-transaction-master-data-services.md)  
   
  [反轉交易 &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
@@ -53,13 +53,13 @@ ms.locfileid: "73729462"
   
    
   
- [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)  
+ [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
- [將成員新增至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
+ [將成員加入至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
- [&#40;Master Data Services 刪除成員或集合&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)  
+ [刪除成員或集合 &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)  
   
- [&#40;Master Data Services 重新啟用成員或集合&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [重新啟用成員或集合 &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)  

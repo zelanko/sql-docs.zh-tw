@@ -1,5 +1,5 @@
 ---
-title: 大型 CLR 使用者定義類型 |Microsoft Docs
+title: 大型 CLR 使用者定義型別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07147f530cf9860514ad6fb830205d14361d539f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033531"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 使用者定義型別
@@ -29,7 +29,7 @@ ms.locfileid: "63033531"
   
  對於 OLE DB，大型 UDT 的支援包括能夠使用 ISequentialStream 繫結，在伺服器來回串流 UDT 值。  
   
- 小於或等於 8,000 個位元組的 UDT 行為如同在 SQL Server 2005 中的行為。 對於 OLE DB，您仍然可以使用 ISequentialStream 系結來串流小型的 Udt。  
+ 小於或等於 8,000 個位元組的 UDT 行為如同在 SQL Server 2005 中的行為。 對於 OLE DB，您仍然可以使用 ISequentialStream 繫結來串流處理小型 UDT。  
   
  原生程式碼有時候必須了解 CLR UDT 的內容，但不必具現化 Managed 物件。 如果是這種情況，您可以使用自訂序列化，將伺服器上的 UDT 值轉換為用戶端熟知的格式。  
   

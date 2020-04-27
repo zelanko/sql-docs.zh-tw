@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174442"
 ---
 # <a name="customize-mining-models-and-structure"></a>自訂採礦模型和結構
@@ -41,10 +41,9 @@ ms.locfileid: "78174442"
  您所做的有關要將哪些資料行用於模型以及如何使用和處理該資料的決策，將會大大地影響分析的結果。 下列主題提供的資訊可幫助您了解這些選擇。
 
 ### <a name="using-feature-selection"></a>使用特徵選取
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的大多數資料採礦演算法會使用稱為 *「特徵選取」* (Feature Selection) 的程序，只選取最有用的屬性來加入至模型。 減少資料行和屬性的數目可以改善效能和模型的品質。 可用的特徵選取方法會因為您選擇的演算法而有所差異。
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的大多數資料採礦演算法會使用稱為 *「特徵選取」* (Feature Selection) 的程序，只選取最有用的屬性來加入至模型。 減少資料行和屬性的數目可以改善效能和模型的品質。 可用的特徵選取方法會因為您選擇的演算法而有所差異。
 
- [&#40;資料採礦&#41;的特徵選取](feature-selection-data-mining.md)。
+ [特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。
 
 ### <a name="changing-usage"></a>變更使用方式
  您可以變更哪些資料行會包含在採礦模型中以及使用每一個資料行的方式。 如果您未得到預期的結果，您應該將您使用的範例資料行當做輸入，並問自己這些資料行是否為好的選擇，以及您是否可以做任何事來改善資料的處理，其中包括：
@@ -85,8 +84,8 @@ ms.locfileid: "78174442"
 |||
 |-|-|
 |[Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)|[Microsoft 時間序列演算法](microsoft-time-series-algorithm.md)|
-|[Microsoft 群集演算法](microsoft-clustering-algorithm.md)|[Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)|
-|[Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)|[Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)|
+|[Microsoft 群集演算法](microsoft-clustering-algorithm.md)|[Microsoft 類神經網路演算法](microsoft-neural-network-algorithm.md)|
+|[Microsoft 貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)|[Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)|
 |[Microsoft Association Algorithm](microsoft-association-algorithm.md)|[Microsoft 線性迴歸演算法](microsoft-linear-regression-algorithm.md)|
 |[Microsoft 時序叢集演算法](microsoft-sequence-clustering-algorithm.md)||
 
@@ -95,14 +94,14 @@ ms.locfileid: "78174442"
 
  每一個演算法類型的主題也會列出可以搭配以該演算法為根據之模型一起使用的預測函數。
 
-|屬性名稱|適用於|
+|屬性名稱|適用對象|
 |-------------------|----------------|
 |AUTO_DETECT_PERIODICITY|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|
 |CLUSTER_COUNT|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 時序群集演算法技術參考](microsoft-sequence-clustering-algorithm-technical-reference.md)|
 |CLUSTER_SEED|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)|
 |CLUSTERING_METHOD|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)|
 |COMPLEXITY_PENALTY|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|
-|FORCE_REGRESSOR|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [資料採礦&#41;的模型旗標 &#40;](modeling-flags-data-mining.md)|
+|FORCE_REGRESSOR|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|
 |FORECAST_METHOD|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|
 |HIDDEN_NODE_RATIO|[Microsoft 類神經網路演算法技術參考資料](microsoft-neural-network-algorithm-technical-reference.md)|
 |HISTORIC_MODEL_COUNT|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|

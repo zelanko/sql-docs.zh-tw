@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8679d1e430ff2755aac32721ff40184cbe0a3c6a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529062"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087368"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "81529062"
 
 - 如果您的伺服器透過 Proxy 伺服器存取 Azure，您必須使用追蹤旗標 1819，然後透過下列其中一個方法來設定 WinHTTP Proxy 設定：
    - Windows XP 或 Windows Server 2003 與更早版本上的 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 公用程式。 
-   - Windows Vista 與 Windows Server 2008 或更新版本上的 [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) 公用程式。 
+   - Windows Vista 與 Windows Server 2008 或更新版本上的 [netsh.exe](/windows/win32/winsock/netsh-exe) 公用程式。 
   
 ## <a name="supported-arguments--statements"></a>支援的引數與陳述式
 

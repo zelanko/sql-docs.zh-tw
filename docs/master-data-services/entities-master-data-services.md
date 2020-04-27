@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728162"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
@@ -70,7 +70,7 @@ ms.locfileid: "73728162"
 |建立新實體。|[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
 |變更現有實體的名稱。|[編輯實體 &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
 |刪除現有實體。|[刪除實體 &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
-|將權限指派給實體。|[指派模型物件使用權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|將權限指派給實體。|[指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
@@ -78,6 +78,6 @@ ms.locfileid: "73728162"
   
 -   [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

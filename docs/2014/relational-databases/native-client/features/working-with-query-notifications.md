@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206597"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
@@ -95,7 +95,7 @@ RECEIVE * FROM MyQueue
   
  如果佇列是空的，這個陳述式會立刻傳回空的結果集；否則會傳回所有的佇列通知。  
   
- 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 非 NULL 且不是空的，則每次執行命令時，都會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null (或是空的)，則該標頭不會傳送且會引發 DB_E_ERRORSOCCURRED (如果這兩個屬性都標示為選擇性的，則會引發 DB_S_ERRORSOCCURRED)，而且狀態值會設定為 DBPROPSTATUS_BADVALUE。 在執行/準備時會進行驗證。 同樣地，當針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本連接設定查詢通知屬性時，會引發 DB_S_ERRORSOCCURED。 狀態值在這種情況下是 DBPROPSTATUS_NOTSUPPORTED。  
+ 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 非 NULL 且不是空的，則每次執行命令時，都會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null (或是空的)，則該標頭不會傳送且會引發 DB_E_ERRORSOCCURRED (如果這兩個屬性都標示為選擇性的，則會引發 DB_S_ERRORSOCCURRED)，而且狀態值會設定為 DBPROPSTATUS_BADVALUE。 在執行/準備時會進行驗證。 同樣地，當針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本連接設定查詢通知屬性時，會引發 DB_S_ERRORSOCCURED。 狀態值在這種情況下是 DBPROPSTATUS_NOTSUPPORTED。  
   
  初始化訂閱並不保證後續的訊息能成功傳遞。 此外，系統也不會對所指定服務名稱的有效性進行檢查。  
   
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  如果訂閱要求是針對批次或預存程序所建立的，就會針對批次或預存程序內執行的每個陳述式建立個別的訂閱要求。 EXECUTE 陳述式不會註冊通知，不過會將通知要求傳送至執行的命令。 如果它是批次，內容就會套用至執行的陳述式，而且適用上述的相同規則。  
   
- 提交在相同資料庫內容下由相同使用者提交之通知的查詢，並具有相同的範本、相同的參數值、相同的通知識別碼，以及現有作用中訂閱的相同傳遞位置，將會更新現有的訂用帳戶，重設新指定的超時時間。這表示如果要求相同查詢的通知，則只會傳送一則通知。 這適用於批次中重複的查詢，或預存程序中多次呼叫的查詢。  
+ 提交在相同資料庫內容下由相同使用者提交之通知的查詢，並具有相同的範本、相同的參數值、相同的通知識別碼，以及現有作用中訂閱的相同傳遞位置，將會更新現有的訂閱，並重設新指定的超時時間。這表示如果要求相同查詢的通知，則只會傳送一則通知。 這適用於批次中重複的查詢，或預存程序中多次呼叫的查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  

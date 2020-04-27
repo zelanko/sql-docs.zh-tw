@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207047"
 ---
 # <a name="prepared-execution"></a>備妥的執行
@@ -31,8 +31,7 @@ ms.locfileid: "68207047"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過改善的演算法來偵測及重複使用**SQLExecDirect**中的執行計畫，藉此降低直接和備妥執行之間的效能差異。 如此可讓備妥的執行得到的某些效能優點可供直接執行的陳述式使用。 如需詳細資訊，請參閱[直接執行](direct-execution.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 還會針對備妥的執行提供原生支援。 執行計畫是以**SQLPrepare**為基礎，並在稍後呼叫**SQLExecute**時執行。 因為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不需要在**SQLPrepare**上建立暫存預存程序，所以**tempdb**中的系統資料表不會有額外的負荷。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 還會針對備妥的執行提供原生支援。 執行計畫是以**SQLPrepare**為基礎，並在稍後呼叫**SQLExecute**時執行。 因為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不需要在**SQLPrepare**上建立暫存預存程序，所以**tempdb**中的系統資料表不會有額外的負荷。  
   
  基於效能考慮，會延遲語句準備，直到呼叫**SQLExecute**或執行中繼屬性作業（例如 ODBC 中的[SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) ）為止。 此為預設行為。 要等到執行此陳述式或執行中繼屬性作業之後，才可得知正在準備之陳述式中的任何錯誤。 將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特有的陳述式屬性 SQL_SOPT_SS_DEFER_PREPARE 設定為 SQL_DP_OFF 可以關閉這項預設行為。  
   

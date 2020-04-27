@@ -16,10 +16,10 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68811392"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
@@ -74,7 +74,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @source_table = ] 'source_table'`這個參數已被取代;請改用*source_object* 。  
   
- *Oracle 發行者不支援這個參數。*  
+ *這個參數不支援 Oracle 發行者。*  
   
 `[ @destination_table = ] 'destination_table'`這是目的地（訂閱）資料表的名稱（如果與*source_table*或預存程式不同）。 *destination_table*是**sysname**，預設值是 Null，表示*source_table*等於*destination_table * *。*  
   
@@ -199,7 +199,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x40000000**|複寫權限。|  
 |**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
 |**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。<br /><br /> 請參閱相關的選項**0x800000000**。|  
-|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]將中引進的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]將中引進的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 |**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
 |**0x1000000000**|將大於8000個位元組的 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。|  
@@ -218,7 +218,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @destination_owner = ] 'destination_owner'`這是目的地物件的擁有者名稱。 *destination_owner*是**sysname**，預設值是 Null。 若未指定*destination_owner* ，則會根據下列規則自動指定擁有者：  
   
-|條件|目的地物件擁有者|  
+|狀況|目的地物件擁有者|  
 |---------------|------------------------------|  
 |發行集利用原生模式大量複製來產生初始快照集，這只支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。|預設為*source_owner*的值。|  
 |從非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者發行。|預設為目的地資料庫的擁有者。|  
@@ -252,7 +252,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**真正**|啟用自動識別範圍處理|  
+|**true**|啟用自動識別範圍處理|  
 |**false**|停用自動識別範圍處理|  
 |Null （預設值）|識別範圍處理是由*identityrangemanagementoption*所設定。|  
   
@@ -400,7 +400,7 @@ sp_addarticle [ @publication = ] 'publication'
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
- [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

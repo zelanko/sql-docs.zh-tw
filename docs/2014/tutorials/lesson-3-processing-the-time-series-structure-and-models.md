@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042874"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>第 3 課：處理時間序列結構和模型
@@ -90,7 +90,7 @@ OPENQUERY (<source data definition>)
     [<mining structure>]  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     Forecasting_MIXED_Structure  
@@ -102,7 +102,7 @@ OPENQUERY (<source data definition>)
     <mining structure columns>  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [ReportingDate],  
@@ -115,7 +115,7 @@ OPENQUERY (<source data definition>)
     OPENQUERY(<source data definition>)  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     OPENQUERY([Adventure Works DW 2008R2],'SELECT [ReportingDate], [ModelRegion], [Quantity], [Amount]  

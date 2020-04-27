@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012170"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
@@ -26,7 +26,7 @@ ms.locfileid: "66012170"
 ## <a name="working-with-xml-data-types"></a>使用 xml 資料類型  
  為了解如何使用實作 `xml` 資料類型資料行之 SQL 資料表的詳細資訊，提供下列範例：  
   
-|Task|範例|主題|  
+|工作|範例|主題|  
 |----------|-------------|-----------|  
 |如何在 XML 檢視中對應與包含 `xml` 資料行|「將 XML 元素對應至 XML 資料類型資料行」|[XSD 元素和屬性對資料表和資料行的預設對應 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |如何使用 Updategrams 將資料插入 `xml` 資料行|「將資料插入至 XML 資料類型資料行」|[使用 XML Updategram 插入資料 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
@@ -42,11 +42,9 @@ ms.locfileid: "66012170"
   
 -   只有 XSD 結構描述支援對應 `xml` 資料行。 XDR 結構描述不支援對應 `xml` 資料行。  
   
--   SQLXML 4.0 會依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 XML 剖析支援。 
-  `xml` 資料行可以當做具類型的 XML 或不具類型的 XML 進行對應。 在任一種情況下，SQLXML 4.0 都不會驗證輸入 XML。  如果輸入 XML 無效或格式不正確，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其回報給 SQLXML，並將使用者傳回的任何相關錯誤資訊傳播給使用者。  
+-   SQLXML 4.0 會依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 XML 剖析支援。 `xml` 資料行可以當做具類型的 XML 或不具類型的 XML 進行對應。 在任一種情況下，SQLXML 4.0 都不會驗證輸入 XML。  如果輸入 XML 無效或格式不正確，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其回報給 SQLXML，並將使用者傳回的任何相關錯誤資訊傳播給使用者。  
   
--   SQLXML 4.0 會依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 DTD 有限支援。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許在 `xml` 資料類型資料中使用內部 DTD，這可用於提供預設值，並將實體參考取代為其展開的內容。 SQLXML 會將 XML 資料以「現況」傳遞 (包括內部 DTD) 到伺服器。 您可以使用協力廠商工具將 DTD 轉換成 XML 結構描述 (XSD) 文件，並將包含內嵌 XML 結構描述的資料載入到資料庫中。  
+-   SQLXML 4.0 會依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 DTD 有限支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許在 `xml` 資料類型資料中使用內部 DTD，這可用於提供預設值，並將實體參考取代為其展開的內容。 SQLXML 會將 XML 資料以「現況」傳遞 (包括內部 DTD) 到伺服器。 您可以使用協力廠商工具將 DTD 轉換成 XML 結構描述 (XSD) 文件，並將包含內嵌 XML 結構描述的資料載入到資料庫中。  
   
 -   根據的行為，SQLXML 4.0 不會保留 XML 宣告處理指示（例如） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，系統會將 XML 宣告視為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 剖析器的指示詞，而且在資料轉換為 `xml` 資料類型之後，會遺失其屬性 (version、encoding 和 standalone)。 XML 資料會當做 UCS-2 儲存在內部。 系統會保留 XML 執行個體中的其他所有處理指示；這些指示可用於 `xml` 資料行，而且可由 SQLXML 支援。  
   

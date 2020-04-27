@@ -18,14 +18,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130772"
 ---
 # <a name="smo-namespaces"></a>SMO 命名空間
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 具有多種命名空間。 不同的命名空間代表 SMO 內不同的功能區域。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，SMO 組件位於 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 資料夾內。  

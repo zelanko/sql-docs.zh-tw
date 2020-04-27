@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126444"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>圖表窗格 (Visual Database Tools)
@@ -45,7 +45,7 @@ ms.locfileid: "63126444"
  **函數**  
  列出可加入 [圖表] 窗格的使用者定義函數。 若要新增函數，請選取函數，再按 [新增]  。 若要一次新增數個函數，請選取函數，再按 [新增]  。  
   
- **本機資料表**  
+ **區域資料表**  
  列出由查詢所建立的資料表，而非屬於資料庫的資料表  
   
  **同義字**  
@@ -65,7 +65,7 @@ ms.locfileid: "63126444"
   
 |核取方塊或符號|描述|  
 |-------------------------|-----------------|  
-|![Visual Database Tools 圖示](../../database-engine/media//dv3wbi7.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi8.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi9.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbia.gif "Visual Database Tools 圖示")|指定查詢結果集 (選取查詢) 中是否使用資料欄，或者是否在 UPDATE、INSERT FROM、製成資料表 (Make Table) 或 INSERT INTO 查詢中使用資料欄。 選取要新增到結果的資料行。 如果選取 [(所有資料行)]****，所有資料行都將出現在輸出中。<br /><br /> 核取方塊所使用的圖示將根據您建立的查詢類型而有所改變。 建立刪除查詢時，您無法選取個別的資料行。|  
+|![Visual Database Tools 圖示](../../database-engine/media//dv3wbi7.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi8.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi9.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbia.gif "Visual Database Tools 圖示")|指定查詢結果集 (選取查詢) 中是否使用資料欄，或者是否在 UPDATE、INSERT FROM、製成資料表 (Make Table) 或 INSERT INTO 查詢中使用資料欄。 選取要新增到結果的資料行。 如果選取 [(所有資料行)]  ，所有資料行都將出現在輸出中。<br /><br /> 核取方塊所使用的圖示將根據您建立的查詢類型而有所改變。 建立刪除查詢時，您無法選取個別的資料行。|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbib.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbic.gif "Visual Database Tools 圖示")|指示用來排列查詢結果 (ORDER BY 子句的一部分) 的資料欄。 如果排列順序為遞增，則圖示將以 A-Z 的方法呈現，如果為遞減排序，則為 Z-A。|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbid.gif "Visual Database Tools 圖示")|指示在彙總查詢中用來建立群組結果集 (GROUP BY 子句的一部分) 的資料欄。|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbie.gif "Visual Database Tools 圖示")|指示查詢 (WHERE 或 HAVING 子句的一部分) 的搜尋條件包含該資料欄。|  

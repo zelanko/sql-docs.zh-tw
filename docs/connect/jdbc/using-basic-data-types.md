@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625560"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728377"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 
@@ -101,20 +101,20 @@ ms.locfileid: "81625560"
 
 如果您必須使用參數化查詢更新資料來源中的資料，可以使用 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 類別的其中一個 set\<Type> 方法 (也稱為「setter 方法」  )，來設定參數的資料類型。 在下列範例中，[prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](reference/executeupdate-method.md) 方法之前，使用 [setString](reference/setstring-method-sqlserverpreparedstatement.md) 方法設定參數的字串值。  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-如需參數化查詢的詳細資訊，請參閱[使用含參數的 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
+如需參數化查詢的詳細資訊，請參閱[使用含參數的 SQL 陳述式](using-an-sql-statement-with-parameters.md)。  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>傳遞參數至預存程序
 
 如果您必須將具類型的參數傳遞至預存程序，可使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的其中一個 set\<Type> 方法，依索引或名稱設定參數。 在下列範例中，[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法用來設定發送給預存程序的呼叫，然後在呼叫 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 方法設定呼叫的參數。  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > 在此範例中，結果集會傳回執行預存程序的結果。
 
-如需搭配預存程序和輸入參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含輸入參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
+如需搭配預存程序和輸入參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含輸入參數的預存程序](using-a-stored-procedure-with-input-parameters.md)。  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>從預存程序中擷取參數
 

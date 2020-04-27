@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206795"
 ---
 # <a name="process-odbc-errors-odbc"></a>處理 ODBC 錯誤 (ODBC)
   您可以使用兩個 ODBC 函式呼叫來抓取 ODBC 訊息： [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)和[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 `SQLGetDiagField` 擷取。  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)和[SQLGETDIAGFIELD](../native-client-odbc-api/sqlgetdiagfield.md)是由 ODBC 驅動程式管理員所處理，而不是個別的驅動程式。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例會顯示呼叫標準 ODBC 資訊之 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 的簡單錯誤處理常式。 然後它會測試是否有有效連接，如果有，就會為 `SQLGetDiagField` ODBC 驅動程式專用的診斷欄位呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 IA64 不支援此範例。  
+ 此範例會顯示呼叫標準 ODBC 資訊之 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 的簡單錯誤處理常式。 然後它會測試是否有有效連接，如果有，就會為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用的診斷欄位呼叫 `SQLGetDiagField`。 IA64 不支援此範例。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c62357496d0b143fcd8736bc61117d43c6a0fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013594"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>在 XSD 結構描述中使用註釋 (SQLXML 4.0)
@@ -87,7 +87,7 @@ ms.locfileid: "66013594"
  [使用 sql：溢位欄位來抓取未使用的資料 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
  描述及提供 `sql:overflow-field` 註解的範例。  
   
- [使用 sql:hide 來隱藏元素和屬性](hiding-elements-and-attributes-by-using-sql-hide.md)  
+ [使用 sql:hide 來隱藏項目和屬性](hiding-elements-and-attributes-by-using-sql-hide.md)  
  描述及提供 `sql:hide` 註解的範例。  
   
  [使用 sql:identity 和 sql:guid 註解](using-the-sql-identity-and-sql-guid-annotations.md)  

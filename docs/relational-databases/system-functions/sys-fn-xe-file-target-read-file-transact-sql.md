@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "73982986"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -47,7 +47,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>引數  
- *路徑名*  
+ *path*  
  要讀取之檔案的路徑。 *path*可以包含萬用字元，並包含檔案名。 *path*是**Nvarchar （260）**。 沒有預設值。 在 Azure SQL Database 的內容中，這個值是 Azure 儲存體中檔案的 HTTP URL。
   
  *mdpath*  
@@ -74,8 +74,8 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |object_name|**nvarchar(256)**|事件的名稱。 不可為 Null。|  
 |event_data|**nvarchar(max)**|事件內容 (XML 格式)。 不可為 Null。|  
 |file_name|**nvarchar(260)**|包含此事件之檔案的名稱。 不可為 Null。|  
-|file_offset|**Bigint**|包含此事件之檔案中的區塊位移。 不可為 Null。|  
-|timestamp_utc|**datetime2**|**適用**于： [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]和更新版本[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]和。<br /><br />事件的日期和時間（UTC 時區）。 不可為 Null。|  
+|file_offset|**bigint**|包含此事件之檔案中的區塊位移。 不可為 Null。|  
+|timestamp_utc|**datetime2**|**適用於**：[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />事件的日期和時間（UTC 時區）。 不可為 Null。|  
 
   
 ## <a name="remarks"></a>備註  
@@ -95,7 +95,7 @@ SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\meta
   
 ## <a name="see-also"></a>另請參閱  
  [擴充的事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [擴充的事件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [擴充事件目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

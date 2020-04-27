@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211381"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>作業屬性及新增作業 (一般頁面)
@@ -29,35 +29,35 @@ ms.locfileid: "68211381"
  **擁有者**  
  選取作業的擁有者。  
   
- **類別目錄**  
+ **類別**  
  選取作業的作業類別目錄。  
   
  **...**  
  檢視選取之類別目錄中的作業。  
   
- **說明**  
+ **描述**  
  變更作業的描述。  
   
  **已啟用**  
  啟用作業。 未啟用作業時，則不會執行作業以回應排程或警示，但是您仍可以使用 **sp_start_job** 預存程序來啟動作業。  
   
- **Source**  
+ **來源**  
  顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
   
- **建立日期**  
+ **已**  
  顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
   
  **上次修改時間**  
  顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
   
- **上次執行時間**  
+ **上次執行**  
  顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
   
- **查看作業歷程記錄**  
+ **檢視作業記錄**  
  檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [實作作業](implement-jobs.md)   
+ [執行作業](implement-jobs.md)   
  [作業類別目錄：管理作業類別目錄](job-categories-manage-job-categories.md)  
   
   

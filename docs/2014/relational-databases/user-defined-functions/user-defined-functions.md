@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211692"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
@@ -25,7 +25,7 @@ ms.locfileid: "68211692"
   
  **本主題內容**  
   
- [使用者定義函數的優點](#Benefits)  
+ [使用者自訂函數的好處](#Benefits)  
   
  [函數類型](#FunctionTypes)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68211692"
   
  [相關工作](#Tasks)  
   
-##  <a name="Benefits"></a>使用者定義函數的優點  
+##  <a name="user-defined-function-benefits"></a><a name="Benefits"></a>使用者定義函數的優點  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用者定義函數的好處如下：  
   
 -   可進行模組化的程式撰寫。  
@@ -50,8 +50,7 @@ ms.locfileid: "68211692"
   
      如同預存程序，[!INCLUDE[tsql](../../includes/tsql-md.md)]  使用者自訂函數可藉由針對重複執行來快取以及重複使用計畫，來降低 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的編譯成本。 這表示，每次使用時，使用者自訂函數不需要重新剖析和最佳化，所以執行時間可以更快。  
   
-     與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數相比，CLR 函數在計算工作、字串處理與商務邏輯等方面提供更顯著的效能優勢。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數更適用於經常需要存取資料的作業。  
+     與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數相比，CLR 函數在計算工作、字串處理與商務邏輯等方面提供更顯著的效能優勢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數更適用於經常需要存取資料的作業。  
   
 -   可降低網路傳輸量。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "68211692"
 > [!NOTE]  
 >  查詢中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數只能在單一執行緒上執行 (序列執行計畫)。  
   
-##  <a name="FunctionTypes"></a>函數類型  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a>函數類型  
  純量函數  
  使用者定義純量函數會傳回在 RETURNS 子句中所定義之類型的單一資料值。 內嵌純量函數並沒有函數主體；純量值為單一陳述式的結果。 若是多重陳述式純量函數，則定義於 BEGIN...END 區塊中的函數主體，會包含傳回單一值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式系列。 傳回類型可以是任何資料類型，但 `text`、`ntext`、`image`、`cursor` 及 `timestamp` 除外。  
   
@@ -68,12 +67,10 @@ ms.locfileid: "68211692"
  使用者定義的資料表值函式會傳回 `table` 資料類型。 若是內嵌資料表值函式，則不會有函式主體；資料表會是單一 SELECT 陳述式的結果集。  
   
  系統函數  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多可用以執行各種作業的系統函數。 這些函數不能修改。 如需詳細資訊，請參閱[內建函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)、[系統預存函式 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql)，和[動態管理檢視與函數 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多可用以執行各種作業的系統函數。 這些函數不能修改。 如需詳細資訊，請參閱[內建函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)、[系統預存函式 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql)，和[動態管理檢視與函數 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)。  
   
-##  <a name="Guidelines"></a>規定  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函式內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
+##  <a name="guidelines"></a><a name="Guidelines"></a>規定  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函式內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
   
  BEGIN...END 區塊中的陳述式不能有任何副作用。 函數副作用是在函數的範圍外對資源狀態所做的任何永久變更，例如修改資料庫資料表。 在函數中陳述式只能變更函數的區域性物件，例如本機資料指標或變數。 在函數中不得執行的動作包括修改資料庫資料表、對函數的非本機資料指標進行運算、傳送電子郵件、試圖修改目錄，以及產生傳回給使用者的結果集。  
   
@@ -82,7 +79,7 @@ ms.locfileid: "68211692"
   
  查詢中指定的函數真正執行的次數，會因最佳化工具建立的執行計畫而有不同。 WHERE 子句中的子查詢所叫用的函數就是一個例子。 子查詢及其函數的執行次數，會因最佳化工具選擇的存取路徑而有不同。  
   
-##  <a name="ValidStatements"></a>函數中有效的語句  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a>函數中有效的語句  
  函數中有效的陳述式類型包括：  
   
 -   DECLARE 陳述式，可用來定義對函數而言為本機的資料變數與資料指標。  
@@ -123,7 +120,7 @@ ms.locfileid: "68211692"
   
  如需決定性與非決定性內建系統函數的清單，請參閱[決定性與非決定性函數](../user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
-##  <a name="SchemaBound"></a>架構系結函數  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a>架構系結函數  
  CREATE FUNCTION 支援 SCHEMABINDING 子句，它可將函數與它參考的任何物件之結構描述繫結在一起，例如資料表、檢視及其他使用者自訂函數。 嘗試更改或卸除任何被結構描述繫結函數所參考的物件將會失敗。  
   
  要在 CREATE FUNCTION 中指定 SCHEMABINDING，必須先滿足下列條件：  
@@ -136,10 +133,10 @@ ms.locfileid: "68211692"
   
  您可以利用 ALTER FUNCTION 來移除結構描述繫結。 ALTER FUNCTION 陳述式不用指定 WITH SCHEMABINDING 即可重新定義函數。  
   
-##  <a name="Parameters"></a>指定參數  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a>指定參數  
  使用者自訂函數會使用零或多個輸入參數，並會傳回純量值或資料表。 每一函數最多可以有 1024 個輸入參數。 若函數的參數有預設值，在呼叫函數以取得預設值時必須指定 DEFAULT 關鍵字。 此一行為不同於使用者自訂預存程序中有預設值的參數，在這些預存程序中省略參數亦意謂著省略預設值。 使用者自訂函數不支援輸出參數。  
   
-##  <a name="Tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 相關工作  
   
 |||  
 |-|-|  

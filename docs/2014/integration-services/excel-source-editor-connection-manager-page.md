@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059172"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 來源編輯器 (連接管理員頁面)
@@ -42,7 +42,7 @@ ms.locfileid: "66059172"
 |值|描述|  
 |-----------|-----------------|  
 |資料表或檢視|從工作表或 Excel 檔案的具名範圍中擷取資料。|  
-|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：** [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊︰** [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL (命令)|使用 SQL 查詢從 Excel 檔案中擷取資料。 如需有關查詢語法的詳細資訊，請參閱＜ [Excel Source](data-flow/excel-source.md)＞。|  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022230"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
@@ -127,7 +127,7 @@ ms.locfileid: "63022230"
 |`smalldatetime`|日期|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|N/A|  
+|`sql_variant`|不適用|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -143,7 +143,7 @@ ms.locfileid: "63022230"
 |`xml`|NCLOB|  
   
 ## <a name="see-also"></a>另請參閱  
- [非 SQL Server 訂閱者](non-sql-server-subscribers.md)   
- [訂閱發行集](../subscribe-to-publications.md)  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

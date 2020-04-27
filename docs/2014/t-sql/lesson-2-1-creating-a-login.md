@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211201"
 ---
 # <a name="creating-a-login"></a>建立登入
@@ -36,8 +36,7 @@ ms.locfileid: "68211201"
   
 ### <a name="to-create-a-login"></a>若要建立登入  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中，輸入並執行下列程式碼，並以您的電腦名稱取代 `computer_name` 。 
-  `FROM WINDOWS` 表示 Windows 將會驗證使用者。 選擇性的 `DEFAULT_DATABASE` 引數會將 `Mary` 連接到 `TestData` 資料庫，除非她的連接字串指定要連接到其他資料庫。 這個陳述式採用分號作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的選擇性結束符號。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中，輸入並執行下列程式碼，並以您的電腦名稱取代 `computer_name` 。 `FROM WINDOWS` 表示 Windows 將會驗證使用者。 選擇性的 `DEFAULT_DATABASE` 引數會將 `Mary` 連接到 `TestData` 資料庫，除非她的連接字串指定要連接到其他資料庫。 這個陳述式採用分號作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的選擇性結束符號。  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  
@@ -55,7 +54,7 @@ ms.locfileid: "68211201"
  [授與資料庫的存取權](lesson-2-2-granting-access-to-a-database.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立登入 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [選擇驗證模式](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 資料列集和參數中的資料類型對應 |Microsoft Docs
+title: 資料列集和參數中的資料類型對應 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062186"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
@@ -33,7 +33,7 @@ ms.locfileid: "63062186"
   
 |SQL Server 資料類型|OLE DB 資料類型|  
 |--------------------------|----------------------|  
-|**Bigint**|DBTYPE_I8|  
+|**bigint**|DBTYPE_I8|  
 |**binary**|DBTYPE_BYTES|  
 |**bit**|DBTYPE_BOOL|  
 |**char**|DBTYPE_STR|  
@@ -46,12 +46,12 @@ ms.locfileid: "63062186"
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
 |**ntext**|DBTYPE_WSTR|  
-|**數值**|DBTYPE_NUMERIC|  
+|**numeric**|DBTYPE_NUMERIC|  
 |**nvarchar**|DBTYPE_WSTR|  
-|**即時**|DBTYPE_R4|  
+|**real**|DBTYPE_R4|  
 |**smalldatetime**|DBTYPE_DBTIMESTAMP|  
 |**smallint**|DBTYPE_I2|  
-|**SMALLMONEY**|DBTYPE_CY|  
+|**smallmoney**|DBTYPE_CY|  
 |**sql_variant**|DBTYPE_VARIANT、DBTYPE_SQLVARIANT|  
 |**sysname**|DBTYPE_WSTR|  
 |**text**|DBTYPE_STR|  
@@ -65,8 +65,7 @@ ms.locfileid: "63062186"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援取用者要求的資料轉換，如圖所示。  
   
- 
-  **sql_variant** 物件可保存任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的資料，下列類型除外：text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 例如，資料行可以在某些資料列中包含 **smallint** 值，在其他資料列中包含 **float** 值，而在剩餘的資料列中包含 **char**/**nchar** 值。  
+ **sql_variant** 物件可保存任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的資料，下列類型除外：text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 例如，資料行可以在某些資料列中包含 **smallint** 值，在其他資料列中包含 **float** 值，而在剩餘的資料列中包含 **char**/**nchar** 值。  
   
 > [!NOTE]  
 >  **Sql_variant**資料類型類似于 Microsoft Visual Basic？中的 variant 資料類型。 和 DBTYPE_VARIANT，DBTYPE_SQLVARIANT 在 OLEDB 中。  
@@ -79,7 +78,7 @@ ms.locfileid: "63062186"
  工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 也必須設定為 TRUE。  
   
 ## <a name="provider-specific-property-ssprop_allownativevariant"></a>提供者特定的屬性 SSPROP_ALLOWNATIVEVARIANT  
- 您在提取資料時，可以明確地指定要針對資料行或參數傳回何種資料類型。 **IColumnsInfo**也可以用來取得資料行資訊，並使用它來執行系結。 使用 **IColumnsInfo** 來取得用於繫結用途的資料行資訊時，如果 SSPROP_ALLOWNATIVEVARIANT 工作階段屬性為 FALSE (預設值)，則會針對 **sql_variant** 資料行傳回 DBTYPE_VARIANT。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性為 FALSE，則 DBTYPE_SQLVARIANT 不受支援。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性設定為 TRUE，則資料行類型會傳回為 DBTYPE_SQLVARIANT，在此種情況下，緩衝區會保存 SSVARIANT 結構。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 必須設定為 TRUE。  
+ 您在提取資料時，可以明確地指定要針對資料行或參數傳回何種資料類型。 **IColumnsInfo** 也可以用來取得資料行資訊，並用該資訊來進行繫結。 使用 **IColumnsInfo** 來取得用於繫結用途的資料行資訊時，如果 SSPROP_ALLOWNATIVEVARIANT 工作階段屬性為 FALSE (預設值)，則會針對 **sql_variant** 資料行傳回 DBTYPE_VARIANT。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性為 FALSE，則 DBTYPE_SQLVARIANT 不受支援。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性設定為 TRUE，則資料行類型會傳回為 DBTYPE_SQLVARIANT，在此種情況下，緩衝區會保存 SSVARIANT 結構。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 必須設定為 TRUE。  
   
  SSPROP_ALLOWNATIVEVARIANT 屬性是提供者特定之 DBPROPSET_SQLSERVERSESSION 屬性集的一部分，而且是工作階段屬性。  
   

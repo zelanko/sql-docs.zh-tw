@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211013"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
-  **Sqlservr.exe**應用程式會[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]從命令提示字元啟動、停止、暫停和繼續執行的實例。  
+  **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,32 +55,28 @@ ms.locfileid: "68211013"
 >  使用此選項時，您不可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務管理員或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net stop **命令停止** ，而且如果您登出該電腦， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也會停止。  
   
  **-d** _master_path_  
- 指出 **master** 資料庫檔案的完整路徑。 
-  **-d** 和 *master_path*之間沒有空格。 如果不提供這個選項，會使用現有的登錄參數。  
+ 指出 **master** 資料庫檔案的完整路徑。 **-d** 和 *master_path*之間沒有空格。 如果不提供這個選項，會使用現有的登錄參數。  
   
  **-f**  
  啟動只含最小組態的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。  
   
  **-e** _error_log_path_  
- 指出錯誤記錄檔的完整路徑。 如果未指定，則預設位置為* \<磁片磁碟機>*： \Program Files\Microsoft sql Server\MSSQL\Log\Errorlog，適用于預設實例，而* \<磁片磁碟機>*： \Program Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog 適用于已命名的實例。 
-  **-e** 和 *error_log_path*之間沒有空格。  
+ 指出錯誤記錄檔的完整路徑。 如果未指定，則預設位置為* \<磁片磁碟機>*： \Program Files\Microsoft sql Server\MSSQL\Log\Errorlog，適用于預設實例，而* \<磁片磁碟機>*： \Program Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog 適用于已命名的實例。 **-e** 和 *error_log_path*之間沒有空格。  
   
  **-l** _master_log_path_  
- 指出 **master** 資料庫交易記錄檔的完整路徑。 
-  **-l** 和 *master_log_path*之間沒有空格。  
+ 指出 **master** 資料庫交易記錄檔的完整路徑。 **-l** 和 *master_log_path*之間沒有空格。  
   
  **-m**  
- 指出要啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的單一使用者模式。 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的單一使用者模式時，只能連接單一使用者。 不會啟動「保證從磁碟快取中，將已完成的交易定期寫入資料庫裝置」的 CHECKPOINT 機制。 (一般而言，如果系統資料庫發生需要修復的問題，便會使用這個選項。)這個選項會啟用 **sp_configure allow updates** 選項。 預設會停用 [**允許更新**]。  
+ 指出要啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的單一使用者模式。 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的單一使用者模式時，只能連接單一使用者。 不會啟動「保證從磁碟快取中，將已完成的交易定期寫入資料庫裝置」的 CHECKPOINT 機制。 (一般而言，如果系統資料庫發生需要修復的問題，便會使用這個選項。)這個選項會啟用 **sp_configure allow updates** 選項。 預設會停用 **allow updates** 。  
   
  **-n**  
  可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **選項啟動** 的執行個體，建議您也要使用 **-e** 選項，否則不會記錄 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
  **-T** _追蹤 #_  
- 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#* )。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
+ 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#*)。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
 > [!IMPORTANT]  
->  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 
-  **接受小寫的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
+>  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
   
  **-v**  
  顯示伺服器版本號碼。  
@@ -104,12 +100,10 @@ ms.locfileid: "68211013"
  使用低於預設值的值，會增加緩衝集區和執行緒堆疊所能使用的記憶體數量，且可能在並未使用許多擴充預存程序、分散式查詢或自動化物件的系統中，使需要大量記憶體的工作負載因而提升效能。  
   
 ## <a name="remarks"></a>備註  
- 在大部分情況下，sqlservr.exe 程式只用來進行疑難排解或主要的維護工作。 在命令提示字元處利用 sqlservr.exe 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會以服務形式啟動，因此，您無法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 使用者可以連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具會顯示該服務的狀態， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員因而可正確地指出該服務已經停止。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以連接到伺服器，但它也會指出該服務已經停止。  
+ 在大部分情況下，sqlservr.exe 程式只用來進行疑難排解或主要的維護工作。 在命令提示字元處利用 sqlservr.exe 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會以服務形式啟動，因此，您無法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 使用者可以連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具會顯示該服務的狀態， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員因而可正確地指出該服務已經停止。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以連接到伺服器，但它也會指出該服務已經停止。  
   
 ## <a name="compatibility-support"></a>相容性支援  
- 
-  **不支援**  -h [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]參數。 舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的狀況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 如需詳細資訊，請參閱[在 SQL Server 2014 中停止 SQL Server 的功能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)。  
+ **不支援**  -h [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]參數。 舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的狀況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 如需詳細資訊，請參閱[在 SQL Server 2014 中停止 SQL Server 的功能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 服務啟動選項](../database-engine/configure-windows/database-engine-service-startup-options.md)  

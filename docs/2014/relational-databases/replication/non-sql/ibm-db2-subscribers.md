@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022208"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
@@ -39,11 +39,11 @@ ms.locfileid: "63022208"
   
 2.  為「訂閱者」建立連接字串。 在任何文字編輯器中都可建立連接字串，但建議您使用「資料存取工具」。 若要在「資料存取工具」中建立字串：  
   
-    1.  依序按一下 **[開始]**、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]**，然後再按 **[資料存取工具]**。  
+    1.  依序按一下 **[開始]** 、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]** ，然後再按 **[資料存取工具]** 。  
   
     2.  遵循 **[資料存取工具]** 中的步驟提供有關 DB2 伺服器的資訊。 完成工具後，將建立通用資料連結 (UDL) 和相關聯的連接字串 (複寫實際不會使用 UDL，但會用到連接字串)。  
   
-    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]**。  
+    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]** 。  
   
      連接字串類似於 (使用分行符號是為提高可讀性)：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63022208"
   
      有多種情況下會需要修改指令碼，但最常見的原因是改變資料類型對應。 如需詳細資訊，請參閱本主題中的＜資料類型對應考量＞一節。 如果您修改 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，請將變更限制為資料類型對應變更 (且指令碼不應包含任何註解)。 如果需要作大量變更，請建立 DB2 指令碼。  
   
-     **修改發行項腳本並做為自訂建立腳本提供**  
+     **若要修改發行項指令碼並做為自訂建立指令碼提供**  
   
     1.  為發行集產生快照集後，瀏覽至發行集的快照集資料夾。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022208"
   
     5.  執行 sp_changearticle，並指定 *creation_script* 屬性的檔案路徑與名稱。 如需詳細資訊，請參閱 [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)。  
   
-     **若要建立發行項腳本並做為自訂建立腳本提供**  
+     **若要建立發行項指令碼並做為自訂建立指令碼提供**  
   
     1.  使用 DB2 SQL 用語建立發行項指令碼。 確定檔案的第一行為 **bypass_translation**，且該行上除此之外無其他內容。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63022208"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|N/A|  
+|`sql_variant`|不適用|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR （0）<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -166,7 +166,7 @@ ms.locfileid: "63022208"
      在某些 DB2 環境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`資料項目不會限制為單一位元組字元;CHAR 或 VARCHAR 專案的長度必須將此納入考慮。 如果需要 *shift in* 和 *shift out* 字元，您還必須考慮到它們。 如果您要複寫具有`nchar`和`nvarchar`資料行的資料表，您可能需要在自訂建立腳本中為資料類型指定較大的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   
 ## <a name="see-also"></a>另請參閱  
- [非 SQL Server 訂閱者](non-sql-server-subscribers.md)   
- [訂閱發行集](../subscribe-to-publications.md)  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

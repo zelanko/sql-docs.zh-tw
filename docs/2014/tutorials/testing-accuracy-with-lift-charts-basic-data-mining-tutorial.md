@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042631"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>使用增益圖測試精確度 (基本資料採礦教學課程)
@@ -26,7 +26,7 @@ ms.locfileid: "63042631"
   
 -   [設定精確度圖表參數](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a>選擇輸入資料  
+##  <a name="choosing-the-input-data"></a><a name="BKMK_InputData"></a>選擇輸入資料  
  若要測試採礦模型的精確度，第一個步驟就是要選取您將用於測試的資料來源。 您將會對照測試資料來測試模型的執行效果，然後搭配外部資料來使用模型。  
   
 #### <a name="to-select-the-data-set"></a>若要選取資料集  
@@ -37,7 +37,7 @@ ms.locfileid: "63042631"
   
      如需其他選項的詳細資訊，請參閱[選擇精確度圖表類型和設定圖表選項](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)。  
   
-##  <a name="BKMK_Selecting"></a>設定精確度圖表參數  
+##  <a name="setting-accuracy-chart-parameters"></a><a name="BKMK_Selecting"></a>設定精確度圖表參數  
  若要建立精確度圖表，您必須定義三件事：  
   
 -   精確度圖表中應該納入哪些模型？  

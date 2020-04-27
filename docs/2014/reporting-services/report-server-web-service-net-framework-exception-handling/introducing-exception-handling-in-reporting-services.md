@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 091b1f40d293515617e369b750a5f18dfe12951b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012328"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Reporting Services 中的例外狀況處理簡介
@@ -34,9 +34,9 @@ ms.locfileid: "63012328"
 |-----------|-----------------|  
 |[處理 Reporting Services 中的例外狀況](handling-exceptions-in-reporting-services.md)|提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的例外狀況概觀以及從 Web 服務傳回錯誤的 SOAP 角色。|  
 |[Reporting Services 例外處理的最佳作法](best-practices/best-practices-for-reporting-services-exception-handling.md)|提供如何處理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的例外狀況之建議。|  
-|[Reporting Services SoapException 類別](soapexception-class/reporting-services-soapexception-class.md)|描述 ** 中的 **SoapException[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 類別。|  
+|[Reporting Services SoapException 類別](soapexception-class/reporting-services-soapexception-class.md)|描述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 **SoapException** 類別。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Web 服務和.NET Framework 建置應用程式](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [使用 Web 服務和 .NET Framework 建置應用程式](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

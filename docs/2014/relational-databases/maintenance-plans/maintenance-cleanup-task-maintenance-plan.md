@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035705"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
@@ -58,13 +58,13 @@ ms.locfileid: "63035705"
  **包含第一層的子資料夾**  
  從 [資料夾]**** 底下的第一層子資料夾中，刪除具有 [副檔名]**** 中所指定之副檔名的檔案。  
   
- **在工作執行時間根據檔案的存留期刪除檔案**  
+ **在工作執行階段依據檔案存在時間刪除檔案**  
  在 [刪除早於下列時限的檔案]**** 方塊中提供數字以及時間單位，以指定您要刪除之檔案的最低存在時間。  
   
- **刪除早于下列的檔案**  
+ **刪除早於下列時限的檔案**  
  提供數字以及時間單位 (日、週、月或年)，以指定您要刪除之檔案的最低存在時間。 存在時間超過指定時間的檔案會遭到刪除。  
   
- **View T-sql**  
+ **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ ms.locfileid: "63035705"
  **...**  
  選取此項以檢視可用伺服器的清單。  
   
- **輸入資訊以登入伺服器**  
+ **輸入要登入到伺服器的資訊**  
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  

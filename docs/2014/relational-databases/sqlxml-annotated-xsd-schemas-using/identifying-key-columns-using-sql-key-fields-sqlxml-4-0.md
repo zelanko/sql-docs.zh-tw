@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013814"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
@@ -34,8 +34,7 @@ ms.locfileid: "66013814"
 > [!NOTE]  
 >  若要確保正確的巢狀結構，建議您針對對應至資料表的元素指定 `sql:key-fields`。 產生的 XML 會區分基礎結果集的排序。 如果沒有指定 `sql:key-fields`，產生的 XML 格式可能會不正確。  
   
- 
-  `sql:key-fields` 的值會識別在關聯中唯一識別資料列的資料行。 如果需要多個資料行才能唯一識別某個資料列，這些資料行值就會以空格隔開。  
+ `sql:key-fields` 的值會識別在關聯中唯一識別資料列的資料行。 如果需要多個資料行才能唯一識別某個資料列，這些資料行值就會以空格隔開。  
   
  當元素包含定義`sql:key-fields`于元素和子專案之間的** \<sql： relationship>** ，但未提供在父元素中指定之資料表的主鍵時，您必須使用注釋。  
   

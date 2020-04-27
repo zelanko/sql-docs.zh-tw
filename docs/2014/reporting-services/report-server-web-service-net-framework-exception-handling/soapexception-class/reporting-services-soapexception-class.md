@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f6efdfac89014116957990ef2db21cf52e76a4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046027"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 類別
@@ -29,7 +29,7 @@ ms.locfileid: "63046027"
   
 |公用屬性|描述|  
 |---------------------|-----------------|  
-|**Actor**|造成例外狀況的程式碼， 這個值是 Web 服務方法的 URL。|  
+|**根源**|造成例外狀況的程式碼， 這個值是 Web 服務方法的 URL。|  
 |**資訊**|應用程式特定的錯誤資訊， 這個值是由報表伺服器所設定，且格式為 XML。 如需詳細資訊，請參閱 [Detail 屬性](detail-property.md)和[使用 Detail 屬性處理特定的錯誤](../best-practices/using-the-detail-property-to-handle-specific-errors.md)。|  
 |**HelpLink**|與該錯誤相關聯的說明檔之 URL 或 URN。 這個值通常是由 Web 服務所設定，而且它會將 URL 設定為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 說明與支援。 因為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 對於所發生的錯誤支援多個說明連結，所以報表伺服器會將說明連結資訊設定為 **Detail** 屬性的一部分。 如需詳細資訊，請參閱 [HelpLink 項目](helplink-element.md)。|  
 |**訊息**|描述錯誤的當地語系化描述性訊息。 此文字可能會出現在應用程式 UI 中。|  

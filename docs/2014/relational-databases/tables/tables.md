@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211782"
 ---
 # <a name="tables"></a>資料表
@@ -32,15 +32,14 @@ ms.locfileid: "68211782"
 ## <a name="types-of-tables"></a>資料表的類型  
  除了基本使用者定義資料表的標準角色之外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還提供在資料庫中具有特殊用途的下列資料表類型。  
   
- 資料分割資料表  
+ 分割區資料表  
  資料分割資料表的資料會水平劃分成數個單元，分散於資料庫中的多個檔案群組。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 依預設， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最多支援 15,000 個資料分割。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  暫存資料表  
  暫存資料表儲存在 `tempdb` 中。 暫存資料表有兩種：區域與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存資料表是以單一數字符號 (#) 作為名稱的第一個字元；只有目前連接的使用者才能看見它們，當使用者中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，就會刪除它們。 全域暫存資料表是以兩個數字符號 (##) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見它們，只有當所有參考這些資料表的使用者都中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，才會刪除它們。  
   
  系統資料表  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將伺服器組態及其所有資料表的定義資料儲存在一組特殊資料表中，稱為系統資料表。 使用者不能直接查詢或更新系統資料表。 系統資料表中的資訊可透過系統檢視表取得。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](/sql/t-sql/language-reference)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將伺服器組態及其所有資料表的定義資料儲存在一組特殊資料表中，稱為系統資料表。 使用者不能直接查詢或更新系統資料表。 系統資料表中的資訊可透過系統檢視表取得。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](/sql/t-sql/language-reference)。  
   
  寬型資料表  
  寬型資料表會使用 [疏鬆資料行](use-sparse-columns.md) ，將資料表可以包含的資料行總數增加至 30,000。 疏鬆資料行為已最佳化儲存位置來保存 Null 值的一般資料行。 疏鬆資料行會減少 Null 值的空間需求，但要付出擷取非 Null 值的更多成本負擔。 寬型資料表已定義 [資料行集](use-column-sets.md)，而資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行合併至結構化輸出中。 索引和統計資料的數目也會分別增加至 1,000 和 30,000。 寬型資料表資料列的大小上限為 8,019 個位元組。 因此，任何特定資料列中的大部分資料應該是 NULL。 在寬型資料表中，非疏鬆資料行加上計算資料行的數目上限仍然是 1,024。  
@@ -65,9 +64,9 @@ ms.locfileid: "68211782"
 |資料表工作|主題|  
 |-----------------|-----------|  
 |描述如何建立資料表。|[建立資料表 &#40;Database Engine&#41;](create-tables-database-engine.md)|  
-|描述如何刪除資料表。|[刪除資料表 &#40;資料庫引擎&#41;](delete-tables-database-engine.md)|  
+|描述如何刪除資料表。|[刪除資料表 &#40;Database Engine&#41;](delete-tables-database-engine.md)|  
 |描述如何建立含有現有資料表之部分或所有資料行的新資料表。|[複製資料表](duplicate-tables.md)|  
-|描述如何重新命名資料表。|[將資料表重新命名 &#40;資料庫引擎&#41;](rename-tables-database-engine.md)|  
+|描述如何重新命名資料表。|[重新命名資料表 &#40;Database Engine&#41;](rename-tables-database-engine.md)|  
 |描述如何檢視資料表的屬性。|[檢視資料表定義](view-the-table-definition.md)|  
 |描述如何判斷其他物件 (例如檢視表或預存程序) 是否與資料表相依。|[檢視資料表的相依性](view-the-dependencies-of-a-table.md)|  
   
@@ -75,11 +74,11 @@ ms.locfileid: "68211782"
   
 |資料行工作|主題|  
 |------------------|-----------|  
-|描述如何將資料行加入現有資料表。|[將資料行新增至資料表 &#40;資料庫引擎&#41;](add-columns-to-a-table-database-engine.md)|  
+|描述如何將資料行加入現有資料表。|[將資料行新增至資料表 &#40;Database Engine&#41;](add-columns-to-a-table-database-engine.md)|  
 |描述如何刪除資料表中的資料行。|[從資料表中刪除資料行](delete-columns-from-a-table.md)|  
-|描述如何變更資料行的名稱。|[重新命名資料行 &#40;資料庫引擎&#41;](rename-columns-database-engine.md)|  
-|描述如何將資料行從某個資料表複製到另一個資料表，但只複製資料行定義，或複製定義和資料。|[將資料行從一個資料表複製到另一個 &#40;資料庫引擎&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
-|描述如何透過變更資料類型或其他屬性來修改資料行定義。|[修改資料行 &#40;資料庫引擎&#41;](modify-columns-database-engine.md)|  
+|描述如何變更資料行的名稱。|[重新命名資料行 &#40;Database Engine&#41;](rename-columns-database-engine.md)|  
+|描述如何將資料行從某個資料表複製到另一個資料表，但只複製資料行定義，或複製定義和資料。|[將資料行從一個資料表複製至另一個資料表 &#40;Database Engine&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
+|描述如何透過變更資料類型或其他屬性來修改資料行定義。|[修改資料行 &#40;Database Engine&#41;](modify-columns-database-engine.md)|  
 |描述如何變更資料行的顯示順序。|[變更資料表中的資料行順序](change-column-order-in-a-table.md)|  
 |描述如何在資料表中建立計算資料行。|[指定資料表中的計算資料行](specify-computed-columns-in-a-table.md)|  
 |描述如何指定資料行的預設值。 如果未提供其他值，則會使用此值。|[指定資料行的預設值](specify-default-values-for-columns.md)|  

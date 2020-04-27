@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149844"
 ---
 # <a name="column-element-for-index-dta"></a>索引的 Column 元素 (DTA)
@@ -49,19 +49,19 @@ ms.locfileid: "63149844"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**出現次數**|最多可為`Index`元素指定1024個數據行。|  
+|**次出現**| 元素可以指定最多 1024 個資料行。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[&#40;DTA&#41;的 Index 元素](index-element-dta.md)|  
-|**子元素**|[資料行 &#40;DTA&#41;的 Name 元素](name-element-for-column-dta.md)|  
+|**父元素**|[Index 元素 &#40;DTA&#41;](index-element-dta.md)|  
+|**子元素**|[資料行的 Name 元素 &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

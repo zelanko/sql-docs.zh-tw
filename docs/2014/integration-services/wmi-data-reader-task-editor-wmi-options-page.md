@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054363"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 資料讀取器工作編輯器 (WMI 選項頁面)
@@ -30,7 +30,7 @@ ms.locfileid: "66054363"
  **WMIConnectionName**  
  在清單中選取 WMI 連線管理員，或按一下\<[**新增 WMI 連接 ...** ]> 建立新的連線管理員。  
   
- **相關主題：** [Wmi 連線管理員](connection-manager/wmi-connection-manager.md)、 [wmi 連線管理員編輯器](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **相關主題** [WMI 連線管理員](connection-manager/wmi-connection-manager.md)、 [WMI 連線管理員編輯器](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  選取工作執行之 WQL 查詢的來源類型。 這個屬性具有下表中所列的選項。  
@@ -59,13 +59,13 @@ ms.locfileid: "66054363"
   
 ### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = 直接輸入  
  **WQLQuerySource**  
- 提供查詢，或按一下省略符號 (...)，然後使用 [WQL 查詢]**** 對話方塊輸入查詢。  
+ 提供查詢，或按一下省略號（...），然後使用 [ **WQL 查詢**] 對話方塊輸入查詢。  
   
 ### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = 檔案連接  
  **WQLQuerySource**  
  在清單中選取檔案連線管理員，或按一下\<[**新增連接 ...** ]> 建立新的連線管理員。  
   
- **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 變數  
  **WQLQuerySource**  
@@ -76,13 +76,13 @@ ms.locfileid: "66054363"
 ## <a name="destinationtype-dynamic-options"></a>DestinationType 動態選項  
   
 ### <a name="destinationtype--file-connection"></a>DestinationType = 檔案連接  
- **目的地**  
+ **Destination**  
  在清單中選取檔案連線管理員，或按一下\<[**新增連接 ...** ]> 建立新的連線管理員。  
   
- **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = 變數  
- **目的地**  
+ **Destination**  
  在清單中選取變數，或按一下\<[**新增變數 ...** ]> 建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  

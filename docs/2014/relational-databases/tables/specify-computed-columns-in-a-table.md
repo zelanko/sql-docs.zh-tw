@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211800"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
@@ -36,22 +36,22 @@ ms.locfileid: "68211800"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Limitations"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 限制事項  
   
 -   計算資料行不能用來做為 DEFAULT 或 FOREIGN KEY 條件約束定義，也不能搭配 NOT NULL 條件約束定義來使用。 不過，如果計算資料行值是由具決定性的運算式所定義，且索引資料行接受結果的資料類型，計算資料行便可用來做為索引中的索引鍵資料行，也可用在任何 PRIMARY KEY 或 UNIQUE 條件約束中。 例如，如果資料表有整數資料行 a 和 b，您可以建立計算資料行 a + b 的索引，但不能建立計算資料行 a +DATEPART(dd, GETDATE()) 的索引，因為在後續叫用時，值可能會改變。  
   
 -   計算資料行不能是 INSERT 或 UPDATE 陳述式的目標。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-###  <a name="NewColumn"></a> 若要加入新的計算資料行  
+###  <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 若要加入新的計算資料行  
   
 1.  在 **[物件總管]** 中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]  ，然後選取 [新增資料行]  。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68211800"
   
 5.  藉由從 [Is Persisted]  子屬性的下拉式清單中選擇 [是]  或 [否]  ，指示資料是否為永續性。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+6.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>若要將計算資料行定義新增至現有資料行  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211800"
   
 3.  加入新的資料行，並依照上述程序加入新的計算料行，藉此指定計算資料行公式。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>建立資料表時加入計算資料行  
   
@@ -133,6 +133,6 @@ ms.locfileid: "68211800"
   
     ```  
   
-     如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+     如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
   
 ###  <a name="TsqlExample"></a>  

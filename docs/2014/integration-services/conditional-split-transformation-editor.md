@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060890"
 ---
 # <a name="conditional-split-transformation-editor"></a>條件式分割轉換編輯器
@@ -30,18 +30,18 @@ ms.locfileid: "66060890"
  若要深入了解條件式分割轉換，請參閱 [條件式分割轉換](data-flow/transformations/conditional-split-transformation.md)。  
   
 ## <a name="options"></a>選項。  
- **單**  
+ **訂單**  
  選取資料列並使用右邊的方向鍵來變更評估運算式的順序。  
   
  **輸出名稱**  
  提供輸出名稱。 預設為已編號的案例清單；然而，您可選擇任何唯一的、描述性名稱。  
   
- **條件**  
+ **狀況**  
  輸入運算式或從可用的資料行、變數、函數以及運算子的清單中拖曳來建立運算式。  
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題：**[Integration Services &#40;ssis&#41; 運算式](expressions/integration-services-ssis-expressions.md)、 [&#40;ssis 運算式&#41;的運算子](expressions/operators-ssis-expression.md)，以及[&#40;ssis 運算式的函數](expressions/functions-ssis-expression.md)&#41;   
+ **相關主題︰**  [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)[運算子 &#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
   
  **預設輸出名稱**  
  輸入預設輸出的名稱，或使用預設值。  

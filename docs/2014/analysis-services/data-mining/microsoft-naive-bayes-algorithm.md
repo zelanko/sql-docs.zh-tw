@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174457"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
@@ -55,7 +55,7 @@ ms.locfileid: "78174457"
 
  貝氏機率分類模型的需求如下：
 
--   **單一索引鍵資料行**每個模型都必須包含一個可唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。
+-   **單一索引鍵資料行** ：每個模型都必須包含一個能唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。
 
 -   **輸入資料行**在貝氏貝氏機率分類模型中，所有資料行都必須是離散或離散化資料行。 如需分隔資料行的相關資訊，請參閱[離散化方法 &#40;資料採礦&#41;](discretization-methods-data-mining.md)。
 
@@ -65,7 +65,7 @@ ms.locfileid: "78174457"
 
      相反地，當您瀏覽模型或資料集來辨識輸入之間的關聯性時，此演算法能夠識別變數之間關聯的功能會很有用。
 
--   **至少一個可預測資料行**可預測的屬性必須包含離散或離散化的值。
+-   **至少有一個可預期的資料行** ：可預期的屬性必須包含離散或離散化的值。
 
      可預期資料行的值可視為輸入。 當您瀏覽新的資料集來尋找資料行之間的關聯性時，這個作法很有用。
 

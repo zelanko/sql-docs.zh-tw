@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023909"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
@@ -49,8 +49,8 @@ ms.locfileid: "63023909"
  做為這個安全性群組的成員，便會授與新帳戶執行複寫代理程式作業所需的權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)   
- [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [&#40;複寫&#41;的錯誤和事件參考](errors-and-events-reference-replication.md)   
+ [管理複寫中的登入和密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [SQL Server 組態管理員](../sql-server-configuration-manager.md)  
   
   

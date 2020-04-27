@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046533"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  
   
 ## <a name="properties"></a>屬性  
- 以下為透過 IRowsetInfo::GetProperties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，嘗試透過 IOpenRowset：： OpenRowset 或 ITableDefinitionWithConstraints：： CreateTableWithConstraints 方法將任何屬性設定為非預設值，將會導致錯誤，而且不會建立任何物件。  
+ 以下為透過 IRowsetInfo::GetProperties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，嘗試透過 IOpenRowset::OpenRowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 方法將任何屬性設定為其非預設值將會導致錯誤，且不會建立任何物件。  
   
  沒有在資料表值參數資料列集物件中實作的屬性不會列在此處。 如需屬性的完整清單，請參閱 OLE DB 文件集中的＜Windows Data Access Components＞。  
   
@@ -74,14 +74,14 @@ ms.locfileid: "63046533"
  下列屬性集支援資料表值參數。  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- 在建立資料表值參數資料列集物件的程式中，取用者會使用這個屬性（如有需要，透過 DBCOLUMNDESC 結構針對每個資料行使用 ITableDefinitionWithConstraints：： CreateTableWithConstraints）。  
+ 這個屬性會由取用者在建立資料表值參數資料列集物件時，如果需要透過 DBCOLUMNDESC 結構針對每個資料行使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 來建立時使用。  
   
 |屬性識別碼|屬性值|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 類型：VT_BOOL<br /><br /> 描述：設定為 VARIANT_TRUE 時，表示資料行為計算資料行。 VARIANT_FALSE 則表示它不是計算資料行。|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 這些屬性是由取用者讀取，同時在 ISSCommandWithParameters：： GetParameterProperties 的呼叫中探索資料表值參數類型資訊，並在設定資料表值參數的特定屬性時由取用者設定透過 ISSCommandWithParameters：： SetParameterProperties。  
+ 這些屬性會由取用者在探索針對 ISSCommandWithParameters::GetParameterProperties 之呼叫中的資料表值參數類型資訊時讀取，以及由取用者在透過 ISSCommandWithParameters::SetParameterProperties 設定關於資料表值參數的指定屬性時設定。  
   
  下表提供這些屬性的詳細描述。  
   

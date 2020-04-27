@@ -13,10 +13,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493808"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 的開發人員參考資料

@@ -16,10 +16,10 @@ ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769218"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
@@ -78,7 +78,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>備註  
  **sp_addlogreader_agent**用於異動複寫中。  
   
- 如果您在**** 使用資料庫建立發行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，將已啟用複寫的資料庫升級為此版本，您必須執行 Sp_addlogreader_agent 來加入記錄讀取器代理程式。  
+ 如果您在**sp_addlogreader_agent**使用資料庫建立發行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，將已啟用複寫的資料庫升級為此版本，您必須執行 Sp_addlogreader_agent 來加入記錄讀取器代理程式。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_addlogreader_agent**。  

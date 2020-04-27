@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011173"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
@@ -29,7 +29,7 @@ ms.locfileid: "66011173"
   
 -   設定全文檢索搜尋的使用者資料庫。 這項作業包括針對資料庫建立一個或多個全文檢索目錄，以及針對您想要執行全文檢索查詢的每個資料表或索引檢視表定義全文檢索索引。  
   
-##  <a name="props"></a> 檢視或變更全文檢索搜尋的伺服器屬性  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> 檢視或變更全文檢索搜尋的伺服器屬性  
  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體的全文檢索屬性。  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>檢視與變更全文檢索搜尋的伺服器屬性  
@@ -67,7 +67,7 @@ ms.locfileid: "66011173"
         > [!NOTE]  
         >  也可以使用 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** 動作來設定全文檢索升級選項。  
   
-##  <a name="metadata"></a> 檢視其他全文檢索伺服器屬性  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> 檢視其他全文檢索伺服器屬性  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數可用來取得全文檢索搜尋之各種伺服器層級屬性的值。 這項資訊可用於管理和疑難排解全文檢索搜尋。  
   
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器執行個體的全文檢索屬性及其相關的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數。  
@@ -78,34 +78,34 @@ ms.locfileid: "66011173"
 |`LoadOSResources`|作業系統斷詞工具和篩選是否已註冊並搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用。|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|指定全文檢索引擎是否只載入已簽署的二進位檔。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a>監視全文檢索搜尋活動  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> 監視全文檢索搜尋活動  
  在伺服器執行個體上監視全文檢索搜尋活動時，許多動態管理檢視與函數相當有用。  
   
- **若要使用進行中的擴展活動來查看全文檢索目錄的相關資訊**  
+ **若要檢視有關包含進行中母體擴展活動之全文檢索目錄的資訊**  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
- **若要查看篩選背景程式主機進程的目前活動**  
+ **若要檢視篩選背景程式主機處理序的目前活動**  
   
 -   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **若要查看進行中索引擴展的相關資訊**  
+ **若要檢視有關進行中索引母體擴展的資訊**  
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **若要在記憶體集區中，查看當做編目或編目範圍一部分使用的記憶體緩衝區。**  
+ **若要檢視在記憶體集區中當做搜耙或搜耙範圍一部分使用的記憶體緩衝區**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **若要查看全文檢索編目或全文檢索編目範圍之全文檢索收集程式元件可用的共用記憶體集區**  
+ **檢視可供全文檢索搜耙或全文檢索搜耙範圍之全文檢索收集程式元件使用的共用記憶體集區**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
- **若要查看有關每個全文檢索索引批次的資訊**  
+ **檢視有關每個全文檢索索引批次的資訊**  
   
 -   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **若要查看與進行中擴展相關之特定範圍的資訊**  
+ **檢視有關與進行中母體擴展相關之特定範圍的資訊**  
   
 -   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

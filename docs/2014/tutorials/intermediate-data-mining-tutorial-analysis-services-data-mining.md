@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017174"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>中繼資料採礦教學課程 (Analysis Services - 資料採礦)
@@ -52,13 +52,13 @@ ms.locfileid: "63017174"
   
  您將為各區域建立個別的模型，然後建立一個用來交叉預測的一般模型。  
   
- [第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  在這個課程中，您將加入新的資料來源檢視，並學習如何使用巢狀資料表與索引鍵。 根據這項資料，您將建立購物籃狀況中所能使用的採礦模型。 此外，您還將探索 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯分析演算法建立的採礦模型。  
   
  [第4課：建立時序群集案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  在這個課程中，您將建立時序群集狀況中所能使用的採礦模型。 另外，您也將學習如何探索 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時序群集演算法所建立的採礦模型。  
   
- [第5課：建立類神經網路和羅吉斯回歸模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [第五課：建立類神經網路和羅吉斯迴歸模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  在這一課，您將使用 Microsoft 類神經網路演算法和 Microsoft 羅吉斯迴歸演算法，建立數個相關的採礦模型。 另外，您也將學習如何使用資料來源檢視探索模型的基礎資料。  
   
 ## <a name="requirements"></a>需求  
@@ -68,8 +68,7 @@ ms.locfileid: "63017174"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 與 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 與 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
   
  為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請造訪[Microsoft SQL 範例資料庫](https://go.microsoft.com/fwlink/?LinkId=88417)頁面，並選取適當版本的範例資料庫。  
   

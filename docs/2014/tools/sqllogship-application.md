@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035056"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
-  **Sqllogship**應用程式會對記錄傳送設定執行備份、複製或還原作業，以及相關的清除工作。 作業是針對特定的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，在的特定實例上執行。  
+  **sqllogship** 應用程式會對記錄傳送組態執行備份、複製或還原作業，以及相關的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
   
- ![主題連結圖示](../../2014/database-engine/media/topic-link.gif "主題連結圖示")如需語法慣例，請參閱[命令提示字元公用程式參考 &#40;資料庫引擎&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
+ ![主題連結圖示](../../2014/database-engine/media/topic-link.gif "主題連結圖示")如需語法慣例，請參閱[命令提示字元公用程式參考 &#40;Database Engine&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,59 +34,55 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 ```  
   
 ## <a name="arguments"></a>引數  
- **-伺服器** _instance_name_  
+ **-server** _instance_name_  
  指定執行作業所在的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定的伺服器執行個體會視指定哪一項記錄傳送作業而定。 若為 **-backup**， *instance_name* 必須是記錄傳送組態中的主要伺服器名稱。 若為 **-copy** 或 **-restore**， *instance_name* 必須是記錄傳送組態中的次要伺服器名稱。  
   
- **-備份** _primary_id_  
+ **-backup** _primary_id_  
  針對主要資料庫執行備份作業，資料庫的主要識別碼是由 *primary_id*指定。 您可以從 [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) 系統資料表選取這個識別碼，或使用 [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) 預存程序取得這個識別碼。  
   
- 備份作業會在備份目錄中建立記錄備份。 
-  **sqllogship** 應用程式接著會根據檔案保留期限，清除任何舊的備份檔案。 接下來，應用程式會記錄主要伺服器和監視伺服器的備份作業歷程。 最後，應用程式會執行 [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql)，根據保留期限清除舊的記錄資訊。  
+ 備份作業會在備份目錄中建立記錄備份。 **sqllogship** 應用程式接著會根據檔案保留期限，清除任何舊的備份檔案。 接下來，應用程式會記錄主要伺服器和監視伺服器的備份作業歷程。 最後，應用程式會執行 [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql)，根據保留期限清除舊的記錄資訊。  
   
- **-複製** _secondary_id_  
+ **-copy** _secondary_id_  
  執行複製作業，從指定的次要伺服器複製次要資料庫的備份，資料庫的次要識別碼是由 *secondary_id*指定。 您可以從 [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) 系統資料表選取這個識別碼，或使用 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 預存程序取得這個識別碼。  
   
- 這項作業會將備份檔從備份目錄複製到目的地目錄。 
-  **sqllogship** 應用程式接著會記錄次要伺服器和監視伺服器的複製作業歷程。  
+ 這項作業會將備份檔從備份目錄複製到目的地目錄。 **sqllogship** 應用程式接著會記錄次要伺服器和監視伺服器的複製作業歷程。  
   
  **-restore** _secondary_id_  
  在指定的次要伺服器上對次要資料庫執行還原作業，資料庫的次要識別碼是由 *secondary_id*指定。 您可以使用 **sp_help_log_shipping_secondary_database** 預存程序取得這個識別碼。  
   
- 目的地目錄中自最近還原點之後建立的任何備份檔，都會還原至次要資料庫。 
-  **sqllogship** 應用程式接著會根據檔案保留期限，清除任何舊的備份檔案。 接下來，應用程式會記錄次要伺服器和監視伺服器的還原作業歷程。 最後，應用程式會執行 **sp_cleanup_log_shipping_history**，根據保留期限清除舊的記錄資訊。  
+ 目的地目錄中自最近還原點之後建立的任何備份檔，都會還原至次要資料庫。 **sqllogship** 應用程式接著會根據檔案保留期限，清除任何舊的備份檔案。 接下來，應用程式會記錄次要伺服器和監視伺服器的還原作業歷程。 最後，應用程式會執行 **sp_cleanup_log_shipping_history**，根據保留期限清除舊的記錄資訊。  
   
- **-verboselevel** _層級_  
- 指定要加入記錄傳送記錄的訊息層級。 *level*是下列其中一個整數：  
+ **-verboselevel** _level_  
+ 指定要加入記錄傳送記錄的訊息層級。 *level* 是下列其中一個整數：  
   
 |層級|描述|  
 |-----------|-----------------|  
 |0|輸出不追蹤和偵錯的訊息。|  
 |1|輸出錯誤處理訊息。|  
 |2|輸出警告和錯誤處理訊息。|  
-|**第**|輸出參考用訊息、警告和錯誤處理訊息。 這是預設值。|  
+|**3**|輸出參考用訊息、警告和錯誤處理訊息。 這是預設值。|  
 |4|輸出所有偵錯和追蹤訊息。|  
   
  **-logintimeout** _timeout_value_  
- 指定在嘗試超時之前，嘗試登入伺服器實例所分配的時間量。預設值為15秒。 *timeout_value*為**int**_。_  
+ 指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int** _。_  
   
  **-querytimeout** _timeout_value_  
- 指定在嘗試超時之前，為啟動指定的作業所配置的時間量。預設值為 [沒有超時時間]。 *timeout_value*為**int**_。_  
+ 指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int** _。_  
   
 ## <a name="remarks"></a>備註  
  建議您盡可能使用備份、複製和還原作業來執行備份、複製和還原。 若要從批次作業或其他應用程式執行這些作業，請呼叫 [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) 預存程序。  
   
- 
-  **sqllogship** 所建立的記錄傳送記錄會穿插記錄傳送備份、複製和還原作業所建立的記錄。 如果您要重複使用 **sqllogship** 對記錄傳送組態執行備份、複製或還原作業，請考慮停用對應的一或多個記錄傳送作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
+ **sqllogship** 所建立的記錄傳送記錄會穿插記錄傳送備份、複製和還原作業所建立的記錄。 如果您要重複使用 **sqllogship** 對記錄傳送組態執行備份、複製或還原作業，請考慮停用對應的一或多個記錄傳送作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
   
  **Sqllogship**應用程式（sqllogship）安裝在 X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn 目錄中。  
   
 ## <a name="permissions"></a>權限  
- **sqllogship**會使用 Windows 驗證。 執行命令的「Windows 驗證」帳戶必須擁有 Windows 目錄存取權和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 需求取決於 **sqllogship** 命令是指定 **-backup**、 **-copy**或 **-restore** 選項。  
+ **sqllogship** 使用「Windows 驗證」。 執行命令的「Windows 驗證」帳戶必須擁有 Windows 目錄存取權和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 需求取決於 **sqllogship** 命令是指定 **-backup**、 **-copy**或 **-restore** 選項。  
   
 |選項|目錄存取|權限|  
 |------------|----------------------|-----------------|  
-|**-備份**|需要讀取/寫入權限才能備份目錄。|需要與 BACKUP 陳述式相同的權限。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。|  
-|**-複製**|需要讀取權限才能備份目錄，以及需要寫入權限才能複製目錄。|需要與 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 預存程序相同的權限。|  
+|**-backup**|需要讀取/寫入權限才能備份目錄。|需要與 BACKUP 陳述式相同的權限。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。|  
+|**-copy**|需要讀取權限才能備份目錄，以及需要寫入權限才能複製目錄。|需要與 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 預存程序相同的權限。|  
 |**-restore**|需要讀取/寫入權限才能複製目錄。|需要與 RESTORE 陳述式相同的權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)備份。|  
   
 > [!NOTE]  
@@ -94,11 +90,11 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_primary_databases &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
- [log_shipping_secondary &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   
- [sp_cleanup_log_shipping_history &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql)   
- [sp_help_log_shipping_primary_database &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql)   
- [sp_help_log_shipping_secondary_database &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)   
- [sp_start_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
+ [log_shipping_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql)   
+ [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql)   
+ [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)   
+ [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
   
   

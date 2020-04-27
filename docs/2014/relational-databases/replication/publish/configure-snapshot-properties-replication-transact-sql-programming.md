@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021331"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>設定快照集屬性 (複寫 Transact-SQL 程式設計)
@@ -30,7 +30,7 @@ ms.locfileid: "63021331"
   
     -   **@alt_snapshot_folder**-如果從該位置（而不是快照集預設資料夾）存取這個發行集的快照集，則指定路徑。  
   
-    -   **@compress_snapshot**-如果替代快照集**** 資料夾中的快照集檔案壓縮成[!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB 檔案格式，則指定 true 的值。  
+    -   **@compress_snapshot**-如果替代快照集**true**資料夾中的快照集檔案壓縮成[!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB 檔案格式，則指定 true 的值。  
   
     -   **@pre_snapshot_script**-指定在套用初始快照集之前的初始化期間，將于訂閱者上執行之 **.sql**檔案的檔案名和完整路徑。  
   

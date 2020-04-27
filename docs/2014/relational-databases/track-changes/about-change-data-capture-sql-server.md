@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211734"
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68211734"
 ## <a name="change-data-capture-data-flow"></a>異動資料擷取資料流程  
  下圖顯示異動資料擷取的主要資料流程。  
   
- ![異動資料擷取資料流程](../../database-engine/media/cdcdataflow.gif "異動資料擷取資料流程")  
+ ![變更資料捕獲資料流程](../../database-engine/media/cdcdataflow.gif "異動資料擷取資料流程")  
   
  異動資料擷取的變更資料來源是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄。 當插入、更新和刪除作業套用至追蹤來源資料表時，描述這些變更的項目就會加入記錄。 此記錄會當做擷取程序的輸入。 這樣就會讀取記錄並將變更之相關資訊新增至追蹤資料表的相關聯變更資料表。 系統會提供一些函數，以便列舉指定之範圍內出現在變更資料表中的變更，並以篩選結果集的形式傳回此資訊。 應用程式處理序通常會使用篩選結果集，在某些外部環境中更新來源的表示法。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68211734"
   
 ## <a name="see-also"></a>另請參閱  
  [追蹤資料變更 &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [啟用和停用異動資料擷取 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
+ [啟用和停用變更資料捕獲 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [使用變更資料 &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
  [管理和監視異動資料擷取 &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   

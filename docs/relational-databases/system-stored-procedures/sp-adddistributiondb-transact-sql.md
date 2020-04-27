@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771347"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,7 +75,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`這是連接到散發者時所要使用的安全性模式。 *security_mode*是**int**，預設值是1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證;**1**指定 Windows 整合式驗證。  
   
-`[ @login = ] 'login'`這是連接到散發者時所使用的登入名稱，用來建立散發資料庫。 如果*security_mode*設定為**0**，這就是必要的。 *login*是**sysname**，預設值是 Null。  
+`[ @login = ] 'login'`這是連接到散發者時所使用的登入名稱，用來建立散發資料庫。 如果*security_mode*設定為**0**，這就是必要的。 *login* 是預設值為 NULL 的 **sysname**。  
   
 `[ @password = ] 'password'`這是連接到散發者時所使用的密碼。 如果*security_mode*設定為**0**，這就是必要的。 *password*是**sysname**，預設值是 Null。  
   
@@ -84,7 +84,7 @@ sp_adddistributiondb [ @database= ] 'database'
 |值|描述|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** （預設值）|建立資料庫或使用現有的資料庫，然後套用**instdist** ，以在散發資料庫中建立複寫物件。|  
+|**1** (預設值)|建立資料庫或使用現有的資料庫，然後套用**instdist** ，以在散發資料庫中建立複寫物件。|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -164,11 +164,11 @@ GO
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_adddistributiondb**。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [設定散發](../../relational-databases/replication/configure-distribution.md)  
   
   

@@ -20,14 +20,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174508"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。
 
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 羅吉斯迴歸演算法的實作
@@ -45,7 +44,7 @@ ms.locfileid: "78174508"
  所有 Analysis Services 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 在羅吉斯迴歸模型中，特徵選取所使用的方法取決於屬性的資料類型。 羅吉斯迴歸是以 Microsoft 類神經網路演算法為基礎，因此，它會使用適用於類神經網路的特徵選取方法子集。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。
 
 ### <a name="scoring-inputs"></a>計分輸入
- 在類神經網路模型或羅吉斯回歸模型的內容中*評分*，表示將資料中的值轉換成使用相同尺規的一組值的程式，因此可以相互比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程式可讓您對每個輸入的重要性進行*評分*或比較，而不論值的差異。
+ 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」** 表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程式可讓您對每個輸入的重要性進行*評分*或比較，而不論值的差異。
 
  對於出現在定型集中的每個狀態，模型都會產生一個輸入。 對於離散或離散化的輸入，如果在定型集中至少出現一次遺漏狀態，則會建立其他輸入來代表「遺漏」狀態。 至於連續輸入，最多會建立兩個輸入節點：一個用於「遺漏」值 (如果出現在定型資料中)，而另一個輸入則用於所有現有的值或非 Null 值。 每個輸入都會使用 z 分數正規化方法（x-μ）/StdDev. 來調整為數值格式
 
@@ -92,8 +91,7 @@ WHERE NODE_TYPE = 23
  如需詳細資訊，請參閱 [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)。
 
 ## <a name="customizing-the-logistic-regression-algorithm"></a>自訂羅吉斯迴歸演算法
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以在用於輸入的資料行上設定模型旗標，藉以修改模型的行為。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以在用於輸入的資料行上設定模型旗標，藉以修改模型的行為。
 
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數
  下表描述可搭配 Microsoft 羅吉斯迴歸演算法使用的參數。
@@ -104,7 +102,7 @@ WHERE NODE_TYPE = 23
 
  HOLDOUT_SEED 指定在隨機判斷維持的資料時，用來植入虛擬隨機產生器的數位。 如果 HOLDOUT_SEED 是設定為 0，則此演算法會依據採礦模型的名稱產生種子，以保證在重新處理期間模型內容保持不變。
 
- 預設值是 0。
+ 預設值為 0。
 
  MAXIMUM_INPUT_ATTRIBUTES 定義演算法在叫用特徵選取之前可處理的輸入屬性數目。 將此值設定為 0 可關閉特徵選取。
 
@@ -139,8 +137,7 @@ WHERE NODE_TYPE = 23
  羅吉斯迴歸模型必須包含索引鍵資料行、輸入資料行和至少一個可預測資料行。
 
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法支援特定輸入資料行內容類型、可預測資料行內容類型和模型旗標，這些都會在下表中列出。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法支援特定輸入資料行內容類型、可預測資料行內容類型和模型旗標，這些都會在下表中列出。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。
 
 |資料行|內容類型|
 |------------|-------------------|

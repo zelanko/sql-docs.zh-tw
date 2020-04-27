@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206817"
 ---
 # <a name="using-cursors-odbc"></a>使用資料指標 (ODBC)
@@ -46,8 +46,7 @@ ms.locfileid: "68206817"
 |定點更新|UPDATE 或 DELETE 上的 WHERE CURRENT OF 子句|**SQLSetPos**|  
 |關閉資料指標|關閉*cursor_name*解除配置|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
   
- 實作於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器資料指標支援 ODBC 資料指標模型的功能。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式使用伺服器資料指標支援 ODBC API 的資料指標功能。  
+ 實作於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器資料指標支援 ODBC 資料指標模型的功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式使用伺服器資料指標支援 ODBC API 的資料指標功能。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -67,11 +66,11 @@ ms.locfileid: "68206817"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [CLOSE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
- [資料指標](../../relational-databases/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/deallocate-transact-sql)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [FETCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
+ [關閉 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/close-transact-sql)   
+ [連筆](../../relational-databases/cursors.md)   
+ [解除配置 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/deallocate-transact-sql)   
+ [DECLARE CURSOR &#40;Transact-sql&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
+ [FETCH &#40;Transact-sql&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
  [OPEN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/open-transact-sql)  
   
   

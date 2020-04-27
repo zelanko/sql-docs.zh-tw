@@ -15,66 +15,61 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207098"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會忽略 SQL_ATTR_CONNECTION_TIMEOUT 的設定。  
   
  也會忽略 SQL_ATTR_TRANSLATE_LIB；不支援指定其他的翻譯程式庫。 若要讓應用程式更容易匯出以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC 驅動程式，任何使用 SQL_ATTR_TRANSLATE_LIB 設定的值將會複製到驅動程式管理員中的緩衝區內外。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會將可重複的讀取交易隔離實作為可序列化。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會將可重複的讀取交易隔離實作為可序列化。  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了新交易隔離屬性 SQL_COPT_SS_TXN_ISOLATION 的支援。 將 SQL_COPT_SS_TXN_ISOLATION 設定為 SQL_TXN_SS_SNAPSHOT 代表交易會在快照隔離等級之下發生。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了新交易隔離屬性 SQL_COPT_SS_TXN_ISOLATION 的支援。 將 SQL_COPT_SS_TXN_ISOLATION 設定為 SQL_TXN_SS_SNAPSHOT 代表交易會在快照隔離等級之下發生。  
   
 > [!NOTE]  
 >  SQL_ATTR_TXN_ISOLATION 可用來設定 SQL_TXN_SS_SNAPSHOT 以外的所有其他隔離等級。 如果您想要使用快照集隔離，就必須透過 SQL_COPT_SS_TXN_ISOLATION 設定 SQL_TXN_SS_SNAPSHOT。 不過，您可以使用 SQL_ATTR_TXN_ISOLATION 或 SQL_COPT_SS_TXN_ISOLATION 來擷取隔離等級。  
   
  將 ODBC 陳述式屬性升級至連接屬性可能會產生非預期的後果。 您可以將要求伺服器資料指標以進行結果集處理的陳述式屬性升級至連接。 例如，如果您將 ODBC 陳述式屬性 SQL_ATTR_CONCURRENCY 設定為比預設值 SQL_CONCUR_READ_ONLY 更具限制性的值，就會引導驅動程式針對在連接時送出的所有陳述式使用動態資料指標。 針對連接的陳述式執行 ODBC 目錄函數會傳回 SQL_SUCCESS_WITH_INFO 以及一個診斷記錄，表示資料指標行為已經變更成唯讀。 嘗試執行包含相同連接之 COMPUTE 子句的 Transact-SQL SELECT 陳述式會失敗。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會針對 sqlncli.h 中定義的 ODBC 連接屬性支援一些驅動程式特有的延伸模組。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可能會要求在連接之前設定此屬性，否則如果已經設定，驅動程式可能會忽略此屬性。 下表將列出各項限制。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會針對 sqlncli.h 中定義的 ODBC 連接屬性支援一些驅動程式特有的延伸模組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可能會要求在連接之前設定此屬性，否則如果已經設定，驅動程式可能會忽略此屬性。 下表將列出各項限制。  
   
 |SQL Server 屬性|在連接至伺服器之前或之後設定|  
 |--------------------------|----------------------------------------------|  
-|SQL_COPT_SS_ANSI_NPW|先前|  
-|SQL_COPT_SS_APPLICATION_INTENT|先前|  
-|SQL_COPT_SS_ATTACHDBFILENAME|先前|  
-|SQL_COPT_SS_BCP|先前|  
-|SQL_COPT_SS_BROWSE_CONNECT|先前|  
-|SQL_COPT_SS_BROWSE_SERVER|先前|  
-|SQL_COPT_SS_CONCAT_NULL|先前|  
-|SQL_COPT_SS_CONNECTION_DEAD|後續|  
-|SQL_COPT_SS_ENCRYPT|先前|  
-|SQL_COPT_SS_ENLIST_IN_DTC|後續|  
-|SQL_COPT_SS_ENLIST_IN_XA|後續|  
-|SQL_COPT_SS_FALLBACK_CONNECT|先前|  
-|SQL_COPT_SS_FAILOVER_PARTNER|先前|  
-|SQL_COPT_SS_INTEGRATED_SECURITY|先前|  
-|SQL_COPT_SS_MARS_ENABLED|先前|  
-|SQL_COPT_SS_MULTISUBMIT_FAILOVER|先前|  
-|SQL_COPT_SS_OLDPWD|先前|  
-|SQL_COPT_SS_PERF_DATA|後續|  
-|SQL_COPT_SS_PERF_DATA_LOG|後續|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|後續|  
-|SQL_COPT_SS_PERF_QUERY|後續|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|後續|  
-|SQL_COPT_SS_PERF_QUERY_LOG|後續|  
-|SQL_COPT_SS_PRESERVE_CURSORS|先前|  
-|SQL_COPT_SS_QUOTED_IDENT|無論是|  
-|SQL_COPT_SS_TRANSLATE|無論是|  
-|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|先前|  
-|SQL_COPT_SS_TXN_ISOLATION|無論是|  
-|SQL_COPT_SS_USE_PROC_FOR_PREP|無論是|  
-|SQL_COPT_SS_USER_DATA|無論是|  
-|SQL_COPT_SS_WARN_ON_CP_ERROR|先前|  
+|SQL_COPT_SS_ANSI_NPW|之前|  
+|SQL_COPT_SS_APPLICATION_INTENT|之前|  
+|SQL_COPT_SS_ATTACHDBFILENAME|之前|  
+|SQL_COPT_SS_BCP|之前|  
+|SQL_COPT_SS_BROWSE_CONNECT|之前|  
+|SQL_COPT_SS_BROWSE_SERVER|之前|  
+|SQL_COPT_SS_CONCAT_NULL|之前|  
+|SQL_COPT_SS_CONNECTION_DEAD|After|  
+|SQL_COPT_SS_ENCRYPT|之前|  
+|SQL_COPT_SS_ENLIST_IN_DTC|After|  
+|SQL_COPT_SS_ENLIST_IN_XA|After|  
+|SQL_COPT_SS_FALLBACK_CONNECT|之前|  
+|SQL_COPT_SS_FAILOVER_PARTNER|之前|  
+|SQL_COPT_SS_INTEGRATED_SECURITY|之前|  
+|SQL_COPT_SS_MARS_ENABLED|之前|  
+|SQL_COPT_SS_MULTISUBMIT_FAILOVER|之前|  
+|SQL_COPT_SS_OLDPWD|之前|  
+|SQL_COPT_SS_PERF_DATA|After|  
+|SQL_COPT_SS_PERF_DATA_LOG|After|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
+|SQL_COPT_SS_PERF_QUERY|After|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
+|SQL_COPT_SS_PERF_QUERY_LOG|After|  
+|SQL_COPT_SS_PRESERVE_CURSORS|之前|  
+|SQL_COPT_SS_QUOTED_IDENT|之前或之後|  
+|SQL_COPT_SS_TRANSLATE|之前或之後|  
+|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|之前|  
+|SQL_COPT_SS_TXN_ISOLATION|之前或之後|  
+|SQL_COPT_SS_USE_PROC_FOR_PREP|之前或之後|  
+|SQL_COPT_SS_USER_DATA|之前或之後|  
+|SQL_COPT_SS_WARN_ON_CP_ERROR|之前|  
   
  針對相同工作階段、資料庫或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 狀態使用預先連接屬性與對等 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令，可能會產生非預期的行為。 例如，  
   
@@ -90,13 +85,13 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_AD_ON|預設。 連接會使用 ANSI 預設行為來處理 NULL 比較、填補、警告和 NULL 串連。|  
+|SQL_AD_ON|預設值。 連接會使用 ANSI 預設行為來處理 NULL 比較、填補、警告和 NULL 串連。|  
 |SQL_AD_OFF|連接會針對 NULL、字元資料類型填補和警告使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定義的處理方式。|  
   
  如果您使用連接共用，應該在連接字串中設定 SQL_COPT_SS_ANSI_NPW，而不是使用 SQLSetConnectAttr。 已經建立連接之後，在使用連接共用時，任何嘗試變更此屬性的行為將會以無訊息的方式發生失敗。  
   
 ## <a name="sql_copt_ss_application_intent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 宣告連接到伺服器時的應用程式工作負載類型。 可能的值為 `Readonly` 與 `ReadWrite`。 例如：  
+ 宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `Readonly` 和 `ReadWrite`。 例如：  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -116,7 +111,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_BCP_OFF|預設。 無法針對連接使用大量複製函數。|  
+|SQL_BCP_OFF|預設值。 無法針對連接使用大量複製函數。|  
 |SQL_BCP_ON|可以針對連接使用大量複製函數。|  
   
 ## <a name="sql_copt_ss_browse_connect"></a>SQL_COPT_SS_BROWSE_CONNECT  
@@ -124,7 +119,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_MORE_INFO_NO|預設。 傳回伺服器的清單。|  
+|SQL_MORE_INFO_NO|預設值。 傳回伺服器的清單。|  
 |SQL_MORE_INFO_YES|**SQLBrowseConnect**會傳回伺服器屬性的擴充字串。|  
   
 ## <a name="sql_copt_ss_browse_server"></a>SQL_COPT_SS_BROWSE_SERVER  
@@ -133,14 +128,14 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |值|描述|  
 |-----------|-----------------|  
 |computername|**SQLBrowseConnect**會傳回指定電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的實例清單。 雙反斜線\\\\（）不應該用於伺服器名稱（例如，而不是\\\MyServer，應使用 MyServer）。|  
-|NULL|預設。 **SQLBrowseConnect**會傳回網域中所有伺服器的資訊。|  
+|NULL|預設值。 **SQLBrowseConnect**會傳回網域中所有伺服器的資訊。|  
   
 ## <a name="sql_copt_ss_concat_null"></a>SQL_COPT_SS_CONCAT_NULL  
  SQL_COPT_SS_CONCAT_NULL 會在串連字元時啟用或停用 NULL ISO 處理的使用方式。 如需詳細資訊，請參閱 SET CONCAT_NULL_YIELDS_NULL。  
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_CN_ON|預設。 連接會在串連字串時使用 ISO 預設行為來處理 NULL 值。|  
+|SQL_CN_ON|預設值。 連接會在串連字串時使用 ISO 預設行為來處理 NULL 值。|  
 |SQL_CN_OFF|連接會在串連字串時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定義的行為來處理 NULL 值。|  
   
 ## <a name="sql_copt_ss_encrypt"></a>SQL_COPT_SS_ENCRYPT  
@@ -179,7 +174,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_IS_OFF|預設。 在登入時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來驗證使用者識別碼和密碼。|  
+|SQL_IS_OFF|預設值。 在登入時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來驗證使用者識別碼和密碼。|  
 |SQL_IS_ON|使用 Windows 驗證模式來驗證使用者對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。|  
   
 ## <a name="sql_copt_ss_mars_enabled"></a>SQL_COPT_SS_MARS_ENABLED  
@@ -187,7 +182,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_MARS_ENABLED_NO|預設。 停用 Multiple Active Result Sets (MARS)。|  
+|SQL_MARS_ENABLED_NO|預設值。 停用 Multiple Active Result Sets (MARS)。|  
 |SQL_MARS_ENABLED_YES|啟用 MARS。|  
   
  如需 MARS 的詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;mars&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)。  
@@ -203,15 +198,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_IS_ON|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會在發生容錯移轉時提供更快速的重新連接。|  
-|SQL_IS_OFF|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 不會在發生容錯移轉時提供更快速的重新連接。|  
+|SQL_IS_ON|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會在發生容錯移轉時提供更快速的重新連接。|  
+|SQL_IS_OFF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 不會在發生容錯移轉時提供更快速的重新連接。|  
   
 ## <a name="sql_copt_ss_oldpwd"></a>SQL_COPT_SS_OLDPWD  
  SQL Server 驗證的密碼逾期是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入的。 目前加入了 SQL_COPT_SS_OLDPWD 屬性，可讓用戶端同時提供舊的和新的密碼進行連接。 設定這個屬性之後，提供者將不會針對第一次連接或後續連接使用連接集區，因為連接字串將會包含已經變更的「舊密碼」。  
   
- 如需詳細資訊，請參閱以程式設計[方式變更密碼](../native-client/features/changing-passwords-programmatically.md)。  
+ 如需詳細資訊，請參閱 [以程式設計方式變更密碼](../native-client/features/changing-passwords-programmatically.md)。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -254,7 +247,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_PC_OFF|預設。 當使用**SQLEndTran**認可或回復交易時，就會關閉資料指標。|  
+|SQL_PC_OFF|預設值。 當使用**SQLEndTran**認可或回復交易時，就會關閉資料指標。|  
 |SQL_PC_ON|使用**SQLEndTran**認可或回復交易時，除非在非同步模式中使用靜態或索引鍵集資料指標，否則不會關閉資料指標。 如果您在資料指標的母體未完成時發出了回復，就會關閉資料指標。|  
   
 ## <a name="sql_copt_ss_quoted_ident"></a>SQL_COPT_SS_QUOTED_IDENT  
@@ -262,9 +255,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_QI_OFF|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接不允許在送出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用引號識別碼。|  
-|SQL_QI_ON|預設。 連接允許在送出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用引號識別碼。|  
+|SQL_QI_OFF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接不允許在送出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用引號識別碼。|  
+|SQL_QI_ON|預設值。 連接允許在送出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用引號識別碼。|  
   
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
  SQL_COPT_SS_TRANSLATE 會在交換 MBCS 資料時，讓驅動程式在用戶端與伺服器字碼頁之間轉譯字元。 屬性只會影響儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**、 **Varchar**和**text**資料行中的資料。  
@@ -272,7 +264,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |值|描述|  
 |-----------|-----------------|  
 |SQL_XL_OFF|此驅動程式不會在用戶端與伺服器之間交換的字元資料中，將字元從某個字碼頁轉譯至另一個字碼頁。|  
-|SQL_XL_ON|預設。 此驅動程式會在用戶端與伺服器之間交換的字元資料中，將字元從某個字碼頁轉譯至另一個字碼頁。 此驅動程式會自動設定字元轉譯，並判斷伺服器所安裝的字碼頁以及用戶端使用中的字碼頁。|  
+|SQL_XL_ON|預設值。 此驅動程式會在用戶端與伺服器之間交換的字元資料中，將字元從某個字碼頁轉譯至另一個字碼頁。 此驅動程式會自動設定字元轉譯，並判斷伺服器所安裝的字碼頁以及用戶端使用中的字碼頁。|  
   
 ## <a name="sql_copt_ss_trust_server_certificate"></a>SQL_COPT_SS_TRUST_SERVER_CERTIFICATE  
  SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 會在使用加密時，讓驅動程式啟用或停用憑證驗證。 雖然此屬性是讀取/寫入值，但是在建立連接之後設定此屬性沒有任何作用。  
@@ -281,7 +273,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_TRUST_SERVER_CERTIFICATE_NO|預設。 不啟用沒有憑證驗證的加密。|  
+|SQL_TRUST_SERVER_CERTIFICATE_NO|預設值。 不啟用沒有憑證驗證的加密。|  
 |SQL_TRUST_SERVER_CERTIFICATE_YES|啟用沒有憑證驗證的加密。|  
   
 ## <a name="sql_copt_ss_txn_isolation"></a>SQL_COPT_SS_TXN_ISOLATION  
@@ -367,9 +359,9 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
  [SQLSetConnectAttr 函式](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API 的執行詳細資料](odbc-api-implementation-details.md)   
  [大量複製函數](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [設定 ANSI_NullS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [設定 ANSI_PADDING &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [設定 ANSI_WARNINGS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [設定 CONCAT_Null_YIELDS_Null &#40;Transact-sql&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [設定 QUOTED_IDENTIFIER &#40;Transact-sql&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SQLPrepare 函式](https://go.microsoft.com/fwlink/?LinkId=59360)   

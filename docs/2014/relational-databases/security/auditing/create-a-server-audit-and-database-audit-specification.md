@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211989"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
@@ -35,30 +35,30 @@ ms.locfileid: "68211989"
   
      [安全性](#Security)  
   
--   **若要使用下列內容來建立伺服器 audit 和資料庫 audit 規格：**  
+-   **若要使用下列項目建立伺服器稽核和資料庫稽核規格：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  資料庫稽核規格是位於給定資料庫內的非安全性實體物件。 當建立資料庫稽核規格之後，它就會處於停用狀態。  
   
  當您在使用者資料庫中建立或修改資料庫稽核規格時，請勿在伺服器範圍的物件 (如系統檢視) 上包含稽核動作。 如果包含了伺服器範圍的物件，將會建立稽核。 但是，將不會包含伺服器範圍的物件，而且不會傳回任何錯誤。 若要稽核伺服器範圍的物件，請在 master 資料庫中使用資料庫稽核規格。  
   
  資料庫稽核規格位於其建立所在的資料庫，但是 `tempdb` 系統資料庫除外。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   具有 ALTER ANY DATABASE AUDIT 權限的使用者可以建立資料庫稽核規格，並將其繫結至任何稽核。  
   
 -   在建立資料庫稽核規格之後，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 權限的主體，或是系統管理員帳戶將可以檢視此規格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   
@@ -74,10 +74,9 @@ ms.locfileid: "68211989"
   
 2.  展開 **[安全性]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [資料庫稽核規格]**** 資料夾，然後選取 [新增資料庫稽核規格]****。  
+3.  以滑鼠右鍵按一下 [**資料庫 Audit 規格**] 資料夾，然後選取 [**新增資料庫] [audit 規格**...]。  
   
-     
-  **[建立資料庫稽核規格]** 對話方塊有下列選項。  
+     **[建立資料庫稽核規格]** 對話方塊有下列選項。  
   
      **名稱**  
      資料庫稽核規格的名稱。 當您建立新的伺服器稽核規格時會自動產生這個名稱，但是可加以編輯。  
@@ -105,7 +104,7 @@ ms.locfileid: "68211989"
   
 4.  當您完成選取選項之後，按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   

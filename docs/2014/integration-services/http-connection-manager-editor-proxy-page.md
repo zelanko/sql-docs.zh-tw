@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058254"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 連接管理員編輯器 (Proxy 頁面)
@@ -27,13 +27,13 @@ ms.locfileid: "66058254"
  若要深入了解 HTTP 連接管理員，請參閱＜ [HTTP Connection Manager](connection-manager/http-connection-manager.md)＞。 若要深入了解 HTTP 連接管理員的常見使用案例，請參閱＜ [Web Service Task](control-flow/web-service-task.md)＞。  
   
 ## <a name="options"></a>選項。  
- **使用 proxy**  
+ **使用 Proxy**  
  指定 HTTP 連接管理員是否要透過 Proxy 伺服器連接。  
   
  **Proxy URL**  
  輸入 Proxy 伺服器的 URL。  
   
- **本機上略過 proxy**  
+ **在本機上略過 Proxy**  
  針對本機位址，指定 HTTP 連接管理員是否要略過 Proxy 伺服器。  
   
  **使用認證**  
@@ -45,7 +45,7 @@ ms.locfileid: "66058254"
  **密碼**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
- **網域**  
+ **Domain**  
  如果 HTTP 連接管理員使用認證，您必須指定使用者名稱、密碼，以及網域。  
   
  **Proxy 略過清單**  

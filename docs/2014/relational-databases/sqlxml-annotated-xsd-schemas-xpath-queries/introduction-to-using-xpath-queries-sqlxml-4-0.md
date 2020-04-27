@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012704"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
@@ -61,7 +61,7 @@ ms.locfileid: "66012704"
   
      W3C XPath 規格沒有定義任何錯誤條件。 無法選取任何節點的 XPath 查詢會傳回空的節點集。 在 SQLXML 4.0 中，查詢可能會傳回許多錯誤訊息類型。  
   
--   **文件順序**  
+-   **檔順序**  
   
      在 SQLXML 4.0 中，不一定會決定文件順序。 因此，系統不會實作使用文件順序 (例如 `following`) 的數值述詞和軸。  
   
@@ -89,10 +89,9 @@ ms.locfileid: "66012704"
 ## <a name="supported-functionality"></a>支援的功能  
  下表將顯示在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|功能|Item|範例查詢的連結|  
+|功能|項目|範例查詢的連結|  
 |-------------|----------|----------------------------|  
-|軸|
-  `attribute`、`child`、`parent` 和 `self` 軸|[在 XPath 查詢中指定軸 &#40;SQLXML 4.0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|軸|`attribute`、`child`、`parent` 和 `self` 軸|[在 XPath 查詢中指定軸 &#40;SQLXML 4.0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |布林值述詞，包括連續和巢狀述詞||[在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |所有關係運算子|=、！ =、<、 \<=、>、>=|[在 XPath 查詢中指定關聯式運算子 &#40;SQLXML 4.0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術運算子|+、-、*、div|[在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -104,7 +103,7 @@ ms.locfileid: "66012704"
 ## <a name="unsupported-functionality"></a>不支援的功能  
  下表將顯示沒有在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|功能|Item|  
+|功能|項目|  
 |-------------|----------|  
 |軸|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |數值述詞||  
@@ -112,7 +111,7 @@ ms.locfileid: "66012704"
 |節點函數|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |字串函數|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
 |布林函數|`lang()`|  
-|數值函式|`sum()`, `floor()`, `ceiling()`, `round()`|  
+|數值函數|`sum()`, `floor()`, `ceiling()`, `round()`|  
 |Union 運算子|&#124;|  
   
  當您在範本中指定 XPath 查詢時，請注意下列行為：  

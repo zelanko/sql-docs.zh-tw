@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013340"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>記錄產生處理序 (SQLXML 4.0)
@@ -216,11 +216,9 @@ ms.locfileid: "66013340"
     ```  
   
 ## <a name="exceptions-to-the-record-generation-rule"></a>記錄產生規則的例外狀況  
- 當 XML 大量載入進入範圍內時，不會產生節點記錄 (如果該節點是 IDREF 或 IDREFS 類型的話)。 您必須確定完整的記錄描述會出現在結構描述中的某個地方。 
-  `dt:type="nmtokens"` 註解會被忽略，就像 IDREFS 類型也被忽略一樣。  
+ 當 XML 大量載入進入範圍內時，不會產生節點記錄 (如果該節點是 IDREF 或 IDREFS 類型的話)。 您必須確定完整的記錄描述會出現在結構描述中的某個地方。 `dt:type="nmtokens"` 註解會被忽略，就像 IDREFS 類型也被忽略一樣。  
   
- 例如，請考慮下列 XSD 架構，其中描述** \<客戶>** 和** \<Order>** 元素。 Customer>元素包含 IDREFS 類型的**OrderList**屬性。 ** \< ** 
-  `<sql:relationship>` 標記會在客戶和訂單清單之間指定一對多關聯性。  
+ 例如，請考慮下列 XSD 架構，其中描述** \<客戶>** 和** \<Order>** 元素。 Customer>元素包含 IDREFS 類型的**OrderList**屬性。 ** \< ** `<sql:relationship>` 標記會在客戶和訂單清單之間指定一對多關聯性。  
   
  這是結構描述：  
   

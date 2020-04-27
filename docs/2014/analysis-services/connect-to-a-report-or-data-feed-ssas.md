@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151833"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>連接到報表或資料摘要 (SSAS)
-  
   **[資料表匯入精靈]** 的這個頁面可讓您連接到資料摘要。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
 ## <a name="from-a-report"></a>從報表  
@@ -36,7 +35,7 @@ ms.locfileid: "70151833"
  導覽至有報表可用的位置。  
   
  **進階**  
- 使用 [設定進階屬性]**** 對話方塊設定其他連接屬性。  
+ 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  
@@ -63,7 +62,7 @@ ms.locfileid: "70151833"
  將帳號金鑰 (已加密) 與資料連接一起儲存。  
   
  **進階**  
- 使用 [設定進階屬性]**** 對話方塊設定其他連接屬性。  
+ 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  
@@ -81,7 +80,7 @@ ms.locfileid: "70151833"
  導覽至有資料摘要可用的位置。  
   
  **進階**  
- 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。  
+ 使用 **[設定進階屬性]** 對話方塊設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  

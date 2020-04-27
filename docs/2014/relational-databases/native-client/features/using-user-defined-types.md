@@ -1,5 +1,5 @@
 ---
-title: 使用使用者自訂類型 |Microsoft Docs
+title: 使用使用者定義型別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206616"
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
-  
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了使用者定義型別 (UDT)。 UDT 會擴充 SQL 類型系統，其方式是允許您將物件和自訂資料結構儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 UDT 是使用會產生可驗證程式碼之 .NET Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Microsoft Visual c #<sup>？</sup> 和 Visual Basic<sup>？</sup> 實際. 資料會公開為 .NET 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法來定義。  
   
  UDT 可用作資料表的資料行定義、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函式或預存程序的引數。  
@@ -38,8 +37,7 @@ ms.locfileid: "68206616"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援使用 udt 當做具有中繼資料資訊的二進位類型，可讓您將 udt 當做物件來管理。 UDT 資料行會公開為 DBTYPE_UDT，而且它們的中繼資料會透過核心 OLE DB 介面 **IColumnRowset** 和新的 [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 介面來公開。  
   
 > [!NOTE]  
->  
-  **IRowsetFind::FindNextRow** 方法無法與 UDT 資料類型一起運作。 如果將 UDT 當做搜尋資料行類型使用，就會傳回 DB_E_BADCOMPAREOP。  
+>  **IRowsetFind::FindNextRow** 方法無法與 UDT 資料類型一起運作。 如果將 UDT 當做搜尋資料行類型使用，就會傳回 DB_E_BADCOMPAREOP。  
   
 ### <a name="data-bindings-and-coercions"></a>資料繫結和強制型轉  
  下表描述當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 使用列出的資料類型時，所發生的繫結和強制型轉。 UDT 資料行是透過[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者公開為 DBTYPE_UDT。 您可以透過適當的結構描述資料列集來取得中繼資料，好讓您可以將自己定義的類型當做物件來管理。  
@@ -51,19 +49,19 @@ ms.locfileid: "68206616"
 |DBTYPE_WSTR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4、6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_BSTR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_STR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4、6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|不支援|N/A<sup>2</sup>|不支援|N/A<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|不受支援|N/A<sup>2</sup>|不受支援|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、6</sup>|N/A<sup>2</sup>|不適用|N/A<sup>2</sup>|  
   
- <sup>1</sup>如果使用**ICommandWithParameters：： SetParameterInfo**指定了 DBTYPE_UDT 以外的伺服器類型，且存取子類型為 DBTYPE_UDT，則在執行語句（DB_E_ERRORSOCCURRED; 參數狀態為 DBSTATUS_E_BADACCESSOR）時，就會發生錯誤。 否則資料會傳給伺服器，但是伺服器會傳回一則錯誤，指示從 UDT 到參數的資料類型之間沒有隱含轉換。  
+ <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_UDT 以外的伺服器類型，而且存取子類型為 DBTYPE_UDT，則當執行陳述式時會發生錯誤 (DB_E_ERRORSOCCURRED；參數狀態為 DBSTATUS_E_BADACCESSOR)。 否則資料會傳給伺服器，但是伺服器會傳回一則錯誤，指示從 UDT 到參數的資料類型之間沒有隱含轉換。  
   
  <sup>2</sup>超出本主題的範圍。  
   
- <sup>3</sup>從十六進位字串轉換為二進位資料的資料。  
+ <sup>3</sup> 發生從十六進位字串轉換為二進位資料的資料轉換。  
   
- <sup>4</sup>發生從二進位資料轉換為十六進位字串的資料。  
+ <sup>4</sup> 發生從二進位資料轉換為十六進位字串的資料轉換。  
   
- <sup>5</sup>在建立存取子時間或提取時，會進行驗證，錯誤是 DB_E_ERRORSOCCURRED，系結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
+ <sup>5</sup>建立存取子或提取時可能發生驗證，錯誤為 DB_E_ERRORSOCCURRED，繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
   
  <sup>6</sup>可能會使用 BY_REF。  
   
@@ -176,8 +174,7 @@ ms.locfileid: "68206616"
  為了透過 OLE DB 支援 Udt， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會執行一些變更，包括新增**ISSCommandWithParameters**介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自**ICommandWithParameters**的三個方法以外，**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供用來處理伺服器特定資料類型的**GetParameterProperties**和**SetParameterProperties**方法。  
   
 > [!NOTE]  
->  
-  **ISSCommandWithParameters** 介面也會使用新的 SSPARAMPROPS 結構。  
+>  **ISSCommandWithParameters** 介面也會使用新的 SSPARAMPROPS 結構。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  除了**ISSCommandWithParameters**介面以外，Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]也會將新的值加入至從呼叫**IColumnsRowset：： GetColumnRowset**方法所傳回的資料列集，包括下列各項。  

@@ -17,21 +17,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140534"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、培訓和探索採礦模型。 您將使用這些採礦模型來建立預測，以判斷客戶是否要購買自行車。  
   
- 這些採礦模型將從 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中包含的資料來建立，該資料庫儲存了虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的資料。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司。 該公司製造金屬類及複合型自行車，並銷售到北美、歐洲及亞洲的商業市場。 公司的基地位於美國華盛頓州的 Bothell 市，有 290 位員工，另外還有數個區域銷售團隊，分別位於國際銷售市場所在地。  
+ 這些採礦模型將從 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中包含的資料來建立，該資料庫儲存了虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的資料。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司。 該公司製造金屬類及複合型自行車，並銷售到北美、歐洲及亞洲的商業市場。 公司的基地位於美國華盛頓州的 Bothell 市，有 290 位員工，另外還有數個區域銷售團隊，分別位於國際銷售市場所在地。  
   
 ## <a name="tutorial-scenario"></a>教學課程案例  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 決定要建立自訂應用程式，使用資料採礦功能來擴大其資料分析。 自訂應用程式的目標是要能夠：  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 決定要建立自訂應用程式，使用資料採礦功能來擴大其資料分析。 自訂應用程式的目標是要能夠：  
   
 -   以潛在客戶的特性做為輸入，並預測他們是否會購買自行車。  
   
@@ -47,11 +45,9 @@ ms.locfileid: "63140534"
   
 -   [Microsoft 決策樹演算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)和[microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
--   中的查詢編輯器[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+-    中的查詢編輯器  
   
- 資料採礦延伸模組 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一種查詢語言，您可以使用它來建立及處理採礦模型。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法建立可用來預測某人是否會購買自行車的模型。 產生的模型可以用個別使用者或客戶資料表做為輸入。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法可依共用特性建立客戶群組。 此教學課程的目標是要提供用於自訂應用程式的 DMX 指令碼。  
+ 資料採礦延伸模組 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一種查詢語言，您可以使用它來建立及處理採礦模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法建立可用來預測某人是否會購買自行車的模型。 產生的模型可以用個別使用者或客戶資料表做為輸入。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法可依共用特性建立客戶群組。 此教學課程的目標是要提供用於自訂應用程式的 DMX 指令碼。  
   
  **如需詳細資訊：** [資料採礦解決方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
@@ -86,13 +82,13 @@ ms.locfileid: "63140534"
  [第 1 課：建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE` 陳述式來建立採礦結構。  
   
- [第 2 課：將採礦模型加入 Bike Buyer 採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [第 2 課：將採礦模型新增至自行車買主採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `ALTER` 陳述式將採礦模型加入至採礦結構。  
   
  [第 3 課：處理自行車買主採礦結構](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `INSERT INTO` 陳述式來處理採礦結構及其相關聯的採礦模型。  
   
- [第 4 課：瀏覽 Bike Buyer 採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [第 4 課：瀏覽自行車買主採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  在這一課，您將學會如何使用 `SELECT` 陳述式來探索採礦模型的內容。  
   
  [第 5 課：執行預測查詢](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
@@ -105,8 +101,7 @@ ms.locfileid: "63140534"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]、 [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]、 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正式範例資料庫，請造訪[Microsoft SQL 範例資料庫](https://go.microsoft.com/fwlink/?LinkId=88417)頁面，並選取您要安裝的資料庫。  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正式範例資料庫，請造訪[Microsoft SQL 範例資料庫](https://go.microsoft.com/fwlink/?LinkId=88417)頁面，並選取您要安裝的資料庫。  
   
 > [!NOTE]  
 >  當您查看教學課程時，建議您將 **[下一個主題]** 和 [**上一個主題**] 按鈕新增至 [檔檢視器] 工具列。  

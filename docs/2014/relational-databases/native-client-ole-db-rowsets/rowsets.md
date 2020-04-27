@@ -1,5 +1,5 @@
 ---
-title: 資料列集 |Microsoft Docs
+title: 資料列集 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206647"
 ---
 # <a name="rowsets"></a>資料列集
@@ -54,13 +54,13 @@ ms.locfileid: "68206647"
   
 -   [資料列集和 SQL Server 資料指標](rowsets-and-sql-server-cursors.md)  
   
--   [提取資料列](fetching-rows.md)  
+-   [擷取資料列](fetching-rows.md)  
   
 -   [使用 IRow 來提取單一資料列](fetching-a-single-row-with-irow.md)  
   
 -   [書籤](bookmarks.md)  
   
--   [更新資料列集中的資料](updating-data-in-rowsets.md)  
+-   [更新資料列集內的資料](updating-data-in-rowsets.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  

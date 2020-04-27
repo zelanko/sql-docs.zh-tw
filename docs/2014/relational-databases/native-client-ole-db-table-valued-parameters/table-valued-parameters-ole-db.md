@@ -1,5 +1,5 @@
 ---
-title: 資料表值參數（OLE DB） |Microsoft Docs
+title: 資料表值參數 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9c58b1837eb017a3cc51652ff404b37690b3849
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046424"
 ---
 # <a name="table-valued-parameters-ole-db"></a>資料表值參數 (OLE DB)
@@ -26,8 +26,7 @@ ms.locfileid: "63046424"
 ## <a name="remarks"></a>備註  
  目前可以藉由參數集將多個資料列當做程序的參數傳送給伺服器 (`ICommand::Execute` 中的 DBPARAMS 參數)。 使用參數集時，該集合中的每個元素都必須以對伺服器的個別遠端程序呼叫 (RPC) 要求來進行傳送。 資料表值參數提供類似的功能，但能與伺服器更緊密地整合。 如此可以減少 RPC 要求數目，並以集合為基礎在伺服器上進行作業。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中，是以 OLE DB `Rowset` 物件的形式支援資料表值參數。 任何 `Rowset` 物件都可以藉由取用者 (也就是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的用戶端應用程式)，以資料表值參數的參數預留位置來提供。 資料表值參數會被視為類似於其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 參數類型。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者能提供建立、探索、規格、繫結和結構描述介面。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中，是以 OLE DB `Rowset` 物件的形式支援資料表值參數。 任何 `Rowset` 物件都可以藉由取用者 (也就是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的用戶端應用程式)，以資料表值參數的參數預留位置來提供。 資料表值參數會被視為類似於其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 參數類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者能提供建立、探索、規格、繫結和結構描述介面。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -39,7 +38,7 @@ ms.locfileid: "63046424"
   
 -   [將資料插入至資料表值參數](inserting-data-into-table-valued-parameters.md)  
   
--   [針對 OLE DB 資料表值參數而變更的結構描述資料列集](schema-rowsets-changed-for-ole-db-table-valued-parameters.md)  
+-   [針對 OLE DB 資料表值參數變更的架構資料列集](schema-rowsets-changed-for-ole-db-table-valued-parameters.md)  
   
 -   [OLE DB 資料表值參數類型支援](ole-db-table-valued-parameter-type-support.md)  
   

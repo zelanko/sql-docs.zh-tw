@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059440"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
-  使用 **[維度處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 計畫的連接或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之執行個體的連接。  
+  使用 [維度處理目的地編輯器]**** 對話方塊的 [連線管理員]**** 頁面，以指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連線。  
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](data-flow/dimension-processing-destination.md)＞。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66059440"
  **新增**  
  使用 [加入 Analysis Services 連接管理員]**** 對話方塊來建立新的連接。  
   
- **可用維度的清單**  
+ **可用維度清單**  
  選取要處理的維度。  
   
  **處理方法**  
@@ -41,13 +41,13 @@ ms.locfileid: "66059440"
   
 |值|描述|  
 |-----------|-----------------|  
-|**新增（增量）**|執行維度的累加處理。|  
-|**完整**|執行維度的完整處理。|  
+|**加入 (累加)**|執行維度的累加處理。|  
+|**寫**|執行維度的完整處理。|  
 |**更新**|執行維度的更新處理。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [維度處理目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [維度處理目的地編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [維度處理目的地編輯器 &#40;進階頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

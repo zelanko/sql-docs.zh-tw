@@ -16,14 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206966"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
   
  下表描述 SQL Server Deprecated Features 計數器執行個體。  
@@ -59,7 +58,7 @@ ms.locfileid: "68206966"
 |DBCC INDEXDEFRAG|遇到 DBCC INDEXDEFRAG 陳述式。 請重寫此陳述式來使用 ALTER INDEX 的 REORGANIZE 選項。 每次查詢時發生一次。|  
 |DBCC SHOWCONTIG|遇到 DBCC SHOWCONTIG 陳述式。 請查詢 sys.dm_db_index_physical_stats，取得這項資訊。 每次查詢時發生一次。|  
 |當做預設值的 DEFAULT 關鍵字|遇到了使用 DEFAULT 關鍵字當做預設值的語法。 請勿使用。 每次編譯時發生一次。|  
-|已被取代的加密演算法|下一版的 SQL Server 將會移除已被取代的加密演算法 RC4。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 RC4 演算法功能並不強，只是為了與舊版相容才予以支援。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。|  
+|已被取代的加密演算法|下一版的 SQL Server 將會移除已被取代的加密演算法 RC4。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 RC4 演算法功能並不強，只是為了與舊版相容才予以支援。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。|  
 |DESX 演算法|遇到了使用 DESX 加密演算法的語法。 請使用另一種演算法進行加密。 每次編譯時發生一次。|  
 |dm_fts_active_catalogs|dm_fts_active_catalogs 計數器一定會保持為 0，因為 sys.dm_fts_active_catalogs 檢視表的某些資料行未被取代。 若要監視已被取代的資料行，請使用資料行特定的計數器，例如 dm_fts_active_catalogs.is_paused。|  
 |dm_fts_active_catalogs.is_paused|遇到了 [sys.dm_fts_active_catalogs](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql) 動態管理檢視的 is_paused 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  

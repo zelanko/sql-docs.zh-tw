@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528722"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727923"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-您也可以使用 [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) 方法，將資料當成位元組陣列來讀取，如下所示：  
+您也可以使用 [getBytes](reference/getbytes-method-sqlserverresultset.md) 方法，將資料當成位元組陣列來讀取，如下所示：  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>修改資料庫中的大數值類型
 
-在多數情況下，在資料庫上更新或修改大數值的建議方法是使用 `UPDATE`、`WRITE` 和 `SUBSTRING` 這類 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，透過 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別來傳遞參數。  
+在多數情況下，在資料庫上更新或修改大數值的建議方法是使用 `UPDATE`、`WRITE` 和 `SUBSTRING` 這類 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，透過 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) 類別來傳遞參數。  
 
 如果您必須在大型文字檔 (例如封存的 HTML 檔案) 中取代文字的執行個體，則可以使用 Clob 物件，如下所示：  
 
@@ -173,12 +173,12 @@ JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：
   
 ## <a name="sql_variant-data-type"></a>Sql_variant 資料類型
 
-如需有關 sql_variant 資料類型的詳細資訊，請參閱[使用 Sql_variant 資料類型](../../connect/jdbc/using-sql-variant-datatype.md)。  
+如需有關 sql_variant 資料類型的詳細資訊，請參閱[使用 Sql_variant 資料類型](using-sql-variant-datatype.md)。  
 
 ## <a name="spatial-data-types"></a>空間資料類型
 
-如需有關空間資料類型的詳細資訊，請參閱[使用空間資料類型](../../connect/jdbc/use-spatial-datatypes.md)。  
+如需有關空間資料類型的詳細資訊，請參閱[使用空間資料類型](use-spatial-datatypes.md)。  
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[了解 JDBC 驅動程式資料類型](understanding-the-jdbc-driver-data-types.md)  

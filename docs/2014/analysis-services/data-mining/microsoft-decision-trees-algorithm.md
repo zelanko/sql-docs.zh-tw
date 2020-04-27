@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174615"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 決策樹演算法
@@ -38,22 +38,17 @@ ms.locfileid: "78174615"
  如果不止一個資料行設定為可預測，或輸入資料包含的巢狀資料表設定為可預測，則演算法會建立每一個可預測資料行的個別決策樹。
 
 ## <a name="example"></a>範例
- 
-  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 公司的行銷部門想要識別舊客戶的特性，這些特性會指出那些客戶是否可能購買未來的產品。 
-  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫會儲存描述舊客戶的人口統計資訊。 藉由使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法來分析此資訊，行銷部門可以建立模型，依據關於特定客戶之已知資料行的狀態 (例如人口統計或過去購買模式) 來預測該客戶是否會購買產品。
+ [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 公司的行銷部門想要識別舊客戶的特性，這些特性會指出那些客戶是否可能購買未來的產品。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫會儲存描述舊客戶的人口統計資訊。 藉由使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法來分析此資訊，行銷部門可以建立模型，依據關於特定客戶之已知資料行的狀態 (例如人口統計或過去購買模式) 來預測該客戶是否會購買產品。
 
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會在樹狀結構中建立一系列分割，藉以建立資料採礦模型。 然後，這些分割會表示成「節點」**。 每次發現輸入資料行與可預測資料行有明顯地相互關聯時，此演算法就會在模型中加入一個節點。 演算法決定分岔的方式不同，視它預測連續資料行或分隔資料行而定。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會在樹狀結構中建立一系列分割，藉以建立資料採礦模型。 然後，這些分割會表示成「節點」**。 每次發現輸入資料行與可預測資料行有明顯地相互關聯時，此演算法就會在模型中加入一個節點。 演算法決定分岔的方式不同，視它預測連續資料行或分隔資料行而定。
 
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用「特徵選取」** 來引導選取最有用的屬性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會使用特徵選取來改善效能和分析的品質。 若要防止不重要的屬性佔用處理器時間，特徵選取就很重要。 如果您在設計資料採礦模型時使用過多輸入或可預測的屬性，此模型可能會需要很長的時間才能處理完成，甚至用完記憶體。 用來判斷是否要分割樹狀結構的方法包括 *entropy* 和 Bayesian 網路的業界標準。** 如需用來選取有意義屬性，然後針對這些屬性計分並排名之方法的詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用「特徵選取」** 來引導選取最有用的屬性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會使用特徵選取來改善效能和分析的品質。 若要防止不重要的屬性佔用處理器時間，特徵選取就很重要。 如果您在設計資料採礦模型時使用過多輸入或可預測的屬性，此模型可能會需要很長的時間才能處理完成，甚至用完記憶體。 用來判斷是否要分割樹狀結構的方法包括 *entropy* 和 Bayesian 網路的業界標準。** 如需用來選取有意義屬性，然後針對這些屬性計分並排名之方法的詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。
 
  資料採礦模型中常見的問題是，模型變得太敏感，而不是定型資料中的小差異，在此情況下，它會被視為*過度*調整或*過度定型*。 過度調整的模型無法一般化成為其他資料集。 為了避免過度調整任何特定資料集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用控制樹狀目錄成長的技術。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何運作的更深入說明，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)。
 
 ### <a name="predicting-discrete-columns"></a>預測分隔資料行
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法為分隔可預測資料行建立樹狀結構的方式，可使用長條圖來示範。 下列圖表顯示一個長條圖，它繪製出可預測資料行 Bike Buyers 對照輸入資料行 Age。 長條圖顯示某人的年齡可協助區分此人是否會購買腳踏車。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法為分隔可預測資料行建立樹狀結構的方式，可使用長條圖來示範。 下列圖表顯示一個長條圖，它繪製出可預測資料行 Bike Buyers 對照輸入資料行 Age。 長條圖顯示某人的年齡可協助區分此人是否會購買腳踏車。
 
  ![來自 Microsoft 決策樹演算法的長條圖](../media/dt-histogram.gif "來自 Microsoft 決策樹演算法的長條圖")
 
@@ -77,11 +72,11 @@ ms.locfileid: "78174615"
 
  決策樹模型的需求如下：
 
--   **單一索引鍵資料行**每個模型都必須包含一個可唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。
+-   **單一索引鍵資料行** ：每個模型都必須包含一個能唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。
 
--   **可預測資料行**至少需要一個可預測資料行。 您可以在模型中加入多個可預測的屬性，而且這些可預測的屬性可以屬於不同的類型：數值或離散。 不過，增加可預測屬性的數目可能會增加處理時間。
+-   **可預測資料行** ：至少需要一個可預測資料行。 您可以在模型中加入多個可預測的屬性，而且這些可預測的屬性可以屬於不同的類型：數值或離散。 不過，增加可預測屬性的數目可能會增加處理時間。
 
--   **輸入資料行**需要可以是離散或連續的輸入資料行。 增加輸入屬性的數目會影響處理時間。
+-   **輸入資料行** ：需要可以是離散或連續的輸入資料行。 增加輸入屬性的數目會影響處理時間。
 
  如需決策樹模型所支援之內容類型和資料類型的詳細資訊，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)的＜需求＞一節。
 

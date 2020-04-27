@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013838"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的明確對應 (SQLXML 4.0)
@@ -52,8 +52,7 @@ ms.locfileid: "66013838"
 ```  
   
 ## <a name="sql-field"></a>sql-field  
- 
-  `sql-field` 註解會將元素或屬性對應到資料庫資料行。 加入 `sql:field` 註解，將結構描述中的 XML 節點對應至資料庫資料行。 您無法在空內容元素上指定 `sql:field`。  
+ `sql-field` 註解會將元素或屬性對應到資料庫資料行。 加入 `sql:field` 註解，將結構描述中的 XML 節點對應至資料庫資料行。 您無法在空內容元素上指定 `sql:field`。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  

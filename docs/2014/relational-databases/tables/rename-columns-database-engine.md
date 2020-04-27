@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211819"
 ---
 # <a name="rename-columns-database-engine"></a>重新命名資料行 (Database Engine)
@@ -38,17 +38,17 @@ ms.locfileid: "68211819"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  重新命名資料行不會自動重新命名該資料行的參考。 您必須手動修改任何參考重新命名之資料行的物件。 例如，如果您重新命名資料表資料行，且有觸發程序參考這個資料行，您必須修改觸發程序來反映新的資料行名稱。 在重新命名物件之前，請利用 [sys.sql_expression_dependencies](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) 來列出其相依性。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要物件的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rename-a-column-using-object-explorer"></a>若要使用物件總管來重新命名資料行  
   
@@ -64,12 +64,12 @@ ms.locfileid: "68211819"
   
 2.  在 **[資料行名稱]** 下，選取您要變更的名稱，並輸入新名稱。  
   
-3.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+3.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
   
 > [!NOTE]  
 >  您也可以在 **[資料行屬性]** 索引標籤中變更資料行的名稱。請選取您要變更名稱的資料行，並輸入新的 **[名稱]** 值。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要重新命名資料行**  
   
 #### <a name="to-rename-a-column"></a>重新命名資料行  
@@ -87,6 +87,6 @@ ms.locfileid: "68211819"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_rename &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)。  
+ 如需詳細資訊，請參閱 [sp_rename &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)。  
   
   

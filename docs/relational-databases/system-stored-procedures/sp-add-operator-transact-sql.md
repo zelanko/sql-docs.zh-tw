@@ -18,10 +18,10 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "74095505"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
@@ -86,7 +86,7 @@ sp_add_operator [ @name = ] 'name'
 |**1**|星期日|  
 |**2**|星期一|  
 |**4**|Tuesday|  
-|**8**|Wednesday|  
+|**8**|星期三|  
 |**1600**|Thursday|  
 |**32**|星期五|  
 |**64**|星期六|  
@@ -106,15 +106,13 @@ sp_add_operator [ @name = ] 'name'
   
  電子郵件系統也支援傳呼，如果您要使用傳呼，電子郵件系統必須有「電子郵件至呼叫器」的功能。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_operator**。  
   
 ## <a name="examples"></a>範例  
- 下列範例設定 `danwi` 的操作員資訊。 操作員是啟用的狀態。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在星期一到星期五的上午 8 點至下午 5 點，利用呼叫器來傳送通知 。  
+ 下列範例設定 `danwi` 的操作員資訊。 操作員是啟用的狀態。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在星期一到星期五的上午 8 點至下午 5 點，利用呼叫器來傳送通知 。  
   
 ```  
 USE msdb ;  

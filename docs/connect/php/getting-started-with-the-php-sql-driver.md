@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c14661e8e3ed7fb5d050121276b2ffac0fda2de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3acd8a63dfec0fa2a76b1674a0764f6598ae44c
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634842"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728333"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>開始使用 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "81634842"
 ## <a name="see-also"></a>另請參閱  
 [範例應用程式 &#40;SQLSRV 驅動程式&#41;](example-application-sqlsrv-driver.md)
 
-[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

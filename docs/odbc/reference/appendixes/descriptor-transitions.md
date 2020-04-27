@@ -1,5 +1,5 @@
 ---
-title: 描述符轉換 |微軟文件
+title: 描述項轉換 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,33 +15,33 @@ ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ec5c26bdde8a0d470f2d93e753504bf1c51edcc0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307039"
 ---
 # <a name="descriptor-transitions"></a>描述項轉換
-ODBC 描述符具有以下三種狀態。  
+ODBC 描述元具有下列三種狀態。  
   
 |State|描述|  
 |-----------|-----------------|  
-|D0|未配置的描述子|  
-|D1i|隱含配置的描述|  
-|D1e|明確配置的描述|  
+|D0|未配置的描述元|  
+|D1i|隱含配置的描述元|  
+|D1e|明確配置的描述元|  
   
- 下表顯示了每個 ODBC 函數如何影響描述符狀態。  
+ 下表顯示每個 ODBC 函數如何影響描述項狀態。  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
 |D0<br /><br /> 未配置|D1i<br /><br /> 隱含|D1e<br /><br /> 明確|  
 |------------------------|----------------------|----------------------|  
-|D1i[1]|--|--|  
-|D1e[2]|--|--|  
+|D1i [1]|--|--|  
+|D1e [2]|--|--|  
   
- [1] 此行顯示*處理類型*SQL_HANDLE_STMT時的過渡。  
+ [1] 當 SQL_HANDLE_STMT *HandleType*時，此資料列會顯示轉換。  
   
- [2] 此行顯示*handleType* SQL_HANDLE_DESC時的過渡。  
+ [2] 當 SQL_HANDLE_DESC *HandleType*時，此資料列會顯示轉換。  
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
@@ -54,11 +54,11 @@ ODBC 描述符具有以下三種狀態。
 |D0<br /><br /> 未配置|D1i<br /><br /> 隱含|D1e<br /><br /> 明確|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|(IH)[2]|(HY017)|D0|  
+|(IH)2|(HY017)|D0|  
   
- [1] 此行顯示*處理類型*SQL_HANDLE_STMT時的過渡。  
+ [1] 當 SQL_HANDLE_STMT *HandleType*時，此資料列會顯示轉換。  
   
- [2] 此行顯示*handleType* SQL_HANDLE_DESC時的過渡。  
+ [2] 當 SQL_HANDLE_DESC *HandleType*時，此資料列會顯示轉換。  
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField 和 SQLGetDescRec  
   
@@ -70,11 +70,11 @@ ODBC 描述符具有以下三種狀態。
   
 |D0<br /><br /> 未配置|D1i<br /><br /> 隱含|D1e<br /><br /> 明確|  
 |------------------------|----------------------|----------------------|  
-|(IH)[1]|--|--|  
+|(IH)sha-1|--|--|  
   
- [1] 當*描述符句柄*是 ARD、APD 或 IPD 的句柄時,或者(對於**SQLSetDescField)** 的*句柄是*IRD 的句柄,*字段標識符*是SQL_DESC_ARRAY_STATUS_PTR或SQL_DESC_ROWS_PROCESSED_PTR時,此行顯示過渡。  
+ [1] 當*DescriptorHandle*是 ARD、APD 或 IPD 的控制碼時，或（若為**SQLSetDescField**），當*DescriptorHandle*為 IRD 和*FieldIdentifier*的控制碼 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR 時，此資料列會顯示轉換。  
   
-## <a name="all-other-odbc-functions"></a>所有其他 ODBC 功能  
+## <a name="all-other-odbc-functions"></a>所有其他 ODBC 函數  
   
 |D0<br /><br /> 未配置|D1i<br /><br /> 隱含|D1e<br /><br /> 明確|  
 |------------------------|----------------------|----------------------|  

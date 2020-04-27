@@ -22,28 +22,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210739"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 提供了使用警示來監視事件（例如複寫代理程式事件）的方法。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔中與警示相關的事件。 如果發生這類事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會藉由執行已經定義的工作，及 (或) 向指定操作員傳送電子郵件或呼叫器訊息，進行自動回應。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含一組預先定義的複寫代理程式警示，您可以設定這類警示來執行工作和 (或) 通知操作員。 如需定義要執行之工作的詳細資訊，請參閱本主題的「自動化回應警示」一節。  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 提供使用警示來監視事件 (如複寫代理程式事件) 的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔中與警示相關的事件。 如果發生這類事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會藉由執行已經定義的工作，及 (或) 向指定操作員傳送電子郵件或呼叫器訊息，進行自動回應。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含一組預先定義的複寫代理程式警示，您可以設定這類警示來執行工作和 (或) 通知操作員。 如需定義要執行之工作的詳細資訊，請參閱本主題的「自動化回應警示」一節。  
   
  當電腦設定為「散發者」時，會安裝下列警示：  
   
-|訊息識別碼|預先定義的警示|觸發警示的條件|在 msdb..sysreplicationalerts 中輸入額外的資訊|  
+|訊息 ID|預先定義的警示|觸發警示的條件|在 msdb..sysreplicationalerts 中輸入額外的資訊|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
 |14150|**複寫: 代理程式成功**|代理程式成功關閉。|是|  
 |14151|**複寫: 代理程式失敗**|代理程式關閉時發生錯誤。|是|  
 |14152|**複寫: 代理程式重試**|代理程式於重試動作不成功之後關閉 (代理程式遇到錯誤，例如伺服器無法使用、鎖死、連線失敗、或逾時失敗)。|是|  
 |14157|**複寫: 已卸除逾期的訂閱**|已卸除逾期的訂閱。|否|  
-|20572|**複寫：驗證失敗之後訂閱重新初始化**|回應作業「重新初始化資料驗證失敗的訂閱」成功重新初始化訂閱。|否|  
-|20574|**複寫：訂閱者的資料驗證失敗**|散發或合併代理程式的資料驗證失敗。|是|  
-|20575|**複寫：訂閱者已通過資料驗證**|散發或合併代理程式通過資料驗證。|是|  
+|20572|**複寫: 驗證失敗後重新初始化訂閱**|回應作業「重新初始化資料驗證失敗的訂閱」成功重新初始化訂閱。|否|  
+|20574|**複寫: 訂閱者資料驗證失敗**|散發或合併代理程式的資料驗證失敗。|是|  
+|20575|**複寫: 訂閱者已經通過資料驗證**|散發或合併代理程式通過資料驗證。|是|  
 |20578|**複寫: 代理程式自訂關閉**|||  
 |22815|**點對點衝突偵測警示**|散發代理程式在嘗試將變更套用到對等節點上時偵測到衝突。|是|  
   

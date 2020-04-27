@@ -16,10 +16,10 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72174009"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
@@ -148,7 +148,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x40000000**|複寫權限。|  
 |**0x80000000**|試圖卸除對於不在發行集中之任何物件的相依性。|  
 |**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。 請參閱相關的選項**0x800000000**。|  
-|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]將中引進的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]將中引進的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 |**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
 |**0x1000000000**|將 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]訂閱者。|  
@@ -206,8 +206,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`啟用或停用發行項的互動式解析程式。 *allow_interactive_resolver*是**Nvarchar （5）**，預設值是 FALSE。 **true**可讓您在發行項上使用互動式解析程式;**false**會停用它。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者不支援互動解析程式。  
+>  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者不支援互動解析程式。  
   
 `[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'`這個參數已被取代，而且會針對腳本的回溯相容性進行維護。  
   
@@ -256,10 +255,10 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|發行項的篩選是靜態的，或不產生每個資料分割的唯一資料子集；也就是說，它是一個「重疊」的資料分割。|  
+|**0** (預設)|發行項的篩選是靜態的，或不產生每個資料分割的唯一資料子集；也就是說，它是一個「重疊」的資料分割。|  
 |**1**|資料分割重疊，在訂閱者端進行的資料操作語言 (DML) 更新並不會變更資料列所屬的資料分割。|  
 |**2**|發行項的篩選會產生非重疊的資料分割，但多個訂閱者可以接收相同的資料分割。|  
-|**第**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。|  
+|**3**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。|  
   
 > [!NOTE]  
 >  如果發行項的來源資料表已經在另一個發行集中發行，則這兩篇文章的*partition_options*值都必須相同。  
@@ -270,7 +269,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|無限制。 在訂閱者端進行的變更會上傳到發行者|  
+|**0** (預設)|無限制。 在訂閱者端進行的變更會上傳到發行者|  
 |**1**|允許在訂閱者端進行變更，但變更不會上傳到發行者。|  
 |**2**|不允許在訂閱者端進行變更。|  
   
@@ -335,7 +334,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**目錄**|****  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用原生模式快照集的0x0C034FD1 和更新版本相容發行集。<br /><br /> ****  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用字元模式快照集的0x08034FF1 和更新版本相容發行集。|  
+|**table**|**0x0C034FD1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用原生模式快照集的0x0C034FD1 和更新版本相容發行集。<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用字元模式快照集的0x08034FF1 和更新版本相容發行集。|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
@@ -349,14 +348,14 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**和**0x2000**|  
 |**indexed view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
 |**proc schema only**|**0x01**和**0x2000**|  
-|**目錄**|所有選項。|  
+|**table**|所有選項。|  
 |**view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

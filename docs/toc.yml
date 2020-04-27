@@ -218,8 +218,10 @@
           items:
             - name: 針對 Kubernetes 進行疑難排解
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory 群組範圍
+            - name: Active Directory 整合
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: HDFS 系統管理員權限
+              href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 參考
       items:
         - name: BDC 合作夥伴

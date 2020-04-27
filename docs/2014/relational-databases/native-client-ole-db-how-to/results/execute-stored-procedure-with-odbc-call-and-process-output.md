@@ -14,14 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206696"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>執行預存程序 (使用 ODBC CALL 語法) 及處理傳回碼和輸出參數 (OLE DB)
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果此命令傳回多個結果，則當 `IMultipleResults::GetResult` 傳回 DB_S_NORESULT 或是當 `IMultipleResults` 介面完全釋放時 (以先發生者為準)，便可使用輸出參數資料。  
   
 > [!IMPORTANT]  
@@ -33,8 +32,7 @@ ms.locfileid: "68206696"
   
 2.  使用 DBBINDING 結構的陣列來建立一組繫結 (每一個參數標記各一個)。  
   
-3.  使用 `IAccessor::CreateAccessor` 方法來建立已定義之參數的存取子。 
-  `CreateAccessor` 會從一組繫結建立存取子。  
+3.  使用 `IAccessor::CreateAccessor` 方法來建立已定義之參數的存取子。 `CreateAccessor` 會從一組繫結建立存取子。  
   
 4.  填入 DBPARAMS 結構。  
   
@@ -356,6 +354,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果 how to 主題 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [處理結果操作說明主題 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

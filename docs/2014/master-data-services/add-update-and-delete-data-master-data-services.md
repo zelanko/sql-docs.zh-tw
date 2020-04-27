@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054267"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>加入、更新及刪除資料 (Master Data Services)
@@ -22,9 +22,9 @@ ms.locfileid: "66054267"
   
  **必要條件**  
   
--   您必須具備權限，才能將資料插入 \< 資料庫的 stg.\<名稱>_Leaf、stg.\<名稱>_Consolidated、stg.[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]名稱>_Relationship 資料表中。  
+-   您必須具備權限，才能將資料插入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 stg.\<名稱>_Leaf、stg.\<名稱>_Consolidated、stg.\<名稱>_Relationship 資料表中。  
   
--   您必須具備權限，才能執行 \< 資料庫中的 stg.udp_\_名稱>_Leaf、stg.udp\<\_名稱>_Consolidated 或 stg.udp\<[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]名稱>_Relationship 預存程序。  
+-   您必須具備權限，才能執行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的 stg.udp_\<名稱>_Leaf、stg.udp\_\<名稱>_Consolidated 或 stg.udp\_\<名稱>_Relationship 預存程序。  
   
 -   模型的狀態不得為 [已認可] ****。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66054267"
   
          ![主資料管理員中的暫存批次頁面](../../2014/master-data-services/media/mds-staging-batches.png "主資料管理員中的暫存批次頁面")  
   
-         暫存程序的啟動間隔，由 ** 中的 [暫存批次間隔]**[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)。  
+         暫存程序的啟動間隔，由 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的 [暫存批次間隔]**** 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
 5.  檢視暫存期間發生的錯誤。 如需詳細資訊，請參閱[在暫存進程期間發生的視圖錯誤 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)和[臨時進程錯誤 &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)。  
   

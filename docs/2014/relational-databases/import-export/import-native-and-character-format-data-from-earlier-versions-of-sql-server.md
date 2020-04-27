@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011920"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
@@ -55,15 +55,14 @@ ms.locfileid: "66011920"
  當您使用 **-V80**參數大量匯出資料時， `nvarchar(max)`、 `varchar(max)`、 `varbinary(max)`、XML 和原生模式中的 UDT 資料會與4位元組前置詞一起儲存， `text`就`image`像、 `ntext`和資料一樣，而不是使用8位元組前置詞，這是[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本的預設值。  
   
 ## <a name="copying-date-values"></a>複製日期值  
- **bcp**會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
+ **bcp** 會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
   
- **Bcp**命令會使用和`datetime` `smalldatetime`值的 ODBC 預設格式來匯出字元格式資料檔案。 例如，包含日期 `datetime` 的 `12 Aug 1998` 資料行會以字元字串 `1998-08-12 00:00:00.000` 大量複製到資料檔案。  
+ **Bcp**命令會使用和`datetime` `smalldatetime`值的 ODBC 預設格式來匯出字元格式資料檔案。 例如，包含日期 `12 Aug 1998` 的 `datetime` 資料行會以字元字串 `1998-08-12 00:00:00.000` 大量複製到資料檔案。  
   
 > [!IMPORTANT]  
->  使用 bcp 將資料匯`smalldatetime`入欄位**** 時，請確定秒的值是 00.000;否則作業將會失敗。 
-  `smalldatetime` 資料類型只會保留最接近分鐘數的數值。 BULK INSERT 及 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在這個案例中將不會失敗，但會截斷秒數值。  
+>  使用 bcp 將資料匯`smalldatetime`入欄位**bcp**時，請確定秒的值是 00.000;否則作業將會失敗。 `smalldatetime` 資料類型只會保留最接近分鐘數的數值。 BULK INSERT 及 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在這個案例中將不會失敗，但會截斷秒數值。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用大量匯入或大量匯出的資料格式**  
   
 -   [使用字元格式匯入或匯出資料 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
@@ -81,7 +80,7 @@ ms.locfileid: "66011920"
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [SQL Server 資料庫引擎回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Database Engine 回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

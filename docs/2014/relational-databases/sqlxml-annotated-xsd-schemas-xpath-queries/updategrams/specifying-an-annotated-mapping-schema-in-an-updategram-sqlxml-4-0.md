@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014658"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66014658"
 ## <a name="dealing-with-data-types"></a>處理資料類型  
  `image`如果架構指定、 `binary`或`varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型（藉由使用`sql:datatype`），而且未指定 xml 資料類型，則 updategram 會假設 xml 資料類型為。 `binary base 64` 如果您的資料是 `bin.base` 類型，您必須明確指定此類型 (`dt:type=bin.base` 或 `type="xsd:hexBinary"`)。  
   
- 如果此結構描述指定 `dateTime`、`date` 或 `time` XSD 資料類型，您也必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來指定對應的 `sql:datatype="dateTime"` 資料類型。  
+ 如果此結構描述指定 `dateTime`、`date` 或 `time` XSD 資料類型，您也必須使用 `sql:datatype="dateTime"` 來指定對應的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。  
   
  處理類型的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `money`參數時，您必須在對應`sql:datatype="money"`架構的適當節點上明確指定。  
   
@@ -154,8 +154,7 @@ ms.locfileid: "66014658"
 </xsd:schema>  
 ```  
   
- 下列 updategram 會使用這個 XSD 架構，為訂單43860加入新的訂單詳細資料記錄（ ** \<after>** 區塊中的** \<OD>** 元素）。 
-  `mapping-schema` 屬性是用來指定 updategram 中的對應結構描述。  
+ 下列 updategram 會使用這個 XSD 架構，為訂單43860加入新的訂單詳細資料記錄（ ** \<after>** 區塊中的** \<OD>** 元素）。 `mapping-schema` 屬性是用來指定 updategram 中的對應結構描述。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -235,11 +234,9 @@ ms.locfileid: "66014658"
   
  這個範例假設下列資料表是在**tempdb**資料庫中：  
   
--   
-  `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 是主索引鍵  
+-   `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 是主索引鍵  
   
--   
-  `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是參考 `CustomerID` 資料表內之 `Cust` 主索引鍵的外部索引鍵。  
+-   `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是參考 `CustomerID` 資料表內之 `Cust` 主索引鍵的外部索引鍵。  
   
  updategram 會使用以下 XSD 結構描述，將記錄插入 Cust 和 Ord 資料表中：  
   

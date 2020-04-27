@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056570"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>原始檔案目的地編輯器 (連接管理員頁面)
@@ -26,17 +26,17 @@ ms.locfileid: "66056570"
   
 -   [開啟原始檔案目的地編輯器](#open)  
   
--   [設定連接管理員索引標籤上的選項](#connection)  
+-   [設定 [連接管理員] 索引標籤上的選項](#connection)  
   
 -   [設定資料行索引標籤上的選項](#mapping)  
   
-##  <a name="open"></a> 開啟原始檔案目的地編輯器  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> 開啟原始檔案目的地編輯器  
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
   
-##  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  
  選取指定檔案名稱的方式。 選取 **[檔案名稱]** 直接輸入檔案名稱和路徑，或是選取 **[來自變數的檔案名稱]** 指定包含檔案名稱的變數。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66056570"
   
  當您按一下 **[產生初始原始檔案]** 時，隨即顯示訊息方塊。 按一下 **[確定]** ，繼續建立檔案。 按一下 **[取消]** ，在 **[資料行]** 頁面上選取不同的資料行清單。  
   
-##  <a name="mapping"></a> 設定資料行索引標籤上的選項  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>在 [資料行] 索引標籤上設定選項  
  **可用的輸入資料行**  
  選取要寫入至原始檔案的一個或多個輸入資料行。  
   

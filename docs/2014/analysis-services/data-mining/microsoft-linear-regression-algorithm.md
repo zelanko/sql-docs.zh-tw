@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174417"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式，可幫助您計算相依與獨立變數之間的線性關聯性，然後使用該關聯性進行預測。
 
  關聯性會以最能夠代表一系列資料的線性方程式表示。 例如，下列圖表中的線條是最佳的資料線性表示法。
@@ -40,17 +39,16 @@ ms.locfileid: "78174417"
  雖然有許多方法可計算線性迴歸，而不需要資料採礦工具，但是針對這項工作使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法的好處在於，變數之間所有可能的關聯性都會自動計算出來，並加以測試。 您不必選取計算方法，例如最小平方的解決方式。 但是，在有多個因數影響結果的狀況下，線性迴歸可能會過於簡化關聯性。
 
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式。 當您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法時，會叫用特殊形式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法，其參數會限制此演算法的行為，而且需要某些輸入資料類型。 此外，在線性迴歸模型中，整個資料集都會用來計算初始行程內的關聯性，而標準決策樹模型則會將資料重複分割成較小的子集或樹狀結構。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式。 當您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法時，會叫用特殊形式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法，其參數會限制此演算法的行為，而且需要某些輸入資料類型。 此外，在線性迴歸模型中，整個資料集都會用來計算初始行程內的關聯性，而標準決策樹模型則會將資料重複分割成較小的子集或樹狀結構。
 
 ## <a name="data-required-for-linear-regression-models"></a>線性迴歸模型所需的資料
  當您準備資料以供線性迴歸模型使用時，您需要了解特定演算法的需求。 其中包括所需的資料數量及資料的使用方式。 此模型類型的需求如下：
 
--   **單一索引鍵資料行**每個模型都必須包含一個可唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。
+-   **單一索引鍵資料行** ：每個模型都必須包含一個能唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。
 
--   **可預測資料行**至少需要一個可預測資料行。 您可以在模型中加入多個可預測的屬性，但是這些可預測的屬性必須是連續數值資料類型。 即使資料的原生儲存體為數值，您還是不能將日期時間資料類型當做可預測的屬性使用。
+-   **可預測資料行** ：至少需要一個可預測資料行。 您可以在模型中加入多個可預測的屬性，但是這些可預測的屬性必須是連續數值資料類型。 即使資料的原生儲存體為數值，您還是不能將日期時間資料類型當做可預測的屬性使用。
 
--   **輸入資料行**輸入資料行必須包含連續數值資料，並為其指派適當的資料類型。
+-   **輸入資料行** ：輸入資料行必須包含連續數值資料，而且必須為它指派適當的資料類型。
 
  如需詳細資訊，請參閱的 [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)的＜需求＞一節。
 

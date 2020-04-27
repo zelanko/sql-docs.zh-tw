@@ -11,10 +11,10 @@ ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728228"
 ---
 # <a name="edit-a-model-deployment-package"></a>編輯模型部署封裝
@@ -27,10 +27,10 @@ ms.locfileid: "73728228"
   
  您會使用模型封裝編輯器來選取封裝檔案中模型的部分，這個檔案是由 MDSModelDeploy 工具 (它所建立的封裝檔案包含物件和資料) 或模型部署精靈 (它所建立的檔案只包含模型結構) 所建立。 在編輯封裝中的模型之後，您會使用 MDSModelDeploy 工具來部署物件和資料，或是使用模型部署精靈，只部署模型結構。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   模型封裝必須存在，才能供您編輯。 如需詳細資訊，請參閱[部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md) 和 [使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)或[使用 MDSModelDeploy 建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73728228"
   
 5.  驗證要部署之選取項目的清單。 若要變更，請按一下 [上一步]****，並重複步驟 4。  
   
-6.  按一下 [瀏覽]**** 移至您想要用來儲存部分套件的資料夾，然後輸入部分套件的檔案名稱 (副檔名為 .pkg)。 按一下 [檔案]  。  
+6.  按一下 [瀏覽]**** 移至您想要用來儲存部分套件的資料夾，然後輸入部分套件的檔案名稱 (副檔名為 .pkg)。 按一下 **[儲存]** 。  
   
 7.  按一下 [完成]  。  
   

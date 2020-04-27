@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210752"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切換可更新之交易式訂閱的更新模式
@@ -26,17 +26,17 @@ ms.locfileid: "68210752"
   
   
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   您可以隨時從立即更新容錯移轉到到佇列更新。 不過在進行這項作業之後，在「訂閱者」和「發行者」連接，且「佇列讀取器代理程式」將佇列中所有暫止訊息套用至「發行者」之前，無法切換回立即更新。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   當交易式訂閱的更新訂閱支援從一種更新模式容錯移轉到另一種模式時，您可以透過程式設計的方式切換更新模式，以處理連接在短時間內變更的情況。 您可以使用複寫預存程序，以程式設計的方式並視需要而設定更新模式。 如需詳細資訊，請參閱 [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
 >  若要在建立訂閱後變更更新模式，則須在建立訂閱時將 **update_mode** 屬性設為 **failover** (允許從立即更新切換到佇列更新) 或 **queued failover** (允許從佇列更新切換到立即更新)。 這些屬性會自動在「新增訂閱精靈」中設定。  
@@ -47,21 +47,21 @@ ms.locfileid: "68210752"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要設定更新模式的訂閱，再按一下 **[設定更新方法]** 。  
+3.  以滑鼠右鍵按一下您要設定更新模式的訂閱，再按一下 **[設定更新方法]**。  
   
-4.  在 [設定更新方法 - **訂閱者>: \<訂閱資料庫>]\<** 對話方塊中，選取 [立即更新]  或 [佇列更新]  。  
+4.  在 [設定更新方法 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊中，選取 [立即更新]**** 或 [佇列更新]****。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>若要設定提取訂閱的更新模式  
   
-1.  在 [訂閱屬性 - **發行者>: \<發行資料庫>]\<** 對話方塊中，選取 [立即複寫變更]  的值或 [訂閱者更新方法]  選項的 [佇列變更]  。  
+1.  在 [訂閱屬性 - \<發行者>: \<發行資料庫>]**** 對話方塊中，選取 [立即複寫變更]**** 的值或 [訂閱者更新方法]**** 選項的 [佇列變更]****。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 如需存取 [訂閱屬性 - **發行者>: \<發行集資料庫>]\<** 對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../view-and-modify-pull-subscription-properties.md)。  
+ 如需存取 [訂閱屬性 - \<發行者>: \<發行集資料庫>]**** 對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../view-and-modify-pull-subscription-properties.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-switch-between-update-modes"></a>切換更新模式  
   
