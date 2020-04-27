@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810419"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
@@ -74,7 +74,7 @@ ms.locfileid: "62810419"
   
 -   查詢目錄檢視。  
   
--   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 及 DBCC SQLPERF。 請勿執行需要大量資源的命令，例如**dbcc** CHECKDB、dbcc DBREINDEX 或 dbcc SHRINKDATABASE。  
+-   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 及 DBCC SQLPERF。 請勿執行需要大量資源的命令，例如 **DBCC** CHECKDB、DBCC DBREINDEX 或 DBCC SHRINKDATABASE。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
   
@@ -109,15 +109,15 @@ ms.locfileid: "62810419"
 ## <a name="related-tasks"></a>相關工作  
   
 ## <a name="related-content"></a>相關內容  
- [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [搭配腳本變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)  
   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
- [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
+ [sp_who &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
   
- [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
+ [sp_lock &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
   
  [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql)  
   

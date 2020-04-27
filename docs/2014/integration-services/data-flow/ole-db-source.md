@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770984"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
@@ -42,13 +42,11 @@ ms.locfileid: "62770984"
   
  此來源使用 OLE DB 連接管理員連接到資料來源，且連接管理員會指定要使用的 OLE DB 提供者。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案也提供資料來源物件，您可從中建立 OLE DB 連接管理員，並提供資料來源和資料檢視讓 OLE DB 來源使用。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案也提供資料來源物件，您可從中建立 OLE DB 連接管理員，並提供資料來源和資料檢視讓 OLE DB 來源使用。  
   
  根據 OLE DB 提供者而定，下列限制適用 OLE DB 來源：  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for Oracle 不支援 Oracle 資料類型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，且 OLE DB 來源無法從含有這些資料類型之資料行的資料表擷取資料。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for Oracle 不支援 Oracle 資料類型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，且 OLE DB 來源無法從含有這些資料類型之資料行的資料表擷取資料。  
   
 -   IBM OLE DB DB2 提供者和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB DB2 提供者不支援使用呼叫預存程序的 SQL 命令。 使用這類命令時，OLE DB 來源無法建立資料行中繼資料，結果在資料流程中跟隨 OLE DB 來源的資料流程元件便沒有任何可用的資料行資料，且資料流程執行失敗。  
   
@@ -94,7 +92,7 @@ ms.locfileid: "62770984"
   
 -   [OLE DB 來源編輯器 &#40;連線管理員頁面&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 來源編輯器 &#40;資料行] 頁面&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 來源編輯器 &#40;資料行頁面&#41;](../ole-db-source-editor-columns-page.md)  
   
 -   [OLE DB 來源編輯器 &#40;錯誤輸出頁面&#41;](../ole-db-source-editor-error-output-page.md)  
   
@@ -115,7 +113,7 @@ ms.locfileid: "62770984"
 -   [排序合併和合併聯結轉換的資料](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>相關內容  
- social.technet.microsoft.com 上的 Wiki 文章： [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS 與 Oracle 連接器)。  
+ Social.technet.microsoft.com 上的 Wiki 文章（[含 Oracle 連接器的 SSIS](https://go.microsoft.com/fwlink/?LinkId=220670)）。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 目的地](ole-db-destination.md)   

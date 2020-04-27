@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770214"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>教學課程：使用 OData 來源 [SSIS]
@@ -46,7 +46,7 @@ ms.locfileid: "62770214"
   
 6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 這可以是服務文件的 URL，或是特定摘要或實體的 URL。 基於本教學課程的目的，請[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)輸入。  
   
-7.  確認已選取 **[Windows 驗證]** 做為用來存取 OData 服務的 **[驗證]** 。 預設會選取 [ **Windows 驗證**]。 若要使用基本驗證，請選取 **[使用此使用者名稱和密碼]**。  
+7.  確認已選取 **[Windows 驗證]** 做為用來存取 OData 服務的 **[驗證]** 。 **[Windows 驗證]** 預設為選取狀態。 若要使用基本驗證，請選取 **[使用此使用者名稱和密碼]**。  
   
 8.  針對連接按一下 **[測試連接]** ，然後按一下 **[確定]** 建立 OData 連接管理員的執行個體。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62770214"
   
 10. 從 **[集合]** 下拉式清單中選取 **[Employees]**。  
   
-11. 針對 **[查詢選項]** 輸入任何其他 OData 查詢選項或篩選。 例如 $orderby=CompanyName&$top=100。 針對本教學課程的用途，輸入 **$top=5**。  
+11. 針對 **[查詢選項]** 輸入任何其他 OData 查詢選項或篩選。 例如： $orderby=CompanyName&$top=100。 針對本教學課程的用途，輸入 **$top=5**。  
   
 12. 按一下 **[預覽]** 預覽資料。  
   
@@ -70,13 +70,11 @@ ms.locfileid: "62770214"
   
 2.  使用藍色箭頭連接 **[OData 來源]** 元件與 **[一般檔案目的地]** 元件。  
   
-3.  按兩下 [一般檔案目的地]****。 
-  **[一般檔案目的地編輯器]** 對話方塊應會隨即出現。  
+3.  按兩下 [一般檔案目的地]****。 **[一般檔案目的地編輯器]** 對話方塊應會隨即出現。  
   
 4.  在 **[一般檔案目的地編輯器]** 對話方塊中，按一下 **[新增]** 建立新的一般檔案連接管理員。  
   
-5.  在 **[一般檔案格式]** 對話方塊中，選取 **[使用分隔符號]**。 
-  **[一般檔案連接管理員編輯器]** 對話方塊應會隨即出現。  
+5.  在 **[一般檔案格式]** 對話方塊中，選取 **[使用分隔符號]**。 **[一般檔案連接管理員編輯器]** 對話方塊應會隨即出現。  
   
 6.  在 [一般檔案連線管理員編輯器]**** 對話方塊中，輸入 **c:\Employees.txt** 作為 [檔案名稱]****。  
   

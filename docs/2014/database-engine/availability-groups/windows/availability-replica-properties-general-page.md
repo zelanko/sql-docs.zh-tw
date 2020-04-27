@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791902"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性複本屬性 (一般頁面)
   使用此對話方塊來檢視可用性複本的屬性。  
   
 ## <a name="task-list"></a>工作清單  
- **若要查看可用性複本屬性**  
+ **若要檢視可用性複本屬性**  
   
 -   [檢視可用性複本屬性 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **可用性組名**  
+ **可用性群組名稱**  
  可用性群組的名稱。 這是使用者指定的名稱，它在 Windows Server 容錯移轉叢集 (WSFC) 內必須是唯一的。  
   
- **伺服器實例**  
+ **伺服器執行個體**  
  裝載這個複本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的伺服器名稱，如果是非預設執行個體，則是它的執行個體名稱。  
   
  **角色**  
@@ -43,7 +43,7 @@ ms.locfileid: "62791902"
  **次要**  
  目前的次要複本。  
   
- **解決**  
+ **解析中**  
  複本角色目前正在解析成主要或次要角色。  
   
  **可用性模式**  
@@ -57,7 +57,7 @@ ms.locfileid: "62791902"
   
  如需詳細資訊，請參閱[可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
- **Failover mode**  
+ **容錯移轉模式**  
  複本的容錯移轉模式，下列其中一項：  
   
  **自動**  
@@ -72,7 +72,7 @@ ms.locfileid: "62791902"
  **允許所有連接**  
  主要複本的資料庫允許所有連接。 這是預設值。  
   
- **允許讀取/寫入連接**  
+ **允取讀取/寫入連接**  
  不允許 Application Intent 連接屬性設為 **ReadOnly** 的連接。 當 [應用程式意圖] 屬性設定為 [ **ReadWrite** ]，或未設定 [應用程式意圖連接] 屬性時，就會允許連接。  
   
  **可讀取次要**  

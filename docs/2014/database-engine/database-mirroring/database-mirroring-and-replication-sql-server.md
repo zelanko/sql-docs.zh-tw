@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807453"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "62807453"
   
     -   將**@working_directory**參數的值設定為主體所使用的快照集資料夾。  
   
-4.  指定 **-PublisherFailoverPartner**代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
+4.  指定 **-PublisherFailoverPartner** 代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
   
     -   快照集代理程式 (針對所有發行集)。  
   
@@ -85,20 +85,19 @@ ms.locfileid: "62807453"
   
     -   合併代理程式 (針對合併訂閱)  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll：適用於使用 Web 同步處理來進行同步處理的合併訂閱)  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll：適用於使用 Web 同步處理來進行同步處理的合併訂閱)  
   
     -   SQL Merge ActiveX Control (針對與控制項同步處理的合併訂閱)  
   
      「散發代理程式」和 Distribution ActiveX Control 沒有這個參數，因為它們並未連接到「發行者」。  
   
-     代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。 您可以在代理程式設定檔中或從命令提示字元指定參數。 如需詳細資訊，請參閱  
+     代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。 您可以在代理程式設定檔中或從命令提示字元指定參數。 如需詳細資訊，請參閱：  
   
-    -   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     我們建議您將 **-PublisherFailoverPartner**新增至代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
+     建議您將 **-PublisherFailoverPartner** 加入代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

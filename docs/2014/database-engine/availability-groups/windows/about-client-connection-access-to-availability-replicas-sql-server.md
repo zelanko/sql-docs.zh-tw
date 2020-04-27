@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789840"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>關於可用性複本的用戶端連接存取 (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62789840"
   
 -   [相關內容](#RelatedContent)  
   
-##  <a name="ConnectAccessForSecondary"></a> 次要角色所支援的連接存取類型  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> 次要角色所支援的連接存取類型  
  次要角色支援用戶端連接的三種替代方式，如下所示：  
   
  無連接  
@@ -60,9 +60,9 @@ ms.locfileid: "62789840"
  允許任何唯讀連接  
  次要資料庫全部適用於讀取連接。 此選項允許較低版本的用戶端進行連接。  
   
- 如需詳細資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+ 如需詳細資訊，請參閱[在可用性複本上設定唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
-##  <a name="ConnectAccessForPrimary"></a> 主要角色所支援的連接存取類型  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> 主要角色所支援的連接存取類型  
  主要角色支援用戶端連接的兩種替代方式，如下所示：  
   
  允許所有連接  
@@ -73,20 +73,20 @@ ms.locfileid: "62789840"
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
- 如需詳細資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+ 如需詳細資訊，請參閱[在可用性複本上設定唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> 連接存取組態如何影響用戶端連接  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> 連接存取組態如何影響用戶端連接  
  複本的連接存取設定會判斷連接嘗試失敗或成功。 下表摘要說明每個連接存取設定的給定連接嘗試成功或失敗。  
   
 |複本角色|複本上支援的連接存取|連接意圖|連接嘗試結果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|次要|全部|讀取意圖、讀寫，或未指定任何連接意圖|Success|  
+|次要|全部|讀取意圖、讀寫，或未指定任何連接意圖|成功|  
 |次要|無 (這是預設的次要行為)。|讀取意圖、讀寫，或未指定任何連接意圖|失敗|  
-|次要|僅限讀取意圖|讀取意圖|Success|  
+|次要|僅限讀取意圖|讀取意圖|成功|  
 |次要|僅限讀取意圖|讀寫，或未指定任何連接意圖|失敗|  
-|Primary|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|Success|  
+|Primary|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|成功|  
 |Primary|讀寫|僅限讀取意圖|失敗|  
-|Primary|讀寫|讀寫，或未指定任何連接意圖|Success|  
+|Primary|讀寫|讀寫，或未指定任何連接意圖|成功|  
   
  如需設定可用性群組接受用戶端連接至其複本的相關資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62789840"
   
  在此範例狀況下，容錯移轉通常只發生在同步認可複本之間，而且剛容錯移轉之後，讀取意圖應用程式可以重新連接至其中一個非同步認可次要複本。 不過，在主要運算中心發生災難時，兩個同步認可複本都會遺失。 衛星站台的資料庫管理員會透過對非同步認可次要複本執行強制手動容錯移轉來回應。 其餘次要複本上的次要資料庫會透過強制容錯移轉暫停，讓它們無法用於唯讀工作負載。 設定成讀寫連接的新主要複本會讓讀取意圖工作負載無法與讀寫工作負載競爭。 也就是說，在資料庫管理員針對其餘非同步認可次要複本繼續次要資料庫之前，讀取意圖用戶端無法連接至任何可用性複本。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [設定可用性複本的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -116,15 +116,15 @@ ms.locfileid: "62789840"
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [統計資料](../../../relational-databases/statistics/statistics.md)  
   
   

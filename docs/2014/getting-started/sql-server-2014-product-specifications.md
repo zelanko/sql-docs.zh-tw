@@ -16,10 +16,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772287"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 產品規格
@@ -49,7 +49,7 @@ This HTML comment can be erased, if you like.
  選取要安裝的元件和功能。  
   
  [SQL Server 2014 各版本所支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
- 每一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本所支援的功能。  
+ 每一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本所支援的功能。  
   
  [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
  不同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的最大容量。  

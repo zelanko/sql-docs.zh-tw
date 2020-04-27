@@ -16,14 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773494"
 ---
 # <a name="view-project-history"></a>檢視專案記錄
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) 專案記錄包括一份在每個專案檔上所採用的完整動作清單，其中包括建立、新增、刪除和復原檔案。  
   
 > [!NOTE]  
@@ -37,7 +36,7 @@ ms.locfileid: "62773494"
   
 2.  **在 [檔案**] 功能表上，指向 [原始檔**控制**]，然後按一下 [ **View 歷程記錄**]。  
   
-3.  在 [ **** \<專案> 的歷程記錄] 對話方塊中，執行下列任何一項動作：  
+3.  在 [ **History of** \<專案> 的歷程記錄] 對話方塊中，執行下列任何一項動作：  
   
     -   檢視原始檔控制系統的所選檔案副本。  
   

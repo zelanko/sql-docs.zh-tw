@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771524"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取服務
@@ -38,7 +38,7 @@ ms.locfileid: "62771524"
   
 -   Windows Server 2012  
   
--   Windows Server 2008 R2 with Service Pack 1  
+-   Windows Server 2008 R2 (含 Service Pack 1)  
   
 -   Windows Server 2008 32 位元 (x86) 和 64 位元 (x64)，含 Service Pack 2  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62771524"
   
 -   [Oracle CDC 服務](the-oracle-cdc-service.md)  
   
--   [Attunity 的 Oracle 變更資料擷取 (CDC) 服務 F1 說明](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Attunity Oracle Change Data Capture (CDC) 服務 F1 說明](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Attunity Oracle Change Data Capture (CDC) 服務使用說明指南](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   

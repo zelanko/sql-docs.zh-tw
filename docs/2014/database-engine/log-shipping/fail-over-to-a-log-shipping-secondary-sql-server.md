@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774185"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>容錯移轉至記錄傳送次要 (SQL Server)
@@ -46,20 +46,20 @@ ms.locfileid: "62774185"
 4.  在同步處理次要伺服器後，您就可以透過復原次要資料庫並將用戶端重新導向至該伺服器執行個體，藉以容錯移轉至偏好的伺服器。 復原會讓資料庫進入一致狀態，並使其連線。  
   
     > [!NOTE]  
-    >  當您讓次要資料庫可以使用時，就應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+    >  當您讓次要資料庫可以使用時，就應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 5.  在復原次要資料庫後，您可以將它重新設定為當做其他次要資料庫的主要資料庫使用。  
   
      如果沒有其他次要資料庫可用，請參閱[設定記錄傳送 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [變更主要與次要記錄傳送伺服器間的角色 &#40;SQL Server&#41;](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [記錄傳送資料表與預存程序](log-shipping-tables-and-stored-procedures.md)   
+ [記錄傳送資料表和預存程式](log-shipping-tables-and-stored-procedures.md)   
  [關於記錄傳送 &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   

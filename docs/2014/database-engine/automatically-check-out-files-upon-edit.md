@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791732"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>在編輯時自動簽出檔案
@@ -25,7 +25,7 @@ ms.locfileid: "62791732"
   
 ### <a name="to-configure-automatic-checkout"></a>設定自動簽出  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
 2.  展開 [**原始檔控制**] 資料夾，然後按一下 [**環境**]。  
   

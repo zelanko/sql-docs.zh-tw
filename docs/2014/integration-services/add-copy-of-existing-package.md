@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772244"
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
@@ -48,6 +48,6 @@ ms.locfileid: "62772244"
  [匯入封裝對話方塊 UI 參考](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [匯出封裝對話方塊 UI 參考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [儲存封裝](save-packages.md)   
- [&#40;SSIS 服務匯入和匯出套件&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [匯入和匯出封裝 &#40;SSIS 服務&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

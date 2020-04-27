@@ -16,22 +16,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789009"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>結果頁面 (AlwaysOn 可用性群組精靈)
   本說明主題描述 **[結果]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此頁面可以檢視精靈的結果。  
   
-##  <a name="PageOptions"></a> 結果頁面選項  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> 結果頁面選項  
  **[摘要]** 方格包含下列資料行：  
   
  **名稱**  
  顯示描述特定作業的片語。  
   
- **結果**  
+ **Result**  
  針對每個完成的步驟，顯示下列其中一個超連結文字。  
   
 |結果|描述|  
@@ -41,7 +41,7 @@ ms.locfileid: "62789009"
   
 
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

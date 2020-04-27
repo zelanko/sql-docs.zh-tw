@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779153"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>搭配記憶體最佳化的資料表使用交易隔離等級的方針
@@ -37,11 +37,9 @@ ms.locfileid: "62779153"
  磁碟基礎的資料表允許多重版本設定與隔離等級 SNAPSHOT 和 READ_COMMITTED_SNAPSHOT。 對於記憶體最佳化的資料表，所有隔離等級都是根據多個版本，包括 REPEATABLE READ 和 SERIALIZABLE。  
   
 ## <a name="types-of-transactions"></a>交易的類型  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每一個查詢都是在交易的內容中執行。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每一個查詢都是在交易的內容中執行。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的交易有三種類型：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的交易有三種類型：  
   
 -   自動認可交易： 如果沒有使用中交易內容，而且在工作階段中隱含交易未設為 ON，每個查詢都有自己的交易內容。 交易在陳述式開始執行時開始，在陳述式完成時完成。  
   

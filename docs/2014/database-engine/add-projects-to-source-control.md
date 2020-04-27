@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791758"
 ---
 # <a name="add-projects-to-source-control"></a>將專案加入原始檔控制中
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 方案可以主控多個指令碼專案。 您如何將專案加入原始檔控制中，會隨著專案所屬的方案是否在原始檔控制之下而不同。 如果方案在原始檔控制之下，簽入方案會自動將專案加入原始檔控制中。 如需簽入方案的詳細資訊，請參閱[簽入](../../2014/database-engine/check-in-files.md)檔案。  
   
  如果這個專案所屬的方案不在原始檔控制之下，您可以將這個方案加入原始檔控制中，之後，便會自動加入方案的專案。 如需將方案加入至原始檔控制的詳細資訊，請參閱[將方案加入至原始檔控制](../../2014/database-engine/add-solutions-to-source-control.md)。  

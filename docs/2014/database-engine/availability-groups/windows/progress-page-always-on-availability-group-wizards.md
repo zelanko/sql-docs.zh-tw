@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789108"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>進度頁面 (AlwaysOn 可用性群組精靈)
   使用此對話方塊可以檢視您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中執行之 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]精靈的進度。 進度列會指出精靈所執行之步驟的相對進度。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **更多詳細資料**  
+ **其他詳細資料**  
  按一下向下箭號可顯示進度方格，這個方格會依照順序列出任何已完成的步驟，接著列出目前進行中的作業。 方格包含下列資料行：  
   
  **名稱**  
@@ -42,7 +42,7 @@ ms.locfileid: "62789108"
 |結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示這個步驟的作業發生錯誤。 按一下連結可顯示描述錯誤的訊息對話方塊。|  
-|**進行中（** *完成百分比* **）**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
+|**進行中 (完成百分比** ** **)**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
 |「成功」 |表示這個步驟的作業已順利完成。|  
   
  **較少詳細資料**  
@@ -51,7 +51,7 @@ ms.locfileid: "62789108"
  **取消**  
  按一下可略過任何其餘作業，然後結束精靈。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

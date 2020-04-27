@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814549"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>遠端 BLOB 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可以為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][遠端 BLOB 存放區 (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB 物件 (Blob) 提供高可用性和災害復原方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會透過將儲存在可用性資料庫中的任何 RBS 中繼資料和結構描述複寫到次要複本，予以保護。 這是 SharePoint 內容資料庫。 一般而言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分開儲存此 RBS 中繼資料與 BLOB。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可以為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][遠端 blob 存放區（RBS）](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) blob 物件（blob）提供高可用性和嚴重損壞修復解決方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會透過將儲存在可用性資料庫中的任何 RBS 中繼資料和結構描述複寫到次要複本，予以保護。 這是 SharePoint 內容資料庫。 一般而言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分開儲存此 RBS 中繼資料與 BLOB。  
   
  RBD BLOB 資料的保護取決於 BLOB 存放區位置，如下所示：  
   
@@ -29,15 +29,15 @@ ms.locfileid: "62814549"
 |在不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的另一個資料庫 (使用 RBS 遠端 FILESTREAM 提供者所儲存)|是<br /><br /> 此資料庫必須位於個別的可用性群組。|  
 |協力廠商 BLOB 存放區|否<br /><br /> 為了保護此 BLOB 資料，請使用 BLOB 存放區提供者的高可用性機制。|  
   
-##  <a name="Limitations"></a> 限制  
+##  <a name="limitations"></a><a name="Limitations"></a> 限制  
   
 -   RBS 維護程式在主要複本上需要為目標。  
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   使用可用性群組接聽程式。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)。  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [維護遠端 BLOB 存放區](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (在《 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
   

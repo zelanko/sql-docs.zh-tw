@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789466"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>選取初始資料同步處理頁面 (AlwaysOn 可用性群組精靈)
@@ -28,7 +28,7 @@ ms.locfileid: "62789466"
   
 
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   在初始資料同步處理期間，暫停主要資料庫的記錄備份工作。  
   
@@ -38,9 +38,8 @@ ms.locfileid: "62789466"
   
      如果備份和還原作業必須是高度保全，建議您選取 **[僅聯結]** 或 **[略過初始資料同步處理]** 選項。  
   
-##  <a name="Full"></a>寫  
- 
-  **[完整]** 選項會在一個工作流程中，對每一個主要資料庫執行數項作業，包括建立主要資料庫的完整和記錄備份；透過還原裝載次要複本之每個伺服器執行個體上的這些備份，建立對應的次要資料庫；以及將每個次要資料庫聯結至可用性群組。  
+##  <a name="full"></a><a name="Full"></a>寫  
+ **[完整]** 選項會在一個工作流程中，對每一個主要資料庫執行數項作業，包括建立主要資料庫的完整和記錄備份；透過還原裝載次要複本之每個伺服器執行個體上的這些備份，建立對應的次要資料庫；以及將每個次要資料庫聯結至可用性群組。  
   
  只有在環境符合下列使用完整初始資料同步處理的必要條件，且您要精靈自動啟動資料同步處理時，才選取此選項。  
   
@@ -58,11 +57,11 @@ ms.locfileid: "62789466"
     > [!IMPORTANT]  
     >  記錄備份將是記錄備份鏈結的一部分。 請適當地儲存記錄備份檔案。  
   
- **如果不符合必要條件**  
+ **若不符合必要條件**  
   
  精靈將無法建立此可用性群組的次要資料庫。 如需有關如何準備的詳細資訊，請參閱本主題稍後的 [手動準備次要資料庫](#PrepareSecondaryDbs)。  
   
- **如果符合必要條件**  
+ **若符合必要條件**  
   
  若符合所有必要條件，且您要精靈執行完整初始資料同步處理，請選取 **[完整]** 選項，並指定網路共用。 如此一來，精靈即會建立完整的資料庫及每個選定資料庫的記錄備份，並將這些備份置於您指定的網路共用。 然後，在裝載其中一個新次要複本的每個伺服器執行個體上，精靈會透過使用 RESTORE WITH NORECOVERY 還原備份來建立次要資料庫。 建立每個次要資料庫之後，精靈會將新次要資料庫聯結至可用性群組。 聯結次要資料庫之後，立即會在該資料庫上啟動資料同步處理。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62789466"
 > [!IMPORTANT]  
 >  記錄備份將是記錄備份鏈結的一部分。 請適當地儲存它們的備份檔案。  
   
-##  <a name="Joinonly"></a>僅聯結  
+##  <a name="join-only"></a><a name="Joinonly"></a>僅聯結  
  只有在裝載可用性群組之次要複本的每個伺服器執行個體上已經有新次要資料庫時，才選取此選項。 如需有關準備次要資料庫的詳細資訊，請參閱本節稍後的 [手動準備次要資料庫](#PrepareSecondaryDbs)。  
   
  如果您選取 **[僅聯結]**，精靈會嘗試將每個現有的次要資料庫聯結至可用性群組。  
@@ -83,12 +82,12 @@ ms.locfileid: "62789466"
 > [!NOTE]  
 >  如需詳細資訊，請參閱[於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="PrepareSecondaryDbs"></a>手動準備次要資料庫  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a>手動準備次要資料庫  
  若要在任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 精靈之外獨立準備次要資料庫，可以使用下列方法之一：  
   
 -   使用 RESTORE WITH NORECOVERY，手動還原主要資料庫的最近資料庫備份，然後使用 RESTORE WITH NORECOVERY，還原每個後續的記錄備份。 若主要與次要資料庫的檔案路徑不同，必須使用 WITH MOVE 選項。 在裝載可用性群組之次要複本的每個伺服器執行個體上，執行此還原順序。  您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 執行這些備份和還原作業。  
   
-     **如需詳細資訊：＜＞**  
+     **如需詳細資訊：**  
   
      [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62789466"
     > [!NOTE]  
     >  為可用性群組建立所有次要資料庫之後，如果您想要在次要複本上執行備份，則需要重新設定可用性群組的自動備份喜好設定。  
   
-     **如需詳細資訊：＜＞**  
+     **如需詳細資訊：**  
   
      [從記錄傳送遷移至 AlwaysOn 可用性群組 &#40;SQL Server 的必要條件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62789466"
   
  您也可選擇在執行精靈之前，先準備所有次要資料庫。 然後在精靈的 **[指定初始資料同步處理]** 頁面上選取 **[僅聯結]** ，以自動將新的次要資料庫聯結至可用性群組。  
   
-##  <a name="LaunchWiz"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

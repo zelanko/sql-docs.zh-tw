@@ -20,20 +20,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805878"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
-  在考慮到[增強一般複寫效能](enhance-general-replication-performance.md)中所述的一般效能秘訣之後，請考慮合併式複寫特有的這些其他區域。  
+  除了考慮＜ [增強一般複寫效能](enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  
   
 ## <a name="database-design"></a>資料庫設計  
   
 -   資料列篩選與聯結篩選中使用的索引資料行。  
   
-     當您在已發行的發行項上使用資料列篩選時，請在篩選的 WHERE 子句中所使用的每個資料行上建立一個索引。 如果沒有索引， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]就必須讀取資料表中的每個資料列，以判斷資料列是否應包含在資料分割中。 有了索引之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可以很快地找出應該包含的資料列。 當複寫單從索引便可完全解析篩選的 WHERE 子句時，便能產生最快的處理速度。  
+     當您在已發行的發行項上使用資料列篩選時，請在篩選的 WHERE 子句中所使用的每個資料行上建立一個索引。 如果沒有索引，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就必須讀取資料表中的每個資料列來判斷該資料列是否應包含在資料分割中。 有了索引之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可以很快地找出應該包含的資料列。 當複寫單從索引便可完全解析篩選的 WHERE 子句時，便能產生最快的處理速度。  
   
      為聯結篩選所使用的全部資料行加上索引也非常重要。 每次執行「合併代理程式」時，系統都會搜尋基底資料表，以決定父資料表與相關資料表中哪些資料列應該包含於資料分割。 為聯結的資料行建立索引可避免 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在「合併式代理程式」每次執行時都讀取資料表中的每個資料列。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "62805878"
   
 -   如果訂閱透過快速連線進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **-ParallelUploadDownload** 參數。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進新的合併代理程式參數： **-ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數：**-ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
     -   [處理複寫代理程式設定檔](../agents/replication-agent-profiles.md)  
   
-    -   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
@@ -144,6 +144,6 @@ ms.locfileid: "62805878"
   
 -   使用複寫監視器內的 **[同步處理記錄]** 索引標籤監視同步處理效能。  
   
-     對於合併式複寫，「複寫監視器」會在 **[同步處理記錄]** 索引標籤中顯示同步處理期間處理之每個發行項的詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關查看詳細統計資料的詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
+     對於合併式複寫，「複寫監視器」會在 **[同步處理記錄]** 索引標籤中顯示同步處理期間處理之每個發行項的詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關檢視詳細統計資料的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
   

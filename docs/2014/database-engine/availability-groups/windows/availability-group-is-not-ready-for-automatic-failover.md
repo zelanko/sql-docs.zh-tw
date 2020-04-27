@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791862"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性群組尚未就緒，無法自動容錯
@@ -29,8 +29,8 @@ ms.locfileid: "62791862"
 |-|-|  
 |**原則名稱**|可用性群組自動容錯移轉整備|  
 |**問題**|可用性群組尚未準備進行自動容錯移轉。|  
-|**類別目錄**|**嚴重**|  
-|**Facet**|可用性群組|  
+|**類別**|**重大**|  
+|**層面**|可用性群組|  
   
 ## <a name="description"></a>描述  
  這項原則檢查可用性群組是否至少有一個已做好容錯移轉準備的次要複本。 當主要複本的容錯移轉模式為自動，但是可用性群組中的次要複本都未準備進行容錯移轉時，原則為狀況不良並會引發警示。  

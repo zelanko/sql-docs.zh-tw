@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813584"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>設定伺服器接聽特定 TCP 通訊埠 (SQL Server 組態管理員)
@@ -37,21 +37,21 @@ ms.locfileid: "62813584"
   
  **本主題內容**  
   
--   **若要將伺服器設定為在特定 TCP 通訊埠上接聽，請使用：**  
+-   **若要使用下列項目，將伺服器設定為在特定 TCP 通訊埠上接聽：**  
   
      [SQL Server 組態管理員](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>若要為 SQL Server Database Engine 指派 TCP/IP 通訊埠編號  
   
-1.  在 SQL Server 組態管理員的主控台窗格中，依序展開 [SQL Server 網路組態]**** 和 [**執行個體名稱> 的通訊協定]\<**，然後按兩下 [TCP/IP]****。  
+1.  在 SQL Server 組態管理員的主控台窗格中，依序展開 [SQL Server 網路組態]  和 [\<執行個體名稱> 的通訊協定]  ，然後按兩下 [TCP/IP]  。  
   
 2.  在 [TCP/IP 內容]**** 對話方塊的 [IP 位址]**** 索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 同時會出現額外的 IP 位址代表電腦上的每個 IP 位址。 以滑鼠右鍵按一下每個位址，然後按一下 [屬性]**** 以識別要設定的 IP 位址。  
   
 3.  如果 **[TCP 動態通訊埠]** 對話方塊包含 **0**，代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在接聽動態通訊埠，請將 0 刪除。  
   
-4.  在 [ **IP**_n_內容 **] 區域方塊**的 [ **TCP 通訊埠**] 方塊中，輸入您要此 IP 位址接聽的埠號碼，然後按一下 **[確定]**。  
+4.  在 [IP_n 屬性]****_ **** 區域方塊的 [TCP 通訊埠]**** 方塊中，鍵入您想要讓此 IP 位址接聽的連接埠號碼，然後按一下 [確定]****。  
   
 5.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "62813584"
 -   設定用戶端使用自訂連接字串進行連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立或刪除伺服器別名，以供用戶端 &#40;SQL Server 組態管理員使用&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
+ [建立或刪除用戶端使用的伺服器別名 &#40;SQL Server 組態管理員&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
   

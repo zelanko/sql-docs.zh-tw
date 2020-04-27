@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c04d257b4000f0d5855a44e299bcb970a5fef8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771454"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 設計工具使用說明指南

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779133"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
@@ -30,7 +30,7 @@ ms.locfileid: "62779133"
   
  如需如何使用 SysPrep 安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的詳細資訊，請參閱[使用 sysprep 安裝 SQL Server 2014](install-sql-server-using-sysprep.md)。  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常見用法  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常見用法  
  您可依照下列任何方法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 功能：  
   
 -   您可以使用「準備映像」步驟，在同一部電腦上準備一個或多個未設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 您可以在同一部電腦上使用完整的映像步驟來設定這些備妥的執行個體。  
@@ -56,7 +56,7 @@ ms.locfileid: "62779133"
   
     -   您不能指定備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本執行個體的產品識別碼。  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
+## <a name="supported-ssnoversion-installations"></a>支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 SysPrep 支援所有功能，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的工具。  
   
  您可以針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或之前版本的並存安裝準備多個執行個體。 這些執行個體的功能必須支援 SysPrep。  
@@ -71,10 +71,10 @@ ms.locfileid: "62779133"
   
  從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 支援從命令列進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
  不支援修復備妥的執行個體。 如果安裝程式在準備映像或完成映像步驟期間失敗，您必須執行解除安裝。  
   
-##  <a name="BKMK_PrepareImage"></a> 準備映像  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> 準備映像  
  準備映像步驟會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品和功能，但不會設定安裝。  
   
  您可以在這個步驟中，指定要安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品安裝檔的安裝位置。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，可以在 [安裝中心]  的 [進階]  頁面上透過 [Image Preparation of a stand-alone instance for SysPrep deployment (準備 SysPrep 部署獨立執行個體的映像)]  或是從命令提示字元執行。  
@@ -85,7 +85,7 @@ ms.locfileid: "62779133"
   
  當準備好執行個體之後，就可以使用 **[開始]** 功能表上的捷徑，讓您完成已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的組態。  
   
-##  <a name="BKMK_CompleteImage"></a> 完成映像  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> 完成映像  
  您可以使用下列其中一個方法，完成已備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體：  
   
 -   使用 [開始] 功能表上的捷徑。  

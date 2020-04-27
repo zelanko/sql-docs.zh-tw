@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771034"
 ---
 # <a name="odata-source"></a>OData 來源
@@ -45,11 +45,11 @@ ms.locfileid: "62771034"
   
 -   [在執行階段修改 OData 來源查詢](modify-odata-source-query-at-runtime.md)  
   
--   [[OData 來源編輯器] &#40;連接] 頁面&#41;](../odata-source-editor-connection-page.md)  
+-   [OData 來源編輯器 &#40;[連線] 頁面&#41;](../odata-source-editor-connection-page.md)  
   
--   [[OData 來源編輯器 &#40;資料行] 頁面&#41;](../odata-source-editor-columns-page.md)  
+-   [OData 來源編輯器 &#40;資料行頁面&#41;](../odata-source-editor-columns-page.md)  
   
--   [[OData 來源編輯器] &#40;錯誤輸出頁面&#41;](../odata-source-editor-error-output-page.md)  
+-   [OData 來源編輯器 &#40;[錯誤輸出] 頁面&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [OData 來源屬性](odata-source-properties.md)  
   

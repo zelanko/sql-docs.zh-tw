@@ -14,15 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774952"
 ---
 # <a name="open-projects-from-source-control"></a>從原始檔控制開啟專案
-  您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，直接從原始檔控制中開啟專案。 當您執行這個動作時，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會擷取專案的最新版本，將它複製到本機磁碟中。 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境也會自動建立一項專案的方案。  
+  您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，直接從原始檔控制中開啟專案。 當您執行這個動作時，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會擷取專案的最新版本，將它複製到本機磁碟中。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境也會自動建立一項專案的方案。  
   
  從原始檔控制中開啟專案之後，您便可以簽出和修改專案檔。  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774832"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>為記憶體中的 OLTP 管理記憶體
@@ -25,9 +25,9 @@ ms.locfileid: "62774832"
 |區段|描述|  
 |-------------|-----------------|  
 |[估計記憶體最佳化資料表的記憶體需求](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|估計資料表的記憶體需求。|  
-|[將包含記憶體最佳化資料表的資料庫繫結至資源集區](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|繫結資料庫與資源集區的逐步解說。|  
+|[資料庫並繫結至資源集區的指引，請參閱](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|繫結資料庫與資源集區的逐步解說。|  
 |[監視與疑難排解記憶體使用量](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|您可以用來監視記憶體使用量的工具。 同時也包含記憶體使用量太高的疑難排解方式。|  
-|[解決記憶體不足問題](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|從 OOM (記憶體不足) 情況中復原的步驟。|  
+|[解決記憶體不足的問題](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|從 OOM (記憶體不足) 情況中復原的步驟。|  
 |[還原資料庫並將其繫結至資源集區](../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md)|還原 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 資料庫並將它繫結至具名資源集區的步驟。|  
 |[記憶體中的 OLTP 記憶體回收](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)|了解如何對已刪除的資料列進行記憶體回收。|  
   

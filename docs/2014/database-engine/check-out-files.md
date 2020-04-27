@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786743"
 ---
 # <a name="check-out-files"></a>簽出檔案
@@ -55,7 +55,7 @@ ms.locfileid: "62786743"
      在原始檔控制連接之下，以一般清單顯示正在簽出的項目。  
   
      **編輯**  
-     修改專案但不簽出。只有**** 在您已[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]設定為支援編輯簽入檔案時，才會出現 [編輯] 按鈕。  
+     修改專案但不簽出。只有**Edit**在您已[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]設定為支援編輯簽入檔案時，才會出現 [編輯] 按鈕。  
   
      **名稱**  
      會顯示可簽出之項目的名稱。 選取的項目旁邊會顯示核取方塊。 如果您不要簽出特定項目，請清除其核取方塊。  

@@ -16,20 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27c46e8e186f0e8424e679e9c023854e7887e232
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780547"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>SQL Server Native Client (ODBC) 參考
   開放式資料庫連接 (Open Database Connectivity，ODBC) 是應用程式用來在 ODBC 資料來源中存取資料的 Microsoft Win32 應用程式開發介面。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式參考不會列出所有 ODBC 函數呼叫。 只會討論與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式搭配使用時，具有驅動程式特有參數或行為的函數。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式參考不會列出所有 ODBC 函數呼叫。 只會討論與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式搭配使用時，具有驅動程式特有參數或行為的函數。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合 ODBC 3.51 規格。 如需 ODBC 3.51 的完整參考，請從[資料存取和儲存開發人員中心](https://go.microsoft.com/fwlink?linkid=4173)下載 Microsoft Data ACCESS Components SDK，或參閱《 [odbc](https://go.microsoft.com/fwlink/?LinkId=45250)程式設計人員參考》線上。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合 ODBC 3.51 規格。 如需 ODBC 3.51 的完整參考，請從[資料存取和儲存開發人員中心](https://go.microsoft.com/fwlink?linkid=4173)下載 Microsoft Data ACCESS Components SDK，或參閱《 [odbc](https://go.microsoft.com/fwlink/?LinkId=45250)程式設計人員參考》線上。  
   
 ## <a name="in-this-section"></a>本節內容  
   

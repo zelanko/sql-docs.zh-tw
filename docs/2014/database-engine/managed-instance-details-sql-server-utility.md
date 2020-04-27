@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774340"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>受管理的執行個體詳細資料 (SQL Server 公用程式)
@@ -38,11 +38,11 @@ ms.locfileid: "62774340"
   
  根據預設，下列資料行會顯示有關每一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的健全狀態資訊。  
   
--   執行個體 CPU - 顯示配置給這個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體之處理器使用量的健全狀態。 這個參數的健全狀態是根據針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體設定的 CPU 使用量原則及動態資源評估原則的組態設定所決定。 如需詳細資訊，請參閱[降低 CPU 使用量原則中的雜訊 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   執行個體 CPU - 顯示配置給這個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體之處理器使用量的健全狀態。 這個參數的健全狀態是根據針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體設定的 CPU 使用量原則及動態資源評估原則的組態設定所決定。 如需詳細資訊，請參閱[降低 CPU 使用量原則的雜訊 &#40;SQL Server Utility&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要檢視這個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的處理器使用量歷程記錄，或是檢視或變更原則限制，請按一下 [CPU 使用量]**** 索引標籤。  
   
--   電腦 CPU - 顯示電腦處理器使用量的健全狀態。 這個參數的健全狀態是根據針對電腦設定的 CPU 使用量原則及動態資源評估原則的組態設定所決定。 如需詳細資訊，請參閱[降低 CPU 使用量原則中的雜訊 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   電腦 CPU - 顯示電腦處理器使用量的健全狀態。 這個參數的健全狀態是根據針對電腦設定的 CPU 使用量原則及動態資源評估原則的組態設定所決定。 如需詳細資訊，請參閱[降低 CPU 使用量原則的雜訊 &#40;SQL Server Utility&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要檢視這個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的處理器使用量歷程記錄，或是檢視或變更原則限制，請按一下 [CPU 使用量]**** 索引標籤。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62774340"
 ## <a name="see-also"></a>另請參閱  
  [部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [公用程式儀表板 &#40;SQL Server 公用程式&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [監視 SQL Server 公用程式中的 SQL Server 執行個體](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [監視 SQL Server 公用程式中 SQL Server 的實例](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [疑難排解 SQL Server 公用程式](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   

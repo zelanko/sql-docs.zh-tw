@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770654"
 ---
 # <a name="script-component"></a>指令碼元件
@@ -56,7 +56,7 @@ ms.locfileid: "62770654"
  在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具」中，指令碼元件有兩個模式：中繼資料設計模式與程式碼設計模式。 在中繼資料設計模式中，您可以加入和修改指令碼元件輸入和輸出，但是不能編寫程式碼。 設定好所有輸入和輸出後，您可以切換到程式碼設計模式編寫指令碼。 指令碼元件會自動從輸入和輸出的中繼資料產生基底程式碼。 如果您在指令碼元件產生基底程式碼後變更中繼資料，您的程式碼可能無法再編譯，因為更新的基底程式碼可能與您的程式碼不相容。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>撰寫元件使用的指令碼  
- 腳本元件使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications （VSTA）做為撰寫腳本的環境。 您可以從 **[指令碼轉換編輯器]** 存取 VSTA。 如需詳細資訊，請參閱 [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../script-transformation-editor-script-page.md)。  
+ 指令碼元件使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當作撰寫指令碼的環境。 您可以從 **[指令碼轉換編輯器]** 存取 VSTA。 如需詳細資訊，請參閱 [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../script-transformation-editor-script-page.md)。  
   
  指令碼元件提供 VSTA 專案，其中包含自動產生的類別，該類別名為 ScriptMain 且代表元件中繼資料。 例如，如果指令碼元件當做具有三個輸出的轉換使用，則 ScriptMain 會包含每個輸出的方法。 ScriptMain 是指令碼的進入點。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "62770654"
 ### <a name="configuring-the-script-component-in-the-designer"></a>在設計工具中設定指令碼元件  
  如需有關可以在 **[指令碼轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [腳本轉換編輯器 &#40;輸入資料行頁面&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [[腳本轉換編輯器] &#40;[輸入和輸出] 頁面&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [腳本轉換編輯器 &#40;腳本頁面&#41;](../../script-transformation-editor-script-page.md)  
+-   [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../script-transformation-editor-script-page.md)  
   
--   [[腳本轉換編輯器] &#40;[連接管理員] 頁面&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  如需有關如何在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774582"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "62774582"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   主要資料庫必須使用完整或大量記錄復原模式；若將資料庫切換為簡單復原模式，會使記錄傳送停止運作。  
   
 -   在設定記錄傳送之前，您必須建立一個共用，讓次要伺服器能夠使用交易記錄備份。 這是將要產生交易記錄檔備份之目錄的共用。 例如，您若是將交易記錄備份到 c:\data\tlogs\\目錄，就可以建立該目錄的 \\\\*primaryserver*\tlogs 共用。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  記錄傳送預存程序需要 **sysadmin** 固定伺服器角色中的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>設定記錄傳送  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62774582"
   
 28. 在 **[資料庫屬性]** 對話方塊上，按一下 **[確定]** 以開始設定處理序。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>設定記錄傳送  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62774582"
   
 10. 在次要伺服器上，啟用複製與還原作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [將記錄傳送升級至 SQL Server 2014 &#40;Transact-sql&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -166,6 +166,6 @@ ms.locfileid: "62774582"
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [記錄傳送資料表與預存程序](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

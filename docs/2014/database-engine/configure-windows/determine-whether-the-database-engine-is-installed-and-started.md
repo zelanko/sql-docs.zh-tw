@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bed1ec3eeb3dffe1ff1174d83050cd2e09af4caf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782631"
 ---
 # <a name="determine-whether-the-database-engine-is-installed-and-started"></a>判斷是否已安裝及啟動 Database Engine
   只要成功安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，就會將檔案安裝至檔案系統、在登錄中建立項目並安裝許多工具。 此主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否已安裝並啟動。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="how-to-view-and-start-the-database-engine-by-using-sql-server-configuration-manager"></a>如何使用 SQL Server 組態管理員來檢視並啟動 Database Engine  
   

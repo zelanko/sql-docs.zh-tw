@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815651"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性群組屬性和新增可用性群組 (一般頁面)
-  本主題適用于 [**新增可用性群組**] 對話方塊和 [**可用性群組屬性**] 對話方塊的 [**一般**] 索引標籤。  [新增可用性群組]**** 對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性]**** 對話方塊可讓您檢視和改變現有可用性群組的組態。  
+  本主題適用於 [新增可用性群組]  對話方塊和 [可用性群組屬性]  對話方塊的 [一般]  索引標籤。  [新增可用性群組]  對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性]  對話方塊可讓您檢視和改變現有可用性群組的組態。  
   
  **若要檢視可用性群組屬性**  
   
@@ -29,10 +29,10 @@ ms.locfileid: "62815651"
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **可用性組名**  
+ **可用性群組名稱**  
  可用性群組的名稱。 這是使用者指定的名稱，它在 Windows Server 容錯移轉叢集 (WSFC) 內必須是唯一的。  
   
-## <a name="availability-databases"></a>「可用性資料庫」  
+## <a name="availability-databases"></a>可用性資料庫  
  **Database Name**  
  已經加入至可用性群組的資料庫名稱。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62815651"
  按一下可從可用性群組中移除選取的資料庫。  
   
 ## <a name="availability-replicas"></a>可用性複本  
- **伺服器實例**  
+ **伺服器執行個體**  
  裝載這個複本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的伺服器名稱，如果是非預設執行個體，則是它的執行個體名稱。  
   
  **角色**  
@@ -53,7 +53,7 @@ ms.locfileid: "62815651"
  **次要**  
  目前的次要複本。  
   
- **解決**  
+ **解析中**  
  複本角色目前正在解析成主要或次要角色。  
   
  **可用性模式**  
@@ -76,14 +76,14 @@ ms.locfileid: "62815651"
  **手動**  
  手動容錯移轉。 此複本只能由資料庫管理員手動容錯移轉。  
   
- **主要角色中的連接**  
+ **主要角色的連接模式**  
  當複本擁有主要角色時所支援的用戶端連接類型。  
   
  **允許所有連接**  
  主要複本的資料庫允許所有連接。 這是預設值。  
   
- **允許讀取/寫入連接**  
- 不允許 Application Intent 連接屬性設為 **ReadOnly** 的連接。 當 [應用程式意圖] 屬性設定為 [ **ReadWrite** ]，或未設定 [應用程式意圖連接] 屬性時，就會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
+ **允取讀取/寫入連接**  
+ 不允許 Application Intent 連接屬性設為 **ReadOnly** 的連接。 當 Application Intent 屬性設為 **ReadWrite** 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
  **可讀取次要**  
  執行次要角色的可用性複本 (也就是次要複本) 是否可接受來自用戶端的連接，下列其中一個值：  
@@ -97,7 +97,7 @@ ms.locfileid: "62815651"
  **是**  
  允許與這個複本的次要資料庫之間的所有連接，但只供讀取存取。 可以讀取所有次要資料庫。  
   
- **會話超時（秒）**  
+ **工作階段逾時 (秒)**  
  此複本之工作階段逾時期限的秒數。  
   
  **端點 URL**  

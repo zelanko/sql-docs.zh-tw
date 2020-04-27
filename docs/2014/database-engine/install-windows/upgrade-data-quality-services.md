@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775628"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
@@ -23,16 +23,15 @@ ms.locfileid: "62775628"
 > [!IMPORTANT]
 >  -   在升級 DQS 之前，您必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的遺失資料狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   您可以使用最新或舊版 Data Quality Client 連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Data Quality Server 或 Integration Services 中的 [DQS 清理轉換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) ，以執行您的資料品質工作。  
-> -   將 Data Quality Services 和 Master Data Services 升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 之後，您可以繼續使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以在 [這裡](https://go.microsoft.com/fwlink/?LinkId=328664)下載  SP1 版適用於 Excel 的 Master Data Services 增益集。  
+> -   將 Data Quality Services 和 Master Data Services 升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 之後，您可以繼續使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以在 [這裡](https://go.microsoft.com/fwlink/?LinkId=328664)下載  SP1 版適用於 Excel 的 Master Data Services 增益集。  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   
 -   您的 Windows 使用者帳戶必須是安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 之 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
-##  <a name="Upgrade"></a> 升級 DQS  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> 升級 DQS  
  升級 DQS：  
   
 1.  在開始升級程序之前，請先備份 DQS 資料庫。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
@@ -41,7 +40,7 @@ ms.locfileid: "62775628"
   
     1.  執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。  
   
-    2.  按一下左窗格中的 [安裝]  。  
+    2.  按一下左窗格中的 [安裝]****。  
   
     3.  在右窗格中，按一下 [**從 SQL Server 2005]、[SQL Server 2008]、[SQL Server 2008 R2] 或 [SQL Server 2012**]。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62775628"
   
     5.  在成功升級 DQS 資料庫結構描述之後，將會顯示完成訊息。  
   
-##  <a name="Verify"></a> 確認 DQS 資料庫結構描述升級  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> 確認 DQS 資料庫結構描述升級  
  若要確認 DQS 資料庫結構描述升級成功，您可以查詢中每個資料庫中的 A_DB_VERSION 資料表，以檢查 DQS_MAIN 和 DQS_PROJECTS 資料庫中的目前版本。 若要這樣做：  
   
 1.  啟動 SQL Server Management Studio，並連接到包含已升級之 DQS 資料庫結構描述的 SQL Server 執行個體。  
@@ -84,7 +83,7 @@ ms.locfileid: "62775628"
   
 3.  輸出會顯示每個升級項目和升級日期。 最新日期的最大 VERSION_ID 和 ASSEMBLY_VERSION 為目前版本。 STATUS 資料行中的值為 2 代表成功。 如果發生錯誤，錯誤會列示在 ERROR 資料行中。 範例輸出：  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|狀態|ERROR|  
+    |識別碼|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|狀態|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<網域\使用者名稱>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<網域\使用者名稱>|2||  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812290"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>設定用於 Database Engine 存取的 Windows 防火牆
@@ -52,10 +52,10 @@ ms.locfileid: "62812290"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 請先確定您已了解防火牆系統，然後再開啟通訊埠。 如需相關資訊，請參閱 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
  適用於 Windows Vista、Windows 7 和 Windows Server 2008  
   
  下列程序使用「具有進階安全性的 Windows 防火牆」Microsoft Management Console (MMC) 嵌入式管理單元設定 Windows 防火牆。 「具有進階安全性的 Windows 防火牆」只會設定目前的設定檔。 如需 [具有進階安全性的 Windows 防火牆] 的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
@@ -84,8 +84,7 @@ ms.locfileid: "62812290"
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[程式]** ，然後按 **[下一步]** 。  
   
-4.  在 **[程式]** 對話方塊中，選取 **[這個程式路徑]** 。 按一下 **[瀏覽]** ，並導覽至您想要透過防火牆存取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[開啟]** 。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設位於 **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 按 [下一步]  。  
+4.  在 **[程式]** 對話方塊中，選取 **[這個程式路徑]** 。 按一下 **[瀏覽]** ，並導覽至您想要透過防火牆存取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[開啟]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設位於 **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 按 [下一步]  。  
   
 5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]** ，然後按 **[下一步]** 。  
   

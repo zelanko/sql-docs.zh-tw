@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813242"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>檢視可用性群組屬性 (SQL Server)
@@ -24,14 +24,14 @@ ms.locfileid: "62813242"
   
 
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要檢視及變更可用性群組的屬性**  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
 2.  依序展開 **[AlwaysOn 高可用性]** 節點和 **[可用性群組]** 節點。  
   
-3.  以滑鼠右鍵按一下要檢視其屬性的可用性群組，然後選取 [屬性]  命令。  
+3.  以滑鼠右鍵按一下要檢視其屬性的可用性群組，然後選取 [屬性]**** 命令。  
   
 4.  在 **[可用性群組屬性]** 對話方塊中，使用 **[一般]** 和 **[備份喜好設定]** 頁面檢視所選可用性群組的屬性，並在某些情況下變更這些屬性。 如需詳細資訊，請參閱[可用性群組屬性和新增可用性群組 &#40;一般頁面&#41;](availability-group-properties-new-availability-group-general-page.md) 和[可用性群組屬性：新增可用性群組 &#40;備份喜好設定頁面&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62813242"
   
 
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要檢視可用性群組的屬性和狀態**  
   
  若要針對伺服器執行個體裝載其可用性複本的可用性群組，查詢其屬性和狀態，請使用下列檢視：  
@@ -61,7 +61,7 @@ ms.locfileid: "62813242"
   
 
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要檢視可用性群組的相關資訊**  
   
 -   [檢視可用性複本屬性 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
@@ -76,7 +76,7 @@ ms.locfileid: "62813242"
   
  **設定現有的可用性群組**  
   
--   [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [將次要複本新增至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 -   [將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   

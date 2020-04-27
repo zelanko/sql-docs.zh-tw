@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774250"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>檢視記錄傳送報表 (SQL Server Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "62774250"
   
  對於目前伺服器執行個體所執行的每一個角色，您可以檢視下列資訊：  
   
-|角色|顯示的資訊|  
+|[角色]|顯示的資訊|  
 |----------|---------------------------|  
 |監視|使用此伺服器執行個體作為其監視伺服器的所有主要伺服器及次要伺服器，其名稱及狀態。|  
 |Primary|對於每一個主要資料庫，此為目前伺服器執行個體 (作為主要伺服器) 的狀態與名稱，還有主要資料庫名稱。 報表會顯示備份作業 (儲存在主要伺服器的本機上) 的狀態。<br /><br /> 報表也會針對每一個對應的次要伺服器，各顯示一個資料列。 如果組態使用監視伺服器，且預存程序可以連接到監視伺服器，這些資料列會顯示最新記錄備份的複製狀態及還原狀態。|  
@@ -43,9 +43,9 @@ ms.locfileid: "62774250"
   
 1.  連接到監視伺服器、主要伺服器或次要伺服器。  
   
-2.  以滑鼠右鍵按一下 [物件總管] 中的伺服器執行個體，然後依序指向 [報表]  和 [標準報表]  。  
+2.  以滑鼠右鍵按一下 [物件總管] 中的伺服器執行個體，然後依序指向 [報表]**** 和 [標準報表]****。  
   
-3.  按一下 **[交易記錄傳送狀態]** 。  
+3.  按一下 **[交易記錄傳送狀態]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視記錄傳送 &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  

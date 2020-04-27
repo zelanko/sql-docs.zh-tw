@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807422"
 ---
 # <a name="cross-container-transactions"></a>跨容器交易
@@ -24,7 +24,7 @@ ms.locfileid: "62807422"
   
  參考記憶體最佳化的資料表的任何解譯的查詢都視為跨容器交易的一部分，不論是從明確或隱含交易執行還是在自動認可模式中執行。  
   
-##  <a name="isolation"></a>隔離個別作業  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>隔離個別作業  
  每一筆 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 交易都有隔離等級。 預設隔離等級為 Read Committed。 若要使用不同的隔離等級，您可以使用[SET TRANSACTION 隔離等級 &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)設定隔離等級。  
   
  相較於以磁碟為基礎的資料表作業，在記憶體最佳化的資料表上執行作業通常更需要在不同的隔離等級。 在交易中，為陳述式集合或個別讀取作業設定不同隔離等級是可行的。  
@@ -99,7 +99,7 @@ commit
  保證資料讀取為已認可狀態，而且一直到交易的邏輯結束時間為止都很穩定。  
   
  SERIALIZABLE  
- 所有可重複讀取的保證，以及與 T 所執行之所有 serializable 讀取作業相關的交易一致性。虛設的規避表示掃描工作只能傳回 T 所寫入的其他資料列，但不能其他交易所寫入的資料列。  
+ 可重複讀取的所有保證，以及與 T 所執行之所有可序列化讀取作業相關的交易一致性。虛設避免表示掃描工作只能傳回 T 所寫入的其他資料列，但沒有其他交易寫入的資料列。  
   
  以下列交易為例：  
   
@@ -172,15 +172,14 @@ commit
   
  記憶體最佳化的資料表可支援 SNAPSHOT、REPEATABLE READ 和 SERIALIZABLE 隔離等級。 如果是自動認可交易，記憶體最佳化的資料表可支援 READ COMMITTED 隔離等級。  
   
- 支援下列案例：  
+ 以下是支援的案例：  
   
 -   READ UNCOMMITTED、READ COMMITTED 和 READ_COMMITTED_SNAPSHOT 跨容器交易可以在 SNAPSHOT、REPEATABLE READ 和 SERIALIZABLE 隔離之下存取記憶體最佳化的資料表。 交易的 READ COMMITTED 保證依然存在；資料庫已認可此交易讀取的所有資料列。  
   
 -   REPEATABLE READ 和 SERIALIZABLE 交易可以在 SNAPSHOT 隔離之下存取記憶體最佳化的資料表。  
   
 ## <a name="read-only-cross-container-transactions"></a>唯讀的跨容器交易  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的大部分唯讀交易都會在認可時間回復。 因為資料庫不需認可任何變更，所以系統會釋出交易所使用的資源。 如果是唯讀的磁碟交易，交易所做的所有鎖定都會在此時釋放。 如果是跨越單一原生編譯程序執行的唯讀記憶體最佳化交易，則不會執行驗證。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的大部分唯讀交易都會在認可時間回復。 因為資料庫不需認可任何變更，所以系統會釋出交易所使用的資源。 如果是唯讀的磁碟交易，交易所做的所有鎖定都會在此時釋放。 如果是跨越單一原生編譯程序執行的唯讀記憶體最佳化交易，則不會執行驗證。  
   
  自動認可模式中的跨容器唯讀交易會在交易結束時回復。 未執行任何驗證。  
   

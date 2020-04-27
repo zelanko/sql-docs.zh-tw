@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771414"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
@@ -197,8 +197,7 @@ ms.locfileid: "62771414"
         ```  
   
         > [!NOTE]  
-        >  
-  `Thread.Sleep` 方法應為以毫秒指定的引數。  
+        >  `Thread.Sleep` 方法應為以毫秒指定的引數。  
   
 7.  保留從指令碼之執行傳回 `DtsExecResult.Success` 的預設程式碼行。  
   

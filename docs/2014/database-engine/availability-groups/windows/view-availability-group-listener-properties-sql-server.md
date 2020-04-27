@@ -15,22 +15,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788024"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>檢視可用性群組接聽程式屬性 (SQL Server)
   此主題描述如何使用 *中的* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來檢視 AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] 「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener) 的屬性。  
   
--   **若要使用下列內容來查看接聽程式屬性：**  
+-   **若要檢視接聽程式屬性，可使用下列項目：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要檢視接聽程式屬性**  
   
 1.  在 [物件總管] 中，連接到裝載您想要檢視其接聽程式之可用性群組的任何可用性複本的伺服器執行個體。 按一下伺服器名稱展開伺服器樹狀目錄。  
@@ -39,11 +39,11 @@ ms.locfileid: "62788024"
   
 3.  展開可用性群組的節點，然後展開 **[可用性群組接聽程式]** 節點。  
   
-4.  以滑鼠右鍵按一下您想要檢視的接聽程式，然後選取 [屬性]  命令。  
+4.  以滑鼠右鍵按一下您想要檢視的接聽程式，然後選取 [屬性]**** 命令。  
   
 5.  這樣就會開啟 **[可用性群組接聽項屬性]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的 [可用性群組接聽程式屬性 (對話方塊)](#AgListenerPropertiesDialog)。  
   
-###  <a name="AgListenerPropertiesDialog"></a> 可用性群組接聽程式屬性 (對話方塊)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a>可用性群組接聽程式屬性（對話方塊）  
  **接聽程式 DNS 名稱**  
  可用性群組接聽程式的網路名稱。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62788024"
   
  此方格會顯示接聽程式所接聽的每個子網路，以及與該子網路相關聯的 IP 位址。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要檢視接聽程式屬性**  
   
  若要監視可用性群組接聽程式，請使用下列檢視：  
@@ -87,7 +87,7 @@ ms.locfileid: "62788024"
 > [!NOTE]  
 >  如需使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 監視 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境的詳細資訊，請參閱 [監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)(Availability Group Listener) 的屬性。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62788024"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

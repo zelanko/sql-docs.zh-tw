@@ -13,15 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774210"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>新增全文檢索停用字詞表 (一般頁面)
-  使用這個對話方塊，即可建立全文檢索停用字詞表。 
-  *「停用字詞表」* (Stoplist) 是指一組稱為 *「停用字詞」*(Stopword) 的常用字，而使用該停用字詞表之資料表的全文檢索索引會省略這些字。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
+  使用這個對話方塊，即可建立全文檢索停用字詞表。 *「停用字詞表」* (Stoplist) 是指一組稱為 *「停用字詞」*(Stopword) 的常用字，而使用該停用字詞表之資料表的全文檢索索引會省略這些字。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
   
  **使用 SQL Server Management Studio 來建立停用字詞表**  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62774210"
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [建立全文檢索停用字詞表 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   
  [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  

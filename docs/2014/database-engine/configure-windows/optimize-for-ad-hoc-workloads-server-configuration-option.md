@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7edf279b49374823c9083005be9b8d047b003f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781434"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>針對特定工作負載最佳化伺服器組態選項
@@ -28,13 +28,13 @@ ms.locfileid: "62781434"
   
  已編譯計畫虛設常式是 sys.dm_exec_cached_plans 目錄檢視所顯示的其中一個 cacheobjtype。 它具有唯一的 SQL 控制代碼和計畫控制代碼。 已編譯計畫虛設常式沒有相關聯的執行計畫，因此查詢計畫控制代碼將不會傳回 XML 執行程序表。  
   
- 追蹤旗標 8032 會將快取限制參數還原為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM 設定，這項設定通常會允許使用更大的快取。 當經常重複使用的快取專案無法納入快取中，以及 [*針對特定工作負載優化] 伺服器設定選項*無法解決計畫快取的問題時，請使用此設定。  
+ 追蹤旗標 8032 會將快取限制參數還原為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM 設定，這項設定通常會允許使用更大的快取。 當經常重複使用的快取項目無法納入快取中，以及 *針對特定工作負載最佳化伺服器組態選項* 無法解決計畫快取的問題時，請使用這項設定。  
   
 > [!WARNING]  
 >  如果大型快取為其他記憶體取用者 (例如緩衝集區) 提供較少的記憶體，追蹤旗標 8032 可能會導致效能降低。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
+ [dm_exec_cached_plans &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
  [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

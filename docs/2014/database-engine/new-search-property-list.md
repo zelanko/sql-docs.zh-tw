@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774496"
 ---
 # <a name="new-search-property-list"></a>新增搜尋屬性清單
@@ -51,8 +51,8 @@ ms.locfileid: "62774496"
  如需如何建立、檢視、變更或刪除搜尋屬性清單，以及如何設定全文檢索索引以進行屬性搜尋的詳細資訊，請參閱＜ [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
- [使用搜索屬性清單搜索文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [建立搜尋屬性清單 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
+ [使用搜尋屬性清單搜尋文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775005"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立執行個體的電腦
@@ -47,7 +47,7 @@ ms.locfileid: "62775005"
   
  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您可以使用新的電腦名稱連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 為了確定 @@SERVERNAME 傳回已更新的本機伺服器執行個體名稱，您應該手動執行下列適用於您狀況的程序。 您所使用的程序需視正在更新的電腦是主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設執行個體還是具名執行個體而定。  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>重新命名主控獨立執行個體的電腦 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>重新命名主控獨立執行個體的電腦 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   若為主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設執行個體的重新命名電腦，請執行下列程序：  
   

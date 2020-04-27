@@ -13,35 +13,35 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809274"
 ---
 # <a name="server-properties-processors-page"></a>伺服器屬性 (處理器頁面)
   使用此頁面來檢視或修改處理器選項。 只有在安裝了一個以上的處理器時，處理器相似性設定才會啟用。  
   
 ## <a name="options"></a>選項。  
- **處理器親和性**  
+ **處理器相似性**  
  將處理器指派給特定的執行緒，以避免執行處理器重新載入，並減少在處理器間進行執行緒的移轉。 如需詳細資訊，請參閱 [affinity mask 伺服器組態選項](affinity-mask-server-configuration-option.md)。  
   
- **I/o 親和性**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將磁片 i/o 系結至指定的 cpu 子集。 如需詳細資訊，請參閱 [affinity I/O mask 伺服器組態選項](affinity-input-output-mask-server-configuration-option.md)。  
+ **I/O 相似性**  
+ 將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟 I/O 繫結到指定 CPU 的子集。 如需詳細資訊，請參閱 [affinity I/O mask 伺服器組態選項](affinity-input-output-mask-server-configuration-option.md)。  
   
- **自動設定所有處理器的處理器親和性遮罩**  
+ **自動設定所有處理器的處理器相似性遮罩**  
  允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定處理器相似性。  
   
- **自動設定所有處理器的 i/o 親和性遮罩**  
+ **自動設定所有處理器的 I/O 相似性遮罩**  
  允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定 I/O 相似性。  
   
  **最大工作者執行緒**  
  0 允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能動態設定工作者執行緒的數目。 此設定對大多數系統都是最佳的。 然而，視系統組態而定，將此選項設定成特定的值，有時候可以提高效能。 如需詳細資訊，請參閱 [設定 max worker threads 伺服器組態選項](configure-the-max-worker-threads-server-configuration-option.md)。  
   
- **提升 SQL Server 優先順序**  
+ **提高 SQL Server 優先權**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否要使用比同一台電腦上之其他處理序更高的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 排序優先權來執行。 如需詳細資訊，請參閱 [設定 priority boost 伺服器組態選項](configure-the-priority-boost-server-configuration-option.md)。  
   
- **使用 Windows 纖維（輕量共用）**  
+ **使用 Windows Fibers (輕量型共用)**  
  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用 Windows Fibers 而不用執行緒。 請注意，這只有在 Windows 2003 Server Edition 中才可以使用。 如需詳細資訊，請參閱 [輕量型共用伺服器組態選項](lightweight-pooling-server-configuration-option.md)。  
   
  **設定的值**  

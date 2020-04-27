@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779369"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>將功能加入至 SQL Server 2014 的執行個體 (安裝程式)
@@ -37,7 +37,7 @@ ms.locfileid: "62779369"
   
 ## <a name="procedures"></a>程序  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>若要從命令提示字元，將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>若要從命令提示字元，將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 setup.exe。 如果出現 [[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝程式] 對話方塊，請[!INCLUDE[clickOK](../../includes/clickok-md.md)] 安裝必要條件，然後按一下 [取消]  以結束 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。  
   

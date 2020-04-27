@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775328"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
@@ -32,7 +32,7 @@ ms.locfileid: "62775328"
   
 -   \\\ServerName\ShareName  
   
- 如需通用命名慣例的詳細資訊， [](https://go.microsoft.com/fwlink/?LinkId=245534)請參閱https://go.microsoft.com/fwlink/?LinkId=245534)UNC （。  
+ 如需通用命名慣例的詳細資訊， [UNC](https://go.microsoft.com/fwlink/?LinkId=245534)請參閱https://go.microsoft.com/fwlink/?LinkId=245534)UNC （。  
   
  不建議使用回送 UNC 路徑 (伺服器名稱為 localhost (127.0.0.1) 的 UNC 路徑，或是本機電腦名稱)。 使用檔案伺服器叢集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (裝載於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行的相同節點上) 也不受支援，這是特殊案例。 為了避免這個狀況發生，建議將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和檔案伺服器叢集建立在不同的 Windows 叢集上。  
   
@@ -81,24 +81,19 @@ ms.locfileid: "62775328"
   
      如需在中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用各種命令列參數選項的詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>作業系統考量 (SMB 通訊協定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>作業系統考量 (SMB 通訊協定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  不同的 Windows 作業系統有不同的 SMB 通訊協定版本，而且 SMB 通訊協定版本對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言是透明的。 您可以找到不同 SMB 通訊協定版本相對於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的優點。  
   
 |作業系統|SMB2 通訊協定版本|對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|相較於舊版 SMB，新版中已改良效能。<br /><br /> 持久性，有助於從暫時性網路問題復原。|  
-|
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包括 Server Core|2.1|支援大型 MTU，有助於大型資料傳送，例如 SQL 備份和還原。 此功能必須由使用者啟用。 如需如何啟用這項功能的詳細資訊，請參閱[SMB 的新功能](https://go.microsoft.com/fwlink/?LinkID=237319)（https://go.microsoft.com/fwlink/?LinkID=237319)。<br /><br /> 大幅改良效能，特別是針對 SQL OLTP 樣式工作負載方面。 這些效能改良需要套用 Hotfix。 如需有關此修補程式的詳細[](https://go.microsoft.com/fwlink/?LinkId=237320)資訊，https://go.microsoft.com/fwlink/?LinkId=237320)請參閱這個（。|  
-|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包括 Server Core|3.0|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區的詳細資訊，請參閱[伺服器訊息區總覽](https://go.microsoft.com/fwlink/?LinkId=253174)（https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。|  
-|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包括 Server Core|3.2|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 利用 SMB Multichannel，支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 利用 SMB Direct 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區的詳細資訊，請參閱[伺服器訊息區總覽](https://go.microsoft.com/fwlink/?LinkId=253174)（https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。<br /><br /> 最佳化對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 的常用小型隨機讀取/寫入 I/O。<br /><br /> 預設會啟動最大傳輸單位 (MTU)，可大幅提高大型循序傳送的效能，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料倉儲及資料庫備份或還原。|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|相較於舊版 SMB，新版中已改良效能。<br /><br /> 持久性，有助於從暫時性網路問題復原。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包括 Server Core|2.1|支援大型 MTU，有助於大型資料傳送，例如 SQL 備份和還原。 此功能必須由使用者啟用。 如需如何啟用這項功能的詳細資訊，請參閱[SMB 的新功能](https://go.microsoft.com/fwlink/?LinkID=237319)（https://go.microsoft.com/fwlink/?LinkID=237319)。<br /><br /> 大幅改良效能，特別是針對 SQL OLTP 樣式工作負載方面。 這些效能改良需要套用 Hotfix。 如需有關此修補程式的詳細[this](https://go.microsoft.com/fwlink/?LinkId=237320)資訊，https://go.microsoft.com/fwlink/?LinkId=237320)請參閱這個（。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包括 Server Core|3.0|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區的詳細資訊，請參閱[伺服器訊息區總覽](https://go.microsoft.com/fwlink/?LinkId=253174)（https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包括 Server Core|3.2|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 利用 SMB Multichannel，支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 利用 SMB Direct 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區的詳細資訊，請參閱[伺服器訊息區總覽](https://go.microsoft.com/fwlink/?LinkId=253174)（https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。<br /><br /> 最佳化對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 的常用小型隨機讀取/寫入 I/O。<br /><br /> 預設會啟動最大傳輸單位 (MTU)，可大幅提高大型循序傳送的效能，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料倉儲及資料庫備份或還原。|  
   
 ## <a name="security-considerations"></a>安全性考量  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶應該擁有 SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限。 如果使用 SMB 檔案伺服器， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶可以是網域帳戶或系統帳戶。 如需有關共用和 NTFS 許可權的詳細資訊，請參閱[檔案伺服器上的共用和 Ntfs 許可權](https://go.microsoft.com/fwlink/?LinkId=245535)（https://go.microsoft.com/fwlink/?LinkId=245535)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶應該擁有 SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限。 如果使用 SMB 檔案伺服器， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶可以是網域帳戶或系統帳戶。 如需有關共用和 NTFS 許可權的詳細資訊，請參閱[檔案伺服器上的共用和 Ntfs 許可權](https://go.microsoft.com/fwlink/?LinkId=245535)（https://go.microsoft.com/fwlink/?LinkId=245535)。  
   
     > [!NOTE]  
     >  SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限僅限於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶以及具有管理伺服器角色的 Windows 使用者。  

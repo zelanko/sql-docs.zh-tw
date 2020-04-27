@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774572"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升級為不同的 SQL Server 2014 版本 (安裝程式)
@@ -26,7 +26,7 @@ ms.locfileid: "62774572"
   
 -   [SQL Server 版本的計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **在叢集環境中： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **在叢集的其中一個節點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行版本升級就已足夠。 這個節點可以是主動或被動節點，而且引擎不會在版本升級期間讓資源離線。 版本升級之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或容錯移轉至不同的節點。  
@@ -39,7 +39,7 @@ ms.locfileid: "62774572"
   
 ## <a name="procedure"></a>程序  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>若要升級至不同的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>若要升級至不同的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中按兩下 setup.exe，或從 [組態工具] 啟動 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心]。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   

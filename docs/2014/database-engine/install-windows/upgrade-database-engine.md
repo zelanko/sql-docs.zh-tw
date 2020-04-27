@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774966"
 ---
 # <a name="upgrade-database-engine"></a>升級 Database Engine
@@ -43,11 +43,10 @@ ms.locfileid: "62774966"
 >  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個版本升級到另一個版本之前，請確認您目前使用的功能在您想要升級後的版本中有受到支援。  
   
 > [!NOTE]  
->  當您從舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition 升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請選擇 [Enterprise Edition：核心授權] 或 [Enterprise Edition]。 這些 Enterprise Edition 只有在授權模式方面不同。 如需詳細資訊，請參閱[依版本 SQL Server 的計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+>  當您從舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition 升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請選擇 [Enterprise Edition：核心授權] 或 [Enterprise Edition]。 這些 Enterprise Edition 只有在授權模式方面不同。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
 ## <a name="pre-upgrade-checklist"></a>升級前檢查清單  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援從舊版升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您也可以從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉資料庫。 您可以從一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移轉到同一部電腦的另一個執行個體，或是從另一部電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移轉。 移轉選項包括使用複製資料庫精靈、備份與還原功能、使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 匯入與匯出精靈，以及大量匯出/大量匯入方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援從舊版升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您也可以從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉資料庫。 您可以從一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移轉到同一部電腦的另一個執行個體，或是從另一部電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移轉。 移轉選項包括使用複製資料庫精靈、備份與還原功能、使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 匯入與匯出精靈，以及大量匯出/大量匯入方法。  
   
  在升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，請檢閱下列文章：  
   
@@ -103,8 +102,7 @@ ms.locfileid: "62774966"
  您可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝精靈來升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>升級後的資料庫相容性層級  
- 升級之後`tempdb`， `model`、 `msdb`和**資源**資料庫的相容性層級會設定為120。 
-  `master` 系統資料庫會繼續保有升級前的相容性層級。  
+ 升級之後`tempdb`， `model`、 `msdb`和**資源**資料庫的相容性層級會設定為120。 `master` 系統資料庫會繼續保有升級前的相容性層級。  
   
  如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所支援的最低相容性層級)。  
   
@@ -126,8 +124,7 @@ ms.locfileid: "62774966"
   
 -   為確保查詢結果中語意的一致性，必須重新擴展全文檢索目錄。  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝新的斷詞工具，供全文索引與語意搜尋之用。 編製索引及查詢時皆可使用斷詞工具。 如不重建全文索引目錄，可能會造成搜尋結果不一致。 當您發出全文索引查詢，尋找在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 斷詞工具中與目前之斷詞工具中斷詞方式相異的片語，可能會無法擷取含有該片語的文件或資料列。 這是索引片語所使用的分解邏輯與查詢所用者不相同所致。 此方案會使用新的斷詞工具重新擴展 (重建) 全文索引目錄，讓索引與查詢時的行為一致。  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝新的斷詞工具，供全文索引與語意搜尋之用。 編製索引及查詢時皆可使用斷詞工具。 如不重建全文索引目錄，可能會造成搜尋結果不一致。 當您發出全文索引查詢，尋找在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 斷詞工具中與目前之斷詞工具中斷詞方式相異的片語，可能會無法擷取含有該片語的文件或資料列。 這是索引片語所使用的分解邏輯與查詢所用者不相同所致。 此方案會使用新的斷詞工具重新擴展 (重建) 全文索引目錄，讓索引與查詢時的行為一致。  
   
      如需詳細資訊，請參閱 [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql)。  
   
@@ -135,8 +132,7 @@ ms.locfileid: "62774966"
   
 -   驗證或移除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所產生及套用至分割區資料表和索引上之查詢的 USE PLAN 提示。  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 改變了在分割區資料表和索引上處理查詢的方式。 在分割區物件上，針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所產生之計畫使用 USE PLAN 提示的查詢包含了無法在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的計畫。 我們建議您在升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，使用以下程序。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 改變了在分割區資料表和索引上處理查詢的方式。 在分割區物件上，針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所產生之計畫使用 USE PLAN 提示的查詢包含了無法在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的計畫。 我們建議您在升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，使用以下程序。  
   
      **在查詢中直接指定 USE PLAN 提示時：**  
   

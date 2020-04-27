@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773810"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>公用程式儀表板 (SQL Server 公用程式)
@@ -24,13 +24,11 @@ ms.locfileid: "62773810"
   
 ## <a name="uielement-list"></a>UIElement 清單  
  Managed 執行個體健全狀況  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的健全狀態會顯示在 [公用程式總管] 內容窗格的左邊。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的健全狀態會顯示在 [公用程式總管] 內容窗格的左邊。  
   
  Managed 執行個體健全狀況的參數如下：  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
   
 -   資料庫檔案使用量。  
   
@@ -64,8 +62,7 @@ ms.locfileid: "62773810"
   
  資料層應用程式健全狀況的參數如下：  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
   
 -   資料庫檔案使用量。  
   
@@ -106,7 +103,7 @@ ms.locfileid: "62773810"
  在儀表板的右下方，儲存使用量圓形圖會顯示包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Managed 執行個體之電腦磁碟區上的使用空間與可用空間的比率。 此顯示畫面的資料每隔 15 分鐘會重新整理一次。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用公用程式總管來管理 SQL Server 公用程式](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
+ [使用公用程式瀏覽器來管理 SQL Server 公用程式](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [註冊 SQL Server &#40;SQL Server 公用程式的實例&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [修改資源健康情況原則定義 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   

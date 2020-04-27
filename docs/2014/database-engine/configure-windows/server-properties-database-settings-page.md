@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809530"
 ---
 # <a name="server-properties-database-settings-page"></a>伺服器屬性 (資料庫設定頁面)
@@ -59,7 +59,7 @@ ms.locfileid: "62809530"
  **復原間隔 (分鐘)**  
  設定每個資料庫復原的最長時間 (分鐘)。 預設值是 0，指出由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動組態。 實務上，這表示復原時間小於一分鐘，而且使用中資料庫幾乎每分鐘有一次檢查點。 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](configure-the-recovery-interval-server-configuration-option.md)。  
   
- **資料**  
+ **Data**  
  指定資料檔案的預設位置。 按一下 [瀏覽] 按鈕，即可導覽到新的預設位置。 要等到重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後才會生效。  
   
  **Log**  
@@ -68,7 +68,7 @@ ms.locfileid: "62809530"
  **設定的值**  
  針對此窗格中的選項，顯示設定的值。 如果您變更這些值，請按一下 **[執行中的值]** ，即可查看變更是否已生效。 如果沒有的話，就必須先重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
- **[執行中的值]**  
+ **執行值**  
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  

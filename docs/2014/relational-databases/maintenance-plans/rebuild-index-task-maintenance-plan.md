@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806980"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>重建索引工作 (維護計畫)
@@ -28,7 +28,7 @@ ms.locfileid: "62806980"
  [重建索引工作]  會使用 ALTER INDEX 陳述式。  
   
 ## <a name="options"></a>選項。  
- **[連接]**  
+ **建立**  
  選取執行此工作時要使用的伺服器連接。  
   
  **新增**  
@@ -56,10 +56,10 @@ ms.locfileid: "62806980"
     > [!NOTE]  
     >  維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
- **Object**  
+ **目標**  
  限制 [選取範圍]**** 格線僅顯示資料表、檢視或兩者。  
   
- **選取項目**  
+ **選項**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  
   
  **使用預設的可用空間量重新組織頁面**  
@@ -75,9 +75,9 @@ ms.locfileid: "62806980"
  使用 `ONLINE` 選項，而這個選項可讓使用者在索引作業期間存取基礎資料表或叢集索引資料以及任何相關的非叢集索引。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都可以使用線上索引作業。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- **View T-sql**  
+ **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
@@ -90,10 +90,10 @@ ms.locfileid: "62806980"
  **選取或輸入伺服器名稱**  
  選取執行此工作時要連接的伺服器。  
   
- **[重新整理]**  
+ **重新整理**  
  重新整理可用的伺服器清單。  
   
- **輸入資訊以登入伺服器**  
+ **輸入要登入到伺服器的資訊**  
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
@@ -109,7 +109,7 @@ ms.locfileid: "62806980"
  提供驗證時要使用的密碼。 無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [索引的 SORT_IN_TEMPDB 選項](../indexes/indexes.md)   

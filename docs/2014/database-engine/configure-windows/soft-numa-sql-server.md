@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809028"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>設定 SQL Server 使用軟體 NUMA (SQL Server)
@@ -47,9 +47,7 @@ ms.locfileid: "62809028"
   
  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- 請思考一下下列範例。 一部具有八個 CPU 的電腦沒有硬體 NUMA。 三個軟體 NUMA 節點已設定。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體 A 是設定成使用 CPU 0 到 3。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的第二個執行個體安裝及設定為使用 CPU 4 到 7。 此範例可以視覺化方式表示如下：  
+ 請思考一下下列範例。 一部具有八個 CPU 的電腦沒有硬體 NUMA。 三個軟體 NUMA 節點已設定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體 A 是設定成使用 CPU 0 到 3。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的第二個執行個體安裝及設定為使用 CPU 4 到 7。 此範例可以視覺化方式表示如下：  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -86,7 +84,7 @@ ms.locfileid: "62809028"
   
      下列範例假設您有 DL580 G9 伺服器。該伺服器的每個插槽 (共有 4 個插槽) 安裝有 18 顆核心，且每個插槽各位在其 K 群組中。 您可以建立類似下列的軟體 numa 組態 (每個節點 6 顆核心、每個群組 3 個節點、4 個群組)。  
   
-    |具有多個 K 群組的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 伺服器範例|類型|值名稱|值資料|  
+    |具有多個 K 群組的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 伺服器範例|類型|值名稱|[數值資料]|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|群組|0|  
@@ -115,7 +113,7 @@ ms.locfileid: "62809028"
   
      其他範例：  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|類型|值名稱|值資料|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|類型|值名稱|[數值資料]|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|群組|0|  
@@ -127,7 +125,7 @@ ms.locfileid: "62809028"
     > [!TIP]  
     >  若要指定 CPU 60 到 63，請使用 QWORD 值 F000000000000000 或 BINARY 值 1111000000000000000000000000000000000000000000000000000000000000。  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|類型|值名稱|值資料|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|類型|值名稱|[數值資料]|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|群組|0|  
@@ -136,7 +134,7 @@ ms.locfileid: "62809028"
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|群組|0|  
   
-    |SQL Server 2008 R2|類型|值名稱|值資料|  
+    |SQL Server 2008 R2|類型|值名稱|[數值資料]|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|群組|0|  
@@ -145,13 +143,13 @@ ms.locfileid: "62809028"
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|群組|0|  
   
-    |SQL Server 2008|類型|值名稱|值資料|  
+    |SQL Server 2008|類型|值名稱|[數值資料]|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|類型|值名稱|值資料|  
+    |SQL Server 2005|類型|值名稱|[數值資料]|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
@@ -159,7 +157,7 @@ ms.locfileid: "62809028"
   
 ## <a name="see-also"></a>另請參閱  
  [將 TCP IP 埠對應到 NUMA 節點 &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
- [affinity mask 伺服器組態選項](affinity-mask-server-configuration-option.md)   
+ [親和性遮罩伺服器設定選項](affinity-mask-server-configuration-option.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

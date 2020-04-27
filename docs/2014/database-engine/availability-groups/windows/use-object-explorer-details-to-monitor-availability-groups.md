@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788321"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>使用物件總管詳細資料監視可用性群組 (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62788321"
   
 -   **開始之前：**  [必要條件](#Prerequisites)  
   
--   **若要監視可用性群組，請使用：**  [SQL Server Management Studio](#SSMSProcedure)  
+-   **若要使用下列項目監視可用性群組：**  [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **物件總管詳細資料：**  
   
@@ -41,12 +41,12 @@ ms.locfileid: "62788321"
   
      [可用性資料庫詳細資料](#AvDbDetails)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **監視可用性群組、可用性複本和可用性資料庫**  
   
 1.  在 [檢視] 功能表上，按一下 **[物件總管詳細資料]** 或按 **F7** 鍵。  
@@ -55,8 +55,7 @@ ms.locfileid: "62788321"
   
 3.  依序展開 **[AlwaysOn 高可用性]** 節點和 **[可用性群組]** 節點。  
   
-4.  
-  **[物件總管詳細資料]** 窗格會顯示連接之伺服器執行個體裝載複本的每個可用性群組。 對於每個可用性群組，[伺服器執行個體 (主要)]**** 資料行會顯示目前裝載主要複本的伺服器執行個體名稱。  若要顯示有關給定之可用性群組的詳細資訊，請在 [物件總管] 中選取它。  
+4.  **[物件總管詳細資料]** 窗格會顯示連接之伺服器執行個體裝載複本的每個可用性群組。 對於每個可用性群組，[伺服器執行個體 (主要)]**** 資料行會顯示目前裝載主要複本的伺服器執行個體名稱。  若要顯示有關給定之可用性群組的詳細資訊，請在 [物件總管] 中選取它。  
   
 5.  接著 **[物件總管詳細資料]** 窗格會顯示此可用性群組的 **[可用性複本]** 和 **[可用性資料庫]** 節點：  
   
@@ -68,24 +67,22 @@ ms.locfileid: "62788321"
   
          若要對多個可用性資料庫執行作業，請選取它們，並以滑鼠右鍵按一下它們，開啟列出可用命令的內容功能表。  
   
-##  <a name="AvGroupsDetails"></a>可用性群組詳細資料  
- 
-  **[可用性群組]** 詳細資料畫面顯示下列資料行：  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a>可用性群組詳細資料  
+ **[可用性群組]** 詳細資料畫面顯示下列資料行：  
   
  **名稱**  
  列出所選可用性群組的 [可用性複本]****、[可用性資料庫]**** 和 [可用性群組接聽程式]**** 資料夾。  
   
-##  <a name="AvReplicaDetails"></a> 可用性複本詳細資料  
- 
-  **[可用性複本]** 詳細資料畫面顯示下列資料行：  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性複本詳細資料  
+ **[可用性複本]** 詳細資料畫面顯示下列資料行：  
   
- **伺服器執行個體**  
+ **伺服器實例**  
  顯示裝載可用性複本的伺服器執行個體名稱，以及表示此伺服器執行個體與本機伺服器執行個體之間目前連接狀態的圖示。  
   
  **角色**  
  指出可用性複本的目前角色： **主要** 或 **次要**。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的相關資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
   
- **次要角色中的連接模式**  
+ **次要角色的連接模式**  
  指出執行次要角色之給定可用性複本 (也就是做為次要複本) 的資料庫是否可接受來自用戶端的連接。  
   
  可能的值如下：  
@@ -93,7 +90,7 @@ ms.locfileid: "62788321"
 |值|描述|  
 |-----------|-----------------|  
 |**不允許連接**|當此可用性複本做為次要複本時，不允許直接連接到可用性資料庫。 次要資料庫不適用於讀取。|  
-|**僅允許讀取意圖連接**|當此複本做為次要複本時，只允許進行直接唯讀連接。 可讀取複本中的所有資料庫。|  
+|**只允許讀取意圖的連接**|當此複本做為次要複本時，只允許進行直接唯讀連接。 可讀取複本中的所有資料庫。|  
 |**允許所有連接**|當此複本做為次要複本時，允許與這些資料庫之間的所有連接。|  
   
  **連接狀態**  
@@ -101,7 +98,7 @@ ms.locfileid: "62788321"
   
 |值|描述|  
 |-----------|-----------------|  
-|**已**|若為遠端可用性複本，表示它與本機可用性複本已中斷連接。 本機複本對 [已中斷連接] 狀態的回應取決於其角色，如下所示：<br /><br /> 在主要複本上，如果次要複本已中斷連接，主要複本上的次要資料庫就會標示為 **[未同步處理]** ，而且主要複本會等候次要複本重新連接。<br /><br /> 在次要複本上，一旦偵測到它已中斷連接之後，次要複本就會嘗試重新連接到主要複本。|  
+|**已中斷連接**|若為遠端可用性複本，表示它與本機可用性複本已中斷連接。 本機複本對 [已中斷連接] 狀態的回應取決於其角色，如下所示：<br /><br /> 在主要複本上，如果次要複本已中斷連接，主要複本上的次要資料庫就會標示為 **[未同步處理]** ，而且主要複本會等候次要複本重新連接。<br /><br /> 在次要複本上，一旦偵測到它已中斷連接之後，次要複本就會嘗試重新連接到主要複本。|  
 |**聯繫**|目前連接到本機複本的遠端可用性複本。|  
 |**Null**|如果本機複本是次要複本，其他次要複本的此值就是 NULL。|  
   
@@ -117,9 +114,8 @@ ms.locfileid: "62788321"
 > [!NOTE]  
 >  如需可用性複本效能計數器的相關資訊，請參閱 [SQLServer，可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
-##  <a name="AvDbDetails"></a>可用性資料庫詳細資料  
- 
-  **[可用性資料庫]** 詳細資料畫面顯示給定之可用性群組中可用性資料庫的下列屬性：  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> 可用性資料庫詳細資料  
+ **[可用性資料庫]** 詳細資料畫面顯示給定之可用性群組中可用性資料庫的下列屬性：  
   
  **名稱**  
  可用性資料庫的名稱。  
@@ -133,12 +129,12 @@ ms.locfileid: "62788321"
 |-----------|-----------------|  
 |正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意：在非同步認可模式中，同步處理模式一律為 **正在同步處理**。|  
   
- **已暫停**  
+ **掛**  
  指出可用性資料庫目前是否已上線。 可能的值如下：  
   
 |值|描述|  
 |-----------|-----------------|  
-|**已暫停**|此狀態指出資料庫在本機已暫停，需要手動恢復。<br /><br /> 在主要複本上，此值對次要資料庫是不可靠的。 若要可靠地判斷次要資料庫是否已暫止，請在裝載此資料庫的次要複本上查詢它。|  
+|**掛**|此狀態指出資料庫在本機已暫停，需要手動恢復。<br /><br /> 在主要複本上，此值對次要資料庫是不可靠的。 若要可靠地判斷次要資料庫是否已暫止，請在裝載此資料庫的次要複本上查詢它。|  
 |**未聯結**|指出次要資料庫尚未聯結至可用性群組或已從群組中移除。|  
 |**線上**|指出在本機可用性複本上的資料庫未暫止，並且已連接到資料庫。|  
 |**未連接**|指出次要複本目前無法連接到主要複本。|  
@@ -147,7 +143,7 @@ ms.locfileid: "62788321"
 >  如需可用性資料庫效能計數器的詳細資訊，請參閱 [SQL Server，資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [查看可用性群組屬性 &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
  [檢視可用性複本屬性 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  

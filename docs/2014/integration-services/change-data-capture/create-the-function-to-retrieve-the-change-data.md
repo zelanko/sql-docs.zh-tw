@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771434"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
@@ -209,9 +209,9 @@ go
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|與變更之認可交易相關聯的 LSN。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的更新作業修改了兩個不同的資料列，此變更資料表將會包含四個資料列 (其中兩個是舊值，而另外兩個是新值)，而且每個資料列都包含相同的 **__$start_lsn** 值。|  
-|**__ $ seqval**|`binary(10)`|用來排序交易內資料列變更的序列值。|  
+|**__$seqval**|`binary(10)`|用來排序交易內資料列變更的序列值。|  
 |**__ $ operation**|`int`|與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (更新作業之前的值)。<br /><br /> 4 = 更新 (更新作業之後的值)。|  
-|**__ $ update_mask**|`varbinary(128)`|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。 如果您必須判斷已經變更的資料行，可以檢查這個值。|  
+|**__$update_mask**|`varbinary(128)`|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。 如果您必須判斷已經變更的資料行，可以檢查這個值。|  
 |**\<已捕獲的來源資料表資料行>**|視情況而異|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有以序數指定任何資料行，就會傳回來源資料表中的所有資料行。|  
   
  如需詳細資訊，請參閱 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
@@ -219,6 +219,6 @@ go
 ## <a name="next-step"></a>後續步驟  
  建立查詢變更資料的資料表值函式後，下一個步驟是開始在封裝中設計資料流程。  
   
- **下一個主題：** [取出並瞭解變更資料](retrieve-and-understand-the-change-data.md)  
+ **下一個主題：** [擷取與了解變更資料](retrieve-and-understand-the-change-data.md)  
   
   

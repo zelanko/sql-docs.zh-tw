@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773666"
 ---
 # <a name="search-property-list-editor"></a>搜尋屬性清單編輯器
@@ -27,8 +27,7 @@ ms.locfileid: "62773666"
   
 ## <a name="options"></a>選項。  
  **屬性名稱**  
- 指定要用來識別全文檢索查詢中之屬性的名稱。 屬性名稱可以包含內部空格。 
-  **[屬性名稱]** 的最大長度為 256 個字元。 這個名稱可以是使用者易記名稱，例如「作者」或「住家地址」，或者它可以是屬性的 Windows 正式名稱，例如 `System.Author` 或 `System.Contact.HomeAddress`。 **屬性名稱**必須唯一識別屬性集內的屬性。  
+ 指定要用來識別全文檢索查詢中之屬性的名稱。 屬性名稱可以包含內部空格。 **[屬性名稱]** 的最大長度為 256 個字元。 這個名稱可以是使用者易記名稱，例如「作者」或「住家地址」，或者它可以是屬性的 Windows 正式名稱，例如 `System.Author` 或 `System.Contact.HomeAddress`。 **[屬性名稱]** 必須唯一識別屬性集內的屬性。  
   
  開發人員使用屬性名稱來識別 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞中的屬性。 因此，在加入屬性時，務必指定可有意義地表示屬性的值。  
   
@@ -57,8 +56,8 @@ ms.locfileid: "62773666"
  請參閱[ALTER SEARCH PROPERTY LIST &#40;transact-sql&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
- [使用搜索屬性清單搜索文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
+ [使用搜尋屬性清單搜尋文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

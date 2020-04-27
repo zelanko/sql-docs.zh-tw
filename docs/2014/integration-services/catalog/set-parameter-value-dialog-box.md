@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771624"
 ---
 # <a name="set-parameter-value-dialog-box"></a>設定參數值對話方塊
@@ -26,7 +26,7 @@ ms.locfileid: "62771624"
   
 -   [設定選項](#option)  
   
-##  <a name="open_dialog"></a> 開啟設定參數值對話方塊  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> 開啟設定參數值對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62771624"
   
 4.  以滑鼠右鍵按一下封裝或專案，再按一下 [設定]  ，然後按一下 [參數]  索引標籤或 [連線管理員]  索引標籤中的省略符號按鈕。  
   
-##  <a name="option"></a> 設定選項  
+##  <a name="configure-the-options"></a><a name="option"></a> 設定選項  
  **參數**  
  列出參數名稱。  
   

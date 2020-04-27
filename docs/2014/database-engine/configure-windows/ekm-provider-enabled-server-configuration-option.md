@@ -15,14 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 136056f848c85c2fbe8c572a5866c4e23b3a85b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782204"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled 伺服器組態選項
-  
   `EKM provider enabled` 選項可控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的可延伸金鑰管理裝置支援。 根據預設，這個選項是關閉的。  
   
  若要啟用或停用此功能，請發出下列其中一個 `sp_configure` 命令：  

@@ -13,19 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775231"
 ---
 # <a name="validate-a-sql-server-installation"></a>驗證 SQL Server 安裝
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 探索報告可以用於驗證電腦上所安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 [**已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝的功能探索報告**] 會顯示[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]安裝[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]本地[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]伺服器[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]上之[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]所有、、、、和產品及功能的報告。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心的 **工具** 頁面存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能探索報告。  
   
  **若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行功能探索報告：**  
   
- 如果要啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心，請使用 [開始]**** 功能表，並依序指向 [所有程式]****、[**[!INCLUDE[msCoName](../../includes/msconame-md.md)]版本名稱>][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<** 和 [組態工具]****，然後按一下 [** 安裝中心][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。 如果要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能探索報告，請按一下 [** 安裝中心]**** 左側導覽區域中的 [工具][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**，然後按一下 [已安裝的 ** 功能探索報告][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。  
+ 如果要啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心，請使用 [開始]  功能表，並依序指向 [所有程式]  、[ **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本名稱>]\<** 和 [組態工具]  ，然後按一下 [ **安裝中心][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。 如果要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能探索報告，請按一下 [ **安裝中心]** **左側導覽區域中的 [工具][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，然後按一下 [已安裝的  **功能探索報告][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]探索報告已儲存至\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% ProgramFiles% \120\Setup Bootstrap\Log\\<上一個安裝程式\>會話。  
   

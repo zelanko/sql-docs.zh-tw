@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774408"
 ---
 # <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  此範例顯示，記憶體最佳化資料表類型的語法類似於磁碟資料表類型，但是有下列例外狀況：  
   
--   
-  `MEMORY_OPTIMIZED=ON` 指出資料表類型為記憶體最佳化。  
+-   `MEMORY_OPTIMIZED=ON` 指出資料表類型為記憶體最佳化。  
   
 -   類型必須至少有一個索引。 就像在記憶體最佳化資料表中，您可以使用雜湊和非叢集索引。  
   
@@ -188,6 +187,6 @@ GO
  屬於資料庫的單一 PGPOOL 記憶體取用者時，才會計算記憶體。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體內部 OLTP 的 Transact-SQL 支援](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+ [記憶體中 OLTP 的 Transact-SQL 支援](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

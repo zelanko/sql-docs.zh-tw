@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786683"
 ---
 # <a name="browse-for-servers-network-servers"></a>瀏覽伺服器 (網路伺服器)
@@ -33,7 +33,7 @@ ms.locfileid: "62786683"
  若要連接至未出現在清單中的執行個體，請輸入執行個體的完整連接字串 (包括 TCP/IP 通訊埠編號或具名管道的管道名稱)。  
   
 ## <a name="options"></a>選項。  
- **針對您的連線選取網路中的 SQL Server 實例**  
+ **從網路中選取一個連接的 SQL Server 執行個體**  
  按一下樹狀結構中所顯示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，以指定您想要連接到的伺服器。 您可以按一下以**+** 或**-** 符號標示的節點，以顯示或隱藏部分樹狀檢視。  
   
   

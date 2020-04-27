@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779776"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>從 CLR 資料庫物件進行 XML 序列化
@@ -33,7 +33,7 @@ ms.locfileid: "62779776"
   
 1.  執行 .NET Framework SDK 所提供的**Sgen**工具，以建立包含來源元件之 XML 序列化程式的元件。  
   
-2.  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式，在 `CREATE ASSEMBLY` 中註冊已產生的組件。  
+2.  使用 `CREATE ASSEMBLY` 陳述式，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊已產生的組件。  
   
  如需執行 XML 序列化時可能會收到之錯誤的相關資訊，請參閱下列 Microsoft 支援服務文章：「[無法載入動態產生的序列化元件](https://support.microsoft.com/kb/913668)」。  
   

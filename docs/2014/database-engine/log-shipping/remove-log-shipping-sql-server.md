@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 270ca92b723aa67938dc1f56d72425d7e1c98040
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774992"
 ---
 # <a name="remove-log-shipping-sql-server"></a>移除記錄傳送 (SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "62774992"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  記錄傳送預存程序需要 **sysadmin** 固定伺服器角色中的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-log-shipping"></a>若要移除記錄傳送  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62774992"
   
 5.  按一下 **[確定]** ，以便從這個主要資料庫移除記錄傳送。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-remove-log-shipping"></a>若要移除記錄傳送  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774992"
   
 6.  若您不再需要使用記錄傳送次要資料庫，也可選擇從次要伺服器中刪除該資料庫。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [將記錄傳送升級至 SQL Server 2014 &#40;Transact-sql&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

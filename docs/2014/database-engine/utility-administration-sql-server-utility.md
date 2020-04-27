@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773750"
 ---
 # <a name="utility-administration-sql-server-utility"></a>公用程式管理 (SQL Server 公用程式)
@@ -37,36 +37,32 @@ ms.locfileid: "62773750"
 -   檔案空間使用量的預設最小值為 0%。  
   
  設定 SQL Server Managed 執行個體的全域應用程式監視原則。 若要展開這個選項的值清單，請按一下原則名稱旁的箭頭，或是按一下原則標題。  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   執行個體處理器使用量的預設最大值為 70%。  
   
 -   執行個體處理器使用量的預設最小值為 0%。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   電腦處理器使用量的預設最大值為 70%。  
   
 -   電腦處理器使用量的預設最小值為 0%。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完檔案空間？ 若要變更資料檔或記錄檔空間使用量的原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完檔案空間？ 若要變更資料檔或記錄檔空間使用量的原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   檔案空間使用量的預設最大值為 70%。  
   
 -   檔案空間使用量的預設最小值為 0%。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完存放磁碟區空間？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完存放磁碟區空間？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   電腦磁碟區空間使用量的預設最大值為 70%。  
   
 -   電腦磁碟區空間使用量的預設最小值為 0%。  
   
  從高動態的資源中減少原則違規雜訊。 若要展開這項功能的控制項，請按一下顯示畫面右邊的向下箭頭。  
- 如需詳細資訊，請參閱[降低 CPU 使用量原則的雜訊 &#40;SQL Server Utility&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+ 如需詳細資訊，請參閱[降低 CPU 使用量原則中的雜訊 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  安全性索引標籤 - 顯示有權從 UCP 管理或讀取的登入名稱。  

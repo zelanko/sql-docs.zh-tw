@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789078"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>原則評估結果 (AlwaysOn)
@@ -25,7 +25,7 @@ ms.locfileid: "62789078"
   
 
   
-##  <a name="Options"></a> 對話方塊選項  
+##  <a name="dialog-box-options"></a><a name="Options"></a>對話方塊選項  
  **偵測到的問題**  
  針對每個偵測到的問題，各顯示一個資料列。 與問題相關的圖示提供視覺指標，以指出問題嚴重性，如下所示：  
   
@@ -34,13 +34,13 @@ ms.locfileid: "62789078"
 |![UI 圖示：錯誤](../../../relational-databases/replication/media/repl-icon-error.gif "UI 圖示：錯誤")|重大|  
 |![UI 圖示：警告](../../../relational-databases/replication/media/repl-icon-warn.gif "UI 圖示：警告")|警告|  
   
- **說明**  
+ **描述**  
  此方格會顯示所選問題的簡短說明。  
   
- **其他資訊**  
+ **詳細資訊**  
  按一下此連結可開啟所選問題的說明主題。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

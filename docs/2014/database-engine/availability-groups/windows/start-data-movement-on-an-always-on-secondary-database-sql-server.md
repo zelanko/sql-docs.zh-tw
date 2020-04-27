@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813552"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62813552"
   
     -   使用 RESTORE WITH NORECOVERY，手動還原主要資料庫的最近資料庫備份，然後使用 RESTORE WITH NORECOVERY，還原每個後續的記錄備份。 在裝載可用性群組之次要複本的每個伺服器執行個體上，執行此還原順序。  
   
-         **如需詳細資訊：＜＞**  
+         **如需詳細資訊：**  
   
          [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62813552"
         > [!NOTE]  
         >  為可用性群組建立所有次要資料庫之後，如果您想要在次要複本上執行備份，則需要重新設定可用性群組的自動備份喜好設定。  
   
-         **如需詳細資訊：＜＞**  
+         **如需詳細資訊：**  
   
          [從記錄傳送遷移至 AlwaysOn 可用性群組 &#40;SQL Server 的必要條件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62813552"
   
 2.  盡快將每個新備妥的次要資料庫聯結至可用性群組。  
   
-     **如需詳細資訊：＜＞**  
+     **如需詳細資訊：**  
   
      [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

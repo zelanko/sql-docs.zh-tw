@@ -14,19 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815749"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 (SQL Server)
-  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型會評估一組預先定義的原則式管理 (PBM) 原則。 您可以使用這些原則，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中檢視可用性群組及其可用性複本和資料庫的健全狀況。  
   
  
   
-##  <a name="TermsAndDefinitions"></a>詞彙和定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>詞彙和定義  
  AlwaysOn 預先定義的原則  
  一組內建原則，可讓資料庫管理員檢查可用性群組及其可用性複本和資料庫是否符合 AlwaysOn 原則所定義的狀態。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62815749"
  可用性群組  
  一組一起容錯移轉之離散化使用者資料庫 (稱為 *「可用性資料庫」*(Availability Database)) 的容器。  
   
- 可用性複本  
+ 「可用性複本」  
  特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* (Primary Replica) 以及一到四個 *「次要複本」*(Secondary Replica)。 針對給定可用性群組裝載可用性複本的伺服器執行個體必須位於單一 Windows Server 容錯移轉叢集 (WSFC) 叢集的不同節點上。  
   
  可用性資料庫  
@@ -44,7 +43,7 @@ ms.locfileid: "62815749"
  AlwaysOn 儀表板  
  提供可用性群組健全狀況之摘要檢視的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 儀表板。 如需詳細資訊，請參閱本主題稍後的 [AlwaysOn 儀表板](#Dashboard)。  
   
-##  <a name="AlwaysOnPBM"></a>預先定義的原則和問題  
+##  <a name="predefined-policies-and-issues"></a><a name="AlwaysOnPBM"></a> 預先定義的原則和問題  
  下表摘要說明預先定義的原則。  
   
 |原則名稱|問題|Category**<sup>*</sup>**|Facet|  
@@ -67,7 +66,7 @@ ms.locfileid: "62815749"
 > [!IMPORTANT]  
 >  **<sup>*</sup>** 對於 AlwaysOn 原則，類別目錄名稱會當做識別碼使用。 變更 AlwaysOn 類別目錄的名稱會破壞其健全狀況評估功能。 因此，請勿修改 AlwaysOn 類別目錄的名稱。  
   
-##  <a name="Dashboard"></a>AlwaysOn 儀表板  
+##  <a name="alwayson-dashboard"></a><a name="Dashboard"></a>AlwaysOn 儀表板  
  AlwaysOn 儀表板會為您提供可用性群組健全狀況的摘要檢視。 AlwaysOn 儀表板包括下列功能：  
   
 -   可讓您輕鬆地顯示有關給定可用性群組、其可用性複本和資料庫的詳細資料。  
@@ -82,20 +81,20 @@ ms.locfileid: "62815749"
   
 -   如果容錯移轉可用性群組是可解決問題的矯正方式，就會提供[容錯移轉可用性群組精靈](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)連結的啟動點。 此精靈將引導資料庫管理員完成手動容錯移轉程序。  
   
-##  <a name="ExtendHealthModel"></a>擴充 AlwaysOn 健全狀況模型  
+##  <a name="extending-the-alwayson-health-model"></a><a name="ExtendHealthModel"></a>擴充 AlwaysOn 健全狀況模型  
  擴充 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型就是建立您自己的使用者定義原則，並根據您所監控的物件類型將其置於某些類別目錄中。  在您改變幾個設定之後，AlwaysOn 儀表板將會自動評估您的使用者定義原則以及 AlwaysOn 預先定義的原則。  
   
  使用者定義的原則可以使用任何可用的 PBM Facet，包括 AlwaysOn 預先定義的原則所使用的 Facet (請參閱本主題稍早的[預先定義的原則和問題](#AlwaysOnPBM))。 伺服器 Facet 會提供用來監控 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況的以下屬性：(`IsHadrEnabled` 和 `HadrManagerStatus`)。 伺服器 Facet 也會提供用來監控 WSFC 叢集組態的以下原則：`ClusterQuorumType` 和 `ClusterQuorumState`。  
   
  如需詳細資訊，請參閱 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型) (SQL Server AlwaysOn 團隊部落格)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用 AlwaysOn 原則來查看可用性群組的健全狀況 &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [透過強制仲裁 &#40;SQL Server 的 WSFC 損毀修復&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+-   [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 -   [在無仲裁情況下強制啟動 WSFC 叢集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62815749"
   
 -   [針對失敗的新增檔案作業進行疑難排解 &#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [AlwaysOn 健全狀況模型第 1 部 -- 健全狀況模型架構](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   

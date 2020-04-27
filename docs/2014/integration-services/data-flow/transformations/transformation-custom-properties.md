@@ -42,14 +42,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770705"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
-  除了[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特有的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
+  除了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特定的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
   
  本主題將列出並描述各種資料流程轉換的自訂屬性。 如需大部分資料流程物件通用之屬性的詳細資訊，請參閱 [通用屬性](../../common-properties.md)。  
   
@@ -59,20 +59,20 @@ ms.locfileid: "62770705"
   
 ||||  
 |-|-|-|  
-|[合計](#aggregate)|[匯出資料行](#extract)|[資料列計數](#rowcount)|  
+|[彙總](#aggregate)|[匯出資料行](#extract)|[資料列計數](#rowcount)|  
 |[稽核](#audit)|[模糊群組 (Fuzzy Grouping)](#fgroup)|[資料列取樣](#rowsamp)|  
 |[快取轉換](#cachetransform)|[模糊查閱](#flookup)|[指令碼元件](#script)|  
 |[字元對應](#charmap)|[匯入資料行](#insert)|[緩時變維度](#scd)|  
-|[條件式分割](#condsplit)|[查閱](#lookup)|[Sort](#sort)|  
-|[複製資料行](#copymap)|[合併聯結](#mjoin)|[詞彙解壓縮](#textract)|  
+|[條件式分割](#condsplit)|[查閱](#lookup)|[排序](#sort)|  
+|[複製資料行](#copymap)|[合併聯結](#mjoin)|[詞彙擷取](#textract)|  
 |[資料轉換](#dataconv)|[OLE DB 命令](#oledbcmd)|[詞彙查閱](#tlookup)|  
 |[資料採礦查詢](#dmquery)|[百分比取樣](#percent)|[取消樞紐](#unpivot)|  
 |[衍生的資料行](#derived)|[樞紐](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>不含自訂屬性的轉換  
- 下列轉換在元件、輸入或輸出層級沒有自訂屬性︰ [合併轉換](merge-transformation.md)、 [多點傳送轉換](multicast-transformation.md)和 [全部聯集轉換](union-all-transformation.md)。 它們只會使用所有資料流程元件通用的屬性。  
+ 下列轉換在元件、輸入或輸出層級沒有自訂屬性︰[合併轉換](merge-transformation.md)、[多點傳送轉換](multicast-transformation.md)和[全部聯集轉換](union-all-transformation.md)。 它們只會使用所有資料流程元件通用的屬性。  
   
-##  <a name="aggregate"></a>匯總轉換自訂屬性  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> 彙總轉換自訂屬性  
  彙總轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是彙總轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -81,16 +81,16 @@ ms.locfileid: "62770705"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|整數|介於 1 到 100 之間的值，指定記憶體於彙總期間可以擴充的百分比。 這個屬性的預設值為 **25**。|  
 |CountDistinctKeys|整數|一個值，指定彙總可寫入之相異計數的確切數目。 如果您指定了 CountDistinctScale 值，就會優先使用 CountDistinctKeys 中的值。|  
-|CountDistinctScale|整數 (列舉)|一個值，描述彙總可以在資料行中計算之相異值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低**（1）-表示最多500000的索引鍵值<br /><br /> **中**（2）-表示最多5000000個索引鍵值<br /><br /> **高**（3）-表示25000000個以上的索引鍵值。<br /><br /> **未指定**（0）-表示未使用 CountDistinctScale 值。 使用 **未指定** (0) 選項可能會影響在大型資料集中的效能。|  
+|CountDistinctScale|整數 (列舉)|一個值，描述彙總可以在資料行中計算之相異值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 CountDistinctScale 值。 使用 **未指定** (0) 選項可能會影響在大型資料集中的效能。|  
 |索引鍵|整數|一個值，指定彙總寫入之群組依據索引鍵的確切數目。 如果您指定了 KeyScale 值，就會優先使用 Keys 中的值。|  
-|KeyScale|整數 (列舉)|一個值，描述彙總可寫入之群組依據索引鍵值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低**（1）-表示最多500000的索引鍵值。<br /><br /> **中**（2）-表示最多5000000的索引鍵值。<br /><br /> **高**（3）-表示25000000個以上的索引鍵值。<br /><br /> **未指定**（0）-表示未使用 KeyScale 值。|  
+|KeyScale|整數 (列舉)|一個值，描述彙總可寫入之群組依據索引鍵值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值。<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值。<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 KeyScale 值。|  
   
  下表描述的是彙總轉換之輸出的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |索引鍵|整數|一個值，指定彙總可寫入之群組依據索引鍵的確切數目。 如果您指定了 KeyScale 值，就會優先使用 Keys 中的值。|  
-|KeyScale|整數 (列舉)|一個值，描述彙總可寫入之群組依據索引鍵值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低**（1）-表示最多500000的索引鍵值，<br /><br /> **中**（2）-表示最多5000000個索引鍵值，<br /><br /> **高**（3）-表示25000000個以上的索引鍵值。<br /><br /> **未指定**（0）-表示未使用 KeyScale 值。|  
+|KeyScale|整數 (列舉)|一個值，描述彙總可寫入之群組依據索引鍵值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值，<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值，<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 KeyScale 值。|  
   
  下表描述的是彙總轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
@@ -98,29 +98,29 @@ ms.locfileid: "62770705"
 |--------------|---------------|-----------------|  
 |AggregationColumnId|整數|參與 GROUP BY 或彙總函式之資料行的 `LineageID`。|  
 |AggregationComparisonFlags|整數|一個值，指定彙總轉換如何比較資料行中的字串資料。 如需詳細資訊，請參閱 [Comparing String Data](../comparing-string-data.md)。|  
-|AggregationType|整數 (列舉)|一個值，指定要在資料行上執行的彙總作業。 此屬性可以有下列其中一個值：<br /><br /> **計數**（1）<br /><br /> **全部計數**（2）<br /><br /> **Countdistinct** （3）<br /><br /> **總和**（4）<br /><br /> **平均**（5）<br /><br /> **最大值**（7）<br /><br /> **最小值**（6）<br /><br /> **分組依據**（0）|  
-|CountDistinctKeys|整數|當彙總類型為 [相異計數]**** 時，就是指定彙總可寫入之索引鍵確切數目的值。 如果您指定了 CountDistinctScale 值，就會優先使用 CountDistinctKeys 中的值。|  
-|CountDistinctScale|整數 (列舉)|當彙總類型為 [相異計數]**** 時，就是描述彙總可寫入之索引鍵值近似數目的值。 此屬性可以有下列其中一個值：<br /><br /> **低**（1）-表示最多500000的索引鍵值，<br /><br /> **中**（2）-表示最多5000000個索引鍵值，<br /><br /> **高**（3）-表示25000000個以上的索引鍵值。<br /><br /> **未指定**（0）-表示未使用 CountDistinctScale 值。|  
+|AggregationType|整數 (列舉)|一個值，指定要在資料行上執行的彙總作業。 此屬性可以有下列其中一個值：<br /><br /> **計數** (1)<br /><br /> **全部計數** (2)<br /><br /> **相異計數** (3)<br /><br /> **總和** (4)<br /><br /> **平均** (5)<br /><br /> **最大值** (7)<br /><br /> **最小值** (6)<br /><br /> **群組依據** (0)|  
+|CountDistinctKeys|整數|當彙總類型為 [相異計數]  時，就是指定彙總可寫入之索引鍵確切數目的值。 如果您指定了 CountDistinctScale 值，就會優先使用 CountDistinctKeys 中的值。|  
+|CountDistinctScale|整數 (列舉)|當彙總類型為 [相異計數]  時，就是描述彙總可寫入之索引鍵值近似數目的值。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值，<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值，<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 CountDistinctScale 值。|  
 |IsBig|Boolean|一個值，指出資料行包含大於 40 億的值，或有效位數超過雙精確度浮點數值的值。 此值可能是 0 或 1。 0表示 IsBig 為`False` ，且資料行不包含大數值或精確值。 這個屬性的預設值為 1。|  
   
  彙總轉換的輸入和輸入資料行沒有任何自訂屬性。  
   
  如需詳細資訊，請參閱 [彙總轉換](aggregate-transformation.md)。  
   
-##  <a name="audit"></a>Audit 轉換自訂屬性  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> 稽核轉換自訂屬性  
  稽核轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是稽核轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|LineageItemSelected|整數 (列舉)|針對輸出選取的稽核項目。 此屬性可以有下列其中一個值：<br /><br /> **執行實例 GUID** （0）<br /><br /> **執行開始時間**（4）<br /><br /> **電腦名稱稱**（5）<br /><br /> **封裝識別碼**（1）<br /><br /> **封裝名稱**（2）<br /><br /> 工作**識別碼**（8）<br /><br /> 工作**名稱**（7）<br /><br /> **使用者名稱**（6）<br /><br /> **版本識別碼**（3）|  
+|LineageItemSelected|整數 (列舉)|針對輸出選取的稽核項目。 此屬性可以有下列其中一個值：<br /><br /> **執行執行個體 GUID** (0)<br /><br /> **執行開始時間** (4)<br /><br /> **電腦名稱** (5)<br /><br /> **封裝識別碼** (1)<br /><br /> **封裝名稱** (2)<br /><br /> **工作識別碼** (8)<br /><br /> **工作名稱** (7)<br /><br /> **使用者名稱** (6)<br /><br /> **版本識別碼** (3)|  
   
  稽核轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
   
  如需詳細資訊，請參閱 [稽核轉換](audit-transformation.md)。  
   
-##  <a name="cachetransform"></a>快取轉換轉換自訂屬性  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> 快取轉換轉換自訂屬性  
  快取轉換轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是快取轉換轉換的屬性。 所有屬性都是可讀寫的。  
@@ -131,9 +131,9 @@ ms.locfileid: "62770705"
 |ValidateExternalMetadata|Boolean|指出快取轉換是否在設計階段使用外部資料來源進行驗證。 如果此屬性設定為 `False`，就會在執行階段根據外部資料來源進行驗證。<br /><br /> 預設值為 `True`。|  
 |AvailableInputColumns|String|可用輸入資料行的清單。|  
 |InputColumns|String|選取之輸入資料行的清單。|  
-|CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器**** 之 [資料行]**** 頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱快取[連線管理員編輯器](../../cache-connection-manager-editor.md)|  
+|CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器  之 [資料行]  頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱 [快取連接管理員編輯器](../../cache-connection-manager-editor.md)|  
   
-##  <a name="charmap"></a>字元對應轉換自訂屬性  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 字元對應轉換自訂屬性  
  字元對應轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是字元對應轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -141,13 +141,13 @@ ms.locfileid: "62770705"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|整數|一個值，指定屬於輸出資料行來源之輸入資料行的 `LineageID`。|  
-|MapFlags|整數 (列舉)|一個值，指定字元對應轉換在資料行上執行的字串作業。 此屬性可以有下列其中一個值：<br /><br /> **位元組反轉**（2）<br /><br /> **全形**（6）<br /><br /> **半形**（5）<br /><br /> **平假名**（3）<br /><br /> **片假名**（4）<br /><br /> **語言大小寫**（7）<br /><br /> **小寫**（0）<br /><br /> **簡體中文**（8）<br /><br /> **繁體中文**（9）<br /><br /> **大寫**（1）|  
+|MapFlags|整數 (列舉)|一個值，指定字元對應轉換在資料行上執行的字串作業。 此屬性可以有下列其中一個值：<br /><br /> **位元組反轉** (2)<br /><br /> **全形** (6)<br /><br /> **半形** (5)<br /><br /> **平假名** (3)<br /><br /> **片假名** (4)<br /><br /> **語言大小寫** (7)<br /><br /> **小寫** (0)<br /><br /> **簡體中文** (8)<br /><br /> **繁體中文**(9)<br /><br /> **大寫** (1)|  
   
  字元對應轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
   
  如需詳細資訊，請參閱 [字元對應轉換](character-map-transformation.md)。  
   
-##  <a name="condsplit"></a>條件式分割轉換自訂屬性  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> 條件式分割轉換自訂屬性  
  條件式分割轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是條件式分割轉換之輸出的自訂屬性。 所有屬性都是可讀寫的。  
@@ -163,7 +163,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [Conditional Split Transformation](conditional-split-transformation.md)。  
   
-##  <a name="copymap"></a>複製資料行轉換自訂屬性  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> 複製資料行轉換自訂屬性  
  複製資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是複製資料行轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -176,21 +176,21 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [複製資料行轉換](copy-column-transformation.md)。  
   
-##  <a name="dataconv"></a>資料轉換自訂屬性  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> 資料轉換自訂屬性  
  資料轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是資料轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 `False`。 如需詳細資訊，請參閱 [快速剖析](../../fast-parse.md) 和 [標準剖析](../../standard-parse.md)。 .<br /><br /> 注意：雖然您無法在資料轉換編輯器**** 中使用這個屬性，但是可以使用進階編輯器**** 來設定這個屬性。|  
+|FastParse|Boolean|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 `False`。 如需詳細資訊，請參閱 [快速剖析](../../fast-parse.md) 和 [標準剖析](../../standard-parse.md)。 。<br /><br /> 注意:雖然您無法在 [資料轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
 |SourceInputColumnLineageId|整數|屬於輸出資料行來源之輸入資料行的 `LineageID`。|  
   
  資料轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
   
  如需詳細資訊，請參閱 [Data Conversion Transformation](data-conversion-transformation.md)。  
   
-##  <a name="dmquery"></a>資料採礦查詢轉換自訂屬性  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> 資料採礦查詢轉換自訂屬性  
  資料採礦查詢轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料採礦查詢轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -198,10 +198,8 @@ ms.locfileid: "62770705"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|連接物件的唯一識別碼。|  
-|ASConnectionString|String|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫的連接字串。|  
-|CatalogName|String|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫的名稱。|  
+|ASConnectionString|String|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫的連接字串。|  
+|CatalogName|String|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫的名稱。|  
 |ModelName|String|資料採礦模型的名稱。|  
 |ModelStructureName|String|採礦結構的名稱。|  
 |ObjectRef|String|可識別轉換所使用之資料採礦結構的 XML 標記。|  
@@ -211,7 +209,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [資料採礦查詢轉換](data-mining-query-transformation.md)。  
   
-##  <a name="derived"></a>衍生的資料行轉換自訂屬性  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> 衍生的資料行轉換自訂屬性  
  衍生的資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是衍生的資料行轉換之輸入資料行和輸出資料行的自訂屬性。 當您選擇要加入衍生的資料行當做新資料行時，這些自訂屬性會套用至新的輸出資料行。當您選擇要使用衍生的結果來取代現有輸入資料行的內容時，這些自訂屬性會套用至現有的輸入資料行。 所有屬性都是可讀寫的。  
@@ -225,7 +223,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [衍生的資料行轉換](derived-column-transformation.md)。  
   
-##  <a name="extract"></a>匯出資料行轉換自訂屬性  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> 匯出資料行轉換自訂屬性  
  匯出資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是匯出資料行轉換之輸入資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -241,7 +239,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [匯出資料行轉換](export-column-transformation.md)。  
   
-##  <a name="insert"></a>匯入資料行轉換自訂屬性  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> 匯入資料行轉換自訂屬性  
  匯入資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是匯入資料行轉換之輸入資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -255,7 +253,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [匯入資料行轉換](import-column-transformation.md)。  
   
-##  <a name="fgroup"></a>模糊群組轉換自訂屬性  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> 模糊群組轉換自訂屬性  
  模糊群組轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是模糊群組轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -263,33 +261,32 @@ ms.locfileid: "62770705"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |分隔符號|String|轉換所使用的 Token 分隔符號。 預設分隔符號包括下列字元：空格 ( )、逗號 (,)、句號 (.)、分號 (;)、冒號 (:)、連字號 (-)、雙引號 (")、單引號 (')、& 符號、正斜線 (/)、反斜線 (\\)、@ 符號、驚嘆號 (!)、問號 (?)、左括弧 (()、右括弧 ())、小於 (\<)、大於 (>)、左方括弧 ([)、右方括弧 (])、左大括弧 ({)、右大括弧 (})、縱線字元 (&#124;)、數字符號 (#)、星號 (*)、插入號 (^) 和百分比 (%)。|  
-|Exhaustive|Boolean|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 
-  `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意：雖然您無法在模糊群組轉換編輯器**** 中使用這個屬性，但是可以使用進階編輯器**** 來設定這個屬性。|  
-|MaxMemoryUsage|整數|可供轉換使用的記憶體數量上限。 此屬性的預設值為 **0**，表示啟用動態記憶體使用量。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意：雖然您無法在模糊群組轉換編輯器**** 中使用這個屬性，但是可以使用進階編輯器**** 來設定這個屬性。|  
-|MinSimilarity|DOUBLE|轉換用來識別重複項目的相似度臨界值，表示成介於 0 與 1 之間的值。  這個屬性的預設值為 0.8。|  
+|Exhaustive|Boolean|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意:雖然您無法在 [模糊群組轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|MaxMemoryUsage|整數|可供轉換使用的記憶體數量上限。 此屬性的預設值為 **0**，表示啟用動態記憶體使用量。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意:雖然您無法在 [模糊群組轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|MinSimilarity|Double|轉換用來識別重複項目的相似度臨界值，表示成介於 0 與 1 之間的值。  這個屬性的預設值為 0.8。|  
   
  下表描述的是模糊群組轉換之輸入資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|ExactFuzzy|整數 (列舉)|一個值，指定轉換會執行模糊比對或完全比對。 有效值為 [Exact]**** 和 [Fuzzy]****。 這個屬性的預設值為 [Fuzzy]****。|  
+|ExactFuzzy|整數 (列舉)|一個值，指定轉換會執行模糊比對或完全比對。 有效值為 [Exact]  和 [Fuzzy]  。 這個屬性的預設值為 [Fuzzy]  。|  
 |FuzzyComparisonFlags|整數 (列舉)|一個值，指定轉換如何比較資料行中的字串資料。 此屬性可以有下列其中一個值：<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Comparing String Data](../comparing-string-data.md)。|  
 |LeadingTrailingNumeralsSignificant|整數 (列舉)|一個值，指定數字的重要性。 此屬性可以有下列其中一個值：<br /><br /> **LeadingNumeralsSignificant** （1）-開頭數位很重要時使用。<br /><br /> **TrailingNumeralsSignificant** （2）-尾端數位很重要時使用。<br /><br /> **LeadingAndTrailingNumeralsSignificant** （3）-開頭和尾端數位都很重要時使用。<br /><br /> **NumeralsNotSpecial** （0）-數位不重要時使用。|  
-|MinSimilarity|DOUBLE|用於資料行之聯結的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
+|MinSimilarity|Double|用於資料行之聯結的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
 |ToBeCleaned|Boolean|一個值，指定此資料行是否用於識別重複項目。亦即，這個資料行是否為您分組所依據的資料行。 此屬性的預設值為 `False`。|  
   
  下表描述的是模糊群組轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|ColumnType|整數 (列舉)|一個值，可識別輸出資料行的類型。 此屬性可以有下列其中一個值：<br /><br /> **KeyIn** （1）<br /><br /> **KeyOut** （2）<br /><br /> **相似性**（3）<br /><br /> **ColumnSimilarity** （4）<br /><br /> **PassThru** （5）<br /><br /> **Canonica**l （6）<br /><br /> **Undefined** （0）|  
+|ColumnType|整數 (列舉)|一個值，可識別輸出資料行的類型。 此屬性可以有下列其中一個值：<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonica**l (6)<br /><br /> **Undefined** (0)|  
 |InputID|整數|對應輸入資料行的 `LineageID`。|  
   
  模糊群組轉換的輸入和輸出沒有任何自訂屬性。  
   
  如需詳細資訊，請參閱 [模糊群組轉換](fuzzy-grouping-transformation.md)。  
   
-##  <a name="flookup"></a>模糊查閱轉換自訂屬性  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> 模糊查閱轉換自訂屬性  
  模糊查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是模糊查閱轉換的自訂屬性。 除了 `ReferenceMetadataXML` 以外的所有屬性都是可讀寫的。  
@@ -299,12 +296,11 @@ ms.locfileid: "62770705"
 |CopyReferenceTable|Boolean|指定是否應該針對模糊查閱索引建構和後續的查閱建立參考資料表的副本。 此屬性的預設值為 `True`。|  
 |分隔符號|String|轉換用來 Token 化資料行值的分隔符號。 預設分隔符號包括下列字元：空格 ( )、逗號 (,)、句號 (.)、分號 (;)、冒號 (:)、連字號 (-)、雙引號 (")、單引號 (')、& 符號、正斜線 (/)、反斜線 (\\)、@ 符號、驚嘆號 (!)、問號 (?)、左括弧 (()、右括弧 ())、小於 (\<)、大於 (>)、左方括弧 ([)、右方括弧 (])、左大括弧 ({)、右大括弧 (})、縱線字元 (&#124;)。 數字符號 (#)、星號 (*)、插入號 (^) 及百分比 (%)。|  
 |DropExistingMatchIndex|Boolean|值，指定是否要在 MatchIndexOptions 未設定為 ReuseExistingIndex 時，刪除 MatchIndexName 中指定的比對索引。 這個屬性的預設值為 `True`。|  
-|Exhaustive|Boolean|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 
-  `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意：雖然您無法在模糊查閱轉換編輯器**** 中使用這個屬性，但是可以使用進階編輯器**** 來設定這個屬性。|  
+|Exhaustive|Boolean|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意:雖然您無法在 [模糊查閱轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
 |MatchIndexName|String|相符索引的名稱。 相符索引是轉換用以建立並儲存它所使用之索引的資料表。 若重複使用相符索引，MatchIndexName 會指定要重複使用的索引。 MatchIndexName 必須是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別碼名稱。 例如，如果名稱包含空格，此名稱就必須以方括號括住。|  
-|MatchIndexOptions|整數 (列舉)|一個值，指定轉換如何管理相符索引。 此屬性可以有下列其中一個值：<br /><br /> `ReuseExistingIndex`0<br /><br /> **GenerateNewIndex** （1）<br /><br /> **GenerateAndPersistNewIndex** （2）<br /><br /> **GenerateAndMaintainNewIndex** （3）|  
-|MaxMemoryUsage|整數|查閱資料表的快取大小上限。 此屬性的預設值為 **0**，表示快取大小沒有任何限制。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意：雖然您無法在模糊查閱轉換編輯器**** 中使用這個屬性，但是可以使用進階編輯器**** 來設定這個屬性。|  
-|MaxOutputMatchesPerInput|整數|轉換可以針對每個輸入資料列傳回的相符項目數上限。 這個屬性的預設值為**1**。<br /><br /> 注意：您只能使用進階編輯器**** 來指定大於 100 的值。|  
+|MatchIndexOptions|整數 (列舉)|一個值，指定轉換如何管理相符索引。 此屬性可以有下列其中一個值：<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
+|MaxMemoryUsage|整數|查閱資料表的快取大小上限。 此屬性的預設值為 **0**，表示快取大小沒有任何限制。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意:雖然您無法在 [模糊查閱轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|MaxOutputMatchesPerInput|整數|轉換可以針對每個輸入資料列傳回的相符項目數上限。 這個屬性的預設值為 **1**。<br /><br /> 注意:您只能使用 [進階編輯器]  來指定大於 100 的值。|  
 |MinSimilarity|整數|轉換在元件層級使用的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|查閱資料表的名稱。 此名稱必須是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別碼名稱。 例如，如果名稱包含空格，此名稱就必須以方括號括住。|  
@@ -315,10 +311,10 @@ ms.locfileid: "62770705"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|整數|一個值，指定轉換如何比較資料行中的字串資料。 如需詳細資訊，請參閱 [Comparing String Data](../comparing-string-data.md)。|  
-|FuzzyComparisonFlagsEx|整數 (列舉)|一個值，指定轉換所使用的擴充比較旗標。 這些值可包括 **MapExpandLigatures、MapFoldCZone**、 **MapFoldDigits**、 **MapPrecomposed**和 **NoMapping**。 **NoMapping**無法與其他旗標搭配使用。|  
+|FuzzyComparisonFlagsEx|整數 (列舉)|一個值，指定轉換所使用的擴充比較旗標。 這些值可包括 **MapExpandLigatures、MapFoldCZone**、 **MapFoldDigits**、 **MapPrecomposed**和 **NoMapping**。 **NoMapping** 無法與其他旗標搭配使用。|  
 |JoinToReferenceColumn|String|一個值，指定此資料行在參考資料表中所聯結的資料行名稱。|  
-|JoinType|整數|一個值，指定轉換會執行模糊比對或完全比對。 這個屬性的預設值為 [Fuzzy]****。 代表完全聯結類型的整數值為 **1**，而代表模糊聯結類型的整數值為 **2**。|  
-|MinSimilarity|DOUBLE|轉換在資料行層級使用的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
+|JoinType|整數|一個值，指定轉換會執行模糊比對或完全比對。 這個屬性的預設值為 [Fuzzy]  。 代表完全聯結類型的整數值為 **1** ，而代表模糊聯結類型的整數值為 **2**。|  
+|MinSimilarity|Double|轉換在資料行層級使用的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
   
  下表描述的是模糊查閱轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
@@ -327,7 +323,7 @@ ms.locfileid: "62770705"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|ColumnType|整數 (列舉)|一個值，可識別轉換加入至輸出之資料行的輸出資料行類型。 此屬性可以有下列其中一個值：<br /><br /> **相似性**（1）<br /><br /> **信心**（2）<br /><br /> **ColumnSimilarity** （3）<br /><br /> **Undefined** （0）|  
+|ColumnType|整數 (列舉)|一個值，可識別轉換加入至輸出之資料行的輸出資料行類型。 此屬性可以有下列其中一個值：<br /><br /> **Similarity** (1)<br /><br /> **Confidence** (2)<br /><br /> **ColumnSimilarity** (3)<br /><br /> **Undefined** (0)|  
 |CopyFromReferenceColumn|String|一個值，指定參考資料表中提供輸出資料行之值的資料行名稱。|  
 |SourceInputColumnLineageId|整數|一個值，可識別提供值給這個輸出資料行的輸入資料行。|  
   
@@ -335,18 +331,18 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [模糊查閱轉換](lookup-transformation.md)。  
   
-##  <a name="lookup"></a>查閱轉換自訂屬性  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> 查閱轉換自訂屬性  
  查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是查閱轉換的自訂屬性。 除了 `ReferenceMetadataXML` 以外的所有屬性都是可讀寫的。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|CacheType|整數 (列舉)|查閱資料表的快取類型。 這些值為 **Full** (0)、 **Partial** (1) 和 **None** (2)。 此屬性的預設值為 [Full]****。|  
+|CacheType|整數 (列舉)|查閱資料表的快取類型。 這些值為 **Full** (0)、 **Partial** (1) 和 **None** (2)。 這個屬性的預設值為 **Full**。|  
 |DefaultCodePage|整數|無法從資料來源中取得字碼頁資訊時要使用的預設字碼頁。|  
 |MaxMemoryUsage|整數|查閱資料表的快取大小上限。 此屬性的預設值為 **25**，表示快取大小沒有任何限制。|  
 |MaxMemoryUsage64|整數|在 64 位元電腦上，查閱資料表的快取大小上限。|  
-|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 `Treat rows with no matching entries as errors` (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。<br /><br /> 當此屬性設定為 `Send rows with no matching entries to the no match output` (1) 時，資料列就不會被視為錯誤。<br /><br /> 預設值為 `Treat rows with no matching entries as errors` (0)。|  
+|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 `Treat rows with no matching entries as errors` (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器]  對話方塊的 [錯誤輸出]  頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。<br /><br /> 當此屬性設定為 `Send rows with no matching entries to the no match output` (1) 時，資料列就不會被視為錯誤。<br /><br /> 預設值為 `Treat rows with no matching entries as errors` (0)。|  
 |ParameterMap|String|歷程識別碼的分號分隔清單，而這些歷程識別碼會對應至 `SqlCommand` 陳述式中使用的參數。|  
 |ReferenceMetadataXML|String|轉換從查閱資料表中複製到輸出之資料行的中繼資料。|  
 |SqlCommand|String|填入查閱資料表的 SELECT 陳述式。|  
@@ -367,9 +363,9 @@ ms.locfileid: "62770705"
   
  查閱轉換的輸入和輸出沒有任何自訂屬性。  
   
- 如需詳細資訊，請參閱[查閱轉換](lookup-transformation.md)。  
+ 如需相關資訊，請參閱 [Lookup Transformation](lookup-transformation.md)。  
   
-##  <a name="mjoin"></a>合併聯結轉換自訂屬性  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> 合併聯結轉換自訂屬性  
  合併聯結轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是合併聯結轉換的自訂屬性。  
@@ -391,14 +387,14 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [合併聯結轉換](merge-join-transformation.md)。  
   
-##  <a name="oledbcmd"></a>OLE DB 命令轉換自訂屬性  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> OLE DB 命令轉換自訂屬性  
  OLE DB 命令轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是 OLE DB 命令轉換的自訂屬性。  
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|CommandTimeout|整數|SQL 命令在超時之前可以執行的最大秒數。值為**0**表示無限時間。 這個屬性的預設值為 **0**。|  
+|CommandTimeout|整數|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。|  
 |DefaultCodePage|整數|無法從資料來源中取得字碼頁資訊時要使用的字碼頁。|  
 |SqlCommand|String|轉換針對資料流程中每個資料列執行的 Transact-SQL 陳述式。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   
@@ -412,7 +408,7 @@ ms.locfileid: "62770705"
   
  如需相關資訊，請參閱 [OLE DB Command Transformation](ole-db-command-transformation.md)。  
   
-##  <a name="percent"></a>百分比取樣轉換自訂屬性  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> 百分比取樣轉換自訂屬性  
  百分比取樣轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是百分比取樣轉換的自訂屬性。  
@@ -432,7 +428,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [百分比取樣轉換](percentage-sampling-transformation.md)。  
   
-##  <a name="pivot"></a>資料透視轉換自訂屬性  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> 樞紐轉換自訂屬性  
  下表描述樞紐轉換的自訂元件屬性。  
   
 |屬性|資料類型|描述|  
@@ -454,7 +450,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [樞紐轉換](pivot-transformation.md)。  
   
-##  <a name="rowcount"></a>資料列計數轉換自訂屬性  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> 資料列計數轉換自訂屬性  
  資料列計數轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料列計數轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -467,7 +463,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [Row Count Transformation](row-count-transformation.md)。  
   
-##  <a name="rowsamp"></a>資料列取樣轉換自訂屬性  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> 資料列取樣轉換自訂屬性  
  資料列取樣轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料列取樣轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -493,7 +489,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [資料列取樣轉換](row-sampling-transformation.md)。  
   
-##  <a name="script"></a>腳本元件自訂屬性  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> 指令碼元件自訂屬性  
  指令碼元件同時具有自訂屬性以及所有資料流程元件通用的屬性。 不論指令碼元件是當做來源、轉換或目的地，您都可以使用相同的自訂屬性。  
   
  下表描述的是指令碼元件的自訂屬性。 所有屬性都是可讀寫的。  
@@ -507,7 +503,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [指令碼元件](script-component.md)。  
   
-##  <a name="scd"></a>緩時變維度轉換自訂屬性  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> 緩時變維度轉換自訂屬性  
  緩時變維度轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是緩時變維度轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -533,7 +529,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [緩時變維度轉換](slowly-changing-dimension-transformation.md)。  
   
-##  <a name="sort"></a>排序轉換自訂屬性  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> 排序轉換自訂屬性  
  排序轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是排序轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -560,7 +556,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [排序轉換](sort-transformation.md)。  
   
-##  <a name="textract"></a>詞彙提取轉換自訂屬性  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> 詞彙擷取轉換自訂屬性  
  詞彙擷取轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是詞彙擷取轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -580,7 +576,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [詞彙擷取轉換](term-extraction-transformation.md)。  
   
-##  <a name="tlookup"></a>詞彙查閱轉換自訂屬性  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> 詞彙查閱轉換自訂屬性  
  詞彙查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是詞彙查閱轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -607,7 +603,7 @@ ms.locfileid: "62770705"
   
  如需詳細資訊，請參閱 [詞彙查閱轉換](term-lookup-transformation.md)。  
   
-##  <a name="unpivot"></a>Unpivot 轉換自訂屬性  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> 取消樞紐轉換自訂屬性  
  取消樞紐轉換只有元件層級上所有資料流程元件通用的屬性。  
   
 > [!NOTE]  
@@ -618,7 +614,7 @@ ms.locfileid: "62770705"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|整數|輸入資料行所對應之輸出資料行的 `LineageID`。 值為 -1 表示輸入資料行不會對應至輸出資料行。|  
-|PivotKeyValue|String|複製到轉換輸出資料行的值。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 在[取消樞紐轉換](unpivot-transformation.md)所描述的取消樞紐狀況中，樞紐值包括 Ham、Coke、Milk、Beer 和 Chips 等文字值。 這些值會在 [樞紐索引鍵值資料行名稱]**** 選項所指定的新 Product 資料行中顯示成文字值。|  
+|PivotKeyValue|String|複製到轉換輸出資料行的值。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 在 [取消樞紐轉換](unpivot-transformation.md)所描述的取消樞紐狀況中，樞紐值包括 Ham、Coke、Milk、Beer 和 Chips 等文字值。 這些值會在 [樞紐索引鍵值資料行名稱]**** 選項所指定的新 Product 資料行中顯示成文字值。|  
   
  下表描述的是取消樞紐轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   

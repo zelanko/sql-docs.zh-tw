@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815763"
 ---
 # <a name="availability-database-is-suspended"></a>可用性資料庫已暫停
@@ -29,8 +29,8 @@ ms.locfileid: "62815763"
 |-|-|  
 |**原則名稱**|可用性資料庫暫停狀態|  
 |**問題**|可用性資料庫已暫停。|  
-|**類別目錄**|**警告**|  
-|**Facet**|可用性資料庫|  
+|**類別**|**Warning**|  
+|**層面**|可用性資料庫|  
   
 ## <a name="description"></a>描述  
  此原則會檢查次要資料庫 (也稱為「次要資料庫複本」) 的資料移動。 當資料移動已暫停時，原則為狀況不良。 否則原則為狀況良好。  

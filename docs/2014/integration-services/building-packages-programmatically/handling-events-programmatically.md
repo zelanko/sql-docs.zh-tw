@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771804"
 ---
 # <a name="handling-events-programmatically"></a>以程式設計方式處理事件
@@ -37,7 +37,7 @@ ms.locfileid: "62771804"
 ## <a name="receiving-idtsevents-callbacks"></a>接收 IDTSEvents 回撥  
  以程式設計方式建立及執行封裝的開發人員，可以在驗證和執行程序期間使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面來接收事件通知。 其處理方式是建立一個類別來實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面，並將這個類別當做參數提供給封裝的 `Validate` 和 `Execute` 方法。 然後當事件發生時，執行階段引擎會呼叫此類別的方法。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 類別是一個已經實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的類別；因此，直接實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一個方法是衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>，並覆寫您想要回應的特定事件。 然後您可以將您的類別當做參數提供給 `Validate` 的 `Execute` 和 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 方法，以接收事件回撥。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 類別是一個已經實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的類別；因此，直接實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一個方法是衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>，並覆寫您想要回應的特定事件。 然後您可以將您的類別當做參數提供給 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 的 `Validate` 和 `Execute` 方法，以接收事件回撥。  
   
  下列程式碼範例會示範衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 的類別，並覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 方法。 然後，類別會當做 aparameter 提供給封裝`Validate`的`Execute`和方法。  
   
@@ -251,6 +251,6 @@ End Module
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services-ssis-event-handlers.md)   
- [將事件處理常式新增至套件](../add-an-event-handler-to-a-package.md)  
+ [將事件處理常式加入封裝中](../add-an-event-handler-to-a-package.md)  
   
   

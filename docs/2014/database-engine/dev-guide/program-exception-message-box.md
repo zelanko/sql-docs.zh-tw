@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780691"
 ---
 # <a name="program-exception-message-box"></a>程式例外狀況訊息方塊
@@ -61,8 +61,7 @@ ms.locfileid: "62780691"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>列舉，指定要在例外狀況訊息方塊中顯示的按鈕。  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 例外狀況訊息方塊的對話方塊標題。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 例外狀況訊息方塊的對話方塊標題。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>列舉，為例外狀況訊息方塊的對話方塊指定預設按鈕。  
   
@@ -90,8 +89,7 @@ ms.locfileid: "62780691"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>-顯示 [**中止**]、[**重試**] 和 [**忽略**] 按鈕。  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - 顯示自訂按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - 顯示自訂按鈕。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>-顯示 [**確定]** 按鈕。  
   

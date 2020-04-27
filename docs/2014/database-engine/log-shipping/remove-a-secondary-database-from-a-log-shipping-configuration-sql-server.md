@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774822"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>從記錄傳送組態中移除次要資料庫 (SQL Server)
@@ -40,30 +40,30 @@ ms.locfileid: "62774822"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  記錄傳送預存程序需要 **sysadmin** 固定伺服器角色中的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-a-log-shipping-secondary-database"></a>若要移除記錄傳送次要資料庫  
   
 1.  連接至目前是記錄傳送主要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並展開該執行個體。  
   
-2.  展開 [資料庫]  ，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]  。  
+2.  展開 [資料庫]****，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]****。  
   
-3.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]** 。  
+3.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]**。  
   
 4.  在 **[次要伺服器執行個體與資料庫]** 下，按一下您要移除的資料庫。  
   
-5.  按一下 **[移除]** 。  
+5.  按一下 [移除]****。  
   
 6.  按一下 **[確定]** 以更新組態。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-remove-a-secondary-database"></a>若要移除次要資料庫  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62774822"
   
 3.  在次要伺服器上停用複製與還原作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [將記錄傳送升級至 SQL Server 2014 &#40;Transact-sql&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -94,6 +94,6 @@ ms.locfileid: "62774822"
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [記錄傳送資料表與預存程序](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

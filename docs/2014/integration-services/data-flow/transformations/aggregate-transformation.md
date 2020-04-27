@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770634"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
@@ -112,9 +112,9 @@ ms.locfileid: "62770634"
   
  如需有關可以在 **[彙總轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [匯總轉換編輯器 &#40;匯總] 索引標籤&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [彙總轉換編輯器 &#40;彙總索引標籤&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [匯總轉換編輯器 &#40;[Advanced] 索引標籤&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [彙總轉換編輯器 &#40;進階索引標籤&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768464"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>以指令碼工作傳送至遠端私用訊息佇列
@@ -42,9 +42,9 @@ ms.locfileid: "62768464"
   
 2.  建立類型[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] `String`為**MessageText**的變數，以將郵件內文傳遞至腳本。 輸入預設訊息做為變數值。  
   
-3.  將指令碼工作加入設計介面並編輯它。 在 [指令碼工作編輯器]**** 的 [指令碼]**** 索引標籤上，將 `MessageText` 變數加入 **ReadOnlyVariables** 屬性，以便在指令碼中使用此變數。  
+3.  將指令碼工作加入設計介面並編輯它。 在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，將 `MessageText` 變數加入 **ReadOnlyVariables** 屬性，以便在指令碼中使用此變數。  
   
-4.  按一下 [編輯指令碼]**** 以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 指令碼編輯器。  
+4.  按一下 [編輯指令碼]  以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 指令碼編輯器。  
   
 5.  在指令碼專案中，加入 `System.Messaging` 命名空間的參考。  
   

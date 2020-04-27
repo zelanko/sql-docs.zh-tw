@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770314"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
@@ -78,8 +78,7 @@ ms.locfileid: "62770314"
   
  InputColumnType 屬性設為 0 或 2 的轉換輸出資料行包含資料行的 CustomLineageID 屬性，其包含上游資料流程元件指派給該資料行的歷程識別碼。  
   
- 「詞彙查閱」轉換會將兩個資料行新增到轉換輸出，以預設的 `Term` 和 `Frequency` 來命名。 
-  `Term` 包含了查閱資料表中的詞彙，而 `Frequency` 包含了參考資料表中的詞彙發生在輸入資料集內的次數。 這些資料行不包含 CustomLineageID 屬性。  
+ 「詞彙查閱」轉換會將兩個資料行新增到轉換輸出，以預設的 `Term` 和 `Frequency` 來命名。 `Term` 包含了查閱資料表中的詞彙，而 `Frequency` 包含了參考資料表中的詞彙發生在輸入資料集內的次數。 這些資料行不包含 CustomLineageID 屬性。  
   
  查閱資料表必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 資料庫中的資料表。 如果將「詞彙擷取」轉換的輸出儲存為資料表，不僅可將此資料表用為參考資料表，也可以使用其他資料表。 在您可以使用「詞彙查閱」轉換之前，一般檔案、Excel 活頁簿或其他來源中的文字必須匯入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫或 Access 資料庫。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "62770314"
   
 -   [詞彙查閱轉換編輯器 &#40;詞彙查閱索引標籤&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [詞彙查閱轉換編輯器 &#40;[Advanced] 索引標籤&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [詞彙查閱轉換編輯器 &#40;進階索引標籤&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

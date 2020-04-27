@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786733"
 ---
 # <a name="collations-and-code-pages"></a>定序和字碼頁
-  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 對於記憶體最佳化的資料表中 (var)Char 資料行支援的字碼頁以及用於索引和原生編譯預存程序中支援的定序有一些限制。  
   
  (var)char 值的字碼頁會判斷字元與資料表中儲存的位元組表示法之間的對應。 例如，在 Windows Latin 1 字碼頁 (也就是 1252；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設值) 中，字元 'a' 對應到 0x61 位元組。  

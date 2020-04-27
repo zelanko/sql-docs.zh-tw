@@ -21,25 +21,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787960"
 ---
-# <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於未同步或未同步處理狀態的次要複本，則 wizard 會執行強制手動容錯移轉，也稱為*強制容錯移轉*（可能會遺失資料）。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
+# <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用容錯移轉可用性群組精靈 (SQL Server Management Studio)
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 狀態的次要複本，此精靈就會執行強制手動容錯移轉，也稱為「強制容錯移轉」** (可能會遺失資料)。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
   
 
 
   
 -   **[!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]頁面**  
   
-     [選取新的主要複本頁面](#SelectNewPrimaryReplica)（本主題稍後）  
+     [選取新的主要複本頁面](#SelectNewPrimaryReplica) (本主題稍後)  
   
-     [連接到複本頁面](#ConnectToReplica)（本主題稍後）  
+     [連接到複本頁面](#ConnectToReplica) (本主題稍後)  
   
-     [確認可能遺失資料頁面](#ConfirmPotentialDataLoss)（本主題稍後）  
+     [確認可能遺失資料頁面](#ConfirmPotentialDataLoss) (本主題稍後)  
   
      [[摘要] 頁面 &#40;AlwaysOn 可用性群組嚮導&#41;](summary-page-always-on-availability-group-wizards.md)  
   
@@ -47,32 +47,31 @@ ms.locfileid: "62787960"
   
      [&#40;AlwaysOn 可用性群組嚮導的結果頁面&#41;](results-page-always-on-availability-group-wizards.md)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  第一次進行規劃的手動容錯移轉之前，請參閱 [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
  第一次進行強制容錯移轉之前，請先參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   目標次要複本接受命令之後，容錯移轉命令就會傳回。 不過，在可用性群組完成容錯移轉之後，會以非同步方式復原資料庫。  
   
 -   容錯移轉時，不會保留可用性群組內跨資料庫的一致性。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不支援跨資料庫交易和分散式交易。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)。  
+    >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不支援跨資料庫交易和分散式交易。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)。  
   
-###  <a name="Prerequisites"></a>使用容錯移轉可用性群組嚮導的必要條件  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a>使用容錯移轉可用性群組嚮導的必要條件  
   
 -   您必須連接到裝載目前可用之可用性複本的伺服器執行個體。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- **若要使用容錯移轉可用性群組嚮導**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ **若要使用容錯移轉可用性群組精靈**  
   
 1.  在 [物件總管] 中，連接到裝載需要容錯移轉之可用性群組次要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
@@ -80,10 +79,9 @@ ms.locfileid: "62787960"
   
 3.  若要啟動 [容錯移轉可用性群組精靈]，請以滑鼠右鍵按一下您要容錯移轉的可用性群組，然後選取 [容錯移轉] ****。  
   
-4.  
-  **[簡介]** 頁面所呈現的資訊主要取決於任何次要複本是否符合規劃容錯移轉的資格。 如果此頁面顯示 **[執行這個可用性群組的計劃的容錯移轉]**，表示您可以在不遺失資料的情況下容錯移轉可用性群組。  
+4.  **[簡介]** 頁面所呈現的資訊主要取決於任何次要複本是否符合規劃容錯移轉的資格。 如果此頁面顯示 **[執行這個可用性群組的計劃的容錯移轉]**，表示您可以在不遺失資料的情況下容錯移轉可用性群組。  
   
-5.  在 [選取新的主要複本] **** 頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」 **) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為 **[無資料遺失]** 的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告 (***#***)**」，其中 *#* 表示針對指定之次要複本存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
+5.  在 [選取新的主要複本] **** 頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」 **) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為 **[無資料遺失]** 的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告 (***#***)**」，其中 *#* 表示指定次要複本所存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
   
      如需詳細資訊，請參閱本主題稍後的＜ [選取新的主要複本頁面](#SelectNewPrimaryReplica)＞。  
   
@@ -93,10 +91,9 @@ ms.locfileid: "62787960"
   
 8.  在 **[摘要]** 頁面上，檢閱容錯移轉至選取次要複本的影響。  
   
-     如果您對所做的選擇感到滿意時，可以選擇按一下 **[指令碼]** ，建立精靈將執行之步驟的指令碼。 然後，若要將可用性群組容錯移轉至選取的次要複本，請按一下 **[完成]**。  
+     如果您對所做的選擇感到滿意，可以選擇按一下 [**腳本**]，建立嚮導將執行之步驟的腳本。 然後，若要將可用性群組容錯移轉至選取的次要複本，請按一下 **[完成]**。  
   
-9. 
-  **[進度]** 頁面會顯示容錯移轉可用性群組的進度。  
+9. **[進度]** 頁面會顯示容錯移轉可用性群組的進度。  
   
 10. 當容錯移轉作業完成時， **[結果]** 頁面就會顯示結果。 當精靈完成時，按一下 **[關閉]** 以結束。  
   
@@ -111,7 +108,7 @@ ms.locfileid: "62787960"
   
  此精靈的其他頁面都與一個或多個其他 AlwaysOn 可用性群組精靈共用說明，而且記載於個別的 F1 說明主題中。  
   
-###  <a name="SelectNewPrimaryReplica"></a>選取新的主要複本頁面  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a>選取新的主要複本頁面  
  本節描述的是 **[選取新的主要複本]** 頁面的選項。 您可以使用此頁面來選取可用性群組將容錯移轉的目標次要複本 (容錯移轉目標)。 這個複本將成為新的主要複本。  
   
 #### <a name="page-options"></a>頁面選項  
@@ -136,7 +133,7 @@ ms.locfileid: "62787960"
  **選擇新的主要複本**  
  您可以使用此方格來選取要成為新主要複本的次要複本。 此方格中的資料行如下所示：  
   
- **伺服器執行個體**  
+ **伺服器實例**  
  顯示裝載次要複本之伺服器執行個體的名稱。  
   
  **可用性模式**  
@@ -159,7 +156,7 @@ ms.locfileid: "62787960"
   
  如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
   
- **[容錯移轉整備]**  
+ **容錯移轉就緒**  
  顯示次要複本的容錯移轉整備，它有下列幾種：  
   
 |值|描述|  
@@ -167,36 +164,36 @@ ms.locfileid: "62787960"
 |**無資料遺失**|這個次要複本目前支援規劃的容錯移轉。 只有當同步認可模式的次要複本目前與主要複本同步處理時，才會出現此值。|  
 |**資料遺失，警告（** *#* **）**|這個次要複本目前支援強制容錯移轉 (可能會遺失資料)。 每當次要複本並未與主要複本同步處理時，就會出現此值。 如需有關可能遺失資料的詳細資訊，請按一下資料遺失警告連結。|  
   
- **[重新整理]**  
+ **重新整理**  
  按一下可更新方格。  
   
  **取消**  
  按一下可取消精靈。 在 **[選取新的主要複本]** 頁面上，取消精靈會導致精靈結束，而不執行任何動作。  
   
-###  <a name="ConfirmPotentialDataLoss"></a>確認可能遺失資料頁面  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a>確認可能遺失資料頁面  
  本節描述的是 **[確認可能遺失資料]** 頁面的選項 (只有當您正在執行強制容錯移轉時，才會顯示此頁面)。 本主題僅供 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]使用。 您可以使用此頁面來指出是否願意承擔可能遺失資料的風險，以便強制可用性群組容錯移轉。  
   
 #### <a name="confirm-potential-data-loss-options"></a>確認可能遺失資料選項  
  如果選取的次要複本並未與主要複本同步處理，此精靈就會顯示一則警告，表示容錯移轉至此次要複本可能會導致一個或多個資料庫的資料遺失。  
   
- **按一下這裡確認可能遺失資料的容錯移轉。**  
+ **按一下這裡確認可能遺失資料的容錯移轉**  
  如果您願意承擔遺失資料的風險，以便將這個可用性群組中的資料庫提供給使用者，請按一下此核取方塊。 如果您不願意承擔遺失資料的風險，可以按一下 **[上一步]** 返回 **[選取新的主要複本]** 頁面，或按一下 **[取消]** 結束精靈而不容錯移轉可用性群組。  
   
  **取消**  
  按一下可取消精靈。 在 **[確認可能遺失資料]** 頁面上，取消精靈會導致精靈結束，而不執行任何動作。  
   
-###  <a name="ConnectToReplica"></a>連接到複本頁面  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a>連接到複本頁面  
  本節描述的是 **之** [連接到複本] [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]頁面的選項。 只有當您沒有連接到目標次要複本時，才會顯示此頁面。 您可以使用此頁面來連接到已選取成為新主要複本的次要複本。  
   
 #### <a name="page-options"></a>頁面選項  
  **方格資料行：**  
- **伺服器執行個體**  
+ **伺服器實例**  
  顯示將裝載可用性複本的伺服器執行個體名稱。  
   
- **連線身分**  
+ **連線方式**  
  顯示在建立連接後連接到伺服器執行個體的帳戶。 如果此資料行對於給定的伺服器執行個體顯示 **[未連接]**，您就必須按一下 **[連接]** 按鈕。  
   
- **連線**  
+ **[連接]**  
  如果這個伺服器執行個體是在與其他需要連接的伺服器執行個體不同的帳戶下執行，請按一下此按鈕。  
   
  **取消**  
@@ -208,6 +205,6 @@ ms.locfileid: "62787960"
  [容錯移轉和容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
- [透過強制仲裁 &#40;SQL Server 的 WSFC 損毀修復&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
   

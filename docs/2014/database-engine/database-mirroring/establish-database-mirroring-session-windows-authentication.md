@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806902"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>使用 Windows 驗證建立資料庫鏡像工作階段 (SQL Server Management Studio)
@@ -41,16 +41,16 @@ ms.locfileid: "62806902"
   
 1.  連接到主體伺服器執行個體後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]** ，然後選取要鏡像的資料庫。  
+2.  展開 **[資料庫]**，然後選取要鏡像的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]****，然後按一下 [鏡像]****。 這會開啟 [**資料庫屬性**] 對話方塊的 [**鏡像**] 頁面。  
   
 4.  若要開始設定鏡像，請按一下 **[設定安全性]** 按鈕，啟動「設定資料庫鏡像安全性精靈」。  
   
     > [!NOTE]  
     >  在資料庫鏡像工作階段中，您只能使用這個精靈來加入或變更見證伺服器執行個體。  
   
-5.  「設定資料庫鏡像安全性精靈」會自動在每個伺服器執行個體上建立資料庫鏡像端點 (如果沒有端點的話)，並在伺服器執行個體角色 ( **[主體]** 、 **[鏡像]** 或 **[見證]** ) 的對應欄位中輸入其伺服器網路位址。  
+5.  「設定資料庫鏡像安全性精靈」會自動在每個伺服器執行個體上建立資料庫鏡像端點 (如果沒有端點的話)，並在伺服器執行個體角色 (**[主體]**、 **[鏡像]** 或 **[見證]**) 的對應欄位中輸入其伺服器網路位址。  
   
     > [!IMPORTANT]  
     >  建立端點時，「設定資料庫鏡像安全性精靈」一定會使用 Windows 驗證。 鏡像端點必須已經設定成使用每個伺服器執行個體的憑證，然後您才能使用此精靈搭配以憑證為基礎的驗證。 此外，精靈之 **[服務帳戶]** 對話方塊中的所有欄位都必須保持空白。 如需建立資料庫鏡像端點以便使用憑證的相關資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)。  
@@ -71,21 +71,21 @@ ms.locfileid: "62806902"
   
     -   已指定主體及鏡像伺服器執行個體的完整 TCP 位址 (在 **[伺服器網路位址]** 區段中)。  
   
-    -   如果作業模式設定為 **[具有自動容錯移轉的高安全性 (同步)]** ，也會指定見證伺服器執行個體的完整 TCP 位址。  
+    -   如果作業模式設定為 **[具有自動容錯移轉的高安全性 (同步)]**，也會指定見證伺服器執行個體的完整 TCP 位址。  
   
 8.  在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]** 以儲存變更。 請注意，您必須先指定見證伺服器位址，才能透過自動容錯移轉切換到高安全性模式。  
   
     > [!NOTE]  
-    >  若要移除見證，請從 **[見證]** 欄位刪除其伺服器網路位址。 如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證]  欄位。  
+    >  若要移除見證，請從 **[見證]** 欄位刪除其伺服器網路位址。 如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證]**** 欄位。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [資料庫鏡像會話期間的角色切換 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [暫停或繼續資料庫鏡像工作階段 &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
- [設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [[鏡像] 頁面 &#40;的資料庫屬性&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [暫停或繼續資料庫鏡像會話 &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [設定鏡像資料庫以使用可信任的屬性 &#40;Transact-sql&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
  [移除資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
+ [在角色切換後管理登入和作業 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [設定資料庫鏡像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  

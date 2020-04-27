@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812294"
 ---
 # <a name="change-server-authentication-mode"></a>變更伺服器驗證模式
@@ -39,22 +39,22 @@ ms.locfileid: "62812294"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  sa 帳戶是已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶，而且經常是惡意使用者的攻擊目標。 除非您的應用程式需要，否則請勿啟用 sa 帳戶。 請務必針對 sa 登入使用一個增強式密碼。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-change-security-authentication-mode"></a>變更安全性驗證模式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]****。  
   
-2.  在 **[安全性]** 頁面上的 **[伺服器驗證]** 中，選取新的伺服器驗證模式，然後按一下 **[確定]** 。  
+2.  在 **[安全性]** 頁面上的 **[伺服器驗證]** 中，選取新的伺服器驗證模式，然後按一下 **[確定]**。  
   
 3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊中，按一下 **[確定]** 以確認需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-4.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [重新啟動]  。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，也必須將它重新啟動。  
+4.  在物件總管中，以滑鼠右鍵按一下您的伺服器，然後按一下 [**重新開機**]。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，也必須將它重新啟動。  
   
 #### <a name="to-enable-the-sa-login"></a>若要啟用 sa 登入  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62812294"
   
 2.  在 **[一般]** 頁面上，您可能需要為登入建立並確認密碼。  
   
-3.  在 **[狀態]** 頁面的 **[登入]** 區段中按一下 **[已啟用]** ，然後按一下 **[確定]** 。  
+3.  在 **[狀態]** 頁面的 **[登入]** 區段中按一下 **[已啟用]**，然後按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要啟用 sa 登入**  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
@@ -83,8 +83,8 @@ ms.locfileid: "62812294"
   
 ## <a name="see-also"></a>另請參閱  
  [增強式密碼](../../relational-databases/security/strong-passwords.md)   
- [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
+ [SQL Server 安裝的安全性考慮](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+ [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
  [當系統管理員遭到鎖定時連接到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
   

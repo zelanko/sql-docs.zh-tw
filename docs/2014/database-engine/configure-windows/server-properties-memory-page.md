@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809415"
 ---
 # <a name="server-properties-memory-page"></a>伺服器屬性 (記憶體頁面)
@@ -41,7 +41,7 @@ ms.locfileid: "62809415"
  **設定的值**  
  針對此窗格中的選項，顯示設定的值。 如果您變更這些值，請按一下 **[執行中的值]** ，即可查看變更是否已生效。 如果沒有的話，就必須先重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
- **[執行中的值]**  
+ **執行值**  
  針對此窗格中的選項，顯示目前執行中的值。 這些值是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  

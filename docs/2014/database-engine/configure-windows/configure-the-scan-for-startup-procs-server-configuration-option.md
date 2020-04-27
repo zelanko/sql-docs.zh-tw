@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1af9aea2b4088c2a8d3753fd55feaa0f43ae6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811365"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>設定 scan for startup procs 伺服器組態選項
@@ -38,20 +38,20 @@ ms.locfileid: "62811365"
   
 -   **後續操作：** [設定掃描啟動程序選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   這個選項是進階選項，只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員才可變更。  
   
 -   您可以使用 **sp_configure**來設定這個選項的值；然而如果您使用 **sp_procoption**(用以標示或取消標示自動執行的預存程序)，這個選項的值就會自動設定。 當 **sp_procoption** 用來將第一個預存程序標示為 autoproc 時，這個選項會自動設定為值 1。 當 **sp_procoption** 用來將最後一個預存程序取消標示 autoproc 時，這個選項會自動設定為值 0。 如果您使用 **sp_procoption** 標示和取消標示 autoproc，而且固定在捨棄 autoproc 之前取消其標示，則不需要手動設定這個選項。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>若要設定 scan for startup procs 選項  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62811365"
   
 3.  在 **[其他]** 下方，從下拉式清單方塊中選取所需的值，將 **[掃描啟動程序]** 選項的值變更為 True 或 False。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>若要設定 scan for startup procs 選項  
   
@@ -85,7 +85,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定掃描啟動程序選項之後  
+##  <a name="follow-up-after-you-configure-the-scan-for-startup-procs-option"></a><a name="FollowUp"></a> 後續操作：設定掃描啟動程序選項之後  
  伺服器必須重新啟動之後，設定才能生效。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768994"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
@@ -56,11 +56,11 @@ ms.locfileid: "62768994"
  您可以使用各種方法來升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 套件。 對於其中某些方法而言，升級只是暫時性。 對於其他方法而言，升級則是永久性。 下表將描述每種方法以及升級是暫時性或永久性。  
   
 > [!NOTE]  
->  當您使用隨目前之 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本安裝的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]dtexec** 公用程式 (dtexec.exe) 執行 ** 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 套件時，暫時套件升級將會拉長執行的時間。 所增加的封裝執行時間長短，取決於封裝的大小。 如要避免執行時間增加，建議您在執行前先升級封裝。  
+>  當您使用隨目前之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本安裝的 **dtexec** 公用程式 (dtexec.exe) 執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 套件時，暫時套件升級將會拉長執行的時間。 所增加的封裝執行時間長短，取決於封裝的大小。 如要避免執行時間增加，建議您在執行前先升級封裝。  
   
 |升級方法|升級的類型|  
 |--------------------|---------------------|  
-|使用隨目前 ** 版本安裝的 **dtexec[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式 (dtexec.exe) 執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 套件。<br /><br /> 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。|封裝升級是暫時性的。 針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，指令碼移轉是暫時性的。<br /><br /> 這些變更無法儲存。|  
+|使用隨目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本安裝的 **dtexec** 公用程式 (dtexec.exe) 執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 套件。<br /><br /> 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。|封裝升級是暫時性的。 針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，指令碼移轉是暫時性的。<br /><br /> 這些變更無法儲存。|  
 |在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，開啟 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 封裝檔案。|如果您儲存了封裝，封裝升級就是永久性。不過，如果您沒有儲存封裝，封裝升級就是暫時性。<br /><br /> 針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，如果您儲存了封裝，指令碼移轉就是永久性。不過，如果您沒有儲存封裝，指令碼移轉就是暫時性。|  
 |在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的現有專案中加入 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 封裝。|封裝升級是永久性的。 針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，指令碼移轉是永久性的。|  
 |開啟 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 中的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 專案檔案，然後使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 升級專案中的多個封裝。<br /><br /> 如需詳細資訊，請參閱 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md) 和 [SSIS 封裝升級精靈 F1 說明](../ssis-package-upgrade-wizard-f1-help.md)。|封裝升級是永久性的。 針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，指令碼移轉是永久性的。|  
@@ -83,10 +83,10 @@ ms.locfileid: "62768994"
   
  若要[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]使用設計包含[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自訂群組件的套件，您需要修改位於* \<磁片磁碟機>*： \Program Files\Microsoft Visual Studio 10.0 \ common7\ide。的 devenv 檔案。  
   
- 如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需組件版本重新導向的詳細資訊，請參閱 [\<runtime> 的 \<assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
+ 如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需元件版本重新導向的詳細資訊，請參閱[ \<運行\<時間>的 assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>尋找組件  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 *磁碟機>\<* :\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .Net 4 有個別的全域組件快取，位於* \<磁片磁碟機>*： \windows\microsoft.net\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
   
  如同舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，核心[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]擴充性 .dll 檔案也位於* \<磁片磁碟機>*： \Program Files\Microsoft SQL server\100\sdk\assemblies。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62768994"
   
 |元件或功能|升級結果|  
 |--------------------------|---------------------|  
-|連接字串|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> -使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝升級嚮導] 來升級封裝，然後選取 [**更新連接字串以使用新的提供者名稱**] 選項。<br /><br /> -在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [選項] 對話方塊的 [一般] 頁面上，選取 [**更新連接字串以使用新的提供者名稱**] 選項。 如需此選項的詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟套件並手動變更 ConnectionString 屬性的文字。<br /><br /> 請注意：當連接字串儲存在組態檔或資料來源檔案中，或者運算式設定 `ConnectionString` 屬性時，您無法使用先前的程序更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱 [資料來源](../connection-manager/data-sources.md)。|  
+|連接字串|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> -使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件升級精靈] 來升級套件，然後選取 [更新連接字串以使用新的提供者名稱]**** 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱]**** 選項。 如需此選項的詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟套件並手動變更 ConnectionString 屬性的文字。<br /><br /> 請注意：當連接字串儲存在組態檔或資料來源檔案中，或者運算式設定 `ConnectionString` 屬性時，您無法使用先前的程序更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱 [資料來源](../connection-manager/data-sources.md)。|  
 |查閱轉換|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，升級程序會自動將查閱轉換升級為目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本。 但目前版本中的此元件另有一些功能可以供您使用。<br /><br /> 如需詳細資訊，請參閱[查閱轉換](../data-flow/transformations/lookup-transformation.md)。|  
 |指令碼工作和指令碼元件|針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，升級程序會自動將指令碼工作和指令碼元件中的指令碼，從 VSA 移轉到 VSTA。<br /><br /> 如需您可能必須在移轉之前對指令碼進行的變更以及指令碼轉換失敗的詳細資訊，請參閱[將指令碼移轉到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。|  
   

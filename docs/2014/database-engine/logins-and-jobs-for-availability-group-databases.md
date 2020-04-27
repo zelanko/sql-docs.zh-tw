@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774280"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>管理可用性群組之資料庫的登入及工作 (SQL Server)
   您應該在每個 AlwaysOn 可用性群組的主要資料庫及其對應的次要資料庫上，固定維護一組相同的使用者登入和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理程式作業。 登入和作業必須在裝載可用性群組之可用性複本的每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上重新產生。  
   
--   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理程式作業**  
+-   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理程式作業**  
   
      您必須從裝載原始主要複本的伺服器執行個體，將相關作業手動複製到裝載原始次要複本的伺服器執行個體。 對於所有資料庫，您需要在每個相關作業的開頭加入邏輯，讓工作只在主要資料庫上執行，也就是說，只有在本機複本是資料庫的主要複本時才執行。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "62774280"
   
 -   **其他中繼資料**  
   
-     登入和作業不是唯一需要在裝載給定可用性群組之次要複本的每一個伺服器執行個體上重新建立的資訊。 例如，您可能需要重新建立伺服器組態設定、認證、加密資料、權限、複寫設定、Service Broker 應用程式、觸發程序 (伺服器層級) 等等。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+     登入和作業不是唯一需要在裝載給定可用性群組之次要複本的每一個伺服器執行個體上重新建立的資訊。 例如，您可能需要重新建立伺服器組態設定、認證、加密資料、權限、複寫設定、Service Broker 應用程式、觸發程序 (伺服器層級) 等等。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="SSauthentication"></a> Logins Of Applications That Use SQL Server Authentication or a Local Windows Login  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Logins Of Applications That Use SQL Server Authentication or a Local Windows Login  
  如果應用程式使用 SQL Server 驗證或本機 Windows 登入，可能會由於 SID 不相符造成遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體無法解析該應用程式的登入。 SID 不相符將導致此登入成為遠端伺服器執行個體上的被遺棄使用者。 若應用程式是在容錯移轉後連接到鏡像資料庫或記錄傳送資料庫，或者連接到從備份初始化的複寫訂閱者資料庫，可能就會發生這個問題。  
   
  建議您在設定這類應用程式而要使用由遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體所裝載的資料庫時，應採取預防措施以避免此問題。 預防的方法包括從本機 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體傳送登入和密碼到遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 如需如何預防此問題的詳細資訊，請參閱知識庫文件 918992：[如何在 SQL Server 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992/)。  
@@ -55,7 +55,7 @@ ms.locfileid: "62774280"
   
  如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立登入](../relational-databases/security/authentication-access/create-a-login.md)  
   

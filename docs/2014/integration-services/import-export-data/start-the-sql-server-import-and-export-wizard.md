@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768025"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>執行 SQL Server 匯入和匯出精靈
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈提供最簡單的方法，讓您在資料來源之間複製資料以及建構基本封裝。 如需有關 wizard 的詳細資訊，請參閱[SQL Server 匯入和匯出 wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
   
  如需示範如何使用 [SQL Server 匯入和匯出嚮導] 建立封裝，將資料從 SQL Server 資料庫匯出至 Microsoft Excel 試算表的影片，請參閱將[SQL Server 資料匯出至 excel （SQL Server 影片）](https://go.microsoft.com/fwlink/?LinkId=131024)。  
@@ -49,8 +48,7 @@ ms.locfileid: "62768025"
      在命令提示字元視窗中，執行 DTSWizard.exe (位於 C:\Program Files\Microsoft SQL Server\100\DTS\Binn)。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會在 64 位元電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈 (DTSWizard.exe) 的 64 位元版本。 不過，有些資料來源 (例如，Access 或 Excel) 只有 32 位元提供者。 若要使用這些資料來源，您可能必須安裝並執行此精靈的 32 位元版本。 若要安裝此精靈的 32 位元版本，您必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會在 64 位元電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈 (DTSWizard.exe) 的 64 位元版本。 不過，有些資料來源 (例如，Access 或 Excel) 只有 32 位元提供者。 若要使用這些資料來源，您可能必須安裝並執行此精靈的 32 位元版本。 若要安裝此精靈的 32 位元版本，您必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料  
   
@@ -61,8 +59,7 @@ ms.locfileid: "62768025"
      可用的資料來源包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者、OLE DB 提供者、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者、Microsoft Office Excel、Microsoft Office Access 和一般檔案來源。 視來源而定，您可以設定驗證模式、伺服器名稱、資料庫名稱和檔案格式等選項。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支援 Oracle BLOB、CLOB、NCLOB、BFILE 和 UROWID 等資料類型。 因此，OLE DB 來源不能從包含這些資料類型之資料行的資料表中擷取資料。  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支援 Oracle BLOB、CLOB、NCLOB、BFILE 和 UROWID 等資料類型。 因此，OLE DB 來源不能從包含這些資料類型之資料行的資料表中擷取資料。  
   
      可用的資料目的地包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者、OLE DB 提供者、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、Excel、Access 和一般檔案目的地。  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811342"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>設定 media retention 伺服器組態選項
@@ -42,24 +42,24 @@ ms.locfileid: "62811342"
   
 -   **後續操作：** [設定媒體保留選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果您在超過設定的天數之前使用備份媒體， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將發出警告訊息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將不會發出警告。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   這個選項是進階選項，只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員才可變更。  
   
 -   **media retention** 選項可使用 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式的 RETAINDAYS 子句完成覆寫。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-media-retention-option"></a>設定 media retention 選項  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62811342"
   
 3.  在 **[備份/還原]** 的 **[預設備份媒體保留]** 方塊中，輸入或選取 0 到 365 間的任一數值，以設定進行資料庫或交易記錄備份之後，備份媒體的保留天數。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-media-retention-option"></a>設定 media retention 選項  
   
@@ -95,7 +95,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定媒體保留選項之後  
+##  <a name="follow-up-after-you-configure-the-media-retention-option"></a><a name="FollowUp"></a> 後續操作：設定媒體保留選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

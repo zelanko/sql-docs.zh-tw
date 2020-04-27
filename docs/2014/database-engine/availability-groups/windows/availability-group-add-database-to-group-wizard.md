@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815723"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將資料庫加入至可用性群組] 精靈 (SQL Server Management Studio)
@@ -36,12 +36,12 @@ ms.locfileid: "62815723"
   
      [安全性](#Security)  
   
--   **若要加入資料庫，請使用：**  [將資料庫加入至可用性組嚮導（SQL Server Management Studio）](#SSMSProcedure)  
+-   **若要加入資料庫，請使用：**  [將資料庫加入可用性群組精靈 (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  如果您從未將資料庫新增至可用性群組，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)中的「可用性資料庫」一節。  
   
-###  <a name="Prerequisites"></a> 必要條件、限制及建議  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a>必要條件、限制和建議  
   
 -   您必須連接到裝載目前主要複本的伺服器執行個體。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "62815723"
   
      如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a>使用將資料庫加入至可用性群組的 Wizard （SQL Server Management Studio）  
- **若要使用將資料庫加入至可用性群組嚮導**  
+##  <a name="using-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用將資料庫加入至可用性群組的 Wizard （SQL Server Management Studio）  
+ **使用將資料庫加入至可用性群組精靈**  
   
 1.  在 [物件總管] 中，連接到裝載可用性群組之主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62815723"
   
 5.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
   
-    -   **完整**  
+    -   **寫**  
   
          只有在您的環境符合自動啟動初始資料同步處理的需求時，才選取此選項 (如需詳細資訊，請參閱本主題稍早的 [必要條件、限制和建議](#Prerequisites))。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62815723"
   
      如需詳細資訊，請參閱[連接到現有的次要複本頁面 &#40;新增複本嚮導和加入資料庫 wizard&#41;](connect-to-existing-secondary-replicas-page.md)。  
   
-7.  **[驗證]** 頁面會驗證您在此精靈中指定的值是否符合 [新增可用性群組精靈] 的需求。 若要進行變更，您可以按 **[上一步]** 返回先前的精靈頁面，以變更一個或多個值。 然後按 **[下一步]** 返回 **[驗證]** 頁面，再按一下 **[重新執行驗證]** 。  
+7.  **[驗證]** 頁面會驗證您在此精靈中指定的值是否符合 [新增可用性群組精靈] 的需求。 若要進行變更，您可以按 **[上一步]** 返回先前的精靈頁面，以變更一個或多個值。 然後按 **[下一步]** 返回 **[驗證]** 頁面，再按一下 **[重新執行驗證]**。  
   
      如需詳細資訊，請參閱[&#40;AlwaysOn 可用性群組嚮導&#41;的驗證頁面](validation-page-always-on-availability-group-wizards.md)。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62815723"
   
      如需詳細資訊，請參閱[&#40;AlwaysOn 可用性群組&#41;](summary-page-always-on-availability-group-wizards.md)的 [摘要] 頁面。  
   
-     如果您對所做的選擇感到滿意時，可以選擇按一下 [指令碼]，建立精靈將執行之步驟的指令碼。 然後，若要建立及設定新的可用性群組，請按一下 **[完成]** 。  
+     如果您對所做的選擇感到滿意時，可以選擇按一下 [指令碼]，建立精靈將執行之步驟的指令碼。 然後，若要建立及設定新的可用性群組，請按一下 **[完成]**。  
   
 9. **[進度]** 頁面會顯示建立可用性群組之步驟的進度 (設定端點、建立可用性群組，並將次要複本加入群組中)。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62815723"
   
 11. 如果初始資料同步處理並未在所有次要資料庫上自動啟動，您需要設定任何尚未聯結的次要資料庫。 如需詳細資訊，請參閱[於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

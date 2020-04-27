@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780511"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 .NET Framework 支援
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 支援的功能可讓您撰寫應用程式以便從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體存取 XML 資料、將資料置於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 環境、處理資料，以及將更新傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本節記載 .NET Framework 支援功能並提供其用法的範例。  
   
 ## <a name="in-this-section"></a>本節內容  

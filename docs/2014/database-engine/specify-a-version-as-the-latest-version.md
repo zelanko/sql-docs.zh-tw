@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773474"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>將版本指定為最新版
@@ -40,7 +40,7 @@ ms.locfileid: "62773474"
   
 3.  **在 [檔案**] 功能表上，指向 [原始檔**控制**]，然後按一下 [ **ViewHistory**]。  
   
-4.  在 [ **** \<檔> 的歷程記錄] 對話方塊中，選取您要指定為最新的版本，然後按一下 [**釘**選]。  
+4.  在 [ **History of** \<檔> 的歷程記錄] 對話方塊中，選取您要指定為最新的版本，然後按一下 [**釘**選]。  
   
      此時所選版本旁會出現圖釘符號，表示它是目前的檔案版本。 如果 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 載入了不同的版本，系統會提示您重新載入檔案。  
   

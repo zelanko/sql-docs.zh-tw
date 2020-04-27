@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779222"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>使用記憶體最佳化資料表索引的方針
@@ -70,8 +70,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |作業|記憶體最佳化、非叢集雜湊、索引|記憶體最佳化的非叢集索引|磁碟型索引|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引掃描，擷取所有資料表資料列。|是|是|是|  
-|等號比較述詞 (=) 的索引搜尋。|是<br /><br /> (需要完整金鑰。)|是 <sup>1</sup>|是|  
-|不等比較述詞的索引搜尋（> \<、<、=、>=、BETWEEN）。|否 (產生索引掃描)|是 <sup>1</sup>|是|  
+|等號比較述詞 (=) 的索引搜尋。|是<br /><br /> (需要完整金鑰。)|是<sup>1</sup>|是|  
+|不等比較述詞的索引搜尋（> \<、<、=、>=、BETWEEN）。|否 (產生索引掃描)|是<sup>1</sup>|是|  
 |依照排序次序擷取符合索引定義的資料列。|否|是|是|  
 |依照排序次序擷取符合相反索引定義的資料列。|否|否|是|  
   

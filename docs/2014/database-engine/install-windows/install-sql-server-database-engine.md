@@ -13,21 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779359"
 ---
 # <a name="about-the-sql-server-database-engine"></a>關於 SQL Server Database Engine
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件是用來儲存、處理及維護資料安全的核心服務。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供控制存取和快速交易處理，以符合企業中最需要的資料耗用應用程式的需求。  
   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件是用來儲存、處理及維護資料安全的核心服務。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供控制存取和快速交易處理，以符合企業中最需要的資料耗用應用程式的需求。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在單一電腦上最多支援 50 個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 若要建立一般[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝，請參閱安裝[程式中的 Install SQL Server 2014 &#40;安裝&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在單一電腦上最多支援 50 個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 若要建立一般[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝，請參閱安裝[程式中的 Install SQL Server 2014 &#40;安裝&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
-  
- **重要事項**若為本機安裝，您必須以系統管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
+ **重要事項**若為本機安裝，您必須以系統管理員的身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
   
  當您在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈的 [要** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **安裝的元件] 頁面上選取 [資料庫引擎] 時，會安裝下列功能：  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815595"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>可用性複本沒有健全的角色
@@ -29,8 +29,8 @@ ms.locfileid: "62815595"
 |-|-|  
 |**原則名稱**|可用性複本的角色狀態|  
 |**問題**|可用性複本沒有狀況良好的角色。|  
-|**類別目錄**|**嚴重**|  
-|**Facet**|可用性複本|  
+|**類別**|**重大**|  
+|**層面**|可用性複本|  
   
 ## <a name="description"></a>描述  
  這項原則檢查可用性複本的角色狀態。 當可用性複本的角色既不是主要也不是次要時，原則為狀況不良。 否則原則為狀況良好。  

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812582"
 ---
 # <a name="check-in-files"></a>簽入檔案
@@ -32,7 +32,7 @@ ms.locfileid: "62812582"
   
 2.  如果 [**簽入**] 對話方塊出現，請選取適當的選項，然後按一下 **[確定]**。  
   
-     **登記**  
+     **簽入**  
      簽入所有選取的項目。  
   
      **資料行**  

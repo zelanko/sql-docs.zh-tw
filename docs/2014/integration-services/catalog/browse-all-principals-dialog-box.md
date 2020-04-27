@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 46d6fd5d4ecd821a3ccfeb35679e8fa7bab6104e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771714"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
@@ -28,7 +28,7 @@ ms.locfileid: "62771714"
   
 -   [設定選項](#options)  
   
-##  <a name="open_dialog"></a> 開啟 [瀏覽所有主體] 對話方塊  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> 開啟 [瀏覽所有主體] 對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62771714"
   
 5.  選取 **[權限]** 頁面，然後按一下 **[瀏覽]** 。  
   
-##  <a name="options"></a> 設定選項  
+##  <a name="configure-the-options"></a><a name="options"></a> 設定選項  
  這個頁面會顯示來自 SSISDB 資料庫之目錄檢視 sys.database_principals 的主體。  
   
  若選取主體，在您按一下 **[確定]** 並關閉 **[瀏覽所有主體]** 對話方塊時，它們就會加入至父對話方塊中 **[權限]** 頁面上的 **[登入或角色]** 清單。 將主體加入至 **[登入或角色]** 清單後，您可以變更它們在所選專案上的權限。  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814137"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 (SQL Server)
@@ -32,17 +32,17 @@ ms.locfileid: "62814137"
   
 -   [必要條件](#Prerequisites)  
   
--   [使用虛擬網路名稱（Vnn）進行 FILESTREAM 和 FileTable 存取](#vnn)  
+-   [使用虛擬網路名稱 (VNN) 進行 FILESTREAM 和 FileTable 存取](#vnn)  
   
 -   [相關工作](#RelatedTasks)  
   
 -   [相關內容](#RelatedContent)  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   將使用 FILESTREAM (包含或不含 FileTable) 的資料庫加入至可用性群組之前，請確定裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。 如需詳細資訊，請參閱 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
-##  <a name="vnn"></a> 使用虛擬網路名稱 (VNN) 進行 FILESTREAM 和 FileTable 存取  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a>使用虛擬網路名稱（Vnn）進行 FILESTREAM 和 FileTable 存取  
  當您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上啟用 FILESTREAM 時，系統就會建立執行個體層級共用，讓您存取 FILESTREAM 資料。 您可以依照下列格式使用電腦名稱來存取這個共用：  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -75,13 +75,13 @@ ms.locfileid: "62814137"
   
  當資料庫不屬於可用性群組的一部分時，如果您的應用程式嘗試使用 VNN 範圍的路徑來存取共用，則要求可能會成功。 在此情況中，虛擬網路名稱會解析成電腦名稱。 不過，強烈建議您不要使用這種方式，因為如果可用性群組已卸除，VNN 範圍的路徑將會停止運作。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [啟用 FileTable 的必要條件](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

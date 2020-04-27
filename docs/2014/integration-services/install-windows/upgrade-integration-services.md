@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768066"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
@@ -64,7 +64,7 @@ ms.locfileid: "62768066"
   
  當您升級時，可以同時升級 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，或是只升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)]或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如果您只升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，雖然 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 仍然可運作，但是您將沒有 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的功能。 如果您只升級 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，雖然 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可完整運作，但是除非另一部電腦提供了 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] 的執行個體，否則就只能將封裝儲存在檔案系統中。  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>將 Integration Services 和 Database Engine 都升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>將 Integration Services 和 Database Engine 都升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  本章節描述執行具有以下準則之升級的作用：  
   
 -   您同時將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -120,12 +120,11 @@ ms.locfileid: "62768066"
   
 -   檢查 packageformat 資料行中的值，以識別 msdb.dbo.sysssispackages 系統資料表中的封裝版本。 此資料表有一個 packageformat 資料行可識別每一個封裝的版本。 packageformat 資料行中的值 2 表示 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 封裝，而值 3 則表示 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝。 在您將封裝移轉至新的封裝格式之前，packageformat 資料行中的值都不會變更。  
   
--   您不能使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具來設計、執行或管理[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具包含各自對應的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 版本、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈，以及封裝執行公用程式 (dtexecui.exe)。 升級程式不會移除[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具。 不過，您無法在已經升級的伺服器上使用這些工具來繼續使用 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝。  
+-   您不能使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具來設計、執行或管理[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具包含各自對應的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 版本、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈，以及封裝執行公用程式 (dtexecui.exe)。 升級程式不會移除[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具。 不過，您無法在已經升級的伺服器上使用這些工具來繼續使用 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝。  
   
 -   依預設，在升級安裝中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會設定為將與封裝執行相關的事件記錄至應用程式事件記錄檔。 當您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的資料收集器功能時，這個設定可能會產生過多的事件記錄項目。 記錄的事件包括 EventID 12288 "封裝已啟動" 和 EventID 12289 "封裝已成功完成"。 若要停止將這兩個事件記錄到應用程式事件記錄檔，請開啟登錄進行編輯。 在登錄中找出 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 節點，然後將 LogPackageExecutionToEventLog 設定的 DWORD 值從 1 變更為 0。  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>只將 Database Engine 升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>只將 Database Engine 升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  本章節描述執行具有以下準則之升級的作用：  
   
 -   您只要升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。 也就是說，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體現在是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體，但是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的執行個體和用戶端工具是來自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  

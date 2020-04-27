@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771537"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
@@ -30,7 +30,7 @@ ms.locfileid: "62771537"
   
 -   [還原專案版本](#restore)  
   
-##  <a name="open_dialog"></a> 開啟 [專案版本] 對話方塊  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> 開啟 [專案版本] 對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771537"
   
  在 [專案版本]  對話方塊中，[版本]  資料表會顯示已經在伺服器上部署之專案版本的清單、版本部署的日期和時間、版本還原的日期和時間 (如果已還原)、版本描述，以及版本識別碼。 目前使用中的版本會以資料表之 **[目前]** 資料行中的核取記號表示。  
   
-##  <a name="restore"></a> 還原專案版本  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> 還原專案版本  
  若要還原舊版專案，請在 **[版本]** 資料表中選取版本，然後按一下 **[還原至選取的版本]** 。 專案便會還原到選取的版本，而且該版本會以 **[版本]** 資料表之 **[目前]** 資料行中的核取記號表示。  
   
   

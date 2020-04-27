@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805567"
 ---
 # <a name="create-custom-templates"></a>建立自訂範本
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]隨附許多一般工作的範本，但範本真正的威力在於能夠為您必須經常建立的複雜字集建立自訂範本。 在這個練習中，您將利用幾個參數來建立簡單的指令碼，但冗長而重複的指令碼也適合使用範本。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了許多一般工作的範本，但範本真正的威力，在於能夠建立您經常需要建立之複雜指令碼的自訂範本。 在這個練習中，您將利用幾個參數來建立簡單的指令碼，但冗長而重複的指令碼也適合使用範本。  
   
 ## <a name="using-custom-templates"></a>使用自訂範本  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62805567"
   
 2.  在 [連接到 Database Engine]**** 對話方塊中，填妥連接資訊，然後按一下 [連接]****。 此時會開啟一個新的 [查詢編輯器] 視窗，其中含有 [WorkOrderProc]**** 範本的內容。  
   
-3.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。  
+3.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。  
   
 4.  在 [**取代範本參數**] 對話方塊中，針對`product_name` [值] 輸入**FreeWheel** （覆寫預設內容），然後按一下 **[確定]** 關閉 [**取代範本參數**] 對話方塊，並在 [查詢編輯器] 中修改腳本。  
   

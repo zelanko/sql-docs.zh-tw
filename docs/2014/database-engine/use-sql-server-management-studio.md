@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773884"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
@@ -62,10 +62,10 @@ ms.locfileid: "62773884"
  [SQL Server Management Studio 鍵盤快速鍵](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
  列出 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中所能使用的鍵盤快速鍵。  
   
- [自訂功能表與快速鍵](../ssms/customize-menus-and-shortcut-keys.md)  
+ [自訂功能表和快速鍵](../ssms/customize-menus-and-shortcut-keys.md)  
  描述如何建立自訂功能表和快速鍵。  
   
- [方案 &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
+ [解決方案 &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
  描述如何開發指令碼專案和方案。  
   
  [範本總管](../ssms/template/template-explorer.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "62773884"
  描述您可以用來建立查詢、設計或修改資料庫結構，或是更新資料的 Visual Database Tools。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看或變更伺服器屬性 &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+ [檢視或變更伺服器屬性 &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

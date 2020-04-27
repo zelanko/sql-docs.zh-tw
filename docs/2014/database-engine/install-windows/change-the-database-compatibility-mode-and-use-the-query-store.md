@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779110"
 ---
 # <a name="migrate-query-plans"></a>移轉查詢計劃
@@ -93,7 +93,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [查詢提示 &#40;Transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
- [計畫指南](../../relational-databases/performance/plan-guides.md)  
+ [查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [計劃指南](../../relational-databases/performance/plan-guides.md)  
   
   

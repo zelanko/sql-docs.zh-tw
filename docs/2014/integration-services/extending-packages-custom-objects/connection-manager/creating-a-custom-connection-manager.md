@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768922"
 ---
 # <a name="creating-a-custom-connection-manager"></a>建立自訂連接管理員
@@ -77,6 +77,6 @@ ConnectionManagerBase
   
 ## <a name="see-also"></a>另請參閱  
  [撰寫自訂連線管理員的程式碼](coding-a-custom-connection-manager.md)   
- [開發自訂連線管理員的使用者介面](developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [開發自訂連接管理員的使用者介面](developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   

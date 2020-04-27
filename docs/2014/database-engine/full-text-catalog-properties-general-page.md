@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779661"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文檢索目錄屬性 (一般頁面)
@@ -32,13 +32,13 @@ ms.locfileid: "62779661"
  顯示目錄是否為資料庫的預設目錄。  
   
  **母體擴展狀態**  
- 指出目錄的狀態。 可能的值為：  
+ 指出目錄的狀態。 可能的值包括：  
   
--   **閒置**  
+-   **Idle**  
   
 -   **搜耙進行中**  
   
--   **而**  
+-   **已暫停**  
   
 -   **調整執行速度**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62779661"
   
 -   **磁片已滿已暫停**  
   
--   **Change tracking**  
+-   **變更追蹤**  
   
  **項目計數**  
  顯示目錄中全文檢索項目的數目。  
@@ -85,7 +85,7 @@ ms.locfileid: "62779661"
   
 |||  
 |-|-|  
-|**無**|不會執行 **最佳化目錄**、 **重建目錄**，或 **重新擴展目錄** 等作業。|  
+|**None**|不會執行 **最佳化目錄**、 **重建目錄**，或 **重新擴展目錄** 等作業。|  
 |**最佳化目錄**|最佳化目錄的空間利用，並改善查詢的效能。 它還會改善搜尋結果之次序相關性的精確性。<br /><br /> 此動作會執行 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE。|  
 |**重建目錄**|刪除並重建全文檢索目錄。 如果已變更基礎的目錄屬性 (例如區分腔調字)，就必須執行此項作業。<br /><br /> 為了使重建能順利完成，全文檢索目錄所存在的檔案群組必須在線上，或者可供讀寫。 重建之後，就會重新擴展全文檢索的索引。<br /><br /> 此動作會執行 ALTER FULLTEXT CATALOG *catalog_name* REBUILD。|  
 |**重新擴展目錄**|用資料最近的變更來更新目錄。 此選項不需要關閉目錄。|  

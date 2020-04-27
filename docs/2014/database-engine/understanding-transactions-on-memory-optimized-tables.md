@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773375"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>了解記憶體最佳化資料表上的交易
@@ -29,7 +29,7 @@ ms.locfileid: "62773375"
   
 -   [記憶體最佳化資料表交易的重試邏輯方針](guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
--   [記憶體最佳化的資料表中的交易](transactions-in-memory-optimized-tables.md)  
+-   [經記憶體最佳化的資料表中的交易](transactions-in-memory-optimized-tables.md)  
   
 -   [交易隔離等級](transaction-isolation-levels.md)  
   
@@ -38,6 +38,6 @@ ms.locfileid: "62773375"
  如需詳細資訊，請參閱[控制交易持久性](../relational-databases/logs/control-transaction-durability.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化資料表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [記憶體優化資料表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

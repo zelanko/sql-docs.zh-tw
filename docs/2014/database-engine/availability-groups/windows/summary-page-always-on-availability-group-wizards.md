@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814064"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>摘要頁面 (AlwaysOn 可用性群組精靈)
   本說明主題描述 **[摘要]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 請使用此頁面上的方格來檢閱您為新可用性群組所做的選擇。 若要進行一個或多個變更，請按 **[上一步]** 返回相關頁面。 完成變更之後，請按 **[下一步]** 返回 **[摘要]** 頁面。 一旦您滿意所做的選擇之後，請按一下 **[完成]**。  
   
-##  <a name="PageOptions"></a>摘要頁面選項  
- **文字**  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> 摘要頁面選項  
+ **指令碼**  
  按一下可針對摘要方格中所列的動作產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 系統將提示您指定指令碼的目的地。  
   
- **處**  
+ **上一步**  
  按一下可返回目前頁面的上一個頁面。 您可以使用 **[上一步]** 按鈕來向前導覽至任何先前的頁面，並且選擇性地變更任何指定的值。  
   
  **[完成]**  
@@ -40,7 +40,7 @@ ms.locfileid: "62814064"
   
 
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

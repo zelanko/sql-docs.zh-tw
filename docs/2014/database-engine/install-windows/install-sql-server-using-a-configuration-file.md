@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775281"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用組態檔安裝 SQL Server 2014
@@ -63,35 +63,35 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  安裝程式基礎結構會針對已執行的動作寫出所有適當的參數，但密碼等機密資訊除外。 /IAcceptSQLServerLicenseTerms 參數也不會寫出至組態檔，而且需要修改組態檔或在命令提示字元中提供某個值。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。 此外，若為通常不會透過命令提示字元提供值的布林值參數，系統就會包含一個值。  
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>使用組態檔安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>使用組態檔安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  您只能針對命令列安裝使用組態檔。  
   
 > [!NOTE]  
 >  如果您需要對組態檔進行變更，我們建議您製作副本並使用此副本進行變更。  
   
-#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>如何使用組態檔安裝獨立式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>如何使用組態檔安裝獨立式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
--   透過命令提示字元執行安裝，並且使用 *ConfigurationFile* 參數來提供 ConfigurationFile.ini。  
+-   透過命令提示字元執行安裝，並使用*ConfigurationFile*參數提供 ConfigurationFile。  
   
-#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>如何使用組態檔準備及完成獨立式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (SysPrep) 的映像  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>如何使用組態檔準備及完成獨立式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (SysPrep) 的映像  
   
 1.  若要在同一部電腦上準備一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並進行設定。  
   
-    -   從安裝中心的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [準備**  獨立執行個體的映像]  ，並擷取備妥的映像組態檔。  
+    -   從安裝中心的 [進階]**** 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]****，並擷取備妥的映像組態檔。  
   
     -   使用相同的準備映像組態檔當做範本，以便準備其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-    -   從 [安裝中心] 的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [完成備妥的**  獨立執行個體的映像]  ，在電腦上設定備妥的執行個體。  
+    -   從 [安裝中心] 的 [進階]**** 頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]****，在電腦上設定備妥的執行個體。  
   
 2.  若要使用 Windows SysPrep 工具來準備作業系統的映像，包括未設定的已備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-    -   從 [安裝中心] 的 [進階] 頁面執行 [準備  **獨立執行個體的映像][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，並擷取備妥的映像組態檔。  
+    -   從 [安裝中心] 的 [進階] 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]****，並擷取備妥的映像組態檔。  
   
-    -   從 [安裝中心] 的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [完成備妥的**  獨立執行個體的映像]  ，但在擷取完成的組態檔之後，在 [準備開始完成]  頁面上取消它。  
+    -   從 [安裝中心] 的 [進階]**** 頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]****，但在擷取完成的組態檔之後，在 [準備開始完成]**** 頁面上取消它。  
   
     -   完成映像組態檔可以與 Windows 映像儲存在一起，以便自動化已備妥執行個體的組態設定作業。  
   
-#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>如何使用組態檔安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集  
+#### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>如何使用組態檔安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集  
   
 1.  整合式安裝選項 (在節點上建立單一節點容錯移轉叢集並且在其他節點上執行 AddNode)：  
   
@@ -113,11 +113,11 @@ FEATURES=SQL,Tools
   
     -   然後，您就可以提供這個 ConfigurationFile.ini 檔案來完成容錯移轉叢集。  
   
-#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>如何使用組態檔為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集加入或移除一個節點  
+#### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>如何使用組態檔為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集加入或移除一個節點  
   
 -   如果您擁有先前用來在容錯移轉叢集中加入節點或移除節點的組態檔，就可以重複使用相同的檔案來加入或移除其他節點。  
   
-#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>如何使用組態檔升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集  
+#### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>如何使用組態檔升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集  
   
 1.  在被動節點上執行「升級」，然後擷取 ConfigurationFile.ini 檔案。 您可以透過執行實際升級或在結束時退出而不進行實際升級，完成此作業。  
   

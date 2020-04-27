@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771574"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
@@ -38,15 +38,14 @@ ms.locfileid: "62771574"
 > [!NOTE]  
 >  如果`SSISDB`資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所連接的實例已停止或沒有回應，isserverexec.exe 程式就會結束。 會在 Windows 事件記錄檔中寫入一則訊息。  
 >   
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的封裝。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱[使用檢查點來重新啟動封裝](../packages/restart-packages-by-using-checkpoints.md)。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的封裝。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catalog-object-identifiers"></a>目錄物件識別碼  
- 當您在目錄中建立新的物件時，請為此物件指派名稱。 物件名稱是識別碼。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會定義哪些字元可以在識別碼中使用的規則。 隨後的物件名稱必須遵照識別碼規則。  
+ 當您在目錄中建立新的物件時，請為此物件指派名稱。 物件名稱是識別碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會定義哪些字元可以在識別碼中使用的規則。 隨後的物件名稱必須遵照識別碼規則。  
   
 -   資料夾  
   
--   隨附此逐步解說的專案  
+-   專案  
   
 -   環境  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62771574"
  **定期清除記錄檔**  
  當這個屬性設定為 `True` 時，便會執行作業清除的作業步驟。  
   
- **保留期間（天）**  
+ **保留週期 (天)**  
  定義可允許的作業資料存在時間上限 (以天為單位)。 移除較舊的資料。  
   
  最小值是一天。 最大值只受限於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int`資料的最大值。 如需此資料類型的資訊，請參閱 [int、bigint、smallint 和 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)。  
@@ -108,12 +107,11 @@ ms.locfileid: "62771574"
  **定期移除舊版本**  
  當這個屬性設定為 `True` 時，便會執行專案版本清除的作業步驟。  
   
- **每個專案的版本數目上限**  
+ **每一專案的版本數目上限**  
  定義多少個專案版本儲存在目錄中。 移除專案的舊版。  
   
 ### <a name="encryption-algorithm"></a>加密演算法  
- 
-  **[加密演算法]** 屬性會指定用來加密敏感性參數值的加密類型。 您可以從以下類型的加密中選擇。  
+ **[加密演算法]** 屬性會指定用來加密敏感性參數值的加密類型。 您可以從以下類型的加密中選擇。  
   
 -   AES_256 (預設)  
   
@@ -141,7 +139,7 @@ ms.locfileid: "62771574"
   
  下表列出 **[目錄屬性]** 對話方塊中所顯示的屬性名稱，以及資料庫檢視中的對應屬性。  
   
-|屬性名稱 (**[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
+|屬性名稱（**目錄屬性**對話方塊）|屬性名稱 (資料庫檢視)|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密演算法名稱|ENCRYPTION_ALGORITHM|  
 |定期清除記錄檔|OPERATION_CLEANUP_ENABLED|  
@@ -170,7 +168,7 @@ ms.locfileid: "62771574"
   
 -   針對專案中，使用 **權限** 頁面 [Project Properties Dialog Box](project-properties-dialog-box.md)。  
   
- 若要使用 Transact-sql 管理許可權，請呼叫[catalog. grant_permission &#40;ssisdb 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)，[目錄。 deny_permission &#40;ssisdb](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database)資料庫&#41;和[目錄。 revoke_permission &#40;ssisdb 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database)。 若要檢視對所有物件之目前主體有效的權限，請查詢 [catalog.effective_object_permissions &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database)。 此主題會提供不同類型之權限的描述。 若要檢視已明確指派給使用者的權限，請查詢 [catalog.explicit_object_permissions &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database)。  
+ 若要使用 Transact-SQL 管理權限，請呼叫 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)、[catalog.deny_permission &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) 及 [catalog.revoke_permission &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database)。 若要檢視對所有物件之目前主體有效的權限，請查詢 [catalog.effective_object_permissions &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database)。 此主題會提供不同類型之權限的描述。 若要檢視已明確指派給使用者的權限，請查詢 [catalog.explicit_object_permissions &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database)。  
   
 ## <a name="folders"></a>資料夾  
  資料夾包含目錄中的`SSISDB`一個或多個專案和環境。 您可以使用 [catalog.folders &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) 檢視來存取目錄中資料夾的相關資訊。 您可以使用以下預存程序來管理資料夾。  
@@ -275,8 +273,7 @@ ms.locfileid: "62771574"
   
 -   [catalog.event_message_context](/sql/integration-services/system-views/catalog-event-message-context)  
   
- 您可以藉由呼叫 [catalog.validate_project &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database) 和 [catalog.validate_package &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database) 預存程序來驗證專案與封裝。 
-  [catalog.validations &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-validations-ssisdb-database) 檢視會提供有關驗證的詳細資料，例如驗證時所考量的伺服器環境參考、這是相依性驗證還是完整驗證，以及使用 32 位元執行階段還是 64 位元執行階段來執行封裝。  
+ 您可以藉由呼叫 [catalog.validate_project &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database) 和 [catalog.validate_package &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database) 預存程序來驗證專案與封裝。 [catalog.validations &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-validations-ssisdb-database) 檢視會提供有關驗證的詳細資料，例如驗證時所考量的伺服器環境參考、這是相依性驗證還是完整驗證，以及使用 32 位元執行階段還是 64 位元執行階段來執行封裝。  
   
 ## <a name="related-tasks"></a>相關工作  
   

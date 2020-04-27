@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788251"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>部分可用性複本未同步處理資料
@@ -29,8 +29,8 @@ ms.locfileid: "62788251"
 |-|-|  
 |**原則名稱**|可用性複本資料同步處理狀態|  
 |**問題**|某些可用性複本並未同步處理資料。|  
-|**類別目錄**|**警告**|  
-|**Facet**|可用性群組|  
+|**類別**|**Warning**|  
+|**層面**|可用性群組|  
   
 ## <a name="description"></a>描述  
  這項原則會積存可用性群組中所有可用性複本的資料同步處理狀態，並檢查是否有任何可用性複本的同步處理無法運作。 如果可用性複本的任何資料同步處理狀態為 NOT SYNCHRONIZING，原則為狀況不良。  

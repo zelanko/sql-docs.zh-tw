@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812733"
 ---
 # <a name="change-source-control"></a>變更原始檔控制
@@ -31,7 +31,7 @@ ms.locfileid: "62812733"
 >  在方案總管中以滑鼠右鍵按一下項目，亦可使用此對話方塊。  
   
 ## <a name="options"></a>選項。  
- **繫結**  
+ **Bind**  
  建立選取的項目與指定的原始檔控制伺服器位置的關聯。 例如，您可以使用此按鈕，來繫節至最後的已知原始檔控制伺服器和資料庫。 如果找不到最近使用的伺服器資料夾或資料庫，就會提示您指定另一個。  
   
  **瀏覽**  
@@ -40,7 +40,7 @@ ms.locfileid: "62812733"
  **資料行**  
  識別要顯示的資料行以及它們顯示的順序。  
   
- **連線**  
+ **[連接]**  
  在選取的項目和原始檔控制伺服器之間建立連接。  
   
  **聯繫**  
@@ -55,7 +55,7 @@ ms.locfileid: "62812733"
  **提供者**  
  顯示原始檔控制外掛程式的名稱。  
   
- **[重新整理]**  
+ **重新整理**  
  針對此對話方塊中所列出的所有專案，重新整理連接資訊。  
   
  **伺服器繫結**  
@@ -80,7 +80,7 @@ ms.locfileid: "62812733"
 |Unknown|尚未決定在原始檔控制下之項目的狀態。|  
 |未控制|項目尚未放置在原始檔控制之下。|  
   
- **解除繫結**  
+ **解除系結**  
  顯示 [**原始檔控制**] 對話方塊，可讓您從原始檔控制中移除選取的專案，並將專案從其目前的資料夾永久解除關聯。  
   
 ## <a name="see-also"></a>另請參閱  

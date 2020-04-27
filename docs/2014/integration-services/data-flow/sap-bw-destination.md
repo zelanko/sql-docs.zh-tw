@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770857"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
@@ -33,7 +33,7 @@ ms.locfileid: "62770857"
   
 -   [設定 SAP BW 目的地](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 準備目的地所需的 SAP Netweaver BW 物件  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> 準備目的地所需的 SAP Netweaver BW 物件  
  SAP BW 目的地要求特定物件必須存在 SAP Netweaver BW 系統中，然後目的地才能運作。 如果這些物件原本不存在，您就必須遵循下列步驟，在 SAP Netweaver BW 系統中建立並設定這些物件。  
   
 > [!NOTE]  
@@ -55,12 +55,12 @@ ms.locfileid: "62770857"
   
  您也可以建立其他支援將資料載入 SAP Netweaver BW 系統所需的 InfoObject、InfoCube、InfoSource 和 InfoPackage。  
   
-##  <a name="bkmk_Connect_Database"></a> 連接到 SAP Netweaver BW 系統  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> 連接到 SAP Netweaver BW 系統  
  為了連接到 SAP Netweaver BW 版本 7 系統，SAP BW 目的地會使用屬於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 封裝一部分的 SAP BW 連接管理員。 SAP BW 連接管理員是 SAP BW 目的地可以使用的唯一 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連接管理員。  
   
  如需有關 SAP BW 連接管理員的詳細資訊，請參閱＜ [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)＞。  
   
-##  <a name="bkmk_Configure_Destination"></a> 設定 SAP BW 目的地  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> 設定 SAP BW 目的地  
  您可以利用下列方式設定 SAP BW 目的地：  
   
 -   查閱並選取要用來載入資料的 InfoPackage。  

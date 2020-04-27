@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775040"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文檢索索引
      
-##  <a name="view"></a>查看和變更全文檢索索引的屬性  
+##  <a name="viewing-and-changing-the-properties-of-a-full-text-index"></a><a name="view"></a>查看和變更全文檢索索引的屬性  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>在 Management Studio 中檢視或變更全文檢索索引的屬性  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62775040"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性]  對話方塊。  
   
-##  <a name="props"></a>查看索引資料表和資料行的屬性  
+##  <a name="viewing-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>查看索引資料表和資料行的屬性  
  您可以使用許多 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數 (例如 OBJECTPROPERTYEX) 以取得各種全文檢索索引屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
   
  下表列出索引資料表和資料行的相關全文檢索屬性及其相關的 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數。  
@@ -63,7 +63,7 @@ ms.locfileid: "62775040"
 |`TableFulltextPopulateStatus`|全文檢索資料表的母體擴展狀態。|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|資料表是否擁有使用中全文檢索索引。|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>取得全文檢索索引鍵資料行的相關資訊  
+##  <a name="getting-information-about-the-full-text-key-column"></a><a name="key"></a>取得全文檢索索引鍵資料行的相關資訊  
  一般而言，CONTAINSTABLE 或 FREETEXTTABLE 資料列集值函數的結果必須與基底資料表聯結。 在這種情況下，您必須知道唯一索引鍵資料行名稱。 您可以查詢給定的唯一索引是否當做全文檢索索引鍵使用，而且可以取得全文檢索索引鍵資料行的識別碼。  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>若要查詢給定的唯一索引是否當做全文檢索索引鍵資料行使用  
@@ -125,7 +125,7 @@ GO
   
  這個範例會傳回名為 `Unique Key Column`的結果集資料行，其中顯示包含 Document 資料表之唯一索引鍵資料行名稱的單一資料列 DocumentID。 請注意，如果這個查詢包含無效的索引名稱、索引名稱沒有對應至資料表，或者資料表不存在等，它就會傳回 NULL。  
   
-##  <a name="disable"></a>停用或重新啟用全文檢索索引的資料表  
+##  <a name="disabling-or-re-enabling-a-table-for-full-text-indexing"></a><a name="disable"></a>停用或重新啟用全文檢索索引的資料表  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，所有使用者建立的資料庫預設都會啟用全文檢索。 此外，個別資料表也會在建立全文檢索索引並將資料行加入索引中後，立即自動啟用全文檢索索引。 從全文檢索索引中卸除最後一個資料行之後，資料表便會自動停用全文檢索索引。  
   
  在具有全文檢索索引的資料表上，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來手動為資料表停用或重新啟用全文檢索索引。  
@@ -138,7 +138,7 @@ GO
   
 3.  選取 [全文檢索索引]  ，然後按一下 [停用全文檢索索引]  或 [啟用全文檢索索引]  。  
   
-##  <a name="remove"></a>從資料表移除全文檢索索引  
+##  <a name="removing-a-full-text-index-from-a-table"></a><a name="remove"></a>從資料表移除全文檢索索引  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>移除資料表的全文檢索索引  
   

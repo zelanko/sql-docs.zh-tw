@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779028"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>全文檢索索引屬性 (排程頁面)
@@ -39,7 +39,7 @@ ms.locfileid: "62779028"
  **已啟用**  
  指出排程的母體擴展目前為啟用或停用。  
   
- **說明**  
+ **描述**  
  顯示建立排程時所指定的描述。  
   
  **新增**  

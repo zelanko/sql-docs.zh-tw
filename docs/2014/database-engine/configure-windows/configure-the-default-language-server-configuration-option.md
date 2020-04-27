@@ -13,16 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811642"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>設定 default language 伺服器組態選項
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default language [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 
-  **default language** 選項會指定所有新建登入的預設語言。 若要設定預設語言，請指定所需語言的 **langid** 值。 
-  **langid** 值可透過查詢 **sys.syslanguages** 相容性檢視來取得。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default language [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **default language** 選項會指定所有新建登入的預設語言。 若要設定預設語言，請指定所需語言的 **langid** 值。 **langid** 值可透過查詢 **sys.syslanguages** 相容性檢視來取得。  
   
  **本主題內容**  
   
@@ -38,20 +36,20 @@ ms.locfileid: "62811642"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**  [設定 default language 選項之後](#FollowUp)  
+-   **後續操作：** [設定預設語言選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   使用 CREATE LOGIN 或 ALTER LOGIN 可覆寫登入的預設語言。 除非使用開放式資料庫連接 (Open Database Connectivity，ODBC) 或 OLE DB API 分別覆寫每個工作階段的語言，否則工作階段的預設語言就是該工作階段的登入語言。 請注意，您只能將 **default language** 選項設為 [sys.syslanguages](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 中定義的語言識別碼 (0-32)。 使用自主資料庫時，可以使用 CREATE DATABASE 或 ALTER DATABASE 為資料庫設定預設語言，以及使用 CREATE USER 或 ALTER USER 為自主資料庫使用者設定預設語言。 在自主資料庫中設定預設語言會接受 **langid** 值、語言名稱或語言別名，如 **sys.syslanguages**中所列。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-default-language-option"></a>設定 default language 選項  
   
@@ -63,7 +61,7 @@ ms.locfileid: "62811642"
   
      預設語言為英文。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-default-language-option"></a>設定 default language 選項  
   
@@ -84,16 +82,16 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a>後續操作：設定 default language 選項之後  
+##  <a name="follow-up-after-you-configure-the-default-language-option"></a><a name="FollowUp"></a> 後續操作：設定預設語言選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立登入 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
- [ALTER USER &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-user-transact-sql)   
- [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

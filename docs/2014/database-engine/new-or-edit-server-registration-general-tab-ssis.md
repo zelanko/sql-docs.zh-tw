@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774152"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>新增或編輯伺服器註冊 (一般索引標籤) (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62774152"
   
 ## <a name="options"></a>選項。  
  **伺服器類型**  
- 在 [已註冊的伺服器] 中註冊伺服器時，[伺服器類型]**** 方塊是唯讀的，且會與 [已註冊的伺服器] 中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]**, **[Database Engine]**, **[Analysis Server]**, **[Reporting Services]** **、**[SQL Server Compact] **Edition** 或 **[Integration Services]** ，然後才開始註冊新伺服器。  
+ 在 [已註冊的伺服器] 中註冊伺服器時，[伺服器類型]**** 方塊是唯讀的，且會與 [已註冊的伺服器] 中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 [已註冊的伺服器]**** 工具列上按一下 **Database Engine**、**Analysis Server**、**Reporting Services**、**SQL Server Compact Edition** **** 或 **Integration Services**，然後才開始註冊新伺服器。  
   
  **伺服器名稱**  
  選取要連接的伺服器。 依預設，會顯示上次連接的伺服器。  
@@ -49,10 +49,10 @@ ms.locfileid: "62774152"
  **已註冊的伺服器描述**  
  輸入伺服器的選擇性描述。  
   
- **測驗**  
+ **測試**  
  按一下以測試與 [伺服器名稱]**** 中選取之伺服器的連接。  
   
- **另**  
+ **儲存**  
  按一下即可儲存 [已註冊的伺服器] 設定。  
   
   

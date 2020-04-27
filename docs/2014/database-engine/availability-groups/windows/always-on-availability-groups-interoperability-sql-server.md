@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815744"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>AlwaysOn 可用性群組：互通性 (SQL Server)
@@ -25,9 +25,8 @@ ms.locfileid: "62815744"
   
 
   
-##  <a name="Interop"></a>與 AlwaysOn 可用性群組互通的功能  
- 下表列出與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互通的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。 
-  **[詳細資訊]** 資料行中的連結表示有適用於所指功能的互通性考量。  
+##  <a name="features-that-interoperate-with-alwayson-availability-groups"></a><a name="Interop"></a>與 AlwaysOn 可用性群組互通的功能  
+ 下表列出與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互通的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。 **[詳細資訊]** 資料行中的連結表示有適用於所指功能的互通性考量。  
   
 |功能|相關資訊|  
 |-------------|----------------------|  
@@ -46,9 +45,8 @@ ms.locfileid: "62815744"
 |Service Broker|[具有 AlwaysOn 可用性群組 &#40;SQL Server 的 Service Broker&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server Agent||  
   
-##  <a name="NoInterop"></a>無法與 AlwaysOn 可用性群組互通的功能  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 無法與下列功能互通：  
+##  <a name="features-that-do-not-interoperate-with-alwayson-availability-groups"></a><a name="NoInterop"></a>無法與 AlwaysOn 可用性群組互通的功能  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 無法與下列功能互通：  
   
 -   跨資料庫交易/分散式交易  
   
@@ -56,11 +54,11 @@ ms.locfileid: "62815744"
   
 -   資料庫鏡像  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   
-     [遷移指南：從先前的叢集和鏡像部署遷移至 SQL Server 2012 容錯移轉叢集和可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [移轉指南：從先前叢集和鏡像部署移轉至 SQL Server 2012 容錯移轉叢集和可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782312"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>啟用 Database Engine 的加密連接 (SQL Server 組態管理員)
@@ -55,7 +55,7 @@ ms.locfileid: "62782312"
   
 ##  <a name="SSMSProcedure"></a>  
   
-###  <a name="Provision"></a>在伺服器上提供（安裝）憑證  
+###  <a name="to-provision-install-a-certificate-on-the-server"></a><a name="Provision"></a> 若要在伺服器上提供 (安裝) 憑證  
   
 1.  在 [**開始**] 功能表上，按一下 [**執行**]，然後在 [ `MMC` **開啟**] 方塊中輸入，然後按一下 **[確定]**。  
   
@@ -75,15 +75,15 @@ ms.locfileid: "62782312"
   
 9. 完成 **[憑證匯入精靈]** 以加入憑證至電腦中，然後關閉 MMC 主控台。 如需新增憑證至電腦的詳細資訊，請參閱 Windows 文件集。  
   
-###  <a name="Export"></a>若要匯出伺服器憑證  
+###  <a name="to-export-the-server-certificate"></a><a name="Export"></a>若要匯出伺服器憑證  
   
 1.  從 [憑證]  嵌入式管理單元的 [憑證]   / [個人]  資料夾中找到憑證，以滑鼠右鍵按一下 [憑證]  ，並指向 [所有工作]  ，然後按一下 [匯出]  。  
   
 2.  完成 **[憑證匯出精靈]** ，並將憑證檔儲存在方便取得的位置。  
   
-###  <a name="ConfigureServerConnections"></a>若要將伺服器設定為接受加密的連接  
+###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> 若要設定伺服器接受加密的連接  
   
-1.  在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [**伺服器執行個體>** _的通訊協定]\<_ ，然後選取 [屬性]  。  
+1.  在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [\<伺服器執行個體>  的通訊協定]  ，然後選取 [屬性]  。  
   
 2.  在 [_\<實例名稱_的**通訊協定**>**屬性**] 對話方塊的 [**憑證**] 索引標籤上，從 [**憑證**] 方塊的下拉式方塊中選取所需的憑證，然後按一下 **[確定]**。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62782312"
   
 4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
-###  <a name="ConfigureClientConnections"></a>設定用戶端要求加密的連接  
+###  <a name="to-configure-the-client-to-request-encrypted-connections"></a><a name="ConfigureClientConnections"></a>設定用戶端要求加密的連接  
   
 1.  將原始憑證或匯出的憑證檔複製到用戶端電腦。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62782312"
   
 4.  在 **[旗標]** 頁面的 **[強制通訊協定加密]** 方塊中，按一下 **[是]** 。  
   
-###  <a name="EncryptConnection"></a>若要從 SQL Server Management Studio 加密連接  
+###  <a name="to-encrypt-a-connection-from-sql-server-management-studio"></a><a name="EncryptConnection"></a>若要從 SQL Server Management Studio 加密連接  
   
 1.  在 [物件總管] 工具列上，按一下 **[連接]** ，再按一下 **[Database Engine]** 。  
   

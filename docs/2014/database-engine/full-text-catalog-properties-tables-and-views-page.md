@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779189"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>全文檢索目錄屬性 (資料表和檢視頁面)
@@ -46,19 +46,18 @@ ms.locfileid: "62779189"
 |**可用的資料行**|顯示已全文檢索索引的所有資料行。 選取核取方塊以將資料行加入全文檢索索引。|  
 |**斷詞工具的語言**|顯示斷詞工具的語言。|  
 |**資料類型資料行**|如果資料行是`varbinary(max)`或`image`資料行，則會列出資料表中保留 [**可用**的資料行] 中所列之資料行檔案類型的資料行名稱。|  
-|**統計語義**|選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言]**** 之前選取 [統計語意]****，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。|  
+|**統計語意**|選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言]**** 之前選取 [統計語意]****，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。|  
   
 ## <a name="track-changes"></a>追蹤變更  
   
 |||  
 |-|-|  
 |**自動**|當修改、加入或刪除基礎資料表中的資料時，全文檢索索引會自動更新。|  
-|**手動**|在索引資料中修改、加入或刪除資料時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會追蹤變更。 
-  **[手動]** 變更追蹤生效時，索引不會自動更新這些變更。 而是管理員可以使用 [ALTER FULLTEXT INDEX ...START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 陳述式來手動套用變更。|  
+|**手動**|在索引資料中修改、加入或刪除資料時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會追蹤變更。 **[手動]** 變更追蹤生效時，索引不會自動更新這些變更。 而是管理員可以使用 [ALTER FULLTEXT INDEX ...START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 陳述式來手動套用變更。|  
 |**不要追蹤變更**|此選項生效時，不會記錄目錄中索引資料的變更。 管理員必須使用 ALTER FULLTEXT INDEX 搭配 FULL POPULATION 或 INCREMENTAL POPULATION 來建立索引。|  
   
 ## <a name="see-also"></a>另請參閱  
- [建立全文檢索目錄 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [擴展全文檢索索引](../relational-databases/indexes/indexes.md)  
   

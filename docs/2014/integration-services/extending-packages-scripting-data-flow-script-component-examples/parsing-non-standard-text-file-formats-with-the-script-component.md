@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62769004"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
@@ -32,7 +32,7 @@ ms.locfileid: "62769004"
 > [!NOTE]  
 >  如果您要建立可以更輕鬆地在多個資料流程工作與多個封裝之間重複使用的元件，請考慮使用這個指令碼元件範例中的程式碼，做為自訂資料流程元件的起點。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
-##  <a name="example1"></a> 範例 1：剖析以資料列分隔的記錄  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> 範例 1：剖析以資料列分隔的記錄  
  這則範例將示範如何取得每個資料行都以個別行顯示的文字檔案，並且使用指令碼元件，將它剖析成目的地資料表。  
   
  如需如何設定腳本元件做為資料流程中的轉換的詳細資訊，請參閱[使用腳本元件建立同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用腳本元件建立異步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
@@ -187,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> 範例 2：分割父記錄和子記錄  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> 範例 2：分割父記錄和子記錄  
  這則範例將示範如何取得文字檔案 (分隔符號資料列位於父記錄資料列前面，而且後面接著不定數目的子記錄資料列)，並且使用指令碼元件，將它剖析成適當正規化的父和子目的地資料表。 您可以針對每筆父記錄和子記錄使用多個資料列或資料行的來源檔案輕鬆地調整這則簡單範例，只要存在可識別每筆記錄之開頭和結尾的方式即可。  
   
 > [!CAUTION]  

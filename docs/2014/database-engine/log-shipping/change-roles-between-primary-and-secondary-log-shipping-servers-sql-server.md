@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774559"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>變更主要與次要記錄傳送伺服器間的角色 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62774559"
   
     2.  新增次要資料庫時，請在 **[次要資料庫設定]** 對話方塊的 **[次要資料庫]** 方塊中，輸入原始的資料庫名稱。  
   
-    3.  在 **[次要資料庫設定]** 對話方中，選取 **[否，次要資料庫已初始化]** 。  
+    3.  在 **[次要資料庫設定]** 對話方中，選取 **[否，次要資料庫已初始化]**。  
   
 4.  如果您先前的記錄傳送組態已啟用記錄傳送監視，請將記錄傳送監視重新設定為監視新的記錄傳送組態。  執行下列命令，以資料庫的名稱取代 *database_name* ：  
   
@@ -78,15 +78,15 @@ ms.locfileid: "62774559"
 3.  啟用次要伺服器 (新的主要伺服器) 上的記錄傳送備份作業，以及主要伺服器 (新的次要伺服器) 上的複製與還原工作。  
   
 > [!IMPORTANT]  
->  當您將次要資料庫變更為主要資料庫時，為了提供一致的經驗給使用者和應用程式，可能需要在新主要伺服器執行個體上為資料庫重新建立部份或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+>  當您將次要資料庫變更為主要資料庫時，為了提供一致的經驗給使用者和應用程式，可能需要在新主要伺服器執行個體上為資料庫重新建立部份或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [容錯移轉至記錄傳送次要 &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [記錄傳送資料表與預存程序](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

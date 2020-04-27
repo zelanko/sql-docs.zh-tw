@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770338"
 ---
 # <a name="pivot-transformation"></a>樞紐轉換
@@ -45,7 +45,7 @@ ms.locfileid: "62770338"
   
  輸入資料可能會包含重複資料列，因而造成「樞紐」轉換失敗。 「重複資料列」表示集索引鍵資料行及樞紐資料行中有相同值的資料列。 若要避免失敗，您可以設定轉換，而將錯誤資料列重新導向至錯誤輸出，也可以預先彙總值，以確定沒有重複資料列。  
   
-##  <a name="options"></a> 樞紐對話方塊中的選項  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> 樞紐對話方塊中的選項  
  您可以在 [樞紐]  對話方塊中設定選項，以設定樞紐作業。 若要開啟 [樞紐]  對話方塊，請將樞紐轉換加入 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的封裝，然後以滑鼠右鍵按一下元件，再按一下 [編輯]  。  
   
  下列清單描述 [樞紐]  對話方塊中的選項。  

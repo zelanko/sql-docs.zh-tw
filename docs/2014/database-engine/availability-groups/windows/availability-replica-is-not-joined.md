@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815285"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性複本未聯結
@@ -29,8 +29,8 @@ ms.locfileid: "62815285"
 |-|-|  
 |**原則名稱**|可用性複本聯結狀態|  
 |**問題**|可用性複本未聯結。|  
-|**類別目錄**|**警告**|  
-|**Facet**|可用性複本|  
+|**類別**|**Warning**|  
+|**層面**|可用性複本|  
   
 ## <a name="description"></a>描述  
  這項原則會檢查可用性複本的聯結狀態。 當可用性複本已加入至可用性角色，但是沒有正確聯結時，原則為狀況不良。 否則原則為狀況良好。  

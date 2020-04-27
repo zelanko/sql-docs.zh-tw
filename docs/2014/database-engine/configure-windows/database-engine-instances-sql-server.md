@@ -11,14 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811229"
 ---
 # <a name="database-engine-instances-sql-server"></a>Database Engine 執行個體 (SQL Server)
-  
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體是做為作業系統服務執行之 `sqlservr.exe` 可執行檔的複本。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
   
 ## <a name="instances"></a>執行個體  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791981"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>維護 AlwaysOn 發行集資料庫 (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791981"
   
  
   
-##  <a name="MaintainPublDb"></a> 在可用性群組中維護已發行的資料庫  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>在可用性群組中維護已發行的資料庫  
  維護 AlwaysOn 發行集資料庫基本上與維護標準發行集資料庫相同，但是具有下列考量事項：  
   
 -   您必須在主要複本主機上進行管理。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，主要複本主機以及可讀取次要複本的發行集會出現在 **[本機發行集]** 資料夾底下。 容錯移轉之後，如果升級為主要複本的次要複本無法讀取，您可能必須手動重新整理 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ，才能反映變更。  
@@ -39,7 +39,7 @@ ms.locfileid: "62791981"
   
 -   若要在容錯移轉後同步處理 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中的訂閱，請從訂閱者同步處理提取訂閱，並從使用中發行者同步處理發送訂閱。  
   
-##  <a name="RemovePublDb"></a> 從可用性群組中移除已發行的資料庫  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 從可用性群組中移除已發行的資料庫  
  如果您已從可用性群組中移除已發行的資料庫，或者已卸除具有已發行成員資料庫的可用性群組，請考慮下列問題。  
   
 -   如果從可用性群組主要複本中移除位於原始發行者端的發行集資料庫，您就必須`sp_redirect_publisher`執行而不指定*@redirected_publisher*參數的值，以便移除發行者/資料庫配對的重新導向。  
@@ -100,7 +100,7 @@ ms.locfileid: "62791981"
   
      此時，您就可以保留或卸除已發行資料庫的複本。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [設定 AlwaysOn 可用性群組的複寫 (SQL Server)](always-on-availability-groups-sql-server.md)  
   

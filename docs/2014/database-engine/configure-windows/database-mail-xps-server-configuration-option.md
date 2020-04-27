@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810540"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XP 伺服器組態選項
   使用 [DatabaseMail XP]  選項，可在此伺服器上啟用 Database Mail。 可能的值包括：  
   
--   **0**表示無法使用 Database Mail （預設值）。  
+-   **0** 表示無法使用 Database Mail (預設值)。  
   
--   **1**表示 Database Mail 可供使用。  
+-   **1** 表示可使用 Database Mail。  
   
  設定立即生效，伺服器不必停止再重新啟動。  
   
