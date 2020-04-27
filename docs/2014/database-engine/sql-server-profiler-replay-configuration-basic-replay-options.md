@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089723"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - 重新執行組態 (基本重新執行選項)
@@ -34,12 +34,10 @@ ms.locfileid: "66089723"
  啟動 [連接到伺服器]**** 對話方塊，以連接到另一部伺服器。  
   
  **儲存至檔案**  
- 將重新執行結果儲存至檔案。 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示標準檔案對話方塊，您可以在此指定檔案的儲存位置。  
+ 將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示標準檔案對話方塊，您可以在此指定檔案的儲存位置。  
   
  **儲存至資料表**  
- 將重新執行結果儲存至資料表。 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示資料表選取項目對話方塊，您可以在此指定資料表的儲存位置。  
+ 將重新執行結果儲存至資料表。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示資料表選取項目對話方塊，您可以在此指定資料表的儲存位置。  
   
  **重新執行執行緒的數目**  
  指定要同時使用的重新執行執行緒的數目。 較高的數目會在重新執行期間消耗較多資源，但是重新執行速度較快而且更並行。  

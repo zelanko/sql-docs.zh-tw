@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084913"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>查詢資料採礦結構描述資料列集 (Analysis Services - 資料採礦)

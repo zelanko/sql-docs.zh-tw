@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089615"
 ---
 # <a name="trace-file-properties-general-tab"></a>追蹤檔案屬性 (一般索引標籤)
@@ -27,7 +27,7 @@ ms.locfileid: "66089615"
  若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]**。  
   
 ## <a name="options"></a>選項。  
- **檔案名稱**  
+ [檔案名稱]****  
  就會顯示追蹤檔案的路徑與名稱。  
   
  **追蹤提供者名稱**  
@@ -36,21 +36,21 @@ ms.locfileid: "66089615"
  **追蹤提供者類型**  
  顯示提供追蹤的伺服器類型。  
   
- **版本**  
+ **version**  
  顯示提供追蹤的伺服器版本。  
   
- **檔案大小（KB）**  
+ **檔案大小 (KB)**  
  追蹤檔案的大小 (以 KB 為單位)。  
   
- **建立日期**  
+ **已**  
  追蹤檔案的建立日期和時間。  
   
- **修改時間**  
+ **修改日期**  
  追蹤檔案的修改日期和時間。  
   
 ## <a name="see-also"></a>另請參閱  
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
- [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

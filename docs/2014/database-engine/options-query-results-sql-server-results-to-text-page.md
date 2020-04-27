@@ -13,29 +13,29 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090014"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>選項（查詢結果-SQL Server-以文字表示結果頁面）
-  使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用于新[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查詢視窗中按一下滑鼠右鍵，然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  
+  使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [**查詢**] 功能表上的 [**查詢選項**]，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查詢視窗中按一下滑鼠右鍵，然後選取 [**查詢選項**]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **輸出格式**  
  根據預設，輸出會顯示在以空格填補結果所建立的資料行中。 其他選項為使用逗號、定位點或空格來分隔資料行。 在此下拉式清單中選取 [自訂分隔符號]****，即可在 [自訂分隔符號]**** 文字方塊中指定不同的分隔字元。  
   
- **自訂分隔符號**  
+ **[自訂分隔符號]**  
  指定您要用來分隔資料行的字元。 此文字方塊只有在 [輸出格式]**** 下拉式清單方塊中，按一下自訂分隔符號時才能使用。  
   
  **在結果集內包含資料行標頭**  
  如果您不要每個資料行均標示有資料行標題，請清除此核取方塊。  
   
- **在結果集中包含查詢**  
+ **在結果集裡包含查詢**  
  選取此核取方塊，即可在查詢結果的前面，包含正在結果窗格中執行之查詢的查詢文字。  
   
- **收到結果時滾動**  
+ **收到結果時捲動**  
  選取此核取方塊，將顯示焦點放在結果集尾端最新傳回的記錄。 清除此核取方塊，即可將作用中的顯示保持為接收到的第一組資料列。  
   
  **數值靠右對齊**  
@@ -44,10 +44,10 @@ ms.locfileid: "66090014"
  **執行查詢之後捨棄結果**  
  選取此核取方塊，當查詢結果顯示於查詢視窗的結果窗格之後，即捨棄查詢結果。  
   
- **在個別的索引標籤中顯示結果**  
+ **在其他索引標籤中顯示結果**  
  選取此核取方塊，即可在新的文件視窗中顯示結果集，而非在查詢文件視窗的下方顯示。  
   
- **在查詢執行後切換至 [結果] 索引標籤**  
+ **執行查詢後，切換至結果索引標籤**  
  選取此核取方塊以自動將螢幕焦點設定為結果集。  
   
  **每個資料行中顯示的最大字元數**  

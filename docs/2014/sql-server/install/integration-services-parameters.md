@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094240"
 ---
 # <a name="integration-services-parameters"></a>Integration Services 參數
@@ -24,7 +24,7 @@ ms.locfileid: "66094240"
   
 ## <a name="options"></a>選項。  
  **分析電腦上的 SSIS 封裝**  
- 選取此選項，即可分析電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 依預設，會選取這個選項。  
+ 選取此選項，即可分析電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 預設會選取這個選項。  
   
  **分析 SSIS 封裝檔案**  
  選取此選項，即可分析檔案系統中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  

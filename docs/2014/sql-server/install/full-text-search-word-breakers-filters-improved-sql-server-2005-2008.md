@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7eebd70d700a36898c59f1fce8a51806bc78f91d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094985"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>SQL Server 2005 和 SQL Server 2008 大幅改進全文檢索搜尋斷詞工具和篩選功能
@@ -29,6 +29,6 @@ ms.locfileid: "66094985"
  如需斷詞工具的相關資訊，請參閱[設定及管理搜尋的斷詞工具和字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

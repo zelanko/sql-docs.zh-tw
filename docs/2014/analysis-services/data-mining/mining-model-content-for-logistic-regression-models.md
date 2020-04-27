@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083617"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>羅吉斯迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
@@ -167,7 +167,7 @@ ms.locfileid: "66083617"
  MSOLAP_NODE_SHORT_CAPTION  
  在羅吉斯迴歸模型中，永遠為空白。  
   
-##  <a name="bkmk_NodeIDs"></a>使用節點名稱和識別碼  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>使用節點名稱和識別碼  
  在羅吉斯迴歸模型中之節點的命名，可提供模型中節點間之關聯性的其他資訊。 下表顯示指派給每層節點之識別碼的慣例。  
   
 |節點類型|節點識別碼的慣例|  

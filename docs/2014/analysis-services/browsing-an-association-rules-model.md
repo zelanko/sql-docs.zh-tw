@@ -16,21 +16,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088473"
 ---
 # <a name="browsing-an-association-rules-model"></a>瀏覽關聯規則模型
   當您使用 **[流覽]** 開啟關聯模型時，該模型會顯示在互動式檢視器中，類似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的關聯規則檢視器。  此檢視器可讓您快速查看相互關聯的項目，並顯示可用於預測或提出建議的規則。  
   
-##  <a name="BKMK_ViewerTabs"></a>探索模型  
+##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>探索模型  
  當您開啟使用[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯規則演算法建立的採礦模型時，[**流覽**] 視窗會包含下列視圖，每個都設計成讓您探索模型的不同層面：  
   
--   [專案集](#BKMK_Itemsets)  
+-   [項目集](#BKMK_Itemsets)  
   
--   [條](#BKMK_Rules)  
+-   [規則](#BKMK_Rules)  
   
 -   [相依性網路](#BKMK_Dependency)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66088473"
   
  若要試驗關聯模型，您可以使用範例資料活頁簿之 [關聯] 索引標籤上的範例資料，然後使用所有預設值建立關聯模型。 您也可以建立購物籃分析模型，並使用 **[流覽]** 來開啟它。  
   
-###  <a name="BKMK_Itemsets"></a>專案集  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>專案集  
  [**專案集**] 索引標籤是開始探索關聯模型的絕佳位置。 此索引標籤會顯示常被模型湊在一起的項目清單。  
   
  ![關聯模型中的項目清單](media/dm13-association-itemsets.gif "關聯模型中的項目清單")  
@@ -63,29 +63,27 @@ ms.locfileid: "66088473"
   
      我們在此`Gloves`輸入。 當您套用篩選時，系統會重新整理清單，並只顯示包含手套的項目集。 如此可讓您專注於客戶購買手套及其他一些項目的交易。  
   
-     
-  **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
+     **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
   
 3.  變更 [專案集**大小下限**] 的值，以篩選出僅購買手套但沒有其他專案的客戶。  
   
 4.  按一下 [**顯示**] 選項的下拉式清單，以控制屬性的顯示方式：  
   
-    -   **顯示內容名稱和值**  
+    -   **顯示屬性名稱和值**  
   
-    -   **僅顯示內容值**  
+    -   **只顯示屬性值**  
   
-    -   **僅顯示內容名稱**  
+    -   **只顯示屬性名稱**  
   
      注意名稱有何改變。 在購物籃模型案例中，此模型是建立在多位客戶購買之產品的巢狀資料表上，因此屬性名稱通常是產品名稱，而清單中顯示的產品會標示為 `Existing`，表示客戶確實購買此項目。  
   
-     
-  `Existing` 的相反是 `Missing`，在資料採礦中調查時是相當有用的屬性。 例如，假設專案集 A + B 非常熱門，您想要尋找購買專案 A 但不是專案 B 的客戶。您可以使用預測查詢來執行這項操作，並使用其中一個來抓取交易，而不是另一個來進行進一步的分析。 如需有關如何在關聯模型上建立預測查詢的詳細資訊，請參閱 SQL Server 線上叢書中的[關聯模型查詢範例](data-mining/association-model-query-examples.md)  
+     `Existing` 的相反是 `Missing`，在資料採礦中調查時是相當有用的屬性。 例如，假設專案集 A + B 非常熱門，您想要尋找購買專案 A 但不是專案 B 的客戶。您可以使用預測查詢來執行這項操作，並使用其中一個來抓取交易，而不是另一個來進行進一步的分析。 如需有關如何在關聯模型上建立預測查詢的詳細資訊，請參閱 SQL Server 線上叢書中的[關聯模型查詢範例](data-mining/association-model-query-examples.md)  
   
 5.  若要強制專案集清單使用新的篩選準則重新顯示，您可以選取或清除 [**顯示完整名稱**] 核取方塊。  
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>條  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>條  
  [**規則**] 索引標籤會合併專案集的相關資訊及其相對值。  
   
  ![關聯模型建立的規則清單](media/dm13-association-rules.gif "關聯模型建立的規則清單")  
@@ -104,8 +102,7 @@ ms.locfileid: "66088473"
   
      例如，如果您想要查看預測客戶可能隨手套購買的所有規則，請在文字方塊中輸入 "手套"，然後重新整理窗格。  
   
-     
-  **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
+     **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
   
 3.  若要強制使用篩選準則重新顯示規則清單，您可以選取或清除 [**顯示完整名稱**] 核取方塊。  
   
@@ -117,7 +114,7 @@ ms.locfileid: "66088473"
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>相依性網路  
+###  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>相依性網路  
  [相依性**網路**] 索引標籤是專案之間相互關聯的視覺化地圖。 圖形中的每個橢圓形（稱為「節點」（ *node*））代表屬性/值組，例如 "背心 = Existing" 或 "Age = 1-30"。  連接橢圓形的每一行（稱為「*邊緣*」）代表相互關聯的類型。  
   
  ![關聯模型的相依性網路圖表](media/dm13-association-dependencynetwork.gif "關聯模型的相依性網路圖表")  

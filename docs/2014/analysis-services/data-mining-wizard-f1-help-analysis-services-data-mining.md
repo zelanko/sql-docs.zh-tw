@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086305"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>資料採礦精靈 F1 說明 (Analysis Services - 資料採礦)
@@ -30,8 +30,7 @@ ms.locfileid: "66086305"
   
  如需詳細資訊，請參閱[資料採礦嚮導 &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)。  
   
- 
-  **[資料採礦精靈]** 會引導您完成下列步驟：  
+ **[資料採礦精靈]** 會引導您完成下列步驟：  
   
 -   選取要作為採礦模型基礎之資料來源的類型。  
   

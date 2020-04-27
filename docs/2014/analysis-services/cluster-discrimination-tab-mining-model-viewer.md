@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087902"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>叢集辨識索引標籤 (採礦模型檢視器)
   使用 [叢集辨識]**** 索引標籤，即可比較存在於一個叢集模型中的兩個叢集。 可以查看屬性和值的不同組合在叢集中的表示方式。  
   
- **如需詳細資訊：** [microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)、[使用 Microsoft 叢集檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、 [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

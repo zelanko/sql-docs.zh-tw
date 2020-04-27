@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088474"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>瀏覽貝式機率分類模型
@@ -28,14 +28,14 @@ ms.locfileid: "66088474"
   
 -   [屬性辨識](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>探索模型  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>探索模型  
  此檢視器的用途是要協助您探索 [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏機率分類模型所發現之輸入與輸出屬性 (輸入與相依變數) 之間的互動。  
   
  如果您想要試驗簡單的貝氏機率分類檢視器，請使用 [分類] Wizard &#40;[資料採礦] 功能區中的 [[適用于 Excel 的資料採礦增益集&#41;](classify-wizard-data-mining-add-ins-for-excel.md) Wizard]，按一下 [ **Advanced** ] 選項，然後將演算法變更為 [使用簡單的貝氏機率分類演算法]  
   
  在這些範例中，我們使用範例活頁簿中的來源資料，並將資料行（**每年收入**）分組成五個收入群組，從**極低**到**非常高**。 然後，貝氏機率分類模型便分析了與每個收入類別目錄相互關聯的因數。  
   
-###  <a name="bkmk_DepNet"></a>相依性網路  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>相依性網路  
  您將使用的第一個視窗是相依性**網路**。 它會概略顯示哪些輸入與選取的結果密切相關。  
   
  ![貝氏機率分類檢視器中的相依性網路](media/dm13-nb.gif "貝氏機率分類檢視器中的相依性網路")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088474"
   
  [回到頁首](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>屬性設定檔  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a> 屬性設定檔  
  [**屬性設定檔**] 視窗可讓您以視覺方式指出所有其他變數與個別結果的關聯。  
   
 ##### <a name="explore-the-profiles"></a>探索設定檔  
@@ -73,7 +73,7 @@ ms.locfileid: "66088474"
   
  [回到頁首](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>屬性特性  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a>屬性特性  
  [**屬性特性**] 視圖適用于深入檢查特定結果變數和貢獻因素。  
   
  ![貝氏機率分類檢視器中的屬性特性](media/dm13-nb-viewer.gif "貝氏機率分類檢視器中的屬性特性")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088474"
   
  [回到頁首](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>屬性辨識  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a>屬性辨識  
  **屬性**辨識視圖有助於比較兩個結果，或一個結果與其他所有結果。  
   
  ![貝氏機率分類檢視器中的屬性辨識](media/dm13-nb-attdisc.gif "貝氏機率分類檢視器中的屬性辨識")  

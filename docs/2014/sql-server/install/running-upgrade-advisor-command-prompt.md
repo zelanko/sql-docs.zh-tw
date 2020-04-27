@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092435"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>執行 Upgrade Advisor (命令提示字元)
@@ -128,10 +128,8 @@ where <server_info> is any combination of the following:
 |`Instance`|要分析之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|(選擇性) 每個組態檔出現一次。 預設值為預設執行個體。<br /><br /> 如果伺服器上出現 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元素或 `IntegrationServices` 元素，則每個組態檔必須出現一次。|  
 |`Components`|包含指定要分析之元件的元素。|(必要) 每個組態檔出現一次。|  
 |`SQLServer`|包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的分析設定。|(選擇性) 每個組態檔出現一次。 如果沒有指定，就不會分析 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料庫。|  
-|
-  `Databases` 元素的 `SQLServer`|包含要分析之資料庫的清單。|每個`SQLServer`元素選用一次。 如果這個元素不存在，就會分析執行個體中的所有資料庫。|  
-|
-  `Database` 元素的 `SQLServer`|指定要分析之資料庫的名稱。|(必要) 如果 `Databases` 元素存在，就出現一或多次。 如果 `Database` 元素包含 "*" 值，就會分析執行個體中的所有資料庫。 沒有預設值。|  
+|`Databases` 元素的 `SQLServer`|包含要分析之資料庫的清單。|每個`SQLServer`元素選用一次。 如果這個元素不存在，就會分析執行個體中的所有資料庫。|  
+|`Database` 元素的 `SQLServer`|指定要分析之資料庫的名稱。|(必要) 如果 `Databases` 元素存在，就出現一或多次。 如果 `Database` 元素包含 "*" 值，就會分析執行個體中的所有資料庫。 沒有預設值。|  
 |`TraceFiles`|包含要分析之追蹤檔案的清單。|每個`SQLServer`元素選用一次。|  
 |`TraceFile`|指定要分析之追蹤檔案的路徑和名稱。|(必要) 如果 `TraceFiles` 元素存在，就出現一或多次。 沒有預設值。|  
 |`BatchFiles`|包含要分析之批次檔案的清單。|每個`SQLServer`元素選用一次。|  
@@ -139,10 +137,8 @@ where <server_info> is any combination of the following:
 |`BatchSeparator`|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批次檔案中所使用的批次分隔符號。|每個`SQLServer`元素選用一次。 預設值為 GO。|  
 |`AnalysisServices`|包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的分析設定。|(選擇性) 每個組態檔出現一次。 如果沒有指定，就不會分析 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
 |`ASInstance`|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|(必要) 每個 `AnalysisServices` 元素出現一次。 沒有預設值。|  
-|
-  `Databases` 元素的 `Analysis Services`|包含要分析之資料庫的清單。|每個`AnalysisServices`元素選用一次。 如果這個元素不存在，就會分析執行個體中的所有資料庫。|  
-|
-  `Database` 元素的 `AnalysisServices`|指定要分析之資料庫的名稱。|(必要) 如果 `Databases` 元素存在，就出現一或多次。 如果 `Database` 元素包含 "*" 值，就會分析執行個體中的所有資料庫。 沒有預設值。|  
+|`Databases` 元素的 `Analysis Services`|包含要分析之資料庫的清單。|每個`AnalysisServices`元素選用一次。 如果這個元素不存在，就會分析執行個體中的所有資料庫。|  
+|`Database` 元素的 `AnalysisServices`|指定要分析之資料庫的名稱。|(必要) 如果 `Databases` 元素存在，就出現一或多次。 如果 `Database` 元素包含 "*" 值，就會分析執行個體中的所有資料庫。 沒有預設值。|  
 |`ReportingServices`|指定要針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行分析。|(選擇性) 每個組態檔出現一次。 如果沒有指定，就不會分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。|  
 |`RSInstance`|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。|(必要) 每個 `ReportingServices` 元素出現一次。 沒有預設值。|  
 |`IntegrationServices`|包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的分析設定。|(選擇性) 每個組態檔出現一次。 如果沒有指定，就不會分析 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。|  
@@ -164,7 +160,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>C. 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來執行 Upgrade Advisor  
+### <a name="c-run-upgrade-advisor-using-ssnoversion-authentication"></a>C. 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來執行 Upgrade Advisor  
  下列範例將示範如何使用組態檔，從命令提示字元執行 Upgrade Advisor。 這則範例會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者名稱和密碼，以便連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 ```  

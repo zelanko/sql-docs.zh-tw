@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088341"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>計算工具 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -28,7 +28,7 @@ ms.locfileid: "66088341"
   
  將選取的元素拖曳至 [動作表單編輯器]****、[鑽研動作表單編輯器]**** 或 [報表動作表單編輯器]**** 窗格，即可在窗格中選取的位置包含該元素的多維度運算式 (MDX) 語法。  
   
- **函數**  
+ **函式**  
  顯示運算式和條件可用的函數。  
   
  將選取的元素拖曳至 **[動作表單編輯器]**、 **[鑽研動作表單編輯器]** 或 **[報表動作表單編輯器]** 窗格，即可在窗格中選取的位置包含該元素的 MDX 語法。  
@@ -41,7 +41,7 @@ ms.locfileid: "66088341"
   
  將選取的元素拖曳至 **[動作表單編輯器]**、 **[鑽研動作表單編輯器]** 或 **[報表動作表單編輯器]** 窗格，即可在窗格中選取的位置包含該元素的 MDX 語法。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [計算工具]**** 窗格中的元素，即可顯示提供下列選項的內容功能表：  
   
 |選項|定義|  

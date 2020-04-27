@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 417ca3c2e5e477960c4c905543f3a712a5ec7453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095164"
 ---
 # <a name="full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed"></a>不允許在非保存的計算資料行上使用全文檢索索引
@@ -29,6 +29,6 @@ ms.locfileid: "66095164"
  若要啟用這些全文檢索索引，請修改資料行定義，讓這些資料行具決定性且精確。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081996"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定義局部加總行為 (商業智慧精靈)
@@ -55,7 +55,7 @@ ms.locfileid: "66081996"
 |**LastNonEmpty**|藉由傳回量值在某個時間維度的最後一個非空白成員進行彙總。|  
 |`Max`|使用 `Max` 函數來進行彙總。|  
 |`Min`|使用 `Min` 函數來進行彙總。|  
-|**無**|不執行彙總。|  
+|**None**|不執行彙總。|  
 |`Sum`|使用 `Sum` 函數來進行彙總。|  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082904"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定當做迴歸輸入變數使用的資料行
@@ -26,7 +26,7 @@ ms.locfileid: "66082904"
   
 ### <a name="how-to-create-a-simple-linear-regression-model"></a>如何建立簡單的線性迴歸模型  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的**方案總管**中，展開 [**採礦結構**]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的**方案總管**中，展開 [採礦結構]****。  
   
 2.  在設計師中按兩下 Call Center.dmm 將其開啟。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66082904"
  [Microsoft 線性回歸演算法](microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](data-mining-queries.md)   
  [Microsoft 線性回歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)   
- [線性回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

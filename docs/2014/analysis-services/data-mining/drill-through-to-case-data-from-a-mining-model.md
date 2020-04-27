@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084604"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
@@ -57,6 +57,6 @@ ms.locfileid: "66084604"
 6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦&#41;&#40;的鑽取查詢](drillthrough-queries-data-mining.md)  
+ [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  
   
   

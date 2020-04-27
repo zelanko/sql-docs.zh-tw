@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087984"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>叢集特性索引標籤 (採礦模型檢視器)
   [叢集特性]**** 索引標籤可讓您瀏覽叢集模型中某個叢集的特性，或瀏覽該模型中所有案例集合的特性。 圖形會將每個屬性/值組的重要性顯示為定義叢集的特性 (相較於其他叢集)。  
   
- **如需詳細資訊：** [microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)、[使用 Microsoft 叢集檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、 [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -34,7 +34,7 @@ ms.locfileid: "66087984"
  **檢視器**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用與此模型類型關聯的自訂檢視器，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用任何可用的外掛程式檢視器。  
   
- **叢集**  
+ **該群**  
  選擇要查看的叢集，或選擇 [母體擴展 (全部)]**** 以查看模型屬性的整體分佈情況。  
   
  **叢集>\<的特性**  

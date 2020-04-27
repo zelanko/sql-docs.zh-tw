@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084303"
 ---
 # <a name="linear-regression-model-query-examples"></a>線性迴歸模型查詢範例
@@ -31,24 +31,24 @@ ms.locfileid: "66084303"
   
  **內容查詢**  
   
- [使用資料採礦架構資料列集來判斷用於模型的參數](#bkmk_Query1)  
+ [使用資料採礦結構描述資料列集來判斷用於模型的參數](#bkmk_Query1)  
   
- [使用 DMX 傳回模型的回歸公式](#bkmk_Query2)  
+ [使用 DMX 傳回模型的迴歸公式](#bkmk_Query2)  
   
  [僅傳回模型的係數](#bkmk_Query3)  
   
  **預測查詢**  
   
- [使用單一查詢預測收入](#bkmk_Query4)  
+ [使用單一查詢預測成果](#bkmk_Query4)  
   
- [搭配回歸模型使用預測函數](#bkmk_Query5)  
+ [搭配迴歸模型使用預測函數](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a>尋找有關線性回歸模型的資訊  
+##  <a name="finding-information-about-the-linear-regression-model"></a><a name="bkmk_top"></a> 尋找有關線性迴歸模型的資訊  
  線性迴歸模型的結構相當簡單：採礦模型將資料表示為定義迴歸公式的單一節點。 如需詳細資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)。  
   
  [回到頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a>範例查詢1：使用資料採礦架構資料列集來判斷用於模型的參數  
+###  <a name="sample-query-1-using-the-data-mining-schema-rowset-to-determine-parameters-used-for-a-model"></a><a name="bkmk_Query1"></a> 範例查詢 1：使用資料採礦結構描述資料列集來判斷用於模型的參數  
  您可以查詢資料採礦結構描述資料列集來尋找有關模型的中繼資料。 這可能包括建立模型的時間、上次處理模型的時間、模型所依據之採礦結構的名稱，以及指定為可預測屬性之資料行的名稱。 您也可以傳回初次建立此模型時所使用的參數。  
   
 ```  
@@ -68,7 +68,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [回到頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a>範例查詢2：抓取模型的回歸公式  
+###  <a name="sample-query-2-retrieving-the-regression-formula-for-the-model"></a><a name="bkmk_Query2"></a> 範例查詢 2：擷取模型的迴歸公式  
  下列查詢會針對利用＜ [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)＞中所使用之相同目標郵寄資料來源所建立的線性迴歸模型，傳回採礦模型內容。 此模型會根據年齡預測客戶收入。  
   
  查詢會傳回包含迴歸公式之節點的內容。 每個變數和係數都儲存在 NODE_DISTRIBUTION 資料表的個別資料列中。 如果您要檢視完整的迴歸公式，使用 [Microsoft 樹狀檢視器](browse-a-model-using-the-microsoft-tree-viewer.md)，按一下 **(All)** 節點，然後開啟 **[採礦圖例]**。  
@@ -87,9 +87,9 @@ FROM LR_PredictIncome.CONTENT
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
-|年齡|471.687717702463|0|0|126.969442359327|7|  
-|年齡|234.680904692439|0|0|0|8|  
-|年齡|45.4269617936399|0|0|126.969442359327|9|  
+|Age|471.687717702463|0|0|126.969442359327|7|  
+|Age|234.680904692439|0|0|0|8|  
+|Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
  相較之下，在 **[採礦圖例]** 中，迴歸公式顯示如下：  
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
   
  [回到頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a>範例查詢3：僅傳回模型的係數  
+###  <a name="sample-query-3-returning-only-the-coefficient-for-the-model"></a><a name="bkmk_Query3"></a> 範例查詢 3：僅傳回模型的係數  
  您可以使用 VALUETYPE 列舉，僅傳回迴歸方程式的係數，如以下查詢所示：  
   
 ```  
@@ -145,7 +145,7 @@ FROM LR_PredictIncome.CONTENT
   
  [回到頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a>範例查詢4：使用單一查詢預測收入  
+###  <a name="sample-query-4-predicting-income-using-a-singleton-query"></a><a name="bkmk_Query4"></a>範例查詢4：使用單一查詢預測收入  
  在迴歸模型上建立單一查詢最簡單的方式是使用 **[單一查詢輸入]** 對話方塊。 例如，您可以建立下列 DMX 查詢，方法是選取適當的回歸模型、選擇 [**單一查詢**]，然後`20`輸入作為 [**年齡**] 的值。  
   
 ```  
@@ -163,7 +163,7 @@ NATURAL PREDICTION JOIN
   
  [回到頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a>範例查詢5：搭配回歸模型使用預測函數  
+###  <a name="sample-query-5-using-prediction-functions-with-a-regression-model"></a><a name="bkmk_Query5"></a> 範例查詢 5：搭配迴歸模型使用預測函數  
  您可以搭配線性迴歸模型使用多個標準的預測函數。 下列範例說明如何將一些敘述性的統計資料加入到預測查詢結果中。 從這些結果中您可以發現，這與此模型的平均值有相當大的偏差。  
   
 ```  
@@ -190,13 +190,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |預測函數|使用量|  
-|[DMX&#41;的 IsDescendant &#40;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
-|[DMX&#41;的 IsInNode &#40;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
-|[&#40;DMX&#41;的 PredictHistogram](/sql/dmx/predicthistogram-dmx)|傳回指定之資料行的一個或一組預測值。|  
-|[DMX&#41;的 PredictNodeId &#40;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
-|[DMX&#41;的 PredictStdev &#40;](/sql/dmx/predictstdev-dmx)|傳回預測值的標準差。|  
-|[DMX&#41;的 PredictSupport &#40;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
-|[DMX&#41;的 PredictVariance &#40;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回指定之資料行的一個或一組預測值。|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回預測值的標準差。|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法共用之函數的清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 如需如何使用這些函數的詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
@@ -204,6 +204,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 線性回歸演算法](microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](data-mining-queries.md)   
  [Microsoft 線性回歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)   
- [線性回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084162"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉驗證報表中的量值
@@ -28,8 +28,7 @@ ms.locfileid: "66084162"
   
  此報表除了包含一些有關資料中的摺疊數以及每個摺疊中的資料量等基本資訊外，也包含一組描述資料分佈的一般標準。 藉由比較針對每個交叉區段的一般標準，您可以評估結構或模型的可靠性。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也會顯示採礦模型的一組詳細量值。 這些量值會因模型類型及要分析的屬性類型而異：例如，其為離散或連續。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也會顯示採礦模型的一組詳細量值。 這些量值會因模型類型及要分析的屬性類型而異：例如，其為離散或連續。  
   
  本節提供 [交叉驗證]**** 報表中含有的量值清單，及其代表的意義。 如需每個量值導出方式的詳細資訊，請參閱 [交叉驗證公式](cross-validation-formulas.md)。  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66084162"
 |彙總|匯總量值提供每個資料分割之結果中的變異數指示：<br /><br /> **Mean**：特定量值的資料分割值的平均值。<br /><br /> **標準差**：在模型的所有資料分割中，與特定量值的平均值偏差的平均值。 針對交叉驗證，此分數的值愈高意味著摺疊數之間會有顯著的變化。|  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087704"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>正在完成精靈 (資料採礦精靈)
@@ -27,7 +27,7 @@ ms.locfileid: "66087704"
 > [!NOTE]  
 >  此頁面會依據您在精靈的 [選取定義方法]**** 頁面上，是選取 **[從現有的關聯式資料庫或資料倉儲]** 或 **[從現有的 Cube]** 而變更。  
   
- **如需詳細資訊：** [資料採礦 Wizard &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[資料採礦設計](data-mining/data-mining-designer.md)工具、[建立關聯式的採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊，請參閱：** [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[資料採礦設計師](data-mining/data-mining-designer.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **採礦結構名稱**  
@@ -53,7 +53,7 @@ ms.locfileid: "66087704"
 > [!NOTE]  
 >  如果您在精靈的 [選取定義方法]**** 頁面上選取 [從現有的 Cube]****，則可以使用此選項。  
   
- **使用採礦模型維度建立 cube**  
+ **使用採礦模型維度建立 Cube**  
  選取即可依據要建立的採礦模型來建立 Cube。 選取此選項之後，請輸入要建立之 Cube 的名稱。  
   
 > [!NOTE]  

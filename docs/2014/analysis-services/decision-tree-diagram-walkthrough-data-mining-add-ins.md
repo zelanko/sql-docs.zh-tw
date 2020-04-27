@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082274"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>決策樹圖表逐步解說（資料採礦增益集）
@@ -108,13 +108,13 @@ ms.locfileid: "66082274"
   
 1.  按一下 [**增益集**] 功能區，然後顯示用來處理資料採礦圖表的其中一個自訂工具列：  
   
-     **版面配置**  
+     **配置**  
      最佳化樹狀結構的排列方式以符合目前的頁面。  
   
      **調整頁面大小**  
      此控制項適用於先前的 HTML 版本。 請改用 Visio 頁面大小調整控制項。  
   
-     **說明**  
+     **描述**  
      當您選取樹狀結構的節點時，按一下此選項就會顯示有關節點中案例的詳細資料。  
   
 2.  使用 Visio**設計**功能區中的 [**重新配置頁面**] 選項來試驗不同的樹狀結構版面配置。  

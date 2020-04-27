@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086135"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
@@ -69,7 +69,7 @@ ms.locfileid: "66086135"
     |-|-|  
     |**\<模型名稱>**|選取此選項，將採礦模型中的值包含在輸出中。 您只能加入可預測的資料行。<br /><br /> 當您加入模型中的資料行時，傳回的結果會是該資料行中的非相異值清單。<br /><br /> 您以這個選項加入的資料行會包含在產生之 DMX 陳述式的 SELECT 部分內。|  
     |**預測函數**|選取這個選項可瀏覽預測函數清單。<br /><br /> 您選取的值或函數會加入至產生之 DMX 陳述式的 SELECT 部分內。<br /><br /> 系統不會篩選預測函數清單，也不會由您選取的模型類型加以限制。 因此，如果您對於目前模型類型是否支援此函數有任何疑問，您只需要將此函數加入至清單中，並查看是否有錯誤發生。<br /><br /> 前有 $ 的清單項目 (例如 $AdjustedProbability) 代表巢狀資料表中的資料行，當您使用 `PredictHistogram` 函數時，該資料表為輸出。 當您傳回單一資料行而非巢狀資料表時，可以使用這些當做捷徑。|  
-    |**自訂表格達式**|選取這個選項來輸入自訂運算式，然後為輸出指派別名。<br /><br /> 此自訂運算式會加入至產生之 DMX 預測查詢的 SELECT 部分中。<br /><br /> 如果您想要針對包含每一個資料列的輸出加入文字、呼叫 VB 函數或是呼叫自訂預存程序，這個選項會非常實用。<br /><br /> 如需從 DMX 使用 VBA 和 Excel 函數的資訊，請參閱 [MDX 和 DAX 中的 VBA 函數](/sql/mdx/vba-functions-in-mdx-and-dax)。|  
+    |**自訂運算式**|選取這個選項來輸入自訂運算式，然後為輸出指派別名。<br /><br /> 此自訂運算式會加入至產生之 DMX 預測查詢的 SELECT 部分中。<br /><br /> 如果您想要針對包含每一個資料列的輸出加入文字、呼叫 VB 函數或是呼叫自訂預存程序，這個選項會非常實用。<br /><br /> 如需從 DMX 使用 VBA 和 Excel 函數的資訊，請參閱 [MDX 和 DAX 中的 VBA 函數](/sql/mdx/vba-functions-in-mdx-and-dax)。|  
   
 3.  在您加入每一個函數或運算式之後，切換到 DMX 檢視可查看此函數如何加入至 DMX 陳述式內。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66086135"
   
      下表會顯示預期的結果：  
   
-    |Bike Buyer|$Cluster|支援|CEILING|  
+    |Bike Buyer|$Cluster|SUPPORT|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|叢集 8|954|953.948638926372|  
   

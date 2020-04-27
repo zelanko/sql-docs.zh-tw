@@ -13,21 +13,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a82cbcc9ef1ab57279b44cc83509cb1efad855ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091394"
 ---
 # <a name="upgrading-will-change-the-sql-server-agent-user-proxy-account-to-the-temporary-upgradedproxyaccount"></a>升級會將 SQL Server Agent 使用者 Proxy 帳戶變更為暫時的 UpgradedProxyAccount
   升級之後，已啟用記錄傳送的資料庫維護計劃將無法啟用。  
   
 ## <a name="component"></a>元件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>描述  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組與資料庫維護計劃不直接相容的新記錄傳送功能。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組與資料庫維護計劃不直接相容的新記錄傳送功能。  
   
 ## <a name="corrective-action"></a>更正動作  
  擁有包含記錄傳送功能之資料庫維護計劃的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 使用者應該使用新的功能來設定記錄傳送。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜記錄傳送＞。  

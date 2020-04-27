@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095090"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文檢索搜尋升級選項
@@ -28,7 +28,7 @@ ms.locfileid: "66095090"
 ## <a name="options"></a>選項。  
  當您升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，請選擇下列其中一個全文檢索升級選項。  
   
- **匯入**  
+ [匯入]****  
  匯入全文檢索目錄。 一般而言，匯入的速度明顯比重建的速度更快。 例如，只有使用一個 CPU 時，匯入的執行速度大約比重建的速度快 10 倍。 不過，從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 匯入的全文檢索目錄並不會使用新增的強化斷詞工具，所以您最後可能會想要重建全文檢索目錄。  
   
 > [!NOTE]  
@@ -51,8 +51,7 @@ ms.locfileid: "66095090"
   
 -   您如何使用斷詞工具？  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文檢索搜尋服務包括斷詞工具和字幹分析器。 這些項目可能會針對特定文字模式或狀況，變更從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索查詢的結果。 因此，在選擇適當的升級選項時，您如何使用斷詞工具便很重要：  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文檢索搜尋服務包括斷詞工具和字幹分析器。 這些項目可能會針對特定文字模式或狀況，變更從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索查詢的結果。 因此，在選擇適當的升級選項時，您如何使用斷詞工具便很重要：  
   
     -   如果您所使用之全文檢索語言的斷詞工具並未變更，或者重新叫用精確度對您不重要，則適合進行匯入。 之後，如果您遇到任何重新叫用的問題，只要透過重建全文檢索目錄，就可以升級為新的斷詞工具。  
   

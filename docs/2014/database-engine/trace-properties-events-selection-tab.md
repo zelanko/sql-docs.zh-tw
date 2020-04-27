@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089583"
 ---
 # <a name="trace-properties-events-selection-tab"></a>追蹤屬性 (事件選取範圍索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視或指定追蹤的事件和資料行。  
   
 ## <a name="options"></a>選項。  
- **事件**資料行  
- 選取或清除事件資料行中的核取方塊，來指定追蹤的事件。 **事件**會依事件類別目錄進行組織。 範本中所指定的事件類別會自動選取。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
+ [事件]**** 資料行  
+ 選取或清除事件資料行中的核取方塊，來指定追蹤的事件。 依事件類別目錄所組織的**事件** 。 範本中所指定的事件類別會自動選取。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  資料行  
  核取對應到所需事件和資料行的方塊，來指定追蹤的資料行。 依預設，針對追蹤內所包含的每個事件，都會核取所有相關的事件資料行。  
@@ -51,7 +51,7 @@ ms.locfileid: "66089583"
  [篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [視圖篩選資訊 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [修改篩選 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083506"
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
@@ -52,7 +52,7 @@ ms.locfileid: "66083506"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**說明**|描述採礦資料行的目的。|  
+|**描述**|描述採礦資料行的目的。|  
 |**名稱**|設定採礦模型資料行的名稱。 您可以輸入新名稱，為採礦模型資料行提供別名。|  
 |**ModelingFlags**|設定資料行的任何演算法特定旗標。|  
 |**SourceColumnID**|代表模型資料行所依據之採礦結構資料行的名稱。<br /><br /> 這個屬性是唯讀的。|  

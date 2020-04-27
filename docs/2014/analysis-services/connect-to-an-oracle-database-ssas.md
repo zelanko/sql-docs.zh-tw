@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087015"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>連接到 Oracle 資料庫 (SSAS)
-  
   **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Oracle 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
@@ -47,7 +46,7 @@ ms.locfileid: "66087015"
  指定是否要儲存您在 **[密碼]** 方塊中輸入的密碼。  
   
  **進階**  
- 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
+ 使用 **[設定進階屬性]** 對話方塊設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  

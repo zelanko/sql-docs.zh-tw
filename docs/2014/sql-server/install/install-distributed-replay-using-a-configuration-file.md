@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094579"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>使用組態檔安裝 Distributed Replay
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可讓您根據使用者輸入和系統預設值產生組態檔。 如指定要安裝管理工具，即可使用組態檔部署管理工具、Distributed Replay Controller 及 Distributed Replay Client 三項 Distributed Replay 元件。 這個組態檔支援安裝、修復和解除安裝 Distributed Replay 元件。  
   
  安裝程式僅支援透過命令列使用組態檔。 使用組態檔時，參數的處理順序如下所述：  

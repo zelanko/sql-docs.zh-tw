@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085393"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>建立新的關聯式採礦結構
@@ -26,7 +26,7 @@ ms.locfileid: "66085393"
   
 ### <a name="to-create-a-relational-mining-structure"></a>若要建立關聯式採礦結構  
   
-1.  在方案總管中，以滑鼠右鍵按一下 ** 專案中的 [採礦結構]**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料夾，然後按一下 [新增採礦結構]****。  
+1.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中的 [採礦結構]**** 資料夾，然後按一下 [新增採礦結構]****。  
   
      就會開啟資料採礦精靈。  
   

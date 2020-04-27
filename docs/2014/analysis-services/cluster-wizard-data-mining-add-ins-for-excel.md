@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087813"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>叢集精靈 (適用於 Excel 的資料採礦增益集)

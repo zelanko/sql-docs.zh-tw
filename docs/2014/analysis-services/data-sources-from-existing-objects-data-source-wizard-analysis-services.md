@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082383"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>從現有物件建立資料來源 (資料來源精靈) (Analysis Services)

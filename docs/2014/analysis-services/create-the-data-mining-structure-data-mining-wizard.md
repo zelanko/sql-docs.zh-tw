@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086754"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>建立資料採礦結構 (資料採礦精靈)
@@ -24,7 +24,7 @@ ms.locfileid: "66086754"
   
  如果選擇建立採礦模型，則也必須指定您要使用的資料採礦演算法。 如果現在只建立結構，則可稍後在結構中加入採礦模型。  
   
- **如需詳細資訊：** [資料採礦演算法 &#40;Analysis Services](data-mining/data-mining-algorithms-analysis-services-data-mining.md)資料採礦&#41;、[資料採礦嚮導 &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式的採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊，請參閱** [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **建立具有採礦模型的採礦結構**  
@@ -39,7 +39,7 @@ ms.locfileid: "66086754"
  **建立沒有模型的採礦結構**  
  選取只建立採礦結構。  
   
- **說明**  
+ **描述**  
  顯示所選取演算法的描述。  
   
 ## <a name="see-also"></a>另請參閱  

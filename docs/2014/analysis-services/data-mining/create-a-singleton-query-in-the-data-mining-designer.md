@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085312"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在資料採礦設計師中建立單一查詢
@@ -45,8 +45,7 @@ AS [t]
   
 2.  按一下 **[採礦模型]** 資料表上的 **[選取模型]** 。  
   
-     
-  **[選取採礦模型]** 對話方塊就會開啟，以顯示存在於目前專案中的所有採礦結構。  
+     **[選取採礦模型]** 對話方塊就會開啟，以顯示存在於目前專案中的所有採礦結構。  
   
      選取您想要用來建立預測的模型。  
   
@@ -58,7 +57,7 @@ AS [t]
   
 4.  在 [單一查詢輸入]**** 資料表上，選取 [值]**** 資料行中的值來描述您要建立預測的案例。  
   
-     例如，針對 [在家中的**數位子**系] 選取 [ **2** ]，然後針對 [Age] 輸入。 **** `45`  
+     例如，針對 [在家中的**數位子**系] 選取 [ **2** ]，然後針對 [Age] 輸入。 **Age** `45`  
   
 5.  將可預測資料行從 [**採礦模型**] 資料表拖曳到索引標籤底部的 [**源**資料行]。您也可以選擇輸入資料行的別名。  
   
@@ -70,17 +69,17 @@ AS [t]
   
 7.  按一下 [PredictProbability]**** 資料列中的 [準則/引數]****，然後輸入要預測的資料行名稱，並選擇性地輸入要預測的特定值。  
   
-     例如，鍵入 `[Bike Buyer], 1`。  
+     例如，輸入 `[Bike Buyer], 1`。  
   
 8.  按一下 [PredictProbability]**** 資料列中的 [別名]**** 方塊，然後輸入代表新資料行的名稱。  
   
-     例如，鍵入 `ProbableBuyer`。  
+     例如，輸入 `ProbableBuyer`。  
   
 9. 在 [採礦模型預測]**** 索引標籤的工具列上，按一下 [切換到查詢結果檢視]****。  
   
      這時會開啟新的畫面，以顯示查詢的結果。 若要檢視您剛建立的 DMX 陳述式，請按一下 [SQL]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;資料採礦&#41;的預測查詢](prediction-queries-data-mining.md)  
+ [預測查詢 &#40;資料採礦&#41;](prediction-queries-data-mining.md)  
   
   

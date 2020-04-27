@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083590"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
@@ -191,7 +191,7 @@ ms.locfileid: "66083590"
 ## <a name="remarks"></a>備註  
  定型類神經網路模型的目的在於判斷與每個轉換關聯的加權 (從輸入到中點，以及從中點到端點)。 因此，模型的輸入層主要存在目的為儲存建立模型所使用的實際值。 隱藏層會儲存經過計算的加權，並提供回到輸入屬性的指標。 輸出層會儲存可預測的值，同時提供回到隱藏層中端點的指標。  
   
-##  <a name="bkmk_NodeIDs"></a>使用節點名稱和識別碼  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>使用節點名稱和識別碼  
  類神經網路模型中節點的命名提供有關節點類型的其他資訊，讓隱藏層與輸入層更容易產生關聯，並讓輸出層與隱藏層產生關聯。 下表顯示指派給每層節點之識別碼的慣例。  
   
 |節點類型|節點識別碼的慣例|  
@@ -210,17 +210,17 @@ ms.locfileid: "66083590"
   
  同樣地，您可以檢視輸出節點 (NODE_TYPE = 23) 中的 NODE_DISTRIBUTION 資料表，來判斷與輸出屬性關聯的隱藏層。 NODE_DISTRIBUTION 資料表的每個資料列都包含隱藏層的識別碼以及相關的係數。  
   
-##  <a name="bkmk_NodeDistTable"></a>解讀 NODE_DISTRIBUTION 資料表中的資訊  
+##  <a name="interpreting-the-information-in-the-node_distribution-table"></a><a name="bkmk_NodeDistTable"></a> 解譯 NODE_DISTRIBUTION 資料表中的資訊  
  NODE_DISTRIBUTION 資料表在某些節點中可以是空的。 不過，對於輸入節點、隱藏層節點，以及輸出節點，NODE_DISTRIBUTION 資料表會儲存關於模型的重要與感興趣的資訊。 為協助您解譯這項資訊，NODE_DISTRIBUTION 資料表包含每個資料列的 VALUETYPE 資料行，這些資料列會告訴您 ATTRIBUTE_VALUE 資料行中的值是 [離散 (4)]、[離散化 (5)]，還是 [連續 (3)] 的。  
   
 ### <a name="input-nodes"></a>輸入節點  
  輸入層包含模型中所使用之屬性每個值的節點。  
   
- **離散屬性：** 輸入節點只會將屬性的名稱及其值儲存在 [ATTRIBUTE_NAME] 和 [ATTRIBUTE_VALUE] 資料行中。 例如，如果 [Work Shift] 為資料行，系統就會針對模型中使用之資料行的每個值建立個別的節點，例如，AM 和 PM。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
+ **離散屬性** ：此輸入節點僅會將屬性的名稱及其值儲存在 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 資料行中。 例如，如果 [Work Shift] 為資料行，系統就會針對模型中使用之資料行的每個值建立個別的節點，例如，AM 和 PM。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
   
- **離散化數值屬性：** 輸入節點會儲存屬性的名稱，以及可為範圍或特定值的值。 所有值都會以運算式表示，例如，'77.4 - 87.4' 或 ' < 64.0' 用於 [Time Per Issue] 的值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
+ **離散化數值屬性** ：此輸入節點會儲存屬性的名稱及值，這可能是一個範圍或一個特定的值。 所有值都會以運算式表示，例如，'77.4 - 87.4' 或 ' < 64.0' 用於 [Time Per Issue] 的值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
   
- **連續屬性：** 輸入節點會儲存屬性的平均值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
+ **連續屬性** ：輸入節點會儲存屬性的平均值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
   
 ### <a name="hidden-layer-nodes"></a>隱藏層節點  
  隱藏層包含節點的變數數目。 在每個節點中，NODE_DISTRIBUTION 資料表在輸入層中都包含隱藏層到節點的對應。 ATTRIBUTE_NAME 資料行包含對應到輸入層中之節點的節點識別碼。 ATTRIBUTE_VALUE 資料行包含與輸入節點和隱藏層節點組合關聯的加權。 資料表中的最後一個資料列包含代表隱藏層中該隱藏節點之加權的係數。  
@@ -230,11 +230,11 @@ ms.locfileid: "66083590"
   
  NODE_DISTRIBUTION 資料表包含的下列額外資訊取決於屬性的類型為：  
   
- **離散屬性：** NODE_DISTRIBUTION 資料表的最後兩個數據列包含整個節點的係數，以及屬性目前的值。  
+ **離散屬性** ：NODE_DISTRIBUTION 資料表的最後兩個資料列包含整個節點的係數，以及屬性目前的值。  
   
- **離散化數值屬性：** 與離散屬性相同，不同之處在于屬性的值是值的範圍。  
+ **離散化數值屬性** ：除了屬性的值為一個範圍的值之外，與離散屬性相同。  
   
- **連續屬性：** NODE_DISTRIBUTION 資料表的最後兩個數據列包含屬性的平均值、整個節點的係數，以及係數的變異數。  
+ **連續屬性** ：NODE_DISTRIBUTION 資料表的最後兩個資料列包含屬性的平均值、整個節點的係數，以及係數的變異數。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 類神經網路演算法](microsoft-neural-network-algorithm.md)   

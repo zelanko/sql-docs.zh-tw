@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082105"
 ---
 # <a name="define-new-measures-cube-wizard"></a>定義新的量值 (Cube 精靈)
@@ -40,7 +40,7 @@ ms.locfileid: "66082105"
   
  若要將範本的所有量值都包含在 Cube 中，請選取標頭中的核取方塊。  
   
- **量值名稱**  
+ **[量值名稱]**  
  列出範本中可以使用的量值。  
   
  若要重新命名量值，請按一下該量值，然後鍵入新的名稱。  
@@ -55,7 +55,7 @@ ms.locfileid: "66082105"
   
  若要變更資料類型，請按一下資料類型，然後從清單中選取資料類型。  
   
- **累積**  
+ **彙總**  
  列出量值的彙總。  
   
  若要變更彙總，請按一下彙總，然後從清單中選取資料類型。  
@@ -68,7 +68,7 @@ ms.locfileid: "66082105"
  **加入新的量值**  
  顯示並讓您能夠定義要包含在 Cube 中的其他量值。  
   
- **量值名稱**  
+ **[量值名稱]**  
  列出要包含在 Cube 中的新量值。  
   
  若要加入新的量值，請按一下 [加入新的量值]****，然後鍵入新量值的名稱。  
@@ -83,7 +83,7 @@ ms.locfileid: "66082105"
   
  若要變更資料類型，請按一下資料類型，然後從清單中選取資料類型。  
   
- **累積**  
+ **彙總**  
  列出量值的彙總。  
   
  若要變更彙總，請按一下彙總，然後從清單中選取資料類型。  

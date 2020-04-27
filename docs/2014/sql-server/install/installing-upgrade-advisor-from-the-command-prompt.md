@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094341"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>從命令提示字元安裝 Upgrade Advisor
@@ -69,6 +69,6 @@ Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
- [Upgrade Advisor 必要條件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
+ [升級建議程式必要條件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087463"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>設定 PowerPivot 資料重新整理的預存認證 (PowerPivot for SharePoint)
@@ -36,7 +36,7 @@ ms.locfileid: "66087463"
   
  如果您在設定或使用資料重新整理時遇到問題，請參閱 TechNet wiki 上的[疑難排解 PowerPivot 資料](https://go.microsoft.com/fwlink/?LinkID=223279)重新整理頁面，以取得可能的解決方案。  
   
-##  <a name="configAny"></a>設定任何 Windows 帳戶以進行資料重新整理  
+##  <a name="configure-any-windows-account-for-data-refresh"></a><a name="configAny"></a>設定任何 Windows 帳戶以進行資料重新整理  
  當 SharePoint 使用者定義資料重新整理排程時，該使用者必須指定用來執行資料重新整理的使用者識別。 您可以選擇選取 PowerPivot 無人看管的資料重新整理帳戶，也可輸入使用者的 Windows 網域使用者帳戶，或是輸入其他可以適用於資料重新整理的 Windows 使用者帳戶。 本節中的步驟適用於最後一個選項：指定某些其他 Windows 帳戶。  
   
  如果您想要使用 PowerPivot 無人看管的資料重新整理帳戶 (適用於 SharePoint 的所有 PowerPivot 使用者) 或活頁簿擁有者之認證的替代方案，可能會選擇這種方式。 例如，您可能會想要將一系列資料重新整理帳戶提供給不同的工作群組，以便協助您在組織層級中追蹤和管理資料重新整理活動。  
@@ -56,7 +56,7 @@ ms.locfileid: "66087463"
   
 ### <a name="step-1-create-a-target-application"></a>步驟 1：建立目標應用程式  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 [ **Secure Store Service**]。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66087463"
   
 10. 在 [**指定 Secure Store 目標應用程式的認證欄位**] 頁面中，接受預設值。 欄位名稱和類型應該是 Windows 使用者名稱和 Windows 密碼。  
   
-11. 按一下 [下一步]。  
+11. 按 [下一步]。  
   
 12. 在 [目標應用程式管理員] 中，指定 SharePoint 使用者的 Windows 網域使用者帳戶，而該使用者必須具備目標應用程式的系統管理存取權 (例如新增或移除 [成員] 清單中之帳戶的能力)。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66087463"
   
 17. 按一下 [確定]  。  
   
-###  <a name="bkmk_grant"></a>步驟2：授與帳戶的「參與」許可權  
+###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>步驟2：授與帳戶的「參與」許可權  
  帳戶必須先獲指派其所應用之任何 PowerPivot 活頁簿的「參與」權限，您才可使用預存認證。 您需要這個權限等級才能從文件庫開啟活頁簿，然後在重新整理資料之後，將其存回文件庫。  
   
  指派權限是由網站集合管理員所執行的步驟。 您可以在根網站集合或根網站集合底下的任何層級 (包括個別文件和項目) 指派 SharePoint 權限。 設定權限的方式將隨著細緻程度而有所不同。 下列步驟示範授與權限的其中一個方法。  
@@ -116,7 +116,7 @@ ms.locfileid: "66087463"
   
 5.  選取 [**參與**]，然後按一下 **[確定]**。  
   
-###  <a name="bkmk_dbread"></a>步驟3：授與讀取權限以存取資料重新整理時所使用的外部資料源  
+###  <a name="step-3-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>步驟3：授與讀取權限以存取資料重新整理時所使用的外部資料源  
  當資料匯入至 PowerPivot 活頁簿時，外部資料連接通常是以信任連接或是以使用目前使用者身分連接至資料來源的模擬連接為基礎。 這些類型的連接只能在目前使用者有讀取所匯入之資料的權限時使用。  
   
  在資料重新整理案例中，用來匯入資料的相同連接字串現在會重複使用來重新整理資料。 假使連接字串採行目前使用者 (例如字串中包含 Integrated_Security=SSPI) 的作法，PowerPivot 系統服務在傳遞目前使用者時，即會將目標應用程式中所指定的使用者識別視為目前使用者。 帳戶必須具備外部資料來源的讀取權限，此連接才會成功。  
@@ -125,7 +125,7 @@ ms.locfileid: "66087463"
   
  如果您是組織中使用的資料來源的系統管理員，可以建立登入並指定所需的權限。 否則，您必須連絡資料擁有者並提供帳戶資訊。 請務必指定對應至目標應用程式的 Windows 網域使用者帳戶。 這是您在本主題的「步驟1：建立目標應用程式」中指定的帳號。  
   
-###  <a name="bkmk_verify"></a>步驟4：確認資料重新整理設定頁面中的帳戶可用性  
+###  <a name="step-4-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>步驟4：確認資料重新整理設定頁面中的帳戶可用性  
   
 1.  為包含 PowerPivot 資料之已發行的活頁簿，開啟資料重新整理組態頁面。 如需如何開啟頁面的指示，請參閱[排程資料重新整理 &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。  
   
@@ -139,14 +139,14 @@ ms.locfileid: "66087463"
   
  如需有關疑難排解的詳細資訊，請參閱 TechNet Wiki 上的[疑難排解 PowerPivot 資料](https://go.microsoft.com/fwlink/p/?LinkID=223279)重新整理。  
   
-##  <a name="config3rd"></a>設定預先定義的帳戶來存取外部或協力廠商資料來源  
+##  <a name="configure-a-predefined-account-for-accessing-external-or-third-party-data-sources"></a><a name="config3rd"></a>設定預先定義的帳戶來存取外部或協力廠商資料來源  
  資料庫伺服器通常會有自己的驗證方法。 如果您的 PowerPivot 活頁簿需要資料庫認證，以便在資料重新整理期間存取外部資料來源，則可以建立認證的目標應用程式識別碼，然後在排程資料重新整理頁面的 [資料來源] 區段指定目標應用程式。  
   
  只有在您想要讓使用者選擇覆寫已經內嵌在 PowerPivot 活頁簿中的資料庫認證時，才需要這個步驟。  
   
  連接字串中必須包含使用者名稱及密碼，此步驟才能運作。 請注意，在連接字串中包含認證十分罕見，因此您在使用此選項時也會有所限制。 在大多數的情況下，您若是使用資料庫驗證來連接資料來源，則連接字串中將只會包含使用者識別碼及密碼。 如需如何檢查連接字串以查看其是否包含使用者識別碼和密碼的詳細資訊，請參閱[PowerPivot Data Refresh With SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)中的「授與建立排程和存取外部資料的許可權」一節。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 [ **Secure Store Service**]。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "66087463"
   
      例如，您可能在欄位名稱中指定 SQL Server 使用者名稱及 SQL Server 使用者密碼，然後選擇使用者名稱及密碼做為欄位類型。  
   
-11. 按一下 [下一步]。  
+11. 按 [下一步]。  
   
 12. 在 [目標應用程式管理員] 中，針對應該擁有應用程式設定管理存取權的 SharePoint 使用者指定 Windows 網域使用者帳戶。  
   

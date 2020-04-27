@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089942"
 ---
 # <a name="options-text-editor---file-extension-page"></a>選項 (文字編輯器 - 副檔名頁面)
@@ -23,7 +23,7 @@ ms.locfileid: "66089942"
  若您從 [編輯器]**** 下拉式清單中，選取「含編碼方式」的選項，則每當開啟該類型的文件時，就會出現對話方塊，以讓您為該文件選取編碼配置。 如果您正在準備指令碼的版本，供不同作業系統或不同目標語言使用，這將會很有用。  
   
 ## <a name="options"></a>選項。  
- **副檔名**  
+ **分機**  
  輸入副檔名。  
   
  **編輯器**  
@@ -35,7 +35,7 @@ ms.locfileid: "66089942"
  **移除**  
  從 [副檔名清單]**** 中刪除選取的項目。  
   
- **副檔名**  
+ **分機**  
  列出有指定編輯器的所有副檔名。  
   
  **編輯經驗**  

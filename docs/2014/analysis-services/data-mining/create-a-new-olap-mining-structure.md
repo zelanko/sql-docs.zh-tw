@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085463"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>建立新的 OLAP 採礦結構
@@ -26,7 +26,7 @@ ms.locfileid: "66085463"
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>若要建立新的 OLAP 採礦結構  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，以滑鼠右鍵按一下 ** 專案中的 [採礦結構]**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料夾，然後按一下 [新增採礦結構]**** 開啟 [資料採礦精靈]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中的 [採礦結構]**** 資料夾，然後按一下 [新增採礦結構]**** 開啟 [資料採礦精靈]。  
   
 2.  在 **[歡迎使用資料採礦精靈]** 頁面上，按 **[下一步]**。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66085463"
 10. 在 **[指定資料行的內容和資料類型]** 頁面的 **[採礦模型結構]** 之下，設定每一個資料行的內容類型和資料類型。  
   
     > [!NOTE]  
-    >  OLAP 採礦模型不支援使用 [偵測]**** 功能，來自動偵測資料行包含連續資料或不連續資料。  
+    >   OLAP 採礦模型不支援使用 **[偵測]** 功能，來自動偵測資料行是否包含連續資料或分隔資料。  
   
      按 [下一步]  。  
   
@@ -97,11 +97,11 @@ ms.locfileid: "66085463"
   
     -   **維度**：從下拉式清單中選擇相關維度。  
   
-    -   階層 **：選取**要套用篩選的維度階層層級。 例如，如果您依 [Geography] 維度進行配量，則可以選擇階層層級，例如 [Region Country Name]。  
+    -   **階層**：選取要套用篩選的維度階層層級。 例如，如果您依 [Geography] 維度進行配量，則可以選擇階層層級，例如 [Region Country Name]。  
   
-    -   **運算子**：從清單中選擇運算子。  
+    -   **運算子**：從清單選取運算子。  
   
-    -   **篩選運算式**：輸入要做為篩選準則的值或運算式，或者使用下拉式清單，從指定之階層層級的成員清單中選取一個值。  
+    -   **篩選運算式**：輸入要做為篩選條件的值或運算式，或者使用下拉式清單，從指定之階層層級的成員清單中選取一個值  
   
          例如，如果您選取 [Geography] 作為維度並選取 [Region Country Name] 作為階層層級，則下拉式清單會包含可作為篩選條件的所有有效國家/地區。 您可以複選。 因此，採礦結構中的資料會限制為來自這些地域的 Cube 資料。  
   
@@ -125,9 +125,9 @@ ms.locfileid: "66085463"
   
     -   Microsoft 關聯規則演算法  
   
-     **建立採礦模型維度**：選取此核取方塊，並提供 [採礦模型] 維度的 [類型名稱]。 當您使用此選項時，會在用於建立採礦結構的原始 Cube 內建立新維度。 您可以使用此維度向下鑽研和執行進一步的分析。 因為該維度位於 Cube 內，所以該維度會自動對應至案例資料維度。  
+     **建立採礦模型維度**：選取此核取方塊，並提供採礦模型維度的類型名稱。 當您使用此選項時，會在用於建立採礦結構的原始 Cube 內建立新維度。 您可以使用此維度向下鑽研和執行進一步的分析。 因為該維度位於 Cube 內，所以該維度會自動對應至案例資料維度。  
   
-     **使用採礦模型維度建立 cube**：選取此核取方塊，並提供新 cube 的名稱。 當您使用此選項時，所建立的新 Cube 同時會包含建立結構所使用的現有維度，以及包含模型結果的新資料採礦維度。  
+     **使用採礦模型維度建立 Cube**：選取此核取方塊，並提供新 Cube 的名稱。 當您使用此選項時，所建立的新 Cube 同時會包含建立結構所使用的現有維度，以及包含模型結果的新資料採礦維度。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)  

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083841"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
@@ -46,7 +46,7 @@ ms.locfileid: "66083841"
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>時序叢集模型中的特徵選取  
  特徵選取不會在建立時序時叫用，但是特徵選取會在群集階段套用。  
   
-|模型類型|特徵選取方法|註解|  
+|模型類型|特徵選取方法|評價|  
 |----------------|------------------------------|--------------|  
 |時序群集|未使用|尚未叫用特徵選取。不過，您可以藉由設定 MINIMUM_SUPPORT 和 MINIMUM_PROBABILIITY 參數的值，控制演算法的行為。|  
 |叢集|有趣性分數|雖然群集演算法可以使用離散或離散化的演算法，但每個屬性的分數都會計算為距離，而且是連續的；因此會使用有趣性分數。|  
@@ -73,8 +73,7 @@ ms.locfileid: "66083841"
  這些方法的完整討論超出本主題的範圍。  
   
 ## <a name="customizing-the-sequence-clustering-algorithm"></a>自訂時序群集演算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定控制演算法處理定型資料之方式的模型旗標，修改已完成之模型的行為。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定控制演算法處理定型資料之方式的模型旗標，修改已完成之模型的行為。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可搭配 Microsoft 時序群集演算法使用的參數。  
@@ -122,15 +121,13 @@ ms.locfileid: "66083841"
 ## <a name="requirements"></a>需求  
  案例資料表必須有一個案例識別碼資料行。 案例資料表可以選擇性地包含儲存案例之相關屬性的其他資料行。  
   
- Microsoft 時序群集演算法需要儲存為巢狀資料表的時序資訊。 巢狀資料表必須有一個單一的 Key Sequence 資料行。 
-  `Key Sequence` 資料行可以包含能夠儲存的任何資料類型，包括字串資料類型，但資料行對於每個案例，必須包含唯一的值。 此外，處理模型前，您必須確認案例資料表與巢狀資料表都根據與資料表相關的索引鍵，以遞增方式排序。  
+ Microsoft 時序群集演算法需要儲存為巢狀資料表的時序資訊。 巢狀資料表必須有一個單一的 Key Sequence 資料行。 `Key Sequence` 資料行可以包含能夠儲存的任何資料類型，包括字串資料類型，但資料行對於每個案例，必須包含唯一的值。 此外，處理模型前，您必須確認案例資料表與巢狀資料表都根據與資料表相關的索引鍵，以遞增方式排序。  
   
 > [!NOTE]  
 >  如果您建立使用 Microsoft 時序演算法但不使用時序資料行的模型，所產生的模型將不包含任何時序，但是將只根據模型中包含的其他屬性群集案例。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
 |資料行|內容類型|  
 |------------|-------------------|  
@@ -141,15 +138,13 @@ ms.locfileid: "66083841"
   
 -   請使用 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 函數以預測時序。 如需有關支援序列預測之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的詳細資訊，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（https://go.microsoft.com/fwlink/?linkid=232473)。  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援鑽研、OLAP 採礦模型的使用，以及資料採礦維度的使用。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援鑽研、OLAP 採礦模型的使用，以及資料採礦維度的使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)   
  [時序群集模型查詢範例](clustering-model-query-examples.md)   
- [時序群集模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

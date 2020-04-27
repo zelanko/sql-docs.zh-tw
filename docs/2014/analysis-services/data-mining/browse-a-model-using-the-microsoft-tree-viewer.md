@@ -24,31 +24,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085942"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 樹狀檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]樹狀檢視器[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會顯示以[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法建立的決策樹。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是同時支援分類與迴歸的混合式決策樹演算法。 因此，您也可以使用這個檢視器來檢視以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法為基礎的模型。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法可用於離散和連續屬性的預測模型。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)＞。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]樹狀檢視器[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會顯示以[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法建立的決策樹。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是同時支援分類與迴歸的混合式決策樹演算法。 因此，您也可以使用這個檢視器來檢視以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法為基礎的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法可用於離散和連續屬性的預測模型。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)＞。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)。  
   
-##  <a name="BKMK_TabsPanes"></a>檢視器索引標籤  
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器包含下列索引標籤和窗格：  
+##  <a name="viewer-tabs"></a><a name="BKMK_TabsPanes"></a>檢視器索引標籤  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器包含下列索引標籤和窗格：  
   
 -   [決策樹](#BKMK_DecisionTree)  
   
 -   [相依性網路](#BKMK_DependencyNetwork)  
   
--   [[挖掘圖例]](#BKMK_MiningLegend)  
+-   [採礦圖例](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a>決策樹  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>決策樹  
  當您建立決策樹模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為每一個可預測屬性建立個別樹狀。 您可以從檢視器之 **[決策樹]** 索引標籤的 **[樹狀結構]** 清單中，選取個別樹狀結構來檢視它。  
   
  決策樹是由一系列的分割所組成，最重要的分割 (由演算法決定) 位於檢視器左邊的 **[全部]** 節點上。 其他分割出現在右邊。 [所有]**** 節點中的分割最重要，因為它包含資料集內最強的導致分割條件，因此它會導致第一個分割。  
@@ -78,9 +75,8 @@ ms.locfileid: "66085942"
   
  [回到頁首](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a>相依性網路  
- 
-  **[相依性網路]** 會顯示模型中的輸入屬性和可預測屬性之間的相依性。 檢視器左邊的滑桿會有篩選的作用，與相依性程度相關。 如果您降低滑桿，則檢視器中只會顯示最強的連結。  
+###  <a name="dependency-network"></a><a name="BKMK_DependencyNetwork"></a>相依性網路  
+ **[相依性網路]** 會顯示模型中的輸入屬性和可預測屬性之間的相依性。 檢視器左邊的滑桿會有篩選的作用，與相依性程度相關。 如果您降低滑桿，則檢視器中只會顯示最強的連結。  
   
  當您選取節點時，檢視器會反白顯示該節點特定的相依性。 例如，若您選擇一個可預測的節點，檢視器也會反白顯示每一個可協助預測該可預測節點的節點。  
   
@@ -90,7 +86,7 @@ ms.locfileid: "66085942"
   
  [回到頁首](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a>[挖掘圖例]  
+###  <a name="mining-legend"></a><a name="BKMK_MiningLegend"></a>[挖掘圖例]  
  當您在決策樹模型中選取節點時， **[採礦圖例]** 會顯示下列資訊：  
   
 -   節點中的案例數目，依可預測屬性的狀態細分。  

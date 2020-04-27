@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084576"
 ---
 # <a name="drillthrough-on-mining-structures"></a>採礦結構的鑽研
-  「*鑽取*」是指查詢「採礦模型」或「採礦結構」，並取得不在模型中公開之詳細資料的能力。  
+  「鑽研」** 表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立採礦模型的資料，也可以鑽研採礦結構中的來源資料。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立採礦模型的資料，也可以鑽研採礦結構中的來源資料。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>鑽研模型案例和鑽研結構的比較  
  鑽研 **模型案例** 對於尋找模型中規則、模式或叢集的詳細資料很有幫助。  
@@ -56,7 +55,7 @@ ms.locfileid: "66084576"
 |-|-|  
 |從採礦模型檢視器對結構使用鑽研|[從模型檢視器使用鑽研](use-drillthrough-from-the-model-viewers.md)|  
 |參閱特定模型類型的鑽研查詢範例。|[資料採礦查詢](data-mining-queries.md)|  
-|取得有關適用於特定採礦結構和採礦模型之權限的詳細資訊。|[授與資料採礦結構和模型的許可權 &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|取得有關適用於特定採礦結構和採礦模型之權限的詳細資訊。|[授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型的鑽研](drillthrough-on-mining-models.md)  

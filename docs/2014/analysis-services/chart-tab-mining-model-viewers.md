@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088180"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>圖表索引標籤 (採礦模型檢視器)
   使用 [圖表]**** 窗格，即可顯示用於定型時間序列模型的歷程記錄資料以及預測值。 圖表的垂直軸代表序列的值，而水平軸代表時間。 虛線代表未來預測。  
   
- **如需詳細資訊：** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)、[使用 microsoft 時間序列檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)、 [使用 Microsoft 時間序列檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

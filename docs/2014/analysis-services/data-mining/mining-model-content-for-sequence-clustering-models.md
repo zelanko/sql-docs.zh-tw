@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083571"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>時序群集模型的採礦模型內容 (Analysis Services - 資料採礦)
-  本主題描述使用 Microsoft 時序群集演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &amp;#40;Analysis Services - 資料採礦&amp;#41;)。  
+  本主題描述使用 Microsoft 時序群集演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱 [採礦模型內容 &amp;#40;Analysis Services - 資料採礦&amp;#41;](mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>了解時序群集模型的結構  
  時序群集模型擁有代表模型及其中繼資料的單一父節點 (NODE_TYPE = 1)。 標示為 **(All)** 的父節點擁有相關的時序節點 (NODE_TYPE = 13)，會列出在定型資料中偵測到的所有轉換。  
@@ -71,11 +71,11 @@ ms.locfileid: "66083571"
  CHILDREN_CARDINALITY  
  節點所擁有子系數目的估計。  
   
- **模型根**基數值等於叢集數目加1。 如需詳細資訊，請參閱 [基數](#bkmk_cardinality)。  
+ **模型根** ：基數值等於叢集數目加 1。 如需詳細資訊，請參閱 [基數](#bkmk_cardinality)。  
   
- 叢集**節點**基數一律為1，因為每個叢集都有一個單一子節點，其中包含叢集中的序列清單。  
+ **叢集節點** ：基數一律為 1，因為每個叢集都有一個單一子節點，其中包含叢集中的時序清單。  
   
- **順序節點**基數表示該叢集中包含的轉換數目。 例如，模型根之時序節點的基數會告訴您整個模型中發現的轉換數目。  
+ **時序節點** ：基數表示該叢集中包含之轉換的數目。 例如，模型根之時序節點的基數會告訴您整個模型中發現的轉換數目。  
   
  PARENT_UNIQUE_NAME  
  節點之父系的唯一名稱。  
@@ -92,22 +92,22 @@ ms.locfileid: "66083571"
  永遠為空白。  
   
  NODE_PROBABILITY  
- **模型根**一律為0。  
+ **模型根** ：一律為 0。  
   
- 叢集**節點**模型中叢集的已調整機率。 已調整的機率總和不為 1，因為在時序群集中使用的群集方法允許多個群集中的部分成員資格。  
+ **叢集節點** ：在模型中，經過叢集的已調整機率。 已調整的機率總和不為 1，因為在時序群集中使用的群集方法允許多個群集中的部分成員資格。  
   
- **順序節點**一律為0。  
+ **時序節點** ：一律為 0。  
   
- **轉換節點**一律為0。  
+ **轉換節點** ：一律為 0。  
   
  MARGINAL_PROBABILITY  
- **模型根**一律為0。  
+ **模型根** ：一律為 0。  
   
- 叢集**節點**與 NODE_PROBABILITY 相同的值。  
+ **叢集節點** ：與 NODE_PROBABILITY 相同的值。  
   
- **順序節點**一律為0。  
+ **時序節點** ：一律為 0。  
   
- **轉換節點**一律為0。  
+ **轉換節點** ：一律為 0。  
   
  NODE_DISTRIBUTION  
  包含機率和其他資訊的資料表。 如需詳細資訊，請參閱 [NODE_DISTRIBUTION 資料表](#bkmk_NODEDIST)。  
@@ -115,13 +115,13 @@ ms.locfileid: "66083571"
  NODE_SUPPORT  
  支援這個節點的轉換數目。 因此，如果在定型資料中有 30 個「產品 A 後面跟著產品 B」時序範例，則總支援為 30。  
   
- **模型根**模型中的轉換總數。  
+ **模型根** ：模型中的轉換總數。  
   
- 叢集**節點**叢集的原始支援，表示為此叢集貢獻案例的定型案例數目。  
+ **叢集節點** ：叢集的原始支援，表示將案例提供給此叢集之定型案例的數目。  
   
- **順序節點**一律為0。  
+ **時序節點** ：一律為 0。  
   
- **轉換節點**叢集中代表特定轉換之案例的百分比。 可以為 0，或者可以有正值。 透過取得叢集節點的原始支援計算，然後乘以群集的機率。  
+ **轉換節點** ：在叢集中代表特定轉換之案例的百分比。 可以為 0，或者可以有正值。 透過取得叢集節點的原始支援計算，然後乘以群集的機率。  
   
  您可以透過這個值了解提供給轉換的定型案例數目。  
   
@@ -151,14 +151,14 @@ ms.locfileid: "66083571"
 |適用於個別群集的時序節點|僅包含該群集中時序之轉換的多個節點|與個別叢集節點中的資訊完全相同。|  
 |轉換|無子系|列出第一個相關狀態的轉換。<br /><br /> 支援是調整過的支援值，表示參與每個轉換的案例。 機率是調整過的機率，以百分比表示。|  
   
-###  <a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION 資料表  
+###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION 資料表  
  NODE_DISTRIBUTION 資料表會針對特定群集的轉換和時序，提供詳細的機率與支援資訊。  
   
  系統一律會將資料列加入到轉換資料表中，代表可能的 `Missing` 值。 如需值的`Missing`意義，以及它如何影響計算的詳細資訊，請參閱[遺漏值 &#40;Analysis Services 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
  支援與機率的計算會根據計算應用於定型案例或完成的模型而有所不同。 這是因為預設的群集方法 Expectation Maximization (EM) 假設任何案例都可以屬於一個以上的群集。 計算模型中案例的支援時，可以使用原始計數和原始機率。 不過，群集中任何特定時序的機率都必須透過所有可能之時序和群集組合的總和加權。  
   
-###  <a name="bkmk_cardinality"></a>基數  
+###  <a name="cardinality"></a><a name="bkmk_cardinality"></a> 基數  
  在群集模型中，父節點的基數一般會告訴您該模型中有多少群集。 不過，時序群集模型在群集層級有兩種節點：其中一種節點包含群集，而另一種節點則包含整個模型的時序清單。  
   
  因此，若要了解模型中的群集數目，您可以取得 (All) 節點的 NODE_CARDINALITY 值後減 1。 例如，如果模型建立 9 個群集，模型根的基數為 10。 這是因為模型包含 9 個叢集節點，每個節點都有自己的時序節點，再加上標示群集 10 (代表模型的時序) 的額外時序節點。  

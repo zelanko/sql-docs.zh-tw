@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091093"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>有關用戶端使用 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的警告
@@ -32,17 +32,13 @@ ms.locfileid: "66091093"
   
 -   當您從以 .NET 3.5、4或4.5 為目標的自訂應用程式參考**SqlTypes**元件版本11.0 時，應用程式將會失敗，因為 SqlClient 的設計會載入版本10.0 的元件。 當應用程式呼叫下列其中一個方法時，就會發生這項失敗：  
   
-    -   
-  `GetValue` 類別的 `SqlDataReader` 方法  
+    -   `GetValue` 類別的 `SqlDataReader` 方法  
   
-    -   
-  `GetValues` 類別的 `SqlDataReader` 方法  
+    -   `GetValues` 類別的 `SqlDataReader` 方法  
   
-    -   
-  `SqlDataReader` 類別的括號索引運算子 []  
+    -   `SqlDataReader` 類別的括號索引運算子 []  
   
-    -   
-  `ExecuteScalar` 類別的 `SqlCommand` 方法  
+    -   `ExecuteScalar` 類別的 `SqlCommand` 方法  
   
 ## <a name="corrective-action"></a>更正動作  
  您可以使用下列其中一個方法來解決這個問題：  

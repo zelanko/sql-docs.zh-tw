@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091476"
 ---
 # <a name="upgrade-how-to-topics"></a>升級的使用說明主題
@@ -26,7 +26,7 @@ ms.locfileid: "66091476"
 |主題|描述|  
 |-----------|-----------------|  
 |[使用安裝精靈 &#40;安裝程式升級至 SQL Server 2014&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的程序主題。|  
-|[升級 SQL Server 容錯移轉叢集實例 &#40;安裝程式&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集的執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的程序主題。|  
+|[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集的執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的程序主題。|  
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|提供在命令提示字元安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的範例語法。|  
   
 ## <a name="see-also"></a>另請參閱  

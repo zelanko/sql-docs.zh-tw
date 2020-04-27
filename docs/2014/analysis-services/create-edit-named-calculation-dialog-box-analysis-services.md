@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086847"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>建立-編輯命名計算對話方塊（Analysis Services）
-  使用 ** 中的 [建立/編輯具名計算]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可定義或修改資料來源檢視中之資料表的具名計算。 您可以執行下列動作來顯示 [建立/編輯具名計算]**** 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立/編輯具名計算]**** 對話方塊，即可定義或修改資料來源檢視中之資料表的具名計算。 您可以執行下列動作來顯示 [建立/編輯具名計算]**** 對話方塊：  
   
 -   在 [資料來源檢視設計師]**** 的 [工具列]**** 窗格中，按一下 [新增具名計算]****。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66086847"
  **資料行名稱**  
  輸入具名計算的名稱。  
   
- **說明**  
+ **描述**  
  輸入具名計算的選擇性描述。  
   
  **運算式**  
@@ -48,6 +48,6 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [資料來源視圖設計工具 &#40;Analysis Services-多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

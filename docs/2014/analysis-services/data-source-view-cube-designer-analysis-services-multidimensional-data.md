@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082532"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>資料來源檢視 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[資料來源檢視]** 窗格，即可檢視來自與所選取 Cube 相關聯之資料來源檢視的資料表和資料行。 此窗格會用來建立量值群組和量值，方法是從 **[資料來源檢視]** 窗格中，將資料行拖曳至 **[量值]** 窗格中。  
   
 ## <a name="options"></a>選項。  
- **資料來源視圖**  
+ **[資料來源檢視]**  
  顯示與所選取 Cube 相關聯的資料來源檢視。  
   
  **(移動視點)**  
@@ -82,11 +82,11 @@ ms.locfileid: "66082532"
  **複製圖表來源**  
  選取與 Cube 相關聯之資料來源檢視所包含的其中一個圖表，以顯示在 [資料來源檢視]**** 窗格中。  
   
- **Zoom**  
+ **縮放**  
  選取可用的顯示比例選項。  
   
  **屬性**  
- 在 ** 中顯示與 Cube 相關聯之資料來源檢視的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示與 Cube 相關聯之資料來源檢視的 [屬性]**** 視窗。  
   
 ## <a name="table-context-menu"></a>資料表內容功能表  
  以滑鼠右鍵按一下 [資料來源檢視]**** 窗格中的資料表或檢視名稱，即可顯示提供下列選項的操作功能表：  
@@ -97,7 +97,7 @@ ms.locfileid: "66082532"
  **隱藏資料表**  
  從窗格中移除資料表。  
   
- **瀏覽資料**  
+ **探索資料**  
  顯示所選取資料表的 [瀏覽資料]**** 對話方塊。  
   
  **編輯資料來源檢視**  
@@ -110,7 +110,7 @@ ms.locfileid: "66082532"
 >  只有在 [量值]**** 窗格中的量值群組尚未參考資料表時，才會啟用此選項。  
   
  **屬性**  
- 在 ** 中顯示所選取資料表的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示所選取資料表的 [屬性]**** 視窗。  
   
 ## <a name="column-context-menu"></a>資料行內容功能表  
  在 [資料來源檢視]**** 窗格中，以滑鼠右鍵按一下資料表或檢視中的資料行名稱，即可顯示提供下列選項的操作功能表：  
@@ -118,14 +118,14 @@ ms.locfileid: "66082532"
  **從資料行新增量值**  
  在 [量值]**** 窗格中，依據所選取資料行定義新的量值。  
   
- **瀏覽資料**  
+ **探索資料**  
  顯示包含所選取資料行之資料表的 [瀏覽資料]**** 對話方塊。  
   
  **編輯資料來源檢視**  
  針對包含選定資料行的資料來源檢視顯示 [資料來源檢視設計師]。 如需資料來源檢視設計工具的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **屬性**  
- 在 ** 中顯示所選取資料行的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示所選取資料行的 [屬性]**** 視窗。  
   
 ## <a name="relationship-context-menu"></a>關聯性內容功能表  
  以滑鼠右鍵按一下 [資料來源檢視]**** 窗格中的關聯性，即可顯示提供下列選項的操作功能表：  
@@ -134,7 +134,7 @@ ms.locfileid: "66082532"
  顯示包含所選取關聯性之資料來源檢視的資料來源檢視設計師。 如需資料來源檢視設計工具的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **屬性**  
- 在 ** 中，顯示所選取關聯性的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，顯示所選取關聯性的 [屬性]**** 視窗。  
   
 ## <a name="see-also"></a>另請參閱  
  [工具列 &#40;Cube 結構索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

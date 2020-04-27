@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084205"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動編輯預測查詢
@@ -33,7 +33,7 @@ ms.locfileid: "66084205"
   
 ### <a name="modify-a-query"></a>修改查詢  
   
-1.  在 ** 中，於資料採礦設計師的 [採礦模型預測]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤上，按一下 [SQL]****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型預測]**** 索引標籤上，按一下 [SQL]****。  
   
      畫面底端的方格會由包含查詢的文字編輯器所取代。 您可以在此編輯器中輸入對查詢的變更。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "66084205"
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](data-mining-queries.md)   
  [預測查詢產生器 &#40;資料採礦&#41;](../prediction-query-builder-data-mining.md)   
- [第6課：建立和使用預測 &#40;基本資料採礦教學課程&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 課：建立及處理預測 &#40;基本資料採礦教學課程&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

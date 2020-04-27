@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092004"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server Agent 升級問題
@@ -27,7 +27,7 @@ ms.locfileid: "66092004"
   
 -   [已取代資料庫維護計畫](../../../2014/sql-server/install/database-maintenance-plans-superseded.md)  
   
--   [只有系統管理員 (sysadmin) 使用者可以將作業步驟記錄檔寫入檔案系統](../../../2014/sql-server/install/only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md)  
+-   [只有系統管理員使用者可以將作業步驟記錄檔寫入檔案系統](../../../2014/sql-server/install/only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md)  
   
 -   [使用新的預存程序取代 xp_sqlagent_proxy_account 擴充預存程序的使用方式](../../../2014/sql-server/install/replace-xp-sqlagent-proxy-account-extended-sp-with-new-stored-procedures.md)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66092004"
   
 -   [SQL Server Agent 服務無法使用 SQL Server 驗證](../../../2014/sql-server/install/sql-server-agent-service-cannot-use-sql-server-authentication.md)  
   
--   [更新 SQL Server Agent 作業步驟中的 Token 語法](../../../2014/sql-server/install/update-token-syntax-in-sql-server-agent-job-steps.md)  
+-   [更新 SQL Server Agent 作業步驟中的語彙基元語法](../../../2014/sql-server/install/update-token-syntax-in-sql-server-agent-job-steps.md)  
   
 -   [先升級所有目標伺服器後再升級主要伺服器](../../../2014/sql-server/install/upgrade-all-target-servers-before-upgrading-the-master-server.md)  
   

@@ -16,29 +16,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084831"
 ---
 # <a name="data-mining-tools"></a>資料採礦工具。
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供下列工具，可讓您用來建立資料採礦[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]解決方案：  
   
--   
-  **
-  ** 中的資料採礦精靈 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可讓您在 Cube 中使用關聯式資料來源或多維度資料，輕鬆建立採礦結構和採礦模型。  
+-   **** 中的資料採礦精靈 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可讓您在 Cube 中使用關聯式資料來源或多維度資料，輕鬆建立採礦結構和採礦模型。  
   
      在此精靈中，您會選擇要使用的資料，然後套用特定的資料採礦技術，例如叢集、類神經網路或時間序列模型。  
   
--   和中都有提供**模型查看**器，可在建立之後探索您的採礦模型。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  您可以使用針對每一個演算法所量身打造的檢視器來瀏覽模型，或者可以使用模型內容檢視器深入分析。  
+-   **** 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都有提供模型檢視器 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，可讓您在建立採礦模型之後加以探索。  您可以使用針對每一個演算法所量身打造的檢視器來瀏覽模型，或者可以使用模型內容檢視器深入分析。  
   
--   
-  **
-  ** 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都有提供預測查詢產生器 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，可幫助您建立預測查詢。 您也可以針對鑑效組資料集或外部資料來測試模型的精確度，或者使用交叉驗證來評估資料集的品質。  
+-   **** 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都有提供預測查詢產生器 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，可幫助您建立預測查詢。 您也可以針對鑑效組資料集或外部資料來測試模型的精確度，或者使用交叉驗證來評估資料集的品質。  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是您用來管理現有資料採礦方案的介面，這些方案已經部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體。 您可以重新處理結構和模型，以更新其中的資料。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是您用來管理現有資料採礦方案的介面，這些方案已經部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體。 您可以重新處理結構和模型，以更新其中的資料。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含可用來清除資料、自動化工作（例如建立預測和更新模型）及建立文字挖掘解決方案的工具。  
   
@@ -47,7 +42,7 @@ ms.locfileid: "66084831"
 ## <a name="data-mining-wizard"></a>資料採礦精靈  
  使用資料採礦精靈開始建立資料採礦方案。 此精靈非常快速且容易使用，可引導您建立資料採礦結構和初始相關之採礦模型的程序，並包含選取演算法類型和資料來源以及定義案例資料進行分析的工作。  
   
- **如需詳細資訊：** [資料採礦 Wizard &#40;Analysis Services 資料採礦&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ **如需詳細資訊︰** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md) (資料採礦精靈 (Analysis Services - 資料採礦))。  
   
 ## <a name="data-mining-designer"></a>資料採礦設計師  
  在您使用資料採礦精靈建立採礦結構和採礦模型之後，您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用資料採礦設計師來處理現有的模型與結構。  
@@ -71,14 +66,12 @@ ms.locfileid: "66084831"
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  在您建立並將採礦模型部署到伺服器之後，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載資料採礦物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 您也可以繼續執行使用此模型的工作，例如瀏覽模型、處理新的資料和建立預測。  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也包含查詢編輯器，您可以用來設計及執行資料採礦延伸 (DMX) 查詢，或是透過 XMLA 來處理資料採礦物件。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也包含查詢編輯器，您可以用來設計及執行資料採礦延伸 (DMX) 查詢，或是透過 XMLA 來處理資料採礦物件。  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 資料採礦工作和轉換  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供許多支援資料採礦的元件。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的一些工具的目的是為了將常見的資料採礦工作自動化，包括預測、模型建立和處理。 例如：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的一些工具的目的是為了將常見的資料採礦工作自動化，包括預測、模型建立和處理。 例如：  
   
 -   建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，每當新的客戶更新資料集時，此封裝都會自動更新模型  
   
@@ -94,7 +87,7 @@ ms.locfileid: "66084831"
   
 -   使用羅吉斯迴歸，根據風險區隔送入的客戶。  
   
- **如需詳細資訊：** [資料採礦解決方案的相關專案](data-mining-solutions.md)  
+ **如需詳細資訊：** [Related Projects for Data Mining Solutions](data-mining-solutions.md) (資料採礦方案的相關專案)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)   

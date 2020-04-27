@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084794"
 ---
 # <a name="data-types-data-mining"></a>資料類型 (資料採礦)
@@ -28,8 +28,7 @@ ms.locfileid: "66084794"
   
  例如，如果您在資料行中有數值資料，您可以選擇將資料當做數值或文字資料類型來處理。 如果您選擇數值資料類型，您可以設定幾種不同的內容類型：您可以離散化數字，或是將數字當做連續值來處理。 如需所有內容類型的清單，請參閱 [內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援以下採礦結構資料行的資料類型：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援以下採礦結構資料行的資料類型：  
   
 |資料類型|支援的內容類型|  
 |---------------|-----------------------------|  

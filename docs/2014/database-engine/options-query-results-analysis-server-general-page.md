@@ -13,10 +13,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089323"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>選項（查詢結果-Analysis Server-一般頁面）

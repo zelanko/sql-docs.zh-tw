@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088011"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>叢集圖表索引標籤 (採礦模型檢視器)
-  
   **[叢集圖表]** 索引標籤會提供叢集模型中，所有叢集的圖形化檢視。  
   
- **如需詳細資訊：** [microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)、[使用 Microsoft 叢集檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、 [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -56,7 +55,7 @@ ms.locfileid: "66088011"
  **修訂版面配置**  
  重新排序圖表中的叢集，以修訂版面配置。  
   
- **濃度**  
+ **密度**  
  使用此選項可變更叢集圖表中顯示的屬性/值組。 使用 **[陰影變數]** 選項選取屬性，並使用 **[狀態]** 選擇值。 圖形中的陰影表示該屬性/值組在叢集中的密度。  
   
  如果選取 **[母體]** ，則圖表會顯示對每個叢集的支援量，表示案例數目 (因為未選取屬性)。  

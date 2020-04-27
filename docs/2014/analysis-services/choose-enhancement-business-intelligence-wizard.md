@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088120"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>選擇增強功能 (商業智慧精靈)
@@ -38,7 +38,7 @@ ms.locfileid: "66088120"
 |**定義局部加總行為**|手動定義個別量值的彙總方法或帳戶類型屬性的成員。 如果 Cube 包含帳戶維度，您可以使用 [定義帳戶智慧]**** 選項來依據帳戶類型自動設定局部加總行為。<br /><br /> 注意：只有 Cube 能夠使用此選項。|  
 |**定義貨幣轉換**|定義規則來轉換和分析 Cube 中的多語系資料。 使用商業智慧精靈所產生的多維度運算式 (MDX) 指令碼在 Cube 中套用轉換規則。<br /><br /> 注意：只有 Cube 能夠使用此選項。|  
   
- **說明**  
+ **描述**  
  提供所選商業智慧增強功能的簡短描述。  
   
 ## <a name="see-also"></a>另請參閱  

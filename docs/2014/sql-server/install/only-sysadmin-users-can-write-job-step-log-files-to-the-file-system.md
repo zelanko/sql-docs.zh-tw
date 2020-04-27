@@ -15,18 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093675"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>只有系統管理員 (sysadmin) 使用者可以將作業步驟記錄檔寫入檔案系統
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會選擇性地為每個作業步驟寫入記錄。  
   
 ## <a name="component"></a>元件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>描述  
  在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Agent 可以針對系統**管理員（sysadmin** ）固定伺服器角色的成員所擁有的作業，將記錄寫入檔案系統。 如果作業擁有者不是**系統管理員（sysadmin** ）角色的成員，而且 proxy 帳戶已啟用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Agent 就可以使用 proxy 帳戶的認證，將記錄寫入檔案系統。  

@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa3cbb7b78577bc1fd01115ddae792efa1d8fc92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094475"
 ---
 # <a name="install-rules"></a>安裝規則
@@ -31,7 +31,7 @@ ms.locfileid: "66094475"
   
  執行安裝作業之前，請檢閱下列主題：  
   
-1.  [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+1.  [安裝 SQL Server 2014 的硬體與軟體需求](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 2.  [SQL Server 2014 各版本所支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66094475"
 ## <a name="additional-rule-topics"></a>其他規則主題  
  請參閱下列主題中有關特定狀況的安裝程式規則：  
   
--   [Installation Rules](../../../2014/sql-server/install/installation-rules.md)  
+-   [安裝規則](../../../2014/sql-server/install/installation-rules.md)  
   
 -   [功能規則 &#40;升級&#41;](../../../2014/sql-server/install/feature-rules-upgrade.md)  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66094475"
   
 -   [解除安裝規則](../../../2014/sql-server/install/uninstallation-rules.md)  
   
--   [準備影像規則](../../../2014/sql-server/install/prepare-image-rules.md)  
+-   [準備映像規則](../../../2014/sql-server/install/prepare-image-rules.md)  
   
--   [完成影像規則](../../../2014/sql-server/install/complete-image-rules.md)  
+-   [完成映像規則](../../../2014/sql-server/install/complete-image-rules.md)  
   
   

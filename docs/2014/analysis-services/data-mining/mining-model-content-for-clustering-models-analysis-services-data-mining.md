@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083674"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>叢集模型的採礦模型內容 (Analysis Services - 資料採礦)
@@ -37,10 +37,10 @@ ms.locfileid: "66083674"
   
  父節點包含有用的統計資料，可描述所有培訓案例的實際散發。 這些統計資料可在巢狀資料表資料行 NODE_DISTRIBUTION 中找到。 例如，下表顯示 NODE_DISTRIBUTION 資料表的數個資料列，描述叢集模型 `TM_Clustering`(您在 [資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)中建立) 的客戶人口統計分佈：  
   
-|ATTRIBUTE_NAME|ATRIBUTE_VALUE|支援|PROBABILITY|variance|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
-|年齡|Missing|0|0|0|1 (遺漏)|  
-|年齡|44.9016152716593|12939|1|125.663453102554|3 (連續)|  
+|Age|Missing|0|0|0|1 (遺漏)|  
+|Age|44.9016152716593|12939|1|125.663453102554|3 (連續)|  
 |性別|Missing|0|0|0|1 (遺漏)|  
 |性別|F|6350|0.490764355823479|0|4 (離散)|  
 |性別|M|6589|0.509235644176521|0|4 (離散)|  
@@ -55,7 +55,7 @@ ms.locfileid: "66083674"
 ## <a name="model-content-for-a-clustering-model"></a>叢集模型的模型內容  
  本章節僅針對採礦模型內容中與叢集模型相關的資料行，提供詳細資料和範例。  
   
- 如需結構描述資料列集 (例如，MODEL_CATALOG 和 MODEL_NAME) 中之一般用途資料行的詳細資訊，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &amp;#40;Analysis Services - 資料採礦&amp;#41;)。  
+ 如需結構描述資料列集 (例如，MODEL_CATALOG 和 MODEL_NAME) 中之一般用途資料行的詳細資訊，請參閱 [採礦模型內容 &amp;#40;Analysis Services - 資料採礦&amp;#41;](mining-model-content-analysis-services-data-mining.md)(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -70,7 +70,7 @@ ms.locfileid: "66083674"
  永遠與 NODE_UNIQUE_NAME 相同。  
   
  NODE_UNIQUE_NAME  
- 節點在模型內的唯一識別項。 無法變更此值。  
+ 節點在模型內的唯一識別項。 這項值不能被改變。  
   
  NODE_TYPE  
  叢集模型會輸出下列節點類型：  
@@ -89,23 +89,23 @@ ms.locfileid: "66083674"
  CHILDREN_CARDINALITY  
  節點所擁有子系數目的估計。  
   
- **父節點**表示模型中的群集數目。  
+ **父節點** ：指出模型中的叢集數。  
   
- 叢集**節點**一律為0。  
+ **分葉節點** ：永遠為 0。  
   
  PARENT_UNIQUE_NAME  
  節點之父系的唯一名稱。  
   
- **父節點**一律為 Null  
+ **父節點** ：永遠為 NULL  
   
- 叢集**節點**通常為000。  
+ **叢集節點** ：通常為 000。  
   
  NODE_DESCRIPTION  
  節點的描述。  
   
- **父節點**一律為 **（全部）**。  
+ **父節點** ：永遠為 **(All)**。  
   
- 叢集**節點**區分叢集與其他叢集之主要屬性的逗號分隔清單。  
+ **叢集節點** ：將叢集與其他叢集加以區分之主要屬性的逗號分隔清單。  
   
  NODE_RULE  
  不用於叢集模型。  
@@ -114,9 +114,9 @@ ms.locfileid: "66083674"
  不用於叢集模型。  
   
  NODE_PROBABILITY  
- 與此節點關聯的機率。 **父節點**一律為1。  
+ 與此節點關聯的機率。 **父節點** ：永遠為 1。  
   
- 叢集**節點**機率代表屬性的複合機率，並根據用來建立群集模型的演算法進行一些調整。  
+ **叢集節點** ：機率代表屬性的複合機率，且依用來建立叢集模型的演算法不同而有一些調整。  
   
  MARGINAL_PROBABILITY  
  從父節點到達節點的機率。 在叢集模型中，臨界機率永遠與節點機率相同。  
@@ -124,16 +124,16 @@ ms.locfileid: "66083674"
  NODE_DISTRIBUTION  
  包含節點之機率長條圖的資料表。  
   
- **父節點**請參閱本主題簡介。  
+ **父節點** ：請參閱本主題的簡介。  
   
- 叢集**節點**表示此叢集中包含之案例的屬性和值分佈。  
+ **叢集節點** ：代表此叢集所含案例的屬性及值的分佈。  
   
  NODE_SUPPORT  
- 支援這個節點的案例數目。 **父節點**表示整個模型的定型案例數目。  
+ 支援這個節點的案例數目。 **父節點** ：指出整個模型的定型案例數目。  
   
- 叢集**節點**以數種案例表示叢集的大小。  
+ **叢集節點** ：以案例數指出叢集大小。  
   
- **注意**如果模型使用 K 表示叢集，則每個案例都只能屬於一個叢集。 不過，如果模型使用 EM 群集，則每個案例都可以屬於不同的群集，且會針對案例所屬的每個群集為該案例指派一個加權距離。 因此，對於 EM 模型而言，個別群集的支援總和會大於整體模型的支援。  
+ **注意** ：如果模型使用 K-Means 叢集，則每個案例都可以僅屬於一個叢集。 不過，如果模型使用 EM 群集，則每個案例都可以屬於不同的群集，且會針對案例所屬的每個群集為該案例指派一個加權距離。 因此，對於 EM 模型而言，個別群集的支援總和會大於整體模型的支援。  
   
  MSOLAP_MODEL_COLUMN  
  不用於叢集模型。  
@@ -141,20 +141,19 @@ ms.locfileid: "66083674"
  MSOLAP_NODE_SCORE  
  顯示與節點相關聯的分數。  
   
- **父節點**群集模型的貝氏資訊準則（BIC）分數。  
+ **父節點** ：叢集模型的 Bayesian Information Criterion (BIC) 分數。  
   
- 叢集**節點**一律為0。  
+ **分葉節點** ：永遠為 0。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  主要用於顯示用途。 您無法變更此標題。  
   
- **父節點**模型的類型：叢集模型  
+ **父節點** ：模型的類型：叢集模型  
   
- 叢集**節點**叢集的名稱。 範例：群集 1。  
+ **叢集節點** ：叢集的名稱。 範例：群集 1。  
   
 ## <a name="remarks"></a>備註  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種建立叢集模型的方法。 如果您不知道所使用的模型是用什麼方法建立的，可以用程式設計的方式、使用 ADOMD 用戶端或 AMO 或者查詢資料採礦結構描述的資料列集，來擷取模型的中繼資料。 如需詳細資訊，請參閱 [查詢用於建立採礦模型的參數](query-the-parameters-used-to-create-a-mining-model.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種建立叢集模型的方法。 如果您不知道所使用的模型是用什麼方法建立的，可以用程式設計的方式、使用 ADOMD 用戶端或 AMO 或者查詢資料採礦結構描述的資料列集，來擷取模型的中繼資料。 如需詳細資訊，請參閱 [查詢用於建立採礦模型的參數](query-the-parameters-used-to-create-a-mining-model.md)。  
   
 > [!NOTE]  
 >  不論您使用的叢集方法或參數為何，模型的結構和內容都會保持相同。  

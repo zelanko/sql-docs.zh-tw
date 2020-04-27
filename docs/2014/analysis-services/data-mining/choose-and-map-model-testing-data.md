@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085754"
 ---
 # <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
@@ -45,11 +45,11 @@ ms.locfileid: "66085754"
   
  [選取輸入資料表來測試採礦模型的精確度](#bkmk_SelectInputs)  
   
- [將模型資料行對應到測試資料中的資料行](#bkmk_MapColumns)  
+ [將模型資料行對應到測試資料的資料行](#bkmk_MapColumns)  
   
  [變更測試資料中的資料行對應至模型的方式](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a>若要選取輸入資料表來測試採礦模型的精確度  
+##  <a name="to-select-input-tables-to-test-the-accuracy-of-a-mining-model"></a><a name="bkmk_SelectInputs"></a> 若要選取輸入資料表來測試採礦模型的精確度  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的資料採礦設計師中，按兩下包含您想要建立圖表之模型的採礦結構。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085754"
   
 5.  按一下 [增益圖]**** 索引標籤或 [分類矩陣]**** 索引標籤，以便使用指定的測試資料來自動建立圖表。  
   
-##  <a name="bkmk_MapColumns"></a>將模型資料行對應到測試資料中的資料行  
+##  <a name="to-map-model-columns-to-the-columns-in-the-testing-data"></a><a name="bkmk_MapColumns"></a> 若要將模型資料行對應到測試資料的資料行  
   
 1.  在資料採礦設計師中，按兩下包含您想要建立圖表之模型的採礦結構，以開啟結構與模型。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085754"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a>若要修改輸入資料對應至模型的方式  
+##  <a name="to-modify-the-way-input-data-is-mapped-to-the-model"></a><a name="bkmk_ChangeMappings"></a>若要修改輸入資料對應至模型的方式  
   
 1.  在資料採礦設計師中，按兩下包含您想要繪製之模型的結構。  
   
@@ -111,8 +111,7 @@ ms.locfileid: "66085754"
   
 10. 選取您要修改之對應的連接線，然後選取 [修改連接]****。  
   
-     
-  **[修改對應]** 對話方塊會開啟。 在此對話方塊的資料表中，[採礦結構資料行]**** 會列出所選取採礦結構包含的每一個資料行，而 [資料表資料行]**** 則會列出輸入資料表中，對應到採礦結構之資料行的資料行。  
+     **[修改對應]** 對話方塊會開啟。 在此對話方塊的資料表中，[採礦結構資料行]**** 會列出所選取採礦結構包含的每一個資料行，而 [資料表資料行]**** 則會列出輸入資料表中，對應到採礦結構之資料行的資料行。  
   
 11. 在 [資料表資料行]**** 之下，選取對應到在 [採礦結構資料行]**** 之下，您要修改關聯性之資料列的資料列。 從清單中選取新的資料行，或選取清單中的空白項目來刪除資料行。  
   
@@ -121,6 +120,6 @@ ms.locfileid: "66085754"
      新的資料行對應會顯示在 [指定資料行對應]**** 對話方塊中。 您可以選取資料行之間的線，然後按 DELETE 鍵來移除對應。 您可以在 [採礦結構]**** 資料表中選取資料行，並將它拖曳到 [選取輸入資料表]**** 資料表中的對應資料行，以建立新的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證工作，以及如何 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

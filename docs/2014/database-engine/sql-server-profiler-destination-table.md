@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088932"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - 目的地資料表
@@ -34,12 +34,12 @@ ms.locfileid: "66088932"
  **擁有者**  
  指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
   
- **Table**  
+ **目錄**  
  指定您要儲存追蹤的資料表名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [將追蹤結果儲存至資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

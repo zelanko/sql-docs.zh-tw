@@ -16,17 +16,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b6e08a384e20d64a7002171059db0d35dfd94a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091468"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>先升級所有目標伺服器後再升級主要伺服器
   升級主要伺服器之前，請先升級所有設定為目標伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦。  
   
 ## <a name="component"></a>元件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>描述  
  若要在多伺服器環境中自動化管理，您至少必須有一個主要伺服器和一個目標伺服器。 主要伺服器會將作業散發到目標伺服器，並接收目標伺服器傳回的事件。 對於目標伺服器上執行的作業，主要伺服器也會儲存其作業定義的集中副本。  

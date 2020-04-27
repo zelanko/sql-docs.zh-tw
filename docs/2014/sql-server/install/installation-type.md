@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094284"
 ---
 # <a name="installation-type"></a>安裝類型
@@ -31,6 +31,6 @@ ms.locfileid: "66094284"
   
  您只能將 SysPrep 支援的功能（[!INCLUDE[ssDE](../../includes/ssde-md.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]）加入至備妥的映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 當備妥的執行個體完成之後，您就可以加入其他 SysPrep 不支援的功能。  
   
- **注意**安裝之後，就無法將功能加入容錯移轉叢集實例。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能加入至現有的容錯移轉叢集，您必須執行新的安裝來安裝個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
+ **注意** ：在容錯移轉叢集執行個體安裝完成之後，您就無法將功能加入至其中。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能加入至現有的容錯移轉叢集，您必須執行新的安裝來安裝個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
   

@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084421"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
@@ -44,8 +44,7 @@ ms.locfileid: "66084421"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 資料採礦中的特徵選取  
  特徵選取通常會在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中自動執行，且每個演算法具有一組預設的技術，可以有智慧地套用特徵減少。 特徵選取一定會在定型模型之前執行，可自動從資料集裡選擇最有可能在模型中使用的屬性。 但是，您也可以手動設定參數以影響特徵選取行為。  
   
- 一般而言，特徵選取的運作方式是計算每個屬性的分數，然後僅選取擁有最佳分數的屬性。 您也可以調整高分的臨界值。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種可用於計算這些分數的方法，而實際套用至任何模型的方法則取決於下列因素：  
+ 一般而言，特徵選取的運作方式是計算每個屬性的分數，然後僅選取擁有最佳分數的屬性。 您也可以調整高分的臨界值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種可用於計算這些分數的方法，而實際套用至任何模型的方法則取決於下列因素：  
   
 -   模型中所使用的演算法  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66084421"
   
  「有趣性」**(Interestingness) 分數是用來在包含非二進位連續數值資料的資料行中排名及排序屬性。  
   
- *Shannon 的熵*和兩個*貝氏*分數適用于包含離散和離散化資料的資料行。 但是，如果模型包含任何連續資料行，則會使用有趣性分數評估所有輸入資料行，以確保一致性。  
+ 包含離散和離散化資料的資料行使用「Shannon 熵」**(Shannon's Entropy) 和兩個貝氏** (Bayesian) 分數。 但是，如果模型包含任何連續資料行，則會使用有趣性分數評估所有輸入資料行，以確保一致性。  
   
  下一節將描述每個特徵選取方法。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66084421"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 演算法所使用的特徵選取方法  
  下表列出支援特徵選取的演算法、演算法所使用的特徵選取方法，以及設定來控制特徵選取行為的參數：  
   
-|演算法|分析的方法|註解|  
+|演算法|分析的方法|評價|  
 |---------------|------------------------|--------------|  
 |貝氏機率分類|Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|Microsoft 貝氏機率分類演算法只接受分隔或離散化的屬性，因此無法使用有趣性分數。<br /><br /> 如需這個演算法的詳細資訊，請參閱 [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)。|  
 |決策樹|有趣性分數<br /><br /> Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|如果任何資料行包含非二進位連續數值，則所有資料行都會使用有趣性分數以確保一致性。 否則，便會使用預設特徵選取方法，或是當您建立模型時所指定的方法。<br /><br /> 如需這個演算法的詳細資訊，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)。|  

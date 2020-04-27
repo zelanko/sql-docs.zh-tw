@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083903"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft 貝氏機率分類演算法技術參考
@@ -36,10 +36,9 @@ ms.locfileid: "66083903"
  如需調整所有模型中的機率來表示可能遺漏值的描述，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
 ### <a name="feature-selection"></a>特徵選取  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法會執行自動特徵選取，藉以限制建立模型時所考量的值數目。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法會執行自動特徵選取，藉以限制建立模型時所考量的值數目。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
   
-|演算法|分析的方法|註解|  
+|演算法|分析的方法|評價|  
 |---------------|------------------------|--------------|  
 |貝氏機率分類|Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|貝氏機率分類只接受離散或離散化的屬性，因此無法使用有趣性分數。|  
   
@@ -52,12 +51,10 @@ ms.locfileid: "66083903"
 -   若要限制可以針對任何一個屬性考量的值數目，減少 MINIMUM_STATES 的值。  
   
 ## <a name="customizing-the-naive-bayes-algorithm"></a>自訂貝氏機率分類演算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定模型資料行上的模型旗標來控制處理資料的方式，或設定採礦結構上的旗標來指定處理遺漏值或 Null 值的方式。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定模型資料行上的模型旗標來控制處理資料的方式，或設定採礦結構上的旗標來指定處理遺漏值或 Null 值的方式。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援數個會影響所產生之採礦模型的效能和精確度的參數。 下表描述每一個參數。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援數個會影響所產生之採礦模型的效能和精確度的參數。 下表描述每一個參數。  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
  指定在叫用特徵選取之前，演算法可以處理輸入屬性的最大數目。 將此值設定為 0，會停用輸入屬性的特徵選取。  
@@ -80,8 +77,7 @@ ms.locfileid: "66083903"
  預設值為 100。  
   
 ### <a name="modeling-flags"></a>模型旗標  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
   
 |模型旗標|描述|  
 |-------------------|-----------------|  
@@ -92,8 +88,7 @@ ms.locfileid: "66083903"
  貝氏機率分類樹狀模型必須包含索引鍵資料行、至少一個可預測屬性，以及至少一個輸入屬性。 任何屬性都不得為連續的；如果您的資料包含連續數值資料，將會忽略或離散化該資料。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
 |資料行|內容類型|  
 |------------|-------------------|  
@@ -106,6 +101,6 @@ ms.locfileid: "66083903"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 貝氏貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)   
  [貝氏貝氏機率分類模型查詢範例](naive-bayes-model-query-examples.md)   
- [適用于貝氏貝氏機率分類模型 &#40;Analysis Services 資料採礦&#41;的採礦模型內容](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

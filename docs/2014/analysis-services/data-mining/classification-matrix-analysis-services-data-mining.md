@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085784"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類矩陣 (Analysis Services - 資料採礦)
@@ -79,11 +79,11 @@ ms.locfileid: "66085784"
 |主題|連結|  
 |------------|-----------|  
 |提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|說明相關的圖表類型。|[增益圖 &#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services-資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services-資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證 &#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
-|描述建立增益圖及其他精確度圖表的步驟。|[測試和驗證工作，以及如何 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
+|描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

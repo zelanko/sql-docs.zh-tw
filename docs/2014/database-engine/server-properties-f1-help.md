@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089842"
 ---
 # <a name="server-properties-f1-help"></a>伺服器屬性 F1 說明
@@ -34,7 +34,7 @@ ms.locfileid: "66089842"
   
  [伺服器屬性 &#40;處理器] 頁面&#41;](configure-windows/server-properties-processors-page.md)  
   
- [[伺服器屬性 &#40;安全性] 頁面&#41;](configure-windows/server-properties-security-page.md)  
+ [伺服器屬性 &#40;安全性頁面&#41;](configure-windows/server-properties-security-page.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器組態選項 &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)  

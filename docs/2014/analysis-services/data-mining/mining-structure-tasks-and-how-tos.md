@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083434"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>採礦結構工作和使用說明
-  
   **中之資料採礦設計師的** [採礦結構] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤包含您可用來建立、編輯和處理採礦結構的工具。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -29,7 +28,7 @@ ms.locfileid: "66083434"
   
 -   [建立新的 OLAP 採礦結構](create-a-new-olap-mining-structure.md)  
   
--   [將資料行加入至採礦結構](add-columns-to-a-mining-structure.md)  
+-   [將資料行新增至採礦結構](add-columns-to-a-mining-structure.md)  
   
 -   [從採礦結構中移除資料行](remove-columns-from-a-mining-structure.md)  
   

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083780"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
@@ -40,20 +40,20 @@ ms.locfileid: "66083780"
   
  [模型內容中的節點](#bkmk_Nodes)  
   
- [依演算法類型的採礦模型內容](#bkmk_AlgoType)  
+ [依據演算法類型的採礦模型內容](#bkmk_AlgoType)  
   
- [用於查看採礦模型內容的工具](#bkmk_Viewing)  
+ [檢視採礦模型內容的工具](#bkmk_Viewing)  
   
  [查詢採礦模型內容的工具](#bkmk_Querying)  
   
-##  <a name="bkmk_Structure"></a>採礦模型內容的結構  
+##  <a name="structure-of-mining-model-content"></a><a name="bkmk_Structure"></a>採礦模型內容的結構  
  每一個模型的內容都會呈現為一系列的 *「節點」*(Node)。 節點是採礦模型內的一個物件，其中包含有關此模型之一部分的中繼資料和資訊。 節點會排列在階層中。 階層中節點的精確管理和階層的意義取決於您所使用的演算法而定。 例如，如果您建立決策樹模型，此模型可包含多個樹狀結構，全都連接到模型根；如果您建立類神經網路模型，此模型可包含一或多個其他網路，再加上統計資料節點。  
   
  每一個模型中的第一個節點稱為 *「根節點」*(Root Node) 或 *「模型父節點」* (Model Parent Node)。 每個模型都有根節點 (NODE_TYPE = 1)。 根節點通常包含了有關模型的一些中繼資料及子節點數目，但是很少包含此模型所找到之模式的其他相關資訊。  
   
  根據您用來建立模型的演算法而定，根節點具有各種不同的子節點數目。 子節點則具有不同的意義且包含了不同的內容 (根據演算法及資料的深度和複雜度而定)。  
   
-##  <a name="bkmk_Nodes"></a>採礦模型內容中的節點  
+##  <a name="nodes-in-mining-model-content"></a><a name="bkmk_Nodes"></a>採礦模型內容中的節點  
  在採礦模型中，節點是一般用途的容器，可儲存有關此模型的所有部分或一部分的資訊片段。 每一個節點的結構一定是相同的，而且包含了資料採礦結構描述資料列集所定義的資料行。 如需詳細資訊，請參閱 [DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
  每一個節點都包含有關此節點的中繼資料，其中包含每一個模型內唯一的識別碼、父節點的識別碼，以及此節點擁有的子節點數目。 中繼資料會識別此節點所屬的模型以及特定模型儲存所在的資料庫目錄。 節點中所提供的其他內容將會因為用來建立模型的演算法類型而異，而且可能包含以下項目：  
@@ -88,7 +88,7 @@ ms.locfileid: "66083780"
 |10|InputAttribute|輸入屬性。 適用於決策樹和貝氏機率分類模型。|  
 |11|InputAttributeState|有關輸入屬性狀態的統計資料。 適用於決策樹和貝氏機率分類模型。|  
 |13|順序|時序群集之 Markov 模型元件的最上層節點。 適用於時序叢集模型。|  
-|14|Transition|Markov 轉換矩陣。 適用於時序叢集模型。|  
+|14|轉換|Markov 轉換矩陣。 適用於時序叢集模型。|  
 |15|TimeSeries|時間序列樹的非根節點。 僅適用於時間序列模型。|  
 |16|TsTree|對應至可預測的時間序列之時間序列樹的根節點。 適用於時間序列模型 (只有當模型是使用 MIXED 參數所建立時)。|  
 |17|NNetSubnetwork|一個子網路。 適用於類神經網路模型。|  
@@ -131,7 +131,7 @@ ms.locfileid: "66083780"
   
 -   您可以使用資料採礦延伸模組 (DMX) 查詢內的函數來尋找特定節點的下階或上層。 如需在查詢中使用函數的詳細資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。  
   
- *基數*指的是集合中的專案數。 在已處理之採礦模型的內容中，基數會告訴您特定節點中的子節點數目。 例如，如果決策樹模型有一個 [Yearly Income] 的節點，而該節點有兩個子節點，一個是條件 [Yearly Income] = High 的節點，另一個是條件 [Yearly Income] = Low 的節點，則 [Yearly Income] 節點的 CHILDREN_CARDINALITY 值會是 2。  
+ *「基數」* (Cardinality) 指定是集合內的項目數。 在已處理之採礦模型的內容中，基數會告訴您特定節點中的子節點數目。 例如，如果決策樹模型有一個 [Yearly Income] 的節點，而該節點有兩個子節點，一個是條件 [Yearly Income] = High 的節點，另一個是條件 [Yearly Income] = Low 的節點，則 [Yearly Income] 節點的 CHILDREN_CARDINALITY 值會是 2。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，只有在計算節點的基數時才會計算直屬子節點。 但是，如果您建立自訂外掛程式演算法，可以多載 CHILDREN_CARDINALITY 來以不同方式計算基數。 例如，如果您想要計算下階的總數，而不只是直屬子節點，這個處理方式可能會很實用。  
@@ -163,7 +163,7 @@ ms.locfileid: "66083780"
   
  例如，如果已設定您的模型來尋找已購買某個特定項目至少一次的客戶，則 ATTRIBUTE_NAME 資料行可能會包含屬性-值配對來定義想要的項目 (例如 `Model = 'Water bottle'`)，而且 ATTRIBUTE_VALUE 資料行只會包含關鍵字 `Existing` 或 `Missing`。  
   
- 支援  
+ SUPPORT  
  具有這個屬性-值配對或是包含此項目集或規則的案例數。  
   
  一般對每個節點而言，support 值都會告訴您目前節點中包含的定型集內有多少案例。 在大多數的模型類型中，support 代表明確的案例數。 Support 值很實用是因為您可以在定型案例內檢視資料的分佈，而不必查詢定型資料。 Analysis Services 伺服器也會使用這些儲存值來計算儲存的機率與之前的機率，以判斷推斷是強的還是弱的。  
@@ -216,7 +216,7 @@ ms.locfileid: "66083780"
 |1|Missing|表示案例資料不包含這個屬性的值。 在計算 `Missing` 狀態時，會與具有值的屬性分開。|  
 |2|Existing|表示案例資料包含這個屬性的值。|  
 |3|連續|表示屬性值是一個連續數值，因此可以由平均值連同變異數和標準差來表示。|  
-|4|Discrete|表示一個視為離散的值 (數值或文字)。<br /><br /> **注意**離散值也可能遺失;不過，在進行計算時，會以不同的方式處理它們。 如需相關資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。|  
+|4|Discrete|表示一個視為離散的值 (數值或文字)。<br /><br /> **注意** ：Discrete 值也可以是 missing 值；但是在計算時會以不同方式處理這兩個值。 如需相關資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。|  
 |5|Discretized|表示此屬性包含已經離散化的數值。 此值將會是一個描述離散化值區的格式化字串。|  
 |6|Existing|表示此屬性具有連續數值，而且資料中已經提供值 (遺漏或推斷的值)。|  
 |7|Coefficient|表示代表著係數的數值。<br /><br /> 係數是計算相依變數的值時所套用的值。 例如，如果您的模型建立一個迴歸公式來根據年齡預測收入，則讓年齡與收入產生關聯的公式中會使用係數。|  
@@ -242,11 +242,11 @@ ms.locfileid: "66083780"
   
  在提供機率分數的節點中，節點機率和臨界機率代表不同的計算。  
   
--   臨界**機率是從**其父系到達節點的機率。  
+-   **臨界機率** ：為從節點的父節點到達節點的機率。  
   
--   **節點**機率是從根節點到達節點的機率。  
+-   **節點機率** ：為從根節點到達節點的機率。  
   
--   **節點**機率一律小於或等於臨界**機率。**  
+-   **節點機率** ：一定會小於或等於 **臨界機率**。  
   
  例如，如果決策樹中所有客戶的母體擴展依性別均分 (而且沒有遺漏任何值)，則子節點的機率應該是 5。 不過，假設每個性別的節點都按收入等級（高、中和低）來平均劃分。 在此情況下，每一個子節點的 MARGINAL_PROBABILITY 分數應該是 .33，但是 NODE_PROBABILTY 值將會是導致該節點之所有機率的乘積，因此一定小於 MARGINAL_PROBABILITY 值。  
   
@@ -261,35 +261,33 @@ ms.locfileid: "66083780"
   
  提供兩種 XML 規則，類似於兩種機率值。 MARGINAL_RULE 中的 XML 片段會定義目前節點的屬性和值，而 NODE_RULE 中的 XML 片段則會描述從模型根到目前節點的路徑。  
   
-##  <a name="bkmk_AlgoType"></a>依演算法類型的採礦模型內容  
+##  <a name="mining-model-content-by-algorithm-type"></a><a name="bkmk_AlgoType"></a>依演算法類型的採礦模型內容  
  每一個演算法都會在它的內容結構描述中儲存不同類型的資訊。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法會產生許多子節點，每一個子節點都代表可能的群集。 每一個叢集節點都包含可描述群集中項目共用之特性的規則。 相較之下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法則不會包含任何子節點；而模型的父節點會包含可描述分析所找到之線性關聯性的方程式。  
   
  下表提供每一種演算法之主題的連結。  
   
--   **模型內容主題：** 針對每個演算法類型說明每個節點類型的意義，並提供有關特定模型類型中最感興趣之節點的指導方針。  
+-   **模型內容主題** ：針對每一個演算法類型說明每一個節點類型的意義，並提供哪些節點在特定模型類型中最有用的相關指引。  
   
--   **查詢主題：** 提供針對特定模型類型查詢的範例，以及如何解讀結果的指引。  
+-   **查詢主題** ：提供針對特定模型類型查詢的範例以及有關如何解譯結果的指引。  
   
 |演算法或模型類型|model content|查詢採礦模型|  
 |-----------------------------|-------------------|----------------------------|  
-|關聯規則模型|[關聯模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[關聯模型查詢範例](association-model-query-examples.md)|  
-|叢集模型|[&#40;Analysis Services 的決策樹模型的模型內容-資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[叢集模型查詢範例](clustering-model-query-examples.md)|  
-|決策樹模型|[&#40;Analysis Services 的決策樹模型的模型內容-資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[決策樹模型查詢範例](decision-trees-model-query-examples.md)|  
-|線性迴歸模型|[線性回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
-|羅吉斯迴歸模型|[羅吉斯回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
-|貝氏機率分類模型|[適用于貝氏貝氏機率分類模型 &#40;Analysis Services 資料採礦&#41;的採礦模型內容](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)|  
-|類神經網路模型|[類神經網路模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[類神經網路模型查詢範例](neural-network-model-query-examples.md)|  
-|時序群集|[時序群集模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)|[時序叢集模型查詢範例](sequence-clustering-model-query-examples.md)|  
-|時間序列模型|[時間序列模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[時間序列模型查詢範例](time-series-model-query-examples.md)|  
+|關聯規則模型|[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[關聯模型查詢範例](association-model-query-examples.md)|  
+|叢集模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[群集模型查詢範例](clustering-model-query-examples.md)|  
+|決策樹模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[決策樹模型查詢範例](decision-trees-model-query-examples.md)|  
+|線性迴歸模型|[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
+|羅吉斯迴歸模型|[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
+|貝氏機率分類模型|[貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)|  
+|類神經網路模型|[類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[類神經網路模型查詢範例](neural-network-model-query-examples.md)|  
+|時序群集|[時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)|[時序叢集模型查詢範例](sequence-clustering-model-query-examples.md)|  
+|時間序列模型|[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[時間序列模型查詢範例](time-series-model-query-examples.md)|  
   
-##  <a name="bkmk_Viewing"></a>用於查看採礦模型內容的工具  
+##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>用於查看採礦模型內容的工具  
  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中瀏覽或探索模型時，可以在 **[Microsoft 一般內容樹狀檢視器]** 中檢視資訊，此工具在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供。  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容檢視器會使用採礦模型的內容結構描述資料列集中提供的相同資訊，顯示資料行、規則、屬性 (Property)、屬性 (Attribute)、節點和其他內容。 內容結構描述資料列集是一般性架構，用來展示有關資料採礦模型內容的詳細資訊。 您可以在任何支援階層式資料列集的用戶端中檢視模型內容。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的檢視器會在 HTML 表格檢視器中呈現此資訊，以一致的格式表示所有模型，讓您更容易了解您所建立之模型的結構。 如需詳細資訊，請參閱 [使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容檢視器會使用採礦模型的內容結構描述資料列集中提供的相同資訊，顯示資料行、規則、屬性 (Property)、屬性 (Attribute)、節點和其他內容。 內容結構描述資料列集是一般性架構，用來展示有關資料採礦模型內容的詳細資訊。 您可以在任何支援階層式資料列集的用戶端中檢視模型內容。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的檢視器會在 HTML 表格檢視器中呈現此資訊，以一致的格式表示所有模型，讓您更容易了解您所建立之模型的結構。 如需詳細資訊，請參閱 [使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
   
-##  <a name="bkmk_Querying"></a>查詢採礦模型內容的工具  
+##  <a name="tools-for-querying-mining-model-content"></a><a name="bkmk_Querying"></a>查詢採礦模型內容的工具  
  若要擷取採礦模型內容，您必須針對資料採礦模型建立查詢。  
   
  建立內容查詢之最簡單的方法就是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中執行以下 DMX 陳述式：  
@@ -306,6 +304,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

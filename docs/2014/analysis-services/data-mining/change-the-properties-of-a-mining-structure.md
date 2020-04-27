@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085856"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>變更採礦結構的屬性
@@ -26,7 +26,7 @@ ms.locfileid: "66085856"
   
 -   採礦結構中個別資料行的屬性  
   
- 請注意，某些屬性相依於其他屬性設定值。 例如，在您將資料行的資料類型設定為 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 之前，無法設定控制分類收納行為的屬性 (例如 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 或 `Discretized`)。  
+ 請注意，某些屬性相依於其他屬性設定值。 例如，在您將資料行的資料類型設定為 `Discretized` 之前，無法設定控制分類收納行為的屬性 (例如 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 或 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>)。  
   
  如需採礦結構屬性的詳細資訊，請參閱 [Mining Structure Columns](mining-structure-columns.md)(採礦結構資料行)。  
   

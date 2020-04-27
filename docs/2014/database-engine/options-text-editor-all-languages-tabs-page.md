@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089909"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>選項 (文字編輯器 - 所有語言 - 定位點頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "66089909"
  當您為特定編輯器選取不同設定時，會顯示「個別文字格式的縮排 (或 Tab) 設定相衝突」訊息。 例如，如果針對 [純文字]**** 選取 [Block indenting (封鎖縮排)]**** 選項，而針對 [XML]**** 選取 [無]****，就會顯示此提醒。  
   
 ## <a name="indenting"></a>縮排  
- **無**  
+ **None**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
  **總匯**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089909"
  以空格數目，設定自動縮排的大小。 預設值為四個空格。 將會插入定位字元、空格字元或兩者，以填滿指定的大小。  
   
  **插入空格**  
- 如果選取此選項，縮排作業僅會插入空格字元，而非定位字元。 例如，若 [縮排大小]**** 設定為 5，在您按下 TAB 鍵或在 ** 主視窗的工具列上按一下 [增加縮排]**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 按鈕時，就會插入五個空格字元。  
+ 如果選取此選項，縮排作業僅會插入空格字元，而非定位字元。 例如，若 [縮排大小]**** 設定為 5，在您按下 TAB 鍵或在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 主視窗的工具列上按一下 [增加縮排]**** 按鈕時，就會插入五個空格字元。  
   
  **保留定位點**  
  如果選取此選項，縮排作業會儘可能插入最多的定位字元。 每個定位字元會填滿 **[定位點大小]** 中所指定的空格數目。 如果 **[縮排大小]** 不是 **[定位點大小]** 的倍數，就會加入空格字元以填滿差異。  

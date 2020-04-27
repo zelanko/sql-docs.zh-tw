@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084054"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線性迴歸演算法技術參考
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 Microsoft 決策樹演算法的特殊版本，適用於連續屬性的模型配對。 本主題說明演算法的實作、描述如何自訂演算法的行為，以及提供查詢模型其他資訊的連結。  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>線性迴歸演算法的實作  
@@ -35,16 +34,15 @@ ms.locfileid: "66084054"
 ### <a name="scoring-methods-and-feature-selection"></a>計分方法與特徵選取  
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 在線性迴歸中，用於特徵選取的方法為有趣性分數，因為模型支援僅支援連續資料行。 下表顯示線性迴歸演算法與決策樹演算法的特徵選取差異，供參考之用。  
   
-|演算法|分析的方法|註解|  
+|演算法|分析的方法|評價|  
 |---------------|------------------------|--------------|  
-|線性迴歸|有趣性分數|預設。<br /><br /> 可用於決策樹演算法的其他特徵選取方法僅適用於離散變數，因此不適用於線性迴歸模型。|  
+|線性迴歸|有趣性分數|預設值。<br /><br /> 可用於決策樹演算法的其他特徵選取方法僅適用於離散變數，因此不適用於線性迴歸模型。|  
 |決策樹|有趣性分數<br /><br /> Shannon 熵<br /><br /> 使用 K2 優先的貝氏<br /><br /> 使用優先統一狄氏分配的貝氏 (預設值)|如果任何資料行包含非二進位連續數值，則所有資料行都會使用有趣性分數以確保一致性。 否則，會使用預設值或指定的方法。|  
   
  針對決策樹模型控制特徵選取的演算法參數為 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
 ## <a name="customizing-the-linear-regression-algorithm"></a>自訂線性迴歸演算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定採礦模型資料行或採礦結構資料行上的模型旗標來控制處理資料的方式。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定採礦模型資料行或採礦結構資料行上的模型旗標來控制處理資料的方式。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表列出針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法提供的參數。  
@@ -56,8 +54,7 @@ ms.locfileid: "66084054"
 |*FORCE_REGRESSOR*|強制演算法使用指定的資料行作為迴歸輸入變數，不考慮演算法計算出來之資料行的重要性。|  
   
 ### <a name="modeling-flags"></a>模型旗標  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
   
 |模型旗標|描述|  
 |-------------------|-----------------|  
@@ -77,8 +74,7 @@ ms.locfileid: "66084054"
  線性迴歸模型必須包含索引鍵資料行、輸入資料行和至少一個可預測資料行。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
 |資料行|內容類型|  
 |------------|-------------------|  
@@ -91,6 +87,6 @@ ms.locfileid: "66084054"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 線性回歸演算法](microsoft-linear-regression-algorithm.md)   
  [線性回歸模型查詢範例](linear-regression-model-query-examples.md)   
- [線性回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

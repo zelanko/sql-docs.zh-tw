@@ -13,15 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086326"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>資料採礦教學課程 (Analysis Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可讓您輕鬆建立複雜的資料採礦方案。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可協助您設計、建立及管理使用關聯式資料或 Cube 資料的資料採礦模型。 您可以管理資料採礦模型的用戶端存取，以及從多個用戶端建立預測查詢。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可讓您輕鬆建立複雜的資料採礦方案。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可協助您設計、建立及管理使用關聯式資料或 Cube 資料的資料採礦模型。 您可以管理資料採礦模型的用戶端存取，以及從多個用戶端建立預測查詢。  
   
  下列清單中逐步教學課程將協助您學習如何充分利用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，讓您可以執行進階分析，解決傳統商業智慧方法之範圍所不及的商務問題。  
   
@@ -47,23 +46,23 @@ ms.locfileid: "66086326"
   
      這些課程涵蓋的進階概念包括使用巢狀資料表、交叉預測、自訂資料來源檢視和具名查詢，以及資料採礦查詢中的篩選。 當您在使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 所包含的預測查詢工具時，也會變得更熟練。  
   
-## <a name="reference"></a>參考  
- [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>參考資料  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>相關章節  
  [資料採礦工具。](data-mining/data-mining-tools.md)  
   
- [邏輯架構 &#40;Analysis Services-資料採礦&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [邏輯架構 &#40;Analysis Services-多維度資料&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [邏輯架構 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  [資料採礦專案](data-mining/data-mining-projects.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦解決方案](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server 資料採礦資源](https://go.microsoft.com/fwlink/?LinkId=97965)   
- [使用 DMX 建立和查詢資料採礦模型：教學課程 &#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [使用 DMX 建立並查詢資料採礦模型：教學課程 &#40;Analysis Services - 資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

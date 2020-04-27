@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084743"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>資料採礦精靈 (Analysis Services - 資料採礦)
@@ -40,7 +40,7 @@ ms.locfileid: "66084743"
   
 -   您是否需要能夠針對統一的資料集測試模型？ 如果是的話，請考慮使用此選項，以保留某些資料進行測試。 您可以選擇某個百分比，然後視需要加以覆蓋指定的資料列數。  
   
-##  <a name="BKMK_Using_DM_Wizard"></a>啟動資料採礦嚮導  
+##  <a name="starting-the-data-mining-wizard"></a><a name="BKMK_Using_DM_Wizard"></a> 啟動資料採礦精靈  
  若要使用資料採礦精靈，您必須已在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟方案，此方案至少包含一個資料採礦或 OLAP 專案。  
   
 -   如果您的方案已經準備好進行資料採礦，您只需要以滑鼠右鍵按一下方案總管中的 [採礦結構]**** 節點，然後選取 [新增採礦結構]****，即可啟動此精靈。  
@@ -51,7 +51,7 @@ ms.locfileid: "66084743"
   
  接下來，您將會建立採礦結構以及一個相關聯的資料採礦模型。 您也可以只建立採礦結構，並在之後加入模型，但是先建立測試模型通常是最容易的方式。  
   
-###  <a name="BKMK_Relational"></a>關聯式與 OLAP 採礦模型的比較  
+###  <a name="relational-vs-olap-mining-models"></a><a name="BKMK_Relational"></a> 關聯式與OLAP 採礦模型的比較  
  下一個重要的選項是選擇是否使用關聯式資料來源，或是讓您的模型根據多維度 (OLAP) 資料。  
   
  資料採礦精靈會在這個點分成兩個路徑，這取決於您的資料來源為關聯式或是在 Cube 中。 除了資料選取程式以外的其他所有專案，都是相同的演算法選擇、加入維持資料集的能力等，但是選取 cube 資料比使用關聯式資料更為複雜。 (如果您建立的模型是以 Cube 為根據，最後您也可以取得一些其他選項)。  
@@ -68,10 +68,9 @@ ms.locfileid: "66084743"
 >  您不需要 Cube 或 OLAP 資料庫，也可以進行資料採礦。 除非您的資料已儲存在 Cube 中，或是您想要採礦 OLAP 維度或是 OLAP 彙總或計算的結果，否則我們建議您針對資料採礦使用關聯式資料表或資料來源。  
   
 ### <a name="choosing-an-algorithm"></a>選擇演算法  
- 接下來，您必須決定要使用哪一個演算法來處理資料。 這個決定可能很困難。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每一個演算法都有不同的功能而且會產生不同的結果，所以您可以試驗並嘗試幾個不同模型，然後再決定哪一個模型最適合您的資料和商業問題。 如需每一個演算法最適合之工作的說明，請參閱以下主題：  
+ 接下來，您必須決定要使用哪一個演算法來處理資料。 這個決定可能很困難。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每一個演算法都有不同的功能而且會產生不同的結果，所以您可以試驗並嘗試幾個不同模型，然後再決定哪一個模型最適合您的資料和商業問題。 如需每一個演算法最適合之工作的說明，請參閱以下主題：  
   
- [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  同樣地，您可以使用不同的演算法建立多個模型，或變更演算法的參數以建立不同的模型。 系統不會限制您的演算法選擇，針對相同資料建立幾個不同模型也是很好的作法。  
   
@@ -83,13 +82,13 @@ ms.locfileid: "66084743"
 ### <a name="additional-features"></a>其他功能  
  為了協助您選擇正確的資料，並正確設定資料來源，資料採礦精靈會提供以下其他功能：  
   
--   **自動偵測資料類型**：此 wizard 會檢查資料行值的唯一性和分佈，然後建議最佳資料類型，並建議資料的使用類型。 您可以從清單中選取值來覆寫這些建議。  
+-   **自動偵測資料類型**：此精靈將會檢查資料行值的唯一性與分佈，然後建議最佳資料類型和資料的使用類型。 您可以從清單中選取值來覆寫這些建議。  
   
--   **變數的建議**：您可以在對話方塊上按一下，並啟動分析器來計算模型所包含之資料行之間的相互關聯性，並判斷是否有任何資料行可能會預測指標結果屬性（在給定目前的模型設定之下）。 您可以輸入不同的值來覆寫這些建議。  
+-   **變數的建議**：您可以在對話方塊上按一下，並啟動分析器來計算模型包含的資料行之間的相互關聯性，並判斷是否有任何資料行可能是結果屬性的預測指標 (在給定目前的模型組態之下)。 您可以輸入不同的值來覆寫這些建議。  
   
--   **特徵選取**：大多數的演算法都會自動偵測出良好預測指標的資料行，並優先使用這些資料行。 如果資料行中包含太多的值，則會套用「特徵選取」**，以減少資料的基數，並提升找到有意義模式的機率。 您可以使用模型參數來影響特徵選取行為。  
+-   **特徵選取**：大多數的演算法都會自動偵測屬於良好預測指標的資料行，並優先使用這些資料行。 如果資料行中包含太多的值，則會套用「特徵選取」**，以減少資料的基數，並提升找到有意義模式的機率。 您可以使用模型參數來影響特徵選取行為。  
   
--   **自動 cube**切割：如果您的採礦模型是以 OLAP 資料來源為基礎，則會自動提供使用 cube 屬性配量模型的功能。 這對於根據 Cube 資料的子集來建立模型非常實用。  
+-   **自動配量 Cube**：如果採礦模型是以 OLAP 資料來源為基礎，則會自動提供使用 Cube 屬性配量模型的功能。 這對於根據 Cube 資料的子集來建立模型非常實用。  
   
 ### <a name="completing-the-wizard"></a>正在完成精靈  
  此精靈中的最後一個步驟為命名採礦結構和相關聯的採礦模型。 根據您建立的模型類型而定，您可能也會擁有以下的重要選項：  
@@ -105,15 +104,15 @@ ms.locfileid: "66084743"
 ## <a name="related-content"></a>相關內容  
  若要深入了解當您建立資料採礦模型時所需要做的決策，請參閱以下連結：  
   
- [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [&#40;資料採礦&#41;的內容類型](content-types-data-mining.md)  
+ [內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)  
   
  [資料類型 &#40;資料採礦&#41;](data-types-data-mining.md)  
   
  [&#40;資料採礦&#41;的特徵選取](feature-selection-data-mining.md)  
   
- [遺漏值 &#40;Analysis Services-資料採礦&#41;](missing-values-analysis-services-data-mining.md)  
+ [遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)  
   
  [採礦模型的鑽研](drillthrough-on-mining-models.md)  
   

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084680"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>將資料採礦方案部署到舊版的 SQL Server
@@ -32,15 +32,15 @@ ms.locfileid: "66084680"
   
  [部署時間序列模型](#bkmk_TimeSeries)  
   
- [使用維持的部署模型](#bkmk_Holdout)  
+ [部署含鑑效組的模型](#bkmk_Holdout)  
   
- [使用篩選部署模型](#bkmk_Filter)  
+ [部署含篩選的模型](#bkmk_Filter)  
   
  [從資料庫備份還原](#bkmk_Backup)  
   
  [使用資料庫同步處理](#bkmk_Synch)  
   
-##  <a name="bkmk_TimeSeries"></a>部署時間序列模型  
+##  <a name="deploying-times-series-models"></a><a name="bkmk_TimeSeries"></a>部署時間序列模型  
  Microsoft 時間序列演算法在 SQL Server 2008 中增強了功能，其方式是加入第二個補充性的演算法 ARIMA。 如需時間序列演算法變更的詳細資訊，請參閱 [Microsoft 時間序列演算法](microsoft-time-series-algorithm.md)。  
   
  因此，使用新 ARIMA 演算法的時間序列採礦模型的行為可能與部署到 SQL Server 2005 Analysis Services 執行個體時不同。  
@@ -55,29 +55,29 @@ ms.locfileid: "66084680"
   
  如果用於模型資料來源的提供者是 SQL Client Data Provider 10，您也必須修改資料來源定義來指定舊版的 SQL Server Native Client。 否則， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會產生錯誤，指出此提供者尚未註冊。  
   
-##  <a name="bkmk_Holdout"></a>使用維持的部署模型  
+##  <a name="deploying-models-with-holdout"></a><a name="bkmk_Holdout"></a>使用維持的部署模型  
  如果您使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 來建立包含用於測試資料採礦模型之鑑效組資料分割的採礦結構，此採礦結構可以部署到 SQL Server 2005 執行個體，但是資料分割資訊將會遺失。  
   
  當您在 SQL Server 2005 Analysis Services 中開啟此採礦結構時， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會引發錯誤，然後重新產生此結構來移除鑑效組資料分割。  
   
  重建結構之後，屬性視窗中無法再使用維持的分割區大小。不過，ASSL 腳本\<檔案中仍可能會\<出現 ddl100_100： HoldoutMaxPercent>30/ddl100_100： HoldoutMaxPercent>）的值。  
   
-##  <a name="bkmk_Filter"></a>使用篩選部署模型  
+##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a>使用篩選部署模型  
  如果您使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 將篩選套用到採礦模型，此模型可以部署到 SQL Server 2005 執行個體，但是篩選將不會套用。  
   
  當您開啟此採礦模型時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會引發錯誤，然後重新產生此模型來移除篩選。  
   
-##  <a name="bkmk_Backup"></a>從資料庫備份還原  
+##  <a name="restoring-from-database-backups"></a><a name="bkmk_Backup"></a>從資料庫備份還原  
  您無法將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立的資料庫備份還原到 SQL Server 2005 執行個體。 如果您這樣做，SQL Server Management Studio 會產生錯誤。  
   
  如果您建立 SQL Server 2005 Analysis Services 資料庫的備份，並將此備份還原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體，則所有時間序列模型都會修改，如上節所述。  
   
-##  <a name="bkmk_Synch"></a>使用資料庫同步處理  
+##  <a name="using-database-synchronization"></a><a name="bkmk_Synch"></a>使用資料庫同步處理  
  不支援從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 到 SQL Server 2005 的資料庫同步處理。  
   
  如果您嘗試同步處理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫，伺服器會傳回錯誤，而且資料庫同步處理會失敗。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services Backward Compatibility](../analysis-services-backward-compatibility.md)  
+ [Analysis Services 回溯相容性](../analysis-services-backward-compatibility.md)  
   
   

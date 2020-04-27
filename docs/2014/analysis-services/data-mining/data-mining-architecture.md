@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085074"
 ---
 # <a name="data-mining-architecture"></a>資料採礦架構
@@ -33,15 +33,15 @@ ms.locfileid: "66085074"
  如需有關如何在商務智慧方案中實作資料採礦的詳細資訊，請參閱 MSDN Library 的＜方案指南＞章節。  
   
 ## <a name="in-this-section"></a>本節內容  
- [邏輯架構 &#40;Analysis Services-資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [實體架構 &#40;Analysis Services-資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [實體架構 &#40;Analysis Services – 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [資料採礦服務與資料來源](data-mining-services-and-data-sources.md)  
   
  [資料採礦方案與物件的管理](management-of-data-mining-solutions-and-objects.md)  
   
- [&#40;資料採礦&#41;的安全性總覽](security-overview-data-mining.md)  
+ [安全性概觀 &#40;資料採礦&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型程式設計](../multidimensional-models/multidimensional-model-programming.md)   

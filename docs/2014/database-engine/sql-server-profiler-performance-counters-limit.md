@@ -15,17 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e64c5cc39ed8634ef2ec74f8680c84f7b66b98f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088816"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server Profiler - 效能計數器限制
   使用 [效能計數器限制] 對話方塊，即可在與 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 追蹤建立相互關聯時，限制系統監視器效能記錄檔的資訊。 您可以使用此對話方塊，來選取應該顯示及用於建立相互關聯的計數器。  
   
- 
-  **[效能計數器限制]** 對話方塊，會以效能記錄檔所包含的效能物件和計數器來擴展。  
+ **[效能計數器限制]** 對話方塊，會以效能記錄檔所包含的效能物件和計數器來擴展。  
   
 ### <a name="to-select-performance-objects-and-counters-to-correlate-with-a-trace"></a>若要選取效能物件和計數器來建立追蹤的相互關聯  
   

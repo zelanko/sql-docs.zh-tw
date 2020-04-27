@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087864"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>叢集設定檔索引標籤 (採礦模型檢視器)
   使用 **[叢集設定檔]** 索引標籤以取得演算法在叢集模型中所發現之叢集的整體檢視。 索引標籤會顯示每一個屬性，以及該屬性在每一個叢集中的分佈。  
   
- **如需詳細資訊：** [microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)、[使用 Microsoft 叢集檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、 [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

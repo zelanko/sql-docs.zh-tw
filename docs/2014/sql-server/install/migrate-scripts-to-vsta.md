@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093990"
 ---
 # <a name="migrate-scripts-to-vsta"></a>將指令碼移轉到 VSTA
@@ -34,15 +34,13 @@ ms.locfileid: "66093990"
   
 -   VSA 指令碼的進入點已重新命名。  
   
-     進入點將 VSTA 專案中 `ScriptMain` 執行階段所呼叫的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 類別方法指定為指令碼工作程式碼的進入點。 
-  `ScriptMain` 類別是指令碼範本所產生的預設類別。  
+     進入點將 VSTA 專案中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段所呼叫的 `ScriptMain` 類別方法指定為指令碼工作程式碼的進入點。 `ScriptMain` 類別是指令碼範本所產生的預設類別。  
   
 -   VSA 指令碼中沒有任何進入點，或者含有多個進入點。  
   
 -   無法加入組件參考。  
   
--   
-  `ScriptMain` 類別已修改為除了 `ScriptObjectModelSSIS` 類別之外，也會繼承其他類別。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]不支援多重繼承。  
+-   `ScriptMain` 類別已修改為除了 `ScriptObjectModelSSIS` 類別之外，也會繼承其他類別。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]不支援多重繼承。  
   
  您無法將使用[!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)]的 VSA 腳本轉換成使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]的 VSTA 腳本。 不過，您可以建立使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]的新 VSTA 腳本。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../integration-services/control-flow/script-task.md)和[指令碼元件的程式碼撰寫和偵錯](../../integration-services/data-flow/transformations/script-component.md)。  
   

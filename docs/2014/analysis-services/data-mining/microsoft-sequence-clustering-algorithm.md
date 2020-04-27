@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083825"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序叢集演算法
@@ -39,9 +39,7 @@ ms.locfileid: "66083825"
  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]網站會收集有關網站使用者造訪之頁面的資訊，以及頁面的流覽順序。 因為該公司提供線上訂購，客戶必須登入站台。 這樣為公司提供每一個客戶設定檔的點選資訊。 在此資料上使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法，公司可以找出具有類似點選模式或時序的客戶群組或群集。 然後，公司可以使用這些群集來分析使用者在整個網站的移動情形、識別哪些頁面與某項特定產品最有關係，並預測下次最可能再造訪哪些頁面。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是一種混合式演算法，它結合了群集技術與 Markov 鏈結分析，可識別群集及其時序。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法的其中一項特徵就是它會使用時序資料。 這項資料通常代表資料集內的一系列事件或各狀態之間的轉換，例如特定使用者的一系列產品採購或網頁點選。 此演算法會檢查所有轉換的機率並測量資料集內所有可能時序之間的差異或距離，以便判斷哪些時序最適合當做群集的輸入使用。 在此演算法已經建立候選時序的清單之後，它就會使用此時序資訊當做群集之 EM 方法的輸入。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是一種混合式演算法，它結合了群集技術與 Markov 鏈結分析，可識別群集及其時序。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法的其中一項特徵就是它會使用時序資料。 這項資料通常代表資料集內的一系列事件或各狀態之間的轉換，例如特定使用者的一系列產品採購或網頁點選。 此演算法會檢查所有轉換的機率並測量資料集內所有可能時序之間的差異或距離，以便判斷哪些時序最適合當做群集的輸入使用。 在此演算法已經建立候選時序的清單之後，它就會使用此時序資訊當做群集之 EM 方法的輸入。  
   
  如需實作的詳細說明，請參閱＜ [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)＞。  
   
@@ -50,11 +48,11 @@ ms.locfileid: "66083825"
   
  時序叢集模型的需求如下：  
   
--   **單一索引鍵資料行**時序群集模型需要可識別記錄的索引鍵。  
+-   **單一索引鍵資料行** ：時序叢集模型需要可識別記錄的索引鍵。  
   
--   **順序資料行**對於時序資料，此模型必須具有包含時序識別碼資料行的嵌套資料表。 此時序識別碼可以是任何可排序資料類型。 例如，您可以使用網頁識別碼、整數或文字字串，只要資料行可識別時序中的事件即可。 每個時序只能有一個時序識別碼，而且每個模型只能有一種時序。  
+-   **時序資料行** ：對於時序資料而言，此模型必須具有包含時序識別碼資料行的巢狀資料表。 此時序識別碼可以是任何可排序資料類型。 例如，您可以使用網頁識別碼、整數或文字字串，只要資料行可識別時序中的事件即可。 每個時序只能有一個時序識別碼，而且每個模型只能有一種時序。  
   
--   **選擇性非順序屬性**此演算法支援加入與排序無關的其他屬性。 這些屬性可以包含巢狀資料行。  
+-   **選擇性非時序屬性** ：此演算法支援加入與時序無關的其他屬性。 這些屬性可以包含巢狀資料行。  
   
  例如，在先前所述的 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 網站範例中，時序叢集模型可能會包含訂單資訊當做案例資料表、每筆訂單之特定客戶的相關人口統計當做非時序屬性，以及包含客戶瀏覽網站或將商品放入購物車之時序的巢狀資料表當做時序資訊。  
   

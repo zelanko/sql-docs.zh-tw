@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084817"
 ---
 # <a name="data-mining-ssas"></a>資料採礦 (SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供併入資料採礦的方案一個整合式平台。 您可以使用關聯式資料或 Cube 資料建立具有預測分析的商業智慧方案。  
   
 ## <a name="benefits-of-data-mining"></a>資料採礦的優點  
@@ -52,13 +51,13 @@ ms.locfileid: "66084817"
   
 -   [資料採礦概念](data-mining-concepts.md)  
   
--   [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [&#40;Analysis Services 的採礦結構-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [&#40;Analysis Services 的採礦模型-資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
+-   [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+-   [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
 -   [資料採礦查詢](data-mining-queries.md)  
   
@@ -68,6 +67,6 @@ ms.locfileid: "66084817"
   
 -   [資料採礦架構](data-mining-architecture.md)  
   
--   [&#40;資料採礦&#41;的安全性總覽](security-overview-data-mining.md)  
+-   [安全性概觀 &#40;資料採礦&#41;](security-overview-data-mining.md)  
   
   

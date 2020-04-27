@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087906"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>叢集圖表逐步解說 (資料採礦增益集)
@@ -76,7 +76,7 @@ ms.locfileid: "66087906"
   
      不過，此選項會做為圖表資料的篩選，因此您稍後無法增加專案數。  
   
-8.  按一下 **[進階]** 。  
+8.  按一下 [進階]****。  
   
      [叢集**選項**] 對話方塊可讓您自訂圖表中所使用之圖形的視覺外觀。 您可以變更用於圖形的色彩，以及用於叢集的圖形。  
   
@@ -107,13 +107,13 @@ ms.locfileid: "66087906"
   
 4.  按一下 [**增益集**] 功能區，然後顯示用來處理資料採礦圖表的其中一個自訂工具列：  
   
-     **版面配置**  
+     **配置**  
      最佳化叢集的排列方式以符合目前的頁面。  
   
      **調整頁面大小**  
      此控制項適用於先前的 HTML 版本。 請改用 Visio 頁面大小調整控制項。  
   
-     **說明**  
+     **描述**  
      如果選取了叢集，按一下這個選項就會顯示有關叢集的詳細資料。  
   
      ![按一下 [描述] 取得叢集的詳細資料](media/dm13-visio-cluster-description-control.gif "按一下 [描述] 取得叢集的詳細資料")  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087303"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>連接到 Microsoft Access 資料庫 (SSAS)
@@ -47,7 +47,7 @@ ms.locfileid: "66087303"
  指定是否要儲存您在 **[密碼]** 方塊中輸入的密碼。  
   
  **進階**  
- 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。  
+ 使用 **[設定進階屬性]** 對話方塊設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  

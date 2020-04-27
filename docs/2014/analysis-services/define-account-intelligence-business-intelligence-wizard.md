@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082203"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>定義帳戶智慧 (商業智慧精靈)
@@ -39,9 +39,9 @@ ms.locfileid: "66082203"
 |**資產**|擁有之事物在特定時間點的價值。|  
 |**餘額**|某項目在特定時間點的計數。|  
 |**費用**|花費之事物的價值。|  
-|**流程**|事物的累加計數。|  
-|**收入**|收到之事物的價值。|  
-|**應**|所欠之事物在特定時間點的價值。|  
+|**Flow**|事物的累加計數。|  
+|**Income**|收到之事物的價值。|  
+|**負債**|所欠之事物在特定時間點的價值。|  
 |**統計**|某項目的計算比率，或者無法彙總之項目的計數。|  
   
 ## <a name="see-also"></a>另請參閱  

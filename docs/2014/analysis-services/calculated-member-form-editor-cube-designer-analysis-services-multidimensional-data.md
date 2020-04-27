@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088365"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>導出成員表單編輯器 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[計算]** 索引標籤上的 **[導出成表單編輯器]** 窗格，即可建立或修改導出成員。  
   
- **注意**這個窗格只會在表單檢視中顯示。  
+ **請注意** 這個窗格只會在表單檢視中顯示。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -37,7 +37,7 @@ ms.locfileid: "66088365"
  **父成員**  
  選取將在其下方出現導出成員的成員。  
   
- **注意**如果 [**父**階層] 指定了 [量值] 以外的階層，則可以使用此選項。  
+ **請注意** 如果 **[父階層]** 指定 MEASURES 以外的階層，才可以使用此選項。  
   
  **更改**  
  選取即可顯示 [選取父成員]**** 對話方塊，然後選擇 [父成員]**** 的成員。 如需 [選取父成員]**** 對話方塊的詳細資訊，請參閱[選取父成員對話方塊 &#40;Analysis Services - 多維度資料&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "66088365"
   
  如需 MDX 格式字串的詳細資訊，請參閱 [FORMAT_STRING 內容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)。  
   
- **Visible**  
+ **亮起**  
  選取 [True]**** 即可讓用戶端應用程式看見導出成員。  
   
  **非空白行為**  

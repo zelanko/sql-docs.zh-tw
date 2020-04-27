@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091670"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>更新 SQL Server Agent 作業步驟中的 Token 語法
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟中使用的 Token 語法已變更。  
   
 ## <a name="component"></a>元件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>描述  
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Agent 會使用括弧（例如 $ （date））而非方括弧（例如 [DATE]）。  

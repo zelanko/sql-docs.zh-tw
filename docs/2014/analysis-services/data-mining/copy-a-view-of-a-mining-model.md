@@ -15,29 +15,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085603"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>複製採礦模型的檢視
-  在 ** 中，資料採礦設計師的 [採礦模型檢視器]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤，對每一種類型的採礦模型都會使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，資料採礦設計師的 [採礦模型檢視器]**** 索引標籤，對每一種類型的採礦模型都會使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集檢視器中的群集圖表  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集檢視器中的群集圖表  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列檢視器中的決策樹  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列檢視器中的決策樹  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集檢視器中的狀態轉換  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集檢視器中的狀態轉換  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器中的相依性網路  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器中的相依性網路  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器之 [節點詳細資料] 窗格中的採礦模型內容  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器之 [節點詳細資料] 窗格中的採礦模型內容  
   
  您可以複製完整的採礦模型表示，或只複製檢視器可見的部分。  
   
@@ -71,6 +66,6 @@ ms.locfileid: "66085603"
 5.  再次以滑鼠右鍵按一下 [節點詳細資料]**** 窗格，然後選取 [複製]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
   
   

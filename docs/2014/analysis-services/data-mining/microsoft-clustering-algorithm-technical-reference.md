@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084026"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
@@ -35,13 +35,12 @@ ms.locfileid: "66084026"
   
  如需有關如何使用叢集模型的詳細資訊，請參閱下列主題：  
   
--   [群集模型的模型內容 &#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [叢集模型查詢範例](clustering-model-query-examples.md)  
+-   [群集模型查詢範例](clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 群集演算法的實作  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集** 方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集** 方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
   
  您可以設定 *CLUSTERING_METHOD* 參數以選擇要使用的演算法。 預設的群集方法是可擴充的 EM。  
   
@@ -76,8 +75,7 @@ ms.locfileid: "66084026"
  1 - P(data point, cluster)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法不會公開用來計算 K-means 的距離函數，而距離量值則無法用於完成的模型中。 不過，您可以使用預測函數來傳回對應至距離的值，其中距離是計算成屬於群集之資料點的機率。 如需詳細資訊，請參閱 [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法不會公開用來計算 K-means 的距離函數，而距離量值則無法用於完成的模型中。 不過，您可以使用預測函數來傳回對應至距離的值，其中距離是計算成屬於群集之資料點的機率。 如需詳細資訊，請參閱 [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)。  
   
  K-means 演算法提供兩種資料集取樣的方法：一種是不可擴充的 K-means，這種方法會載入整個資料集，且進行一次群集行程；另一種則是可擴充的 K-means，其中演算法會使用前 50,000 個案例，且只有在需要更多資料才能達到更佳的模型與資料符合度時，才會讀取更多的案例。  
   
@@ -88,8 +86,7 @@ ms.locfileid: "66084026"
 >  NORMALIZATION 參數是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的內部屬性，不受支援。 一般而言，建議在群集模型中使用正規化，以改善模型結果。  
   
 ## <a name="customizing-the-microsoft-clustering-algorithm"></a>自訂 Microsoft 群集演算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的參數。 這些參數對於所產生之採礦模型的效能和精確度都有影響。  
@@ -97,7 +94,7 @@ ms.locfileid: "66084026"
  CLUSTERING_METHOD  
  指定演算法要使用的群集方法。 可用的群集方法有：  
   
-|ID|方法|  
+|識別碼|方法|  
 |--------|------------|  
 |1|可擴充的 EM|  
 |2|不可擴充的 EM (Non-scalable EM)|  
@@ -116,7 +113,7 @@ ms.locfileid: "66084026"
   
  藉由變更此數字，您可以變更建立初始群集的方法，然後比較使用不同的種子而建立的模型。 如果種子已變更，但找到的群集並未大幅變更，則可將模型視為相當穩定。  
   
- 預設值是 0。  
+ 預設值為 0。  
   
  MINIMUM_SUPPORT  
  指定建立群集所需的案例最小數目。 如果群集中的案例數目低於此數目，則會將群集視為空白並加以捨棄。  
@@ -171,8 +168,7 @@ ms.locfileid: "66084026"
  叢集模型必須包含索引鍵資料行和輸入資料行。 您也可以將輸入資料行定義為可預測的。 設定為 `Predict Only` 的資料行不會用來建立群集。 這些值在群集內的散發是在建立群集之後才計算的。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
 |資料行|內容類型|  
 |------------|-------------------|  
@@ -185,6 +181,6 @@ ms.locfileid: "66084026"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 群集演算法](microsoft-clustering-algorithm.md)   
  [群集模型查詢範例](clustering-model-query-examples.md)   
- [群集模型的模型內容 &#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

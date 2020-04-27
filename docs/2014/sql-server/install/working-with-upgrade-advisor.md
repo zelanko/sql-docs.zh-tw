@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090960"
 ---
 # <a name="working-with-upgrade-advisor"></a>使用 Upgrade Advisor
@@ -41,8 +41,8 @@ ms.locfileid: "66090960"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[Upgrade Advisor 的概觀](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|提供升級程序、Upgrade Advisor 分析精靈和 Upgrade Advisor 報表檢視器的概觀。|  
-|[Upgrade Advisor 使用說明主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|提供執行常見 Upgrade Advisor 程序的指示。|  
+|[升級建議程式概觀](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|提供升級程序、Upgrade Advisor 分析精靈和 Upgrade Advisor 報表檢視器的概觀。|  
+|[升級建議程式使用說明主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|提供執行常見 Upgrade Advisor 程序的指示。|  
 |[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|包含當您按下 F1 鍵或在 Upgrade Advisor 分析 Wizard**頁面上按一下**[說明] 時所顯示的主題。|  
   
 ## <a name="see-also"></a>另請參閱  

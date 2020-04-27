@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082295"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>決策樹索引標籤 (採礦模型檢視器)
   [決策樹]**** 窗格會顯示決策樹模型中建立之決策規則的視覺表示。 決策規則描述朝向某個特定結果的路徑。  
   
- **如需詳細資訊：** [Microsoft 決策樹演算法](data-mining/microsoft-decision-trees-algorithm.md)、[使用 Microsoft 樹狀檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **如需詳細資訊，請參閱 ** [Microsoft 決策樹演算法](data-mining/microsoft-decision-trees-algorithm.md)、[使用 Microsoft 樹狀檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

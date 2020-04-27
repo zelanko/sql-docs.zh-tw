@@ -1,5 +1,5 @@
 ---
-title: 回溯相容性 |Microsoft Docs
+title: 回溯相容性 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088581"
 ---
 # <a name="backward-compatibility"></a>回溯相容性
@@ -41,7 +41,7 @@ ms.locfileid: "66088581"
 |-----------|-----------------|  
 |[SQL Server 回溯相容性](../../2014/getting-started/sql-server-backward-compatibility.md)|包含描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中之變更的主題，您可能需要對自己的應用程式做一些改變。 本主題範圍所包含的功能包括資料可程式性、介面區組態工具、安裝程式、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務和其他大幅的功能變更。|  
 |[SQL Server Database Engine 回溯相容性](../database-engine/sql-server-database-engine-backward-compatibility.md)|包含一些主題，其中描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 變更，您可能需要對自己的應用程式做一些改變。|  
-|[Analysis Services Backward Compatibility](../../2014/analysis-services/analysis-services-backward-compatibility.md)|包含一些主題，其中描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 變更，您可能需要對自己的應用程式做一些改變。|  
+|[Analysis Services 回溯相容性](../../2014/analysis-services/analysis-services-backward-compatibility.md)|包含一些主題，其中描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 變更，您可能需要對自己的應用程式做一些改變。|  
 |[Integration Services 回溯相容性](../integration-services/integration-services-backward-compatibility.md)|描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 變更，您可能需要對現有的 Data Transformation Services 應用程式做一些改變。|  
 |[Reporting Services 回溯相容性](../reporting-services/reporting-services-backward-compatibility.md)|包含一些主題，其中描述 [!INCLUDE[ssRS](../includes/ssrs.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 變更，您可能需要對現有的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 方案做一些改變。|  
 |[回溯相容性 &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|包含一些主題，其中描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 變更，您可能需要對現有的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 方案做一些改變。|  

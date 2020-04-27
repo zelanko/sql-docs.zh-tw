@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 333a812963bf58ada0450243d3fced6891f08915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086556"
 ---
 # <a name="cube-wizard-f1-help"></a>Cube 精靈 F1 說明
@@ -24,7 +24,7 @@ ms.locfileid: "66086556"
   
  **開啟 Cube 精靈**  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**方案總管**中，以滑鼠右鍵按一下 ** 專案的 [Cubes]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料夾，然後按一下 [新增 Cube]****。 使用「Cube 精靈」建立 Cube 之後，您就可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中使用「Cube 設計師」修改其屬性。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**方案總管**中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [Cubes]**** 資料夾，然後按一下 [新增 Cube]****。 使用「Cube 精靈」建立 Cube 之後，您就可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中使用「Cube 設計師」修改其屬性。  
   
 ## <a name="in-this-section"></a>本節內容  
   

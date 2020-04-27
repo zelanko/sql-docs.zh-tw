@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093150"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>移除未記載之系統資料表的參考
@@ -80,7 +80,7 @@ ms.locfileid: "66093150"
 ## <a name="corrective-action"></a>更正動作  
  根據下表修改您的應用程式。  
   
-|取代|使用|  
+|取代|用法|  
 |----------------|---------|  
 |**sysfulltextnotify**|OBJECTPROPERTYEX 函數的**TableFulltextPendingChanges**屬性。|  
 |**syslocks**|**dm_tran_locks**動態管理檢視] 或 [sp_lock] 或 [ **syslockinfo** ] 相容性檢視。|  

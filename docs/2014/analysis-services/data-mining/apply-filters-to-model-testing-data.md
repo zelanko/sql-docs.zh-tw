@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086152"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
@@ -77,7 +77,7 @@ ms.locfileid: "66086152"
   
 8.  您可以使用 [運算子]**** 和 [值]**** 資料行來定義資料行的篩選方式。  
   
-     **注意**輸入值，而不使用引號。  
+     **注意** ：當您輸入值時，請勿使用引號。  
   
 9. 按一下 [及/或]**** 文字方塊並選取邏輯運算子來定義多項條件的組合方式。  
   

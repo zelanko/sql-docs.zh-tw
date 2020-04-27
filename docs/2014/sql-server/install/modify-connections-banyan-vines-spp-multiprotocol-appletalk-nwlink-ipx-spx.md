@@ -23,10 +23,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdbcaa39e3d9630bd4ea50919f31cdbb15a36d14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093903"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>修改使用 Banyan VINES Sequenced Packet Protocol (SPP)、多重通訊協定、AppleTalk 或 NWLink IPX SPX 網路通訊協定的連線
@@ -36,8 +36,7 @@ ms.locfileid: "66093903"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>描述  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支援 Banyan VINES Sequenced Packet Protocol (SPP)、多重通訊協定、AppleTalk 或 NWLink IPX/SPX 網路通訊協定。 先前使用這些通訊協定進行連接的用戶端必須選取不同的通訊協定。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支援 Banyan VINES Sequenced Packet Protocol (SPP)、多重通訊協定、AppleTalk 或 NWLink IPX/SPX 網路通訊協定。 先前使用這些通訊協定進行連接的用戶端必須選取不同的通訊協定。  
   
 ## <a name="corrective-action"></a>更正動作  
  變更用戶端應用程式，以便在連接至伺服器時使用支援的通訊協定。 如果您有使用了其中一個不支援之通訊協定的別名設定，則必須將別名修改為使用其中一個支援的通訊協定。  

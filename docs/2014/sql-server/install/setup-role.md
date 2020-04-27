@@ -11,17 +11,16 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092226"
 ---
 # <a name="setup-role"></a>安裝程式角色
   您可以使用此頁面來指定要使用 [特徵選取] 頁面選取個別功能，還是使用安裝程式角色進行安裝。  
   
- 
-  `setup role` 是實作預先定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態所需之所有功能與共用元件的固定選項。  
+ `setup role` 是實作預先定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態所需之所有功能與共用元件的固定選項。  
   
 ## <a name="options"></a>選項。  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能安裝**  
@@ -39,8 +38,7 @@ ms.locfileid: "66092226"
  **具有預設值的所有功能**  
  選擇此安裝程式角色來安裝可用於此版本的所有功能。 請注意，這個角色中會排除 PowerPivot for SharePoint。 您必須使用 PowerPivot for SharePoint 安裝程式角色來安裝該功能。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用 **NT AUTHORITY\NETWORK SERVICE** 帳戶啟動。 目前的使用者將會當作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**系統管理員** 角色的成員提供。 此選項所設定的值可透過指定其他命令行參數來覆寫。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用 **NT AUTHORITY\NETWORK SERVICE** 帳戶啟動。 目前的使用者將會當作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**系統管理員** 角色的成員提供。 此選項所設定的值可透過指定其他命令行參數來覆寫。  
   
  當作業系統不是網域控制站時，Database Engine 和 Reporting Services 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶、Integration Services 會使用 NTAUTHORITY\NETWORK SERVICE 帳戶，而 SQL 全文檢索篩選背景程式啟動器則會使用 NTAUTHORITY\LOCAL SERVICE 帳戶。  
   

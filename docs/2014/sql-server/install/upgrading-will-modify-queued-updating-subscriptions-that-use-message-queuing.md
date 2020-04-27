@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c723050f9e860534c5298df9a487337e319ff91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091406"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>升級將會修改使用 Message Queuing 的佇列更新訂閱

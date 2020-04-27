@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085136"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>資料採礦演算法 (Analysis Services - 資料採礦)
@@ -49,16 +49,15 @@ ms.locfileid: "66085136"
  選擇特定分析工作最適用的演算法並不容易。 您可以使用不同的演算法來執行相同的業務工作，每一個演算法會產生不同的結果，且部分演算法還會產生一種以上的結果類型。 例如，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法，不僅用來預測也可以減少資料集內的資料行數目，因為決策樹可以識別不影響最終採礦模型的資料行。  
   
 ### <a name="choosing-an-algorithm-by-type"></a>依類型選擇演算法  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括下列演算法類型：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括下列演算法類型：  
   
--   **分類演算法**會根據資料集內的其他屬性，預測一或多個離散變數。  
+-   **分類演算法** 會根據資料集內的其他屬性，預測一或多個離散變數。  
   
 -   **回歸演算法**會根據資料集內的其他屬性，預測一或多個連續變數，例如利潤或損失。  
   
--   **分割演算法**會將資料分成具有類似屬性之專案的群組或群集。  
+-   **分割演算法** ：會將項目的資料劃分為具有相似屬性的群組或叢集。  
   
--   **關聯演算法**會尋找資料集內不同屬性之間的相互關聯。 這種演算法最常應用在建立關聯規則，這些規則可以用在購物籃分析。  
+-   **關聯分析演算法** 會尋找資料集內不同屬性之間的相互關聯。 這種演算法最常應用在建立關聯規則，這些規則可以用在購物籃分析。  
   
 -   時序**分析演算法**會匯總資料中的頻繁序列或集，例如 Web 路徑流程。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66085136"
   
 |工作範例|適用的 Microsoft 演算法|  
 |-----------------------|---------------------------------|  
-|**預測離散屬性**<br /><br /> 將潛在買家清單中的客戶標幟為較佳或較差的潛在客戶。<br /><br /> 計算伺服器在未來 6 個月內失敗的機率。<br /><br /> 分類病人結果並探索相關因素。|[Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft 群集演算法](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)|  
+|**預測離散屬性**<br /><br /> 將潛在買家清單中的客戶標幟為較佳或較差的潛在客戶。<br /><br /> 計算伺服器在未來 6 個月內失敗的機率。<br /><br /> 分類病人結果並探索相關因素。|[Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft 貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft 群集演算法](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft 類神經網路演算法](microsoft-neural-network-algorithm.md)|  
 |**預測連續屬性**<br /><br /> 預測下一個年度的銷售。<br /><br /> 根據過去歷史和季節性趨勢來預測網站訪客。<br /><br /> 根據人口統計產生風險分數。|[Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft 時間序列演算法](microsoft-time-series-algorithm.md)<br /><br /> [Microsoft 線性迴歸演算法](microsoft-linear-regression-algorithm.md)|  
 |**預測序列**<br /><br /> 執行公司網站的點選流分析。<br /><br /> 分析導致伺服器失敗的因素。<br /><br /> 擷取及分析看診期間的活動順序，制定出以一般活動為主的最佳作法。|[Microsoft 時序叢集演算法](microsoft-sequence-clustering-algorithm.md)|  
 |**在交易中尋找通用專案的群組**<br /><br /> 使用購物籃分析來決定產品位置。<br /><br /> 向客戶建議其他可購買的產品。<br /><br /> 分析參加某事件之訪客的調查資料，以找出相互關聯的活動或攤位，並規劃未來的活動。|[Microsoft Association Algorithm](microsoft-association-algorithm.md)<br /><br /> [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)|  
@@ -81,23 +80,23 @@ ms.locfileid: "66085136"
 |||  
 |-|-|  
 |**基本演算法描述**|說明演算法的用途與運作方式，並概要說明演算法可能相當實用的商務案例。|  
-||[Microsoft Association Algorithm](microsoft-association-algorithm.md)<br /><br /> [Microsoft 群集演算法](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft 線性迴歸演算法](microsoft-linear-regression-algorithm.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)<br /><br /> [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)<br /><br /> [Microsoft 時序叢集演算法](microsoft-sequence-clustering-algorithm.md)<br /><br /> [Microsoft 時間序列演算法](microsoft-time-series-algorithm.md)|  
+||[Microsoft Association Algorithm](microsoft-association-algorithm.md)<br /><br /> [Microsoft 群集演算法](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft 線性迴歸演算法](microsoft-linear-regression-algorithm.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)<br /><br /> [Microsoft 貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft 類神經網路演算法](microsoft-neural-network-algorithm.md)<br /><br /> [Microsoft 時序叢集演算法](microsoft-sequence-clustering-algorithm.md)<br /><br /> [Microsoft 時間序列演算法](microsoft-time-series-algorithm.md)|  
 |**技術參考**|提供有關演算法實作的技術詳細資料，並視需要提供學術參考。 列出您可以設定的參數，用於控制演算法的行為，並自訂模型中的結果。 描述資料需求，並盡可能提供效能提示。|  
 ||[Microsoft 關聯分析演算法技術參考](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考資料](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 時序群集演算法技術參考](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
 |**模型內容**|說明每種資料採礦模型類型中的資訊結構化方式，並說明如何解譯儲存在每個節點中的資訊。|  
-||[關聯模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [群集模型的模型內容 &#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [&#40;Analysis Services 的決策樹模型的模型內容-資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [線性回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [羅吉斯回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [適用于貝氏貝氏機率分類模型 &#40;Analysis Services 資料採礦&#41;的採礦模型內容](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [類神經網路模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [時序群集模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [時間序列模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**資料採礦查詢**|提供多項可用於每種模型類型的查詢。 例如，可讓您深入了解模型中模式的內容查詢，以及可協助您根據這些模式建立預測的預測查詢。|  
-||[關聯模型查詢範例](association-model-query-examples.md)<br /><br /> [叢集模型查詢範例](clustering-model-query-examples.md)<br /><br /> [決策樹模型查詢範例](decision-trees-model-query-examples.md)<br /><br /> [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)<br /><br /> [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)<br /><br /> [貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)<br /><br /> [類神經網路模型查詢範例](neural-network-model-query-examples.md)<br /><br /> [時序叢集模型查詢範例](sequence-clustering-model-query-examples.md)<br /><br /> [時間序列模型查詢範例](time-series-model-query-examples.md)|  
+||[關聯模型查詢範例](association-model-query-examples.md)<br /><br /> [群集模型查詢範例](clustering-model-query-examples.md)<br /><br /> [決策樹模型查詢範例](decision-trees-model-query-examples.md)<br /><br /> [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)<br /><br /> [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)<br /><br /> [貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)<br /><br /> [類神經網路模型查詢範例](neural-network-model-query-examples.md)<br /><br /> [時序叢集模型查詢範例](sequence-clustering-model-query-examples.md)<br /><br /> [時間序列模型查詢範例](time-series-model-query-examples.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
   
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |---------------|---------------------|  
 |確定資料採礦模型所使用的演算法。|[查詢用於建立採礦模型的參數](query-the-parameters-used-to-create-a-mining-model.md)|  
 |建立自訂外掛程式演算法|[外掛程式演算法](plugin-algorithms.md)|  
 |使用演算法特定的檢視器瀏覽模型|[資料採礦模型檢視器](data-mining-model-viewers.md)|  
 |檢視使用一般資料表格式的模型內容|[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|了解如何設定資料及使用演算法來建立模型|[&#40;Analysis Services 的採礦結構-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [&#40;Analysis Services 的採礦模型-資料採礦&#41;](mining-models-analysis-services-data-mining.md)|  
+|了解如何設定資料及使用演算法來建立模型|[採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦工具。](data-mining-tools.md)  

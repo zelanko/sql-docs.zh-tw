@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084354"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>篩選關聯規則模型中的項目集
@@ -35,6 +35,6 @@ ms.locfileid: "66084354"
  現在項目集經過篩選後，只顯示包含所選項目的那些項目集。 此方塊不區分大小寫。 篩選會儲存在記憶體中，這樣您就可以從清單中選取舊篩選。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
   
   

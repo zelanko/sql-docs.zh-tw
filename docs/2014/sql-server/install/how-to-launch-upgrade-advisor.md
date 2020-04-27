@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094910"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>如何：啟動 Upgrade Advisor
@@ -32,6 +32,6 @@ ms.locfileid: "66094910"
 ## <a name="see-also"></a>另請參閱  
  [正在執行 Upgrade Advisor &#40;使用者介面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Upgrade Advisor 的 how to 主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

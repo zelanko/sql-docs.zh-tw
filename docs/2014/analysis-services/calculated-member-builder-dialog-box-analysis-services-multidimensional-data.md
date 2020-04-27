@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8046d93f28c6d7c61899bb5f9aa3598f834c0ab3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088377"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>導出成員產生器對話方塊 (Analysis Services - 多維度資料)
@@ -32,9 +32,9 @@ ms.locfileid: "66088377"
 |**運算式**|輸入將要使用的 MDX 運算式。|  
 |**勾**|按一下 **[檢查]** 即可測試 **[運算式]** 中所定義的 MDX 運算式。|  
 |**中繼資料**|顯示目前 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的中繼資料，這可以包含在 **[運算式]** 中所定義的 MDX 運算式內。<br /><br /> 以滑鼠右鍵按一下選取的項目，並選取 [複製]****，或是將選取的項目拖曳至 [運算式]****，即可複製該項目的 MDX 語法。|  
-|**函數**|顯示目前 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體可用的 MDX 函數。 列出的項目擷取自 MDSCHEMA_FUNCTIONS 結構描述資料列集。<br /><br /> 以滑鼠右鍵按一下選取的項目，並選取 [複製]****，或是將選取的項目拖曳至 [運算式]****，即可複製該項目的 MDX 語法。|  
+|**函式**|顯示目前 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體可用的 MDX 函數。 列出的項目擷取自 MDSCHEMA_FUNCTIONS 結構描述資料列集。<br /><br /> 以滑鼠右鍵按一下選取的項目，並選取 [複製]****，或是將選取的項目拖曳至 [運算式]****，即可複製該項目的 MDX 語法。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;MDX&#41; 參考的多維度運算式](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

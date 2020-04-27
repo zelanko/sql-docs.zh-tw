@@ -21,15 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086163"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 關聯規則檢視器瀏覽模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的關聯規則檢視器會顯示以[!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯分析演算法建立的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](microsoft-association-algorithm.md)＞。  
+  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的關聯規則檢視器會顯示以[!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯分析演算法建立的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](microsoft-association-algorithm.md)＞。  
   
  以下是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法的主要原因：  
   
@@ -42,41 +41,34 @@ ms.locfileid: "66086163"
   
  如需如何建立、瀏覽，以及使用關聯採礦模型的逐步解說，請參閱[第 3 課︰建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)。  
   
-##  <a name="BKMK_ViewerTabs"></a>檢視器索引標籤  
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器包括下列索引標籤：  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>檢視器索引標籤  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器包括下列索引標籤：  
   
--   [專案集](#BKMK_Itemsets)  
+-   [項目集](#BKMK_Itemsets)  
   
--   [條](#BKMK_Rules)  
+-   [規則](#BKMK_Rules)  
   
 -   [相依性網路](#BKMK_Dependency)  
   
  每一個索引標籤會包含 **[顯示完整名稱]** 核取方塊，您可以使用它在規則或項目集內顯示或隱藏從中產生項目集的資料表。  
   
-###  <a name="BKMK_Itemsets"></a>專案集  
- 
-  **[項目集]** 索引標籤會顯示被模型識別為經常湊在一起的項目集清單。 索引標籤會顯示具有下列資料行的方格： **[案例數]**、 **[大小]** 和 **[項目集]**。 如需有關案例數的詳細資訊，請參閱＜ [Microsoft Association Algorithm](microsoft-association-algorithm.md)＞。 
-  **[大小]** 資料行會顯示項目集內的項目數目。 
-  **[項目集]** 資料行會顯示模型探索的實際項目集。 您可以使用 **[顯示]** 清單來控制項目集的格式，您可以將它設定為下列選項：  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>專案集  
+ **[項目集]** 索引標籤會顯示被模型識別為經常湊在一起的項目集清單。 索引標籤會顯示具有下列資料行的方格： **[案例數]**、 **[大小]** 和 **[項目集]**。 如需有關案例數的詳細資訊，請參閱＜ [Microsoft Association Algorithm](microsoft-association-algorithm.md)＞。 **[大小]** 資料行會顯示項目集內的項目數目。 **[項目集]** 資料行會顯示模型探索的實際項目集。 您可以使用 **[顯示]** 清單來控制項目集的格式，您可以將它設定為下列選項：  
   
--   **顯示內容名稱和值**  
+-   **顯示屬性名稱和值**  
   
--   **僅顯示內容值**  
+-   **只顯示屬性值**  
   
--   **僅顯示內容名稱**  
+-   **只顯示屬性名稱**  
   
- 您可以使用 **[最小案例數]** 和 **[項目集大小下限]**，來篩選索引標籤中所顯示的項目集數目。 您可以使用 **[篩選項目集]** 和輸入必須存在的項目集特性，來進一步限制所顯示的項目集數目。 例如，若您輸入「Water Bottle = existing」，您就可以將項目集限制為僅包含水壺的那些項目集。 
-  **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
+ 您可以使用 **[最小案例數]** 和 **[項目集大小下限]**，來篩選索引標籤中所顯示的項目集數目。 您可以使用 **[篩選項目集]** 和輸入必須存在的項目集特性，來進一步限制所顯示的項目集數目。 例如，若您輸入「Water Bottle = existing」，您就可以將項目集限制為僅包含水壺的那些項目集。 **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
   
  您可以按一下資料行標題來排序方格中的資料列。  
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>條  
- 
-  **[規則]** 索引標籤會顯示關聯演算法探索的規則。 
-  **[規則]** 索引標籤有一個方格包含下列資料行： **[機率]**、 **[重要性]** 和 **[規則]**。 機率是描述發生規則之結果的可能性。 重要性是設計來測量規則的效益。 雖然規則發生的機率很高，但規則的效益本身可能不重要。 重要性資料行會描述這方面。 例如，若每一個項目集包含屬性的特定狀態，則預測狀態的規則只是一般規則，即使機率很高也一樣。 重要性愈高，規則就愈重要。  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>條  
+ **[規則]** 索引標籤會顯示關聯演算法探索的規則。 **[規則]** 索引標籤有一個方格包含下列資料行： **[機率]**、 **[重要性]** 和 **[規則]**。 機率是描述發生規則之結果的可能性。 重要性是設計來測量規則的效益。 雖然規則發生的機率很高，但規則的效益本身可能不重要。 重要性資料行會描述這方面。 例如，若每一個項目集包含屬性的特定狀態，則預測狀態的規則只是一般規則，即使機率很高也一樣。 重要性愈高，規則就愈重要。  
   
  您可以使用 [**最小**機率] 和 [**最低重要性**] 來篩選規則，類似于您可以在 [**專案集**] 索引標籤上執行的篩選。您也可以使用 [**篩選規則**]，根據其包含的屬性狀態來篩選規則。  
   
@@ -84,9 +76,8 @@ ms.locfileid: "66086163"
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>相依性網路  
- 
-  **[相依性網路]** 索引標籤包含相依性網路檢視器。 檢視器中的每一個節點代表一個項目，例如「state = WA」。 節點之間的箭頭代表項目之間的關聯。 根據演算法探索的規則，箭頭的方向會指出項目之間的關聯。 例如，如果檢視器包含三個專案： A、B 和 C，而 C 是由 A 和 B 預測，則如果您選取節點 C，則兩個箭頭會指向節點 C-A 到 C，B 到 C。  
+###  <a name="dependency-net"></a><a name="BKMK_Dependency"></a>相依性網路  
+ **[相依性網路]** 索引標籤包含相依性網路檢視器。 檢視器中的每一個節點代表一個項目，例如「state = WA」。 節點之間的箭頭代表項目之間的關聯。 根據演算法探索的規則，箭頭的方向會指出項目之間的關聯。 例如，如果檢視器包含三個專案： A、B 和 C，而 C 是由 A 和 B 預測，則如果您選取節點 C，則兩個箭頭會指向節點 C-A 到 C，B 到 C。  
   
  檢視器左邊的滑桿會有篩選的作用，與規則的機率相關。 降低滑桿只顯示最強的連結。  
   

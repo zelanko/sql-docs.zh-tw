@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084380"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在相依性網路中尋找特定節點
@@ -37,6 +37,6 @@ ms.locfileid: "66084380"
 3.  從清單中選取正確的節點，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
   
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088910"
 ---
 # <a name="script-an-extended-event-session"></a>編寫擴充事件工作階段的指令碼
@@ -24,7 +24,7 @@ ms.locfileid: "66088910"
   
 -   **檔案**  
   
--   **粘貼**  
+-   **剪貼簿**  
   
 -   **代理程式作業**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66088910"
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點和 **[擴充事件]**。  
   
-2.  以滑鼠右鍵按一下 [工作階段]****，然後按一下 [新增工作階段]****。  
+2.  以滑鼠右鍵按一下 **[工作階段]**，然後按一下 **[新增工作階段]**。  
   
 3.  在 **[新增工作階段]** UI 中，建立事件工作階段，然後從 **[指令碼]** 下拉式清單中選取您想要編寫事件工作階段指令碼的地方。  
   

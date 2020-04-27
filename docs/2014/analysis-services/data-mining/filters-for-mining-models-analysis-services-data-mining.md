@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084433"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>採礦模型的篩選 (Analysis Services - 資料採礦)
@@ -62,7 +62,7 @@ ms.locfileid: "66084433"
   
  例如，如果您的案例資料表與客戶有關，而且巢狀資料表顯示某位客戶已經購買的產品，您就可以在巢狀資料表篩選中使用下列語法，藉以針對已經購買特定項目的客戶建立篩選： `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`。  
   
- 您也可以使用 `EXISTS` 或 `NOT EXISTS` 關鍵字和子查詢，藉以篩選巢狀資料表中是否存在特定值。 這可讓您建立 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`等條件。 如果巢狀資料表至少有一個資料列包含 `EXISTS SELECT(<subquery>)` 值，`true` 就會傳回 `Water Bottle`。  
+ 您也可以使用 `EXISTS` 或 `NOT EXISTS` 關鍵字和子查詢，藉以篩選巢狀資料表中是否存在特定值。 這可讓您建立 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`等條件。 如果巢狀資料表至少有一個資料列包含 `EXISTS SELECT(<subquery>)` 值，`Water Bottle` 就會傳回 `true`。  
   
  您可以結合案例資料表的條件與巢狀資料表的條件。 例如，下列語法包含案例資料表的條件 (`Age > 30` )、巢狀資料表的子查詢 (`EXISTS (SELECT * FROM Products)`)，以及巢狀資料表的多項條件 (`WHERE ProductName='Milk'  AND Quantity>2`) )。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "66084433"
   
 ## <a name="see-also"></a>另請參閱  
  [模型篩選語法和範例 &#40;Analysis Services-資料採礦&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

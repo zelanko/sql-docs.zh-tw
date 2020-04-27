@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082494"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>資料來源檢視屬性對話方塊 (SSAS)
@@ -27,10 +27,10 @@ ms.locfileid: "66082494"
 |詞彙|定義|  
 |----------|----------------|  
 |**名稱**|顯示資料來源檢視的名稱。|  
-|**ID**|顯示資料來源檢視的識別碼。|  
-|**說明**|顯示資料來源檢視的描述。|  
+|**識別碼**|顯示資料來源檢視的識別碼。|  
+|**描述**|顯示資料來源檢視的描述。|  
 |**建立時間戳記**|顯示建立資料來源檢視的日期和時間。|  
-|**上次架構更新**|顯示上次更新資料來源檢視的中繼資料之日期和時間。|  
+|**上次結構描述更新**|顯示上次更新資料來源檢視的中繼資料之日期和時間。|  
 |**主要資料來源**|顯示與資料來源檢視相關聯之主要資料來源的名稱。|  
   
   

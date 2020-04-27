@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082705"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>檢視及儲存預測查詢的結果
@@ -29,7 +29,7 @@ ms.locfileid: "66082705"
   
 ### <a name="run-a-query-and-view-the-results"></a>執行查詢並檢視結果  
   
-1.  在 ** 中，於資料採礦設計師之 [採礦模型預測]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤的工具列上，按一下 [結果]****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師之 [採礦模型預測]**** 索引標籤的工具列上，按一下 [結果]****。  
   
      查詢結果檢視會開啟並執行查詢。 結果會顯示在檢視器的方格中。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66082705"
   
 4.  如果您想要將資料表加入資料來源檢視，請從 [加入至 DSV]**** 中選取資料來源檢視。  
   
-5.  按一下 [檔案]  。  
+5.  按一下 **[儲存]** 。  
   
     > [!WARNING]  
     >  如果目的地不支援階層式資料列集，您可以將 FALTTENED 關鍵字加入至結果中，以便儲存為二維資料表。  

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088029"
 ---
 # <a name="choosing-data-for-data-mining"></a>選擇要進行資料採礦的資料
@@ -38,7 +38,7 @@ ms.locfileid: "66088029"
   
  [其他資料需求](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>選擇資料  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>選擇資料  
  選取用於分析的資料或許是資料採礦程序中最重要的部分，甚至比選取演算法還重要。 這是因為資料採礦通常不是假設導向，而是資料導向。 資料採礦可能會取用資料並探索新的相互關聯性 (或者未能發現任何模式)，而不像傳統統計模型可能會事先選取及測試變數。 資料的品質和數量對於結果會有重大的影響。  
   
  一般而言，請觀察以下規則：  
@@ -109,7 +109,7 @@ ms.locfileid: "66088029"
   
 -   將值逼近到中央平均值或代表值。  
   
-##  <a name="bkmk_CommonDataProblems"></a>常見的資料問題  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>常見的資料問題  
   
 ### <a name="excel-number-formats"></a>Excel 數字格式  
  Excel 是一種容易使用的工具，因為它是容許的，您幾乎可以在任何地方放置任何類型的資料！ 不過，在開始尋找模式和分析相互關聯性之前，您需要給資料加上一些結構或條件約束。  
@@ -145,15 +145,14 @@ ms.locfileid: "66088029"
   
  如果您在使用日期有困難，而且要使用月或日之類的常識群組來分析日期，可以使用 Excel 的 DATE 函數，將年、月或日擷取至另一個資料行，然後改用此資料行進行分類。  
   
-##  <a name="bkmk_OtherRequirements"></a>其他資料需求  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>其他資料需求  
   
 ### <a name="requirements-by-algorithm-type"></a>依演算法類型的需求  
  在增益集中使用的某些演算法需要特定資料類型或內容類型才能建立模型。  
   
  **貝氏機率分類模型**  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏機率分類演算法不能使用連續資料行當做輸入。 這表示您必須分類收納數字，或是在有幾個足夠的值時，將其當做離散值來處理。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏機率分類演算法不能使用連續資料行當做輸入。 這表示您必須分類收納數字，或是在有幾個足夠的值時，將其當做離散值來處理。  
   
 -   這種模型也無法預測連續值。 因此，如果您想要預測類似收入的連續數字，您應該先將值分類收納成有意義的範圍。 如果您不確定適當的範圍為何，您可以使用群集演算法來識別資料中的數字團塊。  
   
@@ -189,25 +188,24 @@ ms.locfileid: "66088029"
  `Discrete`  
  此資料行包含有限數量的值，且值之間沒有延續。 例如，性別資料行是一個典型的離散屬性資料行，因為其資料代表特定數量的類別。  
   
- 
-  `Discrete` 內容類型可用於所有資料類型。  
+ `Discrete` 內容類型可用於所有資料類型。  
   
  `Continuous`  
  此資料行包含的值代表刻度允許過渡值的數值資料。 連續資料行代表可擴充的度量，其資料可能包含無限個小數值。 溫度資料行就是連續屬性資料行的一個範例。  
   
- `Continuous`內容類型可以與下列資料類型搭配使用： `Date`、 `Double`和`Long`。  
+  內容類型可以用於以下資料類型：、 和 。  
   
  `Discretized`  
  此資料行包含的值代表從連續資料行衍生之值的群組。 值區會被視為已**排序**和離散值。  
   
- `Discretized`內容類型可以與下列資料類型搭配使用： `Date`、 `Double`、 `Long`。  
+  內容類型可以用於以下資料類型：、 和 。  
   
- **索引鍵**  
+ **關鍵**  
  此資料行會唯一識別資料列。  
   
  索引鍵資料行通常是數值或文字識別碼，不應該用於分析，只能用於追蹤記錄。 時間序列索引鍵和時序索引鍵則是例外。  
   
- **** 只有當您從已定義為[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源視圖的外部資料源取得資料時，才會使用嵌套的資料表索引鍵。 如需有關嵌套資料表的詳細資訊[https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)，請參閱：  
+ **Nested table keys**只有當您從已定義為[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源視圖的外部資料源取得資料時，才會使用嵌套的資料表索引鍵。 如需有關嵌套資料表的詳細資訊[https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)，請參閱：  
   
  此內容類型可以用於以下資料類型：`Date`、`Double`、`Long` 和 `Text`。  
   
@@ -221,7 +219,7 @@ ms.locfileid: "66088029"
   
  這個內容類型受到下列資料類型所支援：`Double`、`Long` 和 `Date`。  
   
- **Table**  
+ **目錄**  
  同樣的，只有從已定義為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源檢視的外部資料來源取得資料時，才可以使用此內容類型。  
   
  也就是說，每個資料列實際上是包含了巢狀資料表 (具有一個或多個資料行以及一個或多個資料列)。  

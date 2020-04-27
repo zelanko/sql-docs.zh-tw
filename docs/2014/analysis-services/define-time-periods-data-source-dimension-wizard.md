@@ -13,25 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082013"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>定義時間週期 (資料來源) (維度精靈)
   使用 **[定義時間週期]** 頁面，即可定義代表時間維度中之時間週期的屬性，該時間維度具有 **[選取維度類型]** 頁面指定之資料表中的資料行。  
   
 > [!NOTE]  
->  只有您已經選取 [維度定義]**** 頁面上的 [使用資料來源建立維度]**** 和 [選取資料類型]**** 頁面上的 [時間維度]**** 時，才會出現此頁面。  
+>   只有您已經選取 **[維度定義]** 頁面上的 **[使用資料來源建立維度]** 和 **[選取資料類型]** 頁面上的 **[時間維度]** 時，才會出現此頁面。  
   
 ## <a name="options"></a>選項。  
  **時間屬性名稱**  
  顯示用來指出時間維度內之時間週期的屬性類型。 如需屬性類型的詳細資訊，請參閱 [Type 元素 &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)。  
   
 > [!NOTE]  
->  
-  `Date` 屬性類型應該只用於具有 DateTime 資料類型的資料行。  
+>  `Date` 屬性類型應該只用於具有 DateTime 資料類型的資料行。  
   
  **時間資料表資料行**  
  列出對應之屬性類型將依據的資料行。  

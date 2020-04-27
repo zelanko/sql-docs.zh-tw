@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085723"
 ---
 # <a name="clustering-model-query-examples"></a>叢集模型查詢範例
@@ -30,32 +30,32 @@ ms.locfileid: "66085723"
   
  [使用 DMX 取得模型中繼資料](#bkmk_Query1)  
   
- [從架構資料列集抓取模型中繼資料](#bkmk_Query2)  
+ [從結構描述資料列集擷取模型中繼資料](#bkmk_Query2)  
   
- [傳回叢集或群集清單](#bkmk_Query3)  
+ [傳回群集或群集清單](#bkmk_Query3)  
   
- [傳回叢集的屬性](#bkmk_Query4)  
+ [傳回群集的屬性](#bkmk_Query4)  
   
- [使用系統預存程式傳回叢集設定檔](#bkmk_Query5)  
+ [使用系統預存程序傳回群集設定檔](#bkmk_Query5)  
   
- [尋找叢集的群集辨識因素](#bkmk_Query6)  
+ [尋找群集的辨識因數](#bkmk_Query6)  
   
  [傳回屬於群集的案例](#bkmk_Query7)  
   
  **預測查詢**  
   
- [從群集模型預測結果](#bkmk_Query8)  
+ [從叢集模型預測結果](#bkmk_Query8)  
   
- [判斷叢集成員資格](#bkmk_Query9)  
+ [判斷群集成員資格](#bkmk_Query9)  
   
- [以機率和距離傳回所有可能的群集](#bkmk_Query10)  
+ [使用機率和距離傳回所有可能的群集](#bkmk_Query10)  
   
-##  <a name="bkmk_top2"></a>尋找有關模型的資訊  
+##  <a name="finding-information-about-the-model"></a><a name="bkmk_top2"></a> 尋找有關模型的資訊  
  所有的採礦模型都會公開演算法根據標準化結構描述所學習的內容，也就是採礦模型結構描述資料列集。 您可以藉由使用資料採礦延伸模組 (DMX) 陳述式來針對採礦模型結構描述資料列集建立查詢。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您也可以將結構描述資料列集當做系統資料表直接進行查詢。  
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a>範例查詢1：使用 DMX 取得模型中繼資料  
+###  <a name="sample-query-1-getting-model-metadata-by-using-dmx"></a><a name="bkmk_Query1"></a> 範例查詢 1：使用 DMX 取得模型中繼資料  
  下列查詢會傳回有關您在「基本資料採礦教學課程」中所建立的叢集模型 `TM_Clustering`的基本中繼資料。 叢集模型的父節點所提供的中繼資料包含模型的名稱、模型儲存位置所在的資料庫，以及模型中子節點的數目。 此查詢會使用 DMX 內容查詢從模型的父節點擷取中繼資料：  
   
 ```  
@@ -74,7 +74,7 @@ WHERE NODE_TYPE = 1
 |-|-|  
 |MODEL_CATALOG|TM_Clustering|  
 |MODEL_NAME|Adventure Works DW|  
-|NODE_CAPTION|叢集模型|  
+|NODE_CAPTION|群集模型|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
 |NODE_DESCRIPTION|全部|  
@@ -83,7 +83,7 @@ WHERE NODE_TYPE = 1
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a>範例查詢2：從架構資料列集抓取模型中繼資料  
+###  <a name="sample-query-2-retrieving-model-metadata-from-the-schema-rowset"></a><a name="bkmk_Query2"></a>範例查詢2：從架構資料列集抓取模型中繼資料  
  藉由查詢資料採礦結構描述資料列集，您可以找到與 DMX 內容查詢所傳回的相同的資訊。 不過，結構描述資料列集會提供某些額外的資料行。 其中包括在建立模型時所使用的參數、上次處理模型的日期和時間，以及模型的擁有者。  
   
  下列範例會傳回建立、修改以及上次處理模型的日期，也會傳回用來建立模型的叢集參數以及培訓集的大小。 這些資訊對於記錄模型或者判斷用來建立現有模型時所使用的群集選項很有用。  
@@ -109,7 +109,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>尋找有關群集的資訊  
  叢集模型上最有用的內容查詢所傳回的資訊類型，通常與可以使用 [叢集檢視器]**** 瀏覽的資訊類型相同。 這包括群集設定檔、群集特性和群集辨識。 本章節提供會擷取這些資訊的查詢範例。  
   
-###  <a name="bkmk_Query3"></a>範例查詢3：傳回叢集或群集清單  
+###  <a name="sample-query-3-returning-a-cluster-or-list-of-clusters"></a><a name="bkmk_Query3"></a> 範例查詢 3：傳回群集或群集清單  
  因為所有的群集都具有節點類型 5，所以您可以僅針對該類型的節點查詢模型內容，以輕鬆地擷取群集清單。 您也可以篩選由機率或支援所傳回的節點，如下列範例所示。  
   
 ```  
@@ -135,7 +135,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a>範例查詢4：傳回叢集的屬性  
+###  <a name="sample-query-4-returning-attributes-for-a-cluster"></a><a name="bkmk_Query4"></a> 範例查詢 4：傳回群集的屬性  
  對於每個叢集而言，[叢集檢視器]**** 會顯示列出屬性及其值的設定檔。 檢視器也會顯示長條圖，以顯示模型中整個案例母體的值分佈情形。 如果是在檢視器中瀏覽模型，則您可以輕鬆地從「採礦圖例」複製長條圖，然後將它貼入至 Excel 或 Word 文件。 也可以使用檢視器的 [群集特性] 窗格，以圖形方式比較不同群集的屬性。  
   
  不過，如果一次必須取得一個以上群集的值，對模型進行查詢是比較簡單的方式。 例如，您在瀏覽模型時，可能會注意到最上面兩個叢集在 `Number Cars Owned`屬性方面不同。 因此可能會想針對每個群集擷取值。  
@@ -177,7 +177,7 @@ WHERE NODE_TYPE = 5
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a>範例查詢5：使用系統預存程式傳回群集設定檔  
+###  <a name="sample-query-5-return-a-cluster-profile-using-system-stored-procedures"></a><a name="bkmk_Query5"></a> 範例查詢 5：使用系統預存程序傳回群集設定檔  
  如果不想要使用 DMX 撰寫自己的查詢，也可以呼叫 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用來使用叢集的系統預存程序當做捷徑。 下列範例將說明如何使用內部預存程序為識別碼 002 的群集傳回設定檔。  
   
 ```  
@@ -203,7 +203,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a>範例查詢6：尋找叢集的群集辨識因素  
+###  <a name="sample-query-6-find-discriminating-factors-for-a-cluster"></a><a name="bkmk_Query6"></a> 範例查詢 6：尋找群集的辨識因數  
  [叢集檢視器]**** 的 [叢集辨識]**** 索引標籤可讓您輕鬆地將某個叢集與另一個叢集相比較，或將某個叢集與所有其餘案例 (叢集的補充) 相比較。  
   
  不過，要建立傳回此資訊的查詢可能很複雜，而且您可能需要在用戶端上進行一些額外的處理，並比較兩個或更多查詢的結果。 所以可以使用系統預存程序當做捷徑。  
@@ -216,7 +216,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  範例結果︰  
   
-|屬性|值|Score|  
+|屬性|值|分數|  
 |----------------|------------|-----------|  
 |區域|北美洲|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
@@ -234,7 +234,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a>範例查詢7：傳回屬於群集的案例  
+###  <a name="sample-query-7-returning-cases-that-belong-to-a-cluster"></a><a name="bkmk_Query7"></a> 範例查詢 7：傳回屬於群集的案例  
  如果您已在採礦模型上啟用鑽研，則可以建立查詢以傳回有關在模型中所使用案例的詳細資訊。 此外，如果已在採礦結構上啟用鑽研，則您可以使用 [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 函數來包含來自基礎結構的資料行。  
   
  下列範例會傳回模型中使用的兩個資料行：Age 和 Region，以及另一個未用於模型中的資料行 First Name。 該查詢只會傳回分類為 Cluster 1 的案例。  
@@ -256,7 +256,7 @@ WHERE IsInNode('001')
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a>範例查詢8：從群集模型預測結果  
+###  <a name="sample-query-8-predicting-outcomes-from-a-clustering-model"></a><a name="bkmk_Query8"></a> 範例查詢 8：叢集模型的預測結果  
  如果您建立的叢集模型包含可預測屬性，則您可以使用模型來建立有關結果的預測。 不過，模型會根據可預測資料行是設定為 `Predict` 或 `PredictOnly`，以不同的方式處理可預測屬性。 如果將資料行的用法設定為 `Predict`，則該屬性的值會加入至群集模型，並在完成的模型中顯示為屬性。 不過，如果將資料行的使用方式設定為 `PredictOnly`，則值不會用來建立群集。 反而是在模式完成後，群集演算法會根據每個案例所屬的群集，為 `PredictOnly` 屬性建立新的值。  
   
  下列查詢會為模型提供單一的新案例，其中與案例有關的唯一資訊是年齡和性別。 SELECT 陳述式指定您有興趣的可預測屬性/值配對，而 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 函數則告訴您具有這些屬性的案例擁有目標結果的機率。  
@@ -283,8 +283,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。 
-  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
+ 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
   
  PredictCaseLikelihood 函數傳回的數字是機率，因此一定會介於 0 和 1 之間，.5 的值則代表隨機結果。 因此，小於 .5 的分數代表預測的案例在模型已知時不太可能發生，而超過 .5 的分數則代表預測的案例較符合模型的預測。  
   
@@ -310,7 +309,7 @@ NATURAL PREDICTION JOIN
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a>範例查詢9：判斷群集成員資格  
+###  <a name="sample-query-9-determining-cluster-membership"></a><a name="bkmk_Query9"></a> 範例查詢 9：判斷群集成員資格  
  此範例會使用 [叢集 &#40;DMX&#41;](/sql/dmx/cluster-dmx) 函數來傳回最可能包含新案例的叢集，並使用 [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) 函數來傳回該叢集中的成員資格機率。  
   
 ```  
@@ -333,7 +332,7 @@ NATURAL PREDICTION JOIN
   
  [回到頁首](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a>範例查詢10：使用機率和距離傳回所有可能的群集  
+###  <a name="sample-query-10-returning-all-possible-clusters-with-probability-and-distance"></a><a name="bkmk_Query10"></a> 範例查詢 10：使用機率和距離傳回所有可能的群集  
  在以上範例中，機率分數並不很高。 若要判斷是否有更好的叢集，可以使用 [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) 函數搭配 [叢集 &#40;DMX&#41;](/sql/dmx/cluster-dmx) 函數來傳回包含所有可能叢集的巢狀資料表，並附上新案例屬於每個叢集的機率。 FLATTENED 關鍵字可用來將階層式資料列集變更為二維資料表以方便檢視。  
   
 ```  
@@ -361,7 +360,7 @@ NATURAL PREDICTION JOIN
   
  根據預設值，結果是依機率排序。 結果會告訴您，即使 Cluster 2 的機率相當低，Cluster 2 仍是新資料點的最適合項目。  
   
- **注意**額外的資料行`$DISTANCE`代表從資料點到叢集的距離。 根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法會使用可擴充的 EM 叢集，這種方法會將多個叢集指派給每個資料點，並排列可能叢集的次序。  不過，如果使用 K-means 演算法建立叢集模型，則只能將一個群集指派給每個資料點，且此查詢只會傳回一個資料列。 了解這些差異對於解譯 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數來包含來自基礎結構的資料行。 如需 EM 和 K-means 叢集之間差異的詳細資訊，請參閱 [Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)。  
+ **注意** ：其他的資料行 `$DISTANCE`代表從資料點到叢集的距離。 根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法會使用可擴充的 EM 叢集，這種方法會將多個叢集指派給每個資料點，並排列可能叢集的次序。  不過，如果使用 K-means 演算法建立叢集模型，則只能將一個群集指派給每個資料點，且此查詢只會傳回一個資料列。 了解這些差異對於解譯 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數來包含來自基礎結構的資料行。 如需 EM 和 K-means 叢集之間差異的詳細資訊，請參閱 [Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)。  
   
  [回到頁首](#bkmk_top2)  
   
@@ -371,20 +370,20 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |預測函數|使用量|  
-|[&#40;DMX&#41;的叢集](/sql/dmx/cluster-dmx)|傳回最可能包含輸入案例的群集。|  
-|[DMX&#41;的 ClusterDistance &#40;](/sql/dmx/clusterdistance-dmx)|傳回輸入案例與指定之群集的距離；如果沒有指定任何群集，則會傳回輸入案例與最可能之群集的距離。<br /><br /> 傳回輸入案例屬於指定之群集的機率。|  
-|[DMX&#41;的 ClusterProbability &#40;](/sql/dmx/clusterprobability-dmx)|傳回輸入案例屬於指定之群集的機率。|  
-|[DMX&#41;的 IsDescendant &#40;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
-|[DMX&#41;的 IsInNode &#40;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
-|[DMX&#41;的 PredictAdjustedProbability &#40;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
-|[DMX&#41;的 PredictAssociation &#40;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
-|[DMX&#41;的 PredictCaseLikelihood &#40;](/sql/dmx/predictcaselikelihood-dmx)|傳回輸入案例符合現有模型的可能性。|  
-|[&#40;DMX&#41;的 PredictHistogram](/sql/dmx/predicthistogram-dmx)|傳回與目前預測值相關之值的資料表。|  
-|[DMX&#41;的 PredictNodeId &#40;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
-|[DMX&#41;的 [Predictprobability] &#40;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
-|[DMX&#41;的 PredictStdev &#40;](/sql/dmx/predictstdev-dmx)|傳回指定之資料行的預測標準差。|  
-|[DMX&#41;的 PredictSupport &#40;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
-|[DMX&#41;的 PredictVariance &#40;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  
+|[叢集 &#40;DMX&#41;](/sql/dmx/cluster-dmx)|傳回最可能包含輸入案例的群集。|  
+|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|傳回輸入案例與指定之群集的距離；如果沒有指定任何群集，則會傳回輸入案例與最可能之群集的距離。<br /><br /> 傳回輸入案例屬於指定之群集的機率。|  
+|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|傳回輸入案例屬於指定之群集的機率。|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
+|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|傳回輸入案例符合現有模型的可能性。|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回與目前預測值相關之值的資料表。|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回指定之資料行的預測標準差。|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  
   
  如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   

@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091556"
 ---
 # <a name="upgrade-advisor-progress"></a>Upgrade Advisor 進度
@@ -50,6 +50,6 @@ ms.locfileid: "66091556"
  [如何：執行 Upgrade Advisor 分析嚮導](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [SQL Server 元件](../../../2014/sql-server/install/sql-server-components.md)   
  [Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

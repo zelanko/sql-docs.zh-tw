@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086404"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>資料採礦模型設計工具 (Analysis Services - 資料採礦)
@@ -28,9 +28,9 @@ ms.locfileid: "66086404"
   
 -   [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [使用 DMX 建立和查詢資料採礦模型：教學課程 &#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [使用 DMX 建立並查詢資料採礦模型：教學課程 &#40;Analysis Services - 資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [資料採礦嚮導 &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+-   [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 -   [資料採礦概念](data-mining/data-mining-concepts.md)  
   

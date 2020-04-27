@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092494"
 ---
 # <a name="resolving-upgrade-issues"></a>解決升級問題
@@ -44,7 +44,7 @@ ms.locfileid: "66092494"
   
 -   [最新升級問題](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
   
--   [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+-   [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
 -   [全文檢索搜尋升級問題](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   
@@ -60,11 +60,11 @@ ms.locfileid: "66092494"
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  如果下列工作列在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 升級報表上，您就必須執行必要的動作，然後才能升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]：  
   
--   [卸離資料庫識別碼 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
+-   [中斷連結資料庫識別碼 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
--   [重新命名符合固定伺服器角色名稱的登入](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
+-   [為符合固定伺服器角色名稱的登入重新命名](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
--   [重新命名使用者 sys](../../../2014/sql-server/install/rename-user-sys.md)  
+-   [為使用者 sys 重新命名](../../../2014/sql-server/install/rename-user-sys.md)  
   
 -   [使用 sp_rename 重新命名重複的索引名稱](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   

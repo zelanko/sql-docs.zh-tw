@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090688"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>訂閱和檢查 Finance Name 原則
@@ -62,8 +62,7 @@ ms.locfileid: "66090688"
   
 2.  在 [管理原則類別目錄]**** 對話方塊中，找出 Finance 類別目錄，然後針對 Finance 類別目錄選取 [託管資料庫訂閱]**** 核取方塊。  
   
-3.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 此時，Finance 類別目錄會套用至所有資料庫，但是您已建立的條件會將 Finance Name 原則限制為 Finance 資料庫。 這點就說明了如何以將在許多伺服器上正確套用的方式，使用複雜的條件組合來建立原則的目標。  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 此時，Finance 類別目錄會套用至所有資料庫，但是您已建立的條件會將 Finance Name 原則限制為 Finance 資料庫。 這點就說明了如何以將在許多伺服器上正確套用的方式，使用複雜的條件組合來建立原則的目標。  
   
 ## <a name="summary"></a>摘要  
  這個教學課程已經示範了如何建立以原則為基礎的管理條件、原則和原則群組，以及如何套用篩選和檢查以原則為基礎的管理目標是否符合。  

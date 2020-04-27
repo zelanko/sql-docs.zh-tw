@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093703"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
@@ -85,6 +85,6 @@ ms.locfileid: "66093703"
 4.  使用 DROP SCHEMA 來卸除 CDC 結構描述。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

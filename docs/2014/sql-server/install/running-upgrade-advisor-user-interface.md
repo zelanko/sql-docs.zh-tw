@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092451"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>執行 Upgrade Advisor (使用者介面)
@@ -68,7 +68,7 @@ ms.locfileid: "66092451"
   
  如需使用報表檢視器的逐步指示，請參閱下列主題：  
   
--   [如何：檢視 Upgrade Advisor 報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [如何：檢視升級建議程式報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
 -   [如何：篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
@@ -78,6 +78,6 @@ ms.locfileid: "66092451"
  [如何：執行 Upgrade Advisor 分析嚮導](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

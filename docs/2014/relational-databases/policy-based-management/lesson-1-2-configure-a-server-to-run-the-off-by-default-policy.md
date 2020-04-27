@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090634"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>將伺服器設定為執行 Off By Default 原則
@@ -30,7 +30,7 @@ ms.locfileid: "66090634"
   
 4.  若要查看伺服器是否符合此原則，請按一下 [評估]****。  
   
-5.  如果 ** 符合此原則，您將會在 [結果]**[!INCLUDE[ssDE](../../includes/ssde-md.md)] 區域中看見含有核取記號的綠色圓圈。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不符合此原則，您就會看見含有 X 的紅色圓圈。  
+5.  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 符合此原則，您將會在 [結果]**** 區域中看見含有核取記號的綠色圓圈。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不符合此原則，您就會看見含有 X 的紅色圓圈。  
   
 6.  在 [目標詳細資料]**** 區域中，您將會在錯誤發生時於 [訊息]**** 資料行中看到其他資訊。 在 [訊息]**** 資料行中，按一下 [檢視]**** 查看報表，其中包含所檢查之每個 Facet 屬性的檢查結果。  
   

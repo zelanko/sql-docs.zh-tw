@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088702"
 ---
 # <a name="trace-template-properties-general-tab"></a>追蹤範本屬性 (一般索引標籤)
@@ -31,15 +31,15 @@ ms.locfileid: "66088702"
  **新範本名稱**  
  提供範本的描述性名稱。  
   
- **現有新範本的基礎**  
+ **以現有的範本作為新範本的基礎**  
  使用清單中的範本作為此範本的基礎。 所有選取的事件、資料行與篩選，起初都與現有之範本中的項目相符，然後可以視需要加以修改。  
   
  **作為所選取伺服器類型的預設範本**  
  依預設，會針對為此伺服器類型所建立的追蹤使用此範本。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立追蹤範本 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [建立 &#40;SQL Server Profiler 的追蹤範本&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

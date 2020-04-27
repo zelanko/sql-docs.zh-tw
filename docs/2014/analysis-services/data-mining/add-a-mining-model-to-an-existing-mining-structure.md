@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086374"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>將採礦模型加入至現有的採礦結構
@@ -26,7 +26,7 @@ ms.locfileid: "66086374"
   
 ### <a name="to-add-a-mining-model-to-the-structure"></a>若要將採礦模型加入至結構  
   
-1.  從 ** 的 [採礦模型]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 功能表項目中，選取 [新增採礦模型]****。  
+1.  從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [採礦模型]**** 功能表項目中，選取 [新增採礦模型]****。  
   
      就會開啟 [新增採礦模型]**** 對話方塊。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66086374"
  新的 [採礦模型] 會出現在 [**採礦模型**] 索引標籤中。此模型會使用存在於結構中的預設資料行。 如需如何修改資料行的相關資訊，請參閱 [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
   
   

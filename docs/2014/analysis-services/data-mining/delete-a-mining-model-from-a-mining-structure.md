@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084776"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>從採礦結構刪除採礦模型
@@ -27,7 +27,7 @@ ms.locfileid: "66084776"
   
 ### <a name="delete-a-mining-model-using-sql-server-data-tools"></a>使用 SQL Server 資料工具刪除採礦模型  
   
-1.  選取 ** 中的 [採礦模型]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤。  
+1.  選取 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [採礦模型]**** 索引標籤。  
   
 2.  以滑鼠右鍵按一下您想刪除的模型，然後選取 [刪除]****。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "66084776"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>使用 DMX 刪除採礦模型  
   
--   [捨棄 &#40;DMX&#41;的採礦模型](/sql/dmx/drop-mining-model-dmx)  
+-   [DROP MINING MODEL &#40;DMX&#41;](/sql/dmx/drop-mining-model-dmx)  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
   
   

@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088486"
 ---
 # <a name="browsing-a-forecasting-model"></a>瀏覽預測模型
   當您使用 **[流覽]** 來開啟預測模型時，該模型會顯示在互動式檢視器中，類似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的時間序列模型檢視器。 此檢視器可協助您探索趨勢、比較序列、建立預測，以及取得有關模型和基礎資料的資訊。  
   
-##  <a name="bkmk_Top"></a>探索模型  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>探索模型  
  適用于預測模型的**流覽**檢視器提供了圖表視圖，它會顯示一段時間的趨勢，並可讓您建立預測和模型視圖，將時間序列表示為決策樹或迴歸樹狀結構。  
   
 -   [圖表檢視](#bkmk_charts)  
@@ -35,7 +35,7 @@ ms.locfileid: "66088486"
   
  若要試驗預測模型，您可以使用範例資料活頁簿之 [預測] 索引標籤上的範例資料，並使用 [預測] Wizard 建立時間序列模型 &#40;[**資料採礦**] 功能區中的 [[適用于 Excel 的資料採礦增益集]&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) ，或在 [**分析**] 功能區中[預測適用于 excel&#41;的 &#40;資料表分析工具](forecast-table-analysis-tools-for-excel.md)。  
   
-###  <a name="bkmk_charts"></a>圖  
+###  <a name="chart"></a><a name="bkmk_charts"></a>圖  
  [**圖表**] 索引標籤會顯示一段時間內資料數列的趨勢，以及預測的值。 圖表的垂直軸代表序列的值，而水平軸代表時間。  
   
 ##### <a name="explore-the-forecasting-chart"></a>探索預測圖表  
@@ -86,7 +86,7 @@ ms.locfileid: "66088486"
   
  [探索模型](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>模組  
+###  <a name="model"></a><a name="bkmk_Model"></a>模組  
  預測模型也可以決策樹來表示，如果序列大部分呈線性，則可以迴歸模型來表示。  
   
  例如，在此模型中，根據特定條件迴歸公式含有差異，因此會將樹狀結構分成兩個分支，每個分支使用不同的迴歸公式。  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085550"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 建立資料採礦查詢
@@ -60,7 +60,7 @@ ms.locfileid: "66085550"
   
      `</Restrictions>`  
   
-4.  按一下 **[執行]** 。  
+4.  按一下 **[執行]**。  
   
      [結果]**** 窗格會顯示指定之結構描述資料列集的資料行名稱清單。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66085550"
   
      `</Restrictions>`  
   
-5.  按一下 **[執行]** 。  
+5.  按一下 **[執行]**。  
   
      [結果] 窗格會顯示結構描述定義，以及指定之模型的值。  
   

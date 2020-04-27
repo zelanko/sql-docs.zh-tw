@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085484"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>根據範本建立單一預測查詢
@@ -90,9 +90,9 @@ AS [t]
   
      若為本主題開頭所顯示的範例程式碼，其他查詢條件設定為 `'45' as [Age]`。  
   
-11. 按一下 **[執行]** 。  
+11. 按一下 **[執行]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;基本資料採礦教學課程建立預測&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [建立預測 &#40;資料採礦基本教學課程&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

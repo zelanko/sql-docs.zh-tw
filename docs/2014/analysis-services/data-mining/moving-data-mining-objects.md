@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083302"
 ---
 # <a name="moving-data-mining-objects"></a>移動資料採礦物件
@@ -47,12 +47,11 @@ ms.locfileid: "66083302"
  如需部署 Analysis Services 方案的詳細資訊，請參閱[部署 Analysis Services 專案 &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   
 ### <a name="scripting"></a>指令碼  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了數種語言，可用於編寫物件的指令碼。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了數種語言，可用於編寫物件的指令碼。  
   
--   **Xmla**：您可以在中以[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]滑鼠右鍵按一下物件，使用 xmla 編寫物件的腳本。 若要執行指令碼，請在目標伺服器上的 [XMLA 查詢]**** 視窗中開啟指令碼。  
+-   **XMLA**：您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中以滑鼠右鍵按一下物件，使用 XMLA 編寫物件的指令碼。 若要執行指令碼，請在目標伺服器上的 [XMLA 查詢]**** 視窗中開啟指令碼。  
   
--   **DMX**：您可以使用範本或和[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的其中一個查詢產生器來建立腳本。  
+-   **DMX**：您可以透過使用範本或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的其中一個查詢產生器建立指令碼。  
   
  但請注意，各指令碼語言可執行的工作之間有些差異：  
   
@@ -67,17 +66,16 @@ ms.locfileid: "66083302"
  如需詳細資訊，請參閱＜ [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)＞。  
   
 ### <a name="backup-and-restore"></a>備份與還原  
- 備份和還原整個 Analysis Services 資料庫是絕佳的方法 (如果您的資料採礦方案相依於 OLAP 物件的話)。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供備份和還原功能，讓資料庫備份更快速而且更方便。  
+ 備份和還原整個 Analysis Services 資料庫是絕佳的方法 (如果您的資料採礦方案相依於 OLAP 物件的話)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供備份和還原功能，讓資料庫備份更快速而且更方便。  
   
  如需備份的詳細資訊，請參閱 [備份與還原 Analysis Services 資料庫](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)。  
   
 ### <a name="exporting-and-importing"></a>匯出和匯入  
  利用 DMX 陳述式匯出採礦模型與結構，然後重新匯入，是移動或備份個別關聯式資料採礦物件最方便的方式。 如需有關這些作業之 DMX 語法的詳細資訊，請參閱下列主題：  
   
--   [匯出 &#40;DMX&#41;](/sql/dmx/export-dmx)  
+-   [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [匯入 &#40;DMX&#41;](/sql/dmx/import-dmx)  
+-   [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  如果您指定了 INCLUDE DEPENDENCIES 選項， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也會匯出任何所需資料來源檢視的定義，而且當您匯入模型或結構時，它將在目標伺服器上重新建立資料來源檢視。 在您已經完成匯入模型的作業之後，請務必針對此物件設定必要的採礦權限。  
   

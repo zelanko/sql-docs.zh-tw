@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083361"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>遺漏值 (Analysis Services - 資料採礦)
@@ -62,8 +62,7 @@ ms.locfileid: "66083361"
 >  對於巢狀資料表中的屬性而言，遺漏值沒有很高的資訊價值。 例如，如果客戶尚未購買產品，則巢狀的 **Products** 資料表就不會有對應該產品的資料列，採礦模型也不會為遺漏的產品建立屬性。 不過，如果您對尚未購買特定產品的客戶感興趣，可以藉由在模型篩選中使用 NOT EXISTS 陳述式，建立會針對巢狀資料表中不存在的產品進行篩選的模型。 如需詳細資訊，請參閱 [將篩選套用至採礦模型](apply-a-filter-to-a-mining-model.md)。  
   
 ## <a name="adjusting-probability-for-missing-states"></a>調整遺漏狀態的機率  
- 除了計算值以外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以計算整個資料集中任何值的機率。 
-  `Missing` 值的情況也是如此。 例如，下列資料表顯示前述範例中案例的機率：  
+ 除了計算值以外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以計算整個資料集中任何值的機率。 `Missing` 值的情況也是如此。 例如，下列資料表顯示前述範例中案例的機率：  
   
 |值|案例|機率|  
 |-----------|-----------|-----------------|  
@@ -109,13 +108,13 @@ ms.locfileid: "66083361"
   
 |工作|連結|  
 |-----------|-----------|  
-|將旗標加入個別模型資料行，以控制遺漏值的處理|[查看或變更 &#40;資料採礦&#41;的模型旗標](modeling-flags-data-mining.md)|  
+|將旗標加入個別模型資料行，以控制遺漏值的處理|[檢視或變更模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
 |設定採礦模型的屬性以控制遺漏值的處理|[變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)|  
-|了解如何在 DMX 中指定模型旗標|[&#40;DMX&#41;的模型旗標](/sql/dmx/modeling-flags-dmx)|  
+|了解如何在 DMX 中指定模型旗標|[模型旗標 &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |改變採礦結構處理遺漏值的方式|[變更採礦結構的屬性](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Analysis Services 的採礦模型內容-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
- [資料採礦&#41;的模型旗標 &#40;](modeling-flags-data-mining.md)  
+ [模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)  
   
   

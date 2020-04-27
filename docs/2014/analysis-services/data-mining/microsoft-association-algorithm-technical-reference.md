@@ -21,18 +21,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084133"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法是有名的 Apriori 演算法的簡單實作。  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法都可用來分析關聯，但每個演算法所找到的規則都可能不同。 在決策樹模型中，導致特定規則的分岔是根據資訊改善而定，在關聯模型中，規則則是完全根據信心而定。 因此，在關聯模型中，強大的規則或具有高信心指數的規則可能因為沒有提供新資訊而不具有高「有趣性」。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法都可用來分析關聯，但每個演算法所找到的規則都可能不同。 在決策樹模型中，導致特定規則的分岔是根據資訊改善而定，在關聯模型中，規則則是完全根據信心而定。 因此，在關聯模型中，強大的規則或具有高信心指數的規則可能因為沒有提供新資訊而不具有高「有趣性」。  
   
 ## <a name="implementation-of-the-microsoft-association-algorithm"></a>Microsoft 關聯分析演算法的實作  
  Apriori 演算法並不會分析模式，而是產生「候選項目集」** 並接著加以計算。 項目可能代表事件、產品或屬性的值，根據分析的資料類型而定。  
@@ -44,11 +42,11 @@ ms.locfileid: "66084133"
  您也可以針對數值屬性建立關聯模型。 如果是連續屬性，可以將數字「分隔」** 或群組到值區中。 接著就可以將離散化的值當做布林值或屬性值配對處理。  
   
 ### <a name="support-probability-and-importance"></a>支援、機率和重要性  
- 「*支援*」（issometimes 稱為*frequency*）代表包含目標專案或專案組合的案例數。 只有至少具有指定支援量的項目才能包含在模型中。  
+ 「支援」**(有時也稱為「頻率」**) 代表包含目標項目或項目組合的案例數。 只有至少具有指定支援量的項目才能包含在模型中。  
   
  「常見項目集」** 代表項目的集合，其中的項目組合也具有 MINIMUM_SUPPORT 參數所定義臨界值以上的支援。 例如，如果項目集為 {A,B,C} 而 MINIMUM_SUPPORT 值為 10，則每個個別的 A、B 及 C 項目都必須至少存在於模型所含的 10 個案例中，且項目組合 {A,B,C} 也必須存在於至少 10 個案例中。  
   
- **注意**您也可以藉由指定專案集的最大長度來控制專案集在「採礦模型」中的數目，其中的「長度」表示專案的數目。  
+ **注意** ：您也可以指定項目集的最大長度 (長度代表項目數) 來控制採礦模型中的項目集數目。  
   
  根據預設，任何特定項目或項目集的支援都代表包含該項目或項目集的案例計數。 不過，您也可以將數字輸入為小於 1 的小數值，將 MINIMUM_SUPPORT 表示為資料集總案例數的百分比。 例如，如果將 MINIMUM_SUPPORT 值指定為 0.03，該值代表資料集中至少有 3% 的總案例數必須包含此項目或項目集，才能加入模型。 您應該試用模型，以判斷是計數或是百分比比較適用。  
   
@@ -63,8 +61,7 @@ ms.locfileid: "66084133"
  規則的重要性則是在已知規則左側的情況下，用規則右側的對數可能性來計算。 例如，在規則 `If {A} Then {B}`中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會計算具有 A 和 B 的案例對於具有 B 但沒有 A 的案例的比率，然後再使用對數刻度將該比率正規化。  
   
 ### <a name="feature-selection"></a>特徵選取  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法不會執行任何類型的自動特徵選取， 而是提供參數來控制演算法所使用的資料。 這可能包含每個項目集大小的限制，或者將項目集加入至模型時所需最大及最小支援的設定。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法不會執行任何類型的自動特徵選取， 而是提供參數來控制演算法所使用的資料。 這可能包含每個項目集大小的限制，或者將項目集加入至模型時所需最大及最小支援的設定。  
   
 -   若要篩選出太平常以致於不有趣的項目集事件，請減少 MAXIMUM_SUPPORT 的值，以從模型中移除太常出現的項目集。  
   
@@ -73,8 +70,7 @@ ms.locfileid: "66084133"
 -   若要篩選出規則，請增加 MINIMUM_PROBABILITY 的值。  
   
 ## <a name="customizing-the-microsoft-association-rules-algorithm"></a>自訂 Microsoft 關聯規則演算法  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦設計師，隨時變更採礦模型的參數。 您也可以使用 AMO 中的<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合以程式設計方式變更參數，或在 XMLA 中使用[MININGMODELS 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) 。 下表描述每一個參數。  
@@ -155,8 +151,7 @@ ms.locfileid: "66084133"
  關聯模型必須包含索引鍵資料行、輸入資料行和單一的可預測資料行。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法支援下表所列的特定輸入資料行和可預測資料行。 如需採礦模型中內容類型意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法支援下表所列的特定輸入資料行和可預測資料行。 如需採礦模型中內容類型意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
 |資料行|內容類型|  
 |------------|-------------------|  
@@ -169,6 +164,6 @@ ms.locfileid: "66084133"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 關聯分析演算法](microsoft-association-algorithm.md)   
  [關聯模型查詢範例](association-model-query-examples.md)   
- [關聯模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

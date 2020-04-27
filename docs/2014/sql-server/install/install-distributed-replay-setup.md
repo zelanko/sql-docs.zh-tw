@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094632"
 ---
 # <a name="install-distributed-replay-setup"></a>安裝 Distributed Replay (安裝程式)
@@ -33,7 +33,7 @@ ms.locfileid: "66094632"
 -   安裝之後，必須先執行控制器服務 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller)，然後再啟動用戶端上的 Distributed Replay Client 服務。  
   
 > [!NOTE]  
->  如果要移除或變更 Distributed Replay 功能，請使用 Windows [控制台]**** 中的 [程式和功能]**** 視窗。 在 [解除安裝或變更程式][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 視窗中，選取 [**]，然後按一下 [移除]**** 開啟 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。 在 [選取功能]**** 頁面上，核取您想要移除的 Distributed Replay 功能。  
+>  如果要移除或變更 Distributed Replay 功能，請使用 Windows [控制台]**** 中的 [程式和功能]**** 視窗。 在 [解除安裝或變更程式]**** 視窗中，選取 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]，然後按一下 [移除]**** 開啟 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。 在 [選取功能]**** 頁面上，核取您想要移除的 Distributed Replay 功能。  
   
  **要求**  
   
@@ -52,19 +52,17 @@ ms.locfileid: "66094632"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]工具  
   
-     \-或  
+     \- 或 -  
   
-     
-  \<共用功能目錄>\Tools\\(使用者提供的替代共用功能目錄)  
+     \<共用功能目錄>\Tools\\(使用者提供的替代共用功能目錄)  
   
 -   在 64 位元系統上：  
   
      C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （x86） \120\Tools  
   
-     \-或  
+     \- 或 -  
   
-     
-  \<共用功能目錄 (x86)>\Tools\\(使用者提供的替代共用功能 (x86) 目錄)  
+     \<共用功能目錄 (x86)>\Tools\\(使用者提供的替代共用功能 (x86) 目錄)  
   
 ### <a name="to-install-distributed-replay-features"></a>安裝 Distributed Replay 功能  
   
@@ -108,7 +106,7 @@ ms.locfileid: "66094632"
   
     2.  在64位電腦上，預設安裝路徑為**C:\Program Files （\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] x86）**  
   
-9. 完成後，請按 **[下一步]**。  
+9. 完成之後，按 [下一步]****。  
   
 10. 在 [安裝規則]**** 頁面上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會驗證您的電腦組態。 當驗證程序完成之後，請按一下 [下一步]****。  
   

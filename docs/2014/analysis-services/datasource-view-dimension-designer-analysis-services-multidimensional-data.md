@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082350"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>資料來源檢視 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [資料來源檢視]**** 窗格，即可從與選取之維度相關聯的資料來源檢視中檢視資料表和資料行。 此窗格會用來建立屬性 (attribute)、成員屬性 (property)、階層以及層級，方式是藉由從 [資料來源檢視]**** 窗格拖曳資料行至 ****[屬性] 或 [階層和層級]**** 窗格。  
   
 ## <a name="options"></a>選項。  
- **資料來源視圖**  
+ **[資料來源檢視]**  
  顯示與選取之維度相關聯的資料來源檢視。  
   
  **(移動視點)**  
@@ -82,7 +82,7 @@ ms.locfileid: "66082350"
  **複製圖表來源**  
  選取與維度相關聯之資料來源檢視中包含的其中一個圖表，即可將它顯示在 [資料來源檢視]**** 窗格中。  
   
- **Zoom**  
+ **縮放**  
  選取可用的顯示比例選項。  
   
  **屬性**  
@@ -97,11 +97,11 @@ ms.locfileid: "66082350"
  **隱藏資料表**  
  從窗格中移除資料表。  
   
- **瀏覽資料**  
+ **探索資料**  
  顯示所選取資料表的 [瀏覽資料]**** 對話方塊。  
   
  **編輯資料來源檢視**  
- 針對包含選定資料表的資料來源檢視顯示 [資料來源檢視設計工具]****。 如需**資料來源檢視設計工具**的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
+ 針對包含選取之資料表的資料來源視圖，顯示**資料來源視圖設計**工具。 如需**資料來源檢視設計工具**的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **屬性**  
  在 [SQL Server Data Tools]**** 中顯示所選資料表的 [屬性]**** 視窗。  
@@ -112,11 +112,11 @@ ms.locfileid: "66082350"
  **從資料行新增屬性**  
  在窗格中顯示與資料來源檢視中所選取資料表相關的資料表。  
   
- **瀏覽資料**  
+ **探索資料**  
  顯示包含所選取資料行之資料表的 [瀏覽資料]**** 對話方塊。  
   
  **編輯資料來源檢視**  
- 針對包含選定資料行的資料來源檢視顯示 [資料來源檢視設計工具]****。 如需**資料來源檢視設計工具**的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
+ 顯示包含所選取資料行之資料來源視圖的**資料來源視圖設計**工具。 如需**資料來源檢視設計工具**的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **屬性**  
  在 [SQL Server Data Tools]**** 中顯示所選資料行的 [屬性]**** 視窗。  
@@ -125,10 +125,10 @@ ms.locfileid: "66082350"
  以滑鼠右鍵按一下 [資料來源檢視]**** 窗格中的關聯性，即可顯示提供下表所列出之選項的內容功能表。  
   
  **編輯資料來源檢視**  
- 顯示包含所選取關聯性之資料來源檢視的 [資料來源檢視設計工具]****。 如需**資料來源檢視設計工具**的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
+ 顯示包含所選取關聯性之資料來源視圖的**資料來源視圖設計**工具。 如需**資料來源檢視設計工具**的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
  **屬性**  
- 在 ** 中，顯示所選取關聯性的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，顯示所選取關聯性的 [屬性]**** 視窗。  
   
 ## <a name="see-also"></a>另請參閱  
  [維度結構 &#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   

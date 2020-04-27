@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089760"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - 組織資料行
@@ -28,7 +28,7 @@ ms.locfileid: "66089760"
   
  當您群組或彙總追蹤視窗顯示中的事件時，針對要進行群組或彙總所選取的資料行會固定地顯示在視窗中，但是您可以向左或向右捲動，以檢視所有其他資料行。  
   
- 若要存取此對話方塊，請開啟現有的追蹤檔案或資料表，然後按一下 ** [檔案]** 功能表上的 [屬性][!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ****。 在 **[追蹤屬性]** 對話方塊中，按一下 **[事件選取範圍]** 索引標籤，然後按一下 **[組織資料行]**。 在建立新的追蹤時，您也可以按一下 **[事件選取範圍]** 索引標籤上的 **[組織資料行]** 。  
+ 若要存取此對話方塊，請開啟現有的追蹤檔案或資料表，然後按一下  [檔案][!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **** 功能表上的 [屬性]****。 在 **[追蹤屬性]** 對話方塊中，按一下 **[事件選取範圍]** 索引標籤，然後按一下 **[組織資料行]**。 在建立新的追蹤時，您也可以按一下 **[事件選取範圍]** 索引標籤上的 **[組織資料行]** 。  
   
 ## <a name="options"></a>選項。  
  **群組**  
@@ -44,13 +44,13 @@ ms.locfileid: "66089760"
  **Up**  
  選取資料行之後，按一下 [向上]**** 將資料行向上移至 [群組]****。 您也可以按一下 **[向上]** ，來重新排列追蹤視窗所顯示的資料行。  
   
- **按住**  
+ **向下**  
  選取資料行之後，按一下 [向下]**** 將資料行從 [群組]**** 中移出。 您也可以按一下 **[向下]** ，來重新排列追蹤視窗所顯示的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
  [組織追蹤中所顯示的資料行 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [建立追蹤 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [建立追蹤範本 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [建立 &#40;SQL Server Profiler 的追蹤範本&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   

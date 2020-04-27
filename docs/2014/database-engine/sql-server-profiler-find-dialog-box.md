@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088860"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - 尋找對話方塊
@@ -33,16 +33,16 @@ ms.locfileid: "66088860"
  **在資料行中搜尋**  
  按一下要搜尋的資料行，或按一下** \<[所有資料行]>** ，即可搜尋追蹤中的所有資料行。  
   
- **符合大小寫**  
+ **大小寫須相符**  
  尋找與 [尋找目標]**** 方塊中的大小寫相同的文字。 清除此核取方塊，即可在追蹤中同時尋找大寫與小寫文字字元的範例。  
   
- **全字拼寫相符**  
+ **全字拼寫須相符**  
  將搜尋限制為整個文字。 清除 [全字拼寫須相符]**** 核取方塊來搜尋文字內的所有字元。  
   
- **尋找下一個**  
+ **找下一個**  
  尋找 [尋找目標]**** 方塊中之字元的下一個範例。  
   
- **尋找上一個**  
+ **找上一個**  
  在追蹤中向後搜尋，以尋找 [尋找目標]**** 方塊中之字元的上一個範例。  
   
 ## <a name="see-also"></a>另請參閱  
@@ -50,7 +50,7 @@ ms.locfileid: "66088860"
  [建立追蹤 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
- [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093535"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Upgrade Advisor 的概觀
@@ -28,7 +28,7 @@ ms.locfileid: "66093535"
 |主題|描述|  
 |-----------|-----------------|  
 |[升級程序概觀](../../../2014/sql-server/install/upgrade-process-overview.md)|描述升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的建議程序。|  
-|[Upgrade Advisor 概觀](../../../2014/sql-server/install/upgrade-advisor-overview.md)|提供 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中名為 Upgrade Advisor 這項新工具的概觀。|  
+|[升級建議程式概觀](../../../2014/sql-server/install/upgrade-advisor-overview.md)|提供 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中名為 Upgrade Advisor 這項新工具的概觀。|  
 |[正在執行 Upgrade Advisor &#40;使用者介面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|描述如何啟動和執行 Upgrade Advisor 分析精靈以及 Upgrade Advisor 報表檢視器。|  
 |[使用報表](../../../2014/sql-server/install/using-reports.md)|描述如何檢視和分析 Upgrade Advisor 報表檢視器所產生的報表。|  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085575"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>建立採礦模型內容查詢
@@ -50,7 +50,7 @@ ms.locfileid: "66085575"
   
 7.  (選擇性) 在範本的 WHERE 子句中輸入條件，以便將傳回的資料列限制為特定節點或值。  
   
-8.  按一下 **[執行]** 。  
+8.  按一下 **[執行]**。  
   
 ## <a name="querying-the-data-mining-schema-rowsets"></a>查詢資料採礦結構描述資料列集  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66085575"
   
      `WHERE MODEL_NAME = '<model name>'`  
   
-4.  按一下 **[執行]** 。  
+4.  按一下 **[執行]**。  
   
      [結果] 窗格就會顯示模型的內容。  
   

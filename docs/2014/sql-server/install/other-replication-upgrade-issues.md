@@ -18,18 +18,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093638"
 ---
 # <a name="other-replication-upgrade-issues"></a>其他複寫升級問題
   本主題涵蓋 Upgrade Advisor 未報告的一些升級問題。  
   
 ## <a name="versions-supported"></a>支援的版本  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫的資料庫。 當節點正在升級時，您不必停止其他節點上的活動。 請務必遵守有關拓撲中支援之版本的規則。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫的資料庫。 當節點正在升級時，您不必停止其他節點上的活動。 請務必遵守有關拓撲中支援之版本的規則。  
   
  當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的不同版本之間複寫時，通常受限於所使用之最舊版本的功能。  
   

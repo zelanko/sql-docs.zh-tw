@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ab10518ff976562665317a75574ee2070be0d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087194"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>連接到 Microsoft SQL Server Parallel Data Warehouse (SSAS)
@@ -49,7 +49,7 @@ ms.locfileid: "66087194"
  從資料庫清單中選取資料庫。  
   
  **進階**  
- 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
+ 使用 **[設定進階屬性]** 對話方塊設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 此作業會顯示一則訊息，指出連接是否成功。  

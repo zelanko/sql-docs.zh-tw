@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089236"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>選項 (文字編輯器：編輯器索引標籤和狀態列頁面)
@@ -34,7 +34,7 @@ ms.locfileid: "66089236"
  **顯示執行時間**  
  包括指令碼執行時間。 設定如下：  
   
- **無**  
+ **None**  
  狀態列不會顯示任何時間資訊。  
   
  **成品**  
@@ -70,7 +70,7 @@ ms.locfileid: "66089236"
  **返回頁首**  
  狀態列會出現在 [查詢編輯器] 視窗頂端。  
   
- **下**  
+ **靠**  
  狀態列會出現在 [查詢編輯器] 視窗的底部。  
   
 ## <a name="tab-text"></a>索引標籤文字  

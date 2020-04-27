@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086424"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>適用於 Excel 的資料採礦用戶端 (SQL Server 資料採礦增益集)
@@ -48,13 +48,13 @@ ms.locfileid: "66086424"
   
      適用於 Excel 的資料採礦用戶端會維護與伺服器之間的使用中連接，好讓您可以將資料採礦模型儲存到伺服器，以供進一步測試使用，或是部署至實際執行伺服器以獲得較大的延展性。  
   
-##  <a name="bkmk_Data"></a>使用資料  
+##  <a name="work-with-data"></a><a name="bkmk_Data"></a>使用資料  
  [**資料準備**] 群組包含下列的嚮導，可協助您在準備資料採礦工作時，檢查和清除資料。 此外，大部分的精靈還可以讓您將資料分成定型集和測試集。  
   
  [流覽資料 &#40;SQL Server 資料採礦增益集&#41;](explore-data-sql-server-data-mining-add-ins.md)  
  針對建立和儲存模型，增益集支援以下這些資料連接：  
   
--   連接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]伺服器，用於儲存和處理模型。  
+-    伺服器的連接，用於儲存及處理模型。  
   
 -   選用的外部資料來源連接。 您可以使用可定義為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源的任何類型資料來建立模型，或者是直接使用已存在 Excel 中的資料。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66086424"
  [預測計算器 &#40;適用于 Excel 的資料表分析工具&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  重新**標記**的嚮導可協助您建立資料的新標籤，讓您更容易瞭解分析的結果。 例如，您可以使用更具描述性的名稱來重新命名某個資料範圍，或者可以從清單中選擇代表性的值。  
   
-##  <a name="bkmk_Model"></a>建立模型和分析  
+##  <a name="build-models-and-analyze"></a><a name="bkmk_Model"></a>建立模型和分析  
  工具列之 [**資料模型**化] 區段上的選項可讓您從資料衍生模式;根據屬性來群組資料列，或流覽關聯。 此工具功能區中的精靈是根據 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中提供之功能強大的資料採礦演算法。 這些精靈可讓您自訂此演算法的行為及使用各種資料來源，與適用於 Excel 的資料表分析工具中的類似工具不同。  
   
  [適用于 Excel 的資料採礦增益集&#41;的分類嚮導 &#40;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -101,7 +101,7 @@ ms.locfileid: "66086424"
  [適用于 Excel&#41;的先進模型化 &#40;資料採礦增益集](advanced-modeling-data-mining-add-ins-for-excel.md)  
  已經很熟悉資料採礦了嗎？ 您可以使用 [ **Advanced** data 模型化] 選項來建立自訂資料結構，並使用其他工具和嚮導中未包含的自訂來建立模型。  
   
-##  <a name="bkmk_Validate"></a>測試、查詢和驗證模型  
+##  <a name="test-query-and-validate-models"></a><a name="bkmk_Validate"></a>測試、查詢和驗證模型  
  使用 [**精確度和驗證**] 工具列上的 [嚮導]，即可使用業界標準的測試來驗證模型的正確性，以及評估建立模型之資料集的可用性。  
   
  [&#40;適用于 Excel 的資料表分析工具分析關鍵影響因數&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "66086424"
  [進階資料採礦查詢編輯器](advanced-data-mining-query-editor.md)  
  對於進階使用者，此工具提供了 DMX 的拖放介面。 您可以輕鬆地建立預測查詢或新的模型，而不用擔心語法。  
   
-##  <a name="bkmk_ViewModels"></a>視圖模型  
+##  <a name="view-models"></a><a name="bkmk_ViewModels"></a>視圖模型  
  您建立的模型會自動開啟進行瀏覽。 不過，您也可以在伺服器上瀏覽模型並產生新的視覺效果。 使用[Visio 圖形](viewing-data-mining-models-in-visio-data-mining-add-ins.md)將模型圖表匯出到可自訂的畫布。  
   
  [在 Excel 中流覽模型 &#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "66086424"
  [記載 &#40;適用于 Excel 的資料採礦增益集&#41;的採礦模型](documenting-mining-models-data-mining-add-ins-for-excel.md)  
  此精靈會建立報表，以提供資料集的統計摘要和有關模型的中繼資料，藉此協助調查與解譯。  
   
-##  <a name="bkmk_UsageMgmt"></a>管理、記載及部署  
+##  <a name="manage-document-and-deploy"></a><a name="bkmk_UsageMgmt"></a>管理、記載及部署  
  這些工具可協助您連接到資料採礦伺服器、管理和匯出模型，以及監視資料採礦活動。  
   
  [管理 &#40;SQL Server 資料採礦增益集的模型&#41;](manage-models-sql-server-data-mining-add-ins.md)  
@@ -150,7 +150,7 @@ ms.locfileid: "66086424"
  **快速入門**  
  按一下 [**消費者入門**] 按鈕，啟動設定向導，引導您建立與實例的連接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，並取得執行資料採礦所需的許可權。  
   
- **説明**  
+ **說明**  
  [說明] 下拉式功能表提供線上說明、網站和設定**嚮導的連結**，可協助您完成設定並開始進行資料採礦。  
   
  說明頁面也會連結到線上資源，包括增益集的說明以及其他影片、示範和範例。  

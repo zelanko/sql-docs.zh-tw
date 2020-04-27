@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083084"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>收益圖 (Analysis Services - 資料採礦)
@@ -59,12 +59,12 @@ ms.locfileid: "66083084"
   
      此對話方塊可協助您指定與目標郵寄促銷活動相關的成本與效益。 針對這些範例中所示的圖表，我們使用下列值：  
   
-    |設定|值|註解|  
+    |設定|值|評價|  
     |-------------|-----------|--------------|  
     |**人數**|20,000|設定總目標母體的值<br /><br /> 您的資料庫可能包含許多客戶，但是為了省下郵寄支出，您可以選擇只鎖定最有可能回應的 20,000 名目標客戶。 藉由執行預測查詢，並依預測模型所輸出的機率排序，即可取得這份清單。|  
     |**固定成本**|500|輸入為 20,000 人設定目標郵寄促銷活動的單次成本。 這可能包括印刷品，或是設定電子郵件促銷活動的成本。|  
-    |**個別成本**|3|輸入目標郵寄促銷活動的每單位成本。<br /><br /> 這個金額將會乘以小於或等於 20000 的數字，端視模型預測多少客戶為良好潛在客戶而定。|  
-    |**每個人的收入**|400|輸入代表預期可從成功的結果獲得的收益或收入金額值。 在此情況下，我們會假設郵寄目錄會導致購買配件或自行車平均 $400。<br /><br /> 此金額將會用來預估與高機率案例有關的總收益。|  
+    |**單位成本**|3|輸入目標郵寄促銷活動的每單位成本。<br /><br /> 這個金額將會乘以小於或等於 20000 的數字，端視模型預測多少客戶為良好潛在客戶而定。|  
+    |**每個別營收**|400|輸入代表預期可從成功的結果獲得的收益或收入金額值。 在此情況下，我們會假設郵寄目錄會導致購買配件或自行車平均 $400。<br /><br /> 此金額將會用來預估與高機率案例有關的總收益。|  
   
 7.  在您設定妥必要的參數之後，按一下 [確定]****。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "66083084"
 |主題|連結|  
 |------------|-----------|  
 |提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|說明相關的圖表類型。|[增益圖 &#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分類矩陣 &#40;Analysis Services-資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services-資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|描述採礦模型和採礦結構的交叉驗證。|[交叉驗證 &#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
-|描述建立增益圖及其他精確度圖表的步驟。|[測試和驗證工作，以及如何 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|描述採礦模型和採礦結構的交叉驗證。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
+|描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)   

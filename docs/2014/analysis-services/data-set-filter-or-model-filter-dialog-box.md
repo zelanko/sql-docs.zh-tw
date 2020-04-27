@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082604"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>資料集篩選器或模型篩選器對話方塊
@@ -22,7 +22,7 @@ ms.locfileid: "66082604"
   
  如果是將篩選器套用至新的資料集，則僅會使用資料集中符合條件的案例來評估資料採礦模型。 如果是將篩選器套用至採礦模型本身，則僅會使用現有測試資料集中符合篩選準則的案例來培訓及測試模型。  
   
--   [資料集篩選器]**** 對話方塊可從 [採礦精確度圖表]**** 設計工具的 [輸入選擇]**** 索引標籤中存取。  
+-   [資料集篩選器]**** 對話方塊可從 [採礦精確度圖表]**** 設計師的 [輸入選擇]**** 索引標籤中存取。  
   
 -   [模型篩選器]**** 對話方塊可從資料採礦設計師的 [採礦模型]**** 索引標籤中存取。  
   
@@ -31,10 +31,10 @@ ms.locfileid: "66082604"
 > [!TIP]  
 >  若要測試原始定型資料子集的精確度，您可以加入曾用來將定型集定義為外部測試資料的資料來源檢視，然後在 [資料集篩選器]**** 方格中加入條件。  
   
- **如需詳細資訊：** [&#40;資料採礦&#41;的測試和驗證](data-mining/testing-and-validation-data-mining.md)  
+ **如需詳細資訊，請參閱：** [測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>選項。  
- **滿足**  
+ **條件**  
  顯示資料表名稱，後面跟著資料行名稱及條件。  
   
 |值|描述|  

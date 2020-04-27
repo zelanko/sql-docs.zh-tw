@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085900"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>變更採礦模型中的資料行離散化
@@ -31,20 +31,17 @@ ms.locfileid: "66085900"
   
 1.  在資料採礦設計師的 [採礦模型]**** 索引標籤上，以滑鼠右鍵按一下包含採礦模型名稱的資料行標頭，或是方格中包含採礦演算法名稱的資料列，然後選取 [屬性]****。  
   
-     
-  **[屬性]** 視窗會顯示在整體上與採礦模型相關聯的屬性。  
+     **[屬性]** 視窗會顯示在整體上與採礦模型相關聯的屬性。  
   
 2.  在靠近螢幕左邊的 **[結構]** 資料行中，按一下包含您想要離散化之連續數值資料的資料行。  
   
-     
-  **[屬性]** 視窗會變更，以便只顯示與該資料行有關聯的屬性。  
+     **[屬性]** 視窗會變更，以便只顯示與該資料行有關聯的屬性。  
   
 ### <a name="to-change-the-discretization-method"></a>變更離散化方法  
   
 1.  在 [**挖掘屬性**] 視窗中，按一下 [**內容**] 旁邊的文字方塊， `Discretized`然後從下拉式清單中選取。  
   
-     
-  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性現在就會啟用。  
+     <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性現在就會啟用。  
   
 2.  在 [**屬性**] 視窗中，按一下旁邊的文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> ，然後選取下列其中一個值： `Automatic`、 `EqualAreas`或`Cluster`。  
   
@@ -59,6 +56,6 @@ ms.locfileid: "66085900"
     >  如果您變更這些屬性，就必須重新處理此結構，連同您想要使用新設定的任何模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
   
   

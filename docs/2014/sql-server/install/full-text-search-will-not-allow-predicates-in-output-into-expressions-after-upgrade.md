@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095013"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>升級之後，全文檢索搜尋將不允許 OUTPUT INTO 運算式中使用述詞

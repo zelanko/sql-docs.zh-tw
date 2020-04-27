@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083283"
 ---
 # <a name="naive-bayes-model-query-examples"></a>貝式機率分類模型查詢範例
@@ -28,7 +28,7 @@ ms.locfileid: "66083283"
   
  [使用 DMX 取得模型中繼資料](#bkmk_Query1)  
   
- [正在抓取定型資料的摘要](#bkmk_Query2)  
+ [擷取定型資料的摘要](#bkmk_Query2)  
   
  [尋找有關屬性的詳細資訊](#bkmk_Query3)  
   
@@ -38,14 +38,14 @@ ms.locfileid: "66083283"
   
  [使用單一查詢預測結果](#bkmk_Query5)  
   
- [取得具有機率和支援值的預測](#bkmk_Query6)  
+ [取得含有機率和支援值的預測](#bkmk_Query6)  
   
  [預測關聯](#bkmk_Query7)  
   
 ## <a name="finding-information-about-a-naive-bayes-model"></a>尋找有關貝式機率分類模型的資訊  
  貝氏機率分類模型的模型內容會提供定型資料中，有關值分佈的彙總資訊。 您也可以針對資料採礦結構描述資料列集建立查詢，藉以擷取有關模型之中繼資料的資訊。  
   
-###  <a name="bkmk_Query1"></a>範例查詢1：使用 DMX 取得模型中繼資料  
+###  <a name="sample-query-1-getting-model-metadata-by-using-dmx"></a><a name="bkmk_Query1"></a> 範例查詢 1：使用 DMX 取得模型中繼資料  
  您可以查詢資料採礦結構描述資料列集來尋找模型的中繼資料。 這可能包括建立模型的時間、上次處理模型的時間、模型所依據之採礦結構的名稱，以及用來當做可預測屬性之資料行的名稱。 您也可以傳回建立此模型時所使用的參數。  
   
 ```  
@@ -69,7 +69,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
   
  用於此範例的模型是以您在 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)中建立的貝氏機率分類模型為基礎，但是透過加入另一個可預測屬性，並將篩選套用到定型資料來修改。  
   
-###  <a name="bkmk_Query2"></a>範例查詢2：抓取定型資料的摘要  
+###  <a name="sample-query-2-retrieving-a-summary-of-training-data"></a><a name="bkmk_Query2"></a> 範例查詢 2：擷取定型資料的摘要  
  在貝氏機率分類模型中，臨界統計資料節點會儲存定型資料中，有關值分佈的彙總資訊。 此摘要相當方便，而且您不必根據定型資料建立 SQL 查詢，就可以找到相同的資訊。  
   
  下列範例使用 DMX 內容查詢從節點 (NODE_TYPE = 24) 擷取資料。 由於統計資料儲存在巢狀資料表中，因此，FLATTENED 關鍵字的用途是讓結果更容易檢視。  
@@ -99,7 +99,7 @@ WHERE NODE_TYPE = 26
   
  如需貝氏機率分類模型之 NODE_DISTRIBUTION 資料表中所提供值的定義，請參閱 [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)。 如需支援與機率計算如何受到遺漏值影響的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Query3"></a>範例查詢3：尋找有關屬性的詳細資訊  
+###  <a name="sample-query-3-finding-more-information-about-attributes"></a><a name="bkmk_Query3"></a> 範例查詢 3：尋找有關屬性的詳細資訊  
  貝氏機率分類模型通常包含不同屬性之間關聯性的複雜資訊，檢視這些關聯性最簡單的方式就是使用 [Microsoft 貝氏機率分類檢視器](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。 不過，您可以建立 DMX 查詢來傳回資料。  
   
  下列範例顯示如何從模型傳回有關特定屬性 `Region`的資訊。  
@@ -146,7 +146,7 @@ ORDER BY MSOLAP_NODE_SCORE DESC
   
  透過在 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽模型內容，您將會更為了解哪些統計資料可能是有趣的。 此處會示範一些簡單的案例；您可能需要更常執行多個查詢，或在用戶端上儲存結果並進行處理。  
   
-###  <a name="bkmk_Query4"></a>範例查詢4：使用系統預存程式  
+###  <a name="sample-query-4-using-system-stored-procedures"></a><a name="bkmk_Query4"></a> 範例查詢 4：使用系統預存程序  
  除了撰寫您自己的內容查詢之外，您也可以使用某些 Analysis Services 系統預存程序瀏覽結果。 若要使用系統預存程序，在預存程序名稱開頭加上 CALL 關鍵字：  
   
 ```  
@@ -167,7 +167,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 ## <a name="using-a-naive-bayes-model-to-make-predictions"></a>使用貝式機率分類模型進行預測  
  Microsoft 貝氏機率分類演算法用於預測的頻率通常比用於瀏覽輸入屬性和可預測屬性之間關聯性的頻率低。 不過，此模型支援同時針對預測和關聯使用預測函數。  
   
-###  <a name="bkmk_Query5"></a>範例查詢5：使用單一查詢預測結果  
+###  <a name="sample-query-5-predicting-outcomes-using-a-singleton-query"></a><a name="bkmk_Query5"></a> 範例查詢 5：使用單一查詢預測結果  
  下列查詢使用單一查詢提供新的值，並根據模型預測具備這些特徵的客戶是否可能購買自行車。 在迴歸模型上建立單一查詢最簡單的方式是使用 **[單一查詢輸入]** 對話方塊。 例如，您可以選取 `TM_NaiveBayes` 模型、選擇 **[單一查詢]**，然後從 `[Commute Distance]` 和 `Gender`的下拉式清單選取值來建立下列 DMX 查詢。  
   
 ```  
@@ -188,7 +188,7 @@ NATURAL PREDICTION JOIN
   
  預測函數會傳回最可能的值，在此範例中為 0，也就是說，此類型的客戶不太可能購買自行車。  
   
-###  <a name="bkmk_Query6"></a>範例查詢6：取得具有機率和支援值的預測  
+###  <a name="sample-query-6-getting-predictions-with-probability-and-support-values"></a><a name="bkmk_Query6"></a>範例查詢6：取得具有機率和支援值的預測  
  除了預測結果之外，您通常還想要知道預測的可能性。 下列查詢使用與先前範例相同的單一查詢，但是加入預測函數 ([PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)) 來傳回包含支援預測之統計資料的巢狀資料表。  
   
 ```  
@@ -212,7 +212,7 @@ NATURAL PREDICTION JOIN
   
  資料表中的最後一個資料列會顯示支援與機率針對遺漏值所做的調整。 變異數和標準差永遠為 0，因為貝氏機率分類模型無法製作連續值的模型。  
   
-###  <a name="bkmk_Query7"></a>範例查詢7：預測關聯  
+###  <a name="sample-query-7-predicting-associations"></a><a name="bkmk_Query7"></a>範例查詢7：預測關聯  
  如果採礦結構包含巢狀資料表與當做索引鍵的可預測屬性，Microsoft 貝氏機率分類演算法可以用於關聯分析。 例如，您可以使用在資料採礦教學課程之[第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 中所建立的採礦結構來建立貝氏機率分類模型。 此範例中所使用的模型會遭到修改，以便在案例資料表中加入有關收入和客戶地區的資訊。  
   
  下列查詢範例顯示的單一查詢會預測與購買產品 `'Road Tire Tube'`相關的產品。 您可以使用這項資訊提供產品建議給特定類型的客戶。  
@@ -244,19 +244,19 @@ AS t
 |||  
 |-|-|  
 |預測函數|使用量|  
-|[DMX&#41;的 IsDescendant &#40;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
-|[預測 &#40;DMX&#41;](/sql/dmx/predict-dmx)|傳回指定之資料行的一個或一組預測值。|  
-|[DMX&#41;的 PredictAdjustedProbability &#40;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
-|[DMX&#41;的 PredictAssociation &#40;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
-|[DMX&#41;的 PredictNodeId &#40;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
-|[DMX&#41;的 [Predictprobability] &#40;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
-|[DMX&#41;的 PredictSupport &#40;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
+|[Predict &#40;DMX&#41;](/sql/dmx/predict-dmx)|傳回指定之資料行的一個或一組預測值。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
   
  若要查看特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 貝氏貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Microsoft 貝氏貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)   
- [適用于貝氏貝氏機率分類模型 &#40;Analysis Services 資料採礦&#41;的採礦模型內容](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

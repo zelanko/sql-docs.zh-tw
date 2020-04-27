@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085105"
 ---
 # <a name="data-mining-designer"></a>資料採礦設計師
@@ -39,7 +39,7 @@ ms.locfileid: "66085105"
 ## <a name="mining-structure-tab"></a>採礦結構索引標籤  
  使用 **[採礦結構]** 索引標籤，加入資料行及修改現有採礦結構的屬性。 下列工作和主題提供有關使用採礦結構的詳細資訊：  
   
- [&#40;Analysis Services 的採礦結構-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)  
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)  
   
  [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66085105"
   
  如需有關使用採礦模型的詳細資訊，請參閱下列主題：  
   
- [&#40;Analysis Services 的採礦模型-資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
   
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
   
 ## <a name="mining-model-viewer-tab"></a>採礦模型檢視器索引標籤  
  使用 **[採礦模型檢視器]** 索引標籤，以視覺化方式瀏覽採礦模型。 每一個採礦模型與一個自訂檢視器相關聯，後者會顯示該模型的特定內容。 您也可以使用內容檢視器來檢視採礦模型內容。  
@@ -61,16 +61,16 @@ ms.locfileid: "66085105"
   
  [資料採礦模型檢視器](data-mining-model-viewers.md)  
   
- [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
   
 ## <a name="mining-accuracy-chart-tab"></a>採礦精確度圖表索引標籤  
  使用 **[採礦精確度圖表]** 索引標籤來測試單一採礦模型的預測精確度，或比較採礦結構內所包含之多個採礦模型的效能。 這個索引標籤包含的工具是用來篩選資料、選取採礦模型，以及以增益圖、收益圖或分類矩陣顯示結果。  
   
  如需有關測試和驗證採礦模型的詳細資訊，請參閱下列主題：  
   
- [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
- [測試和驗證工作，以及如何 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>採礦模型預測索引標籤  
  [採礦模型預測]**** 索引標籤包括預測查詢產生器，可用以建立資料採礦延伸模組 (DMX) 預測查詢。 這個索引標籤包含的工具是用來指定採礦模型和輸入資料表、將採礦模型中的資料行對應到輸入資料表中的資料行、將函數加入查詢中，以及指定每一個資料行的準則。  

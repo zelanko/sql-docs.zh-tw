@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086780"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>建立或編輯關聯性對話方塊 (Analysis Services - 多維度資料)
-  使用 ** 中的 [Create/Edit Relationship (建立/編輯關聯性)]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可定義或修改資料來源檢視中的關聯性。 您可以用下列方式來顯示 [Create/Edit Relationship (建立/編輯關聯性)]**** 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [Create/Edit Relationship (建立/編輯關聯性)]**** 對話方塊，即可定義或修改資料來源檢視中的關聯性。 您可以用下列方式來顯示 [Create/Edit Relationship (建立/編輯關聯性)]**** 對話方塊：  
   
 -   按一下 [Data Source View Designer (資料來源檢視設計工具)]**** 之 [工具列]**** 窗格中的 [新增關聯性]****。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66086780"
 -   以滑鼠右鍵按一下 [Data Source View Designer (資料來源檢視設計工具)]**** 之 [圖表]**** 窗格中的關聯性，並選取 [編輯關聯性]****。  
   
 > [!NOTE]  
->  您可以在**資料來源視圖設計**工具中建立不存在於基礎資料來源中的關聯性，並從基礎資料來源中的現有外鍵關聯性移除**資料來源視圖設計**工具所建立的關聯性。  
+>  您可以在 [資料來源檢視設計師]**** 中，建立不存在於基礎資料來源的關聯性，也可以從基礎資料來源的現有外部索引鍵關聯性，移除**資料來源檢視設計師**所建立的關聯性。  
   
 ## <a name="options"></a>選項。  
  **來源 (外部索引鍵) 資料表**  
@@ -49,11 +49,11 @@ ms.locfileid: "66086780"
  **反向**  
  按一下即可反轉關聯性的方向。  
   
- **說明**  
+ **描述**  
  選擇性地鍵入關聯性的描述。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [資料來源視圖設計工具 &#40;Analysis Services-多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

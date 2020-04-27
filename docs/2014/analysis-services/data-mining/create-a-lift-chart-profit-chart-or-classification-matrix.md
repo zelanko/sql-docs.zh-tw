@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085410"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>建立增益圖、收益圖或分類矩陣
@@ -44,7 +44,7 @@ ms.locfileid: "66085410"
   
 ### <a name="select-mining-models-for-inclusion-in-the-chart"></a>選取要包含在圖表中的採礦模型  
   
-1.  在 ** 中，於資料採礦設計師的 [採礦精確度圖表]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤上，按一下 [輸入選擇]**** 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦精確度圖表]**** 索引標籤上，按一下 [輸入選擇]**** 索引標籤。  
   
      清單會顯示目前結構中所有具有相同可預測屬性的模型。  
   
@@ -112,6 +112,6 @@ ms.locfileid: "66085410"
   
 ## <a name="see-also"></a>另請參閱  
  [增益圖 &#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)   
- [分類矩陣 &#40;Analysis Services-資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

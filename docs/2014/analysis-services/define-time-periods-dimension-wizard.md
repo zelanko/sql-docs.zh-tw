@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081983"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>定義時間週期 (維度精靈)
   使用 **[定義時間週期]** 頁面，即可定義時間維度或伺服器時間維度中包含的日曆年度資訊和時間頻率。  
   
 > [!NOTE]  
->  唯有在 [選取維度類型]**** 頁面上選取了 [伺服器時間維度]****，或者在 [選取建立方法]**** 頁面上選取了 [不使用資料來源而建立維度]****，且在 [選取維度類型]**** 頁面上選取了 [時間維度]****，才會顯示此頁面。  
+>   唯有在 **[選取維度類型]** 頁面上選取了 **[伺服器時間維度]** ，或者在 **[選取建立方法]** 頁面上選取了 **[不使用資料來源而建立維度]** ，且在 **[選取維度類型]** 頁面上選取了 **[時間維度]** ，才會顯示此頁面。  
   
 > [!IMPORTANT]  
 >  此頁面是用來定義時間維度的日曆年度。 若要定義時間維度的會計日曆年、製造日曆年、報表日曆年或國際標準組織 (ISO) 8601 日曆年，請使用 [選取日曆]**** 頁面。  
@@ -42,8 +42,7 @@ ms.locfileid: "66081983"
  選取時間維度之日曆年度的時間週期。  
   
 > [!NOTE]  
->  
-  `Date` 時間週期是必要的。  
+>  `Date` 時間週期是必要的。  
   
  **時間成員名稱的語言**  
  選取時間維度中之成員的語言。  

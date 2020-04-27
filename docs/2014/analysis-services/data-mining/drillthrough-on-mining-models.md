@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084600"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
-  「*鑽取*」是指查詢「採礦模型」或「採礦結構」，並取得不在模型中公開之詳細資料的能力。  
+  「鑽研」** 表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>鑽研模型案例和鑽研結構的比較  
  鑽研 **模型案例** 對於尋找模型中規則、模式或叢集的詳細資料很有幫助。 例如，您不會在群集模型中使用客戶連絡人資訊來進行分析，即使資料可供使用，您也可以從模型取得該資訊的存取權。  
@@ -44,7 +43,7 @@ ms.locfileid: "66084600"
   
  並非所有模型都支援鑽研，這取決於建立模型所使用的演算法。 下表列出不支援鑽研或是在限制之下支援鑽研的模型類型。 如果模型類型未列在這裡，就會支援鑽研。  
   
-|**演算法名稱**|**支援鑽取**|  
+|**演算法名稱**|**支援鑽研**|  
 |------------------------|----------------------------------|  
 |Microsoft 貝氏機率分類演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
 |Microsoft 類神經網路演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
@@ -61,7 +60,7 @@ ms.locfileid: "66084600"
 |使用鑽研擷取模型的案例資料|[鑽研採礦模型的案例資料](drill-through-to-case-data-from-a-mining-model.md)|  
 |針對現有的採礦模型啟用鑽研|[針對採礦模型啟用鑽研](enable-drillthrough-for-a-mining-model.md)|  
 |參閱特定模型類型的鑽研查詢範例。|[資料採礦查詢](data-mining-queries.md)|  
-|在採礦模型精靈中啟用鑽研|[完成 Wizard &#40;資料採礦嚮導&#41;](../completing-the-wizard-data-mining-wizard.md)。|  
+|在採礦模型精靈中啟用鑽研|[正在完成精靈 &#40;資料採礦精靈&#41;](../completing-the-wizard-data-mining-wizard.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦結構的鑽研](drillthrough-on-mining-structures.md)  

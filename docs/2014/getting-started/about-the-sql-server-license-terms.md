@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088626"
 ---
 # <a name="about-the-sql-server-license-terms"></a>關於 SQL Server 授權條款
@@ -27,10 +27,9 @@ ms.locfileid: "66088626"
   
  授權條款檔案名稱會指示已安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 語言版本。 授權條款檔案名的格式為： SQLServer2014_License_Edition_\<類型>_\<LCID>。 例如：  
   
--   適用于 Developer， [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]英文版的 SQLServer2014_License_DEV_1033 .rtf。  
+-    Developer (英文版) 的 SQLServer2014_License_DEV_1033.rtf。  
   
--   
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express (英文版) 的 SQLServer2014_License_EXPR_1033.rtf。  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express (英文版) 的 SQLServer2014_License_EXPR_1033.rtf。  
   
  TYPE 指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下列檔案名稱區段可用來識別 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66088626"
   
  LCID 是數字，指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 語言地區設定識別碼。  下列檔案名稱區段可用來識別對應的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 語言：  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]語言|語言的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]縮寫|LCID|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]語言| 語言縮寫|LCID|  
 |----------------------------------------|---------------------------------------------------------|----------|  
 |英文|ENU|1033|  
 |日文|JPN|1041|  
@@ -64,7 +63,7 @@ ms.locfileid: "66088626"
 |葡萄牙文 (巴西)|PTB|1046|  
 |俄文|RUS|1049|  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]授權選項  
+## <a name="ssnoversion-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 授權選項  
  如需有關[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]定價和授權選項的詳細資訊，請參閱https://www.microsoft.com/sqlserver/sql-server-2014.aspx) [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) （網站。  
   
 ## <a name="see-also"></a>另請參閱  

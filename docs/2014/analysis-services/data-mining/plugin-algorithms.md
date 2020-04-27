@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac6494a438f8ecd9c1fb48cc7c2a588cfab9bd9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083164"
 ---
 # <a name="plugin-algorithms"></a>外掛程式演算法
@@ -44,8 +44,7 @@ ms.locfileid: "66083164"
  `IDMAlgorithmFactory`  
  為實作演算法介面的物件建立執行個體，並允許 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存取演算法中繼資料介面。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用這些 COM 介面與外掛程式演算法通訊。 雖然您使用的外掛程式演算法必須支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB for Data Mining 規格，但不必支援該規格中的所有資料採礦選項。 您可以使用 [MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset) 結構描述資料列集，來決定演算法的功能。 此結構描述資料列集，會列出每一個外掛程式演算法提供者的資料採礦支援選項。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用這些 COM 介面與外掛程式演算法通訊。 雖然您使用的外掛程式演算法必須支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB for Data Mining 規格，但不必支援該規格中的所有資料採礦選項。 您可以使用 [MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset) 結構描述資料列集，來決定演算法的功能。 此結構描述資料列集，會列出每一個外掛程式演算法提供者的資料採礦支援選項。  
   
  您必須先註冊新的演算法，才能與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]一起使用。 若要註冊演算法，請在您要包含演算法之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 .ini 檔案中包含下列資訊：  
   

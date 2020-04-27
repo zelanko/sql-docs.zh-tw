@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082992"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
@@ -34,15 +34,14 @@ ms.locfileid: "66082992"
   
  [Reporting Services](#bkmk_SSRS)  
   
- [資料品質服務](#bkmk_DQSetc)  
+ [Data Quality Service](#bkmk_DQSetc)  
   
  [全文檢索搜尋](#bkmk_FTSetc)  
   
- [語義索引](#bkmk_SemSearch)  
+ [語意索引](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了資料準備和資料採礦專案定型階段所需的元件與功能。 雖然您可以使用類似指令碼的其他工具來執行許多資料清理或準備工作，但是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擁有許多資料採礦的優點：  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a> SQL Server Integration Services  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了資料準備和資料採礦專案定型階段所需的元件與功能。 雖然您可以使用類似指令碼的其他工具來執行許多資料清理或準備工作，但是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擁有許多資料採礦的優點：  
   
 -   將工作表示為工作流程的一部分，工作流程可以重複、自動化、建立分支及擴充。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66082992"
   
 -   [詞彙查閱轉換](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  雖然 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通常不會被視為資料採礦方案的重要元件，但是它會提供對於呈現資料採礦方案非常實用的以下功能。  
   
 -   在複雜的報表中整合多個來源的資料。 針對模型內容來為分析師建立查詢，並為使用者建立報表，報表中會顯示預測和趨勢。  
@@ -99,28 +98,26 @@ ms.locfileid: "66082992"
   
 -   與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]整合，以便支援鑽研和瀏覽資料採礦維度及從 OLAP 模型建立而來的資料採礦 Cube。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所提供的參數化和格式化功能。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所提供的參數化和格式化功能。  
   
  如需有關如何搭配資料來源形式的 DMX 查詢使用 Reporting Services 的詳細資訊，請參閱以下連結：  
   
- [從資料採礦模型 &#40;DMX&#41; &#40;SSRS 中取出資料&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [從資料採礦模型擷取資料 &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [適用于 DMX &#40;SSRS 的 Analysis Services 連線類型&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
- 但是，使用 DMX 當做資料來源並不是必要的。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的資料採礦元件也支援將預測查詢結果儲存到關聯式資料庫。 如果您已經使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立更新模型的工作流程，則將預測和其他資料採礦查詢結果保存到 SQL Server 可讓您啟用報告用的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 以及不與 DMX 接觸的其他工具。  
+ 但是，使用 DMX 當做資料來源並不是必要的。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的資料採礦元件也支援將預測查詢結果儲存到關聯式資料庫。 如果您已經使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立更新模型的工作流程，則將預測和其他資料採礦查詢結果保存到 SQL Server 可讓您啟用報告用的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 以及不與 DMX 接觸的其他工具。  
   
  如需有關使用 Reporting Services 當做資料來源展示層的詳細資訊，請參閱＜ [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)＞。  
   
-##  <a name="bkmk_DQSetc"></a>Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的新功能。 因為資料問題可能會讓資料採礦無法進行，所以執行重複分析或是在大型組織處理複雜資料來源的資料採礦人員應該會發現，使用 DQS 的規劃完善資料專案比起使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他指令碼隨選清理資料，為支援資料採礦的一個更可靠的方案。  
   
  資料採礦方案中的資料準備與資料完整性中，應該考量下列 DQS 功能。  
   
- **電腦輔助的資料清理程式，可分析來源資料及建議變更。**  
+ **電腦輔助的資料清理程序，可分析來源資料及建議變更。**  
  DQS 可以將來源資料與資料品質提供者所維護和保證的雲端架構參考資料做比較。  
   
  DQS 可以分析原始來源資料，並從使用者資料建立知識庫。 處理過的資料會加以分類，然後顯示給使用者以供進一步處理。 清理程序為互動式，這表示資料監管可以核准、拒絕或修改電腦輔助的資料清理程序所提議的資料。  
@@ -129,7 +126,7 @@ ms.locfileid: "66082992"
   
  如需詳細資訊，請參閱 [Data Cleansing](../../data-quality-services/data-cleansing.md)。  
   
- **電腦輔助的比對程式，可分析來源資料及建議變更。**  
+ **電腦輔助的比對程序，可分析來源資料及建議變更。**  
  為了避免資料重複，您可以執行資料來源的額外清理，以識別完全相符和大致相符的項目。 這些元件可讓您指定比對規則以及套用規則的臨界值。  
   
  您可以藉由尋找資料相符項目來移除重複項目，因為重複項目可能會讓資料採礦發生問題。 刪除重複資料作業不會自動進行；資料監管或 IT 專業人員必須驗證知識庫中的知識以及要進行的資料變更。  
@@ -151,7 +148,7 @@ ms.locfileid: "66082992"
   
  如需詳細資訊，請參閱 [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
-##  <a name="bkmk_FTSetc"></a>全文檢索搜尋  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>全文檢索搜尋  
  SQL Server 中的全文檢索搜尋可讓應用程式和使用者針對 SQL Server 資料表中以字元為主的資料，執行全文檢索查詢。 當啟用全文檢索搜尋時，您可以針對文字資料執行搜尋，該搜尋是以有關多形式單字或片語的語言特有規則來增強功能。 您也可以設定搜尋條件 (例如多個詞彙之間的距離)，並使用函數來限制依可能性順序傳回的結果。  
   
  因為全文檢索查詢是 SQL Server 引擎提供的功能，所以您可以建立參數化查詢、使用文字資料來源上的全文檢索搜尋功能來產生自訂資料集或詞彙向量，並在資料採礦中使用這些來源。  
@@ -178,7 +175,7 @@ ms.locfileid: "66082992"
   
 -   只有以下資料類型的資料行才支援全文檢索索引：char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 和 varbinary(max)。 如果資料行為 varbinary、varbinary(max)、image 或 xml，您必須在個別類型資料行中指定可建立索引之文件的副檔名 (.doc、.pdf、.xls 等)。  
   
-##  <a name="bkmk_SemSearch"></a>語義索引  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>語義索引  
  語意搜尋會根據 SQL Server 中的現有全文檢索搜尋功能而建立，但是會使用其他功能和統計資料來啟用類似自動關鍵字擷取及探索相關文件等案例。 例如，您可能會使用語意搜尋來為組織建立基本分類，或是分類某個語料的文件。 或者，您可能會使用群集或決策樹模型中擷取之詞彙和文件相似度分數的組合。  
   
  在您成功啟用語意搜尋並將資料行編制索引之後，您可以使用語意索引原本所提供的功能執行以下作業：  
@@ -205,6 +202,6 @@ ms.locfileid: "66082992"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS&#41;的多維度模型方案](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [&#40;SSAS 表格式&#41;的表格式模型方案](../tabular-model-solutions-ssas-tabular.md)  
+ [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

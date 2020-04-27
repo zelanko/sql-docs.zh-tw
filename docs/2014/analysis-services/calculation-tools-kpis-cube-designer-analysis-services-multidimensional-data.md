@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088265"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>計算工具 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -31,7 +31,7 @@ ms.locfileid: "66088265"
   
  將選取的元素拖曳至 [KPI 表單編輯器]**** 窗格，即可在窗格中選取的位置包含該元素的多維度運算式 (MDX) 語法。  
   
- **函數**  
+ **函式**  
  顯示運算式和條件可用的函數。  
   
  將選取的元素拖曳至 **[KPI 表單編輯器]** 窗格，即可在窗格中選取的位置包含該元素的 MDX 語法。  
@@ -44,32 +44,32 @@ ms.locfileid: "66088265"
   
  將選取的元素拖曳至 **[KPI 表單編輯器]** 窗格，即可在窗格中選取的位置包含該元素的 MDX 語法。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [計算工具]**** 窗格中的元素，即可顯示提供下列選項的內容功能表：  
   
  **複製**  
  選取即可將 **[中繼資料]** 或 **[函數]** 中選取的元素複製到剪貼簿。  
   
 > [!NOTE]  
->  如果已選取 **[範本]** ，則不會顯示此選項。  
+>   如果已選取 **[範本]** ，則不會顯示此選項。  
   
 > [!NOTE]  
->  如果選取的成員無法複製 (例如 **[中繼資料]** 中顯示之維度的 **[集]** 資料夾或 **[函數]** 中顯示之函數的函數群組資料夾)，則會停用此選項。  
+>   如果選取的成員無法複製 (例如 **[中繼資料]** 中顯示之維度的 **[集]** 資料夾或 **[函數]** 中顯示之函數的函數群組資料夾)，則會停用此選項。  
   
  **篩選成員**  
  選取即可顯示 **[篩選成員]** 對話方塊，並篩選針對 **[中繼資料]** 中選取之元素顯示的成員。 如需 [篩選成員]**** 對話方塊的詳細資訊，請參閱[篩選成員對話方塊 &#40;Analysis Services - 多維度資料&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md)。  
   
 > [!NOTE]  
->  只有選取 **[中繼資料]** 時，才會顯示此選項。  
+>   只有選取 **[中繼資料]** 時，才會顯示此選項。  
   
 > [!NOTE]  
->  只有在 **[中繼資料]** 中選取屬性的層級時，才會啟用此選項。  
+>   只有在 **[中繼資料]** 中選取屬性的層級時，才會啟用此選項。  
   
  **新增範本**  
  選取即可根據選取的範本將新的導出成員、命名集或指令碼命令加入至 Cube 指令碼，並以表單檢視顯示 [KPI 表單編輯器]****。  
   
 > [!NOTE]  
->  只有選取 **[中繼資料]** 時，才會顯示此選項。  
+>   只有選取 **[中繼資料]** 時，才會顯示此選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   

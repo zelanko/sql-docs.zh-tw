@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089212"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>選項 (文字編輯器 - XML - 其他頁面)
@@ -42,6 +42,6 @@ ms.locfileid: "66089212"
  **檔案開啟時進入大綱模式**  
  檔案開啟時啟動大綱功能。 依預設，這個核取方塊為已選取。  
   
-## <a name="caching"></a>快取  
+## <a name="caching"></a>Caching  
  **結構描述**  
  指定結構描述快取的位置。 瀏覽按鈕 (...) 會在新視窗中開啟目前的結構描述快取位置。 預設位置是* \<Management Studio 安裝目錄>* \xml\schemas。  

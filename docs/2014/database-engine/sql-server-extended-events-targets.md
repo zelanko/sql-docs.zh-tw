@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088873"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 擴充的事件目標是事件取用者。 目標可以寫入至檔案、在記憶體緩衝區中儲存事件資料，或彙總事件資料。 目標也能夠同步或非同步處理資料。  
   
  擴充的事件設計可保證目標一定會收到事件一次，而且每個工作階段只會收到一次。  
@@ -55,7 +54,7 @@ ms.locfileid: "66088873"
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../relational-databases/extended-events/extended-events.md)   
  [SQL Server 擴充的事件封裝](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [SQL Server 擴充的事件工作階段](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server 擴充事件會話](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 擴充的事件引擎](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094370"
 ---
 # <a name="installation-how-to-topics"></a>安裝的使用說明主題
@@ -31,7 +31,7 @@ ms.locfileid: "66094370"
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|提供用來執行自動安裝之範例語法和安裝參數的程序主題。|  
 |[使用組態檔安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|提供用來透過組態檔執行安裝程式之範例語法和安裝參數的程序主題。|  
 |[安裝 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|提供在不同的 SharePoint 伺服器組態上安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 所使用其他程序之連結的程序主題。|  
-|[將功能新增至 SQL Server 2014 &#40;安裝程式的實例&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|用於更新現有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體元件的程序主題。|  
+|[將功能新增至 SQL Server 2014 &#40;安裝程式的實例&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|用於更新現有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體元件的程序主題。|  
 |[卸除 SQL Server 2014 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|用於修復損毀之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝的程序主題。|  
 |[重新命名主控 SQL Server 獨立執行個體的電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|用於更新儲存在 sys.servers 中之系統中繼資料的程序主題。|  
 |[檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|用於檢查安裝記錄檔中之錯誤的程序主題。|  

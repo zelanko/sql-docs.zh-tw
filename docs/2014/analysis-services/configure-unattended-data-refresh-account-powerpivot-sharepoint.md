@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087414"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>設定 PowerPivot 無人看管的資料重新整理帳戶 (PowerPivot for SharePoint)
@@ -46,7 +46,7 @@ ms.locfileid: "66087414"
   
  [更新現有 PowerPivot 無人看管的資料重新整理帳戶所使用的認證](#bkmk_editUA)  
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
  您必須啟用並設定 Secure Store Service，而且必須產生主要金鑰。 如需如何執行這種操作的指示，請參閱[使用 SharePoint 2010 的 PowerPivot 資料](powerpivot-data-refresh-with-sharepoint-2010.md)重新整理  
   
  您必須事先決定要將哪個 Windows 網域使用者帳戶當做 PowerPivot 無人看管的資料重新整理帳戶使用。 這應該是特別針對這個用途所建立的帳戶，讓您可以監視其使用方式。  
@@ -71,9 +71,9 @@ ms.locfileid: "66087414"
   
 -   針對已發行的 PowerPivot 活頁簿，確認在 [管理資料重新整理] 排程頁面中可以使用該帳戶。  
   
-###  <a name="bkmk_create"></a>步驟1：建立目標應用程式並設定認證  
+###  <a name="step-1-create-a-target-application-and-set-the-credentials"></a><a name="bkmk_create"></a>步驟1：建立目標應用程式並設定認證  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 [ **Secure Store Service**]。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "66087414"
   
 16. 按一下 [確定]  。  
   
-###  <a name="bkmk_specifyUA"></a>步驟2：在 PowerPivot 服務器設定頁面中指定自動帳戶  
+###  <a name="step-2-specify-the-unattended-account-in-powerpivot-server-configuration-pages"></a><a name="bkmk_specifyUA"></a>步驟2：在 PowerPivot 服務器設定頁面中指定自動帳戶  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  尋找 PowerPivot 服務應用程式。 您可以依其類型來識別服務應用程式。 PowerPivot 服務應用程式類型為 **[PowerPivot 服務應用程式]**。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66087414"
   
 6.  按一下 [確定]  。  
   
-###  <a name="bkmk_grant"></a>步驟3：授與帳戶的「參與」許可權  
+###  <a name="step-3-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>步驟3：授與帳戶的「參與」許可權  
  在您可以使用 PowerPivot 無人看管的資料重新整理帳戶之前，必須在該帳戶所使用的任何 PowerPivot 活頁簿上指派「參與」權限給它。 您需要這個權限等級才能從文件庫開啟活頁簿，然後在重新整理資料之後，將其存回文件庫。  
   
  指派權限是由網站集合管理員所執行的步驟。 您可以在根網站集合或根網站集合底下的任何層級 (包括個別文件和項目) 指派 SharePoint 權限。 設定權限的方式將隨著細緻程度而有所不同。 下列步驟示範授與權限的其中一個方法。  
@@ -137,7 +137,7 @@ ms.locfileid: "66087414"
   
 5.  選取 [**參與**]，然後按一下 **[確定]**。  
   
-###  <a name="bkmk_dbread"></a>步驟4：授與讀取權限以存取資料重新整理時所使用的外部資料源  
+###  <a name="step-4-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>步驟4：授與讀取權限以存取資料重新整理時所使用的外部資料源  
  當資料匯入至 PowerPivot 活頁簿時，外部資料連接通常是以信任連接或是以使用目前使用者身分連接至資料來源的模擬連接為基礎。 這些類型的連接只能在目前使用者有讀取所匯入之資料的權限時使用。  
   
  在資料重新整理案例中，用來匯入資料的相同連接字串現在會重複使用來重新整理資料。 如果連接字串假設目前使用者 (例如，包含 Integrated_Security=SSPI 的字串)，PowerPivot 系統服務就會將 PowerPivot 無人看管資料重新整理帳戶的使用者身分當做目前使用者。 此連接只在 PowerPivot 無人看管的資料重新整理帳戶有讀取外部資料來源的權限時才會成功。  
@@ -146,7 +146,7 @@ ms.locfileid: "66087414"
   
  如果您是組織中使用的資料來源的系統管理員，可以建立登入並指定所需的權限。 否則，您必須連絡資料擁有者並提供帳戶資訊。 請務必指定對應至 PowerPivot 無人看管資料重新整理帳戶的 Windows 網域使用者帳戶。 這是您在本主題的「（步驟1）：建立目標應用程式並設定認證」中指定的帳號。  
   
-###  <a name="bkmk_verify"></a>步驟5：在資料重新整理設定頁面中確認帳戶可用性  
+###  <a name="step-5-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>步驟5：在資料重新整理設定頁面中確認帳戶可用性  
   
 1.  為包含 PowerPivot 資料之已發行的活頁簿，開啟資料重新整理組態頁面。 如需如何開啟頁面的指示，請參閱[排程資料重新整理 &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。  
   
@@ -160,17 +160,17 @@ ms.locfileid: "66087414"
   
  如需有關疑難排解的詳細資訊，請參閱 TechNet Wiki 上的[疑難排解 PowerPivot 資料](https://go.microsoft.com/fwlink/p/?LinkID=223279)重新整理。  
   
-##  <a name="bkmk_use"></a>使用 PowerPivot 無人看管的資料重新整理帳戶  
+##  <a name="using-the-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_use"></a>使用 PowerPivot 無人看管的資料重新整理帳戶  
  在 PowerPivot 資料重新整理排程頁面上所提供的三個認證選項中，只有第一個選項會對應到無人看管的資料重新整理帳戶。 設定資料重新整理排程時，請務必選取此選項。  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
  請勿使用第三個認證選項 (即需要您輸入目標應用程式識別碼的選項) 存取 PowerPivot 無人看管的資料重新整理帳戶。 此選項另外還會執行模擬檢查，若您嘗試將此選項用於 PowerPivot 無人看管的資料重新整理帳戶 (或任何使用 [個別] 帳戶類型的目標應用程式)，將會導致驗證錯誤。 如需如何使用第三個選項的詳細資訊，請參閱[設定 PowerPivot 資料重新整理的預存認證 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
-##  <a name="bkmk_editUA"></a>更新現有 PowerPivot 無人看管的資料重新整理帳戶所使用的認證  
+##  <a name="update-the-credentials-used-by-an-existing-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_editUA"></a>更新現有 PowerPivot 無人看管的資料重新整理帳戶所使用的認證  
  若安裝程式或管理員已設定了無人看管的資料重新整理帳戶，您即可藉由編輯儲存認證的目標應用程式來更新使用者名稱或密碼。 請注意，當您編輯 Secure Store Service 中的認證時，將不會顯示先前與 PowerPivot 無人看管的資料重新整理帳戶相關聯的原始 Windows 識別。 不論您要更新過期密碼，或要指定不同的帳戶，皆必須在 Secure Store Service 中重新輸入該目標應用程式的使用者名稱及密碼。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 [ **Secure Store Service**]。  
   

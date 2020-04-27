@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083101"
 ---
 # <a name="process-a-mining-model"></a>處理採礦模型
@@ -28,7 +28,7 @@ ms.locfileid: "66083101"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
- 您也可以使用 XMLA 處理命令。 如需詳細資訊，請參閱[處理的工具和方式 &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)。  
+ 您也可以使用 XMLA 處理命令。 如需詳細資訊，請參閱[處理 &#40;Analysis Services&#41;的工具和方法](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)。  
   
 ### <a name="process-a-single-mining-model-using-sql-server-data-tools"></a>使用 SQL Server 資料工具處理單一採礦模型  
   
@@ -65,6 +65,6 @@ ms.locfileid: "66083101"
  已處理採礦結構和所有相關聯的採礦模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
   
   

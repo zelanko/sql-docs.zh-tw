@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083652"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
@@ -49,15 +49,15 @@ ms.locfileid: "66083652"
  ATTRIBUTE_NAME  
  對應至這個節點之屬性的名稱。  
   
- **模型根**可預測屬性的名稱。  
+ **模型根** ：可預測屬性的名稱。  
   
- 臨界**統計資料**不適用  
+ **臨界統計資料** ：不適用  
   
- **可預測屬性**可預測屬性的名稱。  
+ **可預測的屬性** ：可預測屬性的名稱。  
   
- **輸入屬性**輸入屬性的名稱。  
+ **輸入屬性** ：輸入屬性的名稱。  
   
- **輸入屬性狀態**僅限輸入屬性的名稱。 若要取得狀態，使用 MSOLAP_NODE_SHORT_CAPTION。  
+ **輸入屬性狀態** ：僅限輸入屬性的名稱。 若要取得狀態，使用 MSOLAP_NODE_SHORT_CAPTION。  
   
  NODE_NAME  
  節點的名稱。  
@@ -82,32 +82,32 @@ ms.locfileid: "66083652"
  NODE_CAPTION  
  與節點關聯的標籤或標題。 這個屬性主要是供顯示之用。  
   
- **模型根**空白  
+ **模型根** ：空白  
   
  臨界**統計資料**空白  
   
- **可預測屬性**可預測屬性的名稱。  
+ **可預測的屬性** ：可預測屬性的名稱。  
   
- **輸入屬性**可預測屬性與目前輸入屬性的名稱。 例如：  
+ **輸入屬性** ：可預測屬性與目前輸入屬性的名稱。 例如：  
   
  Bike Buyer -> Age  
   
- **輸入屬性狀態**可預測屬性與目前輸入屬性的名稱，加上輸入的值。 例如：  
+ **輸入屬性狀態** ：可預測屬性與目前輸入屬性的名稱，加上輸入的值。 例如：  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  節點擁有的子系數目。  
   
- **模型根**模型中可預測屬性的計數加1，用於臨界統計資料節點。  
+ **模型根** ：模型中的可預測屬性計數針對臨界統計資料節點加 1。  
   
- 臨界**統計資料**依定義，沒有子系。  
+ **臨界統計資料** ：依定義，沒有子系。  
   
- **可預測屬性** 與目前可預測屬性相關之輸入屬性的計數。  
+ **可預測的屬性**  ：與目前可預測屬性相關之輸入屬性的計數。  
   
- **輸入屬性**目前輸入屬性之離散或離散化值的計數。  
+ **輸入屬性** ：目前輸入屬性之離散值或離散化之值的計數。  
   
- **輸入屬性狀態**一律為0。  
+ **輸入屬性狀態** ：一律為 0。  
   
  PARENT_UNIQUE_NAME  
  父節點的唯一名稱。 如需父節點與子節點關聯的詳細資訊，請參閱 [使用節點名稱與識別碼](#bkmk_nodenames)。  
@@ -124,15 +124,15 @@ ms.locfileid: "66083652"
  NODE_PROBABILITY  
  與此節點關聯的機率。  
   
- **模型根**一律為0。  
+ **模型根** ：一律為 0。  
   
- 臨界**統計資料**一律為0。  
+ **臨界統計資料** ：一律為 0。  
   
- **可預測屬性** 一律為1。  
+ **可預測的屬性**  ：一律為 1。  
   
- **輸入屬性**一律為1。  
+ **輸入屬性** ：一律為 1。  
   
- **輸入屬性狀態**十進位數，表示目前值的機率。 父系輸入屬性節點下，所有輸入屬性狀態的值總和為 1。  
+ **輸入屬性狀態** ：代表目前值機率的十進位數字。 父系輸入屬性節點下，所有輸入屬性狀態的值總和為 1。  
   
  MARGINAL_PROBABILITY  
  與節點機率相同。  
@@ -143,15 +143,15 @@ ms.locfileid: "66083652"
  NODE_SUPPORT  
  支援這個節點的案例數目。  
   
- **模型根**定型資料中所有案例的計數。  
+ **模型根** ：定型資料中所有案例的計數。  
   
- 臨界**統計資料**一律為0。  
+ **臨界統計資料** ：一律為 0。  
   
- **可預測屬性**定型資料中所有案例的計數。  
+ **可預測的屬性** ：定型資料中所有案例的計數。  
   
- **輸入屬性**定型資料中所有案例的計數。  
+ **輸入屬性** ：定型資料中所有案例的計數。  
   
- **輸入屬性狀態**定型資料中僅包含此特定值的案例計數。  
+ **輸入屬性狀態** ：定型資料中，僅包含此特定值之案例的計數。  
   
  MSOLAP_MODEL_COLUMN  
  主要用於顯示用途。 通常和 ATTRIBUTE_NAME 相同。  
@@ -159,30 +159,30 @@ ms.locfileid: "66083652"
  MSOLAP_NODE_SCORE  
  代表模型中屬性或值的重要性。  
   
- **模型根**一律為0。  
+ **模型根** ：一律為 0。  
   
- 臨界**統計資料**一律為0。  
+ **臨界統計資料** ：一律為 0。  
   
- **可預測屬性** 一律為0。  
+ **可預測的屬性**  ：一律為 0。  
   
- **輸入屬性**目前輸入屬性與目前可預測屬性的有趣性分數。  
+ **輸入屬性** ：目前輸入屬性相對於目前可預測屬性的有趣性分數。  
   
- **輸入屬性狀態**一律為0。  
+ **輸入屬性狀態** ：一律為 0。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  文字字串，表示資料行的名稱或值。  
   
  **模型根**著  
   
- 臨界**統計資料**著  
+ **臨界統計資料** ：空白  
   
  **可預測屬性** 可預測屬性的名稱。  
   
- **輸入屬性**輸入屬性的名稱。  
+ **輸入屬性** ：輸入屬性的名稱。  
   
- **輸入屬性狀態**輸入屬性的值或離散化值。  
+ **輸入屬性狀態** ：輸入屬性的值或離散化的值。  
   
-##  <a name="bkmk_nodenames"></a>使用節點名稱和識別碼  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a>使用節點名稱和識別碼  
  在貝式機率分類中之節點的命名，可提供節點類型的其他資訊，讓您更容易了解模型中資訊間的關聯性。 下表顯示指派給不同節點類型之識別碼的慣例。  
   
 |節點類型|節點識別碼的慣例|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>NODE_DISTRIBUTION 資料表  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>NODE_DISTRIBUTION 資料表  
  巢狀資料表資料行 NODE_DISTRIBUTION 通常包含節點中值分佈的統計資料。 在貝式機率分類模型中，僅會針對下列節點填入此資料表：  
   
 |節點類型|巢狀資料表的內容|  
@@ -265,10 +265,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  在這些結果中，SUPPORT 資料行的值會顯示購買自行車之客戶的計數，以及指定的婚姻狀況。 PROBABILITY 資料行包含每個屬性值的機率 (僅針對此節點計算)。 如需 NODE_DISTRIBUTION 資料表所用詞彙的一般定義，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_margstats"></a>臨界統計資料節點中的資訊  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a> 臨界統計資料節點中的資訊  
  在貝式機率分類模型中，臨界統計資料節點的巢狀資料表包含整組定型資料的值分佈。 例如，下表包含模型 `TM_NaiveBayes`的巢狀 NODE_DISTRIBUTION 資料表中，統計資料的部分清單：  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|支援|PROBABILITY|variance|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
@@ -285,12 +285,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  在貝式機率分類模型中，可能沒有連續屬性，因此，所有數值資料都會以離散 (VALUE_TYPE = 4) 或離散化 (VALUE_TYPE = 5) 代表。  
   
- `Missing`值（VALUE_TYPE = 1）會加入至每個輸入和輸出屬性，以代表不存在於定型資料中的潛在值。 您必須仔細區別字串「遺失」和預設 `Missing` 值「遺失」。 如需詳細資訊，請參閱 [遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)預先定義的模型旗標外，協力廠商外掛程式也可能擁有其他的模型旗標。  
+  值 (VALUE_TYPE = 1) 會加入到每個輸入和輸出屬性，以代表不在定型資料中的可能值。 您必須仔細區別字串「遺失」和預設 `Missing` 值「遺失」。 如需詳細資訊，請參閱 [遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)預先定義的模型旗標外，協力廠商外掛程式也可能擁有其他的模型旗標。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Analysis Services 的採礦模型內容-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](data-mining-model-viewers.md)   
  [資料採礦查詢](data-mining-queries.md)   
- [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)  
+ [Microsoft 貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)  
   
   

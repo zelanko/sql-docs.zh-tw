@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083864"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
@@ -36,8 +36,7 @@ ms.locfileid: "66083864"
  以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建構的採礦模型可包含多個網路，視用於輸入和預測的資料行數目或只用於預測的資料行數目而定。 單一採礦模型包含的網路數目，視採礦模型使用的輸入資料行和可預測資料行所包含的狀態數目而定。  
   
 ## <a name="example"></a>範例  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法在分析複雜輸入資料 (例如來自製造程序或商業程序的資料) 或商務問題 (有大量培訓資料可用但很難使用其他演算法來衍生規則) 時很有用。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法在分析複雜輸入資料 (例如來自製造程序或商業程序的資料) 或商務問題 (有大量培訓資料可用但很難使用其他演算法來衍生規則) 時很有用。  
   
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的建議狀況包括下列各項：  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66083864"
 -   任何分析許多輸入以及較少輸出之間複雜關聯性的預測模型。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層神經所組成的網路。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層神經所組成的網路。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
   
  **輸入層：** 輸入神經會定義資料採礦模型的所有輸入屬性值及其機率。  
   

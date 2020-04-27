@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084405"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>篩選關聯規則模型中的規則
@@ -37,8 +37,7 @@ ms.locfileid: "66084405"
   
 3.  在 **[篩選規則]** 方塊中輸入規則條件。 例如，規則條件可能是 "Bike Stand"，這也會傳回 "Bike Stands"。  
   
-     
-  **[篩選規則]** 文字方塊會支援 .NET 語言所定義的規則運算式。 因此，您可以使用類似以下的運算式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此運算式會傳回包含 Helmets 和 Fenders 字 (順序不限) 之屬性的任何項目集。  
+     **[篩選規則]** 文字方塊會支援 .NET 語言所定義的規則運算式。 因此，您可以使用類似以下的運算式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此運算式會傳回包含 Helmets 和 Fenders 字 (順序不限) 之屬性的任何項目集。  
   
 4.  在 **[最小機率]** 中，增加機率的值來查看更少的規則，或是降低此值來查看更多的規則。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "66084405"
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 關聯規則檢視器流覽模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

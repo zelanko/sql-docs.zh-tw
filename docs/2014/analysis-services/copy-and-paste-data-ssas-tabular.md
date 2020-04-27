@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086973"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>複製及貼上資料 (SSAS 表格式)
@@ -34,7 +34,7 @@ ms.locfileid: "66086973"
   
 -   [貼上預覽對話方塊](#bkmk_paste_preview)  
   
-##  <a name="bkmk_prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> 必要條件  
  貼上資料時有一些限制：  
   
 -   貼上的資料表不能超過 10,000 個資料列。  
@@ -47,7 +47,7 @@ ms.locfileid: "66086973"
   
 -   當您使用 **[貼上新增]** 或 **[貼上取代]** 時，新的資料必須與原始資料的資料行數目完全相同。 您貼上或附加的資料行，最好也與目的地資料表是相同或相容的資料類型。 在某些情況下，您可以使用不同的資料類型，但會顯示 **類型不符** 的錯誤。  
   
-##  <a name="bkmk_paste_data"></a>貼上資料  
+##  <a name="paste-data"></a><a name="bkmk_paste_data"></a> 貼上資料  
   
 #### <a name="to-paste-data-into-the-designer"></a>將資料貼入設計師  
   
@@ -59,9 +59,8 @@ ms.locfileid: "66086973"
   
     -   按一下 **[貼上取代]** ，以 [剪貼簿] 的內容取代選取的資料表。 所有現有的資料行標頭名稱依然會在資料表中，並且保留關聯性。  
   
-##  <a name="bkmk_paste_preview"></a>貼上預覽對話方塊  
- 
-  **[貼上預覽]** 對話方塊可讓您查看已複製到設計師視窗之資料的預覽，並確認資料已正確複製。 若要存取此對話方塊，請將以資料表為基礎的 HTML 格式資料複製到剪貼簿，然後在設計師中，按一下 [編輯]**** 功能表，再按一下 [貼上]****、[貼上新增]**** 或 [貼上取代]****。 只有在透過從剪貼簿複製並貼上而建立的資料表中加入或取代資料時，才可以使用 **[貼上新增]** 和 **[取代貼上]** 選項。 您不能使用 **[貼上新增]** 或 **[取代貼上]** ，將資料加入至匯入資料的資料表中。  
+##  <a name="paste-preview-dialog-box"></a><a name="bkmk_paste_preview"></a>貼上預覽對話方塊  
+ **[貼上預覽]** 對話方塊可讓您查看已複製到設計師視窗之資料的預覽，並確認資料已正確複製。 若要存取此對話方塊，請將以資料表為基礎的 HTML 格式資料複製到剪貼簿，然後在設計師中，按一下 [編輯]**** 功能表，再按一下 [貼上]****、[貼上新增]**** 或 [貼上取代]****。 只有在透過從剪貼簿複製並貼上而建立的資料表中加入或取代資料時，才可以使用 **[貼上新增]** 和 **[取代貼上]** 選項。 您不能使用 **[貼上新增]** 或 **[取代貼上]** ，將資料加入至匯入資料的資料表中。  
   
  根據您是將資料貼入全新的資料表、貼入現有的資料表並以新資料取代現有資料，或附加到現有資料表，此對話方塊的選項都不同。  
   

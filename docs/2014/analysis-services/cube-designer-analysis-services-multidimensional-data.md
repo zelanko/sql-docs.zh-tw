@@ -13,21 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086610"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube 設計師 (Analysis Services - 多維度資料)
-  使用 ** 中的 [Cube 設計師]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來編輯現有 Cube 的各種屬性，包括量值群組與量值、Cube 維度與維度關聯性、計算、關鍵效能指標 (KPI)、動作、資料分割、檢視方塊以及 Cube 包含的翻譯，還可以瀏覽 Cube 包含的資料。 您可依下列方式顯示 **[Cube 設計師]** 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [Cube 設計師]**** 來編輯現有 Cube 的各種屬性，包括量值群組與量值、Cube 維度與維度關聯性、計算、關鍵效能指標 (KPI)、動作、資料分割、檢視方塊以及 Cube 包含的翻譯，還可以瀏覽 Cube 包含的資料。 您可依下列方式顯示 **[Cube 設計師]** 對話方塊：  
   
 -   以滑鼠右鍵按一下方案總管**** 中的 Cube，然後從內容功能表選取 [開啟]**** 或 [檢視設計師]****。  
   
 -   按兩下方案總管**** 中的 Cube。  
   
- 
-  **[Cube 設計師]** 包含下列索引標籤：  
+ **[Cube 設計師]** 包含下列索引標籤：  
   
 ## <a name="tabs"></a>定位點  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66086610"
 |**資料分割**|使用此索引標籤即可建立和修改資料分割，包括 Cube 所含之量值群組與資料分割的主動式快取設定。 如需此索引標籤的詳細資訊，請參閱[資料分割 &#40;Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**檢視方塊**|使用此索引標籤即可建立和修改 Cube 所含的檢視方塊。 如需此索引標籤的詳細資訊，請參閱[檢視方塊 &#40;Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**翻譯**|使用此索引標籤，即可建立和修改 Cube 所含之量值群組、量值、Cube 維度、檢視方塊、KPI、動作、命名集以及導出成員的翻譯。 如需此索引標籤的詳細資訊，請參閱[翻譯 &#40;Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)。|  
-|**[瀏覽器]**|使用此索引標籤即可瀏覽 Cube 的資料與中繼資料。 如需此索引標籤的詳細資訊，請參閱[瀏覽器 &#40;Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**瀏覽器**|使用此索引標籤即可瀏覽 Cube 的資料與中繼資料。 如需此索引標籤的詳細資訊，請參閱[瀏覽器 &#40;Cube 設計師&#41; &#40;Analysis Services - 多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 物件 &#40;Analysis Services 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   

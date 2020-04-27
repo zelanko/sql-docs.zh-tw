@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083042"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查詢用於建立採礦模型的參數
@@ -31,7 +31,7 @@ ms.locfileid: "66083042"
 2.  以滑鼠右鍵按一下執行個體名稱，選取 [新增查詢]****，然後選取 [DMX]****。  
   
     > [!NOTE]  
-    >  您也可以使用 [MDX]**** 範本針對資料採礦模型建立查詢。  
+    >   您也可以使用 **[MDX]** 範本針對資料採礦模型建立查詢。  
   
 3.  如果執行個體包含多個資料庫，請從工具列中的 **[可用的資料庫]** 清單選取包含您要查詢之模型的資料庫。  
   

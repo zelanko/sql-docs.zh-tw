@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082182"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定義本地貨幣參考 (商業智慧精靈)
@@ -35,7 +35,7 @@ ms.locfileid: "66082182"
  在貨幣維度中選取貨幣屬性，其成員代表本地貨幣的貨幣識別碼。 （貨幣屬性是其`Type`屬性設為*currency*的屬性）。  
   
 > [!NOTE]  
->  若未選取 [事實資料表中的識別碼]**** 選項，則無法使用此選項。  
+>   若未選取 **[事實資料表中的識別碼]** 選項，則無法使用此選項。  
   
  **維度資料表中的屬性**  
  選取即可從與量值群組相關的維度中指定屬性，該量值群組包含本地貨幣的貨幣識別碼。  
@@ -46,7 +46,7 @@ ms.locfileid: "66082182"
  在維度中選取屬性，其成員參考本地貨幣的貨幣識別碼。  
   
 > [!NOTE]  
->  若未選取 [維度資料表中的屬性]**** 選項，則無法使用此選項。  
+>   若未選取 **[維度資料表中的屬性]** 選項，則無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [商業智慧 Wizard F1 說明](business-intelligence-wizard-f1-help.md)   

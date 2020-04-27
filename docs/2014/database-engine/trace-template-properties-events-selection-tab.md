@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089550"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>追蹤範本屬性 (事件選取範圍索引標籤)
   使用 **[追蹤範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視、編輯或指定要包含在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 追蹤範本中的事件類別和資料行。  
   
 ## <a name="options"></a>選項。  
- **事件**資料行  
+ [事件]**** 資料行  
  選取或清除事件資料行中的核取方塊，來指定應追蹤的事件。 依事件類別目錄所組織的事件。  
   
  如果選取 **[一般]** 索引標籤上的 **[以現有的範本作為新範本的基礎]** ，就會根據指定的範本自動選取事件。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  
@@ -53,7 +53,7 @@ ms.locfileid: "66089550"
  [篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [視圖篩選資訊 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [修改篩選 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085820"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>選擇精確度圖表類型及設定圖表選項
@@ -33,7 +33,7 @@ ms.locfileid: "66085820"
   
  本主題提供不同精確度圖表的概觀。  
   
- **注意**圖表及其定義不會儲存。 如果將包含圖表的視窗關閉，則必須再次建立該圖表。  
+ **注意** ：圖表及其定義並不會儲存。 如果將包含圖表的視窗關閉，則必須再次建立該圖表。  
   
 ## <a name="accuracy-chart-types"></a>精確度圖表類型  
  根據您選擇的圖表類型而定，您將能夠進一步設定選項、瀏覽圖表，或是將圖表複製到剪貼簿，然後在 Excel 中處理資料。  

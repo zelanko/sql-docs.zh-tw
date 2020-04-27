@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088794"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>追蹤檔案屬性 (事件選取範圍索引標籤)
   使用 **[追蹤檔案範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，以檢視追蹤的資料行屬性，或者從追蹤移除資料行。  
   
- 若要檢視此視窗，請開啟追蹤檔案。 然後，**在 [檔案**] 功能表上，按一下 [內容 **]，然後**按一下 [**事件選取範圍**] 索引標籤。  
+ 若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]**，然後按一下 **[事件選取範圍]** 索引標籤。  
   
 ## <a name="options"></a>選項。  
- **事件**資料行  
+ [事件]**** 資料行  
  檢視依事件類別目錄所組織的追蹤事件。 起初會選取追蹤內的所有事件。 勾選方塊或勾選事件的資料行即可選取事件。 如果勾選事件方塊，就會選取所有適用於該事件的資料行。 如果勾選事件的資料行，就會勾選事件，也會自動勾選任何其他必要的資料行。 如果您正在檢視追蹤檔案或資料表，清除事件或資料行的核取方塊會減少追蹤視窗中的可見資料量，以便進行分析。 您也可以變更資料行篩選，來減少追蹤視窗中的可見資料量。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  
   
  資料行  
@@ -52,7 +52,7 @@ ms.locfileid: "66088794"
  [篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [視圖篩選資訊 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [修改篩選 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

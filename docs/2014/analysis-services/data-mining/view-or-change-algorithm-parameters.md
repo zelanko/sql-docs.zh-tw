@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082685"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>檢視或變更演算法參數
@@ -39,14 +39,13 @@ ms.locfileid: "66082685"
   
 ### <a name="change-an-algorithm-parameter"></a>變更演算法參數  
   
-1.  在 ** 中，於資料採礦設計師的 [採礦模型]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤上，以滑鼠右鍵按一下您要微調演算法之採礦模型的演算法類型，並選取 [設定演算法參數]****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型]**** 索引標籤上，以滑鼠右鍵按一下您要微調演算法之採礦模型的演算法類型，並選取 [設定演算法參數]****。  
   
      就會開啟 **[演算法參數]** 對話方塊。  
   
 2.  在 **[值]** 資料行中，設定您要變更之演算法的新值。  
   
-     如果您沒有在 **[值]** 資料行中輸入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用預設參數值。 
-  **[範圍]** 資料行描述您可以輸入的可能值。  
+     如果您沒有在 **[值]** 資料行中輸入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用預設參數值。 **[範圍]** 資料行描述您可以輸入的可能值。  
   
 3.  按一下 [確定]  。  
   
@@ -66,6 +65,6 @@ ms.locfileid: "66082685"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
   
   

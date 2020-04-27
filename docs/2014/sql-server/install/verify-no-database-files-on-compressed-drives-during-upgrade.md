@@ -13,15 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41c183c72188cccb21838e1e574992bfb723c022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091154"
 ---
 # <a name="verify-that-no-database-files-are-on-compressed-drives-during-the-upgrade-process"></a>確認在升級過程中，壓縮磁碟機上沒有資料庫檔案
-  Upgrade Advisor 在壓縮磁碟機上偵測到資料庫檔案。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在壓縮磁碟機上建立或升級資料庫。  
+  Upgrade Advisor 在壓縮磁碟機上偵測到資料庫檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在壓縮磁碟機上建立或升級資料庫。  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
