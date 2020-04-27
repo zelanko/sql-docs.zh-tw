@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070014"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>儲存資料採礦查詢結果對話方塊 (採礦模型預測檢視)
@@ -57,6 +57,6 @@ ms.locfileid: "66070014"
 ## <a name="see-also"></a>另請參閱  
  [預測查詢產生器 &#40;資料採礦&#41;](prediction-query-builder-data-mining.md)   
  [資料採礦查詢介面](data-mining/data-mining-query-tools.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

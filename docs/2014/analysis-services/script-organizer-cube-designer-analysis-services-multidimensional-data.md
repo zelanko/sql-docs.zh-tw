@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069927"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>指令碼組合管理 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -31,7 +31,7 @@ ms.locfileid: "66069927"
   
  在 [工具列]**** 窗格或內容功能表中，按一下 [上移]**** 或 [下移]****，即可變更計算的執行順序。  
   
- **型別**  
+ **類型**  
  顯示識別計算為導出成員、命名集或指令碼命令的圖示。  
   
  **命令**  
@@ -39,7 +39,7 @@ ms.locfileid: "66069927"
   
  選取命令即可顯示適用於該命令的 [指令碼編輯器]****、[導出成員表單編輯器]**** 或 [命名集表單編輯器]**** (在表單檢視中)，或將 [指令碼編輯器]**** 窗格的內容捲動到 Cube 指令碼中、命令所在的位置 (在指令碼檢視中)。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [指令碼組合管理]**** 窗格中的命令，即可顯示提供下列選項的內容功能表：  
   
 |選項|定義|  

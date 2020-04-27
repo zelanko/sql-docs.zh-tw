@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069753"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>選取資料來源檢視 (Cube 精靈)
@@ -29,7 +29,7 @@ ms.locfileid: "66069753"
  **資料來源視圖**  
  選取用於空白 Cube 的資料來源檢視。  
   
- **無**  
+ **None**  
  如果您不想要使用資料來源檢視，請選取此選項。 如果您之後將產生資料來源檢視，或者您計畫單獨使用包含連結量值群組的 Cube，這個選項就很適合。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070042"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>取樣資料 (SQL Server 資料採礦增益集)
@@ -70,12 +70,12 @@ ms.locfileid: "66070042"
 ## <a name="related-options"></a>相關的選項  
  當您逐步進行精靈時，會有下列選項：  
   
-|選項。|註解|  
+|選項。|評價|  
 |-------------|--------------|  
 |選取來源資料對話方塊 (適用於 Excel 的資料採礦用戶端)|選取包含資料的 Excel 範圍或資料表。 如果您要使用外部資料，可以使用關聯式資料，不過資料必須包含在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源中。 T|  
 |選取取樣類型頁面 (適用於 Excel 的資料採礦用戶端)|如果您使用外部資料來源，則僅能使用隨機取樣選項。 此外，您必須使用 [資料**列計數**] 選項，指定要在最後一個資料集中建立的資料列數目。 您無法指定來源資料的百分比。|  
 |隨機取樣頁面 (適用於 Excel 的資料採礦用戶端)|您可以從來源複製某個百分比的資料列，或特定資料列數目。|  
-|超取樣頁面 (適用於 Excel 的資料採礦用戶端)|**目標狀態**<br /><br /> 從清單選取原始資料集中低於適當比例的值。 超取樣將會增加包含此狀態之資料列的比例。<br /><br /> **樣本大小**<br /><br /> 選取要擷取的資料列總數。 這個值代表最終資料集的大小。|  
+|超取樣頁面 (適用於 Excel 的資料採礦用戶端)|**目標狀態**<br /><br /> 從清單選取原始資料集中低於適當比例的值。 超取樣將會增加包含此狀態之資料列的比例。<br /><br /> **取樣大小**<br /><br /> 選取要擷取的資料列總數。 這個值代表最終資料集的大小。|  
   
 ## <a name="other-sampling-options"></a>其他取樣選項  
  如果此精靈中的取樣選項不符合您的需要，您可以使用 SQL Server Integration Services (SSIS) 中的取樣轉換來取樣多個資料來源的資料列。  
@@ -83,6 +83,6 @@ ms.locfileid: "66070042"
  如需詳細資訊，請參閱資料[列取樣轉換](../integration-services/data-flow/transformations/row-sampling-transformation.md)和[百分比取樣轉換](../integration-services/data-flow/transformations/percentage-sampling-transformation.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦準備清單](checklist-of-preparation-for-data-mining.md)  
+ [資料採礦準備檢查清單](checklist-of-preparation-for-data-mining.md)  
   
   

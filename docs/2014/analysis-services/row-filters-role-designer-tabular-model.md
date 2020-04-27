@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070127"
 ---
 # <a name="row-filters-role-designertabular-model"></a>資料列篩選 (角色設計師)(表格式模型)
@@ -26,7 +26,7 @@ ms.locfileid: "66070127"
 >  如果已在角色設計師的 [一般]**** 頁面上選取 [完整控制權 (管理員)]****，或者如果角色權限設定為 [處理]****，則此頁面上的所有選項就會停用。  
   
 ## <a name="options"></a>選項。  
- **Table**  
+ **目錄**  
  為其定義篩選的模型資料表。  
   
  **DAX 篩選**  
@@ -37,6 +37,6 @@ ms.locfileid: "66070127"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的表格式模型角色](tabular-models/roles-ssas-tabular.md)   
- [使用 SSMS &#40;SSAS 表格式&#41;管理角色](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [使用 SSMS 管理角色 &#40;SSAS 表格式&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   
