@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075440"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商業智慧精靈定義時間智慧計算
@@ -59,9 +59,9 @@ ms.locfileid: "66075440"
 ## <a name="apply-time-views-to-members"></a>將時間檢視套用至成員  
  在 [定義計算範圍]**** 頁面上，您可以指定要套用新時間檢視的成員。 您可將新時間檢視套用到下列物件之一：  
   
--   **帳戶維度的成員**在 [**定義計算範圍**] 頁面上，[**可用的量值**] 清單會包含帳戶維度。 帳戶維度之 `Type` 屬性設定成 `Accounts`。 如果您有帳戶維度，但該維度並未在 [可用的量值]**** 清單中顯示，您可以使用 [商業智慧精靈] 將帳戶智慧套用至該維度。 如需詳細資訊，請參閱 [將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
+-   **帳戶維度的成員**：在 [定義計算範圍]**** 頁面上，[可用的量值]**** 清單中包含帳戶維度。 帳戶維度之 `Type` 屬性設定成 `Accounts`。 如果您有帳戶維度，但該維度並未在 [可用的量值]**** 清單中顯示，您可以使用 [商業智慧精靈] 將帳戶智慧套用至該維度。 如需詳細資訊，請參閱 [將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
--   **量值**您可以不指定帳戶維度，而是指定要套用時間查看的量值。 在此狀況下，請選取所選的時間計算套用的檢視。 例如，資產和負債是年度至今的資料；因此，您不會將年度至今計算套用到資產或負債量值。  
+-   **量值** ：您可以指定時間檢視套用的量值，而非指定帳戶維度。 在此狀況下，請選取所選的時間計算套用的檢視。 例如，資產和負債是年度至今的資料；因此，您不會將年度至今計算套用到資產或負債量值。  
   
 ## <a name="viewing-the-time-intelligence-enhancement"></a>檢視時間智慧增強功能  
  在 [商業智慧精靈] 的最後一頁，您可以檢視將會對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫進行的變更。 針對時間智慧增強功能，精靈會變更選取的時間維度、關聯的資料來源檢視以及關聯的 Cube，如下表所述。  

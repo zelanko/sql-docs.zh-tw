@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077849"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>中繼資料 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -28,9 +28,9 @@ ms.locfileid: "66077849"
  **中繼資料**  
  顯示目前檢視中可用的中繼資料。 您可以按一下 Cube 圖示，然後使用 [選取 Cube]**** 對話方塊選擇一個新的 Cube 或檢視方塊，藉以變更檢視 (亦即目前選取的檢視方塊或 Cube)。 您也可以按一下 [量值群組]****，然後從下拉式清單中選取一個新的量值群組，以篩選 [中繼資料]**** 窗格中提供的物件。  
   
- 將選取的項目拖曳至在 [報表][!INCLUDE[msCoName](../includes/msconame-md.md)]** 窗格中之 ** Office 11.0 樞紐分析表控制項的篩選、資料、資料列或資料行區域，即可顯示選取之項目的資料。  
+ 將選取的項目拖曳至在 [報表]**** 窗格中之 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 11.0 樞紐分析表控制項的篩選、資料、資料列或資料行區域，即可顯示選取之項目的資料。  
   
- **函數**  
+ **函式**  
  在 [瀏覽器]**** 中顯示可用來建立查詢或資料檢視之所有函數、運算子和常數的清單。 若要使用函數，請找出您要的函數，然後將其拖曳到查詢區域中。 語法定義便會加入至文字中  
   
 > [!WARNING]  
@@ -40,7 +40,7 @@ ms.locfileid: "66077849"
   
  提示：包含 DAX 函數的資料夾會以全部大寫字母列出。 其他所有資料夾則包含 MDX 函數。 例如，有兩個統計函數的資料夾： **STATISTICAL** 包含相關的 DAX 函數。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [中繼資料]**** 窗格所顯示的元素，即可顯示提供下列選項的操作功能表：  
   
 |選項|描述|  

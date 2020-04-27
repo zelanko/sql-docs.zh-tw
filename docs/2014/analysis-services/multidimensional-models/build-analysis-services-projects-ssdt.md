@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076777"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>建立多個 Analysis Services 專案 (SSDT)
@@ -43,10 +43,10 @@ ms.locfileid: "66076777"
   
 |檔案 (在 bin 資料夾中)|描述|  
 |-----------------------------|-----------------|  
-|*專案名稱*. .asdatabase|包含 ASSL 元素，這些元素會在部署指令碼檔案中定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案內物件的中繼資料， 部署引擎會使用這個檔案將這些物件部署至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
-|*專案名稱*. .configsettings|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的組態設定 (例如，資料來源的連接字串)。|  
-|*專案名稱*. .deploymenttargets|包含部署期間可用來直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 「部署精靈」中使用的目的地設定 (例如，伺服器和資料庫名稱)。|  
-|*專案名稱*. d|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的各種選項設定 (例如，儲存位置)|  
+|*Projectname*.asdatabase|包含 ASSL 元素，這些元素會在部署指令碼檔案中定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案內物件的中繼資料， 部署引擎會使用這個檔案將這些物件部署至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
+|*Projectname*.configsettings|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的組態設定 (例如，資料來源的連接字串)。|  
+|*Projectname*.deploymenttargets|包含部署期間可用來直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 「部署精靈」中使用的目的地設定 (例如，伺服器和資料庫名稱)。|  
+|*Projectname*.deploymentoptions|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的各種選項設定 (例如，儲存位置)|  
 |*Assemblyname*/*dllname。* urlmon.dll|每一個參考之組件的個別資料夾；每一個資料夾都包含該組件的 DLL、任何參考的組件，以及輸出偵錯資訊的所有關聯 .pdb 檔案。|  
   
 |檔案 (在 obj 資料夾中)|描述|  
@@ -59,6 +59,6 @@ ms.locfileid: "66076777"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [&#40;SSDT 部署 Analysis Services 專案&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 專案 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070983"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理：PowerPivot 資料
@@ -24,7 +24,7 @@ ms.locfileid: "66070983"
   
 |||  
 |-|-|  
-|適用於|PowerPivot for SharePoint|  
+|適用對象|PowerPivot for SharePoint|  
 |產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Excel Services 設定為拒絕外部資料存取。|  
 |訊息文字|儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理：PowerPivot 資料|  
@@ -35,7 +35,7 @@ ms.locfileid: "66070983"
 ## <a name="user-action"></a>使用者動作  
  變更組態設定來允許內嵌資料來源。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 [Excel Services 應用程式]****。  
   

@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079870"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>確認 PowerPivot for SharePoint 安裝
   您在 SharePoint 伺服器陣列中安裝的 PowerPivot for SharePoint 執行個體是透過 SharePoint 管理中心來進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以確認 PowerPivot 伺服器元件和功能是可用的。 但是，為了完整確認安裝作業，您必須擁有可以發行到 SharePoint 並從文件庫存取的 PowerPivot 活頁簿。 為了測試用途，您可以發行已經包含 PowerPivot 資料的範例活頁簿，並用它來確認 SharePoint 整合已正確設定。  
   
-##  <a name="verifyinstall"></a>確認管理中心整合  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a> 確認管理中心整合  
  若要確認 PowerPivot 可與管理中心整合，請執行下列動作：  
   
 1.  在 [開始] 功能表上，按一下 [**所有程式**]，開啟 [Microsoft SharePoint 2010 產品]，然後按一下 [ **SharePoint 2010 管理中心**]。  
@@ -46,11 +46,11 @@ ms.locfileid: "66079870"
   
 4.  確認 **[PowerPivot 整合功能]** 為 **[使用中]**。  
   
-5.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]**。  
+5.  在 [管理中心] 的 [系統設定] 中，按一下 [**管理伺服器上的服務**]。  
   
 6.  確認 **SQL Server Analysis Services** 和 **SQL Server PowerPivot 系統服務** 都已啟動。  
   
-7.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+7.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 8.  按一下 [**預設的 Powerpivot 服務應用程式**]，開啟此應用程式的 PowerPivot 管理儀表板。 在第一次使用時，需要數分鐘才能載入儀表板。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66079870"
 ## <a name="verify-data-access-on-the-server"></a>確認伺服器上的資料存取。  
  若要在伺服器上確認 PowerPivot 資料存取，請執行以下作業：  
   
-1.  [下載](https://go.microsoft.com/fwlink/?LinkID=219108)Reporting Services 教學課程隨附的野餐資料範例。 您將使用此下載中的範例活頁簿確認 PowerPivot 資料存取。 將檔案解壓縮。  
+1.  [下載](https://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教學課程隨附的野餐資料範例。 您將使用此下載中的範例活頁簿確認 PowerPivot 資料存取。 將檔案解壓縮。  
   
 2.  將 Excel 活頁簿 (.xlsx) 上傳至 Shared Documents。 此活頁簿包含內嵌的 PowerPivot 資料。  
   

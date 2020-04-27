@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074594"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>建立查詢中的 Cube 內容 (MDX)
@@ -59,6 +59,6 @@ FROM [Adventure Works]
  您可以使用 MDX [LookupCube](/sql/mdx/lookupcube-mdx) 函數來擷取 Cube 內容之外的 Cube 資料。 此外，例如可用的 [Filter](/sql/mdx/filter-mdx) 函數，允許在評估查詢時暫時限制內容。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072163"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>資料分割屬性對話方塊 (SSMS)
@@ -30,7 +30,7 @@ ms.locfileid: "66072163"
   
 |頁面|描述|  
 |----------|-----------------|  
-|**選取項目**|使用 [選取範圍]**** 頁面，即可選取量值群組中的資料分割，以顯示或修改其屬性。 如需此頁面的詳細資訊，請參閱[選取範圍 &#40;資料分割屬性對話方塊&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)。|  
+|**選項**|使用 [選取範圍]**** 頁面，即可選取量值群組中的資料分割，以顯示或修改其屬性。 如需此頁面的詳細資訊，請參閱[選取範圍 &#40;資料分割屬性對話方塊&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)。|  
 |**一般**|使用 [一般]**** 頁面，即可顯示及修改 [選取範圍]**** 頁面中所選取之資料分割的一般屬性。 如需此頁面的詳細資訊，請參閱[一般 &#40;資料分割屬性對話方塊&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)。|  
 |**主動式快取**|使用 [主動式快取]**** 頁面，即可顯示及修改 [選取範圍]**** 頁面中所選取之資料分割的儲存體與主動式快取設定。 如需此頁面的詳細資訊，請參閱[主動式快取 &#40;資料分割屬性對話方塊&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)。|  
 |**錯誤組態**|使用 [錯誤組態]**** 頁面，即可顯示及修改用於處理 [選取範圍]**** 頁面中所選取資料分割的錯誤組態設定。 如需此頁面的詳細資訊，請參閱[設定 Cube、分割區和維度處理 &#40;SSAS - 多維度&#41; 時發生錯誤](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)。|  

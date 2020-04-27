@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072074"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>資料分割 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[資料分割]** 索引標籤，即可建立和修改資料分割，包括 Cube 中每個量值群組的儲存、主動式快取以及回寫設定。  
   
- 
-  **[資料分割]** 索引標籤包含下列窗格：  
+ **[資料分割]** 索引標籤包含下列窗格：  
   
 ## <a name="panes"></a>窗格  
- **工具列**  
+ **Toolbar**  
  使用工具列來執行索引標籤上的一般動作。  
   
  **量值群組**  

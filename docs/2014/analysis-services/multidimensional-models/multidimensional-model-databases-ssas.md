@@ -19,35 +19,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073515"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多維度模型資料庫 (SSAS)
-  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫是資料來源、資料來源檢視、Cube、維度及角色的集合。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫也可以包含資料採礦結構，以及提供您方法將使用者定義函數加入至資料庫的自訂組件。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫是資料來源、資料來源檢視、Cube、維度及角色的集合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫也可以包含資料採礦結構，以及提供您方法將使用者定義函數加入至資料庫的自訂組件。  
   
  Cube 是 Analysis Services 的基本查詢物件。 當您透過用戶端應用程式連接至 Analysis Services 資料庫時，您可以連接至該資料庫內的 Cube。 如果跨多個內容重複使用維度、組件、角色或採礦結構，資料庫可能包含多個 Cube。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您可以程式設計方式或透過下列其中一個互動方法，建立及修改  資料庫：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您可以程式設計方式或透過下列其中一個互動方法，建立及修改  資料庫：  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案部署到指定的  執行個體。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 這個程序會建立  資料庫 (如果該執行個體中尚未存在這個名稱的資料庫)，並將新建之資料庫內的已設計物件具現化。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，對於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中物件所做的變更必須要在專案部署到  執行個體之後，才會生效。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案部署到指定的  執行個體。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 這個程序會建立  資料庫 (如果該執行個體中尚未存在這個名稱的資料庫)，並將新建之資料庫內的已設計物件具現化。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，對於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中物件所做的變更必須要在專案部署到  執行個體之後，才會生效。  
   
--   請使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行個體內建立空的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料庫，然後使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 直接連接到該資料庫，並在其中建立物件 (而不是在專案內建立)。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 當以這個方式使用  資料庫時，對物件所做的變更會在儲存已變更的物件之後，於您所連接的這個資料庫中生效。  
+-   請使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行個體內建立空的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料庫，然後使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 直接連接到該資料庫，並在其中建立物件 (而不是在專案內建立)。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 當以這個方式使用  資料庫時，對物件所做的變更會在儲存已變更的物件之後，於您所連接的這個資料庫中生效。  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會使用與原始檔控制軟體的整合，以支援多位開發人員同時在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中使用不同的物件。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 開發人員也可以直接與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫互動，而不用透過 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，但是這樣做會有一個風險，就是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的物件可能不會與用於部署的  專案同步。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在部署之後，您會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來管理  資料庫。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫進行某些變更 (如資料分割和角色的變更)，而這樣也會使得 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的物件不會與用於部署的  專案同步。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會使用與原始檔控制軟體的整合，以支援多位開發人員同時在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中使用不同的物件。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 開發人員也可以直接與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫互動，而不用透過 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，但是這樣做會有一個風險，就是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的物件可能不會與用於部署的  專案同步。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在部署之後，您會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來管理  資料庫。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫進行某些變更 (如資料分割和角色的變更)，而這樣也會使得 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的物件不會與用於部署的  專案同步。  
   
 ## <a name="related-tasks"></a>相關工作  
  [附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)  

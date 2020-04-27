@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077615"
 ---
 # <a name="model-tab-mining-model-viewers"></a>模型索引標籤 (採礦模型檢視器)
@@ -24,7 +24,7 @@ ms.locfileid: "66077615"
   
  使用此時間序列模型檢視可擷取有關時間序列分析的有用資訊，包括圖形的方程式、ARIMA 詞彙和係數。  
   
- **如需詳細資訊：** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)、[使用 microsoft 時間序列檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)  
+ **如需詳細資訊，請參閱** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)、 [使用 Microsoft 時間序列檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

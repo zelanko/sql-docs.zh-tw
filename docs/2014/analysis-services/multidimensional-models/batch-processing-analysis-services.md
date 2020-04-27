@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076946"
 ---
 # <a name="batch-processing-analysis-services"></a>批次處理 (Analysis Services)
@@ -30,9 +30,9 @@ ms.locfileid: "66076946"
   
  [SQL Server Data Tools 中的批次處理](#bkmk_ssdt)  
   
- [在 Management Studio 中使用 XMLA 的批次處理](#bkmk_xmla)  
+ [在 Management Studio 中使用 XMLA 執行批次處理](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>SQL Server Data Tools 中的批次處理  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a> SQL Server 資料工具中的批次處理  
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中處理物件之前，必須先部署包含該物件的專案。 如需詳細資訊，請參閱[部署 Analysis Services 專案 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)。  
   
 1.  開啟 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
@@ -53,9 +53,9 @@ ms.locfileid: "66076946"
   
 9. 在 **[處理選項]** 下標示下列設定：  
   
-    -   [**處理順序**] 設定為 [**連續**]，而 [**交易模式]** 設定為 [**一筆交易**]。  
+    -   將 **[處理順序]** 設定為 **[循序]**，並將 **[交易模式]** 設定為 **[一筆交易]**。  
   
-    -   **回寫資料表選項**設定為**使用現有**的。  
+    -   將 **[回寫資料表選項]** 設定為 **[使用現有的]**。  
   
     -   在 **[受影響的物件]** 下，選取 **[處理受影響的物件]** 核取方塊。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66076946"
   
 14. 按一下 **[處理物件]** 畫面上的 **[關閉]** 。  
   
-##  <a name="bkmk_xmla"></a>在 Management Studio 中使用 XMLA 的批次處理  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>在 Management Studio 中使用 XMLA 的批次處理  
  您可以建立執行批次處理的 XMLA 指令碼。 首先在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中為每個物件產生 XMLA 指令碼，然後將它們結合為可以互動方式執行或在排程工作內執行的單一 XMLA 查詢。  
   
  如需逐步指示，請參閱 **使用 SQL Server Agent 排程 SSAS 管理工作** 中的 [範例 2](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  

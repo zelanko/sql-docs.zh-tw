@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078791"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>第 4 課：標記為日期資料表
@@ -24,16 +24,16 @@ ms.locfileid: "66078791"
   
  在這一課，您將標記所匯入並重新命名的 Date 資料表為「日期資料表」**，而 Date 資料行 (包含在 Date 資料表中) 則會標記為「日期資料行」**(唯一識別碼)。 名稱日期的所有使用都可能會令人困惑，但您很快就會得到這種想法。  
   
- 這堂課的預估完成時間：**3 分鐘**  
+ 完成本課程的估計時間： **3 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 3 課：重新命名資料行](rename-columns.md)。  
   
 ### <a name="to-set-mark-as-date-table"></a>設定標記為日期資料表  
   
 1.  在模型設計師中，按一下 [Date]**** 資料表 (索引標籤)。  
   
-2.  依序按一下 [資料表]**** 功能表、[日期]**** 和 [標記為日期資料表]****。  
+2.  依序按一下 [**資料表**] 功能表、[**日期**] 和 [**標記為日期資料表**]。  
   
 3.  在 [標記為日期資料表]**** 對話方塊中，在 [日期]**** 清單方塊中選取 [Date]**** 資料行當作唯一識別碼。  
   

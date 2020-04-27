@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070973"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此活頁簿包含可重新整理外部資料的一個或多個查詢。
@@ -39,7 +39,7 @@ ms.locfileid: "66070973"
   
  您也可以變更組態設定，不再於重新整理時警告。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 [Excel Services 應用程式]****。  
   

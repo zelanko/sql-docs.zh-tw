@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072720"
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
@@ -28,9 +28,8 @@ ms.locfileid: "66072720"
   
  您可以使用 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]或 MDX 指派或變更任一個 Cube 定義的彙總方法。 如需進一步指示，請參閱[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)或 [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)。  
   
-##  <a name="AggFunction"></a>彙總函式  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供多種函數可以彙總量值群組中所含維度的量值。 彙總函式的「加總性」** 決定如何在 Cube 的所有維度中來彙總量值。 彙總函式分成三個加總性層級：  
+##  <a name="aggregate-functions"></a><a name="AggFunction"></a>彙總函式  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供多種函數可以彙總量值群組中所含維度的量值。 彙總函式的「加總性」** 決定如何在 Cube 的所有維度中來彙總量值。 彙總函式分成三個加總性層級：  
   
  加法  
  此為加總量值，也稱為完全加總量值，可將包含該量值的量值群組中，所包含的所有維度加以彙總，而且沒有限制。  
@@ -58,7 +57,7 @@ ms.locfileid: "66072720"
 |`FirstNonEmpty`|局部加總|擷取第一個非空白之子成員的值。|  
 |`LastNonEmpty`|局部加總|擷取最後一個非空白之子成員的值。|  
   
-##  <a name="bkmk_distinct"></a>關於相異計數量詞  
+##  <a name="about-distinct-count-measures"></a><a name="bkmk_distinct"></a> About Distinct Count measure  
  具有 **彙總函式** 屬性值 **Distinct Count** 的量值稱為相異計數量值。 相異計數量值可用來統計事實資料表中某維度之最低層級成員的出現次數。 因為當成員出現多次時，此計數便會不同，所以只會計算一次。 相異計數量值只會用在專用的量值群組中。 最佳做法是將相異計數量值放入設計師內建的專用量值群組，以最佳化效能。  
   
  相異計數量值通常是用來針對維度的每一個成員判斷，另一個維度有多少相異的最低層級成員共用事實資料表中的資料列； 例如在 Sales Cube 中，針對每一個客戶及客戶群組判斷，已經購買了多少數量的相異產品？ (也就是說，對於客戶維度的每一個成員而言，產品維度中有多少相異的最低層級成員共用事實資料表中的資料列？)或者在 Internet Site Visits Cube 中，針對每一個網站造訪者及網站造訪者群組判斷，此網際網路網站上造訪過的相異網頁數目。 (也就是說，對於網站造訪者維度的每一個成員而言，網頁維度中有多少相異的最低層級成員共用事實資料表中的資料列？)在每一個範例中，第二個維度的最低層級成員是由相異計數量值所統計。  

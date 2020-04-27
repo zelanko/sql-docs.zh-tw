@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072153"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>資料分割來源對話方塊 (Analysis Services - 多維度資料)
-  使用 ** 中的 [資料分割來源]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可指定資料分割之事實資料表資料的來源。 您可依下列方式顯示 [資料分割來源]**** 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [資料分割來源]**** 對話方塊，即可指定資料分割之事實資料表資料的來源。 您可依下列方式顯示 [資料分割來源]**** 對話方塊：  
   
 -   在 [Cube 設計師] 中的 [資料分割]**** 索引標籤上，於 [量值群組]**** 窗格中所選取量值群組的 [資料分割]**** 方格中，按一下資料格上的 [...]**** 按鈕。  
   
--   在 ** 中的 [屬性]**** 視窗中，於 [資料分割]**** 物件的 [來源]**** 屬性值上，按一下 [...]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 按鈕。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [屬性]**** 視窗中，於 [資料分割]**** 物件的 [來源]**** 屬性值上，按一下 [...]**** 按鈕。  
   
 ## <a name="options"></a>選項。  
   

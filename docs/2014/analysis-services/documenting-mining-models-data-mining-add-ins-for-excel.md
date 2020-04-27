@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081593"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>記錄採礦模型 (適用於 Excel 的資料採礦增益集)
@@ -55,12 +55,12 @@ ms.locfileid: "66081593"
   
 ||||  
 |-|-|-|  
-|**中繼資料**|模型名稱<br /><br /> 模型說明<br /><br /> 演算法名稱<br /><br /> 上次處理的日期||  
+|**中繼資料**|模型名稱<br /><br /> 模型描述<br /><br /> 演算法名稱<br /><br /> 上次處理的日期||  
 |**模型結果**|關聯|項目集的計數<br /><br /> 規則的計數|  
 ||叢集|叢集的計數<br /><br /> 每個叢集的支援|  
 ||決策樹|樹狀結構數目<br /><br /> 每個樹狀結構中的節點數目|  
 ||線性迴歸|樹狀結構數目 (永遠為 1)<br /><br /> 節點數目 (永遠為 1)|  
-||貝氏機率分類|重要的屬性|  
+||貝氏機率分類|重要屬性|  
 ||類神經網路|輸入節點的數目<br /><br /> 輸出節點的數目<br /><br /> 隱藏節點的數目|  
 ||時序群集|叢集數目|  
   

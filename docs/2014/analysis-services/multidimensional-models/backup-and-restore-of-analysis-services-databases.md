@@ -22,14 +22,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077033"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括備份與還原，讓您可以從特定時間點復原資料庫及其物件。 備份與還原也是一種有效的技術，可將資料庫移轉到升級的伺服器、在伺服器之間移動資料庫，或是將資料庫部署到實際伺服器。 如果您還沒有備份計畫，但是您有很重要的資料，就應該盡快設計及實作計畫，以供資料復原之用。  
   
  備份與還原命令是在已部署的 Analysis Services 資料庫上執行。 針對您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的專案和方案，您應該使用原始檔控制來確保您可以復原特定版本的來源檔案，然後為您要使用之原始檔控制系統的儲存機制，建立資料復原計畫。  
@@ -46,14 +45,14 @@ ms.locfileid: "66077033"
   
 -   [還原 Analysis Services 資料庫](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
  您必須具有 Analysis Services 執行個體的管理權限，或在要備份的資料庫上擁有「完整控制權 (管理員)」權限。  
   
  還原位置相較於取得備份的來源執行個體而言，必須是相同版本或更新版本的 Analysis Services 執行個體。 雖然您無法將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體中的資料庫還原到舊版的 Analysis Services，但是在較新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體上還原舊版資料庫 (例如 SQL Server 2012) 是常見的做法。  
   
  還原位置必須具有相同的伺服器類型。 表格式資料庫只能還原到以表格式模式執行的 Analysis Services。 多維度資料庫需要在多維度模式下執行的執行個體。  
   
-##  <a name="bkmk_prep"></a>準備備份  
+##  <a name="preparing-for-backup"></a><a name="bkmk_prep"></a>準備備份  
  請使用下列檢查清單來準備備份：  
   
 -   檢查將儲存備份檔案的位置。 如果您使用遠端位置，必須將它指定為 UNC 資料夾。 確認您可以存取此 UNC 路徑。  
@@ -64,7 +63,7 @@ ms.locfileid: "66077033"
   
 -   檢查現有檔案是否有相同名稱。 如果同名的檔案已經存在，備份將會失敗，除非您指定覆寫檔案的選項。  
   
-##  <a name="bkmk_cube"></a>備份多維度或表格式資料庫  
+##  <a name="backing-up-a-multidimensional-or-a-tabular-database"></a><a name="bkmk_cube"></a> 備份多維度或表格式資料庫  
  系統管理員可以將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至單一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔 (.abf)，而不用考慮資料庫的大小。 如需逐步指示，請參閱 [如何備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自動備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
@@ -100,7 +99,7 @@ ms.locfileid: "66077033"
   
  如需備份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱 [備份選項](backup-options.md)。  
   
-##  <a name="bkmk_restore"></a>還原 Analysis Services 資料庫  
+##  <a name="restoring-an-analysis-services-database"></a><a name="bkmk_restore"></a>還原 Analysis Services 資料庫  
  管理員可以從一個或多個備份檔案還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
 > [!NOTE]  

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073043"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
   當[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]您使用部署嚮導來[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署專案時，您可以透過下列方式執行嚮導：  
   
--   **以互動方式**以互動方式執行時[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，部署嚮導會根據輸入檔產生 XML 部署腳本，而這些檔案是由使用者輸入以互動方式修改。 精靈只會將使用者修改套用至部署指令碼。 精靈不會修改輸入檔。 如需關於輸入檔的詳細資訊，請參閱 [了解用來建立部署指令碼的輸入檔](deployment-script-files-input-used-to-create-deployment-script.md)。  
+-   **互動式** ：以互動方式執行時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈會產生以輸入檔為基礎的 XML 部署指令碼，而由使用者輸入以互動方式加以修改。 精靈只會將使用者修改套用至部署指令碼。 精靈不會修改輸入檔。 如需關於輸入檔的詳細資訊，請參閱 [了解用來建立部署指令碼的輸入檔](deployment-script-files-input-used-to-create-deployment-script.md)。  
   
 -   **從命令提示**字元當在命令提示字元下執行時[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，部署嚮導會根據您用來執行嚮導的參數，產生 XML FOR ANALYSIS （XMLA）部署腳本。 此精靈可以是下列其中之一：提示使用者輸入並依據該輸入來修改輸入檔；依現狀使用輸入檔來執行無訊息自動部署；或建立可稍後使用的部署指令碼。  
   
@@ -46,8 +46,7 @@ ms.locfileid: "66073043"
     >  如果您找不到* \<專案名稱>*.asdatabase 檔案，請嘗試使用 [搜尋] 並指定 *. .asdatabase。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>在命令提示字元下執行 Analysis Services 部署精靈  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈也可以在命令提示字元下執行。 當您在命令提示字元中執行精靈時，請提供 .asdatabase 檔案的完整路徑，並在下列其中一個模式下執行精靈：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈也可以在命令提示字元下執行。 當您在命令提示字元中執行精靈時，請提供 .asdatabase 檔案的完整路徑，並在下列其中一個模式下執行精靈：  
   
  **回應檔案模式**  
  在回應檔案模式中，精靈可讓您以互動方式修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立時原先產生的輸入檔。 在產生 XMLA 部署指令碼之前，精靈會儲存這些修改的輸入檔。 下次執行精靈時，已修改的輸入檔會變成新的起點。  

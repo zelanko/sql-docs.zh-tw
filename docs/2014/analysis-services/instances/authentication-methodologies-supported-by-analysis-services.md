@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080337"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
@@ -34,7 +34,7 @@ ms.locfileid: "66080337"
   
  如需 BI 和 Analysis Services 驗證流程的詳細資訊，請參閱 [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576)(Microsoft BI 驗證及識別委派)。  
   
-##  <a name="bkmk_auth"></a>瞭解您的驗證替代方案  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a> 了解您的驗證替代方案  
  連接到 Analysis Services 資料庫需要 Windows 使用者或群組識別以及相關聯的權限。 此識別可能是一般用途的登入，由需要檢視報表的任何人使用，但是比較可能的案例包含個別使用者的識別。  
   
  表格式或多維度模型通常具有不同的資料存取層級 (依物件或資料本身)，端視提出要求的對象而定。 為了符合此需求，您可以使用 NTLM、Kerberos、EffectiveUserName 或基本驗證。 上述所有技術都會提供一種透過每個連接傳入不同使用者識別的方法。 不過，這些選擇大部分會受限於單躍點限制。 只有含有委派的 Kerberos 允許原始使用者識別跨多個電腦連接流向遠端伺服器上的後端資料存放區。  

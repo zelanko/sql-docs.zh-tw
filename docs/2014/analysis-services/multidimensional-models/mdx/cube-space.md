@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074704"
 ---
 # <a name="cube-space"></a>Cube 空間
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  在上述查詢中，Customer 維度內的 Customer Geography 使用者自訂階層是用來定義 Cube 空間中的位置 (先前是使用屬性階層加以定義)。 使用屬性階層或使用者自訂階層，都可以定義 Cube 空間中的相同位置。  
   
-##  <a name="AttribRelationships"></a>屬性關聯性和 Cube 空間  
+##  <a name="attribute-relationships-and-cube-space"></a><a name="AttribRelationships"></a>屬性關聯性和 Cube 空間  
  定義相關屬性之間的屬性關聯性後，不僅查詢效能會因著建立適當彙總而提高，與屬性階層成員同時出現的相關屬性階層成員也會因此受影響。 例如，當您定義的 Tuple 包含 City 屬性階層的成員，並且該 Tuple 沒有明確定義 Country 屬性階層成員，您可能預期預設的 Country 屬性階層成員將會是 Country 屬性階層的相關成員。 然而，只有在 City 屬性階層和 Country 屬性階層之間已定義屬性關聯性時，這個狀況才會屬實。  
   
  下列範例會傳回查詢中沒有明確包含之相關屬性階層的成員。  
@@ -135,6 +135,6 @@ FROM [Adventure Works]
  [使用成員、元組和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [視覺效果總計和非視覺化總計](visual-totals-and-non-visual-totals.md)   
  [Mdx 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [&#40;MDX&#41; 參考的多維度運算式](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

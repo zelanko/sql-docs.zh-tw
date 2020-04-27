@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071816"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>設定檔案上傳的大小上限 (PowerPivot for SharePoint)
@@ -28,7 +28,7 @@ ms.locfileid: "66071816"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>設定 Excel Services 的檔案大小上限  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 Excel Services 應用程式的名稱。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071816"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>設定 SharePoint Web 應用程式的檔案大小上限  
   
-1.  在管理中心的 [應用程式管理] 中，按一下 **[管理 Web 應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理 web 應用程式**]。  
   
     > [!NOTE]  
     >  只有當您在 Excel Services 中增加 [最大活頁簿大小] 時，才執行以下步驟。  

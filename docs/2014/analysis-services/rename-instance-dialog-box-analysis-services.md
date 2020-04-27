@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070365"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>重新命名執行個體對話方塊 (Analysis Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66070365"
 |----------|----------------|  
 |**要重新命名的執行個體**|選取要重新命名的執行個體。|  
 |**新執行個體名稱**|輸入想要的執行個體名稱。 請勿包含伺服器名稱。 \<也就是說，不是>\\<實例名稱\>輸入伺服器名稱，而是只\<輸入實例名稱>。<br /><br /> 如果您要使正在重新命名的執行個體成為預設的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，請保留名稱空白。|  
-|**Username**|顯示服務會用來啟動的帳戶。 不可以變更使用者名稱。|  
+|**使用者名稱**|顯示服務會用來啟動的帳戶。 不可以變更使用者名稱。|  
 |**密碼**|輸入服務帳戶的密碼。|  
   
 ## <a name="see-also"></a>另請參閱  

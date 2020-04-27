@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072692"
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用範本建立動作
@@ -32,6 +32,6 @@ ms.locfileid: "66072692"
 -   填入必要資訊，以完成建置以範本為基礎的動作。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Analysis Services 多維度資料的動作&#41;](actions-analysis-services-multidimensional-data.md)  
+ [動作 &#40;Analysis Services - 多維度資料&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

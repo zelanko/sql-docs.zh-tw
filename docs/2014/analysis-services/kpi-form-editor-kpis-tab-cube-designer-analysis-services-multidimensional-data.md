@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079444"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 表單編輯器 (KPI 索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
@@ -90,7 +90,7 @@ ms.locfileid: "66079444"
  **顯示資料夾**  
  鍵入用戶端應用程式用於顯示用途所使用的 KPI 分類。  
   
- 在顯示資料夾中使用反斜線 (\\) 來分隔資料夾名稱，並使用分號 (;) 來分隔多個顯示資料夾。 例如，鍵入 `Category\Goal\Scientific;Category\Goal\Metric`。  
+ 在顯示資料夾中使用反斜線 (\\) 來分隔資料夾名稱，並使用分號 (;) 來分隔多個顯示資料夾。 例如，輸入 `Category\Goal\Scientific;Category\Goal\Metric`。  
   
  **父 KPI**  
  選取現有的 KPI，在其下分類供用戶端應用程式使用的 KPI。  
@@ -106,12 +106,12 @@ ms.locfileid: "66079444"
 > [!IMPORTANT]  
 >  MDX 計算式必須傳回成員的唯一名稱，該成員在時間維度內與 [相關聯的量值群組]**** 中所指定的量值群組相關聯。  
   
- **權**  
+ **Weight**  
  展開即可檢視或編輯 KPI 加權因數的 MDX 運算式。  
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
- **說明**  
+ **描述**  
  鍵入 KPI 的選擇性描述。  
   
 ## <a name="see-also"></a>另請參閱  

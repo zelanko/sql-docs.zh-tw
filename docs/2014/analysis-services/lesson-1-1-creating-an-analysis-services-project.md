@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079355"
 ---
 # <a name="creating-an-analysis-services-project"></a>建立 Analysis Services 專案
-  在下列工作中，您會[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]根據[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案範本， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]使用來`Analysis Services Tutorial`建立名為的新專案。 
-  *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱 [建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
+  在下列工作中，您會[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]根據[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案範本， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]使用來`Analysis Services Tutorial`建立名為的新專案。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱 [建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>若要建立新的 Analysis Services 專案  
   

@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074800"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
@@ -47,9 +47,9 @@ ms.locfileid: "66074800"
 |詞彙|定義|  
 |----------|----------------|  
 |目標|會傳回 KPI 目標值的 MDX 數值運算式或計算。|  
-|值|會傳回 KPI 實際值的 MDX 數值運算式。|  
-|狀態|代表指定時間點之 KPI 狀態的 MDX 運算式。<br /><br /> 狀態 MDX 運算式應傳回介於 -1 和 1 之間的正規化值。 等於或小於 -1 的值將解譯為「不良」或「低」。 零值 (0) 會解釋為「可接受」或「中」。 等於或大於 1 的值將解譯為「很好」或「高」。<br /><br /> 可以選擇性地傳回無限數量的中繼值，而且如果用戶端應用程式支援的話，也可用來顯示任意數量的其他狀態。|  
-|趨勢|評估一段時間的 KPI 值的 MDX 運算式。 趨勢可以是特定商務情況下適用的任何時間性準則。<br /><br /> 趨勢 MDX 運算式可讓商務使用者判斷經過一段時間之後，KPI 是提升還是降低。|  
+|值|會傳回實際 KPI 值的 MDX 數值運算式。|  
+|狀態|代表特定時間點之 KPI 狀態的 MDX 運算式。<br /><br /> 狀態 MDX 運算式應傳回介於 -1 和 1 之間的正規化值。 等於或小於 -1 的值將解譯為「不良」或「低」。 零值 (0) 會解釋為「可接受」或「中」。 等於或大於 1 的值將解譯為「很好」或「高」。<br /><br /> 可以選擇性地傳回無限數量的中繼值，而且如果用戶端應用程式支援的話，也可用來顯示任意數量的其他狀態。|  
+|趨勢|評估一段時間後之 KPI 值的 MDX 運算式。 趨勢可以是在特定商務內容中任何有意義且以時間為基礎的準則。<br /><br /> 趨勢 MDX 運算式可讓商務使用者判斷經過一段時間之後，KPI 是提升還是降低。|  
 |狀態指標|快速表示 KPI 狀態的視覺元素。 元素的顯示取決於用來評估狀態的 MDX 運算式值。|  
 |趨勢指標|快速表示 KPI 趨勢的視覺元素。 元素的顯示取決於用來評估趨勢的 MDX 運算式值。|  
 |顯示資料夾|使用者瀏覽 Cube 時，可在其中看到 KPI 的資料夾。|  
@@ -60,10 +60,9 @@ ms.locfileid: "66074800"
 ## <a name="parent-kpis"></a>父 KPI  
  組織可追蹤不同層級的不同商業標準。 例如，只有兩或三個 KPI 可用來量測全公司的商業成就，但這些公司的整體性 KPI 可以用公司內的事業單位所追蹤的其他三或四個 KPI 為基礎。 同時，公司內的事業單位可使用不同的統計資料來計算相同的 KPI，然後再將結果積存到公司的整體性 KPI。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您定義 KPI 之間的父子式關聯性。 此父子式關聯性可讓子 KPI 的結果用於計算父 KPI 的結果。 用戶端應用程式也可以使用此關聯性來適當地顯示父 KPI 和子 KPI。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您定義 KPI 之間的父子式關聯性。 此父子式關聯性可讓子 KPI 的結果用於計算父 KPI 的結果。 用戶端應用程式也可以使用此關聯性來適當地顯示父 KPI 和子 KPI。  
   
-## <a name="weights"></a>Weights  
+## <a name="weights"></a>加權  
  子 KPI 也可指派加權。 加權可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在計算父 KPI 值時，按比例調整子 KPI 的結果。  
   
 ## <a name="retrieving-and-displaying-kpis"></a>擷取及顯示 KPI  

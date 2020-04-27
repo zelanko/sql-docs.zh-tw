@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080620"
 ---
 # <a name="import-data-ssas-tabular"></a>匯入資料 (SSAS 表格式)
@@ -25,9 +25,9 @@ ms.locfileid: "66080620"
   
  您可以使用資料表匯入精靈，從下列資料來源匯入資料：  
   
-|**資料來源**|**說明**|  
+|**資料來源**|**描述**|  
 |---------------------|---------------------|  
-|**關聯式資料庫**|關聯式資料來源包括：<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
+|**關係資料庫**|關聯式資料來源包括：<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
 |**多維度來源**|Microsoft SQL Server Analysis Services Cube|  
 |**資料摘要**|資料摘要包括：<br /><br /> Microsoft Reporting Services 報表<br /><br /> Azure DataMarket 資料集<br /><br /> 公用提供者或公司提供者的 ATOM 摘要|  
 |**文字檔**|文字檔包括：<br /><br /> Excel 檔案 (.xlsx)<br /><br /> 文字檔 (.txt)|  
@@ -42,6 +42,6 @@ ms.locfileid: "66080620"
 |[從多維度資料來源匯入 &#40;SSAS 表格式&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|描述如何從多維度 SQL Server Analysis Services Cube 匯入資料。|  
 |[從資料摘要匯入 &#40;SSAS 表格式&#41;](import-from-a-data-feed-ssas-tabular.md)|描述如何從 Microsoft Reporting Services 報表或 Azure DataMarket 資料集等資料摘要匯入資料。|  
 |[從 &#40;SSAS 表格式&#41;的文字檔匯入](import-from-a-text-file-ssas-tabular.md)|描述如何從 Microsoft Excel 活頁簿或文字檔匯入資料。|  
-|[複製並貼上資料 &#40;SSAS 表格式&#41;](copy-and-paste-data-ssas-tabular.md)|描述如何使用 [貼上] 和 [貼上新增]，將資料加入模型設計師中的現有資料表。|  
+|[複製及貼上資料 &#40;SSAS 表格式&#41;](copy-and-paste-data-ssas-tabular.md)|描述如何使用 [貼上] 和 [貼上新增]，將資料加入模型設計師中的現有資料表。|  
   
   

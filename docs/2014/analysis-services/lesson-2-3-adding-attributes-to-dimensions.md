@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079025"
 ---
 # <a name="adding-attributes-to-dimensions"></a>將屬性加入至維度
@@ -64,15 +64,15 @@ ms.locfileid: "66079025"
   
 5.  將下列資料行，從 [資料來源檢視]**** 窗格中的 [地理位置]**** 資料表拖曳至 [屬性]**** 窗格：  
   
-    -   **City**  
+    -   **城市**  
   
-    -   **[Stateprovincename]**  
+    -   **StateProvinceName**  
   
-    -   **Englishcountryregionname]**  
+    -   **EnglishCountryRegionName**  
   
     -   **PostalCode**  
   
-6.  按一下 [檔案] 功能表上的 [全部儲存]  。  
+6.  按一下 [ 檔案 ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>將屬性加入至 [產品] 維度  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079025"
   
     -   **StandardCost**  
   
-    -   **Color**  
+    -   **顏色**  
   
     -   **SafetyStockLevel**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079025"
   
     -   **SizeRange**  
   
-    -   **權**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079025"
   
     -   **DealerPrice**  
   
-    -   **課堂**  
+    -   **類別**  
   
     -   **Style**  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66079025"
   
     -   **狀態**  
   
-5.  按一下 [檔案] 功能表上的 [全部儲存]  。  
+5.  按一下 [ 檔案 ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [檢閱 Cube 和維度屬性](lesson-2-4-reviewing-cube-and-dimension-properties.md)  

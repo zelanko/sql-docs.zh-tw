@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075054"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授與維度資料的自訂存取權 (Analysis Services)
@@ -41,10 +41,10 @@ ms.locfileid: "66075054"
   
  基本維度安全性是最簡單的；您只需選取要在角色中包含或排除的維度屬性和屬性階層。 進階安全性較複雜，而且需要 MDX 指令碼的專業知識。 以下是這兩種方法的敘述。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  並非所有量值或維度成員均可用在自訂存取案例中。 如果某個角色禁止存取預設的量值或成員，或是該角色禁止存取的量值為量值運算式的一部分，則連線將會失敗。  
   
- **檢查維度安全性的障礙物：量值運算式中使用的預設量值、預設成員及量值**  
+ **檢查維度安全性的限制：預設量值、預設成員及量值運算式中使用的量值**  
   
 1.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 cube，然後選取 [**腳本 cube] 做** | 為 [**更改為** | 追加**查詢編輯器視窗]**。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66075054"
   
 ## <a name="basic-dimension-security"></a>基本維度安全性  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]****，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到的實例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
   
-     角色應該已具備 Cube 的讀取權限。 如需設定維度權限的詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
+     角色應該已具備 Cube 的讀取權限。 如需詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
   
 2.  在 [**維度資料** | ] [**基本**] 上，選取您要設定許可權的維度。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66075054"
   
      或者，您可以 [取消選取全部成員]**** 來全面撤銷存取，然後挑選要允許的成員。 在後續的處理作業中，一直到您手動編輯維度資料安全性來允許存取新成員為止，將無法看到任何新成員。  
   
-5.  （選擇性） **** 按一下 [Advanced `Visual Totals` ]，為此屬性階層啟用。 這個選項會根據可透過這個角色使用的成員，重新計算彙總。  
+5.  （選擇性） **Advanced**按一下 [Advanced `Visual Totals` ]，為此屬性階層啟用。 這個選項會根據可透過這個角色使用的成員，重新計算彙總。  
   
     > [!NOTE]  
     >  在套用變更維度成員的權限時，並不會自動重新計算彙總的總計。 假設在`All`套用許可權之前，屬性階層的成員傳回200計數。 套用拒絕存取部分成員的許可權之後， `All`仍然會傳回200，即使使用者看到的成員值較少也一樣。 若要避免混淆 cube 的取用者，您可以將`All`成員設定為僅限角色成員成員的匯總，而不是屬性階層之所有成員的匯總。 若要叫用這個行為，您`Visual Totals`可以在設定維度安全性時，于 [ **Advanced** ] 索引標籤上啟用。 啟用之後，彙總會在查詢期間計算，而不是從預先計算的彙總中擷取。 這可以在查詢效能上產生顯著效果，因此只有在需要時才使用它。  
@@ -88,7 +88,7 @@ ms.locfileid: "66075054"
   
  您可以使用 MDX 產生器來撰寫 MDX 陳述式。 如需詳細資訊，請參閱 [MDX 產生器 &#40;Analysis Services - 多維度資料&#41;](../mdx-builder-analysis-services-multidimensional-data.md)。 [進階]**** 索引標籤具有下列選項：  
   
- **Attribute**  
+ **屬性**  
  選取您要管理其成員安全性的屬性。  
   
  **允許的成員集**  
@@ -113,7 +113,7 @@ ms.locfileid: "66075054"
   
  例如，假設資料庫角色指定 `Male` 做為 `Gender` 屬性的預設成員。 除非查詢明確包含 `Gender` 屬性並為此屬性指定不同成員，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會傳回只包含男性客戶的資料集。 如需設定預設成員的詳細資訊，請參閱 [定義預設成員](attribute-properties-define-a-default-member.md)。  
   
- **啟用視覺效果總計**  
+ **啟用視覺化總計**  
  VisualTotals 屬性會指出所顯示彙總資料格的值，是根據所有資料格值來計算，還是只根據資料庫角色所看見資料格的值來計算。  
   
  預設會停用 VisualTotals 屬性（設定為`False`）。 此預設值會使效能最佳化，因為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可快速計算所有資料格的值之總計，而不必浪費時間選取要計算之資料格的值。  
@@ -129,6 +129,6 @@ ms.locfileid: "66075054"
  [授與 cube 或模型許可權 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [將資料格資料的自訂存取權授與 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [授與資料採礦結構和模型的許可權 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授與資料來源物件的許可權 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授與資料來源物件的權限 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

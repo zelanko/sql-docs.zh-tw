@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070533"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>查詢參數對話方塊 (MDX)
-  使用 ** 和 ** 中的 [查詢參數][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊即可將參數加入至用於定義集合、維度和 Subcube 的 MDX 查詢。 您可以在 [MDX 查詢產生器]**** 對話方塊中按一下 [參數]**** 圖示，藉以顯示 [查詢參數]**** 對話方塊。  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [查詢參數]**** 對話方塊即可將參數加入至用於定義集合、維度和 Subcube 的 MDX 查詢。 您可以在 [MDX 查詢產生器]**** 對話方塊中按一下 [參數]**** 圖示，藉以顯示 [查詢參數]**** 對話方塊。  
   
 ## <a name="options"></a>選項。  
  **參數**  
  輸入參數名稱即可開始建立新的參數，或是編輯現有參數的名稱。  
   
- **維度**  
+ **Dimension**  
  從清單中選擇現有的維度。  
   
  **階層**  

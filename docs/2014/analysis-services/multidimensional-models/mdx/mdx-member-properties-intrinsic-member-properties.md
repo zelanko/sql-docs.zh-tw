@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074211"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>內建成員屬性 (MDX)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會公開維度成員的內建屬性，您可以將它們納入查詢中，以便傳回用於自訂應用程式的其他資料或中繼資料，或協助模型調查或建構。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
   
  內建屬性包括 `ID`、`KEY`、`KEYx` 和 `NAME`，這些屬性可在任何層級公開給每位成員。 您也可以傳回位置資訊，例如 `LEVEL_NUMBER` 或 `PARENT_UNIQUE_NAME`，以及其他資訊。  
@@ -32,9 +31,7 @@ ms.locfileid: "66074211"
 > [!NOTE]  
 >  作為符合 OLE DB 規格之 OLAP 區段（日期為1999年3月（2.6））的提供者[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，支援本主題中列出的內建成員屬性。  
 >   
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供者可支援其他內建成員屬性。 如需其他提供者支援之內建成員屬性的詳細資訊，請參閱這些提供者提供的文件。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供者可支援其他內建成員屬性。 如需其他提供者支援之內建成員屬性的詳細資訊，請參閱這些提供者提供的文件。  
   
 ## <a name="types-of-member-properties"></a>成員屬性類型  
  支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的內建成員屬性有兩種類型：  
@@ -136,7 +133,7 @@ ms.locfileid: "66074211"
 ### <a name="example"></a>範例  
  下列範例顯示傳回內建屬性的 MDX 查詢。  
   
- **範例1：在查詢中使用內容相關的內建屬性**  
+ **範例 1：在查詢中使用會受內容影響的內建屬性**  
   
  下列範例會傳回父系識別碼、索引鍵和每項產品類別的名稱。 請注意屬性如何公開為量值。 在您執行查詢時，這可讓您在資料格集中檢視屬性，而非 SSMS 的 [成員屬性] 對話方塊。 您可以執行類似此項目的查詢，以便從已部署的 Cube 擷取成員中繼資料。  
   
@@ -154,7 +151,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **範例2：不區分內容的內建屬性**  
+ **範例 2：不受內容影響的內建屬性**  
   
  下列範例是不受內容影響的內建屬性完整清單。 在 SSMS 執行查詢後，請按一下個別成員，檢視 [成員屬性] 對話方塊中的屬性。  
   
@@ -192,7 +189,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **範例3：傳回成員屬性當做結果集中的資料**  
+ **範例 3：傳回做為結果集資料的成員屬性**  
   
  下列範例會針對指定的地區設定，傳回 Adventure Works Cube 中 Product 維度的產品類別目錄成員的已翻譯標題。  
   
@@ -219,6 +216,6 @@ FROM [Adventure Works]
  [MDX&#41;的屬性 &#40;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
  [使用成員屬性 &#40;MDX&#41;](mdx-member-properties.md)   
- [Mdx 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

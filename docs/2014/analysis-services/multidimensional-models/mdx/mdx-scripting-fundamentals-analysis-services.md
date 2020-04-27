@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17cb2b326ed510a952249da6a73693b6be6ab252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073860"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>MDX 指令碼基礎觀念 (Analysis Services)
@@ -37,13 +37,13 @@ ms.locfileid: "66073860"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[基本 MDX 腳本 &#40;MDX&#41;](the-basic-mdx-script-mdx.md)|詳細說明基本的 MDX 指令碼，包括每個 Cube 提供的預設 MDX 指令碼，以及在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，MDX 指令碼一般會如何在 Cube 內運作。|  
-|[&#40;MDX&#41;管理範圍和內容](managing-scope-and-context-mdx.md)|描述如何使用 [CALCULATE](/sql/mdx/mdx-scripting-calculate) 陳述式、 [SCOPE](/sql/mdx/mdx-scripting-scope) 陳述式及 [This](/sql/mdx/this-mdx) 函數，管理 MDX 指令碼內的內容與範圍。|  
-|[使用 &#40;MDX&#41;的變數和參數](using-variables-and-parameters-mdx.md)|描述如何使用 MDX 指令碼中的變數與參數。|  
-|[&#40;MDX&#41;的錯誤處理](error-handling-mdx.md)|說明 MDX 指令碼內的錯誤處理。|  
+|[基本 MDX 指令碼 &#40;MDX&#41;](the-basic-mdx-script-mdx.md)|詳細說明基本的 MDX 指令碼，包括每個 Cube 提供的預設 MDX 指令碼，以及在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，MDX 指令碼一般會如何在 Cube 內運作。|  
+|[管理範圍及內容 &#40;MDX&#41;](managing-scope-and-context-mdx.md)|描述如何使用 [CALCULATE](/sql/mdx/mdx-scripting-calculate) 陳述式、 [SCOPE](/sql/mdx/mdx-scripting-scope) 陳述式及 [This](/sql/mdx/this-mdx) 函數，管理 MDX 指令碼內的內容與範圍。|  
+|[使用變數與參數 &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|描述如何使用 MDX 指令碼中的變數與參數。|  
+|[錯誤處理 &#40;MDX&#41;](error-handling-mdx.md)|說明 MDX 指令碼內的錯誤處理。|  
 |[支援的 MDX &#40;MDX&#41;](supported-mdx-mdx.md)|提供 MDX 指令碼內支援的 MDX 運算子、陳述式及函數的清單。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)  
+ [MDX 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)  
   
   

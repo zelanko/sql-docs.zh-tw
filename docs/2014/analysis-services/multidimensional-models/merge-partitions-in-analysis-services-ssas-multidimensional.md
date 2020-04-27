@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073653"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合併分割區 (SSAS - 多維度)
@@ -27,22 +27,22 @@ ms.locfileid: "66073653"
   
  [需求](#bkmk_prereq)  
   
- [在合併分割區之後更新分割區來源](#bkmk_Where)  
+ [合併分割區之後更新分割區來源](#bkmk_Where)  
   
- [依事實資料表或命名查詢分割之資料分割的特殊考慮](#bkmk_fact)  
+ [依事實資料表或具名查詢分割分割區的特殊考量](#bkmk_fact)  
   
  [如何使用 SSMS 合併分割區](#bkmk_partitionSSMS)  
   
  [如何使用 XMLA 合併資料分割](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a>常見案例  
+##  <a name="common-scenarios"></a><a name="bkmk_Scenario"></a>常見案例  
  針對分割區使用的單一最常見組態，牽涉到跨時間維度的資料分離。 視專案特定的商務需求而定，與每個分割區相關聯的時間資料粒度會有所不同。 例如，分割可能是依年份，並依月份分割最近的年份，再加上使用中之月份的個別分割區。 使用中月份分割區會定期顯示新資料。  
   
  當使用中的月份完成時，該分割區會合併回年初至今分割區中的月份，然後繼續進行。 在年份結束時，就會形成完整的新年度分割區。  
   
  如此案例所示，合併分割區可成為定期執行的例行工作，以提供漸進的方法來合併及組織歷程記錄資料。  
   
-##  <a name="bkmk_prereq"></a>滿足  
+##  <a name="requirements"></a><a name="bkmk_prereq"></a> 需求  
  只能合併符合下列所有準則的分割區：  
   
 -   它們有相同的量值群組。  
@@ -66,7 +66,7 @@ ms.locfileid: "66073653"
   
  若要建立未來適合進行合併的分割區，當您在分割區精靈中建立分割區時，您可以選擇從 Cube 的另一個分割區來複製彙總設計。 這樣可以確保這些分割區具有相同的彙總設計。 進行合併時，來源分割區的彙總會與目標分割區中的彙總結合。  
   
-##  <a name="bkmk_Where"></a>在合併分割區之後更新分割區來源  
+##  <a name="update-the-partition-source-after-merging-partitions"></a><a name="bkmk_Where"></a>在合併分割區之後更新分割區來源  
  分割區會依查詢 (例如用於處理資料之 SQL 查詢的 WHERE 子句) 分割，或依資料表或具名查詢分割，以提供資料給分割區。 分割區的 `Source` 屬性指出分割區繫結至查詢或資料表。  
   
  當您合併分割區時，會合併分割區的內容，但不會更新 `Source` 屬性以反映其他分割區的範圍。 這表示如果您後續重新處理保留其原始 `Source` 的分割區，會從該分割區取得不正確的資料。 分割區會錯誤地在父層級彙總資料。 下列範例說明此行為。  
@@ -85,7 +85,7 @@ ms.locfileid: "66073653"
   
  合併分割區之後，請務必檢查 `Source` 以確認篩選對於合併的資料是正確的。 如果您的分割區一開始包含 Q1、Q2 和 Q3 的歷程記錄資料，且您現在想合併 Q4，則必須調整篩選以加入 Q4。 否則，分割區的後續處理將產生錯誤的結果。 此結果對於 Q4 而言將不正確。  
   
-##  <a name="bkmk_fact"></a>依事實資料表或命名查詢分割之資料分割的特殊考慮  
+##  <a name="special-considerations-for-partitions-segmented-by-fact-table-or-named-query"></a><a name="bkmk_fact"></a>依事實資料表或命名查詢分割之資料分割的特殊考慮  
  除了查詢之外，也可依資料表或具名查詢分割分割區。 如果來源分割區和目標分割區使用資料來源或資料來源檢視中的相同事實資料表，`Source` 屬性會在合併分割區之後生效。 它會指定適合結果分割區的事實資料表資料。 由於事實資料表中已存在結果分割區所需的事實，因此不需要修改 `Source` 屬性。  
   
  使用多個事實資料表或具名查詢中資料的分割區需要執行額外的工作。 您必須手動將來源分割區的事實資料表中的事實，合併到目標分割區的事實資料表。  
@@ -110,7 +110,7 @@ ms.locfileid: "66073653"
   
  事實資料表可以在合併分割區之前或之後合併。 然而，只有在兩個作業都完成後，彙總才能正確地代表基礎事實。 當使用者未連接到包含這些分割區的 Cube 時，建議您合併存取不同事實資料表的 HOLAP 或 ROLAP 分割區。  
   
-##  <a name="bkmk_partitionSSMS"></a>如何使用 SSMS 合併分割區  
+##  <a name="how-to-merge-partitions-using-ssms"></a><a name="bkmk_partitionSSMS"></a>如何使用 SSMS 合併分割區  
   
 > [!IMPORTANT]  
 >  合併分割區之前，請先複製資料篩選資訊 (通常是根據 SQL 查詢篩選的 WHERE 子句)。 在完成合併之後，您應該更新包含累積事實資料之分割區的 Partition Source 屬性。  
@@ -128,7 +128,7 @@ ms.locfileid: "66073653"
   
 5.  開啟`Source`屬性並修改 WHERE 子句，使其包含剛才合併的分割區資料。 回想一下， `Source`此屬性不會自動更新。 如果您重新處理而未先`Source`更新，您可能無法取得所有預期的資料。  
   
-##  <a name="bkmk_partitionsXMLA"></a>如何使用 XMLA 合併資料分割  
+##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合併分割區  
  如需詳細資訊，請參閱此主題：[合併資料分割 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  
   
 ## <a name="see-also"></a>另請參閱  

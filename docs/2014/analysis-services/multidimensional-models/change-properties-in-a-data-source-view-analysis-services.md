@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076740"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>變更資料來源檢視的屬性 (Analysis Services)
@@ -53,7 +53,7 @@ ms.locfileid: "66076740"
 |SchemaRestriction|指定對於從資料來源擷取之結構描述的限制 (如果有的話)。 依預設，不會有任何結構描述限制存在。|  
   
 ## <a name="viewing-or-changing-datatable-properties"></a>檢視或變更 DataTable 屬性  
- **DataTable**屬性是資料來源視圖中資料表、視圖和命名查詢的屬性。 將任何物件加入到資料來源檢視時，會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataTable]** 物件的屬性。  
+ **[DataTable]** 屬性是資料來源檢視中資料表、檢視和具名查詢的屬性， 將任何物件加入到資料來源檢視時，會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataTable]** 物件的屬性。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "66076740"
 |TableType|指定資料表、檢視表或具名查詢的資料表類型。 無法編輯這個屬性。|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>檢視或變更 DataColumn 屬性  
- **DataColumn**屬性是資料來源視圖中資料表、視圖和命名查詢中的資料行屬性。 當任何物件加入到資料來源檢視 (從基礎資料表或檢視、具名查詢，或是具名計算所定義)，便會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataColumn]** 物件的屬性。  
+ **[DataColumn]** 屬性是資料來源檢視中資料表、檢視表及具名查詢內資料行的屬性， 當任何物件加入到資料來源檢視 (從基礎資料表或檢視、具名查詢，或是具名計算所定義)，便會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataColumn]** 物件的屬性。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -81,6 +81,6 @@ ms.locfileid: "66076740"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
- [在資料來源視圖設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

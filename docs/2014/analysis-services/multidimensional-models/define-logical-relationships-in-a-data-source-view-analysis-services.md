@@ -15,17 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075614"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯關聯性 (Analysis Services)
   [資料來源檢視精靈] 和資料來源檢視設計工具會根據基礎資料庫關聯性，或是根據您所指定的名稱比對準則，自動定義加入到資料來源檢視 (DSV) 之資料表之間的關聯性。  
   
- 在使用多個資料來源之資料的情況下，您可能需要在 DSV 中手動定義邏輯關聯性，以補充那些自動定義的關聯性。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要關聯性來識別事實資料表和維度資料表、建構查詢以從基礎資料來源擷取資料和中繼資料，以及利用進階的商業智慧功能。  
+ 在使用多個資料來源之資料的情況下，您可能需要在 DSV 中手動定義邏輯關聯性，以補充那些自動定義的關聯性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要關聯性來識別事實資料表和維度資料表、建構查詢以從基礎資料來源擷取資料和中繼資料，以及利用進階的商業智慧功能。  
   
  您可以在資料來源檢視設計師中定義以下類型的關聯性：  
   
@@ -42,13 +41,13 @@ ms.locfileid: "66075614"
   
  這個主題包括下列各節：  
   
- [若要在資料表、命名查詢或 views 之間加入關聯性](#bkmk_addRel)  
+ [在資料表、具名查詢或檢視表之間加入關聯性](#bkmk_addRel)  
   
- [若要在圖表窗格中查看或修改關聯性](#bkmk_diagrampane)  
+ [在圖表窗格中檢視或修改關聯性](#bkmk_diagrampane)  
   
- [若要在 [資料表] 窗格中查看或修改關聯性](#bkmk_tablespane)  
+ [在資料表窗格中檢視或修改關聯性](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a>若要在資料表、命名查詢或 views 之間加入關聯性  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>若要在資料表、命名查詢或 views 之間加入關聯性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中加入邏輯關聯性之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
@@ -73,11 +72,11 @@ ms.locfileid: "66075614"
   
     4.  選擇性地在 [描述]**** 方塊中輸入關聯性的描述。  
   
-##  <a name="bkmk_diagrampane"></a>若要在圖表窗格中查看或修改關聯性  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a>若要在圖表窗格中查看或修改關聯性  
   
 -   在 [資料來源檢視設計工具]**** 的 [圖表]**** 窗格中，以滑鼠右鍵按一下您要檢視的關聯性，然後按一下 [編輯關聯性]**** (或直接按兩下關聯性箭頭)。  使用 [編輯關聯性]**** 對話方塊修改關聯性。  
   
-##  <a name="bkmk_tablespane"></a>若要在 [資料表] 窗格中查看或修改關聯性  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a>若要在 [資料表] 窗格中查看或修改關聯性  
   
 1.  在 [資料來源檢視設計工具]**** 的 [資料表]**** 窗格中，尋找含有您想要檢視或修改之關聯性的資料表、檢視表或具名查詢，並加以展開。  
   

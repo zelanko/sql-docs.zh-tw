@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076103"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多維度模型中的資料來源檢視
@@ -31,29 +31,29 @@ ms.locfileid: "66076103"
  您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中針對一個或多個資料來源建立多個資料來源檢視，並建構每一個資料來源檢視，使其滿足不同方案的需求。  
   
 ## <a name="related-tasks"></a>相關工作  
- [定義資料來源視圖 &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
+ [定義資料來源檢視 &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [在資料來源 View 中加入或移除資料表或視圖 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [變更資料來源視圖中的屬性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [變更資料來源檢視的屬性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
- [在資料來源視圖中定義邏輯關聯性 &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義邏輯關聯性 &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
- [在資料來源視圖中定義邏輯主鍵 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義邏輯主索引鍵 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
   
- [定義資料來源視圖中的已命名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
- [在資料來源視圖中定義已命名的查詢 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名查詢 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [將資料來源 View 中的資料表或已命名的查詢取代 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [取代資料來源檢視中的資料表或具名查詢 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [在資料來源視圖設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [流覽資料來源視圖中的資料 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中瀏覽資料 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [刪除資料來源視圖 &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
+ [刪除資料來源檢視 &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
- [重新整理資料來源視圖中的架構 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中重新整理結構描述 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [架構產生嚮導 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   

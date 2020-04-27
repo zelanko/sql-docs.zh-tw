@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078794"
 ---
 # <a name="modifying-the-date-dimension"></a>修改 Date 維度
   在這個主題的工作中，您會建立一個使用者定義階層，以及變更針對 [日期]、[月]、[日曆季] 和 [日曆半年] 屬性所顯示的成員名稱。 您也會定義屬性的複合索引鍵、控制維度成員的排序次序，以及定義屬性關聯性。  
   
 ## <a name="adding-a-named-calculation"></a>加入具名計算  
- 具名計算是以導出資料行表示的 SQL 運算式，您可以將它加入資料來源檢視的資料表中。 這個運算式以資料表的資料行呈現及運作。 具名計算可讓您延伸資料來源檢視中現有資料表的關聯式結構描述，而不必修改基礎資料來源中的資料表。 如需詳細資訊，請參閱 [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ 具名計算是以導出資料行表示的 SQL 運算式，您可以將它加入資料來源檢視的資料表中。 這個運算式以資料表的資料行呈現及運作。 具名計算可讓您延伸資料來源檢視中現有資料表的關聯式結構描述，而不必修改基礎資料來源中的資料表。 如需詳細資訊，請參閱[在資料來源 View 中定義指名的計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>加入具名計算  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66078794"
   
 #### <a name="to-use-the-named-calculation-for-member-names"></a>針對成員名稱使用具名計算  
   
-1.  針對 ** 中的 [日期] 維度，開啟 [維度設計師]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要這麼做，請在`Date` **方案總管**的 [**維度**] 節點中，按兩下維度。  
+1.  針對 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [日期] 維度，開啟 [維度設計師]****。 若要這麼做，請在`Date` **方案總管**的 [**維度**] 節點中，按兩下維度。  
   
 2.  在 [維度結構]**** 索引標籤的 [屬性]**** 窗格中，按一下 [日期索引鍵]**** 屬性。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "66078794"
   
 2.  在 [屬性]**** 視窗的 [KeyColumns]**** 欄位中按一下，然後按一下瀏覽 (**...**) 按鈕。  
   
-3.  在 [索引鍵資料行]**** 對話方塊的 [可用的資料行]**** 清單中，選取 [CalendarYear]**** 資料行，然後按一下 [**]>** 按鈕。  
+3.  在 [索引鍵資料行]**** 對話方塊的 [可用的資料行]**** 清單中，選取 [CalendarYear]**** 資料行，然後按一下 [>]**** 按鈕。  
   
      [CalendarSemester]**** 和 [CalendarYear]**** 資料行現在會顯示在 [索引鍵資料行]**** 清單中。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "66078794"
   
 #### <a name="to-deploy-and-view-the-changes"></a>部署和檢視變更  
   
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
 2.  當您收到 [已**成功完成部署**] 訊息之後，請針對`Date`維度按一下**維度設計師**的 [**瀏覽器**] 索引標籤，然後按一下設計師工具列上的 [重新連接] 按鈕。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "66078794"
   
      屬性階層的成員現在變成先按年再按月排序。  
   
-9. 在 ** 的 [建立]**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。 順利完成部署之後，針對`Date`維度，按一下維度設計師中的 [**瀏覽器**] 索引標籤。  
+9. 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。 順利完成部署之後，針對`Date`維度，按一下維度設計師中的 [**瀏覽器**] 索引標籤。  
   
 10. 在 [瀏覽器]**** 索引標籤的工具列上，按一下 [重新連接] 按鈕。  
   

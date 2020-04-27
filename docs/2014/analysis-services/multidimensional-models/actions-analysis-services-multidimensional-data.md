@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077593"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
@@ -40,8 +40,7 @@ ms.locfileid: "66077593"
   
  條件是指在動作事件上評估的 `Boolean` MDX 運算式。 如果條件評估為 `true`，就會執行此動作。 否則，不會執行此動作。  
   
- 類型是指要執行之動作的種類。 
-  <xref:Microsoft.AnalysisServices.Action> 是抽象類別，因此使用它時，必須使用任何一個衍生類別。 預先定義的動作有兩種：鑽研和報表。 它們具有相對應的衍生類別： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他動作已涵蓋在 <xref:Microsoft.AnalysisServices.StandardAction> 類別中。  
+ 類型是指要執行之動作的種類。 <xref:Microsoft.AnalysisServices.Action> 是抽象類別，因此使用它時，必須使用任何一個衍生類別。 預先定義的動作有兩種：鑽研和報表。 它們具有相對應的衍生類別： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他動作已涵蓋在 <xref:Microsoft.AnalysisServices.StandardAction> 類別中。  
   
  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，動作是預存的 MDX 語句，可呈現給用戶端應用程式並供其使用。 換句話說，動作是定義及儲存在伺服器上的用戶端命令。 動作所包含的資訊還包含指定用戶端應用程式應顯示和處理 MDX 陳述式的時間和方式。 將動作中的資訊當成參數，動作所指定的作業即可啟動應用程式，或可根據動作所提供的準則來擷取資訊。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66077593"
 |CommandLine|在命令提示字元執行命令。|  
 |資料集|將資料集傳回用戶端應用程式。|  
 |鑽研|將 drillthrough 陳述式當做運算式傳回，用戶端會執行這個運算式來傳回資料列集。|  
-|Html|在網際網路瀏覽器中執行 HTML 指令碼。|  
+|HTML|在網際網路瀏覽器中執行 HTML 指令碼。|  
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
 |Report|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
 |資料列集|將資料列集傳回用戶端應用程式。|  

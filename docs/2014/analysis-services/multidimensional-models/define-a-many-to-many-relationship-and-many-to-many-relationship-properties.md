@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075783"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
@@ -113,8 +113,7 @@ ms.locfileid: "66075783"
   
 9. 為每一個事實資料表選擇量值。  
   
-     若要簡化您的模型，請清除所有量值，然後只選取清單底部的 [銷售量]**** 和 [事實網際網路銷售計數]****。 
-  **FactInternetSalesReason** 只有一個量值，所以系統會自動為您加以選取。  
+     若要簡化您的模型，請清除所有量值，然後只選取清單底部的 [銷售量]**** 和 [事實網際網路銷售計數]****。 **FactInternetSalesReason** 只有一個量值，所以系統會自動為您加以選取。  
   
 10. 在維度清單中，您應該會看到 [維度銷售原因]**** 和 [維度銷售訂單]****。  
   
@@ -147,11 +146,11 @@ ms.locfileid: "66075783"
   
 3.  建立使用以下項目的樞紐分析表：  
   
-    -   **銷售金額**作為值  
+    -   **銷售量** 作為值  
   
     -   資料行上的**銷售原因名稱**  
   
-    -   資料列上的**銷售訂單號碼**  
+    -   資料列上的 [銷售訂單號碼]****  
   
 4.  分析結果。 因為我們使用範例資料，所以最初的印象就是所有銷售訂單都有相同的值。 但是，如果您向下捲動，您會開始看到資料的變化。  
   
@@ -177,19 +176,19 @@ ms.locfileid: "66075783"
   
 4.  請避免在多個多對多關聯性中使用連結量值群組，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships (SSAS Troubleshooting)](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(包含多對多關聯性之 Cube 中連結量值的數量不正確 (SSAS 疑難排解))。  
   
-##  <a name="bkmk_Learn"></a>瞭解更多資訊  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>瞭解更多資訊  
  使用以下連結來取得可幫助您掌握各個概念的其他資訊。  
   
  [我要如何在 Analysis Services 中定義多對多維度](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [多對多革命2。0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [多對多革命 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [教學課程： SQL Server Analysis Services 的多對多維度範例](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [教學課程：SQL Server Analysis Services 的多對多維度範例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../install-sample-data-and-projects.md)   
  [&#40;SSDT 部署 Analysis Services 專案&#41;](deploy-analysis-services-projects-ssdt.md)   
- [多維度模型中的觀點](perspectives-in-multidimensional-models.md)  
+ [多維度模型中的檢視方塊](perspectives-in-multidimensional-models.md)  
   
   

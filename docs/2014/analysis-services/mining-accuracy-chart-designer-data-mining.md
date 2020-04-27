@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077774"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>採礦精確度圖表設計師 (資料採礦)
   使用 **[採礦精確度圖表]** 檢視，即可比較所包含的所選採礦結構上建立之採礦模型的效能。  
   
- 
-  **[採礦精確度圖表]** 檢視包含下列索引標籤：  
+ **[採礦精確度圖表]** 檢視包含下列索引標籤：  
   
 -   [[輸入選擇] 索引標籤 &#40;[&#41;的 [挖掘精確度] 圖表視圖](input-selection-tab-mining-accuracy-chart-view.md)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66077774"
   
      針對在 `Input Selection` 索引標籤上選取的模型，顯示分類矩陣。  
   
--   [[交叉驗證] 索引標籤 &#40;[挖掘精確度] 圖表視圖&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [交叉驗證索引標籤 &#40;採礦精確度圖表檢視&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      針對選取的採礦結構設定選項，並產生交叉驗證結果。  
   

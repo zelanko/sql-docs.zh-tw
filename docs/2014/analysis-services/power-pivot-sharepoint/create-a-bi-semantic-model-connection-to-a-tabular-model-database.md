@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071655"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>建立與表格式模型資料庫的 BI 語意模型連接
@@ -24,19 +24,19 @@ ms.locfileid: "66071655"
   
  本主題包含下列各節。 請依指定順序執行每個工作。  
   
- [審查必要條件](#bkmk_prereq)  
+ [檢閱必要條件](#bkmk_prereq)  
   
- [授與 Analysis Services 共用服務應用程式的系統管理許可權](#bkmk_ssas)  
+ [授與 Analysis Services 管理權限給共用服務應用程式](#bkmk_ssas)  
   
  [授與表格式模型資料庫的讀取權限](#bkmk_BISM)  
   
- [建立與表格式模型資料庫的 BI 語意模型連接](#bkmk_connect)  
+ [建立與表格式模型資料庫的 BI 語義模型連接](#bkmk_connect)  
   
- [設定 BI 語義模型連接的 SharePoint 許可權](#bkmk_permissions)  
+ [設定 BI 語意模型連接的 SharePoint 權限](#bkmk_permissions)  
   
  [後續步驟](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>審查必要條件  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>審查必要條件  
  您必須有 [參與] 以上權限，才能建立 BI 語意模型連接檔案。  
   
  您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱[將 BI 語義模型連接內容類型新增至程式庫 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "66071655"
   
  參與連接順序的所有電腦和使用者都必須是在相同網域或受信任網域 (雙向信任) 中。  
   
-##  <a name="bkmk_ssas"></a>授與 Analysis Services 共用服務應用程式的系統管理許可權  
+##  <a name="grant-analysis-services-administrative-permissions-to-shared-service-applications"></a><a name="bkmk_ssas"></a>授與 Analysis Services 共用服務應用程式的系統管理許可權  
  從 SharePoint 到 Analysis Services 伺服器上表格式模型資料庫的連接有時是由共用服務代表要求資料的使用者所建立。 發出要求的服務可能是 PowerPivot 服務應用程式、Reporting Services 服務應用程式或 PerformancePoint 服務應用程式。 為了要讓連接成功，此服務必須擁有 Analysis Services 伺服器的管理權限。 在 Analysis Services 中，只允許管理員代表其他使用者建立模擬連接。  
   
  在下列情況下使用連接時需要管理權限：  
@@ -66,7 +66,7 @@ ms.locfileid: "66071655"
   
  為確保這些行為如預期執行，請將 Analysis Services 執行個體的管理權限授與每個服務識別。 請使用下列指示來授與必要權限。  
   
- **將服務識別新增至伺服器管理員角色**  
+ **將服務識別加入至伺服器管理員角色**  
   
 1.  在 SQL Server Management Studio 中，連接到 Analysis Services 執行個體。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66071655"
   
      您可以使用管理中心判斷識別。 在 [安全性] 區段中開啟 [設定服務帳戶]****，以檢視哪一個 Windows 帳戶與每一個應用程式所使用的服務應用程式集區相關聯，然後依照本主題所提供的指示將管理權限授與帳戶。  
   
-##  <a name="bkmk_BISM"></a>授與表格式模型資料庫的讀取權限  
+##  <a name="grant-read-permissions-on-the-tabular-model-database"></a><a name="bkmk_BISM"></a> 授與表格式模型資料庫的讀取權限  
  由於資料庫在伺服器陣列外部的伺服器上執行，因此在設定連接的過程中，將會包含授與後端 Analysis Services 伺服器的資料庫使用者權限。 Analysis Services 會使用以角色為基礎的權限模型。 連接到模型資料庫的使用者必須使用「讀取」權限或更高的權限，透過授與讀取權限給其成員的角色來進行。  
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立模型時會定義角色 (有時也會定義角色成員資格)。 您不能使用 SQL Server Management Studio 建立角色，但是可以用來將成員加入至已經定義的角色。 如需建立角色的詳細資訊，請參閱[建立及管理角色 &#40;SSAS 表格式&#41;](../tabular-models/roles-ssas-tabular.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "66071655"
   
 3.  在 [成員資格] 頁面中，加入需要存取權的 Windows 群組和使用者帳戶。  
   
-##  <a name="bkmk_connect"></a>建立與表格式模型資料庫的 BI 語義模型連接  
+##  <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a><a name="bkmk_connect"></a> 建立與表格式模型資料庫的 BI 語意模型連接  
  在 Analysis Services 中設定權限之後，您可以返回 SharePoint 並建立 BI 語意模型連接。  
   
 1.  在包含 BI 語意模型連接的文件庫中，按一下 SharePoint 功能區上的 [文件]****。  
@@ -98,9 +98,9 @@ ms.locfileid: "66071655"
   
 3.  同時設定 [伺服器]**** 和 [資料庫]**** 屬性。 如果您不確定資料庫名稱，請使用 SQL Server Management Studio 檢視在伺服器上部署之資料庫的清單。  
   
-     [**伺服器名稱**] 可以是伺服器的網路名稱、IP 位址或完整功能變數名稱（例如，myserver.mydomain.corp.adventure-works.com）。 如果伺服器當做具名執行個體安裝，請使用下列格式輸入伺服器名稱：computername\instancename。  
+     [伺服器名稱]**** 可以是伺服器的網路名稱、IP 位址或完整網域名稱 (例如 myserver.mydomain.corp.adventure-works.com)。 如果伺服器當做具名執行個體安裝，請使用下列格式輸入伺服器名稱：computername\instancename。  
   
-     **資料庫**必須是目前可以在伺服器上使用的表格式資料庫。 請勿指定另一個 BI 語意模型連接檔案、Office 資料連線 (.odc) 檔案、Analysis Services OLAP 資料庫或 PowerPivot 活頁簿。 若要取得資料庫名稱，您可以使用 Management Studio 連接到伺服器並檢視可用資料庫的清單。 使用資料庫的屬性頁可確保您擁有正確的名稱。  
+     [資料庫]**** 必須是目前可以在伺服器上使用的表格式資料庫。 請勿指定另一個 BI 語意模型連接檔案、Office 資料連線 (.odc) 檔案、Analysis Services OLAP 資料庫或 PowerPivot 活頁簿。 若要取得資料庫名稱，您可以使用 Management Studio 連接到伺服器並檢視可用資料庫的清單。 使用資料庫的屬性頁可確保您擁有正確的名稱。  
   
 4.  按一下 [確定]**** 以儲存頁面。 此時，PowerPivot 服務應用程式會驗證該連接。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "66071655"
   
      您可以在 Excel 或 Power View 中使用它來連接到表格式模型資料庫，藉以驗證連接。 如果資料來源連接成功，儘管驗證警告，連接仍然有效。  
   
-##  <a name="bkmk_permissions"></a>設定 BI 語義模型連接的 SharePoint 許可權  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>設定 BI 語義模型連接的 SharePoint 許可權  
  需要有 SharePoint 文件庫中 BI 語意模型連接項目的 [讀取]**** 權限，才能使用 BI 語意模型連接作為 Excel 活頁簿或 Reporting Services 報表的資料來源。 [讀取] 權限等級包含 [開啟項目]**** 權限，此權限允許將 BI 語意模型連接資訊下載到 Excel 桌面應用程式。  
   
  有數種方法可以在 SharePoint 中授與權限。 下列指示說明如何建立具有 [讀取]**** 權限等級、稱為「BISM 使用者」**** 的新群組。  
@@ -139,7 +139,7 @@ ms.locfileid: "66071655"
   
 4.  按一下 [移除使用者權限]****。  
   
-##  <a name="bkmk_next"></a>後續步驟  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> 後續步驟  
  在建立 BI 語意模型連接並且確保其安全之後，可以將此連接指定為資料來源。 如需詳細資訊，請參閱 [在 Excel 或 Reporting Services 使用 BI 語意模型連接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077916"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>量值 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -31,7 +31,7 @@ ms.locfileid: "66077916"
   
  展開量值群組以檢視量值。 按一下選取的量值群組或量值，即可分別重新命名量值群組或量值。  
   
- 方格  
+ Grid  
  顯示量值的方格及其最常存取的屬性。 按一下 **[加入新的量值]** ，即可顯示 **[新增量值]** 對話方塊，並將新的量值加入至方格。  
   
  方格包含下列資料行：  
@@ -48,7 +48,7 @@ ms.locfileid: "66077916"
  彙總  
  選取量值的彙總函式。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [量值]**** 窗格，即可顯示提供下列選項的操作功能表：  
   
  **[新增量值]**  
@@ -63,9 +63,9 @@ ms.locfileid: "66077916"
 |選項|定義|  
 |------------|----------------|  
 |**路徑**|在樹狀檢視中顯示量值群組與量值。|  
-|**格**|在方格中顯示量值群組與量值。|  
+|**Grid**|在方格中顯示量值群組與量值。|  
   
- **Rename**  
+ **重新命名**  
  選取即可重新命名選取的量值群組或量值。  
   
  **刪除**  
@@ -87,7 +87,7 @@ ms.locfileid: "66077916"
  按一下即可顯示 **[連結物件精靈]** 來連結其他 Cube 的量值群組和維度，以及匯入動作、KPI 和計算到所選取的 Cube 中。  
   
  **屬性**  
- 選取即可顯示選取的量值群組或量值之 ** 的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。  
+ 選取即可顯示選取的量值群組或量值之 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]**** 視窗。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定量值屬性](multidimensional-models/configure-measure-properties.md)   

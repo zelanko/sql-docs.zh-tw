@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075438"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>刪除資料來源檢視 (Analysis Services)
@@ -34,6 +34,6 @@ ms.locfileid: "66075438"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
- [變更資料來源視圖中的屬性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [變更資料來源檢視的屬性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078364"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 課：建立關鍵效能指標
   在這一課，您將建立關鍵效能指標 (KPI)。 Kpi 是用來針對*目標*值（也是由量值或絕對值所定義），測量由*基底*量值定義之值的效能。 在報告用戶端應用程式中，KPI 可讓商務專業人士輕鬆、快速地概括了解商務成果或找出趨勢。 如需詳細資訊，請參閱 [KPI &#40;SSAS 表格式&#41;](tabular-models/kpis-ssas-tabular.md)。  
   
- 這堂課的預估完成時間：**15 分鐘**  
+ 完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
- 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 7 課：建立量值](lesson-6-create-measures.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 7 課：建立量值](lesson-6-create-measures.md)。  
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66078364"
   
      完成建立公式時，按 ENTER。  
   
-     此量值將作為 KPI 的基準量值。  
+     此量值將做為 KPI 的基底量值。  
   
 4.  在量值方格中，以滑鼠右鍵按一下 [網際網路當季銷售績效]**** 量值，然後按一下 [建立 KPI]****。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "66078364"
 7.  在 [選取圖示樣式]**** 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型，然後按一下 [確定]****。  
   
 ## <a name="next-step"></a>後續步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)。  
+ 若要繼續進行本教學課程，請前往下一課： [第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)。  
   
   

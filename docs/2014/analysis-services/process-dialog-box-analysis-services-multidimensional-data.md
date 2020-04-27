@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070750"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>處理對話方塊 (Analysis Services - 多維度資料)
-  使用 ** 和 ** 中的 [處理][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可處理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件。 您可以在 ** 中依下列方式顯示 [處理]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [處理]**** 對話方塊，即可處理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件。 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中依下列方式顯示 [處理]**** 對話方塊：  
   
--   以滑鼠右鍵按一下方案總管[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**中的 ** 專案、Cube、維度或採礦結構，然後選取 [處理]****。  
+-   以滑鼠右鍵按一下方案總管**** 中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案、Cube、維度或採礦結構，然後選取 [處理]****。  
   
 -   從 [Cube 設計師]**** 的每個頁面、[維度設計師]**** 的每個頁面或 [資料採礦模型設計師]**** 的 [採礦結構]**** 和 [採礦模型]**** 頁面上的工具列，選取 [處理]****。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66070750"
   
  您可以在 [SQL Server Management Studio]**** 中依下列方式顯示 [處理]**** 對話方塊：  
   
--   以滑鼠右鍵按一下物件總管[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**中的 ** 資料庫、Cube、量值群組、資料分割、維度、採礦結構或採礦模型，然後選取 [處理]****。  
+-   以滑鼠右鍵按一下物件總管**** 中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫、Cube、量值群組、資料分割、維度、採礦結構或採礦模型，然後選取 [處理]****。  
   
 ## <a name="options"></a>選項。  
  **物件清單**  
@@ -39,7 +39,7 @@ ms.locfileid: "66070750"
  **Object Name**  
  顯示要處理的物件名稱。 名稱左邊的圖示會指出物件類型。  
   
- **型別**  
+ **類型**  
  顯示要處理的物件類型。  
   
  **處理選項**  
@@ -60,7 +60,7 @@ ms.locfileid: "66070750"
  **變更設定**  
  按一下即可開啟 [變更設定]**** 對話方塊，以變更會影響所選取物件之處理方式的設定，包括批次處理設定、回寫設定以及維度索引鍵錯誤設定。 如需 [變更設定]**** 對話方塊的詳細資訊，請參閱[變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md)。  
   
- **執行**  
+ **進行**  
  按一下即可處理物件。  
   
 ## <a name="see-also"></a>另請參閱  

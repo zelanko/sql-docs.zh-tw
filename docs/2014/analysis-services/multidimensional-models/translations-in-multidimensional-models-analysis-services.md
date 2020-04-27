@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072737"
 ---
 # <a name="translations-in-multidimensional-models"></a>多維度模型中的翻譯
@@ -25,10 +25,9 @@ ms.locfileid: "66072737"
 ## <a name="defining-translations"></a>定義翻譯  
  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義翻譯，方法是針對要翻譯的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用適當的設計師。 定義翻譯會建立 `Translation` 物件，並與適當的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件相關聯，其中會以指定的語言和指定的明確常值，來設定相關聯之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的屬性。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的下列物件和屬性有與其相關聯的翻譯：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的下列物件和屬性有與其相關聯的翻譯：  
   
-|Object|屬性|設計工具|  
+|Object|屬性|設計師|  
 |------------|----------------|--------------|  
 |資料庫|`Caption`, `Description`|[一般 &#40;資料庫設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
 |Cube|`Caption`, `Description`|[翻譯 &#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075638"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯主索引鍵 (Analysis Services)
@@ -36,7 +36,7 @@ ms.locfileid: "66075638"
   
 2.  在方案總管中，展開 [資料來源檢視]**** 資料夾，然後按兩下資料來源檢視。  
   
-     若要尋找資料表或檢視表，您可以按一下 [資料來源檢視]**** 功能表，或是以滑鼠右鍵按一下 [資料表]**** 或 [圖表]**** 窗格的開放區域，即可使用 [尋找資料表]**** 選項。  
+     若要找出資料表或視圖，您可以按一下 [**資料來源視圖**] 功能表，或以滑鼠右鍵按一下 [**資料表]** 或 [**圖表**] 窗格的開放區域，即可使用 [**尋找資料表**] 選項。  
   
 3.  在 [資料表]**** 或 [圖表]**** 窗格中，以滑鼠右鍵按一下您要用來定義邏輯主索引鍵的一或多個資料行，然後按一下 [設定邏輯主索引鍵]****。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66075638"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
- [定義資料來源視圖中的已命名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

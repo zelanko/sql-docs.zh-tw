@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072375"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>在資料來源檢視設計工具中使用圖表 (Analysis Services)
@@ -31,7 +31,7 @@ ms.locfileid: "66072375"
   
  這個主題包括下列各節：  
   
- [新增圖表](#bkmk_add)  
+ [加入圖表](#bkmk_add)  
   
  [編輯或刪除圖表](#bkmk_edit)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66072375"
   
  [保留物件相片順序](#bkmk_preserve)  
   
-##  <a name="bkmk_add"></a>新增圖表  
+##  <a name="add-a-diagram"></a><a name="bkmk_add"></a>新增圖表  
  DSV 圖表會在您建立 DSV 時自動建立。 DSV 存在之後，即可建立其他圖表、移除圖表或隱藏特定物件，以建立更容易管理的 DSV 表示法。  
   
  若要建立新圖表，請以滑鼠右鍵按一下 [圖表組合管理]**** 窗格中的任何位置，然後按一下 [新增圖表]****。  
@@ -52,14 +52,14 @@ ms.locfileid: "66072375"
   
  基於商業用途，您可以將相關資料表和具名查詢分組在不同的圖表中，讓人更容易了解包含許多資料表、檢視和具名查詢的資料來源檢視。 相同的資料表或命名查詢可以包含在多個圖表中，但\<所有資料表> 圖表除外。 在 [ \<所有資料表>] 圖表中，包含在資料來源視圖中的所有物件只會顯示一次。  
   
-##  <a name="bkmk_edit"></a>編輯或刪除圖表  
+##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>編輯或刪除圖表  
  使用圖表時，請特別注意用於加入及移除物件的命令。 例如，從圖表中刪除物件會從 DSV 中刪除相同物件。 如果您只想將其從圖表中刪除，請改用 **[隱藏資料表]** 。  
   
  ![圖表工作空間的螢幕擷取畫面，以滑鼠右鍵按一下功能表](../media/ssas-olapdsv-diagram.gif "圖表工作空間的螢幕擷取畫面，以滑鼠右鍵按一下功能表")  
   
  雖然您可以個別隱藏物件，但是使用 [顯示相關資料表] 命令重新顯示物件時，會將所有相關物件傳回圖表。 若要控制傳回工作空間的物件，請改為從 [資料表] 窗格中拖曳物件。  
   
-##  <a name="bkmk_findtables"></a>在圖表中尋找資料表  
+##  <a name="find-tables-in-a-diagram"></a><a name="bkmk_findtables"></a>在圖表中尋找資料表  
  如果結構描述很大，則在 **[圖表]** 窗格中捲動至特定資料表可能會有困難。 然而，下列工具可讓您輕鬆地尋找圖表中的資料表。  
   
 -   在 **[資料表]** 窗格中捲動資料表清單。  
@@ -74,14 +74,14 @@ ms.locfileid: "66072375"
   
      您可以在 [篩選] 方塊中輸入字串和萬用字元，來檢視圖表中的資料表子集。  
   
-##  <a name="bkmk_arrangeobjects"></a>排列圖表中的物件  
+##  <a name="arrange-objects-in-a-diagram"></a><a name="bkmk_arrangeobjects"></a>排列圖表中的物件  
  雖然資料來源檢視設計工具可以定義多個圖表，讓 DSV 更容易了解，但包含太多資料表的圖表就很難閱讀，且手動重新排列資料表配置又是一件耗時的工作。 資料來源檢視設計師可以根據目前圖表中資料表之間的關聯性，使用矩形或對角線配置，來自動重新排列目前圖表中的資料表。  
   
 -   在矩形配置中，關聯性線條是在資料表之間而非資料行之間繪製。 關聯性線條會水平及垂直地繪製在資料表之間。  
   
 -   在對角線配置中，關聯性線條會盡可能直接繪製在資料表的相關資料行之間。 多個資料行的關聯性會附加至資料表中的第一個相關資料行。 如果看不到資料表中的資料行，則線條會繪製在資料表頂端。  
   
-##  <a name="bkmk_preserve"></a>保留物件相片順序  
+##  <a name="preserve-object-arrangement"></a><a name="bkmk_preserve"></a>保留物件相片順序  
  依照所要的方式手動排列資料表之後，將更多資料表加入至圖表可能會造成圖表重新整理，而移除您對物件配置的最近修改。  
   
  當您加入資料表時，導致 [圖表組合管理] 移動其他資料表以容納新資料表，可能會發生這種行為。 然後它會重新繪製圖表，確保所有資料表和連接線正確表示。 此時，對特定物件位置的所有手動調整可能會遺失。  
@@ -90,6 +90,6 @@ ms.locfileid: "66072375"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
- [資料來源視圖設計工具 &#40;Analysis Services-多維度資料&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

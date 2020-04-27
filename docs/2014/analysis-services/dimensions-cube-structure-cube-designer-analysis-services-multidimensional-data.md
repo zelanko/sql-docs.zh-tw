@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081700"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>維度 (Cube 結構索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
@@ -33,7 +33,7 @@ ms.locfileid: "66081700"
   
  展開 cube 維度，然後選取 **[ \<編輯維度>** ] 來顯示維度設計師，並編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [維度]**** 窗格，即可顯示提供下列選項的操作功能表：  
   
  **加入 Cube 維度**  
@@ -45,11 +45,11 @@ ms.locfileid: "66081700"
  **編輯維度**  
  按一下即可顯示維度設計師，並編輯 Cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
   
- **Rename**  
+ **重新命名**  
  按一下即可為 Cube 重新命名選取的 Cube 維度。  
   
 > [!NOTE]  
->  在 [維度]**** 窗格中重新命名 Cube 維度，並不會重新命名 Cube 維度所依據的資料庫維度。  
+>   在 **[維度]** 窗格中重新命名 Cube 維度，並不會重新命名 Cube 維度所依據的資料庫維度。  
   
 > [!NOTE]  
 >  唯有選取了維度才會顯示此選項。  
@@ -58,7 +58,7 @@ ms.locfileid: "66081700"
  按一下即可從 Cube 中移除選取的 Cube 維度。  
   
 > [!NOTE]  
->  從 [維度]**** 窗格中移除 Cube 維度，並不會刪除 Cube 維度所依據的資料庫維度。  
+>   從 **[維度]** 窗格中移除 Cube 維度，並不會刪除 Cube 維度所依據的資料庫維度。  
   
 > [!NOTE]  
 >  唯有選取了維度才會顯示此選項。  
@@ -82,7 +82,7 @@ ms.locfileid: "66081700"
 >  唯有選取了維度才會顯示此選項。  
   
  **屬性**  
- 按一下即可為選取的 Cube 維度、Cube 階層或 Cube 屬性顯示 ** 的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。  
+ 按一下即可為選取的 Cube 維度、Cube 階層或 Cube 屬性顯示 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]**** 視窗。  
   
 ## <a name="see-also"></a>另請參閱  
  [工具列 &#40;Cube 結構索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

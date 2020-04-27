@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078994"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>檢閱 Cube 和維度屬性
@@ -42,7 +42,7 @@ ms.locfileid: "66078994"
   
      在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的這份檢視中，您會看到 [網際網路銷售] 量值群組所使用的 Cube 維度。 同時，您可以在每個維度和使用該維度的每個量值群組之間定義關聯性類型。  
   
-7.  按一下 [**資料**分割] 索引標籤。  
+7.  按一下 [資料分割]**** 索引標籤。  
   
      [Cube 精靈] 會使用不含彙總的多維度線上分析處理 (MOLAP) 儲存模式來定義 Cube 的單一資料分割。 運用 MOLAP，所有分葉層級資料和所有彙總都儲存在 Cube 內，以達到最大效能。 彙總是預先計算的資料彙總，可改進查詢回應時間，因為它在提出問題之前就已備妥答案。 您可以在 [資料分割] 索引卷**標上定義**其他資料分割、儲存設定和回寫設定。如需詳細資訊，請參閱分割區[&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)、[匯總和匯總設計](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   

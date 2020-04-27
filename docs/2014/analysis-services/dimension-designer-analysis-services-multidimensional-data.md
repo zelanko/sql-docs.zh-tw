@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081782"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>維度設計師 (Analysis Services - 多維度資料)
@@ -44,7 +44,7 @@ ms.locfileid: "66081782"
  [翻譯](translations-dimension-designer-analysis-services-multidimensional-data.md)  
  使用此頁面來檢視和修改與維度及其屬性、階層和層級相關聯的翻譯。  
   
- [[瀏覽器]](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [瀏覽器](browser-dimension-designer-analysis-services-multidimensional-data.md)  
  使用這個頁面，即可瀏覽維度所包含之階層的成員。  
   
 ## <a name="see-also"></a>另請參閱  

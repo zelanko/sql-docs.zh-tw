@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080813"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>方格 (維度使用方式索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -28,7 +28,7 @@ ms.locfileid: "66080813"
 |**維度**|選取在 **[方格]** 窗格中顯示為資料列的 Cube 維度。 選取 [(全部顯示)]**** 就會顯示所有可用的 Cube 維度。<br /><br /> 按一下維度的所選取資料列標頭，即可重新命名 Cube 維度。|  
 |**格值**|選取一個資料格，再按一下省略符號按鈕 ([...]****)，即可顯示 [定義關聯性]**** 對話方塊，並定義 Cube 維度與量值群組之間的維度關聯性。 如需 [定義關聯性]**** 對話方塊的詳細資訊，請參閱[定義關聯性對話方塊 &#40;Analysis Services - 多維度資料&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)。|  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  下列選項可以在內容功能表中使用，以滑鼠右鍵按一下 [方格]**** 窗格即可顯示內容功能表：  
   
 |選項|定義|  
@@ -39,7 +39,7 @@ ms.locfileid: "66080813"
 |**複製**|注意：此選項已停用。|  
 |**貼上**|注意：此選項已停用。|  
 |**刪除**|選取即可從 Cube 中刪除選取的 Cube 維度、量值群組或維度關聯性。|  
-|**Rename**|選取即可重新命名選取的 Cube 維度、量值群組或維度關聯性。|  
+|**重新命名**|選取即可重新命名選取的 Cube 維度、量值群組或維度關聯性。|  
 |**屬性**|選取即可針對選取的 Cube 維度、量值群組或維度關聯性，在 **中顯示** [屬性] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。|  
   
 ## <a name="see-also"></a>另請參閱  

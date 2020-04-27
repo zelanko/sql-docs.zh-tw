@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ace708cc4ee09295380b814bbf21f5a1c350974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075711"
 ---
 # <a name="define-cube-hierarchy-properties"></a>定義 Cube 階層屬性
@@ -27,9 +27,7 @@ ms.locfileid: "66075711"
 |--------------|-----------------|  
 |`Enabled`|決定是否為 Cube 維度啟用階層。|  
 |`HierarchyID`|包含階層的唯一識別碼 (ID)。|  
-|`OptimizedState`|決定套用至階層的最佳化層級。 此屬性可以有下列的值：<br /><br /> 
-  `FullyOptimized`：執行個體會建立階層的索引，以增進查詢效能。 這是預設值。<br /><br /> 
-  `NotOptimized`：執行個體不會建立其他索引。|  
+|`OptimizedState`|決定套用至階層的最佳化層級。 此屬性可以有下列的值：<br /><br /> `FullyOptimized`：執行個體會建立階層的索引，以增進查詢效能。 這是預設值。<br /><br /> `NotOptimized`：執行個體不會建立其他索引。|  
 |`Visible`|決定 Cube 階層的可見性。 預設值是 `True`。|  
   
 ## <a name="see-also"></a>另請參閱  

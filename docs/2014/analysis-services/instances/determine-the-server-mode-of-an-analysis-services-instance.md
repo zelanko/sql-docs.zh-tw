@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080056"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
@@ -36,8 +36,7 @@ ms.locfileid: "66080056"
 >  請不要變更 `DeploymentMode` 屬性的值。 不支援在安裝伺服器後手動變更此屬性。  
   
 ## <a name="about-the-deploymentmode-property"></a>關於 DeploymentMode 屬性  
- 
-  `DeploymentMode` 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 在對話方塊、訊息和檔中，此屬性稱為「伺服器模式」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
+ `DeploymentMode` 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 在對話方塊、訊息和檔中，此屬性稱為「伺服器模式」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
   
  這個屬性的有效值包括：  
   
@@ -56,6 +55,6 @@ ms.locfileid: "66080056"
  [連接到 Analysis Services](connect-to-analysis-services.md)   
  [&#40;SSAS 表格式&#41;的表格式模型方案](../tabular-model-solutions-ssas-tabular.md)   
  [&#40;SSAS&#41;的多維度模型方案](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [&#40;Analysis Services 的採礦模型-資料採礦&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -11,31 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078424"
 ---
 # <a name="lesson-7-create-measures"></a>第 7 課：建立量值
   在這一課，您將建立要包含在模型中的量值。 量值與您在上一課建立的導出資料行相似，基本上是使用 DAX 公式建立的計算。 不過，與導出資料行不同，量值評估是根據使用者選取的「篩選條件」**。例如，在樞紐分析表的 [資料列標籤] 欄位中新增的特定資料行或交叉分析篩選器。   然後會以套用的量值，計算篩選條件中每個資料格的值。 量值是功能強大且彈性的計算，您會希望將它包含在幾乎所有表格式模型中，以便在數值資料上執行動態計算。 如需詳細資訊，請參閱[量值 &#40;SSAS 表格式&#41;](tabular-models/measures-ssas-tabular.md)。  
   
- 您將使用 [量值方格] 建立量值。 根據預設，每個資料表都有一個空白量值方格；不過，您通常不會為每個資料表建立量值。 在 [資料檢視] 中，量值方格會出現在模型設計師中的資料表下方。 若要隱藏或顯示資料表的量值方格，請按一下 [資料表]**** 功能表，然後按一下 [顯示量值方格]****。  
+ 您將使用 [量值方格] 建立量值。 根據預設，每個資料表都有一個空白的量值方格，不過，通常您不會為每個資料表建立量值。 在 [資料檢視] 中，量值方格會出現在模型設計師中的資料表下方。 若要隱藏或顯示資料表的量值方格，請按一下 [資料表]**** 功能表，然後按一下 [顯示量值方格]****。  
   
- 若要建立量值，您可以按一下量值方格中的空資料格，然後在公式列中輸入 DAX 公式。 當您按 ENTER 完成公式時，量值就會出現在資料格中。 您也可以按一下資料行，然後按一下工具列上的 [自動加總] 按鈕 (**∑**)，利用標準彙總函式建立量值。 使用 [自動加總] 功能建立的量值會出現在資料行正下方的量值方格資料格中，不過必要時可以將其移除。  
+ 若要建立量值，您可以按一下量值方格中的空資料格，然後在公式列中輸入 DAX 公式。 按 ENTER 完成公式時，量值就會出現在資料格中。 您也可以按一下資料行，然後按一下工具列上的 [自動加總] 按鈕 (**∑**)，利用標準彙總函式建立量值。 使用 [自動加總] 功能建立的量值會出現在資料行正下方的量值方格資料格中，不過必要時可以將其移除。  
   
  在這一課，您將藉由在公式列中輸入 DAX 公式以及使用 [自動加總] 功能這兩種方式建立量值。  
   
- 完成本課程的估計時間： **30 分鐘**  
+ 這堂課的預估完成時間：**30 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
- 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 6 課：建立導出資料行](lesson-5-create-calculated-columns.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 6 課：建立導出資料行](lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
   
 #### <a name="to-create-a-days-current-quarter-to-date-measure-in-the-date-table"></a>在日期資料表中建立當季目前為止天數量值  
   
-1.  在模型設計師中，按一下 [**日期**] 資料表。  
+1.  在模型設計師中，按一下 [日期]**** 資料表。  
   
 2.  如果資料表下方尚未出現空的量值方格，請按一下 [資料表]**** 功能表，然後按一下 [顯示量值方格]****。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66078424"
   
      完成建立公式時，按 ENTER。  
   
- 在一個不完整期間與前一個期間之間建立比率時，此公式必須考慮該期間已流逝的比例，並與前一個期間的相同比例做比較。 在此案例中，[Days Current Quarter to Date]/[Days in Current Quarter] 會得出目前期間內已經過的比例。  
+ 在一個不完整期間與前一個期間之間建立比率時，公式必須考慮期間內已經過的比例，並且將它與前一個期間中的相同比例進行比較。 在此案例中，[Days Current Quarter to Date]/[Days in Current Quarter] 會得出目前期間內已經過的比例。  
   
 #### <a name="to-create-an-internet-distinct-count-sales-order-measure-in-the-internet-sales-table"></a>在 Internet Sales 資料表中建立網際網路相異計數銷售訂單量值  
   
@@ -116,6 +116,6 @@ ms.locfileid: "66078424"
  針對 [Internet Sales] 資料表建立的量值可用來分析關鍵的財務資料，例如使用者選取的篩選所定義的項目銷售額、成本和利率。  
   
 ## <a name="next-step"></a>後續步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
+ 若要繼續進行本教學課程，請前往下一課： [第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
   
   

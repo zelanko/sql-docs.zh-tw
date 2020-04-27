@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077271"
 ---
 # <a name="group-attribute-members-discretization"></a>群組屬性成員 (分隔)
@@ -34,7 +34,7 @@ ms.locfileid: "66077271"
   
  屬性 (Attribute) 上的 `DiscretizationMethod` 屬性 (Property)，控制如何將成員群組。  
   
-|`DiscretizationMethod`設|描述|  
+|`DiscretizationMethod` 設定|描述|  
 |--------------------------------------|-----------------|  
 |`None`|顯示成員。|  
 |`Automatic`|請選取最適合代表資料的方法：`EqualAreas` 方法或 `Clusters` 方法。|  
@@ -52,8 +52,7 @@ ms.locfileid: "66077271"
 ## <a name="naming-template"></a>命名範本  
  建立成員群組時，會自動產生成員群組名稱。 除非您指定命名範本，否則會使用預設命名範本。 而在屬性 (Attribute) 之 `Format` 屬性 (Property) 的 `NameColumn` 選項中指定命名範本，即可變更這個命名方法。 也可以針對用於屬性 (Attribute) 之 `Translations` 屬性 (Property) 之資料行繫結的 `NameColumn` 集合中所指定的每個語言，來重新定義不同的命名範本。  
   
- 
-  `Format` 設定會使用下列字串運算式，來定義命名範本：  
+ `Format` 設定會使用下列字串運算式，來定義命名範本：  
   
  `<Naming template> ::= <First definition> [;<Intermediate definition>;<Last definition>]`  
   
@@ -63,17 +62,13 @@ ms.locfileid: "66077271"
   
  `<Last definition> ::= <Name expression>`  
   
- 
-  `<First definition>` 參數只適用於分隔方法所產生的第一個，或唯一的一個成員群組。 如果未提供選擇性參數 `<Intermediate definition>` 和 `<Last definition>` ，則會將 `<First definition>` 參數用於針對該屬性所產生的所有量值群組。  
+ `<First definition>` 參數只適用於分隔方法所產生的第一個，或唯一的一個成員群組。 如果未提供選擇性參數 `<Intermediate definition>` 和 `<Last definition>` ，則會將 `<First definition>` 參數用於針對該屬性所產生的所有量值群組。  
   
- 
-  `<Last definition>` 參數只適用於分隔方法所產生的最後一個成員群組。  
+ `<Last definition>` 參數只適用於分隔方法所產生的最後一個成員群組。  
   
- 
-  `<Intermediate bucket name>` 參數適用於分隔方法所產生之第一個或最後一個成員群組以外的每一個成員群組。 如果只產生兩個或更少的成員群組，就會忽略此參數。  
+ `<Intermediate bucket name>` 參數適用於分隔方法所產生之第一個或最後一個成員群組以外的每一個成員群組。 如果只產生兩個或更少的成員群組，就會忽略此參數。  
   
- 
-  `<Bucket name>` 參數是一個字串運算式，其中可以納入一組變數，在其成員群組名稱中代表成員或成員群組資訊：  
+ `<Bucket name>` 參數是一個字串運算式，其中可以納入一組變數，在其成員群組名稱中代表成員或成員群組資訊：  
   
 |變數|描述|  
 |--------------|-----------------|  

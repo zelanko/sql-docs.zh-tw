@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074776"
 ---
 # <a name="linked-measure-groups"></a>連結量值群組
@@ -68,7 +68,7 @@ ms.locfileid: "66074776"
 ## <a name="secure-a-linked-measure"></a>維護連結量值的安全  
  定義連結之後，管理連結量值群組中量值的存取權方式，就和管理其他量值群組存取權的方式一樣。 連結物件會連同其非連結的對應項目一起出現在角色設計工具中。 如需管理量值群組之安全性的詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
   
- 若要定義或使用連結量值群組，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 Windows 服務帳戶必須屬於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色 (而此角色擁有來源 `ReadDefinition` 執行個體上對來源 Cube 和量值群組的 `Read` 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存取權限)，或必須屬於來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員角色。  
+ 若要定義或使用連結量值群組，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 Windows 服務帳戶必須屬於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色 (而此角色擁有來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上對來源 Cube 和量值群組的 `ReadDefinition` 和 `Read` 存取權限)，或必須屬於來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員角色。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義連結維度](define-linked-dimensions.md)  

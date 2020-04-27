@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081745"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>維度結構 (維度設計師) (Analysis Services - 多維度資料)
@@ -34,7 +34,7 @@ ms.locfileid: "66081745"
 ## <a name="panes"></a>窗格  
  [維度結構]**** 頁面包含下表窗格：  
   
- [資料來源視圖](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
+ [[資料來源檢視]](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
  使用 [資料來源檢視]**** 窗格，即可瀏覽和管理與維度相關聯的資料來源檢視。  
   
  [階層](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  

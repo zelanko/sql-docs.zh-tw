@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071813"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
@@ -72,7 +72,7 @@ ms.locfileid: "66071813"
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>如何限制資料庫保留在快取中多久  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]****。  
   
 2.  按一下 [**預設的 PowerPivot 服務應用程式**] 開啟管理儀表板。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66071813"
   
 4.  在 [磁碟快取] 區段中，您可以指定非使用中的資料庫存留在記憶體中多久，才能服務新要求 (預設為 48 小時)，以及存留在快取中多久 (預設為 120 小時)。  
   
-     [**將非使用中資料庫保留在記憶體中**] 會指定非使用中資料庫保留在記憶體中的時間，以服務該資料的新要求。 只要您要查詢使用中的資料庫，該資料庫就會永遠保留在記憶體中，但在資料庫不再處於使用中狀態時，系統會將該資料庫另外保留在記憶體中一段時間，以防有該資料的其他要求。  
+     [將非使用中的資料庫保留在記憶體中]**** 會指定非使用中的資料庫要存留在記憶體中多久之後，才能服務該資料的新要求。 只要您要查詢使用中的資料庫，該資料庫就會永遠保留在記憶體中，但在資料庫不再處於使用中狀態時，系統會將該資料庫另外保留在記憶體中一段時間，以防有該資料的其他要求。  
   
      系統會先快取 PowerPivot 資料庫，然後再載入記憶體中，因此，資料庫檔案會立即耗用磁碟空間。 不過，當資料庫處於使用中狀態 (而且持續 48 小時) 時，所有要求都會忽略快取資料庫，先導向至記憶體中的資料庫。 48 小時未有任何活動之後，就會從記憶體卸載檔案，但存留在本機 PowerPivot 伺服器執行個體攔截該資料的新連接要求時可以快速重新載入的快取中。 對非使用中資料庫的連接要求是從快取 (而非內容庫) 服務的，因此可將對內容資料庫的影響降至最低。  
   
      請務必注意，內容庫是 PowerPivot 資料庫唯一的永久位置。 只有在內容庫中的資料庫與磁碟上的副本相同時，才會使用快取副本。  
   
-     [**將非使用中資料庫保留在**快取中] 會指定非使用中的資料庫從記憶體卸載之後，保留在檔案系統上的時間長度。 清除作業會使用這個設定來判斷要刪除的檔案。 未有任何活動達 168 小時 (記憶體中 48 小時，快取中 120 小時) 的所有 PowerPivot 資料庫都會透過清除作業，從磁碟中刪除。  
+     [將非使用中的資料庫保留在快取中]**** 會指定非使用中的資料庫要存留在檔案系統中多久之後，才能從記憶體卸載。 清除作業會使用這個設定來判斷要刪除的檔案。 未有任何活動達 168 小時 (記憶體中 48 小時，快取中 120 小時) 的所有 PowerPivot 資料庫都會透過清除作業，從磁碟中刪除。  
   
 5.  按一下 [確定]**** 以儲存您的變更。  
   
@@ -94,6 +94,6 @@ ms.locfileid: "66071813"
  PowerPivot for SharePoint 安裝提供健全狀況規則，讓您可以在伺服器健全狀況、組態或可用性中偵測到問題時，採取更正動作。 這些規則中，有部分規則使用組態設定來決定觸發健全狀況規則的條件。 如果您積極地調整伺服器效能，可能也會想要檢閱這些設定，以確保預設值是對您系統最好的選擇。 如需詳細資訊，請參閱[PowerPivot 健全狀況規則-設定](configure-power-pivot-health-rules.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

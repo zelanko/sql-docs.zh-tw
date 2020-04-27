@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079279"
 ---
 # <a name="defining-a-data-source-view"></a>定義資料來源檢視
@@ -40,19 +40,19 @@ ms.locfileid: "66079279"
   
      在 [可用的物件]**** 清單中，選取下列物件。 您可以在按住 CTRL 鍵的同時，按一下每個資料表，藉以選取多個資料表：  
   
-    -   **DimCustomer （dbo）**  
+    -   **DimCustomer (dbo)**  
   
-    -   **DimDate （dbo）**  
+    -   **DimDate (dbo)**  
   
-    -   **DimGeography （dbo）**  
+    -   **DimGeography (dbo)**  
   
-    -   **DimProduct （dbo）**  
+    -   **DimProduct (dbo)**  
   
-    -   **FactInternetSales （dbo）**  
+    -   **FactInternetSales (dbo)**  
   
 5.  按一下**>** 即可將選取的資料表加入至 [**包含的物件**] 清單。  
   
-6.  按 [下一步]  。  
+6.  按 **[下一步]**。  
   
 7.  在 [名稱] 欄位中，確認有顯示 [Adventure Works DW 2012]****，然後按一下 [完成]****。  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074362"
 ---
 # <a name="manipulating-data-mdx"></a>操作資料 (MDX)
@@ -29,9 +29,9 @@ ms.locfileid: "66074362"
 
 |主題|描述|  
 |-----------|-----------------|  
-|[使用 [鑽取] 來取得來源資料 &#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|討論使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 陳述式，在多維度資料來源中擷取適用於資料格之來源資料的資料列集。|  
+|[使用 DRILLTHROUGH 擷取來源資料 &#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|討論使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 陳述式，在多維度資料來源中擷取適用於資料格之來源資料的資料列集。|  
 |[使用 RollupChildren 函數 &#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|討論 MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)的影響
-|[瞭解行程順序和解決順序 &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|詳細說明解決順序的概念，以及此功能如何影響 MDX 運算式、陳述式及指令碼。|  
+|[了解行程順序和求解順序 &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|詳細說明解決順序的概念，以及此功能如何影響 MDX 運算式、陳述式及指令碼。|  
 
 <!-- ??
 

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073669"
 ---
 # <a name="measures-and-measure-groups"></a>量值和量值群組
@@ -32,7 +32,7 @@ ms.locfileid: "66073669"
   
  本主題描述 [量值](#bkmk_measure) 和 [量值群組](#bkmk_mg)。 它也包含下表，表內有連結可供取得建立及設定量值和量值群組的程序步驟。  
   
-|**Link**|**說明**|  
+|**連結**|**描述**|  
 |--------------|---------------------|  
 |[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)|您有數種方法可以用來建立量值和量值群組。|  
 |[設定量值屬性](configure-measure-properties.md)|若是使用 [Cube 精靈] 啟動您的 Cube 時，您必須變更彙總方法、套用資料格式、設定是否要在用戶端應用程式中顯示量值，或可能需要在彙總值之前，先新增量值運算式來操作資料。|  
@@ -41,7 +41,7 @@ ms.locfileid: "66073669"
 |[定義局部加總行為](define-semiadditive-behavior.md)|局部加總行為是指對於某些維度有效，但對其他維度無效的彙總。 常見範例為銀行帳戶餘額。 您可能只想要依客戶及地區彙總餘額，而不需要依時間。 例如，您不想要加總同一帳戶連續數日期間的餘額。 若要定義局部加總行為，請使用 [加入商業智慧精靈]。|  
 |[連結量值群組](linked-measure-groups.md)|重新安排現有的量值群組中在同一資料庫或不同 Analysis Services 資料庫中之其他 Cube 中的用途。|  
   
-##  <a name="bkmk_measure"></a>評估  
+##  <a name="measures"></a><a name="bkmk_measure"></a>評估  
  量值代表包含可彙總之可量化資料 (通常是數值) 的資料行。 量值代表組織活動的某些層面，可以貨幣表示 (例如營收、獲利或成本)，或以計數表示 (庫存量、員工數、客戶數或訂單數)，或以結合商務邏輯之更複雜的計算方式表示。  
   
  每個 Cube 至少須有一個量值，但大部分 Cube 都有許多量值，有時數量可達數百。 從結構來說，量值通常會對應到事實資料表中的來源資料行，再由資料行提供用以載入量值的值。 或者，您也可以使用 MDX 定義量值。  
@@ -60,7 +60,7 @@ ms.locfileid: "66073669"
   
  若要降低用戶端應用程式發生這些行為的機率，可以在相同的資料庫中建立多個 Cube 或檢視方塊，並確認每個 Cube 或檢視方塊只包含相關的物件。 您必須檢查量值群組 (對應至事實資料表) 與維度之間的關聯性。  
   
-##  <a name="bkmk_mg"></a>量值群組  
+##  <a name="measure-groups"></a><a name="bkmk_mg"></a>量值群組  
  在 Cube 中，量值是根據它們的基礎事實資料表分組成量值群組。 量值群組是用來建立維度與量值的關聯。 量值群組也會用於與其彙總行為具有相異計數的量值； 將每一個相異計數量值放入其本身的量值群組時，會最佳化彙總處理。  
   
  簡單的 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件由群組名稱、儲存模式及處理模式等基本資訊組成。 其同時包含其構成部分：量值、維度，以及組成量值群組組合的資料分割。  

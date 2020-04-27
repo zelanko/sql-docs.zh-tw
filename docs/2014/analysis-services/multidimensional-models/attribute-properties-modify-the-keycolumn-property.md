@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077244"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>修改屬性 (attribute) 的 KeyColumn 屬性 (property)
@@ -44,9 +44,9 @@ ms.locfileid: "66077244"
   
      [索引鍵資料行]**** 對話方塊隨即開啟。  
   
-6.  若要從 [索引鍵資料行]**** 清單中移除現有的索引鍵資料行，請選取資料行，然後按一下 [**]\<** 按鈕。  
+6.  若要從 [索引鍵資料行]**** 清單中移除現有的索引鍵資料行，請選取資料行，然後按一下 [\<]**** 按鈕。  
   
-7.  若要在 [可用的資料行]**** 清單中加入索引鍵資料行，請選取資料行，然後按一下 [**]>** 按鈕。  
+7.  若要在 [可用的資料行]**** 清單中加入索引鍵資料行，請選取資料行，然後按一下 [>]**** 按鈕。  
   
     > [!NOTE]  
     >  如果您要定義數個索引鍵資料行，這些資料行出現在 [索引鍵資料行]**** 清單中的順序會影響顯示順序。 例如，月份屬性有兩個索引鍵資料行：月和年。 如果年份資料行出現在月份資料行前的清單中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將會先依照年份排序，然後再依照月份排序。 如果月份資料行出現在年份資料行前， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將會先依照月份排序，然後再依照年份排序。  

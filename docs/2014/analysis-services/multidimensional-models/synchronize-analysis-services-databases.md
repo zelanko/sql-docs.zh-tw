@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072844"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步處理 Analysis Services 資料庫
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含資料庫同步處理功能，此功能藉由將來源伺服器上資料庫的資料和中繼資料複製到目的地伺服器上的資料庫，讓兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫相等。 使用同步處理資料庫功能可完成下列任何一項工作：  
   
 -   將資料庫從暫存伺服器部署到實際伺服器。  
@@ -43,7 +42,7 @@ ms.locfileid: "66072844"
 > [!NOTE]  
 >  以下針對舊版 Analysis Services 所撰寫的技術白皮書依然適用於使用 SQL Server 2012 所建立的可擴充式多維度方案。 如需詳細資訊，請參閱 [使用 Analysis Services 向外延展查詢](https://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用唯讀資料庫向外延展查詢 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  在您起始資料庫同步處理的目的地 (或目標) 伺服器上，您必須是 Analysis Services 伺服器管理員角色的成員。 在來源伺服器上，您的 Windows 使用者帳戶必須擁有來源資料庫的完整控制權限。 如果您以互動方式同步處理資料庫，請記得同步處理是在 Windows 使用者識別的安全性內容之下執行。 如果系統拒絕您的帳戶存取特定物件，這些物件將會從作業中排除。 如需伺服器管理員角色和資料庫許可權的詳細資訊，請參閱[授與伺服器管理員許可權 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)並[授與資料庫許可權 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。  
   
  TCP 通訊埠 2383 必須已在兩部伺服器上開啟，好讓預設執行個體之間能夠進行遠端連接。 如需在 Windows 防火牆中建立例外狀況的詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
@@ -82,7 +81,7 @@ ms.locfileid: "66072844"
   
 3.  指定來源伺服器和來源資料庫。 在 [選取要同步處理的資料庫] 頁面上的 [來源伺服器]**** 和 [來源資料庫]**** 中，輸入來源伺服器和來源資料庫的名稱。 例如，如果您要從測試環境部署到實際伺服器，來源就是暫存伺服器上的資料庫。  
   
-     [**目的地伺服器**] 會顯示在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [**源資料庫**] 中所選取之資料庫的資料和中繼資料已同步處理之實例的名稱。  
+     [目的地伺服器]**** 會顯示與資料和中繼資料 (來自 [來源資料庫]**** 中所選取的資料庫) 同步處理之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。  
   
      名稱相同的來源資料庫與目的地資料庫會發生同步處理。 如果目的地伺服器已經有與來源資料庫共用相同名稱的資料庫，即會以來源的中繼資料和其他資料更新目的地資料庫。 如果資料庫不存在，即會在目的地伺服器上加以建立。  
   
@@ -95,10 +94,10 @@ ms.locfileid: "66072844"
   
      [位置]**** 選項會顯示一個方格，其中列出來源資料夾、目的資料夾，以及要儲存在目的地執行個體上之本機資料分割的預估大小。 方格包含下列資料行：  
   
-     **源資料夾**  
+     **來源資料夾**  
      顯示來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上，包含本機資料分割的資料夾名稱。 如果資料行包含值「(預設)」，來源執行個體的預設位置就包含本機分割區。  
   
-     **目的地資料夾**  
+     **目的資料夾**  
      選取目的地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上，要與本機資料分割同步處理的資料夾名稱。 如果資料行包含值「(預設)」，目的地執行個體的預設位置就包含本機分割區。  
   
      按一下省略符號 (**...**) 按鈕，來顯示 [瀏覽遠端資料夾]**** 對話方塊，並指定目的地執行個體上，應與在所選取位置處儲存的本機資料分割同步處理的資料夾。  
@@ -117,10 +116,10 @@ ms.locfileid: "66072844"
      **量值群組**  
      顯示包含分割區之 Cube 中的量值群組的名稱。  
   
-     **資料分割名稱**  
+     **分割區名稱**  
      顯示分割區的名稱。  
   
-     **大小（Mb）**  
+     **大小 (MB)**  
      顯示分割區的大小 (以 MB 為單位)。  
   
 5.  選擇性地變更遠端資料分割的位置。使用 [指定遠端資料分割的位置]**** 頁面來指出是否應同步處理來源伺服器上指定之資料庫所管理的遠端資料分割，並且指定應將所選取之遠端資料分割儲存到其中的目的地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和資料庫。  
@@ -130,7 +129,7 @@ ms.locfileid: "66072844"
   
      [位置]**** 選項會顯示一個方格，其中列出有關來源資料庫之遠端資料分割之儲存位置的詳細資訊，包括來源和目的地資訊，以及各個位置所使用的儲存體大小 (從選取的資料庫取得)。 方格包含下列資料行：  
   
-     **保持**  
+     **同步**  
      選取以納入在同步處理期間包含遠端分割區的位置。  
   
     > [!NOTE]  
@@ -139,7 +138,7 @@ ms.locfileid: "66072844"
      **來源伺服器**  
      顯示包含遠端分割區之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。  
   
-     **源資料夾**  
+     **來源資料夾**  
      顯示包含遠端分割區之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的資料夾名稱。 如果資料行包含值「(預設)」，[來源伺服器]**** 中所顯示執行個體的預設位置就包含遠端資料分割。  
   
      **目的地伺服器**  
@@ -147,7 +146,7 @@ ms.locfileid: "66072844"
   
      按一下省略符號 (**...**) 按鈕，來顯示 [連線管理員]**** 對話方塊，並指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，且應將在所選取位置處儲存的遠端資料分割，與此執行個體同步處理。  
   
-     **目的地資料夾**  
+     **目的資料夾**  
      顯示目的地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的資料夾名稱，且要將遠端分割區與此執行個體同步處理。 如果資料行包含值「(預設)」，目的地執行個體的預設位置就應包含遠端分割區。  
   
      按一下省略符號 (**...**) 按鈕，來顯示 [瀏覽遠端資料夾]**** 對話方塊，並指定目的地執行個體上的資料夾，且應將在所選取位置處儲存的遠端資料分割，與此執行個體同步處理。  
@@ -163,10 +162,10 @@ ms.locfileid: "66072844"
      **量值群組**  
      顯示包含分割區之 Cube 中的量值群組的名稱。  
   
-     **資料分割名稱**  
+     **分割區名稱**  
      顯示分割區的名稱。  
   
-     **大小（Mb）**  
+     **大小 (MB)**  
      顯示分割區的大小 (以 MB 為單位)。  
   
 6.  指定是否應該包含使用者權限資訊以及是否應該使用壓縮。 根據預設，此精靈在將檔案複製到目的地伺服器之前會先壓縮所有資料和中繼資料。 這個選項會產生更快的檔案傳輸速度。 一旦檔案到達目的地伺服器之後，就會解壓縮。  

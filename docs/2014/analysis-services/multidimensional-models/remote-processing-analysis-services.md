@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073210"
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
   您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   您的每部電腦上若各自執行不同版本的 SQL Server，則用戶端程式庫的版本與處理此模型之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的版本必須相符。 例如，若處理在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 執行個體上進行，則發出要求的電腦便須擁有和 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]相同的用戶端程式庫。 請參閱 [用於 Analysis Services 連接的資料提供者](../instances/data-providers-used-for-analysis-services-connections.md)。  
   
@@ -31,8 +31,7 @@ ms.locfileid: "66073210"
 -   解決現有的本機處理錯誤，然後再嘗試遠端處理。 確認當處理要求來自本機時，可以順利從外部關聯式資料來源擷取資料。 如需指定用來擷取資料之認證相關指示，請參閱[設定模擬選項 (SSAS - 多維度)](set-impersonation-options-ssas-multidimensional.md)。  
   
 ## <a name="on-demand-remote-processing"></a>隨選遠端處理  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接受具有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員權限之使用者或應用程式帳戶所發出的處理要求。 您若是系統管理員，請確認您可以連接到遠端執行個體，並可透過遠端連接手動處理資料庫。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接受具有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員權限之使用者或應用程式帳戶所發出的處理要求。 您若是系統管理員，請確認您可以連接到遠端執行個體，並可透過遠端連接手動處理資料庫。  
   
 1.  在要用於排程處理電腦上啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，並連接到遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66073210"
   
 -   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   如果不能授與**系統管理員**許可權， [SQL Server Agent 元件](../../ssms/agent/sql-server-agent.md#Components)會建議替代的固定伺服器角色。  
+-   若無法授與[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) 權限， **SQL Server Agent Components** 建議使用替代的固定伺服器角色。  
   
  設定帳戶權限之後，請繼續執行下列步驟。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66073210"
   
 2.  (選擇性) 您可以設定追蹤屬性，將追蹤傳送至檔案或資料庫中的資料表。  
   
-#### <a name="run-the-job"></a>執行工作  
+#### <a name="run-the-job"></a>執行作業  
   
 1.  在執行此作業的電腦上，確認此作業可以執行基本作業。 在物件總管中的 SQL Server Agent 下，先展開 [作業]****，再於剛才所建立的作業上按一下滑鼠右鍵，然後按一下 [從下列步驟啟動作業]****。 作業會立即啟動。 您可以在 SQL Server Profiler 中監視進度。  
   
@@ -96,6 +95,6 @@ ms.locfileid: "66073210"
  [使用 SQL Server Agent 排程 SSAS 管理工作](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [批次處理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)   
- [處理 &#40;XMLA&#41;的物件](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
+ [處理物件 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

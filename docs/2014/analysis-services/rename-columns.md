@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070322"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 課：重新命名資料行
@@ -25,7 +25,7 @@ ms.locfileid: "66070322"
   
  這堂課的預估完成時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 2 課：新增資料](lesson-2-add-data.md)。  
   
 ## <a name="rename-columns"></a>重新命名資料行  
@@ -73,7 +73,7 @@ ms.locfileid: "66070322"
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|日期|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070322"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **區域**  
+     **地理位置**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "66070322"
     |PostalCode|郵遞區號|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Products**  
+     **基礎**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
@@ -143,7 +143,7 @@ ms.locfileid: "66070322"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **網際網路銷售**  
+     **Internet Sales**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  

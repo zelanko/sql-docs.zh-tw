@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072017"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>檢視方塊 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[檢視方塊]** 索引標籤，即可為選取的 Cube 建立和修改檢視方塊。  
   
- 
-  **[檢視方塊]** 索引標籤包含下列窗格：  
+ **[檢視方塊]** 索引標籤包含下列窗格：  
   
 ## <a name="panes"></a>窗格  
- **工具列**  
+ **Toolbar**  
  使用工具列來執行索引標籤上的一般動作。  
   
  **檢視方塊詳細資料**  

@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072984"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>設定分割區儲存 (Analysis Services - 多維度)
@@ -38,7 +38,7 @@ ms.locfileid: "66072984"
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之 Cube 的 [分割區] 索引標籤，或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的分割區屬性頁面上，指定分割區儲存。  
   
 ## <a name="guidelines-for-choosing-a-storage-mode"></a>選擇儲存模式的指導方針  
- 針對大型量值群組，為不同的分割區設定不同的儲存是常見的作法。 請考慮下列指導方針：  
+ 針對大型量值群組，為不同的分割區設定不同的儲存是常見的作法。 請參考下列指引：  
   
 -   針對持續更新的目前資料，請使用即時 ROLAP。  
   
@@ -78,6 +78,6 @@ ms.locfileid: "66072984"
  如果您選取 [套用設定至維度]**** 核取方塊，相同的儲存設定就會套用至與量值群組相關的維度。 維度值一開始與分割區值相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的資料分割](partitions-in-multidimensional-models.md)  
+ [多維度模型中的分割區](partitions-in-multidimensional-models.md)  
   
   

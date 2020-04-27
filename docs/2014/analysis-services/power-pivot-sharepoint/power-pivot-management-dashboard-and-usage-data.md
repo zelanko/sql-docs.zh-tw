@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071114"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理儀表板和使用量資料
@@ -32,10 +32,10 @@ ms.locfileid: "66071114"
   
  [建立 PowerPivot 管理儀表板中的自訂報表](#reports)  
   
-##  <a name="prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
  您必須是服務管理員，才能開啟所管理 PowerPivot 服務應用程式的 PowerPivot 管理儀表板。  
   
-##  <a name="items"></a>儀表板區段的總覽  
+##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a> 儀表板中各區段的概觀  
  PowerPivot 管理儀表板包含 Web 組件和向下鑽研至特定資訊類別的內嵌報表。 下列清單描述的是儀表板的每個部分：  
   
 |儀表板|描述|  
@@ -48,7 +48,7 @@ ms.locfileid: "66071114"
 |資料重新整理 - 最近的失敗|列出未順利完成資料重新整理的 PowerPivot 活頁簿。|  
 |報表|包含您可以在 Excel 中開啟的報表連結。|  
   
-##  <a name="open"></a>開啟 PowerPivot 管理儀表板  
+##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>開啟 PowerPivot 管理儀表板  
  儀表板一次只為一個 PowerPivot 服務應用程式顯示資訊。 您可以從兩個不同的位置開啟管理儀表板。  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>從一般應用程式設定開啟儀表板  
@@ -72,7 +72,7 @@ ms.locfileid: "66071114"
   
 3.  按一下您想要查看管理儀表板報表之 PowerPivot 服務應用程式的名稱。  
   
-##  <a name="sourcedata"></a>儀表板中的來源資料  
+##  <a name="source-data-in-dashboards"></a><a name="sourcedata"></a> 儀表板中的來源資料  
  儀表板、報表和網頁組件會顯示內部資料模型的資料，而該模型會從系統和 PowerPivot 應用程式資料庫中提取資料。 內部資料模型內嵌在管理中心網站所裝載 PowerPivot 活頁簿中。 資料模型的結構是固定的。 雖然您可以使用 PowertPivot 活頁簿做為資料來源建立新報表，但是不得以任何方式修改結構而中斷了使用該來源的預先定義報表。  
   
  如需有關如何收集資料的詳細資訊，請參閱下列主題：  
@@ -81,12 +81,12 @@ ms.locfileid: "66071114"
   
 -   [設定 &#40;PowerPivot for SharePoint 的使用量資料收集](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 若要擷取 PowerPivot 伺服器系統的相關資料，請確認已針對每個 PowerPivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意：** 如果您關閉事件或使用歷程記錄，複合報表將會不完整或發生錯誤。  
+ 若要擷取 PowerPivot 伺服器系統的相關資料，請確認已針對每個 PowerPivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意** ：如果關閉事件或使用量記錄，綜合報表會不完整或發生錯誤。  
   
-##  <a name="edit"></a>編輯 PowerPivot 儀表板  
+##  <a name="edit-powerpivot-dashboard"></a><a name="edit"></a>編輯 PowerPivot 儀表板  
  如果您擁有開發或自訂儀表板的專業技術，可以編輯儀表板以包含新的網頁組件。 您也可以編輯包含於儀表板中的網頁組件屬性。  
   
-##  <a name="reports"></a>建立 PowerPivot 管理儀表板的自訂報表  
+##  <a name="create-custom-reports-for-powerpivot-management-dashboard"></a><a name="reports"></a>建立 PowerPivot 管理儀表板的自訂報表  
  基於報表用途，PowerPivot 使用量資料與記錄會保留在與儀表板一起建立和設定的內部 PowerPivot 活頁簿中。 如果預設報表沒有提供您所需要的資訊，可以在 Excel 中，根據活頁簿建立自訂報表。 如果您稍後升級或解除安裝 PowerPivot 方案檔，您所建立的活頁簿和所有自訂報表都會保留下來。 這些活頁簿和報表會儲存在管理中心網站內的 PowerPivot 管理庫中。 預設看不到這個管理庫，但是您可以使用 [網站動作] 底下的 [檢視所有網站內容] 動作檢視此管理庫。  
   
  為了協助您開始使用自訂報表，PowerPivot 管理儀表板會提供 Office 資料連線 (.odc) 檔案以連線到來源活頁簿。 例如，您可以在 Excel 中使用 .odc 檔案來建立其他報表。  
@@ -140,7 +140,7 @@ ms.locfileid: "66071114"
   
     5.  在檔案路徑中，指定 .odc 檔。  
   
-    6.  按一下 **[開啟]** 。 「資料表匯入精靈」隨即使用包含使用方式資料之 PowerPivot 活頁簿的連接字串啟動。  
+    6.  按一下 [開啟]  。 「資料表匯入精靈」隨即使用包含使用方式資料之 PowerPivot 活頁簿的連接字串啟動。  
   
     7.  按一下 **[測試連接]** 確認您是否擁有存取權。  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077423"
 ---
 # <a name="define-a-default-member"></a>定義預設成員
@@ -44,6 +44,6 @@ ms.locfileid: "66077423"
  若階層中的層級自然彙總，您可以定義階層中任何屬性的預設成員，而不必管階層中的其他屬性。 例如，在階層的國家/地區，您可以定義 City 的預設成員，例如 [City]。[蒙特利爾] 未定義州或國家/地區的預設成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定屬性階層的 &#40;所有&#41; 層級](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [設定屬性階層的 &#40;全部&#41; 層級](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

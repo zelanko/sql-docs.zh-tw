@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079660"
 ---
 # <a name="post-install-configuration-analysis-services"></a>後續安裝組態 (Analysis Services)
@@ -32,9 +32,9 @@ ms.locfileid: "66079660"
 |[設定 Windows 防火牆以允許 Analysis Services 存取](configure-the-windows-firewall-to-allow-analysis-services-access.md)|在 Windows 防火牆中建立輸入規則，以便透過 Analysis Services 執行個體所使用的 TCP 通訊埠來傳送要求。 這是必要的工作。 除非定義輸入防火牆規則，否則就無法從遠端電腦存取 Analysis Services。|  
 |[授與伺服器管理員許可權 &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|在安裝期間，您必須將至少一個使用者帳戶加入至 Analysis Services 執行個體的管理員角色。 許多例行伺服器作業 (例如從外部關聯式資料庫處理資料) 都需要管理權限。 請透過本主題中的資訊來加入或修改管理員角色的成員資格。|  
 |[設定服務帳戶 &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|在安裝期間，會佈建 Analysis Services 服務帳戶，並提供適當權限以允許對程式可執行檔和資料庫檔案進行控制存取。 做為後續安裝工作，您現在應該考慮在執行其他工作時，是否允許使用服務帳戶。 處理和查詢工作負載都可以在服務帳戶下執行。 只有在服務帳戶具有適當的權限時，這些作業才會成功。|  
-|[在伺服器群組中註冊 Analysis Services 實例](register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) 可讓您建立伺服器群組，方便組織 SQL Server 執行個體。 包含多個伺服器執行個體的可延展部署在伺服器群組中更容易管理。 請透過本主題的資訊，在 SSMS 中將 Analysis Services 執行個體組織成群組。|  
-|[判斷 Analysis Services 實例的伺服器模式](determine-the-server-mode-of-an-analysis-services-instance.md)|在安裝期間，您必須選擇在伺服器上執行的伺服器模式，這個模式會決定模型的類型 (多維度或表格式)。 如果您不確定伺服器模式，請透過本主題中的資訊來判斷已安裝的模式。|  
-|[重新命名 Analysis Services 執行個體](rename-an-analysis-services-instance.md)|如果多個執行個體的伺服器模式都不相同，您可以使用描述性名稱加以區別，也可以區分組織中的部門或小組主要使用的執行個體。 如果希望變更執行個體名稱讓您在管理安裝時更容易，請透過本主題中的資訊來了解要如何變更名稱。|  
+|[註冊伺服器群組中的 Analysis Services 執行個體](register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) 可讓您建立伺服器群組，方便組織 SQL Server 執行個體。 包含多個伺服器執行個體的可延展部署在伺服器群組中更容易管理。 請透過本主題的資訊，在 SSMS 中將 Analysis Services 執行個體組織成群組。|  
+|[判斷 Analysis Services 執行個體的伺服器模式](determine-the-server-mode-of-an-analysis-services-instance.md)|在安裝期間，您必須選擇在伺服器上執行的伺服器模式，這個模式會決定模型的類型 (多維度或表格式)。 如果您不確定伺服器模式，請透過本主題中的資訊來判斷已安裝的模式。|  
+|[重新命名 Analysis Services 實例](rename-an-analysis-services-instance.md)|如果多個執行個體的伺服器模式都不相同，您可以使用描述性名稱加以區別，也可以區分組織中的部門或小組主要使用的執行個體。 如果希望變更執行個體名稱讓您在管理安裝時更容易，請透過本主題中的資訊來了解要如何變更名稱。|  
   
 ## <a name="next-steps"></a>後續步驟  
  了解如何使用用戶端程式庫，從 Microsoft 應用程式或自訂應用程式連接至 Analysis Services。 視方案需求而定，您可能還必須為服務設定 Kerberos 驗證。 有跨網域界限需求的連接就需要 HTTP 存取。 如需有關後續步驟的指示，請參閱＜ [Connect to Analysis Services](connect-to-analysis-services.md) ＞。  

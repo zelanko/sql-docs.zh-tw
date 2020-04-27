@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081013"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>一般 (儲存選項對話方塊) (Analysis Services - 多維度資料)
-  在 ** 中，使用 [儲存選項]**** 對話方塊的 [一般]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 索引標籤，即可為維度、Cube、量值群組或資料分割設定儲存模式與主動式快取設定。  
+  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，使用 [儲存選項]**** 對話方塊的 [一般]**** 索引標籤，即可為維度、Cube、量值群組或資料分割設定儲存模式與主動式快取設定。  
   
 > [!NOTE]  
 >  在您修改這些設定之前，必須先熟悉儲存模式與主動式快取功能。 如需詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "66081013"
 |**無回應間隔**|設定在主動式快取開始建立物件的新 MOLAP 影像之前，物件沒有活動的最短間隔與時間單位。<br /><br /> 注意：除非選取 [當資料變更時更新快取]****，否則此選項會停用。|  
 |**無回應覆寫間隔**|設定在接收到針對物件的通知之後，主動式快取開始建立物件之新 MOLAP 影像的最長間隔與時間單位 (不論物件的目前活動情況)。 在到達此間隔後收到的通知，不會取消此間隔所觸發的 MOLAP 影像處理。<br /><br /> 注意：除非選取 [當資料變更時更新快取]****，否則此選項會停用。 另請注意，如果**儲存模式**設定為**HOLAP**，就不應該設定此選項。|  
 |**卸除過期的快取**|指定在開始建立新的 MOLAP 快取與移除現有 MOLAP 快取之間的期間。<br /><br /> 注意：除非選取 [啟用主動式快取]****，否則此選項會停用。 另請注意，如果**儲存模式**設定為 HOLAP，就不應該設定此選項。|  
-|**延遲**|指定在開始建立新 MOLAP 快取與移除現有 MOLAP 快取之間的期間之間隔及時間單位。<br /><br /> 注意：除非選取了 [卸除過期的快取]****，否則此選項會停用。 另請注意，如果**儲存模式**設定為**HOLAP**，就不應該設定此選項。|  
+|**Latency**|指定在開始建立新 MOLAP 快取與移除現有 MOLAP 快取之間的期間之間隔及時間單位。<br /><br /> 注意：除非選取了 [卸除過期的快取]****，否則此選項會停用。 另請注意，如果**儲存模式**設定為**HOLAP**，就不應該設定此選項。|  
 |**定期更新快取**|不論是否接收到通知，都會定期更新 MOLAP 影像。<br /><br /> 注意：除非選取 [啟用主動式快取]****，否則此選項會停用。 另請注意，如果**儲存模式**設定為**HOLAP**，就不應該設定此選項。|  
 |**重建間隔**|選取期間的間隔和時間單位，在建立[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新的 MOLAP 影像之後，就會再次針對物件啟動 MOLAP 影像處理（不論是否有通知）。 在到達此間隔後收到的通知，不會取消此間隔所觸發的 MOLAP 影像處理。<br /><br /> 注意：除非選取了 [定期更新快取]****，否則此選項會停用。 另請注意，如果**儲存模式**設定為**HOLAP**，就不應該設定此選項。|  
 |**立即線上工作**|使物件立即到線上工作。 如果設定了此選項，在重建 MOLAP 快取的期間，物件就會使用基礎 ROLAP 儲存體來解析查詢。 如果未設定此選項，只有在完成了物件的 MOLAP 快取之後，才會使物件上線。|  

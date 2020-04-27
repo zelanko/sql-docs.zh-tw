@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074722"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中建立 Subcube (MDX)
@@ -36,9 +36,7 @@ ms.locfileid: "66074722"
 CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression  
 ```  
   
- CREATE SUBCUBE 語法相當簡單。 
-  *Subcube_Identifier* 參數可識別將作為 Subcube 基礎的 Cube。 
-  *Subcube_Expression* 參數可選取將成為 Subcube 的 Cube 部分。  
+ CREATE SUBCUBE 語法相當簡單。 *Subcube_Identifier* 參數可識別將作為 Subcube 基礎的 Cube。 *Subcube_Expression* 參數可選取將成為 Subcube 的 Cube 部分。  
   
  建立 Subcube 之後，此 Subcube 就會成為所有 MDX 查詢的內容，直到工作階段結束或是執行 [DROP SUBCUBE](/sql/mdx/mdx-data-definition-drop-subcube) 陳述式為止。  
   
@@ -70,6 +68,6 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 ## <a name="see-also"></a>另請參閱  
  [在查詢中建立 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

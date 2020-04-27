@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077498"
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
@@ -51,7 +51,7 @@ ms.locfileid: "66077498"
   
  選取目標物件類型之後，在 [目標物件]**** 下，選取指定類型的 Cube 物件。  
   
- **條件（選擇性）**  
+ **條件 (選擇性)**  
  指定解析成布林值的選擇性多維度運算式 (MDX) 運算式。 如果值為 `True`，就會在指定的目標上執行動作。 如果值為 `False`，則不會執行動作。  
   
  **動作內容**  
@@ -72,10 +72,10 @@ ms.locfileid: "66077498"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**啟動**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> Batch<br /><br /> 互動式<br /><br /> 開啟時|  
-|**Application**|描述動作的應用程式。|  
-|**說明**|描述動作。|  
-|**Caption**|提供為動作顯示的標題。 如果標題是 MDX，請針對`True` [**標題是 mdx**] 指定。|  
+|**引動過程**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> Batch<br /><br /> Interactive (互動式)<br /><br /> 開啟時|  
+|**應用程式**|描述動作的應用程式。|  
+|**描述**|描述動作。|  
+|**字幕**|提供為動作顯示的標題。 如果標題是 MDX，請針對`True` [**標題是 mdx**] 指定。|  
 |**標題是 MDX**|如果標題是 MDX，請指定 `True`；如果不是 MDX，則指定 `False`。|  
   
 > [!NOTE]  
@@ -93,7 +93,7 @@ ms.locfileid: "66077498"
 |**伺服器路徑**|報表伺服器所公開的路徑。|  
 |**報表格式**|HTML5、HTML3、Excel 或 PDF。|  
   
- **參數（選擇性）**  
+ **參數 (選擇性)**  
  建立動作時，會將參數傳送到伺服器做為 URL 字串的一部分。 這些參數包括 [參數名稱]**** 和 [參數值]****，後者為 MDX 運算式。  
   
  報表伺服器 URL 的建構如下：  
@@ -120,10 +120,10 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
 ## <a name="creating-a-drillthrough-action"></a>建立鑽研動作  
  鑽研動作是由資料列集動作定義的，會傳回到用戶端應用程式做為鑽研陳述式。 動作目標是量值群組的成員。 若要建立新的鑽研動作，請在 [Cube]**** 功能表上，按一下 [新增鑽研動作]****。 下列選項是鑽研動作特有的選項：  
   
- **鑽取資料行**  
+ **鑽研資料行**  
  選取一或多個維度，並針對每一個維度，選取由動作傳回到用戶端應用程式的鑽研資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
   
   

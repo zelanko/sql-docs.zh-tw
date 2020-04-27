@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077905"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>量值群組 (資料分割索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
@@ -31,18 +31,18 @@ ms.locfileid: "66077905"
   
  按一下即可選取資料分割的整個資料列。  
   
- **資料分割名稱**  
+ **分割區名稱**  
  鍵入選取之資料分割的名稱。  
   
- **Source**  
+ **來源**  
  鍵入為選取之資料分割提供事實資料表資料的資料表名稱 (適用於資料表繫結) 或查詢 (適用於查詢繫結)。  
   
  按一下 [...]**** 按鈕即可顯示 [資料分割來源]**** 對話方塊，並為選取的資料分割定義來源。  
   
- **累積**  
+ **彙總**  
  顯示分割區的彙總模式和儲存模式。 先顯示儲存模式：關聯式線上分析處理 (ROLAP)、多維度線上分析處理 (MOLAP) 或混合式線上分析處理 (HOLAP)。 彙總模式會顯示為要求最佳化的百分比、要求或使用之空間的量值、或建立的彙總數目。 按一下 [...]**** 按鈕即可顯示 [彙總設計精靈]****，並為指定的資料分割定義彙總設計。  
   
- **說明**  
+ **描述**  
  鍵入分割區的選擇性描述。  
   
  **新增資料分割...**  
@@ -57,7 +57,7 @@ ms.locfileid: "66077905"
  **回寫設定 .。。**  
  按一下即可顯示 [啟用/停用回寫]**** 對話方塊，並為選取的量值群組指定回寫設定。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  在選取之量值群組的 [資料分割]**** 窗格中，以滑鼠右鍵按一下資料列，即可顯示提供下列選項的操作功能表：  
   
 |選項|定義|  
@@ -73,6 +73,6 @@ ms.locfileid: "66077905"
 |**處理程序**|按一下即可顯示 [處理]**** 對話方塊，並處理選取的資料分割。|  
 |**複製**|已停用此選項。|  
 |**貼上**|已停用此選項。|  
-|**屬性**|選取即可在 ** 中，顯示選取之資料分割的 [屬性]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗。|  
+|**屬性**|選取即可在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，顯示選取之資料分割的 [屬性]**** 視窗。|  
   
   

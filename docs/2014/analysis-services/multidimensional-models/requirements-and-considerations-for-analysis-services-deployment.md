@@ -22,18 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073166"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的需求和考量
   方案的效能和可用性取決於許多因素，包括基礎硬體的功能、伺服器部署的拓撲、方案的特性 (例如，具有跨多部伺服器分散的資料分割，或使用需要直接存取關聯式引擎的 ROLAP 儲存)、伺服器等級協定，以及資料模型的複雜性。  
   
 ## <a name="memory-and-processor-requirements"></a>記憶體和處理器需求  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要較多的記憶體和處理器資源：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要較多的記憶體和處理器資源：  
   
 -   處理大型或複雜的 Cube 時。 這些需要比處理小型或簡單的 Cube 更多的記憶體和處理器資源。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66073166"
   
  可供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的記憶體和處理器資源數量會因 SQL Server 版本、作業系統、硬體功能以及您是使用虛擬還是實體處理器而異。 如需詳細資訊，請追蹤下列連結：  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [SQL Server 版本的計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
@@ -56,13 +55,12 @@ ms.locfileid: "66073166"
  [最大容量規格 &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>磁碟空間需求  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安裝的差異以及物件處理工作的差異，會有不同的磁碟空間需求。 下列清單描述這些需求。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安裝的差異以及物件處理工作的差異，會有不同的磁碟空間需求。 下列清單描述這些需求。  
   
  Cube  
  有大型事實資料表的 Cube 所需要的磁碟空間，會比小型事實資料表的 Cube 更多。 同樣地，雖然差異幅度較小，有許多大型維度的 Cube 對於所需要的磁碟空間，會比有較少維度成員的 Cube 更多。 一般而言，您可以預測 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫所需的磁碟空間，會是基礎關聯式資料庫中所儲存相同資料之空間的 20% 左右。  
   
- 彙總  
+ Aggregations  
  匯總需要與新增的匯總有額外的空間-有更多的匯總，需要更多的空間。 如果您有避免建立不需要的彙總，則彙總需要的額外磁碟空間，通常不會超過基礎關聯式資料庫中所儲存資料大小的 10% 左右。  
   
  資料採礦  
@@ -71,7 +69,7 @@ ms.locfileid: "66073166"
  物件處理  
  在處理期間， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將正在處理交易中處理的物件副本儲存到磁碟上，直到處理完成為止。 處理完成時，物件的已處理副本就會取代原始物件。 因此，您必須提供足夠的額外磁碟空間，給要處理的每一個物件的第二個副本。 例如，如果您打算在單一交易中處理整個 Cube，您需要足夠的磁碟空間來儲存整個 Cube 的第二個副本。  
   
-##  <a name="BKMK_Availability"></a>可用性考慮  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>可用性考慮  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 環境中，可能會因為硬體或軟體的失敗，而無法使用 Cube 或採礦模型來進行查詢。 Cube 也可能因為需要進行處理而無法使用。  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>在硬體或軟體失敗時維持可用性  
@@ -88,7 +86,7 @@ ms.locfileid: "66073166"
   
  若要直接在背景處理來源資料的累加更新，請啟用主動式快取。 主動式快取會自動以新的來源資料更新 Cube，不需要手動處理且不影響 Cube 的可用性。 如需詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
-##  <a name="BKMK_Scalability"></a>擴充性考慮  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>擴充性考慮  
  相同電腦上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和的多個實例可能會造成效能問題。 若要解決這些問題，可增加伺服器上的處理器、記憶體和磁碟資源。 不過，您可能也需要在多部電腦上調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的延展。  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>在多部電腦上調整 Analysis Services 的延展  

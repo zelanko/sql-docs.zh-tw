@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081445"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>編輯現有的資料來源連接 (SSAS 表格式)
@@ -61,8 +61,7 @@ ms.locfileid: "66081445"
   
 2.  按一下 **[資料表]** 功能表，然後再按一下 **[資料表屬性]**。  
   
-     所選資料表的名稱會顯示在 **[資料表名稱]** 方塊中。 
-  **[來源名稱]** 方塊會包含此資料表在外部資料來源的名稱。 如果資料行在來源和模型中的名稱不同，您可以在兩組資料行名稱之間切換，其方式是選取 **[來源]** 或 **[模型]** 選項。  
+     所選資料表的名稱會顯示在 **[資料表名稱]** 方塊中。 **[來源名稱]** 方塊會包含此資料表在外部資料來源的名稱。 如果資料行在來源和模型中的名稱不同，您可以在兩組資料行名稱之間切換，其方式是選取 **[來源]** 或 **[模型]** 選項。  
   
 3.  若要變更當做資料來源使用的資料表，請針對 **[來源名稱]** 選取與目前資料表不同的資料表。  
   
@@ -80,6 +79,6 @@ ms.locfileid: "66081445"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;處理資料](process-data-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;支援的資料來源](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

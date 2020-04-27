@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072963"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>設定模擬選項 (SSAS - 多維度)
@@ -39,13 +39,13 @@ ms.locfileid: "66072963"
 ## <a name="set-impersonation-options-in-management-studio"></a>在 Management Studio 中設定模擬選項  
  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，針對這些對話方塊的下列屬性按一下省略符號 (**...**) 按鈕，以開啟 [模擬資訊]**** 對話方塊：  
   
--   [**資料庫屬性**] 對話方塊，透過 [資料來源模擬資訊] 屬性。  
+-   [資料庫屬性]**** 對話方塊，透過 [資料來源模擬資訊] 屬性。  
   
--   [**資料來源屬性**] 對話方塊，透過 [模擬資訊] 屬性。  
+-   [資料來源屬性]**** 對話方塊，透過 [模擬資訊] 屬性。  
   
--   [**元件屬性**] 對話方塊，透過 [模擬資訊] 屬性。  
+-   [組件屬性]**** 對話方塊，透過 [模擬資訊] 屬性。  
   
-##  <a name="bkmk_options"></a>模擬選項  
+##  <a name="impersonation-options"></a><a name="bkmk_options"></a> 模擬選項  
  對話方塊中的所有選項都可以使用，但並非所有選項都適合所有案例。 請使用下列資訊來確定最適合您案例的選項。  
   
  **使用特定的使用者名稱和密碼**  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076110"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多維度模型中的 Cube
@@ -35,23 +35,23 @@ ms.locfileid: "66076110"
 |-------------|-----------------|  
 |維度|[多維度模型中的維度](dimensions-in-multidimensional-models.md)|  
 |量值和量值群組|[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)|  
-|資料分割|[多維度模型中的資料分割](partitions-in-multidimensional-models.md)|  
-|檢視方塊|[多維度模型中的觀點](perspectives-in-multidimensional-models.md)|  
+|資料分割|[多維度模型中的分割區](partitions-in-multidimensional-models.md)|  
+|檢視方塊|[多維度模型中的檢視方塊](perspectives-in-multidimensional-models.md)|  
 |階層|[建立使用者定義階層](user-defined-hierarchies-create.md)|  
 |動作|[多維度模型中的動作](actions-in-multidimensional-models.md)|  
-|關鍵效能指標 (KPI)|[多維度模型中 &#40;Kpi&#41; 的關鍵效能指標](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|關鍵效能指標 (KPI)|[多維度模型中的關鍵效能指標 &#40;KPI&#41;](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |計算|[多維度模型中的計算](calculations-in-multidimensional-models.md)|  
 |翻譯|[多維度模型中的翻譯](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[使用 Cube 精靈來建立 Cube](create-a-cube-using-the-cube-wizard.md)|描述如何使用 Cube 精靈來定義 Cube、維度、維度屬性和使用者自訂階層。|  
 |[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)|描述如何定義量值群組。|  
 |[多維度模型中的計算](calculations-in-multidimensional-models.md)|描述如何定義及設定 MDX 指令碼中的計算。|  
 |[多維度模型中的動作](actions-in-multidimensional-models.md)|描述如何定義及設定動作。|  
-|[多維度模型中的觀點](perspectives-in-multidimensional-models.md)|描述如何定義及設定檢視方塊。|  
+|[多維度模型中的檢視方塊](perspectives-in-multidimensional-models.md)|描述如何定義及設定檢視方塊。|  
 |[定義預存程序](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|描述如何使用預存程序。|  
   
   

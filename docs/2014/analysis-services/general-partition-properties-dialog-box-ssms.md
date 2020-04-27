@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081067"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>一般 (資料分割屬性對話方塊) (SSMS)
@@ -30,20 +30,20 @@ ms.locfileid: "66081067"
 |**彙總前置詞**|顯示資料分割所包含之彙總執行個體的預設前置詞。|  
 |**建立時間戳記**|顯示建立資料分割的日期和時間。|  
 |**目前儲存模式**|顯示資料分割的目前儲存模式。<br /><br /> 注意：此模式可能會依據資料分割的主動式快取設定而改變。 如需主動式快取的詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。|  
-|**說明**|鍵入即可變更資料分割的描述。|  
+|**描述**|鍵入即可變更資料分割的描述。|  
 |**估計的資料列**|鍵入資料分割代表之基礎資料來源中所估計的資料列數目。 此值會於處理期間使用，以估計處理資料分割所需的時間和儲存體。|  
 |**估計的大小**|顯示資料分割的估計大小。|  
-|**ID**|顯示資料分割的識別碼。|  
+|**識別碼**|顯示資料分割的識別碼。|  
 |**上次處理**|顯示上次處理資料分割的日期和時間。|  
-|**上次架構更新**|顯示上次更新資料分割之中繼資料的日期和時間。|  
+|**上次結構描述更新**|顯示上次更新資料分割之中繼資料的日期和時間。|  
 |**名稱**|顯示分割區的名稱。|  
 |**處理模式**|選取資料分割的處理模式。 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]物件之處理模式的詳細資訊，請參閱多[維度模型物件處理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。|  
 |**遠端資料來源識別碼**|顯示從其中擷取資料分割之來源資料的遠端資料來源識別碼。<br /><br /> 注意：此屬性包含僅適用於遠端資料分割的值。|  
 |**圓形圖**|顯示識別資料分割所代表之資料配量的運算式。|  
-|**Source**|顯示提供資料分割之來源資料的資料表或查詢。|  
+|**來源**|顯示提供資料分割之來源資料的資料表或查詢。|  
 |**State**|顯示資料分割目前的處理狀態。|  
 |**儲存位置**|顯示儲存資料分割之資料的資料夾。<br /><br /> 注意：唯有指定了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的預設儲存位置之外的儲存位置之後，此屬性才會包含值。|  
-|**型別**|顯示資料分割的類型。|  
+|**類型**|顯示資料分割的類型。|  
   
 ## <a name="see-also"></a>另請參閱  
  [分割區 &#40;Analysis Services 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

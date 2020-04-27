@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072899"
 ---
 # <a name="set-partition-writeback"></a>設定分割區回寫
@@ -62,6 +62,6 @@ ms.locfileid: "66072899"
 ## <a name="see-also"></a>另請參閱  
  [可寫入的磁碟分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [在 Excel 2010 的資料格層級啟用 OLAP Cube 的回寫功能](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [使用 Analysis Services 回寫來啟用和保護資料輸入](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [啟用 Analysis Services 回寫並透過回寫保護資料輸入](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

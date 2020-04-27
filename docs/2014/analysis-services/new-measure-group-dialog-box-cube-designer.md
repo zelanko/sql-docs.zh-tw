@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072269"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>新增量值群組對話方塊 (Cube 設計工具)
-  使用 ** 中的 [新增量值群組]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可將新的量值群組加入 Cube 設計師中的 Cube。 您可以藉由下列方式顯示 [新增量值群組]**** 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [新增量值群組]**** 對話方塊，即可將新的量值群組加入 Cube 設計師中的 Cube。 您可以藉由下列方式顯示 [新增量值群組]**** 對話方塊：  
   
 -   在 Cube 設計師的 [Cube 結構]**** 索引標籤上，按一下 [工具列]**** 窗格中的 [新增量值群組]****。  
   

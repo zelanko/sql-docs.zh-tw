@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072190"
 ---
 # <a name="object-binding-dialog-box"></a>物件繫結對話方塊
-  使用 **中的** [物件繫結] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件屬性與資料來源檢視中之資料表或資料行之間的繫結。 在 ** 的 [屬性]**** 視窗中，從下列 ** 物件屬性值的下拉式清單中選取 [(新增)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**，即可顯示 [物件繫結]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊：  
+  使用 **中的** [物件繫結] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件屬性與資料來源檢視中之資料表或資料行之間的繫結。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]**** 視窗中，從下列 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件屬性值的下拉式清單中選取 [(新增)]****，即可顯示 [物件繫結]**** 對話方塊：  
   
 -   NameColumn  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66072190"
  指出要在資料來源檢視中定義新的資料行，然後建立資料行繫結與該資料行的關聯。  
   
 > [!NOTE]  
->  如果選取此選項，您就必須在部署 ** 物件之前，先執行 [結構描述產生精靈]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+>  如果選取此選項，您就必須在部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件之前，先執行 [結構描述產生精靈]****。  
   
  資料列繫結  
  將物件繫結到事實資料表中的資料列，並可根據事實資料表中處理的資料列數提供計數量值。  

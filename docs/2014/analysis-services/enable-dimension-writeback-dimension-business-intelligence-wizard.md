@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081333"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>啟用維度回寫 (維度) (商業智慧精靈)
@@ -26,7 +26,7 @@ ms.locfileid: "66081333"
 >  如果 [商業智慧精靈] 是從 [維度設計師] 啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。  
   
 ## <a name="options"></a>選項。  
- **維度**  
+ **Dimension**  
  選取要精靈啟用回寫的維度。  
   
 ## <a name="see-also"></a>另請參閱  

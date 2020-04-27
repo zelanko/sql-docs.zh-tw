@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072322"
 ---
 # <a name="neural-network-mining-model-viewer"></a>類神經網路 (採礦模型檢視器)
   使用 **[類神經網路]** 檢視器，即可探索以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 類神經網路演算法或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 羅吉斯迴歸演算法為基礎的採礦模型。  
   
- **如需詳細資訊：** [Microsoft 類神經網路演算法](data-mining/microsoft-neural-network-algorithm.md)、 [Microsoft 羅吉斯回歸演算法](data-mining/microsoft-logistic-regression-algorithm.md)、[使用 Microsoft 類神經網路檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **如需詳細資訊，請參閱 ** [Microsoft 類神經網路演算法](data-mining/microsoft-neural-network-algorithm.md)、[Microsoft 羅吉斯迴歸演算法](data-mining/microsoft-logistic-regression-algorithm.md)、[使用 Microsoft 類神經網路檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -39,7 +39,7 @@ ms.locfileid: "66072322"
   
 |值|描述|  
 |-----------|-----------------|  
-|**Attribute**|從清單選擇輸入屬性。 如果您將選取專案保留為預設值 [ ** \<所有>**]，則圖表會顯示所有輸入屬性的清單，並依其對可預測屬性的影響進行排序。|  
+|**屬性**|從清單選擇輸入屬性。 如果您將選取專案保留為預設值 [ ** \<所有>**]，則圖表會顯示所有輸入屬性的清單，並依其對可預測屬性的影響進行排序。|  
 |**ReplTest1**|選擇輸入屬性的值。|  
   
  **輸出**  
@@ -48,7 +48,7 @@ ms.locfileid: "66072322"
 |值|描述|  
 |-----------|-----------------|  
 |**輸出屬性**|選擇可預測屬性。 如果您在建立模型時未將資料行定義為可預測資料行，則無法在此處新增它。|  
-|**值1**|選擇一種可預測屬性狀態，和 **[值 2]** 裡包含的狀態進行比較。<br /><br /> 可以比較任兩個離散或離散化值；但無法像在其他檢視器中一樣，比較值與其補數。|  
+|**值 1**|選擇一種可預測屬性狀態，和 **[值 2]** 裡包含的狀態進行比較。<br /><br /> 可以比較任兩個離散或離散化值；但無法像在其他檢視器中一樣，比較值與其補數。|  
 |**值2**|選取一種可預測屬性狀態，和 **[值 1]** 裡包含的狀態進行比較。|  
   
  **變數**  
@@ -56,7 +56,7 @@ ms.locfileid: "66072322"
   
 |值|描述|  
 |-----------|-----------------|  
-|**Attribute**|顯示您在 **[屬性]** 中所選取輸入屬性的名稱。|  
+|**屬性**|顯示您在 **[屬性]** 中所選取輸入屬性的名稱。|  
 |**ReplTest1**|顯示所選取輸入屬性的值。|  
 |**偏好\<值 1>**|顯示長條，該圖表示此特定屬性/值組合對 [值 1]**** 中選擇的目標結果有多大影響。|  
 |**偏好\<值 2>**|顯示長條，該圖表示此特定屬性/值組合對 [值 2]**** 中選擇的目標結果有多大影響。|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078895"
 ---
 # <a name="modifying-measures"></a>修改量值
@@ -22,7 +22,7 @@ ms.locfileid: "66078895"
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>若要修改 Cube 的量值  
   
-1.  針對 ** 教學課程 Cube，切換到 [Cube 設計師] 的 [Cube 結構]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，並展開 [量值]**** 窗格中的 [網際網路銷售]**** 量值群組，然後以滑鼠右鍵按一下 [訂購數量]****，再按一下 [屬性]****。  
+1.  針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [Cube 結構]**** 索引標籤，並展開 [量值]**** 窗格中的 [網際網路銷售]**** 量值群組，然後以滑鼠右鍵按一下 [訂購數量]****，再按一下 [屬性]****。  
   
 2.  在 [屬性] 視窗中，按一下 [自動隱藏]**** 圖釘圖示來固定開啟 [屬性] 視窗。  
   
@@ -38,17 +38,17 @@ ms.locfileid: "66078895"
   
     -   **單價**  
   
-    -   **延伸量**  
+    -   **擴充量**  
   
-    -   **折扣金額**  
+    -   **折扣量**  
   
     -   **產品標準成本**  
   
     -   **產品總成本**  
   
-    -   **銷售金額**  
+    -   **銷售量**  
   
-    -   **稅金金額**  
+    -   **稅額**  
   
     -   **Freight**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66078895"
 11. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [修改 [客戶] 維度](lesson-3-2-modifying-the-customer-dimension.md)  
+ [修改客戶維度](lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [定義資料庫維度](multidimensional-models/define-database-dimensions.md)   

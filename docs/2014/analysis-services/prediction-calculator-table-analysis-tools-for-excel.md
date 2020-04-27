@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070863"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>預測計算器 (適用於 Excel 的資料表分析工具)
@@ -54,7 +54,7 @@ ms.locfileid: "66070863"
   
 7.  在 [**輸出選項**] 區段中，選取 [**操作計算機**]，在 Excel 活頁簿內建立分析和計分卡。 選取 [**印表機就緒計算機**] 來建立分析，也會產生可列印並用於手動評分的報表。  
   
-8.  按一下 **[執行]** 。  
+8.  按一下 [執行]****。  
   
      此工具會建立包含報表與計分卡的新工作表。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66070863"
 #### <a name="table-for-specifying-costs-and-profits"></a>指定成本與收益的資料表  
  此報表中的第一個工具在報表左上方的資料表，您可以在其中指定與正確和不正確預測值相關聯的成本與收益。  計算器需要這些成本與收益，才能計算最佳分數臨界值。  
   
-|Item|描述及範例|  
+|項目|描述及範例|  
 |----------|-----------------------------|  
 |誤判成本|當實際的預測錯誤時，假設模型正確預測肯定結果的成本。<br /><br /> 例如，模型預測客戶將購買某樣東西，而且您根據這個預測鎖定該客戶想出一個活動。 您可能在此輸入拓展客戶的成本。|  
 |誤否定成本|當實際的預測錯誤時，假設模型正確預測否定結果的成本。<br /><br /> 例如，模型可能會預測年紀較大的客戶不太可能購買腳踏車，但是您發現該模型被扭曲了，因此您損失了鎖定年紀較大的客戶的機會。 您可能在此指派損失的機會成本。|  
@@ -101,8 +101,8 @@ ms.locfileid: "66070863"
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
-|性別|女性|13|  
-|性別|男性|0|  
+|性別|Female|13|  
+|性別|Male|0|  
   
  您可以將這些因數解譯如下：  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070863"
 |屬性|值|相對影響|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
-|性別|男性|0|  
+|性別|Male|0|  
 |Income|39050-71062|117|  
 |Children|0|157|  
 |教育訓練|Bachelors|22|  
@@ -139,7 +139,7 @@ ms.locfileid: "66070863"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |區域|北美洲|0|  
-|年齡|37-46|5|  
+|Age|37-46|5|  
 |總計||491|  
 |Prediction for 'Yes'||FALSE|  
   
@@ -175,8 +175,7 @@ ms.locfileid: "66070863"
 8.  使用在**總**資料列之後的工作表上列印的準則，將分數轉換成預測的結果。  
   
 ## <a name="related-tools"></a>相關工具  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供 Microsoft 羅吉斯迴歸演算法，以用於此類型的分析。 如果您已經熟悉羅吉斯回歸，可以使用適用于 Excel 的資料採礦用戶端的 [ **Advanced** ] 選項，輕鬆地建立羅吉斯回歸模型。 如需詳細資訊，請參閱[Advanced 模型化 &#40;適用于 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)。 如需羅吉斯回歸模型之選項和參數的詳細資訊，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的「Microsoft 羅吉斯回歸演算法」主題。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供 Microsoft 羅吉斯迴歸演算法，以用於此類型的分析。 如果您已經熟悉羅吉斯回歸，可以使用適用于 Excel 的資料採礦用戶端的 [ **Advanced** ] 選項，輕鬆地建立羅吉斯回歸模型。 如需詳細資訊，請參閱[Advanced 模型化 &#40;適用于 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)。 如需羅吉斯回歸模型之選項和參數的詳細資訊，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的「Microsoft 羅吉斯回歸演算法」主題。  
   
 ## <a name="see-also"></a>另請參閱  
  [適用於 Excel 的資料表分析工具](table-analysis-tools-for-excel.md)  

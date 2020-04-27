@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073771"
 ---
-# <a name="tuples"></a>Tuples
+# <a name="tuples"></a>Tuple
   Tuple 可以唯一識別 Cube 中的資料配量。 Tuple 是由維度成員的組合所構成，只要沒有兩個以上的成員屬於相同階層即可。  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Tuple 中的隱含或預設屬性成員  
@@ -66,6 +66,6 @@ FROM [Adventure Works]
  [MDX 中的重要概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Cube 空間](cube-space.md)   
  [自動存在](autoexists.md)   
- [使用成員、元組和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [使用成員、Tuple 和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

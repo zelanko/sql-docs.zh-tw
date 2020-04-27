@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079563"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>項目集索引標籤 (採礦模型檢視器)
   您可以使用 [項目集]**** 窗格，檢視關聯規則採礦模型所包含的常見項目集。 因為關聯模型可包含許多項目集，所以檢視器中提供了一些控制項，協助您篩選在檢視器中顯示的項目集。  
   
- **如需詳細資訊：** [Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)、[使用 microsoft 關聯規則檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)、 [使用 Microsoft 關聯規則檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -34,7 +34,7 @@ ms.locfileid: "66079563"
  **檢視器**  
  選擇用來檢視選取之採礦模型的檢視器。 可以使用自訂的關聯模型檢視器，或 [ [!INCLUDE[msCoName](../includes/msconame-md.md)] 一般內容樹狀檢視器]。 還可以使用外掛程式檢視器 (如果有)。  
   
- **最低支援**  
+ **最小支援**  
  變更此值以設定項目集必須包含的最小支援，才能出現在檢視器中。 首次開啟模型時顯示的預設值是由模型所計算，但您可以變更此值以查看更多或更少項目集。  
   
  **項目集大小下限**  
@@ -68,13 +68,13 @@ ms.locfileid: "66079563"
  **最大資料列數**  
  限制在檢視器中顯示的項目集數目。 根據預設，項目集是依支援的遞減順序排序，因此，減小此值會限制清單，只列出最常用的項目集。  
   
- **部門**  
+ **支援**  
  顯示對每個項目集的支援。  
   
  **大小**  
  顯示存在於每個項目集內的項目數目。  
   
- **項數**  
+ **項目集**  
  顯示每個項目集的描述。 根據預設，項目集表示為以逗號分隔的屬性及其值清單。 您可以使用 [顯示]**** 選項來變更其顯示方式。  
   
 ## <a name="see-also"></a>另請參閱  

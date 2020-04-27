@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073573"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>多維度模型方案 (SSAS)
@@ -37,10 +37,10 @@ ms.locfileid: "66073573"
  [多維度模型中的維度](dimensions-in-multidimensional-models.md)  
  描述如何設計 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度物件。  
   
- [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
  描述如何設計 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 物件。  
   
- [架構產生嚮導 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
  描述如何在無現有的關聯式結構描述之下來設計多維度資料庫物件。  
   
  [Analysis Services 個人化延伸模組](extending-olap/analysis-services-personalization-extensions.md)  

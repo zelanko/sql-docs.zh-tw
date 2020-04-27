@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080758"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>反白顯示例外狀況 (適用於 Excel 的資料表分析工具)
@@ -37,7 +37,7 @@ ms.locfileid: "66080758"
   
 2.  指定要分析的資料行。  
   
-3.  按一下 **[執行]** 。  
+3.  按一下 [執行]****。  
   
 4.  開啟標題\<為 [資料表名稱] 的工作表> 極端值，以查看找到的極端值摘要。  
   

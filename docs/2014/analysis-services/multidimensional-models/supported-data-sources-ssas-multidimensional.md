@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072855"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>支援的資料來源（SSAS 多維度）
   此主題描述可用於多維度模型的資料來源類型。  
   
-##  <a name="bkmk_supported_ds"></a>支援的資料來源  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>支援的資料來源  
  您可以從下表的資料來源擷取資料。 當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，安裝程式不會安裝所列每種資料來源的提供者。 某些提供者可能已經隨著其他應用程式安裝在您的電腦上。在其他情況下，您將需要下載和安裝提供者。  
   
 > [!NOTE]  

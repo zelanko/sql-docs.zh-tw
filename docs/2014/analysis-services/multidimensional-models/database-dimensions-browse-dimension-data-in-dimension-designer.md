@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075993"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>在維度設計師中瀏覽維度資料
-  您可以從 ** 存取維度設計師，並使用其中的 [瀏覽器]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 檢視來瀏覽維度中的資料。  
+  您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取維度設計師，並使用其中的 [瀏覽器]**** 檢視來瀏覽維度中的資料。  
   
  若要在 [瀏覽器]**** 檢視中顯示維度資料，此維度必須在已處理的狀態。 如需詳細資訊，請參閱多[維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
   

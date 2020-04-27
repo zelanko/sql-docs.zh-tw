@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075344"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>指定資料分割和角色部署選項
@@ -35,7 +35,7 @@ ms.locfileid: "66075344"
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>檢閱資料分割和角色部署選項  
  \<*專案名稱*> d 檔案中的部署選項包括下列各項：  
   
- **分割區部署選項**  
+ **資料分割部署選項**  
  \<*專案名稱*> d 檔案會指定是否保留或覆寫目的地資料庫中的現有資料分割（預設值）。 如果保留現有的資料分割，則只會部署新的資料分割，而所有現有的量值群組上的資料分割與彙總設計都會保持不變。  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "66075344"
   
 -   保留目的地資料庫中之現有的角色和角色成員，而且不部署新角色。  
   
--   **注意**保留現有的角色和成員時，與這些角色相關聯的許可權會重設為 [無]。 安全性權限包含在它們所保護的物件中，而非與它們相關聯的安全性角色。 如需如何使用 Analysis Services 部署嚮導來處理此行為的詳細資訊，請參閱 Microsoft 知識庫中的「保留角色和成員」。  
+-   **注意** ：保留現有角色與成員時，與這些角色相關聯的權限會重設為無。 安全性權限包含在它們所保護的物件中，而非與它們相關聯的安全性角色。 如需如何使用 Analysis Services 部署嚮導來處理此行為的詳細資訊，請參閱 Microsoft 知識庫中的「保留角色和成員」。  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>修改資料分割和角色部署選項  
  您可能需要使用不同的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]分割區和角色選項來部署專案，而不是\<d 檔案中儲存的*專案> 名稱*。 例如，您可能會想要保留現有的分割區、角色和角色成員，而不是取代所有現有的\<分割區、角色和成員，如*專案名稱*>. d 檔案中所示。  

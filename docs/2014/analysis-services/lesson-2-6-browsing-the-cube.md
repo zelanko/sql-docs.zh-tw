@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078975"
 ---
 # <a name="browsing-the-cube"></a>瀏覽 Cube
@@ -28,20 +28,20 @@ ms.locfileid: "66078975"
   
 ### <a name="to-browse-the-deployed-cube"></a>瀏覽已部署的 Cube  
   
-1.  針對 ** 中的 [產品] 維度，切換至 [維度設計師]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [產品]**** 維度。  
+1.  針對 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [產品] 維度，切換至 [維度設計師]****。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [產品]**** 維度。  
   
-2.  按一下 [**瀏覽器**] 索引卷**** 標，顯示`Product Key`屬性階層的 [全部] 成員。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
+2.  按一下 [**瀏覽器**] 索引卷**All**標，顯示`Product Key`屬性階層的 [全部] 成員。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
   
-3.  在 ** 中，切換至 [Cube 設計師]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要這樣做，請在方案總管的 [Cube]**** 節點中，按兩下 [Analysis Services 教學課程]**** Cube。  
+3.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，切換至 [Cube 設計師]****。 若要這麼做，請在方案總管的 [ **cube** ] 節點中，按兩下 [ **Analysis Services 教學**課程] cube。  
   
 4.  選取 [瀏覽器]**** 索引標籤，然後按一下設計師工具列上的重新連接**** 圖示。  
   
      設計師的左窗格會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中的物件。 [瀏覽器]**** 索引標籤的右側具有兩個窗格：上面的窗格是 [篩選]**** 窗格，而下面的窗格是 [資料]**** 窗格。 在後續課程中，您將使用 Cube 瀏覽器來進行分析。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 3 課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [第3課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

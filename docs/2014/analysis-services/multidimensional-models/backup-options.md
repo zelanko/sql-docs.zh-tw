@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f620bafc0a734651adfe43bcf0367ca5328dc40c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076958"
 ---
 # <a name="backup-options"></a>備份選項
@@ -31,7 +31,7 @@ ms.locfileid: "66076958"
   
 ## <a name="see-also"></a>另請參閱  
  [[備份資料庫] 對話方塊 &#40;Analysis Services-多維度資料&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Analysis Services 資料庫的備份與還原](backup-and-restore-of-analysis-services-databases.md)   
+ [備份與還原 Analysis Services 資料庫](backup-and-restore-of-analysis-services-databases.md)   
  [Backup 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [備份、還原和同步處理資料庫 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074935"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>授與資料採礦結構和模型的權限 (Analysis Services)
@@ -49,11 +49,11 @@ ms.locfileid: "66074935"
 ## <a name="set-permissions-to-access-a-mining-model"></a>設定權限以存取採礦模型  
  對於資料採礦模型而言，角色可以擁有 [讀取]**** 或 [讀取/寫入]**** 權限，以及 [鑽研]**** 和 [讀取定義]**** 權限，以允許檢視和瀏覽基礎資料。  
   
- **注意**如果您在「採礦結構」和「挖掘」模型上啟用「鑽取」，則任何身為「採礦模型」和「採礦結構」之「鑽取」許可權之角色成員的使用者，也可以在「挖掘」結構中查看資料行，即使這些資料行不包含在「挖掘」模型中也一樣。 因此，若要保護機密資訊，您應該設定資料來源檢視來遮罩個人資訊，並只有在必要時才允許採礦結構的鑽研存取。  
+ **注意** ：如果您在採礦結構和採礦模型上都啟用鑽研，則任何使用者只要是對於採礦模型和採礦結構具有鑽研權限的角色成員，也都可以檢視採礦結構中的資料行，即使這些資料行未包含在採礦模型中。 因此，若要保護機密資訊，您應該設定資料來源檢視來遮罩個人資訊，並只有在必要時才允許採礦結構的鑽研存取。  
   
  若要授與資料庫角色讀取或讀取/寫入權限，使用者必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，或者擁有完整控制權 (管理員) 權限之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色的成員。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]****，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到的實例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
   
 2.  在 [採礦結構]**** 窗格的 [採礦模型]**** 清單中尋找採礦模型，然後針對該採礦模型選取 [讀取]****、[讀取/寫入]****、[鑽研]**** 或 [瀏覽]****。  
   
@@ -70,6 +70,6 @@ ms.locfileid: "66074935"
  [授與伺服器管理員許可權 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [授與 cube 或模型許可權 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [將維度資料的自訂存取權授與 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [將資料格資料的自訂存取權授與 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

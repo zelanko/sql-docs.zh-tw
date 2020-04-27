@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078967"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
@@ -26,7 +26,7 @@ ms.locfileid: "66078967"
   
  這堂課的預估完成時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，請依序完成。 在執行這堂課中的工作之前，您必須已完成上一堂課：[第1課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>建立連接  
@@ -60,18 +60,18 @@ ms.locfileid: "66078967"
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
-    |DimDate|Date|  
+    |DimDate|日期|  
     |DimGeography|[地理位置]|  
     |DimProduct|Products|  
     |DimProductCategory|產品類別|  
     |DimProductSubcategory|產品子類別目錄|  
     |FactInternetSales|Internet Sales|  
   
-     **不要**按一下 **[完成]**。  
+     **請不要**按一下 [完成]****。  
   
  現在，您已經連接到資料庫、選取了要匯入的資料表，並且已使用易記的資料表名稱，即可前往下一節[在匯入之前篩選資料表資料](#FilterData)。  
   
-##  <a name="FilterData"></a>篩選資料表資料  
+##  <a name="filter-the-table-data"></a><a name="FilterData"></a>篩選資料表資料  
  您要從資料庫匯入的 DimCustomer 資料表包含來自原始 SQL Server Adventure Works 資料庫的資料子集。 您將會從 DimCustomer 資料表中篩選出一些不必要的資料行。 如果可能的話，您會想要篩選掉不會使用的資料，以便節省模型使用的記憶體中空間。  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>若要在匯入之前篩選資料表資料  
@@ -87,7 +87,7 @@ ms.locfileid: "66078967"
     |**SpanishOccupation**|  
     |**FrenchOccupation**|  
   
-     因為這些資料行的值與網際網路銷售分析無關，不需要匯入這些資料行。 消除不必要的資料行列將使您的模型變小。  
+     因為這些資料行的值與網際網路銷售分析無關，所以不需要匯入這些資料行。 消除不必要的資料行列將使您的模型變小。  
   
 3.  確認已檢查過所有其他資料行，然後按一下 [確定]****。  
   
@@ -95,12 +95,12 @@ ms.locfileid: "66078967"
   
 4.  藉由清除每個資料表中下列資料行的核取方塊，篩選其餘資料表：  
   
-    |Date|  
+    |日期|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  
     |**FrenchDayNameOfWeek**|  
-    |**[Spanishmonthname**|  
+    |**SpanishMonthName**|  
     |**FrenchMonthName**|  
   
     |[地理位置]|  
@@ -140,8 +140,8 @@ ms.locfileid: "66078967"
   
  現在您已預覽並篩選掉不必要的資料，那麼就可以開始匯入資料。 請前往下一節 **匯入選取的資料表和資料行資料**。  
   
-##  <a name="Import"></a>匯入選取的資料表和資料行資料  
- 現在您可以匯入選取的資料。 精靈會匯入資料表資料，以及資料表之間的任何關聯性。 新的資料表和資料行會在模型中使用您指定的易記名稱建立，而且不會匯入您篩選掉的資料。  
+##  <a name="import-the-selected-tables-and-column-data"></a><a name="Import"></a>匯入選取的資料表和資料行資料  
+ 現在您可以匯入選取的資料。 此精靈會匯入資料表資料，包含資料表之間的任何關聯性。 新的資料表和資料行會在模型中使用您指定的易記名稱建立，而且不會匯入您篩選掉的資料。  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>匯入選取的資料表和資料行資料  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66078967"
     > [!TIP]  
     >  若要查看在匯入的資料表之間自動建立的關聯性，請在 [資料準備]**** 資料列上按一下 [詳細資料]****。  
   
-2.  按一下 [關閉]  。  
+2.  按一下 **關閉**。  
   
      精靈隨即關閉，而且您可以看見模型設計師。 每一個資料表都已經加入成為模型設計師中的新索引標籤。  
   

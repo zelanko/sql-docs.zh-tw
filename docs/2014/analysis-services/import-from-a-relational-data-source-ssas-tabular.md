@@ -11,19 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080526"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>從關聯式資料來源匯入 (SSAS 表格式)
-  您可以使用 [資料表匯入精靈]，從各種關聯式資料庫匯入資料。 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]提供此精靈，位於 [模型] **** 功能表。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。 如需支援的資料來源和提供者的詳細資訊，請參閱 [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)(支援的資料來源 (SSAS 表格式))。  
+  您可以使用 [資料表匯入精靈]，從各種關聯式資料庫匯入資料。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]提供此精靈，位於 [模型] **** 功能表。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。 如需支援的資料來源和提供者的詳細資訊，請參閱 [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)(支援的資料來源 (SSAS 表格式))。  
   
  [資料表匯入精靈] 支援從下列資料來源匯入資料：  
   
- **關聯式資料庫**  
+ **關係資料庫**  
   
 -   Microsoft SQL Server 資料庫  
   
@@ -61,6 +60,6 @@ ms.locfileid: "66080526"
   
 ## <a name="see-also"></a>另請參閱  
  [將資料匯入 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;支援的資料來源](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

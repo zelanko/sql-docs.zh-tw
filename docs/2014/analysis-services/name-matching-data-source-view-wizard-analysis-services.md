@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072399"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名稱比對 (資料來源檢視精靈) (Analysis Services)
@@ -34,9 +34,9 @@ ms.locfileid: "66072399"
   
 |選取|即可建立|  
 |------------|---------------|  
-|**與主要金鑰相同的名稱**|資料行名稱符合所選資料表之主索引鍵資料行名稱的任何資料表之邏輯關聯性。|  
-|**與目的地資料表名稱相同的名稱**|資料行名稱符合所選資料表名稱的任何資料表之邏輯關聯性。|  
-|**目的地資料表名稱 + 主鍵名稱**|資料行名稱符合所選資料表名稱串連所選資料表之主索引鍵資料行名稱的邏輯關聯性。 串連字串中的非英數字元會被忽略 (例如，「Product ID」、「Product_ID」和「ProductID」全部都會相符)。|  
+|**與主索引鍵的名稱相同**|資料行名稱符合所選資料表之主索引鍵資料行名稱的任何資料表之邏輯關聯性。|  
+|**與目的地資料表的名稱相同**|資料行名稱符合所選資料表名稱的任何資料表之邏輯關聯性。|  
+|**目的地資料表名稱 + 主索引鍵名稱**|資料行名稱符合所選資料表名稱串連所選資料表之主索引鍵資料行名稱的邏輯關聯性。 串連字串中的非英數字元會被忽略 (例如，「Product ID」、「Product_ID」和「ProductID」全部都會相符)。|  
   
  **描述及範例**  
  檢視所選準則的描述及範例。  

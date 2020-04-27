@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074073"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>建立查詢範圍命名集 (MDX)
@@ -43,8 +43,7 @@ FROM <SELECT subcube clause>
   
 ```  
   
- 在 WITH 關鍵字的語法中， `Set_Identifier` 參數包含命名集的別名。 
-  `Set_Expression` 參數包含了命名集別名所參考的集合運算式。  
+ 在 WITH 關鍵字的語法中， `Set_Identifier` 參數包含命名集的別名。 `Set_Expression` 參數包含了命名集別名所參考的集合運算式。  
   
 ## <a name="with-keyword-example"></a>WITH 關鍵字範例  
  下列 MDX 查詢會檢查 `FoodMart 2000` (Microsoft SQL Server 2000 Analysis Services 的範例資料庫) 中，各種 Chardonnay 和 Chablis 葡萄酒的單位銷售量。 此查詢就結果集而言雖然相當簡單，但當您必須維護這樣的查詢時卻是冗長而不便的。  
@@ -95,6 +94,6 @@ FROM Sales
   
 ## <a name="see-also"></a>另請參閱  
  [SELECT 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [建立會話範圍命名集 &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [建立工作階段範圍命名集 &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

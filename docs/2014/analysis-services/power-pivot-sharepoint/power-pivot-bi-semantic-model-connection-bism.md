@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071377"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 語意模型連接 (.bism)
@@ -24,15 +24,14 @@ ms.locfileid: "66071377"
   
  ![BISM 快速啟動命令的螢幕擷取畫面](../media/ssas-bism-quicklaunch.gif "BISM 快速啟動命令的螢幕擷取畫面")  
   
-##  <a name="bkmk_prereq"></a>支援的資料庫  
+##  <a name="supported-databases"></a><a name="bkmk_prereq"></a>支援的資料庫  
  BI 語意模型連接指向表格式模型資料庫。 這個資料有三個來源：  
   
 -   在表格式伺服器模式中於獨立 Analysis Services 執行個體上執行的表格式模型資料庫。 獨立 Analysis Services 執行個體的部署來自伺服陣列外部。 存取伺服陣列外部的資料來源需要額外的權限，您可以在這個主題中閱讀詳細資訊：＜ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)＞。  
   
 -   儲存到 SharePoint 中的 PowerPivot 活頁簿。 Excel 活頁簿內部的內嵌 PowerPivot 資料庫相當於在獨立 Analysis Services 表格式模式伺服器上執行的表格式模型資料庫。 如果您已經使用 PowerPivot for Excel 和 PowerPivot for SharePoint，可以在 SharePoint 文件庫中定義指向 PowerPivot 活頁簿的 BI 語意模型連接，並使用現有的 PowerPivot 資料建立 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表。  您可以使用在 SQL Server 2008 R2 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 PowerPivot for Excel 中建立的活頁簿。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的多維度資料模型。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的多維度資料模型。  
   
  如需資料來源的比較，請參閱[瞭解 SQL Server 2012 BI 語義模型](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)的「社區內容」（BISM）。  
   
@@ -57,8 +56,7 @@ ms.locfileid: "66071377"
   
  如果未設定 Kerberos，而且要求失敗，Reporting Services 會進行第二次嘗試。 在這種情況下，用戶端程式庫會使用 Reporting Services 服務識別和 NTLM 驗證連接到 Analysis Services。 Power View 使用者的識別是透過使用 `effectiveusername` 參數的連接字串來傳遞。  
   
- 僅 Analysis Services 執行個體的系統管理員角色成員有權使用 `effectiveusername` 參數建立連接以及模擬伺服器執行個體上的另一個使用者。 因此，Reporting Services 共用服務的執行帳戶必須有 Analysis Services 執行個體的管理權限。  
-  [建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)主題中提供有關授與管理權限給服務帳戶的指示。  
+ 僅 Analysis Services 執行個體的系統管理員角色成員有權使用 `effectiveusername` 參數建立連接以及模擬伺服器執行個體上的另一個使用者。 因此，Reporting Services 共用服務的執行帳戶必須有 Analysis Services 執行個體的管理權限。  [建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)主題中提供有關授與管理權限給服務帳戶的指示。  
   
  下圖顯示每個連接都使用相同 Windows 使用者識別的連接順序。 最後一個 Analysis Services 連接上，連接是透過 Reporting Services 服務應用程式識別，使用 `effectiveusername` 傳遞 Windows 使用者識別來建立。  
   
@@ -70,12 +68,12 @@ ms.locfileid: "66071377"
   
  在這種情況下，所有連接都是在相同伺服器陣列中發生，因此不需要 Kerberos 或受條件約束的委派。  
   
-##  <a name="bkmk_rel"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> 相關工作  
  [將 BI 語義模型連接內容類型新增至程式庫 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [建立與 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [建立與表格式模型資料庫的 BI 語義模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [在 Excel 或 Reporting Services 使用 BI 語意模型連接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

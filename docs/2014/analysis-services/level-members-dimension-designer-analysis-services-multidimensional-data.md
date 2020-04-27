@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078104"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>層級和成員 (瀏覽器索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -47,7 +47,7 @@ ms.locfileid: "66078104"
   
  如果啟用回寫模式，與維度中之索引鍵屬性相關聯的每一個索引鍵資料行都會顯示一個資料行。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下所選取成員之 [層級和成員]**** 窗格的任何部份，即可顯示提供下列選項的內容功能表：  
   
  **建立同層級**  
@@ -92,7 +92,7 @@ ms.locfileid: "66078104"
 > [!NOTE]  
 >  只有啟用回寫模式時才會顯示此選項。  
   
- **Rename**  
+ **重新命名**  
  選取即可編輯選取之成員的名稱。  
   
 > [!NOTE]  

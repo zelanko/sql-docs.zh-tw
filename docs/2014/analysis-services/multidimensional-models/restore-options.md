@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a754ac9650c94511e8576a8a05e0b81fb38138a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073091"
 ---
 # <a name="restore-options"></a>還原選項
-  有許多[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]方法可以還原您的資料庫，這些都需要您具備伺服器電腦和[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫的系統管理員許可權。 若要還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，您可以在 ** 中開啟 [還原資料庫]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊，選取適當的選項組態，然後從對話方塊執行還原。 或者，您可以使用檔案中已經指定的設定來建立指令碼；然後儲存指令碼並視需要執行。 如此即可使用 XMLA 來完成還原，如下節中的描述。  
+  有許多[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]方法可以還原您的資料庫，這些都需要您具備伺服器電腦和[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫的系統管理員許可權。 若要還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟 [還原資料庫]**** 對話方塊，選取適當的選項組態，然後從對話方塊執行還原。 或者，您可以使用檔案中已經指定的設定來建立指令碼；然後儲存指令碼並視需要執行。 如此即可使用 XMLA 來完成還原，如下節中的描述。  
   
 ## <a name="restoring-databases-using-xmla"></a>使用 XMLA 還原資料庫  
  XMLA Restore 命令是依據 .abf 檔案執行還原，以自動化還原處理序的方法。 Restore 命令有數個屬性可供設定，以指定安全性定義、儲存遠端資料分割的位置，以及關聯式 OLAP (ROLAP) 物件的重新放置。 如需詳細資訊，請參閱 [Restore 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)。  
@@ -34,7 +34,7 @@ ms.locfileid: "66073091"
   
 ## <a name="see-also"></a>另請參閱  
  [[還原資料庫] 對話方塊 &#40;Analysis Services-多維度資料&#41;](../restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Analysis Services 資料庫的備份與還原](backup-and-restore-of-analysis-services-databases.md)   
+ [備份與還原 Analysis Services 資料庫](backup-and-restore-of-analysis-services-databases.md)   
  [Restore 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
  [備份、還原和同步處理資料庫 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072063"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>檢視方塊詳細資料 (檢視方塊索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -38,7 +38,7 @@ ms.locfileid: "66072063"
   
  選取要包含在檢視方塊中的物件。  
   
-## <a name="context-menu"></a>內容功能表  
+## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [檢視方塊詳細資料]**** 窗格中所顯示檢視方塊的任何資料格，即可顯示提供下列選項的操作功能表：  
   
 |選項|描述|  

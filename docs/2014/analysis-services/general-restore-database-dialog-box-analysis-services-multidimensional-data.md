@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080949"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>一般 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
@@ -30,10 +30,10 @@ ms.locfileid: "66080949"
   
  **在還原資料庫對話方塊中顯示一般頁面**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 ** 執行個體的 [資料庫]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料夾或物件總管**** 中的資料庫、按一下 [還原]****，然後按一下 [選取頁面]**** 底下的 [一般]****。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫]**** 資料夾或物件總管**** 中的資料庫、按一下 [還原]****，然後按一下 [選取頁面]**** 底下的 [一般]****。  
   
 ## <a name="options"></a>選項。  
- **文字**  
+ **指令碼**  
  根據在對話方塊中選取的選項，建立還原指令碼。 此還原指令碼是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 撰寫而成。  
   
  根據預設，按一下 **[指令碼]** 圖示就會將還原指令碼傳送至新的查詢視窗中。  

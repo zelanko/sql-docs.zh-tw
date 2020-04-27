@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4826be0fd38118e94921f63e02882935132a4d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072483"
 ---
 # <a name="view-the-xml-for-an-analysis-services-project-ssdt"></a>檢視 Analysis Services 專案的 XML (SSDT)
@@ -34,6 +34,6 @@ ms.locfileid: "66072483"
      此物件的 XML 程式碼即會出現在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中。  
   
 ## <a name="see-also"></a>另請參閱  
- [組建 Analysis Services 專案 &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
+ [建立多個 Analysis Services 專案 &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
   
   

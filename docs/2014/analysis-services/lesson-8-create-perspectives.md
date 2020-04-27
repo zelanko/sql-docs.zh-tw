@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078246"
 ---
 # <a name="lesson-9-create-perspectives"></a>第 9 課：建立檢視方塊
   在這一課，您將建立一個 [網際網路銷售] 檢視方塊。 檢視方塊會定義可檢視的模型子集，以提供聚焦、商務特有或應用程式特有的觀點。 使用者使用檢視方塊連接到模型時，只會將那些模型物件 (資料表、資料行、量值、階層和 KPI) 視為該檢視方塊中定義的欄位。  
   
- 您在本課中所建立的網際網路銷售額檢視方塊將不包含 Customer 資料表物件。 當您建立從檢視中排除某些物件的檢視方塊時，該物件仍然存在於模型中；不過，不會顯示在報告用戶端欄位清單中。 計算結果欄和量值不管是否包含在檢視方塊中，仍然可以從排除的物件資料計算。  
+ 您在本課中所建立的網際網路銷售額檢視方塊將不包含 Customer 資料表物件。 當您建立從檢視表中排除某些物件的檢視方塊時，該物件仍然會存在於模型中，但是在報表用戶端欄位清單中看不到。 導出資料行嗨量值無論是否包含在檢視方塊中，都仍然可以從遭排除之物件資料中計算。  
   
- 本課程的目的在於說明如何建立檢視方塊，以及熟悉表格式模型撰寫工具。 如果您之後展開此模型納入其他資料表，可以建立其他檢視方塊來定義不同的模型視點，例如存貨和銷售人員。  
+ 本課程的目的在於描述如何建立檢視方塊，以及熟悉表格式模型撰寫工具。 如果您之後展開此模型納入其他資料表，可以建立其他檢視方塊來定義不同的模型視點，例如存貨和銷售人員。  
   
  如需詳細資訊，請參閱[檢視方塊 &#40;SSAS 表格式&#41;](tabular-models/perspectives-ssas-tabular.md)。  
   
- 這堂課的預估完成時間：**5 分鐘**  
+ 完成本課程的估計時間： **5 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
- 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>建立檢視方塊  
   
@@ -48,6 +48,6 @@ ms.locfileid: "66078246"
 5.  驗證您所做的選擇，確定未核取 [Customer]**** 資料表，然後按一下 [確定]****  
   
 ## <a name="next-steps"></a>後續步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
+ 若要繼續進行本教學課程，請前往下一課： [第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
   
   

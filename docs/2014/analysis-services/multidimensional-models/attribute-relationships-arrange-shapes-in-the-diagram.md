@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077134"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>在屬性關聯性圖表中排列形狀
-  您可以在 ** 中維度設計師之 [維度結構] 檢視的 [屬性關聯性]**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤中，變更形狀的配置。  
+  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中維度設計師之 [維度結構] 檢視的 [屬性關聯性]**** 索引標籤中，變更形狀的配置。  
   
 ### <a name="to-arrange-shapes-in-the-attribute-relationship-diagram"></a>在屬性關聯性圖表中排列形狀  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080746"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>影響分析對話方塊 (Analysis Services - 多維度資料)
@@ -32,7 +32,7 @@ ms.locfileid: "66080746"
  **Object Name**  
  顯示可能需要處理之相依性物件的名稱。 名稱左邊的圖示會指出物件類型。  
   
- **型別**  
+ **類型**  
  顯示可能需要處理之相依性物件的類型。  
   
  **影響類型**  

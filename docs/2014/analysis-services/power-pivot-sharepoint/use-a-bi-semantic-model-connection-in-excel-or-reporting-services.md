@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070925"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 使用 BI 語意模型連接
   本主題說明如何使用透過其他主題的指示所建立的 BI 語意模型連接。 如果您尚未建立 BI 語義模型，請參閱[建立與 PowerPivot 活頁簿的 Bi 語義模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)和[建立與表格式模型資料庫的 Bi 語義模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
-##  <a name="bkmk_connect"></a>從 Excel 連接  
+##  <a name="connect-from-excel"></a><a name="bkmk_connect"></a> 從 Excel 連接  
  您可以在 Excel 或是使用 Analysis Services 表格式模型資料的其他任何商務應用程式中，指定 BI 語意模型連接當做資料來源。 本節說明使用 Excel 連接到 BI 語意模型資料的兩種方法。  
   
  來自 Excel 的 BI 語意模型連接要求在工作站上安裝 Excel 2010 和 MSOLAP.5 OLE DB 提供者。 本節會進一步提供有關連接需求的其他資訊。  
   
- **從 SharePoint 開始**  
+ **從 SharePoint 啟動**  
   
 -   以滑鼠右鍵按一下文件庫中的 BI 語意模型連接，然後選取 [啟動 Excel]****。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66070925"
   
  當系統提示您啟用資料連接時，按一下 **[啟用]** 。 Excel 會開啟活頁簿，其中包含填入了基礎資料來源中之欄位的樞紐分析表欄位清單。  
   
- **從 Excel 開始**  
+ **從 Excel 啟動**  
   
 1.  啟動 Excel 並開啟活頁簿。 在 [資料] 索引標籤上，按一下 [取得外部資料] 中的 **[從其他來源]**。  
   
@@ -47,14 +47,13 @@ ms.locfileid: "66070925"
   
  若要讓連接成功，您必須將 Excel 2010 和 MSOLAP.5.dll 安裝在用戶端電腦上。 您可以藉由安裝這個版本的最新版本 PowerPivot for Excel 來取得提供者，或者您可以從[功能套件下載頁面](https://go.microsoft.com/fwlink/?linkid=214066)僅下載 Analysis Services OLE DB 提供者。  
   
- 若要確認 MSOLAP.5.dll 是最新的版本，請檢查登錄中的 `HKEY_CLASSES_ROOT\MSOLAP`。 
-  `CurVer` 應該設定為 MSOLAP.5。  
+ 若要確認 MSOLAP.5.dll 是最新的版本，請檢查登錄中的 `HKEY_CLASSES_ROOT\MSOLAP`。 `CurVer` 應該設定為 MSOLAP.5。  
   
  在 SharePoint 中，您也必須擁有 BI 語意模型檔案的「讀取」權限。 「讀取」權限包含下載權限。 Excel 會從 SharePoint 下載 BI 語意模型連接資訊，然後透過 `HTTP Get` 開啟與資料庫的直接連接。 一旦 BI 語意模型連接資訊在本機上儲存，連接要求就不會流經 SharePoint。  
   
  如果您要連接至 Analysis Services 伺服器上執行的表格式模型資料庫，則 SharePoint 權限還不夠。 您也必須擁有伺服器的資料庫讀取權限。 當您建立 BI 語意模型連接時，應該已經執行這個步驟。 如需詳細資訊，請參閱 [建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
-##  <a name="bkmk_use"></a>從 SharePoint 中的 Reporting Services 連接  
+##  <a name="connect-from-reporting-services-in-sharepoint"></a><a name="bkmk_use"></a> 在 SharePoint 中從 Reporting Services 連接  
  您可以利用您使用多數資料來源的相同方式來使用 BI 語意模型連接，方法是在使用資料的文件或工具中，將檔案指定為資料來源。 雖然 BI 語意模型連接會指向其他伺服器上的實體資料庫，但是您要將該連接檔案本身當做資料來源使用。 BI 語意模型連接的 SharePoint URL 對於使用 BI 語意模型資料的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表而言是有效的資料來源位置。  
   
  針對 SharePoint 中的隨選報表設計，建立報表的使用者必須擁有 BI 語意模型連接 (.bism) 檔案和商業智慧語意模型資料庫的 SharePoint 權限。 連接的安全性內容是正在建立報表的互動式使用者。  

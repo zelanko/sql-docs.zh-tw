@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078461"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>在量值群組內定義維度資料粒度
@@ -60,8 +60,7 @@ ms.locfileid: "66078461"
   
 12. 從`Sales Quotas`量值群組中刪除 [**日曆季**] 量值。  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到作為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到作為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
   
 13. 在 [**量值**] 窗格中，以`Sales Quotas`滑鼠右鍵按一下量值群組，然後按一下 [**新增量值**]。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66078461"
   
 1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
-2.  順利完成部署之後，針對 ** 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]**** 按鈕。  
+2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]**** 按鈕。  
   
 3.  按一下 Excel 捷徑，然後按一下 [啟用]****。  
   
@@ -200,7 +199,7 @@ ms.locfileid: "66078461"
   
 1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
-2.  順利完成部署之後，針對 ** 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]****。  
+2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]****。  
   
 3.  按一下 Excel 捷徑，然後按一下 [啟用]****。  
   
@@ -221,11 +220,11 @@ ms.locfileid: "66078461"
      ![正確建立維度的銷售配額量值群組](../../2014/tutorials/media/l5-granularity-7.gif "正確建立維度的銷售配額量值群組")  
   
 ## <a name="next-lesson"></a>下一課  
- [第 6 課：定義計算](lesson-6-defining-calculations.md)  
+ [第6課：定義計算](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定義一般關聯性和一般關聯性屬性](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [在資料來源視圖設計工具中使用圖表 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

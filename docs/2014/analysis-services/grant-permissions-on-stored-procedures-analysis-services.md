@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080724"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授與預存程序 (Analysis Services) 的權限
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的預存程序 (或組件) 是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET 程式語言撰寫的外部常式，用於擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 組件可讓開發人員利用跨語言整合、例外狀況處理、版本控制支援、部署支援和偵錯支援等優點。  
   
  您必須是伺服器管理員，才能註冊組件。 請參閱[&#40;Analysis Services&#41;授與伺服器管理員許可權](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -26,8 +25,7 @@ ms.locfileid: "66080724"
 ## <a name="security-context-for-stored-procedure-execution"></a>預存程序執行的安全性內容  
  所有使用者都可以呼叫預存程序。 視預存程序的設定方式而定，程序可在呼叫程序之使用者的內容中，或是在匿名使用者的內容中執行。 因為匿名使用者沒有安全性內容，請使用此功能及設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體來允許匿名存取。  
   
- 在使用者呼叫預存程序之後，但在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行預存程序之前，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會在預存程序內評估動作。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會根據已授與使用者的權限以及用來執行此程序的權限集合之間的交集，評估預存程序中的動作。 如果預存程序包含資料庫角色無法為使用者執行的動作，就不會執行該動作。  
+ 在使用者呼叫預存程序之後，但在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行預存程序之前，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會在預存程序內評估動作。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會根據已授與使用者的權限以及用來執行此程序的權限集合之間的交集，評估預存程序中的動作。 如果預存程序包含資料庫角色無法為使用者執行的動作，就不會執行該動作。  
   
  以下是用來執行預存程序的權限集合：  
   
@@ -38,6 +36,6 @@ ms.locfileid: "66080724"
 -   不**受限制**有了不受限制的許可權集合，預存程式就可以使用任何程式碼來存取外部資源。 使用此權限集合，就無法保證預存程序的安全性或可靠性。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型元件管理](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [多維度模型組件管理](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

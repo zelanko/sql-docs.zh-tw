@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080940"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>開始使用資料採礦 (適用於 Excel 的資料採礦增益集)
@@ -32,7 +32,7 @@ ms.locfileid: "66080940"
   
  您選擇的分析方法取決於您的目標。 資料採礦增益集支援下列分析類型：  
   
--   監督式和非監督式學習  
+-   有人監督和無人監督的學習  
   
 -   叢集 (分割)  
   

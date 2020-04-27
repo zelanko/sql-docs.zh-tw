@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081076"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>一般 (資料庫設計工具) (Analysis Services - 多維度資料)
-  使用 [一般]**** 索引標籤，即可變更 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的屬性。  
+  使用 **[一般]** 索引標籤，即可變更 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的屬性。  
   
  **顯示一般索引標籤**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66081076"
 > [!NOTE]  
 >  若要重新命名資料庫，請在方案總管**** 視窗中以滑鼠右鍵按一下專案，然後按一下 [屬性]****。 在資料庫的 **[屬性頁]** 對話方塊中，於 **[部署]** 頁面上，將 **[資料庫]** 屬性的值變更為新的資料庫名稱。  
   
- **說明**  
+ **描述**  
  鍵入資料庫的描述。  
   
 ## <a name="translations-options"></a>翻譯選項  
@@ -60,7 +60,7 @@ ms.locfileid: "66081076"
  展開 **[帳戶類型對應]** 區段，以修改所選取資料庫中，與每一個帳戶 **類型** 相關聯的預設彙總函式。  
   
 > [!NOTE]  
->  此選項僅適用於有一個或多個量值使用 *ByAccount* 彙總函式的 Cube。  
+>   此選項僅適用於有一個或多個量值使用 *ByAccount* 彙總函式的 Cube。  
   
  此區段包含具有下列資料行的方格：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66081076"
   
  若要加入新的帳戶類型，請按一下** \<[新增帳戶類型>**]。  
   
- **別名**  
+ **鋸齒**  
  設定供商業智慧精靈使用之帳戶類型的預設名稱。 如果此資料行保留空白，則會使用 **[名稱]** 資料行中的預設值。  
   
  **彙總函式**  

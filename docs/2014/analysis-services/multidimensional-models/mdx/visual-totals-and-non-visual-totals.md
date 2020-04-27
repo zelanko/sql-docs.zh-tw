@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073724"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>視覺化總計和非視覺化總計
@@ -36,11 +36,11 @@ ms.locfileid: "66073724"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**所有產品**|**Accessories**|**Bikes**|**Clothing**|**元件**|  
-|**所有轉銷商**|**$80450596.98**|**$571297.93**|**$66302381.56**|**$1777840.84**|**$11799076.66**|  
-|**專業自行車商店**|**$6756166.18**|**$65125.48**|**$6080117.73**|**$252933.91**|**$357989.07**|  
-|**增值轉銷商**|**$34967517.33**|**$175002.81**|**$30892354.33**|**$592385.71**|**$3307774.48**|  
-|**式**|**$38726913.48**|**$331169.64**|**$29329909.50**|**$932521.23**|**$8133313.11**|  
+||**All Products**|**Accessories**|**Bikes**|**服飾**|**元件**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
+|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
+|**式**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>資料行和資料列上的非視覺化  
  若要只針對產品為 Accessories 和 Clothing，且轉售商為 Value Added Reseller 和 Warehouse 的資料產生資料表，但同時保留全部項目的總計，可以使用 NON VISUAL 撰寫如下：  
@@ -61,10 +61,10 @@ ms.locfileid: "66073724"
   
 |||||  
 |-|-|-|-|  
-||**所有產品**|**Accessories**|**Clothing**|  
-|**所有轉銷商**|**$80450596.98**|**$571297.93**|**$1777840.84**|  
-|**增值轉銷商**|**$34967517.33**|**$175002.81**|**$592385.71**|  
-|**式**|**$38726913.48**|**$331169.64**|**$932521.23**|  
+||**All Products**|**Accessories**|**服飾**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
+|**式**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
 ## <a name="non-visual-on-rows"></a>資料列上的非視覺化  
  若要產生可以視覺化總計資料行，但就資料列總計傳回所有 [Category] 的實際總計，應發出下列查詢：  
@@ -103,6 +103,6 @@ ms.locfileid: "66073724"
  [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [&#40;MDX 的基本 MDX 查詢&#41;](mdx-query-the-basic-query.md)   
  [使用查詢和交叉分析篩選器軸來限制查詢 &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [在查詢中建立 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [建立查詢中的 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

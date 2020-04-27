@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077861"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>量值群組繫結對話方塊 (Analysis Services - 多維度資料)
@@ -36,7 +36,7 @@ ms.locfileid: "66077861"
 |**屬性名稱**|顯示屬性的名稱。|  
 |**維度資料表**|顯示作為屬性基礎之維度資料表的名稱。|  
   
- **關聯性**  
+ **相對**  
  顯示由選取之屬性的維度資料表資料行，與選取之量值群組的事實資料表資料行之間的關聯性所組成的方格，以及關聯性的 Null 處理選項。 方格包含下列資料行：  
   
 |選項|定義|  

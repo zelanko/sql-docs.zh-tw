@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076894"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>將帳戶智慧加入至維度中
@@ -40,21 +40,19 @@ ms.locfileid: "66076894"
   
  在第二個 **[定義帳戶智慧]** 頁面上，有兩個資料行：  
   
--   
-  **[來源資料表帳戶類型]** 資料行列出精靈從維度資料表取得的帳戶類型。  
+-   **[來源資料表帳戶類型]** 資料行列出精靈從維度資料表取得的帳戶類型。  
   
--   
-  **[伺服器帳戶類型]** 資料行會識別 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的對應帳戶類型。 下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的帳戶類型，以及每一個這些類型的預設彙總。 如果維度資料表使用的帳戶類型名稱與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的一樣，則會自動選取。  
+-   **[伺服器帳戶類型]** 資料行會識別 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的對應帳戶類型。 下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的帳戶類型，以及每一個這些類型的預設彙總。 如果維度資料表使用的帳戶類型名稱與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的一樣，則會自動選取。  
   
     |伺服器帳戶類型|彙總|描述|  
     |-------------------------|-----------------|-----------------|  
     |**統計**|`None`|某項目的計算比率，或者經過一段時間無法彙總之項目的計數。 此帳戶類型不使用轉換規則來轉換貨幣。|  
-    |**應**|`LastNonEmpty`|在特定時間虧欠之事物的金額或價值。 此帳戶類型經過一段時間不會累積，因此經過一段時間不會自然彙總。 例如，Year 數量是有資料的上一個月的值。 這種類型的帳戶會以 End of Period 匯率轉換貨幣。|  
+    |**負債**|`LastNonEmpty`|在特定時間虧欠之事物的金額或價值。 此帳戶類型經過一段時間不會累積，因此經過一段時間不會自然彙總。 例如，Year 數量是有資料的上一個月的值。 這種類型的帳戶會以 End of Period 匯率轉換貨幣。|  
     |**資產**|`LastNonEmpty`|在特定時間持有之事物的金額或價值。 此帳戶類型經過一段時間會累積，因此不會隨著時間自然彙總。 例如，Year 數量是有資料的上一個月的值。 這種類型的帳戶會以 End of Period 匯率轉換貨幣。|  
     |**餘額**|`LastNonEmpty`|某項目在指定之時間的計數。 此帳戶類型會累積，但不會隨著時間自然彙總。 例如，Year 數量是有資料的上一個月的值。|  
-    |**流程**|`Sum`|某項目的累加計數。 此帳戶類型經過一段時間會彙總成為 `Sum`，但不會以貨幣轉換規則轉換。|  
+    |**Flow**|`Sum`|某項目的累加計數。 此帳戶類型經過一段時間會彙總成為 `Sum`，但不會以貨幣轉換規則轉換。|  
     |**費用**|`Sum`|所花費之事物的金額或價值。 這種帳戶類型會隨時間彙總為 `Sum`，並以平均匯率轉換貨幣。|  
-    |**收入**|`Sum`|所收到之事物的金額或價值。 這種帳戶類型會隨時間彙總為 `Sum`，並以平均匯率轉換貨幣。|  
+    |**Income**|`Sum`|所收到之事物的金額或價值。 這種帳戶類型會隨時間彙總為 `Sum`，並以平均匯率轉換貨幣。|  
   
     > [!NOTE]  
     >  適合的話，您可以將維度中一個以上的帳戶類型，對應到特定伺服器帳戶類型。  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080540"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>從文字檔匯入 (SSAS 表格式)
@@ -32,6 +32,6 @@ ms.locfileid: "66080540"
   
 ## <a name="see-also"></a>另請參閱  
  [將資料匯入 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;支援的資料來源](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077455"
 ---
 # <a name="add-a-standard-action"></a>加入標準動作
@@ -47,7 +47,7 @@ ms.locfileid: "66077455"
   
     -   從 [類型]**** 下拉式清單中，選取您要建立的動作類型。 下表列出可用的動作類型。  
   
-        |類型|描述|  
+        |類型|說明|  
         |----------|-----------------|  
         |資料集|擷取資料集。|  
         |專屬|使用不同於此資料表列出的介面來執行作業。|  
@@ -63,14 +63,14 @@ ms.locfileid: "66077455"
   
         |選項|描述|  
         |------------|-----------------|  
-        |互動式|此動作會在使用者互動時觸發。|  
+        |Interactive (互動式)|此動作會在使用者互動時觸發。|  
         |Batch|此動作會以批次作業執行。|  
         |開啟時|此動作會在使用者開啟 Cube 時執行。|  
   
     -   在 **[應用程式]** 中，輸入與動作相關聯的應用程式名稱。 例如，如果您建立將使用者導向特定網站的動作，與動作相關聯的應用程式應該是 Microsoft Internet Explorer 或其他網頁瀏覽器。  
   
         > [!NOTE]  
-        >  除非用戶端應用程式明確限制結構描述資料列集僅傳回與在 [應用程式]**** 中指定的名稱相符的動作，否則不會將專屬動作傳回給伺服器。  
+        >   除非用戶端應用程式明確限制結構描述資料列集僅傳回與在 **[應用程式]** 中指定的名稱相符的動作，否則不會將專屬動作傳回給伺服器。  
   
     -   在 [**動作內容**] 中，如果您使用 URL 類型，請以引號括住網際網路位址，例如 "http://www.adventure-works.com"。  
   

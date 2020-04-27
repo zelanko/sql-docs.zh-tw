@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074892"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授與處理權限 (Analysis Services)
@@ -77,7 +77,7 @@ ms.locfileid: "66074892"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>設定資料採礦結構的處理權限  
  您可以建立角色，授與權限來處理資料採礦結構。 其中包括處理所有採礦模型。  
   
- **** 導覽和結構`Read Definition`的流覽和許可權是不可部分完成的，而且可以加入至相同的角色，或分成不同的角色。  
+ **Drill Through**導覽和結構`Read Definition`的流覽和許可權是不可部分完成的，而且可以加入至相同的角色，或分成不同的角色。  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體、開啟 [資料庫] 資料夾，然後選取資料庫。  
   
@@ -93,6 +93,6 @@ ms.locfileid: "66074892"
  [處理資料庫、資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)   
  [授與資料庫許可權 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [授與物件中繼資料的讀取定義許可權 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [授與物件中繼資料的讀取定義權限 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

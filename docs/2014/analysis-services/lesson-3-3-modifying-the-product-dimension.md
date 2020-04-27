@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078836"
 ---
 # <a name="modifying-the-product-dimension"></a>修改 [產品] 維度
@@ -95,23 +95,23 @@ ms.locfileid: "66078836"
   
 1.  在 [屬性]**** 窗格中，按住 CTRL 鍵，同時按一下每個屬性，藉以選取下列屬性：  
   
-    -   **課堂**  
+    -   **類別**  
   
-    -   **Color**  
+    -   **顏色**  
   
     -   **製造天數**  
   
-    -   **重新排列點**  
+    -   **Reorder Point**  
   
-    -   **安全庫存層級**  
+    -   **Safety Stock Level**  
   
     -   **大小**  
   
-    -   **大小範圍**  
+    -   **Size Range**  
   
     -   **Style**  
   
-    -   **權**  
+    -   **Weight**  
   
 2.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性欄位中， `Stocking`輸入。  
   
@@ -119,11 +119,11 @@ ms.locfileid: "66078836"
   
 3.  在 [屬性]**** 窗格中，選取下列屬性：  
   
-    -   **轉銷商價格**  
+    -   **Dealer Price**  
   
-    -   **標價**  
+    -   **List Price**  
   
-    -   **標準成本**  
+    -   **Standard Cost**  
   
 4.  在屬性視窗的 [ **attributehierarchydisplayfolder]** ] 屬性資料格中， `Financial`輸入。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66078836"
   
 2.  在圖表中，以滑鼠右鍵按一下 [型號名稱]**** 屬性，然後按一下 [新增屬性關聯性]****。  
   
-3.  在 [建立屬性關聯性]**** 對話方塊中，[來源屬性]**** 是 [型號名稱]****。 將 [相關屬性]**** 設定為 [產品線]****。  
+3.  在 [建立屬性關聯性]**** 對話方塊中，[來源屬性]**** 是 [模型名稱]****。 將 [相關屬性]**** 設定為 [產品線]****。  
   
      然後，在 [關聯性類型]**** 清單中，保持關聯性類型設定為 [彈性]**** 的狀態，因為成員之間的關聯性可能會隨著時間而變更。 例如，產品型號最後可能會移至不同的產品線。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "66078836"
   
 #### <a name="to-review-the-product-dimension-changes"></a>若要檢閱 Product 維度變更  
   
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
 2.  當您收到 [已成功地完成部署]**** 訊息之後，請針對 [產品]**** 維度按一下 [維度設計師] **** 的 [瀏覽器]**** 索引標籤，然後按一下設計師工具列上的 [重新連接] 圖示。  
   
@@ -179,11 +179,11 @@ ms.locfileid: "66078836"
      請注意，[**全部**] 成員的名稱會`All Products`顯示為。 這是因為您已將此階層的**AllMemberName**屬性變更`All Products`為稍早在課程中。 此外，[產品線]**** 層級的成員現在有了使用者易記名稱，而非單一字母的縮寫。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [修改 Date 維度](lesson-3-4-modifying-the-date-dimension.md)  
+ [修改日期維度](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [定義資料來源視圖中的已命名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)   
- [設定屬性階層的 &#40;所有&#41; 層級](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [設定屬性階層的 &#40;全部&#41; 層級](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

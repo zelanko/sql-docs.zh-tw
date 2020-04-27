@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075943"
 ---
 # <a name="create-a-date-type-dimension"></a>建立日期類型維度
@@ -40,8 +40,7 @@ ms.locfileid: "66075943"
  伺服器時間維度  
  如果您沒有可繫結與時間相關之屬性的維度資料表，可以讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 根據時間週期來定義伺服器時間維度。 若要定義伺服器時間維度所代表的階層、層級和成員，您可在建立維度時選取標準時間週期。  
   
- 伺服器時間維度中的屬性具有特定的時間屬性繫結。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用與日期相關的屬性類型 (例如年、月或日) 來定義時間維度中的屬性成員。  
+ 伺服器時間維度中的屬性具有特定的時間屬性繫結。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用與日期相關的屬性類型 (例如年、月或日) 來定義時間維度中的屬性成員。  
   
  在 Cube 中包含伺服器時間維度之後，您可以在 Cube 精靈的 [定義維度使用方式]**** 頁面上指定關聯性，來設定量值群組和伺服器時間維度之間的關聯性。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079226"
 ---
 # <a name="modifying-default-table-names"></a>修改預設資料表名稱
@@ -46,10 +46,10 @@ ms.locfileid: "66079226"
 7.  在 [檔案]**** 功能表上或 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的工具列上，按一下 [全部儲存]****，即可儲存您到目前為止在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中所做的變更。 如果您想要的話，可以在此停止教學課程，之後再繼續。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
+ [第2課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源視圖](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [變更資料來源視圖中的屬性 &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [變更資料來源檢視的屬性 &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

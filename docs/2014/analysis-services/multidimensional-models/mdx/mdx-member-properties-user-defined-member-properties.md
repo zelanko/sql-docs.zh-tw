@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074254"
 ---
 # <a name="user-defined-member-properties-mdx"></a>使用者自訂成員屬性 (MDX)
@@ -37,8 +37,7 @@ ms.locfileid: "66074254"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- 
-  `PROPERTIES` 關鍵字會在座標軸規格的集合運算式後面出現。 例如，以下的 MDX 查詢 `PROPERTIES` 關鍵字會擷取 `List Price` 與 `Dealer Price` 使用者自訂成員屬性，並且在識別 1 月份銷售之產品的集合運算式之後顯示：  
+ `PROPERTIES` 關鍵字會在座標軸規格的集合運算式後面出現。 例如，以下的 MDX 查詢 `PROPERTIES` 關鍵字會擷取 `List Price` 與 `Dealer Price` 使用者自訂成員屬性，並且在識別 1 月份銷售之產品的集合運算式之後顯示：  
   
 ```  
 SELECT   
@@ -69,6 +68,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [使用成員屬性 &#40;MDX&#41;](mdx-member-properties.md)   
- [MDX&#41;的屬性 &#40;](/sql/mdx/properties-mdx)  
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

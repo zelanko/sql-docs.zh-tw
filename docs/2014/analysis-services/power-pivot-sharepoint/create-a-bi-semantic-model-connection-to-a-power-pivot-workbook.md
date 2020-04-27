@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071640"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>建立與 PowerPivot 活頁簿的 BI 語意模型連接
@@ -24,17 +24,17 @@ ms.locfileid: "66071640"
   
  本主題包含下列各節。 請依指定順序執行每個工作。  
   
- [審查必要條件](#bkmk_prereq)  
+ [檢閱必要條件](#bkmk_prereq)  
   
  [建立連接](#bkmk_create)  
   
  [設定 BI 語義模型連接的 SharePoint 許可權](#bkmk_permissions)  
   
- [設定活頁簿的 SharePoint 許可權](#bkmk_userdb)  
+ [設定活頁簿的 SharePoint 權限](#bkmk_userdb)  
   
  [後續步驟](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>審查必要條件  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>審查必要條件  
  您必須有 [參與] 以上權限，才能建立 BI 語意模型連接檔案。  
   
  您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱[將 BI 語義模型連接內容類型新增至程式庫 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "66071640"
   
  參與連接順序的所有電腦和使用者都必須是在相同網域或受信任網域 (雙向信任) 中。  
   
-##  <a name="bkmk_create"></a>建立連接  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>建立連接  
   
 1.  在包含 BI 語意模型連接的文件庫中，按一下 SharePoint 功能區上的 [文件]****。 按一下 [新文件] 上的向下箭號，然後選取 [BISM 連接檔案]**** 開啟 [新增 BI 語意模型連接] 頁面。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071640"
   
      或者，如果您有活頁簿的 SharePoint 權限，則會執行額外的驗證步驟，以確保該位置有效。 如果您沒有資料的存取權限，則會提供一個無需驗證回應即儲存 BI 語意模型連接的選項。  
   
-##  <a name="bkmk_permissions"></a>設定 BI 語義模型連接的 SharePoint 許可權  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>設定 BI 語義模型連接的 SharePoint 許可權  
  需要有 SharePoint 文件庫中 BI 語意模型連接項目的 [讀取]**** 權限，才能使用 BI 語意模型連接作為 Excel 活頁簿或 Reporting Services 報表的資料來源。 [讀取] 權限等級包含 [開啟項目]**** 權限，此權限允許將 BI 語意模型連接資訊下載到 Excel 桌面應用程式。  
   
  有數種方法可以在 SharePoint 中授與權限。 下列指示說明如何建立具有 [讀取]**** 權限等級、稱為「BISM 使用者」**** 的新群組。  
@@ -88,17 +88,17 @@ ms.locfileid: "66071640"
   
 4.  按一下 [移除使用者權限]****。  
   
-##  <a name="bkmk_userdb"></a>設定活頁簿的 SharePoint 許可權  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a>設定活頁簿的 SharePoint 許可權  
  如果您在 Excel 活頁簿內使用 PowerPivot 資料庫，此 Excel 活頁簿的 SharePoint 權限會決定透過 BI 語意模型連接的資料存取。 存取活頁簿的所有使用者都必須擁有活頁簿的讀取權限，才能將它做為外部資料來源。  
   
  如果您使用上一節中的指示建立了「BISM 使用者」**** 群組，則「BISM 使用者」**** 成員的使用者和群組帳戶都會有此活頁簿和 BI 語意模型連接檔案的充足權限 (假設活頁簿使用繼承的權限)。  
   
-##  <a name="bkmk_next"></a>後續步驟  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> 後續步驟  
  在建立 BI 語意模型連接並且確保其安全之後，可以將此連接指定為資料來源。 如需詳細資訊，請參閱 [在 Excel 或 Reporting Services 使用 BI 語意模型連接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot BI 語義模型連接 &#40;. bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [在 Excel 或 Reporting Services 中使用 BI 語義模型連接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
- [建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [建立與表格式模型資料庫的 BI 語義模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

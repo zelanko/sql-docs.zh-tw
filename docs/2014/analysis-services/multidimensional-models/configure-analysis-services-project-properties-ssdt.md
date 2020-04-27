@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076722"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>設定 Analysis Services 專案屬性 (SSDT)
@@ -29,7 +29,7 @@ ms.locfileid: "66076722"
 ## <a name="property-description"></a>屬性描述  
  下表描述的是每一個專案屬性、列出其預設值，以及提供變更屬性值的詳細資訊。  
   
-|屬性|預設設定|描述|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
 |建立 / 部署伺服器版本|用來開發專案的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|指定最終會將專案部署到哪一個版本的伺服器。 當與專案的多位開發人員合作時，開發人員需要了解伺服器版本，才能知道哪些功能會併入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
 |建立 / 部署伺服器版本|用來開發專案的版本|指定最終會將專案部署到哪一個版本的伺服器。|  
@@ -51,6 +51,6 @@ ms.locfileid: "66076722"
   
 ## <a name="see-also"></a>另請參閱  
  [組建 Analysis Services 專案 &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [&#40;SSDT 部署 Analysis Services 專案&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 專案 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

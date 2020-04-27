@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9c408f79dcecd0a7850c7361716cc29b07f4cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073350"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多維度模型中的檢視方塊
@@ -62,6 +62,6 @@ ms.locfileid: "66073350"
  若要檢視任何物件，請展開 [Cube 物件]**** 之下，任何物件類型的類別目錄 ([量值群組]****、[維度]****、[KPI]****、[計算]**** 或 [動作]****)。 若要檢視維度中的階層或屬性，請先展開維度，然後展開 [階層]**** 或 [屬性]**** 資料列。 若要檢視量值群組中的量值，請展開量值群組。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
   
   
