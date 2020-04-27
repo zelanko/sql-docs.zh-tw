@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011493"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>管理登入、使用者與結構描述的使用說明主題
@@ -35,7 +35,7 @@ ms.locfileid: "63011493"
 -   [授與主體的許可權](grant-a-permission-to-a-principal.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [主體 &#40;資料庫引擎&#41;](principals-database-engine.md)   
+ [主體 &#40;Database Engine&#41;](principals-database-engine.md)   
  [保護 SQL Server 的安全](../securing-sql-server.md)  
   
   

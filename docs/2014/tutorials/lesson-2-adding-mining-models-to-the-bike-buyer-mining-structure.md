@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131734"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 課：將採礦模型加入 Bike Buyer 採礦結構中
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 課：將採礦模型新增至自行車買主採礦結構
   在這一課，您會將兩個採礦模型新增至您在[第1課：建立自行車購買者採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)中建立的自行車購買者採礦結構。 這些採礦模型可讓您使用一個模型探索資料，使用另一個模型建立預測。  
   
  若要探索潛在客戶如何依其特性分類，您將建立以[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)為基礎的採礦模型。 在下一課，您將採索此演算法如何尋找共用類似特性的客戶叢集。 例如，您會發現某些客戶很可能成為鄰居、使用自行車通勤，並具有類似的教育背景。 您可以利用這些叢集，進一步了解不同客戶彼此的關係，並使用此資訊來建立一個以特定客戶群為目標的行銷策略。  
@@ -112,7 +112,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Bike Buyer]  
@@ -124,7 +124,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     Decision Tree  
@@ -136,7 +136,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model columns>,  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     (  
@@ -164,7 +164,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     Using Microsoft_Decision_Trees  
@@ -218,7 +218,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Bike Buyer]  
@@ -230,7 +230,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     Clustering Model  
@@ -251,7 +251,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     USING Microsoft_Clustering  

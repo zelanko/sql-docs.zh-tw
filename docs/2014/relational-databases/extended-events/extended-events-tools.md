@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137059"
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
@@ -27,13 +27,13 @@ ms.locfileid: "63137059"
   
 -   動態管理檢視、目錄檢視和系統資料表。 這些可讓您使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式取得工作階段資料和中繼資料。 系統資料表可幫助您判定 SQL 追蹤事件類別與資料行的現有「擴充事件」對等項目。  
   
--   [物件總管] 的 [擴充事件]  節點。 這可讓您啟動、停止或刪除工作階段，或是匯入及匯出工作階段範本。  
+-   [物件總管] 的 [擴充事件]**** 節點。 這可讓您啟動、停止或刪除工作階段，或是匯入及匯出工作階段範本。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者。 這是一項功能強大的工具，可讓您用來建立、更改和管理「擴充事件」工作階段。 如需詳細資訊，請參閱 [針對擴充事件使用 PowerShell 提供者](use-the-powershell-provider-for-extended-events.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。 這可讓您建立及執行「擴充事件」主題中所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](../../ssms/object/object-explorer.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 這可讓您建立及執行「擴充事件」主題中所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](../../ssms/object/object-explorer.md)。  
   
- 除了您所建立的工作階段以外，伺服器上也會有預設系統健康工作階段存在。 此工作階段會收集系統資料，讓您能夠用來協助排除效能問題。 如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md)。  
+ 除了您所建立的工作階段以外，伺服器上也會有預設系統健康工作階段存在。 此工作階段會收集系統資料，讓您能夠用來協助排除效能問題。 如需詳細資訊，請參閱[使用 System_health 會話](use-the-ssms-xe-profiler.md)。  
   
 ## <a name="ddl-statements"></a>DDL 陳述式  
  使用下列 DDL 陳述式，以建立、變更和卸除「擴充事件」工作階段。  
@@ -83,10 +83,10 @@ ms.locfileid: "63137059"
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|針對對應到 SQL 追蹤資料行識別碼的每個擴充事件動作包含一個資料列。|  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](../views/views.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [SQL Server 擴充的事件目錄資料表 &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
- [使用 system_health 工作階段](use-the-ssms-xe-profiler.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](../views/views.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
+ [SQL Server 擴充的事件資料表 &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
+ [使用 system_health 會話](use-the-ssms-xe-profiler.md)   
  [針對擴充事件使用 PowerShell 提供者](use-the-powershell-provider-for-extended-events.md)  
   
   

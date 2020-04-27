@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985808"
 ---
 # <a name="rendering-extensions-overview"></a>轉譯延伸模組概觀
-  轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]包含七個轉譯延伸模組： HTML、Excel、WORD、CSV 或 TEXT、XML、IMAGE 和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  
+  轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]包含七個轉譯延伸模組：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  
   
 > [!NOTE]  
 >  若要決定可以使用哪些轉譯延伸模組，您可以檢視在 RSReportServer.config 檔案中已安裝的延伸模組清單。  
@@ -36,10 +36,8 @@ ms.locfileid: "62985808"
 |`PDF`|在 Adobe Acrobat Reader 中轉譯報表。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [Acrobat (PDF) 檔案]****。|  
 |`EXCEL`|在 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 中轉譯報表。|  
 |`WORD`|在 [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] 中轉譯報表。|  
-|
-  `HTML 4.0` (HTML 轉譯延伸模組的一部分)|HTML 是用以初始化轉譯報表的格式。 如果瀏覽器支援 HTML 4.0，就會使用此格式。 否則，系統會使用 HTML 3.2。|  
-|
-  `MHTML` (HTML 轉譯延伸模組的一部分)|以 MHTML 格式轉譯報表。 報表就會在 Internet Explorer 中開啟。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [網頁封存]****。|  
+|`HTML 4.0` (HTML 轉譯延伸模組的一部分)|HTML 是用以初始化轉譯報表的格式。 如果瀏覽器支援 HTML 4.0，就會使用此格式。 否則，系統會使用 HTML 3.2。|  
+|`MHTML` (HTML 轉譯延伸模組的一部分)|以 MHTML 格式轉譯報表。 報表就會在 Internet Explorer 中開啟。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [網頁封存]****。|  
 |`NULL`|不會將報表轉譯為特定格式。 這個轉譯延伸模組對於將報表放在快取中特別有用。 Null 轉譯應該與排程執行或傳遞一起使用。|  
   
  如需建議格式和其使用方法的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../report-builder/export-reports-report-builder-and-ssrs.md)。  
@@ -61,7 +59,7 @@ ms.locfileid: "62985808"
  如需 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的補充文件與白皮書，請參閱 [Reporting Services 網站](https://go.microsoft.com/fwlink/?LinkId=19951)的最新技術資源。  
   
 ## <a name="see-also"></a>另請參閱  
- [實作轉譯延伸模組](implementing-a-rendering-extension.md)   
+ [執行轉譯延伸模組](implementing-a-rendering-extension.md)   
  [Reporting Services 延伸模組程式庫](../reporting-services-extension-library.md)  
   
   

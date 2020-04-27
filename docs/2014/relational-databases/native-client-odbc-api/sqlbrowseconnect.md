@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067657"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -28,8 +28,8 @@ ms.locfileid: "63067657"
   
 |關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/A|否|**SQLDataSources**所傳回之資料來源的名稱。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
-|DRIVER|N/A|否|Microsoft？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式名稱是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] {native client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
+|DSN|不適用|否|**SQLDataSources**所傳回之資料來源的名稱。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
+|DRIVER|不適用|否|Microsoft？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式名稱是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] {native client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
   
 ## <a name="level-2"></a>層級 2  
   
@@ -45,10 +45,8 @@ ms.locfileid: "63067657"
   
 |關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|是|是|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。|  
-|LANGUAGE|是|是|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家語言。|  
+|DATABASE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。|  
+|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家語言。|  
   
  **SQLBrowseConnect**會忽略儲存在 ODBC 資料來源定義中的資料庫和語言關鍵字的值。 如果傳遞至**SQLBrowseConnect**的連接字串中指定的資料庫或語言無效，則**SQLBrowseConnect**會傳回 SQL_NEED_DATA 和層級3連接屬性。  
   

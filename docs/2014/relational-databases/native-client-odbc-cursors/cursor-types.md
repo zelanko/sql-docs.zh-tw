@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d88b48c1fc4166b32821da9cdaaa5eb7f6c2e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070995"
 ---
 # <a name="cursor-types"></a>資料指標類型
@@ -29,8 +29,7 @@ ms.locfileid: "63070995"
   
 -   順向資料指標：此種資料指標不支援捲動，而僅支援從資料指標開頭到結尾循序提取資料列。  
   
--   當資料指標開啟時，靜態資料指標會內建于**tempdb**中。 這種資料指標一定會顯示結果集在資料指標開啟時的原貌， 而不會反映出資料的變更。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 靜態資料指標永遠是唯讀的。 因為靜態伺服器資料指標是在**tempdb**中建立為工作資料表，所以資料指標結果集的大小不能超過所允許的資料列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大小上限。  
+-   當資料指標開啟時，靜態資料指標會內建于**tempdb**中。 這種資料指標一定會顯示結果集在資料指標開啟時的原貌， 而不會反映出資料的變更。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 靜態資料指標永遠是唯讀的。 因為靜態伺服器資料指標是在**tempdb**中建立為工作資料表，所以資料指標結果集的大小不能超過所允許的資料列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大小上限。  
   
 -   索引鍵集驅動的資料指標：這種資料指標開啟時，會將結果集中資料列的成員資格和順序設為固定。 您可透過此資料指標看到非索引鍵資料行的變更。  
   

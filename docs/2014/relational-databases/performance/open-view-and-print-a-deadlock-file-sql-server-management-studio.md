@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150687"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>開啟、檢視及列印死結檔案 (SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "63150687"
   
 ### <a name="to-print-a-deadlock-file"></a>若要列印死結檔案  
   
-1.  **在的 [檔案**] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]功能表上，指向 [**開啟**]，**然後按一下 [** 檔案]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]**** 功能表上，指向 [開啟]**** 並按一下 [檔案]****。  
   
 2.  在 [開啟檔案]  對話方塊中，從 [檔案類型]  方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   

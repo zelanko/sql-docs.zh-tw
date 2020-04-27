@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022559"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 發行者的管理考量
@@ -64,7 +64,7 @@ ms.locfileid: "63022559"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](configure-an-oracle-publisher.md)   
- [Oracle 發行者的設計考量與限制](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Oracle 發行者的設計考慮與限制](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle 發行概觀](oracle-publishing-overview.md)  
   
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067644"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
@@ -31,7 +31,7 @@ ms.locfileid: "63067644"
   
         -   [SQL Server 安裝的安全性考量](../../install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   執行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝程式之前，必須先進行設定步驟;使用 Windows 叢集系統管理員來執行這些工作。針對您想要設定的每個容錯移轉叢集實例，您都必須有一個 WSFC 群組。  
+    -   您必須先完成組態設定步驟，才能執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式；請使用 [Windows 叢集系統管理員] 執行這些步驟。針對您所要設定的每個容錯移轉叢集執行個體，都必須要有一個 WSFC 群組。  
   
     -   您必須確定系統符合最低需求。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之特定需求的詳細資訊，請參閱 [安裝容錯移轉叢集之前](before-installing-failover-clustering.md)。  
   
@@ -41,20 +41,17 @@ ms.locfileid: "63067644"
   
 3.  為每個容錯移轉叢集執行個體指定多個 IP 位址。 您可以為每個子網路指定多個 IP 位址。 若在相同的子網路上有多重 IP 位址， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 AND。 若正跨多重子網路進行節點的叢集作業， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 OR。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝選項  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝選項  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>選項 1：整合式安裝與加入節點  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合式容錯移轉叢集安裝包含兩個步驟：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合式容錯移轉叢集安裝包含兩個步驟：  
   
 1.  建立並設定單一節點的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。 節點設定完成時，您就擁有可完整運作的容錯移轉叢集執行個體。 此時，它仍沒有高可用性，因為容錯移轉叢集只有單一節點。  
   
 2.  在要加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的每個節點上，使用「加入節點」功能來執行安裝程式，以便加入該節點。  
   
 ##### <a name="option-2-advancedenterprise-installation"></a>選項 2：進階/企業型安裝  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進階/企業型容錯移轉叢集安裝包含兩個步驟：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進階/企業型容錯移轉叢集安裝包含兩個步驟：  
   
 1.  在即將成為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集一部分的每個節點上，使用「準備容錯移轉叢集」功能來執行安裝程式。 雖然這個步驟會準備即將建立叢集的節點，不過在這個步驟結束時，不會提供任何可運作的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -64,12 +61,10 @@ ms.locfileid: "63067644"
     >  兩種安裝選項都允許多節點 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。 已經建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之後，「加入節點」可用來針對任何一個選項加入其他節點。  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝位置的作業系統磁碟機代號在加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的所有節點上都必須符合。  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝位置的作業系統磁碟機代號在加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的所有節點上都必須符合。  
   
 #### <a name="ip-address-configuration-during-setup"></a>安裝期間的 IP 位址組態  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式可在執行下列動作時，設定或變更 IP 資源的相依性設定：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式可在執行下列動作時，設定或變更 IP 資源的相依性設定：  
   
 -   整合式安裝 - [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -79,10 +74,9 @@ ms.locfileid: "63067644"
   
 -   移除節點 - [在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
- **注意**支援 IPV6 IP 位址。  如果您同時設定了 IPV4 和 IPV6，而且兩者被視為不同子網路，則 IPV6 預期會先上線。  
+ **備註** ：支援 IPV6 IP 位址。  如果您同時設定了 IPV4 和 IPV6，而且兩者被視為不同子網路，則 IPV6 預期會先上線。  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集  
  當叢集中的節點位於不同的子網路時，您可以設定 OR 相依性。 但是， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集中的每一個節點，必須至少是一個已指定之 IP 位址的可能擁有者。  
   
 ## <a name="see-also"></a>另請參閱  

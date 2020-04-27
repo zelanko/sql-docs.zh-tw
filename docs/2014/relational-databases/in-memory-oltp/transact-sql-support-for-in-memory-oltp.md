@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156221"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 Transact-SQL 支援
   您可以使用任何 Transact-SQL 查詢或 DML 陳述式 (SELECT、INSERT、UPDATE 或 DELETE)、特定陳述式及 SQL 模組 (例如預存程序、資料表值函數、純量函數、觸發程序和檢視表) 來存取記憶體最佳化的資料表。 如需詳細資訊，請參閱[使用已解讀的 Transact-sql 存取記憶體優化資料表](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。  
   
- 只參考記憶體最佳化資料表的預存程序，可以原生方式編譯為機器碼，且通常能夠為解譯的 (以磁碟為基礎的) 預存程序，帶來顯著的效能提升。 若要最佳化記憶體最佳化資料表的存取，請使用原生編譯的預存程序。 如需詳細資訊，請參閱原生[編譯的預存程式](natively-compiled-stored-procedures.md)。  
+ 只參考記憶體最佳化資料表的預存程序，可以原生方式編譯為機器碼，且通常能夠為解譯的 (以磁碟為基礎的) 預存程序，帶來顯著的效能提升。 若要最佳化記憶體最佳化資料表的存取，請使用原生編譯的預存程序。 如需詳細資訊，請參閱[原生編譯的預存程序](natively-compiled-stored-procedures.md)。  
   
  建立與修改資料庫物件 (DDL 陳述式) 前，需修改下列陳述式：  
   
@@ -50,8 +50,8 @@ ms.locfileid: "63156221"
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部優化&#41;](in-memory-oltp-in-memory-optimization.md)   
- [原生編譯預存程序的移轉問題](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [原生編譯預存程式的遷移問題](migration-issues-for-natively-compiled-stored-procedures.md)   
  [支援的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)   
- [原生編譯的預存程序](natively-compiled-stored-procedures.md)  
+ [原生編譯的預存程式](natively-compiled-stored-procedures.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151190"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
@@ -39,9 +39,9 @@ ms.locfileid: "63151190"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 `sp_create_plan_guide` 的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，如果指定了 `@name =`，您也必須指定 `@stmt =`、`@type =` 等等。 同樣地，如果省略 `@name =`，而只提供參數值，您也必須省略其餘參數名稱，只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "63151190"
   
 -   試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。 嘗試卸除定義了觸發程序且被計畫指南參考的資料表也會造成錯誤。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要建立類型為 OBJECT 的計畫指南，需要所參考物件的 ALTER 權限。 若要建立類型為 SQL 或 TEMPLATE 的計畫指南，需要目前資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-plan-guide"></a>若要建立計畫指南  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63151190"
   
 7.  在 **[範圍結構描述名稱]** 清單中，輸入包含了該物件的結構描述名稱。 **[範圍結構描述名稱]** 方塊只在 **[物件]** 選定為範圍類型時才可供使用。  
   
-8.  在 [範圍物件名稱]  方塊中，輸入顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序名稱、使用者定義純量函數名稱、多重陳述式資料表值函數名稱或 DML 觸發程序名稱。 **[範圍物件名稱]** 方塊只在 **[物件]** 選定為範圍類型時才可供使用。  
+8.  在 [範圍物件名稱]**** 方塊中，輸入顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序名稱、使用者定義純量函數名稱、多重陳述式資料表值函數名稱或 DML 觸發程序名稱。 **[範圍物件名稱]** 方塊只在 **[物件]** 選定為範圍類型時才可供使用。  
   
 9. 在 **[參數]** 方塊中，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中內嵌的所有參數的參數名稱與資料類型。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63151190"
   
 11. 按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-plan-guide"></a>若要建立計畫指南  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149800"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -44,8 +44,7 @@ ms.locfileid: "63149800"
 -   一組遵循檔案換用命名規範的換用追蹤檔案，例如：`<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`... `<TraceFile>_n.trc`。  
   
 ### <a name="input-trace-events-and-columns"></a>輸入追蹤事件和資料行  
- 輸入追蹤資料必須包含特定的事件及資料行，如此 Distributed Replay 才可重新執行。 
-  **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 範本包含所有必要的事件和資料，以及額外的資訊。 如需該範本的詳細資訊，請參閱 [重新執行需求](../sql-server-profiler/replay-requirements.md)。  
+ 輸入追蹤資料必須包含特定的事件及資料行，如此 Distributed Replay 才可重新執行。 **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 範本包含所有必要的事件和資料，以及額外的資訊。 如需該範本的詳細資訊，請參閱 [重新執行需求](../sql-server-profiler/replay-requirements.md)。  
   
 > [!WARNING]  
 >  若您未使用 **TSQL_Replay** 範本來擷取輸入追蹤資料，或不符合輸入追蹤資料的需求，可能會收到未預期的重新執行結果。  
@@ -104,11 +103,11 @@ ms.locfileid: "63149800"
   
 -   HostName  
   
--   二進位資料  
+-   Binary Data  
   
 -   SPID  
   
--   開始時間  
+-   Start Time  
   
 -   EndTime  
   
@@ -135,10 +134,8 @@ ms.locfileid: "63149800"
   
 |Distributed Replay 功能|每個重新執行環境的最大安裝數目|  
 |--------------------------------|--------------------------------------------------|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務|1|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務|16 (實體或虛擬電腦)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務|1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務|16 (實體或虛擬電腦)|  
 |管理工具|無限制|  
   
 > [!NOTE]  

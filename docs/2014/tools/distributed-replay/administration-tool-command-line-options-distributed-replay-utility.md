@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151587"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令列選項 (Distributed Replay Utility)
   Distributed Replay 管理工具`DReplay.exe`是命令列工具，可讓您用來與 Distributed Replay controller 通訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可以使用管理工具來起始、監視及取消控制器上的作業。  
   
- ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示")如需與管理工具語法搭配使用之語法慣例的詳細資訊，請參閱 transact-sql[語法慣例 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
+ ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,27 +45,27 @@ Usage:
 ## <a name="remarks"></a>備註  
  您可以使用 `DReplay.exe` 發出下列命令列選項：  
   
- **預處理**  
+ **preprocess**  
  起始前置處理階段。 控制器會準備輸入追蹤資料 (您從實際執行環境擷取而來)，以便對目標伺服器重新執行。  
   
- **重播**  
+ **replay**  
  起始事件重新執行階段。 控制器會分派重新執行資料給指定的用戶端、啟動分散式重新執行，以及同步處理用戶端。 另外，每個選取的用戶端會記錄重新執行活動，並在本機上儲存結果追蹤檔案。  
   
- **狀態**  
+ **status**  
  查詢控制器，並顯示目前狀態。  
   
- **取消**  
+ **cancel**  
  取消目前正在控制器上執行的作業。  
   
  如需包含命令引數和範例的詳細語法資訊，請參閱下列主題：  
   
 -   [前置處理選項 &#40;Distributed Replay 管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Distributed Replay 管理工具 &#40;重新執行選項&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [重新執行選項 &#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Distributed Replay 管理工具 &#40;的狀態選項&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [狀態選項 &#40;Distributed Replay 管理工具&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Distributed Replay 管理工具 &#40;取消選項&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [取消選項 &#40;Distributed Replay 管理工具&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  RPC 以 RPC 形式重新執行，而不是以語言事件的形式重新執行。  
   

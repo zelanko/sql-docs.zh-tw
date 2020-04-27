@@ -16,17 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137604"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>擴充預存程式程式設計人員&#39;s 參考
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)]擴充預存程式 API （先前為 Open 資料服務的一部分）會提供以伺服器為基礎的應用程式開發介面（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] API），以擴充[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能。 API 包含用來建置應用程式的 C 和 C++ 函數和巨集。  
   

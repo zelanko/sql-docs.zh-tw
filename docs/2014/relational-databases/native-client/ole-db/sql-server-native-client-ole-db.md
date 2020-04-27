@@ -19,20 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033553"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是用於存取資料的低階 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是用於存取資料的低階 COM API。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
-  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會對連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的應用程式提供 OLE DB 支援。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會對連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的應用程式提供 OLE DB 支援。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
   
@@ -46,7 +42,7 @@ ms.locfileid: "63033553"
   
 -   [資料列集](../../native-client-ole-db-rowsets/rowsets.md)  
   
--   [預存程序](stored-procedures.md)  
+-   [預存程式](stored-procedures.md)  
   
 -   [BLOB 與 OLE 物件](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
@@ -54,27 +50,27 @@ ms.locfileid: "63033553"
   
 -   [資料類型 &#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [架構資料列集支援 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+-   [結構描述資料列集支援 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
 -   [資料表值參數 &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [&#40;OLE DB 的日期和時間改善&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日期和時間改善 &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [大型 CLR 使用者定義類型 &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
+-   [大型 CLR 使用者定義型別 &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
 -   [FILESTREAM 支援 &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [交易](../../native-client-ole-db-transactions/transactions.md)  
+-   [異動](../../native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../native-client-ole-db-errors/errors.md)  
+-   [錯誤](../../native-client-ole-db-errors/errors.md)  
   
 -   [用戶端連接 &#40;OLE DB&#41; 中的服務主體名稱 &#40;SPN&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [稀疏資料行支援 &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
+-   [疏鬆資料行支援 &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
 -   [SQL Server Native Client &#40;OLE DB&#41; 參考](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [OLE DB 的使用說明主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [OLE DB how to 主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../sql-server-native-client-programming.md)  

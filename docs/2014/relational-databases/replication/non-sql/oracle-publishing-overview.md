@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022251"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview
@@ -41,7 +41,7 @@ ms.locfileid: "63022251"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](configure-an-oracle-publisher.md)   
- [Oracle 發行相關術語字彙](glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle 發行的詞彙詞彙](glossary-of-terms-for-oracle-publishing.md)   
  [異質資料庫複寫](heterogeneous-database-replication.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151039"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151039"
 ## <a name="new-xevents"></a>新的 XEvents  
  現已有兩個新的 query_optimizer_estimate_cardinality XEvents 支援新的查詢計劃。  
   
--   當查詢最佳化工具估計關聯式運算式的基數時，就會發生*query_optimizer_estimate_cardinality* 。  
+-   *query_optimizer_estimate_cardinality* 會在查詢最佳化工具估計關聯運算式的基數時發生。  
   
--   當追蹤旗標2312和9481都已啟用時，會同時嘗試同時強制執行舊的和新的基數估計行為， *query_optimizer_force_both_cardinality_estimation*_behaviors 發生。  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors 會在一併啟用追蹤旗標 2312 和 9481 而嘗試同時強制新舊兩版的基數估計行為時發生。  
   
 ## <a name="examples"></a>範例  
  下列範例示範新的基數估計值的部分變更。 估計基數的程式碼已經改寫。 其邏輯相當複雜，因此無法提供所有變更的詳盡清單。  

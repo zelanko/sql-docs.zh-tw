@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071783"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
@@ -185,10 +185,10 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [示範記憶體內部 OLTP 的 AdventureWorks 擴充功能](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [記憶體內部 OLTP &#40;記憶體內部優化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [記憶體優化資料表](memory-optimized-tables.md)   
- [原生編譯的預存程序](natively-compiled-stored-procedures.md)   
+ [原生編譯的預存程式](natively-compiled-stored-procedures.md)   
  [使用記憶體優化資料表的需求](requirements-for-using-memory-optimized-tables.md)   
- [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER DATABASE File 和 Filegroup 選項 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [建立程式和記憶體優化資料表](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

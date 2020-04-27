@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015645"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
@@ -31,20 +31,20 @@ ms.locfileid: "63015645"
   
      [安全性](#Security)  
   
--   **若要查看統計資料屬性，請使用：**  
+-   **若要使用下列項目檢視統計資料屬性：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  使用者必須擁有資料表，或者使用者必須是系統管理員 (`sysadmin`) 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員，才能檢視統計資料物件。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>若要檢視統計資料屬性  
   
@@ -56,11 +56,11 @@ ms.locfileid: "63015645"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 [統計資料屬性 - **statistics_name]** __ 對話方塊的 [選取頁面]**** 窗格中，選取 [詳細資料]****。  
+6.  在 [統計資料屬性 - **statistics_name**]  對話方塊的 [選取頁面]  窗格中，選取 [詳細資料]  。  
   
-     下列屬性會在 [統計資料屬性 - **statistics_name**]** 對話方塊的 [詳細資料]** __ 頁面中顯示。  
+     下列屬性會在 [統計資料屬性 - **statistics_name**]  對話方塊的 [詳細資料]  頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -76,10 +76,10 @@ ms.locfileid: "63015645"
      **名稱**  
      統計資料物件的名稱。  
   
-     **已**  
+     **已更新**  
      上次更新統計資料的日期和時間。  
   
-     **行間**  
+     **資料列**  
      上一次更新統計資料時位於資料表或索引檢視表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。  
   
      **取樣的資料列**  
@@ -88,25 +88,25 @@ ms.locfileid: "63015645"
      **步驟**  
      長條圖中的步驟數。 每一個步驟都會跨越某個範圍的資料行值，後面緊接著上限資料行值。 長條圖步驟會在統計資料中的第一個索引鍵資料行上定義。 步驟數的最大值為 200。  
   
-     **濃度**  
-     針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值**，不包括長條圖界限值。 查詢最佳化工具不會使用這個密度值，而且會針對與 SQL Server 2008 之前版本之間的回溯相容性顯示。  
+     **密度**  
+     針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值  ，不包括長條圖界限值。 查詢最佳化工具不會使用這個密度值，而且會針對與 SQL Server 2008 之前版本之間的回溯相容性顯示。  
   
      **平均索引鍵長度**  
      針對統計資料物件中的所有索引鍵資料行計算之每個值的平均位元組數。  
   
-     **字串索引**  
-     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在 statistics 物件的第一個索引鍵資料行上建立，其類型為**char**、 **Varchar**、 **Nchar**、 **Nvarchar**、 **Varchar （max）**、 **Nvarchar （max）**、 **text**或**Ntext**。  
+     **String Index**  
+     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text**或 **ntext**類型時於統計資料物件的第一個索引鍵資料行上建立。  
   
      **篩選運算式**  
      包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。  
   
-     **未篩選的資料列**  
+     **Unfiltered Rows**  
      套用篩選運算式之前，資料表中的資料列總數。 如果 Filter Expression 為 NULL，Unfiltered Rows 就會等於 Rows。  
   
      下列資訊描述結果集針對密度向量所傳回的資料行。  
   
      **所有密度**  
-     密度是 1 / 相異值**。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度是 1 / 相異值  。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **平均長度**  
      平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。  
@@ -133,7 +133,7 @@ ms.locfileid: "63015645"
   
 7.  按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>若要檢視統計資料屬性  
   

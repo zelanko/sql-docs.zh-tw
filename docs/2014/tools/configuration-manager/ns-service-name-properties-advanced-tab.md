@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00deba3bb21a36f478fc2994f621cbe8fe9396c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63049590"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([進階] 索引標籤)

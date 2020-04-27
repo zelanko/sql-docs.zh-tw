@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057118"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -68,17 +68,17 @@ ms.locfileid: "63057118"
   
     -   [處理複寫代理程式設定檔](agents/replication-agent-profiles.md)  
   
-    -   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   複寫[代理程式可執行檔概念](concepts/replication-agent-executables-concepts.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](agents/replication-agent-administration.md)   
- [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)   
+ [&#40;複寫&#41;的錯誤和事件參考](errors-and-events-reference-replication.md)   
  [複寫散發代理程式](agents/replication-distribution-agent.md)   
  [複寫記錄讀取器代理程式](agents/replication-log-reader-agent.md)   
  [複寫合併代理程式](agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [複寫快照集代理程式](agents/replication-snapshot-agent.md)  
   
   

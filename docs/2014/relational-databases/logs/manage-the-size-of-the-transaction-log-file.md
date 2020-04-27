@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144329"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
   在部分情況下，實際壓縮或擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之交易記錄的實體記錄檔十分有用。 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
   
   
-##  <a name="MonitorSpaceUse"></a>監視記錄空間的使用  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>監視記錄空間的使用  
  您可以使用 DBCC SQLPERF (LOGSPACE) 來監視記錄空間的使用。 這個命令會傳回目前使用之記錄空間量的相關資訊，並指出交易記錄需要截斷的時機。 如需詳細資訊，請參閱 [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)。 如需記錄檔的目前大小、大小上限及檔案的自動成長選項等相關資訊，您也可以在 **sys.database_files** 中使用該記錄檔的 **size**、**max_size** 和 **growth** 資料行。 如需詳細資訊，請參閱 [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。  
   
 > [!IMPORTANT]  
 >  我們建議您應避免讓記錄磁碟超過負載。  
   
   
-##  <a name="ShrinkSize"></a>壓縮記錄檔的大小  
+##  <a name="shrink-the-size-of-the-log-file"></a><a name="ShrinkSize"></a>壓縮記錄檔的大小  
  若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如果您知道交易記錄檔包含不再需要的未使用空間，則這十分有用。 只有當資料庫已上線，而且至少有一個虛擬記錄檔可用時，才會壓縮記錄檔。 在某些情況下，壓縮記錄可能要等到下一個記錄截斷之後才能進行。  
   
 > [!NOTE]  
@@ -50,15 +50,15 @@ ms.locfileid: "63144329"
   
  `To monitor log space`  
   
--   [DBCC SQLPERF &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
+-   [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
   
--   [database_files &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) （請參閱記錄檔或檔案的 [**大小**]、[ **max_size**] 和 [**成長**] 資料行）。  
+-   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (請參閱一或多個記錄檔的 **size**、**max_size** 和 **growth** 資料行。)  
   
 > [!NOTE]  
 >  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 `autoshrink` 資料庫屬性預設為 FALSE。 如果 `autoshrink` 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需變更`autoshrink`屬性之設定的詳細資訊，請參閱[View Or Change a Database Properties](../databases/view-or-change-the-properties-of-a-database.md)-使用 [**選項**] 頁面上的 [**自動壓縮**] 屬性，或 [ [ALTER database SET Options] &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 [AUTO_SHRINK] 選項。  
   
   
-##  <a name="AddOrEnlarge"></a>新增或加大記錄檔  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>新增或加大記錄檔  
  或者，您可以加大現有的記錄檔 (如果磁碟空間允許的話)，或是將記錄檔加入資料庫 (通常是在不同的磁碟上)，來取得空間。  
   
 -   若要對資料庫新增一個記錄檔，請使用 ALTER DATABASE 陳述式的 ADD LOG FILE 子句。 新增記錄檔可讓記錄檔增大。  
@@ -66,11 +66,11 @@ ms.locfileid: "63144329"
 -   若要加大記錄檔，可以使用 ALTER DATABASE 陳述式的 MODIFY FILE 子句，並指定 SIZE 與 MAXSIZE 語法。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
   
-##  <a name="tempdbOptimize"></a>優化 tempdb 交易記錄檔的大小  
+##  <a name="optimize-the-size-of-the-tempdb-transaction-log"></a><a name="tempdbOptimize"></a>優化 tempdb 交易記錄檔的大小  
  重新啟動伺服器執行個體時，就會將 **tempdb** 資料庫的交易記錄大小重新調整為自動成長之前的原始大小。 這樣會降低 **tempdb** 交易記錄的效能。 您可以在啟動或重新啟動伺服器執行個體後，增加 **tempdb** 交易記錄的大小，藉以避免這項負擔。 如需詳細資訊，請參閱 [tempdb Database](../databases/tempdb-database.md)。  
   
   
-##  <a name="ControlGrowth"></a>控制交易記錄檔的成長  
+##  <a name="control-the-growth-of-a-transaction-log-file"></a><a name="ControlGrowth"></a>控制交易記錄檔的成長  
  您可以使用 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) 陳述式來管理交易記錄檔的成長。 請注意：  
   
 -   若要變更目前的檔案大小 (單位為 KB、MB、GB 和 TB)，請使用 SIZE 選項。  
@@ -84,6 +84,6 @@ ms.locfileid: "63144329"
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+ [針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   

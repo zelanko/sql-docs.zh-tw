@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150152"
 ---
 # <a name="configuration-element-dta"></a>Configuration 元素 (DTA)
@@ -50,19 +50,19 @@ ms.locfileid: "63150152"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**出現次數**|選擇性。 每個 `DTAInput` 元素可以使用這個元素一次。|  
+|**次出現**|選擇性。 每個 `DTAInput` 元素可以使用這個元素一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[&#40;DTA&#41;的 DTAInput 元素](dtainput-element-dta.md)|  
-|**子元素**|[Configuration &#40;DTA&#41;的 Server 元素](server-element-for-configuration-dta.md)|  
+|**父元素**|[DTAInput 元素 &#40;DTA&#41;](dtainput-element-dta.md)|  
+|**子元素**|[組態的 Server 元素 &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

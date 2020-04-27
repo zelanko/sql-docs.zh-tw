@@ -27,16 +27,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127897"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 安裝的安全性考量
   安全性對於每一個產品和每一項業務都很重要。 只要遵循簡單的最佳做法，就可以避免許多安全性漏洞。 本主題會討論一些您在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前和安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後應該考慮的安全性最佳做法。 特定功能的參考主題中會包括那些功能的安全性指南。  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>安裝之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>安裝之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  設定伺服器環境時，請遵循這些最佳做法：  
   
 -   [加強實體安全性](#physical_security)  
@@ -51,7 +51,7 @@ ms.locfileid: "63127897"
   
 -   [在網域控制站上安裝 SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  實體和邏輯隔離，構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性的基礎。 若要加強 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的實體安全性，請執行下列工作：  
   
 -   將伺服器放在只有獲得授權的人員能夠存取的地點。  
@@ -62,7 +62,7 @@ ms.locfileid: "63127897"
   
 -   定期備份所有資料，並在遠端位置保護備份安全。  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  防火牆對於保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的安全非常重要。 如果您遵照這些方針，防火牆將是最有效的：  
   
 -   將防火牆放在伺服器和網際網路之間。 啟用您的防火牆。 如果防火牆已關閉，請將它開啟。 如果防火牆已開啟，請勿將它關閉。  
@@ -77,12 +77,12 @@ ms.locfileid: "63127897"
   
  如需預設 Windows 防火牆設定的詳細資訊以及影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  隔離服務減少一個遭到破壞的服務被用來破壤其他服務的風險。 若要隔離服務，請考慮下列方針：  
   
 -   在個別 Windows 帳戶下執行個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 請盡可能針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用低權限的個別 Windows 或本機使用者帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  使用正確的檔案系統會增加安全性。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝，您應該執行下列工作：  
   
 -   使用 NTFS 檔案系統 (NTFS)。 NTFS 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的慣用檔案系統，因為它比 FAT 檔案系統更穩定，而且具有更高的可復原性。 NTFS 也會啟用一些安全性選項，例如檔案和目錄存取控制清單 (ACL) 及加密檔案系統 (EFS) 檔案加密。 在安裝期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在偵測到 NTFS 時，對登錄機碼和檔案設定適當的 ACL。 這些權限不應該變更。 未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本可能不支援在含有 FAT 檔案系統的電腦上安裝。  
@@ -92,7 +92,7 @@ ms.locfileid: "63127897"
   
 -   針對重要資料檔使用獨立磁碟容錯陣列 (RAID)。  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  周邊網路中的伺服器應該停用所有非必要的通訊協定，包括 NetBIOS 和伺服器訊息區塊 (SMB) 在內。  
   
  NetBIOS 使用下列通訊埠：  
@@ -111,7 +111,7 @@ ms.locfileid: "63127897"
   
  Web 伺服器和網域名稱系統 (DNS) 伺服器不需要 NetBIOS 或 SMB。 在這些伺服器上，請停用這兩種通訊協定以減少使用者列舉的威脅。  
   
-###  <a name="Install_DC"></a> 在網域控制站上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> 在網域控制站上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  基於安全性理由，不建議您在網域控制站上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會封鎖當做網域控制站之電腦上的安裝，但適用以下限制：  
   
 -   您無法以本機服務帳戶在網域控制站上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
@@ -124,7 +124,7 @@ ms.locfileid: "63127897"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式無法在唯讀的網域控制站上建立安全性群組或提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 在此狀況中，安裝程式將會失敗。  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>安裝時或安裝後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>安裝時或安裝後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  安裝之後，您可以遵照關於帳戶和驗證模式的這些最佳做法，來加強 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的安全性：  
   
  **服務帳戶**  

@@ -13,14 +13,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137473"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>第4課：執行應用程式（VB-VC #）
-  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供幾種從 IDE 建立與執行主控台應用程式的方法，例如：  
   
 -   啟動並偵錯  

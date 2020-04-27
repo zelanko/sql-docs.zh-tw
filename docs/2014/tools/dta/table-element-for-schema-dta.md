@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63138780"
 ---
 # <a name="table-element-for-schema-dta"></a>結構描述的 Table 元素 (DTA)
@@ -45,14 +45,14 @@ ms.locfileid: "63138780"
 |--------------------|-----------------|  
 |**資料類型和長度**|**字串**，介於1到255個字元之間。|  
 |**預設值**|無。|  
-|**出現次數**|選擇性。 依照工作負載的需要，列出儘可能多的資料表。|  
+|**次出現**|選擇性。 依照工作負載的需要，列出儘可能多的資料表。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[資料庫的 Schema 元素 &#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**子元素**|[資料表 &#40;DTA&#41;的 Name 元素](name-element-for-table-dta.md)|  
+|**子元素**|[資料表的 Name 元素 &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>備註  
  如果您沒有指定 `Table` 元素，Database Engine Tuning Advisor 會假設指定資料庫的所有資料表都可以微調。  
@@ -61,6 +61,6 @@ ms.locfileid: "63138780"
  如需使用範例，請參閱[伺服器元素 &#40;DTA&#41;](server-element-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

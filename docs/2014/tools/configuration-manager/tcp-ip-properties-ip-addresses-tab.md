@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151441"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP/IP 屬性（IP 位址索引標籤）
@@ -49,8 +49,7 @@ ms.locfileid: "63151441"
  **[TCP 動態通訊埠]**  
  檢視或變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽的通訊埠。 根據預設， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體會接聽通訊埠 1433。  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以在同一個 IP 位址接聽多個通訊埠，方法是使用逗號隔開通訊埠 (例如，1433,1500,1501)。 此欄位最長不可超過 2047 個字元。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以在同一個 IP 位址接聽多個通訊埠，方法是使用逗號隔開通訊埠 (例如，1433,1500,1501)。 此欄位最長不可超過 2047 個字元。  
   
  若要設定單一 IP 位址接聽多個通訊埠，還必須在 [TCP/IP 屬性]  對話方塊的 [通訊協定]  索引標籤上，將 [全部接聽]  參數設為 [否]  。 如需詳細資訊，請參閱 SQL Server 線上叢書的＜如何：設定 Database Engine 以在＜ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online＞接聽多個 TCP 通訊埠的。  
   

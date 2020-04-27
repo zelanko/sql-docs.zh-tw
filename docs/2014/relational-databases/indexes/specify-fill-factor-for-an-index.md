@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036205"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>指定索引的填滿因素
@@ -44,9 +44,9 @@ ms.locfileid: "63036205"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Performance"></a> 效能考量  
+###  <a name="performance-considerations"></a><a name="Performance"></a> 效能考量  
   
 #### <a name="page-splits"></a>頁面分割  
  選擇正確的填滿因數值，可以減少可能的頁面分割，因為當基礎資料表中加入資料時，將有足夠的空間來進行索引擴充。將新的資料列加入全文檢索頁面時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將幾乎一半的資料列移到新的頁面，以留出空間給新的資料列。 這個重組動作稱為分頁分割。 分頁分割可留出空間給新的記錄，但是執行時需要時間，而且是一項耗用大量資源的作業。 此外，它也可能會造成資料片段過多，因而增加 I/O 作業。 如果頁面分割次數過於頻繁，可以使用新的或現有的填滿因數值重建索引，藉以重新分配資料。 如需詳細資訊，請參閱 [重新組織與重建索引](reorganize-and-rebuild-indexes.md)。  
@@ -56,12 +56,12 @@ ms.locfileid: "63036205"
 #### <a name="adding-data-to-the-end-of-the-table"></a>將資料加入資料表的結尾  
  如果新的資料在資料表內平均分配，則非零的填滿因數值 (0 或 100 以外) 對於效能將很有幫助。 但是，如果將所有資料加入資料表的結尾，索引頁面中的空白處將不會填滿。 例如，如果索引鍵資料行為 IDENTITY 資料行，新資料列的索引鍵一定會增加，而且在邏輯上會將索引資料列加入索引的結尾。 如果現有的資料列將以增加資料列大小的資料進行更新，請使用小於 100 的填滿因數。 每個頁面上的額外位元組將有助於減少資料列中額外長度所導致的頁面分割。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>使用資料表設計工具指定填滿因數  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63036205"
   
 8.  按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>若要在現有索引中指定填滿因數  
   

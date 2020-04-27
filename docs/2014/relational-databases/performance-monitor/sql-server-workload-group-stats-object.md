@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151106"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 物件
@@ -41,7 +41,7 @@ ms.locfileid: "63151106"
   
 ## <a name="see-also"></a>另請參閱  
  [監視資源使用量 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
- [SQL Server, Resource Pool Stats 物件](sql-server-resource-pool-stats-object.md)   
+ [SQL Server，資源集區統計資料物件](sql-server-resource-pool-stats-object.md)   
  [資源管理員](../resource-governor/resource-governor.md)  
   
   

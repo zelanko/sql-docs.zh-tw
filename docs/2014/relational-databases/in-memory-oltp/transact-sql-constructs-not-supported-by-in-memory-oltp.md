@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155308"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
@@ -111,7 +111,7 @@ ms.locfileid: "63155308"
 |功能|資料指標|原生編譯預存程序上或內部不支援資料指標。<br /><br /> -從用戶端執行程式時，請使用 RPC，而不是資料指標 API。 使用 ODBC 時，避免 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 `EXECUTE`，請改為直接指定程序的名稱。<br /><br /> -從[!INCLUDE[tsql](../../includes/tsql-md.md)]批次或另一個預存程式執行程式時，請避免將資料指標與原生編譯預存程式搭配使用。<br /><br /> -建立原生編譯的預存程式時，不要使用資料指標，而是使用以集合為`WHILE`基礎的邏輯或迴圈。|  
 |功能|非常數參數的預設值|在原生編譯預存程序上使用具有參數的預設值時，值必須為常數。 請從參數宣告中移除任何萬用字元。|  
 |功能|EXTERNAL|無法對 CLR 預存程序執行原生編譯。 從 CREATE PROCEDURE 陳述式中移除 AS EXTERNAL 子句或 NATIVE_COMPILATION 選項。|  
-|功能|編號的預存程序|原生編譯預存程序不可編號。 請從`;` ** `CREATE PROCEDURE`語句中移除該數位。|  
+|功能|編號的預存程序|原生編譯預存程序不可編號。 請從`;` *number* `CREATE PROCEDURE`語句中移除該數位。|  
 |功能|多資料列插入 .。。VALUES 語句|無法使用相同的 `INSERT` 陳述式在原生編譯預存程序中插入多個資料列。 請為每個資料列建立 `INSERT` 陳述式。|  
 |功能|通用資料表運算式 (CTE)|原生編譯預存程序中不支援通用資料表運算式 (CTE)。 重寫查詢。|  
 |功能|子查詢|不支援子查詢 (另一個查詢中的巢狀查詢)。 重寫查詢。|  
@@ -165,7 +165,7 @@ ms.locfileid: "63155308"
 |運算子|TSEQUAL|不支援此運算子。 請從原生編譯預存程序中移除 `TSEQUAL`。|  
 |運算子|LIKE|不支援此運算子。 請從原生編譯預存程序中移除 `LIKE`。|  
 |運算子|NEXT VALUE FOR|原生編譯預存程序內可以參考順序。 請使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]取得值，並將它傳遞至原生編譯預存程序。 如需詳細資訊，請參閱 [在記憶體最佳化資料表中實作 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)。|  
-|Set 選項|*件*|原生編譯預存程序內的 SET 選項不可變更。 某些選項可以透過 BEGIN ATOMIC 陳述式設定。 如需詳細資訊，請參閱＜ [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)＞中的＜Atonic 區塊＞一節。|  
+|Set 選項|*選項*|原生編譯預存程序內的 SET 選項不可變更。 某些選項可以透過 BEGIN ATOMIC 陳述式設定。 如需詳細資訊，請參閱＜ [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)＞中的＜Atonic 區塊＞一節。|  
 |運算元|TABLESAMPLE|不支援此運算子。 請從原生編譯預存程序中移除 `TABLESAMPLE`。|  
 |選項|RECOMPILE|原生編譯預存程序是在建立時編譯。 若要重新編譯原生編譯預存程序，請將它卸除再重新建立。 請從程序定義中移除 `RECOMPILE`。|  
 |選項|ENCRYPTION|不支援這個選項。 請從程序定義中移除 `ENCRYPTION`。|  
@@ -175,29 +175,23 @@ ms.locfileid: "63155308"
 |聯結提示|HASH、MERGE|原生編譯預存程序僅支援巢狀迴圈聯結。 不支援雜湊和合併聯結。 請移除聯結提示。|  
 |查詢提示|*查詢提示*|此查詢提示不在原生編譯預存程序內。 如需支援的查詢提示，請參閱[查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)。|  
 |選項|DISTINCT|不支援這個選項。 請從原生編譯預存程序的查詢中移除 `DISTINCT`。|  
-|選項|PERCENT|
-  `TOP` 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 `PERCENT`。|  
-|選項|WITH TIES|
-  `TOP` 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 `WITH TIES`。|  
+|選項|PERCENT|`TOP` 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 `PERCENT`。|  
+|選項|WITH TIES|`TOP` 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 `WITH TIES`。|  
 |彙總函式|*彙總函式*|不支援此子句。 如需原生編譯預存程序中彙總函式的詳細資訊，請參閱＜ [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)＞。|  
 |排名函數|*次序函數*|原生編譯預存程序中不支援排名函數。 請從程序定義中將它們移除。|  
 |函式|*函數*|不支援此函數。 請從原生編譯預存程序中將它移除。|  
-|引數|*陳述式*|不支援此陳述式。 請從原生編譯預存程序中將它移除。|  
+|引數|*引數*|不支援此陳述式。 請從原生編譯預存程序中將它移除。|  
 |功能|MIN 和 MAX 可與二進位和字元字串並用|彙總函式 `MIN` 和 `MAX` 不可用於原生編譯預存程序內的字元和二進位字串值。|  
 |功能|未使用彙總函式的 GROUP BY|在原生編譯的預存程序中，當查詢包含 `GROUP BY` 子句時，查詢也必須在 SELECT 或 HAVING 子句中使用彙總函式。 請將彙總函式加入至查詢。|  
 |功能|GROUP BY ALL|在原生編譯的預存程序中，ALL 不得與 GROUP BY 子句並用。 從 GROUP BY 子句中移除 ALL。|  
 |功能|GROUP BY ()|無法使用空白清單做為群組依據。 請移除 GROUP BY 子句，或在群組清單中加入資料行。|  
-|功能|ROLLUP|
-  `ROLLUP` 無法與原生編譯預存程序中的 `GROUP BY` 子句一起使用。 請從程序定義中移除 `ROLLUP`。|  
-|功能|CUBE|
-  `CUBE` 無法與原生編譯預存程序中的 `GROUP BY` 子句一起使用。 請從程序定義中移除 `CUBE`。|  
-|功能|GROUPING SETS|
-  `GROUPING SETS` 無法與原生編譯預存程序中的 `GROUP BY` 子句一起使用。 請從程序定義中移除 `GROUPING SETS`。|  
+|功能|ROLLUP|`ROLLUP` 無法與原生編譯預存程序中的 `GROUP BY` 子句一起使用。 請從程序定義中移除 `ROLLUP`。|  
+|功能|CUBE|`CUBE` 無法與原生編譯預存程序中的 `GROUP BY` 子句一起使用。 請從程序定義中移除 `CUBE`。|  
+|功能|GROUPING SETS|`GROUPING SETS` 無法與原生編譯預存程序中的 `GROUP BY` 子句一起使用。 請從程序定義中移除 `GROUPING SETS`。|  
 |功能|BEGIN TRANSACTION、COMMIT TRANSACTION 與 ROLLBACK TRANSACTION。|使用 ATOMIC 區塊控制交易和錯誤處理。 如需詳細資訊，請參閱 [Atomic Blocks](atomic-blocks-in-native-procedures.md)。|  
 |功能|內嵌資料表變數宣告。|資料表變數必須明確參考定義的記憶體最佳化資料表類型。 您應該建立記憶體最佳化資料表的類型，並使用該類型宣告變數，而不要指定內嵌類型。|  
 |功能|sp_recompile|不支援重新編譯原生編譯的預存程序。 卸除再重新建立程序。|  
-|功能|EXECUTE AS CALLER|
-  `EXECUTE AS` 為必要子句。 但 `EXECUTE AS CALLER` 不受支援。 使用`EXECUTE AS OWNER`、 `EXECUTE AS`*使用者*或`EXECUTE AS SELF`。|  
+|功能|EXECUTE AS CALLER|`EXECUTE AS` 為必要子句。 但 `EXECUTE AS CALLER` 不受支援。 使用`EXECUTE AS OWNER`、 `EXECUTE AS`*使用者*或`EXECUTE AS SELF`。|  
 |功能|磁碟型資料表|磁碟型資料表無法從原生編譯的預存程序中存取。 從原生編譯的預存程序移除磁碟型資料表類型的參考。 或是將磁碟型資料表移轉至經過最佳化的記憶體。|  
 |功能|檢視|檢視無法從原生編譯的預存程序中存取。 請參考基底資料表，而不要使用檢視。|  
 |功能|資料表值函式|資料表值函式無法從原生編譯的預存程序中存取。 從原生編譯的預存程序中移除資料表值函式的參考。|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63045990"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 錯誤資料表
@@ -103,6 +103,6 @@ ms.locfileid: "63045990"
  [Reporting Services 中的例外狀況處理簡介](../introducing-exception-handling-in-reporting-services.md)   
  [錯誤和事件參考 &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
  [Reporting Services SoapException 類別](reporting-services-soapexception-class.md)   
- [使用 Detail 屬性來處理特定的錯誤](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [使用詳細資料屬性來處理特定的錯誤](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

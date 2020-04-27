@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150462"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>TCP IP 屬性（通訊協定索引標籤）
@@ -35,8 +35,7 @@ ms.locfileid: "63150462"
  指定 SQL Server 是否將接聽電腦的網路卡所繫結的所有 IP 位址。 如果設為 [否]  ，請使用每個 IP 位址的屬性對話方塊，分別設定每個 IP 位址。 如果設為 [是]  ，[IPAll]  屬性方塊的設定將套用到所有 IP 位址。 預設值是 [是]  。  
   
  **No Delay**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未實作此屬性的變更。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未實作此屬性的變更。  
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

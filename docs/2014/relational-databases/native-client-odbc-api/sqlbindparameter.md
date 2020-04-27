@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067814"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
@@ -31,7 +31,7 @@ ms.locfileid: "63067814"
   
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，指定繫結輸入參數時的 SQL_PARAM_INPUT。 繫結使用 OUTPUT 關鍵字定義的預存程序參數時，只會指定 SQL_PARAM_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT。  
   
- [](sqlrowcount.md)如果系結參數陣列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的陣列元素導致語句執行發生錯誤，則 SQLROWCOUNT 與 Native Client ODBC 驅動程式不可靠。 ODBC 陳述式屬性 SQL_ATTR_PARAMS_PROCESSED_PTR 會報告錯誤發生前處理的資料列數目。 接著，如果需要，此應用程式可以周遊其參數狀態陣列以探索成功執行的陳述式數目。  
+ [SQLRowCount](sqlrowcount.md)如果系結參數陣列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的陣列元素導致語句執行發生錯誤，則 SQLROWCOUNT 與 Native Client ODBC 驅動程式不可靠。 ODBC 陳述式屬性 SQL_ATTR_PARAMS_PROCESSED_PTR 會報告錯誤發生前處理的資料列數目。 接著，如果需要，此應用程式可以周遊其參數狀態陣列以探索成功執行的陳述式數目。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 字元類型的繫結參數  
  如果傳入的 SQL 資料類型是字元類型，則*ColumnSize*是以字元（不是位元組）為單位的大小。 如果資料字串的長度（以位元組為單位）大於8000，則*ColumnSize*應該設定為`SQL_SS_LENGTH_UNLIMITED`，表示 SQL 類型的大小沒有任何限制。  
@@ -53,11 +53,10 @@ ms.locfileid: "63067814"
  如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLBindParameter 支援  
- 
-  `SQLBindParameter` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLBindParameter` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 的執行詳細資料](odbc-api-implementation-details.md)   
- [SQLBindParameter 函數](https://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter 函式](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

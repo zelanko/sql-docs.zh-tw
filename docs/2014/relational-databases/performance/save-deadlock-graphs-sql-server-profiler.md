@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150697"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>儲存死結圖形 (SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63150697"
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]****，將不會顯示 [追蹤屬性]**** 對話方塊，而是開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]****，將不會顯示 [追蹤屬性]**** 對話方塊，而是開始追蹤。 於 [工具]**** 功能表，按一下 [選項]****，並清除 [連接後立即啟動追蹤]**** 核取方塊，以關閉這項設定。  
   
 2.  在 [追蹤屬性] 對話方塊的 [追蹤名稱]**** 方塊中，輸入追蹤的名稱。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63150697"
   
          (選擇性) 按一下 **[設定最大資料列數]**，然後指定一個值。  
   
-5.  (選擇性) 選取 **[啟用追蹤停止時間]** 核取方塊，然後指定停止日期和時間。  
+5.  （選擇性）選取 [**啟用追蹤停止時間**] 核取方塊，然後指定停止日期和時間。  
   
 6.  按一下 [事件選取範圍]**** 索引標籤。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63150697"
   
 10. 按一下 [所有死結 XML 批次都在單一檔案中]****，將所有 Deadlock Graph 事件儲存在單一 XML 檔案中，或按一下 [每一個死結 XML 批次都在相異檔案中]****，為每一個 Deadlock Graph 建立新的 XML 檔案。  
   
- 在儲存了死結檔案之後，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟檔案。 如需詳細資訊，請參閱[開啟、查看和列印鎖死檔案 &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md)。  
+ 在儲存了死結檔案之後，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟檔案。 如需詳細資訊，請參閱[開啟、檢視及列印死結檔案 &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Profiler 分析死結](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  

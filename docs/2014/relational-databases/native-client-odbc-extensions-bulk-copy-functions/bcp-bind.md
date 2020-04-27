@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140563"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -148,7 +148,7 @@ bcp_bind(hdbc, szName, 0,
   
  呼叫此或任何其他大量複製函數之前，請先呼叫[bcp_init](bcp-init.md) 。 呼叫**bcp_init**會設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用於大量複製的目標資料表。 呼叫**bcp_init**以與**bcp_bind**和[bcp_sendrow](bcp-sendrow.md)搭配使用時，表示資料檔的**bcp_init** _szDataFile_參數會設定為 Null;**bcp_init**_eDirection_參數設為 DB_IN。  
   
- 針對您要**** 複製的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表中的每個資料行，建立個別的 bcp_bind 呼叫。 完成必要的**bcp_bind**呼叫之後，請呼叫**bcp_sendrow** ，將您的程式變數中的資料列傳送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支援重新繫結資料行。  
+ 針對您要**bcp_bind**複製的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表中的每個資料行，建立個別的 bcp_bind 呼叫。 完成必要的**bcp_bind**呼叫之後，請呼叫**bcp_sendrow** ，將您的程式變數中的資料列傳送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支援重新繫結資料行。  
   
  每當您想[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要認可已收到的資料列時，請呼叫[bcp_batch](bcp-batch.md)。 例如，針對每1000個插入的資料列，或在任何其他間隔呼叫一次**bcp_batch** 。  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150823"
 ---
 # <a name="plan-guides"></a>計畫指南
@@ -125,7 +125,7 @@ sp_create_plan_guide
   
  對於以 SQL 或 TEMPLATE 為基礎的計畫指南而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逐字元比較查詢的 @module_or_batch 和 @params 引數值，使兩個值相符。 這表示您必須提供與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在實際批次中所收到的文字完全相符的文字。  
   
- 當@type = ' SQL ' 且@module_or_batch設定為 Null 時，的值@module_or_batch會設定為的值。 @stmt這表示，在提交給** 時，必須以與字元相同的格式來[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 statement_text 的值。 不會執行內部轉換來簡化這個比對作業。  
+ 當@type = ' SQL ' 且@module_or_batch設定為 Null 時，的值@module_or_batch會設定為的值。 @stmt這表示，在提交給*statement_text*時，必須以與字元相同的格式來[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 statement_text 的值。 不會執行內部轉換來簡化這個比對作業。  
   
  當一般 (SQL 或 OBJECT) 計畫指南和 TEMPLATE 計畫指南都適用於陳述式時，只會使用一般計畫指南。  
   
@@ -137,7 +137,7 @@ sp_create_plan_guide
   
 ## <a name="related-tasks"></a>相關工作  
   
-|Task|主題|  
+|工作|主題|  
 |----------|-----------|  
 |描述如何建立計畫指南。|[建立新的計畫指南](create-a-new-plan-guide.md)|  
 |描述如何建立參數化查詢的計畫指南。|[建立參數化查詢的計畫指南](create-a-plan-guide-for-parameterized-queries.md)|  
@@ -145,7 +145,7 @@ sp_create_plan_guide
 |描述如何將固定的查詢計畫併入計畫指南。|[將固定的查詢計畫套用至計畫指南](apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |描述如何在計畫指南中指定查詢提示。|[將查詢提示附加至計畫指南](attach-query-hints-to-a-plan-guide.md)|  
 |描述如何檢視計畫指南屬性。|[檢視計畫指南屬性](view-plan-guide-properties.md)|  
-|描述如何使用 SQL Server Profiler 建立和測試計畫指南。|[使用 SQL Server Profiler 建立及測試計畫指南](plan-guides.md)|  
+|描述如何使用 SQL Server Profiler 建立和測試計畫指南。|[使用 SQL Server Profiler 建立及測試計劃指南](plan-guides.md)|  
 |描述如何驗證計畫指南。|[升級之後驗證計畫指南](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>另請參閱  
@@ -153,6 +153,6 @@ sp_create_plan_guide
  [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

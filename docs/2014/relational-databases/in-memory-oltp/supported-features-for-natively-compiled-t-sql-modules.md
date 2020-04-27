@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155724"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>原生編譯的預存程序中支援的建構
@@ -38,7 +38,7 @@ ms.locfileid: "63155724"
   
  如需有關不支援之建構的完整資訊，請參閱＜ [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)＞。 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
-##  <a name="pncsp"></a>原生編譯預存程式中的可程式性  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>原生編譯預存程式中的可程式性  
  支援下列功能：  
   
 -   BEGIN ATOMIC (在預存程序的外部層級)、LANGUAGE、ISOLATION LEVEL、DATEFORMAT 和 DATEFIRST。  
@@ -63,7 +63,7 @@ ms.locfileid: "63155724"
   
      若要最佳化效能，整個原生編譯預存程序必須使用單一 TRY/CATCH 區塊。  
   
-##  <a name="so"></a> 支援的運算子  
+##  <a name="supported-operators"></a><a name="so"></a>支援的運算子  
  下列為支援的運算子。  
   
 -   條件（IF，WHILE）中支援[transact-sql&#41;&#40;的比較運算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)（例如，>、 \<、>= 和 <=）。  
@@ -78,7 +78,7 @@ ms.locfileid: "63155724"
   
 -   位元運算子 ~、&、| 和 ^  
   
-##  <a name="bfncsp"></a>原生編譯預存程式中的內建函數  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>原生編譯預存程式中的內建函數  
  記憶體最佳化資料表上的預設條件約束和原生編譯預存程序中，支援下列函數。  
   
 -   數學函數：ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE 和 TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155724"
   
 -   系統函式：@@rowcount。 原生編譯預存程序內的陳述式會更新 @@rowcount，您可以在原生編譯預存程序中使用 @@rowcount，來判斷該原生編譯預存程序內最後執行之陳述式所影響的資料列數。 不過，@@rowcount 會在原生編譯預存程序開始及結束執行時重設為 0。  
   
-##  <a name="qsancsp"></a>原生編譯預存程式中的查詢介面區  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>原生編譯預存程式中的查詢介面區  
  支援下列功能：  
   
 -   BETWEEN  
@@ -151,12 +151,12 @@ ms.locfileid: "63155724"
   
  這些限制不適用於記憶體最佳化資料表上解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取。  
   
-##  <a name="auditing"></a> 稽核  
+##  <a name="auditing"></a><a name="auditing"></a>統計  
  原生編譯預存程序中支援程序層級稽核。 不支援陳述式層級稽核。  
   
  如需有關稽核的詳細資訊，請參閱＜ [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md)＞。  
   
-##  <a name="tqh"></a>資料表、查詢和聯結提示  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>資料表、查詢和聯結提示  
  支援下列功能：  
   
 -   在資料表提示語法或查詢的 [OPTION 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) 中的 INDEX、FORCESCAN 和 FORCESEEK 提示。  
@@ -169,10 +169,10 @@ ms.locfileid: "63155724"
   
  如需詳細資訊，請參閱[transact-sql&#41;的提示 &#40;](/sql/t-sql/queries/hints-transact-sql)。  
   
-##  <a name="los"></a> 排序的限制  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
   
- 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序 *\<程序名稱>* 、行 *\<行號>* 。TOP 運算子最多可以傳回 8192 個資料列；要求 *\<數字>* 。**  
+ 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序 *\<程序名稱>*、行 *\<行號>*。TOP 運算子最多可以傳回 8192 個資料列；要求 *\<數字>*。**  
   
  如果您沒有 TOP 子句，則可以使用 ORDER BY 排序任意數目的資料列。  
   
@@ -229,7 +229,7 @@ GO
  計算 TOP N 中最差情況下支援之最大值 N 的公式是： `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`。  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](natively-compiled-stored-procedures.md)   
+ [原生編譯的預存程式](natively-compiled-stored-procedures.md)   
  [原生編譯預存程序的移轉問題](migration-issues-for-natively-compiled-stored-procedures.md)  
   
   

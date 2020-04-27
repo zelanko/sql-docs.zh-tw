@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62936986"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>作業類別目錄屬性及新增作業類別目錄
@@ -26,16 +26,16 @@ ms.locfileid: "62936986"
  **名稱**  
  鍵入新作業類別目錄的名稱。 如果這是作業類別目錄屬性的對話方塊，就會顯示您正在檢視的類別目錄。  
   
- **此類別中的工作**  
+ **此類別目錄中的作業**  
  顯示此類別目錄中所有現有的作業。  
   
  **顯示所有作業**  
  列出所有作業。  
   
- **請**  
+ **選取**  
  勾選或清除它，來變更作業的類別目錄。  
   
- **作業**  
+ **工作 (Job)**  
  顯示作業的名稱。  
   
 ## <a name="see-also"></a>另請參閱  

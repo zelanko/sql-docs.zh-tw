@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM 支援 |Microsoft Docs
+title: FILESTREAM 支援 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046260"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
-  FILESTREAM 提供透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或直接存取 Windows 檔案系統來儲存及存取大型二進位值的方式。 大型二進位值是大於 2 GB 的值。 如需增強型 FILESTREAM 支援的詳細資訊，請參閱[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)。  
+  FILESTREAM 提供透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或直接存取 Windows 檔案系統來儲存及存取大型二進位值的方式。 大型二進位值是大於 2 GB 的值。 如需有關增強型 FILESTREAM 支援的詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)。  
   
  當開啟資料庫連接時，`@@TEXTSIZE` 預設會設定為 -1 (無限制)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63046260"
   
  若要建立 FILESTREAM 資料行，或偵測哪些現有的資料行是 FILESTREAM 資料行`is_filestream` ，您可以使用[sys.databases](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)目錄檢視的資料行。  
   
- 以下是範例：  
+ 以下是一個範例：  
   
 ```  
 -- Create a table with a FILESTREAM column.  

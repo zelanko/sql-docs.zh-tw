@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067554"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>使用更新資料執行時間序列預測 (中繼資料採礦教學課程)
@@ -57,7 +57,7 @@ ms.locfileid: "63067554"
   
     1.  在方格中，按一下 [**來源**] 底下的第一個空白資料列，然後選取 [預測]。  
   
-    2.  在 [**欄位**] 資料行中，選取 [ **** 模型區域] `Model Region`，然後在 [別名] 中輸入。  
+    2.  在 [**欄位**] 資料行中，選取 [ **Alias**模型區域] `Model Region`，然後在 [別名] 中輸入。  
   
 8.  接著加入及編輯預測函數。  
   
@@ -102,6 +102,6 @@ ms.locfileid: "63067554"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 時間序列演算法技術參考](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [時間序列模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

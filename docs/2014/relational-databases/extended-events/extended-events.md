@@ -14,24 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990707"
 ---
 # <a name="extended-events"></a>擴充事件
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件具有可高度擴充及可高度設定的基礎結構，可以讓使用者視需要收集許多或部分的資訊來排除或識別效能問題。  
   
  您可以在 [SQL Server 擴充事件](https://blogs.msdn.com/b/extended_events/)網站上找到有關擴充事件的詳細資訊。  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件的優點  
- 「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。 擴充事件提供了兩個圖形化使用者介面（[**新增會話嚮導]** 和 [**新增會話**]）來建立、修改、顯示及分析您的會話資料。  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件的優點  
+ 「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。 擴充事件提供了兩個圖形化使用者介面 ([新增工作階段精靈]**** 和 [新增工作階段]****)，用以建立、修改、顯示及分析您的工作階段資料。  
   
 ## <a name="extended-events-concepts"></a>擴充事件概念  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件是以現有的概念為建置基礎 (例如事件或事件取用者)、使用 Windows 事件追蹤的概念，並引進新的概念。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件是以現有的概念為建置基礎 (例如事件或事件取用者)、使用 Windows 事件追蹤的概念，並引進新的概念。  
   
  下表描述擴充事件的概念。  
   
@@ -75,7 +73,7 @@ ms.locfileid: "62990707"
   
 -   能夠動態監視使用中處理序，同時對這些處理序有最少的影響。  
   
--   執行的預設系統健康工作階段，而不會有任何顯著的效能影響。 此工作階段會收集系統資料，讓您能夠用來協助排除效能問題。 如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md)。  
+-   執行的預設系統健康工作階段，而不會有任何顯著的效能影響。 此工作階段會收集系統資料，讓您能夠用來協助排除效能問題。 如需詳細資訊，請參閱[使用 System_health 會話](use-the-ssms-xe-profiler.md)。  
   
 ## <a name="extended-events-tasks"></a>擴充事件工作  
  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料定義語言 (DDL) 陳述式、動態管理檢視和函數或目錄檢視時，您可以針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境建立簡單或複雜 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「擴充事件」疑難排解方案。  
@@ -84,7 +82,7 @@ ms.locfileid: "62990707"
 |----------------------|-----------|  
 |使用 **[物件總管]** 管理事件工作階段。|[在物件總管中管理事件工作階段](../../ssms/object/object-explorer.md)|  
 |描述如何建立擴充事件工作階段。|[建立擴充事件工作階段](../../database-engine/create-an-extended-events-session.md)|  
-|描述如何檢視及重新整理目標資料。|[檢視事件工作階段資料](../../database-engine/view-event-session-data.md)|  
+|描述如何檢視及重新整理目標資料。|[查看事件會話資料](../../database-engine/view-event-session-data.md)|  
 |描述如何使用擴充事件工具來建立和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「擴充事件」工作階段。|[擴充事件工具](extended-events-tools.md)|  
 |描述如何改變擴充事件工作階段。|[更改擴充事件工作階段](alter-an-extended-events-session.md)|  
 |描述如何複製或匯出目標資料。|[複製或匯出目標資料](../../database-engine/copy-or-export-target-data.md)|  
@@ -92,7 +90,7 @@ ms.locfileid: "62990707"
 |描述如何取得與事件有關之欄位的資訊。|[取得所有事件的欄位](../../database-engine/get-the-fields-for-all-events.md)|  
 |描述如何在註冊的封裝中查明哪些事件可用。|[檢視已註冊之套件的事件](../../database-engine/view-the-events-for-registered-packages.md)|  
 |描述如何判斷哪些擴充事件目標可在註冊的封裝中使用。|[檢視已註冊之套件的擴充事件目標](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  
-|描述如何檢視同等於每一個 SQL 追蹤事件及其關聯資料行的「擴充事件」事件和動作。|[檢視同等於 SQL 追蹤事件類別的擴充事件](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|描述如何檢視同等於每一個 SQL 追蹤事件及其關聯資料行的「擴充事件」事件和動作。|[檢視同等於 SQL 追蹤事件類別的擴充事件項目](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |描述當您在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 引數時，如何尋找可以設定的參數。|[取得 ADD TARGET 引數的可設定參數](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |描述如何將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段。|[將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |描述如何判斷哪些查詢持有鎖定、查詢的計畫，以及取得鎖定時的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊。|[判斷哪些查詢持有鎖定](determine-which-queries-are-holding-locks.md)|  

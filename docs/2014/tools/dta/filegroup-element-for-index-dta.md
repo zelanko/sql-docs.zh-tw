@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63154602"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的 Filegroup 元素 (DTA)
@@ -39,8 +39,7 @@ ms.locfileid: "63154602"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|
-  `string`，沒有長度限制。|  
+|**資料類型和長度**|`string`，沒有長度限制。|  
 |**預設值**|無。|  
 |**出現次數**|選擇性。 每個 `Index` 元素可以使用這個元素一次。 如果指定了 `PartitionScheme` 元素的 `PartitionColumn` 和 `Index` 元素，就不能使用這個元素。|  
   

@@ -14,37 +14,35 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151097"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server 的 User Settable 物件
-  Microsoft **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的使用者可設定物件，可讓您建立自訂計數器實例。 使用自訂計數器執行個體來監視現有計數器未監視的伺服器層面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫獨有的元件 (例如，記錄的客戶訂單數或產品庫存數)。  
+  Microsoft **的** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件可讓您建立自訂的計數器執行個體。 使用自訂計數器執行個體來監視現有計數器未監視的伺服器層面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫獨有的元件 (例如，記錄的客戶訂單數或產品庫存數)。  
   
- 
-  **User Settable** 物件包含從 **User counter 1** 到 **User counter 10**這 10 個查詢計數器執行個體。 這些計數器分別對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **到** sp_user_counter10 **的**預存程序。 當使用者應用程式執行這些預存程序時，預存程序所設定的數值將顯示於「系統監視器」內。 計數器可監視任何一個整數值，例如計算特定產品在某天內發生的訂單數的預存程序。  
+ **User Settable** 物件包含從 **User counter 1** 到 **User counter 10**這 10 個查詢計數器執行個體。 這些計數器分別對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **到** sp_user_counter10 **的**預存程序。 當使用者應用程式執行這些預存程序時，預存程序所設定的數值將顯示於「系統監視器」內。 計數器可監視任何一個整數值，例如計算特定產品在某天內發生的訂單數的預存程序。  
   
 > [!NOTE]  
 >  「系統監視器」不會自動輪詢使用者計數器預存程序。 必須由使用者應用程式明確執行，才會更新計數器的值。 請利用觸發程序來自動更新計數器的值。 例如，若要建立計數器來監視資料表的資料列數目，請在資料表建立 INSERT 和 DELETE 觸發程序來執行下列陳述式： `SELECT COUNT(*) FROM table`。 每當資料表因 INSERT 或 DELETE 作業而引發觸發程序時，「系統監視器」計數器就會自動更新。  
   
- 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
+ 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 物件。  
   
 |SQL Server User Settable 計數器|描述|  
 |---------------------------------------|-----------------|  
-|**查詢**|
-  **User Settable** 物件包含查詢計數器。 使用者可設定查詢物件內的 **User counter** 。|  
+|**查詢**|**User Settable** 物件包含查詢計數器。 使用者可設定查詢物件內的 **User counter** 。|  
   
  下表描述 **Query** 計數器的 **執行個體** 。  
   
 |Query 計數器執行個體|描述|  
 |-----------------------------|-----------------|  
-|**使用者計數器1**|使用 **sp_user_counter1**來定義。|  
-|**使用者計數器2**|使用 **sp_user_counter2**來定義。|  
-|**使用者計數器3**|使用 **sp_user_counter3**來定義。|  
+|**User counter 1**|使用 **sp_user_counter1**來定義。|  
+|**使用者計數器 2**|使用 **sp_user_counter2**來定義。|  
+|**使用者計數器 3**|使用 **sp_user_counter3**來定義。|  
 |...||  
-|**使用者計數器10**|使用 **sp_user_counter10**來定義。|  
+|**User counter 10**|使用 **sp_user_counter10**來定義。|  
   
  若要使用使用者計數器預存程序，只要從您自己的應用程式執行它們，並且以一個整數參數代表計數器的新數值。 例如若要將 **User counter 1** 設成數值 10，可執行下列的 Transact-SQL 陳述式：  
   
@@ -69,7 +67,7 @@ GO
 >  盡量讓定義於使用者計數器預存程序的查詢越簡單越好。 執行大量排序或雜湊作業的記憶體密集查詢，或是執行大量 I/O 的查詢，都需要很多資源才能執行，所以可能影響效能。  
   
 ## <a name="permissions"></a>權限  
- **sp_user_counter**可供所有使用者使用，但可針對任何查詢計數器加以限制。  
+ **sp_user_counter** 適用於所有使用者，但可以由任何查詢計數器來限制。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  

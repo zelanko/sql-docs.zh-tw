@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62931523"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>第 2 課：建立預測案例 (中繼資料採礦教學課程)
@@ -43,8 +43,7 @@ ms.locfileid: "62931523"
  若要完成本課程中所列的工作（如下所示），您[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]將使用在[第1課：建立中繼資料採礦方案 &#40;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)中建立的資料來源，&#41;。  
   
 > [!WARNING]  
->  
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 範例資料庫中的日期已在此版本中更新。 如果您使用舊版 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，可以在這些步驟後建立模型，但您可能會看到不同的結果。  
+>  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 範例資料庫中的日期已在此版本中更新。 如果您使用舊版 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，可以在這些步驟後建立模型，但您可能會看到不同的結果。  
   
  **建立簡單的預測模型**  
   
@@ -80,11 +79,11 @@ ms.locfileid: "62931523"
   
  第 2 課：預測案例 (中繼資料採礦教學課程)  
   
- [第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
  [第4課：建立時序群集案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [第5課：建立類神經網路和羅吉斯回歸模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [第五課：建立類神經網路和羅吉斯迴歸模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   

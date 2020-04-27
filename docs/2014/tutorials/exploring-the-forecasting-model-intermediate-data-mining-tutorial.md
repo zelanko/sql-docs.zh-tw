@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992255"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>探索預測模型 (中繼資料採礦教學課程)
-  現在您已建立預測採礦模型，您可以使用資料採礦設計師的 [**採礦模型檢視器**] 索引標籤來探索結果。 時間序列檢視器包含兩個索引標籤： [**圖表**] 和 [模型]。 **** [!INCLUDE[msCoName](../includes/msconame-md.md)]  
+  現在您已建立預測採礦模型，您可以使用資料採礦設計師的 [**採礦模型檢視器**] 索引標籤來探索結果。 時間序列檢視器包含兩個索引標籤： [**圖表**] 和 [模型]。 **Model** [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
  此外，您可以對所有模型使用 Microsoft 一般內容樹狀檢視器。 每個檢視針對時間序列模型中的資訊呈現略為不同的面貌。  
   
@@ -28,8 +28,8 @@ ms.locfileid: "62992255"
   
 -   [Microsoft 一般內容樹狀檢視器](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>圖表索引標籤  
- 時間序列檢視器的 [圖表] 索引標籤會以圖形方式顯示每個數列，包括歷程記錄資料和預測。 **** [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列圖形中的每個線條代表由產品、區域和可預測屬性構成的唯一組合。  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>圖表索引標籤  
+ 時間序列檢視器的 [圖表] 索引標籤會以圖形方式顯示每個數列，包括歷程記錄資料和預測。 **Charts** [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列圖形中的每個線條代表由產品、區域和可預測屬性構成的唯一組合。  
   
  檢視器右側的圖例會根據下拉式清單中的選取項目列出時間序列。 您可以選取和清除圖例中的核取方塊，來控制圖形中所顯示的時間序列。  
   
@@ -87,8 +87,8 @@ ms.locfileid: "62992255"
   
  [回到頁首](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>模型索引標籤  
- [ **** 資料採礦設計師] [!INCLUDE[msCoName](../includes/msconame-md.md)]中的時間序列檢視器的 [模型] 索引標籤可讓您以樹狀結構圖表的形式來查看預測模型。  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>模型索引標籤  
+ [ **Model**資料採礦設計師] [!INCLUDE[msCoName](../includes/msconame-md.md)]中的時間序列檢視器的 [模型] 索引標籤可讓您以樹狀結構圖表的形式來查看預測模型。  
   
  首先，請注意，因為資料針對三個不同區域 (Europe、North America 和 Pacific) 中多個產品線 (T1000 等等) 的銷售描述兩個不同的量值 (Amount 和 Quantity)，所以建立的模型實際上包含 24 個不同的樹狀目錄，每個樹狀目錄代表不同區域、產品和可預測屬性之組合的銷售模式模型。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62992255"
   
 -   當時間序列的樹狀圖形有多個分支時，這表示偵測到的時間序列太複雜，無法以單一方程式表示。 相反地，樹狀圖表可能包含多個分支，每個分支都標示了導致樹狀結構*分割*的條件。 當樹狀目錄分割時，每個分支表示不同的時間區段，其中的趨勢可用單一方程式描述。  
   
-     例如，如果您查看圖表圖形，並在9月底開始看到銷售量突然跳躍，並繼續進行年末的假日，您可以切換至**模型**視圖，以查看趨勢變更的確切日期。 樹狀結構中代表「9月前」和「9月之後」的分支會包含不同的公式：一個公式會以數學方式描述分割的銷售趨勢，以及另一個描述9月銷售趨勢的公式年-結束假期。  
+     例如，如果您查看圖表圖形，並在9月底開始看到銷售量突然跳躍，並繼續進行年末的假日，您可以切換至**模型**視圖，以查看趨勢變更的確切日期。 樹狀結構中代表「9月前」和「9月之後」的分支會包含不同的公式：一個公式會以數學方式描述分割的銷售趨勢，另一個公式則描述「年9月」假期的銷售趨勢。  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>瀏覽時間序列模型的決策樹  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992255"
   
  [回到頁首](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>選擇性一般內容樹狀檢視器  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>選擇性一般內容樹狀檢視器  
  除了時間序列的自訂檢視器之外， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]還提供**MicrosoftGeneric 內容樹狀檢視器**，以用於所有資料採礦模型。 此檢視器具備一些優點：  
   
 -   **Microsoft 時間序列檢視器**：此視圖會合並這兩種演算法的結果。 雖然您可以分別檢視每個序列，但無法判斷各演算法結果如何結合。 此外，在此檢視中，工具提示和採礦圖例只顯示最重要的統計資料。  

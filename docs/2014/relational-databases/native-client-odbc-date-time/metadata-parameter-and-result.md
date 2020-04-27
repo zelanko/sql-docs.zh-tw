@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032327"
 ---
 # <a name="parameter-and-result-metadata"></a>參數和結果中繼資料
@@ -37,21 +37,18 @@ ms.locfileid: "63032327"
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_TYPE|SQL_TYPE_DATE|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_DESC_TYPE_NAME|`date`|`time`|
-  `smalldatetime` (在 IRD 中)、`datetime2` (在 IPD 中)|
-  `datetime` (在 IRD 中)、`datetime2` (在 IPD 中)|`datetime2`|datetimeoffset|  
+|SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime` (在 IRD 中)、`datetime2` (在 IPD 中)|`datetime` (在 IRD 中)、`datetime2` (在 IPD 中)|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
+|SQL_CA_SS_SERVER_TYPE|不適用|不適用|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|不適用|  
   
  有時候，數值範圍會存在不連續的情況。 例如，8,10..16 中便遺漏了 9。 這是當小數有效位數大於零時增加的小數點所導致。  
   
- 
-  `datetime2` 會傳回成為 `smalldatetime` 和 `datetime` 的類型名稱，因為此驅動程式會使用這個類型當做將所有 `SQL_TYPE_TIMESTAMP` 值傳送至伺服器的一般類型。  
+ `datetime2` 會傳回成為 `smalldatetime` 和 `datetime` 的類型名稱，因為此驅動程式會使用這個類型當做將所有 `SQL_TYPE_TIMESTAMP` 值傳送至伺服器的一般類型。  
   
  SQL_CA_SS_VARIANT_SQL_TYPE 是新的描述項欄位。 這個欄位會加入至 IRD 和 IPD，讓應用程式指定與 `sqlvariant` (SQL_SSVARIANT) 資料行和參數相關聯的數值類型。  
   
- SQL_CA_SS_SERVER_TYPE 是新的僅限 IPD 欄位，可讓應用程式控制繫結成 SQL_TYPE_TYPETIMESTAMP (或繫結成具有 SQL_C_TYPE_TIMESTAMP 之 C 類型的 SQL_SS_VARIANT) 的參數值如何傳送至伺服器。 如果在呼叫 SQLExecute 或 SQLExecDirect 時，SQL_DESC_CONCISE_TYPE 是 SQL_TYPE_TIMESTAMP （或為 SQL_SS_VARIANT，而 C 類型為 SQL_C_TYPE_TIMESTAMP），則 SQL_CA_SS_SERVER_TYPE 的值會決定參數值的表格式資料流程（TDS）類型。，如下所示：  
+ SQL_CA_SS_SERVER_TYPE 是新的僅限 IPD 欄位，可讓應用程式控制繫結成 SQL_TYPE_TYPETIMESTAMP (或繫結成具有 SQL_C_TYPE_TIMESTAMP 之 C 類型的 SQL_SS_VARIANT) 的參數值如何傳送至伺服器。 如果在呼叫 SQLExecute 或 SQLExecDirect 時，SQL_DESC_CONCISE_TYPE 是 SQL_TYPE_TIMESTAMP （或為 SQL_SS_VARIANT，而 C 類型為 SQL_C_TYPE_TIMESTAMP），則 SQL_CA_SS_SERVER_TYPE 的值會決定參數值的表格式資料流程（TDS）類型，如下所示：  
   
 |SQL_CA_SS_SERVER_TYPE 的值|SQL_DESC_PRECISION 的有效值|SQL_DESC_LENGTH 的有效值|TDS 類型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  

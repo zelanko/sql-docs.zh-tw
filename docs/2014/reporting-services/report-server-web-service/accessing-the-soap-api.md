@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012250"
 ---
 # <a name="accessing-the-soap-api"></a>存取 SOAP API
@@ -34,14 +34,12 @@ ms.locfileid: "63012250"
 ## <a name="referencing-the-reporting-services-wsdl"></a>參考 Reporting Services WSDL  
  若要順利呼叫 Web 服務，您必須知道如何存取服務，服務支援哪些作業、服務需要哪些參數以及服務會傳回哪些內容。 WSDL 是以電腦可讀取或處理的 XML 文件提供這項資訊。  
   
- 報表伺服器 Web 服務是以三個不同的端點公開。 每個端點都有不同的 WSDL 檔案名稱。 
-  <xref:ReportService2010> 端點包含以原生模式或 SharePoint 整合模式在報表伺服器上管理物件的方法。 這個端點的 WSDL 是透過 `ReportService2010.asmx?wsdl.` 來存取。  
+ 報表伺服器 Web 服務是以三個不同的端點公開。 每個端點都有不同的 WSDL 檔案名稱。 <xref:ReportService2010> 端點包含以原生模式或 SharePoint 整合模式在報表伺服器上管理物件的方法。 這個端點的 WSDL 是透過 `ReportService2010.asmx?wsdl.` 來存取。  
   
 > [!NOTE]  
 >  <xref:ReportService2005> 和 <xref:ReportService2006> 端點是在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中被取代。 <xref:ReportService2010> 端點包含這兩個端點的功能，並包含額外的管理功能。  
   
--   
-  <xref:ReportExecution2005> 端點可讓開發人員以程式設計方式處理及轉譯報表伺服器中的報表。 這個端點的 WSDL 是透過 `ReportExecution2005.asmx?wsdl` 來存取。  
+-   <xref:ReportExecution2005> 端點可讓開發人員以程式設計方式處理及轉譯報表伺服器中的報表。 這個端點的 WSDL 是透過 `ReportExecution2005.asmx?wsdl` 來存取。  
   
  WSDL 可供支援 SOAP 和 Web 服務的開發工具組使用，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK。  
   

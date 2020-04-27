@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046763"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件類別
@@ -32,7 +32,7 @@ ms.locfileid: "63046763"
 |BinaryData|`image`|這是一個二進位值，會隨著追蹤所擷取的事件類別而不同。|2|是|  
 |ClientProcessID|`int`|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
 |CPU|`int`|事件使用的 CPU 時間量。 自 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始以毫秒為單位。 舊版中的單位是毫秒。|18|是|  
-|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在追蹤中捕捉到 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|`nvarchar`|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |Duration|`bigint`|事件花費的時間量。 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始以毫秒為單位。 舊版中的單位是毫秒。|13|是|  
 |EndTime|`datetime`|遠端程序呼叫的結束時間。|15|是|  

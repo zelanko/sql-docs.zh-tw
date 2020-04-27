@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151205"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -64,10 +64,9 @@ ms.locfileid: "63151205"
  一種易用的介面，可用以指定工作負載，以及選取各種微調選項。  
   
  **dta**實用  
- Database Engine Tuning Advisor 的命令提示字元版本。 
-  **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
+ Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
   
- 工作負載  
+ workload  
  Transact-SQL 指令碼檔案、追蹤檔案或追蹤資料表，內含代表您要微調之資料庫的工作負載。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，您可以將計畫快取指定為工作負載。  
   
  XML 輸入檔  

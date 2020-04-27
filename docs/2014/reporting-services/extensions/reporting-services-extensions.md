@@ -17,18 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985769"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 延伸模組
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模組化架構是針對擴充性所設計。 現在可以使用 Managed 程式碼 API，這樣您就可以輕鬆地開發、安裝和管理許多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件取用的延伸模組。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 建立私人或共用組件，並新增新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能以滿足不斷成長的商務需求。  
   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模組化架構是針對擴充性所設計。 現在可以使用 Managed 程式碼 API，這樣您就可以輕鬆地開發、安裝和管理許多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件取用的延伸模組。 您可以使用建立私用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]或共用元件，並加入[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]新的功能以滿足不斷演進的商務需求。  
-  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 獨特的擴充性架構可讓開發人員擴充產品及其元件的特定功能。 目前，有許多方式可用來擴充 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的資料處理功能。 資料處理 API 包括熟悉的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者建構與慣例，可讓開發人員在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中建立其他的資料處理延伸模組。 這些資料處理延伸模組會將功能加入報表伺服器與報表設計師，以將自訂資料緊密整合到報表中。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 獨特的擴充性架構可讓開發人員擴充產品及其元件的特定功能。 目前，有許多方式可用來擴充 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的資料處理功能。 資料處理 API 包括熟悉的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者建構與慣例，可讓開發人員在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中建立其他的資料處理延伸模組。 這些資料處理延伸模組會將功能加入報表伺服器與報表設計師，以將自訂資料緊密整合到報表中。  
   
  傳遞延伸模組為另一個支援的延伸模組。 傳遞 API 會完整整合至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 架構，以便在傳送報表通知給使用者時使用廣泛的傳遞機制。 您可以擴充報表伺服器以提供自訂傳遞給使用者，也能夠擴充報表管理員的訂閱管理頁面，以啟用使用自訂傳遞延伸模組的訂閱。  
   

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070876"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 課：瀏覽 Bike Buyer 採礦模型
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 課：瀏覽自行車買主採礦模型
   在這一課，您將使用[SELECT （DMX）](/sql/dmx/select-dmx)語句來流覽決策樹中的內容，以及在[第2課：將採礦模型加入至預測性採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)中所建立的叢集化採礦模型。  
   
  包含在採礦模型中的資料行不是採礦結構所定義的資料行，而是描述該演算法所發現的趨勢和模式的一組特定資料行。 DMSCHEMA_MINING_MODEL_CONTENT 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)架構資料列集中會描述這些採礦模型資料行。 例如，內容結構描述資料列集的 MODEL_NAME 資料行包含採礦模型的名稱。 若為群集採礦模型，NODE_CAPTION 資料行包含每一個群集的名稱，NODE_DESCRIPTION 資料行包含每一個群集之特性的描述。 您可以使用 [從\<模型選取]> 來流覽這些資料行。DMX 中的 CONTENT 語句。 您也可以使用此陳述式來探索用來建立採礦模型的資料。 您必須在採礦結構中啟用鑽研，才能使用此陳述式。 如需語句的詳細資訊，請參閱[SELECT FROM &#60;model&#62;。&#40;DMX&#41;的案例](/sql/dmx/select-from-model-content-dmx)。  
@@ -79,7 +79,7 @@ WHERE NODE_SUPPORT > 100
     <select list>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     *  
@@ -93,7 +93,7 @@ WHERE NODE_SUPPORT > 100
     [<mining model>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Clustering]  
@@ -154,7 +154,7 @@ WHERE IsInNode('<node id>')
     <select list>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     *  
@@ -168,7 +168,7 @@ WHERE IsInNode('<node id>')
     [<mining model>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Decision Tree]  
@@ -221,7 +221,7 @@ SELECT DISTINCT [<column>]
     [<column,name>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Bike Buyer]  
@@ -233,7 +233,7 @@ SELECT DISTINCT [<column>]
     [<mining model>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Decision Tree]  

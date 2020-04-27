@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066330"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>比較用來預測模型的預測 (中繼資料採礦教學課程)
@@ -34,7 +34,7 @@ ms.locfileid: "63066330"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a>在加入資料之後比較原始結果與結果  
+##  <a name="comparing-the-original-results-with-results-after-adding-data"></a><a name="bkmk_EXTEND"></a>在加入資料之後比較原始結果與結果  
  讓我們查看太平洋地區 M200 產品線的資料，以瞭解如何以新資料更新模型會影響結果。 請記得原始資料數列在 2004 年 6 月結束，而我們取得 7 月、8 月和 9 月的新資料。  
   
 -   第一個資料行顯示加入的新資料。  
@@ -48,15 +48,15 @@ ms.locfileid: "63066330"
 |7-25-2008|**65**|32|**65**|  
 |8-25-2008|**54**|37|**54**|  
 |9-25-2008|**61**|32|**61**|  
-|10-25-2008|沒有資料|36|32|  
-|11-25-2008|沒有資料|31|41|  
-|12-25-2008|沒有資料|34|32|  
+|10-25-2008|無資料|36|32|  
+|11-25-2008|無資料|31|41|  
+|12-25-2008|無資料|34|32|  
   
  您將會注意到使用擴充資料 (此處以粗體顯示) 的預測完全重複實際資料點。 重複是預設行為。 只要有可用的實際資料點，預測查詢就會傳回實際值，只在新的實際資料點已經用完後才會輸出新的預測值。  
   
  一般而言，相較於模型資料開頭的資料，演算法對新資料的變更賦予較重的加權。 不過，在此情況下，新銷售數字比起上一個週期增幅僅為 20-30%，因此對預計銷售造成些微的上揚，在此之後銷售預測轉而向下，重複加入新資料之前月份的趨勢。  
   
-##  <a name="bkmk_REPLACE"></a>比較原始和交叉預測結果  
+##  <a name="comparing-the-original-and-cross-prediction-results"></a><a name="bkmk_REPLACE"></a>比較原始和交叉預測結果  
  請記得，原始採礦模型揭露地區之間和產品線之間有很大的差異。 例如，M200 模型的銷售非常強，而 T1000 模型的銷售則在所有地區都很低。 此外，有些數列沒有太多資料。 數列不完全，表示它們沒有相同的起點。  
   
  ![序列預測 M200 與 T1000 數量](../../2014/tutorials/media/6series-defaultforecasting.gif "序列預測 M200 與 T1000 數量")  

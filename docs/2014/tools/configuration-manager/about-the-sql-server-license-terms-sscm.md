@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035317"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>關於 SQL Server 授權條款 (SSCM)
@@ -24,17 +24,13 @@ ms.locfileid: "63035317"
   
  授權條款檔案名稱會指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言版本。 例如：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer (英文版) 適用的 License_DEV_ENU.txt。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer (英文版) 適用的 License_DEV_ENU.txt。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard (義大利文版) 適用的 License_STD_ITA.txt。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard (義大利文版) 適用的 License_STD_ITA.txt。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor (日文版) 適用的 License_UA_JPN.txt。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor (日文版) 適用的 License_UA_JPN.txt。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (英文版) 適用的 License_SQLNCLI_ENU.txt。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (英文版) 適用的 License_SQLNCLI_ENU.txt。  
   
 -   SQLXML (韓文版) 適用的 License_SQLXML4_KOR.txt。  
   

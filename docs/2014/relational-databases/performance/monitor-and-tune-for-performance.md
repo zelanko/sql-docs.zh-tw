@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150710"
 ---
 # <a name="monitor-and-tune-for-performance"></a>效能的監視與微調
@@ -73,7 +73,7 @@ ms.locfileid: "63150710"
 |[找出瓶頸](identify-bottlenecks.md)|描述如何監視和追蹤伺服器效能，以找出瓶頸。|  
 |[伺服器效能與活動監視](server-performance-and-activity-monitoring.md)|描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 效能和活動監視工具。|  
 |[顯示並儲存執行計畫](display-and-save-execution-plans.md)|描述如何顯示執行計畫，以及如何將執行計畫儲存至 XML 格式的檔案。|  
-|[Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)|查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並加以保留供您檢閱。|  
+|[使用查詢存放區監視效能](monitoring-performance-by-using-the-query-store.md)|查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並加以保留供您檢閱。|  
   
 ## <a name="see-also"></a>另請參閱  
  [跨企業進行自動化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071804"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>建立原生編譯的預存程序
@@ -55,12 +55,11 @@ go
   
 |選項|描述|  
 |------------|-----------------|  
-|`SCHEMABINDING`|原生編譯的預存程序必須繫結至其所參考之物件的結構描述。 這表示，此程序所參考的資料表將無法卸除。 程式中參考的資料表必須包含其架構名稱，而且查詢中\*不允許使用萬用字元（）。 只有這個 `SCHEMABINDING` 版本中的原生編譯預存程序才支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
+|`SCHEMABINDING`|原生編譯的預存程序必須繫結至其所參考之物件的結構描述。 這表示，此程序所參考的資料表將無法卸除。 程式中參考的資料表必須包含其架構名稱，而且查詢中\*不允許使用萬用字元（）。 只有這個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本中的原生編譯預存程序才支援 `SCHEMABINDING`。|  
 |`EXECUTE AS`|原生編譯的預存程序不支援 `EXECUTE AS CALLER` (預設執行內容)。 因此，需要指定執行內容。 支援選項`EXECUTE AS OWNER`、 `EXECUTE AS`*使用者*和`EXECUTE AS SELF` 。|  
 |`BEGIN ATOMIC`|原生編譯的預存程序主體必須剛好由一個不可部分完成的區塊所組成。 不可部分完成的區塊保證會以不可部分完成的方式執行預存程序。 如果此程序在使用中交易的內容之外叫用，它將會開始新的交易，該交易會在不可部分完成的區塊結尾認可。 原生編譯預存程序中不可部分完成的區塊有兩個必要選項：<br /><br /> `TRANSACTION ISOLATION LEVEL`. 如需支援的隔離等級，請參閱[交易隔離等級](../../database-engine/transaction-isolation-levels.md)。<br /><br /> `LANGUAGE`. 預存程序的語言必須設定為其中一個可用語言或語言別名。|  
   
- 
-  `EXECUTE AS` 和 Windows 登入可能會因為透過 `EXECUTE AS`執行模擬而發生錯誤。 如果使用者帳戶使用 Windows 驗證，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所使用的服務帳戶與 Windows 登入的網域之間必須完全信任。 如果沒有完全信任，則在建立原生編譯的預存程式時，會傳回下列錯誤訊息： Msg 15404，無法取得有關 Windows NT 群組/使用者 ' username ' 的資訊，錯誤碼0x5。  
+ `EXECUTE AS` 和 Windows 登入可能會因為透過 `EXECUTE AS`執行模擬而發生錯誤。 如果使用者帳戶使用 Windows 驗證，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所使用的服務帳戶與 Windows 登入的網域之間必須完全信任。 如果沒有完全信任，則在建立原生編譯的預存程式時，會傳回下列錯誤訊息： Msg 15404，無法取得有關 Windows NT 群組/使用者 ' username ' 的資訊，錯誤碼0x5。  
   
  如果要解決此錯誤，請使用下列動作之一：  
   
@@ -111,6 +110,6 @@ go
  這個方法的優點是應用程式不會離線。 不過，需要執行更多工作來維護參考，並確認參考一律指向最新版的預存程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](natively-compiled-stored-procedures.md)  
+ [原生編譯的預存程式](natively-compiled-stored-procedures.md)  
   
   

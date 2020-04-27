@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960761"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
@@ -30,13 +30,13 @@ ms.locfileid: "62960761"
 >  這些教學課程所示範的大部分工作都可以透過程式設計的方式來執行。 如需詳細資訊，請參閱《[開發人員指南》 &#40;Replication&#41;](concepts/replication-developer-documentation.md)。  
   
 ## <a name="replication-tutorials"></a>複寫教學課程  
- [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)  
+ [準備用於複寫的伺服器](tutorial-preparing-the-server-for-replication.md)  
  了解如何準備伺服器，以便使用最低權限執行複寫。 您必須先完成本教學課程，才能進行其他複寫教學課程。  
   
  [在連續連接的伺服器之間複寫資料](tutorial-replicating-data-between-continuously-connected-servers.md)  
  了解如何使用異動複寫，在完全連接的伺服器之間複寫資料。  
   
- [使用行動用戶端複寫資料](tutorial-replicating-data-with-mobile-clients.md)  
+ [利用行動用戶端複寫資料](tutorial-replicating-data-with-mobile-clients.md)  
  了解如何使用合併式複寫，在伺服器與一個或多個只是偶而連接的用戶端之間交換資料。  
   
 ## <a name="see-also"></a>另請參閱  

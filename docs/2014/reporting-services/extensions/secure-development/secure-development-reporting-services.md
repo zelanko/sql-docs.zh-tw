@@ -15,15 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ba284b9013c5da6b03cce06ec72deccb045cfad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62987932"
 ---
 # <a name="secure-development-reporting-services"></a>安全開發 (Reporting Services)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供健全的安全性系統，可在嚴格限制、系統管理員定義的安全性內容中執行程式[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]代碼。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性系統，也稱為程式碼存取安全性 (或是證據型安全性)。 在程式碼存取安全性之下，系統會信任使用者存取資源，但是如果使用者執行的程式碼未獲得信任，該資源的存取將會遭到拒絕。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了強固的安全性系統，可在嚴格控制、管理員定義的安全性環境中執行程式碼。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性系統，也稱為程式碼存取安全性 (或是證據型安全性)。 在程式碼存取安全性之下，系統會信任使用者存取資源，但是如果使用者執行的程式碼未獲得信任，該資源的存取將會遭到拒絕。  
   
  根據程式碼的安全性 (相對於特定使用者) 可允許針對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 開發的自訂組件或資料、傳遞、轉譯和安全性延伸模組來表示安全性。 您的延伸模組程式碼可由任意數目的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用者來執行，這些使用者在開發時間都是未知的。 您所開發的自訂組件或延伸模組需要 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的特定安全性原則。 這些安全性原則會表示為 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的類型。 如需有關程式碼存取安全性的詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 文件集中的「程式碼存取安全性」。  
   

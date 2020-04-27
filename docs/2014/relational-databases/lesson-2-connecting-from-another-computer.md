@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144797"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連線
@@ -32,7 +32,7 @@ ms.locfileid: "63144797"
   
 -   [使用 SQL Server Browser 服務來連接](#browser)  
   
-##  <a name="protocols"></a>啟用通訊協定  
+##  <a name="enabling-protocols"></a><a name="protocols"></a>啟用通訊協定  
  為了加強安全性， [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]、Developer 和 Evaluation 的安裝只包含有限的網路連線功能。 同一部電腦上執行的工具可以建立 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的連接，但無法從其他電腦中建立。 如果您打算在 [!INCLUDE[ssDE](../includes/ssde-md.md)]所在的同一部電腦上進行開發工作，便不需要另外啟用其他通訊協定。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 將會使用 Shared Memory 通訊協定連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 這個通訊協定已經啟用。  
   
  如果您打算從其他電腦連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，您必須啟用通訊協定，例如 TCP/IP。  
@@ -53,9 +53,8 @@ ms.locfileid: "63144797"
     > [!NOTE]  
     >  變更網路通訊協定之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。不過，此步驟會在下一項工作中完成。  
   
-##  <a name="port"></a>設定固定通訊埠  
- 為了加強安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 都會開啟 Windows 防火牆。 若要從另一部電腦連接到這個執行個體，您必須在防火牆中開啟通訊埠。 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體會接聽通訊埠 1433，因此，您不需要設定固定通訊埠。 但是，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 在內的具名執行個體則會接聽動態通訊埠。 在防火牆中開啟通訊埠之前，您必須先設定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 接聽特定的通訊埠 (稱為固定通訊埠或靜態通訊埠)，否則每次 [!INCLUDE[ssDE](../includes/ssde-md.md)] 啟動時可能會接聽不同的通訊埠。 如需防火牆、預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+##  <a name="configuring-a-fixed-port"></a><a name="port"></a>設定固定通訊埠  
+ 為了加強安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 都會開啟 Windows 防火牆。 若要從另一部電腦連接到這個執行個體，您必須在防火牆中開啟通訊埠。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體會接聽通訊埠 1433，因此，您不需要設定固定通訊埠。 但是，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 在內的具名執行個體則會接聽動態通訊埠。 在防火牆中開啟通訊埠之前，您必須先設定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 接聽特定的通訊埠 (稱為固定通訊埠或靜態通訊埠)，否則每次 [!INCLUDE[ssDE](../includes/ssde-md.md)] 啟動時可能會接聽不同的通訊埠。 如需防火牆、預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!NOTE]  
 >  通訊埠編號指派是由網際網路指派的號碼授權單位所管理， [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)列于。埠號碼應從數位49152到65535指派。  
@@ -72,21 +71,21 @@ ms.locfileid: "63144797"
   
 5.  按一下 [確定]**** 關閉對話方塊，再於提示您必須重新啟動服務的警告中按一下 [確定]****。  
   
-6.  在左窗格中，按一下 **[SQL Server 服務]** 。  
+6.  在左窗格中，按一下 **[SQL Server 服務]**。  
   
 7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]****。 當[!INCLUDE[ssDE](../includes/ssde-md.md)]重新開機時，它會接聽埠`49172`。  
   
-##  <a name="firewall"></a>在防火牆中開啟埠  
- 防火牆系統有助於防止未經授權存取電腦資源。 若要在防火牆開啟時從另一部電腦連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您必須在防火牆中開啟通訊埠。  
+##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>在防火牆中開啟埠  
+ 防火牆系統有助於預防未經授權存取電腦資源。 若要在防火牆開啟時從另一部電腦連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您必須在防火牆中開啟通訊埠。  
   
 > [!IMPORTANT]  
->  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 在開啟通訊埠之前，請先確定您已經了解防火牆系統。 如需詳細資訊，請參閱[SQL Server 安裝的安全性考慮](../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
+>  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 在開啟通訊埠之前，請先確定您已經了解防火牆系統。 如需詳細資訊，請參閱＜ [Security Considerations for a SQL Server Installation](../sql-server/install/security-considerations-for-a-sql-server-installation.md)＞。  
   
  在設定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 使用固定通訊埠之後，請遵循下列指示，在「Windows 防火牆」中開啟該通訊埠 (您不需要為預設執行個體設定固定通訊埠，因為它已經固定在 TCP 通訊埠 1433)。  
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access-windows-7"></a>若要在 Windows 防火牆中開啟通訊埠供 TCP 存取 (Windows 7)  
   
-1.  在 [**開始**] 功能表上，按一下 [**執行**]，輸入**WF**，然後按一下 **[確定]**。  
+1.  在 **[開始]** 功能表上、按一下 **[執行]**，輸入 **WF.msc**，然後按一下 **[確定]**。  
   
 2.  在 [具有進階安全性的 Windows 防火牆]**** 的左窗格中，以滑鼠右鍵按一下 [輸入規則]****，再從動作窗格按一下 [新增規則]****。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "63144797"
   
  如需防火牆設定 (包括 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]的指示) 的詳細資訊，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。 如需預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
-##  <a name="otherComp"></a>從另一部電腦連接到資料庫引擎  
+##  <a name="connecting-to-the-database-engine-from-another-computer"></a><a name="otherComp"></a>從另一部電腦連接到資料庫引擎  
  既然您已經設定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在固定通訊埠接聽，而且已在防火牆開啟該通訊埠，您就可以從另一部電腦連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務在伺服器電腦上執行，而且防火牆已開啟 UDP 通訊埠 1434 時，可以使用電腦名稱和執行個體名稱來建立連接。 為了加強安全性，此範例不使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務。  
@@ -120,15 +119,14 @@ ms.locfileid: "63144797"
   
 4.  在 [**驗證**] 方塊中，確認 [**視窗驗證]**，然後按一下 **[連接**]。  
   
-##  <a name="browser"></a>使用 SQL Server Browser 服務連接  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務會接聽 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資源的內容要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的資訊。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務執行時，使用者可以提供電腦名稱和執行個體名稱 (而非電腦名稱和通訊埠編號) 來連接到具名執行個體。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 接收未驗證的 UDP 要求，所以在安裝期間不一定都開啟著。 如需服務的描述及其何時開啟的說明，請參閱 [SQL Server Browser 服務 &#40;Database Engine 和 SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。  
+##  <a name="connecting-using-the-sql-server-browser-service"></a><a name="browser"></a>使用 SQL Server Browser 服務連接  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務會接聽 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資源的內容要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的資訊。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務執行時，使用者可以提供電腦名稱和執行個體名稱 (而非電腦名稱和通訊埠編號) 來連接到具名執行個體。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 接收未驗證的 UDP 要求，所以在安裝期間不一定都開啟著。 如需服務的描述及其何時開啟的說明，請參閱 [SQL Server Browser 服務 &#40;Database Engine 和 SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。  
   
  若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser，您必須遵循與上述相同的步驟，並開啟防火牆中的 UDP 通訊埠 1434。  
   
  以上總結這個簡短的基本連接教學課程。  
   
 ## <a name="return-to-tutorials-portal"></a>返回教學課程入口網站  
- [教學課程：Database Engine 使用者入門](tutorial-getting-started-with-the-database-engine.md)  
+ [教學課程：資料庫引擎使用者入門](tutorial-getting-started-with-the-database-engine.md)  
   
   

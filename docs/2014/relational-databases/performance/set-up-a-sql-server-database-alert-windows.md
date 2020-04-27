@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3342af1de84e922ce63848c8fdffe5aa30ec309a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150493"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>設定 SQL Server 資料庫警示 (Windows)
@@ -26,7 +26,7 @@ ms.locfileid: "63150493"
   
 ### <a name="to-set-up-a-sql-server-database-alert"></a>若要設定 SQL Server 資料庫警示  
   
-1.  在 [效能] 視窗的瀏覽樹狀目錄中，展開 [效能記錄檔及警示]****。  
+1.  在 [效能] 視窗的巡覽樹狀目錄上，展開 [效能記錄檔及警示]****。  
   
 2.  以滑鼠右鍵按一下 [警示]****，然後按一下 [New Alert Settings (新增警示設定)]****。  
   
