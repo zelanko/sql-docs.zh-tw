@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cda3117df524ba90f322bbb99d6db98ee989ab71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870627"
 ---
 # <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
@@ -33,8 +33,7 @@ ms.locfileid: "62870627"
 |訊息文字|無法建立計畫指南 '%.\*ls'，因為 `@plan_handle` 指定的批次或模組中未包含適用於計畫指南的陳述式。 請為 `@plan_handle` 指定其他值。|  
   
 ## <a name="explanation"></a>說明  
- 
-  `@plan_handle` 指定的批次或模組中未包含適用於計畫指南的陳述式。  
+ `@plan_handle` 指定的批次或模組中未包含適用於計畫指南的陳述式。  
   
 ## <a name="user-action"></a>使用者動作  
  請為 `@plan_handle` 指定其他值。  

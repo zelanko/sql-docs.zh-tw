@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62855712"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>第 2 課：將採礦模型加入時間序列採礦結構中
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>第 2 課：將採礦模型新增至時間序列採礦結構
   在這一課，您會將新的採礦模型加入至您剛在[第1課：建立時間序列](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)的「採礦模型」和「採礦結構」中所建立的「採礦結構」。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 陳述式  
@@ -105,7 +105,7 @@ WITH DRILLTHROUGH
     <mining structure name>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Forecasting_MIXED_Structure]  
@@ -117,7 +117,7 @@ WITH DRILLTHROUGH
     <mining model name>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     Forecasting_ARIMA  
@@ -129,7 +129,7 @@ WITH DRILLTHROUGH
     <key columns>,  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [ReportingDate],  
@@ -144,7 +144,7 @@ WITH DRILLTHROUGH
     <mining model columns>  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     ([Quantity] PREDICT,  
@@ -159,7 +159,7 @@ WITH DRILLTHROUGH
     [WITH DRILLTHROUGH]  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     USING Microsoft_Time_Series (AUTO_DETECT_PERIODICITY = .08, FORECAST_METHOD = 'ARIMA')  

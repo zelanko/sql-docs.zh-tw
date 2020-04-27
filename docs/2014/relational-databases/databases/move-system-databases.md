@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871535"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
@@ -50,7 +50,7 @@ ms.locfileid: "62871535"
 > [!IMPORTANT]  
 >  如果您移動了系統資料庫，接著重建 master 資料庫，就必須再次移動系統資料庫，因為重建作業會將所有系統資料庫安裝到預設的位置。  
   
-##  <a name="Intro"></a>**本主題中的**  
+##  <a name="in-this-topic"></a><a name="Intro"></a> **本主題內容**  
   
 -   [規劃的重新配置和排程的磁片維護程式](#Planned)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62871535"
   
 -   [範例](#Examples)  
   
-##  <a name="Planned"></a>規劃的重新配置和排程的磁片維護程式  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 計畫的重新放置與排程的磁碟維謢程序  
  若要以計畫的重新放置或排程的維護作業來移動系統資料庫資料或記錄檔，請遵照下列步驟執行。 此程序適用於 master 和 Resource 資料庫以外的所有系統資料庫。  
   
 1.  對於要移動的每個檔案執行下列陳述式。  
@@ -101,7 +101,7 @@ ms.locfileid: "62871535"
   
 2.  透過傳送測試郵件，確認 Database Mail 是否可正常運作。  
   
-##  <a name="Failure"></a>失敗修復程式  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> 失敗復原程序  
  如果因為硬體失敗必須移動檔案，請遵照下列步驟將檔案重新放置到新位置。 此程序適用於 master 和 Resource 資料庫以外的所有系統資料庫。  
   
 > [!IMPORTANT]  
@@ -149,14 +149,14 @@ ms.locfileid: "62871535"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a>移動 master 資料庫  
+##  <a name="moving-the-master-database"></a><a name="master"></a> 移動 master 資料庫  
  若要移動 master 資料庫，請遵循下列步驟。  
   
 1.  從 **[開始]** 功能表上，依序指向 **[程式集]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
 2.  在 **[SQL Server 服務]** 節點中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體 (例如 **[SQL Server (MSSQLSERVER)]**)，然後選擇 **[屬性]**。  
   
-3.  在 [SQL Server (<執行個體名稱>) 屬性]********** 對話方塊中，按一下 [啟動參數]**** 索引標籤。  
+3.  在 [SQL Server (*****) 屬性]***** 對話方塊中，按一下 [啟動參數]**** 索引標籤。  
   
 4.  在 [**現有參數**] 方塊中，選取-d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62871535"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**，即可停止 ** 的執行個體。  
+6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止]****，即可停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
 7.  將 master.mdf 和 mastlog.ldf 檔移至新位置。  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871535"
     GO  
     ```  
   
-##  <a name="Resource"></a>移動 Resource 資料庫  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a>移動 Resource 資料庫  
  Resource 資料庫的位置是 \<*磁碟機*>:\Program Files\Microsoft SQL Server\MSSQL\<版本>.\<*執行個體名稱*>\MSSQL\Binn\\。 此資料庫無法移動。  
   
-##  <a name="Follow"></a>後續操作：移動所有系統資料庫之後  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 後續工作：移動所有系統資料庫之後  
  如果您將所有系統資料庫移動至新的磁碟機或磁碟區，或是移動至使用不同磁碟機代號的另一部伺服器，請進行下列更新。  
   
 -   變更 SQL Server Agent 記錄路徑。 如果您未更新此路徑，SQL Server Agent 將無法啟動。  
@@ -221,7 +221,7 @@ ms.locfileid: "62871535"
   
 4.  停止 SQL Server 服務然後啟動它來完成變更。  
   
-##  <a name="Examples"></a> 範例  
+##  <a name="examples"></a><a name="Examples"></a> 範例  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. 移動 tempdb 資料庫  
  下列範例會以計畫的重新放置，將 `tempdb` 資料和記錄檔移到新位置。  
@@ -268,11 +268,11 @@ ms.locfileid: "62871535"
  [tempdb 資料庫](tempdb-database.md)   
  [master 資料庫](master-database.md)   
  [msdb 資料庫](msdb-database.md)   
- [Model 資料庫](model-database.md)   
+ [model 資料庫](model-database.md)   
  [移動使用者資料庫](move-user-databases.md)   
  [移動資料庫檔案](move-database-files.md)   
  [啟動、停止、暫停、繼續、重新開機資料庫引擎、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [重建系統資料庫](system-databases.md)  
   
   

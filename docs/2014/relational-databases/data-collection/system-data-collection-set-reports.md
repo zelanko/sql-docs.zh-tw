@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873406"
 ---
 # <a name="system-data-collection-set-reports"></a>系統資料收集組報表
@@ -38,7 +38,7 @@ ms.locfileid: "62873406"
   
  您可以使用這些報表來取得監視系統容量和疑難排解系統效能的資訊。  
   
-##  <a name="Disk"></a> 磁碟使用量摘要報表  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> 磁碟使用量摘要報表  
  [磁碟使用量摘要] 報表包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中所有資料庫之磁碟空間使用量的資料。 這些報表中提供的資料是使用 [磁碟使用量] 收集組所取得，而此收集組會使用一般 T-SQL 查詢收集器類型。  
   
  您可以從 [物件總管] 中存取 [磁碟使用量摘要] 報表。 若要檢視此報表，請展開 [管理]  資料夾、以滑鼠右鍵按一下 [資料收集]  、依序指向 [報表]  和 [管理資料倉儲]  ，然後按一下 [磁碟使用量摘要]  。 如需詳細資訊，請參閱 [檢視收集組報表 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)執行個體中所有資料庫之磁碟空間使用量的資料。  
@@ -71,7 +71,7 @@ ms.locfileid: "62873406"
   
  系統會報告資料庫中每個資料檔所使用的磁碟空間。 報告成 [保留的空間] 的空間是指使用的空間量加上配置給檔案但尚未使用的空間量。 [使用的空間] 所報告的空間是指檔案目前使用的實際空間，但不包含配置的空間。  
   
-##  <a name="Query"></a> 查詢統計資料記錄報表  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> 查詢統計資料記錄報表  
  [查詢統計資料記錄] 報表包含查詢執行統計資料。 這份報表所使用的資料是使用 [查詢統計資料] 收集組取得的，而此收集組會使用查詢活動收集器類型。  
   
  您可以從 [物件總管] 中存取 [查詢統計資料記錄] 報表。 若要檢視此報表，請展開 [管理]  資料夾、以滑鼠右鍵按一下 [資料收集]  、依序指向 [報表]  和 [管理資料倉儲]  ，然後按一下 [查詢統計資料記錄]  。 如需詳細資訊，請參閱 [檢視收集組報表 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)執行個體中所有資料庫之磁碟空間使用量的資料。  
@@ -118,16 +118,16 @@ ms.locfileid: "62873406"
   
  您可以使用行事曆按鈕來指定您要報告之資料的開始日期、開始時間以及持續時間。  
   
-###  <a name="Server"></a> 伺服器活動記錄報表  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> 伺服器活動記錄報表  
  [伺服器活動記錄] 報表會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體與主機作業系統之伺服器活動的初始檢視。  
   
  下表描述的是繪製報表中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與系統活動的圖表，以及可透過這些圖表存取的詳細子報表。  
   
 |圖形|報表描述|  
 |-----------|------------------------|  
-|%CPU|您可以在 %CPU 圖表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統圖表線條上按一下任何一點，即可存取這些子報表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [查詢統計資料記錄] 報表會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中成本最高之查詢的圖表。 此圖表下方的資料表會列出這些查詢並且包含每個查詢的統計資料。 您可以按一下查詢，以便取得其他詳細資料。<br /><br /> 系統<br /> [系統 CPU 使用量] 報表會提供每個處理器之 %CPU 時間的圖表，並且以表格式格式提供每個處理序的統計資料。|  
-|記憶體使用量|您可以在記憶體使用量圖表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統圖表線條上按一下任何一點，即可存取這些子報表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用量] 報表會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序記憶體使用量、記憶體計數器和內部記憶體耗用量 (依據類型) 的圖表，以及提供平均記憶體使用量 (依據元件類型) 之相關資訊的資料表。<br /><br /> 系統<br /> [系統記憶體使用量] 報表會提供記憶體使用量、快取和頁面叫用比率的圖表，以及提供每個處理序之工作集和私用位元組的相關資訊的資料表。|  
-|磁碟 I/O 使用量|您可以在磁碟 I/O 使用量圖表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統圖表線條上按一下任何一點，即可存取這些子報表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟 I/O 使用量] 報表會提供磁碟回應時間和磁碟傳輸率的圖表。 有一份額外的資料表會依據磁碟、資料庫和檔案來提供虛擬檔案統計資料。<br /><br /> 系統<br /> [系統磁碟使用量] 報表會提供磁碟回應時間、平均磁碟佇列長度和磁碟傳輸率的圖表，以及提供每個處理序之 IO 寫入與讀取的相關資訊的資料表。|  
+|%CPU|您可以在 %CPU 圖表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統圖表線條上按一下任何一點，即可存取這些子報表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [查詢統計資料記錄] 報表會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中成本最高之查詢的圖表。 此圖表下方的資料表會列出這些查詢並且包含每個查詢的統計資料。 您可以按一下查詢，以便取得其他詳細資料。<br /><br /> System<br /> [系統 CPU 使用量] 報表會提供每個處理器之 %CPU 時間的圖表，並且以表格式格式提供每個處理序的統計資料。|  
+|記憶體使用量|您可以在記憶體使用量圖表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統圖表線條上按一下任何一點，即可存取這些子報表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用量] 報表會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序記憶體使用量、記憶體計數器和內部記憶體耗用量 (依據類型) 的圖表，以及提供平均記憶體使用量 (依據元件類型) 之相關資訊的資料表。<br /><br /> System<br /> [系統記憶體使用量] 報表會提供記憶體使用量、快取和頁面叫用比率的圖表，以及提供每個處理序之工作集和私用位元組的相關資訊的資料表。|  
+|磁碟 I/O 使用量|您可以在磁碟 I/O 使用量圖表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統圖表線條上按一下任何一點，即可存取這些子報表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟 I/O 使用量] 報表會提供磁碟回應時間和磁碟傳輸率的圖表。 有一份額外的資料表會依據磁碟、資料庫和檔案來提供虛擬檔案統計資料。<br /><br /> System<br /> [系統磁碟使用量] 報表會提供磁碟回應時間、平均磁碟佇列長度和磁碟傳輸率的圖表，以及提供每個處理序之 IO 寫入與讀取的相關資訊的資料表。|  
 |網路使用量|沒有其他報表可用。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等候|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等候圖表會顯示等候類別所執行之執行緒所遇到的等候。 您可以按一下圖表中的任何區段，藉以存取詳細的報表。 除了針對一段縮短的時間範圍提供圖形 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等候統計資料以外，這份報表還會以表格式格式提供等候類別的相關資訊。 此資料表會針對每個類別 (例如 CPU 及其子類別) 顯示等候次數、等候時間和總等候時間的百分比。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動|您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動圖表存取不同層面的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動。 您可以透過在 SQL 編譯/秒圖表線條上按一下某個點所取得的報表如下所示：<br /><br /> 連線和工作階段<br /><br /> Requests<br /><br /> 計畫快取命中率<br /><br /> tempdb 特性|  

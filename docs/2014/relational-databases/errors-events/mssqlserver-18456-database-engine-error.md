@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869593"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -88,7 +88,7 @@ ms.locfileid: "62869593"
 ## <a name="examples"></a>範例  
  在此範例中，驗證錯誤狀態為 8。 這表示密碼不正確。  
   
-|Date|來源|訊息|  
+|日期|來源|訊息|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|登入|錯誤: 18456，嚴重性: 14，狀態: 8。|  
 |2007-12-05 20:12:56.34|登入|使用者 '<user_name>' 登入失敗。 [用戶端\<： ip 位址>]|  

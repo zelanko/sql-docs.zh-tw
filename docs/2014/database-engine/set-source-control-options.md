@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843711"
 ---
 # <a name="set-source-control-options"></a>設定原始檔控制選項
@@ -34,7 +34,7 @@ ms.locfileid: "62843711"
   
 ### <a name="to-set-source-control-options"></a>設定原始檔控制選項  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
 2.  在 [**選項**] 對話方塊中，展開 [**原始檔控制**]，然後按一下 [**外掛程式選取範圍]** 頁面。  
   
@@ -69,12 +69,10 @@ ms.locfileid: "62843711"
   
 5.  在 [**原始檔控制環境設定**] 方塊中，選取您要設定原始檔控制選項的角色。  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會自動選取所選角色的預設原始檔控制選項。 如果您清除任何預設選項，[原始檔**控制環境設定**] 方塊會顯示 [**自訂**] 選項，指出您已自訂原先選取的角色。  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會自動選取所選角色的預設原始檔控制選項。 如果您清除任何預設選項，[原始檔**控制環境設定**] 方塊會顯示 [**自訂**] 選項，指出您已自訂原先選取的角色。  
   
      **原始檔控制環境設定**  
-     指定您要使用的角色。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會定義下列角色。  
+     指定您要使用的角色。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會定義下列角色。  
   
     |角色|描述|  
     |----------|-----------------|  
@@ -98,7 +96,7 @@ ms.locfileid: "62843711"
     |**自動簽出**|簽出項目，而不顯示 [**簽出**] 對話方塊。 這是預設選項。|  
     |**另存新檔**|另存為新的檔案。|  
   
-     **使用**  
+     **編輯**  
   
     |動作|描述|  
     |------------|-----------------|  

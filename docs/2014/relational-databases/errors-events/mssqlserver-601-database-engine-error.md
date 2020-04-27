@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62867727"
 ---
 # <a name="mssqlserver_601"></a>MSSQLSERVER_601
@@ -44,7 +44,7 @@ ms.locfileid: "62867727"
   
 ## <a name="see-also"></a>另請參閱  
  [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
- [&#40;Transact-sql&#41;的資料表提示](/sql/t-sql/queries/hints-transact-sql-table)   
+ [資料表提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)  
   

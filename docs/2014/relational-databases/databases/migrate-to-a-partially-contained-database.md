@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871725"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -32,7 +32,7 @@ ms.locfileid: "62871725"
   
 -   [將使用者移轉至自主資料庫使用者](#users)  
   
-##  <a name="prepare"></a> 準備移轉資料庫  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> 準備移轉資料庫  
  當您考慮將資料庫移轉至部分自主資料庫模型時，請檢閱下列項目。  
   
 -   您應該了解部分自主資料庫模型。 如需相關資訊，請參閱 [自主資料庫](contained-databases.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "62871725"
   
 -   請監視 **database_uncontained_usage** XEvent 來查看使用非內含性功能的時間。  
   
-##  <a name="enable"></a> 啟用自主資料庫  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> 啟用自主資料庫  
  您必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫，然後才能建立自主資料庫。  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 來啟用自主資料庫  
@@ -69,7 +69,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="convert"></a> 將資料庫轉換成部分自主資料庫  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> 將資料庫轉換成部分自主資料庫  
  您可以透過變更 [內含項目]  選項，將資料庫轉換成自主資料庫。  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL，將資料庫轉換成部分自主資料庫  
@@ -91,7 +91,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> 將使用者移轉至自主資料庫使用者  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> 將使用者移轉至自主資料庫使用者  
  下列範例會將以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入為基礎的所有使用者移轉至具有密碼之自主資料庫使用者。 此範例會排除未啟用的登入。 您必須在自主資料庫中執行此範例。  
   
 ```sql  

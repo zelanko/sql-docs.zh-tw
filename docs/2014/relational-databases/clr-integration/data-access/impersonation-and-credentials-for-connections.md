@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874017"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>連接的模擬和認證
@@ -31,8 +31,7 @@ ms.locfileid: "62874017"
   
  根據預設，連接到 Windows 的 SQL Server 處理序需要 SQL Server Windows 服務帳戶的安全性內容。 但是，可將 CLR 函數對應到 Proxy 識別，好讓它的傳出連接具有與 Windows 服務帳戶不同的安全性內容。  
   
- 在某些情況下，您可能會想要使用 `SqlContext.WindowsIdentity` 屬性來模擬呼叫端，而不是以此服務帳戶的身分執行。 
-  `WindowsIdentity` 執行個體代表叫用呼叫程式碼之用戶端的識別，而且只有當用戶端使用 Windows 驗證時才可使用。 在您取得 `WindowsIdentity` 執行個體之後，您可以呼叫 `Impersonate` 來變更執行緒的安全性 Token，然後代表用戶端開啟 ADO.NET 連接。  
+ 在某些情況下，您可能會想要使用 `SqlContext.WindowsIdentity` 屬性來模擬呼叫端，而不是以此服務帳戶的身分執行。 `WindowsIdentity` 執行個體代表叫用呼叫程式碼之用戶端的識別，而且只有當用戶端使用 Windows 驗證時才可使用。 在您取得 `WindowsIdentity` 執行個體之後，您可以呼叫 `Impersonate` 來變更執行緒的安全性 Token，然後代表用戶端開啟 ADO.NET 連接。  
   
  呼叫 SQLCoNtext WindowsIdentity 之後，您就無法存取本機資料，也無法存取系統資料。 若要再次存取資料，您必須呼叫 WindowsImpersonationCoNtext。  
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873486"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>檢視或變更收集組排程 (SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "62873486"
   
 6.  按一下 **[確定]** 儲存這些變更並且關閉 **[資料收集組屬性]** 對話方塊。  
   
-####  <a name="CollectionSet"></a> 資料收集組屬性對話方塊  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> 資料收集組屬性對話方塊  
  **一般頁面**  
   
  使用這個頁面可設定要如何收集及上傳資料、設定排程，以及設定管理資料倉儲中的資料保留期限。 這個頁面也會提供有關收集組的資訊，例如收集器類型和收集頻率，以及用於收集組的輸入參數。  

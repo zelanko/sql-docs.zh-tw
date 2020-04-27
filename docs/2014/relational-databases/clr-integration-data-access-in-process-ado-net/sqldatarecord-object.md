@@ -14,18 +14,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874678"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 物件
-  
   `SqlDataRecord` 物件表示資料的單一資料列及其相關的中繼資料。  
   
- Managed 預存程序可將不是來自 `SqlDataReader` 的結果集傳送給用戶端。 
-  `SqlDataRecord` 類別以及 `SendResultsStart` 物件的 `SendResultsRow`、`SendResultsEnd` 及 `SqlPipe` 方法允許預存程序將自訂結果集傳送至用戶端。  
+ Managed 預存程序可將不是來自 `SqlDataReader` 的結果集傳送給用戶端。 `SqlDataRecord` 類別以及 `SendResultsStart` 物件的 `SendResultsRow`、`SendResultsEnd` 及 `SqlPipe` 方法允許預存程序將自訂結果集傳送至用戶端。  
   
  如需詳細資訊，請參閱 .NET Framework SDK 文件集中的 `Microsoft.SqlServer.Server.SqlDataRecord` 類別參考文件集。  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872052"
 ---
 # <a name="contained-database-collations"></a>自主資料庫定序
@@ -85,8 +85,7 @@ JOIN #T2
   
  無法解析 equal to 作業中 "Latin1_General_100_CI_AS_KS_WS_SC" 及 "Chinese_Simplified_Pinyin_100_CI_AS" 之間的定序衝突。  
   
- 修正此問題的方法是明確地建立暫時資料表的定序。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可提供 `DATABASE_DEFAULT` 子句的 `COLLATE` 關鍵字，以簡化此作業。  
+ 修正此問題的方法是明確地建立暫時資料表的定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可提供 `DATABASE_DEFAULT` 子句的 `COLLATE` 關鍵字，以簡化此作業。  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -121,8 +120,7 @@ END;
   
  雖然資料庫定序會保留下來，不過只當做使用者資料的預設定序使用。 根據預設，資料庫定序等於模型資料庫定序，但是使用者可透過`CREATE`或`ALTER DATABASE`命令加以變更，就如同非自主資料庫一樣。  
   
- 
-  `CATALOG_DEFAULT` 子句提供了新的關鍵字 `COLLATE`。 在包含和非自主資料庫中，這個關鍵字會當做中繼資料之目前定序的捷徑使用。 也就是說，在非自主資料庫中，`CATALOG_DEFAULT` 將傳回目前資料庫定序，因為中繼資料已在資料庫定序中定序。 在自主資料庫中，這兩個值可能會不同，因為使用者可以變更資料庫定序，讓它不符合目錄定序。  
+ `CATALOG_DEFAULT` 子句提供了新的關鍵字 `COLLATE`。 在包含和非自主資料庫中，這個關鍵字會當做中繼資料之目前定序的捷徑使用。 也就是說，在非自主資料庫中，`CATALOG_DEFAULT` 將傳回目前資料庫定序，因為中繼資料已在資料庫定序中定序。 在自主資料庫中，這兩個值可能會不同，因為使用者可以變更資料庫定序，讓它不符合目錄定序。  
   
  下表將摘要說明包含和非自主資料庫中各種物件的行為：  
   

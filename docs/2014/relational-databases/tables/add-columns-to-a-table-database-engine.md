@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856138"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
@@ -38,17 +38,17 @@ ms.locfileid: "62856138"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  如果您使用 ALTER TABLE 陳述式，將資料行加入至資料表，系統就會自動將這些資料行加入至資料表的結尾。 如果您想要讓資料行按照特定順序列在資料表中，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 不過，請注意，這並非資料庫設計最佳作法。 最佳作法是在應用程式和查詢層級指定傳回資料行的順序。 您不應該仰賴使用 SELECT *，根據資料表中定義資料行的順序，按照預期的順序傳回所有資料行。 請務必按照您想要顯示資料行的順序，在查詢和應用程式中依名稱指定資料行。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>若要使用資料表設計工具將資料行插入資料表中  
   
@@ -61,16 +61,16 @@ ms.locfileid: "62856138"
 4.  按下 TAB 鍵以移至 [ **資料類型** ] 資料格，然後從下拉式清單中選取資料類型。 這也是必要值。如果未選擇，將會指派預設值。  
   
     > [!NOTE]  
-    >  您可以在 [資料庫工具]**** 的 [選項]**** 對話方塊中變更預設值。  
+    >   您可以在 [ **資料庫工具** ] 的 [ **選項**] 對話方塊中變更預設值。  
   
 5.  在 [ **資料行屬性** ] 索引標籤中繼續定義其他任何的資料行屬性。  
   
     > [!NOTE]  
-    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性]**** 索引標籤中變更預設值。  
+    >   資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 **[資料行屬性]** 索引標籤中變更預設值。  
   
-6.  新增資料行之後，請從 [檔案]**** 功能表中，選擇 [儲存**資料表**] __。  
+6.  新增資料行之後，請從 [檔案]**** 功能表中，選擇 [儲存 <資料表名稱>]****__。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-insert-columns-into-a-table"></a>若要將資料行插入資料表中  
   
@@ -84,6 +84,6 @@ ms.locfileid: "62856138"
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a>如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+##  <a name="for-more-information-see-alter-table-40transact-sql41"></a><a name="FollowUp"></a>如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
   

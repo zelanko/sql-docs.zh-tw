@@ -16,17 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871707"
 ---
 # <a name="msdb-database"></a>msdb 資料庫
-  Agent 會使用**msdb**資料庫來排程警示和作業，以及其他功能（例如[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]） [!INCLUDE[ssSB](../../includes/sssb-md.md)]和 Database Mail。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+  **msdb** 資料庫供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來設定警示和作業排程，以及供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和 Database Mail 等其他功能使用。  
   
- 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動在 **msdb**的資料表中維護一份完整的線上備份和還原記錄。 此資訊包括執行備份者的名稱、備份時間，以及在其中儲存備份的裝置或檔案。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用此資訊來提出還原資料庫以及套用任何交易記錄備份的計畫。 即使是以自訂應用程式或協力廠商工具建立備份，所有資料庫的備份事件都會記錄下來。 例如，如果使用會呼叫 SQL Server 管理物件 (SMO) 物件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式來執行備份作業，則事件會記錄在 **msdb** 系統資料表、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄中。 為了協助您保護儲存在 **msdb**中的資訊，我們建議您考慮將 **msdb** 交易記錄放在容錯儲存體上。  
+ 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動在 **msdb**的資料表中維護一份完整的線上備份和還原記錄。 此資訊包括執行備份者的名稱、備份時間，以及在其中儲存備份的裝置或檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用此資訊來提出還原資料庫以及套用任何交易記錄備份的計畫。 即使是以自訂應用程式或協力廠商工具建立備份，所有資料庫的備份事件都會記錄下來。 例如，如果使用會呼叫 SQL Server 管理物件 (SMO) 物件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式來執行備份作業，則事件會記錄在 **msdb** 系統資料表、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。 為了協助您保護儲存在 **msdb**中的資訊，我們建議您考慮將 **msdb** 交易記錄放在容錯儲存體上。  
   
  依預設， **msdb** 使用的是簡單復原模式。 如果您使用 [備份與還原記錄](../backup-restore/backup-history-and-header-information-sql-server.md) 資料表，我們建議您針對 **msdb**使用完整復原模式。 如需詳細資訊，請參閱[復原模式 &#40;SQL Server &#41;](../backup-restore/recovery-models-sql-server.md)。 請注意，當您安裝或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，只要使用 Setup.exe 重建系統資料庫，就會自動將 **msdb** 的復原模式設定為簡單。  
   

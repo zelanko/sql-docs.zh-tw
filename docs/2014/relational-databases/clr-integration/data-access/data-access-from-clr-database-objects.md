@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874085"
 ---
 # <a name="data-access-from-clr-database-objects"></a>從 CLR 資料庫物件進行資料存取

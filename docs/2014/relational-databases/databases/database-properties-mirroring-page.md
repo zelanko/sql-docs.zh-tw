@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871943"
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
@@ -47,13 +47,13 @@ ms.locfileid: "62871943"
   
  伺服器網路位址具有以下基本語法：  
   
- TCP：**//**_fully_qualified_domain_name_**：**_埠_  
+ TCP **://**_fully_qualified_domain_name_**:**_port_  
   
- 其中  
+ where  
   
--   *fully_qualified_domain_name*是伺服器實例所在的伺服器。  
+-   *fully_qualified_domain_name* 是伺服器執行個體所在的伺服器。  
   
--   *port*是指派給伺服器實例之資料庫鏡像端點的通訊埠。  
+-   *port* 是指派給伺服器執行個體資料庫鏡像端點的通訊埠。  
   
      若要參與資料庫鏡像，伺服器需要有資料庫鏡像端點。 當您使用「設定資料庫鏡像安全性精靈」建立伺服器執行個體的第一個鏡像工作階段時，精靈就會自動建立端點，並且設定其使用「Windows 驗證」。 如需如何使用憑證型驗證精靈的相關資訊，請參閱 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
@@ -133,16 +133,16 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 |狀態|說明|  
 |------------|-----------------|  
-|**此資料庫尚未設定鏡像**|資料庫鏡像工作階段不存在，並且在 [鏡像]  頁面上沒有可以報告的活動。|  
+|**這個資料庫尚未設定鏡像**|資料庫鏡像工作階段不存在，並且在 [鏡像]**** 頁面上沒有可以報告的活動。|  
 |**已暫停**|主體資料庫可供使用，但是不會將任何記錄傳送到鏡像伺服器。|  
 |**沒有連接**|主體伺服器執行個體無法連接到其夥伴。|  
-|**正在同步處理**|鏡像資料庫的內容落後於主體資料庫的內容。 主體伺服器執行個體正在將記錄傳送到鏡像伺服器執行個體，這時會將變更套用至鏡像資料庫，以便向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，鏡像資料庫和主體資料庫都是處於這個狀態。|  
+|**複製**|鏡像資料庫的內容落後於主體資料庫的內容。 主體伺服器執行個體正在將記錄傳送到鏡像伺服器執行個體，這時會將變更套用至鏡像資料庫，以便向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，鏡像資料庫和主體資料庫都是處於這個狀態。|  
 |**容錯移轉**|在主體伺服器執行個體上，手動容錯移轉 (角色切換) 已經開始，而且伺服器目前正在轉換成鏡像角色。 在這個狀態下，使用者與主體資料庫的連接會快速結束，而且接著資料庫就會立即接替鏡像角色。|  
 |**與其**|當鏡像伺服器足以追趕上主體伺服器時，資料庫狀態就會變成 [已同步處理]****。 只要主體伺服器繼續傳送變更到鏡像伺服器，而鏡像伺服器也繼續將變更套用到鏡像資料庫，資料庫便會保持在這種狀態。<br /><br /> 在高安全性模式中，可以進行容錯移轉，不會遺失任何資料。<br /><br /> 在高效能模式中，永遠都有可能遺失部分資料，即使是在 [已同步處理]**** 狀態也是如此。|  
   
  如需詳細資訊，請參閱[鏡像狀態 &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
- **[重新整理]**  
+ **重新整理**  
  按一下以更新 [狀態]**** 方塊。  
   
 ## <a name="remarks"></a>備註  
@@ -158,7 +158,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ### <a name="removing-a-witness"></a>移除見證  
- 若要移除見證，請從 [見證]**** 欄位中刪除其伺服器網路位址。 如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證]  欄位。  
+ 若要移除見證，請從 [見證]**** 欄位中刪除其伺服器網路位址。 如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證]**** 欄位。  
   
  在刪除見證之後，必須按一下 [確定]**** 才能將其從鏡像工作階段中移除。  
   
@@ -173,7 +173,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  如需詳細資訊，請參閱 [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
@@ -183,10 +183,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [資料庫鏡像會話期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [暫停與繼續資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
+ [暫停和繼續資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
  [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

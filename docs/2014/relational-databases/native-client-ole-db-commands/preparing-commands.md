@@ -1,5 +1,5 @@
 ---
-title: 準備命令 |Microsoft Docs
+title: 準備命令 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62865016"
 ---
 # <a name="preparing-commands"></a>準備命令
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援針對單一命令的最佳化多次執行進行命令準備。不過，命令準備會產生負擔，而且取用者不需要準備命令，即可多次執行命令。 一般而言，如果某個命令將執行三次以上，您就應該準備此命令。  
   
  基於效能的考量，命令準備會延遲到執行命令為止。 此為預設行為。 在執行命令或執行中繼屬性作業之前，無法得知正在準備之命令中的任何錯誤。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性 SSPROP_DEFERPREPARE 設定為 FALSE 可以關閉此預設行為。  

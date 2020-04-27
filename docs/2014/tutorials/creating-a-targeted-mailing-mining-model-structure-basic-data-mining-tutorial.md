@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856167"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>建立目標郵寄採礦模型結構 (基本資料採礦教學課程)
@@ -100,9 +100,9 @@ ms.locfileid: "62856167"
   
     -   **EmailAddress**  
   
-    -   **名字**  
+    -   **姓**  
   
-    -   **姓氏**  
+    -   **LastName**  
   
      請確定這些資料列只有在左邊的資料行中才有核取記號。 這些資料行將會加入到您的結構中，但是不會併入模型中。 但是在建立此模型之後，這些資料行將可用於鑽研和測試。 如需有關「鑽取」的詳細資訊，請參閱[&#40;資料採礦的鑽看查詢&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   

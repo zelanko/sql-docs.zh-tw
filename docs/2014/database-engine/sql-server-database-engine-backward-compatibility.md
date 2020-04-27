@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842843"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server Database Engine 回溯相容性
@@ -29,8 +29,7 @@ ms.locfileid: "62842843"
 |-----------|-----------------|  
 |[SQL Server 2014 中已被取代的 Database Engine 功能](deprecated-database-engine-features-in-sql-server-2016.md)|這一版已被取代的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 功能。|  
 |[SQL Server 2014 中已停止的 Database Engine 功能](discontinued-database-engine-functionality-in-sql-server-2016.md)|這一版已停止的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 功能。|  
-|[SQL Server 2014 中對於 Database Engine 的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 功能變更。|  
+|[SQL Server 2014 中對於 Database Engine 的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] 功能變更。|  
 |[SQL Server 2014 中對於 Database Engine 功能的行為變更](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|這一版在資料庫功能上的其他變更。|  
   
   

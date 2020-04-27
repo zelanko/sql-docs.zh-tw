@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869175"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869175"
 |訊息文字|無法查詢原始發行者 '%s' 和發行者資料庫 '%s' 的重新導向伺服器 '%s' 以判斷遠端伺服器之名稱; 錯誤 %d，錯誤訊息 '%s'。|  
   
 ## <a name="explanation"></a>說明  
- 
-  `sp_validate_redirected_publisher` 會使用暫時連結的伺服器，而建立此伺服器的目的是要連接到重新導向的發行者，以便探索遠端伺服器的名稱。 當連結的伺服器查詢失敗時，就會傳回錯誤 21879。 要求遠端伺服器名稱的呼叫通常是在第一次使用暫時連結的伺服器時進行，因此如果發生連接問題，這些問題可能會先與此呼叫一起顯示。 這個遠端呼叫只會在遠端伺服器上執行選取的 `@@servername`。  
+ `sp_validate_redirected_publisher` 會使用暫時連結的伺服器，而建立此伺服器的目的是要連接到重新導向的發行者，以便探索遠端伺服器的名稱。 當連結的伺服器查詢失敗時，就會傳回錯誤 21879。 要求遠端伺服器名稱的呼叫通常是在第一次使用暫時連結的伺服器時進行，因此如果發生連接問題，這些問題可能會先與此呼叫一起顯示。 這個遠端呼叫只會在遠端伺服器上執行選取的 `@@servername`。  
   
  用來查詢重新導向發行者的連結伺服器會使用針對原始發行者呼叫 `sp_adddistpublisher` 時所提供的安全性模式、登入和密碼。  
   

@@ -30,16 +30,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874308"
 ---
 # <a name="manipulating-udt-data"></a>操作 UDT 資料
-  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 在修改使用者定義型別 (UDT) 資料行中的資料時，不會提供 INSERT、UPDATE 或 DELETE 陳述式的特定語法。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函數可用來將原生資料類型轉換為 UDT 類型。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 在修改使用者定義型別 (UDT) 資料行中的資料時，不會提供 INSERT、UPDATE 或 DELETE 陳述式的特定語法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函數可用來將原生資料類型轉換為 UDT 類型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>將資料插入 UDT 資料行  
  下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會將三個範例資料列插入至**Points**資料表。 **Point**資料類型是由會公開為 UDT 屬性的 X 和 Y 整數值所組成。 您必須使用 CAST 或 CONVERT 函數，將以逗號分隔的 X 和 Y 值轉換為**Point**類型。 前兩個語句使用 CONVERT 函式，將字串值轉換為**Point**類型，而第三個語句則使用 CAST 函數：  
@@ -197,8 +195,7 @@ ID PntDistanceFromPoint
 31,990  
 ```  
   
- 
-  `DistanceFromXY` 方法將個別點視為引數：  
+ `DistanceFromXY` 方法將個別點視為引數：  
   
 ```  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   

@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843097"
 ---
 # <a name="solution-explorer-source-control"></a>方案總管原始檔控制
@@ -33,15 +33,13 @@ ms.locfileid: "62843097"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- 「原始檔控制」是指利用一段中央伺服器軟體來儲存和追蹤檔案版本及控制檔案存取動作的系統。 典型的原始檔控制系統包括一個原始檔控制提供者及兩個或更多原始檔控制用戶端。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以與原始檔控制服務整合。 這表示此工具可用來做為您的原始檔控制提供者的用戶端。 在不離開環境的情況下，您很容易管理您的個別和團隊專案。 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 並未隨附原始檔控制提供者。  
+ 「原始檔控制」是指利用一段中央伺服器軟體來儲存和追蹤檔案版本及控制檔案存取動作的系統。 典型的原始檔控制系統包括一個原始檔控制提供者及兩個或更多原始檔控制用戶端。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以與原始檔控制服務整合。 這表示此工具可用來做為您的原始檔控制提供者的用戶端。 在不離開環境的情況下，您很容易管理您的個別和團隊專案。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 並未隨附原始檔控制提供者。  
   
 #### <a name="to-select-a-source-control-provider"></a>若要選取原始檔控制提供者  
   
 1.  安裝原始檔控制提供者的用戶端部份。  
   
-2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]** 。  
+2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]**。  
   
 3.  在 [**選項**] 對話方塊中，展開 [**原始檔控制**]，然後按一下 [**外掛程式選取範圍]** 頁面。  
   

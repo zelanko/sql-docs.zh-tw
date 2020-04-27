@@ -12,20 +12,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62837688"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>取得協助 (SQL Server 2014)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  
   
 -   與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安裝的文件集和教學課程。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network (MSDN) 和 TechNet 上的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 網站。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network (MSDN) 和 TechNet 上的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 網站。  
   
 -   其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 網站上的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 資訊。  
   
