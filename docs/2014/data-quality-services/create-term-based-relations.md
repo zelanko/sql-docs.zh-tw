@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480821"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
@@ -26,11 +26,11 @@ ms.locfileid: "65480821"
   
  在分析之前，以詞彙為主的關聯轉換和符號轉換 (其中會以空格或 null 取代特殊字元) 都會在前置處理階段進行。 如果要求複合定義域剖析，則會在兩次轉換之前執行，因為分隔符號剖析需要符號。 其他作業 (例如定義域規則和定義域值變更) 將會在轉換之後執行。 就比對而言，不論您是否執行了清理，都會在比對活動之前，將以詞彙為主的關聯套用至來源資料。  
   
- **以詞彙為基礎的關聯和定義域管理**  
+ **以詞彙為主的關聯及定義域管理**  
   
  當您在定義域管理中套用以詞彙為主的關聯時，DQS 會在知識探索、清理或比對程序中套用變更，但是 DQS 不會變更定義域值本身以符合以詞彙為主的關聯。 換句話說，如果您在 **[定義域管理]** 頁面的 **[以詞彙為主的關聯]** 索引標籤中，輸入並接受以詞彙為主的關聯，就不會對相同頁面的 **[定義域值]** 索引標籤進行變更。 這可讓您隨後變更 TBR。  
   
- **以詞彙為基礎的關聯和資料清除**  
+ **以詞彙為主的關聯及資料清除**  
   
  當您在定義域中套用以詞彙為主的關聯，並接著執行資料清理程序時，DQS 會在清理期間套用變更，但是不會將變更套用至知識庫中的詞彙。  
   
@@ -42,25 +42,25 @@ ms.locfileid: "65480821"
   
 -   如果依照以詞彙為主的關聯變更之值在定義域中，但是該值錯誤/無效且無更正，則該值會出現在 [無效] 索引標籤底下，並提供原因 ([定義域值])。  
   
- **以詞彙為基礎的關聯和知識探索**  
+ **以詞彙為主的關聯及知識探索**  
   
  當您套用以詞彙為主的關聯，並接著執行知識庫探索程序時，所有符合 TBR 的值都會維持不變，並會視為正確值。 TBR 變更的任何值會當做正確值匯入，並視為符合 TBR 之值的同義字。  
   
- **以詞彙為主的關聯，並將清理值匯入定義域中**  
+ **以詞彙為主的關聯及將清理值匯入定義域中**  
   
  如果您將清理程序期間收集到的資料品質知識匯入定義域，TBR 變更的值會當做正確值匯入。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要建立以詞彙為主的關聯，您必須已在 [定義域管理] 活動中開啟定義域。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立以詞彙為主的關聯。  
   
-##  <a name="Create"></a>建立以詞彙為主的關聯  
+##  <a name="create-term-based-relations"></a><a name="Create"></a>建立以詞彙為主的關聯  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65480821"
   
     6.  在 **[尋找]** 文字方塊中輸入一個或多個位數，以尋找關聯資料表中的值。 系統會反白顯示此字串的相符項目。 使用上下箭頭，移到此字串在資料表中的不同出現位置。  
   
-    7.  **拼寫**器：如果 [**值**] 或 [**更正為**] 資料行中的值具有波浪式紅色底線，則表示檢查程式會建議值的更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../../2014/data-quality-services/set-domain-properties.md)。  
+    7.  **拼字檢查**：如果 **[值]** 或 **[更正為]** 資料行中的某個值有波浪式紅色底線，則表示拼字檢查建議此值的更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../../2014/data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
         >  若要使用拼字檢查，您可以在 **[定義域屬性]** 頁面中啟用此功能，或者如果 **[定義域屬性]** 頁面中已停用此功能，您可以按一下 **[以詞彙為主的關聯]** 頁面上的 **[啟用/停用拼字檢查]** 圖示，在此頁面上啟用此功能。  
@@ -99,7 +99,7 @@ ms.locfileid: "65480821"
   
 7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   
-##  <a name="FollowUp"></a>後續操作：建立以詞彙為基礎的關聯之後  
+##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> 後續操作：建立以詞彙為主的關聯之後  
  在您建立以詞彙為主的關聯之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

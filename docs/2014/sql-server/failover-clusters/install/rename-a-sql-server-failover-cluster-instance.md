@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63125998"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
@@ -29,8 +29,7 @@ ms.locfileid: "63125998"
   
  在開始重新命名的程序之前，請檢閱以下項目。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支援與複寫有關之伺服器的重新命名作業。 如果主要伺服器永久失去了，就可以重新命名記錄傳送中的次要伺服器。 如需詳細資訊，請參閱[記錄傳送和複寫 &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支援與複寫有關之伺服器的重新命名作業。 如果主要伺服器永久失去了，就可以重新命名記錄傳送中的次要伺服器。 如需詳細資訊，請參閱[記錄傳送和複寫 &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)。  
   
 -   在重新命名設定為使用資料庫鏡像的虛擬伺服器時，您必須在重新命名作業之前關閉資料庫鏡像，然後使用新的虛擬伺服器名稱，重新建立資料庫鏡像。 資料庫鏡像的中繼資料並不會自動更新來反映新的虛擬伺服器名稱。  
   
@@ -45,8 +44,7 @@ ms.locfileid: "63125998"
 ## <a name="verify-the-renaming-operation"></a>確認重新命名作業  
  重新命名虛擬伺服器之後，任何使用舊名稱的連接現在都必須使用新名稱進行連接。  
   
- 若要確認重新命名作業已經完成，請從 `@@servername` 或 `sys.servers` 選取資訊。 
-  `@@servername` 函數會傳回新的虛擬伺服器名稱，而 `sys.servers` 資料表則會顯示新的虛擬伺服器名稱。 若要確認容錯移轉程序可以使用新名稱正常運作，使用者應該同時嘗試將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源容錯移轉至其他節點。  
+ 若要確認重新命名作業已經完成，請從 `@@servername` 或 `sys.servers` 選取資訊。 `@@servername` 函數會傳回新的虛擬伺服器名稱，而 `sys.servers` 資料表則會顯示新的虛擬伺服器名稱。 若要確認容錯移轉程序可以使用新名稱正常運作，使用者應該同時嘗試將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源容錯移轉至其他節點。  
   
  對於來自叢集內任何節點的連接，幾乎可以立即使用新的名稱。 不過，對於來自用戶端電腦使用新名稱的連接，必須在該用戶端電腦看到新名稱之後，才能使用新名稱連接到伺服器。 新名稱透過網路傳播所需的時間長度可以是幾秒鐘，或長達 3 到 5 分鐘，視網路組態而定；可能也需要額外的時間，才不會在網路上看到舊的虛擬伺服器名稱。  
   
@@ -73,7 +71,7 @@ ms.locfileid: "63125998"
   
 -   當電腦/叢集網路名稱已重新命名時，請修正主要伺服器 (MSX) 和目標伺服器 (TSX) 執行個體名稱。 如需詳細資訊，請參閱下列主題：  
   
-    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [從主要伺服器脫離多個目標伺服器](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [建立多伺服器環境](../../../ssms/agent/create-a-multiserver-environment.md)  
   

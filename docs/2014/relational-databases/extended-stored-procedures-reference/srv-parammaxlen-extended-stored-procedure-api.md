@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127208"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (擴充預存程序 API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳回遠端預存程序呼叫參數的最大資料長度。 此函式已被 **srv_paraminfo** 函式取代。  
   
@@ -63,18 +62,17 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|`BITN`|**Null：** 1<br /><br /> **零：** 1<br /><br /> **>= 255：** N/A<br /><br /> **<255：** N/A|  
-|`BIGVARCHAR`|**Null：** 255<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|`BIGCHAR`|**Null：** 255<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|`BIGBINARY`|**Null：** 255<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|`BIGVARBINARY`|**Null：** 255<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|`NCHAR`|**Null：** 255<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|`NVARCHAR`|**Null：** 255<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|`NTEXT`|**Null：** -1<br /><br /> **零：** -1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \< **|  
+|`BITN`|**NULL：** 1<br /><br /> **零：** 1<br /><br /> **>= 255：** N/A<br /><br /> **<255：** N/A|  
+|`BIGVARCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
+|`BIGCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
+|`BIGBINARY`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
+|`BIGVARBINARY`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
+|`NCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
+|`NVARCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255:** 255|  
+|`NTEXT`|**Null：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \< **|  
   
 ## <a name="remarks"></a>備註  
- 每個遠端預存程序參數都具有實際和最大的資料長度。 對於不允許 null 值的標準固定長度資料類型，實際和最大的長度是相同的。 對於可變長度資料類型，長度則可以有所不同。 例如，宣告為 **varchar(30)** 的參數可能擁有只有 10 個位元組長的資料。 參數的實際長度為 10，而其最大長度為 30。 
-  **srv_parammaxlen** 函式會取得遠端預存程序的最大資料長度。 若要取得參數的實際長度，請使用 **srv_paramlen**。  
+ 每個遠端預存程序參數都具有實際和最大的資料長度。 對於不允許 null 值的標準固定長度資料類型，實際和最大的長度是相同的。 對於可變長度資料類型，長度則可以有所不同。 例如，宣告為 **varchar(30)** 的參數可能擁有只有 10 個位元組長的資料。 參數的實際長度為 10，而其最大長度為 30。 **srv_parammaxlen** 函式會取得遠端預存程序的最大資料長度。 若要取得參數的實際長度，請使用 **srv_paramlen**。  
   
  當遠端預存程序呼叫是用參數產生時，該參數可以依名稱或位置 (未命名) 傳遞。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 雖然仍會呼叫 SRV_RPC 處理常式，但是看起來好像沒有參數，而且 **srv_rpcparams** 會傳回 0。  
   
@@ -83,6 +81,6 @@ n
   
 ## <a name="see-also"></a>另請參閱  
  [srv_paraminfo &#40;擴充預存程式 API&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
- [srv_rpcparams &#40;擴充預存程式 API&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;擴充預存程序 API&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

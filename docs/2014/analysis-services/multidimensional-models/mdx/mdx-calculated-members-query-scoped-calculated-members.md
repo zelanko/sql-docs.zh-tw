@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074533"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>建立查詢範圍導出成員 (MDX)
@@ -41,8 +41,7 @@ ms.locfileid: "66074533"
   
 ```  
   
- 在 WITH 關鍵字的語法中， `Member_Identifier` 值是導出成員的完整名稱。 此完整名稱包括與導出成員相關的維度或層級。 
-  `MDX_Expression` 值會在評估過運算式後，傳回導出成員的值。 導出成員的內建資料格屬性值也可以選擇性地藉由在 `MemberProperty_Identifier` 值中提供資料格屬性名稱，以及在 `Scalar_Expression` 值中提供資料格屬性的值來指定。  
+ 在 WITH 關鍵字的語法中， `Member_Identifier` 值是導出成員的完整名稱。 此完整名稱包括與導出成員相關的維度或層級。 `MDX_Expression` 值會在評估過運算式後，傳回導出成員的值。 導出成員的內建資料格屬性值也可以選擇性地藉由在 `MemberProperty_Identifier` 值中提供資料格屬性名稱，以及在 `Scalar_Expression` 值中提供資料格屬性的值來指定。  
   
 ## <a name="with-keyword-examples"></a>WITH 關鍵字範例  
  下列 MDX 查詢定義導出成員， `[Measures].[Special Discount]`，根據原始折扣量計算特殊折扣。  
@@ -94,6 +93,6 @@ WHERE [Product].[Category].[Bikes]
 ## <a name="see-also"></a>另請參閱  
  [Mdx 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [SELECT 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [&#40;MDX&#41;建立會話範圍匯出成員](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [建立工作階段範圍導出成員 &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

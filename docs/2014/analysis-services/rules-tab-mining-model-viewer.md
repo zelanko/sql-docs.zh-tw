@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070094"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>規則索引標籤 (採礦模型檢視器)
@@ -27,7 +27,7 @@ ms.locfileid: "66070094"
 > [!WARNING]  
 >  根據預設，檢視器只顯示高於 [最小機率]**** 中定義之機率臨界值的規則。 無法使用檢視器減小此值，因為規則輸出的機率臨界值是在建立模型時決定的。 如需詳細資訊，請參閱 [Microsoft 關聯分析演算法技術參考](data-mining/microsoft-association-algorithm-technical-reference.md)。  
   
- **如需詳細資訊：** [Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)、[使用 microsoft 關聯規則檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)、 [使用 Microsoft 關聯規則檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021803"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>發行集資訊，代理程式 (交易式發行集)
@@ -49,12 +49,12 @@ ms.locfileid: "63021803"
 -   Completed  
   
  **代理程式**  
- 與發行集相關聯之每個複寫代理程式的名稱。 散發代理程式與這個發行集的訂閱相關聯。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+ 與發行集相關聯之每個複寫代理程式的名稱。 散發代理程式與這個發行集的訂閱相關聯。 如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
  **上次啟動時間**  
  代理程式上次啟動的時間。  
   
- **有效期間**  
+ **期限**  
  代理程式已執行的時間量。 如果代理程式目前正在執行，此時間代表經過時間；如果代理程式是先前有執行過，則此時間代表總共時間。  
   
  **最後一個動作**  
@@ -62,7 +62,7 @@ ms.locfileid: "63021803"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](monitor/start-the-replication-monitor.md)   
- [使用複寫監視器來檢視資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用複寫監視器來查看資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [監視複寫](monitoring-replication.md)  
   
   

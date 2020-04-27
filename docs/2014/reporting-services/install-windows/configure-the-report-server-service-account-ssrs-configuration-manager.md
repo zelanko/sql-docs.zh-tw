@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261075"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員，以及用於排程報表處理和訂閱傳遞的背景處理應用程式。 本主題將說明如何在一開始設定服務帳戶，以及如何使用 Reporting Services 組態工具來修改此帳戶或密碼。  
   
 ## <a name="initial-configuration"></a>初始組態
@@ -30,12 +29,11 @@ ms.locfileid: "63261075"
   
 ## <a name="changing-the-service-account"></a>變更服務帳戶
 
- 若要檢視及重新設定服務帳戶資訊，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。 服務識別資訊會儲存在內部的多個位置。 使用此工具可確保每當您變更帳戶或密碼時，所有的參考也會隨著更新。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具會執行下列其他步驟，以確保報表伺服器保持可用：  
+ 若要檢視及重新設定服務帳戶資訊，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。 服務識別資訊會儲存在內部的多個位置。 使用此工具可確保每當您變更帳戶或密碼時，所有的參考也會隨著更新。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具會執行下列其他步驟，以確保報表伺服器保持可用：  
   
 - 自動將新帳戶加入本機電腦上所建立的報表伺服器群組中。 此群組是在保護 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案安全的存取控制清單 (ACL) 中指定。  
   
-- 會自動更新用來主控報表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]伺服器資料庫之實例的登入許可權。 新的帳戶會加入至 **RSExecRole**。  
+- 自動更新用來裝載報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體登入權限。 新的帳戶會加入至 **RSExecRole**。  
   
      舊帳戶的資料庫登入將不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的[管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../report-server/report-server-database-ssrs-native-mode.md)。  
   
@@ -66,9 +64,9 @@ ms.locfileid: "63261075"
   
 - [服務帳戶 &#40;SSRS 原生模式&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)。  
   
-- 在 SQL Server 線上叢書中[設定 Windows 服務帳戶和許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+- 《SQL Server 線上叢書》中的[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
   
-- [《服務與服務帳戶安全性規劃指南》](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
+- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733) (服務和服務帳戶安全性規劃指南)。  
   
 ## <a name="updating-an-expired-password"></a>更新已過期的密碼
 
@@ -114,7 +112,7 @@ ms.locfileid: "63261075"
   
 9. 等候此服務停止。  
   
-10. 按一下 [開始]****。  
+10. 按一下 [啟動]  。  
   
 > [!NOTE]  
 > SharePoint 產品與技術需要網域帳戶來處理類似 Reporting Services SharePoint 模式的服務組態。  

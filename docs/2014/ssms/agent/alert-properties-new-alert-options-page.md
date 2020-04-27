@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061262"
 ---
 # <a name="alert-properties-new-alert-options-page"></a>警示屬性：新增警示 (選項頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "63061262"
  **位址**  
  在電子郵件通知內包含事件中的錯誤文字 (如果有的話)。  
   
- **尋呼**  
+ **呼叫器**  
  在呼叫器通知內包含事件中的錯誤文字 (如果有的話)。  
   
  **Net send**  
@@ -35,10 +35,10 @@ ms.locfileid: "63061262"
  **要傳送的其他通知訊息**  
  鍵入要包含在通知訊息中的其他文字。  
   
- **回應之間的延遲**  
+ **回應間隔延遲**  
  指定事件重複發生的延遲。 某些事件會在短期間內頻繁發生。 在此情況下，您可能想要知道事件是否已經發生，但不要讓每個事件都產生回應。 使用此選項來指定超時時間。若有延遲，在警示回應事件之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會等候指定的延遲，然後再次回應，而不論事件是否發生在延遲期間。  
   
- **細節**  
+ **分鐘**  
  指定延遲，以分鐘為單位。 若要在每一次發生事件時產生回應，請指定 0 分和 0 秒。  
   
  **表示**  

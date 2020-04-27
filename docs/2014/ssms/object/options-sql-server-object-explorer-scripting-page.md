@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031932"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>選項（SQL Server 物件總管-腳本頁面）
@@ -39,12 +39,12 @@ ms.locfileid: "63031932"
   
 ### <a name="general-scripting-options"></a>一般指令碼選項  
  **分隔個別陳述式**  
- 使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 工具  /選項  /查詢執行  /SQL Server  /一般  /批次分隔符號  。 預設值是 False。 如需詳細資訊，請參閱[GO &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
+ 使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 [工具]****/選項]****/查詢執行]****/SQL Server]****/一般]****/[批次分隔符號]****。 預設值是 False。 如需詳細資訊，請參閱[GO &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
   
  **包含描述性標頭**  
  透過將每個物件的指令碼分隔成區段，在指令碼中加入描述性註解。 預設值是 True。 如需詳細資訊，請參閱[Comment &#40;transact-sql&#41;](/sql/t-sql/language-elements/comment-transact-sql)。  
   
- **包含 vardecimal 選項**  
+ **包括 Vardecimal 選項**  
  加入 Vardecimal 儲存選項。 預設值是 False。 如需詳細資訊，請參閱和[sp_db_vardecimal_storage_format &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)。  
   
  **編寫變更追蹤的指令碼**  
@@ -63,7 +63,7 @@ ms.locfileid: "63031932"
  **產生相依物件的指令碼**  
  針對執行選取物件之指令碼時所需的其他物件，產生指令碼。 預設值是 False。  
   
- **包含 If NOT EXISTS 子句**  
+ **包含 IF NOT EXISTS 子句**  
  加入陳述式，以便檢查每個物件是否都不存在資料庫中，然後再嘗試建立物件。 預設值是 False。 如需詳細資訊，請參閱[IF .。。或者，&#40;Transact-sql&#41;](/sql/t-sql/language-elements/if-else-transact-sql)和[EXISTS &#40;transact-sql&#41;](/sql/t-sql/language-elements/exists-transact-sql)。  
   
  **結構描述會限定物件名稱**  

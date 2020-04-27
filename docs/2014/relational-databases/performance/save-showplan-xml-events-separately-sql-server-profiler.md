@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150423"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML 事件 (SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63150423"
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [**進行連接後立即啟動追蹤**]，則不會顯示 [**追蹤屬性**] 對話方塊，而是開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
+    >  如果選取 [**進行連接後立即啟動追蹤**]，則不會顯示 [**追蹤屬性**] 對話方塊，而是開始追蹤。 於 [工具]**** 功能表，按一下 [選項]****，並清除 [連接後立即啟動追蹤]**** 核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤屬性]** 對話方塊的 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63150423"
   
     -   選取 [儲存至資料表]**** 核取方塊，將追蹤擷取至資料庫資料表。 選擇性地按一下 [**設定最大資料列數**]，然後指定一個值。  
   
-5.  (選擇性) 選取 **[啟用追蹤停止時間]** 核取方塊，然後指定停止日期和時間。  
+5.  （選擇性）選取 [**啟用追蹤停止時間**] 核取方塊，然後指定停止日期和時間。  
   
 6.  按一下 [事件選取範圍]**** 索引標籤。  
   
@@ -60,6 +60,6 @@ ms.locfileid: "63150423"
 11. 若要在 SQL Server Management Studio 中檢視 **Showplan XML** 事件，請在 **[檔案]** 功能表上指向 **[開啟]**，然後按一下 **[檔案]**。 導覽至您儲存 **Showplan XML** 事件檔案的目錄，以便選取一個檔案並加以開啟。 **Showplan XML** 事件檔案的副檔名為 .SQLPlan。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 SQL Server Profiler 中使用執行程式表結果分析查詢](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

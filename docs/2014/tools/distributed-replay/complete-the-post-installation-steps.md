@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63025656"
 ---
 # <a name="complete-the-post-installation-steps"></a>完成安裝後步驟
@@ -32,7 +32,7 @@ ms.locfileid: "63025656"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2.  **授與目標伺服器上的每個用戶端許可權**：在用戶端電腦上完成安裝用戶端服務之後，您必須手動將用戶端服務帳戶加入目標實例上的系統管理員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（sysadmin）角色。  
+2.  **將目標伺服器的權限授與每個用戶端**：當您已經完成在用戶端電腦上安裝用戶端服務的作業之後，就必須手動將用戶端服務帳戶加入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的系統管理員角色。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  您必須具備管理權限，才可安裝各種 Distributed Replay 功能。 只有擁有系統管理員權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入能夠將用戶端服務帳戶加入測試伺服器的系統管理員伺服器角色。 如需 Distributed Replay 安全性考量的詳細資訊，請參閱 [Distributed Replay 安全性](distributed-replay-security.md)。  

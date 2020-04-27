@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd38e382cc0b34de0498dd5ed9ce0237a5a1e07f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046130"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 例外處理的最佳作法
@@ -37,7 +37,7 @@ ms.locfileid: "63046130"
 |[防止無效的要求](preventing-invalid-requests.md)|描述可用以防止將無效的要求傳送到報表伺服器的技術。|  
 |[使用 Try 和 Catch 區塊](using-try-and-catch-blocks.md)|描述如何進一步使用 Try/Catch 區塊來增強應用程式的可靠性。|  
 |[處理未造成例外狀況的警告與案例](handling-warnings-and-cases-that-do-not-cause-exceptions.md)|說明如何處理錯誤才不會造成 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 擲回例外狀況。|  
-|[使用 Detail 屬性來處理特定的錯誤](using-the-detail-property-to-handle-specific-errors.md)|說明如何使用 **SoapException** 物件的 **Detail** 屬性，以程式設計的方式處理特定錯誤。|  
+|[使用詳細資料屬性來處理特定的錯誤](using-the-detail-property-to-handle-specific-errors.md)|說明如何使用 **SoapException** 物件的 **Detail** 屬性，以程式設計的方式處理特定錯誤。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Detail 屬性](../soapexception-class/detail-property.md)   

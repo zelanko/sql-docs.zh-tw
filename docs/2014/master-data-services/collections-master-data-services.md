@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483538"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
@@ -45,8 +45,8 @@ ms.locfileid: "65483538"
 |工作描述|主題|  
 |----------------------|-----------|  
 |啟用明確階層和集合的實體。|[啟用明確階層和集合的實體 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|建立新集合。|[建立 &#40;Master Data Services 的集合&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|將成員加入至現有的集合。|[將成員新增至集合 &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|建立新集合。|[建立集合 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|將成員加入至現有的集合。|[將成員加入至集合 &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

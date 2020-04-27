@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068165"
 ---
 # <a name="specify-source-information-partition-wizard"></a>指定來源資訊 (資料分割精靈)
@@ -29,7 +29,7 @@ ms.locfileid: "66068165"
  **量值群組**  
  選取此分割區的量值群組。  
   
- **Look in**  
+ [查詢]****  
  選取包含此資料分割之來源資料表的資料來源或資料來源檢視。 依預設，會選取量值群組所用的資料來源檢視。  
   
  **篩選資料表**  
@@ -49,6 +49,6 @@ ms.locfileid: "66068165"
 >  如果選取一個以上的資料表，就無法顯示 [限制資料列]**** 頁面，而且無法限制從所選資料表建立之資料分割的資料列。 若要限制每個資料分割的資料列，請為要建立資料分割的每個資料表執行一次資料分割精靈。  
   
 ## <a name="see-also"></a>另請參閱  
- [分割區 &#40;Analysis Services 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

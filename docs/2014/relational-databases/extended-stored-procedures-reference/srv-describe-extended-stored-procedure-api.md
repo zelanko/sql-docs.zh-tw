@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127337"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  針對資料列中的特定資料行定義資料行名稱以及來源和目的地資料類型。  
   
@@ -118,6 +117,6 @@ srcdata
 ## <a name="see-also"></a>另請參閱  
  [srv_sendrow &#40;擴充預存程式 API&#41;](srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype &#40;擴充預存程式 API&#41;](srv-setutype-extended-stored-procedure-api.md)   
- [srv_setcoldata &#40;擴充預存程式 API&#41;](srv-setcoldata-extended-stored-procedure-api.md)  
+ [srv_setcoldata &#40;擴充預存程序 API&#41;](srv-setcoldata-extended-stored-procedure-api.md)  
   
   

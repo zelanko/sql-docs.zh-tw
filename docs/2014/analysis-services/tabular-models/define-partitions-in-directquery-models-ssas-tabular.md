@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067313"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>資料分割和 DirectQuery 模式 (SSAS 表格式)
@@ -40,14 +40,14 @@ ms.locfileid: "66067313"
 ## <a name="partitions-in-cached-models-and-in-directquery-models"></a>快取模型和 DirectQuery 模型中的資料分割  
  當您設定 DirectQuery 資料分割時，您必須為此資料分割指定處理選項。  
   
- DirectQuery 資料分割有兩個處理選項。 若要設定這個屬性，請在 ** 或 ** 中使用 [資料分割管理員][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然後選取 [處理選項]**** 屬性。 下表列出這個屬性的值，並描述當每個值在連接字串上結合 DirectQueryUsage 屬性使用時的影響：  
+ DirectQuery 資料分割有兩個處理選項。 若要設定這個屬性，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [資料分割管理員]****，然後選取 [處理選項]**** 屬性。 下表列出這個屬性的值，並描述當每個值在連接字串上結合 DirectQueryUsage 屬性使用時的影響：  
   
-|**DirectQueryUsage**屬性|**處理選項**屬性|注意|  
+|**DirectQueryUsage**屬性|[處理選項]**** 屬性|注意|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|永不處理這個資料分割|當模型使用僅限 DirectQuery 時，不需要進行處理。<br /><br /> 在混合模型中，您可以將 DirectQuery 資料分割設定為永遠不會處理。 例如，如果您正在對一個非常大的資料集進行操作，並且不想要將完整結果新增至快取，則可以指定 DirectQuery 資料分割包含資料表中所有其他資料分割結果的聯集，然後永遠不處理聯集。 傳送至關聯式資料來源的查詢不會受到影響，並且對快取資料執行的查詢會合併來自其他資料分割的資料。|  
 |搭配使用 InMemory 和 DirectQuery|允許處理資料分割|如果模型使用混合模式，您應該針對記憶體中查詢和 DirectQuery 資料來源的查詢使用相同資料分割。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SSAS 表格式 &#40;的資料分割&#41;](partitions-ssas-tabular.md)  
+ [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)  
   
   

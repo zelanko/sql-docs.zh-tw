@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066605"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>設定資料行的資料類型 (SSAS 表格式)
@@ -50,7 +50,7 @@ ms.locfileid: "66066605"
   
 |模型資料類型|  
 |----------------------|  
-|Text<br /><br /> 十進位數字<br /><br /> 整數<br /><br /> 貨幣<br /><br /> TRUE/FALSE<br /><br /> Date|  
+|Text<br /><br /> 十進位數字<br /><br /> 整數<br /><br /> 貨幣<br /><br /> TRUE/FALSE<br /><br /> 日期|  
   
  如果發現資料的資料類型錯誤，或是與您想要的資料類型不同，您有幾個選擇：  
   
@@ -68,6 +68,6 @@ ms.locfileid: "66066605"
  如需商業智慧語意模型中使用的資料類型、如何以隱含方式轉換這些資料類型，以及如何在公式內使用不同資料類型等的詳細資訊，請參閱 [支援的資料類型 &#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SSAS 表格式&#41;支援的資料類型](data-types-supported-ssas-tabular.md)  
+ [支援的資料類型 &#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)  
   
   

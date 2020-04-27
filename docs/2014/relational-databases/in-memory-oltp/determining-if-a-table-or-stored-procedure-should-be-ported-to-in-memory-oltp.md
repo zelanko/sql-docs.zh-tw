@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072366"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
@@ -31,7 +31,7 @@ ms.locfileid: "63072366"
   
 -   產生交易效能分析報表來識別效能關鍵的資料表和預存程序。  
   
- 如需有關遷移方法的詳細資訊，請參閱[記憶體內部 OLTP-一般工作負載模式和遷移考慮](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  交易效能收集器和交易效能分析報表將協助您完成下列工作：  
   
@@ -53,11 +53,11 @@ ms.locfileid: "63072366"
   
  您可以使用任何方法來建立效能基準，包括但不限於使用效能計數器記錄或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 活動監視器。 您的效能基準和比較中所要使用的資訊包括：  
   
--   的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CPU 耗用量。  
+-    的 CPU 耗用量。  
   
--   的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]記憶體耗用量。  
+-    的記憶體耗用量。  
   
--   的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]i/o 活動。  
+-    的 I/O 活動。  
   
 -   在處理交易時的執行個體交易輸送量。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63072366"
   
 7.  在下一個畫面上，按一下 **[完成] 結束**嚮導。  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>在本機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上設定資料收集  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>在本機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上設定資料收集  
  資料收集需要啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent。 您只需要在伺服器上設定一個資料收集器。  
   
  您可以在 SQL Server 2012 或更新版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上設定資料收集器。  
@@ -118,7 +118,7 @@ ms.locfileid: "63072366"
   
 6.  驗證選取項目。 按 [**上一步**] 修改設定。 完成時按一下 **[完成]** 。  
   
-###  <a name="xxx"></a>設定遠端[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上的資料收集  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>設定遠端[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上的資料收集  
  您必須在收集資料所在的執行個體上啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 才能進行資料收集。  
   
  您可以在 SQL Server 2012 或更新版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上設定資料收集器。  

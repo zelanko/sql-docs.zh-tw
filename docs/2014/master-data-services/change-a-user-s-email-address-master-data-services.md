@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483587"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>變更使用者的電子郵件地址 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更傳送通知的電子郵件地址，以及通知電子郵件的預設格式。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [使用者及群組]**** 功能區域的權限。  
@@ -39,11 +39,11 @@ ms.locfileid: "65483587"
   
 5.  更新電子郵件地址或電子郵件格式。  
   
-6.  按一下 [檔案]  。  
+6.  按一下 **[儲存]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [指派功能區域許可權 &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [指派功能區域權限 &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  

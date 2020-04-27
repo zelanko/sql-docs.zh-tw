@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074900"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授與物件中繼資料的讀取定義權限 (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66074900"
   
  建議您在設定專用處理`Read Definition`的角色時，在資料庫層級包含許可權。 擁有`Read Definition`可讓非系統管理員在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查看模型的物件階層，並流覽至個別的物件以進行後續處理。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]****，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到的實例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、在物件總管中展開適當資料庫的 [**角色**]，然後按一下資料庫角色（或建立新的資料庫角色）。  
   
 2.  在 [**一般**] 索引標籤`Read Definition`上，選取選項。  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66074900"
   
 ## <a name="see-also"></a>另請參閱  
  [授與資料庫許可權 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [授與處理許可權 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [授與處理權限 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

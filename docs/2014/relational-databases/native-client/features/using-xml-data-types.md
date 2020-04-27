@@ -1,5 +1,5 @@
 ---
-title: 使用 XML 資料類型 |Microsoft Docs
+title: 使用 XML 資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -31,15 +31,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136668"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進的**xml**資料類型可讓您將 xml 檔和片段儲存在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫中。 
-  **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如果是其他內建類型，當您建立資料表作為變數類型、參數類型、函式傳回型別，或是在 CAST 和 CONVERT 函式中時，可以使用 **xml** 資料類型作為資料行類型。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的 **xml** 資料類型可讓您將 XML 文件和片段儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如果是其他內建類型，當您建立資料表作為變數類型、參數類型、函式傳回型別，或是在 CAST 和 CONVERT 函式中時，可以使用 **xml** 資料類型作為資料行類型。  
   
 ## <a name="programming-considerations"></a>程式設計考量  
  XML 可以是自我描述的，因為它可以選擇性地包含指定文件編碼的 XML 標頭，例如：  
@@ -59,13 +58,12 @@ ms.locfileid: "63136668"
   
 -   文字字串  
   
--   
-  **ISequentialStream**  
+-   **ISequentialStream**  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不包含 SAX 讀取器，但是**ISequentialStream**可以輕鬆地傳遞到 MSXML 中的 sax 和 DOM 物件。  
   
- **ISequentialStream**應該用來抓取大型 XML 檔。 用於其他大數值類型的相同技術也適用於 XML。 如需詳細資訊，請參閱[使用大數數值型別](using-large-value-types.md)。  
+ **ISequentialStream**應該用來抓取大型 XML 檔。 用於其他大數值類型的相同技術也適用於 XML。 如需詳細資訊，請參閱[使用大數值類型](using-large-value-types.md)。  
   
  儲存在資料列集之 XML 類型資料行中的資料也可以由應用程式，透過 **IRow::GetColumns**、**IRowChange::SetColumns** 和 **ICommand::Execute** 之類的一般介面擷取、插入或更新。 與抓取案例類似，應用程式可以將文字字串或**ISequentialStream**傳遞給[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者。  
   
@@ -83,36 +81,36 @@ ms.locfileid: "63136668"
   
 |資料類型|到伺服器<br /><br /> **XML**|到伺服器<br /><br /> **非 XML**|從伺服器<br /><br /> **XML**|從伺服器<br /><br /> **非 XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|通過<sup>6,7</sup>|錯誤<sup>1</sup>|OK<sup>11，6</sup>|錯誤<sup>8</sup>|  
+|DBTYPE_XML|通過<sup>6,7</sup>|錯誤<sup>1</sup>|沒有問題<sup>11, 6</sup>|錯誤<sup>8</sup>|  
 |DBTYPE_BYTES|通過<sup>6,7</sup>|N/A<sup>2</sup>|沒有問題 <sup>11, 6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|確定<sup>4、6、12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_BSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題 <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|OK<sup>6、9、10</sup>|N/A <sup>2</sup>|沒有問題<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|沒有問題<sup>6, 9, 10</sup>|N/A <sup>2</sup>|沒有問題<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|透過 **ISequentialStream** 的位元組資料流<sup>7</sup>|N/A <sup>2</sup>|透過 **ISequentialStream** 的位元組資料流<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|不適用|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>如果使用**ICommandWithParameters：： SetParameterInfo**指定了 DBTYPE_XML 以外的伺服器類型，且存取子類型為 DBTYPE_XML，則在執行語句（DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）時，就會發生錯誤。否則，資料會傳送至伺服器，但是伺服器會傳回錯誤，指出沒有從 XML 到參數資料類型的隱含轉換。  
   
  <sup>2</sup>超出本主題的範圍。  
   
- <sup>3</sup>格式為 UTF-16，不帶勾號（BOM），無編碼規格，無 null 終止。  
+ <sup>3</sup>格式為 UTF-16，無位元組順序標示 (BOM)，無編碼規格，無 Null 結束。  
   
- <sup>4</sup>格式為 UTF-16，無 BOM，無編碼規格，null 終止。  
+ <sup>4</sup>格式為 UTF-16，無 BOM，無編碼規格，Null 結束。  
   
- <sup>5</sup>格式是在用戶端字碼頁中以 null 結束字元編碼的多位元組字元。 從伺服器提供的 Unicode 進行轉換可能會造成資料損毀，因此，強烈建議您不要使用此繫結。  
+ <sup>5</sup>格式為以用戶端字碼頁搭配 Null 結束字元編碼的多位元組字元。 從伺服器提供的 Unicode 進行轉換可能會造成資料損毀，因此，強烈建議您不要使用此繫結。  
   
  <sup>6</sup>可能會使用 BY_REF。  
   
  <sup>7</sup>UTF-16 資料必須以 BOM 開頭。 如果不是，伺服器可能無法正確辨識編碼。  
   
- <sup>8</sup>在建立存取子時間或提取時，可能會發生驗證。 錯誤為 DB_E_ERRORSOCCURRED，繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
+ <sup>8</sup>建立存取子時，或提取時，可能會進行驗證。 錯誤為 DB_E_ERRORSOCCURRED，繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
   
- <sup>9</sup>資料會先使用用戶端字碼頁轉換為 Unicode，然後再傳送至伺服器。 如果文件編碼與用戶端字碼頁不符，這可能會導致資料損毀，因此，強烈建議您不要使用此繫結。  
+ <sup>9</sup>資料會先使用用戶端字碼頁轉換為 Unicode，然後再傳送到伺服器。 如果文件編碼與用戶端字碼頁不符，這可能會導致資料損毀，因此，強烈建議您不要使用此繫結。  
   
- <sup>10</sup>BOM 一律會加入至傳送至伺服器的資料。 如果資料已經以 BOM 開頭，這會在緩衝區的開頭產生兩個 BOM。 伺服器會使用第一個 BOM 將編碼識別為 UTF-16，然後再捨棄它。 第二個 BOM 會解譯為零寬度的不分行空格字元。  
+ <sup>10</sup>BOM 一律會新增到傳送至伺服器的資料中。 如果資料已經以 BOM 開頭，這會在緩衝區的開頭產生兩個 BOM。 伺服器會使用第一個 BOM 將編碼識別為 UTF-16，然後再捨棄它。 第二個 BOM 會解譯為零寬度的不分行空格字元。  
   
- <sup>11</sup>格式為 UTF-16，無編碼規格，BOM 會加入到從伺服器接收的資料。 如果伺服器傳回空字串，仍然會將 BOM 傳回到應用程式。 如果緩衝區長度為奇數位元組，則會正確地截斷資料。 如果在區塊中傳回整個值，可以串連這些區塊以重新組成正確的值。  
+ <sup>11</sup>格式為 UTF-16，無編碼規格，BOM 會加入到接收自伺服器的資料中。 如果伺服器傳回空字串，仍然會將 BOM 傳回到應用程式。 如果緩衝區長度為奇數位元組，則會正確地截斷資料。 如果在區塊中傳回整個值，可以串連這些區塊以重新組成正確的值。  
   
  <sup>12</sup>如果緩衝區長度小於兩個字元（也就是沒有足夠的空間來進行 null 終止），則會報告溢位錯誤。  
   
@@ -193,8 +191,7 @@ ms.locfileid: "63136668"
  為了透過 OLE DB 支援**xml**資料類型，Native Client 會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行一些變更，包括新增[ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自**ICommandWithParameters**的三個方法以外，**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供用來處理伺服器特定資料類型的[GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)和[SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)方法。  
   
 > [!NOTE]  
->  
-  **ISSCommandWithParameters** 介面也會使用新的 SSPARAMPROPS 結構。  
+>  **ISSCommandWithParameters** 介面也會使用新的 SSPARAMPROPS 結構。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會將下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定的資料行加入至**IColumnRowset：： GetColumnsRowset**方法所傳回的資料列集。 這些資料行包含 XML 結構描述集合的三部分名稱。 對於非 XML 資料行或不具類型的 XML 資料行，所有三個資料行都會使用 NULL 的預設值。  
@@ -208,7 +205,7 @@ ms.locfileid: "63136668"
 #### <a name="the-irowset-interface"></a>IRowset 介面  
  XML 資料行中的 XML 執行個體會透過 **IRowset::GetData** 方法擷取。 根據用戶端所指定的繫結，可以將 XML 執行個體當做 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES 擷取，或透過 DBTYPE_IUNKNOWN，當做介面擷取。 如果取用者指定 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，提供者會將 XML 執行個體轉換為使用者要求的類型，並將其放入對應繫結中所指定的位置。  
   
- 如果取用者指定 DBTYPE_IUNKNOWN，並將 *pObject* 引數設定為 NULL，或將 *pObject* 引數設定為 IID_IsequentialStream，提供者會將 **ISequentialStream** 介面傳回到取用者，讓取用者可以用資料流的形式，將 XML 資料傳出資料行。 然後， **ISequentialStream**會傳回 XML 資料做為 Unicode 字元資料流。  
+ 如果取用者指定 DBTYPE_IUNKNOWN，並將 *pObject* 引數設定為 NULL，或將 *pObject* 引數設定為 IID_IsequentialStream，提供者會將 **ISequentialStream** 介面傳回到取用者，讓取用者可以用資料流的形式，將 XML 資料傳出資料行。 **ISequentialStream** 接著會傳回 XML 資料，作為 Unicode 字元資料流。  
   
  傳回繫結至 DBTYPE_IUNKNOWN 的 XML 值時，提供者會報告 `sizeof (IUnknown *)` 的大小值。 請注意，這與資料行繫結為 DBTYPE_IUnknown 或 DBTYPE_IDISPATCH 時所採取的方法一致，而且在無法判斷確實的資料行大小時，夠過 DBTYPE_IUNKNOWN/ISequentialStream 所採取的方法一致。  
   
@@ -222,11 +219,10 @@ ms.locfileid: "63136668"
  在 DBTYPE_IUNKNOWN/ISequentialStream 的案例中，如果取用者沒有指定任何儲存物件，取用者必須事先建立**ISequentialStream**物件、使用物件系結 XML 檔，然後透過**IRowsetChange：： SetData**方法將物件傳遞給提供者。 取用者也可以建立儲存物件、將 pObject 引數設定為 IID_IsequentialStream、建立 **ISequentialStream** 物件，然後將 **ISequentialStream** 物件傳遞到 **IRowsetChange::SetData** 方法。 在兩種情況下，提供者可以透過 **ISequentialStream** 物件擷取 XML 物件，並將其插入到適當的資料行中。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 介面  
- **IRowsetUpdate**介面提供延遲更新的功能。 在取用者呼叫**IRowsetUpdate： Update**方法之前，資料列集所提供的資料不會提供給其他交易使用。  
+ **IRowsetUpdate** 介面提供延遲更新的功能。 在取用者呼叫**IRowsetUpdate： Update**方法之前，資料列集所提供的資料不會提供給其他交易使用。  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind 介面  
- 
-  **IRowsetFind::FindNextRow** 方法無法搭配 **xml** 資料類型使用。 呼叫 **IRowsetFind::FindNextRow** 而且 *hAccessor* 引數指定 DBTYPE_XML 的資料行時，會傳回 DB_E_BADBINDINFO。 不管要搜尋的是什麼資料行類型，都會發生這個狀況。 對於其他任何繫結類型，如果要搜尋的資料行屬於 **xml** 資料類型，**FindNextRow** 會失敗並傳回 DB_E_BADCOMPAREOP。  
+ **IRowsetFind::FindNextRow** 方法無法搭配 **xml** 資料類型使用。 呼叫 **IRowsetFind::FindNextRow** 而且 *hAccessor* 引數指定 DBTYPE_XML 的資料行時，會傳回 DB_E_BADBINDINFO。 不管要搜尋的是什麼資料行類型，都會發生這個狀況。 對於其他任何繫結類型，如果要搜尋的資料行屬於 **xml** 資料類型，**FindNextRow** 會失敗並傳回 DB_E_BADCOMPAREOP。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
  在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式中，已對各種函數進行一些變更，以支援**xml**資料類型。  
@@ -245,7 +241,7 @@ ms.locfileid: "63136668"
  當[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)函數中無法判斷資料行大小時，Native Client ODBC 驅動程式會報告 SQL_SS_LENGTH_UNLIMITED。  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
- Native Client ODBC 驅動程式會將 SQL_SS_LENGTH_UNLIMITED 報告為 SQLGetTypeInfo 函數中**xml**資料類型的最大 COLUMN_SIZE。 [](../../native-client-odbc-api/sqlgettypeinfo.md) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ Native Client ODBC 驅動程式會將 SQL_SS_LENGTH_UNLIMITED 報告為 SQLGetTypeInfo 函數中**xml**資料類型的最大 COLUMN_SIZE。 [SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ### <a name="sqlprocedurecolumns"></a>SQLProcedureColumns  
  [SQLProcedureColumns](../../native-client-odbc-api/sqlprocedurecolumns.md)函數具有與**SQLColumns**函數相同的資料行新增專案。  

@@ -1,5 +1,5 @@
 ---
-title: 資料表值參數資料列集建立 |Microsoft Docs
+title: 建立資料表值參數資料列集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046498"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>建立資料表值參數資料列集
@@ -25,13 +25,11 @@ ms.locfileid: "63046498"
  資料表值參數資料列集物件是由取用者針對輸入參數所明確建立，而且是透過多個工作階段層級介面。 每個資料表值參數都有資料表值參數資料列集物件的一個執行個體。 取用者可以建立資料表值參數資料列集物件，其方式是提供已知的中繼資料資訊 (靜態案例) 或是透過提供者介面來探索 (動態案例)。 下列章節描述這兩個案例。  
   
 ## <a name="static-scenario"></a>靜態案例  
- 已知類型資訊時，取用者會使用 ITableDefinitionWithConstraints：： CreateTableWithConstraints 來具現化對應至資料表值參數的資料表值參數資料列集物件。  
+ 當類型資訊已知時，取用者會使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 來具現化對應至資料表值參數的資料表值參數資料列集物件。  
   
- *Guid*欄位（*pTableID*參數）包含特殊 guid （CLSID_ROWSET_TVP）。 
-  *pwszName* 成員包含取用者想要具現化之資料表值參數類型的名稱。 
-  *eKind* 欄位將會設定為 DBKIND_GUID_NAME。 當此陳述式為特定的 SQL 時，就需要這個名稱；如果它是程序呼叫，則此名稱為選擇性。  
+ *guid* 欄位 (*pTableID* 參數) 包含特殊 GUID (CLSID_ROWSET_TVP)。 *pwszName* 成員包含取用者想要具現化之資料表值參數類型的名稱。 *eKind* 欄位將會設定為 DBKIND_GUID_NAME。 當此陳述式為特定的 SQL 時，就需要這個名稱；如果它是程序呼叫，則此名稱為選擇性。  
   
- 就匯總而言，取用者會傳遞*pUnkOuter*參數與控制 IUnknown。  
+ 為了彙總，取用者會傳遞具有控制之 IUnknown 的 *pUnkOuter* 參數。  
   
  資料表值參數資料列集物件屬性是唯讀的，因此取用者不應該在*rgPropertySets*中設定任何屬性。  
   
@@ -48,7 +46,7 @@ ms.locfileid: "63046498"
   
  在此案例中，提供者會代表取用者包含來自伺服器之資料表值參數資料列集物件的相關類型資訊。  
   
- 在靜態案例中，應該將*pTableID*和*pUnkOuter*參數設定為。 接著[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供者會從伺服器取得類型資訊（資料行資訊和條件約束），並透過*ppRowset*參數傳回資料表值參數資料列集物件。 這項作業需要與伺服器通訊，因此其效能不比靜態案例。 動態案例只適用於參數化程序呼叫。  
+ *pTableID* 和 *pUnkOuter* 參數的設定應該與靜態案例相同。 接著[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供者會從伺服器取得類型資訊（資料行資訊和條件約束），並透過*ppRowset*參數傳回資料表值參數資料列集物件。 這項作業需要與伺服器通訊，因此其效能不比靜態案例。 動態案例只適用於參數化程序呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料表值參數 &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
