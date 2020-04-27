@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482756"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
@@ -46,12 +46,12 @@ ms.locfileid: "65482756"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到適用于 Excel 的 mds 增益集 &#40;的 MDS 儲存機制&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |將 MDS 資料載入 Excel 中。|[將資料從 MDS 載入 Excel 中](export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [適用于 Excel 的 MDS 增益集的連接 &#40;&#41;](connections-mds-add-in-for-excel.md)  
+-   [連接 &#40;適用於 Excel 的 MDS 增益集&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [載入適用于 Excel 的 MDS 增益集&#41;的資料 &#40;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

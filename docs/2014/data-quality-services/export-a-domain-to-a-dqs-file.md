@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5b12aa1456f7f4009f48a8c8609f296dfa4b27d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484346"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>將定義域匯出成 .dqs 檔案
@@ -26,17 +26,17 @@ ms.locfileid: "65484346"
   
  匯出程序所建立的 .dqs 資料檔已經過加密，因此無法檢視內容。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要將定義域匯出到 .dqs 資料檔，您必須已經建立及選取單一定義域或是包含多個單一定義域的複合定義域。 您不需要擁有匯出目標的 .dqs 檔案，系統會為您建立一個檔案。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將定義域匯出到 .dqs 資料檔。  
   
-##  <a name="Export"></a>將網域匯出至 dqs 檔案  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>將網域匯出至 dqs 檔案  
  您可以從任何 [定義域管理] 頁面匯出。 您可以從使用者介面的控制項或是 [定義域清單] 窗格之內容功能表的命令中取得匯出命令。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
@@ -47,11 +47,11 @@ ms.locfileid: "65484346"
   
 4.  按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出定義域]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單中的定義域，指向 **[匯出]**，然後按一下 **[匯出定義域]**。  
   
-5.  在 [匯出到資料檔]**** 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留預設名稱、將 [DQS 資料檔 (**.dqs)]\*** 保留為 [檔案類型]****，然後按一下 [儲存]****。  
+5.  在 [匯出到資料檔]**** 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留預設名稱、將 [DQS 資料檔 (\*.dqs)]**** 保留為 [檔案類型]****，然後按一下 [儲存]****。  
   
 6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 [確定]  。  
   
-##  <a name="FollowUp"></a>後續操作：將定義域匯出至 dqs 檔案之後  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>後續操作：將定義域匯出至 dqs 檔案之後  
  在您將定義域匯出到 .dqs 檔案之後，您可以將此定義域匯入另一個知識庫中。  
   
   

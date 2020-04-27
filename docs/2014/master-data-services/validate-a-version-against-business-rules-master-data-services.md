@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e33526df02cff22adbd56bfbfc2f25cef1c1c052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482314"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
@@ -30,12 +30,12 @@ ms.locfileid: "65482314"
 > [!NOTE]  
 >  所有成員都必須通過驗證之後，才能認可版本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)。  
   
 -   版本的狀態必須是 [開啟]**** 或 [已鎖定]****。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65482314"
   
 3.  在 [驗證版本]**** 頁面上，選取要驗證的模型和版本。  
   
-4.  按一下 [驗證]****。  
+4.  按一下 **[驗證]** 。  
   
 5.  在確認對話方塊中按一下 **[確定]**。  
   

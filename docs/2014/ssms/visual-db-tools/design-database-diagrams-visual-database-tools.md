@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316087"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>設計資料庫圖表 (Visual Database Tools)
@@ -37,35 +37,35 @@ ms.locfileid: "63316087"
 ## <a name="tables-and-columns-in-a-database-diagram"></a>資料庫圖表中的資料表和資料行  
  資料庫圖表中的每個資料表都具有三項功能：標題列、資料列選取器和一組屬性欄位。  
   
- **標題列**標題列會顯示資料表的名稱  
+ **標題列** ：標題列顯示資料表的名稱  
   
  如果您已經修改某個資料表但尚未儲存，該資料表名稱的後方將出現星號 (*) 表示尚未儲存變更。 如需儲存修改過的資料表和圖表的詳細資訊，請參閱 [使用資料庫圖表 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- 資料**列選取器**您可以按一下資料列選取器，選取資料表中的資料庫資料行。 如果該資料行位於資料表的主索引鍵，資料列選取器將顯示索引鍵符號。 如需主鍵的詳細資訊，請參閱[primary 和 Foreign Key 條件約束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
+ **資料列選取器** ：您可以按一下資料列選取器，選取資料表中的資料庫資料行。 如果該資料行位於資料表的主索引鍵，資料列選取器將顯示索引鍵符號。 如需主鍵的詳細資訊，請參閱[primary 和 Foreign Key 條件約束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
   
- **屬性資料行**只有在資料表的特定視圖中，才會顯示內容資料行的集合。 您可以使用五種檢視方法來檢視資料表，任何一種方法都可以協助您管理圖表的大小和配置。  
+ **屬性資料行** ：屬性資料行組只有在資料表中的特定檢視才可見。 您可以使用五種檢視方法來檢視資料表，任何一種方法都可以協助您管理圖表的大小和配置。  
   
  如需資料表檢視的詳細資訊，請參閱[自訂圖表中顯示的資料量 &#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)。  
   
 ## <a name="relationships-in-a-database-diagram"></a>資料庫圖表中的關聯性  
  資料庫圖表中的每個關聯性都具有三項功能：結束點、行樣式和相關資料表。  
   
- **端點**這一行的端點會指出關聯性為一對一或一對多。 如果關聯性在結束點具有一個索引鍵，且在其他結束點擁有 ∞，該關聯性即為一對多關聯性 (One-To-Many Relationship)。 如果關聯性在每個結束點都擁有一個索引鍵，該關聯性即為一對一關聯性。  
+ **結束點** ：行的結束點可以顯示其關聯性為一對一或一對多。 如果關聯性在結束點具有一個索引鍵，且在其他結束點擁有 ∞，該關聯性即為一對多關聯性 (One-To-Many Relationship)。 如果關聯性在每個結束點都擁有一個索引鍵，該關聯性即為一對一關聯性。  
   
- **線條樣式**這一行本身（而非其端點）指出資料庫管理系統（DBMS）是否會在將新資料加入至外鍵資料表時，強制執行關聯性的參考完整性。 如果該行為實線，當您在外部索引鍵資料表中加入或修改資料列時，DBMS 將強制使用關聯性的參考完整性。 如果該行為虛線，當您在外部索引資料表中加入或修改資料列時，DBMS 將不會強制使用關聯性的參考完整性。  
+ **行樣式** ：資料行本身 (非其結束點) 可指出當新資料加入至外部索引鍵表格時，資料庫管理系統 (DBMS) 是否會強制使用關聯性的參考完整性 (Referential Integrity)。 如果該行為實線，當您在外部索引鍵資料表中加入或修改資料列時，DBMS 將強制使用關聯性的參考完整性。 如果該行為虛線，當您在外部索引資料表中加入或修改資料列時，DBMS 將不會強制使用關聯性的參考完整性。  
   
- **相關資料表**關聯性線表示一個資料表與另一個資料表之間存在外鍵關聯性。 如果是一對多關聯性，外部索引鍵表即為該行 ∞ 符號旁的資料表。 如果該行的兩個結束點都與同一個資料表連接，則該關聯性即為自反關聯性 (Reflexive Relationship)。 如需詳細資訊，請參閱[繪製自反關聯性 &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)。  
+ **相關資料表** ：關聯性行將指出兩個表格之間是否存在外部索引鍵關聯性。 如果是一對多關聯性，外部索引鍵表即為該行 ∞ 符號旁的資料表。 如果該行的兩個結束點都與同一個資料表連接，則該關聯性即為自反關聯性 (Reflexive Relationship)。 如需詳細資訊，請參閱[繪製自反關聯性 &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [了解資料庫圖表擁有權 &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
- [在資料庫關係圖設計工具中導覽 &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
+ [在資料庫圖表設計工具中導覽 &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
   
- [設定資料庫關係圖設計工具 &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
+ [設定資料庫圖表設計工具 &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
   
  [升級舊版的資料庫圖表 &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
- [開啟資料庫關係圖設計工具 &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
+ [開啟資料庫圖表設計工具 &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料庫關係圖 &#40;Visual Database Tools&#41;](visual-database-tools.md)   

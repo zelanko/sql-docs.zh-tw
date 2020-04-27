@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265375"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>自訂組件中的判斷提示權限
@@ -32,8 +32,7 @@ ms.locfileid: "63265375"
   
 2.  修改報表伺服器原則組態檔，以授與自訂組件所需的權限。 如需安全性原則設定檔的詳細資訊，請參閱[使用 Reporting Services 安全性原則檔](../extensions/secure-development/using-reporting-services-security-policy-files.md)。  
   
-3.  判斷提示所需的權限，做為進行安全呼叫的方法之一部分。 這是必要的動作，因為報表伺服器所呼叫的自訂組譯碼是報表運算式主機組件的一部分，報表運算式主機組件預設會以 **Execution** 權限執行。 
-  **Execution** 權限集合允許執行程式碼，但不允許使用受保護的資源。  
+3.  判斷提示所需的權限，做為進行安全呼叫的方法之一部分。 這是必要的動作，因為報表伺服器所呼叫的自訂組譯碼是報表運算式主機組件的一部分，報表運算式主機組件預設會以 **Execution** 權限執行。 **Execution** 權限集合允許執行程式碼，但不允許使用受保護的資源。  
   
 4.  如果使用強式名稱簽署自訂組件，請將它標示為 **AllowPartiallyTrustedCallersAttribute**。 這是必要的動作，因為自訂組件是從報表運算式中呼叫，而報表運算式是報表運算式主機組件的一部分，所以預設不會授與 **FullTrust**，因此它屬於「部分信任的」呼叫端。 如需詳細資訊，請參閱[使用強式名稱自訂組件](using-strong-named-custom-assemblies.md)。  
   

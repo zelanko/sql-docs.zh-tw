@@ -14,17 +14,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bacb199a87cd0d9e388b49b00cbc2e245571d2ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483707"
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，屬性群組有助於組織實體中的屬性。 當實體包含多個屬性時，屬性群組可改善實體在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中顯示的方式。  
   
 ## <a name="how-attribute-groups-change-the-display"></a>屬性群組如何變更顯示  
- 屬性群組會以方格上方的索引標籤形式顯示在 ** 的 [總管]**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 功能區域。  
+ 屬性群組會以方格上方的索引標籤形式顯示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的 [總管]**** 功能區域。  
   
  如果實體有大量屬性，當您在 [總管]**** 的方格中檢視該實體時，必須捲動至右方，才能檢視所有屬性。 若要避免此捲動，您可以建立屬性群組。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65483707"
   
 -   沒有方法可以隱藏 [所有屬性]**** 索引標籤。  
   
- 屬性群組是在**的 [系統管理]**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 功能區域中管理的。  
+ 屬性群組是在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的 [系統管理]**** 功能區域中管理的。  
   
 ## <a name="show-or-hide-attribute-groups"></a>顯示或隱藏屬性群組  
  當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。 如需如何顯示此群組的詳細資訊，請參閱 [讓使用者看到屬性群組 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)。  
@@ -48,12 +48,12 @@ ms.locfileid: "65483707"
 |工作描述|主題|  
 |----------------------|-----------|  
 |建立新的屬性群組並加入屬性。|[建立屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
-|讓使用者看到屬性群組。|[讓使用者可以看到屬性群組 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
-|變更現有屬性群組的名稱。|[變更屬性組名 &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
+|讓使用者看到屬性群組。|[讓使用者看到屬性群組 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
+|變更現有屬性群組的名稱。|[變更屬性群組名稱 &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
 |刪除現有屬性群組。|[刪除屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1477f934dfa8a23fa5498124b74c9a150b24a33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480068"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>指派模型物件權限 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65480068"
 > [!NOTE]  
 >  當您指派某個模型的權限時，會明確拒絕所有其他模型的權限。 如果未指派模型物件權限，使用者或群組就無法存取 **[總管]** 中的資料。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ### <a name="to-assign-model-object-permissions"></a>若要指派模型物件權限  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65480068"
   
 8.  從功能表中，選取 [**唯讀**]、[**更新**] 或 [**拒絕**]。  
   
-9. 按一下 [檔案]  。  
+9. 按一下 **[儲存]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   
@@ -60,6 +60,6 @@ ms.locfileid: "65480068"
 ## <a name="see-also"></a>另請參閱  
  [刪除模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-model-object-permissions-master-data-services.md)   
  [模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [建立模型系統管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
+ [建立模型管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   
   

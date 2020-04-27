@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489522"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>工作 9：使用主資料管理員建立衍生階層
@@ -42,7 +42,7 @@ ms.locfileid: "65489522"
   
      ![目前層級可用的實體和階層](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "目前層級可用的實體和階層")  
   
-8.  從**** 可用的**層級拖曳狀態： SuppliersInState**到**目前的層級： SuppliersInState**。 畫面應具有**目前的層級**，如下圖所示。  
+8.  從**State**可用的**層級拖曳狀態： SuppliersInState**到**目前的層級： SuppliersInState**。 畫面應具有**目前的層級**，如下圖所示。  
   
      ![衍生階層的目前層級和預覽](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "衍生階層的目前層級和預覽")  
   
@@ -61,6 +61,6 @@ ms.locfileid: "65489522"
      ![檔案總管中的衍生階層](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "檔案總管中的衍生階層")  
   
 ## <a name="next-step"></a>後續步驟  
- [第 5 課：使用 SSIS 自動化清理和比對](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [第 5 課：使用 SSIS 將清理和比對自動化](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

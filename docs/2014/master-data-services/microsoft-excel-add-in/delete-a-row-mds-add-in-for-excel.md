@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482685"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>刪除資料列 (適用於 Excel 的 MDS 增益集)
@@ -23,7 +23,7 @@ ms.locfileid: "65482685"
 > [!NOTE]  
 >  管理員可以重新啟動刪除的成員。 如需詳細資訊，請參閱[重新啟用成員或集合 &#40;Master Data Services&#41;](../reactivate-a-member-or-collection-master-data-services.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有 [總管]**** 功能區域的權限。  

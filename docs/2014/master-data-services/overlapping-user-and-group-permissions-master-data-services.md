@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478879"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重疊的使用者和群組的權限 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65478879"
   
  如果使用者是多個群組的成員，而且這些群組擁有主資料管理員的存取權，將適用以下規則：  
   
--   [**拒絕**] 會覆寫所有其他許可權。  
+-   **[拒絕]** 會覆寫所有其他的權限。  
   
 -   **更新**會覆寫**唯讀**。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "65478879"
   
 ## <a name="see-also"></a>另請參閱  
  [如何判斷許可權 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
- [重迭的模型和成員許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

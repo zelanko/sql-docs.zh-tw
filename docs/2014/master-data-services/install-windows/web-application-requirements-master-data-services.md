@@ -11,19 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482878"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是由 Internet Information Services (IIS) 裝載的 Web 應用程式。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 僅適用於 Internet Explorer (IE) 7 或更新版本。 不支援 IE 7 及更新版本、Microsoft Edge 和 Chrome。  
   
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是由 Internet Information Services (IIS) 裝載的 Web 應用程式。 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 僅適用於 Internet Explorer (IE) 7 或更新版本。 不支援 IE 7 及更新版本、Microsoft Edge 和 Chrome。  
-  
- 使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以建立及設定 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。 
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 會在本機電腦上設定 IIS，因此最適合用於初始 Web 組態工作。 例如在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 環境中設定單一 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的向外延展部署中設定第一個 Web 應用程式。 您可以使用 IIS 工具執行更複雜的工作，例如在向外延展部署中設定多部 Web 伺服器。  
+ 使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以建立及設定 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 會在本機電腦上設定 IIS，因此最適合用於初始 Web 組態工作。 例如在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 環境中設定單一 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的向外延展部署中設定第一個 Web 應用程式。 您可以使用 IIS 工具執行更複雜的工作，例如在向外延展部署中設定多部 Web 伺服器。  
   
 > [!NOTE]  
 >  安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 元件的任何電腦都必須獲得授權。 如需詳細資訊，請參閱使用者授權合約 (EULA)。  
@@ -33,15 +30,9 @@ ms.locfileid: "65482878"
 ### <a name="operating-system"></a>作業系統  
  下列 Windows 作業系統包含了 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 應用程式及 Web 服務所需的 Internet Information Services (IIS) 功能。  
   
-|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer (64 位元) x64|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64 位元) x64|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64 位元) x64|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer (64 位元) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64 位元) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64 位元) x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
-|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 專業版、企業版與旗艦版<br /><br /> Windows 8.0 專業版、企業版與旗艦版|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 專業版、企業版與旗艦版<br /><br /> Windows 8.0 專業版、企業版與旗艦版|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
  如需版本所支援之 Windows 作業系統的完整清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
@@ -56,7 +47,7 @@ ms.locfileid: "65482878"
   
 ||  
 |-|  
-|Web 伺服器<br /><br /> 一般 HTTP 功能<br /><br /> 靜態內容<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 影片應用程式開發<br /><br /> ASP.NET<br /><br /> .NET 擴充性<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 安全性<br /><br /> Windows 驗證<br /><br /> 要求篩選<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 管理工具<br /><br /> IIS 管理主控台|  
+|Web 伺服器<br /><br /> 一般 HTTP 功能<br /><br /> 靜態內容<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 應用程式開發<br /><br /> ASP.NET<br /><br /> .NET 擴充性<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 安全性<br /><br /> Windows 驗證<br /><br /> 要求篩選<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 管理工具<br /><br /> IIS 管理主控台|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>角色和角色服務 (Windows Server 2012 或 Windows 8 作業系統)  
  在 Windows Server 2012 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 **[伺服器管理員]** 來安裝 **[網頁伺服器 (IIS)]** 角色及下列必要的角色服務。  
@@ -66,7 +57,7 @@ ms.locfileid: "65482878"
   
 ||  
 |-|  
-|網際網路資訊服務<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 影片應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [注意：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
+|網際網路資訊服務<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [注意：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>功能 (Windows Server 2008 或 Windows Server 2008 R2、Windows 7 作業系統)  
  在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或 Windows Server 2008 R2 上，您可以使用 **[伺服器管理員]** 來安裝下列必要的功能。  
@@ -98,6 +89,6 @@ ms.locfileid: "65482878"
 ## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](install-master-data-services.md)   
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
- [Web 設定頁面 &#40;Master Data Services 組態管理員&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
+ [Web 組態頁面 &#40;Master Data Services 組態管理員&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

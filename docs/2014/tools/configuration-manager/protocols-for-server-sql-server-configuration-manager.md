@@ -1,5 +1,5 @@
 ---
-title: "\n  &lt;伺服器&gt; 的通訊協定 (SQL Server 設定管理員) | Microsoft Docs"
+title: '&lt;伺服器&gt; 的通訊協定 (SQL Server 設定管理員) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8a4377d11040abde228383ec35dd9284f14760a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63278929"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>&lt;伺服器&gt; 的通訊協定 (SQL Server 設定管理員)

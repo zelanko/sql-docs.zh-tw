@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481238"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1：建立知識庫和定義域
@@ -63,6 +63,6 @@ ms.locfileid: "65481238"
     -   Zip  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 2：手動加入定義域值](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [工作 2：手動新增定義域值](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

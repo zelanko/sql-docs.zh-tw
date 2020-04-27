@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 174691a92836a2548e1fa5776872801cd1225afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63266492"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>ProtocolDisplayName 屬性 (ServerNetworkProtocol 類別)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *物件*  
  代表實例所使用之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的[ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 47534b08e32f9e8fe585e4ad7fe2e36f6c6e8c8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484011"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合權限 (Master Data Services)
@@ -35,6 +35,6 @@ ms.locfileid: "65484011"
 ## <a name="see-also"></a>另請參閱  
  [指派模型物件使用權限 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [&#40;Master Data Services 的集合&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+ [模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

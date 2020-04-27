@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e700942f9cebc08241cf4e159dceedc7d515a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480119"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>將屬性加入至變更追蹤群組 (Master Data Services)
@@ -27,12 +27,12 @@ ms.locfileid: "65480119"
 > [!NOTE]  
 >  將屬性加入至變更追蹤群組之後，當屬性值變更時， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的屬性會標示為已變更。 建立商務規則，以根據變更來執行動作。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 -   屬性必須存在，才能加入至變更追蹤群組。 如需詳細資訊，請參閱 [建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)(管理員 (Master Data Services))。  
   
@@ -68,10 +68,10 @@ ms.locfileid: "65480119"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [根據屬性值變更起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [根據屬性值變更來起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 &#40;Master Data Services&#41;的文字屬性](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
- [建立以網域為基礎的屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [建立網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

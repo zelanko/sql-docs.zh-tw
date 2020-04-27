@@ -13,21 +13,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de5cc28bfd034001c7bc18da9d934277e01935a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484056"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>變更屬性名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性的名稱。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ### <a name="to-change-an-attribute-name"></a>若要變更屬性名稱  
   
@@ -45,13 +45,13 @@ ms.locfileid: "65484056"
   
 7.  按一下 [**編輯選取的屬性**]。  
   
-8.  在 [名稱]**** 方塊中，輸入屬性的更新名稱。 如需不應該當做屬性名稱使用的字詞清單，請參閱[保留字 &#40;Master Data Services&#41;](reserved-words-master-data-services.md)。  
+8.  在 [名稱]**** 方塊中，輸入屬性的更新名稱。 如需不應當做屬性名稱使用的字組清單，請參閱[保留字 &#40;Master Data Services&#41;](reserved-words-master-data-services.md)。  
   
 9. 按一下 **[儲存屬性]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 &#40;Master Data Services&#41;的文字屬性](create-a-text-attribute-master-data-services.md)   
  [刪除屬性 &#40;Master Data Services&#41;](delete-an-attribute-master-data-services.md)   
- [Master Data Services &#40;的屬性&#41;](attributes-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](attributes-master-data-services.md)  
   
   

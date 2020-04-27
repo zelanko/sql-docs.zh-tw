@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482759"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>變更屬性類型 (適用於 Excel 的 MDS 增益集)
@@ -25,12 +25,12 @@ ms.locfileid: "65482759"
 > [!NOTE]  
 >  您不能更新 **Name** 或 **Code** 資料行的類型或長度。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理]**** 和總管**** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)。  
   
 -   必須有現有的模型、實體和屬性存在。  
   
@@ -74,6 +74,6 @@ ms.locfileid: "65482759"
   
 ## <a name="see-also"></a>另請參閱  
  [Master Data Services &#40;的屬性&#41;](../attributes-master-data-services.md)   
- [建立模型 &#40;適用于 Excel 的 MDS 增益集&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [建立模型 &#40;適用於 Excel 的 MDS 增益集&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

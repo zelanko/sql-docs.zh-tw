@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478814"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
@@ -38,7 +38,7 @@ ms.locfileid: "65478814"
 |------------|-----------------|  
 |錯誤|對 MDS 管理員所定義的商務規則，資料列中一個或多個值的驗證失敗。|  
 |未驗證|尚未對商務規則驗證資料列中的值。|  
-|Success|資料列中的所有值已經通過商務規則驗證。|  
+|成功|資料列中的所有值已經通過商務規則驗證。|  
   
 ## <a name="input-statuses"></a>輸入狀態  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，可能出現下列幾種輸入狀態：  
@@ -54,8 +54,8 @@ ms.locfileid: "65478814"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|判斷哪些值未通過已定義的商務規則。|[套用商務規則 &#40;適用于 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
-|若要更正驗證錯誤，請檢視成員進行的所有交易。|[針對 Excel 的 MDS 增益集，查看成員 &#40;的所有批註或交易&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+|判斷哪些值未通過已定義的商務規則。|[套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|若要更正驗證錯誤，請檢視成員進行的所有交易。|[檢視成員的所有註解或交易 &#40;適用於 Excel 的 MDS 增益集&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

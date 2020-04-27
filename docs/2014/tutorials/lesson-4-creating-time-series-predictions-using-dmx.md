@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312085"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>第 4 課：使用 DMX 建立時間序列預測
@@ -81,7 +81,7 @@ WHERE [<criteria>]
     <select list>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Forecasting_MIXED].[ModelRegion],  
@@ -93,8 +93,7 @@ WHERE [<criteria>]
   
      第二行和第三行會使用 `PredictTimeSeries` 函數。 每一行都會預測不同的屬性 (`[Quantity]` 或 `[Amount]`)。 可預測屬性名稱後面的數字會指定所要預測的時間步驟數。  
   
-     
-  `AS` 子句是用來針對每一個預測函數傳回的資料行提供一個名稱。 如果您不提供別名，則當傳回這兩個資料行時，預設都會將其加上 `Expression` 標籤。  
+     `AS` 子句是用來針對每一個預測函數傳回的資料行提供一個名稱。 如果您不提供別名，則當傳回這兩個資料行時，預設都會將其加上 `Expression` 標籤。  
   
 4.  取代下列項目：  
   
@@ -102,7 +101,7 @@ WHERE [<criteria>]
     [<mining model>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Forecasting_MIXED]  
@@ -114,7 +113,7 @@ WHERE [<criteria>]
     WHERE [criteria>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  

@@ -11,19 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478908"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>在載入之前篩選資料 (適用於 Excel 的 MDS 增益集)
   在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要限制載入 Excel 的資料大小或範圍時，請篩選資料。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 ### <a name="to-filter-data-before-loading"></a>若要在載入之前篩選資料  
   
@@ -53,6 +53,6 @@ ms.locfileid: "65478908"
 ## <a name="see-also"></a>另請參閱  
  [載入適用于 Excel 的 MDS 增益集&#41;的資料 &#40;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [[篩選] 對話方塊 &#40;適用于 Excel 的 MDS 增益集&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [重新排序適用于 Excel 的 MDS 增益集 &#40;資料行&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [重新排序資料行 &#40;適用於 Excel 的 MDS 增益集&#41;](reorder-columns-mds-add-in-for-excel.md)  
   
   

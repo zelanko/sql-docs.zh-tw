@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482859"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>儲存捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您經常需要存取相同的資料集時，可儲存捷徑查詢檔案。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   使用中工作表必須使用您想要的格式包含 MDS 管理的資料。 例如，您應該依照您想要的順序 (套用任何想要的篩選) 來檢視資料行。 如需詳細資訊，請參閱[&#40;適用于 excel 的 Mds 增益集&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)和[重新排序 &#40;適用于 Excel 的 mds 增益集&#41;中](reorder-columns-mds-add-in-for-excel.md)的資料行。  
@@ -35,9 +35,9 @@ ms.locfileid: "65482859"
   
 -   按一下 [儲存查詢]**** 底下的箭頭，以檢視捷徑查詢並將它開啟。  
   
--   [以電子郵件傳送快捷方式查詢檔案 &#40;適用于 Excel 的 MDS 增益集&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
+-   [以電子郵件傳送捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;適用于 Excel 的 MDS 增益集的快捷方式查詢檔案&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+ [捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

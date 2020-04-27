@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63285765"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
@@ -42,7 +42,7 @@ ms.locfileid: "63285765"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`type`|識別 Issue 元素所報告的問題類別：<br /><br /> 「**診斷**」報告當您分析[!INCLUDE[ssSB](../../includes/sssb-md.md)]設定時發現的設定問題。<br /><br /> 「**問題**」報告導致**ssbdiagnose**無法完成其分析的問題。 請更正問題並重新執行 **ssbdiagnose**。<br /><br /> 「**事件**」報告當[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]您執行 **-RUNTIME**檢查時發現的事件。 只有在您指定 **-SHOWEVENTS** 時才會報告事件。|  
+|`type`|識別 Issue 元素所報告的問題類別：<br /><br /> **「診斷」** ：報告在您分析 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 設定時發現的設定問題。<br /><br /> **「問題」** ：報告讓 **ssbdiagnose** 無法完成其分析的問題。 請更正問題並重新執行 **ssbdiagnose**。<br /><br /> **「事件」** ：報告在您執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **檢查時發現的** 事件。 只有在您指定 **-SHOWEVENTS** 時才會報告事件。|  
 |`code`|識別訊息的錯誤號碼。|  
 |`server`|識別在其中發現問題的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 如果問題位於預設執行個體中，server 屬性就只有電腦名稱。 如果問題位於具名執行個體中，server 屬性就會採用 ComputerName\InstanceName 的格式。|  
 |`database`|識別在其中發現問題的資料庫名稱。|  
@@ -52,10 +52,9 @@ ms.locfileid: "63285765"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|
-  `string`，沒有長度限制。|  
+|**資料類型和長度**|`string`，沒有長度限制。|  
 |**ReplTest1**|傳回錯誤訊息的文字。|  
-|**出現次數**|每個報告的錯誤出現一次。|  
+|**次出現**|每個報告的錯誤出現一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

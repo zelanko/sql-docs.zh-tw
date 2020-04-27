@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287363"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用巢狀 AUTO 模式查詢產生同層級
@@ -144,8 +144,7 @@ FOR XML AUTO, TYPE
   
 -   先前的查詢已加入 `FROM` 子句中。 查詢結果會以資料表傳回。 請注意新增的 `XmlCol` 別名。  
   
--   `SELECT` 子句會對 `XmlCol` 子句中傳回的 `FROM` 指定 XQuery。 
-  `query()` 資料類型的 `xml` 方法則用來指定 XQuery。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/query-method-xml-data-type)。  
+-   `SELECT` 子句會對 `XmlCol` 子句中傳回的 `FROM` 指定 XQuery。 `query()` 資料類型的 `xml` 方法則用來指定 XQuery。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/query-method-xml-data-type)。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

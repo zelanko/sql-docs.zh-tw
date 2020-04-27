@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489119"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5：將清理結果匯出到 Excel 檔案
@@ -47,6 +47,6 @@ ms.locfileid: "65489119"
     5.  從試算表刪除 [**位址驗證**] 資料行，並儲存 excel 檔案。 此額外資料行對應至「地址驗證」複合定義域。  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 6：從 Cleanse Supplier List 專案匯入值](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [工作 6：從清理供應商清單專案匯入值](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

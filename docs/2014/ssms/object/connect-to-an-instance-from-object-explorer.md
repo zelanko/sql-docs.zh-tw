@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63277425"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>從物件總管連接到執行個體
   若要使用物件總管管理物件，您必須先將物件總管連接到包含物件的執行個體。 您可以同時將物件總管連接到多個執行個體。  
   
 ## <a name="connecting-object-explorer-to-a-server"></a>將物件總管連接到伺服器  
- 若要使用物件總管，您必須先連接到伺服器。 請在物件總管工具列上，按一下 [連接]****，再從下拉式清單中選取伺服器類型。 [連接到伺服器]  對話方塊隨即開啟。 若要連接，您至少必須先提供伺服器名稱以及正確的驗證資訊。  
+ 若要使用物件總管，您必須先連接到伺服器。 請在物件總管工具列上，按一下 [連接]****，再從下拉式清單中選取伺服器類型。 [連接到伺服器]**** 對話方塊隨即開啟。 若要連接，您至少必須先提供伺服器名稱以及正確的驗證資訊。  
   
 ## <a name="optional-object-explorer-connection-settings"></a>選擇性的物件總管連接設定  
  當連接到伺服器時，您可以在 [連接到伺服器]**** 對話方塊中，指定其他連接資訊。 [連接到伺服器]**** 對話方塊會保留上次使用的設定，新的連接 (例如新的程式碼編輯器視窗) 將會使用這些設定。  
@@ -32,10 +32,9 @@ ms.locfileid: "63277425"
   
 2.  在 [伺服器名稱]**** 方塊中，輸入您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
-3.  按一下 [選項] ****。 此時 [連接到伺服器]**** 對話方塊會顯示其他選項。  
+3.  按一下 [選項]****。 此時 [連接到伺服器]**** 對話方塊會顯示其他選項。  
   
-4.  按一下 [連接屬性]**** 索引標籤來設定其他設定。 可用的設定會隨著伺服器類型而不同。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用下列設定。  
+4.  按一下 [連接屬性]**** 索引標籤來設定其他設定。 可用的設定會隨著伺服器類型而不同。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用下列設定。  
   
     |設定|描述|  
     |-------------|-----------------|  

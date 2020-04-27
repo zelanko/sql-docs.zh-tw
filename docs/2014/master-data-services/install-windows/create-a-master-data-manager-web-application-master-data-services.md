@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 238cf52a52e53aa4ee2712e0bd6abf43a6c5e128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479378"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 Web 應用程式 (Master Data Services)
-  
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式提供了一個介面，可讓使用者處理主資料並且讓管理員設定及管理 MDS。  
   
  網站中一定要包含 Web 應用程式。 若要建立 Web 應用程式，您必須：  
@@ -31,7 +30,7 @@ ms.locfileid: "65479378"
   
  建立 Web 應用程式之後，將它與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   如需主控此 Web 應用程式之電腦需求的資訊，請參閱 [Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)。  
   

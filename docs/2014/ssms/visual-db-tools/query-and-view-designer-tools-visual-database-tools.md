@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460012"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>查詢和檢視設計工具 (Visual Database Tools)
@@ -45,7 +45,7 @@ ms.locfileid: "63460012"
  您可以在其中任何一個窗格中建立查詢或檢視：您可以在 [圖表] 窗格中選擇要指定顯示的資料行、將資料行輸入 [準則] 窗格，或使之成為 [SQL] 窗格中 SQL 陳述式的一部份。  
   
 ## <a name="displaying-and-hiding-panes"></a>顯示及隱藏窗格  
- 若要隱藏窗格或顯示看不見的窗格，請以滑鼠右鍵按一下設計介面，指向 [窗格]****，然後按一下窗格名稱。 如果在查詢設計工具模式中開啟 [查詢和檢視表設計工具，則無法使用 [結果]**** 窗格。  
+ 若要隱藏窗格或顯示看不見的窗格，請以滑鼠右鍵按一下設計介面，指向 [窗格]  ，然後按一下窗格名稱。 如果在查詢設計工具模式中開啟 查詢和檢視表設計工具，則無法使用 結果  窗格。  
   
 ## <a name="see-also"></a>另請參閱  
  [設計查詢和觀看 how to 主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   

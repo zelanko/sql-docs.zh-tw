@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffc03bf3f50c629dc53913959dc01b0a6443edef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270173"
 ---
 # <a name="snapshot-replication"></a>快照式複寫
@@ -40,15 +40,15 @@ ms.locfileid: "63270173"
   
  快照式複寫相對於異動複寫，其在「發行者」上的連續性負擔更低，因為它不追蹤累加的變更。 但是，如果複寫的資料集變得很大，它將需要大量資源來產生和套用快照集。 在評估是否使用快照式複寫時，請考慮整個資料集的大小和對資料進行變更的頻率。  
   
- **本主題中的**  
+ **本主題內容**  
   
- [快照式複寫的運作方式](#HowWorks)  
+ [快照式複寫如何運作](#HowWorks)  
   
  [快照集代理程式](#SnapshotAgent)  
   
- [散發和合併代理程式](#DistAgent)  
+ [散發與合併代理程式](#DistAgent)  
   
-##  <a name="HowWorks"></a>快照式複寫的運作方式  
+##  <a name="how-snapshot-replication-works"></a><a name="HowWorks"></a> 快照式複寫如何運作  
  依預設，三種類型的複寫均使用快照集來初始化「訂閱者」。 「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集代理程式」總是會產生快照集檔案，但是根據所使用的複寫類型，傳遞檔案的代理程式有所不同。 快照式複寫和異動複寫使用「散發代理程式」傳遞檔案，而合併式複寫則使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併代理程式」。 快照集代理程式於發行者端執行。 「散發代理程式」和「合併代理程式」則在發送訂閱的「散發者」端或提取訂閱的「訂閱者」端執行。  
   
  快照集的產生和套用可以在訂閱建立後立即進行，也可以在發行集建立時所排定的時間進行。 「快照集代理程式」會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案，將檔案儲存在「發行者」的快照集資料夾內，然後追蹤「散發者」散發資料庫中的資訊。 在設定「散發者」時指定預設快照集資料夾，但也可以為發行集指定預設位置以外的替代位置，或兩個位置均指定。  
@@ -59,7 +59,7 @@ ms.locfileid: "63270173"
   
  ![快照式複寫元件和資料流程](media/snapshot.gif "快照式複寫元件和資料流程")  
   
-##  <a name="SnapshotAgent"></a>快照集代理程式  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 快照集代理程式  
  針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync**的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication**時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
   
  「快照集代理程式」會執行下列步驟：  
@@ -76,9 +76,7 @@ ms.locfileid: "63270173"
   
 3.  從「發行者」端的已發行資料表複製資料，並將其寫入快照集資料夾。 快照集以一組大量複製程式 (BCP) 檔案的形式產生。  
   
-4.  對於快照式和交易式發行集，「快照集代理程式」會附加資料列至散發資料庫中的 **MSrepl_commands** 和 **MSrepl_transactions** 資料表。 
-  **MSrepl_commands** 資料表中的項目為命令，表示 .sch 和 .bcp 檔案的位置、其他快照集檔案，以及對前快照集 (pre-snapshot) 或後快照集 (post-snapshot) 指令碼的參考。 
-  **MSrepl_transactions** 資料表中的項目是與同步處理「訂閱者」相關的命令。  
+4.  對於快照式和交易式發行集，「快照集代理程式」會附加資料列至散發資料庫中的 **MSrepl_commands** 和 **MSrepl_transactions** 資料表。 **MSrepl_commands** 資料表中的項目為命令，表示 .sch 和 .bcp 檔案的位置、其他快照集檔案，以及對前快照集 (pre-snapshot) 或後快照集 (post-snapshot) 指令碼的參考。 **MSrepl_transactions** 資料表中的項目是與同步處理「訂閱者」相關的命令。  
   
      對於合併式發行集，「快照集代理程式」還執行其他步驟。  
   
@@ -86,7 +84,7 @@ ms.locfileid: "63270173"
   
  在快照集產生期間，無法對已發行的資料進行結構描述變更。 快照集檔案產生之後，您可以使用 Windows Explorer 在快照集資料夾中檢視這些檔案。  
   
-##  <a name="DistAgent"></a>散發代理程式和合併代理程式  
+##  <a name="distribution-agent-and-merge-agent"></a><a name="DistAgent"></a> 散發代理程式與合併代理程式  
  對於快照式發行集，每次為發行集執行「散發代理程式」時，它都會將新快照集移至每個尚未同步處理但已標示要進行重新初始化的「訂閱者」，或包含新發行項。  
   
  對於快照式和異動複寫，「散發代理程式」執行下列步驟：  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479036"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>發行資料 (適用於 Excel 的 MDS 增益集)
@@ -52,11 +52,11 @@ ms.locfileid: "65479036"
 |工作描述|主題|  
 |----------------------|-----------|  
 |將資料從使用中工作表發行回 MDS 儲存機制。|[將 Excel 的資料發行至適用于 Excel 的 mds 增益集 &#40;&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|同時從 MDS 儲存機制和工作表中刪除資料列。|[&#40;適用于 Excel 的 MDS 增益集&#41;刪除資料列](delete-a-row-mds-add-in-for-excel.md)|  
+|同時從 MDS 儲存機制和工作表中刪除資料列。|[刪除資料列 &#40;適用於 Excel 的 MDS 增益集&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [重新整理適用于 Excel 的 MDS 增益集&#41;的資料 &#40;](refreshing-data-mds-add-in-for-excel.md)  
+-   [重新整理資料 &#40;適用於 Excel 的 MDS 增益集&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   

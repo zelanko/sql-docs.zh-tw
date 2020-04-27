@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267483"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>在採礦模型中篩選巢狀資料表 (中繼資料採礦教學課程)
   建立並探索模型之後，您決定要將焦點放在客戶資料子集上。 例如，您可能只要分析包含特定項目的購物籃，或是分析在特定期間未購買任何產品的客戶人口統計。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了篩選採礦模型資料的功能。 這項功能很有用，因為您不需要設定新的資料來源視圖來使用不同的資料。 在基本資料採礦教學課程中，您學會了如何對案例資料表套用條件，以篩選來自二維資料表的資料。 在這項工作中，您將建立套用至巢狀資料表的篩選。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了篩選採礦模型資料的功能。 這項功能很有用，因為您不需要設定新的資料來源視圖來使用不同的資料。 在基本資料採礦教學課程中，您學會了如何對案例資料表套用條件，以篩選來自二維資料表的資料。 在這項工作中，您將建立套用至巢狀資料表的篩選。  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>巢狀和案例資料表的篩選  
  如果您的資料來源檢視如同用於關聯模型的資料來源檢視，同樣包含一個案例資料表和一個巢狀資料表，您可以篩選來自案例資料表的值、巢狀資料表中存在或不存在的值，或是兩者的一些組合。  
@@ -112,6 +111,6 @@ ms.locfileid: "63267483"
   
 ## <a name="see-also"></a>另請參閱  
  [模型篩選語法和範例 &#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [&#40;Analysis Services 的採礦模型篩選-資料採礦&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

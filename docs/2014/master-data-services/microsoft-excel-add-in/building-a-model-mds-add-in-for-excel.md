@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee3473ba16ad3a03a95065aea94888654db53187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479340"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>建立模型 (適用於 Excel 的 MDS 增益集)
@@ -33,26 +33,16 @@ ms.locfileid: "65479340"
   
 |工作描述|工具|主題|  
 |----------------------|----------|-----------|  
-|建立模型。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立模型 &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
-|建立實體。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[&#40;適用于 Excel 的 MDS 增益集建立實體&#41;](create-an-entity-mds-add-in-for-excel.md)|  
-|建立網域屬性。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[&#40;適用于 Excel 的 MDS 增益集建立網域屬性&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
-|建立屬性群組。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立屬性群組 &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
-|建立商務規則。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立和發佈商務規則 &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
-|建立訂閱檢視。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立訂閱視圖 &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
-|建立階層。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立衍生階層 &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [建立明確階層 &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
-|建立集合。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立 &#40;Master Data Services 的集合&#41;](../create-a-collection-master-data-services.md)|  
-|建立資料的版本。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[鎖定版本 &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
-|部署模型。|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 MDSModelDeploy 工具。|[使用 MDSModelDeploy 建立模型部署封裝](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|建立模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立模型 &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
+|建立實體。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[建立實體 &#40;適用於 Excel 的 MDS 增益集&#41;](create-an-entity-mds-add-in-for-excel.md)|  
+|建立網域屬性。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[建立網域屬性 &#40;適用於 Excel 的 MDS 增益集&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
+|建立屬性群組。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立屬性群組 &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
+|建立商務規則。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立及發行商務規則 &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
+|建立訂閱檢視。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立訂閱視圖 &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
+|建立階層。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立衍生階層 &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [建立明確階層 &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
+|建立集合。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立集合 &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
+|建立資料的版本。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[鎖定版本 &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
+|部署模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 MDSModelDeploy 工具。|[使用 MDSModelDeploy 建立模型部署封裝](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
@@ -60,9 +50,9 @@ ms.locfileid: "65479340"
   
 -   [實體 &#40;Master Data Services&#41;](../entities-master-data-services.md)  
   
--   [Master Data Services &#40;的屬性&#41;](../attributes-master-data-services.md)  
+-   [屬性 &#40;Master Data Services&#41;](../attributes-master-data-services.md)  
   
--   [以網域為基礎的屬性 &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)  
+-   [網域屬性 &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)  
   
 -   [屬性群組 &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)  
   
@@ -72,12 +62,12 @@ ms.locfileid: "65479340"
   
 -   [階層 &#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
   
--   [&#40;Master Data Services 的集合&#41;](../collections-master-data-services.md)  
+-   [集合 &#40;Master Data Services&#41;](../collections-master-data-services.md)  
   
 -   [版本 &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
 -   [安全性 &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
--   [&#40;Master Data Services 部署模型&#41;](../deploying-models-master-data-services.md)  
+-   [部署模型 &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
   
   

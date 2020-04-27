@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 06e593c676c206f863bdb110be5c93e5003b4e13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484093"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 定義域支援的 SQL Server 和 SSIS 資料類型
@@ -23,24 +23,24 @@ ms.locfileid: "65484093"
 > [!NOTE]  
 >  在 .xlsx 和 .xls 檔案中，來源資料行的資料類型是由前八個資料列中最普遍的資料類型所決定。 如果資料格不符合該資料類型，將會為它提供 null 值。 同樣地，在 .csv 檔案中，來源資料行的資料類型是由前八個資料列中最普遍的資料類型所決定。  
   
-##  <a name="SQLServer"></a>支援的 SQL Server 資料類型  
+##  <a name="supported-sql-server-data-types"></a><a name="SQLServer"></a>支援的 SQL Server 資料類型  
  下表將提供每種 DQS 定義域資料類型所支援之 SQL Server 資料類型的相關資訊：  
   
 |DQS 定義域資料類型|支援的 SQL Server 資料類型|  
 |--------------------------|------------------------------------|  
-|Date|date|  
+|日期|date|  
 |Decimal|decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> real<br /><br /> SMALLMONEY|  
-|整數|BIGINT<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
+|整數|BIGINT<br /><br /> int<br /><br /> SMALLINT<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   
  DQS 不支援其餘 SQL Server 資料類型。 如需所有 SQL Server 資料類型的資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)。  
   
-##  <a name="SSIS"></a>支援的 SSIS 資料類型  
+##  <a name="supported-ssis-data-types"></a><a name="SSIS"></a> 支援的 SSIS 資料類型  
  下表將提供每種 DQS 定義域資料類型所支援之 SSIS 資料類型的相關資訊：  
   
 |DQS 定義域資料類型|支援的 SSIS 資料類型|  
 |--------------------------|------------------------------|  
-|Date|DT_DATE|  
+|日期|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |整數|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |String|DT_STR<br /><br /> DT_WSTR|  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478907"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
@@ -48,8 +48,8 @@ ms.locfileid: "65478907"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|結合外部資料與 MDS 管理的資料，準備進行比較。|[結合 Data &#40;適用于 Excel 的 MDS 增益集&#41;](combine-data-mds-add-in-for-excel.md)|  
-|使用 DQS 知識來尋找資料中的相似度。|[符合適用于 Excel&#41;的類似資料 &#40;MDS 增益集](match-similar-data-mds-add-in-for-excel.md)|  
+|結合外部資料與 MDS 管理的資料，準備進行比較。|[結合資料 &#40;適用於 Excel 的 MDS 增益集&#41;](combine-data-mds-add-in-for-excel.md)|  
+|使用 DQS 知識來尋找資料中的相似度。|[比對相似資料 &#40;適用於 Excel 的 MDS 增益集&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

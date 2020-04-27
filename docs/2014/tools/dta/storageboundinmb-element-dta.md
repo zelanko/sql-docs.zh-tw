@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460109"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
@@ -38,11 +38,9 @@ ms.locfileid: "63460109"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|
-  `unsignedInt`，沒有長度限制。|  
+|**資料類型和長度**|`unsignedInt`，沒有長度限制。|  
 |**預設值**|無。|  
-|**出現次數**|選擇性。 
-  `TuningOptions` 元素只能使用這個元素一次。|  
+|**出現次數**|選擇性。 `TuningOptions` 元素只能使用這個元素一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

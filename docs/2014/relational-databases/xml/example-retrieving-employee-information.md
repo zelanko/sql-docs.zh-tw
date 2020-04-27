@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287843"
 ---
 # <a name="example-retrieving-employee-information"></a>範例：擷取員工資訊
@@ -123,9 +123,9 @@ FOR XML EXPLICIT;
   
  以下是如何處理通用資料表的資料列，以產生結果 XML 樹狀結構：  
   
- 第一個資料列會識別 `Tag` 值 `1`。 因此，會識別 `Tag` 值 `1` 的資料行群組 `Employee!1!EmpID`。 此資料行會將 `Employee` 識別為元素名稱。 然後就會建立擁有 `Employee` 屬性的 <`EmpID`> 元素。 對應的資料行值會指派給這些屬性。  
+ 第一個資料列會識別 `Tag` 值 `1`。 因此，會識別 `Tag` 值 `1` 的資料行群組 `Employee!1!EmpID`。 此資料行會將 `Employee` 識別為元素名稱。 然後就會建立擁有 `EmpID` 屬性的 <`Employee`> 元素。 對應的資料行值會指派給這些屬性。  
   
- 第二個資料列具有 `Tag` 值 `2`。 因此，會識別資料行名稱中 `Tag` 值為 `2` 的資料行群組 `Name!2!FName`、 `Name!2!LName`。 這些資料行名稱會將 `Name` 識別為元素名稱。 此外會建立擁有 `Name` 與 `FName` 屬性的 <`LName`> 元素。 然後將對應的資料行值指派給這些屬性。 此資料列會將 `1` 識別為 `Parent`。 此元素子系便會加入到先前的 <`Employee`> 元素。  
+ 第二個資料列具有 `Tag` 值 `2`。 因此，會識別資料行名稱中 `Tag` 值為 `2` 的資料行群組 `Name!2!FName`、 `Name!2!LName`。 這些資料行名稱會將 `Name` 識別為元素名稱。 此外會建立擁有 `FName` 與 `LName` 屬性的 <`Name`> 元素。 然後將對應的資料行值指派給這些屬性。 此資料列會將 `1` 識別為 `Parent`。 此元素子系便會加入到先前的 <`Employee`> 元素。  
   
  這個處理序會對資料列集中其餘的資料列重複進行。 請記下通用資料表中資料列排序的優先順序，如此 FOR XML EXPLICIT 就可以依序處理資料列集，並產生您想要的 XML。  
   

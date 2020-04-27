@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282025"
 ---
 # <a name="show-the-object-explorer-details-page"></a>顯示物件總管詳細資料頁面
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可以針對物件總管中選取的每個物件顯示報表。 這份報表稱為 [物件總管詳細資料] 頁面，是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立的，且會在文件視窗中開啟。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以針對物件總管中所選取的每個物件，各顯示一份報表。 這份報表稱為 [物件總管詳細資料] 頁面，是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立的，且會在文件視窗中開啟。  
   
 ## <a name="showing-the-object-explorer-details-page"></a>顯示物件總管詳細資料頁面  
   

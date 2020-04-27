@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a8c5bc039e4e6c18680ba4e290ea7e69fa87804
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250776"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server 的 Broker TO Statistics 物件
@@ -32,9 +32,9 @@ ms.locfileid: "63250776"
 |**平均Length of Batched Writes**|儲存於批次中的傳輸物件平均數目。|  
 |**平均Time To Write Batch (ms)**|儲存傳輸物件批次所需的平均毫秒數。|  
 |**Avg. Time Between Batches (ms)**|傳輸物件批次寫入之間的平均毫秒數。|  
-|**事務物件取得數/秒**|對話每秒鐘要求傳輸物件的次數。|  
-|**標示為已變更/秒的交易對象**|傳輸物件每秒鐘標示為中途的次數。 造成記憶體內部複本與儲存於 **tempdb**中的複本不同的第一次修改將傳輸物件標示為中途。 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 必須記錄對話之訊息傳輸的狀態變更時，會修改傳輸物件。|  
-|**事務物件寫入數/秒**|傳輸物件批次每秒鐘寫入 **tempdb** 工作資料表的次數。 寫入次數很多時，可能表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體的負荷很大。|  
+|**Tran Object Gets/sec**|對話每秒鐘要求傳輸物件的次數。|  
+|**Tran Objects Marked Dirty/sec**|傳輸物件每秒鐘標示為中途的次數。 造成記憶體內部複本與儲存於 **tempdb**中的複本不同的第一次修改將傳輸物件標示為中途。 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 必須記錄對話之訊息傳輸的狀態變更時，會修改傳輸物件。|  
+|**Tran Object Writes/sec**|傳輸物件批次每秒鐘寫入 **tempdb** 工作資料表的次數。 寫入次數很多時，可能表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體的負荷很大。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server，Access 方法物件](sql-server-access-methods-object.md)   

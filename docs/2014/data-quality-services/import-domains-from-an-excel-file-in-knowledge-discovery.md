@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0ca7391a025cf0fe4477cc9008c51c0a06a59f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480539"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知識探索活動中匯入 Excel 檔案中的一個或多個定義域。 此匯入程序會簡化知識產生程序，以節省時間和精力。 此程序可讓擁有 Excel 檔案或文字檔資料的人建立包含該資料的知識庫 （如需將值匯入現有知識庫定義域的詳細資訊，請參閱將[Excel 檔案中的值](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)匯入定義域。）不支援匯出至 Excel 檔案。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要從 Excel 檔案匯入定義域，安裝 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的電腦上必須已安裝 Excel；您必須已經使用定義域值建立 Excel 檔案 (請參閱 [How the import works](#How))；而且您必須已經建立及開啟要匯入定義域到其中的知識庫。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 Excel 檔案匯入定義域。  
   
-##  <a name="Import"></a>將 Excel 檔案中的定義域匯入知識庫中  
+##  <a name="import-domains-from-an-excel-file-into-a-knowledge-base"></a><a name="Import"></a> 將 Excel 檔案中的定義域匯入知識庫  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -67,10 +67,10 @@ ms.locfileid: "65480539"
   
 14. 確認知識庫已發行，然後按一下 **[確定]**。  
   
-##  <a name="FollowUp"></a>後續操作：從 Excel 檔案匯入定義域之後  
+##  <a name="follow-up-after-importing-domains-from-an-excel-file"></a><a name="FollowUp"></a>後續操作：從 Excel 檔案匯入定義域之後  
  當您從 Excel 檔案匯入定義域之後，您可以將知識加入至定義域，或是在清理或比對專案時使用定義域 (根據定義域的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)、[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)、[資料清理](../../2014/data-quality-services/data-cleansing.md)或[資料比對](../../2014/data-quality-services/data-matching.md)。  
   
-##  <a name="How"></a>匯入的運作方式  
+##  <a name="how-the-import-works"></a><a name="How"></a>匯入的運作方式  
  在匯入作業中，DQS 會依照以下方式解譯 Excel 檔案：  
   
 -   資料行表示定義域  

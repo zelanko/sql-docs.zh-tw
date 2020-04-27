@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e79f48f4e4a2eb5fbc83c353461709658caf2509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265660"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>將自訂組件與報表搭配使用
@@ -43,7 +43,7 @@ ms.locfileid: "63265660"
  [初始化自訂組件物件](initializing-custom-assembly-objects.md)  
  描述如何初始化從報表呼叫之自訂組件物件的值。  
   
- [如何：偵錯自訂組件](how-to-debug-custom-assemblies.md)  
+ [如何：針對自訂組件進行偵錯](how-to-debug-custom-assemblies.md)  
  說明如何偵錯您的自訂組件程式碼。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1cef52f066a07032240d17f88297b02ba3f7e5fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65995116"
 ---
 # <a name="sysexternal_languages-transact-sql"></a>sys.databases external_languages （Transact-sql）
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-此目錄檢視會提供資料庫中的外部語言清單。 **R**和**Python**是保留的名稱，而且不能使用這些特定名稱來建立外部語言。
+此目錄檢視會提供資料庫中的外部語言清單。 **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。
 
 ## <a name="sysexternal_languages"></a>sys.external_languages
 

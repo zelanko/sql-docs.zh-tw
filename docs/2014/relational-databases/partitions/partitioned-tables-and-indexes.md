@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092045"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
@@ -37,9 +37,7 @@ ms.locfileid: "65092045"
   
 -   您可以提升查詢效能，不過這要視您經常執行的查詢類型和硬體組態而定。 例如，因為您可以聯結分割區本身，則在資料表中的分割資料行相同時，查詢最佳化工具可以更快速地處理兩個以上資料分割資料表之間的等聯結 (Equi-Join) 查詢。  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在為 I/O 作業執行資料排序時，會先依資料分割排序資料。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一次會存取一台磁碟機，而這樣會降低效能。 若要改善資料排序效能，請設定 RAID，以將分割區的資料檔案分割到多個磁碟上。 利用這種方式，雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍然會依資料分割排序資料，但它可以同時存取每個資料分割的所有磁碟機。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在為 I/O 作業執行資料排序時，會先依資料分割排序資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一次會存取一台磁碟機，而這樣會降低效能。 若要改善資料排序效能，請設定 RAID，以將分割區的資料檔案分割到多個磁碟上。 利用這種方式，雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍然會依資料分割排序資料，但它可以同時存取每個資料分割的所有磁碟機。  
   
      此外，您可以啟用分割區層級的鎖定擴大 (而非整個資料表) 來提升效能。 這可以減少資料表上的鎖定競爭。  
   
@@ -113,12 +111,12 @@ ms.locfileid: "65092045"
   
 -   [使用 SQL Server 2008 的資料分割資料表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [如何執行自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [如何實作自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [大量載入至資料分割資料表](https://msdn.microsoft.com/library/cc966380.aspx)  
   
 -   [分割資料表和索引上的查詢處理增強功能](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [建立大規模關聯式資料倉儲的十大最佳作法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [建立大規模關聯式資料倉儲的前 10 大最佳作法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

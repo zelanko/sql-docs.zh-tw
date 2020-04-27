@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316400"
 ---
 # <a name="script-a-table"></a>編寫資料表的指令碼
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可以建立腳本來選取、插入、更新和刪除資料表，以及建立、變更、卸載或執行預存程式。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以建立指令碼來選取、插入、更新和刪除資料表，以及建立、變更、卸除或執行預存程序。  
   
  您有時會希望指令碼有多個選項，如先卸除程序，再建立程序，或先建立資料表，再變更資料表。 若要建立結合的指令碼，請將第一個指令碼儲存在 [查詢編輯器] 視窗中，再將第二個指令碼儲存在剪貼簿中，以便在視窗中將它貼在第一個指令碼之後。  
   

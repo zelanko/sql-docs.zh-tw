@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460052"
 ---
 # <a name="granting-access-to-a-database"></a>授與資料庫的存取權
@@ -40,6 +40,6 @@ ms.locfileid: "63460052"
      現在 Mary 即具有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 `TestData` 資料庫兩者的存取權。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [建立檢視和預存程序](lesson-2-3-creating-views-and-stored-procedures.md)  
+ [建立視圖和預存程式](lesson-2-3-creating-views-and-stored-procedures.md)  
   
   

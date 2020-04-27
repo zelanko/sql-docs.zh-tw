@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489676"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>工作 8：加入條件式分割轉換來分割清理輸出
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>工作 8：新增條件式分割轉換來分割清理輸出
   在這項轉換中，您會將條件式分割轉換加入至資料流程。 「條件式分割」轉換可根據資料的內容，將資料列路由傳送至不同的輸出。 在本教學課程中，您會使用 DQS 清理轉換中的 [**記錄狀態**輸出] 資料行。 在本教學課程中，您只會將正確或已更正的記錄上傳到 MDS 伺服器。 因此，您會檢查**記錄狀態**是否**正確**或已**更正**，並在將記錄上傳至 MDS 之前，先合併記錄。  
   
 1.  從 [ **SSIS 工具箱**] 中的 [**一般**] 區段，將 [**條件式分割轉換**] 拖放至 [**清理供應商資料**] 底下的 **[資料流程]**  
@@ -45,6 +45,6 @@ ms.locfileid: "65489676"
 10. 按一下 **[確定]** 以關閉 [**條件式分割轉換編輯器**] 對話方塊。  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 9：加入聯集全部轉換來結合正確和更正的記錄](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [工作 9：新增聯集全部轉換來結合正確和更正的記錄](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

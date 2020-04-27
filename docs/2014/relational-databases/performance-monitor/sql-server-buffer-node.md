@@ -14,24 +14,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250734"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
-  **Buffer Node**物件提供了計數器，可補充**緩衝區管理員**物件所提供的計數器。 它可讓您監視每個非統一記憶體存取 (NUMA) 節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區頁面散發。 每個 NUMA 節點都會使用 **Buffer Node** 物件執行個體。 在非 NUMA 架構上，會有單一 **Buffer Node** 物件的執行個體。  
+  **Buffer Node** 物件提供用來補充 **Buffer Manager** 物件所提供之計數器的計數器。 它可讓您監視每個非統一記憶體存取 (NUMA) 節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區頁面散發。 每個 NUMA 節點都會使用 **Buffer Node** 物件執行個體。 在非 NUMA 架構上，會有單一 **Buffer Node** 物件的執行個體。  
   
 ## <a name="buffer-node-performance-objects"></a>Buffer Node 效能物件  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** 效能物件。  
   
 |SQL Server Buffer Node 計數器|描述|  
 |-------------------------------------|-----------------|  
-|**資料庫頁面**|指出在這個具有資料庫內容之節點上的緩衝集區頁面數。|  
-|**頁面生命預期**|指出頁面停留在這個沒有參考之節點的緩衝集區中的秒數下限。|  
-|**本機節點頁面查閱/秒**|指出來自這個節點而且由這個節點滿足的查閱要求數目。|  
-|**遠端便箋頁面查閱/秒**|指出來自這個節點但是由其他節點滿足的查閱要求數目。|  
+|**Database pages**|指出在這個具有資料庫內容之節點上的緩衝集區頁面數。|  
+|**Page life expectancy**|指出頁面停留在這個沒有參考之節點的緩衝集區中的秒數下限。|  
+|**Local Node page lookups/sec**|指出來自這個節點而且由這個節點滿足的查閱要求數目。|  
+|**Remote Note page lookups/sec**|指出來自這個節點但是由其他節點滿足的查閱要求數目。|  
   
  如果 SQL Server 是在非 NUMA 硬體上執行，則 **Buffer Node** 和 **Buffer Manager** 物件的計數器應該相符。  
   

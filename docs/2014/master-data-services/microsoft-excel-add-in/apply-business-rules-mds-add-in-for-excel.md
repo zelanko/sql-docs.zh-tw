@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 32819a694769092c255c4b2ed918dd8fde99362e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482598"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>套用商務規則 (適用於 Excel 的 MDS 增益集)
@@ -23,7 +23,7 @@ ms.locfileid: "65482598"
 > [!NOTE]  
 >  資料驗證會在您發行資料時自動進行。 如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../validation-stored-procedure-master-data-services.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有總管**** 功能區域的存取權。  

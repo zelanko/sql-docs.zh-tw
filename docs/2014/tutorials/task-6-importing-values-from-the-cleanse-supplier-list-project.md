@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489089"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>工作 6：從 Cleanse Supplier List 專案匯入值
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>工作 6：從清理供應商清單專案匯入值
   在這項工作中，您會匯入清理程序期間所收集的資料品質知識。 如需詳細資訊，請參閱[將清理專案值匯入定義域](https://msdn.microsoft.com/library/hh479581.aspx)主題。 您也會將知識庫匯出到 DQS 檔案，然後再發行更新的**供應商**知識庫。  
   
 1.  在**DQS 用戶端**的主頁面中，按一下 [**最近使用的知識庫**] 底下 [**供應商**] 旁**的向右箭**號，然後按一下 [**定義域管理**]。  
