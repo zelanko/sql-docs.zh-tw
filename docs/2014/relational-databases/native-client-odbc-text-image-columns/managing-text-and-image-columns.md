@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195323"
 ---
 # <a name="managing-text-and-image-columns"></a>管理 Text 和 Image 資料行
@@ -34,9 +34,9 @@ ms.locfileid: "63195323"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [繫結與未繫結的文字和影像資料行](bound-vs-unbound-text-and-image-columns.md)  
+-   [繫結與未繫結的 Text 和 Image 資料行](bound-vs-unbound-text-and-image-columns.md)  
   
--   [已記錄及未記錄的修改](logged-vs-unlogged-modifications.md)  
+-   [已記錄與未記錄的修改](logged-vs-unlogged-modifications.md)  
   
 -   [資料執行中和 Text、ntext 或 Image 資料行](data-at-execution-and-text-ntext-or-image-columns.md)  
   

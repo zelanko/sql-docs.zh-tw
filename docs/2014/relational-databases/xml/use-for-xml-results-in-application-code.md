@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193337"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
@@ -201,11 +201,9 @@ ms.locfileid: "63193337"
   
  在此範例中，使用了下列 Microsoft .NET Framework 管理的 API 來完成 FOR XML 查詢結果的傳回和轉譯作業：  
   
-1.  
-  `SqlConnection` 用來開啟 SQL Server 的連接，並以指定之連接字串變數 strConn 的內容為基礎。  
+1.  `SqlConnection` 用來開啟 SQL Server 的連接，並以指定之連接字串變數 strConn 的內容為基礎。  
   
-2.  
-  `SqlDataAdapter` 則做為資料配接器使用，它使用 SQL 連接和指定的 SQL 查詢字串來執行 FOR XML 查詢。  
+2.  `SqlDataAdapter` 則做為資料配接器使用，它使用 SQL 連接和指定的 SQL 查詢字串來執行 FOR XML 查詢。  
   
 3.  執行查詢之後，會呼叫 `SqlDataAdapter.Fill` 方法，並傳遞 `DataSet,` 的執行個體 (MyDataSet)，以便在資料集內填入 FOR XML 查詢的輸出。  
   

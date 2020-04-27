@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185570"
 ---
 # <a name="basic-data-mining-tutorial"></a>資料採礦基本教學課程
@@ -48,14 +48,14 @@ ms.locfileid: "63185570"
  [第2課：建立目標郵寄結構 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  在這一課，您將學習如何建立目標郵寄狀況中所能使用的採礦模型結構。  
   
- [第 3 課：加入及處理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [第 3 課：新增及處理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  在這一課，您將學會如何將模型加入到結構中。 您建立的模型會使用下列演算法建立：  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]決策樹  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]聚集  
+-    群集  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]貝氏貝氏機率分類  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏機率分類  
   
  [第4課：探索目標郵寄模型 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  在這一課，您將學會如何使用檢視器探索及解譯各模型的發現。  
@@ -63,7 +63,7 @@ ms.locfileid: "63185570"
  [第5課： &#40;基本資料採礦教學課程來測試模型&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  在這一課，您要建立其中一個目標郵寄模型的副本、加入採礦模型篩選以便將定型資料限制在特定一組客戶，然後評估模型的可用性。  
   
- [第6課：建立和使用預測 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 課：建立及處理預測 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  在這基本資料採礦教學課程的最後一課，您將使用模型來預測哪些客戶最有可能購買自行車。 接著，您要鑽研基礎案例以取得連絡資訊。  
   
 ## <a name="requirements"></a>需求  
@@ -73,8 +73,7 @@ ms.locfileid: "63185570"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]模式中  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
   
  為了加強安全性，範例資料庫不會隨著 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安裝。 若要安裝的正式資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請造訪[Microsoft SQL 範例資料庫](https://go.microsoft.com/fwlink/?LinkId=88417)頁面，並[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]選取。  
   
@@ -84,6 +83,6 @@ ms.locfileid: "63185570"
 ## <a name="see-also"></a>另請參閱  
  [資料採礦解決方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [採礦模型工作和操作說明](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [使用 DMX 建立和查詢資料採礦模型：教學課程 &#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [使用 DMX 建立並查詢資料採礦模型：教學課程 &#40;Analysis Services - 資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

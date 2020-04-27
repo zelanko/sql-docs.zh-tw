@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246000"
 ---
 # <a name="specify-job-responses"></a>指定作業回應
@@ -41,9 +41,9 @@ ms.locfileid: "63246000"
   
 |||  
 |-|-|  
-|**說明**|**主題**|  
+|**描述**|**主題**|  
 |描述如何通知操作員作業狀態。|[通知操作員作業狀態](notify-an-operator-of-job-status.md)|  
-|描述如何將作業狀態寫入 Windows 應用程式記錄檔。|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
+|描述如何將作業狀態寫入 Windows 應用程式記錄檔。|[若要將作業狀態寫入到 Windows 應用程式記錄](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視及回應事件](monitor-and-respond-to-events.md)  

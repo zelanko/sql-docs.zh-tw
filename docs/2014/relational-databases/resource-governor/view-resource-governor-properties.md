@@ -15,20 +15,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209687"
 ---
 # <a name="view-resource-governor-properties"></a>檢視資源管理員屬性
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
   
-1.  **開始之前：**  [許可權](#Permissions)  
+1.  **Before you begin:**  [Permissions](#Permissions)  
   
-2.  使用下列[Resource Governor 屬性頁面](#ViewRGProp)**來查看 Resource Governor 屬性**    
+2.  **若要檢視資源管理員屬性，請使用：**  [資源管理員屬性頁面](#ViewRGProp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  除了檢視資源管理員實體的屬性之外，還可以使用 **[資源管理員屬性]** 頁面執行多個組態工作。 如需詳細資訊，請參閱下列主題：  
   
 -   [啟用資源管理員](enable-resource-governor.md)  
@@ -51,21 +51,21 @@ ms.locfileid: "63209687"
   
  您可以利用查詢 [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 動態管理檢視的方式，查看目前 is_configuration_pending 的狀況，了解是否有暫止的組態。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  檢視資源管理員屬性需要 VIEW SERVER STATER 權限。 資源管理員組態工作需要 CONTROL SERVER 權限。  
   
-##  <a name="ViewRGProp"></a>查看 Resource Governor 屬性頁面  
+##  <a name="view-the-resource-governor-properties-page"></a><a name="ViewRGProp"></a>查看 Resource Governor 屬性頁面  
  **若要使用中的 [Resource Governor 屬性] 頁面來查看 resource governor 屬性[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [Resource Governor]****，然後按一下 [屬性]****，這會開啟 [Resource Governor 屬性]**** 頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]****，然後按一下 [屬性]****，這會開啟 [資源管理員屬性]**** 頁面。  
   
 3.  如需有關該頁中之欄位的說明，請參閱＜ [資源管理員屬性](#RGProp)＞。  
   
 4.  若要儲存任何變更，請按一下 **[確定]**。  
   
-##  <a name="RGProp"></a>Resource Governor 屬性  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a>Resource Governor 屬性  
  **分類函數名稱**  
  從清單中選取以指定分類函數。  
   
@@ -78,16 +78,16 @@ ms.locfileid: "63209687"
  **名稱**  
  指定資源集區的名稱。  
   
- **最小 CPU%**  
+ **最小 CPU %**  
  當 CPU 出現瓶頸時，為在資源集區中的所有要求，指定保證平均 CPU 頻寬使用量。 範圍是 0 到 100。  
   
- **最大 CPU 百分比**  
+ **最大 CPU %**  
  當發生 CPU 競爭時，指定所有要求在此資源集區中將會接收的最大平均 CPU 頻寬。 範圍是 0 到 100。 預設設定為 100。  
   
- **最小記憶體%**  
+ **最小記憶體 %**  
  指定為此資源集區所保留的最小記憶體數量 (不與其他資源集區共享)。 範圍是 0 到 100。  
   
- **最大記憶體百分比**  
+ **最大記憶體 %**  
  指定在此資源集區中，可供要求所用的伺服器記憶體總量。 範圍是 0 到 100。 預設設定為 100。  
   
  如需詳細資訊，請參閱[&#40;transact-sql&#41;建立資源集](/sql/t-sql/statements/create-resource-pool-transact-sql)區。  
@@ -101,16 +101,16 @@ ms.locfileid: "63209687"
  **重要性**  
  指定在工作負載群組中的要求的相對重要性。 可用的設定為「低」、「中」和「高」。  
   
- **要求數上限**  
+ **最大要求**  
  指定在工作負載群組中可允許執行的最大同時要求數。 必須是 0 或正整數。  
   
- **CPU 時間（秒）**  
+ **CPU 時間 (秒)**  
  指定一個要求所能使用的最大 CPU 時間量。 必須是 0 或正整數。 如果為 0，時間是無限制。  
   
- **記憶體授與%**  
+ **記憶體授權 %**  
  指定單一要求可由集區中獲取的記憶體最大數量。 範圍是 0 到 100。  
   
- **授與超時（秒）**  
+ **授與逾時 (秒)**  
  指定在查詢失敗前，一個查詢能夠等待可用資源的最大時間。 必須是 0 或正整數。  
   
  **平行處理原則的程度**  
@@ -119,7 +119,7 @@ ms.locfileid: "63209687"
  如需詳細資訊，請參閱 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql) (建立可用性群組 (Transact-SQL))。  
   
 ## <a name="view-resource-governor-properties-by-using-transact-sql"></a>使用 Transact-SQL 檢視資源管理員屬性  
- **使用 Transact-sql 來查看 resource governor 屬性**  
+ **使用 Transact-SQL 檢視資源管理員屬性**  
   
 1.  若要檢視 Resource Governor 實體的定義，請使用 [Resource Governor 目錄檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql)。  
   

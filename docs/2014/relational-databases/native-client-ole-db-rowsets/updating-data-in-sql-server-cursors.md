@@ -1,5 +1,5 @@
 ---
-title: 更新 SQL Server 資料指標中的資料 |Microsoft Docs
+title: 更新 SQL Server 資料指標中的資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242914"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 資料指標中的資料
@@ -34,7 +34,7 @@ ms.locfileid: "63242914"
 ## <a name="immediate-and-delayed-update-modes"></a>立即和延遲更新模式  
  在立即更新模式下，**IRowsetChange::SetData** 的每個呼叫會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的往返。 如果取用者對單一資料列進行多個變更，利用單一 **SetData** 呼叫提交所有變更會更有效率。  
   
- 在延遲更新模式下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的往返是針對 *IRowsetUpdate::Update* 之 *cRows* 和 **rghRows** 參數中指示的每個資料列進行。  
+ 在延遲更新模式下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的往返是針對 **IRowsetUpdate::Update** 之 *cRows* 和 *rghRows* 參數中指示的每個資料列進行。  
   
  在任一種模式下，當資料列集沒有開啟任何交易物件時，往返代表不同的交易。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "63242914"
  取用者不應該假設資料列會以任何特定順序處理。 如果取用者需要透過一個以上的單一資料列進行資料修改的排序處理，取用者應該以應用程式邏輯建立該順序，並開啟交易來包含程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [更新資料列集中的資料](updating-data-in-rowsets.md)  
+ [更新資料列集內的資料](updating-data-in-rowsets.md)  
   
   

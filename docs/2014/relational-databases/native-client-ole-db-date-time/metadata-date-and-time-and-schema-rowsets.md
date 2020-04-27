@@ -1,5 +1,5 @@
 ---
-title: 日期和時間與架構資料列集 |Microsoft Docs
+title: 日期和時間以及結構描述資料列集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238017"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和時間與架構資料列集
@@ -27,10 +27,10 @@ ms.locfileid: "63238017"
   
 |資料行類型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|清除|0|  
+|date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|設定|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|清除|0|  
-|Datetime|DBTYPE_DBTIMESTAMP|清除|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|設定|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|設定|0..7|  
   

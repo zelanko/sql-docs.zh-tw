@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217747"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>在時序群集模型上建立預測 (中繼資料採礦教學課程)
@@ -65,13 +65,13 @@ ms.locfileid: "63217747"
   
 1.  按一下預測查詢產生器左上角的 [**設計**] 按鈕，切換回查詢建立方格。  
   
-2.  在 [**單一查詢輸入**] 對話方塊中，按一下**** 的 [值`Region`] 方塊，然後選取 [**歐洲**]。  
+2.  在 [**單一查詢輸入**] 對話方塊中，按一下**Value**的 [值`Region`] 方塊，然後選取 [**歐洲**]。  
   
 3.  按一下 [**結果**] 按鈕，以查看歐洲客戶的預測。  
   
 4.  按一下預測查詢產生器左上角的 [**設計**] 按鈕，切換回查詢建立方格。  
   
-5.  在 [**單一查詢輸入**] 對話方塊中，按一下**** 的 [值`Region`] 方塊，然後選取 [**北美洲**]。  
+5.  在 [**單一查詢輸入**] 對話方塊中，按一下**Value**的 [值`Region`] 方塊，然後選取 [**北美洲**]。  
   
 6.  按一下 [**結果**] 按鈕，以在北美洲中查看客戶的預測。  
   
@@ -145,9 +145,9 @@ NATURAL PREDICTION JOIN
   
 1.  按一下預測查詢產生器左上角的 [**設計**] 按鈕，切換回查詢建立方格。  
   
-2.  在 [**單一查詢輸入**] 對話方塊中，按一下**** 的 [值`Region`] 方塊，然後選取空白資料列，以清除此欄位的輸入。  
+2.  在 [**單一查詢輸入**] 對話方塊中，按一下**Value**的 [值`Region`] 方塊，然後選取空白資料列，以清除此欄位的輸入。  
   
-3.  在 [**單一查詢輸入**] 對話方塊中，按一下**** 的 [值`vAssocSeqLineItems`] 方塊，然後按一下 [（...）] 按鈕。  
+3.  在 [**單一查詢輸入**] 對話方塊中，按一下**Value**的 [值`vAssocSeqLineItems`] 方塊，然後按一下 [（...）] 按鈕。  
   
 4.  按一下 [**嵌套資料表輸入**] 對話方塊中的 [**加入**]。  
   
@@ -201,6 +201,6 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>另請參閱  
  [時序群集模型查詢範例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [時序群集模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

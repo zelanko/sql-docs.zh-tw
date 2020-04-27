@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200482"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "63200482"
   
 4.  執行 SQL 陳述式。  
   
-5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) 提供，可以選擇呼叫 [SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 來設定資料指標名稱。  
+5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，可以選擇呼叫 [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) 來設定資料指標名稱。  
   
 6.  呼叫 [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) 來取得資料列集中的資料行 (C) 數目。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63200482"
   
      請注意，當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   
-9. 或者也可以使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
+9. 您可以選擇使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
   
 10. 如果有其他可用的結果集，請到步驟 6。  
   

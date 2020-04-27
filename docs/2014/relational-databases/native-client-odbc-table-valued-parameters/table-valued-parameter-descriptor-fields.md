@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228960"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>資料表值參數描述項欄位
@@ -24,7 +24,7 @@ ms.locfileid: "63228960"
   
 ## <a name="remarks"></a>備註  
   
-|名稱|Location|類型|描述|  
+|名稱|位置|類型|描述|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR *|資料表值參數的伺服器類型名稱。<br /><br /> 當資料表值參數類型名稱是在呼叫 SQLBindParameter 時指定時，一定要將它指定為 Unicode 值，即使在以 ANSI 應用程式形式建立的應用程式中也是如此。 參數*StrLen_or_IndPtr*所使用的值應該是 SQL_NTS 或名稱的字串長度乘以 SIZEOF （WCHAR）。<br /><br /> 透過 SQLSetDescField 指定資料表值參數類型名稱時，可以使用符合應用程式建立方式的常值來指定。 ODBC 驅動程式管理員將會執行所有必要的 Unicode 轉換。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (唯讀)|IPD|SQLTCHAR *|類型定義所在的目錄。|  
@@ -34,7 +34,7 @@ ms.locfileid: "63228960"
   
  當參數焦點設定為資料表值參數時，資料表值參數適用下列的陳述式屬性和描述項標頭欄位：  
   
-|名稱|Location|類型|描述|  
+|名稱|位置|類型|描述|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (這相當於在 APD 中的 SQL_DESC_ARRAY_SIZE)。|APD|SQLUINTEGER|資料表值參數的緩衝區陣列的陣列大小。 這是緩衝區可容納的最大資料列數目，或者以資料列表示的緩衝區大小；資料表值參數值本身的資料列可能多於或少於緩衝區所能保存的資料列。 預設值為 1。 **注意：** 如果 SQL_SOPT_SS_PARAM_FOCUS 設定為預設值0，SQL_ATTR_PARAMSET_SIZE 會參考語句並指定參數集的數目。 如果 SQL_SOPT_SS_PARAM_FOCUS 設定為資料表值參數的序數，則它會參考資料表值參數並針對資料表值參數而指定每個參數集的資料列數。|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|預設值為 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要選取資料列繫結，這個欄位會設定為會繫結到資料表值參數資料列集之結構或緩衝區執行個體的長度。 這個長度會包含所有繫結資料行以及結構或緩衝區之任何填補的空間。 如此可確保在使用指定長度遞增繫結資料行的位址時，結果會指向下一個資料列中相同資料行的起始處。 在 ANSI C 中使用 `sizeof` 運算子時，可保證此項行為。|  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245417"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>針對使用 Proxy 的多伺服器作業進行疑難排解
@@ -25,7 +25,7 @@ ms.locfileid: "63245417"
   
 -   「作業步驟需要 Proxy 帳戶，不過目標伺服器上已停用 Proxy 比對。」  
   
-     若要解決此錯誤，請設定**\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.**> **** _ \<n_\SQLServerAgent\AllowDownloadedJobsToMatchProxyName 登錄子機碼為**1 （true）**。 根據預設，這個子機碼設定**** 為 0`false`（）。 MSSQL 的值 **。**\< *n*> 是實例名稱;例如， **mssql. 1**或**mssql. 3**。  
+     若要解決此錯誤，請設定**\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.**> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** _ \<n_\SQLServerAgent\AllowDownloadedJobsToMatchProxyName 登錄子機碼為**1 （true）**。 根據預設，這個子機碼設定**0**為 0`false`（）。 MSSQL 的值 **。**\< *n*> 是實例名稱;例如， **mssql. 1**或**mssql. 3**。  
   
 -   「找不到 Proxy。」  
   

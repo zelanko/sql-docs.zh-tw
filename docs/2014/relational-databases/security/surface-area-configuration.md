@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184534"
 ---
 # <a name="surface-area-configuration"></a>介面區組態
@@ -60,7 +60,7 @@ ms.locfileid: "63184534"
   
  若要定期檢查 Facet 的組態，請使用以原則為基礎的管理。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
- 您也可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預存程序來設定 `sp_configure` 選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
+ 您也可以使用 `sp_configure` 預存程序來設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
  變更 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的屬性設定。 若要變更 [排程事件和報表傳遞]  屬性以及 [Web 服務和 HTTP 存取]  屬性時，請編輯 **RSReportServer.config** 組態檔。  
   

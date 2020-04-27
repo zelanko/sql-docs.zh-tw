@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184426"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
@@ -45,17 +45,15 @@ ms.locfileid: "63184426"
 |`int`|-2,147,483,648 至 2,147,483,647|  
 |`bigint`|-9,223,372,036,854,775,808 至 9,223,372,036,854,775,807|  
   
--   
-  `decimal` 或小數位數為 0 的 `numeric`。  
+-   `decimal` 或小數位數為 0 的 `numeric`。  
   
 -   以這些類型之一為基礎的任何使用者定義的資料類型 (別名類型)。  
   
- **Precision**  
+ **有效位數**  
  如果是 `decimal` 或 `numeric` 資料類型，請指定有效位數  (小數位數一定是 0)。  
   
  **開始值**  
- 順序物件會傳回的第一個值。 
-  **START** 值必須是小於或等於順序物件的最大值，而且大於或等於最小值。 新順序物件的預設開始值是遞增順序物件的最小值，是遞減順序物件的最大值。  
+ 順序物件會傳回的第一個值。 **START** 值必須是小於或等於順序物件的最大值，而且大於或等於最小值。 新順序物件的預設開始值是遞增順序物件的最小值，是遞減順序物件的最大值。  
   
  **遞增量**  
  每次呼叫 **NEXT VALUE FOR** 函數時，用來遞增順序物件值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。  
@@ -66,7 +64,7 @@ ms.locfileid: "63184426"
  **最大值**  
  指定順序物件的界限。 新序列物件的預設最大值是序列物件之資料類型的最大值。  
   
- **迴圈順序會在達到限制時重新開機**  
+ **在達到限制時循環順序將會重新啟動**  
  選取以允許當超出其最小值或最大值時，順序物件從最小值 (或是遞減順序物件的最大值) 重新啟動。  
   
 > [!NOTE]  
@@ -79,8 +77,7 @@ ms.locfileid: "63184426"
   
 -   無快取 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會快取序號。  
   
--   快取與大小 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會快取順序值。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會追蹤目前值，以及留在快取中的值數目。 因此，儲存快取所需的記憶體數量永遠是順序物件之資料類型的兩個執行個體。  
+-   快取與大小 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會快取順序值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會追蹤目前值，以及留在快取中的值數目。 因此，儲存快取所需的記憶體數量永遠是順序物件之資料類型的兩個執行個體。  
   
  以 CACHE 選項建立時，非預期關閉 (例如停電) 可能會失去快取中的序號。  
   
@@ -90,6 +87,6 @@ ms.locfileid: "63184426"
  需要 SCHEMA 的 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的 sys 順序](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+ [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

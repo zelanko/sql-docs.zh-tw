@@ -1,5 +1,5 @@
 ---
-title: 執行非同步作業 |Microsoft Docs
+title: 執行非同步作業 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,31 +20,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246152"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許應用程式執行非同步資料庫作業。 非同步處理可讓方法立即執行，而不會在呼叫的執行緒上封鎖。 這樣可允許多執行緒的許多功能與彈性，而不需要開發人員明確建立執行緒或處理同步。 當初始化資料庫連接或初始化執行命令的結果時，應用程式會要求非同步處理。  
   
 ## <a name="opening-and-closing-a-database-connection"></a>開啟及關閉資料庫連接  
  使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，設計為以非同步方式初始化資料來源物件的應用程式，可以在呼叫**IDBInitialize：： initialize**之前，在 DBPROP_INIT_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位。 設定此屬性時，如果作業已經立即完成，提供者會使用 S_OK 立即從 **Initialize** 的呼叫傳回；如果初始化是以非同步方式繼續，則會使用 DB_S_ASYNCHRONOUS 從此呼叫傳回。 應用程式可以在資料來源物件上查詢**IDBAsynchStatus**或[ISSAsynchStatus](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)介面，然後呼叫**IDBAsynchStatus：： GetStatus**或[ISSAsynchStatus：： WaitForAsynchCompletion](../../native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)來取得初始化的狀態。  
   
- 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 **ISSAsynchStatus** 介面的提供者必須利用 VARIANT_TRUE 的值實作此屬性。  
+ 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 **ISSAsynchStatus** 介面的提供者必須使用 VARIANT_TRUE 的值實作此屬性。  
   
- 您可以呼叫**IDBAsynchStatus：： abort**或[ISSAsynchStatus：： abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md)來取消非同步**初始化**呼叫。 取用者必須明確地要求非同步資料來源初始化。 否則，要等到資料來源物件完全初始化之後，**IDBInitialize::Initialize** 才會傳回。  
+ 呼叫 **IDBAsynchStatus::Abort** 或 [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) 可以取消非同步的 **Initialize** 呼叫。 取用者必須明確地要求非同步資料來源初始化。 否則，要等到資料來源物件完全初始化之後，**IDBInitialize::Initialize** 才會傳回。  
   
 > [!NOTE]  
->  用於連接共用的資料來源物件無法在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中呼叫**ISSAsynchStatus**介面。 
-  **ISSAsynchStatus** 介面不會針對集區資料來源物件公開。  
+>  用於連接共用的資料來源物件無法在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中呼叫**ISSAsynchStatus**介面。 **ISSAsynchStatus** 介面不會針對集區資料來源物件公開。  
 >   
 >  如果應用程式明確地強制使用資料指標引擎，**IOpenRowset::OpenRowset** 和 **IMultipleResults::GetResult** 將不支援非同步處理。  
 >   
->  此外，遠端 proxy/stub dll （在 MDAC 2.8 中）無法呼叫 Native Client **** 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 ISSAsynchStatus 介面。 
-  **ISSAsynchStatus** 介面不會透過遠端公開。  
+>  此外，遠端 proxy/stub dll （在 MDAC 2.8 中）無法呼叫 Native Client **ISSAsynchStatus**中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 ISSAsynchStatus 介面。 **ISSAsynchStatus** 介面不會透過遠端公開。  
 >   
 >  服務元件不支援 **ISSAsynchStatus**。  
   
@@ -66,7 +63,7 @@ ms.locfileid: "63246152"
  當命令執行完成時，除非同步案例的一個例外，否則可以如常使用 **IMultipleResults**：可以傳回 DB_S_ASYNCHRONOUS，在此情況下，**IDBAsynchStatus** 或 **ISSAsynchStatus** 可用於判斷作業完成的時間。  
   
 ## <a name="examples"></a>範例  
- 在下列範例中，應用程式會呼叫非封鎖的方法、進行其他某些處理，然後返回處理結果。 **ISSAsynchStatus：： WaitForAsynchCompletion**會等候內部事件物件，直到非同步執行的作業完成，或已傳遞*dwMilisecTimeOut*所指定的時間量為止。  
+ 在下列範例中，應用程式會呼叫非封鎖的方法、進行其他某些處理，然後返回處理結果。 **ISSAsynchStatus::WaitForAsynchCompletion** 會等候內部事件物件，直到非同步執行作業完成，或是過了 *dwMilisecTimeOut* 所指定的時間為止。  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -107,7 +104,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus：： WaitForAsynchCompletion**會等候內部事件物件，直到非同步執行的作業完成或傳遞*dwMilisecTimeOut*值為止。  
+ **ISSAsynchStatus::WaitForAsynchCompletion** 會等候內部事件物件，直到非同步執行作業完成，或是過了 *dwMilisecTimeOut* 值為止。  
   
  下列範例會示範利用多個結果集的非同步處理：  
   

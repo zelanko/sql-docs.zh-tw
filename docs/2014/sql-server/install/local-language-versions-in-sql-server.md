@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195071"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本
@@ -30,7 +30,7 @@ ms.locfileid: "63195071"
   
 -   當地語系化版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以與英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體並存安裝。  
   
-##  <a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
+##  <a name="configure-operating-system-to-support-localized-versions"></a><a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
  透過使用 Windows 多語系使用者介面 (MUI) 套件設定， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的當地語系化版本可在支援的作業系統英文版上受到支援。  
   
  不過，在以非英文 MUI 設定執行英文版作業系統的伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的當地語系化版本之前，您必須確認某些作業系統設定。 您需要確認下列作業系統設定是否符合要安裝的當地語系化之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的語言：  

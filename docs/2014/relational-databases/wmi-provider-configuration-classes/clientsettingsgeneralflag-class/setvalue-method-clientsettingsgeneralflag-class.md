@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 7e96139ac789e4ded8453e2c26d1cd436fed6d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242799"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue 方法 (ClientSettingsGeneralFlag 類別)
@@ -40,7 +40,7 @@ Value
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *物件*  
  表示伺服器設定之一般旗標的 [ClientSettingsGeneralFlag 類別](clientsettingsgeneralflag-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
@@ -50,8 +50,7 @@ Value
 |*ReplTest1*|指定旗標之值的布林值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 
-  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
+ `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
   
 ## <a name="remarks"></a>備註  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209742"
 ---
 # <a name="move-a-workload-group"></a>移動工作負載群組
@@ -29,16 +29,16 @@ ms.locfileid: "63209742"
   
 -   **若要移動工作負載群組，請使用下列方式：** [SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  如果有暫止的資源管理員組態作業，則無法移動工作負載群組。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  如果有暫止的資源管理員組態作業，則無法移動工作負載群組。 您可以藉由查詢 [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 動態管理檢視的方式，查看目前 is_configuration_pending 的狀況，以判斷是否有暫止的組態。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  移動工作負載群組需要 CONTROL SERVER 權限。  
   
-##  <a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移動工作負載群組  
+##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移動工作負載群組  
  **若要使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
@@ -55,7 +55,7 @@ ms.locfileid: "63209742"
   
 7.  如果建立或重新設定資源集區或工作負載群組的作業失敗，在屬性頁的標題下方會出現摘要錯誤訊息。 若要查看詳細錯誤訊息，按一下錯誤訊息上的向下箭頭。  
   
-##  <a name="MoveWGTSQL"></a> 使用 Transact-SQL 移動工作負載群組  
+##  <a name="move-a-workload-group-using-transact-sql"></a><a name="MoveWGTSQL"></a> 使用 Transact-SQL 移動工作負載群組  
  **若要使用 Transact-SQL 移動工作負載群組**  
   
 1.  執行 `ALTER WORKLOAD GROUP` 陳述式，並指定要移動之工作負載群組的名稱以及要移入的資源集區。  

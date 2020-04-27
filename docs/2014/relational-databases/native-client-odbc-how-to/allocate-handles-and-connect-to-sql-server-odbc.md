@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225497"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>配置控制代碼並連接到 SQL Server (ODBC)
@@ -29,13 +29,13 @@ ms.locfileid: "63225497"
   
 2.  加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驅動程式專屬的標頭檔 Odbcss.h。  
   
-3.  使用[](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_ENV `HandleType`的呼叫 SQLALLOCHANDLE，以初始化 ODBC 並配置環境控制碼。  
+3.  使用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_ENV `HandleType`的呼叫 SQLALLOCHANDLE，以初始化 ODBC 並配置環境控制碼。  
   
 4.  呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)並`Attribute`將設定為 SQL_ATTR_ODBC_VERSION `ValuePtr` ，並將設定為 SQL_OV_ODBC3，以指示應用程式將使用 ODBC 3.x 格式函式呼叫。  
   
 5.  （選擇性）呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)以設定其他環境選項，或呼叫[SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)來取得環境選項。  
   
-6.  使用[](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_DBC `HandleType`的呼叫 SQLAllocHandle，以配置連接控制碼。  
+6.  使用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) SQL_HANDLE_DBC `HandleType`的呼叫 SQLAllocHandle，以配置連接控制碼。  
   
 7.  （選擇性）呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)來設定連接選項，或呼叫[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)來取得連接選項。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63225497"
   
 11. 呼叫 SQLDisconnect 以中斷與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的連線，並讓連接控制碼可用於新的連接。  
   
-12. 使用[](../native-client-odbc-api/sqlfreehandle.md) SQL_HANDLE_DBC `HandleType`的呼叫 SQLFreeHandle 來釋放連接控制碼。  
+12. 使用[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) SQL_HANDLE_DBC `HandleType`的呼叫 SQLFreeHandle 來釋放連接控制碼。  
   
 13. 利用 SQL_HANDLE_ENV 的 `SQLFreeHandle` 呼叫 `HandleType` 來釋放環境控制代碼。  
   

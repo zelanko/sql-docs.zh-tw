@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187257"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>設定預先定義的複寫警示 (SQL Server Management Studio)
@@ -27,12 +27,12 @@ ms.locfileid: "63187257"
 -   **複寫: 代理程式失敗**    
 -   **複寫: 代理程式重試**    
 -   **複寫: 已卸除逾期的訂閱**    
--   **複寫：驗證失敗之後訂閱重新初始化**    
--   **複寫：訂閱者的資料驗證失敗**    
--   **複寫：訂閱者已通過資料驗證**    
+-   **複寫: 驗證失敗後重新初始化訂閱**    
+-   **複寫: 訂閱者資料驗證失敗**    
+-   **複寫: 訂閱者已經通過資料驗證**    
 -   **複寫: 代理程式自訂關閉**  
   
- 在 **** 中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 如需存取此索引標籤的詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
+ 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [警示]**** 資料夾或複寫監視器中的 [警告]**** 索引標籤設定這些警示。 如需存取此索引標籤的詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
  除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需詳細資訊，請參閱在複寫監視器警示基礎結構[中設定臨界值和警告](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 如需詳細資訊，請參閱[建立使用者定義的事件](../../../ssms/agent/create-a-user-defined-event.md)。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "63187257"
          如果警示為 [複寫 **：訂閱者資料驗證失敗**]，您可以指定複寫為此警示提供的回應作業：選取 [**執行作業**]，然後按一下瀏覽按鈕（**...**）。在 [**尋找作業**] 對話方塊中，按一下 **[流覽]**。 在 **[瀏覽物件]** 對話方塊中，選取 **[重新初始化具有資料驗證失敗的訂閱]**。 在兩個開啟的對話方塊中按一下 **[確定]** 。 執行作業時，它會使用對預存程序的遠端程序呼叫 (RPC) 重新初始化訂閱。 如果「發行者」使用遠端「散發者」，則必須定義「發行者」端的遠端伺服器登入，以便建立從「散發者」到「發行者」的 RPC。   
     -   在 **[選項]** 頁面上，自訂回應的文字。    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用複寫代理程式事件的警示](../agents/use-alerts-for-replication-agent-events.md)  
+ [使用針對複寫代理程式事件的警示](../agents/use-alerts-for-replication-agent-events.md)  
   
   

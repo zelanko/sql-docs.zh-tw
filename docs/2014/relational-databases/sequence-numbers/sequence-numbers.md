@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184414"
 ---
 # <a name="sequence-numbers"></a>序號
@@ -54,7 +54,7 @@ ms.locfileid: "63184414"
   
  雖然順序物件會根據其定義產生編號，不過順序物件不會控制編號的使用方式。 當您回復交易時、當多個資料表共用順序物件時，或者當您配置序號而沒有將它們用於資料表時，插入資料表中的序號可能會產生間距。 以 CACHE 選項建立時，非預期關閉 (例如停電) 可能會失去快取中的序號。  
   
- 如果單一 `NEXT VALUE FOR` 陳述式具有多個指定相同順序產生器的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數執行個體，所有執行個體都會針對該 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式所處理的給定資料列傳回相同的值。 這種行為與 ANSI 標準一致。  
+ 如果單一 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式具有多個指定相同順序產生器的 `NEXT VALUE FOR` 函數執行個體，所有執行個體都會針對該 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式所處理的給定資料列傳回相同的值。 這種行為與 ANSI 標準一致。  
   
 ## <a name="typical-use"></a>一般用法  
  若要建立從 -2,147,483,648 到 2,147,483,647 且遞增量為 1 的整數序號，請使用下列陳述式。  
@@ -267,7 +267,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. 重設序號  
- 範例 E 取用了前 79 個 `Samples.IDLabel` 序號 (您的 `AdventureWorks2012` 版本可能會傳回不同的結果數目)。請執行下列陳述式來取用後續 79 個序號 (80 到 158)。  
+ 範例 E 取用了前 79 個 `Samples.IDLabel` 序號  (您的 `AdventureWorks2012` 版本可能會傳回不同的結果數目)。請執行下列陳述式來取用後續 79 個序號 (80 到 158)。  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  
@@ -387,7 +387,7 @@ GO
   
 ```  
   
- 使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的 `SELECT *` 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
+ 使用 `SELECT *` 的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
   
 ## <a name="related-content"></a>相關內容  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  

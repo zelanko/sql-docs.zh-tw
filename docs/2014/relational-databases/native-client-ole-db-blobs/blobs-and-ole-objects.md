@@ -1,5 +1,5 @@
 ---
-title: Blob 和 OLE 物件 |Microsoft Docs
+title: BLOB 與 OLE 物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195223"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **存取 Ntext**、 **text**、 **image**、 **Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 和 xml 資料類型做為二進位大型物件（blob）。 
-  **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **存取 Ntext**、 **text**、 **image**、 **Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 和 xml 資料類型做為二進位大型物件（blob）。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
   
- 如需示範這項功能的範例，請參閱[Set 大型資料 &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)。  
+ 如需示範此功能的範例，請參閱[設定大型資料 &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)。  
   
  當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取用者在針對資料修改所系結的存取子中提供介面指標時，Native Client OLE DB 提供者可以使用取用者實**IStorage**介面。  
   

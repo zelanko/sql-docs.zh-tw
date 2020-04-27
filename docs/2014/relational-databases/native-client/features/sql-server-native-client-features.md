@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225558"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
@@ -89,7 +89,7 @@ ms.locfileid: "63225558"
  [高可用性/災害復原的 SQL Server Native Client 支援](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  討論如何設定應用程式以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中新增的高可用性災害復原功能。  
   
- [存取擴充事件記錄檔中的診斷資訊](accessing-diagnostic-information-in-the-extended-events-log.md)  
+ [存取擴展事件記錄檔中的診斷資訊](accessing-diagnostic-information-in-the-extended-events-log.md)  
  討論可讓您存取信號緩衝區和 XEvents 記錄檔中之診斷資訊的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 及資料追蹤增強功能。  
   
  [SQL Server Native Client 對 LocalDB 的支援](sql-server-native-client-support-for-localdb.md)  

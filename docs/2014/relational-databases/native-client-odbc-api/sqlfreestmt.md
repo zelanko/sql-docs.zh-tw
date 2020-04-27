@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4aa7e597bcfa80d7d45064c844986018d64617d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190312"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
-  在 ODBC 3.0 和更新版本中不建議使用**SQLFreeStmt** 。 Native Client ODBC 驅動程式支援**SQLFreeStmt**所有已定義的選項值。 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不過， [SQLCloseCursor](sqlclosecursor.md)、 [SQLBindParameter](sqlbindparameter.md)、 [SQLBindCol](sqlbindcol.md)、 **SQLSetDescField**和[SQLFreeHandle](sqlfreehandle.md)會取代或複製**SQLFreeStmt**的函式，因此應該改用。  
+  在 ODBC 3.0 和更新版本中不建議使用**SQLFreeStmt** 。 Native Client ODBC 驅動程式支援**SQLFreeStmt**所有已定義的選項值。 *Option* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不過， [SQLCloseCursor](sqlclosecursor.md)、 [SQLBindParameter](sqlbindparameter.md)、 [SQLBindCol](sqlbindcol.md)、 **SQLSetDescField**和[SQLFreeHandle](sqlfreehandle.md)會取代或複製**SQLFreeStmt**的函式，因此應該改用。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLFreeStmt 函式](https://go.microsoft.com/fwlink/?LinkId=59346)   

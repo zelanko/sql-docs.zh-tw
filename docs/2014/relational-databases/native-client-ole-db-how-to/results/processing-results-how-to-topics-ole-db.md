@@ -1,5 +1,5 @@
 ---
-title: 處理結果的使用說明主題（OLE DB） |Microsoft Docs
+title: 處理結果操作說明主題 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225471"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
@@ -24,15 +24,15 @@ ms.locfileid: "63225471"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [使用 ODBC CALL 語法來執行預存程式 &#40;&#41;，並 &#40;OLE DB 處理傳回碼和輸出參數&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [執行預存程序 &#40;使用 ODBC CALL 語法&#41; 及處理傳回碼和輸出參數 &#40;OLE DB&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [執行預存程式 &#40;使用 RPC 語法&#41; 並處理傳回碼和輸出參數 &#40;OLE DB&#41;](execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [執行預存程序 &#40;使用 RPC 語法&#41; 及處理傳回碼和輸出參數 &#40;OLE DB&#41;](execute-stored-procedure-with-rpc-and-process-output.md)  
   
 -   [執行使用者定義函數和處理傳回碼 &#40;OLE DB&#41;](execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [從結果集提取資料列 &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
+-   [從結果集擷取資料列 &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 的使用說明主題](../ole-db-how-to-topics.md)  
+ [OLE DB how to 主題](../ole-db-how-to-topics.md)  
   
   

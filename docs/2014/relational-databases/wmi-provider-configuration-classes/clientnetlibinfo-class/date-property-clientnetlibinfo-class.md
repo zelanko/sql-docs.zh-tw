@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 31bb3835202d752a067fc47c8afac32b9107bd7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63191167"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 屬性 (ClientNetLibInfo 類別)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *物件*  
  代表用戶端網路程式庫相關資訊的 [ClientNetLibInfo 類別](clientnetlibinfo-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

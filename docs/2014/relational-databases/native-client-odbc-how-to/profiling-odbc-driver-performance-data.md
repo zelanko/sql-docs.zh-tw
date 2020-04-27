@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200309"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>分析驅動程式效能資料 (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63200309"
   
 3.  按一下記錄效能的資料來源。  
   
-4.  按一下 **[設定]**。  
+4.  按一下 [設定]****。  
   
 5.  在 Microsoft SQL Server 設定 DSN Wizard] 中，流覽至包含**記錄檔 ODBC 驅動程式統計資料的頁面至記錄**檔。  
   

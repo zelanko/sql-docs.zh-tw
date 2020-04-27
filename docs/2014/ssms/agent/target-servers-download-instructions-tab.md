@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245337"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目標伺服器 (下載指示索引標籤)
@@ -26,7 +26,7 @@ ms.locfileid: "63245337"
  **目標伺服器**  
  選取要檢視或修改指示的伺服器。  
   
- **作業**  
+ **工作 (Job)**  
  選取要檢視或修改指示的作業。  
   
  **目標伺服器**  
@@ -38,7 +38,7 @@ ms.locfileid: "63245337"
  **Object Name**  
  檢視將受到下載指示影響的物件名稱。  
   
- **張貼日期**  
+ **公佈日期**  
  檢視公佈指示的本地日期和時間。  
   
  **下載日期**  
@@ -50,7 +50,7 @@ ms.locfileid: "63245337"
  **刪除**  
  刪除選取的下載指示。  
   
- **Clear**  
+ **明確**  
  清除選取的下載指示的狀態。  
   
 ## <a name="see-also"></a>另請參閱  

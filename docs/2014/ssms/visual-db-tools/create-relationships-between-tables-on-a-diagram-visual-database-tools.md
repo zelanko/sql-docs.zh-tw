@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184273"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在圖表上建立資料表之間的關聯性 (Visual Database Tools)
@@ -28,17 +28,17 @@ ms.locfileid: "63184273"
   
 2.  將選取的資料行拖曳到關聯的資料表。  
   
-3.  會出現兩個對話方塊：[外部索引鍵關聯性]**** 和 [資料表與資料行]****，而後者會顯示在前景中。  
+3.  會出現兩個對話方塊：[外部索引鍵關聯性]  和 [資料表與資料行]  ，而後者會顯示在前景中。  
   
 4.  **關聯性名稱**具有系統提供的名稱，格式為 FK_*localtable*_*foreigntable*。 您可以變更這個值。  
   
-5.  確認 [主索引鍵資料表]**** 是否指定正確的資料表。  
+5.  確認 [主索引鍵資料表]  是否指定正確的資料表。  
   
 6.  方格會列出本地資料行及其對應的外部資料行。 您可以加入或移除資料表資料行，或變更對應。  
   
-7.  選擇 [確定]****。  
+7.  選擇 [確定]  。  
   
-     [外部索引鍵關聯性]**** 對話方塊便會出現。 [**選取的關聯**性] 會顯示您已建立的關聯性。  
+     [外部索引鍵關聯性]  對話方塊便會出現。 [選取的關聯性]  會顯示您所建立的關聯性。  
   
 8.  變更方格中關聯性的屬性。  
   

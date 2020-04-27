@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200322"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
     
 ### <a name="to-use-a-statement"></a>使用陳述式  
   
-1.  利用 SQL_HANDLE_STMT 的 [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) 來呼叫 *SQLAllocHandle*，以配置陳述式控制代碼。  
+1.  利用 SQL_HANDLE_STMT 的 *HandleType* 來呼叫 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)，以配置陳述式控制代碼。  
   
 2.  您可以選擇呼叫 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 來設定陳述式選項，或是呼叫 [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) 來取得陳述式屬性。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63200322"
   
     -   若要重複使用陳述式控制代碼，請移至步驟 2。  
   
-8.  使用 SQL_HANDLE_STMT 的 [HandleType](../../native-client-odbc-api/sqlfreehandle.md) 呼叫 *SQLFreeHandle*，以釋放陳述式控制代碼。  
+8.  使用 SQL_HANDLE_STMT 的 *HandleType* 呼叫 [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md)，以釋放陳述式控制代碼。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行查詢 &#40;ODBC&#41;的使用說明主題](executing-queries-how-to-topics-odbc.md)  

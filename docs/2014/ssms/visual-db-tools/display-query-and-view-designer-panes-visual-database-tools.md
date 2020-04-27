@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204981"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>顯示查詢和檢視表設計工具窗格 (Visual Database Tools)
@@ -31,10 +31,10 @@ ms.locfileid: "63204981"
   
 1.  開啟檢視或建立新的查詢，以開啟查詢和檢視設計工具。  
   
-2.  在 [查詢設計工具]**** 功能表中指向 [窗格]****，然後按一下要開啟的窗格名稱。  
+2.  在 [查詢設計工具]  功能表中指向 [窗格]  ，然後按一下要開啟的窗格名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Visual Database Tools 建立查詢&#41;](visual-database-tools.md)   
- [&#40;Visual Database Tools 開啟查詢和 View Designer&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
+ [開啟查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

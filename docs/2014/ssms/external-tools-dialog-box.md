@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245637"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
-  使用 [**外部工具**] 對話方塊，將 SQLCMD 或 [記事本] 之類的外部工具新增至 [**工具**] 功能表。 新增外部工具可讓您在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]環境中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 此外，某些工具的輸出可以顯示在 [輸出]**** 視窗中。 [外部工具]  對話方塊可以透過 [工具]  功能表使用。  
+  請利用 [外部工具]  對話方塊，將 SQLCMD 或 [記事本] 之類的外部工具新增至 [工具]  功能表。 當您新增外部工具時，即可在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境中工作時輕鬆地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 此外，某些工具的輸出可以顯示在 [輸出]  視窗中。 [外部工具]  對話方塊可以透過 [工具]  功能表使用。  
   
 ## <a name="options"></a>選項。  
  **功能表內容**  
@@ -41,7 +41,7 @@ ms.locfileid: "63245637"
  從 [功能表內容]  清單及 [工具]  功能表中移除工具或命令。  
   
  **Title** (標題)  
- 輸入會顯示在 [工具]**** 功能表之 [外部工具]**** 子功能表上的工具名稱或命令。 將連字號 (&) 放在工具名稱的某個字母前，以指定該字母做為鍵盤快速鍵。 例如，"&SQLCMD" 會在 [工具]**** 功能表中顯示 SQLCMD。  
+ 輸入會顯示在 [工具]  功能表之 [外部工具]  子功能表上的工具名稱或命令。 將連字號 (&) 放在工具名稱的某個字母前，以指定該字母做為鍵盤快速鍵。 例如，"&SQLCMD" 會在 [工具]  功能表中顯示 SQLCMD。  
   
  **命令**  
  指定要啟動的檔案路徑。  
@@ -59,19 +59,18 @@ ms.locfileid: "63245637"
  指定工具的工作目錄。 請利用箭頭按鈕來選取目錄。 您可以選取一個以上。  
   
  **提示提供引數**  
- 顯示 [引數]**** 對話方塊，讓您在每次啟動外部工具時，輸入或編輯引數的值。  
+ 顯示 [引數]  對話方塊，讓您在每次啟動外部工具時，輸入或編輯引數的值。  
   
  **結束時關閉**  
  關閉工具時也關閉該工具所開啟的視窗。  
   
 ## <a name="example"></a>範例  
- 在 [外部工具]**** 對話方塊中輸入下列值，將會建立標示為 DAC 的功能表項目；在選取該功能表項目時，會開啟命令提示字元，並使用專用管理員連接執行 **sqlcmd** 公用程式。  
+ 在 [外部工具]  對話方塊中輸入下列值，將會建立標示為 DAC 的功能表項目；在選取該功能表項目時，會開啟命令提示字元，並使用專用管理員連接執行 **sqlcmd** 公用程式。  
   
 |Box|值|  
 |---------|-----------|  
 |**Title** (標題)|DAC|  
-|**命令**|
-  [!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**命令**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**引數**|-A|  
   
 ## <a name="see-also"></a>另請參閱  

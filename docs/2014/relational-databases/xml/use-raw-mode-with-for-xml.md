@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193244"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>搭配 FOR XML 使用 RAW 模式
@@ -39,7 +39,7 @@ ms.locfileid: "63193244"
   
 -   [範例：使用 ELEMENTS 指示詞指定 XSINIL](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [範例：使用 XMLDATA 和 XMLSCHEMA 選項來要求結構描述作為結果](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [範例：擷取二進位資料](example-retrieving-binary-data.md)  
   

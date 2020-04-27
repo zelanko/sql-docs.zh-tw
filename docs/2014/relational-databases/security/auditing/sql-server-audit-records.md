@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238382"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
@@ -35,7 +35,7 @@ ms.locfileid: "63238382"
 |**session_id**|事件發生所在之工作階段的識別碼。|`int`|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|`int`|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|`int`|否|  
-|**object_ 識別碼**|稽核發生所在之實體的主要識別碼。 其中包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|`int`|否|  
+|**object_ 識別碼**|稽核發生所在之實體的主要識別碼。 這包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|`int`|否|  
 |**target_server_principal_id**|套用可稽核之動作的伺服器主體。|`int`|是|  
 |**target_database_principal_id**|套用可稽核之動作的資料庫主體。|`int`|否|  
 |**class_type**|稽核發生所在之可稽核的實體類型。|`varchar(2)`|是|  
@@ -49,24 +49,20 @@ ms.locfileid: "63238382"
 |**server_instance_name**|稽核發生所在的伺服器執行個體名稱。 使用標準的 machine\instance 格式。|`nvarchar(120)`|是|  
 |**database_name**|動作發生所在的資料庫環境。|`sysname`|否|  
 |**schema_name**|動作發生所在的結構描述環境。|`sysname`|否|  
-|**object_name**|稽核發生所在之實體的名稱。 其中包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件<br /><br /> TSQL 陳述式 (如果有的話)|`sysname`|否|  
+|**object_name**|稽核發生所在之實體的名稱。 這包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件<br /><br /> TSQL 陳述式 (如果有的話)|`sysname`|否|  
 |**句**|TSQL 陳述式 (如果有的話)|`nvarchar(4000)`|否|  
 |**additional_information**|有關儲存為 XML 之事件的任何其他資訊。|`nvarchar(4000)`|否|  
   
 ## <a name="remarks"></a>備註  
  某些動作不會填入資料行的值，因為它可能不適用於此動作。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時， **sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 程序如下：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時， **sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 此程序如下：  
   
--   
-  **statement** 資料行分成 4000 個字元。  
+-   **statement** 資料行分成 4000 個字元。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會寫成具有部分資料之稽核記錄的第一個資料列。 所有其他欄位會在每一個資料列中重複。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會寫成具有部分資料之稽核記錄的第一個資料列。 所有其他欄位會在每一個資料列中重複。  
   
--   
-  **sequence_no** 值會遞增。  
+-   **sequence_no** 值會遞增。  
   
 -   重複執行此程序，直到記錄所有資料為止。  
   

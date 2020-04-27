@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186268"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>維護計畫 (報告與記錄頁面)
-  使用 [**報表與記錄**] 對話方塊，即可設定執行維護計畫時產生的報表和記錄。  
+  使用 **[報表與記錄]** 對話方塊設定執行維護計畫時產生的報表和記錄。  
   
 ## <a name="options"></a>選項。  
  **產生文字檔報表**  
- 指定是否要[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]撰寫文字檔報表。  
+ 指定是否要 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 撰寫文字檔報表。  
   
  **建立新檔案**  
- 每次執行維護計畫都建立新的報表檔案。 依預設，寫入報表檔案的電腦，是主控包含此維護計畫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦，而寫入位置是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，所建立的預設記錄檔資料夾。 若要指定其他資料夾，請在 [資料夾]**** 文字方塊中輸入資料夾的完整路徑，或者按一下瀏覽按鈕 (**...**) 並瀏覽至您要的資料夾。  
+ 每次執行維護計畫都建立新的報表檔案。 依預設，寫入報表檔案的電腦，是主控包含此維護計畫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦，而寫入位置是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，所建立的預設記錄檔資料夾。 若要指定其他資料夾，請在 [資料夾]  文字方塊中輸入資料夾的完整路徑，或者按一下瀏覽按鈕 ( **...** ) 並瀏覽至您要的資料夾。  
   
  **附加至檔案**  
- 將來自每個計畫執行的報表附加至 [檔案名稱]**** 文字方塊中所指定的檔案。 您也可以按一下瀏覽按鈕並從對話方塊中選取檔案，以指定檔案。  
+ 將來自每個計畫執行的報表附加至 [檔案名稱]  文字方塊中所指定的檔案。 您也可以按一下瀏覽按鈕並從對話方塊中選取檔案，以指定檔案。  
   
- **將報表傳送給電子郵件收件者**  
+ **傳送報表至電子郵件收件者**  
  透過電子郵件傳送維護計畫執行的結果。 此選項只有在已啟用 Database Mail 並已正確設定之後才能使用。  
   
  **代理程式操作員**  
@@ -48,7 +48,7 @@ ms.locfileid: "63186268"
  指定記錄到遠端伺服器使用的連接資訊。  
   
  **新增**  
- 顯示 [連接屬性]**** 對話方塊。 用來設定記錄到遠端伺服器的新連接資訊。  
+ 顯示 [連接屬性]  對話方塊。 用來設定記錄到遠端伺服器的新連接資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](maintenance-plans.md)   

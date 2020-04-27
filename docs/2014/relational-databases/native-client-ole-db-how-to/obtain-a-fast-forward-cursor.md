@@ -1,5 +1,5 @@
 ---
-title: 取得 FAST_FORWARD 的資料指標 |Microsoft Docs
+title: 取得 FAST_FORWARD 資料指標 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225556"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>取得 FAST_FORWARD 資料指標

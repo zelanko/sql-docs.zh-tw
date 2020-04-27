@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209754"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>建立 SQL Server Native Client OLE DB 提供者應用程式
@@ -35,7 +35,7 @@ ms.locfileid: "63209754"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [建立資料來源的連接](establishing-a-connection-to-a-data-source.md)  
+-   [建立與資料來源的連接](establishing-a-connection-to-a-data-source.md)  
   
 -   [執行命令](executing-a-command.md)  
   

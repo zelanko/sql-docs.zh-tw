@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204952"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>指定多重資料行的多重搜尋條件 (Visual Database Tools)
@@ -39,9 +39,9 @@ ms.locfileid: "63204952"
   
 1.  在 [準則窗格](visual-database-tools.md)中，新增想要搜尋的資料行。  
   
-2.  在想要搜尋的第一個資料行的 [篩選條件]**** 資料行中，指定第一個條件。  
+2.  在想要搜尋的第一個資料行的 [篩選條件]  資料行中，指定第一個條件。  
   
-3.  在要搜尋的第二個資料行之 [或...]**** 資料行中，指定第二個條件，請將 [篩選條件]**** 資料行保留空白。  
+3.  在要搜尋的第二個資料行之 [或...]  資料行中，指定第二個條件，請將 [篩選條件]  資料行保留空白。  
   
      [查詢和檢視表設計工具] 會建立包含 OR 條件的 WHERE 子句，如下所示：  
   
@@ -52,18 +52,18 @@ ms.locfileid: "63204952"
       (hire_date < '01/01/1998')  
     ```  
   
-4.  對想要加入的每個額外條件重複步驟 2 和 3。 為每個新增的條件使用不同的 [或...]**** 資料行。  
+4.  對想要加入的每個額外條件重複步驟 2 和 3。 為每個新增的條件使用不同的 [或...]  資料行。  
   
 ## <a name="specifying-an-and-condition"></a>指定 AND 條件  
- 若要搜尋使用 AND 連結條件的不同資料行，請將所有條件放入方格的 [篩選條件]**** 資料行。  
+ 若要搜尋使用 AND 連結條件的不同資料行，請將所有條件放入方格的 [篩選條件]  資料行。  
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>若要指定兩個不同資料行的 AND 條件  
   
 1.  在 [準則窗格](visual-database-tools.md)中，新增想要搜尋的資料行。  
   
-2.  在想要搜尋的第一個資料行的 [篩選條件]**** 資料行中，指定第一個條件。  
+2.  在想要搜尋的第一個資料行的 [篩選條件]  資料行中，指定第一個條件。  
   
-3.  在第二個資料行的 [篩選條件]**** 資料行中，指定第二個條件。  
+3.  在第二個資料行的 [篩選條件]  資料行中，指定第二個條件。  
   
      查詢與檢視設計工具會建立 WHERE 子句，其中包含 AND 條件，如下所示：  
   

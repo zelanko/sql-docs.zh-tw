@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217876"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>建立用於撥接中心模型的預測 (中繼資料採礦教學課程)
@@ -83,7 +83,7 @@ ms.locfileid: "63217876"
   
 5.  以滑鼠右鍵按一下空白設計窗格，然後選取 [新增] [**指名的查詢**]。  
   
-6.  在 [**建立命名查詢**] 對話方塊中， **** 針對 [名稱`Shifts for Call Center`] 輸入。  
+6.  在 [**建立命名查詢**] 對話方塊中， **Name**針對 [名稱`Shifts for Call Center`] 輸入。  
   
      這個名稱會顯示在 [資料來源檢視設計師] 中，但只會做為具名查詢的名稱。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "63217876"
   
  下表顯示每個排班的範例結果。  
   
-|移位|WageType|預測的服務等級|機率|  
+|Shift|WageType|預測的服務等級|機率|  
 |-----------|--------------|-----------------------------|-----------------|  
 |AM|假日|0.165|0.377520666|  
 |midnight|假日|0.105|0.364105573|  

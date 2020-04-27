@@ -14,17 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232362"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了功能強大的平台，可針對半結構化的資料管理來開發豐富的應用程式。 支援將 XML 整合至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有元件，並包含下列項目：  
   
--   
-  `xml` 資料類型。 XML 值可用原生方式儲存在 `xml` 資料類型資料行中，依照 XML 結構描述的集合來設定類型，或維持不具類型。 您可以編製 XML 資料行的索引。  
+-   `xml` 資料類型。 XML 值可用原生方式儲存在 `xml` 資料類型資料行中，依照 XML 結構描述的集合來設定類型，或維持不具類型。 您可以編製 XML 資料行的索引。  
   
 -   可以針對儲存在 `xml` 類型之資料行與變數中的 XML 資料，指定 XQuery 查詢。  
   

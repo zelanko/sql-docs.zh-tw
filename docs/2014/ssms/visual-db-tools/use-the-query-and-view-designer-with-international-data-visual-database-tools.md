@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204625"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
-  您可以使用[查詢和 View Designer](visual-database-tools.md)搭配任何語言的資料，以及任何版本的 Windows 作業系統。 下列方針即簡要說明您將注意到的不同處，並提供管理國際應用程式資料的資訊。  
+  您可以使用 [查詢和檢視表設計工具](visual-database-tools.md) 處理任何語言的資料，並在任何版本的 Windows 作業系統中執行。 下列方針即簡要說明您將注意到的不同處，並提供管理國際應用程式資料的資訊。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>準則和 SQL 窗格的當地語系化文化資訊  
  如果使用 [準則] 窗格建立查詢，可以用符合於您電腦的 Windows [地區選項] 的格式來輸入資訊。 例如，如果您要搜尋資料，您可以使用您習慣使用的格式在 [準則] 資料行中輸入資料，但以下為例外情況：  

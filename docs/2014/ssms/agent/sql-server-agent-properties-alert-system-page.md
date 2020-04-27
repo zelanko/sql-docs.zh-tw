@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245746"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
   使用此頁面來查看及修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所傳送之訊息的設定。  
   
 ## <a name="options"></a>選項。  
- **郵件會話**  
+ **郵件工作階段**  
  此章節中的選項會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 郵件。  
   
  **啟用郵件設定檔**  
@@ -38,52 +38,52 @@ ms.locfileid: "63245746"
  **郵件設定檔**  
  設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取** \<[新增 Database Mail 設定檔 ...] >** 建立新的設定檔。  
   
- **呼機電子郵件**  
+ **呼叫器電子郵件**  
  本節中的選項可以讓您設定傳送到呼叫器號碼的電子郵件訊息，以搭配呼叫系統使用。  
   
- **尋呼程式電子郵件的位址格式**  
+ **呼叫器電子郵件位址格式**  
  此章節可以讓您指定位址格式，以及呼叫器電子郵件中所包含的主旨。  
   
- **到行**  
+ **收件者**  
  指定訊息之 [收件者]**** 的選項  
   
  **前置詞**  
  在傳送到呼叫器的訊息之 [收件者]**** 的開頭處，輸入系統要求的任何固定文字。  
   
- **尋呼**  
+ **呼叫器**  
  在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
- **後置詞**  
+ **尾碼**  
  在傳送到呼叫器的訊息之 [收件者]**** 的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
- **抄送行**  
+ **副本**  
  指定訊息之 [副本]**** 的選項。  
   
  **前置詞**  
  在傳送到呼叫器的訊息之 [副本]**** 的開頭處，輸入系統要求的任何固定文字。  
   
- **尋呼**  
+ **呼叫器**  
  在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
- **後置詞**  
+ **尾碼**  
  在傳送到呼叫器的訊息之 [副本]**** 的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
- **主題**  
+ **主旨**  
  指定訊息主旨的選項。  
   
  **前置詞**  
  在傳送到呼叫器的訊息之 [主旨]**** 的開頭處，輸入呼叫器系統要求的任何固定文字。  
   
- **後置詞**  
+ **尾碼**  
  在傳送到呼叫器的訊息之 [主旨]**** 的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
- **在通知訊息中包含電子郵件內文**  
+ **在通知訊息中包含主體**  
  在傳送給呼叫器的訊息中，包含電子郵件訊息的主體。  
   
- **Fail-安全操作員**  
+ **保全操作員**  
  此章節可以讓您指定保全操作員的選項。  
   
- **啟用 fail 安全操作員**  
+ **啟用保全操作員**  
  指定保全操作員。  
   
  **運算子**  
@@ -100,7 +100,7 @@ ms.locfileid: "63245746"
 >   
 >  如果您需要使用這些 Token，在啟用之前，請確定只有信任的 Windows 安全性群組的成員，例如 Administrators 群組，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的電腦的事件記錄檔上才具有寫入權限。  
   
- **將所有作業回應的權杖取代為警示**  
+ **取代回應警示之所有作業的 Token**  
  選取此核取方塊，以允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 警示所啟動的作業上取代 Token。  
   
 ## <a name="see-also"></a>另請參閱  

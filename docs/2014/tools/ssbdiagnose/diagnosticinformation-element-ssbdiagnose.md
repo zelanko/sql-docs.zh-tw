@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186913"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 元素 (ssbdiagnose)
@@ -37,7 +37,7 @@ ms.locfileid: "63186913"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`None`|N/A|  
+|`None`|不適用|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63186913"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**出現次數**|每個 **ssbdiagnose** XML 輸出檔發生一次。|  
+|**次出現**|每個 **ssbdiagnose** XML 輸出檔發生一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

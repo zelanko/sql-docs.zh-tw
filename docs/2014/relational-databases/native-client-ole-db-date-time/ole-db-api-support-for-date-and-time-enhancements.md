@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237841"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API 對日期和時間增強功能的支援
@@ -30,11 +30,11 @@ ms.locfileid: "63237841"
 |ICommandWithParameters::SetParameterinfo|如需詳細資訊，請參閱[參數和資料列集中繼資料](metadata-parameter-and-rowset.md)。|  
 |IColumnsRowset::GetColumnsRowset|如需詳細資訊，請參閱[參數和資料列集中繼資料](metadata-parameter-and-rowset.md)。|  
 |IColumnsInfo::GetColumnInfo|如需詳細資訊，請參閱[參數和資料列集中繼資料](metadata-parameter-and-rowset.md)。|  
-|IDBSchemaRowset::GetRowset|如需受影響架構資料列集的詳細資訊，請參閱[日期和時間與架構資料列集](../native-client-ole-db-rowsets/rowsets.md)。|  
+|IDBSchemaRowset::GetRowset|如需受影響結構描述資料列集的詳細資訊，請參閱[日期和時間以及結構描述資料列集](../native-client-ole-db-rowsets/rowsets.md)。|  
 |IRowsetFastLoad|此介面支援新的日期/時間類型，但是它的介面沒有任何變更。|  
-|ITableDefinition::CreateTable|如需詳細資訊，請參閱[OLE DB 日期和時間改善的資料類型支援](data-type-support-for-ole-db-date-and-time-improvements.md)。|  
+|ITableDefinition::CreateTable|如需詳細資訊，請參閱[對 OLE DB 日期和時間改善的資料類型支援](data-type-support-for-ole-db-date-and-time-improvements.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;OLE DB 的日期和時間改善&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和時間改善 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

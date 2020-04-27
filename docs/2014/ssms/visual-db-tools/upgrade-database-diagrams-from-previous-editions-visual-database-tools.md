@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205712"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
@@ -40,6 +40,6 @@ ms.locfileid: "63205712"
   
 ## <a name="see-also"></a>另請參閱  
  [瞭解資料庫關係圖擁有權 &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
- [設定資料庫關係圖設計工具 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [設定資料庫圖表設計工具 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

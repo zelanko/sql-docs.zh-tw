@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233072"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233072"
   
 |OLE DB 用戶端類型|SQL Server 2005 類型|SQL Server 2008 (或更新版本) 類型|結果轉換 (伺服器到用戶端)|參數轉換 (用戶端到伺服器)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Date|[確定]|[確定]|  
+|DBTYPE_DBDATE|Datetime|日期|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
 |DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233072"
 |DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|[確定]|  
 |DBTYPE_DBTIMESTAMP||Datetime2 （3）|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP||Datetime2 （7）|[確定]|[確定]|  
-|DBTYPE_DBDATE|Smalldatetime|Date|[確定]|[確定]|  
+|DBTYPE_DBDATE|Smalldatetime|日期|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
 |DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
@@ -55,7 +55,7 @@ ms.locfileid: "63233072"
   
 -   切換到 `datetime2`，因為這是適用於日期和時間的慣用資料類型。  
   
- 使用透過 ICommandWithParameters：： GetParameterInfo 或架構資料列集取得之伺服器中繼資料的應用程式，透過 ICommandWithParameters：： SetParameterInfo 來設定參數類型資訊，將會在用戶端轉換期間失敗，其中字串來源類型的表示大於目的地類型的字串表示。 例如，如果用戶端系結使用 DBTYPE_DBTIMESTAMP 而伺服器資料行是日期， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 會將值轉換為 "yyyy-mm-dd hh： mm： ss. fff"，但是伺服器中繼資料將會當做傳回`nvarchar(10)`。 產生的溢位會造成 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 的資料轉換會引發類似的問題，因為資料列集中繼資料是從結果集中繼資料設定而來。  
+ 使用透過 ICommandWithParameters：： GetParameterInfo 或架構資料列集取得之伺服器中繼資料的應用程式，透過 ICommandWithParameters：： SetParameterInfo 來設定參數類型資訊時，將會在用戶端轉換期間失敗，而來源類型的字串表示會大於目的地類型的字串標記法。 例如，如果用戶端系結使用 DBTYPE_DBTIMESTAMP 而伺服器資料行是日期， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 會將值轉換為 "yyyy-mm-dd hh： mm： ss. fff"，但是伺服器中繼資料將會當做傳回`nvarchar(10)`。 產生的溢位會造成 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 的資料轉換會引發類似的問題，因為資料列集中繼資料是從結果集中繼資料設定而來。  
   
 ### <a name="parameter-and-rowset-metadata"></a>參數和資料列集中繼資料  
  本節針對以早于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的 Native Client 版本編譯的用戶端，描述參數、結果資料行和架構資料列集的中繼資料。  
@@ -166,6 +166,6 @@ ms.locfileid: "63233072"
  新的日期/時間類型允許使用所有比較運算子，因為它們會顯示為字串類型，而非日期/時間類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;OLE DB 的日期和時間改善&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和時間改善 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

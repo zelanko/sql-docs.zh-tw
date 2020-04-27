@@ -14,39 +14,39 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250634"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
-  中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLServer： General Statistics**物件提供計數器來監視一般全伺服器範圍的活動，例如目前的連接數目，以及每秒從執行實例的電腦連線和中斷連接的使用者數目。 當您處理大型線上交易處理 (OLTP) 類型的系統時，這類系統中有許多用戶端會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體連接與中斷連接，這時就會相當有用。  
+  **的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件提供計數器來監視整個伺服器範圍的一般活動，例如目前的連接數目，以及每秒與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之電腦連接與中斷連接的使用者數目。 當您處理大型線上交易處理 (OLTP) 類型的系統時，這類系統中有許多用戶端會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體連接與中斷連接，這時就會相當有用。  
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 計數器。  
   
 |SQL Server 的 General Statistics 計數器|描述|  
 |--------------------------------------------|-----------------|  
-|**作用中的臨時表**|使用中的暫存資料表數目/資料表變數數目。|  
-|**連接重設/秒**|從連接集區啟動的登入總數。|  
-|**事件通知延遲捨棄**|等待系統執行緒卸除的事件通知數目。|  
-|**HTTP 已驗證的要求**|每秒啟動的經驗證 HTTP 要求數目。|  
-|**邏輯連接**|系統的邏輯連接數目。<br /><br /> 邏輯連接的主要用途是服務 Multiple Active Result Sets (MARS) 要求。 針對 MARS 要求，每次當應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，可能會有一個以上的邏輯連接對應至該實體連接。<br /><br /> 若不使用 MARS，則實體連接與邏輯連接的比率為 1:1。 因此，每次有應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，邏輯連接數目就會遞增 1。|  
-|**登入數/秒**|每秒啟動登入總數。 這不包括共用連接。|  
-|**登出/秒**|每秒啟動的登出總數。|  
-|**Mars 鎖死**|偵測到的 MARS 死結數目。|  
-|**非不可部分完成率**|每秒非不可部分完成的產生數目。|  
-|**封鎖的進程**|目前已封鎖的處理序數目。|  
-|**SOAP 空白要求**|每秒啟動的空白 SOAP 要求數目。|  
-|**SOAP 方法調用**|每秒啟動的 SOAP 方法引動過程數目。|  
-|**SOAP 會話起始要求**|每秒啟動的 SOAP 工作階段初始化要求數目。|  
-|**SOAP 會話結束要求**|每秒啟動的 SOAP 工作階段結束要求數目。|  
-|**SOAP SQL 要求**|每秒啟動的 SOAP SQL 要求數目。|  
-|**SOAP WSDL 要求**|每秒啟動的 SOAP Web 服務描述語言要求數目。|  
-|**臨時表建立速率**|每秒建立的暫存資料表數目/資料表變數數目。|  
-|**用於銷毀的臨時表**|等候清除系統執行緒終結的暫存資料表數目/資料表變數數目。|  
-|**追蹤事件通知佇列**|在內部佇列中等候透過 Service Broker 傳送的追蹤事件通知執行個體數目。|  
-|**交易**|交易編列數目 (結合本機、DTC、繫結)。|  
+|**Active Temp Tables**|使用中的暫存資料表數目/資料表變數數目。|  
+|**Connection resets/sec**|從連接集區啟動的登入總數。|  
+|**Event Notifications Delayed Drop**|等待系統執行緒卸除的事件通知數目。|  
+|**HTTP Authenticated Requests**|每秒啟動的經驗證 HTTP 要求數目。|  
+|**Logical Connections**|系統的邏輯連接數目。<br /><br /> 邏輯連接的主要用途是服務 Multiple Active Result Sets (MARS) 要求。 針對 MARS 要求，每次當應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，可能會有一個以上的邏輯連接對應至該實體連接。<br /><br /> 若不使用 MARS，則實體連接與邏輯連接的比率為 1:1。 因此，每次有應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，邏輯連接數目就會遞增 1。|  
+|**Logins/sec**|每秒啟動登入總數。 這不包括共用連接。|  
+|**Logouts/sec**|每秒啟動的登出總數。|  
+|**Mars Deadlocks**|偵測到的 MARS 死結數目。|  
+|**Non-atomic yield rate**|每秒非不可部分完成的產生數目。|  
+|**Processes blocked**|目前已封鎖的處理序數目。|  
+|**SOAP Empty Requests**|每秒啟動的空白 SOAP 要求數目。|  
+|**SOAP Method Invocations**|每秒啟動的 SOAP 方法引動過程數目。|  
+|**SOAP Session Initiate Requests**|每秒啟動的 SOAP 工作階段初始化要求數目。|  
+|**SOAP Session Terminate Requests**|每秒啟動的 SOAP 工作階段結束要求數目。|  
+|**SOAP SQL Requests**|每秒啟動的 SOAP SQL 要求數目。|  
+|**SOAP WSDL Requests**|每秒啟動的 SOAP Web 服務描述語言要求數目。|  
+|**Temp Tables Creation Rate**|每秒建立的暫存資料表數目/資料表變數數目。|  
+|**Temp Tables For Destruction**|等候清除系統執行緒終結的暫存資料表數目/資料表變數數目。|  
+|**Trace Event Notifications Queue**|在內部佇列中等候透過 Service Broker 傳送的追蹤事件通知執行個體數目。|  
+|**異動**|交易編列數目 (結合本機、DTC、繫結)。|  
 |**使用者連接**|計算目前已連線到 SQL Server 的使用者數目。|  
   
 ## <a name="see-also"></a>另請參閱  

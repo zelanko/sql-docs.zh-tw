@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b559ddf5c33b10375d89138a0ac5580472c4fadf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242653"
 ---
 # <a name="instancename-property-clientsettings-class"></a>InstanceName 屬性 (ClientSettings 類別)
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
- 代表 `ClientSettings` 用戶端執行個體上之設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件。  
+ *物件*  
+ 代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端執行個體上之設定的 `ClientSettings` 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端執行個體名稱的字串值。  

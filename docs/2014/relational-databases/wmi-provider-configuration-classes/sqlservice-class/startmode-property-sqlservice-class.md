@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187833"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 屬性 (SqlService 類別)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *物件*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
@@ -48,7 +48,7 @@ object
  Boot  
  值 = 0。 由作業系統載入程式啟動的服務。 這個選項只對驅動程式服務有效。  
   
- 系統  
+ System  
  值 = 1。 由 `IoInitSystem` 方法啟動的服務。 這個選項只對驅動程式服務有效。  
   
  自動  
@@ -57,7 +57,7 @@ object
  手動  
  值 = 3。 在處理序呼叫 `StartService` 方法時要由電腦管理員啟動的服務。  
   
- 已停用  
+ 停用  
  值 = 4。 無法啟動服務。  
   
 ## <a name="remarks"></a>備註  

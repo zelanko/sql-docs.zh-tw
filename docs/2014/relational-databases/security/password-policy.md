@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187965"
 ---
 # <a name="password-policy"></a>密碼原則
@@ -75,7 +75,7 @@ ms.locfileid: "63187965"
   
     -   密碼記錄會使用目前密碼雜湊的值來初始化。  
   
-    -   [**帳戶鎖定期間**]、[**帳戶鎖定閾值**] 和 [**重設帳戶鎖定] 計數器也會在之後**啟用。  
+    -   [帳戶鎖定期間]****、[帳戶鎖定閾值]**** 和 [重設帳戶鎖定計數器的時間]**** 也會啟用。  
   
 -   當 CHECK_POLICY 改為 OFF 時，會發生下列行為：  
   
@@ -108,13 +108,13 @@ ms.locfileid: "63187965"
   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  
   
- [ALTER USER &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
+ [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
  [建立登入](authentication-access/create-a-login.md)  
   
  [建立資料庫使用者](authentication-access/create-a-database-user.md)  
   
 ## <a name="related-content"></a>相關內容  
- [強式密碼](strong-passwords.md)  
+ [增強式密碼](strong-passwords.md)  
   
   

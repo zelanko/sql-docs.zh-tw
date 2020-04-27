@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209880"
 ---
 # <a name="resource-governor-resource-pool"></a>資源管理員資源集區
@@ -65,8 +65,8 @@ ms.locfileid: "63209880"
   
 |集區名稱|MIN % 設定|MAX % 設定|計算出有效的 MAX %|計算出共用的 %|註解|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|內部|0|100|100|0|有效的 MAX% 和共用的 % 不適用於內部集區。|  
-|預設|0|100|30|30|有效的 MAX 值計算為：min(100,100-(20+50)) = 30。 計算出共用的 % 為有效的 MAX - MIN = 30。|  
+|internal|0|100|100|0|有效的 MAX% 和共用的 % 不適用於內部集區。|  
+|default|0|100|30|30|有效的 MAX 值計算為：min(100,100-(20+50)) = 30。 計算出共用的 % 為有效的 MAX - MIN = 30。|  
 |集區 1|20|100|50|30|有效的 MAX 值計算為：min(100,100-50) = 50。 計算出共用的 % 為有效的 MAX - MIN = 30。|  
 |集區 2|50|70|70|20|有效的 MAX 值計算為：min(70,100-20) = 70。 計算出共用的 % 為有效的 MAX - MIN = 20。|  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204705"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>了解資料庫圖表擁有權 (Visual Database Tools)
@@ -36,6 +36,6 @@ ms.locfileid: "63204705"
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料庫關係圖 &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [設定資料庫關係圖設計工具 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [設定資料庫圖表設計工具 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

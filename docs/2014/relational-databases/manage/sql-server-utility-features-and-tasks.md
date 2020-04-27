@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190433"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
@@ -30,7 +30,7 @@ ms.locfileid: "63190433"
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 公用程式的優點  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會將組織的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關實體在統一檢視中模型化。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) 中的公用程式總管和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 公用程式視點會透過做為公用程式控制點 (UCP) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，為系統管理員提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源健全狀況的整體檢視。 UCP 中所呈現之使用量過低和使用量過高的原則以及各種索引鍵參數的摘要和詳細資料組合，將可讓您輕鬆識別資源合併機會和資源使用量過高的情形。 健全狀況原則是可以設定的，而且可加以調整來變更資源使用量的上下臨界值。 您可以變更全域監視原則，或是針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中管理的每個實體來設定個別監視原則。  
   
-##  <a name="typical_scenarios"></a> SQL Server 公用程式使用者入門  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> SQL Server 公用程式使用者入門  
  一般使用者案例會從建立公用程式控制點開始，公用程式控制點會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的中央推理點。 UCP 會根據自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體收集到的資源健全狀況，提供合併檢視。 在建立 UCP 之後，您會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體註冊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，以便它們可以受到 UCP 的管理。  
   
  受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式管理的每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料層應用程式都可以根據全域原則定義或個別原則定義來進行監視。  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205841"
 ---
 # <a name="delete-a-resource-pool"></a>刪除資源集區
@@ -27,16 +27,16 @@ ms.locfileid: "63205841"
   
 -   **若要刪除資源集區，請使用下列方式：** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  如果資源集區包含工作負載群組，您就無法刪除該資源集區。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  您無法刪除資源管理員的預設或內部資源集區。 如果資源集區包含工作負載群組，您就無法刪除該資源集區。 如需詳細資訊，請參閱 [Delete a Workload Group](delete-a-workload-group.md)。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  刪除資源集區需要 CONTROL SERVER 權限。  
   
-##  <a name="DelRPSSMS"></a> 使用物件總管刪除資源集區  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> 使用物件總管刪除資源集區  
  **若要使用 SQL Server Management Studio 刪除資源集區**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
@@ -48,7 +48,7 @@ ms.locfileid: "63205841"
     > [!NOTE]  
     >  如果您嘗試刪除的資源集區包含工作負載群組，這項動作將會失敗。  
   
-##  <a name="DelRPTSQL"></a> 使用 Transact-SQL 刪除資源集區  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> 使用 Transact-SQL 刪除資源集區  
  **若要使用 Transact-SQL 刪除資源集區**  
   
 1.  執行 `DROP RESOURCE POOL` 陳述式，並指定要刪除之資源集區的名稱。  

@@ -14,20 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207001"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和時間改善 (ODBC)
-  
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需有關新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期和時間資料類型之 Native Client 支援的總覽，請參閱[日期和時間改善](../native-client/features/date-and-time-improvements.md)。 如需示範 ODBC 日期/時間支援的範例，請參閱[使用日期和時間類型](../native-client-odbc-how-to/use-date-and-time-types.md)。  
   
- 如需日期和時間資料類型的一般資訊，請參閱[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)。  
+ 如需更多日期和時間資料類型的一般資訊，請參閱 [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ODBC 日期和時間改善的資料類型支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
+ [資料類型對 ODBC 日期和時間支援的改善](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  提供有關支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和時間資料類型之 ODBC 類型的資訊。  
   
  [&#40;ODBC&#41;的中繼資料](../../database-engine/dev-guide/metadata-odbc.md)  
@@ -36,7 +35,7 @@ ms.locfileid: "63207001"
  [&#40;ODBC&#41;的日期時間資料類型轉換](datetime-data-type-conversions-odbc.md)  
  描述如何在 datetime 和 datetimeoffset 值之間轉換。  
   
- [日期和時間類型的 SQL_variant 支援](sql-variant-support-for-date-and-time-types.md)  
+ [日期和時間類型的 sql_variant 支援](sql-variant-support-for-date-and-time-types.md)  
  描述 SQL_VARIANT 函數對日期和時間增強功能的支援。  
   
  [增強型日期和時間類型的大量複製變更 &#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187098"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
@@ -33,7 +33,7 @@ ms.locfileid: "63187098"
   
 ## <a name="server-and-network"></a>伺服器和網路  
   
--   設定配置給[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大記憶體數量。  
+-   設定配置給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的最小和最大記憶體數量。  
   
      依預設， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 將根據可用的系統資源，動態地變更其記憶體需求。 若要避免複寫活動執行期間記憶體可用量過低，請使用 **min server memory** 選項設定最小可用的記憶體。 若要避免作業系統將記憶體分頁部署到光碟，亦可使用 **max server memory** 選項設定最大記憶體數量。 如需詳細資訊，請參閱[伺服器記憶體伺服器組態選項](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63187098"
   
      當需要將大量的變更傳送到「訂閱者」時，請使用新的快照集來重新初始化訂閱，這可能比使用複寫來移動個別的變更還要快。 如需詳細資訊，請參閱 [重新初始化訂閱](../reinitialize-subscriptions.md)。  
   
-     對於異動複寫，「複寫監視器」在 **[未散發的命令]** 索引標籤上顯示以下資訊：在散發資料庫中尚未散發到「訂閱者」的交易數量；散發這些交易的估計時間。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     對於異動複寫，「複寫監視器」在 **[未散發的命令]** 索引標籤上顯示以下資訊：在散發資料庫中尚未散發到「訂閱者」的交易數量；散發這些交易的估計時間。 如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 ## <a name="snapshot-considerations"></a>快照集考量  
   
@@ -162,8 +162,8 @@ ms.locfileid: "63187098"
   
 -   [處理複寫代理程式設定檔](../agents/work-with-replication-agent-profiles.md)  
   
--   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   複寫[代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
+-   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)的最小和最大記憶體數量。  
   
   

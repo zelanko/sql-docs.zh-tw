@@ -1,5 +1,5 @@
 ---
-title: 傳回碼 |Microsoft Docs
+title: 傳回碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 625d56a38d88b3cccbea1c75ad88917af1a6f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228945"
 ---
 # <a name="return-codes"></a>傳回碼
@@ -45,6 +45,6 @@ ms.locfileid: "63228945"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者成員函式不會傳回成功的程式碼 S_FALSE。 所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者成員函式一律會傳回 S_OK 以表示成功。  
   
 ## <a name="see-also"></a>另請參閱  
- [Errors](errors.md)  
+ [錯誤](errors.md)  
   
   

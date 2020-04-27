@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232410"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- 使用其中一種 `@x` 資料類型方法，您就可以再額外處理以變數 `xml` 傳回的 XML。 例如，您可以使用 `ProductModelID` value() 方法 [來擷取](/sql/t-sql/xml/value-method-xml-data-type)屬性值。  
+ 使用其中一種 `xml` 資料類型方法，您就可以再額外處理以變數 `@x` 傳回的 XML。 例如，您可以使用 `ProductModelID` value() 方法 [來擷取](/sql/t-sql/xml/value-method-xml-data-type)屬性值。  
   
 ```  
 DECLARE @i int;  
@@ -47,7 +47,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- 在下列範例中，因為已在 `FOR XML` 子句中指定 `xml` 指示詞，所以傳回的 `TYPE` 查詢結果為 `FOR XML` 類型。  
+ 在下列範例中，因為已在 `FOR XML` 子句中指定 `TYPE` 指示詞，所以傳回的 `FOR XML` 查詢結果為 `xml` 類型。  
   
 ```  
 SELECT ProductModelID, Name  
@@ -102,7 +102,7 @@ FOR XML AUTO, TYPE;
   
 -   以內部 `FOR XML` 查詢產生的 XML 會加入至外部 `FOR XML`產生的 XML 中。  
   
--   內部查詢指定了 `TYPE` 指示詞。 因此，內部查詢所傳回的 XML 資料為 `xml` 類型。 如果未指定 TYPE 指示詞，會以 `FOR XML` 傳回內部 `nvarchar(max)` 查詢的結果，並實體化 XML 資料。  
+-   內部查詢指定了 `TYPE` 指示詞。 因此，內部查詢所傳回的 XML 資料為 `xml` 類型。 如果未指定 TYPE 指示詞，會以 `nvarchar(max)` 傳回內部 `FOR XML` 查詢的結果，並實體化 XML 資料。  
   
 ## <a name="controlling-the-shape-of-resulting-xml-data"></a>控制產生之 XML 資料的外觀  
  巢狀 FOR XML 查詢可讓您有更多的控制權，以定義所產生之 XML 資料的外觀。 您可以使用 FOR XML 查詢來建構部分為屬性中心、部分為元素中心的 XML。  

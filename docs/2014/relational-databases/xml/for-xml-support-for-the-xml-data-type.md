@@ -14,15 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205008"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 資料類型的 FOR XML 支援
-  如果 FOR XML 查詢在 SELECT 子句中指定 `xml` 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 
-  `xml` 類型資料行中的任何 XML 宣告都沒有序列化。  
+  如果 FOR XML 查詢在 SELECT 子句中指定 `xml` 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 `xml` 類型資料行中的任何 XML 宣告都沒有序列化。  
   
  例如，下列查詢會抓取客戶連絡人資訊`BusinessEntityID`，例如、 `FirstName`和`LastName`資料行，以及來自`AdditionalContactInfo` `xml`類型之資料行的電話號碼。  
   
@@ -147,8 +146,7 @@ for xml auto;
   
 -   具有單一 `xml` 類型資料行的資料表  
   
--   
-  `xml` 類型的執行個體  
+-   `xml` 類型的執行個體  
   
  例如，下列使用者定義函數會傳回具有單一 `xm`l 類型資料行的資料表：  
   

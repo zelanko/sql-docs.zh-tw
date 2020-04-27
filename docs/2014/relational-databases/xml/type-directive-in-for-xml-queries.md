@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193281"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)可讓您藉由指定 type 指示詞，選擇性地要求以資料類型的形式`xml`傳回 for xml 查詢的結果。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、將結果指派給`xml`類型變數，或撰寫[Nested FOR XML 查詢](use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 XML 資料類型的執行個體資料至用戶端，做為不同伺服器建構的結果，例如使用 TYPE 指示詞的 FOR XML 查詢，或使用 `xml` 資料類型從 SQL 資料表資料行和輸出參數傳回 XML 執行個體資料。 在用戶端應用程式中，ADO.NET 提供者要求以二進位編碼從伺服器傳送此 XML 資料類型資訊。 然而，如果您使用沒有 TYPE 指示詞的 FOR XML，XML 資料會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。 請注意，不含 TYPE 指示詞的最上層 FOR XML 無法與資料指標一起使用。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 XML 資料類型的執行個體資料至用戶端，做為不同伺服器建構的結果，例如使用 TYPE 指示詞的 FOR XML 查詢，或使用 `xml` 資料類型從 SQL 資料表資料行和輸出參數傳回 XML 執行個體資料。 在用戶端應用程式中，ADO.NET 提供者要求以二進位編碼從伺服器傳送此 XML 資料類型資訊。 然而，如果您使用沒有 TYPE 指示詞的 FOR XML，XML 資料會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。 請注意，不含 TYPE 指示詞的最上層 FOR XML 無法與資料指標一起使用。  
   
 ## <a name="examples"></a>範例  
  下列範例說明搭配 FOR XML 查詢使用 TYPE 指示詞。  
@@ -74,7 +73,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>查詢 FOR XML 查詢的結果  
  FOR XML 查詢會傳回 XML。 因此，您可以將 `xml` 類型方法 (例如 `query()` 與 `value()`) 套用至 FOR XML 查詢所傳回的 XML 結果。  
   
- 在下列查詢中，`query()` 資料類型的 `xml` 方法是用以查詢 `FOR XML` 查詢的結果。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/query-method-xml-data-type)。  
+ 在下列查詢中，`xml` 資料類型的 `query()` 方法是用以查詢 `FOR XML` 查詢的結果。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/query-method-xml-data-type)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,7 +103,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 在下列查詢中，`value()` 資料類型的 `xml` 方法是用以擷取 `SELECT...FOR XML` 查詢所傳回的 XML 結果。 如需詳細資訊，請參閱 [value&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/value-method-xml-data-type)。  
+ 在下列查詢中，`xml` 資料類型的 `value()` 方法是用以擷取 `SELECT...FOR XML` 查詢所傳回的 XML 結果。 如需詳細資訊，請參閱 [value&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/value-method-xml-data-type)。  
   
 ```  
 USE AdventureWorks2012;  

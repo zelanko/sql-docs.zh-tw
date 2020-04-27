@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200190"
 ---
 # <a name="data-type-usage"></a>資料類型使用方式
@@ -43,10 +43,8 @@ ms.locfileid: "63200190"
 |別名資料類型|當連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*的實例時，ODBC 驅動程式會將 Null 新增至未明確宣告資料行 null 屬性的資料行定義。 因此會忽略儲存在別名資料類型定義中的 Null 屬性。<br /><br /> 當連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到 4.2*x*的實例時，具有具有**char**或**binary**基底資料類型且未宣告 null 屬性之別名資料類型的資料行，會建立為**Varchar**或**Varbinary**資料類型。 [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)、 [SQLColumns](../native-client-odbc-api/sqlcolumns.md)和[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)會傳回 SQL_VARCHAR 或 SQL_VARBINARY 做為這些資料行的資料類型。 從這些資料行所擷取的資料不會進行填補。 **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式支援連接至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 和更早版本。|  
 |LONG 資料類型|同時限制 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 資料類型的*資料執行中*參數。|  
 |大型值類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會在接受或傳回 ODBC SQL 資料類型的 api 中公開**Varchar （max）**、 **Varbinary （max）** 和**Nvarchar （max）** 類型做為 SQL_VARCHAR、SQL_VARBINARY 和 SQL_WVARCHAR （分別）。|  
-|使用者定義型別 (UDT)|UDT 資料行會對應為 SQL_SS_UDT。 如果 UDT 資料行使用 UDT 的 ToString() 或 ToXMLString() 方法或是透過 CAST/CONVERT 函數而明確地對應到 SQL 陳述式中的其他類型，則結果集內的資料行類型會反映出此資料行轉換成的實際類型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式只能以二進位形式系結至 UDT 資料行。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援 SQL_SS_UDT 和 SQL_C_BINARY 資料類型之間的轉換。|  
-|XML|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動將 XML 轉換為 Unicode 文字。 XML 類型會對應為 SQL_SS_XML。|  
+|使用者定義型別 (UDT)|UDT 資料行會對應為 SQL_SS_UDT。 如果 UDT 資料行使用 UDT 的 ToString() 或 ToXMLString() 方法或是透過 CAST/CONVERT 函數而明確地對應到 SQL 陳述式中的其他類型，則結果集內的資料行類型會反映出此資料行轉換成的實際類型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式只能以二進位形式系結至 UDT 資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援 SQL_SS_UDT 和 SQL_C_BINARY 資料類型之間的轉換。|  
+|XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動將 XML 轉換為 Unicode 文字。 XML 類型會對應為 SQL_SS_XML。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;ODBC&#41;處理結果](processing-results-odbc.md)  

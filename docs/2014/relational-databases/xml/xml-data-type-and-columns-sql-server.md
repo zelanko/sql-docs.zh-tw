@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193061"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
@@ -162,8 +162,7 @@ ms.locfileid: "63193061"
 ## <a name="limitations-of-the-xml-data-type"></a>xml 資料類型的限制  
  請注意下列適用於 `xml` 資料類型的一般限制：  
   
--   
-  `xml` 資料類型執行個體的預存表示法不能超過 2 GB。  
+-   `xml` 資料類型執行個體的預存表示法不能超過 2 GB。  
   
 -   它無法當作 **sql_variant** 執行個體的子類型使用。  
   

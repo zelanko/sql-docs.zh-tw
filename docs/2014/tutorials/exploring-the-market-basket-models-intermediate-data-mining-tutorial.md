@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224612"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>探索購物籃模型 (中繼資料採礦教學課程)
@@ -32,7 +32,7 @@ ms.locfileid: "63224612"
   
  在本教學課程中，您將從 [相依性**網路**] 索引標籤開始，然後使用 [**規則**] 索引標籤和 [**專案集**] 索引標籤，加深您對檢視器中所顯示的關聯性 您也會使用 [ **Microsoft 一般內容樹狀檢視器]** 來取得個別規則或專案集的詳細統計資料。  
   
-##  <a name="bkmk_DepNet"></a>相依性網路索引標籤  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>相依性網路索引標籤  
  使用 [相依性**網路**] 索引標籤，您可以調查模型中不同專案的互動。 檢視器中的每一個節點都代表某個項目，而節點之間的線條則代表規則。 您可以透過選取某個節點，查看其他哪些節點會預測選取的項目，或目前的項目預測出哪些項目。 在某些情況下，項目之間會存在雙向關聯，表示它們通常會出現在同一項交易中。 您可以參考此索引標籤底部的色彩圖例來判斷關聯的方向。  
   
  連接兩個項目的線條表示，這兩個項目很可能同時出現在單一交易中。 換句話說，客戶很可能一起購買這兩個項目。 滑動軸與規則的機率相關。 將滑動軸往上移或往下移來篩選掉微弱的關聯，也就是機率很低的規則。  
@@ -77,7 +77,7 @@ ms.locfileid: "63224612"
   
  [回到頁首](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>專案集索引標籤  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>專案集索引標籤  
  接下來，您將會深入了解此模型針對 Touring Tire 和 Touring Tire Tube 產品所產生的規則與項目集。 [**專案集**] 索引標籤會顯示與[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯分析演算法所探索的專案集相關的三個重要資訊片段：  
   
 -   **支援：** 專案集發生所在的交易數目。  
@@ -134,7 +134,7 @@ ms.locfileid: "63224612"
   
  [回到頁首](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>規則索引標籤  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>規則索引標籤  
  [**規則**] 索引標籤會顯示與演算法找到的規則相關的下列資訊。  
   
 -   機率 **：** 規則的*可能性*，定義為指定左側專案的右手邊專案機率。  
@@ -171,7 +171,7 @@ ms.locfileid: "63224612"
   
  [回到頁首](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>一般內容樹狀檢視器  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>一般內容樹狀檢視器  
  此檢視器可用於所有模型，不論演算法或模型類型為何。 [ **Microsoft 一般內容樹狀檢視器]** 可從 [**檢視器]** 下拉式清單中取得。  
   
  內容樹狀結構會將採礦模型表示為節點的序列，其中的每一個節點都表示所學習到有關某些資料集的知識。 節點可以包含模式、一組規則、叢集，或是共用某些特性之日期範圍的定義。 節點的確切內容會因為演算法和可預測之屬性的類型而有所不同，但是內容的一般表示都是相同的。 您可以展開每一個節點，以查看詳細資料的遞增層級，並將任何節點的內容複製到剪貼簿。  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63216004"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -109,17 +109,17 @@ ms.locfileid: "63216004"
  **-?**  
  列印所有可用的參數。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 這是發行者的名稱。 針對** 該伺服器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的預設實例指定 server_name。 在該伺服器上指定的已命名實例_server_name_**\\**_instance_name。_ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 *server_name*。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  這是發行者資料庫的名稱。  
   
- **-發行**集_發行_集  
+ **-Publication** _publication_  
  這是發行集的名稱。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，這個參數才有效。  
   
- **-訂閱者** _server_name_[**\\**_instance_name_]  
- 這是訂閱者的名稱。 針對** 該伺服器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的預設實例指定 server_name。 在該伺服器上指定的已命名實例_server_name_**\\**_instance_name。_ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 這是訂閱者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-SubscriberDB** _subscriber_database_  
  這是訂閱者資料庫的名稱。  
@@ -127,7 +127,7 @@ ms.locfileid: "63216004"
  **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  這是包含訂閱之初始快照集的資料夾路徑。  
   
- **-連續**  
+ **-Continuous**  
  指定代理程式是否會嘗試持續輪詢複寫的交易。 如果您指定了這個參數，代理程式就會以輪詢間隔輪詢來源的複寫交易，即使沒有任何交易暫止也一樣。  
   
  **-DestThreads** _number_of_destination_threads_  
@@ -136,8 +136,8 @@ ms.locfileid: "63216004"
  **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令提示字元引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
   
- **-** 散發者_server_name_[**\\**_instance_name_]  
- 這是散發者的名稱。 針對** 該伺服器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的預設實例指定 server_name。 在該伺服器上指定的已命名實例_server_name_**\\**_instance_name。_ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 若為散發者 (發送) 散發，此名稱就會預設為本機電腦上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體的名稱。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 若為散發者 (發送) 散發，此名稱就會預設為本機電腦上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體的名稱。  
   
  **-DistributorLogin** _distributor_login_  
  這是散發者登入名稱。  
@@ -176,8 +176,7 @@ ms.locfileid: "63216004"
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上傳，請改用 `@subscriber_upload_options` 的 `sp_addmergearticle`。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上傳，請改用 `@subscriber_upload_options` 的 `sp_addmergearticle`。  
   
  指定同步處理期間資料交換的類型，它可以是下列其中一個值：  
   
@@ -185,7 +184,7 @@ ms.locfileid: "63216004"
 |------------------------|-----------------|  
 |**1**|代理程式應該將資料變更從訂閱者上傳至發行者。|  
 |**2**|代理程式應該將資料變更從發行者下載至訂閱者。|  
-|**3** （預設值）|代理程式應該先將資料變更從訂閱者上傳至發行者，然後再將資料變更從發行者下載至訂閱者。 您必須使用這個選項搭配 Web 同步處理。|  
+|**3** (預設)|代理程式應該先將資料變更從訂閱者上傳至發行者，然後再將資料變更從發行者下載至訂閱者。 您必須使用這個選項搭配 Web 同步處理。|  
   
  僅限下載的發行項可讓您控制發行集中個別發行項的同步處理行為，而且它們可以改善效能。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
@@ -195,16 +194,14 @@ ms.locfileid: "63216004"
  指定應該針對資料列計數驗證使用哪一種資料列計數計算方法。 值為 **1** (預設值) 表示快速方法。 值為 **0** 則表示完整資料列計數方法。  
   
  **-FileTransferType** [**0**|**1**]  
- 指定檔案傳輸類型。 
-  **
-  ** 值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
+ 指定檔案傳輸類型。  值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** （**發行者**| **訂閱**| **者）]**  
+ **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合併代理程式應該使用的聚合層級，而且可以是下列其中一個值。  
   
 |ForceConvergenceLevel 值|描述|  
 |---------------------------------|-----------------|  
-|**0** （預設值）|預設。 執行標準合併，但不進行其他聚合。|  
+|**0** (預設)|預設值。 執行標準合併，但不進行其他聚合。|  
 |**1**|針對所有層代強制執行聚合。|  
 |**2**|針對所有層代強制執行聚合並更正損毀的歷程。 指定這個值時，指定應該修正歷程的位置：發行者、訂閱者或發行者與訂閱者兩者。|  
   
@@ -227,10 +224,10 @@ ms.locfileid: "63216004"
 |-------------------------------|-----------------|  
 |**0**|記錄最終代理程式狀態訊息、最終工作階段詳細資料，以及任何錯誤。|  
 |**1**|除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料，包括完成百分比。|  
-|**2**|預設。 除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料和發行項層級工作階段詳細資料，包括完成百分比。 此外，系統也會記錄代理程式狀態訊息。|  
-|**第**|與 **-HistoryVerboseLevel** = **2**相同，不同之處在于會記錄更多代理程式進度訊息。|  
+|**2**|預設值。 除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料和發行項層級工作階段詳細資料，包括完成百分比。 此外，系統也會記錄代理程式狀態訊息。|  
+|**3**|與 **-HistoryVerboseLevel** = **2**相同，但是系統會記錄更多代理程式進度訊息。|  
   
- **-主機名稱** _host_name_  
+ **-Hostname** _host_name_  
  這是本機電腦的網路名稱。 預設值為本機電腦名稱。  
   
  **-InteractiveResolution** [**0**|**1**]  
@@ -251,7 +248,7 @@ ms.locfileid: "63216004"
  **-InternetProxyServer**  *internet_proxy_server*  
  指定要在存取 *internet_url*中指定之 HTTP 資源時使用的 Proxy 伺服器。  
   
- **-Microsoft.sqlserver.replication.mergesynchronizationagent.internetsecuritymode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**|**1**]  
  指定在 Web 同步處理期間，連接至 Web 伺服器時使用的 IIS 安全性模式。 值為 **0** 表示基本驗證，而值為 **1** 則表示 Windows 整合式驗證 (預設值)。  
   
  **-InternetTimeout** _internet_timeout_  
@@ -261,18 +258,18 @@ ms.locfileid: "63216004"
  指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL 的 URL。 您必須指定這個屬性。  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
- 這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將合併代理程式標示為有疑問。 預設值為**300**秒。  
+ 這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將合併代理程式標示為有疑問。 預設值是 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入超時前的秒數。預設值為**15**秒。  
+ 這是登入逾時之前的秒數。  預設值為 15 秒。  
   
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
- 這是建立層代或變更批次之間等待的秒數，以便下載到用戶端。 預設值為**1**秒。  
+ 這是建立層代或變更批次之間等待的秒數，以便下載到用戶端。 預設值為 **1** 秒。  
   
  Makegeneration 是準備將發行者變更下載到訂閱者的程序，而且在它下載期間可能是效能瓶頸。 如果 makegeneration 程序已經在 **-MakeGenerationInterval**指定的間隔內執行，則會略過目前同步處理工作階段的程序。 這有助於進行並行同步處理，而且在訂閱者不想要下載變更時特別實用。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或發行集資料庫之系統資料表 **sysmergeschemachange** 中顯示的大量複製要求數目的較小者。 **MaxBcpThreads**必須具有大於0的值，而且沒有硬式編碼的上限。 預設值為**1**。  
+ 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或發行集資料庫之系統資料表 **sysmergeschemachange** 中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 0 的值而且沒有硬式編碼的上限。 預設為 **1**。  
   
  **-MaxDownloadChanges** _number_of_download_changes_  
  指定應該從發行者下載至訂閱者的最大變更資料列數目。 所下載的資料列數目可能會高於指定的最大值，因為：系統會處理完整的層代，而且平行目的地執行緒可能會執行，其中每個執行緒在第一次傳遞時至少會處理 100 項變更。 根據預設，系統會傳送準備下載的所有變更。  
@@ -283,15 +280,11 @@ ms.locfileid: "63216004"
  **-MetadataRetentionCleanup** [**0**|**1**]  
  指定是否應該根據發行集保留週期，從 [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)、 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)、 [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)和 [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) 中移除中繼資料。 預設值為 **1**，表示應該進行清除。 值為 **0** 則表示不應該自動進行清除。  
   
- **-輸出** _output_path_and_file_name_  
+ **-Output** _output_path_and_file_name_  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定輸出是否應該詳細。 
-  **
-  **如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。 
-  **
-  ** 如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。  如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  指定合併代理程式是否應該以平行方式處理上傳至發行者的變更以及下載至訂閱者的變更，而且這個參數在具有高網路頻寬的高容量環境中很有用。 如果 **ParallelUploadDownload** 是 **1**，就會啟用平行處理。  
@@ -305,7 +298,7 @@ ms.locfileid: "63216004"
  **-ProfileName** _profile_name_  
  指定要用於代理程式參數的代理程式設定檔。 如果 **ProfileName** 為 NULL，就會停用代理程式設定檔。 如果沒有指定 **ProfileName** ，就會使用該代理程式類型的預設設定檔。 如需資訊，請參閱[複寫代理程式設定檔](replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱 [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
@@ -318,10 +311,10 @@ ms.locfileid: "63216004"
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- 這是查詢超時之前的秒數。預設值為300秒。 此外，當這個值大於 1800 時，合併代理程式也會使用 `QueryTimeout` 的值來決定等候資料分割快照集產生的時間長度。  
+ 這是查詢逾時之前的秒數。預設為 300 秒。 此外，當這個值大於 1800 時，合併代理程式也會使用 `QueryTimeout` 的值來決定等候資料分割快照集產生的時間長度。  
   
  **-SrcThreads** _number_of_source_threads_  
- 指定合併代理程式從來源列舉變更所用的來源執行緒數目。 在上傳期間，來源是訂閱者，而在下載期間，來源則是發行者。 預設值為**3**。  
+ 指定合併代理程式從來源列舉變更所用的來源執行緒數目。 在上傳期間，來源是訂閱者，而在下載期間，來源則是發行者。 預設為 **3**。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
  這是當執行中並行合併進程的數目是由**@max_concurrent_merge** **sp_addmergepublication**的屬性所設定的限制時，合併代理程式等待的最大秒數。 如果已到達最大秒數而且合併代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
@@ -337,7 +330,7 @@ ms.locfileid: "63216004"
 |**0**|使用現有的資料庫 (預設值)。|  
 |**1**|建立新的空白訂閱者資料庫。|  
 |**2**|建立新的資料庫並將它附加至指定的檔案。|  
-|**第**|建立新的資料庫、附加該資料庫，然後啟用可能存在檔案中的所有訂閱。|  
+|**3**|建立新的資料庫、附加該資料庫，然後啟用可能存在檔案中的所有訂閱。|  
   
 > [!NOTE]  
 >  當您使用 **2** 和 **3**值時，就必須在 **SubscriberDatabasePath** 選項中指定訂閱者的資料庫路徑。  
@@ -354,49 +347,47 @@ ms.locfileid: "63216004"
  **-SubscriberConflictClean** [ **0**| **1**]  
  是否要在同步處理過程中清除訂閱者端的衝突資料表。值為 **1** 表示要清除訂閱者端的衝突資料表。 這個參數只能用於具有分散式衝突記錄之發行集的訂閱。  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| ********| **** 5 6| **7**8]|   
+ **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
  指定由合併代理程式所使用的訂閱者連接類型。 只有預設值 **0** 支援這個參數。  
   
  **-SubscriptionType**[ **0**| **1**| **2**]  
  指定散發的訂閱類型。 值為 **0** 表示發送訂閱 (預設值)、值為 **1** 表示提取訂閱，而值為 **2** 則表示匿名訂閱。  
   
- **-SyncToAlternate** [ **0 | 1**]  
- 指定合併代理程式是否會在訂閱者與替代發行者之間進行同步處理。 值為 **1** 表示它是替代發行者。 預設值為**0**。  
+ **-SyncToAlternate** [ **0|1**]  
+ 指定合併代理程式是否會在訂閱者與替代發行者之間進行同步處理。 值為 **1** 表示它是替代發行者。 預設為 **0**。  
   
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  這是將變更從訂閱者上傳至發行者時，要在單一批次中處理的層代數目。 層代會定義為每個發行項的邏輯變更群組。 可靠通訊連結的預設值為 **100**。 不可靠通訊連結的預設值為 **1**。  
   
  **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
- 這是將變更從訂閱者上傳至發行者時，要在單一批次中讀取的變更數目。 預設值為**100**。  
+ 這是將變更從訂閱者上傳至發行者時，要在單一批次中讀取的變更數目。 預設為 **100**。  
   
  **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
- 這是將變更從訂閱者上傳至發行者時，要在單一批次中套用的變更數目。 預設值為**100**。  
+ 這是將變更從訂閱者上傳至發行者時，要在單一批次中套用的變更數目。 預設為 **100**。  
   
  **-UseInprocLoader**  
- 將快照集檔案套用至訂閱者時，讓合併代理程式使用 BULK INSERT 命令，藉以改善初始快照集的效能。 這個參數已被取代，因為它與 XML 資料類型不相容。 如果您不複寫 XML 資料，則可使用這個參數。 這個參數無法搭配字元模式快照集使用。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果您使用這個參數，位於訂閱者端的  服務帳戶就必須擁有快照集 .bcp 資料檔案所在目錄的讀取權限。 沒有使用這個參數時，代理程式所載入的 ODBC 驅動程式就會從這些檔案中讀取，因此不會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容。  
+ 將快照集檔案套用至訂閱者時，讓合併代理程式使用 BULK INSERT 命令，藉以改善初始快照集的效能。 這個參數已被取代，因為它與 XML 資料類型不相容。 如果您不複寫 XML 資料，則可使用這個參數。 這個參數無法搭配字元模式快照集使用。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果您使用這個參數，位於訂閱者端的  服務帳戶就必須擁有快照集 .bcp 資料檔案所在目錄的讀取權限。 沒有使用這個參數時，代理程式所載入的 ODBC 驅動程式就會從這些檔案中讀取，因此不會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容。  
   
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否應該在合併工作階段結束時完成驗證，而且如果是的話，應該完成哪一種驗證。 值 **3** 是建議值。  
   
 |Validate 值|描述|  
 |--------------------|-----------------|  
-|**0** （預設值）|不驗證。|  
+|**0** (預設)|不驗證。|  
 |**1**|僅驗證資料列計數。|  
 |**2**|資料列計數及總和檢查碼驗證。|  
-|**第**|資料列計數及二進位總和檢查碼驗證。|  
+|**3**|資料列計數及二進位總和檢查碼驗證。|  
   
 > [!NOTE]  
 >  如果「訂閱者」與「發行者」端的資料類型不同，則使用二進位總和檢查碼或總和檢查碼的驗證可能會誤報失敗。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)中的＜資料驗證的考量＞一節。  
   
  **-ValidateInterval** _validate_interval_  
- 這是在連續模式下驗證訂閱的頻率。 預設值為**60**分鐘。  
+ 這是在連續模式下驗證訂閱的頻率。 預設值是 **60** 分鐘。  
   
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的合併代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，合併代理程式就會失敗。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
+>  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的合併代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，合併代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
   
  若要啟動合併代理程式，請從命令提示字元執行 **replmerg.exe** 。 如需詳細資訊，請參閱＜ [複寫代理程式可執行檔](../concepts/replication-agent-executables-concepts.md)＞。  
   

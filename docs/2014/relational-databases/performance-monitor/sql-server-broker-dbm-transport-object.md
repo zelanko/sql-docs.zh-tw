@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250733"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server 的 Broker 和 DBM Transport 物件
@@ -57,7 +57,7 @@ ms.locfileid: "63250733"
 |**Send I/Os/sec**|此計數器會報告每秒已完成的傳輸傳送 I/O 作業數目。 請注意傳輸傳送作業可能包含一個以上的訊息片段。|  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql)   
+ [dm_broker_forwarded_messages &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   

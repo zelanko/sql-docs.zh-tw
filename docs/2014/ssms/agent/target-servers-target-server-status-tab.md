@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245718"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目標伺服器 (目標伺服器狀態索引標籤)
@@ -26,10 +26,10 @@ ms.locfileid: "63245718"
  **目標伺服器**  
  檢視目標伺服器的名稱。  
   
- **當地時間**  
+ **本地時間**  
  檢視目標伺服器的本地時區日期和時間。  
   
- **上次輪詢時間**  
+ **上一次輪詢**  
  檢視目標伺服器上一次輪詢主要伺服器的本地日期和時間。  
   
  **未閱讀的指示**  
@@ -44,7 +44,7 @@ ms.locfileid: "63245718"
  **強制脫離**  
  按一下此按鈕，強制所選取的目標伺服器脫離主要伺服器。  
   
- **Post 指示**  
+ **公佈指示**  
  將指示公佈到選取的目標伺服器。  
   
  **啟用自動重新整理**  

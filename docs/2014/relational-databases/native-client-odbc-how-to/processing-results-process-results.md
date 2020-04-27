@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200312"
 ---
 # <a name="process-results-odbc"></a>處理結果 (ODBC)
@@ -50,7 +50,7 @@ ms.locfileid: "63200312"
     > [!NOTE]  
     >  當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   
-5.  或者也可以使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
+5.  您可以選擇使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
   
 6.  如果有其他可用的結果集，請到步驟 1。  
   

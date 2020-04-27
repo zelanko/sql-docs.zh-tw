@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63216019"
 ---
 # <a name="enable-resource-governor"></a>啟用資源管理員
@@ -26,7 +26,7 @@ ms.locfileid: "63216019"
   
 -   **若要啟用 Resource Governor，請使用下列方式：** [物件總管](#RGOnObjEx)、[Resource Governor 屬性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  啟用資源管理員會產生下列結果：  
   
 -   系統會針對新的連接執行分類函數，以便將其工作負載指派給工作負載群組。  
@@ -35,20 +35,20 @@ ms.locfileid: "63216019"
   
 -   啟用資源管理員之前存在的要求會受到停用資源管理員時所做的任何組態變更影響。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  在使用者交易中時，您無法使用 `ALTER RESOURCE GOVERNOR` 陳述式啟用資源管理員。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  啟用資源管理員需要 CONTROL SERVER 權限。  
   
-##  <a name="RGOnObjEx"></a> 使用物件總管啟用資源管理員  
+##  <a name="enable-resource-governor-using-object-explorer"></a><a name="RGOnObjEx"></a> 使用物件總管啟用資源管理員  
  **若要使用物件總管啟用資源管理員**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
 2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [啟用]  。  
   
-##  <a name="RGOnProp"></a> 使用資源管理員屬性啟用資源管理員  
+##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> 使用資源管理員屬性啟用資源管理員  
  **若要使用資源管理員屬性頁面來啟用資源管理員**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
@@ -57,7 +57,7 @@ ms.locfileid: "63216019"
   
 3.  按一下 **[啟用資源管理員]** 核取方塊，然後按一下 **[確定]** 。  
   
-##  <a name="RGOnTSQL"></a> 使用 Transact-SQL 啟用資源管理員  
+##  <a name="enable-resource-governor-using-transact-sql"></a><a name="RGOnTSQL"></a> 使用 Transact-SQL 啟用資源管理員  
  **若要使用 Transact-SQL 啟用資源管理員**  
   
 1.  執行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 陳述式。  

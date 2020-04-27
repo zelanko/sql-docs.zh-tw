@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192461"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>啟動及停止複寫代理程式 (SQL Server Management Studio)
-  從   中的 [作業]  資料夾和 [複寫][!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾，以及從複寫監視器啟動及停止代理程式。 啟動和停止下列代理程式和作業：  
+  從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [作業]**** 資料夾和 [複寫]**** 資料夾，以及從複寫監視器啟動及停止代理程式。 啟動和停止下列代理程式和作業：  
   
 -   所有發行集所使用的快照集代理程式。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "63192461"
   
 2.  展開 **[本機發行集]** 資料夾，然後以滑鼠右鍵按一下發行集。  
   
-3.  按一下 **[檢視快照集代理程式的狀態]** 或 **[檢視記錄讀取器代理程式的狀態]** 。  
+3.  按一下 **[檢視快照集代理程式的狀態]** 或 **[檢視記錄讀取器代理程式的狀態]**。  
   
-4.  按一下 **[啟動]** 或 **[停止]** 。  
+4.  按一下 **[啟動]** 或 **[停止]**。  
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>若要從 Management Studio 啟動和停止「佇列讀取器代理程式」  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63192461"
   
 2.  展開 **[SQL Server Agent]** 資料夾，然後展開 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下代理程式的作業，再按一下 **[啟動作業]** 或 **[停止作業]** 。 佇列讀取器代理程式的作業名稱格式為 **[\<散發者>].\<整數>** 。  
+3.  以滑鼠右鍵按一下代理程式的作業，再按一下 **[啟動作業]** 或 **[停止作業]**。 佇列讀取器代理程式的作業名稱格式為 **[\<散發者>]。\<整數>**。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>若要從「複寫監視器」啟動和停止「快照集代理程式」、「記錄讀取器代理程式」或「佇列讀取器代理程式」  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63192461"
   
 2.  按一下 **[代理程式]** 索引標籤。  
   
-3.  以滑鼠右鍵按一下代理程式，然後按一下 **[啟動代理程式]** 或 **[停止代理程式]** 。  
+3.  以滑鼠右鍵按一下代理程式，然後按一下 **[啟動代理程式]** 或 **[停止代理程式]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../monitoring-replication.md)   
