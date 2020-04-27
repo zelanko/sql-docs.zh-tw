@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637596"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>建立、修改和卸除選擇性 XML 索引
@@ -22,7 +22,7 @@ ms.locfileid: "62637596"
   
  如需選擇性 XML 索引的詳細資訊，請參閱 [選擇性 XML 索引 &#40;SXI&#41;](selective-xml-indexes-sxi.md)。  
   
-##  <a name="create"></a> 建立選擇性 XML 索引  
+##  <a name="creating-a-selective-xml-index"></a><a name="create"></a> 建立選擇性 XML 索引  
   
 ### <a name="how-to-create-a-selective-xml-index"></a>如何：建立選擇性 XML 索引  
  **使用 Transact-SQL 建立選擇性 XML 索引**  
@@ -46,7 +46,7 @@ FOR(
   
   
   
-##  <a name="alter"></a> 修改選擇性 XML 索引  
+##  <a name="altering-a-selective-xml-index"></a><a name="alter"></a> 修改選擇性 XML 索引  
   
 ### <a name="how-to-alter-a-selective-xml-index"></a>如何：修改選擇性 XML 索引  
  **使用 Transact-SQL 修改選擇性 XML 索引**  
@@ -68,7 +68,7 @@ FOR
   
   
   
-##  <a name="drop"></a> 卸除選擇性 XML 索引  
+##  <a name="dropping-a-selective-xml-index"></a><a name="drop"></a> 卸除選擇性 XML 索引  
   
 ### <a name="how-to-drop-a-selective-xml-index"></a>如何：卸除選擇性 XML 索引  
  **使用 Transact-SQL 卸除選擇性 XML 索引**  

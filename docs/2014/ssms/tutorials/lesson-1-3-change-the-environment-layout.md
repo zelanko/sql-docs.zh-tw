@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62634267"
 ---
 # <a name="change-the-environment-layout"></a>變更環境配置
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的各個元件會競相爭取使用畫面空間。 若要有更多空間，您可以關閉、隱藏或移動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 元件。 這一頁的各個練習會將元件移到不同的位置。  
   
 ## <a name="closing-and-hiding-components"></a>關閉和隱藏元件  

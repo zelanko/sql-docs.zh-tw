@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702039"
 ---
 # <a name="merging-partitions-xmla"></a>合併資料分割 (XMLA)
@@ -37,10 +37,9 @@ ms.locfileid: "62702039"
  當`MergePartitions`命令執行時，會將儲存在[source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)屬性中指定之來源分割區的匯總資料，加入[目標](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)屬性中指定的目標資料分割。  
   
 > [!NOTE]  
->  
-  `Source` 屬性可包含一個以上的資料分割物件參考。 不過，`Target` 屬性則不可以。  
+>  `Source` 屬性可包含一個以上的資料分割物件參考。 不過，`Target` 屬性則不可以。  
   
- 為了能夠成功合併，在 `Source` 與 `Target` 中指定的資料分割，必須由相同的量值群組包含，並使用相同的彙總設計。 否則便會發生錯誤。  
+ 為了能夠成功合併，在 `Source` 與 `Target` 中指定的資料分割，必須由相同的量值群組包含，並使用相同的彙總設計。 否則，系統將發生錯誤。  
   
  在 `Source` 中指定的資料分割會在 `MergePartitions` 命令成功完成後刪除。  
   

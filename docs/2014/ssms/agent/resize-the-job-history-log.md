@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650883"
 ---
 # <a name="resize-the-job-history-log"></a>調整作業記錄大小
@@ -31,22 +31,22 @@ ms.locfileid: "62650883"
   
      [安全性](#Security)  
   
--   **若要設定作業歷程記錄的大小限制，請使用：**  
+-   **若要使用下列項目設定作業記錄的大小限制：**  
   
      [Transact-SQL](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>若要根據原始大小調整作業記錄大小  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在 [物件總管]**** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後按一下 [屬性]****。  
   
 3.  選取 [記錄]**** 頁面，然後確認已選取 [限制作業記錄大小]****。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62650883"
   
 1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，然後展開該實例。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後按一下 [屬性]****。  
   
 3.  選取 **[記錄]** 頁面，然後按一下 **[自動移除代理程式記錄]**。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653851"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>第 3 課：處理購物籃採礦結構
@@ -106,7 +106,7 @@ RELATE [<case key>] TO [<foreign key>]
     [<mining structure>]  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     Market Basket  
@@ -120,7 +120,7 @@ RELATE [<case key>] TO [<foreign key>]
     ( SKIP, <skipped column> )  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [OrderNumber],  
@@ -128,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     陳述式中的 `Products` 會參考 SHAPE 陳述式所定義的 Products 資料表。 
-  `SKIP` 用來忽略 Model 資料行，此資料行在來源資料中做為索引鍵，但在採礦結構中沒有使用。  
+     陳述式中的 `Products` 會參考 SHAPE 陳述式所定義的 Products 資料表。 `SKIP` 用來忽略 Model 資料行，此資料行在來源資料中做為索引鍵，但在採礦結構中沒有使用。  
   
 5.  取代下列項目：  
   
@@ -144,7 +143,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [<nested table>]  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     SHAPE {  

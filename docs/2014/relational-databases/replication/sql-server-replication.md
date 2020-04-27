@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626146"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
@@ -37,7 +37,7 @@ ms.locfileid: "62626146"
 
  ## <a name="replication-security"></a>複寫安全性
   
--   [檢視及修改複寫安全性設定](security/view-and-modify-replication-security-settings.md)  
+-   [查看及修改複寫安全性設定](security/view-and-modify-replication-security-settings.md)  
 -   [管理發行集存取清單中的登入](security/manage-logins-in-the-publication-access-list.md)  
   
 ## <a name="publishing-and-distribution"></a>發行和散發  
@@ -54,8 +54,8 @@ ms.locfileid: "62626146"
 -   [檢視和修改發行項屬性](publish/view-and-modify-article-properties.md)    
 -   [刪除發行集](publish/delete-a-publication.md)   
 -   [刪除發行項](publish/delete-an-article.md)    
--   [從 Oracle Database 建立發行集](publish/create-a-publication-from-an-oracle-database.md)   
--   [設定訂閱的逾期期限](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [從 Oracle 資料庫建立發行集](publish/create-a-publication-from-an-oracle-database.md)   
+-   [設定訂閱的到期時間](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [指定架構選項](publish/specify-schema-options.md)  
 -   [複寫架構變更](publish/replicate-schema-changes.md)    
 -   [管理識別欄位](publish/manage-identity-columns.md)   
@@ -77,7 +77,7 @@ ms.locfileid: "62626146"
 ### <a name="transactional-replication-options"></a>異動複寫選項  
   
 -   [設定對交易式發行項之資料變更的傳播方法](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [啟用交易式發行集的可更新訂閱](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [啟用交易式發行集的更新訂閱](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>合併式複寫選項  
   
@@ -134,5 +134,5 @@ ms.locfileid: "62626146"
 -   [以程式設計方式監視複寫](monitor/programmatically-monitor-replication.md)    
 -   [在散發資料庫中查看複寫的命令和其他資訊](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [檢視合併式發行集的衝突資訊](view-conflict-information-for-merge-publications.md) 
--   [針對異動複寫測量延遲及驗證連接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [針對異動複寫測量延遲及驗證連線](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 IRow：： GetColumns （OLE DB）提取資料行 |Microsoft Docs
+title: 使用 IRow::GetColumns 擷取資料行 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468494"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
-  
   `IRow` 介面允許直接存取結果集中單一資料列的資料行。 因此，`IRow` 是從包含一個資料列之結果集擷取資料行的有效方式。  
   
  系統會提供一個程式碼範例，顯示如何使用 `IRow` 提取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
@@ -518,6 +517,6 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 的使用說明主題](ole-db-how-to-topics.md)  
+ [OLE DB how to 主題](ole-db-how-to-topics.md)  
   
   

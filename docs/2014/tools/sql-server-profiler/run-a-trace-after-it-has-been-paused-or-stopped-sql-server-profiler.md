@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fabb6cd5d089ba39c413ee12427b18f1bbee8bf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688589"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>在追蹤暫停或停止之後執行追蹤 (SQL Server Profiler)
@@ -32,7 +32,7 @@ ms.locfileid: "62688589"
 2.  在 **[檔案]** 功能表上，按一下 **[執行追蹤]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [[SQL Server Profiler]](sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [啟動追蹤](start-a-trace.md)  
   
   

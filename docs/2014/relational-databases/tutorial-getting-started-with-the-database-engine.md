@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524327"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：Database Engine 使用者入門
@@ -42,7 +42,7 @@ ms.locfileid: "62524327"
   
  您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]可以藉由執行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝程式來安裝，或從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=144346)下載並安裝。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的安裝方式是執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式或從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=144346)下載並安裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

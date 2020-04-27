@@ -11,14 +11,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca9df655e00b1f2fd1919f30bb1bb166e2556b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62505140"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 的預設和具名執行個體的檔案位置
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安裝是由一個或多個不同的執行個體所組成。 不論是預設或具名，執行個體都有自己的一組程式和資料檔案，以及在電腦上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間共用的一組共同檔案。  
   
  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體包括 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，則每一個元件都有一組完整的資料檔案和可執行檔，以及所有元件共用的共同檔案。  
@@ -32,7 +31,7 @@ ms.locfileid: "62505140"
 >   
 >  請勿刪除下列任何一個目錄或是其內容：Binn、Data、Ftdata、HTML 或 1033。 必要時，您可以刪除其他目錄。不過，如果您沒有解除安裝後再重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的話，可能會無法擷取任何遺失的功能或資料。 請勿刪除或修改 HTML 目錄中的任何 .htm 檔。 這些檔案是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具得以正常運作所不可或缺的要素。  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  單一電腦上所有執行個體使用的通用檔案會安裝在 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] 資料夾中，其中 \<*drive*> 是元件安裝位置的磁碟機代號。 預設值通常是磁碟機 C。  
   
 ## <a name="file-locations-and-registry-mapping"></a>檔案位置和登錄對應  
@@ -40,14 +39,11 @@ ms.locfileid: "62505140"
   
  預設執行個體識別碼是使用以下格式建構的：  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]的 MSSQL，後面接著主要版本號碼、底線、次要版本 (如果適用的話) 和句點，再接著執行個體名稱。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]的 MSSQL，後面接著主要版本號碼、底線、次要版本 (如果適用的話) 和句點，再接著執行個體名稱。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 MSAS，後面接著主要版本號碼、底線、次要版本 (如果適用的話) 和句點，再接著執行個體名稱。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 MSAS，後面接著主要版本號碼、底線、次要版本 (如果適用的話) 和句點，再接著執行個體名稱。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 MSRS，後面接著主要版本號碼、底線、次要版本 (如果適用的話) 和句點，再接著執行個體名稱。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 MSRS，後面接著主要版本號碼、底線、次要版本 (如果適用的話) 和句點，再接著執行個體名稱。  
   
  此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的預設執行個體識別碼範例如下：  
   
@@ -68,8 +64,7 @@ ms.locfileid: "62505140"
  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定非預設的執行個體識別碼。 如果使用者選擇變更預設安裝目錄，則可以改用 \<自訂路徑>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而不使用 \<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，不支援以底線 (_) 為開頭或是包含數字符號 (#) 或貨幣符號 ($) 的執行個體識別碼。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和用戶端元件都不會感知執行個體，因此，也不會被指派執行個體識別碼。 根據預設，系統會將非執行個體感知的元件安裝到單一目錄： [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 變更某個共用元件的安裝路徑也會變更其他共用元件的安裝路徑。 後續安裝會將非執行個體感知的元件安裝到與原始安裝相同的目錄。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和用戶端元件都不會感知執行個體，因此，也不會被指派執行個體識別碼。 根據預設，系統會將非執行個體感知的元件安裝到單一目錄： [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 變更某個共用元件的安裝路徑也會變更其他共用元件的安裝路徑。 後續安裝會將非執行個體感知的元件安裝到與原始安裝相同的目錄。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]是在安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後支援實例重新命名的唯一元件。 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體已重新命名，執行個體識別碼將不會變更。 當執行個體重新命名完成之後，目錄和登錄機碼將會繼續使用安裝期間所建立的執行個體識別碼。  
   
@@ -96,25 +91,20 @@ ms.locfileid: "62505140"
   
 |元件|預設路徑<sup>1、2</sup>|可設定的<sup>3</sup>或固定路徑|  
 |---------------|---------------------------------|--------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]伺服器元件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID>\|可設定|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]資料檔案|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID>\|可設定|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID>\|可設定|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料檔案|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID>\|可設定|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12。\<InstanceID> \Reporting Services\ReportServer\Bin\|可設定|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表管理員|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12。\<InstanceID> \Reporting Services\ReportManager\|固定路徑|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 伺服器元件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID>\|可設定|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料檔|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID>\|可設定|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID>\|可設定|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID>\|可設定|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12。\<InstanceID> \Reporting Services\ReportServer\Bin\|可設定|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表管理員|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12。\<InstanceID> \Reporting Services\ReportManager\|固定路徑|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<安裝目錄> \120\DTS\|可設定的<sup>4</sup>|  
 |用戶端元件 (bcp.exe 和 sqlcmd.exe 除外)|\<安裝目錄> \120\Tools\|可設定的<sup>4</sup>|  
-|用戶端元件 (bcp.exe 和 sqlcmd.exe)|
-  \<安裝目錄>\Client SDK\ODBC\110\Tools\Binn|固定路徑|  
+|用戶端元件 (bcp.exe 和 sqlcmd.exe)|\<安裝目錄>\Client SDK\ODBC\110\Tools\Binn|固定路徑|  
 |複寫和伺服器端 COM 物件|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\<sup>5</sup>|固定路徑|  
 |資料轉換執行階段引擎的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件 DLL、資料轉換管線引擎和 `dtexec` 命令提示字元公用程式|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|固定路徑|  
-|對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|
-  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|固定路徑|  
-|
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援的每一種類型之列舉值的 DLL|
-  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|固定路徑|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務，WMI 提供者|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共用\|固定路徑|  
+|對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|固定路徑|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援的每一種類型之列舉值的 DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|固定路徑|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務，WMI 提供者|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共用\|固定路徑|  
 |的所有執行個體之間共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共用\|固定路徑|  
   
  <sup>1</sup>請確定 \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ 資料夾受到有限許可權的保護。  

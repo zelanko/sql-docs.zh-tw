@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727462"
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
@@ -52,7 +52,7 @@ ms.locfileid: "62727462"
 > [!NOTE]  
 >  如果實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]無法找出並取消與連接相關聯的會話（例如，當資料提取在提供 HTTP 連接時開啟多個會話時），實例就無法取消連接。 如果在 `Cancel` 命令期間遇到這個情況，就會發生錯誤。  
   
- 伺服器管理員可以擷取使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方法的 DISCOVER_CONNECTIONS 結構描述資料列集，來為 `Discover` 執行個體擷取使用中的連接。  
+ 伺服器管理員可以擷取使用 `Discover` 方法的 DISCOVER_CONNECTIONS 結構描述資料列集，來為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體擷取使用中的連接。  
   
 ## <a name="canceling-server-processes"></a>取消伺服器處理序  
  藉由在`Cancel`命令的[SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)屬性中指定伺服器處理序識別碼（spid），伺服器管理員可以取消與指定之 spid 相關聯的命令。  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510385"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
@@ -49,9 +49,9 @@ ms.locfileid: "62510385"
   
      `SELECT session_id, net_transport FROM sys.dm_exec_connections;`  
   
-12. 在 [選取報表類型]  頁面上，選取 [表格式]  ，然後按一下 [完成]  。  
+12. 在 [選取報表類型]**** 頁面上，選取 [表格式]****，然後按一下 [完成]****。  
   
-13. 在 [正在完成精靈]  頁面的 [報表名稱]  方塊中，輸入 **ConnectionsReport**，然後按一下 [完成]  建立並儲存報表。  
+13. 在 [正在完成精靈]**** 頁面的 [報表名稱]**** 方塊中，輸入 **ConnectionsReport**，然後按一下 [完成]**** 建立並儲存報表。  
   
 14. 關閉 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "62510385"
   
 ### <a name="to-add-a-report-to-management-studio"></a>將報表加入至 Management Studio  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找到自訂報表資料夾，並選取 **ConnectionsReport.rdl** 檔案，然後按一下 [開啟]  。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件總管中的節點、指向 [報表]****，然後按一下 [自訂報表]****。 在 [開啟檔案]**** 對話方塊中，找到自訂報表資料夾，並選取 **ConnectionsReport.rdl** 檔案，然後按一下 [開啟]****。  
   
-     第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]  下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
+     第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]**** 下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]**** 下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
   
-    1.  若要變更最近使用清單中可顯示的檔案數目，請在 [工具]  功能表中，按一下 [選項]  、展開 [環境]  資料夾，然後按一下 [一般]  。  
+    1.  若要變更最近使用清單中可顯示的檔案數目，請在 [工具]**** 功能表中，按一下 [選項]****、展開 [環境]**** 資料夾，然後按一下 [一般]****。  
   
-    2.  調整 [顯示在最近使用的清單中的檔案數]  中的數目。  
+    2.  調整 [顯示在最近使用的清單中的檔案數]**** 中的數目。  
   
 ## <a name="see-also"></a>另請參閱  
  [Management Studio 中的自訂報表](custom-reports-in-management-studio.md)   

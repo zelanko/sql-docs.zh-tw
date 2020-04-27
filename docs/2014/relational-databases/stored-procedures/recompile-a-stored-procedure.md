@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721043"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
@@ -37,9 +37,9 @@ ms.locfileid: "62721043"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   初次編譯或重新編譯程序時，該程序的查詢計劃會針對資料庫及其物件目前狀態最佳化。 如果資料庫的資料或結構經歷大幅變更，則重新編譯程序時，會針對這些變更更新並最佳化程序的查詢計劃。 如此可以提高程序的處理效能。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62721043"
   
 -   如果程序中的特定查詢固定使用非典型或暫存值，則可在這些查詢中使用 RECOMPILE 查詢提示來改善程序效能。 由於只會重新編譯使用查詢提示的查詢，而非完整程序，因此會模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的陳述式層級重新編譯行為。 不過，除了使用程序目前的參數值之外，RECOMPILE 查詢提示也會在您編譯陳述式時，使用預存程序內任何區域變數的值。 如需詳細資訊，請參閱 [查詢提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  `WITH RECOMPILE`件  
  如果在建立程序定義時使用此選項，則需要資料庫的 CREATE PROCEDURE 權限以及建立程序所在結構描述的 ALTER 權限。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62721043"
  `sp_recompile`系統預存程式  
  需要指定之程序的 ALTER 權限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>若要使用 WITH RECOMPILE 選項重新編譯預存程序  
   
@@ -132,11 +132,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立預存程序](../stored-procedures/create-a-stored-procedure.md)   
- [修改預存程序](../stored-procedures/modify-a-stored-procedure.md)   
- [重新命名預存程序](rename-a-stored-procedure.md)   
- [檢視預存程序的定義](view-the-definition-of-a-stored-procedure.md)   
- [檢視預存程序的相依性](view-the-dependencies-of-a-stored-procedure.md)   
+ [建立預存程式](../stored-procedures/create-a-stored-procedure.md)   
+ [修改預存程式](../stored-procedures/modify-a-stored-procedure.md)   
+ [重新命名預存程式](rename-a-stored-procedure.md)   
+ [查看預存程式的定義](view-the-definition-of-a-stored-procedure.md)   
+ [查看預存程式的相依性](view-the-dependencies-of-a-stored-procedure.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

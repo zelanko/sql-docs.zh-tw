@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638327"
 ---
 # <a name="stored-procedures"></a>預存程序
-  預存程式（預[存程式 &#40;資料庫引擎&#41;](../../stored-procedures/stored-procedures-database-engine.md)）是儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援  
+  預存程序 ([預存程序 &#40;資料庫引擎&#41;](../../stored-procedures/stored-procedures-database-engine.md)) 是儲存於資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  
   
 -   預存程序  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62638327"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [執行預存程式 &#40;OLE DB&#41;](stored-procedures-running.md)  
+-   [執行預存程序 &#40;OLE DB&#41;](stored-procedures-running.md)  
   
--   [呼叫預存程式 &#40;OLE DB&#41;](stored-procedures-calling.md)  
+-   [呼叫預存程序 &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  

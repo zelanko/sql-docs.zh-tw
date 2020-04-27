@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637606"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
@@ -67,8 +67,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  依預設，只要下列任一項為真，當 XML 剖析器將字串資料轉換成 XML 時，將會捨棄無意義的空白。  
   
--   
-  `The xml:space` 未在項目或其上階項目定義屬性。  
+-   `The xml:space` 未在項目或其上階項目定義屬性。  
   
 -   在某個元素或在其中一個它的上階元素生效的 `xml:space` 屬性，具有預設值。  
   
@@ -181,8 +180,7 @@ go
  如需 FOR XML 的詳細資訊，請參閱 [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `xml` 資料類型執行個體傳回用戶端，作為不同伺服器建構的結果 (例如使用 TYPE 指示詞的 FOR XML 查詢)，或者使用 `xml` 資料類型從 SQL 資料行、變數和輸出參數傳回 XML。 在用戶端應用程式的程式碼中，ADO.NET 提供者會要求從伺服器以二進位編碼傳送這項 `xml` 資料類型資訊。 但若您使用的 FOR XML 不含 TYPE 指示詞，XML 資料就會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `xml` 資料類型執行個體傳回用戶端，作為不同伺服器建構的結果 (例如使用 TYPE 指示詞的 FOR XML 查詢)，或者使用 `xml` 資料類型從 SQL 資料行、變數和輸出參數傳回 XML。 在用戶端應用程式的程式碼中，ADO.NET 提供者會要求從伺服器以二進位編碼傳送這項 `xml` 資料類型資訊。 但若您使用的 FOR XML 不含 TYPE 指示詞，XML 資料就會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。  
   
 ## <a name="using-constant-assignments"></a>使用常數指派  
  在預期`xml`資料類型的實例時，可以使用字串常數。 這與使用 CAST 將字串隱含轉換成 XML 是相同的。 例如：  

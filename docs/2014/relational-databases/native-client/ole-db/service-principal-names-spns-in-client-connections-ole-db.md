@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ae38f4258c965a3b4aedf18ed6261134bd00ac6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626851"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>用戶端連接中的服務主要名稱 (SPN) (OLE DB)
-  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需用戶端應用程式中 SPN 的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[&#40;OLE DB&#41;的整合式 Kerberos 驗證](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
+  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需用戶端應用程式中 SPN 的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式 Kerberos 驗證 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>提供者初始化字串關鍵字  
  下列提供者初始化字串關鍵字可支援 OLE DB 應用程式內的 SPN。 在下表中，關鍵字欄中的值會用於 IDBInitialize::Initialize 的提供者字串。 當使用 ADO 或 IDataInitialize::GetDataSource 連接時，描述欄中的值會在初始化字串中使用。  
@@ -29,8 +29,7 @@ ms.locfileid: "62626851"
 |FailoverPartnerSPN|容錯移轉夥伴 SPN|容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
   
 ## <a name="data-source-initialization-properties"></a>資料來源初始化屬性  
- 
-  `DBPROPSET_SQLSERVERDBINIT` 屬性集中的以下屬性可讓應用程式指定 SPN。  
+ `DBPROPSET_SQLSERVERDBINIT` 屬性集中的以下屬性可讓應用程式指定 SPN。  
   
 |名稱|類型|使用量|  
 |----------|----------|-----------|  
@@ -38,8 +37,7 @@ ms.locfileid: "62626851"
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，讀取/寫入|指定容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
   
 ## <a name="data-source-properties"></a>資料來源屬性  
- 
-  `DBPROPSET_SQLSERVERDATASOURCEINFO` 屬性集中的以下屬性可讓應用程式探索驗證方法。  
+ `DBPROPSET_SQLSERVERDATASOURCEINFO` 屬性集中的以下屬性可讓應用程式探索驗證方法。  
   
 |名稱|類型|使用量|  
 |----------|----------|-----------|  
@@ -53,7 +51,7 @@ ms.locfileid: "62626851"
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|*pwszInitializationString*可以包含新的關鍵字`ServerSPN`和`FailoverPartnerSPN`。|  
 |IDataInitialize::GetInitializationString|如果 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 有非預設值，則會透過*ppwszInitString*當做`ServerSPN`和`FailoverPartnerSPN`的關鍵字值，將它們包含在初始化字串中。 否則，這些關鍵字將不會包含在初始化字串中。|  
-|IDBInitialize::Initialize|如果在資料來源初始化屬性內設定 DBPROP_INIT_PROMPT 來啟用提示，將會顯示 [OLE DB 登入] 對話方塊。 如此可允許同時針對主體伺服器和它的容錯移轉夥伴來輸入 SPN。<br /><br /> DPPROP_INIT_PROVIDERSTRING 中的提供者字串（如果有設定的話）將會`ServerSPN`辨識`FailoverPartnerSPN`新的關鍵字，並使用它們的值（如果有的話）來初始化 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。<br /><br /> 您可以呼叫 IDBProperties：： SetProperties 來設定 SSPROP_INIT_SERVER_SPN 的屬性，並在呼叫 IDBInitialize：： Initialize 之前 SSPROP_INIT_FAILOVER_PARTNER_SPN。 這是使用提供者字串的替代方式。<br /><br /> 如果在一個以上的地方設定屬性，以程式設計方式設定的值會優先於提供者字串中設定的值。 在初始化字串中設定的值會優先於登入對話方塊內設定的值。<br /><br /> 如果相同的關鍵字在提供者字串內出現一次以上，第一次出現的值會優先於其他的值。|  
+|IDBInitialize::Initialize|如果在資料來源初始化屬性內設定 DBPROP_INIT_PROMPT 來啟用提示，將會顯示 [OLE DB 登入] 對話方塊。 如此可允許同時針對主體伺服器和它的容錯移轉夥伴來輸入 SPN。<br /><br /> DPPROP_INIT_PROVIDERSTRING 中的提供者字串（如果有設定的話）將會`ServerSPN`辨識`FailoverPartnerSPN`新的關鍵字，並使用它們的值（如果有的話）來初始化 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。<br /><br /> 呼叫 IDBInitialize::Initialize 之前，可以呼叫 IDBProperties::SetProperties 來設定 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN 屬性。 這是使用提供者字串的替代方式。<br /><br /> 如果在一個以上的地方設定屬性，以程式設計方式設定的值會優先於提供者字串中設定的值。 在初始化字串中設定的值會優先於登入對話方塊內設定的值。<br /><br /> 如果相同的關鍵字在提供者字串內出現一次以上，第一次出現的值會優先於其他的值。|  
 |IDBProperties::GetProperties|可以呼叫 IDBProperties::GetProperties 來取得新資料來源初始化屬性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 以及新資料來源屬性 SSPROP_AUTHENTICATIONMETHOD 和 SSPROP_MUTUALLYAUTHENTICATED 的值。|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo 將會包含新的資料來源初始化屬性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 或是新的資料來源屬性 SSPROP_AUTHENTICATION_METHOD 和 SSPROP_MUTUALLYAUTHENTICATED。|  
 |IDBProperties::SetProperties|可以呼叫 IDBProperties::SetProperties 來設定新資料來源初始化屬性 SSPROP_INITSERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值。<br /><br /> 這些屬性可以在任何時間設定，但是如果資料來源已經開啟，將會傳回下列錯誤：DB_E_ERRORSOCCURRED --「多重步驟的 OLE DB 作業已產生錯誤。 請檢查每個 OLE DB 狀態值 (如果有的話)。 未完成任何工作」。|  

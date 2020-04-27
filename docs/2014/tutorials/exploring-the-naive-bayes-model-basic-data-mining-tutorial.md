@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472882"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>瀏覽貝氏機率分類模型 (基本資料採礦教學課程)
@@ -24,8 +24,8 @@ ms.locfileid: "62472882"
   
  
   
-##  <a name="DependencyNetwork"></a>相依性網路  
- [相依性**網路**] 索引標籤的運作方式**** 與[!INCLUDE[msCoName](../includes/msconame-md.md)]樹狀檢視器的 [相依性網路] 索引標籤相同。 檢視器中的每一個節點各代表變數，節點之間的線條則代表關聯性。 在此檢視器中，您可以查看對於可預測屬性 Bike Buyer 的狀態具有影響力的所有屬性。  
+##  <a name="dependency-network"></a><a name="DependencyNetwork"></a>相依性網路  
+ [相依性**網路**] 索引標籤的運作方式**Dependency Network**與[!INCLUDE[msCoName](../includes/msconame-md.md)]樹狀檢視器的 [相依性網路] 索引標籤相同。 檢視器中的每一個節點各代表變數，節點之間的線條則代表關聯性。 在此檢視器中，您可以查看對於可預測屬性 Bike Buyer 的狀態具有影響力的所有屬性。  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>若要在相依性網路索引標籤中瀏覽模型  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62472882"
      隨著您將滑動軸往下移，便只留下對 [Bike Buyer] 資料行影響最大的屬性。 當您調整滑動軸時，您可以發現幾個最具影響力的屬性如下：擁有的汽車數量、通勤距離及小孩總數。  
  
   
-##  <a name="AttributeProfiles"></a>屬性設定檔  
+##  <a name="attribute-profiles"></a><a name="AttributeProfiles"></a> 屬性設定檔  
  [**屬性設定檔**] 索引標籤會描述輸入屬性的不同狀態如何影響可預測屬性的結果。  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>若要在屬性設定檔索引標籤中瀏覽模型  
@@ -64,7 +64,7 @@ ms.locfileid: "62472882"
      [**挖掘圖例**] 會顯示更詳細的觀點。  
   
   
-##  <a name="AttributeCharacteristics"></a>屬性特性  
+##  <a name="attribute-characteristics"></a><a name="AttributeCharacteristics"></a>屬性特性  
  使用 [**屬性特性**] 索引標籤，您可以選取屬性和值，以查看其他屬性的值在選取的值案例中出現的頻率。  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>若要在屬性特性索引標籤中瀏覽模型  
@@ -76,7 +76,7 @@ ms.locfileid: "62472882"
      在此檢視器中，您將會看到家裡沒有小孩、通勤距離很短而且住在北美地區的客戶比較可能購買自行車。  
   
   
-##  <a name="AttributeDiscrimination"></a>屬性辨識  
+##  <a name="attribute-discrimination"></a><a name="AttributeDiscrimination"></a>屬性辨識  
  使用 [**屬性**辨識] 索引標籤，您可以調查自行車購買和其他屬性值的兩個離散值之間的關聯性。 因為`TM_NaiveBayes`模型只有兩個狀態，1和0，所以您不需要對檢視器進行任何變更。  
   
  在此檢視器中，您可以看出沒有汽車的人傾向於購買自行車，而擁有兩輛汽車的人則傾向於不購買自行車。  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657272"
 ---
 # <a name="name-element-for-schema-dta"></a>結構描述的 Name 元素 (DTA)
@@ -38,7 +38,7 @@ ms.locfileid: "62657272"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`，介於1到255個字元之間|  
+|**資料類型和長度**|`string`，在 1 和 255 個字元之間。|  
 |**預設值**|無。|  
 |**出現次數**|每個 **Schema** 元素需要使用這個元素一次。|  
   

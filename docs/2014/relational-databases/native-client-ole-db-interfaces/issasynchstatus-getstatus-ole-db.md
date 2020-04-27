@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus：： GetStatus （OLE DB） |Microsoft Docs
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12013ae253680621d154d7a6af87005aedbd92a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511448"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -40,7 +40,7 @@ HRESULT GetStatus(
 ```  
   
 ## <a name="arguments"></a>引數  
- *hchapter 設定*[in]  
+ *hChapter*[in]  
  章節控制代碼。 如果輪詢的物件不是資料列集物件，或者作業不適用於章節，則這應該設定為 DB_NULL_HCHAPTER (會由提供者忽略)。  
   
  *eOperation*[in]  
@@ -61,11 +61,9 @@ HRESULT GetStatus(
  *peAsynchPhase*[out]  
  記憶體的指標，會從中傳回有關非同步作業的其他資訊。 有效值包括：  
   
- DBASYNCHPHASE_INITIALIZATION：物件正處於初始化階段。 
-  *pulProgress* 和 *pulProgressMax* 引數指出預估的完成率。 物件尚未完全具體化。 呼叫任何其他介面的嘗試可能失敗，而物件可能無法使用完整的介面集。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，而且如果 *cParamSets* 大於 1，則 *pulProgress* 和 *pulProgressMax* 可能代表單一參數集或參數集完整陣列的進度。  
+ DBASYNCHPHASE_INITIALIZATION：物件正處於初始化階段。 *pulProgress* 和 *pulProgressMax* 引數指出預估的完成率。 物件尚未完全具體化。 呼叫任何其他介面的嘗試可能失敗，而物件可能無法使用完整的介面集。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，而且如果 *cParamSets* 大於 1，則 *pulProgress* 和 *pulProgressMax* 可能代表單一參數集或參數集完整陣列的進度。  
   
- DBASYNCHPHASE_POPULATION：物件正處於擴展階段。 雖然資料列集會完全初始化，而且物件可以使用完整的介面範圍，則可能有其他的資料列尚未擴展到資料列集中。 
-  *pulProgress* 和 *pulProgressMax* 雖然可以根據擴展的資料列數目而定，但通常是根據擴展資料列集所需的時間或努力來決定。 因此呼叫者應該使用此項資訊 (而非最後的資料列計數) 做為處理序所可能花費時間的大略估計。 此階段只會在資料列集擴展期間傳回，而不會在初始化資料來源物件時傳回，或由更新、刪除或插入資料列的命令執行傳回。  
+ DBASYNCHPHASE_POPULATION：物件正處於擴展階段。 雖然資料列集會完全初始化，而且物件可以使用完整的介面範圍，則可能有其他的資料列尚未擴展到資料列集中。 *pulProgress* 和 *pulProgressMax* 雖然可以根據擴展的資料列數目而定，但通常是根據擴展資料列集所需的時間或努力來決定。 因此呼叫者應該使用此項資訊 (而非最後的資料列計數) 做為處理序所可能花費時間的大略估計。 此階段只會在資料列集擴展期間傳回，而不會在初始化資料來源物件時傳回，或由更新、刪除或插入資料列的命令執行傳回。  
   
  DBASYNCHPHASE_COMPLETE：物件的所有非同步處理已完成。 **ISSAsynchStatus：： GetStatus**會傳回 HRESULT，指出作業的結果。 一般而言，這會是在同步呼叫作業時所傳回的 HRESULT。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，則 *pulProgress* 和 *pulProgressMax* 等於受到該命令影響的資料列總數。 如果 *cParamSets* 大於 1，這是受到執行所指定的所有參數集影響的資料列總數。 如果 *peAsynchPhase* 是 Null 指標，則不會傳回狀態碼。  
   
@@ -96,7 +94,7 @@ HRESULT GetStatus(
  已在資料來源物件初始化期間取消非同步處理。 資料來源物件處於未初始化的狀態。  
   
  E_INVALIDARG  
- *Hchapter 設定*參數不正確。  
+ *hChapter* 參數錯誤。  
   
  E_UNEXPECTED  
  在資料來源物件上呼叫了**ISSAsynchStatus：： GetStatus** ，但尚未在資料來源物件上呼叫**IDBInitialize：： Initialize** 。  
@@ -109,8 +107,7 @@ HRESULT GetStatus(
  發生了提供者特定的錯誤。  
   
 ## <a name="remarks"></a>備註  
- 
-  **ISSAsynchStatus::GetStatus** 方法的行為與 **IDBAsynchStatus::GetStatus** 方法完全相同，不同的是如果中止資料來源物件的初始化，便會傳回 E_UNEXPECTED，而不是 DB_E_CANCELED (雖然 [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) 會傳回 DB_E_CANCELED)。 這是因為資料來源物件在中止後不會保留在一般的廢止狀態，如此可以讓系統嘗試進一步的初始化作業。  
+ **ISSAsynchStatus::GetStatus** 方法的行為與 **IDBAsynchStatus::GetStatus** 方法完全相同，不同的是如果中止資料來源物件的初始化，便會傳回 E_UNEXPECTED，而不是 DB_E_CANCELED (雖然 [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) 會傳回 DB_E_CANCELED)。 這是因為資料來源物件在中止後不會保留在一般的廢止狀態，如此可以讓系統嘗試進一步的初始化作業。  
   
  如果資料列集是非同步地初始化或擴展，則必須支援此方法。  
   

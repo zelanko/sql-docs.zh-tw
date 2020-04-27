@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721650"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
@@ -101,8 +101,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
  如果您是第一次使用發行者，也必須設定散發者和快照集共用。 每個訂閱者的合併代理程式都必須具有快照集共用的讀取權限。 如需詳細資訊，請參閱[設定散發](configure-distribution.md)和[保護快照集資料夾](security/secure-the-snapshot-folder.md)。  
   
- 
-  `gen` 是 websync XML 檔案中的保留字。 請勿嘗試發行包含資料行名稱 `gen` 的資料表。  
+ `gen` 是 websync XML 檔案中的保留字。 請勿嘗試發行包含資料行名稱 `gen` 的資料表。  
   
 ## <a name="configuring-the-subscription"></a>設定訂閱  
  啟用發行集及設定 IIS 之後，請建立提取訂閱，並指定提取訂閱應利用 IIS 來同步處理。 (只有提取訂閱才支援 Web 同步處理。)  

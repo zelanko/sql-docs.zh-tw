@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702295"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>建立和改變物件 (XMLA)
@@ -74,14 +74,12 @@ ms.locfileid: "62702295"
   
  例如，您必須提供物件參考給 Cube，以修改 Cube 的結構。 在 `Object` 屬性中的 Cube 之物件參考，包含資料庫識別碼與 Cube 識別碼，因為相同的 Cube 識別碼可能會用於不同的資料庫。  
   
- 
-  `ObjectDefinition` 元素包含定義要修改的主要物件之 ASSL 元素。 如需 ASSL 的詳細資訊，請參閱[使用 Analysis Services 指令碼語言進行開發 &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
+ `ObjectDefinition` 元素包含定義要修改的主要物件之 ASSL 元素。 如需 ASSL 的詳細資訊，請參閱[使用 Analysis Services 指令碼語言進行開發 &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
   
  如果您將 `AllowCreate` 命令的 `Alter` 屬性設定為 True，只要物件不存在，即可建立指定的主要物件。 否則，如果指定的主要物件尚未存在，就會發生錯誤。  
   
 ### <a name="using-the-objectexpansion-attribute"></a>使用 ObjectExpansion 屬性  
- 如果您只變更主要物件的屬性，而且不會重新定義主要物件所包含的次要物件，您可以將`ObjectExpansion` `Alter`命令的屬性設定為*ObjectProperties*。 
-  `ObjectDefinition` 屬性就只需要包含主要物件之屬性的元素，而且 `Alter` 命令不會改變與主要物件關聯的次要物件。  
+ 如果您只變更主要物件的屬性，而且不會重新定義主要物件所包含的次要物件，您可以將`ObjectExpansion` `Alter`命令的屬性設定為*ObjectProperties*。 `ObjectDefinition` 屬性就只需要包含主要物件之屬性的元素，而且 `Alter` 命令不會改變與主要物件關聯的次要物件。  
   
  若要重新定義主要物件的次要物件，您必須將`ObjectExpansion`屬性設定為*ExpandFull* ，而且物件定義必須包含主要物件所包含的所有次要物件。 如果 `ObjectDefinition` 命令的 `Alter` 屬性未明確包括主要物件所含的次要物件，則會刪除未包括的次要物件。  
   
@@ -144,7 +142,7 @@ ms.locfileid: "62702295"
 </Alter>  
 ```  
   
-### <a name="comments"></a>註解  
+### <a name="comments"></a>評價  
  `Alter`命令`ObjectExpansion`的屬性已設定為*ObjectProperties*。 此設定可讓[ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)元素（次要物件）從中`ObjectDefinition`定義的資料來源中排除。 因此，資料來源的模擬資訊仍然會設定成服務帳號，如第一個範例中所指定。  
   
 ## <a name="see-also"></a>另請參閱  

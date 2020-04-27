@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23e39e48b8c4c20ab0e847d87b7193179e8d74ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664231"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 事件類別
@@ -30,14 +30,12 @@ ms.locfileid: "62664231"
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|`nvarchar`|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|`int`|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
-|**DatabaseID**|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在追蹤中捕捉到**ServerName**資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|**DatabaseID**|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|`int`|擷取的事件類別類型。 對於 **Broker:Conversation Group** ，一律為 **136**。|27|否|  
 |**EventSequence**|`int`|此事件的序號。|51|否|  
-|**EventSubClass**|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **建立**。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立新的交談群組。<br /><br /> **Drop**。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 刪除交談群組。|21|是|  
+|**EventSubClass**|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **Create**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立新的交談群組。<br /><br /> **Drop**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 刪除交談群組。|21|是|  
 |**GUID**|`uniqueidentifier`|此事件描述之交談群組的交談群組識別碼。|54|否|  
-|**名稱**|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
+|**HostName**|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IsSystem**|`int`|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|否|  
 |**LoginSid**|`image`|已登入之使用者的安全性識別碼 (SID)。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|`nvarchar`|使用者所隸屬的 Windows 網域。|7|是|  

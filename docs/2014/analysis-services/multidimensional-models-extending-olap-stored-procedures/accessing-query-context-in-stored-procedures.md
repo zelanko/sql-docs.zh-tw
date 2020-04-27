@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702672"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>在預存程序中存取查詢內容
@@ -30,10 +30,9 @@ ms.locfileid: "62702672"
 |**CurrentCube**|Cube|目前查詢內容的 Cube。|  
 |**CurrentDatabaseName**|String|目前資料庫的識別碼。|  
 |**CurrentConnection**|Connection|對目前內容中之連線物件的參考。|  
-|**密碼**|整數|目前內容的行程數目。|  
+|**通過**|整數|目前內容的行程數目。|  
   
- 預存程序中若使用到多維度運算式 (MDX) 物件模型，會有 `Context` 物件。 如果是在用戶端上使用 MDX 物件模型，則無法使用該物件。 
-  `Context` 物件並未明確地傳遞至預存程序，或由預存程序傳回。 在預存程序執行時可使用此物件。  
+ 預存程序中若使用到多維度運算式 (MDX) 物件模型，會有 `Context` 物件。 如果是在用戶端上使用 MDX 物件模型，則無法使用該物件。 `Context` 物件並未明確地傳遞至預存程序，或由預存程序傳回。 在預存程序執行時可使用此物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型元件管理](../multidimensional-models/multidimensional-model-assemblies-management.md)   

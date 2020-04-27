@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705131"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>評估原則對話方塊，原則選取頁面
   使用此對話方塊可評估以原則為基礎的管理原則。 您可以藉由選取 **[評估結果]** 頁面，將原則套用到目標集內不符合原則的項目。  
   
 ## <a name="options"></a>選項。  
- **Source**  
+ **來源**  
  指定原則的來源。 若要變更來源，請按一下 [瀏覽]\( **...** ) 按鈕，開啟 **[選取來源]** 對話方塊。  
   
  **檔案**  
@@ -61,7 +61,7 @@ ms.locfileid: "62705131"
     -   目標伺服器類型與原則評估所在的伺服器類型不同。 例如在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]中，如果您嘗試評估已經針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立的原則，您將會收到空的目標集。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)   
+ [使用以原則為基礎的管理來管理伺服器](administer-servers-by-using-policy-based-management.md)   
  [評估原則對話方塊，評估結果頁面](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

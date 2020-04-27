@@ -13,15 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626045"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
-  以原則為基礎的管理可讓您監視的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]最佳作法。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當做最佳作法原則來匯入，然後針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集來評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
+  以原則為基礎的管理可讓您監視的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]最佳作法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當做最佳作法原則來匯入，然後針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集來評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Database Engine 的原則和規則  
  下表列出安裝所包含的原則， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並包含每個原則所評估之最佳作法規則的相關資訊。 這些原則會儲存為 XML 檔案，而且必須匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯入原則的詳細資訊，請參閱 [匯入原則式管理原則](import-a-policy-based-management-policy.md)。  

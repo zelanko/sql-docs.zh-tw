@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679796"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
@@ -28,7 +28,7 @@ ms.locfileid: "62679796"
   
  如需選擇性 XML 索引的詳細資訊，請參閱 [選擇性 XML 索引 &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)。  
   
-##  <a name="untyped"></a> 了解不具類型之 XML 中的 XQuery 和 SQL Server 類型  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> 了解不具類型之 XML 中的 XQuery 和 SQL Server 類型  
  選擇性 XML 索引支援兩種類型的系統：XQuery 類型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型。 索引路徑可用來比對 XQuery 運算式，或是比對 XML 資料類型之 value() 方法的傳回類型。  
   
 -   如果要索引的路徑未加上註解，或是使用 XQUERY 關鍵字註解，則路徑會比對 XQuery 運算式。 XQUERY 註解的節點路徑有兩種變化：  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 
   
-##  <a name="typed"></a> 了解具類型之 XML 的選擇性 XML 索引支援  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> 了解具類型之 XML 的選擇性 XML 索引支援  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中具類型的 XML 是與特定 XML 文件相關聯的結構描述。 結構描述會定義節點的整體文件結構和類型。 如果結構描述存在，選擇性 XML 索引會在使用者升級路徑時套用結構描述結構，因此不需要指定路徑的 XQUERY 類型。  
   
  選擇性 XML 索引支援下列 XSD 類型：  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  如需最佳化提示的詳細資訊，請參閱 [指定最佳化提示](#hints)。  
   
-##  <a name="paths"></a> 指定路徑  
+##  <a name="specifying-paths"></a><a name="paths"></a> 指定路徑  
  選擇性 XML 索引可讓您僅索引與預期執行之查詢相關的預存 XML 資料中節點的子集。 如果相關節點的子集大幅少於 XML 文件中節點的總數，選擇性 XML 索引只會儲存相關的節點。 若要利用選擇性 XML 索引的優點，請識別要索引的正確節點子集。  
   
 ### <a name="choosing-the-nodes-to-index"></a>選擇要索引的節點  
@@ -346,7 +346,7 @@ WHERE T.xmldata.exist('
   
 
   
-##  <a name="hints"></a> 指定最佳化提示  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> 指定最佳化提示  
  您可以使用選用的最佳化提示，為藉由選擇性 XML 索引進行索引的節點指定其他對應詳細資料。 例如，您可以指定節點的資料類型和基數，以及有關資料結構的特定資訊。 這項額外資訊可提供更佳的對應。 此外還能獲得效能提升和 (或) 節省儲存空間的結果。  
   
  最佳化提示是選擇性的用法。 您可以一律接受預設對應，預設對應雖然可靠，但不一定能提供最佳效能和儲存。  
@@ -418,7 +418,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-##  <a name="sample"></a> 做為範例的範例 XML 文件  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> 做為範例的範例 XML 文件  
  下列範例 XML 文件會在本主題的範例中參考：  
   
 ```xml  

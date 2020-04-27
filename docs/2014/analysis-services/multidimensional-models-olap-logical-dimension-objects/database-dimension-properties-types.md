@@ -28,14 +28,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728554"
 ---
 # <a name="dimension-types"></a>維度類型
-  
   `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，`Type` 設定只會提供用戶端應用程式的指導，而且是選擇性的。 在其他情況下 (例如 `Accounts` 或 `Time` 維度)，維度的 `Type` 屬性 (Property) 設定及其屬性 (Attribute) 會決定特定的伺服器型行為，且在 Cube 中實作某些行為時可能會需要用到。 例如，維度的 `Type` 屬性可設定為 `Accounts`，對用戶端應用程式指出標準維度包含帳戶屬性。 如需有關時間、帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)、[建立父子式類型維度的財務帳戶](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)和[建立貨幣類型維度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
   
  維度類型的預設值是 `Regular`，亦即不會對維度的內容進行假設。 除非您在使用維度精靈定義維度時指定 `Time`，否則當您初始定義維度時，這就是所有維度的預設值。 如果維度精靈未列出維度類型的適當類型，則您也應將 `Regular` 保留為維度類型。  
@@ -46,14 +45,14 @@ ms.locfileid: "62728554"
 |維度類型|描述|  
 |--------------------|-----------------|  
 |Regular|此維度的類型並未設定為特殊維度類型。|  
-|Time|此維度的屬性代表時間週期，例如年數、半年數、季數、月數和日數。|  
+|時間|此維度的屬性代表時間週期，例如年數、半年數、季數、月數和日數。|  
 |組織|此維度的屬性代表組織的資訊，例如員工或分公司。|  
 |[地理位置]|此維度的屬性代表地理資訊，例如城市或郵遞區號。|  
 |BillOfMaterials|維度的屬性代表存貨或製造資訊 (例如產品的組件清單)。|  
 |帳戶|此維度的屬性代表財務報表用途的帳戶圖表。|  
 |客戶|此維度的屬性代表客戶或連絡資訊。|  
 |Products|此維度的屬性代表產品資訊。|  
-|狀況|此維度的屬性代表計畫或策略分析資訊。|  
+|案例|此維度的屬性代表計畫或策略分析資訊。|  
 |數量|此維度的屬性代表數量的資訊。|  
 |公用程式|此維度的屬性代表其他資訊。|  
 |貨幣|此維度類型包含貨幣資料和中繼資料。|  
@@ -63,6 +62,6 @@ ms.locfileid: "62728554"
   
 ## <a name="see-also"></a>另請參閱  
  [使用現有的資料表建立維度](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [維度 &#40;Analysis Services 多維資料&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [維度 &#40;Analysis Services - 多維度資料&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

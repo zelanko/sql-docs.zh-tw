@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaccc593ea7e4baece132b759ca920018cdbe4b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518720"
 ---
 # <a name="web-service-authentication"></a>Web 服務驗證
@@ -57,8 +57,7 @@ service.Credentials = new System.Net.NetworkCredential("username", "password", "
  在您呼叫報表伺服器 Web 服務的任何方法之前，必須先設定認證。 如果您未設定認證，會收到錯誤碼「HTTP 401 錯誤：拒絕存取」。 您必須在使用它之前先驗證服務，但是在您設定認證之後，不需要再次設定它們，因為您會繼續使用相同的服務變數 (例如，*rs*)。  
   
 ## <a name="custom-authentication"></a>自訂驗證  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括程式設計 API，以提供開發人員設計和開發自訂驗證延伸模組的機會，又稱為安全性延伸模組。 如需詳細資訊，請參閱＜ [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md)＞。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括程式設計 API，以提供開發人員設計和開發自訂驗證延伸模組的機會，又稱為安全性延伸模組。 如需詳細資訊，請參閱＜ [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Web 服務和 .NET Framework 建置應用程式](building-applications-using-the-web-service-and-the-net-framework.md)   

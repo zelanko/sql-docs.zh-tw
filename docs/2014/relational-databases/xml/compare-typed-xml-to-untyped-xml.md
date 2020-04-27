@@ -26,18 +26,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637616"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
   您可以建立 `xml` 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 `xml` 類型的變數、參數和資料行建立關聯。 在此情況下， `xml`資料類型實例稱為「具*類型*」。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正確的 XML 和 xml 資料類型  
- 
-  `xml` 資料類型會實作 ISO 標準 `xml` 資料類型。 因此，它可以在不具類型的 XML 資料行中儲存格式良好的 XML 1.0 版文件，也可以儲存含有文字節點和任意數量之最上層元素的所謂 XML 內容片段。 系統會確認資料的格式良好、不需要將資料行繫結到 XML 結構描述，並拒絕在某種程度上格式不良的資料。 對於不具類型的 XML 變數和參數而言，也是如此。  
+ `xml` 資料類型會實作 ISO 標準 `xml` 資料類型。 因此，它可以在不具類型的 XML 資料行中儲存格式良好的 XML 1.0 版文件，也可以儲存含有文字節點和任意數量之最上層元素的所謂 XML 內容片段。 系統會確認資料的格式良好、不需要將資料行繫結到 XML 結構描述，並拒絕在某種程度上格式不良的資料。 對於不具類型的 XML 變數和參數而言，也是如此。  
   
 ## <a name="xml-schemas"></a>XML 結構描述  
  XML 結構描述提供下列項目：  
@@ -137,8 +136,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
 ```  
   
 ## <a name="document-type-definition-dtd"></a>文件類型定義 (DTD)  
- 
-  `xml` 資料類型資料行、變數及參數可以用 XML 結構描述來設定類型，但不能用 DTD 來設定。 但是，內嵌 DTD 可用於不具類型和具類型的 XML 來提供預設值，並將實體參考取代為其展開的形式。  
+ `xml` 資料類型資料行、變數及參數可以用 XML 結構描述來設定類型，但不能用 DTD 來設定。 但是，內嵌 DTD 可用於不具類型和具類型的 XML 來提供預設值，並將實體參考取代為其展開的形式。  
   
  您可以用協力廠商工具將 DTD 轉換成 XML 結構描述文件，並將 XML 結構描述載入資料庫中。  
   

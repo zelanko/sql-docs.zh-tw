@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659576"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 元素 (DTA)
@@ -50,7 +50,7 @@ ms.locfileid: "62659576"
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[結構描述的 Table 元素 &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**子元素**|[Create 元素 &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop`元素. 如需詳細資訊，請參閱＜ [Database Engine Tuning Advisor XML 結構描述](https://go.microsoft.com/fwlink/?linkid=43100)＞。|  
+|**子元素**|[Create 元素 &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 元素。 如需詳細資訊，請參閱＜ [Database Engine Tuning Advisor XML 結構描述](https://go.microsoft.com/fwlink/?linkid=43100)＞。|  
   
 ## <a name="remarks"></a>備註  
  在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **RecommendationTypecomplexType** 。 它用來指定假設性組態的索引。 請勿混淆這個 `Recommendation` 元素與可用來指定資料分割 (`RecommendationPType`) 或檢視 (`RecommendationViewType`) 的其他類型。 如需這些其他`Recommendation`元素類型的詳細資訊，請參閱[Database Engine Tuning Advisor XML 架構](https://go.microsoft.com/fwlink/?linkid=43100)。  

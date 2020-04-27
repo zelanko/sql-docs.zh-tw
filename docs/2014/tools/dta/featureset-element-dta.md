@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735751"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62735751"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|
-  `string`，沒有最大長度。|  
+|**資料類型和長度**|`string`，沒有最大長度。|  
 |**允許的值**|**IDX_IV**<br /> 索引和索引檢視表。<br /><br /> **IDX**<br /> 只有索引。<br /><br /> **IV**<br /> 只有索引檢視表。<br /><br /> **NCL_IDX**<br /> 只有非叢集索引。<br /><br /> 這個元素使用這些值的其中之一。|  
 |**預設值**|**IDX**|  
 |**出現次數**|除非使用 `TuningOptions` 元素，否則，每個 `DropOnlyMode` 元素都需要使用這個元素一次。 如果使用 `DropOnlyMode`，您便無法使用 `FeatureSet`。 這些元素互斥。|  

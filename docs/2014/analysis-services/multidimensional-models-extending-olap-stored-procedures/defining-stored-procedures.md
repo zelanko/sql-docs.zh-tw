@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69daca3a13cf5318e102002f0edfcb98b80ff9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702763"
 ---
 # <a name="defining-stored-procedures"></a>定義預存程序
@@ -37,6 +37,6 @@ ms.locfileid: "62702763"
 |[除錯預存程序](debugging-stored-procedures.md)|描述如何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中偵錯組件。|  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型元件管理](../multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [多維度模型組件管理](../multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

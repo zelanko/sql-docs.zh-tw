@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704563"
 ---
 # <a name="creating-a-table-tutorial"></a>建立資料表 (教學課程)
@@ -57,7 +57,7 @@ ms.locfileid: "62704563"
     GO  
     ```  
   
-### <a name="to-create-a-table"></a>建立資料表  
+### <a name="to-create-a-table"></a>若要建立資料表  
   
 -   在 [查詢編輯器] 視窗中，輸入並執行下列程式碼，建立名稱為 `Products`的簡單資料表。 此資料表中的資料行名稱分別為 `ProductID`、 `ProductName`、 `Price`和 `ProductDescription`。 `ProductID` 資料行是此資料表的主索引鍵。 `int`、 `varchar(25)`、 `money`和 `text` 全部都是資料類型。 在插入或變更資料列時，只有 `Price` 和 `ProductionDescription` 資料行可以不含任何資料。 這個陳述式包含一個選擇性的元素 (`dbo.`)，稱為「結構描述」。 結構描述就是擁有資料表的資料庫物件。 如果您是系統管理員，則 `dbo` 是預設的結構描述。 `dbo` 代表資料庫擁有者。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62704563"
     ```  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [在資料表中插入和更新資料 &#40;教學課程&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+ [在資料表中插入及更新資料 &#40;教學課程&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  

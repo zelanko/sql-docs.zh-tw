@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520554"
 ---
 # <a name="report-server-web-service"></a>報表伺服器 Web 服務
@@ -50,7 +50,7 @@ Reporting Services 可用的 Web 服務開發選項
  [存取 SOAP API](../report-server-web-service/accessing-the-soap-api.md)  
  描述 Web 服務描述語言 (WSDL) 並提供 URL 以存取 Reporting Services WSDL 檔案。  
   
- [使用 Web 服務和.NET Framework 建置應用程式](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [使用 Web 服務和 .NET Framework 建置應用程式](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
  包含有關開發應用程式與 Web 服務以呼叫 Reporting Services SOAP API 的資訊。  
   
  [利用 rs.exe 公用程式與 Web 服務編寫指令碼](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
@@ -66,7 +66,7 @@ Reporting Services 可用的 Web 服務開發選項
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]或者，如果您想要使用開發和部署應用程式，請在電腦上安裝 SDK。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的特性與功能有深入的了解。  
+-   深入瞭解[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特性和功能。  
   
 -   對 SOAP 和 [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)]有確實的了解。  
   

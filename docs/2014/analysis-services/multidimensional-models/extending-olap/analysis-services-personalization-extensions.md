@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726114"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 個人化延伸模組
@@ -30,21 +30,18 @@ ms.locfileid: "62726114"
   
 -   **快速散發**與[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]其他軟體發展人員共用個人化延伸模組，而不需要深入瞭解如何找到此延伸功能的詳細規格。  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組有許多用途。 例如，假設貴公司的銷售使用不同的貨幣。 您建立一個導出成員，該成員會使用存取此 Cube 之人員所用的當地貨幣來傳回合併的銷售量。 您會將這個成員建立為個人化延伸模組， 然後您可以將這個導出成員與一組使用者共用。 一旦共用之後，這些使用者就可以在連接伺服器之後立刻存取此導出成員。 即使這些使用者所使用的介面與當初建立此導出成員所用的介面不同，他們還是可以存取。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組有許多用途。 例如，假設貴公司的銷售使用不同的貨幣。 您建立一個導出成員，該成員會使用存取此 Cube 之人員所用的當地貨幣來傳回合併的銷售量。 您會將這個成員建立為個人化延伸模組， 然後您可以將這個導出成員與一組使用者共用。 一旦共用之後，這些使用者就可以在連接伺服器之後立刻存取此導出成員。 即使這些使用者所使用的介面與當初建立此導出成員所用的介面不同，他們還是可以存取。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組是對現有 managed 元件架構的簡單且簡潔的修改，而且會[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer>在整個物件模型、多維度運算式（MDX）語法和架構資料列集公開。  
   
 ## <a name="logical-architecture"></a>邏輯架構  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組的架構是根據 Managed 組件架構，而且具有以下四個基本元素：  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組的架構是根據 Managed 組件架構，而且具有以下四個基本元素：  
   
  [PlugInAttribute] 自訂屬性  
  啟動服務時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]會載入必要的元件，並判斷哪些類別具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自訂屬性。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會使用可描述程式碼及影響執行階段行為的方式來定義自訂屬性。 如需詳細資訊，請參閱 MSDN 上《 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]開發人員指南》中的「[屬性總覽](https://go.microsoft.com/fwlink/?LinkId=82929)」主題。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會使用可描述程式碼及影響執行階段行為的方式來定義自訂屬性。 如需詳細資訊，請參閱 MSDN 上《 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]開發人員指南》中的「[屬性總覽](https://go.microsoft.com/fwlink/?LinkId=82929)」主題。  
   
  對於具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自訂屬性的所有類別[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，會叫用其預設的函式。 在啟動時叫用所有建構函式會提供一個共用位置，可以從這個位置建立新的物件，而且此位置與任何使用者活動都無關。  
   
@@ -68,30 +65,24 @@ ms.locfileid: "62726114"
  所有物件的撰寫和管理都與這個結構無關，而且只有物件的開發人員才需負責。  
   
 ## <a name="infrastructure-foundations"></a>基礎結構基準  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組是根據現有的元件。 下列是提供個人化延伸模組功能的增強與改良摘要。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組是根據現有的元件。 下列是提供個人化延伸模組功能的增強與改良摘要。  
   
 ### <a name="assemblies"></a>組件  
  自訂屬性 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 可加入您的自訂組件中，以識別 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組類別。  
   
 ### <a name="changes-to-the-adomdserver-object-model"></a>變更到 AdomdServer 物件模型  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer> 物件模型中的以下物件已經過增強或是已加入此模型。  
+ <xref:Microsoft.AnalysisServices.AdomdServer> 物件模型中的以下物件已經過增強或是已加入此模型。  
   
 #### <a name="new-adomdconnection-class"></a>新的 AdomdConnection 類別  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 類別是新的，而且會透過屬性和事件公開幾個個人化延伸模組。  
+ <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 類別是新的，而且會透過屬性和事件公開幾個個人化延伸模組。  
   
  **屬性**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A> 是一個唯讀字串值，代表目前連接的工作階段識別碼。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A> 是一個唯讀字串值，代表目前連接的工作階段識別碼。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A> 是與目前工作階段有關之用戶端文化特性的唯讀參考。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A> 是與目前工作階段有關之用戶端文化特性的唯讀參考。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A> 是代表目前使用者之識別介面的唯讀參考。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A> 是代表目前使用者之識別介面的唯讀參考。  
   
  **事件**  
   
@@ -100,26 +91,20 @@ ms.locfileid: "62726114"
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing>  
   
 #### <a name="new-properties-in-the-context-class"></a>Context 類別中的新屬性  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context> 類別有兩個新的屬性：  
+ <xref:Microsoft.AnalysisServices.AdomdServer.Context> 類別有兩個新的屬性：  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A> 是新伺服器物件的唯讀參考。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A> 是新伺服器物件的唯讀參考。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A> 是新 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 物件的唯讀參考。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A> 是新 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 物件的唯讀參考。  
   
 #### <a name="new-server-class"></a>新的 Server 類別  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server> 類別是新的，而且會透過類別屬性和事件公開幾個個人化延伸模組。  
+ <xref:Microsoft.AnalysisServices.AdomdServer.Server> 類別是新的，而且會透過類別屬性和事件公開幾個個人化延伸模組。  
   
  **屬性**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A> 是代表伺服器名稱的唯讀字串值。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A> 是代表伺服器名稱的唯讀字串值。  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A> 是與伺服器有關之全域文化特性的唯讀參考。  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A> 是與伺服器有關之全域文化特性的唯讀參考。  
   
  **事件**  
   
@@ -128,16 +113,15 @@ ms.locfileid: "62726114"
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>  
   
 #### <a name="adomdcommand-class"></a>AdomdCommand 類別  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 類別現在支援下列 MDX 命令：  
+ <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 類別現在支援下列 MDX 命令：  
   
--   [&#40;MDX&#41;的 CREATE MEMBER 語句](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [UPDATE MEMBER 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [&#40;MDX&#41;建立 SET 語句](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [&#40;MDX&#41;的 DROP SET 語句](/sql/mdx/mdx-data-definition-drop-set)  
   

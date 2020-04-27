@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637864"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本語法
@@ -88,7 +88,7 @@ XML
  TYPE  
  指定查詢以 **xml** 類型傳回結果。 如需詳細資訊，請參閱 [FOR XML 查詢中的 TYPE 指示詞](type-directive-in-for-xml-queries.md)。  
   
- 根 [（'*RootName*'）]  
+ ROOT [('*RootName*')]  
  指定將單一最上層元素加入產生的 XML。 您可以選擇性地指定要產生的根元素名稱。 預設值是 "root"。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664083"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件類別
@@ -47,12 +47,12 @@ ms.locfileid: "62664083"
 |**ObjectName**|**nvarchar**|交談另一端的服務名稱，以及遠端資料庫用來連接此資料庫的連接字串。|34|否|  
 |**RoleName**|**nvarchar**|接收此訊息的結束點角色。 下列其中一個值。<br /><br /> **起始**端：<br />                  接收的結束點是交談的起始端。<br /><br /> **目標**：<br />                  接收的結束點是交談的目標。|38|否|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
-|**Severity**|**int**|若錯誤造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將訊息卸除，此錯誤的嚴重性。|29|否|  
+|**嚴重性**|**int**|若錯誤造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將訊息卸除，此錯誤的嚴重性。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**int**|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
 |**TextData**|**ntext**|偵測到的損毀之描述。|1|是|  
-|**交易識別碼**|**Bigint**|系統指派的交易識別碼。|4|否|  
+|**交易識別碼**|**bigint**|系統指派的交易識別碼。|4|否|  
   
  此事件的 **TextData** 資料行包含描述此訊息問題的訊息。  
   

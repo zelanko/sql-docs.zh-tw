@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728492"
 ---
 # <a name="database-dimension-properties"></a>資料庫維度屬性
@@ -55,6 +55,6 @@ ms.locfileid: "62728492"
  [屬性和屬性階層](attributes-and-attribute-hierarchies.md)   
  [使用者階層](user-hierarchies.md)   
  [維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [維度 &#40;Analysis Services 多維資料&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [維度 &#40;Analysis Services - 多維度資料&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

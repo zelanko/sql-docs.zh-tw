@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720052"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>指定資料類型和內容類型 (基本資料採礦教學課程)
@@ -30,27 +30,27 @@ ms.locfileid: "62720052"
   
     |資料行|內容類型|資料類型|  
     |------------|------------------|---------------|  
-    |**位址 Line1**|**Discrete**|**文字**|  
-    |**位址 Line2**|**Discrete**|**文字**|  
-    |**存在**|**連續**|**Long**|  
+    |**位址 Line1**|**Discrete**|**Text**|  
+    |**位址 Line2**|**Discrete**|**Text**|  
+    |**存在**|**系列**|**Long**|  
     |**Bike Buyer**|**Discrete**|**Long**|  
-    |**Commute Distance**|**Discrete**|**文字**|  
-    |**CustomerKey**|**索引鍵**|**Long**|  
-    |**DateLastPurchase**|**連續**|**日期**|  
-    |**電子郵件地址**|**Discrete**|**文字**|  
-    |**English Education**|**Discrete**|**文字**|  
-    |**English Occupation**|**Discrete**|**文字**|  
-    |**名字**|**Discrete**|**文字**|  
-    |**性別**|**Discrete**|**文字**|  
-    |**Geography Key**|**Discrete**|**文字**|  
-    |**房屋擁有者旗標**|**Discrete**|**文字**|  
-    |**姓氏**|**Discrete**|**文字**|  
-    |**Marital Status**|**Discrete**|**文字**|  
-    |**擁有的 Cars 數**|**Discrete**|**Long**|  
-    |**在家中的子女數**|**Discrete**|**Long**|  
-    |**區域**|**Discrete**|**文字**|  
+    |**Commute Distance**|**Discrete**|**Text**|  
+    |**CustomerKey**|**關鍵**|**Long**|  
+    |**DateLastPurchase**|**系列**|**日期**|  
+    |**電子郵件地址**|**Discrete**|**Text**|  
+    |**English Education**|**Discrete**|**Text**|  
+    |**English Occupation**|**Discrete**|**Text**|  
+    |**姓**|**Discrete**|**Text**|  
+    |**性別**|**Discrete**|**Text**|  
+    |**Geography Key**|**Discrete**|**Text**|  
+    |**House Owner Flag**|**Discrete**|**Text**|  
+    |**姓氏**|**Discrete**|**Text**|  
+    |**Marital Status**|**Discrete**|**Text**|  
+    |**Number Cars Owned**|**Discrete**|**Long**|  
+    |**Number Children At Home**|**Discrete**|**Long**|  
+    |**區域**|**Discrete**|**Text**|  
     |**Total Children**|**Discrete**|**Long**|  
-    |**年收入**|**連續**|**兩**|  
+    |**Yearly Income**|**系列**|**Double**|  
   
 3.  按 [下一步]  。  
   

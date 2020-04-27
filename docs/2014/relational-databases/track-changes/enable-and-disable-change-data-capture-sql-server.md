@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670574"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)
@@ -28,9 +28,7 @@ ms.locfileid: "62670574"
 ## <a name="enable-change-data-capture-for-a-database"></a>針對資料庫啟用異動資料擷取  
  針對個別資料表建立擷取執行個體之前，`sysadmin` 固定伺服器角色的成員必須先啟用異動資料擷取的資料庫。 這項步驟可透過在資料庫內容中執行 [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) 預存程序完成。 若要判斷資料庫是否已經啟用，請查詢 `is_cdc_enabled` 目錄檢視中的 `sys.databases` 資料行。  
   
- 啟用異動資料擷取的資料庫時，也會針對資料庫建立 `cdc` 結構描述、`cdc` 使用者、中繼資料表，以及其他系統物件。 
-  `cdc` 結構描述包含異動資料擷取中繼資料表，以及啟用異動資料擷取的來源資料表後，當做變更資料儲存機制使用的個別變更資料表。 
-  `cdc` 結構描述也包含用來查詢變更資料的相關聯系統函數。  
+ 啟用異動資料擷取的資料庫時，也會針對資料庫建立 `cdc` 結構描述、`cdc` 使用者、中繼資料表，以及其他系統物件。 `cdc` 結構描述包含異動資料擷取中繼資料表，以及啟用異動資料擷取的來源資料表後，當做變更資料儲存機制使用的個別變更資料表。 `cdc` 結構描述也包含用來查詢變更資料的相關聯系統函數。  
   
  異動資料擷取需要獨佔使用 `cdc` 結構描述與 `cdc` 使用者。 如果名稱為 *cdc* 的結構描述或資料庫使用者目前存在於資料庫中，就無法啟用異動資料擷取的資料庫，直到卸除或重新命名結構描述和 (或) 使用者為止。  
   
@@ -100,8 +98,7 @@ GO
   
  `A role for controlling access to a change table.`  
   
- 指定角色的目的是要控制變更資料的存取權。 指定的角色可以是現有的固定伺服器角色或資料庫角色。 如果指定的角色不存在，則會自動建立該名稱的資料庫角色。 
-  `sysadmin` 或 `db_owner` 角色的成員對於變更資料表中的資料擁有完整存取權。 其他所有使用者對於來源資料表的所有擷取資料行必須具備 SELECT 權限。 此外，指定角色時，不是 `sysadmin` 或 `db_owner` 角色之成員的使用者也必須是指定之角色的成員。  
+ 指定角色的目的是要控制變更資料的存取權。 指定的角色可以是現有的固定伺服器角色或資料庫角色。 如果指定的角色不存在，則會自動建立該名稱的資料庫角色。 `sysadmin` 或 `db_owner` 角色的成員對於變更資料表中的資料擁有完整存取權。 其他所有使用者對於來源資料表的所有擷取資料行必須具備 SELECT 權限。 此外，指定角色時，不是 `sysadmin` 或 `db_owner` 角色之成員的使用者也必須是指定之角色的成員。  
   
  如果您不想要使用控制角色，請將*@role_name*參數明確設定為 Null。 如需在不使用控制角色的情況下啟用資料表的範例，請參閱「`Enable a Table Without Using a Gating Role`」範本。  
   
@@ -148,8 +145,7 @@ GO
 >  如果已在具有現有主鍵的資料表上啟用變更資料捕獲，而*@index_name*參數未用來識別替代的唯一索引，則變更資料捕獲功能將會使用主鍵。 如果沒有先針對資料表停用異動資料擷取，系統就不允許對主索引鍵進行後續變更。 不論設定異動資料擷取時是否要求淨變更查詢的支援，都是如此。 如果啟用異動資料擷取時，資料表沒有任何主索引鍵，則異動資料擷取就會忽略後續加入主索引鍵的作業。 由於異動資料擷取不會使用啟用資料表之後所建立的主索引鍵，因此您可以移除此索引鍵和索引鍵資料行，而且沒有任何限制。  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>針對資料表停用異動資料擷取  
- 
-  `db_owner` 固定資料庫角色的成員可以使用 `sys.sp_cdc_disable_table` 預存程序，針對個別的來源資料表移除擷取執行個體。 若要判斷目前是否已啟用異動資料擷取的來源資料表，請檢查 `is_tracked_by_cdc` 目錄檢視中的 `sys.tables` 資料行。 如果進行停用之後，資料庫中沒有任何資料表啟用，系統也會移除異動資料擷取作業。  
+ `db_owner` 固定資料庫角色的成員可以使用 `sys.sp_cdc_disable_table` 預存程序，針對個別的來源資料表移除擷取執行個體。 若要判斷目前是否已啟用異動資料擷取的來源資料表，請檢查 `is_tracked_by_cdc` 目錄檢視中的 `sys.tables` 資料行。 如果進行停用之後，資料庫中沒有任何資料表啟用，系統也會移除異動資料擷取作業。  
   
  如果啟用異動資料擷取的資料表已卸除，系統就會自動移除與此資料表相關聯的異動資料擷取中繼資料。  
   
@@ -170,7 +166,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [追蹤資料變更 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
- [關於異動資料擷取 &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
+ [關於變更資料捕獲 &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [使用變更資料 &#40;SQL Server&#41;](work-with-change-data-sql-server.md)   
  [管理和監視異動資料擷取 &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   

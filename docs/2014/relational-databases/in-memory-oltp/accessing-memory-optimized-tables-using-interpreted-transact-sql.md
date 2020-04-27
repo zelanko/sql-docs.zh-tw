@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468605"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
@@ -42,7 +42,7 @@ ms.locfileid: "62468605"
 |跨資料庫|跨資料庫查詢<br /><br /> 跨資料庫交易<br /><br /> 連結的伺服器|  
   
 ## <a name="table-hints"></a>資料表提示  
- 如需有關資料表提示的詳細資訊，請參閱。 [資料表提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)。 新增支援 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的快 SNAPSHOT 隔離。  
+ 如需有關資料表提示的詳細資訊，請參閱。 [&#40;transact-sql&#41;的資料表提示](/sql/t-sql/queries/hints-transact-sql-table)。 新增支援 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的快 SNAPSHOT 隔離。  
   
  使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]存取記憶體最佳化的資料表時，不支援下列資料表提示。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62468605"
 >  在自動認可模式下執行之查詢所存取的記憶體最佳化的資料表不需要隔離等級資料表提示。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體中 OLTP 的 Transact-SQL 支援](transact-sql-support-for-in-memory-oltp.md)   
+ [記憶體內部 OLTP 的 transact-sql 支援](transact-sql-support-for-in-memory-oltp.md)   
  [移轉至 In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

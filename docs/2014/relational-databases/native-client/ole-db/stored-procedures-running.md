@@ -1,5 +1,5 @@
 ---
-title: 執行預存程式（OLE DB） |Microsoft Docs
+title: 執行預存程序 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638763"
 ---
 # <a name="running-stored-procedures-ole-db"></a>執行預存程序 (OLE DB)
@@ -51,6 +51,6 @@ ms.locfileid: "62638763"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性設定為 DBPROPVAL_OA_ATROWRELEASE，以指出在處理或釋放結果集之前，不會傳回傳回碼和輸出參數。  
   
 ## <a name="see-also"></a>另請參閱  
- [預存程序](stored-procedures.md)  
+ [預存程式](stored-procedures.md)  
   
   

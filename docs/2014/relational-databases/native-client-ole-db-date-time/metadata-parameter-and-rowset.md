@@ -1,5 +1,5 @@
 ---
-title: 參數和資料列集中繼資料 |Microsoft Docs
+title: 參數和資料列集中繼資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655624"
 ---
 # <a name="parameter-and-rowset-metadata"></a>參數和資料列集中繼資料
@@ -37,10 +37,10 @@ ms.locfileid: "62655624"
   
 |參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|設定|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19，21. 27|0..7|設定|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26，28. 34|0..7|設定|  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62655624"
 |datetime2 或 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- *BPrecision*參數會被忽略。  
+ 已忽略 *bPrecision* 參數。  
   
- 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "`datetime`" 和 "`smalldatetime`" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更新版本）伺服器時`datetime2`，將會使用 "" 格式，而且當類型名稱為 "`datetime2`" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換（如有必要）。 ** 如果使用提供者特定的類型名稱 "`datetime`" 或 "`smalldatetime`"，則會忽略 bScale。 否則，html5 應用程式必須確定已正確設定*bScale* 。 從 MDAC 升級的應用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式以及使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] "DBTYPE_DBTIMESTAMP" 的 Native Client，如果未正確設定*bScale* ，將會失敗。 連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
+ 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "`datetime`" 和 "`smalldatetime`" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更新版本）伺服器時`datetime2`，將會使用 "" 格式，而且當類型名稱為 "`datetime2`" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換（如有必要）。 *bScale*如果使用提供者特定的類型名稱 "`datetime`" 或 "`smalldatetime`"，則會忽略 bScale。 否則，html5 應用程式必須確定已正確設定*bScale* 。 從 MDAC 升級的應用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式以及使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] "DBTYPE_DBTIMESTAMP" 的 Native Client，如果未正確設定*bScale* ，將會失敗。 連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
   
  未呼叫 ICommandWithParameters：： SetParameterInfo 時，提供者會依照 IAccessor：： CreateAccessor 中的指定，從系結類型推斷伺服器類型，如下所示：  
   
@@ -78,15 +78,14 @@ ms.locfileid: "62655624"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- 
-  `IColumnsRowset::GetColumnsRowset` 傳回下列資料行：  
+ `IColumnsRowset::GetColumnsRowset` 傳回下列資料行：  
   
 |資料行類型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|設定|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|設定|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|設定|  
   
@@ -117,10 +116,10 @@ ms.locfileid: "62655624"
   
 |參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|設定|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|設定|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|設定|  
   
@@ -140,7 +139,7 @@ ms.locfileid: "62655624"
   
  可以設定剩餘的旗標 (DBCOLUMNFLAGS_ISNULLABLE、DBCOLUMNFLAGS_MAYBENULL、DBCOLUMNFLAGS_WRITE 和 DBCOLUMNFLAGS_WRITEUNKNOWN)。  
   
- 在 *dwFlags* 中會提供新旗標 DBCOLUMNFLAGS_SS_ISVARIABLESCALE，以允許應用程式判斷資料行的伺服器類型，其中 *wType* 是 DBTYPE_DBTIMESTAMP。 *bScale*也必須用來識別伺服器類型。  
+ 在 *dwFlags* 中會提供新旗標 DBCOLUMNFLAGS_SS_ISVARIABLESCALE，以允許應用程式判斷資料行的伺服器類型，其中 *wType* 是 DBTYPE_DBTIMESTAMP。 *bScale* 也必須用來識別伺服器類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [中繼資料 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

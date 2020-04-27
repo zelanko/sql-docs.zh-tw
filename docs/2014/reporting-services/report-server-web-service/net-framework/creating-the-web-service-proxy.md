@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520373"
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
@@ -29,10 +29,9 @@ ms.locfileid: "62520373"
  有兩種方式可以使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]將 proxy 類別加入至您的開發專案：使用中的 WSDL 工具[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，以及在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]加入 Web 參考。 下列小節針對這個主題進行更詳細的討論。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>使用 WSDL 工具加入 Proxy  
- 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 以支援 Web 服務的語言（目前的 c # 和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）建立用戶端 proxy 的最常見方式，是使用 WSDL 工具。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 以支援 Web 服務的語言（目前的 c # 和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）建立用戶端 proxy 的最常見方式，是使用 WSDL 工具。  
   
- **使用 Wsdl.exe 將 proxy 類別加入至您的專案**  
+ **使用 Wsdl.exe 將 Proxy 類別新增至專案**  
   
 1.  從命令提示，使用 Wsdl.exe 來建立 Proxy 類別，(至少) 將 URL 指定為報表伺服器 Web 服務。  
   
@@ -67,10 +66,9 @@ ReportingService2010 service = new ReportingService2010();
  如需有關 Wsdl.exe 工具 (包括其完整的語法) 的詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件集中的＜Web 服務描述語言工具＞。 如需 Web 服務 Proxy 的完整說明，請參閱 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件集中的＜建立 XML Web 服務 Proxy＞。  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>使用 Visual Studio 中的 Web 參考來加入 Proxy  
- Web 參考可讓專案取用一個或多個 Web 服務。 
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 可讓使用者遵循一些簡單的步驟，將 Web 服務參考加入專案中。  
+ Web 參考可讓專案取用一個或多個 Web 服務。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 可讓使用者遵循一些簡單的步驟，將 Web 服務參考加入專案中。  
   
- **若要將 Web 參考加入至專案**  
+ **將 Web 參考新增至專案**  
   
 1.  在**方案總管**中，選取將取用 Web 服務的專案。  
   
@@ -120,7 +118,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 您也可以將 **using** (在 ** 中為**匯入[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 指示詞新增報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
+ 您也可以將 **using** (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為**匯入**) 指示詞新增報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
   
 ```vb  
 Import myNamespace.myReferenceName  

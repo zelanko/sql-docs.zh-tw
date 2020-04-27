@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643364"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>使用 ISequentialStream Bound to ICommandText 參數將資料傳送到 FILESTREAM 資料行 (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "62643364"
  如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
- 在您編譯和執行此範例之前，請先啟用 FILESTREAM 支援（[啟用和設定 filestream](../../blob/enable-and-configure-filestream.md)）。  
+ 編譯並執行此範例之前，請先啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../blob/enable-and-configure-filestream.md))。  
   
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   

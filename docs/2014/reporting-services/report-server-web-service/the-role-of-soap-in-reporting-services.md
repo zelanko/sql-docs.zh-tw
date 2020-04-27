@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519196"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -57,8 +57,7 @@ public void DeleteItem(string item);
 </soap:Envelope>  
 ```  
   
- 
-  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法沒有傳回值，所以會傳回空的回應。  
+ <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法沒有傳回值，所以會傳回空的回應。  
   
 ## <a name="see-also"></a>另請參閱  
  [存取 SOAP API](accessing-the-soap-api.md)   

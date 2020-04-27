@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689069"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -95,8 +95,7 @@ eDirection
   
  若要變更針對資料檔案指定的資料格式值，請呼叫[bcp_columns](bcp-columns.md)並[bcp_colfmt](bcp-colfmt.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱大量匯入和[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)[中最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱大量匯入和[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)[中最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
  如果沒有使用任何資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定記憶體中每個資料行之為的格式和位置，然後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](bcp-sendrow.md)將資料列複製到。  
   

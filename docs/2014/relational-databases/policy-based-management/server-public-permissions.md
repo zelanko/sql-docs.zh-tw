@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691476"
 ---
 # <a name="server-public-permissions"></a>伺服器 public 權限
@@ -26,7 +26,7 @@ ms.locfileid: "62691476"
  請勿將伺服器權限授與給伺服器 public 角色。  
   
 > [!IMPORTANT]  
->  在安裝程式完成**** 之後，PUBLIC `CONNECT`角色具有所有端點的許可權，但**專用管理員連接**除外。 這是正常狀況，通常不應該變更 (存取權是使用建立新登入時自動授與的 `CONNECT SQL` 權限來控制)。  
+>  在安裝程式完成**PUBLIC**之後，PUBLIC `CONNECT`角色具有所有端點的許可權，但**專用管理員連接**除外。 這是正常狀況，通常不應該變更 (存取權是使用建立新登入時自動授與的 `CONNECT SQL` 權限來控制)。  
   
 ### <a name="for-more-information"></a>取得詳細資訊  
  [保護 SQL Server 的安全](../security/securing-sql-server.md)  

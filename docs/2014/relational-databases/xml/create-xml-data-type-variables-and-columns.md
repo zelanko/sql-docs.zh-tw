@@ -14,14 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637991"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
-  
   `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 如同其他內建類型，當您建立資料表作為變數`xml`類型、參數類型、函數傳回類型，或是在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)中時，您可以使用資料類型做為資料行類型。  
   
 ## <a name="creating-columns-and-variables"></a>建立資料行和變數  
@@ -67,8 +66,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援在 `xml` 類型之資料行上的 NULL 和 NOT NULL 條件約束。 例如：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援在 `xml` 類型之資料行上的 NULL 和 NOT NULL 條件約束。 例如：  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -89,8 +87,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   COLLATE  
   
-     XML 可自行提供編碼。 定序僅適用於字串類型。 
-  `xml` 資料類型不是字串類型。 但它確實具有字串表示法，並允許轉換成字串資料類型，以及從字串資料類型轉換回來。  
+     XML 可自行提供編碼。 定序僅適用於字串類型。 `xml` 資料類型不是字串類型。 但它確實具有字串表示法，並允許轉換成字串資料類型，以及從字串資料類型轉換回來。  
   
 -   RULE  
   

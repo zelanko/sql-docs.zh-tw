@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702686"
 ---
 # <a name="calculations"></a>計算
@@ -31,8 +31,7 @@ ms.locfileid: "62702686"
   
  可以針對任何維度定義導出成員，包括量值維度。 在量值維度上建立的導出成員，稱為導出量值。  
   
- 雖然導出成員通常是根據 Cube 中的現有資料，但是您也可以將資料與算術運算子、數字和函數組合來建立複雜的運算式。 您也可使用 MDX 函數 (如 LookupCube) 來存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中其他 Cube 內的資料； 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含標準化的 Visual Studio 函數程式庫，而且您可使用預存程序從目前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫以外的來源中擷取資料。 如需預存程式的詳細資訊，請參閱[定義預存程式](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
+ 雖然導出成員通常是根據 Cube 中的現有資料，但是您也可以將資料與算術運算子、數字和函數組合來建立複雜的運算式。 您也可使用 MDX 函數 (如 LookupCube) 來存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中其他 Cube 內的資料； [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含標準化的 Visual Studio 函數程式庫，而且您可使用預存程序從目前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫以外的來源中擷取資料。 如需預存程式的詳細資訊，請參閱[定義預存程式](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
   
  例如，假設一運輸公司的管理者想要根據每一容量單位的利潤，來決定運送哪一種貨物類型的利潤較高。 他們使用包含貨物、船隊與時間維度，以及 Price_to_Ship、Cost_to_Ship、及 Volume_in_Cubic_Meters 量值的運貨 Cube；但是，該 Cube 沒有包含獲利率的量值。 您可以在下列運算式中合併現有的量值，以在 Cube 中建立一個導出成員作為量值 (名為 Profit_per_Cubic_Meter)：  
   

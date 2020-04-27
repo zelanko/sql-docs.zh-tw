@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725492"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量規格 (Analysis Services)
@@ -31,10 +31,10 @@ ms.locfileid: "62725492"
   
  [表格式 (DeploymentMode=2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>多維度和資料採礦（DeploymentMode = 0）  
+##  <a name="multidimensional-and-data-mining-deploymentmode0"></a><a name="bkmk_OLAP"></a>多維度和資料採礦（DeploymentMode = 0）  
  MOLAP 儲存模式，會同時儲存資料和中繼資料，對於檔案大小另有實體限制。 字串存放檔案的預設大小上限為 4 GB。 如果您需要更大的字串存放檔案，可以指定不同的字串儲存體架構。 如需詳細資訊，請參閱[設定維度和資料分割的字串儲存體](../configure-string-storage-for-dimensions-and-partitions.md)。  
   
-|Object|大小/數目的最大值|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的維度|2^31-1 = 2,147,483,647|  
@@ -51,7 +51,7 @@ ms.locfileid: "62725492"
 |Cube 中的資料分割|2^31-1 = 2,147,483,647|  
 |Cube 中的翻譯|2^31-1 = 2,147,483,647|  
 |資料分割中的彙總|2^31-1 = 2,147,483,647|  
-|由查詢所傳回的資料格|2^31-1 = 2,147,483,647|  
+|查詢傳回的資料格|2^31-1 = 2,147,483,647|  
 |來源查詢的記錄大小|64K|  
 |物件名稱的長度|100 個字元|  
 |資料採礦模型屬性資料行中相異狀態數目的上限|2^31-1 = 2,147,483,647|  
@@ -61,9 +61,9 @@ ms.locfileid: "62725492"
   
  如需線上分析處理（OLAP）和資料採礦之資料來源限制的詳細資訊，請參閱[支援的資料來源 &#40;ssas 多維度&#41;](../supported-data-sources-ssas-multidimensional.md)、[支援 &#40;ssas 多維度&#41;的資料](../supported-data-sources-ssas-multidimensional.md)源，以及[ASSL 物件和物件特性](../scripting-language-assl/assl-objects-and-object-characteristics.md)。  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint （DeploymentMode = 1）  
+##  <a name="sharepoint-deploymentmode1"></a><a name="bkmk_sharepoint"></a>SharePoint （DeploymentMode = 1）  
   
-|Object|大小/數目的最大值|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的資料表|2^31-1 = 2,147,483,647|  
@@ -75,13 +75,13 @@ ms.locfileid: "62725492"
 |資料表中的索引鍵資料行|2^31-1 = 2,147,483,647|  
 |資料表中的量值|2 ^ 31-1 = 2147483647**警告：** 資料表中的量值總數取決於與同一個資料表相關聯的資料行和計算資料行總數。 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
 |資料表中的導出資料行|2 ^ 31-1 = 2147483647**警告：** 資料表中的匯出資料行總數取決於與同一個資料表相關聯的資料行和量值總數。 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
-|由查詢所傳回的資料格|2^31-1 = 2,147,483,647|  
+|查詢傳回的資料格|2^31-1 = 2,147,483,647|  
 |來源查詢的記錄大小|64K|  
 |物件名稱的長度|100 個字元|  
   
-##  <a name="bkmk_vertipaq"></a>表格式（DeploymentMode = 2）  
+##  <a name="tabular-deploymentmode2"></a><a name="bkmk_vertipaq"></a>表格式（DeploymentMode = 2）  
   
-|Object|大小/數目的最大值|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的資料表|2^31-1 = 2,147,483,647|  
@@ -93,7 +93,7 @@ ms.locfileid: "62725492"
 |資料表中的索引鍵資料行|2^31-1 = 2,147,483,647|  
 |資料表中的量值|2 ^ 31-1 = 2147483647**警告：** 資料表中的量值總數取決於與同一個資料表相關聯的資料行和計算資料行總數。 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
 |資料表中的導出資料行|2 ^ 31-1 = 2147483647**警告：** 資料表中的匯出資料行總數取決於與同一個資料表相關聯的資料行和量值總數。 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
-|由查詢所傳回的資料格|2^31-1 = 2,147,483,647|  
+|查詢傳回的資料格|2^31-1 = 2,147,483,647|  
 |來源查詢的記錄大小|64K|  
 |物件名稱的長度|100 個字元|  
   

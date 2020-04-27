@@ -1,5 +1,5 @@
 ---
-title: 錯誤介面中的資訊 |Microsoft Docs
+title: 錯誤介面中的資訊 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60b6b0387aea5475d74c314a10e4fa437fadc005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657658"
 ---
 # <a name="information-in-error-interfaces"></a>錯誤介面中的資訊
@@ -33,11 +33,11 @@ ms.locfileid: "62657658"
 |---------------------|-----------------|  
 |**GetDescription**|描述性的錯誤訊息字串。|  
 |**GetGUID**|定義錯誤之介面的 GUID。|  
-|**GetHelpCoNtext**|不支援。 永遠傳回零。|  
+|**GetHelpContext**|不支援。 永遠傳回零。|  
 |**GetHelpFile**|不支援。 一律傳回 NULL。|  
 |**GetSource**|字串 "Microsoft SQL Server Native Client"。|  
   
- Native Client OLE DB 提供者支援取用者可用的 IErrorRecords 成員函式，如下所示。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Native Client OLE DB 提供者支援取用者可用的 IErrorRecords 成員函式，如下所示。 **IErrorRecords** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 |成員函數|描述|  
 |---------------------|-----------------|  
@@ -52,9 +52,9 @@ ms.locfileid: "62657658"
 |參數|描述|  
 |---------------|-----------------|  
 |*pbstrSQLState*|為錯誤傳回 SQLSTATE 值。 SQLSTATE 值定義於 SQL-92、ODBC 和 ISO SQL，以及 API 規格中。 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 都不 OLE DB 提供者定義的執行特定 SQLSTATE 值。|  
-|*plNativeError*|從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master.dbo.sysmessages** 傳回 ** 錯誤號碼 (如果有的話)。 成功初始化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client OLE DB 提供者資料來源之後，就可以使用原生錯誤。 在嘗試之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者一律會傳回零。|  
+|*plNativeError*|從 **master.dbo.sysmessages** 傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤號碼 (如果有的話)。 成功初始化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client OLE DB 提供者資料來源之後，就可以使用原生錯誤。 在嘗試之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者一律會傳回零。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Errors](errors.md)  
+ [錯誤](errors.md)  
   
   

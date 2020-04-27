@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691665"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
@@ -41,22 +41,22 @@ ms.locfileid: "62691665"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+     [Replication Management Objects （RMO）](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果您在初始化發行集的訂閱後，新增、修改或刪除邏輯記錄，則必須在進行變更後產生新的快照集並重新初始化所有訂閱。 如需屬性變更需求的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [新增發行集精靈] 和 [發行集屬性 - **發行集>]** **對話方塊的 [加入聯結]\<** 對話方塊中，定義邏輯記錄。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 您可以在位於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>]**** 對話方塊的 [加入聯結]**** 對話方塊中，定義邏輯記錄。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
   
  只有將邏輯記錄套用至合併式發行集中的聯結篩選，並且該發行集符合使用預先計算的資料分割要求時，方可在 **[加入聯結]** 對話方塊中定義這些邏輯記錄。 若要定義未套用至聯結篩選的邏輯記錄，並在邏輯記錄層級設定衝突偵測和解決方案，您必須使用預存程序。  
   
 #### <a name="to-define-a-logical-record-relationship"></a>若要定義邏輯記錄關聯性  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個資料列篩選。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊的 [篩選資料列]**** 頁面上，從 [已篩選的資料表]**** 窗格中選取一個資料列篩選。  
   
      邏輯記錄關聯性與聯結篩選相關聯，這會擴充資料列篩選。 因此，您必須在使用聯結擴充篩選並套用邏輯記錄關聯性之前，先定義資料列篩選。 定義好一個聯結篩選後，您可以以另一個聯結篩選擴充這個聯結篩選。 如需定義聯結篩選的詳細資訊，請參閱＜ [定義和修改合併發行項之間的聯結篩選](define-and-modify-a-join-filter-between-merge-articles.md)＞。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62691665"
   
 3.  在 **[加入聯結]** 對話方塊中定義聯結篩選，然後選取 **[邏輯記錄]** 核取方塊。  
   
-4.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+4.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>若要刪除邏輯記錄關聯性  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62691665"
   
      若要僅刪除邏輯記錄關聯性：  
   
-    1.  在 [新增發行集精靈] 的 [篩選資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取與邏輯記錄關聯性相關聯的聯結篩選，然後按一下 [編輯]  。  
+    1.  在 [新增發行集精靈] 的 [篩選資料列]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊的 [篩選資料列]**** 頁面上，從 [已篩選的資料表]**** 窗格中選取與邏輯記錄關聯性相關聯的聯結篩選，然後按一下 [編輯]****。  
   
     2.  在 **[編輯聯結]** 對話方塊中，清除 **[邏輯記錄]** 核取方塊。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62691665"
   
      若要刪除邏輯記錄關聯性及與其關聯的聯結篩選：  
   
-    -   在 [新增發行集精靈] 或 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
+    -   在 [新增發行集精靈] 或 [發行集屬性 - \<發行集>]**** 對話方塊的 [篩選資料列]**** 頁面上，從 [已篩選的資料表]**** 窗格中選取一個篩選，然後按一下 [刪除]****。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序，以程式設計方式指定發行項之間的邏輯記錄關聯性。  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>定義沒有相關聯結篩選的邏輯記錄關聯性  
@@ -144,12 +144,12 @@ ms.locfileid: "62691665"
   
 2.  在發行集資料庫的發行者上，執行 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)。 指定**@publication**、關聯性中的其中一個發行項名稱**@article**，以及步驟1中的關聯性名稱。 **@filtername**  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個範例會在現有的發行集上啟用預先計算的資料分割，並針對 `SalesOrderHeader` 和 `SalesOrderDetail` 資料表建立組成兩個新發行項的邏輯記錄。  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
 > [!NOTE]  
 >  合併式複寫可允許您指定在邏輯記錄層級追蹤及解決衝突，但這些選項無法使用 RMO 來設定。  
@@ -194,7 +194,7 @@ ms.locfileid: "62691665"
   
 10. 針對發行集中每一個剩餘的邏輯記錄關聯性重複步驟 8 和 9。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>範例（RMO）  
  這個範例會針對 `SalesOrderHeader` 和 `SalesOrderDetail` 資料表建立組成兩個新發行項的邏輯記錄。  
   
  [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
@@ -204,9 +204,9 @@ ms.locfileid: "62691665"
 ## <a name="see-also"></a>另請參閱  
  [定義和修改合併發行項之間的聯結篩選](define-and-modify-a-join-filter-between-merge-articles.md)   
  [針對合併發行項定義及修改參數化資料列篩選](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [定義及修改靜態資料列篩選](define-and-modify-a-static-row-filter.md)   
- [使用邏輯記錄分組相關資料列的變更](../merge/group-changes-to-related-rows-with-logical-records.md)   
- [使用預先計算的資料分割最佳化參數化篩選效能](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)   
+ [定義和修改靜態資料列篩選](define-and-modify-a-static-row-filter.md)   
+ [使用邏輯記錄將相關資料列的變更分組](../merge/group-changes-to-related-rows-with-logical-records.md)   
+ [使用預先計算的資料分割優化參數化篩選效能](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)   
  [使用邏輯記錄分組相關資料列的變更](../merge/group-changes-to-related-rows-with-logical-records.md)  
   
   

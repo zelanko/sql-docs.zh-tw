@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57d80824ab0dde301a0b96239636cf0f79ca032c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714736"
 ---
 # <a name="delete-a-trace-transact-sql"></a>刪除追蹤 (Transact-SQL)
@@ -28,9 +28,9 @@ ms.locfileid: "62714736"
   
 ### <a name="to-delete-a-trace"></a>若要刪除追蹤  
   
-1.  指定 **** = 0 **，執行 @statussp_trace_setstatus** 以停止追蹤。  
+1.  指定 **@status = 0**，執行 **sp_trace_setstatus** 以停止追蹤。  
   
-2.  指定 **** = 2 **，執行 @statussp_trace_setstatus** 以關閉追蹤，並將其資訊從伺服器中刪除。  
+2.  指定 **@status = 2**，執行 **sp_trace_setstatus** 以關閉追蹤，並將其資訊從伺服器中刪除。  
   
 > [!NOTE]  
 >  您必須先關閉追蹤，才能將它刪除。  

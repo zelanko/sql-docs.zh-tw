@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727574"
 ---
 # <a name="partition-storage-modes-and-processing"></a>資料分割儲存模式及處理
@@ -79,13 +79,13 @@ ms.locfileid: "62727574"
 -   建立索引檢視的工作階段必須將下列選項設為 OFF：NUMERIC_ROUNDABORT。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更這項設定。  
   
 ## <a name="holap"></a>HOLAP  
- HOLAP 儲存模式會結合 MOLAP 和 ROLAP 的屬性。 就像 MOLAP 一樣，HOLAP 會使資料分割的匯總儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]實例的多維度結構中。 HOLAP 不會儲存來源資料的副本。 針對只存取資料分割彙總之摘要資料的查詢，HOLAP 相當於 MOLAP。 存取來源資料的查詢-例如，如果您想要向下切入到沒有匯總資料的不可部分完成 cube 資料格，則必須從關係資料庫中取出資料，而且如果來源資料儲存在 MOLAP structur 中，則不會快速版. 在 HOLAP 儲存模式下，使用者經常會遇到查詢時間有大幅差異的情況，而這是根據可以從快取或彙總來解析查詢，還是從來源資料本身解析查詢而定。  
+ HOLAP 儲存模式會結合 MOLAP 和 ROLAP 的屬性。 就像 MOLAP 一樣，HOLAP 會使資料分割的匯總儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]實例的多維度結構中。 HOLAP 不會儲存來源資料的副本。 針對只存取資料分割彙總之摘要資料的查詢，HOLAP 相當於 MOLAP。 存取來源資料的查詢-例如，如果您想要向下切入到沒有匯總資料的不可部份完成 cube 資料格，則必須從關係資料庫中取出資料，而且如果來源資料儲存在 MOLAP 結構中，其速度將不會快上。 在 HOLAP 儲存模式下，使用者經常會遇到查詢時間有大幅差異的情況，而這是根據可以從快取或彙總來解析查詢，還是從來源資料本身解析查詢而定。  
   
  因為儲存為 HOLAP 的資料分割不包含來源資料，所以會比同等的 MOLAP 資料分割還小，而且針對涉及摘要資料之查詢的回應速度也會比 ROLAP 資料分割還快。 HOLAP 儲存模式一般是適用於 Cube 中的資料分割，而這類資料分割需要根據大量來源資料以快速回應摘要查詢。 但是，如果使用者產生必須接觸分葉層級資料的查詢 (例如計算中間值)，MOLAP 通常是較好的選擇。  
   
 ## <a name="see-also"></a>另請參閱  
  [主動式快取 &#40;分割區&#41;](partitions-proactive-caching.md)   
  [同步處理 Analysis Services 資料庫](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [分割區 &#40;Analysis Services 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)  
   
   

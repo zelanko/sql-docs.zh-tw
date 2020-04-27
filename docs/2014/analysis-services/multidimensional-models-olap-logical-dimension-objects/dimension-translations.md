@@ -18,15 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728524"
 ---
 # <a name="dimension-translations"></a>維度翻譯
-  翻譯是一種簡單的機制，用來將顯示的標籤和標題從某個語言變成另一個語言。 每一個翻譯都會定義成一組值：具有翻譯文字的字串以及具有語言識別碼的數字。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有物件都可使用翻譯。 維度也可以將屬性值翻譯。 用戶端應用程式負責尋找使用者已定義的語言設定，並將所有標題和標籤切換成以該語言顯示。 物件可以有您想要的任何翻譯數目。  
+  翻譯是一種簡單的機制，用來將顯示的標籤和標題從某個語言變成另一個語言。 每一個翻譯都會定義成一組值：具有翻譯文字的字串以及具有語言識別碼的數字。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有物件都可使用翻譯。 維度也可以將屬性值翻譯。 用戶端應用程式負責尋找使用者已定義的語言設定，並將所有標題和標籤切換成以該語言顯示。 物件可以有您想要的任何翻譯數目。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Translation> 物件是由語言識別碼和翻譯的標題所組成。 語言識別碼是具有語言識別碼的 `Integer`。 翻譯的標題則是翻譯的文字。  
   
@@ -39,6 +38,6 @@ ms.locfileid: "62728524"
 ## <a name="see-also"></a>另請參閱  
  [Cube 翻譯](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [翻譯 &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [&#40;Analysis Services 的全球化秘訣和最佳作法&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

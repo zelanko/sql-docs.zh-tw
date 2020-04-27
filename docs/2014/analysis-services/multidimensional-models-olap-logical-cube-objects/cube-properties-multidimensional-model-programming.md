@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727644"
 ---
 # <a name="cube-properties"></a>Cube 屬性
@@ -58,7 +58,7 @@ ms.locfileid: "62727644"
 |`Language`|指定 Cube 的預設語言識別碼。|  
 |`Name`|指定 Cube 的使用者易記名稱。|  
 |`ProactiveCaching`|定義 Cube 的主動式快取設定。|  
-|`ProcessingMode`|指出在處理期間或處理之後，是否應該進行檢索和彙總。 選項為**** [一般`lazy`] 或 []。|  
+|`ProcessingMode`|指出在處理期間或處理之後，是否應該進行檢索和彙總。 選項為**regular** [一般`lazy`] 或 []。|  
 |`ProcessingPriority`|決定 Cube 在背景作業 (例如延遲彙總和索引) 期間的處理優先權。 預設值為**0**。|  
 |`ScriptCacheProcessingMode`|指出在處理期間或處理之後是否應建立指令碼快取。 選項為**一般**和`lazy`。|  
 |`ScriptErrorHandlingMode`|決定錯誤處理。 選項為 `IgnoreNone` 或 `IgnoreAll`。|  

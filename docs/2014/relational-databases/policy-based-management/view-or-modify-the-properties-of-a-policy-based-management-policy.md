@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676937"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>檢視或修改原則式管理原則的屬性
@@ -35,20 +35,20 @@ ms.locfileid: "62676937"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>若要檢視物件之所有原則的屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]  ，然後選取 [檢視]  。 如需有關 [檢視原則 - **物件名稱**]  對話方塊中可用選項的詳細資訊，請參閱[檢視原則對話方塊](view-policies-dialog-box.md)。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]****，然後選取 [檢視]****。 如需有關 [檢視原則 - _物件名稱_]**** 對話方塊中可用選項的詳細資訊，請參閱[檢視原則對話方塊](view-policies-dialog-box.md)。  
   
-2.  完成後，請按一下 **[關閉]** 。  
+2.  完成後，請按一下 **[關閉]**。  
   
 #### <a name="to-view-or-modify-a-specific-policys-properties"></a>若要檢視或修改特定原則的屬性  
   
@@ -56,15 +56,15 @@ ms.locfileid: "62676937"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]** 。  
+3.  按一下加號展開 **[原則管理]**。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]  。 如需有關 [開啟原則 - **原則名稱**]  對話方塊中可用選項的詳細資訊，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)和[建立新原則或開啟原則對話方塊，描述頁面](create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]****。 如需有關 [開啟原則 - _原則名稱_]**** 對話方塊中可用選項的詳細資訊，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)和[建立新原則或開啟原則對話方塊，描述頁面](create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
-6.  完成後，請按一下 **[確定]** 。  
+6.  完成時按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-a-policys-properties"></a>若要檢視原則的屬性  
   

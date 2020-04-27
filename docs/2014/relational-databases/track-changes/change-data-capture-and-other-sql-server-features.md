@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62672078"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能
@@ -30,23 +30,23 @@ ms.locfileid: "62672078"
   
 -   [還原或附加啟用變更資料擷取的資料庫](#RestoreOrAttach)  
   
-##  <a name="ChangeTracking"></a> 變更追蹤  
+##  <a name="change-tracking"></a><a name="ChangeTracking"></a>變更追蹤  
  您可以在同一個資料庫上啟用變更資料擷取和 [變更追蹤](about-change-tracking-sql-server.md) 。 不需要進行任何特殊考量。 如需詳細資訊，請參閱[使用變更追蹤 &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md)。  
   
-##  <a name="DatabaseMirroring"></a>資料庫鏡像  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>資料庫鏡像  
  啟用變更資料擷取的資料庫可以進行鏡像。 若要確保擷取和清除會在容錯移轉之後自動進行，請遵循下列步驟：  
   
 1.  請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是在新的主體伺服器執行個體上執行。  
   
 2.  在新的主體資料庫上建立擷取作業和清除作業 (之前的鏡像資料庫)。 若要建立這些作業，請使用 [sp_cdc_add_job](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql) 預存程序。  
   
- 若要檢視清除或擷取作業的目前組態，請在新的主體伺服器執行個體上使用 [sys.sp_cdc_help_jobs](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql) 預存程序。 針對指定的資料庫，capture 作業會命名為 cdc。*database_name*_capture，且清除作業的名稱為 cdc。*database_name*_cleanup，其中*database_name*是資料庫的名稱。  
+ 若要檢視清除或擷取作業的目前組態，請在新的主體伺服器執行個體上使用 [sys.sp_cdc_help_jobs](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql) 預存程序。 對於指定的資料庫而言，擷取作業會命名為 cdc.*database_name*_capture，而清除作業會命名為 cdc.*database_name*_cleanup，其中 *database_name* 是資料庫的名稱。  
   
  若要變更作業的組態，請使用 [sys.sp_cdc_change_job](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql) 預存程序。  
   
  如需資料庫鏡像的相關資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
-##  <a name="TransReplication"></a>異動複寫  
+##  <a name="transactional-replication"></a><a name="TransReplication"></a>異動複寫  
  雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 `sp_replcmds`。 當相同的資料庫上同時啟用這兩項功能時， `sp_replcmds`記錄讀取器代理程式會呼叫。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
   
  假設您在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上啟用了變更資料擷取，而且有兩份資料表啟用了擷取。 為了擴展變更資料表，擷取作業會呼叫 `sp_replcmds`。 資料庫啟用了異動複寫，而且建立了發行集。 此時，會針對資料庫建立記錄讀取器代理程式，並且刪除擷取作業。 記錄讀取器代理程式會繼續掃描記錄，從變更資料表所認可的最後一個記錄序號開始。 如此可確保變更資料表中的資料保持一致。 如果這個資料庫停用了異動複寫，系統就會移除記錄讀取器代理程式並且重新建立擷取作業。  
@@ -56,7 +56,7 @@ ms.locfileid: "62672078"
   
  啟用變更資料擷取時，異動複寫的 **proc exec** 選項無法使用。  
   
-##  <a name="RestoreOrAttach"></a>還原或附加啟用變更資料捕獲的資料庫  
+##  <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a><a name="RestoreOrAttach"></a>還原或附加啟用變更資料捕獲的資料庫  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用下列邏輯來判斷在還原或附加資料庫之後，變更資料擷取是否會維持啟用狀態：  
   
 -   如果資料庫還原至具有相同資料庫名稱的相同伺服器，變更資料擷取就會維持啟用狀態。  

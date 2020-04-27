@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714758"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
@@ -70,8 +70,7 @@ ms.locfileid: "62714758"
   
 -   但是，超執行緒核心中 2 個邏輯處理器的計算容量大於停用超執行緒之相同核心的計算容量。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個版本都有兩個計算容量限制：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個版本都有兩個計算容量限制：  
   
 1.  插槽的數目上限 (與實體處理器、插槽或處理器封裝相同)。  
   
@@ -81,13 +80,13 @@ ms.locfileid: "62714758"
   
  下表指定每個 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本之單一執行個體的計算容量限制：  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公告|單一執行個體所使用的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體所使用的計算容量上限 (AS、RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|單一執行個體所使用的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體所使用的計算容量上限 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition：以核心為基礎的授權<sup>1</sup>|作業系統最大值|作業系統最大值|  
-|開發人員|作業系統最大值|作業系統最大值|  
+|Developer|作業系統最大值|作業系統最大值|  
 |評估|作業系統最大值|作業系統最大值|  
 |商業智慧|限制為 4 個插槽或 16 個核心的較小者|作業系統最大值|  
-|標準|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
+|Standard|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
 |Web|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
 |Express|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |Express with Tools|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  

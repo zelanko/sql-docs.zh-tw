@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629633"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
@@ -58,12 +58,12 @@ ms.locfileid: "62629633"
   
 -   訂閱資料庫  
   
--   發行者、散發者及所有訂閱者端的**msdb**資料庫和**master**資料庫  
+-   「發行者」、「散發者」及所有「訂閱者」端的**msdb** 資料庫和 **master** 資料庫  
   
  針對複寫的資料庫進行資料的備份與還原時，需要特別地注意。 如需詳細資訊，請參閱 [備份及還原複寫的資料庫](back-up-and-restore-replicated-databases.md)。  
   
 ## <a name="script-the-replication-topology"></a>編寫複寫拓撲指令碼  
- 拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 系統預存程序，如發行集或訂閱。 您可以在建立元件之後，于 wizard （例如 [新增發行集]） [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或中建立腳本。 您可使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。 如需詳細資訊，請參閱 [Scripting Replication](../scripting-replication.md)。  
+ 拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 系統預存程序，如發行集或訂閱。 指令碼可以在精靈中建立 (例如 [新增發行集精靈])，或可在建立元件之後，於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中建立。 您可使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。 如需詳細資訊，請參閱 [Scripting Replication](../scripting-replication.md)。  
   
  如果任何屬性被變更，則應對該元件重新編寫指令碼。 若您在異動複寫中使用自訂預存程序，每個程序副本會與指令碼同時儲存；若程序變更，則副本必須更新 (程序通常在結構描述變更或改變應用程式需求時進行更新)。 如需自訂程序的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62629633"
   
 -   代理程式參數  
   
--   維護   
+-   維護  
   
  在設定複寫後，建議您開發一個效能基準線，它可讓您判斷複寫在您的應用程式及拓撲之一般工作負載下的行為。 使用複寫監視器和系統監視器來判斷下列五個複寫效能維度的特定數值：  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62629633"
   
 -   「複寫監視器」是監視複寫的最重要的工具，可讓您監視複寫拓撲的全面健全狀況。 如需詳細資訊，請參閱 [Monitoring Replication](../monitoring-replication.md)。  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 Replication Management Objects (RMO) 提供監視複寫的介面。 如需詳細資訊，請參閱 [Monitoring Replication](../monitoring-replication.md)。  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 Replication Management Objects (RMO) 提供監視複寫的介面。 如需詳細資訊，請參閱 [Monitoring Replication](../monitoring-replication.md)。  
   
 -   「系統監視器」也可用於監視複寫效能。 如需相關資訊，請參閱 [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md)。  
   
@@ -134,7 +133,7 @@ ms.locfileid: "62629633"
  建立發行集之後，可能需要加入或卸除發行項，或者變更發行集與發行項屬性。 建立發行集之後即允許多數變更。但在某些情況下，必須產生新的發行集快照集和 (或) 重新初始化訂閱到發行集。 如需詳細資訊，請參閱[變更發行集與發行項屬性](../publish/change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>了解應用程式需求變更時如何變更結構描述  
- 許多情況下，在應用程式運行後需要進行結構描述變更。 在複寫拓撲中，這些變更必須經常傳播給所有的「訂閱者」。 複寫支援對已發行物件進行大範圍的結構描述變更。 當您對[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]發行者端適當的已發行物件進行下列任何架構變更時，該變更預設會傳播到所有[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]訂閱者：  
+ 許多情況下，在應用程式運行後需要進行結構描述變更。 在複寫拓撲中，這些變更必須經常傳播給所有的「訂閱者」。 複寫支援對已發行物件進行大範圍的結構描述變更。 當您對「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者」端適當的已發行物件進行下列任何結構描述變更時，依預設，該變更會傳播給所有的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」：  
   
 -   ALTER TABLE  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 794dfea63b193ff79fb5831cb3a4e519d7d5f63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691380"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>設定平行處理原則的最大程度選項來取得最佳效能
@@ -26,7 +26,7 @@ ms.locfileid: "62691380"
  使用 sp_configure 將 max degree of parallelism 選項設定為 8。  
   
 ## <a name="for-more-information"></a>詳細資訊  
- [Microsoft 知識庫文章329204](https://go.microsoft.com/fwlink/?linkid=117786)  
+ [Microsoft 知識庫文章 329204](https://go.microsoft.com/fwlink/?linkid=117786)  
   
  [設定平行處理原則最大程度伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   

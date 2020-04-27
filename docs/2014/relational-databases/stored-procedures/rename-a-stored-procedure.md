@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721009"
 ---
 # <a name="rename-a-stored-procedure"></a>重新命名預存程序
@@ -37,9 +37,9 @@ ms.locfileid: "62721009"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   程序名稱必須符合 [識別碼](../databases/database-identifiers.md)的規則。  
   
@@ -47,24 +47,24 @@ ms.locfileid: "62721009"
   
 -   變更程序的名稱或定義後，若未更新物件來反映對程序所做的變更，則可能導致相依物件執行失敗。 如需詳細資訊，請參閱[查看預存程式的](view-the-dependencies-of-a-stored-procedure.md)相依性。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  CREATE PROCEDURE  
  需要資料庫的 CREATE PROCEDURE 權限，以及要在其中建立程序之結構描述的 ALTER 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
   
  ALTER PROCEDURE  
  需要程序的 ALTER 權限，或 **db_ddladmin** 固定資料庫角色的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>若要重新命名預存程序  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
+2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
   
-3.  [判斷預存](view-the-dependencies-of-a-stored-procedure.md)程式的相依性。  
+3.  [判斷預存程序的相依性](view-the-dependencies-of-a-stored-procedure.md)。  
   
 4.  展開 [預存程序]****，以滑鼠右鍵按一下要重新命名的程序，然後按一下 [重新命名]****。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62721009"
   
 6.  修改在任何相依物件或指令碼中參考的程序名稱。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>若要重新命名預存程序  
   
@@ -112,11 +112,11 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
- [建立預存程序](../stored-procedures/create-a-stored-procedure.md)   
- [修改預存程序](../stored-procedures/modify-a-stored-procedure.md)   
- [刪除預存程序](../stored-procedures/delete-a-stored-procedure.md)   
- [檢視預存程序的定義](view-the-definition-of-a-stored-procedure.md)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [建立預存程式](../stored-procedures/create-a-stored-procedure.md)   
+ [修改預存程式](../stored-procedures/modify-a-stored-procedure.md)   
+ [刪除預存程式](../stored-procedures/delete-a-stored-procedure.md)   
+ [查看預存程式的定義](view-the-definition-of-a-stored-procedure.md)   
  [檢視預存程序的相依性](view-the-dependencies-of-a-stored-procedure.md)  
   
   

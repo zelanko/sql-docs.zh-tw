@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655491"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -124,8 +124,8 @@ ms.locfileid: "62655491"
   
 ## <a name="see-also"></a>另請參閱  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [交易複製](transactional-replication.md)   
+ [異動複寫](transactional-replication.md)   
  [發行資料和資料庫物件](../publish/publish-data-and-database-objects.md)   
- [訂閱發行集](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

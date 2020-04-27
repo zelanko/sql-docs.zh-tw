@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473142"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
-  在多個實例之間自動化[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理，稱為多*伺服器管理*。 使用多伺服器管理，可進行以下工作：  
+  將多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」**(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
   
 -   管理二或多部伺服器。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62473142"
  [管理整個企業的作業](manage-jobs-across-an-enterprise.md)  
  包含檢查作業狀態、變更作業的目標伺服器、同步處理目標伺服器時鐘，以及向主要伺服器輪詢其目前作業狀態等的相關資訊。  
   
- [針對使用 Proxy 的多伺服器作業進行疑難排解](troubleshoot-multiserver-jobs-that-use-proxies.md)  
+ [為使用 Proxy 的多伺服器作業疑難排解](troubleshoot-multiserver-jobs-that-use-proxies.md)  
  包含失敗的使用 Proxy 之多伺服器作業的疑難排解資訊。  
   
  [輪詢伺服器](poll-servers.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "62473142"
  包含多伺服器環境中的自動化管理如何利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之自行微調功能的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資料庫引擎回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Database Engine 回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [註冊伺服器](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   

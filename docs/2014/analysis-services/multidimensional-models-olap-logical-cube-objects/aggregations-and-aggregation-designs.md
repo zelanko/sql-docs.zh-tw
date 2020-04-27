@@ -19,16 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727694"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
-  <xref:Microsoft.AnalysisServices.AggregationDesign>物件會定義一組可跨多個資料分割共用的匯總定義。  
+   物件會定義可在多個資料分割之間共用的一組彙總定義。  
   
- <xref:Microsoft.AnalysisServices.Aggregation>物件代表維度之特定細微性的量值群組資料摘要。  
+  物件表示在維度的某個資料粒度上之量值群組資料的摘要。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Aggregation> 物件是由基本資訊和維度所組成。 基本資訊包括彙總的名稱、識別碼、註解和描述。 維度是包含此維度之資料粒度屬性清單的 <xref:Microsoft.AnalysisServices.AggregationDimension> 物件集合。  
   

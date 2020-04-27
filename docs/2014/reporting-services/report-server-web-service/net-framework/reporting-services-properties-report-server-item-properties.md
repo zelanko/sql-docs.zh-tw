@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519138"
 ---
 # <a name="report-server-item-properties"></a>報表伺服器項目屬性
@@ -34,15 +34,15 @@ ms.locfileid: "62519138"
 |--------------|-----------------|  
 |**CreatedBy**|原先將項目加入報表伺服器資料庫的使用者名稱。|  
 |**CreationDate**|項目加入報表伺服器資料庫的日期與名稱。|  
-|**說明**|項目的描述。|  
-|**Hidden**|指出使用者是否可看到和使用項目的值。|  
+|**描述**|項目的描述。|  
+|**隱含**|指出使用者是否可看到和使用項目的值。|  
 |**識別碼**|報表伺服器資料庫中項目的識別碼。|  
 |**ModifiedBy**|報表伺服器資料庫中上次修改項目的使用者名稱。|  
 |**ModifiedDate**|使用者上次修改項目的日期和時間。|  
 |**名稱**|報表伺服器資料庫中項目的名稱。|  
 |**路徑**|項目的完整路徑名稱。 報表伺服器資料庫中任何項目的路徑，其最大字元長度為 260。|  
 |**大小**|報表伺服器資料庫中項目的大小 (以位元組為單位)。|  
-|**型別**|報表伺服器資料庫中項目的類型。|  
+|**類型**|報表伺服器資料庫中項目的類型。|  
 |**VirtualPath**|報表伺服器資料庫中項目的虛擬路徑。 <xref:ReportService2010.CatalogItem.VirtualPath%2A> 屬性值是使用者預期可用來檢視項目的路徑。 例如，名為 report1 的報表是位於使用者個人的 [我的報表] 資料夾中，具有 My Reports 的虛擬路徑。 項目的實際路徑是 /Users/username/My Reports。|  
   
 ## <a name="folder-properties"></a>資料夾屬性  
@@ -50,7 +50,7 @@ ms.locfileid: "62519138"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**已保留**|針對報表伺服器所保留的資料夾，由 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法傳回的值。 保留的資料夾包含 [使用者]、[我的報表] 和 /。 無法修改或移除保留的資料夾。|  
+|**Reserved**|針對報表伺服器所保留的資料夾，由 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法傳回的值。 保留的資料夾包含 [使用者]、[我的報表] 和 /。 無法修改或移除保留的資料夾。|  
   
 ## <a name="report-properties"></a>報表屬性  
  除了先前所列的項目屬性之外，下列屬性會套用至報表伺服器資料庫中的報表。  

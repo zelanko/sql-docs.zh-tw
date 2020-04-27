@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725382"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的資料類型
@@ -28,8 +28,8 @@ ms.locfileid: "62725382"
 |Binary|**Byte**類型的二進位資料資料流程。 **Byte**是代表不帶正負號整數值的實值型別，範圍介於0到255之間。|  
 |Boolean|這個類型的執行個體具有 `true` 或 `false` 值。|  
 |貨幣|*貨幣*值，範圍從-922337203685477.5808 到 + 922337203685477.5807，精確度為貨幣單位的萬分之一（四位數）。|  
-|Date|日期和時間資料，儲存為雙精確度浮點數。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分或當天的時間。|  
-|DOUBLE|浮點數，範圍在 -1.79769313486232E +308 到 1.79769313486232E +308 之間。 Double 值儲存最多有效位數為 15 個小數位數的數字資訊。|  
+|日期|日期和時間資料，儲存為雙精確度浮點數。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分或當天的時間。|  
+|Double|浮點數，範圍在 -1.79769313486232E +308 到 1.79769313486232E +308 之間。 Double 值儲存最多有效位數為 15 個小數位數的數字資訊。|  
 |整數|32 位元帶正負號的整數，代表範圍從複數 2,147,483,648 到正數 2,147,483,647 的帶正負號的整數值。|  
 |Single|浮點數，範圍在 - 3.4028235E +38 到 3.4028235E +38 之間。 Single 值儲存最多有效位數為 7 個小數位數的數字資訊。|  
 |Smallint|16 位元帶正負號的整數。 *Smallint*實數值型別代表帶正負號的整數值，範圍從負32768到正數32767。|  

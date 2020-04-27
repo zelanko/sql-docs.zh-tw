@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664024"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件類別
@@ -54,11 +54,10 @@ ms.locfileid: "62664024"
 |SPID|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |State|`int`|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
-|Success|`int`|訊息已經存留的時間量。 當此值大於或等於存留時間時，就會卸除訊息。|23|否|  
+|成功|`int`|訊息已經存留的時間量。 當此值大於或等於存留時間時，就會卸除訊息。|23|否|  
 |TargetLoginName|`nvarchar`|將轉寄訊息的目的網路位址。|42|否|  
 |TargetUserName|`nvarchar`|訊息的起始端服務名稱。|39|否|  
-|TextData|`ntext`|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。|1|是|  
+|TextData|`ntext`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。|1|是|  
 |Transaction ID|`bigint`|系統指派的交易識別碼。|4|否|  
   
  此事件的 TextData 資料行包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。  

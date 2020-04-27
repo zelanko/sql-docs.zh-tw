@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters：： GetParameterProperties （OLE DB） |Microsoft Docs
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638080"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -36,7 +36,7 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>引數  
- *時 pcparams*[out] [in]  
+ *pcParams*[out][in]  
  記憶體的指標，其中包含在 *prgParamProperties* 中傳回的 SSPARAMPROPS 結構數目。  
   
  *prgParamProperties*[out]  
@@ -60,11 +60,10 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
-|*cPropertySets*|
-  *rgPropertySets* 中的 DBPROPSET 結構數目。|  
+|*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  
 |*rgPropertySets*|藉其傳回 DBPROPSET 結構陣列的記憶體指標。|  
   
 ## <a name="see-also"></a>另請參閱  

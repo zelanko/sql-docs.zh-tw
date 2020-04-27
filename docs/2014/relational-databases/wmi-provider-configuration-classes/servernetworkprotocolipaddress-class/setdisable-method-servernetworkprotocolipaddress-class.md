@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adaa66fd04f6e3b6f97b4e4edc75d9a21ea4e31f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643213"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>SetDisable 方法 (ServerNetworkProtocolIPAddress 類別)
@@ -38,7 +38,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *物件*  
  [ServerNetworkProtocolIPAdress 類別] servernetworkprotocolipaddress-class.md）物件，代表實例上網路通訊協定的 IP 位址[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

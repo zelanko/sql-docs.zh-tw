@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714915"
 ---
 # <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序
@@ -46,6 +46,6 @@ ms.locfileid: "62714915"
 -   [從資料存取應用程式呼叫原生編譯預存程序](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化資料表](memory-optimized-tables.md)  
+ [記憶體優化資料表](memory-optimized-tables.md)  
   
   

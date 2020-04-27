@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62703084"
 ---
 # <a name="creating-stored-procedures"></a>建立預存程序
@@ -84,7 +84,7 @@ ms.locfileid: "62703084"
   
 1.  在 [物件總管中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開資料庫的實例，以滑鼠右鍵按一下 [**元件**] 資料夾，然後按一下 [**新增元件參考**]。 這會顯示 [**加入參考**] 對話方塊。 [**加入參考**] 對話方塊的 [ **.net** ] 索引標籤會列出現有的 .net （CLR）元件，而 [**專案**] 索引標籤則會列出專案。  
   
-2.  您可以按一下現有的元件或專案，然後按一下**** [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]新增] 將它加入至專案。 若要加入 COM DLL 的參考，請按一下 [**流覽**] 索引標籤來尋找檔案。 [**選取的專案和元件**] 清單會顯示您要新增至專案之每個元件的名稱、類型、版本和位置。  
+2.  您可以按一下現有的元件或專案，然後按一下**Add** [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]新增] 將它加入至專案。 若要加入 COM DLL 的參考，請按一下 [**流覽**] 索引標籤來尋找檔案。 [**選取的專案和元件**] 清單會顯示您要新增至專案之每個元件的名稱、類型、版本和位置。  
   
 3.  當您完成選取要加入的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]元件時，請按一下 **[確定]** 將其新增至專案。  
   

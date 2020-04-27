@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653781"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 課：存取 Web 服務
@@ -29,7 +29,7 @@ ms.locfileid: "62653781"
   
 ### <a name="to-access-the-web-service"></a>若要存取 Web 服務  
   
-1.  您必須先將 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] (`using` 中的 `Imports`) 指示詞加入至程式碼檔案，藉以將命名空間加入至 Program.cs 檔案 ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 Module1.vb)。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。  
+1.  您必須先將 `using` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 `Imports`) 指示詞加入至程式碼檔案，藉以將命名空間加入至 Program.cs 檔案 ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 Module1.vb)。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。  
   
 2.  若要完成這個步驟，請在您的程式碼檔案開頭中加入以下的程式碼：  
   

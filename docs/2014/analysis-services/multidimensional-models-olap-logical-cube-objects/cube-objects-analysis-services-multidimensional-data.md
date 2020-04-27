@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702640"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Cube 物件 (Analysis Services - 多維度資料)
@@ -33,7 +33,7 @@ ms.locfileid: "62702640"
 |||  
 |-|-|  
 |主題||  
-|[&#40;Analysis Services 多維度資料的動作&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[動作 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[彙總和彙總設計](aggregations-and-aggregation-designs.md)||  
 |[計算](calculations.md)||  
 |[Cube 資料格 &#40;Analysis Services 多維度資料&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -41,9 +41,9 @@ ms.locfileid: "62702640"
 |[Cube 儲存體 &#40;Analysis Services-多維度資料&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[Cube 翻譯](cube-translations.md)||  
 |[維度關聯性](dimension-relationships.md)||  
-|[多維度模型中 &#40;Kpi&#41; 的關鍵效能指標](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[多維度模型中的關鍵效能指標 &#40;KPI&#41;](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[量值和量值群組](../multidimensional-models/measures-and-measure-groups.md)||  
-|[分割區 &#40;Analysis Services 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[資料分割 &#40;Analysis Services - 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[檢視方塊](perspectives.md)||  
   
   

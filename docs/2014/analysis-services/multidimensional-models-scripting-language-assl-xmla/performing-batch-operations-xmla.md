@@ -20,30 +20,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702067"
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
   您可以使用 XML for Analysis （XMLA）中的[批次](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)命令，使用單一 xmla [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法來執行多個 xmla 命令。 您可以用單一交易或每個命令的個別交易，以序列或平行方式執行 `Batch` 命令中包含的多個命令。 您也可以`Batch`在命令中指定非正規系結和其他屬性來處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>執行交易式與非交易式批次命令  
- 
-  `Batch` 命令使用下列兩種方式之一來執行命令：  
+ `Batch` 命令使用下列兩種方式之一來執行命令：  
   
- **異動**  
- `Transaction`如果`Batch`命令的屬性設定為 true，則`Batch`命令會在單一交易中執行命令所包含`Batch`的所有命令-交易式批次。 **  
+ **交易式**  
+ `Transaction`如果`Batch`命令的屬性設定為 true，則`Batch`命令會在單一交易中執行命令所包含`Batch`的所有命令-交易式批次。 *transactional*  
   
- 如果交易式批次中有任何命令[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]失敗，則會回復命令`Batch`中執行失敗的命令之前的任何命令， `Batch`而且命令會立即結束。 
-  `Batch` 命令中尚未執行的任何命令都不會被執行。 在 `Batch` 命令結束之後，`Batch` 命令會報告因為失敗的命令而發生的任何錯誤。  
+ 如果交易式批次中有任何命令[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]失敗，則會回復命令`Batch`中執行失敗的命令之前的任何命令， `Batch`而且命令會立即結束。 `Batch` 命令中尚未執行的任何命令都不會被執行。 在 `Batch` 命令結束之後，`Batch` 命令會報告因為失敗的命令而發生的任何錯誤。  
   
  **非交易式**  
  如果`Transaction`屬性設定為 false，此`Batch`命令會在個別的交易中執行`Batch`命令所包含的每個命令-*非*交易式批次。 如果非交易式批次中有任何命令失敗，`Batch` 命令會繼續執行失敗命令之後的命令。 在 `Batch` 命令嘗試執行 `Batch` 命令包含的所有命令之後，`Batch` 命令會報告所發生的任何錯誤。  
   
- 所有由包含在 `Batch` 命令中的命令傳回的結果，都會按照 `Batch` 命令所含命令的相同順序來傳回。 
-  `Batch` 命令傳回的結果，會因 `Batch` 命令是交易式或非交易式而異。  
+ 所有由包含在 `Batch` 命令中的命令傳回的結果，都會按照 `Batch` 命令所含命令的相同順序來傳回。 `Batch` 命令傳回的結果，會因 `Batch` 命令是交易式或非交易式而異。  
   
 > [!NOTE]  
 >  如果`Batch`命令包含不會傳回輸出的命令（例如[Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)命令），且該命令已成功執行，則`Batch`命令會在 results 元素中傳回空的[根](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla)元素。 空的 `root` 元素可確保 `Batch` 命令中所含的每個命令，可與該命令結果的適當 `root` 元素相符。  
@@ -60,17 +57,15 @@ ms.locfileid: "62702067"
 ## <a name="using-serial-and-parallel-execution"></a>使用序列和平行執行  
  您可以使用 `Batch` 命令，以序列或平行方式，執行包含的命令。 以序列方式執行命令時，`Batch` 命令中所含的下一個命令必須等到 `Batch` 命令中目前執行的命令完成時才能啟動。 以平行方式執行命令時，`Batch` 命令可以同時執行多個命令。  
   
- 若要以平行方式執行命令，請將要平行執行的命令加入至[](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla) `Batch`命令的 parallel 屬性。 目前， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]只能平行執行連續的連續[進程](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)命令。 包含在屬性中的`Parallel`任何其他 XMLA 命令（例如[Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)或[Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)）都會以序列循序執行。  
+ 若要以平行方式執行命令，請將要平行執行的命令加入至[Parallel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla) `Batch`命令的 parallel 屬性。 目前， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]只能平行執行連續的連續[進程](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)命令。 包含在屬性中的`Parallel`任何其他 XMLA 命令（例如[Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)或[Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)）都會以序列循序執行。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會嘗試平行執行所有包含在 `Process` 屬性中的 `Parallel` 命令，但是無法保證所有包含的 `Process` 命令都可以平行執行。 執行個體會分析每個 `Process` 命令，而且如果執行個體判斷無法平行執行命令，就會序列執行 `Process` 命令。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會嘗試平行執行所有包含在 `Process` 屬性中的 `Parallel` 命令，但是無法保證所有包含的 `Process` 命令都可以平行執行。 執行個體會分析每個 `Process` 命令，而且如果執行個體判斷無法平行執行命令，就會序列執行 `Process` 命令。  
   
 > [!NOTE]  
 >  若要平行執行命令，必須將 `Transaction` 命令的 `Batch` 屬性設定成 True，因為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 僅支援每個連接有一個使用中交易，而且非交易式批次會在個別交易中執行每個命令。 如果您在非交易式批次中包含 `Parallel` 屬性，就會發生錯誤。  
   
 ### <a name="limiting-parallel-execution"></a>限制平行執行  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會嘗試盡量平行執行 `Process` 命令，最多可達執行個體執行的電腦限制。 您可以將 `Process` 屬性 (Property) 的 `maxParallel` 屬性 (Attribute)，設定為可以平行執行之 `Parallel` 命令的上限，以限制並行執行的 `Process` 命令數目。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會嘗試盡量平行執行 `Process` 命令，最多可達執行個體執行的電腦限制。 您可以將 `Process` 屬性 (Property) 的 `maxParallel` 屬性 (Attribute)，設定為可以平行執行之 `Parallel` 命令的上限，以限制並行執行的 `Process` 命令數目。  
   
  例如，`Parallel` 屬性依序包含下列命令：  
   
@@ -109,11 +104,9 @@ ms.locfileid: "62702067"
 -   命令 8 與 9 會在命令 7 完成之後平行執行。  
   
 ## <a name="using-the-batch-command-to-process-objects"></a>使用 Batch 命令處理物件  
- 
-  `Batch` 命令特別包含一些選擇性的屬性 (Property) 與屬性 (Attribute)，以支援處理多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案：  
+ `Batch` 命令特別包含一些選擇性的屬性 (Property) 與屬性 (Attribute)，以支援處理多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案：  
   
--   
-  `ProcessAffectedObjects` 命令的 `Batch` 屬性指出執行個體是否要在 `Process` 命令中的 `Batch` 命令處理指定的物件之後，也處理需要重新處理的物件。  
+-   `ProcessAffectedObjects` 命令的 `Batch` 屬性指出執行個體是否要在 `Process` 命令中的 `Batch` 命令處理指定的物件之後，也處理需要重新處理的物件。  
   
 -   [系結] 屬性包含`Process` `Batch`命令中所有[命令所使用](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla)之非正規系結的集合。  
   

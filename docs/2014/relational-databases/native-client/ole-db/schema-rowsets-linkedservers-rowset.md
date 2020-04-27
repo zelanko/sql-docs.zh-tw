@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 資料列集（OLE DB） |Microsoft Docs
+title: LINKEDSERVERS 資料列集 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667333"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 資料列集 (OLE DB)
-  
   **LINKEDSERVERS** 資料列集會列舉可以參與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢的組織資料來源。  
   
- 
-  **LINKEDSERVERS** 資料列集包含下列資料行。  
+ **LINKEDSERVERS** 資料列集包含下列資料行。  
   
 |資料行名稱|類型指標|描述|  
 |-----------------|--------------------|-----------------|  
@@ -39,6 +37,6 @@ ms.locfileid: "62667333"
  資料列集會根據 SRV_NAME 排序，而且 SRV_NAME 上可支援單一限制。  
   
 ## <a name="see-also"></a>另請參閱  
- [架構資料列集支援 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [結構描述資料列集支援 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

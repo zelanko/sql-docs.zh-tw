@@ -14,14 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727744"
 ---
 # <a name="debugging-stored-procedures"></a>除錯預存程序
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序實際上是以 C# (或任何其他 CLR 或 COM 語言) 撰寫的 CLR 或 COM 程式庫 (通常是 DLL)。 因此，偵錯預存程序十分類似在 Visual Studio 偵錯環境中除錯任何其他應用程式。 您可以使用整合偵錯功能，在 Visual Studio 開發環境中偵錯預存程序。 它們可讓您在程序位置上停止，檢查記憶體和登錄值，變更變數，觀察訊息流量，以及仔細查看程式碼的運作方式。  
   
 ### <a name="to-debug-a-stored-procedure"></a>偵錯預存程序  
@@ -46,7 +45,7 @@ ms.locfileid: "62727744"
   
     4.  在 [**附加至**] 文字方塊中，確認已選取適當的程式類型。 若為 CLR DLL，請依序按一下 [**選取**]、[**偵錯工具代碼類型**] 和 [**受管理**]，然後按一下 **[確定]**。 若為 COM DLL，請依序按一下 [**選取**]、[**偵錯工具代碼類型**] 和 [**原生**]，然後按一下 **[確定]**。  
   
-    5.  按一下 [**附加**]。  
+    5.  按一下 [附加] ****。  
   
 7.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，叫用程式或 MDX 指令碼來呼叫預存程序。 當偵錯工具到達包含中斷點的那一行時就會中斷。 您可以在監看式視窗中評估變數、檢視地區設定和逐步執行程式碼。  
   

@@ -16,22 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62729066"
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
-  您可以使用 XML for Analysis （XMLA）中的 [[訂閱](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)] 命令，來監視在實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上定義的現有追蹤。 
-  `Subscribe` 命令會以資料列集傳回追蹤的結果。  
+  您可以使用 XML for Analysis （XMLA）中的 [[訂閱](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)] 命令，來監視在實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上定義的現有追蹤。 `Subscribe` 命令會以資料列集傳回追蹤的結果。  
   
 ## <a name="specifying-a-trace"></a>指定追蹤  
  命令的[object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)屬性必須包含[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]實例的物件參考，或實例上的追蹤。 `Subscribe` 如果未指定 `Object` 屬性，或者如果在 `Object` 屬性中沒有指定追蹤識別碼，則 `Subscribe` 命令會監視命令的 SOAP 標頭中指定的明確工作階段之預設工作階段追蹤。  
   
 ## <a name="returning-results"></a>傳回結果  
- 
-  `Subscribe` 命令會傳回包含指定追蹤擷取的追蹤事件之資料列集。 `Subscribe`命令會傳回追蹤結果，直到[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令取消命令為止。  
+ `Subscribe` 命令會傳回包含指定追蹤擷取的追蹤事件之資料列集。 `Subscribe`命令會傳回追蹤結果，直到[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令取消命令為止。  
   
  資料列集包含下表中列出的資料行。  
   
@@ -57,7 +55,7 @@ ms.locfileid: "62729066"
 |NestLevel|整數|發生事件的交易等級。|  
 |NumSegments|長整數|發生事件的命令所影響或是存取的資料區段數目。|  
 |Severity|整數|事件例外狀況的嚴重性層級。 此資料行可包含下列其中一個值：<br /><br /> 值： 0 = 成功<br /><br /> 值： 1 = 資訊<br /><br /> 值： 2 = 警告<br /><br /> 值： 3 = 錯誤|  
-|Success|Boolean|指出命令是成功或失敗。|  
+|成功|Boolean|指出命令是成功或失敗。|  
 |錯誤|長整數|事件的錯誤號碼 (如果適用的話)。|  
 |ConnectionID|String|發生事件的連接識別碼。|  
 |DatabaseName|String|發生事件的資料庫名稱。|  

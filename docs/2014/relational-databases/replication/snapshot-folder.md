@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676526"
 ---
 # <a name="snapshot-folder"></a>快照集資料夾
@@ -29,14 +29,13 @@ ms.locfileid: "62676526"
  輸入要在其中儲存快照集檔案之資料夾的路徑。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用網路共用作為快照集資料夾的位置。 其他電腦上的代理程式無法存取本機路徑 (以磁碟機代號開頭的路徑，例如 C:\\)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用網路共用作為快照集資料夾的位置。 其他電腦上的代理程式無法存取本機路徑 (以磁碟機代號開頭的路徑，例如 C:\\)。  
   
 ## <a name="see-also"></a>另請參閱  
  [替代快照集資料夾位置](alternate-snapshot-folder-locations.md)   
- [[設定散發]](configure-distribution.md)   
- [設定發行和散發](configure-publishing-and-distribution.md)   
- [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
+ [設定散發](configure-distribution.md)   
+ [設定發行與散發](configure-publishing-and-distribution.md)   
+ [查看和修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
  [使用快照集初始化訂閱](initialize-a-subscription-with-a-snapshot.md)  
   
   
