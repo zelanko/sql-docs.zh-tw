@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478497"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升級資料庫精靈 (Master Data Services 組態管理員)
@@ -28,7 +28,7 @@ ms.locfileid: "65478497"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**SQL Server 實例**|目前所選取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的名稱。|  
+|**SQL Server 執行個體**|目前所選取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的名稱。|  
 |**Master Data Services 資料庫**|目前所選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的名稱。|  
   
 ## <a name="progress-and-finish"></a>進度和完成  

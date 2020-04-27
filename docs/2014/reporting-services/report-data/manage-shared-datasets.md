@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107205"
 ---
 # <a name="manage-shared-datasets"></a>管理共用資料集
@@ -27,14 +27,13 @@ ms.locfileid: "66107205"
   
 -   報表產生器：使用共用資料集設計模式，並將共用資料集儲存至報表伺服器或 SharePoint 網站。  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師：在 [方案總管] 中的 [共用資料集] 資料夾下建立共用資料集。 若要發行共用資料集，則將資料集部署到報表伺服器或 SharePoint 網站。  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師：在 [方案總管] 中的 [共用資料集] 資料夾下建立共用資料集。 若要發行共用資料集，則將資料集部署到報表伺服器或 SharePoint 網站。  
   
 -   上傳共用資料集定義 (.rsd) 檔案：您可以將檔案上傳至報表伺服器或 SharePoint 網站。 在 SharePoint 網站上， 共用資料集進行快取或在報表中使用之前，上傳的檔案不會依結構描述進行驗證。  
   
  共用資料集定義包括：查詢、含預設值的資料集參數、資料選項 (例如，大小寫區分和資料集篩選)。 只要報表中包含共用資料集，就會使用您在定義中設定的值。  
   
- 若要在報表中使用共用資料集，您可以開啟應用程式 (如報表產生器)，瀏覽至報表伺服器或 SharePoint 網站，然後選取共用資料集。 這會將共用資料集的執行個體加入報表。 您無法在報表中檢視或者變更查詢或共用資料集的共用資料來源。 您可以指定套用至報表中執行個體的其他資料集屬性值集。 例如，您可以加入篩選器，或變更區分大小寫等資料選項。 如需詳細資訊，請參閱 msdn.microsoft.com 上[報表產生器文件](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)中的[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](https://go.microsoft.com/fwlink/?LinkId=154494)。  
+ 若要在報表中使用共用資料集，您可以開啟應用程式 (如報表產生器)，瀏覽至報表伺服器或 SharePoint 網站，然後選取共用資料集。 這會將共用資料集的執行個體加入報表。 您無法在報表中檢視或者變更查詢或共用資料集的共用資料來源。 您可以指定套用至報表中執行個體的其他資料集屬性值集。 例如，您可以加入篩選器，或變更區分大小寫等資料選項。 如需詳細資訊，請參閱 msdn.microsoft.com 上[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)中的[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="managing-shared-datasets"></a>管理共用資料集  
  若要管理已發行共用資料集的屬性，您可以針對原生模式報表伺服器使用報表管理員，或是如果將報表伺服器部署為 SharePoint 整合模式，則使用 SharePoint 網站上的應用程式頁面。 您可以在共用資料集上執行的工作取決於您的角色指派及站台層級和項目層級使用權限，如果實際上權限是繼承而來的，則也包括資料夾權限。 共用資料集的項目層級安全性遵循與報表相同的項目層級安全性模型。 如需詳細資訊，請參閱 [保護共用資料集項目的安全](../security/secure-shared-dataset-items.md)。  
@@ -48,7 +47,7 @@ ms.locfileid: "66107205"
 |-|-|  
 |編輯名稱|變更共用資料集的名稱。 相依項目的所有參考都將繼續運作。|  
 |編輯描述|變更共用資料集的描述。|  
-|編輯查詢執行逾時|設定查詢執行逾時，以秒為單位。 零（0）碼錶示沒有時間。判斷資料集查詢超時之前的秒數。若要指定無超時值，請使用0。 如需詳細資訊，請參閱[設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。|  
+|編輯查詢執行逾時|設定查詢執行逾時，以秒為單位。 零 (0) 秒表示無逾時。決定資料集查詢逾時之前的秒數。若要指定無逾時值，請使用 0。 如需詳細資訊，請參閱[設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。|  
 |檢視相依項目|檢視使用此共用資料集的項目：已發行的報表組件、共用資料來源和報表。|  
   
  下列的其他共用資料集屬性會自動進行設定：  
@@ -72,13 +71,13 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>控制共用的資料集定義的存取  
  根據預設，下列工作適用於共用資料集上的作業。  
   
--   **查看報表**視圖共用資料集專案和專案屬性。  
+-   **檢視報表** ：檢視共用資料集項目和項目屬性。  
   
--   取用**報表**讀取共用資料集定義。  
+-   **取用報表** ：讀取共用資料集定義。  
   
--   **管理報表**建立及刪除共用資料集，並編輯共用資料集屬性。  
+-   **管理報表** ：建立及刪除共用資料集，並編輯共用資料集屬性。  
   
--   **設定專案的安全性**查看和修改共用資料集的安全性設定。  
+-   **在項目上設定安全性** ：檢視及修改共用資料集的安全性設定。  
   
  如需控制存取原生模式報表伺服器之資料來源屬性的工作和權限的詳細資訊，請參閱 [保護共用資料集項目的安全](../security/secure-shared-dataset-items.md)。  
   
@@ -89,12 +88,12 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |Task|工具|連結|  
 |----------|----------|----------|  
-|新增共用資料集，或變更共用資料集定義屬性。|儲存在報表產生器中。<br /><br /> 部署在報表設計師中。<br /><br /> 上傳報表管理員中的 .rsd 檔案|在 msdn.microsoft.com 的[報表產生器檔](https://go.microsoft.com/fwlink/?LinkId=154494)中，[報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [上傳檔案頁面 &#40;報表管理員&#41;](../upload-file-page-report-manager.md)<br /><br /> 如果在相依的共用資料來源發行之前上傳共用資料集，必須以手動方式將共用資料集繫結至共用資料來源。 如需詳細資訊，請參閱 msdn.microsoft.com 之 [一般屬性頁面、共用資料集 &#40;報表管理員&#41;](../general-properties-page-shared-datasets-report-manager.md)。|  
+|新增共用資料集，或變更共用資料集定義屬性。|儲存在報表產生器中。<br /><br /> 部署在報表設計師中。<br /><br /> 上傳報表管理員中的 .rsd 檔案|msdn.microsoft.com 之[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)中的[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。<br /><br /> [上傳檔案頁面 &#40;報表管理員&#41;](../upload-file-page-report-manager.md)<br /><br /> 如果在相依的共用資料來源發行之前上傳共用資料集，必須以手動方式將共用資料集繫結至共用資料來源。 如需詳細資訊，請參閱 msdn.microsoft.com 之 [一般屬性頁面、共用資料集 &#40;報表管理員&#41;](../general-properties-page-shared-datasets-report-manager.md)。|  
 |變更共用資料集項目屬性。|報表管理員|[一般屬性頁面、共用資料集 &#40;報表管理員&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |為報表中的共用資料集執行個體指定其他共用資料集屬性。|報表產生器報表設計師|[資料集屬性對話方塊、查詢](../dataset-properties-dialog-box-query.md)|  
-|繫結至共用資料集的不同共用資料來源。|報表管理員|[資料來源選取頁面 &#40;報表管理員&#41;](../data-source-selection-page-report-manager.md)|  
+|繫結至共用資料集的不同共用資料來源。|報表管理員|[資料來源選擇頁面 &#40;報表管理員&#41;](../data-source-selection-page-report-manager.md)|  
 |驗證資料集參數的預設值。|在報表產生器中開啟，或使用 URL 存取語法。|例如：<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|啟用快取|報表管理員|[快取共用資料集 &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [[快取] 頁面，共用資料集 &#40;報表管理員&#41;](../caching-page-shared-datasets-report-manager.md)|  
+|啟用快取|報表管理員|[快取共用資料集 &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [快取頁面、共用資料集 &#40;報表管理員&#41;](../caching-page-shared-datasets-report-manager.md)|  
 |建立或編輯快取重新整理計畫|報表管理員|[快取重新整理選項 &#40;報表管理員&#41;](../cache-refresh-options-report-manager.md)|  
 |檢視共用資料集定義結構描述。|報表管理員|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |在 SharePoint 整合模式中，同步處理報表伺服器與 SharePoint 網站之間的共用資料集定義|SharePoint 應用程式頁面|變更共用資料集項目屬性<br /><br /> 變更快取選項<br /><br /> 變更共用資料來源|  

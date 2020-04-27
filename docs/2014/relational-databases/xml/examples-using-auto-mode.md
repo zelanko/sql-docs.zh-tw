@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287813"
 ---
 # <a name="examples-using-auto-mode"></a>範例：使用 AUTO 模式
@@ -167,8 +167,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>範例：傳回二進位資料  
- 此查詢會從 `ProductPhoto` 資料表傳回產品相片。 
-  `ThumbNailPhoto` 是 `varbinary(max)` 資料表中的 `ProductPhoto` 資料行。 依預設， `AUTO` 模式會傳回二進位資料的參考，此為執行查詢所在之資料庫虛擬根目錄的相對 URL。 您必須指定 `ProductPhotoID` 索引鍵屬性來識別影像。 如同此範例所說明，在擷取影像參考時，也必須在 `SELECT` 子句中指定資料表的主索引鍵，以識別具唯一性的資料列。  
+ 此查詢會從 `ProductPhoto` 資料表傳回產品相片。 `ThumbNailPhoto` 是 `ProductPhoto` 資料表中的 `varbinary(max)` 資料行。 依預設， `AUTO` 模式會傳回二進位資料的參考，此為執行查詢所在之資料庫虛擬根目錄的相對 URL。 您必須指定 `ProductPhotoID` 索引鍵屬性來識別影像。 如同此範例所說明，在擷取影像參考時，也必須在 `SELECT` 子句中指定資料表的主索引鍵，以識別具唯一性的資料列。  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  

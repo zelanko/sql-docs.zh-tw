@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107714"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66107714"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a>以 MHTML 呈現  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> 在 MHTML 中轉譯  
  HTML 轉譯延伸模組也可以在 MHTML (彙總 HTML 文件的 MIME 封裝) 中轉譯報表。 MHTML 擴充了 HTML，可以在 HTML 文件中內嵌編碼的物件，例如影像。 使用 MHTML 轉譯延伸模組時，您可以利用 MIME 結構，將影像、文件或其他二進位檔案等資源內嵌在單一檔案的報表 HTML 中。 MHTML 報表也適合用於內嵌在電子郵件訊息中，因為所有的資源都包含在報表中。 雖然實際上是 HTML 轉譯延伸模組轉譯 MHTML，此功能也可視為 MHTML 轉譯延伸模組。  
   
-##  <a name="BrowserSupport"></a>瀏覽器支援  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a>瀏覽器支援  
  此轉譯延伸模組支援下列瀏覽器版本：  
   
 -   Internet Explorer 5.5 及更新版本  
@@ -45,7 +45,7 @@ ms.locfileid: "66107714"
   
  由於跨瀏覽器的考量，轉譯的報表在不同的瀏覽器中可能略有不同。 例如，文字方塊包含稱為 WritingMode 的屬性。 Firefox 中不支援此屬性。  
   
-##  <a name="HTMLSpecificRenderingRules"></a>HTML 特定的轉譯規則  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> HTML 特定的轉譯規則  
  下列 HTML 特定規則會在轉譯時套用：  
   
 -   轉譯器會建立一個 HTML 資料表結構，以便在每個 `ReportItems` 集合 (如果有一個以上) 中包含所有項目。  
@@ -62,7 +62,7 @@ ms.locfileid: "66107714"
   
 -   所有座標和報表項目大小都會轉換為公釐。 包括樣式屬性在內的其他所有大小則會保留其原始單位。 大小和位置的差異小於 .2 公釐時，則會視為 0 公釐。  
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a>互動性  
  HTML 中支援某些互動元素。 下列是特定行為的描述。  
   
 ### <a name="show-and-hide"></a>顯示與隱藏  
@@ -85,12 +85,12 @@ ms.locfileid: "66107714"
   
  其他搜尋和尋找功能是由 ReportViewer Web 表單控制項提供。  
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>裝置資訊設定  
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下轉譯，方法是，變更裝置資訊設定。 如需相關資訊，請參閱 [HTML Device Information Settings](../html-device-information-settings.md)。  
 
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;報表產生器和 SSRS 轉譯報表專案&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

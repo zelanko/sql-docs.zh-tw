@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c88d8dd92fcedac2facff27f52492be5ccb74269
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103605"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
@@ -25,9 +25,9 @@ ms.locfileid: "66103605"
   
  若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列：  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) （https://technet.microsoft.com/library/cc731241(WS.10).aspx)。  
   
--   [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
+-   [服務主體名稱（spn） SetSPN 語法（SetSPN .exe）](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) （https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)。  
   
  您必須是網域管理員，才能在網域控制站上執行此公用程式。  
   
@@ -38,13 +38,11 @@ ms.locfileid: "66103605"
 Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>  
 ```  
   
- Windows Server 上提供**SetSPN** 。 
-  `-s` 引數會在確認沒有重複存在之後加入 SPN。 **注意：-s** 從 Windows Server 2008 開始已可於 Windows Server 中使用。  
+ Windows Server 上提供**SetSPN** 。 `-s` 引數會在確認沒有重複存在之後加入 SPN。 **注意：-s** 從 Windows Server 2008 開始已可於 Windows Server 中使用。  
   
- 
-  `HTTP` 為服務類別。 報表伺服器 Web 服務會在 HTTP.SYS 中執行。 依據產品建立適用於 HTTP 的 SPN 就是指相同電腦上在 HTTP.SYS 中執行的所有 Web 應用程式 (包括 IIS 內主控的應用程式) 都將根據網域使用者帳戶來被授與票證。 如果這些服務在不同的帳戶下執行，驗證要求將會失敗。 為了避免這個問題，請務必在相同的帳戶下設定所有要執行的 HTTP 應用程式，或是考慮為每一個應用程式建立主機標頭，然後再為每一個主機標頭建立個別的 SPN。 當您設定主機標頭時，不論 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態為何，都需要進行 DNS 變更。  
+ `HTTP` 為服務類別。 報表伺服器 Web 服務會在 HTTP.SYS 中執行。 依據產品建立適用於 HTTP 的 SPN 就是指相同電腦上在 HTTP.SYS 中執行的所有 Web 應用程式 (包括 IIS 內主控的應用程式) 都將根據網域使用者帳戶來被授與票證。 如果這些服務在不同的帳戶下執行，驗證要求將會失敗。 為了避免這個問題，請務必在相同的帳戶下設定所有要執行的 HTTP 應用程式，或是考慮為每一個應用程式建立主機標頭，然後再為每一個主機標頭建立個別的 SPN。 當您設定主機標頭時，不論 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態為何，都需要進行 DNS 變更。  
   
- 您為 \<電腦名稱**>、\<網域名稱**> 和 \<連接埠**> 指定的值，可識別裝載報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，而且使用連接埠 80，即可在命令列中省略 \<網域名稱**> 和 \<連接埠**>。 \<網域使用者帳戶  > 是用以執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
+ 您為\< *computername*>、 \< *domainname*> 和\< *port*指定的值，會> 識別主控報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，而且使用通訊埠80，您可以從\<命令列省略*domainname*> 和\<*埠*>。 \<*網域使用者帳戶*> 是用來執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>為網域使用者帳戶註冊 SPN  
   
@@ -62,7 +60,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     例如： `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+     例如：`Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  執行命令。  
   
@@ -71,7 +69,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  加入 `<RSWindowsNegotiate/>` 當做此區段的第一個項目，以便啟用 NTLM。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定服務帳戶 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [&#40;SSRS Configuration Manager 設定服務帳戶&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)  
   

@@ -14,26 +14,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481036"
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域規則。 定義域規則是用來驗證、更正並標準化定義域值的條件。 定義域規則必須在定義域中成立，才能讓定義域值被視為正確且符合商務需求。 定義域規則所包含的驗證規則可用來驗證定義域值，但是無法用來更正資料品質專案中的資料。 此外，規則也包含針對有效資料套用以及用於資料更正的標準化規則。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要建立定義域規則，您必須已在 [定義域管理] 活動中開啟知識庫和定義域。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能建立定義域規則。  
   
-##  <a name="Build"></a>組建定義域規則  
+##  <a name="build-domain-rules"></a><a name="Build"></a> 建置定義域規則  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65481036"
   
 6.  選取 **[使用中]** 指定將要執行此規則 (預設值)，或取消選取以防止執行此規則。  
   
-7.  在 [建置規則]**** 窗格中，從規則子句方塊的下拉式清單中選取條件。  
+7.  在 [**建立規則**] 窗格中，從規則子句方塊的下拉式清單中選取條件。  
   
 8.  如果條件需要值，請在相關聯的文字方塊中輸入值。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "65481036"
   
 16. 繼續進行下列測試程序。  
   
-##  <a name="Test"></a>測試定義域規則  
+##  <a name="test-domain-rules"></a><a name="Test"></a>測試定義域規則  
   
 1.  選取某項規則之後，按一下 **[在測試資料上執行選取的定義域規則]** 圖示。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65481036"
   
 7.  繼續進行下列套用程序。  
   
-##  <a name="Apply"></a>套用定義域規則  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a>套用定義域規則  
   
 1.  按一下 **[套用所有規則]** ，將規則套用至定義域中的值。 當您按一下 **[套用所有規則]** 之後，系統就會顯示一個快顯視窗，其中指出處於特定狀態的多少值將會受到此規則所影響。 如果您仍然想要套用規則，請按一下 **[是]** ，否則請按一下 **[否]** 。 如果您按一下 **[是]**，請按一下 **[確定]** 關閉結果快顯視窗。  
   
@@ -97,10 +97,10 @@ ms.locfileid: "65481036"
   
 3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   
-##  <a name="FollowUp"></a>後續操作：建立定義域規則之後  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>後續操作：建立定義域規則之後  
  在建立定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Conditions"></a>定義域規則條件  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>定義域規則條件  
  下表描述的是可在定義域規則中套用的條件，並且提供範例以說明如何套用這些條件。  
   
  當您套用定義域規則，但是某個定義域值使規則失敗時，該值就會被指定為無效。 如果導致值變成無效的規則已刪除、已停用或者已變更，讓該值不再使規則失敗，則指定為無效的值將會變更為正確。 如果您手動將某個值指定為無效 (在 [定義域管理] 活動的 [定義域值] 索引標籤中)，而且該值使之失敗的規則已經刪除、停用或變更，則該值仍然會被指定為無效 (符合手動指定)。  
@@ -109,7 +109,7 @@ ms.locfileid: "65481036"
   
  您可以在建立定義域規則時選擇其他替代方式。 例如，若要驗證值的開頭是否為 A、B 或 C 字母，您可以建立包含複雜條件的簡單規則 (例如包含縱線字元的規則運算式)，也可以建立包含許多簡單條件的複雜規則。 第一項規則的範例為「值包含規則運算式 (^A|^B|^C)」。 第二項規則的範例為「‘值開頭為 A' OR '值開頭為 B' OR '值開頭為 C'」。  
   
-|條件|描述|範例|  
+|狀況|說明|範例|  
 |---------------|-----------------|-------------|  
 |長度等於|只有由運算元指定之字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1<br /><br /> 無效值：AA|  
 |長度大於或等於|只有由運算元指定之字元數或更多字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 無效值：AA|  

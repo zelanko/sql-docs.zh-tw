@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9bff6ec41cc2437c6083e150eb391470cb5a5ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105433"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>繪製次要座標軸上的資料 (報表產生器及 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105433"
   
  如果比較的數列超過兩個，請考慮不同的方法來在圖表中比較及顯示多個數列。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
   
- 此圖表的範例可從範例報表取得。 如需下載此範例報表及其他專案的詳細資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[報表產生器和報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 此圖表的範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "66105433"
 2.  按一下 **[軸和圖表區域]** ，然後選取要啟用的次要軸、值軸或類別目錄軸。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的軸標籤 &#40;報表產生器和 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [指定軸間隔 &#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

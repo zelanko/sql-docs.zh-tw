@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f31f93ba468e6ffc91313e7ca653d122c1664ad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480658"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
@@ -26,17 +26,17 @@ ms.locfileid: "65480658"
   
  當您匯入知識庫時，您可以使用相同的名稱，除非此知識庫名稱已存在於用戶端應用程式中 (此時必須重新命名)。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要從 .dqs 檔案匯入知識庫，您必須已將知識庫匯出到 .dqs 檔案。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入知識庫。  
   
-##  <a name="Import"></a>從 dqs 檔案匯入知識庫  
+##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a>從 dqs 檔案匯入知識庫  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65480658"
   
 5.  針對 **[選取資料檔]** 按一下 **[瀏覽]**。  
   
-6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 **[開啟]** 。  
+6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 [開啟]  。  
   
 7.  確認 **[定義域]** 清單中是否顯示正確的知識庫和定義域。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65480658"
   
 13. 在 Data Quality Services 首頁上，確認此知識庫列在 **[最近使用的知識庫]** 底下。  
   
-##  <a name="FollowUp"></a>後續操作：從 dqs 檔案匯入知識庫之後  
+##  <a name="follow-up-after-importing-a-knowledge-base-from-a-dqs-file"></a><a name="FollowUp"></a> 後續操作：從 .dqs 檔案匯入知識庫之後  
  當您從 .dqs 檔案匯入知識庫之後，您可以將知識加入至知識庫，或是在清理或比對專案中使用此知識庫 (根據知識庫的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)、[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)、[資料清理](../../2014/data-quality-services/data-cleansing.md)或[資料比對](../../2014/data-quality-services/data-matching.md)。  
   
   

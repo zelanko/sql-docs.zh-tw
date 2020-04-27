@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480104"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>指派功能區域權限 (Master Data Services)
   指派功能區域權限，授予使用者或群組 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能區域的存取權。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -46,7 +46,7 @@ ms.locfileid: "65480104"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [指派模型物件使用權限 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
+-   [指派模型物件權限 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立模型系統管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   

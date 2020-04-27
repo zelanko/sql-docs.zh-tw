@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481232"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>工作 10：設定複合定義域使用參考資料服務
@@ -46,7 +46,7 @@ ms.locfileid: "65481232"
   
      ![將 RDS 結構描述項目對應至定義域](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "將 RDS 結構描述項目對應至定義域")  
   
-9. 按一下 **[確定]** ，關閉對話方塊。  
+9. 按一下 [確定]**** 關閉對話方塊。  
   
 ## <a name="next-step"></a>後續步驟  
  [工作 11：發行知識庫](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  

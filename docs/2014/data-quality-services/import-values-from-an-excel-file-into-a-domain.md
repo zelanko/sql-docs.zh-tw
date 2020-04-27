@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484317"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
@@ -30,17 +30,17 @@ ms.locfileid: "65484317"
   
 -   將值匯入現有且已填入的定義域中，此時只會匯入新的值。 系統將不會匯入已經存在的所有值。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要從 Excel 檔案匯入定義域，安裝 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式的電腦上必須已安裝 Excel，才能匯入定義域值或完整定義域；您必須已經使用定義域值建立 Excel 檔案 (請參閱＜ [How the import works](#How)＞)；而且您必須已經建立及開啟要匯入定義域到其中的知識庫。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能從 Excel 檔案匯入定義域值。  
   
-##  <a name="Import"></a>將 Excel 檔案中的值匯入定義域中  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>將 Excel 檔案中的值匯入定義域中  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -64,17 +64,16 @@ ms.locfileid: "65484317"
   
 11. 確認「匯入完成」已顯示在 [匯入定義域值]**** 對話方塊中。 您可以在此對話方塊中查看已成功匯入的值，以及未匯入的值。 它會指出檔案的名稱和檔案的路徑、作業的完成狀態、已經成功匯入的值數目、未匯入的值數目，以及已處理的值總數。  
   
-12. 對於未成功匯入的這些值，請按一下 [記錄檔]**** 顯示 [匯入定義域值 - 失敗值]**** 對話方塊，以便查看匯入作業失敗的原因。 
-  **[失敗值]** 資料行會顯示無法從 Excel 檔案匯入定義域的值，而 **[原因]** 資料行會說明匯入失敗的原因。 您可以按一下 **[複製至剪貼簿]** ，將 **[失敗值]** 資料表複製到 [剪貼簿]，以便將該資料表複製到另一個程式，例如 Excel 試算表或 [記事本] 檔案。 按一下 **[確定]** 關閉 **[失敗值]** 對話方塊。  
+12. 對於未成功匯入的這些值，請按一下 [記錄檔]**** 顯示 [匯入定義域值 - 失敗值]**** 對話方塊，以便查看匯入作業失敗的原因。 **[失敗值]** 資料行會顯示無法從 Excel 檔案匯入定義域的值，而 **[原因]** 資料行會說明匯入失敗的原因。 您可以按一下 **[複製至剪貼簿]** ，將 **[失敗值]** 資料表複製到 [剪貼簿]，以便將該資料表複製到另一個程式，例如 Excel 試算表或 [記事本] 檔案。 按一下 **[確定]** 關閉 **[失敗值]** 對話方塊。  
   
 13. 按一下 **[確定]** 完成匯入作業，然後關閉對話方塊。 當匯入成功完成時， **[定義域值]** 頁面上的定義域值清單就會重新整理，而且將包含新匯入的值。 此時，篩選會變更為 **[所有值]** ，並且選取 **[只顯示新值]** 。 在匯入作業之後選取 **[只顯示新值]** 時，就只會顯示從 Excel 檔案匯入的值。  
   
 14. 按一下 **[完成]** ，將值加入至知識庫。  
   
-##  <a name="FollowUp"></a>後續操作：將 Excel 檔案中的值匯入定義域之後  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>後續操作：將 Excel 檔案中的值匯入定義域之後  
  將值匯入定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索以將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Synonyms"></a>匯入同義字  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a>匯入同義字  
  同義字的匯入方式如下：  
   
 -   首先，系統會匯入所有值，然後建立同義字連接。  
@@ -89,7 +88,7 @@ ms.locfileid: "65484317"
   
 -   如果由於任何原因而無法在應用程式中手動連接值，表示該值可能不適用於匯入作業。  
   
-##  <a name="How"></a>匯入的運作方式  
+##  <a name="how-the-import-works"></a><a name="How"></a>匯入的運作方式  
  此作業將匯入下列值：  
   
  在匯入作業中，DQS 會依照以下方式從 Excel 檔案匯入資料：  

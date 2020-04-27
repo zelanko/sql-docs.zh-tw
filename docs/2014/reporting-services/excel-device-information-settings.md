@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d71c83195c8f91984bbbce95bd00402928fdb36e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109213"
 ---
 # <a name="excel-device-information-settings"></a>Excel 裝置資訊設定
@@ -27,13 +27,12 @@ ms.locfileid: "66109213"
 |-------------|-----------|  
 |**OmitDocumentMap**|指出是否為支援它的報表省略文件引導模式。 預設值是 `false`。|  
 |**OmitFormulas**|指出是否從轉譯的報表省略公式。 預設值是 `false`。|  
-|`SimplePageHeade`車載|指出是否將報表的頁首轉譯為 Excel 頁首。 
-  `false` 的值指出將頁首轉譯為工作表的第一列。 預設值是 `false`。|  
+|`SimplePageHeade`rs|指出是否將報表的頁首轉譯為 Excel 頁首。 `false` 的值指出將頁首轉譯為工作表的第一列。 預設值是 `false`。|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [將裝置資訊設定傳遞至轉譯延伸模組](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [在 Rsreportserver.config 中自訂轉譯延伸模組參數](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [技術參考 &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

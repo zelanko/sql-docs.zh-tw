@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c44e1830b1f04b1a7686bf7db1efea4549ae143e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479544"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>建立主資料管理員 Web 服務 Proxy 類別
-  
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務可讓您以程式設計的方式，從可以存取 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 網站的任何電腦使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的功能。 在您可以開始撰寫程式碼以存取 Web 服務之前，必須先產生 Proxy 類別。 您用來執行 Web 服務作業的主要 Proxy 類別為 <xref:Microsoft.MasterDataServices.ServiceClient> 類別，此類別會實作 <xref:Microsoft.MasterDataServices.IService> 介面。  
   
 ## <a name="enable-web-service-metadata-publishing"></a>啟用 Web 服務中繼資料發佈  
@@ -37,7 +36,7 @@ ms.locfileid: "65479544"
     「您已建立服務」的頁面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>使用 Visual Studio 建立 Proxy 類別  
- 如果您已安裝 Visual Studio 2010，產生 Proxy 類別最簡單的方式，就是將 [服務參考]**** 新增至您的專案。 服務參考的位址就是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，並附加 /service/service.svc。 例如： http://yourserver/MDS/service/service.svc 。 如需詳細資訊，請參閱[如何：新增、更新或移除服務參考](https://go.microsoft.com/fwlink/?LinkId=221167)。  
+ 如果您已安裝 Visual Studio 2010，產生 Proxy 類別最簡單的方式，就是將 [服務參考]**** 新增至您的專案。 服務參考的位址就是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，並附加 /service/service.svc。 例如：http://yourserver/MDS/service/service.svc。 如需詳細資訊，請參閱[如何：新增、更新或移除服務參考](https://go.microsoft.com/fwlink/?LinkId=221167)。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>使用 Svcutil.exe 建立 Proxy 類別  
  您必須[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]安裝或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，才能在電腦上使用 Svcutil。 如果您使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，您須使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示字元執行此命令。 如需詳細資訊，請參閱 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[從服務中繼資料產生 WCF 用戶端](https://go.microsoft.com/fwlink/?LinkId=164821)。  
@@ -53,13 +52,13 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  其中：  
   
--   *servername*：*port*是主控[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]之電腦的電腦名稱稱和埠號碼。  
+-   *servername*:*port* 為主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之電腦的電腦名稱及連接埠號碼。  
   
--   *virtual_path*是 INTERNET INFORMATION SERVICES （IIS） [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]中的虛擬路徑。  
+-   *virtual_path* 為 Internet Information Services (IIS) 中 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的虛擬路徑。  
   
--   *proxy_name*是所產生之 proxy 檔案的名稱。  
+-   *proxy_name* 為產生之 Proxy 檔案的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [已分類的 Web 服務作業 &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
+ [分類的 Web 服務作業 &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
   
   

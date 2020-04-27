@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479998"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
@@ -27,7 +27,7 @@ ms.locfileid: "65479998"
  如果您想要部署只包含模型物件的封裝，您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中改用模型部署精靈。 如需詳細資訊，請參閱 [使用精靈建立模型部署封裝](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
 > [!NOTE]  
 > 這個版本的 MDSModelDeploy 工具無法使用超過 gb 的記憶體。 當您使用**模型物件和資料**選項建立或部署大型模型時，可能會遇到「記憶體不足」或「資料流程太長」錯誤。 若要解決此問題，請使用 MDS 預備環境來部署資料;或升級至 MDS 2016 或更新版本，其中包含 MDSModelDeploy 工具的更新版本。
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 1.  執行 MDSModelDeploy 工作所需的基本權限如下：  
@@ -58,7 +58,7 @@ ms.locfileid: "65479998"
   
  模型必須存在，才能建立其封裝。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](create-a-model-master-data-services.md)。  
   
- 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+ 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>若要使用 MDSModelDeploy 建立模型部署封裝  
   
@@ -100,6 +100,6 @@ ms.locfileid: "65479998"
   
 ## <a name="see-also"></a>另請參閱  
  [模型部署選項 &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [&#40;Master Data Services 部署模型&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

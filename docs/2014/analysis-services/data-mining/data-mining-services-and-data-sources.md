@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217125"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
@@ -61,9 +61,9 @@ ms.locfileid: "79217125"
   
 -   因為資料採礦是伺服器所提供的服務，所以必須將資料來源的存取權提供給 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  存取有兩個層面：位置和識別。  
   
-     **位置**表示，如果您使用只儲存在電腦上的資料來建立模型，然後將模型部署到伺服器，則模型將無法處理，因為找不到資料來源。 若要解決此問題，您可能必須將資料移轉到執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的相同 SQL Server 執行個體，或是將檔案移到共用位置。  
+     **位置** ：表示如果您只使用電腦上所儲存的資料，然後將模型部署至伺服器來建立模型，此模型將無法處理，因為找不到資料來源。 若要解決此問題，您可能必須將資料移轉到執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的相同 SQL Server 執行個體，或是將檔案移到共用位置。  
   
-     **識別**：表示上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服務必須能夠使用適當的認證開啟資料檔或資料來源。 例如，當您建立模型時，您可能擁有檢視資料的無限權限，但是在伺服器上處理及更新模型的使用者可能擁有資料的有限存取權或無任何存取權，這樣可能會導致處理失敗或影響模型的內容。 用來連接遠端資料來源的帳戶至少必須擁有資料的讀取權限。  
+     **識別** ：表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 上的服務必須能夠使用適當的認證開啟資料檔或資料來源。 例如，當您建立模型時，您可能擁有檢視資料的無限權限，但是在伺服器上處理及更新模型的使用者可能擁有資料的有限存取權或無任何存取權，這樣可能會導致處理失敗或影響模型的內容。 用來連接遠端資料來源的帳戶至少必須擁有資料的讀取權限。  
   
 -   當您移動模型時，也會有相同的需求：您必須設定適當的權限來存取舊的資料來源的位置、複製資料來源，或設定新的資料來源。 此外，您也必須移轉登入和角色，或是設定權限來允許在新的位置中處理和更新資料採礦物件。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "79217125"
     > [!IMPORTANT]  
     >  若要改善安全性，我們建議您將這個屬性設定為 `false`。 預設值是 `false`。 不過，即使這個屬性設定為 `false`，使用者仍然可以繼續建立單一查詢，而且可以針對允許的資料來源使用 OPENQUERY。  
   
--   **Allowedprovidersinopenrowset:** 指定提供者（如果已啟用特定存取）。 您可以透過輸入逗號分隔的 ProgID 清單，指定多個提供者。  
+-   **AllowedProvidersInOpenRowset** ：指定提供者 (如果已啟用特定存取的話)。 您可以透過輸入逗號分隔的 ProgID 清單，指定多個提供者。  
   
--   **Maxconcurrentpredictionqueries:** 控制伺服器因預測而產生的負載。 預設值 0 允許無限制的查詢 (適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise)，而最大值是五個並行查詢 (適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard)。 超過此限制的查詢會進行序列化而且可能會逾時。  
+-   **MaxConcurrentPredictionQueries** ：控制預測所造成的伺服器負載。 預設值 0 允許無限制的查詢 (適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise)，而最大值是五個並行查詢 (適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard)。 超過此限制的查詢會進行序列化而且可能會逾時。  
   
  此伺服器會提供可控制哪些資料採礦演算法可用的其他屬性，包括演算法的任何相關限制，以及所有資料採礦服務的預設值。 不過，目前沒有任何設定可讓您特別控制資料採礦預存程序的存取權。 如需詳細資訊，請參閱 [資料採礦屬性](../server-properties/data-mining-properties.md)。  
   
@@ -93,15 +93,15 @@ ms.locfileid: "79217125"
 ## <a name="programmatic-access-to-data-mining-objects"></a>以程式設計方式存取資料採礦物件  
  您可以使用下列物件模型來建立 Analysis Services 資料庫的連接以及使用資料採礦物件：  
   
- **ADO**使用 OLE DB 連接至 Analysis Services 伺服器。 當您使用 ADO 時，用戶端就會限制為結構描述資料列集查詢和 DMX 陳述式。  
+ **ADO** ：使用 OLE DB 來連接至 Analysis Services 伺服器。 當您使用 ADO 時，用戶端就會限制為結構描述資料列集查詢和 DMX 陳述式。  
   
- **ADO.NET**與 SQL Server 提供者的互動比其他提供者更好。 使用資料配接器來儲存動態資料列集。 使用資料集物件，而這是儲存成可當做 XML 進行更新或儲存之資料表的伺服器資料快取。  
+ **ADO.NET** ：與 SQL Server 提供者互動的效果比其他提供者較佳。 使用資料配接器來儲存動態資料列集。 使用資料集物件，而這是儲存成可當做 XML 進行更新或儲存之資料表的伺服器資料快取。  
   
- **ADOMD.NET**已針對使用資料採礦和 OLAP 優化的 managed 資料提供者。 相較於 ADO.NET 而言，ADOMD.NET 的速度較快而且記憶體效率較高。 ADOMD.NET 也可以讓您擷取有關伺服器物件的中繼資料。 建議用戶端應用程式採用 (.NET 無法使用時除外)。  
+ **ADOMD.NET** ：針對使用資料採礦和 OLAP 最佳化的 Managed 資料提供者。 相較於 ADO.NET 而言，ADOMD.NET 的速度較快而且記憶體效率較高。 ADOMD.NET 也可以讓您擷取有關伺服器物件的中繼資料。 建議用戶端應用程式採用 (.NET 無法使用時除外)。  
   
- **伺服器 ADOMD**直接在伺服器上存取 Analysis Services 物件的物件模型。 由 Analysis Services 預存程序使用，但不適合用戶端使用。  
+ **Server ADOMD** ：直接在伺服器上存取 Analysis Services 物件的物件模型。 由 Analysis Services 預存程序使用，但不適合用戶端使用。  
   
- **AMO**取代決策支援物件（DSO）之 Analysis Services 的管理介面。 反覆運算物件等作業在使用 AMO 時會比使用其他介面需要更高的權限。 這是因為 AMO 會直接存取中繼資料，而 ADOMD.NET 和其他介面只會存取資料庫結構描述。  
+ **AMO** ：取代決策支援物件 (DSO) 的 Analysis Services 管理介面。 反覆運算物件等作業在使用 AMO 時會比使用其他介面需要更高的權限。 這是因為 AMO 會直接存取中繼資料，而 ADOMD.NET 和其他介面只會存取資料庫結構描述。  
   
 ### <a name="browse-and-query-access-to-servers"></a>伺服器的瀏覽和查詢存取  
  您可以使用 OLAP/資料採礦模式中的 Analysis Services 執行個體來執行所有種類的預測，但是有下列限制：  

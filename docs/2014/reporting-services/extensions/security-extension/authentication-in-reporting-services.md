@@ -16,21 +16,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282162"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的驗證
   驗證是建立使用者對識別的權限之程序。 您可以使用許多技術來驗證使用者。 最常見的方式是使用密碼。 例如，當您實作表單驗證時，想要查詢使用者是否有認證 (通常是透過某個介面來要求登入名稱與密碼)，然後針對資料存放區來驗證使用者，例如資料庫資料表或是組態檔。 如果無法驗證認證，驗證程序會失敗，而且使用者將假設匿名識別。  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services 中的自訂驗證  
- 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Windows 作業系統會透過整合式安全性，或是透過使用者認證之明確接收與驗證，來處理使用者的驗證。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中可以開發自訂驗證，以支援其他的驗證配置。 這是透過安全性延伸介面 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 來達成。 所有的延伸模組都會針對報表伺服器所部署和使用的任何延伸模組，自 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 基底介面繼承。 
-  <xref:Microsoft.ReportingServices.Interfaces.IExtension> 以及 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 是 <xref:Microsoft.ReportingServices.Interfaces> 命名空間的成員。  
+ 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Windows 作業系統會透過整合式安全性，或是透過使用者認證之明確接收與驗證，來處理使用者的驗證。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中可以開發自訂驗證，以支援其他的驗證配置。 這是透過安全性延伸介面 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 來達成。 所有的延伸模組都會針對報表伺服器所部署和使用的任何延伸模組，自 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 基底介面繼承。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 以及 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 是 <xref:Microsoft.ReportingServices.Interfaces> 命名空間的成員。  
   
- 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中針對報表伺服器驗證的主要方法是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 Reporting Services Web 服務的這個成員，可用以將使用者認證傳遞給報告伺服器以供驗證。 您的基礎安全性延伸模組會執行**IAuthenticationExtension** ，其中包含您的自訂驗證程式代碼。 在表單驗證範例中，**LogonUser** 會針對提供的認證以及資料庫中的自訂使用者存放區執行驗證檢查。 
-  **LogonUser** 的實作範例看起來像這樣：  
+ 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中針對報表伺服器驗證的主要方法是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 Reporting Services Web 服務的這個成員，可用以將使用者認證傳遞給報告伺服器以供驗證。 您的基礎安全性延伸模組會執行**IAuthenticationExtension** ，其中包含您的自訂驗證程式代碼。 在表單驗證範例中，**LogonUser** 會針對提供的認證以及資料庫中的自訂使用者存放區執行驗證檢查。 **LogonUser** 的實作範例看起來像這樣：  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -112,8 +110,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 2.  Web 服務會呼叫安全性延伸模組的<xref:ReportService2010.ReportingService2010.LogonUser%2A>方法，具體來說，就是執行**IAuthenticationExtension**的類別。  
   
-3.  
-  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 的實作會在使用者存放區或是安全性授權中，驗證使用者名稱與密碼。  
+3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 的實作會在使用者存放區或是安全性授權中，驗證使用者名稱與密碼。  
   
 4.  一旦成功驗證，Web 服務會為工作階段建立 Cookie 並管理它。  
   
@@ -129,8 +126,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 ## <a name="forms-authentication"></a>表單驗證  
  表單驗證是一種 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 驗證類型，它會將未驗證的使用者導向 HTML 表單。 一旦使用者提供認證，系統會發出包含驗證 Ticket 的 Cookie。 對於之後的要求，系統會先檢查 Cookie 來查看報表伺服器是否已驗證使用者。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可加以擴充，以便透過 Reporting Services API 使用可用的安全性擴充性介面。 如果您擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 來使用表單驗證，請為所有與報表伺服器的通訊使用安全通訊端層 (SSL)，以防止惡意的使用者存取其他使用者的 Cookie。 SSL 允許用戶端和報表伺服器驗證彼此，並確保沒有其他的電腦可以讀取兩台電腦之間的通訊內容。 所有透過 SSL 連接從用戶端傳送的資料都會經過加密，因此惡意的使用者將無法攔截傳送到報表伺服器的密碼或是資料。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可加以擴充，以便透過 Reporting Services API 使用可用的安全性擴充性介面。 如果您擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 來使用表單驗證，請為所有與報表伺服器的通訊使用安全通訊端層 (SSL)，以防止惡意的使用者存取其他使用者的 Cookie。 SSL 允許用戶端和報表伺服器驗證彼此，並確保沒有其他的電腦可以讀取兩台電腦之間的通訊內容。 所有透過 SSL 連接從用戶端傳送的資料都會經過加密，因此惡意的使用者將無法攔截傳送到報表伺服器的密碼或是資料。  
   
  通常會實作表單驗證以支援 Windows 之外的平台其帳戶和驗證。 對於要求存取報表伺服器的使用者會顯示圖形介面，而且會將提供的認證提交到安全性授權以進行驗證。  
   
@@ -146,12 +142,9 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   如果您使用表單驗證，必須在 Internet Information Services (IIS) 中的報表伺服器虛擬目錄上啟用匿名存取。  
   
--   
-  [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 驗證必須設定為 Forms。 您為報表伺服器在 Web.config 檔案中設定 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 驗證。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 驗證必須設定為 Forms。 您為報表伺服器在 Web.config 檔案中設定 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 驗證。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以使用 Windows 驗證或是自訂驗證，來驗證和授權使用者，但並不能同時使用這兩者。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 並不支援同時使用多個安全性延伸模組。  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以使用 Windows 驗證或是自訂驗證，來驗證和授權使用者，但並不能同時使用這兩者。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 並不支援同時使用多個安全性延伸模組。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作安全性延伸模組](../security-extension/implementing-a-security-extension.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2610534159be781e2719034b41276be5f0d7d473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104819"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>從圓形圖頂端開始繪製圓形圖值 (報表產生器及 SSRS)
@@ -27,16 +27,16 @@ ms.locfileid: "66104819"
   
 1.  按一下圓形圖本身。  
   
-2.  如果 [屬性]  窗格沒有開啟，請按一下 [檢視]  索引標籤上的 [屬性]  。  
+2.  如果 [屬性]**** 窗格沒有開啟，請按一下 [檢視]**** 索引標籤上的 [屬性]****。  
   
-3.  在 [屬性]  窗格的 [自訂屬性]  底下，將 [PieStartAngle]  從 **0** 變更為 **270**。  
+3.  在 [**屬性**] 窗格的 [**自訂屬性**] 底下，將**PieStartAngle**從**0**變更為**270**。  
   
-4.  按一下 [執行]  以預覽報表。  
+4.  按一下 [執行]**** 以預覽報表。  
   
  第一個值現在從圓形圖的頂端開始繪製。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [將圖表格式化 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [圓形圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

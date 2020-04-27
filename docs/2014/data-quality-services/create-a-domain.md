@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480964"
 ---
 # <a name="create-a-domain"></a>建立定義域
@@ -24,17 +24,17 @@ ms.locfileid: "65480964"
   
  建立新的定義域的方式有兩種。 第一種方式是在知識探索活動的對應步驟期間，當您正在分析資料取樣，將知識加入至新的知識庫或現有知識庫時。 第二種方式是在定義域管理活動期間，當您建立新的定義域，而不是變更現有定義域時。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要建立定義域，您必須已建立及開啟知識庫。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立定義域。  
   
-##  <a name="Discovery"></a>在知識探索活動中建立定義域  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a> 在知識探索活動中建立定義域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480964"
   
 5.  在 **[對應]** 資料表中，從空白資料列之 **[來源資料行]** 資料行的下拉式清單中選取來源資料行。 如果沒有對應的定義域存在，請按一下 **[建立定義域]** 圖示。  
   
-##  <a name="DomainManagement"></a>在定義域管理活動中建立定義域  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> 在定義域管理活動中建立定義域  
   
 1.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟知識庫]** ，然後選取知識庫，或是按一下 **[新增知識庫]** ，並輸入新知識庫的屬性。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65480964"
   
 3.  在 **[定義域管理]** 頁面上，按一下定義域清單上方的 **[建立定義域]** 圖示。  
   
-##  <a name="Properties"></a>設定網域屬性  
+##  <a name="set-domain-properties"></a><a name="Properties"></a>設定網域屬性  
   
 1.  在 **[建立定義域]** 對話方塊中，輸入知識庫特有的名稱以及最多 256 個字元的描述。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65480964"
   
 10. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   
-##  <a name="FollowUp"></a>後續操作：建立定義域之後  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> 後續操作：建立定義域之後  
  在建立定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255384"
 ---
 # <a name="updatable-subscriptions"></a>可更新的訂閱
-  使用異動複寫時，應該將複寫的資料視為唯讀;不過，您可以使用可更新的訂閱[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來修改訂閱者端的複寫資料。 如果您需要修改訂閱者端的資料，請視您的需求，使用下列其中一個選項。  
+  若為異動複寫，複寫的資料應當成唯讀處理；不過，您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者端使用可更新訂閱，來修改複寫的資料。 如果您需要修改訂閱者端的資料，請視您的需求，使用下列其中一個選項。  
   
 |可更新的訂閱類型|需求|  
 |---------------------------------|------------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "63255384"
 ## <a name="see-also"></a>另請參閱  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [訂閱發行集](subscribe-to-publications.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

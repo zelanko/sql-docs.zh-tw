@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483697"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自動建立代碼 (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65483697"
  當您使用其中一種工具或暫存處理序，將屬性值輸入至 MDS 時，可以將屬性值留空。 套用商務規則時，將會根據最高的現有值遞增這些值。 例如，如果您的規則是「將屬性預設為從 1 開始產生，並以 4 遞增的值」，而且該屬性最高的目前值為 700，則新增之下一個成員的值將是 704。  
   
 ## <a name="deleting-automatically-generated-values"></a>刪除自動產生的值  
- 在管理員為 Code 屬性啟用自動產生的值時，使用者可能會不小心刪除擁有他們要重複使用之 Code 值的成員。 將會顯示「已刪除的成員已使用成員代碼」錯誤訊息。 有兩個可能的解決方案：  
+ 在管理員為 Code 屬性啟用自動產生的值時，使用者可能會不小心刪除擁有他們要重複使用之 Code 值的成員。 將會顯示「已刪除的成員已使用成員代碼」錯誤訊息。 有兩種可能的解決方法：  
   
 -   在 [**版本管理**] 功能區域中，系統管理員可以反轉刪除成員時所發生的交易。 不過，這表示會還原所有先前成員的屬性和階層和集合中的成員資格。 如需詳細資訊，請參閱[反轉交易 &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。  
   
@@ -41,8 +41,8 @@ ms.locfileid: "65483697"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|自動為 Code 屬性產生值。|[自動產生程式碼屬性值 &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|自動為其他屬性產生值。|[自動產生程式碼 &#40;Master Data Services 以外的屬性值&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|自動為 Code 屬性產生值。|[自動產生 Code 屬性值 &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|自動為其他屬性產生值。|[自動產生 Code 以外的屬性值 &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

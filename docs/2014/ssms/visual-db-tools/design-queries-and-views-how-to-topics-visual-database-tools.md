@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316073"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>設計查詢和檢視操作說明主題 (Visual Database Tools)
   查詢和檢視設計師可以協助您建立與維護應用程式的資料擷取和資料操作部分。  
   
 ## <a name="in-this-section"></a>本節內容  
- [&#40;Visual Database Tools 開啟查詢和 View Designer&#41;](visual-database-tools.md)  
+ [開啟查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  提供步驟，在 [查詢和檢視設計師] 中開啟新的或現有的查詢或檢視。  
   
- [在 [查詢和視圖設計工具] 中流覽 &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [在查詢和檢視表設計工具中巡覽 &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  提供清單，列出可以在 [查詢和檢視設計師] 中使用的組合鍵和滑鼠動作。  
   
  [查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  

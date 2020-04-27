@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481199"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>選項 (查詢結果和相依性服務頁面)
@@ -28,13 +28,13 @@ ms.locfileid: "65481199"
   
 2.  [設定選項](#options)  
   
-##  <a name="open_dialog"></a>開啟 [選項（查詢結果/相依性服務頁面）] 對話方塊  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>開啟 [選項（查詢結果/相依性服務頁面）] 對話方塊  
   
 1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，按一下 [**工具**] 功能表上的 [**選項**]。  
   
 2.  展開 [查詢結果]****，然後按一下 [相依性服務]****。  
   
-##  <a name="options"></a> 設定選項  
+##  <a name="configure-the-options"></a><a name="options"></a>設定選項  
   
 ### <a name="options"></a>選項。  
  **相依性服務伺服器**  
@@ -51,5 +51,5 @@ ms.locfileid: "65481199"
  **密碼**  
  如果使用 SQL Server 驗證，請提供密碼。  
   
- **測驗**  
+ **測試**  
  按一下來測試連接。

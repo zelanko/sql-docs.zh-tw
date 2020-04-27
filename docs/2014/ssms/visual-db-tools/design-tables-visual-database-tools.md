@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316145"
 ---
 # <a name="design-tables-visual-database-tools"></a>設計資料表 (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63316145"
  [開啟資料表設計工具 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  開啟新的資料庫資料表或現有的資料庫資料表。  
   
- [在資料表設計工具 &#40;Visual Database Tools 中儲存您的工作&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
+ [儲存資料表設計工具中的工作 &#40;Visual Database Tools&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
  將變更儲存至特定資料表，或儲存至資料表設計工具中開啟的所有資料表。  
   
   

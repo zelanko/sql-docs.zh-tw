@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482806"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>載入資料 (適用於 Excel 的 MDS 增益集)
@@ -42,13 +42,13 @@ ms.locfileid: "65482806"
 |----------------------|-----------|  
 |在將 MDS 資料載入 Excel 之前篩選資料。|[載入 &#40;適用于 Excel 的 MDS 增益集之前先篩選資料&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |將 MDS 資料載入 Excel 中。|[將資料從 MDS 載入 Excel 中](export-data-to-excel-from-master-data-services.md)|  
-|在下載資料之前變更資料行的順序。|[重新排序適用于 Excel 的 MDS 增益集 &#40;資料行&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|在下載資料之前變更資料行的順序。|[重新排序資料行 &#40;適用於 Excel 的 MDS 增益集&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [適用于 Excel 的 MDS 增益集的連接 &#40;&#41;](connections-mds-add-in-for-excel.md)  
+-   [連接 &#40;適用於 Excel 的 MDS 增益集&#41;](connections-mds-add-in-for-excel.md)  
   
--   [&#40;適用于 Excel 的 MDS 增益集的快捷方式查詢檔案&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   

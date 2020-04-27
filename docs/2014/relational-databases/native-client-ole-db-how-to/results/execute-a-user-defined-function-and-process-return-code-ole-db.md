@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c5a54f678f9b52551523b04af4658539d98ef56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206705"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>執行使用者定義函數和處理傳回碼 (OLE DB)
@@ -364,6 +364,6 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果 how to 主題 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [處理結果操作說明主題 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

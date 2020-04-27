@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264886"
 ---
 # <a name="custom-report-item-class-libraries"></a>自訂報表項目類別庫
@@ -81,8 +81,7 @@ ms.locfileid: "63264886"
 |`LocalizedNameAttribute`|建構 LocalizedNameAttribute 物件。|  
   
 ### <a name="microsoftreportdesigneradornment"></a>Microsoft.ReportDesigner.Adornment  
- 
-  `Adornment` 類別會由自訂報表項目設計階段元件用於在設計介面主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。  
+ `Adornment` 類別會由自訂報表項目設計階段元件用於在設計介面主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。  
   
 #### <a name="public-methods"></a>公用方法  
   
@@ -132,8 +131,8 @@ ms.locfileid: "63264886"
 |`Fields`|要卸除的欄位集合 (`Microsoft.ReportDesigner.Field`)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [報表定義語言 &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
- [建立自訂報表項目執行階段元件](creating-a-custom-report-item-run-time-component.md)   
+ [&#40;SSRS&#41;的報表定義語言](../reports/report-definition-language-ssrs.md)   
+ [建立自訂報表專案執行時間元件](creating-a-custom-report-item-run-time-component.md)   
  [建立自訂報表項目設計階段元件](creating-a-custom-report-item-design-time-component.md)  
   
   

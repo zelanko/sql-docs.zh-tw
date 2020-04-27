@@ -11,29 +11,29 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480689"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
   本主題描述如何卸離和附加 DQS 資料庫。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Limitations"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 限制事項  
  如需限制事項的清單，請參閱 [資料庫卸離與附加 &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)中卸離資料庫。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需有關在此畫面工作的詳細資訊，請參閱＜ [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)＞。  
   
 -   確定沒有任何使用者登入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體之 db_owner 固定伺服器角色的成員，才能卸離 DQS 資料庫。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65480689"
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中終止任何執行中的活動或停止任何執行中的處理序。  
   
-##  <a name="Detach"></a>卸離 DQS 資料庫  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a>卸離 DQS 資料庫  
  當您使用 SQL Server Management Studio 卸離 DQS 資料庫時，卸離的檔案仍會保留在您的電腦上，可供您將其重新附加至相同的 SQL Server 執行個體，或是移到另一部伺服器並附加至該處。 DQS 資料庫檔案通常位於 Data Quality Services 電腦上的下列位置： C:\Program Files\Microsoft SQL Server\MSSQL12。*<Instance_Name>* \mssql\data。  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
@@ -56,16 +56,14 @@ ms.locfileid: "65480689"
   
  您也可以使用 Transact-SQL 陳述式，透過 sp_detach_db 預存程序卸離 DQS 資料庫。 如需有關使用 Transact-SQL 陳述式卸離資料庫的詳細資訊，請參閱＜ [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) ＞中的＜ [Detach a Database](../relational-databases/databases/detach-a-database.md)＞。  
   
-##  <a name="Attach"></a>附加 DQS 資料庫  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a>附加 DQS 資料庫  
  請使用下列指示，將 DQS 資料庫附加至相同的 SQL Server 執行個體 (原本卸離之處) 或是 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 安裝所在的另一個 SQL Server 執行個體。  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]**，然後按一下 **[附加]**。 
-  **[附加資料庫]** 對話方塊隨即出現。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]**，然後按一下 **[附加]**。 **[附加資料庫]** 對話方塊隨即出現。  
   
-3.  若要指定欲附加的資料庫，請按一下 **[加入]**。 
-  **[尋找資料庫檔案]** 對話方塊隨即出現。  
+3.  若要指定欲附加的資料庫，請按一下 **[加入]**。 **[尋找資料庫檔案]** 對話方塊隨即出現。  
   
 4.  選取資料庫所在的磁碟機、展開目錄樹狀結構，尋找並選取資料庫的 .mdf 檔案。 以 DQS_MAIN 資料庫為例：  
   
@@ -73,8 +71,7 @@ ms.locfileid: "65480689"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  
-  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下**流覽**按鈕（...）。  
+5.  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下**流覽**按鈕（...）。  
   
 6.  按一下 **[確定]** 以附加 DQS_MAIN 資料庫。  
   

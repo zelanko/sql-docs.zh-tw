@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "64568261"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>自訂 HTML 檢視器及報表管理員的樣式表
@@ -68,6 +68,6 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [HTML 檢視器和報告工具列](html-viewer-and-the-report-toolbar.md)   
- [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer 設定檔](report-server/rsreportserver-config-configuration-file.md)  
   
   

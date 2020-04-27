@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106420"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>運算式中的內建集合 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66106420"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a>瞭解內建集合  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> 了解內建集合  
  下表列出可在撰寫運算式時使用的內建集合。 每一列都包含該集合的區分大小寫程式設計名稱，以及您是否可以使用 [運算式] 對話方塊以互動的方式加入集合的參考、範例及描述 (包含初始化及提供集合值的時間)。  
   
 |內建集合|[運算式] 對話方塊中的類別目錄|範例|描述|  
@@ -39,15 +39,15 @@ ms.locfileid: "66106420"
 |`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|代表報表變數和群組變數的集合。 如需詳細資訊，請參閱[報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)。|  
 |`ReportItems`|不顯示|`=ReportItems("Textbox1").Value`|代表報表項目的文字方塊集合。 這個集合可以用來摘要頁面上的項目，以包含在頁首或頁尾中。 如需詳細資訊，請參閱 [ReportItems 集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)。|  
   
-##  <a name="Syntax"></a>在運算式中使用集合語法  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> 在運算式中使用集合語法  
  若要從運算式參考集合，請針對集合中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的專案使用標準語法。 下表顯示集合語法的範例。  
   
 |語法|範例|  
 |------------|-------------|  
 |*集合!ObjectName. Property*|`=Fields!Sales.Value`|  
 |*集合!ObjectName （"Property"）*|`=Fields!Sales("Value")`|  
-|*Collection （"ObjectName"）。Property*|`=Fields("Sales").Value`|  
-|*集合（"Member"）*|`=User("Language")`|  
+|*Collection("物件名稱").Property*|`=Fields("Sales").Value`|  
+|*Collection("成員")*|`=User("Language")`|  
 |*集合。成員*|`=User.Language`|  
   
 ## <a name="see-also"></a>另請參閱  

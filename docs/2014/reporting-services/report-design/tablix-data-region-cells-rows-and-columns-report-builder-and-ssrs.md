@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104652"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)
@@ -40,12 +40,12 @@ ms.locfileid: "66104652"
   
 |圖示|描述|  
 |----------|-----------------|  
-|![具有詳細資料列之三條平行線的資料列代碼](../media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼")|只有資料列群組階層上的詳細資料群組|  
-|![具有詳細資料列及一個外部群組的資料列代碼](../media/rs-icontablix-groupwithdetails.gif "具有詳細資料列及一個外部群組的資料列代碼")|一個外部群組和詳細資料子群組|  
-|![兩個平行括號顯示巢狀群組](../media/rs-icontablix-nestedgroupnodetails.gif "兩個平行括號顯示巢狀群組")|一個外部群組、一個內部群組，沒有詳細資料群組|  
-|![2個括弧 & 嵌套 & 詳細資料的3個堆疊線條](../media/rs-icontablix-nestedgroupwithdetails.gif "2 個括號 & 巢狀 & 詳細資料的 3 個堆疊線")|一個外部群組、一個內部群組和詳細資料子群組|  
-|![具有頁尾資料列和內部群組的一個外部群組、一個內部群組](../media/rs-icontablix-nestedgroupwithparentfooter.gif "具有頁尾資料列和內部群組的一個外部群組、一個內部群組")|包含詳細資料之頁尾資料列的一個外部群組，以及一個內部群組|  
-|![外部群組括號、內部群組括號、詳細資料](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部群組括號、內部群組括號、詳細資料")|包含詳細資料之頁尾資料列的一個外部群組、包含總計之頁尾資料列的一個內部群組，以及一個詳細資料列|  
+|![具有 3 條平行線代表詳細資料列的資料列控制代碼](../media/rs-icontablix-detailsrow.gif "具有 3 條平行線代表詳細資料列的資料列控制代碼")|只有資料列群組階層上的詳細資料群組|  
+|![具有詳細資料列及一個外部群組的資料列控制代碼](../media/rs-icontablix-groupwithdetails.gif "具有詳細資料列及一個外部群組的資料列控制代碼")|一個外部群組和詳細資料子群組|  
+|![兩個平行方括弧顯示巢狀群組](../media/rs-icontablix-nestedgroupnodetails.gif "兩個平行方括弧顯示巢狀群組")|一個外部群組、一個內部群組，沒有詳細資料群組|  
+|![2 個方括弧和 3 個堆疊線代表巢狀與詳細資料](../media/rs-icontablix-nestedgroupwithdetails.gif "2 個方括弧和 3 個堆疊線代表巢狀與詳細資料")|一個外部群組、一個內部群組和詳細資料子群組|  
+|![具有頁尾資料列的一個外部群組、一個內部群組](../media/rs-icontablix-nestedgroupwithparentfooter.gif "具有頁尾資料列的一個外部群組、一個內部群組")|包含詳細資料之頁尾資料列的一個外部群組，以及一個內部群組|  
+|![外部群組方括弧、內部群組方括弧、詳細資料](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部群組方括弧、內部群組方括弧、詳細資料")|包含詳細資料之頁尾資料列的一個外部群組、包含總計之頁尾資料列的一個內部群組，以及一個詳細資料列|  
 |![父頁首和頁尾，以及子群組](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "父頁首和頁尾，以及子群組")|包含標籤頁首及總計頁尾的一個外部群組，以及一個內部群組，沒有詳細資料群組|  
   
 ### <a name="group-rows"></a>群組資料列  
@@ -84,11 +84,11 @@ ms.locfileid: "66104652"
   
  下圖顯示 Tablix 資料區域與巢狀資料列群組，以及詳細資料群組。  
   
- ![設計檢視，新增總資料列至群組和資料表](../media/rs-basictablegroupstotalscolordesign.gif "設計檢視，新增總資料列至群組和資料表")  
+ ![設計檢視表，將總計資料列新增至群組和資料表](../media/rs-basictablegroupstotalscolordesign.gif "設計檢視表，將總計資料列新增至群組和資料表")  
   
  若是顯示詳細資料的 Tablix 資料區域，詳細資料群組為最內部的子群組。 加入到詳細資料群組的資料列會針對連結到此 Tablix 資料區域之資料集查詢結果集中的每個資料列重複一次。 下圖顯示轉譯之報表的最後一頁。 在本圖中，您可以看到最後一個詳細資料列以及最後一個訂單的小計資料列。  
   
- ![預覽，具有群組總計的資料表、最後資料列](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "預覽，具有群組總計的資料表、最後資料列")  
+ ![預覽，具有群組總計的資料表、最後的資料列](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "預覽，具有群組總計的資料表、最後的資料列")  
   
  對於 Tablix 資料區域中的每個資料行而言，則適用相同的原則。 例如，資料行位於每個資料行群組的內部或外部；若要顯示總計，請在群組外部加入資料行。  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110149"
 ---
 # <a name="viewing-tuning-reports"></a>檢視微調報表
@@ -46,6 +46,6 @@ ms.locfileid: "66110149"
  現在，您已在 Database Engine Tuning Advisor GUI 的 [報表]**** 索引標籤中，探索了 MySession 微調工作階段。 您可以利用這些相同的步驟來探索針對 EvaluateMySession 微調工作階段而產生的報表。 請在 [工作階段監視器]**** 窗格中，按兩下 [EvaluateMySession]**** 來開始作業。  
   
 ## <a name="next-lesson"></a>下一課  
- [課程 3：使用 dta 命令提示字元公用程式](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [第 3 課：使用 dta 命令提示字元公用程式](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

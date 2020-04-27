@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264724"
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自訂組件
-  若要在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]部署自訂群組件，請將元件放在報表設計師和報表伺服器的應用程式資料夾中。 依預設，會授與自訂組件在 `Execution` 中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限。 若要授與執行權限以外的自訂組件權限，您必須編輯報表伺服器的 rssrvpolicy.config 設定檔，以及報表設計師預覽視窗的 rspreviewpolicy.config 設定檔。 或者，您可以在全域組件快取 (GAC) 中安裝自訂組件。  
+  若要在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]部署自訂群組件，請將元件放在報表設計師和報表伺服器的應用程式資料夾中。 依預設，會授與自訂組件在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 `Execution` 權限。 若要授與執行權限以外的自訂組件權限，您必須編輯報表伺服器的 rssrvpolicy.config 設定檔，以及報表設計師預覽視窗的 rspreviewpolicy.config 設定檔。 或者，您可以在全域組件快取 (GAC) 中安裝自訂組件。  
   
 > [!NOTE]  
 >  報表設計師有兩個預覽模式：當在 `DebugLocal` 模式中啟動報表專案時，會啟動[預覽] 索引標籤與快顯預覽視窗。 [預覽] 索引標籤會使用 `FullTrust` 權限來執行所有的報表運算式，而且不會套用安全性原則設定。 快顯預覽視窗是用以模擬報表伺服器功能，因此具有原則組態檔，而且您或系統管理員必須修改該檔案，才能在報表設計師中使用自訂組件。 此快顯預覽也會鎖定自訂組件。 因此，您需要關閉預覽視窗，才能修改或是更新自訂組件程式碼。  
@@ -63,6 +63,6 @@ ms.locfileid: "63264724"
   
 ## <a name="see-also"></a>另請參閱  
  [將自訂群組件與報表搭配使用](using-custom-assemblies-with-reports.md)   
- [使用元件和全域組件快取](https://go.microsoft.com/fwlink/?LinkId=63912)  
+ [使用組件和全域組件快取](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

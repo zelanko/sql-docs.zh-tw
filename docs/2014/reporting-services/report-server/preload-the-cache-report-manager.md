@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103592"
 ---
 # <a name="preload-the-cache-report-manager"></a>預先載入快取 (報表管理員)
@@ -35,8 +35,7 @@ ms.locfileid: "66103592"
   
 -   共用資料集或報表的共用資料來源必須設定為使用預存的認證或無認證。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務必須執行。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務必須執行。  
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>若要透過建立快取重新整理計劃以預先載入快取  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66103592"
     Select * from UserInfo  
     ```  
   
-10. 按一下 [驗證]****。 必須先驗證查詢，才能繼續。 出現 **[成功驗證查詢]** 訊息時，請按 **[下一步]**。  
+10. 按一下 **[驗證]** 。 必須先驗證查詢，才能繼續。 出現 **[成功驗證查詢]** 訊息時，請按 **[下一步]**。  
   
 11. 您無法設定 Null 傳遞提供者之傳遞延伸模組的設定，所以請按 **[下一步]**。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "66103592"
   
 ## <a name="see-also"></a>另請參閱  
  [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
- [&#40;SSRS 教學課程建立資料驅動訂閱&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [效能、快照、快取 &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [設定報表處理屬性](set-report-processing-properties.md)   
  [快取報表 &#40;SSRS&#41;](caching-reports-ssrs.md)  

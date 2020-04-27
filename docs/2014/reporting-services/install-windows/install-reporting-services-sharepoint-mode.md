@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef049b4ded6408e651d5ec2c3db99c10bf7c27b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108770"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services SharePoint 模式安裝 (SharePoint 2010 和 SharePoint 2013)
@@ -46,13 +46,13 @@ ms.locfileid: "66108770"
   
  [安裝或卸載適用于 SharePoint &#40;SharePoint 2010 和 SharePoint 2013 的 Reporting Services 增益集&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
- [何處可以找到適用于 SharePoint 產品的 Reporting Services 增益集](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
+ [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [將其他報表伺服器加入至伺服器陣列 &#40;SSRS 相應放大&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [將其他報表伺服器加入至伺服器陣列 &#40;SSRS 向外延展&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [將其他 Reporting Services Web 前端加入至伺服器陣列](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [&#40;SharePoint 2010 和 SharePoint 2013 設定 Reporting Services 服務應用程式的電子郵件&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2010 和 SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [SSRS 服務應用程式的佈建訂閱及警示](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   

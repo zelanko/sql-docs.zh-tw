@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84339eab432194327759fbdad505cdb1af60517b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479421"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分類的 Web 服務作業 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務包含一組完整的作業，可讓您撰寫程式[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]代碼來控制透過其使用者介面執行的所有功能。 這些 Web 服務作業是透過 <xref:Microsoft.MasterDataServices.IService> 介面定義，並當做 <xref:Microsoft.MasterDataServices.ServiceClient> 類別中的方法實作。 本主題將 Web 服務作業分為概念性類別目錄，以協助您了解如何使用 Web 服務 API。  
+   Web 服務包含一組完整的作業，這組作業可讓您撰寫程式碼以控制  透過其使用者介面所執行的所有功能。 這些 Web 服務作業是透過 <xref:Microsoft.MasterDataServices.IService> 介面定義，並當做 <xref:Microsoft.MasterDataServices.ServiceClient> 類別中的方法實作。 本主題將 Web 服務作業分為概念性類別目錄，以協助您了解如何使用 Web 服務 API。  
   
 ## <a name="model-operations"></a>模型作業  
  這些作業用於建立、更新與刪除模型，以及針對模型的所有內容操作，例如實體、階層和版本。 如需詳細資訊，請參閱[模型 &#40;Master Data Services&#41;](../models-master-data-services.md)。  

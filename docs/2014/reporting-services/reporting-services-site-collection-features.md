@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9475ee323222b800a9c4b9a86e737fdd161e7a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102756"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式提供了三個 SharePoint 網站集合功能。 這些功能支援一般 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式報表環境、適用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]Enterprise Edition 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集功能 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] ，以及 SharePoint 管理中心內 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的管理作業。  
   
 ## <a name="site-collection-features"></a>網站集合功能  
@@ -33,6 +32,6 @@ ms.locfileid: "66102756"
 ## <a name="see-also"></a>另請參閱  
  [在 SharePoint 中啟用報表伺服器和 Power View 整合功能](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
  [&#40;SharePoint 模式下 Reporting Services 網站設定和網站功能&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)   
- [在 SharePoint 管理中心內啟用報表伺服器檔案同步處理功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
+ [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
   

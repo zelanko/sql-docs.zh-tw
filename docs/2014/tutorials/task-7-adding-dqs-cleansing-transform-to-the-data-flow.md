@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488947"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>工作 7：將 DQS 清理轉換加入至資料流程
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>工作 7：將 DQS 清理轉換新增至資料流程
   在這項工作中，您將使用 DQS 將 DQS 清理轉換加入至資料流程來清理輸入供應商資料。 如需有關轉換的詳細資訊，請參閱**[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)**。  
   
 1.  以滑鼠右鍵**按一下 [資料流程**] 索引標籤中的 [ **DQS 清理**]，然後按一下 [**重新命名**] 輸入**清理供應商資料**，然後按**enter**。  
@@ -34,7 +34,7 @@ ms.locfileid: "65488947"
   
 6.  按一下 [**測試連接**] 來測試 DQS 伺服器的連接。  
   
-7.  按一下 **[確定]** ，關閉對話方塊。  
+7.  按一下 [確定]**** 關閉對話方塊。  
   
 8.  針對 [**資料品質知識庫**] 選取 [**供應商**]。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "65488947"
 12. 按一下 **[確定]** 以關閉 [ **DQS 清理轉換編輯器**] 對話方塊。  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 8：加入條件式分割轉換來分割清理輸出](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [工作 8：新增條件式分割轉換來分割清理輸出](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

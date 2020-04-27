@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261687"
 ---
 # <a name="queue-reader-agent-security"></a>佇列讀取器代理程式安全性
@@ -34,7 +34,7 @@ ms.locfileid: "63261687"
  輸入 Windows 帳戶的密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [管理複寫中的登入和密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [複寫代理程式安全性模型](security/replication-agent-security-model.md)   
  [複寫代理程式概觀](agents/replication-agents-overview.md)   
  [複寫安全性最佳作法](security/replication-security-best-practices.md)  

@@ -11,20 +11,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312556"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>選取鍵盤快速鍵配置
   除了標準 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 鍵盤配置，您可以設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用與 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]相容的鍵盤配置。  
   
-## <a name="changing-to-the-includevs_dev10_longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>變更為 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 鍵盤配置  
+## <a name="changing-to-the-vs_dev10_long-keyboard-scheme"></a>變更為 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 鍵盤配置  
   
-#### <a name="to-apply-includevs_dev10_longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>若要套用 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 相容的鍵盤配置  
+#### <a name="to-apply-vs_dev10_long-compatible-keyboard-scheme"></a>若要套用 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 相容的鍵盤配置  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
 2.  展開 [環境]****，再按一下 [鍵盤]****。  
   
@@ -37,6 +37,6 @@ ms.locfileid: "63312556"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Management Studio 鍵盤快速鍵](../sql-server-management-studio-keyboard-shortcuts.md)   
- [自訂功能表與快速鍵](../customize-menus-and-shortcut-keys.md)  
+ [自訂功能表和快速鍵](../customize-menus-and-shortcut-keys.md)  
   
   

@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479539"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案，以便根據您所指定的條件，自動更新與驗證資料，並傳送電子郵件通知。 當您需要做的處理比內建工作流程動作所提供的處理還要複雜時，請使用自訂工作流程。 自訂工作流程是您所建立的 .NET 組件。 呼叫您的工作流程組件時，程式碼會採取您的情況所需的任何動作。 例如，如果您的工作流程需要自訂的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 啟動一個自訂工作流程，這個工作流程會分析資料並決定將該資料傳送至何處以待審核。  
   
 ## <a name="how-custom-workflows-are-processed"></a>如何處理自訂工作流程  
@@ -26,8 +25,7 @@ ms.locfileid: "65479539"
   
 1.  您要使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 驗證啟動工作流程的實體。  
   
-2.  
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 會將符合商務規則條件的成員傳送至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫中的 Service Broker 佇列。  
+2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 會將符合商務規則條件的成員傳送至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫中的 Service Broker 佇列。  
   
 3.  SQL Server MDS 工作流程整合服務會定期呼叫 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫中的預存程序。  
   
@@ -89,10 +87,7 @@ ms.locfileid: "65479539"
     </setting>  
     ```  
   
-     
-  \<值> 標記的內部文字採用 \<工作流程標記>=\<組件限定工作流程類型名稱> 的格式。 
-  \<工作流程標記> 是在您於[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]中建立商務規則時，用來識別工作流程處理常式組件的名稱。 
-  \<組件限定工作流程類型名稱> 是您工作流程類別的命名空間限定名稱，後面加上一個逗號，再加上組件的顯示名稱。 如果您的組件具備強式名稱，也必須包含版本資訊及其 PublicKeyToken。 如果您已經為不同種類的工作流程建立多個工作流程處理常式，則可以包含多個 \<設定> 標記。  
+     \<值> 標記的內部文字採用 \<工作流程標記>=\<組件限定工作流程類型名稱> 的格式。 \<工作流程標記> 是在您於[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]中建立商務規則時，用來識別工作流程處理常式組件的名稱。 \<組件限定工作流程類型名稱> 是您工作流程類別的命名空間限定名稱，後面加上一個逗號，再加上組件的顯示名稱。 如果您的組件具備強式名稱，也必須包含版本資訊及其 PublicKeyToken。 如果您已經為不同種類的工作流程建立多個工作流程處理常式，則可以包含多個 \<設定> 標記。  
   
 > [!NOTE]  
 >  根據您伺服器的設定，可以在嘗試儲存 Microsoft.MasterDataServices.Workflow.exe.config 檔案時，看到「存取遭拒」錯誤。 如果發生這個情形，請暫時停用伺服器上的 [使用者帳戶控制 (UAC)]。 若要這麼做，開啟 [控制台]，然後按一下 [系統及安全性]****。 在 [控制中心]**** 底下，按一下 [變更使用者帳戶控制設定]****。 在 [使用者帳戶控制設定]**** 對話方塊中，將長條滑動到底部，讓您絕不會收到通知。 重新啟動電腦，然後重複以上的步驟以編輯您的組態檔。 儲存此檔案之後，將您的 UAC 設定重設為預設層級。  
@@ -106,7 +101,7 @@ ms.locfileid: "65479539"
   
 3.  授與 mds_workflow_service 使用者權限以執行工作流程處理常式組件。 若要這麼做，請將 mds_workflow_service user 新增至工作流程處理常式組件之 [內容]**** 的 [安全性]**** 索引標籤，然後授與 mds_workflow_service user 的 READ 和 EXECUTE 權限。  
   
-4.  授與 mds_workflow_service 使用者權限以執行 SQL Server MDS 工作流程整合服務可執行檔。 若要這麼做，請將 mds_workflow_service user 新增至 Microsoft.MasterDataServices.Workflow.exe (位於 **您的安裝資料夾>\Master Data Services\WebApplication\bin) 之 [內容]**** 的 [安全性]**\< 索引標籤，並授與 mds_workflow_service user 的 READ 和 EXECUTE 權限。  
+4.  授與 mds_workflow_service 使用者權限以執行 SQL Server MDS 工作流程整合服務可執行檔。 若要這麼做，請將 mds_workflow_service user 新增至 Microsoft.MasterDataServices.Workflow.exe (位於 \<您的安裝資料夾>\Master Data Services\WebApplication\bin) 之 [內容]**** 的 [安全性]**** 索引標籤，並授與 mds_workflow_service user 的 READ 和 EXECUTE 權限。  
   
 5.  使用名稱為 InstallUtil.exe 的 .NET 安裝公用程式，安裝 SQL Server MDS 工作流程整合服務。 InstallUtil.exe 可以在 .NET 安裝資料夾 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.30319\\) 中找到。 在提升權限的命令提示字元下輸入以下內容，安裝 SQL Server MDS 工作流程整合服務：  
   
@@ -123,7 +118,7 @@ ms.locfileid: "65479539"
   
  依照以下步驟，建立在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中啟動自訂工作流程的商務規則。  
   
-1.  在的商務規則編輯器中[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]，在您指定商務規則的條件之後，將 [**啟動工作流程**] 動作從 [**外部動作**] 清單拖曳到 [ **THEN** ] 窗格的 [**動作**] 標籤。  
+1.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的商務規則編輯器中指定您商務規則的條件之後，將 [啟動工作流程]**** 動作從 [外部動作]**** 清單拖曳到 [THEN]**** 窗格的 [動作]**** 標籤中。  
   
 2.  在 [編輯動作]**** 窗格的 [工作流程類型]**** 方塊中，輸入可識別您工作流程處理常式組件的標記。 這是您在組態檔中，為組件指定的標記，例如 TEST。  
   
@@ -136,8 +131,7 @@ ms.locfileid: "65479539"
 6.  儲存並發佈商務規則。  
   
 ### <a name="apply-business-rules-to-start-a-workflow"></a>套用商務規則以啟動工作流程  
- 將商務規則套用至您的資料以啟動工作流程。 若要這麼做，請使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 編輯包含您要驗證之成員的實體。 按一下 [套用商務規則]****。 
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 會擴展 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的 Service Broker 佇列，以回應商務規則。 當 SQL Server MDS 工作流程整合服務檢查佇列時，會將資料傳送至指定的工作流程處理常式組件，然後清除佇列。 工作流程處理常式組件會執行您已經為其撰寫程式碼的動作。  
+ 將商務規則套用至您的資料以啟動工作流程。 若要這麼做，請使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 編輯包含您要驗證之成員的實體。 按一下 [套用商務規則]****。 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 會擴展 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的 Service Broker 佇列，以回應商務規則。 當 SQL Server MDS 工作流程整合服務檢查佇列時，會將資料傳送至指定的工作流程處理常式組件，然後清除佇列。 工作流程處理常式組件會執行您已經為其撰寫程式碼的動作。  
   
 ## <a name="troubleshoot-custom-workflows"></a>疑難排解自訂工作流程  
  如果您的工作流程處理常式組件沒有收到資料，可以嘗試為 SQL Server MDS 工作流程整合服務偵錯，或檢視 Service Broker 佇列。  

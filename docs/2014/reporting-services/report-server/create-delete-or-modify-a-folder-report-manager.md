@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103919"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>建立、刪除或修改資料夾 (報表管理員)
@@ -59,7 +59,7 @@ ms.locfileid: "66103919"
   
 2.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 [一般屬性] 頁面隨即開啟。  
+3.  在下拉式功能表中，按一下 **[管理]**。 [一般屬性] 頁面隨即開啟。  
   
 4.  若要變更資料夾位置，請按一下 [移動]****。 鍵入目的資料夾的位置，或者從樹狀目錄中選擇目的資料夾，然後按一下 [確定]****。  
   

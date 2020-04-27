@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483077"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
@@ -29,16 +29,16 @@ ms.locfileid: "65483077"
 > [!IMPORTANT]  
 >  封裝只能部署到之前建立封裝所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 這表示，在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中建立的套件無法部署到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 或更高版本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   在目標 ** 環境中，您必須擁有存取 [系統管理]**[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能區域的權限。  
+-   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]**** 功能區域的權限。  
   
 -   模型部署封裝必須存在。 如需詳細資訊，請參閱  [使用 MDSModelDeploy 建立模型部署套件](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
--   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
--   如果您正在使用資料更新模型，您所部署的目標版本不得為 [已鎖定]**** 或 [已認可]****。  
+-   如果您要使用資料更新模型，您所部署的版本就無法**鎖定**或**認可**。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>若要部署模型部署封裝  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65483077"
   
 6.  當成功部署套件後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
   
- **紀錄**  
+ **注意：**  
   
 -   如果封裝中的訂閱視圖與現有模型中的訂閱視圖具有相同的名稱，則會將此視圖建立為*modelname. modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "65483077"
      更新模型時，如果此程序在前三個步驟期間失敗，就不會繼續進行，但是，並不會回復已經進行的變更。 如果此程序在步驟 4 失敗，則會更新可以更新的成員。  
   
 ## <a name="next-steps"></a>後續步驟  
- 使用者定義的中繼資料、檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱  
+ 使用者定義的中繼資料、檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱：  
   
 -   [新增中繼資料 &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
--   [指派模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [指派模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Master Data Services 部署模型&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

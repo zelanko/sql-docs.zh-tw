@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312104"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 課：執行購物籃預測
@@ -88,7 +88,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
@@ -102,7 +102,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Default Association]  
@@ -117,7 +117,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -125,8 +125,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     此陳述式會使用 `UNION` 陳述式來指定三項產品，而這些產品必須連同預測的產品一起加入購物車內。 
-  `SELECT` 陳述式中的 Model 資料行會對應到巢狀產品資料表所包含的模型資料行。  
+     此陳述式會使用 `UNION` 陳述式來指定三項產品，而這些產品必須連同預測的產品一起加入購物車內。 `SELECT` 陳述式中的 Model 資料行會對應到巢狀產品資料表所包含的模型資料行。  
   
      現在，完整的陳述式應該如下所示：  
   
@@ -163,7 +162,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     PREDICT([Modified Association].[Products],INCLUDE_STATISTICS,3)  
@@ -175,7 +174,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     [Modified Association]  
@@ -190,7 +189,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     取代為  
+     成為：  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -198,8 +197,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     此陳述式會使用 `UNION` 陳述式來指定三項產品，而這些產品必須連同預測的產品一起加入購物車內。 
-  `[Model]` 陳述式中的 `SELECT` 資料行會對應到巢狀產品資料表中的資料行。  
+     此陳述式會使用 `UNION` 陳述式來指定三項產品，而這些產品必須連同預測的產品一起加入購物車內。 `SELECT` 陳述式中的 `[Model]` 資料行會對應到巢狀產品資料表中的資料行。  
   
      現在，完整的陳述式應該如下所示：  
   

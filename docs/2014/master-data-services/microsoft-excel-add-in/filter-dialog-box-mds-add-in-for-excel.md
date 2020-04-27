@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482560"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選]**** 對話方塊。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]在中，您可以使用 [**篩選**] 對話方塊，在將 MDS 管理的資料載入 Excel 之前縮小其清單範圍。  
   
  這個對話方塊包含三個區段：[資料行]****、[資料列]**** 和 [摘要]****。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65482560"
 |------------------|-----------------|  
 |模型|模型的名稱。|  
 |版本|版本的名稱。|  
-|實體|實體的名稱。|  
+|單位|實體的名稱。|  
 |資料列|根據 [資料列]**** 區段中套用的篩選，即將載入 Excel 中的資料列數目。|  
 |資料行|根據 [資料行]**** 區段中選取的屬性，即將載入 Excel 中的資料行數目。|  
   

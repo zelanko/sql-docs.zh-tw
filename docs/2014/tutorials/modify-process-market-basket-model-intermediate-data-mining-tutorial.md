@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301366"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>修改及處理購物籃模型 (中繼資料採礦教學課程)
@@ -50,7 +50,7 @@ ms.locfileid: "63301366"
   
      [**進程採礦結構-關聯**] 對話方塊隨即開啟。  
   
-3.  按一下 **[執行]** 。  
+3.  按一下 [執行]****。  
   
      [**處理進度**] 對話方塊隨即開啟，以顯示模型處理的相關資訊。 處理新的結構和模型可能需要花一些時間。  
   
@@ -62,6 +62,6 @@ ms.locfileid: "63301366"
  [流覽購物籃模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;資料採礦&#41;的處理需求和考慮](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 (資料採礦)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109703"
 ---
 # <a name="control-report-distribution"></a>控制報表散發
@@ -39,7 +39,7 @@ ms.locfileid: "66109703"
 ## <a name="controlling-e-mail-delivery"></a>控制電子郵件傳遞  
  您可以設定報表伺服器，來限制只能散發電子郵件至特定主機網域。 例如，您可以防止報表伺服器將報表傳遞至 RSReportServer 組態檔中所列網域以外的所有網域。  
   
- 您也可以組態組態設定，以隱藏訂閱中的 [收件者]**** 欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
+ 您也可以組態組態設定，以隱藏訂閱中的 [收件者]  欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
   
  控制報表散發最有效的方式，是將報表伺服器設定為只傳送報表伺服器 URL。 報表伺服器使用 Windows 驗證和以角色為基礎的驗證模型，來控制對報表的存取。 如果使用者意外地透過電子郵件接收到未被授權檢視的報表，報表伺服器將不會顯示報表。  
   

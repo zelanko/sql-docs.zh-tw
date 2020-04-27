@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478798"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>將資料從 Excel 發行至 MDS (適用於 Excel 的 MDS 增益集)
@@ -24,14 +24,14 @@ ms.locfileid: "65478798"
 >  -   當您發行變更時，系統會刪除 MDS 管理之資料格的註解。  
 > -   MDS 管理的資料格中不支援公式。 MDS 管理之資料格中的公式會處理為文字值。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 -   使用中工作表必須包含 MDS 管理的資料，而且您必須已經對 MDS 管理的資料進行變更或加入作業。  
   
--   如果您要加入成員，而且系統會自動產生實體的代碼，您就不需要指定 **Code** 值。 如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../automatic-code-creation-master-data-services.md)。  
+-   如果您要加入成員，而且系統會自動產生實體的代碼，您就不需要指定 **Code** 值。 如需詳細資訊，請參閱[自動建立程式碼 &#40;Master Data Services&#41;](../automatic-code-creation-master-data-services.md)。  
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>若要將資料發行至 MDS 儲存機制  
   
@@ -47,10 +47,10 @@ ms.locfileid: "65478798"
 >  如果您要將新的成員 (資料列) 加入至工作表，但是無法順利將它們發行至 MDS 儲存機制，表示您可能沒有工作表中所有屬性的 [更新]**** 權限。 在 [檢閱]**** 索引標籤上，按一下 [變更]**** 群組中的 [取消保護工作表]****，再次嘗試發行。  
   
 ## <a name="next-steps"></a>後續步驟  
- [套用商務規則 &#40;適用于 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料 &#40;適用于 Excel 的 MDS 增益集&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [驗證適用于 Excel 的 MDS 增益集&#41;的資料 &#40;](validating-data-mds-add-in-for-excel.md)  
+ [驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

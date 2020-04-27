@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63256063"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用以原則為基礎的管理來管理伺服器
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用原則式管理來管理伺服器
   歡迎使用「使用以原則為基礎的管理原則來管理伺服器」教學課程。 本教學課程的主要對象是熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但剛接觸以原則為基礎之管理的使用者。  
   
 ## <a name="what-you-will-learn"></a>學習內容  

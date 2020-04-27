@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316199"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>關閉追蹤視窗 (SQL Server Profiler)
@@ -33,7 +33,7 @@ ms.locfileid: "63316199"
 >  如果正在執行追蹤，關閉追蹤視窗將停止相關聯的追蹤。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler 範本和權限](sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和許可權](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

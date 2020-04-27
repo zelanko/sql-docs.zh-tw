@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478848"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Master Data Services 伺服器組態頁面 (組態管理員)
@@ -27,6 +27,6 @@ ms.locfileid: "65478848"
 |控制項名稱|描述|  
 |------------------|-----------------|  
 |**Windows PowerShell**|顯示安裝在本機電腦上之 Windows PowerShell 的版本。 若要使用 Master Data Services 組態管理員，必須有 Windows PowerShell 1.0 版本或更新版本。|  
-|**網際網路資訊服務**|顯示安裝在本機電腦上的 Internet Information Services (IIS) 版本。 若要使用 Master Data Services 組態管理員，必須有 IIS 7.0 版本或更新版本。|  
+|**Internet Information Services**|顯示安裝在本機電腦上的 Internet Information Services (IIS) 版本。 若要使用 Master Data Services 組態管理員，必須有 IIS 7.0 版本或更新版本。|  
   
   

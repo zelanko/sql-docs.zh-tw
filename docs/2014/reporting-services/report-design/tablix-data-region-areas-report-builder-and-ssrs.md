@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104717"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 資料區的區域 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104717"
   
  在設計介面上，虛線會指出所選取之 Tablix 資料區的四個區域。 下圖顯示 Tablix 區域中，具有以類別目錄和子類別目錄為基礎的巢狀資料列群組、以地理和國家 (地區) 為基礎的巢狀資料行群組，以及以年為基礎的相鄰資料行群組的區域。  
   
- ![Tablix 資料區區域](../media/rs-tablixareas.gif "Tablix 資料區域")  
+ ![Tablix 資料區區域](../media/rs-tablixareas.gif "Tablix 資料區的區域")  
   
  下列清單具有每個區域的描述：  
   
@@ -41,16 +41,16 @@ ms.locfileid: "66104717"
   
  下圖顯示預覽中的 Tablix 資料區。  
   
- ![預覽、Tablix 邊角、資料列 & 資料行群組、主體](../media/rs-tablixareaspreview.gif "預覽，Tablix 邊角、資料列和資料行群組、主體")  
+ ![預覽，Tablix 邊角、資料列和資料行群組、主體](../media/rs-tablixareaspreview.gif "預覽，Tablix 邊角、資料列和資料行群組、主體")  
   
  資料列群組區域會為 Clothing 和 Components 顯示兩個類別目錄群組執行個體。 資料行群組會為 North America 顯示地理群組執行個體，其中具有 Canada (CA) 和 United States (US) 的兩個巢狀國家 (地區) 群組執行個體。 另外，相鄰的資料行會為 2003 和 2004 顯示兩個年群組執行個體。 [總計] 資料行資料列會顯示資料列總計；類別目錄群組所重複的總計資料列會顯示子類別目錄總計，而全部總計資料列則會針對資料區域顯示一次類別目錄的總計。  
   
 ## <a name="see-also"></a>另請參閱  
- [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [列出 &#40;報表產生器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [教學課程 &#40;報表產生器&#41;](../report-builder-tutorials.md)   
- [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
- [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [清單 &#40;報表產生器及 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [資料表 &#40;報表產生器和 SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;的矩陣](create-a-matrix-report-builder-and-ssrs.md)   
+ [列出 &#40;報表產生器和 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

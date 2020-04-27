@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107042"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
@@ -126,10 +126,10 @@ ms.locfileid: "66107042"
   
  在這些狀況下，報表伺服器會使用您必須事先定義的自動執行帳戶連接到遠端資料來源。 報表伺服器未利用它的服務認證連接到遠端伺服器，因此，您必須指定帳戶，讓報表伺服器能夠用於進行連接。 如需建立此帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-##  <a name="DataSourceConfigurationConnections"></a>資料來源設定和網路連接  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> 資料來源組態和網路連接  
  下表顯示如何為認證類型和資料處理延伸模組的特定組合進行連接。 如果您要使用自訂資料處理延伸模組，請參閱 [為自訂資料處理延伸模組指定連接](specify-connections-for-custom-data-processing-extensions.md)。  
   
-|**型別**|**網路連接的內容**|**資料來源類型**<br /><br /> **（SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase）**|  
+|**類型**|**網路連接的內容**|**資料來源類型**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |整合式安全性|模擬目前的使用者|針對所有資料來源類型，利用目前的使用者帳戶來連接。|  
 |Windows 認證|模擬指定的使用者|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模擬使用者帳戶進行連接。|  

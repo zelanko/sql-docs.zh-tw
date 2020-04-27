@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101672"
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
@@ -77,7 +77,7 @@ ms.locfileid: "66101672"
  （create-and-manage-role-assignments.md）   
  [設定報表產生器存取](../report-server/configure-report-builder-access.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)   
- [保護共用資料來源項目的安全](secure-shared-data-source-items.md)   
- [在 Reporting Services 資料來源中儲存認證](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [保護共用資料來源專案的安全](secure-shared-data-source-items.md)   
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

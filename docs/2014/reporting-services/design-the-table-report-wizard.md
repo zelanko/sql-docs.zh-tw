@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 056e96963c9e8f6450861fb6a54e496b406d0daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109275"
 ---
 # <a name="design-the-table-report-wizard"></a>設計資料表 (報表精靈)
@@ -32,14 +32,14 @@ ms.locfileid: "66109275"
  **頁面**  
  檢視在頁面層級顯示的欄位清單。 若要變更欄位的順序，請選取欄位，然後按一下向上按鈕或向下按鈕。  
   
- **小組**  
+ **群組**  
  檢視在資料表中用來群組資料的欄位清單。 若要變更欄位的順序，請選取欄位，然後按一下向上按鈕或向下按鈕。  
   
  **詳細資料**  
  檢視在資料表的詳細資料區段中顯示的欄位清單。 若要變更欄位的順序，請選取欄位，然後按一下向上按鈕或向下按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表 &#40;報表產生器及 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [資料表 &#40;報表產生器和 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [報表精靈說明](../../2014/reporting-services/report-wizard-help.md)  
   
   

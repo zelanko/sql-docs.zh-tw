@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482663"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
@@ -45,12 +45,12 @@ ms.locfileid: "65482663"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|將使用中工作表的內容儲存為捷徑查詢檔案。|[儲存快捷方式查詢檔案 &#40;適用于 Excel 的 MDS 增益集&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|將代表使用中工作表內容的捷徑查詢檔案以電子郵件送出。|[以電子郵件傳送快捷方式查詢檔案 &#40;適用于 Excel 的 MDS 增益集&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|將使用中工作表的內容儲存為捷徑查詢檔案。|[儲存捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|將代表使用中工作表內容的捷徑查詢檔案以電子郵件送出。|[以電子郵件傳送捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [適用于 Excel 的 MDS 增益集的連接 &#40;&#41;](connections-mds-add-in-for-excel.md)  
+-   [連接 &#40;適用於 Excel 的 MDS 增益集&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   

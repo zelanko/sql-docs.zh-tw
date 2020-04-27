@@ -15,19 +15,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483418"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
   當[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]您想要在系統中加入主要資料，而不是使用臨時表或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]匯入資料時，可以在中建立分葉成員。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 -   針對要加入成員之實體的分葉模型物件，您至少必須擁有 [**更新**] 許可權。  
   

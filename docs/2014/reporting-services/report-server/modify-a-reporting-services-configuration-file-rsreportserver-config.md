@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103754"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -35,7 +35,7 @@ ms.locfileid: "66103754"
   
 -   [編輯 Reporting Services 組態檔](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> 讀取和使用組態值  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> 讀取和使用組態值  
  當服務啟動時，以及每次系統儲存組態檔時，報表伺服器都會讀取組態檔。 目前的應用程式網域過期之後，全新和修訂的值才會在新的應用程式網域中生效。 系統會盡可能讓仍然在目前應用程式網域中處理的要求完成。 不過，少數設定需要進行立即應用程式網域回收作業。 在這種情況下，所有處理中的要求都會在新的應用程式網域中重新啟動。  
   
  如果報表伺服器偵測到無效的值，報表伺服器就會在 Windows 應用程式記錄中記錄錯誤，而且無法啟動或使用預設值 (視錯誤情況而定)：  
@@ -46,13 +46,13 @@ ms.locfileid: "66103754"
   
  所有組態檔變更 (包括成功變更) 都會記錄在報表伺服器追蹤記錄檔中。 只有錯誤會記錄在應用程式事件記錄中。  
   
-##  <a name="bkmk_default_values"></a> 關於預設值  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> 關於預設值  
  大部分組態設定都具有報表伺服器內部指定的預設值。 如果使用者定義的值無效或未指定，報表伺服器就會使用這些值。 如果由於組態設定無效而必須使用預設值，系統就會在追蹤記錄檔中寫入錯誤。  
   
-##  <a name="bkmk_delete_config_settings"></a> 刪除組態設定  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> 刪除組態設定  
  如果是有預設值的組態設定，從組態檔中移除此設定不會有任何作用。 大部分組態設定實際上都會在內部定義及設定。 如果您刪除組態檔中的項目，內部複本仍然可以使用，而且會使用為它定義的預設值。  
   
-##  <a name="bkmk_edit_configuation_file"></a> 編輯 Reporting Services 組態檔  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> 編輯 Reporting Services 組態檔  
   
 1.  尋找您想要編輯的組態檔：  
   
@@ -93,11 +93,11 @@ ms.locfileid: "66103754"
 ## <a name="see-also"></a>另請參閱  
  [Rsreportserver.config 設定檔](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 設定檔](reportingservicesservice-configuration-file.md)   
- [RSReportDesigner 組態檔](rsreportdesigner-configuration-file.md)   
+ [Rsreportdesigner.config 設定檔](rsreportdesigner-configuration-file.md)   
  [部署資料處理延伸模組](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [部署傳遞延伸模組](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [部署轉譯延伸模組](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [如何：部署自訂報表專案](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
- [Reporting Services 設定檔](reporting-services-configuration-files.md)  
+ [Reporting Services 組態檔](reporting-services-configuration-files.md)  
   
   

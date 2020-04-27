@@ -14,23 +14,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479566"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>刪除屬性群組 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，如果 ** 的 [總管]**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 功能區域已不再需要顯示某個索引標籤時，您即可刪除該屬性群組。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，如果 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的 [總管]**** 功能區域已不再需要顯示某個索引標籤時，您即可刪除該屬性群組。  
   
--   **注意**當屬性群組存在時， **Explorer**中不會顯示不屬於屬性群組的屬性。 當屬性群組不存在時，則會顯示所有屬性。  
+-   **注意**：當屬性群組存在時，[總管]**** 只會顯示屬於該屬性群組的屬性。 當屬性群組不存在時，則會顯示所有屬性。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-attribute-group"></a>若要刪除屬性群組  
   

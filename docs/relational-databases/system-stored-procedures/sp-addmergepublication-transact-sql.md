@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278357"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -164,7 +164,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**真正**|發行集使用預先計算的資料分割。|  
+|**true**|發行集使用預先計算的資料分割。|  
 |**false**|發行集不使用預先計算的資料分割。|  
 |Null （預設值）|系統決定資料分割策略。|  
   
@@ -203,7 +203,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |值|版本|  
 |-----------|-------------|  
 |**day** （預設值）|以天為保留週期的指定單位。|  
-|**那個**|以星期為保留週期的指定單位。|  
+|**week**|以星期為保留週期的指定單位。|  
 |**month**|以月為保留週期的指定單位。|  
 |**year**|以年為保留週期的指定單位。|  
   

@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106292"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>在圖表上格式化圖例 (報表產生器及 SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66106292"
   
  圖例項目會連接到報表上的個別數列，但是形狀圖表例外 (其圖例會連接到個別資料點)。 此圖表會根據從資料產生的數列，將項目加入到圖例中。  
   
- 您可以使用 **[圖例屬性]** 對話方塊或 [屬性] 窗格來設定圖例的格式。 請以滑鼠右鍵按一下此圖例，然後按一下 **[圖例屬性]** ，為圖例文字、背景色彩、框線和 3D 效果變更值。 若要變更圖例標題的，請選取此圖例，然後以滑鼠右鍵按一下圖例標題，再按一下 **[圖例標題屬性]**。  
+ 您可以使用 **[圖例屬性]** 對話方塊或 [屬性] 窗格來設定圖例的格式。 請以滑鼠右鍵按一下此圖例，然後按一下 **[圖例屬性]** ，為圖例文字、背景色彩、框線和 3D 效果變更值。 若要變更圖例標題的，請選取此圖例，然後以滑鼠右鍵按一下圖例標題，再按一下 **[圖例標題屬性]** 。  
   
  您無法將影像、額外資料行或其他補充項目加入至圖例。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66106292"
 ## <a name="displaying-legend-items-horizontally"></a>水平顯示圖例項目  
  根據預設，圖例會格式化成一或多個資料列的清單，其中每一個資料列包含一個圖例項目。 圖例區域會展開，以容納這個數目的圖例項目。 如果此圖例無法展開，就會顯示省略符號 (...)。 根據指定的圖例樣式而定，此圖例可垂直或水平展開。 您可以在 **[圖例屬性]** 對話方塊上變更配置樣式，或是變更用來顯示所有圖例項目的配置空間。  
   
- 若要水平顯示此圖例，請將此圖例停駐於圖表的上方或底部。 這樣會水平展開此圖例。 您也可以將 Layout 屬性設定為 [資料列]**** 或 [寬型資料表]****。 在 [屬性] 窗格中設定 MaxAutoSize 屬性可在圖例停駐於圖表區域的上方或底部時，控制配置給此圖例的垂直空間。  
+ 若要水平顯示此圖例，請將此圖例停駐於圖表的上方或底部。 這樣會水平展開此圖例。 您也可以將 Layout 屬性設定為 [資料列]  或 [寬型資料表]  。 在 [屬性] 窗格中設定 MaxAutoSize 屬性可在圖例停駐於圖表區域的上方或底部時，控制配置給此圖例的垂直空間。  
   
 ## <a name="formatting-the-legend-text"></a>格式化圖例文字  
  您可以在 **[圖例屬性]** 對話方塊的 **[字型]** 頁面上變更圖例文字的字型、大小、樣式和色彩。  
@@ -79,12 +79,12 @@ ms.locfileid: "66106292"
  依預設，圖例文字不會最佳化來配合圖例區域的大小。 若要讓圖例文字自動配合配置的空間，請將 AutoFitTextDisabled 屬性設定為`False` ，並將 MinFontSize 屬性的最小字型大小設定為您認為可呈現的最低字型大小，而且仍然允許圖例優化。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖例屬性對話方塊、一般 &#40;報表產生器和 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [圖例屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [隱藏圖表上的圖例專案 &#40;報表產生器和 SSRS&#41;](chart-legend-hide-items-report-builder.md)   
+ [隱藏圖表上的圖例項目 &#40;報表產生器及 SSRS&#41;](chart-legend-hide-items-report-builder.md)   
  [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

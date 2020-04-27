@@ -11,22 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108526"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中建立報表，必須先建立報表伺服器專案，您將在其中儲存報表定義 (.rdl) 檔案以及報表所需的任何其他資源檔案。 然後，您將建立實際的報表定義檔案、定義報表的資料來源、定義資料集，以及定義報表配置。 當您執行報表時，會擷取實際資料並與配置結合，然後轉譯在您的螢幕上，再從螢幕上匯出、列印或儲存資料。  
   
- 在這一課，您將學習如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立報表伺服器專案。 報表伺服器專案用於建立在報表伺服器上執行的報表。  
+ 在這一課，您將學習如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立報表伺服器專案。 報表伺服器專案用於建立在報表伺服器上執行的報表。  
   
 ### <a name="to-create-a-report-server-project"></a>建立報表伺服器專案  
   
 1.  按一下 [**開始**]，指向 [**所有程式**] [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，指向 []，然後按一下 [ **SQL Server Data Tools**]。 如果這是您第一次開啟[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，請按一下 [**商業智慧設定**] 做為預設環境設定。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
   
 3.  在 [已安裝的範本]**** 清單中，按一下 [商業智慧]****。  
   

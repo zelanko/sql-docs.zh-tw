@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105504"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
@@ -31,21 +31,21 @@ ms.locfileid: "66105504"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="PageLayout"></a>頁面配置和報表專案  
+##  <a name="page-layout-and-report-items"></a><a name="PageLayout"></a>頁面配置和報表專案  
  報表項目是指與不同類型的報表資料相關聯的配置元素。 資料表、矩陣、清單、圖表和量測計都是資料區報表項目，每一個都會連結到報表資料集。 處理報表時，資料區會展開到報表頁面的下方，以便顯示資料。 其他報表項目會連結到單一項目，並顯示單一項目。 **[影像]** 報表項目會連結到圖片。 **[文字方塊]** 報表項目包含類似標題或運算式的簡單文字，其中可以包含內建欄位、報表參數或資料集欄位的參考。 **[線條]** 和 **[矩形]** 報表項目則提供了報表頁面上的簡單圖形化元素。 **[矩形]** 也可以是其他報表項目的容器。 報表可以包含子報表。  
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時，您可以將報表項目放在設計介面上的任何地方。 您可以使用貼齊格線和調整大小的控點，以互動方式放置、展開及收縮報表項目的最初形狀。 您可以並排不同組的資料來放置資料區，甚至是不同格式的相同資料。 當您將報表項目放在設計介面上時，它會有預設的大小和形狀，而且與所有其他報表項目之間具有初始關聯性。 您可以交互放置許多報表項目，以便建立更複雜的報表設計。 例如，在資料表資料格中放置圖表或影像、在資料表資料格中放置資料表，以及在矩形中放置多個影像。 除了提供您想要讓報表呈現的組織和外觀以外，在矩形等容器中放置報表項目也有助於控制報表項目顯示在報表頁面上的方式。  
   
  報表可以合併多個頁面，每一個頁面上都有重複的頁首和頁尾。 報表可以包含類似影像和線條的圖形元素，也可以有多種字型、色彩和樣式 (可以根據運算式)。  
   
-##  <a name="ReportSections"></a> 報表區段  
+##  <a name="report-sections"></a><a name="ReportSections"></a> 報表區段  
  報表是由三個主要區段所組成：選擇性頁首、選擇性頁尾和報表主體。 報表頁首和頁尾不是報表的個別區段，而是由放置於報表主體上方和底部的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
   
  您可以在報表項目上設定屬性，即可一開始在頁面上隱藏或顯示這些項目。 您可以在資料列或資料行或是資料區的群組上設定可見性屬性，並提供切換按鈕讓使用者以互動方式顯示或隱藏報表資料。 您可以使用運算式 (包括了根據報表參數的運算式) 來設定可見性或初始可見性。  
   
  當處理報表時，報表資料會結合報表配置元素，而已結合的資料則會傳送到報表轉譯器。 此轉譯器遵循報表項目展開的預先定義規則，而且可決定每個頁面所容納的資料量。 若要設計容易閱讀的報表，並針對您打算使用的轉譯器最佳化此報表，您應該了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-##  <a name="RenderingExtensions"></a> 轉譯器  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a>輸出  
  Reporting Services 包含一組轉譯器 (也稱為轉譯延伸模組)，您可以使用這組轉譯器將報表匯出為不同的格式。 轉譯器有三種類型：  
   
 -   **資料轉譯器** ：資料轉譯器會從報表移除所有格式與版面配置資訊，而僅顯示資料。 所產生的檔案可用於將原始報表資料匯入到其他檔案類型 (例如，Excel)、其他資料庫、XML 資料訊息，或是自訂應用程式。 可用的資料轉譯器為：CSV 和 XML。  
@@ -61,7 +61,7 @@ ms.locfileid: "66105504"
   
   
   
-##  <a name="RenderingBehaviors"></a> 轉譯行為  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a>轉譯行為  
  根據所選取的轉譯器，當轉譯報表時，系統會套用某些規則。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  
   
 -   轉譯規則。  
@@ -80,7 +80,7 @@ ms.locfileid: "66105504"
   
   
   
-##  <a name="Pagination"></a> 分頁  
+##  <a name="pagination"></a><a name="Pagination"></a> 分頁  
  分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分頁會根據您用於檢視和傳遞報表的轉譯延伸模組，以及您設定報表使用的分頁符號和保持在一起的選項而有所不同。  
   
  若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。 使用資料與軟分頁轉譯延伸模組匯出的報表通常不會受到分頁影響。 當您使用資料轉譯延伸模組時，報表會以 XML 或 CSV 格式轉譯為表格式資料列集。 為確保匯出的報表資料可以使用，您應該了解從報表套用至已轉譯之扁平化表格式資料列集的規則。  
@@ -91,7 +91,7 @@ ms.locfileid: "66105504"
   
   
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>How To 主題  
  本節列出的程序可以為您逐步示範如何在報表中使用分頁。  
   
 -   [加入分頁符號 &#40;報表產生器及 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
@@ -108,7 +108,7 @@ ms.locfileid: "66105504"
   
   
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>本節內容  
  下列主題提供有關頁面配置與轉譯的其他資訊。  
   
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
@@ -120,7 +120,7 @@ ms.locfileid: "66105504"
   
   
 ## <a name="see-also"></a>另請參閱  
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器和 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [匯出報表 &#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

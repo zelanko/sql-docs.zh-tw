@@ -14,15 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483156"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，資料儲存在多個資料庫資料表並且顯示在檢視表中。 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中受到保護的資訊，對具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫存取權的使用者是可見的。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，資料儲存在多個資料庫資料表並且顯示在檢視表中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中受到保護的資訊，對具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫存取權的使用者是可見的。  
   
  具體來說，員工薪資資訊可能包含在 Employee 模型中，公司財務資訊可能包含在 Account 模型中。 您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面中拒絕使用者存取這些模型，但具有資料庫存取權的使用者可以檢視此資料。  
   
@@ -32,17 +31,17 @@ ms.locfileid: "65483156"
   
 -   [暫存資料](#Staging)  
   
--   [根據商務規則驗證資料](#rules)  
+-   [依商務規則驗證資料](#rules)  
   
 -   [刪除版本](#Versions)  
   
--   [立即套用階層成員許可權](#Hierarchy)  
+-   [立即套用階層成員權限](#Hierarchy)  
   
 -   [變更系統管理員帳戶](#SysAdmin)  
   
--   [正在進行系統設定](#SysSettings)  
+-   [設定系統設定](#SysSettings)  
   
-##  <a name="Staging"></a>暫存資料  
+##  <a name="staging-data"></a><a name="Staging"></a> 暫存資料  
  在下表中，每個安全物件都會有 "name" 作為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱[資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 |動作|安全性實體|權限|  
@@ -57,7 +56,7 @@ ms.locfileid: "65483156"
   
  如需詳細資訊，請參閱[資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
   
-##  <a name="rules"></a>根據商務規則驗證資料  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>根據商務規則驗證資料  
   
 |動作|安全性實體|權限|  
 |------------|---------------|-----------------|  
@@ -65,7 +64,7 @@ ms.locfileid: "65483156"
   
  如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)。  
   
-##  <a name="Versions"></a>刪除版本  
+##  <a name="deleting-versions"></a><a name="Versions"></a>刪除版本  
   
 |動作|安全性實體|權限|  
 |------------|----------------|-----------------|  
@@ -74,7 +73,7 @@ ms.locfileid: "65483156"
   
  如需詳細資訊，請參閱[刪除版本 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)。  
   
-##  <a name="Hierarchy"></a>立即套用階層成員許可權  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>立即套用階層成員許可權  
   
 |動作|安全性實體|權限|  
 |------------|----------------|-----------------|  
@@ -82,7 +81,7 @@ ms.locfileid: "65483156"
   
  如需詳細資訊，請參閱[立即套用成員權限 &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   
-##  <a name="SysAdmin"></a>變更系統管理員帳戶  
+##  <a name="changing-the-system-administrator-account"></a><a name="SysAdmin"></a>變更系統管理員帳戶  
   
 |動作|安全性實體|權限|  
 |------------|----------------|-----------------|  
@@ -91,7 +90,7 @@ ms.locfileid: "65483156"
   
  如需詳細資訊，請參閱[將系統管理員帳戶變更 &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)。  
   
-##  <a name="SysSettings"></a>正在進行系統設定  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>正在進行系統設定  
  有些系統設定可設定控制 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的行為。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中調整這些設定；如果您有 UPDATE 存取權，也可以直接在 mdm.tblSystemSetting 資料庫資料表中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  

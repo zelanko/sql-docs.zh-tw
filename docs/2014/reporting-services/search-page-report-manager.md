@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102254"
 ---
 # <a name="search-page-report-manager"></a>搜尋頁面 (報表管理員)
@@ -53,7 +53,7 @@ ms.locfileid: "66102254"
   
  不支援布林運算子，例如加號字元 (+)。  
   
- **[詳細資料檢視]**  
+ **詳細資料檢視**  
  按一下即可在清單中顯示 [搜尋結果] 頁面，其中包含有關項目的其他資訊，例如項目類型、名稱、描述、項目所在的資料夾，以及上一次執行項目的時間。 在 **[詳細資料檢視]** 中，您可以使用 **[刪除]** 和 **[移動]** 按鈕來移除和重新定位資料夾中的項目。  
   
  將滑鼠停留在某個項目上，然後按一下下拉箭號，即可開啟下拉式功能表，以便從中存取和設定所選取之項目的屬性。  

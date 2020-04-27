@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107790"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
-  當您建立報表時，經常預覽報表以確認報表如預期般顯示相當有協助。 若要預覽報表，按一下 **[執行]** 。 報表隨即在預覽模式下呈現。  
+  當您建立報表時，經常預覽報表以確認報表如預期般顯示相當有協助。 若要預覽報表，按一下 **[執行]**。 報表隨即在預覽模式下呈現。  
   
  報表產生器會在連接到報表伺服器時使用編輯工作階段，藉以改善預覽經驗。 編輯工作階段會建立一個資料快取，並讓快取中的資料集可以進行重複的報表預覽。 編輯工作階段不是一個您可以直接互動的功能，但是，當您預覽報表並了解報表呈現速度為什麼較快或較慢時，了解何時重新整理快取的資料集將會協助您提升效能。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66107790"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="improving-preview-performance"></a>提升預覽效能  
- 您建立和更新報表的方式會影響報表在預覽中呈現的速度。 當您第一次預覽依賴伺服器參考的報表時，系統會為您建立編輯工作階段，而且執行報表時所使用的資料會加入到儲存在報表伺服器上的資料快取中。 當您針對報表進行不會影響資料的變更時，報表會使用資料的快取副本。 也就是說，每次預覽報表時，您都看不到資料變更。 如果您想要新的資料，請按一下功能區上的 [重新整理]  按鈕。  
+ 您建立和更新報表的方式會影響報表在預覽中呈現的速度。 當您第一次預覽依賴伺服器參考的報表時，系統會為您建立編輯工作階段，而且執行報表時所使用的資料會加入到儲存在報表伺服器上的資料快取中。 當您針對報表進行不會影響資料的變更時，報表會使用資料的快取副本。 也就是說，每次預覽報表時，您都看不到資料變更。 如果您想要新的資料，請按一下功能區上的 [重新整理]**** 按鈕。  
   
  下列動作會重新整理快取，並減慢您下次預覽報表的報表呈現速度：  
   
@@ -68,19 +68,19 @@ ms.locfileid: "66107790"
  根據預設，資料快取最多可以容納 5 個資料集。 如果您使用多個不同的參數值組合，報表可能需要更多資料。 這需要重新整理快取，而且當您下次預覽報表時，報表的呈現速度會更慢。 快取中的項目數可以由報表伺服器的管理員設定。  
   
 ## <a name="concurrency-of-report-updates"></a>報表更新並行  
- 當您更新報表，並將其儲存到報表伺服器時，您會經常預覽它。 當您正在更新報表時，可能會有其他人正在進行更新，然後同時儲存該報表。 最後儲存的報表是可供未來檢視和更新的報表版本。 這表示，您預覽的報表版本可能不是再次開啟的版本。 您可以選擇使用 [報表產生器] 功能表上的 [另存新檔]  選項，將報表儲存成新的名稱。  
+ 當您更新報表，並將其儲存到報表伺服器時，您會經常預覽它。 當您正在更新報表時，可能會有其他人正在進行更新，然後同時儲存該報表。 最後儲存的報表是可供未來檢視和更新的報表版本。 這表示，您預覽的報表版本可能不是再次開啟的版本。 您可以選擇使用 [報表產生器] 功能表上的 [另存新檔]**** 選項，將報表儲存成新的名稱。  
   
 ## <a name="external-report-items"></a>外部報表項目  
  您的報表可能包含的項目包括共用資料來源、外部影像，以及與報表個別儲存的子報表等等。 由於這些項目會個別儲存，因此可能會移到報表伺服器上的其他位置或是遭到刪除。 如果發生這個情況，您的報表可能無法預覽。 您可以更新報表以指出項目的更新位置；如果項目遭到刪除，則將其取代成現有的項目，或從報表中移除該項目的參考。  
   
- 如果建立編輯工作階段之後，變更了您報表所使用的子報表，該報表將不會呈現在預覽中。 若要成功預覽報表，您應該儲存報表，或按一下 [重新整理]  來取得新的資料。  
+ 如果建立編輯工作階段之後，變更了您報表所使用的子報表，該報表將不會呈現在預覽中。 若要成功預覽報表，您應該儲存報表，或按一下 [重新整理]**** 來取得新的資料。  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料加入報表 &#40;報表產生器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [將報表專案的格式設定 &#40;報表產生器和 SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [報表產生器和 SSRS &#40;資料表、矩陣和清單&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
+ [報表產生器和 SSRS &#40;資料表、矩陣和清單&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [儲存報表 &#40;報表產生器&#41;](saving-reports-report-builder.md)  
   
   

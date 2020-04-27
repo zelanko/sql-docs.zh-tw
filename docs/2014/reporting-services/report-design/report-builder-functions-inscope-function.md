@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105244"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 函數 (報表產生器及 SSRS)
@@ -41,8 +41,7 @@ InScope(scope)
   
  *Scope* 不能是運算式。  
   
- 
-  `InScope` 函數一般會用於具有動態範圍的資料區域。 例如，資料區域資料格中的鑽研連結可以利用 `InScope`，根據按下的資料格來提供不同的報表名稱和不同組的參數。 此範例如下：  
+ `InScope` 函數一般會用於具有動態範圍的資料區域。 例如，資料區域資料格中的鑽研連結可以利用 `InScope`，根據按下的資料格來提供不同的報表名稱和不同組的參數。 此範例如下：  
   
 -   下列運算式是用做鑽研連結中的報表名稱，如果按下的資料格是在 `ProductDetail` 群組中，便會開啟 `Month` 報表，如果不是，便開啟 `ProductSummary` 報表。  
   

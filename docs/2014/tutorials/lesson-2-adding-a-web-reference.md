@@ -11,15 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316013"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>第 2 課：加入 Web 參考
-  Web 服務探索是用戶端用來尋找 Web 服務及取得服務描述的程序。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的 Web 服務探索程序牽涉到依照預先定義的演算法來詢問網站。 此程序的目的是尋找服務描述，也就是使用 Web 服務描述語言 (WSDL) 的 XML 文件集。  
+# <a name="lesson-2-adding-a-web-reference"></a>第 2 課：新增 Web 參考
+  Web 服務探索是用戶端用來尋找 Web 服務及取得服務描述的程序。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的 Web 服務探索程序牽涉到依照預先定義的演算法來詢問網站。 此程序的目的是尋找服務描述，也就是使用 Web 服務描述語言 (WSDL) 的 XML 文件集。  
   
  服務描述所描述的是可用的服務以及如何與這些服務互動。 若沒有服務描述，即無法與 Web 服務建立程式化的互動。  
   
@@ -43,10 +42,9 @@ ms.locfileid: "63316013"
   
 6.  按一下 [**加入參考**]，為目標 Web 服務新增 Web 參考。  
   
-     
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 會下載服務描述，並產生聯繫應用程式和報表伺服器 Web 服務的 Proxy 類別。 您也必須加入 <xref:System.Web.Services> 命名空間的參考，才能讓 Web 參考運作。  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 會下載服務描述，並產生聯繫應用程式和報表伺服器 Web 服務的 Proxy 類別。 您也必須加入 <xref:System.Web.Services> 命名空間的參考，才能讓 Web 參考運作。  
   
-7.  在 [專案] 功能表上，按一下 [**加入參考**]。  
+7.  在 [專案] 功能表上，按一下 [加入參考]****。  
   
 8.  在 [**加入參考**] 對話方塊的 [ **.net** ] 索引標籤中，選取 [ **System.web**]，然後按一下 **[確定]**。  
   

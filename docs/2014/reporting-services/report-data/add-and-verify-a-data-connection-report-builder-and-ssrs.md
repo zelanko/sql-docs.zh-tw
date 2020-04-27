@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107515"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>加入及驗證資料連接或資料來源 (報表產生器及 SSRS)
@@ -31,17 +31,16 @@ ms.locfileid: "66107515"
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>建立共用資料來源的參考  
   
-1.  在 [報表資料] 窗格的工具列上，按一下 [**新增]，** 然後按一下 [**資料來源**]。 
-  **[資料來源屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]** 。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
 2.  在 **[名稱]** 文字方塊中，輸入資料來源的名稱。  
   
     > [!NOTE]  
     >  這個名稱會儲存在本機報表定義中。 這個名稱不是共用資料來源在報表伺服器上的名稱。  
   
-3.  選取 **[使用共用連接或報表模型]**。 隨即出現最近使用的共用資料來源和報表模型清單。 若要從報表伺服器選取其中一個項目，請按一下 **[瀏覽]** 並瀏覽至報表伺服器上提供共用資料來源的資料夾。  
+3.  選取 **[使用共用連接或報表模型]** 。 隨即出現最近使用的共用資料來源和報表模型清單。 若要從報表伺服器選取其中一個項目，請按一下 **[瀏覽]** 並瀏覽至報表伺服器上提供共用資料來源的資料夾。  
   
-4.  選取該共用資料來源，然後按一下 **[開啟]**。  
+4.  選取該共用資料來源，然後按一下 **[開啟]** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,8 +48,7 @@ ms.locfileid: "66107515"
   
 ### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
   
-1.  在 [報表資料] 窗格的工具列上，按一下 [**新增**]，然後按一下 [**資料來源**]。 
-  **[資料來源屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格的工具列上，按一下 [**新增**]，然後按一下 [**資料來源**]。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
 2.  在 **[名稱]** 文字方塊中，輸入資料來源的名稱或接受預設值。  
   
@@ -78,10 +76,9 @@ ms.locfileid: "66107515"
   
 ### <a name="to-verify-a-data-connection"></a>若要驗證資料連接  
   
-1.  在工具列的 [報表資料] 窗格中，按兩下此資料來源。 
-  **[資料來源屬性]** 對話方塊隨即開啟。  
+1.  在工具列的 [報表資料] 窗格中，按兩下此資料來源。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
-2.  按一下 **[測試連接]** 。  
+2.  按一下 **[測試連接]**。  
   
 3.  如果連接成功，將會出現下列訊息：「成功建立連接」。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -95,8 +92,8 @@ ms.locfileid: "66107515"
   
 ## <a name="see-also"></a>另請參閱  
  [將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [尋找、查看和管理報表 &#40;報表產生器和 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

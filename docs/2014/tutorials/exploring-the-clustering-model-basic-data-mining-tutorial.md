@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280425"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>瀏覽群集模型 (基本資料採礦教學課程)
   群集[!INCLUDE[msCoName](../includes/msconame-md.md)]演算法會將案例分組至包含類似特性的群集。 這些群集對於瀏覽資料、識別資料的異常及建立預測很有幫助。  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 叢集檢視器會提供下列索引標籤，用來瀏覽叢集採礦模型：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 叢集檢視器會提供下列索引標籤，用來瀏覽叢集採礦模型：  
   
 
   
-##  <a name="ClusterDiagramTab"></a>[群集圖表] 索引標籤  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>[群集圖表] 索引標籤  
  [群集圖表] 索引標籤會顯示採礦模型中的所有群集。 群集之間的線代表「相似程度」，並根據群集的相似程度加上陰影。 每一個群集的實際色彩各代表變數的頻率和群集中的狀態。  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>若要在群集圖表索引標籤中瀏覽模型  
@@ -54,12 +53,11 @@ ms.locfileid: "63280425"
   
      當您選取群集時，將此群集連接至其他群集的線條會反白顯示，如此您就可以輕鬆看見這個群集的所有關聯性。 當未選取此群集時，您可以透過線條的明暗度來區分圖表中所有群集之間關聯性的強烈程度。 如果陰影很淡或不存在，則表示群集不太相似。  
   
-9. 利用網路左側的滑動軸，可以篩選掉較弱的連結，並找出關聯性最近的群集。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 行銷部門在判斷傳遞目標郵件的最佳方法時，可能會想要將類似的群集結合在一起。  
+9. 利用網路左側的滑動軸，可以篩選掉較弱的連結，並找出關聯性最近的群集。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 行銷部門在判斷傳遞目標郵件的最佳方法時，可能會想要將類似的群集結合在一起。  
   
 
   
-##  <a name="ClusterProfilesTab"></a>群集設定檔索引標籤  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>群集設定檔索引標籤  
  [**群集設定檔**] 索引標籤會提供`TM_Clustering`模型的整體觀點。 [**群集設定檔**] 索引標籤包含模型中每個叢集的資料行。 第一個資料行列出至少與一個群集相關聯的變數。 檢視器的其餘部份含有每一個群集的變數，其狀態的分佈情形。 離散變數的分佈會顯示為彩色列，其中包含**長條圖**列清單中所顯示的最大橫條數。 連續變數是以鑽石圖顯示，代表在每一個群集中的平均與標準差。  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>若要在群集設定檔索引標籤中瀏覽模型  
@@ -86,7 +84,7 @@ ms.locfileid: "63280425"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>群集特性索引標籤  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>群集特性索引標籤  
  使用 [叢集**特性**] 索引標籤，您可以更詳細地檢查組成叢集的特性。 您可以一次瀏覽一個群集，而不是比較所有群集的特性 (如同 [群集設定檔] 索引標籤上的處理方式)。 例如，如果您**從 [叢集**] 清單中選取 [**自行車購買者高**]，就可以看到此叢集中客戶的特性。 雖然這個顯示與 [群集設定檔] 檢視器不同，但是找到的結果是相同的。  
   
 > [!NOTE]  
@@ -94,7 +92,7 @@ ms.locfileid: "63280425"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>群集辨識索引標籤  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>群集辨識索引標籤  
  使用 [**叢集**辨識] 索引標籤，您可以探索區別另一個叢集的特性。 在您選取兩個叢集（一個來自 [叢集**1** ] 清單，另一個來自 [**群集 2** ] 清單）之後，檢視器會計算叢集之間的差異，並顯示最能區分叢集的屬性清單。  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>若要在群集辨識索引標籤中瀏覽模型  

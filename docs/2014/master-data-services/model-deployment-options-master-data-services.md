@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbc88c186e5f8f92c943c3e0d766ab6d8846941
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479018"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署選項 (Master Data Services)
@@ -41,6 +41,6 @@ ms.locfileid: "65479018"
 ## <a name="see-also"></a>另請參閱  
  [使用 MDSModelDeploy 部署模型部署封裝](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [使用 Wizard 部署模型部署封裝](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [&#40;Master Data Services 部署模型&#41;](deploying-models-master-data-services.md)  
+ [部署模型 &#40;Master Data Services&#41;](deploying-models-master-data-services.md)  
   
   

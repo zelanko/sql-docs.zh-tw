@@ -11,15 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103723"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
-  您可以將安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]中所使用的報表伺服器資料庫，移至不同電腦上的實例。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
+  您可以將安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]中所使用的報表伺服器資料庫，移至不同電腦上的實例。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
@@ -27,15 +26,13 @@ ms.locfileid: "66103723"
   
 -   當您第一次重新啟動報表伺服器服務時，便會重新建立排程。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 雖然您不需要將這些作業移至新的電腦，但是可能會想要刪除電腦上不再使用的作業。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 雖然您不需要將這些作業移至新的電腦，但是可能會想要刪除電腦上不再使用的作業。  
   
 -   移動的資料庫會保留訂閱、快取報表以及快照集。 如果快照集並未在移動資料庫之後收取重新整理過的資料，請在報表管理員中清除快照集選項，然後按一下 [套用]**** 儲存變更、重新建立排程，再按一下 [套用]**** 儲存變更。  
   
 -   當您移動 reportservertempdb 資料庫時，系統會保留儲存在該資料庫中的暫存報表和使用者工作階段。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供數種移動資料庫的方法，包括備份與還原、附加與卸離，以及複製。 並不是所有方法都適合用來將現有資料庫重新放置到新的伺服器執行個體上， 移動報表伺服器資料庫的最佳方法會因您的系統可用性需求而有所差異。 移動報表伺服器資料庫最簡單的方式就是附加與卸離， 但是，如果要採用這種方法，您必須在卸離資料庫時將報表伺服器設定為離線狀態。 如果您希望能將服務中斷的情況降到最少，備份與還原就是比較好的選擇，但是您必須執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來執行這些作業。 我們不建議利用複製資料庫來移動報表伺服器 (特別是使用「複製資料庫精靈」)，因為複製資料庫不會保留資料庫中的權限設定。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供數種移動資料庫的方法，包括備份與還原、附加與卸離，以及複製。 並不是所有方法都適合用來將現有資料庫重新放置到新的伺服器執行個體上， 移動報表伺服器資料庫的最佳方法會因您的系統可用性需求而有所差異。 移動報表伺服器資料庫最簡單的方式就是附加與卸離， 但是，如果要採用這種方法，您必須在卸離資料庫時將報表伺服器設定為離線狀態。 如果您希望能將服務中斷的情況降到最少，備份與還原就是比較好的選擇，但是您必須執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來執行這些作業。 我們不建議利用複製資料庫來移動報表伺服器 (特別是使用「複製資料庫精靈」)，因為複製資料庫不會保留資料庫中的權限設定。  
   
 > [!IMPORTANT]  
 >  如果您對現有安裝所做的唯一變更是重新放置報表伺服器資料庫，就適用本主題中所提供的這些步驟。 移轉整個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝 (亦即，移動資料庫，並變更使用資料庫之報表伺服器 Windows 服務的識別) 需要重新設定連接和重設加密金鑰。  
@@ -217,8 +214,7 @@ GO
 7.  按 **[下一步]** ，然後按一下 **[完成]**。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體必須包含 `RSExecRole` 角色。 當您透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定報表伺服器資料庫連接時，會產生角色建立、登入註冊以及角色指派等動作。 如果您使用其他方法 (尤其是使用 rsconfig.exe 命令提示字元公用程式) 來設定連接，報表伺服器將不會處於工作狀態。 您可能必須撰寫 WMI 程式碼，才能讓報表伺服器可供使用。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../tools/access-the-reporting-services-wmi-provider.md)。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體必須包含 `RSExecRole` 角色。 當您透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定報表伺服器資料庫連接時，會產生角色建立、登入註冊以及角色指派等動作。 如果您使用其他方法 (尤其是使用 rsconfig.exe 命令提示字元公用程式) 來設定連接，報表伺服器將不會處於工作狀態。 您可能必須撰寫 WMI 程式碼，才能讓報表伺服器可供使用。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../tools/access-the-reporting-services-wmi-provider.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 RSExecRole](../security/create-the-rsexecrole.md)   
@@ -227,7 +223,7 @@ GO
  [&#40;SSRS Configuration Manager 設定自動執行帳戶&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [&#40;SSRS&#41;的 rsconfig 公用程式](../tools/rsconfig-utility-ssrs.md)   
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [設定和管理 &#40;SSRS Configuration Manager 的加密金鑰&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)  
   
   

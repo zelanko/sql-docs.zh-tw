@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480992"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
@@ -31,17 +31,17 @@ ms.locfileid: "65480992"
   
  跨定義域規則會在只影響單一定義域的所有簡單規則之後納入考量。 只有當某個值通過單一定義域規則 (如果存在的話) 時，才會套用跨定義域規則。 您必須先定義所有要執行規則的複合定義域和單一定義域，然後才能執行規則。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要建立跨定義域規則，您必須已經建立並開啟複合定義域。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能建立跨定義域規則。  
   
-##  <a name="Create"></a>建立跨定義域規則  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a> 建立跨定義域規則  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65480992"
   
 9. 繼續進行下列測試程序。  
   
-##  <a name="Test"></a>測試跨定義域規則  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a> 測試跨定義域規則  
   
 1.  依照下列方式測試跨定義域規則：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65480992"
   
 2.  當您完成跨定義域規則時，請按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   
-##  <a name="FollowUp"></a>後續操作：建立跨定義域規則之後  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> 後續操作：建立跨定義域規則之後  
  在建立跨定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

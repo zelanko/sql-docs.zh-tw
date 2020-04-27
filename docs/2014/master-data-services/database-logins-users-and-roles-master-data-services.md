@@ -18,14 +18,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479748"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含的登入、使用者和角色會自動安裝在主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體上。 不應對這些登入、使用者和角色進行修改。  
   
 ## <a name="logins"></a>登入  
@@ -62,7 +61,7 @@ ms.locfileid: "65479748"
 |----------|-----------------|  
 |`mdm`|包含所有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫與 Service Broker 物件，而非 mdq 結構描述中包含的函數。|  
 |`mdq`|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫函數，這些函數與根據規則運算式或相似度篩選成員結果有關，而且可用於格式化通知電子郵件。|  
-|**stg.<**|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫資料表、預存程序以及與暫存處理序有關的檢視表。 請勿刪除這些物件的任何一個。 如需暫存進程的詳細資訊，請參閱[資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。|  
+|**stg**|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫資料表、預存程序以及與暫存處理序有關的檢視表。 請勿刪除這些物件的任何一個。 如需暫存進程的詳細資訊，請參閱[資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫物件安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  

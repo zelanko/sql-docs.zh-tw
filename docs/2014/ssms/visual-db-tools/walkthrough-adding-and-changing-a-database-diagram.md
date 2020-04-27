@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273740"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
@@ -78,8 +78,8 @@ ms.locfileid: "63273740"
   
     |**資料行名稱**|**資料類型**|**允許 Null**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|已選取|  
-    |`T1col2`|`varchar(50)`|已選取|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
     |`T1col3`|`float`|已選取|  
   
 4.  以滑鼠右鍵按一下 `T1col1`，再選取 [設定主索引鍵]****。  
@@ -101,7 +101,7 @@ ms.locfileid: "63273740"
   
      此時會出現 [檢查條件約束]**** 對話方塊。  
   
-2.  按一下 [新增]  。  
+2.  按一下 **[新增]** 。  
   
      [選取的檢查條件約束]**** 清單中會出現新的條件約束，其預設名稱為 `CK_Table1`。  
   
@@ -111,10 +111,9 @@ ms.locfileid: "63273740"
   
 4.  輸入 `T1col3 > 5` ，然後按一下 **[確定]**。  
   
-     
-  `Table1` 現在便會有一項條件約束，規定所有輸入 `T1col3` 的值都必須大於 5。  
+     `Table1` 現在便會有一項條件約束，規定所有輸入 `T1col3` 的值都必須大於 5。  
   
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
 #### <a name="to-create-relationships-between-tables"></a>若要建立資料表之間的關聯性  
   
@@ -123,8 +122,8 @@ ms.locfileid: "63273740"
     |**資料行名稱**|**資料類型**|**允許 Null**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|未選取|  
-    |`T2col2`|`varchar(50)`|已選取|  
-    |`T2col3`|`xml`|已選取|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  外部索引鍵關聯性的主索引鍵端的資料行必須加入主索引鍵或唯一的條件約束。  
@@ -146,7 +145,7 @@ ms.locfileid: "63273740"
   
      [索引/索引鍵]**** 對話方塊便會出現。  
   
-2.  按一下 [新增]  。  
+2.  按一下 **[新增]** 。  
   
      [選取的主/唯一索引鍵或索引]**** 清單中會出現新的索引，其預設名稱類似 `IX_Table1`。  
   
@@ -170,15 +169,15 @@ ms.locfileid: "63273740"
     > [!NOTE]  
     >  加入 XML 索引時，需要將資料表中的另一個資料行設定為叢集主索引鍵。  
   
-2.  以滑鼠右鍵按一下 `T2col3` 中的 `Table2` 資料列，再選取 [XML 索引]****。  
+2.  以滑鼠右鍵按一下 `Table2` 中的 `T2col3` 資料列，再選取 [XML 索引]****。  
   
      [XML 索引]**** 對話方塊便會出現。  
   
-3.  按一下 [新增]  。  
+3.  按一下 **[新增]** 。  
   
      便會將含有預設值的 XML 索引新增至 [選取的 XML 索引]**** 清單。  
   
-4.  按一下 [關閉]  。  
+4.  按一下 **關閉**。  
   
     > [!NOTE]  
     >  XML 索引會針對個別資料行建立。 第一個 XML 索引是主索引；任何額外的索引則為次要索引。  

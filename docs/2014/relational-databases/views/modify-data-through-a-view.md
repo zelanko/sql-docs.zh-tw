@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211671"
 ---
 # <a name="modify-data-through-a-view"></a>透過檢視修改資料
@@ -38,28 +38,28 @@ ms.locfileid: "68211671"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) 中的＜可更新的檢視＞一節。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  根據執行的動作，需要目標資料表的 UPDATE、INSERT 或 DELETE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>透過檢視修改資料表資料  
   
-1.  在 **[物件總管]** 中，展開包含檢視的資料庫，然後展開 **[檢視]**。  
+1.  在 **[物件總管]** 中，展開包含檢視的資料庫，然後展開 **[檢視]** 。  
   
-2.  以滑鼠右鍵按一下檢視，然後選取 [編輯前 200 個資料列]****。  
+2.  以滑鼠右鍵按一下檢視，然後選取 [編輯前 200 個資料列]  。  
   
 3.  您可能需要修改 **[SQL]** 窗格中的 SELECT 陳述式，才能傳回要修改的資料列。  
   
-4.  在 **[結果]** 窗格中，尋找要變更或刪除的資料列。 若要刪除資料列，請以滑鼠右鍵按一下此資料列，然後選取 [刪除]****。 若要變更一個或多個資料行中的資料，請修改資料行中的資料。  
+4.  在 **[結果]** 窗格中，尋找要變更或刪除的資料列。 若要刪除資料列，請以滑鼠右鍵按一下此資料列，然後選取 [刪除]  。 若要變更一個或多個資料行中的資料，請修改資料行中的資料。  
   
     > [!IMPORTANT]  
     >  如果檢視參考多個基底資料表，就不能刪除資料列。 您只可以更新屬於單一基底資料表的資料行。  
@@ -69,7 +69,7 @@ ms.locfileid: "68211671"
     > [!IMPORTANT]  
     >  如果檢視參考多個基底資料表，就不能插入資料列。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-update-table-data-through-a-view"></a>透過檢視更新資料表資料  
   

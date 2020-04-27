@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74b6e86e6c9e7fd9d293e4c1bdab952468adb4b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106504"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>在資料表或矩陣的圖表上對齊資料 (報表產生器及 SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66106504"
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [&#40;報表產生器和 SSRS 新增走勢圖和資料橫條&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [加入走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

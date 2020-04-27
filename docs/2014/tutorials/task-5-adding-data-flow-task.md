@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489139"
 ---
-# <a name="task-5-adding-data-flow-task"></a>工作 5：加入資料流程工作
+# <a name="task-5-adding-data-flow-task"></a>工作 5：新增資料流程工作
   在這項工作中，您會將資料流程工作加入至 SSIS 封裝的控制流程中。  
   
 1.  將 [**資料流程**工作] 從 [ **ssis 工具箱**] 拖放至 ssis 設計師中的 [**控制流程**] 索引標籤。 如果您看不到 [ **SSIS 工具箱**]，請按一下 [**控制流程**] 索引標籤中的任何位置，按一下功能表列上的 [ **ssis** ]，然後按一下 [ **ssis 工具箱**]。  
@@ -31,6 +31,6 @@ ms.locfileid: "65489139"
 4.  按兩下 [**資料流程工作]，切換至 [** **資料流程] 索引**標籤。  
   
 ## <a name="next-step"></a>後續步驟  
- [工作 6：將 Excel 來源加入至資料流程](task-6-adding-excel-source-to-the-data-flow.md)  
+ [工作 6：將 Excel 來源新增至資料流程](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

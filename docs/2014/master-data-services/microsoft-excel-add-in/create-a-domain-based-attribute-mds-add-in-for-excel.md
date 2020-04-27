@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478979"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>建立網域屬性 (適用於 Excel 的 MDS 增益集)
@@ -25,12 +25,12 @@ ms.locfileid: "65478979"
 > [!NOTE]  
 >  如果使用者在受條件約束的資料行中輸入值，而不是從清單中選取，在發行時 **$InputStatus$** 資料行中會顯示錯誤。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理]**** 和總管**** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)。  
   
 -   模型和實體必須已經存在。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "65478979"
 ## <a name="see-also"></a>另請參閱  
  [以網域為基礎的屬性 &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
  [&#40;適用于 Excel 的 MDS 增益集建立實體&#41;](create-an-entity-mds-add-in-for-excel.md)   
- [建立模型 &#40;適用于 Excel 的 MDS 增益集&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [建立模型 &#40;適用於 Excel 的 MDS 增益集&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

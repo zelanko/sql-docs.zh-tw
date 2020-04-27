@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1c3caf606e8cbf551d7b865b30996ae0f16450a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480717"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能及工作
@@ -25,7 +25,7 @@ ms.locfileid: "65480717"
   
  [DQS 知識庫與定義域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- [&#40;DQS&#41;的資料品質專案](../../2014/data-quality-services/data-quality-projects-dqs.md)  
+ [資料品質專案 &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)  
   
  [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109375"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>資料集屬性對話方塊、篩選 (報表產生器)
@@ -42,13 +42,12 @@ ms.locfileid: "66109375"
  將清單中所選取的篩選向下移動  
   
  **運算式**  
- 輸入或選擇您要套用篩選的目標運算式。 請按一下 [運算式]\(**fx**) 按鈕來編輯運算式。  
+ 輸入或選擇您要套用篩選的目標運算式。 按一下 [運算式] （**fx**）按鈕來編輯運算式。  
   
  **資料類型**  
  選擇 [值]**** 的資料類型。 可能的話，請選擇符合 **[運算式]** 資料類型的資料類型。  
   
- 
-  **[運算式]** 與 **[值]** 中的值必須評估為相同的資料類型。 例如，如果 [運算式]**** 設定為具有 System.Int32 資料類型的欄位，而 [值]**** 設定為 7，請從下拉式清單中，選擇 [整數]****。  
+ **[運算式]** 與 **[值]** 中的值必須評估為相同的資料類型。 例如，如果 [運算式]**** 設定為具有 System.Int32 資料類型的欄位，而 [值]**** 設定為 7，請從下拉式清單中，選擇 [整數]****。  
   
  如果您所需要的資料類型選項不在此下拉式清單中，請撰寫運算式，以便將此值轉換為正確的資料類型。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -56,10 +55,10 @@ ms.locfileid: "66109375"
  選擇要用來比較運算式和值的運算子。  
   
  **ReplTest1**  
- 評估在 [運算式]**** 方塊中指定的運算式時，輸入要使用的運算式或值。 請按一下 [運算式]\(**fx**) 按鈕來編輯運算式。  
+ 評估在 [運算式]**** 方塊中指定的運算式時，輸入要使用的運算式或值。 按一下 [運算式] （**fx**）按鈕來編輯運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [將篩選加入至資料集 &#40;報表產生器和 SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  

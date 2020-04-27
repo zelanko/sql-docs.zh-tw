@@ -14,18 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298596"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署轉譯延伸模組
   在您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表轉譯延伸模組並將其編譯成 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使其可供報表伺服器和報表設計師探索。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>組態檔轉譯延伸模組元素  
- 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 
-  `Extension` 元素包含兩個屬性：Name 與 Type。  
+ 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 `Extension` 元素包含兩個屬性：Name 與 Type。  
   
  下表描述用於轉譯延伸模組之`Extension`元素的屬性：  
   

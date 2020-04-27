@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99fe80a22f380bbe1406d357846c4103eeb0083e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104386"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>報表屬性對話方塊、參考 (報表產生器)
@@ -44,7 +44,7 @@ ms.locfileid: "66104386"
  **Up**  
  若為具有相依性的類別，您可將這個參考移動至清單中的較高位置。  
   
- **按住**  
+ **向下**  
  若為具有相依性的類別，您可將這個參考移動至清單中的較低位置。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265136"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
@@ -86,9 +86,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>修改元件屬性  
- 您可以用數種方式在設計環境中修改 `CustomData` 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 <xref:System.ComponentModel.BrowsableAttribute> 屬性瀏覽器以 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性]**** 以顯示自訂屬性視窗。  
+ 您可以用數種方式在設計環境中修改 `CustomData` 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器以 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性]**** 以顯示自訂屬性視窗。  
   
- 下列程式碼範例顯示套用了 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 屬性 (Attribute) 的 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Property)：  
+ 下列程式碼範例顯示套用了 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 的 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 屬性 (Property)：  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -190,15 +190,14 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   元件的設計階段屬性  
   
--   
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的元件  
+-   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的元件  
   
 -   逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂報表專案架構](custom-report-item-architecture.md)   
- [建立自訂報表項目執行階段元件](creating-a-custom-report-item-run-time-component.md)   
+ [建立自訂報表專案執行時間元件](creating-a-custom-report-item-run-time-component.md)   
  [自訂報表專案類別庫](custom-report-item-class-libraries.md)   
- [如何：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)  
+ [操作說明：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)  
   
   

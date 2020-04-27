@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479174"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65479174"
   
  如果是沒有啟用明確階層的實體，將權限指派給 [分葉]**** 與指派給實體相同。  
   
- **紀錄**  
+ **注意：**  
   
 -   分葉權限只適用於使用者介面的總管**** 功能區域。  
   
@@ -67,6 +67,6 @@ ms.locfileid: "65479174"
  [合併的許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
  [模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

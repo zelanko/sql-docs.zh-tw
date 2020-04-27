@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260753"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
@@ -40,15 +40,14 @@ ms.locfileid: "63260753"
   
 |設定|值|  
 |-------------|-----------|  
-|**收件人**|出現在電子郵件訊息的 `To` 之電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
-|**副本**|出現在電子郵件訊息的 `Cc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
+|**自**|出現在電子郵件訊息的 `To` 之電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
+|**修**|出現在電子郵件訊息的 `Cc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**密件副本**|出現在電子郵件訊息的 `Bcc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**ReplyTo**|出現在電子郵件訊息的 `Reply-To` 標頭之電子郵件地址。 值必須是單一電子郵件地址。 選擇性。|  
-|`IncludeReport`|指出在電子郵件傳遞中是否包括報表的值。 
-  `true` 的值指出在電子郵件訊息的本文中所傳遞的報表。|  
+|`IncludeReport`|指出在電子郵件傳遞中是否包括報表的值。 `true` 的值指出在電子郵件訊息的本文中所傳遞的報表。|  
 |**RenderFormat**|要用以產生轉譯報表的轉譯延伸模組名稱。 名稱必須對應至報表伺服器上安裝的其中一個可見的轉譯延伸模組。 如果將 `IncludeReport` 設定為 `true` 的值，則這個值是必要的。|  
 |**優先順序**|傳送電子郵件訊息的優先權。 有效值是 `LOW`、`NORMAL` 和 `HIGH`。 預設值是 `NORMAL`。|  
-|**主題**|電子郵件訊息主旨中的文字。|  
+|**主旨**|電子郵件訊息主旨中的文字。|  
 |**註解**|文字包括在電子郵件訊息的本文中。|  
 |**IncludeLink**|指出在電子郵件本文中是否包括報表連結的值。|  
   
@@ -66,7 +65,7 @@ ms.locfileid: "63260753"
 |**WRITEMODE**|存取磁碟時使用的寫入模式。 有效值是 `None`、`Overwrite` 和 `AutoIncrement`。|  
   
 ## <a name="see-also"></a>另請參閱  
- [技術參考 &#40;SSRS&#41;](../../technical-reference-ssrs.md)   
- [使用 Web 服務和.NET Framework 建置應用程式](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [SSRS&#41;&#40;的技術參考](../../technical-reference-ssrs.md)   
+ [使用 Web 服務和 .NET Framework 建置應用程式](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

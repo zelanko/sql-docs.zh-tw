@@ -11,33 +11,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106430"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合參考 (報表產生器及 SSRS)
-  
   `DataSources` 集合代表報表中使用的所有資料來源。 同樣地，`DataSets` 集合則代表報表中所有資料來源的所有資料集。 請使用 [報表資料]  窗格以階層的方式檢視報表資料集 (排列在所參考資料來源的下方)。 如果加入這些集合的參考，就不會在預覽報表時看到值。 只有發行報表至報表伺服器後，才可以使用這些集合。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="datasources"></a>DataSources  
- 
-  `DataSources` 集合代表已發行報表定義中參考的資料來源。 您可以選擇在報表中加入這項資訊，以記錄報表資料的來源。 這個集合在 [預覽]  模式中無法使用。 下表描述 `DataSources` 集合內的變數。  
+ `DataSources` 集合代表已發行報表定義中參考的資料來源。 您可以選擇在報表中加入這項資訊，以記錄報表資料的來源。 這個集合在 [預覽]  模式中無法使用。 下表描述 `DataSources` 集合內的變數。  
   
-|**變數**|`Type`|**說明**|  
+|**變數**|`Type`|**描述**|  
 |------------------|--------------|---------------------|  
 |`DataSourceReference`|`String`|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`.|  
-|`Type`|`String`|資料來源的資料提供者類型。 例如： `SQL` 。|  
+|`Type`|`String`|資料來源的資料提供者類型。 例如，`SQL`。|  
   
 ## <a name="datasets"></a>DataSets  
- 
-  `DataSets` 集合代表報表定義中參考的資料集。 您可以選擇將查詢加入報表的文字方塊中，這樣如果使用者想要知道報表中到底有什麼資料，就可以看到原始的命令文字。 這個集合在 [預覽]  模式中無法使用。 下表描述 `DataSets` 集合的成員。  
+ `DataSets` 集合代表報表定義中參考的資料集。 您可以選擇將查詢加入報表的文字方塊中，這樣如果使用者想要知道報表中到底有什麼資料，就可以看到原始的命令文字。 這個集合在 [預覽]**** 模式中無法使用。 下表描述 `DataSets` 集合的成員。  
   
-|**成員**|`Type`|**說明**|  
+|**成員**|`Type`|**描述**|  
 |----------------|--------------|---------------------|  
 |`CommandText`|`String`|針對資料庫資料來源，此查詢是用來擷取資料來源中的資料。 如果查詢是運算式，則此為評估運算式。|  
 |`RewrittenCommandText`|`String`|資料提供者的擴充 CommandText 值。 此值通常用於含有對應至報表參數之查詢參數的報表。 當命令文字參數參考擴充至針對已對應報表參數所選取的常數值時，資料提供者會設定此屬性。|  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104072"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>設定報表伺服器 (Reporting Services 原生模式)
@@ -59,10 +59,10 @@ ms.locfileid: "66104072"
  建立資料夾、上傳項目及執行報表來確認您的安裝。 請依照 [驗證 Reporting Services 安裝](../install-windows/verify-a-reporting-services-installation.md) 中的指示來確認安裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 Reporting Services 的原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)   
- [設定報表伺服器存取的防火牆](configure-a-firewall-for-report-server-access.md)   
- [&#40;SSRS&#41;設定原生模式報表伺服器進行本機管理](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [設定報表伺服器進行遠端系統管理](configure-a-report-server-for-remote-administration.md)   
+ [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)   
+ [設定供報表伺服器存取的防火牆](configure-a-firewall-for-report-server-access.md)   
+ [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [設定報表伺服器來進行遠端管理](configure-a-report-server-for-remote-administration.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

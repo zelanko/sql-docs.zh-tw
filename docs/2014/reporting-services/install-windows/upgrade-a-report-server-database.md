@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108643"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
@@ -31,15 +31,13 @@ ms.locfileid: "66108643"
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>升級原生模式報表伺服器資料庫的方法  
  下列清單會識別升級報表伺服器資料庫的狀況：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會升級報表伺服器的單一執行個體。 報表伺服器資料庫結構描述會在服務啟動之後自動升級，而且報表伺服器會判斷此資料庫結構描述是否與伺服器版本不符。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會升級報表伺服器的單一執行個體。 報表伺服器資料庫結構描述會在服務啟動之後自動升級，而且報表伺服器會判斷此資料庫結構描述是否與伺服器版本不符。  
   
      當服務啟動時，報表伺服器會檢查資料庫結構描述版本，以便確認它是否符合伺服器版本。 如果資料庫結構描述版本是較舊的版本，它就會自動升級為報表伺服器所需的結構描述版本。 如果您還原或附加舊版的報表伺服器資料庫，自動升級會特別實用。 報表伺服器追蹤記錄檔中會輸入一則訊息，表示資料庫結構描述版本已升級。  
   
 -   當您選取要搭配新的報表伺服器執行個體使用的舊版時， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會升級本機或遠端報表伺服器資料庫。 若為上述情況，您就必須在升級動作發生之前先進行確認。  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不再提供個別的 [升級] 按鈕或升級指令碼。 這些功能從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始已過時，因為報表伺服器服務有自動升級功能。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不再提供個別的 [升級] 按鈕或升級指令碼。 這些功能從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始已過時，因為報表伺服器服務有自動升級功能。  
   
  在更新結構描述之後，便無法將此項升級回復成先前的版本。 一定要備份報表伺服器資料庫，以防之後需要重新建立先前的安裝。  
   
@@ -55,7 +53,7 @@ ms.locfileid: "66108643"
  除了報表伺服器資料庫之外，報表伺服器也使用暫存資料庫。 當您升級報表伺服器資料庫時，會自動升級暫存資料庫。  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>升級報表伺服器資料庫所需的權限  
- 如果您正在升級的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝包含報表伺服器資料庫，則當執行資料庫升級時具備的權限不足時，您可能會看到錯誤訊息。 依預設，安裝程式會使用執行安裝程式之使用者的安全性 Token，以連接到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並更新結構描述。 如果您在主控報表伺服器資料庫的資料庫伺服器上擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員** 權限，資料庫升級將會成功。 同樣地，如果您從命令提示字元執行安裝程式，並為具有修改遠端電腦結構描述之 **系統管理員** 權限的帳戶指定 RSUPGRADEDATABASEACCOUNT 和 RSUPGRADEPASSWORD 引數，資料庫升級將會成功。  
+ 如果您正在升級的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝包含報表伺服器資料庫，則當執行資料庫升級時具備的權限不足時，您可能會看到錯誤訊息。 依預設，安裝程式會使用執行安裝程式之使用者的安全性 Token，以連接到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並更新結構描述。 如果您在主控報表伺服器資料庫的資料庫伺服器上擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員**權限，則資料庫升級將會成功。 同樣地，如果您從命令提示字元執行安裝程式，並為具有修改遠端電腦結構描述之 **系統管理員** 權限的帳戶指定 RSUPGRADEDATABASEACCOUNT 和 RSUPGRADEPASSWORD 引數，資料庫升級將會成功。  
   
  然而，如果您沒有遠端電腦之資料庫的 **系統管理員** 權限，則連線會遭到拒絕，並傳回下列錯誤：  
   
@@ -68,7 +66,7 @@ ms.locfileid: "66108643"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [建立 &#40;SSRS Configuration Manager 的報表伺服器資料庫&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [&#40;SSRS 原生模式的變更資料庫 Wizard&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [升級和遷移 Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [遷移 Reporting Services 安裝 &#40;原生模式&#41;](migrate-a-reporting-services-installation-native-mode.md)  
