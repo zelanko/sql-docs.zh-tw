@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736612"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 物件和物件特性
@@ -63,8 +63,7 @@ ms.locfileid: "62736612"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed` (在適當處)  
+-   `LastProcessed` (在適當處)  
   
 > [!NOTE]  
 >  將物件分類為主要物件會影響 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體處理 (Treat)該物件的方式，以及如何以物件定義語言處理 (Handle) 該物件。 不過，這個分類無法保證 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理與開發工具，將允許獨立地建立、修改或刪除這些物件。  
@@ -82,10 +81,10 @@ ms.locfileid: "62736612"
   
 -   與 Cube 相關聯的命令  
   
--   彙總  
+-   Aggregations  
   
 ## <a name="object-expansion"></a>物件展開  
- `ObjectExpansion`限制可用於控制伺服器傳回之 ASSL XML 的擴充程度。 這個限制具有下表中所列的選項。  
+  限制可用以控制伺服器傳回的 ASSL XML 展開程度。 這個限制具有下表中所列的選項。  
   
 |列舉值|允許\<Alter>|描述|  
 |-----------------------|---------------------------|-----------------|  
@@ -97,11 +96,8 @@ ms.locfileid: "62736612"
  這個 ASSL 參考章節描述*ExpandFull*標記法。 所有其他 `ObjectExpansion` 層級都衍生自這個層級。  
   
 ## <a name="object-processing"></a>物件處理  
- ASSL 包括的唯讀元素或是屬性 (例如 `LastProcessed`)，可以從 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體讀取，但是當將命令指令碼提交到執行個體時，會省略它們。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會在沒有警告或錯誤的情況下，忽略唯讀元素已修改的值。  
+ ASSL 包括的唯讀元素或是屬性 (例如 `LastProcessed`)，可以從 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體讀取，但是當將命令指令碼提交到執行個體時，會省略它們。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會在沒有警告或錯誤的情況下，忽略唯讀元素已修改的值。  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 也會忽略不適當或是不相關的屬性，而不會引發驗證錯誤。 例如，X 元素應該只有在 Y 元素具有特定值時才出現。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體會忽略 X 元素，而不會針對 Y 元素值來驗證該元素。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 也會忽略不適當或是不相關的屬性，而不會引發驗證錯誤。 例如，X 元素應該只有在 Y 元素具有特定值時才出現。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體會忽略 X 元素，而不會針對 Y 元素值來驗證該元素。  
   
   

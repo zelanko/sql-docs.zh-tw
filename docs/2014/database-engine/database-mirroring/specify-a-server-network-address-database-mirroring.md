@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755061"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)
@@ -29,33 +29,33 @@ ms.locfileid: "62755061"
   
   
   
-##  <a name="Syntax"></a> 伺服器網路位址的語法  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a>伺服器網路位址的語法  
  伺服器網路位址的語法採用下列格式：  
   
  TCP：<strong>//</strong>*\<系統-位址>* <strong>：<strong>*\<埠>* 
   
- 其中  
+ where  
   
--   *\<系統位址>* 是可明確識別目標電腦系統的字串。 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
+-   系統位址>是可明確識別目的地電腦系統的字串。 * \< * 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
   
     -   如果系統位於同一個網域，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址>  **]** 。  
+    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須括在方括弧內，例如： **[** _<IPv6_address>_ **]**。  
   
          若要取得系統的 IP 位址，請在 Windows 命令提示字元下，輸入 **ipconfig** 命令。  
   
     -   完整網域名稱保證可以運作。 這是在不同位置會有不同格式的本機定義位址字串。 完整網域名稱通常 (但不一定) 都是複合名稱，包含電腦名稱及一系列以句號分隔的網域區段，並採用下列格式：  
   
-         _電腦名稱_ **.** _網域區段_[... **.** _網域區段_]  
+         _電腦名稱_ **.** _網域區段_[...**.**_網域區段_]  
   
-         其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[... **.** _網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
+         其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[...**.**_網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
   
          網域區段的內容和數目是在公司或組織的內部決定的。 如果您不知道伺服器的完整網域名稱，請洽詢您的系統管理員。  
   
         > [!NOTE]  
         >  如需有關如何尋找完整網域名稱的詳細資訊，請參閱本主題稍後的「尋找完整網域名稱」。  
   
--   *\<連接埠>* 是夥伴伺服器執行個體的鏡像端點所使用的連接埠號碼。 如需指定端點的資訊，請參閱 [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+-   埠>是夥伴伺服器實例的鏡像端點所使用的通訊埠編號。 * \< * 如需指定端點的資訊，請參閱 [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
      資料庫鏡像端點可以使用電腦系統上任何可用的通訊埠。 電腦系統上的每個通訊埠編號必須只與一個端點產生關聯，而且每個端點會與單一伺服器執行個體產生關聯，因此相同伺服器上的不同伺服器執行個體會利用不同通訊埠接聽不同端點。 因此，當您設定資料庫鏡像工作階段時，在伺服器網路位址中指定的通訊埠，會永遠把工作階段導向到端點與該通訊埠產生關聯的伺服器執行個體。  
   
@@ -106,7 +106,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  **IPCONFIG /ALL**  
   
- 若要形成完整的網域名稱，請串連 <主機名稱>  和 <主要 DNS 尾碼>  的值，如下所示：  
+ 若要形成完整的網域名稱，請串連 <主機名稱>** 和 <主要 DNS 尾碼>** 的值，如下所示：  
   
  _<主機名稱>_ **.** _<主要 DNS 尾碼>_  
   
@@ -120,7 +120,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> 範例  
+##  <a name="examples"></a><a name="Examples"></a> 範例  
  下列範例會顯示另一個網域中名為 `REMOTESYSTEM3` 之電腦系統上伺服器執行個體的伺服器網路位址。 網域資訊為 `NORTHWEST.ADVENTURE-WORKS.COM`，而且資料庫鏡像端點的通訊埠為 `7025`。 如果有這些範例元件，伺服器網路位址就是：  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -129,7 +129,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

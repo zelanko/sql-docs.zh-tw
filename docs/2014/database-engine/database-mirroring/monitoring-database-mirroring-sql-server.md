@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755370"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62755370"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> 監視鏡像狀態  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> 監視鏡像狀態  
  若要針對伺服器執行個體上的一個或多個鏡像資料庫設定並管理監視作業，您可以使用 [資料庫鏡像監視器] 或 **dbmmonitor** 系統預存程序。 您可以在鏡像工作階段期間監視鏡像資料庫，以便確認資料流程是否正常。  
   
  更明確地說，監視鏡像資料庫可讓您：  
@@ -62,7 +62,7 @@ ms.locfileid: "62755370"
   
      如果新的狀態資料列含有超過臨界值的值，就會傳送參考用事件至 Windows 事件記錄檔。 然後，系統管理員就可以根據這些事件，手動設定警示。 如需詳細資訊，請參閱 [使用鏡像效能標準的警告臨界值與警示 &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> 監視資料庫鏡像狀態的工具  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> 監視資料庫鏡像狀態的工具  
  您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 系統預存程序來監視鏡像狀態。 系統管理員 (亦即 **系統管理員** 固定伺服器角色的成員) 和系統管理員在 **msdb** 資料庫之 **dbm_monitor** 固定資料庫角色中加入的使用者，都可以使用這些工具來監視本機伺服器執行個體上任何鏡像資料庫的資料庫鏡像。 使用任何一項工具時，系統管理員也可以手動重新整理鏡像狀態。  
   
 > [!NOTE]  
@@ -130,14 +130,14 @@ ms.locfileid: "62755370"
      系統管理員可以使用 **sp_dbmmonitorresults** 系統預存程序來檢視並選擇性地更新狀態資料表 (如果在前 15 秒內未更新過的話)。 此程序會呼叫 **sp_dbmmonitorupdate** 程序並根據程序呼叫中要求的數量，傳回一個或多個記錄資料列。 如需結果集中狀態的資訊，請參閱 [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)。  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>監視資料庫鏡像狀態 (dbm_monitor 成員)  
- 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態]***** 頁面上查看 [主體記錄 (\<時間>)]********** 和 [鏡像記錄 (\<時間>)]********* 標籤中的時間。  
+ 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態]**** 頁面上查看 [主體記錄 (\<時間>)]********** 和 [鏡像記錄 (\<時間>)]********** 標籤中的時間。  
   
  **dbm_monitor** 固定資料庫角色的成員會仰賴 [資料庫鏡像監視器作業]  來定期更新狀態資料表。 如果此作業不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 已停止，狀態就會逐漸成為過時，而且不再反映鏡像工作階段的組態。 例如，在容錯移轉之後，夥伴可能看起來像是共用相同的角色 (主體或鏡像)，或者目前的主體伺服器可能會顯示為鏡像，而目前的鏡像伺服器則顯示為主體。  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>卸除資料庫鏡像監視器作業  
  資料庫鏡像監視器作業 **[資料庫鏡像監視器作業]** 會維持到卸除為止。 此監視作業必須由系統管理員管理。 若要卸除 [資料庫鏡像監視器作業]  ，請使用 **sp_dbmmonitordropmonitoring**。 如需詳細資訊，請參閱 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)。  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> 資料庫鏡像監視器顯示的狀態  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> 資料庫鏡像監視器顯示的狀態  
  [資料庫鏡像監視器] 的 **[狀態]** 頁面會描述夥伴，還有鏡像工作階段的狀態。 狀態會包括效能標準，如交易記錄狀態和其他資訊，目的是要在工作階段沒有同步時，協助您估計目前完成容錯移轉所需的時間以及遺失資料的可能性。 此外， **[狀態]** 頁面還會顯示鏡像工作階段的一般狀態和相關資訊。  
   
 > [!NOTE]  
@@ -247,7 +247,7 @@ ms.locfileid: "62755370"
   
     -   具有自動容錯移轉的高安全性 (同步)  
   
-##  <a name="AdditionalSources"></a> 與鏡像資料庫相關的其他資訊來源  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> 與鏡像資料庫相關的其他資訊來源  
  除了使用 [資料庫鏡像監視器] 和 dbmmonitor 預存程序來監視鏡像資料庫並設定監視效能變數的警示以外， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 還提供目錄檢視、效能計數器及資料庫鏡像事件通知。  
   
  **本節內容：**  
@@ -258,7 +258,7 @@ ms.locfileid: "62755370"
   
 -   [資料庫鏡像事件通知](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> 資料庫鏡像中繼資料  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> 資料庫鏡像中繼資料  
  每個資料庫鏡像工作階段都會在中繼資料中描述，並可透過下列目錄或動態管理檢視公開此中繼資料：  
   
 -   **sys.database_mirroring**  
@@ -279,7 +279,7 @@ ms.locfileid: "62755370"
   
      如需詳細資訊，請參閱 [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)。  
   
-###  <a name="DbmPerfCounters"></a> 資料庫鏡像效能計數器  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> 資料庫鏡像效能計數器  
  效能計數器可讓您監視資料庫鏡像效能。 例如，您可以檢查 **[Transaction Delay]** 計數器，以查看資料庫鏡像是否影響主體伺服器的效能；您可以檢查 **[Redo Queue]** 與 **[Log Send Queue]** 計數器，以查看鏡像資料庫是否跟得上主體資料庫。 您可以檢查 [Log Bytes Sent/sec]  計數器，以監視每秒傳送的記錄量。  
   
  在每個夥伴的「效能監視器」中，都可在資料庫鏡像效能物件 (**SQLServer:Database Mirroring**) 中使用效能計數器。 如需詳細資訊，請參閱 [SQL Server 的 Database Mirroring 物件](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
@@ -288,7 +288,7 @@ ms.locfileid: "62755370"
   
 -   [啟動系統監視器 &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> 資料庫鏡像事件通知  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> 資料庫鏡像事件通知  
  事件通知是特殊的資料庫物件類型。 事件通知是為了回應各種 Transact-SQL 資料定義語言 (DDL) 陳述式和 SQL 追蹤事件而執行，並將伺服器和資料庫事件的相關資訊傳送給 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務。  
   
  下列事件可用於資料庫鏡像：  
@@ -301,7 +301,7 @@ ms.locfileid: "62755370"
   
      這會報告與資料庫鏡像傳輸安全性相關的稽核訊息。 如需詳細資訊，請參閱 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用鏡像效能標準的警告臨界值與警示 &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

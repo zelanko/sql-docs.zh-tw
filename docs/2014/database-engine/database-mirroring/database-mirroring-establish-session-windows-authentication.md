@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755513"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 驗證建立資料庫鏡像工作階段 (Transact-SQL)
@@ -42,9 +42,9 @@ ms.locfileid: "62755513"
      資料庫鏡像工作階段中的每個伺服器執行個體都需要一個資料庫鏡像端點。 如果端點不存在，您就必須自行建立。  
   
     > [!NOTE]  
-    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱[資料庫鏡像的傳輸安全性和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 有兩種傳輸安全性可用於資料庫鏡像：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱[資料庫鏡像的傳輸安全性和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
   
-     確定在每個夥伴伺服器上，資料庫鏡像都有端點可供使用。 不論要支援的鏡像工作階段數有多少，伺服器執行個體只能有一個資料庫鏡像端點。 如果您想要將此伺服器實例專門用於資料庫鏡像會話中的夥伴，您可以將夥伴的角色指派給端點（角色**=** 夥伴）。 如果您也想讓其他資料庫鏡像工作階段的見證使用此伺服器，請將端點的角色指派為 ALL。  
+     確定在每個夥伴伺服器上，資料庫鏡像都有端點可供使用。 不論要支援的鏡像工作階段數有多少，伺服器執行個體只能有一個資料庫鏡像端點。 若要讓資料庫鏡像工作階段的夥伴獨佔使用此伺服器執行個體，您可以將夥伴的角色指派給端點 (ROLE **=** PARTNER)。 如果您也想讓其他資料庫鏡像工作階段的見證使用此伺服器，請將端點的角色指派為 ALL。  
   
      若要執行 SET PARTNER 陳述式，兩個夥伴的端點狀態 (STATE) 必須都設為 STARTED。  
   
@@ -65,15 +65,15 @@ ms.locfileid: "62755513"
   
      ALTER DATABASE *<database_name>* 設定夥伴**=** _<server_network_address>_  
   
-     其中 <資料庫名稱>** 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 <伺服器網路位址>** 是主體伺服器的伺服器網路位址。  
+     其中 *<database_name>* 是要鏡像的資料庫名稱（此名稱在兩個夥伴上都相同），而 *<server_network_address>* 是主體伺服器的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
      TCP：<strong>//</strong>\<*系統-位址>* <strong>：</strong>\<*埠>*  
   
-     其中 \<系統位址>** 是清楚識別目的地電腦系統的字串，\<通訊埠>** 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
+     其中 \<系統位址>  是清楚識別目的地電腦系統的字串，\<通訊埠>  是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在鏡像伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始主體伺服器執行個體。 資料庫名稱是**AdventureWorks**，系統位址是 DBSERVER1-夥伴系統的名稱，而夥伴的資料庫鏡像端點所使用的埠是7022：  
+     例如，在鏡像伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始主體伺服器執行個體。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER1 (夥伴系統的名稱)，而夥伴資料庫鏡像端點使用的通訊埠是 7022：  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -88,7 +88,7 @@ ms.locfileid: "62755513"
   
      如需詳細資訊，請參閱步驟 4。  
   
-     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始鏡像伺服器執行個體。 資料庫名稱是**AdventureWorks**，系統位址是 DBSERVER2-夥伴系統的名稱，而夥伴的資料庫鏡像端點所使用的埠是7025：  
+     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始鏡像伺服器執行個體。 資料庫名稱是 **AdventureWorks**，系統位址是 DBSERVER2 (夥伴系統的名稱) 而夥伴資料庫鏡像端點使用的通訊埠是 7025：  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -211,10 +211,10 @@ ms.locfileid: "62755513"
   
 ## <a name="see-also"></a>另請參閱  
  [設定資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [允許使用 Windows 驗證 &#40;SQL Server&#41;的資料庫鏡像端點的網路存取](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [建立適用于 Windows 驗證的資料庫鏡像端點 &#40;Transact-sql&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [資料庫鏡像和記錄傳送 &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [資料庫鏡像和複寫 &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   

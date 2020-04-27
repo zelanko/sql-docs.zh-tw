@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761619"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
@@ -36,9 +36,9 @@ ms.locfileid: "62761619"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   外部索引鍵條件約束不一定只能連結到另一個資料表中的主索引鍵條件約束；它也可以定義成參考另一個資料表中 UNIQUE 條件約束的資料行。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "62761619"
   
 -   只有在所參考的主索引鍵也定義成 `varchar(max)` 類型時，`varchar(max)` 類型的資料行才能夠參與 FOREIGN KEY 條件約束。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  建立具有外部索引鍵的新資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。  
   
  在現有資料表中建立外部索引鍵需要此資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>若要在資料表設計工具建立外部索引鍵關聯性  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62761619"
   
 7.  在方格的下方，選擇組成資料表主索引鍵的資料行。 在每個資料行左側的鄰近方格資料格，選擇對應到外部索引鍵資料表的外部索引鍵資料行。  
   
-     **資料表設計工具**建議關聯性的名稱。 若要變更這個名稱，請編輯 **[關聯性名稱]** 文字方塊的內容。  
+     **[資料表設計工具]** 會提供關聯性的建議名稱。 若要變更這個名稱，請編輯 **[關聯性名稱]** 文字方塊的內容。  
   
 8.  選擇 **[確定]** 建立關聯性。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>在新的資料表建立外部索引鍵  
   

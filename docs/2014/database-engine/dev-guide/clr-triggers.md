@@ -26,18 +26,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755250"
 ---
 # <a name="clr-triggers"></a>CLR 觸發程序
   因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 整合，所以您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 語言建立 CLR 觸發程序。 本節涵蓋使用 CLR 整合實作之觸發程序的特定資訊。 如需觸發程式的完整討論，請參閱[DDL 觸發](../../relational-databases/triggers/ddl-triggers.md)程式。  
   
 ## <a name="what-are-triggers"></a>什麼是觸發程序？  
- 觸發程序是一種特殊的預存程序，會在語言事件執行時自動執行。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含兩種一般的觸發程序：資料操作語言 (DML) 和資料定義語言 (DDL) 觸發程序。 當`INSERT`、`UPDATE` 或 `DELETE` 陳述式在指定的資料表或檢視中修改資料時，可以使用 DML 觸發程序。 DDL 觸發程序會引發預存程序來回應多種 DDL 陳述式，這些主要是以 `CREATE`、`ALTER` 和 `DROP` 開頭的陳述式。 DDL 觸發程序可用於稽核和控管資料庫作業等管理工作。  
+ 觸發程序是一種特殊的預存程序，會在語言事件執行時自動執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含兩種一般的觸發程序：資料操作語言 (DML) 和資料定義語言 (DDL) 觸發程序。 當`INSERT`、`UPDATE` 或 `DELETE` 陳述式在指定的資料表或檢視中修改資料時，可以使用 DML 觸發程序。 DDL 觸發程序會引發預存程序來回應多種 DDL 陳述式，這些主要是以 `CREATE`、`ALTER` 和 `DROP` 開頭的陳述式。 DDL 觸發程序可用於稽核和控管資料庫作業等管理工作。  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>CLR 觸發程序的獨特功能  
  以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 撰寫的觸發程序可以藉由使用 `UPDATE(column)` 和 `COLUMNS_UPDATED()` 函數，來判定檢視或資料表中哪些資料行已經更新。  
@@ -53,13 +52,11 @@ ms.locfileid: "62755250"
  這些功能可以在查詢語言中自動提供，或由 `SqlTriggerContext` 類別提供。 如需 CLR 整合的優點，以及在 managed 程式碼和[!INCLUDE[tsql](../../includes/tsql-md.md)]之間選擇的詳細資訊，請參閱[CLR 整合的總覽](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="using-the-sqltriggercontext-class"></a>使用 SqlTriggerContext 類別  
- 
-  `SqlTriggerContext` 類別無法公開建構，而是僅可藉由存取 CLR 觸發程序主體內的 `SqlContext.TriggerContext` 屬性來取得。 藉由呼叫 `SqlTriggerContext` 屬性，可從作用中的 `SqlContext` 取得 `SqlContext.TriggerContext` 類別：  
+ `SqlTriggerContext` 類別無法公開建構，而是僅可藉由存取 CLR 觸發程序主體內的 `SqlContext.TriggerContext` 屬性來取得。 藉由呼叫 `SqlTriggerContext` 屬性，可從作用中的 `SqlContext` 取得 `SqlContext.TriggerContext` 類別：  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- 
-  `SqlTriggerContext` 類別會提供觸發程序的內容資訊。 此內容相關資訊包括會造成引發觸發程序的動作類型 (已使用 UPDATE 作業修改其資料行)，而且，若其為 DDL 觸發程序，則包括說明觸發作業的 XML `EventData` 結構。 如需詳細資訊，請參閱[EVENTDATA &#40;transact-sql&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
+ `SqlTriggerContext` 類別會提供觸發程序的內容資訊。 此內容相關資訊包括會造成引發觸發程序的動作類型 (已使用 UPDATE 作業修改其資料行)，而且，若其為 DDL 觸發程序，則包括說明觸發作業的 XML `EventData` 結構。 如需詳細資訊，請參閱[EVENTDATA &#40;transact-sql&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
   
 ### <a name="determining-the-trigger-action"></a>決定觸發動作  
  一旦取得 `SqlTriggerContext`，您就可以用它來決定引發觸發程序的動作類型。 此資訊可以透過 `TriggerAction` 類別的 `SqlTriggerContext` 屬性來取得。  
@@ -75,8 +72,7 @@ ms.locfileid: "62755250"
 -   若為 DDL 觸發程序，可能的 TriggerAction 值清單會相當長。 如需詳細資訊，請參閱 .NET Framework SDK 中的＜TriggerAction 列舉＞。  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>使用插入和刪除的資料表  
- DML 觸發程式語句中會使用兩個特殊資料表：**插入**的資料表和**已刪除**的資料表。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存資料表測試某些資料修改的影響，並設定會執行 DML 觸發程序動作的條件，但是您無法直接改變資料表中的資料。  
+ DML 觸發程式語句中會使用兩個特殊資料表：**插入**的資料表和**已刪除**的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存資料表測試某些資料修改的影響，並設定會執行 DML 觸發程序動作的條件，但是您無法直接改變資料表中的資料。  
   
  CLR 觸發程式可以透過 CLR 同進程提供者存取已**插入**和**已刪除**的資料表。 這是透過從 SqlContext 物件取得 `SqlCommand` 物件而完成。 例如：  
   
@@ -100,8 +96,7 @@ command.CommandText = "SELECT * FROM " + "inserted"
 ```  
   
 ### <a name="determining-updated-columns"></a>判定更新的資料行  
- 您可以透過使用 `ColumnCount` 物件的 `SqlTriggerContext` 屬性，判定 UPDATE 作業所修改的資料行數。 您可以使用會將資料行序數做為輸入參數的 `IsUpdatedColumn` 方法，判定資料行是否已更新。 
-  `True` 值表示資料行已更新。  
+ 您可以透過使用 `ColumnCount` 物件的 `SqlTriggerContext` 屬性，判定 UPDATE 作業所修改的資料行數。 您可以使用會將資料行序數做為輸入參數的 `IsUpdatedColumn` 方法，判定資料行是否已更新。 `True` 值表示資料行已更新。  
   
  例如，此程式碼片段 (本主題中稍後的 EmailAudit 觸發程序) 會列出所有已更新的資料行：  
   
@@ -517,8 +512,7 @@ The statement has been terminated.
  這項例外狀況也在預期中，而 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式周圍必須有執行引發觸發程序之動作的 try/catch 區塊，才能繼續執行。 儘管會擲回兩項例外狀況，交易仍會回復，而且不會將變更認可到資料表中。 CLR 觸發程序和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序之間的主要差異在於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序在交易回復之後，仍可繼續執行其他作業。  
   
 ### <a name="example"></a>範例  
- 下列觸發程序會在資料表上執行 INSERT 陳述式的簡單驗證。 如果插入的整數值等於 1，則交易會回復，而且值不會插入至資料表。 所有其他的整數值都會插入至資料表。 請注意 `Transaction.Rollback` 方法周圍的 try/catch 區塊。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立測試資料表、組件和 Managed 預存程序。 請注意，這兩個 INSERT 陳述式會包裝在 try/catch 區塊中，如此才能捕捉觸發程序完成執行時所擲回的例外狀況。  
+ 下列觸發程序會在資料表上執行 INSERT 陳述式的簡單驗證。 如果插入的整數值等於 1，則交易會回復，而且值不會插入至資料表。 所有其他的整數值都會插入至資料表。 請注意 `Transaction.Rollback` 方法周圍的 try/catch 區塊。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立測試資料表、組件和 Managed 預存程序。 請注意，這兩個 INSERT 陳述式會包裝在 try/catch 區塊中，如此才能捕捉觸發程序完成執行時所擲回的例外狀況。  
   
  C#  
   
@@ -663,9 +657,9 @@ DROP TABLE Table1;
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
- [DML 觸發程序](../../relational-databases/triggers/dml-triggers.md)   
- [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [DML 觸發程式](../../relational-databases/triggers/dml-triggers.md)   
+ [DDL 觸發程式](../../relational-databases/triggers/ddl-triggers.md)   
+ [嘗試 .。。CATCH &#40;Transact-sql&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
  [使用 Common Language Runtime 建立資料庫物件 &#40;CLR&#41; 整合](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

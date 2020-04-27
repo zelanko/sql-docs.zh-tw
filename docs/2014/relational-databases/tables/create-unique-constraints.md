@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761451"
 ---
 # <a name="create-unique-constraints"></a>建立唯一的條件約束
@@ -36,28 +36,28 @@ ms.locfileid: "62761451"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-constraint"></a>若要建立唯一條件約束  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]  。  
+1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]****。  
   
-2.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
+2.  在 [**資料表設計工具**] 功能表上，按一下 [**索引/索引鍵**]。  
   
-3.  在 [索引/索引鍵]  對話方塊中，按一下 [加入]  。  
+3.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
   
-4.  在 [一般]  底下的方格中，按一下 [類型]  ，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]  。  
+4.  在 [一般]**** 底下的方格中，按一下 [類型]****，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]****。  
   
-5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+5.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>若要建立唯一條件約束  
   

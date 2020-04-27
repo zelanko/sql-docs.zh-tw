@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736351"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>將資料行從一個資料表複製至另一個資料表 (Database Engine)
@@ -31,23 +31,23 @@ ms.locfileid: "62736351"
   
      [安全性](#Security)  
   
--   **若要下列方式複製資料行，請使用：**  
+-   **使用下列方式複製資料行：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  當您在資料庫之間複製擁有別名資料類型的資料行時，別名資料類型可能無法在目的地資料庫中使用。 在這種狀況下，將指派資料庫中可用而最符合的基本資料類型給該資料行。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>若要將資料行定義從一個資料表複製到另一個資料表  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736351"
      如果您是在資料表中複製資料列，您可以加入來源資料表做為目的資料表。  
   
     > [!NOTE]  
-    >  **查詢設計**工具無法預先判斷您可以更新哪些資料表和瀏覽器。 因此，[ **選擇插入結果的目標資料表** ] 對話方塊中的資料表清單會顯示正在查詢之資料連接中的所有可用資料表和檢視，甚至包括您可能無法將資料列複製到其中的資料表和檢視。  
+    >  [**查詢設計工具** ] 無法預先判斷您可以更新哪些資料表和檢視。 因此，[ **選擇插入結果的目標資料表** ] 對話方塊中的資料表清單會顯示正在查詢之資料連接中的所有可用資料表和檢視，甚至包括您可能無法將資料列複製到其中的資料表和檢視。  
   
 5.  在 [圖表] 窗格的主體中按一下滑鼠右鍵，再從快速鍵功能表中按一下 [Add Table to Diagram (將資料表加入圖表)]****。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "62736351"
   
 11. 按一下 [ **執行 SQL** ] 按鈕 以執行查詢。  
   
-     當您執行插入結果查詢時，[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)不會報告任何結果。 而是出現訊息指出已經複製了多少資料列。  
+     在執行插入結果查詢時， [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中不會報告結果， 而是出現訊息指出已經複製了多少資料列。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>若要將資料行定義從一個資料表複製到另一個資料表  
   

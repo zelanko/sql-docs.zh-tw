@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754448"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>設定資料庫鏡像 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62754448"
   
  
   
-##  <a name="PrepareInstances"></a> 準備伺服器執行個體以裝載鏡像伺服器  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> 準備伺服器執行個體以裝載鏡像伺服器  
  在資料庫鏡像工作階段中：  
   
 1.  主體伺服器、鏡像伺服器和見證 (如果有的話) 必須是由位於個別主機系統上的個別伺服器執行個體所裝載。 每一個伺服器執行個體都需要資料庫鏡像端點。 如果您需要建立資料庫鏡像端點，請確定其他伺服器執行個體能夠存取它。  
@@ -48,7 +48,7 @@ ms.locfileid: "62754448"
   
 3.  在即將裝載鏡像資料庫的伺服器執行個體上，設定鏡像資料庫所需的其餘環境。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="EstablishUsingWinAuthentication"></a> 概觀：建立資料庫鏡像工作階段  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> 概觀：建立資料庫鏡像工作階段  
  建立鏡像工作階段的基本步驟如下：  
   
 1.  在每項還原作業上使用 RESTORE WITH NORECOVERY，透過還原下列備份來建立鏡像資料庫：  
@@ -99,7 +99,7 @@ ms.locfileid: "62754448"
   
  
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  摘要說明在繼續進行暫停的工作階段之前，建立鏡像資料庫或準備鏡像資料庫的步驟。 同時提供如何主題的連結。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754448"
  [設定資料庫鏡像的登入帳戶，或 AlwaysOn 可用性群組 &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  描述針對使用與本機伺服器執行個體不同之帳戶的遠端伺服器執行個體，建立登入。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **Transact-SQL**  
   
 -   [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

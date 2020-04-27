@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f0853d7db0664e75140c0e5478af19c233a2517
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761716"
 ---
 # <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
@@ -39,7 +39,7 @@ ms.locfileid: "62761716"
  請確定在 USE PLAN 提示中指定的所有資料庫都存在。  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢提示 &#40;Transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [計畫指南](../performance/plan-guides.md)  
   
   

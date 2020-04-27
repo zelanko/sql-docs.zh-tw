@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768534"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
@@ -87,8 +87,7 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend 介面  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面會定義當執行階段引擎暫停或是繼續工作的執行時，該引擎呼叫的方法。 
-  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面實作，而且自訂工作通常會覆寫其 `Suspend` 與 `ResumeExecution` 方法。 當執行階段引擎從工作收到 `OnBreakpointHit` 事件時，它會呼叫每個執行中工作的 `Suspend` 方法，以通知工作暫停。 當用戶端繼續執行時，執行階段引擎會呼叫已暫停工作的 `ResumeExecution` 方法。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面會定義當執行階段引擎暫停或是繼續工作的執行時，該引擎呼叫的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面實作，而且自訂工作通常會覆寫其 `Suspend` 與 `ResumeExecution` 方法。 當執行階段引擎從工作收到 `OnBreakpointHit` 事件時，它會呼叫每個執行中工作的 `Suspend` 方法，以通知工作暫停。 當用戶端繼續執行時，執行階段引擎會呼叫已暫停工作的 `ResumeExecution` 方法。  
   
  暫停和繼續工作執行需要暫停和繼續工作的執行緒。 在 Managed 程式碼中，您使用 .NET Framework 之 `ManualResetEvent` 命名空間中的 `System.Threading` 類別，來執行這項動作。  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754240"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  雜湊索引健全狀況的兩個重要指標為：  
   
  *empty_bucket_percent*  
- *empty_bucket_percent*指出雜湊索引中的空值區數目。  
+ *empty_bucket_percent* 指出雜湊索引中的空白貯體數目。  
   
  如果 *empty_bucket_percent* 小於 10%，表示這個值區計數可能太低。 理想的 *empty_bucket_percent* 應該是 33% 或更高。 若值區計數與索引鍵值相符，則約 1/3 的貯體數目為空白，原因是雜湊散發。  
   
  *avg_chain_length*  
- *avg_chain_length*指出雜湊值區中資料列鏈的平均長度。  
+ *avg_chain_length* 指出雜湊值區中資料列鏈結的平均長度。  
   
  如果 *avg_chain_length* 大於 10，且 *empty_bucket_percent* 大於 10%，則可能有許多重複的索引鍵值，那麼非叢集索引會較為理想。 理想的平均鏈結長度為 1。  
   

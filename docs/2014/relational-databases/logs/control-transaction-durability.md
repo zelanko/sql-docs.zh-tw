@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743164"
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
@@ -60,13 +60,13 @@ ms.locfileid: "62743164"
   
  可因使用延遲的交易持久性而獲益的情形如下：  
   
- **您可以容忍部分資料遺失。**   
+ **您可以容忍部分資料遺失。**  
  如果您可以容忍部分資料遺失 (只要擁有大部分資料即可，個別記錄並不重要)，延遲的持久性就值得考慮使用。 如果您無法容忍任何資料遺失，請勿使用延遲的交易持久性。  
   
- **您在交易記錄寫入時遇到瓶頸。**   
+ **您在交易記錄寫入時遇到瓶頸。**  
  如果您的效能問題是由於交易記錄寫入的延遲所造成，則使用延遲的交易持久性可能會讓您的應用程式從中獲益。  
   
- **您的工作負載具有很高的競爭率。**   
+ **您的工作負載具有很高的競爭率。**  
  如果您的系統具有高競爭層級的工作負載，就表示花很多時間在等候釋放鎖定。 延遲的交易持久性會減少認可時間並加快釋放鎖定的速度，因而提高輸送量。  
   
  **延遲的交易持久性保證**  
@@ -98,12 +98,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [預設值] 使用這項設定時，在資料庫上認可的所有交易都是完全持久，不論認可層級設定為何 (DELAYED_DURABILITY=[ON | OFF])。 完全不需要進行預存程序變更和重新編譯。 這可讓您確保任何資料都不會因為延遲的持久性而面臨風險。  
   
  `ALLOWED`  
- 使用這項設定時，每筆交易的持久性都是在交易層級上決定的 - DELAYED_DURABILITY = { *OFF* | ON }。 如需詳細資訊，請參閱不可部分完成[的區塊層級控制-原生編譯的預存程式](#atomic-block-level-control---natively-compiled-stored-procedures)和[COMMIT 層級控制 transact-sql](#commit-level-control---t-sql) 。  
+ 使用此設定時，每筆交易的持久性都是在交易層級決定-DELAYED_DURABILITY = { *OFF* |于}。 如需詳細資訊，請參閱不可部分完成[的區塊層級控制-原生編譯的預存程式](#atomic-block-level-control---natively-compiled-stored-procedures)和[COMMIT 層級控制 transact-sql](#commit-level-control---t-sql) 。  
   
  `FORCED`  
  使用這項設定時，在資料庫上認可的每筆交易都是延遲的持久。 不論交易是否有指定完全持久 (DELAYED_DURABILITY = OFF) ，交易都是延遲的持久。 當延遲的交易持久性適用於資料庫，而且您不想要變更任何應用程式程式碼時，這項設定就很有用。  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> ATOMIC 區塊等級控制 - 原生編譯的預存程序  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>不可部分完成的區塊層級控制-原生編譯的預存程式  
  下列程式碼會進入不可部分完成的區塊內部。  
   
 ```sql  
@@ -157,14 +157,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |COMMIT 設定/資料庫設定|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|
-  `DELAYED_DURABILITY = OFF` 資料庫層級交易。|交易是完全持久。|交易是完全持久。|交易是延遲的持久。|  
-|
-  `DELAYED_DURABILITY = ON` 資料庫層級交易。|交易是完全持久。|交易是延遲的持久。|交易是延遲的持久。|  
-|
-  `DELAYED_DURABILITY = OFF` 跨資料庫或分散式交易。|交易是完全持久。|交易是完全持久。|交易是完全持久。|  
-|
-  `DELAYED_DURABILITY = ON` 跨資料庫或分散式交易。|交易是完全持久。|交易是完全持久。|交易是完全持久。|  
+|`DELAYED_DURABILITY = OFF` 資料庫層級交易。|交易是完全持久。|交易是完全持久。|交易是延遲的持久。|  
+|`DELAYED_DURABILITY = ON` 資料庫層級交易。|交易是完全持久。|交易是延遲的持久。|交易是延遲的持久。|  
+|`DELAYED_DURABILITY = OFF` 跨資料庫或分散式交易。|交易是完全持久。|交易是完全持久。|交易是完全持久。|  
+|`DELAYED_DURABILITY = ON` 跨資料庫或分散式交易。|交易是完全持久。|交易是完全持久。|交易是完全持久。|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>如何強制交易記錄排清  
  強制將交易記錄排清至磁碟的方法有兩種。  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62757000"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -88,12 +88,12 @@ REM Gather information about the instance of LocalDB
 |||  
 |-|-|  
 |名稱|"LocalDBApp1"|  
-|版本|\<目前的版本>|  
+|版本|\<目前版本>|  
 |共用名稱|""|  
 |擁有者|"\<您的 Windows 使用者>"|  
 |自動建立|否|  
 |State|執行中|  
-|上次啟動時間|\<> 的日期和時間|  
+|上次啟動時間|\<日期和時間>|  
 |執行個體管道名稱|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
   
 > [!NOTE]  

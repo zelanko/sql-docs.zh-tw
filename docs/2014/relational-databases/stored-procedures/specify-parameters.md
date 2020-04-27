@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736361"
 ---
 # <a name="specify-parameters"></a>指定參數
@@ -60,13 +60,13 @@ GO
 ## <a name="specifying-parameter-names"></a>指定參數名稱  
  建立程序及宣告參數名稱時，參數名稱必須以一個 \@ 字元開始，而且在程序範圍中必須是唯一的。  
   
- 明確為參數命名以及在程序呼叫中指定適當值給每個參數，就能以任何順序提供參數。 例如，如果 **my_proc** 程序預期有三個參數，名稱分別為 **\@first**、**\@second** 和 **\@third**，您可以將傳遞給程序的值指派給參數名稱，例如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ 明確為參數命名以及在程序呼叫中指定適當值給每個參數，就能以任何順序提供參數。 例如，如果 **my_proc** 程序預期有三個參數，名稱分別為 **\@first**、 **\@second** 和 **\@third**，您可以將傳遞給程序的值指派給參數名稱，例如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  如果以** \@parameter =**_value_形式提供一個參數值，所有後續的參數都必須以這種方式提供。 如果不是以** \@parameter =**_value_形式傳遞參數值，則這些值必須以相同的順序（由左至右）提供，因為參數會列在 CREATE PROCEDURE 語句中。  
+>  如果以 **\@parameter =** _value_ 形式提供一個參數值，則所有後續的參數就必須按照此方式來提供。 如果不是以 **\@parameter =** _value_ 形式傳遞參數值，則提供值的順序就必須與 CREATE PROCEDURE 陳述式中列出參數的順序一樣 (由左到右)。  
 > 
 > [!WARNING]
->  以** \@參數 =**_值_傳遞的任何參數如果拼錯，都會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生錯誤並防止程式執行。  
+>  任何以 **\@parameter =** _value_ 形式傳遞的參數若有拼字錯誤，就會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生錯誤，並導致程序無法執行。  
   
 ## <a name="specifying-parameter-data-types"></a>指定參數資料類型  
  在 CREATE PROCEDURE 陳述式中宣告時，參數必須定義一種資料類型。 參數的資料類型將決定在呼叫程序時參數可接受的值類型和範圍。 例如，若將參數定義為 `tinyint` 資料類型，在傳遞數值至該參數時，只能接受 0 到 255 範圍內的數值。 執行程序時，如果值與資料類型不相容的話，就會傳回錯誤。  

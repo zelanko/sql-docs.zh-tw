@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767980"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>預覽資料對話方塊 (SQL Server 匯入和匯出精靈)
@@ -31,10 +31,10 @@ ms.locfileid: "62767980"
 -   在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出嚮導] 的 [**選取來源資料表和視圖**] 頁面上，按一下 [**預覽**]。  
   
 ## <a name="options"></a>選項。  
- **Source**  
+ **來源**  
  顯示此精靈將傳送至資料來源的查詢。  
   
- **範例資料方格**  
+ **取樣資料方格**  
  最多顯示 200 個查詢傳回之取樣資料的資料列。  
   
   

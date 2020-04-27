@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62762378"
 ---
 # <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
@@ -77,7 +77,7 @@ ms.locfileid: "62762378"
  [DBCC FREESESSIONCACHE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
  [DBCC FREEPROCCACHE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [SQL Server 的 Buffer Manager 物件](../performance-monitor/sql-server-buffer-manager-object.md)   
+ [SQL Server，Buffer Manager 物件](../performance-monitor/sql-server-buffer-manager-object.md)   
  [SQL Server 的 Memory Manager 物件](../performance-monitor/sql-server-memory-manager-object.md)  
   
   

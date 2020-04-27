@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768484"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼
@@ -34,13 +34,13 @@ ms.locfileid: "62768484"
   
 2.  按兩下內含要在其中設定中斷點之指令碼的封裝。  
   
-3.  若要開啟指令碼工作，請按一下 [控制流程]**** 索引標籤，然後按兩下指令碼工作。  
+3.  若要開啟指令碼工作，請按一下 [控制流程]  索引標籤，然後按兩下指令碼工作。  
   
-4.  若要開啟指令碼元件，請按一下 [資料流程]**** 索引標籤，然後按兩下指令碼元件。  
+4.  若要開啟指令碼元件，請按一下 [資料流程]  索引標籤，然後按兩下指令碼元件。  
   
-5.  按一下 [指令碼]****，然後按一下 [編輯指令碼]****。  
+5.  按一下 [指令碼]  ，然後按一下 [編輯指令碼]  。  
   
-6.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中，找出要在其上設定中斷點的指令碼行，以滑鼠右鍵按一下該行，並指向 [中斷點]****，然後按一下 [插入中斷點]****。  
+6.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中，找出要在其上設定中斷點的指令碼行，以滑鼠右鍵按一下該行，並指向 [中斷點]  ，然後按一下 [插入中斷點]  。  
   
      中斷點圖示隨即出現在程式碼行上。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "62768484"
   
 8.  按一下 [確定]  。  
   
-9. 若要儲存封裝，請按一下 [檔案]**** 功能表上的 [儲存選取項目]****。  
+9. 若要儲存封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768524"
 ---
 # <a name="persisting-custom-objects"></a>保存自訂物件
@@ -156,6 +156,6 @@ public void SaveToXML(System.Xml.XmlDocument doc,
   
 ## <a name="see-also"></a>另請參閱  
  [開發 Integration Services 的自訂物件](developing-custom-objects-for-integration-services.md)   
- [自訂物件的建立、部署和偵錯](building-deploying-and-debugging-custom-objects.md)  
+ [建立、部署和偵錯自訂物件](building-deploying-and-debugging-custom-objects.md)  
   
   

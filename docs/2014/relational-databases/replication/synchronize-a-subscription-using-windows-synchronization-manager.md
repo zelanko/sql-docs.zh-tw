@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745757"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows Synchronization Manager 同步處理訂閱 (Windows Synchronization Manager)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步處理管理員只能用來同步處理 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集的訂閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （如果是在與同步處理管理員相同的電腦上執行）（也可以用來同步處理離線檔案和網頁）。 若要使用 Synchronization Manager：  
+  如果 Microsoft[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Synchronization Manager 在相同的電腦上執行，則 Synchronization Manager 只能用於同步處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的訂閱 (它也可以用於同步處理離線檔案和網頁)。 若要使用 Synchronization Manager：  
   
-1.  在 [訂閱屬性 - **訂閱者>: \<訂閱資料庫>]\<** 對話方塊中，啟用同步處理提取訂閱與 Windows Synchronization Manager。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
+1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊中，啟用同步處理提取訂閱與 Windows Synchronization Manager。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
   
 2.  透過 Windows 中的 **[開始]** 功能表存取 Synchronization Manager。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745757"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>若要使用 Windows Synchronization Manager 啟用提取訂閱同步處理  
   
-1.  在 [訂閱屬性 - **訂閱者>: **訂閱資料庫>]**\< 對話方塊的 [一般]\<** 頁面中，針對 [使用 Windows Synchronization Manager]**** 選項選取 [啟用]****。  
+1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊的 [一般]**** 頁面中，針對 [使用 Windows Synchronization Manager]**** 選項選取 [啟用]****。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -73,11 +73,11 @@ ms.locfileid: "62745757"
   
 2.  在下列索引標籤中檢視並修改屬性：  
   
-    -   **發現**  
+    -   **識別**  
   
-    -   **訂閱者登**入、散發者**登**入和**發行者登**入（僅適用于合併式複寫）  
+    -   **[訂閱者登入]**、 **[散發者登入]** 和 **[發行者登入]** (僅用於合併式複寫)  
   
-    -   **Web 服務器資訊**（適用于執行 SQL Server 2005 或更新版本之訂閱者上的合併訂閱）  
+    -   **[Web 伺服器資訊]** (用於執行 SQL Server 2005 或更新版本之「訂閱者」端的合併訂閱)  
   
     -   **其他**  
   
@@ -103,13 +103,13 @@ ms.locfileid: "62745757"
   
 3.  選擇性地編輯任何在「互動解決器」中顯示的資料行，然後按下列其中一個按鈕，以解決衝突：  
   
-    -   **接受建議**  
+    -   **[接受建議]**  
   
-    -   **接受發行者**  
+    -   **[接受發行者]**  
   
-    -   **接受訂閱者**  
+    -   **[接受訂閱者]**  
   
-    -   **自動解決所有問題**（所有目前的衝突都已解決，但不含進一步的輸入）  
+    -   **[自動解決所有衝突]** (會解決目前所有的衝突，而無需進一步的輸入)  
   
      選取的資料列然後會被套用到「發行者」和 (或)「訂閱者」；在後續同步處理期間，它會傳播到其他節點。  
   

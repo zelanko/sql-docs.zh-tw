@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754031"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "62754031"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> 效能標準和警告臨界值  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> 效能標準和警告臨界值  
  下表將列出可設定警告的效能標準、描述對應的警告臨界值，並列出對應的 [資料庫鏡像監視器] 標籤。  
   
 |效能標準|警告臨界值|資料庫鏡像監視器標籤|  
@@ -51,7 +51,7 @@ ms.locfileid: "62754031"
   
  系統管理員可以針對其中一項效能標準，在鏡像資料庫上指定臨界值。 如需詳細資訊，請參閱本主題後面的 [設定和管理警告臨界值](#SetUpManageWarningThresholds)。  
   
-##  <a name="SetUpManageWarningThresholds"></a> 設定和管理警告臨界值  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> 設定和管理警告臨界值  
  系統管理員可以設定關鍵鏡像效能標準的一或多個警告臨界值。 我們建議您在兩個夥伴上設定指定警告的臨界值，以便確保資料庫在容錯移轉時，警告仍會保持不變。 每個夥伴上的適當臨界值會根據該夥伴系統的效能功能而定。  
   
  您可以使用下列任何一項方式來設定並管理警告臨界值：  
@@ -73,7 +73,7 @@ ms.locfileid: "62754031"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|卸除指定效能標準的警告。|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>傳送至 Windows 事件記錄檔的效能臨界值事件  
- 如果已經定義效能標準的警告臨界值，當狀態資料表更新後，就會根據臨界值評估最新的值。 如果已經達到臨界值，更新程序 **sp_dbmmonitorupdate** 就會產生此標準的參考用事件 (「效能臨界值事件」  ) 並將事件寫入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔。 下表將列出效能臨界值事件的事件識別碼。  
+ 如果已經定義效能標準的警告臨界值，當狀態資料表更新後，就會根據臨界值評估最新的值。 如果已達到臨界值，更新程式**sp_dbmmonitorupdate**會產生資訊事件（此為度量的*效能臨界值事件*），並將事件寫入[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔。 下表將列出效能臨界值事件的事件識別碼。  
   
 |效能標準|事件識別碼|  
 |------------------------|--------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "62754031"
 >   
 >  。  
   
-##  <a name="UseAlerts"></a> 針對鏡像資料庫使用警示  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a>針對鏡像資料庫使用警示  
  監視鏡像資料庫最重要的部分就是設定重大資料庫鏡像事件的警示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生下列資料庫鏡像事件類型：  
   
 -   效能臨界值事件  
@@ -110,7 +110,7 @@ ms.locfileid: "62754031"
 > [!IMPORTANT]  
 >  我們強烈建議您針對所有鏡像工作階段，將資料庫設定為傳送任何狀態變更事件的警示。 除非狀態變更預期為手動組態變更的結果，否則就表示發生了可能會危害資料的事件。 若要有效保護資料，請識別並修正非預期狀態變更的原因。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用 SQL Server Management Studio 建立警示**  
   
 -   [使用錯誤號碼建立警示](../../ssms/agent/create-an-alert-using-an-error-number.md)  

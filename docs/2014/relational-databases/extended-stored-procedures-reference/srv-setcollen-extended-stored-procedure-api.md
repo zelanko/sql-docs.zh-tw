@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d4b3ab8f1e956ee68585ecdc3e12ae605d52ab38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745669"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (擴充預存程序 API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  以位元組為單位，指定可變長度資料行或允許 NULL 值之資料行目前的資料長度。  
   
@@ -66,7 +65,7 @@ len
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 資料列的每個資料行必須先用 **srv_describe** 定義。 資料行的資料長度是由對 **srv_describe** 或 **srv_setcollen** 的最後呼叫所設定。 如果資料列的可變長度資料 (以 Null 結束的資料) 變更，則必須先使用 **srv_setcollen** 來將它設定為新長度，再呼叫 **srv_sendrow**。 如果是允許 Null 值的資料行，則必須以 **desttype** 設定為允許 Null 的資料類型 (例如 SRVINTN) 來呼叫 *srv_describe*，而且以設定為 0 的 **len** 呼叫 *srv_setcollen* 來指定 Null 資料。 零長度的資料不能使用擴充預存程序 API 指定。  
+ 資料列的每個資料行必須先用 **srv_describe** 定義。 資料行的資料長度是由對 **srv_describe** 或 **srv_setcollen** 的最後呼叫所設定。 如果資料列的可變長度資料 (以 Null 結束的資料) 變更，則必須先使用 **srv_setcollen** 來將它設定為新長度，再呼叫 **srv_sendrow**。 如果是允許 Null 值的資料行，則必須以 *desttype* 設定為允許 Null 的資料類型 (例如 SRVINTN) 來呼叫 **srv_describe**，而且以設定為 0 的 *len* 呼叫 **srv_setcollen** 來指定 Null 資料。 零長度的資料不能使用擴充預存程序 API 指定。  
   
  請注意，當資料行的資料類型是可變長度時，就不會檢查 *len*。 如果針對固定長度資料行呼叫此函數，此函數會傳回 FAIL。  
   
@@ -74,6 +73,6 @@ len
 >  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
- [srv_describe &#40;擴充預存程式 API&#41;](srv-describe-extended-stored-procedure-api.md)  
+ [srv_describe &#40;擴充預存程序 API&#41;](srv-describe-extended-stored-procedure-api.md)  
   
   

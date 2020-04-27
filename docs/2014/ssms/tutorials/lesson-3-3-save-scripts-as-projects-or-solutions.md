@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753037"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>將指令碼儲存成專案或方案
@@ -28,11 +28,11 @@ ms.locfileid: "62753037"
   
 1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，再利用 [物件總管] 來連接伺服器。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。 此時會開啟 [新增專案]**** 對話方塊。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。 此時會開啟 [新增專案]**** 對話方塊。  
   
 3.  在 [名稱]**** 文字方塊中，輸入 **StatusCheck**，並在 [範本]**** 中按一下 [SQL Server 指令碼]****，然後按一下 [確定]**** 來開啟新的方案和指令碼專案。  
   
-4.  在方案總管中，以滑鼠右鍵按一下 [連接]****，然後按一下 [新增連接]****。 [連接到伺服器]  對話方塊隨即開啟。  
+4.  在方案總管中，以滑鼠右鍵按一下 [連接]****，然後按一下 [新增連接]****。 [連接到伺服器]**** 對話方塊隨即開啟。  
   
 5.  在 [伺服器名稱]**** 清單方塊中，輸入您伺服器的名稱。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62753037"
 12. 若要儲存您的方案和指令碼專案，請在 [檔案]**** 功能表上，按一下 [全部儲存]****。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [摘要：方案和指令碼專案](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [摘要：方案及指令碼專案](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

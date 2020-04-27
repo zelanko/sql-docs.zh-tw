@@ -21,21 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768888"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>執行計劃和緩衝區配置
   在執行之前，資料流程工作會檢查其元件並為元件的每個順序產生執行計劃。 本節提供有關執行計劃的詳細資料、如何檢視計劃以及輸入與輸出緩衝區如何根據執行計劃配置。  
   
 ## <a name="understanding-the-execution-plan"></a>了解執行計劃  
- 任何執行計劃都包含來源執行緒與工作執行緒，而且每個執行緒都包含工作清單，以指定來源執行緒的輸出工作清單，或是工作執行緒的輸入與輸出工作清單。 執行計畫中的來源執行緒代表資料流程中的來源元件，並由*以 sourcethread * * n*在執行計畫中識別，其中*n*是來源執行緒以零為基底的數目。  
+ 任何執行計劃都包含來源執行緒與工作執行緒，而且每個執行緒都包含工作清單，以指定來源執行緒的輸出工作清單，或是工作執行緒的輸入與輸出工作清單。 執行計畫中的來源執行緒代表資料流程中的來源元件，在執行計畫中以 *SourceThread**n* 識別，其中 *n* 是來源執行緒從零開始的編號。  
   
  每個來源執行緒會建立一個緩衝區、設定接聽程式，並且呼叫來源元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法。 這是執行開始和資料起源的地方，即來源元件開始將資料列加入資料流程工作所提供的輸出緩衝區。 在來源執行緒執行之後，會將工作平衡地散佈在工作執行緒之間。  
   
- 工作執行緒可能包含輸入和輸出工作清單，而且在執行計畫中識別為*WorkThread * * n*，其中*n*是工作執行緒的以零為基底的數目。 當圖表包含具有非同步輸出的元件時，這些執行緒會包含輸出工作清單。  
+ 工作執行緒可能包含輸入和輸出工作清單，在執行計畫中識別為 *WorkThread**n*，其中 *n* 是工作執行緒從零開始的編號。 當圖表包含具有非同步輸出的元件時，這些執行緒會包含輸出工作清單。  
   
  下列範例執行計劃代表一個資料流程，其中包含連接到轉換的來源元件，而該轉換則帶有連接到目的地元件的非同步輸出。 在此範例中，WorkThread0 包含輸出工作清單，因為轉換元件具有非同步輸出。  
   

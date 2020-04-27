@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754315"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754315"
     > [!IMPORTANT]  
     >  若要建立更安全的環境，請考慮針對每個伺服器執行個體使用不同的網域帳戶。  
   
-##  <a name="CreateLogin"></a> ＜為不同的帳戶建立登入＞  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a>為不同的帳戶建立登入  
  如果兩個伺服器執行個體是以不同的帳戶執行，系統管理員必須使用 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，為每個伺服器執行個體之遠端執行個體的啟動服務帳戶建立登入。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)。  
   
 > [!IMPORTANT]  
@@ -49,20 +49,20 @@ ms.locfileid: "62754315"
 > [!NOTE]  
 >  您也可以利用電腦帳戶代替網域使用者，與網路服務帳戶連接。 如果使用電腦帳戶，則必須將該帳戶新增為其他個伺服器執行個體的使用者。  
   
-##  <a name="GrantConnect"></a> ＜授與連接權限＞  
- 一旦在伺服器執行個體上建立登入，就必須授權該登入來連接伺服器執行個體的資料庫鏡像端點。 系統管理員可使用 GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來授與連接權限。 如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)的相關資訊。  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a>Grant Connect 許可權  
+ 一旦在伺服器執行個體上建立登入，就必須授權該登入來連接伺服器執行個體的資料庫鏡像端點。 系統管理員可使用 GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來授與連接權限。 如需詳細資訊，請參閱[GRANT &#40;transact-sql&#41;](/sql/t-sql/statements/grant-transact-sql)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立登入](../../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [使用 Windows 驗證允許資料庫鏡像端點的網路存取 &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)。  
+-   [允許使用 Windows 驗證 &#40;SQL Server&#41;，對資料庫鏡像端點進行網路存取](../database-mirroring-allow-network-access-windows-authentication.md)。  
   
 -   [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [為資料庫鏡像組態進行疑難排解 &#40;SQL Server&#41; &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [針對資料庫鏡像設定進行疑難排解 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [針對 AlwaysOn 可用性群組 Configuration &#40;SQL Server&#41;進行疑難排解](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

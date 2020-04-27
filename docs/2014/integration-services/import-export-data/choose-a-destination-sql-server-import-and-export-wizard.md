@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768022"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)
@@ -42,10 +42,10 @@ ms.locfileid: "62768022"
  **伺服器名稱**  
  輸入接收資料的伺服器名稱，或從清單中選擇伺服器。  
   
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
  指定封裝是否使用 Microsoft Windows 驗證來登入資料庫。 建議使用 Windows 驗證，以獲得較佳的安全性。  
   
- **使用 SQL Server 驗證**  
+ **[使用 SQL Server 驗證]**  
  指定封裝是否應使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入資料庫。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
  **使用者名稱**  
@@ -57,23 +57,23 @@ ms.locfileid: "62768022"
  **Database**  
  從指定之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上的資料庫清單中選取，或按一下 [**新增**] 來建立新的資料庫。  
   
- **[重新整理]**  
+ **重新整理**  
  按一下 [重新整理]**** 來還原可用資料庫的清單。  
   
  **新增**  
  使用 [**建立資料庫**] 對話方塊來建立新的目的地資料庫。  
   
 ### <a name="destination--flat-file-destination"></a>目的地 = 一般檔案目的地  
- **檔案名稱**  
+ [檔案名稱]****  
  指定儲存資料之檔案的路徑和檔案名稱。 或按一下 [瀏覽]**** 找出檔案。  
   
  **瀏覽**  
  使用 [開啟]**** 對話方塊來找出檔案。  
   
- **地區設定**  
+ **語言**  
  指定用來定義字元排序順序及日期和時間格式的地區設定識別碼 (LCID)。  
   
- **消除**  
+ **Unicode**  
  指出是否使用 Unicode。 如果使用 Unicode，您就不必指定字碼頁。  
   
  **字碼頁**  
@@ -91,7 +91,7 @@ ms.locfileid: "62768022"
  **文字定位項**  
  輸入要使用的文字限定詞。 例如，您可以指定每一個文字資料行都加上引號。  
   
- **第一個資料列中的資料行名稱**  
+ **第一個資料列的資料行名稱**  
  指出是否在第一個資料列顯示資料行名稱。  
   
 ### <a name="destination--microsoft-excel"></a>目的地 = Microsoft Excel  
@@ -116,7 +116,7 @@ ms.locfileid: "62768022"
 > [!NOTE]  
 >  只有當您想要連接到使用2003或更早版本的資料庫時，才選取 [ **Microsoft Access** ]。 若要連接到使用存取2007的資料庫，請選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]。  
   
- **檔案名稱**  
+ [檔案名稱]****  
  指定儲存資料之資料庫檔案的路徑和檔案名（例如，C:\MyData.mdb、 \\\Sales\Database\Northwind.mdb）。 或者，按一下 **[流覽]** 以找出資料庫檔案。  
   
  **瀏覽**  

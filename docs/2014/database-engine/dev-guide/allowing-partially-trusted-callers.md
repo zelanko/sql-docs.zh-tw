@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754196"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允許部分信任的呼叫端
@@ -39,7 +39,7 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- 我們建議您最好將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊的所有組件 (加入至全域組件快取的組件除外) 都標示 `AllowPartiallyTrustedCallers` 屬性，好讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 載入的組件可以彼此存取。 要加入至全域組件快取的組件應該先徹底檢閱看看是否安全之後，再加入 `AllowPartiallyTrustedCallers` 屬性，因為此組件之後將提供給非預期環境的部分信任呼叫端所使用。 組件不應該變成完全信任 (在 `UNSAFE` 中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限集合註冊)。  
+ 我們建議您最好將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊的所有組件 (加入至全域組件快取的組件除外) 都標示 `AllowPartiallyTrustedCallers` 屬性，好讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 載入的組件可以彼此存取。 要加入至全域組件快取的組件應該先徹底檢閱看看是否安全之後，再加入 `AllowPartiallyTrustedCallers` 屬性，因為此組件之後將提供給非預期環境的部分信任呼叫端所使用。 組件不應該變成完全信任 (在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 `UNSAFE` 權限集合註冊)。  
   
  如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜從部分受信任程式碼使用程式庫＞一節。  
   

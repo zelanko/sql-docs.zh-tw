@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754683"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
@@ -25,14 +25,14 @@ ms.locfileid: "62754683"
   
  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>若要移除資料庫鏡像  
   
@@ -40,13 +40,13 @@ ms.locfileid: "62754683"
   
 2.  展開 **[資料庫]** 並選取資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]****，然後按一下 [鏡像]****。 這會開啟 [**資料庫屬性**] 對話方塊的 [**鏡像**] 頁面。  
   
 4.  在 **[選取頁面]** 窗格中按一下 **[鏡像]**。  
   
 5.  若要移除鏡像，請按一下 **[移除鏡像]**。 會出現提示要求確認。 如果按一下 **[是]**，會停止工作階段，並從資料庫移除鏡像。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要移除資料庫鏡像，請使用 **[資料庫屬性]**。 使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。  
   
 #### <a name="to-remove-database-mirroring"></a>若要移除資料庫鏡像  
@@ -69,16 +69,16 @@ ms.locfileid: "62754683"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a>後續操作：移除資料庫鏡像  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a>後續操作：移除資料庫鏡像  
   
 > [!NOTE]  
 >  如需移除鏡像之影響的資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
   
--   **如果您想要在資料庫上重新開機鏡像**  
+-   **如果您打算在資料庫上重新啟動鏡像**  
   
      在您可以重新啟動鏡像之前，您必須先將鏡像移除之後在主體資料庫上建立的所有記錄備份套用到鏡像資料庫。  
   
--   **如果您不打算重新開機鏡像**  
+-   **如果您不打算重新啟動鏡像**  
   
      另外，您也可以選擇復原先前的鏡像資料庫。 在原本是鏡像伺服器的伺服器執行個體上，您可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62754683"
     > [!IMPORTANT]  
     >  如果復原這個資料庫，線上將會有兩個名稱相同但內容不同的資料庫。 因此，您必須確定用戶端只能存取其中一個資料庫 (通常是最新的主體資料庫)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [暫停或繼續資料庫鏡像工作階段 &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62754683"
   
 -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [範例：使用憑證設定資料庫鏡像 &#40;Transact-sql&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

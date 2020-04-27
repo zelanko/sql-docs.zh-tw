@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfdce0d0db35d651d12670ffd3cb1c9437961cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736513"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>使用 Analysis Services 指令碼語言 (ASSL) 開發
@@ -32,6 +32,6 @@ ms.locfileid: "62736513"
 ## <a name="see-also"></a>另請參閱  
  [ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)   
  [ASSL XML 慣例](assl-xml-conventions.md)   
- [&#40;SSAS 多維度&#41;的資料來源和系結](../data-sources-and-bindings-ssas-multidimensional.md)  
+ [資料來源和繫結 &#40;SSAS 多維度&#41;](../data-sources-and-bindings-ssas-multidimensional.md)  
   
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754604"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>資料庫鏡像的必要條件、限制和建議事項
@@ -33,19 +33,18 @@ ms.locfileid: "62754604"
  本主題描述設定資料庫鏡像的必要條件和建議事項。 如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟儲存格式在 64 位元與 32 位元環境下都相同。 因此，資料庫鏡像工作階段可以結合 32 位元環境下執行的伺服器執行個體與 64 位元環境下執行的伺服器執行個體。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟儲存格式在 64 位元與 32 位元環境下都相同。 因此，資料庫鏡像工作階段可以結合 32 位元環境下執行的伺服器執行個體與 64 位元環境下執行的伺服器執行個體。  
   
 
   
-##  <a name="DbmSupport"></a> 支援資料庫鏡像  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a>資料庫鏡像支援  
  如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料庫鏡像支援的相關資訊，請參閱 [SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  請注意，資料庫鏡像適用於任何支援的資料庫相容性層級。 如需支援的相容性層級相關資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
   
 
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   如果要建立鏡像工作階段，則夥伴伺服器和見證伺服器 (如果有的話) 必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62754604"
   
 
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
   
 -   只有使用者資料庫可進行鏡像。 您無法鏡像處理 **master**、 **msdb**、 **tempdb**或 **model** 資料庫。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62754604"
   
 
   
-##  <a name="RecommendationsForPartners"></a> 設定夥伴伺服器的建議  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a>設定夥伴伺服器的建議  
   
 -   夥伴伺服器應該在可相比而且可以處理相同工作負載的系統上執行。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "62754604"
   
 
   
-##  <a name="RecommendationsForDeploying"></a> 部署資料庫鏡像的建議  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a>部署資料庫鏡像的建議  
  最佳資料庫鏡像效能是使用非同步作業所取得。 當使用同步作業之鏡像工作階段的工作負載產生大量交易記錄資料時，效能可能會變慢。  
   
  在測試環境中，適合瀏覽所有作業模式，以評估資料庫鏡像的效能。 然而，在實際環境中部署鏡像之前，必須先了解網路如何在實際環境中運作。  
@@ -128,6 +127,6 @@ ms.locfileid: "62754604"
  [設定資料庫鏡像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
+ [為資料庫鏡像組態進行疑難排解 &#40;SQL Server&#41; &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
