@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011772"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011772"
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
 > [!NOTE]  
->  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR、SQLNVARCHAR (資料會以 Unicode 傳送)、SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
+>  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR 或 SQLNVARCHAR (資料會以 Unicode 傳送)，或是 SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
   
 ## <a name="examples"></a>範例  
  本節中的範例說明如何使用格式檔案，利用**bcp**命令和 BULK INSERT 來大量匯入資料，然後插入 .。。SELECT * FROM OPENROWSET （BULK ...）語句。 執行其中一個大量匯入範例之前，必須先建立範例資料表、資料檔案與格式檔案。  
@@ -75,8 +75,7 @@ GO
  本節中有部分範例會使用 XML 格式檔案 `myTestFormatFiles-f-x-c.Xml`，而其他範例會使用非 XML 格式檔案。 兩種格式檔案都使用字元資料格式和非預設欄位結束字元 (,)。  
   
 #### <a name="the-sample-non-xml-format-file"></a>非 XML 格式檔案範例  
- 下列範例會使用 **bcp**，從 `myTestFormatFiles` 資料表產生 XML 格式檔案。 
-  `myTestFormatFiles.Fmt` 檔案包含下列資訊：  
+ 下列範例會使用 **bcp**，從 `myTestFormatFiles` 資料表產生 XML 格式檔案。 `myTestFormatFiles.Fmt` 檔案包含下列資訊：  
   
 ```  
 9.0  
@@ -97,8 +96,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
  如需建立格式檔案的詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)。  
   
 #### <a name="the-sample-xml-format-file"></a>XML 格式檔案範例  
- 下列範例使用 **bcp**，從 `myTestFormatFiles` 資料表建立以產生 XML 格式檔案。 
-  `myTestFormatFiles.Xml` 檔案包含下列資訊：  
+ 下列範例使用 **bcp**，從 `myTestFormatFiles` 資料表建立以產生 XML 格式檔案。 `myTestFormatFiles.Xml` 檔案包含下列資訊：  
   
 ```  
 <?xml version="1.0"?>  
@@ -137,7 +135,7 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 >  如需此命令的詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)。  
   
 ### <a name="using-bulk-insert"></a>使用 BULK INSERT  
- 下列範例使用 BULK INSERT，將 `myTestFormatFiles-c.Dat` 資料檔中的資料大量匯入到 `HumanResources.myTestFormatFiles` 範例資料庫中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料表。 這個範例使用非 XML 格式檔案 `MyTestFormatFiles.Fmt`。 這個範例會在匯入資料檔之前，刪除任何現有的資料表資料列。  
+ 下列範例使用 BULK INSERT，將 `myTestFormatFiles-c.Dat` 資料檔中的資料大量匯入到 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `HumanResources.myTestFormatFiles` 資料表。 這個範例使用非 XML 格式檔案 `MyTestFormatFiles.Fmt`。 這個範例會在匯入資料檔之前，刪除任何現有的資料表資料列。  
   
  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行：  
   

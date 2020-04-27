@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014213"
 ---
 # <a name="multilinestring"></a>MultiLineString
@@ -58,13 +58,11 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- 
-  `MultiLineString` 執行個體必須符合下列準則，才會是有效的：  
+ `MultiLineString` 執行個體必須符合下列準則，才會是有效的：  
   
 1.  組成 `MultiLineString` 執行個體的所有執行個體必須都是有效的 `LineString` 執行個體。  
   
-2.  組成 `LineString` 執行個體的任兩個 `MultiLineString` 執行個體都不可在間隔上重疊。 
-  `LineString` 執行個體只能在有限的點數內彼此交集或接觸，或是接觸其他 `LineString` 執行個體。  
+2.  組成 `LineString` 執行個體的任兩個 `MultiLineString` 執行個體都不可在間隔上重疊。 `LineString` 執行個體只能在有限的點數內彼此交集或接觸，或是接觸其他 `LineString` 執行個體。  
   
  下列範例示範三個有效的 `MultiLineString` 執行個體和一個無效的 `MultiLineString` 執行個體。  
   
@@ -76,8 +74,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- 
-  `@g4` 無效，因為第二個 `LineString` 執行個體與第一個 `LineString` 執行個體於間隔處重疊。 兩者以無限點數接觸。  
+ `@g4` 無效，因為第二個 `LineString` 執行個體與第一個 `LineString` 執行個體於間隔處重疊。 兩者以無限點數接觸。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立包含兩個具有 SRID 0 之 `geometry``MultiLineString` 元素的簡單 `LineString` 執行個體。  

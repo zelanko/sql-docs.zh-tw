@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca2bc726b0bf017ec4b3dd0451313d60ef57696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012135"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 的新功能&#39;
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 包含不同的更新和增強功能。 本主題摘要說明更新並提供詳細資訊的連結 (如果有的話)。 SQLXML 4.0 SP1 會提供其他的增強功能以支援 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中導入的新資料類型。 本主題包含下列主旨：  
   
 -   安裝 SQLXML 4.0 SP1  
@@ -40,8 +39,7 @@ ms.locfileid: "66012135"
   
 -   Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支援  
   
--   
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入資料類型的支援  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入資料類型的支援  
   
 -   SQLXML 4.0 的 XML 大量載入變更  
   
@@ -50,8 +48,7 @@ ms.locfileid: "66012135"
 -   移轉問題  
   
 ## <a name="installing-sqlxml-40-sp1"></a>安裝 SQLXML 4.0 SP1  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本中，SQLXML 4.0 隨附於 SQL Server 而且是所有 SQL Server 版本 (SQL Server Express 除外) 之預設安裝的一部分。 不過，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，SQL Server 已不再包含最新版的 SQLXML (SQLXML 4.0 SP1)。 若要安裝 SQLXML 4.0 SP1，請從[sqlxml 4.0 sp1 的安裝位置](https://www.microsoft.com/download/details.aspx?id=30403)下載。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本中，SQLXML 4.0 隨附於 SQL Server 而且是所有 SQL Server 版本 (SQL Server Express 除外) 之預設安裝的一部分。 不過，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，SQL Server 已不再包含最新版的 SQLXML (SQLXML 4.0 SP1)。 若要安裝 SQLXML 4.0 SP1，請從[sqlxml 4.0 sp1 的安裝位置](https://www.microsoft.com/download/details.aspx?id=30403)下載。  
   
  SQLXML 4.0 SP1 檔案也會安裝於下列位置：  
   
@@ -87,11 +84,9 @@ ms.locfileid: "66012135"
 ## <a name="support-for-sql-server-native-client"></a>SQL Server Native Client 的支援  
  SQLXML 4.0 同時支援 SQLOLEDB 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者。 建議您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相同版本的 native client 提供者， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client 的開發目的是要支援伺服器隨附的任何新資料類型，例如中`Date, Time` `DateTime2` `dateTimeOffset` [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的、和資料類型，以及[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client 所支援的。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入的資料存取技術。 此項技術將 SQLOLEDB Provider 與 SQLODBC Driver 合而為一，成為原生的動態連結程式庫 (DLL)，同時也提供了獨立而有別於 Microsoft Data Access Components (MDAC) 的新功能。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入的資料存取技術。 此項技術將 SQLOLEDB Provider 與 SQLODBC Driver 合而為一，成為原生的動態連結程式庫 (DLL)，同時也提供了獨立而有別於 Microsoft Data Access Components (MDAC) 的新功能。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用於建立新的應用程式，或者加強需要利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所導入功能 (不受 MDAC 中的 SQLOLEDB 和 SQLODBC 以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支援) 的現有應用程式。 例如，用戶端的 SQLXML 功能 (例如 FOR XML) 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 才能使用 `xml` 資料類型。 如需詳細資訊，請參閱[用戶端 XML 格式 &#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)、[使用 ADO 執行 SQLXML 4.0 查詢](using-ado-to-execute-sqlxml-4-0-queries.md)，以及[SQL Server Native Client 程式設計](../native-client/sql-server-native-client-programming.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用於建立新的應用程式，或者加強需要利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所導入功能 (不受 MDAC 中的 SQLOLEDB 和 SQLODBC 以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支援) 的現有應用程式。 例如，用戶端的 SQLXML 功能 (例如 FOR XML) 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 才能使用 `xml` 資料類型。 如需詳細資訊，請參閱[用戶端 XML 格式 &#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)、[使用 ADO 執行 SQLXML 4.0 查詢](using-ado-to-execute-sqlxml-4-0-queries.md)，以及[SQL Server Native Client 程式設計](../native-client/sql-server-native-client-programming.md)。  
   
 > [!NOTE]  
 >  SQLXML 4.0 並非完全與 SQLXML 3.0 回溯相容。 因為某些錯誤修正和其他的功能性變更 (特別是 SQLXML ISAPI 支援的移除)，您無法將 IIS 虛擬目錄用於 SQLXML 4.0。 雖然大部分的應用程式都可以在稍加修改後執行，但在將這些應用程式放入使用 SQLXML 4.0 的生產環境之前，必須先加以測試。  

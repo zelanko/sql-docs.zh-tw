@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011151"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
@@ -35,7 +35,7 @@ ms.locfileid: "66011151"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將依照等級來排序相符項目，並且最多只傳回指定的資料列數。 此選項可能大幅地增加效能。 例如，通常從一百萬個資料列中傳回 100,000 列的查詢，如果只要求前 100 個資料列的話，就會處理得更為快速。  
   
-##  <a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 A：只搜尋前三個相符項目  
  下列範例會使用 CONTAINSTABLE，以便只傳回前三個相符項目。  
@@ -90,7 +90,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 搜尋查詢結果如何排序次序  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 搜尋查詢結果如何排序次序  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的全文檢索搜尋可以產生選擇性分數 (或次序值)，表示全文檢索查詢傳回之資料的相關性。 這個等級值是針對每個資料列計算的，而且可當做排序準則使用，以便依據相關性排序給定查詢的結果集。 等級值僅表示結果集中資料列相關性的相對順序。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。 次序值不會在查詢之間保存任何重要性。  
   
 ### <a name="statistics-for-ranking"></a>排序的統計資料  
@@ -143,8 +143,7 @@ GO
   
  統計資料 (例如 `IndexRowCount`) 可能會有很大的差異。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
   
- 
-  `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為檔長度在相鄰資料表值32和128之間的範圍內，所以會有效地將其視為具有相同的長度，128（32 `docLength` < <= 128）。  
+ `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為檔長度在相鄰資料表值32和128之間的範圍內，所以會有效地將其視為具有相同的長度，128（32 `docLength` < <= 128）。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

@@ -19,18 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013940"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
-  若要指定常數元素（也就是 XSD 架構中未對應到任何資料庫資料表或資料行的專案），您可以使用`sql:is-constant`批註。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 
-  `sql:is-constant` 註解可以在沒有任何屬性的元素上指定。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
+  若要指定常數元素（也就是 XSD 架構中未對應到任何資料庫資料表或資料行的專案），您可以使用`sql:is-constant`批註。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 `sql:is-constant` 註解可以在沒有任何屬性的元素上指定。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
   
- 
-  `sql:is-constant` 註解可以用於：  
+ `sql:is-constant` 註解可以用於：  
   
 -   將最上層元素加入到 XML 文件中。 XML 需要單一的最上層元素 (根元素) 供文件使用。  
   

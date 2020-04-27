@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054300"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 來源編輯器 (連接管理員頁面)
@@ -33,10 +33,10 @@ ms.locfileid: "66054300"
 |值|描述|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
-|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**：[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |來自變數的 XML 資料|從變數中擷取 XML 資料。|  
   
- **使用內嵌架構**  
+ **使用內嵌結構描述**  
  指定 XML 來源資料本身是否包含定義及驗證其結構和資料的 XSD 結構描述。  
   
  **XSD 位置**  

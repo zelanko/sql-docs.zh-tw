@@ -22,31 +22,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013948"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>資料類型強制型轉和 sql:datatype 註解 (SQLXML 4.0)
   在 XSD 結構描述中，`xsd:type` 屬性會指定元素或屬性的 XSD 資料類型。 當 XSD 結構描述用於從資料庫擷取資料時，指定的資料類型則會用於將資料格式化。  
   
- 除了在結構描述中指定 XSD 類型，您也可以藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註解指定 Microsoft `sql:datatype` 資料類型。 在 XSD 資料類型和 `xsd:type` 資料類型之間，`sql:datatype` 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性會控制對應。  
+ 除了在結構描述中指定 XSD 類型，您也可以藉由使用 `sql:datatype` 註解指定 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 在 XSD 資料類型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型之間，`xsd:type` 和 `sql:datatype` 屬性會控制對應。  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 屬性  
- 您可以使用 `xsd:type` 屬性指定屬性或元素之 XML 資料類型，而該屬性或元素是對應到資料行的。 
-  `xsd:type` 會影響從伺服器傳回的文件，以及已執行的 XPath 查詢。 當 XPath 查詢針對包含 `xsd:type` 的對應結構描述執行時，XPath 則會在處理查詢的同時使用指定的資料類型。 如需有關 XPath 如何使用`xsd:type`的詳細資訊，請參閱[將 XSD 資料類型對應到 xpath 資料類型 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)。  
+ 您可以使用 `xsd:type` 屬性指定屬性或元素之 XML 資料類型，而該屬性或元素是對應到資料行的。 `xsd:type` 會影響從伺服器傳回的文件，以及已執行的 XPath 查詢。 當 XPath 查詢針對包含 `xsd:type` 的對應結構描述執行時，XPath 則會在處理查詢的同時使用指定的資料類型。 如需有關 XPath 如何使用`xsd:type`的詳細資訊，請參閱[將 XSD 資料類型對應到 xpath 資料類型 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)。  
   
  在傳回的文件中，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型會轉換為字串表示。 某些資料類型需要額外的轉換。 下表列出用於各種 `xsd:type` 值的轉換。  
   
 |XSD 資料類型|SQL Server 轉換|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|日期|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|時間|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |All others|No additional conversion|  
   
 > [!NOTE]  
@@ -85,10 +84,9 @@ ms.locfileid: "66013948"
 |`uniqueidentifier`|`string`|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 註解  
- 
-  `sql:datatype` 註解是用於指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，而且該註解必須在下列狀況中指定：  
+ `sql:datatype` 註解是用於指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，而且該註解必須在下列狀況中指定：  
   
--   您`dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會從 XSD `dateTime`、 `date`或`time`類型大量載入至資料行。 在這個狀況下，您必須藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定 `sql:datatype="dateTime"` 資料行資料類型。 這項規則也套用於 Updategram。  
+-   您`dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會從 XSD `dateTime`、 `date`或`time`類型大量載入至資料行。 在這個狀況下，您必須藉由使用 `sql:datatype="dateTime"` 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行資料類型。 這項規則也套用於 Updategram。  
   
 -   您會大量載入類型的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier`資料行，而且 XSD 值是包含大括弧（{和}）的 GUID。 當您指定 `sql:datatype="uniqueidentifier"` 時，大括號會先從值上移除，然後才插入資料行。 如果未指定 `sql:datatype`，值會跟著大括號傳送出去，而且插入或更新動作會失敗。  
   

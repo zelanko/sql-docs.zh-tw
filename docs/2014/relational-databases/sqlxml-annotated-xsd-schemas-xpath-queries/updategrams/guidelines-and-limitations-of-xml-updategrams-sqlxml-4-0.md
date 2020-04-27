@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 953fc5b7c203faa8fa6a9820993a3d0fd7a7de40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014833"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML Updategram 的指導方針和限制 (SQLXML 4.0)
@@ -46,8 +46,7 @@ ms.locfileid: "66014833"
   
 -   使用 updategram 時，不應該在中`text/ntext` ** \<>** 使用二進位大型物件（BLOB）型別（例如和影像），因為這會包含這些型別，以便在並行控制中使用。 這可能會因為 BLOB 類型的比較限制而造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的問題。 例如，WHERE 子句中的 LIKE 關鍵字用於 `text` 資料類型之資料行間的比較，不過，如果 BLOB 類型中，資料大小大於 8K，則比較將會失敗。  
   
--   
-  `ntext` 資料中的特殊字元可能會因為 BLOB 類型的比較限制而造成 SQLXML 4.0 的問題。 例如，在`ntext`類型的資料行並行檢查中使用 updategram 時，使用 "[Serializable]" 的** \<before>** 區塊時，將會失敗，並出現下列 SQLOLEDB 錯誤描述：  
+-   `ntext` 資料中的特殊字元可能會因為 BLOB 類型的比較限制而造成 SQLXML 4.0 的問題。 例如，在`ntext`類型的資料行並行檢查中使用 updategram 時，使用 "[Serializable]" 的** \<before>** 區塊時，將會失敗，並出現下列 SQLOLEDB 錯誤描述：  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

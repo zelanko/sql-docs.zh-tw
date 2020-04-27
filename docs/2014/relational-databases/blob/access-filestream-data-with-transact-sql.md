@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010436"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>使用 Transact-SQL 存取 FILESTREAM 資料
@@ -25,7 +25,7 @@ ms.locfileid: "66010436"
 > [!NOTE]  
 >  本主題中的範例需要使用在 [建立啟用 FILESTREAM 的資料庫](create-a-filestream-enabled-database.md) 和 [建立儲存 FILESTREAM 資料的資料表](create-a-table-for-storing-filestream-data.md)中建立之啟用 FILESTREAM 的資料庫和資料表。  
   
-##  <a name="ins"></a> 插入包含 FILESTREAM 資料的資料列  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> 插入包含 FILESTREAM 資料的資料列  
  若要將資料列加入至支援 FILESTREAM 資料的資料表，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 陳述式。 當您將資料插入 FILESTREAM 資料行時，可以插入 NULL 或 `varbinary(max)` 值。  
   
 ### <a name="inserting-null"></a>插入 NULL  
@@ -51,14 +51,14 @@ ms.locfileid: "66010436"
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
-##  <a name="upd"></a> 更新 FILESTREAM 資料  
+##  <a name="updating-filestream-data"></a><a name="upd"></a>更新 FILESTREAM 資料  
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來更新檔案系統檔案中的資料。不過，當您必須將大量資料串流處理至檔案時，可能不會想要這樣做。  
   
  下列範例會以文字 `Xray 1`來取代檔案記錄中的所有文字。  
   
  [!code-sql[FILESTREAM#FS_UpdateData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_updatedata)]  
   
-##  <a name="del"></a> 刪除 FILESTREAM 資料  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> 刪除 FILESTREAM 資料  
  當您刪除包含 FILESTREAM 欄位的資料列時，您也會刪除其基礎檔案系統的檔案。 因此，刪除資料列與檔案的唯一方法，是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE 陳述式。  
   
  下列範例將示範如何刪除資料列及相關聯的檔案系統檔案。  
@@ -71,7 +71,7 @@ ms.locfileid: "66010436"
 >  基礎檔案會由 FILESTREAM 記憶體回收行程所移除。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟用及設定 FILESTREAM](enable-and-configure-filestream.md)   
+ [啟用和設定 FILESTREAM](enable-and-configure-filestream.md)   
  [避免與 FILESTREAM 應用程式中的資料庫作業相衝突](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   
   

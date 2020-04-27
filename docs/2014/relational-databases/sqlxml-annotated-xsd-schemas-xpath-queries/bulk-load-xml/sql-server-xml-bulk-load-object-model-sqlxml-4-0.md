@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013287"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
@@ -57,7 +57,7 @@ ms.locfileid: "66013287"
  當屬性設定為 TRUE 時，XML 大量載入會檢查插入之每個值的條件約束 (也就是說，條件約束違規會導致錯誤)。  
   
 > [!NOTE]  
->  若要將此屬性保留為 FALSE，您必須具有目標資料表的**ALTER TABLE**許可權。 如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要將此屬性保留為 FALSE，您必須具有目標資料表的**ALTER TABLE**許可權。 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  預設值為 FALSE。 設定為 FALSE 時，XML 大量載入會在插入作業期間忽略條件約束。 在目前的實作中，您必須以對應結構描述中，主索引鍵和外部索引鍵關聯性的順序定義資料表。 也就是說，具有主索引鍵的資料表必須在具有外部索引鍵的對應資料表之前定義，否則，XML 大量載入會失敗。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66013287"
  設定為 TRUE 時，觸發程序一般將會在插入作業期間引發。  
   
 > [!NOTE]  
->  若要將此屬性保留為 FALSE，您必須具有目標資料表的**ALTER TABLE**許可權。 如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要將此屬性保留為 FALSE，您必須具有目標資料表的**ALTER TABLE**許可權。 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  請注意，如果識別碼擴展即將完成，則此選項不會套用，而且觸發條件將會保持開啟。 如果 `KeepIdentity=False`，而且有定義一個關聯性，其中父系是識別欄位，並在產生值時將其提供給子系，則會發生這個狀況。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66013287"
  此屬性的值會套用到大量載入包含的所有資料行。 預設值為 TRUE。  
   
 > [!NOTE]  
->  若要將此屬性保留為 TRUE，您必須具有目標資料表的**ALTER TABLE**許可權。 否則，它必須設定為值 FALSE。 如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+>  若要將此屬性保留為 TRUE，您必須具有目標資料表的**ALTER TABLE**許可權。 否則，它必須設定為值 FALSE。 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
   
  KeepNulls  
  指定在 XML 文件中，用於缺少對應屬性或子元素之資料行的值。 這是布林屬性。 當屬性設定為 TRUE 時，XML 大量載入會將 Null 值指派給資料行。 它不會將資料行的預設值指派為伺服器上的值 (如果有的話)。 此屬性的值會套用到大量載入包含的所有資料行。  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054474"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 連接管理員編輯器
@@ -30,13 +30,13 @@ ms.locfileid: "66054474"
  **名稱**  
  提供唯一的名稱給連接管理員。  
   
- **說明**  
+ **描述**  
  描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
   
  **伺服器名稱**  
  提供您要 WMI 連接的伺服器名稱。  
   
- **命名空間**  
+ **Namespace**  
  指定 WMI 命名空間。  
   
  **使用 Windows 驗證**  
@@ -48,7 +48,7 @@ ms.locfileid: "66054474"
  **密碼**  
  如果您並未使用 Windows 驗證，則必須提供連接的密碼。  
   
- **測驗**  
+ **測試**  
  測試連接管理員設定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -15,26 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011945"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>匯入或匯出資料的格式檔案 (SQL Server)
   當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用「格式檔案」  來儲存大量匯出或大量匯入資料所需的所有格式資訊。 這包含相對於該資料表之資料檔中各欄位的格式資訊。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援兩種類型的格式檔案：XML 格式檔案和非 XML 格式檔案。 非 XML 格式檔案和 XML 格式檔案都會將每個欄位的描述包含在資料檔中，而且 XML 格式檔案也包含對應資料表資料行的描述。 一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援兩種類型的格式檔案：XML 格式和非 XML 格式檔案。 非 XML 格式檔案和 XML 格式檔案都會將每個欄位的描述包含在資料檔中，而且 XML 格式檔案也包含對應資料表資料行的描述。 一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
  
   
-##  <a name="Benefits"></a> 格式檔案的優點  
+##  <a name="benefits-of-format-files"></a><a name="Benefits"></a> 格式檔案的優點  
   
 -   提供可用來寫入資料檔的彈性系統，幾乎不需要進行編輯，即可符合其他資料格式或從其他軟體中讀取資料檔。  
   
 -   可讓您大量匯入資料，而不需要加入或刪除不需要的資料，或是重新排列資料檔中的現有資料。 當資料檔欄位與資料表資料行不相符時，格式檔案就會特別有用。  
   
-##  <a name="ExamplesOfFFs"></a> 格式檔案的範例  
+##  <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> 格式檔案的範例  
  下列範例顯示非 XML 格式檔案及 XML 格式檔案的配置。 這些格式檔案會對應到 `HumanResources.myTeam` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 這個資料表包含四個資料行： `EmployeeID`、 `Name`、 `Title`和 `ModifiedDate`。  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-##  <a name="WhenFFrequired"></a> 何時需要格式檔案？  
+##  <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> 何時需要格式檔案？  
  INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式永遠需要格式檔案。  
   
 -   至於 **bcp** 或 BULK INSERT，在簡單的情況下，可以選擇是否使用格式檔案，但很少會需要。 不過，在複雜的大量匯入情況下，就經常需要格式檔案。  
@@ -114,7 +114,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

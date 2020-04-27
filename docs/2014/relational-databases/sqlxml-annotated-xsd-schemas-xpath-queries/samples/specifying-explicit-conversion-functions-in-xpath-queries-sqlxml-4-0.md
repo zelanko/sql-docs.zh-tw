@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010703"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
@@ -28,8 +28,7 @@ ms.locfileid: "66010703"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
- 
-  `number()` 函數會將引數轉換成數字。  
+ `number()` 函數會將引數轉換成數字。  
   
  假設**ContactID**的值為非數值，則下列查詢會將**ContactID**轉換成數位，並將它與值4進行比較。 然後，此查詢會傳回內容節點的所有** \<Employee>** 專案子系，其**ContactID**屬性的數值為4：  
   
@@ -78,8 +77,7 @@ ms.locfileid: "66010703"
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
- 
-  `string()` 函數會將引數轉換成字串。  
+ `string()` 函數會將引數轉換成字串。  
   
  下列查詢會將**ContactID**轉換成字串，並將它與字串值 "4" 進行比較。 此查詢會傳回內容節點的所有** \<Employee>** 專案子系，且**ContactID**的字串值為 "4"：  
   

@@ -25,17 +25,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013830"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 來隱藏元素和屬性
   針對 XSD 結構描述執行 XPath 查詢時，產生的 XML 文件會具有在結構描述中指定的元素和屬性。 您可以使用 `sql:hide` 註解來指定某些元素和屬性要在結構描述中隱藏。 當查詢的選取準則需要結構描述中的特定元素或屬性，但是您不想要在產生的 XML 文件中傳回這些項目時，這樣做就很有用。  
   
- 
-  `sql:hide` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
+ `sql:hide` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  

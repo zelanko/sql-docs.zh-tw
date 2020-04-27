@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011965"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
     
-##  <a name="top"></a>您可以將 XML 檔大容量導[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]入資料庫，或從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫大量匯出它們。 本主題將提供這兩種情況的範例。  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>您可以將 XML 檔大容量導[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]入資料庫，或從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫大量匯出它們。 本主題將提供這兩種情況的範例。  
   
  若要從資料檔將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或非資料分割檢視，您可以使用下列方式：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66011965"
   
 -   E. [大量匯出 XML 資料](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a> A. 以二進位位元組資料流大量匯入 XML 資料  
+###  <a name="a-bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a> A. 以二進位位元組資料流大量匯入 XML 資料  
  從包含您要套用的編碼宣告之檔案大量匯入 XML 資料時，請在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 選項。 SINGLE_BLOB 選項可確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 剖析器，會根據 XML 宣告中指定的編碼配置來匯入資料。  
   
 #### <a name="sample-table"></a>範例資料表  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   比對或解析資料庫定序設定與非 Unicode XML 編碼配置。  
   
- [&#91;Top&#93;](#top)  
+ [[頁首]](#top)  
   
-###  <a name="existing_row"></a> B. 在現有資料列中大量匯入 XML 資料  
+###  <a name="b-bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> B. 在現有資料列中大量匯入 XML 資料  
  這個範例使用 `OPENROWSET` 大量資料列集提供者，將 XML 執行個體加入範例資料表 `T`中的現有資料列。  
   
 > [!NOTE]  
@@ -134,9 +134,9 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;Top&#93;](#top)  
+ [[頁首]](#top)  
   
-###  <a name="file_contains_dtd"></a> C. 從包含 DTD 的檔案大量匯入 XML 資料  
+###  <a name="c-bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> C. 從包含 DTD 的檔案大量匯入 XML 資料  
   
 > [!IMPORTANT]  
 >  如果您的 XML 環境不需要文件類型定義 (DTD)，我們建議您不要啟用這項支援。 開啟 DTD 支援會增加您伺服器受攻擊的介面區，以及將它暴露於阻絕服務攻擊的危險。 如果您必須啟用 DTD 支援，可以藉由只處理信任的 XML 文件來減輕此安全性風險。  
@@ -180,14 +180,13 @@ INSERT T1
   
  在執行 `INSERT` 陳述式之後，會從 XML 移除 DTD，並將它儲存在 `T1` 資料表中。  
   
- [&#91;Top&#93;](#top)  
+ [[頁首]](#top)  
   
-###  <a name="field_terminator_in_format_file"></a>D. 使用格式檔案明確指定欄位結束字元  
+###  <a name="d-specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> D. 使用格式檔案明確指定欄位結束字元  
  下列範例顯示如何大量匯入下列 XML 文件 `Xmltable.dat`。  
   
 #### <a name="sample-data-file"></a>範例資料檔  
- 
-  `Xmltable.dat` 中的文件包含兩個 XML 值，每列各有一個值。 第一個 XML 值是以 UTF-16 編碼，而第二個值則是以 UTF-8 編碼。  
+ `Xmltable.dat` 中的文件包含兩個 XML 值，每列各有一個值。 第一個 XML 值是以 UTF-16 編碼，而第二個值則是以 UTF-8 編碼。  
   
  這個資料檔的內容顯示在下列十六進位傾印中：  
   
@@ -213,7 +212,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>範例資料表  
- 當您大量匯入或匯出 XML 檔時，您應該使用不可能出現在任何檔中的[欄位結束字元](specify-field-and-row-terminators-sql-server.md);例如，一連串四個 null （`\0`）後面接著字母`z`：。 `\0\0\0\0z`  
+ 當大量匯入或匯出 XML 文件時，您應該使用任何文件都無法顯示的 [欄位結束字元](specify-field-and-row-terminators-sql-server.md) ；例如，連續四個 Null (`\0`) 後面接著字母 `z`： `\0\0\0\0z`。  
   
  這個範例顯示如何將這個欄位結束字元使用於 `xTable` 範例資料表。 若要建立這個範例資料表，請使用下列 `CREATE TABLE` 陳述式：  
   
@@ -244,9 +243,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;Top&#93;](#top)  
+ [[頁首]](#top)  
   
-###  <a name="bulk_export_xml_data"></a>版. 大量匯出 XML 資料  
+###  <a name="e-bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> E. 大量匯出 XML 資料  
  下列範例使用 `bcp` 從前面範例所建立的資料表 (使用相同的 XML 格式檔案) 大量匯入 XML 資料。 在下列 `bcp` 命令中， `<server_name>` 和 `<instance_name>` 代表必須以適當值取代的預留位置：  
   
 ```  
@@ -254,17 +253,15 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 XML 資料保存於資料庫時，並不會儲存 XML 編碼。 因此，一旦匯出 XML 資料之後，便無法使用 XML 欄位的原始編碼。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在匯出 XML 資料時使用 UTF-16 編碼。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 XML 資料保存於資料庫時，並不會儲存 XML 編碼。 因此，一旦匯出 XML 資料之後，便無法使用 XML 欄位的原始編碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在匯出 XML 資料時使用 UTF-16 編碼。  
   
- [&#91;Top&#93;](#top)  
+ [[頁首]](#top)  
   
 ## <a name="see-also"></a>另請參閱  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [&#40;Transact-sql&#41;的 SELECT 子句](/sql/t-sql/queries/select-clause-transact-sql)   
+ [SELECT 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp 公用程式](../../tools/bcp-utility.md)   
- [大量匯入和匯出資料 &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [資料的大量匯入及匯出 &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   

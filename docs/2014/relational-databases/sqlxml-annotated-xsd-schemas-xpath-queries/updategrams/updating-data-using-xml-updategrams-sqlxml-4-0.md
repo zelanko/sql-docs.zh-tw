@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014680"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
@@ -59,8 +59,7 @@ ms.locfileid: "66014680"
  `<updg:after>`  
  After>區塊中的專案會描述套用更新之後， ** \<在之前的>** 區塊中指定的記錄應如何查看。 ** \< **  
   
- 
-  `mapping-schema` 屬性會識別 Updategram 所使用的對應結構描述。 如果 updategram 指定對應架構，則在** \<>之前**和** \<之後>** 區塊中指定的元素和屬性名稱必須符合架構中的名稱。 對應的結構描述會將這些元素或屬性名稱對應到資料庫資料表和資料行名稱。  
+ `mapping-schema` 屬性會識別 Updategram 所使用的對應結構描述。 如果 updategram 指定對應架構，則在** \<>之前**和** \<之後>** 區塊中指定的元素和屬性名稱必須符合架構中的名稱。 對應的結構描述會將這些元素或屬性名稱對應到資料庫資料表和資料行名稱。  
   
  如果 Updategram 沒有指定結構描述，Updategram 會使用預設的對應。 在預設的對應中，updategram 中指定的** \<>ElementName**會對應到資料庫資料表，而子項目或屬性則會對應到資料庫資料行。  
   

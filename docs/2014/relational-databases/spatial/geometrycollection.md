@@ -13,16 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014224"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  
-  `GeometryCollection` 是零或多個 `geometry` 或 `geography` 執行個體的集合。 
-  `GeometryCollection` 可以是空的。  
+  `GeometryCollection` 是零或多個 `geometry` 或 `geography` 執行個體的集合。 `GeometryCollection` 可以是空的。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 執行個體  
   
@@ -52,8 +50,7 @@ DECLARE @g4 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- 
-  `@g4` 無效，因為 `Polygon` 執行個體中的 `GeometryCollection` 執行個體無效。  
+ `@g4` 無效，因為 `Polygon` 執行個體中的 `GeometryCollection` 執行個體無效。  
   
  如需可接受和有效執行個體的詳細資訊，請參閱＜ [Point](point.md)＞、＜ [MultiPoint](multipoint.md)＞、＜ [LineString](linestring.md)＞、＜ [MultiLineString](multilinestring.md)＞、＜ [Polygon](polygon.md)＞和＜ [MultiPolygon](multipolygon.md)＞。  
   

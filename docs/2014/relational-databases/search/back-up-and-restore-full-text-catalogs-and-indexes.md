@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012815"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>備份並還原全文檢索目錄與索引。
@@ -30,9 +30,9 @@ ms.locfileid: "66012815"
 > [!IMPORTANT]  
 >  您可以在升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫時，匯入全文檢索目錄。 每個匯入的全文檢索目錄都是其檔案群組中的資料庫檔案。 若要備份匯入的目錄，只要備份其檔案群組即可。 如需詳細資訊，請參閱《 [線上叢書》中的](https://go.microsoft.com/fwlink/?LinkID=121052)備份和還原 SQL Server 2008 全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
-##  <a name="backingup"></a> 備份全文檢索目錄的全文檢索索引  
+##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> 備份全文檢索目錄的全文檢索索引  
   
-###  <a name="Find_FTIs_of_a_Catalog"></a> 尋找全文檢索目錄的全文檢索索引  
+###  <a name="finding-the-full-text-indexes-of-a-full-text-catalog"></a><a name="Find_FTIs_of_a_Catalog"></a> 尋找全文檢索目錄的全文檢索索引  
  您可以使用下列 [SELECT](/sql/t-sql/queries/select-transact-sql) 陳述式 (從 [sys.fulltext_indexes](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql) 和 [sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql) 目錄檢視中選取資料行) 來擷取全文檢索索引的屬性。  
   
 ```  
@@ -49,7 +49,7 @@ GO
   
 
   
-###  <a name="Find_FG_of_FTI"></a> 尋找包含全文檢索索引的檔案群組或檔案  
+###  <a name="finding-the-filegroup-or-file-that-contains-a-full-text-index"></a><a name="Find_FG_of_FTI"></a> 尋找包含全文檢索索引的檔案群組或檔案  
  建立全文檢索索引時，它會放置於下列其中一個位置：  
   
 -   使用者指定的檔案群組。  
@@ -73,7 +73,7 @@ GO
   
 
   
-###  <a name="Back_up_FTIs_of_FTC"></a> 備份包含全文檢索索引的檔案群組  
+###  <a name="backing-up-the-filegroups-that-contain-full-text-indexes"></a><a name="Back_up_FTIs_of_FTC"></a> 備份包含全文檢索索引的檔案群組  
  尋找包含全文檢索目錄之索引的檔案群組之後，您必須備份每個檔案群組。 在備份程序期間，您可能無法卸除或加入全文檢索目錄。  
   
  檔案群組的第一個備份必須是完整檔案備份。 建立檔案群組的完整檔案備份之後，您就可以透過建立一系列的一個或多個差異檔案備份 (以完整檔案備份為基礎)，僅備份檔案群組中的變更。  
@@ -86,7 +86,7 @@ GO
   
 
   
-##  <a name="Restore_FTI"></a> 還原全文檢索索引  
+##  <a name="restoring-a-full-text-index"></a><a name="Restore_FTI"></a> 還原全文檢索索引  
  還原備份的檔案群組就會還原全文檢索索引檔案，以及檔案群組中的其他檔案。 根據預設，檔案群組會還原至備份檔案群組所在的磁碟位置。  
   
  如果建立備份時，全文檢索索引資料表已在線上，而且正在進行母體擴展，就會在還原之後繼續進行母體擴展。  

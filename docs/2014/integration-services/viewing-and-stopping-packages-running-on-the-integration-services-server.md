@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054602"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>檢視及停止在 Integration Services 伺服器上執行的封裝
-  
   `SSISDB` 資料庫會將執行記錄儲存在不會對使用者顯示的內部資料表中。 不過，它會透過可供您查詢的公用檢視來公開您需要的資訊。 另外，它也會提供預存程序，讓您可以加以呼叫，以執行與封裝相關的一般工作。  
   
  通常，您會在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中管理伺服器上的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]物件。 但您也可以直接查詢資料庫檢視並呼叫預存程序，或編寫可呼叫 Managed API 的自訂程式碼。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 Managed API 會查詢檢視並呼叫預存程序，以執行許多工作。 例如，您可以檢視目前正在伺服器上執行之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的清單，並在需要時要求停止封裝。  
@@ -51,7 +50,7 @@ ms.locfileid: "66054602"
  請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
   
 ## <a name="viewing-the-history-of-packages-that-have-run"></a>檢視已執行封裝的記錄  
- 若要檢視已在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中執行之封裝的記錄，請使用 **[所有執行]** 報表。 如需 [所有執行]  報表和其他標準報表的詳細資訊，請參閱 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md) (Integration Services 伺服器的報表)。  
+ 若要檢視已在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中執行之封裝的記錄，請使用 **[所有執行]** 報表。 如需 [所有執行]**** 報表和其他標準報表的詳細資訊，請參閱 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md) (Integration Services 伺服器的報表)。  
   
  如需有關可用來檢視執行中封裝記錄之其他方法的詳細資訊，請參閱下列主題。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66054602"
  請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行專案和套件](packages/run-integration-services-ssis-packages.md)   
- [套件執行的疑難排解報告](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [執行專案和封裝](packages/run-integration-services-ssis-packages.md)   
+ [疑難排解封裝執行的報表](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

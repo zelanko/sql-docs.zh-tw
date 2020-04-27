@@ -23,20 +23,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013865"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 從產生的 XML 文件排除結構描述元素 (SQLXML 4.0)
   XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您要在 XSD 結構中建立沒有對應到任何資料庫資料表 (檢視表) 或資料行，而且沒有出現在 XML 中的元素，您可以指定 `sql:mapped` 註解。  
   
- 如果無法修改結構描述，或者如果結構描述用於驗證來自其他來源的 XML，而且不包含未儲存在資料庫中的資料，則 `sql:mapped` 註解特別實用。 
-  `sql:mapped` 註解與 `sql:is-constant` 不同之處在於，未對應的元素和屬性不會出現在 XML 文件中。  
+ 如果無法修改結構描述，或者如果結構描述用於驗證來自其他來源的 XML，而且不包含未儲存在資料庫中的資料，則 `sql:mapped` 註解特別實用。 `sql:mapped` 註解與 `sql:is-constant` 不同之處在於，未對應的元素和屬性不會出現在 XML 文件中。  
   
- 
-  `sql:mapped` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
+ `sql:mapped` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  

@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011464"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
   全文檢索目錄是不屬於任何檔案群組的虛擬物件。它是參考一組全文檢索索引的邏輯概念。  
   
-##  <a name="creating"></a>建立全文檢索目錄  
+##  <a name="creating-a-full-text-catalog"></a><a name="creating"></a>建立全文檢索目錄  
   
 #### <a name="to-create-a-full-text-catalog"></a>建立全文檢索目錄  
   
@@ -42,9 +42,8 @@ ms.locfileid: "66011464"
   
   
   
-##  <a name="props"></a>查看全文檢索目錄的屬性  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 (例如 FULLTEXTCATALOGPROPERTY) 可以用來取得各種全文檢索索引相關屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
+##  <a name="viewing-the-properties-of-a-full-text-catalog"></a><a name="props"></a>查看全文檢索目錄的屬性  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 (例如 FULLTEXTCATALOGPROPERTY) 可以用來取得各種全文檢索索引相關屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
   
  下表列出與全文檢索目錄相關的屬性。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66011464"
   
   
   
-##  <a name="rebuildone"></a>重建全文檢索目錄  
+##  <a name="rebuilding-a-full-text-catalog"></a><a name="rebuildone"></a>重建全文檢索目錄  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>重建全文檢索目錄  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66011464"
   
   
   
-##  <a name="rebuildall"></a>重建資料庫的所有全文檢索目錄  
+##  <a name="rebuilding-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a>重建資料庫的所有全文檢索目錄  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>重建資料庫的全文檢索目錄  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66011464"
   
   
   
-##  <a name="removing"></a>從資料庫移除全文檢索目錄  
+##  <a name="removing-a-full-text-catalog-from-a-database"></a><a name="removing"></a>從資料庫移除全文檢索目錄  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>從資料庫移除全文檢索目錄  
   

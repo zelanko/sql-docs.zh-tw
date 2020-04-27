@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010941"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>設定全文檢索篩選背景程式啟動器的服務帳戶
@@ -26,20 +26,20 @@ ms.locfileid: "66010941"
  SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體相關聯的執行個體感知服務。 SQL 全文檢索篩選背景程式啟動器服務會將服務帳戶資訊傳播給每個篩選背景程式主機處理序。  
   
   
-##  <a name="setting"></a>設定服務帳戶  
+##  <a name="setting-the-service-account"></a><a name="setting"></a>設定服務帳戶  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>設定全文檢索搜尋的 SQL 全文檢索篩選背景程式啟動器服務帳戶  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
 2.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server Services**]，以滑鼠右鍵按一下 **[SQL 全文檢索*`instance name`* 篩選背景程式啟動器（）**]，然後按一下 [**屬性**]。  
   
 3.  按一下對話方塊的 [登入]**** 索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所建立之每個處理序的帳戶。  
   
-4.  在您關閉對話方塊之後，請按一下 [重新啟動]  重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
+4.  在您關閉對話方塊之後，請按一下 [重新啟動] **** 重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
   
   
-##  <a name="error"></a>如果 SQL 全文檢索篩選背景程式啟動器服務未啟動  
+##  <a name="if-the-sql-full-text-filter-daemon-launcher-service-does-not-start"></a><a name="error"></a>如果 SQL 全文檢索篩選背景程式啟動器服務未啟動  
  若未啟動 SQL 全文檢索篩選背景程式啟動器服務，則可能是下列其中一個或多個原因所造成：  
   
 -   與 SQL 全文檢索篩選背景程式啟動器服務帳戶相關聯的密碼已過期。  

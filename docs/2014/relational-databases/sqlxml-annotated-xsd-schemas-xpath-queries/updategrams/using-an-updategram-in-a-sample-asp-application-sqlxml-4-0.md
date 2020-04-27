@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014625"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)

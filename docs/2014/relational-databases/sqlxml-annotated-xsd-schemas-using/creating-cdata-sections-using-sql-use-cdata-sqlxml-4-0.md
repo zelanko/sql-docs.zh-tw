@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014005"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 建立 CDATA 區段 (SQLXML 4.0)
@@ -31,12 +31,9 @@ ms.locfileid: "66014005"
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料庫有時會包含 XML 剖析器視為標記字元的字元;例如，角括弧（\<和 >）、小於或等於符號（<=）和連字號（&）會被視為標記字元。 但是，您可以將這類型的特殊字元包裝在 CDATA 區段內，以免被視為標記字元。 XML 剖析器會將 CDATA 區段內的文字視為純文字。  
   
- 
-  `sql:use-cdata` 註解是用來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所傳回的資料應該包裝在 CDATA 區段內 (也就是說，它會指出 `sql:field` 指定之資料行中的值是否應該包含在 CDATA 區段內)。 
-  `sql:use-cdata` 註解只能在對應至資料庫資料行的元素上指定。  
+ `sql:use-cdata` 註解是用來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所傳回的資料應該包裝在 CDATA 區段內 (也就是說，它會指出 `sql:field` 指定之資料行中的值是否應該包含在 CDATA 區段內)。 `sql:use-cdata` 註解只能在對應至資料庫資料行的元素上指定。  
   
- 
-  `sql:use-cdata` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
+ `sql:use-cdata` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
  此註解不能搭配 `sql:url-encode` 使用或是在 ID、IDREF、IDREFS、NMTOKEN 和 NMTOKENS 屬性類型上使用。  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012079"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>大量匯入或大量匯出的資料格式 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66012079"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> 大量匯入或匯出的資料格式  
+##  <a name="data-formats-for-bulk-import-or-export"></a><a name="ComponentsAndConcepts"></a> 大量匯入或匯出的資料格式  
  下表根據資料的呈現方式和作業的來源或目標，指出一般適合使用的資料格式。  
   
 |作業|原生|Unicode 原生|字元|Unicode 字元|  
@@ -43,7 +43,7 @@ ms.locfileid: "66012079"
   
  <sup>1</sup>使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**時，從大量匯出資料的最快方法。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   

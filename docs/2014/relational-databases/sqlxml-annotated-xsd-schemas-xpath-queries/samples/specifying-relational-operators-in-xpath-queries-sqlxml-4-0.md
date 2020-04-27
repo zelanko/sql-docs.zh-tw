@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012443"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
@@ -36,8 +36,7 @@ ms.locfileid: "66012443"
   
  括弧中指定的述詞會篩選** \<Customer>** 元素。 只會傳回至少有一個** \<OrderDetail>** 孫代具有大於3的 OrderQty 屬性值的** \<客戶>** 元素。  
   
- 
-  `child` 軸是預設值。 因此，此查詢可以指定為：  
+ `child` 軸是預設值。 因此，此查詢可以指定為：  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  

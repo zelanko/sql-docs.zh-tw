@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015084"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>疑難排解全文檢索索引
      
-##  <a name="failure"></a> 疑難排解全文檢索索引失敗  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> 疑難排解全文檢索索引失敗  
  擴展或維護全文檢索索引時，全文檢索索引子可能會因為下面所描述的原因而無法對一個或多個資料列進行檢索。 這些資料列層級錯誤不會讓母體擴展無法完成。 索引子會略過這些資料列，而這表示您無法查詢這些資料列中所含的內容。  
   
  下列情況可能會發生編製索引失敗：  
@@ -54,7 +54,7 @@ ms.locfileid: "66015084"
   
 
   
-##  <a name="state"></a> 全文檢索索引在還原交易記錄之後處於不一致的狀態  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> 全文檢索索引在還原交易記錄之後處於不一致的狀態  
  當復原資料庫的交易記錄時，您會看到一個警告，指出全文檢索索引處於不一致的狀態。 原因是備份資料庫後，資料表的全文檢索索引已發生變更。 若要讓全文檢索索引的狀態一致，您必須在資料表上執行完整母體擴展 (搜耙)。 如需詳細資訊，請參閱 [擴展全文檢索索引](../indexes/indexes.md)。  
   
 

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010114"
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述
@@ -25,13 +25,12 @@ ms.locfileid: "66010114"
 |檔案屬性名稱|type|大小|預設|描述|檔案系統可存取性|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|變動|識別此項目位置的 `hierarchyid`。|此節點在階層式 FileNamespace 中的位置。<br /><br /> 資料表的主索引鍵。|可透過設定 Windows 路徑值加以建立及修改。|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||
-  `NEWID()` 函數所傳回的值。|FILESTREAM 資料的唯一識別碼。|不適用。|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||`NEWID()` 函數所傳回的值。|FILESTREAM 資料的唯一識別碼。|不適用。|  
 |**file_stream**|`varbinary(max)`<br /><br /> `filestream`|變動|NULL|包含 FILESTREAM 資料。|不適用。|  
-|**file_type**|`nvarchar(255)`|變動|NULL。<br /><br /> 檔案系統中的建立或重新命名作業，將會根據名稱填入副檔名值。|代表檔案的類型。<br /><br /> 當您建立全文檢索索引時，此資料行可用以做為 `TYPE COLUMN`。<br /><br /> **file_type**是保存的計算資料行。|自動計算， 無法設定。|  
+|**file_type**|`nvarchar(255)`|變動|NULL。<br /><br /> 檔案系統中的建立或重新命名作業，將會根據名稱填入副檔名值。|代表檔案的類型。<br /><br /> 當您建立全文檢索索引時，此資料行可用以做為 `TYPE COLUMN`。<br /><br /> **file_type** 是保存的計算資料行。|自動計算， 無法設定。|  
 |**名稱**|`nvarchar(255)`|變動|GUID 值。|檔案或目錄名稱。|可使用 Windows API 加以建立或修改。|  
-|**parent_path_locator**|`hierarchyid`|變動|識別內含此項目之目錄的 `hierarchyid`。|上層目錄的 `hierarchyid`。<br /><br /> **parent_path_locator**是保存的計算資料行。|自動計算， 無法設定。|  
-|**cached_file_size**|`bigint`|||FILESTREAM 資料的大小 (以位元組為單位)。<br /><br /> **cached_file_size**是保存的計算資料行。|雖然快取的檔案大小會自動保持最新狀態，不過在少見的情況下，它可能會呈現未同步狀態。 若要計算確切的大小，請使用 `DATALENGTH()` 函數。|  
+|**parent_path_locator**|`hierarchyid`|變動|識別內含此項目之目錄的 `hierarchyid`。|上層目錄的 `hierarchyid`。<br /><br /> **parent_path_locator** 是保存的計算資料行。|自動計算， 無法設定。|  
+|**cached_file_size**|`bigint`|||FILESTREAM 資料的大小 (以位元組為單位)。<br /><br /> **cached_file_size** 是保存的計算資料行。|雖然快取的檔案大小會自動保持最新狀態，不過在少見的情況下，它可能會呈現未同步狀態。 若要計算確切的大小，請使用 `DATALENGTH()` 函數。|  
 |**creation_time**|`datetime2(4)`<br /><br /> `not null`|8 個位元組|目前時間。|建立檔案的日期與時間。|自動計算， 也可以使用 Windows API 加以設定。|  
 |**last_write_time**|`datetime2(4)`<br /><br /> `not null`|8 個位元組|目前時間。|上次更新檔案的日期與時間。|自動計算， 也可以使用 Windows API 加以設定。|  
 |**last_access_time**|`datetime2(4)`<br /><br /> `not null`|8 個位元組|目前時間。|上次存取檔案的日期與時間。|自動計算， 也可以使用 Windows API 加以設定。|  

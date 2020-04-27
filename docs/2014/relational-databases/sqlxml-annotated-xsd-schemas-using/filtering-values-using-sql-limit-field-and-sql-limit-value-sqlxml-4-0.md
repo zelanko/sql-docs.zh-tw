@@ -19,22 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013812"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)
-  您可以根據特定的限制值來限制從資料庫查詢傳回的資料列。 
-  `sql:limit-field` 和 `sql:limit-value` 註解用於識別包含限制值的資料庫資料行，以及指定篩選所傳回之資料所使用的特定限制值。  
+  您可以根據特定的限制值來限制從資料庫查詢傳回的資料列。 `sql:limit-field` 和 `sql:limit-value` 註解用於識別包含限制值的資料庫資料行，以及指定篩選所傳回之資料所使用的特定限制值。  
   
- 
-  `sql:limit-field` 註解用於識別包含限制值的資料行；該註解可在每個對應的元素或屬性上使用。  
+ `sql:limit-field` 註解用於識別包含限制值的資料行；該註解可在每個對應的元素或屬性上使用。  
   
- 
-  `sql:limit-value` 註解用於指定 `sql:limit-field` 註解中所指定之資料行中的限制值。 
-  `sql:limit-value` 註解是選擇性的。 如果未指定 `sql:limit-value`，則會假設 NULL 值。  
+ `sql:limit-value` 註解用於指定 `sql:limit-field` 註解中所指定之資料行中的限制值。 `sql:limit-value` 註解是選擇性的。 如果未指定 `sql:limit-value`，則會假設 NULL 值。  
   
 > [!NOTE]  
 >  使用 `sql:limit-field` (其中對應的 SQL 資料行屬於 `real` 類型) 時，SQLXML 4.0 會針對 XML 結構描述中指定的 `sql:limit-value` 執行轉換，做為 `nvarchar` 指定的值。 這需要使用完整的科學記號標記法指定十進位限制值。 如需詳細資訊，請參閱下列範例 B。  

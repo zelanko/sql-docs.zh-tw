@@ -18,14 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014346"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 Data Access Components
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 包含三個資料提供者，可針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的資料庫插入及擷取 XML 資料：  
   
 -   SQLXMLOLEDB 提供者  

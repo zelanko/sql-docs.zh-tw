@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011304"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>全文檢索搜尋 DDL、函數、預存程序與檢視
@@ -24,7 +24,7 @@ ms.locfileid: "66011304"
   
  如需支援語意搜尋之資料庫物件的清單，請參閱＜ [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)＞。  
   
-##  <a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
   
 -   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011304"
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-search-property-list-transact-sql)  
   
-##  <a name="func"></a> 系統述詞和函數  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> 系統述詞和函數  
   
 -   [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66011304"
   
 -   [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)  
   
-##  <a name="meta"></a> 系統中繼資料函數  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 系統中繼資料函數  
   
 -   [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66011304"
   
 -   [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
   
-##  <a name="proc"></a> 系統預存程序  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> 系統預存程序  
   
 -   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66011304"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="cat"></a> 系統檢視表 - 目錄檢視  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> 系統檢視表 - 目錄檢視  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66011304"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
-##  <a name="dmv"></a> 系統檢視表 - 動態管理檢視  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 系統檢視表 - 動態管理檢視  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   

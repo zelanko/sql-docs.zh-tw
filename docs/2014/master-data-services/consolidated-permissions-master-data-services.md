@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054104"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合併的權限 (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "66054104"
   
  合併的權限只適用於啟用明確階層和集合的實體。  
   
- **紀錄**  
+ **注意：**  
   
 -   分葉權限只適用於使用者介面的總管**** 功能區域。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "66054104"
  [分葉許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

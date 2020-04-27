@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011040"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>語意搜尋 DDL、函數、預存程序及檢視
@@ -24,14 +24,14 @@ ms.locfileid: "66011040"
   
  如需支援全文檢索搜尋之陳述式和資料庫物件的清單，請參閱 [全文檢索搜尋 DDL、函數、預存程序與檢視](../views/views.md)。  
   
-##  <a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
   
 |Object|相關資訊|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)|[在資料表和資料行上啟用語意搜尋](enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)|[在資料表和資料行上啟用語意搜尋](enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> 系統函數  
+##  <a name="system-functions"></a><a name="func"></a> 系統函數  
   
 |Object|相關資訊|  
 |------------|----------------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "66011040"
 |[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql)|[使用語意搜尋尋找相似及相關的文件](find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql)|[使用語意搜尋尋找相似及相關的文件](find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> 系統中繼資料函數  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 系統中繼資料函數  
   
 |Object|相關資訊|  
 |------------|----------------------|  
@@ -50,14 +50,14 @@ ms.locfileid: "66011040"
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|[在資料表和資料行上啟用語意搜尋](enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|[安裝及設定語意搜尋](install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> 系統預存程序  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> 系統預存程序  
   
 |Object|相關資訊|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[安裝及設定語意搜尋](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[安裝及設定語意搜尋](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> 系統檢視表 - 目錄檢視  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a> 系統檢視表 - 目錄檢視  
   
 |Object|相關資訊|  
 |------------|----------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "66011040"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[安裝及設定語意搜尋](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[安裝及設定語意搜尋](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> 系統檢視表 - 動態管理檢視  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 系統檢視表 - 動態管理檢視  
   
 |Object|相關資訊|  
 |------------|----------------------|  

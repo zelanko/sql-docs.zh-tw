@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011735"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "66011735"
  此主題中的修改格式檔案的範例是以下列資料表與資料檔為基礎。  
   
 ### <a name="sample-table"></a>範例資料表  
- 本主題中的範例需要在 `myTestOrder` 結構描述底下的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中建立一個名為 `dbo` 的資料表。 若要建立這個資料表，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行下列程式碼：  
+ 本主題中的範例需要在 `dbo` 結構描述底下的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中建立一個名為 `myTestOrder` 的資料表。 若要建立這個資料表，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行下列程式碼：  
   
 ```  
 USE AdventureWorks2012;  
@@ -96,8 +96,7 @@ GO
 ## <a name="using-an-xml-format-file"></a>使用 XML 格式檔案  
  下列非 XML 格式檔案範例呈現格式檔案 `myTestOrder.xml`，它會將 `myTestOrder-c.txt` 中的欄位對應到 `myTestOrder` 資料表的資料行。如需有關如何建立資料表和資料檔的詳細資訊，請參閱本主題前面的「範例資料表與資料檔」。  
   
- 
-  `myTestOrder.xml` 格式檔案包含下列資訊：  
+ `myTestOrder.xml` 格式檔案包含下列資訊：  
   
 ```  
 <?xml version="1.0"?>  
@@ -120,11 +119,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  如需 XML 結構描述語法的相關資訊以及 XML 格式檔案的其他範例，請參閱[XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
+>  如需 XML 結構描述語法的相關資訊以及 XML 格式檔案的其他範例，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ### <a name="example"></a>範例  
- 下列範例使用 `OPENROWSET` 大量資料列集提供者，利用 `myTestOrder-c.txt` XML 格式檔案，將 `myTestOrder` 資料檔中的資料匯入 `myTestOrder.xml` 範例資料表。 
-  `INSERT... SELECT`陳述式指定選取清單中的資料行清單。  
+ 下列範例使用 `OPENROWSET` 大量資料列集提供者，利用 `myTestOrder-c.txt` XML 格式檔案，將 `myTestOrder` 資料檔中的資料匯入 `myTestOrder.xml` 範例資料表。 `INSERT... SELECT`陳述式指定選取清單中的資料行清單。  
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行下列程式碼：  
   

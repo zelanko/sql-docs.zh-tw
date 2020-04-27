@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011882"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式檔案 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011882"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 非 XML 格式檔案的優點  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> 非 XML 格式檔案的優點  
   
 -   您可以在 **format** 命令中指定 **bcp** 選項，以自動建立非 XML 格式檔案。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66011882"
 > [!NOTE]  
 >  XML 格式檔案提供了許多優於非 XML 格式檔案的優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
-##  <a name="Structure"></a> 非 XML 格式檔案的結構  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> 非 XML 格式檔案的結構  
  非 XML 格式檔案是具有特定結構的文字檔。 非 XML 格式檔案包含每個資料表資料行的檔案儲存類型、前置長度、欄位長度和欄位結束字元等相關資訊。  
   
  下圖說明非 XML 格式範例檔案的格式檔案欄位。  
@@ -58,7 +58,7 @@ ms.locfileid: "66011882"
   
 |格式檔案欄位|描述|  
 |------------------------|-----------------|  
-|版本|只能由 **bcp**辨識版本號碼，而不是由 [!INCLUDE[tsql](../../includes/tsql-md.md)]辨識。 **bcp** 公用程式的版本號碼：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注意：用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本必須與用於建立格式檔案的版本相同，或比它更新。 例如， [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**產生的 10.0 版格式檔案，但是 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 無法讀取由 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**產生的 12.0 版格式檔案。|  
+|版本|只能由 **bcp**辨識版本號碼，而不是由 [!INCLUDE[tsql](../../includes/tsql-md.md)]辨識。 **bcp** 公用程式的版本號碼：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注意:用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本必須與用於建立格式檔案的版本相同，或比它更新。 例如， [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**產生的 10.0 版格式檔案，但是 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 無法讀取由 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**產生的 12.0 版格式檔案。|  
 |Number of columns|資料檔案的欄位數。 在所有資料列中此數目必須相同。|  
   
  其他格式檔案欄位描述要大量匯入或匯出的資料欄位。 每個資料欄位在格式檔案中，必須有個別的資料列來代表。 每個格式檔案資料列都包含下表所述之格式檔案欄位的值。  
@@ -77,7 +77,7 @@ ms.locfileid: "66011882"
 > [!NOTE]  
 >  您可以修改格式檔案，讓您從欄位數目或順序與資料表資料行數目或順序不同的資料檔，進行大量匯入。 如需詳細資訊，請參閱本主題稍後的 [相關工作](#RelatedTasks) 清單。  
   
-##  <a name="Examples"></a> 非 XML 格式檔案範例  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> 非 XML 格式檔案範例  
  下列範例顯示先前建立的非 XML 格式檔案 (`myDepartmentIdentical-f-c.fmt`)。 這個檔案針對 `HumanResources.Department` 範例資料庫的 `AdventureWorks2012` 資料表，描述其中每個資料行的字元資料欄位。  
   
  產生的格式檔案 `myDepartmentIdentical-f-c.fmt`包含下列資訊：  
@@ -94,7 +94,7 @@ ms.locfileid: "66011882"
 > [!NOTE]  
 >  如需與這個非 XML 格式範例檔案有關的格式檔案欄位圖解，請參閱本主題稍早的 [非 XML 格式檔案結構](#Structure)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

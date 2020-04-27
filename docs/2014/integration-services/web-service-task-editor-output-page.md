@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054464"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服務工作編輯器 (輸出頁面)
@@ -41,7 +41,7 @@ ms.locfileid: "66054464"
  **檔案**  
  在清單中選取檔案連線管理員，或\<按一下 [**新增連接 ...** ]> 建立新的連線管理員。  
   
- **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = 變數  
  **變數**  

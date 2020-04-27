@@ -15,17 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011480"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文檢索查詢可以透過使用同義字 (Thesaurus) 搜尋使用者指定之詞彙的同義字 (Synonym)。 
-  「同義字」[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** (thesaurus) 會針對特定語言定義一組同義字 (synonym)。 系統管理員可以定義兩種同義字形式：展開集和取代集。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 同義字比對會針對所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查詢以及指定 FORMSOF THESAURUS 子句的任何 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查詢進行。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文檢索查詢可以透過使用同義字 (Thesaurus) 搜尋使用者指定之詞彙的同義字 (Synonym)。 「同義字」[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** (thesaurus) 會針對特定語言定義一組同義字 (synonym)。 系統管理員可以定義兩種同義字形式：展開集和取代集。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 同義字比對會針對所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查詢以及指定 FORMSOF THESAURUS 子句的任何 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查詢進行。  
   
-##  <a name="tasks"></a>設定同義字檔案的基本工作  
+##  <a name="basic-tasks-for-setting-up-a-thesaurus-file"></a><a name="tasks"></a>設定同義字檔案的基本工作  
  您必須先針對給定的語言定義同義字 (thesaurus) 對應 (同義字)，然後伺服器執行個體上的全文檢索搜詢查詢才能尋找該語言的同義字 (synonym)。 您必須手動設定每個同義字，以便定義下列項目：  
   
 -   變音符號設定  
@@ -43,11 +42,10 @@ ms.locfileid: "66011480"
      取代集包含替代集所要取代的文字模式。 如需範例，請參閱本主題後面的＜取代集的 XML 結構＞一節。  
   
   
-##  <a name="initial_thesaurus_files"></a>同義字檔案的初始內容  
+##  <a name="initial-content-of-the-thesaurus-files"></a><a name="initial_thesaurus_files"></a>同義字檔案的初始內容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組 XML 同義字檔案 (每個支援的語言都有一個檔案)。 這些檔案基本上都是空的。 它們僅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同義字通用的最上層 XML 結構以及標記為註解的範例同義字。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附的同義字檔案都包含下列 XML 程式碼：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附的同義字檔案都包含下列 XML 程式碼：  
   
 ```  
 <XML ID="Microsoft Search Thesaurus">  
@@ -76,7 +74,7 @@ ms.locfileid: "66011480"
 ```  
   
   
-##  <a name="location"></a>同義字檔案的位置  
+##  <a name="location-of-the-thesaurus-files"></a><a name="location"></a>同義字檔案的位置  
  同義字檔案的預設位置為：  
   
  *<SQL_Server_data_files_path>* \MSSQL12。MSSQLSERVER\MSSQL\FTDATA\  
@@ -104,11 +102,11 @@ ms.locfileid: "66011480"
  通用同義字檔案會對應至 LCID 0 的中性語言。 只有管理員能夠變更這個值。  
   
   
-##  <a name="how_queries_use_tf"></a>查詢如何使用同義字檔案  
+##  <a name="how-queries-use-thesaurus-files"></a><a name="how_queries_use_tf"></a>查詢如何使用同義字檔案  
  同義字查詢會同時使用語言特有的同義字和通用同義字。 首先，查詢會查閱語言特有的檔案並載入此檔案，以便進行處理 (除非已經載入此檔案)。 查詢會展開成包含同義字 (Thesaurus) 檔案中展開集和取代集規則所指定的語言特有同義字 (Synonym)。 然後，系統會針對通用同義字重複這些步驟。 不過，如果某個詞彙已經是語言特有同義字檔案中相符項目的一部分，該詞彙就不適用於在通用同義字中比對。  
   
   
-##  <a name="structure"></a>瞭解同義字檔案的結構  
+##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>瞭解同義字檔案的結構  
  每個同義字檔案都會定義識別碼為 `Microsoft Search Thesaurus` 的 XML 容器，以及包含範例同義字的 `<!--` ... `-->` 註解。 同義字定義于同義字> 專案\<中，其中包含定義變音符號設定、展開集和取代集的子項目範例，如下所示：  
   
 -   變音符號設定的 XML 結構  
@@ -175,7 +173,7 @@ ms.locfileid: "66011480"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a>使用同義字檔案  
+##  <a name="working-with-thesaurus-files"></a><a name="working_with_thesaurus_files"></a>使用同義字檔案  
  **編輯同義字檔案**  
   
 -   [編輯同義字檔案](#editing)  
@@ -189,7 +187,7 @@ ms.locfileid: "66011480"
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a>編輯同義字檔案  
+##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>編輯同義字檔案  
  您可以透過編輯給定語言的同義字檔案 (XML 檔案)，設定同義字。 在安裝過程中，只會安裝包含\<xml> 容器和批註化範例\<同義字> 元素的空白同義字檔案。 為了讓搜尋同義字的全文檢索搜尋查詢能夠正常運作，您必須建立定義一組同義字的實際\<同義字> 元素。 您可以定義兩種同義字形式：展開集和取代集。  
   
  **同義字檔案的限制**  

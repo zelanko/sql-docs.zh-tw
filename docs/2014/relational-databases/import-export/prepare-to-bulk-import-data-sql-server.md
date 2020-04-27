@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011850"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>準備大量匯入資料 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011850"
 > [!NOTE]  
 >  不支援大量匯入資料到遠端資料表。  
   
- 當您從資料檔案將資料大量匯入到的實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請使用下列指導方針：  
+ 當您將資料檔案中資料大量匯入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，請使用下列方針：  
   
 -   為您的使用者帳戶取得必要的權限。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011850"
   
 -   使用大量記錄復原模式。  
   
-     這個指導方針適用於使用完整復原模式的資料庫。 大量記錄復原模式在對未編製索引的資料表 (「堆積」**) 執行大量作業時很有用。 因為大量記錄復原不會執行記錄檔資料列插入的作業，所以使用大量記錄復原模式，將有助於防止因記錄交易而用盡空間的情形。 如需大量記錄復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
+     這個指導方針適用於使用完整復原模式的資料庫。 大量記錄復原模式在對未編製索引的資料表 (「堆積」  ) 執行大量作業時很有用。 因為大量記錄復原不會執行記錄檔資料列插入的作業，所以使用大量記錄復原模式，將有助於防止因記錄交易而用盡空間的情形。 如需大量記錄復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
   
      建議您在大量匯入作業之前，立即將資料庫變更為使用大量記錄復原模式。 事後則應立刻將資料庫重設成完整復原模式。 如需詳細資訊，請參閱[檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66011850"
      許多公用程式和文字編輯器會顯示隱藏字元，這些字元通常是在資料檔結尾。 大量匯入作業期間，ASCII 資料檔中的隱藏字元可能會產生問題，造成「發現非預期的 NULL」錯誤。 尋找並移除所有的隱藏字元，應該有助於防止這個問題的發生。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 bcp 公用程式 &#40;SQL Server 來匯入和匯出大量資料&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+ [使用 bcp 公用程式匯入及匯出大量資料 &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012533"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法執行 SQL 查詢

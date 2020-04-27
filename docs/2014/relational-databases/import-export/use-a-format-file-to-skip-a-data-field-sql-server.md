@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011719"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案略過資料欄位 (SQL Server)
@@ -66,8 +66,7 @@ GO
 ## <a name="non-xml-format-file-for-more-data-fields"></a>使用非 XML 格式檔案以取得更多資料欄位  
  下列格式檔案 `myTestSkipField.fmt` 會將 `myTestSkipField-c.dat` 中的欄位對應至 `myTestSkipField` 資料表的資料行。 格式檔案使用字元資料格式。 若要略過資料行對應，就必須將其資料行順序值變更為 0，如格式檔案中的 `ExtraField` 資料行所示。  
   
- 
-  `myTestSkipField.fmt` 格式檔案包含下列資訊：  
+ `myTestSkipField.fmt` 格式檔案包含下列資訊：  
   
 ```  
 9.0  
@@ -103,8 +102,7 @@ GO
   
  下列格式檔案 `myTestSkipField.xml` 會將 `myTestSkipField-c.dat` 中的欄位對應至 `myTestSkipField` 資料表的資料行。 格式檔案使用字元資料格式。  
   
- 
-  `myTestSkipField.xml` 格式檔案包含下列資訊：  
+ `myTestSkipField.xml` 格式檔案包含下列資訊：  
   
 ```  
 <?xml version="1.0"?>  
@@ -141,7 +139,7 @@ GO
 ```  
   
 > [!NOTE]  
->  如需 XML 結構描述語法的相關資訊以及 XML 格式檔案的其他範例，請參閱[XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
+>  如需 XML 結構描述語法的相關資訊以及 XML 格式檔案的其他範例，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [bcp 公用程式](../../tools/bcp-utility.md)   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013022"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>DiffGrams 的 SQLXML 4.0 簡介
@@ -59,7 +59,7 @@ ms.locfileid: "66013022"
 ## <a name="diffgram-annotations"></a>DiffGram 註解  
  這些注釋定義于 DiffGram 命名空間 **"urn：架構-microsoft-com： xml-DiffGram-01"** 中：  
   
- **號**  
+ **id**  
  這個屬性是用來配對中** \<** 的元素，>和** \<DataInstance>** 組塊。  
   
  **hasChanges**  

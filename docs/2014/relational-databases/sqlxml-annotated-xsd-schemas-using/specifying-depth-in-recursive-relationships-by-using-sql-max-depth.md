@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013661"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 來指定遞迴關聯性的深度
@@ -93,8 +93,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 由於此關聯性是遞迴的，所以您需要某種方式來指定結構描述中的遞迴深度。 否則，結果將是無止盡的遞迴 (員工向員工報告，依此類推)。 
-  `sql:max-depth` 註解可讓您指定遞迴的深度。 在這個範例中，若要指定 `sql:max-depth` 的值，您必須知道公司中管理階層的深度。  
+ 由於此關聯性是遞迴的，所以您需要某種方式來指定結構描述中的遞迴深度。 否則，結果將是無止盡的遞迴 (員工向員工報告，依此類推)。 `sql:max-depth` 註解可讓您指定遞迴的深度。 在這個範例中，若要指定 `sql:max-depth` 的值，您必須知道公司中管理階層的深度。  
   
 > [!NOTE]  
 >  此結構描述會指定 `sql:limit-field` 註解，但是不會指定 `sql:limit-value` 註解。 這會將產生之階層中的最上層節點限制為不向任何人報告的員工  （上級為 Null）。指定`sql:limit-field`並不指定`sql:limit-value` （預設為 Null）注釋可完成這個。 如果您想讓產生的 XML 包含每個可能的報告樹狀結構 (資料表中每位員工的報告樹狀結構)，請從結構描述中移除 `sql:limit-field` 註解。  
@@ -230,8 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 註解  
  在包含遞迴關聯性的結構描述中，遞迴的深度必須明確指定於結構描述中。 這是成功產生可傳回要求結果之對應 FOR XML EXPLICIT 查詢的必要條件。  
   
- 您可以在結構描述中使用 `sql:max-depth` 註解，以便指定結構描述所描述之遞迴關聯性的遞迴深度。 
-  `sql:max-depth` 註解的值是正整數 (1 到 50)，表示遞迴的數目：值為 1 會在指定 `sql:max-depth` 註解的元素處停止遞迴，值為 2 會在指定 `sql:max-depth` 之元素的下一個階層處停止遞迴，依此類推。  
+ 您可以在結構描述中使用 `sql:max-depth` 註解，以便指定結構描述所描述之遞迴關聯性的遞迴深度。 `sql:max-depth` 註解的值是正整數 (1 到 50)，表示遞迴的數目：值為 1 會在指定 `sql:max-depth` 註解的元素處停止遞迴，值為 2 會在指定 `sql:max-depth` 之元素的下一個階層處停止遞迴，依此類推。  
   
 > [!NOTE]  
 >  在基礎實作中，針對對應結構描述所指定的 XPath 查詢會轉換成 SELECT ... FOR XML EXPLICIT 查詢。 這個查詢會要求您指定有限的遞迴深度。 您針對 `sql:max-depth` 指定的值越高，產生的 FOR XML EXPLICIT 查詢就越大。 這可能會降低擷取速度。  

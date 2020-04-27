@@ -18,28 +18,27 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014063"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
   空間資料代表幾何物件的實體位置和圖形相關資訊。 這些物件可以是點位置或更複雜的物件，例如國家/地區、道路或湖泊。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種空間資料類型：`geometry` 資料類型和 `geography` 資料類型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種空間資料類型：`geometry` 資料類型和 `geography` 資料類型。  
   
--   類型`geometry`代表 Euclidean （平面）座標系統中的資料。  
+-    類型代表 Euclidean (平面) 座標系統中的資料。  
   
--   類型`geography`代表圓形地球座標系統中的資料。  
+-    類型代表圓形表面座標系統中的資料。  
   
  這兩種資料類型都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中實作為 .NET Common Language Runtime (CLR) 資料類型。  
   
 > [!IMPORTANT]  
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進之空間功能的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 2012 的新空間功能)。  
   
-##  <a name="reltasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作  
  [建立、建構及查詢幾何執行個體](create-construct-and-query-geometry-instances.md)  
  描述可以與 geometry 資料類型執行個體搭配使用的方法。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66014063"
  [空間資料類型概觀](spatial-data-types-overview.md)  
  介紹空間資料類型。  
   
--   [點](point.md)  
+-   [Point](point.md)  
   
 -   [LineString](linestring.md)  
   

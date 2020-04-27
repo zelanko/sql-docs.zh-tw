@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010004"
 ---
 # <a name="load-files-into-filetables"></a>載入檔案至 FileTable
   描述如何載入或移轉檔案至 FileTable 中。  
   
-##  <a name="BasicsLoadNew"></a> 將檔案載入或移轉至 FileTable  
+##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> 將檔案載入或移轉至 FileTable  
  您選擇用於將檔案載入或移轉至 FileTable 中的方法，取決於目前儲存檔案的位置。  
   
 |檔案的目前位置|移轉選項|  
@@ -32,7 +32,7 @@ ms.locfileid: "66010004"
 |檔案目前儲存在檔案系統中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有檔案的知識。|因為 FileTable 會顯示成 Windows 檔案系統中的資料夾，所以您可以使用任何移動或複製檔案的可用方法，輕鬆地將檔案載入新的 FileTable。 這些方法包括 Windows 檔案總管、命令列選項 (包括 xcopy 與 robocopy)，以及自訂指令碼或應用程式。<br /><br /> 您無法將現有的資料夾轉換為 FileTable。|  
 |檔案目前儲存在檔案系統中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含內有指向檔案之指標的中繼資料資料表。|第一個步驟是使用上述方法之一，移動或複製檔案。<br /><br /> 第二個步驟是將中繼資料的現有資料表，更新為指向該檔案的新位置。<br /><br /> 如需詳細資訊，請參閱本主題的＜ [範例：從檔案系統移轉檔案至 FileTable](#HowToMigrateFiles) ＞。|  
   
-###  <a name="HowToLoadNew"></a> 如何：將檔案載入 FileTable  
+###  <a name="how-to-load-files-into-a-filetable"></a><a name="HowToLoadNew"></a> 如何：將檔案載入 FileTable  
  您可用以將檔案載入 FileTable 的方法包括：  
   
 -   在 [Windows 檔案總管] 中，將檔案從來源資料夾拖放至新的 FileTable 資料夾。  
@@ -41,11 +41,10 @@ ms.locfileid: "66010004"
   
 -   以 C# 或 Visual Basic.NET 撰寫使用來自 **System.IO** 命名空間之方法的自訂應用程式，移動或複製檔案。  
   
-###  <a name="HowToMigrateFiles"></a>範例：將檔案系統中的檔案遷移至 FileTable  
- 在此案例中，您的檔案儲存在檔案系統中，而且您在擁有內含指向該檔案之指標的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，具有中繼資料表。 您想要將檔案移入 FileTable，然後使用 FileTable UNC 路徑來取代中繼資料內每個檔案的原始 UNC 路徑。 
-  [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 函式可協助您達成此目標。  
+###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> 範例：從檔案系統移轉檔案至 FileTable  
+ 在此案例中，您的檔案儲存在檔案系統中，而且您在擁有內含指向該檔案之指標的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，具有中繼資料表。 您想要將檔案移入 FileTable，然後使用 FileTable UNC 路徑來取代中繼資料內每個檔案的原始 UNC 路徑。 [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 函式可協助您達成此目標。  
   
- 在此範例中，假設有一個現有的資料庫資料表， `PhotoMetadata`其中包含相片的相關資料。 此資料表中有一個 `UNCPath`(512) 類型的 `varchar` 資料行，其中包含對應至 .jpg 檔案的實際 UNC 路徑。  
+ 在此範例中，假設有一個現有的資料庫資料表， `PhotoMetadata`其中包含相片的相關資料。 此資料表中有一個 `varchar`(512) 類型的 `UNCPath` 資料行，其中包含對應至 .jpg 檔案的實際 UNC 路徑。  
   
  若要將影像檔從檔案系統移轉至 FileTable，您必須進行下列動作：  
   
@@ -77,7 +76,7 @@ UPDATE PhotoMetadata
     SET pathlocator = GetPathLocator(UNCPath);  
 ```  
   
-##  <a name="BasicsBulkLoad"></a>將檔案大量載入 FileTable  
+##  <a name="bulk-loading-files-into-a-filetable"></a><a name="BasicsBulkLoad"></a> 將檔案大量載入 FileTable  
  FileTable 大量作業的行為和一般資料表相同，包含以下條件。  
   
  FileTable 具有系統定義的條件約束，可確保能維持檔案與目錄命名空間的完整性。 大量載入至 FileTable 中的資料，必須通過這些條件約束的驗證。 因為某些大量插入作業允許忽略資料表條件約束，所以系統會強制執行下列要求。  
@@ -98,10 +97,10 @@ UPDATE PhotoMetadata
   
     -   插入 .。。SELECT * FROM OPENROWSET （BULK ...） with IGNORE_CONSTRAINTS 子句。  
   
-###  <a name="HowToBulkLoad"></a>如何：將檔案大量載入 FileTable  
+###  <a name="how-to-bulk-load-files-into-a-filetable"></a><a name="HowToBulkLoad"></a> 如何：將檔案大量載入 FileTable  
  您可以使用各種方法將檔案大量載入 FileTable：  
   
--   **in**  
+-   **bcp**  
   
     -   使用 **CHECK_CONSTRAINTS** 子句呼叫。  
   
@@ -121,7 +120,7 @@ UPDATE PhotoMetadata
   
  如需停用 FileTable 條件約束的詳細資訊，請參閱 [管理 FileTables](manage-filetables.md)。  
   
-###  <a name="disabling"></a>如何：為大量載入停用 FileTable 條件約束  
+###  <a name="how-to-disable-filetable-constraints-for-bulk-loading"></a><a name="disabling"></a> 如何：為大量載入停用 FileTable 條件約束  
  若不希望大量載入檔案至 FileTable 時發生強制啟動系統定義之條件約束負擔，您可暫時停用該條件約束。 如需詳細資訊，請參閱 [管理作業步驟](manage-filetables.md)。  
   
 ## <a name="see-also"></a>另請參閱  

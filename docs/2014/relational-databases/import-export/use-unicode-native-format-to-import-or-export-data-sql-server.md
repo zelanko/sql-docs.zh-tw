@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011570"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
-  當必須從某個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝將資訊複製到另一個時，Unicode 原生格式會很有説明。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  
+  當必須從某個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝將資訊複製到其他安裝時，Unicode 原生格式很有用。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  
   
  建議使用 Unicode 原生格式，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用包含擴充字元或 DBCS 字元的資料檔，大量傳送資料。 若是非字元資料，Unicode 原生格式會使用原生 (資料庫) 資料類型。 若是字元資料，如 `char`、`nchar`、`varchar`、`nvarchar`、`text`、`varchar(max)`、`nvarchar(max)` 及 `ntext`，Unicode 原生格式會使用 Unicode 字元資料格式。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "66011570"
   
  下列選項支援 Unicode 原生格式：  
   
-|Command|選項|描述|  
+|Command|選項|說明|  
 |-------------|------------|-----------------|  
-|**in**|**-N**|使**bcp**公用程式使用 Unicode 原生格式，其會針對所有的字元（`char`、 `nchar`、 `varchar` `nvarchar` `text`、、和`ntext`）資料使用原生（資料庫）資料類型做為所有的非字元資料和 unicode 字元資料格式。|  
+|**bcp**|**-N**|使**bcp**公用程式使用 Unicode 原生格式，其會針對所有的字元（`char`、 `nchar`、 `varchar` `nvarchar` `text`、、和`ntext`）資料使用原生（資料庫）資料類型做為所有的非字元資料和 unicode 字元資料格式。|  
 |BULK INSERT|DATAFILETYPE **= '** widenative **'**|當大量匯入資料時，使用 Unicode 原生格式。|  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
@@ -100,7 +100,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用大量匯入或大量匯出的資料格式**  
   
 -   [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

@@ -17,33 +17,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011834"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
   欄位長度會指出以字元格式表現資料所需的最大字元數。 如果是以原生格式儲存資料的話，欄位長度眾所皆知；例如，`int` 資料類型會佔用 4 個位元組。 如果您針對前置長度指定為0， **bcp**命令會提示您輸入欄位長度、預設欄位長度，以及欄位長度對包含`char`資料之資料檔案中資料儲存的影響。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示輸入欄位長度  
- 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、**-c**、**-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
+ 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
   
  如需在內容中顯示此提示的範例，請參閱[使用 bcp 時指定相容性的資料格式 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
   
 > [!NOTE]  
->  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應儲存為非 XML 格式檔案。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
+>  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應以非 XML 格式的檔案加以儲存。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
- 
-  **bcp** 命令是否會提示輸入欄位長度，取決於以下數個因素：  
+ **bcp** 命令是否會提示輸入欄位長度，取決於以下數個因素：  
   
 -   當您複製的資料類型沒有固定長度，而且指定前置長度為 0 時， **bcp** 就會提示輸入欄位長度。  
   
 -   將非字元資料轉換為字元資料時， **bcp** 會建議足以儲存資料的預設欄位長度。  
   
--   如果是非字元的檔案儲存類型， **bcp** 命令就不會提示輸入欄位長度。 資料會以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生資料標記法（原生格式）儲存。  
+-   如果是非字元的檔案儲存類型， **bcp** 命令就不會提示輸入欄位長度。 該資料會以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料表示法 (原生格式) 儲存。  
   
 ## <a name="using-default-field-lengths"></a>使用預設的欄位長度  
  一般而言， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受 **bcp**所建議的欄位長度預設值。 已建立字元模式資料檔案時，使用預設的欄位長度可確定不會截斷資料，而且不會發生數值溢位錯誤。  
@@ -91,8 +90,7 @@ ms.locfileid: "66011834"
  \*如需`decimal`和`numeric`資料類型的詳細資訊，請參閱[decimal 和 numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。  
   
 > [!NOTE]  
->  
-  `tinyint` 類型的資料行可包含 0 到 255 的數值；因此代表該範圍內任意數值所需的最大字元數為 3 (代表數值 100 到 255)。  
+>  `tinyint` 類型的資料行可包含 0 到 255 的數值；因此代表該範圍內任意數值所需的最大字元數為 3 (代表數值 100 到 255)。  
   
 ### <a name="default-field-lengths-for-native-file-storage"></a>原生檔案儲存的預設欄位長度  
  下表列出資料的預設欄位長度，以儲存為原生檔案儲存類型。 可為 Null 的資料長度與非 Null 的資料長度相同，字元資料永遠都會以字元格式儲存。  
@@ -113,8 +111,8 @@ ms.locfileid: "66011834"
 |`tinyint`|1|  
 |`money`|8|  
 |`smallmoney`|4|  
-|`decimal`<sup>1</sup>|<sup>*</sup>|  
-|`numeric`<sup>1</sup>|<sup>*</sup>|  
+|`decimal` <sup>1</sup>|<sup>*</sup>|  
+|`numeric` <sup>1</sup>|<sup>*</sup>|  
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
@@ -125,9 +123,9 @@ ms.locfileid: "66011834"
 ## <a name="see-also"></a>另請參閱  
  [bcp 公用程式](../../tools/bcp-utility.md)   
  [資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [指定欄位和資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [使用 bcp &#40;SQL Server 在資料檔案中指定前置長度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [使用 bcp &#40;SQL Server 來指定檔案儲存類型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
+ [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [使用 bcp 時指定資料檔案的前置長度 &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [使用 bcp 指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
  [大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
   

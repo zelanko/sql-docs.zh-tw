@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054285"
 ---
 # <a name="add-metadata-master-data-services"></a>加入中繼資料 (Master Data Services)
   在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，將使用者定義的中繼資料加入至**中繼資料**模型，以描述您的模型物件。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 -   針對**中繼資料**模型，您必須擁有要加入之中繼資料實體或分葉成員類型的 [**加入**] 許可權。  
   

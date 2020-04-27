@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011962"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 範例資料表 (SQL Server)
@@ -27,8 +27,7 @@ ms.locfileid: "66011962"
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的其中一個範例資料庫。  
   
- 
-  **myTeam** 資料表包含下列資料行。  
+ **myTeam** 資料表包含下列資料行。  
   
 |資料行|資料類型|Null 屬性|描述|  
 |------------|---------------|-----------------|-----------------|  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a49d7db68fe32d9794e89db66020d7f90555508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011396"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的全文檢索搜尋功能
@@ -54,7 +54,7 @@ ms.locfileid: "66011396"
 |sp_detach_db 選項：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|無。|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service 動作值：resource_usage 沒有函數。|None|sp_fulltext_service @action=resource_usage|200|  
   
- \***SQL Server：** 已被取代的功能物件不會監視在檔案群組檔案群組上建立全文檢索 catlog filegroup filegroup 的出現*次數。*  
+ \***SQL Server:Deprecated Features** 物件不會監視 CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*的出現次數。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server，已被取代的功能物件](../performance-monitor/sql-server-deprecated-features-object.md)   

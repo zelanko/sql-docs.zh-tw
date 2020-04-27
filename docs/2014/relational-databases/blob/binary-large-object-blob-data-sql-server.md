@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010343"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>二進位大型物件 (Blob) 資料 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供在資料庫中或遠端存放裝置上儲存檔案和文件的解決方案。  
   
-##  <a name="section"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="section"></a>本節內容  
  [比較用於儲存 Blob 的選項 &#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
  比較 FILESTREAM、FileTable 和遠端 Blob 存放區的優點。  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054521"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
@@ -27,7 +27,7 @@ ms.locfileid: "66054521"
  若要了解這個工作，請參閱 [Web 服務工作](control-flow/web-service-task.md)。  
   
 ## <a name="options"></a>選項。  
- **維護**  
+ **Service**  
  從清單中選取要用於執行 Web 方法的 Web 服務。  
   
  **方法**  
@@ -39,7 +39,7 @@ ms.locfileid: "66054521"
  **名稱**  
  列出 Web 方法之輸入的名稱。  
   
- **型別**  
+ **類型**  
  列出輸入的資料類型。  
   
 > [!NOTE]  

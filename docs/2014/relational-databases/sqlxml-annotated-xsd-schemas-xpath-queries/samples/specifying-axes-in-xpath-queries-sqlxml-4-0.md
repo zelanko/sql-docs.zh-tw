@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010721"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定軸 (SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "66010721"
   
  在查詢中， `child`是`Contact`軸而且是節點測試（如果`Contact`是** \<元素>** 節點，則為 TRUE，因為\<元素> 是與`child`軸相關聯的主要節點類型）。  
   
- 
-  `child` 軸是預設值。 因此，此查詢可以撰寫為：  
+ `child` 軸是預設值。 因此，此查詢可以撰寫為：  
   
 ```  
 /Contact  
@@ -93,8 +92,7 @@ ms.locfileid: "66010721"
   
  在查詢中， `child`是`Customer`軸，而和`Order`是節點測試（如果 Customer 和 Order 是** \<元素>** 節點，則這些節點測試為 TRUE，因為** \<元素>** 節點是`child`軸的主要節點）。 針對每個符合** \<客戶>** 的節點，會將符合** \<訂單>** 的節點新增至結果。 只有** \<Order>** 會在結果集中傳回。  
   
- 
-  `child` 軸是預設值。 因此，此查詢可以指定為：  
+ `child` 軸是預設值。 因此，此查詢可以指定為：  
   
 ```  
 /Customer/Order  
@@ -170,8 +168,7 @@ ms.locfileid: "66010721"
 /child::Customer/child::Order[../@CustomerID="1"]  
 ```  
   
- 
-  `child` 軸是預設軸。 因此，此查詢可以指定為：  
+ `child` 軸是預設軸。 因此，此查詢可以指定為：  
   
 ```  
 /Customer/Order[../@CustomerID="1"]  

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013674"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
@@ -35,7 +35,7 @@ ms.locfileid: "66013674"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 指定目標命名空間  
- 下列 XSD 架構會使用**xsd： targetNamespace**屬性來指定目標命名空間。 此架構也會將**elementFormDefault**和**attributeFormDefault**屬性值設定為 **"不合格"** （這些屬性的預設值）。 這是全域宣告，會影響所有本機專案****（ **** ** ** ** \<** 在架構中的順序>）和屬性（在架構中的 CustomerID、連絡人和訂單）。  
+ 下列 XSD 架構會使用**xsd： targetNamespace**屬性來指定目標命名空間。 此架構也會將**elementFormDefault**和**attributeFormDefault**屬性值設定為 **"不合格"** （這些屬性的預設值）。 這是全域宣告，會影響所有本機專案**ContactName**（ **OrderID** ** ** ** \<** 在架構中的順序>）和屬性（在架構中的 CustomerID、連絡人和訂單）。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

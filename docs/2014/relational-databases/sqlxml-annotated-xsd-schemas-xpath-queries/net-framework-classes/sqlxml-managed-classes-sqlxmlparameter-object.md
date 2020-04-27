@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010763"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 物件 (SQLXML Managed 類別)

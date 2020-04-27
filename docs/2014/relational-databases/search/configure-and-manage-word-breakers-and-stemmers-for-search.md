@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011535"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>設定及管理搜尋的斷詞工具與字幹分析器
@@ -32,14 +32,14 @@ ms.locfileid: "66011535"
   
  使用語言特有的斷詞工具會使得針對該語言產生的詞彙更正確。 如果有語系的斷詞工具，但沒有特定次語言的斷詞工具，則會使用主要語言。 例如，處理加拿大法文時會使用法文文字分隔。 如果某種特定語文沒有文字分隔，則會使用中性文字分隔。 使用中性文字分隔時，會以中性字元來中斷文字，例如空白與標點符號。  
   
-##  <a name="register"></a>註冊斷詞工具  
+##  <a name="registering-word-breakers"></a><a name="register"></a>註冊斷詞工具  
  若要使用某種語言的斷詞工具，您必須註冊它們。 針對已註冊的斷詞工具、相關聯的語言資源（字幹分析器、非搜尋字（停用字詞）和同義字檔案），也會提供給全文檢索索引和查詢作業使用。 若要檢視目前已向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊之斷詞工具的語言清單，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
  SELECT * FROM sys.fulltext_languages  
   
  如果您加入、移除或更改了斷詞工具，就必須重新整理支援全文檢索索引和查詢的 Microsoft Windows 地區設定識別碼 (LCID) 清單。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="default"></a>設定預設全文檢索語言選項  
+##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>設定預設全文檢索語言選項  
  若為當地語系化的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式會`default full-text language`將選項設定為伺服器的語言（如果有適當的相符項存在的話）。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為非當地語系化的版本時，則 `default full-text language` 選項會是英文。  
   
  建立或更改全文檢索索引時，您可以為每個全文檢索索引資料行指定不同的語言。 若沒有為資料行指定語言，則預設值會是組態選項 `default full-text language` 的值。  
@@ -47,7 +47,7 @@ ms.locfileid: "66011535"
 > [!NOTE]  
 >  除非在查詢中指定 LANGUAGE 選項，否則列在單一全文檢索查詢函數子句的所有資料行都必須使用相同的語文。 查詢之全文檢索索引資料行所用的語言會決定要對全文檢索查詢述詞 ([CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)) 與函數 ([CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql)) 之引數執行的語言分析。  
   
-##  <a name="lang"></a>選擇索引資料行的語言  
+##  <a name="choosing-the-language-for-an-indexed-column"></a><a name="lang"></a>選擇索引資料行的語言  
  建立全文檢索索引時，建議您針對每個索引資料行指定語言。 如果沒有為資料行指定語言，就會使用系統預設語言。 資料行的語言會決定哪些斷詞工具和字幹分析器要用於建立該資料行的索引。 此外，資料行的全文檢索查詢會使用該語言的同義字檔案。  
   
  在選擇資料行語言以建立全文檢索索引時，必須考慮一些事項。 這些考量與文字如何 Token 化，然後如何由全文檢索引擎編製索引有關。 如需詳細資訊，請參閱 [選擇建立全文檢索索引時的語言](choose-a-language-when-creating-a-full-text-index.md)。  
@@ -62,8 +62,8 @@ ms.locfileid: "66011535"
     SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;  
     ```  
   
-##  <a name="info"></a>取得斷詞工具的相關資訊  
- **查看斷詞工具、同義字和停用字詞表組合的 token 化結果**  
+##  <a name="obtaining-information-about-word-breakers"></a><a name="info"></a>取得斷詞工具的相關資訊  
+ **檢視斷詞工具、同義字和停用字詞表組合的 Token 化結果**  
   
 -   [dm_fts_parser &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)。  
   
@@ -71,10 +71,10 @@ ms.locfileid: "66011535"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="tshoot"></a>針對斷詞逾時錯誤進行疑難排解  
+##  <a name="troubleshooting-word-breaking-time-out-errors"></a><a name="tshoot"></a>針對斷詞逾時錯誤進行疑難排解  
  斷詞逾時錯誤可能會在各種情況中發生。 如需這些情況以及每種情況中之回應方式的相關資訊，請參閱 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)。  
   
-##  <a name="impact"></a>瞭解新斷詞工具的影響  
+##  <a name="understanding-the-impact-of-new-word-breakers"></a><a name="impact"></a>瞭解新斷詞工具的影響  
  每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本一般都會包含新的斷詞工具，其語言規則比舊版斷詞工具更好而且更正確。 新斷詞工具的行為可能會與全文檢索索引內斷詞工具的行為稍有不同，而全文檢索索引是從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入。 如果全文檢索目錄是在將資料庫升級為目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本時匯入，則這點就很明顯。 全文檢索目錄中全文檢索索引所使用的一種或多種語言現在可能會與新的斷詞工具相關聯。 如需詳細資訊，請參閱 [升級全文檢索搜尋](upgrade-full-text-search.md)。  
   
  如需所有斷詞工具的完整清單，請參閱[sys.databases &#40;transact-sql&#41;fulltext_languages ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
@@ -82,8 +82,8 @@ ms.locfileid: "66011535"
 ## <a name="see-also"></a>另請參閱  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)   
- [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)   
+ [sp_fulltext_service &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)   
+ [fulltext_languages &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)   
  [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [升級全文檢索搜尋](upgrade-full-text-search.md)  
   

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013724"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 要求指向 BLOB 資料的 URL 參考 (SQLXML 4.0)
@@ -31,13 +31,11 @@ ms.locfileid: "66013724"
   
  如果您希望要傳回之資料的參考 (URI) 可以在稍後用來擷取二進位格式的 BLOB 資料，請指定 `sql:encode` 註解。 您可以在屬性或簡單類型的元素上指定 `sql:encode`。  
   
- 指定 `sql:encode` 註解可指示應該傳回欄位的 URL，而不是欄位的值。 
-  `sql:encode` 會依賴主索引鍵來產生 URL 中的單一選取。 主索引鍵可以使用 `sql:key-fields` 註解來指定。  
+ 指定 `sql:encode` 註解可指示應該傳回欄位的 URL，而不是欄位的值。 `sql:encode` 會依賴主索引鍵來產生 URL 中的單一選取。 主索引鍵可以使用 `sql:key-fields` 註解來指定。  
   
  可以將 "url" 或 "default" 值指派給 `sql:encode` 註解。 "default" 值會傳回 Base 64 編碼格式的資料。  
   
- 
-  `sql:encode` 註解不能搭配 `sql:use-cdata` 使用或是在 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 屬性類型上使用。 它也不能與 XSD **fixed**屬性一起使用。  
+ `sql:encode` 註解不能搭配 `sql:use-cdata` 使用或是在 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 屬性類型上使用。 它也不能與 XSD **fixed**屬性一起使用。  
   
 > [!NOTE]  
 >  BLOB 類型的資料行不能當做索引鍵或外部索引鍵的一部分使用。  

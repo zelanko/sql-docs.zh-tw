@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011673"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
@@ -51,10 +51,10 @@ ms.locfileid: "66011673"
   
  下列命令列選項支援字元格式：  
   
-|Command|選項|描述|  
+|Command|選項|說明|  
 |-------------|------------|-----------------|  
-|**in**|**-c**|使**bcp**公用程式使用字元資料。<sup>1</sup>|  
-|BULK INSERT|DATAFILETYPE **= ' char '**|於大量匯入資料時使用字元格式。|  
+|**bcp**|**-c**|使**bcp**公用程式使用字元資料。<sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **='char'**|於大量匯入資料時使用字元格式。|  
   
  <sup>1</sup>若要將字元（**-c**）資料載入與舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端相容的格式，請使用 **-V**參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |限定詞|描述|  
 |----------------|-----------------|  
 |**-c**|指定字元格式。|  
-|**-t**`,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意：預設的欄位結束字元是定位字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意：預設的欄位結束字元是定位字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
  下列範例會將字元格式的資料，從 `myTestCharData` 資料表大量匯出至名為 `myTestCharData-c.Dat` 的新資料檔，並使用逗號 (,) 做為欄位結束字元。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  
@@ -125,7 +125,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用大量匯入或大量匯出的資料格式**  
   
 -   [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

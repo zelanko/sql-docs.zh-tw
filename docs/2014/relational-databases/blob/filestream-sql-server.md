@@ -15,17 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010134"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM 可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架構應用程式在檔案系統上儲存非結構化的資料，例如文件和影像。 應用程式可以利用檔案系統的豐富資料流 API 和效能，並同時維護非結構化資料與對應結構化資料之間的交易一致性。  
   
- FILESTREAM 會將[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]與 NTFS 檔案系統整合，方法`varbinary(max)`是將二進位大型物件（BLOB）資料儲存為檔案系統上的檔案。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以插入、更新、查詢、搜尋和備份 FILESTREAM 資料。 Win32 檔案系統介面提供了資料的資料流方式存取。  
+ FILESTREAM 會將[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]與 NTFS 檔案系統整合，方法`varbinary(max)`是將二進位大型物件（BLOB）資料儲存為檔案系統上的檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以插入、更新、查詢、搜尋和備份 FILESTREAM 資料。 Win32 檔案系統介面提供了資料的資料流方式存取。  
   
  FILESTREAM 會使用 NT 系統快取來儲存檔案資料。 如此可減少 FILESTREAM 資料可能對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生的任何影響。 並不會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區；因此，此記憶體可用於查詢處理。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66010134"
   
  如需安裝和使用 FILESTREAM 的詳細資訊，請參閱[相關](#reltasks)工作清單。  
   
-##  <a name="whentouse"></a>使用 FILESTREAM 的時機  
+##  <a name="when-to-use-filestream"></a><a name="whentouse"></a>使用 FILESTREAM 的時機  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，BLOB 可以是將資料儲存在資料表中的標準 `varbinary(max)` 資料，或是將資料儲存在檔案系統中的 FILESTREAM `varbinary(max)` 物件。 資料的大小和使用情況可決定您是應該使用資料庫儲存體還是檔案系統儲存體。 如果下列條件成立，您應該考慮使用 FILESTREAM：  
   
 -   平均來說，儲存的物件大於 1 MB。  
@@ -45,7 +44,7 @@ ms.locfileid: "66010134"
  如果是較小的物件，將 `varbinary(max)` BLOB 儲存在資料庫中通常會提供更好的資料流處理效能。  
   
   
-##  <a name="storage"></a>FILESTREAM 儲存體  
+##  <a name="filestream-storage"></a><a name="storage"></a>FILESTREAM 儲存體  
  FILESTREAM 儲存體會實作為 `varbinary(max)` 資料行，該資料行中的資料會當做 BLOB 儲存在檔案系統上。 BLOB 的大小只受到檔案系統磁碟區大小的限制。 標準 `varbinary(max)` 限制 (2-GB 檔案大小) 不適用於檔案系統中所儲存的 BLOB。  
   
  若要指定資料行應該將資料儲存在檔案系統上，請在 `varbinary(max)` 資料行上指定 FILESTREAM 屬性。 如此會讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將該資料行的所有資料都儲存在檔案系統上，而不是儲存在資料庫檔案中。  
@@ -79,7 +78,7 @@ ms.locfileid: "66010134"
 > [!NOTE]  
 >  SQL 登入不會使用 FILESTREAM 容器。 只有 NTFS 驗證會使用 FILESTREAM 容器。  
   
-##  <a name="dual"></a>使用 Transact-sql 和檔案系統資料流程存取來存取 BLOB 資料  
+##  <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> 使用 Transact-SQL 和檔案系統資料流存取來存取 BLOB 資料  
  在您將資料儲存在 FILESTREAM 資料行中以後，可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 交易或 Win32 API 來存取檔案。  
   
 ### <a name="transact-sql-access"></a>Transact-SQL 存取  
@@ -96,7 +95,7 @@ ms.locfileid: "66010134"
   
  由於檔案作業是交易式，所以您無法透過檔案系統來刪除或重新命名 FILESTREAM 檔案。  
   
- **語句模型**  
+ **陳述式模型**  
   
  FILESTREAM 檔案系統存取會使用檔案的開啟和關閉來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的模型。 當檔案控制代碼開啟時，此陳述式便會開始，而當此控制代碼關閉時，此陳述式就會結束。 例如，當寫入控制代碼關閉時，在資料表上註冊之任何可能的 AFTER 觸發程序便會引發，就像是 UPDATE 陳述式已完成一樣。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66010134"
   
  使用 FILESTREAM 時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在交易認可之後確保從檔案系統資料流存取修改之 FILESTREAM BLOB 資料的交易持續性。  
   
- **隔離語義**  
+ **隔離語意**  
   
  隔離語意受到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 交易隔離等級的管制。 讀取認可的隔離等級支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和檔案系統存取。 可重複的讀取作業以及可序列化和快照集隔離均受到支援。 中途讀取則不受到支援。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66010134"
   
  如果在寫入此控制代碼之後發出 FSCTL，則最後一個寫入作業將會保存下來，而之前對此控制代碼的寫入將會遺失。  
   
- **檔案系統 Api 和支援的隔離等級**  
+ **檔案系統 API 和支援的隔離等級**  
   
  當檔案系統 API 由於隔離違規而無法開啟檔案時，系統就會傳回 ERROR_SHARING_VIOLATION 例外狀況。 當兩筆交易嘗試存取相同的檔案時，就會發生這種隔離違規。 存取作業的結果主要取決於用來開啟檔案的模式，以及執行交易的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 下表概述了兩筆存取相同檔案之交易的可能結果。  
   
@@ -145,13 +144,13 @@ ms.locfileid: "66010134"
 |開啟以便進行可重複讀取的 SELECT。|開啟以便讀取。|兩筆交易都成功。|兩筆交易都成功。|  
 |開啟以便進行可重複讀取的 SELECT。|開啟以便寫入。|交易 2 的開啟作業失敗，並傳回 ERROR_SHARING_VIOLATION 例外狀況。|交易 2 的開啟作業失敗，並傳回 ERROR_SHARING_VIOLATION 例外狀況。|  
   
- **從遠端用戶端進行寫入**  
+ **從遠端用戶端寫出**  
   
  遠端檔案系統對 FILESTREAM 資料的存取，是透過伺服器訊息區塊 (SMB) 通訊協定來啟用。 如果用戶端在遠端，則用戶端不會快取任何寫入作業。 寫入作業一定會傳送給伺服器， 資料可以在伺服器端快取。 我們建議您將在遠端用戶端上執行的應用程式合併小型寫入作業，以便使用較多的資料來減少寫入作業。  
   
  使用 FILESTREAM 控制代碼來建立記憶體對應檢視 (記憶體對應 I/O) 不受到支援。 如果將記憶體對應用於 FILESTREAM 資料， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將無法保證資料的一致性與持續性或是資料庫的完整性。  
   
-##  <a name="reltasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作  
  [啟用及設定 FILESTREAM](enable-and-configure-filestream.md)  
   [建立啟用 FILESTREAM 的資料庫](create-a-filestream-enabled-database.md)  
   [建立儲存 FILESTREAM 資料的資料表](create-a-table-for-storing-filestream-data.md)  
@@ -164,6 +163,6 @@ ms.locfileid: "66010134"
   [設定容錯移轉叢集上的 FILESTREAM](set-up-filestream-on-a-failover-cluster.md)  
   [為 FILESTREAM 存取設定防火牆](configure-a-firewall-for-filestream-access.md)  
   
-##  <a name="relcontent"></a> 相關內容  
+##  <a name="related-content"></a><a name="relcontent"></a> 相關內容  
  [FILESTREAM 與其他 SQL Server 功能的相容性](filestream-compatibility-with-other-sql-server-features.md)  
   

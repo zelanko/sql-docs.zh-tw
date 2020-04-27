@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012344"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端的 XML 格式化 (SQLXML 4.0)

@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013875"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
@@ -161,8 +161,7 @@ ms.locfileid: "66013875"
 </xsd:schema>  
 ```  
   
- 
-  `xml` 資料類型是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入。  
+ `xml` 資料類型是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   

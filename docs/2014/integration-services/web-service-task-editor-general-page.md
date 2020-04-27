@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054534"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服務工作編輯器 (一般頁面)
@@ -33,10 +33,10 @@ ms.locfileid: "66054534"
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題：**  [Http 連線管理員](connection-manager/http-connection-manager.md)、 [HTTP 連線管理員編輯器 &#40;伺服器頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **相關主題：**  [HTTP 連接管理員](connection-manager/http-connection-manager.md)、[HTTP 連接管理員編輯器 &#40;伺服器頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 鍵入本機電腦的 WSDL 檔案完整路徑，或按一下瀏覽按鈕 **(...)** 並找出此檔案。  
+ 輸入本機電腦的 WSDL 檔案完整路徑，或按一下瀏覽按鈕 **（...）** ，然後找出此檔案。  
   
  如果您已經將 WSDL 檔案手動下載到電腦中，請選取該檔案。 如果尚未下載 WSDL 檔案，則請執行下列步驟：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66054534"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **說明**  
+ **描述**  
  輸入 Web 服務工作的描述。  
   
  **下載 WSDL**  

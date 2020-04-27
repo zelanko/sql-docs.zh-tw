@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011550"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
@@ -31,7 +31,7 @@ ms.locfileid: "66011550"
   
  建立與維護全文檢索索引的程序稱為「母體擴展」  ，也稱為「搜耙」  。 全文檢索索引母體擴展有三種類型：完整母體擴展、以變更追蹤為基礎的母體擴展，以及以時間戳記為基礎的累加母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](populate-full-text-indexes.md)。  
   
-##  <a name="tasks"></a>一般工作  
+##  <a name="common-tasks"></a><a name="tasks"></a>一般工作  
  **建立全文檢索索引**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -46,12 +46,12 @@ ms.locfileid: "66011550"
   
  [本主題內容](#top)  
   
-##  <a name="structure"></a>全文檢索索引結構  
+##  <a name="full-text-index-structure"></a><a name="structure"></a>全文檢索索引結構  
  若能充分了解全文檢索索引的結構，將有助於了解全文檢索引擎的運作方式。 本主題會使用下列 **之** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 資料表的摘錄當做範例資料表。 這個摘錄只會顯示該資料表中的兩個資料行 ( **DocumentID** 資料行和 **Title** 資料行) 和三個資料列。  
   
  就本例而言，我們會假設已經在 **Title** 資料行中建立了全文檢索索引。  
   
-|DocumentID|Title|  
+|DocumentID|標題|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -63,14 +63,14 @@ ms.locfileid: "66011550"
   
  此外，請注意，關鍵字 "and" 已經從全文檢索索引中移除了。 進行此作業的原因是 "and" 是停用字詞，而且從全文檢索索引中移除停用字詞可能會大幅節省磁碟空間，進而改善查詢效能。 如需停用字詞的詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- **片段1**  
+ **片段 1**  
   
 |關鍵字|ColId|DocId|出現次數|  
 |-------------|-----------|-----------|----------------|  
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|維護 |1|1|5|  
+|維護|1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -78,33 +78,30 @@ ms.locfileid: "66011550"
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
 |Bracket|1|3|3|  
-|組件|1|2|6|  
+|Assembly|1|2|6|  
 |3|1|2|7|  
 |安裝|1|3|4|  
   
- 
-  **Keyword** 資料行包含編列索引時所擷取的單一 Token 表示法。 文字分隔會決定 Token 的組成項目。  
+ **Keyword** 資料行包含編列索引時所擷取的單一 Token 表示法。 文字分隔會決定 Token 的組成項目。  
   
- 
-  **ColId** 資料行所包含的值會對應到已建立全文檢索索引的特定資料行。  
+ **ColId** 資料行所包含的值會對應到已建立全文檢索索引的特定資料行。  
   
  此`DocId`資料行包含八個位元組整數的值，對應到全文檢索索引資料表中的特定全文檢索索引鍵值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在這種情況下，全文檢索索引鍵值與`DocId`值之間的對應會保留在稱為 DocId Mapping 資料表的個別資料表中。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
   
- 
-  **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。  
+ **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。  
   
  [本主題內容](#top)  
   
-##  <a name="fragments"></a>全文檢索索引片段  
+##  <a name="full-text-index-fragments"></a><a name="fragments"></a>全文檢索索引片段  
  邏輯全文檢索索引通常會在多份內部資料表之間分割。 每份內部資料表會稱為全文檢索索引片段。 其中某些片段可能包含比其他片段更新的資料。 例如，如果使用者更新 DocId 為 3 的下列資料列，而且資料表已進行自動變更追蹤，就會建立新的片段。  
   
-|DocumentID|Title|  
+|DocumentID|標題|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
  在下列範例 (顯示片段 2) 中，此片段包含的 DocId 3 相關資料比片段 1 更新。 因此，當使用者查詢 "Rear Reflector" 時，片段 2 的資料就會用於 DocId 3。 每個片段都會以建立時間戳記標示，而且您可以使用 [sys.fulltext_index_fragments](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql) 目錄檢視，查詢此時間戳記。  
   
- **片段2**  
+ **片段 2**  
   
 |關鍵字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
@@ -120,14 +117,14 @@ ms.locfileid: "66011550"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|維護 |1|1|5|  
+|維護|1|1|5|  
 |Front|1|2|1|  
 |Rear|1|3|1|  
 |Reflector|1|2|2|  
 |Reflector|1|2|5|  
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
-|組件|1|2|6|  
+|Assembly|1|2|6|  
 |3|1|2|7|  
   
  [本主題內容](#top)  

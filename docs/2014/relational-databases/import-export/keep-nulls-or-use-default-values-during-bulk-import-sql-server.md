@@ -21,17 +21,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011896"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)
-  根據預設，當資料匯入資料表時， **bcp** 命令和 BULK INSERT 陳述式會查看資料表中的資料行是否已定義預設值。 例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。 
-  **bcp** 命令和 BULK INSERT 陳述式都可讓您指定保留 Null 值。  
+  根據預設，當資料匯入資料表時， **bcp** 命令和 BULK INSERT 陳述式會查看資料表中的資料行是否已定義預設值。 例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。 **bcp** 命令和 BULK INSERT 陳述式都可讓您指定保留 Null 值。  
   
- 相對地，一般的 INSERT 陳述式會保留 Null 值，而不會插入預設值。 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式所提供的基本行為與一般 INSERT 陳述式相同，但它還支援用於插入預設值的 資料表提示 。  
+ 相對地，一般的 INSERT 陳述式會保留 Null 值，而不會插入預設值。 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式所提供的基本行為與一般 INSERT 陳述式相同，但它還支援用於插入預設值的資料表提示。  
   
 > [!NOTE]  
 >  如需略過資料表資料行的範例格式檔案，請參閱[使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)。  
@@ -67,8 +66,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
  如需建立格式檔案的詳細資訊，請參閱 [建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)。  
   
 ### <a name="sample-data-file"></a>範例資料檔  
- 此範例將使用範例資料檔 `MyTestEmptyField2-c.Dat`，此檔案在第二個欄位中不含任何值。 
-  `MyTestEmptyField2-c.Dat` 資料檔含有下列記錄。  
+ 此範例將使用範例資料檔 `MyTestEmptyField2-c.Dat`，此檔案在第二個欄位中不含任何值。 `MyTestEmptyField2-c.Dat` 資料檔含有下列記錄。  
   
 ```  
 1,,DataField3  
@@ -81,7 +79,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Command|Qualifier|限定詞類型|  
 |-------------|---------------|--------------------|  
-|**in**|`-k`|Switch|  
+|**bcp**|`-k`|Switch|  
 |BULK INSERT|KEEPNullS<sup>1</sup>|引數|  
   
  <sup>1</sup>針對 BULK INSERT，如果無法使用預設值，則必須將資料表資料行定義為允許 null 值。  
@@ -173,7 +171,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [大量匯入資料時保留識別值 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
@@ -205,11 +203,11 @@ GO
   
  **若要在使用 bcp 時指定相容性的資料格式**  
   
--   [指定欄位和資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [使用 bcp &#40;SQL Server 在資料檔案中指定前置長度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [使用 bcp 指定資料檔的前置長度 &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [使用 bcp &#40;SQL Server 來指定檔案儲存類型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

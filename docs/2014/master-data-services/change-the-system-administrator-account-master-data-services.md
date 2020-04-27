@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054142"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>變更系統管理員帳戶 (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66054142"
 > [!WARNING]  
 >  當您完成這個程序時，先前的系統管理員使用者帳戶會遭到刪除。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須將新的系統管理員使用者名稱加入 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者清單。 如需詳細資訊，請參閱[Add a User &#40;Master Data Services&#41;](add-a-user-master-data-services.md)。  
@@ -49,6 +49,6 @@ ms.locfileid: "66054142"
 5.  執行查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [系統管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+ [管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
   
