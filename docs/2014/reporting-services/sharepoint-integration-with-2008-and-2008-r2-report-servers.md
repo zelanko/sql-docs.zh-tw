@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101198"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>與 2008 及 2008 R2 報表伺服器的 SharePoint 整合
-  的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]引進了架構，其中 sharepoint 模式現在是以 sharepoint 共用服務為基礎。 新功能的管理是在 SharePoint 管理中心的 [**管理服務**] 和 [**管理員服務應用程式**] 頁面上完成。 Sharepoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2010 產品的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]增益集仍然支援 sharepoint 整合的先前架構，因此您可以將 sharepoint 2010 與舊版的報表伺服器整合。  
+   的  版本引進了一種架構，其中 SharePoint 模式現在是以 SharePoint 共用服務為基礎。 新功能的管理是在 SharePoint 管理中心的 [**管理服務**] 和 [**管理員服務應用程式**] 頁面上完成。 Sharepoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2010 產品的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]增益集仍然支援 sharepoint 整合的先前架構，因此您可以將 sharepoint 2010 與舊版的報表伺服器整合。  
   
  您可在下列位置找到用來管理舊有架構的 SharePoint 管理中心頁面：  
   

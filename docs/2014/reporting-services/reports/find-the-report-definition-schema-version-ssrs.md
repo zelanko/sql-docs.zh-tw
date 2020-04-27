@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102650"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
@@ -39,16 +39,15 @@ ms.locfileid: "66102650"
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何：識別報表設計師的 RDL 結構描述版本  
   
-1.  開啟新的專案。 您所選擇的專案版本會決定 RDL 結構描述的版本。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中支援多個結構描述版本。 如需詳細資訊，請參閱 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
+1.  開啟新的專案。 您所選擇的專案版本會決定 RDL 結構描述的版本。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中支援多個結構描述版本。 如需詳細資訊，請參閱 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
-2.  在 [專案]  功能表上，按一下 [加入新項目]  。 [新增項目]**** 對話方塊隨即開啟。  
+2.  在 [專案]**** 功能表上，按一下 [加入新項目]****。 [新增項目]**** 對話方塊隨即開啟。  
   
 3.  在 [範本]**** 窗格中，按一下 [報表]****。  
   
 4.  在 [名稱]**** 中，鍵入報表名稱或接受預設值。  
   
-5.  按一下 [新增]  。 報表設計師就會在 [設計] 檢視中開啟新的空白報表。  
+5.  按一下 **[新增]** 。 報表設計師就會在 [設計] 檢視中開啟新的空白報表。  
   
 6.  在 [檢視]**** 功能表中，按一下 [程式碼]****。 報表定義就會顯示成 XML 檔。  
   

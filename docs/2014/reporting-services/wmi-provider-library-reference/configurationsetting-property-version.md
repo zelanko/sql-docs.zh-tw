@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85aefb7b34ccd5e74debefafcaf0637e526d78bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097397"
 ---
 # <a name="version-property--wmi-msreportserver_configurationsetting"></a>版本屬性 (WMI MSReportServer_ConfigurationSetting)
@@ -39,7 +39,7 @@ public string Version;
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_Instance 成員](msreportserver-instance-members.md)  

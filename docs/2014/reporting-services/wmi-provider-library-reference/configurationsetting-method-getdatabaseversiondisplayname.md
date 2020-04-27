@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098412"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>GetDatabaseVersionDisplayName 方法 (WMI)
@@ -47,18 +47,12 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
   
 |**版本**|`Version`|**顯示名稱**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|
-  @DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
-|RS 2005 SP1|
-  @DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
-|RS 2005 RTM|
-  @DBVersion = 'C.0.8.40'|SQL Server 2005|  
-|RS 2000 SP2|
-  @DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
-|RS 2000 SP1|
-  @DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
-|RS 2000 RTM|
-  @DBVersion = 'C.0.6.43'|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |Hotfix||最接近的適用版本|  
   
  若為 *2000 之前的* Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，就會傳回 ACT_E_BAD_VERSION 的 HRESULT。  
@@ -67,7 +61,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

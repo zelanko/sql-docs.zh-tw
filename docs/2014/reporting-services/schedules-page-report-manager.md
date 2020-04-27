@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102321"
 ---
 # <a name="schedules-page-report-manager"></a>排程頁面 (報表管理員)
@@ -43,16 +43,16 @@ ms.locfileid: "66102321"
  **刪除**  
  按一下即可移除共用排程。  
   
- **中斷**  
+ **暫停**  
  按一下即可暫時停止執行共用排程。 暫停排程可避免訂閱及其他已排程處理序的執行。  
   
  **繼續**  
  按一下即可重新恢復共用排程。 不會啟動在暫停排程時排定執行的失效處理序。  
   
- **[排程]**  
+ **排程**  
  顯示目前定義的共用排程。 按一下共用排程以檢視或編輯頻率資訊。  
   
- **創**  
+ **建立者**  
  顯示建立共用排程的使用者名稱。  
   
  **最後執行 / 下一個執行**  

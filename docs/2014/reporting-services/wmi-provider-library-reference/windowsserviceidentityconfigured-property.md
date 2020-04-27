@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb9b782aece15cf9aaf49b2bc427d34fa3d86525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096964"
 ---
 # <a name="windowsserviceidentityconfigured-property-wmi-msreportserver_configurationsetting"></a>WindowsServiceIdentityConfigured 屬性 (WMI MSReportServer_ConfigurationSetting)
@@ -39,14 +39,13 @@ public string WindowsServiceIdentityConfigured;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- 
-  `String` 值，包含傳回上次設定報表伺服器 Windows 服務執行時所使用的識別。  
+ `String` 值，包含傳回上次設定報表伺服器 Windows 服務執行時所使用的識別。  
   
 ## <a name="example-code"></a>範例程式碼  
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

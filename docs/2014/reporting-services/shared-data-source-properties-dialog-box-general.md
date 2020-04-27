@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb7e3caa1fedf1e8a398a1c5abd91fdaa2263ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101322"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>共用資料來源屬性對話方塊、一般
@@ -26,7 +26,7 @@ ms.locfileid: "66101322"
  **名稱**  
  輸入資料來源的名稱。 資料來源名稱在報表內必須是唯一的。 根據預設，系統會將一般名稱 (例如，DataSource1 或 DataSource2) 指派給資料來源。  
   
- **型別**  
+ **類型**  
  選取資料處理延伸模組。 此清單會顯示所有已註冊的延伸模組。  
   
  **連接字串**  

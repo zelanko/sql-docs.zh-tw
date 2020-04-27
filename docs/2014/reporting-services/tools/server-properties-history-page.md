@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099580"
 ---
 # <a name="server-properties-history-page"></a>伺服器多個屬性 (記錄頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66099580"
   
  報表記錄快照集會儲存在報表伺服器資料庫中。 如果您保留無限數量的快照集，請務必定期檢查資料庫大小，以便確保它的成長速度不會過快或耗用過多磁碟空間。  
   
- 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連接至報表伺服器執行個體、以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。 按一下 **[記錄]** ，即可開啟此頁面。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連接至報表伺服器執行個體、以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]****。 按一下 **[記錄]** ，即可開啟此頁面。  
   
 ## <a name="options"></a>選項。  
  **不限制報表記錄中的快照集數目**  
@@ -38,8 +38,8 @@ ms.locfileid: "66099580"
  如果稍後限制報表記錄，則當現有的報表記錄超過指定的限制時，報表伺服器會將現有的報表記錄縮減至低於新限制的量。 會先刪除最舊的報表快照集。 如果報表記錄為空白或在限制以下，則會加入新報表快照集。 如果達到限制，加入新報表快照集時會刪除最舊的快照集。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [連接至 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
+ [將報表伺服器屬性設定 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [連接到 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
  [Management Studio F1 說明中的報表伺服器](report-server-in-management-studio-f1-help.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102304"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>將報表儲存到您的電腦 (報表產生器)
@@ -22,10 +22,10 @@ ms.locfileid: "66102304"
   
 ### <a name="to-save-a-report"></a>若要儲存報表  
   
-1.  在報表產生器的按鈕中，按一下 **[儲存]** 。 [另存為 **報表項目>** _]\<_ 對話方塊隨即開啟。  
+1.  在報表產生器的按鈕中，按一下 **[儲存]**。 [**另存**新檔]_\<報表專案>_ ] 對話方塊隨即開啟。  
   
     > [!NOTE]  
-    >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔]  選項可變更位置。  
+    >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔]**** 選項可變更位置。  
   
 2.  （選擇性）按一下 [**桌面**]、[**我的文件**] 或 [**我的電腦**]，將報表儲存到其中一個資料夾。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66102304"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>若要將報表儲存成不同的名稱  
   
-1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]** 。 [另存為 **報表項目>** _]\<_ 對話方塊隨即開啟。  
+1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]**。 [**另存**新檔]_\<報表專案>_ ] 對話方塊隨即開啟。  
   
 2.  瀏覽至電腦上要儲存報表的位置。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66102304"
 4.  在 **[下列類型的項目]** 中，選取您要儲存的報表項目類型。 報表的類型為報表 (*.rdl)。  
   
 ## <a name="see-also"></a>另請參閱  
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [尋找、查看和管理報表 &#40;報表產生器和 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [儲存報表 &#40;報表產生器&#41;](report-builder/saving-reports-report-builder.md)   
+ [將報表儲存 &#40;報表產生器&#41;](report-builder/saving-reports-report-builder.md)   
  [將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS &#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

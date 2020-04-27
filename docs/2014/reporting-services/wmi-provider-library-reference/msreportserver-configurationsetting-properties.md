@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c3937d888089f06435fece25e791b10ebbab785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097333"
 ---
 # <a name="msreportserver_configurationsetting-properties"></a>MSReportServer_ConfigurationSetting 屬性
@@ -33,12 +33,12 @@ ms.locfileid: "66097333"
   
 |||  
 |-|-|  
-|[ConnectionPoolSize](configurationsetting-property-connectionpoolsize.md)|傳回報表伺服器用來與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]主控報表伺服器資料庫之實例進行通訊的連接集區大小。 唯讀。|  
-|[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)|指定報表伺服器用來連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]主控報表伺服器資料庫之實例的登入帳戶。 唯讀。|  
+|[ConnectionPoolSize](configurationsetting-property-connectionpoolsize.md)|傳回報表伺服器用來與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體 (其主控報表伺服器資料庫) 進行通訊的連接集區大小。 唯讀。|  
+|[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)|指定報表伺服器用來連線至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體 (其主控報表伺服器資料庫) 的登入帳戶。 唯讀。|  
 |[DatabaseLogonTimeout](configurationsetting-property-databaselogontimeout.md)|指定嘗試登入報表伺服器資料庫失敗之前等候的秒數。 唯讀。|  
 |[DatabaseLogonType](configurationsetting-property-databaselogontype.md)|指定報表伺服器會使用 Windows 服務帳戶、Windows 使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入來存取報表伺服器資料庫。 唯讀。|  
 |[DatabaseName](configurationsetting-property-databasename.md)|指定主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|  
-|[DatabaseQueryTimeout](configurationsetting-property-databasequerytimeout.md)|指定命令失敗或超時之前必須經過的秒數。報表伺服器會針對 SQL Server 目錄進行處理，而非報表的資料來源。|  
+|[DatabaseQueryTimeout](configurationsetting-property-databasequerytimeout.md)|指定此命令失敗或逾時之前必須經過的秒數。報表伺服器會針對 SQL Server 目錄 (而非報表的資料來源) 進行處理序計時。|  
 |[DatabaseServerName](configurationsetting-property-databaseservername.md)|指定安裝報表伺服器資料庫之伺服器的名稱。|  
 |[InstallationID 屬性](configurationsetting-property-installationid.md)|傳回特定報表伺服器執行個體的唯一識別碼。|  
 |[InstanceName](configurationsetting-property-instancename.md)|指定特定電腦上報表伺服器執行個體的名稱。|  
@@ -46,7 +46,7 @@ ms.locfileid: "66097333"
 |[IsSharePointIntegrated](configurationsetting-property-issharepointintegrated.md)|指出報表伺服器是否設定為 SharePoint 整合模式。|  
 |[IsWebServiceEnabled](configurationsetting-property-iswebserviceenabled.md)|指出報表伺服器 Web 服務是否已啟用。 唯讀。|  
 |[IsWindowsServiceEnabled](configurationsetting-property-iswindowsserviceenabled.md)|指出是否已啟用報表伺服器 Windows 服務。 唯讀。|  
-|[&#40;WMI&#41;的 MachineAccountIdentity 屬性](configurationsetting-property-machineaccountidentity.md)|取得安裝報表伺服器的電腦帳戶識別。|  
+|[MachineAccountIdentity 屬性 &#40;WMI&#41;](configurationsetting-property-machineaccountidentity.md)|取得安裝報表伺服器的電腦帳戶識別。|  
 |[PathName](configurationsetting-property-pathname.md)|指定報表伺服器執行個體的安裝路徑。|  
 |[SecureConnectionLevel](configurationsetting-property-secureconnectionlevel.md)|傳回 RSReportServer.config 檔案中指定的安全連接層級。|  
 |[SenderEmailAddress](configurationsetting-property-senderemailaddress.md)|取得用以從報表伺服器傳送電子郵件的位址。 唯讀。|  

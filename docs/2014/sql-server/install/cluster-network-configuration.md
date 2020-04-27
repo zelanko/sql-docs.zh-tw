@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096440"
 ---
 # <a name="cluster-network-configuration"></a>叢集網路組態
@@ -26,7 +26,7 @@ ms.locfileid: "66096440"
 ## <a name="options"></a>選項。  
  **容錯移轉叢集網路名稱-這是用來在網路上識別容錯移轉叢集實例的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **網路設定**-指定容錯移轉叢集實例的 ip 類型和 ip 位址。  
+ **網路設定** ：指定容錯移轉叢集執行個體的 IP 類型和 IP 位址。  
   
  在加入節點和移除節點作業期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集之現有 IP 位址的唯讀清單。  
   

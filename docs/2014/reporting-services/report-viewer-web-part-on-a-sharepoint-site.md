@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103045"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 網站上的報表檢視器 Web 組件
@@ -70,6 +70,6 @@ ms.locfileid: "66103045"
   
 ## <a name="see-also"></a>另請參閱  
  [安裝或卸載適用于 SharePoint &#40;SharePoint 2010 和 SharePoint 2013 的 Reporting Services 增益集&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [將報表檢視器網頁組件加入至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [將報表檢視器 Web 組件加入網頁中 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

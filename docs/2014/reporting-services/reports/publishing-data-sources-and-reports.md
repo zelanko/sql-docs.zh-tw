@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102504"
 ---
 # <a name="publishing-data-sources-and-reports"></a>發行資料來源與報表
@@ -43,7 +43,7 @@ ms.locfileid: "66102504"
  [將資料加入報表 &#40;報表產生器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [頁面配置和轉譯 &#40;報表產生器和 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [將資料加入報表 &#40;報表產生器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [尋找、查看和管理報表 &#40;報表產生器和 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [列印報表 &#40;報表產生器及 SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)  
   

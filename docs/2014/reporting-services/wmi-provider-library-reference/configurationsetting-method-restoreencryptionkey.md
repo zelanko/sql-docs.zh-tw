@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098131"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>RestoreEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -42,7 +42,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ```  
   
 ## <a name="parameters"></a>參數  
- *KeyFile []*  
+ *KeyFile[]*  
  [out] 包含已加密之加密金鑰的陣列。  
   
  *長度*  
@@ -66,7 +66,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  在清除加密金鑰清單的 [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) 方法之後呼叫此方法最有效。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

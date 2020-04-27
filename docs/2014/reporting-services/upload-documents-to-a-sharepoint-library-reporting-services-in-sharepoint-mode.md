@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098843"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>將文件上傳到 SharePoint 文件庫 (SharePoint 模式的 Reporting Services)
@@ -33,9 +33,9 @@ ms.locfileid: "66098843"
   
 ### <a name="to-add-a-report-definition-or-report-model-to-a-library"></a>將報表定義或報表模型加入至文件庫  
   
-1.  開啟文件庫或文件庫內的資料夾。 如果尚未開啟文件庫，請按一下 [快速啟動] 上的文件庫名稱。 如果找不到您的文件庫名稱，請先按一下 **[檢視所有網站內容]** ，然後再按一下文件庫名稱。  
+1.  開啟文件庫或文件庫內的資料夾。 如果尚未開啟文件庫，請按一下 [快速啟動] 上的文件庫名稱。 如果找不到您的文件庫名稱，請先按一下 **[檢視所有網站內容]**，然後再按一下文件庫名稱。  
   
-2.  在 [上傳]  功能表上，按一下 [上傳文件]  。  
+2.  在 [上傳]**** 功能表上，按一下 [上傳文件]****。  
   
 3.  若要上傳單一報表或報表模型檔案，請選取報表定義 (.rdl) 或報表模型 (.smdl) 檔案，然後按一下 [確定]****。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66098843"
  報表可以包含參數，以便讓使用者篩選資料。 您可將參數設定成使用特定值，或變更使用者看到的參數外觀。 如需詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表發行到 SharePoint 文件庫](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [將報表發行至 SharePoint 文件庫](reports/publish-a-report-to-a-sharepoint-library.md)   
  [將共用資料來源發行至 SharePoint 文件庫](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

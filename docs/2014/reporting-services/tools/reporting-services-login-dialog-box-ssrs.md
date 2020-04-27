@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 232ee51614a668b07263c3e3a4182f23652135bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099864"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 登入對話方塊 (SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66099864"
   
 ## <a name="options"></a>選項。  
  **Server**  
- 顯示報表伺服器的名稱。 例如： `http://localhost/reportserver` 。 如果報表伺服器使用的是預設通訊埠 80 以外的通訊埠，請加入該通訊埠號碼。 例如： `http://localhost:81/reportserver` 。  
+ 顯示報表伺服器的名稱。 例如，`http://localhost/reportserver`。 如果報表伺服器使用的是預設通訊埠 80 以外的通訊埠，請加入該通訊埠號碼。 例如，`http://localhost:81/reportserver`。  
   
  **使用者名稱**  
  輸入使用者名稱以登入 Web 服務。  

@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 750a4cefffe2baaefadf7266e94800374834ad85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100524"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>文字方塊屬性對話方塊、對齊 (報表產生器及 SSRS)
   選取 **[文字方塊屬性]** 對話方塊上的 **[對齊]** ，可以定位所選資料格或資料區域內的值。  
   
 ## <a name="options"></a>選項。  
- **水平**  
+ **橫座標**  
  指定在選取之資料格或資料區域內於何處水平定位值。 依預設，會選取 **[預設值]** 。 預設值為 **[一般]**。 如需如何導出一般文字對齊的詳細資訊，請參閱[格式化文字和預留位置 &#40;報表產生器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。 按一下 [**運算式**] （*fx*）按鈕來編輯運算式。  
   
  **Vertical**  
@@ -39,11 +39,11 @@ ms.locfileid: "66100524"
  **返回頁首**  
  指定在資料格的上邊緣與資料格內顯示的值之間有多少填補或空格。 預設為 2 點。 按一下 [**運算式**] （*fx*）按鈕來編輯運算式。  
   
- **下**  
+ **靠**  
  指定在資料格的下邊緣與資料格內顯示的值之間有多少填補或空格。 預設為 2 點。 按一下 [**運算式**] （*fx*）按鈕來編輯運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [將報表專案的格式設定 &#40;報表產生器和 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
   

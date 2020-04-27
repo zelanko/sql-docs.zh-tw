@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099474"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "66099474"
   
 -   [Management Studio](#bkmk_managements_studio)  
   
--   [報表設計師和報表精靈的 SQL Server Data Tools](#bkmk_ssdt)  
+-   [含有報表設計師和報表精靈的 SQL Server 資料工具](#bkmk_ssdt)  
   
 -   [報表產生器](#bkmk_report_builder)  
   
-##  <a name="bkmk_configuration_manager"></a>Reporting Services 組態管理員（原生模式）  
+##  <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a>Reporting Services 組態管理員（原生模式）  
  使用原生模式組態管理員來完成下列動作：  
   
 -   指定服務帳戶。  
@@ -58,7 +58,7 @@ ms.locfileid: "66099474"
   
 -   設定自動報表處理和電子郵件報表傳遞。  
   
- **安裝：** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]當您安裝[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]原生模式時，會安裝 Configuration Manager。 如需詳細資訊，請參閱[安裝 Reporting Services 原生模式報表伺服器](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **安裝** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式時，就會安裝 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員。 如需詳細資訊，請參閱 [安裝 Reporting Services 原生模式報表伺服器](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>啟動 Reporting Services 組態管理員  
   
@@ -70,14 +70,13 @@ ms.locfileid: "66099474"
   
      依序按一下 **[開始]**、 **[程式集]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[Reporting Services 組態管理員]**。  
   
-     
-  **[報表伺服器安裝執行個體選取範圍]** 對話方塊隨即出現，以便讓您選取所要設定的報表伺服器執行個體。  
+     **[報表伺服器安裝執行個體選取範圍]** 對話方塊隨即出現，以便讓您選取所要設定的報表伺服器執行個體。  
   
 2.  在 **[伺服器名稱]** 中，指定安裝報表伺服器執行個體的電腦名稱。 依預設，會指定本機電腦的名稱，但您也可以輸入遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
      如果您指定遠端電腦，請按一下 **[尋找]** 來建立連接。 必須事先設定報表伺服器的遠端管理功能。 如需詳細資訊，請參閱 [設定報表伺服器來進行遠端管理](../report-server/configure-a-report-server-for-remote-administration.md)。  
   
-3.  在 **在stance Name**中，選擇您要設定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 執行個體。 只有 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器執行個體會出現在此清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
+3.  在 [執行個體名稱]**** 中，選擇您要設定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 執行個體。 只有 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器執行個體會出現在此清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
   
 4.  按一下 [ **連接**]。  
   
@@ -85,9 +84,9 @@ ms.locfileid: "66099474"
   
      ![Reporting Services 組態工具](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services 組態工具")  
   
- **後續步驟：** [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)並[Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ **後續步驟︰** [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 和[Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-##  <a name="bkmk_report_manager"></a>報表管理員（原生模式）  
+##  <a name="report-manager-native-mode"></a><a name="bkmk_report_manager"></a>報表管理員（原生模式）  
  使用[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)來設定許可權、管理訂閱與排程，以及處理報表。 您也可以使用報表管理員，檢視報表。  
   
  **安裝：** 當您安裝[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]原生模式時，會安裝報表管理員：[安裝 Reporting Services 原生模式報表伺服器](../install-windows/install-reporting-services-native-mode-report-server.md)  
@@ -106,7 +105,7 @@ ms.locfileid: "66099474"
   
  **後續步驟：** [設定報表管理員 &#40;原生模式&#41;](../report-server/configure-web-portal.md)。  
   
-##  <a name="bkmk_managements_studio"></a>Management Studio  
+##  <a name="management-studio"></a><a name="bkmk_managements_studio"></a> Management Studio  
  報表伺服器管理員可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ，將報表伺服器連同其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 元件伺服器一起管理。 如需詳細資訊，請參閱 [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)。  
   
 #### <a name="to-start-sql-server-management-studio"></a>若要啟動 SQL Server Management Studio  
@@ -127,7 +126,7 @@ ms.locfileid: "66099474"
   
 5.  按一下 [ **連接**]。 您可以展開根節點以設定伺服器屬性、修改角色定義，或關閉報表伺服器功能。  
   
-##  <a name="bkmk_ssdt"></a>報表設計師和報表精靈的 SQL Server Data Tools  
+##  <a name="sql-server-data-tools-with-report-designer-and-report-wizard"></a><a name="bkmk_ssdt"></a>報表設計師和報表精靈的 SQL Server Data Tools  
  報表設計師是在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] - Business Intelligence for Visual Studio 2012 中提供的。 工具中的設計介面包括：索引標籤式視窗、精靈和用來存取報表撰寫功能的功能表。 報表設計師工具會在您選擇「報表伺服器專案」或「報表伺服器精靈」範本時提供使用。 若要深入了解，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](reporting-services-in-sql-server-data-tools-ssdt.md)。  
   
 #### <a name="to-start-report-designer"></a>啟動報表設計師  
@@ -138,9 +137,9 @@ ms.locfileid: "66099474"
   
      按一下 [**開始**]，指向 [**所有程式**] [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，再指向 []，然後按一下 **[SQL Server Data Tools （SSDT）**]。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
   
-3.  在 **[專案類型]** 清單中，按一下 **[商業智慧專案]** 。  
+3.  在 **[專案類型]** 清單中，按一下 **[商業智慧專案]**。  
   
 4.  在 **[範本]** 清單中，按一下 **[報表伺服器專案]**。 下圖顯示專案範本出現在對話方塊中的情形：  
   
@@ -152,14 +151,14 @@ ms.locfileid: "66099474"
   
  若要著手建立第一份報表，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。 若要深入瞭解您可以在報表設計師內使用的查詢設計工具，請參閱[報表設計師 SQL Server Data Tools &#40;SSRS&#41;中的查詢設計工具](../report-data/query-design-tools-ssrs.md)。  
   
-##  <a name="bkmk_report_builder"></a>報表產生器  
+##  <a name="report-builder"></a><a name="bkmk_report_builder"></a> 報表產生器  
  使用[報表產生器 &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md) ，在類似[!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 的撰寫環境中建立報表。 不論報表是利用報表設計師還是利用舊版報表產生器所建立，您都可以自訂與更新所有現有的報表。 如需您可以執行以便在本機電腦上安裝報表產生器之 ReportBuilder3.msi 檔案的位置，請連絡管理員。  
   
  **安裝：** 報表產生器的按一下一次版本是由[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]原生模式或 SharePoint 模式安裝。 單機版報表產生器則需要個別下載。  請參閱[安裝獨立版本的報表產生器 &#40;報表產生器&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>若要從報表管理員啟動報表產生器 ClickOnce (原生模式)  
   
-1.  在網頁瀏覽器中，輸入報表伺服器的報表管理員 URL。 根據預設，URL 為 http://\<*伺服器名稱*>/reports。 報表管理員隨即開啟。  
+1.  在網頁瀏覽器中，輸入報表伺服器的報表管理員 URL。 根據預設，URL 為 HTTP://\<*servername*>/reports。 報表管理員隨即開啟。  
   
 2.  按一下 **[報表產生器]**。  
   

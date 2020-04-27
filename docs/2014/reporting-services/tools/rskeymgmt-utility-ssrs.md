@@ -22,14 +22,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099805"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
-  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」** 是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
+  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」  是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66099805"
   
  此引數沒有取得值。 不過，命令列必須包括其他引數，才能選取要套用的金鑰所在的檔案。 您可以指定的引數包括 `-f` 和 `-p`。  
   
- **-d.ddd...e**  
+ **-d**  
  刪除所有對稱金鑰執行個體及報表伺服器資庫中所有已加密的資料。 此引數沒有取得值。  
   
  `-s`  
@@ -103,7 +103,7 @@ ms.locfileid: "66099805"
  `-v`  *許可權*  
  (`-u` 需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
   
- **-t**  *追蹤*  
+ **-t**  *trace*  
  在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。  
   
 ## <a name="permissions"></a>權限  
@@ -170,13 +170,12 @@ rskeymgmt -r <installationID>
 ## <a name="remarks"></a>備註  
  報表伺服器會加密預存的認證和連接資訊。 資料的加密使用公開金鑰和對稱金鑰。 報表伺服器資料庫必須具備有效的金鑰，報表伺服器才能夠執行。 您可以使用 **rskeymgmt** 來備份、刪除或還原金鑰。 如果金鑰無法還原，這個工具可用來刪除已無法使用的加密內容。  
   
- 
-  **rskeymgmt** 公用程式用來管理安裝期間或初始化期間所定義的金鑰組。 它利用遠端程序呼叫 (RPC) 端點來連接本機報表伺服器 Windows 服務。 報表伺服器 Windows 服務必須在執行中，這個公用程式才能運作。  
+ **rskeymgmt** 公用程式用來管理安裝期間或初始化期間所定義的金鑰組。 它利用遠端程序呼叫 (RPC) 端點來連接本機報表伺服器 Windows 服務。 報表伺服器 Windows 服務必須在執行中，這個公用程式才能運作。  
   
  如需加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定原生模式報表伺服器向外延展部署 &#40;SSRS 設定管理員&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [設定原生模式報表伺服器向外延展部署 &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [&#40;SSRS&#41;的報表伺服器命令提示字元公用程式](report-server-command-prompt-utilities-ssrs.md)   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  

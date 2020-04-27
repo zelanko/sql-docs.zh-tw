@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101115"
 ---
 # <a name="site-settings-page-report-manager"></a>站台設定頁面 (報表管理員)
@@ -51,7 +51,7 @@ ms.locfileid: "66101115"
  報表處理計時器時鐘在選取報表時會開始，而當報表開啟時就會結束。 當您設定此值時，請指定足以完成資料處理和報表處理的時間。  
   
  **自訂報表產生器啟動 URL**  
- 當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這項設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會將報表產生器視為 ClickOnce 應用程式啟動。 預設的 URL 是下列其中一項：  
+ 當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會將報表產生器視為 ClickOnce 應用程式啟動。 預設的 URL 是下列其中一項：  
   
  **原生模式報表伺服器：** 在原生模式安裝中，預設 URL 會採用 HTTP://\<*computername*>/reportserver/reportbuilder/ReportBuilder_3_0_0_0. 應用程式的格式。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66101115"
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [在原生模式報表伺服器上授與權限](security/granting-permissions-on-a-native-mode-report-server.md)   
- [Predefined Roles](security/role-definitions-predefined-roles.md)   
+ [預先定義的角色](security/role-definitions-predefined-roles.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

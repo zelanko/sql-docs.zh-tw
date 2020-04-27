@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102876"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 查詢設計工具
@@ -32,11 +32,11 @@ ms.locfileid: "66102876"
   
 -   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。 [!INCLUDE[msCoName](../includes/msconame-md.md)]語言和 Oracle SQL 語言在查詢命令的語法上有一些[!INCLUDE[tsql](../includes/tsql-md.md)]變化。  
   
--   **藉由支援資料庫物件名稱的架構部分。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如： `SELECT FirstName, LastName FROM [Person].[Person]` 。  
+-   **依資料庫物件名稱的結構描述部分支援。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如，`SELECT FirstName, LastName FROM [Person].[Person]`。  
   
--   **支援查詢參數。** 資料提供者的差異在於參數的支援。 有些資料提供者支援指名參數，例如， `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`。 有些資料提供者則支援未指名參數，例如， `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`。 參數識別碼可能依資料提供者而有所不同，例如， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 @ 符號，而 Oracle 使用冒號 (:)。 而有些資料提供者不支援參數。  
+-   **依查詢參數支援。** 資料提供者的差異在於參數的支援。 有些資料提供者支援指名參數，例如， `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`。 有些資料提供者則支援未指名參數，例如， `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`。 參數識別碼可能依資料提供者而有所不同，例如， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 @ 符號，而 Oracle 使用冒號 (:)。 而有些資料提供者不支援參數。  
   
--   **藉由匯入查詢的功能。** 例如，若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料來源，您可以從報表定義檔案 (.rdl) 或 .sql 檔案匯入查詢。  
+-   **依匯入查詢的能力。** 例如，若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料來源，您可以從報表定義檔案 (.rdl) 或 .sql 檔案匯入查詢。  
   
 ## <a name="query-designers"></a>查詢設計工具  
  下列主題會描述每一個查詢設計工具的使用者介面。  

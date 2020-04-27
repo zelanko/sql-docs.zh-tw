@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd6b3cc87757a8d0edc9067bd2f8f0911ccef238
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100473"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>將新的或現有的報表加入報表專案 (SSRS)
@@ -48,11 +48,11 @@ ms.locfileid: "66100473"
   
 ### <a name="to-add-a-new-blank-report"></a>加入新的空白報表  
   
-1.  在 [專案]  功能表中，按一下 [新增項目]  。  
+1.  在 [專案]**** 功能表中，按一下 [新增項目]****。  
   
-2.  在 [範本]  中，按一下 [報表]  。  
+2.  在 [範本]**** 中，按一下 [報表]****。  
   
-3.  按一下 [新增]  。  
+3.  按一下 **[新增]** 。  
   
      新的空白報表就會加入至專案並且顯示在設計介面上。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66100473"
   
 1.  從 [**專案**] 功能表中，依序按一下 [**加入**] 和 [**現有專案**]。  
   
-2.  巡覽至 .rdl 檔的位置、選取該檔案，然後按一下 [新增]  。  
+2.  巡覽至 .rdl 檔的位置、選取該檔案，然後按一下 [新增]****。  
   
-     報表就會新增至 [報表]  資料夾底下的專案。 當您關閉並重新開啟專案時，這些報表就會按照字母順序排序。  
+     報表就會新增至 [報表]**** 資料夾底下的專案。 當您關閉並重新開啟專案時，這些報表就會按照字母順序排序。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  

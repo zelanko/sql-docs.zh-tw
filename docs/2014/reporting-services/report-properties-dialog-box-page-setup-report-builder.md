@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104373"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>報表屬性對話方塊、版面設定 (報表產生器)
@@ -41,13 +41,13 @@ ms.locfileid: "66104373"
  **寬度**  
  顯示 [紙張類型]**** 清單中選取之紙張大小的寬度。  
   
- **高度**  
+ **高寬比**  
  顯示 [紙張類型]**** 清單中選取之紙張大小的高度。  
   
  **返回頁首**  
  設定報表頂端和報表第一行頂端之間的距離。  
   
- **下**  
+ **靠**  
  設定報表底部和報表最後一行底部之間的距離。  
   
  **左面**  
@@ -58,7 +58,7 @@ ms.locfileid: "66104373"
   
 ## <a name="see-also"></a>另請參閱  
  [對話方塊、窗格和嚮導的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [報表屬性對話方塊、程式碼 &#40;報表產生器&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
  [報表屬性對話方塊、參考 &#40;報表產生器&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   

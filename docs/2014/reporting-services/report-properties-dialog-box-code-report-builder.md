@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2a4ef9c25607226c3898c10c0ec9ff245de8a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104452"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>報表屬性對話方塊、程式碼 (報表產生器)
@@ -28,7 +28,7 @@ ms.locfileid: "66104452"
   
 ## <a name="see-also"></a>另請參閱  
  [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [報表和群組變數集合參考 &#40;報表產生器和 SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

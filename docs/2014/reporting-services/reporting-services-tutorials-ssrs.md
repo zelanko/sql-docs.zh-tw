@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35532f3889836aa1a84858fb547f2764b1d4a902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102684"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教學課程 (SSRS)
   本節包含的[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]教學課程。  
   
- [&#40;SSRS 教學課程建立資料驅動訂閱&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
+ [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供資料驅動訂閱，讓您可以依據接收報表之訂閱者的動態清單自訂報表的散發。 資料驅動訂閱通常是由報表伺服器管理員來建立和維護。 您必須是建立查詢的專家、擁有包含訂閱者資料之資料來源的知識，且具備較高的報表伺服器權限，才能夠建立資料驅動訂閱。  
   
  [建立基本資料表報表 &#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)  

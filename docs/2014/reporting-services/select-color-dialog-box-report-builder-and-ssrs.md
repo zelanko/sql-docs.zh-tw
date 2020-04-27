@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101376"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>選取色彩對話方塊 (報表產生器及 SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66101376"
  **色彩選取器**  
  從指定如何選取色彩的三個選項選擇。  
   
--   **選擇器-色彩圓形**使用 [色調/飽和度/亮度（HSB）] 色彩值來選擇色彩。  
+-   **選擇器 - 色彩圓形** ：使用「色調/飽和/亮度」(HSB) 色彩值來選擇色彩。  
   
--   **選擇器-色彩正方形**使用「紅色/綠色/藍色」（RGB）色彩值來選擇色彩。  
+-   **選擇器 - 色彩方塊** ：使用「紅色/綠色/藍色」(RGB) 色彩值來選擇色彩。  
   
--   **調色板-標準色彩**從預先定義的色彩值清單中選擇色彩。  
+-   **調色盤 - 標準色彩** ：從預先定義的色彩值清單選擇色彩。  
   
  **色彩圓形**  
  用於 HSB 色彩，因為 HSB 值會對應到圓柱座標系統。 色調是實際的色彩、飽和度是色彩的純度，而亮度是相對亮度或暗度。  
@@ -56,10 +56,10 @@ ms.locfileid: "66101376"
  **紅色**  
  RGB 色彩紅色部分的十進位值。 使用微調方塊來變更值，或輸入一個介於 0 和 255 之間的值。  
   
- **綠色**  
+ **環保**  
  RGB 色彩綠色部分的十進位值。 使用微調方塊來變更值，或輸入一個介於 0 和 255 之間的值。  
   
- **藍色**  
+ **藍天**  
  RGB 色彩藍色部分的十進位值。 使用微調方塊來變更值，或輸入一個介於 0 和 255 之間的值。  
   
  **Alpha**  
@@ -78,7 +78,7 @@ ms.locfileid: "66101376"
  在窗格的左半部顯示目前的色彩，並在窗格的右半部以互動方式顯示您所選擇的新色彩。 如果沒有預設色彩，窗格的左半部為白色。 大部分的 RDL 屬性都沒有預設色彩。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [將報表專案的格式設定 &#40;報表產生器和 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101093"
 ---
 # <a name="subscriptions-page-report-manager"></a>訂閱頁面 (報表管理員)
@@ -39,7 +39,7 @@ ms.locfileid: "66101093"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
 4.  選取 **[訂閱]** 索引標籤。  
   
@@ -57,16 +57,13 @@ ms.locfileid: "66101093"
  按一下即可檢視或編輯訂閱。  
   
  **Report**  
- 當您從共用資料來源開啟這個頁面時，此資料行會識別定義此訂閱的報表。 
-  **[資料夾]** 資料行會識別報表的位置。  
+ 當您從共用資料來源開啟這個頁面時，此資料行會識別定義此訂閱的報表。 **[資料夾]** 資料行會識別報表的位置。  
   
- **說明**  
+ **描述**  
  顯示訂閱的描述。  
   
- **界限**  
- 識別造成執行訂閱的條件。 
-  **TimedSubscription** 觸發程序是以執行訂閱時定義的排程為基礎。 
-  **SnapshotUpdated** 觸發程序是以報表快照集的更新為基礎。  
+ **觸發程序**  
+ 識別造成執行訂閱的條件。 **TimedSubscription** 觸發程序是以執行訂閱時定義的排程為基礎。 **SnapshotUpdated** 觸發程序是以報表快照集的更新為基礎。  
   
  **擁有者**  
  顯示建立訂閱的使用者名稱。  

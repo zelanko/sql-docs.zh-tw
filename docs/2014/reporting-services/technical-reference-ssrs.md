@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100609"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
@@ -43,17 +43,17 @@ ms.locfileid: "66100609"
  [轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
  ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**報表伺服器命令提示字元公用程式**  
- [&#40;SSRS&#41;的 RS 公用程式](tools/rs-exe-utility-ssrs.md)  
+ [RS.exe 公用程式 &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
   
- [&#40;SSRS&#41;的 rsconfig 公用程式](tools/rsconfig-utility-ssrs.md)  
+ [rsconfig 公用程式 &#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt 公用程式 &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
   
- ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示") **Reporting Services WMI 提供者類別庫**  
+ ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**Reporting Services WMI 提供者類別庫**  
  [Reporting Services WMI 提供者程式庫參考 &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [關於疑難排解 Reporting Services 的 TechNet wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209153)   
- [關於疑難排解 Reporting Services SharePoint 模式的 TechNet wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209158)  
+ [有關疑難排解 Reporting Services SharePoint 模式的 TechNet Wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

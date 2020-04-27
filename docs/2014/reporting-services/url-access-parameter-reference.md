@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098715"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
@@ -31,11 +31,11 @@ ms.locfileid: "66098715"
 ## <a name="html-viewer-commands-rc"></a>HTML 檢視器命令 (rc:)  
  下表描述前面加上*rc：* 的 URL 存取參數，並且用來以 HTML 檢視器為目標。  
   
-|參數|描述|值|  
+|參數|說明|值|  
 |---------------|-----------------|------------|  
-|*工具列*|顯示或隱藏工具列。<br /><br /> `false` ** ** \*重要\* ：工具列不適用於使用 IP 位址的 URL 存取字串，而不是功能變數名稱，以 SharePoint 網站上所裝載的報表為\* ** =目標。|如果這個參數的值為 `false`，則會忽略所有剩餘的選項。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。 這個參數的預設值為 `true`。<br /><br /> `true` <br /> `false`|  
+|*Toolbar*|顯示或隱藏工具列。<br /><br /> `false` *rc:Toolbar* ** \*重要\* ：工具列不適用於使用 IP 位址的 URL 存取字串，而不是功能變數名稱，以 SharePoint 網站上所裝載的報表為\* ** =目標。|如果這個參數的值為 `false`，則會忽略所有剩餘的選項。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。 這個參數的預設值為 `true`。<br /><br /> `true` <br /> `false`|  
 |*參數*|顯示或隱藏工具列的參數區。<br /><br /> `Native`模式範例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed`<br /><br /> `SharePoint`模式範例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed`|如果將這個參數設定為 `true`，工具列的參數區就會顯示。 如果將這個參數設定為 `false`，參數區就不會顯示，且無法由使用者顯示。 如果將這個參數設定為 `Collapsed` 的值，參數區就不會顯示，但可以由使用者切換顯示。 此參數的預設值為 `true`。 有效值為：<br /><br /> `true` <br /> `false` <br /> `Collapsed`|  
-|*Zoom*|將報表縮放值設定為整數百分比或字串常數。<br /><br /> `Native`模式範例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:Zoom=Page Width`<br /><br /> `SharePoint`模式範例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width`|標準字串值包括 `Page Width` 和 `Whole Page`。 Internet Explorer 5.0 之前的舊版 Internet Explorer 和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 `100`。|  
+|*縮放*|將報表縮放值設定為整數百分比或字串常數。<br /><br /> `Native`模式範例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:Zoom=Page Width`<br /><br /> `SharePoint`模式範例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width`|標準字串值包括 `Page Width` 和 `Whole Page`。 Internet Explorer 5.0 之前的舊版 Internet Explorer 和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 `100`。|  
 |*區段*|設定要顯示報表中的哪一頁。<br /><br /> `Native`顯示報表第2頁的模式範例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:Section=2`<br /><br /> `SharePoint`顯示報表第2頁的模式範例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2`|任何大於報表中頁數的值都會顯示最後一頁。 任何小於 `0` 的值都會顯示報表的第 1 頁。 此參數的預設值為 `1`。|  
 |*FindString*|在報表中搜尋特定文字集。<br /><br /> `Native`模式範例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400`<br /><br /> `SharePoint`模式範例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400`||  
 |*StartFind*|指定要搜尋的最後一部分。<br /><br /> `Native`模式範例，它會在產品目錄範例報表中搜尋第一個出現的文字 "山區-400"，從頁面1開始，並以第五頁結束：<br /><br /> `http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400`|此參數的預設值是報表的最後一頁。|  
@@ -43,8 +43,8 @@ ms.locfileid: "66098715"
 |*FallbackPage*|設定在搜尋或文件引導模式選取項目失敗時所顯示頁面的頁碼。|預設值為目前頁面的頁碼。|  
 |*GetImage*|取得 HTML 檢視器使用者介面的特定圖示。||  
 |*圖示*|取得特定轉譯延伸模組的圖示。||  
-|*樣式表*|指定要套用至 HTML 檢視器的樣式表。||  
-|裝置資訊設定|將裝置資訊設定指定為的形式`rc:tag=value`，其中*tag*是目前使用的轉譯延伸模組特定的裝置資訊設定名稱（請參閱*Format*參數的描述）。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)。||  
+|*樣式表單*|指定要套用至 HTML 檢視器的樣式表。||  
+|裝置資訊設定|將裝置資訊設定指定為 `rc:tag=value` 的形式，其中 *tag* 是目前所使用轉譯延伸模組的特定裝置資訊設定名稱 (請參閱 *Format* 參數的描述)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)。||  
   
 ## <a name="report-server-commands-rs"></a>報表伺服器命令 (rs:)  
  下表描述的 URL 存取參數前面會加上*rs：* ，而且會用來將報表伺服器設為目標。  
@@ -63,10 +63,8 @@ ms.locfileid: "66098715"
 |*PersistStreams*|轉譯單一永續性資料流中的報表。 這個參數是由影像轉譯器用來傳輸轉譯的報表，一次一個區塊。 在 URL 存取字串中使用這個參數後，以 *GetNextStream* 參數使用相同的 URL 存取字串，而不用 *PersistStreams* 參數，以取得永續性資料流中的下一個區塊。 這個 URL 命令最後會傳回 0 個位元組資料流，表示永續性資料流結尾。 預設值是 `false`。|  
 |*GetNextStream*|取得使用 *PersistStreams* 參數存取的永續性資料流中的下一個資料區塊。 如需詳細資訊，請參閱 *PersistStreams*的描述。 預設值是 `false`。|  
 |*Id*|指定用戶端應用程式和報表伺服器之間已建立的使用中報表工作階段。 此參數的值是設定為工作階段識別碼。<br /><br /> 您可以將工作階段識別碼指定為 Cookie 或是 URL 的一部分。 當將報表伺服器設定成不使用工作階段 Cookie 時，第一個沒有指定工作階段識別碼的要求，會導致使用某個工作階段識別碼來進行重新導向。 如需有關報表伺服器工作階段的詳細資訊，請參閱＜ [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)＞。|  
-|*ClearSession*|
-  `true` 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 （報表實例會定義為相同的報表會以不同的報表參數值執行多次）。預設值是`false`。|  
-|*ResetSession*|
-  `true` 的值會指示報表伺服器透過移除與所有報表快照集的報表工作階段關聯，重設報表工作階段。 預設值是 `false`。|  
+|*ClearSession*|`true` 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 （報表實例會定義為相同的報表會以不同的報表參數值執行多次）。預設值是`false`。|  
+|*ResetSession*|`true` 的值會指示報表伺服器透過移除與所有報表快照集的報表工作階段關聯，重設報表工作階段。 預設值是 `false`。|  
 |*ShowHideToggle*|切換該報表區段的顯示和隱藏狀態。 指定正整數以表示要切換的區段。|  
   
 ## <a name="report-viewer-web-part-commands-rv"></a>報表檢視器 Web 組件命令 (rv:)  
@@ -74,25 +72,13 @@ ms.locfileid: "66098715"
   
 |參數|動作|  
 |---------------|------------|  
-|*工具列*|控制報表檢視器 Web 組件的工具列顯示。 預設值是 `Full`。 值可以是：<br /><br /> 
-  `Full`：顯示完整的工具列。<br /><br /> 
-  `Navigation`：只在工具列中顯示分頁。<br /><br /> 
-  `None`：不顯示工具列。<br /><br /> <br /><br /> 例如，在 `SharePoint` 模式中，只在工具列中顯示分頁。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation`|  
-|*HeaderArea*|控制報表檢視器 Web 組件的標頭顯示。 預設值是 `Full`。 值可以是：<br /><br /> 
-  `Full`：顯示完整的標頭。<br /><br /> 
-  `BreadCrumbsOnly`：只在標頭中顯示蹤跡導覽，以通知使用者他們在應用程式中的所在位置。<br /><br /> 
-  `None`：不顯示標頭。<br /><br /> <br /><br /> 例如，在 `SharePoint` 模式中，只在標頭中顯示階層連結導覽。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly`|  
+|*Toolbar*|控制報表檢視器 Web 組件的工具列顯示。 預設值是 `Full`。 值可以是：<br /><br /> `Full`：顯示完整的工具列。<br /><br /> `Navigation`：只在工具列中顯示分頁。<br /><br /> `None`：不顯示工具列。<br /><br /> <br /><br /> 例如，在 `SharePoint` 模式中，只在工具列中顯示分頁。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation`|  
+|*HeaderArea*|控制報表檢視器 Web 組件的標頭顯示。 預設值是 `Full`。 值可以是：<br /><br /> `Full`：顯示完整的標頭。<br /><br /> `BreadCrumbsOnly`：只在標頭中顯示蹤跡導覽，以通知使用者他們在應用程式中的所在位置。<br /><br /> `None`：不顯示標頭。<br /><br /> <br /><br /> 例如，在 `SharePoint` 模式中，只在標頭中顯示階層連結導覽。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly`|  
 |*DocMapAreaWidth*|控制參數區在報表檢視器 Web 組件中的顯示寬度 (以像素為單位)。 預設值與報表檢視器 Web 組件的預設值相同。 其值必須為非負整數。|  
 |*AsyncRender*|控制是否要以非同步方式轉譯報表。 預設值為 `true`，此值指定以非同步方式轉譯報表。 此值必須為 `true` 或 `false` 的布林值。|  
-|*ParamMode*|控制報表檢視器 Web 元件的參數提示區域在整頁視圖中的顯示方式。  預設值是 `Full`。 有效值為：<br /><br /> 
-  `Full`：顯示參數提示區域。<br /><br /> 
-  `Collapsed`：摺疊參數提示區域。<br /><br /> 
-  `Hidden`：隱藏參數提示區域。<br /><br /> 例如，在 `SharePoint` 模式中，摺疊參數提示區域。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed`|  
-|*DocMapMode*|控制報表檢視器 Web 元件的檔引導模式區域在整頁視圖中的顯示方式。 預設值是 `Full`。 有效值為：<br /><br /> 
-  `Full`：顯示文件引導模式區域。<br /><br /> 
-  `Collapsed`：摺疊文件引導模式區域。<br /><br /> 
-  `Hidden`：隱藏文件引導模式區域。|  
-|*DockToolBar*|控制報表檢視器 Web 元件的工具列是否停駐在頂端或底端。 有效值為 `Top` 和 `Bottom`。 預設值是 `Top`。<br /><br /> <br /><br /> 例如，在 `SharePoint` 模式中，將工具列停駐在底部。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
+|*ParamMode*|控制報表檢視器 Web 組件的參數提示區域，在整頁檢視中的顯示方式。  預設值是 `Full`。 有效值為：<br /><br /> `Full`：顯示參數提示區域。<br /><br /> `Collapsed`：摺疊參數提示區域。<br /><br /> `Hidden`：隱藏參數提示區域。<br /><br /> 例如，在 `SharePoint` 模式中，摺疊參數提示區域。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed`|  
+|*DocMapMode*|控制報表檢視器 Web 組件的文件引導模式區域，在整頁檢視中的顯示方式。 預設值是 `Full`。 有效值為：<br /><br /> `Full`：顯示文件引導模式區域。<br /><br /> `Collapsed`：摺疊文件引導模式區域。<br /><br /> `Hidden`：隱藏文件引導模式區域。|  
+|*DockToolBar*|控制報表檢視器 Web 組件工具列是否停駐在頂部或底部。 有效值為 `Top` 和 `Bottom`。 預設值是 `Top`。<br /><br /> <br /><br /> 例如，在 `SharePoint` 模式中，將工具列停駐在底部。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
 |*ToolBarItemsDisplayMode*|控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值新增總值。 例如：針對沒有動作功能表，請使用 rv:ToolBarItemsDisplayMode=63 (或 0x3F)，這就是 1+2+4+8+16+ 32；僅針對動作功能表項目，請使用 rv:ToolBarItemsDisplayMode=960 (或 0x3C0)。  預設值是 `-1`，其中包含所有的工具列項目。 有效值為：<br /><br /> 1 (0x1)：[上一步]**** 按鈕<br /><br /> 2 (0x2)：文字搜尋控制項<br /><br /> 4 (0x4)：頁面導覽控制項<br /><br /> 8 (0x8)：[重新整理]**** 按鈕<br /><br /> 16 (0x10)：[顯示比例]**** 清單方塊<br /><br /> 32 (0x20)：[Atom 摘要]**** 按鈕<br /><br /> 64 (0x40)：[動作]**** 中的 [列印]**** 功能表選項<br /><br /> 128 (0x80)：[動作]**** 中的 [匯出]**** 子功能表<br /><br /> 256 (0x100：[動作]**** 中的 [用報表產生器開啟]**** 功能表選項<br /><br /> 512 (0x200：[動作]**** 中的 [訂閱]**** 功能表選項<br /><br /> 1024 (0x400：[動作]**** 中的 [新資料警示]**** 功能表選項<br /><br /> 例如，在模式`SharePoint`中，只顯示 [**上一頁**] 按鈕、文字搜尋控制項、頁面導覽控制項**和 [** 重新整理] 按鈕。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
   
 ## <a name="see-also"></a>另請參閱  

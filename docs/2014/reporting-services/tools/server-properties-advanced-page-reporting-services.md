@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099661"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
   您可以使用這個頁面來設定報表伺服器的系統屬性。 有許多方式可設定系統屬性。 這項工具提供了圖形化使用者介面，如此您不需要撰寫程式碼就可以設定屬性。  
   
- 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連接至報表伺服器執行個體、以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。 按一下 **[進階]** ，即可開啟此頁面。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連接至報表伺服器執行個體、以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]****。 按一下 **[進階]** ，即可開啟此頁面。  
   
 ## <a name="options"></a>選項。  
  **EnableMyReports**  
@@ -64,11 +64,11 @@ ms.locfileid: "66099661"
  **SnapshotCompression**  
  定義快照集的壓縮方式。 預設值是 `SQL`。 有效值如下：  
   
- **SQL =** 儲存在報表伺服器資料庫時，會壓縮快照集。 這是目前的行為。  
+ **SQL =** 當快照集儲存在報表伺服器資料庫時，系統會壓縮快照集。 這是目前的行為。  
   
- **None** = 不壓縮快照集。  
+ **無 =** 系統不會壓縮快照集。  
   
- **全部 =** 系統會針對所有儲存選項壓縮快照集，包括報表伺服器資料庫或檔案系統。  
+ **全部 =** 系統會針對所有儲存選項壓縮快照集，包括報表伺服器資料庫或是檔案系統。  
   
  **SystemReportTimeout**  
  在報表伺服器命名空間中管理之所有報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是從 `-1` 到 `2`、`147`、`483`、`647`。 如果此值為 `-1`，命名空間中的報表就不會在處理期間逾時。 預設值是 `1800`。  
@@ -79,11 +79,9 @@ ms.locfileid: "66099661"
  **EnableIntegratedSecurity**  
  決定 Windows 整合式安全性是否支援報表資料來源連接。 預設值為 `True`。 有效值如下：  
   
- 
-  `True` = Windows 整合式安全性已啟用。  
+ `True` = Windows 整合式安全性已啟用。  
   
- 
-  `False` = Windows 整合式安全性未啟用。 設定為使用 Windows 整合式安全性的報表資料來源不會執行。  
+ `False` = Windows 整合式安全性未啟用。 設定為使用 Windows 整合式安全性的報表資料來源不會執行。  
   
  `EnableLoadReportDefinition`  
  選取此選項即可指定使用者是否可以從報表產生器報表執行特定報表執行。 設定這個選項會針對報表伺服器決定 `EnableLoadReportDefinition` 屬性的值。  
@@ -95,7 +93,7 @@ ms.locfileid: "66099661"
  **EnableRemoteErrors**  
  包含外部錯誤資訊 (例如，有關報表資料來源的錯誤資訊) 以及針對從遠端電腦要求報表之使用者傳回的錯誤訊息。 有效值為 `true` 和 `false`。 預設值是 `false`。 如需詳細資訊，請參閱[啟用遠端錯誤 &#40;Reporting Services&#41;](../report-server/enable-remote-errors-reporting-services.md)。  
   
- **Enablereportdesignclientdownload 設**  
+ **EnableReportDesignClientDownload**  
  指定是否可從報表伺服器下載報表產生器安裝套件。 如果您清除此設定，報表產生器的 URL 將會失效。 如需詳細資訊，請參閱 [設定報表產生器的存取](../report-server/configure-report-builder-access.md)。  
   
  **EditSessionCacheLimit**  
@@ -108,8 +106,8 @@ ms.locfileid: "66099661"
  指出當使用者使用報表伺服器來測試資料來源連接時，是否要將詳細的錯誤訊息傳送至用戶端電腦。 預設值是 `true`。 如果此選項設定為 `false`，就只會傳送一般錯誤訊息。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [連接至 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
+ [將報表伺服器屬性設定 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [連接到 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services 屬性](../report-server-web-service/net-framework/reporting-services-properties.md)   
  [Management Studio F1 說明中的報表伺服器](report-server-in-management-studio-f1-help.md)   
  [報表伺服器系統屬性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   

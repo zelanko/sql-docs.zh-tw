@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098850"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
@@ -26,7 +26,7 @@ ms.locfileid: "66098850"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>您將瞭解的內容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>您將瞭解的內容  
  在本教學課程中，您將學習如何執行下列作業：  
   
 1.  [從資料表或矩陣精靈建立資料表報表和資料集](#Setup)  
@@ -58,7 +58,7 @@ ms.locfileid: "66098850"
 ## <a name="requirements"></a>需求  
  如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Setup"></a>1. 從資料表或矩陣 Wizard 建立資料表報表和資料集  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. 從資料表或矩陣 Wizard 建立資料表報表和資料集  
  建立資料表報表、資料來源與資料集。 當您配置資料表時，只會包含少數欄位。 在完成精靈之後，您將手動加入資料行。 精靈方便您配置資料表並套用樣式。  
   
 > [!NOTE]  
@@ -71,19 +71,19 @@ ms.locfileid: "66098850"
   
 1.  按一下 [**開始**]，指向 [**程式**]，按一下[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)][**報表產生器**]，然後按一下 [**報表產生器**]。  
   
-     此時會出現 **[使用者入門]** 對話方塊。  
+     [**消費者入門**] 對話方塊隨即出現。  
   
     > [!NOTE]  
-    >  如果 **[使用者入門]** 對話方塊沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
+    >   如果 **[使用者入門]** 對話方塊沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
   
     > [!NOTE]  
     >  如果您偏好使用 ClickOnce 版本的報表產生器，請開啟報表管理員，然後按一下 [**報表產生器**]，或移至 SharePoint 網站，其中會啟用 Reporting Services 內容類型（例如報表），然後在共用文件庫的 [**檔**] 索引標籤上，按一下 [**新增檔**] 功能表上的 [**報表產生器報表**]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
-3.  在右窗格中，按一下 **[資料表或矩陣精靈]** 。  
+3.  在右窗格中，按一下 **[資料表或矩陣精靈]**。  
   
-4.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]** 。  
+4.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]**。  
   
 5.  按 [下一步]  。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66098850"
   
 7.  按 [下一步]  。  
   
-8.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]** 。  
+8.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
 9. 將下列查詢貼入查詢窗格中：  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66098850"
   
 17. 在 [**選擇樣式**] 頁面上，按一下 [**平板**電腦]，然後按一下 **[完成]**。  
   
-##  <a name="UpdateNames"></a>2. 更新資料來源和資料集的預設名稱  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. 更新資料來源和資料集的預設名稱  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>若要更新資料來源的預設名稱  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66098850"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. 顯示名字、初始名稱和姓氏  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. 顯示名字、初始名稱和姓氏  
  在運算式中，使用 **Left** 函數和 **Concatenate** (**&**) 運算子，以將結果評估為包括縮寫和姓氏的名稱。 您可以逐步建立運算式，或是在程序中先略過，再從教學課程將運算式複製/貼上至 [運算式]**** 對話方塊中。  
   
 #### <a name="to-add-the-name-column"></a>若要加入名稱資料行  
@@ -195,8 +195,7 @@ ms.locfileid: "66098850"
   
 5.  在 [項目]**** 清單中，按兩下 [左方]****。  
   
-     
-  **Left** 函數隨即新增至運算式中。  
+     **Left** 函數隨即新增至運算式中。  
   
 6.  在 [類別目錄]**** 清單中，按一下 [欄位 (運算式)]****。  
   
@@ -206,7 +205,7 @@ ms.locfileid: "66098850"
   
      此運算式會從 **FirstName** 值中擷取一個字元 (從左邊算起)。  
   
-9. 輸入 **& "" &**  
+9. 輸入 **&" "&**  
   
 10. 在 [值]**** 清單中，按兩下 **LastName**。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "66098850"
   
 12. 按一下 **[執行]** 預覽報表。  
   
-##  <a name="Gender"></a>4. 使用影像顯示性別  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. 使用影像顯示性別  
  使用影像顯示人員的性別，並且使用第三個影像識別未知的性別值。 您會在報表中加入三個隱藏影像，以及一個新的資料行來顯示這些影像，然後依據 [Gender] 欄位中的值決定出現在資料行中的影像。  
   
  若要在製作橫條報表時套用色彩至包含影像的資料表資料格，您會先加入矩形，然後將影像加入矩形中。 您必須使用矩形，才能將背景色彩套用至矩形，而不是套用至影像。  
@@ -297,7 +296,7 @@ ms.locfileid: "66098850"
   
 14. 按一下 **[執行]** 預覽報表。  
   
-##  <a name="Lookup"></a>5. 查閱國家/地區名稱  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. 查閱國家/地區名稱  
  建立 CountryRegion 資料集並使用 **Lookup** 函數顯示國家/地區的名稱，而不使用國家/地區的識別碼。  
   
 #### <a name="to-create-the-countryregion-dataset"></a>若要建立 CountryRegion 資料集  
@@ -333,7 +332,7 @@ ms.locfileid: "66098850"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. 按一下 **「執行」** (**!**) 來執行查詢。  
+9. 按一下 [**執行**] （**！**）來執行查詢。  
   
      查詢結果為國家/地區識別碼和名稱。  
   
@@ -365,14 +364,13 @@ ms.locfileid: "66098850"
   
      完成的運算式為： `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
-     
-  **Lookup** 函數的語法會在 CountryRegion 資料集中指定 CountryRegionID 與 ID 之間的查閱，而該資料集會傳回 CountryRegion 值，並在同一個資料集中包含此值。  
+     **Lookup** 函數的語法會在 CountryRegion 資料集中指定 CountryRegionID 與 ID 之間的查閱，而該資料集會傳回 CountryRegion 值，並在同一個資料集中包含此值。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. 按一下 **[執行]** 預覽報表。  
   
-##  <a name="Count"></a>6. 計算自上次購買後的天數  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. 計算自上次購買後的天數  
  新增資料行，然後使用**Now**函數或內`ExecutionTime`建全域變數，計算自個人上次購買後的當日天數。  
   
 #### <a name="to-add-the-days-ago-column"></a>若要加入 [天前] 資料行  
@@ -408,8 +406,7 @@ ms.locfileid: "66098850"
 14. 在 [項目]**** 清單中，按兩下 [Now]****。  
   
     > [!WARNING]  
-    >  在生產報表中，不應該在隨報表轉譯而評估多次的運算式中使用 **Now** 函數 (例如，報表的詳細資料列)。 
-  **Now** 的值會依資料列而改變，而不同的值會影響運算式的評估結果，導致結果稍微不一致。 因此，您應該改用 `ExecutionTime` 提供的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全域變數。  
+    >  在生產報表中，不應該在隨報表轉譯而評估多次的運算式中使用 **Now** 函數 (例如，報表的詳細資料列)。 **Now** 的值會依資料列而改變，而不同的值會影響運算式的評估結果，導致結果稍微不一致。 因此，您應該改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供的 `ExecutionTime` 全域變數。  
   
 15. 如果游標不在 `Now(` 的正後方，請將它放至該處。  
   
@@ -419,9 +416,8 @@ ms.locfileid: "66098850"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. 使用指標顯示銷售比較  
- 加入新的資料行，並使用指標來顯示某人的年初至今（YTD）購買高於或低於平均 YTD 購買。 
-  **Round** 函數會移除值的小數。  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. 使用指標顯示銷售比較  
+ 加入新的資料行，並使用指標來顯示某人的年初至今（YTD）購買高於或低於平均 YTD 購買。 **Round** 函數會移除值的小數。  
   
  設定指標及其狀態需要進行許多步驟。 如果您想要，您可以在「設定指標」程式中直接跳過，然後從這個教學課程將完成的運算式複製/貼上至 [**運算式**] 對話方塊。  
   
@@ -525,7 +521,7 @@ ms.locfileid: "66098850"
   
 38. 按一下 **[執行]** 預覽報表。  
   
-##  <a name="GreenBar"></a>8. 將報表設為「綠色橫條」報表  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. 將報表設為「綠色橫條」報表  
  使用參數指定套用至報表中交替資料列的色彩，使其變成橫條報表。  
   
 #### <a name="to-add-a-parameter"></a>若要加入參數  
@@ -544,25 +540,25 @@ ms.locfileid: "66098850"
   
 6.  按一下 [指定值]****。  
   
-7.  按一下 [新增]  。  
+7.  按一下 **[新增]** 。  
   
-8.  在 [**標籤**] 方塊中，輸入：**黃色**  
+8.  在 [標籤]**** 方塊中，輸入 **Yellow**。  
   
 9. 在 [值]**** 方塊中，輸入 **Yellow**。  
   
-10. 按一下 [新增]  。  
+10. 按一下 **[新增]** 。  
   
 11. 在 [標籤]**** 方塊中，鍵入 **Green**  
   
 12. 在 [值]**** 方塊中，鍵入 **PaleGreen**  
   
-13. 按一下 [新增]  。  
+13. 按一下 **[新增]** 。  
   
 14. 在 [標籤]**** 方塊中，鍵入 **Blue**  
   
 15. 在 [值]**** 方塊中，鍵入 **LightBlue**  
   
-16. 按一下 [新增]  。  
+16. 按一下 **[新增]** 。  
   
 17. 在 [標籤]**** 方塊中，鍵入 **Pink**  
   
@@ -634,15 +630,15 @@ ms.locfileid: "66098850"
   
 1.  如果您不是在 [首頁]**** 索引標籤上，請按一下 [首頁]**** 返回設計檢視。  
   
-2.  按一下 **[執行]** 。  
+2.  按一下 [執行]****。  
   
 3.  在 [選擇色彩]**** 下拉式清單中，選取報表上非白色橫條的色彩。  
   
-4.  按一下 **[檢視報表]** 。  
+4.  按一下 [檢視報表]****。  
   
      報表隨即呈現，而且交替的資料列會使用您選擇的背景。  
   
-##  <a name="DateFormat"></a>選擇性格式化日期資料行  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>選擇性格式化日期資料行  
  格式化包含日期的 [上次購買]**** 資料行。  
   
 #### <a name="to-format-date-column"></a>若要格式化日期資料行  
@@ -655,12 +651,12 @@ ms.locfileid: "66098850"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>選擇性加入報表標題  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>選擇性加入報表標題  
  加入報表的標題。  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
-1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
+1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
 2.  輸入**銷售比較摘要**，然後按一下文字方塊外部。  
   
@@ -676,16 +672,16 @@ ms.locfileid: "66098850"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>選擇性儲存報表  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>選擇性儲存報表  
  您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。 如需詳細資訊，請參閱[儲存報表 &#40;報表產生器&#41;](report-builder/saving-reports-report-builder.md)。  
   
  本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>若要將報表儲存至報表伺服器  
   
-1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]** 。  
+1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
-2.  按一下 **[最近使用的網站和伺服器]** 。  
+2.  按一下 **[最近使用的網站和伺服器]**。  
   
 3.  選取或輸入您有權儲存報表之報表伺服器的名稱。  
   
@@ -693,26 +689,26 @@ ms.locfileid: "66098850"
   
 4.  在 [名稱]**** 中，將預設名稱取代為**銷售比較摘要**。  
   
-5.  按一下 [檔案]  。  
+5.  按一下 **[儲存]** 。  
   
  報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
 #### <a name="to-save-the-report-to-your-computer"></a>若要將報表儲存到您的電腦上  
   
-1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]** 。  
+1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
 2.  按一下 **[桌面]**、 **[我的文件]** 或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
   
 3.  在 [名稱]**** 中，將預設名稱取代為**銷售比較摘要**。  
   
-4.  按一下 [檔案]  。  
+4.  按一下 **[儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [指標 &#40;報表產生器和 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
- [資料表 &#40;報表產生器及 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS 的影像、文字方塊、矩形和線條&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [資料表 &#40;報表產生器和 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2e92e3e0f6752ea99fe89c962ebe96e343c0195b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097747"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserver_configurationsetting"></a>DatabaseQueryTimeout 屬性 (WMI MSReportServer_ConfigurationSetting)
@@ -45,7 +45,7 @@ public UInt32 DatabaseQueryTimeout;
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

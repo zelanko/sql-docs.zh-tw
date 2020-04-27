@@ -13,15 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa6f1df8858f5ba9bf302eb6a415182cfa9442c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095785"
 ---
 # <a name="database-engine-configuration---filestream"></a>Database Engine 組態 - Filestream
-  您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝啟用 FILESTREAM。 FILESTREAM 會將[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]與 NTFS 檔案系統整合，方法`varbinary(max)`是將二進位大型物件（BLOB）資料儲存為檔案系統上的檔案。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以插入、更新、查詢、搜尋和備份 FILESTREAM 資料。 Win32 檔案系統介面提供了資料的資料流方式存取。  
+  您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝啟用 FILESTREAM。 FILESTREAM 會將[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]與 NTFS 檔案系統整合，方法`varbinary(max)`是將二進位大型物件（BLOB）資料儲存為檔案系統上的檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以插入、更新、查詢、搜尋和備份 FILESTREAM 資料。 Win32 檔案系統介面提供了資料的資料流方式存取。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **對 Transact-SQL 存取啟用 FILESTREAM**  
@@ -37,7 +36,7 @@ ms.locfileid: "66095785"
  選取這個控制項即可允許遠端用戶端在此伺服器上存取這項 FILESTREAM 資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
+ [啟用和設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
   

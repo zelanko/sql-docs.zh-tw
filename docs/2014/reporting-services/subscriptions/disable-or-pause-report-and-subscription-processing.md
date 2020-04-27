@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100916"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暫停報表與訂閱處理
@@ -49,6 +49,6 @@ ms.locfileid: "66100916"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
- [安全性屬性頁面，&#40;報表管理員的專案&#41;](../security-properties-page-items-report-manager.md)  
+ [安全性屬性頁面，項目 &#40;報表管理員&#41;](../security-properties-page-items-report-manager.md)  
   
   

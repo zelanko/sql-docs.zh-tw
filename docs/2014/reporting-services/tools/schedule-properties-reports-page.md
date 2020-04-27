@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099789"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
@@ -27,7 +27,7 @@ ms.locfileid: "66099789"
  若要開啟此頁面， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請啟動、連接至報表伺服器、開啟 [**共用**排程] 資料夾、以滑鼠右鍵按一下共用排程、選取 [**屬性**]，然後按一下 [**報表**]。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
   
 ## <a name="options"></a>選項。  
  **資料夾**  
@@ -40,7 +40,7 @@ ms.locfileid: "66099789"
  [建立、修改和刪除共用排程](../subscriptions/create-modify-and-delete-schedules.md)   
  [[排程]](../subscriptions/schedules.md)   
  [Management Studio F1 說明中的報表伺服器](report-server-in-management-studio-f1-help.md)   
- [連接至 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
+ [連接到 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
  [設定報表的一般屬性 &#40;報表管理員&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

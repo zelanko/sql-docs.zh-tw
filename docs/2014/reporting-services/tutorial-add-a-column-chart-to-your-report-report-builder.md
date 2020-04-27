@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099129"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 (報表產生器)
@@ -30,7 +30,7 @@ ms.locfileid: "66099129"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>您將瞭解的內容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>您將瞭解的內容  
  在本教學課程中，您將學習如何執行下列作業：  
   
 1.  [從圖表精靈建立圖表](#Chart)  
@@ -59,7 +59,7 @@ ms.locfileid: "66099129"
 ## <a name="requirements"></a>需求  
  如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Chart"></a>1. 從圖表 Wizard 建立圖表報表  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. 從圖表 Wizard 建立圖表報表  
  從 [**消費者入門**] 對話方塊中，使用 [圖表] Wizard 來建立內嵌資料集、選擇共用資料來源，以及建立直條圖。  
   
 > [!NOTE]  
@@ -69,23 +69,23 @@ ms.locfileid: "66099129"
   
 1.  按一下 **[開始]**、依序指向 **[程式集]** 和 **[Microsoft SQL Server 2012 報表產生器]**，然後按一下 **[報表產生器]**。  
   
-     此時會出現 **[使用者入門]** 對話方塊。  
+     [**消費者入門**] 對話方塊隨即出現。  
   
     > [!NOTE]  
-    >  如果 **[使用者入門]** 對話方塊沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
+    >   如果 **[使用者入門]** 對話方塊沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
-3.  在右窗格中，按一下 [圖表精靈]  。  
+3.  在右窗格中，按一下 [圖表精靈]****。  
   
-4.  在 [選擇資料集]  頁面上，按一下 [建立資料集]  ，然後按一下 [下一步]  。  
+4.  在 [選擇資料集]**** 頁面上，按一下 [建立資料集]****，然後按一下 [下一步]****。  
   
-5.  在 [選擇與資料來源的連線]  頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]  。 您可能需要輸入使用者名稱和密碼。  
+5.  在 [選擇與資料來源的連線]**** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]****。 您可能需要輸入使用者名稱和密碼。  
   
     > [!NOTE]  
     >  只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]** 。  
+6.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
 7.  將下列查詢貼入查詢窗格中：  
   
@@ -108,20 +108,20 @@ ms.locfileid: "66099129"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (選擇性) 按一下 [執行] 按鈕 ( **!** ) 來查看您報表所依據的資料。  
+8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您報表所依據的資料。  
   
 9. 按 [下一步]  。  
   
-##  <a name="ChartType"></a>2. 選擇圖表類型  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 選擇圖表類型  
  您可以選擇各種不同預先定義的圖表類型。  
   
 #### <a name="to-add-a-column-chart"></a>加入直條圖  
   
-1.  在 [選擇圖表類型]  頁面上，直條圖是預設圖表類型。 按 [下一步]  。  
+1.  在 [選擇圖表類型]**** 頁面上，直條圖是預設圖表類型。 按 [下一步]  。  
   
-2.  在 [排列圖表欄位]  頁面上，將 [SalesDate] 欄位拖曳至 [類別目錄]  。 類別目錄會顯示在水平軸上。  
+2.  在 [排列圖表欄位]**** 頁面上，將 [SalesDate] 欄位拖曳至 [類別目錄]****。 類別目錄會顯示在水平軸上。  
   
-3.  將 [Sales] 欄位拖曳至 [值]  。 [值]  方塊會顯示 [Sum(Sales)]，因為系統會針對每個日期彙總銷售總計值的總和。 值會顯示在垂直軸上。  
+3.  將 [Sales] 欄位拖曳至 [值]****。 [值]**** 方塊會顯示 [Sum(Sales)]，因為系統會針對每個日期彙總銷售總計值的總和。 值會顯示在垂直軸上。  
   
 4.  按 [下一步]  。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66099129"
   
 8.  按一下 **[執行]** 預覽報表。  
   
-##  <a name="Horizontal"></a>3. 將水準軸格式化並加上標籤  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. 將水準軸格式化並加上標籤  
  根據預設，水平軸會以一般格式顯示值，此格式會自動調整為適合圖表的大小。  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>若要格式化水平軸上的日期  
@@ -150,11 +150,11 @@ ms.locfileid: "66099129"
   
 4.  在 [**類別**] 中，選取 [**日期**]。  
   
-5.  在 [類型]  方塊中，選取 [31 Jan 2000]  。  
+5.  在 [類型]**** 方塊中，選取 [31 Jan 2000]****。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  在 [主資料夾] 索引標籤上，按一下 [執行]  預覽報表。  
+7.  在 [主資料夾] 索引標籤上，按一下 [執行]**** 預覽報表。  
   
  日期會以您所選取的日期格式顯示。 請注意，圖表並未在水平軸上標示每個類別目錄。 根據預設，只有容納在軸旁的標籤才會包含在內。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "66099129"
   
 6.  在 [**變更軸標籤自動調整選項**] 中，選取 [**停用自動調整**]。  
   
-7.  在 [標籤旋轉角度]  中，選取 [-90]  。  
+7.  在 [標籤旋轉角度]**** 中，選取 [-90]****。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -184,7 +184,7 @@ ms.locfileid: "66099129"
   
  在圖表上，標籤會旋轉而且會顯示每隔三天的標籤。  
   
-##  <a name="Legend"></a>4. 移動圖例  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. 移動圖例  
  圖例是從類別目錄和數列資料自動建立。  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>若要移動直條圖之圖表區域下方的圖例  
@@ -203,7 +203,7 @@ ms.locfileid: "66099129"
   
 6.  按一下 **[執行]** 預覽報表。  
   
-##  <a name="ChartTitle"></a>5. 為圖表標題  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. 為圖表標題  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>若要變更圖表區域上方的圖表標題  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66099129"
   
 3.  按一下 **[執行]** 預覽報表。  
   
-##  <a name="Vertical"></a>6. 格式化垂直軸並為其加上標籤  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. 格式化垂直軸並為其加上標籤  
  根據預設，垂直軸會以一般格式顯示值，此格式會自動調整為適合圖表的大小。  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>若要將垂直軸上的數字格式化成貨幣  
@@ -242,19 +242,19 @@ ms.locfileid: "66099129"
   
 12. 按一下 **[執行]** 預覽報表。  
   
-##  <a name="Average"></a>7. 加入移動平均  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. 加入移動平均  
   
 #### <a name="to-add-a-moving-average"></a>若要加入移動平均  
   
 1.  切換到報表設計檢視。  
   
-2.  按兩下圖表以顯示 [圖表資料]  窗格。  
+2.  按兩下圖表以顯示 [圖表資料]**** 窗格。  
   
 3.  以滑鼠右鍵按一下位於 [**值**] 區域中的 **[Sum （Sales）]** 欄位，然後按一下 [**加入匯出數列**]。  
   
-4.  在 [公式]  中，確認已選取 [移動平均]  。  
+4.  在 [公式]**** 中，確認已選取 [移動平均]****。  
   
-5.  在 [設定公式參數]  中，針對 [週期]  選取 [4]  。  
+5.  在 [設定公式參數]**** 中，針對 [週期]**** 選取 [4]****。  
   
 6.  按一下 [**框線**]。  
   
@@ -266,13 +266,13 @@ ms.locfileid: "66099129"
   
  圖表會顯示一條線，代表依照日期區分之總銷售量的移動平均 (每四個日期的平均)。  
   
-##  <a name="Title"></a>8. 加入報表標題  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. 加入報表標題  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
 1.  切換到報表設計檢視。  
   
-2.  在設計介面上，按一下 **[按一下以加入標題]** 。  
+2.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
 3.  輸入**銷售圖表**，按 enter，然後輸入**2009 年1月到12月**，讓它看起來像這樣：  
   
@@ -290,17 +290,17 @@ ms.locfileid: "66099129"
   
 7.  按一下 **[執行]** 預覽報表。  
   
-##  <a name="Save"></a>9. 儲存報表  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. 儲存報表  
   
 #### <a name="to-save-the-report"></a>若要儲存報表  
   
 1.  切換到報表設計檢視。  
   
-2.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]** 。  
+2.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]**。  
   
-3.  在 [名稱]  中，鍵入 **Sales Order Column Chart**。  
+3.  在 [名稱]**** 中，鍵入 **Sales Order Column Chart**。  
   
-4.  按一下 [檔案]  。  
+4.  按一下 **[儲存]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
  您已成功完成「將直條圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) 和[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  

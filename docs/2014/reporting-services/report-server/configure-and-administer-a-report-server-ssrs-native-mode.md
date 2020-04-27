@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104003"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>設定和管理報表伺服器 (SSRS 原生模式)
@@ -59,7 +59,7 @@ ms.locfileid: "66104003"
  [設定報表產生器存取](configure-report-builder-access.md)   
  [Reporting Services 組態檔](reporting-services-configuration-files.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)   
+ [Reporting Services 的安全性與保護](../security/reporting-services-security-and-protection.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](reporting-services-report-server-native-mode.md)  
   
   

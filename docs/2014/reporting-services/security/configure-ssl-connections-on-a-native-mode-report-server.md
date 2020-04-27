@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102125"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器的加密連接。 如果您在報表伺服器電腦的本機憑證存放區內有安裝憑證 (.cer) 檔案，您可以將此憑證繫結到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目，以便透過加密通道支援報表伺服器連接。  
   
 > [!TIP]  
@@ -29,8 +28,7 @@ ms.locfileid: "66102125"
  由於 Internet Information Services (IIS) 也使用 HTTP SSL，所以如果您在同一部電腦上執行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，將必須負責解決重要的互通性問題。 請務必檢閱「與 IIS 的互通性問題」一節，以取得如何對付這些問題的指引。  
   
 ## <a name="server-certificate-requirements"></a>伺服器憑證需求  
- 電腦上必須已安裝伺服器憑證 (不支援用戶端憑證)。 Reporting Services 不提供要求、產生、下載或安裝憑證的功能。 
-  [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 會提供一個憑證嵌入式管理單元，可用它來從信任的憑證授權單位要求憑證。  
+ 電腦上必須已安裝伺服器憑證 (不支援用戶端憑證)。 Reporting Services 不提供要求、產生、下載或安裝憑證的功能。 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 會提供一個憑證嵌入式管理單元，可用它來從信任的憑證授權單位要求憑證。  
   
  如果是為了測試，您可以在本機產生憑證。 如果您使用 **MakeCert** 公用程式和範例命令當做範本，請務必將伺服器名稱指定為主機，並在執行此命令之前先移除所有分行符號。 如果您在 DOS 視窗中執行此命令，可能需要增加視窗的緩衝區大小，以容納整個命令。  
   
@@ -54,10 +52,9 @@ ms.locfileid: "66102125"
   
 1.  啟動 Reporting Services 組態工具，並連接到報表伺服器。  
   
-2.  按一下 **[Web 服務 URL]**。  
+2.  按一下 **[Web 服務 URL]** 。  
   
-3.  展開 SSL 憑證的清單。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會偵測本機存放區內的伺服器驗證憑證。 如果您已安裝憑證，而且沒有在清單中看到它，您可能需要重新啟動服務。 您可以在 Reporting Services 組態工具的 **[報表伺服器狀態]** 頁面中，使用 **[停止]** 和 **[啟動]** 按鈕來重新啟動服務。  
+3.  展開 SSL 憑證的清單。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會偵測本機存放區內的伺服器驗證憑證。 如果您已安裝憑證，而且沒有在清單中看到它，您可能需要重新啟動服務。 您可以在 Reporting Services 組態工具的 **[報表伺服器狀態]** 頁面中，使用 **[停止]** 和 **[啟動]** 按鈕來重新啟動服務。  
   
 4.  選取憑證。  
   
@@ -71,7 +68,7 @@ ms.locfileid: "66102125"
   
 1.  按一下 **[報表管理員 URL]**。  
   
-2.  按一下 **[進階]** 。  
+2.  按一下 [進階]****。  
   
 3.  在 **[報表管理員的多重 SSL 識別]** 中，按一下 **[加入]**。  
   
@@ -85,11 +82,9 @@ ms.locfileid: "66102125"
 > [!NOTE]  
 >  如果在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中設定 SSL 憑證繫結之後，需要從電腦移除該憑證，請務必先從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 移除繫結，然後再移除電腦中的憑證。 否則，您將無法使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具或 WMI 來移除繫結，而且會收到「無效的參數」錯誤。 如果您已經從電腦移除憑證，就可以使用 Httpcfg.exe 工具從 HTTP.SYS 移除繫結。 如需有關 Httpcfg.exe 的詳細資訊，請參閱 Windows 產品文件集。  
   
- SSL 繫結是 Microsoft Windows 中的共用資源。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或其他工具 (像是 IIS 管理員) 所做的變更，可能會影響同一部電腦上的其他應用程式。 最佳做法是使用相同的工具編輯用來建立繫結的繫結。  例如，如果您使用組態管理員建立 SSL 繫結，則建議您使用組態管理員管理繫結的生命週期。 如果您使用 IIS 管理員建立繫結，則建議您使用 IIS 管理員管理繫結的生命週期。 如果在電腦上安裝 IIS 之後才安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，則最好在設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之前先檢閱 IIS 中的 SSL 組態。  
+ SSL 繫結是 Microsoft Windows 中的共用資源。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或其他工具 (像是 IIS 管理員) 所做的變更，可能會影響同一部電腦上的其他應用程式。 最佳做法是使用相同的工具編輯用來建立繫結的繫結。  例如，如果您使用組態管理員建立 SSL 繫結，則建議您使用組態管理員管理繫結的生命週期。 如果您使用 IIS 管理員建立繫結，則建議您使用 IIS 管理員管理繫結的生命週期。 如果在電腦上安裝 IIS 之後才安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，則最好在設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之前先檢閱 IIS 中的 SSL 組態。  
   
- 如果您使用 Reporting Services 組態管理員移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 繫結，SSL 可能無法再於執行 Internet Information Services (IIS) 的伺服器或另一部 HTTP.SYS 伺服器的網站上運作。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會移除下列登錄機碼。 移除此登錄機碼時，IIS 的 SSL 繫結也會移除。 若沒有此繫結，就不會對 HTTPS 通訊協定提供 SSL。 若要診斷此問題，請使用 IIS 管理員或 HTTPCFG.exe 命令列公用程式。若要解決此問題，請使用 IIS 管理員還原網站的 SSL 繫結。若要避免未來發生此問題，請使用 IIS 管理員移除 SSL 繫結，然後使用 IIS 管理員還原所需網站的繫結。 如需詳細資訊，請參閱知識庫文章：[移除 SSL 繫結之後 SSL 便不再有用 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) \(英文\)。  
+ 如果您使用 Reporting Services 組態管理員移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 繫結，SSL 可能無法再於執行 Internet Information Services (IIS) 的伺服器或另一部 HTTP.SYS 伺服器的網站上運作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會移除下列登錄機碼。 移除此登錄機碼時，IIS 的 SSL 繫結也會移除。 若沒有此繫結，就不會對 HTTPS 通訊協定提供 SSL。 若要診斷此問題，請使用 IIS 管理員或 HTTPCFG.exe 命令列公用程式。若要解決此問題，請使用 IIS 管理員還原網站的 SSL 繫結。若要避免未來發生此問題，請使用 IIS 管理員移除 SSL 繫結，然後使用 IIS 管理員還原所需網站的繫結。 如需詳細資訊，請參閱知識庫文章：[移除 SSL 繫結之後 SSL 便不再有用 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](authentication-with-the-report-server.md)   

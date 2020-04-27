@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103060"
 ---
 # <a name="update-a-resource-report-manager"></a>更新資源 (報表管理員)
@@ -35,7 +35,7 @@ ms.locfileid: "66103060"
   
 5.  按一下 [取代]****，即可開啟 [匯入資源]**** 頁面。  
   
-6.  按一下 **[瀏覽]** 。  
+6.  按一下 [瀏覽]****。  
   
 7.  選取您要用來取代目前資源的檔案。 您可以使用資源檔案的更新版本，或者指定不同名稱或檔案類型的檔案。  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100985"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
@@ -26,7 +26,7 @@ ms.locfileid: "66100985"
  建立訂閱的使用者便擁有該訂閱。 每一個使用者都可以修改或刪除自己所擁有的訂閱。  
   
 > [!NOTE]  
->  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 開始，您可以用程式設計的方式傳送訂閱的擁有權。 沒有任何使用者介面可以用來傳送訂閱的擁有權。 如需詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 開始，您可以用程式設計的方式傳送訂閱的擁有權。 沒有任何使用者介面可以用來傳送訂閱的擁有權。 如需詳細資訊，請參閱＜<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>＞  
   
  視**rsreportserver.config**的設定檔設定而定，使用者可能可以將更多使用者新增至訂用帳戶（例如，管理員會新增其直屬員工的電子郵件地址，讓他們各自收到一份報告）。 是否支援此功能取決於在定義個別訂閱時，[收件者:] 欄位是否為可見的。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66100985"
   
 -   [若要刪除訂用帳戶](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a>若要建立訂用帳戶  
+##  <a name="to-create-a-subscription"></a><a name="bkmk_create_subscription"></a>若要建立訂用帳戶  
  若要建立訂閱，請選擇適用於報表伺服器部署的工具和方法：  
   
 -   本主題的內容描述如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表管理員在原生模式報表伺服器上建立訂閱。 定義了訂閱之後，您可以在報表管理員中，透過特定報表的 [我的訂閱] 頁面或 **[訂閱]** 索引標籤存取訂閱。  
@@ -61,7 +61,7 @@ ms.locfileid: "66100985"
   
  本主題並未說明如何建立資料驅動訂閱。 如需如何建立資料驅動訂閱的指示，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) 或報表管理員中 [建立資料驅動訂閱] 頁面的線上說明。  
   
-###  <a name="bkmk_create_fileshare_subscription"></a>若要建立檔案共用訂閱  
+###  <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a>若要建立檔案共用訂閱  
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100985"
   
 8.  在 [轉譯格式] 中，選取檔案傳遞的報表輸出格式。 選擇對應至將用於開啟報表之桌面應用程式的格式。 請避免使用無法在單一資料流完成報表轉譯的格式，或者會導入靜態檔案無法支援之互動性的格式 (例如 HTML 4.0)。  
   
-9. 在 [**使用者名稱**] 和 [**密碼**] 文字方塊中，使用使用者名稱的 [ * \<網域>* \\ * \<使用者名稱>* 格式，指定存取檔案共用所需的認證。  
+9. 在 [使用者名稱]  及 [密碼]  文字方塊中，指定存取檔案共用所需的認證，使用者名稱請使用 \<網域>  \\\<使用者名稱>  。  
   
 10. 指定覆寫選項。 如果您按一下 **[如果舊版存在，不要覆寫檔案]**，則若是偵測到現有的檔案，將不會傳遞。 如果您按一下 **[加入較新版本時，遞增檔案名稱]**，報表伺服器就會在檔案名稱後面附加一個數字，以便與相同名稱的現有檔案區別。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66100985"
   
  報表會以靜態檔案傳遞。 如果報表包括互動式功能 (例如，連結到其他資料列或資料行)，則那些功能無法使用。  
   
-###  <a name="bkmk_create_email_subscription"></a>若要建立電子郵件訂閱  
+###  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a>若要建立電子郵件訂閱  
   
 1.  在報表管理員的 **[內容]** 頁面上，瀏覽至您要訂閱的報表。 按一下報表以開啟它。  
   
@@ -106,10 +106,10 @@ ms.locfileid: "66100985"
   
 3.  在 [**傳遞者**] 中，選取 [**電子郵件**]。 如果這種傳遞類型無法使用，表示您的報表伺服器尚未針對電子郵件訂閱進行設定。  
   
-4.  **在 [收**件者] 文字方塊中，會使用您的網域使用者帳戶來自我定址 [收件者：] 欄位中的收件者名稱。 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者]**** 欄位。 如需變更設定電子郵件地址的詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+4.  **在 [收**件者] 文字方塊中，會使用您的網域使用者帳戶來自我定址 [收件者：] 欄位中的收件者名稱。 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者]  欄位。 如需變更設定電子郵件地址的詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
     > [!NOTE]  
-    >  根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以在 [副本]****、[密件副本]**** 和 [回覆至]**** 文字方塊中，鍵入其他電子郵件地址。 這需要您具有管理所有訂閱的權限。  
+    >  根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以在 [副本]  、[密件副本]  和 [回覆至]  文字方塊中，鍵入其他電子郵件地址。 這需要您具有管理所有訂閱的權限。  
   
 5.  選取傳遞選項，如下所示：  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66100985"
   
 9. 如果是參數化報表，請指定要用於此訂閱之報表的參數。 您指定的參數，可以與視需要執行報表或依其他排程作業執行報表所用的參數不同。  
   
-##  <a name="bkmk_modify_subscription"></a>若要修改訂用帳戶  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a>若要修改訂用帳戶  
  您可以在任何時間修改訂閱。 如果您在處理訂閱時修改訂閱，當更新的設定在傳遞延伸模組接收到訂閱資料之前，儲存到報表伺服器資料庫中時，就會使用更新的設定。 否則，會使用現有的設定。  
   
  若要找出訂閱，請使用 **[我的訂閱]** 頁面，或檢視與報表相關聯的訂閱定義。 您無法直接搜尋訂閱，也無法依擁有者名稱、觸發程序資訊、狀態資訊等等搜尋訂閱。  
@@ -151,7 +151,7 @@ ms.locfileid: "66100985"
 > [!NOTE]  
 >  報表伺服器管理員無法從一個位置，管理在給定報表伺服器上使用的所有個別訂閱。 然而，報表伺服器管理員可以存取個別訂閱以修改或刪除。  
   
-##  <a name="bkmk_delete_subscription"></a>若要刪除訂用帳戶  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a>若要刪除訂用帳戶  
  刪除訂閱：  
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
@@ -173,7 +173,7 @@ ms.locfileid: "66100985"
 ## <a name="see-also"></a>另請參閱  
  [工作和權限](../security/tasks-and-permissions.md)   
  [建立及管理 SharePoint 模式報表伺服器的訂閱](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [建立和管理原生模式報表伺服器的訂閱](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [建立及管理原生模式報表伺服器的訂閱](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   

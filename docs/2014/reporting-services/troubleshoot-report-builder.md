@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099337"
 ---
 # <a name="troubleshoot-report-builder"></a>疑難排解報表產生器
@@ -25,13 +25,13 @@ ms.locfileid: "66099337"
  下列主題可協助您針對報表進行疑難排解，這將取決於您是報表作者還是報表伺服器管理員。  
   
 ## <a name="report-authors"></a>報表作者  
- [報表疑難排解：地圖報表 &#40;報表產生器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [&#40;報表產生器和 SSRS&#41;疑難排解報表元件](report-parts-report-builder-and-ssrs.md)  
   
  [疑難排解圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
-## <a name="administrators"></a>系統管理員  
+## <a name="administrators"></a>Administrators  
  [安裝、解除安裝和報表產生器支援](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
  此外，請參閱《 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中檔集的下列主題：  

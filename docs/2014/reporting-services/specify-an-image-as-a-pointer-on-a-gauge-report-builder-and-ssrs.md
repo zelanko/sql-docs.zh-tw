@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101151"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>將影像指定為量測計的指標 (報表產生器及 SSRS)
@@ -57,9 +57,9 @@ ms.locfileid: "66101151"
 10. 在 [ **TransparentColor**] 中，挑選您想要從影像中移除的色彩值。 這樣就會針對量測計的指標建立連續的外觀。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [格式化量測計上的指標 &#40;報表產生器和 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [將量測計加入報表 &#40;報表產生器和 SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
- [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS 格式化線條、色彩和影像&#41;](report-design/images-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
   

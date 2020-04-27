@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101812"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>建立、刪除或修改角色 (Management Studio)
@@ -76,8 +76,8 @@ ms.locfileid: "66101812"
          選取這個角色的成員可以執行的工作，然後按一下 **[確定]** 來套用變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [連接至 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)   
+ [連接到 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)   
  （create-and-manage-role-assignments.md）   
- [SQL Server Management Studio &#40;SSRS&#41;中的 Reporting Services](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [SQL Server Management Studio 中的 Reporting Services &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

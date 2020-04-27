@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101013"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
@@ -30,11 +30,11 @@ ms.locfileid: "66101013"
   
  建立訂閱時，有三種方式可以指定其傳遞：  
   
--   **文件庫**：您可以建立訂閱，以便將以原始報表為基礎的文件傳遞至與原始報表位於相同 SharePoint 網站中的程式庫。 您無法將文件傳遞至相同網站集合中另一部伺服器或另一個網站上的程式庫。 若要傳遞文件，您必須在報表要傳遞至其中的程式庫上擁有「新增項目」權限。  
+-   **文件庫**：您可建立訂閱，以便將以原始報表為基礎的文件傳遞至與原始報表位於相同 SharePoint 網站中文件庫。 您無法將文件傳遞至相同網站集合中另一部伺服器或另一個網站上的程式庫。 若要傳遞文件，您必須在報表要傳遞至其中的程式庫上擁有「新增項目」權限。  
   
--   **檔案資料夾：** 您可以將以原始報表為基礎的文件傳遞至檔案系統上的共用資料夾。 您必須選取可透過網路連接存取的現有資料夾。  
+-   **檔案資料夾：** 您可將以原始報表為基礎的文件傳遞至檔案系統上共用資料夾。 您必須選取可透過網路連接存取的現有資料夾。  
   
--   **電子郵件：** 如果報表伺服器設定為使用報表伺服器電子郵件傳遞延伸模組，您就可以建立將報表或已匯出報表檔案 (以輸出格式儲存) 傳送至收件匣的訂閱。 若只要接收通知，但不接收報表或報表 URL，請清除 **[包含這個報表的連結]** 和 **[在訊息內顯示報表]** 核取方塊。  
+-   **電子郵件：** 如果報表伺服器設定為使用報表伺服器電子郵件傳遞延伸模組，即可建立將報表或已匯出報表檔案 (以輸出格式儲存) 傳送至收件匣的訂閱。 若只要接收通知，但不接收報表或報表 URL，請清除 **[包含這個報表的連結]** 和 **[在訊息內顯示報表]** 核取方塊。  
   
  **本主題內容：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101013"
   
 -   [刪除訂閱](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> 訂閱的一般需求  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> 訂閱的一般需求  
  若要建立訂閱，報表必須使用預存認證，而且您必須具有檢視報表和建立警示的權限。  
   
  當您建立訂閱時，可以選取輸出檔案格式。 並非每份報表都適用於每種格式。 在您選取訂閱的格式之前，請開啟報表並將它匯出成不同的格式，以便確認它是否如預期方式顯示。  
@@ -66,7 +66,7 @@ ms.locfileid: "66101013"
   
  您針對訂閱所選取的輸出格式會以報表伺服器上安裝的轉譯延伸模組為基礎。 您只能選取報表伺服器之轉譯延伸模組所支援的輸出格式。  
   
-###  <a name="bkmk_tosharepoint_library"></a> 若要建立傳遞報表至 SharePoint 文件庫的訂閱  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> 若要建立傳遞報表至 SharePoint 文件庫的訂閱  
   
 1.  瀏覽至包含報表的 SharePoint 文件庫。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66101013"
   
 10. 在 **[參數]** 中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如果您選取的報表不包含參數，表示在此頁面上看不到報表區段。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> 若要建立共用資料夾傳遞的訂閱  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> 若要建立共用資料夾傳遞的訂閱  
   
 1.  瀏覽至包含報表的 SharePoint 文件庫。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66101013"
   
 12. 在 **[參數]** 中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
-###  <a name="bkmk_subscription_for_email"></a> 建立報表伺服器電子郵件傳遞的訂閱  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> 建立報表伺服器電子郵件傳遞的訂閱  
   
 1.  瀏覽至包含報表的 SharePoint 文件庫。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66101013"
   
 10. 在 **[參數]** 中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
-###  <a name="bkmk_to_modify_subscription"></a> 檢視或修改訂閱  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> 檢視或修改訂閱  
   
 1.  瀏覽至包含報表的 SharePoint 文件庫。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66101013"
   
 3.  每個訂閱都可由傳遞類型加以識別。 按一下訂閱類型，即可檢視並變更現有的屬性。  
   
-###  <a name="bkmk_to_delete_subscription"></a> 刪除訂閱  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> 刪除訂閱  
   
 1.  瀏覽至包含報表的 SharePoint 文件庫。  
   

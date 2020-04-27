@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103614"
 ---
 # <a name="process-large-reports"></a>處理大型報表
@@ -71,7 +71,7 @@ ms.locfileid: "66103614"
 ## <a name="see-also"></a>另請參閱  
  [訂閱與傳遞 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [設定報表處理屬性](set-report-processing-properties.md)   
- [指定報表資料來源的認證和連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server-content-management-ssrs-native-mode.md)   
  [預先載入快取 &#40;報表管理員&#41;](preload-the-cache-report-manager.md)  
   

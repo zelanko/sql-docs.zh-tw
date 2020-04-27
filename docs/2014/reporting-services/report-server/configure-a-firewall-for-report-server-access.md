@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104156"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -39,25 +39,25 @@ ms.locfileid: "66104156"
   
 #### <a name="to-open-port-80-on-windows-7-windows-server-2008-r2-windows-server-2012-and-2012-r2"></a>在 Windows 7、Windows Server 2008 R2、Windows Server 2012 和 2012 R2 上開啟通訊埠 80  
   
-1.  在 **[開始]** 功能表中，按一下 **[控制台]** 、按一下 **[系統及安全性]** ，然後按一下 **[Windows 防火牆]** 。 如果 [控制台] 沒有設定為「類別目錄」檢視，您只需要選取 **[Windows 防火牆]** 。  
+1.  在 **[開始]** 功能表中，按一下 **[控制台]**、按一下 **[系統及安全性]**，然後按一下 **[Windows 防火牆]**。 如果 [控制台] 沒有設定為「類別目錄」檢視，您只需要選取 **[Windows 防火牆]**。  
   
-2.  按一下 [進階設定]  。  
+2.  按一下 [進階設定]****。  
   
-3.  按一下 **[輸入規則]** 。  
+3.  按一下 **[輸入規則]**。  
   
-4.  按一下 [**動作**] 視窗中的 [**新增規則**]**。**  
+4.  在 **[動作]** 視窗中，按一下 **[新增規則]** 。****  
   
-5.  按一下 **[連接埠]** 的 **[規則類型]** 。  
+5.  按一下 **[連接埠]** 的 **[規則類型]**。  
   
 6.  按 [下一步]  。  
   
-7.  在 **[通訊協定及連接埠]** 頁面上，按一下 **[TCP]** 。  
+7.  在 **[通訊協定及連接埠]** 頁面上，按一下 **[TCP]**。  
   
 8.  選取 **[特定本機連接埠]** ，然後輸入值： **80**。  
   
 9. 按 [下一步]  。  
   
-10. 在 **[動作]** 頁面上，按一下 **[允許該連線]** 。  
+10. 在 **[動作]** 頁面上，按一下 **[允許該連線]**。  
   
 11. 按 [下一步]  。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66104156"
   
 13. 按 [下一步]  。  
   
-14. 在 [名稱]  頁面上，輸入名稱：**ReportServer (TCP 在連接埠 80 上)**  
+14. 在 [名稱]**** 頁面上，輸入名稱：**ReportServer (TCP 在連接埠 80 上)**  
   
 15. 按一下 [完成]  。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66104156"
   
 2.  按一下 [**允許程式通過 Windows 防火牆**]。  
   
-3.  按一下 **[繼續]**。  
+3.  按一下 **[繼續]** 。  
   
 4.  在 [例外] 索引標籤上，按一下 [**新增埠**]。  
   
@@ -91,19 +91,19 @@ ms.locfileid: "66104156"
   
 9. 按一下 [**僅限我的網路（子網）**]，然後按一下 **[確定]**。  
   
-10. 按一下 **[確定]** ，關閉對話方塊。  
+10. 按一下 [確定]**** 關閉對話方塊。  
   
 11. 重新啟動電腦。  
   
 ## <a name="next-steps"></a>後續步驟  
- 在您開啟此通訊埠之後，以及確認遠端使用者是否可以在您開啟的通訊埠上存取報表伺服器之前，您必須透過首頁和網站層級的角色指派，為使用者授與此報表伺服器的存取權。 如果使用者沒有足夠的權限，雖然您可以正確開啟通訊埠，不過報表伺服器連接仍然會失敗。 如需詳細資訊，請參閱《[ 線上叢書》中的](../security/grant-user-access-to-a-report-server.md)將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 在您開啟此通訊埠之後，以及確認遠端使用者是否可以在您開啟的通訊埠上存取報表伺服器之前，您必須透過首頁和網站層級的角色指派，為使用者授與此報表伺服器的存取權。 如果使用者沒有足夠的權限，雖然您可以正確開啟通訊埠，不過報表伺服器連接仍然會失敗。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../security/grant-user-access-to-a-report-server.md)。  
   
- 您也可以在另一部電腦上啟動報表管理員，以確認此通訊埠已正確開啟。 如需詳細資訊，請參閱《[ 線上叢書》中的](../report-manager-ssrs-native-mode.md)報表管理員 &#40;SSRS 原生模式&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 您也可以在另一部電腦上啟動報表管理員，以確認此通訊埠已正確開啟。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [建立 &#40;SSRS Configuration Manager 的報表伺服器資料庫&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)  
   

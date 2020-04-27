@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098285"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>ListReportServersInDatabase 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -45,16 +45,16 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ```  
   
 ## <a name="parameters"></a>參數  
- *MachineNames []*  
+ *MachineNames[]*  
  [out] 包含資料庫中報表伺服器安裝之電腦名稱的陣列。  
   
- *InstanceNames []*  
+ *InstanceNames[]*  
  [out] 包含資料庫中每個報表伺服器安裝之執行個體名稱的陣列。  
   
  *InstallationIDs[]*  
  [out] 包含資料庫中每個報表伺服器安裝之安裝識別碼的陣列。  
   
- *IsInitialized []*  
+ *IsInitialized[]*  
  [out] 包含資料庫中每個報表伺服器安裝之初始化狀態的陣列。  
   
  *長度*  
@@ -73,7 +73,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  ListReportServersInDatabase 會列出存在報表伺服器資料庫中的報表伺服器安裝，不論它們是否具有安全資訊的存取權都一樣，並且傳回一組包含每個安裝之資訊的相符陣列。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

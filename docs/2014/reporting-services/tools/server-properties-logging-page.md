@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099533"
 ---
 # <a name="server-properties-logging-page"></a>伺服器屬性 (記錄頁面)
@@ -28,12 +28,12 @@ ms.locfileid: "66099533"
  **啟用報表執行記錄**  
  按一下即可建立和儲存有關伺服器之報表活動的資訊。 如果此選項已啟用，報表伺服器將會追蹤使用的報表、報表處理的頻率、執行的報表作業類型、輸出格式，以及執行報表的人員。 如需有關記錄檔中所捕捉其他資料點的詳細資訊，請參閱[報表伺服器執行記錄和 ExecutionLog3 視圖](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
- **移除此天數之前的記錄專案**  
+ **移除此天數之前的記錄項目**  
  指定天數，在此天數後的記錄項目會從報表執行記錄中刪除。 預設值為 60 天。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [連接至 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
+ [將報表伺服器屬性設定 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [連接到 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)   
  [Management Studio F1 說明中的報表伺服器](report-server-in-management-studio-f1-help.md)   
  [報表伺服器執行記錄和 ExecutionLog3 檢視](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  

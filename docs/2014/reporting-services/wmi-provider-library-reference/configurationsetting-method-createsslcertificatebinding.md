@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098534"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>CreateSSLCertificateBinding 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -38,7 +38,7 @@ public void CreateSSLCertificateBinding(string application,
 ```  
   
 ## <a name="parameters"></a>參數  
- *Application*  
+ *應用程式*  
  應該建立憑證繫結之應用程式的名稱。  
   
  *CertificateHash*  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  指定主機名稱的 URL 保留項目存在，但是此主機名稱與憑證主機名稱不符。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

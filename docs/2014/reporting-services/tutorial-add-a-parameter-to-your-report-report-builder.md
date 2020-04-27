@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099093"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
@@ -22,7 +22,7 @@ ms.locfileid: "66099093"
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
-##  <a name="BackToTop"></a>您將瞭解的內容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>您將瞭解的內容  
  在本教學課程中，您將學習如何執行下列作業：  
   
 1.  [從資料表或矩陣精靈建立矩陣報表和資料集](#Setup)  
@@ -61,7 +61,7 @@ ms.locfileid: "66099093"
 ## <a name="requirements"></a>需求  
  如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Setup"></a>1. 從資料表或矩陣 Wizard 建立矩陣報表和資料集  
+##  <a name="1-create-a-matrix-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. 從資料表或矩陣 Wizard 建立矩陣報表和資料集  
  建立矩陣報表、資料來源與資料集。  
   
 > [!NOTE]  
@@ -69,20 +69,20 @@ ms.locfileid: "66099093"
   
 #### <a name="to-create-a-new-matrix-report"></a>若要建立新的矩陣報表  
   
-1.  按一下 **[開始]**、依序指向 **[程式集]** 和 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**[報表產生器]**，然後按一下 **[報表產生器]**。  
+1.  按一下 [ **開始**]、依序指向 [ **程式集**] 和 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**]，然後按一下 [ **報表產生器**]。  
   
-     此時會出現 **[使用者入門]** 對話方塊。  
+     [**消費者入門**] 對話方塊隨即出現。  
   
     > [!NOTE]  
-    >  如果 **[使用者入門]** 對話方塊沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
+    >   如果 **[使用者入門]** 對話方塊沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
   
 2.  在左窗格中，確認已選取 **[報表]** 。  
   
-3.  在右窗格中，按一下 **[資料表或矩陣精靈]** 。  
+3.  在右窗格中，按一下 **[資料表或矩陣精靈]**。  
   
-4.  按一下 **[建立]**。  
+4.  按一下 [建立]  。  
   
-5.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]** 。  
+5.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]**。  
   
 6.  按 [下一步]  。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66099093"
   
 8.  按 [下一步]  。  
   
-9. 在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]** 。  
+9. 在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
 10. 將下列查詢貼入查詢窗格中：  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66099093"
   
 12. 按 [下一步]  。  
   
-##  <a name="CompleteWizard"></a>2. 從資料表或矩陣 Wizard 組織資料、選擇配置和樣式  
+##  <a name="2-organize-data-choose-layout-and-style-from-the-table-or-matrix-wizard"></a><a name="CompleteWizard"></a>2. 從資料表或矩陣 Wizard 組織資料、選擇配置和樣式  
  使用精靈提供起始設計來顯示資料。 精靈中的預覽窗格可協助您在完成資料表或矩陣設計之前，先視覺化群組資料的結果。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -157,7 +157,7 @@ ms.locfileid: "66099093"
   
  在這個案例中，資料行標題顯示的商店識別碼而非商店名稱。 稍後，您會加入運算式，在包含商店識別碼/商店名稱組的資料集中，查詢商店名稱。  
   
-##  <a name="Query"></a>3. 加入查詢參數來建立報表參數  
+##  <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. 加入查詢參數來建立報表參數  
  當您將查詢參數加入至查詢時，報表產生器會自動建立一個單一值報表參數，其中包含名稱、提示與資料類型的預設屬性。  
   
 #### <a name="to-add-a-query-parameter"></a>若要加入查詢參數  
@@ -174,8 +174,7 @@ ms.locfileid: "66099093"
   
      `WHERE`子句會將抓取的資料限制為查詢參數*@StoreID*所指定的存放區識別碼。  
   
-4.  在 [查詢設計工具] 工具列上，按一下 [**執行**] （**！**）。 
-  **定義查詢參數**] 對話方塊隨即開啟，並且提示您輸入查詢參數的值*@StoreID*。  
+4.  在 [查詢設計工具] 工具列上，按一下 [**執行**] （**！**）。 **定義查詢參數**] 對話方塊隨即開啟，並且提示您輸入查詢參數的值*@StoreID*。  
   
 5.  在 **[參數值]** 中，輸入 **200**。  
   
@@ -189,14 +188,14 @@ ms.locfileid: "66099093"
   
  請注意，現在有一個名為*@StoreID*的報表參數。 根據預設，參數的資料類型為 **[文字]**。 由於商店識別碼是一個整數，所以在下一個步驟中，您會將資料類型變更為 Integer。  
   
-##  <a name="ChangeDefaultProperties"></a>4. 變更報表參數的預設資料類型和其他屬性  
+##  <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. 變更報表參數的預設資料類型和其他屬性  
  建立報表參數之後，您可以調整屬性的預設值。  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>若要變更報表參數的預設資料類型  
   
 1.  在 [報表資料] 窗格的 [**參數**] 節點下， *@StoreID*以滑鼠右鍵按一下，然後按一下 [**參數屬性**]。  
   
-2.  在 [提示] 中輸入**商店識別碼？** 。當您執行報表時，此文字會出現在報表檢視器工具列上。  
+2.  在 [提示] 中輸入 **商店識別碼？** 。當您執行報表時，此文字會出現在報表檢視器工具列上。  
   
 3.  在 **[資料類型]** 的下拉式清單中，選取 **[整數]**。  
   
@@ -208,7 +207,7 @@ ms.locfileid: "66099093"
   
 7.  在報表檢視器工具列上，就在 Store ID 旁，輸入 **200**，然後按一下 **[檢視報表]**。  
   
-##  <a name="AddDataset"></a>4a. 加入資料集來提供可用值與顯示名稱  
+##  <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. 加入資料集來提供可用值與顯示名稱  
  為了確保使用者只會輸入有效的參數值，您可以建立列出多個值的下拉式清單，供使用者選擇。 這些值可以取自資料集或是根據您另外指定的清單。 可用的值必須透過資料集提供，且該資料集具有不含參數參考的查詢。  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>建立資料集以提供有效的參數值  
@@ -238,7 +237,7 @@ ms.locfileid: "66099093"
   
      [報表資料] 窗格會在 **Stores** 資料集節點下顯示 StoreID 和 StoreName 欄位。  
   
-##  <a name="AvailableValues"></a>4b. 指定可以用於建立多個值之下拉式清單的值  
+##  <a name="4b-specify-available-values-to-create-a-drop-down-list-of-values"></a><a name="AvailableValues"></a>4b. 指定可以用於建立多個值之下拉式清單的值  
  建立資料集來提供可用的值之後，您必須變更報表屬性，以指定要用於填入 ReportViewer 工具列中有效下拉式清單值的資料集與欄位。  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>若要從資料集提供可用的參數值  
@@ -253,7 +252,7 @@ ms.locfileid: "66099093"
   
 5.  從 [標籤欄位]**** 的下拉式清單中，按一下 StoreName。 標籤欄位會指定值的顯示名稱。  
   
-6.  按一下 **[一般]** 。  
+6.  按一下 [一般]****。  
   
 7.  在 [提示] 中輸入 **商店名稱？**。  
   
@@ -269,7 +268,7 @@ ms.locfileid: "66099093"
   
  報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
   
-##  <a name="DefaultValues"></a>4c. 指定預設值讓報表能夠自動執行  
+##  <a name="4c-specify-default-values-so-the-report-runs-automatically"></a><a name="DefaultValues"></a>4c. 指定預設值讓報表能夠自動執行  
  您可以指定每一個參數的預設值，讓報表能夠自動執行。  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>若要從資料集指定預設值  
@@ -306,7 +305,7 @@ ms.locfileid: "66099093"
   
  對於*@StoreID*，報表檢視器會顯示值 "Contoso Catalog Store"。 這是商店識別碼 **200**的顯示名稱。 報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
   
-##  <a name="NameValue"></a>4d. 從具有名稱/值組的資料集中查閱值  
+##  <a name="4d-look-up-a-value-from-a-dataset-that-has-namevalue-pairs"></a><a name="NameValue"></a>4d. 從具有名稱/值組的資料集中查閱值  
  資料集可能同時包含識別碼與對應的名稱欄位。 如果您只有識別碼，那麼可以查詢包含名稱/值組之資料集 (您先前建立) 中的對應名稱。  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>若要從資料集查詢值  
@@ -333,7 +332,7 @@ ms.locfileid: "66099093"
   
  每一頁頂端的文字方塊會顯示商店名稱，而非商店識別碼。  
   
-##  <a name="Expression"></a>5. 在報表中顯示選取的參數值  
+##  <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. 在報表中顯示選取的參數值  
  如果使用者對報表有任何疑問，這有助於明白先前選擇了哪些參數值。 您可以在報表中保留使用者為每一個參數所選取的值。 其中一個方法是在頁尾的文字方塊中顯示參數。  
   
 #### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>若要在頁尾中顯示選取的參數值與標籤  
@@ -346,8 +345,7 @@ ms.locfileid: "66099093"
   
 4.  若要顯示參數標籤，按一下文字方塊，直到插入游標出現在現有運算式之後，輸入一個空格，然後將參數的其他複本從 [報表資料] 窗格拖曳至文字方塊。 此文字方塊便會顯示 `[@StoreID] [@StoreID]`。  
   
-5.  以滑鼠右鍵按一下第一個運算式，然後按一下 **[運算式]**。 
-  **[運算式]** 對話方塊隨即開啟。 將文字 `Value` 取代為 `Label`。  
+5.  以滑鼠右鍵按一下第一個運算式，然後按一下 **[運算式]**。 **[運算式]** 對話方塊隨即開啟。 將文字 `Value` 取代為 `Label`。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -355,7 +353,7 @@ ms.locfileid: "66099093"
   
 7.  預覽報表。  
   
-##  <a name="Filter"></a>6. 在篩選中使用報表參數  
+##  <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. 在篩選中使用報表參數  
  篩選有助於控制在自外部資料來源擷取報表後，要在其中使用哪些資料。 若要協助使用者可以控制他們想要看的資料，您可以在矩陣的篩選中加入報表參數。  
   
 #### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>若要在矩陣篩選中指定參數  
@@ -368,10 +366,9 @@ ms.locfileid: "66099093"
   
 4.  在 [運算式]**** 的下拉式清單中，選取 StoreID 資料集欄位。 資料類型會顯示 **[整數]**。 當運算式值為資料集欄位時，會自動設定資料類型。  
   
-5.  在**** `equals` [運算子] 中，確認已選取 [（=）]。  
+5.  在**Operator** `equals` [運算子] 中，確認已選取 [（=）]。  
   
-6.  在 [值]**** 中，輸入 `[@StoreID]`。 
-  `[@StoreID]` 為表示 `=Parameters!StoreID.Value`的簡單運算式語法。  
+6.  在 **[值]** 中，輸入 `[@StoreID]`。 `[@StoreID]` 為表示 `=Parameters!StoreID.Value`的簡單運算式語法。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -383,7 +380,7 @@ ms.locfileid: "66099093"
   
  矩陣會顯示對應於您所選商店的資料。  
   
-##  <a name="Multivalued"></a>7. 變更報表參數以接受多個值  
+##  <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. 變更報表參數以接受多個值  
  若要將參數由單一值變更為多重值，您必須變更查詢以及所有包含參數參考的所有運算式，包含篩選條件。 多重值參數為值的陣列。 在資料集查詢中，查詢語法必須經過測試，確認值組中包含一個值。 在報表運算式中，運算式語法必須存取值的陣列，而不是單一值。  
   
 #### <a name="to-change-a-parameter-from-single-to-multivalued"></a>將參數由單一值變更為多重值  
@@ -404,8 +401,7 @@ ms.locfileid: "66099093"
     WHERE StoreID IN (@StoreID)  
     ```  
   
-     
-  `IN` 運算子會測試一個值，確認已包含一組值。  
+     `IN` 運算子會測試一個值，確認已包含一組值。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -439,7 +435,7 @@ ms.locfileid: "66099093"
   
 19. 從下拉式清單中，按一下 [全選]**** 清除清單，並按一下 [Contoso Catalog Store] 與 [Contoso Asia Online Store]，然後按一下 [檢視報表]****。  
   
-##  <a name="Boolean"></a>8. 加入條件式可見度的布林值參數  
+##  <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. 加入條件式可見度的布林值參數  
   
 #### <a name="to-add-a-boolean-parameter"></a>加入布林參數  
   
@@ -463,7 +459,7 @@ ms.locfileid: "66099093"
   
 1.  在設計介面上，以滑鼠右鍵按一下頁尾中顯示參數值的文字方塊，然後按一下 [文字方塊屬性]****。  
   
-2.  按一下 **[可見性]**。  
+2.  按一下 **[可見性]** 。  
   
 3.  選取 **[依據運算式顯示或隱藏]** 選項，然後按一下 **Fx**運算式按鈕。  
   
@@ -485,29 +481,29 @@ ms.locfileid: "66099093"
   
  頁尾中的文字方塊會顯示您所選取的所有商店。  
   
-##  <a name="Title"></a>9. 加入報表標題  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. 加入報表標題  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
-1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
+1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
 2.  輸入「參數化產品銷售」，然後按一下文字方塊外部。  
   
-##  <a name="Save"></a>10. 儲存報表  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. 儲存報表  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
-1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]** 。  
+1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
-2.  按一下 **[最近使用的網站和伺服器]** 。  
+2.  按一下 **[最近使用的網站和伺服器]**。  
   
 3.  選取或輸入您有權儲存報表之報表伺服器的名稱。  
   
-     [**連接到報表伺服器] 訊息隨即出現**。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
+     **[連接到報表伺服器]** 訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
 4.  在 **[名稱]** 中，將預設名稱取代為「參數化產品銷售」。  
   
-5.  按一下 [檔案]  。  
+5.  按一下 **[儲存]** 。  
   
  報表就會儲存至報表伺服器。 您所連接的報表伺服器會顯示在視窗底部的狀態列中。  
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098096"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>SetDatabaseConnection 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -71,8 +71,7 @@ public void BackupEncryptionKey(string Server,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
 ## <a name="remarks"></a>備註  
- 當 *CredentialsType* 參數設為 0 時 (Windows)，即必須設定 *UserName* 和 *Password* 參數。 
-  *UserName* 參數必須採用「網域\使用者名稱」格式，且此值必須代表有效的 Windows 登入。  
+ 當 *CredentialsType* 參數設為 0 時 (Windows)，即必須設定 *UserName* 和 *Password* 參數。 *UserName* 參數必須採用「網域\使用者名稱」格式，且此值必須代表有效的 Windows 登入。  
   
  當 *CredentialsType* 參數設為 1 時 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，傳入 *UserName* 參數的值必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱的需求。  
   
@@ -87,7 +86,7 @@ public void BackupEncryptionKey(string Server,
  SetDatabaseConnection 方法不會將權限授與指定的帳戶。 您必須針對需要存取報表伺服器資料庫的每個帳戶呼叫 [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) 方法，並且執行產生的指令碼。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

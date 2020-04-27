@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c30dfdd78ed6f420bee7c6bbba449ba40a2a137a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100784"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -34,33 +34,33 @@ ms.locfileid: "66100784"
   
  本主題內容：  
   
--   [暫停和繼續共用排程（原生模式）](#bkmk_native)  
+-   [暫停及繼續共用排程 (原生模式)](#bkmk_native)  
   
--   [暫停和繼續共用排程（SharePoint 模式）](#bkmk_sharepoint)  
+-   [暫停及繼續共用排程 (SharePoint 模式)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a>暫停和繼續共用排程（原生模式）  
- 若要暫停和繼續共用排程，請使用報表管理員的 [排程] 頁面。 您不能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]使用;它不會提供暫停和繼續排程的選項。 如需詳細資訊，請參閱 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)。  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> 暫停及繼續共用排程 (原生模式)  
+ 若要暫停和繼續共用排程，請使用報表管理員的 [排程] 頁面。 您不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，因為其未提供暫停和繼續排程的選項。 如需詳細資訊，請參閱 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
   
-1.  從報表管理員中，按一下 **[站台設定]**。  
+1.  從報表管理員中，按一下 **[站台設定]** 。  
   
-2.  按一下 **[排程]**。  
+2.  按一下 **[排程]** 。  
   
-3.  選取排程，然後按一下功能區中的 **[暫停]** 或 **[繼續]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
+3.  選取排程，然後按一下功能區中的 **[暫停]** 或 **[繼續]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]** 。  
   
-##  <a name="bkmk_sharepoint"></a>暫停和繼續共用排程（SharePoint 模式）  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 暫停及繼續共用排程 (SharePoint 模式)  
  若要暫停及繼續共用排程，請使用 [站台設定] 頁面或 PowerShell。 排程是以每個 SharePoint 網站為單位管理。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
   
-1.  按一下 **[網站動作]**。  
+1.  按一下 **[網站動作]** 。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  在 [Reporting Services] 區段中，按一下 **[管理共用排程]**。  
+3.  在 [Reporting Services] 區段中，按一下 **[管理共用排程]** 。  
   
-4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]**。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
+4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [[排程]](schedules.md)   

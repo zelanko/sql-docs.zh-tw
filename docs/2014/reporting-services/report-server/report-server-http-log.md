@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103402"
 ---
 # <a name="report-server-http-log"></a>報表伺服器 HTTP 記錄
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器 HTTP 記錄檔會保留報表伺服器所處理之每個 HTTP 要求與回應的記錄。 由於要求溢位和逾時錯誤不會送達報表伺服器，因此它們不會記錄在記錄檔中。  
   
  HTTP 記錄預設是不啟用的。 若要啟用 HTTP 記錄，請修改 **ReportingServicesService.exe.config** 組態檔，以在安裝中使用這項功能。  
@@ -30,13 +29,13 @@ ms.locfileid: "66103402"
   
 |||  
 |-|-|  
-|**檔案名稱**|根據預設，記錄檔名稱為<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> 您可以透過在 ReportingServicesService.exe.config 檔中修改 HttpTraceFileName 屬性，自訂檔案名稱的前置詞。 此時間戳記是以國際標準時間 (UTC) 為基礎。|  
+|[檔案名稱]****|根據預設，記錄檔名稱為<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> 您可以透過在 ReportingServicesService.exe.config 檔中修改 HttpTraceFileName 屬性，自訂檔案名稱的前置詞。 此時間戳記是以國際標準時間 (UTC) 為基礎。|  
 |**檔案位置**|檔案會寫入下列位置：<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**檔案格式**|此檔案採用 EN-US 格式。 它是 ASCII 文字檔。|  
 |**檔案建立和保留**|當您在組態檔中啟用 HTTP 記錄、重新啟動此服務，然後報表伺服器處理 HTTP 要求之後，系統就會建立 HTTP 記錄。 如果您設定了這些設定，但卻沒有看見記錄檔，請開啟報表或啟動報表伺服器應用程式 (例如「報表管理員」) 來產生 HTTP 要求，以便建立此檔案。<br /><br /> 記錄檔的新執行個體會在報表伺服器的每個服務重新啟動和後續 HTTP 要求之後建立。<br /><br /> 根據預設，追蹤記錄的上限為 32 MB，並且會在 14 天之後遭到刪除。|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>設定報表伺服器 HTTP 記錄的設定  
- 若要設定報表伺服器 HTTP 記錄檔，請使用 [記事本] 修改**ReportingServicesService** 。 此組態檔位於 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 資料夾中。  
+ 若要設定報表伺服器 HTTP 記錄，請使用 [記事本] 來修改 **ReportingServicesService.exe.config** 檔。 此組態檔位於 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 資料夾中。  
   
  若要啟用 HTTP 伺服器，請將 `http:4` 加入 ReportingServicesService.exe.config 檔的 RStrace 區段。 所有其他 HTTP 記錄檔項目是選擇性的。 下列範例包含所有設定，因此您可以將整個區段貼入 RStrace 區段，然後刪除不需要的設定。  
   

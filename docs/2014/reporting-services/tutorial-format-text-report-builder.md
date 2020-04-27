@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098895"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 (報表產生器)
@@ -28,7 +28,7 @@ ms.locfileid: "66098895"
   
  本教學課程所建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需下載此範例報表及其他專案的詳細資訊，請參閱[報表產生器範例報表](https://go.microsoft.com/fwlink/?LinkId=184851)。  
   
-##  <a name="BackToTop"></a>您將瞭解的內容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>您將瞭解的內容  
   
 ### <a name="set-up-the-report"></a>設定報表  
  1. [建立具有資料來源和資料集的空白報表](#CreateReport)  
@@ -53,15 +53,14 @@ ms.locfileid: "66098895"
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="CreateReport"></a>建立具有資料來源和資料集的空白報表  
+##  <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>建立具有資料來源和資料集的空白報表  
   
 #### <a name="to-create-a-blank-report"></a>建立空白報表  
   
-1.  按一下 **[開始]**、依序指向 **[程式集]** 和 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**[報表產生器]**，然後按一下 **[報表產生器]**。  
+1.  按一下 [ **開始**]、依序指向 [ **程式集**] 和 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**]，然後按一下 [ **報表產生器**]。  
   
     > [!NOTE]  
-    >  
-  **[使用者入門]** 對話方塊應會隨即出現。 如果沒有出現，請從 [報表產生器] 按鈕按一下 **[新增]**。  
+    >  **[使用者入門]** 對話方塊應會隨即出現。 如果沒有出現，請從 [報表產生器] 按鈕按一下 **[新增]**。  
   
 2.  在 **[使用者入門]** 對話方塊的左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66098895"
   
 #### <a name="to-create-a-data-source"></a>建立資料來源  
   
-1.  在 [報表資料] 窗格中，按一下 [**新增**]，然後按一下 [**資料來源**]。  
+1.  在 [報表資料] 窗格中，按一下 **[新增]**，然後按一下 **[資料來源]**。  
   
 2.  在 [名稱]**** 方塊中，鍵入：**TextDataSource**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66098895"
   
 #### <a name="to-create-a-dataset"></a>建立資料集  
   
-1.  在 [報表資料] 窗格中，按一下 [**新增**]，然後按一下 [**資料集**]。  
+1.  在 [報表資料] 窗格中，按一下 **[新增]**，然後按一下 **[資料集]**。  
   
 2.  確認資料來源為 **TextDataSource**。  
   
@@ -129,13 +128,13 @@ ms.locfileid: "66098895"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  按一下 「執行」 (**!**) 來執行查詢。  
+7.  按一下 [執行]\(**!**) 來執行查詢。  
   
      查詢結果會成為可供報表顯示的資料。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a>將欄位加入至報表 Design Surface  
+##  <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>將欄位加入至報表 Design Surface  
  如果希望擷取自資料集的欄位出現在報表中，您可能會不加思索地直接將欄位拖曳到設計介面。 此練習將點出為何這樣做無效，以及應該改用的方法。  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>將欄位加入至報表 (會得到錯誤的結果)  
@@ -144,7 +143,7 @@ ms.locfileid: "66098895"
   
      報表產生器會建立一個具有運算式的文字方塊，以\<Expr> 表示。  
   
-2.  按一下 **[執行]** 。  
+2.  按一下 [執行]****。  
   
      請注意，只有一筆記錄**Fernando Ross**，這是查詢中第一筆記錄的字母順序。 欄位並未重複成顯示該欄位內的其他記錄。  
   
@@ -158,8 +157,7 @@ ms.locfileid: "66098895"
     =First(Fields!FullName.Value, "TextDataSet")  
     ```  
   
-     
-  `First` 函數是設計成僅擷取欄位內的第一個值，而其目的也已達到。  
+     `First` 函數是設計成僅擷取欄位內的第一個值，而其目的也已達到。  
   
      直接將欄位拖曳到設計介面會建立文字方塊。 文字方塊本身並非資料區，所以不會顯示來自報表資料集的資料。 位於資料區 (例如資料表、矩陣和清單) 內的文字方塊才會顯示資料。  
   
@@ -173,7 +171,7 @@ ms.locfileid: "66098895"
   
      這回報表產生器會建立一個內有運算式 `[FullName]` 的文字方塊。  
   
-3.  按一下 **[執行]** 。  
+3.  按一下 [執行]****。  
   
      請注意，此時方塊已經重複成顯示查詢中的所有記錄。  
   
@@ -191,7 +189,7 @@ ms.locfileid: "66098895"
   
 7.  選取清單方塊，然後按下 DELETE 鍵。  
   
-##  <a name="AddTable"></a>將資料表加入至報表 Design Surface  
+##  <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>將資料表加入至報表 Design Surface  
  建立這個資料表，以便能夠在其中放置超連結和旋轉的文字。  
   
 #### <a name="to-add-a-table-to-the-report"></a>將資料表加入至報表  
@@ -220,9 +218,9 @@ ms.locfileid: "66098895"
   
 11. 選取這三個數據格後，以滑鼠右鍵按一下其中一個資料格，然後按一下 [**刪除資料列**]。  
   
-12. 按一下 **[執行]** 。  
+12. 按一下 [執行]****。  
   
-##  <a name="AddHyperlink"></a>將超連結加入至報表  
+##  <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>將超連結加入至報表  
  在本節中，您要加入超連結指向上一節資料表中的文字。  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>加入超連結至報表  
@@ -243,13 +241,13 @@ ms.locfileid: "66098895"
   
 8.  在 [**首頁**] 索引標籤的 [**字型**] 區段中，按一下 [底線] 按鈕，然後按一下 [**色彩** **] 按鈕旁邊**的下拉箭號，再按一下 [**藍色**]。  
   
-9. 按一下 **[執行]** 。  
+9. 按一下 [執行]****。  
   
      文字現在看起來就像一個連結。  
   
 10. 按一下該連結。 如果您的電腦已連接至網際網路，瀏覽器將會開啟報表產生器說明主題。  
   
-##  <a name="RotateText"></a>旋轉報表中的文字  
+##  <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>旋轉報表中的文字  
  在本節中，您要旋轉前幾節資料表中的部分文字。  
   
 #### <a name="to-rotate-text"></a>旋轉文字  
@@ -260,22 +258,22 @@ ms.locfileid: "66098895"
   
 3.  在 [主資料夾]**** 索引標籤的 [字型]**** 區段中，按一下 [粗體]**** 按鈕。  
   
-4.  如果 [屬性] 窗格並未開啟，請選取 [檢視]  索引標籤上的 [屬性]  核取方塊。  
+4.  如果 [屬性] 窗格並未開啟，請選取 [檢視]**** 索引標籤上的 [屬性]**** 核取方塊。  
   
 5.  在 [屬性] 窗格中找出 [WritingMode] 屬性。  
   
     > [!NOTE]  
-    >  當 [屬性] 窗格中的屬性組織成類別目錄時，WritingMode 會位於 [當地語系化]  類別目錄中。 請確定您已選取資料格，而不是文字。 WritingMode 是文字方塊的屬性，並非文字的屬性。  
+    >  當 [屬性] 窗格中的屬性組織成類別目錄時，WritingMode 會位於 [當地語系化]**** 類別目錄中。 請確定您已選取資料格，而不是文字。 WritingMode 是文字方塊的屬性，並非文字的屬性。  
   
 6.  在清單方塊中，按一下 [ **Rotate270**]。  
   
 7.  在 [**首頁**] 索引標籤的 [**段落**] 區段中，按一下 [**中間**] 和 [**置**中] 按鈕，以垂直和水準方式找出資料格中央的文字。  
   
-8.  按一下 [執行] （**！**）。  
+8.  按一下 [執行] (**!**)。  
   
  如今 `[Territory]` 資料格中的文字已呈垂直方向，從資料格底部往上書寫。  
   
-##  <a name="FormatHTML"></a>顯示 HTML 格式的文字  
+##  <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>顯示 HTML 格式的文字  
   
 #### <a name="to-display-text-formatted-as-html"></a>顯示格式化為 HTML 的文字  
   
@@ -315,7 +313,7 @@ ms.locfileid: "66098895"
   
  文字方塊中的文字會顯示成標頭、段落和項目符號清單。  
   
-##  <a name="FormatCurrency"></a>貨幣格式  
+##  <a name="format-currency"></a><a name="FormatCurrency"></a>貨幣格式  
   
 #### <a name="to-format-numbers-as-currency"></a>將數字格式化為貨幣  
   
@@ -327,22 +325,22 @@ ms.locfileid: "66098895"
   
 4.  選擇性在 [**首頁**] 索引標籤的 [**數位**] 群組中，按一下 [**預留位置樣式**] 按鈕，然後按一下 [**範例值**]，以查看數位的格式化方式。  
   
-5.  (選擇性) 在 [主資料夾]  索引標籤的 [數字]  群組中，按一下[減少小數位數]  按鈕兩次，顯示沒有分的貨幣數字。  
+5.  (選擇性) 在 [主資料夾]**** 索引標籤的 [數字]**** 群組中，按一下[減少小數位數]**** 按鈕兩次，顯示沒有分的貨幣數字。  
   
 6.  按一下 [執行]\(**!**) 預覽報表。  
   
  報表如今已顯示格式化的資料，更容易閱讀。  
   
-##  <a name="Save"></a>儲存報表  
+##  <a name="save-the-report"></a><a name="Save"></a>儲存報表  
  您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。  
   
  本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
-1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]** 。  
+1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
-2.  按一下 **[最近使用的網站和伺服器]** 。  
+2.  按一下 **[最近使用的網站和伺服器]**。  
   
 3.  選取或輸入您有權儲存報表之報表伺服器的名稱。  
   
@@ -350,26 +348,26 @@ ms.locfileid: "66098895"
   
 4.  在 [名稱]**** 中，將預設名稱取代為您選擇的名稱。  
   
-5.  按一下 [檔案]  。  
+5.  按一下 **[儲存]** 。  
   
  報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
 #### <a name="to-save-the-report-on-your-computer"></a>將報表儲存到您的電腦上  
   
-1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]** 。  
+1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
 2.  按一下 **[桌面]**、 **[我的文件]** 或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
   
 3.  在 [名稱]**** 中，將預設名稱取代為您選擇的名稱。  
   
-4.  按一下 [檔案]  。  
+4.  按一下 **[儲存]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
  有許多方式可以在報表產生器[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程 &#40;報表產生器&#41;](report-builder-tutorials.md)   
- [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [將報表專案的格式設定 &#40;報表產生器和 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [SQL Server 2014 中的報表產生器](report-builder/report-builder-in-sql-server-2016.md)  
   
   

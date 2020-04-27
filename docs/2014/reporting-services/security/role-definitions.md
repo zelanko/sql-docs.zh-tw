@@ -16,24 +16,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101745"
 ---
 # <a name="role-definitions"></a>角色定義
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，*角色**定義*是一個具名的工作集合，這些工作會定義可在報表伺服器上執行的作業。 角色定義會提供報表伺服器用來強制執行安全性的規則。 當使用者嘗試執行工作 (例如發行報表) 時，報表伺服器就會檢查使用者的角色指派，以便判斷工作是否包含在其角色定義中。 如果工作包括在角色定義中，便會提交要求。  
+  在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，*角色 * * 定義*是工作的命名集合，可定義報表伺服器上可用的作業。 角色定義會提供報表伺服器用來強制執行安全性的規則。 當使用者嘗試執行工作 (例如發行報表) 時，報表伺服器就會檢查使用者的角色指派，以便判斷工作是否包含在其角色定義中。 如果工作包括在角色定義中，便會提交要求。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>使用角色來授權報表伺服器的存取權  
  當角色用於角色指派時，角色才成為可以作業。 如需角色如何提供安全性的詳細資訊，請參閱 [角色指派](role-assignments.md)。  
   
 ## <a name="types-of-role-definitions"></a>角色定義的類型  
- 角色定義是項目層級或系統層級定義。 「項目層級角色定義」** 會描述與報表伺服器上儲存和管理之項目 (例如報表、資料夾和模型) 相關的工作。 管理報表、檢視資料夾和管理個別訂閱都是您可以包含在項目層級角色定義中的工作範例。 「系統角色定義」** 包含套用至整個網站的工作。 檢視報表伺服器屬性是您可能會包含在系統角色中的工作範例。  
+ 角色定義是項目層級或系統層級定義。 「項目層級角色定義」  會描述與報表伺服器上儲存和管理之項目 (例如報表、資料夾和模型) 相關的工作。 管理報表、檢視資料夾和管理個別訂閱都是您可以包含在項目層級角色定義中的工作範例。 「系統角色定義」  包含套用至整個網站的工作。 檢視報表伺服器屬性是您可能會包含在系統角色中的工作範例。  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括一些對應至不同使用者互動層級的預先定義角色。 下列清單含有您可以使用的預先定義角色：  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括一些對應至不同使用者互動層級的預先定義角色。 下列清單含有您可以使用的預先定義角色：  
   
 -   「內容管理員」、「發行者」、「瀏覽者」、「報表產生器」和「我的報表」都是您可以在建立存取報表伺服器內容之角色指派時使用的項目層級角色定義。  
   
@@ -46,9 +45,9 @@ ms.locfileid: "66101745"
   
  角色必須有唯一的名稱。 有效的角色定義，至少必須包含一項工作。 如需詳細資訊，請參閱 [工作和權限](tasks-and-permissions.md)。  
   
- 若要建立角色定義，請[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]使用。 如需這些預先定義角色的詳細資訊，請參閱 [建立、刪除或修改角色 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)。  
+ 若要建立角色定義，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如需這些預先定義角色的詳細資訊，請參閱 [建立、刪除或修改角色 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)。  
   
- 建立角色定義之後，您可以在角色指派中選取該定義，藉以使用它。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
+ 建立角色定義之後，您可以在角色指派中選取該定義，藉以使用它。 如需這些預先定義角色的詳細資訊，請參閱 [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
   
 ## <a name="customize-or-delete-a-role-definition"></a>自訂或刪除角色定義  
  您可以修改預先定義的角色，也可以使用自訂角色來取代它們。 若要修改角色，請在角色定義中加入或移除工作。 但是，您無法重新命名角色。 您所做的任何變更都會立即套用至包含該角色定義的所有角色指派。  

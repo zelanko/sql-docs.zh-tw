@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102584"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)
@@ -43,7 +43,7 @@ ms.locfileid: "66102584"
 ## <a name="see-also"></a>另請參閱  
  [搜尋報表和其他專案 &#40;報表產生器和 SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [[內容] 頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [尋找、查看和管理報表 &#40;報表產生器和 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

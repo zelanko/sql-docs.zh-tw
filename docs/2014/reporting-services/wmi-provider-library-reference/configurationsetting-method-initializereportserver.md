@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098350"
 ---
 # <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -60,10 +60,10 @@ public void InitializeReportServer(string InstallationID,
   
  您必須針對已經擁有安全資訊之存取權的報表伺服器呼叫 *InitializeReportServer* 方法，才能讓它解密加密金鑰。 然後，所產生且已加密的加密金鑰密就會儲存在報表伺服器資料庫中。  
   
- 如果在呼叫 InitializeReportServer 方法[](configurationsetting-property-isinitialized.md)時，報表伺服器的`true` IsInitialized 屬性設定為，則方法會傳回成功，而不會嘗試加密加密金鑰。  
+ 如果在呼叫 InitializeReportServer 方法[IsInitialized](configurationsetting-property-isinitialized.md)時，報表伺服器的`true` IsInitialized 屬性設定為，則方法會傳回成功，而不會嘗試加密加密金鑰。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

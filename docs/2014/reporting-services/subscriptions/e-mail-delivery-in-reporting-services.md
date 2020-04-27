@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100890"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
@@ -28,7 +28,7 @@ ms.locfileid: "66100890"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; sharepoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; sharepoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式|  
   
 ## <a name="e-mail-delivery-options"></a>電子郵件傳遞選項  
  報表伺服器電子郵件傳遞可以利用下列方式傳遞報表：  
@@ -47,10 +47,9 @@ ms.locfileid: "66100890"
   
      如果您的瀏覽器支援 HTML 4.0 與 MHTML，而且您選擇網頁封存轉譯格式，則報表會內嵌為訊息的一部分。 所有其他轉譯格式 (CSV、PDF 等等) 均以附加檔案傳遞報表。 您可以在 RSReportServer 組態檔中停用此功能。  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其他傳遞選項之一 (例如 URL 或通知)。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其他傳遞選項之一 (例如 URL 或通知)。  
   
- 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]****，則電子郵件訊息包含連結到報表的超連結。  
+ 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]  ，則電子郵件訊息包含連結到報表的超連結。  
   
 ## <a name="role-based-e-mail-settings"></a>以角色為基礎的電子郵件設定  
  您訂閱報表時所使用的電子郵件傳遞設定，會依您的角色包含的是「管理個別訂閱」工作或「管理所有訂閱」工作而異。  
@@ -78,7 +77,7 @@ ms.locfileid: "66100890"
   
  如需如何設定 SharePoint 模式報表伺服器的詳細資訊，請參閱下列內容：  
   
--   [&#40;SharePoint 2010 和 SharePoint 2013 設定 Reporting Services 服務應用程式的電子郵件&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [工作和權限](../security/tasks-and-permissions.md)   

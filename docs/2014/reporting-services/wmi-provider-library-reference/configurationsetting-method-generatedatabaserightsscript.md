@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098476"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -55,7 +55,7 @@ out Int32 HRESULT);
  *IsWindowsUser*  
  指出指定之使用者名稱是 Windows 使用者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的布林值。  
   
- *文字*  
+ *指令碼*  
  [out] 包含所產生之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的字串。  
   
  *HRESULT*  
@@ -77,18 +77,12 @@ out Int32 HRESULT);
   
 |已轉譯的帳戶 / SID|一般名稱|遠端名稱|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|[本機系統]|
-  \<網域>\\<電腦名稱\>$|  
-|.\LocalSystem|[本機系統]|
-  \<網域>\\<電腦名稱\>$|  
-|ComputerName\LocalSystem|[本機系統]|
-  \<網域>\\<電腦名稱\>$|  
-|LocalSystem|[本機系統]|
-  \<網域>\\<電腦名稱\>$|  
-|(S-1-5-20)|網路服務|
-  \<網域>\\<電腦名稱\>$|  
-|NT AUTHORITY\NetworkService|網路服務|
-  \<網域>\\<電腦名稱\>$|  
+|(S-1-5-18)|[本機系統]|\<網域>\\<電腦名稱\>$|  
+|.\LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
+|ComputerName\LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
+|LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
+|(S-1-5-20)|網路服務|\<網域>\\<電腦名稱\>$|  
+|NT AUTHORITY\NetworkService|網路服務|\<網域>\\<電腦名稱\>$|  
 |(S-1-5-19)|本機服務|錯誤 - 請參閱下列內容。|  
 |NT AUTHORITY\LocalService|本機服務|錯誤 - 請參閱下列內容。|  
   
@@ -104,10 +98,9 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<Machinename>|testlab14|  
-|
-  \<機器 FQDN>|example.redmond.microsoft.com|  
-|\<IPAddress>|180.012.345,678|  
+|\<機器名稱>|testlab14|  
+|\<機器 FQDN>|example.redmond.microsoft.com|  
+|\<IP 位址>|180.012.345,678|  
   
  當*IsWindowsUser*設定為`true`時，WMI 提供者會呼叫 LookupAccountName 來取得帳戶的 SID，然後呼叫 LookupAccountSID 以取得要放入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]腳本的名稱。 這樣可確保所使用的帳戶名稱會通過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
   
@@ -120,7 +113,7 @@ out Int32 HRESULT);
  產生的指令碼支援 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

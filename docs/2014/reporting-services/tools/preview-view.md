@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100113"
 ---
 # <a name="preview-view"></a>預覽檢視
@@ -42,7 +42,7 @@ ms.locfileid: "66100113"
  **上一頁**  
  選擇此選項即可移至報表的上一頁。  
   
- **目前頁面**  
+ **目前的頁面**  
  顯示報表目前的頁面。  
   
  **總頁數**  
@@ -60,22 +60,22 @@ ms.locfileid: "66100113"
  **停止轉譯**  
  選擇此選項即可停止轉譯處理序。  
   
- **[重新整理]**  
+ **重新整理**  
  選擇此選項可重新整理資料快取，然後再次執行報表。  
   
- **印刷**  
+ **Print**  
  選擇此選項即可列印報表。  
   
  **整頁模式**  
  選擇這個選項即可切換預覽報表與報表出現在列印頁面上的檢視。  
   
- **版面設定**  
+ **設定列印格式**  
  選擇這個選項即可輕易變更頁面和列印屬性。 而使用 [整頁模式] 可在列印之前檢視變更。  
   
  **匯出**  
  選擇此選項可使用特定的格式匯出轉譯報表。  
   
- **Zoom**  
+ **縮放**  
  選取顯示比例來縮小或放大報表。  
   
  **搜尋文字**  
@@ -84,7 +84,7 @@ ms.locfileid: "66100113"
  **尋找**  
  選擇這個選項即可開始搜尋報表，以找出搜尋文字。  
   
- **尋找下一個**  
+ **找下一個**  
  選擇這個選項即可搜尋該搜尋文字的下一個執行個體。  
   
 ## <a name="see-also"></a>另請參閱  

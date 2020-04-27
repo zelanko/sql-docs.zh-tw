@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102904"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能及工作 (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66102904"
   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
- [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
+ [Reporting Services 資料警示](../ssms/agent/alerts.md)  
   
  [Reporting Services 安全性與保護](security/reporting-services-security-and-protection.md)  
   

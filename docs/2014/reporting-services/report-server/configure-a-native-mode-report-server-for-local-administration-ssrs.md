@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104184"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66104184"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -49,45 +49,45 @@ ms.locfileid: "66104184"
   
  雖然這個作法會提升系統的整體安全性，但是也會妨礙您使用 Reporting Services 為本機管理員建立之預先定義的內建角色指派。  
   
--   [設定變更總覽](#bkmk_configuraiton_overview)  
+-   [組態變更概觀](#bkmk_configuraiton_overview)  
   
--   [若要設定本機報表伺服器和報表管理員系統管理](#bkmk_configure_local_server)  
+-   [若要設定本機報表伺服器和報表管理員的管理](#bkmk_configure_local_server)  
   
--   [若要設定本機報表伺服器管理的 SQL Server Management Studio （SSMS）](#bkmk_configure_ssms)  
+-   [若要設定 SQL Server Management Studio (SSMS) 來進行本機報表伺服器管理](#bkmk_configure_ssms)  
   
 -   [若要設定 SQL Server Data Tools BI (SSDT) 來發行至本機報表伺服器](#bkmk_configure_ssdt)  
   
 -   [其他資訊](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a>設定變更總覽  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a>設定變更總覽  
  下列組態變更會設定伺服器，好讓您可以使用標準使用者權限來管理報表伺服器內容和作業：  
   
 -   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 加入至信任的網站。 根據預設，在列出的作業系統上執行的 Internet Explorer 會在 **[受保護模式]** 下執行，此功能會封鎖瀏覽器要求，使其無法到達相同電腦上執行的高層級處理序。 您可以為報表伺服器應用程式停用受保護模式，只要將這些應用程式加入為信任的網站即可。  
   
 -   建立授與您 (亦即報表伺服器管理員) 有權管理內容和作業的角色指派，而不需要使用 Internet Explorer 上的 **[以系統管理員身分執行]** 功能。 為 Windows 使用者帳戶建立角色指派，就可以使用內容管理員和系統管理員權限取得報表伺服器的存取權 (透過可取代 Reporting Services 建立之預先定義的內建角色指派的明確角色指派)。  
   
-##  <a name="bkmk_configure_local_server"></a>若要設定本機報表伺服器和報表管理員系統管理  
+##  <a name="to-configure-local-report-server-and-report-manager-administration"></a><a name="bkmk_configure_local_server"></a>若要設定本機報表伺服器和報表管理員系統管理  
  如果您瀏覽至本機報表伺服器而且看到類似於以下的錯誤，請完成本章節的組態步驟：  
   
 -   使用者 `'Domain\[user name]`' 沒有必要權限。 請確認已授與足夠的權限，而且滿足 Windows 使用者帳戶控制 (UAC) 的限制。  
   
-###  <a name="bkmk_site_settings"></a>瀏覽器中受信任的網站設定  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a>瀏覽器中受信任的網站設定  
   
 1.  使用 [以系統管理員身分執行] 權限開啟瀏覽器視窗。 從 **[開始]** 功能表按一下 **[所有程式]**，再以滑鼠右鍵按一下 **[Internet Explorer]**，並選取 **[以系統管理員身分執行]**。  
   
 2.  按一下 **[允許]** 繼續進行。  
   
-3.  在 URL 網址中，輸入報表管理員 URL。 如需指示，請參閱《[ 線上叢書》中的](../report-manager-ssrs-native-mode.md)報表管理員 &#40;SSRS 原生模式&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+3.  在 URL 網址中，輸入報表管理員 URL。 如需指示，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
-4.  按一下 [**工具**]。  
+4.  按一下 **[工具]** 。  
   
-5.  按一下 **[網際網路選項]**。  
+5.  按一下 **[網際網路選項]** 。  
   
 6.  按一下 **[安全性]** 。  
   
-7.  按一下 **[信任的網站]**。  
+7.  按一下 **[信任的網站]** 。  
   
-8.  按一下 **[網站]**。  
+8.  按一下 **[網站]** 。  
   
 9. 加入 `http://<your-server-name>`。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66104184"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_folder_settings"></a>報表管理員資料夾設定  
+###  <a name="report-manager-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> 報表管理員資料夾設定  
   
 1.  在報表管理員的首頁上，按一下 **[資料夾設定]**。  
   
@@ -107,20 +107,20 @@ ms.locfileid: "66104184"
   
 4.  在 [群組或使用者名稱] **** 欄位中，使用以下格式輸入您的 Windows 使用者帳戶： `<domain>\<user>`。  
   
-5.  選取 **[內容管理員]**。  
+5.  選取 **[內容管理員]** 。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_site_settings"></a>報表管理員網站設定  
+###  <a name="report-manager-site-settings"></a><a name="bkmk_configure_site_settings"></a> 報表管理員網站設定  
   
 1.  以系統管理權限開啟瀏覽器，並瀏覽至報表管理員 `http://<server name>/reports`。  
   
 2.  按一下首頁上方角落的 **[站台設定]** 。  
   
     > [!TIP]  
-    >  **注意：** 如果您看不到 [**網站設定**] 選項，請關閉並重新開啟瀏覽器，然後使用系統管理許可權流覽至報表管理員。  
+    >  **注意：** 如果您沒看到 **[站台設定]** 選項，請使用系統管理權限關閉並重新開啟瀏覽器，然後瀏覽至報表管理員。  
   
-3.  按一下 [**安全性**]。  
+3.  按一下 **[安全性]**。  
   
 4.  按一下 **[新增角色指派]**。  
   
@@ -134,12 +134,12 @@ ms.locfileid: "66104184"
   
 9. 在 Internet Explorer 中重新開啟報表管理員，而不使用 **[以系統管理員身分執行]**。  
   
-##  <a name="bkmk_configure_ssms"></a>若要設定本機報表伺服器管理的 SQL Server Management Studio （SSMS）  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a>若要設定本機報表伺服器管理的 SQL Server Management Studio （SSMS）  
  根據預設，您無法存取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中所提供的所有報表伺服器屬性，除非您使用系統管理權限啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
- **若要[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]設定**角色屬性和角色指派，讓您不需要每[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]次都使用更高的許可權來啟動：  
+ **若要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色屬性和角色指派，好讓您不必每次都使用更高權限啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   在 [開始]**** 功能表中，依序按一下 [所有程式]**** 與 [SQL Server 2014]****、以滑鼠右鍵按一下 [**][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**，然後按一下 [以系統管理員身分執行]****。  
+-   在 [開始]**** 功能表中，依序按一下 [所有程式]**** 與 [SQL Server 2014]****、以滑鼠右鍵按一下 [[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]]****，然後按一下 [以系統管理員身分執行]****。  
   
 -   連接到本機 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器。  
   
@@ -157,14 +157,14 @@ ms.locfileid: "66104184"
   
  現在當您開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 而且未明確選取 **[以系統管理員身分執行]** 時，還是可以存取報表伺服器屬性。  
   
-##  <a name="bkmk_configure_ssdt"></a>若要將 SQL Server Data Tools BI （SSDT）設定為發行至本機報表伺服器  
+##  <a name="to-configure-sql-server-data-tools-bi-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a>若要將 SQL Server Data Tools BI （SSDT）設定為發行至本機報表伺服器  
  如果您已經在本主題的第一個章節所列的其中一個作業系統上安裝 [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] ，而且您希望 SSDT 與本機原生模式報表伺服器互動，您將會遇到權限錯誤，除非您以更高權限開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或設定報表服務角色。 例如，如果您沒有足夠的權限，您將會遇到類似以下的問題：  
   
 -   當您嘗試將報表項目部署到本機報表伺服器時，您會在 **[錯誤清單]** 視窗中看到類似下列的錯誤訊息：  
   
     -   授與使用者 'Domain\\<使用者名稱\>' 的權限不足，無法執行此作業。  
   
- **若要在每次開啟 SSDT 時，以更高的許可權執行：**  
+ **若要在每次開啟 SSDT 時都以更高權限執行：**  
   
 1.  在 [開始] 畫面上`sql server` ，輸入，然後以滑鼠右鍵按一下**Visual Studio 的 [SQL Server Data Tools**]。 按一下 **[以系統管理員身分執行]**。  
   
@@ -172,17 +172,17 @@ ms.locfileid: "66104184"
   
      在 [開始] **** 功能表中，依序按一下 [所有程式] **** 與 [SQL Server 2014] ****、以滑鼠右鍵按一下 [SQL Server Data Tools] ****，然後按一下 [以系統管理員身分執行] ****。  
   
-2.  按一下 **[繼續]**。  
+2.  按一下 **[繼續]** 。  
   
 3.  按一下 **[執行程式]**。  
   
  您現在應該能夠將報表和其他項目部署到本機報表伺服器。  
   
- **若要[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]設定角色指派，讓您不需要每次都使用更高許可權啟動 SSDT：**  
+ **若要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 角色指派，好讓您不必每次都使用更高權限啟動 SSDT：**  
   
 -   請參閱本主題稍早的＜ [報表管理員資料夾設定](#bkmk_configure_folder_settings) ＞和＜ [報表管理員網站設定](#bkmk_configure_site_settings) ＞章節。  
   
-##  <a name="bkmk_addiitonal_informaiton"></a>其他資訊  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a>其他資訊  
  與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相關的額外且常見的組態步驟如下：在 Windows 防火牆中開啟通訊埠 80，以允許存取報表伺服器電腦。 如需指示，請參閱 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)。  
   
 ## <a name="see-also"></a>另請參閱  

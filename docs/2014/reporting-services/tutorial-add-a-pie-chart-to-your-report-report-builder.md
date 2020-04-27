@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099052"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
@@ -26,7 +26,7 @@ ms.locfileid: "66099052"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>您將瞭解的內容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>您將瞭解的內容  
  在本教學課程中，您將學會如何：  
   
 1.  [從圖表精靈建立圓形圖](#Chart)  
@@ -51,7 +51,7 @@ ms.locfileid: "66099052"
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Chart"></a>1. 從圖表 Wizard 建立圓形圖  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. 從圖表 Wizard 建立圓形圖  
  從 [使用者入門] 對話方塊，使用 [圖表精靈] 建立內嵌資料集，並選擇共用資料來源，然後建立圓形圖。  
   
 > [!NOTE]  
@@ -64,15 +64,15 @@ ms.locfileid: "66099052"
      [使用者入門] 對話方塊隨即出現。  
   
     > [!NOTE]  
-    >  如果 [使用者入門] 對話方塊沒有出現，請在 [報表產生器] 按鈕中按一下 **[新增]**。  
+    >   如果 [使用者入門] 對話方塊沒有出現，請在 [報表產生器] 按鈕中按一下 **[新增]**。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
-3.  在右窗格中，按一下 [圖表精靈]  。  
+3.  在右窗格中，按一下 [圖表精靈]****。  
   
 4.  在 [**選擇資料集**] 頁面上，按一下 [**建立資料集**]，然後按 **[下一步]**。  
   
-5.  在 [選擇與資料來源的連線]  頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]  。 您可能需要輸入使用者名稱和密碼。  
+5.  在 [選擇與資料來源的連線]**** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]****。 您可能需要輸入使用者名稱和密碼。  
   
     > [!NOTE]  
     >  只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -92,11 +92,11 @@ ms.locfileid: "66099052"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (選擇性) 按一下 [執行] 按鈕 ( **!** ) 來查看您報表所依據的資料。  
+8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您報表所依據的資料。  
   
 9. 按 [下一步]  。  
   
-##  <a name="ChartType"></a>2. 選擇圖表類型  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 選擇圖表類型  
  您可以選擇各種不同預先定義的圖表類型。  
   
 #### <a name="to-add-a-pie-chart"></a>加入圓形圖  
@@ -123,7 +123,7 @@ ms.locfileid: "66099052"
   
  報表會顯示畫分有八個配量的圓形圖，每一塊表示一個產品。 每個配量的大小代表該產品的銷售量。 其中 3 塊配量極少。  
   
-##  <a name="Percentages"></a>3. 在每個配量中顯示百分比  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. 在每個配量中顯示百分比  
  在圓形圖的每個配量上，您可以顯示這個配量相較於整個圓形圖的百分比。  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>若要在圓形圖的每個配量中顯示百分比  
@@ -141,7 +141,7 @@ ms.locfileid: "66099052"
 5.  選擇性若要指定標籤所顯示的小數位數`#PERCENT{Pn}` ，請輸入，其中*n*是要顯示的小數點位數。 例如，若不要顯示任何小數位數， `#PERCENT{P0}`請輸入。  
   
     > [!NOTE]  
-    >  當您格式化百分比時，[**數列標籤屬性**] 對話方塊中的**數位格式**不會有任何作用。 這會將標籤格式化成百分比，但是不會計算每個配量所代表的圓形圖百分比。  
+    >  當您格式化百分比時，[數列標籤屬性]**** 對話方塊中的 [數字格式]**** 沒有任何作用。 這會將標籤格式化成百分比，但是不會計算每個配量所代表的圓形圖百分比。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66099052"
   
  報表會顯示每個圓形圖配量佔整體的百分比。  
   
-##  <a name="CombineSlices"></a>4. 將小型配量結合成一個磁區  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. 將小型配量結合成一個磁區  
  圓形圖中有 3 塊配量極少。 您可以將多個比例較小的配量結合為一個代表所有配量的較大配量。  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>若要將圓形圖上小於 5% 的任何配量結合成單一配量  
@@ -160,9 +160,9 @@ ms.locfileid: "66099052"
   
 3.  在設計介面上按一下圓形圖的任何配量。 數列的屬性會顯示在 [屬性] 窗格中。  
   
-4.  在 [一般]  區段中，展開 [CustomAttributes]  節點。  
+4.  在 [一般] **** 區段中，展開 [CustomAttributes] **** 節點。  
   
-5.  將**CollectedStyle**屬性設定為**SingleSlice**。  
+5.  將 **CollectedStyle** 屬性設定為 **SingleSlice**。  
   
 6.  確認 **CollectedThreshold** 屬性設定為 5。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "66099052"
   
  在圖例中，現在「其他」類別目錄就會存在。 新的圓形圖配量會將低於 5% 的所有配量結合成一個佔整個圓形圖 6% 的配量。  
   
-##  <a name="DrawingEffect"></a>5. 自訂繪圖效果  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. 自訂繪圖效果  
  在 [圖表精靈] 中，圓形圖的自訂樣式為 Ocean，外觀具有 Concave 的繪圖效果。 您可以在執行精靈後變更這個項目。  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>若要將繪製效果加入至圓形圖  
@@ -196,17 +196,17 @@ ms.locfileid: "66099052"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. 加入報表標題  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. 加入報表標題  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
-1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
+1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
 2.  輸入 **Camera and Camcorder Sales**並按 ENTER，然後輸入 **As a Percentage of Total Sales**，它看起來如下：  
   
-     **相機和攝影機銷售**  
+     **Camera and Camcorder Sales**  
   
-     **以總銷售額的百分比表示**  
+     **As a Percentage of Total Sales**  
   
 3.  選取 [**相機和攝影機銷售**]，然後從功能區**的 [常用**] 索引標籤的 [**字型**] 區段中，按一下 [**粗體**] 按鈕。  
   
@@ -218,17 +218,17 @@ ms.locfileid: "66099052"
   
 6.  按一下 **[執行]** 預覽報表。  
   
-##  <a name="Save"></a>7. 儲存報表  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. 儲存報表  
   
 #### <a name="to-save-the-report"></a>若要儲存報表  
   
 1.  切換到報表設計檢視。  
   
-2.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]** 。  
+2.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]**。  
   
 3.  在 [名稱]**** 中，鍵入 **Sales Pie Chart**。  
   
-4.  按一下 [檔案]  。  
+4.  按一下 **[儲存]** 。  
   
  您的報表就會儲存在報表伺服器上。  
   

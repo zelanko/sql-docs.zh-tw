@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096525"
 ---
 # <a name="check-files-in-use"></a>檢查使用中的檔案
@@ -26,14 +26,13 @@ ms.locfileid: "66096525"
   
  為了排除安裝之後重新啟動電腦的需求，安裝程式會顯示正在鎖定檔案之處理序的清單。 請停止或結束此清單中的處理序和應用程式， 然後按一下 **[重新整理檢查]** 重新執行檢查。 按一下 **[停止檢查]** 可結束正在執行的檢查作業。 如果找不到鎖定的檔案，表格會是空的。 當所有鎖定的處理序都已關閉或停止時，請按 **[下一步]** 繼續。  
   
- 安裝程式會將資訊記錄到記錄檔中。 如需有關如何檢視記錄檔的詳細資訊，請參閱[檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)和[如何：讀取 SQL Server 安裝程式記錄檔](https://go.microsoft.com/fwlink/?LinkID=134490)。  
+ 安裝程式會將資訊記錄到記錄檔中。 如需有關如何檢視記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) 和 [如何：讀取 SQL Server 安裝程式記錄檔](https://go.microsoft.com/fwlink/?LinkID=134490)。  
   
  記錄檔中將包含下列資訊：  
   
 -   處理序的名稱  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的名稱  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的名稱  
   
 -   處理序類型  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66096525"
   
 |名稱|描述|  
 |----------|-----------------|  
-|處理程序|顯示正在使用要更新之檔案的處理序完整名稱。|  
+|Process|顯示正在使用要更新之檔案的處理序完整名稱。|  
 |類型|顯示處理序的類型。|  
 |帳戶|顯示執行處理序所使用的帳戶。|  
 |處理序識別碼|顯示處理序識別碼。|  

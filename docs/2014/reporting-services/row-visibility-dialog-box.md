@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe9af16c34fa70bb8fcda0dcaae64a39786e3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102410"
 ---
 # <a name="row-visibility-dialog-box"></a>資料列可見性對話方塊
@@ -36,7 +36,7 @@ ms.locfileid: "66102410"
  **依據運算式顯示或隱藏**  
  選取此選項即可使用運算式改變初始可見性。  
   
- 輸入會評估為 `Boolean` 值的運算式，`True` 會隱藏項目，`False` 會顯示項目。 請按一下 [運算式]\(**fx**) 按鈕來編輯運算式。  
+ 輸入會評估為 `Boolean` 值的運算式，`True` 會隱藏項目，`False` 會顯示項目。 按一下 [運算式] （**fx**）按鈕來編輯運算式。  
   
  **此報表項目可以切換顯示**  
  選擇這個選項可顯示一個切換影像，好讓使用者在 HTML 報表檢視器中顯示或隱藏這個報表項目。  
@@ -46,7 +46,7 @@ ms.locfileid: "66102410"
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [將展開或折迭動作新增至 &#40;報表產生器和 SSRS 的專案&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [影像 &#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;的影像](report-design/images-report-builder-and-ssrs.md)   
  [報表設計師 F1 說明](tools/report-designer-f1-help.md)  
   
   

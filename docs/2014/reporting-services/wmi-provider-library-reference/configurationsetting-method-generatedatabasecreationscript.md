@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098504"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -42,7 +42,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ```  
   
 ## <a name="parameters"></a>參數  
- *名稱*  
+ *Databasename*  
  包含要建立之報表伺服器資料庫名稱的字串。  
   
  *Lcid*  
@@ -54,7 +54,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 > [!IMPORTANT]  
 >  從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，不支援*IsSharePointMode* = `True` ，因為在 sharepoint 模式中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，是 sharepoint 共用服務，且不受 WMI 提供者控制。 您應該一律將此參數設定為 `False`。  
   
- *文字*  
+ *指令碼*  
  [out] 包含所產生之 SQL 指令碼的字串。  
   
  *HRESULT*  
@@ -75,7 +75,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  產生的指令碼支援 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099743"
 ---
 # <a name="schedule-properties-general-page"></a>排程屬性 (一般頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "66099743"
  若要開啟此頁面， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請啟動、連接至報表伺服器、開啟 [**共用**排程] 資料夾、以滑鼠右鍵按一下共用排程，然後選取 [**屬性**]。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都提供此功能，而且在您執行沒有此功能的版本時，此頁面並不會出現。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都提供此功能，而且在您執行沒有此功能的版本時，此頁面並不會出現。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -41,7 +41,7 @@ ms.locfileid: "66099743"
  **停止此排程於**  
  指定此排程的到期日。  
   
- **型別**  
+ **類型**  
  指定循環模式主要是以小時、天、週、月為基礎，還是只執行一次。  
   
  **小時 (循環模式)**  
@@ -56,12 +56,12 @@ ms.locfileid: "66099743"
  **月 (循環模式)**  
  指定以月為間隔或是以月為基礎的選項，來執行排程的作業。 您可以指定每月的排程，包括執行排程的日子和時間。 排程中可以省略特定的月份。  
   
- **一次**  
+ **即可**  
  指定排程只在特定的日期和時間執行一次。  
   
 ## <a name="see-also"></a>另請參閱  
  [Management Studio F1 說明中的報表伺服器](report-server-in-management-studio-f1-help.md)   
- [連接至 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
+ [連接到 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
  [建立、修改和刪除共用排程](../subscriptions/create-modify-and-delete-schedules.md)   
  [排程](../subscriptions/schedules.md)  
   

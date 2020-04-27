@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098180"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>RemoveSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -38,7 +38,7 @@ public void RemoveSSLCertificateBindings(string Application,
 ```  
   
 ## <a name="parameters"></a>參數  
- *Application*  
+ *應用程式*  
  應該移除憑證繫結之應用程式的名稱。  
   
  *CertificateHash*  
@@ -66,7 +66,7 @@ public void RemoveSSLCertificateBindings(string Application,
  這個方法會從 rsreportserver.config 檔案和 HTTP.SYS (選擇性) 中移除特定繫結。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

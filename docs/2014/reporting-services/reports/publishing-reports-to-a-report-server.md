@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102487"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
@@ -48,9 +48,9 @@ ms.locfileid: "66102487"
  您可以發行單一報表或包含多個報表的報表伺服器專案。 如需發行報表的相關指示，請參閱[發行報表](../publish-reports.md)。  
   
 ### <a name="publishing-a-single-report"></a>發行單一報表  
- 如果您不要發行專案中的所有報表，可以只選擇發行單一報表。 若要這樣做，請選取部署報表的設定 (例如 Release 設定)，以滑鼠右鍵按一下報表，然後按一下 [部署]  。  
+ 如果您不要發行專案中的所有報表，可以只選擇發行單一報表。 若要這樣做，請選取部署報表的設定 (例如 Release 設定)，以滑鼠右鍵按一下報表，然後按一下 [部署]****。  
   
- 如果報表使用共用資料來源，您也必須部署共用資料來源，否則將不會執行部署的報表。 以滑鼠右鍵按一下共用資料來源，然後按一下 [部署]  。  
+ 如果報表使用共用資料來源，您也必須部署共用資料來源，否則將不會執行部署的報表。 以滑鼠右鍵按一下共用資料來源，然後按一下 [部署]****。  
   
  您必須指定報表伺服器的目標伺服器 URL，並視需要變更負責部署報表和共用資料來源的預設資料夾。  
   

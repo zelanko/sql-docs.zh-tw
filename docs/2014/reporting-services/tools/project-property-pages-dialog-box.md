@@ -15,27 +15,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100034"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
-  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 [專案]**** 功能表按一下 _報表專案名稱>\<_ 屬性]****。  
+  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案  功能表按一下 _報表專案名稱>\<_ 屬性  。  
   
- 在您定義組態屬性之後，可以從工具列的 [方案組態]**** 下拉式清單中選取組態。  
+ 在您定義組態屬性之後，可以從工具列的 [方案組態]  下拉式清單中選取組態。  
   
 ## <a name="options"></a>選項。  
- **組態**  
+ **設定**  
  選取要編輯的組態。 一開始會有下列的組態可用： **Debug**、 **DebugLocal**和 **Release**。 使用中組態會先出現，例如 **Active(Debug)**。  
   
  若要同時查看多個組態的屬性，請選取 **[所有組態]** 或 **[多重組態]**。  
   
  若要建立其他組態，請按一下工具列上的 **[組態管理員]** 。  
   
- **組態管理員**  
- 針對整個方案管理組態或是加入其他組態。 如需詳細資訊，請[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]參閱檔集。  
+ **Configuration Manager**  
+ 針對整個方案管理組態或是加入其他組態。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文件。  
   
  **OutputPath**  
  輸入或貼上路徑來儲存報表之建立驗證、部署與預覽時所使用的報表定義。 此路徑必須不同於專案所使用的路徑以及位於專案路徑下之子資料夾的相對路徑。  
@@ -78,8 +78,8 @@ ms.locfileid: "66100034"
   
 ## <a name="see-also"></a>另請參閱  
  [發行報表](../publish-reports.md)   
- [將報表發行到 SharePoint 文件庫](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [設定部署屬性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [將報表發行至 SharePoint 文件庫](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [將部署屬性設定 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [報表設計師 F1 說明](report-designer-f1-help.md)  
   
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096611"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>針對 xs:dateTime、xs:date 和 xs:time 類型之儲存格式所做的變更
@@ -186,6 +186,6 @@ EXECUTE DateTimeInvestigation 1;
  若要在升級之後於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 XML 索引，您必須針對使用 xs:date、xs:time 或 xs:dateTime 的資料行重建 XML 索引或重新設定 XML 資料行的類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103465"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
@@ -25,7 +25,7 @@ ms.locfileid: "66103465"
   
  設定為 SharePoint 模式的報表伺服器也可以利用 SharePoint ULS 記錄。 如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> 檢視記錄資訊  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> 檢視記錄資訊  
  報表伺服器執行會將有關報表執行的資料記錄到內部資料庫資料表中。 您可以從 SQL Server 檢視取得此資料表的資訊。  
   
  報表執行記錄會儲存在預設名為 **ReportServer**的報表伺服器資料庫中。 SQL 檢視會提供執行記錄資訊。 "2" 和 "3" 檢視是在較新版本中新增，而且包含新欄位或是名稱比舊版更易記的欄位。 舊版檢視仍然保留在產品中，因此相依於這些檢視的自訂應用程式不受影響。 如果您沒有舊版檢視 (例如 ExecutionLog) 的相依性，建議您使用最新檢視 ExecutionLog**3**。  
@@ -44,7 +44,7 @@ ms.locfileid: "66103465"
   
 -   [記錄欄位 (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> SharePoint 模式報表伺服器的組態設定  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> SharePoint 模式報表伺服器的組態設定  
  您可以從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定] 開啟或關閉報表執行記錄。  
   
  根據預設，記錄項目會保留 60 天。 超過此日期的項目會在每天上午 2:00 移除 。 在到期的安裝上，不論何時都只能取得 60 天的資訊。  
@@ -71,7 +71,7 @@ ms.locfileid: "66103465"
   
 2.  將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
-##  <a name="bkmk_native"></a> 原生模式報表伺服器的組態設定  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> 原生模式報表伺服器的組態設定  
  您可以從 SQL Server Management Studio 的 [伺服器屬性] 頁面開啟或關閉報表執行記錄。 **EnableExecutionLogging** 是進階屬性。  
   
  根據預設，記錄項目會保留 60 天。 超過此日期的項目會在每天上午 2:00 移除 。 在到期的安裝上，不論何時都只能取得 60 天的資訊。  
@@ -98,7 +98,7 @@ ms.locfileid: "66103465"
   
 2.  在 [使用者定義]  區段中，將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
-##  <a name="bkmk_executionlog3"></a> 記錄欄位 (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> 記錄欄位 (ExecutionLog3)  
  這個檢視已在 XML 架構的 **AdditionalInfo** 資料行內加入其他效能診斷節點。 AdditionalInfo 資料行包含的 XML 結構是由 1 至多個其他資訊欄位所組成。 下面是可從 ExecutionLog3 檢視中擷取資料列的範例 Transact SQL 陳述式。 此範例會假設報表伺服器資料庫名為 **ReportServer**：  
   
 ```  
@@ -114,7 +114,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|儲存報表或報表項目的路徑。|  
 |UserName|使用者識別碼。|  
 |ExecutionID|與要求相關聯的內部識別碼。 相同使用者工作階段上的要求會共用相同的執行識別碼。|  
-|RequestType|可能的值如下：<br />**互動式**<br />**訂用帳戶**<br /><br /> <br /><br /> 分析依 RequestType=Subscription 所篩選並且依 TimeStart 所排序的記錄資料可能會顯現訂閱使用量龐大的週期，而且您可能會想要將某些報表訂閱修改成不同的時間。|  
+|RequestType|可能的值如下：<br />**Interactive (互動式)**<br />**訂閱帳戶**<br /><br /> <br /><br /> 分析依 RequestType=Subscription 所篩選並且依 TimeStart 所排序的記錄資料可能會顯現訂閱使用量龐大的週期，而且您可能會想要將某些報表訂閱修改成不同的時間。|  
 |[格式]|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
 |ItemAction|可能的值：<br /><br /> **轉譯**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
@@ -129,7 +129,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RowCount|從查詢傳回的資料列數目。|  
 |AdditionalInfo|XML 屬性包，其中包含有關執行的其他資訊。 每個資料列的內容可能都不同。|  
   
-##  <a name="bkmk_additionalinfo"></a> AdditionalInfo 欄位  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> AdditionalInfo 欄位  
  AdditionalInfo 欄位是一種 XML 屬性包或結構，其中包含有關執行的其他資訊。 記錄中每個資料列的內容可能都不同。  
   
  下表是標準和詳細資訊記錄中，AddtionalInfo 欄位內容的範例：  
@@ -297,7 +297,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> 記錄欄位 (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a>記錄欄位（ExecutionLog2）  
  這個檢視加入了一些新欄位並且重新命名了一些其他欄位。 下面是可從 ExecutionLog2 檢視中擷取資料列的範例 Transact SQL 陳述式。 此範例會假設報表伺服器資料庫名為 **ReportServer**：  
   
 ```  
@@ -328,7 +328,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|從查詢傳回的資料列數目。|  
 |AdditionalInfo|XML 屬性包，其中包含有關執行的其他資訊。|  
   
-##  <a name="bkmk_executionlog"></a> 記錄欄位 (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a>記錄欄位（ExecutionLog）  
  下面是可從 ExecutionLog 檢視中擷取資料列的範例 Transact SQL 陳述式。 此範例會假設報表伺服器資料庫名為 **ReportServer**：  
   
 ```  
@@ -358,7 +358,7 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|從查詢傳回的資料列數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [開啟 SharePoint 追蹤記錄 &#40;ULS 的 Reporting Services 事件&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)   
  [錯誤和事件參考 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

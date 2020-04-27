@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096323"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 子句中資料行別名的前置詞不可以是資料表別名
@@ -36,10 +36,9 @@ FROM Person.Contact p
 ORDER BY p.l  
 ```  
   
- 
-  [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] 不會將 `p.l` 子句中的 `ORDER BY` 比對成資料表中的有效資料行。  
+ [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] 不會將 `p.l` 子句中的 `ORDER BY` 比對成資料表中的有效資料行。  
   
-### <a name="exception"></a>Exception  
+### <a name="exception"></a>例外狀況  
  如果在 ORDER BY 子句中指定的前置資料行別名是指定資料表中的有效資料行名稱，則查詢會在無錯誤的情況下執行。但是，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，陳述式的語意可能不同。 例如，在下列陳述式中指定的資料行別名 (`id`) 是 `sysobjects` 資料表中的有效資料行名稱。 在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中，當該陳述式執行時，`CAST` 作業會在排序結果集之後執行。 這表示 `name` 資料行會用於排序作業中。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中，`CAST` 作業會在排序作業之前進行。 這表示 `id` 資料行會用於排序作業中，並以非預期的順序傳回結果集。  
   
 ```  

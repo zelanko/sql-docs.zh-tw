@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102170"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
@@ -27,7 +27,7 @@ ms.locfileid: "66102170"
   
  在您啟用基本驗證之前，請確認您的安全性基礎結構有支援它。 使用基本驗證時，報表伺服器 Web 服務會將認證傳遞給本機安全性授權。 如果認證指定本機使用者帳戶，報表伺服器電腦上的本機安全性授權將會驗證這位使用者，而此使用者將會取得對於本機資源有效的安全性 Token。 網域使用者帳戶的認證會轉送給網域控制站，並由網域控制站加以驗證。 產生的票證對於網路資源而言是有效的。  
   
- 如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱[在原生模式報表伺服器上設定 SSL 連線](configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
  當您啟用基本驗證之後，請注意在使用者設定外部資料來源的連線屬性，而此資料來源會提供資料給報表時，就無法選取 [Windows 整合式安全性]  選項。 資料來源屬性頁上的這個選項將會呈現灰色。  
   
@@ -84,12 +84,10 @@ ms.locfileid: "66102170"
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic 參考  
  當您設定基本驗證時，可以指定下列元素。  
   
-|元素|必要|有效值|  
+|元素|必要|有效的值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|
-  `2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> 
-  `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
-|Realm|選用|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
+|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意:[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
+|Realm|選擇性|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
 |DefaultDomain|選用|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
   
 ## <a name="enabling-anonymous-access-to-report-builder-application-files"></a>啟用對報表產生器應用程式檔案的匿名存取  
@@ -139,7 +137,7 @@ ms.locfileid: "66102170"
   
      若您包含 Web.config 檔，則驗證模式必須設定為 `Windows`。  
   
-     `Identity impersonate`可以是`True`或`False`。  
+     `Identity impersonate` 可以是 `True` 或 `False`。  
   
     -   如果您不希望 ASP.NET 讀取安全性 Token，請將它設定為 `False`。 此要求將會在報表伺服器服務的安全性內容中執行。  
   
@@ -158,7 +156,7 @@ ms.locfileid: "66102170"
 8.  重新啟動報表伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表伺服器應用程式的應用程式域](../report-server/application-domains-for-report-server-applications.md)   
+ [報表伺服器應用程式的應用程式網域](../report-server/application-domains-for-report-server-applications.md)   
  [Reporting Services 安全性與保護](reporting-services-security-and-protection.md)  
   
   

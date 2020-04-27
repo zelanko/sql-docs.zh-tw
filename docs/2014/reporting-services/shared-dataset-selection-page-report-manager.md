@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101265"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>共用資料集選取頁面 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66101265"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
 4.  選取 **[共用資料集]** 索引標籤。  
   
@@ -41,8 +41,7 @@ ms.locfileid: "66101265"
   
  若要變更資料集名稱所參考的共用資料集，請按一下 **[瀏覽]** 按鈕。  
   
- 
-  **[瀏覽]** 按鈕會開啟報表伺服器的資料夾結構。 按一下共用資料集，即可將完整路徑加入至 **[位置]** 欄位。  
+ **[瀏覽]** 按鈕會開啟報表伺服器的資料夾結構。 按一下共用資料集，即可將完整路徑加入至 **[位置]** 欄位。  
   
  按一下 **[確定]** 按鈕以完成選取共用資料集，或按一下 **[取消]** 按鈕以取消瀏覽共用資料集。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66101265"
  [[內容] 頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [管理共用資料集](report-data/manage-shared-datasets.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [報表產生器中的報表組件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)   
- [內嵌和共用資料集 &#40;報表產生器和 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [報表產生器中的報表元件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

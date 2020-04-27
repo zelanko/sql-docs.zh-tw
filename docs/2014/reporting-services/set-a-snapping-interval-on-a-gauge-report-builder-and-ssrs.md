@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101371"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>設定量測計的貼齊間隔 (報表產生器及 SSRS)
@@ -39,8 +39,8 @@ ms.locfileid: "66101371"
 5.  將**SnappingInterval**設定為代表貼齊間隔的值。 此指標將貼齊您已指定之值的最接近捨入倍數。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [格式化量測計上的尺規 &#40;報表產生器和 SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [格式化量測計上的指標 &#40;報表產生器和 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
   

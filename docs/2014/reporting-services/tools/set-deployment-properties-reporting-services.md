@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099545"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)
-  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您必須為報表及共用資料來源指定報表伺服器和資料夾 (選擇性)，讓您可以將報表伺服器專案中的項目發行至報表伺服器。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 需要建立、預覽部署報表的屬性和值都儲存在報表伺服器專案的專案組態中。 您可以為這些專案屬性建立多個命名集，讓您可以在屬性集之間方便地切換。 每一組屬性都是一個組態。 例如，您可以擁有一個組態將報表發行到測試伺服器，並有另一個組態將報表發行到實際伺服器。  
+  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您必須為報表及共用資料來源指定報表伺服器和資料夾 (選擇性)，讓您可以將報表伺服器專案中的項目發行至報表伺服器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 需要建立、預覽部署報表的屬性和值都儲存在報表伺服器專案的專案組態中。 您可以為這些專案屬性建立多個命名集，讓您可以在屬性集之間方便地切換。 每一組屬性都是一個組態。 例如，您可以擁有一個組態將報表發行到測試伺服器，並有另一個組態將報表發行到實際伺服器。  
   
  使用組態管理員可在專案組態中建立及管理專案屬性的集合。 組態管理員是 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]支援的功能， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以它為基礎。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66099545"
   
 10. 在 [TargetServerURL]  文字方塊中，鍵入目標報表伺服器的 URL。 在發行報表之前，您必須設定此屬性為有效的報表伺服器 URL。 當您發行至以原生模式執行的報表伺服器時，請使用報表伺服器之虛擬目錄的 URL (例如 http: *//server/reportserver* 或 https: *//server/reportserver*)。 這是報表伺服器的虛擬目錄，而非報表管理員。  
   
-     發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 如果您未指定網站，則會使用預設頂層網站 (例如 http://*伺服器名稱*、http://*伺服器名稱*/*網站*或 http://*伺服器名稱*/*網站*/*子網站*)。  
+     發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 如果您未指定網站，則會使用預設的頂層網站（例如，HTTP://*servername*、HTTP://*servername*/*site*或 HTTP://*servername*/*網站*/*子*網站）。  
   
 ### <a name="to-set-configuration-manager-properties"></a>設定組態管理員屬性  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66099545"
  [發行資料來源與報表](../reports/publishing-data-sources-and-reports.md)   
  [預覽報表](../reports/previewing-reports.md)   
  [報表設計師 F1 說明](report-designer-f1-help.md)   
- [SharePoint 模式在報表伺服器上已發行報表項目的 URL 範例 &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint 模式中報表伺服器上已發行報表專案的 URL 範例 &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [專案屬性頁對話方塊](project-property-pages-dialog-box.md)   
  [將報表發行至報表伺服器](../reports/publishing-reports-to-a-report-server.md)  
   

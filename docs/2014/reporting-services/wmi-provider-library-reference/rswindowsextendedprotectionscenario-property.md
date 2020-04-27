@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a61ca96aafe0e475d28023276c561f49c13cde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096975"
 ---
 # <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserver_configurationsetting"></a>RSWindowsExtendedProtectionScenario 屬性 (WMI MSReportServer_ConfigurationSetting)
@@ -44,6 +44,6 @@ public string RSWindowsExtendedProtectionScenario;
  [RSWindowsExtendedProtectionLevel 屬性 &#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionlevel-property.md)   
  [SetExtendedProtectionSettings 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setextendedprotectionsettings.md)   
  [Reporting Services 的驗證擴充保護](../security/extended-protection-for-authentication-with-reporting-services.md)   
- [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)  
   
   

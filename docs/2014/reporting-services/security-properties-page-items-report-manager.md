@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102155"
 ---
 # <a name="security-properties-page-items-report-manager"></a>安全性屬性頁面，項目 (報表管理員)
@@ -35,11 +35,11 @@ ms.locfileid: "66102155"
   
 3.  在下拉式功能表中，執行下列其中一項步驟：  
   
-    -   按一下 **[安全性]** 。 這樣就會開啟該項目的 [安全性] 屬性頁面。  
+    -   按一下 [安全性]****。 這樣就會開啟該項目的 [安全性] 屬性頁面。  
   
     -   按一下 **[管理]** 開啟項目的 [一般] 屬性頁面。 然後，選取 **[安全性]** 索引標籤。  
   
- **編輯專案安全性**  
+ **編輯項目安全性**  
  按一下即可變更定義目前項目安全性的方式。 如果您編輯資料夾的安全性，您的變更將套用至目前資料夾及其任何子資料夾的內容。  
   
  [首頁] 資料夾不可使用此按鈕。  
@@ -63,7 +63,7 @@ ms.locfileid: "66102155"
   
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [Predefined Roles](security/role-definitions-predefined-roles.md)   
+ [預先定義的角色](security/role-definitions-predefined-roles.md)   
  [在原生模式報表伺服器上授與權限](security/granting-permissions-on-a-native-mode-report-server.md)   
  [角色指派](security/role-assignments.md)   
  [角色定義](security/role-definitions.md)  

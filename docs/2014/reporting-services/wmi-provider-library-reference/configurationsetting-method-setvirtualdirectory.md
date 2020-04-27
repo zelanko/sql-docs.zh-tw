@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097923"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserver_configurationsetting"></a>SetVirtualDirectory 方法 (WMI MSReportServer_ConfigurationSetting)
@@ -36,7 +36,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ```  
   
 ## <a name="parameters"></a>參數  
- *Application*  
+ *應用程式*  
  要設定虛擬目錄之應用程式的名稱。  
   
  *VirtualDirectory*  
@@ -62,7 +62,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  更新 \Configuration\URLReservations\Application\VirtualDirectory 元素的值。 即使尚未建立任何 URL 保留項目，也會成功。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

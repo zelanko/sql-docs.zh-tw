@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098711"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>檢視或刪除報表記錄 (報表管理員)
@@ -54,7 +54,7 @@ ms.locfileid: "66098711"
 3.  選取您想要刪除之記錄快照集旁的核取方塊，然後按一下 [**刪除**]。  
   
 ## <a name="see-also"></a>另請參閱  
- [將快照集加入報表記錄 &#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [將快照集加入至報表記錄 &#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [報表記錄頁面 &#40;報表管理員&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [設定報表處理屬性](report-server/set-report-processing-properties.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
