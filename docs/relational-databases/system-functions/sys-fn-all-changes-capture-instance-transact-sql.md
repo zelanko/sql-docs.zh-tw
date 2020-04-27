@@ -21,10 +21,10 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72909402"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.databases fn_all_changes_&lt;capture_instance&gt; （transact-sql）
@@ -60,12 +60,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  這個參數可以採用兩個可能意義的其中一個，這取決於針對@closed_high_end_point sp_cdc_generate_wrapper_function 呼叫來產生包裝函式的 create 腳本時所選擇的值：  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      只有在 cdc. <中的資料列 capture_instance>_CT 變更資料表的關聯認可時間小於或等於 end_time，才會包含在結果集中。  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      結果集內只會包含 cdc. capture_instance_CT 變更資料表中，具有嚴格小於 end_time 之相關聯認可時間的資料列。  
   
@@ -76,7 +75,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  可以是下列其中一個選項：  
   
- 所有  
+ all  
  傳回指定之 LSN 範圍內的所有變更。 如果是因為更新作業所發生的變更，這個選項就只會傳回包含套用更新之後之新值的資料列。  
   
  all update old  
@@ -86,10 +85,10 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 |資料行名稱|資料行類型|描述|  
 |-----------------|-----------------|-----------------|  
-|__CDC_STARTLSN|**binary （10）**|與變更相關聯之交易的認可 LSN。 在相同交易中認可的所有變更都會共用相同的認可 LSN。|  
-|__CDC_SEQVAL|**binary （10）**|用來排序交易內資料列變更的序列值。|  
-|\<> 的@column_list資料行|**視情況而異**|當呼叫它來產生建立包裝函式的腳本時，sp_cdc_generate_wrapper_function 的*column_list*引數中所識別的資料行。|  
-|__CDC_OPERATION|**Nvarchar （2）**|表示將資料列套用到目標環境所需之作業的作業碼。 它會根據呼叫中所提供的引數*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = ' all '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> *row_filter_option* = ' 所有更新舊版本 '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> 'UO' - 更新作業舊值|  
+|__CDC_STARTLSN|**binary(10)**|與變更相關聯之交易的認可 LSN。 在相同交易中認可的所有變更都會共用相同的認可 LSN。|  
+|__CDC_SEQVAL|**binary(10)**|用來排序交易內資料列變更的序列值。|  
+|\<> 的@column_list資料行|**差異**|當呼叫它來產生建立包裝函式的腳本時，sp_cdc_generate_wrapper_function 的*column_list*引數中所識別的資料行。|  
+|__CDC_OPERATION|**nvarchar(2)**|表示將資料列套用到目標環境所需之作業的作業碼。 它會根據呼叫中所提供的引數*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = ' all '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> *row_filter_option* = ' 所有更新舊版本 '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> 'UO' - 更新作業舊值|  
 |\<> 的@update_flag_list資料行|**bit**|藉由將 _uflag 附加到資料行名稱所命名的位元旗標。 當 _CDC_OPERATION 為 ' UO ' 的 ' \_I ' 時，旗標一律會設為 Null。 當\__CDC_OPERATION 為 ' UN ' 時，如果更新產生對應資料行的變更，它會設定為1。 否則為 0。|  
   
 ## <a name="remarks"></a>備註  
@@ -113,6 +112,6 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>另請參閱  
  [sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

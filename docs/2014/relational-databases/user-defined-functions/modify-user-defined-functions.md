@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196456"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
@@ -34,9 +34,9 @@ ms.locfileid: "68196456"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  ALTER FUNCTION 不能用於執行以下任何動作：  
   
 -   將純量值函式變更為資料表值函式，反之亦然。  
@@ -45,12 +45,12 @@ ms.locfileid: "68196456"
   
 -   將 Transact-SQL 函數變更為 CLR 函數，反之亦然。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要函數或結構描述的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>若要修改使用者定義函數  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68196456"
   
 6.  在 [檔案]  功能表上，按一下 [儲存 **function_name**]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>若要修改使用者定義函數  
   

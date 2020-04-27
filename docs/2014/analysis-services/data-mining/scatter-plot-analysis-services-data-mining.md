@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ea37a9aecda0b3fbb6d61f7ba14a82f368c95aa
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175175"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>散佈圖 (Analysis Services - 資料採礦)
-  
   *「散佈圖」* (Scatter Plot) 會針對此模型所預測的值來繪製資料中的實際值。 散佈圖會沿著 X 軸顯示實際值，並沿著 Y 軸顯示預測值。 散佈圖也會顯示一條線來說明完美預測，也就是預測值完全符合實際值的情況。 這條理想 45 度線上之點的距離會指示預測執行的成果好壞。
 
 ## <a name="understanding-the-scatter-plot"></a>了解散佈圖
@@ -41,7 +40,7 @@ ms.locfileid: "78175175"
 ## <a name="restrictions-on-scatter-plots"></a>散佈圖的限制
  只有當您在 **[輸入選擇]** 索引標籤上選擇的模型包含連續可預測屬性時，才會建立散佈圖。 您不必進行任何其他選擇；散佈圖圖表類型會自動顯示在以模型和屬性類型為根據的 **[增益圖]** 索引標籤上。
 
- 雖然時間序列模型會預測連續數字，但是您無法使用散佈圖來測量時間序列模型的精確度。 您可以使用其他方法，例如保留歷程記錄資料的一部分。 如需詳細資訊，請參閱 [時間序列模型查詢範例](time-series-model-query-examples.md)。
+ 雖然時間序列模型會預測連續數字，但是您無法使用散佈圖來測量時間序列模型的精確度。 您可以使用其他方法，例如保留歷程記錄資料的一部分。 如需詳細資訊，請參閱[時間序列模型查詢範例](time-series-model-query-examples.md)。
 
 ## <a name="related-content"></a>相關內容
  下列主題包含有關如何建立及使用散佈圖與相關精確度圖表的詳細資訊。
@@ -49,11 +48,11 @@ ms.locfileid: "78175175"
 |主題|連結|
 |------------|-----------|
 |提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|
-|說明相關的圖表類型。|[增益圖 &#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services-資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [分類矩陣 &#40;Analysis Services-資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)|
-|描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證 &#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|
-|描述建立增益圖及其他精確度圖表的步驟。|[測試和驗證工作，以及如何 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|
+|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)|
+|描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|
+|描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|
 
 ## <a name="see-also"></a>另請參閱
- [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)
 
 

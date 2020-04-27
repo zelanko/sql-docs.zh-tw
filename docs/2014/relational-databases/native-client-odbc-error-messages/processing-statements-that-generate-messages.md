@@ -25,14 +25,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205695"
 ---
 # <a name="processing-statements-that-generate-messages"></a>處理產生訊息的陳述式
-  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 陳述式選項 STATISTICS TIME 和 STATISTICS IO 用於取得協助診斷長時間執行之查詢的資訊。 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 SHOWPLAN 選項來分析查詢計畫。 ODBC 應用程式可以執行下列陳述式來設定這些選項：  
   
 ```  
@@ -50,8 +49,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
               Table Scan"  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版會將 SHOWPLAN 選項取代成 SHOWPLAN_ALL 和 SHOWPLAN_TEXT，而且這兩個都會傳回輸出當做結果集，而且一組訊息。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版會將 SHOWPLAN 選項取代成 SHOWPLAN_ALL 和 SHOWPLAN_TEXT，而且這兩個都會傳回輸出當做結果集，而且一組訊息。  
   
  STATISTICS TIME 資料的每一行都會以下列格式傳回：  
   

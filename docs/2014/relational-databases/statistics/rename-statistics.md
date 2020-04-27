@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a97bb9ab3fcf5aa3ec9e3177a8f4b319c98e1988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197145"
 ---
 # <a name="rename-statistics"></a>重新命名統計資料
@@ -35,19 +35,19 @@ ms.locfileid: "68197145"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  根據預設，建立索引時會在該索引的索引鍵資料行上建立統計資訊。 因此，重新命名索引會自動重新命名統計資料物件，反之亦然。  
   
  變更物件名稱的任何部分，可能破壞指令碼和預存程序。 建議您卸除統計資料物件，並使用新名稱重新建立統計資料物件，而不要重新命名。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-rename-a-statistics-object"></a>若要重新命名統計資料物件  
   

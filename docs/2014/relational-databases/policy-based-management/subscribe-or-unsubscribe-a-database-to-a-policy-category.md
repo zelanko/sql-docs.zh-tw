@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212137"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>讓資料庫訂閱或取消訂閱原則類別目錄
@@ -28,20 +28,20 @@ ms.locfileid: "68212137"
   
      [安全性](#Security)  
   
--   **若要將資料庫訂閱或取消訂閱原則類別目錄，請使用：**  
+-   **若要使用下列方法讓資料庫訂閱或取消訂閱原則類別目錄：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 db_owner 固定資料庫角色中的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>若要讓資料庫訂閱或取消訂閱原則類別目錄  
   
@@ -51,8 +51,7 @@ ms.locfileid: "68212137"
   
 3.  以滑鼠右鍵按一下要管理其中類別目錄訂閱的資料庫，指向 [原則]**** 並選取 [類別目錄]****。  
   
-     
-  **[類別目錄]** 對話方塊有下列選項：  
+     **[類別目錄]** 對話方塊有下列選項：  
   
      展開資料行  
      按一下此選項可展開原則類別目錄。 這個清單會列出此類別目錄中所包含的所有原則。  
@@ -77,9 +76,9 @@ ms.locfileid: "68212137"
   
 4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱]**** 資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
   
-5.  完成後，請按一下 **[確定]** 。  
+5.  完成時按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>若要讓資料庫訂閱原則類別目錄  
   

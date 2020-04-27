@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba0e9f1edc59b6f1b51bff6afa040fa489cd9858
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982009"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631587"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73982009"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 {   
     PAD_INDEX = { ON | OFF }  
   | FILLFACTOR = fillfactor  

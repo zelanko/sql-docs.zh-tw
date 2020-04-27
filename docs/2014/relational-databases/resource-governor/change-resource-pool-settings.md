@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198949"
 ---
 # <a name="change-resource-pool-settings"></a>變更資源集區設定
@@ -27,17 +27,17 @@ ms.locfileid: "68198949"
   
 -   **若要變更資源集區的設定，請使用下列方式：** [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  最大 CPU 百分比必須大於或等於最小 CPU 百分比。 最大記憶體百分比必須大於或等於最小記憶體百分比。  
   
  所有資源集區之最小 CPU 百分比和最小記憶體百分比的總和不得超過 100。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  變更資源集區設定需要 CONTROL SERVER 權限。  
   
-##  <a name="ChgRPProp"></a> 使用 SQL Server Management Studio 變更資源集區設定  
+##  <a name="change-resource-pool-settings-using-sql-server-management-studio"></a><a name="ChgRPProp"></a> 使用 SQL Server Management Studio 變更資源集區設定  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 [管理]  節點至 [資源集區]  。  
@@ -50,7 +50,7 @@ ms.locfileid: "68198949"
   
 5.  若要儲存變更，請按一下 **[確定]** 。  
   
-##  <a name="ChgRPTSQL"></a> 使用 Transact-SQL 變更資源集區設定  
+##  <a name="change-resource-pool-settings-using-transact-sql"></a><a name="ChgRPTSQL"></a> 使用 Transact-SQL 變更資源集區設定  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  執行 `ALTER RESOURCE POOL` 陳述式，並指定要變更的屬性值。  

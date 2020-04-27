@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205459"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料

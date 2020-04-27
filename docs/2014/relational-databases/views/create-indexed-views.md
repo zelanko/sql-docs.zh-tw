@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196434"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
@@ -29,7 +29,7 @@ ms.locfileid: "68196434"
   
   
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  以下是建立索引檢視表所需要的步驟，這些步驟對於能否順利完成索引檢視表的實作是很重要的：  
   
 1.  確認檢視表中所要參考之所有現有資料表的 SET 選項是正確的。  
@@ -42,7 +42,7 @@ ms.locfileid: "68196434"
   
 5.  在檢視表上建立唯一的叢集索引。  
   
-###  <a name="Restrictions"></a>索引視圖的必要 SET 選項  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>索引視圖的必要 SET 選項  
  如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 CONCAT_NULL_YIELDS_NULL 設為 ON 之後，運算式 **'** abc **'** + NULL 會傳回 NULL 值。 不過，將 CONCAT_NULL_YIEDS_NULL 設為 OFF 之後，相同的運算式則會產生 **'** abc **'**。  
   
  若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 當下列情況發生時，您必須將下表中的 SET 選項設定為**RequiredValue**資料行中顯示的值：  
@@ -130,12 +130,12 @@ ms.locfileid: "68196434"
   
 -   如果檢視表定義包含 GROUP BY 子句，唯一叢集索引的索引鍵則只能參考 GROUP BY 子句中指定的資料行。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
  當您在索引檢視中參考 `datetime` 和 `smalldatetime` 字串常值時，我們建議您使用決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具有決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。 牽涉到將字元字串隱含轉換成 `datetime` 或 `smalldatetime` 的運算式是視為非決定性的。 這是因為結果需視伺服器工作階段的 LANGUAGE 和 DATEFORMAT 設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`listopad`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 DATEFORMAT 設定解譯字串 `'2000-12-01'` 。  
   
  非 Unicode 字元資料與定序之間的隱含轉換也是視為非決定性的。  
   
-###  <a name="Considerations"></a>考量  
+###  <a name="considerations"></a><a name="Considerations"></a>考量  
  索引檢視表中資料行的 **large_value_types_out_of_row** 選項設定是繼承基底資料表中對應的資料行設定。 此值可透過 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)設定。 由運算式形成的資料行其預設值為 0。 這表示大數值類型是以資料列的方式儲存。  
   
  可以在分割區資料表上建立索引檢視表，且索引檢視表本身也可以分割。  
@@ -146,12 +146,12 @@ ms.locfileid: "68196434"
   
  您可以停用資料表與檢視的索引。 停用資料表的叢集索引時，也會停用與資料表相關之檢視的索引。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  至少必須有資料庫中的 CREATE VIEW 權限，以及正在建立之檢視表所在之結構描述的 ALTER 權限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>建立索引檢視表  
   
@@ -212,9 +212,9 @@ ms.locfileid: "68196434"
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [設定 ANSI_NullS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [設定 ANSI_PADDING &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [設定 ANSI_WARNINGS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [SET ARITHABORT &#40;Transact-sql&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [設定 CONCAT_Null_YIELDS_Null &#40;Transact-sql&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [設定 NUMERIC_ROUNDABORT &#40;Transact-sql&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   

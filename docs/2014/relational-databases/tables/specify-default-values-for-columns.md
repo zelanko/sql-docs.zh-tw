@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196719"
 ---
 # <a name="specify-default-values-for-columns"></a>指定資料行的預設值
@@ -35,15 +35,15 @@ ms.locfileid: "68196719"
   
      [安全性](#Security)  
   
--   **若要指定預設值，請使用：**  
+-   **若要使用下列項目來指定預設值：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果 [預設值]**** 欄位中的輸入內容取代繫結的預設值 (顯示為沒有括弧)，系統會提示您解除繫結預設值，並使用新的預設值加以取代。  
   
@@ -53,16 +53,16 @@ ms.locfileid: "68196719"
   
 -   若要輸入物件/函數，請輸入物件/函數的名稱，但不要加上引號。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>若要指定資料行的預設值  
   
-1.  在 [物件總管]  中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]  。  
+1.  在 [物件總管]**** 中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]****。  
   
 2.  選取您要指定預設值的資料行。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "68196719"
     > [!NOTE]  
     >  若要輸入數字預設值，請輸入數字。 若為物件或函數，請輸入其名稱。 若為英數字元預設值，請在單引號內部輸入值。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+4.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>若要指定資料行的預設值  
   
@@ -95,6 +95,6 @@ ms.locfileid: "68196719"
   
     ```  
   
- 如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+ 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
   
 ###  <a name="TsqlExample"></a>  

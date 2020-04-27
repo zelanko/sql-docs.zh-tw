@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197770"
 ---
 # <a name="event-notifications"></a>事件通知
@@ -51,7 +51,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>事件通知概念  
  建立事件通知時，會在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體與您所指定的目標服務之間開啟一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交談。 交談通常會維持開啟狀態，只要事件通知是以伺服器執行個體上的物件存在即可。 在某些錯誤的例子中，可以在卸除事件通知之間先關閉交談。 這些交談永遠不會在事件通知之間共用。 每個事件通知都有自己獨佔的交談。 明確地結束交談可防止目標服務再收到訊息，而且在下次事件通知引發之前都不會再重新開啟交談。  
   
- 事件資訊是以 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 類型的變數傳遞至 `xml` 服務，它提供事件發生時的詳細資訊、受影響之資料庫物件的詳細資訊、相關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次陳述式以及其他資訊。 如需事件通知所產生之 XML 結構描述的詳細資訊，請參閱 [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
+ 事件資訊是以 `xml` 類型的變數傳遞至 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務，它提供事件發生時的詳細資訊、受影響之資料庫物件的詳細資訊、相關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次陳述式以及其他資訊。 如需事件通知所產生之 XML 結構描述的詳細資訊，請參閱 [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
   
 ### <a name="event-notifications-vs-triggers"></a>事件通知與 觸發程序  
  下表比較觸發程序和事件通知的異同。  

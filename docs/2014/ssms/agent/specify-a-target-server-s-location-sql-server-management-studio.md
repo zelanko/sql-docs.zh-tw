@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211330"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目標伺服器的位置 (SQL Server Management Studio)
@@ -31,23 +31,23 @@ ms.locfileid: "68211330"
   
      [安全性](#Security)  
   
--   **若要指定目標伺服器的位置，請使用：**  
+-   **若要使用下列項目指定目標伺服器的位置：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  執行此動作會編輯登錄。 您最好不要手動編輯登錄，因為不當或不正確的變更會使系統發生嚴重的組態問題。 因此，只有資深使用者才應該利用登錄編輯器程式來編輯登錄。 如需詳細資訊，請參閱 Microsoft Windows 文件集。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-specify-a-target-servers-location"></a>若要指定目標伺服器的位置  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68211330"
   
 4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-a-target-servers-location"></a>若要指定目標伺服器的位置  
   

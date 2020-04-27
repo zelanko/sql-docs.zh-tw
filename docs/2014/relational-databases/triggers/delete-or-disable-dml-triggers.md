@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196524"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>刪除或停用 DML 觸發程序
@@ -41,9 +41,9 @@ ms.locfileid: "68196524"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   刪除觸發程序時，會從目前的資料庫卸除它。 其所依據的資料表和資料不受影響。 刪除資料表時會自動刪除資料表上的所有觸發程序。  
   
@@ -51,14 +51,14 @@ ms.locfileid: "68196524"
   
 -   即使停用觸發程序，也不會卸除它。 該觸發程序仍然會以物件形式存在於目前的資料庫中。 不過，當設計此觸發程序的 INSERT、UPDATE 或 DELETE 陳述式執行時，不會引發觸發程序。 已停用的觸發程序可重新啟用。 啟用觸發程序並不會重新建立它。 觸發程序會以當初建立的相同方式引發。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  刪除 DML 觸發程序需要定義觸發程序所在資料表或檢視表的 ALTER 權限。  
   
  若要停用或啟用 DML 觸發程序，使用者至少要對建立該觸發程序的資料表或檢視，具備 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>刪除 DML 觸發程序  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68196524"
   
 4.  若要啟用觸發程序，請按一下 **[啟用]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>刪除 DML 觸發程序  
   

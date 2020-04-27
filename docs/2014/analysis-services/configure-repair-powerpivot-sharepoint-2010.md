@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174467"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)
-  若要設定或修復 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安裝，請使用 PowerPivot 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。 本主題描述適用於 SharePoint 2010 的 PowerPivot 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 設定工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。
+  若要設定或修復 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安裝，請使用 PowerPivot 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。 本主題描述適用於 SharePoint 2010 的 PowerPivot 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 設定工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。
 
  **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010
 
  
 
-##  <a name="bkmk_before"></a>開始之前
+##  <a name="before-you-start"></a><a name="bkmk_before"></a>開始之前
  PowerPivot for SharePoint 組態工具會掃描程式檔案、登錄設定和可用的通訊埠。 若要充分利用這些工具，請檢閱下列各項。
 
 -   執行＜ [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md)＞組態工具的一般需求。
@@ -34,7 +33,7 @@ ms.locfileid: "78174467"
 
 -   通訊埠 80 必須可用，其中一項選取的工作才會要求組態工具建立及設定 Web 應用程式。
 
-##  <a name="bkmk_using"></a>使用 PowerPivot 設定工具
+##  <a name="using-the-powerpivot-configuration-tool"></a><a name="bkmk_using"></a>使用 PowerPivot 設定工具
  此工具的第一頁提供用於設定 SharePoint 伺服器陣列的輸入值摘要。 除了您提供的輸入值之外，也會使用預設值來設定系統。 預設名稱用於服務應用程式、服務應用程式資料庫和服務應用程式屬性。
 
 > [!TIP]
@@ -50,7 +49,7 @@ ms.locfileid: "78174467"
 
  ![組態工具使用者介面](media/ssas-pctui.gif "組態工具使用者介面")
 
-##  <a name="bkmk_steps"></a>設定步驟
+##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>設定步驟
  只有在本機伺服器上安裝了 PowerPivot for SharePoint 2010 時，才看得見組態工具的連結。
 
 1.  指向 **[開始]** 功能表上的 **[所有程式]**，按一下 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]，然後按一下 **[組態工具]**，再按一下 **[PowerPivot 組態工具]**。
@@ -59,11 +58,11 @@ ms.locfileid: "78174467"
 
 3.  將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。
 
-4.  **預設帳戶：** 在 [參數] 索引標籤上，輸入 [**預設帳戶使用者名稱**] 的網域使用者帳戶。 此帳戶會用來佈建主要服務，包括 PowerPivot 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。
+4.  **預設帳戶** ：在 [參數] 索引標籤上，輸入 **[預設帳戶使用者名稱]** 的網域使用者帳戶。 此帳戶會用來佈建主要服務，包括 PowerPivot 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。
 
-     複雜**密碼：** 輸入複雜密碼。 對於新的 SharePoint 伺服器陣列，複雜密碼是在新的伺服器或應用程式加入至 SharePoint 伺服器陣列時使用。 如果是現有的伺服器陣列，則輸入可讓您將伺服器應用程式加入至該伺服器陣列的複雜密碼。
+     **複雜密碼** ：輸入複雜密碼。 對於新的 SharePoint 伺服器陣列，複雜密碼是在新的伺服器或應用程式加入至 SharePoint 伺服器陣列時使用。 如果是現有的伺服器陣列，則輸入可讓您將伺服器應用程式加入至該伺服器陣列的複雜密碼。
 
-5.  **埠：**（選擇性）輸入要連接到管理中心 web 應用程式的通訊埠編號，或使用提供的隨機產生編號。 組態工具會先檢查這個編號是否可以使用，然後再提供它當做選項。
+5.  **通訊埠** ：選擇性地輸入連接至管理中心 Web 應用程式的通訊埠編號，或是使用提供的隨機產生編號。 組態工具會先檢查這個編號是否可以使用，然後再提供它當做選項。
 
 6.  按一下 **[在本機伺服器上註冊 SQL Server Analysis Services (PowerPivot)]**。
 
@@ -82,7 +81,7 @@ ms.locfileid: "78174467"
 
 11. [確認 PowerPivot for SharePoint 安裝](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)。
 
-##  <a name="bkmk_input"></a>用來設定伺服器的輸入值
+##  <a name="input-values-used-to-configure-the-server"></a><a name="bkmk_input"></a>用來設定伺服器的輸入值
  PowerPivot 組態工具會使用輸入值 (您所輸入) 以及預設值 (它偵測到或自動使用) 的組合。
 
  組態工具中列出的動作清單取決於 SharePoint 伺服器陣列目前的組態。 例如，如果已設定 SharePoint 伺服器陣列，則工具中不會列出任何動作。 您可以隨時執行工具以設定、修復或偵測組態錯誤。 如果必要服務 (例如 Excel Services 或 Secure Store Service) 未在伺服器陣列中執行，此工具會偵測遺漏的服務並且提供用於啟用這些服務的選項。 如果無需執行任何動作，則工作清單將是空的。
@@ -91,17 +90,16 @@ ms.locfileid: "78174467"
 
 |頁面|輸入值|來源|描述|
 |----------|-----------------|------------|-----------------|
-|**[設定或修復 PowerPivot for SharePoint]**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 此帳戶用於佈建 PowerPivot 服務應用程式、Secure Store Service、Excel Services、Web 應用程式集區識別、網站集合管理員和 PowerPivot 無人看管的資料重新整理帳戶。<br /><br /> 根據預設，工具會輸入目前使用者的網域帳戶。 除非伺服器是設定做為評估之用，否則應該以其他網域使用者帳戶取代此預設帳戶。<br /><br /> 您之後也可以使用管理中心變更服務識別。<br /><br /> 您可以選擇在 PowerPivot 組態工具中為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 [**建立預設 Web 應用程式**] 頁面（假設此工具正在為伺服器陣列建立 Web 應用程式）。<br /><br /> PowerPivot 無人看管的資料重新整理帳戶，使用此工具中的 **[建立無人看管的資料重新整理帳戶]** 頁面。|
+|**[設定或修復 PowerPivot for SharePoint]**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 此帳戶用於佈建 PowerPivot 服務應用程式、Secure Store Service、Excel Services、Web 應用程式集區識別、網站集合管理員和 PowerPivot 無人看管的資料重新整理帳戶。<br /><br /> 根據預設，工具會輸入目前使用者的網域帳戶。 除非伺服器是設定做為評估之用，否則應該以其他網域使用者帳戶取代此預設帳戶。<br /><br /> 您之後也可以使用管理中心變更服務識別。<br /><br /> 您可以選擇在 PowerPivot 組態工具中為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 **[建立預設 Web 應用程式]** 頁面 (假設此工具正在為伺服器陣列建立 Web 應用程式)。<br /><br /> PowerPivot 無人看管的資料重新整理帳戶，使用此工具中的 **[建立無人看管的資料重新整理帳戶]** 頁面。|
 ||資料庫伺服器|本機 PowerPivot 具名執行個體 (如果有的話)|如果資料庫引擎執行個體安裝為 PowerPivot 具名執行個體，此工具會使用此執行個體擴展資料庫伺服器欄位。 如果您沒有安裝資料庫引擎，此欄位是空的。 您必須提供執行個體。 此執行個體可以是 SharePoint 伺服器陣列所支援的任何 SQL Server 版本或版別。|
 ||複雜密碼|使用者輸入|如果您要建立新的伺服器陣列，您所輸入的複雜密碼將是此伺服器陣列的複雜密碼。 如果您要將 PowerPivot for SharePoint 加入至現有的伺服器陣列，則必須提供在建立時為此伺服器陣列定義的複雜密碼。|
 ||SharePoint 管理中心通訊埠|預設值 (如果需要)|如果未設定伺服器陣列，則此工具會提供用於建立伺服器陣列的選項，包括指向管理中心的 HTTP 端點。 它預設為未使用的隨機產生通訊埠編號。|
-|**設定新的伺服器陣列**|資料庫伺服器<br /><br /> 伺服器陣列帳戶<br /><br /> 複雜密碼<br /><br /> SharePoint 管理中心通訊埠|預設值 (如果需要)|設定會預設為您在主頁面中輸入的內容。|
+|**設定新伺服器陣列**|資料庫伺服器<br /><br /> 伺服器陣列帳戶<br /><br /> 複雜密碼<br /><br /> SharePoint 管理中心通訊埠|預設值 (如果需要)|設定會預設為您在主頁面中輸入的內容。|
 |**設定本機服務執行個體**|Analysis Services 服務帳戶密碼|使用者輸入|您必須在 **[在本機伺服器上註冊 SQL Server Analysis Services (PowerPivot)]** 頁面中輸入 Analysis Services 服務帳戶的密碼。<br /><br /> 此服務帳戶是在安裝期間指定。 您現在必須輸入密碼，以便向 SharePoint 註冊本機服務執行個體。|
 |**建立 PowerPivot 服務應用程式**|PowerPivot 服務應用程式名稱|預設|預設名稱是「預設的 PowerPivot 服務應用程式」。 您可以在工具中取代為不同的值。|
 ||PowerPivot 服務應用程式資料庫伺服器|預設|裝載 PowerPivot 服務應用程式資料庫的資料庫伺服器。 預設伺服器名稱就是用於伺服器陣列的資料庫伺服器。 您可以在工具中取代為不同的值。|
 ||PowerPivot 服務應用程式資料庫名稱|預設|預設資料庫名稱以服務應用程式名稱為基礎，後面跟著 GUID，以確保名稱是唯一的。 您可以在工具中取代為不同的值。|
-||升級活頁簿以啟用資料重新整理|使用者輸入|資料重新整理失敗，而且在 SQL Server 2008 R2 PowerPivot 活頁簿中不支援。 
-  **[升級活頁簿以啟用資料重新整理]** 選項會將活頁簿升級為 SQL Server 2012 PowerPivot 版。|
+||升級活頁簿以啟用資料重新整理|使用者輸入|資料重新整理失敗，而且在 SQL Server 2008 R2 PowerPivot 活頁簿中不支援。 **[升級活頁簿以啟用資料重新整理]** 選項會將活頁簿升級為 SQL Server 2012 PowerPivot 版。|
 |**建立預設 Web 應用程式**|Web 應用程式名稱|預設值 (如果需要)|如果沒有任何 Web 應用程式，此工具會建立一個。 Web 應用程式將針對傳統模式驗證設定，並且在 **通訊埠 80**上接聽。 上傳檔案大小上限設為 2047 MB，這是 SharePoint 所允許的最大值。 較大的檔案上傳大小在於容納大型 PowerPivot 檔案。|
 ||URL|預設值 (如果需要)|此工具會根據伺服器名稱，使用與 SharePoint 相同的檔案命名慣例來建立 URL。|
 ||Web 應用程式集區|預設值 (如果需要)|此工具會在 IIS 中建立預設應用程式集區。|
@@ -122,7 +120,7 @@ ms.locfileid: "78174467"
 ||服務應用程式 Proxy||輸入 Secure Store Service 應用程式 Proxy 的名稱。  這個名稱將顯示在預設連接群組中，藉由群組可以將應用程式與 SharePoint 內容 Web 應用程式產生關聯。|
 |**更新 Secure Store Service 主要金鑰**|服務應用程式 Proxy||輸入 Secure Store Service 應用程式 Proxy 的名稱|
 ||複雜密碼||主要金鑰會用於資料加密。 根據預設，用來產生金鑰的複雜密碼與用來在伺服器陣列中佈建新伺器所用的複雜密碼相同。 您可以用唯一的複雜密碼取代預設複雜密碼。|
-|**建立 Datarefresh 的自動帳戶**|目標應用程式識別碼||應用程式識別碼可以是描述性文字。|
+|**建立無人看管的資料重新整理帳戶**|目標應用程式識別碼||應用程式識別碼可以是描述性文字。|
 ||目標應用程式的易記名稱|||
 ||無人看管帳戶的使用者名稱和密碼||輸入由目標應用程式所使用且用來執行無人看管之資料重新整理的 Windows 使用者帳戶認證。|
 ||網站 URL||輸入與目標應用程式相關聯之網站集合的網站 URL。 若要與其他網站集合產生關聯，請使用 SharePoint 管理中心。|
@@ -135,7 +133,7 @@ ms.locfileid: "78174467"
 
  如果工具建立網站集合，它會使用與 SharePoint 相同的檔案命名慣例，在資料庫伺服器上建立內容資料庫。 您無法變更內容資料庫名稱。
 
-##  <a name="bkmk_nextsteps"></a>後續步驟
+##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a> 後續步驟
  完成伺服器安裝之後，有幾個您應該執行的後置安裝工作：
 
 -   授與 SharePoint 權限給個人與群組。 若要存取網站及內容，這是必要的工作。

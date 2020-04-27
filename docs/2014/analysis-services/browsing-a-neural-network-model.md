@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174207"
 ---
 # <a name="browsing-a-neural-network-model"></a>瀏覽類神經網路模型
   當您使用 [瀏覽]**** 開啟類神經網路或羅吉斯迴歸模型時，該模型會在類似於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 類神經網路檢視器的互動式檢視器中顯示。 此檢視器可協助您探索相互關聯，以及取得有關模型和基礎資料之模式的資訊。
 
-##  <a name="BKMK_Tabs"></a>探索模型
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>探索模型
  以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 類神經網路或羅吉斯迴歸演算法為基礎的模型很相似，因為它們都會將資料分析成已知輸入與輸出之間的一組連接。 [瀏覽]**** 檢視器可協助您使用下列控制項來探索這些連接：
 
 -   [變數](#BKMK_Variables)
@@ -37,7 +37,7 @@ ms.locfileid: "78174207"
 
  如果您想要試驗這個檢視器，可以使用[分類精靈 &#40;適用於 Excel 的資料採礦增益集&#41;](classify-wizard-data-mining-add-ins-for-excel.md) 精靈來建立模型，並且使用 [演算法參數]**** 對話方塊中的 [進階]**** 選項，將演算法變更為 Microsoft 羅吉斯迴歸。
 
-###  <a name="BKMK_Variables"></a>變數
+###  <a name="variables"></a><a name="BKMK_Variables"></a>變數
  [變數]**** 窗格會按照輸入變數作用於模型的順序，顯示這些變數的清單。 您可以使用 [輸入]**** 和 [輸出]**** 控制項來篩選模型，並影響顯示的變數及其順序。
 
  在判斷客戶比較可能屬於自行車購買者類別目錄或非購買者類別目錄時，您可以使用此檢視器來探索最重要的因數。
@@ -72,17 +72,17 @@ ms.locfileid: "78174207"
 
      工具提示隨即出現，其中包含「重要性」** 分數、一對「機率」** 分數，以及一對「增益」** 值。
 
-    -   **重要性**是跨整個資料集計算的，而且會識別給定所有輸入的屬性，與目標結果最相關。 此檢視器會按照重要性分數排序圖表中的值。
+    -   **重要性**的計算範圍是整個資料集，而且可在指定所有輸入的情況下，識別與目標結果最相關的屬性。 此檢視器會按照重要性分數排序圖表中的值。
 
-    -   機率**是針對**整個資料集內的目標結果，計算每一組屬性值配對。
+    -   **機率**的計算範圍是整個資料集內，目標結果的每組屬性值配對。
 
-    -   增益**會告訴您**這個特定屬性/值組用於升級一個結果的有用程度。
+    -   **增益**會告知您這個特定屬性值配對在促成不同結果方面的有用程度。
 
      注意：不論您將滑鼠游標放在哪個資料行上方，工具提示都會包含相同的資訊。
 
  [回到頁首](#BKMK_Tabs)
 
-###  <a name="BKMK_Inputs"></a>輸入
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>輸入
  [輸入]**** 窗格可讓您選擇一組輸入並且套用該組輸入當成模型的篩選，以便根據定型資料，查看這些選擇對於結果的影響
 
 ##### <a name="explore-inputs"></a>探索輸入
@@ -113,7 +113,7 @@ ms.locfileid: "78174207"
 
  [回到頁首](#BKMK_Tabs)
 
-###  <a name="BKMK_Outputs"></a>產出
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>產出
  在 [輸出]**** 窗格中，您可以選擇自己感興趣的結果。 類神經網路可讓您指定任意數目的結果資料行，不過，加入更多輸出會增加模型的複雜度，而且可能需要更長的處理時間。
 
  若要比較兩個輸出，您必須將這些輸出指定為 [預測]**** 或 [僅預測]**** 資料行。

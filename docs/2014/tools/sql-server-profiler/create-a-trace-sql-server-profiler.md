@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211083"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
@@ -29,8 +29,7 @@ ms.locfileid: "68211083"
      會出現 [追蹤屬性]  對話方塊。  
   
     > [!NOTE]  
-    >  
-  **[追蹤屬性]** 對話方塊無法顯示，但若已選取 **[進行連接後立即啟動追蹤]** ，便會開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
+    >  **[追蹤屬性]** 對話方塊無法顯示，但若已選取 **[進行連接後立即啟動追蹤]** ，便會開始追蹤。 於 [工具]**** 功能表，按一下 [選項]****，並清除 [連接後立即啟動追蹤]**** 核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "68211083"
     > [!CAUTION]  
     >  當您不將追蹤結果儲存至檔案或資料表時，您可以在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 開啟時檢視追蹤。 但是，當您停止追蹤並關閉 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]後會遺失追蹤結果。 若要使用此方式以避免遺失追蹤結果，請在關閉 **之前，按一下** [檔案] **功能表上的** [儲存] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來儲存結果。  
   
-5.  (選擇性) 選取 **[啟用追蹤停止時間]** 核取方塊，然後指定停止日期和時間。  
+5.  （選擇性）選取 [**啟用追蹤停止時間**] 核取方塊，然後指定停止日期和時間。  
   
 6.  若要加入或移除事件、資料行或篩選，請按一下 [事件選取範圍]**** 索引標籤。 如需詳細資訊，請參閱[指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)。  
   

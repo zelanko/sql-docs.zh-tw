@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196666"
 ---
 # <a name="use-sparse-columns"></a>使用疏鬆資料行
@@ -65,10 +65,9 @@ ms.locfileid: "68196666"
 |`ntext`||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>資料類型預計節省的空間  
- 相較於未標示為 SPARSE 之相同資料所需的空間，疏鬆資料行需要更多的儲存空間來儲存非 Null 值。 下表顯示每一個資料類型的空間使用。 
-  **NULL 百分比** 資料行指出資料必須有多少百分比為 NULL，空間的淨節省才會是百分之 40。  
+ 相較於未標示為 SPARSE 之相同資料所需的空間，疏鬆資料行需要更多的儲存空間來儲存非 Null 值。 下表顯示每一個資料類型的空間使用。 **NULL 百分比** 資料行指出資料必須有多少百分比為 NULL，空間的淨節省才會是百分之 40。  
   
- **固定長度的資料類型**  
+ **固定長度資料類型**  
   
 |資料類型|非疏鬆位元組|疏鬆位元組|NULL 百分比|  
 |---------------|---------------------|------------------|---------------------|  
@@ -105,9 +104,9 @@ ms.locfileid: "68196666"
 |資料類型|非疏鬆位元組|疏鬆位元組|NULL 百分比|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|隨著基礎資料類型而不同|||  
-|`varchar`或`char`|2*|4*|60%|  
-|`nvarchar`或`nchar`|2*|4*+|60%|  
-|`varbinary`或`binary`|2*|4*|60%|  
+|`varchar` 或 `char`|2*|4*|60%|  
+|`nvarchar` 或 `nchar`|2*|4*+|60%|  
+|`varbinary` 或 `binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
@@ -159,7 +158,7 @@ ms.locfileid: "68196666"
   
      異動複寫支援疏鬆資料行，但是不支援資料行集，資料行集可搭配疏鬆資料行使用。 如需資料行集的詳細資訊，請參閱 [使用資料行集](../tables/use-column-sets.md)。  
   
-     SPARSE 屬性的複寫是由使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或使用 ** 中 [發行項屬性]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊所指定的結構描述選項所決定。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援疏鬆資料行。 如果您必須將資料複寫到舊版，請指定不應該複寫 SPARSE 屬性。  
+     SPARSE 屬性的複寫是由使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [發行項屬性]**** 對話方塊所指定的結構描述選項所決定。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援疏鬆資料行。 如果您必須將資料複寫到舊版，請指定不應該複寫 SPARSE 屬性。  
   
      如果是發行的資料表，您不能將任何新的疏鬆資料行加入資料表，或是變更現有資料行的疏鬆屬性。 如果需要進行這類作業，請卸除發行集再重新建立。  
   
@@ -234,8 +233,8 @@ WHERE ProductionSpecification IS NOT NULL ;
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料行集](../tables/use-column-sets.md)   
- [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  
   
   

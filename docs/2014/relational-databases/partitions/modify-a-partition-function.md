@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206977"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
@@ -37,9 +37,9 @@ ms.locfileid: "68206977"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   ALTER PARTITION FUNCTION 只能用來將一個資料分割拆解成兩個，或將兩個資料分割合併為一個。 若要變更資料表或索引的資料分割方式 (例如，從 10 個資料分割變更成 5 個)，您可以使用下列任何一個選項：  
   
@@ -58,9 +58,9 @@ ms.locfileid: "68206977"
   
 -   ALTER PARTITION FUNCTION 所影響的所有檔案群組都必須在線上。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  下列中的任何權限都可用來執行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
@@ -69,7 +69,7 @@ ms.locfileid: "68206977"
   
 -   對於建立資料分割函數之資料庫伺服器的 CONTROL SERVER 或 ALTER ANY DATABASE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要修改資料分割函數：**  
   
  您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行這項特定動作。 若要修改資料分割函數，您必須先刪除此函數，然後再使用 [建立資料分割精靈] 來建立具有所需屬性的新函數。 如需相關資訊，請參閱  
@@ -84,7 +84,7 @@ ms.locfileid: "68206977"
   
 4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割函數，然後按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>若要將單一資料分割拆解成兩個資料分割  
   

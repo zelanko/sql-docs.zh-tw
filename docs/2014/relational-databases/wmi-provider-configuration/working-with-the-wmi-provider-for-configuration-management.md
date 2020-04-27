@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195769"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
@@ -41,7 +41,7 @@ ms.locfileid: "68195769"
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- 其中 `instance_name` 預設為 `MSSQLSERVER` 預設安裝中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 其中 `instance_name` 預設為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設安裝中的 `MSSQLSERVER`。  
   
  **注意：** 如果您是透過 Windows 防火牆進行連線，則必須確定您的電腦已正確設定。 請參閱 MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] [網站](https://go.microsoft.com/fwlink/?linkid=15426)上 Windows Management Instrumentation 檔中的「透過 Windows 防火牆連線」文章。  
   

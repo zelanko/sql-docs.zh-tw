@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211400"
 ---
 # <a name="edit-an-alert"></a>編輯警示
@@ -30,26 +30,26 @@ ms.locfileid: "68211400"
   
      [安全性](#Security)  
   
--   **若要使用下列內容來編輯警示：**  
+-   **若要使用下列項目編輯警示：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  依預設， **系統管理員 (sysadmin)** 固定伺服器角色的成員可以編輯警示中的資訊。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-edit-an-alert"></a>若要編輯警示  
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含要編輯之警示的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]** 。  
+2.  按一下加號展開 **[SQL Server Agent]**。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "68211400"
   
 5.  更新 **[一般]**、 **[回應]** 和 **[選項]** 頁面上的警示屬性。  
   
-6.  完成後，請按一下 **[確定]** 。  
+6.  完成時按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-edit-an-alert"></a>若要編輯警示  
   

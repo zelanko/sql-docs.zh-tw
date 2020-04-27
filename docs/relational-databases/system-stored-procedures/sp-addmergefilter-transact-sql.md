@@ -16,10 +16,10 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769184"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
@@ -78,7 +78,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|僅聯結篩選。 支援 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者需要這個值。|  
 |**2**|僅邏輯記錄關聯性。|  
-|**第**|聯結篩選和邏輯記錄關聯性。|  
+|**3**|聯結篩選和邏輯記錄關聯性。|  
   
  如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   

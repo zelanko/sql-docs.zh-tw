@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205961"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>通知操作員工作 (維護計畫)
-  使用 [**通知操作員**工作] 對話方塊，將自動通知加入此維護計畫。 若要使用這項工作，您必須已啟用 Database Mail，並正確地將 MSDB 設定為郵件主機資料庫[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並讓代理程式操作員具有有效的電子郵件地址。  
+  使用 **[通知操作員工作]** 對話方塊，將自動通知加入此維護計畫。 若要使用這項工作，您必須先啟用 Database Mail，並正確設定 MSDB 作為郵件主機資料庫，同時擁有具有效電子郵件地址的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 運算子。  
   
  這項工作會使用 sp_notify_operator 預存程序。  
   
@@ -42,14 +42,14 @@ ms.locfileid: "68205961"
  **通知訊息主體**  
  指定通知訊息主體中要包含的文字。  
   
- **View T-sql**  
+ **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
 >  受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
 ## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
- **連接名稱**  
+ **連線名稱**  
  輸入新連接的名稱。  
   
  **選取或輸入伺服器名稱**  
@@ -58,14 +58,14 @@ ms.locfileid: "68205961"
  **[重新整理]**  
  重新整理可用的伺服器清單。  
   
- **輸入資訊以登入伺服器**  
+ **輸入要登入到伺服器的資訊**  
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連接到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]實例。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 驗證，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
@@ -75,6 +75,6 @@ ms.locfileid: "68205961"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../database-mail/database-mail.md)   
- [sp_notify_operator &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
+ [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
   
   

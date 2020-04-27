@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 713658238cf9e737b8fff9e6c239c8b5a644e039
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 98aea4830dcbf299e4f8e54e893f60e55d7e3520
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529372"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086827"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -97,7 +97,7 @@ ms.locfileid: "81529372"
 |**1448**|讓複寫記錄讀取器向前移動，即使非同步次要尚未認可收到變更也一樣。 即使這個追蹤旗標已啟用，記錄讀取器一定會等候同步次要。 記錄讀取器不會超過同步次要的最小認可。 這個追蹤旗標會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，而不只可用性群組、可用性資料庫或記錄讀取器執行個體。 立即生效，不必重新啟動。 您可以事先或在非同步次要失敗時啟動這個追蹤旗標。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/937041) \(機器翻譯\)。<br /><br />**範圍**：只限全域|   
 |**1462**|停用非同步可用性群組的記錄資料流壓縮。 非同步可用性群組上預設會啟用此功能，以最佳化網路頻寬。 如需詳細資訊，請參閱 [微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**：只限全域| 
 |**1800**|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 和「記錄傳送」環境中，當主要和次要複本記錄檔使用不同磁區大小的磁碟時啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最佳化。 只有在交易記錄檔位於磁區大小是 512 個位元組的磁碟上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，才需要啟用此追蹤旗標。 在磁區大小為 4k 的磁碟上「不需」  啟用此追蹤旗標。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3009974) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU13、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 CU3、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU5 以及更新版本的組建。<br /><br />**範圍：** 只限全域|
-| **1819**| 允許[備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)，以在存取 Azure 區塊 Blob 時利用 Proxy 伺服器。 除了此追蹤旗標之外，您還必須透過下列其中一種方法，在伺服器上設定 WinHTTP Proxy 設定： <br /><br />- Windows XP 或 Windows Server 2003 與更早版本上的 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 公用程式。 <br /> - Windows Vista 與 Windows Server 2008 或更新版本上的 [netsh .exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) 公用程式。 <br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON) |
+| **1819**| 允許[備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)，以在存取 Azure 區塊 Blob 時利用 Proxy 伺服器。 除了此追蹤旗標之外，您還必須透過下列其中一種方法，在伺服器上設定 WinHTTP Proxy 設定： <br /><br />- Windows XP 或 Windows Server 2003 與更早版本上的 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 公用程式。 <br /> - Windows Vista 與 Windows Server 2008 或更新版本上的 [netsh .exe](/windows/win32/winsock/netsh-exe) 公用程式。 <br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON) |
 |**1802**|在資料庫附加或卸離作業期間停用 ACL 變更與模擬存取驗證。 當附加資料庫並遇到存取權限錯誤 (例如錯誤 5120) 時，這可能很有用。<br /><br />**範圍**：只限全域| 
 |**2301**|啟用進階決策支援最佳化。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON) |
 |**2312**|將查詢最佳化工具基數估計模型設為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本，根據資料庫的相容性層級。<br /><br />**注意：** 如果資料庫相容性層級低於 120，則啟用追蹤旗標 2312 會使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (120) 的基數估計模型。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2801413) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'FORCE_DEFAULT_CARDINALITY_ESTIMATION' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)| 

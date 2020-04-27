@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198406"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
@@ -41,17 +41,17 @@ ms.locfileid: "68198406"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   在您為它建立伺服器稽核規格之前，必須有稽核存在。 當建立伺服器稽核規格之後，它就會處於停用狀態。  
   
 -   CREATE SERVER AUDIT 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   若要建立、更改或卸除伺服器稽核，主體需要使用 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68198406"
   
 -   一旦建立伺服器稽核規格之後，就可以使用具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 權限的主體、系統管理員 (sysadmin) 帳戶或具有此稽核之明確存取權的主體來加以檢視。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   
@@ -154,7 +154,7 @@ ms.locfileid: "68198406"
   
 3.  完成時，請按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   

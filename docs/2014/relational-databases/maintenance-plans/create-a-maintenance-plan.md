@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206049"
 ---
 # <a name="create-a-maintenance-plan"></a>建立維護計畫
@@ -30,23 +30,23 @@ ms.locfileid: "68206049"
   
      [安全性](#Security)  
   
--   **若要建立維護計畫，請使用：**  
+-   **使用下列方法建立維護計畫：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  若要建立多伺服器維護計畫，必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器。 多伺服器維護計畫必須在主要伺服器上建立和維護。 您可以在目標伺服器上檢視這些計畫，但不能加以維護。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要建立或管理維護計畫，您必須是**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>若要使用維護計畫精靈來建立維護計畫  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68206049"
   
 4.  遵循[建立維護計畫 &#40;維護計畫設計介面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md) 中的步驟建立維護計畫。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>若要建立維護計畫  
   
@@ -135,14 +135,14 @@ ms.locfileid: "68206049"
   
     ```  
   
- 如需詳細資訊，請參閱  
+ 如需詳細資訊，請參閱：  
   
--   [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
   

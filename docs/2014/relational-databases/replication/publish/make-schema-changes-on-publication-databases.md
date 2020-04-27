@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199444"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
@@ -46,7 +46,7 @@ ms.locfileid: "68199444"
   
  如需新增及移除發行集發行項的資訊，請參閱[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
- **若要複寫架構變更**  
+ **若要複寫結構描述變更**  
   
  依預設，會複寫以上所列的結構描述變更。 如需有關停用結構描述變更複寫的詳細資訊，請參閱＜ [Replicate Schema Changes](replicate-schema-changes.md)＞。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68199444"
   
 -   結構描述變更必須遵從由 [!INCLUDE[tsql](../../../includes/tsql-md.md)]規定的任何條件約束。 例如，ALTER TABLE 不允許對主索引鍵資料行執行 ALTER。  
   
--   資料類型對應只會針對初始快照集執行。 結構描述變更並不會對應到舊版的資料類型。 例如，如果在 `ALTER TABLE ADD datetime2 column` 內使用陳述式 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，則資料類型不會針對 `nvarchar` 訂閱者轉譯成 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 在某些案例中，發行者上會封鎖結構描述變更。  
+-   資料類型對應只會針對初始快照集執行。 結構描述變更並不會對應到舊版的資料類型。 例如，如果在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 內使用陳述式 `ALTER TABLE ADD datetime2 column`，則資料類型不會針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 訂閱者轉譯成 `nvarchar`。 在某些案例中，發行者上會封鎖結構描述變更。  
   
 -   如果發行集設定為允許傳播結構描述變更，則不論發行集中發行項的相關結構描述選項如何設定，結構描述都會傳播。 例如，如果選取不對資料表發行項的外部索引鍵條件約束進行複寫，但是接著發出 ALTER TABLE 命令，將外部索引鍵新增至「發行者」端的資料表，則外部索引鍵會新增至「訂閱者」端的資料表。 若要防止發生這種情況，則在發出 ALTER TABLE 命令前停用結構描述變更的傳播。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68199444"
   
 -   若要將新資料行新增至資料表，並且在現有發行集中不包含該資料行，則停用結構描述變更的複寫，然後執行 ALTER TABLE \<資料表> 新增 \<資料行>。  
   
--   若要在現有發行集中包含現有資料行，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或 [發行集屬性 - **發行集>]\<** 對話方塊。  
+-   若要在現有發行集中包含現有資料行，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或 [發行集屬性 - \<發行集>]**** 對話方塊。  
   
      如需詳細資訊，請參閱 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 這需要重新初始化訂閱。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68199444"
   
 -   若要從現有發行集卸除資料行，並從「發行者」端的資料表卸除該資料行，則執行 ALTER TABLE \<資料表> 卸除 \<資料行>。 依預設，資料行然後便會從所有「訂閱者」端的資料表中卸除。  
   
--   若要從現有發行集卸除資料行，但要將該資料行保留在「發行者」端的資料表中，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或 [發行集屬性 - **發行集>]\<** 對話方塊。  
+-   若要從現有發行集卸除資料行，但要將該資料行保留在「發行者」端的資料表中，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或 [發行集屬性 - \<發行集>]**** 對話方塊。  
   
      如需詳細資訊，請參閱 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 這需要產生新的快照集。  
   
@@ -146,8 +146,7 @@ ms.locfileid: "68199444"
         |`hierarchyid`|允許變更|封鎖變更|封鎖變更|  
         |`geography` 和 `geometry`|允許變更|允許變更<sup>1</sup>|封鎖變更|  
         |`filestream`|允許變更|封鎖變更|封鎖變更|  
-        |
-  `date`、`time`、`datetime2` 和 `datetimeoffset`|允許變更|允許變更<sup>1</sup>|封鎖變更|  
+        |`date`、`time`、`datetime2` 和 `datetimeoffset`|允許變更|允許變更<sup>1</sup>|封鎖變更|  
   
          <sup>1</sup> SQL Server Compact 訂閱者在訂閱者端轉換這些資料類型。  
   
@@ -158,7 +157,7 @@ ms.locfileid: "68199444"
 -   合併式複寫會提供預存程序，以在疑難排解期間略過結構描述變更。 如需詳細資訊，請參閱 [sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) 和 [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
  [ALTER FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-function-transact-sql)   

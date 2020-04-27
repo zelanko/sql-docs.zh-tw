@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210813"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server 的 Plan Cache 物件
@@ -40,12 +40,12 @@ ms.locfileid: "68210813"
 |**Sql Plans**|從特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (包括自動參數化查詢) 產生的查詢計劃，或從使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **準備之**陳述式產生的查詢計劃。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會快取特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的計畫，以便稍後執行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時重複使用。 使用者的參數化查詢 (即使未確實預備) 也會當作預備的 SQL 計畫來監視。|  
 |**Object Plans**|藉著建立預存程序、函數或觸發程序而產生的查詢計畫。|  
 |**Bound Trees**|檢視、規則、計算資料行與檢查條件約束的正規化樹。|  
-|**擴充預存程序**|擴充預存程序的目錄資訊。|  
+|**擴充預存程式**|擴充預存程序的目錄資訊。|  
 |**暫存資料表 & 資料表變數**|與暫存資料表和資料表變數相關的快取資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
- [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [SQL Server 的 Buffer Manager 物件](sql-server-buffer-manager-object.md)   
+ [伺服器記憶體伺服器設定選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [SQL Server，Buffer Manager 物件](sql-server-buffer-manager-object.md)   
  [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

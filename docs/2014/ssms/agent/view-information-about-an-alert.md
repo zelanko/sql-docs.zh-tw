@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211299"
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
@@ -32,32 +32,32 @@ ms.locfileid: "68211299"
   
      [安全性](#Security)  
   
--   **若要使用下列內容來查看警示的相關資訊：**  
+-   **若要使用下列項目檢視有關警示的資訊：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  依預設， **系統管理員 (sysadmin)** 固定伺服器角色的成員可以檢視警示的相關資訊。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>若要檢視有關警示的資訊  
   
 1.  在 **[物件總管]** 中，按一下加號，展開要檢視警示相關資訊的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]** 。  
+2.  按一下加號展開 **[SQL Server Agent]**。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
 4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]****。  
   
-     如需 [ _alert_name_**警示**內容] 對話方塊中所包含之可用選項的詳細資訊，請參閱：  
+     如需 [<警示名稱> 警示屬性]__**** 對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [警示屬性-新增警示 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "68211299"
   
     -   [警示屬性：新增警示 &#40;選項頁面&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [警示屬性 &#40;歷程記錄頁面&#41;](alert-properties-history-page.md)  
+    -   [警示屬性 &#40;記錄頁面&#41;](alert-properties-history-page.md)  
   
-5.  完成後，請按一下 **[確定]** 。  
+5.  完成時按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>若要檢視有關警示的資訊  
   

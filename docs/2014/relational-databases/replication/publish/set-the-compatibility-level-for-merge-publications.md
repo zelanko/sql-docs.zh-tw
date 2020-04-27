@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199322"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>設定合併式發行集的相容性層級
@@ -32,8 +32,8 @@ ms.locfileid: "68199322"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在「新增發行集精靈」的 **[訂閱者類型]** 頁面中設定相容性層級。 如需存取此精靈的詳細資訊，請參閱＜ [Create a Publication](create-a-publication.md)中設定合併式發行集的相容性層級。 建立發行集快照集後，可以提高相容性層級，但不能降低。 您可以在 [發行集屬性 - **發行集>]** **對話方塊的 [一般]\<** 頁面上，增加相容性層級。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。 如果提高發行集的相容性層級，則對於執行相容性層級之前版本的伺服器，其上的所有現有訂閱均無法再同步處理。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 在「新增發行集精靈」的 **[訂閱者類型]** 頁面中設定相容性層級。 如需存取此精靈的詳細資訊，請參閱＜ [Create a Publication](create-a-publication.md)中設定合併式發行集的相容性層級。 建立發行集快照集後，可以提高相容性層級，但不能降低。 您可以在 [發行集屬性 - \<發行集>]**** 對話方塊的 [一般]**** 頁面上，增加相容性層級。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。 如果提高發行集的相容性層級，則對於執行相容性層級之前版本的伺服器，其上的所有現有訂閱均無法再同步處理。  
   
 > [!NOTE]  
 >  因為相容性層級對其他發行集屬性有影響，並且發行項屬性對其有效，所以不要變更相容性層級以及對話方塊中相同用途的其他屬性。 發行集的快照集應在變更屬性後重新產生。  
@@ -44,9 +44,9 @@ ms.locfileid: "68199322"
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>若要提高發行集相容性層級  
   
--   您可以在 [發行集屬性 - **發行集>]** **對話方塊的 [一般]\<** 頁面上，選取 [相容性層級]  。  
+-   您可以在 [發行集屬性 - \<發行集>]**** 對話方塊的 [一般]**** 頁面上，選取 [相容性層級]****。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  合併式發行集的相容性層級可以在建立發行集時以程式設計方式加以設定，或是在之後以程式設計方式加以修改。 您可以使用複寫預存程序來設定或變更此發行集屬性。  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>設定合併式發行集的發行集相容性層級  
@@ -55,7 +55,7 @@ ms.locfileid: "68199322"
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>變更合併式發行集的發行集相容性層級  
   
-1.  執行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，指定的**publication_compatibility_level** **@property**和的適當發行集相容性層級**@value**。  
+1.  執行 [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，為 **@property** 指定 **publication_compatibility_level**，並為 **@value** 指定適當的發行集相容性層級。  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>判斷合併式發行集的發行集相容性層級  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68199322"
   
 2.  在結果集的 **backward_comp_level** 欄中尋找發行集相容性層級。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會建立合併式發行集，並設定發行集相容性層級。  
   
 ```  

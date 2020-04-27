@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196460"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
@@ -34,20 +34,20 @@ ms.locfileid: "68196460"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果資料庫中有 Transact-SQL 函數或檢視參考這個函數，並且是利用 SCHEMABINDING 加以建立；或者如果有計算資料行、CHECK 條件約束或 DEFAULT 條件約束參考這個函數，就無法刪除函數。  
   
 -   如果有計算資料行參考這個函數，而且已經產生索引，就無法刪除函數。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要函數所屬結構描述的 ALTER 權限，或函數的 CONTROL 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-user-defined-function"></a>若要刪除使用者定義函數  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68196460"
     > [!IMPORTANT]  
     >  按一下 [**刪除物件**] 對話方塊中的 [**顯示**相依性]，開啟 [ _function_name_相依**性] 對話方塊**。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-user-defined-function"></a>若要刪除使用者定義函數  
   

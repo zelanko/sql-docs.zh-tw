@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211687"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
@@ -37,20 +37,20 @@ ms.locfileid: "68211687"
   
      [安全性](#Security)  
   
--   **若要取得函數的相關資訊，請使用：**  
+-   **使用下列方法取得函數的相關資訊：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要使用 **sys.sql_expression_dependencies** 尋找函數的所有相依性，需要資料庫的 VIEW DEFINITION 權限以及資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 系統物件定義是公開可見的，就像 OBJECT_DEFINITION 中傳回的定義一樣。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>顯示使用者定義函數的屬性  
   
@@ -66,9 +66,9 @@ ms.locfileid: "68211687"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]  。  
   
-     下列屬性會出現在 [函數屬性 - **function_name]** __ 對話方塊中。  
+     下列屬性會出現在 [函式屬性 - **function_name**]  對話方塊中。  
   
      **Database**  
      包含此函數之資料庫的名稱。  
@@ -88,13 +88,13 @@ ms.locfileid: "68211687"
      **名稱**  
      目前函數的名稱。  
   
-     **Schema**  
+     **結構描述**  
      顯示擁有函數的結構描述。  
   
      **系統物件**  
      指出函數是否為系統物件。 值為 True 與 False。  
   
-     **ANSI Nulls**  
+     **ANSI NULLS**  
      指出物件是否使用 ANSI NULLS 選項建立。  
   
      **已加密**  
@@ -106,10 +106,10 @@ ms.locfileid: "68211687"
      **引號識別碼**  
      指出物件是否使用引號識別碼選項建立。  
   
-     **架構系結**  
+     **結構描述繫結**  
      指出函數是否為結構描述繫結函數。 值為 True 與 False。 如需結構描述繫結函數的資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql) 的＜SCHEMABINDING＞一節。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>若要取得函數定義和屬性  
   

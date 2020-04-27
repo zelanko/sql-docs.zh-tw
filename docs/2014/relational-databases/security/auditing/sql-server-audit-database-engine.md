@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198417"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
@@ -32,10 +32,9 @@ ms.locfileid: "68198417"
  所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本都支援伺服器層級稽核。 資料庫層級稽核則限於 Enterprise、Developer 和 Evaluation Edition。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  
   
 ## <a name="sql-server-audit-components"></a>SQL Server Audit 元件  
- 「稽核」 ** 是針對特定伺服器動作或資料庫動作群組將幾個元素組合成單一封裝的動作。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的元件結合起來可產生稱為稽核的輸出，就像是與圖形和資料元素結合的報表定義會產生報表一樣。  
+ 「稽核」 ** 是針對特定伺服器動作或資料庫動作群組將幾個元素組合成單一封裝的動作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的元件結合起來可產生稱為稽核的輸出，就像是與圖形和資料元素結合的報表定義會產生報表一樣。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]audit 會使用*擴充事件*來協助建立 audit。 如需擴充事件的詳細資訊，請參閱 [擴充事件](../../extended-events/extended-events.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會使用「擴充事件」 ** 來協助建立稽核。 如需擴充事件的詳細資訊，請參閱[擴充事件](../../extended-events/extended-events.md)。  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  *SQL Server Audit*物件會收集要監視的單一伺服器實例，或資料庫層級動作和動作群組。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。  
@@ -52,7 +51,7 @@ ms.locfileid: "68198417"
 ### <a name="database-audit-specification"></a>資料庫稽核規格  
  「資料庫稽核規格」 ** 物件屬於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit。 您可以針對每個稽核的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫建立一個資料庫稽核規格。  
   
- 資料庫稽核規格會收集由擴充的事件功能所引發的資料庫層級稽核動作。 您可以將稽核動作群組或稽核事件加入資料庫稽核規格。 「 *Audit 事件*」是可由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]引擎進行審核的不可部分完成的動作。 *Audit 動作群組*是預先定義的動作群組。 這兩者都在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫範圍內。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
+ 資料庫稽核規格會收集由擴充的事件功能所引發的資料庫層級稽核動作。 您可以將稽核動作群組或稽核事件加入資料庫稽核規格。 「稽核事件」** 是可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎稽核之不可部分完成的動作。 「稽核動作群組」** 是預先定義的動作群組。 這兩者都在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫範圍內。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
   
  資料庫層級的稽核動作群組和稽核動作在 [SQL Server Audit 動作群組和動作](sql-server-audit-action-groups-and-actions.md)主題中有描述。  
   
@@ -66,15 +65,13 @@ ms.locfileid: "68198417"
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以使用以下方式來限制對檔案位置的存取：  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶必須具有讀取和寫入權限。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶必須具有讀取和寫入權限。  
   
 -   稽核管理員通常需要讀取和寫入權限。 這會假設稽核管理員為管理稽核檔案的 Windows 帳戶，例如將稽核檔案複製到不同的共用位置、備份稽核檔案等等。  
   
 -   被授權可讀取稽核檔案的稽核讀取者必須擁有讀取權限。  
   
- 即使當 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 寫入檔案時，其他擁有權限的 Windows 使用者還是可以讀取稽核檔案。 
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 不會進行獨佔鎖定來防止讀取作業。  
+ 即使當 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 寫入檔案時，其他擁有權限的 Windows 使用者還是可以讀取稽核檔案。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 不會進行獨佔鎖定來防止讀取作業。  
   
  因為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 可以存取檔案，所以具有 CONTROL SERVER 權限的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入可以使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 來存取稽核檔案。 若要記錄正在讀取稽核檔案的任何使用者，請在 master.sys.fn_get_audit_file 上定義稽核。 這樣會記錄具有 CONTROL SERVER 權限的登入，該登入已經透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]來存取稽核檔案。  
   
@@ -108,9 +105,9 @@ ms.locfileid: "68198417"
  如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](create-a-server-audit-and-server-audit-specification.md) 和 [建立伺服器稽核和資料庫稽核規格](create-a-server-audit-and-database-audit-specification.md)。  
   
 ## <a name="considerations"></a>考量  
- 如果在稽核起始期間發生失敗，伺服器將不會啟動。 在此情況下，可以在命令列上使用 **-f** 選項來啟動伺服器。  
+ 如果在稽核起始期間發生失敗，伺服器將不會啟動。 在此情況下，可以在命令列使用 **-f**選項來啟動伺服器。  
   
- 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m** 旗標在單一使用者模式下啟動**，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m** 旗標啟動 ** 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
+ 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 **-m** 旗標在單一使用者模式下啟動[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 **-m** 旗標啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
   
  如需服務啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
@@ -139,11 +136,11 @@ ms.locfileid: "68198417"
   
 |||  
 |-|-|  
-|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[建立伺服器 AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE AUDIT 規格](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[建立伺服器 AUDIT 規格](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
-|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT 規格](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[ALTER SERVER AUDIT 規格](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[建立資料庫 AUDIT 規格](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT 規格](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[建立伺服器 AUDIT 規格](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[建立資料庫 AUDIT 規格](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>動態檢視和函數  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的動態檢視和函數。  
@@ -160,16 +157,15 @@ ms.locfileid: "68198417"
   
 |目錄檢視|描述|  
 |-------------------|-----------------|  
-|[database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
+|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|包含所有資料庫伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|針對伺服器執行個體中的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核各包含一個資料列。|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之伺服器稽核規格的資訊。|  
-|[sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|包含伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之伺服器稽核規格詳細資料 (動作) 的資訊。|  
+|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|包含伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之伺服器稽核規格詳細資料 (動作) 的資訊。|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之檔案稽核類型的存放區擴充資訊。|  
   
 ## <a name="permissions"></a>權限  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一個功能和命令都有個別的權限需求。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一個功能和命令都有個別的權限需求。  
   
  若要建立、改變或卸除伺服器稽核或伺服器稽核規格，伺服器主體需要 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。 若要建立、改變或卸除資料庫稽核規格，資料庫主體需要資料庫的 ALTER ANY DATABASE AUDIT 權限或是 ALTER 或 CONTROL 權限。 此外，主體還必須擁有連接資料庫的權限，或 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
@@ -190,26 +186,25 @@ ms.locfileid: "68198417"
  如需如何授與權限的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)。  
   
 > [!CAUTION]  
->  系統管理員 (sysadmin) 角色中的主體可以損害任何稽核元件，而 db_owner 角色中的主體可以損害資料庫中的稽核規格。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 將會驗證建立或改變稽核規格的登入至少要有 ALTER ANY DATABASE AUDIT 權限。 但是，當您附加資料庫時，它不會進行任何驗證。 您應該假設所有資料庫稽核規格都與系統管理員 (sysadmin) 或 db_owner 角色中的主體一樣值得信任。  
+>  系統管理員 (sysadmin) 角色中的主體可以損害任何稽核元件，而 db_owner 角色中的主體可以損害資料庫中的稽核規格。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 將會驗證建立或改變稽核規格的登入至少要有 ALTER ANY DATABASE AUDIT 權限。 但是，當您附加資料庫時，它不會進行任何驗證。 您應該假設所有資料庫稽核規格都與系統管理員 (sysadmin) 或 db_owner 角色中的主體一樣值得信任。  
   
 ## <a name="related-tasks"></a>相關工作  
  [建立伺服器稽核與伺服器稽核規格](create-a-server-audit-and-server-audit-specification.md)  
   
- [建立伺服器 Audit 和資料庫 Audit 規格](create-a-server-audit-and-database-audit-specification.md)  
+ [建立伺服器稽核和資料庫稽核規格](create-a-server-audit-and-database-audit-specification.md)  
   
- [查看 SQL Server 的審核記錄](view-a-sql-server-audit-log.md)  
+ [檢視 SQL Server Audit 記錄](view-a-sql-server-audit-log.md)  
   
  [將 SQL Server Audit 事件寫入安全性記錄檔](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>與稽核密切相關的主題  
- [[伺服器屬性 &#40;安全性] 頁面&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
- 說明如何開啟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入稽核。 這些稽核記錄會儲存在 Windows 應用程式記錄檔中。  
+ [伺服器屬性 &#40;安全性頁面&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ 說明如何開啟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登入稽核。 這些稽核記錄會儲存在 Windows 應用程式記錄檔中。  
   
  [C2 稽核模式伺服器組態選項](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 C2 安全性規範稽核模式。  
   
- [Security Audit 事件類別目錄 &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [安全性稽核事件類別目錄 &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  說明 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]中可用的稽核事件。 如需詳細資訊，請參閱 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)。  
   
  [SQL 追蹤](../../sql-trace/sql-trace.md)  
@@ -218,11 +213,11 @@ ms.locfileid: "68198417"
  [DDL 觸發程序](../../triggers/ddl-triggers.md)  
  說明如何使用資料定義語言 (DDL) 觸發程序來追蹤資料庫的變更。  
   
- [Microsoft TechNet： SQL Server 的技術中心： SQL Server 2005 安全性與保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性和保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Audit 動作群組和動作](sql-server-audit-action-groups-and-actions.md)   
- [SQL Server 審核記錄](sql-server-audit-records.md)  
+ [SQL Server Audit 記錄](sql-server-audit-records.md)  
   
   

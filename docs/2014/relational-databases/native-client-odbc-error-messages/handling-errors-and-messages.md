@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207088"
 ---
 # <a name="handling-errors-and-messages"></a>處理錯誤與訊息
@@ -39,7 +39,7 @@ ms.locfileid: "68207088"
   
  原始的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生 API （適用于 C 的 db-library）可讓應用程式安裝回呼錯誤處理，以及傳回錯誤或訊息的訊息處理函式。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如，PRINT、RAISERROR、DBCC 和 SET) 會將其結果傳回 DB-Library 訊息處理常式函數，而非結果集。 不過，ODBC API 沒有此種回撥能力。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式偵測到來自的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訊息時，它會將 ODBC 傳回碼設定為 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，並傳回訊息做為一或多個診斷記錄。 因此，ODBC 應用程式必須仔細測試這些傳回碼，並呼叫**SQLGetDiagRec**來捕獲訊息資料。  
   
- 如需追蹤錯誤的資訊，請參閱 [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (資料存取追蹤)。 如需中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]新增的錯誤追蹤增強功能的詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 如需追蹤錯誤的資訊，請參閱 [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (資料存取追蹤)。 如需有關 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中加入之錯誤追蹤增強功能的詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

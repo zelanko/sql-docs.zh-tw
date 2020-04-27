@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211866"
 ---
 # <a name="modify-statistics"></a>修改統計資料
@@ -29,24 +29,24 @@ ms.locfileid: "68211866"
   
      [安全性](#Security)  
   
--   **若要修改統計資料，請使用：**  
+-   **若要使用下列項目修改統計資料：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要：  
   
 -   使用者有資料表或檢視的 ALTER 權限。  
   
 -   使用者必須是資料表或索引檢視表擁有者，或是下列其中一個角色的成員： **sysadmin** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-statistics"></a>若要修改統計資料  
   
@@ -58,14 +58,14 @@ ms.locfileid: "68211866"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 [統計資料屬性 - **statistics_name]** ** 對話方塊的 [一般]**** 頁面上，按一下 [加入]****、[移除]****、[上移]****、[下移]**** 或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行]**** 方格中位置會大幅影響統計資料的效益。  
+6.  在 [統計資料屬性 - **statistics_name**]  對話方塊的 [一般]  頁面上，按一下 [新增]  、[移除]  、[上移]  、[下移]  或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行]  方格中位置會大幅影響統計資料的效益。  
   
 7.  按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **修改統計資料**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
+ **若要修改統計資料**  
   
  您無法使用 Transact-SQL 陳述式來執行這項工作。 若要使用 Transact-SQL 來修改統計資料，您必須先刪除現有的統計資料，然後以新的屬性重新建立統計資料。  
   

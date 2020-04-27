@@ -1,5 +1,5 @@
 ---
-title: SQL Server 訊息結果 |Microsoft Docs
+title: SQL Server 訊息結果 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff604f4c5d66a5742868e25ba05ca6b4528ddb1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206715"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 訊息結果
@@ -41,6 +41,6 @@ ms.locfileid: "68206715"
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每個成員函式執行之後，不論傳回碼的值為何、傳回的**IRowset**或**IMultipleResults**介面參考是否存在，或受影響的資料列計數，原生用戶端 OLE DB 提供者取用者允許動態指定查詢文字，都應該檢查錯誤介面。  
   
 ## <a name="see-also"></a>另請參閱  
- [Errors](errors.md)  
+ [錯誤](errors.md)  
   
   

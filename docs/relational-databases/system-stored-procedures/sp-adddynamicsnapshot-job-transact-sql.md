@@ -16,10 +16,10 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771336"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
@@ -79,12 +79,12 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
-|**4** （預設值）|每天|  
+|**4** （預設值）|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
   
 `[ @frequency_interval = ] frequency_interval`這是已篩選資料快照集作業執行時的期間（以天為單位）。 *frequency_interval*是**int**，預設值是1，且取決於*frequency_type*的值。  
   
@@ -103,9 +103,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4** （預設值）|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4** （預設值）|Minute|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是在每次執行作業之間發生的*frequency_subday*週期數。 *frequency_subday_interval*是**int**，預設值是5。  
   
@@ -113,11 +113,11 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1** （預設值）|第一頁|  
-|**2**|秒|  
+|**1** (預設值)|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是0。  
   
@@ -133,7 +133,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|識別[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系統資料表中已篩選的資料快照集作業。|  
+|**id**|**int**|識別[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系統資料表中已篩選的資料快照集作業。|  
 |**dynamic_snapshot_jobname**|**sysname**|已篩選資料快照集作業的名稱。|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|在「散發[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]者」端唯一識別 Agent 作業。|  
   

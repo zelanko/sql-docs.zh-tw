@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211373"
 ---
 # <a name="job-activity-monitor"></a>作業活動監視器
@@ -42,14 +42,14 @@ ms.locfileid: "68211373"
  **下次執行** <sup>1</sup>  
  下次排程為使用伺服器的當地日期和時間執行作業的日期和時間。  
   
- **類別目錄**  
+ **類別**  
  指派給作業的作業類別目錄。  
   
  **可執行的**  
- 如果可以執行作業，則為 **[是]** ;**否**，如果無法執行作業。 如果作業沒有任何步驟，或者沒有目標伺服器，就無法執行此作業。  
+ [是]**** 如果作業可執行；[否]**** 如果作業無法執行。 如果作業沒有任何步驟，或者沒有目標伺服器，就無法執行此作業。  
   
- **已排程**  
- 如果作業已指派給作業排程，則為 **[是]** 。**否**，如果作業沒有排程。  
+ **排程**  
+ [是]**** 表示作業已指派給作業排程；[否]**** 表示作業沒有排程。  
   
  <sup>1</sup>只有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統管理員（sysadmin）固定伺服器角色和伺服器管理員群組的成員，才能夠看到此資料行中的值。 SQLAgentOperatorRole 角色的成員無法看到此資料行中的值。  
   
