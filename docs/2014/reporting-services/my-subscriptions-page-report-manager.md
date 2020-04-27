@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108193"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>我的訂閱頁面 (報表管理員)
@@ -47,16 +47,14 @@ ms.locfileid: "66108193"
  **Report**  
  顯示在訂閱中指定的報表。 按一下報表名稱即可檢視報表。  
   
- **說明**  
+ **描述**  
  顯示訂閱的描述。 按一下描述即可檢視或編輯報表的訂閱資訊。  
   
  **資料夾**  
  顯示包含訂閱中指定之報表的資料夾。 按一下資料夾名稱即可檢視資料夾的內容。  
   
- **界限**  
- 識別造成執行訂閱的條件。 
-  **TimedSubscription** 觸發程序是以執行訂閱時定義的排程為基礎。 
-  **SnapshotUpdated** 觸發程序是以報表快照集的更新為基礎。  
+ **觸發程序**  
+ 識別造成執行訂閱的條件。 **TimedSubscription** 觸發程序是以執行訂閱時定義的排程為基礎。 **SnapshotUpdated** 觸發程序是以報表快照集的更新為基礎。  
   
  **最後執行**  
  顯示最後處理訂閱的時間。  

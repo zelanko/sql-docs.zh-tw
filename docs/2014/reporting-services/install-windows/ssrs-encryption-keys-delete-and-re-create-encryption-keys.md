@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108703"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
@@ -116,7 +116,7 @@ ms.locfileid: "66108703"
 4.  針對使用加密資料的訂閱 (這包括使用加密的檔案共用傳遞延伸模組和協力廠商傳遞延伸模組)，開啟每個訂閱並重新輸入認證。 使用報表伺服器電子郵件傳遞的訂閱並不使用加密資料，因此不受金鑰變更的影響。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [設定和管理 &#40;SSRS Configuration Manager 的加密金鑰&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

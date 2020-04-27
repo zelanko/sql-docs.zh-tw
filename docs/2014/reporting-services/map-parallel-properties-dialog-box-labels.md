@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108250"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>地圖平行屬性對話方塊、標籤
@@ -25,7 +25,7 @@ ms.locfileid: "66108250"
   
 -   **平面.** X 座標。  
   
--   **地域.** 目前投射的緯度。  
+-   **地理：** 目前投射的緯度。  
   
  按一下 **[運算式]** (*fx*) 按鈕來編輯設定選項值的運算式。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "66108250"
  **放置**  
  選取要顯示相對於檢視區上方、中間與下方之標籤的位置。 預設位置為 **[靠近]**。  
   
--   **接近**在頂端顯示標籤。  
+-   **靠近** ：在上方顯示標籤。  
   
--   **一季**將標籤顯示在頂端與中心之間的一半方向。  
+-   **四分之一** ：在上方和中間之間的一半位置顯示標籤。  
   
--   **置**中在中央顯示標籤。  
+-   **中間** ：在中間顯示標籤。  
   
--   **三季**將標籤顯示在中間和底部之間的一半方向。  
+-   **四分之三** ：在中間和下方之間的一半位置顯示標籤。  
   
--   **遠**在底部顯示標籤。  
+-   **遠方** ：在下方顯示標籤。  
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   

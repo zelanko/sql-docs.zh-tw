@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105206"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函數 (報表產生器及 SSRS)
@@ -47,11 +47,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  傳回 `VariantArray` 或在沒有相符項目時傳回 `Nothing`。  
   
 ## <a name="remarks"></a>備註  
- 使用 `Multilookup` 可從具有一對一關係的每一組名稱/值組的資料集內擷取一組值。 
-  `MultiLookup` 等於針對一組名稱或索引鍵呼叫 `Lookup`。 例如，如果是根據主索引鍵識別碼的多值參數，您可以在資料表中的文字方塊內使用運算式中的 `Multilookup`，從未繫結至參數或資料表的資料集擷取關聯的值。  
+ 使用 `Multilookup` 可從具有一對一關係的每一組名稱/值組的資料集內擷取一組值。 `MultiLookup` 等於針對一組名稱或索引鍵呼叫 `Lookup`。 例如，如果是根據主索引鍵識別碼的多值參數，您可以在資料表中的文字方塊內使用運算式中的 `Multilookup`，從未繫結至參數或資料表的資料集擷取關聯的值。  
   
- 
-  `Multilookup` 會執行下列動作：  
+ `Multilookup` 會執行下列動作：  
   
 -   評估目前範圍中的來源運算式，並產生變數物件的陣列。  
   
@@ -71,8 +69,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   
-  `Multilookup` 不能當做下列報表項目的運算式使用：  
+-   `Multilookup` 不能當做下列報表項目的運算式使用：  
   
     -   資料來源的動態連接字串。  
   

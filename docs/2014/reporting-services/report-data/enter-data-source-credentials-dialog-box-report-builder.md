@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107322"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>輸入資料來源認證對話方塊 (報表產生器)
@@ -33,6 +33,6 @@ ms.locfileid: "66107322"
  [報表產生器中的資料連線、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [資料來源屬性對話方塊、一般 &#40;報表產生器&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [在報表產生器中指定認證](../specify-credentials-in-report-builder.md)   
- [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

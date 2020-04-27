@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a790f3951ce37e714346b8d280547e603cf48c23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105446"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標圖 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66105446"
   
 ## <a name="variations"></a>變化  
   
--   **雷達圖**。 雷達圖會將數列顯示為弧線或區域。 雷達圖不像極座標圖，不會根據極座標顯示資料。  
+-   **雷達圖**： 雷達圖會將數列顯示為弧線或區域。 雷達圖不像極座標圖，不會根據極座標顯示資料。  
   
 ## <a name="data-considerations-for-polar-charts"></a>極座標圖的資料考量  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66105446"
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [折線圖 &#40;報表產生器和 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
+ [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

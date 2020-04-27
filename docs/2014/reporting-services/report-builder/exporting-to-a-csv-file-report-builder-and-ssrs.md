@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107931"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107931"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV 轉譯  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a>CSV 轉譯  
  使用預設值轉譯時，CSV 報表會具有下列特性：  
   
 -   預設的欄位分隔符號字串是逗號 (,)。  
@@ -55,7 +55,7 @@ ms.locfileid: "66107931"
   
 -   折線圖  
   
--   影像  
+-   Image  
   
 -   矩形  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66107931"
   
  下表指出報表項目轉譯時的外觀：  
   
-|Item|轉譯行為|  
+|項目|轉譯行為|  
 |----------|------------------------|  
 |文字方塊|轉譯文字方塊的內容。 在預設模式下，系統會根據項目的格式化屬性來設定項目的格式。 在相容模式下，格式可以依據裝置資訊設定來變更。 如需有關 CSV 轉譯模式的詳細資訊，請參閱以下。|  
 |Table|藉由展開資料表，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。 不支援鑽研報表。|  
@@ -96,7 +96,7 @@ ms.locfileid: "66107931"
   
  
   
-##  <a name="RenderingModes"></a> 轉譯器模式  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 轉譯器模式  
  CSV 轉譯延伸模組可以在兩種模式下操作：一種會針對 Excel 最佳化，而另一種則會針對需要 CSV 嚴格遵循 RFC 4180 中 CSV 合規性的協力廠商應用程式最佳化。 根據所使用的模式，對等資料區域的處理方式也會不同。  
   
 ### <a name="default-mode"></a>預設模式  
@@ -120,7 +120,7 @@ ms.locfileid: "66107931"
 #### <a name="formatting"></a>格式化  
  這些值沒有格式化。  
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a>互動性  
  此轉譯器產生的任一種 CSV 格式都不支援互動性。 系統不會轉譯下列互動項目：  
   
 -   超連結  
@@ -139,16 +139,16 @@ ms.locfileid: "66107931"
   
 
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>裝置資訊設定  
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下進行轉譯、要使用哪些字元當做分隔符號，以及要使用哪些字元當做文字限定詞的預設字串，只要變更裝置資訊設定即可。 如需詳細資訊，請參閱 [CSV Device Information Settings](../csv-device-information-settings.md)。  
   
   
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;報表產生器和 SSRS 轉譯報表專案&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

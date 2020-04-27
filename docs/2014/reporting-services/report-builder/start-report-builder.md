@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107594"
 ---
 # <a name="start-report-builder-report-builder"></a>啟動報表產生器 (報表產生器)
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]包含獨立和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 
-  [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
+  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]包含獨立和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
   
 > [!NOTE]  
 >  報表產生器無法安裝在 Itanium 64 型電腦上。 這同樣適用於 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 和單機版本的報表產生器。  
@@ -37,7 +36,7 @@ ms.locfileid: "66107594"
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>若要從報表管理員啟動報表產生器 ClickOnce  
   
-1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 http://\<*伺服器名稱*>/reports。 報表管理員隨即開啟。  
+1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 HTTP://\<*servername*>/reports。 報表管理員隨即開啟。  
   
 2.  按一下 **[報表產生器]**。  
   

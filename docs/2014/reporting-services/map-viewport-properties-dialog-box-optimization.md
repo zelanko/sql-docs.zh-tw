@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108283"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>地圖檢視區屬性對話方塊、最佳化
@@ -31,7 +31,7 @@ ms.locfileid: "66108283"
  **效能**  
  將指標朝 **[效能]** 滑近一點來簡化地圖並顯示較少的細節。  
   
- **品質**  
+ **Quality**  
  將指標朝 **[品質]** 滑近一點，以便更詳細地繪製地圖。  
   
  **地圖解析度**  
@@ -39,6 +39,6 @@ ms.locfileid: "66108283"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [報表疑難排解：地圖報表 &#40;報表產生器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

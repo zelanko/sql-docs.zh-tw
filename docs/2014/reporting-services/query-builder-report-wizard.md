@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108000"
 ---
 # <a name="query-builder-report-wizard"></a>查詢產生器 (報表精靈)
@@ -34,10 +34,10 @@ ms.locfileid: "66108000"
  您也可以從其他報表匯入查詢。  
   
 ## <a name="query-builder-options"></a>查詢產生器選項  
- **當做文字編輯**  
+ **[當成文字編輯]**  
  在以文字為基礎和圖形化查詢設計工具之間切換 (如果這兩種工具都適用於查詢的話)。  
   
- **匯入**  
+ [匯入]****  
  開啟 [匯入查詢]**** 對話方塊，然後顯示任何可用報表的 .rdl 和 .sql 檔。 您可以依原狀使用匯入的查詢，也可以在查詢產生器中修改此查詢。  
   
  **!進行**  
@@ -53,7 +53,7 @@ ms.locfileid: "66108000"
  顯示查詢傳回的結果集。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [報表精靈說明](../../2014/reporting-services/report-wizard-help.md)  
   
   

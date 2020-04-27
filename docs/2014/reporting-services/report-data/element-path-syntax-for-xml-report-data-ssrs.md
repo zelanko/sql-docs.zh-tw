@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107303"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107303"
 |&#124; (分隔號)|會分隔語法項目， 您只能選擇其中一個項目。|  
 |`[ ] (brackets)`|選擇性的語法項目。 不要輸入方括號。|  
 |**{ }** (大括弧)|會分隔語法項目的參數。|  
-|[ **,** ...*n*]|指出先前項目可以重複 *n* 次。 以逗號分隔項目。|  
+|[**,**...*n*]|指出先前專案可以重複*n*次。 以逗號分隔項目。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,29 +76,24 @@ XMLLocalName :: =
 |----------|----------------|  
 |元素路徑|定義 XML 文件中周遊節點的順序，以便使用 XML 資料來源擷取資料集的欄位資料。|  
 |`ElementNode`|XML 文件中的 XML 節點。 節點是由標記指定，並存在於與其他節點構成的階層式關聯性中。 例如，\<Customers> 是根元素節點。 \<Customer> 是 \<Customers>的子元素。|  
-|`XMLName`|節點的名稱。 例如，Customers 節點的名稱為 Customers。 
-  `XMLName` 可以使用命名空間識別碼做為前置詞，以確保所有節點的名稱都是唯一的。|  
+|`XMLName`|節點的名稱。 例如，Customers 節點的名稱為 Customers。 `XMLName` 可以使用命名空間識別碼做為前置詞，以確保所有節點的名稱都是唯一的。|  
 |`Encoding`|指出本元素的 `Value` 是已編碼的 XML，需要加以解碼並加入做為此元素的子元素。|  
-|`FieldList`|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 ( **{}** )，就不會使用這個節點中的任何欄位。<br /><br /> 
-  `FieldList` 可能不會同時包含 `Value` 及 `Element` 或 `ElementNode`。|  
+|`FieldList`|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單（**{}**），就不會使用這個節點中的任何欄位。<br /><br /> `FieldList` 可能不會同時包含 `Value` 及 `Element` 或 `ElementNode`。|  
 |`Field`|指定擷取做為資料集欄位的資料。|  
-|`Attribute`|
-  `ElementNode` 中名稱與值的配對。 \<例如，在元素 NODE Customer ID = "1" > 中， `ID`是一個屬性，並`@ID(Integer)`會在對應的資料欄位`ID`中傳回 "1" 做為整數類型。|  
-|`Value`|元素的值。 
-  `Value` 只能用於元素路徑中的最後一個 `ElementNode` 上。 例如，因為\<傳回> 是分葉節點，如果您將它包含在元素路徑的結尾，則的值`Return {@}`會是。 `Chair`|  
+|`Attribute`|`ElementNode` 中名稱與值的配對。 \<例如，在元素 NODE Customer ID = "1" > 中， `ID`是一個屬性，並`@ID(Integer)`會在對應的資料欄位`ID`中傳回 "1" 做為整數類型。|  
+|`Value`|元素的值。 `Value` 只能用於元素路徑中的最後一個 `ElementNode` 上。 例如，因為\<傳回> 是分葉節點，如果您將它包含在元素路徑的結尾，則的值`Return {@}`會是。 `Chair`|  
 |`Element`|具名子元素的值。 例如，Customers {}/Customer {}/LastName 只會擷取 LastName 元素的值。|  
 |`Type`|此元素建立之欄位所使用的選擇性資料類型。|  
-|`NamespacePrefix`|
-  `NamespacePrefix` 是在 XML 查詢元素中定義。 如果 XML 查詢元素不存在，則會省略 XML `ElementPath` 中的命名空間。 如果有 XML 查詢元素，XML `ElementPath` 則會有選擇性的 `IgnoreNamespaces` 屬性。 如果 IgnoreNamespaces 為`true`，則 XML `ElementPath`和 xml 檔中的命名空間會被忽略。 如需詳細資訊，請參閱 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](report-data-ssrs.md)。|  
+|`NamespacePrefix`|`NamespacePrefix` 是在 XML 查詢元素中定義。 如果 XML 查詢元素不存在，則會省略 XML `ElementPath` 中的命名空間。 如果有 XML 查詢元素，XML `ElementPath` 則會有選擇性的 `IgnoreNamespaces` 屬性。 如果 IgnoreNamespaces 為`true`，則 XML `ElementPath`和 xml 檔中的命名空間會被忽略。 如需詳細資訊，請參閱 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](report-data-ssrs.md)。|  
   
 ## <a name="example---no-namespaces"></a>範例 - 沒有命名空間  
  下列範例會使用 XML 文件 Customers.xml。 這個表格會顯示元素路徑語法的範例，並且以 XML 文件為資料來源，顯示在定義資料集的查詢中使用元素路徑的結果。  
   
  請注意，當元素路徑是空的時，查詢會使用預設的元素路徑：第一個分葉節點集合的路徑。 在第一個範例中，將元素路徑保留為空白相當於將元素路徑指定為 /Customers/Customer/Orders/Order。 路徑上的所有節點值和屬性都會傳回到結果集，而節點名稱和屬性會以資料集欄位的方式顯示。  
   
--   *空*  
+-   *空白*  
   
-    |單|數量|ID|名字|姓氏|Customer.ID|xmlns|  
+    |單|數量|識別碼|名字|姓氏|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
     |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
     |Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
@@ -107,7 +102,7 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer`  
   
-    |名字|姓氏|ID|  
+    |名字|姓氏|識別碼|  
     |---------------|--------------|--------|  
     |Bobby|Moore|11|  
     |Crystal|Hu|20|  
@@ -132,7 +127,7 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-    |Order.ID|名字|姓氏|ID|  
+    |Order.ID|名字|姓氏|識別碼|  
     |--------------|---------------|--------------|--------|  
     |1|Bobby|Moore|11|  
     |2|Bobby|Moore|11|  
@@ -183,7 +178,7 @@ XMLLocalName :: =
   
 2.  建立 XML 資料來源的新資料集。  
   
-3.  在 **[資料集屬性]** 對話方塊中，按一下 **[查詢設計工具]** 。 以文字為基礎的查詢設計工具對話方塊隨即開啟。  
+3.  在 **[資料集屬性]** 對話方塊中，按一下 **[查詢設計工具]**。 以文字為基礎的查詢設計工具對話方塊隨即開啟。  
   
 4.  在查詢窗格中，輸入下列兩行程式碼：  
   
@@ -201,15 +196,15 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  按一下 [執行查詢]  \(!)。  
+8.  按一下 [執行查詢]**** \(!)。  
   
      結果集會顯示具有下列資料行的 4 行資料： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 連接類型 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
- [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [XML 連線類型 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
+ [Reporting Services SSRS &#40;的教學課程&#41;](../reporting-services-tutorials-ssrs.md)   
  [加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

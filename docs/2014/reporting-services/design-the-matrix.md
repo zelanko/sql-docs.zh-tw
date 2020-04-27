@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109300"
 ---
 # <a name="design-the-matrix"></a>設計矩陣
@@ -35,14 +35,14 @@ ms.locfileid: "66109300"
  **資料行**  
  檢視顯示為矩陣資料行之欄位的清單。 若要變更欄位的順序，請選取欄位，然後按一下向上按鈕或向下按鈕。  
   
- **行間**  
+ **資料列**  
  檢視顯示為矩陣資料列之欄位的清單。 若要變更欄位的順序，請選取欄位，然後按一下向上按鈕或向下按鈕。  
   
  **詳細資料**  
  檢視在矩陣的詳細資料區段中顯示之欄位的清單。 若要變更欄位的順序，請選取欄位，然後按一下向上按鈕或向下按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
- [矩陣 &#40;報表產生器及 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;的矩陣](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [報表精靈說明](../../2014/reporting-services/report-wizard-help.md)  
   
   

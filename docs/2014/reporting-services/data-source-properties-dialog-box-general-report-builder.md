@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109464"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>資料來源屬性對話方塊、一般 (報表產生器)
@@ -51,11 +51,11 @@ ms.locfileid: "66109464"
  **使用內嵌於我的報表的連接**  
  選取此選項，即可建立僅供這份報表使用的資料來源。  
   
- **型別**  
+ **類型**  
  選取資料處理延伸模組。 此清單會顯示所有已註冊的延伸模組。  
   
  **連接字串**  
- 輸入資料來源的連接字串。 按一下 **[建立]** ，即可使用 **[連接屬性]** 對話方塊來建立連接字串。 按一下 [**運算式**] （*fx*）按鈕來編輯運算式。  
+ 輸入資料來源的連接字串。 按一下 **[建立]** ，即可使用 **[連接屬性]** 對話方塊來建立連接字串。 請按一下 [運算式]**** (*fx*) 按鈕來編輯運算式。  
   
  **處理查詢時使用單一交易**  
  選取此選項，指出使用此資料來源的資料集會在單一交易中針對資料庫執行。 若要包含使用相同資料來源之子報表的交易，請選取子報表，然後在 [屬性] 窗格中，將 **[MergeTransactions]** 設定為 **[True]**。  
@@ -68,6 +68,6 @@ ms.locfileid: "66109464"
  [加入及驗證資料連線或資料來源 &#40;報表產生器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [報表產生器中的資料連線、資料來源及連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [資料來源屬性對話方塊、認證 &#40;報表產生器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [對話方塊、窗格和嚮導的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

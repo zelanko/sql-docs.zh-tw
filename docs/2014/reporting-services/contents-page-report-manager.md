@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109729"
 ---
 # <a name="contents-page-report-manager"></a>內容頁面 (報表管理員)
@@ -38,7 +38,7 @@ ms.locfileid: "66109729"
  **上傳檔案**  
  按一下即可開啟 [上傳檔案] 頁面，可用來從檔案系統複製檔案至報表伺服器。 您可以上傳檔案以新增報表和資源 (例如圖表、文件或您要與報表一同保存的任何其他連帶內容)。 上傳的檔案儲存在報表伺服器資料庫並由此來管理該檔案。 若要上傳報表，請選取具有 .rdl 副檔名的檔案。  
   
- **[詳細資料檢視]**  
+ **詳細資料檢視**  
  按一下即可在清單中顯示 [內容] 頁面，其中包含有關項目的其他資訊。 在 **[詳細資料檢視]** 中，您可以使用 **[刪除]** 和 **[移動]** 按鈕來移除和重新定位資料夾中的項目。  
   
  將滑鼠停留在某個項目上，然後按一下下拉箭號，即可開啟下拉式功能表，以便從中存取和設定所選取之項目的屬性。  

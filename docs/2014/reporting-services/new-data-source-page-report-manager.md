@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108181"
 ---
 # <a name="new-data-source-page-report-manager"></a>新增資料來源頁面 (報表管理員)
@@ -33,7 +33,7 @@ ms.locfileid: "66108181"
  **名稱**  
  輸入共用資料來源的名稱，可用來識別報表伺服器資料夾階層中的項目。  
   
- **說明**  
+ **描述**  
  提供有關共用資料來源的資訊。 此描述會顯示在 [內容] 頁面上。  
   
  **在清單檢視中隱藏**  
@@ -98,6 +98,6 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  [[內容] 頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [建立、修改和刪除 &#40;SSRS&#41;的共用資料來源](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [指定報表資料來源的認證及連線資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

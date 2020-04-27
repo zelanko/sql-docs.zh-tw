@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106144"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>清單 (報表產生器及 SSRS)
@@ -25,13 +25,12 @@ ms.locfileid: "66106144"
   
  若要快速地開始使用清單，請參閱[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包含一份使用清單的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解清單。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包含一份使用清單的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解清單。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a>將清單加入至您的報表  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a>將清單加入至您的報表  
  將清單從功能區上的 [插入] 索引標籤加入至設計介面。 根據預設，清單一開始在與詳細資料群組相關聯的資料列中有一個單一資料格。  
   
  ![設計介面上的新清單報表項目](../media/rs-listtemplatenew.gif "設計介面上的新清單報表項目")  
@@ -44,32 +43,32 @@ ms.locfileid: "66106144"
   
 
   
-##  <a name="DisplayingLayout"></a>以自由格式的版面配置顯示資料  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> 以自由形式的配置顯示資料  
  若要以自由形式配置而非方格組織報表資料，您可以將清單加入到設計介面中。 將欄位從 [報表資料] 窗格拖曳至資料格。 根據預設，資料格包含當做容器使用的矩形。 在容器中移動每個欄位，直到擁有所需的設計為止。 當您在矩形容器中拖曳文字方塊時使用對齊線可協助您以垂直和水平方式對齊邊緣。 調整資料格的大小來移除不想要的空白字元。 如需詳細資訊，請參閱[變更資料列高度或資料行寬度 &#40;報表產生器及 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)。  
   
  下圖顯示的清單可顯示有關順序的資訊，包括以下欄位：Date、Order、Qty、Product、LineTotal 和影像。  
   
- ![設計檢視、4 個欄位及影像中的清單](../media/rs-basiclistformdesign.gif "設計檢視、4 個欄位及影像中的清單")  
+ ![設計檢視中的清單，4 個欄位及一個影像](../media/rs-basiclistformdesign.gif "設計檢視中的清單，4 個欄位及一個影像")  
   
  在預覽中，清單會重複以顯示自由形式格式的欄位資料，如下圖所示：  
   
- ![預覽具有 4 個欄位及影像的清單](../media/rs-basiclistformpreview.gif "預覽具有 4 個欄位及影像的清單")  
+ ![預覽具有 4 個欄位及一個影像的清單](../media/rs-basiclistformpreview.gif "預覽具有 4 個欄位及一個影像的清單")  
   
 > [!NOTE]  
 >  顯示在這些圖表中的虛線也包含在內，以顯示每個欄位值的自由形式配置。 在實際報表中通常不會使用虛線。  
   
 
   
-##  <a name="DisplayingGrouping"></a>以一個群組層級顯示資料  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a> 利用一個群組層級顯示資料  
  清單會自動提供容器，因此您可以使用清單來顯示包含多個檢視的群組資料。 若要變更預設清單來指定群組，請編輯詳細資料群組、指定一個新名稱，並指定一個群組運算式。  
   
  例如，您可以內嵌顯示相同資料集之不同檢視的資料表和圖表。 您可以將群組加入到清單中，讓巢狀報表項目針對每個群組值重複一次。 下圖顯示依產品類別目錄分組的清單。 請注意，其中沒有詳細資料列， 而有兩個資料表以巢狀方式，並排在清單中。 第一個資料表會顯示包含總銷售額的子類別目錄。 第二個資料表則顯示依地理區域分組的類別目錄，其中包含一個顯示子類別目錄分佈的圖表。  
   
- ![具有兩個資料表的清單，其中一個資料表具有巢狀圖表](../media/rs-basiclistgroupdesign.gif "具有兩個資料表的清單，其中一個資料表具有巢狀圖表")  
+ ![具有 2 個資料表的清單，其中一個資料表具有巢狀圖表](../media/rs-basiclistgroupdesign.gif "具有 2 個資料表的清單，其中一個資料表具有巢狀圖表")  
   
  在預覽中，資料表會顯示自行車所有子類別目錄的總銷售額，而該資料表內部的資料表則顯示每個地理區域的銷售額明細。 透過使用運算式來指定總計的背景色彩與圖表的自訂調色盤，第一個資料表也提供圖表色彩的圖例。  
   
- ![預覽、兩個資料表，其中一個資料表具有巢狀圖表](../media/rs-basiclistgrouppreview.gif "預覽、兩個資料表，其中一個資料表具有巢狀圖表")  
+ ![預覽，2 個資料表，其中一個資料表具有巢狀圖表](../media/rs-basiclistgrouppreview.gif "預覽，2 個資料表，其中一個資料表具有巢狀圖表")  
   
 
   

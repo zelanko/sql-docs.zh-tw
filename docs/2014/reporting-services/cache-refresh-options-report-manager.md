@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109914"
 ---
 # <a name="cache-refresh-options-report-manager"></a>快取重新整理選項 (報表管理員)
@@ -56,7 +56,7 @@ ms.locfileid: "66109914"
  選取這個選項，以編輯目前的重新整理計劃。  
   
 ## <a name="cache-refresh-plan-options"></a>快取重新整理計劃選項  
- **說明**  
+ **描述**  
  指定快取重新整理計劃的描述。  
   
  **項目特定排程**  
@@ -80,7 +80,7 @@ ms.locfileid: "66109914"
  **使用預設值**  
  選取此選項，可使用此參數的預先定義預設值。  
   
-##  <a name="Parameters"></a>指定參數  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a>指定參數  
  若要建立快取重新整理計劃，每個報表或共用資料集參數都必須有值。 如果報表或共用資料集項目並沒有在定義中指定預設值，您必須指定一個值。 如果有預設值，就不需要在此提供值。 如果您提供了任何值，該值就會覆寫預設值。  
   
  若要指定多個參數值組合，請分別為每個值組合建立快取重新整理計劃。  
@@ -90,15 +90,15 @@ ms.locfileid: "66109914"
 ### <a name="shared-dataset-parameters"></a>共用資料集參數  
  就共用資料集而言，下列資訊是自共用資料集定義衍生而來：  
   
--   **名稱**指定查詢參數的名稱。  
+-   **名稱** ：指定查詢參數的名稱。  
   
--   **類型**指定查詢參數的資料類型。 由於直到資料提供者處理資料集查詢之前，資料類型都屬未知，所以處理共用資料集之前無法進行資料類型驗證。  
+-   **類型** ：指定查詢參數的資料類型。 由於直到資料提供者處理資料集查詢之前，資料類型都屬未知，所以處理共用資料集之前無法進行資料類型驗證。  
   
--   **可為 null**指定 Null 是否為有效的值。  
+-   **可為 Null** ：指定 NULL 是否為有效的值。  
   
--   **ReadOnly**指定這個參數在共用資料集定義中是否標示為唯讀。 唯讀參數不會顯示在快取重新整理選項的參數清單中，而且必須指定預設值做為共用資料集定義的一部分。  
+-   **唯讀** ：指定這個參數在共用資料集定義中是否標示為唯讀。 唯讀參數不會顯示在快取重新整理選項的參數清單中，而且必須指定預設值做為共用資料集定義的一部分。  
   
--   **預設**已在共用資料集定義中指定的預設值。 查詢參數可以是多重值。 若要覆寫預設值，請在文字方塊提示區域中輸入新的值。  
+-   **預設值** ：已在共用資料集定義中指定的預設值。 查詢參數可以是多重值。 若要覆寫預設值，請在文字方塊提示區域中輸入新的值。  
   
  如果共用資料集定義為參數指定 **[從查詢中忽略]** 選項，就不需要提供預設值。 這個旗標表示查詢中不使用該資料集參數。 例如，參數顯示在共用資料集定義中，因為該參數是只用於資料集篩選中的報表參數。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66109914"
 -   為與重新整理計劃關聯的資料集查詢參數清除或選取唯讀選項，然後將新的定義儲存至報表伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [項目層級工作](security/tasks-and-permissions-item-level-tasks.md)   
+ [專案層級工作](security/tasks-and-permissions-item-level-tasks.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [快取多個報表 &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   

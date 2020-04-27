@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105304"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>報表撰寫概念 (報表產生器及 SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66105304"
  [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  描述用來描述不同狀態之報表的各種詞彙，這些狀態包括初始定義、已發行的報表以及使用者檢視的報表。  
   
- [內嵌和共用資料連線或資料來源 &#40;報表產生器和 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  描述用來定義報表、報表模型和資料驅動訂閱中使用之資料來源連接的方式。  
   
- [內嵌和共用資料集 &#40;報表產生器和 SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  說明建立、儲存和管理內嵌和共用資料集的差異。  
   
- [資料區域和對應 &#40;報表產生器和 SSRS&#41;](maps-report-builder-and-ssrs.md)  
+ [資料區與地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)  
  描述可加入至報表配置的資料區域類型。 資料區會決定報表的外觀：表格式、矩陣、清單或圖表。  
   
  [報表參數概念 &#40;報表產生器和 SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  

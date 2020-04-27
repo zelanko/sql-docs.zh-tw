@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105487"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>圓形圖 (報表產生器及 SSRS)
@@ -29,15 +29,15 @@ ms.locfileid: "66105487"
   
 ## <a name="variations"></a>變化  
   
--   **分裂式圓形圖**。 一種圓形圖，其中所有的扇區會從圓形圖的中央向外移動。 除了所有扇區都分離的分裂式圓形圖之外，您也可以建立只有一個扇區的分裂式扇形圖。  
+-   **分裂式圓形圖**： 一種圓形圖，其中所有的扇區會從圓形圖的中央向外移動。 除了所有扇區都分離的分裂式圓形圖之外，您也可以建立只有一個扇區的分裂式扇形圖。  
   
--   **環圈圖**。 中央具有開放空間的一種圓形圖。  
+-   **環圈圖**： 中央具有開放空間的一種圓形圖。  
   
--   **分裂式環圈圖**。 一種環圈圖，其中所有的扇區會從環圈圖的中央向外移動。  
+-   **分裂式環圈圖**： 一種環圈圖，其中所有的扇區會從環圈圖的中央向外移動。  
   
--   **3D 圓形圖**。 套用立體樣式的一種圓形圖。  
+-   **立體圓形圖**： 套用立體樣式的一種圓形圖。  
   
--   **3D 分裂式圓形圖**。 套用立體樣式的一種分裂式圓形圖。  
+-   **立體分裂式圓形圖**： 套用立體樣式的一種分裂式圓形圖。  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>在圓形圖上顯示的資料考量  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66105487"
 -   將小配量收集成補充的圓形圖。 第二個圓形圖不會顯示在設計工具中。 但是在報表處理期間，圖表會根據資料點的值，計算是否需要顯示另一個圓形圖。 如果需要，這些值會加入到另一個圓形圖中。  
   
 ## <a name="see-also"></a>另請參閱  
- [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   

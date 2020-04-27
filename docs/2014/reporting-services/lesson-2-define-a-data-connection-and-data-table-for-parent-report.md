@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108501"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 課：定義父報表的資料連接和資料表
@@ -22,25 +22,25 @@ ms.locfileid: "66108501"
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>若要藉由加入 DataSet 定義資料連接和資料表 (針對父報表)  
   
-1.  在 [網站]  功能表上選取 [新增項目]  。  
+1.  在 [網站]**** 功能表上選取 [新增項目]****。  
   
 2.  在 [**加入新專案**] 對話方塊中，選取 [**資料集**]，然後按一下 [**加入**]。 出現提示時，您應該按一下 [**是]**，將專案新增至 [ **App_Code** ] 資料夾。  
   
      這樣會將新的 XSD 檔 **DataSet1.xsd** 新增至專案，並開啟 DataSet 設計工具。  
   
-3.  從 [工具箱] 視窗中，將 [ **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** ] 控制項拖曳至設計介面。 這樣會啟動 [ **TableAdapter** 組態精靈]。  
+3.  從 [工具箱] 視窗將 **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** 控制項拖曳至設計介面。 這樣會啟動 [ **TableAdapter** 組態精靈]。  
   
 4.  在 [**選擇您的資料連線**] 頁面上，按一下 [**新增連接**]。  
   
 5.  如果這是您第一次在 Visual Studio 中建立資料來源，您會看到 [**選擇資料來源**] 頁面。 在 [資料來源]**** 方塊中，選取 [Microsoft SQL Server]****。  
   
-6.  在 [新增連線]  對話方塊中，執行下列步驟：  
+6.  在 [新增連線]**** 對話方塊中，執行下列步驟：  
   
     1.  在 [**伺服器名稱**] 方塊中，輸入**AdventureWorks2008**資料庫所在的伺服器。  
   
          預設的 SQL Server Express 執行個體為 **(local)\sqlexpress**。  
   
-    2.  在 [登入伺服器]  區段中，選取提供資料存取的選項。 [使用 Windows 驗證]  是預設值。  
+    2.  在 [登入伺服器]**** 區段中，選取提供資料存取的選項。 [使用 Windows 驗證]**** 是預設值。  
   
     3.  從 [**選取或輸入資料庫名稱**] 下拉式清單中，按一下 [ **AdventureWorks2008**]。  
   

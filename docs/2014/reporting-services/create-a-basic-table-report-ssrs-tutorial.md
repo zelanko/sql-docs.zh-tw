@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109674"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
@@ -32,8 +32,7 @@ ms.locfileid: "66109674"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]資料庫引擎。  
   
--   
-  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。  如需詳細資訊，請參閱[SQL Server 2012 的艾德作品（SQL Server 2012 的艾德作品）](https://go.microsoft.com/fwlink/?LinkId=245471) （https://go.microsoft.com/fwlink/?LinkId=245471).。 如需[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]範例資料庫和範例程式[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]代碼支援的詳細資訊，請參閱 CodePlex 網站上的[資料庫和範例總覽](https://go.microsoft.com/fwlink/?LinkId=110391)。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。  如需詳細資訊，請參閱[SQL Server 2012 的艾德作品（SQL Server 2012 的艾德作品）](https://go.microsoft.com/fwlink/?LinkId=245471) （https://go.microsoft.com/fwlink/?LinkId=245471).。 如需[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]範例資料庫和範例程式[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]代碼支援的詳細資訊，請參閱 CodePlex 網站上的[資料庫和範例總覽](https://go.microsoft.com/fwlink/?LinkId=110391)。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
@@ -58,7 +57,7 @@ ms.locfileid: "66109674"
  [課程 6：加入群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  在審核教學課程時，建議您在檔檢視器工具列上加入 **[下一個]** 和 [**上一個**] 按鈕。 如需詳細資訊，請參閱：  
+>  在審核教學課程時，建議您在檔檢視器工具列上加入 **[下一個]** 和 [**上一個**] 按鈕。 如需詳細資訊，請參閱。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 教學課程 &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  

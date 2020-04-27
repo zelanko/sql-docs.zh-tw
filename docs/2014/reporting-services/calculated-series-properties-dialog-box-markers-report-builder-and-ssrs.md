@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109893"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>導出數列屬性對話方塊、標記 (報表產生器及 SSRS)
@@ -40,10 +40,10 @@ ms.locfileid: "66109893"
  選取要在資料點上顯示之標記的框線色彩。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [格式化圖表上的數列色彩 &#40;報表產生器和 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的軸標籤 &#40;報表產生器和 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [使用 &#40;報表產生器和 SSRS 的調色板來定義圖表的色彩&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [在次要軸上繪製資料 &#40;報表產生器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [格式化圖表上的資料點 &#40;報表產生器和 SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [將移動平均加入至圖表 &#40;報表產生器及 SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

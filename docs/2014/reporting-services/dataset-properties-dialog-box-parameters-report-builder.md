@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109385"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>資料集屬性對話方塊、參數 (報表產生器)
@@ -42,7 +42,7 @@ ms.locfileid: "66109385"
  將清單中所選取的參數向下移動。  
   
  **參數名稱**  
- 在 [資料集屬性]  對話方塊的 [查詢]  索引標籤上，輸入您要加入到資料集之查詢參數的名稱。  
+ 在 [資料集屬性]**** 對話方塊的 [查詢]**** 索引標籤上，輸入您要加入到資料集之查詢參數的名稱。  
   
  **參數值**  
  僅適用於內嵌資料集。  
@@ -65,7 +65,7 @@ ms.locfileid: "66109385"
   
  選取此選項，將此參數在共用資料集定義中標示為唯讀。 將共用資料集加入至報表時，參數不會出現在屬性中。 在報表伺服器上快取共用資料集時，無法變更值。  
   
- **Nullable**  
+ **可為 Null**  
  僅適用於共用資料集。  
   
  選取此選項以允許 Null 值。  
@@ -79,11 +79,11 @@ ms.locfileid: "66109385"
  [對話方塊、窗格和嚮導的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [資料集屬性對話方塊、查詢 &#40;報表產生器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數加入至您的報表 &#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [查詢設計工具 &#40;報表產生器&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [建立共用資料集或內嵌資料集 &#40;報表產生器和 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

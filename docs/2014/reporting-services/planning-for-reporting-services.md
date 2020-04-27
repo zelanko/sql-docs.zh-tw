@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3a4dc8e890f2b23319afcc02c628410d5264c6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108022"
 ---
 # <a name="planning"></a>規劃
-  使用這些主題可進一步瞭解[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 了解如何安裝及設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境，使其最符合您的需要。  
+  使用這些主題以更清楚了解 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 了解如何安裝及設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境，使其最符合您的需要。  
   
  ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**一般 Reporting Services 功能規劃和架構**  
  [規劃 Reporting Services 和 Power View 瀏覽器支援 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "66108022"
  ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示") **Reporting Services 安裝程式**  
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
   
- [部署檢查清單：將 Reporting Services 安裝到現有的 SharePoint 伺服器陣列](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
  [Deployment Topologies for SQL Server BI Features in SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)    
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108033"
 ---
 # <a name="publish-reports"></a>發行報表
@@ -27,14 +27,14 @@ ms.locfileid: "66108033"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>若要發行專案中的所有報表  
   
--   在 [組建]  功能表上，按一下 [部署 **報表專案名稱>]\<** 。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]  。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
+-   在 [組建]**** 功能表上，按一下 [部署 \<報表專案名稱>]****。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]****。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
   
     > [!NOTE]  
     >  當您部署報表伺服器專案時，也會部署報表專案中的共用資料來源。  
   
 ### <a name="to-publish-a-single-report"></a>若要發行單一報表  
   
--   在 [方案總管] 中，以滑鼠右鍵按一下報表，然後按一下 **[部署]** 。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
+-   在 [方案總管] 中，以滑鼠右鍵按一下報表，然後按一下 **[部署]**。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
   
     > [!NOTE]  
     >  當您發行報表時，也必須部署該報表所使用的共用資料來源。  
@@ -43,7 +43,7 @@ ms.locfileid: "66108033"
  [發行資料來源與報表](reports/publishing-data-sources-and-reports.md)   
  [預覽報表](reports/previewing-reports.md)   
  [將報表發行至報表伺服器](reports/publishing-reports-to-a-report-server.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [尋找、查看和管理報表 &#40;報表產生器和 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

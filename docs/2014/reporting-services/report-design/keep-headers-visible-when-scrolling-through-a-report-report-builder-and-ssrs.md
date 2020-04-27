@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105594"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
@@ -40,9 +40,9 @@ ms.locfileid: "66105594"
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>若要在捲動時維持矩陣群組標頭的可見度  
   
-1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
+1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]** 。  
   
-2.  在 **[一般]** 索引標籤的 **[資料列標頭]** 或 **[資料行標頭]** 下方選取 **[捲動時，標頭應保持可見]**。  
+2.  在 **[一般]** 索引標籤的 **[資料列標頭]** 或 **[資料行標頭]** 下方選取 **[捲動時，標頭應保持可見]** 。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66105594"
   
      [資料列群組] 窗格會顯示資料列群組階層的階層式靜態及動態成員，[資料行群組] 窗格則會為資料行群組階層顯示類似的內容。  
   
-2.  在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]**。  
+2.  在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]** 。  
   
 3.  在捲動時按一下您要保持可見的靜態成員 (資料列或資料行)。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
      ![Tablix 成員屬性](../media/grouppane-tablixmember-updated.png "Tablix 成員屬性")  
   
-4.  在 [屬性] 窗格中**** ，將`True`FixedData 設定為。  
+4.  在 [屬性] 窗格中**FixedData** ，將`True`FixedData 設定為。  
   
 5.  針對您要在捲動時保持可見的相鄰成員重複這個步驟。  
   
@@ -72,8 +72,8 @@ ms.locfileid: "66105594"
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [以群組 &#40;報表產生器和 SSRS 顯示頁首和頁尾&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [在多個頁面上顯示資料列和資料行標頭 &#40;報表產生器和 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [在多個頁面上顯示資料列和資料行標頭 &#40;報表產生器及 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [群組窗格 &#40;報表產生器&#41;](grouping-pane-report-builder.md)  
   
   

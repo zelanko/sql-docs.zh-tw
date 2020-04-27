@@ -17,20 +17,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23dda0c65589e55849f906c621e42ce70f0d7ab5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106763"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>將組件參考加入至報表 (SSRS)
-  當您內嵌的自訂程式碼包含[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]了不在或<xref:System.Convert>中<xref:System.Math>之類別的參考時，您必須提供報表的元件參考，讓報表處理器可以解析名稱。 如需詳細資訊，請參閱[將程式碼加入至報表 &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)。  
+  當您內嵌的自訂程式碼包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別的參考，而該類別不在 <xref:System.Math> 或 <xref:System.Convert> 中時，則必須提供此報表的組件參考以讓報表處理器可以解析名稱。 如需詳細資訊，請參閱[將程式碼加入至報表 &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)。  
   
 ### <a name="to-add-an-assembly-reference-to-a-report"></a>若要將組件參考加入至報表  
   
-1.  在 [設計]**** 檢視中，以滑鼠右鍵按一下報表框線外面的設計介面，然後按一下 [報表屬性]****。  
+1.  在 [設計]  檢視中，以滑鼠右鍵按一下報表框線外面的設計介面，然後按一下 [報表屬性]  。  
   
-2.  按一下 **[參考]**。  
+2.  按一下 **[參考]** 。  
   
 3.  在 **[加入或移除組件]** 中，按一下 **[加入]** ，然後按一下省略符號按鈕，瀏覽至該組件。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66106763"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [將自訂群組件與報表搭配使用](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [將自訂組件與報表搭配使用](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [報表屬性對話方塊、參考](../report-properties-dialog-box-references.md)  
   
   

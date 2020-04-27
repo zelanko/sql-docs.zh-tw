@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107663"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 登入對話方塊 (報表產生器)
@@ -24,7 +24,7 @@ ms.locfileid: "66107663"
   
 ## <a name="options"></a>選項。  
  **Server**  
- 顯示報表伺服器的名稱。 例如： `http://localhost/reportserver` 。 如果報表伺服器使用的是預設通訊埠 80 以外的通訊埠，請加入該通訊埠號碼。 例如： `http://localhost:8080/reportserver` 。  
+ 顯示報表伺服器的名稱。 例如，`http://localhost/reportserver`。 如果報表伺服器使用的是預設通訊埠 80 以外的通訊埠，請加入該通訊埠號碼。 例如，`http://localhost:8080/reportserver`。  
   
  **使用者名稱**  
  輸入使用者名稱以登入 Web 服務。  
@@ -33,6 +33,6 @@ ms.locfileid: "66107663"
  輸入密碼以登入 Web 服務。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

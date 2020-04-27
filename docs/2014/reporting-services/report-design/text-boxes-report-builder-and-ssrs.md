@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104624"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文字方塊 (報表產生器及 SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104624"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>增加和縮小文字方塊  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> 文字方塊的擴張和縮小  
  根據預設，文字方塊是固定的大小。 您可以讓文字方塊根據其內容垂直縮小或擴張。 如需詳細資訊，請參閱 [允許文字方塊擴張或縮小 &#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
 ## <a name="orienting-a-text-box"></a>指定文字方塊的方向  
@@ -55,17 +55,17 @@ ms.locfileid: "66104624"
   
  若要快速地開始變更文字方向，請參閱[教學課程：將文字格式化 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)中的旋轉文字一節。 如需詳細資訊，請參閱[&#40;報表產生器和 SSRS&#41;設定文字方塊方向](set-text-box-orientation-report-builder-and-ssrs.md)。  
   
-##  <a name="HowTo"></a> 如何主題  
- [加入、移動或刪除文字方塊 &#40;報表產生器和 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>How To 主題  
+ [加入、移動或刪除文字方塊 &#40;報表產生器及 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [將文字方塊方向設定 &#40;報表產生器和 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [設定文字方塊方向 &#40;報表產生器及 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [允許文字方塊擴大或縮小 &#40;報表產生器和 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [允許文字方塊擴張或縮小 &#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS 設定文字和預留位置的格式&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

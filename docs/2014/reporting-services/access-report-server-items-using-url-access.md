@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110101"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 存取權存取報表伺服器項目
-  本主題描述如何使用*rs： Command*=*值*，在報表伺服器資料基底或 SharePoint 網站中存取不同類型的類別目錄專案。  
+  本主題描述如何使用 *rs:Command*=*Value*，來存取報表伺服器資料庫或 SharePoint 網站中不同類型的目錄項目。  
   
- 您不需要加入此參數字串。 如果您省略此參數字串，報表伺服器會評估項目類型並自動選取適當的參數值。 不過，在 URL 中使用*rs： Command*=*值*字串可改善報表伺服器的效能。  
+ 您不需要加入此參數字串。 如果您省略此參數字串，報表伺服器會評估項目類型並自動選取適當的參數值。 不過，在 URL 中使用 *rs:Command*=*Value* 字串可改善報表伺服器的效能。  
   
  請注意下列範例中的 `_vti_bin` Proxy 語法。 如需使用 Proxy 語法的詳細資訊，請參閱 [URL 存取參數參考](url-access-parameter-reference.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66110101"
  您看到的使用者介面類似於 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) 所使用的目錄瀏覽模式。 報表伺服器的版本號碼 (包括組建編號) 也會顯示在資料夾清單下面。  
   
 ## <a name="see-also"></a>另請參閱  
- [URL 存取 &#40;SSRS&#41;](url-access-ssrs.md)   
+ [&#40;SSRS&#41;的 URL 存取](url-access-ssrs.md)   
  [URL 存取參數參考](url-access-parameter-reference.md)  
   
   

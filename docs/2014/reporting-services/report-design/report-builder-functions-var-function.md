@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a10d92d8492f9f07f18d2edccd7f3074b7c584c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105085"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 函數 (報表產生器及 SSRS)
@@ -38,8 +38,7 @@ Var(expression, scope, recursive)
  (`String`) 選擇性。 包含要套用彙總函式之報表項目的資料集、群組或資料區域名稱的常數。 如果未指定 *scope* ，則使用目前的範圍。  
   
  *遞迴*  
- (**列舉型別**) 選擇性。 
-  `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
+ (**列舉型別**) 選擇性。 `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
   
 ## <a name="return-type"></a>傳回類型  
  十進位運算式會傳回 `Decimal`，所有其他運算式都會傳回 `Double`。  

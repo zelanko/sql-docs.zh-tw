@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109627"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>建立及管理共用資料來源 (SharePoint 整合模式的 Reporting Services)
@@ -86,6 +86,6 @@ ms.locfileid: "66109627"
  刪除報表模型時，請特別小心。 如果您刪除模型，就不能再於報表產生器中，開啟和修改以該模型為基礎的任何報表。 如果您不慎刪除了現有報表所使用的模型，就必須重新產生該模型，重新建立並儲存使用該模型的任何報表，然後重新指定想要使用的任何模型項目安全性。 您不能只是重新產生模型，然後將它附加到現有的報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [指定報表資料來源的認證及連線資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

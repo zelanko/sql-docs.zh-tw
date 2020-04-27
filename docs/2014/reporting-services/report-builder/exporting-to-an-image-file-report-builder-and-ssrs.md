@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd3a6e7126775479ae7ca0c6b6d138a0625476af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107884"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>匯出至影像檔 (報表產生器及 SSRS)
@@ -25,10 +25,10 @@ ms.locfileid: "66107884"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> 支援的影像格式  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> 支援的影像格式  
  下表顯示每個影像轉譯器格式的副檔名和 MimeType。  
   
-|**型別**|**副檔名**|**MIMEType**|  
+|**類型**|**分機**|**MIMEType**|  
 |--------------|-------------------|------------------|  
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
@@ -39,11 +39,11 @@ ms.locfileid: "66107884"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> 轉譯多頁  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> 轉譯多頁  
  TIFF 是在單一檔案中，支援多頁文件的唯一格式。 JPG 或 PNG 之類的其他格式一次輸出一頁，而且需要為每一頁個別呼叫轉譯延伸模組。  
   
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a>互動性  
  此轉譯器產生的任何影像格式都不支援互動性。 系統不會轉譯下列互動項目：  
   
 -   超連結  
@@ -61,15 +61,15 @@ ms.locfileid: "66107884"
 -   書籤  
   
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>裝置資訊設定  
  您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱＜ [Image Device Information Settings](../image-device-information-settings.md)＞。  
   
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;報表產生器和 SSRS 轉譯報表專案&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

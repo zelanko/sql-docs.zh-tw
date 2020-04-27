@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109607"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>建立、刪除或修改共用資料來源 (報表管理員)
@@ -70,7 +70,7 @@ ms.locfileid: "66109607"
     > [!NOTE]  
     >  [測試連接] 按鈕不支援 XML 資料來源類型。  
   
-10. 按一下 [確定]****。  
+10. 按一下 [檔案] &gt; [新增] &gt; [專案]   
   
 ### <a name="to-modify-a-shared-data-source"></a>若要修改共用資料來源  
   

@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109686"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了資料驅動訂閱，讓您可以依據動態訂閱者資料來自訂報表的散發。 資料驅動訂閱適用於下列狀況：  
   
 -   將報表散發給成員資格可能隨著不同的散發而變更的大型收件者集區。 例如，將月報表散發給目前的所有客戶。  
@@ -37,10 +36,10 @@ ms.locfileid: "66109686"
  [第 1 課：建立範例訂閱者資料庫](lesson-1-creating-a-sample-subscriber-database.md)  
  在這一課，您將學習如何建立包含訂閱者資訊的本機 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [第 2 課：修改報表資料來源屬性](lesson-2-modifying-the-report-data-source-properties.md)  
  在這一課，您將學習如何修改報表資料來源屬性，讓報表能夠自動執行。 自動處理需要預存認證。 您也會將報表資料集修改為包含訂閱者資料所提供的參數。  
   
- [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
+ [第 3 課：定義資料驅動訂閱](lesson-3-defining-a-data-driven-subscription.md)  
  在這一課，您將學習如何定義資料驅動訂閱。 本課程會逐步引導您完成「資料驅動訂閱精靈」的每個頁面。  
   
 ## <a name="requirements"></a>需求  
@@ -58,8 +57,7 @@ ms.locfileid: "66109686"
   
 -   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
   
--   
-  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫，它會將資料提供給範例報表。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫，它會將資料提供給範例報表。  
   
 -   包括範例報表之「管理所有訂閱」工作的角色指派。 定義資料驅動訂閱需要這項工作。 如果您是電腦的管理員，本機管理員的預設角色指派提供必要權限來建立資料驅動訂閱。 如需詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](security/granting-permissions-on-a-native-mode-report-server.md)。  
   

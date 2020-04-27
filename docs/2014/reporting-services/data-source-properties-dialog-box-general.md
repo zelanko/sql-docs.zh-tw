@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f918d6583f01473e061792406821b13a4856cea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109480"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>資料來源屬性對話方塊、一般
@@ -30,11 +30,11 @@ ms.locfileid: "66109480"
  **內嵌連接**  
  當您不想要使用共用資料來源時，選取此選項。  
   
- **型別**  
+ **類型**  
  選取資料處理延伸模組。 此清單會顯示所有已註冊的延伸模組。  
   
  **連接字串**  
- 輸入資料來源的連接字串。 按一下 **[編輯]** ，即可使用 **[連接屬性]** 對話方塊來建立連接字串。 按一下 [**運算式**] （*fx*）按鈕來編輯運算式。  
+ 輸入資料來源的連接字串。 按一下 **[編輯]** ，即可使用 **[連接屬性]** 對話方塊來建立連接字串。 請按一下 [運算式]**** (*fx*) 按鈕來編輯運算式。  
   
  **使用共用資料來源參考**  
  選取此選項即可連結至共用資料來源。 從下拉式清單選取共用資料來源。 若要編輯選取的資料來源，請按一下 **[編輯]**。 如果選取 **[使用共用資料來源參考]** ，就會停用 **[類型]** 和 **[連接字串]** 。  

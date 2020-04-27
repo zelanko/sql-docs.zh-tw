@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109093"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>一般屬性頁面，報表 (報表管理員)
@@ -29,7 +29,7 @@ ms.locfileid: "66109093"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -37,7 +37,7 @@ ms.locfileid: "66109093"
   
  " 或 / (在指定名稱時)。  
   
- **說明**  
+ **描述**  
  輸入報表的描述。 此描述顯示在有權存取此報表的使用者的 [內容] 頁面上。  
   
  **在清單檢視中隱藏**  
@@ -55,7 +55,7 @@ ms.locfileid: "66109093"
  **建立連結報表**  
  按一下即可開啟 [新增連結報表] 頁面。 如需有關此頁面和連結報表的詳細資訊，請參閱[新增連結報表頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)。  
   
- **另**  
+ **儲存**  
  按一下即可擷取報表定義的唯讀副本。 視電腦上定義的檔案關聯而定，系統會在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他應用程式中開啟檔案。 在大多數情況下，會將報表開啟為 XML 檔案。  
   
  您開啟的副本與初始發行至報表伺服器的原始報表定義相同。 發行報表之後，在報表上設定的任何屬性 (例如參數和資料來源屬性)，都不會反映在您開啟的檔案中。  

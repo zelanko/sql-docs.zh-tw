@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4354461c9f52106d821e376aac4698546538e19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107159"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>報表內嵌資料集和共用資料集 (報表產生器及 SSRS)
@@ -32,19 +32,19 @@ ms.locfileid: "66107159"
   
  ![rs_DatasetStory](../media/rs-datasetstory.gif "rs_DatasetStory")  
   
-1.  **[報表資料] 窗格中的資料集**當您建立內嵌資料集或加入共用資料集之後，資料集會出現在 [報表資料] 窗格中。 資料集是以資料來源為基礎。  
+1.  **報表資料窗格中的資料集** ：在您建立內嵌資料集或加入共用資料集之後，[報表資料] 窗格中就會出現資料集。 資料集是以資料來源為基礎。  
   
-2.  **查詢設計**工具當您設計資料集查詢時，與資料來源類型相關聯的查詢設計工具隨即開啟。  
+2.  **查詢設計工具** ：當您設計資料集查詢時，與資料來源類型相關聯的查詢設計工具便會開啟。  
   
-3.  **查詢命令**查詢設計工具可協助您建立查詢命令。 命令語法是由資料提供者決定。  
+3.  **查詢命令** ：查詢設計工具可協助您建立查詢命令。 命令語法是由資料提供者決定。  
   
-4.  **資料延伸模組/Data Provider**連接到資料可以透過多個資料存取層。  
+4.  **資料延伸模組/資料提供者** ：資料可經由多個資料存取層連接。  
   
-5.  **外部資料源**從關係資料庫、多維度資料基底、SharePoint 清單、Web 服務或報表模型取出資料。  
+5.  **外部資料來源** ：從關聯式資料庫、多維資料庫、SharePoint 清單、Web 服務或報表模型擷取資料。  
   
-6.  **查詢結果**您可以執行查詢並查看範例結果集。 您必須擁有設計階段認證，才能執行查詢。  
+6.  **查詢結果** ：您可以執行查詢並查看範例結果集。 您必須擁有設計階段認證，才能執行查詢。  
   
-7.  **來自架構的中繼資料**資料提供者會執行與查詢不同的架構查詢命令，以抓取資料集欄位集合的中繼資料。 例如， [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT`語句會傳回資料庫資料表的資料行名稱。 使用 [報表資料] 窗格展開資料集，即可檢視資料集欄位集合。  
+7.  **來自結構描述的中繼資料** ：資料提供者會將結構描述查詢命令與查詢分開執行，以擷取資料集欄位集合的中繼資料。 例如， [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT`語句會傳回資料庫資料表的資料行名稱。 使用 [報表資料] 窗格展開資料集，即可檢視資料集欄位集合。  
   
  資料也可以使用預先定義的共用資料集和報表組件併入報表中。 這些項目已經有您所需的資料連接資訊。 如需詳細資訊，請參閱[將資料加入報表 &#40;報表產生器和 ssrs&#41;](report-datasets-ssrs.md)以及[&#40;報表產生器和 ssrs&#41;中的報表元件](../report-parts-report-builder-and-ssrs.md)。  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66107159"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Overview"></a>瞭解報表資料集和查詢  
- 報表資料集包含的查詢命令可在外部資料來源上執行，並指定要擷取的資料。 若要建立查詢指令，您可以使用與外部資料來源之資料延伸模組相關聯的查詢設計工具。 在查詢設計工具中，您可以執行查詢命令並檢視結果集。 結果集是一個矩形資料列集，其中的資料行名稱和資料列在每個資料列中都有相同數目的值。 不支援階層式資料，也稱為 *「不完全階層」*(Ragged Hierarchy)。 資料行名稱會當做資料集欄位的清單儲存在報表定義中。  
+##  <a name="understanding-report-datasets-and-queries"></a><a name="Overview"></a> 了解報表資料集與查詢  
+ 報表資料集包含的查詢命令可在外部資料來源上執行，並指定要擷取的資料。 若要建立查詢指令，您可以使用與外部資料來源之資料延伸模組相關聯的查詢設計工具。 在查詢設計工具中，您可以執行查詢命令並檢視結果集。 結果集是一個矩形資料列集，其中的資料行名稱和資料列在每個資料列中都有相同數目的值。 不支援階層式資料，也稱為 *「不完全階層」* (Ragged Hierarchy)。 資料行名稱會當做資料集欄位的清單儲存在報表定義中。  
   
  將資料集加入至報表後，您可以將欄位從 [報表資料] 窗格中的欄位集合拖曳至資料表、圖表，以及您用來設計報表配置的其他報表項目。 如需使用欄位的詳細資訊，請參閱 [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66107159"
   
  系統只支援 .sql 和 .rdl 檔案類型。 多維度運算式 (MDX) 查詢、資料採礦預測 (DMX) 查詢以及模型查詢 (SMQL) 只能由相關聯的查詢設計工具產生。  
   
-##  <a name="Compare"></a>比較和建立共用資料集與內嵌資料集  
+##  <a name="comparing-and-creating-shared-datasets-and-embedded-datasets"></a><a name="Compare"></a> 比較和建立共用資料集與內嵌資料集  
  內嵌資料集是在報表或已發行的報表組件中定義的。 對內嵌資料集所做的變更只會影響該報表或該報表組件。  
   
  共用資料集是在報表伺服器或 SharePoint 網站上定義、以共用資料來源為基礎，而且可由多個報表及報表組件使用。 對共用資料集定義所做的變更會影響使用該定義的所有報表和所有報表組件。  
@@ -151,9 +151,9 @@ ms.locfileid: "66107159"
 |欄位|來自查詢命令的欄位<br /><br /> 導出欄位不屬於資料集定義的一部分|檢視欄位，但是無法變更欄位<br /><br /> 根據您將共用資料集加入至報表時的查詢，欄位集合是靜態的。 若要更新，請按一下 **[資料集屬性]** 對話方塊中的 **[重新整理欄位]** 。 實際的欄位集合是定義中目前的查詢所傳回的任何內容。<br /><br /> 加入導出欄位|  
 |資料集|資料選項，例如區分大小寫|覆寫執行個體中的資料選項|  
   
- 如需建立資料集的詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)的[建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../tools/reporting-services-tools.md) 和 [Reporting Services 工具](https://go.microsoft.com/fwlink/?linkid=121312)。  
+ 如需建立資料集的詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)的[建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../tools/reporting-services-tools.md)。  
   
-##  <a name="SortGroupFilter"></a>篩選、排序和分組資料集中的資料  
+##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> 篩選、排序及分組資料集中的資料  
  資料集中的資料是在外部資料來源上執行查詢命令而產生的。 資料延伸模組的查詢命令語法會決定是否可以排序或分組資料。 排序與分組要在擷取報表的資料前，於查詢中進行。 篩選則在擷取報表的資料之後進行。  
   
  如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
@@ -173,9 +173,9 @@ ms.locfileid: "66107159"
  您也可以使用參數與排序運算式的組合，讓使用者選擇資料在報表中的排序次序。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
 ### <a name="grouping-data-in-a-dataset"></a>在資料集中分組資料  
- 您無法在資料集中分組資料。 若要彙總資料集中的資料，您可以在擷取報表的資料前，編輯查詢命令來計算彙總。 這些值稱為 *「伺服器彙總」*(Server Aggregate)。 在運算式中，若要將這些值識別為預先計算的彙總，請使用彙總函式。 如需詳細資訊，請參閱[彙總函式 &#40;報表產生器及 SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)。  
+ 您無法在資料集中分組資料。 若要彙總資料集中的資料，您可以在擷取報表的資料前，編輯查詢命令來計算彙總。 這些值稱為 *「伺服器彙總」* (Server Aggregate)。 在運算式中，若要將這些值識別為預先計算的彙總，請使用彙總函式。 如需詳細資訊，請參閱[彙總函式 &#40;報表產生器及 SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)。  
   
-##  <a name="Parameters"></a>使用參數和資料集  
+##  <a name="using-parameters-and-datasets"></a><a name="Parameters"></a> 使用參數與資料集  
  針對包含查詢變數的內嵌資料集查詢，系統會自動建立查詢參數和對應的報表參數。 當報表執行時，報表參數的值會連結到資料集查詢參數。 利用這個方式，在外部資料來源上執行的查詢命令會包含針對報表參數所指定的值。 報表參數可讓使用者選擇他們想要在報表中查看的資料。 您可以在[資料集屬性對話方塊、參數 &#40;報表產生器&#41;](../dataset-properties-dialog-box-parameters-report-builder.md) 頁面中檢視查詢參數與報表參數的連結方式。  
   
  若是共用資料集，查詢參數是共用資料集定義的一部分，可以在報表伺服器上與報表分開管理。 下列清單描述查詢參數值的支援：  
@@ -197,15 +197,15 @@ ms.locfileid: "66107159"
 ### <a name="displaying-hidden-datasets"></a>顯示隱藏的資料集  
  當您針對某些多維度資料來源建立參數化查詢時，系統會自動建立提供有效參數值的資料集。 在某些查詢設計工具上，您可以指定篩選，然後選取要建立參數的選項來達到這個目的。 根據預設，這些資料集不會出現在 [報表資料] 窗格內，但是它們可以顯示出來。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
-##  <a name="Maps"></a>使用對應和資料集  
+##  <a name="using-maps-and-datasets"></a><a name="Maps"></a> 使用地圖與資料集  
  如果您在報表中包含地圖，就必須提供空間資料。 空間資料可能來自報表資料集、地圖厙中的地圖，或 ESRI 形狀檔。 來自報表或 ESRI 形狀檔的空間資料不會當做資料集出現在 [報表資料] 窗格中。 如需詳細資訊，請參閱[地圖 &#40;報表產生器及 SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)。  
   
-##  <a name="Multiple"></a>顯示來自多個資料集的資料  
+##  <a name="displaying-data-from-multiple-datasets"></a><a name="Multiple"></a> 顯示多個資料集的資料  
  報表通常有一個以上的資料集。 下列清單描述您如何在報表中使用資料集：  
   
 -   您可以使用個別的資料區域顯示每個資料集中的資料。 如需詳細資訊，請參閱[資料區及地圖 &#40;報表產生器及 SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md)。  
   
--   您可以將一個以上的資料區域連結至一個資料集，並提供相同資料的多個檢視。 如需詳細資訊，請參閱[將多個資料區域連結至相同的資料集 &#40;報表產生器和 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
+-   您可以將一個以上的資料區域連結至一個資料集，並提供相同資料的多個檢視。 如需詳細資訊，請參閱 [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
   
 -   您可以使用資料集提供可用值的下拉式清單，或報表參數的預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
@@ -213,10 +213,10 @@ ms.locfileid: "66107159"
   
 -   您無法在單一資料區域中，顯示來自多個資料集的詳細資料。 不過，您可以在資料區域中，顯示多個資料集的彙總或內建函數值。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)。 如果您需要將多個資料集的詳細資料結合到一個資料區中，必須重新撰寫查詢以便將資料當做單一資料集擷取。  
   
-##  <a name="NoRows"></a>沒有資料列可用時顯示訊息  
+##  <a name="displaying-a-message-when-no-rows-of-data-are-available"></a><a name="NoRows"></a> 沒有可用的資料列時顯示訊息  
  在報表處理期間，當資料集的查詢執行時，結果集可能不包含任何資料列。 在轉譯的報表中，連結到空資料集的資料區域會顯示為空資料區域。 您可以指定要在轉譯之報表中顯示的文字來取代空資料區域。 當所有資料集的查詢在執行階段沒有產生任何資料時，您也可以指定子報表的訊息。 如需詳細資訊，請參閱[在資料區域中設定沒有資料的訊息 &#40;報表產生器及 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="Options"></a>設定資料集選項  
+##  <a name="setting-dataset-options"></a><a name="Options"></a> 設定資料集選項  
  對於支援國際資料的資料來源，您可能需要針對影響排序次序、國際字元屬性，以及區分大小寫的資料集調整屬性。 這些屬性包含大小寫、假名、寬度、腔調字和定序。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](https://go.microsoft.com/fwlink/?linkid=98335)》中的＜資料庫和 Database Engine 應用程式的國際化考量＞和＜使用定序＞。 如需如何設定這些屬性的詳細資訊，請參閱[資料集屬性對話方塊、選項 &#40;報表產生器&#41;](dataset-properties-dialog-box-options-report-builder.md)。  
   
 ## <a name="see-also"></a>另請參閱  

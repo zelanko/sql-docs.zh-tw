@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efdea595034f91497befdc7f7b12adacef8d73ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109547"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數
@@ -40,11 +40,9 @@ ms.locfileid: "66109547"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>尋找及修改 RSReportServer.config  
  報表輸出格式的組態設定會在 RSReportServer.config 檔中指定為轉譯延伸模組參數。 若要指定組態檔中的轉譯延伸模組參數，您必須了解如何定義設定轉譯參數的 XML 結構。 可進行修改的 XML 結構有兩種：  
   
--   
-  `OverrideNames` 元素會定義轉譯延伸模組顯示的名稱和語言。  
+-   `OverrideNames` 元素會定義轉譯延伸模組顯示的名稱和語言。  
   
--   
-  `DeviceInfo` XML 結構會定義轉譯延伸模組所使用的裝置資訊設定。 大部分的轉譯延伸模組參數會指定為裝置資訊設定。  
+-   `DeviceInfo` XML 結構會定義轉譯延伸模組所使用的裝置資訊設定。 大部分的轉譯延伸模組參數會指定為裝置資訊設定。  
   
  您可以使用文字編輯器來修改 RSReportServer.config 檔案， 此檔案可以在 \Reporting Services\Report Server\Bin 資料夾中找到。 如需修改設定檔的詳細資訊，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   

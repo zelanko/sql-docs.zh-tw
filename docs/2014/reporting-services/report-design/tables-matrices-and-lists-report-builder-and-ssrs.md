@@ -36,10 +36,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104745"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>資料表、矩陣和清單 (報表產生器及 SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "66104745"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Table"></a>目錄  
+##  <a name="table"></a><a name="Table"></a>目錄  
  使用資料表顯示詳細資料、在資料列群組中組織資料，或兩者。 「資料表」範本包含三個資料行，其中有一個資料的資料表頁首資料列和一個詳細資料資料列。 下圖顯示在設計介面上選取的初始資料表範本：  
   
  ![在設計介面上選取的資料表範本](../media/rs-tabletemplatenewselected.gif "在設計介面上選取的資料表範本")  
@@ -76,7 +76,7 @@ ms.locfileid: "66104745"
   
 
   
-##  <a name="Matrix"></a>核准  
+##  <a name="matrix"></a><a name="Matrix"></a>核准  
  使用矩陣顯示在資料列與資料行中群組的彙總資料摘要，類似於樞紐分析表或交叉資料表。 群組的資料列數和資料行數，取決於每個資料列和資料行群組的唯一組數目。 下圖顯示在設計介面上選取的初始矩陣範本：  
   
  ![從工具箱新增選取的矩陣](../media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的矩陣")  
@@ -91,7 +91,7 @@ ms.locfileid: "66104745"
   
 
   
-##  <a name="List"></a>名單  
+##  <a name="list"></a><a name="List"></a>名單  
  使用清單來建立自由形式配置。 您不會受限於格線配置，但是可以將欄位任意放在清單內。 您可以使用清單來設計顯示許多資料集欄位的表單，或將表單設計為容器來並排顯示群組資料的多個資料區域。 例如，您可以定義清單的群組；加入資料表、圖表與影像；以及以資料表和圖形形式顯示每個群組值的值，如同您針對員工或病患記錄所進行的處理。  
   
  ![從工具箱新增選取的新清單](../media/rs-listtemplatenewselected.gif "從工具箱新增選取的新清單")  
@@ -100,7 +100,7 @@ ms.locfileid: "66104745"
   
 
   
-##  <a name="PreparingData"></a>準備資料  
+##  <a name="preparing-data"></a><a name="PreparingData"></a>準備資料  
  資料表、矩陣和清單資料區都會顯示資料集中的資料。 您可以在擷取資料集之資料的查詢中準備資料，也可以透過設定資料表、矩陣或清單中的屬性來準備資料。  
   
  您用來擷取報表資料集之資料的查詢語言 (例如 [!INCLUDE[tsql](../../includes/tsql-md.md)]) 可以透過套用篩選以便只包含資料的子集、以使報表更容易讀取的常數取代 Null 值或空白，以及排序和分組資料，來準備資料。  
@@ -111,14 +111,14 @@ ms.locfileid: "66104745"
   
 
   
-##  <a name="BuildingConfiguringTableMatrixList"></a>建立和設定資料表、矩陣或清單  
+##  <a name="building-and-configuring-a-table-matrix-or-list"></a><a name="BuildingConfiguringTableMatrixList"></a>建立和設定資料表、矩陣或清單  
  當您將資料表或矩陣加入至報表時，可以使用「資料表和矩陣精靈」或從報表產生器和報表設計師所提供的範本手動建立它們。 清單是從清單範本手動建立。  
   
  此精靈會引導您進行快速建立和設定資料表或矩陣的步驟。 完成精靈之後，或者如果您要從頭開始建立 Tablix 資料區，您可以進一步設定並精簡它們。 可從資料區的滑鼠右鍵功能表取得的對話方塊可讓您輕鬆設定常用的分頁符號屬性、頁首與頁尾的重複性和可見性、顯示選項、篩選，以及排序。 但是，Tablix 資料區會提供其他豐富的屬性，這些屬性只能在報表產生器的 [屬性] 窗格中設定。 例如，如果您要在資料表、矩陣或清單的資料集空白時顯示訊息，您要在 [屬性] 窗格的 NoRowsMessage Tablix 屬性中指定訊息文字。  
   
 
   
-##  <a name="ChangingBetweenTablixTemplates"></a>在 Tablix 範本之間變更  
+##  <a name="changing-between-tablix-templates"></a><a name="ChangingBetweenTablixTemplates"></a>在 Tablix 範本之間變更  
  您不會受到一開始選擇的 Tablix 範本所限制。 當您加入群組、總計與標籤時，可以修改您的 Tablix 設計。 例如，您可以從資料表開始，然後刪除詳細資料資料列並加入資料行群組。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
  您可以加入任何 Tablix 功能以便繼續開發資料表、矩陣或清單。 Tablix 功能包括在資料列和資料行上顯示群組資料的詳細資料或彙總。 您可以建立巢狀群組、獨立的相鄰群組或遞迴群組。 您可以在群組定義中加入多個群組運算式，藉以篩選與排序群組資料，並輕鬆地結合群組。  
@@ -127,51 +127,51 @@ ms.locfileid: "66104745"
   
 
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>How To 主題  
  本節列出向您逐步示範如何在報表中使用資料表、矩陣和清單；如何顯示資料列和資料行中的資料、加入和刪除資料行、合併資料格，以及加入資料列和資料行群組之小計的程序。  
   
--   [新增 &#40;報表產生器和 SSRS&#41;的詳細資料群組](add-a-details-group-report-builder-and-ssrs.md)  
+-   [加入詳細資料群組 &#40;報表產生器及 SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [將總計新增至群組或 Tablix 資料區 &#40;報表產生器和 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [將總計新增至群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [&#40;報表產生器和 SSRS 中變更資料格內的專案&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [變更資料格內的項目 &#40;報表產生器及 SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
 -   [變更資料列高度或資料行寬度 &#40;報表產生器及 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
 -   [插入或刪除資料行 &#40;報表產生器及 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [插入或刪除資料列 &#40;報表產生器和 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [插入或刪除資料列 &#40;報表產生器及 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [在資料區域中合併資料格 &#40;報表產生器和 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [在資料區中合併資料格 &#40;報表產生器及 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [建立遞迴階層群組 &#40;報表產生器和 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [在資料區域中新增或刪除群組 &#40;報表產生器和 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
 -   [與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [建立 &#40;報表產生器和 SSRS&#41;的分級報表](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [建立階梯狀報表 &#40;報表產生器及 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [加入、移動或刪除資料表、矩陣或清單 &#40;報表產生器和 SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [加入、移動或刪除資料表、矩陣或清單 &#40;報表產生器及 SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>本節內容  
  下列主題提供有關使用 Tablix 資料區的其他資訊。  
   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  說明與 Tablix 資料區相關的主要概念，例如 Tablix 的區域、詳細資料和群組資料、資料行和資料列群組，以及靜態與動態資料列和資料行。  
   
- [將資料加入至 Tablix 資料區 &#40;報表產生器和 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [將資料加入至 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  提供有關將詳細資料和群組資料、小計和總計，以及標籤加入至 Tablix 資料區的詳細資訊。  
   
  [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  描述 Tablix 資料區的屬性，您可以修改這些屬性來變更您在報表中檢視時 Tablix 資料區顯示的方式。  
   
- [控制 &#40;報表產生器和 SSRS 的資料列和資料行標題&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [控制資料列和資料行標題 &#40;報表產生器及 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  描述資料表、矩陣或清單資料區以水平或垂直方式跨越多個頁面時，如何控制資料列和資料行標題。  
   
- [&#40;報表產生器和 SSRS 建立遞迴階層群組&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  描述如何顯示父系和子系之關聯性由資料集中之欄位表示的遞迴資料。  
   
  [了解群組 &#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
@@ -180,13 +180,13 @@ ms.locfileid: "66104745"
 
   
 ## <a name="see-also"></a>另請參閱  
- [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [新增資料集篩選、資料區域篩選和群組篩選 &#40;報表產生器和 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [&#40;報表產生器和 SSRS 的嵌套資料區域&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [將多個資料區域連結至相同的資料集 &#40;報表產生器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [篩選、分組和排序資料 &#40;報表產生器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

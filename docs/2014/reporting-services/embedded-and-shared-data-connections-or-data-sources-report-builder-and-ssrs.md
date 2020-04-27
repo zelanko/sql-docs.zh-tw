@@ -15,18 +15,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109266"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>內嵌和共用資料連接或資料來源 (報表產生器及 SSRS)
   查詢執行或處理報表時，報表會使用資料連接擷取報表的資料。 您可以從內建的資料連接類型清單，選擇連接到關聯式資料庫、多維度資料庫、Web 服務或其他資料來源的類型。 下列項目可在描述資料連接時使用。  
   
--   **資料連線。** 也稱為 *資料來源*。 資料連接包括相依於連接類型的名稱和連接屬性。 依預設，資料連接不包括認證。 資料連接不會指定要從外部資料來源擷取的資料。 若要執行這項操作，您可以在建立資料集時指定查詢。  
+-   **資料連接。** 也稱為 *資料來源*。 資料連接包括相依於連接類型的名稱和連接屬性。 依預設，資料連接不包括認證。 資料連接不會指定要從外部資料來源擷取的資料。 若要執行這項操作，您可以在建立資料集時指定查詢。  
   
--   **資料來源定義。** 包含報表資料來源之 XML 表示的檔案。 報表發行時，其資料來源會儲存到報表伺服器或 SharePoint 網站上做為資料來源定義，與報表定義分開。 例如，報表伺服器管理員可能會更新連接字串或認證。 在原生報表伺服器上，檔案類型為 .rds。 在 SharePoint 網站上，檔案類型為 .rsds。  
+-   **共用資料來源定義。** 包含報表資料來源之 XML 表示的檔案。 報表發行時，其資料來源會儲存到報表伺服器或 SharePoint 網站上做為資料來源定義，與報表定義分開。 例如，報表伺服器管理員可能會更新連接字串或認證。 在原生報表伺服器上，檔案類型為 .rds。 在 SharePoint 網站上，檔案類型為 .rsds。  
   
 -   **連接字串。** 連接字串是連接到資料來源時所需之連接屬性的字串版本。 連接屬性會依資料連接類型而有所不同。 如需範例，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)＞。  
   
@@ -53,10 +53,10 @@ ms.locfileid: "66109266"
 ## <a name="embedded-data-sources"></a>內嵌資料來源  
  內嵌資料來源是儲存在報表定義中的資料連接。 內嵌資料來源連接資訊只能用於內嵌該資訊的報表中。 若要定義和管理內嵌資料來源，請使用 **[資料來源屬性]** 對話方塊。  
   
-##  <a name="Comparing"></a>比較內嵌和共用資料來源  
+##  <a name="comparing-embedded-and-shared-data-sources"></a><a name="Comparing"></a>比較內嵌和共用資料來源  
  下表摘要列出內嵌與共用資料來源之間的差異：  
   
-|描述|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
+|描述|內嵌<br /><br /> 資料來源|Shared<br /><br /> 資料來源|  
 |-----------------|------------------------------|----------------------------|  
 |資料連接會內嵌在報表定義中。|![可用](media/greencheck.gif "可用")||  
 |報表伺服器上資料連接的指標會內嵌在報表定義中。||![可用](media/greencheck.gif "可用")|  
@@ -72,6 +72,6 @@ ms.locfileid: "66109266"
  [報表撰寫概念 &#40;報表產生器和 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Reporting Services &#40;SSRS 支援的資料來源&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [加入及驗證資料連線或資料來源 &#40;報表產生器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [內嵌和共用資料集 &#40;報表產生器和 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

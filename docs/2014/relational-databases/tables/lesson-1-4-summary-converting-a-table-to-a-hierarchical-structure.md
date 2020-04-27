@@ -13,14 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110125"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>摘要：將資料表轉換為階層式結構
-  
   `hierarchyid` 資料類型可以用簡單、精簡的格式，儲存階層式關聯性。 適當的索引可以按照階層的層級、階層的子樹，或傳統的單一查閱，有效傳回資料。  
   
  在本課程中，您使用其中兩個階層式方法。 下一課將會示範如何使用其他方法查詢與操作階層式資料。  

@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106100"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66106100"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> 變更地圖的選項  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> 變更地圖的選項  
  在地圖報表項目上，您可以控制下列項目：  
   
 -   加入多個標題。  
@@ -73,7 +73,7 @@ ms.locfileid: "66106100"
   
  
   
-##  <a name="Viewport"></a> 變更檢視區的選項  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> 變更檢視區的選項  
  使用檢視區選項來變更出現在報表中之地圖的檢視。  
   
  空間資料來源所提供的區域可能會比您需要在報表中顯示的空間還多。 您可以使用檢視區設定置中、縮放層級，以及裁剪地圖的區域。  
@@ -94,7 +94,7 @@ ms.locfileid: "66106100"
   
 
   
-##  <a name="Legends"></a> 變更圖例的選項  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> 變更圖例的選項  
  圖例可協助使用者解譯地圖上的資料。  
   
  根據預設，您為圖層指定的所有規則都會將項目加入至第一個圖例中。 此外，所有色彩規則都會顯示色階中的值。  
@@ -107,7 +107,7 @@ ms.locfileid: "66106100"
   
 
   
-##  <a name="Layer"></a> 變更圖層的選項  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> 變更圖層的選項  
  若要顯示地圖的圖層，按一下該地圖來選取它。 [地圖] 窗格隨即出現。 若要變更圖層的選項，以滑鼠右鍵按一下圖層，然後使用快速鍵功能表。  
   
  根據空間資料來源傳回的空間資料，圖層可以是以下三個類型之一：多邊形圖層、線條圖層與點圖層。  
@@ -124,7 +124,7 @@ ms.locfileid: "66106100"
   
  如需圖層的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
-##  <a name="DataGrouping"></a> 變更圖層的資料群組  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> 變更圖層的資料群組  
  您可以自訂形狀空間資料的彙總方式。 若要設定圖層的群組屬性，請選取 [地圖] 窗格中的圖層，在圖層的 [屬性] 窗格中按一下 [群組]  ，然後按一下省略符號 (...) 開啟 [群組屬性]。 在這個對話方塊中，您可以指定群組運算式、建立群組變數，以及篩選用於群組的資料。  
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
@@ -133,7 +133,7 @@ ms.locfileid: "66106100"
   
  
   
-##  <a name="MapElements"></a> 變更圖層上地圖元素的選項  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> 變更圖層上地圖元素的選項  
  在以空間資料為基礎的圖層上，地圖元素為點、線條或多邊形。 您可以為地圖元素設定下列選項。 不會是否內嵌地圖元素，這些選項都會套用到圖層上的所有地圖元素：  
   
 -   標籤、標籤可見性、標籤位移與格式。  
@@ -150,7 +150,7 @@ ms.locfileid: "66106100"
   
 
   
-##  <a name="Precedence"></a> 了解顯示選項優先順序  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> 了解顯示選項優先順序  
  當您想要控制地圖圖層上點、線條或多邊形的顯示外觀時，您必須了解可以設定顯示選項的位置，以及哪些選項擁有較高的優先順序。 下列顯示選項會從最低到最高依序列出。 此清單中優先順序較高的顯示選項會覆寫優先順序較低的選項：  
   
 -   圖層選項。  

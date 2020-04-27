@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110031"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中啟用報表伺服器和 Power View 整合功能
@@ -32,37 +32,37 @@ ms.locfileid: "66110031"
   
 -   [若要啟用報表伺服器和 Power View 整合網站集合功能：](#bkmk_features)  
   
--   [若要啟用或停用 Reporting Services 管理中心網站集合功能：](#bkmk_centraladmin)  
+-   [若要啟用或停用 Reporting Services 管理中心的網站集合功能：](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>若要啟用報表伺服器和 Power View 整合網站集合功能：  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>若要啟用報表伺服器和 Power View 整合網站集合功能：  
   
 1.  開啟瀏覽器，移至您想要啟用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的網站。  
   
-2.  按一下 **[網站動作]**。  
+2.  按一下 **[網站動作]** 。  
   
-3.  按一下 **[站台設定]**。  
+3.  按一下 **[站台設定]** 。  
   
 4.  在網站集合管理群組中，按一下 **[網站集合功能]** 。  
   
 5.  在清單中尋找 **[報表伺服器整合功能]** 或 **[Power View 整合功能]** 。  
   
-6.  按一下 [啟用]  。  
+6.  按一下 [啟動]****。  
   
  若要停用功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]**。  
   
-##  <a name="bkmk_centraladmin"></a>若要啟用或停用 Reporting Services 管理中心網站集合功能：  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>若要啟用或停用 Reporting Services 管理中心網站集合功能：  
   
 1.  開啟瀏覽器，並移至 SharePoint 管理中心。  
   
-2.  按一下 **[網站動作]**。  
+2.  按一下 **[網站動作]** 。  
   
-3.  按一下 **[站台設定]**。  
+3.  按一下 **[站台設定]** 。  
   
 4.  在網站集合管理群組中，按一下 **[網站集合功能]** 。  
   
 5.  在清單中尋找 **[報表伺服器管理中心功能]** 。  
   
-6.  按一下 [啟用]  。  
+6.  按一下 [啟動]****。  
   
  若要停用此功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]**。  
   

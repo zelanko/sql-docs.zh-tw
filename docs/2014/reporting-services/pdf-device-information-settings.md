@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36def4705f6b2be9d5e1828f920ae41a51477272
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108091"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 裝置資訊設定
@@ -37,12 +37,11 @@ ms.locfileid: "66108091"
 |**MarginTop**|為報表所設定的上邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  
 |**PageHeight**|為報表所設定的頁面高度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，11in)。 這個值會覆寫報表的原始設定。|  
 |**PageWidth**|為報表所設定的頁面寬度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，8.5in)。 這個值會覆寫報表的原始設定。|  
-|`StartPage`|要轉譯之報表的第一頁。 
-  `0` 的值表示轉譯所有頁面。 預設值是 `1`。|  
+|`StartPage`|要轉譯之報表的第一頁。 `0` 的值表示轉譯所有頁面。 預設值是 `1`。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將裝置資訊設定傳遞至轉譯延伸模組](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [在 Rsreportserver.config 中自訂轉譯延伸模組參數](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [技術參考 &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

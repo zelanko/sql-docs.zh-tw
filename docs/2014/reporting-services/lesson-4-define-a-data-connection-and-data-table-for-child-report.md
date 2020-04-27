@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108469"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 課：定義子報表的資料連接和資料表
@@ -32,19 +32,19 @@ ms.locfileid: "66108469"
   
 4.  在 [**選擇您的資料連線**] 頁面上，按一下 [**新增連接**]。  
   
-5.  在 [新增連線]  對話方塊中，執行下列步驟：  
+5.  在 [新增連線]**** 對話方塊中，執行下列步驟：  
   
     1.  在 [**伺服器名稱**] 方塊中，輸入**AdventureWorks2008**資料庫所在的伺服器。  
   
          預設的 SQL Server Express 執行個體為 **(local)\sqlexpress**。  
   
-    2.  在 [登入伺服器]  區段中，選取提供資料存取的選項。 [使用 Windows 驗證]  是預設值。  
+    2.  在 [登入伺服器]**** 區段中，選取提供資料存取的選項。 [使用 Windows 驗證]**** 是預設值。  
   
     3.  從 [**選取或輸入資料庫名稱**] 下拉式清單中，按一下 [ **AdventureWorks2008**]。  
   
     4.  按一下 [確定]****，然後按 [下一步]****。  
   
-6.  如果您已在步驟 5 (b) 中選取 [使用 SQL Server 驗證]  ，請選取在字串中包含機密資料或在應用程式程式碼中設定資訊的選項。  
+6.  如果您已在步驟 5 (b) 中選取 [使用 SQL Server 驗證]****，請選取在字串中包含機密資料或在應用程式程式碼中設定資訊的選項。  
   
 7.  在 [將**連接字串儲存到應用程式佈建檔**] 頁面上，輸入連接字串的名稱或接受預設**AdventureWorks2008ConnectionString**。 按 [下一步]  。  
   

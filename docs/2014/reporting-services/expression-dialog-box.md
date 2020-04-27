@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109203"
 ---
 # <a name="expression-dialog-box"></a>運算式對話方塊
@@ -53,7 +53,7 @@ ms.locfileid: "66109203"
  **欄位（** _ \<選取的資料集>_ **）**  
  顯示在 [資料集] 類別目錄中所選取之資料集的欄位清單。 按兩下欄位，即可將欄位複製至 [運算式]**** 方塊。  
   
- **Vsam**  
+ **資料集**  
  提供可用資料集的清單，並顯示做為資料集之成員的欄位。  
   
  **變數**  
@@ -65,7 +65,7 @@ ms.locfileid: "66109203"
  **一般功能**  
  顯示一般函數，依類型分組。 當您在 [項目] 窗格中選取函數時，描述及範例就會顯示。  
   
- 一般函數包含內建報表和彙總函式、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 執行階段程式庫函數，以及 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 和 <xref:System.Math> 命名空間中的 <xref:System.Convert> Common Language Runtime (CLR) 類別。 您也可以加入未出現在類別目錄清單中的 CLR 類別以及外部組件的參考。 如需詳細資訊，請參閱 [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 一般函數包含內建報表和彙總函式、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 執行階段程式庫函數，以及 <xref:System.Math> 和 <xref:System.Convert> 命名空間中的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 類別。 您也可以加入未出現在類別目錄清單中的 CLR 類別以及外部組件的參考。 如需詳細資訊，請參閱 [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ## <a name="options"></a>選項。  
  程式碼視窗  
@@ -77,10 +77,10 @@ ms.locfileid: "66109203"
   
  輸入函數名稱且在後面加上左括號時，您會看到工具提示提供有關參數和函數傳回值的資訊。  
   
- **類別目錄**  
+ **類別**  
  顯示運算式的類別目錄。 選擇類別目錄會為運算式的建立奠立內容，並會變更 [項目] 窗格中的有效值清單。 例如，針對文字方塊值的運算式，展開 [一般函數]，然後選取 [彙總函式]， `Avg`以`Count`顯示、和 [**專案**] 窗格中的其他函數。  
   
- **Item**  
+ **項目**  
  顯示所選取類別目錄的有效值清單。 請在項目上按兩下，以在程式碼視窗中的插入點加入這個項目的運算式文字。  
   
  **值**  
@@ -89,13 +89,13 @@ ms.locfileid: "66109203"
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [參數集合參考 &#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [群組運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [運算式用於報表 &#40;報表產生器和 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [將數位和日期格式化 &#40;報表產生器和 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [參數集合參考 &#40;報表產生器和 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [群組運算式範例 &#40;報表產生器和 SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [篩選方程式範例 &#40;報表產生器和 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
- [&#40;報表產生器和 SSRS 新增運算式&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
+ [運算式中的資料類型 &#40;報表產生器和 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [運算式中的內建集合 &#40;報表產生器和 SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [加入運算式 &#40;報表產生器及 SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

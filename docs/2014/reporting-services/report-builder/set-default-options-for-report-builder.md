@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107620"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>報表產生器選項對話方塊、設定 (報表產生器)
@@ -34,10 +34,10 @@ ms.locfileid: "66107620"
  您不需要重新啟動報表產生器，這項設定也會生效。  
   
  **顯示下列數量之最近使用的網站和伺服器**  
- 指定要顯示在 [開啟報表]  和 [另存為報表]  對話方塊中的最近使用之網站和連接的數目。  
+ 指定要顯示在 [開啟報表]**** 和 [另存為報表]**** 對話方塊中的最近使用之網站和連接的數目。  
   
  **顯示下列數量之最近使用的共用資料集和資料來源連接**  
- 指定要顯示在 [資料集屬性]  對話方塊和資料區域精靈之 [選擇與資料來源的連接]  頁面中的最近使用之共用資料集和資料來源連接的數目。  
+ 指定要顯示在 [資料集屬性]**** 對話方塊和資料區域精靈之 [選擇與資料來源的連接]**** 頁面中的最近使用之共用資料集和資料來源連接的數目。  
   
  **顯示下列數量之最近使用的文件**  
  指定要在您按一下 [報表產生器] 按鈕時顯示的最近使用之文件的數目。  
@@ -46,6 +46,6 @@ ms.locfileid: "66107620"
  清除最近使用之網站和伺服器、共用資料集和共用資料來源連接以及文件的目前清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

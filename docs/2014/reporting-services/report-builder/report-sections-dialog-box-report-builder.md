@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107666"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>報表區段對話方塊 (報表產生器)
@@ -29,6 +29,6 @@ ms.locfileid: "66107666"
  按一下 [確定]**** 繼續。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10fcb605ba6040c6d2a44c562af81c658ee26514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109170"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]包含數個工具和應用程式，可讓您用來建立、管理和查看報表。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
   
  若要在工具或應用程式執行時存取使用者介面主題，請在開啟對話方塊、網頁或精靈之後，按下 F1 或是按一下 **[說明]** 。 如需啟動 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 工具的詳細資訊，請參閱[教學課程：如何尋找及啟動 Reporting Services 工具 &#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
   
@@ -44,10 +44,10 @@ ms.locfileid: "66109170"
  提供用於在網頁瀏覽器中檢視報表之 HTML 檢視器元件的說明。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 概念 &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
+ [Reporting Services SSRS &#40;的概念&#41;](reporting-services-concepts-ssrs.md)   
  [Reporting Services &#40;SSRS 的報表&#41;](reports/reporting-services-reports-ssrs.md)   
  [將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [使用報表產生器的消費者入門](https://www.microsoft.com/download/en/details.aspx?id=29072)   
- [使用報表產生器1.0 設計和執行報表](https://go.microsoft.com/fwlink/?LinkId=142601)  
+ [使用報表產生器 1.0 來設計和實作報表](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

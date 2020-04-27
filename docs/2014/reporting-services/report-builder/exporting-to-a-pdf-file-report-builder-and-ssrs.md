@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107916"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>匯出至 PDF 檔案 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107916"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> 字型內嵌  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>字型內嵌  
  如果可以的話，PDF 轉譯延伸模組會內嵌在 PDF 檔中顯示報表所需之每個字型的子集。 報表中使用的字型必須安裝在報表伺服器上。 報表伺服器產生 PDF 格式的報表時，會使用以報表參考之字型儲存的資訊，來建立 PDF 檔案中的字元對應。 如果報表伺服器上未安裝參考字型，則產生的 PDF 檔案可能不會包含正確的對應，而且檢視時可能也無法正確地顯示。  
   
  當下列條件成立時，字型會內嵌在 PDF 檔案中：  
@@ -57,25 +57,21 @@ ms.locfileid: "66107916"
   
  內嵌在 PDF 檔案中的字型包含在 Fonts 屬性中，而此屬性則以中繼資料的形式和檔案一起儲存。  
   
-##  <a name="Metadata"></a> 中繼資料  
+##  <a name="metadata"></a><a name="Metadata"></a>中繼資料  
  除了報表配置之外，PDF 轉譯延伸模組也會將下列中繼資料寫入 PDF 文件資訊字典。  
   
 |PDF 屬性|來源|  
 |------------------|------------------|  
-|`Title`|
-  `Name` RDL 元素的 `Report` 屬性。|  
-|`Author`|
-  `Author` RDL 元素。|  
-|`Subject`|
-  `Description` RDL 元素。|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 產品名稱和版本。|  
+|`Title`|`Name` RDL 元素的 `Report` 屬性。|  
+|`Author`|`Author` RDL 元素。|  
+|`Subject`|`Description` RDL 元素。|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 產品名稱和版本。|  
 |`Producer`|轉譯延伸模組名稱與版本。|  
 |`CreationDate`|PDF `datetime` 格式的報表執行時間。|  
   
   
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a>互動性  
  在 PDF 中支援某些互動項目。 下列是特定行為的描述。  
   
 ### <a name="show-and-hide"></a>顯示與隱藏  
@@ -97,7 +93,7 @@ ms.locfileid: "66107916"
   
   
   
-##  <a name="Compression"></a>程度  
+##  <a name="compression"></a><a name="Compression"></a>程度  
  影像壓縮會以影像的原始檔案類型為基礎。 PDF 轉譯延伸模組預設會壓縮 PDF 檔案。  
   
  若要盡可能保留 PDF 檔案隨附的任何壓縮影像，JPEG 影像會儲存為 JPEG，而其他所有影像類型則會儲存為 BMP。  
@@ -107,16 +103,16 @@ ms.locfileid: "66107916"
   
   
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>裝置資訊設定  
  您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱 [PDF Device Information Settings](../pdf-device-information-settings.md)。  
   
   
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;報表產生器和 SSRS 轉譯報表專案&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

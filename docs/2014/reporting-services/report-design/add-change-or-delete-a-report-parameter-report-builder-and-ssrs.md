@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebf333b49c20c7eadef4fdbcd54834c450d274c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106690"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>加入、變更或刪除報表參數 (報表產生器及 SSRS)
@@ -35,19 +35,19 @@ ms.locfileid: "66106690"
   
 4.  在 **[資料類型]** 中，選取參數值的資料類型。  
   
-5.  如果參數可以包含空白值，請選取 **[允許空白值]** 。  
+5.  如果參數可以包含空白值，請選取 **[允許空白值]**。  
   
-6.  如果參數可以包含 Null 值，請選取 **[允許 Null 值]** 。  
+6.  如果參數可以包含 Null 值，請選取 **[允許 Null 值]**。  
   
-7.  若要允許使用者針對參數選取多個值，請選取 **[允許多個值]** 。  
+7.  若要允許使用者針對參數選取多個值，請選取 **[允許多個值]**。  
   
 8.  設定可見性選項。  
   
-    -   若要在報表頂端的工具列上顯示此參數，請選取 **[可見]** 。  
+    -   若要在報表頂端的工具列上顯示此參數，請選取 **[可見]**。  
   
-    -   若要隱藏此參數而不顯示在工具列上，請選取 **[隱藏]** 。  
+    -   若要隱藏此參數而不顯示在工具列上，請選取 **[隱藏]**。  
   
-    -   若要隱藏此參數並且防止任何人在發行報表之後於報表伺服器上修改此參數，請選取 **[內部]** 。 然後，報表參數就只能在報表定義中檢視。 若要使用此選項，您必須設定預設值或允許參數接受 Null 值。  
+    -   若要隱藏此參數並且防止任何人在發行報表之後於報表伺服器上修改此參數，請選取 **[內部]**。 然後，報表參數就只能在報表定義中檢視。 若要使用此選項，您必須設定預設值或允許參數接受 Null 值。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -55,19 +55,19 @@ ms.locfileid: "66106690"
   
 1.  在 **[報表資料]** 窗格中，展開 **[參數]** 節點。  
   
-2.  以滑鼠右鍵按一下報表參數，然後按一下 **[刪除]** 。  
+2.  以滑鼠右鍵按一下報表參數，然後按一下 **[刪除]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [為報表參數加入、變更或刪除可用的值 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
- [為報表參數新增、變更或刪除預設值 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [為報表參數新增、變更或刪除可用的值 &#40;報表產生器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [為報表參數新增、變更或刪除預設值 &#40;報表產生器和 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [變更報表參數 &#40;報表產生器和 SSRS 的順序&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)   
  [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [將串聯參數加入至報表 &#40;報表產生器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數加入至您的報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [教學課程 &#40;報表產生器&#41;](../report-builder-tutorials.md)   
- [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
+ [新增資料集篩選、資料區域篩選和群組篩選 &#40;報表產生器和 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [參數集合參考 &#40;報表產生器和 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [將多值參數加入至報表](add-a-multi-value-parameter-to-a-report.md)  
   
   

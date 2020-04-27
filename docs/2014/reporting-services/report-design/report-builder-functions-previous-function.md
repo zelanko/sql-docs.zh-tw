@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105194"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 函數 (報表產生器及 SSRS)
@@ -41,15 +41,14 @@ Previous(expression, scope)
  傳回 `Variant` 或 `Binary`。  
   
 ## <a name="remarks"></a>備註  
- 
-  `Previous` 函數會在套用過所有的排序和篩選之後，針對在指定範圍內評估的運算式傳回上一個值。  
+ `Previous` 函數會在套用過所有的排序和篩選之後，針對在指定範圍內評估的運算式傳回上一個值。  
   
  如果*expression*未包含匯總， `Previous`函數會預設為報表專案的目前範圍。  
   
  在詳細資料群組中，請使用 `Previous` 來指定上一個詳細資料列執行個體中欄位參考的值。  
   
 > [!NOTE]  
->  `Previous`函數只支援詳細資料群組中的欄位參考。 例如，在詳細資料群組的文字方塊中， `=Previous(Fields!Quantity.Value)` 會從上一個資料列傳回 `Quantity` 欄位的資料。 在第一個資料列中，這個運算式會傳回 Null (在 `Nothing` 中為 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。  
+>  `Previous`函數只支援詳細資料群組中的欄位參考。 例如，在詳細資料群組的文字方塊中， `=Previous(Fields!Quantity.Value)` 會從上一個資料列傳回 `Quantity` 欄位的資料。 在第一個資料列中，這個運算式會傳回 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)。  
   
  如果*expression*包含使用預設範圍的彙總函式， `Previous`則會匯總在彙總函式呼叫所指定之範圍的先前實例內的資料。  
   

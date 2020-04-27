@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109445"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>資料來源屬性對話方塊、認證
@@ -47,7 +47,7 @@ ms.locfileid: "66109445"
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源屬性對話方塊、一般](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
- [指定報表資料來源的認證和連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

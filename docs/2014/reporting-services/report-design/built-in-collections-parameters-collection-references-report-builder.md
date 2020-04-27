@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c3c9452a9be55c71431a0ed3012769b1f5f6d8eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106406"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>參數集合參考 (報表產生器及 SSRS)
@@ -27,31 +27,31 @@ ms.locfileid: "66106406"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Single"></a>在運算式中使用單一值參數  
+##  <a name="using-a-single-valued-parameter-in-an-expression"></a><a name="Single"></a> 在運算式中使用單一值參數  
  下表顯示當您在運算式中加入任何資料類型之單一值參數的參考時，所要使用的語法範例。  
   
 |範例|描述|  
 |-------------|-----------------|  
-|`=Parameters!`* \<ParameterName>*`.IsMultiValue`|傳回 `False`。<br /><br /> 檢查參數是否為多重值。 如果為 `True`，表示參數為多重值，且為物件的集合。 如果為 `False`，表示參數為單一值，且為單一物件。|  
-|`=Parameters!`* \<ParameterName>*`.Count`|傳回整數值 1。 如果是單一值參數，此計數一定會是 1。|  
-|`=Parameters!`* \<ParameterName>*`.Label`|會傳回參數標籤，經常當做可用值下拉式清單中的顯示名稱。|  
-|`=Parameters!`* \<ParameterName>*`.Value`|會傳回參數值。 如果尚未設定 Label 屬性，這個值會出現在可用值下拉式清單中。|  
-|`=CStr(Parameters!`  * \<ParameterName>*`.Value)`|會傳回字串形式的參數值。|  
-|`=Fields(Parameters!`* \<ParameterName>*`.Value).Value`|會傳回與參數同名之欄位的值。|  
+|`=Parameters!` *參數名稱>\<* `.IsMultiValue`|傳回 `False`。<br /><br /> 檢查參數是否為多重值。 如果為 `True`，表示參數為多重值，且為物件的集合。 如果為 `False`，表示參數為單一值，且為單一物件。|  
+|`=Parameters!` *參數名稱>\<* `.Count`|傳回整數值 1。 如果是單一值參數，此計數一定會是 1。|  
+|`=Parameters!` *參數名稱>\<* `.Label`|會傳回參數標籤，經常當做可用值下拉式清單中的顯示名稱。|  
+|`=Parameters!` *參數名稱>\<* `.Value`|會傳回參數值。 如果尚未設定 Label 屬性，這個值會出現在可用值下拉式清單中。|  
+|`=CStr(Parameters!` *參數名稱>\<* `.Value)`|會傳回字串形式的參數值。|  
+|`=Fields(Parameters!` *參數名稱>\<* `.Value).Value`|會傳回與參數同名之欄位的值。|  
   
  如需在篩選中使用參數的詳細資訊，請參閱[新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
-##  <a name="Multi"></a>在運算式中使用多重值參數  
+##  <a name="using-a-multivalue-parameter-in-an-expression"></a><a name="Multi"></a> 在運算式中使用多重值參數  
  下表顯示當您在運算式中加入任何資料類型之多重值參數的參考時，所要使用的語法範例。  
   
 |範例|描述|  
 |-------------|-----------------|  
-|`=Parameters!`* \<MultivalueParameterName>*`.IsMultiValue`|傳回 `True` 或 `False`。<br /><br /> 檢查參數是否為多重值。 如果為 `True`，表示參數為多重值，且為物件的集合。 如果為 `False`，表示參數為單一值，且為單一物件。|  
-|`=Parameters!`* \<MultivalueParameterName>*`.Count`|傳回整數值。<br /><br /> 參考值的數目。 如果是單一值參數，此計數一定會是 1。 如果是多重值參數，此計數是 0 或以上。|  
-|`=Parameters!`* \<MultivalueParameterName>*`.Value(0)`|傳回多重值參數中的第一個值。|  
-|`=Parameters!``.Value(Parameters!` * \<MultivalueParameterName* *>\<MultivalueParameterName>*`.Count-1)`|傳回多重值參數中的最後一個值。|  
+|`=Parameters!` *多值參數名稱>\<* `.IsMultiValue`|傳回 `True` 或 `False`。<br /><br /> 檢查參數是否為多重值。 如果為 `True`，表示參數為多重值，且為物件的集合。 如果為 `False`，表示參數為單一值，且為單一物件。|  
+|`=Parameters!` *多值參數名稱>\<* `.Count`|傳回整數值。<br /><br /> 參考值的數目。 如果是單一值參數，此計數一定會是 1。 如果是多重值參數，此計數是 0 或以上。|  
+|`=Parameters!` *多值參數名稱>\<* `.Value(0)`|傳回多重值參數中的第一個值。|  
+|`=Parameters!` *多值參數名稱>\<* `.Value(Parameters!` *多值參數名稱>\<* `.Count-1)`|傳回多重值參數中的最後一個值。|  
 |`=Split("Value1,Value2,Value3",",")`|傳回數值的陣列。<br /><br /> 針對多重值的 `String` 參數建立數值陣列。 您可以在第二個參數中使用任何分隔符號來分隔。 這個運算式可用來設定多重值參數的預設值或是建立多重值參數，以傳送至子報表或鑽研報表。|  
-|`=Join(Parameters!`* \<MultivalueParameterName>*`.Value,", ")`|傳回 `String`，此值是由多重值參數中以逗號分隔的值清單所組成。 您可以在第二個參數中使用任何分隔符號來聯結。|  
+|`=Join(Parameters!` *多值參數名稱>\<* `.Value,", ")`|傳回 `String`，此值是由多重值參數中以逗號分隔的值清單所組成。 您可以在第二個參數中使用任何分隔符號來聯結。|  
   
  如需在篩選中使用參數的詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)。  
   

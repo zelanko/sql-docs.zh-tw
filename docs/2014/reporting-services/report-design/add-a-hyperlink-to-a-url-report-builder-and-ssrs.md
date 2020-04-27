@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106820"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66106820"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 您也可以在您和您的使用者有權使用報表伺服器之 URL 要求進行檢視的任何報表伺服器上指定報表的 URL。 例如，您可以指定報表，並在使用者最初檢視報表時為他們隱藏文件引導模式。 如需詳細資訊，請參閱《[ 線上叢書》中 ](../url-access-ssrs.md)Reporting Services 文件集[的 ](https://go.microsoft.com/fwlink/?linkid=121312)URL 存取 &#40;SSRS&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 您也可以在您和您的使用者有權使用報表伺服器之 URL 要求進行檢視的任何報表伺服器上指定報表的 URL。 例如，您可以指定報表，並在使用者最初檢視報表時為他們隱藏文件引導模式。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312)的 [URL 存取 &#40;SSRS&#41;](../url-access-ssrs.md)。  
   
  您可以將 URL 的超連結加入到具有 **[動作]** 屬性的任何項目，例如報表中的文字方塊、影像或導出數列。 當使用者按一下該報表項目時，就會發生您定義的動作。 如需詳細資訊，請參閱[動作屬性對話方塊 &#40;報表產生器及 SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) 和[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106820"
 7.  若要測試連結，請按一下 **[執行]** 預覽報表，然後按一下這個連結設定所在的報表項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [互動式排序、檔引導模式及 &#40;報表產生器和 SSRS 的連結&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [建立文件引導模式 &#40;報表產生器及 SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
   
   

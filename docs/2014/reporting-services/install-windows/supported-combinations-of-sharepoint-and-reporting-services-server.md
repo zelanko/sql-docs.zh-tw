@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f0997cb73a156e54b22ad280fa5d6eb0ec7d73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108645"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>支援的 SharePoint 和 Reporting Services 伺服器與增益集 (SQL Server 2014) 的組合
@@ -48,13 +48,9 @@ ms.locfileid: "66108645"
 |6|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|是|  
 |7|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2010|是|  
 |8|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|SharePoint 2010|是|  
-|9|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|是|  
-|10|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]R2、windows|SharePoint 2010|是|  
-|11|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|是|  
+|9|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|是|  
+|10|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] R2|SharePoint 2010|是|  
+|11|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|是|  
   
  如需有關[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能和報表伺服器模式的詳細資訊，請參閱[Reporting Services 報表伺服器](../reporting-services-report-server.md)。  
   
@@ -66,7 +62,7 @@ ms.locfileid: "66108645"
   
 -   SQL Server 2012 (或更新版本) 報表伺服器不支援 SQL Server 2008 R2 增益集。 SharePoint 2010 必要條件安裝程式會自動安裝 SQL Server 2008 R2 增益集。 在安裝較新版本的增益集之前必須先解除安裝。 不支援就地升級增益集。  
   
--   **升級：** 已安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集的 sharepoint 2010 無法就地升級至 SharePoint 2013。 SharePoint 2013 需要 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集與報表伺服器。 如需升級的詳細資訊，請參閱 [升級和移轉 Reporting Services](upgrade-and-migrate-reporting-services.md)。  
+-   **升級：** 已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的 SharePoint 2010 無法就地升級至 SharePoint 2013。 SharePoint 2013 需要 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集與報表伺服器。 如需升級的詳細資訊，請參閱 [升級和移轉 Reporting Services](upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [何處可以找到適用于 SharePoint 產品的 Reporting Services 增益集](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   

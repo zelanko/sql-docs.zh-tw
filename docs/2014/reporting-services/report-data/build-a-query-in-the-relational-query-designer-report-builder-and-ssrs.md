@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107440"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
@@ -65,11 +65,11 @@ ms.locfileid: "66107440"
   
 1.  在關聯式查詢設計工具中，確認您已選取欄位，且欄位出現在 **[選取的欄位]** 窗格中。  
   
-2.  在 [套用的篩選器] 窗格工具列中，按一下 **[加入篩選]**。 新的篩選資料列隨即顯示。  
+2.  在 [套用的篩選器] 窗格工具列中，按一下 **[加入篩選]** 。 新的篩選資料列隨即顯示。  
   
-3.  在 [欄位名稱]**** 中，按一下以顯示欄位的下拉式清單，然後按一下要作為篩選依據的欄位名稱。 例如，若要依數量篩選，請按一下包含項目數的欄位。  
+3.  在 [欄位名稱]  中，按一下以顯示欄位的下拉式清單，然後按一下要作為篩選依據的欄位名稱。 例如，若要依數量篩選，請按一下包含項目數的欄位。  
   
-4.  在 [運算子]**** 中，按一下以顯示運算子的下拉式清單，然後選取要用於篩選的比較運算子。  
+4.  在 [運算子]  中，按一下以顯示運算子的下拉式清單，然後選取要用於篩選的比較運算子。  
   
 5.  在 **[值]** 中，輸入篩選所要依據的值。 例如，若要篩選出超過 100 的數量，請輸入 100。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107440"
   
 ### <a name="to-view-a-query-result-set"></a>若要檢視查詢結果集  
   
-1.  在查詢設計工具工具列上，按一下 [執行查詢 (!)]****。  
+1.  在查詢設計工具工具列上，按一下 [執行查詢 (!)]  。  
   
     > [!NOTE]  
     >  查詢設計工具會使用設計階段認證執行查詢和擷取結果集。 如需詳細資訊，請參閱 [在報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
@@ -92,9 +92,9 @@ ms.locfileid: "66107440"
   
 ## <a name="see-also"></a>另請參閱  
  [將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)   
- [從 &#40;SSRS&#41;的外部資料源加入資料](add-data-from-external-data-sources-ssrs.md)   
+ [從外部資料來源新增資料 &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)   
- [建立共用資料集或內嵌資料集 &#40;報表產生器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [報表設計檢視 &#40;報表產生器&#41;](../report-builder/report-design-view-report-builder.md)   
  [共用資料集設計檢視 &#40;報表產生器&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Reporting Services 查詢設計工具](../reporting-services-query-designers.md)  

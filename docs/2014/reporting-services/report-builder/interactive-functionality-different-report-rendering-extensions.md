@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107803"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同報表轉譯延伸模組的互動式功能 (報表產生器及 SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供互動式報表功能，讓您能夠在執行階段使用報表。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 您可以利用下表來了解每個互動式功能在特定格式中的運作方式。  
   
 > [!NOTE]  
@@ -111,9 +110,9 @@ ms.locfileid: "66107803"
   
 ## <a name="see-also"></a>另請參閱  
  [匯出報表 &#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [矩陣 &#40;報表產生器及 SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [互動式排序、檔引導模式及 &#40;報表產生器和 SSRS 的連結&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;的矩陣](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [報表產生器和 SSRS &#40;資料表、矩陣和清單&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

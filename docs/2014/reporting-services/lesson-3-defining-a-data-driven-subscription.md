@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108511"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
@@ -41,7 +41,7 @@ ms.locfileid: "66108511"
   
 -   [步驟 6 - 為訂閱建立排程](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a>啟動資料驅動訂閱嚮導  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>啟動資料驅動訂閱嚮導  
   
 1.  在報表管理員中，按一下 **[首頁]**，然後導覽至包含 **Sales Orders** 報表的資料夾。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66108511"
   
 3.  按一下 [**新增資料驅動訂閱**]。 如果您沒有看見這個按鈕，表示您沒有「內容管理員」權限。  
   
-##  <a name="bkmk_definesubscription"></a>步驟 1-定義描述  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>步驟 1-定義描述  
   
 1.  在 [描述] 中，輸入 **銷售訂單傳遞** 。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108511"
   
 3.  選取 **[僅為此訂閱指定]**，然後按 **[下一步]**。  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a>步驟 2-定義訂閱者資料來源的連接  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>步驟 2-定義訂閱者資料來源的連接  
   
 1.  選取 **[Microsoft SQL Server]** 做為資料來源類型。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108511"
   
 5.  選取 **[連接到資料來源時做為 Windows 認證]**，再按 **[下一步]**。  
   
-##  <a name="bkmk_definequery"></a>步驟 3-定義用來抓取訂閱者資料的查詢  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>步驟 3-定義用來抓取訂閱者資料的查詢  
   
 1.  在查詢方塊中，輸入下列查詢：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108511"
   
 3.  按一下 **[驗證]**，再按 **[下一步]**。  
   
-##  <a name="bkmk_set_deliveryoptions"></a>步驟 4-設定傳遞選項  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>步驟 4-設定傳遞選項  
   
 1.  針對 **[檔案名稱]**，選取 **[從資料庫取值]**。 選取 **[Order]** 欄位。  
   
@@ -107,13 +107,13 @@ ms.locfileid: "66108511"
   
 7.  針對 **[密碼]**，選取 **[指定靜態值]**。 輸入密碼。 請務必小心輸入密碼。 精靈不會驗證密碼。  
   
-8.  按 [下一步]  。  
+8.  按 **[下一步]**。  
   
-##  <a name="bkmk_configure_parameter"></a>步驟 5-將參數值設定為非常報告的輸出  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>步驟 5-將參數值設定為非常報告的輸出  
   
-1.  針對 **[OrderNumber]**，選取 **[從資料庫取值]**。 在 [值] 中，選取 **[Order]**。 按 [下一步]  。  
+1.  針對 **[OrderNumber]**，選取 **[從資料庫取值]**。 在 [值] 中，選取 **[Order]**。 按 **[下一步]**。  
   
-##  <a name="bkmk_schedule_subscription"></a>步驟 6-排程訂閱  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>步驟 6-排程訂閱  
   
 1.  按一下 **[在為此訂閱建立的排程上]**，然後按 **[下一步]**。  
   
@@ -138,10 +138,10 @@ ms.locfileid: "66108511"
  此步驟是＜定義資料驅動訂閱＞教學課程的總結。 若要深入瞭解其他[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]教學課程，請參閱[Reporting Services &#40;SSRS&#41;的教學](../reporting-services/reporting-services-tutorials-ssrs.md)課程。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SSRS 教學課程建立資料驅動訂閱&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [建立、修改和刪除資料驅動訂閱](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [使用外部資料源做為訂閱者資料 &#40;資料驅動訂閱&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

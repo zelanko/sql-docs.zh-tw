@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105242"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 函數 (報表產生器及 SSRS)
@@ -38,11 +38,9 @@ Level(scope)
  傳回 `Integer`。 如果*scope*指定資料集或資料區域，或指定非遞迴群組（也就是沒有`Parent`元素的群組）， `Level`則會傳回0。 如果省略 *scope* ，則會傳回目前範圍的層級。  
   
 ## <a name="remarks"></a>備註  
- 
-  `Level` 函數傳回的值是以零為基礎；亦即，階層中的第一個層級是 0。  
+ `Level` 函數傳回的值是以零為基礎；亦即，階層中的第一個層級是 0。  
   
- 
-  `Level` 函數可以在遞迴階層 (例如員工清單) 中提供縮排。  
+ `Level` 函數可以在遞迴階層 (例如員工清單) 中提供縮排。  
   
  如需遞迴階層的詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   

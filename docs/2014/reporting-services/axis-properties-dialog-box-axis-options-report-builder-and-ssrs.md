@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109954"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>軸屬性對話方塊、軸選項 (報表產生器及 SSRS)
-  選取 [**水準**] 或 [**垂直軸屬性**] 對話方塊上的 [**軸選項**]，即可定義圖表中指定之軸的外觀。 在舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，圖表預設會顯示 X 軸上的所有標籤。 不過，在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，圖表會略過標籤，以便產生較清晰的圖表影像並避免標籤互相衝突。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
+  選取 [**水準**] 或 [**垂直軸屬性**] 對話方塊上的 [**軸選項**]，即可定義圖表中指定之軸的外觀。 在舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，圖表預設會顯示 X 軸上的所有標籤。 不過，在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，圖表會略過標籤，以便產生較清晰的圖表影像並避免標籤互相衝突。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>選項。  
- **啟用刻度中斷**  
+ **啟用刻度斷層**  
  選擇此選項讓圖表在必要時，繪製刻度斷層。 啟用此選項時，圖表會先自動計算資料集的高低點之間是否有足夠的差距，然後才繪製刻度斷層。  
   
  **相反方向**  
@@ -60,13 +60,13 @@ ms.locfileid: "66109954"
  輸入運算式或選取值，即可在圖表元素和圖表側邊之間加入或移除邊界。 如果此選項設定為 [自動]****，則會加入側邊界。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [指定軸間隔 &#40;報表產生器及 SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [格式化圖表上的軸標籤 &#40;報表產生器和 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [格式化圖表上的數列色彩 &#40;報表產生器和 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [指定報表產生器和 SSRS &#40;的軸間隔&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [將軸標籤格式化為日期或貨幣 &#40;報表產生器和 SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [在次要軸上繪製資料 &#40;報表產生器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [走勢圖和資料橫條 &#40;報表產生器和 SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [在圖表中新增或移除邊界 &#40;報表產生器和 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [加入或移除圖表中的邊界 &#40;報表產生器及 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

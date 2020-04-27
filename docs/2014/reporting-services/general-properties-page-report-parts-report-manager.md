@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109092"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>一般屬性頁面、報表組件 (報表管理員)
@@ -52,13 +52,13 @@ ms.locfileid: "66109092"
  **名稱**  
  輸入名稱以識別報表組件。  
   
- **說明**  
+ **描述**  
  提供有關報表組件的資訊。 此描述會出現在報表管理員的 [內容] 頁面上。 當使用者從報表撰寫工具搜尋報表組件時，可搜尋描述文字。  
   
  **在清單檢視中隱藏**  
  選取此選項可以隱藏報表組件，避免在報表管理員中使用清單檢視模式的使用者看見。 清單檢視模式是您瀏覽報表伺服器資料夾階層時的預設檢視格式。 雖然在清單檢視中可以隱藏項目，但在詳細資料檢視中則不行。 如果想要限制項目的存取，您必須建立角色指派。  
   
- **型別**  
+ **類型**  
  報表組件的類型。 唯讀。  
   
  **套用**  
@@ -80,7 +80,7 @@ ms.locfileid: "66109092"
  [管理報表元件](report-design/managing-report-parts.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[內容] 頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [報表組件 &#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [報表元件 &#40;報表產生器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [報表產生器中的報表組件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)  
   

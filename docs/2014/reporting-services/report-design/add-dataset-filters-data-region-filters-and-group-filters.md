@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106624"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>新增資料集篩選、資料區篩選和群組篩選 (報表產生器及 SSRS)
@@ -27,12 +27,12 @@ ms.locfileid: "66106624"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> 選擇要設定篩選的時機  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> 選擇要設定篩選的時機  
  當您無法篩選來源的資料時，請指定報表項目的篩選。 例如，當資料來源不支援查詢參數、您必須執行預存程序但無法修改查詢，或者參數化報表快照集會針對不同的使用者顯示自訂資料時，請使用報表篩選。  
   
  您可以在擷取報表資料集之前或之後來篩選報表資料。 若要在擷取資料之前進行篩選，請針對每個資料集變更查詢。 當您篩選查詢中的資料時，您會篩選資料來源中的資料，這樣會減少在報表中擷取及處理所需的資料量。 若要在擷取資料之後進行篩選，請在報表中建立篩選運算式。 您可以為資料集、資料區或群組 (包括詳細資料群組) 設定篩選運算式。 您也可以在篩選運算式中包含參數，提供一個方式來為特定值或特定使用者篩選資料，例如，篩選可識別檢視報表之使用者的值。  
   
-##  <a name="Where"></a> 選擇要設定篩選的位置  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> 選擇要設定篩選的位置  
  依據您想要在報表中達成的效果，判斷要設定篩選的位置。 在執行階段，報表處理器會按照下列順序套用篩選：套用至資料集、套用至資料區，然後由上而下套用至每個群組階層中的群組。 在資料表、矩陣和清單上，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表上，系統會針對類別目錄群組和數列群組獨立套用篩選。 當報表處理器套用篩選時，系統就會按照在每個報表項目之 [屬性]  對話方塊的 [篩選]  頁面上定義的順序套用所有篩選方程式，而這就相當於使用布林值 AND 作業來結合這些篩選方程式。  
   
  下列清單會比較針對不同報表項目設定篩選的效果：  
@@ -47,14 +47,14 @@ ms.locfileid: "66106624"
   
 -   **圖表資料區中的數列或類別目錄群組：** 當您想要針對群組運算式包含或排除特定值來控制要在圖表中顯示哪些值時，請設定數列或類別目錄群組的篩選。  
   
-##  <a name="FilterEquations"></a>瞭解篩選方程式  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a>瞭解篩選方程式  
  在執行階段，報表處理器會將值轉換成指定的資料類型，然後使用指定的運算子來比較運算式和值。 下列清單將描述篩選方程式的每個部分：  
   
--   **運算式**定義您要篩選的內容。 一般而言，這是資料集欄位。  
+-   **運算式** ：定義您要篩選的項目。 一般而言，這是資料集欄位。  
   
--   **資料類型**指定當報表處理器在執行時間評估篩選方程式時，所要使用的資料類型。 您所選取的資料類型必須是報表定義結構描述所支援的其中一種資料類型。  
+-   **資料類型** ：指定報表處理器在執行階段評估篩選方程式時要使用的資料類型。 您所選取的資料類型必須是報表定義結構描述所支援的其中一種資料類型。  
   
--   **運算子**定義如何比較篩選方程式的兩個部分。  
+-   **運算子** ：定義如何比較篩選方程式的兩個部分。  
   
 -   `Value`定義要在比較中使用的運算式。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106624"
 ### <a name="data-type"></a>資料類型  
  若要讓報表處理器比較兩個值，其資料類型必須相同。 下表將列出 CLR 資料類型與報表定義資料類型之間的對應。 您從資料來源中擷取的資料可能會在它是報表資料時轉換成不同的資料類型。  
   
-|**報表定義架構資料類型**|**CLR 類型**|  
+|**報表定義結構描述資料類型**|**CLR 類型**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`, `DateTimeOffset`|  
@@ -81,10 +81,10 @@ ms.locfileid: "66106624"
   
 |運算子|動作|  
 |--------------|------------|  
-|**等於、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|比較運算式與單一值。|  
+|**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|比較運算式與單一值。|  
 |**TopN、BottomN**|比較運算式與單一 `Integer` 值。|  
 |**TopPercent、BottomPercent**|比較運算式與單一 `Integer` 或 `Float` 值。|  
-|**介於**|測試運算式是否位於 (包含) 兩個值之間。|  
+|**兩**|測試運算式是否位於 (包含) 兩個值之間。|  
 |**在**|測試運算式是否包含在一組值之中。|  
   
 ### <a name="value"></a>值  
@@ -95,7 +95,7 @@ ms.locfileid: "66106624"
  這個值也可以包含參數參考，以便允許使用者以互動方式選取要篩選的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [運算式用於報表 &#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

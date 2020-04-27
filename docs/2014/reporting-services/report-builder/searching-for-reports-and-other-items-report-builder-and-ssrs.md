@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107644"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜尋報表和其他項目 (報表產生器及 SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66107644"
 ## <a name="see-also"></a>另請參閱  
  [在報表管理員 &#40;報表產生器和 SSRS 中尋找及查看報表&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
  [使用我的報表 &#40;報表產生器和 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [開啟並關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)  
+ [尋找、查看和管理報表 &#40;報表產生器和 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [開啟及關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)  
   
   

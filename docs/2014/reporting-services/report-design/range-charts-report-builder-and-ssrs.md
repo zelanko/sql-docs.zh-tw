@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105395"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範圍圖表 (報表產生器及 SSRS)
@@ -22,18 +22,18 @@ ms.locfileid: "66105395"
   
  下圖顯示的是包含三個數列的一般範圍圖表。  
   
- ![範圍圖表](../media/rs-rangechart.gif "範圍圖表")  
+ ![範圍圖](../media/rs-rangechart.gif "範圍圖")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="variations"></a>變化  
   
--   **平滑範圍**。 平滑範圍圖表會顯示曲線而不是直線。  
+-   **平滑範圍圖表**： 平滑範圍圖表會顯示曲線而不是直線。  
   
--   資料**行範圍**。 資料行範圍圖表會使用資料行 (而非區域) 來顯示範圍。  
+-   **資料行範圍**： 資料行範圍圖表會使用資料行 (而非區域) 來顯示範圍。  
   
--   **橫條圖範圍**。 橫條範圍圖表會使用橫條 (而非區域) 來顯示範圍。  
+-   **橫條範圍**： 橫條範圍圖表會使用橫條 (而非區域) 來顯示範圍。  
   
 ## <a name="data-considerations-for-range-charts"></a>範圍圖表的資料考量  
   

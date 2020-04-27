@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109175"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>將報表匯出為其他檔案類型 (報表產生器及 SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66109175"
   
 4.  選取要使用的格式。  
   
-5.  按一下 [匯出]****。  
+5.  按一下 [匯出]  。  
   
      此時會出現一個訊息，詢問您要開啟還是儲存檔案。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66109175"
   
      使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]**，系統會提示您儲存報表的位置。  
   
-     **注意**如果程式因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找程式來開啟報表。  
+     **注意** ：如果因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找一個程式來開啟該報表。  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>若要在 SharePoint 文件庫中將報表匯出為其他檔案類型  
   
@@ -82,11 +82,11 @@ ms.locfileid: "66109175"
   
      您可以選擇變更匯出之報表的檔案名稱。  
   
-     **注意**如果程式因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找程式來開啟報表。  
+     **注意** ：如果因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找一個程式來開啟該報表。  
   
 ## <a name="see-also"></a>另請參閱  
  [匯出報表 &#40;報表產生器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

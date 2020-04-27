@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107894"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
@@ -23,10 +23,10 @@ ms.locfileid: "66107894"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> 報表項目  
+##  <a name="report-items"></a><a name="ReportItems"></a> 報表項目  
  下表描述報表項目轉譯的方式。  
   
-|Item|轉譯行為|  
+|項目|轉譯行為|  
 |----------|------------------------|  
 |Report|轉譯成 XML 文件的最上層元素。|  
 |資料區域|轉譯成元素中的元素做為其容器。 資料區包含資料表、矩陣和清單，可將資料顯示為文字和圖表、資料橫條、走勢圖、量測計，以及將資料視覺化的指標。|  
@@ -51,28 +51,24 @@ ms.locfileid: "66107894"
   
 -   不會轉譯無法透過切換使其顯示的隱藏項目。 會轉譯一開始可見的項目和可透過切換使其可見的隱藏項目。  
   
--   
-  `Images, lines, and custom report items` 都會忽略。  
+-   `Images, lines, and custom report items` 都會忽略。  
   
-##  <a name="DataTypes"></a> 資料型別  
+##  <a name="data-types"></a><a name="DataTypes"></a>資料類型  
  文字方塊元素或屬性會根據文字方塊所顯示的值，指派 XSD 資料類型。  
   
 |如果所有文字方塊值為|指派的資料類型為|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:decimal**|  
-|
-  `Float` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:float**|  
-|
-  `Double` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd： dateTime**|  
-|`Time`|**xsd：字串**|  
-|`Boolean`|**xsd：布林值**|  
-|`String`, `Char`|**xsd：字串**|  
-|其他|**xsd：字串**|  
+|`Decimal` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:decimal**|  
+|`Float` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:float**|  
+|`Double` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:string**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:string**|  
+|其他|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>XML 特定的轉譯規則  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> XML 特定的轉譯規則  
  下列幾節描述 XML 轉譯延伸模組如何解譯報表中的項目。  
   
 ### <a name="report-body"></a>報表主體  
@@ -80,7 +76,7 @@ ms.locfileid: "66107894"
   
  XML 命名空間定義與結構描述參考屬性也包含在報表元素中 變數會以粗體類型顯示：  
   
- \<**Report** xmlns = "**SchemaName**" xmlns： xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi：**schemaLocation**= "**SchemaNameReportURL**&amp;rc% 3aSchema = true" Name = "ReportName" >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  變數的值如下：  
   
@@ -109,7 +105,7 @@ ms.locfileid: "66107894"
 ### <a name="custom-report-items"></a>自訂報表項目  
  轉譯延伸模組看不到 CustomReportItems (CRI)。 如果報表中有自訂報表項目，轉譯延伸模組會將其轉譯為傳統的報表項目。  
   
-### <a name="images"></a>映像  
+### <a name="images"></a>影像  
  不會轉譯影像。  
   
 ### <a name="lines"></a>線條  
@@ -152,20 +148,20 @@ ms.locfileid: "66107894"
   
  如果 DataElementOutput 屬性值等於「輸出」，重複項目的標頭就會轉譯為詳細資料元素的子系。  
   
-##  <a name="CustomFormatsXSLTransformations"></a>自訂格式和 XSL 轉換  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> 自訂格式和 XSL 轉換  
  使用 XSL 轉換 (XSLT)，幾乎可以將 XML 轉譯延伸模組所產生的 XML 檔案轉換成任何格式。 此功能可用來產生現有的轉譯延伸模組已不支援的資料格式。 在嘗試建立您自己的轉譯延伸模組之前，請考慮使用 XML 轉譯延伸模組和 XSLT。  
   
-##  <a name="DuplicateName"></a>重複的名稱  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> 重複的名稱  
  如果在相同的範圍內有重複的資料元素名稱，轉譯器會顯示一個錯誤訊息。  
   
-##  <a name="XSLTTransformations"></a>XSLT 轉換  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>XSLT 轉換  
  XML 轉譯器可以將伺服器端的 XSLT 轉換套用到原始 XML 資料。 套用 XSLT 時，轉譯器會輸出轉換的內容，而非輸出 XML 原始資料。 轉換會在伺服器上，而非用戶端上進行。  
   
  系統會在報表定義檔案中，以報表的 DataTransform 屬性或以 XSLT *DeviceInfo* 參數，定義要套用到輸出的 XSLT。 如果設定其中一個值，就會在每次使用 XML 轉換器時進行轉換。 使用訂閱時，必須在 RDL DataTransform 屬性中定義 XSLT。  
   
  如果有同時透過 DataTransform 定義屬性和裝置資訊設定指定 XSLT 檔案，會先出現在 DataTransform 中指定的 XSLT，接著出現由裝置資訊設定所設定的 XSLT。  
   
-###  <a name="DeviceInfo"></a> 裝置資訊設定  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>裝置資訊設定  
  您可以變更此轉譯器的某些預設值，方法是，變更裝置資訊設定，包括：  
   
 -   套用至 XML 的轉換 (XSLT)。  
@@ -185,8 +181,8 @@ ms.locfileid: "66107894"
  如需詳細資訊，請參閱＜ [XML Device Information Settings](../xml-device-information-settings.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [&#40;報表產生器和 SSRS 轉譯報表專案&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

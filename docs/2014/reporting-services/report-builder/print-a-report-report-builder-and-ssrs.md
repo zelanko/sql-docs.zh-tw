@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107773"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
@@ -42,16 +42,16 @@ ms.locfileid: "66107773"
   
 1.  開啟報表。  
   
-2.  在 [主資料夾] 索引標籤上，按一下 **[執行]** 。  
+2.  在 [首頁] 索引標籤上，按一下 [**執行**]。  
   
-3.  (選擇性) 按一下 [整頁模式]  查看報表列印時的外觀。  
+3.  (選擇性) 按一下 [整頁模式]**** 查看報表列印時的外觀。  
   
-4.  (選擇性) 按一下 [版面設定]  設定紙張、方向與邊界。  
+4.  (選擇性) 按一下 [版面設定]**** 設定紙張、方向與邊界。  
   
     > [!NOTE]  
     >  這些設定的預設值來自 [設計] 檢視中所設定的報表屬性。 您在 **[版面設定]** 對話方塊中設定的值只會用於此工作階段。 當您關閉這份報表並重新開啟時，它就會再次具有預設值。  
   
-5.  按一下 **[列印]** 。  
+5.  按一下 **[列印]**。  
   
 6.  在 **[列印]** 對話方塊中，選取印表機並指定其他列印選項。  
   

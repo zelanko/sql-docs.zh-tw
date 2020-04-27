@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108852"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
@@ -55,8 +55,7 @@ ms.locfileid: "66108852"
 |虛擬目錄|ReportServer|請注意，這兩個範例 URL 都包含虛擬目錄名稱。 除非您自訂 URL 定義，否則您一定要在 URL 上指定應用程式的虛擬目錄名稱。|  
   
 > [!NOTE]  
->  基礎 URL 保留項目會啟用 URL 上所要使用的任何有效主機名稱。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具會使用可允許主機名稱變化的語法來解析為特定的報表伺服器執行個體，以便在 HTTP.SYS 中建立 URL 保留項目。 如需 URL 保留項目的詳細資訊，請參閱 [關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
+>  基礎 URL 保留項目會啟用 URL 上所要使用的任何有效主機名稱。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具會使用可允許主機名稱變化的語法來解析為特定的報表伺服器執行個體，以便在 HTTP.SYS 中建立 URL 保留項目。 如需 URL 保留項目的詳細資訊，請參閱 [關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
   
 ## <a name="server-side-permissions-on-a-report-server-url"></a>報表伺服器 URL 的伺服器端權限  
  每一個 URL 端點的權限會專門授與給報表伺服器服務帳戶。 只有這個帳戶具有可接受導向 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 之要求的權限。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來設定服務識別時，將會為此帳戶建立及維護判別存取控制清單 (DACL)。 如果您變更此服務帳戶， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具將會更新您建立來收取新帳戶資訊的所有 URL 保留項目。 如需詳細資訊，請參閱《 [URL 保留項目語法 &#40;SSRS 組態管理員&#41;](url-reservation-syntax-ssrs-configuration-manager.md)。  
@@ -68,21 +67,20 @@ ms.locfileid: "66108852"
  [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)  
  此主題提供在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中設定及修改 URL 保留項目的指示。  
   
- [關於 URL 保留專案和註冊 &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  URL 是用來存取應用程式和報表。 此主題將說明應用程式 URL、預設 URL，以及 URL 保留項目和註冊在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的運作方式。  
   
- [&#40;SSRS Configuration Manager 的 URL 保留語法&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的預設 URL 保留項目對於大多數狀況是有效的。 但是，如果您想要限制存取或擴充部署來啟用網際網路或外部網路存取，您可能必須自訂設定以符合您的需求。 此主題將描述 URL 保留項目的語法，並提供為部署建立自訂保留項目的建議。  
+ [URL 保留項目語法 &#40;SSRS 組態管理員&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的預設 URL 保留項目對於大多數狀況是有效的。 但是，如果您想要限制存取或擴充部署來啟用網際網路或外部網路存取，您可能必須自訂設定以符合您的需求。 此主題將描述 URL 保留項目的語法，並提供為部署建立自訂保留項目的建議。  
   
- [&#40;SSRS Configuration Manager 的設定檔中的 Url&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [組態檔中的 URL &#40;SSRS 組態管理員&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  RSReportServer.config 檔包含了多個 URL 保留項目，以及報表管理員和報表伺服器電子郵件傳遞所使用的 URL。 此主題將摘要列出 URL 組態設定，好讓您可以了解其比較方式。  
   
- [多重實例報表伺服器部署的 URL 保留專案 &#40;SSRS Configuration Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [多重執行個體報表伺服器部署的 URL 保留項目 &#40;SSRS 組態管理員&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  當您在單一電腦上安裝多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體時，您便增加了在註冊 URL 時遇到 URL 重複的機率。 為了避免這些錯誤，請遵循本主題的建議來建立執行個體特有的 URL 保留項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [設定 SSRS Configuration Manager &#40;的 URL&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [&#40;SSRS 原生模式的 Web 服務 URL&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

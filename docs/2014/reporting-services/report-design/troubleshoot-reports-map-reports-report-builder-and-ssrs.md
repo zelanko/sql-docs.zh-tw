@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104640"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66104640"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a>報表定義大小問題  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a>報表定義大小問題  
  使用本節協助解決與報表定義大小相關的問題。  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>如何縮減報表定義大小？  
@@ -49,7 +49,7 @@ ms.locfileid: "66104640"
   
   
   
-##  <a name="Spatial"></a>空間資料問題  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a>空間資料問題  
  使用本節協助解決與空間資料相關的問題。  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>在設計介面上，我看到範例空間資料。  
@@ -102,7 +102,7 @@ ms.locfileid: "66104640"
   
   
   
-##  <a name="Viewport"></a>視口中心和視圖問題  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a>視口中心和視圖問題  
  使用本節協助解決與檢視區選項相關的問題。  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>我無法在內嵌的地圖元素上設定置中與檢視。  
@@ -126,17 +126,17 @@ ms.locfileid: "66104640"
   
   
   
-##  <a name="Layers"></a>圖層問題  
+##  <a name="layer-issues"></a><a name="Layers"></a>圖層問題  
  使用本節協助解決與圖層選項相關的問題。  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>我在地圖中看不到一個或多個圖層。  
  您在報表中是否看到地圖圖層，取決於空間資料的可用性、空間資料與分析資料之間的關聯性、空間資料類型與對應的圖層類型、圖層上的可見性與透明度選項，以及圖層繪製順序。 如果您從圖層看不到資料，請檢查下列選項：  
   
--   **圖層類型與空間資料類型。** 圖層類型僅顯示符合圖層類型的空間資料。 例如，如果圖層類型為 [點]，但是空間資料為 [線條]，則不會出現任何資料。  
+-   **圖層類型與空間資料類型：** 圖層類型僅顯示符合圖層類型的空間資料。 例如，如果圖層類型為 [點]，但是空間資料為 [線條]，則不會出現任何資料。  
   
--   **符合域值。** 在欄位中，您指定用來讓分析資料與空間資料產生關聯的值，必須唯一識別每個地圖元素。 這些欄位必須擁有相同的資料類型。 欄位中的值都必須相同。 如需詳細資訊，請參閱 [圖例、色階與距離標尺問題](#Legend)。  
+-   **符合欄位值：** 在欄位中，您指定用來讓分析資料與空間資料產生關聯的值，必須唯一識別每個地圖元素。 這些欄位必須擁有相同的資料類型。 欄位中的值都必須相同。 如需詳細資訊，請參閱 [圖例、色階與距離標尺問題](#Legend)。  
   
--   **圖層順序。** 圖層在 [地圖] 窗格中的順序就是使用報表轉譯器繪製圖層的順序。 最先繪製之圖層上的空間資料可能會遭到稍後繪製之圖層的空間資料覆寫。 系統會最先繪製出現在清單頂端的圖層。 當您變更圖層在清單中的順序時，就是在變更圖層的繪製順序。  
+-   **圖層順序：** 圖層在 [地圖] 窗格中的順序就是使用報表轉譯器繪製圖層的順序。 最先繪製之圖層上的空間資料可能會遭到稍後繪製之圖層的空間資料覆寫。 系統會最先繪製出現在清單頂端的圖層。 當您變更圖層在清單中的順序時，就是在變更圖層的繪製順序。  
   
 -   **無關.** 您可以針對每個地圖圖層分別指定透明度。 透明度的預設值會根據您加入圖層的方式而有所不同。 透明度為 0% 時，表示圖層不透明，而且不會透過此圖層顯示其他任何圖層資料。 若要讓其他資料透過現有的圖層顯示，請將值調整為較高的百分比，就可以提供您想要的效果。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66104640"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>我在地圖圖層上設定了一個篩選，但是沒有作用。  
  若要篩選圖層的資料，必須指定篩選運算式中的資料類型。 請確認您已經指定正確的基礎資料類型，讓篩選方程式可以正確評估指定的條件。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](filter-equation-examples-report-builder-and-ssrs.md)。  
   
-##  <a name="Legend"></a>圖例、色階和規則問題  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a>圖例、色階和規則問題  
  使用本節協助解決與規則、圖例和色階選項相關的問題。  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>如何控制地圖圖例中的值？  
@@ -172,8 +172,7 @@ ms.locfileid: "66104640"
 -   如需詳細資訊，請參閱 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>色階上的 NaN 值代表什麼意思？  
- 
-  `NaN` 代表「非數字」(Not a Number)。 色階值應為數值。 針對與色階相關的規則，檢查分佈設定與圖例文字值。 如果您已經建立自訂分佈範圍，請確認您在第一個範圍指定下限，並在最後一個範圍指定上限。  
+ `NaN` 代表「非數字」(Not a Number)。 色階值應為數值。 針對與色階相關的規則，檢查分佈設定與圖例文字值。 如果您已經建立自訂分佈範圍，請確認您在第一個範圍指定下限，並在最後一個範圍指定上限。  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>當我執行報表時，我的色階沒有出現。  
  當地圖圖層針對整個圖層或針對內嵌的地圖元素指定多邊形、線條或點的色彩規則時，色階會對使用者顯示相關資訊。 如果地圖元素沒有指定任何色彩規則，或者色彩規則透過圖例 (而非色彩地圖) 指定，則色彩地圖不會出現在轉譯的報表中。  
@@ -182,7 +181,7 @@ ms.locfileid: "66104640"
   
   
   
-##  <a name="Tile"></a>磚問題  
+##  <a name="tile-issues"></a><a name="Tile"></a>磚問題  
  使用本節協助解決與影像分割背景選項相關的問題。  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>我看不到 Bing 地圖底圖背景。  
@@ -199,14 +198,13 @@ ms.locfileid: "66104640"
  如需新增圖格圖層的詳細資訊，請參閱[新增、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ### <a name="how-do-i-control-the-text-on-a-tile-layer"></a>如何控制影像分割圖層上的文字？  
- 
-  **[道路]** 與 **[混合式]** 檢視都包含文字。 文字是來自 Bing Map Web 服務之影像分割的一部分。  
+ **[道路]** 與 **[混合式]** 檢視都包含文字。 文字是來自 Bing Map Web 服務之影像分割的一部分。  
   
  若要加入沒有文字的影像分割圖層，選取 **[空中]** 檢視。  
   
   
   
-##  <a name="Tooltip"></a>工具提示和標籤問題  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a>工具提示和標籤問題  
  使用本節協助解決與標籤或工具提示選項相關的問題。  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>當我將標籤或工具提示設定為運算式時，出現有關資料集範圍的運算式錯誤。  

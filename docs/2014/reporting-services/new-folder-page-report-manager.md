@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108196"
 ---
 # <a name="new-folder-page-report-manager"></a>新增資料夾頁面 (報表管理員)
@@ -37,7 +37,7 @@ ms.locfileid: "66108196"
  **名稱**  
  指定資料夾的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? ： \@ & = +，$/* \< > |"或/指定名稱時。  
   
- **說明**  
+ **描述**  
  輸入資料夾內容的描述。 此描述會顯示在有權存取此資料夾之使用者的 [內容] 頁面中。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109080"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>一般屬性頁面、共用資料來源 (報表管理員)
@@ -29,13 +29,13 @@ ms.locfileid: "66109080"
   
 2.  將滑鼠停留在該資料來源上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該共用資料來源的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該共用資料來源的 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
  指定共用資料來源的名稱，可用來識別報表伺服器命名空間中的項目。  
   
- **說明**  
+ **描述**  
  提供有關共用資料來源的資訊。 此描述會顯示在 [內容] 頁面上。  
   
  **在清單檢視中隱藏**  
@@ -102,6 +102,6 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [新增資料來源頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [指定報表資料來源的認證及連線資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

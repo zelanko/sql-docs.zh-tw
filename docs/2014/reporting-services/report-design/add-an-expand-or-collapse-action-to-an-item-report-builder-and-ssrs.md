@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106747"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106747"
 3.  在適當的群組窗格中，按一下您要隱藏相關聯資料列或資料行之資料列群組或資料行群組的名稱。 群組選定之後，[屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，請按一下功能區上的 [檢視]****，然後按一下 [屬性]****。  
+    >   如果看不到 [屬性] 窗格，請按一下功能區上的 [檢視] **** ，然後按一下 [屬性] ****。  
   
 4.  在`Hidden`中，選擇下列其中一個選項，以在您第一次執行報表時設定此報表專案的可見度：  
   
@@ -63,13 +63,13 @@ ms.locfileid: "66106747"
   
 6.  若要測試切換，請執行報表，然後按一下包含切換影像的文字方塊。 報表顯示會重新整理，以顯示包含已切換之可見性的資料列群組和資料行群組。  
   
-     ![執行含可展開之資料列群組的報表](../media/expandcollapse-runreport-rowgroup.png "執行含可展開之資料列群組的報表")  
+     ![執行含可展開資料列群組的報表](../media/expandcollapse-runreport-rowgroup.png "執行含可展開資料列群組的報表")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>若要將展開和摺疊動作加入至報表項目中  
   
 1.  在報表設計檢視中，以滑鼠右鍵按一下要顯示或隱藏的報表專案，然後按一下* \<[報表專案]>* **屬性**]。 報表專案的 [ * \<報表專案>* **屬性**] 對話方塊隨即開啟。  
   
-2.  按一下 **[可見性]**。  
+2.  按一下 **[可見性]** 。  
   
 3.  在 **[一開始執行報表時]** 中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66106747"
   
     -   選取 **[隱藏]** 來隱藏報表項目。  
   
-    -   選取 **[依據運算式顯示或隱藏]** ，使用在執行階段評估的運算式來決定可見性。 按一下 (**fx**) 開啟 [運算式]**** 對話方塊，即可建立運算式。  
+    -   選取 **[依據運算式顯示或隱藏]** ，使用在執行階段評估的運算式來決定可見性。 按一下（**fx**）開啟 [**運算式**] 對話方塊，以建立運算式。  
   
         > [!NOTE]  
         >  當您指定可見性的運算式時，會設定報表項目的 Hidden 屬性。 運算式會評估為 `Boolean` 值 `True` 來隱藏項目，以及 `False` 來顯示項目。  
@@ -93,10 +93,10 @@ ms.locfileid: "66106747"
   
 5.  若要測試切換，請執行報表，然後按一下包含切換影像的文字方塊。 報表顯示會重新整理，以顯示包含已切換之可見性的報表項目。  
   
-     ![執行含有展開的資料表的報表](../media/expandcollapse-runreport-reporttable.png "執行含有展開的資料表的報表")  
+     ![執行含有已展開資料表的報表](../media/expandcollapse-runreport-reporttable.png "執行含有已展開資料表的報表")  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;報表產生器和 SSRS 的深入分析動作&#41;](drilldown-action-report-builder-and-ssrs.md)   
- [隱藏 &#40;報表產生器和 SSRS 的專案&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [隱藏項目 &#40;報表產生器及 SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

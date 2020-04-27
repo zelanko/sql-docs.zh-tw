@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108407"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：新增群組和總計 (Reporting Services)
   將群組和總計加入至報表以組織和摘要資料。  
   
  如需將累計總計加入至報表的詳細資訊，請參閱：[將總計加入至 Reporting Services （SSRS）報表](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)。  
@@ -28,29 +28,29 @@ ms.locfileid: "66108407"
   
 -   [若要將總計加入至報表](#bkmk_addtotals)  
   
--   [若要在報表中加入每日總計](#bkmk_adddailytotal)  
+-   [在報表中加入每日總計](#bkmk_adddailytotal)  
   
 -   [若要將總計加入至報表](#bkmk_addgrandtotal)  
   
 -   [若要將報表發行至報表伺服器（選擇性）](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a>若要將報表中的資料分組  
+##  <a name="to-group-data-in-a-report"></a><a name="bkmk_groupdata"></a>若要將報表中的資料分組  
   
 1.  按一下 **[設計]** 索引標籤。  
   
 2.  如果您看不到 [資料**列群組**] 窗格，請以滑鼠右鍵按一下設計介面，然後按一下 [**視圖**]，再按一下 [**群組**]。  
   
-3.  將 ** 欄位從 [報表資料]**`Date` 窗格拖曳到 [資料列群組]**** 窗格。 將它放在稱為 [(詳細資料)]**** 之資料列的上方。  
+3.  將 `Date` 欄位從 [報表資料]**** 窗格拖曳到 [資料列群組]**** 窗格。 將它放在稱為 [(詳細資料)]**** 之資料列的上方。  
   
      請注意，資料列控制代碼中現在具有一個用來顯示群組的方括號。 資料表現在也具有兩個 [日期] 資料行 – 垂直虛線兩側各有一個。  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  將 ** 欄位從 [報表資料]**`Order` 窗格拖曳到 [資料列群組]**** 窗格。 將它放在 [日期] 下方和 [(詳細資料)]**** 上方。  
+4.  將 `Order` 欄位從 [報表資料]**** 窗格拖曳到 [資料列群組]**** 窗格。 將它放在 [日期] 下方和 [(詳細資料)]**** 上方。  
   
      請注意，資料列控制代碼中現在具有兩個方括號，用來顯示兩個群組。 資料表現在也有兩`Order`個數據行。  
   
-5.  刪除雙線右側的原始 [日期] 和 [訂單]**** 資料行。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]****。  
+5.  刪除雙線**右側**的原始 [日期] 和 [訂單] 資料行。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]****。  
   
      ![選取要刪除的資料行](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "選取要刪除的資料行")  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66108407"
   
 6.  切換到 **[預覽]** 索引標籤預覽報表。 報表應看起來類似下圖：  
   
-     ![依照日期和訂單分組的資料表](../../2014/tutorials/media/rs-basictablegroupspreview.gif "依照日期和訂單分組的資料表")  
+     ![依照日期後依照訂單分組的資料表](../../2014/tutorials/media/rs-basictablegroupspreview.gif "依照日期後依照訂單分組的資料表")  
   
-##  <a name="bkmk_addtotals"></a>若要將總計加入至報表  
+##  <a name="to-add-totals-to-a-report"></a><a name="bkmk_addtotals"></a>若要將總計加入至報表  
   
 1.  切換至 [設計] 檢視。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66108407"
   
      ![設計檢視：具有訂單總計的基本資料表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "設計檢視：具有訂單總計的基本資料表")  
   
-##  <a name="bkmk_adddailytotal"></a>若要在報表中加入每日總計  
+##  <a name="to-add-a-daily-total-to-a-report"></a><a name="bkmk_adddailytotal"></a>若要在報表中加入每日總計  
   
 1.  以滑鼠右鍵按一下 [訂單] 資料格，並指向 [加入總計]****，然後按一下 [之後]****。  
   
      這會加入新的資料列，其中包含每日數量和金額的總和，以及 [訂單] 資料行中的「**總計**」標籤。  
   
-2.  在同一個資料格的 [**總計** **] 前面輸入**單字，讓它**每日**讀取一次。  
+2.  在同一資料格的 **總計** 一詞之前，輸入 **每日** 一詞，使其讀為 **[每日總計]**。  
   
 3.  選取 **[每日總計]** 資料格、兩個 **[總和]** 資料格以及它們之間的空白資料格。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66108407"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a>若要將總計加入至報表  
+##  <a name="to-add-a-grand-total-to-a-report"></a><a name="bkmk_addgrandtotal"></a>若要將總計加入至報表  
   
 1.  以滑鼠右鍵按一下 [日期] 資料格，並指向 [加入總計]****，然後按一下 [之後]****。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66108407"
   
      ![預覽：具有總計的基本資料表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "預覽：具有總計的基本資料表")  
   
-##  <a name="bkmk_publishreport"></a>若要將報表發行至報表伺服器（選擇性）  
+##  <a name="to-publish-the-report-to-the-report-server-optional"></a><a name="bkmk_publishreport"></a>若要將報表發行至報表伺服器（選擇性）  
   
 1.  選擇性步驟是將已完成的報表發行至原生模式報表伺服器，讓您能夠從報表管理員檢視報表。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66108407"
   
 3.  在**TargetServerURL**中，輸入報表伺服器名稱的名稱，例如**HTTP://\<servername>/reportserver**  
   
-4.  按一下 [確定]****。  
+4.  按一下 [檔案] &gt; [新增] &gt; [專案]   
   
 5.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]**。  
   

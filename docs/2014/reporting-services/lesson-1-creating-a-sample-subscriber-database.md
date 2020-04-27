@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108543"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 課：建立範例訂閱者資料庫
@@ -63,7 +63,7 @@ ms.locfileid: "66108543"
  您已順利建立驅動報表散發作業的訂閱資料，且每位訂閱者的報表輸出都各不相同。 之後，您要修改將散發給各訂閱者之報表的資料來源屬性。 修改資料來源屬性是為了準備資料驅動訂閱所傳遞的報表。 您也會將報表設計修改為包含訂閱將搭配訂閱者資料使用的參數。 [第2課：修改報告資料來源屬性](lesson-2-modifying-the-report-data-source-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SSRS 教學課程建立資料驅動訂閱&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [建立資料庫](../relational-databases/databases/create-a-database.md)   
  [建立基本資料表報表 &#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

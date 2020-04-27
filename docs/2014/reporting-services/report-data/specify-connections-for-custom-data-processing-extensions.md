@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107047"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>為自訂資料處理延伸模組指定連接
@@ -60,7 +60,7 @@ ms.locfileid: "66107047"
   
 1.  設定自動執行帳戶。 若要利用 `IDbConnection` 來進行連接，則必須設定此帳戶。 報表伺服器在進行連接時會模擬該帳戶。  
   
-2.  在報表中設定資料來源屬性來使用 **[無認證]**。  
+2.  在報表中設定資料來源屬性來使用 **[無認證]** 。  
   
 3.  將用於連接到資料來源的認證放在連接字串中。  
   
@@ -77,8 +77,8 @@ ms.locfileid: "66107047"
 |無認證|如果指定自動執行帳戶，連接字串會判斷所使用的認證。<br /><br /> 如果未定義自動執行帳戶，報表伺服器的連接會失敗。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SSRS Configuration Manager 設定自動執行帳戶&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [指定報表資料來源的認證和連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)   
+ [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services 中的資料連線、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [實作資料處理延伸模組](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   

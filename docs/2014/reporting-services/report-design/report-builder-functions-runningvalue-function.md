@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105156"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函數 (報表產生器及 SSRS)
@@ -38,18 +38,15 @@ RunningValue(expression, function, scope)
  (`Enum`) 運算式所要套用的彙總函式名稱，例如 `Sum`。 此函數可以是 `RunningValue`、`RowNumber` 或 `Aggregate`。  
   
  *範圍 (scope)*  
- (`String`) 字串常數，它是資料集、資料區域或群組的名稱，或為 Null (在 `Nothing` 中為 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，可指定要在其中評估彙總的內容。 
-  `Nothing` 指定最外層的內容，這通常為報表資料集。  
+ (`String`) 字串常數，它是資料集、資料區域或群組的名稱，或為 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)，可指定要在其中評估彙總的內容。 `Nothing` 指定最外層的內容，這通常為報表資料集。  
   
 ## <a name="return-type"></a>傳回類型  
  取決於 *function* 參數所指定的彙總函式。  
   
 ## <a name="remarks"></a>備註  
- 
-  `RunningValue` 的值會針對範圍的每個新執行個體重設為 0。 如果已指定群組，當群組運算式變更時，執行中的值也會重設。 如果已指定資料區域，就會為每個資料區域的新執行個體重設執行中的值。 如果已指定資料集，則整個資料集不會重設執行中的值。  
+ `RunningValue` 的值會針對範圍的每個新執行個體重設為 0。 如果已指定群組，當群組運算式變更時，執行中的值也會重設。 如果已指定資料區域，就會為每個資料區域的新執行個體重設執行中的值。 如果已指定資料集，則整個資料集不會重設執行中的值。  
   
- 
-  `RunningValue` 不能用於篩選或排序運算式。  
+ `RunningValue` 不能用於篩選或排序運算式。  
   
  評估執行值的資料集合必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 `CInt`、`CDbl` 或 `CDec` 等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](https://go.microsoft.com/fwlink/?LinkId=96142)。  
   

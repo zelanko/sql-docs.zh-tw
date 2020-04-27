@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109623"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>建立資料驅動訂閱頁面 (報表管理員)
@@ -36,7 +36,7 @@ ms.locfileid: "66109623"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 **[一般]** 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這會開啟報表的 [**一般**] 屬性頁面。  
   
 4.  選取 **[訂閱]** 索引標籤，然後按一下 **[新增資料驅動訂閱]**。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66109623"
     >  報表資料來源必須使用預存認證才能啟用此按鈕。  
   
 ## <a name="start-a-subscription-page-1"></a>開始訂閱 (第 1 頁)  
- **說明**  
+ **描述**  
  提供訂閱的描述。 訂閱中顯示的描述，會列在報表的 **[我的訂閱]** 和 **[訂閱]** 索引標籤中。  
   
  **指定通知收件者的方式**  
@@ -75,7 +75,7 @@ ms.locfileid: "66109623"
   
  如果資料來源使用 Windows 驗證，請在指定連接時選取 **[當做 Windows 認證使用]** 。  
   
- 如果您要使用不驗證使用者連接的資料來源 (例如，如果資料來源是 XML 檔案的話)，請選取 [不需要認證]。 您先前必須已設定了自動執行帳戶，才能使用這個選項。 如需詳細資訊，請參閱[&#40;SSRS Configuration Manager&#41;設定自動執行帳戶](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 如果您要使用不驗證使用者連接的資料來源 (例如，如果資料來源是 XML 檔案的話)，請選取 [不需要認證]。 您先前必須已設定了自動執行帳戶，才能使用這個選項。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="specify-a-query-page-3"></a>指定查詢 (第 3 頁)  
  您可以使用這個頁面來輸入擷取訂閱者資料的查詢。 為了獲得最佳結果，請先在 SQL Server Management Studio 中執行此查詢，然後再將它用於資料驅動訂閱中。 接著，您可以檢查結果，以便確認它是否包含所需的資訊。 辨識查詢結果的重點包括：  
@@ -105,10 +105,10 @@ ms.locfileid: "66109623"
 #### <a name="set-delivery-options-for-file-share-delivery"></a>設定檔案共用傳遞的傳遞選項  
  系統經常會使用檔案共用傳遞延伸模組，因為它不需要事先設定。 如果您要使用檔案共用傳遞延伸模組，下表將描述您可以設定的選項：  
   
- **檔案名稱**  
+ [檔案名稱]****  
  指定報表的檔案名稱。 檔案共用傳遞延伸模組會將報表當做靜態應用程式檔案傳遞至共用資料夾。 在大部分情況下，您應該使用資料庫的值來建立檔案名稱。 根據您設定寫入模式的方式而定，使用靜態值將會導致每個新傳遞覆寫先前的傳遞。  
   
- **Path**  
+ **路徑**  
  指定可透過網路連接存取的共用資料夾。 若要確認資料夾可供存取，請按一下 [開始] 功能表上的 [**執行**]，並以\\ \\下列格式\> \\輸入資料夾\>路徑：<computername<sharedfoldername。  
   
  **轉譯格式**  
@@ -153,13 +153,13 @@ ms.locfileid: "66109623"
  **次**  
  定義在所指定日期之特定時間執行的排程。 您可以透過下列方式指定天數：每* \<日>*、每個工作日，以及每個* \<>* 日的數目。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
   
- **提交**  
+ **每週**  
  定義在每週間隔的指定時間執行的排程。 此間隔可以是整週 (例如每兩週) 或是其中的日期。  
   
  **每月**  
  定義以每月為基礎執行的排程。 在月份中可以根據模式來選擇日期 (例如每月的最後一個星期日) 或特定的日期 (例如 1 和 15 表示每月的第一和第十五日)。 使用逗號和連字號，可以指定多天和範圍，例如 1、5、7-12、21。  
   
- **一次**  
+ **即可**  
  定義只執行一次的排程。 使用 **[開始和結束日期]** 區段，即可指定要執行排程的日期。 此排程在處理過後立即過期。  
   
  **[開始和結束日期]**  
@@ -171,8 +171,8 @@ ms.locfileid: "66109623"
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [&#40;SSRS 教學課程建立資料驅動訂閱&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [指定報表資料來源的認證和連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   

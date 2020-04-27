@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862d8b90f3c91dffda35971677db7fdc231c1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108925"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>從 Microsoft Access 匯入報表 (Reporting Services)
@@ -26,8 +26,7 @@ ms.locfileid: "66108925"
  當您使用匯入功能時，會匯入資料庫或專案檔案的所有報表。 如果 Access 檔案包含許多報表，您可以建立個別的報表專案以匯入報表，然後再於主要報表專案中開啟個別的 RDL 檔案。 報表匯入報表設計師之後，就可以編輯報表了。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不支援所有 Access 報表物件。 未轉換的專案會顯示在 [**工作清單**] 視窗中。 如需詳細資訊，請參閱[支援的存取報告功能 &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)。  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不支援所有 Access 報表物件。 未轉換的專案會顯示在 [**工作清單**] 視窗中。 如需詳細資訊，請參閱[支援的存取報告功能 &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)。  
   
 ### <a name="to-import-reports-from-microsoft-access"></a>從 Microsoft Access 匯入報表  
   

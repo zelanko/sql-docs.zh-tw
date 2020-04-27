@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 137d9d4adf1377d730bac2fc6e847f97d02c2c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109823"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>選擇資料表樣式或選擇矩陣樣式
@@ -25,7 +25,7 @@ ms.locfileid: "66109823"
  您也可以加入其他樣式範本。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [報表產生器和 SSRS &#40;資料表、矩陣和清單&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [報表精靈說明](../../2014/reporting-services/report-wizard-help.md)  
   
   

@@ -11,15 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105480"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分頁 (報表產生器與 SSRS)
-  分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的分頁會根據您用於檢視和傳遞報表的轉譯延伸模組而有所不同。 當您在報表伺服器上執行報表時，報表會使用 HTML 轉譯器。 HTML 會遵循特定的一組分頁規則。 例如，如果您將相同的報表匯出至 PDF，系統就會使用 PDF 轉譯器，並套用另一組不同的規則，因此，報表的分頁就會不同。 若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中之分頁的規則。  
+  分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的分頁會根據您用於檢視和傳遞報表的轉譯延伸模組而有所不同。 當您在報表伺服器上執行報表時，報表會使用 HTML 轉譯器。 HTML 會遵循特定的一組分頁規則。 例如，如果您將相同的報表匯出至 PDF，系統就會使用 PDF 轉譯器，並套用另一組不同的規則，因此，報表的分頁就會不同。 若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中之分頁的規則。  
   
  本主題討論實體頁面大小與報表配置，對手動分頁符號轉譯器轉譯報表的影響。 您可以使用 **[報表屬性]** 窗格、 **[屬性]** 窗格或 **[版面設定]** 對話方塊來設定屬性，藉此修改實際頁面大小和邊界，並且將報表分為資料行。 按一下報表主體外面的藍色區域即可存取 **[報表屬性]** 。 按一下 [主資料夾] 索引標籤上的 **[執行]** ，然後按一下 [執行] 索引標籤上的 **[版面設定]** ，即可存取 **[版面設定]** 對話方塊。  
   
@@ -30,8 +29,7 @@ ms.locfileid: "66105480"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="the-report-body"></a>報表主體  
- 報表主體是在設計介面上會顯示為空格的矩形容器。 它可以擴張或縮小以容納包含在其中的報表項目。 報表主體不會反映實體頁面大小，而且事實上，報表主體的擴張可以超出實體頁面大小的界限而跨越多個報表頁面。 
-  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]、Word、HTML 和 MHTML 之類的某些轉譯器會轉譯根據頁面內容而擴張或縮小的報表。 以這些格式轉譯的報表會針對螢幕檢視 (例如在網頁瀏覽器中) 最佳化。 這些轉譯器會在需要時加入垂直分頁符號。  
+ 報表主體是在設計介面上會顯示為空格的矩形容器。 它可以擴張或縮小以容納包含在其中的報表項目。 報表主體不會反映實體頁面大小，而且事實上，報表主體的擴張可以超出實體頁面大小的界限而跨越多個報表頁面。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]、Word、HTML 和 MHTML 之類的某些轉譯器會轉譯根據頁面內容而擴張或縮小的報表。 以這些格式轉譯的報表會針對螢幕檢視 (例如在網頁瀏覽器中) 最佳化。 這些轉譯器會在需要時加入垂直分頁符號。  
   
  您可以設定報表主體的格式，讓其包含框線色彩、框線樣式，以及框線寬度。 您也可以加入背景色彩和背景影像。  
   
@@ -54,7 +52,7 @@ ms.locfileid: "66105480"
   
  您可以使用 [報表屬性]**** 窗格、[版面設定]**** 對話方塊，或變更 [屬性]**** 窗格中的 TopMargin、BottomMargin、LeftMargin 和 RightMargin 屬性來指定資料行。 如果您要使用未定義的邊界大小，您可以針對要用於匯出報表的特定轉譯器，使用 [裝置資訊] 設定來指定邊界大小。 只有在您以 PDF 或影像格式轉譯與列印報表時，才會套用資料行。 下列影像指出包含資料行之頁面的可用頁面區域。  
   
- ![顯示資料欄的實體頁面。](../media/rspagecolumns.gif "顯示資料欄的實體頁面。")  
+ ![具有資料欄的實體頁面。](../media/rspagecolumns.gif "具有資料欄的實體頁面。")  
   
 ## <a name="page-breaks-and-page-names"></a>分頁和頁面名稱  
  當報表中包含頁面名稱時，報表可能會更容易閱讀，其資料也會更容易稽核及匯出。 Reporting Services 報表中提供報表及 Tablix 資料區域 (資料表、矩陣和清單) 的屬性、群組和矩形，可控制重新編頁、重設頁碼，並在分頁時提供新的報表頁面名稱。 不論報表以何種格式轉譯，這些功能都可以加強報表運作，尤其是在將報表匯出至 Excel 活頁簿時特別有用。  

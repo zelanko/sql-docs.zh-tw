@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108314"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>地圖色彩規則對話方塊、一般
@@ -29,7 +29,7 @@ ms.locfileid: "66108314"
  **套用範本樣式**  
  選取此選項可以根據您在精靈中選擇的主題，或在多邊形、線條或點圖層屬性中設定的主題，使用色彩。 主題會為地圖設定色彩、字型與框線的預設選項。 若是此選項，不會套用任何規則來指派色彩給每個地圖元素。  
   
- **使用調色板將資料視覺化**  
+ **使用調色盤將資料視覺化**  
  選取此選項可以透過使用特定色彩調色盤中的色彩來視覺化分析資料。  
   
  **使用色彩範圍將資料視覺化**  

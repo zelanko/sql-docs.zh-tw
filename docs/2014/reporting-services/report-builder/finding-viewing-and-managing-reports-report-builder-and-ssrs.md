@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6e2dc5a7ff69a61aae3d72fb9d9feca6abc3253c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107830"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107830"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a>在報表產生器中尋找及查看報表  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a>在報表產生器中尋找及查看報表  
  若要尋找您要使用的報表，或選取要在報表中使用的共用資料來源、影像或子報表，請瀏覽您的電腦，報表伺服器上的資料夾，或與 Reporting Services 整合的 SharePoint 網站。  
   
  若要尋找報表伺服器上的報表，您必須指定報表伺服器的 URL，並具備資料夾的適當權限，以讓您讀取和儲存報表項目。 請向報表伺服器的系統管理員要求適當的 URL 和權限。  
@@ -43,15 +43,15 @@ ms.locfileid: "66107830"
   
  報表產生器可協助您進行下列工作：  
   
--   **尋找報表**當您流覽報表時，可以使用已針對報表產生器自訂的熟悉 Microsoft Office 樣式的 [**開啟**檔案] 對話方塊。 您可以瀏覽報表伺服器或檔案系統上的資料夾，包括 [我的報表]、[站台和伺服器]、[桌面]、[我的文件] 和 [我的電腦]。 [站台和伺服器] 提供最近使用過的伺服器清單。  
+-   **尋找報表** ：當您瀏覽報表時，可以使用熟悉的 Microsoft Office 樣式的 **[開啟檔案]** 對話方塊，此對話方塊已針對報表產生器進行自訂。 您可以瀏覽報表伺服器或檔案系統上的資料夾，包括 [我的報表]、[站台和伺服器]、[桌面]、[我的文件] 和 [我的電腦]。 [站台和伺服器] 提供最近使用過的伺服器清單。  
   
--   **尋找共用資料來源**當您流覽共用資料來源時，可以從最近使用的清單中挑選，或流覽至與報表位於相同報表伺服器上的另一個資料夾。  
+-   **尋找共用的資料來源** ：當您瀏覽共用資料來源時，可以從最近使用過的清單挑選，或瀏覽到與報表位置相同之報表伺服器上的其他資料夾。  
   
--   **查看報表**您在建立或更新報表時，會在報表產生器中預覽報表。 當報表產生器連接至報表伺服器時，報表伺服器會載入並處理報表；否則，報表會在本機進行處理。 報表產生器中的報表檢視器會顯示轉譯的報表。  
+-   **檢視報表** ：建立或更新報表時，可以在報表產生器中進行預覽。 當報表產生器連接至報表伺服器時，報表伺服器會載入並處理報表；否則，報表會在本機進行處理。 報表產生器中的報表檢視器會顯示轉譯的報表。  
   
 
   
-##  <a name="ViewingAndManagingReportServer"></a>在報表伺服器上查看和管理報表  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a>在報表伺服器上查看和管理報表  
  您可以使用報表管理員來檢視和管理報表伺服器上的報表。 瀏覽伺服器上的資料夾以找出報表、執行報表以便在瀏覽器中檢視這些報表，然後執行管理工作。  
   
  報表管理員可協助您進行下列管理工作：  
@@ -77,7 +77,7 @@ ms.locfileid: "66107830"
  ![報表管理員中的報表工具列](../media/hs-reportserver-blowout.gif "報表管理員中的報表工具列")  
 報表管理員視窗  
   
- ![報告工具列](../media/htmlviewer-toolbar.gif "報表工具列")  
+ ![報表工具列](../media/htmlviewer-toolbar.gif "報表工具列")  
 報表工具列  
   
  當您執行報表時，您可以將報表匯出成其他格式，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel 或 PDF。 您也可以使用資料轉譯延伸模組 (例如，逗號分隔值 (CSV) 轉譯延伸模組) 來匯出報表，然後使用 CSV 資料檔做為其他應用程式的輸入。 如需匯出報表的詳細資訊，請參閱[匯出報表 &#40;報表產生器和 ssrs&#41;](export-reports-report-builder-and-ssrs.md)並[將報表匯出為另一種檔案類型 &#40;報表產生器和 ssrs&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。  
@@ -91,21 +91,20 @@ ms.locfileid: "66107830"
   
 |選項|結果|  
 |------------|------------|  
-|瀏覽器視窗上的 [重新整理 **] 按鈕**|顯示儲存在工作階段快取中的報表。 使用者開啟報表時，便會建立工作階段快取。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用瀏覽器工作階段，在報表開啟時維持一致的檢視方式。|  
+|瀏覽器視窗上的 **[重新整理]** 按鈕。|顯示儲存在工作階段快取中的報表。 使用者開啟報表時，便會建立工作階段快取。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用瀏覽器工作階段，在報表開啟時維持一致的檢視方式。|  
 |![報表工具列上的瀏覽器重新整理按鈕](../media/htmlviewer-refresh.GIF "報表工具列上的瀏覽器重新整理按鈕")|當您按一下報表工具列的 **[重新整理]** 按鈕時，報表伺服器會重新執行查詢，如果報表為視需要執行，還會更新報表資料。 如果報表已快取或為快照集， **[重新整理]** 會顯示儲存在報表伺服器資料庫中的報表。|  
 |CTRL+F5 組合鍵|與按一下報表工具列的 **[重新整理]** 按鈕的結果相同。|  
   
 
   
-##  <a name="ViewingAndManagingSharePointSite"></a>從 SharePoint 網站查看和管理報表伺服器專案  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a>從 SharePoint 網站查看和管理報表伺服器專案  
  當系統管理員將報表伺服器設定為以 SharePoint 整合模式執行時，您就可以從 SharePoint 網站檢視和管理報表及其他報表伺服器項目。  
   
  SharePoint 網站包含用於設定資料來源屬性、報表記錄、報表處理選項、排程、訂閱、報表參數和建立共用排程的頁面。 您可以在 SharePoint 網站上管理報表伺服器項目，方法就像使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的其他工具來建立和管理這些項目一樣。  
   
  若要存取應用程式頁面，請從報表的下拉式功能表選取項目專屬的動作，或選取您先前加入到 SharePoint 文件庫的其他報表伺服器項目。 根據項目和權限，您也可能可以在報表產生器中建立報表、產生模型和設定模型項目安全性。  
   
- 如需 Reporting Services 和 SharePoint 技術的詳細資訊，請參閱 msdn.microsoft.com 上《[](../configure-administer-report-server-reporting-services-sharepoint-mode.md)線上叢書》中的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](https://go.microsoft.com/fwlink/?LinkId=154888)。  
+ 如需 Reporting Services 和 SharePoint 技術的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?LinkId=154888)》中的[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 網站上尋找報表伺服器項目  
  您必須要先能找到項目，才能設定屬性。 報表伺服器項目一律儲存在程式庫或程式庫內的資料夾中。  
@@ -122,20 +121,19 @@ ms.locfileid: "66107830"
  ![rs_SharePointRunReport](../media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>透過動作管理項目  
- 下拉式功能表上的動作可支援每個項目的管理工作。 根據您的權限，每個項目都具有通用的動作，對於儲存在 SharePoint 程式庫中的項目而言，這些都是標準動作。 **View properties**和**Edit 屬性**是一般動作的範例。 自訂動作可提供項目特定的管理功能。 下列影像顯示報表定義的動作。 報表定義的自訂動作範例包括 **[管理訂閱]** 和 **[管理處理選項]**：  
+ 下拉式功能表上的動作可支援每個項目的管理工作。 根據您的權限，每個項目都具有通用的動作，對於儲存在 SharePoint 程式庫中的項目而言，這些都是標準動作。 **[檢視屬性]** 和 **[編輯屬性]** 是通用動作的範例。 自訂動作可提供項目特定的管理功能。 下列影像顯示報表定義的動作。 報表定義的自訂動作範例包括 **[管理訂閱]** 和 **[管理處理選項]**：  
   
  ![報表伺服器項目的功能表命令](../media/rs-ecbforrsitems.gif "報表伺服器項目的功能表命令")  
   
 
   
-##  <a name="DeskTop"></a>在桌面應用程式中查看報表  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a>在桌面應用程式中查看報表  
  您可以完全略過瀏覽器檢視，改用桌面應用程式 (例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel) 作為報表檢視器。 若要這樣做，請定義指定桌面應用程式格式和共用資料夾目的地的訂閱。 報表伺服器會將報表建立成應用程式檔案，加上副檔名，然後將報表儲存成硬碟中的檔案。 之後，您便可以改用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel (或其他應用程式) 取代瀏覽器來檢視報表。  
   
 
   
-##  <a name="AboutUserSessions"></a>關於使用者會話  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用瀏覽器工作階段來維持檢視報表時的一致性。 工作階段是以瀏覽器連接為基礎，並非以驗證的使用者為基礎。 每次使用者在新的瀏覽器視窗中開啟報表時，就會建立新的工作階段。 建立瀏覽器工作階段之後，您就可以繼續使用工作階段開始時所開啟的報表版本，即使該報表後來已經在報表伺服器上修改過也一樣。 例如，若您在下午 11:00 開啟報表，且報表作者在下午 11:01 重新發行相同的報表，則您的工作階段期間將會繼續使用您所開啟的版本。  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a>關於使用者會話  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用瀏覽器工作階段來維持檢視報表時的一致性。 工作階段是以瀏覽器連接為基礎，並非以驗證的使用者為基礎。 每次使用者在新的瀏覽器視窗中開啟報表時，就會建立新的工作階段。 建立瀏覽器工作階段之後，您就可以繼續使用工作階段開始時所開啟的報表版本，即使該報表後來已經在報表伺服器上修改過也一樣。 例如，若您在下午 11:00 開啟報表，且報表作者在下午 11:01 重新發行相同的報表，則您的工作階段期間將會繼續使用您所開啟的版本。  
   
  如果您在相同工作階段內使用 **[重新整理]** 按鈕重新整理報表，則會顯示報表的原始工作階段版本。 如果您使用報表工具列上的 **[重新整理]** 按鈕來重新整理視需要執行的報表，則會重新執行報表並顯示新資料 (如果有的話)。  
   
@@ -143,19 +141,19 @@ ms.locfileid: "66107830"
   
 
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>本節內容  
  下列主題提供有關檢視與管理報表的其他資訊。  
   
- [在報表管理員 &#40;報表產生器和 SSRS 中尋找及查看報表&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  描述如何使用報表管理員來尋找、檢視與管理報表。  
   
- [使用瀏覽器 &#40;報表產生器和 SSRS 來尋找及查看報表&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
+ [使用瀏覽器尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  描述如何使用 URL 尋找和檢視報表。  
   
- [搜尋報表和其他專案 &#40;報表產生器和 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
+ [搜尋報表和其他項目 &#40;報表產生器及 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  描述如何使用報表管理員中的搜尋功能來尋找報表伺服器上的項目。  
   
- [使用我的報表 &#40;報表產生器和 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
+ [使用我的報表 &#40;報表產生器及 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
  描述如何使用 [我的報表] 資料夾做為儲存和使用您擁有之報表的個人工作空間。  
   
  [在報表產生器中預覽報表](previewing-reports-in-report-builder.md)  
@@ -164,7 +162,7 @@ ms.locfileid: "66107830"
 
   
 ## <a name="see-also"></a>另請參閱  
- [儲存報表 &#40;報表產生器&#41;](saving-reports-report-builder.md)   
+ [將報表儲存 &#40;報表產生器&#41;](saving-reports-report-builder.md)   
  [SQL Server 2014 中的報表產生器](report-builder-in-sql-server-2016.md)   
  [安裝、解除安裝和報表產生器支援](../install-uninstall-and-report-builder-support.md)  
   

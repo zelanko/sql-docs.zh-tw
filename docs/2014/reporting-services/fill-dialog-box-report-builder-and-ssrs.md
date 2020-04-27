@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109162"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>填滿對話方塊 (報表產生器及 SSRS)
@@ -36,11 +36,11 @@ ms.locfileid: "66109162"
  **選取影像來源**  
  指出影像儲存的位置，以便在轉譯報表時，讓報表處理器可以顯示該影像。  
   
--   **外部**當您希望影像在報表伺服器或網頁伺服器上繼續當做檔案存在時，請選擇此選項。  
+-   **外部** ：當您希望影像在報表伺服器或網頁伺服器上繼續當作檔案存在時，選擇此選項。  
   
--   **內嵌**當您想要將影像內嵌到報表中時，請選擇此選項。  
+-   **內嵌** ：當您要將影片內嵌到報表中時，選擇此選項。  
   
--   **資料庫**當您想要加入的資料庫功能變數名稱代表您要包含在報表中的影像時，請選擇此選項。  
+-   **資料庫** ：當您要加入的資料庫欄位名稱代表您要包含在報表中的影像時，選擇此選項。  
   
  **使用此影像**  
  此選項會在您選取 [內嵌]**** 或 [外部]**** 選項時出現。  
@@ -49,7 +49,7 @@ ms.locfileid: "66109162"
   
  如果您選取 [外部]**** 選項，輸入影像的 URL。 對於發行到設定為原生模式之報表伺服器的報表，請使用完整或相對路徑（例如，HTTP://*\<servername>*/images/image1.jpg）。 對於發行到設定為 SharePoint 整合模式之報表伺服器的報表，請使用完整的 URL （例如，HTTP://*\<伺服器名稱>/\<site>*/Documents/images/image1.jpg）。  
   
- **匯入**  
+ [匯入]****  
  適用於選取 [內嵌]**** 時。 按一下此選項，即可將影像加入到 [使用此影像]**** 下拉式清單中。  
   
  **使用此欄位**  
@@ -59,8 +59,8 @@ ms.locfileid: "66109162"
  選擇資料庫中包含的適當圖片格式 (例如，.bmp、.jpeg、.gif、.png 或 .x-png)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [將報表專案的格式設定 &#40;報表產生器和 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS 設定文字和預留位置的格式&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [影像 &#40;報表產生器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

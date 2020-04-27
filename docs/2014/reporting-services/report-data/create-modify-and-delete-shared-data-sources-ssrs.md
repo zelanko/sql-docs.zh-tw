@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107394"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
@@ -38,18 +38,18 @@ ms.locfileid: "66107394"
 |描述|檢視資料夾的內容時，與「報表管理員」中的項目一起顯示的描述。|  
 |連線類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。|  
 |連接字串|資料庫的連接字串。 如需詳細資訊以及查看常用資料來源之連接字串的範例，請參閱[Reporting Services 中的資料連線、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。|  
-|認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱[指定報表資料來源的認證和連接資訊](../../integration-services/connection-manager/data-sources.md)。|  
+|認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../integration-services/connection-manager/data-sources.md)。|  
   
  共用資料來源不包含用來擷取資料的查詢資訊。 查詢永遠會保留在報表定義中。  
   
 ## <a name="creating-and-modifying-a-shared-data-source"></a>建立與刪除共用資料來源  
- 若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源]**** 權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
+ 若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源]  權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
   
  如需有關建立共用資料來源的詳細資訊，請參閱：  
   
--   [建立 &#40;SSRS&#41;的內嵌或共用資料來源](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [建立內嵌或共用資料來源 &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
--   [以 SharePoint 整合模式 &#40;Reporting Services 建立和管理共用資料來源&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
+-   [建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
  在報表伺服器上建立共用資料來源之後，您可以建立角色指派來控制其存取權、將其移動到不同的位置、重新命名它，或者在外部資料來源執行維護作業時離線以防進行報表處理。 如果您重新命名或移動共用資料來源項目至報表伺服器資料夾階層中的其他位置，所有參考共用資料來源的報表或訂閱，其相關路徑資訊會隨之更新。 如果您讓共用資料來源離線，所有報表、模型和訂閱都不會執行，直到您重新啟用資料來源為止。  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105792"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>設定報表項目的格式 (報表產生器及 SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66105792"
   
  C. 文字方塊具有文字標籤和預留位置。  
   
- 您可以變更格式化選項，其方法是選取要格式化的項目，然後開啟此項目的 [屬性] 對話方塊。 例如，如果您想要格式化整個文字方塊的內容或是文字方塊內選取的字，請以滑鼠右鍵按一下此項目，然後選取 [文字方塊屬性]****。 然後，您可以套用您想要的格式化樣式。  
+ 您可以變更格式化選項，其方法是選取要格式化的項目，然後開啟此項目的 [屬性] 對話方塊。 例如，如果您想要格式化整個文字方塊的內容或是文字方塊內選取的字，請以滑鼠右鍵按一下此項目，然後選取 [文字方塊屬性]  。 然後，您可以套用您想要的格式化樣式。  
   
  若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66105792"
  [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  描述如何針對一個文字方塊中的不同文字區塊，進行文字格式化與自訂格式化選項。  
   
- [將 HTML 匯入報表 &#40;報表產生器和 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  描述如何在報表中插入並使用 HTML。  
   
  [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "66105792"
  [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)  
  描述如何格式化報表項目和資料區內的線條、格線、色彩和影像。  
   
- [將報表或文字方塊的地區設定 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [設定報表或文字方塊的地區設定 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  描述如何變更因語言和地區而異之資料顯示格式的設定，例如日期、貨幣和數字值。  
   
 ## <a name="see-also"></a>另請參閱  

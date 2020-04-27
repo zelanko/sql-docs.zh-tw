@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108681"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
@@ -34,7 +34,7 @@ ms.locfileid: "66108681"
   
  如果您在預設組態中安裝了原生模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，當安裝了報表伺服器執行個體時，就會自動建立及設定報表伺服器資料庫。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來檢視或修改安裝程式為您進行的設定。  
   
-##  <a name="rsdbrequirements"></a>開始之前  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> 開始之前  
  建立或設定報表伺服器資料庫是多重步驟的程序。 在您建立報表伺服器資料庫之前，請考慮您要如何指定以下項目：  
   
  選取資料庫伺服器  
@@ -79,7 +79,7 @@ ms.locfileid: "66108681"
   
 2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]**。  
   
-3.  按一下 [**建立新的報表伺服器資料庫**]，然後按 **[下一步]**。  
+3.  按一下 **[建立新的報表伺服器資料庫]**，再按 **[下一步]**。  
   
 4.  連接到將用來建立及主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體：  
   

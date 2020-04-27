@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106271"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106271"
   
  您可以在建立圖表類型之後再加以變更。 如需詳細資訊，請參閱[變更圖表類型 &#40;報表產生器及 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)。  
   
- 其中許多圖表類型的範例可從範例報表取得。 如需有關下載範例報表的詳細資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[報表產生器和報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 其中許多圖表類型的範例可從範例報表取得。  如需有關下載範例報表的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 |圖表類型|顯示比例資料|顯示庫存資料|顯示線性資料|顯示多重值資料|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -48,8 +48,8 @@ ms.locfileid: "66106271"
 |[股票圖 &#40;報表產生器及 SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![可用](../media/greencheck.gif "可用")||![可用](../media/greencheck.gif "可用")|  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [圖表中的空白和 Null 資料點 &#40;報表產生器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [將圖表加入報表中 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

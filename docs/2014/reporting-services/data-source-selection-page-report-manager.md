@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109440"
 ---
 # <a name="data-source-selection-page-report-manager"></a>資料來源選擇頁面 (報表管理員)
@@ -29,7 +29,7 @@ ms.locfileid: "66109440"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表或模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表或模型的 [一般] 屬性頁面。  
   
 4.  選取 **[資料來源]** 索引標籤。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66109440"
   
 ## <a name="see-also"></a>另請參閱  
  [管理報表資料來源](report-data/manage-report-data-sources.md)   
- [指定報表資料來源的認證和連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [資料來源屬性頁面 &#40;報表管理員&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [新增資料來源頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  

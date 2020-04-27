@@ -13,17 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110105"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>使用階層式方法重新排列階層式資料表中的資料順序
   重新組織階層是常見的維護工作。 在這項工作中，我們將會使用 UPDATE 陳述式搭配 [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) 方法，先將單一資料列移到階層中的新位置。 然後，我們會將整個子樹移到新位置。  
   
- 
-  `GetReparentedValue` 方法會使用兩個引數。 第一個引數描述要修改的階層部分。 例如，如果階層為 **/1/4/2/3/** 而您想要變更 **/1/4/** 區段，讓該階層變成 **/2/1/2/3/**，留下最後兩個節點 (**2/3/**) 不變，您必須提供變更的節點 (**/1/4/**) 作為第一個引數。 第二個引數會提供新的階層層級，在範例中為 **/2/1/**。 兩個引數不必包含相同的層級數目。  
+ `GetReparentedValue` 方法會使用兩個引數。 第一個引數描述要修改的階層部分。 例如，如果階層為 **/1/4/2/3/** 而您想要變更 **/1/4/** 區段，讓該階層變成 **/2/1/2/3/**，留下最後兩個節點 (**2/3/**) 不變，您必須提供變更的節點 (**/1/4/**) 作為第一個引數。 第二個引數會提供新的階層層級，在範例中為 **/2/1/**。 兩個引數不必包含相同的層級數目。  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>將單一資料列移到階層中的新位置  
   

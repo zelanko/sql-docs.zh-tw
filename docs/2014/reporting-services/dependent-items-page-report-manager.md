@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109330"
 ---
 # <a name="dependent-items-page-report-manager"></a>相依項目頁面 (報表管理員)
@@ -29,7 +29,7 @@ ms.locfileid: "66109330"
   
 2.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該資料來源的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該資料來源的 [一般] 屬性頁面。  
   
 4.  選取 **[相依項目]** 索引標籤。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66109330"
  **名稱**  
  顯示報表或模型的名稱。 按一下報表名稱將它開啟。 按一下模型的名稱則可開啟它的屬性頁面。  
   
- **說明**  
+ **描述**  
  顯示報表或模型的描述。  
   
  **刪除**  
@@ -49,7 +49,7 @@ ms.locfileid: "66109330"
  **編輯**  
  按一下 [屬性] 圖示即可存取報表或模型的屬性頁面。  
   
- **型別**  
+ **類型**  
  顯示項目類型的圖示。  
   
  **修改日期**  

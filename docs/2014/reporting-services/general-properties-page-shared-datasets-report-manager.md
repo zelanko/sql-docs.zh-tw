@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109071"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>一般屬性頁面、共用資料集 (報表管理員)
@@ -39,7 +39,7 @@ ms.locfileid: "66109071"
  **名稱**  
  輸入可用來識別報表伺服器資料夾階層中項目的共用資料集名稱。  
   
- **說明**  
+ **描述**  
  提供有關共用資料集的資訊。 此描述會顯示在 [內容] 頁面上。  
   
  **在清單檢視中隱藏**  

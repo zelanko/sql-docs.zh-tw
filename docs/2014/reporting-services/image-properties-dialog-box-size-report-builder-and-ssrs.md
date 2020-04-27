@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108985"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>影像屬性對話方塊、大小 (報表產生器及 SSRS)
@@ -45,13 +45,13 @@ ms.locfileid: "66108985"
  **返回頁首**  
  指定在資料格或文字方塊的右邊緣與資料格內顯示的值之間有多少填補或空格。  
   
- **下**  
+ **靠**  
  指定在資料格或文字方塊的右邊緣與資料格內顯示的值之間有多少填補或空格。  
   
 ## <a name="see-also"></a>另請參閱  
  [影像屬性對話方塊、一般 &#40;報表產生器和 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [影像 &#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [對話方塊、窗格和嚮導的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [&#40;報表產生器和 SSRS&#41;的影像](report-design/images-report-builder-and-ssrs.md)   
+ [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

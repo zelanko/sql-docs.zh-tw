@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106085"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>資料區域與地圖 (報表產生器及 SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "66106085"
  您可以將資料區放在其他資料區內，成為巢狀結構。 例如，如果您要在資料庫中建立每個銷售人員的銷售記錄，您可以建立一份含有文字方塊和影像的清單，以便顯示員工的相關資訊，然後再將資料表和圖表資料區域加入至清單，以便顯示員工的銷售記錄。 如需詳細資訊，請參閱 [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)。  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>連結至相同資料集的多個資料區域  
- 您可以將多個資料區域連結至相同的資料集，以便提供相同資料的不同檢視。 例如，您可以在資料表和圖表中顯示相同的資料。 也可以撰寫報表來提供資料表的互動式排序按鈕，讓您在排序資料表時，就會自動排序圖表。 如需詳細資訊，請參閱[將多個資料區域連結至相同的資料集 &#40;報表產生器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
+ 您可以將多個資料區域連結至相同的資料集，以便提供相同資料的不同檢視。 例如，您可以在資料表和圖表中顯示相同的資料。 也可以撰寫報表來提供資料表的互動式排序按鈕，讓您在排序資料表時，就會自動排序圖表。 如需詳細資訊，請參閱 [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
   
 ## <a name="data-for-a-data-region"></a>資料區的資料  
  每個 Tablix、圖表和量測計都是針對顯示單一資料集中的資料而設計。 地圖會顯示來自相同或不同資料集的空間資料和分析資料。 您也可以使用下列方式，包含來自從未連結到資料區之資料集的值：  
@@ -65,8 +65,8 @@ ms.locfileid: "66106085"
   
 ## <a name="see-also"></a>另請參閱  
  [報表撰寫概念 &#40;報表產生器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [頁面配置和轉譯 &#40;報表產生器和 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [報表、報表元件和報表定義 &#40;報表產生器和 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
  [教學課程 &#40;報表產生器&#41;](../report-builder-tutorials.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   

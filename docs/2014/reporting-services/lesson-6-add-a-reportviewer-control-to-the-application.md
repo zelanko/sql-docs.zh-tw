@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108415"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 課：將 ReportViewer 控制項加入到應用程式
@@ -22,13 +22,13 @@ ms.locfileid: "66108415"
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>若要將 ReportViewer 控制項加入至應用程式  
   
-1.  在**方案總管**中，以滑鼠右鍵按一下 **Default.aspx**，然後按一下 [檢視表設計師]  。  
+1.  在**方案總管**中，以滑鼠右鍵按一下 **Default.aspx**，然後按一下 [檢視表設計師]****。  
   
 2.  從 [**工具箱**] 視窗的 [ **AJAX 擴充**功能] 群組中，將**ScriptManager**控制項拖曳至設計介面。  
   
-3.  從 [報表]  群組，將 **ReportViewer** 控制項拖曳至設計介面上的 **ScriptManager** 控制項下方。  
+3.  從 [報表]**** 群組，將 **ReportViewer** 控制項拖曳至設計介面上的 **ScriptManager** 控制項下方。  
   
-4.  按一下 **ReportViewer** 控制項右上角的箭頭，開啟 [ReportViewer 工作]  視窗。  
+4.  按一下 **ReportViewer** 控制項右上角的箭頭，開啟 [ReportViewer 工作]**** 視窗。  
   
 5.  在 [**選擇報表**] 方塊中，選取您建立的父報表。  
   

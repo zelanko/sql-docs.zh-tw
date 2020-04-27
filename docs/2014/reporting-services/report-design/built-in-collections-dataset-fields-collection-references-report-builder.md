@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106444"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>資料集欄位集合參考 (報表產生器及 SSRS)
@@ -32,15 +32,15 @@ ms.locfileid: "66106444"
   
  若要將欄位集合的摘要值直接顯示在設計介面上的文字方塊中 (不屬於資料區的一部分)，您必須將資料集名稱指定為彙總函式的範圍。 例如，如果是名為 `SalesData`的資料集，下列運算式會針對 `Sales`: `=Sum(Fields!Sales,"SalesData")`欄位指定所有值的總計。  
   
- 當您使用 [運算式]**** 對話方塊來定義簡單欄位參考時，可以在 [類別目錄] 窗格中選取 Fields 集合，並在 [欄位]**** 窗格中查看可用欄位的清單。 每個欄位都有數個屬性，包括 Value 和 IsMissing。 其餘的屬性會預先定義在擴充欄位屬性上，這些屬性可能可以提供給資料集使用 (視資料來源類型而定)。  
+ 當您使用 [運算式]  對話方塊來定義簡單欄位參考時，可以在 [類別目錄] 窗格中選取 Fields 集合，並在 [欄位]  窗格中查看可用欄位的清單。 每個欄位都有數個屬性，包括 Value 和 IsMissing。 其餘的屬性會預先定義在擴充欄位屬性上，這些屬性可能可以提供給資料集使用 (視資料來源類型而定)。  
   
 ### <a name="detecting-nulls-for-a-dataset-field"></a>偵測資料集欄位的 Null  
- 若要偵測 Null 的欄位值 (`Nothing` 中為 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，您可以使用 `IsNothing` 函數。 當下列運算式放置於資料表詳細資料列的文字方塊內時，運算式會測試 `MiddleName` 欄位，並在該值為 Null 時以 "No Middle Name" 文字替代，而當該值不是 Null 時則為欄位值本身：  
+ 若要偵測 Null 的欄位值 ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)，您可以使用 `IsNothing` 函數。 當下列運算式放置於資料表詳細資料列的文字方塊內時，運算式會測試 `MiddleName` 欄位，並在該值為 Null 時以 "No Middle Name" 文字替代，而當該值不是 Null 時則為欄位值本身：  
   
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在執行階段偵測動態查詢的遺漏欄位  
- Fields 集合內的項目預設會有兩個屬性：Value 和 IsMissing。 IsMissing p 屬性會指出在設計階段針對資料集所定義的欄位是否包含在執行階段擷取的欄位中。 例如，您的查詢可能會呼叫預存程序 (其中的結果集會因為輸入參數而不同)，或者您的查詢可能會是 `SELECT * FROM` *\<資料表>* (變更資料表定義的地方)。  
+ Fields 集合內的項目預設會有兩個屬性：Value 和 IsMissing。 IsMissing p 屬性會指出在設計階段針對資料集所定義的欄位是否包含在執行階段擷取的欄位中。 例如，您的查詢可能會呼叫預存程序 (其中的結果集會因為輸入參數而不同)，或您的查詢可能會是 `SELECT * FROM` *資料表>\<* (變更資料表定義的地方)。  
   
 > [!NOTE]  
 >  IsMissing 會偵測設計階段與執行階段之間對於任何資料來源類型的資料集結構描述變更。 IsMissing 不能用來偵測多維度 cube 中的空白成員，而且與`EMPTY`和`NON EMPTY`的 MDX 查詢語言概念無關。  
@@ -88,7 +88,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>使用擴充欄位屬性  
  擴充欄位屬性是資料處理延伸模組在欄位上所定義的其他屬性，此模組是由資料集的資料來源類型所決定。 擴充欄位屬性是預先定義的，或是資料來源類型所特有的。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
- 如果您指定了該欄位不支援的屬性，則運算式會評估為 `null` (`Nothing` 中為 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 如果資料提供者不支援擴充欄位屬性，或是執行查詢時找不到欄位，則當屬性類型為 `null` 和 `Nothing` 時，此屬性值會是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`String` 中則為 `Object`)；當屬性類型為 `Integer` 時，此屬性值為零 (0)。 資料處理延伸模組可藉由最佳化包含這個語法的查詢來利用預先定義的屬性。  
+ 如果您指定了該欄位不支援的屬性，則運算式會評估為 `null` ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)。 如果資料提供者不支援擴充欄位屬性，或是執行查詢時找不到欄位，則當屬性類型為 `null` 和 `Nothing` 時，此屬性值會是 `String` ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中則為 `Object`)；當屬性類型為 `Integer` 時，此屬性值為零 (0)。 資料處理延伸模組可藉由最佳化包含這個語法的查詢來利用預先定義的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

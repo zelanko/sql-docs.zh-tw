@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa45de225ac1de636bc9e9b14cec9d1ab4512316
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109570"
 ---
 # <a name="cube-selection-dialog-box"></a>選取 Cube 對話方塊
@@ -25,6 +25,6 @@ ms.locfileid: "66109570"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services MDX 查詢設計工具使用者介面](report-data/analysis-services-mdx-query-designer-user-interface.md)   
- [適用于 MDX &#40;SSRS 的 Analysis Services 連線類型&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

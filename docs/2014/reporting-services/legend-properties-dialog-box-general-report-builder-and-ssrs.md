@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108560"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>圖例屬性對話方塊、一般 (報表產生器及 SSRS)
@@ -27,18 +27,18 @@ ms.locfileid: "66108560"
  **名稱**  
  輸入圖例的名稱。  
   
- **版面配置**  
+ **配置**  
  選擇一個選項以表示圖例的配置。 預設的圖例配置為 [自動] 資料表。  
   
--   **高資料表**顯示資料表中圖例的內容。 系統將會加入圖例項目，以垂直方式展開圖例。  
+-   **高型資料表** ：顯示資料表中圖例的內容。 系統將會加入圖例項目，以垂直方式展開圖例。  
   
--   資料**行**在單一資料行中顯示圖例的內容。  
+-   **資料行** ：顯示單一資料行中圖例的內容。  
   
--   資料**列**在單一資料列中顯示圖例的內容。  
+-   **資料列** ：顯示單一資料列中圖例的內容。  
   
--   **寬型資料表**顯示資料表中圖例的內容。 系統將會加入圖例項目，以水平方式展開圖例。  
+-   **寬型資料表** ：顯示資料表中圖例的內容。 系統將會加入圖例項目，以水平方式展開圖例。  
   
--   **自動資料表**顯示資料表中圖例的內容。 系統將會加入圖例項目，根據圖表中的可用空間，以水平或垂直方式展開圖例。  
+-   **自動資料表** ：顯示資料表中圖例的內容。 系統將會加入圖例項目，根據圖表中的可用空間，以水平或垂直方式展開圖例。  
   
  **停駐在圖表區域**  
  選取此選項，讓圖例與圖表區域產生關聯。  
@@ -47,13 +47,13 @@ ms.locfileid: "66108560"
  選取此選項，在圖表區域外部顯示圖例。 此選項僅適用於圖例停駐於圖表區域時。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [格式化圖表上的數列色彩 &#40;報表產生器和 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [在圖表上格式化圖例 &#40;報表產生器和 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [格式化圖表上的軸標籤 &#40;報表產生器和 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [使用 &#40;報表產生器和 SSRS 的調色板來定義圖表的色彩&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [在次要軸上繪製資料 &#40;報表產生器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [在圖表上格式化圖例 &#40;報表產生器和 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [將移動平均加入至圖表 &#40;報表產生器及 SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

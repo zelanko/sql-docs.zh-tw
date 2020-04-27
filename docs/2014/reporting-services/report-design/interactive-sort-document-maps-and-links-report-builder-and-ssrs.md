@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2fc1145354b4e14317c7588d75ea904f3fa094d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105639"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>互動式排序、文件引導模式及連結 (報表產生器及 SSRS)

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109346"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 已被取代的功能
@@ -27,18 +27,18 @@ ms.locfileid: "66109346"
   
  本主題內容：  
   
--   [SQL Server 2014 Reporting Services 已淘汰的功能](#bkmk_2014)  
+-   [SQL Server 2014 Reporting Services 已淘汰功能](#bkmk_2014)  
   
 -   [SQL Server 2012 SP1 Reporting Services 已被取代的功能](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services 已淘汰的功能](#bkmk_2012)  
+-   [SQL Server 2012 Reporting Services 已淘汰功能](#bkmk_2012)  
   
 -   [SQL Server 2008 R2 Reporting Services 已被取代的功能](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 已淘汰的功能  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 已淘汰的功能  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 不支援的功能  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **下一**版的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]將不再支援下列功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。  
+ 下一版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的 **** 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>HTML 轉譯延伸模組的裝置資訊設定  
  下列 HTML 轉譯延伸模組的裝置資訊設定已被取代。  
@@ -83,7 +83,7 @@ ms.locfileid: "66109346"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]不包含用來建立或更新報表模型的工具。 如需詳細資訊，請參閱[SQL Server 2014 中 SQL Server Reporting Services 的重大變更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
   
 #### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Web 服務端點中已被取代的方法  
- <xref:ReportService2010.ReportingService2010> Web 服務端點中的下列作業已被取代：  
+  Web 服務端點中的下列作業已被取代：  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
   
@@ -97,10 +97,9 @@ ms.locfileid: "66109346"
 ### <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本不支援的功能  
  下一版的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可支援下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但會在更新的版本中移除。 確實的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本尚未決定。  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中沒有已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中沒有已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 已淘汰的功能  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 已淘汰的功能  
  本節描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中已被取代的 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]功能。 下一版的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可支援下列 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能，但會在更新的版本中移除。 確實的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本尚未決定。  
   
 ### <a name="sharepoint-web-parts"></a>SharePoint Web 組件  
@@ -108,7 +107,7 @@ ms.locfileid: "66109346"
   
  如需已被取代之 web 元件的詳細資訊，請參閱[使用 SharePoint Web 組件查看和流覽原生模式報表（SSRS）](https://msdn.microsoft.com/library/ms159772.aspx)  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 已淘汰的功能  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 已淘汰的功能  
  本節描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中已被取代的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能。  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>HTML 轉譯延伸模組的裝置資訊設定  
@@ -154,13 +153,13 @@ ms.locfileid: "66109346"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]不包含用來建立或更新報表模型的工具。 如需詳細資訊，請參閱[SQL Server 2014 中 SQL Server Reporting Services 的重大變更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
   
 ### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Web 服務端點中已被取代的方法  
- <xref:ReportService2010.ReportingService2010> Web 服務端點中的下列作業已被取代：  
+  Web 服務端點中的下列作業已被取代：  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 已淘汰的功能  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 已淘汰的功能  
   
 > [!NOTE]  
 >  因為 SQL Server 2008 R2 是 SQL Server 2008 的次要版本更新，所以建議您也檢閱 SQL Server 2008 章節中的內容。  
@@ -174,6 +173,6 @@ ms.locfileid: "66109346"
  [Reporting Services 的新 &#40;&#41;](what-s-new-reporting-services.md)   
  [回溯相容性](../getting-started/backward-compatibility.md)   
  [SQL Server 2014 中 SQL Server Reporting Services 的行為變更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [SQL Server 2014 中 SQL Server Reporting Services 已停止的功能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
+ [SQL Server 2014 中已中止的 SQL Server Reporting Services 功能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   
   

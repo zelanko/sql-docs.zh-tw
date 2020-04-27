@@ -14,17 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aead5d8e5c85b67333f10bee4e73e2bb1a8633ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109367"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>資料集屬性對話方塊、查詢
   選取 [**資料集屬性**] 對話方塊上的 [**查詢**]，即可選擇資料來源並建立查詢。  
   
- 
-  **[資料集屬性]** 對話方塊包含下列項目：  
+ **[資料集屬性]** 對話方塊包含下列項目：  
   
 -   [資料集屬性對話方塊、參數](report-data/dataset-properties-dialog-box-parameters.md)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66109367"
  選取要做為資料集基礎的資料來源。 若要建立新的資料來源，按一下 **[新增]**。  
   
  **查詢類型**  
- 選取資料集使用的命令或查詢類型。 選取 **[文字]** 來執行查詢，以便從資料庫中擷取資料。 選取 **[資料表]** 即可使用 **的** [TableDirect] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能來選取資料表中的所有欄位。 選取 **[預存程序]** 即可依名稱執行預存程序。 預設會選取 [**文字**]，並用於大部分的查詢。 若要編輯選取的資料來源查詢，按一下 **[查詢設計工具]**。  
+ 選取資料集使用的命令或查詢類型。 選取 **[文字]** 來執行查詢，以便從資料庫中擷取資料。 選取 **[資料表]** 即可使用 **的** [TableDirect] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能來選取資料表中的所有欄位。 選取 **[預存程序]** 即可依名稱執行預存程序。 依預設，會選取 **[文字]** ，這適用於大多數的查詢。 若要編輯選取的資料來源查詢，按一下 **[查詢設計工具]**。  
   
 > [!NOTE]  
 >  並非所有的查詢類型都受到所有資料來源的支援。 例如， **[資料表]** 只受到 **[OLE DB]** 和 **[ODBC]** 資料來源類型的支援。  
@@ -56,12 +55,11 @@ ms.locfileid: "66109367"
  **資料表名稱**  
  輸入您想要當做資料集使用之資料表的名稱。 此選項會在您選取 **[資料表]** 時出現。  
   
- **選取或輸入預存程式名稱**  
+ **選取或輸入預存程序名稱**  
  輸入或選擇您要使用之預存程序的名稱。 按一下 [**運算式**] （*fx*）按鈕來編輯運算式。 此選項會在選擇 [預存程序] 命令類型選項時出現。  
   
- **超時時間（以秒為單位）**  
- 輸入查詢超時之前的秒數。預設值是30秒。 
-  **[逾時]** 的值必須是空白或大於零。 如果是空白，則查詢不會逾時。  
+ **逾時 (以秒為單位)**  
+ 輸入查詢超時之前的秒數。預設值是30秒。 **[逾時]** 的值必須是空白或大於零。 如果是空白，則查詢不會逾時。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的資料連線、資料來源及連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   

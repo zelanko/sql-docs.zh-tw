@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108426"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66108426"
   
 -   [變更文字樣式和資料行寬度](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a>格式化日期  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>格式化日期  
  依預設，[Date] 欄位會顯示日期和時間資訊。 您可以格式化該欄位以便只顯示日期。  
   
 #### <a name="to-format-a-date-field"></a>將日期欄位格式化  
@@ -45,7 +45,7 @@ ms.locfileid: "66108426"
   
 6.  預覽報表以查看 `[Date]` 欄位的變更，然後變更回設計檢視。  
   
-##  <a name="bkmk_format_currency"></a>將貨幣格式化  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>將貨幣格式化  
  [LineTotal] 欄位會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。  
   
 #### <a name="to-format-a-currency-field"></a>格式化貨幣欄位  
@@ -58,9 +58,9 @@ ms.locfileid: "66108426"
   
     -   **小數位數：2**  
   
-    -   **負數：（$12345.00）**  
+    -   **負數：($12345.00)**  
   
-    -   **符號： $ 英文（美國）**  
+    -   **符號：$ 英文 (美國)**  
   
 4.  選取 [使用千分位 (,) 符號]****。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108426"
   
 6.  預覽報表以查看 `[LineTotal]` 欄位的變更，然後變更回設計檢視。  
   
-##  <a name="bkmk_change_textstyle"></a>變更文字樣式和資料行寬度  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>變更文字樣式和資料行寬度  
  您也可以變更標頭資料列的格式，以便與報表中資料的資料列區分。 最後，您將調整資料行的寬度。  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>格式化標頭資料列和資料表資料行  
@@ -95,7 +95,7 @@ ms.locfileid: "66108426"
  您已經成功格式化資料行標頭和日期以及貨幣值。 下一步，您會將群組和總計加入至報表。 請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [將數位和日期格式化 &#40;報表產生器和 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
