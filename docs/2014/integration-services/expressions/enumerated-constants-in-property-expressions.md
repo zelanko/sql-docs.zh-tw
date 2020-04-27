@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898896"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
@@ -43,7 +43,7 @@ ms.locfileid: "62898896"
   
  [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> 封裝  
+##  <a name="package"></a><a name="Package"></a> 封裝  
  下列表格列出使用來自列舉值的值所設定之封裝屬性的易記名稱和數值相等項。  
   
  `PackageType`屬性：使用來自列舉的`DTSPackageType`值進行設定。  
@@ -86,7 +86,7 @@ ms.locfileid: "62898896"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> 優先順序條件約束  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> 優先順序條件約束  
  `EvalOp`屬性：使用來自列舉的`DTSPrecedenceEvalOp`值進行設定。  
   
 |DTSPrecedenceEvalOp 中的易記名稱|數值|  
@@ -105,7 +105,7 @@ ms.locfileid: "62898896"
 |Completion|2|  
 |已取消|3|  
   
-##  <a name="Foreach"></a> Foreach 迴圈列舉值  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Foreach 迴圈列舉值  
  「Foreach 迴圈」包含一組列舉值，其屬性可由屬性運算式設定。  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 列舉值  
@@ -143,7 +143,7 @@ ms.locfileid: "62898896"
 |節點|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> 工作  
+##  <a name="tasks"></a><a name="Tasks"></a> 工作  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含許多工作，其屬性可由屬性運算式設定。  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作  
@@ -475,7 +475,7 @@ ms.locfileid: "62898896"
 |快速|1|  
 |精確|2|  
   
-##  <a name="MaintenancePlanTasks"></a> 維護計畫工作  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> 維護計畫工作  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含一組工作，用以執行要在維護計畫和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的 SQL Server 工作。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援以程式設計方式處理這些工作，而且程式設計參考文件集也不包括這些工作及其列舉值的 API 文件集。  
@@ -568,7 +568,7 @@ ms.locfileid: "62898896"
 |索引|2|  
 |全部|3|  
   
-##  <a name="CommonProperties"></a> 通用屬性  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> 通用屬性  
  封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器可以使用下列列舉來設定指定的屬性。  
   
  `ForceExecutionResult`屬性：使用來自列舉的`DTSForcedExecResult`值進行設定。  

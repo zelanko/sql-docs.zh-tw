@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54ec4cc92383d0b8e423aabd19c0aeee9226d71f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896039"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>開發自訂連接管理員的使用者介面
@@ -288,6 +288,6 @@ private void ConfigureControlsFromConnectionManager()
   
 ## <a name="see-also"></a>另請參閱  
  [建立自訂連線管理員](creating-a-custom-connection-manager.md)   
- [撰寫自訂連線管理員的程式碼](coding-a-custom-connection-manager.md)  
+ [撰寫自訂連接管理員的程式碼](coding-a-custom-connection-manager.md)  
   
   

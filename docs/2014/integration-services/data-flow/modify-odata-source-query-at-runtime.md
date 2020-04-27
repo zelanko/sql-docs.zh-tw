@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901185"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在執行階段修改 OData 來源查詢
-  您可以在執行階段修改 OData 來源查詢，修改的方式是將「運算式」  加入資料流程工作的 [OData Source].[Query] 屬性。  
+  您可以在執行階段修改 OData 來源查詢，修改的方式是將運算式加入資料流程工作的 **[OData Source].[Query]** 屬性。  
   
  請注意，資料行必須維持與設計階段所使用的內容相同，否則您在執行封裝時將會收到錯誤。 在使用 $select 查詢選項時，請務必指定相同的資料行 (以相同順序)。 使用 $select 選項有一個更安全的替代方法，也就是直接從來源元件 UI 取消選取您不想要的資料行。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62901185"
   
 1.  選取包含您的 [OData 來源]**** 的 [資料流程工作]****。  
   
-2.  在 [屬性]  視窗中，反白顯示 [運算式]  屬性。  
+2.  在 [屬性]**** 視窗中，反白顯示 [運算式]**** 屬性。  
   
 3.  按一下 [...]（省略號）按鈕，以顯示 [**屬性運算式編輯器**]。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62901185"
   
 5.  按一下 [...]**運算式**的（省略號）按鈕。  
   
-6.  輸入 [運算式]  。  
+6.  輸入**運算式**。  
   
 7.  按一下 [確定]  。  
   

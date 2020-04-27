@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898856"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
@@ -112,7 +112,7 @@ ms.locfileid: "62898856"
 > [!IMPORTANT]  
 >  您必須將命名空間和限定變數名稱的組合加上方括號，運算式評估工具才能辨認該變數。  
   
- 如果**使用者**命名空間中的**count**值為10，而 MyNamespace 中的**count**值**** 為2，則運算式會評估為`true` ，因為運算式評估工具會辨識兩個不同的變數。  
+ 如果**使用者**命名空間中的**count**值為10，而 MyNamespace 中的**count**值**MyNamespace**為2，則運算式會評估為`true` ，因為運算式評估工具會辨識兩個不同的變數。  
   
  即使變數名稱不是唯一的，也不會發生錯誤。 但運算式評估工具只會使用一個變數執行個體評估運算式，並傳回不正確的結果。 例如，下列運算式是要用來比較兩個不同**計數**變數的值（10和2），但運算式會評估為`false` ，因為運算式評估工具使用相同的**count**變數實例兩次。  
   

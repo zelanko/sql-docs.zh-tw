@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921792"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>在不還原資料的情況下復原資料庫 (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921792"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  FROM **=** \<*backup_device>* 子句未使用於僅復原的還原，因為沒有備份的必要。  
+>  From **=** \< *backup_device>* 子句不會用於僅復原還原，因為不需要備份。  
   
  **範例**  
   
@@ -91,8 +91,8 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="see-also"></a>另請參閱  
  [線上還原 &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [分次還原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [檔案還原 &#40;簡單復原模式&#41;](file-restores-simple-recovery-model.md)   
- [檔案還原 &#40;完整復原模式&#41;](file-restores-full-recovery-model.md)   
+ [&#40;簡單復原模式的檔案還原&#41;](file-restores-simple-recovery-model.md)   
+ [&#40;完整復原模式的檔案還原&#41;](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

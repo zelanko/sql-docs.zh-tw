@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899963"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
-  資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之 `Object` 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
+  資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 `Object` 之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
   
  您可以在多種不同情況下使用資料錄集目的地。 以下是一些範例：  
   
@@ -70,23 +70,19 @@ ms.locfileid: "62899963"
   
     1.  建立名稱為 `BonusRecordset` 的變數，然後將其類型設為 `Object`。  
   
-         
-  `BonusRecordset` 變數會保存資料錄集。  
+         `BonusRecordset` 變數會保存資料錄集。  
   
     2.  建立名稱為 `EmailAddress` 的變數，然後將其類型設為 `String`。  
   
-         
-  `EmailAddress` 變數會保存銷售人員的電子郵件地址。  
+         `EmailAddress` 變數會保存銷售人員的電子郵件地址。  
   
     3.  建立名稱為 `FirstName` 的變數，然後將其類型設為 `String`。  
   
-         
-  `FirstName` 變數會保存銷售人員的名字。  
+         `FirstName` 變數會保存銷售人員的名字。  
   
     4.  建立名稱為 `Bonus` 的變數，然後將其類型設為 `Double`。  
   
-         
-  `Bonus` 變數會保存銷售人員的獎金金額。  
+         `Bonus` 變數會保存銷售人員的獎金金額。  
   
 #### <a name="to-configure-the-connection-managers"></a>設定連接管理員  
   

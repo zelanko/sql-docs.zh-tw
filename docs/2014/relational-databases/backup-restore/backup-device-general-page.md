@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922139"
 ---
 # <a name="backup-device-general-page"></a>備份裝置 (一般頁面)
-  使用 [**一般**] 頁面，即可指定或查看邏輯備份裝置的一般屬性。  
+  使用 **[一般]** 頁面，可指定或檢視邏輯備份裝置的一般屬性。  
   
  **若要使用 SQL Server Management Studio 檢視備份裝置的內容**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62922139"
  檢視現有邏輯備份裝置的名稱，或是指定新邏輯備份裝置的名稱。  
   
  **磁帶**  
- 在 [磁帶]**** 清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的電腦時，才能使用此選項。  
+ 在 [磁帶]  清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連結到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的電腦上時，此選項才可以使用。  
   
 > [!NOTE]  
 >  遠端電腦上的磁帶備份裝置並不是有效的備份目的地。  
@@ -41,8 +41,7 @@ ms.locfileid: "62922139"
  **檔案**  
  檢視現有邏輯備份裝置的目的地檔案，或是指定新邏輯備份裝置的目的地檔案。  
   
--   如果是現有的邏輯備份裝置，則會顯示備份檔案的路徑。 
-  **[檔案]** 欄位無法編輯，而且 [瀏覽] 按鈕無法使用。  
+-   如果是現有的邏輯備份裝置，則會顯示備份檔案的路徑。 **[檔案]** 欄位無法編輯，而且 [瀏覽] 按鈕無法使用。  
   
 -   如果是新的邏輯備份裝置，您必須提供要定義邏輯備份裝置之備份檔案的路徑。 這個檔案目前尚不存在。  
   
@@ -54,26 +53,25 @@ ms.locfileid: "62922139"
     >  透過網路備份資料可能會受到網路錯誤的影響，因此，建議您在備份作業完成之後要進行確認。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)。  
   
 ## <a name="remarks"></a>備註  
- 單一媒體集是由一組一個或多個備份裝置上的備份所組成。 
-  *「媒體集」* 是按順序排列的備份媒體集合 (磁帶或磁碟檔案)，由一個或多個的備份作業使用固定的備份裝置類型與數量寫入。 如需媒體集的一般資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
+ 單一媒體集是由一組一個或多個備份裝置上的備份所組成。 *「媒體集」* 是按順序排列的備份媒體集合 (磁帶或磁碟檔案)，由一個或多個的備份作業使用固定的備份裝置類型與數量寫入。 如需媒體集的一般資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
   
  將媒體集中的第一個備份寫入邏輯備份裝置時，會初始化對應於邏輯備份裝置的實體備份裝置。 如果實體備份裝置是目前尚不存在的檔案，在初始化時便會建立該檔案。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [定義磁帶機的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [指定磁片或磁帶做為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [指定磁碟或磁帶作為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [刪除備份裝置 &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [在備份 &#40;SQL Server 上設定到期日&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [設定備份的到期日 &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [檢視備份磁帶或檔案的內容 &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [查看備份組中的資料和記錄檔 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [檢視備份組中的資料和記錄檔 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

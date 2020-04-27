@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889783"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以程式設計方式列舉可用的封裝
   當您以程式設計方式處理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，可能會需要判別個別的封裝或資料夾是否存在，或是列舉可供載入與執行的預儲封裝。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。  
   
-##  <a name="exists"></a> 判斷套件或資料夾是否存在  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> 判斷套件或資料夾是否存在  
  若要以程式設計方式判斷儲存的封裝是否存在，請在嘗試載入和執行封裝之前，呼叫下列其中一個方法：  
   
 |儲存位置|要呼叫的方法|  
@@ -41,7 +41,7 @@ ms.locfileid: "62889783"
   
  [回到頁首](#top)  
   
-##  <a name="listing"></a> 列舉可用的套件  
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> 列舉可用的套件  
  若要以程式設計方式取得儲存的封裝清單，請呼叫下列其中一個方法：  
   
 |儲存位置|要呼叫的方法|  
@@ -51,7 +51,7 @@ ms.locfileid: "62889783"
   
  下列範例是可示範這些方法之使用的主控台應用程式。  
   
-###  <a name="listing_store"></a> 範例 (SSIS 套件存放區)  
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> 範例 (SSIS 套件存放區)  
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> 方法來列出 SSIS 封裝存放區內儲存的封裝。 由 SSIS 封裝存放區所管理的預設儲存位置是檔案系統和 MSDB。 您可以在這些位置建立其他邏輯資料夾。  
   
 ```vb  
@@ -157,7 +157,7 @@ namespace EnumeratePackagesSSIS_CS
   
  [回到頁首](#top)  
   
-###  <a name="listing_sql"></a> 範例 (SQL Server)  
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> 範例 (SQL Server)  
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> 方法來列出儲存於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。  
   
 ```vb  

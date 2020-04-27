@@ -19,18 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917465"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>使用備份與還原複製資料庫
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以藉由還原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本所建立的使用者資料庫備份，建立新的資料庫。 但是， **無法還原使用舊版**所建立的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]備份。 此外，任何舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都無法還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用與之前版本不同的預設路徑。 因此，若要還原舊版預設位置中建立的資料庫備份，您就必須使用 MOVE 選項。 如需新預設路徑的詳細資訊[，請參閱 SQL Server 預設和命名實例的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 如需移動資料庫檔案的詳細資訊，請參閱本主題稍後的「移動資料庫檔案」。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用與之前版本不同的預設路徑。 因此，若要還原舊版預設位置中建立的資料庫備份，您就必須使用 MOVE 選項。 如需新預設路徑的詳細資訊[，請參閱 SQL Server 預設和命名實例的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 如需移動資料庫檔案的詳細資訊，請參閱本主題稍後的「移動資料庫檔案」。  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>使用備份與還原來複製資料庫的一般步驟  
  當您使用備份與還原將資料庫複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體時，來源和目的地電腦可為執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何平台。  
@@ -93,9 +92,9 @@ ms.locfileid: "62917465"
  當資料庫在另一部電腦上還原時，初始還原作業的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者會自動變成新資料庫的擁有者。 還原資料庫時，系統管理員或新的資料庫擁有者可以變更資料庫擁有權。 若要防止未經授權的資料庫還原，請使用媒體或備份組密碼。  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>還原至另一個伺服器執行個體時管理中繼資料  
- 當您在另一個伺服器執行個體還原資料庫時，為了提供一致的經驗給使用者和應用程式，您可能需要在其他伺服器執行個體上為資料庫重新建立部分或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 當您在另一個伺服器執行個體還原資料庫時，為了提供一致的經驗給使用者和應用程式，您可能需要在其他伺服器執行個體上為資料庫重新建立部分或全部的中繼資料，例如登入和作業。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
- **若要查看備份組中的資料和記錄檔**  
+ **檢視備份組中的資料與記錄檔**  
   
 -   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
@@ -115,11 +114,11 @@ ms.locfileid: "62917465"
   
  **若要重新啟動被中斷的還原作業**  
   
--   [&#40;Transact-sql 重新開機中斷的還原作業&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [重新啟動中斷的還原作業 &#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
  **變更資料庫的擁有者**  
   
--   [sp_changedbowner &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
+-   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
  **使用 SQL Server 管理物件 (SMO) 複製資料庫**  
   
@@ -134,7 +133,7 @@ ms.locfileid: "62917465"
 ## <a name="see-also"></a>另請參閱  
  [將資料庫複製到其他伺服器](copy-databases-to-other-servers.md)   
  [SQL Server 預設和已命名實例的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [RESTORE FILELISTONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

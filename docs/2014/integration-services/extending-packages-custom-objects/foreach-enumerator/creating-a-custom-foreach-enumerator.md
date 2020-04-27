@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49455bf9a5138d539a13ed241a24ab5d720c7f43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896078"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>建立自訂 Foreach 列舉值
@@ -81,6 +81,6 @@ namespace Microsoft.Samples.SqlServer.Dts
   
 ## <a name="see-also"></a>另請參閱  
  [撰寫自訂 Foreach 列舉值的程式碼](coding-a-custom-foreach-enumerator.md)   
- [開發自訂 Foreach 列舉程式的使用者介面](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [開發自訂 ForEach 列舉值的使用者介面](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   

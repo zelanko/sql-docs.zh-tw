@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913549"
 ---
 # <a name="create-scripts-using-templates"></a>利用範本建立指令碼
@@ -30,7 +30,7 @@ ms.locfileid: "62913549"
   
 3.  在 [連接到 Database Engine]**** 對話方塊中，填妥連接資訊，然後按一下 [連接]****。 此時會開啟一個新的 [查詢編輯器] 視窗，其中含有 [建立資料庫]**** 範本的內容。  
   
-4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。  
+4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。  
   
 5.  在 [指定範本參數的值]**** 對話方塊中，[值]**** 資料行包含 **Database_Name** 參數的建議值。 在 [資料庫名稱]**** 參數方塊中，輸入 [行銷]****，然後按一下 [確定]****。 請注意在不同位置將 [行銷] 插入指令碼的方式。  
   

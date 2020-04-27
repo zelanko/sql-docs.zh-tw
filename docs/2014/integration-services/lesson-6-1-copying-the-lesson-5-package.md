@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890754"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的封裝
+# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1:複製第 5 課的封裝
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>若要複製第 5 課的封裝  
@@ -54,7 +54,7 @@ ms.locfileid: "62890754"
   
     1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  按一下 **[下載]** 索引標籤。  
+    2.  按一下 [**下載**] 索引標籤。  
   
     3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890754"
      在複製第 5 課封裝之後，如果您目前在方案中已經有之前課程的封裝，請以滑鼠右鍵按一下 1-5 課的每一個封裝，並按一下 [從專案移除]。 當您完成時，您的方案中應該只有 Lesson 6.dtsx。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2：將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [步驟 2:將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

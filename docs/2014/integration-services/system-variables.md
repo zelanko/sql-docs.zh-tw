@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927221"
 ---
 # <a name="system-variables"></a>系統變數
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供一組系統變數，可儲存有關執行中封裝及其物件的資訊。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組系統變數來儲存執行套件及其物件的資訊。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
   
  所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至參數的參數繫結中使用。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62927221"
 |`IgnoreConfigurationsOnLoad`|Boolean|指出載入封裝時是否忽略封裝組態。|  
 |**InteractiveMode**|Boolean|指示封裝是否以互動模式執行。 如果封裝在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中執行，則此屬性設為 `True`。 如果封裝是使用**DTExec**命令提示字元公用程式來執行，則屬性會設定`False`為。|  
 |`LocaleId`|Int32|封裝使用的地區設定。|  
-|**名**|String|執行封裝之電腦的名稱。|  
+|**MachineName**|String|執行封裝之電腦的名稱。|  
 |**OfflineMode**|Boolean|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
 |**PackageID**|String|封裝的唯一識別碼。|  
 |**PackageName**|String|封裝名稱。|  
@@ -104,6 +104,6 @@ ms.locfileid: "62927221"
  此規則也適用於使用者自訂變數。 但是，由於系統變數的資料類型無法變更，而且您必須修改這些變數的用法以符合其資料類型，因此使用者自訂變數比較有彈性。 參數繫結中使用之使用者自訂變數所定義的資料類型，通常與其對應參數的資料類型相容。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在執行 SQL 工作中將查詢參數對應到變數](control-flow/execute-sql-task.md)  
+ [在執行 SQL 工作中將查詢參數對應至變數](control-flow/execute-sql-task.md)  
   
   

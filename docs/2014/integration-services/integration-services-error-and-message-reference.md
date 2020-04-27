@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892656"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
@@ -43,9 +43,8 @@ ms.locfileid: "62892656"
   
 -   [資料流程元件錯誤訊息 (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> 錯誤訊息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_E_` 當做開頭。  
+##  <a name="error-messages"></a><a name="msgError"></a> 錯誤訊息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_E_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -231,7 +230,7 @@ ms.locfileid: "62892656"
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|這個查詢的執行沒有相關聯的結果資料列集。 未正確指定結果。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|未正確產生偵錯傾印檔案。 hresult 為 0x%1!8.8X!。|  
 |0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 無效。 當伺服器或 Proxy URL 為 Null 或格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 無效。 當指定 http 或 https 以外的配置或 URL 的格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 無效。 當指定 http 或 https 以外的配置或 URL 的格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|無法建立與伺服器 %1 的連接。 當伺服器不存在或 Proxy 設定不正確時，就會發生這個錯誤。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|已經重設或結束與伺服器的連接。 請稍後再試一次。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|"%1" 的登入嘗試失敗。 當提供的登入憑證不正確時，就會發生這個錯誤。 請驗證登入認證。|  
@@ -790,7 +789,7 @@ ms.locfileid: "62892656"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|至少必須指定一個來源檔案。|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|在來源資料庫 "%2" 中找不到檔案 "%1"。|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|符合 U.S. 規範的系統上不允許要求的作業。FIPS 140-2.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|執行查詢 "%1" 失敗，發生下列錯誤: "%2"。 可能的失敗原因：查詢發生問題、未正確設定 "ResultSet" 屬性、未正確設定參數，或未正確建立連接。|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|執行查詢 "%1" 失敗，發生下列錯誤: "%2"。 可能的失敗原因: 查詢發生問題、未正確設定 "ResultSet" 屬性、未正確設定參數，或未正確建立連接。|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|從 XML 檔案讀取預存程序名稱時發生錯誤。|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|傳送預存程序工作的資料節點無效。|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|連接 "%1" 的類型不是 "SMOServer"。|  
@@ -1114,7 +1113,7 @@ ms.locfileid: "62892656"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|值 %1!d! 未辨識為有效的存取模式 。 小數位數必須在 %3!d! 到 %4!d! 的範圍內 。 小數位數不得超出有效位數，且不得為負數。|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|值 %1!d! 未辨識為有效的存取模式 。 長度必須是正數。|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|無法指派負值給 %1。|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2" 的 "%1" 自訂屬性不能設定為 true。  資料行資料類型必須是下列其中一項：DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2 或 DT_FILETIME。|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2" 的 "%1" 自訂屬性不能設定為 true。  資料行資料類型必須是下列其中一個: DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2 或 DT_FILETIME。|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|無法重新附加 "%1"。 請刪除路徑、加入新路徑，然後再附加。|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|函數 "%1" 需要 %2!d! 參數， 而非 %3!d! 參數。 已辨識函數名稱，但參數數目無效。|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|函數 "%1" 需要 %2!d! 參數， 而非 %3!d! 參數。 已辨識函數名稱，但參數數目無效。|  
@@ -2018,9 +2017,8 @@ ms.locfileid: "62892656"
 |||DTS_E_GETCATMANAGERFAILED|無法建立 COM 元件類別目錄管理員，因為錯誤 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|元件 %1!s! 無法初始化，因為錯誤 0x%2!8.8X! "%3!s!"。|  
   
-##  <a name="msgWarning"></a> 警告訊息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 `DTS_W_` 當做開頭。  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> 警告訊息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 `DTS_W_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2126,7 +2124,7 @@ ms.locfileid: "62892656"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|找不到元件 %2 的 "%1" 值。 找不到元件的 CurrentVersion 值。 如果元件未於 DTSInfo 區段中設定登錄資訊來包含 CurrentVersion 值，就會發生這個錯誤。 如果未適當地登錄元件，則在元件開發期間或在封裝中使用元件時，就會出現這個訊息。|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|緩衝區管理員無法取得暫存檔名稱。|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|緩衝區管理員無法在路徑 "%1" 上建立暫存檔。 不會再考慮使用此路徑做為暫存區。|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告：無法開啟全域共用記憶體來與效能 DLL 通訊；資料流程效能計數器無法使用。  若要解決問題，必須以管理員身分或在系統的主控台上執行此封裝。|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告: 無法開啟全域共用記憶體來與效能 DLL 通訊; 資料流程效能計數器無法使用。  若要解決問題，必須以管理員身分或在系統的主控台上執行此封裝。|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|檔案結尾有不完整的資料列。|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|在讀取標頭資料列時，已經到達資料檔案的結尾。 請確定標頭資料列分隔符號和要略過的標頭資料列數都正確。|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|無法從 OLE DB 提供者擷取資料行字碼頁資訊。  如果元件支援 "%1" 屬性，將使用該屬性的字碼頁。  如果目前的字串字碼頁值不正確，請變更屬性的值。  如果元件不支援屬性，將使用元件地區設定識別碼的字碼頁。|  
@@ -2165,9 +2163,8 @@ ms.locfileid: "62892656"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|沒有任何輸入資料行對應到 %1。|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|資料表 "%1" 已變更。 此資料表可能已加入新的資料行。|  
   
-##  <a name="msgInfo"></a> 參考用訊息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 `DTS_I_` 當做開頭。  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> 參考用訊息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 `DTS_I_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2265,9 +2262,8 @@ ms.locfileid: "62892656"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 已將快取寫入檔案 "%2"。|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 目的地 "%1" 的插入認可大小上限屬性設定為 0。 這個屬性設定可能會導致執行中的封裝停止回應。 如需詳細資訊，請參閱 OLE DB 目的地編輯器 (連接管理員頁面) 的 F1 說明主題。|  
   
-##  <a name="msgGeneral"></a> 一般和事件訊息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_MSG_` 當做開頭。  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> 一般和事件訊息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_MSG_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2305,9 +2301,8 @@ ms.locfileid: "62892656"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|事件名稱: %1<br /><br /> 訊息: %9<br /><br /> 操作員: %2<br /><br /> 來源名稱: %3<br /><br /> 來源識別碼: %4<br /><br /> 執行識別碼: %5<br /><br /> 開始時間: %6<br /><br /> 結束時間: %7<br /><br /> 資料碼: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名稱: %1<br /><br /> 訊息: %9<br /><br /> 操作員: %2<br /><br /> 來源名稱: %3<br /><br /> 來源識別碼: %4<br /><br /> 執行識別碼: %5<br /><br /> 開始時間: %6<br /><br /> 結束時間: %7<br /><br /> 資料碼: %8|  
   
-##  <a name="msgSuccess"></a> 成功訊息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 `DTS_S_` 當做開頭。  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> 成功訊息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 `DTS_S_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2315,9 +2310,8 @@ ms.locfileid: "62892656"
 |0x40005|262149|DTS_S_TRUNCATED|已截斷字串值。 緩衝區收到對資料行而言太長的字串，緩衝區已截斷字串。|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|在運算式評估期間發生截斷。 截斷是在評估期間發生，可能包含中間步驟的任何點。|  
   
-##  <a name="msgPipeline"></a> 資料流程元件錯誤訊息  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 `DTSBC_E_` 當做開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生自的原生基底類別。  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> 資料流程元件錯誤訊息  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 `DTSBC_E_` 當做開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生自的原生基底類別。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  

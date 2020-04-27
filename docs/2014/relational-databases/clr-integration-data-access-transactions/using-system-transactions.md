@@ -18,16 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919541"
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
-  
-  `System.Transactions` 命名空間會提供與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合完全整合的交易架構。 
-  `System.Transactions.TransactionScope` 類別可藉由在分散式交易中隱含地編列連接，讓程式碼區塊可進行交易。 您必須呼叫 `Complete` 所標示之程式碼區塊結尾的 `TransactionScope` 方法。 當程式執行離開程式碼區塊時，會叫用 `Dispose` 方法，如果不呼叫 `Complete` 方法，則會讓交易停止。 如果已擲回造成程式碼離開範圍的例外狀況，則會將交易視為停止。  
+  `System.Transactions` 命名空間會提供與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合完全整合的交易架構。 `System.Transactions.TransactionScope` 類別可藉由在分散式交易中隱含地編列連接，讓程式碼區塊可進行交易。 您必須呼叫 `Complete` 所標示之程式碼區塊結尾的 `TransactionScope` 方法。 當程式執行離開程式碼區塊時，會叫用 `Dispose` 方法，如果不呼叫 `Complete` 方法，則會讓交易停止。 如果已擲回造成程式碼離開範圍的例外狀況，則會將交易視為停止。  
   
  建議您使用 `using` 區塊，以確保結束 `Dispose` 區塊時，會在 `TransactionScope` 物件上呼叫 `using` 方法。 無法認可或復原暫止的交易可能會使效能嚴重下降，因為 `TransactionScope` 的預設逾時是一分鐘。 如果您不使用 `using` 陳述式，則必須在 `Try` 區塊中執行所有工作，並明確呼叫 `Dispose` 區塊中的 `Finally` 方法。  
   
@@ -36,8 +34,7 @@ ms.locfileid: "62919541"
  只有在存取本機和遠端資料來源或外部資原管理員時，才應該使用 `TransactionScope`。 這是因為即使是在內容連接內使用 `TransactionScope`，還是永遠會使交易升級。  
   
 > [!NOTE]  
->  
-  `TransactionScope` 類別預設會以 `System.Transactions.Transaction.IsolationLevel` 的 `Serializable` 建立交易。 根據應用程式，您可能會考慮降低隔離等級，以避免應用程式中發生劇烈的競爭現象。  
+>  `TransactionScope` 類別預設會以 `System.Transactions.Transaction.IsolationLevel` 的 `Serializable` 建立交易。 根據應用程式，您可能會考慮降低隔離等級，以避免應用程式中發生劇烈的競爭現象。  
   
 > [!NOTE]  
 >  建議您針對遠端伺服器，在分散式交易內僅執行更新、插入及刪除作業，因為它們會耗用大量的資料庫資源。 如果要在本機伺服器上執行作業，就不需要使用分散式交易，而且本機交易就已經足夠。 SELECT 陳述式可能會不必要地鎖定資料庫資源，而且在某些案例中，可能需要使用交易來進行選取。 除非涉及其他已交易的資源管理者，否則所有非資料庫工作都應在交易範圍外執行。 雖然交易範圍內的例外狀況會防止認可交易，但 `TransactionScope` 類別不支援針對在交易本身範圍外所做的任何程式碼變更，進行復原。 如果在復原交易時需要採取某些動作，則必須撰寫您自己的 `System.Transactions.IEnlistmentNotification` 介面實作，並在交易中明確編列。  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916964"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
@@ -32,9 +32,9 @@ ms.locfileid: "62916964"
   
 
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   資料庫的大小不得小於資料庫的大小下限。 大小下限是最初建立資料庫時所指定的大小，或利用檔案大小變更作業 (如 DBCC SHRINKFILE) 來設定的最後一個明確大小。 例如，如果資料庫最初建立時為 10 MB 的大小，而後擴充到 100 MB，則該資料庫最多只能縮小到 10 MB，即使該資料庫中的所有資料都已刪除，也是如此。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62916964"
   
 -   遇到 xVelocity 記憶體最佳化的資料行存放區索引時，DBCC SHRINKDATABASE 將會失敗。 遇到資料行存放區索引之前完成的工作將會成功，因此資料庫可能會較小。 若要完成 DBCC SHRINKDATABASE，請在執行 DBCC SHRINKDATABASE 前停用所有資料行存放區索引，然後重建資料行存放區索引。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   檢視資料庫中目前的可用 (未配置) 空間量。 如需相關資訊，請參閱 [顯示資料庫的資料和記錄空間資訊](display-data-and-log-space-information-for-a-database.md)  
   
@@ -56,12 +56,12 @@ ms.locfileid: "62916964"
   
     -   除非您有特定的需求，否則請不要將 AUTO_SHRINK 資料庫選項設定為 ON。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
- 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色中的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>若要壓縮資料庫  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62916964"
      **可用空間**  
      顯示選取之資料庫的記錄檔和資料檔中可用空間的總和。  
   
-     **釋放未使用的空間之前重新組織檔案**  
+     **釋放未使用的空間之前，先重新組織檔案**  
      選取這個選項相當於執行 DBCC SHRINKDATABASE 指定目標百分比選項。 清除此選項相當於搭配 TRUNCATEONLY 選項執行 DBCC SHRINKDATABASE。 依預設，開啟對話方塊時並不會選取此選項。 如果選取此選項，使用者必須指定目標百分比選項。  
   
      **壓縮後檔案的最大可用空間**  
@@ -88,7 +88,7 @@ ms.locfileid: "62916964"
   
 4.  按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>若要壓縮資料庫  
   
@@ -100,14 +100,14 @@ ms.locfileid: "62916964"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a>後續操作：壓縮資料庫之後  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a> 待處理：壓縮資料庫之後  
  為壓縮檔案所移動的資料可散佈至檔案中的任何可用位置。 如此會造成索引片段，並可能導致大範圍之索引搜尋的查詢效能變慢。 若要消除資料片段，可考慮在壓縮之後重建該檔案的索引。  
   
 ## <a name="see-also"></a>另請參閱  
  [壓縮檔案](shrink-a-file.md)   
- [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [DBCC SHRINKFILE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [資料庫檔案與檔案群組](database-files-and-filegroups.md)  
   

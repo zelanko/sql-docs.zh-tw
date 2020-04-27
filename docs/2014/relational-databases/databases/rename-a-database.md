@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916767"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
@@ -31,7 +31,7 @@ ms.locfileid: "62916767"
   
      [安全性](#Security)  
   
--   **若要重新命名資料庫，請使用：**  
+-   **使用下列方法重新命名資料庫：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -39,18 +39,18 @@ ms.locfileid: "62916767"
   
 -   **後續操作：** [重新命名資料庫之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   您無法重新命名系統資料庫。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rename-a-database"></a>若要重新命名資料庫  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62916767"
   
 4.  輸入新的資料庫名稱，然後按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-rename-a-database"></a>若要重新命名資料庫  
   
@@ -81,11 +81,11 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a>後續操作：重新命名資料庫之後  
+##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a> 待處理：重新命名資料庫之後  
  重新命名任何資料庫之後，請備份 **master** 資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [資料庫識別碼](database-identifiers.md)  
   
   

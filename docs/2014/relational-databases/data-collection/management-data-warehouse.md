@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918336"
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
@@ -126,8 +126,8 @@ ms.locfileid: "62918336"
 |在「快照集結構描述」一節中，更新資料表的清單。 新增 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory 和 snapshots.io_virtual_file_stats。 移除 snapshots.os_process_memory 和 snapshots.distinct_query_stats。|  
   
 ## <a name="see-also"></a>另請參閱  
- [管理資料倉儲預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [資料收集器預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+ [&#40;Transact-sql&#41;的管理資料倉儲預存程式](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [&#40;Transact-sql&#41;的資料收集器預存程式](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [資料收集](data-collection.md)   
  [檢視收集組報表 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   

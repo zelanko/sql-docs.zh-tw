@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876107"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在備份和還原期間可能的媒體錯誤 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876107"
   
   
   
-##  <a name="BckChecksums"></a> 備份總和檢查碼  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> 備份總和檢查碼  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援三種類型的總和檢查碼：分頁上的總和檢查碼、記錄區塊中的總和檢查碼，以及備份總和檢查碼。 產生備份總和檢查碼時，BACKUP (備份) 會驗證從資料庫讀取的資料，是否與資料庫中的任何總和檢查碼或損毀頁指示一致。  
   
  BACKUP 陳述式可選擇性地計算備份資料流的備份總和檢查碼；如果分頁總和檢查碼或損毀頁資訊顯示在特定的分頁上，備份該分頁時，BACKUP 也會驗證該分頁的總和檢查碼、損毀頁狀態及分頁識別碼。 建立備份總和檢查碼時，備份作業不會新增任何總和檢查碼至分頁。 分頁會依照其存在於資料庫中的樣子來備份，而且備份不會修改分頁。  
@@ -75,7 +75,7 @@ ms.locfileid: "62876107"
   
 4.  發出訊息指出已順利產生備份，但包含分頁錯誤。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要啟用或停用備份總和檢查碼**  
   
 -   [在備份或還原期間啟用或停用備份總和檢查碼 &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

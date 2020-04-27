@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916944"
 ---
 # <a name="model-database"></a>Model 資料庫
@@ -89,7 +89,7 @@ ms.locfileid: "62916944"
   
 -   變更定序。 預設定序是伺服器定序。  
   
--   變更資料庫擁有者。 **model**是由**sa**所擁有。  
+-   變更資料庫擁有者。 **model** 是由 **sa**所擁有。  
   
 -   卸除資料庫。  
   

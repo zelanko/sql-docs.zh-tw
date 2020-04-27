@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919297"
 ---
 # <a name="assembly-properties-general-page"></a>組件屬性 (一般頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "62919297"
  **組件擁有者**  
  鍵入擁有者名稱或結構描述名稱，或者從清單中選取。  
   
- **權限集合**  
+ **許可權集合**  
  設定組件的安全性層級。 提供的安全性層級有三種：**安全**、**外部存取**和**不安全**的存取。  
   
  **組件的路徑**  

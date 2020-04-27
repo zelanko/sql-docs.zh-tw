@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896028"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件
@@ -29,7 +29,7 @@ ms.locfileid: "62896028"
  結合這些成員，即可讓您開發與 Microsoft 所開發之「合併」和「合併聯結」轉換方案類似的記憶體壓力方案。  
   
 ## <a name="setting-the-supportsbackpressure-property"></a>設定 SupportsBackPressure 屬性  
- 針對自訂支援多個輸入之資料流程元件實作更好的記憶體管理中的第一個步驟，就是在 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 中將 `true` 屬性的值設定為 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>。 當 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 的值為 `true` 時，資料流程引擎會呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法，具有超過兩個輸入時，也會在執行階段呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。  
+ 針對自訂支援多個輸入之資料流程元件實作更好的記憶體管理中的第一個步驟，就是在 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 中將 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 屬性的值設定為 `true`。 當 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 的值為 `true` 時，資料流程引擎會呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法，具有超過兩個輸入時，也會在執行階段呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。  
   
 ### <a name="example"></a>範例  
  在下列範例中，<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 的實作會將 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 的值設定為 `true`。  
@@ -49,7 +49,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 ```  
   
 ## <a name="implementing-the-isinputready-method"></a>實作 IsInputReady 方法  
- 當您在 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 物件中將 `true` 屬性的值設定為 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 時，就必須提供 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 類別之 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法的實作。  
+ 當您在 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 物件中將 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 屬性的值設定為 `true` 時，就必須提供 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 類別之 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法的實作。  
   
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法實作不應該呼叫基底類別中實作。 在基底類別中，這個方法的預設實作只會引發 `NotImplementedException`。  

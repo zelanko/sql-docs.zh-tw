@@ -15,38 +15,32 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920048"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 物件
   當您呼叫程序或函數、在 Common Language Runtime (CLR) 使用者定義型別上呼叫方法，或您的動作引發以任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 語言定義的觸發程序時，會在伺服器中叫用 Managed 程式碼。 因為要求執行此程式碼做為使用者連接的一部分，所以需要從伺服器上執行的程式碼，存取呼叫端的內容。 此外，特定資料存取作業只有在呼叫端的內容下執行才會有效。 例如，對在觸發程序作業中使用之插入及刪除虛擬資料表的存取，只有在呼叫端的內容下才有效。  
   
- 呼叫端的內容會在 `SqlContext` 物件中擷取。 如需有關 `SqlTriggerContext` 方法和屬性的詳細資訊，請參閱 `Microsoft.SqlServer.Server.SqlTriggerContext` SDK 中的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別參考文件。  
+ 呼叫端的內容會在 `SqlContext` 物件中擷取。 如需有關 `SqlTriggerContext` 方法和屬性的詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 中的 `Microsoft.SqlServer.Server.SqlTriggerContext` 類別參考文件。  
   
- 
-  `SqlContext` 會提供下列元件的存取：  
+ `SqlContext` 會提供下列元件的存取：  
   
--   
-  `SqlPipe`：`SqlPipe` 物件表示結果藉以流向用戶端的「管道」。 如需物件的`SqlPipe`詳細資訊，請參閱[SqlPipe 物件](sqlpipe-object.md)。  
+-   `SqlPipe`：`SqlPipe` 物件表示結果藉以流向用戶端的「管道」。 如需物件的`SqlPipe`詳細資訊，請參閱[SqlPipe 物件](sqlpipe-object.md)。  
   
--   
-  `SqlTriggerContext`：`SqlTriggerContext` 物件只能在 CLR 觸發程序內擷取。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需物件的`SqlTriggerContext`詳細資訊，請參閱[SqlTriggerCoNtext 物件](sqltriggercontext-object.md)。  
+-   `SqlTriggerContext`：`SqlTriggerContext` 物件只能在 CLR 觸發程序內擷取。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需物件的`SqlTriggerContext`詳細資訊，請參閱[SqlTriggerCoNtext 物件](sqltriggercontext-object.md)。  
   
--   
-  `IsAvailable`：`IsAvailable` 屬性用於判斷內容可用性。  
+-   `IsAvailable`：`IsAvailable` 屬性用於判斷內容可用性。  
   
--   
-  `WindowsIdentity`：`WindowsIdentity` 屬性用於擷取呼叫端的 Windows 識別。  
+-   `WindowsIdentity`：`WindowsIdentity` 屬性用於擷取呼叫端的 Windows 識別。  
   
 ## <a name="determining-context-availability"></a>決定內容可用性  
- 查詢 `SqlContext` 類別，以查看目前執行的程式碼是否同處理序執行。 若要這樣做，請檢查 `IsAvailable` 物件的 `SqlContext` 屬性。 如果呼叫程式碼在 `IsAvailable` 內執行，且可存取其他 `True` 成員，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性是唯讀的，並會傳回 `SqlContext`。 如果 `IsAvailable` 屬性傳回 `False`，則使用的其他所有 `SqlContext` 成員會擲回 `InvalidOperationException`。 如果 `IsAvailable` 傳回 `False`，則開啟連接字串中包括 "context connection=true" 之連接物件的任何嘗試都會失敗。  
+ 查詢 `SqlContext` 類別，以查看目前執行的程式碼是否同處理序執行。 若要這樣做，請檢查 `IsAvailable` 物件的 `SqlContext` 屬性。 如果呼叫程式碼在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行，且可存取其他 `IsAvailable` 成員，則 `True` 屬性是唯讀的，並會傳回 `SqlContext`。 如果 `IsAvailable` 屬性傳回 `False`，則使用的其他所有 `SqlContext` 成員會擲回 `InvalidOperationException`。 如果 `IsAvailable` 傳回 `False`，則開啟連接字串中包括 "context connection=true" 之連接物件的任何嘗試都會失敗。  
   
 ## <a name="retrieving-windows-identity"></a>擷取 Windows 識別  
- 在處理序帳戶的內容中，永遠會叫用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行的 CLR 程式碼。 如果程式碼應使用呼叫使用者的識別 (而非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序識別) 執行特定動作，則應透過 `WindowsIdentity` 物件的 `SqlContext` 屬性取得模擬 Token。 
-  `WindowsIdentity` 屬性會傳回表示呼叫端之 `WindowsIdentity` Windows 識別的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 執行個體，或者，如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來驗證用戶端，則會傳回 Null。 只有以 `EXTERNAL_ACCESS` 或 `UNSAFE` 使用權限標記的組件才能存取此屬性。  
+ 在處理序帳戶的內容中，永遠會叫用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行的 CLR 程式碼。 如果程式碼應使用呼叫使用者的識別 (而非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序識別) 執行特定動作，則應透過 `WindowsIdentity` 物件的 `SqlContext` 屬性取得模擬 Token。 `WindowsIdentity` 屬性會傳回表示呼叫端之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 識別的 `WindowsIdentity` 執行個體，或者，如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來驗證用戶端，則會傳回 Null。 只有以 `EXTERNAL_ACCESS` 或 `UNSAFE` 使用權限標記的組件才能存取此屬性。  
   
  取得 `WindowsIdentity` 物件之後，呼叫端可以模擬用戶端帳戶，並代表它執行動作。  
   

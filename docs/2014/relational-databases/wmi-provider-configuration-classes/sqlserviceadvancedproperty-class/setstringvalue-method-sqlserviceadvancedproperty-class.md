@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911390"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 方法 (SqlServiceAdvancedProperty 類別)
@@ -40,7 +40,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>組件  
- *目標*  
+ *物件*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](sqlserviceadvancedproperty-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
@@ -50,8 +50,7 @@ StrValue
 |*StrValue*|指定進階屬性值的字串值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 
-  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
+ `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
   
 ## <a name="remarks"></a>備註  
  屬性值類型必須是 `string`，才能將屬性設定為字串值。  

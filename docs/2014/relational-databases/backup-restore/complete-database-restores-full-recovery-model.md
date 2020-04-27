@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922152"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整的資料庫還原 (完整復原模式)
@@ -45,7 +45,7 @@ ms.locfileid: "62922152"
 > [!NOTE]  
 >  如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)的＜相容性支援＞一節。  
   
-##  <a name="PointOfFailure"></a> 將資料庫還原到失敗點  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a>將資料庫還原到失敗點  
  一般而言，將資料庫復原至失敗點的作業，包含下列基本步驟：  
   
 1.  備份使用中的交易記錄檔 (即所謂的記錄檔結尾)。 這會建立結尾記錄備份。 如果沒有使用中的交易記錄，就會遺失該部分記錄中的所有交易。  
@@ -72,8 +72,8 @@ ms.locfileid: "62922152"
 > [!NOTE]  
 >  當您將資料庫備份還原至不同的伺服器執行個體時，請參閱 [使用備份與還原複製資料庫](../databases/copy-databases-with-backup-and-restore.md)。  
   
-###  <a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
- 上圖中還原順序的基本 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 語法如下：  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
+ 上圖中還原順序的基本[restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]語法如下：  
   
 1.  RESTORE DATABASE *&lt;database&gt;* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62922152"
   
 4.  RESTORE DATABASE *&lt;database&gt;* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> 範例：復原到失敗點 (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a>範例：復原到失敗點（Transact-sql）  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例顯示將資料庫還原到失敗點之還原順序中的基本選項。 此範例會建立資料庫的結尾記錄備份。 接下來，此範例會還原完整的資料庫備份和記錄備份，然後還原結尾記錄備份。 此範例會在一個不同的最後步驟中復原資料庫。  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> 將資料庫還原到記錄備份內的時間點  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> 將資料庫還原到記錄備份內的時間點  
  在完整復原模式下，完整資料庫還原通常可以復原到某個時間點、標示的交易或記錄備份內的 LSN。 然而，在大量記錄復原模式下，如果記錄備份包含大量記錄的變更，則無法進行時間點復原。  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>範例時間點還原案例  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  如需特定時間點還原的範例，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)的＜相容性支援＞一節。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **還原完整資料庫備份**  
   
 -   [還原資料庫備份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
@@ -171,16 +171,16 @@ GO
   
 -   [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [復原包含標示之交易的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [復原包含標記之異動的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [復原到記錄序號 &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [套用交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [完整資料庫備份 &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [將交易記錄備份套用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [&#40;SQL Server&#41;的完整資料庫備份](full-database-backups-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

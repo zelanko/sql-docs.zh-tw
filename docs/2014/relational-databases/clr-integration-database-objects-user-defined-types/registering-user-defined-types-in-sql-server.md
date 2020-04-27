@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919944"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
@@ -64,8 +64,7 @@ ms.locfileid: "62919944"
 ### <a name="using-create-assembly"></a>使用 CREATE ASSEMBLY  
  CREATE ASSEMBLY 語法會在要使用 UDT 的資料庫中註冊組件。 一旦註冊此組件，它就不具有相依性。  
   
- 不允許在給定資料庫內建立同一組件的多個版本。 但是，根據給定資料庫中的文化特性建立相同組件的多個版本是可行的。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內所註冊的不同名稱來區分某個組件的多個文化特性版本。 如需詳細資訊，請參閱 .NET Framework SDK 中的＜建立和使用強式名稱的組件＞。  
+ 不允許在給定資料庫內建立同一組件的多個版本。 但是，根據給定資料庫中的文化特性建立相同組件的多個版本是可行的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內所註冊的不同名稱來區分某個組件的多個文化特性版本。 如需詳細資訊，請參閱 .NET Framework SDK 中的＜建立和使用強式名稱的組件＞。  
   
  當使用 SAFE 或 EXTERNAL_ACCESS 權限集合執行 CREATE ASSEMBLY 時，系統會檢查組件，以確定它可進行驗證且型別是安全的。 如果您省略指定使用權限集合，則會假設為 SAFE。 系統不會檢查使用 UNSAFE 權限集合的程式碼。 如需有關組件權限集合的詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   

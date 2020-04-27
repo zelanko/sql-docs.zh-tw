@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891757"
 ---
-# <a name="step-1-creating-a-new-integration-services-project"></a>步驟 1：建立新的 Integration Services 專案
+# <a name="step-1-creating-a-new-integration-services-project"></a>步驟 1:建立新的 Integration Services 專案
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 (資料來源、資料來源檢視和封裝)，您在資料轉換方案中會用到它們。  
   
  您在這個 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程中建立的封裝將解譯區分地區設定資料的值。 如果電腦未設定為使用地區設定選項 [英文 (美國)]，則您需要在封裝中設定其他屬性。 您在第 2 課到第 5 課使用的封裝，是從第 1 課建立的封裝複製而來，您不需要在複製的封裝中更新區分地區設定的屬性。  
@@ -46,6 +46,6 @@ ms.locfileid: "62891757"
 7.  在 [ **方案總管** ] 工具列上，以滑鼠右鍵按一下 [ **Package.dtsx**]、按一下 **[重新命名]**，然後將預設封裝重新命名為 **Lesson 1.dtsx**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2：加入和設定一般檔案連接管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [步驟 2:新增和設定一般檔案連線管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

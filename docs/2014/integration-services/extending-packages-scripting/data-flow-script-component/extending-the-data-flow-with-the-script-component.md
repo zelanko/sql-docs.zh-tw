@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 051f2ed14e8218a3909a43052f08e0e339138dab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894802"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
-  腳本元件會使用以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual c # 撰寫的自訂程式碼（在封裝執行時間編譯和執行），來擴充封裝的資料流程功能。 當 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 隨附的來源、轉換和目的地無法完全滿足您的需求時，指令碼元件會簡化自訂資料流程來源、轉換或目的地的開發作業。 在您使用預期的輸入和輸出來設定此元件之後，它會為您撰寫所有必要的基礎結構程式碼，讓您專門著重在自訂處理所需的程式碼。  
+  指令碼元件會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Visual C# 所撰寫且在套件執行階段編譯並執行的自訂程式碼，以擴充 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 套件的資料流程功能。 當 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 隨附的來源、轉換和目的地無法完全滿足您的需求時，指令碼元件會簡化自訂資料流程來源、轉換或目的地的開發作業。 在您使用預期的輸入和輸出來設定此元件之後，它會為您撰寫所有必要的基礎結構程式碼，讓您專門著重在自訂處理所需的程式碼。  
   
  指令碼元件會透過 `ComponentWrapper` 和 `BufferWrapper` 專案項目中自動產生的類別與包含的封裝和資料流程互動，而這些項目分別是 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 類別的執行個體。 這些類別會讓連接、變數和其他封裝項目當做具類型的物件使用，並且管理輸入和輸出。 指令碼元件也可以使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 命名空間和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別庫以及自訂組件來實作自訂功能。  
   
@@ -44,21 +44,19 @@ ms.locfileid: "62894802"
  下列主題提供有關指令碼元件的詳細資訊。  
   
  [在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)  
- 您在 [指令碼轉換編輯器]**** 中設定的屬性會影響指令碼元件程式碼的功能和效能。  
+ 您在 [指令碼轉換編輯器]  中設定的屬性會影響指令碼元件程式碼的功能和效能。  
   
  [腳本元件的程式碼撰寫和偵錯工具]（coding-and-debugging-the-script-component.md  
- 您可以使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications （VSTA）開發環境來開發包含在腳本元件中的腳本。  
+ 您可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 開發環境來開發包含在指令碼元件中的指令碼。  
   
  [了解指令碼元件物件模型](understanding-the-script-component-object-model.md)  
  新的指令碼元件專案包含三個專案項目，其中包含許多類別和自動產生的屬性與方法。  
   
  [在指令碼元件中使用變數](using-variables-in-the-script-component.md)  
- 
-  `ComponentWrapper` 專案項目包含封裝變數的強型別 (Strongly-Typed) 存取子屬性。  
+ `ComponentWrapper` 專案項目包含封裝變數的強型別 (Strongly-Typed) 存取子屬性。  
   
- [連接到指令碼元件中的資料來源](connecting-to-data-sources-in-the-script-component.md)  
- 
-  `ComponentWrapper` 專案項目也包含封裝中定義之連接的強型別存取子屬性。  
+ [在指令碼元件中連線至資料來源](connecting-to-data-sources-in-the-script-component.md)  
+ `ComponentWrapper` 專案項目也包含封裝中定義之連接的強型別存取子屬性。  
   
  [在指令碼元件中引發事件](raising-events-in-the-script-component.md)  
  您可以引發事件來提供問題和錯誤的通知。  
@@ -69,7 +67,7 @@ ms.locfileid: "62894802"
  [開發指令碼元件的特定類型](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
  這些簡單的範例將說明並示範如何使用指令碼元件來開發資料流程來源、轉換和目的地。  
   
- [額外的指令碼元件範例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [其他指令碼元件範例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  這些簡單的範例將說明並示範一些指令碼元件的可能用法。  
   
 ![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的最新下載、文件、範例和影片以及社群中的選定方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  

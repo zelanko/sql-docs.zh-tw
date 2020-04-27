@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62878280"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教學課程：建立簡易 ETL 封裝
@@ -39,7 +39,7 @@ ms.locfileid: "62878280"
   
  若要使用這個教學課程，系統上必須已安裝下列元件：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用**AdventureWorksDW2012**資料庫。 為了加強安全性，依預設，不會安裝範例資料庫。 若要下載 **AdventureWorksDW2012** 資料庫，請參閱 [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026)。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 **資料庫的** 。 為了加強安全性，依預設，不會安裝範例資料庫。 若要下載 **AdventureWorksDW2012** 資料庫，請參閱 [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026)。  
   
     > [!IMPORTANT]  
     >  當您附加資料庫 (\*.mdf 檔案) 時， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 預設會搜尋 .ldf 檔案。 您必須先手動移除 .ldf 檔案，然後再按一下 **[附加資料庫]** 對話方塊中的 [確定]。  
@@ -50,7 +50,7 @@ ms.locfileid: "62878280"
   
     1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  按一下 **[下載]** 索引標籤。  
+    2.  按一下 [**下載**] 索引標籤。  
   
     3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
@@ -58,16 +58,16 @@ ms.locfileid: "62878280"
  [第 1 課：建立專案和基本封裝](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  在這一課，您將建立一個從單個一般檔案擷取資料的簡易 ETL 封裝，使用查閱轉換元件來轉換資料，最後將結果載入至事實資料表目的地。  
   
- [第 2 課：加入迴圈](lesson-2-adding-looping-with-ssis.md)  
+ [第 2 課：新增迴圈](lesson-2-adding-looping-with-ssis.md)  
  在這一課，您將擴充在第 1 課建立的封裝，利用新的迴圈功能，將多個一般檔案擷取到單一資料流程處理序中。  
   
- [第 3 課：加入記錄](lesson-3-add-logging-with-ssis.md)  
+ [第 3 課：新增記錄](lesson-3-add-logging-with-ssis.md)  
  在這一課，您將擴充在第 2 課建立的封裝，來利用新的記錄功能。  
   
- [「課程 4：加入錯誤流程重新導向](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [第 4 課：新增錯誤流程重新導向](lesson-4-add-error-flow-redirection-with-ssis.md)  
  在這一課，您將擴充在第 3 課建立的封裝，來利用新的錯誤輸出組態。  
   
- [第 5 課：加入封裝部署模型的封裝組態](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [第 5 課：新增封裝部署模型的封裝組態](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  在這一課，您將擴充在第 4 課建立的封裝，來利用新的封裝組態選項。  
   
  [第 6 課：搭配專案部署模型使用參數](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

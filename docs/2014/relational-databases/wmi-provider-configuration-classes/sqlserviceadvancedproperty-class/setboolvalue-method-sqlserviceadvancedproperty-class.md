@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911400"
 ---
 # <a name="set-breakpoints"></a>[設定中斷點]
@@ -28,7 +28,7 @@ ms.locfileid: "62911400"
  **已啟用**  
  選取即可在事件上啟用中斷點。  
   
- **中斷條件**  
+ **Break Condition**  
  檢視要設定中斷點之可用事件的清單。  
   
  **叫用計數類型**  
@@ -38,10 +38,10 @@ ms.locfileid: "62911400"
 |-----------|-----------------|  
 |**永遠**|叫用中斷點時，一律暫停執行。|  
 |**叫用計數等於**|當中斷點發生的次數等於叫用計數時，暫停執行。|  
-|**點擊大於或等於**|當中斷點發生的次數大於或等於叫用計數時，暫停執行。|  
+|**叫用大於或等於**|當中斷點發生的次數大於或等於叫用計數時，暫停執行。|  
 |**叫用計數倍數**|每當到達叫用計數的倍數時，暫停執行。 例如，若您將此選項設定為 5，則每到達五次叫用便會暫停執行。|  
   
- **計數**  
+ **叫用計數**  
  指定觸發中斷的叫用次數。 如果中斷點永遠有效，則無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922930"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62922930"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Requirements"></a>還原交易記錄備份的需求  
+##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a>還原交易記錄備份的需求  
  若要套用交易記錄備份，必須符合下列需求：  
   
 -   **有足夠的記錄備份供還原順序使用：** 您必須備份了足夠的記錄，才能完成還原順序。 您必須先備妥必要的記錄備份，包括所需的 [結尾記錄備份](tail-log-backups-sql-server.md) ，才開始還原順序。  
@@ -50,7 +50,7 @@ ms.locfileid: "62922930"
     > [!TIP]  
     >  最佳做法就是還原所有的記錄備份 (RESTORE LOG *資料庫名稱* WITH NORECOVERY)。 然後，在還原最後一個記錄備份之後，以個別的作業來復原資料庫 (RESTORE DATABASE *資料庫名稱* WITH RECOVERY)。  
   
-##  <a name="RecoveryAndTlogs"></a>復原與交易記錄  
+##  <a name="recovery-and-transaction-logs"></a><a name="RecoveryAndTlogs"></a>復原與交易記錄  
  當您完成還原作業並復原資料庫時，復原作業會回復所有未完成的交易。 此即稱為 *「恢復階段」*。 需要進行回復，才能還原資料庫的完整性。 回復之後，資料庫會上線，而且不再有交易記錄備份可以套用到資料庫。  
   
  例如，一系列交易記錄備份中包含長時間執行的交易。 該交易的開頭記錄在第一個交易記錄備份，但是交易的結尾記錄在第二個交易記錄備份。 那麼一個交易記錄備份中將沒有認可或回復作業的記錄。 如果在套用第一個交易記錄備份時執行復原作業，則會將長時間執行的交易視為未完成，並且回復在交易的第一個交易記錄備份中記錄的資料修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許在此時間點之後套用第二個交易記錄備份。  
@@ -58,10 +58,10 @@ ms.locfileid: "62922930"
 > [!NOTE]  
 >  在某些狀況下，您可以在記錄還原期間明確加入檔案。  
   
-##  <a name="PITrestore"></a>使用記錄備份來還原到失敗點  
+##  <a name="using-log-backups-to-restore-to-the-point-of-failure"></a><a name="PITrestore"></a>使用記錄備份來還原到失敗點  
  假設發生下列事件順序。  
   
-|Time|事件|  
+|時間|事件|  
 |----------|-----------|  
 |上午 8:00|備份資料庫以建立完整資料庫備份。|  
 |中午|備份交易記錄。|  
@@ -95,7 +95,7 @@ ms.locfileid: "62922930"
 > [!NOTE]  
 >  在某些情況下，您也可以使用交易記錄，將資料庫還原到特定時間點。 如需詳細資訊，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **套用交易記錄備份**  
   
 -   [還原交易記錄備份 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
@@ -108,7 +108,7 @@ ms.locfileid: "62922930"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
--   [復原包含標示之交易的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [復原包含標記之異動的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [復原到記錄序號 &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   

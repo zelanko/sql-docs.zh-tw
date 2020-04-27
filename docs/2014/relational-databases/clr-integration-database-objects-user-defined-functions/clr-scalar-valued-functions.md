@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919595"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
@@ -30,8 +30,7 @@ ms.locfileid: "62919595"
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 純量值函式的需求  
  .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從 SVF 傳回的輸入參數和類型可以是所支援的任何純量資料類型，但、、 `varchar`、 `char` `rowversion` `text`、 `ntext` `image` `timestamp` `table`、、、或`cursor`除外。 SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
- 當以 .NET Framework 語言實作 .NET Framework SVF 時，您可藉由指定 `SqlFunction` 自訂屬性，併入有關此函數的其他資訊。 
-  `SqlFunction` 屬性會指出當函數具有決定性或涉及浮點運算時，是否可以存取或修改資料。  
+ 當以 .NET Framework 語言實作 .NET Framework SVF 時，您可藉由指定 `SqlFunction` 自訂屬性，併入有關此函數的其他資訊。 `SqlFunction` 屬性會指出當函數具有決定性或涉及浮點運算時，是否可以存取或修改資料。  
   
  純量值使用者定義函數可能具有決定性，也可能不具決定性。 當以一組特定的輸入參數呼叫具有決定性的函數時，一律會傳回相同的結果。 當以一組特定的輸入參數呼叫不具決定性的函數時，它可能會傳回不同的結果。  
   
@@ -83,11 +82,9 @@ End Class
   
  第一行程式碼會參考 `Microsoft.SqlServer.Server` 來存取屬性，並參考 `System.Data.SqlClient` 來存取 ADO.NET 命名空間  (此命名空間包含 `SqlClient`，也就是 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
   
- 接下來，此函數會接收 `SqlFunction` 自訂屬性，該屬性可在 `Microsoft.SqlServer.Server` 命名空間中找到。 此自訂屬性會指出使用者定義函數 (UDF) 是否會使用同處理序提供者來讀取伺服器上的資料。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許 UDF 更新、插入或刪除資料。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以讓不使用同處理序提供者之 UDF 的執行最佳化。 將 `DataAccessKind` 設定為 `DataAccessKind.None` 可表示這一點。 在下一行中，目標方法為 public static (Visual Basic .NET 中則為 shared)。  
+ 接下來，此函數會接收 `SqlFunction` 自訂屬性，該屬性可在 `Microsoft.SqlServer.Server` 命名空間中找到。 此自訂屬性會指出使用者定義函數 (UDF) 是否會使用同處理序提供者來讀取伺服器上的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許 UDF 更新、插入或刪除資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以讓不使用同處理序提供者之 UDF 的執行最佳化。 將 `DataAccessKind` 設定為 `DataAccessKind.None` 可表示這一點。 在下一行中，目標方法為 public static (Visual Basic .NET 中則為 shared)。  
   
- 然後位於 `SqlContext` 命名空間的 `Microsoft.SqlServer.Server` 類別可以使用已經設定之 `SqlCommand` 執行個體的連接來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件。 也可透過 `System.Transactions` 應用程式開發介面 (API) 來使用目前的交易內容，不過這裡並不會使用。  
+ 然後位於 `SqlContext` 命名空間的 `Microsoft.SqlServer.Server` 類別可以使用已經設定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接來存取 `SqlCommand` 物件。 也可透過 `System.Transactions` 應用程式開發介面 (API) 來使用目前的交易內容，不過這裡並不會使用。  
   
  如果開發人員已經撰寫會使用 `System.Data.SqlClient` 命名空間內之類型的用戶端應用程式，應該會覺得函數主體內的大多數程式碼行看起來很類似。  
   
@@ -131,14 +128,12 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` 表示應該產生程式庫，而不是可執行檔。 可執行檔無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊。  
+>  `/t:library` 表示應該產生程式庫，而不是可執行檔。 可執行檔無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊。  
   
 > [!NOTE]  
->  在 `/clr:pure` 中，不支援以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 編譯之 Visual C++ 資料庫物件的執行。 例如，這類資料庫物件包括純量值函式。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，不支援以 `/clr:pure` 編譯之 Visual C++ 資料庫物件的執行。 例如，這類資料庫物件包括純量值函式。  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢及註冊組件和 UDF 的範例引動過程為：  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢及註冊組件和 UDF 的範例引動過程為：  
   
 ```  
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  

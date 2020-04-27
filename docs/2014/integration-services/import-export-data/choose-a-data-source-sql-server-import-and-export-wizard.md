@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893593"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>選擇資料來源 (SQL Server 匯入和匯出精靈)
@@ -39,10 +39,10 @@ ms.locfileid: "62893593"
  **伺服器名稱**  
  輸入包含資料之伺服器的名稱，或者從清單中選擇伺服器。  
   
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
  指定封裝是否應使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證來登入資料庫。 建議使用 Windows 驗證，以獲得較佳的安全性。  
   
- **使用 SQL Server 驗證**  
+ **[使用 SQL Server 驗證]**  
  指定封裝是否應使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入資料庫。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
  **使用者名稱**  
@@ -54,7 +54,7 @@ ms.locfileid: "62893593"
  **Database**  
  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之指定執行個體上的資料庫清單中選取。  
   
- **[重新整理]**  
+ **重新整理**  
  按一下 [重新整理]**** 來還原可用資料庫的清單。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>資料來源 = .NET Framework Data Provider for SQL Server  
@@ -83,10 +83,10 @@ ms.locfileid: "62893593"
 >  只有當您想要連接到使用 Excel 2003 或更早版本的資料來源時，才選取 [ **Microsoft Excel** ]。 若要連接到使用 Excel 2007 的資料來源，請選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]，按一下 [**屬性**]，然後在 [**資料連結屬性**] 對話方塊的`Excel 12.0` [**全部**] 索引標籤上，輸入作為 [**擴充屬性**] 的值。  
   
  **Excel 檔案路徑**  
- 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]  。  
+ 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]****。  
   
  **瀏覽**  
- 使用 [開啟]  對話方塊來找出試算表。  
+ 使用 [開啟]**** 對話方塊來找出試算表。  
   
  **Excel 版本**  
  選取儲存來源資料之 Excel 的版本。  
@@ -99,8 +99,8 @@ ms.locfileid: "62893593"
 > [!NOTE]  
 >  只有當您想要連接到使用2003或更早版本的資料庫時，才選取 [ **Microsoft Access** ]。 若要連接到使用存取2007的資料庫，請改為選取 [ **Microsoft Office 12.0 存取資料庫引擎 OLE DB 提供者**]。  
   
- **檔案名稱**  
- 指定要從中匯入資料之資料庫檔案的路徑和檔案名稱。 例如 **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**。 或按一下 [瀏覽]  。  
+ [檔案名稱]****  
+ 指定要從中匯入資料之資料庫檔案的路徑和檔案名稱。 例如 **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**。 或按一下 [瀏覽]****。  
   
  **瀏覽**  
  使用 [開啟]**** 對話方塊來找出資料庫檔案。  
@@ -119,10 +119,10 @@ ms.locfileid: "62893593"
   
  [一般檔案連線管理員編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [一般檔案連接管理員編輯器 &#40;資料行] 頁面&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [一般檔案連線管理員編輯器 &#40;資料行頁面&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [一般檔案連線管理員編輯器 &#40;Advanced Page&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [一般檔案連線管理員編輯器 &#40;進階頁面&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [&#40;預覽頁面的一般檔案連線管理員編輯器&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [一般檔案連線管理員編輯器 &#40;預覽頁面&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

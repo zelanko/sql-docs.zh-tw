@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891054"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>步驟 2：啟用和設定封裝組態
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>步驟 2:啟用和設定封裝組態
   在此工作中，您會將專案轉換成封裝部署模型，並使用封裝組態精靈來啟用封裝組態。 您將利用這個精靈來產生 XML 組態檔，它包含 Foreach 迴圈容器的 `Directory` 屬性的組態設定。 Directory 屬性的值是由新的封裝層級變數提供，您可以在執行階段更新它。 另外，您還會擴展一個要在測試期間使用的新範例資料夾。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>若要建立一個對應至 Directory 屬性的新封裝層級變數  
   
-1.  按一下 [** 設計師] 的 [控制流程]**[!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤的背景。 這樣會將您要建立之變數的範圍設定為封裝。  
+1.  按一下 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 [控制流程]**** 索引標籤的背景。 這樣會將您要建立之變數的範圍設定為封裝。  
   
 2.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)]] 功能表上，選取 [變數]  。  
   
@@ -33,13 +33,13 @@ ms.locfileid: "62891054"
     > [!IMPORTANT]  
     >  變數名稱會區分大小寫。  
   
-5.  確認 [**範圍**] 方塊顯示套件的名稱，即第5課。  
+5.  確認 [範圍]**** 方塊顯示套件的名稱，即「第 5 課」。  
   
 6.  將 `varFolderName` 變數之 [資料類型]  方塊的值設定為 [字串]  。  
   
 7.  回到 [控制流程]  索引標籤，按兩下 [資料夾的 Foreach 檔案]  容器。  
   
-8.  在 [Foreach 迴圈編輯器]**** 的 [集合]**** 頁面上，按一下 [運算式]****，然後按一下省略符號按鈕 **(...)**。  
+8.  在 [ **Foreach 迴圈編輯器**] 的 [**集合**] 頁面上，按一下 [**運算式**]，然後按一下省略號按鈕 **（...）**。  
   
 9. 在 [**屬性運算式編輯器**] 中，按一下 [**屬性**] 清單， `Directory`然後選取 []。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "62891054"
   
 2.  按一下警告提示上的 [確定]****，並在轉換完成時按一下 [轉換為封裝部署模型]**** 對話方塊上的 [確定]****。  
   
-3.  按一下 [** 設計師] 的 [控制流程]**[!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤的背景。  
+3.  按一下 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 [控制流程]**** 索引標籤的背景。  
   
 4.  在 [SSIS]  功能表上，按一下 [封裝組態]  。  
   
 5.  在 [封裝組態組合管理]**** 對話方塊中，選取 [啟用封裝組態]****，然後按一下 [加入]****。  
   
-6.  在 [套件設定向導] 的 [歡迎使用] 頁面上，按 **[下一步]**。  
+6.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]  。  
   
 7.  在 [選取組態類型]  頁面上，確認 [組態類型]  是設為 [XML 組態檔]  。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62891054"
   
 11. 在 [**選取設定類型**] 頁面上，按 **[下一步]。**  
   
-12. 在 [**選取要匯出的屬性**] 頁面的 [**物件**] 窗格中，展開 [**變數**]，展開 [ **varFolderName**]，展開 [**屬性**]，然後選取 [**值**]。  
+12. 在 [選取要匯出的屬性]**** 頁面的 [物件]**** 窗格中，依序展開 [變數]****、[varFolderName]**** 和 [屬性]****，然後選取 [值]****。  
   
 13. 在 [選取要匯出的屬性]**** 頁面上，按一下 [下一步]****。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62891054"
   
 15. 按一下 [完成]  。  
   
-16. 按一下 [關閉]  。  
+16. 按一下 **關閉**。  
   
 17. 此 wizard 會建立名為 SSISTutorial. Ssistutorial.dtsconfig 的設定檔，其中包含變數`value`之的設定，接著會設定列舉值的`Directory`屬性。  
   

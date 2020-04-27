@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915449"
 ---
 # <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
@@ -36,8 +36,7 @@ ms.locfileid: "62915449"
  BEGIN ATOMIC 陳述式的 WITH 子句未指定選項的值。  
   
 ## <a name="user-action"></a>使用者動作  
- 
-  `ATOMIC` 區塊需要 `WITH` 選項 `TRANSACTION ISOLATION LEVEL` 和 `LANGUAGE` 的值。 例如：  
+ `ATOMIC` 區塊需要 `WITH` 選項 `TRANSACTION ISOLATION LEVEL` 和 `LANGUAGE` 的值。 例如：  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

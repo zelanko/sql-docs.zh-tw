@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921059"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>將 SQL Server 資料庫還原至某個時間點 (完整復原模式)
@@ -33,29 +33,29 @@ ms.locfileid: "62921059"
   
      [安全性](#Security)  
   
--   **若要將 SQL Server 資料庫還原至某個時間點，請使用：**  
+-   **若要將 SQL Server 資料庫還原到某個時間點，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   您可以使用 STANDBY 尋找未知時間點。  
   
 -   指定還原順序中較早的時間點  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
   
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- **若要將資料庫還原至某個時間點**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ **將資料庫還原至某個時間點**  
   
 1.  在 [物件總管] 中，連接至適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，並展開伺服器樹狀目錄。  
   
@@ -86,12 +86,12 @@ ms.locfileid: "62921059"
   
 6.  按一下 **[時間表]** ，存取 **[備份時間表]** 對話方塊。  
   
-7.  在 **[還原至]** 區段中，按一下 **[特定的日期與時間]**。  
+7.  在 **[還原至]** 區段中，按一下 **[特定的日期與時間]** 。  
   
 8.  使用 **[日期]** 及 **[時間]** 方塊或滑動軸，指定應該停止還原的特定日期與時間。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  您可以使用 [時間表間隔]**** 方塊變更時間表上顯示的時間量。  
+    >  您可以使用 [時間表間隔]  方塊變更時間表上顯示的時間量。  
   
 9. 當您指定了特定的時間點之後，Database Recovery Advisor 便會在 **[要還原的備份組]** 方格的 **[還原]** 資料行中確定只選取要還原到該時間點所需的備份。 這些選取的備份為您的時間點還原構成了建議的還原計畫。 您應該只使用選取的備份來進行時間點還原作業。  
   
@@ -117,28 +117,28 @@ ms.locfileid: "62921059"
   
      如需這些選項的描述，請參閱[還原資料庫 &#40;選項頁面&#41;](restore-database-options-page.md)。  
   
-12. 如果您選取的時間點需要，則會選取 [**還原前先進行尾記錄備份**]。 您不需要修改這個設定，但是即使不需要，還是可以選擇備份記錄結尾。  
+12. 如果選取的時間點需要 [還原前先進行結尾記錄備份]  ，則會予以選取。 您不需要修改這個設定，但是即使不需要，還是可以選擇備份記錄結尾。  
   
 13. 若資料庫有使用中的連接，還原作業可能會失敗。 核取 **[關閉現有的連接選項]** ，確定已關閉 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 與資料庫之間的所有使用中連接。 這個核取方塊會在執行還原作業之前將資料庫設定為單一使用者模式，並在完成後將資料庫設定為多使用者模式。  
   
 14. 如果想要系統在每個還原作業之間提示您，請選取 **[還原每個備份之前先提示]** 。 除非資料庫夠大，而且您想要監視還原作業的狀態，否則這通常不需要。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **開始之前**  
   
  指定的時間一律是從記錄備份中還原。 在還原順序的每個 RESTORE LOG 陳述式中，您必須在相同的 STOPAT 子句中指定目標時間或交易。 您必須先還原其端點早於目標還原時間的完整資料庫備份，當做時間點還原的必要條件。 該完整資料庫備份可以晚於最近的完整資料庫備份，只要您之後還原每個後續的記錄備份即可，最多並包括含有目標時間點的記錄備份。  
   
  若要協助您識別要還原哪個資料庫備份，可以選擇性地在 RESTORE DATABASE 陳述式中指定 WITH STOPAT 子句，以便在資料庫備份太接近指定的目標時間時引發錯誤。 此時，系統一定會還原完整的資料備份，即使它包含目標時間也一樣。  
   
- **基本[!INCLUDE[tsql](../../includes/tsql-md.md)]語法**  
+ **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法**  
   
  RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT ** = *`time`*，** RECOVERY .。。  
   
  復原點是在由`datetime` *時間*指定的值之前或之前發生的最新交易認可。  
   
- 若只要還原特定時間點之前所做的修改，請為您要還原的**=** 每個備份指定 WITH STOPAT *time* 。 這樣可確保您不會還原到超過目標時間。  
+ 若只要還原特定時間點之前進行的修改，請為您要還原的每個備份指定 WITH STOPAT **=** *time*。 這樣可確保您不會還原到超過目標時間。  
   
- **若要將資料庫還原至某個時間點**  
+ **將資料庫還原至某個時間點**  
   
 > [!NOTE]  
 >  如需這個程序的範例，請參閱本節稍後的 [範例 &#40;Transact-SQL&#41;](#TsqlExample)。  
@@ -157,12 +157,11 @@ ms.locfileid: "62921059"
     > [!NOTE]  
     >  RECOVERY 及 STOPAT 選項。 如果交易記錄備份中不含所要求的時間 (例如指定的時間超出交易記錄的結束時間)，則會產生警告訊息，且此資料庫會維持未復原狀態。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將資料庫還原至 `12:00 AM``April 15, 2020` 時的狀態，並顯示含有多個記錄備份的還原作業。 在備份裝置 `AdventureWorksBackups`上，要還原的完整資料庫備份是裝置上的第三個備份組 (`FILE = 3`)，第一個記錄備份是第四個備份組 (`FILE = 4`)，而第二個記錄備份是第五個備份組 (`FILE = 5`)。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 若要允許記錄備份，在執行完整資料庫備份之前，已使用 `ALTER DATABASE AdventureWorks SET RECOVERY FULL`將資料庫設定為使用完整復原模式。  
+>  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 若要允許記錄備份，在執行完整資料庫備份之前，已使用 `ALTER DATABASE AdventureWorks SET RECOVERY FULL`將資料庫設定為使用完整復原模式。  
   
 ```  
 RESTORE DATABASE AdventureWorks  
@@ -181,7 +180,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [還原資料庫備份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -194,7 +193,7 @@ GO
 -   [復原到記錄序號 &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

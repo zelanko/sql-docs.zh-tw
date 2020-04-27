@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889298"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
@@ -29,7 +29,7 @@ ms.locfileid: "62889298"
 ## <a name="understanding-the-disadvantages-of-configuring-integration-services-as-a-cluster-resource"></a>了解將 Integration Services 設定為叢集資源的缺點  
  將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為叢集資源的一些可能缺點包括下列：  
   
--   當容錯移轉發生時，執行中的封裝不會重新啟動。 您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱[使用檢查點來重新啟動封裝](../packages/restart-packages-by-using-checkpoints.md)。  
+-   當容錯移轉發生時，執行中的封裝不會重新啟動。 您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../packages/restart-packages-by-using-checkpoints.md)。  
   
 -   當您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的不同資源群組中設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務時，無法從用戶端電腦使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來管理儲存在 msdb 資料庫中的封裝。 在這種雙躍點的狀況中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務無法委派認證。  
   

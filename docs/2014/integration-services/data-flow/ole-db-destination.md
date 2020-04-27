@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901482"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
@@ -48,21 +48,20 @@ ms.locfileid: "62901482"
  當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入]**** 或 [資料表名稱或檢視名稱變數 - 快速載入]****。 兩個選項都可從 [OLE DB 目的地編輯器]**** 對話方塊使用。 在程式設計[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型時，您應該將 AccessMode 屬性設定`OpenRowset Using FastLoad`為、 `OpenRowset Using FastLoad From Variable`或。  
   
 > [!NOTE]  
->  如果使用「** 設計師」中的 [OLE DB 目的地編輯器]**[!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
+>  如果使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中的 [OLE DB 目的地編輯器]**** 對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
   
 > [!NOTE]  
 >  視目的地類型而定，[OLE DB 目的地編輯器]**** 對話方塊產生的 CREATE TABLE 陳述式可能需要進行修改。 例如，某些目的地並不支援 CREATE TABLE 陳述式所使用的資料類型。  
   
  此目的地使用 OLE DB 連接管理員連接到資料來源，且連接管理員會指定要使用的 OLE DB 提供者。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案亦提供您建立 OLE DB 連線管理員所在的資料來源物件，讓 OLE DB 目的地使用資料來源和資料來源檢視。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案亦提供您建立 OLE DB 連線管理員所在的資料來源物件，讓 OLE DB 目的地使用資料來源和資料來源檢視。  
   
  OLE DB 目的地包含輸入資料行與目的地資料來源中資料行之間的對應。 您不一定要將輸入資料行對應到所有目的地資料行，但因目的地資料行屬性的不同，如果輸入資料行未對應到目的地資料行，則可能發生錯誤。 例如，如果目的地資料行不允許 Null 值，則輸入資料行必須對應到該資料行。 此外，對應之資料行的資料類型必須相容。 例如，您不能將字串資料類型的輸入資料行對應到數值資料類型的目的地資料行。  
   
  OLE DB 目的地具有一個規則輸入和一個錯誤輸出。  
   
- 如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](integration-services-data-types.md)＞。  
+ 如需資料類型的詳細資訊，請參閱[Integration Services 資料類型](integration-services-data-types.md)。  
   
 ## <a name="fast-load-options"></a>快速載入選項  
  如果 OLE DB 目的地使用快速載入資料存取模式，則您可以在 **OLE DB 目的地編輯器**這個使用者介面中為目的地指定下列快速載入選項：  
@@ -90,8 +89,7 @@ ms.locfileid: "62901482"
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
 |ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<資料行名稱> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意：如果您使用 ORDER 選項依照資料表的叢集索引排序輸入資料，將可改善效能。|  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字通常是以大寫字母輸入，但是這些關鍵字並不區分大小寫。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字通常是以大寫字母輸入，但是這些關鍵字並不區分大小寫。  
   
  若要深入了解有關快速載入選項的詳細資訊，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -105,7 +103,7 @@ ms.locfileid: "62901482"
   
 -   [OLE DB 目的地編輯器 &#40;連線管理員頁面&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB 目的地編輯器 &#40;對應] 頁面&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [OLE DB 目的地編輯器 &#40;對應頁面&#41;](../ole-db-destination-editor-mappings-page.md)  
   
 -   [OLE DB 目的地編輯器 &#40;錯誤輸出頁面&#41;](../ole-db-destination-editor-error-output-page.md)  
   

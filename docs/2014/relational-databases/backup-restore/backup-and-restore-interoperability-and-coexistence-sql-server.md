@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922433"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>備份與還原：互通性與共存性 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922433"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> 檔案還原與資料庫啟動  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> 檔案還原與資料庫啟動  
  本節僅與包含多個檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922433"
   
  如果啟動成功，任何包含離線檔案的檔案群組都會保持離線。  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> 線上還原和停用的索引  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> 線上還原和停用的索引  
  本節僅與包含多個檔案群組 (在簡單復原模式下，至少有一個唯讀檔案群組) 的資料庫有關。  
   
  在這些案例中，如果資料庫在線上，則只有在保有索引任一部分的所有檔案群組都在線上時，才可以建立、卸除、啟用或停用索引。  
   
  如需還原離線檔案群組的相關資訊，請參閱[線上還原 &#40;SQL Server&#41;](online-restore-sql-server.md)。  
   
-##  <a name="DbMandBnR"></a> 資料庫鏡像與備份和還原  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> 資料庫鏡像與備份和還原  
  本節僅與包含多個檔案群組的完整模式資料庫有關。  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922433"
   
 -   不允許還原主體資料庫。  
   
-##  <a name="PiecemealAndFTIndexes"></a> 分次還原和全文檢索索引  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> 分次還原和全文檢索索引  
  本節只與包含多個檔案群組的資料庫有關，而在簡單模式資料庫中僅與唯讀檔案群組相關。  
   
  全文檢索索引會儲存在資料庫檔案群組中，而且可能會受到分次還原的影響。 如果全文檢索索引與任何相關聯的資料表資料位於相同的檔案群組中，分次還原就會依照預期方式運作。  
@@ -111,7 +111,7 @@ ms.locfileid: "62922433"
   
  一旦資料表檔案群組和群組檢索索引檔案群組都上線時，任何暫停的全文檢索母體擴展就會繼續進行。  
   
-##  <a name="FileBnRandCompression"></a> 檔案備份以及還原與壓縮  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> 檔案備份以及還原與壓縮  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援唯讀檔案群組及唯讀資料庫的 NTFS 檔案系統資料壓縮。  
   
  壓縮的 NTFS 檔案支援唯讀檔案群組中的檔案還原。 這些檔案群組的備份與還原，本質上與任何唯讀檔案群組相同，但有下列例外狀況：  
@@ -123,7 +123,7 @@ ms.locfileid: "62922433"
 > [!NOTE]  
 >  讀取/寫入資料庫的記錄檔絕不可放在壓縮檔案系統上。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

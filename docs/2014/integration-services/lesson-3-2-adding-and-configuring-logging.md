@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892433"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>步驟 2：加入和設定記錄
+# <a name="step-2-adding-and-configuring-logging"></a>步驟 2:新增和設定記錄
   在這項工作中，您將針對 Lesson 3.dtsx 封裝的資料流程啟用記錄。 然後，您會設定文字檔案記錄提供者來記錄 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 文字檔案記錄提供者會建立容易檢視及容易傳輸的記錄。 這些記錄檔的簡單性，使它們在封裝的基本測試階段特別有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [記錄事件] 視窗中檢視記錄項目。  
   
 ### <a name="to-add-logging-to-the-package"></a>若要將記錄加入封裝中  
   
-1.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
+1.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
   
 2.  在 **[設定 SSIS 記錄]** 對話方塊的 **[容器]** 窗格中，確定有選取代表第 3 課封裝的最上層物件。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62892433"
 9. 在 **[容器]** 窗格中，展開封裝容器階層的所有節點，然後清除所有核取方塊，包括 **[擷取範例貨幣資料]** 核取方塊在內。 現在，請選取 **[擷取範例貨幣資料]** 來取得只有此節點的事件。  
   
     > [!IMPORTANT]  
-    >  如果 [擷取範例貨幣資料]**** 核取方塊呈現暗灰色而不是被選取，此工作將使用父容器的記錄設定，且您不能啟用此工作特定的記錄事件。  
+    >   如果 **[擷取範例貨幣資料]** 核取方塊呈現暗灰色而不是被選取，此工作將使用父容器的記錄設定，且您不能啟用此工作特定的記錄事件。  
   
 10. 在 **[詳細資料]** 索引標籤的 **[事件]** 資料行中，選取 **[PipelineExecutionPlan]** 和 **[PipelineExecutionTrees]** 事件。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62892433"
   
 12. 按一下 **[基本]** 來隱藏資訊類別目錄。  
   
-13. 在 [**提供者和記錄**檔] 索引**** 標籤的 [ `Lesson 3 Log File`名稱] 欄中，選取 []。 建立封裝的記錄提供者之後，您就可以選擇性地取消選取它，來暫時關閉記錄，而不必刪除再重新建立記錄提供者。  
+13. 在 [**提供者和記錄**檔] 索引**Name**標籤的 [ `Lesson 3 Log File`名稱] 欄中，選取 []。 建立封裝的記錄提供者之後，您就可以選擇性地取消選取它，來暫時關閉記錄，而不必刪除再重新建立記錄提供者。  
   
 14. 按一下 [確定]  。  
   

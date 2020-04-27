@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874125"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 整合使用者入門
@@ -102,8 +102,7 @@ C:\Windows\Microsoft.NET\Framework\(version)
 C:\Windows\Microsoft.NET\Framework\v2.0.31113  
 ```  
   
- 將 .NET Framework 目錄加入路徑後，您就可以使用下列命令將範例預存程序編譯為組件。 
-  `/target` 選項可讓您將其編譯為組件。  
+ 將 .NET Framework 目錄加入路徑後，您就可以使用下列命令將範例預存程序編譯為組件。 `/target` 選項可讓您將其編譯為組件。  
   
  若為 Visual C# 來源檔案：  
   
@@ -143,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 程序建立完成後，就可以使用與執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中撰寫的一般預存程序一樣的方法來執行它。 執行以下命令：  
+ 程序建立完成後，就可以使用與執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中撰寫的一般預存程序一樣的方法來執行它。 執行下列命令：  
   
 ```  
 DECLARE @J nchar(25)  

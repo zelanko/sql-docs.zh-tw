@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916706"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
@@ -33,9 +33,9 @@ ms.locfileid: "62916706"
   
 -   **若要將資料庫還原成資料庫快照集，請使用下列方式：** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  在下列狀況下，不支援還原：  
   
 -   資料庫目前只能有一個資料庫快照集，就是您打算要還原的目標快照集。  
@@ -66,7 +66,7 @@ ms.locfileid: "62916706"
   
 -   還原會卸除所有全文檢索目錄。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  請確定來源資料庫和資料庫快照集符合下列必要條件：  
   
 -   確認資料庫尚未損毀。  
@@ -78,18 +78,18 @@ ms.locfileid: "62916706"
   
 -   卸除目前存在資料庫上的任何其他快照集。 如需詳細資訊，請參閱 [卸除資料庫快照集 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)執行個體。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  任何擁有來源資料庫之 RESTORE DATABASE 權限的使用者都可以將它還原成建立資料庫快照集時的狀態。  
   
-##  <a name="TsqlProcedure"></a> 如何將資料庫還原成資料庫快照集 (使用 Transact-SQL)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> 如何將資料庫還原成資料庫快照集 (使用 Transact-SQL)  
  **若要將資料庫還原成資料庫快照集**  
   
 > [!NOTE]  
 >  如需此程序的範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
   
-1.  識別您要將資料庫還原成哪一個資料庫快照集。 您可以檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中之資料庫的快照集 (請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md))。 此外，您可以從 **sys.databases &#40;Transact-SQL&#41;** 目錄檢視的 [sys.databases &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 資料行中，識別某個檢視的來源資料庫。  
+1.  識別您要將資料庫還原成哪一個資料庫快照集。 您可以檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中之資料庫的快照集 (請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md))。 此外，您可以從 **sys.databases &amp;#40;Transact-SQL&amp;#41;** 目錄檢視的 [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 資料行中，識別某個檢視的來源資料庫。  
   
 2.  卸除任何其他資料庫快照集。  
   
@@ -117,14 +117,14 @@ ms.locfileid: "62916706"
   
 6.  您可以選擇性地備份還原的資料庫，特別是當它使用完整 (或大量記錄) 復原模式時。 若要備份資料庫，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  本節包含將資料庫還原成資料庫快照集的下列範例：  
   
 -   A. [還原 AdventureWorks 資料庫上的快照集](#Reverting_AW)  
   
 -   B. [還原 Sales 資料庫上的快照集](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. 還原 AdventureWorks 資料庫上的快照集  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. 還原 AdventureWorks 資料庫上的快照集  
  此範例假設 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上目前只有一個快照集。 如需建立還原資料庫之快照集的範例，請參閱 [建立資料庫快照集 &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -135,7 +135,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> B. 還原 Sales 資料庫上的快照集  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> B. 還原 Sales 資料庫上的快照集  
  此範例假設 **Sales** 資料庫中目前有兩個快照集： **sales_snapshot0600** 和 **sales_snapshot1200**。 此範例會刪除較舊的快照集，並將資料庫還原到較新的快照集。  
   
  如需建立範例資料庫與此範例使用之快照的程式碼，請參閱：  
@@ -157,7 +157,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立資料庫快照集 &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   

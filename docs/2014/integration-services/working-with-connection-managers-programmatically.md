@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877699"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
@@ -61,15 +61,15 @@ ms.locfileid: "62877699"
 |MULTIFILE|多個檔案連接管理員|`System.String`|其中一個檔案的路徑。|  
 |MULTIFLATFILE|多個一般檔案連接管理員|`System.String`|其中一個檔案的路徑。|  
 |SMOServer|SMO 連線管理員|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 連接管理員|`System.String`|例如： `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 連接管理員|`System.String`|例如：`SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 連接管理員|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 連接管理員|`System.Data.SqlServerCe.SqlCeConnection`||  
   
 ![Integration Services 圖示（小型）](media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [在指令碼工作中連線至資料來源](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [在指令碼元件中連線至資料來源](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
- [在自訂工作中連線至資料來源](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
+ [連接至腳本工作中的資料來源](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [連接到腳本元件中的資料來源](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+ [連接至自訂工作中的資料來源](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   

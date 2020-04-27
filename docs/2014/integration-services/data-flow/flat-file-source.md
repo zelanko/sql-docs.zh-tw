@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902435"
 ---
 # <a name="flat-file-source"></a>一般檔案來源
@@ -55,9 +55,9 @@ ms.locfileid: "62902435"
   
  如需有關 **[一般檔案來源編輯器]** 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [[一般檔案來源編輯器] &#40;連線管理員頁面&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [一般檔案來源編輯器 &#40;連線管理員頁面&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [[一般檔案來源編輯器] &#40;[資料行] 頁面&#41;](../flat-file-source-editor-columns-page.md)  
+-   [一般檔案來源編輯器 &#40;資料行頁面&#41;](../flat-file-source-editor-columns-page.md)  
   
 -   [一般檔案來源編輯器 &#40;錯誤輸出頁面&#41;](../flat-file-source-editor-error-output-page.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62902435"
 -   [一般檔案自訂屬性](flat-file-custom-properties.md)  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何設定資料流程元件屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定資料流程元件屬性的詳細資訊，請參閱 [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)(設定資料流程元件的屬性)。  
   
 ## <a name="see-also"></a>另請參閱  
  [一般檔案目的地](flat-file-destination.md)   

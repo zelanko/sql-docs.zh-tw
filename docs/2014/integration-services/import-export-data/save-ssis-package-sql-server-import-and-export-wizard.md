@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892749"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
@@ -33,10 +33,10 @@ ms.locfileid: "62892749"
  **名稱**  
  提供封裝的唯一名稱。  
   
- **說明**  
+ **描述**  
  提供封裝的描述。 最佳作法是以其用途描述封裝，使封裝可以自我記錄並易於維護。  
   
- **設定**  
+ **目標**  
  檢視先前為目的地檔案指定的目標 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或檔案)。  
   
 ## <a name="target-dynamic-options"></a>目標動態選項  
@@ -45,10 +45,10 @@ ms.locfileid: "62892749"
  **伺服器名稱**  
  當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，請輸入或選取目的地伺服器名稱。  
   
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
  當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，請指定是否使用 Windows 整合式驗證連接到伺服器。 這是慣用的驗證方法。  
   
- **使用 SQL Server 驗證**  
+ **[使用 SQL Server 驗證]**  
  當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，請指定是否使用 SQL Server 驗證連接到伺服器。  
   
  **使用者名稱**  
@@ -58,7 +58,7 @@ ms.locfileid: "62892749"
  當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，並且指定 SQL Server 驗證時，請輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密碼。  
   
 ### <a name="target--file-system"></a>目標 = 檔案系統  
- **檔案名稱**  
+ [檔案名稱]****  
  當您選取檔案目的地時，請輸入目的地檔案的路徑，或使用 [**流覽]** 按鈕。  
   
  **瀏覽**  

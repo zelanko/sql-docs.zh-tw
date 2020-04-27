@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916500"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>擴充屬性的值對話方塊
-  使用 [ **** * \<屬性名稱>* ] 對話方塊的 [值]，即可輸入或查看值。 這是一般的對話方塊，可以從數個位置加以開啟。  
+  使用 [**屬性名稱> 的值]** *\<* 對話方塊來輸入或檢視值。 這是一般的對話方塊，可以從數個位置加以開啟。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **擴充屬性名稱**  

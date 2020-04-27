@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902436"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
   當資料輸入封裝中的資料流程時，擷取資料的來源會將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 數值資料會指派為數值資料類型、字串資料指派為字元資料類型，而日期則是指派為日期資料類型。 其他資料，例如 GUID 和「二進位大型物件區塊 (BLOB)」也都會被指派適當的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如果資料的資料類型不能轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，則會發生錯誤。  
   
- 部分資料流程元件會在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]資料類型和的 managed 資料類型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]之間轉換資料類型。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Managed 資料類型間對應的詳細資訊，請參閱 [使用資料流程中的資料類型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
+ 部分資料流程元件會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的受控資料類型之間轉換資料類型。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Managed 資料類型間對應的詳細資訊，請參閱 [使用資料流程中的資料類型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 資料表中的某些資料類型具有適用的精確度和小數位數資訊。 如需有效位數和小數位數的詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql)。  
   
@@ -60,15 +60,14 @@ ms.locfileid: "62902436"
 |DT_UI4|四位元組不帶正負號的整數。|  
 |DT_UI8|八位元組不帶正負號的整數。|  
 |DT_WSTR|最大長度為 4000 字元，以 Null 終止的 Unicode 字元字串。 如果資料行值包含額外的 Null 結束字元，字串就會在第一個 Null 出現時被截斷。|  
-|DT_IMAGE|大小上限為 2<sup>31</sup>-1 （2147483647）個位元組的二進位值。 .|  
+|DT_IMAGE|大小上限為 2<sup>31</sup>-1 （2147483647）個位元組的二進位值。 。|  
 |DT_NTEXT|最大長度為 2<sup>30</sup> -1 （1073741823）個字元的 Unicode 字元字串。|  
 |DT_TEXT|最[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]大長度為 2<sup>31</sup>-1 （2147483647）個字元的/MBCS 字元字串。|  
   
 ## <a name="conversion-of-data-types"></a>資料類型的轉換  
  如果資料行中的資料不需要來源資料類型配置的全形字元，您可能需要變更該資料行的資料類型。 在傳送資料時，每個資料列愈窄愈有助於最佳化效能，因為每個資料列愈窄，資料從來源移動到目的地的速度就會愈快。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含完整的一組數值資料類型，以便您可以使資料類型與資料大小密切相符。 例如，如果資料類型為 DT_UI8 之資料列中的值始終是 0 至 3000 之間的整數，則您可以將資料類型變更為 DT_UI2。 同樣地，如果資料類型為 DT_CY 的資料行可以透過改用整數資料類型來滿足封裝資料需求，則您可以將資料類型變更為 DT_I4。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含完整的一組數值資料類型，以便您可以使資料類型與資料大小密切相符。 例如，如果資料類型為 DT_UI8 之資料列中的值始終是 0 至 3000 之間的整數，則您可以將資料類型變更為 DT_UI2。 同樣地，如果資料類型為 DT_CY 的資料行可以透過改用整數資料類型來滿足封裝資料需求，則您可以將資料類型變更為 DT_I4。  
   
  您可以透過下列方式變更資料行的資料類型：  
   
@@ -223,26 +222,26 @@ ms.locfileid: "62902436"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney、money|smallmoney、money|貨幣||||  
+|DT_CY|smallmoney, money|smallmoney, money|貨幣||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[時間 &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql)（p）|[時間 &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql) （p）|||||  
-|DT_DBTIMESTAMP|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)、 [Smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)、 [Smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[時間 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[時間 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)、[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)、[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)（p）|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) （p）||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|簡短||SMALLINT|SMALLINT|  
+|DT_I2|SMALLINT|SMALLINT|Short||SMALLINT|SMALLINT|  
 |DT_I4|int|int|long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||BIGINT|BIGINT|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|real|real|Single||real|real|  
-|DT_R8|FLOAT|FLOAT|DOUBLE|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

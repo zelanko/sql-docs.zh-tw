@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920793"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62920793"
 > [!IMPORTANT]  
 >  在給定的資源管理員狀況中，工作階段分類可能會以使用者名稱、應用程式名稱，或可區分連接的其他任何項目為基礎。 如需相關資訊，請參閱 [Resource Governor Classifier Function](../resource-governor/resource-governor-classifier-function.md) 以及 [Resource Governor Workload Group](../resource-governor/resource-governor-workload-group.md)。  
   
-##  <a name="Top"></a> 這個主題包含下列狀況集，並依序展示：  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> 這個主題包含下列狀況集，並依序展示：  
   
 1.  [針對低優先權作業設定登入和使用者](#setup_login_and_user)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62920793"
   
 4.  [使用含有限制 CPU 的工作階段來壓縮備份](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> 針對低優先權作業設定登入和使用者  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> 針對低優先權作業設定登入和使用者  
  這個主題中的狀況需要使用低優先權 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和使用者。 使用者名稱將用來分類在登入中執行的工作階段，並且將它們路由傳送至限制 CPU 使用量的資源管理員工作負載群組。  
   
  下列程序描述針對此目的設定登入和使用者的步驟，後面接著 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例：「範例 A：設定登入和使用者 (Transact-SQL)」。  
@@ -100,7 +100,7 @@ GO
   
  [[頁首]](#Top)  
   
-##  <a name="configure_RG"></a> 設定資源管理員來限制 CPU 使用量  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> 設定資源管理員來限制 CPU 使用量  
   
 > [!NOTE]  
 >  請確定資源管理員已啟用。 如需詳細資訊，請參閱 [啟用資源管理員](../resource-governor/enable-resource-governor.md)。  
@@ -238,7 +238,7 @@ GO
   
  [[頁首]](#Top)  
   
-##  <a name="verifying"></a> 確認目前工作階段的分類 (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> 確認目前工作階段的分類 (Transact-SQL)  
  (選擇性) 以您在分類函數中指定之使用者的身分登入，然後在 [物件總管] 中發出下列 [SELECT](/sql/t-sql/queries/select-transact-sql) 陳述式，藉以確認工作階段分類：  
   
 ```sql  
@@ -258,7 +258,7 @@ GO
   
  [[頁首]](#Top)  
   
-##  <a name="creating_compressed_backup"></a> 使用含有限制 CPU 的工作階段來壓縮備份  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> 使用含有限制 CPU 的工作階段來壓縮備份  
  若要在含有限制最大 CPU 的工作階段中建立壓縮備份，請以您在分類函數中指定之使用者的身分登入。 在備份命令中，指定 WITH COMPRESSION （[!INCLUDE[tsql](../../includes/tsql-md.md)]）或選取 [**壓縮備份**][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]（）。 若要建立壓縮的資料庫備份，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)。  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>範例 C：建立壓縮備份 (Transact-SQL)  

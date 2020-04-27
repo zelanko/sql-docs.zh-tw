@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899931"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
@@ -173,11 +173,11 @@ ms.locfileid: "62899931"
   
  如需可在 [詞彙擷取轉換編輯器]**** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [[詞彙解壓縮轉換編輯器] &#40;[詞彙] [提取] 索引標籤&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [[詞彙解壓縮轉換編輯器] &#40;[排除] 索引標籤&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [詞彙擷取轉換編輯器 &#40;排除索引標籤&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [[詞彙解壓縮轉換編輯器] &#40;[Advanced] 索引標籤&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [詞彙擷取轉換編輯器 &#40;進階索引標籤&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

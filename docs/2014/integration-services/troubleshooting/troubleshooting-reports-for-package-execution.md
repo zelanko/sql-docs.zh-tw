@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c1a59d9e77806666c487b0778edd574bcaa5e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62926303"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>疑難排解封裝執行的報表
@@ -40,6 +40,6 @@ ms.locfileid: "62926303"
 ## <a name="related-content"></a>相關內容  
  [Integration Services 伺服器的報表](../reports-for-the-integration-services-server.md)  
   
- [套件執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)  
+ [封裝執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)  
   
   

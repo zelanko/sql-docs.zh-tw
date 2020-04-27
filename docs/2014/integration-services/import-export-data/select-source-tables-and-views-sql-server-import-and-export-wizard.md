@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892666"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
@@ -32,10 +32,10 @@ ms.locfileid: "62892666"
 ## <a name="options"></a>選項。  
   
 ### <a name="tables-and-views-list"></a>資料表和檢視表清單  
- **Source**  
+ **來源**  
  使用這些核取方塊，從可用的資料表和檢視清單中選取要複製到目的地的項目。 如果您選取來源資料表或檢視，並且未執行其他任何動作，就會複製來自來源的結構描述和資料，而不會進行變更。  
   
- **目的地**  
+ **Destination**  
  從每個來源資料表的清單中選取目的地資料表。  
   
 > [!NOTE]  
@@ -48,6 +48,6 @@ ms.locfileid: "62892666"
  **預覽**  
  在執行匯入或匯出之前，預覽 [**預覽資料**] 對話方塊中的來源資料以進行驗證。 [**預覽資料**] 對話方塊會顯示多達200個數據列。  
   
- 預覽資料之後，您可能會想要變更已針對資料來源和目的地選取的選項。 若要進行這些變更，請在 [選取來源資料表和檢視]**** 頁面上，按一下 [上一步]**** 返回先前的頁面，如此您就可以在其中變更選項。  
+ 預覽資料之後，您可能會想要變更已針對資料來源和目的地選取的選項。 若要進行這些變更，請在 [選取來源資料表和檢視]**** 頁面上，按 [上一步]**** 返回先前的頁面，如此您就可以在其中變更選項。  
   
   

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900221"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
@@ -53,13 +53,13 @@ ms.locfileid: "62900221"
   
 -   DB2  
   
- 「查閱」轉換會嘗試在轉換輸入的值與參考資料集的值之間執行等聯結 (Equi-Join)  (等聯結表示轉換輸入中的各資料列，必須至少符合參考資料集中的某個資料列)。如果無法執行等聯結，則「查閱」轉換會執行下列其中一項動作：  
+ 「查閱」轉換會嘗試在轉換輸入的值與參考資料集的值之間執行等聯結 (Equi-Join) (等聯結表示轉換輸入中的各資料列，必須至少符合參考資料集中的某個資料列)。如果無法執行等聯結，則「查閱」轉換會執行下列其中一項動作：  
   
 -   如果參考資料集中沒有相符的項目，則不會發生聯結。 根據預設，「查閱」轉換會將沒有相符項目的資料列視為錯誤； 不過，您可以設定「查閱」轉換，以將這些資料列重新導向至無相符結果輸出。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;一般頁面&#41;](../../lookup-transformation-editor-general-page.md) 和[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。  
   
 -   如果參考資料表中有多個相符項目，「查閱」轉換將只傳回查閱查詢所傳回的第一個相符項目。 如果找到多個相符項目，則「查閱」轉換只會在已設定為將所有參考資料集載入至快取時才產生錯誤或警告。 在這種情況下，「查閱」轉換會在轉換填滿快取時偵測到多個相符項目時產生警告。  
   
- 聯結可以是複合聯結，表示您可以將轉換輸入中的多個資料行聯結至參考資料集中的資料行。 轉換支援聯結任何資料類型的資料行，但 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAG 除外。 如需詳細資訊，請參閱[Integration Services 資料類型](../integration-services-data-types.md)。  
+ 聯結可以是複合聯結，表示您可以將轉換輸入中的多個資料行聯結至參考資料集中的資料行。 轉換支援聯結任何資料類型的資料行，但 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAG 除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../integration-services-data-types.md)。  
   
  通常參考資料集的值會加入至轉換輸出。 例如，「查閱」轉換可從使用輸出資料行之值的資料表擷取產品名稱，然後將產品名稱加入至轉換輸出。 參考資料表的值可取代資料行的值，或者可加入至新的資料行。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62900221"
   
  下列是將快取保存至檔案的其他優點：  
   
--   ***在多個封裝之間共用快取檔案。如需詳細資訊，請參閱***  [使用快取連線管理員以完整快取模式來執行查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
+-   ***在多個封裝間共用快取檔案。如需詳細資訊，請參閱***  [使用快取連線管理員以完整快取模式實作查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
   
--   使用封裝部署快取檔案， ***然後您可以在多部電腦上使用資料。*** 如需詳細資訊，請參閱 [針對查閱轉換來建立及部署快取](create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
+-   使用封裝部署快取檔案， ***接著就可以在多部電腦上使用資料。*** 如需詳細資訊，請參閱 [針對查閱轉換來建立及部署快取](create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
 -   使用「原始檔案」來源從快取檔案讀取資料， 接著就可以使用其他的資料流程元件來轉換或移動資料。 如需相關資訊，請參閱 [Raw File Source](../raw-file-source.md)。  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62900221"
   
      此快取選項與 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]中用於「查閱」轉換的無快取選項相容。  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的差異在於比較字串的方式。 如果「查閱」轉換是設定為在執行之前將參考資料集載入至快取，則 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會在快取中進行查閱比較。 否則，查閱作業會使用參數化的 SQL 陳述式而由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行查閱比較。 這表示「查閱」轉換可能會根據快取類型，從相同的查閱資料表傳回不同數目的相符項目。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的差異在於比較字串的方式。 如果「查閱」轉換是設定為在執行之前將參考資料集載入至快取，則 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會在快取中進行查閱比較。 否則，查閱作業會使用參數化的 SQL 陳述式而由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行查閱比較。 這表示「查閱」轉換可能會根據快取類型，從相同的查閱資料表傳回不同數目的相符項目。  
   
 ## <a name="related-tasks"></a>相關工作  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。 如需進一步詳細資訊，請參閱下列主題。  

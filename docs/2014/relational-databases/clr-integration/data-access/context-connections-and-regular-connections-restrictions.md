@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919172"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>一般和內容連接的限制
@@ -30,16 +30,13 @@ ms.locfileid: "62919172"
   
 -   內容連接不支援 Multiple Active Result Sets (MARS)。  
   
--   
-  `SqlBulkCopy` 類別無法在內容連接中運作。  
+-   `SqlBulkCopy` 類別無法在內容連接中運作。  
   
 -   不支援在內容連接中更新批次。  
   
--   
-  `SqlNotificationRequest` 無法搭配針對內容連接執行的命令使用。  
+-   `SqlNotificationRequest` 無法搭配針對內容連接執行的命令使用。  
   
--   不支援取消針對內容連接執行的命令。 
-  `SqlCommand.Cancel` 方法會以無訊息的方式忽略此要求。  
+-   不支援取消針對內容連接執行的命令。 `SqlCommand.Cancel` 方法會以無訊息的方式忽略此要求。  
   
 -   當您使用 "context connection=true" 時，無法使用其他連接字串關鍵字。  
   

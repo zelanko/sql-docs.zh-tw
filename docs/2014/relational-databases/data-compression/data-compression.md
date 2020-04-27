@@ -23,14 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873551"
 ---
 # <a name="data-compression"></a>資料壓縮
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援資料列存放區之資料表和索引的資料列和頁面壓縮，並且支援資料行存放區之資料表和索引的資料行存放區和資料行存放區封存壓縮。  
   
  如果是資料列存放區資料表和索引，使用資料壓縮功能有助於減少資料庫的大小。 除了節省空間之外，資料壓縮也有助於改善 I/O 密集型工作負載的效能，因為資料會儲存在更少的頁面中，而且查詢需要從磁碟讀取的頁面也變少了。 但是在與應用程式交換資料時，資料庫伺服器上需要額外的 CPU 資源來壓縮和解壓縮資料。 您可以針對下列資料庫物件來設定資料列和頁面壓縮：  
@@ -103,14 +102,13 @@ ms.locfileid: "62873551"
 -   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中實作 Vardecimal 儲存格式的資料表將會在升級時保留此設定。 您可以將資料列壓縮套用到具有 Vardecimal 儲存格式的資料表。 但是，由於資料列壓縮是 Vardecimal 儲存格式的超集，所以沒有理由保留 Vardecimal 儲存格式。 當您將 Vardecimal 儲存格式結合資料列壓縮時，十進位值不會取得額外的壓縮。 您可以將頁面壓縮套用到具有 Vardecimal 儲存格式的資料表；但是，Vardecimal 儲存格式資料行可能不會封存其他壓縮。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Vardecimal 儲存格式；但是，由於資料列層級的壓縮會達成相同的目標，所以 Vardecimal 儲存格式已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Vardecimal 儲存格式；但是，由於資料列層級的壓縮會達成相同的目標，所以 Vardecimal 儲存格式已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用資料行存放區和資料行存放區封存壓縮  
   
 ||  
 |-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
+|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
 ### <a name="basics"></a>基本概念  
  資料行存放區資料表和索引永遠都會以資料行存放區壓縮形式來儲存。 您可以進一步減少資料行存放區資料的大小，只要設定稱為封存壓縮的額外壓縮即可。  為了執行封存壓縮， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對資料執行 Microsoft XPRESS 壓縮演算法。 您可以使用下列資料壓縮類型來新增或移除封存壓縮：  
@@ -173,8 +171,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression`和`data_compression_desc`資料行包含資料行存放區和 COLUMNSTORE_ARCHIVE。  
   
- 
-  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 程序不適用於資料行存放區索引。  
+ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 程序不適用於資料行存放區索引。  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>壓縮對分割資料表和索引有何影響  
  當您搭配分割資料表和索引使用資料壓縮時，請注意以下考量事項：  
@@ -256,12 +253,12 @@ REBUILD PARTITION = ALL WITH (
   
 ## <a name="see-also"></a>另請參閱  
  [資料列壓縮執行](row-compression-implementation.md)   
- [頁面壓縮實作](page-compression-implementation.md)   
+ [頁面壓縮執行](page-compression-implementation.md)   
  [Unicode 壓縮執行](unicode-compression-implementation.md)   
  [建立資料分割配置 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
  [&#40;Transact-sql&#41;建立資料分割函數](/sql/t-sql/statements/create-partition-function-transact-sql)   
- [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: af3e8d9184b12a726361643c563402242c6b04cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876773"
 ---
 # <a name="backup-compression-sql-server"></a>備份壓縮 (SQL Server)
@@ -31,14 +31,14 @@ ms.locfileid: "62876773"
 >  如需[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支援備份壓縮之版本的資訊，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。  
   
   
-##  <a name="Benefits"></a> 優點  
+##  <a name="benefits"></a><a name="Benefits"></a> 優點  
   
 -   由於壓縮的備份小於相同資料的未壓縮備份，所以壓縮備份通常需要更少的裝置 I/O 而且通常會大幅提升備份速度。  
   
      如需詳細資訊，請參閱本主題稍後介紹的＜ [壓縮備份的效能影響](#PerfImpact)＞。  
   
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
  下列限制適用於壓縮的備份：  
   
 -   壓縮和未壓縮的備份無法在媒體集中並存。  
@@ -48,7 +48,7 @@ ms.locfileid: "62876773"
 -   NTbackup 無法與壓縮的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份共用磁帶。  
   
   
-##  <a name="PerfImpact"></a> 壓縮備份的效能影響  
+##  <a name="performance-impact-of-compressing-backups"></a><a name="PerfImpact"></a> 壓縮備份的效能影響  
  根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在其 CPU 使用量由[資源管理員](../resource-governor/resource-governor.md)限制的工作階段中，建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。  
   
  若要全盤了解備份 I/O 效能，您可以透過評估下列效能計數器種類，隔離往返裝置之間的備份 I/O：  
@@ -62,7 +62,7 @@ ms.locfileid: "62876773"
  如需有關 Windows 計數器的詳細資訊，請參閱 Windows 說明。 如需如何使用 SQL Server 計數器的相關資訊，請參閱 [使用 SQL Server 物件](../performance-monitor/use-sql-server-objects.md)。  
   
   
-##  <a name="CompressionRatio"></a> 計算壓縮備份的壓縮率  
+##  <a name="calculate-the-compression-ratio-of-a-compressed-backup"></a><a name="CompressionRatio"></a> 計算壓縮備份的壓縮率  
  若要計算備份的壓縮率，請使用 **backupset** 記錄資料表的 **backup_size** 和 [compressed_backup_size](/sql/relational-databases/system-tables/backupset-transact-sql) 資料行中的備份值，如下所示：  
   
  **backup_size**：**compressed_backup_size**  
@@ -92,12 +92,12 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
      如果資料庫已壓縮，壓縮備份可能不會大幅縮減其大小 (如果有的話)。  
   
   
-##  <a name="Allocation"></a> 配置備份檔案的空間  
+##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> 配置備份檔案的空間  
  對於壓縮備份，最後備份檔案的大小取決於資料可壓縮的程度，但是在備份作業完成之前，無法得知這項資訊。  因此，根據預設，使用壓縮備份資料庫時，Database Engine 會針對備份檔案使用預先配置的演算法。 此演算法預先為備份檔案配置了預先定義的資料庫大小百分比。 如果在備份作業期間需要更多空間，Database Engine 會增加檔案大小。 如果最後的大小小於配置的空間，在備份作業結束時，Database Engine 會將檔案縮小為最後的實際備份大小。  
   
  若要讓備份檔案只依照需要增加至最終大小，請使用追蹤旗標 3042。 追蹤旗標 3042 會導致備份作業略過預設備份壓縮預先配置演算法。 如果您只要配置壓縮備份所需的實際大小，藉以節省空間，這個追蹤旗標就很有用。 不過，使用此追蹤旗標可能會導致效能稍微降低 (可能會增加備份作業的持續時間)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [設定備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)  
   

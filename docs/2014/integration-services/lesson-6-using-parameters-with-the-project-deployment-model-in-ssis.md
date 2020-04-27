@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890543"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>第 6 課：搭配專案部署模型使用參數
@@ -32,15 +32,15 @@ ms.locfileid: "62890543"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
-1.  [步驟 1：複製第 5 課的封裝](lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [步驟 1:複製第 5 課的封裝](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [步驟 2：將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [步驟 2:將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [步驟 3：測試第 6 課的套件](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [步驟 3：測試第 6 課的封裝](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [步驟 4：部署第 6 課的套件](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [步驟 4：部署第 6 課的封裝](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1：複製第 5 課的封裝](lesson-6-1-copying-the-lesson-5-package.md)  
+ [步驟 1:複製第 5 課的封裝](lesson-6-1-copying-the-lesson-5-package.md)  
   
   

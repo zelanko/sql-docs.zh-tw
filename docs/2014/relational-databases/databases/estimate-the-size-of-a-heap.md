@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916742"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
@@ -54,7 +54,7 @@ ms.locfileid: "62916742"
   
      ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
-     新增到 ***Max_Var_Size*** 之位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行儲存所佔空間的百分比會比較低，您可以經由調整百分比所得的 ***Max_Var_Size*** 值，取得更精確的整體資料表大小。  
+     加入至 ***Max_Var_Size*** 的位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行儲存所佔空間的百分比會比較低，您可以經由調整百分比所得的 ***Max_Var_Size*** 值，取得更精確的整體資料表大小。  
   
     > [!NOTE]  
     >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 資料行。 這些資料行的每個長度仍然必須落在`varchar`、 `nvarchar,``varbinary`或`sql_variant`資料行的8000位元組限制內。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
@@ -63,7 +63,7 @@ ms.locfileid: "62916742"
   
 5.  計算資料列總大小：  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
   
      公式中 4 這個值是資料列的資料列標頭負擔。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916742"
   
 7.  計算儲存所有資料列所需的分頁數目：  
   
-     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
+     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
   
      估計的分頁數目應該要將小數進位到最接近的整分頁數。  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 112d0297243ebdd778f21db69037b5a3cbd67d10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916248"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
@@ -33,8 +33,7 @@ ms.locfileid: "62916248"
 |訊息文字|無法建立計畫指南 '%.\*ls'，因為 `@stmt` 或 `@statement_start_offset` 所指定的陳述式中含有語法錯誤或不適用於計畫指南。 請提供單一有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，或批次中陳述式的有效開始位置。 若要取得有效開始位置，請查詢 sys.dm_exec_query_stats 動態管理函數中的 statement_start_offset 資料行。|  
   
 ## <a name="explanation"></a>說明  
- 
-  `@stmt` 或 `@statement_start_offset` 所指定的陳述式中含有語法錯誤或不適用於計畫指南。  
+ `@stmt` 或 `@statement_start_offset` 所指定的陳述式中含有語法錯誤或不適用於計畫指南。  
   
 ## <a name="user-action"></a>使用者動作  
  請提供單一有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，或批次中陳述式的有效開始位置。 若要取得有效開始位置，請查詢 sys.dm_exec_query_stats 動態管理函數中的 statement_start_offset 資料行。  

@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919638"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>以 DataAdapter 更新 UDT 資料行
@@ -67,8 +67,7 @@ da.Fill(datTable);
   
 -   為 `InsertCommand` 物件提供自訂 `UpdateCommand`、`DeleteCommand` 及 `SqlDataAdapter` 物件。  
   
--   使用命令產生器 (`System.Data.SqlClient.SqlCommandBuilder`)，以自動建立 INSERT、UPDATE 及 DELETE 命令。 為了進行衝突偵測，請將 `timestamp` 資料行 (別名 `rowversion`) 加入到包含 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 
-  `timestamp` 資料類型可以讓您對資料表中的資料列加上版本戳記，而且可保證它在資料庫內是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
+-   使用命令產生器 (`System.Data.SqlClient.SqlCommandBuilder`)，以自動建立 INSERT、UPDATE 及 DELETE 命令。 為了進行衝突偵測，請將 `timestamp` 資料行 (別名 `rowversion`) 加入到包含 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 `timestamp` 資料類型可以讓您對資料表中的資料列加上版本戳記，而且可保證它在資料庫內是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
   
  請注意，除非在基底資料表中有 `SqlCommandBuilder` 資料行，否則 `timestamp` 不會考慮衝突偵測的 UDT。 因為 UDT 不一定可比較，所以當使用「比較原始值」選項來產生命令時，不會包括在 WHERE 子句中。  
   

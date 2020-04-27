@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921951"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
@@ -30,9 +30,9 @@ ms.locfileid: "62921951"
   
  頁面視為「可疑」的條件如下：當 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 嘗試讀取資料頁時，遇到下列其中一個錯誤：  
   
--   作業系統發出的迴圈冗余檢查（CRC）所造成的[823 錯誤](../errors-events/mssqlserver-823-database-engine-error.md)，例如磁片錯誤（某些硬體錯誤）  
+-   作業系統發出之循環冗餘檢查 (CRC) 所造成的 [823 錯誤](../errors-events/mssqlserver-823-database-engine-error.md) ，例如磁碟錯誤 (某些硬體錯誤)  
   
--   [824 錯誤](../errors-events/mssqlserver-824-database-engine-error.md)，例如損毀頁（任何邏輯錯誤）  
+-   [824 錯誤](../errors-events/mssqlserver-824-database-engine-error.md)，例如損毀頁 (任何邏輯錯誤)  
   
  每一個可疑頁面的頁面識別碼都會記錄在 **suspect_pages** 資料表中。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會記錄正常處理期間 (例如下列時間) 發生的任何可疑頁面：  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62921951"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   **記錄在 suspect_pages 資料表的錯誤**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62921951"
   
      資料庫管理員也可以插入或更新記錄。 例如，如果資料庫管理員知道某個疑問頁面其實沒問題，但想要保留記錄一段時間，則更新資料列會很有用。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  任何可以存取 **msdb** 的人員，均能讀取 **suspect_pages** 資料表中的資料。 針對 suspect_pages 資料表擁有 UPDATE 權限的任何人都可以更新其記錄。 **msdb** 上 **db_owner** 固定資料庫角色的成員或 **系統管理員** 固定伺服器角色的成員皆可插入、更新及刪除記錄。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>若要管理 suspect_pages 資料表  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921951"
   
 4.  在查詢視窗中，編輯、更新或刪除所要的資料列。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>若要管理 suspect_pages 資料表  
   

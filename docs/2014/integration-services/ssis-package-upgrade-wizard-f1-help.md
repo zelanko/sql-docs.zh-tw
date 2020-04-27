@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889361"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
   使用 [SSIS 封裝升級嚮導]， [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]將封裝[!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)]和封裝升級為目前版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝格式。  
   
- **執行 SSIS 封裝升級嚮導**  
+ **執行 SSIS 封裝升級精靈**  
   
--   [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [使用 SSIS 套件升級精靈來升級 Integration Services 套件](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="in-this-section"></a>本節內容  
  本節包含一些主題，這些主題會描述出現在 [SSIS 封裝升級精靈] 各頁面上的選項：  
@@ -42,6 +42,6 @@ ms.locfileid: "62889361"
 -   [升級 &#40;SSIS 封裝升級嚮導的封裝&#41;](../../2014/integration-services/upgrading-the-packages-ssis-package-upgrade-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages.md)  
+ [升級 Integration Services 套件](install-windows/upgrade-integration-services-packages.md)  
   
   

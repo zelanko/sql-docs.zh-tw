@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891546"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>步驟 6：加入及設定查閱轉換
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>步驟 6：新增和設定查閱轉換
   在設定一般檔案來源從來源檔擷取資料之後，下一項工作是要定義所需要的查閱轉換來取得 **CurrencyKey** 和 **DateKey**的值。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在此教學課程中，查閱轉換使用 OLE DB 連接管理員來連接到資料庫，該資料庫包含的資料就是參考資料集的來源。  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "62891546"
 12. 在 [屬性視窗中，確認屬性`LocaleID`是設為 [**英文（美國）** ]，而 [ **DefaultCodePage** ] 屬性設定為**1252**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 7：加入及設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [步驟 7：新增和設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [查閱轉換](data-flow/transformations/lookup-transformation.md)  

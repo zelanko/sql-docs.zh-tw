@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917701"
 ---
 # <a name="database-mail-messaging-objects"></a>Database Mail 訊息物件
   **msdb** 資料庫是 Database Mail 主機資料庫。 這個資料庫包含 Database Mail 的預存程序和訊息物件。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含 [Database Mail 組態精靈]，用以啟用 Database Mail、建立和管理設定檔及帳戶，以及設定 Database Mail 選項。  
   
-##  <a name="ComponentsAndConcepts"></a>**msdb** 資料庫中的物件  
+##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a>**msdb** 資料庫中的物件  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 必須在 **msdb** 資料庫中加以啟用。 不過，Database Mail 不會使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 網路。 因此，使用者並不需要建立 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點來使用 Database Mail。 外部 Database Mail 處理序會使用標準 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接來與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]進行通訊。  
   
  啟用 Database Mail 時，Database Mail 會公開 **msdb** 資料庫中的下列物件。  

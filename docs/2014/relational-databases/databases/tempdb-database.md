@@ -16,26 +16,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916880"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
-  **Tempdb**系統資料庫是全域資源，可供所有連接到實例的使用者使用，並用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]保存下列各項：  
+  **tempdb** 系統資料庫是全域資源，適用於所有連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的使用者，且可用來保留下列項目：  
   
 -   明確建立的暫存使用者物件 (例如：全域或本機暫存資料表、暫存預存程序、資料表變數或資料指標)。  
   
--   
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所建立的內部物件 (例如，儲存多工緩衝處理或排序之中繼結果集的工作資料表)。  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所建立的內部物件 (例如，儲存多工緩衝處理或排序之中繼結果集的工作資料表)。  
   
 -   由資料庫中的資料修改交易所產生的資料列版本，該資料庫採用使用資料列版本設定隔離的讀取認可或快照集隔離交易。  
   
 -   由以下這類功能的資料修改交易所產生的資料列版本：線上索引作業、Multiple Active Result Set (MARS) 和 AFTER 觸發程序。  
   
- 
-  **tempdb** 中的作業會以最低限度記錄。 這可讓您回復交易。 **** 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動時都會重新建立 tempdb，如此一來，系統一律會從資料庫的乾淨複本開始。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **tempdb**中的任何專案都不會從的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一個會話儲存到另一個。 **Tempdb**不允許備份和還原作業。  
+ **tempdb** 中的作業會以最低限度記錄。 這可讓您回復交易。 **tempdb**每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動時都會重新建立 tempdb，如此一來，系統一律會從資料庫的乾淨複本開始。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **tempdb**中的任何專案都不會從的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一個會話儲存到另一個。 **Tempdb**不允許備份和還原作業。  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb 的實體屬性  
  下表列示 **tempdb** 資料和記錄檔的初始組態值。 對於不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這些檔案的大小稍有不同。  

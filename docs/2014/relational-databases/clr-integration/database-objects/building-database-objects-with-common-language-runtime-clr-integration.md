@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919248"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
@@ -54,8 +54,7 @@ ms.locfileid: "62919248"
  提供 CLR 整合程式設計模型限制的相關資訊。  
   
  [.NET Framework 的 SQL Server 資料類型](../../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型及其 .NET Framework 對等項目的概觀。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型及其 .NET Framework 對等項目的概觀。  
   
  [CLR 整合自訂屬性的概觀](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  提供 CLR 整合自訂屬性的相關資訊。  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876179"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62876179"
     > [!NOTE]  
     >  此外，您也可以在還原順序之前手動使檔案離線。 如需詳細資訊，請參閱本主題稍後的「使資料庫或檔案離線」。  
   
-##  <a name="taking_db_or_file_offline"></a>讓資料庫或檔案離線  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>讓資料庫或檔案離線  
  如果您不想要使用線上還原，則可以使用下列其中一個方法先讓資料庫離線，再來啟動還原順序：  
   
 -   在任何復原模式下，您可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式，讓資料庫離線：  
@@ -87,11 +87,11 @@ ms.locfileid: "62876179"
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [還原檔案和檔案群組 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62876179"
 -   [移除無用的檔案群組 &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [檔案還原 &#40;完整復原模式&#41;](file-restores-full-recovery-model.md)   
- [檔案還原 &#40;簡單復原模式&#41;](file-restores-simple-recovery-model.md)   
- [還原頁面 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
+ [&#40;完整復原模式的檔案還原&#41;](file-restores-full-recovery-model.md)   
+ [&#40;簡單復原模式的檔案還原&#41;](file-restores-simple-recovery-model.md)   
+ [SQL Server&#41;還原頁面 &#40;](restore-pages-sql-server.md)   
  [分次還原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

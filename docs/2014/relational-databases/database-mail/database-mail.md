@@ -15,25 +15,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917961"
 ---
 # <a name="database-mail"></a>Database Mail
-  Database Mail 是從 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]傳送電子郵件訊息的企業解決方案。 使用 Database Mail，資料庫應用程式就能夠將電子郵件訊息傳送給使用者。 這類訊息能包含查詢結果，也可以包含來自網路上任何資源的檔案。  
+  Database Mail 是從 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 傳送電子郵件訊息的企業解決方案。 使用 Database Mail，資料庫應用程式就能夠將電子郵件訊息傳送給使用者。 這類訊息能包含查詢結果，也可以包含來自網路上任何資源的檔案。  
   
  
   
-##  <a name="Benefits"></a>使用 Database Mail 的優點  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> 使用 Database Mail 的優點  
  Database Mail 具有可靠性、延展性、安全性及可支援性。  
   
 ### <a name="reliability"></a>可靠性  
   
 -   Database Mail 會使用標準的 Simple Mail Transfer Protocol (SMTP) 來傳送郵件。 您不需要在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦上安裝「擴充 MAPI」用戶端，就可以使用 Database Mail。  
   
--   處理序隔離。 為了將對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的影響減到最小，傳遞電子郵件的元件必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部的個別處理序中執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使外部進程停止或失敗，仍會繼續將電子郵件訊息排入佇列。 佇列的訊息會在外部處理序或 SMTP 伺服器恢復連線後傳送。  
+-   處理序隔離。 為了將對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的影響減到最小，傳遞電子郵件的元件必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部的個別處理序中執行。 即使外部處理序停止或失敗，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會繼續將電子郵件訊息排入佇列中。 佇列的訊息會在外部處理序或 SMTP 伺服器恢復連線後傳送。  
   
 -   容錯移轉帳戶。 您可以使用 Database Mail 設定檔，指定多個 SMTP 伺服器。 萬一 SMTP 伺服器無法使用時，還是可以將郵件傳遞到另一個 SMTP 伺服器。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62917961"
   
 -   Database Mail 會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎服務帳戶執行。 若要從資料夾將檔案附加至電子郵件，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎帳戶應具備存取包含該檔案之資料夾的權限。  
   
-### <a name="supportability"></a>支援能力  
+### <a name="supportability"></a>可支援性  
   
 -   整合式組態：Database Mail 可維護 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]內電子郵件帳戶的資訊。  
   
@@ -75,14 +75,14 @@ ms.locfileid: "62917961"
   
 
   
-##  <a name="VisualElement"></a>Database Mail 架構  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a> Database Mail 架構  
  Database Mail 是根據使用 Service Broker 技術的佇列架構而設計。 當使用者執行 **sp_send_dbmail**時，預存程序會在郵件佇列中插入項目，並建立包含該電子郵件訊息的記錄。 在郵件佇列中插入新項目會啟動外部 Database Mail 處理序 (DatabaseMail.exe)。 外部處理序會讀取電子郵件資訊，並傳送電子郵件訊息到適當的電子郵件伺服器。 外部處理序會在「狀態」佇列中插入項目，表示傳送作業的結果。 在狀態佇列中插入新記錄會啟動內部預存程序，此預存程序會更新電子郵件訊息的狀態。 除了儲存已傳送 (或未傳送) 的電子郵件訊息之外，Database Mail 也會在系統資料表中記錄任何電子郵件附加檔案。 Database Mail 檢視提供可用於進行疑難排解的訊息狀態，並提供可用來管理 Database Mail 佇列的預存程序。  
   
  ![msdb 傳送訊息到 SMTP 郵件伺服器](../../database-engine/media/databasemail.gif "msdb 傳送訊息到 SMTP 郵件伺服器")  
   
 
   
-##  <a name="ComponentsAndConcepts"></a>Database Mail 元件簡介  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a> Database Mail 元件簡介  
  Database Mail 是由下列主要元件所組成：  
   
 -   組態與安全性元件  
@@ -91,8 +91,7 @@ ms.locfileid: "62917961"
   
 -   訊息元件  
   
-     
-  **msdb** 資料庫會充當郵件主機資料庫，其中會保存 Database Mail 用來傳送電子郵件的訊息物件。 這些物件包括 **sp_send_dbmail** 預存程序，以及保存訊息相關資訊的資料結構。  
+     **msdb** 資料庫會充當郵件主機資料庫，其中會保存 Database Mail 用來傳送電子郵件的訊息物件。 這些物件包括 **sp_send_dbmail** 預存程序，以及保存訊息相關資訊的資料結構。  
   
 -   Database Mail 可執行檔  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62917961"
   
  
   
-##  <a name="RelatedContent"></a>Database Mail 元件主題  
+##  <a name="database-mail-component-topics"></a><a name="RelatedContent"></a> Database Mail 元件主題  
   
 -   [Database Mail 組態物件](database-mail-configuration-objects.md)  
   

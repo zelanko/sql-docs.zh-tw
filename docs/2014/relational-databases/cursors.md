@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918689"
 ---
 # <a name="cursors"></a>資料指標
@@ -42,12 +42,10 @@ ms.locfileid: "62918689"
   
 ## <a name="concepts"></a>概念  
  實作資料指標  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援三個資料指標實作。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援三個資料指標實作。  
   
  Transact-SQL 資料指標  
- 根據 DECLARE CURSOR 語法，主要用於 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼、預存程序和觸發程序。 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標會在伺服器上實作，而且由用戶端傳送給伺服器的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所管理。 資料指標也可存在批次、預存程序或觸發程序內。  
+ 根據 DECLARE CURSOR 語法，主要用於 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼、預存程序和觸發程序。 [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標會在伺服器上實作，而且由用戶端傳送給伺服器的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所管理。 資料指標也可存在批次、預存程序或觸發程序內。  
   
  應用程式開發介面 (Application Programming Interface，API) 伺服端資料指標  
  可支援 OLE DB、ODBC 的 API 資料指標函數。 API 伺服端資料指標實作在伺服端上。 每次用戶端應用程式呼叫 API 資料指標函數時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 提供者或 ODBC 驅動程式都會將要求傳遞至伺服器，以依照 API 伺服端資料指標執行。  
@@ -61,42 +59,35 @@ ms.locfileid: "62918689"
   
  因為無法逆向捲動資料指標，提取資料列之後對資料庫中資料列所進行的大部分變更，都無法經由資料指標看見。 如果已修改用來判斷結果集之資料列位置的值 (例如更新叢集索引所涵蓋的資料行)，就可以經由資料指標看到修改的值。  
   
- 雖然資料庫 API 資料指標模型會將順向資料指標視為不同的資料指標類型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並不會。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將順向和捲動視為可以套用至靜態、索引鍵集驅動和動態資料指標的選項。 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標支援順向、靜態、索引鍵集驅動和動態資料指標。 資料庫 API 資料指標模式會假設靜態、索引鍵集驅動和動態資料指標一律可以捲動。 當資料庫 API 資料指標屬性 (Attribute 或 Property) 設為順向時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將此資料指標實作為順向動態資料指標。  
+ 雖然資料庫 API 資料指標模型會將順向資料指標視為不同的資料指標類型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並不會。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將順向和捲動視為可以套用至靜態、索引鍵集驅動和動態資料指標的選項。 [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標支援順向、靜態、索引鍵集驅動和動態資料指標。 資料庫 API 資料指標模式會假設靜態、索引鍵集驅動和動態資料指標一律可以捲動。 當資料庫 API 資料指標屬性 (Attribute 或 Property) 設為順向時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將此資料指標實作為順向動態資料指標。  
   
- 靜態  
+ Static  
  資料指標開啟時，靜態資料指標的完整結果集會內建於 **tempdb** 。 資料指標開啟的同時，靜態資料指標會將結果集的原貌展現出來。 靜態資料指標可以偵測少量的變更或是沒有變更，但是在捲動時所耗用的資源相當少。  
   
  即使資料庫中的變更影響結果集的成員資格，或構成結果集的資料列之資料行數值有所變動時，此類資料指標並不會反映出其中的變更。 靜態資料指標並不會將資料指標開啟後插入資料庫的新資料列顯示出來，即使資料列符合資料指標 SELECT 陳述式的搜尋條件。 如果構成結果集的資料列被其他使用者更新，新資料值不會顯示在靜態資料指標上。 靜態資料指標會顯示資料指標開啟後從資料庫刪除的資料列。 總結以上，靜態資料指標中並不會反映出 UPDATE、INSERT 或 DELETE 作業帶來的變動 (除非資料指標經過關閉後重新開啟)，即使是使用同一連接開啟資料指標後的修改也不顯示。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 靜態資料指標永遠是唯讀的。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 靜態資料指標永遠是唯讀的。  
   
  因為靜態資料指標的結果集是儲存在 **tempdb**中的工作資料表，所以結果集中的資料列大小不可超過 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表的資料列大小的上限。  
   
- 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 對靜態資料指標不太能區分。 部分資料庫 API 會將它們識別為快照集資料指標。  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] 對靜態資料指標不太能區分。 部分資料庫 API 會將它們識別為快照集資料指標。  
   
  索引鍵集  
  開啟資料指標時，索引鍵集驅動資料指標中的成員資格和資料列順序是固定的。 索引鍵集驅動資料指標是由一組唯一的識別碼、索引鍵 (稱為索引鍵集) 所控制。 索引鍵是從結果集中唯一識別資料列的一組資料行建立的。 索引鍵集是一組取自所有資料列的索引鍵值，這些資料列會在開啟資料指標時對 SELECT 陳述式加以限定。 開啟資料指標時，會在 **tempdb** 中建立索引鍵集驅動資料指標的索引鍵集。  
   
- Dynamic  
+ 動態  
  動態資料指標是靜態資料指標的相反。 捲動資料指標時，動態資料指標會反映其結果集中資料列的所有變更。 每回擷取時結果集之中資料列的資料值、順序和成員均會變動。 您可以透過資料指標看到所有使用者執行的全部 UPDATE、INSERT 和 DELETE 陳述式作業。 若是藉由使用 API 函數 (如： **SQLSetPos** 或 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE CURRENT OF 子句) 的資料指標來進行更新，您會馬上看到更新。 至於資料指標外的更新必須經過認可後才看得見，除非資料指標交易隔離等級設定為讀取未認可。 動態資料指標計劃一律不會使用空間索引。  
   
 ## <a name="requesting-a-cursor"></a>要求資料指標  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種要求資料指標的方法：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種要求資料指標的方法：  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
   
-     
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 語言支援使用 ISO 以後版本的資料指標語法。  
+     [!INCLUDE[tsql](../includes/tsql-md.md)] 語言支援使用 ISO 以後版本的資料指標語法。  
   
 -   資料庫應用程式開發介面 (API) 資料指標函數  
   
-     
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援以下資料庫 API 的資料指標功能：  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援以下資料庫 API 的資料指標功能：  
   
     -   ADO ([!INCLUDE[msCoName](../includes/msconame-md.md)] ActiveX 資料物件)  
   
@@ -109,8 +100,7 @@ ms.locfileid: "62918689"
  如果沒有要求 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 API 資料指標， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設會傳回完整的結果集 (亦即預設結果集) 給應用程式。  
   
 ## <a name="cursor-process"></a>資料指標處理過程  
- 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標和 API 資料指標具有不同的語法，但是下列一般處理過程適用於所有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料指標：  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標和 API 資料指標具有不同的語法，但是下列一般處理過程適用於所有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料指標：  
   
 1.  使資料指標與 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的結果集建立關聯，並定義資料指標的特性，例如可否更新資料指標中的資料列。  
   
@@ -123,12 +113,12 @@ ms.locfileid: "62918689"
 5.  關閉資料指標。  
   
 ## <a name="related-content"></a>相關內容  
- 資料[指標行為](native-client-odbc-cursors/cursor-behaviors.md)[如何執行](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)資料指標  
+ [資料指標行為](native-client-odbc-cursors/cursor-behaviors.md) [如何實作資料指標](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [資料指標 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
- [資料指標函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
- [&#40;Transact-sql&#41;的資料指標預存程式](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
+ [DECLARE CURSOR &#40;Transact-sql&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
+ [&#40;Transact-sql&#41;的資料指標](/sql/t-sql/language-elements/cursors-transact-sql)   
+ [&#40;Transact-sql&#41;的資料指標函數](/sql/t-sql/functions/cursor-functions-transact-sql)   
+ [資料指標預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   
   

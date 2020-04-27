@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917199"
 ---
 # <a name="database-properties-query-store-page"></a>資料庫屬性 (查詢存放區頁面)
@@ -24,7 +24,7 @@ ms.locfileid: "62917199"
   
 ||  
 |-|  
-|**適用**于： [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+|**適用於**： [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 ## <a name="options"></a>選項。  
  啟用  
@@ -63,7 +63,7 @@ ms.locfileid: "62917199"
  查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 可藉由使用這個查詢存放區資料庫屬性頁面，或是使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 選項，設定查詢存放區。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 對話方塊，查詢存放區即可呈現資訊。 如需查詢存放區的詳細資訊，請參閱 [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢存放區預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
+ [查詢存放區預存程式 &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

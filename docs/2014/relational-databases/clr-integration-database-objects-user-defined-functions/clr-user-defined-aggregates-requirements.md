@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874474"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR 使用者定義彙總的需求
@@ -38,8 +38,7 @@ ms.locfileid: "62874474"
   
 |方法|語法|描述|  
 |------------|------------|-----------------|  
-|`Init`|public void Init （）;|查詢處理器使用這個方法將彙總計算初始化。 這個方法針對查詢處理器正在彙總的每個群組叫用一次。 查詢處理器為了計算多個群組彙總，可能選擇重複使用彙總類別之相同執行個體。 
-  `Init` 方法應該會視需要針對上次使用的此執行個體執行清除作業，並讓它重新啟動新的彙總計算。|  
+|`Init`|public void Init （）;|查詢處理器使用這個方法將彙總計算初始化。 這個方法針對查詢處理器正在彙總的每個群組叫用一次。 查詢處理器為了計算多個群組彙總，可能選擇重複使用彙總類別之相同執行個體。 `Init` 方法應該會視需要針對上次使用的此執行個體執行清除作業，並讓它重新啟動新的彙總計算。|  
 |`Accumulate`|public void 累積（輸入類型值 [，輸入類型值，...]）;|代表函數參數的一個或多個參數。 *input_type* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]應該是 managed 資料類型，相當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于`CREATE AGGREGATE`語句中*input_sqltype*所指定的原生資料類型。 如需詳細資訊，請參閱[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。<br /><br /> 如果是使用者定義型別 (UDT)，輸入類型則是 UDT 類型。 查詢處理器使用這個方法來累積彙總值。 在群組中正在彙總的每一個值都會叫用一次。 查詢處理器一定只會在給定的彙總類別執行個體上呼叫 `Init` 方法後才會呼叫這些值。 這個方法的實作應該會更新執行個體的狀態，以反映傳入的引數值之累積狀況。|  
 |`Merge`|public void Merge （udagg_class 值）;|這個方法可用於將此彙總類別的其他執行個體與目前的執行個體合併。 查詢處理器使用這個方法合併多個不完全的彙總計算。|  
 |`Terminate`|public return_type Terminate （）;|這個方法會完成彙總計算，並傳回彙總的結果。 *Return_type*應該是 managed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，這是`CREATE AGGREGATE`語句中所指定*return_sqltype*的 managed 對應項。 *Return_type*也可以是使用者定義型別。|  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921937"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
@@ -54,7 +54,7 @@ ms.locfileid: "62921937"
   
   
   
-##  <a name="Overview"></a> 從檔案備份還原損壞的檔案  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 從檔案備份還原損壞的檔案  
   
 1.  在還原一個或多個損壞的檔案之前，請嘗試建立 [結尾記錄備份](tail-log-backups-sql-server.md)。  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [範例：離線還原主要檔案群組與另一個檔案群組 &#40;完整復原模式&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **還原檔案和檔案群組**  
   
 -   [將檔案還原到新位置 &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  

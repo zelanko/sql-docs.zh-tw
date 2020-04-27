@@ -10,10 +10,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc96699fda1e933e3d0a56b89a3b2b2b3b27164d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917868"
 ---
 # <a name="validation-rules-for-data-tier-application-wizards"></a>資料層應用程式精靈的驗證規則

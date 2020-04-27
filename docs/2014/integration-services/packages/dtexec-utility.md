@@ -11,18 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890194"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
-  `dtexec`命令提示字元公用程式可用來設定及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 
-  `dtexec` 公用程式可存取所有封裝組態及執行功能，例如參數、連接、屬性、變數、記錄與進度指標。 `dtexec`公用程式可讓您從下列來源載入封裝： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器、.ispac 專案檔案、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區和檔案系統。  
+  `dtexec`命令提示字元公用程式可用來設定及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 `dtexec` 公用程式可存取所有封裝組態及執行功能，例如參數、連接、屬性、變數、記錄與進度指標。 `dtexec`公用程式可讓您從下列來源載入封裝： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器、.ispac 專案檔案、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區和檔案系統。  
   
 > [!NOTE]  
->  當您使用 `dtexec` 隨附的 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] 公用程式版本執行 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會暫時將封裝升級為 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]。 但您無法使用 `dtexec` 公用程式儲存這些升級的變更。 如需如何將封裝永久升級至[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]的詳細資訊，請參閱[升級 Integration Services 套件](../install-windows/upgrade-integration-services-packages.md)。  
+>  當您使用 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] 隨附的 `dtexec` 公用程式版本執行 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會暫時將封裝升級為 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]。 但您無法使用 `dtexec` 公用程式儲存這些升級的變更。 如需如何將封裝永久升級至[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]的詳細資訊，請參閱[升級 Integration Services 套件](../install-windows/upgrade-integration-services-packages.md)。  
   
  這個主題包括下列各節：  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62890194"
   
 -   [範例](#example)  
   
-##  <a name="server"></a> Integration Services 伺服器及專案檔案  
+##  <a name="integration-services-server-and-project-file"></a><a name="server"></a>Integration Services 伺服器和專案檔案  
  當您使用`dtexec`在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器上執行封裝時， `dtexec`會呼叫[目錄。 create_execution &#40;ssisdb 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database)，[目錄。 set_execution_parameter_value &#40;Ssisdb](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)資料庫&#41;和[目錄。 start_execution &#40;ssisdb 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)預存程式來建立執行、設定參數值，以及開始執行。 所有執行記錄都可以從伺服器的相關檢視中查看，或透過 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中提供的標準報表查看。 如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](../reports-for-the-integration-services-server.md)。  
   
  以下是執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝範例。  
@@ -61,35 +60,35 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  您可以使用`dtexec`與協力廠商排程工具來排程部署到[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器的封裝。  
   
-##  <a name="bit"></a> 64 位元電腦上的安裝考量  
+##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a>64位電腦上的安裝考慮  
  在 64 位元電腦上，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝 64 位元版本的 `dtexec` 公用程式 (dtexec.exe)。 如果您必須用 32 位元模式執行特定封裝，必須安裝 32 位元版本的 `dtexec` 公用程式。 如果要安裝 32 位元版本的 `dtexec` 公用程式，必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
   
- 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是 \<磁碟機>  :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位元的目錄路徑是 \<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn)。  
+ 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 （一般而言，32位的目錄路徑是* \<磁片磁碟機>*： \Program Files （x86） \Microsoft SQL Server\110\DTS\Binn，而64位的目錄路徑是* \<磁片磁碟機>*： \Program Files\Microsoft SQL server\110\dts\binn）  
   
 > [!NOTE]  
 >  如果您使用 SQL Server Agent 執行此公用程式，SQL Server Agent 會自動使用 64 位元版的公用程式。 SQL Server Agent 會使用此登錄 (而不是 PATH 環境變數) 來尋找此公用程式的正確可執行檔。  
   
  若要確保您可在命令提示字元上執行 64 位元版的公用程式，您可以採取下列其中一個動作：  
   
--   開啟 [命令提示字元] 視窗，然後將目錄切換到包含 64 位元版公用程式的目錄 (\<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn)，再從該位置執行公用程式。  
+-   開啟 [命令提示字元] 視窗，切換至包含64位版公用程式的目錄（*\<磁片磁碟機>*： \Program Files\Microsoft SQL Server\110\DTS\Binn），然後從該位置執行公用程式。  
   
--   在命令提示字元上，輸入 64 位元版公用程式的完整路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn)，以執行此公用程式。  
+-   在命令提示字元中，輸入64位版本之公用程式的完整路徑（*\<磁片磁碟機>*： \Program Files\Microsoft SQL Server\110\DTS\Binn），以執行此公用程式。  
   
--   在 PATH 環境變數中將 64 位元路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn) 置於 32 位元路徑 (\<磁碟機>  :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可以永久變更該變數中的路徑順序。  
+-   藉由將64位路徑（*\<磁片磁碟機>*： \Program Files\Microsoft SQL Server\110\DTS\Binn）放在32位路徑之前（*\<磁片磁碟機>*： \，永久變更 PATH 環境變數中的路徑順序。變數中的 Program Files （x86） \Microsoft SQL Server\110\DTS\Binn）。  
   
-##  <a name="side"></a> 擁有並存安裝之電腦的考量  
+##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a>具有並存安裝之電腦的考慮  
  如果 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 安裝在已安裝 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的電腦上，則會安裝多個版本的 `dtexec` 公用程式。  
   
- 為確保您執行正確的公用程式版本，請在命令提示字元中輸入完整路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\\<版本\>\DTS\Binn) 來執行公用程式。  
+ 為確保您執行正確的公用程式版本，請在命令提示字元中輸入完整路徑（*\<磁片磁碟機>*： \Program Files\Microsoft SQL Server\\<版本\>\DTS\Binn）來執行公用程式。  
   
-##  <a name="phases"></a> 執行階段  
+##  <a name="phases-of-execution"></a><a name="phases"></a>執行階段  
  這個公用程式有四個執行階段。 執行階段如下所示：  
   
-1.  命令來源階段：命令提示字元讀取已指定的選項及引數清單。 如果遇到了 **/?** 或 **/HELP** 選項，則會略過所有後續的階段。  
+1.  命令來源階段：命令提示字元讀取已指定的選項和引數清單。 如果遇到了 **/?** 或 **/HELP** 選項，則會略過所有後續的階段。  
   
 2.  封裝載入階段：已載入`/SQL`、 **/FILE**或`/DTS`選項所指定的封裝。  
   
-3.  設定階段：選項會依下列順序處理：  
+3.  設定階段：選項的處理順序如下：  
   
     -   設定封裝旗標、變數和屬性的選項。  
   
@@ -97,9 +96,9 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
     -   設定公用程式之執行階段行為的選項，例如報告。  
   
-4.  驗證及執行階段：執行套件，如有指定 **/VALIDATE** 選項，則只會驗證套件而不會執行套件。  
+4.  驗證和執行階段：執行封裝，如有指定 **/VALIDATE** 選項，將只會驗證封裝，而不會執行。  
   
-##  <a name="exit"></a> 傳回的結束碼  
+##  <a name="exit-codes-returned"></a><a name="exit"></a>傳回的結束代碼  
  **從 dtexec 公用程式傳回的結束碼**  
   
  封裝執行期間，`dtexec` 可能會傳回結束碼。 結束碼可用來擴展 ERRORLEVEL 變數，讓您可以在批次檔內的條件陳述式或分支邏輯中測試此變數的值。 下表列出 `dtexec` 公用程式結束時所能設定的值。  
@@ -113,7 +112,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |5|公用程式無法載入所要求的封裝。 無法載入這個封裝。|  
 |6|公用程式在命令列中發現內部語法錯誤或語意錯誤。|  
   
-##  <a name="syntaxRules"></a> 語法與規則  
+##  <a name="syntax-rules"></a><a name="syntaxRules"></a>語法規則  
  **公用程式語法規則**  
   
  所有選項的開頭都必須是斜線 (/) 或減號 (-)。 此處顯示的選項的開頭為斜線 (/)，但可以用減號 (-) 來替代。  
@@ -124,7 +123,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  除了密碼以外，選項和引數都沒有區分大小寫。  
   
-##  <a name="cmdshell"></a> 使用 xp_cmdshell 的 dtexec  
+##  <a name="using-dtexec-from-the-xp_cmdshell"></a><a name="cmdshell"></a>從 xp_cmdshell 使用 dtexec  
  **使用 xp_cmdshell 的 dtexec**  
   
  您可以從 **xp_cmdshell** 提示處執行 dtexec。 下列範例顯示如何執行名為 UpsertData.dtsx 的封裝，並忽略傳回碼：  
@@ -141,15 +140,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安裝的 **xp_cmdshell** 選項預設為停用。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，預設會在新安裝上停用 [ **xp_cmdshell** ] 選項。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
-##  <a name="syntax"></a> 語法  
+##  <a name="syntax"></a><a name="syntax"></a>語法  
   
 ```  
 dtexec /option [value] [/option [value]]...  
 ```  
   
-##  <a name="parameter"></a> 參數  
+##  <a name="parameters"></a><a name="parameter"></a> 參數  
   
 -   **/?** [*option_name*]：選擇性。 顯示命令提示字元選項，或顯示指定之 *option_name* 的說明，然後關閉公用程式。  
   
@@ -158,7 +157,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Ca [llerInfo]**：   
                   選擇性。 指定封裝執行的其他資訊。 當您使用 SQL Server Agent 執行封裝時，代理程式會設定此引數以指示透過 SQL Server Agent 叫用封裝執行。 從命令列執行 `dtexec` 公用程式時，會忽略此參數。  
   
--   **/CheckF [ile]** _filespec_：   
+-   **/CheckF[ile]** _filespec_：   
                   選擇性。 將封裝`CheckpointFileName`上的屬性設定為*filespec*中的路徑和檔案 spemandcified。 當重新啟動封裝時，會使用這個檔案。 如果指定這個選項時沒有使用檔案名稱值，就會將封裝的 `CheckpointFileName` 設為空字串。 如果沒有指定這個選項，就會保留封裝中的值。  
   
 -   **/CheckP [ointing]** _{on\off}_：   
@@ -168,14 +167,14 @@ dtexec /option [value] [/option [value]]...
   
      Dtexec 的 **/checkpointing on**選項相當於將封裝的`SaveCheckpoints`屬性設定為 True，並將`CheckpointUsage`屬性設為 Always。  
   
--   **/Com [mandFile]** _filespec_：   
+-   **/Com[mandFile]** _filespec_：   
                   (選擇性)。 指定要與 `dtexec` 一起執行的命令選項。 *filespec* 中指定的檔案會開啟，並且讀取檔案中的選項，直到在檔案中找到 EOF 為止。 *filespec* 是文字檔。 *filespec* 引數會指定要與封裝的執行產生關聯之命令檔的檔名和路徑。  
   
 -   **/Conf [igFile]** _filespec_：選擇性。 指定要擷取值的來源組態檔。 使用這個選項時，您可以設定一個執行階段組態，這個執行階段組態與封裝設計階段所指定的組態不同。 您可以將不同的組態設定儲存在 XML 組態檔中，然後在執行封裝之前，利用 **/ConfigFile** 選項載入設定。  
   
      您可以使用 **/ConfigFile** 選項在執行階段載入您未在設計階段指定的其他組態。 但您不可使用 **/ConfigFile** 選項取代您在設計階段指定過的設定值。 如需了解封裝組態套用的方式，請參閱＜ [Package Configurations](../package-configurations.md)＞。  
   
--   **/Conn [ection]** _id_or_name; connection_string [[; id_or_name; connection_string] ...]_：   
+-   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_：   
                   選擇性。 指定具有指定名稱或 GUID 的連接管理員位於此封裝中，並指定連接字串。  
   
      這個選項需要同時指定這兩個參數：在 *id_or_name* 引數中必須提供連接管理員名稱或 GUID，而且在 *connection_string* 引數中必須指定有效的連接字串。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../connection-manager/integration-services-ssis-connections.md)。  
@@ -213,7 +212,7 @@ dtexec /option [value] [/option [value]]...
   
     -   對包含或排除指定的 *src_name_or_guid* 參數為事件名稱、來源名稱或來源 GUID。  
   
-     您如在同一個命令提示字元處使用多個 **/ConsoleLog** 選項，這些選項的互動方式如下：  
+     如果您在相同的命令提示字元上使用多個 **/ConsoleLog**選項，它們的互動方式如下：  
   
     -   顯示順序不受影響。  
   
@@ -223,18 +222,17 @@ dtexec /option [value] [/option [value]]...
   
      如需 **/ConsoleLog**選項的範例，請參閱**備註**一節。  
   
--   **/D [ts]** _package_path_：   
+-   **/D[ts]** _package_path_：   
                   選擇性。 從 SSIS 封裝存放區中載入封裝。 儲存在 SSIS 封裝存放區中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 `/ISServer` 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
      *package_path* 引數指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的相對路徑，從 SSIS 封裝存放區的根目錄開始，並包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的名稱。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
   
-     
-  `/DTS` 選項不可與 `/File` 或 `/SQL` 選項並用。 如果指定多個選項，`dtexec` 將會失敗。  
+     `/DTS` 選項不可與 `/File` 或 `/SQL` 選項並用。 如果指定多個選項，`dtexec` 將會失敗。  
   
 -   **/De [crypt]**  _password_：選擇性。 設定載入含密碼加密的封裝時，所用的解密密碼。  
   
--   **/Dump** _錯誤碼_：  
-                  選擇性：當封裝正在執行時，如果發生一或多個指定的事件，則會建立 .mdmp 和 .tmp 的調試檔。 *error code* 引數會指定事件代碼的類型 (錯誤、警告或資訊)，這些事件代碼將會觸發系統建立偵錯傾印檔案。 若要指定多個事件代碼，請用分號 (;) 隔開每一個「錯誤碼」  引數。 *error code* 引數中請勿包含引號。  
+-   **/Dump** _error code_：  
+                  選擇性：當封裝正在執行時，如果發生一或多個指定的事件，則會建立 .mdmp 和 .tmp 的調試檔。 *錯誤碼*引數會指定事件代碼的類型-錯誤、警告或資訊，以觸發系統建立偵錯工具檔案。 若要指定多個事件代碼，請用分號 (;) 隔開每一個「錯誤碼」** 引數。 *error code* 引數中請勿包含引號。  
   
      下列範例會在 DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER 錯誤發生時，產生偵錯傾印檔案。  
   
@@ -251,7 +249,7 @@ dtexec /option [value] [/option [value]]...
   
      若您將 **DumpOnCodes** 值加入此登錄機碼中，並使用 **/Dump** 選項，系統將會建立以這兩個設定為根據的偵錯傾印檔案。  
   
-     如需有關偵錯傾印檔案的詳細資訊，請參閱＜ [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md)＞。  
+     如需有關 debug 傾印檔案的詳細資訊，請參閱[產生封裝執行的](../troubleshooting/generating-dump-files-for-package-execution.md)傾印檔案。  
   
 -   **/DumpOnError**：   
                   選擇性。 當封裝正在執行時，如果發生任何錯誤，就會建立 .mdmp 和 .tmp 的「調試傾印」檔案。  
@@ -276,20 +274,19 @@ dtexec /option [value] [/option [value]]...
   
      此參數是由 SQL Server Agent 所使用。  
   
--   **/F [ile]** _filespec_：   
-                  選擇性。 載入儲存在檔案系統中的封裝。 儲存在檔案系統中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 `/ISServer` 選項。 如需封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)＞。  
+-   **/F[ile]** _filespec_：   
+                  選擇性。 載入儲存在檔案系統中的封裝。 儲存在檔案系統中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 `/ISServer` 選項。 如需封裝和專案部署模型的詳細資訊，請參閱[部署專案和封裝](deploy-integration-services-ssis-projects-and-packages.md)  
   
      *filespec* 引數指定封裝的路徑和檔案名稱。 您可以指定路徑為通用命名慣例 (UNC) 路徑或本機路徑。 如果 *filespec* 引數中指定的路徑或檔案名稱包含空格，必須將 *filespec* 引數括以引號。  
   
-     
-  `/File` 選項不可與 `/DTS` 或 `/SQL` 選項並用。 如果指定多個選項，`dtexec` 將會失敗。  
+     `/File` 選項不可與 `/DTS` 或 `/SQL` 選項並用。 如果指定多個選項，`dtexec` 將會失敗。  
   
 -   **/H [elp]** [*Option_name*]：選擇性。 顯示選項的說明，或顯示指定之 *option_name* 的說明，並關閉公用程式。  
   
      如果您指定*option_name*引數， `dtexec`則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會啟動《線上叢書》，並顯示 dtexec 公用程式主題。  
   
 -   `/ISServer`*packagepath*：  
-                  選擇性。 執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 *PackagePath* 引數會指定部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器之封裝的完整路徑和檔案名稱。 如果 *PackagePath* 引數中指定的路徑或檔案名稱包含空格，必須將 *PackagePath* 引數括以引號。  
+                  選擇性。 執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 *PackagePath* 引數會指定部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器之封裝的完整路徑和檔案名稱。 如果*PackagePath*引數中指定的路徑或檔案名包含空格，您必須將*PackagePath*引數括以引號。  
   
      封裝格式如下所示：  
   
@@ -299,50 +296,49 @@ dtexec /option [value] [/option [value]]...
   
      您可以將 `/Server` 選項與 `/ISSERVER` 選項並用。 只有 Windows 驗證可以執行 SSIS 伺服器上的封裝。 目前的 Windows 使用者用來存取封裝。 如果省略 /Server 選項，將假設使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設本機執行個體。  
   
-     
-  `/ISSERVER` 選項無法與 `/DTS`, `/SQL` 或 `/File` 選項並用。 如果指定了多個選項，dtexec 便會失敗。  
+     `/ISSERVER` 選項無法與 `/DTS`, `/SQL` 或 `/File` 選項並用。 如果指定了多個選項，dtexec 便會失敗。  
   
      此參數是由 SQL Server Agent 所使用。  
   
--   **/L [ogger]** _classid_orprogid; configstring_：  
+-   **/L[ogger]** _classid_orprogid;configstring_：  
                   選擇性。 建立一或多個記錄提供者與 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行作業的關聯性。 *classid_orprogid* 參數指定記錄提供者，並可指定為類別 GUID。 *configstring* 是用來設定記錄提供者的字串。  
   
      下列清單顯示可用的記錄提供者：  
   
     -   文字檔：  
   
-        -   ProgID：DTS.LogProviderTextFile.1  
+        -   ProgID: DTS.LogProviderTextFile.1  
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
-        -   ProgID：DTS.LogProviderSQLProfiler.1  
+        -   ProgID: DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-        -   ProgID：DTS.LogProviderSQLServer.1  
+        -   ProgID: DTS.LogProviderSQLServer.1  
   
         -   ClassID: {6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
     -   Windows 事件記錄：  
   
-        -   ProgID：DTS.LogProviderEventLog.1  
+        -   ProgID: DTS.LogProviderEventLog.1  
   
         -   ClassID: {97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
     -   XML 檔案：  
   
-        -   ProgID：DTS.LogProviderXMLFile.1  
+        -   ProgID: DTS.LogProviderXMLFile.1  
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M [axConcurrent]** _concurrent_executables_：  
+-   **/M[axConcurrent]** _concurrent_executables_：  
                   選擇性。 指定封裝可以同時執行的可執行檔數量。 指定的值必須是非負數的整數或 -1。 -1 值表示 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 允許同時執行的最大可執行檔數量，等於執行封裝之電腦上的處理器總數再加 2。  
   
--   **/Pack [age]** _PackageName_：  
+-   **/Pack[age]** _PackageName_：  
                   選擇性。 指定所執行的封裝。 當您從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]執行封裝時，主要會使用這個參數。  
   
 -   **/P [assword]** _密碼_：  
@@ -375,10 +371,10 @@ dtexec /option [value] [/option [value]]...
     /parameter CM.SourceServer.ServerName;.  
     ```  
   
--   **/Proj [ect]** _ProjectFile_：  
+-   **/Proj[ect]** _ProjectFile_：  
                   選擇性。 指定要從中擷取所執行之封裝的專案。 *ProjectFile* 引數會指定 .ispac 檔案名稱。 當您從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]執行封裝時，主要會使用這個參數。  
   
--   **/Rem** _批註_：  
+-   **/Rem** _comment_：  
                   選擇性。 在命令提示字元或命令檔中加入註解。 引數是選擇性的。 *comment* 的值是一個字串，它必須以引號括住，或不包含空格。 如果未指定引數，將會插入空白行。 命令取得階段將會捨棄*comment* 值。  
   
 -   **/Rep [orting]** _level_ [*; event_guid_or_name*[*; event_guid_or_name*[...]]：選擇性。 指定要報告的訊息類型。 *level* 可用的報告選項如下：  
@@ -419,7 +415,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** [$Sensitive：：]*propertyPath; 值*：選擇性。 覆寫封裝內的參數、變數、屬性、容器、記錄提供者、Foreach 列舉值或連接的組態。 使用此選項時， **/Set** 會將 *propertyPath* 引數變更為指定的值。 可以指定多個 **/Set** 選項。  
   
-     除了使用 **/set**選項與 **/f [ile]** 選項之外，您也可以搭配`/ISServer`選項或`/Project`選項使用 **/set**選項。 當您搭配**** 使用/set `/Project`與時， **/set**會設定參數值。 當您搭配**** 使用/set `/ISServer`與時， **/set**會設定屬性覆寫。 此外，當您搭配使用 **/set**與`/ISServer`時，您可以使用選擇性的 $Sensitive 前置詞，表示應該在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器上將屬性視為機密。  
+     除了使用 **/set**選項與 **/f [ile]** 選項之外，您也可以搭配`/ISServer`選項或`/Project`選項使用 **/set**選項。 當您搭配 **/Set**使用/set `/Project`與時， **/set**會設定參數值。 當您搭配 **/Set**使用/set `/ISServer`與時， **/set**會設定屬性覆寫。 此外，當您搭配使用 **/set**與`/ISServer`時，您可以使用選擇性的 $Sensitive 前置詞，表示應該在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器上將屬性視為機密。  
   
      您可以執行 [封裝組態精靈] 來決定 *propertyPath* 的值。 您選取項目的路徑會顯示在最後的 **[正在完成精靈]** 頁面上，並可複製及貼上。 如果您只是為了這個目的而使用精靈，可以在複製路徑之後取消精靈。  
   
@@ -438,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
      指定 `/Ser[ver]` 選項時，需要 `/ISServer` 選項。  
   
--   **/SQ [L]** _package_path_：  
+-   **/SQ[L]** _package_path_：  
                   載入儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `msdb` 資料庫中的封裝。 儲存在 `msdb` 資料庫中的封裝是使用封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 `/ISServer` 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
      *package_path* 引數指定要擷取的封裝名稱。 如果路徑包含資料夾，則其結尾應為反斜線 ("\\")。 *Package_path* 值可以加上引號。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
@@ -454,8 +450,7 @@ dtexec /option [value] [/option [value]]...
   
      如果省略 `/Server` 選項，將會假設使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設本機執行個體。  
   
-     
-  `/SQL` 選項不可與 `/DTS` 或 `/File` 選項並用。 如果指定多個選項，`dtexec` 將會失敗。  
+     `/SQL` 選項不可與 `/DTS` 或 `/File` 選項並用。 如果指定多個選項，`dtexec` 將會失敗。  
   
 -   **/Su [m]**：選擇性。 顯示包含下一個元件將接收之列數的累加計數器。  
   
@@ -478,10 +473,10 @@ dtexec /option [value] [/option [value]]...
   
     -   *major*; *minor*; *build*  
   
--   **/VerifyP [ackageID]** _packageID_：  
+-   **/VerifyP[ackageID]** _packageID_：  
                   選擇性。 將封裝 GUID 與 *package_id* 引數所指定的值進行比較，藉此驗證要執行之封裝的 GUID。  
   
--   **/VerifyS [igned]**：  
+-   **/VerifyS[igned]**：  
                   選擇性。 使 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查封裝的數位簽章。 如果此封裝未簽署或是簽章無效，此封裝就會失敗。 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](../security/identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。  
   
     > [!IMPORTANT]  
@@ -501,7 +496,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/X86**：選擇性。 使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在 64 位元電腦上以 32 位元模式執行封裝。 當下列條件都成立時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就會設定這個選項：  
   
-    -   作業步驟類型是 **[SQL Server Integration Services 封裝]** 。  
+    -   作業步驟類型是 **[SQL Server Integration Services 封裝]**。  
   
     -   已經在 **[新增作業步驟]** 對話方塊的 **[執行選項]** 索引標籤上選取 **[使用 32 位元執行階段]** 選項。  
   
@@ -509,7 +504,7 @@ dtexec /option [value] [/option [value]]...
   
      這個選項只能由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 如果在命令提示字元處執行 `dtexec` 公用程式，系統將會忽略此選項。  
   
-##  <a name="remark"></a> 備註  
+##  <a name="remarks"></a><a name="remark"></a>備註  
  命令選項的指定順序可能會影響封裝的執行方式：  
   
 -   依照在命令列中發現選項的順序來處理選項。 在命令列上發現命令檔案時便會加以讀取， 命令檔案中的命令也就會依照發現的順序來處理。  
@@ -518,10 +513,10 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** 與 **/ConfigFile** 選項會依據發現的順序進行處理。  
   
-##  <a name="example"></a> 範例  
+##  <a name="examples"></a><a name="example"></a> 範例  
  下列範例示範如何使用`dtexec`命令提示字元公用程式來設定及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。  
   
- **[Running Packages]**  
+ **執行封裝**  
   
  若要利用 Windows 驗證來執行儲存至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝，請使用下列程式碼：  
   

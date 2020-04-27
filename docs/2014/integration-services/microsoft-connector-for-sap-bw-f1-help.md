@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890655"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Microsoft Connector 1.1 for SAP BW F1 說明
@@ -27,7 +27,7 @@ ms.locfileid: "62890655"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>SAP BW 連接管理員 F1 說明  
   
--   [SAP BW 連線管理員編輯器](sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連接管理員編輯器](sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 來源 F1 說明  
   
@@ -57,19 +57,19 @@ ms.locfileid: "62890655"
   
 -   [SAP BW 目的地編輯器 &#40;進階頁面&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [ InfoPackage](data-flow/look-up-infopackage.md)  
+-   [查閱 InfoPackage](data-flow/look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](data-flow/create-new-infoobject.md)  
   
 -   [建立交易資料的 InfoCube](data-flow/create-infocube-for-transaction-data.md)  
   
--   [查詢 InfoObject](data-flow/look-up-infoobject.md)  
+-   [查閱 InfoObject](data-flow/look-up-infoobject.md)  
   
 -   [建立 InfoSource](data-flow/create-infosource.md)  
   
 -   [建立交易資料的 InfoSource](data-flow/create-infosource-for-transaction-data.md)  
   
--   [建立主要資料的 InfoSource](data-flow/create-infosource-for-master-data.md)  
+-   [[建立主要資料的 InfoSource]](data-flow/create-infosource-for-master-data.md)  
   
 -   [建立 InfoPackage](data-flow/create-infopackage.md)  
   
