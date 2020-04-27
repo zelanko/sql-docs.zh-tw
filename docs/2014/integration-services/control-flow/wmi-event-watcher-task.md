@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829508"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [[WMI 事件監看員工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [WMI 事件監看員工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Wmi 事件監看員工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [WMI 事件監看員工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

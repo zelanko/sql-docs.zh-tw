@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833556"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
@@ -33,8 +33,8 @@ ms.locfileid: "62833556"
   
     2.  如果您想要使用 HTTPS 而非 HTTP連接到 Azure 儲存體服務，請選取 [使用 HTTPS]****。  
   
-4.  按一下 **[確定]** ，關閉對話方塊。  
+4.  按一下 [確定]**** 關閉對話方塊。  
   
-5.  您可以在 [屬性]  視窗中看到您建立的連線管理員屬性。  
+5.  您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。  
   
   

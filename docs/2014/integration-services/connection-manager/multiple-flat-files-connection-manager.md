@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833699"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
@@ -47,7 +47,7 @@ ms.locfileid: "62833699"
   
  如果「多個一般檔案」連接管理員參考多個檔案，則檔案的路徑會以垂直線 (|) 字元隔開。 連接管理員的 `ConnectionString` 屬性具有下列格式：  
   
- \<** >|路徑\<*路徑*>  
+ \<*path*>|\<*path*>  
   
  您也可以使用萬用字元來指定多個檔案。 例如，若要參考 C 磁片磁碟機上的所有文字檔， `ConnectionString`屬性的值可以設定為 c：\\* .txt。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62833699"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [多個一般檔案連線管理員編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [多個一般檔案連接管理員編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [多個一般檔案連線管理員編輯器 &#40;資料行頁面&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [多個一般檔案連線管理員編輯器 &#40;Advanced Page&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [多個一般檔案連線管理員編輯器 &#40;進階頁面&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [&#40;預覽頁面中的多個一般檔案連線管理員編輯器&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [多個一般檔案連線管理員編輯器 &#40;預覽頁面&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../building-packages-programmatically/adding-connections-programmatically.md)。  
   

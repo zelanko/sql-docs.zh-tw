@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829491"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Wmi 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [WMI 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

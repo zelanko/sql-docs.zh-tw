@@ -1,5 +1,5 @@
 ---
-title: 資料列集屬性和行為 |Microsoft Docs
+title: 資料列集屬性和行為 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36a2af059b75e6ca86dcb8354b1e2c9f8d2abe54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62826629"
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
@@ -41,9 +41,9 @@ ms.locfileid: "62826629"
 |DBPROP_COLUMNRESTRICT|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取用者無法變更資料列集中的資料行時，Native Client OLE DB 提供者會將屬性設定為 VARIANT_TRUE。 資料列集中的其他資料行可能可以更新，而且資料列本身可能會遭到刪除。<br /><br /> 當屬性為 VARIANT_TRUE 時，取用者會檢查 DBCOLUMNINFO 結構的 *dwFlags* 成員來判斷是否可寫入個別資料行的值。 對於可修改的資料行，*dwFlags* 會表現 DBCOLUMNFLAGS_WRITE。|  
 |DBPROP_COMMANDTIMEOUT|R/W：讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在**ICommand：： Execute**方法上不會有時間。|  
 |DBPROP_COMMITPRESERVE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：認可作業後的資料列集行為取決於此屬性。<br /><br /> VARIANT_TRUE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會維護有效的資料列集。<br /><br /> VARIANT_FALSE： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在認可作業之後失效資料列集。 資料列集物件的功能都會幾乎遺失。 它僅支援 **IUnknown** 作業，以及未處理之資料列與存取子控制代碼的釋放。|  
-|DBPROP_DEFERRED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：當設定為時 VARIANT_TRUE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會嘗試針對資料列集使用伺服器資料指標。 在應用程式存取**Text**、 **Ntext**和**image**資料行之前，不會從伺服器傳回。|  
+|DBPROP_DEFERRED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：當設定為時 VARIANT_TRUE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會嘗試針對資料列集使用伺服器資料指標。 在應用程式存取 **Text**、**ntext** 和 **image** 資料行之前，不會從伺服器傳回這些資料行。|  
 |DBPROP_DELAYSTORAGEOBJECTS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援儲存物件的立即更新模式。<br /><br /> 對循序資料流物件中的資料所進行之變更會立即提交至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 系統會根據資料列集交易模式認可這些修改。|  
-|DBPROP_HIDDENCOLUMNS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> **描述：** 隱藏的資料行計數<br /><br /> 如果 DBPROP_UNIQUEROWS 為 VARIANT_TRUE，DBPROP_HIDDENCOLUMNS 屬性會傳回提供者所加入之其他「隱藏」資料行的數目，藉以唯一識別資料列集中的資料列。 這些資料行會由 **IColumnsInfo::GetColumnInfo** 和 **IColumnsRowset::GetColumnsRowset** 傳回。 不過，這些資料行不會包含在 *IColumnsInfo::GetColumnInfo* 所傳回之 **pcColumns** 引數傳回的資料列計數中。<br /><br /> 為判斷 *IColumnsInfo::GetColumnInfo* 所傳回之 **prgInfo** 結構中表示的資料行總數，包括隱藏的資料行，取用者會將 DBPROP_HIDDENCOLUMNS 的值加入到從 **pcColumns** 之 *IColumnsInfo::GetColumnInfo* 中所傳回的資料行計數。 如果 DBPROP_UNIQUEROWS 為 VARIANT_FALSE，DBPROP_HIDDENCOLUMNS 為零。|  
+|DBPROP_HIDDENCOLUMNS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> **描述：** 隱藏的資料行計數<br /><br /> 如果 DBPROP_UNIQUEROWS 為 VARIANT_TRUE，DBPROP_HIDDENCOLUMNS 屬性會傳回提供者所加入之其他「隱藏」資料行的數目，藉以唯一識別資料列集中的資料列。 這些資料行會由 **IColumnsInfo::GetColumnInfo** 和 **IColumnsRowset::GetColumnsRowset** 傳回。 不過，這些資料行不會包含在 **IColumnsInfo::GetColumnInfo** 所傳回之 *pcColumns* 引數傳回的資料列計數中。<br /><br /> 為判斷 **IColumnsInfo::GetColumnInfo** 所傳回之 *prgInfo* 結構中表示的資料行總數，包括隱藏的資料行，取用者會將 DBPROP_HIDDENCOLUMNS 的值加入到從 *pcColumns* 之 **IColumnsInfo::GetColumnInfo** 中所傳回的資料行計數。 如果 DBPROP_UNIQUEROWS 為 VARIANT_FALSE，DBPROP_HIDDENCOLUMNS 為零。|  
 |DBPROP_IAccessor DBPROP_IColumnsInfo DBPROP_IConvertType DBPROP_IRowset DBPROP_IRowsetInfo|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在所有資料列集上支援這些介面。|  
 |DBPROP_IColumnsRowset|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援**IColumnsRowset**介面。|  
 |DBPROP_IConnectionPointContainer|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：IConnectionPointContainer。 如果是 VARIANT_TRUE，資料列集支援指定的介面。 如果是 VARIANT_FALSE，資料列集不支援指定的介面。 支援介面的提供者必須支援與包含 VARIANT_TRUE 值之介面相關聯的屬性。 這些屬性主要用於透過 ICommandProperties::SetProperties 來要求介面。|  
@@ -76,8 +76,7 @@ ms.locfileid: "62826629"
 |DBPROP_REPORTMULTIPLECHANGES|此資料列集屬性不是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者所執行。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_RETURNPENDINGINSERTS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：呼叫提取資料列的方法時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會傳回暫止的插入資料列。|  
 |DBPROP_ROWRESTRICT|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料列集不支援以資料列為基礎的存取權。 如果在資料列集上公開 **IRowsetChange** 介面，取用者可以呼叫 **SetData** 方法。|  
-|DBPROP_ROWSET_ASYNCH|R/W：讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：針對非同步資料列集處理提供。 此屬性位於 Rowset 屬性群組以及 DBPROPSET_ROWSET 屬性集。 類型為 VT_14。<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在位元遮罩中支援的唯一值是 `DBPROPVAL_ASYNCH_INITIALIZE`。|  
+|DBPROP_ROWSET_ASYNCH|R/W：讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：針對非同步資料列集處理提供。 此屬性位於 Rowset 屬性群組以及 DBPROPSET_ROWSET 屬性集。 類型為 VT_14。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在位元遮罩中支援的唯一值是 `DBPROPVAL_ASYNCH_INITIALIZE`。|  
 |DBPROP_ROWTHREADMODEL|R/W：唯讀<br /><br /> 預設值：DBPROPVAL_RT_FREETHREAD<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援從單一取用者的多個執行執行緒存取其物件。|  
 |DBPROP_SERVERCURSOR|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料指標用於支援資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_SERVERDATAONINSERT|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：插入的伺服器資料<br /><br /> VARIANT_TRUE：將插入傳送到伺服器時，提供者會從伺服器擷取資料來更新本機資料列快取。<br /><br /> VARIANT_FALSE：提供者不會擷取新插入之資料列的伺服器值。|  

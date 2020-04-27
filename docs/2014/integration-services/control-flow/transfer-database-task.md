@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830147"
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
@@ -71,9 +71,9 @@ ms.locfileid: "62830147"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [[傳送資料庫工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送資料庫工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[傳送資料庫工作編輯器 &#40;資料庫] 頁面&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [傳送資料庫工作編輯器 &#40;資料庫頁面&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

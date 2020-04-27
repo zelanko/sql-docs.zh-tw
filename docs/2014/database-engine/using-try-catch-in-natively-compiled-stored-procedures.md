@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842476"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>在原生編譯預存程序中使用 Try..Catch
@@ -61,6 +61,6 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [原生編譯的預存程式](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832773"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
@@ -28,7 +28,7 @@ ms.locfileid: "62832773"
   
 |||  
 |-|-|  
-|**欄位**|**說明**|  
+|**欄位**|**描述**|  
 |AzureStorageConnection|指定現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員，而該儲存體帳戶指向裝載 Blob 檔案之處。|  
 |BlobContainer|指定以 Blob 形式保存上傳之檔案的 Blob 容器名稱。|  
 |BlobDirectory|指定以區塊 Blob 形式儲存上傳之檔案的 Blob 目錄。 Blob 目錄是虛擬的階層式結構。 如果在 Blob 已存在，將會遭到取代。|  

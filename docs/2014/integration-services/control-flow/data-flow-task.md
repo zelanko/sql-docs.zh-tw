@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832449"
 ---
 # <a name="data-flow-task"></a>資料流程工作
@@ -44,9 +44,7 @@ ms.locfileid: "62832449"
  ![資料流程](../media/mw-dts-09.gif "資料流程")  
   
 ## <a name="log-entries"></a>記錄項目  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也為許多工作提供自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也為許多工作提供自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
@@ -110,7 +108,7 @@ ms.locfileid: "62832449"
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>資料流程工作的程式設計組態  
  如需有關以程式設計方式將資料流程工作加入封裝，並設定資料流程屬性的詳細資訊，請按下列主題：  
   
--   [以程式設計方式新增資料流程工作](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [以程式設計方式加入資料流程工作](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>相關工作  
  [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  

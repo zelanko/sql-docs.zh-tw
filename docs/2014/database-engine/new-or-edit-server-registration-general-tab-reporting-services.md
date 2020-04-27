@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844264"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>新增或編輯伺服器註冊 (一般索引標籤) (Reporting Services)
@@ -34,7 +34,7 @@ ms.locfileid: "62844264"
  **驗證**  
  對報表伺服器的驗證是透過 Internet Information Services (IIS) 來完成。 連接到 Reporting Services 時，請選取下列其中一種驗證模式：  
   
- **Windows 驗證模式（Windows 驗證）**  
+ **Windows 驗證模式 (Windows 驗證)**  
  使用您的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認證連接到報表伺服器執行個體。  
   
  **基本驗證**  
@@ -47,13 +47,13 @@ ms.locfileid: "62844264"
  請輸入連接將使用的登入名稱。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
   
  **密碼**  
- 輸入使用者名稱的密碼。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能編輯此選項。  
+ 請輸入使用者名稱的密碼。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能編輯此選項。  
   
  **記住密碼**  
  請儲存您輸入的密碼。 唯有已按一下 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
   
 > [!NOTE]  
->  如果您已儲存密碼而想要停止儲存，請清除此核取方塊，然後按一下 [**儲存**]。  
+>   如果您已儲存密碼但不想再儲存，請清除此核取方塊，然後按一下 **[儲存]**。  
   
  **已註冊的伺服器名稱**  
  您要在 [已註冊的伺服器] 上顯示的名稱。 此名稱不需與 **[伺服器名稱]** 方塊中的名稱相符。  
@@ -61,10 +61,10 @@ ms.locfileid: "62844264"
  **已註冊的伺服器描述**  
  輸入伺服器的選擇性描述。  
   
- **測驗**  
+ **測試**  
  按一下以測試與 [伺服器名稱]**** 中選取之伺服器的連接。  
   
- **另**  
+ **儲存**  
  按一下即可儲存已註冊的伺服器設定。  
   
   

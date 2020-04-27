@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833153"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
@@ -220,7 +220,7 @@ ms.locfileid: "62833153"
   
 -   [Analysis Services 執行 DDL 工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services &#40;DDL 頁面上執行 DDL 工作編輯器&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Analysis Services 執行 DDL 工作編輯器 &#40;DDL 頁面&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836329"
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
@@ -31,7 +31,7 @@ ms.locfileid: "62836329"
   
 -   [設定選項](#options)  
   
-##  <a name="open_dialog"></a> 開啟 [封裝屬性] 對話方塊  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> 開啟 [封裝屬性] 對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62836329"
   
 5.  以滑鼠右鍵按一下封裝，然後選取 [屬性]  。  
   
-##  <a name="options"></a> 設定選項  
+##  <a name="configure-the-options"></a><a name="options"></a> 設定選項  
  使用 [一般]  頁面，即可檢視所選封裝的屬性。  
   
  [一般]  頁面上的所有屬性都是唯讀的。  
@@ -57,9 +57,7 @@ ms.locfileid: "62836329"
  列出封裝識別碼。  
   
  **進入點**  
- 
-  `True` 的值表示封裝是直接啟動。 
-  `False` 的值表示封裝是使用「執行封裝」，由另一個封裝啟動。 預設值是 `True`。  
+ `True` 的值表示封裝是直接啟動。 `False` 的值表示封裝是使用「執行封裝」，由另一個封裝啟動。 預設值是 `True`。  
   
  以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **，就可以在**  中為父封裝和子封裝設定此屬性。  
   

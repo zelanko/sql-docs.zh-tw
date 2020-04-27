@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843554"
 ---
 # <a name="share-files"></a>共用檔案
@@ -38,7 +38,7 @@ ms.locfileid: "62843554"
   
 3.  在 [**共用方式**] 對話方塊中，流覽目錄清單中您想要共用的專案，然後按一下該專案。  
   
-4.  按一下 [**共用**]。  
+4.  按一下 [共用]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [原始檔控制基本概念](../../2014/database-engine/source-control-basics.md)  

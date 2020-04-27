@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831766"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
@@ -44,19 +44,19 @@ ms.locfileid: "62831766"
   
 |連線類型|[ODBC 來源編輯器]|  
 |---------------------|------------------------|  
-|EXCEL|[Excel 連接管理員](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[OLE DB 連接管理員](../connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[ODBC 連接管理員](../connection-manager/odbc-connection-manager.md)|  
-|ADO|[ADO 連接管理員](../connection-manager/ado-connection-manager.md)|  
-|ADO.NET|[ADO.NET 連接管理員](../connection-manager/ado-net-connection-manager.md)|  
-|SQLMOBILE|[SQL Server Compact Edition 連接管理員](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
+|EXCEL|[Excel 連線管理員](../connection-manager/excel-connection-manager.md)|  
+|OLE DB|[OLE DB 連線管理員](../connection-manager/ole-db-connection-manager.md)|  
+|ODBC|[ODBC 連線管理員](../connection-manager/odbc-connection-manager.md)|  
+|ADO|[ADO 連線管理員](../connection-manager/ado-connection-manager.md)|  
+|ADO.NET|[ADO.NET 連線管理員](../connection-manager/ado-net-connection-manager.md)|  
+|SQLMOBILE|[SQL Server Compact Edition 連線管理員](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## <a name="creating-sql-statements"></a>建立 SQL 陳述式  
  此工作所使用的 SQL 陳述式來源，可以是包含陳述式的工作屬性、包含一個或多個陳述式的檔案連接，或者包含陳述式的變數名稱。 SQL 陳述式必須以來源資料庫管理系統 (DBMS) 的用語撰寫。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 查詢](../integration-services-ssis-queries.md)。  
   
- 如果 SQL 陳述式儲存在檔案中，則工作會使用「檔案」連接管理員連接到該檔案。 如需詳細資訊，請參閱[File Connection Manager](../connection-manager/file-connection-manager.md)。  
+ 如果 SQL 陳述式儲存在檔案中，則工作會使用「檔案」連接管理員連接到該檔案。 如需相關資訊，請參閱 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
- 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，您可以使用 [執行 SQL 工作編輯器]**** 對話方塊輸入 SQL 陳述式，或使用圖形化使用者介面 [查詢產生器]**** 建立 SQL 查詢。 如需詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](../execute-sql-task-editor-general-page.md) 和[查詢產生器](../query-builder.md)。  
+ 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，您可以使用 [執行 SQL 工作編輯器]  對話方塊輸入 SQL 陳述式，或使用圖形化使用者介面 [查詢產生器]  建立 SQL 查詢。 如需詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](../execute-sql-task-editor-general-page.md) 和[查詢產生器](../query-builder.md)。  
   
 > [!NOTE]  
 >  「執行 SQL」工作可能無法成功剖析在「執行 SQL」工作外部撰寫的有效 SQL 陳述式。  
@@ -67,7 +67,7 @@ ms.locfileid: "62831766"
 ## <a name="sending-multiple-statements-in-a-batch"></a>在批次中傳送多重陳述式  
  如果您在執行 SQL 工作中加入多個陳述式，可將它們組成群組，並在批次中執行。 若要表示批次結束，請使用 GO 命令。 兩個 GO 命令之間的所有 SQL 陳述式，都會在一個批次中傳送至要執行的 OLE DB 提供者。 SQL 命令可包含以 GO 命令分隔的多個批次。  
   
- 您可分組到同一個批次中的 SQL 陳述式有其限制。 如需詳細資訊，請參閱[陳述式的批次](../../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md)。  
+ 您可分組到同一個批次中的 SQL 陳述式有其限制。 如需詳細資訊，請參閱 [陳述式的批次](../../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md)。  
   
  如果執行 SQL 工作執行一個批次的 SQL 陳述式，則下列規則會套用至該批次︰  
   
@@ -146,7 +146,7 @@ ms.locfileid: "62831766"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [在執行 SQL 工作中將查詢參數對應到變數](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [在執行 SQL 工作中將查詢參數對應至變數](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
 -   [在執行 SQL 工作中將結果集對應至變數](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   

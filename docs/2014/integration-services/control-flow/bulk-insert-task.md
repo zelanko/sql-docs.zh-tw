@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832870"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
@@ -89,11 +89,11 @@ ms.locfileid: "62832870"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [[大量插入工作編輯器] &#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [大量插入工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[大量插入工作編輯器] &#40;連接] 頁面&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [大量插入工作編輯器 &#40;連接頁面&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [[大量插入工作編輯器] &#40;選項] 頁面&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [大量插入工作編輯器 &#40;選項頁面&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62832870"
   
 ## <a name="related-content"></a>相關內容  
   
--   support.microsoft.com 上的技術文件： [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(您可能會在啟用 UAC 的系統上收到「無法準備 SSIS 大量插入來進行資料插入」錯誤)。  
+-   support.microsoft.com 上的技術文件： [您可能會在啟用 UAC 的系統上收到「無法準備 SSIS 大量插入來進行資料插入」錯誤](https://go.microsoft.com/fwlink/?LinkId=233693)。  
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=233700)。  
   

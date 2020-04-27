@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 839350610bdcc55d185fa06c122e71b50c5ca753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832655"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 刪除叢集工作
@@ -26,13 +26,13 @@ ms.locfileid: "62832655"
 > [!NOTE]
 > 刪除 HDInsight 叢集可能需要 10~20 分鐘。  
   
-若要加入 **Azure HDInsight 刪除叢集工作**，請將其拖放至 SSIS 設計工具，並按兩下或在其上按一下滑鼠右鍵，然後按一下 [編輯]  ，即可看到以下 [Azure HDInsight 刪除叢集工作編輯器]  對話方塊。  
+若要加入 **Azure HDInsight 刪除叢集工作**，請將其拖放至 SSIS 設計工具，並按兩下或在其上按一下滑鼠右鍵，然後按一下 [編輯] **** ，即可看到以下 [Azure HDInsight 刪除叢集工作編輯器] **** 對話方塊。  
   
 下表提供此對話方塊中欄位的描述。  
   
 |||  
 |-|-|  
-|**欄位**|**說明**|  
+|**欄位**|**描述**|  
 |AzureResourceManagerConnection|選取現有的 Azure Resource Manager 連線管理員或建立新的連線管理員，以用來刪除 HDInsight 叢集。|
 |SubscriptionId|指定 HDInsight 叢集所在的訂用帳戶 ID。|
 |ResourceGroup|指定 HDInsight 叢集所在的 Azure 資源群組。|

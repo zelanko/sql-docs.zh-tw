@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832605"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
@@ -71,7 +71,7 @@ ms.locfileid: "62832605"
 ## <a name="request-properties-options"></a>要求屬性選項  
  [要求屬性]**** 窗格會針對 [資料行模式設定檔要求]**** 顯示下列選項群組：  
   
--   **資料**，包括**tableorview]** 和**Column**選項  
+-   **[資料]**，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
   
 -   **一般**  
   
@@ -92,15 +92,15 @@ ms.locfileid: "62832605"
  如需詳細資訊，請參閱本主題中的「資料行選項」一節。  
   
 #### <a name="tableorview-options"></a>TableOrView 選項  
- **Schema**  
+ **結構描述**  
  指定選取之資料表所屬的結構描述。 此選項是唯讀的。  
   
- **Table**  
+ **目錄**  
  顯示選取之資料表的名稱。 此選項是唯讀的。  
   
 #### <a name="column-options"></a>資料行選項  
  **IsWildCard**  
- 指定是否已**選取\*（）** 萬用字元。 如果您已選取 **(**)** 來分析所有資料行，這個選項會設定為 [True]\***。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已**選取\*（）** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]****。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **（\*）** 來分析所有資料行，這個選項就會是空白。 此選項是唯讀的。  
@@ -127,7 +127,7 @@ ms.locfileid: "62832605"
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   
- **標點符號**  
+ **Symbols**  
  列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 ‘\@’ (代表電子郵件地址)。 根據預設，**符號**清單包含下列字元： `,.;:-"'`~ =&/@！？（） <> []{}| # * ^% '。  
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  

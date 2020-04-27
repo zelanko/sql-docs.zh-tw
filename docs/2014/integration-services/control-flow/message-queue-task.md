@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831475"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  「訊息佇列」工作可讓您使用訊息佇列（也稱為 MSMQ）在封裝之間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
+  「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
   
  透過使用「訊息佇列」工作，您可以協調整個企業內的作業。 如果目的地無法使用或者忙碌，可以將訊息排入佇列以稍後傳遞；例如，此工作可將屬於銷售代表離線之膝上型電腦的訊息排入佇列，等銷售代表們連接到網路後就可以接收到各自的訊息。 您可將「訊息佇列」工作用於下列用途：  
   
@@ -47,17 +47,13 @@ ms.locfileid: "62831475"
 ## <a name="message-types"></a>訊息類型  
  您可利用下列方式設定「訊息佇列」工作提供的訊息類型：  
   
--   
-  `Data file` 訊息指定某個檔案包含訊息。 接收訊息時，您可以設定工作以儲存檔案，覆寫現有的檔案，並指定工作可以從中接收訊息的封裝。  
+-   `Data file` 訊息指定某個檔案包含訊息。 接收訊息時，您可以設定工作以儲存檔案，覆寫現有的檔案，並指定工作可以從中接收訊息的封裝。  
   
--   
-  `String` 訊息指定訊息為字串。 接收訊息時，您可以設定工作，以比較接收到的字串與使用者自訂字串，並根據比較結果採取行動。 字串比較可以為完全相符、區分大小寫或不區分大小寫，或者使用子字串。  
+-   `String` 訊息指定訊息為字串。 接收訊息時，您可以設定工作，以比較接收到的字串與使用者自訂字串，並根據比較結果採取行動。 字串比較可以為完全相符、區分大小寫或不區分大小寫，或者使用子字串。  
   
--   
-  `String message to variable` 將來源訊息指定為傳送到目的變數的字串。 您可以設定工作使用完全相符、不區分大小寫或子字串比較，來比較接收到的字串與使用者自訂的字串。 只有當工作接收訊息時此訊息類型才可用。  
+-   `String message to variable` 將來源訊息指定為傳送到目的變數的字串。 您可以設定工作使用完全相符、不區分大小寫或子字串比較，來比較接收到的字串與使用者自訂的字串。 只有當工作接收訊息時此訊息類型才可用。  
   
--   
-  `Variable` 指定訊息將包含一或多個變數。 您可以設定工作，以指定訊息中包含的變數名稱。 接收訊息時您可以設定工作，以指定可從中接收訊息的封裝，以及做為訊息目的地的變數。  
+-   `Variable` 指定訊息將包含一或多個變數。 您可以設定工作，以指定訊息中包含的變數名稱。 接收訊息時您可以設定工作，以指定可從中接收訊息的封裝，以及做為訊息目的地的變數。  
   
 ## <a name="sending-messages"></a>傳送訊息  
  設定「訊息佇列」工作以傳送訊息時，您可以使用 Message Queuing 技術目前支援的加密演算碼 RC2 及 RC4 其中一個，以加密訊息。 這兩種加密演算法目前被認為在密碼編譯技術上不如較新的演算法，不過 Message Queuing 技術目前還不支援較新的演算法。 因此，在使用「訊息佇列」工作傳送訊息時，應仔細考慮您的加密需求。  
@@ -92,11 +88,11 @@ ms.locfileid: "62831475"
 ## <a name="configuration-of-the-message-queue-task"></a>訊息佇列工作的組態  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [[訊息佇列工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [訊息佇列工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[訊息佇列工作編輯器] &#40;接收頁面&#41;](../message-queue-task-editor-receive-page.md)  
+-   [訊息佇列工作編輯器 &#40;接收頁面&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [[訊息佇列工作編輯器] &#40;傳送頁面&#41;](../message-queue-task-editor-send-page.md)  
+-   [訊息佇列工作編輯器 &#40;傳送頁面&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

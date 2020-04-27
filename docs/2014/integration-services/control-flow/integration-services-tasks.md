@@ -27,22 +27,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831432"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
-  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]封裝是由一或多項工作所[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
+  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
   
  您也可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具是中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]用於處理封裝的圖形化工具，提供建立封裝控制流程的設計介面，並提供自訂編輯器來設定工作。 您也可以設計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]物件模型，以程式設計方式建立封裝。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中用於處理套件的圖形化工具，提供用來建立套件控制流程的設計介面，以及用來設定工作的自訂編輯器。 您也可以設計 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型的程式，以透過程式設計方式來建立套件。  
   
 ## <a name="types-of-tasks"></a>工作的類型  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下列工作類型。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下列工作類型。  
   
  資料流程工作  
  執行資料流程以擷取資料、套用資料行層級轉換，以及載入資料的工作。  
@@ -69,8 +68,7 @@ ms.locfileid: "62831432"
  此外，您可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。 如果您要在 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中存取自訂工作，可為該工作建立及註冊使用者介面。 如需詳細資訊，請參閱 [開發自訂工作](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="configuration-of-tasks"></a>設定工作  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可包含單一工作，例如，在封裝執行時刪除資料庫資料表中各項記錄的執行 SQL 工作。 不過，封裝通常包含數項工作，且各項工作均設定為在封裝控制流程的內容中執行。 若事件處理常式為回應執行階段事件的工作流程，則亦可擁有工作。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可包含單一工作，例如，在封裝執行時刪除資料庫資料表中各項記錄的執行 SQL 工作。 不過，封裝通常包含數項工作，且各項工作均設定為在封裝控制流程的內容中執行。 若事件處理常式為回應執行階段事件的工作流程，則亦可擁有工作。  
   
  如需使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 將工作加入封裝的詳細資訊，請參閱 [在控制流程中加入或刪除工作或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
@@ -84,6 +82,6 @@ ms.locfileid: "62831432"
  您可將多項工作設為群組，並做為單一工作單位執行，或於迴圈中重複。 如需詳細資訊，請參閱 [Foreach 迴圈容器](foreach-loop-container.md)、 [For 迴圈容器](for-loop-container.md)和 [時序容器](sequence-container.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在控制流程中加入或刪除工作或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+ [在控制流程中新增或刪除工作或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

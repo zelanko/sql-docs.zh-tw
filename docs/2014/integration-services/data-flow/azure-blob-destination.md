@@ -14,20 +14,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828280"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 目的地
   [Azure Blob 目的地]  元件可讓 SSIS 封裝將資料寫入 Azure Blob。 支援的檔案格式：CSV 與 AVRO。 拖-將**Azure Blob 目的地**放到資料流程設計師，然後按兩下以查看編輯器）。  
   
-1.  針對 [Azure 儲存體連線管理員]  欄位，請指定現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員。  
+1.  針對 [Azure 儲存體連線管理員]**** 欄位，請指定現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員。  
   
-2.  針對 [Blob 容器名稱]  欄位，請指定包含原始程式檔的 Blob 容器名稱。  
+2.  針對 [Blob 容器名稱]**** 欄位，請指定包含原始程式檔的 Blob 容器名稱。  
   
-3.  針對 [Blob 名稱]  欄位，請指定 Blob 的路徑。  
+3.  針對 [Blob 名稱]**** 欄位，請指定 Blob 的路徑。  
   
 4.  針對 [Blob 檔案格式]**** 欄位，請指定要使用的 Blob 格式。  
   

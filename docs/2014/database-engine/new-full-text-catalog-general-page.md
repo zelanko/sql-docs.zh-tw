@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844096"
 ---
 # <a name="new-full-text-catalog-general-page"></a>新增全文檢索目錄 (一般頁面)
@@ -37,7 +37,7 @@ ms.locfileid: "62844096"
  **設定為預設目錄**  
  選取即可將此目錄設定為新全文檢索目錄的預設目錄。  
   
- **區分重音**  
+ **區分腔調字**  
  指出類別目錄是否區分或不區分變音符號，例如波狀符號（**~**）、銳角、重音符號（**́**）或變音符號（**？**）。 如果您選取 **[不區分]**，在與此全文檢索目錄相關的全文檢索索引中會忽略變音符號。 如需有關變音符號的詳細資訊，請參閱 Merriam-Webster 網站中的變[音符號](https://www.merriam-webster.com/dictionary/diacritic)。  
   
 ## <a name="see-also"></a>另請參閱  

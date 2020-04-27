@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842973"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 管理工具回溯相容性
   「回溯相容性」一節中的主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本之間行為上的變更。  
   
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |---------------|---------------------|  
 |[在 SQL Server 2014 中已被取代的管理工具功能](../../2014/database-engine/deprecated-management-tools-features-in-sql-server-2014.md)|在這個版本中已被取代的管理工具功能。|  
 |[在 SQL Server 2014 中已停止的管理工具功能](../../2014/database-engine/discontinued-management-tools-features-in-sql-server-2014.md)|在這個版本中已停止的管理工具功能。|  

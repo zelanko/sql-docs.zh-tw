@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62834640"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
@@ -50,7 +50,7 @@ ms.locfileid: "62834640"
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本，支援 SQL Server CDC  
   
 ## <a name="software-prerequisites"></a>軟體必要條件  
- 需要下列軟體：  
+ 以下是必要的軟體：  
   
 -   Oracle 10. x 用戶端  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828549"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
@@ -62,7 +62,7 @@ ms.locfileid: "62828549"
 ### <a name="restart-ssis"></a>重新啟動 SSIS  
  安裝 CDC 元件之後，您必須重新啟動 SSIS 服務，才能確保在 SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中開發封裝時，這些元件可正確運作。  
   
- 安裝元件之後，系統會顯示一則訊息。 出現提示時，按一下 **[是]** 。  
+ 安裝元件之後，系統會顯示一則訊息。 出現提示時，請按一下 [是]  。  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>解除安裝 Microsoft CDC 元件  
  您可以使用解除安裝精靈來解除安裝 CDC 來源、CDC 分隔器或 CDC 控制工作。 解除安裝元件之前，您必須先確定下列事項：  
@@ -70,9 +70,7 @@ ms.locfileid: "62828549"
  如果您正在使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 進行封裝開發，請確定 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 已關閉，然後再執行解除安裝精靈。  
   
 ## <a name="benefits"></a>優點  
- 
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 元件的 CDC 元件可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 元件的 CDC 元件可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
   
  SSIS CDC 元件是用來以方便進一步處理的方式提供變更資料，以便複寫、載入資料倉儲、更新 OLAP 的緩時變維度、稽核變更或進行其他可能的用途。 所使用的進一步處理類型是由 SSIS 開發人員決定。  
   
@@ -81,19 +79,19 @@ ms.locfileid: "62828549"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>開始使用異動資料擷取元件  
  一般的 CDC 封裝會處理一組資料表的變更。 下圖顯示這種 CDC 封裝類型的基本控制流程部分。 這種封裝稱為 Trickle 摘要處理封裝。  
   
- ![處理封裝控制流程的 Trickle 摘要](../media/tricklefeedprocessing.gif "處理封裝控制流程的 Trickle 摘要")  
+ ![Trickle 摘要處理套件控制流程](../media/tricklefeedprocessing.gif "Trickle 摘要處理套件控制流程")  
   
- 這個 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」**** 的第一項工作會針對在名為「處理變更」**** 之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
+ 這個 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」  的第一項工作會針對在名為「處理變更」  之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
   
  如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md) 和 [CDC 控制工作編輯器](../cdc-control-task-editor.md)。  
   
- 下圖顯示「處理變更」**** 資料流程，就概念上說明變更的處理方式。  
+ 下圖顯示「處理變更」  資料流程，就概念上說明變更的處理方式。  
   
  ![處理異動資料流程](../media/processchangesdataflow.gif "處理異動資料流程")  
   
  此圖所說明的步驟如下：  
   
--   **資料表 x 的變更**是一個 cdc 來源，它會讀取對資料表 x 所做的變更，而在此情況下，會在父控制流程中決定的 CDC 處理範圍內進行。  
+-   「資料表 X 的變更」**** 是讀取對資料表 X 所做變更的 CDC 來源，這些變更是在父控制流程中決定的 CDC 處理範圍內進行。  
   
 -   **CDC 分隔器 X**是用來將變更分割成插入、刪除和更新。 此案例會假設 CDC 來源設定成產生淨變更，以便以平行方式處理不同的變更類型。  
   
@@ -125,11 +123,11 @@ ms.locfileid: "62828549"
   
  下圖顯示可處理前兩種案例的 SSIS 封裝：  
   
- ![SSIS 封裝處理前兩個案例](../media/scenarioonetwo.gif "SSIS 封裝處理前兩個案例")  
+ ![SSIS 套件處理前兩個案例](../media/scenarioonetwo.gif "SSIS 套件處理前兩個案例")  
   
  下圖顯示可處理第三種案例的 SSIS 封裝：  
   
- ![SSIS 封裝處理第三個案例](../media/scenario3.gif "SSIS 封裝處理第三個案例")  
+ ![SSIS 套件處理第三個案例](../media/scenario3.gif "SSIS 套件處理第三個案例")  
   
  初始載入封裝之後，Trickle 摘要更新封裝會根據處理變更的排程重複執行，因為它們變成可供取用。  
   
@@ -178,7 +176,7 @@ ms.locfileid: "62828549"
 |0-(INITIAL)|在目前 CDC 群組上執行任何封裝之前就存在的狀態。 這也是 CDC 狀態為空白時呈現的狀態。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。|  
 |1-ILSTART (初始載入開始)|這是初始載入封裝啟動時存在的狀態。 這個狀態會在 CDC 控制工作的 **MarkInitialLoadStart** 作業呼叫之後出現。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。|  
 |2-ILEND (初始載入結束)|這是初始載入封裝順利結束時存在的狀態。 這個狀態會在 CDC 控制工作的 MarkInitialLoadEnd 作業呼叫之後出現。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。|  
-|3-ILUPDATE (初始載入更新)|這是在初始載入之後仍在處理初始處理範圍時第一次執行更新封裝之後存在的狀態。 這個狀態會在 CDC 控制工作的 **GetProcessingRange** 作業呼叫之後出現。<br /><br /> 如果使用 **_ $** 重新處理資料行，則會將它設定為1，表示封裝可能會重新處理已經在目標上的資料列。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。|  
+|3-ILUPDATE (初始載入更新)|這是在初始載入之後仍在處理初始處理範圍時第一次執行更新封裝之後存在的狀態。 這個狀態會在 CDC 控制工作的 **GetProcessingRange** 作業呼叫之後出現。<br /><br /> 如果正在使用 **_$reprocessing** 資料行，它就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。|  
 |4-TFEND (Trickle 摘要更新結束)|這是一般 CDC 回合所預期的狀態。 這種狀態表示上一個回合已順利完成，而且可以啟動具有新處理範圍的新回合。|  
 |5-TFSTART (Trickle 摘要更新開始)|這是在 CDC 控制工作的 **GetProcessingRange** 作業呼叫之後，後續執行更新封裝時存在的狀態。<br /><br /> 這種狀態表示一般 CDC 回合已啟動，但是沒有完成或者尚未全部完成 (**MarkProcessedRange**)。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)。|  
 |6-TFREDO (重新處理 Trickle 摘要更新)|這是在 TFSTART 之後發生 **GetProcessingRange** 時的狀態。 這種狀態表示上一個回合並未順利完成。<br /><br /> 如果正在使用 __$reprocessing 資料行，它就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
@@ -219,6 +217,6 @@ ms.locfileid: "62828549"
 -   technet.microsoft.com 上的影片： [CDC for Oracle Databases using SQL Server Integration Services 2012](https://technet.microsoft.com/sqlserver/jj218898)(使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC Control Task](../control-flow/cdc-control-task.md)  
+ [CDC 控制工作](../control-flow/cdc-control-task.md)  
   
   

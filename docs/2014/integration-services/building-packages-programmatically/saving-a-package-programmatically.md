@@ -14,19 +14,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0304d4ba3388874fbd2c19001b12094f1df4d351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836694"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
   在以程式設計方式建立新封裝或是修改現有封裝之後，通常會想要儲存變更。  
   
- 本主題中用以儲存封裝的所有方法需要 `Microsoft.SqlServer.ManagedDTS` 組件的參考。 在新專案中加入參考之後，請使用 <xref:Microsoft.SqlServer.Dts.Runtime> 或 `using` 陳述式來匯入 `Imports` 命名空間。  
+ 本主題中用以儲存封裝的所有方法需要 `Microsoft.SqlServer.ManagedDTS` 組件的參考。 在新專案中加入參考之後，請使用 `using` 或 `Imports` 陳述式來匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
   
 ## <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝  
- 若要以程式設計方式儲存封裝，請呼叫[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application>類別的下列其中一個方法：  
+ 若要以程式設計方式儲存套件，請呼叫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> 類別的下列其中一種方法：  
   
 |儲存位置|要呼叫的方法|  
 |----------------------|--------------------|  
