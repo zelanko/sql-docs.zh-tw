@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095874"
 ---
 # <a name="database-engine-configuration---user-instance"></a>資料庫引擎組態 - 使用者執行個體
@@ -30,7 +30,7 @@ ms.locfileid: "66095874"
  使用者執行個體 (也稱為子系或用戶端執行個體) 是父執行個體 (當做服務執行的主要執行個體，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 代表使用者所產生的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]執行個體。 使用者執行個體是在該使用者的安全性內容下，以使用者處理序的形式執行。 使用者執行個體與父執行個體和電腦上執行的其他使用者執行個體隔離。 使用者執行個體功能也稱為「以一般使用者的身分執行」(RANU)。  
   
 > [!NOTE]  
->  在安裝期間布建為**系統**管理員（sysadmin）固定伺服器角色成員的登入，會布建為範本資料庫中的管理員。 除非移除，否則這些登入會是使用者執行個體上 **sysadmin** (系統管理員) 固定伺服器角色的成員。  
+>  在安裝期間佈建為 **sysadmin** (系統管理員) 固定伺服器角色成員的登入，會佈建為範本資料庫中的管理員。 除非移除，否則這些登入會是使用者執行個體上 **sysadmin** (系統管理員) 固定伺服器角色的成員。  
   
  將使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員角色  
  預設值不是開啟。 若要將目前的安裝程式使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員角色，請選取該核取方塊。  
