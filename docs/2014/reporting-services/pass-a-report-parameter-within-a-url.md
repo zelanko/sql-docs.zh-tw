@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108104"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
@@ -80,7 +80,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  如果報表中包含具有預設值的報表參數，而且 `Prompt` 屬性的值是 `false` (也就是在報表管理員中未選取 [提示使用者] 屬性)，則您無法在 URL 內傳遞該報表參數的值。 這可讓管理員選擇防止使用者加入或修改某些報表參數值。  
   
-##  <a name="bkmk_examples"></a>其他範例  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> 其他範例  
  下列 URL 範例包含空格和多個參數。  
   
 -   資料夾名稱 "SQL Server User Education Team" 包含空格，因此 "+" 會取代每個空格。  
@@ -106,7 +106,7 @@ http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [URL 存取 &#40;SSRS&#41;](url-access-ssrs.md)   
+ [&#40;SSRS&#41;的 URL 存取](url-access-ssrs.md)   
  [URL 存取參數參考](url-access-parameter-reference.md)  
   
   

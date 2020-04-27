@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107690"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
@@ -33,7 +33,7 @@ ms.locfileid: "66107690"
   
  ![ReportDesignView](../media/reportdesignview.gif "ReportDesignView")  
   
-##  <a name="Ribbon"></a>功能區  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>功能區  
  [功能區] 的設計目的是要協助您快速找到完成工作所需的命令。 這些命令會以邏輯群組進行組織，然後一起收集在索引標籤底下。 每個索引標籤都與一種活動相關，例如插入報表項目或格式化文字。  
   
  在報表設計檢視中，[功能區] 會分成下列索引標籤：[首頁]、[插入] 和 [檢視]。 如果您在 [功能區] 上找不到工作，某些 [功能區] 群組具有相關的對話方塊，而且您可以按一下群組右下角的箭號來開啟對話方塊。 不過，您無法最小化或刪除 [功能區]，或將它取代成工具列和功能表。  
@@ -61,7 +61,7 @@ ms.locfileid: "66107690"
  若要返回報表設計檢視，請在 [**執行**] 索引標籤上，按一下 [**設計**]。  
   
   
-##  <a name="RptDesignSurface"></a>報表 Design Surface  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> 報表設計介面  
  報表產生器的設計介面是設計報表時的主要工作區域。 若要在報表中放置資料區域、子報表、文字方塊、影像、矩形和線條等報表項目，可以將這些項目從「功能區」或「報表組件庫」加入設計介面。 您可以從這裡對報表項目加入群組、運算式、參數、篩選、動作、可見性和格式。  
   
  也可以變更下列項目：  
@@ -86,7 +86,7 @@ ms.locfileid: "66107690"
 >  若要顯示尺規，請在 [檢視]**** 索引標籤上選取 [尺規]**** 核取方塊。  
   
   
-##  <a name="ReptDataPane"></a>[報表資料] 窗格  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  在 [報表資料] 窗格中，您可以定義報表所需的報表資料和報表資源，然後再設計報表配置。 例如，您可以將資料來源、資料集、導出欄位、報表參數和影像加入至 [報表資料] 窗格。  
   
  當您將項目加入至 [報表資料] 窗格之後，只需要將欄位拖曳到設計介面上的報表項目，就可以控制資料要出現在報表中的位置。  
@@ -113,7 +113,7 @@ ms.locfileid: "66107690"
 -   [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a>報表元件庫  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a>報表元件庫  
  建立報表最簡單的方式，就是在報表伺服器或整合到 SharePoint 網站的報表伺服器找到現有的報表組件，如資料表和圖表。 您會搜尋報表組件，以便加入至報表組件庫中的報表。 您可以依下列方式篩選報表組件：報表組件的全部或部分名稱、建立者、上次修改報表組件者、上次修改時間、儲存位置，或報表組件的類型。 例如，您可以依其中一個同事，搜尋上星期建立的所有圖表。  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "66107690"
  您可以以縮圖或清單方式檢視搜尋結果，並依名稱、建立和修改日期，以及建立者來排序搜尋結果。 如需詳細資訊，請參閱 [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)。  
   
   
-##  <a name="PropertiesPane"></a>[屬性] 窗格（報表產生器）  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> 屬性窗格 (報表產生器)  
  報表中的每個項目 (包括報表主體本身、資料區域、影像和文字方塊) 都具有相關聯的屬性。 例如，文字方塊的 BorderColor 屬性會顯示文字方塊框線的色彩值，而報表的 PageSize 屬性會顯示報表的頁面大小。  
   
  這些屬性會顯示在 [屬性] 窗格中。 窗格中的屬性會因您所選取的報表項目而有所不同。  
@@ -148,7 +148,7 @@ ms.locfileid: "66107690"
  [屬性] 窗格的窗格頂端具有三個按鈕：[類別目錄]、[按字母排列] 和 [屬性頁]。 按一下 [類別目錄] 和 [按字母排列] 按鈕，即可在 [屬性] 窗格檢視之間切換。 按一下 [屬性頁]**** 按鈕，即可開啟選取之報表項目的 [屬性] 對話方塊。  
   
   
-##  <a name="GroupPane"></a>[群組] 窗格（報表產生器）  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> 群組窗格 (報表產生器)  
  群組的用途在於將報表資料組織為視覺階層以及計算總計。 您可以在設計介面和 [群組] 窗格中檢視資料區域內的資料列和資料行群組。 [群組] 窗格具有兩個窗格：[資料列群組] 和 [資料行群組]。 當您選取某個資料區域時，[群組] 窗格就會將該資料區域內的所有群組顯示成階層式清單：子群組會以縮排方式顯示在其父群組底下。  
   
  ![巢狀資料列和資料行群組的群組窗格](../media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的群組窗格")  
@@ -160,7 +160,7 @@ ms.locfileid: "66107690"
  如需詳細資訊，請參閱[群組窗格 &#40;報表產生器&#41;](../report-design/grouping-pane-report-builder.md) 和[了解群組 &#40;報表產生器和 SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
   
-##  <a name="RunMode"></a>在執行模式中預覽報表  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> 在執行模式中預覽報表  
  在報表設計檢視中，您使用的不是實際資料，而是欄位名稱或運算式所指示之資料的表示。 當您想要查看顯示在所設計之報表內容中的實際資料時，可以執行報表來預覽顯示在報表配置中之基礎資料庫的資料。 在設計與執行報表之間切換，可讓您調整其設計並且立即查看結果。 若要預覽報表，請按一下功能區上 [ **Views** ] 群組中的 [**執行**]。  
   
  當您按一下 [執行]**** 時，報表產生器就會連線至報表資料來源、在電腦上快取資料、結合資料和配置，然後在 HTML 檢視器中轉譯報表。 在您繼續設計報表時，可以視需要不斷執行報表。 當您對報表感到滿意時，就可以將報表儲存至報表伺服器，具有適當權限的其他個人可以在其中檢視您的報表。  
@@ -173,7 +173,7 @@ ms.locfileid: "66107690"
   
   
 ## <a name="see-also"></a>另請參閱  
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [尋找、查看和管理報表 &#40;報表產生器和 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [SQL Server 2014 中的報表產生器](report-builder-in-sql-server-2016.md)  
   
   

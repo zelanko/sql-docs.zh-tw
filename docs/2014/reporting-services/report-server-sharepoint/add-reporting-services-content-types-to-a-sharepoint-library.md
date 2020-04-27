@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104284"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>將報表檢視器 Web 組件加入至網頁 (SharePoint 整合模式的 Reporting Services)
@@ -42,7 +42,7 @@ ms.locfileid: "66104284"
   
 4.  在網頁組件類別目錄的清單中，選取 [其他]**** 類別目錄，然後選取 [SQL Server Reporting Services 報表檢視器]****。  
   
-5.  按一下 [新增]  。 Web 組件會加入區域頂端。 您可將它拖曳至該區域中的其他位置。  
+5.  按一下 **[新增]** 。 Web 組件會加入區域頂端。 您可將它拖曳至該區域中的其他位置。  
   
 6.  在檢視器中，按一下 [請按這裡開啟工具窗格]****。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66104284"
 ## <a name="see-also"></a>另請參閱  
  [SharePoint 網站上的報表檢視器 Web 元件](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [自訂報表檢視器 Web 元件](../customize-the-report-viewer-web-part.md)   
- [授與 SharePoint 網站上報表伺服器項目的權限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授與 SharePoint 網站上報表伺服器專案的許可權](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [安裝或卸載適用于 SharePoint &#40;SharePoint 2010 和 SharePoint 2013 的 Reporting Services 增益集&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

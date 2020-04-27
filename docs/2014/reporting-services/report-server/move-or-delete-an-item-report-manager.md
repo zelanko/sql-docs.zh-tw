@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103730"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
@@ -30,11 +30,11 @@ ms.locfileid: "66103730"
   
 |圖示|可移動項目|  
 |----------|-------------------|  
-|![報表圖示](../media/hlp-16doc.gif "報表圖示")|Report|  
+|![Report icon](../media/hlp-16doc.gif "報表圖示")|Report|  
 |![連結報表圖示](../media/hlp-16linked.gif "連結報表圖示")|連結報表|  
 |![資料夾圖示](../media/hlp-16folder.gif "資料夾圖示")|資料夾|  
 |![一般資源圖示](../media/hlp-16file.gif "一般資源圖示")|一般資源|  
-|![共用資料來源圖示](../media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源|  
+|![Shared data source icon](../media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源|  
 ||共用資料集|  
   
  並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派中為目標項目選取下列工作時，即涵蓋移動項目的權限：「管理報表」、「管理模型」、「管理資料夾」，以及「管理資料來源」。  
@@ -43,19 +43,19 @@ ms.locfileid: "66103730"
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;].。/report-manager-ssrs-native-mode.md）。  
   
-2.  在報表管理員中，巡覽至 [內容]**** 頁面，然後找出您要移動的項目。  
+2.  在報表管理員中，巡覽至 [內容]  頁面，然後找出您要移動的項目。  
   
 3.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-4.  在下拉式功能表中，按一下 **[移動]**。  
+4.  在下拉式功能表中，按一下 **[移動]** 。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  針對 [位置]****，請指定您要移動項目的目標資料夾。 您可以輸入完整資料夾名稱，或使用樹狀目錄控制項導覽至資料夾。  
+6.  針對 [位置]  ，請指定您要移動項目的目標資料夾。 您可以輸入完整資料夾名稱，或使用樹狀目錄控制項導覽至資料夾。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 或者，您可以巡覽至要移動的物件、按一下 [屬性]****，然後按一下頁面頂端的 [移動]****。  
+ 或者，您可以巡覽至要移動的物件、按一下 [屬性]  ，然後按一下頁面頂端的 [移動]  。  
   
 ## <a name="delete-an-item"></a>刪除項目  
  刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找專案的相依專案，請參閱 [相依專案] 頁面 &#40;報表管理員&#41;]。/dependent-items-page-report-manager.md）。  
@@ -64,11 +64,11 @@ ms.locfileid: "66103730"
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;].。/report-manager-ssrs-native-mode.md）。  
   
-2.  在報表管理員中，巡覽至 [內容]**** 頁面，然後找出您要刪除的項目。  
+2.  在報表管理員中，巡覽至 [內容]  頁面，然後找出您要刪除的項目。  
   
 3.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-4.  在下拉式功能表中，按一下 [刪除]****。  
+4.  在下拉式功能表中，按一下 [刪除]  。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

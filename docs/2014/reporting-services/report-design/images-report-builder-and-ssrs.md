@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5b7a8add7f890dcd6e273597f1a43d612d6c5af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105694"
 ---
 # <a name="images-report-builder-and-ssrs"></a>影像 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66105694"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingImages"></a>比較外部、內嵌和資料系結影像  
+##  <a name="comparing-external-embedded-and-data-bound-images"></a><a name="ComparingImages"></a> 比較外部、內嵌與資料繫結影像  
  當您在報表中使用以伺服器為基礎或其他外部的影像時，影像項目會包含指向報表伺服器之影像或網路上所在位置的路徑。 不過，使用內嵌影像時，影像資料是儲存在報表定義中，而不是以個別檔案存在。  
   
  以伺服器為基礎的影像在數個報表或網頁共用標誌或靜態圖片時，非常有用。 內嵌影像可確保影像總是能供報表使用，但是不能共用它們。 使用外部影像的報表定義小於使用內嵌影像的報表定義。  
@@ -36,19 +36,19 @@ ms.locfileid: "66105694"
   
 
   
-##  <a name="ImagesReportParts"></a>當做報表元件的影像  
+##  <a name="images-as-report-parts"></a><a name="ImagesReportParts"></a> 當做報表組件的影像  
  您可以將影像當做報表組件，與報表分開儲存。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  
   
-##  <a name="EmbedImages"></a>內嵌影像  
+##  <a name="embedding-images"></a><a name="EmbedImages"></a> 內嵌影像  
  您可以在報表中內嵌影像，讓所有影像資料都儲存在報表定義中。 當您內嵌影像時，影像會以 MIME 編碼，並當做文字儲存在報表定義中。 使用內嵌影像來確保報表隨時都可以使用影像，但它也會增加報表定義的大小。  
   
  如需內嵌影像的詳細資訊，請參閱 [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)。  
   
 
   
-##  <a name="ExternalImages"></a>外部影像  
+##  <a name="external-images"></a><a name="ExternalImages"></a> 外部影像  
  您可以指定影像的 URL，在報表中包含預存影像。 當您在報表中使用外部影像時，影像來源會設定為 `External`，而影像的值則是影像的 URL 位址或路徑。  
   
  如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
@@ -59,7 +59,7 @@ ms.locfileid: "66105694"
   
  
   
-##  <a name="BackgroundImages"></a>背景影像  
+##  <a name="background-images"></a><a name="BackgroundImages"></a> 背景影像  
  影像可當做報表之主體、矩形、文字方塊、清單、矩陣或資料表中的背景影像。 背景影像和影像具有類似的屬性。 您也可以指定如何重複影像將項目的背景填滿。  
   
 > [!NOTE]  
@@ -69,24 +69,24 @@ ms.locfileid: "66105694"
   
  
   
-##  <a name="DataboundImages"></a>資料系結影像  
+##  <a name="data-bound-images"></a><a name="DataboundImages"></a> 資料繫結影像  
  您可以將儲存在資料庫中的影像加入至您的報表。 您使用的影像報表項目與靜態影像所使用的相同，不過多了一組屬性來指示影像儲存在資料庫中。 若要檢視資料繫結影像的使用指示，請參閱 [加入資料繫結影像 &#40;報表產生器及 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)。  
   
 
   
-##  <a name="HowTo"></a>How to 主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  [加入外部影像 &#40;報表產生器及 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
  [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [新增背景影像 &#40;報表產生器及 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [加入背景影像 &#40;報表產生器及 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [新增資料繫結影像 &#40;報表產生器及 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [加入資料繫結影像 &#40;報表產生器及 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>另請參閱  
- [匯出至影像檔案 &#40;報表產生器及 SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

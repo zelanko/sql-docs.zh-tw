@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102533"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>將報表發行到 SharePoint 文件庫
@@ -30,9 +30,9 @@ ms.locfileid: "66102533"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  在 **[專案]** 功能表按一下 **[屬性]** 。 _專案>\<_ [屬性頁]  對話方塊隨即開啟。  
+2.  在 **[專案]** 功能表按一下 **[屬性]**。 [ _ \<專案>_**屬性頁**] 對話方塊隨即開啟。  
   
-3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定列為 [使用中]\(**設定>** *)\<* 。  
+3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定**列為 [使用中**（*\<configuration>*）]。  
   
 4.  如果您想要發行專案中的共用資料來源，並覆寫之前發行的共用資料來源，請將 **OverwriteDataSources** 設定為 **True**。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "66102533"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]  。 報表便會發行至 **[TargetReportFolder]** 中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
+9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]****。 報表便會發行至 **[TargetReportFolder]** 中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
   
 ## <a name="see-also"></a>另請參閱  
  [專案屬性頁對話方塊](../tools/project-property-pages-dialog-box.md)   
- [設定部署屬性 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [將部署屬性設定 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [將報表發行至報表伺服器](publishing-reports-to-a-report-server.md)   
- [SharePoint 模式在報表伺服器上已發行報表項目的 URL 範例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint 模式中報表伺服器上已發行報表專案的 URL 範例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [搭配報表使用 Office 資料連接 &#40;.odc&#41; &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

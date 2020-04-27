@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108103"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>預留位置屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[預留位置屬性]** 對話方塊可變更文字方塊內某個預留位置的值、工具提示和標記選項。  
   
 ## <a name="options"></a>選項。  
- **標誌**  
+ **標籤**  
  輸入預留位置的標籤。 此標籤只會在設計介面上顯示。  
   
  **ReplTest1**  
@@ -36,17 +36,17 @@ ms.locfileid: "66108103"
  **標記類型**  
  選取選項，指出如何轉譯預留位置。  
   
--   **純文字**將預留位置顯示為簡單文字。 HTML 會視為常值文字。  
+-   **純文字** ：將預留位置顯示為簡單的文字。 HTML 會視為常值文字。  
   
--   **HTML** 將預留位置顯示為 HTML。 如果預留位置的運算式值包含有效的 HTML 標記，則這些標記會轉譯為 HTML。  
+-   **HTML**  ：將預留位置顯示為 HTML。 如果預留位置的運算式值包含有效的 HTML 標記，則這些標記會轉譯為 HTML。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [將文字方塊中的文字格式化 &#40;報表產生器及 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [將 HTML 新增至報表 &#40;報表產生器和 SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [文字方塊 &#40;報表產生器及 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
- [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [將 HTML 匯入報表 &#40;報表產生器和 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [文字方塊 &#40;報表產生器和 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [將報表專案的格式設定 &#40;報表產生器和 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS 設定文字和預留位置的格式&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

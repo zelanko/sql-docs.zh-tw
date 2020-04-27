@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109105"
 ---
 # <a name="general-properties-page-models-report-manager"></a>一般屬性頁面，模型 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66109105"
   
 2.  將滑鼠停留在該模型上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該模型的 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -39,7 +39,7 @@ ms.locfileid: "66109105"
   
  ; ? ： \@ & = +，$/* \< > |" /  
   
- **說明**  
+ **描述**  
  輸入模型的描述。 這項描述會顯示在有權存取此模型之使用者的 [內容] 頁面上。  
   
  **在清單檢視中隱藏**  
@@ -54,7 +54,7 @@ ms.locfileid: "66109105"
  **移動**  
  按一下即可在報表伺服器資料夾階層內重新定位模型。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。 如需詳細資訊，請參閱[&#40;報表管理員&#41;中移動專案頁面](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
- **另**  
+ **儲存**  
  按一下即可儲存模型定義的唯讀副本。 視電腦上定義的檔案關聯而定，系統會在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他應用程式中開啟檔案。 在大多數情況下，系統會將模型開啟為 XML 檔案。  
   
  您開啟的副本與初始發行至報表伺服器的原始模型定義相同。 發行模型之後在模型上設定的任何屬性 (例如資料來源屬性) 都不會反映在您開啟的檔案中。  

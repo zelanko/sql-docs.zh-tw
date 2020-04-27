@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105515"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
@@ -36,13 +36,13 @@ ms.locfileid: "66105515"
   
  下列清單描述資料格在下列 Tablix 區域中的範圍：  
   
--   **Tablix 角落**範圍是套用資料集和外部 tablix 的篩選和排序運算式之後，連結至 tablix 資料區域之資料區域中的資料。  
+-   **Tablix 邊角** ：此範圍為套用資料集和外部 Tablix 的篩選與排序運算式後，連結至 Tablix 資料區域之資料區域中的資料。  
   
--   **Tablix 資料行群組**套用資料集、外部 tablix 和資料行群組的篩選和排序運算式之後，最內層資料行群組中的資料。  
+-   **Tablix 資料行群組** ：套用資料集、外部 Tablix 與資料行群組的篩選與排序運算式後，最內部資料行群組中的資料。  
   
--   **Tablix 資料列群組**套用資料集、外部 tablix 和資料列群組的篩選和排序運算式之後，最內層資料列群組中的資料。  
+-   **Tablix 資料列群組** ：套用資料集、外部 Tablix 與資料列群組的篩選與排序運算式後，最內部資料列群組中的資料。  
   
--   **Tablix 主體**套用資料集、外部 tablix 和資料列和資料行群組的篩選和排序運算式之後，最內層群組中的資料會以資料列群組與資料行群組的交集資料表示。  
+-   **Tablix 主體** ：套用資料集、外部 Tablix 與資料列和資料行群組的篩選與排序運算式後，最內部群組中以資料列群組和資料行群組之交集表示的資料。  
   
  如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66105515"
   
  您必須設定將會顯示在量測計標尺上的最小值與最大值。 若要指定量測計的最大值，您可以使用運算式，例如 `=Max!MyField.Value`。 不過，因為此運算式僅會在資料格中資料的範圍內進行評估，對於 Tablix 中的所有資料列而言，每個量測計的最大值都不會相同。 這在 Tablix 中的量測計間進行比較時，可能會更難以了解。 或者，您可以為最大值指定一個靜態值。 Tablix 內部的所有資料列都會顯示包含此最大值的量測計。 如需詳細資訊，請參閱[設定量測計的最小值或最大值 &#40;報表產生器和 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
- 如果量測計上的資料變得太大，請考慮使用標尺乘數減少所顯示的位數。 若要指定乘數，您可以用滑鼠右鍵按一下標尺，然後選取 [標尺屬性]****。 當 **[標尺屬性]** 對話方塊開啟時，針對 **[乘數]** 指定一個值。  
+ 如果量測計上的資料變得太大，請考慮使用標尺乘數減少所顯示的位數。 若要指定乘數，您可以用滑鼠右鍵按一下標尺，然後選取 [標尺屬性]  。 當 **[標尺屬性]** 對話方塊開啟時，針對 **[乘數]** 指定一個值。  
   
 ## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>在清單中巢狀資料表或矩陣與圖表  
  若要在清單中巢狀多個資料區域，請先加入矩形，然後將資料區域加入到該矩形中。  
@@ -84,7 +84,7 @@ ms.locfileid: "66105515"
   
 ## <a name="see-also"></a>另請參閱  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [列出 &#40;報表產生器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

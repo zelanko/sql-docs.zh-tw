@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109231"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
@@ -65,14 +65,11 @@ ms.locfileid: "66109231"
 |**MaxResourceSize**|外部資源允許的最大 KB 數。<br /><br /> 預設值：100|  
 |**MaxStringResultLength**|RDL 運算式的傳回值中允許的最大字元數。<br /><br /> 預設值：1000|  
 |**MaxArrayResultLength**|RDL 運算式的陣列傳回值中允許的最大項目數。<br /><br /> 預設值：100|  
-|**類型**|RDL 運算式中允許的成員清單。|  
-|**允許**|RDL 運算式中允許的類型或類型集合。|  
-|**命名空間**|
-  **Allow** 的屬性，這是包含一或多個套用至 Value 之類型的命名空間。 這個屬性不區分大小寫。|  
-|`AllowNew`|
-  **Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 注意：啟用`RDLSandboxing`時，不論的設定為何，都無法在 RDL 運算式中建立新的陣列`AllowNew`。|  
-|**ReplTest1**|
-  **Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 值**\*** 表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
+|**型別**|RDL 運算式中允許的成員清單。|  
+|**Allow**|RDL 運算式中允許的類型或類型集合。|  
+|**Namespace**|**Allow** 的屬性，這是包含一或多個套用至 Value 之類型的命名空間。 這個屬性不區分大小寫。|  
+|`AllowNew`|**Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 注意：啟用`RDLSandboxing`時，不論的設定為何，都無法在 RDL 運算式中建立新的陣列`AllowNew`。|  
+|**ReplTest1**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 值**\*** 表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
 |**成員**|如需包含在** \<類型>** 元素中的類型清單，則為 RDL 運算式中不允許的成員名稱清單。|  
 |**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意：為成員指定**Deny**時，不允許所有類型的所有成員使用此名稱。|  
   

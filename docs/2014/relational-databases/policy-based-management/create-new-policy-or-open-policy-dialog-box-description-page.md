@@ -11,27 +11,27 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255230"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>建立新原則或開啟原則對話方塊，描述頁面
   使用此對話方塊可在以原則為基礎的管理原則中加入描述和其他資訊。  
   
 ## <a name="options"></a>選項。  
- **類別目錄**  
+ **類別**  
  當您正在建立新的原則時，請選取原則類別目錄。  
   
- **說明**  
+ **描述**  
  輸入原則的描述。  
   
  **其他說明超連結: 要顯示的文字**  
- 在執行原則時，其他說明超連結會顯示在 [結果詳細檢視]  頁面上。 輸入要顯示為超連結的文字。  
+ 在執行原則時，其他說明超連結會顯示在 [結果詳細檢視]**** 頁面上。 輸入要顯示為超連結的文字。  
   
  **其他說明超連結: 位址**  
- 輸入當使用者按一下 [結果詳細檢視]  頁面上所出現的超連結文字時，所要開啟之網頁的超連結。  
+ 輸入當使用者按一下 [結果詳細檢視]**** 頁面上所出現的超連結文字時，所要開啟之網頁的超連結。  
   
  **其他說明超連結: 測試連結**  
  按一下此選項可開啟用來測試連結有效性的超連結。  

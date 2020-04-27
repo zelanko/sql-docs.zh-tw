@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109877"
 ---
 # <a name="choose-link-page-report-manager"></a>選擇連結頁面 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66109877"
   
 2.  將滑鼠停留在該連結報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該連結報表的 **[一般]** 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該連結報表的 **[一般]** 屬性頁面。  
   
 4.  在 **[一般]** 索引標籤的屬性頁面上，按一下 **[變更連結]**。  
   

@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273535"
 ---
 # <a name="topologies-for-web-synchronization"></a>Web 同步處理的拓撲
-  您可以選擇各種[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同步處理複寫拓撲。 設定 Web 同步處理的一般方式包括：  
+  您可以從各種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同步處理複寫拓撲中進行選擇。 設定 Web 同步處理的一般方式包括：  
   
 -   單一伺服器  
   
@@ -54,10 +54,10 @@ ms.locfileid: "63273535"
 > [!NOTE]  
 >  訂閱者只能與特定發行者同步處理。 例如，訂閱者若訂閱重新發行者 A，則在無法使用 A 時不能改為與重新發行者 B 同步處理。  
   
- ![Web 同步處理和重新發行](media/web-sync05.gif "Web 同步處理和重新發行")  
+ ![Web 同步處理和重新發佈](media/web-sync05.gif "Web 同步處理和重新發佈")  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 Web 同步處理](configure-web-synchronization.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)   
  [合併式複寫的 Web 同步處理](web-synchronization-for-merge-replication.md)  
   
   

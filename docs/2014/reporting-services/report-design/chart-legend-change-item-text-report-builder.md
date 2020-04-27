@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e34f0a34030dab62a876a41043dc4c4f4c86f0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106308"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>變更圖例項目的文字 (報表產生器及 SSRS)
@@ -31,11 +31,11 @@ ms.locfileid: "66106308"
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-shape-chart"></a>在形狀圖上修改出現在圖例中的文字  
   
-1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]**** 區域中的欄位，然後選取 [數列屬性]****。  
+1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]  區域中的欄位，然後選取 [數列屬性]  。  
   
-2.  按一下 [圖例]****，然後在 [自訂圖例文字]**** 方塊中鍵入關鍵字。  
+2.  按一下 [圖例]  ，然後在 [自訂圖例文字]  方塊中鍵入關鍵字。  
   
- 下表提供用於 [自訂圖例文字]**** 屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 下表提供用於 [自訂圖例文字]  屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 |關鍵字|描述|在圖例中顯示為文字的範例|  
 |-------------|-----------------|---------------------------------------------------|  
@@ -45,17 +45,17 @@ ms.locfileid: "66106308"
 |`#AXISLABEL (#PERCENT{P0})`|顯示類別目錄欄位的文字表示法，後面接著每個類別目錄顯示在圖表上的百分比。|Michael Blythe (85%)|  
   
 > [!NOTE]  
->  在 [數列群組]**** 區域中沒有指定任何欄位時，只能在執行階段評估 #AXISLABEL 關鍵字。  
+>  在 [數列群組]  區域中沒有指定任何欄位時，只能在執行階段評估 #AXISLABEL 關鍵字。  
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-non-shape-chart"></a>在非形狀圖上修改出現在圖例中的文字  
   
-1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]**** 區域中的欄位，然後選取 [數列屬性]****。  
+1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]  區域中的欄位，然後選取 [數列屬性]  。  
   
-2.  按一下 [圖例]****，然後在 [自訂圖例文字]**** 方塊中鍵入圖例標籤。 數列會隨著您的文字更新。  
+2.  按一下 [圖例]  ，然後在 [自訂圖例文字]  方塊中鍵入圖例標籤。 數列會隨著您的文字更新。  
   
 ## <a name="see-also"></a>另請參閱  
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [隱藏圖表上的圖例專案 &#40;報表產生器和 SSRS&#41;](chart-legend-hide-items-report-builder.md)  
+ [隱藏圖表上的圖例項目 &#40;報表產生器及 SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   
   

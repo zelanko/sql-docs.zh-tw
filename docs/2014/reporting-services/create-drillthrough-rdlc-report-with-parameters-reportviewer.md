@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109653"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>使用 ReportViewer 建立包含參數的鑽研 (RDLC) 報表 (SSRS 教學課程)
@@ -36,10 +36,10 @@ ms.locfileid: "66109653"
  [第6課：將 ReportViewer 控制項加入至應用程式](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [第7課：在父報表上加入鑽取動作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
  [第8課：建立資料篩選](../reporting-services/lesson-8-create-a-data-filter.md)   
- [第 9 課：建置並執行應用程式](../reporting-services/lesson-9-build-and-run-the-application.md)  
+ [第 9 課：建置及執行應用程式](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services SSRS &#40;的教學課程&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
  [使用報表設計師設計報表 &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

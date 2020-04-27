@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480011"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
@@ -36,11 +36,9 @@ ms.locfileid: "65480011"
  使用者可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或透過程式設計方式設定為模型管理員。 如需詳細資訊，請參閱 [建立模型管理員 &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services 系統管理員  
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員只有一個。 系統管理員是您在建立[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫時，針對**administrator 帳戶**指定的使用者。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員只有一個。 系統管理員是您在建立[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫時，針對**administrator 帳戶**指定的使用者。  
   
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員：  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員：  
   
 -   自動擁有所有功能區域的存取權。  
   
@@ -52,10 +50,8 @@ ms.locfileid: "65480011"
   
 |管理員類型|描述|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系統管理員|
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中所指派權限不會影響系統管理員的存取。<br /><br /> 自動擁有所有模型的 [**更新**] 許可權。<br /><br /> 自動擁有所有功能區域的存取權。<br /><br /> 在 tblUser 中，[**識別碼**] 資料行中的值是**1**。|  
-|模型管理員|
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中指派的權限會決定使用者是否為模型管理員。<br /><br /> 根據明確指派的權限或繼承自群組的權限，使用者可以是模型管理員。<br /><br /> 只有在已指派最上層模型物件之**Update**許可權，且沒有其他許可權的模型，才是系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 在 tblUser 中，[**識別碼**] 資料行中的值不是**1**。|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中所指派權限不會影響系統管理員的存取。<br /><br /> 自動擁有所有模型的 [**更新**] 許可權。<br /><br /> 自動擁有所有功能區域的存取權。<br /><br /> 在 tblUser 中，[**識別碼**] 資料行中的值是**1**。|  
+|模型管理員|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中指派的權限會決定使用者是否為模型管理員。<br /><br /> 根據明確指派的權限或繼承自群組的權限，使用者可以是模型管理員。<br /><br /> 只有在已指派最上層模型物件之**Update**許可權，且沒有其他許可權的模型，才是系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 在 tblUser 中，[**識別碼**] 資料行中的值不是**1**。|  
   
 ## <a name="see-also"></a>另請參閱  
  [建立模型系統管理員 &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   

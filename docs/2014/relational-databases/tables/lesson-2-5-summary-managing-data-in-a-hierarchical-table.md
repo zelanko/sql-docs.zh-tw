@@ -13,14 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 127eeec7f3abe52e247dadb284a5ca7b91ed1cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110084"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>摘要：在階層式資料表中管理資料
-  
   `hierarchyid` 資料類型可讓您輕鬆建立反映階層式資料的資料表，然後建立深度優先和廣度優先的索引，即可有效率地存取資料表。 使用階層式方法來查詢與操作資料。  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>返回教學課程的起始處  

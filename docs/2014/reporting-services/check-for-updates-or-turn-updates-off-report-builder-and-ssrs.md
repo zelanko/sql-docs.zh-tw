@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109863"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>檢查更新或關閉更新 (報表產生器及 SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66109863"
 -   以滑鼠右鍵按一下報表外部的設計介面，或在報表主體中，按一下 [**檢查更新**]。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表組件 &#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [報表元件 &#40;報表產生器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [報表產生器和 SSRS &#40;發行和重新發佈報表元件&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [流覽報表元件，並 &#40;報表產生器和 SSRS 設定預設資料夾&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [&#40;報表產生器和 SSRS&#41;疑難排解報表元件](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

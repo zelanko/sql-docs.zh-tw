@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108213"
 ---
 # <a name="new-model-page-report-manager"></a>新增模型頁面 (報表管理員)
@@ -43,7 +43,7 @@ ms.locfileid: "66108213"
   
  ; ? ： \@ & = +，$/* \< > |" /  
   
- **說明**  
+ **描述**  
  顯示模型的描述。 透過報表管理員檢視這個項目的使用者會在瀏覽資料夾階層時看到此描述。  
   
  **變更位置**  

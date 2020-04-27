@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d25d369870dc7a4f53e70a61726ffbb7d38d9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480617"
 ---
 # <a name="end-the-domain-management-activity"></a>結束定義域管理活動
@@ -28,7 +28,7 @@ ms.locfileid: "65480617"
   
 -   **否-儲存知識庫工作並**結束：將會儲存您的工作，知識庫會保持鎖定，而且知識庫的狀態將會設定為 [工作中]。 定義域管理和知識探索活動都可供使用。 您會返回首頁。  
   
--   **取消-留在目前畫面**：快顯視窗將會關閉，而且您會返回 [定義域管理] 畫面。  
+-   **取消 - 留在目前畫面**：快顯視窗將會關閉，而且您會返回 [定義域管理] 畫面。  
   
  **取消**  
  按一下以結束 [定義域管理] 活動，不儲存工作並返回 DQS 首頁。  

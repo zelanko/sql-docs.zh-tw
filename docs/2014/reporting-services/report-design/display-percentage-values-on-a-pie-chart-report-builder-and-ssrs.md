@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3beb87611f258d0c028b0a02b5d226864314620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106029"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖上顯示百分比值 (報表產生器及 SSRS)
@@ -42,8 +42,8 @@ ms.locfileid: "66106029"
 2.  在 [**圖例**] `#PERCENT`中，針對 [**自訂圖例文字**] 屬性輸入。  
   
 ## <a name="see-also"></a>另請參閱  
- [圓形圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [圓形圖 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [在圖表上格式化圖例 &#40;報表產生器和 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   

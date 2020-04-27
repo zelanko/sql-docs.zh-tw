@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 016eeebb679ee16e07a99e44a3740efaae413483
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106833"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>將移動平均加入至圖表 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106833"
   
 ### <a name="to-add-a-calculated-moving-average-to-a-series-on-the-chart"></a>將導出的移動平均加入至圖表上的數列  
   
-1.  以滑鼠右鍵按一下 **[值]** 區域中的欄位，然後按一下 **[加入導出數列]** 。 **[導出數列屬性]** 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下 **[值]** 區域中的欄位，然後按一下 **[加入導出數列]**。 **[導出數列屬性]** 對話方塊隨即開啟。  
   
 2.  從 **[公式]** 下拉式清單中，選取 **[移動平均]** 選項。  
   
@@ -41,8 +41,8 @@ ms.locfileid: "66106833"
     >  週期是用來計算移動平均的天數。 如果沒有在 X 軸上指定日期/時間值，則週期會由用來計算移動平均的資料點數目代表。 如果只有一個資料點，則移動平均公式不會進行計算。 移動平均會從第二個點開始計算。 如果指定 **[從第一個點開始]** 選項，則移動平均會從圖表的第一個點開始。 如果只有一個資料點，則導出的移動平均中的點會與原始數列中的第一個點相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [將圖表格式化 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [將空點加入至圖表 &#40;報表產生器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
   

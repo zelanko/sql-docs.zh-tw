@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265863"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>建立自訂報表項目執行階段元件
@@ -150,6 +150,6 @@ namespace Microsoft.Samples.ReportingServices
  [自訂報表專案架構](custom-report-item-architecture.md)   
  [建立自訂報表專案設計階段元件](creating-a-custom-report-item-design-time-component.md)   
  [自訂報表專案類別庫](custom-report-item-class-libraries.md)   
- [如何：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)  
+ [操作說明：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)  
   
   

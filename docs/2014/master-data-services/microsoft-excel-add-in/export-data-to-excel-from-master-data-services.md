@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482708"
 ---
 # <a name="load-data-from-mds-into-excel"></a>將資料從 MDS 載入 Excel 中
@@ -22,10 +22,10 @@ ms.locfileid: "65482708"
   
  如果您想要在載入之前篩選資料集，請[先參閱先篩選資料，然後再載入適用于 Excel 的 &#40;MDS 增益集&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) 。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 ### <a name="to-load-data-from-mds-into-excel"></a>若要將資料從 MDS 載入 Excel 中  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104380"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>報表屬性對話方塊、版面設定
@@ -42,13 +42,13 @@ ms.locfileid: "66104380"
  **寬度**  
  顯示 [紙張類型]**** 清單中選取之紙張大小的寬度。  
   
- **高度**  
+ **高寬比**  
  顯示 [紙張類型]**** 清單中選取之紙張大小的高度。  
   
  **返回頁首**  
  設定報表頂端和報表第一行頂端之間的距離。  
   
- **下**  
+ **靠**  
  設定報表底部和報表最後一行底部之間的距離。  
   
  **左面**  
@@ -58,7 +58,7 @@ ms.locfileid: "66104380"
  設定報表右邊緣和報表資料列右邊緣之間的距離。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [報表設計提示 &#40;報表產生器及 SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

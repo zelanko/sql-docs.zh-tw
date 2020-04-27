@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101955"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或刪除角色指派 (報表管理員)
@@ -38,9 +38,9 @@ ms.locfileid: "66101955"
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  按一下 **[安全性]** 。 如此就會依據帳戶名稱列出目前針對伺服器或向外延展部署所定義的所有系統層級角色指派。  
+3.  按一下 [安全性]****。 如此就會依據帳戶名稱列出目前針對伺服器或向外延展部署所定義的所有系統層級角色指派。  
   
 4.  尋找您想要修改或刪除的角色指派。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "66101955"
  （create-and-manage-role-assignments.md）   
  [角色指派](role-assignments.md)   
  [[網站設定] 頁面 &#40;報表管理員&#41;](../site-settings-page-report-manager.md)   
- [新增系統角色指派： [編輯系統角色指派] 頁面 &#40;報表管理員&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [新增系統角色指派：編輯系統角色指派頁面 &#40;報表管理員&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

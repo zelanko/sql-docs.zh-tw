@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103234"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
@@ -56,10 +56,10 @@ ms.locfileid: "66103234"
  如果有這種情況，報表伺服器就會在下次訂閱排程執行時停用訂閱。 若要重新啟動訂閱，請開啟再儲存訂閱。 當您開啟訂閱，報表伺服器會將訂閱參數值更新為快照集所指定的值。 如需訂用帳戶的詳細資訊，請參閱[訂用帳戶與傳遞 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [以 SharePoint 整合模式 &#40;Reporting Services 設定處理選項&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表的執行屬性 &#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
+ [Reporting Services SSRS &#40;的概念&#41;](../reporting-services-concepts-ssrs.md)   
  [如何：將快照集加入至報表記錄](add-a-snapshot-to-report-history-report-manager.md)   
- [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

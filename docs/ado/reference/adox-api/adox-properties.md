@@ -14,10 +14,10 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910614"
 ---
 # <a name="adox-properties"></a>ADOX 屬性
@@ -28,17 +28,17 @@ ms.locfileid: "67910614"
 |[屬性](../../../ado/reference/adox-api/attributes-property-adox.md)|描述資料行特性。|  
 |[叢集](../../../ado/reference/adox-api/clustered-property-adox.md)|指出索引是否已叢集化。|  
 |[命令](../../../ado/reference/adox-api/command-property-adox.md)|指定可以用來建立或執行程式的 ADO**命令**物件。|  
-|[計數](../../../ado/reference/ado-api/count-property-ado.md)|表示集合中的物件數目。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|表示集合中的物件數目。|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|表示建立物件的日期。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|表示上次修改物件的日期。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|表示資料行的指定大小上限。|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|指出刪除主要金鑰時所執行的動作。|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|指出索引欄位中具有 null 值的記錄是否有索引項目。|  
-|[Item](../../../ado/reference/ado-api/item-property-ado.md)|以名稱或序數表示集合的特定成員。|  
+|[項目](../../../ado/reference/ado-api/item-property-ado.md)|以名稱或序數表示集合的特定成員。|  
 |[名稱](../../../ado/reference/adox-api/name-property-adox.md)|指出物件的名稱。|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|表示資料行中數值的小數位數。|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|指定資料表或資料行的父目錄，以提供提供者特定屬性的存取權。|  
-|[Precision](../../../ado/reference/adox-api/precision-property-adox.md)|指出資料行中資料值的最大有效位數。|  
+|[有效位數](../../../ado/reference/adox-api/precision-property-adox.md)|指出資料行中資料值的最大有效位數。|  
 |[關鍵字](../../../ado/reference/adox-api/primarykey-property-adox.md)|指出索引是否代表資料表的主鍵。|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|表示相關資料表中相關資料行的名稱（僅限索引鍵資料行）。|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|表示相關資料表的名稱。|  

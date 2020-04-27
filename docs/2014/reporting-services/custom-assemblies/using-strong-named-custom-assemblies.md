@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e685ecda39e0487eb4b469920820fa6e4a10daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264903"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>使用強式名稱自訂組件
@@ -37,7 +37,7 @@ ms.locfileid: "63264903"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- **AllowPartiallyTrustedCallersAttribute**只有在元件層級由強式名稱元件套用時才有效。 如需在元件層級套用屬性的詳細資訊，請參閱 SDK 檔中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 「套用屬性」。  
+ **AllowPartiallyTrustedCallersAttribute** 只有在組件層級由強式名稱組件套用時才有效。 如需在元件層級套用屬性的詳細資訊，請參閱 SDK 檔中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 「套用屬性」。  
   
 > [!CAUTION]  
 >  當 **AllowPartiallyTrustedCallersAttribute** 存在時，會防止預設的 **FullTrustLinkDemand** 安全性檢查，以確定可從任何其他部分信任的組件呼叫組件。 所有的安全性檢查都必須明確地陳述，包括類別層級或是方法層級宣告的安全性屬性。  

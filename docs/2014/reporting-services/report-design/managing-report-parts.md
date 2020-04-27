@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105592"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
@@ -75,7 +75,7 @@ ms.locfileid: "66105592"
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 整合模式下的伺服器  
   
-|動作|角色|  
+|動作|[角色]|  
 |-------------|----------|  
 |加入、刪除、編輯項目屬性、管理安全性，以及下載報表組件|完全控制|  
 |加入、刪除、編輯項目屬性，以及下載報表組件|設計<br /><br /> 參與|  
@@ -91,7 +91,7 @@ ms.locfileid: "66105592"
 -   報表組件會使用與現有「資源」項目類型相同的權限原則。 在資料夾之中，傳統資源項目與來自安全性繼承檢視方塊的報表組件之間沒有差異。 報表組件會繼承與同一個資料夾中影像相同的權限原則。 需要區別這兩者時，可以為想要的報表組件設定項目層級安全性。 或者，您可以將報表組件放在與已設定之正確權限不同的資料夾中。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表產生器中的報表組件和資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [報表產生器中的報表元件和資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [一般屬性頁面、報表元件 &#40;報表管理員&#41;](../general-properties-page-report-parts-report-manager.md)   
  [移動專案頁面 &#40;報表管理員&#41;](../move-items-page-report-manager.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

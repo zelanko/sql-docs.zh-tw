@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102805"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較
@@ -30,55 +30,48 @@ ms.locfileid: "66102805"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; sharepoint 2010 和 SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]原生模式|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 &#124; SharePoint 2010 和 SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式|  
   
  **本主題內容：**  
   
--   [比較許可權工具和詞彙](#bkmk_compare_tools_terms)  
+-   [比較權限工具和詞彙](#bkmk_compare_tools_terms)  
   
 -   [比較原生模式角色和 SharePoint 群組](#bkmk_compare_roles_groups)  
   
--   [比較原生模式工作和 SharePoint 許可權](#bkmk_compare_tasks_permissions)  
+-   [比較原生模式工作和 SharePoint 權限](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a>比較許可權工具和詞彙  
- **原生模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]原生模式權限物件（角色和工作）是在中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]建立，並針對報表管理員中的個別使用者進行設定。  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> 比較權限工具和詞彙  
+ **原生模式：** 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中建立 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式權限物件 (角色和工作)，並為報表管理員的個別使用者進行設定。  
   
- **Sharepoint 模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sharepoint 模式會利用 sharepoint 許可權功能。 SharePoint 群組和權限是從 **[站台設定]** 頁面管理。  
+ **SharePoint 模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式會利用 SharePoint 權限功能。 SharePoint 群組和權限是從 **[站台設定]** 頁面管理。  
   
  下表比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式和 SharePoint 之間的權限相關物件及概念。  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]原生模式|SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式|SharePoint|  
 |---------------------------------------------|----------------|  
-|**角色：** 例如「內容管理員」。|**群組：** 例如，預設的「檢視器」群組。|  
-|---|**許可權等級群組：** 例如「僅限 View」代表「檢視器」群組。|  
-|工作 **：** 例如 [管理報表]。|**許可權：** 例如，在「僅 View」群組中，有 [視圖專案]、[view 版本] 和 [view] 應用程式頁面的清單相關許可權。|  
+|**角色：** 例如 [內容管理員]。|**群組：** 例如預設 [檢視者] 群組。|  
+|---|**權限等級群組：** 例如 [檢視者] 群組的 [僅檢視]。|  
+|**工作：** 例如「管理報表」。|**權限：** 例如，在 [僅檢視] 群組中有檢視項目、檢視版本和檢視應用程式頁面的清單相關權限。|  
   
  如需 SharePoint 許可權的詳細資訊，請參閱[Sharepoint Server 中的使用者權限與許可權等級](/sharepoint/sites/user-permissions-and-permission-levels)，並[決定 sharepoint 2013 中的許可權等級和群組](https://technet.microsoft.com/library/cc262690.aspx)。  
   
-##  <a name="bkmk_compare_roles_groups"></a>比較原生模式角色和 SharePoint 群組  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> 比較原生模式角色和 SharePoint 群組  
  下表會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式中的預先定義角色定義與標準 SharePoint 群組。 如果 SharePoint 群組不符合您所需要的特定角色，您可以在 SharePoint 中建立自訂群組，並指派權限等級。  
   
- **注意**：可用的預設 sharepoint 群組取決於用來建立 SharePoint 網站的網站範本。  
+ **注意**：預設 SharePoint 群組是否可用取決於用來建立 SharePoint 網站的網站範本。  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]角色|SharePoint 群組|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 角色|SharePoint 群組|  
 |--------------------------------------|-----------------------|  
-|**[瀏覽器]**<br /><br /> 檢視|
-  **
-  ** 使用 [訪客] 群組可授與檢視報表的權限。 
-  **
-  ** [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。|  
+|**瀏覽器**<br /><br /> 檢視| 使用 [訪客] 群組可授與檢視報表的權限。  [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。|  
 |**內容管理員**<br /><br /> 對所有項目和項目層級的作業具有完整權限，其中包括設定安全性的權限。|使用「 **擁有者** 」群組可授與完整控制權，來管理 SharePoint 網站上的報表伺服器項目。 「 **擁有者** 」群組具有「完整控制權」權限，讓群組成員能夠變更網站內容、網頁或功能。 完整控制存取權應該僅限於網站管理員。|  
-|**我的報表**|沒有對等的群組。 以 SharePoint 模式執行的報表伺服器不支援**我的報表**。 如果您想要使用對等的功能，可以使用 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 中的「我的網站」功能。|  
+|**我的報表**|沒有對等的群組。  以 SharePoint 模式執行的報表伺服器不支援 [我的報表]。 如果您想要使用對等的功能，可以使用 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 中的「我的網站」功能。|  
 |**發行者**<br /><br /> 加入、更新、檢視和刪除報表、報表模型、共用資料來源和資源。|使用「 **成員** 」群組可授與權限，在 SharePoint 網站上加入項目、編輯項目和更新相依項目的參考。 「 **成員** 」群組具有「參與」等級權限，讓群組成員能夠檢視網頁、加入和更新項目以及提交變更核准。|  
 |**報表產生器**<br /><br /> 在報表產生器中檢視報表、自我管理個別訂閱和開啟報表。|在預先定義的現成權限等級或 SharePoint 群組中，沒有相當於報表產生器報表定義的項目。 依預設，凡是屬於「 **成員** 」群組或「 **擁有者** 」群組的使用者，都有權限可以使用報表產生器。 如果您要讓更多使用者可以使用報表產生器，您應該建立自訂安全性設定，以提供類似報表產生器角色所提供的權限等級。 如需詳細資訊，請參閱 [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)＞。|  
-|-|
-  **
-  ** 使用 [檢視者] 群組可授與檢視已轉譯之報表的權限。 「 **檢視者** 」群組無法下載或檢視報表項目的內容。<br /><br /> **注意：** 從 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]開始，**查看**器群組沒有建立訂閱的許可權。|  
-|**系統使用者**和**系統管理員**|這些角色不是以 SharePoint 模式執行報表伺服器時必要的角色。 **系統使用者**和**系統管理員**會對應到 SharePoint 伺服器陣列或 Web 應用層級許可權。 報表伺服器不提供必須於該層級授權的任何功能。|  
+|-| 使用 [檢視者] 群組可授與檢視已轉譯之報表的權限。 「 **檢視者** 」群組無法下載或檢視報表項目的內容。<br /><br /> **注意：** 從 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 開始，[檢視者]  群組沒有建立訂閱的權限。|  
+|**系統使用者** 和 **系統管理員**|這些角色不是以 SharePoint 模式執行報表伺服器時必要的角色。  [系統使用者]  和 [系統管理員] 對應到 SharePoint 伺服陣列或 Web 應用程式層級權限。 報表伺服器不提供必須於該層級授權的任何功能。|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a>比較原生模式工作和 SharePoint 許可權  
- 下表會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式工作與 SharePoint 權限。 
-  **[類型]** 資料行指出原生模式工作是否與系統角色或標準角色和項目相關。 系統角色管理系統層級的權限，例如共用排程。  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> 比較原生模式工作和 SharePoint 權限  
+ 下表會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式工作與 SharePoint 權限。 **[類型]** 資料行指出原生模式工作是否與系統角色或標準角色和項目相關。 系統角色管理系統層級的權限，例如共用排程。  
   
 |原生模式工作|角色類型|對等的 SharePoint 權限|  
 |----------------------|---------------|--------------------------------------|  
@@ -110,7 +103,7 @@ ms.locfileid: "66102805"
 |檢視共用排程|系統|開啟項目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [在 sharepoint 網站上設定報表伺服器專案的許可權 &#40;SharePoint 整合模式中的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [設定 SharePoint Web 應用程式中報表伺服器作業的權限](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定義](security/role-definitions.md)   

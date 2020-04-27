@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108489"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表
@@ -30,14 +30,14 @@ ms.locfileid: "66108489"
   
      這樣會啟動 [報表精靈]。  
   
-4.  在 [資料集屬性]**** 頁面的 [資料來源]**** 方塊中，選取您在**第 2 課：定義父報表的資料連線和資料表**中建立的 [DataSet1][](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
-    [可用資料集]**** 方塊會自動更新為您如上所建立的 **DataTable**。  
+4.  在 [資料集屬性]  頁面的 [資料來源]  方塊中，選取您在下列課程中建立的 [DataSet1]  ：[第 2 課：定義父報表的資料連線和資料表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
+    [可用資料集]  方塊會自動更新為您如上所建立的 **DataTable**。  
   
 5.  按 [下一步]  。  
   
 6.  在 [排列欄位]  頁面中執行下列操作：  
   
-    1.  從 [可用欄位]**** 將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值]**** 方塊。  
+    1.  從 [可用欄位]  將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值]  方塊。  
   
     2.  按一下 [ **sum （ProductID）**]、[ **sum （SafetyStockLevel）**]、[sum **（ReorderLevel）** ] 旁的箭號，並清除 [ **sum** ] 選項。  
   

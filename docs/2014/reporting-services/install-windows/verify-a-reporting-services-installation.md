@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108573"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -34,7 +34,7 @@ ms.locfileid: "66108573"
   
 -   [確認原生模式安裝](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a>確認 SharePoint 模式安裝  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> 確認 SharePoint 模式安裝  
   
 #### <a name="to-verify-the-reporting-services-service"></a>確認 Reporting Services 服務  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108573"
   
 2.  從 CodePlex 下載 Adventure Works 範例資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表。 如需詳細資訊，請參閱＜ [AdventureWorks 報表範例](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)＞。  
   
-##  <a name="bkmk_nativemode"></a>確認原生模式安裝  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> 驗證原生模式安裝  
  當您使用預設組態安裝原生模式報表伺服器時，安裝程式會安裝和部署該伺服器。 您可以執行一些簡單的測試，來確認安裝程式是否部署報表伺服器。 您必須是本機管理員才能執行這些步驟。 若要讓其他使用者能夠執行測試，您必須為那些使用者設定報表伺服器存取權。  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>確認報表伺服器已安裝及執行  

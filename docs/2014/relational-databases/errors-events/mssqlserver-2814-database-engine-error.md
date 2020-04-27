@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046777"
 ---
 # <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
@@ -53,7 +53,7 @@ ms.locfileid: "67046777"
   
 ## <a name="user-action"></a>使用者動作  
   
-1.  您可以執行下列查詢來檢視導致重新編譯的陳述式。 請將 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 預留位置取代成錯誤訊息中指定的值。 請注意，特定和準備 ** 陳述式的 **database_name** 和 **object_name[!INCLUDE[tsql](../../includes/tsql-md.md)] 資料行將成為 NULL。  
+1.  您可以執行下列查詢來檢視導致重新編譯的陳述式。 請將 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 預留位置取代成錯誤訊息中指定的值。 請注意，特定和準備 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 **database_name** 和 **object_name** 資料行將成為 NULL。  
   
      SELECT DB_NAME(st.dbid) AS database_name  
   

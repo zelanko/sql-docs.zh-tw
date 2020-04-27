@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792929"
 ---
 # <a name="create-the-off-by-default-policy"></a>建立依預設為關閉的原則
@@ -28,7 +28,7 @@ ms.locfileid: "67792929"
   
 3.  在 [Facet]**** 方塊中，確認已選取 [介面區組態]**** Facet。  
   
-4.  在 [運算式]**** 區域的 [欄位]**** 方塊中，選取 **\@DatabaseMailEnabled**、在 [運算子]**** 方塊中選取 [**]=**，然後在 [值]**** 中選取 [False]****。  
+4.  在 [運算式]**** 區域的 [欄位]**** 方塊中，選取 **\@DatabaseMailEnabled**、在 [運算子]**** 方塊中選取 [=]****，然後在 [值]**** 中選取 [False]****。  
   
 5.  在 [描述]**** 頁面上，輸入條件的描述，然後按一下 [確定]**** 建立條件。  
   

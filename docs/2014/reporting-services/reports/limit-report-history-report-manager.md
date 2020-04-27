@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd493fae67e3aa47c5c53cd3ad12d018b0b72f70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102634"
 ---
 # <a name="limit-report-history-report-manager"></a>限制報表記錄 (報表管理員)
@@ -40,14 +40,14 @@ ms.locfileid: "66102634"
   
 1.  在報表管理員中，導覽至您要設定記錄的報表，然後按一下該報表來開啟它。  
   
-2.  按一下 [屬性]  索引標籤。  
+2.  按一下 [內容]**** 索引標籤。  
   
 3.  按一下 [**歷程記錄**] 索引標籤。  
   
 4.  選取報表的選項，然後按一下 [套用]****。 如需每個選項的詳細資訊，請參閱[快照集選項屬性頁 &#40;報表管理員&#41;](../snapshot-options-properties-page-report-manager.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將快照集加入報表記錄 &#40;報表管理員&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [將快照集加入至報表記錄 &#40;報表管理員&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 019ca09c83b0b3011e9940d9a4c988ce223e192f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107115"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>將資料加入至報表 (報表產生器及 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66107115"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a>加入報表資料  
+##  <a name="adding-report-data"></a><a name="Methods"></a> 加入報表資料  
  在報表產生器中，您可以使用下列方式加入報表資料。  
   
 -   將報表組件從報表伺服器加入至報表中。 每個報表組件都是獨立的，並包含相依的資料集。 系統會預先定義資料集。  
@@ -77,7 +77,7 @@ ms.locfileid: "66107115"
   
 -   [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
 
-##  <a name="QuickStart"></a>使用報表元件加入資料  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> 加入包含報表組件的資料  
  報表組件包含它們所相依的資料集。 這些資料集是在報表伺服器上提供的共用資料來源上建立的。 在報表產生器中，當您將報表組件加入至報表時，相依的資料集也會加入到報表中，就像您手動加入它們一樣。 例如，預先定義的圖表包含資料集。 若要查看資料，請預覽報表。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "66107115"
   
 -   如需詳細資訊，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md) 和[報表設計師中的報表組件 &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md)。  
 
-##  <a name="Queries"></a>查詢和查詢設計工具  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> 查詢和查詢設計工具  
  若要指定資料來源中所需的資料，您要建立一個查詢命令。 每種資料來源類型都會提供一個相關的 *「查詢設計工具」* (Query Designer) 來協助您建立查詢。 查詢設計工具可以是圖形化或以文字為基礎。 在圖形化查詢設計工具中，您可以檢視代表外部資料來源之資料的中繼資料，並將欄位或項目拖曳到查詢設計介面，以互動方式建立查詢。 在以文字為基礎的查詢設計工具中，您可以使用外部資料來源支援的查詢語法撰寫或匯入查詢。  
   
  在查詢設計工具中，您可以執行查詢來檢視範例資料並驗證查詢命令語法。 在結果集中的資料行名稱會變成您在 [報表資料] 窗格中看到的欄位名稱。 結果集必須是單一一組資料列和資料行，其中每個資料列都有相同數目的值。 不支援來自單一查詢的多個結果集。 不支援沒有固定資料行數目，而且每個資料列可能產生不同資料值數目的不完全階層。  
@@ -96,26 +96,26 @@ ms.locfileid: "66107115"
   
  資料延伸模組和外部資料來源之間的通訊是由資料提供者處理。 查詢命令語法、查詢參數，以及結果集中之值資料類型的支援取決於每個資料提供者。 如需詳細資訊，請參閱特定資料延伸模組類型的主題和[查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)。  
 
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  [加入及驗證資料連線或資料來源 &#40;報表產生器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [建立共用資料集或內嵌資料集 &#40;報表產生器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [在關聯式查詢設計工具中建立查詢 &#40;報表產生器和 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [在關聯式查詢設計工具中建立查詢 &#40;報表產生器及 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [針對多維度資料 &#40;報表產生器和 SSRS 的參數值顯示隱藏的資料集&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器及 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
- [將篩選加入至資料集 &#40;報表產生器和 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [針對資料區 &#40;報表產生器和 SSRS 設定無資料訊息&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [在資料區域中設定沒有資料的訊息 &#40;報表產生器及 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [將查詢參數與報表參數產生關聯 &#40;報表產生器和 SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [將查詢參數與報表參數產生關聯 &#40;報表產生器及 SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [在 MDX 查詢設計工具中定義 Analysis Services &#40;報表產生器和 SSRS 的參數&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [在 Analysis Services 的 MDX 查詢設計工具中定義參數 &#40;報表產生器及 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
 
-##  <a name="Section"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本節內容  
  [報表產生器中的報表組件和資料集](report-parts-and-datasets-in-report-builder.md)  
   
  [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
@@ -128,4 +128,4 @@ ms.locfileid: "66107115"
 
 ## <a name="see-also"></a>另請參閱  
  [報表設計檢視 &#40;報表產生器&#41;](../report-builder/report-design-view-report-builder.md)   
- [報表撰寫概念 &#40;報表產生器和 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  

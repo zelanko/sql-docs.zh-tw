@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478621"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "65478621"
   
  若要在 UI 的 [總管]**** 功能區域內執行動作，群組或使用者必須獲得指派 [總管]**** 功能區域存取權以及模型物件權限。  
   
- 如果使用者或群組需要存取其他功能區域，使用者或群組必須是管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+ 如果使用者或群組需要存取其他功能區域，使用者或群組必須是管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ## <a name="best-practice"></a>最佳做法  
  若要簡化管理，請建立群組，然後指派每個群組的功能區域和模型物件權限。 您即可在群組中新增及移除使用者，而不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI。  
@@ -45,6 +45,6 @@ ms.locfileid: "65478621"
  [新增使用者 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [新增群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [刪除 &#40;Master Data Services&#41;的使用者或群組](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
- [測試使用者的許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [測試使用者的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

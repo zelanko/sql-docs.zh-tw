@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108742"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化報表伺服器 (SSRS 組態管理員)
@@ -71,6 +71,6 @@ ms.locfileid: "66108742"
  若要確認報表伺服器初始化，請在命令視窗中鍵入 **http://\<伺服器名稱>/reportserver**，來 Ping 報表伺服器 Web 服務。 如果發生 `RSReportServerNotActivated` 錯誤，初始化就會失敗。  
   
 ## <a name="see-also"></a>另請參閱  
- [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

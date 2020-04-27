@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107853"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66107853"
     > [!NOTE]  
     >  依預設，文件名稱就是報表名稱。  
   
-7.  確認文件類型為 **[ATOMSVC 檔]** ，然後按一下 **[儲存]** 。  
+7.  確認文件類型為 **[ATOMSVC 檔]**，然後按一下 **[儲存]**。  
   
 8.  或者，在瀏覽器或者文字或 XML 編輯器中開啟 .atomsvc 檔。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66107853"
     > [!NOTE]  
     >  依預設，文件名稱就是報表名稱。 如果 Atom 服務文件有多個摘要，預設全部都使用相同的名稱，也就是報表名稱。 若要區別這些摘要，請加以重新命名以使用有意義的名稱。  
   
-5.  確認文件類型為 **[ATOM 檔]** ，然後按一下 **[儲存]** 。  
+5.  確認文件類型為 **[ATOM 檔]**，然後按一下 **[儲存]**。  
   
 6.  或者，在瀏覽器或者文字編輯器或 XML 編輯器中開啟 .atom 檔。  
   

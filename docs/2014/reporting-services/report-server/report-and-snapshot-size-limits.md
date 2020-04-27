@@ -18,28 +18,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103543"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  
   
 ## <a name="maximum-size-for-published-reports-and-models"></a>已發行報表和模型的大小上限  
- 報表伺服器上報表和模型的大小，是根據您發行至報表伺服器上報表定義 (.rdl) 與報表模型 (.smdl) 檔案的大小來決定， 報表伺服器本身並不會限制您發行之報表或模型的大小。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]會針對張貼至伺服器的專案施加大小上限。 依預設，此限制為 4 MB。 如果您將超出此限制的檔案上傳或發行至報表伺服器，您將收到一個 HTTP 例外狀況。 在此情況下，藉由增加 Machine.config 檔案中 `maxRequestLength` 元素的值，就可以修改預設值。  
+ 報表伺服器上報表和模型的大小，是根據您發行至報表伺服器上報表定義 (.rdl) 與報表模型 (.smdl) 檔案的大小來決定， 報表伺服器本身並不會限制您發行之報表或模型的大小。 但是，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會限制張貼到伺服器的項目大小上限。 依預設，此限制為 4 MB。 如果您將超出此限制的檔案上傳或發行至報表伺服器，您將收到一個 HTTP 例外狀況。 在此情況下，藉由增加 Machine.config 檔案中 `maxRequestLength` 元素的值，就可以修改預設值。  
   
  儘管報表模型的大小可能非常巨大，但是報表定義很少會超過 4 MB， 而且報表大小通常只在 KB 的範圍之內。 但是，如果您包含內嵌影像，則這些影像的編碼可能會產生超過 4 MB 預設值的大型報表定義。  
   
- 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會限制公佈之檔案的大小上限，以便減少針對伺服器的阻絕服務攻擊威脅。 增加上限值會逐漸破壞此限制所提供的一些保護。 只有當您確定增加上限值後的優點，大於任何額外的安全性風險時，才需要這麼做。  
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會限制公佈之檔案的大小上限，以便減少針對伺服器的阻絕服務攻擊威脅。 增加上限值會逐漸破壞此限制所提供的一些保護。 只有當您確定增加上限值後的優點，大於任何額外的安全性風險時，才需要這麼做。  
   
  請記住，您為 `maxRequestLength` 元素所設定的值必須大於想要強制執行的實際大小限制。 將所有參數封裝在 SOAP Envelope 中，並將 Base64 編碼套用至特定參數 (例如 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 和 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 方法中的 Definition 參數) 之後，HTTP 要求大小必然會增加，因此您需要設定更大的值以容納增加的大小。 Base64 編碼會使原始資料大小增加約 33%。 因此，您為 `maxRequestLength` 元素所指定的值需要大於實際可用的項目大小約 33%。 例如，如果您為 `maxRequestLength` 所指定的值為 64 MB，公佈到報表伺服器的報表檔案大小上限實際上應該約會是 48 MB。  
   
 ## <a name="report-size-in-memory"></a>記憶體中的報表大小  
- 當您執行報表時，報表大小等於傳回的報表資料量再加上輸出資料流的大小。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會限制已轉譯之報表的大小上限。 系統記憶體會決定大小上限 (根據預設，轉譯報表時，報表伺服器會使用所有設定的可用記憶體)，但是您可以指定組態設定，以便設定記憶體臨界值和記憶體管理原則。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
+ 當您執行報表時，報表大小等於傳回的報表資料量再加上輸出資料流的大小。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會限制已轉譯之報表的大小上限。 系統記憶體會決定大小上限 (根據預設，轉譯報表時，報表伺服器會使用所有設定的可用記憶體)，但是您可以指定組態設定，以便設定記憶體臨界值和記憶體管理原則。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
  對於任何報表而言，根據所傳回資料的數量以及該報表所使用的轉譯格式，其大小可以有許多不同的變化。 參數化報表可能會因為參數值影響查詢結果的情況，而會變得較大或較小。 所選取的報表輸出格式會對報表大小產生下列幾種影響：  
   
@@ -59,8 +57,7 @@ ms.locfileid: "66103543"
 ## <a name="measuring-snapshot-storage"></a>測量快照集儲存區  
  任何給定之快照集的大小，會與報表中的資料數量呈現直接正比， 因此會遠大於儲存在報表伺服器上的其他項目。 快照集大小一般會介於數 MB 到數十 MB 之間， 如果您的報表非常大，則可以預期會看到更大的快照集。 根據您使用快照集的頻率以及設定報表記錄的方式，可能在短時間內，報表伺服器資料庫所需的磁碟空間數量就會快速增加。  
   
- 
-  **reportserver** 與 **reportservertempdb** 兩種資料庫預設都設定為自動成長。 儘管資料庫大小會自動增加，但卻不會自動減少。 如果因為刪除快照集造成 **reportserver** 資料庫超出其容量，您就必須手動縮減資料庫的大小來復原磁碟空間。 相同的，如果擴充 **reportservertempdb** 以容納不尋常、極大量的互動式報告功能，磁碟空間配置將會維持這個設定直到您縮小資料庫大小為止。  
+ **reportserver** 與 **reportservertempdb** 兩種資料庫預設都設定為自動成長。 儘管資料庫大小會自動增加，但卻不會自動減少。 如果因為刪除快照集造成 **reportserver** 資料庫超出其容量，您就必須手動縮減資料庫的大小來復原磁碟空間。 相同的，如果擴充 **reportservertempdb** 以容納不尋常、極大量的互動式報告功能，磁碟空間配置將會維持這個設定直到您縮小資料庫大小為止。  
   
  若要測量報表伺服器資料庫的大小，您可以執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。 定期計算資料庫大小的總和可以幫助您建立在一段期間內合理預估報表伺服器資料庫的方式。 下列陳述式會測量目前使用的空間數量 (這些陳述式假定您使用的是預設的資料庫名稱)：  
   
@@ -84,7 +81,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](set-report-processing-properties.md)   
- [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)   
+ [&#40;SSRS 原生模式的報表伺服器資料庫&#41;](report-server-database-ssrs-native-mode.md)   
  [處理大型報表](process-large-reports.md)  
   
   

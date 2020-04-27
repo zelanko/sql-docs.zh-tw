@@ -19,18 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f020dd812b53e531a3f4634ccba0d2cba980b89e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103802"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
   使用效能監視工具來監視報表伺服器的效能，以評估伺服器活動、觀察趨勢、診斷系統瓶頸，以及收集可協助您判斷目前系統組態是否適當的資料。 若要微調伺服器效能，您可以指定回收報表伺服器應用程式定義域的頻率。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
 ## <a name="sources-of-performance-data"></a>效能資料的來源  
- 使用技術與工具的組合，取得有關系統如何執行的詳細資訊。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 作業系統會透過下列工具提供效能資訊：  
+ 使用技術與工具的組合，取得有關系統如何執行的詳細資訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 作業系統會透過下列工具提供效能資訊：  
   
 -   工作管理員  
   
@@ -42,8 +41,7 @@ ms.locfileid: "66103802"
   
  您可以使用效能主控台和事件檢視器來建立有關報表處理與資源耗用的記錄和警示。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]產生之 Windows 事件的資訊，請參閱 [Windows 應用程式記錄檔](windows-application-log.md)。 如需有關效能主控台的詳細資訊，請參閱本主題稍後的「Windows 效能計數器」。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式也會提供用於快取和工作階段管理之報表伺服器資料庫與暫存資料庫的相關資訊。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式也會提供用於快取和工作階段管理之報表伺服器資料庫與暫存資料庫的相關資訊。  
   
 ## <a name="windows-performance-counters"></a>Windows 效能計數器  
  監視特定的效能計數器可以讓您：  
@@ -59,16 +57,13 @@ ms.locfileid: "66103802"
 -   驗證系統組態的變更對效能有正面的影響。  
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 效能物件  
- 
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包含下列效能物件：  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包含下列效能物件：  
   
 -   **MSRS 2011 Web 服務**和`MSRS 2011 SharePoint Mode Web Service`來監視報表伺服器效能。 這些效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。  
   
--   
-  `MSRS 2011 Windows Service` 和 `MSRS 2011 Windows Service SharePoint Mode` 用於監視已排程的作業與報表傳遞。 這些效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 已排程的作業包括訂閱與傳遞、報表執行快照集，以及報表記錄。  
+-   `MSRS 2011 Windows Service` 和 `MSRS 2011 Windows Service SharePoint Mode` 用於監視已排程的作業與報表傳遞。 這些效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 已排程的作業包括訂閱與傳遞、報表執行快照集，以及報表記錄。  
   
--   
-  `ReportServer:Service` 和 `ReportServerSharePoint:Service` 用於監視 HTTP 相關事件和記憶體管理。 這些計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 這個效能物件也包含與記憶體管理相關的計數器。  
+-   `ReportServer:Service` 和 `ReportServerSharePoint:Service` 用於監視 HTTP 相關事件和記憶體管理。 這些計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 這個效能物件也包含與記憶體管理相關的計數器。  
   
  如果您在單一電腦上有多個報表伺服器執行個體，則可以一起或分開監視這些執行個體。 加入計數器時，選擇要包含哪些執行個體。 如需使用效能主控台 (perfmon.msc) 與加入計數器的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 產品文件集。  
   
@@ -90,7 +85,7 @@ ms.locfileid: "66103802"
  [MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  描述報表伺服器 Windows 服務所使用的效能計數器。  
   
- [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](performance-counters-reportserver-service-performance-objects.md)  
+ [ReportServer： Service 和 ReportServerSharePoint： Service 效能物件的效能計數器](performance-counters-reportserver-service-performance-objects.md)  
  描述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的 HTTP 相關和記憶體相關效能計數器。  
   
  SharePoint 整合模式中報表伺服器的事件  

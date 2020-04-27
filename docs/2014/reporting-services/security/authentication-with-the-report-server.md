@@ -17,18 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102193"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] （SSRS）提供數個可設定的選項，以便針對報表伺服器驗證使用者和用戶端應用程式。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 會提供多種可設定選項，便於針對報表伺服器進行使用者及用戶端應用程式的驗證。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。  
   
 > [!NOTE]  
->  在舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，IIS 支援所有的驗證類型。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本開始，不再使用 IIS。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會內部處理所有驗證要求。  
+>  在舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，IIS 支援所有的驗證類型。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本開始，不再使用 IIS。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會內部處理所有驗證要求。  
   
  所有要求存取至報表伺服器內容或作業的使用者或應用程式都必須在允許存取前驗證完畢。  
   
@@ -49,12 +48,9 @@ ms.locfileid: "66102193"
 |驗證方法|說明|  
 |---------------------------|-----------------|  
 |匿名|報表伺服器將不會接受來自匿名使用者的未驗證要求，但是包含自訂驗證延伸模組的部署除外。<br /><br /> 如果您在有設定基本驗證的報表伺服器上啟用報表產生器的存取，報表產生器將會接受未經過驗證的要求。<br /><br /> 在其他所有的情況下，當要求到達 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]之前，匿名使用者都會遭到拒絕，並產生「HTTP 狀態 401」拒絕存取的錯誤。 收到「401 拒絕存取」錯誤的用戶端必須使用有效的驗證類型來重新構成要求。|  
-|單一登入技術 (SSO)|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的單一登入技術並沒有原生支援。 如果您想要使用單一登入技術，您必須建立自訂驗證延伸模組。<br /><br /> 主控環境的報表伺服器不支援 ISAPI 篩選。 如果您所使用的 SSO 技術實作為 ISAPI 篩選，請考慮針對 RSASecueID 或 RADIUS 通訊協定使用 ISA Server 內建支援。 否則，您可以建立 ISA Server ISAPI 或 HTTPModule for RS，但是建議您直接使用 ISA Server。|  
-|Passport|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支援此項目。|  
-|摘要|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支援此項目。|  
+|單一登入技術 (SSO)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的單一登入技術並沒有原生支援。 如果您想要使用單一登入技術，您必須建立自訂驗證延伸模組。<br /><br /> 主控環境的報表伺服器不支援 ISAPI 篩選。 如果您所使用的 SSO 技術實作為 ISAPI 篩選，請考慮針對 RSASecueID 或 RADIUS 通訊協定使用 ISA Server 內建支援。 否則，您可以建立 ISA Server ISAPI 或 HTTPModule for RS，但是建議您直接使用 ISA Server。|  
+|Passport|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支援此項目。|  
+|Digest|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支援此項目。|  
   
 ## <a name="configuration-of-authentication-settings"></a>設定驗證設定  
  當保留報表伺服器 URL 時，會將驗證設定設定為使用預設安全性。 如果您錯誤地修改這些設定，報表伺服器將會針對無法驗證的 HTTP 要求傳回「HTTP 401 拒絕存取」錯誤。 選擇驗證類型時，您必須已經知道您的網路支援 Windows 驗證的方式。 至少必須指定一個驗證類型。 可以針對 RSWindows 指定多個驗證類型。 RSWindows 驗證類型（也就是`RSWindowsBasic` `RSWindowsNTLM` `RSWindowsKerberos`、、和**RSWindowsNegotiate**）與 Custom 互斥。  
@@ -87,8 +83,8 @@ ms.locfileid: "66102193"
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)   
  [Rsreportserver.config 設定檔](../report-server/rsreportserver-config-configuration-file.md)   
  （create-and-manage-role-assignments.md）   
- [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
- [執行安全性延伸模組](../extensions/security-extension/implementing-a-security-extension.md)   
+ [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [實作安全性延伸模組](../extensions/security-extension/implementing-a-security-extension.md)   
  [在原生模式報表伺服器上設定 SSL 連線](configure-ssl-connections-on-a-native-mode-report-server.md)   
  [設定報表產生器存取](../report-server/configure-report-builder-access.md)   
  [安全性延伸模組概觀](../extensions/security-extension/security-extensions-overview.md)   

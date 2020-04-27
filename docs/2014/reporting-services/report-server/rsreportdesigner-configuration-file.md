@@ -14,15 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103341"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 組態檔
-  RSReportDesigner.config 檔會儲存有關 [報表設計師] 可用之轉譯和資料處理延伸模組的設定。 資料處理延伸模組資訊儲存在 `Data` 元素中。 轉譯延伸模組資訊儲存在 `Render` 元素中。 
-  `Designer` 元素列舉報表設計師中所使用的查詢產生器。  
+  RSReportDesigner.config 檔會儲存有關 [報表設計師] 可用之轉譯和資料處理延伸模組的設定。 資料處理延伸模組資訊儲存在 `Data` 元素中。 轉譯延伸模組資訊儲存在 `Render` 元素中。 `Designer` 元素列舉報表設計師中所使用的查詢產生器。  
   
  報表設計師使用內嵌的報表伺服器功能來預覽報表。 可以指定伺服器相關的設定，以支援預覽作業的本機伺服器端處理。 如需有關報表伺服器設定的詳細資訊，請參閱[Rsreportserver.config Configuration File](rsreportserver-config-configuration-file.md)。  
   
@@ -63,13 +62,8 @@ ms.locfileid: "66103341"
 |`SessionTimeoutMinutes`|指定工作階段 Cookie 有效的期間。 預設值是 3 分鐘。|  
 |`PolicyLevel`|指定安全性原則組態檔。 有效的值為 Rspreviewpolicy.config。如需詳細資訊，請參閱[使用 Reporting Services 安全性原則](../extensions/secure-development/using-reporting-services-security-policy-files.md)檔案。|  
 |`CacheDataForPreview`|設定為 `True` 時，報表設計師會將資料儲存在本機電腦上的快取檔案內。 有效值為 `True` (預設值) 和 `False`。 如需詳細資訊，請參閱 [預覽報表](../reports/previewing-reports.md)。|  
-|`Render`|列舉報表設計師可用於預覽的轉譯延伸模組。 用來預覽的轉譯延伸模組集，應該要和安裝在報表伺服器中的轉譯延伸模組相同。<br /><br /> 
-  `Name` 指定轉譯延伸模組。 如果您透過程式碼叫用轉譯延伸模組，請使用此值以呼叫特定延伸模組。<br /><br /> 
-  `Type` 指定延伸模組類別的完整類別名稱加上程式庫名稱，並以逗號分隔。<br /><br /> 
-  `Visible` 指定是否在任何使用者介面中顯示名稱。 此值可以是 `True` (預設值) 或 `False`。 如果為 `True`，則會在使用者介面中顯示。|  
-|`Data`|列舉報表設計師可用於連接到提供報表資料之資料來源的資料處理延伸模組。 使用於報表設計師中的資料處理延伸模組集，應該要和安裝在報表伺服器中的資料處理延伸模組相同。 如果您要加入或移除自訂延伸模組，請參閱 [部署資料處理延伸模組](../extensions/data-processing/deploying-a-data-processing-extension.md)。<br /><br /> 
-  `Name` 指定資料處理延伸模組。<br /><br /> 
-  `Type` 指定延伸模組類別的完整類別名稱加上程式庫名稱，並以逗號分隔。|  
+|`Render`|列舉報表設計師可用於預覽的轉譯延伸模組。 用來預覽的轉譯延伸模組集，應該要和安裝在報表伺服器中的轉譯延伸模組相同。<br /><br /> `Name` 指定轉譯延伸模組。 如果您透過程式碼叫用轉譯延伸模組，請使用此值以呼叫特定延伸模組。<br /><br /> `Type` 指定延伸模組類別的完整類別名稱加上程式庫名稱，並以逗號分隔。<br /><br /> `Visible` 指定是否在任何使用者介面中顯示名稱。 此值可以是 `True` (預設值) 或 `False`。 如果為 `True`，則會在使用者介面中顯示。|  
+|`Data`|列舉報表設計師可用於連接到提供報表資料之資料來源的資料處理延伸模組。 使用於報表設計師中的資料處理延伸模組集，應該要和安裝在報表伺服器中的資料處理延伸模組相同。 如果您要加入或移除自訂延伸模組，請參閱 [部署資料處理延伸模組](../extensions/data-processing/deploying-a-data-processing-extension.md)。<br /><br /> `Name` 指定資料處理延伸模組。<br /><br /> `Type` 指定延伸模組類別的完整類別名稱加上程式庫名稱，並以逗號分隔。|  
 |`Designer`|列舉報表設計師可以使用的查詢產生器。 查詢產生器會提供建構查詢的使用者介面，以擷取報表所使用的資料。 不同的資料處理延伸模組可能有不同的查詢產生器。 依預設，Reporting Services 會對產品內所包括的所有資料處理延伸模組，提供一個視覺化資料工具使用者介面。 然而，如果您建立或使用協力廠商的資料處理延伸模組，則可套用其他查詢產生器介面。|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|指定在顯示錯誤訊息之前，等待預覽處理服務啟動的週期。 預設為 15 秒。|  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105218"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函數 (報表產生器及 SSRS)
@@ -49,8 +49,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>備註  
  使用 `Lookup` 可從具有一對一關係之名稱/值組的指定資料集中擷取值。 例如，如果是資料表中的識別碼欄位，您可以使用 `Lookup` 從未繫結至資料區的資料集中，擷取對應的名稱欄位。  
   
- 
-  `Lookup` 會執行下列動作：  
+ `Lookup` 會執行下列動作：  
   
 -   評估目前範圍中的來源運算式。  
   
@@ -64,7 +63,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  適用以下限制：  
   
--   `Lookup`會在套用所有篩選運算式之後進行評估。  
+-   當套用所有篩選運算式之後，便會評估 `Lookup`。  
   
 -   只支援一層的查閱。 來源、目的地或結果運算式不能包含查閱函數的參考。  
   
@@ -72,8 +71,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   
-  `Lookup` 不能當做下列報表項目的運算式使用：  
+-   `Lookup` 不能當做下列報表項目的運算式使用：  
   
     -   資料來源的動態連接字串。  
   

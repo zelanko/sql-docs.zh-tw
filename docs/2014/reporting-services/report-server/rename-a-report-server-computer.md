@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c96ae889017eab71378b91eeb1a9ea1881fb25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103502"
 ---
 # <a name="rename-a-report-server-computer"></a>重新命名報表伺服器電腦
-  重新命名電腦會使 Web 伺服器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (如果它在同一台電腦上) 發生對應的名稱變更。 在某些情況下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，在電腦名稱稱變更之後可能無法存取。 電腦名稱變更之後，您可以利用本主題提供的步驟來重新設定報表伺服器。  
+  重新命名電腦會使 Web 伺服器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (如果它在同一台電腦上) 發生對應的名稱變更。 在某些情況下，當電腦名稱變更後，可能就無法存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 電腦名稱變更之後，您可以利用本主題提供的步驟來重新設定報表伺服器。  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>重新命名 SQL Server Database Engine  
  如果您要重新命名執行報表伺服器資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體，請執行下列步驟：  
@@ -29,7 +29,7 @@ ms.locfileid: "66103502"
   
 2.  開啟 [資料庫安裝] 頁面。  
   
-3.  在 **[伺服器名稱]** 中，輸入或選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名稱，然後按一下 **[連接]**。  
+3.  在 **[伺服器名稱]** 中，輸入或選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名稱，然後按一下 **[連接]** 。  
   
 4.  按一下 [套用]  。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "66103502"
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](reporting-services-report-server-native-mode.md)   
  [啟動與停止 Report Server 服務](start-and-stop-the-report-server-service.md)   
- [&#40;SSRS&#41;的 rsconfig 公用程式](../tools/rsconfig-utility-ssrs.md)  
+ [rsconfig 公用程式 &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
   
   

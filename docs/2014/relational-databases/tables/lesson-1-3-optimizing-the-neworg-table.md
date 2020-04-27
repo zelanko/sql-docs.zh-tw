@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110066"
 ---
 # <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
@@ -95,7 +95,7 @@ ms.locfileid: "66110066"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     「**員工 id**-第一個索引」：資料列會以「**員工**」順序儲存。  
+     **EmployeeID**優先索引：資料列會以 **EmployeeID** 順序儲存。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -124,17 +124,14 @@ ms.locfileid: "66110066"
   
 #### <a name="to-drop-the-unnecessary-columns"></a>卸除不必要的資料行  
   
-1.  
-  **ManagerID** 資料行代表員工/主管的關聯性，此種關聯性現在以 **OrgNode** 資料行代表。 如果其他應用程式不需要 **ManagerID** 資料行，請考慮使用下列陳述式卸除該資料行：  
+1.  **ManagerID** 資料行代表員工/主管的關聯性，此種關聯性現在以 **OrgNode** 資料行代表。 如果其他應用程式不需要 **ManagerID** 資料行，請考慮使用下列陳述式卸除該資料行：  
   
     ```  
     ALTER TABLE NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  
-  **EmployeeID** 資料行也是多餘的。 
-  **OrgNode** 資料行可唯一識別每個員工。 如果其他應用程式不需要 **EmployeeID** 資料行，請考慮使用下列程式碼先卸除索引，再卸除該資料行：  
+2.  **EmployeeID** 資料行也是多餘的。 **OrgNode** 資料行可唯一識別每個員工。 如果其他應用程式不需要 **EmployeeID** 資料行，請考慮使用下列程式碼先卸除索引，再卸除該資料行：  
   
     ```  
     DROP INDEX EmpIDs_unq ON NewOrg ;  

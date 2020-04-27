@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104951"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形狀圖 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66104951"
   
 ## <a name="variations"></a>變化  
   
--   **金字塔**。 金字塔圖會顯示成比例的資料，讓圖表看起來像金字塔一樣。  
+-   **金字塔圖**： 金字塔圖會顯示成比例的資料，讓圖表看起來像金字塔一樣。  
   
 ## <a name="data-considerations-for-shape-charts"></a>形狀圖的資料考量  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66104951"
 -   您可以在圓形圖和環圈圖上套用其他繪製樣式來增加視覺效果。 如需詳細資訊，請參閱[格式化圖表上的數列色彩 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [將圖表格式化 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [圖表中的空白和 Null 資料點 &#40;報表產生器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [圓形圖 &#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

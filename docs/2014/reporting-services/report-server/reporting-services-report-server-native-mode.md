@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103306"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
@@ -38,9 +38,8 @@ ms.locfileid: "66103306"
   
 -   [從報表參考影像資源](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a>原生模式摘要  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝包含多項需要管理及維護的伺服器端功能。 此伺服器功能包含以下項目：  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a> 原生模式摘要  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝包含多項需要管理及維護的伺服器端功能。 此伺服器功能包含以下項目：  
   
 -   報表伺服器 Web 服務 (在報表伺服器服務內部執行)。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66103306"
   
 -   如果您將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝在網域控制站上，您必須是網域管理員。  
   
-##  <a name="bkmk_managecontent"></a>管理內容  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> 管理內容  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指報表、模型、資料夾、資源和共用資料來源的管理。 所有的這些項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。  
   
 > [!NOTE]  
@@ -80,10 +79,9 @@ ms.locfileid: "66103306"
   
  執行管理工作的權限是透過兩個預先定義角色提供的： **系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。 如需這些預先定義角色的詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)。  
   
- 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。  
+ 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。  
   
-##  <a name="bkmk_manageresources"></a>保護和管理資源  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a>保護和管理資源  
  資源是指儲存在報表伺服器上，但並非由報表伺服器所處理的 Managed 項目。 一般而言，資源會提供外部內容給報表使用者。 範例包括 .jpg 檔或 HTML 檔中描述報表所使用之商務規則的影像。 雖然此 JPG 或 HTML 檔會儲存在報表伺服器上，但是報表伺服器會直接將此檔案傳遞至瀏覽器而非先處理它。  
   
  若要將資源加入至報表伺服器，您可以上傳或發行檔案：  
@@ -99,7 +97,7 @@ ms.locfileid: "66103306"
   
  資源會連同報表、共用資料來源、共用排程和資料夾一起當做具名項目存在報表伺服器資料夾階層中。 您可以搜尋、檢視、保護和設定資源的屬性，就像處理報表伺服器上所儲存的任何項目一樣。 若要檢視或管理資源，您的角色指派中必須具有檢視資源或管理員資源的工作。  
   
-##  <a name="bkmk_referenceimage"></a>從報表參考影像資源  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a>從報表參考影像資源  
  資源可以包含您在報表中參考的影像。 如果報表需求包括使用外部影像，請考慮下列將影像儲存成資源的優點：  
   
 -   報表伺服器資料庫中的集中式儲存。 如果您將報表伺服器資料庫及其內容移至另一部電腦，外部影像會與報表一起移動。 您不需要追蹤儲存在不同電腦之磁碟上的影像檔。  
@@ -110,6 +108,6 @@ ms.locfileid: "66103306"
   
 ## <a name="see-also"></a>另請參閱  
  [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [疑難排解 Reporting Services 安裝](../install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [針對 Reporting Services 安裝進行疑難排解](../install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

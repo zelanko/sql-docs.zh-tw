@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63259163"
 ---
 # <a name="agent-security-new-publication-wizard"></a>代理程式安全性 (新增發行集精靈)
-  [**代理程式安全性**] 頁面可讓您指定下列代理程式執行時所使用的帳戶，並與複寫拓撲中的電腦建立連接：  
+  **[代理程式安全性]** 頁面可讓您指定執行下列代理程式的帳戶，並與複寫拓撲中的電腦建立連接。  
   
 -   所有發行集的快照集代理程式。  
   
 -   所有交易式發行集的記錄讀取器代理程式。  
   
--   允許可更新訂閱的交易式發行集之佇列讀取器代理程式。 如果您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. 如需有關可更新訂閱的詳細資訊，請參閱＜ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)＞。  
+-   允許可更新訂閱的交易式發行集之佇列讀取器代理程式。 如果您在 [發行集類型][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面上指定 [具有可更新訂閱的交易式發行集]  ，則不論您所使用可更新訂閱類型為何都會建立此代理程式的   Agent 作業。 如需有關可更新訂閱的詳細資訊，請參閱＜ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)＞。  
   
  如需有關代理程式所需權限和複寫安全性的最佳做法的詳細資訊，請參閱＜ [Replication Agent Security Model](security/replication-agent-security-model.md) ＞和＜ [Replication Security Best Practices](security/replication-security-best-practices.md)＞。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63259163"
 >  每一個使用異動複寫發行的資料庫都有一個記錄讀取器代理程式。 如果交易式發行集已存在資料庫中，則安全性設定是唯讀的。 您可以在 **[發行集屬性]** 對話方塊中變更設定，但變更會影響資料庫中的所有交易式發行集。  
   
  **佇列讀取器代理程式**  
- 允許可更新訂閱的交易式發行集都會顯示。 按一下 **[安全性設定]** ，即可在 **[佇列讀取器代理程式安全性]** 對話方塊中指定安全性設定。 此精靈完成時就會建立佇列讀取器代理程式作業；與您是否建立任何佇列更新訂閱無關。 如果您不要建立任何佇列更新訂閱，就可以停用此作業。 以滑鼠右鍵按一下作業（以下列格式命名： *[\<Publisher>]。\<整數>*）。在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式**作業**] 資料夾中，然後按一下 [**停**用]。  
+ 允許可更新訂閱的交易式發行集都會顯示。 按一下 **[安全性設定]** ，即可在 **[佇列讀取器代理程式安全性]** 對話方塊中指定安全性設定。 此精靈完成時就會建立佇列讀取器代理程式作業；與您是否建立任何佇列更新訂閱無關。 如果您不要建立任何佇列更新訂閱，就可以停用此作業。 在  *Agent 的 [作業]\<\< 資料夾中，以滑鼠右鍵按一下作業 (命名格式：* 發行者>.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]整數>  )，然後按一下 [停用]  。  
   
  如需有關佇列讀取器代理程式所使用的帳戶所需之權限的詳細資訊，請在 **[佇列讀取器代理程式安全性]** 對話方塊上按一下 **[說明]** 。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "63259163"
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](publish/create-a-publication.md)   
- [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
  [檢視及修改發行集屬性](publish/view-and-modify-publication-properties.md)   
- [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [管理複寫中的登入和密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [發行資料和資料庫物件](publish/publish-data-and-database-objects.md)   
  [複寫代理程式概觀](agents/replication-agents-overview.md)  
   
