@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158807"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>決定 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的最小值  
  判斷出記憶體最佳化資料表的記憶體需求之後，您必須決定所需數量佔可用記憶體的百分比，並將記憶體百分比設定為該值或更高。  
   
- **實例**   
+ **範例：**    
 此範例假設您經過計算後，判斷出記憶體最佳化資料表和索引需要 16 GB 的記憶體。 假設您已獲認可使用 32 GB 的記憶體。  
   
  乍看之下，您似乎必須將 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 設定為 50 (16 等於 32 乘以 50%)。  不過，這樣並不會使您的記憶體最佳化資料表擁有足夠的記憶體。 看看下面表格 ([記憶體最佳化資料表和索引可用的記憶體百分比](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)) 我們得知假設有 32 GB 的認可記憶體時，只有 80% 可用於記憶體最佳化資料表和索引。  因此，最小和最大百分比要依據可用的記憶體來計算，而不是依據認可的記憶體。  
@@ -149,8 +149,7 @@ GO
 |<= 8 GB|70%|  
 |<= 16 GB|75%|  
 |<= 32 GB|80%|  
-|
-  \<= 96 GB|85%|  
+|\<= 96 GB|85%|  
 |>96 GB|90%|  
   
  例如，如果您的「目標認可的記憶體」為 100 GB，而您估計經記憶體最佳化的資料表和索引需要 60GB 的記憶體，則您可以建立一個 MAX_MEMORY_PERCENT = 67 的資源集區 (需要 60GB / 0.90 = 66.667GB - 四捨五入為 67GB；已安裝 67GB / 100GB = 67%)，確保您的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 物件擁有所需的 60GB。  
@@ -186,7 +185,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  如果您無法將資料庫繫結至具名資源集區，則資料庫會繫結至「預設」集區。 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在大多數其他配置中會使用預設資源集區，因此您將無法針對所需資料庫精確使用 DMV sys.dm_resource_governor_resource_pools 監視記憶體最佳化資料表所耗用的記憶體。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
+ [sp_xtp_bind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [sp_xtp_unbind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
  [Resource Governor](../resource-governor/resource-governor.md)   
  [Resource Governor 資源集區](../resource-governor/resource-governor-resource-pool.md)   

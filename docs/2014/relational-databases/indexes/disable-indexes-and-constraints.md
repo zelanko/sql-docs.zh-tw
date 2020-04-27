@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162409"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
@@ -47,9 +47,9 @@ ms.locfileid: "63162409"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   索引停用時，不會進行維護。  
   
@@ -85,12 +85,12 @@ ms.locfileid: "63162409"
   
 -   建立新的叢集索引可啟用先前停用的非叢集索引。 如需詳細資訊，請參閱 [Enable Indexes and Constraints](enable-indexes-and-constraints.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>若要停用索引  
   
@@ -159,7 +159,7 @@ ms.locfileid: "63162409"
   
 -   按一下超連結即可顯示含有完整錯誤的對話方塊。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>若要停用索引  
   

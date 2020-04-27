@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156808"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
@@ -49,21 +49,21 @@ ms.locfileid: "63156808"
   
      [安全性](#Security)  
   
--   **若要建立具有非索引鍵資料行的索引，請使用：**  
+-   **使用下列方法建立非索引鍵資料行的索引：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="DesignRecs"></a> 設計建議  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a>設計建議  
   
 -   重新設計具有大型索引鍵大小的非叢集索引，如此僅有用於搜尋與查閱的資料行才會是索引鍵資料行。 讓涵蓋查詢的所有其他資料行都做為非索引鍵資料行。 如此一來，您將擁有涵蓋查詢所需的所有資料行，但是索引鍵本身會變得很小而且很有效率。  
   
 -   在非叢集索引中包含非索引鍵資料行，以避免超出目前索引大小限制 (最大 16 個索引鍵資料行，最大 900 個位元組索引鍵大小) 計算索引鍵資料行數或索引鍵大小時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會考慮非索引鍵之索引資料行。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   非索引鍵資料行只能在非叢集索引上定義。  
   
@@ -81,12 +81,12 @@ ms.locfileid: "63156808"
   
     -   增加 `varchar`、`nvarchar` 或 `varbinary` 資料行的長度。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>建立非索引鍵資料行的索引  
   
@@ -96,25 +96,25 @@ ms.locfileid: "63156808"
   
 3.  按一下加號展開要建立非索引鍵資料行之索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
+4.  以滑鼠右鍵按一下 [**索引**] 資料夾，指向 [**新增索引**]，然後選取 [**非叢集索引**]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行]  索引標籤底下的 [加入...]  。  
+6.  按一下 [索引鍵資料行]**** 索引標籤底下的 [加入...]****。  
   
 7.  在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至索引之資料表資料行的核取方塊。  
   
 8.  按一下 [確定]  。  
   
-9. 按一下 [包含的資料行]  索引標籤底下的 [加入...]  。  
+9. 按一下 [包含的資料行]**** 索引標籤底下的 [加入...]****。  
   
 10. 在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至索引中做為非索引鍵資料行之資料表資料行或資料行的核取方塊。  
   
 11. 按一下 [確定]  。  
   
-12. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
+12. 在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>建立非索引鍵資料行的索引  
   

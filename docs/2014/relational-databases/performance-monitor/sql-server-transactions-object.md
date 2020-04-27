@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183000"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server 的 Transactions 物件
@@ -40,7 +40,7 @@ ms.locfileid: "63183000"
 |**Update Snapshot Transactions**|目前使用快照隔離等級且已修改資料的使用中交易數。|  
 |**Version Cleanup rate (KB/s)**|從 **tempdb**的快照隔離版本存放區中移除資料列版本的速度 (KB/sec)。|  
 |**Version Generation rate (KB/s)**|新資料列版本加入 **tempdb**之快照隔離版本存放區的速度 (KB/sec)。|  
-|**Version Store Size (KB)**|**tempdb** 中用來儲存快照隔離等級資料列版本的空間量 (以 KB 為單位)。|  
+|**版本存放區大小（KB）**|**tempdb** 中用來儲存快照隔離等級資料列版本的空間量 (以 KB 為單位)。|  
 |**Version Store unit count**|**tempdb**中快照隔離版本存放區的使用中配置單位數。|  
 |**Version Store unit creation**|自從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動之後，已在快照隔離存放區中建立的配置單位數。|  
 |**Version Store unit truncation**|自從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動之後，已從快照隔離存放區中移除的配置單位數。|  

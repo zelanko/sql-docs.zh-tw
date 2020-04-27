@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162361"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
@@ -50,9 +50,9 @@ ms.locfileid: "63162361"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Benefits"></a> 唯一索引的優點  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> 唯一索引的優點  
   
 -   多重資料行唯一索引可保證索引鍵的每一個值組合都是唯一的。 例如，若在 **LastName**、 **FirstName**和 **MiddleName** 資料行的組合上建立唯一索引，則該資料表中不得有兩個資料列具有這些資料行的相同值組合。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63162361"
   
 -   唯一索引提供額外資訊給查詢最佳化工具，有助於產生更有效率的執行計畫。  
   
-###  <a name="Implementations"></a> 一般實作  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 一般實作  
  唯一索引的實作方式如下：  
   
 -   **PRIMARY KEY 或 UNIQUE 條件約束**  
@@ -83,18 +83,18 @@ ms.locfileid: "63162361"
   
      若要建立索引檢視，您必須在一個或多個檢視資料行上定義唯一的叢集索引。 將會執行檢視，而結果集會以資料表資料儲存在叢集索引中的相同方式，儲存在索引的分葉層級。 如需詳細資訊，請參閱 [建立索引檢視表](../views/views.md)。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果資料中已存在重複的索引鍵值，則無法建立唯一索引、UNIQUE 條件約束或 PRIMARY KEY 條件約束。  
   
 -   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](create-indexes-with-included-columns.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>若要使用資料表設計工具建立唯一索引  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63162361"
   
 13. 按一下 [關閉]  。  
   
-14. **在 [檔案**] 功能表上，按一下 [**儲存**_table_name_]。  
+14. 在 [檔案]**** 功能表上，按一下 [儲存 _資料表名稱_]****。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用物件總管建立唯一索引  
   
@@ -142,13 +142,13 @@ ms.locfileid: "63162361"
   
 7.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-8.  在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至唯一索引之資料表資料行的核取方塊。  
+8.  在 [從 <資料表名稱>__ 選取資料行]**** 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
   
 9. 按一下 [確定]  。  
   
 10. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>在資料表上建立唯一索引  
   

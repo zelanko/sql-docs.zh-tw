@@ -1,5 +1,5 @@
 ---
-title: SQL Server 錯誤詳細資料 |Microsoft Docs
+title: SQL Server 錯誤詳細資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c7535e4579204834fc8024b7c37c46675320b8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156389"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 錯誤詳細資料
@@ -40,22 +40,18 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  另一種取得 **ISQLServerErrorInfo** 指標的方法是在已取得的 **ISQLErrorInfo** 指標上呼叫 **QueryInterface** 方法。 請注意，因為 **ISQLServerErrorInfo** 包含 **ISQLErrorInfo** 所提供資訊的超集，所以透過 **GetCustomerErrorObject** 直接存取 **ISQLServerErrorInfo** 很合理。  
   
- 
-  **ISQLServerErrorInfo** 介面會公開一個成員函數 [ISQLServerErrorInfo::GetErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)。 該函數會傳回 SSERRORINFO 結構的指標以及字串緩衝區的指標。 這兩個指標都會參考取用者必須使用 **IMalloc::Free** 方法來取消配置的記憶體。  
+ **ISQLServerErrorInfo** 介面會公開一個成員函數 [ISQLServerErrorInfo::GetErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)。 該函數會傳回 SSERRORINFO 結構的指標以及字串緩衝區的指標。 這兩個指標都會參考取用者必須使用 **IMalloc::Free** 方法來取消配置的記憶體。  
   
  SSERRORINFO 結構成員會依下列方式由取用者解譯。  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤訊息。 與 **IErrorInfo::GetDescription** 中傳回的字串相同。|  
+|*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息。 與 **IErrorInfo::GetDescription** 中傳回的字串相同。|  
 |*pwszServer*|工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |*pwszProcedure*|如果適用，則為發生錯誤之程序的名稱， 否則便為空字串。|  
-|*lNative*|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生錯誤號碼。 與 *ISQLErrorInfo::GetSQLInfo* 的 **plNativeError** 參數中所傳回的值相同。|  
-|*bState*|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息的狀態。|  
-|*bClass*|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息的嚴重性。|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生錯誤號碼。 與 **ISQLErrorInfo::GetSQLInfo** 的 *plNativeError* 參數中所傳回的值相同。|  
+|*bState*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息的狀態。|  
+|*bClass*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息的嚴重性。|  
 |*wLineNumber*|在適用時，這是發生錯誤之預存程序的行號。|  
   
 ## <a name="see-also"></a>另請參閱  

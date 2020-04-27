@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182926"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>開啟條件對話方塊，相依原則頁面
@@ -32,7 +32,7 @@ ms.locfileid: "63182926"
  **History**  
  按一下 [檢視記錄] 超連結可顯示執行記錄報表。  
   
- **建立日期**  
+ **已**  
  此原則的建立日期。  
   
 ## <a name="see-also"></a>另請參閱  

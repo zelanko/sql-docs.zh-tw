@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161729"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>停止複寫拓撲 (複寫 Transact-SQL 程式設計)
-  *「停止」* (Quiesce) 系統包括停止所有節點上已發行資料表的活動，並確定每個節點已收到來自其他所有節點的所有變更。 本主題說明如何停止複寫拓撲 (此為數項管理工作所需)，以及如何確定節點已從其他節點接收到所有變更。  
+  「停止」** 系統包括停止所有節點上已發行資料表的活動，並確定每個節點已收到來自其他所有節點的所有變更。 本主題說明如何停止複寫拓撲 (此為數項管理工作所需)，以及如何確定節點已從其他節點接收到所有變更。  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>若要使用唯讀訂閱停止異動複寫拓撲  
   
@@ -81,6 +81,6 @@ ms.locfileid: "63161729"
   
 ## <a name="see-also"></a>另請參閱  
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [針對異動複寫測量延遲及驗證連接](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [針對異動複寫測量延遲及驗證連線](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158716"
 ---
 # <a name="programming-specific-tasks"></a>程式設計特有的工作
@@ -34,7 +34,7 @@ ms.locfileid: "63158716"
 |[在 SMO 中設定 SQL Server](configuring-sql-server-in-smo.md)|描述如何在 SMO 中檢視與修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的組態設定。|  
 |[使用資料表和索引資料分割](using-table-and-index-partitioning.md)|描述如何在 SMO 中使用索引和資料表資料分割。|  
 |[使用檔案群組和檔案來儲存資料](using-filegroups-and-files-to-store-data.md)|描述如何在 SMO 中使用檔案群組。|  
-|[使用 WMI 提供者管理服務和網路設定](managing-services-and-network-settings-by-using-wmi-provider.md)|描述使用代表組態管理的 WMI 提供者之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件，追蹤 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 執行個體的數個方式。|  
+|[使用 WMI 提供者管理服務和網路設定](managing-services-and-network-settings-by-using-wmi-provider.md)|描述使用代表組態管理的 WMI 提供者之 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件，追蹤 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的數個方式。|  
 |[使用資料庫物件](creating-altering-and-removing-database-objects.md)|描述如何建立代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之物件的執行個體類別。|  
 |[管理使用者、角色和登入](managing-users-roles-and-logins.md)|描述如何在 SMO 中使用安全性角色。|  
 |[授與、撤銷和拒絕權限](granting-revoking-and-denying-permissions.md)|描述如何使用 SMO 授與、撤銷與拒絕使用者或角色成員的權限。|  

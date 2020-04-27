@@ -1,5 +1,5 @@
 ---
-title: 中繼資料探索 |Microsoft Docs
+title: 中繼資料探索 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162017"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
@@ -25,8 +25,7 @@ ms.locfileid: "63162017"
  如果您使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的 Native Client 開發應用程式，但連接到早于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的伺服器版本，則中繼資料探索功能將對應至伺服器的版本。  
   
 ## <a name="remarks"></a>備註  
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 bcp 函數，以便提供改良的中繼資料探索：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 bcp 函數，以便提供改良的中繼資料探索：  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
   
@@ -42,8 +41,7 @@ ms.locfileid: "63162017"
   
  [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)有一個新的*eOption* ，可控制 bcp_readfmt 的行為`BCPDELAYREADFMT`：。  
   
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 ODBC 函數，以便提供改良的中繼資料探索：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 ODBC 函數，以便提供改良的中繼資料探索：  
   
 -   [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md)  
   
@@ -53,14 +51,13 @@ ms.locfileid: "63162017"
   
 -   [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)  
   
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 OLE DB 成員函數，以便提供改良的中繼資料探索：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 OLE DB 成員函數，以便提供改良的中繼資料探索：  
   
 -   IColumnsInfo::GetColumnInfo  
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters：： GetParameterInfo （如需詳細資訊，請參閱[ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) ）  
+-   ICommandWithParameters::GetParameterInfo (如需詳細資訊，請參閱 [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md))  
   
  當您使用 IBCPSession::BCPSetBulkMode 來指定中繼資料格式時，也會看見效能改進  
   

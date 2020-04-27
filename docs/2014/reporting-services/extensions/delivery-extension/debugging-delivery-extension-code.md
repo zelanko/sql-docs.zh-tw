@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d289b3d4c4177ed885a3153bb758d0052286bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164340"
 ---
 # <a name="debugging-delivery-extension-code"></a>偵錯傳遞延伸模組程式碼
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供數個偵錯工具，可協助您分析傳遞延伸模組程式碼，並找出其中的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]錯誤。 效果最好的工具將視您嘗試要完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析傳遞延伸模組程式碼並尋找其中的錯誤。 效果最好的工具將視您嘗試要完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
   
 #### <a name="to-debug-your-delivery-extension-code"></a>偵錯傳遞延伸模組程式碼  
   
@@ -34,15 +34,15 @@ ms.locfileid: "63164340"
   
 4.  導覽至 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 與您的傳遞延伸模組專案，並在程式碼中設定某些中斷點。  
   
-5.  當傳遞延伸模組專案仍為使用中視窗時，按一下 [偵錯]**** 功能表的 [附加至處理序]****。  
+5.  當傳遞延伸模組專案仍為使用中視窗時，按一下 [偵錯]  功能表的 [附加至處理序]  。  
   
-     [附加至處理序]**** 對話方塊隨即開啟。  
+     [附加至處理序]  對話方塊隨即開啟。  
   
-6.  從處理序清單中，選取 aspnet_wp.exe 處理序 (或者，如果在 IIS 6.0 上部署應用程式則選取 w3wp.exe)，然後按一下 [附加]****。  
+6.  從處理序清單中，選取 aspnet_wp.exe 處理序 (或者，如果在 IIS 6.0 上部署應用程式則選取 w3wp.exe)，然後按一下 [附加]  。  
   
 7.  使用您的傳遞延伸模組定義新的訂閱。 您很可能會使用報表管理員或是 SOAP API。 這應該會叫用偵錯工具並執行對應至中斷點的程式碼。  
   
-8.  使用**F11**鍵逐步執行程式碼。 如需有關使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 進行偵錯的詳細資訊，請參閱您的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文件集。  
+8.  使用 **F11** 鍵逐步執行程式碼。 如需有關使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 進行偵錯的詳細資訊，請參閱您的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文件集。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作傳遞延伸模組](implementing-a-delivery-extension.md)   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162388"
 ---
 # <a name="enable-indexes-and-constraints"></a>啟用索引與條件約束
@@ -41,9 +41,9 @@ ms.locfileid: "63162388"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   在重建索引後，任何因為停用索引而停用的條件約束，都必須手動啟用。 重建關聯索引將可啟用 PRIMARY KEY 與 UNIQUE 條件約束。 您必須先重建 (啟用) 索引，才可以啟用參考 PRIMARY KEY 或 UNIQUE 條件約束的 FOREIGN KEY 條件約束。 FOREIGN KEY 條件約束是使用 ALTER TABLE CHECK CONSTRAINT 陳述式來啟用。  
   
@@ -68,12 +68,12 @@ ms.locfileid: "63162388"
     |DROP INDEX|此動作會成功。|此動作會成功。|  
     |CREATE INDEX WITH DROP_EXISTING|此動作會失敗。|此動作會成功。|  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 如果使用 DBCC DBREINDEX，使用者必須擁有該資料表，或者是 **系統管理員** 固定伺服器角色或 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>啟用已停用的索引  
   
@@ -85,9 +85,9 @@ ms.locfileid: "63162388"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要啟用的索引，然後選取 [重建]  。  
+5.  以滑鼠右鍵按一下您要啟用的索引，然後選取 [重建]****。  
   
-6.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。  
+6.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
   
 #### <a name="to-enable-all-indexes-on-a-table"></a>啟用資料表上的所有索引  
   
@@ -97,13 +97,13 @@ ms.locfileid: "63162388"
   
 3.  按一下加號展開要啟用索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，並選取 [全部重建]  。  
+4.  以滑鼠右鍵按一下 [索引]**** 資料夾，並選取 [全部重建]****。  
   
-5.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。 若要從 **[要重建的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
+5.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。 若要從 **[要重建的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   
  **[重建索引]** 對話方塊中提供下列資訊：  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>使用 ALTER INDEX 啟用已停用的索引  
   

@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165022"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>準備實作資料處理延伸模組
-  在您執行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]資料處理延伸模組之前，應該先定義要執行的介面。 您可能會想要提供整組介面的延伸模組特定實作，或者您可能會直接將實作的集點放在子集上，例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 與 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 介面，其中用戶端主要會與作為 **DataReader** 物件的結果集互動，而且將使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組作為結果集與資料來源之間的橋樑。  
+  在您實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之前，應該定義要實作的介面。 您可能會想要提供整組介面的延伸模組特定實作，或者您可能會直接將實作的集點放在子集上，例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 與 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 介面，其中用戶端主要會與作為 **DataReader** 物件的結果集互動，而且將使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組作為結果集與資料來源之間的橋樑。  
   
  您可以使用兩種方法之一來實作資料處理延伸模組：  
   
--   您的資料處理延伸模組類別可以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]實作為資料提供者介面，並選擇性地執行所提供[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的擴充資料處理延伸模組介面。  
+-   您的資料處理延伸模組類別可以實作 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面，並選擇性地擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的資料處理延伸模組介面。  
   
 -   您的資料處理延伸模組類別可以實作 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的資料處理延伸模組介面，並選擇性地擴充資料處理延伸模組介面。  
   

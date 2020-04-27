@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155802"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化資料表](memory-optimized-tables.md)  
+ [記憶體優化資料表](memory-optimized-tables.md)  
   
   

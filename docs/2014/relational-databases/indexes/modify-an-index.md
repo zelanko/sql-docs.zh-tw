@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1da4462f3ba23d263cd30d222f7b9026285b1159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162373"
 ---
 # <a name="modify-an-index"></a>修改索引
@@ -35,7 +35,7 @@ ms.locfileid: "63162373"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-an-index"></a>若要修改索引  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63162373"
   
 1.  若要加入、移除或變更索引資料行的位置，請選取 **[索引屬性]** 對話方塊中的 **[一般]** 頁面。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-an-index"></a>若要修改索引  
   
@@ -75,10 +75,10 @@ ms.locfileid: "63162373"
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
- [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
- [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
- [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
+ [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
+ [index_columns &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
  [設定索引選項](set-index-options.md)   
  [重新命名索引](indexes.md)  
   

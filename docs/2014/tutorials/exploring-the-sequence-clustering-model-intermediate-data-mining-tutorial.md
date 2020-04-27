@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164050"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>探索時序群集模型 (中繼資料採礦教學課程)
@@ -32,7 +32,7 @@ ms.locfileid: "63164050"
   
 -   [一般內容檢視](#bkmk_Generic)  
   
-##  <a name="bkmk_CDiagram"></a>[群集圖表] 索引標籤  
+##  <a name="cluster-diagram-tab"></a><a name="bkmk_CDiagram"></a>[群集圖表] 索引標籤  
  [**群集圖表**] 索引標籤會以圖形方式顯示演算法在資料庫中探索到的叢集。 圖表的配置代表群集的關聯性，而且類似的群集會緊密地聚集在一起。 依預設，每一個節點的陰影都代表群集中所有案例的密度：節點的陰影越暗，表示它所包含的案例越多。 您可以變更節點陰影的意義，使它在每一個群集中代表屬性和狀態的支援。  
   
  您也可以重新命名群集，讓您可以更輕鬆地識別及處理目標群集。 在此教學課程中，我們將會重新命名太平洋地區具有最高客戶百分比的群集，以及整體上具有最多案例的群集。  
@@ -87,7 +87,7 @@ ms.locfileid: "63164050"
   
  [回到頁首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CProfiles"></a>群集設定檔索引標籤  
+##  <a name="cluster-profiles-tab"></a><a name="bkmk_CProfiles"></a>群集設定檔索引標籤  
  [**群集設定檔**] 索引標籤會顯示每個叢集中的序列。 群集會列在 [**狀態**] 資料行右邊的個別資料行中。  
   
  在檢視器中，[**模型**] 資料列描述叢集中專案的整體分佈，而 [模型] 中的 [**範例**] 資料列則包含這些專案的序列。 模型中每個資料格的色彩序列的每一行 **。 [範例**] 資料清單示叢集中隨機選取之使用者的行為。  
@@ -132,7 +132,7 @@ ms.locfileid: "63164050"
   
  [回到頁首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CChars"></a>群集特性索引標籤  
+##  <a name="cluster-characteristics-tab"></a><a name="bkmk_CChars"></a>群集特性索引標籤  
  [叢集**特性**] 索引標籤會以視覺化方式呈現所選叢集之屬性值重要性的橫條，來匯總叢集中各狀態之間的轉換。 [**變數**] 資料行會告訴您所選叢集或擴展所需的模型為何：特定值或值之間的關聯性，也就是所謂的*轉換*。 [**值**] 資料行會提供有關值或轉換的詳細資訊，**而 [機率**] 資料行則會以視覺方式表示這個屬性或轉換的權數。  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>若要檢視群集的重要屬性  
@@ -169,14 +169,14 @@ ms.locfileid: "63164050"
   
  [回到頁首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CDiscrim2"></a>群集辨識索引標籤  
+##  <a name="cluster-discrimination-tab"></a><a name="bkmk_CDiscrim2"></a>群集辨識索引標籤  
  [**叢集**辨識] 索引標籤可協助您比較兩個叢集，以判斷哪些屬性會區分特定叢集與另一個叢集。 此索引標籤包含四個**資料**行：**變數**、值、 **cluster 1**和**cluster 2**。  您可以選擇任何叢集作為 [叢集**1** ] 和 [叢集**2**] 使用。  
   
  [**變數**] 資料行會告訴您屬性的名稱，這可以是資料行名稱或資料行名稱和**轉換**文字的組合。 [**值] 資料**行會顯示內容或轉換的確切值。 [叢集**1** ] 和 [叢集**2** ] 之資料行中的陰影橫條指出您要比較的群集中屬性的強度。 長條越長，就表示此群集包含具有該屬性之案例的可能性越高。  
   
 #### <a name="to-compare-two-clusters-by-using-the-cluster-discrimination-tab"></a>若要使用群集辨識索引標籤來比較兩個群集  
   
-1.  在 [**群集**辨識] 索引卷**** 標中，針對`Pacific Cluster`[叢集 1] 選取。  
+1.  在 [**群集**辨識] 索引卷**Cluster 1**標中，針對`Pacific Cluster`[叢集 1] 選取。  
   
      根據預設，[叢集**2** ] 的選取專案會變更為 [**太平洋叢集補數**]。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "63164050"
   
  [回到頁首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_StateTran"></a>狀態轉換索引標籤  
+##  <a name="state-transitions-tab"></a><a name="bkmk_StateTran"></a>狀態轉換索引標籤  
  在 [**狀態轉換**] 索引標籤上，您可以選取叢集並流覽其狀態轉換。 如果您從 [叢集] 下拉式清單中選取 [擴展 **（全部）** ]，則圖表會顯示整個採礦模型的狀態分佈。  
   
  圖表中的每個節點都代表一種狀態，或是您嘗試分析之序列的可能值。 節點的背景色彩代表該狀態的頻率。 線條會連接某些狀態，這表示狀態之間的轉換。 您可以將滑動軸上移或下移來變更轉換的機率臨界值。 數字與某些節點有關，這表示該狀態的機率。  
@@ -227,7 +227,7 @@ ms.locfileid: "63164050"
   
  [回到頁首](#bkmk_CDiagram)  
   
-##  <a name="bkmk_Generic"></a>一般內容樹狀檢視器  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_Generic"></a>一般內容樹狀檢視器  
  此檢視器可用於所有模型，不論演算法或模型類型為何。 [ **MicrosoftGeneric 內容樹狀檢視器]** 可從 [**檢視器]** 下拉式清單中取得。  
   
  內容樹狀結構會將任何採礦模型表示為一系列的節點，其中的每一個節點都表示所學習到有關定型資料的知識。 節點可以包含模式、一組規則、群集，或是共用某些屬性之日期範圍的定義。 節點的確切內容會因為演算法和可預測屬性而有所不同，但是內容的一般表示都是相同的。  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180544"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 建立並查詢資料採礦模型：教學課程 (Analysis Services - 資料採礦)
@@ -38,8 +38,8 @@ ms.locfileid: "63180544"
   
      這個教學課程會建立一個預測模型，用於說明 CREATE MODEL (DMX) 陳述式的使用方法。 接著您要加入相關模型，並且變更 Microsoft 時間序列演算法的參數以自訂各模型的行為。 最後，您要建立預測，然後使用新資料更新預測。 在進行預測時更新時間序列這項功能已加入至 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]。  
   
-## <a name="reference"></a>參考  
- [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>參考資料  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d97cc2d4c04e147d5f4a88c13674429f5c784
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164903"
 ---
 # <a name="creating-a-delivery-extension-library"></a>建立傳遞延伸模組程式庫
@@ -50,7 +50,7 @@ csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll
 /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- 下列程式[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]代碼範例示範將用於副檔名為 .vb 之檔案的命令。  
+ 下列程式碼範例示範將用於副檔名為 .vb 之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 檔案的命令。  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll   

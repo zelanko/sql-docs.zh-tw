@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157122"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
@@ -63,9 +63,9 @@ ms.locfileid: "63157122"
   
 -   **後續操作：** [在變更代理程式參數之後](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-###  <a name="Access_SSMS"></a> 若要透過 SQL Server Management Studio 存取代理程式設定檔對話方塊  
+###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> 若要透過 SQL Server Management Studio 存取代理程式設定檔對話方塊  
   
 1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面上，按一下 [設定檔預設值]  。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63157122"
   
     2.  對於「散發代理程式」和「合併代理程式」設定檔，請以滑鼠右鍵按一下 **[所有訂閱]** 索引標籤上的訂閱，然後按一下 **[代理程式設定檔]** 。 對於其他代理程式，請以滑鼠右鍵按一下 **[代理程式]** 索引標籤，然後按一下 **[代理程式設定檔]** 。  
   
-###  <a name="Specify_SSMS"></a> 若要為代理程式指定設定檔  
+###  <a name="to-specify-a-profile-for-an-agent"></a><a name="Specify_SSMS"></a> 若要為代理程式指定設定檔  
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63157122"
   
 3.  若要指定現有發行集或訂閱之選定類型的所有代理程式應使用此設定檔，請按一下 **[變更現有的代理程式]** 。  
   
-###  <a name="Modify_SSMS"></a> 若要檢視和編輯設定檔的相關參數  
+###  <a name="to-view-and-edit-the-parameters-associated-with-a-profile"></a><a name="Modify_SSMS"></a> 若要檢視和編輯設定檔的相關參數  
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "63157122"
   
 4.  按一下 [關閉]  。  
   
-###  <a name="Create_SSMS"></a> 若要建立使用者自訂的設定檔  
+###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> 若要建立使用者自訂的設定檔  
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "63157122"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-###  <a name="Delete_SSMS"></a> 若要刪除使用者自訂的設定檔  
+###  <a name="to-delete-a-user-defined-profile"></a><a name="Delete_SSMS"></a> 若要刪除使用者自訂的設定檔  
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
@@ -132,9 +132,9 @@ ms.locfileid: "63157122"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-###  <a name="Create_tsql"></a> 若要建立新的代理程式設定檔  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_tsql"></a> 若要建立新的代理程式設定檔  
   
 1.  在散發者端，執行 [sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql)。 指定**@name**、 **1**的值**@profile_type**，以及下列其中一個值**@agent_type**：  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63157122"
   
 2.  在建立新設定檔之後，可以加入、移除或修改預設的參數來自訂該設定檔。  
   
-###  <a name="Modify_tsql"></a> 若要修改現有的代理程式設定檔  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_tsql"></a> 若要修改現有的代理程式設定檔  
   
 1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 針對**@agent_type**指定下列其中一個值：  
   
@@ -183,7 +183,7 @@ ms.locfileid: "63157122"
   
     -   在散發者端，執行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql)。 針對**@profile_id**指定步驟1中的設定檔識別碼、針對新增的**@parameter_name**有效參數名稱，以及的參數值。 **@parameter_value**  
   
-###  <a name="Delete_tsql"></a> 若要刪除代理程式設定檔  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_tsql"></a> 若要刪除代理程式設定檔  
   
 1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 針對**@agent_type**指定下列其中一個值：  
   
@@ -201,7 +201,7 @@ ms.locfileid: "63157122"
   
 2.  在散發者端，執行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql)。 針對**@profile_id**指定步驟1中的設定檔識別碼。  
   
-###  <a name="Synch_tsql"></a> 若要在同步處理期間使用代理程式設定檔  
+###  <a name="to-use-agent-profiles-during-synchronization"></a><a name="Synch_tsql"></a> 若要在同步處理期間使用代理程式設定檔  
   
 1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 針對**@agent_type**指定下列其中一個值：  
   
@@ -221,14 +221,14 @@ ms.locfileid: "63157122"
   
 3.  從命令提示字元啟動代理程式時，請在`profile_name` **-ProfileName**命令列參數之後指定在步驟1中取得的值。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會針對名為 **custom_merge**的合併代理程式建立自訂的設定檔、變更 **-UploadReadChangesPerBatch** 參數的值、加入新的 **-ExchangeType** 參數，並傳回所建立之設定檔的相關資訊。  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../snippets/tsql/SQL15/replication/howto/tsql/createperfparammerge.sql#sp_addagentprofileparam)]  
   
-##  <a name="RMOProcedure"></a> 使用 RMO  
+##  <a name="using-rmo"></a><a name="RMOProcedure"></a> 使用 RMO  
   
-###  <a name="Create_RMO"></a> 若要建立新的代理程式設定檔  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_RMO"></a> 若要建立新的代理程式設定檔  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體建立與「散發者」的連接。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "63157122"
   
     -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 設定檔的描述。  
   
-    -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果依預設這個 `true` 的所有新代理程式作業都會使用這個設定檔，請將此屬性設定為 <xref:Microsoft.SqlServer.Replication.AgentType>。  
+    -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果依預設這個 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理程式作業都會使用這個設定檔，請將此屬性設定為 `true`。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法，以在伺服器上建立設定檔。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "63157122"
   
 6.  若要將設定檔指派給現有的複寫代理程式作業，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 請針對 *distributionDBName* 傳遞散發資料庫的名稱，而針對 *agentID*傳遞作業識別碼。  
   
-###  <a name="Modify_RMO"></a> 若要修改現有的代理程式設定檔  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> 若要修改現有的代理程式設定檔  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體建立與「散發者」的連接。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "63157122"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 變更設定檔中現有參數的設定，其中 *name* 是代理程式參數的名稱，而 *newValue* 則是參數要變更成的值。 若要列舉所有目前為設定檔所定義的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 物件的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> ，代表此設定檔的現有參數。 若要列舉所有受支援的代理程式參數設定，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 物件的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> ，代表所有受支援的參數值。  
   
-###  <a name="Delete_RMO"></a> 若要刪除代理程式設定檔  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_RMO"></a> 若要刪除代理程式設定檔  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體建立與「散發者」的連接。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "63157122"
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 方法，從伺服器移除此物件代表的使用者自訂設定檔。  
   
-##  <a name="FollowUp"></a> 後續操作：在變更代理程式參數之後  
+##  <a name="follow-up-after-changing-agent-parameters"></a><a name="FollowUp"></a> 後續操作：在變更代理程式參數之後  
  代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。  
   
 ## <a name="see-also"></a>另請參閱  

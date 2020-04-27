@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162431"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>ODBC 驅動程式在處理字元轉換上的行為變更
@@ -52,13 +52,10 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|
-  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|6|驅動程式誤認為只要長度 * 2 即可將 CHAR 轉換成 WCHAR。|  
-|
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (11.0.2100.60 版) 或更新版本|-4 (SQL_NO_TOTAL)|驅動程式不會再假設從 CHAR 轉換成 WCHAR 或 WCHAR 至 CHAR 是 a （乘） \*2 或（除法）/2 動作。<br /><br /> 呼叫**SQLGetData**不再傳回預期轉換的長度。 驅動程式將偵測出這是 CHAR 與 WCHAR 之間的相互轉換，並且傳回 (-4) SQL_NO_TOTAL 而不至於會有 *2 或 /2 的錯誤行為。|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|6|驅動程式誤認為只要長度 * 2 即可將 CHAR 轉換成 WCHAR。|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (11.0.2100.60 版) 或更新版本|-4 (SQL_NO_TOTAL)|驅動程式不會再假設從 CHAR 轉換成 WCHAR 或 WCHAR 至 CHAR 是 a （乘） \*2 或（除法）/2 動作。<br /><br /> 呼叫**SQLGetData**不再傳回預期轉換的長度。 驅動程式將偵測出這是 CHAR 與 WCHAR 之間的相互轉換，並且傳回 (-4) SQL_NO_TOTAL 而不至於會有 *2 或 /2 的錯誤行為。|  
   
  使用**SQLGetData**來取出資料的區塊。 (虛擬程式碼如下所示)  
   
@@ -84,13 +81,10 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|
-  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|20|-   **SQLFetch**會報告資料右側有截斷。<br />-Length 是傳回的資料長度，而不是所儲存的內容（假設 * 2 CHAR 可 WCHAR 轉換，這對圖像而言可能不正確）。<br />-儲存在 buffer 中的資料是 123 \ 0。 緩衝區一定是以 NULL 結尾。|  
-|
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (11.0.2100.60 版) 或更新版本|-4 (SQL_NO_TOTAL)|-   **SQLFetch**會報告資料右側有截斷。<br />-Length 表示-4 （SQL_NO_TOTAL），因為未轉換資料的其餘部分。<br />-儲存在緩衝區中的資料是 123 \ 0。 - 緩衝區一定是以 NULL 結尾。|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|20|-   **SQLFetch**會報告資料右側有截斷。<br />-Length 是傳回的資料長度，而不是所儲存的內容（假設 * 2 CHAR 可 WCHAR 轉換，這對圖像而言可能不正確）。<br />-儲存在 buffer 中的資料是 123 \ 0。 緩衝區一定是以 NULL 結尾。|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (11.0.2100.60 版) 或更新版本|-4 (SQL_NO_TOTAL)|-   **SQLFetch**會報告資料右側有截斷。<br />-Length 表示-4 （SQL_NO_TOTAL），因為未轉換資料的其餘部分。<br />-儲存在緩衝區中的資料是 123 \ 0。 - 緩衝區一定是以 NULL 結尾。|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (OUTPUT 參數行為)  
  查詢`create procedure spTest @p1 varchar(max) OUTPUT`  
@@ -101,17 +95,13 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
 SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|
-  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|2468|-   **SQLFetch**不會傳回更多可用的資料。<br />-   **SQLMoreResults**不會傳回更多可用的資料。<br />-Length 表示從伺服器傳回的資料大小，而不是儲存在 buffer 中。<br />-原始緩衝區包含63個位元組和一個 Null 結束字元。 緩衝區一定是以 NULL 結尾。|  
-|
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (11.0.2100.60 版) 或更新版本|-4 (SQL_NO_TOTAL)|-   **SQLFetch**不會傳回更多可用的資料。<br />-   **SQLMoreResults**不會傳回更多可用的資料。<br />-Length 表示（-4） SQL_NO_TOTAL，因為未轉換資料的其餘部分。<br />-原始緩衝區包含63個位元組和一個 Null 結束字元。 緩衝區一定是以 NULL 結尾。|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|2468|-   **SQLFetch**不會傳回更多可用的資料。<br />-   **SQLMoreResults**不會傳回更多可用的資料。<br />-Length 表示從伺服器傳回的資料大小，而不是儲存在 buffer 中。<br />-原始緩衝區包含63個位元組和一個 Null 結束字元。 緩衝區一定是以 NULL 結尾。|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (11.0.2100.60 版) 或更新版本|-4 (SQL_NO_TOTAL)|-   **SQLFetch**不會傳回更多可用的資料。<br />-   **SQLMoreResults**不會傳回更多可用的資料。<br />-Length 表示（-4） SQL_NO_TOTAL，因為未轉換資料的其餘部分。<br />-原始緩衝區包含63個位元組和一個 Null 結束字元。 緩衝區一定是以 NULL 結尾。|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>執行 CHAR 和 WCHAR 轉換  
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驅動程式提供了幾種方法來執行 CHAR 和 WCHAR 轉換。 邏輯類似于操作 blob （Varchar （max）、Nvarchar （max） ...）：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驅動程式提供了幾種方法來執行 CHAR 和 WCHAR 轉換。 邏輯類似于操作 blob （Varchar （max）、Nvarchar （max） ...）：  
   
 -   當使用**SQLBindCol**或**SQLBindParameter**系結時，資料會儲存或截斷至指定的緩衝區。  
   

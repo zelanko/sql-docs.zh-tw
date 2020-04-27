@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156829"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
@@ -31,9 +31,8 @@ ms.locfileid: "63156829"
   
  SqlClient 不支援擷取有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索) (CommandType.SchemaOnly)。 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client{2}  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 不支援擷取有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索)。 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 不支援擷取有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索)。 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
  下列建議適用於使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式時的原生編譯預存程序呼叫。  
   
@@ -49,8 +48,7 @@ ms.locfileid: "63156829"
   
 -   使用 `SQLExecute`，執行預存程序多次。  
   
- 下列程式碼片段示範將項目加入訂單的預存程序備妥執行。 
-  `SQLPrepare` 只呼叫一次，而 `SQLExecute` 多次呼叫，每個程序執行各呼叫一次。  
+ 下列程式碼片段示範將項目加入訂單的預存程序備妥執行。 `SQLPrepare` 只呼叫一次，而 `SQLExecute` 多次呼叫，每個程序執行各呼叫一次。  
   
 ```  
 // Bind parameters  
@@ -395,6 +393,6 @@ int _tmain() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](natively-compiled-stored-procedures.md)  
+ [原生編譯的預存程式](natively-compiled-stored-procedures.md)  
   
   

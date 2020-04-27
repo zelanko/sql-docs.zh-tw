@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157091"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
@@ -35,8 +35,7 @@ ms.locfileid: "63157091"
   
 -   公司原則禁止啟用 Database Mail 或 SQL Mail。 因此，建立原則來檢查這兩項功能的伺服器狀態。 管理員會比較伺服器狀態與此原則。 如果伺服器狀態不符合規範，管理員就會選擇設定模式，而且此原則會讓伺服器狀態符合規範。  
   
--   
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫具有要求所有預存程序都以字母 AW_ 為開頭的命名慣例。 因此，建立原則來強制執行此原則。 管理員會測試此原則，並且收到不符合規範之預存程序的清單。 如果未來的預存程序不符合此命名慣例，預存程序的建立陳述式就會失敗。  
+-   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫具有要求所有預存程序都以字母 AW_ 為開頭的命名慣例。 因此，建立原則來強制執行此原則。 管理員會測試此原則，並且收到不符合規範之預存程序的清單。 如果未來的預存程序不符合此命名慣例，預存程序的建立陳述式就會失敗。  
   
 > [!NOTE]  
 >  請注意，原則可能會影響某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能之運作方式。 例如，異動資料擷取和異動複寫都會使用沒有索引的 systranschemas 資料表。 如果您啟用了所有資料表都必須擁有索引的原則，則強制此原則的合規性將會造成這些功能失敗。  
@@ -54,7 +53,7 @@ ms.locfileid: "63157091"
  若為失敗的原則，[物件總管] 會指出嚴重健全狀況警告成為目標旁的紅色圖示以及 [物件總管] 樹狀結構中較高的節點。  
   
 > [!NOTE]  
->  當系統計算原則的物件集時，根據預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  當系統計算原則的物件集時，根據預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>原則式管理概念  
  原則式管理有三個元件：  
@@ -73,7 +72,7 @@ ms.locfileid: "63157091"
   
     -   **視需要**。 這種模式會在使用者直接指定時評估原則。  
   
-    -   **變更時：避免**。 這種自動模式會使用 DDL 觸發程序來防止原則違規。  
+    -   **變更時: 避免**。 這種自動模式會使用 DDL 觸發程序來防止原則違規。  
   
         > [!IMPORTANT]  
         >  如果停用了巢狀觸發程序伺服器組態選項，[變更時: 避免]**** 將無法正確運作。 以原則為基礎的管理會依賴 DDL 觸發程序來偵測及回復不符合使用此評估模式之原則的 DDL 作業。 移除以原則為基礎的管理 DDL 觸發程序或停用巢狀觸發程序時，將會造成這個評估模式失敗或以非預期的方式執行。  
@@ -92,8 +91,7 @@ ms.locfileid: "63157091"
  針對特定 Managed 目標類型建立行為或特性模型的一組邏輯屬性。 屬性的數目和特性會建立在 Facet 中，而且只能由 Facet 的建立者加入或移除。 一個目標類型可以實作一或多個管理 Facet，而一個管理 Facet 可以由一或多個目標類型實作。 Facet 的某些屬性只能套用至特定版本。  
   
  以原則為基礎的管理條件  
- 一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與管理 Facet 有關)。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在評估條件時嘗試觀察定序。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序不完全符合 Windows 定序時，請測試您的條件，以決定演算法如何解決衝突。  
+ 一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與管理 Facet 有關)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在評估條件時嘗試觀察定序。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序不完全符合 Windows 定序時，請測試您的條件，以決定演算法如何解決衝突。  
   
  以原則為基礎的管理原則  
  以原則為基礎的管理條件和預期的行為，例如評估模式、目標篩選和排程。 一個原則只能包含一個條件。 您可以啟用或停用原則。 原則會儲存在 msdb 資料庫中。  
@@ -131,9 +129,9 @@ ms.locfileid: "63157091"
 |描述如何確認伺服器執行個體、資料庫、伺服器物件或資料庫物件符合原則。|[根據物件評估原則式管理原則](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [根據原則式管理原則評估該原則](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [依照排程評估原則式管理原則](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |描述如何檢視及複製原則式管理 Facet 狀態至檔案|[使用原則式管理 Facet](working-with-policy-based-management-facets.md)|  
 |提供一組原則檔可讓您將其做為最佳作法原則進行匯入，然後說明如何針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集，評估原則。|[使用原則式管理來監視和強制最佳做法](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|在 ** 中提供物件總管的 [原則管理]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 節點之 F1 說明主題。|[原則管理節點 &#40;物件總管&#41;](../../ssms/object/object-explorer.md)|  
+|在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供物件總管的 [原則管理]**** 節點之 F1 說明主題。|[原則管理節點 &#40;物件總管&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [以原則為基礎的管理檢視 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
+ [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

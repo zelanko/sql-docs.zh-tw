@@ -11,15 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161998"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>為記憶體最佳化的物件定義持久性
-  記憶體中 OLTP 可保證完整的不可部分完成性、一致性、隔離性與完全持久性 (ACID) 屬性。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境和記憶體最佳化的資料表中的持久性會提供下列保證：  
+  記憶體中 OLTP 可保證完整的不可部分完成性、一致性、隔離性與完全持久性 (ACID) 屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境和記憶體最佳化的資料表中的持久性會提供下列保證：  
   
  交易持久性  
  當您認可一項對記憶體最佳化資料表進行 (DDL 或 DML) 變更的完全持久交易時，對持久的記憶體最佳化資料表所做的變更就會變成永久變更。  

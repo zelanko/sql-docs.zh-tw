@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162329"
 ---
 # <a name="delete-an-index"></a>刪除索引
@@ -40,17 +40,17 @@ ms.locfileid: "63162329"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  使用此方法無法刪除以 PRIMARY KEY 或 UNIQUE 條件約束之結果所建立的索引。 而是必須刪除條件約束。 若要移除條件約束和對應的索引，請搭配 [中的 DROP CONSTRAINT 子句來使用](/sql/t-sql/statements/alter-table-transact-sql) ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]。 如需詳細資訊，請參閱 [Delete Primary Keys](../tables/delete-primary-keys.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 依預設，這個權限會授與 **系統管理員** 固定伺服器角色以及 **db_ddladmin** 和 **db_owner** 固定資料庫角色。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-an-index-by-using-object-explorer"></a>若要使用物件總管刪除索引  
   
@@ -84,7 +84,7 @@ ms.locfileid: "63162329"
   
 8.  在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-an-index"></a>若要刪除索引  
   

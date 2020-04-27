@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f5dfd3a6a7615fa3fd91c917bba6dbf0808f0f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63163979"
 ---
 # <a name="removing-a-data-processing-extension"></a>移除資料處理延伸模組
@@ -26,7 +26,7 @@ ms.locfileid: "63163979"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../reporting-services-extensions.md)   
- [實作資料處理延伸模組](implementing-a-data-processing-extension.md)   
+ [執行資料處理延伸模組](implementing-a-data-processing-extension.md)   
  [Reporting Services 延伸模組程式庫](../reporting-services-extension-library.md)  
   
   

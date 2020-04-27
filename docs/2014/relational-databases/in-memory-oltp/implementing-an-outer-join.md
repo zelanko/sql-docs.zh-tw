@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158167"
 ---
 # <a name="implementing-an-outer-join"></a>實作外部聯結
@@ -113,7 +113,7 @@ exec dbo.usp_left_join
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯預存程序的移轉問題](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [原生編譯預存程式的遷移問題](migration-issues-for-natively-compiled-stored-procedures.md)   
  [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162390"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>設定原則式管理的一般屬性
@@ -36,22 +36,22 @@ ms.locfileid: "63162390"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-policy-based-management"></a>設定以原則為基礎的管理  
   
-1.  在物件總管  中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
+1.  在物件總管**** 中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理]  ，然後選取 [屬性]  。  
+3.  以滑鼠右鍵按一下 [原則管理]****，然後選取 [屬性]****。  
   
      **[原則管理屬性]** 對話方塊有下列選項。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "63162390"
   
     -   當這個值為 true 時，成功和失敗的原則評估都會記錄下來。  
   
-4.  完成後，請按一下 **[確定]** 。  
+4.  完成時按一下 **[確定]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-policy-based-management"></a>設定以原則為基礎的管理  
   

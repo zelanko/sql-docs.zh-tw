@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162441"
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
@@ -36,11 +36,11 @@ ms.locfileid: "63162441"
   
 -   SET 選項需求  
   
- **擁有權需求**  
+ **Ownership Requirements**  
   
  計算資料行中的所有函數參考都必須與資料表具有相同的擁有者。  
   
- **確定性需求**  
+ **Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  如果運算式一定會針對指定的輸入集傳回相同的結果，這些運算式就具有決定性。 **COLUMNPROPERTY** 函數的 [IsDeterministic](/sql/t-sql/functions/columnproperty-transact-sql) 屬性會報告 *computed_column_expression* 是否具決定性。  
@@ -58,13 +58,13 @@ ms.locfileid: "63162441"
  任何包含 Common Language Runtime (CLR) 運算式的計算資料行都必須具有決定性，而且必須在製作索引前標示為 PERSISTED。 在計算的資料行定義中允許 CLR 使用者自訂類型的運算式。 具有 CLR 使用者自訂類型的計算資料行，只要類型是可比較的就可製作索引。 如需詳細資訊，請參閱 [CLR 使用者定義型別](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 > [!NOTE]  
->  當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中參考索引計算資料行內的日期資料類型字串常值時，我們建議您使用具有決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。 除非資料庫相容性層級設定為 80 或以下，否則牽涉到將字元字串隱含轉換成日期資料類型的運算式都會視為不具決定性。 這是因為結果需視伺服器會話的[LANGUAGE](/sql/t-sql/statements/set-language-transact-sql)和[DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql)設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`30 listopad 1996`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')`中，「 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 」會根據 DATEFORMAT 設定來解譯 `'2000-12-01'` 字串。  
+>  當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中參考索引計算資料行內的日期資料類型字串常值時，我們建議您使用具有決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。 除非資料庫相容性層級設定為 80 或以下，否則牽涉到將字元字串隱含轉換成日期資料類型的運算式都會視為不具決定性。 這是因為結果需視伺服器工作階段的 [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) 和 [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) 設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`30 listopad 1996`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')`中，「 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 」會根據 DATEFORMAT 設定來解譯 `'2000-12-01'` 字串。  
 >   
 >  除非相容性層級設定為 80 或以下，否則，定序之間的非 Unicode 字元資料的隱含轉換被視為不具決定性。  
 >   
 >  當資料庫相容性層級設定為 90 時，您就不能在包含這些運算式的計算資料行上建立索引。 但是，包含這些來自升級資料庫之運算式的現有計算資料行是可以維護的。 如果您使用包含字串到日期之隱含轉換的索引計算資料行，請確定資料庫和應用程式中 LANGUAGE 和 DATEFORMAT 設定是一致的，以避免索引損毀。  
   
- **精確度需求**  
+ **Precision Requirements**  
   
  *computed_column_expression* 必須精確。 若下列一或多種情況成立， *computed_column_expression* 就會精確：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63162441"
   
 -   從 `image`、`ntext` 以及 `text` 資料類型所衍生的計算資料行，只要其資料類型可作為非索引鍵之索引資料行，就可作為非叢集索引中無索引鍵 (內含) 的資料行。  
   
- **設定選項需求**  
+ **SET 選項需求**  
   
 -   執行定義計算資料行的 CREATE TABLE 或 ALTER TABLE 陳述式時，ANSI_NULLS 連接層級選項必須設定為 ON。 [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) 函數將透過 **IsAnsiNullsOn** 屬性，報告選項是否為開啟狀態。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63162441"
   
      當資料庫的相容性層級設定為 90 或以上時，將 ANSI_WARNINGS 設定為 ON 也會將 ARITHABORT 隱含設定為 ON。  
   
-##  <a name="BKMK_persisted"></a> 在保存的計算資料行上建立索引  
+##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 在保存的計算資料行上建立索引  
  如果計算的資料行在 CREATE TABLE 或 ALTER TABLE 陳述式中是標示成 PERSISTED，就可在以具有決定性但不精確的運算式所定義的計算資料行上建立索引。 這表示當在[!INCLUDE[ssDE](../../../includes/ssde-md.md)]資料行上建立索引時，以及在查詢中參考索引時，會使用這些保存的值。 此選項可讓您在計算資料行上建立索引[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]，但同時具有決定性且精確。  
   
 ## <a name="related-content"></a>相關內容  

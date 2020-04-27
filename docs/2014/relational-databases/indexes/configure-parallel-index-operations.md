@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157475"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
@@ -43,9 +43,9 @@ ms.locfileid: "63157475"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   查詢最佳化工具所使用的處理器數目通常可以提供最佳的效能。 然而，諸如建立、重建、卸除非常大的索引都需要大量的資源，並可能在索引作業期間造成其他應用程式和資料庫作業的資源不足。 當發生此問題時，您可以限制索引作業要使用的處理器數目，藉以手動設定執行索引陳述式要使用的最大處理器數目。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "63157475"
   
 -   如果查詢最佳化工具將平行處理原則的程度套用至建立作業，則需要排序的資料分割索引作業可能需要更多的記憶體。 平行處理原則的程度愈高，所需的記憶體就愈大。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)＞。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>若要在索引上設定平行處理原則的最大程度  
   
@@ -90,15 +90,15 @@ ms.locfileid: "63157475"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]  。  
   
-6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
   
-7.  選取 **[平行處理原則的最大程度]**，然後輸入介於 1 和 64 之間的一些值。  
+7.  選取 **[平行處理原則的最大程度]** ，然後輸入介於 1 和 64 之間的一些值。  
   
 8.  按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>若要在現有索引上設定平行處理原則的最大程度  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63157475"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+ 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>在新索引上設定平行處理原則的最大程度  
   

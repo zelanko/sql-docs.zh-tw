@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183015"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
@@ -47,12 +47,12 @@ ms.locfileid: "63183015"
 |平均磁碟讀取 IO (毫秒)|從磁碟讀取作業的平均時間 (毫秒)。|  
 |磁碟寫入 IO/秒|上一秒寫入至磁碟的作業數目。|  
 |節流的磁碟寫入 IO/秒|上一秒寫入的節流作業數。|  
-| Disk Write Bytes/sec|上一秒寫入至磁碟的位元組數。|  
+|Disk Write Bytes/sec|上一秒寫入至磁碟的位元組數。|  
 |平均磁碟寫入 IO (毫秒)|寫入磁碟作業的平均時間 (毫秒)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視資源使用量 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
- [SQL Server, Workload Group Stats 物件](sql-server-workload-group-stats-object.md)   
+ [SQL Server，工作負載群組統計資料物件](sql-server-workload-group-stats-object.md)   
  [資源管理員](../resource-governor/resource-governor.md)  
   
   

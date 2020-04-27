@@ -15,15 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c0cd3a0390fb1e7fa447264449a0bdb9407e9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164349"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>建立資料處理延伸模組程式庫
-  每個您建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組都應該指派到唯一的命名空間，並內建於程式庫或是組件檔中。 命名空間的正確名稱並不重要，但是它必須是唯一且未與其他延伸模組共用。 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 為 <xref:Microsoft.ReportingServices.DataProcessing> 隨附的資料處理延伸模組使用命名空間 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 您應該為公司的資料處理延伸模組建立自己的唯一命名空間。  
+  每個您建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組都應該指派到唯一的命名空間，並內建於程式庫或是組件檔中。 命名空間的正確名稱並不重要，但是它必須是唯一且未與其他延伸模組共用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 為 <xref:Microsoft.ReportingServices.DataProcessing> 隨附的資料處理延伸模組使用命名空間 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 您應該為公司的資料處理延伸模組建立自己的唯一命名空間。  
   
  下列範例示範開始 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組的程式碼，這是使用包含資料處理介面與任何公用程式類別的命名空間。  
   
@@ -52,7 +51,7 @@ namespace CompanyName.ExtensionName
 csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- 下列程式[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]代碼範例示範將用於副檔名為 .vb 之檔案的命令。  
+ 下列程式碼範例示範將用於副檔名為 .vb 之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 檔案的命令。  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  

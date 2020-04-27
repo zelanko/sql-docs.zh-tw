@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09d6099ea9c80e9ce237e3462cec93fa66626b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164028"
 ---
 # <a name="using-comments"></a>使用註解
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可讓您輕鬆地將部分腳本批註在一起。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可讓您輕易地將部分指令碼註解化。  
   
 ## <a name="commenting-out-part-of-a-script"></a>將部分指令碼註解化  
   

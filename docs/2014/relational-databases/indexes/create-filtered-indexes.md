@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155381"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
@@ -56,15 +56,15 @@ ms.locfileid: "63155381"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Design"></a> 設計考量  
+###  <a name="design-considerations"></a><a name="Design"></a> 設計考量  
   
 -   當資料行僅具有少數的查詢相關值時，可以在值的子集上建立篩選索引。 例如，當資料行中的值大部分都是 NULL 且查詢只會從非 NULL 值進行選取時，您可以針對非 NULL 的資料列建立篩選索引。 所產生的索引比在相同的索引鍵資料行上定義的全資料表非叢集索引還小，維護成本也比較低。  
   
 -   當資料表具有異質資料列時，您可以針對一或多個資料類別建立篩選索引。 這會將查詢焦點縮小為資料表的特定區域，改善這些資料列的查詢效能。 同樣地，所產生的索引比完整資料表非叢集索引還小，維護成本也比較低。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   您無法在檢視上建立篩選索引； 不過，如果在檢視中參考的資料表上定義篩選索引，則可為查詢最佳化工具提供多項優點。 如果查詢結果會是正確的，則查詢最佳化工具會針對從檢視進行選取的查詢考慮篩選索引。  
   
@@ -90,12 +90,12 @@ ms.locfileid: "63155381"
   
 -   如果在篩選索引的篩選索引運算式中指定的比較運算子產生隱含或明確的資料轉換，則如果該轉換是發生在比較運算子的左側，就會發生錯誤。 解決方案是以資料轉換運算子 (CAST 或 CONVERT) 在比較運算子的右側寫下篩選索引運算式。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。 若要修改篩選索引運算式，請使用 CREATE INDEX WITH DROP_EXISTING。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>建立篩選的索引  
   
@@ -105,13 +105,13 @@ ms.locfileid: "63155381"
   
 3.  按一下加號展開要建立篩選索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
+4.  以滑鼠右鍵按一下 [**索引**] 資料夾，指向 [**新增索引**]，然後選取 [**非叢集索引**]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
 6.  在 [**索引鍵資料行**] 下，按一下 [**新增**]。  
   
-7.  在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至唯一索引之資料表資料行的核取方塊。  
+7.  在 [從 <資料表名稱>__ 選取資料行]**** 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 [確定]  。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63155381"
   
 10. 按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>建立篩選的索引  
   
