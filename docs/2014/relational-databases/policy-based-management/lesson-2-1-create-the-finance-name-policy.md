@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792907"
 ---
 # <a name="create-the-finance-name-policy"></a>建立 Finance Name 原則
-  在這項工作中，您將建立名為財務的資料庫，然後建立一個條件，要求所有資料表的開頭都是字母**fintbl 為開頭**。 接著，您將會建立原則和原則類別目錄，以便針對 Finance 資料庫中的資料表強制執行命名標準。  
+   在這項工作中，您將會建立名為 Finance 的資料庫，然後建立要求所有資料表都以字母 **fintbl** 為開頭的條件。 接著，您將會建立原則和原則類別目錄，以便針對 Finance 資料庫中的資料表強制執行命名標準。  
   
 ### <a name="to-create-the-finance-database"></a>建立 Finance 資料庫  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67792907"
   
 1.  在物件總管中，展開 [管理]****，以滑鼠右鍵按一下 [原則管理]****，然後按一下 [管理類別目錄]****。  
   
-2.  在 [**管理原則類別目錄**] 對話方塊中****，于 [ `Finance`名稱] 底下的空白方塊中輸入，然後清除 [託管**資料庫訂閱**]。 [託管**資料庫訂閱**] 將會強制實例中的每個資料庫訂閱屬於這個原則類別目錄的原則。 基於這個理由，只有 Finance 資料庫應該訂閱 Finance Name 原則。  
+2.  在 [**管理原則類別目錄**] 對話方塊中**Name**，于 [ `Finance`名稱] 底下的空白方塊中輸入，然後清除 [託管**資料庫訂閱**]。 [託管資料庫訂閱]**** 將會強制執行個體中的每一個資料庫訂閱屬於這個原則類別目錄的原則。 基於這個理由，只有 Finance 資料庫應該訂閱 Finance Name 原則。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

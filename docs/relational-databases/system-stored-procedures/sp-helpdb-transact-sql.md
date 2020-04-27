@@ -18,10 +18,10 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67903024"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
@@ -52,19 +52,19 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**db_size**|**Nvarchar （13）**|資料庫的總大小。|  
 |**主人**|**sysname**|資料庫擁有者，例如**sa**。|  
 |**dbid**|**smallint**|資料庫識別碼。|  
-|**已**|**nvarchar(11)**|資料庫的建立日期。|  
-|**狀態**|**Nvarchar （600）**|資料庫目前所設定的資料庫選項值清單 (以逗號分隔)。<br /><br /> 布林值選項必須已啟用，才會列出。 非布林值選項會以*option_name*=*值*的形式，列出其對應的值。<br /><br /> 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
+|**created**|**nvarchar(11)**|資料庫的建立日期。|  
+|**status**|**Nvarchar （600）**|資料庫目前所設定的資料庫選項值清單 (以逗號分隔)。<br /><br /> 布林值選項必須已啟用，才會列出。 非布林值選項會以*option_name*=*值*的形式，列出其對應的值。<br /><br /> 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |**compatibility_level**|**tinyint**|資料庫相容性層級：60、65、70、80 或 90。|  
   
  如果指定*name* ，則會有一個額外的結果集，顯示指定資料庫的檔案配置。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**Nchar （128）**|邏輯檔案名稱。|  
+|**name**|**nchar(128)**|邏輯檔案名稱。|  
 |**fileid**|**smallint**|檔案識別碼。|  
 |**名稱**|**Nchar （260）**|作業系統檔案名稱 (實體檔案名稱)。|  
-|**檔案群組**|**nvarchar(128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
-|**容量**|**Nvarchar （18）**|檔案大小 (以 MB 為單位)。|  
+|**filegroup**|**nvarchar(128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
+|**size**|**Nvarchar （18）**|檔案大小 (以 MB 為單位)。|  
 |**maxsize**|**Nvarchar （18）**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**growth**|**Nvarchar （18）**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
 |**實例**|**Varchar （9）**|檔案的使用方式。 針對資料檔案，此值為「**僅限資料**」，而記錄檔的值為「**僅限記錄**」。|  
@@ -96,9 +96,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [建立資料庫 &#40;SQL Server Transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   

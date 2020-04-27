@@ -21,10 +21,10 @@ ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900656"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
@@ -38,17 +38,17 @@ ms.locfileid: "67900656"
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|WSFC 叢集的名稱，該叢集會裝載啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 執行個體。|  
 |**quorum_type**|**tinyint**|這個 WSFC 叢集所使用的仲裁類型，可為下列其中一個值：<br /><br /> 0 = 節點多數。 此仲裁設定可維持一半節點的失敗數 (四捨五入) 減一。 例如，在七個節點的叢集上，這個仲裁設定可以維持三個節點失敗數。<br /><br /> 1 = 節點與磁碟多數。 如果磁碟見證依然在線上，此仲裁設定可維持一半節點的失敗數 (四捨五入)。 例如，如果在六個節點的叢集中，有磁碟見證處於線上，則可維持三個節點失敗數。 如果磁碟見證離線或失敗，此仲裁設定可維持一半節點的失敗數 (四捨五入) 減一。 例如，如果在六個節點的叢集中，有失敗的磁碟見證，則可維持兩個節點 (3-1=2) 失敗數。<br /><br /> 2 = 節點與檔案共用多數。 此仲裁設定的運作方式類似於「節點與磁碟多數」，但是會使用檔案共用見證，而非磁碟見證。<br /><br /> 3 = 無多數，僅限磁碟。 如果仲裁磁碟在線上，此仲裁設定可維持所有節點的失敗數，除了一以外。<br /><br /> 4 = 未知的仲裁。 叢集的未知仲裁。<br /><br /> 5 = 雲端見證。 叢集會利用仲裁仲裁的 Microsoft Azure。 如果有可用的雲端見證，叢集就可以承受一半節點的失敗（進位）。|  
-|**quorum_type_desc**|**Varchar （50）**|**Quorum_type**的描述，下列其中一個：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
+|**quorum_type_desc**|**varchar(50)**|**Quorum_type**的描述，下列其中一個：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
 |**quorum_state**|**tinyint**|WSFC 仲裁的狀態，下列其中一個值：<br /><br /> 0 = 未知仲裁狀態<br /><br /> 1 = 正常仲裁<br /><br /> 2 = 強制仲裁|  
-|**quorum_state_desc**|**Varchar （50）**|**Quorum_state**的描述，下列其中一個：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
+|**quorum_state_desc**|**varchar(50)**|**Quorum_state**的描述，下列其中一個：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [AlwaysOn 可用性群組目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [dm_hadr_cluster_members &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
+ [Always On 可用性群組動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Always On 可用性群組目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

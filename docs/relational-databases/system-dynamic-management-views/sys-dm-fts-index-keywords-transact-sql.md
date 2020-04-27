@@ -21,10 +21,10 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900942"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
@@ -77,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  **Sys. dm_fts_index_keywords**所傳回的**document_count** ，對於特定檔而言，可能會比**sys. dm_fts_index_keywords_by_document**或**CONTAINS**查詢所傳回的計數較不精確。 據估計，這類潛在錯誤應不到 1%。 這項誤差可能會發生，因為**document_id**在索引片段中的多個資料列之間繼續計算兩次，或在相同的資料列中出現多次時。 若要為特定檔取得更精確的計數，請使用**sys.databases dm_fts_index_keywords_by_document**或**包含**查詢。  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   

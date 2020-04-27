@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412976"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>在 SQL Server Reporting Services (SSRS) 中預覽報表
@@ -41,9 +41,9 @@ ms.locfileid: "67412976"
  如果您使用建立報表但是未部署報表的專案組態，則在目前組態之 `StartItem` 屬性中所指定的報表，會在另一個預覽視窗中開啟。 預覽視窗顯示報表的方式和功能都與 [預覽] 模式相同。  
   
 > [!NOTE]  
-> 在偵錯報表之前，您必須設定一個啟動項目。 若要設定起始專案，請在方案總管中，以滑鼠右鍵按一下報表專案****，再按一下 [屬性`StartItem`]，然後在中選取要顯示的報表名稱。  
+> 在偵錯報表之前，您必須設定一個啟動項目。 若要設定起始專案，請在方案總管中，以滑鼠右鍵按一下報表專案**Properties**，再按一下 [屬性`StartItem`]，然後在中選取要顯示的報表名稱。  
   
- 如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 **[執行]**。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
+ 如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]****。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   
 ## <a name="print-preview"></a>預覽列印
 

@@ -18,10 +18,10 @@ ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8822b0e7c56fe109a251365050f5aed9cdef178
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907362"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67907362"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|篩選資料快照集作業的識別碼。|  
+|**id**|**int**|篩選資料快照集作業的識別碼。|  
 |**name**|**sysname**|篩選資料快照集作業的名稱。|  
 |**pubid**|**uniqueidentifier**|這個發行集的唯一識別碼。|  
 |**job_id**|**uniqueidentifier**|散發者的 SQL Server Agent 作業的識別碼。|  

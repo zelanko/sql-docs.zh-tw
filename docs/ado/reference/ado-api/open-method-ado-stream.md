@@ -17,10 +17,10 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917830"
 ---
 # <a name="open-method-ado-stream"></a>Open 方法 (ADO Stream)
@@ -34,10 +34,10 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>參數  
- *Source*  
+ *來源*  
  選擇性。 **變數**值，指定**資料流程**的資料來源。 *來源*可能包含指向已知樹狀結構中現有節點（例如電子郵件或檔案系統）的絕對 URL 字串。 您應該使用 url 關鍵字（"url =*配置*：//*伺服器*/*資料夾*"）來指定 url。 或者， *Source*可能包含已開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件的參考，這會開啟與**記錄**相關聯的預設資料流程。 如果未指定*Source* ，則會具現化並開啟**資料流程**，預設與沒有基礎來源相關聯。 如需 URL 配置及其相關聯提供者的詳細資訊，請參閱[絕對和相對 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
- *模式*  
+ *Mode*  
  選擇性。 [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值，指定結果**資料流程**的存取模式（例如，讀取/寫入或唯讀）。 預設值為**adModeUnknown**。 如需存取模式的詳細資訊，請參閱[Mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性。 如果未指定*模式*，則會由來源物件繼承。 例如，如果在唯讀模式中開啟來源**記錄**，則根據預設，**資料流程**也會以唯讀模式開啟。  
   
  *OpenOptions*  

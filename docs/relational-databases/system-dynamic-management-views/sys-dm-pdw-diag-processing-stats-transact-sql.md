@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899534"
 ---
 # <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys.databases dm_pdw_diag_processing_stats （Transact-sql）
@@ -30,7 +30,7 @@ ms.locfileid: "67899534"
 |**process_id**|**int**|正在提交此統計資料之進程的識別碼。|  
 |**target_name**|**nvarchar(255)**|佇列的名稱。|  
 |**queue_size**|**int**|進程佇列中的專案數。 佇列大小通常是0。 正數表示系統正在承受壓力，而且正在建立事件的待處理專案（backlog）。 其他資料行中的正計數表示系統已損毀該特定佇列和任何相關的 Dmv。|  
-|**lost_events_count**|**Bigint**|遺失的事件數目。|  
+|**lost_events_count**|**bigint**|遺失的事件數目。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

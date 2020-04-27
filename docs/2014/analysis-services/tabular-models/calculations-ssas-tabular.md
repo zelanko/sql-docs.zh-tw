@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284910"
 ---
 # <a name="calculations-ssas-tabular"></a>計算 (SSAS 表格式)
@@ -24,7 +24,7 @@ ms.locfileid: "67284910"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[瞭解表格式模型中的 DAX &#40;SSAS 表格式&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|描述 Data Analysis Expressions (DAX) 公式語言，可用來在表格式模型中建立導出資料行、量值和資料列篩選的計算。|  
+|[了解表格式模型中的 DAX &#40;SSAS 表格式&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|描述 Data Analysis Expressions (DAX) 公式語言，可用來在表格式模型中建立導出資料行、量值和資料列篩選的計算。|  
 |[DirectQuery 模式中的公式相容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|描述差異、列出 DirectQuery 模式不支援的函數，並且列出受支援但可能會傳回不同結果的函數。|  
 |[&#40;DAX&#41; 參考的資料分析運算式](/dax/data-analysis-expressions-dax-reference)|本節提供 DAX 語法、運算子和函數的詳細描述。|  
   

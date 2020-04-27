@@ -11,17 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046760"
 ---
-# <a name="lesson-3-adding-logging"></a>第 3 課：加入記錄
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包含記錄功能，可讓您藉由提供工作和容器事件的追蹤來疑難排解和監視封裝執行。 記錄功能很有彈性，可在封裝層級或在封裝內的個別工作和容器上啟用。 您可以選取要記錄的事件，以及針對單一封裝建立多個記錄。  
+# <a name="lesson-3-adding-logging"></a>第 3 課：新增記錄
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含的記錄功能，可讓您藉由提供工作和容器事件的追蹤來對套件執行進行疑難排解和監視。 記錄功能很有彈性，可在封裝層級或在封裝內的個別工作和容器上啟用。 您可以選取要記錄的事件，以及針對單一封裝建立多個記錄。  
   
- 記錄是由記錄提供者提供。 每一個記錄提供者都可將記錄資訊寫入至不同格式和目的地類型。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供下列記錄提供者：  
+ 記錄是由記錄提供者提供。 每一個記錄提供者都可將記錄資訊寫入至不同格式和目的地類型。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供下列記錄提供者：  
   
 -   文字檔  
   
@@ -41,13 +40,13 @@ ms.locfileid: "67046760"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1：複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [步驟 1:複製第 2 課的封裝](lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [步驟 2：加入和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
+-   [步驟 2:新增和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
   
 -   [步驟 3：測試第 3 課的教學課程封裝](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1：複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
+ [步驟 1:複製第 2 課的封裝](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

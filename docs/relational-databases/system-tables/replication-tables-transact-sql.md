@@ -16,10 +16,10 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910231"
 ---
 # <a name="replication-tables-transact-sql"></a>複寫資料表 (Transact-SQL)
@@ -139,7 +139,7 @@ ms.locfileid: "67910231"
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另請參閱  
- [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

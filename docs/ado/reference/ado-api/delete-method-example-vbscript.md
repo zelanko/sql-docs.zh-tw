@@ -15,16 +15,16 @@ ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919111"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete 方法範例 (VBScript)
 這個範例會使用[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法，從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)移除指定的記錄。  
   
- 在 Active Server Page （ASP）中使用下列範例。 若要查看此功能完整的範例，您必須擁有位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的資料來源 Advworks-srv01 （隨附于 SDK），或編輯範例程式碼中的路徑，以反映這個檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
+ 在 Active Server Page （ASP）中使用下列範例。 若要查看此功能完整的範例，您必須擁有位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的資料來源 Advworks-srv01 .mdb （與 SDK 一起安裝），或編輯範例程式碼中的路徑，以反映此檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
   
  使用 [**尋找**] 找出 Adovbs 檔案，並將它放在您打算使用的目錄中。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器中，然後將它儲存為**DeleteVBS。** 您可以在任何用戶端瀏覽器中查看結果。  
   

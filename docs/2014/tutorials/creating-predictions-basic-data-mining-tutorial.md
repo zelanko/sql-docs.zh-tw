@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67597516"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>建立預測 (基本資料採礦教學課程)
@@ -53,7 +53,7 @@ ms.locfileid: "67597516"
   
      請注意，並非每一個資料行都會對應。 我們會加入數個**資料表資料行**的對應。 另外還會依據目前的日期資料行產生新的生日資料行，讓資料行更好比對。  
   
-2.  在****[ `Bike Buyer`資料表資料行] 底下，按一下資料格，然後從下拉式清單中選取 [ProspectiveBuyer 未知]。  
+2.  在**Table Column**[ `Bike Buyer`資料表資料行] 底下，按一下資料格，然後從下拉式清單中選取 [ProspectiveBuyer 未知]。  
   
      這會將可預測的資料行 [Bike Buyer] 對應到輸入資料表資料行。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "67597516"
   
      讓您可以移除查詢中的子句，而不必從設計師將其刪除。 當您使用複雜的查詢而想要保留語法時，這樣就不必複製 DMX 再貼入視窗，所以相當實用。  
   
--   **小組**  
+-   **群組**  
   
      在所選該行的開頭插入左括號，或在目前該行的結尾插入右括號。  
   

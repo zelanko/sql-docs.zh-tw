@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48282f08df588f54b6f03a0b99c58a2f0cf039ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793533"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher-replication-transact-sql-programming"></a>設定 Oracle 發行者的交易集作業 (複寫 Transact-SQL 程式設計)
@@ -37,15 +37,15 @@ ms.locfileid: "67793533"
   
 ### <a name="to-configure-the-transaction-set-job"></a>若要設定交易集作業  
   
-1.  (選擇性) 在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 針對 **\@publisher** 指定 Oracle 發行者的名稱。 這麼做會傳回「發行者」端 **Xactset** 作業的屬性。  
+1.  (選擇性) 在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 指定** \@發行者**的「Oracle 發行者」名稱。 這麼做會傳回「發行者」端 **Xactset** 作業的屬性。  
   
-2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 針對 **\@publisher** 指定 Oracle 發行者名稱、針對 **\@propertyname** 指定要設定的 Xactset 作業屬性名稱，並針對 **\@propertyvalue** 指定新設定。  
+2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql)。 指定** \@發行者**的「Oracle 發行者」名稱、針對** \@propertyname**所設定之 Xactset 作業屬性的名稱，以及適用于** \@propertyvalue**的新設定。  
   
 3.  (選擇性) 針對每個要設定的 Xactset 作業屬性重複步驟 2。 變更`xactsetjobinterval`屬性時，您必須在「Oracle 發行者」上重新開機作業，新的間隔才會生效。  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>若要檢視交易集作業的屬性  
   
-1.  在「散發者」端執行 [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql)。 針對 **\@publisher** 指定 Oracle 發行者的名稱。  
+1.  在「散發者」端執行 [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql)。 指定** \@發行者**的「Oracle 發行者」名稱。  
   
 ### <a name="to-disable-the-transaction-set-job"></a>若要停用交易集作業  
   

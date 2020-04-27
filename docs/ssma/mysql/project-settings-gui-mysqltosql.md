@@ -10,10 +10,10 @@ ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 10d45c885570d048aea33480990161fb0413ca4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908787"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>專案設定 (GUI) (MySQLToSQL)

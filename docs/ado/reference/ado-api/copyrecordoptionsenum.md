@@ -16,10 +16,10 @@ ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919375"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
@@ -30,7 +30,7 @@ ms.locfileid: "67919375"
 |**adCopyAllowEmulation**|4|指出*來源*提供者會嘗試使用下載和上傳作業來模擬複製，如果此方法因為*目的地*位於不同的伺服器上，或由不同于*來源*的提供者服務而失敗。 請注意，不同的提供者功能可能會妨礙效能或遺失資料。|  
 |**adCopyNonRecursive**|2|將目前目錄（但沒有其子目錄）複製到目的地。 複製作業不是遞迴的。|  
 |**adCopyOverWrite**|1|如果*目的地*指向現有的檔案或目錄，則覆寫檔案或目錄。|  
-|**adCopyUnspecified**|-1|預設。 執行預設複製作業：如果目的地檔案或目錄已經存在，作業就會失敗，而且作業會以遞迴方式複製。|  
+|**adCopyUnspecified**|-1|預設值。 執行預設複製作業：如果目的地檔案或目錄已經存在，作業就會失敗，而且作業會以遞迴方式複製。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
  這些常數沒有 ADO/WFC 對應項。  

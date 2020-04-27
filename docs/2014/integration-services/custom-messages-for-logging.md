@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67316670"
 ---
 # <a name="custom-messages-for-logging"></a>自訂訊息以進行記錄
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組豐富的自訂事件，可以為封裝和許多工作寫入記錄項目。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  
   
  自訂記錄項目是一組與可用於封裝以及所有容器和工作的標準記錄事件不同的項目。 自訂記錄項目可以用來擷取與封裝中特定工作相關的有用資訊。 例如，「執行 SQL」工作記錄的其中一個自訂記錄項目會在記錄檔中記錄該工作所執行的 SQL 陳述式。  
@@ -52,7 +51,7 @@ ms.locfileid: "67316670"
   
  [指令碼工作](#Script)  
   
- [傳送電子郵件工作](#SendMail)  
+ [傳送郵件工作](#SendMail)  
   
  [傳送資料庫工作](#TransferDatabase)  
   
@@ -76,17 +75,16 @@ ms.locfileid: "67316670"
   
 ## <a name="log-entries"></a>記錄項目  
   
-###  <a name="Package"></a> 封裝  
+###  <a name="package"></a><a name="Package"></a>包裹  
  下表列出封裝的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`PackageStart`|指出封裝已經開始執行。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |`PackageEnd`|指出封裝已經完成。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
-|`Diagnostic`|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。<br /><br /> 
-  `Diagnostic` 記錄項目也包括呼叫外部資料提供者之前和之後的項目。 如需詳細資訊，請參閱 [疑難排解工具封裝連接](troubleshooting/troubleshooting-tools-for-package-connectivity.md)。|  
+|`Diagnostic`|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。<br /><br /> `Diagnostic` 記錄項目也包括呼叫外部資料提供者之前和之後的項目。 如需詳細資訊，請參閱 [疑難排解工具封裝連接](troubleshooting/troubleshooting-tools-for-package-connectivity.md)。|  
   
-###  <a name="BulkInsert"></a>大量插入工作  
+###  <a name="bulk-insert-task"></a><a name="BulkInsert"></a>大量插入工作  
  下表列出「大量插入」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -95,7 +93,7 @@ ms.locfileid: "67316670"
 |`DTSBulkInsertTaskEnd`|指出大量插入已經完成。|  
 |`DTSBulkInsertTaskInfos`|提供有關工作的描述性資訊。|  
   
-###  <a name="DataFlow"></a>資料流程工作  
+###  <a name="data-flow-task"></a><a name="DataFlow"></a>資料流程工作  
  下表列出「資料流程」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -111,7 +109,7 @@ ms.locfileid: "67316670"
 |`PipelineExecutionTrees`|報告資料流程中的配置執行樹狀目錄。 資料流程引擎的排程器使用這些樹狀目錄來建立資料流程的執行計畫。|  
 |`PipelineInitialization`|提供有關工作的初始化資訊。 這項資訊包括作為 BLOB 資料暫存儲存位置使用的目錄、預設緩衝區大小，以及緩衝區中的資料列數目。 根據資料流程工作的組態而定，可能會寫入多個記錄項目。|  
   
-###  <a name="ExecuteDTS200"></a>執行 DTS 2000 工作  
+###  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> 執行 DTS 2000 工作  
  下表列出「執行 DTS 2000」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -121,7 +119,7 @@ ms.locfileid: "67316670"
 |`ExecuteDTS80PackageTaskTaskInfo`|提供有關工作的描述性資訊。|  
 |`ExecuteDTS80PackageTaskTaskResult`|報告工作執行之 DTS 2000 封裝的執行結果。|  
   
-###  <a name="ExecuteProcess"></a>執行處理工作  
+###  <a name="execute-process-task"></a><a name="ExecuteProcess"></a>執行處理工作  
  下表列出「執行處理」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -129,21 +127,21 @@ ms.locfileid: "67316670"
 |`ExecuteProcessExecutingProcess`|提供工作設定執行之可執行檔的執行處理相關資訊。<br /><br /> 將會寫入兩個記錄項目。 其中一個包含工作執行之可執行檔的名稱和位置相關資訊，另一個項目則記錄可執行檔的結束。|  
 |`ExecuteProcessVariableRouting`|提供有關哪些變數會傳到可執行檔之輸入和輸出的相關資訊。 將會寫入 stdin (輸入)、stdout (輸出) 和 stderr (錯誤輸出) 的記錄項目。|  
   
-###  <a name="ExecuteSQL"></a>執行 SQL 工作  
+###  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a>執行 SQL 工作  
  下表描述「執行 SQL」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|提供 SQL 陳述式執行階段的相關資訊。 寫入記錄項目的時機包括在工作取得資料庫連接時、在工作開始準備 SQL 陳述式時，以及在 SQL 陳述式執行完成之後。 準備階段的記錄項目包含工作所使用的 SQL 陳述式。|  
   
-###  <a name="FileSystem"></a>檔案系統工作  
+###  <a name="file-system-task"></a><a name="FileSystem"></a>檔案系統工作  
  下表描述「檔案系統」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`FileSystemOperation`|報告工作執行的作業。 記錄項目會在檔案系統作業開始時寫入，項目中包含有關來源和目的地的資訊。|  
   
-###  <a name="FTP"></a>FTP 工作  
+###  <a name="ftp-task"></a><a name="FTP"></a>FTP 工作  
  下表列出 FTP 工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -151,7 +149,7 @@ ms.locfileid: "67316670"
 |`FTPConnectingToServer`|指出工作已經起始與 FTP 伺服器的連接。|  
 |`FTPOperation`|報告工作執行之 FTP 作業的開始及其類型。|  
   
-###  <a name="MessageQueue"></a>訊息佇列工作  
+###  <a name="message-queue-task"></a><a name="MessageQueue"></a>訊息佇列工作  
  下表列出「訊息佇列」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -165,14 +163,14 @@ ms.locfileid: "67316670"
 |`MSMQTaskInfo`|提供有關工作的描述性資訊。|  
 |`MSMQTaskTimeOut`|指出工作已經逾時。|  
   
-###  <a name="Script"></a>腳本工作  
+###  <a name="script-task"></a><a name="Script"></a>腳本工作  
  下表描述「指令碼」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|報告在指令碼內實作記錄的結果。 每次呼叫 `Log` 物件的 `Dts` 方法時，都會寫入記錄項目。 項目會在程式碼執行時寫入。 如需詳細資訊，請參閱 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
-###  <a name="SendMail"></a>傳送郵件工作  
+###  <a name="send-mail-task"></a><a name="SendMail"></a>傳送郵件工作  
  下表列出「傳送郵件」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -181,7 +179,7 @@ ms.locfileid: "67316670"
 |`SendMailTaskEnd`|指出工作已經完成傳送電子郵件訊息。|  
 |`SendMailTaskInfo`|提供有關工作的描述性資訊。|  
   
-###  <a name="TransferDatabase"></a>傳送資料庫工作  
+###  <a name="transfer-database-task"></a><a name="TransferDatabase"></a>傳送資料庫工作  
  下表列出「傳送資料庫」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -189,7 +187,7 @@ ms.locfileid: "67316670"
 |`SourceDB`|指定工作所複製的資料庫。|  
 |`SourceSQLServer`|指定從中複製資料庫的電腦。|  
   
-###  <a name="TransferErrorMessages"></a>傳送錯誤訊息工作  
+###  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a>傳送錯誤訊息工作  
  下表列出「傳送錯誤訊息」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -197,7 +195,7 @@ ms.locfileid: "67316670"
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|指出工作已經完成傳送錯誤訊息。|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|指出工作已經開始傳送錯誤訊息。|  
   
-###  <a name="TransferJobs"></a>傳送作業工作  
+###  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a>傳送作業工作  
  下表列出「傳送作業」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -205,7 +203,7 @@ ms.locfileid: "67316670"
 |`TransferJobsTaskFinishedTransferringObjects`|指出工作已經完成傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業。|  
 |`TransferJobsTaskStartTransferringObjects`|指出工作已經開始傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業。|  
   
-###  <a name="TransferLogins"></a>傳送登入工作  
+###  <a name="transfer-logins-task"></a><a name="TransferLogins"></a>傳送登入工作  
  下表列出「傳送登入」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -213,7 +211,7 @@ ms.locfileid: "67316670"
 |`TransferLoginsTaskFinishedTransferringObjects`|指出工作已經完成傳送登入。|  
 |`TransferLoginsTaskStartTransferringObjects`|指出工作已經開始傳送登入。|  
   
-###  <a name="TransferMasterStoredProcedures"></a>傳送主要預存程式工作  
+###  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a>傳送主要預存程式工作  
  下表列出「傳送主要預存程序」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -221,7 +219,7 @@ ms.locfileid: "67316670"
 |`TransferStoredProceduresTaskFinishedTransferringObjects`|指出工作已經完成傳送儲存在 **master** 資料庫中的使用者定義預存程序。|  
 |`TransferStoredProceduresTaskStartTransferringObjects`|指出工作已經開始傳送儲存在 **master** 資料庫中的使用者定義預存程序。|  
   
-###  <a name="TransferSQLServerObjects"></a>傳送 SQL Server 物件工作  
+###  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a>傳送 SQL Server 物件工作  
  下表列出「傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -229,7 +227,7 @@ ms.locfileid: "67316670"
 |`TransferSqlServerObjectsTaskFinishedTransferringObjects`|指出工作已經完成傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫物件。|  
 |`TransferSqlServerObjectsTaskStartTransferringObjects`|指出工作已經開始傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫物件。|  
   
-###  <a name="WebServices"></a>Web 服務工作  
+###  <a name="web-services-task"></a><a name="WebServices"></a> Web 服務工作  
  下表列出您可以為「Web 服務」工作啟用的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -238,7 +236,7 @@ ms.locfileid: "67316670"
 |`WSTaskEnd`|工作已經完成 Web 服務方法。|  
 |`WSTaskInfo`|關於工作的描述性資訊。|  
   
-###  <a name="WMIDataReader"></a>WMI 資料讀取器工作  
+###  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a>WMI 資料讀取器工作  
  下表列出「WMI 資料讀取器」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -246,7 +244,7 @@ ms.locfileid: "67316670"
 |`WMIDataReaderGettingWMIData`|指出工作已經開始讀取 WMI 資料。|  
 |`WMIDataReaderOperation`|報告工作已執行的 WQL 查詢。|  
   
-###  <a name="WMIEventWatcher"></a>WMI 事件監看員工作  
+###  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a>WMI 事件監看員工作  
  下表列出「WMI 事件監看員」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -255,7 +253,7 @@ ms.locfileid: "67316670"
 |`WMIEventWatcherTimedout`|指出工作已經逾時。|  
 |`WMIEventWatcherWatchingForWMIEvents`|指出工作已經開始執行 WQL 查詢。 項目包含查詢。|  
   
-###  <a name="XML"></a>XML 工作  
+###  <a name="xml-task"></a><a name="XML"></a>XML 工作  
  下表描述 XML 工作的自訂記錄項目。  
   
 |記錄項目|描述|  

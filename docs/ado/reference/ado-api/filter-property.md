@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918634"
 ---
 # <a name="filter-property"></a>Filter 屬性
@@ -56,7 +56,7 @@ ms.locfileid: "67918634"
 -   相反地，您會將此篩選器視為  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在**LIKE**子句中，您可以在模式的開頭和結尾使用萬用字元。 例如，您可以使用`LastName Like '*mit*'`。 或者，使用**LIKE**時，只能在模式的結尾使用萬用字元。 例如： `LastName Like 'Smit*'` 。  
+-   在**LIKE**子句中，您可以在模式的開頭和結尾使用萬用字元。 例如，您可以使用 `LastName Like '*mit*'`。 或者，使用**LIKE**時，只能在模式的結尾使用萬用字元。 例如，`LastName Like 'Smit*'`。  
   
  篩選常數可讓您只查看在最後一個[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法呼叫期間受到影響的記錄，讓您更容易在批次更新模式中解決個別的記錄衝突。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "67918634"
 ||非索引鍵|單一索引鍵|多個金鑰|
 |-|--------------|----------------|-------------------|
 |**非索引鍵**|+|+|+|
-|**單一索引鍵**|+|-|N/A|
-|**多個金鑰**|+|N/A|+|
+|**單一索引鍵**|+|-|不適用|
+|**多個金鑰**|+|不適用|+|
 |||||
   
 ## <a name="applies-to"></a>套用至

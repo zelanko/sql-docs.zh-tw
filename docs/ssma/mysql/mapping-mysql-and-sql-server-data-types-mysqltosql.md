@@ -13,10 +13,10 @@ ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908994"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>對應 MySQL 和 SQL Server 資料類型 (MySQLToSQL)
@@ -76,7 +76,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
     1.  在 [類型對應] 窗格中，選取 [類型對應] 清單中的資料列，其中包含您想要移除的資料類型對應。  
   
-    2.  按一下 **[移除]** 。  
+    2.  按一下 [移除]****。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是[建立評量報告](assessing-mysql-databases-for-conversion-mysqltosql.md)，或[將 MySQL 資料庫物件轉換成 SQL Server 或 SQL Azure 語法](converting-mysql-databases-mysqltosql.md)。 如果您建立報告，MySQL 物件會在評估期間自動轉換。  

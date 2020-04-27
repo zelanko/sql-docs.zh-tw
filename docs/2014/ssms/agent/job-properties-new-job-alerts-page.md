@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189275"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>作業屬性：新增作業 (警示頁面)
@@ -36,7 +36,7 @@ ms.locfileid: "68189275"
  從作業中移除選取的警示，然後刪除警示。  
   
 ## <a name="see-also"></a>另請參閱  
- [警示](alerts.md)   
+ [Alerts](alerts.md)   
  [實作作業](implement-jobs.md)  
   
   

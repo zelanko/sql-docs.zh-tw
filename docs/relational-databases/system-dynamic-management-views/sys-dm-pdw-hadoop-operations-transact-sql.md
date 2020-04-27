@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899385"
 ---
 # <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>sys.databases dm_pdw_hadoop_operations （Transact-sql）
@@ -26,7 +26,7 @@ ms.locfileid: "67899385"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**Nvarchar （32）**|此外部 Hadoop 作業的識別碼。|與 sys.databases 中的識別碼相同[dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|request_id|**nvarchar(32)**|此外部 Hadoop 作業的識別碼。|與 sys.databases 中的識別碼相同[dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|參考此 Hadoop 作業的查詢步驟索引。|與[sys. dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 step_index 相同。|  
 |operation_type|**nvarchar(255)**|描述外部運算的類型。|「外部 Hadoop 作業」|  
 |operation_name|**nvarchar(4000)**|地圖-縮減作業的作業識別碼。 這是由 Hadoop 在提交[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]作業之後傳回。||  

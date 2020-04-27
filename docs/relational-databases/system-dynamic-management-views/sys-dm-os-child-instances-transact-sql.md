@@ -21,10 +21,10 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900240"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67900240"
 
   針對已經從父伺服器執行個體建立的每個使用者執行個體，各傳回一個資料列。  
   
-> **重大!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> **重要！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  從**dm_os_child_instances sys.databases**傳回的資訊可以用來判斷每個使用者實例的狀態（heart_beat），並取得可用來建立使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQLCmd 之使用者實例連接的管道名稱（instance_pipe_name）。 您只能連接到已由外部處理序 (例如，用戶端應用程式) 啟動的使用者執行個體。 SQL 管理工具無法啟動使用者執行個體。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67900240"
 |owning_principal_sid_binary|varbinary(85)|擁有使用者執行個體之使用者的 SID 二進位版本|  
 |**instance_name**|**nvarchar(128)**|這個使用者執行個體的名稱。|  
 |**instance_pipe_name**|**nvarchar(260)**|在建立使用者執行個體時，系統會針對要連接的應用程式建立具名管道。 這個名稱可用於連接字串，以連接這個使用者執行個體。|  
-|**os_process_id**|**Int**|這個使用者執行個體的 Windows 處理序號碼。|  
+|**os_process_id**|**整數**|這個使用者執行個體的 Windows 處理序號碼。|  
 |**os_process_creation_date**|**從中**|上次啟動這個使用者執行個體的日期和時間。|  
 |**heart_beat**|**Nvarchar （5）**|這個使用者執行個體目前的狀態，可能為 ALIVE 或 DEAD。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  

@@ -18,10 +18,10 @@ ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e832ec871a353b994c1858bb01a2a2ab557f3869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917311"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 屬性 (ADO)

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284898"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>建立及管理角色 (SSAS 表格式)
@@ -28,7 +28,7 @@ ms.locfileid: "67284898"
 ## <a name="tasks"></a>工作  
  若要建立、編輯、複製及刪除角色，您要使用 [角色管理員]**** 對話方塊。 若要檢視 [角色管理員]**** 對話方塊，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中按一下 [模型]**** 功能表，然後按一下 [角色管理員]****。  
   
-###  <a name="bkmk_new_role"></a>若要建立新的角色  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a>若要建立新的角色  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，按一下 [模型]**** 功能表，然後按一下 [角色管理員]****。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67284898"
   
     |權限|描述|  
     |----------------|-----------------|  
-    |**無**|成員無法對模型結構描述進行任何修改，也無法查詢資料。|  
+    |**None**|成員無法對模型結構描述進行任何修改，也無法查詢資料。|  
     |**讀取**|成員可以查詢資料 (根據資料列篩選)，但無法對模型結構描述進行任何變更。|  
     |**讀取和處理**|成員可以查詢資料 (根據資料列層級篩選) 並執行「處理」和「全部處理」作業，但無法對模型結構描述進行任何變更。|  
     |**處理程序**|成員可以執行「處理」和「全部處理」作業。 無法修改模型結構描述，也無法查詢資料。|  
@@ -61,7 +61,7 @@ ms.locfileid: "67284898"
   
 8.  在 [選取使用者或群組]**** 對話方塊中，輸入 Windows 使用者或 Windows 群組物件做為成員。  
   
-9. 按一下 [確定]****。  
+9. 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的角色](roles-ssas-tabular.md)   

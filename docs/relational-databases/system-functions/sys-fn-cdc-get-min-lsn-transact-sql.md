@@ -21,10 +21,10 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046398"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
  這是擷取執行個體的名稱。 *capture_instance_name*是**sysname**。  
   
 ## <a name="return-types"></a>傳回型別  
- **binary （10）**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>備註  
  當擷取執行個體不存在，或者呼叫端未經授權，無法存取與擷取執行個體相關聯的變更資料時，便傳回 0x00000000000000000000。  
@@ -59,7 +59,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. 針對指定的擷取執行個體傳回最小 LSN 值  
- 下列範例會針對 `HumanResources_Employee` 資料庫中的擷取執行個體 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 傳回最小 LSN 值。  
+ 下列範例會針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的擷取執行個體 `HumanResources_Employee` 傳回最小 LSN 值。  
   
 ```  
 USE AdventureWorks2-12;  

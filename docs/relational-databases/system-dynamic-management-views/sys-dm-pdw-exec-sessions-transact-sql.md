@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899412"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.databases dm_pdw_exec_sessions （Transact-sql）
@@ -26,9 +26,9 @@ ms.locfileid: "67899412"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**Nvarchar （32）**|目前查詢或最後一個查詢執行的識別碼（如果會話已終止，且查詢在終止時執行）。 此視圖的索引鍵。|系統中的所有會話都是唯一的。|  
+|session_id|**nvarchar(32)**|目前查詢或最後一個查詢執行的識別碼（如果會話已終止，且查詢在終止時執行）。 此視圖的索引鍵。|系統中的所有會話都是唯一的。|  
 |status|**Nvarchar （10）**|針對目前的會話，識別會話目前為作用中或閒置。 對於過去的會話，會話狀態可能會顯示 [已關閉] 或 [已終止] （如果已強制關閉會話）。|「作用中」、「已關閉」、「閒置」、「已終止」|  
-|request_id|**Nvarchar （32）**|目前查詢或上次查詢執行的識別碼。|在系統的所有要求中都是唯一的。 如果未執行任何值，則為 Null。|  
+|request_id|**nvarchar(32)**|目前查詢或上次查詢執行的識別碼。|在系統的所有要求中都是唯一的。 如果未執行任何值，則為 Null。|  
 |security_id|**Varbinary （85）**|執行會話之主體的安全識別碼。||  
 |login_name|**nvarchar(128)**|執行會話之主體的登入名稱。|符合使用者命名慣例的任何字串。|  
 |login_time|**datetime**|使用者登入和此會話建立的日期和時間。|目前時間之前有效的**日期時間**。|  

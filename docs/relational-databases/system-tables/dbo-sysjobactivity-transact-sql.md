@@ -20,10 +20,10 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902208"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67902208"
 |**session_id**|**int**|**Msdb**資料庫中**syssessions**資料表所儲存之會話的識別碼。|  
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
 |**run_requested_date**|**datetime**|要求執行作業的日期和時間。|  
-|**run_requested_source**|**sysname （Nvarchar （128））**|執行作業的要求者。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|執行作業的要求者。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|將這項作業放入佇列的日期和時間。 如果是直接執行這項作業，這個資料行就是 NULL。|  
 |**start_execution_date**|**datetime**|排程執行作業的日期和時間。|  
 |**last_executed_step_id**|**int**|先前執行的最後一個作業步驟的識別碼。|  

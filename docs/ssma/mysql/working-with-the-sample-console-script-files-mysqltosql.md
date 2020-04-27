@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904889"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>使用範例主控台指令檔（MySQLToSQL）
@@ -54,7 +54,7 @@ ms.locfileid: "67904889"
   
     如需產生報表的詳細資訊，請參閱[&#40;MySQLToSQL&#41;產生報表](../../ssma/mysql/generating-reports-mysqltosql.md)。  
   
-    **紀錄**  
+    **注意：**  
   
     -   請確定將變數值檔案命令列引數傳遞至主控台應用程式，並以使用者指定的值更新 VariableValueFileSample。  
   
@@ -73,19 +73,19 @@ ms.locfileid: "67904889"
 -   **ConversionAndDataMigrationSample .xml：**  
      這個範例可讓使用者執行端對端遷移，使其無法轉換為資料移轉。 如下所示，需要變更的必要屬性值清單如下：  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `map-schema`  
   
     源資料庫與目標架構的架構對應。  
   
-    **Attribute**  
+    **屬性**  
   
     -   `source-schema:`指定需要轉換的源資料庫。  
   
     -   `sql-server-schema`：指定要遷移至的目標資料庫  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `convert-schema`  
   
@@ -93,11 +93,11 @@ ms.locfileid: "67904889"
   
     2.  如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`convert-schema`主控台指令檔的範例4所示。  
   
-    **Attribute**  
+    **屬性**  
   
     `object-name`：指定需要轉換的源資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `synchronize-target`  
   
@@ -105,11 +105,11 @@ ms.locfileid: "67904889"
   
     2.  如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`synchronize-target`主控台指令檔的範例3所示。  
   
-    **Attribute**  
+    **屬性**  
   
     `object-name:`指定需要建立的 sql server 資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `migrate-data`  
   
@@ -117,7 +117,7 @@ ms.locfileid: "67904889"
   
     2.  如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`migrate-data`主控台指令檔的範例2中所示。  
   
-    **Attribute**  
+    **屬性**  
   
     `object-name:`指定需要遷移的源資料庫/資料表名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`  
   

@@ -24,10 +24,10 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120256"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
@@ -61,7 +61,7 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|資料庫物件的識別碼。 特定 SQL 陳述式的這個值是 NULL。|  
 |number|**smallint**|如果將程序分組的話，便指出群組數目。<br /><br /> 0 = 項目不是程序。<br /><br /> NULL = 特定 SQL 陳述式。|  
 |encrypted|**bit**|指出物件是否已經加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密|  
-|text|**text**|這是 SQL 陳述式的文字。 加密物件的這個值是 NULL。|  
+|文字|**text**|這是 SQL 陳述式的文字。 加密物件的這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
  您可以從 dm_exec_requests sys.databases 的 sql_handle 資料行取得有效的 SQL 控制碼[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動態管理檢視。  

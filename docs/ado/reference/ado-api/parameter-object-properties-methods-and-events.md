@@ -13,10 +13,10 @@ ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e20cb08ccfedbc2fa60b703279f8494d0f3f53c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917780"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Parameter 物件屬性、方法和事件

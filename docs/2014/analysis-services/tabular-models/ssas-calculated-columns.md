@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284896"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>導出資料行 (SSAS 表格式)
@@ -33,7 +33,7 @@ ms.locfileid: "67284896"
   
 -   [相關工作](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a> 優點  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a>各種  
  導出資料行中的公式與 Excel 中的公式非常類似。 然而與 Excel 不同的是，您不能為資料表中不同的資料列建立不同的公式，DAX 公式會自動套用到整個資料行。  
   
  當資料行包含公式時，會針對每個資料列計算其值。 當您輸入有效的公式時，即會計算資料行的結果。 資料行值日後將視需要進行重新計算，例如當基礎資料重新整理之時。  
@@ -51,7 +51,7 @@ ms.locfileid: "67284896"
   
  此公式從 StartDate 資料行中擷取月份。 接著再計算資料表中每個資料列的月底值。 第二個參數是指定在 StartDate 當月之前或之後的月數，本例為 0 即表示同一個月份。 例如，若 StartDate 資料行的值為 6/1/2001，則導出資料行的值將是 6/30/2001。  
   
-##  <a name="bkmk_naming"></a>命名計算結果欄  
+##  <a name="naming-a-calculated-column"></a><a name="bkmk_naming"></a>命名計算結果欄  
  根據預設，新的導出資料行會加入至資料表中其他資料行的右邊，而且將自動為這類資料行指派預設名稱 **CalculatedColumn1**、 **CalculatedColumn2**，依此類推。 您也可以在資料行上按一下滑鼠右鍵，然後按一下 [插入資料行]，在兩個現有的資料行之間建立新資料行。 您可以按一下再拖曳，來重新排列相同資料表中的資料行，也可以在建立資料行之後，重新命名資料行；但是，您應該注意下列有關變更導出資料行的限制：  
   
 -   每個資料行名稱在資料表中都必須是唯一的。  
@@ -62,7 +62,7 @@ ms.locfileid: "67284896"
   
 -   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [PowerPivot 的 DAX 語法規格](/dax/dax-syntax-reference)中的＜命名需求＞。  
   
-##  <a name="bkmk_perf"></a>計算結果欄的效能  
+##  <a name="performance-of-calculated-columns"></a><a name="bkmk_perf"></a>計算結果欄的效能  
  導出資料行的公式可能會比量值所使用的公式更耗費資源。 其中一個原因是：導出資料行的結果永遠是針對資料表中的每個資料列計算，而量值僅針對報表、樞紐分析表或樞紐分析圖中所用篩選定義的資料格計算。 例如，包含一百萬個資料列的資料表所擁有的導出資料行永遠都會有一百萬個結果，在效能上也會有對應的影響。 但是，樞紐分析表通常會套用資料列和資料行標題來篩選資料，因此，只會針對樞紐分析表內每一個資料格中的資料子集來計算量值。  
   
  公式通常與該公式中參考之物件具有相依性，例如評估值的其他資料行或運算式。 舉例來說，以另一個資料行做為根據的導出資料行或是包含具有資料行參考之運算式的計算，必須等到評估另一個資料行的結果之後，才會評估出結果。 預設情況下，活頁簿會啟用自動重新整理，因此在更新值或重新整理公式時，任何這類相依性都有可能影響效能。  
@@ -77,15 +77,15 @@ ms.locfileid: "67284896"
   
 -   如果您建立包含循環相依性或自我參考相依性的公式，將會發生錯誤。  
   
-##  <a name="bkmk_rel_tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> 相關工作  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立 &#40;SSAS 表格式&#41;的計算結果欄](ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
+|[建立導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;SSAS 表格式&#41;的資料表和資料行](tables-and-columns-ssas-tabular.md)   
  [&#40;SSAS 表格式&#41;的量值](measures-ssas-tabular.md)   
- [&#40;SSAS 表格式&#41;的計算](calculations-ssas-tabular.md)  
+ [計算 &#40;SSAS 表格式&#41;](calculations-ssas-tabular.md)  
   
   

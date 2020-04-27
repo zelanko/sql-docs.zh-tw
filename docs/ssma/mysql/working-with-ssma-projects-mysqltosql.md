@@ -15,10 +15,10 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904907"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
@@ -67,7 +67,7 @@ SSMA 包含數個設定，用於轉換和載入資料庫、遷移資料，以及
   
 ##### <a name="to-create-a-new-project"></a>建立新的專案  
   
-1.  從 [檔案] 功能表**中選取**[**新增專案**]。 此時會出現 [新增專案]**** 對話方塊。 在 [檔案]**** 功能表上，選取 [新增專案]****。 此時會出現 [新增專案]**** 對話方塊。  
+1.  從 [檔案] 功能表**中選取**[**新增專案**]。 [新增專案]  對話方塊隨即出現。 在 [檔案]**** 功能表上，選取 [新增專案]****。 [新增專案]  對話方塊隨即出現。  
   
 2.  在 [**名稱**] 方塊中，輸入專案的名稱。  
   
@@ -75,11 +75,11 @@ SSMA 包含數個設定，用於轉換和載入資料庫、遷移資料，以及
   
 4.  在 [**遷移至**] 下拉式選，選取用於遷移的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目標版本。 可用的選項如下︰  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -105,7 +105,7 @@ SSMA 會建立專案檔。
   
 1.  針對顯示 [**中繼資料遺失**] 狀態的每個資料庫，選取資料庫名稱旁邊的核取方塊。 儲存中繼資料可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請不要選取任何核取方塊。  
   
-2.  按一下 [檔案]  。  
+2.  按一下 **[儲存]** 。  
   
 SSMA 將會剖析 MySQL 架構，並將中繼資料儲存至專案檔。  
   

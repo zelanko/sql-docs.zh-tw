@@ -21,10 +21,10 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122574"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.databases fn_net_changes_&lt;capture_instance&gt; （transact-sql）
@@ -61,12 +61,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  這個參數可以採用兩個意義的其中一個，這取決於呼叫 sp_cdc_generate_wrapper_function @closed_high_end_point sys.databases 時所選擇的值，以產生建立包裝函式的腳本：  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      只有 cdc. <中的資料列會 capture_instance>_CT 變更資料表中具有\_ \_$start _lsn 中的值，而且對應的認可時間小於或等於**start_time**會包含在結果集中。  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      只有 cdc. <中的資料列會 capture_instance>_CT 變更資料表具有\_ \_$start _lsn 中的值，而且在結果集中包含嚴格小於**start_time**的對應認可時間。  
   
@@ -75,7 +74,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *<row_filter_option>* ：： = {all | all with mask | all with merge}  
  管理結果集中傳回之中繼資料資料行以及資料列內容的選項。 可以是下列其中一個選項：  
   
- 所有  
+ all  
  傳回內容資料行內已變更之資料列的最後內容，以及在 __CDC_OPERATION 中繼資料行內套用資料列所需的作業。  
   
  all with mask  
@@ -96,8 +95,8 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |資料行名稱|資料行類型|描述|  
 |-----------------|-----------------|-----------------|  
-|\<> 的@column_list資料行|**視情況而異**|呼叫以產生建立包裝函式的腳本時，在 sp_cdc_generate_wrapper_function 的**column_list**引數中識別的資料行。 如果*column_list*為 Null，所有追蹤的來源資料行都會出現在結果集中。|  
-|__CDC_OPERATION|**Nvarchar （2）**|指示將資料列套用到目標環境時，需要哪一個作業的作業碼。 作業會根據下列呼叫中提供的引數*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = ' all '、' all with mask '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業<br /><br /> *row_filter_option* = ' 全部使用 merge '<br /><br /> 'D' - 刪除作業<br /><br /> 'M' - 插入作業或更新作業|  
+|\<> 的@column_list資料行|**差異**|呼叫以產生建立包裝函式的腳本時，在 sp_cdc_generate_wrapper_function 的**column_list**引數中識別的資料行。 如果*column_list*為 Null，所有追蹤的來源資料行都會出現在結果集中。|  
+|__CDC_OPERATION|**nvarchar(2)**|指示將資料列套用到目標環境時，需要哪一個作業的作業碼。 作業會根據下列呼叫中提供的引數*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = ' all '、' all with mask '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業<br /><br /> *row_filter_option* = ' 全部使用 merge '<br /><br /> 'D' - 刪除作業<br /><br /> 'M' - 插入作業或更新作業|  
 |\<> 的@update_flag_list資料行|**bit**|藉由將 _uflag 附加到資料行名稱所命名的位元旗標。 只有當*row_filter_option* **= ' all with mask '** 和\__CDC_OPERATION **= ' UN '** 時，旗標才會採用非 null 值。 如果在查詢視窗內修改了對應的資料行，它會設定為 1。 否則為 0。|  
   
 ## <a name="remarks"></a>備註  
@@ -121,6 +120,6 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>另請參閱  
  [sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

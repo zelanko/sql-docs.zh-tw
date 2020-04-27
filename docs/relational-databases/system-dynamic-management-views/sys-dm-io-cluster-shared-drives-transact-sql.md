@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900389"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67900389"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**DriveName**|**Nchar （2）**|代表參與叢集共用磁碟陣列之個別磁碟的磁碟機名稱 (磁碟機代號)。 資料行不可為 Null。|  
+|**DriveName**|**nchar(2)**|代表參與叢集共用磁碟陣列之個別磁碟的磁碟機名稱 (磁碟機代號)。 資料行不可為 Null。|  
 |**pdw_node_id**|**int**|**適用**物件： ssPDW<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  

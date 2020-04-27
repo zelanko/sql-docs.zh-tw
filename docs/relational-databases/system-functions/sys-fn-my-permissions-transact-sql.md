@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122627"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -102,7 +102,7 @@ GO
 ```  
   
 ### <a name="c-listing-effective-permissions-on-a-view"></a>C. 列出檢視表的有效權限  
- 下列範例會傳回 `vIndividualCustomer` 資料庫之 `Sales` 結構描述中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 檢視呼叫端的有效權限清單。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 `vIndividualCustomer` 結構描述中 `Sales` 檢視呼叫端的有效權限清單。  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="d-listing-effective-permissions-of-another-user"></a>D. 列出其他使用者的有效權限  
- 下列範例會傳回 `Wanida` 資料庫之 `Employee` 結構描述中 `HumanResources` 資料表資料庫使用者 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的有效權限清單。 呼叫端需要使用者 `Wanida` 的 IMPERSONATE 權限。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 `Wanida` 結構描述中 `Employee` 資料表資料庫使用者 `HumanResources` 的有效權限清單。 呼叫端需要使用者 `Wanida` 的 IMPERSONATE 權限。  
   
 ```  
 EXECUTE AS USER = 'Wanida';  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. 列出其他登入的有效權限  
- 下列範例會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之 `WanidaBenshoof` 結構描述中 `Employee` 資料表之 `HumanResources` 登入 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的有效權限清單。 呼叫端需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 IMPERSONATE 權限。  
+ 下列範例會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之 `WanidaBenshoof` 結構描述中 `Employee` 資料表之 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 登入 `HumanResources` 的有效權限清單。 呼叫端需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 IMPERSONATE 權限。  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -163,8 +163,8 @@ GO
  [&#40;Transact-sql&#41;的安全性函數](../../t-sql/functions/security-functions-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [安全性實體](../../relational-databases/security/securables.md)   
- [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [許可權階層 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [fn_builtin_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   

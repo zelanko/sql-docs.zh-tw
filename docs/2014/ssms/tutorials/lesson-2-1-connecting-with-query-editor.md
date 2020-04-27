@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68187814"
 ---
 # <a name="connecting-with-query-editor"></a>連接查詢編輯器
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]允許您在與伺服器中斷連線的情況下撰寫或編輯程式碼。 當伺服器無法使用，或您想節省寶貴的伺服器或網路資源時，這可能很有用。 您也可以在不開啟新 [查詢編輯器] 視窗或重新輸入程式碼的情況下，將查詢編輯器改成連接到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允許您在未連接伺服器的情況下，撰寫或編輯程式碼。 當伺服器無法使用，或您想節省寶貴的伺服器或網路資源時，這可能很有用。 您也可以在不開啟新 [查詢編輯器] 視窗或重新輸入程式碼的情況下，將查詢編輯器改成連接到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 ## <a name="coding-offline"></a>離線撰寫程式碼  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68187814"
     GO  
     ```  
   
-     此時您可以按一下 [連接][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**、[執行]****、[剖析]**** 或 [顯示估計執行計畫]**** 來連接到 ** 的執行個體，您可以從 [查詢]**** 功能表或 [查詢編輯器] 工具列來找到它們，也可以用滑鼠右鍵按一下 [查詢編輯器] 視窗，在捷徑功能表中找到它們。 在這個練習中，我們將使用工具列。  
+     此時您可以按一下 [連接]****、[執行]****、[剖析]**** 或 [顯示估計執行計畫]**** 來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，您可以從 [查詢]**** 功能表或 [查詢編輯器] 工具列來找到它們，也可以用滑鼠右鍵按一下 [查詢編輯器] 視窗，在捷徑功能表中找到它們。 在這個練習中，我們將使用工具列。  
   
 4.  在工具列上，按一下 [執行]**** 按鈕來開啟 [連接到 Database Engine]**** 對話方塊。  
   

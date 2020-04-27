@@ -46,10 +46,10 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918358"
 ---
 # <a name="item-property-ado"></a>Item 屬性 (ADO)
@@ -65,7 +65,7 @@ Set object = collection.Item ( Index )
  傳回物件參考。  
   
 ## <a name="parameters"></a>參數  
- *指數*  
+ *索引*  
  會評估為名稱或集合中物件序號的**Variant**運算式。  
   
 ## <a name="remarks"></a>備註  

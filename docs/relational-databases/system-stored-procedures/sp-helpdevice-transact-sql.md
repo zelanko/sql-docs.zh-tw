@@ -18,10 +18,10 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902985"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
@@ -54,9 +54,9 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**device_name**|**sysname**|邏輯裝置名稱。|  
 |**physical_name**|**nvarchar(260)**|實體檔案名稱。|  
 |**描述**|**nvarchar(255)**|裝置的描述。|  
-|**狀態**|**int**|對應至 [**描述**] 資料行中狀態原因的數位。|  
+|**status**|**int**|對應至 [**描述**] 資料行中狀態原因的數位。|  
 |**cntrltype**|**smallint**|裝置的控制器類型：<br /><br /> 2 = 磁碟裝置<br /><br /> 5 = 磁帶裝置|  
-|**容量**|**int**|裝置大小 (2KB) 頁面。|  
+|**size**|**int**|裝置大小 (2KB) 頁面。|  
   
 ## <a name="remarks"></a>備註  
  如果指定了*name* ， **sp_helpdevice**會顯示指定傾印裝置的相關資訊。 如果未指定*name* ， **sp_helpdevice**會顯示**sys.databases backup_devices**目錄檢視中所有傾印裝置的相關資訊。  
@@ -74,8 +74,8 @@ EXEC sp_helpdevice;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

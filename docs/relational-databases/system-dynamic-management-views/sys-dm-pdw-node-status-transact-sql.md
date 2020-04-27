@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899363"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys.databases dm_pdw_node_status （Transact-sql）
@@ -29,13 +29,13 @@ ms.locfileid: "67899363"
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。<br /><br /> 此視圖的索引鍵。|在設備上是唯一的，不論類型為何。|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**Bigint**|此節點上配置的記憶體總計。||  
-|available_memory|**Bigint**|此節點上的可用記憶體總計。||  
-|process_cpu_usage|**Bigint**|總處理常式 CPU 使用量（以刻度為單位）。||  
-|total_cpu_usage|**Bigint**|總 CPU 使用量（以刻度為單位）。||  
-|thread_count|**Bigint**|此節點上使用中的執行緒總數。||  
-|handle_count|**Bigint**|此節點上使用中的控制碼總數。||  
-|total_elapsed_time|**Bigint**|從系統啟動或重新開機以來經過的總時間。|從系統啟動或重新開機以來經過的總時間。 如果 total_elapsed_time 超過整數的最大值（以毫秒為單位的24.8 天），則會造成具體化失敗，因為溢位。<br /><br /> 最大值（以毫秒為單位）相當於24.8 天。|  
+|allocated_memory|**bigint**|此節點上配置的記憶體總計。||  
+|available_memory|**bigint**|此節點上的可用記憶體總計。||  
+|process_cpu_usage|**bigint**|總處理常式 CPU 使用量（以刻度為單位）。||  
+|total_cpu_usage|**bigint**|總 CPU 使用量（以刻度為單位）。||  
+|thread_count|**bigint**|此節點上使用中的執行緒總數。||  
+|handle_count|**bigint**|此節點上使用中的控制碼總數。||  
+|total_elapsed_time|**bigint**|從系統啟動或重新開機以來經過的總時間。|從系統啟動或重新開機以來經過的總時間。 如果 total_elapsed_time 超過整數的最大值（以毫秒為單位的24.8 天），則會造成具體化失敗，因為溢位。<br /><br /> 最大值（以毫秒為單位）相當於24.8 天。|  
 |is_available|**bit**|指出此節點是否可供使用的旗標。||  
 |sent_time|**datetime**|上次此節點傳送網路封裝的時間。||  
 |received_time|**datetime**|上次此節點收到網路套件的時間。||  

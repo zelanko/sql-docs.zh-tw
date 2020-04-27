@@ -16,10 +16,10 @@ ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918274"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
@@ -33,7 +33,7 @@ Stream.LoadFromFileFileName
 ```  
   
 #### <a name="parameters"></a>參數  
- *名稱*  
+ *FileName*  
  **字串**值，包含要載入至**資料流程**中的檔案名。 *FileName*可以包含 UNC 格式的任何有效路徑和名稱。 如果指定的檔案不存在，就會發生執行階段錯誤。  
   
 ## <a name="remarks"></a>備註  

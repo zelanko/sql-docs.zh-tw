@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918621"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
@@ -34,7 +34,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ```  
   
 #### <a name="parameters"></a>參數  
- *準則*  
+ *指標*  
  **字串**值，其中包含指定要在搜尋中使用之資料行名稱、比較運算子和值的語句。  
   
  *SkipRows*  
@@ -43,7 +43,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  選擇性。 [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定搜尋是否應在目前資料列或搜尋方向的下一個可用資料列開始。 如果值為**adSearchForward**，則會在**記錄集**的結尾停止不成功的搜尋。 如果值為**adSearchBackward**，則會在**記錄集**的開頭停止不成功的搜尋。  
   
- *Start*  
+ *啟動*  
  選擇性。 做為搜尋開始位置的**Variant**書簽。  
   
 ## <a name="remarks"></a>備註  

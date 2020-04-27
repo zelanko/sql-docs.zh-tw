@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110190"
 ---
 # <a name="tuning-a-workload"></a>微調工作負載
@@ -34,7 +34,7 @@ ms.locfileid: "66110190"
   
 4.  選取 [工作負載]**** 的 [檔案]****，然後按一下 [瀏覽工作負載檔案]**** 按鈕，來尋找您在步驟 1 儲存的 **MyScript.sql** 檔。  
   
-5.  在 [工作負載分析的資料庫][!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]** 清單中選取 **，在 [選取要微調的資料庫與資料表][!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]** 方格中選取 **，並保留已選取的 [儲存微調記錄]****。 [**工作負載分析的資料庫**] 指定在微調工作負載時 Database Engine Tuning Advisor 連接的第一個資料庫。 在微調開始之後，Database Engine Tuning Advisor 會連接到工作負載包含的 `USE DATABASE` 陳述式所指定的資料庫。  
+5.  在 [工作負載分析的資料庫]**** 清單中選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，在 [選取要微調的資料庫與資料表]**** 方格中選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，並保留已選取的 [儲存微調記錄]****。 [工作負載分析的資料庫]**** 指定在微調工作負載時 Database Engine Tuning Advisor 所連接的第一個資料庫。 在微調開始之後，Database Engine Tuning Advisor 會連接到工作負載包含的 `USE DATABASE` 陳述式所指定的資料庫。  
   
 6.  按一下 [**微調選項**] 索引標籤。您不會在此練習中設定任何微調選項，但請花點時間檢查預設的微調選項。 請按 F1 鍵來檢視這個索引標籤頁的說明。 請按一下 [進階選項]**** 來檢視其他微調選項。 如需這裡所顯示之微調選項的相關資訊，請按一下 [進階微調選項]**** 對話方塊中的 [說明]****。 請按一下 [取消]**** 來關閉 [進階微調選項]**** 對話方塊，保持選取預設的選項。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66110190"
   
      如果您收到關於微調停止日期和時間的錯誤，請檢查主要 [**微調選項**]**索引標籤**上的 [停止時間]。請確定 [**停止**日期] 和 [時間] 大於目前的日期和時間，如有必要，請變更它們。  
   
-8.  完成分析之後，在 [動作][!INCLUDE[tsql](../../includes/tsql-md.md)]** 功能表上，按一下 [儲存建議]****，將建議儲存成一份 ** 指令碼。 在 [另存新檔]**** 對話方塊中，導覽到用來儲存建議指令碼的目錄，再輸入 **MyRecommendations** 檔案名稱。  
+8.  完成分析之後，在 [動作]**** 功能表上，按一下 [儲存建議]****，將建議儲存成一份 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 在 [另存新檔]**** 對話方塊中，導覽到用來儲存建議指令碼的目錄，再輸入 **MyRecommendations** 檔案名稱。  
   
 ## <a name="summary"></a>摘要  
  您已完成 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之簡單 SELECT 陳述式工作負載的微調。 另外，Database Engine Tuning Advisor 也可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤檔和資料表來作為微調工作負載。 下一項工作告訴您如何檢視和解譯練習微調結果所得出的微調建議。  

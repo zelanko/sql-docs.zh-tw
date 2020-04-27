@@ -17,10 +17,10 @@ ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 98094273d37bf0622eb903b9ad177817e4bb12d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905090"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys.databases sp_rda_reconcile_batch （Transact-sql）

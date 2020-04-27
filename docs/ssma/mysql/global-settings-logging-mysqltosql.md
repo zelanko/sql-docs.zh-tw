@@ -10,10 +10,10 @@ ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896387"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>全域設定 (記錄) (MySQLToSQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67896387"
 |**收集器**|收集有關來源架構的中繼資料，並將其儲存至專案。|  
 |**轉換器**|將源資料庫物件的結構（例如資料表和預存程式）轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應的結構。|  
 |**資料移轉**|將源資料庫中的資料移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至。|  
-|**程式**|轉換器的子元件，會產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架構的腳本。|  
+|**格式器**|轉換器的子元件，會產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架構的腳本。|  
 |**圖形化使用者介面**|當您使用 SSMA 工具時所顯示的訊息。|  
 |**連結器**|解析 SQL 識別碼並提供資訊給其他元件。|  
 |**其他**|所有不在其他類別中的訊息。|  
@@ -45,7 +45,7 @@ ms.locfileid: "67896387"
 |-|-|  
 |**嚴重錯誤**|只將嚴重錯誤訊息寫入記錄檔。|  
 |**錯誤**|將錯誤和嚴重錯誤訊息寫入記錄檔。|  
-|**警告**|將警告、錯誤和嚴重錯誤訊息寫入記錄檔。|  
+|**Warning**|將警告、錯誤和嚴重錯誤訊息寫入記錄檔。|  
 |**資訊**|將資訊、警告、錯誤和嚴重錯誤訊息寫入記錄檔。|  
 |**偵錯**|將所有訊息（包括調試訊息）寫入至記錄檔。|  
   

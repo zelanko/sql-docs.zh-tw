@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110183"
 ---
 # <a name="viewing-tuning-recommendations"></a>檢視微調建議
-  這項工作使用您先前在 [微調工作負載](lesson-1-1-tuning-a-workload.md)中所建立的微調工作階段。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]使用 myscript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)]腳本微調資料庫之後， [!INCLUDE[ssDE](../../includes/ssde-md.md)]微調建議程式會在 [**建議**] 索引標籤上顯示其結果。下列工作介紹[!INCLUDE[ssDE](../../includes/ssde-md.md)]微調顧問圖形化使用者介面（GUI）的 [**建議**] 索引標籤，並引導您探索它針對微調會話結果所提供的資訊。  
+   這項工作使用您先前在[微調工作負載](lesson-1-1-tuning-a-workload.md)中所建立的微調工作階段。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]使用 myscript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)]腳本微調資料庫之後， [!INCLUDE[ssDE](../../includes/ssde-md.md)]微調建議程式會在 [**建議**] 索引標籤上顯示其結果。下列工作介紹[!INCLUDE[ssDE](../../includes/ssde-md.md)]微調顧問圖形化使用者介面（GUI）的 [**建議**] 索引標籤，並引導您探索它針對微調會話結果所提供的資訊。  
   
 ### <a name="view-tuning-recommendations"></a>檢視微調建議  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66110183"
   
 2.  在 [工作階段監視器]**** 窗格中，按兩下 [MySession]****。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]微調顧問會從先前的微調會話載入會話資訊，並顯示 [**建議**] 索引卷[!INCLUDE[ssDE](../../includes/ssde-md.md)]標。請注意，因為您已接受所有微調選項預設值，而且在 [**微調選項**] 索引標籤上**未選取任何分割**，所以微調建議程式不會進行**分割**  
   
-3.  在 [建議]**** 索引標籤上，利用索引標籤頁面底端的捲軸來檢視所有 [索引建議]**** 資料行。 每個資料列都代表一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議要卸除或建立的資料庫物件 (索引或索引檢視表)。 捲到最右側資料行，按一下 [定義]****。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]微調建議程式會顯示 [ **SQL 腳本預覽**] 視窗，您[!INCLUDE[tsql](../../includes/tsql-md.md)]可以在其中查看在該資料列上建立或卸載資料庫物件的腳本。 按一下 [關閉]**** 來關閉預覽視窗。  
+3.  在 [建議]**** 索引標籤上，利用索引標籤頁面底端的捲軸來檢視所有 [索引建議]**** 資料行。 每個資料列都代表一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議要卸除或建立的資料庫物件 (索引或索引檢視表)。 捲到最右側資料行，按一下 [定義]****。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會顯示一個 [SQL 指令碼預覽]**** 視窗，供您檢視在這個資料列上建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 按一下 [關閉]**** 來關閉預覽視窗。  
   
      如果您在尋找包含連結的 [定義]**** 時遇到困難，請按一下索引標籤式頁面底端的 [顯示現有的物件]**** 核取方塊加以清除，以減少顯示的資料列數。 當您清除這個核取方塊時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 只會顯示它已產生建議的物件。 選取 [顯示現有的物件]**** 核取方塊，以檢視 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫目前已存在的所有資料庫物件。 請利用索引標籤頁面右側的捲軸來檢視所有物件。  
   
@@ -38,12 +38,11 @@ ms.locfileid: "66110183"
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查詢編輯器中，開啟 MySessionRecommendations.sql 指令碼來檢視它。 您可能會在查詢編輯器中執行這份指令碼，將建議套用在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫上，但請勿執行這個動作。 請在查詢編輯器中關閉這份指令碼，不要執行它。  
   
-     或者，您也可以在 ** Tuning Advisor 的 [動作]**** 功能表上，按一下 [套用建議]**[!INCLUDE[ssDE](../../includes/ssde-md.md)] 來套用建議，但現在請先不要在這個練習中套用這些建議。  
+     或者，您也可以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 [動作]**** 功能表上，按一下 [套用建議]**** 來套用建議，但現在請先不要在這個練習中套用這些建議。  
   
 6.  如果 [建議]**** 索引標籤中存在多個建議，請清除某些在 [索引建議]**** 方格中列出資料庫物件的資料列。  
   
-7.  在 **[動作]** 功能表上，按一下 **[評估建議]** 。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 就會建立一個新的微調工作階段，供您評估 MySession 的部分原始建議。  
+7.  在 **[動作]** 功能表上，按一下 **[評估建議]**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 就會建立一個新的微調工作階段，供您評估 MySession 的部分原始建議。  
   
 8.  輸入`EvaluateMySession`作為新的**會話名稱**，然後按一下工具列上的 [**開始分析**] 按鈕。 您可以針對這個新的微調工作階段，重複步驟 2 和 3 來檢視它的建議。  
   

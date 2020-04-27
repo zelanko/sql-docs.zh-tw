@@ -10,10 +10,10 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c4437f76a926e84ffe3592042f9d29b50f3eabf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908845"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>專案設定 (同步處理) (MySQLToSQL)

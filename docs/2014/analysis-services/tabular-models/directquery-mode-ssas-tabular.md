@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284867"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式 (SSAS 表格式)
@@ -42,14 +42,14 @@ ms.locfileid: "67284867"
   
 -   [相關主題和工作](#bkmk_related_tasks)  
   
-##  <a name="bkmk_Benefits"></a>DirectQuery 模式的優點  
+##  <a name="benefits-of-directquery-mode"></a><a name="bkmk_Benefits"></a>DirectQuery 模式的優點  
  根據預設，表格式模型會使用記憶體中快取來儲存和查詢資料。 因為表格式模型使用存在於記憶體中的資料，所以即使是複雜查詢也可以非常快速地執行。 但是，使用快取資料有些缺點：  
   
 -   來源資料變更時不會重新整理資料。 您必須處理模型，以便對資料進行更新。  
   
 -   在您關閉裝載模型的電腦時，快取將保存到磁碟中，並且在您載入模型或開啟 PowerPivot 檔案時必須重新開啟。 儲存和載入作業可能很耗時。  
   
- 反之，DirectQuery 模式使用儲存在 SQL Server 資料庫中的資料。  通常，在您撰寫模型時會將全部資料或少量樣本資料匯入至快取中，並且在您部署模型時指定用於模型查詢的資料來源應該是 SQL Server，而非快取資料。 針對指定的關聯式資料來源，將資料[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的任何 DAX 查詢轉譯為對等的 SQL 語句。  
+ 反之，DirectQuery 模式使用儲存在 SQL Server 資料庫中的資料。  通常，在您撰寫模型時會將全部資料或少量樣本資料匯入至快取中，並且在您部署模型時指定用於模型查詢的資料來源應該是 SQL Server，而非快取資料。  會將資料的任何 DAX 查詢轉譯為針對指定之關聯式資料來源的對等 SQL 陳述式。  
   
  使用 DirectQuery 模式部署模型有許多優點：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "67284867"
   
 -   如果模型包含可能需要多個查詢的複雜公式，Analysis Services 可以執行最佳化，以確保對後端資料庫執行之查詢的查詢計畫將盡可能有效率。  
   
-##  <a name="bkmk_Design"></a>撰寫用於 DirectQuery 模式的模型  
+##  <a name="authoring-models-for-use-with-directquery-mode"></a><a name="bkmk_Design"></a>撰寫用於 DirectQuery 模式的模型  
  表格式模型是使用模型設計師 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 所撰寫。 模型設計師會在記憶體中建立所有模型，這表示在模型化時，如果資料太大而無法放入記憶體中，您應該只將資料子集匯入至工作空間資料庫使用的快取中。  
   
  在您準備切換至 DirectQuery 模式時，您可以變更啟用 DirectQuery 模式的屬性。 如需詳細資訊，請參閱[啟用 DirectQuery 設計模式 &#40;SSAS 表格式&#41;](enable-directquery-mode-in-ssdt.md)。  
@@ -94,12 +94,12 @@ ms.locfileid: "67284867"
   
 -   部署模型之後，您可以變更慣用連接方法。 例如，您可以使用混合模式來進行測試，並且只在全面測試了使用該模型的所有報表或查詢後，才將模型切換到 **[僅限 DirectQuery]** 模式。 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。  
   
-###  <a name="bkmk_DataSources"></a>DirectQuery 模型的資料來源  
+###  <a name="data-sources-for-directquery-models"></a><a name="bkmk_DataSources"></a>DirectQuery 模型的資料來源  
  當您將設計環境變更為啟用 DirectQuery 模式之後，系統會立即對工作空間資料庫的資料來源進行驗證，以確保它們來自單一 SQL Server 資料來源。 DirectQuery 模型中不允許來自其他資料來源的資料，包括複製-貼上的資料。  
   
  如果您想要在 DirectQuery 模式下使用模型，則必須確保報表所需的所有資料都儲存在指定的 SQL Server 資料庫中。 如果該來源中未提供模型化所需的資料，請考慮使用 Integration Services 或其他資料倉儲工具，將資料匯入至做為 DirectQuery 資料來源的 SQL Server 資料庫中。  
   
-###  <a name="bkmk_Validation"></a>DirectQuery 模式的驗證和設計限制  
+###  <a name="validation-and-design-restrictions-for-directquery-mode"></a><a name="bkmk_Validation"></a>DirectQuery 模式的驗證和設計限制  
  當您撰寫要在 DirectQuery 模式下使用的模型時，最初必須將某些部分的資料載入快取中。 如果您最終使用的資料太大而無法放入記憶體中，您可以使用 [資料表匯入嚮導] 中的 [**預覽 & 篩選**] 選項來選取資料的子集，或撰寫 SQL 腳本來取得您想要的資料。  
   
 > [!WARNING]  
@@ -113,7 +113,7 @@ ms.locfileid: "67284867"
   
 -   如果您將模型設定為以混合模式操作，允許使用快取或來自 SQL Server 的資料，則應該了解連接到每一個資料來源的用戶端可能會看到不同結果 (根據連接字串中指定的模式而定)。 如果您需要確保報表使用者只看到來自 SQL Server 的資料，則必須清除快取或將模型變更為 DirectQueryOnly。  
   
-###  <a name="bkmk_FormulaCompat"></a>DirectQuery 模型的公式相容性  
+###  <a name="formula-compatibility-for-directquery-models"></a><a name="bkmk_FormulaCompat"></a>DirectQuery 模型的公式相容性  
  某些模型可能包含 DirectQuery 模式所不支援的公式，因此必須對模型進行重新設計，以防止驗證錯誤。 DirectQuery 模式所支援之公式的限制包含下列：  
   
 -   任何表格式模型在啟用 DirectQuery 模式後都不支援導出資料行，甚至是混合模型也不支援。 如果模型需要導出資料行，請考慮在匯入定義中使用 Transact-SQL，將這些導出資料行轉換為衍生的資料行。  
@@ -124,12 +124,12 @@ ms.locfileid: "67284867"
   
 -   在您將模型切換至 DirectQuery 模式時，模型中的公式可能會通過驗證，但在對快取和關聯式資料存放區執行時，則會傳回不同的結果。 這是因為對快取的計算使用 xVelocity 記憶體中分析引擎 (VertiPaq) 的語意，其中包含用於模擬 Excel 行為的許多功能，而針對儲存在關聯式資料存放區之資料的查詢則需要使用 SQL Server 的語意。 如需在模型部署為即時時可能會傳回不同結果的 DAX 函數清單，請參閱[DirectQuery 模式中的公式相容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)。  
   
-###  <a name="bkmk_Connecting"></a>連接到 DirectQuery 模型  
+###  <a name="connecting-to-directquery-models"></a><a name="bkmk_Connecting"></a>連接到 DirectQuery 模型  
  使用 MDX 當做查詢語言的用戶端不能連接到使用 DirectQuery 模式的模型。 例如，如果您嘗試針對 DirectQuery 模型建立 MDX 查詢，則會出現錯誤，表示找不到或尚未處理 Cube。 您可以使用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、DAX 公式或 XMLA 查詢來針對 DirectQuery 模型建立查詢。 如需如何針對表格式模型執行特定查詢的詳細資訊，請參閱[表格式模型資料存取](tabular-model-data-access.md)。  
   
  如果您正在使用混合模型，可以藉由指定連接字串屬性 DirectQueryMode 來指定使用者是連接到快取還是使用 DirectQuery 資料。  
   
-###  <a name="bkmk_Security"></a>DirectQuery 模式中的安全性  
+###  <a name="security-in-directquery-mode"></a><a name="bkmk_Security"></a>DirectQuery 模式中的安全性  
  在模型撰寫過程中，您會指定用於擷取來源資料的權限。 通常這是您自己的認證或是用於開發的帳戶。 但是，在模型切換為使用 DirectQuery 模式時，安全性內容更為複雜：  
   
 -   考慮使用者是否具有存取關聯式資料存放區資料的必要層級。  
@@ -152,20 +152,19 @@ ms.locfileid: "67284867"
   
  如需如何設定這些屬性的詳細資訊，請參閱[DirectQuery 部署案例 &#40;SSAS 表格式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)。  
   
-##  <a name="bkmk_PropertyList"></a>DirectQuery 屬性  
+##  <a name="directquery-properties"></a><a name="bkmk_PropertyList"></a>DirectQuery 屬性  
  下表列出可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定的一些屬性，以便啟用 DirectQuery 及控制模型查詢所用的資料來源。  
   
 |屬性名稱|描述|  
 |-------------------|-----------------|  
 |**DirectQueryMode 屬性**|此屬性會在模型設計師中啟用 DirectQuery 模式。 您必須將此屬性設定為 `On`，才能變更任何其他 DirectQuery 屬性。<br /><br /> 如需詳細資訊，請參閱[啟用 DirectQuery 設計模式 &#40;SSAS 表格式&#41;](enable-directquery-mode-in-ssdt.md)。|  
-|**QueryMode 屬性**|此屬性指定 DirectQuery 模型的預設查詢方法。當您部署模型時，在模型設計師中設定此屬性，但稍後可以覆寫該屬性。 此屬性有下列值：<br /><br /> **DirectQuery** ：此設定會指定模型的所有查詢都應該只使用關聯式資料來源。<br /><br /> **DirectQuery 與記憶體**內部-這項設定會指定預設情況下，應該使用關聯式來源來回應查詢，除非在用戶端的連接字串中指定另一個。<br /><br /> **記憶體**內部-這項設定會指定應該只使用快取來回應查詢。<br /><br /> **使用 DirectQuery 的記憶體**內部-根據預設，此設定會指定。 應該透過快取來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
+|**QueryMode 屬性**|此屬性指定 DirectQuery 模型的預設查詢方法。當您部署模型時，在模型設計師中設定此屬性，但稍後可以覆寫該屬性。 此屬性有下列值：<br /><br /> **DirectQuery** ：此設定會指定模型的所有查詢都應該只使用關聯式資料來源。<br /><br /> **搭配使用 DirectQuery 和 InMemory** ：根據預設，此設定會指定應該透過關聯式來源來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> **InMemory** ：此設定會指定僅透過快取來回應查詢。<br /><br /> **搭配使用 InMemory 和 DirectQuery** ：根據預設，此設定會指定 應該透過快取來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
 |**DirectQueryMode 屬性**|在部署模型之後，您可以透過在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更此屬性，變更 DirectQuery 模型的慣用查詢資料來源。<br /><br /> 與上一個屬性相似，此屬性指定模型的預設資料來源，而且有下列值：<br /><br /> **InMemory**：查詢只能使用快取。<br /><br /> **DirectQuerywithInMemory**：根據預設，查詢會使用關聯式資料來源，除非在用戶端的連接字串中指定另一個。<br /><br /> **InMemorywithDirectQuery**：查詢預設會使用快取，除非在用戶端的連接字串中指定另一個。<br /><br /> （**DirectQuery**：查詢只使用關聯式資料來源。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
-|**模擬設定屬性**|此屬性定義在查詢時連接至 SQL Server 資料來源所用的認證。 您可以在模型設計師中設定此屬性，並且可以稍後在部署模型後變更值。<br /><br /> 請注意，這些認證只用於回應對關聯式資料存放區的查詢；它們不同於處理混合模型快取所用的認證。<br /><br /> 當模型只用於記憶體中時，不能使用模擬。 
-  `ImpersonateCurrentUser` 設定無效，除非模型正在使用 DirectQuery 模式。|  
+|**模擬設定屬性**|此屬性定義在查詢時連接至 SQL Server 資料來源所用的認證。 您可以在模型設計師中設定此屬性，並且可以稍後在部署模型後變更值。<br /><br /> 請注意，這些認證只用於回應對關聯式資料存放區的查詢；它們不同於處理混合模型快取所用的認證。<br /><br /> 當模型只用於記憶體中時，不能使用模擬。 `ImpersonateCurrentUser` 設定無效，除非模型正在使用 DirectQuery 模式。|  
   
  此外，如果您的模型包含資料分割，您必須選擇一個資料分割做為 DirectQuery 模式查詢的來源。 如需詳細資訊，請參閱[&#40;SSAS 表格式&#41;的資料分割和 DirectQuery 模式](define-partitions-in-directquery-models-ssas-tabular.md)。  
   
-##  <a name="bkmk_related_tasks"></a>相關主題和工作  
+##  <a name="related-topics-and-tasks"></a><a name="bkmk_related_tasks"></a>相關主題和工作  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -181,4 +180,4 @@ ms.locfileid: "67284867"
 ## <a name="see-also"></a>另請參閱  
  [SSAS 表格式 &#40;的資料分割&#41;](partitions-ssas-tabular.md)   
  [&#40;SSAS 表格式&#41;的表格式模型專案](tabular-model-projects-ssas-tabular.md)   
- [在 Excel 中分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)  

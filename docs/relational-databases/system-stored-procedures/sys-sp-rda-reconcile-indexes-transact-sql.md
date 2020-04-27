@@ -17,10 +17,10 @@ ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905040"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys.databases sp_rda_reconcile_indexes （Transact-sql）

@@ -17,10 +17,10 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917919"
 ---
 # <a name="open-method-ado-record"></a>Open 方法 (ADO Record)
@@ -34,13 +34,13 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>參數  
- *Source*  
+ *來源*  
  選擇性。 **Variant** ，可能代表此**記錄**物件所代表之實體的 URL、**命令**、開啟的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或其他**記錄**物件、包含 SQL SELECT 語句或資料表名稱的字串。  
   
  *ActiveConnection*  
  選擇性。 表示連接字串或開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的**Variant** 。  
   
- *模式*  
+ *Mode*  
  選擇性。 [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值，指定結果**記錄**物件的存取模式。 預設值為**adModeUnknown**。  
   
  *CreateOptions*  

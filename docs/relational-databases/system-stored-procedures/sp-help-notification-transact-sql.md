@@ -18,10 +18,10 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906100"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
@@ -50,10 +50,10 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`傳回的*object_type*資訊。 *enum_type*在大多數情況下都是實際的。 *enum_type*是**char （10）**，沒有預設值，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |ACTUAL|僅列出與*名稱*相關聯的*object_types* 。|  
-|ALL|列出所有 object_types，包括未與 [*名稱*] 相關聯的** 。|  
+|ALL|列出所有 object_types，包括未與 [*名稱*] 相關聯的*object_types* 。|  
 |TARGET|只會列出符合所提供之*target_name*的*object_types* ，不論是否有*名稱*關聯。|  
   
 `[ @notification_method = ] notification_method`數值，決定要傳回的通知方法資料行。 *notification_method*是**Tinyint**，它可以是下列其中一個值。  
@@ -63,7 +63,7 @@ sp_help_notification
 |**1**|電子郵件：只傳回**use_email**的資料行。|  
 |**2**|呼機：只傳回**use_pager**資料行。|  
 |**4**|NetSend：只傳回**use_netsend**資料行。|  
-|**utf-7**|全部：傳回所有資料行。|  
+|**7**|全部：傳回所有資料行。|  
   
 `[ @target_name = ] 'target_name'`要搜尋的警示名稱（如果*object_type*是警示），或要搜尋的操作員名稱（如果*object_type*是運算子）。 只有*enum_type*為目標時，才需要*target_name* 。 *target_name*是**sysname**，預設值是 Null。  
   

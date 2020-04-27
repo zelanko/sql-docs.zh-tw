@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059197"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
@@ -44,7 +44,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>引數  
  *database_id* |Null  
- 資料庫的識別碼。 *database_id*是**int**，沒有預設值。 請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。  
+ 資料庫的識別碼。 *database_id* 為沒有預設值的 **int**。 請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。  
   
  *file_id* |Null  
  檔案的識別碼。 *file_id*是**int**，沒有預設值。 請指定 NULL 來傳回資料庫中的所有檔案。  
@@ -55,16 +55,16 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|資料庫識別碼。|  
 |**FileId**|**smallint**|檔案識別碼。|  
-|**戳**|**Bigint**|取得資料的資料庫時間戳記。 **** 在之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的版本中為 int。 |  
-|**NumberReads**|**Bigint**|對檔案發出的讀取數。|  
-|**BytesRead**|**Bigint**|對檔案發出的讀取位元組數。|  
-|**IoStallReadMS**|**Bigint**|使用者等待完成檔案讀取 I/O 的時間總量 (以毫秒為單位)。|  
-|**NumberWrites**|**Bigint**|檔案所進行的寫入數。|  
-|**BytesWritten**|**Bigint**|檔案所進行的寫入位元組數。|  
-|**IoStallWriteMS**|**Bigint**|使用者等待完成檔案寫入 I/O 的時間總量 (以毫秒為單位)。|  
-|**IoStallMS**|**Bigint**|**IoStallReadMS**和**IoStallWriteMS**的總和。|  
-|**FileHandle**|**Bigint**|檔案控制代碼的值。|  
-|**BytesOnDisk**|**Bigint**|磁碟中的實體檔案大小 (位元組的計數)。<br /><br /> 針對資料庫檔案，此值與 sys.databases 中的**大小**相同 **。 database_files**，但以位元組表示，而不是分頁。<br /><br /> 如果是資料庫快照集疏鬆檔案，這是作業系統供檔案使用的空間。|  
+|**TimeStamp**|**bigint**|取得資料的資料庫時間戳記。 **int**在之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的版本中為 int。 |  
+|**NumberReads**|**bigint**|對檔案發出的讀取數。|  
+|**BytesRead**|**bigint**|對檔案發出的讀取位元組數。|  
+|**IoStallReadMS**|**bigint**|使用者等待完成檔案讀取 I/O 的時間總量 (以毫秒為單位)。|  
+|**NumberWrites**|**bigint**|檔案所進行的寫入數。|  
+|**BytesWritten**|**bigint**|檔案所進行的寫入位元組數。|  
+|**IoStallWriteMS**|**bigint**|使用者等待完成檔案寫入 I/O 的時間總量 (以毫秒為單位)。|  
+|**IoStallMS**|**bigint**|**IoStallReadMS**和**IoStallWriteMS**的總和。|  
+|**FileHandle**|**bigint**|檔案控制代碼的值。|  
+|**BytesOnDisk**|**bigint**|磁碟中的實體檔案大小 (位元組的計數)。<br /><br /> 針對資料庫檔案，此值與 sys.databases 中的**大小**相同 **。 database_files**，但以位元組表示，而不是分頁。<br /><br /> 如果是資料庫快照集疏鬆檔案，這是作業系統供檔案使用的空間。|  
   
 ## <a name="remarks"></a>備註  
  **fn_virtualfilestats**是提供統計資訊的系統資料表值函式，例如在檔案上執行的 i/o 總數。 您可以利用這個函數來協助您持續追蹤使用者必須等待讀取或寫入檔案的時間長度。 這個函數也可以協助您識別發生大量 I/O 活動的檔案。  

@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188506"
 ---
 # <a name="options-environment-general-page"></a>選項 (環境 - 一般頁面)
-  使用 [**選項**] 對話方塊，即可[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]設定啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具]**** 功能表上按一下 [選項]****、展開 [環境]**** 資料夾，然後按一下 [一般]****。  
+  使用 [選項]  對話方塊來設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具]  功能表上按一下 [選項]  、展開 [環境]  資料夾，然後按一下 [一般]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **啟動時**  
  選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動時要執行的動作。 可用選項包括：  
   
--   **開啟物件總管**會提示您輸入連接，然後開啟物件總管。  
+-   [開啟物件總管]**** 會提示進行連接，然後開啟物件總管。  
   
--   [**開啟新的查詢視窗]** 會提示您進行連接，然後開啟 [SQL 查詢編輯器]。  
+-   [開啟新增查詢視窗]**** 會提示進行連接，然後開啟 SQL 查詢編輯器。  
   
--   **開啟物件總管和新的查詢**提示以進行連接，然後使用該連接開啟物件總管和 SQL 查詢編輯器。  
+-   [開啟物件總管和新增查詢]**** 會提示進行連接，然後使用該連接開啟物件總管和 SQL 查詢編輯器。  
   
--   [**開啟空白環境**] 會在沒有 SQL 查詢編輯器視窗的情況下開啟[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，而且不會將物件總管連接到伺服器。  
+-   [開啟空白環境]**** 會開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，但沒有 SQL 查詢編輯器視窗，且不會將物件總管連接到伺服器。  
   
  **在物件總管中隱藏系統物件**  
  選取此核取方塊，即可從 [物件總管] 中的樹狀檢視裡，移除系統資料庫、系統資料表、系統檢視，以及系統預存程序。 系統函數與系統資料類型並未隱藏。 此選項僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，且不會影響在 [物件總管] 中已經連接的伺服器。  
@@ -40,21 +40,21 @@ ms.locfileid: "68188506"
 ## <a name="environment-layout"></a>環境配置  
  您必須關閉再重新開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，才能在索引標籤式文件與多重文件介面 (MDI) 環境模式之間變更。  
   
- **索引標籤式檔**  
+ **索引標籤式文件**  
  選取此選項即可顯示在編輯器內，以索引標籤組合在一起的多個文件視窗。 索引標籤式文件視窗適用於組織多個開啟的文件以及在它們之間切換。  
   
  **MDI 環境**  
  選取此選項即可在 MDI 環境中開啟文件。 MDI 文件視窗可以讓螢幕空間更大，因為原來由索引標籤式文件環境中之索引標籤佔據的螢幕空間，也可以使用。 以 MDI 模式工作時，您可以按下 CTRL+TAB，或使用位於 [視窗]**** 功能表上的並列選項，在文件之間切換。  
   
 ## <a name="docked-tool-window-behavior"></a>停駐工具視窗行為  
- **[關閉] 按鈕只影響作用中的索引標籤**  
+ **關閉按鈕只會影響使用中的索引標籤**  
  指定若選取了此核取方塊，只會關閉目前具有焦點的工具視窗，而不會關閉停駐集內的所有工具視窗。 依預設，這個核取方塊為已選取。  
   
- **[自動隱藏] 按鈕只影響作用中的索引標籤**  
+ **自動隱藏按鈕只會影響使用中的索引標籤**  
  指定若選取了此核取方塊，只會自動隱藏目前具有焦點的工具視窗，而不會隱藏停駐集內的所有工具視窗。 依預設，不會勾選此核取方塊。  
   
 ## <a name="display"></a>顯示器  
- **在最近使用的清單中顯示 n 個檔案**  
+ **顯示最近使用清單中的 n 個檔案**  
  自訂 [檔案]**** 功能表上所顯示之最近使用的專案與最近使用之檔案的數目。 輸入介於 1 到 24 之間的數字。 預設值為 4。 這是方便用來擷取最近使用過的指令碼專案和檔案，以及編寫專案的方式。  
   
   

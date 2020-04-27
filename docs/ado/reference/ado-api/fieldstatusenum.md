@@ -16,10 +16,10 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918661"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
@@ -42,7 +42,7 @@ ms.locfileid: "67918661"
 |**adFieldIntegrityViolation**|10|表示欄位無法修改，因為它是計算或衍生的實體。|  
 |**adFieldInvalidURL**|17|表示資料來源 URL 包含不正確字元。|  
 |**adFieldIsNull**|3|指出提供者傳回 VT_Null 類型的 VARIANT 值，而且欄位不是空的。|  
-|**adFieldOK**|0|預設。 表示已成功加入或刪除欄位。|  
+|**adFieldOK**|0|預設值。 表示已成功加入或刪除欄位。|  
 |**adFieldOutOfSpace**|22|指出提供者無法取得足夠的儲存空間來完成移動或複製操作。|  
 |**adFieldPendingChange**|0x40000|表示已刪除欄位，然後再重新加入（可能使用不同的資料類型），或先前具有**adFieldOK**狀態的欄位值已變更。 欄位的最終形式會在呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法之後修改[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合。|  
 |**adFieldPendingDelete**|0x20000|表示**刪除**作業導致狀態設定。 呼叫**Update**方法之後，欄位已從**Fields**集合中標示為要刪除。|  

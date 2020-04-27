@@ -18,10 +18,10 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072657"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
@@ -75,17 +75,14 @@ sp_addlogin [ @loginame = ] 'login'
 |值|描述|  
 |-----------|-----------------|  
 |NULL|傳遞純文字密碼。 這是預設值。|  
-|**skip_encryption**|密碼已雜湊。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 應該直接儲存這個值，不需要重新雜湊。|  
-|**skip_encryption_old**|提供的密碼是由舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所雜湊的。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 應該直接儲存這個值，不需要重新雜湊。 這個選項專用來升級。|  
+|**skip_encryption**|密碼已雜湊。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 應該直接儲存這個值，不需要重新雜湊。|  
+|**skip_encryption_old**|提供的密碼是由舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所雜湊的。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 應該直接儲存這個值，不需要重新雜湊。 這個選項專用來升級。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入可以包含 1 到 128 個字元，其中包括字母、符號和數字。 登入不能包含反\\斜杠（）;為保留的登入名稱，例如 sa 或 public，或已經存在;或為 Null 或空字串（`''`）。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入可以包含 1 到 128 個字元，其中包括字母、符號和數字。 登入不能包含反\\斜杠（）;為保留的登入名稱，例如 sa 或 public，或已經存在;或為 Null 或空字串（`''`）。  
   
  如果提供了預設資料庫的名稱，您可以直接連接到指定的資料庫，不需要執行 USE 陳述式。 不過，您無法使用預設資料庫，直到資料庫擁有者取得該資料庫的存取權（使用[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)或[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)）或[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)為止。  
   
@@ -93,7 +90,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  變更伺服器的預設語言並不會變更現有登入的預設語言。 若要變更伺服器的預設語言，請使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
- 如果**** 在將登入新增至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，密碼已雜湊處理，使用 skip_encryption 來隱藏密碼雜湊就很有用。 如果密碼是由舊版所雜湊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用**skip_encryption_old**。  
+ 如果**skip_encryption**在將登入新增至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，密碼已雜湊處理，使用 skip_encryption 來隱藏密碼雜湊就很有用。 如果密碼是由舊版所雜湊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用**skip_encryption_old**。  
   
  sp_addlogin 無法在使用者自訂交易內執行。  
   
@@ -112,7 +109,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-sql-server-login"></a>A. 建立 SQL Server 登入  
- 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的 `Victoria` 登入，密碼是 `B1r12-36`，不指定預設資料庫。  
+ 下列範例會建立 `Victoria` 使用者的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，密碼是 `B1r12-36`，不指定預設資料庫。  
   
 ```  
 EXEC sp_addlogin 'Victoria', 'B1r12-36';  
@@ -120,7 +117,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-sql-server-login-that-has-a-default-database"></a>B. 建立有預設資料庫的 SQL Server 登入  
- 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的 `Albert` 登入，密碼是 `B5432-3M6`，預設資料庫是 `corporate`。  
+ 下列範例會建立 `Albert` 使用者的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，密碼是 `B5432-3M6`，預設資料庫是 `corporate`。  
   
 ```  
 EXEC sp_addlogin 'Albert', 'B5432-3M6', 'corporate';  
@@ -128,21 +125,21 @@ GO
 ```  
   
 ### <a name="c-creating-a-sql-server-login-that-has-a-different-default-language"></a>C. 建立有不同預設語言的 SQL Server 登入  
- 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的 `TzTodorov` 登入，密碼是 `709hLKH7chjfwv`，預設資料庫是 `AdventureWorks2012`，預設語言是 `Bulgarian`。  
+ 下列範例會建立 `TzTodorov` 使用者的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，密碼是 `709hLKH7chjfwv`，預設資料庫是 `AdventureWorks2012`，預設語言是 `Bulgarian`。  
   
 ```  
 EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2012', N'български'  
 ```  
   
 ### <a name="d-creating-a-sql-server-login-that-has-a-specific-sid"></a>D. 建立有特定 SID 的 SQL Server 登入  
- 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的 `Michael` 登入，密碼是 `B548bmM%f6`，預設資料庫是 `AdventureWorks2012`，預設語言是 `us_english`，SID 是 `0x0123456789ABCDEF0123456789ABCDEF`。  
+ 下列範例會建立 `Michael` 使用者的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，密碼是 `B548bmM%f6`，預設資料庫是 `AdventureWorks2012`，預設語言是 `us_english`，SID 是 `0x0123456789ABCDEF0123456789ABCDEF`。  
   
 ```  
 EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立登入 &#40;Transact-sql&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

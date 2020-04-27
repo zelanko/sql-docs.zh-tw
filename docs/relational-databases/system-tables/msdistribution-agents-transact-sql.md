@@ -18,10 +18,10 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907417"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67907417"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|散發代理程式的識別碼。|  
+|**id**|**int**|散發代理程式的識別碼。|  
 |**name**|**Nvarchar （100）**|散發代理程式的名稱。|  
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
@@ -41,8 +41,8 @@ ms.locfileid: "67907417"
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = Push。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
 |**local_job**|**bit**|指出本機散發者是否有 SQL Server Agent 作業。|  
-|**job_id**|**binary （16）**|作業識別碼。|  
-|**subscription_guid**|**binary （16）**|這個代理程式的訂閱識別碼。|  
+|**job_id**|**binary(16)**|作業識別碼。|  
+|**subscription_guid**|**binary(16)**|這個代理程式的訂閱識別碼。|  
 |**profile_id**|**int**|[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中的設定識別碼。|  
 |**anonymous_subid**|**uniqueidentifier**|匿名代理程式的識別碼。|  
 |**subscriber_name**|**sysname**|訂閱者的名稱，只供匿名代理程式使用。|  
@@ -58,7 +58,7 @@ ms.locfileid: "67907417"
 |**dts_package_location**|**int**|封裝位置。 封裝的位置**可以是「** 散發者」或「**訂閱者**」。|  
 |**sid**|**Varbinary （85）**|散發代理程式或合併代理程式在第一次執行期間的安全性識別碼 (SID)。|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|當連接到訂閱者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> ****  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 驗證<br /><br /> ****  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
+|**subscriber_security_mode**|**smallint**|當連接到訂閱者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 驗證<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**subscriber_login**|**sysname**|連接到訂閱者時所用的登入。|  
 |**subscriber_password**|**Nvarchar （524）**|這是連接到訂閱者時，所用之密碼的加密值。|  
 |**reset_partial_snapshot_progress**|**bit**|這是指是否將捨棄部份下載的快照集，以便重新啟動整個快照集處理序。|  

@@ -18,10 +18,10 @@ ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910141"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
@@ -35,10 +35,10 @@ ms.locfileid: "67910141"
 |**source_dbms**|**sysname**|指出資料類型對應的來源 DBMS 名稱，它可以是下列值之一：<br /><br /> **MSSQLSERVER** = 來源是 SQL Server 資料庫。<br /><br /> **Oracle** = 來源是 oracle 資料庫。|  
 |**source_version**|**sysname**|指出來源 DBMS 的產品版本。|  
 |**source_type**|**sysname**|指出來源 DBMS 中所列出的資料類型。|  
-|**source_length_min**|**Bigint**|來源 DBMS 的資料類型最小長度，如果其值為 NULL，表示不使用長度。|  
-|**source_length_max**|**Bigint**|來源 DBMS 的資料類型最大長度，如果其值為 NULL，表示不使用長度。|  
-|**source_precision_min**|**Bigint**|來源 DBMS 的資料類型最小有效位數，如果其值為 NULL，表示不使用有效位數。|  
-|**source_precision_max**|**Bigint**|來源 DBMS 的資料類型最大有效位數，如果其值為 NULL，表示不使用有效位數。|  
+|**source_length_min**|**bigint**|來源 DBMS 的資料類型最小長度，如果其值為 NULL，表示不使用長度。|  
+|**source_length_max**|**bigint**|來源 DBMS 的資料類型最大長度，如果其值為 NULL，表示不使用長度。|  
+|**source_precision_min**|**bigint**|來源 DBMS 的資料類型最小有效位數，如果其值為 NULL，表示不使用有效位數。|  
+|**source_precision_max**|**bigint**|來源 DBMS 的資料類型最大有效位數，如果其值為 NULL，表示不使用有效位數。|  
 |**source_scale_min**|**int**|來源 DBMS 的資料類型最小小數位數，如果其值為 NULL，表示不使用小數位數。|  
 |**source_scale_max**|**int**|來源 DBMS 的資料類型最大小數位數，如果其值為 NULL，表示不使用小數位數。|  
 |**source_nullable**|**bit**|指出目的地資料類型是否支援 Null 值。|  
@@ -46,8 +46,8 @@ ms.locfileid: "67910141"
 |**destination_dbms**|**sysname**|指出目的地 DBMS 的名稱，它可以是下列值之一：<br /><br /> **MSSQLSERVER** = 目的地是 SQL Server 資料庫。<br /><br /> **Oracle** = 目的地是 oracle 資料庫。<br /><br /> **DB2** = 目的地是 IBM DB2 資料庫。<br /><br /> **Sybase** = 目的地是 sybase 資料庫。|  
 |**destination_version**|**sysname**|目的地 DBMS 的產品版本。|  
 |**destination_type**|**sysname**|目的地 DBMS 的資料類型。|  
-|**destination_length**|**Bigint**|目的地 DBMS 的資料類型長度。|  
-|**destination_precision**|**Bigint**|目的地 DBMS 之資料類型的有效位數。|  
+|**destination_length**|**bigint**|目的地 DBMS 的資料類型長度。|  
+|**destination_precision**|**bigint**|目的地 DBMS 之資料類型的有效位數。|  
 |**destination_scale**|**int**|目的地 DBMS 之資料類型的小數位數。|  
 |**destination_nullable**|**bit**|指出目的地 DBMS 中的資料類型是否支援 Null 值。|  
 |**destination_createparams**|**int**|僅供內部使用。|  

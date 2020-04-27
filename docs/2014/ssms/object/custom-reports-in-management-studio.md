@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188294"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自訂報表
@@ -32,9 +32,9 @@ ms.locfileid: "68188294"
 ## <a name="running-a-custom-report"></a>執行自訂報表  
  您可以利用下列方式在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中執行自訂報表：  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]，然後以滑鼠左鍵按一下 [自訂報表]。 在 [開啟檔案] 對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後以滑鼠左鍵按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]、指向 [自訂報表]，然後從最近使用過的檔案清單中選取自訂報表。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  、指向 [自訂報表]  ，然後從最近使用過的檔案清單中選取自訂報表。  
   
 ## <a name="limitations"></a>限制  
  當您使用自訂報表時，請考量下列限制：  

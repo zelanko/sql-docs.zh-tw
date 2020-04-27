@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110162"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>啟動 dta 命令提示字元公用程式和微調工作負載
-  這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，利用它來微調工作負載。 它會使用您在 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 的 [微調工作負載](lesson-1-1-tuning-a-workload.md)練習中所建立的 MyScript.sql 工作負載。  
+   這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，使用它來微調工作負載。 它會使用您為 Database Engine Tuning Advisor 圖形化使用者介面（GUI）練習所建立的工作負載（Myscript.sql），以[微調工作負載](lesson-1-1-tuning-a-workload.md)。  
   
  本教學課程使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫。 基於安全性的考量，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](http://sqlserversamples.codeplex.com)＞。  
   
@@ -48,9 +48,7 @@ ms.locfileid: "66110162"
     dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2012 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
     ```  
   
-     其中 `-S` 指定您的伺服器名稱以及安裝了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 執行個體。 
-  `-E` 設定值指定您要使用執行個體的信任連接，當您利用 Windows 網域帳戶來連接時，適合採用這個方式。 
-  `-D` 設定值指定您要微調的資料庫， `-if` 指定工作負載檔案， `-s` 指定工作階段名稱， `-of` 指定工具要將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建議指令碼寫入其中的檔案， `-ox` 指定工具要將 XML 格式的建議寫入其中的檔案。 最後三個參數依照下列方式來指定微調選項： `-fa IDX_IV` 指定 Database Engine Tuning Advisor 只應考慮加入索引 (叢集和非叢集) 和索引檢視； `-fp NONE` 指定在分析期間，完全不應考慮任何資料分割策略； `-fk NONE` 指定 Database Engine Tuning Advisor 在產生建議時，不需要保留資料庫中任何現有的實體設計結構。  
+     其中 `-S` 指定您的伺服器名稱以及安裝了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 執行個體。 `-E` 設定值指定您要使用執行個體的信任連接，當您利用 Windows 網域帳戶來連接時，適合採用這個方式。 `-D` 設定值指定您要微調的資料庫， `-if` 指定工作負載檔案， `-s` 指定工作階段名稱， `-of` 指定工具要將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建議指令碼寫入其中的檔案， `-ox` 指定工具要將 XML 格式的建議寫入其中的檔案。 最後三個參數依照下列方式來指定微調選項： `-fa IDX_IV` 指定 Database Engine Tuning Advisor 只應考慮加入索引 (叢集和非叢集) 和索引檢視； `-fp NONE` 指定在分析期間，完全不應考慮任何資料分割策略； `-fk NONE` 指定 Database Engine Tuning Advisor 在產生建議時，不需要保留資料庫中任何現有的實體設計結構。  
   
 3.  在 Database Engine Tuning Advisor 微調好工作負載之後，它會顯示一則訊息，指出微調工作階段已順利完成。 您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開啟 MySession2OutputScript.sql 和 MySession2Output.xml 檔，以檢視微調結果。 另外，您也可以在 Database Engine Tuning Advisor GUI 中開啟 MySession2 微調工作階段，依照 [檢視微調建議](lesson-1-2-viewing-tuning-recommendations.md) 和 [檢視微調報表](lesson-1-3-viewing-tuning-reports.md)中的相同方式來檢視其建議和報表。  
   

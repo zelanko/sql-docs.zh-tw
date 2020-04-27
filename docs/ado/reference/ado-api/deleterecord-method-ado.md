@@ -17,10 +17,10 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919087"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
@@ -34,7 +34,7 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>參數  
- *Source*  
+ *來源*  
  選擇性。 **字串**值，包含可識別要刪除之實體（例如，檔案或目錄）的 URL。 如果省略*Source*或指定空字串，則會刪除目前[記錄](../../../ado/reference/ado-api/record-object-ado.md)所代表的實體。 如果記錄是集合記錄（ **adCollectionRecord**的[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ，例如目錄），則也會一併刪除所有子系（例如，子目錄）。  
   
  *Async*  

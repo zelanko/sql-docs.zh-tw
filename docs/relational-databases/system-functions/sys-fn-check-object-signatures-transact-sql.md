@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046316"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
@@ -52,7 +52,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@*類別*為**sysname**。  
+ \@*class* 是 **sysname**。  
   
  { \@ *thumbprint* }  
  用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 \@*指紋*為**Varbinary （20）**。  
@@ -62,7 +62,7 @@ fn_ check_object_signatures (
   
 |資料行|類型|描述|  
 |------------|----------|-----------------|  
-|type|**Nvarchar （120）**|傳回類型描述或組件。|  
+|type|**nvarchar(120)**|傳回類型描述或組件。|  
 |entity_id|**int**|傳回所評估之物件的物件識別碼。|  
 |is_signed|**int**|當此物件並非由提供的指模所簽署時，傳回 0。 當此物件是由提供的指模所簽署時，傳回 1。|  
 |is_signature_valid|**int**|如果 is_signed 值是 1，就會在簽章無效時傳回 0。 當簽章有效時，則傳回 1。<br /><br /> 如果 is_signed 值是 0，則一律傳回 0。|  

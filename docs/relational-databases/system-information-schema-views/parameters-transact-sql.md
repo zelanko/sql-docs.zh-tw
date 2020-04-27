@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68103278"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68103278"
 |**PARAMETER_MODE**|**Nvarchar （** 10 **）**|如果是輸入參數，便傳回 IN；如果是輸出參數，便傳回 OUT，如果是輸入/輸出參數，便傳回 INOUT。|  
 |**IS_RESULT**|**Nvarchar （** 10 **）**|如果指出常式的結果是函數，便傳回 YES。 否則，便傳回 NO。|  
 |**AS_LOCATOR**|**Nvarchar （** 10 **）**|如果宣告成定位器，便傳回 YES。 否則，便傳回 NO。|  
-|**PARAMETER_NAME**|**Nvarchar （** 128 **）**|參數名稱。 如果這對應於函數的傳回值，便是 NULL。|  
+|**PARAMETER_NAME**|**Nvarchar （** 128 **）**|參數的名稱。 如果這對應於函數的傳回值，便是 NULL。|  
 |**DATA_TYPE**|**Nvarchar （** 128 **）**|系統提供的資料類型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二進位或字元資料類型的最大長度 (以字元為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，便傳回 NULL。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二進位或字元資料類型的最大長度 (以位元組為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，便傳回 NULL。|  
@@ -70,6 +70,6 @@ ms.locfileid: "68103278"
  [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [&#40;Transact-sql&#41;的 sys.databases 參數](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

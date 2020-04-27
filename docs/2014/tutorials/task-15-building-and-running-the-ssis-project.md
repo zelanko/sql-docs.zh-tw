@@ -10,13 +10,13 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822990"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>工作 15：建立和執行 SSIS 專案
+# <a name="task-15-building-and-running-the-ssis-project"></a>工作 15：建置及執行 SSIS 專案
 
   在這項工作中，您會建立及執行 SSIS 專案。 如果您的電腦上已安裝64位版本的 Excel 2010，則您應該將**Run64BitRuntime**的值設定為**False** ，excel 來源才能正常執行。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66822990"
   
      ![CleanseAndCurateSuppliers 專案屬性](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "CleanseAndCurateSuppliers 專案屬性")  
   
-4.  按一下 **[確定**] 關閉 [**屬性**] 對話方塊。  
+4.  按一下 [確定]**** 以關閉 [內容]**** 對話方塊。  
   
 5.  按一下功能表列上的 [**建立**]，然後按一下 [**建立 CleanseAndCurateSuppliers**]。 確定沒有任何建立錯誤。  
   

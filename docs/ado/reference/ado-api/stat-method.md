@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916875"
 ---
 # <a name="stat-method"></a>Stat 方法
@@ -54,16 +54,16 @@ Long stream.Stat(StatStg, StatFlag)
  包含資料流程名稱的字串（如果有的話），而且未指定 StatFlag 值 STATFLAG_NONAME。  
   
  *cbSize*  
- 指定資料流程或位元組陣列的大小（以位元組為單位）。  
+ 指定資料流或位元組陣列的大小，以位元組為單位。  
   
  *mtime*  
- 指出此儲存、資料流程或位元組陣列的最後修改時間。  
+ 指示這個儲存區、資料流或位元組陣列的上一次修改時間。  
   
  *ctime*  
- 指出此儲存、資料流程或位元組陣列的建立時間。  
+ 指示這個儲存區、資料流或位元組陣列的建立時間。  
   
  *atime*  
- 指出此儲存、資料流程或位元組陣列的上次存取時間。  
+ 指示這個儲存區、資料流或位元組陣列的上一次存取時間。  
   
  如果 StatFlag 參數中指定了 STATFLAG_NONAME，就不會傳回資料流程的名稱。  
   

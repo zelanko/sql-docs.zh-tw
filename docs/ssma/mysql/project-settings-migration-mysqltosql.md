@@ -10,10 +10,10 @@ ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908860"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>專案設定 (移轉) (MySQLToSQL)
@@ -33,9 +33,9 @@ ms.locfileid: "67908860"
 |--------|--------------|  
 |**批次大小**|指定資料移轉期間使用的批次大小。<br /><br />**預設模式**：1000<br /><br />**開放式模式**：1000<br /><br />**完整模式**：1000|  
 |**檢查條件約束**|指定當 SSMA 將資料插入 SQL Server 資料表時，是否應檢查條件約束。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
-|**引發觸發程式**|指定 SSMA 是否應該在將資料加入 SQL Server 資料表時，引發插入觸發程式。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
-|**保留身分識別**|指定 SSMA 將資料新增至 SQL Server 時，是否保留 MySQL 身分識別值。 值為 False 會導致目的地指派識別值。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
-|**保留 null**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
+|**引發觸發程序**|指定 SSMA 是否應該在將資料加入 SQL Server 資料表時，引發插入觸發程式。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
+|**保留識別**|指定 SSMA 將資料新增至 SQL Server 時，是否保留 MySQL 身分識別值。 值為 False 會導致目的地指派識別值。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
+|**保留 Null**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
 |**表鎖**|指定 SSMA 是否會在資料移轉期間將資料加入資料表時，鎖定資料表。 取得大量複製作業期間的大量更新鎖定。 如果值為 False，就會在資料列層級設定鎖定。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
   
 ### <a name="data-modification"></a>資料修改  

@@ -13,17 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110170"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>使用現有的階層式資料填入資料表
-  此工作會建立新的資料表，並在其中填入**EmployeeDemo**資料表中的資料。 此工作的步驟如下：  
+   此工作會建立一個新的資料表，並以 **EmployeeDemo** 資料表中的資料填入該資料表。 此工作的步驟如下：  
   
--   建立包含 `hierarchyid` 資料行的新資料表。 此資料行可以取代現有的 **EmployeeID** 和 **ManagerID** 資料行。 不過，您將會保留這些資料行。 這是因為現有的應用程式可能會參考這些資料行，而且這些資料行也可以在轉換後，協助您了解資料。 資料表定義指定 **OrgNode** 為主索引鍵，其會要求該資料行所包含的值不得重複。 
-  **OrgNode** 資料行上的叢集索引將以 **OrgNode** 順序儲存資料。  
+-   建立包含 `hierarchyid` 資料行的新資料表。 此資料行可以取代現有的 **EmployeeID** 和 **ManagerID** 資料行。 不過，您將會保留這些資料行。 這是因為現有的應用程式可能會參考這些資料行，而且這些資料行也可以在轉換後，協助您了解資料。 資料表定義指定 **OrgNode** 為主索引鍵，其會要求該資料行所包含的值不得重複。 **OrgNode** 資料行上的叢集索引將以 **OrgNode** 順序儲存資料。  
   
 -   建立暫存資料表，該資料表可用於追蹤各個主管手下的直屬員工人數。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66110170"
   
      `10        4         2`  
   
-3.  填入 **NewOrg** 資料表。 使用 GetRoot 和 ToString 方法，將**Num**值串連成`hierarchyid`格式，然後以產生的階層式值更新**OrgNode**資料行：  
+3.  填入**NewOrg**資料表。 使用 GetRoot 和 ToString 方法，將**Num**值串連成`hierarchyid`格式，然後以產生的階層式值更新**OrgNode**資料行：  
   
     ```  
     WITH paths(path, EmployeeID)   

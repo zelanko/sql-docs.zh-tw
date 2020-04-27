@@ -16,10 +16,10 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917745"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
@@ -27,7 +27,7 @@ ms.locfileid: "67917745"
   
 |持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|預設。 表示參數代表輸入參數。|  
+|**adParamInput**|1|預設值。 表示參數代表輸入參數。|  
 |**adParamInputOutput**|3|表示參數同時代表輸入和輸出參數。|  
 |**adParamOutput**|2|表示參數表示輸出參數。|  
 |**adParamReturnValue**|4|表示參數代表傳回值。|  

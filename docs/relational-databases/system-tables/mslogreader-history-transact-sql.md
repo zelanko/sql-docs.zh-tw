@@ -18,10 +18,10 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907289"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "67907289"
 |**runstatus**|**int**|執行狀態如下：<br /><br /> 1 = 啟動。<br /><br /> 2 = 成功。<br /><br /> 3 = 進行中。<br /><br /> 4 = 閒置。<br /><br /> 5 = 重試。<br /><br /> 6 = 失敗。|  
 |**start_time**|**datetime**|開始執行作業的時間。|  
 |**time**|**datetime**|記錄訊息的時間。|  
-|**期限**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  
+|**duration**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  
 |**批註**|**nvarchar(255)**|訊息文字。|  
-|**xact_seqno**|**Varbinary （16）**|前次處理的交易序號。|  
+|**xact_seqno**|**varbinary(16)**|前次處理的交易序號。|  
 |**delivery_time**|**int**|傳遞第一項交易的時間。|  
 |**delivered_transactions**|**int**|在工作階段所傳遞的交易總數。|  
 |**delivered_commands**|**int**|在工作階段所傳遞的命令總數。|  

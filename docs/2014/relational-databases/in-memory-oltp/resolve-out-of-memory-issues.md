@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624402"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
@@ -69,7 +69,7 @@ ms.locfileid: "67624402"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>解決低記憶體或 OOM 狀況對於工作負載的影響  
  避免發生低記憶體或 OOM (記憶體不足) 的情況才是最上策。 良好的規劃和監視有助於避免 OOM 情況。 不過，最佳的規劃永遠無法預測實際發生的狀況，而最後可能會導致低記憶體或 OOM。 有兩個步驟可以從 OOM 中復原：  
   
-1.  [開啟 DAC （專用管理員連接）](#open-a-dac-dedicated-administrator-connection) 
+1.  [開啟 DAC (專用管理員連接)](#open-a-dac-dedicated-administrator-connection) 
   
 2.  [採取更正動作](#take-corrective-action) 
   
@@ -145,6 +145,6 @@ GO
  [管理記憶體內部 OLTP 的記憶體](../../database-engine/managing-memory-for-in-memory-oltp.md)   
  [監視和疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md)   
  [資料庫並繫結至資源集區的指引，請參閱](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [最佳做法：在 VM 環境中使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
+ [最佳作法：在 VM 環境使用記憶體中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

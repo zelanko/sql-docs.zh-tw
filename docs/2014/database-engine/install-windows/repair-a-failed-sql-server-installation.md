@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046661"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>卸除 SQL Server 2014 安裝
@@ -46,7 +46,7 @@ ms.locfileid: "67046661"
   
 -   若要在失敗的「準備」作業之後修復容錯移轉叢集節點，請使用 [移除節點]  ，然後再次執行「準備」步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>若要從安裝中心修復失敗的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>若要從安裝中心修復失敗的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
   
 1.  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式 (setup.exe)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67046661"
   
 8.  [修復進度] 頁面會顯示修復作業的狀態。 [完成] 頁面會指出作業已完成。  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>若要使用命令提示字元修復失敗的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>若要使用命令提示字元修復失敗的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
   
 1.  在命令提示字元執行下列命令：  
   

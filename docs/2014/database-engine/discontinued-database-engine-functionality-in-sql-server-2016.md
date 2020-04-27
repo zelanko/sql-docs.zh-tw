@@ -34,23 +34,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67463462"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="SQL14"></a>中已停止的功能[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a><a name="SQL14"></a>中已停止的功能[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
 |類別|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
 |相容性層級|90 相容性層級|資料庫至少必須設定為相容性層級 100。 當相容性層級低於 100 的資料庫升級為 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]時，資料庫的相容性層級會在升級作業期間設定為 100。|  
   
-## <a name="Denali"></a>中已停止的功能[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a><a name="Denali"></a>中已停止的功能[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
 |類別|已停止的功能|取代|  
@@ -66,17 +66,14 @@ ms.locfileid: "67463462"
 |記憶體管理|32 位元 Address Windowing Extensions (AWE) 和 32 位元 Hot Add Memory 支援。|使用 64 位元作業系統。|  
 |中繼資料|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |可程式性|SQL Server Distributed Management Objects (SQL-DMO)|SQL Server 管理物件 (SMO)|  
-|查詢提示|`FASTFIRSTROW`提示|`OPTION (FAST`*n* `)`。|  
-|遠端伺服器|使用者已無法使用 `sp_addserver` 建立新的遠端伺服器。 
-  `sp_addserver` 與 'local' 選項仍可使用。 升級期間所保留或複寫所建立的遠端伺服器仍然可以使用。|使用連結的伺服器取代遠端伺服器。|  
+|查詢提示|`FASTFIRSTROW` 提示|`OPTION (FAST`*n* `)`。|  
+|遠端伺服器|使用者已無法使用 `sp_addserver` 建立新的遠端伺服器。 `sp_addserver` 與 'local' 選項仍可使用。 升級期間所保留或複寫所建立的遠端伺服器仍然可以使用。|使用連結的伺服器取代遠端伺服器。|  
 |安全性|`sp_dropalias`|以使用者帳戶和資料庫角色的組合來取代別名。 請使用 `sp_dropalias`，在升級的資料庫中移除別名。|  
 |安全性|代表早於 **2000 之登入值的版本參數** PWDCOMPARE [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已停止。|None|  
-|SMO 中的 Service Broker 可程式性|
-  **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** 類別不再實作 **Microsoft.SqlServer.Management.Smo.IObjectPermission** 介面。||  
+|SMO 中的 Service Broker 可程式性|**Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** 類別不再實作 **Microsoft.SqlServer.Management.Smo.IObjectPermission** 介面。||  
 |Set 選項|`SET DISABLE_DEF_CNST_CHK`|無。|  
 |系統資料表|sys.database_principal_aliases|請使用角色，而非別名。|  
-|Transact-SQL|
-  `RAISERROR` 格式的 `RAISERROR integer 'string'` 已停止。|請使用目前的**RAISERROR （...）** 語法重寫語句。|  
+|Transact-SQL|`RAISERROR` 格式的 `RAISERROR integer 'string'` 已停止。|請使用目前的**RAISERROR （...）** 語法重寫語句。|  
 |Transact-SQL 語法|`COMPUTE / COMPUTE BY`|使用`ROLLUP`|  
 |Transact-SQL 語法|使用和 **=&#42;** ** \* **|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed、databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|已取代為 database_file_size_change event、database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  

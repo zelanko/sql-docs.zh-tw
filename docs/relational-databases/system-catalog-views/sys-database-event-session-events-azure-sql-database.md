@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 959c595f4ac394bbaf50c07b27a4679d9a30556e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915136"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
@@ -34,7 +34,7 @@ ms.locfileid: "67915136"
 |NAME|**sysname**|事件的名稱。 不可為 Null。|  
 |套件|**sysname**|包含此事件之事件封裝的名稱。 不可為 Null。|  
 |module|**sysname**|包含此事件之模組的名稱。 不可為 Null。|  
-|述詞|**Nvarchar （3000）**|套用至事件的述詞運算式。 可為 Null。|  
+|predicate|**Nvarchar （3000）**|套用至事件的述詞運算式。 可為 Null。|  
 |predicate_xml|**Nvarchar （3000）**|套用至事件的 XML 述詞運算式。 可為 Null。|  
   
 ## <a name="permissions"></a>權限  

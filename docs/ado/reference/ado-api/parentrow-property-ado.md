@@ -18,10 +18,10 @@ ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a81eb6ee58d942547a159728b9c3edf9a30f1ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917677"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 屬性 (ADO)

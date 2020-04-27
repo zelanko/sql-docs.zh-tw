@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67285050"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>並存安裝 Reporting Services 和 Internet Information Services (SSRS 原生模式)
@@ -51,7 +51,7 @@ ms.locfileid: "67285050"
   
  發生連接埠衝突的其中一個指標是，您將會看到下列錯誤訊息：「System.IO.FileLoadException: 由於已有另一個處理序正在使用該檔案，所以無法存取該檔案。 (來自 HRESULT 的例外狀況: 0x80070020)。」  
   
-## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>IIS 6.0、7.0、8.0、8.5 與 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 URL 保留項目  
+## <a name="url-reservations-for-iis-60-70-80-85-with-sssql14-reporting-services"></a>IIS 6.0、7.0、8.0、8.5 與 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 URL 保留項目  
  根據上一節所描述的優先順序規則，您可以開始了解針對 Reporting Services 和 IIS 所定義的 URL 保留項目如何提升互通性。 Reporting Services 會接收明確指定其應用程式之虛擬目錄名稱的要求。IIS 會接收所有其餘要求，然後您可以將這些要求導向至 IIS 處理模型內部執行的應用程式。  
   
 |Application|URL 保留項目|描述|要求接收|  
@@ -60,7 +60,7 @@ ms.locfileid: "67285050"
 |報表管理員|http://+:80/Reports|通訊埠 80 的強式萬用字元，以及 Reports 虛擬目錄。|在通訊埠 80 上接收指定 Reports 虛擬目錄的所有要求。 報表管理員接收 HTTP://\<computername>/reports。的所有要求|  
 |IIS|http://*:80/|通訊埠 80 的弱式萬用字元。|在通訊埠 80 上接收其他應用程式未接收的任何其餘要求。|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>在 IIS 6.0、7.0、8.0、8.5 上並存部署 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與 SQL Server 2005 Reporting Services  
+## <a name="side-by-side-deployments-of-sscurrent-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>在 IIS 6.0、7.0、8.0、8.5 上並存部署 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與 SQL Server 2005 Reporting Services  
  當 IIS 網站的虛擬目錄名稱與 Reporting Services 所使用的虛擬目錄名稱完全相同時，IIS 與 Reporting Services 之間就會發生互通性問題。 例如，假設您有下列組態：  
   
 -   指派至通訊埠 80 以及名為 "Reports" 之虛擬目錄的 IIS 網站。  
@@ -79,7 +79,7 @@ ms.locfileid: "67285050"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [設定 SSRS Configuration Manager &#40;的 URL&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [安裝 Reporting Services 原生模式報表伺服器](install-reporting-services-native-mode-report-server.md)  
   
   

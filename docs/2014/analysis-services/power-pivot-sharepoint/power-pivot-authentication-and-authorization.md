@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67826339"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
@@ -24,7 +24,7 @@ ms.locfileid: "67826339"
   
  按下列連結可閱讀本主題中的特定小節：  
   
- [使用傳統模式登入需求的 Windows 驗證](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [使用傳統模式登入的 Windows 驗證需求](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [PowerPivot 作業需要使用者授權](#UserConnections)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67826339"
   
  [PowerPivot 活頁簿的 Excel Services 安全性考量](#excel)  
   
-##  <a name="bkmk_auth"></a>使用傳統模式登入需求的 Windows 驗證  
+##  <a name="windows-authentication-using-classic-mode-sign-in-requirement"></a><a name="bkmk_auth"></a>使用傳統模式登入需求的 Windows 驗證  
  PowerPivot for SharePoint 支援 SharePoint 所提供之一組經過簡化的驗證選項。 在所有可用的驗證選項中，PowerPivot for SharePoint 部署僅支援 Windows 驗證。 此外，發生登入的 Web 應用程式必須設定為使用傳統模式。  
   
  由於 PowerPivot for SharePoint 部署的 Analysis Services 資料引擎僅支援 Windows 驗證，因此需要 Windows 驗證。 Excel Services 使用透過 NTLM 或 Kerberos 通訊協定驗證的 Windows 使用者識別，經由 MSOLAP OLE DB 提供者建立 Analysis Services 連接。  
@@ -52,7 +52,7 @@ ms.locfileid: "67826339"
   
  若為現有的 Web 應用程式，請使用下列指示來確認 Web 應用程式是否設定為使用 Windows 驗證。  
   
-1.  在管理中心的 [應用程式管理] 中，按一下 **[管理 Web 應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理 web 應用程式**]。  
   
 2.  選取 Web 應用程式。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67826339"
   
 4.  確認每個區域都有一個提供者，而且預設區域設為 Windows。  
   
-##  <a name="UserConnections"></a>需要使用者授權的 PowerPivot 作業  
+##  <a name="powerpivot-operations-requiring-user-authorization"></a><a name="UserConnections"></a>需要使用者授權的 PowerPivot 作業  
  SharePoint 授權只用於 PowerPivot 查詢和資料處理的所有層級存取。  
   
  不支援 Analysis Services 以角色為基礎的授權模型。 資料格、資料列或資料表層級的 PowerPivot 資料無法使用以角色為基礎的授權。 您無法透過保護活頁簿不同部分的安全，在其中為特定的使用者授與或拒絕機密資料的存取。 擁有 SharePoint 文件庫中 Excel 活頁簿之檢視權限的使用者可以完整使用內嵌的 PowerPivot 資料。  
@@ -73,7 +73,7 @@ ms.locfileid: "67826339"
   
 -   將資料來源的更新複本儲存至內容庫中活頁簿的資料重新整理作業。 在此情況下，實際登入作業是使用從 Secure Store Service 之目標應用程式擷取的使用者名稱和密碼執行。 認證可以是 PowerPivot 無人看管的資料重新整理帳戶，或以資料建立時，其重新整理排程儲存的認證。 如需詳細資訊，請參閱[設定 Powerpivot 資料重新整理的預存認證 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)和[設定 Powerpivot 無人看管的資料重新整理帳戶 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
-##  <a name="Permissions"></a>PowerPivot 資料存取的 SharePoint 許可權  
+##  <a name="sharepoint-permissions-for-powerpivot-data-access"></a><a name="Permissions"></a>PowerPivot 資料存取的 SharePoint 許可權  
  發行、管理及保護 PowerPivot 活頁簿安全等作業只透過 SharePoint 整合進行支援。 SharePoint 伺服器提供確保合法存取資料的驗證和授權子系統。 在 SharePoint 伺服器陣列之外安全部署 PowerPivot 活頁簿，並沒有支援案例。  
   
  使用者可透過「檢視」權限或更高的權限來存取 PowerPivot 資料，且此使用者存取在伺服器上是唯讀的。 「參與」權限允許加入及編輯檔案。 您必須將活頁簿下載至安裝 PowerPivot for Excel 的 Excel 桌面應用程式，才可以變更 PowerPivot 資料。 檔案的「參與」權限決定使用者是否可以在本機下載檔案，然後再將變更儲存回 SharePoint 中。  
@@ -85,12 +85,12 @@ ms.locfileid: "67826339"
 |權限等級|允許下列工作|  
 |----------------------|------------------------|  
 |伺服陣列或服務管理員|安裝、啟用與設定服務和應用程式。<br /><br /> 使用 PowerPivot 管理儀表板與檢視管理報表。|  
-|完整控制|啟用網站集合層級的 PowerPivot 功能整合。<br /><br /> 建立 PowerPivot 圖庫文件庫。<br /><br /> 建立資料摘要庫。|  
+|完全控制|啟用網站集合層級的 PowerPivot 功能整合。<br /><br /> 建立 PowerPivot 圖庫文件庫。<br /><br /> 建立資料摘要庫。|  
 |參與|加入、編輯、刪除與下載 PowerPivot 活頁簿。<br /><br /> 設定資料重新整理。<br /><br /> 根據 SharePoint 網站上的 PowerPivot 活頁簿，建立新的活頁簿和報表。<br /><br /> 在資料摘要庫中建立資料服務文件|  
 |讀取|將 PowerPivot 活頁簿當做外部資料源來存取，其中活頁簿 URL 是在連接對話方塊（例如，在 Excel 的資料連線嚮導）中明確輸入的。|  
 |僅檢視|檢視 PowerPivot 活頁簿。<br /><br /> 檢視資料重新整理記錄。<br /><br /> 將本機活頁簿連接至 SharePoint 網站上的 PowerPivot 活頁簿，以其他方式重新訂定其資料用途。<br /><br /> 下載活頁簿的快照集。 此快照集是資料的靜態複本，不包含交叉分析篩選器、篩選、公式或資料連接。 此快照集的內容類似於從瀏覽器視窗中複製資料格值。|  
   
-##  <a name="excel"></a>PowerPivot 活頁簿的 Excel Services 安全性考慮  
+##  <a name="excel-services-security-considerations-for-powerpivot-workbooks"></a><a name="excel"></a>PowerPivot 活頁簿的 Excel Services 安全性考慮  
  PowerPivot 伺服器端查詢處理與 Excel Services 緊密結合。 產品整合開始於文件層級，在此層級中，PowerPivot 活頁簿是包含或參考 PowerPivot 資料的 Excel 活頁簿 (.xlsx) 檔案。 PowerPivot 活頁簿沒有個別的副檔名。  
   
  在 SharePoint 網站上開啟 PowerPivot 活頁簿時，Excel Services 會讀取內嵌的 PowerPivot 資料連接字串，並將要求轉送至本機 SQL Server Analysis Services OLE DB 提供者。 接著，此提供者會將連接資訊傳遞到伺服器陣列中的 PowerPivot 伺服器。 若要讓要求在兩部伺服器間順暢地流動，必須將 Excel Services 設定為使用 PowerPivot for SharePoint 所需的設定。  

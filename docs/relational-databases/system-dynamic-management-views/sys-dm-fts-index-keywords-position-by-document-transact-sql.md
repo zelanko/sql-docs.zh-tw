@@ -19,10 +19,10 @@ ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900960"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys.databases dm_fts_index_keywords_position_by_document （Transact-sql）
@@ -51,10 +51,10 @@ OBJECT_ID('table_name')
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
-|關鍵字 (keyword)|**Varbinary （128）**|代表關鍵字的二進位字串。|  
+|關鍵字 (keyword)|**varbinary(128)**|代表關鍵字的二進位字串。|  
 |display_term|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自儲存在全文檢索索引中的內部格式。|  
 |column_id|**int**|從中針對目前關鍵字進行全文檢索索引之資料行的識別碼。|  
-|document_id|**Bigint**|從中針對目前詞彙進行全文檢索索引之文件或資料列的識別碼。 這個識別碼會對應至該文件或資料列的全文檢索索引鍵值。|  
+|document_id|**bigint**|從中針對目前詞彙進行全文檢索索引之文件或資料列的識別碼。 這個識別碼會對應至該文件或資料列的全文檢索索引鍵值。|  
 |position|**int**|檔中關鍵字的位置。|  
   
 ## <a name="remarks"></a>備註  
@@ -95,7 +95,7 @@ WHERE document_id = 7 AND display_term = 'performance';
  [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋函數](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
  [全文檢索搜尋和語義搜尋動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋預存程式](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [使用搜尋屬性清單搜尋文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

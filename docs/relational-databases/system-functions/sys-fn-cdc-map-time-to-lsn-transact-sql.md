@@ -21,10 +21,10 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046327"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
@@ -58,7 +58,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  這是要比對的日期時間值。 *tracking_time*為**datetime**。  
   
 ## <a name="return-type"></a>傳回類型  
- **binary （10）**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>備註  
  若要瞭解如何使用**fn_cdc_map_time_lsn sys.databases**將日期時間範圍對應至 lsn 範圍，請考慮下列案例。 假設某位取用者想要每天擷取變更資料。 也就是說，該取用者只需要指定當天的變更 (直到且包括午夜)。 此時間範圍的下限應該是直到但不包括前一天的午夜。 其上限應該是直到且包括指定當天的午夜。 下列範例示範如何使用**fn_cdc_map_time_to_lsn**的函式，將這個以時間為基礎的範圍，有系統地對應到變更資料捕獲列舉函數所需的 lsn 範圍，以傳回該範圍內的所有變更。  
@@ -97,6 +97,6 @@ END
  [lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [fn_cdc_map_lsn_to_time &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

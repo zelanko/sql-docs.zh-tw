@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b75eb53da9961025e3310f27e4a12608dd4fda78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899353"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys.databases dm_pdw_network_credentials （Transact-sql）
@@ -27,8 +27,8 @@ ms.locfileid: "67899353"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。|  
-|target_server_name|**Nvarchar （32）**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將使用使用者名稱和密碼認證存取的目標伺服器 IP 位址。|  
-|username|**Nvarchar （32）**|儲存密碼的使用者名稱。|  
+|target_server_name|**nvarchar(32)**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將使用使用者名稱和密碼認證存取的目標伺服器 IP 位址。|  
+|username|**nvarchar(32)**|儲存密碼的使用者名稱。|  
 |last_modified|**datetime**|上次修改認證之作業的日期時間。|  
   
 ## <a name="permissions"></a>權限  

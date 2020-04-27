@@ -22,10 +22,10 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905168"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
@@ -71,11 +71,10 @@ sys.sp_cdc_help_change_data_capture
 |capture_instance|**sysname**|擷取執行個體的名稱。|  
 |object_id|**int**|與來源資料表相關聯之變更資料表的識別碼。|  
 |source_object_id|**int**|來源資料表的識別碼。|  
-|start_lsn|**binary （10）**|代表查詢變更資料表之低端點的記錄序號 (LSN)。<br /><br /> NULL = 尚未建立低端點。|  
-|end_lsn|**binary （10）**|代表查詢變更資料表之高端點的 LSN。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
+|start_lsn|**binary(10)**|代表查詢變更資料表之低端點的記錄序號 (LSN)。<br /><br /> NULL = 尚未建立低端點。|  
+|end_lsn|**binary(10)**|代表查詢變更資料表之高端點的 LSN。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
 |supports_net_changes|**bit**|淨變更支援已啟用。|  
-|has_drop_pending|**bit**|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中不使用。|  
+|has_drop_pending|**bit**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中不使用。|  
 |role_name|**sysname**|用來控制變更資料之存取權的資料庫角色名稱。<br /><br /> NULL = 不使用角色。|  
 |index_name|**sysname**|在來源資料表中，用來唯一識別資料列的索引名稱。|  
 |filegroup_name|**sysname**|變更資料表所在的檔案群組名稱。<br /><br /> NULL = 變更資料表位於資料庫的預設檔案群組中。|  

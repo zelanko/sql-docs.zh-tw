@@ -21,10 +21,10 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046447"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
@@ -42,7 +42,7 @@ sys.fn_cdc_get_max_lsn ()
 ```  
   
 ## <a name="return-types"></a>傳回型別  
- **binary （10）**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>備註  
  此函數會傳回[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表的 start_lsn 資料行中的最大 LSN。 因此，它就是變更傳播至資料庫變更資料表時，由擷取處理序所處理的最後一個 LSN。 此外，它會當做所有時間表 (與針對資料庫定義的擷取執行個體相關聯) 的高端點使用。  

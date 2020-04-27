@@ -20,10 +20,10 @@ ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900771"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
@@ -37,13 +37,13 @@ ms.locfileid: "67900771"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|可用性群組的唯一識別碼。|  
-|**primary_replica**|**Varchar（128**|裝載目前主要複本的伺服器執行個體名稱。<br /><br /> NULL = 不是主要複本，或是無法與 WSFC 容錯移轉叢集通訊。|  
+|**primary_replica**|**varchar(128)**|裝載目前主要複本的伺服器執行個體名稱。<br /><br /> NULL = 不是主要複本，或是無法與 WSFC 容錯移轉叢集通訊。|  
 |**primary_recovery_health**|**tinyint**|表示主要複本的復原健全狀況，可為下列其中一個值：<br /><br /> 0 = 進行中<br /><br /> 1 = 線上<br /><br /> NULL<br /><br /> 在次要複本上， **primary_recovery_health**資料行是 Null。|  
-|**primary_recovery_health_desc**|**Nvarchar （60）**|**Primary_replica_health**的描述，下列其中一個：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
+|**primary_recovery_health_desc**|**nvarchar(60)**|**Primary_replica_health**的描述，下列其中一個：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|指出次要複本複本的復原健全狀況，下列其中一個：<br /><br /> 0 = 進行中<br /><br /> 1 = 線上<br /><br /> NULL<br /><br /> 在主要複本上， **secondary_recovery_health**資料行是 Null。|  
-|**secondary_recovery_health_desc**|**Nvarchar （60）**|**Secondary_recovery_health**的描述，下列其中一個：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
+|**secondary_recovery_health_desc**|**nvarchar(60)**|**Secondary_recovery_health**的描述，下列其中一個：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**synchronization_health**|**tinyint**|反映可用性群組中所有可用性複本的**synchronization_health**匯總。 以下是可能的值及其描述。<br /><br /> 0：狀況不良。 所有可用性複本都沒有狀況良好的**synchronization_health** （2 = 狀況良好）。<br /><br /> 1：部分狀況良好。 部分 (而不是所有) 可用性複本的同步處理狀況良好。<br /><br /> 2：狀況良好。 每一個可用性複本的同步處理狀況良好。<br /><br /> 如需複本同步處理健全狀況的詳細資訊，請參閱[dm_hadr_availability_replica_states &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)中的**synchronization_health**資料行。|  
-|**synchronization_health_desc**|**Nvarchar （60）**|**Synchronization_health**的描述，下列其中一個：<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**synchronization_health_desc**|**nvarchar(60)**|**Synchronization_health**的描述，下列其中一個：<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>安全性  
   
@@ -51,8 +51,8 @@ ms.locfileid: "67900771"
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

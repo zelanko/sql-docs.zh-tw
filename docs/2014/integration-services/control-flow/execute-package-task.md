@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284947"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
@@ -104,7 +104,7 @@ ms.locfileid: "67284947"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [執行封裝工作編輯器](../execute-package-task-editor.md)  
+-   [執行套件工作編輯器](../execute-package-task-editor.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

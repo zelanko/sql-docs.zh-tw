@@ -13,10 +13,10 @@ ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917418"
 ---
 # <a name="put_oledbcommand-method"></a>put_OLEDBCommand 方法

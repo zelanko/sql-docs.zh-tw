@@ -22,10 +22,10 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918471"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile 屬性
@@ -33,7 +33,7 @@ ms.locfileid: "67918471"
   
 ## <a name="return-values"></a>傳回值  
   
--   **** 比對針對說明檔中的主題，傳回內容識別碼，做為**完整**的值。  
+-   **HelpContextID**比對針對說明檔中的主題，傳回內容識別碼，做為**完整**的值。  
   
 -   **説明**傳回評估為說明檔之完整解析路徑的**字串**值。  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10cee6f0d5bf62178c71d25b8eb5682c22bbbe3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189239"
 ---
 # <a name="job-properties-new-job-notifications-page"></a>作業屬性：新增作業 (通知頁面)
@@ -32,14 +32,14 @@ ms.locfileid: "68189239"
  **Net send**  
  選取此選項，即可在作業完成時使用 Net Send 來通知操作員。 選取此選項之後，請指定要通知的操作員及觸發通知的條件：[當作業成功時]****、[當作業失敗時]**** 或 [作業完成時]****。  
   
- **寫入 Windows 應用程式事件記錄檔**  
+ **寫入 Windwos 應用程式事件記錄**  
  選取此選項，即可在作業完成時將項目寫入應用程式事件記錄檔。 選取此選項之後，請指定寫入項目時的條件：[當作業成功時]****、[當作業失敗時]**** 或 [作業完成時]****。  
   
  **自動刪除作業**  
  選取此選項，即可在作業完成時刪除作業。 選取此選項之後，請指定觸發刪除作業的條件：[當作業成功時]****、[當作業失敗時]**** 或 [作業完成時]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [實作作業](implement-jobs.md)   
+ [執行作業](implement-jobs.md)   
  [設定 SQL Server Agent Mail 使用 Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
   

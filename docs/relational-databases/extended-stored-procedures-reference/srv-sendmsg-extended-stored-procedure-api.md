@@ -20,18 +20,17 @@ ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 62fa2db01ff17008a0b6a7cd4e5fd0a2bce71189
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910917"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳送訊息給用戶端。  
   
@@ -82,10 +81,10 @@ msglen
  *msgnum*  
  這是 4 位元組的訊息編號。  
   
- *課堂*  
+ *class*  
  指定錯誤嚴重性。 嚴重性小於或等於 10 視為參考用訊息。  
   
- *狀態*  
+ *state*  
  提供目前訊息的錯誤狀態編號。 錯誤狀態編號會提供有關錯誤內容的資訊。 有效的狀態編號是從 0 到 255。  
   
  *rpcname*  
@@ -97,7 +96,7 @@ msglen
  *linenum*  
  這是此訊息在語言命令批次中所適用的行號。 行號從 1 開始。 如果 *linenum* 不會套用到訊息，請將它設定為 0。  
   
- *消息*  
+ *message*  
  這是要傳送給用戶端之字元字串的指標。  
   
  *msglen*  

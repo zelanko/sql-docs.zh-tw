@@ -14,14 +14,13 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66462694"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
-  
   **Azure Data Lake Store 連線管理員** 可讓 SSIS 套件透過兩種驗證類型連接到 Azure Data Lake Store 服務︰Azure AD 使用者識別及 Azure AD 服務識別。  
 
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>設定 Azure Data Lake Store 連線管理員 
@@ -50,8 +49,8 @@ ms.locfileid: "66462694"
     
         4. 按一下 [測試連接] **** 按鈕來測試連接。  
   
-4.  按一下 **[確定]** ，關閉對話方塊。  
+4.  按一下 [確定]**** 關閉對話方塊。  
   
-    您可以在 [屬性]  視窗中看到您建立的連線管理員屬性。  
+    您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。  
   
   

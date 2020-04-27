@@ -13,10 +13,10 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908999"
 ---
 # <a name="managing-passwords-mysqltosql"></a>管理密碼 (MySQLToSQL)

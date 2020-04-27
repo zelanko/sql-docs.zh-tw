@@ -20,10 +20,10 @@ ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95d9c980927d565b907d666af1317e883126087e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915030"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67915030"
 |**database_id**|**int**|資料庫的識別碼。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內，這個值是唯一的。|  
 |**directory_name**|**nvarchar(255)**|所有 FileTable 命名空間的資料庫層級目錄。|  
 |**non_transacted_access**|**tinyint**|已啟用的非交易式 FILESTREAM 資料存取層級。 存取層級是由**CREATE DATABASE**或**ALTER database**語句的 NON_TRANSACTED_ACCESS 選項所設定。<br /><br /> 這個設定有下列其中一個值：<br /><br /> 0-未啟用。 這是預設值。 此層級是藉由提供 [ **NON_TRANSACTED_ACCESS** ] 選項的 [ **OFF** ] 值來設定。<br /><br /> 1-唯讀存取。 此層級是藉由提供 [ **NON_TRANSACTED_ACCESS** ] 選項的 [ **READ_ONLY** ] 值來設定。<br /><br /> 3-完整存取。 此層級是藉由提供 [ **NON_TRANSACTED_ACCESS** ] 選項的 [**完整**] 值來設定。<br /><br /> 5 - 正在轉換為 READONLY<br /><br /> 6-正在轉換為 OFF|  
-|**non_transacted_access_desc**|**Nvarchar （60）**|Non_transacted_access 中所識別之非交易式存取層級的描述。<br /><br /> 這個設定有下列其中一個值：<br /><br /> 無-這是預設值。<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
+|**non_transacted_access_desc**|**nvarchar(60)**|Non_transacted_access 中所識別之非交易式存取層級的描述。<br /><br /> 這個設定有下列其中一個值：<br /><br /> 無-這是預設值。<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
 ## <a name="see-also"></a>另請參閱  
  [啟用 FileTable 的必要條件](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  

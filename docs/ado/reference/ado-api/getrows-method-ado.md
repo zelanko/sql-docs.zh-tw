@@ -17,10 +17,10 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918454"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
@@ -37,10 +37,10 @@ array = recordset.GetRows(Rows, Start, Fields )
  傳回其值為二維陣列的**Variant** 。  
   
 #### <a name="parameters"></a>參數  
- *行間*  
+ *資料列*  
  選擇性。 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，表示要取得的記錄數目。 預設值為**adGetRowsRest**。  
   
- *Start*  
+ *啟動*  
  選擇性。 **字串**值或**Variant** ，會評估為要從中開始**GetRows**作業之記錄的書簽。 您也可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
  *欄位*  

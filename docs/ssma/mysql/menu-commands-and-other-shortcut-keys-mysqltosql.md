@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908804"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>功能表命令和其他快速鍵 (MySQLToSQL)
@@ -87,7 +87,7 @@ ms.locfileid: "67908804"
 |顯示 [專案設定] 對話方塊。|ALT + T + P|  
 |顯示 [預設專案設定] 對話方塊。|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>[說明] 功能表命令  
+## <a name="help-menu-commands"></a>說明功能表命令  
 若要存取 [說明] 功能表，使用的鍵盤快速鍵為 ALT + H。下表描述用來存取 [說明] 功能表下之功能表項目的鍵盤快速鍵。  
   
 |若要這樣做|出版|  

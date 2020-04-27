@@ -18,10 +18,10 @@ ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907257"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "67907257"
 |**phase_id**|**int**|同步處理工作階段的階段，它可以是下列項目之一：<br /><br /> **1** = 上傳。<br /><br /> **2** = 下載。<br /><br /> **4** = 清除。<br /><br /> **5** = 關閉。<br /><br /> **6** = 架構變更。<br /><br /> **7** = BCP。|  
 |**article_name**|**sysname**|更改過的發行項名稱。|  
 |**start_time**|**datetime**|代理程式開始處理發行項的時間。|  
-|**期限**|**int**|代理程式處理發行項所花的時間 (以秒計)。|  
+|**duration**|**int**|代理程式處理發行項所花的時間 (以秒計)。|  
 |**插入**|**int**|在同步處理時，曾經套用至某篇特定發行項的插入數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
-|**update**|**int**|在同步處理時，曾經套用至某篇特定發行項的更新數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
+|**更新**|**int**|在同步處理時，曾經套用至某篇特定發行項的更新數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**刪除**|**int**|在同步處理時，曾經套用至某篇特定發行項的刪除數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**相**|**int**|在同步處理時所發生的衝突數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**conflicts_resolved**|**int**|在進行已解析的同步處理時所發生的衝突數量。 這個值會在同步處理時增加，而結束值就代表總數。|  

@@ -18,17 +18,17 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907151"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>對應來源和目標資料庫（AccessToSQL）
 當您連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 時，您需要指定要進行遷移的目標資料庫。 如果您有多個 Access 資料庫，您可以將它們[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應至多個資料庫（或架構），或對應到已連線之 SQL Azure 資料庫下的多個架構。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server 或 SQL Azure 資料庫架構  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫會使用架構的概念，將資料庫內的物件分隔成邏輯群組。 例如，程式庫資料庫可以使用名為「**書籍**」、「**音訊**」和「**影片**」的三個架構來分隔書籍、音訊和影片物件。 根據預設，access 資料庫會對應到**master**資料庫，以及**** 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 dbo 架構和 SQL Azure 中的連接資料庫和**dbo**架構。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫會使用架構的概念，將資料庫內的物件分隔成邏輯群組。 例如，程式庫資料庫可以使用名為「**書籍**」、「**音訊**」和「**影片**」的三個架構來分隔書籍、音訊和影片物件。 根據預設，access 資料庫會對應到**master**資料庫，以及**dbo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 dbo 架構和 SQL Azure 中的連接資料庫和**dbo**架構。  
   
 除非您自訂每個 Access 資料庫與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫和架構之間的對應，否則 SSMA 會將與 Access 資料庫相關聯的所有架構和資料移轉到預設的資料庫對應。  
   

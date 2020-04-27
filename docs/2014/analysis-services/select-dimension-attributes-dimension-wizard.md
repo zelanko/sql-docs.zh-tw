@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624345"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>選取維度屬性 (維度精靈)
@@ -27,7 +27,7 @@ ms.locfileid: "67624345"
   
  **開啟維度精靈**  
   
--   在方案總管[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]**的 ** 中，以滑鼠右鍵按一下 ** 專案的 [維度]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料夾，然後按一下 [新增維度]****。  
+-   在方案總管**** 的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]**** 資料夾，然後按一下 [新增維度]****。  
   
 ## <a name="options"></a>選項。  
  (具有核取方塊的資料行)  
@@ -46,7 +46,7 @@ ms.locfileid: "67624345"
  若要變更屬性的名稱，請按一下屬性名稱，然後輸入屬性的新名稱。  
   
  **啟用瀏覽**  
- 選取即可讓屬性供使用者用來瀏覽和篩選。 必須針對索引鍵屬性選取 [**啟用流覽**]。 若為非索引鍵屬性 (Attribute)，預設值是不選取 [啟用瀏覽]****，因而導致非索引鍵屬性 (Attribute) 只能顯示為成員屬性 (Property)。  
+ 選取即可讓屬性供使用者用來瀏覽和篩選。 您必須針對索引鍵屬性選取 **[啟用瀏覽]** 。 若為非索引鍵屬性 (Attribute)，預設值是不選取 [啟用瀏覽]****，因而導致非索引鍵屬性 (Attribute) 只能顯示為成員屬性 (Property)。  
   
  在大部分情況下，您可以透過分別將 `AttributeHierarchyEnabled` 屬性 (Property) 設定為 `True` 或 `False`，讓屬性 (Attribute) 可以或無法用於瀏覽。 不過，在下列三個情況中，精靈會使用不同的設定。  
   

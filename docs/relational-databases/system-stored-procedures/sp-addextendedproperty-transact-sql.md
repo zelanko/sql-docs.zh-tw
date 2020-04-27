@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072693"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
@@ -57,8 +57,7 @@ sp_addextendedproperty
  這是要加入的屬性名稱。 *property_name*是**sysname** ，不能是 Null。 名稱也可包含空白或非英數字元字串，以及二進位值。  
   
  [ @value= ]{'*value*'}  
- 這是與屬性相關聯的值。 *value*是**SQL_variant**，預設值是 Null。 
-  *value* 的大小不能超過 7,500 個位元組。  
+ 這是與屬性相關聯的值。 *value*是**SQL_variant**，預設值是 Null。 *value* 的大小不能超過 7,500 個位元組。  
   
  [ @level0type= ]{'*level0_object_type*'}  
  這是層級 0 物件的類型。 *level0_object_type*是**Varchar （128）**，預設值是 Null。  
@@ -66,8 +65,7 @@ sp_addextendedproperty
  有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將 USER 指定為層級 1 類型物件擴充屬性中之層級 0 類型的功能，將在未來的 版本中移除。 請改用 SCHEMA 做為層級 0 類型。 例如，在資料表上定義擴充屬性時，請指定資料表的結構描述代替使用者名稱。 將 TYPE 指定為層級 0 類型的功能，將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將 USER 指定為層級 1 類型物件擴充屬性中之層級 0 類型的功能，將在未來的 版本中移除。 請改用 SCHEMA 做為層級 0 類型。 例如，在資料表上定義擴充屬性時，請指定資料表的結構描述代替使用者名稱。 將 TYPE 指定為層級 0 類型的功能，將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
  [ @level0name= ]{'*level0_object_name*'}  
  這是所指定之層級 0 物件類型的名稱。 *level0_object_name*是**sysname** ，預設值是 Null。  
@@ -111,8 +109,7 @@ sp_addextendedproperty
 ## <a name="examples"></a>範例  
   
 ### <a name="a-adding-an-extended-property-to-a-database"></a>A. 將擴充屬性加入至資料庫  
- 
-  `'Caption'` 下列範例將一個含有 `'AdventureWorks2012 Sample OLTP Database'` 值的屬性名稱 `AdventureWorks2012` 加入至 範例資料庫。  
+ `'Caption'` 下列範例將一個含有 `'AdventureWorks2012 Sample OLTP Database'` 值的屬性名稱 `AdventureWorks2012` 加入至 範例資料庫。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +121,7 @@ EXEC sp_addextendedproperty
 ```  
   
 ### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B. 將擴充屬性加入至資料表中的資料行  
- 
-  `PostalCode` 下列範例將標題屬性加入至 `Address`資料表中的 資料行。  
+ `PostalCode` 下列範例將標題屬性加入至 `Address`資料表中的 資料行。  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,8 +136,7 @@ GO
 ```  
   
 ### <a name="c-adding-an-input-mask-property-to-a-column"></a>C. 將輸入遮罩屬性加入至資料行  
- 
-  `99999 or 99999-9999 or #### ###`下列範例將 ' `PostalCode` ' 輸入遮罩屬性加入至 `Address`資料表中的 資料行。  
+ `99999 or 99999-9999 or #### ###`下列範例將 ' `PostalCode` ' 輸入遮罩屬性加入至 `Address`資料表中的 資料行。  
   
 ```  
 USE AdventureWorks2012;  
@@ -155,8 +150,7 @@ GO
 ```  
   
 ### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D. 將擴充屬性加入至檔案群組  
- 
-  `PRIMARY` 下列範例會將擴充屬性加入至  檔案群組中。  
+ `PRIMARY` 下列範例會將擴充屬性加入至  檔案群組中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -169,8 +163,7 @@ GO
 ```  
   
 ### <a name="e-adding-an-extended-property-to-a-schema"></a>E. 將擴充屬性加入至結構描述  
- 
-  `HumanResources` 下列範例會將擴充屬性加入至  結構描述中。  
+ `HumanResources` 下列範例會將擴充屬性加入至  結構描述中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -183,8 +176,7 @@ EXECUTE sys.sp_addextendedproperty
 ```  
   
 ### <a name="f-adding-an-extended-property-to-a-table"></a>F. 將擴充屬性加入至資料表  
- 
-  `Address` 下列範例會將擴充屬性加入至 `Person` 結構描述中的  資料表。  
+ `Address` 下列範例會將擴充屬性加入至 `Person` 結構描述中的  資料表。  
   
 ```  
 USE AdventureWorks2012;  

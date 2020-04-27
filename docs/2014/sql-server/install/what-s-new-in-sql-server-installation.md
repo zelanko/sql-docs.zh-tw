@@ -15,17 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68190073"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安裝的新增功能
   Windows Vista 不是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支援的作業系統。 Service Pack 1 會保留 [!INCLUDE[win7](../../includes/win7-md.md)] 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 作業系統的最低需求。 如需作業系統需求的詳細資訊，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](hardware-and-software-requirements-for-installing-sql-server.md)。  
   
- 
-  [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 的安裝會提示您指定目錄，用來儲存所擷取的封裝。 如果沒有輸入位置，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 會預設為電腦的系統磁碟機。 在 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 安裝完成之後，仍會保留所擷取的檔案。  
+ [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 的安裝會提示您指定目錄，用來儲存所擷取的封裝。 如果沒有輸入位置，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 會預設為電腦的系統磁碟機。 在 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 安裝完成之後，仍會保留所擷取的檔案。  
   
  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝都支援 SysPrep。 SysPrep 現在支援容錯移轉叢集安裝。 如需詳細資訊，請參閱[使用 Sysprep 安裝 SQL Server 的考慮](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)和[使用 sysprep 安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-using-sysprep.md)。  
   
@@ -37,6 +36,6 @@ ms.locfileid: "68190073"
  [2014 SQL Server 的新功能](../what-s-new-in-sql-server-2016.md)   
  [SQL Server 2014 的產品規格](../../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [規劃 SQL Server 安裝](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
- [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [安裝 SQL Server 2014 的硬體與軟體需求](hardware-and-software-requirements-for-installing-sql-server.md)  
   
   

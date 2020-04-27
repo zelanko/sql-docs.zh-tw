@@ -13,10 +13,10 @@ ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120265"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys.databases fn_db_backup_file_snapshots （Transact-sql）
@@ -44,13 +44,13 @@ sys.fn_db_backup_file_snapshots
 |-----------------|---------------|-----------------|  
 |file_id|**int**|資料庫的檔案識別碼。 不可為 Null。|  
 |snapshot_time|**nvarchar(260)**|REST API 所傳回之快照集的時間戳記。 如果沒有快照集存在，則傳回 Null。|  
-|snapshot_url|**Nvarchar （360）**|檔案快照集的完整 URL。 如果沒有快照集存在，則傳回 Null。|  
+|snapshot_url|**nvarchar(360)**|檔案快照集的完整 URL。 如果沒有快照集存在，則傳回 Null。|  
   
 ## <a name="permissions"></a>權限  
  需要資料庫的 VIEW DATABASE STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_delete_backup_file_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)   
- [sp_delete_backup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
+ [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   
   

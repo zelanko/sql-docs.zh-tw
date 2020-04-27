@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 762cf7e67a9983c345b58d2afd1c47da93306bd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413141"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能
@@ -24,7 +24,7 @@ ms.locfileid: "67413141"
   
 這項功能可以在每個網站以手動方式啟用及停用，但不能在網站集合層級啟用及停用。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  必須安裝適用於 SharePoint 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集。 如果未安裝增益集，[網站功能清單] 中就不會顯示檔案同步功能。  
   
  若要確認安裝，請檢視在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows **[控制台]** 中已安裝應用程式的清單。 如果已安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集，請遵循本主題的指示來啟用報表伺服器同步處理功能。  
@@ -37,10 +37,10 @@ ms.locfileid: "67413141"
   
 3.  在清單中找到 **[報表伺服器檔案同步處理]** 。  
   
-4.  按一下 [啟用]  。  
+4.  按一下 [啟動]****。  
   
 > [!NOTE]  
->  若要停用報表伺服器檔案同步處理功能，您可以執行相同的程序，但是請按一下 [停用]  。  
+>  若要停用報表伺服器檔案同步處理功能，您可以執行相同的程序，但是請按一下 [停用]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;報表產生器和 SSRS&#41;疑難排解報表元件](report-parts-report-builder-and-ssrs.md)   

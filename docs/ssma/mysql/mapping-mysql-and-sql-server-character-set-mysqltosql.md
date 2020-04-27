@@ -10,10 +10,10 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909027"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>對應 MySQL 和 SQL Server 字元集 (MySQLToSQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67909027"
 > [!NOTE]  
 > 選取來編輯字元集對應的索引標籤包含三個按鈕，而不論不同節點層級上的對應。  
 >   
-> 如下：  
+> 其中包括：  
 >   
 > 1.  **適用：** 套用使用者所做的變更，只有在已編輯和尚未儲存字元集對應時才會啟用。  
 > 2.  **取消：** 取消使用者所做的變更。 編輯字元集對應但未儲存時，會啟用此按鈕。  

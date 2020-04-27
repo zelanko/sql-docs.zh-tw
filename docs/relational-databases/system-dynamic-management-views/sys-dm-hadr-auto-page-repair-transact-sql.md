@@ -21,10 +21,10 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900691"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "67900691"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|這個資料列所對應的資料庫識別碼。|  
 |**file_id**|**int**|頁面所在之檔案的識別碼。|  
-|**page_id**|**Bigint**|檔案中頁面的識別碼。|  
-|**error_type**|**int**|錯誤的類型。 值可以是：<br /><br /> **-** 1 = 所有硬體823錯誤<br /><br /> 1 = 總和檢查碼錯誤或頁面損毀 (例如，頁面識別碼不正確) 以外的 824 錯誤<br /><br /> 2 = 總和檢查碼錯誤<br /><br /> 3 = 頁面損毀|  
+|**page_id**|**bigint**|檔案中頁面的識別碼。|  
+|**error_type**|**int**|錯誤的類型。 其值可能是：<br /><br /> **-** 1 = 所有硬體823錯誤<br /><br /> 1 = 總和檢查碼錯誤或頁面損毀 (例如，頁面識別碼不正確) 以外的 824 錯誤<br /><br /> 2 = 總和檢查碼錯誤<br /><br /> 3 = 頁面損毀|  
 |**page_status**|**int**|修復頁面嘗試行為的狀態：<br /><br /> 2 = 已將夥伴的要求排入佇列。<br /><br /> 3 = 要求已傳送給夥伴。<br /><br /> 4 = 已成功修復頁面。<br /><br /> 5 = 在上次嘗試/自動修復頁面時無法修復頁面，將會嘗試重新修復頁面。|  
 |**modification_time**|**datetime**|上次變更頁面狀態的時間。|  
   

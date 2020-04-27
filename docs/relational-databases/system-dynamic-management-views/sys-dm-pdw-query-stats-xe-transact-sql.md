@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8cb9980f74bdb37b1fab43db352e35c43151c390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899148"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys.databases dm_pdw_query_stats_xe （Transact-sql）
@@ -26,7 +26,7 @@ ms.locfileid: "67899148"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|event|**Nvarchar （60）**|此視圖的索引鍵。||  
+|event|**nvarchar(60)**|此視圖的索引鍵。||  
 |event_id|**Nvarchar （36）**|||  
 |create_time|**datetime**|||  
 |session_id|**int**|會話的識別碼。|請參閱[dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  

@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413110"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>將快照集加入報表記錄 (報表管理員)
@@ -30,12 +30,11 @@ ms.locfileid: "67413110"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>若要手動將快照集加入至報表記錄
 
-1. 在報表管理員中，巡覽至 [內容]**** 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。
+1. 在報表管理員中，巡覽至 [內容]  頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。
   
-2. 在下拉式功能表中，按一下 **[檢視報表記錄]**。  
+2. 在下拉式功能表中，按一下 **[檢視報表記錄]** 。  
   
-3. 按一下 **[新增快照集]** 。 
-  **[執行時]** 資料行裡會建立一個新的快照集。  
+3. 按一下 **[新增快照集]** 。 **[執行時]** 資料行裡會建立一個新的快照集。  
   
     > [!NOTE]
     > 管理員必須將報表記錄設定為 **[允許手動建立記錄]**，才能執行此作業。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)。
@@ -46,11 +45,11 @@ ms.locfileid: "67413110"
   
 1. 若為已經設定成當做報表執行快照集執行的報表，您可以設定其他屬性，以便在每次重新整理快照集時，將快照集的副本儲存至報表記錄。  
   
-2. 在報表管理員中，巡覽至 [內容]**** 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+2. 在報表管理員中，巡覽至 [內容]  頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
 3. 在下拉式功能表中，按一下 **[管理]** 。  
   
-4. 按一下 **[快照集選項]**。  
+4. 按一下 **[快照集選項]** 。  
   
 5. 選取 **[將所有報表執行快照集儲存在記錄中]** 的核取方塊。  
   
@@ -58,24 +57,24 @@ ms.locfileid: "67413110"
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>若要依照排程自動將快照集加入報表記錄  
   
-1. 在報表管理員中，巡覽至 [內容]**** 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+1. 在報表管理員中，巡覽至 [內容]  頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
 2. 在下拉式功能表中，按一下 **[管理]** 。  
   
-3. 按一下 **[快照集選項]**。  
+3. 按一下 **[快照集選項]** 。  
   
 4. 選取 **[使用下列排程將快照集加入至報表記錄]** 的核取方塊。 執行下列其中一項：  
   
-    - 選取 [報表特定排程]****。 填入排程詳細資料，選取排程的開始和結束日期，然後按一下 **[確定]**。  
+    - 選取 [報表特定排程]  。 填入排程詳細資料，選取排程的開始和結束日期，然後按一下 **[確定]** 。  
   
-    - 選取 **[共用排程]**。 從清單中，選取喜好的排程。  
+    - 選取 **[共用排程]** 。 從清單中，選取喜好的排程。  
   
 5. 按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [設定報表的執行屬性 &#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
-- [開啟並關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)
+- [開啟及關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)
 - [排程](../subscriptions/schedules.md)   
 - [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)

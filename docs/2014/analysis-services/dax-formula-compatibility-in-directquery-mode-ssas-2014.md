@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67343900"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)
-資料分析運算式語言（DAX）可以用來建立量值和其他自訂公式，以用於 Analysis Services 表格式模型、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 活頁簿中的資料模型，以及 Power BI Desktop 資料模型。 在大部分的情況下，您在這些環境中建立的模型是相同的，而且您可以使用相同的量值、關聯性和 Kpi 等。不過，如果您撰寫 Analysis Services 表格式模型，並在 DirectQuery 模式中部署，則可以使用的公式有一些限制。 本主題提供這些差異的總覽，列出在相容性層級1100或1103和 DirectQuery 模式下 SQL Server 2014 Analysis Services tabulars 模型中不支援的函式，並列出支援但可能會發生的函數傳回不同的結果。  
+資料分析運算式語言（DAX）可以用來建立量值和其他自訂公式，以用於 Analysis Services 表格式模型、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 活頁簿中的資料模型，以及 Power BI Desktop 資料模型。 在大部分的情況下，您在這些環境中建立的模型是相同的，而且您可以使用相同的量值、關聯性和 Kpi 等。不過，如果您撰寫 Analysis Services 表格式模型，並在 DirectQuery 模式中部署，則可以使用的公式有一些限制。 本主題提供這些差異的總覽，列出在相容性層級1100或1103和 DirectQuery 模式下 SQL Server 2014 Analysis Services tabulars 模型中不支援的函式，並列出支援但可能會傳回不同結果的函數。  
   
 在本主題中，我們會使用「*記憶體中模型*」一詞來參考表格式模型，這會在以表格式模式執行的 Analysis Services 伺服器上完全裝載記憶體內部快取資料。 我們使用*directquery 模型*來參考在 DirectQuery 模式中撰寫及/或部署的表格式模型。 如需 DirectQuery 模式的相關資訊，請參閱[Directquery 模式（SSAS 表格式）](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
   
   
-## <a name="bkmk_SemanticDifferences"></a>記憶體內部與 DirectQuery 模式之間的差異  
+## <a name="differences-between-in-memory-and-directquery-mode"></a><a name="bkmk_SemanticDifferences"></a>記憶體內部與 DirectQuery 模式之間的差異  
 在 DirectQuery 模式中部署之模型的查詢，可能會傳回與在記憶體內部模式中部署之相同模型的不同結果。 這是因為使用 DirectQuery 時，會直接從關聯式資料存放區查詢資料，而且公式所需的匯總會使用相關的關聯式引擎來執行，而不是使用 xVelocity 的記憶體內部分析引擎（VertiPaq）來儲存和計算。  
   
 例如，某些關聯式資料存放區處理數值、日期、Null 等項目的方式就有差異。  
@@ -35,7 +35,7 @@ ms.locfileid: "67343900"
 ## <a name="semantic-differences"></a>語意差異  
 本節將列出您可以預期的語意差異類型，並且描述可能適用於函數使用方式或查詢結果的任何限制。  
   
-### <a name="bkmk_Comparisons"></a>比較  
+### <a name="comparisons"></a><a name="bkmk_Comparisons"></a>比較  
 記憶體內部模型中的 DAX 支援比較兩個解析為不同資料類型之純量值的運算式。 不過，在 DirectQuery 模式中部署的模型會使用關聯式引擎的資料類型和比較運算子，因此可能會傳回不同的結果。  
   
 在 DirectQuery 資料來源的計算中使用時，下列比較一定會傳回錯誤：  
@@ -48,7 +48,7 @@ ms.locfileid: "67343900"
   
 一般而言，DAX 比較能夠容許記憶體內部模型的資料類型不符，而且將嘗試針對值進行隱含轉換 (最多兩次)，如本節所述。 不過，在 DirectQuery 模式中，傳送至關聯式資料存放區的公式會依照關聯式引擎的規則，以較嚴格的方式進行評估，而且比較可能會失敗。  
   
-**字串和數位的比較**  
+**字串和數字的比較**  
 範例： `"2" < 3`  
   
 此公式會比較文字字串與數字。 在 DirectQuery 模式和記憶體內部模型中，此運算式都是 **true** 。  
@@ -69,7 +69,7 @@ ms.locfileid: "67343900"
   
 請注意，在 Transact-SQL 中，Null 永遠不等於 Null。 不過，在 DAX 中，某個空白會等於另一個空白。 這種行為對於所有記憶體中模型都相同。 請務必注意，DirectQuery 模式會使用 SQL Server 的大部分語意。不過，在此情況下，它會針對 NULL 比較提供新的行為，藉以區別。  
   
-### <a name="bkmk_Casts"></a>廣播  
+### <a name="casts"></a><a name="bkmk_Casts"></a>廣播  
   
 雖然 DAX 沒有這類轉換函數，不過在許多比較和算術運算中，它會執行隱含轉換。 這就是決定結果資料類型的比較或算術運算。 例如，  
   
@@ -92,14 +92,14 @@ ms.locfileid: "67343900"
 **從字串轉換成其他非布林值**  
 從字串轉換成非布林值時，DirectQuery 模式的行為與 SQL Server 相同。 如需詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
-**不允許從數位轉換成字串**  
+**不允許從數字轉換成字串**  
 範例： `CONCATENATE(102,",345")`  
   
 SQL Server 不允許從數字轉換成字串。  
   
 在表格式模型和 DirectQuery 模式中，此公式會傳回錯誤。不過，在 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]中，此公式會產生結果。  
   
-**不支援 DirectQuery 中的兩次嘗試轉換**  
+**在 DirectQuery 中不支援兩次嘗試轉換**  
 當第一次轉換失敗時，記憶體中模型通常會嘗試第二次轉換。 這在 DirectQuery 模式中絕對不會發生。  
   
 範例： `TODAY() + "13:14:15"`  
@@ -108,13 +108,13 @@ SQL Server 不允許從數字轉換成字串。
   
 在 DirectQuery 模式中，系統只會套用從 **string** 到 **double** 的直接轉換。 如果這項轉換失敗，公式將傳回錯誤。  
   
-### <a name="bkmk_Math"></a>數學函數和算術運算  
+### <a name="math-functions-and-arithmetic-operations"></a><a name="bkmk_Math"></a>數學函數和算術運算  
 在 DirectQuery 模式中，某些數學函數會由於可在運算中套用之基礎資料類型或轉換的差異而傳回不同的結果。 此外，上述有關允許值範圍的限制可能也會影響算術運算的結果。  
   
-**加法的順序**  
+**加法順序**  
 當您建立將一連串數字相加的公式時，記憶體中模型處理這些數字的順序可能與 DirectQuery 模型不同。  因此，當您設有許多非常龐大的正數和負數時，可能會在某個運算中收到錯誤，而在另一個運算中取得結果。  
   
-**使用 POWER 函式**  
+**POWER 函數的用法**  
 範例： `POWER(-64, 1/3)`  
   
 在 DirectQuery 模式中，當 POWER 函數提升為分數指數時，無法使用負值做為底數。 這是 SQL Server 的預期行為。  
@@ -126,7 +126,7 @@ SQL Server 不允許從數字轉換成字串。
   
 不過，在記憶體中模型中使用相同的公式時，則會傳回八位元組整數。 這是因為公式引擎不會執行數值溢位的檢查。  
   
-**具有空白的記錄函數會傳回不同的結果**  
+**含有空白的 LOG 函數會傳回不同的結果**  
 SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 因此，下列公式會在 DirectQuery 模式中傳回錯誤，但會在記憶體中模式中傳回無限大（-inf）。  
   
 `EXAMPLE: LOG(blank())`  
@@ -135,7 +135,7 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 因此，
   
 如需 DAX 中 **blank** 資料類型的詳細資訊，請參閱 [DAX 語法參考](/dax/dax-syntax-reference)。
   
-**除以0和除以空白**  
+**除以 0 和除以空白**  
 在 DirectQuery 模式中，除以零 (0) 或除以 BLANK 都一定會產生錯誤。 SQL Server 不支援無限大的概念，而且因為任何除以 0 的自然結果都是無限大，所以結果就是錯誤。 不過，SQL Server 支援除以 Null，而且結果一定等於 Null。  
   
 在 DirectQuery 模式中，這兩種運算類型 (除以零和除以 Null) 都會傳回錯誤，而非傳回不同的結果。  
@@ -154,7 +154,7 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 因此，
   
 運算式 `BLANK/BLANK` 是特殊案例，它會針對記憶體中模型和 DirectQuery 模式傳回 `BLANK` 。  
   
-### <a name="bkmk_Ranges"></a>支援的數值和日期-時間範圍  
+### <a name="supported-numeric-and-date-time-ranges"></a><a name="bkmk_Ranges"></a>支援的數值和日期-時間範圍  
 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]和表格式模型中的公式會受到與 Excel 相同的限制，如同實際數位和日期允許的最大值。 不過，當最大值是從計算或查詢傳回，或者系統轉換、轉型、四捨五入或截斷值時，可能會發生差異。  
   
 -   如果 **Currency** 和 **Real** 類型的值相乘，而且結果大於最大可能值，則在 DirectQuery 模式中，不會引發錯誤，而且會傳回 Null。  
@@ -169,12 +169,12 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 因此，
   
 如果公式中使用的任何日期超過這個範圍，則公式會產生錯誤，或者結果不符。  
   
-**上限所支援的浮點值**  
+**CEILING 支援的浮點值**  
 範例： `EVALUATE ROW("x", CEILING(-4.398488E+30, 1))`  
   
 DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下的值。 基本原則是，浮點值應該能夠納入 **bigint**中。  
   
-**包含超出範圍之日期的 Datepart 函數**  
+**所含日期超出範圍的 Datepart 函數**  
 只有當做為引數使用的日期位於有效的日期範圍內時，才能保證 DirectQuery 模式的結果與記憶體中模型的結果相符。 如果沒有滿足這些條件，則會引發錯誤，或者公式會在 DirectQuery 與記憶體中模式中傳回不同的結果。  
   
 範例： `MONTH(0)` 或 `YEAR(0)`  
@@ -191,7 +191,7 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
   
 在 DirectQuery 模式和記憶體中模式中，此運算式的結果應該都相同。  
   
-**時間值的截斷**  
+**截斷時間值**  
 範例： `SECOND(1231.04097222222)`  
   
 在 DirectQuery 模式中，系統會依照 SQL Server 的規則截斷結果，而且此運算式會評估為 59。  
@@ -219,29 +219,29 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
   
 這種行為會影響將日期資料行當做參數使用的所有函數。  
   
-### <a name="bkmk_Currency"></a>符號  
+### <a name="currency"></a><a name="bkmk_Currency"></a>貨幣  
 在 DirectQuery 模式中，如果算術運算的結果為 **Currency**類型，此值就必須位於下列範圍內：  
   
 -   最小值：-922337203685477.5808  
   
 -   最大值：922337203685477.5807  
   
-**結合 currency 與 REAL 資料類型**  
+**結合 Currency 與 REAL 資料類型**  
 範例： `Currency sample 1`  
   
 如果 **Currency** 和 **Real** 類型相乘，結果大於 9223372036854774784 (0x7ffffffffffffc00)，DirectQuery 模式不會引發錯誤。  
   
 在記憶體內部模型中，如果結果的絕對值大於 922337203685477.4784，則會引發錯誤。  
   
-**運算會產生超出範圍的值**  
+**運算產生超出範圍的值**  
 範例： `Currency sample 2`  
   
 如果任兩個貨幣值的運算產生了超過指定範圍的值，記憶體中模型就會引發錯誤，但是 DirectQuery 模型不會引發錯誤。  
   
-**結合 currency 與其他資料類型**  
+**結合 Currency 與其他資料類型**  
 將貨幣值除以其他數值類型的值可能會產生不同的結果。  
   
-### <a name="bkmk_Aggregations"></a>彙總函式  
+### <a name="aggregation-functions"></a><a name="bkmk_Aggregations"></a>彙總函式  
 含有一個資料列之資料表的統計函數會傳回不同的結果。 此外，空白資料表的彙總函式在記憶體中模型中表現的行為也與 DirectQuery 模式不同。  
   
 **含有單一資料列之資料表的統計函數**  
@@ -249,14 +249,14 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
   
 在記憶體中模型中，針對含有單一資料列之資料表使用 STDEV 或 VAR 的公式會傳回除以零錯誤。  
   
-### <a name="bkmk_Text"></a>文字函數  
+### <a name="text-functions"></a><a name="bkmk_Text"></a>文字函數  
 因為關聯式資料存放區所提供的文字資料類型與 Excel 不同，所以當您搜尋字串或使用子字串時，可能會看見不同的結果。 字串的長度可能也不同。  
   
 一般而言，任何使用固定大小資料行做為引數的字串操作函數都可能具有不同的結果。  
   
 此外，在 SQL Server 中，某些文字函數支援 Excel 並未提供的其他引數。 如果公式需要遺漏的引數，您可能會在記憶體中模型中取得不同的結果或錯誤。  
   
-**使用 LEFT、RIGHT 等傳回字元的作業，可能會傳回正確的字元，但在不同的情況下則不會傳回任何結果**  
+**使用 LEFT、RIGHT 等函數傳回字元的運算可能會傳回正確但大小寫不同的字元，或者不傳回任何結果**  
 範例： `LEFT(["text"], 2)`  
   
 在 DirectQuery 模式中，傳回之字元的大小寫一定與儲存在資料庫中的字母完全相同。 不過，xVelocity 引擎會使用不同的演算法來壓縮值並建立索引，以便改善效能。  
@@ -287,12 +287,12 @@ DirectQuery 模式會將 DAX TRIM 函數轉譯成 SQL 陳述式 `LTRIM(RTRIM(<co
   
 相較之下，記憶體中模型中的相同公式會依照 Excel 的行為，移除字串內的空格。  
   
-**使用 LEN 函數的隱性 RTRIM**  
+**搭配 LEN 函數使用的隱含 RTRIM**  
 範例： `LEN('string_column')`  
   
 與 SQL Server 相同的是，DirectQuery 模式會自動從字串資料行的結尾移除空白字元：也就是說，它會執行隱含 RTRIM。 因此，如果字串具有尾端空格，使用 LEN 函數的公式可能會傳回不同的結果。  
   
-**記憶體內部支援其他參數以替代**  
+**記憶體支援 SUBSTITUTE 的其他參數**  
 範例： `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
 範例： `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
@@ -301,12 +301,12 @@ DirectQuery 模式會將 DAX TRIM 函數轉譯成 SQL 陳述式 `LTRIM(RTRIM(<co
   
 在記憶體中模型中，您可以使用選擇性的第四個參數來指定要取代之字串的執行個體編號。 例如，您可以單獨取代第二個執行個體。  
   
-**REPT 作業的字串長度限制**  
+**REPT 運算的字串長度限制**  
 在記憶體中模型中，使用 REPT 之運算所產生的字串長度必須小於 32,767 個字元。  
   
 這項限制不適用於 DirectQuery 模式。  
   
-**子字串作業會根據字元類型傳回不同的結果**  
+**子字串運算會根據字元類型傳回不同的結果**  
 範例： `MID([col], 2, 5)`  
   
 如果輸入文字為 **varchar** 或 **nvarchar**，公式的結果一定相同。  
@@ -315,7 +315,7 @@ DirectQuery 模式會將 DAX TRIM 函數轉譯成 SQL 陳述式 `LTRIM(RTRIM(<co
   
 在記憶體中模型中，結果會在最後一個字串字元處終止，而且沒有填補。  
   
-## <a name="bkmk_SupportedFunc"></a>DirectQuery 模式中支援的函式  
+## <a name="functions-supported-in-directquery-mode"></a><a name="bkmk_SupportedFunc"></a>DirectQuery 模式中支援的函式  
 下列 DAX 函數可用於 DirectQuery 模式，但是使用條件如上一節所述。  
   
 **文字函數**  
@@ -392,7 +392,7 @@ POWER
   
 在記憶體中模型中，重複 ORDER BY 子句不會影響結果。  
   
-## <a name="bkmk_NotSupportedFunc"></a>DirectQuery 模式不支援的函數  
+## <a name="functions-not-supported-in-directquery-mode"></a><a name="bkmk_NotSupportedFunc"></a>DirectQuery 模式不支援的函數  
 在 DirectQuery 模式中部署的模型不支援某些 DAX 函數。 不支援特定函數的原因可能包括下列任何一個原因或這些原因的組合：  
   
 -   基礎關聯式引擎無法執行相當於 xVelocity 引擎所執行的計算。  
@@ -504,6 +504,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>另請參閱  
-[DirectQuery 模式（SSAS 表格式）](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 模式 (SSAS 表格式)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

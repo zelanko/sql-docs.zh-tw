@@ -19,10 +19,10 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899714"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
@@ -38,9 +38,9 @@ ms.locfileid: "67899714"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> 引數  
+##  <a name="arguments"></a><a name="Arguments"></a>參量  
  *database_id*  
- 資料庫的識別碼。 *database_id*是**int**，沒有預設值。 不能是 NULL。  
+ 資料庫的識別碼。 *database_id* 為沒有預設值的 **int**。 不能是 NULL。  
   
  *file_id*  
  檔案識別碼。 *file_id*是**int**，沒有預設值。 不能是 NULL。  
@@ -49,15 +49,15 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**資料行**|**資料類型**|**說明**|  
+|**資料行**|**資料類型**|**描述**|  
 |**database_id**|**int**|資料庫的識別碼。 不可為 null。|  
 |**file_id**|**int**|檔案識別碼。 不可為 null。|  
 |**volume_mount_point**|**nvarchar(512)**|磁碟區根目錄所在的掛接點。 可以傳回空字串。|  
 |**volume_id**|**nvarchar(512)**|作業系統磁碟區識別碼。 可以傳回空字串|  
 |**logical_volume_name**|**nvarchar(512)**|邏輯磁碟區名稱。 可以傳回空字串|  
 |**file_system_type**|**nvarchar(512)**|作業系統磁碟區的類型 (例如，NTFS、FAT、RAW)。 可以傳回空字串|  
-|**total_bytes**|**Bigint**|磁碟區的總大小 (以位元組為單位)。 不可為 null。|  
-|**available_bytes**|**Bigint**|磁碟區上的可用空間。 不可為 null。|  
+|**total_bytes**|**bigint**|磁碟區的總大小 (以位元組為單位)。 不可為 null。|  
+|**available_bytes**|**bigint**|磁碟區上的可用空間。 不可為 null。|  
 |**supports_compression**|**bit**|表示磁碟區是否支援作業系統壓縮。 不可為 null。|  
 |**supports_alternate_streams**|**bit**|表示磁碟區是否支援替代資料流。 不可為 null。|  
 |**supports_sparse_files**|**bit**|表示磁碟區是否支援疏鬆檔案。  不可為 null。|  

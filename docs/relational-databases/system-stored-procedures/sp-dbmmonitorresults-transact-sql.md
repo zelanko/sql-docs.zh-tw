@@ -19,10 +19,10 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899164"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
@@ -84,7 +84,7 @@ sp_dbmmonitorresults database_name
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|鏡像資料庫名稱。|  
-|**角色**|**int**|伺服器執行個體目前的鏡像角色：<br /><br /> 1 = 主體<br /><br /> 2 = 鏡像|  
+|**role**|**int**|伺服器執行個體目前的鏡像角色：<br /><br /> 1 = 主體<br /><br /> 2 = 鏡像|  
 |**mirroring_state**|**int**|資料庫狀態：<br /><br /> 0 = 已暫停<br /><br /> 1 = 已中斷連線<br /><br /> 2 = 正在同步處理<br /><br /> 3 = 暫止容錯移轉<br /><br /> 4 = 已同步處理|  
 |**witness_status**|**int**|資料庫的資料庫鏡像工作階段中的見證連接狀態可以是下列值：<br /><br /> 0 = 未知<br /><br /> 1 = 已連接<br /><br /> 2 = 已中斷連接|  
 |**log_generation_rate**|**int**|自從此資料庫先前的鏡像狀態更新之後產生的記錄量 (以 KB/秒為單位)。|  
