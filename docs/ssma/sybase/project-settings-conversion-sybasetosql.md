@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028759"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>專案設定 (轉換) (SybaseToSQL)
@@ -421,7 +421,7 @@ Sybase 中的 Left 和 Right 函式會以不同的方式來表示負值長度參
 **SUBSTRING 函數**  
 在 ASE 中，如果`SUBSTRING(expression, start, length)`指定的起始值大於 expression 中的字元數，或長度等於零，此函數會傳回 Null。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 中，對等運算式會傳回空字串。  
   
--   若要使用 ASE 行為，請選取 [**取代**函式]。 所有對 SUBSTRING 函式的呼叫都會以 SUBSTRING_VARCHAR 或 SUBSTRING_NVARCHAR 或 SUBSTRING_VARBINARY 使用者定義函數的呼叫來取代，這是根據傳遞的參數類型（在架構名稱的 2ss ' 底下的使用者資料庫中建立）來模擬Sybase ASE 行為。  
+-   若要使用 ASE 行為，請選取 [**取代**函式]。 所有對 SUBSTRING 函式的呼叫都會以 SUBSTRING_VARCHAR 或 SUBSTRING_NVARCHAR 或 SUBSTRING_VARBINARY 使用者定義函式的呼叫來取代，這是根據傳遞的參數類型（在架構名稱的 2ss ' 底下的使用者資料庫中建立）來模擬 Sybase ASE 行為。  
   
 -   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure 行為，請選取 [**保留目前的語法**]。  
   

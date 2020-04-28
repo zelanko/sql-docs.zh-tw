@@ -18,10 +18,10 @@ ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038960"
 ---
 # <a name="error-handling-xquery"></a>錯誤處理 (XQuery)

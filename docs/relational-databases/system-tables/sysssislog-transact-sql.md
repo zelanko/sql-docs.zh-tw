@@ -18,10 +18,10 @@ ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029615"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68029615"
 |endtime|**datetime**|封裝完成的時間。<br /><br /> 系統不會實作這個功能。 endtime 資料行中的值永遠與 starttime 資料行中的值相同。|  
 |datacode|**int**|選擇性的整數值，一般會指示容器或工作的執行結果。|  
 |databytes|**image**|包含其他資訊的選擇性位元組陣列。|  
-|message|**nvarchar**|事件的描述以及與此事件相關的資訊。|  
+|訊息|**nvarchar**|事件的描述以及與此事件相關的資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)   

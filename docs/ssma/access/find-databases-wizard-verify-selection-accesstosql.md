@@ -12,10 +12,10 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68024746"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>尋找資料庫 Wizard （確認選取）（AccessToSQL）
@@ -23,8 +23,8 @@ ms.locfileid: "68024746"
   
 若要**開啟 [尋找**資料庫] wizard，請在 [檔案] 功能表上，按一下 [**尋找資料庫**]。  
   
-## <a name="options"></a>選項。  
-**檔案名稱**  
+## <a name="options"></a>選項  
+[檔案名稱]****  
 顯示要加入至 SSMA 的 Access 資料庫檔案的名稱。  
   
 **檔案路徑**  

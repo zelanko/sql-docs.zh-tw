@@ -14,10 +14,10 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029131"
 ---
 # <a name="generating-reports-sybasetosql"></a>產生報表 (SybaseToSQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68029131"
     > [!IMPORTANT]  
     > 輸出報告與評量報告不同。 前者是已執行命令的效能報告，後者則是以程式設計方式取用的 XML 報表。  
   
-    適用于輸出報告的命令選項（從 Sl）。 否。 2-4），請參閱[執行 SSMA 主控台 &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)一節。  
+    適用于輸出報告的命令選項（從 Sl）。 不可以。 2-4），請參閱[執行 SSMA 主控台 &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)一節。  
   
 2.  使用報表詳細資訊設定，指出您想要在輸出報告中的詳細程度：  
   

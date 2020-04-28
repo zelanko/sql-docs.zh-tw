@@ -18,10 +18,10 @@ ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029754"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68029754"
 |**join_nickname**|**int**|要加以聯結以便判斷資料列是否屬於它的資料表暱稱。|  
 |**join_unique_key**|**int**|表示**join_tablename**的唯一索引鍵上的聯結：<br /><br /> 0 = 不是唯一索引鍵。<br /><br /> 1 = 唯一索引鍵。|  
 |**expand_proc**|**sysname**|合併代理程式用來識別需要從訂閱者中傳送或移除之資料列的預存程序名稱。|  
-|**join_filterclause**|**Nvarchar （1000）**|用於聯結的篩選子句。|  
+|**join_filterclause**|**nvarchar(1000)**|用於聯結的篩選子句。|  
 |**filter_type**|**tinyint**|指定篩選類型，它可以是下列項目之一：<br /><br /> 1 = 聯結篩選。<br /><br /> 2 = 邏輯記錄連結。<br /><br /> 3 = 聯結篩選和邏輯記錄連結。|  
   
 ## <a name="see-also"></a>另請參閱  

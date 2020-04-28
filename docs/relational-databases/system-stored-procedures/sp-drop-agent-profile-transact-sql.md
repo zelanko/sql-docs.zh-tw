@@ -16,10 +16,10 @@ ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ac93ebe2bc9c0ec63e22b3273592005873efac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001070"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)

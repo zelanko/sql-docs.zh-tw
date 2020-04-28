@@ -18,10 +18,10 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032570"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68032570"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|佇列讀取器代理程式的識別碼。|  
+|**id**|**int**|佇列讀取器代理程式的識別碼。|  
 |**name**|**Nvarchar （100）**|佇列讀取器代理程式的名稱。|  
-|**job_id**|**binary （16）**|**Sysjobs**資料表中唯一的作業識別碼編號。|  
+|**job_id**|**binary(16)**|**Sysjobs**資料表中唯一的作業識別碼編號。|  
 |**profile_id**|**int**|**MSagent_profiles**資料表中的設定檔識別碼。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  
   

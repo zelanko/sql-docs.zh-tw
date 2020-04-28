@@ -18,10 +18,10 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997481"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -69,7 +69,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**者**|**sysname**|對其授與權限之主體的名稱。|  
 |**授與者**|**sysname**|對指定的被授與者授與權限之主體的名稱。|  
 |**ProtectType**|**Nvarchar （10）**|保護類型的名稱：<br /><br /> GRANT REVOKE|  
-|**動作**|**Nvarchar （60）**|權限的名稱。 權限陳述式是否有效，需根據物件類型而定。|  
+|**動作**|**nvarchar(60)**|權限的名稱。 權限陳述式是否有效，需根據物件類型而定。|  
 |**資料行**|**sysname**|權限的類型：<br /><br /> 全部 = 權限涵蓋物件的所有目前資料行。<br /><br /> 新增 = 權限涵蓋未來可能在物件上變更 (利用 ALTER 陳述式) 的任何新資料行。<br /><br /> 全部+新增 = 全部和新增的組合。<br /><br /> 如果權限類型不適用於資料行，則傳回句號。|  
   
 ## <a name="remarks"></a>備註  
@@ -92,7 +92,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
- 傳回的資訊受限於中繼資料存取限制。 主體對其沒有權限的實體不會出現。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 傳回的資訊受限於中繼資料存取限制。 主體對其沒有權限的實體不會出現。  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -133,7 +133,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [拒絕 &#40;Transact-sql&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018070"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
@@ -39,16 +39,16 @@ ms.locfileid: "68018070"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**uid**|**smallint**|使用者識別碼，在這個資料庫中是唯一的。<br /><br /> 1 = 資料庫擁有者<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
-|**狀態**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|使用者名稱或群組名稱，在這個資料庫中是唯一的。|  
 |**sid**|**Varbinary （85）**|這個項目的安全性識別碼。|  
-|**角色**|**Varbinary （2048）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**角色**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|加入帳戶的日期。|  
 |**updatedate**|**datetime**|上次變更帳戶的日期。|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
-|**許可權**|**Varbinary （256）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**gid**|**smallint**|這位使用者所屬的群組識別碼。 如果**uid**與**gid**相同，此專案會定義一個群組。 如果群組和使用者結合的數目超過 32,767，則會造成溢位或傳回 NULL。|  
-|**environ**|**Varchar （255）**|已保留。|  
+|**environ**|**varchar(255)**|已保留。|  
 |**hasdbaccess**|**int**|1 = 帳戶有資料庫存取權。|  
 |**islogin**|**int**|1 = 帳戶是具有登入帳戶的 Windows 群組、Windows 使用者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者。|  
 |**isntname**|**int**|1 = 帳戶是 Windows 群組或 Windows 使用者。|  
@@ -61,6 +61,6 @@ ms.locfileid: "68018070"
   
 ## <a name="see-also"></a>另請參閱  
  [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032744"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -74,14 +74,13 @@ sp_statistics [ @table_name = ] 'table_name'
 |**NON_UNIQUE**|**smallint**|NOT NULL。<br /><br /> 0 = 唯一<br /><br /> 1 = 不是唯一|  
 |**INDEX_QUALIFIER**|**sysname**|索引擁有者名稱。 部分 DBMS 產品允許資料表擁有者以外的使用者建立索引。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，這個資料行一律與**TABLE_NAME**相同。|  
 |**INDEX_NAME**|**sysname**|這是索引的名稱。 這個資料行一律會傳回值。|  
-|**TYPE**|**smallint**|這個資料行一律會傳回值：<br /><br /> 0 = 資料表的統計資料<br /><br /> 1 = 叢集<br /><br /> 2 = 雜湊<br /><br /> 3 = 非叢集|  
+|**類型**|**smallint**|這個資料行一律會傳回值：<br /><br /> 0 = 資料表的統計資料<br /><br /> 1 = 叢集<br /><br /> 2 = 雜湊<br /><br /> 3 = 非叢集|  
 |**SEQ_IN_INDEX**|**smallint**|索引內資料行的位置。|  
 |**COLUMN_NAME**|**sysname**|傳回**TABLE_NAME**之每個資料行的資料行名稱。 這個資料行一律會傳回值。|  
 |**定序**|**char （1）**|定序中使用的順序。 可為以下項目：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用|  
 |**基數**|**int**|資料表中的資料列數，或索引中的唯一值數目。|  
-|**頁面**|**int**|用來儲存索引或資料表的頁數。|  
-|**FILTER_CONDITION**|**Varchar（128**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
+|**PAGES**|**int**|用來儲存索引或資料表的頁數。|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -98,7 +97,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>範例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回資料表的`DimEmployee`相關資訊。  
   
 ```  

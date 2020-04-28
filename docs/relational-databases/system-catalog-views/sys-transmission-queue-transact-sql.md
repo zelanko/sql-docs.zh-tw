@@ -20,10 +20,10 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022603"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68022603"
 |**from_service_name**|**nvarchar(256)**|這則訊息的來源服務名稱。 NULLABLE。|  
 |**service_contract_name**|**nvarchar(256)**|這則訊息之交談所遵照的合約名稱。 NULLABLE。|  
 |**enqueue_time**|**datetime**|訊息進入佇列的時間。 無論執行個體的當地時區為何，這個值一律使用 UTC。 不是 NULLABLE。|  
-|**message_sequence_number**|**Bigint**|訊息的序號。 不是 NULLABLE。|  
+|**message_sequence_number**|**bigint**|訊息的序號。 不是 NULLABLE。|  
 |**message_type_name**|**nvarchar(256)**|訊息的訊息類型名稱。 NULLABLE。|  
 |**is_conversation_error**|**bit**|這則訊息是否為錯誤訊息。<br /><br /> 0 = 不是錯誤訊息。<br /><br /> 1 = 錯誤訊息。<br /><br /> 不是 NULLABLE。|  
 |**is_end_of_dialog**|**bit**|這則訊息是否代表交談訊息結束。 不是 NULLABLE。<br /><br /> 0 = 不代表交談訊息結束。<br /><br /> 1 = 代表交談訊息結束。<br /><br /> 不是 NULLABLE。|  

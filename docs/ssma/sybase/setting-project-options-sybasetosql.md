@@ -12,10 +12,10 @@ ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020926"
 ---
 # <a name="setting-project-options-sybasetosql"></a>設定專案選項 (SybaseToSQL)
@@ -44,7 +44,7 @@ SSMA 有五組專案設定：
   
 3.  完整  
   
-4.  Custom  
+4.  自訂  
   
 建議大多數使用者使用預設模式。 開放式模式會保留更多最新的 Sybase 調適型伺服器 Enterprise （ASE）語法，而且較容易閱讀。 不過，保留目前的語法可能會不正確。 如果 ASE 語法必須轉換成對等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 語法，則完整模式會執行完整的轉換，但產生的程式碼可能較不容易閱讀。 在自訂模式中，您可以設定選項。  
   

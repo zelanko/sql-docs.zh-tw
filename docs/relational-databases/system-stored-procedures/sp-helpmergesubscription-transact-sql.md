@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002638"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`這是訂用帳戶的類型。 *subscription_type*是**Nvarchar （15）**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**push** （預設值）|發送訂閱|  
 |**拉**|提取訂閱|  
@@ -67,24 +67,24 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**sysname**|訂用帳戶的名稱。|  
+|**subscription_name**|**sysname**|訂閱的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
-|**狀態**|**int**|訂閱的狀態：<br /><br /> **0** = 所有作業都在等候啟動<br /><br /> **1** = 一或多個作業正在啟動<br /><br /> **2** = 所有作業都已成功執行<br /><br /> **3** = 至少有一項作業正在執行<br /><br /> **4** = 所有作業都已排程且閒置<br /><br /> **5** = 在上一次失敗之後，至少有一個作業嘗試執行<br /><br /> **6** = 至少有一項作業無法成功執行|  
+|**status**|**int**|訂閱的狀態：<br /><br /> **0** = 所有作業都在等候啟動<br /><br /> **1** = 一或多個作業正在啟動<br /><br /> **2** = 所有作業都已成功執行<br /><br /> **3** = 至少有一項作業正在執行<br /><br /> **4** = 所有作業都已排程且閒置<br /><br /> **5** = 在上一次失敗之後，至少有一個作業嘗試執行<br /><br /> **6** = 至少有一項作業無法成功執行|  
 |**subscriber_type**|**int**|訂閱者的類型。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 推播<br /><br /> **1** = 提取<br /><br /> **2** = 兩者|  
 |**優先順序**|**float （8）**|表示訂閱優先權的數字。|  
 |**sync_type**|**tinyint**|訂閱同步處理類型。|  
 |**描述**|**nvarchar(255)**|這項合併訂閱的簡要描述。|  
-|**merge_jobid**|**binary （16）**|合併代理程式的作業識別碼。|  
+|**merge_jobid**|**binary(16)**|合併代理程式的作業識別碼。|  
 |**full_publication**|**tinyint**|這是指訂閱完整或篩選發行集。|  
 |**offload_enabled**|**bit**|指定是否已將複寫代理程式的卸載執行設成執行於訂閱者端。 如果是 NULL，就是執行於發行者端。|  
 |**offload_server**|**sysname**|執行代理程式的伺服器名稱。|  
 |**use_interactive_resolver**|**int**|傳回是否在重新調整期間使用互動式解析程式。 如果是**0**，則不會使用互動式解析程式。|  
-|**名稱**|**sysname**|當訂閱依據[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函數的值進行篩選時所提供的值。|  
+|**hostname**|**sysname**|當訂閱依據[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函數的值進行篩選時所提供的值。|  
 |**subscriber_security_mode**|**smallint**|這是訂閱者端的安全性模式， **1**表示 Windows 驗證， **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**subscriber_login**|**sysname**|這是在訂閱者端的登入名稱。|  
 |**subscriber_password**|**sysname**|永遠不傳回實際的訂閱者密碼。 結果會以**\*\*\*\*"\***" 字串遮罩。|  

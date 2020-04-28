@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68025790"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68025790"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|觸發程序或事件通知的識別碼。 這個值連同**類型**，可唯一識別資料列。|  
 |**type**|**int**|造成觸發程序引發的事件。|  
-|**type_desc**|**Nvarchar （60）**|造成觸發程序引發之事件的描述。|  
+|**type_desc**|**nvarchar(60)**|造成觸發程序引發之事件的描述。|  
 |**is_trigger_event**|**bit**|1 = 觸發程序事件。<br /><br /> 0 = 通知事件。|  
 |**event_group_type**|**int**|觸發程序或事件通知建立所在的事件群組，如果未在事件群組上建立則為 null。|  
-|**event_group_type_desc**|**Nvarchar （60）**|觸發程序或事件通知建立所在之事件群組的描述，如果未在事件群組上建立則為 null。|  
+|**event_group_type_desc**|**nvarchar(60)**|觸發程序或事件通知建立所在之事件群組的描述，如果未在事件群組上建立則為 null。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

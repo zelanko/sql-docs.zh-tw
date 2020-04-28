@@ -18,10 +18,10 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032717"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -67,7 +67,7 @@ sp_stop_job
  如果作業目前正在執行**CmdExec**或**PowerShell**類型的步驟，執行中的進程（例如 myprogram.exe）會強制提前結束。 提前結束可能造成無法預期的行為，例如，有保留開啟狀態的處理序在使用檔案。 因此，如果作業包含**CmdExec**或**PowerShell**類型的步驟，應該只在極端情況下使用**sp_stop_job** 。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+ 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   

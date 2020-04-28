@@ -10,10 +10,10 @@ ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028710"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>專案設定 (移轉) (SybaseToSQL)
@@ -48,9 +48,9 @@ ms.locfileid: "68028710"
 |**檢查條件約束**|指定當 SSMA 將資料插入 SQL Server 資料表時，是否應檢查條件約束。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
 |**資料移轉超時**|指定資料移轉期間使用的超時時間<br /><br />**預設模式**：15<br /><br />**開放式模式**：15<br /><br />**完整模式**：15|  
 |**擴充資料移轉選項**|在個別的 [詳細資料] 索引標籤中顯示每個資料表的額外資料移轉選項。<br /><br />**預設模式**：隱藏<br /><br />**開放式模式**：隱藏<br /><br />**完整模式**：隱藏|  
-|**引發觸發程式**|指定 SSMA 是否應該在將資料加入 SQL Server 資料表時，引發插入觸發程式。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
-|**保留身分識別**|指定 SSMA 將資料新增至 SQL Server 時，是否保留 Sybase 識別值。 值為 False 會導致目的地指派識別值。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
-|**保留 null**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
+|**引發觸發程序**|指定 SSMA 是否應該在將資料加入 SQL Server 資料表時，引發插入觸發程式。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
+|**保留識別**|指定 SSMA 將資料新增至 SQL Server 時，是否保留 Sybase 識別值。 值為 False 會導致目的地指派識別值。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
+|**保留 Null**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
 |**發生錯誤時**|發生錯誤時停止資料移轉。 它有三個選項：<br /><br />**停止遷移：** 停止資料移轉作業<br /><br />**繼續進行下一個資料表：** 停止對目前資料表的資料移轉，並繼續進行下一個工作<br /><br />**繼續進行下一個批次：** 停止對目前批次的資料移轉，並繼續進行下一個<br /><br />**預設模式**：繼續進行下一個批次<br /><br />**開放式模式**：繼續進行下一個批次<br /><br />**完整模式**：繼續進行下一個批次|  
 |**數位的四捨五入小數部分**|指定在遷移至整數類型期間，是否要修剪十進位和數值資料的小數部分，如果小數部分不是簡單的則顯示錯誤訊息<br /><br />**預設模式**：否<br /><br />**開放式模式**：否<br /><br />**完整模式**：否|  
 |**Sybase Unicode 位元組序**|指定 Sybase Unicode 字串的 endian 類型。 您可以針對此特定設定來設定下列選項：<br /><br />位元組由大到小<br /><br />位元組由大到小<br /><br />**預設模式**：小位元組序<br /><br />**開放式模式**：小位元組序<br /><br />**完整模式**：位元組由大到小|  

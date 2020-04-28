@@ -14,10 +14,10 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006641"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>轉換、載入和遷移（AccessToSQL）
@@ -27,7 +27,7 @@ ms.locfileid: "68006641"
   
 頁面的 [**遷移所選物件的資料**] 區段也包含 [**報表**] 按鈕。 您可以按一下此按鈕來查看資料移轉報表。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **Report**  
 顯示相關聯的轉換或遷移報表。  
   

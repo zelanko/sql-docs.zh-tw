@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003508"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函數參考 (MDX)
@@ -85,7 +85,7 @@ ms.locfileid: "68003508"
   
 |函式|描述|  
 |--------------|-----------------|  
-|[匯總 &#40;MDX&#41;](../mdx/aggregate-mdx.md)|傳回純量值，此值是藉由彙總量值或指定集合的 Tuple 上選擇性指定的數值運算式而計算出。|  
+|[Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)|傳回純量值，此值是藉由彙總量值或指定集合的 Tuple 上選擇性指定的數值運算式而計算出。|  
 |[平均 &#40;MDX&#41;](../mdx/avg-mdx.md)|評估指定的集合，傳回量值的平均值或選擇性數值運算式的平均值。|  
 |[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|傳回 Cube 目前的計算行程 (給特定的查詢內容)。|  
 |[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|評估 Cube 指定的計算行程後，傳回 MDX 運算式的值。|  
@@ -93,7 +93,7 @@ ms.locfileid: "68003508"
 |[相互關聯 &#40;MDX&#41;](../mdx/correlation-mdx.md)|傳回在集合上評估的兩個序列的交互關聯係數。|  
 |[&#40;維度&#41; &#40;MDX&#41;計數](../mdx/count-dimension-mdx.md)|傳回 Cube 中的維度數目。|  
 |[&#40;&#41; &#40;MDX 的階層層級計數&#41;](../mdx/count-hierarchy-levels-mdx.md)|傳回一個維度或階層中的層級數目。|  
-|[&#40;&#41; &#40;MDX&#41;設定計數](../mdx/count-set-mdx.md)|傳回集合中的資料格數目。|  
+|[Count &#40;集合&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)|傳回集合中的資料格數目。|  
 |[計算 &#40;元組&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)|傳回 Tuple 中的維度數目。|  
 |[&#40;MDX&#41;的共變數](../mdx/covariance-mdx.md)|傳回在採用偏差結果母體公式的集合上評估兩個序列之擴展協方差。|  
 |[CovarianceN &#40;MDX&#41;](../mdx/covariancen-mdx.md)|傳回在採用無偏差結果母體公式的集合上評估兩個序列的樣本共變數。|  
@@ -136,7 +136,7 @@ ms.locfileid: "68003508"
 |[BottomCount &#40;MDX&#41;](../mdx/bottomcount-mdx.md)|以遞增的順序排序集合，並傳回數值最低的指定 Tuple 數。|  
 |[BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)|以遞增的順序排序集合，並傳回數值最低的 Tuple 集合，此集合的累計總和等於或小於指定的百分比。|  
 |[BottomSum &#40;MDX&#41;](../mdx/bottomsum-mdx.md)|以遞增的順序排序集合，並傳回數值最低的 Tuple 集合，此集合的總和等於或小於指定的值。|  
-|[&#40;MDX&#41;的子系](../mdx/children-mdx.md)|傳回指定成員的子成員。|  
+|[Children &#40;MDX&#41;](../mdx/children-mdx.md)|傳回指定成員的子成員。|  
 |[MDX&#41;的交叉聯結 &#40;](../mdx/crossjoin-mdx.md)|傳回兩個集合的交叉乘積。|  
 |[CurrentOrdinal &#40;MDX&#41;](../mdx/currentordinal-mdx.md)|反覆運算時傳回集合中目前的反覆運算編號。|  
 |[子代 &#40;MDX&#41;](../mdx/descendants-mdx.md)|傳回特定層集或距離的成員之子系集合，選擇性包括或排除其他層級中的子系。|  
@@ -152,7 +152,7 @@ ms.locfileid: "68003508"
 |[&#40;MDX&#41;除外](../mdx/except-mdx-function.md)|找出兩集合間的差異，選擇性保留重複部分。|  
 |[存在 &#40;MDX&#41;](../mdx/exists-mdx.md)|傳回有一個或多個其他集合的一個或多個 Tuple 存在的一個集合的成員集合。|  
 |[&#40;MDX&#41;解壓縮](../mdx/extract-mdx.md)|從引出的維度元件傳回一個 Tuple 集合。|  
-|[篩選 &#40;MDX&#41;](../mdx/filter-mdx.md)|傳回根據搜尋條件篩選指定集合後所得的集合。|  
+|[Filter &#40;MDX&#41;](../mdx/filter-mdx.md)|傳回根據搜尋條件篩選指定集合後所得的集合。|  
 |[產生 &#40;MDX&#41;](../mdx/generate-mdx.md)|套用一個集合到另一個集合的每個成員，然後以聯集的方式將結果集聯結。 或者，針對集合進行字串運算式評估之後，傳回所產生的串連字串。|  
 |[Head &#40;MDX&#41;](../mdx/head-mdx.md)|傳回集合中指定數目的前幾個元素，同時保留重複項。|  
 |[Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)|以階層式架構排列集合成員。|  
@@ -191,7 +191,7 @@ ms.locfileid: "68003508"
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|在相同資料庫中其他指定的 Cube 運算後傳回數值 MDX 運算式的值。|  
 |[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|傳回對應至指定成員的 MDX 格式字串。|  
 |[MDX&#41;的名稱 &#40;](../mdx/name-mdx.md)|傳回維度、階層架構、層級或者成員的名稱。|  
-|[MDX&#41;的屬性 &#40;](../mdx/properties-mdx.md)|傳回包含成員屬性值的字串或強型別 (strongly-typed) 值。|  
+|[Properties &#40;MDX&#41;](../mdx/properties-mdx.md)|傳回包含成員屬性值的字串或強型別 (strongly-typed) 值。|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|傳回對應至指定成員的 MDX 格式化字串。|  
 |[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|傳回對應至指定之元組的 MDX 格式字串。|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|傳回指定維度、階層、層級或成員的唯一名稱。|  
@@ -201,7 +201,7 @@ ms.locfileid: "68003508"
   
 |函式|描述|  
 |--------------|-----------------|  
-|[這 &#40;MDX&#41;](../mdx/this-mdx.md)|傳回目前的 Subcube。|  
+|[此 &#40;MDX&#41;](../mdx/this-mdx.md)|傳回目前的 Subcube。|  
 |[離開 &#40;MDX&#41;](../mdx/leaves-mdx.md)|傳回指定維度、成員或 Tuple 的分葉成員集合。|  
   
 ## <a name="tuple-functions"></a>Tuple 函數  
@@ -220,6 +220,6 @@ ms.locfileid: "68003508"
 |[MDX&#41;&#40;錯誤](../mdx/error-mdx.md)|引發錯誤，選擇性提供指定的錯誤訊息。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -24,10 +24,10 @@ ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018029"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>系統相容性檢視（Transact-sql）
@@ -61,7 +61,7 @@ ms.locfileid: "68018029"
  範例：如果使用者在使用者資料庫中建立名為**sys.syslanguages**的使用者資料表，在 SQL Server 2008 中，該資料庫中`SELECT * from dbo.syslanguages;`的語句會傳回使用者資料表中的值。 從 SQL Server 2012 開始，這種作法會從系統**sys.syslanguages**傳回資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

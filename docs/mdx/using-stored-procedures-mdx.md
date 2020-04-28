@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038010"
 ---
 # <a name="using-stored-procedures-mdx"></a>使用預存程序 (MDX)
@@ -35,8 +35,7 @@ WHERE [Measures].[Reseller Freight Cost]
 >  *預存*程式是用於[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]這類函數的術語。 舊版的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]會將這些類型的函*式當做使用者定義函數*來呼叫。  
   
 ## <a name="types-of-stored-procedures"></a>預存程序類型  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 COM 及 CLR 兩種組件。 因為 CLR 組件具備進階的安全性，所以建議使用 CLR 組件。 如果伺服器上已安裝 Microsoft Office Excel，還可以使用 Excel 函數。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 COM 及 CLR 兩種組件。 因為 CLR 組件具備進階的安全性，所以建議使用 CLR 組件。 如果伺服器上已安裝 Microsoft Office Excel，還可以使用 Excel 函數。  
   
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM 組件會自動註冊。  

@@ -10,10 +10,10 @@ ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e2b24483b57c638d68e044bd3dda175cc76cc48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68011162"
 ---
 # <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME

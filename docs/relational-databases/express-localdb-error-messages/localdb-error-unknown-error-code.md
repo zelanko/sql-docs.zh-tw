@@ -10,10 +10,10 @@ ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd2a159b67670a2bbffa28bae7e2cc449b8ba6e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010998"
 ---
 # <a name="localdb_error_unknown_error_code"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE

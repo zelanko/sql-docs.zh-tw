@@ -13,10 +13,10 @@ ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028887"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL)
@@ -51,7 +51,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
 2.  若要加入新的對應，請執行下列動作：  
   
-    1.  按一下 [新增]  。  
+    1.  按一下 **[新增]** 。  
   
     2.  在 [**來源類型**] 底下，選取要對應的 ASE 資料類型。  
   
@@ -83,7 +83,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
     1.  選取 [類型對應] 清單中的資料列，其中包含您想要移除的資料類型對應。  
   
-    2.  按一下 **[移除]** 。  
+    2.  按一下 [移除]****。  
   
         您無法移除繼承的對應。 不過，繼承的對應會由特定物件或物件類別上的自訂對應覆寫。  
   

@@ -16,10 +16,10 @@ ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039026"
 ---
 # <a name="comments-in-xquery"></a>XQuery 中的註解

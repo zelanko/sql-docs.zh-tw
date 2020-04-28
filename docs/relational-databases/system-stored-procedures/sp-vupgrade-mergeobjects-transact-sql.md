@@ -16,10 +16,10 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042703"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
@@ -45,11 +45,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @login = ] 'login'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員登入。 *login*是**sysname**，預設值是 Null。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
+`[ @login = ] 'login'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
   
 `[ @password = ] 'password'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員密碼。 *password*是**sysname**，預設值是 **' '** （空字串）。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
   
-`[ @security_mode = ] 'security_mode'`這是在散發資料庫中建立新的系統物件時，所要使用的登入安全性模式。 *security_mode*是**bit** ，預設值是**1**。 如果**** 是 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則會使用驗證。 如果是**1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'`這是在散發資料庫中建立新的系統物件時，所要使用的登入安全性模式。 *security_mode*是**bit** ，預設值是**1**。 如果**0**是 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則會使用驗證。 如果是**1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -58,10 +58,10 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
  **sp_vupgrade_mergeobjects**僅用於合併式複寫。  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

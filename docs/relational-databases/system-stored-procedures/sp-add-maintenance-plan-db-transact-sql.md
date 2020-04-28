@@ -18,10 +18,10 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e3f0afcd0007dc0e61424449e87851ca562b0cdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009198"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
@@ -47,7 +47,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>引數  
 `[ @plan_id = ] 'plan_id'`指定維護計畫的計畫識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
   
-`[ @db_name = ] 'database_name'`指定要加入至維護計畫的資料庫名稱。 資料庫必須先建立好或已存在，才能加入計畫中。 *database_name*是**sysname**。  
+`[ @db_name = ] 'database_name'`指定要加入至維護計畫的資料庫名稱。 資料庫必須先建立好或已存在，才能加入計畫中。 *database_name* 為 **sysname**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

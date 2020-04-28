@@ -19,17 +19,16 @@ ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004938"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表) 傳回累加統計資料的屬性。 
-  `sys.dm_db_incremental_stats_properties` (其中包含資料分割編號) 的使用類似於用於非累加統計資料的 `sys.dm_db_stats_properties` 。 
+  針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表) 傳回累加統計資料的屬性。 `sys.dm_db_incremental_stats_properties` (其中包含資料分割編號) 的使用類似於用於非累加統計資料的 `sys.dm_db_stats_properties` 。 
   
   這個函數是在 service [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] pack 2 和[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] service pack 1 中引進。
   
@@ -41,10 +40,10 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>引數  
  *object_id*  
- 這是目前資料庫中，要求其中一個累加統計資料屬性之物件的識別碼。 *object_id*為**int**。  
+ 這是目前資料庫中，要求其中一個累加統計資料屬性之物件的識別碼。 *@object_id* 是 **int**。  
   
  *stats_id*  
- 這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id*為**int**。  
+ 這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id* 是 **int**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -54,18 +53,16 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |stats_id|**int**|統計資料物件的識別碼。 在資料表中，這是唯一的。 如需詳細資訊，請參閱 [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|
 |partition_number|**int**|包含資料表其中一部分的磁碟分割的號碼。|  
 |last_updated|**datetime2**|上次更新統計資料物件的日期和時間。 如需詳細資訊，請參閱此頁的[備註](#Remarks)一節。|  
-|rows|**BIGINT**|上一次更新統計資料時位於資料表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。|  
-|rows_sampled|**Bigint**|針對統計資料計算進行取樣的資料列總數。|  
+|rows|**bigint**|上一次更新統計資料時位於資料表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。|  
+|rows_sampled|**bigint**|針對統計資料計算進行取樣的資料列總數。|  
 |steps|**int**|長條圖中的步驟數。 如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。|  
-|unfiltered_rows|**Bigint**|套用篩選運算式 (針對篩選的統計資料) 之前，資料表中的資料列總數。 如果統計資料未經過篩選，unfiltered_row 就會等於 rows 資料行中傳回的值。|  
-|modification_counter|**Bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 此資料行沒有包含記憶體最佳化資料表的資訊。|  
+|unfiltered_rows|**bigint**|套用篩選運算式 (針對篩選的統計資料) 之前，資料表中的資料列總數。 如果統計資料未經過篩選，unfiltered_row 就會等於 rows 資料行中傳回的值。|  
+|modification_counter|**bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 此資料行沒有包含記憶體最佳化資料表的資訊。|  
   
-## <a name="Remarks"></a> 備註  
- 
-  `sys.dm_db_incremental_stats_properties` 在下列任何情況下，都會傳回空的資料列集：  
+## <a name="remarks"></a><a name="Remarks"></a>備註  
+ `sys.dm_db_incremental_stats_properties` 在下列任何情況下，都會傳回空的資料列集：  
   
--   
-  `object_id` 或 `stats_id` 是 NULL。   
+-   `object_id` 或 `stats_id` 是 NULL。   
 -   找不到指定的物件，或者該物件沒有對應至具有累加統計資料的資料表。  
 -   指定的統計資料識別碼沒有對應至指定之物件識別碼的現有統計資料。  
 -   目前的使用者沒有檢視統計資料物件的權限。
@@ -89,9 +86,9 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 如需其他使用建議，請參閱  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)。
   
 ## <a name="see-also"></a>另請參閱  
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [物件相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.databases dm_db_stats_histogram （Transact-sql）](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

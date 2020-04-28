@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033914"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 運算子參考 (MDX)
@@ -24,7 +24,7 @@ ms.locfileid: "68033914"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[--&#40;批註&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|指出使用者提供的註解文字。|  
+|[-- &#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|指出使用者提供的註解文字。|  
 |[-&#40;&#41; &#40;MDX&#41;除外](../mdx/except-mdx-operator.md)|執行集合運算，傳回兩個集合間的差異、移除重複的成員。|  
 |[-&#40;負數&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|執行一元運算，這項運算會傳回數值運算式的負值。|  
 |[-&#40;減去&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|執行算術運算，將一個數字從另一個數字減去。|  
@@ -32,8 +32,8 @@ ms.locfileid: "68033914"
 |[&#42; &#40;乘以&#41; &#40;MDX&#41;](../mdx/multiply-mdx.md)|執行兩個數目相乘的算術運算。|  
 |[&#40;除&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|執行算術運算，將一個數字除以另一個數字。|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|執行算術運算，將一個數字乘至另一個數字的乘冪。|  
-|[批註 &#40;MDX&#41;](../mdx/comment-mdx.md)|指出使用者提供的註解文字。|  
-|[&#40;批註&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|指出使用者提供的文字。|  
+|[註解 &#40;MDX&#41;](../mdx/comment-mdx.md)|指出使用者提供的註解文字。|  
+|[&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|指出使用者提供的文字。|  
 |[： &#40;範圍&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|執行傳回一個自然順序集合的集合運算，其中會以兩個指定成員做為結束點，並將介於這兩個指定成員之間的所有成員當做集合的成員。|  
 |[+ &#40;新增&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|執行兩個數目相加的算術運算。|  
 |[+ &#40;正&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|執行一元運算，這項運算會傳回數值運算式的正值。|  
@@ -52,6 +52,6 @@ ms.locfileid: "68033914"
 |[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|在兩個數值運算式上執行邏輯排除。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

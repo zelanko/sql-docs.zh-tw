@@ -12,10 +12,10 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006552"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>尋找資料庫 Wizard （選取檔案）（AccessToSQL）
@@ -25,14 +25,14 @@ ms.locfileid: "68006552"
   
 若要選取要新增至 SSMA 的檔案，請選取檔案名旁的核取方塊。 當您完成選取檔案之後，請按 **[下一步]** 以查看 [完成] 頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **全選**  
 選取此核取方塊，以選取清單中的所有資料庫。  
   
 **全部取消選取**  
 選取此核取方塊，即可取消選取清單中的所有資料庫。  
   
-**檔案名稱**  
+[檔案名稱]****  
 顯示要加入至 SSMA 的 Access 資料庫檔案的名稱。  
   
 **擁有者**  
@@ -44,10 +44,10 @@ ms.locfileid: "68006552"
 **大小**  
 資料庫的大小（以位元組為單位）。  
   
-**建立日期**  
+**已**  
 建立資料庫的日期和時間。  
   
-**修改時間**  
+**修改日期**  
 上次更新資料庫的日期和時間。  
   
 ## <a name="see-also"></a>另請參閱  

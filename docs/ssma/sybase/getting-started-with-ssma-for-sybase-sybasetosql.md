@@ -10,10 +10,10 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029120"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE （SybaseToSQL）的消費者入門
@@ -99,7 +99,7 @@ SSMA 包含下列功能表：
 |**檢視**|包含**同步處理中繼資料**的流覽命令。 這會同步處理 Sybase Metadata Explorer 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料瀏覽器之間的物件。 也包含用來顯示和隱藏 [**輸出**] 和 [**錯誤清單**] 窗格的命令，以及用來管理版面配置的選項**版面**配置。|  
 |**工具**|包含用來建立報表、匯出資料，以及遷移物件和資料的命令。 也會提供 [**全域設定**] 和 [**專案設定**] 對話方塊的存取權。|  
 |**測試人員**|包含用來建立測試案例、查看測試結果和資料庫備份管理命令的命令。|  
-|**説明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
+|**說明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>輸出窗格和錯誤清單窗格  
 [ **View** ] 功能表提供命令來切換 [輸出] 窗格和 [錯誤清單] 窗格的可見度：  

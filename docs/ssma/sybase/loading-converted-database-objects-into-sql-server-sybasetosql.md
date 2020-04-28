@@ -12,10 +12,10 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5185e8b1364fe2a5bae92c40c99e8f52bcd32ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028935"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>將轉換的資料庫物件載入 SQL Server (SybaseToSQL)

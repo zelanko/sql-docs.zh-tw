@@ -21,10 +21,10 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041006"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
@@ -65,8 +65,7 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="requirements"></a>需求  
   
--   
-  `database_name` 所指定的資料庫必須具有 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資源集區的繫結。  
+-   `database_name` 所指定的資料庫必須具有 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資源集區的繫結。  
   
 -   需要 CONTROL SERVER 權限。  
   

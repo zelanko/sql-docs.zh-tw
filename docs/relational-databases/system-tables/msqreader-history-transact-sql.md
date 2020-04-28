@@ -18,10 +18,10 @@ ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032535"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68032535"
 |**runstatus**|**int**|代理程式的執行狀態：<br /><br /> **1** = 開始。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
 |**start_time**|**datetime**|代理程式工作階段啟動的日期和時間。|  
 |**time**|**datetime**|上次記錄之訊息的日期和時間。|  
-|**期限**|**int**|所記錄之工作階段活動的經歷時間 (以秒為單位)。|  
+|**duration**|**int**|所記錄之工作階段活動的經歷時間 (以秒為單位)。|  
 |**批註**|**nvarchar(255)**|描述性文字。|  
-|**transaction_id**|**Nvarchar （40）**|與訊息一起儲存的交易識別碼 (如果適用的話)。|  
+|**transaction_id**|**nvarchar(40)**|與訊息一起儲存的交易識別碼 (如果適用的話)。|  
 |**transaction_status**|**int**|交易的狀態。|  
 |**transactions_processed**|**int**|在工作階段所處理的累計交易數。|  
 |**commands_processed**|**int**|在工作階段所處理的累計命令數。|  

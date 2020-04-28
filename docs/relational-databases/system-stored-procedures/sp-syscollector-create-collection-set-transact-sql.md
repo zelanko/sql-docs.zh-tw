@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032645"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -97,8 +97,7 @@ sp_syscollector_create_collection_set
   
 -   持續執行的收集進度  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的警告事件  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的警告事件  
   
  2 - 層級 1 記錄和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的詳細事件資訊  
   
@@ -122,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 使用預設值建立收集組  
- 下列範例藉由只指定必要參數來建立收集組。 
-  `@collection_mode` 不是必要項，但是預設收集模式 (快取) 需要指定排程識別碼或排程名稱。  
+ 下列範例藉由只指定必要參數來建立收集組。 `@collection_mode` 不是必要項，但是預設收集模式 (快取) 需要指定排程識別碼或排程名稱。  
   
 ```  
 USE msdb;  
@@ -159,8 +157,8 @@ EXEC dbo.sp_syscollector_create_collection_set
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-sql&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

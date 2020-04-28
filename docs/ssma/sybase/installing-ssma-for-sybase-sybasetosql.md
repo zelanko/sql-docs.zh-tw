@@ -10,10 +10,10 @@ ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 91a4dfcf8add3900c51e33a6e40fa874ce9f9798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028969"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>安裝 SSMA for SAP ASE （SybaseToSQL）

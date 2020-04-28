@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997440"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -45,18 +45,18 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`這是描述伺服器的選項。 *option*是**Varchar （** 35 **）**，預設值是 Null，它必須是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**定序相容**|影響針對連結伺服器執行分散式查詢。 如果此選項設定為 true，|  
 |**資料存取**|啟用和停用連結伺服器的分散式查詢存取。|  
 |**dist**|散發者。|  
 |**dpub**|這個散發者的遠端簽發者。|  
 |**lazy schema validation**|在查詢開始時，略過遠端資料表的結構描述檢查。|  
-|**酒館**|簽發者。|  
+|**pub**|簽發者。|  
 |**4**|從指定伺服器啟用 RPC。|  
 |**rpc 輸出**|啟用對指定伺服器的 RPC。|  
 |**sub**|訂閱者。|  
-|**筆記本電腦**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**系統**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用遠端定序**|利用遠端資料行的定序來取代本機伺服器的定序。|  
   
 `[ @show_topology = ] 'show_topology'`這是指定伺服器與其他伺服器的關聯性。 *show_topology*是**Varchar （** 1 **）**，預設值是 Null。 如果*show_topology*不等於**t**或為 Null， **Sp_helpserver**會傳回 [結果集] 區段中所列的資料行。 如果*show_topology*等於**t**，除了結果集中列出的資料行之外， **sp_helpserver**也會傳回**topx**和**topy**資訊。  
@@ -70,8 +70,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|伺服器名稱。|  
 |**network_name**|**sysname**|伺服器的網路名稱。|  
-|**狀態**|**Varchar （** 70 **）**|伺服器狀態。|  
-|**號**|**char （** 4 **）**|伺服器的識別碼。|  
+|**status**|**Varchar （** 70 **）**|伺服器狀態。|  
+|**id**|**char （** 4 **）**|伺服器的識別碼。|  
 |**collation_name**|**sysname**|伺服器的定序。|  
 |**connect_timeout**|**int**|連接到連結伺服器的逾時值。|  
 |**query_timeout**|**int**|針對連結伺服器進行查詢的逾時值。|  
@@ -113,7 +113,7 @@ EXEC sp_helpserver 'SEATTLE2';
  [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45c7458505b2a7e89868b81ceb471e9d52ca425a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68011145"
 ---
 # <a name="localdb_error_invalid_parameter"></a>LOCALDB_ERROR_INVALID_PARAMETER

@@ -14,10 +14,10 @@ ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 39426b7e49a29b2ada6f075102db7eda10bf9692
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043184"
 ---
 # <a name="transaction-related-dynamic-management-views-and-functions-transact-sql"></a>交易相關的動態管理檢視和函數 (Transact-SQL)

@@ -18,10 +18,10 @@ ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e1683427057ac458e09bddde51dc70d8d402d38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016453"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)

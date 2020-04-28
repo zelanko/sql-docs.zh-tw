@@ -15,10 +15,10 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004520"
 ---
 # <a name="general-xquery-use-cases"></a>一般 XQuery 使用案例
@@ -344,7 +344,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
  [Xquery 處理關聯式資料](../xquery/xqueries-handling-relational-data.md)   
  [XQuery 中的字串搜尋](../xquery/string-search-in-xquery.md)   
  [在 XQuery 中處理命名空間](../xquery/handling-namespaces-in-xquery.md)   
- [使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
+ [使用 WITH WITH XMLNAMESPACES 將命名空間新增至查詢](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

@@ -20,10 +20,10 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004730"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -36,10 +36,9 @@ ms.locfileid: "68004730"
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
 |**step_id**|**int**|作業中步驟的識別碼。|  
 |**step_name**|**sysname**|作業步驟的名稱。|  
-|**子系統**|**Nvarchar （40）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來執行作業步驟的子系統名稱。|  
+|**子系統**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來執行作業步驟的子系統名稱。|  
 |**命令**|**nvarchar(max)**|要由**子系統**執行的命令。|  
-|**旗幟**|**int**|已保留。|  
+|**flags**|**int**|已保留。|  
 |**additional_parameters**|**ntext**|已保留。|  
 |**cmdexec_success_code**|**int**|**CmdExec**子系統步驟傳回的錯誤層級值，表示成功。|  
 |**on_success_action**|**tinyint**|當步驟執行成功時，所要執行的動作。|  

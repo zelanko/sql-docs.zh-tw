@@ -18,10 +18,10 @@ ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022323"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
@@ -47,34 +47,25 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|上次執行**sp_monitor**時間。|  
 |**current_run**|正在執行**sp_monitor**時間。|  
-|**seconds**|自**sp_monitor**執行以來經過的秒數。|  
+|**表示**|自**sp_monitor**執行以來經過的秒數。|  
 |**cpu_busy**|伺服器電腦的 CPU 已執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作的秒數。|  
-|**io_busy**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已花在處理輸入和輸出作業的秒數。|  
-|**忙**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已閒置的秒數。|  
-|**packets_received**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已讀取的輸入封包數。|  
-|**packets_sent**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已寫入的輸出封包數。|  
-|**packet_errors**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在讀取和寫入封包時所發現的錯誤數。|  
-|**total_read**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的讀取數。|  
-|**total_write**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的寫入數。|  
-|**total_errors**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在讀取和寫入時所發現的錯誤數。|  
+|**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已花在處理輸入和輸出作業的秒數。|  
+|**忙**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已閒置的秒數。|  
+|**packets_received**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已讀取的輸入封包數。|  
+|**packets_sent**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已寫入的輸出封包數。|  
+|**packet_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在讀取和寫入封包時所發現的錯誤數。|  
+|**total_read**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的讀取數。|  
+|**total_write**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的寫入數。|  
+|**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在讀取和寫入時所發現的錯誤數。|  
 |**介面**|登入或嘗試登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的次數。|  
   
 ## <a name="remarks"></a>備註  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會透過一系列的函數來持續追蹤它已完成的工作量。 執行**sp_monitor**會顯示這些函式所傳回的目前值，並顯示自上次執行程式之後有多少變更。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會透過一系列的函數來持續追蹤它已完成的工作量。 執行**sp_monitor**會顯示這些函式所傳回的目前值，並顯示自上次執行程式之後有多少變更。  
   
  針對每個資料行，統計資料會以*數位*（*數位*）-*數位*% 或*數位*（*數位*）的形式列印。 第一個*數位*是指[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自從重新開機之後的秒數（ **cpu_busy**、 **io_busy**和**閒置**）或總數（針對其他變數）。 括弧中的*數位*指的是上次執行**sp_monitor**後的秒數或總數。 百分比是上次執行**sp_monitor**以來的時間百分比。 例如，如果報表顯示**cpu_busy**為4250（215）-68%，則 cpu 在上次啟動後已忙碌4250秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，自上次執行**sp_monitor**起的215秒，以及自上次執行**sp_monitor**以來的總時間為68%。  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會報告有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忙碌情形的資訊。  
@@ -88,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**seconds**|  
+|**last_run**|**current_run**|**表示**|  
 |Mar 29 1998 11:55AM|Apr 4 1998 2:22 PM|561|  
   
 ||||  

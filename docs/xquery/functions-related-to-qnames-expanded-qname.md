@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004579"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>與 QNames 相關的函式 - expanded-QName
@@ -45,13 +45,12 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   如果指定的 *$paramLocal*值不是 Xs： NCName 類型的正確詞法格式，則會傳回空的序列，並代表動態錯誤。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援從 xs:QName 類型轉換成任何其他類型。 因此，**擴充的 QName （）** 函數不能用在 XML 結構中。 例如，當您建構節點時，例如 `<e> expanded-QName(...) </e>`，該值必須為不具類型。 您將需要將 `expanded-QName()` 傳回的 xs:QName 類型值轉換成 xdt:untypedAtomic。 不過，並不支援此轉換。 本主題稍後將在範例中提供解決方案。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援從 xs:QName 類型轉換成任何其他類型。 因此，**擴充的 QName （）** 函數不能用在 XML 結構中。 例如，當您建構節點時，例如 `<e> expanded-QName(...) </e>`，該值必須為不具類型。 您將需要將 `expanded-QName()` 傳回的 xs:QName 類型值轉換成 xdt:untypedAtomic。 不過，並不支援此轉換。 本主題稍後將在範例中提供解決方案。  
   
 -   您無法修改或比較現有的 QName 類型值。 例如， `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`會比較元素的值，<`e`>，以及**擴充的 qname （）** 函數所傳回的 QName。  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**** 在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**xml**在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. 取代 QName 類型節點值  
  此範例說明您可以如何修改 QName 類型的元素節點值。 本範例將執行下列動作：  
@@ -133,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. 使用 expanded-QName() 函數時處理其限制  
- **擴充的 QName**函數不能用在 XML 結構中。 說明如下例。 若要解決這個限制，該範例會先插入一個節點，然後修改該節點。  
+ **擴充的 QName**函數不能用在 XML 結構中。 下列範例將說明這點。 若要解決這個限制，該範例會先插入一個節點，然後修改該節點。  
   
 ```  
 -- if exists drop the table T  

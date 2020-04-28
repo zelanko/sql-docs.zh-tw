@@ -18,10 +18,10 @@ ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017698"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68017698"
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|由訂閱者的層代 (Generation) 所識別之變更的全域識別碼。|  
 |**pubid**|**uniqueidentifier**|發行集識別碼。|  
-|**代數**|**Bigint**|層代 (Generation) 值。|  
+|**代數**|**bigint**|層代 (Generation) 值。|  
 |**art_nick**|**int**|發行項的暱稱。|  
 |**nicknames**|**Varbinary （1001）**|這個層代 (Generation) 已經知道的其他訂閱者的暱稱清單。 其目的是避免將層代 (Generation) 傳送給已經看過那些變更的訂閱者。 為了提高搜尋的效率，暱稱清單中的暱稱都是依序維護的。 如果暱稱太多，超過這個欄位的容量，它們就無法達到最佳化的效果。|  
 |**coldate**|**datetime**|將目前層代 (Generation) 加入資料表中的日期。|  

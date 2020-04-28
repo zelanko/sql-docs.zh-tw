@@ -10,20 +10,20 @@ ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006592"
 ---
 # <a name="data-migration-report-accesstosql"></a>資料移轉報告（AccessToSQL）
 將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，[**資料移轉報表**] 對話方塊隨即出現。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **狀態**  
 顯示從來源到目標資料庫的資料移轉狀態。  
   
-**從**  
+**From**  
 來源資料表。  
   
 **自**  

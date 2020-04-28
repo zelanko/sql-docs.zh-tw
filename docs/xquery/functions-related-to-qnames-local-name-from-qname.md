@@ -16,10 +16,10 @@ ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004565"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>與 QNames 相關的函式 - local-name-from-QName
@@ -38,7 +38,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  應該擷取本機名稱的來源 QName。  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**** 在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**xml**在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
   
  下列範例會使用**本機名稱 from-qname （）** 函數，從 qname 類型值抓取區功能變數名稱稱和命名空間 URI 部分。 本範例將執行下列動作：  
   

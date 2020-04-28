@@ -21,10 +21,10 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033123"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>資料層應用程式視圖-dbo. sysdac_instances

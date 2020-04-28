@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036698"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
@@ -31,10 +31,10 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *Start*  
+ *啟動*  
  有效的數值運算式，會指定要傳回之第一個 Tuple 的位置。  
   
- *計數*  
+ *Count*  
  有效的數值運算式，會指定要傳回的 Tuple 數目。  
   
 ## <a name="remarks"></a>備註  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

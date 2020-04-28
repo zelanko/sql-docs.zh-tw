@@ -15,10 +15,10 @@ ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11ab2a034dde90f5e868d49fe23b7a036ea1b830
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033138"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)

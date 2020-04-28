@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 58bee93a4cef37a8a5a71211b292a16392687f12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67999956"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
@@ -75,6 +75,6 @@ FROM [Adventure Works]
  [&#40;&#41; &#40;MDX&#41;設定計數](../mdx/count-set-mdx.md)   
  [&#40;MDX&#41;的層級](../mdx/levels-mdx.md)   
  [&#40;設定&#41; &#40;MDX 的成員&#41;](../mdx/members-set-mdx.md)   
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

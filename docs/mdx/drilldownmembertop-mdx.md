@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1ebb3054ab25729ef5d75034dbee1d720f4dd928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68031245"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
@@ -34,7 +34,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *計數*  
+ *Count*  
  有效的數值運算式，會指定要傳回的 Tuple 數目。  
   
  *Numeric_Expression*  
@@ -79,6 +79,6 @@ WHERE [Measures].[Reseller Order Quantity]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

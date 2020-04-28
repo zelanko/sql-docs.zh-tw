@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022276"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
@@ -52,15 +52,15 @@ sp_revoke_proxy_from_subsystem
 |值|描述|  
 |-----------|-----------------|  
 |**2**|ActiveX Script<br /><br /> ** \* \*重要\*事項**在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 中移除 ActiveX 腳本子系統。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
-|**第**|作業系統 (CmdExec)|  
+|**3**|作業系統 (CmdExec)|  
 |**4**|複寫快照集代理程式|  
-|**第**|複寫記錄讀取器代理程式|  
+|**5**|複寫記錄讀取器代理程式|  
 |**6**|複寫散發代理程式|  
-|**utf-7**|Replication Merge Agent|  
+|**7**|Replication Merge Agent|  
 |**8**|複寫佇列讀取器代理程式|  
 |**9**|Analysis Services 命令|  
-|**十大**|Analysis Services 查詢|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝執行|  
+|**10**|Analysis Services 查詢|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行|  
 |**12**|PowerShell 指令碼|  
   
 `[ @subsystem_name = ] 'subsystem_name'`要撤銷存取權的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 Null。 必須指定*subsystem_id*或*subsystem_name* ，但不能同時指定兩者。 下表列出每個子系統的值。  
@@ -76,7 +76,7 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|複寫佇列讀取器代理程式|  
 |ANALYSISQUERY|Analysis Services 命令|  
 |ANALYSISCOMMAND|Analysis Services 查詢|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝執行|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行|  
 |PowerShell|PowerShell 指令碼|  
   
 ## <a name="remarks"></a>備註  
@@ -89,7 +89,7 @@ sp_revoke_proxy_from_subsystem
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_revoke_proxy_from_subsystem**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會撤銷 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 這個 Proxy 的 `Catalog application proxy` 子系統存取權。  
+ 下列範例會撤銷 `Catalog application proxy` 這個 Proxy 的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 子系統存取權。  
   
 ```  
 USE msdb ;  

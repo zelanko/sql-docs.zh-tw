@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005079"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
@@ -36,12 +36,10 @@ ms.locfileid: "68005079"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|
-  `sys.databases` 檢視中目前資料庫的識別碼。|  
+|**database_id**|**int**|`sys.databases` 檢視中目前資料庫的識別碼。|  
 |**start_date**|**datetimeoffset**|起始資料庫複製作業時，區域性 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料中心的 UTC 時間。|  
 |**modify_date**|**datetimeoffset**|資料庫複製作業完成時，區域性 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料中心的 UTC 時間。 新的資料庫和主要資料庫於此時間在交易上是一致的。 完成資訊每隔1分鐘會更新一次。<br /><br />反映 percent_complete 欄位上次更新的 UTC 時間。|  
-|**percent_complete**|**即時**|已複製位元組的百分比。 值的範圍是從 0 到 100。 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能會從某些錯誤中自動復原 (例如容錯移轉)，然後再重新啟動資料庫複製作業。 在此情況下，percent_complete 會從 0 重新開始。|  
+|**percent_complete**|**real**|已複製位元組的百分比。 值的範圍是從 0 到 100。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能會從某些錯誤中自動復原 (例如容錯移轉)，然後再重新啟動資料庫複製作業。 在此情況下，percent_complete 會從 0 重新開始。|  
 |**error_code**|**int**|如果大於 0，則代碼表示複製期間發生了錯誤。 如果未發生錯誤，值會等於 0。|  
 |**error_desc**|**Nvarchar （4096）**|複製期間發生之錯誤的描述。|  
 |**error_severity**|**int**|如果資料庫複製失敗，則傳回 16。|  

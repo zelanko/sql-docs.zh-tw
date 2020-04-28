@@ -18,10 +18,10 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022330"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
@@ -80,7 +80,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="examples"></a>範例  
   
 ### <a name="a-migrating-a-single-user"></a>A. 移轉單一使用者  
- 下列範例會將名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `Barry` 登入移轉為具有密碼之自主資料庫使用者。 此範例不會變更使用者名稱，而且會將登入保留為已啟用。  
+ 下列範例會將名為 `Barry` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入移轉為具有密碼之自主資料庫使用者。 此範例不會變更使用者名稱，而且會將登入保留為已啟用。  
   
 ```sql  
 sp_migrate_user_to_contained   
@@ -117,7 +117,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [遷移至部分自主資料庫](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [自主資料庫](../../relational-databases/databases/contained-databases.md)  
   
   

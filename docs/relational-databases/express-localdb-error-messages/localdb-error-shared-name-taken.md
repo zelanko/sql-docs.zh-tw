@@ -10,10 +10,10 @@ ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9f53c220dfa53675e59416de4615415006fac08c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68011117"
 ---
 # <a name="localdb_error_shared_name_taken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN

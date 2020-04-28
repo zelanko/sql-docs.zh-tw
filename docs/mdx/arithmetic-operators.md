@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017080"
 ---
 # <a name="arithmetic-operators"></a>算術運算子
@@ -24,10 +24,10 @@ ms.locfileid: "68017080"
   
 |運算子|描述|  
 |--------------|-----------------|  
-|[+ （新增）](../mdx/add-mdx.md)|兩個數字相加。|  
-|[/（除）](../mdx/divide-mdx-operator-reference.md)|以一個數目除以另一個數目。|  
-|[* （乘）](../mdx/multiply-mdx.md)|兩個數目相乘。|  
-|[-（減）](../mdx/subtract-mdx.md)|兩個數字相減。|  
+|[+ (加)](../mdx/add-mdx.md)|兩個數字相加。|  
+|[/ (除)](../mdx/divide-mdx-operator-reference.md)|以一個數目除以另一個數目。|  
+|[* (乘)](../mdx/multiply-mdx.md)|兩個數目相乘。|  
+|[- (減)](../mdx/subtract-mdx.md)|兩個數字相減。|  
 |^ (乘冪)|計算某一個數字的次方數。|  
   
 > [!NOTE]  

@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006626"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 Access 資料庫物件（AccessToSQL）
@@ -60,8 +60,8 @@ ms.locfileid: "68006626"
 |索引|索引|  
 |外部索引鍵 (foreign key)|外部索引鍵 (foreign key)|  
 |查詢|檢視<br /><br />大部分的 SELECT 查詢都會轉換成 views。 其他查詢，例如更新查詢，則不會遷移。<br /><br />不會轉換接受參數的 SELECT 查詢，也不會交叉索引標籤的查詢。|  
-|report|未轉換|  
-|form|未轉換|  
+|報表|未轉換|  
+|表單|未轉換|  
 |巨集|未轉換|  
 |module|未轉換|  
 |預設值|預設值|  

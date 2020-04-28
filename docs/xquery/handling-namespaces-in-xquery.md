@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004538"
 ---
 # <a name="handling-namespaces-in-xquery"></a>處理 XQuery 中的命名空間
@@ -146,7 +146,7 @@ where ProductModelID=19
  請注意，若覆寫預設元素命名空間或空的命名空間，所建構的 XML 中所有的本機具名元素之後都會繫結到執行覆寫的預設命名空間。 因此，若您想在建構 XML 時保有運用空命名空間的彈性，請不要覆寫預設元素命名空間。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
+ [使用 WITH WITH XMLNAMESPACES 將命名空間新增至查詢](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

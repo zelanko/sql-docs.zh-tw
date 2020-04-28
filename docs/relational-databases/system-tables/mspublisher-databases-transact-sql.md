@@ -18,10 +18,10 @@ ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032615"
 ---
 # <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
@@ -33,9 +33,8 @@ ms.locfileid: "68032615"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
-|**號**|**int**|資料列的識別碼。|  
-|**publisher_engine_edition**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的版本，可以是下列其中一個版本：<br /><br /> **10** = 個人版<br /><br /> **11** = 桌上型電腦引擎（MSDE）<br /><br /> **20** = 標準<br /><br /> **21** = Workgroup<br /><br /> **30** = 企業（評估）<br /><br /> **31** = 開發人員<br /><br /> **40** = Express （express 不能是發行者。 存在這個值是為了完整性)。|  
+|**id**|**int**|資料列的識別碼。|  
+|**publisher_engine_edition**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的版本，可以是下列其中一個版本：<br /><br /> **10** = 個人版<br /><br /> **11** = 桌上型電腦引擎（MSDE）<br /><br /> **20** = 標準<br /><br /> **21** = Workgroup<br /><br /> **30** = 企業（評估）<br /><br /> **31** = 開發人員<br /><br /> **40** = Express （express 不能是發行者。 存在這個值是為了完整性)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042987"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
@@ -62,8 +62,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
  CHANGE_TRACKING_IS_COLUMN_IN_MASK 不會執行任何檢查來驗證*column_id*值，或從取得*column_id*的資料表中取得*change_columns*參數。  
   
 ## <a name="examples"></a>範例  
- 下列範例可判斷是否更新 `Salary` 資料表的 `Employees` 資料行。 `COLUMNPROPERTY`函數會傳回資料`Salary`行的資料行識別碼。 
-  `@change_columns` 區域變數必須使用 CHANGETABLE 設定為查詢結果，做為資料來源。  
+ 下列範例可判斷是否更新 `Salary` 資料表的 `Employees` 資料行。 `COLUMNPROPERTY`函數會傳回資料`Salary`行的資料行識別碼。 `@change_columns` 區域變數必須使用 CHANGETABLE 設定為查詢結果，做為資料來源。  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
@@ -72,8 +71,8 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [變更追蹤函數 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

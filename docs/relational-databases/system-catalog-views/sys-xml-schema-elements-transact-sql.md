@@ -20,10 +20,10 @@ ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d43f30f15502a41882190dcdd19984d9ec042d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037390"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
@@ -34,8 +34,8 @@ ms.locfileid: "68037390"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<繼承的資料行>**|**--**|從 sys.databases 繼承資料行[xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)。|  
-|**is_default_fixed**|**bit**|1 = 預設值是固定值。 在 XML 執行個體中不能覆寫這個值。<br /><br /> 0 = 預設值不是元素的固定值。 （預設值）。|  
-|**is_abstract**|**bit**|1 = 元素是抽象的，無法使用於執行個體文件中。 元素的替代群組成員必須出現在執行個體文件中。<br /><br /> 0 = 元素不是抽象的。 （預設值）。|  
+|**is_default_fixed**|**bit**|1 = 預設值是固定值。 在 XML 執行個體中不能覆寫這個值。<br /><br /> 0 = 預設值不是元素的固定值。 (預設值)。|  
+|**is_abstract**|**bit**|1 = 元素是抽象的，無法使用於執行個體文件中。 元素的替代群組成員必須出現在執行個體文件中。<br /><br /> 0 = 元素不是抽象的。 (預設值)。|  
 |**is_nillable**|**bit**|1 = 元素為 Nillable。<br /><br /> 0 = 元素不是 Nillable。 (預設值)|  
 |**must_be_qualified**|**bit**|1 = 元素必須明確限定命名空間。<br /><br /> 0 = 元素可隱含限定命名空間。 (預設值)|  
 |**is_extension_blocked**|**bit**|1 = 封鎖取代成某延伸類型的執行個體。<br /><br /> 0 = 允許取代成延伸類型。 (預設值)|  
@@ -49,7 +49,7 @@ ms.locfileid: "68037390"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 架構 &#40;XML 類型系統&#41; 目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

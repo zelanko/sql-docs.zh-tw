@@ -20,10 +20,10 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017990"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>變更資料捕獲-sys. dm_cdc_log_scan_sessions
@@ -36,18 +36,18 @@ ms.locfileid: "68017990"
 |**session_id**|**int**|工作階段的識別碼。<br /><br /> 0 = 這個資料列中傳回的資料是自從上次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以來所有工作階段的彙總。|  
 |**start_time**|**datetime**|工作階段開始的時間。<br /><br /> 當**session_id** = 0 時，就會開始匯總資料收集的時間。|  
 |**end_time**|**datetime**|工作階段結束的時間。<br /><br /> NULL = 工作階段使用中。<br /><br /> 當**session_id** = 0 時，就是上一個會話結束的時間。|  
-|**期限**|**Bigint**|工作階段的持續時間 (以秒為單位)。<br /><br /> 0 = 工作階段不包含異動資料擷取交易。<br /><br /> 當**session_id** = 0 時，就是所有具有變更資料捕獲交易之會話的持續時間總和（以秒為單位）。|  
+|**duration**|**bigint**|工作階段的持續時間 (以秒為單位)。<br /><br /> 0 = 工作階段不包含異動資料擷取交易。<br /><br /> 當**session_id** = 0 時，就是所有具有變更資料捕獲交易之會話的持續時間總和（以秒為單位）。|  
 |**scan_phase**|**nvarchar(200)**|工作階段的目前階段。 以下是可能的值和其描述：<br /><br /> 1：正在讀取設定<br />2：第一次掃描，建立雜湊表<br />3：第二次掃描<br />4：第二次掃描<br />5：第二次掃描<br />6：架構版本設定<br />7：上次掃描<br />8：完成<br /><br /> 當**session_id** = 0 時，這個值一律是 "Aggregate"。|  
 |**error_count**|**int**|發生的錯誤數目。<br /><br /> 當**session_id** = 0 時，就是所有會話中發生的錯誤總數。|  
 |**start_lsn**|**Nvarchar （23）**|工作階段的起始 LSN。<br /><br /> 當**session_id** = 0 時，就是上一個會話的起始 LSN。|  
 |**current_lsn**|**Nvarchar （23）**|目前正在掃描的 LSN。<br /><br /> 當**session_id** = 0 時，目前的 LSN 為0。|  
 |**end_lsn**|**Nvarchar （23）**|工作階段的結束 LSN。<br /><br /> NULL = 工作階段使用中。<br /><br /> 當**session_id** = 0 時，就是上一個會話的結束 LSN。|  
-|**tran_count**|**Bigint**|已處理的異動資料擷取交易數目。 此計數器會在第2階段中填入。<br /><br /> 當**session_id** = 0 時，就是所有會話中已處理的交易數目。|  
+|**tran_count**|**bigint**|已處理的異動資料擷取交易數目。 此計數器會在第2階段中填入。<br /><br /> 當**session_id** = 0 時，就是所有會話中已處理的交易數目。|  
 |**last_commit_lsn**|**Nvarchar （23）**|上一個已處理之認可記錄的 LSN。<br /><br /> 當**session_id** = 0 時，就是任何會話的最後一個認可記錄 LSN。|  
 |**last_commit_time**|**datetime**|處理上一個認可記錄的時間。<br /><br /> 當**session_id** = 0 時，就是任何會話的上一個認可記錄檔記錄的時間。|  
-|**log_record_count**|**Bigint**|已掃描的記錄數目。<br /><br /> 當**session_id** = 0 時，針對所有會話掃描的記錄數目。|  
+|**log_record_count**|**bigint**|已掃描的記錄數目。<br /><br /> 當**session_id** = 0 時，針對所有會話掃描的記錄數目。|  
 |**schema_change_count**|**int**|已偵測之資料定義語言 (DDL) 作業的數目。 這個計數器會在第 6 個階段中填入。<br /><br /> 當**session_id** = 0 時，就是所有會話中已處理的 DDL 作業數目。|  
-|**command_count**|**Bigint**|已處理的命令數目。<br /><br /> 當**session_id** = 0 時，就是所有會話中已處理的命令數目。|  
+|**command_count**|**bigint**|已處理的命令數目。<br /><br /> 當**session_id** = 0 時，就是所有會話中已處理的命令數目。|  
 |**first_begin_cdc_lsn**|**Nvarchar （23）**|包含異動資料擷取交易的第一個 LSN。<br /><br /> 當**session_id** = 0 時，就是包含變更資料捕獲交易的第一個 LSN。|  
 |**last_commit_cdc_lsn**|**Nvarchar （23）**|包含異動資料擷取交易之上一個認可記錄的 LSN。<br /><br /> 當**session_id** = 0 時，就是任何包含變更資料捕獲交易之會話的上次認可記錄 LSN|  
 |**last_commit_cdc_time**|**datetime**|處理包含異動資料擷取交易之上一個認可記錄的時間。<br /><br /> 當**session_id** = 0 時，就是任何包含變更資料捕獲交易之會話的上一個認可記錄檔記錄的時間。|  

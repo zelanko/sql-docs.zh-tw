@@ -20,23 +20,21 @@ ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a099d67d337544a33bfc922fe14e07af39bd619d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022617"
 ---
 # <a name="systrace_subclass_values-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Trace_subclass_values**目錄檢視包含已命名的資料行值清單。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些子類別值不會改變。  
+  **Trace_subclass_values**目錄檢視包含已命名的資料行值清單。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些子類別值不會改變。  
   
  如需所支援追蹤事件的完整清單，請參閱[SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

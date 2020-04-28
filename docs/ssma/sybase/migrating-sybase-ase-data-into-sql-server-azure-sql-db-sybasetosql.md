@@ -13,10 +13,10 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028842"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>將 Sybase ASE 資料移轉至 SQL Server-Azure SQL DB （SybaseToSQL）
@@ -63,7 +63,7 @@ ms.locfileid: "68028842"
   
 **遷移資料**  
   
-1.  請確認下列事項：  
+1.  驗證下列項目：  
   
     -   ASE 提供者會安裝在執行 SSMA 的電腦上。  
   

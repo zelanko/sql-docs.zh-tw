@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036590"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *比例*  
+ *百分比*  
  有效的數值運算式，指定要傳回的 Tuple 百分比。  
   
 > [!IMPORTANT]  
@@ -69,10 +69,10 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|多倫多|$3508904.84|  
-|倫敦|$1521530.09|  
+|Toronto|$3508904.84|  
+|London|$1521530.09|  
 |Seattle|$1209418.16|  
-|巴黎|$1170425.18|  
+|Paris|$1170425.18|  
   
  原始資料集可透過下列查詢取得，並傳回 588 個資料列：  
   
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

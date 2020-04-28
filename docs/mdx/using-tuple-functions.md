@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037985"
 ---
 # <a name="using-tuple-functions"></a>使用 Tuple 函數
@@ -49,6 +49,6 @@ ms.locfileid: "68037985"
 ## <a name="see-also"></a>另請參閱  
  [函數 &#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)   
  [使用成員函式](../mdx/using-member-functions.md)   
- [使用集合函數](../mdx/using-set-functions.md)  
+ [使用集合函式](../mdx/using-set-functions.md)  
   
   

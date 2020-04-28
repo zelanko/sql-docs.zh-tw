@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028657"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>專案設定 (類型對應) (SybaseToSQL)
@@ -25,11 +25,11 @@ ms.locfileid: "68028657"
   
 -   若要指定目前專案的設定，請在 [**工具**] 功能表上，選取 [**專案設定**]，然後選取左窗格底部的 [**類型對應**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源類型**  
 對應的 ASE 資料類型。  
   
-**目標類型**  
+**目標型別**  
 指定 ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的目標資料類型。  
   
 如需 Sybase 類型對應的預設 SSMA，請參閱下一節中的表格。  
@@ -51,19 +51,19 @@ ms.locfileid: "68028657"
   
 |ASE 資料類型|SQL Server 資料類型|  
 |-----------------|------------------------|  
-|**Bigint**|**Bigint**|  
+|**bigint**|**bigint**|  
 |**binary**|**binary**|  
 |**binary [\*.。8000]**|**binary [\*]**|  
 |**binary [8001 ...\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**char 改變**|**varchar**|  
+|**char varying**|**varchar**|  
 |**char 改變 [\*.。8000]**|**Varchar [\*]**|  
 |**char 改變 [8001 ...\*]**|**varchar(max)**|  
 |**char [\*.。8000]**|**char [\*]**|  
 |**char [8001 ...\*]**|**varchar(max)**|  
 |**字母**|**char**|  
-|**字元變動**|**varchar**|  
+|**character varying**|**varchar**|  
 |**字元變動 [\*.。8000]**|**Varchar [\*]**|  
 |**字元變動 [8001 ...\*]**|**varchar(max)**|  
 |**字元 [\*.。8000]**|**char [\*]**|  
@@ -76,7 +76,7 @@ ms.locfileid: "68028657"
 |**decimal**|**decimal**|  
 |**decimal [\*.。\*]**|**decimal [\*]**|  
 |**decimal [\*.。\*][\*..\*]**|**decimal [\*] [\*]**|  
-|**雙精度**|**float [53]**|  
+|**雙精確度**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*.。次**|**float [24]**|  
 |**float [16 ...\*]**|**float [53]**|  
@@ -106,16 +106,16 @@ ms.locfileid: "68028657"
 |**Nchar 改變 [4001 ...\*]**|**nvarchar(max)**|  
 |**Nchar [\*.。4000]**|**Nchar [\*]**|  
 |**Nchar [4001 ...\*]**|**nvarchar(max)**|  
-|**數值**|**數值**|  
+|**numeric**|**numeric**|  
 |**數值 [\*.。\*]**|**數值 [\*]**|  
 |**數值 [\*.。\*][\*..\*]**|**數值 [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**Nvarchar [\*.。4000]**|**Nvarchar [\*]**|  
 |**Nvarchar [4001 ...\*]**|**nvarchar(max)**|  
-|**即時**|**float [24]**|  
+|**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
-|**SMALLMONEY**|**SMALLMONEY**|  
+|**smallmoney**|**smallmoney**|  
 |**sysname**|**Nvarchar [128]**|  
 |**sysname [\*.。。\*]**|**Nvarchar [255]**|  
 |**text**|**text**|  
@@ -133,7 +133,7 @@ ms.locfileid: "68028657"
 |**uniVarchar [\*.。。4000]**|**Nvarchar [\*]**|  
 |**uniVarchar [4001 ...\*]**|**nvarchar(max)**|  
 |**不帶正負號的 Bigint**|**數值 [20] [0]**|  
-|**不帶正負號的整數**|**Bigint**|  
+|**不帶正負號的整數**|**bigint**|  
 |**不帶正負號的 Smallint**|**int**|  
 |**不帶正負號的 Tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  

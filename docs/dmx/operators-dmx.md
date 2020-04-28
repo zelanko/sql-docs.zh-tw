@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f03c3152e3144b137c079cbdfddeff5b9cd5156
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008170"
 ---
 # <a name="operators-dmx"></a>運算子 (DMX)
@@ -20,8 +20,7 @@ ms.locfileid: "68008170"
 
   您可以使用資料採礦延伸模組（DMX）運算子，在的查詢中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行算術、比較、串連和邏輯運算。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用運算子執行下列動作：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用運算子執行下列動作：  
   
 -   搜尋符合特定條件的值或物件。  
   
@@ -29,7 +28,7 @@ ms.locfileid: "68008170"
   
  DMX 使用下列區段所描述之數種類別目錄的運算子。 如需個別運算子的詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)。  
   
-|運算子類別目錄|作業類型|  
+|運算子類別目錄|運算的類型|  
 |-----------------------|-----------------------|  
 |[&#40;DMX&#41;的算術運算子](../dmx/operators-arithmetic.md)|執行加、減、乘或除。|  
 |[&#40;DMX&#41;的比較運算子](../dmx/operators-comparison.md)|以一個值去比較另一個值或運算式。|  

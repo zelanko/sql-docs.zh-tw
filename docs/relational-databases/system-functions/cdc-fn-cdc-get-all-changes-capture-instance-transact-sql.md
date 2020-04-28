@@ -17,10 +17,10 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043056"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc. fn_cdc_get_all_changes_&lt;capture_instance&gt; （transact-sql）
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  可以是下列其中一個選項：  
   
- 所有  
+ all  
  傳回指定之 LSN 範圍內的所有變更。 若為由於更新作業所造成的變更，這個選項就只會傳回包含套用更新之後之新值的資料列。  
   
  all update old  
@@ -70,10 +70,10 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**__ $ start_lsn**|**binary （10）**|與變更相關聯的認可 LSN，其中保留變更的認可順序。 在相同交易中認可的變更都會共用相同的認可 LSN 值。|  
-|**__ $ seqval**|**binary （10）**|用於排序交易內資料列變更的序列值。|  
+|**__$start_lsn**|**binary(10)**|與變更相關聯的認可 LSN，其中保留變更的認可順序。 在相同交易中認可的變更都會共用相同的認可 LSN 值。|  
+|**__$seqval**|**binary(10)**|用於排序交易內資料列變更的序列值。|  
 |**__ $ operation**|**int**|識別將變更資料的資料列套用至目標資料來源所需的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (擷取的是更新作業之前的資料行值)。 只有在您指定了 'all update old' 資料列篩選選項時，這個值才適用。<br /><br /> 4 = 更新 (擷取的是更新作業之後的資料行值)。|  
-|**__ $ update_mask**|**Varbinary （128）**|位元遮罩，其中含有對應至針對擷取執行個體所識別之每個擷取資料行的位元。 當 **__ $ operation** = 1 或2時，這個值會將所有定義的位設為1。 當 **__ $ operation** = 3 或4時，只有對應至已變更之資料行的位會設定為1。|  
+|**__$update_mask**|**varbinary(128)**|位元遮罩，其中含有對應至針對擷取執行個體所識別之每個擷取資料行的位元。 當 **__ $ operation** = 1 或2時，這個值會將所有定義的位設為1。 當 **__ $ operation** = 3 或4時，只有對應至已變更之資料行的位會設定為1。|  
 |**\<已捕獲的來源資料表資料行>**|視情況而異|這個函數所傳回的其餘資料行都是建立擷取執行個體時所識別的擷取資料行。 如果擷取的資料行清單中沒有指定任何資料行，就會傳回來源資料表中的所有資料行。|  
   
 ## <a name="permissions"></a>權限  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037933"
 ---
 # <a name="var-mdx"></a>Var (MDX)
@@ -40,6 +40,6 @@ Var(Set_Expression [ ,Numeric_Expression ] )
  **Var**函數使用非偏誤擴展公式，而[VarP](../mdx/varp-mdx.md)函數使用偏誤擴展公式。  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

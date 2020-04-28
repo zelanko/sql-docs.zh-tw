@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039286"
 ---
 # <a name="sysxml_schema_components-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68039286"
 |**symbol_space_desc**|**nvarchar**<br /><br /> **（60）**|根據**種類**，此符號名稱為唯一的空間描述：<br /><br /> 無<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
 |**常見**|**char （1）**|XML 結構描述元件的種類。<br /><br /> N = 任何類型 (特殊內建元件)<br /><br /> Z = 任何簡單類型 (特殊內建元件)<br /><br /> P = 基本類型 (內建類型)<br /><br /> S = 簡單類型<br /><br /> L = 清單類型<br /><br /> U = 聯集類型<br /><br /> C = 複雜簡單類型 (從「簡單」衍生)<br /><br /> K = 複雜類型<br /><br /> E = 元素<br /><br /> M = 模型群組<br /><br /> W = 元素萬用字元<br /><br /> A = 屬性<br /><br /> G = 屬性群組<br /><br /> V = 屬性萬用字元|  
 |**kind_desc**|**nvarchar**<br /><br /> **（60）**|XML 結構描述元件種類的描述：<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**derivation**|**char （1）**|衍生類型的衍生方法：<br /><br /> N = 無 (不衍生)<br /><br /> X = 延伸<br /><br /> R = 限制<br /><br /> S = 替代|  
+|**衍生**|**char （1）**|衍生類型的衍生方法：<br /><br /> N = 無 (不衍生)<br /><br /> X = 延伸<br /><br /> R = 限制<br /><br /> S = 替代|  
 |**derivation_desc**|**nvarchar**<br /><br /> **（60）**|衍生類型之衍生方法的描述：<br /><br /> 無<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|從中衍生這個元件的元件識別碼。 如果沒有，則為 NULL。|  
 |**scoping_xml_component_id**|**int**|範圍元件的唯一識別碼。 如果沒有 (全域範圍)，則為 NULL。|  
@@ -51,7 +51,7 @@ ms.locfileid: "68039286"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 架構 &#40;XML 類型系統&#41; 目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

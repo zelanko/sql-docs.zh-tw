@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bd5b497f1d96f813570282f785fe0cbfe73265d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017934"
 ---
 # <a name="change-tracking---sysdm_tran_commit_table"></a>變更追蹤-sys. dm_tran_commit_table
@@ -37,15 +37,15 @@ ms.locfileid: "68017934"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|commit_ts|**Bigint**|單純遞增數字，當做每一筆認可之交易的資料庫特有時間戳記。|  
-|xdes_id|**Bigint**|交易之資料庫特有的內部識別碼。|  
-|commit_lbn|**Bigint**|包含交易之認可記錄檔記錄的記錄區塊數目。|  
-|commit_csn|**Bigint**|交易之執行個體特有的認可序號。|  
+|commit_ts|**bigint**|單純遞增數字，當做每一筆認可之交易的資料庫特有時間戳記。|  
+|xdes_id|**bigint**|交易之資料庫特有的內部識別碼。|  
+|commit_lbn|**bigint**|包含交易之認可記錄檔記錄的記錄區塊數目。|  
+|commit_csn|**bigint**|交易之執行個體特有的認可序號。|  
 |commit_time|**smalldatetime**|認可交易的時間。|  
 |pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [關於變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
   

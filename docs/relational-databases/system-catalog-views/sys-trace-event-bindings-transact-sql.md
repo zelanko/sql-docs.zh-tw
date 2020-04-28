@@ -20,23 +20,21 @@ ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d74fd55d4d2bf230cbb190cad428b371807f32ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022610"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Trace_event_bindings**目錄檢視包含事件和資料行的所有可能使用組合的清單。 針對 [ **trace_event_id** ] 資料行中列出的每個事件，所有可用的資料行都會列在 [ **trace_column_id** ] 資料行中。 不是每次發生給定的事件，都會擴展所有可用的資料行。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些值不會改變。  
+  **Trace_event_bindings**目錄檢視包含事件和資料行的所有可能使用組合的清單。 針對 [ **trace_event_id** ] 資料行中列出的每個事件，所有可用的資料行都會列在 [ **trace_column_id** ] 資料行中。 不是每次發生給定的事件，都會擴展所有可用的資料行。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些值不會改變。  
   
  如需所支援追蹤事件的完整清單，請參閱[SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

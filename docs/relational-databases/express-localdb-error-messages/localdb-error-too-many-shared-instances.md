@@ -10,10 +10,10 @@ ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86a76c02f6fbd2d4d47772950fa08af656701ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68011016"
 ---
 # <a name="localdb_error_too_many_shared_instances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002458"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
@@ -48,8 +48,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是`nvarchar`，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。
 
-`[ @namespace = ] ' < class > '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時`<class>` ，則為必要。 
-  `<class>` 為 `nvarchar(20)`。 有效的輸入`DATABASE_DDL_TRIGGER`為`SERVER_DDL_TRIGGER`和。    
+`[ @namespace = ] ' < class > '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時`<class>` ，則為必要。 `<class>` 為 `nvarchar(20)`。 有效的輸入`DATABASE_DDL_TRIGGER`為`SERVER_DDL_TRIGGER`和。    
 
 ## <a name="return-code-values"></a>傳回碼值  
 
@@ -157,5 +156,5 @@ GO
 ## <a name="see-also"></a>另請參閱 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Always Encrypted Wizard](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Always Encrypted 精靈](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

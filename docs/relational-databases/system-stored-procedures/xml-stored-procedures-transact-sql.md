@@ -16,10 +16,10 @@ ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 66f944e1be0edec50492f0eb732bdd03575891f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037209"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>XML 預存程序 (Transact-SQL)

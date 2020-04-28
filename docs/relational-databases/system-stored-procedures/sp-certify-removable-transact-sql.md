@@ -18,10 +18,10 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045935"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -77,7 +77,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   只要使用**auto**值來執行**sp_certify_removable** 。  
   
- 請注意，這個預存程序只會檢查使用者和使用者權限。 您可以將群組加入資料庫中，以及將權限授與這些群組。 如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)的相關資訊。  
+ 請注意，這個預存程序只會檢查使用者和使用者權限。 您可以將群組加入資料庫中，以及將權限授與這些群組。 如需詳細資訊，請參閱[GRANT &#40;transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
  執行許可權僅限於**系統管理員（sysadmin** ）固定伺服器角色的成員。  
@@ -92,7 +92,7 @@ EXEC sp_certify_removable inventory, AUTO;
 ## <a name="see-also"></a>另請參閱  
  [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

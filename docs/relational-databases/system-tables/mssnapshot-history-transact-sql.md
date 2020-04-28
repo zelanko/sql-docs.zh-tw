@@ -18,10 +18,10 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997276"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67997276"
 |**runstatus**|**int**|執行狀態如下：<br /><br /> **1** = 開始。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
 |**start_time**|**datetime**|開始執行作業的時間。|  
 |**time**|**datetime**|記錄訊息的時間。|  
-|**期限**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  
+|**duration**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  
 |**批註**|**nvarchar(255)**|訊息文字。|  
 |**delivered_transactions**|**int**|在工作階段所傳遞的交易總數。|  
 |**delivered_commands**|**int**|每秒傳遞的命令數。|  

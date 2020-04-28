@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026826"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
@@ -36,22 +36,22 @@ ms.locfileid: "68026826"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|memory_consumer_id|**Bigint**|記憶體取用者的識別碼 (內部)。|  
+|memory_consumer_id|**bigint**|記憶體取用者的識別碼 (內部)。|  
 |memory_consumer_type|**int**|記憶體取用者的類型：<br /><br /> 0=彙總。 (彙總兩個以上取用者的記憶體使用量。 它不應該顯示)。<br /><br /> 2=VARHEAP (追蹤可變長度堆積的記憶體耗用量)。<br /><br /> 3=HASH (追蹤索引的記憶體耗用量)。<br /><br /> 5=資料庫分頁集區 (追蹤用於執行階段作業之資料庫分頁集區的記憶體耗用量。 例如，資料表變數和一些可序列化的掃描。 每個資料庫只有一個這種類型的記憶體取用者)。|  
 |memory_consumer_type_desc|**Nvarchar （64）**|記憶體取用者的類型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0-（不應該顯示）。<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
 |memory_consumer_desc|**Nvarchar （64）**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP <br />資料庫堆積。 用來配置資料庫的使用者資料 (資料列)。<br />資料庫系統堆積。 用來配置將包含在記憶體傾印中而且不包含使用者資料的資料庫資料。<br />範圍索引堆積。 範圍索引為了配置 BW 頁面所使用的私密堆積。<br /><br /> HASH：沒有描述，因為 object_id 表示資料表和 index_id 雜湊索引本身。<br /><br /> PGPOOL：對於資料庫，只有一個分頁集區資料庫是64K 的分頁集區。|  
-|object_id|**Bigint**|配置的記憶體所歸屬的物件識別碼。 系統物件的負值。|  
-|xtp_object_id|**Bigint**|記憶體優化資料表的物件識別碼。|  
+|object_id|**bigint**|配置的記憶體所歸屬的物件識別碼。 系統物件的負值。|  
+|xtp_object_id|**bigint**|記憶體優化資料表的物件識別碼。|  
 |index_id|**int**|取用者的索引識別碼 (如果有的話)。 基底資料表的 NULL。|  
-|allocated_bytes|**Bigint**|保留給此取用者的位元組數。|  
-|used_bytes|**Bigint**|這個取用者使用的位元組。 只適用於 varheap。|  
+|allocated_bytes|**bigint**|保留給此取用者的位元組數。|  
+|used_bytes|**bigint**|這個取用者使用的位元組。 只適用於 varheap。|  
 |allocation_count|**int**|配置的數目。|  
 |partition_count|**int**|僅供內部使用。|  
 |sizeclass_count|**int**|僅供內部使用。|  
 |min_sizeclass|**int**|僅供內部使用。|  
 |max_sizeclass|**int**|僅供內部使用。|  
 |memory_consumer_address|**varbinary**|取用者的內部位址。 僅供內部使用。|  
-|xtp_object_id|**Bigint**|對應至記憶體優化資料表的記憶體內部 OLTP 物件識別碼。|  
+|xtp_object_id|**bigint**|對應至記憶體優化資料表的記憶體內部 OLTP 物件識別碼。|  
   
 ## <a name="remarks"></a>備註  
  在輸出中，資料庫層級的配置器會參考使用者資料表、索引及系統資料表。 object_id = NULL 的 VARHEAP 會參考配置給具有可變長度資料行之資料表的記憶體。  
@@ -124,6 +124,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9aa59c95b211591ce89b3207b2bac181bb413222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000835"
 ---
 # <a name="sp_syscollector_delete_execution_log_tree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)

@@ -18,10 +18,10 @@ ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dc2e7e5b2cf767972ab6531b5f06c2043a3f07fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016458"
 ---
 # <a name="mstracer_tokens-transact-sql"></a>MStracer_tokens (Transact-SQL)

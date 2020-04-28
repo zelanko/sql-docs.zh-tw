@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042897"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
@@ -49,7 +49,7 @@ CHANGETABLE (
  變更*資料表*， *last_sync_version*  
  傳回從*last_sync_version*所指定的版本以來，對資料表進行之所有變更的追蹤資訊。  
   
- *目錄*  
+ *table*  
  可取得其追蹤變更的使用者定義資料表。 您必須在資料表上啟用變更追蹤。 可以使用一部分、兩部分、三部分或四部分資料表名稱。 資料表名稱可以是資料表的同義字。  
   
  *last_sync_version*  
@@ -68,7 +68,7 @@ CHANGETABLE (
  版本*資料表*{<primary_key_values>}  
  針對指定的資料列傳回最新的變更追蹤資訊。 主索引鍵值必須識別資料列。 <primary_key_values> 識別主鍵資料行並指定值。 您可以用任何順序指定主索引鍵資料行名稱。  
   
- *Table*  
+ *目錄*  
  可取得其變更追蹤資訊的使用者定義資料表。 您必須在資料表上啟用變更追蹤。 可以使用一部分、兩部分、三部分或四部分資料表名稱。 資料表名稱可以是資料表的同義字。  
   
  *column_name*  
@@ -87,7 +87,7 @@ CHANGETABLE (
  CHANGETABLE 所傳回之資料行的資料行選用別名或資料行別名的清單。 這可在結果中有多個重複名稱時，自訂資料行名稱。  
   
 ## <a name="return-types"></a>傳回型別  
- **目錄**  
+ **table**  
   
 ## <a name="return-values"></a>傳回值  
   
@@ -96,11 +96,11 @@ CHANGETABLE (
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|SYS_CHANGE_VERSION|**Bigint**|與資料列最後變更相關聯的版本值|  
-|SYS_CHANGE_CREATION_VERSION|**Bigint**|與最後插入作業相關聯的版本值。|  
-|SYS_CHANGE_OPERATION|**Nchar （1）**|指定變更的類型：<br /><br /> **U** = 更新<br /><br /> **I** = 插入<br /><br /> **D** = 刪除|  
-|SYS_CHANGE_COLUMNS|**Varbinary （4100）**|列出 last_sync_version (基準版本) 以來變更的資料行。 請注意，計算資料行永遠不會列示為已變更。<br /><br /> 當下列任一條件成立時，該值為 NULL：<br /><br /> 未啟用資料行變更追蹤。<br /><br /> 作業為插入或刪除作業。<br /><br /> 已經在一個作業中更新所有非主索引鍵資料行。 這個二進位值不得直接解譯。 相反地，若要加以解讀，請使用[CHANGE_TRACKING_IS_COLUMN_IN_MASK （）](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)。|  
-|SYS_CHANGE_CONTEXT|**Varbinary （128）**|您可以使用[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)子句當做 INSERT、UPDATE 或 DELETE 子句的一部分，藉以選擇性地指定變更內容資訊。|  
+|SYS_CHANGE_VERSION|**bigint**|與資料列最後變更相關聯的版本值|  
+|SYS_CHANGE_CREATION_VERSION|**bigint**|與最後插入作業相關聯的版本值。|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|指定變更的類型：<br /><br /> **U** = 更新<br /><br /> **I** = 插入<br /><br /> **D** = 刪除|  
+|SYS_CHANGE_COLUMNS|**varbinary(4100)**|列出 last_sync_version (基準版本) 以來變更的資料行。 請注意，計算資料行永遠不會列示為已變更。<br /><br /> 當下列任一條件成立時，該值為 NULL：<br /><br /> 未啟用資料行變更追蹤。<br /><br /> 作業為插入或刪除作業。<br /><br /> 已經在一個作業中更新所有非主索引鍵資料行。 這個二進位值不得直接解譯。 相反地，若要加以解讀，請使用[CHANGE_TRACKING_IS_COLUMN_IN_MASK （）](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)。|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|您可以使用[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)子句當做 INSERT、UPDATE 或 DELETE 子句的一部分，藉以選擇性地指定變更內容資訊。|  
 |\<主要索引鍵資料行值>|與使用者資料表資料行相同|追蹤資料表的主索引鍵值。 這些值會唯一識別使用者資料表中的每個資料列。|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
@@ -108,8 +108,8 @@ CHANGETABLE (
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|SYS_CHANGE_VERSION|**Bigint**|與資料列相關聯的目前變更版本值。<br /><br /> 如果尚未針對比變更追蹤保留週期長的任何週期進行變更，或者資料列在啟用變更追蹤以來尚未經過變更，則值為 NULL。|  
-|SYS_CHANGE_CONTEXT|**Varbinary （128）**|您可以使用 WITH 子句當做 INSERT、UPDATE 或 DELETE 陳述式一部分選擇性指定的變更內容資訊。|  
+|SYS_CHANGE_VERSION|**bigint**|與資料列相關聯的目前變更版本值。<br /><br /> 如果尚未針對比變更追蹤保留週期長的任何週期進行變更，或者資料列在啟用變更追蹤以來尚未經過變更，則值為 NULL。|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|您可以使用 WITH 子句當做 INSERT、UPDATE 或 DELETE 陳述式一部分選擇性指定的變更內容資訊。|  
 |\<主要索引鍵資料行值>|與使用者資料表資料行相同|追蹤資料表的主索引鍵值。 這些值會唯一識別使用者資料表中的每個資料列。|  
   
 ## <a name="remarks"></a>備註  
@@ -210,10 +210,10 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [變更追蹤函數 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

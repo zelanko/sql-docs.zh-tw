@@ -10,10 +10,10 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026809"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68026809"
 
 | 資料行名稱 | 資料類型 | 描述 |
 | :-- | :-- | :-- |
-| request_state | tinyint | 合併要求的狀態：<br/>0 = Requested<br/>1 = Pending<br/>2 = 已安裝<br/>3 = Abandoned |
+| request_state | TINYINT | 合併要求的狀態：<br/>0 = Requested<br/>1 = Pending<br/>2 = 已安裝<br/>3 = Abandoned |
 | request_state_desc | nvarchar(60) | 要求目前狀態的意義：<br/><br/>已要求-合併要求存在。<br/>暫止-正在處理合併。<br/>已安裝-合併已完成。<br/>已放棄-合併無法完成，可能是因為缺少儲存空間。 |
 | destination_file_id | GUID | 用於合併來源檔案之目的地檔案的唯一識別碼。 |
 | lower_bound_tsn | BIGINT | 目標合併檔案的最小時間戳記。 要合併之所有來源檔案的最低交易時間戳記。 |

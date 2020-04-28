@@ -18,10 +18,10 @@ ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7629bff37fb33080f8057fc1799437fff182882f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044800"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)

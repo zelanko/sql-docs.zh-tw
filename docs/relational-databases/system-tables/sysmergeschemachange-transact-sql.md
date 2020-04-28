@@ -18,10 +18,10 @@ ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7225fae192ab256c2c2660fcb1554cd01818907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029825"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)

@@ -18,10 +18,10 @@ ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dcf3788480a6e3dbb3bde20ef3f9e6a43269c9e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026735"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)

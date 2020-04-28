@@ -19,10 +19,10 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010554"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
@@ -116,8 +116,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-parameters-of-a-collection-item"></a>C. 變更收集項的參數  
- 下列範例會變更與收集項有關聯的參數。 
-  `<Value>` 屬性內定義的陳述式會變更，而且 `UseSystemDatabases` 屬性會設定為 false。 若要檢視這個項目的目前參數，請查詢 syscollector_collection_items 系統檢視表中的參數資料行。 您可能需要修改 `@collection_item_id` 的值。  
+ 下列範例會變更與收集項有關聯的參數。 `<Value>` 屬性內定義的陳述式會變更，而且 `UseSystemDatabases` 屬性會設定為 false。 若要檢視這個項目的目前參數，請查詢 syscollector_collection_items 系統檢視表中的參數資料行。 您可能需要修改 `@collection_item_id` 的值。  
   
 ```  
 USE msdb;  
@@ -139,9 +138,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042940"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
@@ -45,7 +45,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
  這是資料表的物件識別碼。 *table_object_id*為**int**。  
   
 ## <a name="return-type"></a>傳回類型  
- **Bigint**  
+ **bigint**  
   
 ## <a name="remarks"></a>備註  
  使用此函數來驗證 CHANGETABLE 的*last_sync_version*參數值。 如果*last_sync_version*小於此函數所報告的值，則稍後呼叫 CHANGETABLE 所傳回的結果可能無效。  
@@ -87,7 +87,7 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [變更追蹤函數 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
   

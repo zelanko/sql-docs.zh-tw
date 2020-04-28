@@ -21,17 +21,16 @@ ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044545"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對每個內部資料表物件，各傳回一個資料列。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動產生內部資料表來支援各種功能。 例如，當您建立主要 XML 索引時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會自動建立內部資料表來保存零碎的 XML 文件資料。 內部資料表會出現在每個資料庫的**sys**架構中，而且具有系統產生的唯一名稱，以指出其函式，例如**xml_index_nodes_2021582240_32001**或**queue_messages_1977058079**  
+  針對每個內部資料表物件，各傳回一個資料列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動產生內部資料表來支援各種功能。 例如，當您建立主要 XML 索引時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會自動建立內部資料表來保存零碎的 XML 文件資料。 內部資料表會出現在每個資料庫的**sys**架構中，而且具有系統產生的唯一名稱，以指出其函式，例如**xml_index_nodes_2021582240_32001**或**queue_messages_1977058079**  
   
  內部資料表不包含使用者可存取的資料，而且其結構描述是固定且無法變更的。 您無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中參考內部資料表名稱。 例如，您無法執行 SELECT \* FROM * \<sys. internal_table_name>*。 不過，您可以查詢目錄檢視來查看內部資料表的中繼資料。  
   
@@ -40,9 +39,9 @@ ms.locfileid: "68044545"
 |-----------------|---------------|-----------------|  
 |**\<繼承自 sys.databases 的資料行>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**internal_type**|**tinyint**|內部資料表的類型：<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** （例如空間索引）<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_coNtext_settings**|  
-|**internal_type_desc**|**Nvarchar （60）**|內部資料表類型的描述：<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
-|**parent_id**|**int**|父系的識別碼，不論是否以結構描述為範圍，都是如此。 否則，在沒有父系的狀況下，便是 0。<br /><br /> **佇列的 queue_messages** = **object_id**<br /><br /> ****  = xml 索引的 xml_index_nodes**object_id**<br /><br /> ****  = 全文檢索目錄的 fulltext_catalog_freelist**fulltext_catalog_id**<br /><br /> ****  = 全文檢索索引的 fulltext_index_map**object_id**<br /><br /> **query_notification**，或**service_broker_map** = 0<br /><br /> ****  = 擴充索引的 extended_indexes**object_id** ，例如空間索引<br /><br /> 已啟用資料表追蹤的資料表**object_id** = **change_tracking**|  
-|**parent_minor_id**|**int**|父系的次要識別碼。<br /><br /> ****  = XML 索引的 xml_index_nodes**index_id**<br /><br /> ****  = 擴充索引的 extended_indexes**index_id** ，例如空間索引<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**或**change_tracking**|  
+|**internal_type_desc**|**nvarchar(60)**|內部資料表類型的描述：<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
+|**parent_id**|**int**|父系的識別碼，不論是否以結構描述為範圍，都是如此。 否則，在沒有父系的狀況下，便是 0。<br /><br /> **佇列的 queue_messages** = **object_id**<br /><br /> **xml_index_nodes**  = xml 索引的 xml_index_nodes**object_id**<br /><br /> **fulltext_catalog_freelist**  = 全文檢索目錄的 fulltext_catalog_freelist**fulltext_catalog_id**<br /><br /> **fulltext_index_map**  = 全文檢索索引的 fulltext_index_map**object_id**<br /><br /> **query_notification**，或**service_broker_map** = 0<br /><br /> **extended_indexes**  = 擴充索引的 extended_indexes**object_id** ，例如空間索引<br /><br /> 已啟用資料表追蹤的資料表**object_id** = **change_tracking**|  
+|**parent_minor_id**|**int**|父系的次要識別碼。<br /><br /> **xml_index_nodes**  = XML 索引的 xml_index_nodes**index_id**<br /><br /> **extended_indexes**  = 擴充索引的 extended_indexes**index_id** ，例如空間索引<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**或**change_tracking**|  
 |**lob_data_space_id**|**int**|非零值是存放這份資料表的大型物件 (LOB) 之資料空間 (檔案群組或資料分割結構描述) 的識別碼。|  
 |**filestream_data_space_id**|**int**|保留供未來使用。|  
   
@@ -175,7 +174,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

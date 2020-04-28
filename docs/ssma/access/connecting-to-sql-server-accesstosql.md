@@ -22,10 +22,10 @@ ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006644"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>連接到 SQL Server （AccessToSQL）
@@ -97,9 +97,9 @@ ms.locfileid: "68006644"
 ||||||||
 |-|-|-|-|-|-|-|
 |**專案類型與目標伺服器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005（版本： 9. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008（版本： 10. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016（版本： 13. x）|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|是|是|是|是|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||是|是|是|是||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||是|是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||是|是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||是||
 |SQL Azure||||||是|

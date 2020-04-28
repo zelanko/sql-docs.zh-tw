@@ -10,10 +10,10 @@ ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020857"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>使用者介面參考 (SybaseToSQL)

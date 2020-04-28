@@ -12,10 +12,10 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68024751"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>尋找資料庫 Wizard （選取位置）（AccessToSQL）
@@ -23,7 +23,7 @@ ms.locfileid: "68024751"
   
 若要**開啟 [尋找**資料庫] Wizard，請在 [檔案] 功能表上，按一下 [**尋找資料庫**]。 如需如何使用此對話方塊的詳細資訊，請參閱[新增和移除 Access 資料庫](adding-and-removing-access-database-files-accesstosql.md)檔案  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **瀏覽**  
 按一下以流覽電腦或網路。 選取要搜尋的資料夾或位置，然後按一下 **[確定]**。 按一下 [**新增**]，將此位置新增至清單。  
   

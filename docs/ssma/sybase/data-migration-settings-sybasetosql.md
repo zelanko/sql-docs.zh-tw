@@ -10,10 +10,10 @@ ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9fcf6142a0df913c33782b4c65e8e95d4fcf91ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029384"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>資料移轉設定 (SybaseToSQL)

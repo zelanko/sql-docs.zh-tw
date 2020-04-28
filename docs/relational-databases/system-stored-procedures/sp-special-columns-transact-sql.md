@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032837"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
@@ -80,11 +80,10 @@ sp_special_columns [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|傳回之*資料表*的每個資料行的資料行名稱。 這個欄位一律會傳回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 資料類型。|  
 |TYPE_NAME|**sysname**|與資料來源相關的資料類型名稱;例如， **char**、 **Varchar**、 **money**或**text**。|  
-|PRECISION|**Int**|資料來源之資料行的有效位數。 這個欄位一律會傳回值。|  
-|LENGTH|**Int**|資料類型在資料來源中的二進位格式所需的長度（以位元組為單位），例如，10代表**char （** 10 **）**、4代表**整數**，而2則為**Smallint**。|  
+|PRECISION|**整數**|資料來源之資料行的有效位數。 這個欄位一律會傳回值。|  
+|LENGTH|**整數**|資料類型在資料來源中的二進位格式所需的長度（以位元組為單位），例如，10代表**char （** 10 **）**、4代表**整數**，而2則為**Smallint**。|  
 |SCALE|**smallint**|資料來源之資料行的小數位數。 小數位數不適用的資料類型會傳回 NULL。|  
-|PSEUDO_COLUMN|**smallint**|指出資料行是否為虛擬資料行。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會傳回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|指出資料行是否為虛擬資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會傳回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>備註  
  sp_special_columns 相當於 ODBC 中的 SQLSpecialColumns。 傳回的結果依 SCOPE 來排序。  

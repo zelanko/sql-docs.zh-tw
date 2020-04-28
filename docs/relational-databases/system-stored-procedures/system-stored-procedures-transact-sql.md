@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037325"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系統預存程序 (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "68037325"
 |[管理資料倉儲預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|用來設定管理資料倉儲。|  
 |[OLE Automation 預存程式](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|用來啟用標準 Automation 物件，以供標準 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次使用。|  
 |[以原則為基礎的管理預存程序](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|用於以原則為基礎的管理。|  
-|[PolyBase 預存程式](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|在 PolyBase 向外延展群組中新增或移除電腦。|  
+|[PolyBase 預存程序](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|在 PolyBase 向外延展群組中新增或移除電腦。|  
 |[查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|用來微調效能。|  
 |[複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|用來管理複寫。|  
 |[安全性預存程序](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|用來管理安全性。|  
@@ -172,7 +172,7 @@ ms.locfileid: "68037325"
 |sp_xml_schema_rowset2||  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE PROCEDURE &#40;Transact-sql&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [預存程式 &#40;資料庫引擎&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [執行預存程式 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [執行預存程式](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   

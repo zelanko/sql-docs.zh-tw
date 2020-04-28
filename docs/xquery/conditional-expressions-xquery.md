@@ -20,10 +20,10 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039014"
 ---
 # <a name="conditional-expressions-xquery"></a>條件運算式 (XQuery)
@@ -49,7 +49,7 @@ else
   
 -   否則，就會引發靜態錯誤。  
   
- 另請注意下列事項：  
+ 同時應注意下列項目：  
   
 -   測試運算式必須在括號內。  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036597"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
@@ -31,7 +31,7 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *計數*  
+ *Count*  
  有效的數值運算式，會指定要傳回的 Tuple 數目。  
   
  *Numeric_Expression*  
@@ -71,6 +71,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a08ed3b0a138ae0fbe6a76abc31c7db27b4758ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67996024"
 ---
 # <a name="localdb_error_cannot_access_instance_registry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY

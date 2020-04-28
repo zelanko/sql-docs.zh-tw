@@ -12,10 +12,10 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020995"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>選取並設定受影響的物件 (SybaseToSQL)
@@ -112,7 +112,7 @@ ms.locfileid: "68020995"
 ## <a name="comparing-sql"></a>比較 SQL  
 您可以在 [**比較 SQL** ] 頁面上，查看 SSMA 測試人員所產生的 SELECT 語句。 測試人員會以逐列方式比較這些語句的結果集。 Sybase 結果集的每個下一個資料列都應該等於中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所產生之結果集的下一個資料列。  
   
-您可以編輯這些 SELECT 語句來提供自訂驗證。 若要在 Sybase 和語句中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]儲存變更，請相對地使用來源和目標 SQL 底下的 [套用] 按鈕。 ****  
+您可以編輯這些 SELECT 語句來提供自訂驗證。 若要在 Sybase 和語句中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]儲存變更，請相對地使用來源和目標 SQL 底下的 [套用] 按鈕。 **Apply**  
   
 ## <a name="next-step"></a>後續步驟  
 [自訂呼叫順序 &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

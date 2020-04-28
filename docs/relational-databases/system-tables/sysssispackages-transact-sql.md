@@ -18,10 +18,10 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029637"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
@@ -33,11 +33,10 @@ ms.locfileid: "68029637"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|封裝的唯一識別碼。|  
-|**號**|**uniqueidentifier**|封裝的 GUID。|  
+|**id**|**uniqueidentifier**|封裝的 GUID。|  
 |**描述**|**nvarchar**|封裝的選擇性描述。|  
 |**createdate**|**datetime**|封裝的建立日期。|  
-|**folderid**|**uniqueidentifier**|
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 列出封裝所在之邏輯資料夾的 GUID。|  
+|**folderid**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 列出封裝所在之邏輯資料夾的 GUID。|  
 |**ownersid**|**varbinary**|建立封裝之使用者的唯一安全性識別碼。|  
 |**packagedata**|**image**|封裝。|  
 |**packageformat**|**int**|儲存封裝的格式：<br /><br /> 值為2表示封裝是以[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]格式儲存。<br /><br /> 值為3表示封裝是以或更新版本的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]格式儲存。|  

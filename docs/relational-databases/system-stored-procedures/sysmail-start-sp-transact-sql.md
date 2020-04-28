@@ -18,10 +18,10 @@ ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044445"
 ---
 # <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp (Transact-SQL)

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002657"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
@@ -57,8 +57,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |**column_usage**|**Varchar （20）**|查詢使用資料行的方式。 可能的值和其描述如下：<br /><br /> 相等：資料行會提供給表示相等的述詞，格式為： <br />                        *資料表。資料行* = *constant_value*<br /><br /> 不等：資料行會提供給表示不相等的述詞，例如，下列格式的述詞： *table. Column* > *constant_value*。 "=" 以外的其他任何比較運算子都可表示不相等。<br /><br /> INCLUDE：資料行不是用來評估述詞，而是用於其他原因，例如，用來涵蓋查詢。|  
   
 ## <a name="remarks"></a>備註  
- 
-  **sys.dm_db_missing_index_columns** 傳回的資訊會在查詢最佳化工具最佳化查詢時更新，而不會一直保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  
+ **sys.dm_db_missing_index_columns** 傳回的資訊會在查詢最佳化工具最佳化查詢時更新，而不會一直保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  
   
 ## <a name="transaction-consistency"></a>交易一致性  
  如果交易建立或卸除資料表，便會從這個動態管理物件中移除包含有關已卸除物件之遺漏索引資訊的資料列，以維持交易的一致性。  

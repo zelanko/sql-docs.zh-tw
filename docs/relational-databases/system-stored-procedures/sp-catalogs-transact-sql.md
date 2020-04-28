@@ -18,10 +18,10 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045937"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
@@ -64,7 +64,7 @@ EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_columns_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
  [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   

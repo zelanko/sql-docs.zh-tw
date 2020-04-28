@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026837"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
@@ -48,13 +48,13 @@ ms.locfileid: "68026837"
 |資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父資料表的物件識別碼。|  
-|xtp_object_id|**Bigint**|記憶體優化資料表的識別碼。|  
+|xtp_object_id|**bigint**|記憶體優化資料表的識別碼。|  
 |index_id|**int**|索引識別碼。|  
-|total_bucket_count|**Bigint**|索引中雜湊值區的總數。|  
-|empty_bucket_count|**Bigint**|索引中空雜湊值區的數目。|  
-|avg_chain_length|**Bigint**|索引中所有雜湊值區的平均資料列鏈結長度。|  
-|max_chain_length|**Bigint**|雜湊值區中資料列鏈結的最大長度。|  
-|xtp_object_id|**Bigint**|對應至記憶體優化資料表的記憶體內部 OLTP 物件識別碼。|  
+|total_bucket_count|**bigint**|索引中雜湊值區的總數。|  
+|empty_bucket_count|**bigint**|索引中空雜湊值區的數目。|  
+|avg_chain_length|**bigint**|索引中所有雜湊值區的平均資料列鏈結長度。|  
+|max_chain_length|**bigint**|雜湊值區中資料列鏈結的最大長度。|  
+|xtp_object_id|**bigint**|對應至記憶體優化資料表的記憶體內部 OLTP 物件識別碼。|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW DATABASE STATE 權限。  
@@ -112,7 +112,7 @@ ms.locfileid: "68026837"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-請注意，內部資料表上的索引 BUCKET_COUNT 無法變更，因此應該將此查詢的輸出視為有資訊。 不需採取任何動作。  
+請注意，內部資料表上的索引 BUCKET_COUNT 無法變更，因此應該將此查詢的輸出視為有資訊。 您不需要執行任何動作。  
 
 除非您使用的功能會利用內部資料表的雜湊索引，否則此查詢不應傳回任何資料列。 下列記憶體優化資料表包含資料行存放區索引。 建立此資料表之後，您會看到內部資料表的雜湊索引。
 
@@ -125,6 +125,6 @@ ms.locfileid: "68026837"
 ```
 
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

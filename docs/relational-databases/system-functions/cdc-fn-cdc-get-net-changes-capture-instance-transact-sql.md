@@ -17,10 +17,10 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043040"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc. fn_cdc_get_net_changes_&lt;capture_instance&gt; （transact-sql）
@@ -65,7 +65,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *<row_filter_option>* ：： = {all | all with mask | all with merge}  
  管理結果集中傳回之中繼資料資料行以及資料列內容的選項。 可以是下列其中一個選項：  
   
- 所有  
+ all  
  傳回資料列最後一項變更的 LSN，以及套用中繼資料行 __ $ start_lsn 和\_ \_$operation 所需的作業。 資料行\_ \_$update 的 _mask 一律為 Null。  
   
  all with mask  
@@ -80,9 +80,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|__$start_lsn|**binary （10）**|與變更之認可交易相關聯的 LSN。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的更新作業修改了兩個數據列中的兩個數據行，則變更資料表會包含四個數據列，每個資料列都有相同的 __ $ start_lsnvalue。|  
+|__$start_lsn|**binary(10)**|與變更之認可交易相關聯的 LSN。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的更新作業修改了兩個數據列中的兩個數據行，則變更資料表會包含四個數據列，每個資料列都有相同的 __ $ start_lsnvalue。|  
 |__$operation|**int**|識別將變更資料的資料列套用至目標資料來源所需的資料操作語言 (DML) 作業。<br /><br /> 如果 row_filter_option 參數的值為 all 或 all with mask，則此資料行中的值可能為下列其中一個值：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 4 = 更新<br /><br /> 如果 row_filter_option 參數的值為 all with merge，則此資料行中的值可能為下列其中一個值：<br /><br /> 1 = 刪除|  
-|__$update_mask|**Varbinary （128）**|位元遮罩，其中含有對應至針對擷取執行個體所識別之每個擷取資料行的位元。 當 __$operation = 1 或 2 時，這個值會將所有定義的位元都設定為 1。 當\_ \_$operation = 3 或4時，只有對應至已變更之資料行的位會設定為1。|  
+|__$update_mask|**varbinary(128)**|位元遮罩，其中含有對應至針對擷取執行個體所識別之每個擷取資料行的位元。 當 __$operation = 1 或 2 時，這個值會將所有定義的位元都設定為 1。 當\_ \_$operation = 3 或4時，只有對應至已變更之資料行的位會設定為1。|  
 |*\<已捕獲的來源資料表資料行>*|視情況而異|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有指定任何資料行，就會傳回來源資料表中的所有資料行。|  
   
 ## <a name="permissions"></a>權限  

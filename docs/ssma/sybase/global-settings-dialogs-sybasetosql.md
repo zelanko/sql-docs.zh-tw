@@ -10,10 +10,10 @@ ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029085"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>全域設定（對話方塊）（SybaseToSQL）
@@ -21,7 +21,7 @@ ms.locfileid: "68029085"
   
 若要存取 [**工具**] 功能表上的對話方塊設定，請選取 [**全域設定**]，按一下左窗格底部的 [ **GUI** ]，然後選取 [**對話方塊**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **在覆寫物件之前發出警告**  
 當 SSMA 將物件轉換成 SQL Server 時，某些物件可能已經存在於專案的 SQL Server 中繼資料中。 這些物件可能已經轉換，或物件在目標架構中的名稱可能與您要轉換的物件相同。  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005047"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys.databases dm_db_column_store_row_group_operational_stats （Transact-sql）
@@ -37,9 +37,9 @@ ms.locfileid: "68005047"
 |**scan_count**|**int**|自上次 SQL 重新開機後通過資料列群組的掃描次數。|  
 |**delete_buffer_scan_count**|**int**|刪除緩衝區用來判斷此資料列群組中已刪除資料列的次數。 這包括存取記憶體中的雜湊表和基礎 btree。|  
 |**index_scan_count**|**int**|掃描資料行存放區索引資料分割的次數。 這對資料分割中的所有資料列群組都是相同的。|  
-|**rowgroup_lock_count**|**Bigint**|自上次 SQL 重新開機之後，此資料列群組的鎖定要求累計計數。|  
-|**rowgroup_lock_wait_count**|**Bigint**|自從上次 SQL 重新開機之後，資料庫引擎在此資料列群組鎖定上等候的累計次數。|  
-|**rowgroup_lock_wait_in_ms**|**Bigint**|自從上次 SQL 重新開機之後，資料庫引擎在這個資料列群組鎖定上等候的累計毫秒數。|  
+|**rowgroup_lock_count**|**bigint**|自上次 SQL 重新開機之後，此資料列群組的鎖定要求累計計數。|  
+|**rowgroup_lock_wait_count**|**bigint**|自從上次 SQL 重新開機之後，資料庫引擎在此資料列群組鎖定上等候的累計次數。|  
+|**rowgroup_lock_wait_in_ms**|**bigint**|自從上次 SQL 重新開機之後，資料庫引擎在這個資料列群組鎖定上等候的累計毫秒數。|  
   
 ## <a name="permissions"></a>權限  
  需要下列權限：  
@@ -55,14 +55,14 @@ ms.locfileid: "68005047"
  如需詳細資訊，請參閱[動態管理檢視和函數 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [索引相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [dm_os_latch_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

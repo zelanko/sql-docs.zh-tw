@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017008"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
@@ -40,8 +40,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  **Avg**函數會先計算指定集合中資料格的值總和，然後將計算的總和除以指定集合中非空白資料格的計數，來計算指定集合中的非空白值的平均值。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在計算數字集合中的平均值時會忽略 Null。  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在計算數字集合中的平均值時會忽略 Null。  
   
  如果未指定特定數值運算式（通常是量值），則**Avg**函數會平均目前查詢內容中的每一個量值。 如果提供特定量值， **Avg**函數會先評估該集合上的量值，然後函式會根據指定的量值來計算平均值。  
   
@@ -146,6 +145,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

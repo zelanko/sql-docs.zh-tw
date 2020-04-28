@@ -18,10 +18,10 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030899"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
@@ -29,8 +29,7 @@ ms.locfileid: "68030899"
 
   針對使用者自訂叢集和非叢集索引，或不含叢集索引的資料表，來設定鎖定選項值。  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會自動選擇頁面、資料列或資料表層級的鎖定。 您不需要手動設定這些選項。 **sp_indexoption**是針對知道確定特定鎖定類型一律適用的專家使用者而提供。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會自動選擇頁面、資料列或資料表層級的鎖定。 您不需要手動設定這些選項。 **sp_indexoption**是針對知道確定特定鎖定類型一律適用的專家使用者而提供。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]請改用[ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
@@ -140,8 +139,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e14d5162c15f38cf741ceead94c2bacb230c42a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043169"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
@@ -42,18 +42,18 @@ ms.locfileid: "68043169"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|object_id|**Bigint**|物件的識別碼。|  
-|row_insert_attempts|**Bigint**|上一次資料庫重新啟動之後，由認可和中止的交易插入資料表中的資料列數。|  
-|row_update_attempts|**Bigint**|上一次資料庫重新啟動之後，由認可和中止的交易在資料表中更新的資料列數。|  
-|row_delete_attempts|**Bigint**|上一次資料庫重新啟動之後，由認可和中止的交易從資料表中刪除的資料列數。|  
-|write_conflicts|**Bigint**|上一次資料庫重新啟動之後發生的寫入衝突數目。|  
-|unique_constraint_violations|**Bigint**|上一次資料庫重新啟動之後發生的唯一條件約束違規數目。|  
+|object_id|**bigint**|物件的識別碼。|  
+|row_insert_attempts|**bigint**|上一次資料庫重新啟動之後，由認可和中止的交易插入資料表中的資料列數。|  
+|row_update_attempts|**bigint**|上一次資料庫重新啟動之後，由認可和中止的交易在資料表中更新的資料列數。|  
+|row_delete_attempts|**bigint**|上一次資料庫重新啟動之後，由認可和中止的交易從資料表中刪除的資料列數。|  
+|write_conflicts|**bigint**|上一次資料庫重新啟動之後發生的寫入衝突數目。|  
+|unique_constraint_violations|**bigint**|上一次資料庫重新啟動之後發生的唯一條件約束違規數目。|  
 |object_address|**varbinary(8)**|僅供內部使用。|  
   
 ## <a name="permissions"></a>權限  
  需要目前資料庫的 VIEW DATABASE STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

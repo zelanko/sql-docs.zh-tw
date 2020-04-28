@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038899"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 陳述式與反覆運算 (XQuery)
@@ -49,8 +49,7 @@ ms.locfileid: "68038899"
   
 -   選擇性的 `order by` 子句。  
   
--   
-  `return` 運算式。 在 `return` 子句中的運算式可建構 FLWOR 陳述式的結果。  
+-   `return` 運算式。 在 `return` 子句中的運算式可建構 FLWOR 陳述式的結果。  
   
  例如，下列查詢會逐一查看第一個製造`Step`位置的 <> 元素，並傳回 <`Step`> 節點的字串值：  
   
@@ -95,8 +94,7 @@ where ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   
-  `$Step` 是 Iterator 變數。  
+-   `$Step` 是 Iterator 變數。  
   
 -   [路徑運算式](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`會產生輸入序列。 此順序是第一個 <`step` `Location`> 專案節點的 <> 元素節點子系的順序。  
   
@@ -250,8 +248,7 @@ where ProductModelID=7
   
 -   關鍵字會使用**count （）** 函式來計算每個工作中心`step`位置中的 <> 子項目數目。 `where`  
   
--   
-  `return` 運算式可從反覆運算的結果建構 XML。  
+-   `return` 運算式可從反覆運算的結果建構 XML。  
   
  以下是結果：  
   
@@ -298,8 +295,7 @@ SELECT @x.query('
   
 -   `for`運算式會定義`$Loc`和 $`FirstStep`變數。  
   
--   
-  `two` 運算式 `/ManuInstructions/Location` 及 `$FirstStep in $Loc/Step[1]`，與 `$FirstStep` 值相依的 `$Loc` 值相互關聯。  
+-   `two` 運算式 `/ManuInstructions/Location` 及 `$FirstStep in $Loc/Step[1]`，與 `$FirstStep` 值相依的 `$Loc` 值相互關聯。  
   
 -   與`$Loc`相關聯的運算式會產生 <`Location`> 元素的序列。 針對每個`Location` <> 元素`$FirstStep` ，會產生一個 <`Step`> 元素的序列，即 singleton。  
   
@@ -330,8 +326,7 @@ WHERE ProductModelID=7
   
  下列為上一個查詢的注意事項：  
   
--   
-  `for` 子句定義兩個變數 `$WC` 與 `$S`。 與 `$WC` 關聯的運算式會產生製造腳踏車產品型號的工作中心位置序列。 指派給 `$S` 變數的路徑運算式會為 `$WC` 中的每個工作中心位置產生步驟的序列。  
+-   `for` 子句定義兩個變數 `$WC` 與 `$S`。 與 `$WC` 關聯的運算式會產生製造腳踏車產品型號的工作中心位置序列。 指派給 `$S` 變數的路徑運算式會為 `$WC` 中的每個工作中心位置產生步驟的序列。  
   
 -   Return 語句會建立具有 <`Step`> 元素的 XML，其中包含製造步驟和**LocationID**做為其屬性。  
   
@@ -457,8 +452,7 @@ where ProductModelID=19;
   
 -   `/p1:ProductDescription/p1:Specifications/*`運算式會傳回 <`Specifications`> 的元素子系。  
   
--   
-  `order by (local-name($a))` 運算式會依元素名稱的本機部份排序。  
+-   `order by (local-name($a))` 運算式會依元素名稱的本機部份排序。  
   
  以下是結果：  
   

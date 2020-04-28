@@ -18,10 +18,10 @@ ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fc72f98883762c873c214fab9330100c78941d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035497"
 ---
 # <a name="sp_syspolicy_repair_policy_automation-transact-sql"></a>sp_syspolicy_repair_policy_automation (Transact-SQL)

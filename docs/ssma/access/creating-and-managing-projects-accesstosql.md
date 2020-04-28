@@ -18,10 +18,10 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006613"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>建立和管理專案（AccessToSQL）
@@ -61,7 +61,7 @@ SSMA 會啟動，而不會載入預設專案。 若要將資料從 Access 資料
   
 1.  在 [檔案]**** 功能表上，選取 [新增專案]****。  
   
-    此時會出現 [新增專案]**** 對話方塊。  
+    [新增專案]  對話方塊隨即出現。  
   
 2.  在 [**名稱**] 方塊中，輸入專案的名稱。  
   

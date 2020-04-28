@@ -10,10 +10,10 @@ ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028637"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>移除 SSMA for Sybase 元件 (SybaseToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68028637"
   
 **卸載 SSMA**  
   
-1.  在 [控制台] 中，開啟 ****[新增或移除程式]。  
+1.  在 [控制台] 中，開啟 [新增或移除程式]。  
   
 2.  選取 [ **Microsoft SQL Server 移轉小幫手用於 Sybase**]，然後按一下 [**移除**]。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68028637"
   
 卸載擴充功能套件  
   
-1.  在 [控制台] 中，開啟 ****[新增或移除程式]。  
+1.  在 [控制台] 中，開啟 [新增或移除程式]。  
   
 2.  選取 [Microsoft SQL Server 移轉小幫手] 做**為 [Sybase 延伸模組套件**]，然後按一下 [**移除**]。  
   

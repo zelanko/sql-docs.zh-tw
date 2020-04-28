@@ -18,10 +18,10 @@ ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2edf9a5656eaf9dd3f18adff28562e279db892e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029960"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)

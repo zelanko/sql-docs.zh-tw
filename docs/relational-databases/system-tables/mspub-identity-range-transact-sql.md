@@ -18,10 +18,10 @@ ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032606"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
@@ -32,11 +32,11 @@ ms.locfileid: "68032606"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|具有複寫所管理的識別欄位之資料表的識別碼。|  
-|**格或**|**Bigint**|控制將在調整時，在訂閱進行指派的連續識別值的範圍大小。|  
-|**pub_range**|**Bigint**|控制將在調整時，在發行集進行指派的連續識別值的範圍大小。|  
-|**current_pub_range**|**Bigint**|發行集所用的目前範圍。 如果在**sp_changearticle**變更之後，以及在下一個範圍調整之前觀看，它可能會與*pub_range*不同。|  
+|**格或**|**bigint**|控制將在調整時，在訂閱進行指派的連續識別值的範圍大小。|  
+|**pub_range**|**bigint**|控制將在調整時，在發行集進行指派的連續識別值的範圍大小。|  
+|**current_pub_range**|**bigint**|發行集所用的目前範圍。 如果在**sp_changearticle**變更之後，以及在下一個範圍調整之前觀看，它可能會與*pub_range*不同。|  
 |**閾值**|**int**|用來控制散發代理程式指派新識別範圍之時機的百分比值。 使用 [*臨界*值] 中指定的百分比時，散發代理程式會建立新的識別範圍。|  
-|**last_seed**|**Bigint**|目前範圍的下限。|  
+|**last_seed**|**bigint**|目前範圍的下限。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

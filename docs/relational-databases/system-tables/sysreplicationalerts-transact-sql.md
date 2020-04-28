@@ -18,10 +18,10 @@ ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029742"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68029742"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警示的識別碼。|  
-|**狀態**|**int**|使用者自訂值：<br /><br /> **0** = Unserviced。<br /><br /> **1** = 已維修。|  
+|**status**|**int**|使用者自訂值：<br /><br /> **0** = Unserviced。<br /><br /> **1** = 已維修。|  
 |**agent_type**|**int**|代理程式的類型：<br /><br /> **1** = 快照集代理程式。<br /><br /> **2** = 記錄讀取器代理程式。<br /><br /> **3** = 散發代理程式。<br /><br /> **4** = 合併代理程式。|  
 |**agent_id**|**int**|來自資料表**MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**或**MSmerge_agents**中的代理程式識別碼。|  
 |**error_id**|**int**|儲存在**MSrepl_errors**中的錯誤識別碼。|  

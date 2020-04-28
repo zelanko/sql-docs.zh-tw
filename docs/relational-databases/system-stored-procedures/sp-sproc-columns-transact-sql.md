@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032820"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -75,20 +75,18 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|ODBC 資料類型的整數碼。 如果這個資料類型無法對應至 ISO 類型，此值就是 NULL。 原生資料類型名稱會在**TYPE_NAME**資料行中傳回。|  
 |**TYPE_NAME**|**sysname**|資料類型的字串表示法。 這是基礎 DBMS 所提供的資料類型名稱。|  
 |**精密**|**int**|有效位數的數目。 **PRECISION**資料行的傳回值以基底10為底數。|  
-|**長**|**int**|資料的傳送大小。|  
+|**LENGTH**|**int**|資料的傳送大小。|  
 |**尺度**|**smallint**|小數點右側的位數。|  
 |**RADIX**|**smallint**|這是數值類型的基底。|  
 |**Null**|**smallint**|指定 Null 屬性：<br /><br /> 1 = 資料類型可以建立成允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
-|**標記**|**Varchar （** 254 **）**|程序資料行的描述。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**備註**|**Varchar （** 254 **）**|程序資料行的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |**COLUMN_DEF**|**Nvarchar （** 4000 **）**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述項的**類型**欄位時的值。 除了**datetime**和 ISO **interval**資料類型之外，這個資料行與**DATA_TYPE**資料行相同。 這個資料行一律會傳回值。|  
-|**SQL_DATETIME_SUB**|**smallint**|
-  **datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 若為**datetime**和 ISO **interval**以外的資料類型，此欄位為 Null。|  
+|**SQL_DATETIME_SUB**|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 若為**datetime**和 ISO **interval**以外的資料類型，此欄位為 Null。|  
 |**CHAR_OCTET_LENGTH**|**int**|**字元**或**二進位**資料類型資料行的最大長度（以位元組為單位）。 所有其他資料類型的這個資料行都會傳回 NULL。|  
 |**ORDINAL_POSITION**|**int**|資料行在資料表中的序數位置。 資料表中的第一個資料行是 1。 這個資料行一律會傳回值。|  
 |**IS_NullABLE**|**Varchar （254）**|資料表中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO 標準 DBMS 無法傳回空字串。<br /><br /> 如果資料行可以包括 NULLS，便顯示 YES，如果資料行不能包括 NULLS，便顯示 NO。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 這個資料行的傳回值不同於 NULLABLE 資料行的傳回值。|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程式所使用的資料類型。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
+|**SS_DATA_TYPE**|**tinyint**|擴充預存程序所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
   
 ## <a name="remarks"></a>備註  
  **sp_sproc_columns**相當於 ODBC 中的**SQLProcedureColumns** 。 傳回的結果會依**PROCEDURE_QUALIFIER**、 **PROCEDURE_OWNER**、 **PROCEDURE_NAME**，以及參數出現在程序定義中的順序排序。  

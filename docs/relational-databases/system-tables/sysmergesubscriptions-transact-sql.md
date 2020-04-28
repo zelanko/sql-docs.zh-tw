@@ -18,10 +18,10 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029782"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68029782"
 |subscriber_server|**sysname**|伺服器的識別碼。 將訂閱資料庫的副本移轉到另一部伺服器時，用來將 srvid 欄位對應至伺服器特定的值。|  
 |db_name|**sysname**|訂閱資料庫的名稱。|  
 |pubid|**uniqueidentifier**|用來建立目前訂閱的來源發行集識別碼。|  
-|datasource_type|**int**|資料來源的類型：<br /><br /> ****  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB。|  
+|datasource_type|**int**|資料來源的類型：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB。|  
 |subid|**uniqueidentifier**|訂閱的唯一識別碼。|  
 |replnickname|**binary**|複本的精簡暱稱。|  
 |replicastate|**uniqueidentifier**|透過比較在「發行者」的值與在「訂閱者」的值，來判斷先前的同步處理是否成功所使用的唯一識別碼。|  
@@ -43,10 +43,10 @@ ms.locfileid: "68029782"
 |subscription_type|**int**|訂閱的類型：<br /><br /> **0** = Push。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
 |sync_type|**tinyint**|同步處理的類型：<br /><br /> **1** = 自動。<br /><br /> **2** = 無同步處理。|  
 |description|**nvarchar(255)**|訂閱的簡要描述。|  
-|優先順序|**即時**|指定訂閱優先權，允許實作以優先權為基礎的衝突解決。 所有本機或匿名訂閱都等於**0.00** 。|  
-|recgen|**Bigint**|收到的最後一個層代 (Generation) 的編號。|  
+|priority|**real**|指定訂閱優先權，允許實作以優先權為基礎的衝突解決。 所有本機或匿名訂閱都等於**0.00** 。|  
+|recgen|**bigint**|收到的最後一個層代 (Generation) 的編號。|  
 |recguid|**uniqueidentifier**|收到的最後一個層代 (Generation) 的唯一識別碼。|  
-|sentgen|**Bigint**|傳送的最後一個層代 (Generation) 的編號。|  
+|sentgen|**bigint**|傳送的最後一個層代 (Generation) 的編號。|  
 |sentguid|**uniqueidentifier**|傳送的最後一個層代 (Generation) 的唯一識別碼。|  
 |schemaversion|**int**|收到的最後一個結構描述的編號。|  
 |schemaguid|**uniqueidentifier**|收到的最後一個結構描述的唯一識別碼。|  

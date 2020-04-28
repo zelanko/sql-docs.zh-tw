@@ -18,10 +18,10 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038909"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>布林值的相關函式 - not 函式 
@@ -72,7 +72,7 @@ WHERE CatalogDescription.exist('
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. 使用 not() XQuery 函數擷取沒有 MachineHours 屬性的工作中心位置  
  以下查詢是針對 Instructions 資料行而指定。 此資料行儲存了產品型號的製造指示。  
   
- 對於特定的產品型號，此查詢會擷取未指定 MachineHours 的工作中心位置。 也就是說，不會針對**** \<Location> 元素指定屬性 MachineHours。  
+ 對於特定的產品型號，此查詢會擷取未指定 MachineHours 的工作中心位置。 也就是說，不會針對**MachineHours** \<Location> 元素指定屬性 MachineHours。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  

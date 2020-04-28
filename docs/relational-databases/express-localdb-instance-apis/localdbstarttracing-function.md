@@ -16,10 +16,10 @@ ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8fd4d94debcaaaa90447b3bc85621ae973d7f70d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022067"
 ---
 # <a name="localdbstarttracing-function"></a>LocalDBStartTracing 函數

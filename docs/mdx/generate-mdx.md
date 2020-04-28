@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005901"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,7 +41,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  有效的字串運算式，這通常是指定集合中每個 Tuple 的目前成員名稱 (CurrentMember.Name)。  
   
- *為止*  
+ *分隔符號*  
  以字串運算式表示的有效分隔符號。  
   
 ## <a name="remarks"></a>備註  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  這種形式的**產生**函數在偵測計算時很有用，因為它可讓您傳回字串，以顯示集合中所有成員的名稱。 這可能比[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)函式所傳回之集合的嚴格 MDX 表示方式更容易閱讀。  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

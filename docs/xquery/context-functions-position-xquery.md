@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038977"
 ---
 # <a name="context-functions---position-xquery"></a>內容函式 - position (XQuery)
@@ -38,7 +38,7 @@ fn:position() as xs:integer
  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中， **fn： position （）** 只能用於內容相依述詞的內容中。 具體而言，它只能用於括號 ([ ]) 內。針對此函數所做的比較不會在靜態類型推斷期間減少基數。  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**** 在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**xml**在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. 使用 position() XQuery 函數以擷取前兩個產品功能  
  下列查詢會從產品型號目錄描述中，抓取前兩個功能，也`Features`就是 <> 元素的前兩個子項目。 如果有更多的功能，它會將`there-is-more/` <> 元素新增至結果。  

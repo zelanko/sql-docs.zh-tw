@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006562"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出存取清查（AccessToSQL）
@@ -57,7 +57,7 @@ SSMA 會匯出有關 Access 資料庫、資料表、資料行、索引、外鍵�
   
 2.  在 [檔案]**** 功能表上，選取 [新增專案]****。  
   
-    此時會出現 [新增專案]**** 對話方塊。  
+    [新增專案]  對話方塊隨即出現。  
   
 3.  在 [**名稱**] 方塊中，輸入專案的名稱。  
   

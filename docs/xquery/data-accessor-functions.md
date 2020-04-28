@@ -15,10 +15,10 @@ ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b3726686a2c0e5229a0fccf4d9f51c0e1404f1a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038947"
 ---
 # <a name="data-accessor-functions"></a>Data Accessor 函數

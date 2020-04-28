@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042755"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
@@ -56,16 +56,16 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ```  
   
 ## <a name="arguments"></a>引數  
- *目錄*  
+ *table*  
  這是已標示全文檢索查詢的資料表名稱。 *資料表*或*視圖*可以是一個、兩個或三個部分的資料庫物件名稱。 當查詢檢視時，只能包含一個全文檢索索引基底資料表。  
   
  *資料表*無法指定伺服器名稱，而且無法用於針對連結伺服器的查詢。  
   
  *column_name*  
- 這是在 FROM 子句中指定之資料表一個或多個全文檢索索引資料行的名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)**。  
+ 這是在 FROM 子句中指定之資料表一個或多個全文檢索索引資料行的名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)** 。  
   
  *column_list*  
- 指出您可以指定多個資料行，各資料行用逗號分隔。 *column_list*必須括在括弧中。 除非已指定 *language_term*，否則 *column_list* 之所有資料行的語言都必須相同。  
+ 指出您可以指定多個資料行，各資料行用逗號分隔。 *column_list* 必須括在括號中。 除非已指定 *language_term*，否則 *column_list* 之所有資料行的語言都必須相同。  
   
  \*  
  指定所有已登錄全文檢索搜尋的資料行都應該用來搜尋指定的 *freetext_string*。 除非指定了*language_term* ，否則資料表中所有全文檢索索引資料行的語言都必須相同。  
@@ -75,16 +75,16 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  不同于包含搜尋條件，其中和是關鍵字，使用於時*freetext_string*會將 ' AND ' 這個字視為非搜尋字或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，並將其捨棄。  
   
- 不允許使用 WEIGHT、FORMSOF、萬用字元、NEAR 和其他語法。 *freetext_string*是 wordbroken、詞幹分析，並透過同義字傳遞。  
+ 不允許使用 WEIGHT、FORMSOF、萬用字元、NEAR 和其他語法。 *freetext_string* 會經過斷字、進行詞幹分析，然後進行同義字檢查。  
   
  LANGUAGE *language_term*  
- 這是查詢利用其資源來斷詞、分析詞幹，以及移除同義字和停用字詞的語言。 這個參數是選擇性的，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有元素。 如果未指定任何值，就會使用資料行全文檢索語言。  
+ 這是查詢利用其資源來斷詞、分析詞幹，以及移除同義字和停用字詞的語言。 這個參數是選擇性的，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有項。 如果未指定任何值，就會使用資料行全文檢索語言。  
   
  如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢這類資料行時，指定*LANGUAGE language_term*可能會提高相符的機率。  
   
- 當指定為字串時，*language_term* 會對應到 **sys.syslanguages &#40;Transact-SQL&#41;** 相容性檢視表中的 [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
+ 當指定為字串時，*language_term* 會對應到 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視表中的 **alias** 資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
- 如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
+ 如果這個值是雙位元組字集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會將它轉換成 Unicode。  
   
  如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   
@@ -165,19 +165,19 @@ GO
 >  使用*top_n_by_rank*參數時，不需要語言*language_term*參數。  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋入門](../../relational-databases/search/get-started-with-full-text-search.md)   
+ [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   
  [建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [建立全文檢索目錄 &#40;Transact-sql&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
- [&#40;Visual Database Tools 建立全文檢索搜尋查詢&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [&#40;Transact-sql&#41;的資料列集函數](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-sql&#41;](../../t-sql/queries/where-transact-sql.md)   
- [預先計算次序伺服器組態選項](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [預先計算順位伺服器組態選項](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
   
   

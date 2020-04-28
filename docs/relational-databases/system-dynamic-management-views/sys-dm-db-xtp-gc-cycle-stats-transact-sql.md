@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026855"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
@@ -45,12 +45,12 @@ ms.locfileid: "68026855"
   
 |資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
-|cycle_id|**Bigint**|記憶體回收循環的唯一識別碼。|  
-|ticks_at_cycle_start|**Bigint**|循環開始時的時間刻度。|  
-|ticks_at_cycle_end|**Bigint**|循環結束時的時間刻度。|  
-|base_generation|**Bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為124、125、126 .。。139，此值會是124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
-|xacts_copied_to_local|**Bigint**|從交易管線複製到資料庫之層代陣列的交易數目。|  
-|xacts_in_gen_0- xacts_in_gen_15|**Bigint**|每一層代 (Generation) 的交易數目。|  
+|cycle_id|**bigint**|記憶體回收循環的唯一識別碼。|  
+|ticks_at_cycle_start|**bigint**|循環開始時的時間刻度。|  
+|ticks_at_cycle_end|**bigint**|循環結束時的時間刻度。|  
+|base_generation|**bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為124、125、126 .。。139，此值會是124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
+|xacts_copied_to_local|**bigint**|從交易管線複製到資料庫之層代陣列的交易數目。|  
+|xacts_in_gen_0- xacts_in_gen_15|**bigint**|每一層代 (Generation) 的交易數目。|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW DATABASE STATE 權限。  
@@ -92,6 +92,6 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

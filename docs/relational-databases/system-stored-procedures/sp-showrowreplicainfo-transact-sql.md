@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032889"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -54,8 +54,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|建立資料列版本項目之主控資料庫的伺服器名稱。|  
 |**db_name**|**sysname**|建立這個項目的資料庫名稱。|  
-|**db_nickname**|**二進位（6）**|建立這個項目的資料庫暱稱。|  
-|**版本**|**int**|項目的版本。|  
+|**db_nickname**|**binary(6)**|建立這個項目的資料庫暱稱。|  
+|**version**|**int**|項目的版本。|  
 |**current_state**|**Nvarchar （9）**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -row 資料代表資料列的目前狀態。<br /><br /> **n** -row 資料不代表資料列的目前狀態。<br /><br /> n/a>-不適用。 ** \< **<br /><br /> 未知的>-無法判斷目前的狀態。 ** \< **|  
 |**rowversion_table**|**Nchar （17）**|指出資料列版本是否儲存在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表中。|  
 |**加以**|**nvarchar(255)**|這個資料列版本項目的其他相關資訊。 這個欄位通常是空的。|  
@@ -66,8 +66,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|建立資料行版本項目之主控資料庫的伺服器名稱。|  
 |**db_name**|**sysname**|建立這個項目的資料庫名稱。|  
-|**db_nickname**|**二進位（6）**|建立這個項目的資料庫暱稱。|  
-|**版本**|**int**|項目的版本。|  
+|**db_nickname**|**binary(6)**|建立這個項目的資料庫暱稱。|  
+|**version**|**int**|項目的版本。|  
 |**colname**|**sysname**|資料行版本項目所代表之發行項資料行的名稱。|  
 |**加以**|**nvarchar(255)**|這個資料行版本項目的其他相關資訊。 這個欄位通常是空的。|  
   

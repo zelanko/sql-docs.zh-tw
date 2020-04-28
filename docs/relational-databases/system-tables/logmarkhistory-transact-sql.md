@@ -18,10 +18,10 @@ ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001798"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
@@ -36,12 +36,12 @@ ms.locfileid: "68001798"
 |**mark_name**|**nvarchar(128)**|使用者提供的標示交易名稱。|  
 |**描述**|**nvarchar(255)**|使用者提供的標示交易描述。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行標示交易的資料庫使用者名稱。 可以是 NULL。|  
-|**lsn**|**數值（25，0）**|標示所在之交易記錄的記錄序號。|  
+|**lsn**|**numeric(25,0)**|標示所在之交易記錄的記錄序號。|  
 |**mark_time**|**datetime**|標示的交易之認可時間 (本機時間)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料庫還原到標示的交易 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
- [使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
+ [使用標示的交易以一致的方式復原相關資料庫，&#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   
