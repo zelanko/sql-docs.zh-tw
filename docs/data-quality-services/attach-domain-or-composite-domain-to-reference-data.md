@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557913"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>將定義域或複合定義域附加至參考資料-Data Quality Services （DQS）
@@ -39,15 +39,15 @@ ms.locfileid: "75557913"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  您必須已設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，才能使用參考資料服務。 請參閱[設定 DQS 使用參考資料](../data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
 #### <a name="permissions"></a>權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色，才能將定義域對應至參考資料。  
   
-##  <a name="Map"></a>將定義域對應至 Melissa 資料中的參考資料  
+##  <a name="map-domains-to-reference-data-from-melissa-data"></a><a name="Map"></a>將定義域對應至 Melissa 資料中的參考資料  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -78,17 +78,17 @@ ms.locfileid: "75557913"
   
 9. 您將回到 [**參考資料**] 索引標籤。在 [**提供者設定**] 區域中，視需要變更下列方塊中的值：  
   
-    -   **自動校正閾值**：在此臨界值高於此閾值的參考資料服務更正之後，將會自動完成。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.9 表示 90%。  
+    -   **自動校正臨界值**：如果參考資料服務提供之更正的信賴等級高於這個臨界值，將會自動執行更正。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.9 表示 90%。  
   
-    -   **建議的候選**專案：要從參考資料服務中顯示的建議候選項目數目。  
+    -   **建議的候選值**：要從參考資料服務中顯示的建議候選值數目。  
   
-    -   **最低信賴度**：參考資料服務的建議將會略過低於此值的信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.6 表示 60%。  
+    -   **最低信賴值**：如果參考資料服務提供之建議的信賴等級低於這個值，將會予以忽略。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.6 表示 60%。  
   
 10. 按一下 **[完成]** ，發行知識庫。 在成功發行知識庫之後，便會出現確認訊息。  
   
  您現在可以將此知識庫用於資料品質專案中的清理活動，根據透過 Azure Marketplace Melissa 資料所提供的知識，在來源資料中標準化和清理美國位址。  
   
-##  <a name="FollowUp"></a>後續操作：將定義域對應至參考資料之後  
+##  <a name="follow-up-after-mapping-a-domain-to-reference-data"></a><a name="FollowUp"></a> 後續操作：將定義域對應至參考資料之後  
  建立資料品質專案，並針對包含美國地址的來源資料執行清理活動，方法是將它與本主題建立的知識庫相比較。 請參閱[使用參考資料 &#40;外部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  
   
 ## <a name="see-also"></a>另請參閱  

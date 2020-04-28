@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172017"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
@@ -38,8 +38,7 @@ ms.locfileid: "78172017"
 
  如果未指定 **-m** 參數，則會使用本機電腦。
 
- **-d** *controller_working_dir*會指定要儲存中繼檔案的控制器上的目錄。 
-  **-d** 是必要參數。
+ **-d** *controller_working_dir*會指定要儲存中繼檔案的控制器上的目錄。 **-d** 是必要參數。
 
  下列為適用需求：
 
@@ -79,20 +78,15 @@ ms.locfileid: "78172017"
 ## <a name="examples"></a>範例
  在此範例中，分散式重新執行會從修改過的重新執行組態檔 `DReplay.exe.replay.config`，衍生其大部分的行為。
 
--   
-  **-m** 參數會指定一個名為 `controller1` 的電腦，作為控制器。 當控制器服務執行於不同的電腦上時，必須指定電腦名稱。
+-   **-m** 參數會指定一個名為 `controller1` 的電腦，作為控制器。 當控制器服務執行於不同的電腦上時，必須指定電腦名稱。
 
--   
-  **-d** 參數會指定控制器上中繼檔案的位置， `c:\WorkingDir`。
+-   **-d** 參數會指定控制器上中繼檔案的位置， `c:\WorkingDir`。
 
--   
-  **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意：組態檔中的 `<ResultTrace>` 元素，可用以指定是否應記錄資料列計數與結果集。
+-   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意：組態檔中的 `<ResultTrace>` 元素，可用以指定是否應記錄資料列計數與結果集。
 
--   
-  **-w** 參數會指定 `client1` 到 `client4` 的電腦，參與為分散式重新執行中的用戶端。
+-   **-w** 參數會指定 `client1` 到 `client4` 的電腦，參與為分散式重新執行中的用戶端。
 
--   
-  **-c** 參數可用以指向修改過的組態檔 `DReplay.exe.replay.config`。
+-   **-c** 參數可用以指向修改過的組態檔 `DReplay.exe.replay.config`。
 
 -   不需要 **-s** 參數，因為重新執行組態檔 `<Server>` 的 `<ReplayOptions>` 元素中，指定了 `DReplay.exe.replay.config`元素。
 
@@ -125,8 +119,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>
 ```
 
- 若要指定壓力順序模式， `<SequencingMode>` 檔案的 `DReplay.exe.replay.config` 元素要設為等於 `stress`值。 
-  `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素設為 `50` 值 (以指定 50%)。 如需有關連接時間和思考時間的詳細資訊，請參閱 [設定 Distributed Replay](configure-distributed-replay.md)。 下列 XML 範例會示範這些變更：
+ 若要指定壓力順序模式， `<SequencingMode>` 檔案的 `DReplay.exe.replay.config` 元素要設為等於 `stress`值。 `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素設為 `50` 值 (以指定 50%)。 如需有關連接時間和思考時間的詳細資訊，請參閱 [設定 Distributed Replay](configure-distributed-replay.md)。 下列 XML 範例會示範這些變更：
 
 ```
 <?xml version='1.0'?>

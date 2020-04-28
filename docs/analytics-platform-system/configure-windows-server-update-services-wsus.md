@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761902"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>設定分析平臺系統中的 Windows Server Update Services （WSUS）
@@ -35,7 +35,7 @@ ms.locfileid: "76761902"
   
 -   如果您的應用裝置將使用 proxy 伺服器來存取上游伺服器或 Microsoft Update，請知道 proxy 伺服器的 IP 位址。  
   
--   在大部分情況下，WSUS 需要存取設備以外的伺服器。 若要支援此使用案例，可以將分析平臺系統 DNS 設定為支援外部名稱轉寄站，以允許分析平臺系統主機和虛擬機器（Vm）使用外部 DNS 伺服器來解析位於以外的名稱台. 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非設備 DNS 名稱 &#40;分析平臺系統&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
+-   在大部分情況下，WSUS 需要存取設備以外的伺服器。 若要支援此使用案例，可以將分析平臺系統 DNS 設定為支援外部名稱轉寄站，以允許分析平臺系統主機和虛擬機器（Vm）使用外部 DNS 伺服器來解析設備以外的名稱。 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非設備 DNS 名稱 &#40;分析平臺系統&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>設定 Windows Server Update Services （WSUS）  
   
@@ -109,7 +109,7 @@ ms.locfileid: "76761902"
   
     ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
-    #### <a name="to-configure-proxy-server-settings"></a>若要設定 proxy 伺服器設定  
+    #### <a name="to-configure-proxy-server-settings"></a>進行 Proxy 伺服器設定  
   
     1.  在設定向導的 [**指定 Proxy 伺服器**] 頁面上，選取 [**同步處理時使用 Proxy 伺服器**] 核取方塊，然後在對應的方塊中輸入 proxy 伺服器 IP 位址（不是名稱）和埠號碼（預設為埠80）。  
   
@@ -168,11 +168,11 @@ ms.locfileid: "76761902"
   
     選取 [**開始初始同步**處理]，然後按 **[下一步]**。  
   
-12. 結束.  
+12. [完成]。  
   
     按一下 [完成]  。  
   
-## <a name="bkmk_WSUSGroup"></a>將 WSUS 中的設備伺服器分組  
+## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>將 WSUS 中的設備伺服器分組  
 設定適用于分析平臺系統的 WSUS 之後，下一步是將設備伺服器群組在一起。 藉由將所有設備伺服器新增到群組，WSUS 將能夠將軟體更新套用至設備中的所有伺服器。  
   
 > [!NOTE]  

@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175221"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 範本
-  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組範本，協助您快速建立 XMLA 指令碼、DMX 或 MDX 查詢、在 Cube 或表格式模型中建立 KPI、編寫備份與還原作業的指令碼，以及執行許多其他工作。 範本位於 ** 中的範本總管**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組範本，協助您快速建立 XMLA 指令碼、DMX 或 MDX 查詢、在 Cube 或表格式模型中建立 KPI、編寫備份與還原作業的指令碼，以及執行許多其他工作。 範本位於 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的範本總管****。
 
  此主題包含用於多維度模型和表格式模型之範本的清單，並提供如何使用中繼資料總管和範本總管建立 MDX 查詢和 XMLA 陳述式的範例。
 
@@ -37,7 +36,7 @@ ms.locfileid: "78175221"
 
  本主題未涵蓋 DMX 範本。 如需如何使用範本建立資料採礦查詢的範例，請參閱 [在 SQL Server Management Studio 中建立 DMX 查詢](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) 或 [根據範本建立單一預測查詢](../data-mining/create-a-singleton-prediction-query-from-a-template.md)。
 
-##  <a name="bkmk_usingTE"></a>開啟 Analysis Services 範本
+##  <a name="open-an-analysis-services-template"></a><a name="bkmk_usingTE"></a> 開啟 Analysis Services 範本
  Database Engine 查詢和 Analysis Services 查詢與命令的所有範本都是在範本總管中存取。
 
  若要開啟範本總管，請選取 [檢視]**** 功能表上的 [範本總管]****。 接著按一下 Cube 圖示，查看 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的可用範本清單。
@@ -56,7 +55,7 @@ ms.locfileid: "78175221"
 
      切換至 [訊息]**** 索引標籤，查看所傳回的記錄數目、與查詢執行相關聯的錯誤、查詢陳述式和任何其他訊息。 例如，如果對處於 DirectQuery 模式的模型執行 DAX 陳述式，您會看到 xVelocity 記憶體中分析引擎 (VertiPaq) 所產生的 Transact-SQL 陳述式。
 
-##  <a name="BKMK_Building_Queries"></a>使用範本在表格式模型上建立及執行 MDX 查詢
+##  <a name="build-and-run-an-mdx-query-on-a-tabular-model-using-a-template"></a><a name="BKMK_Building_Queries"></a> 使用範本在表格式模型上建立及執行 MDX 查詢
  這個範例示範如何將表格式模型資料庫做為資料來源，在 SQL Server Management Studio 中建立 MDX 查詢。 若要在電腦上重複此範例，您可以 [下載 Adventureworks 表格式模型範例專案](https://go.microsoft.com/fwlink/?LinkId=231183)。
 
 > [!WARNING]
@@ -80,9 +79,8 @@ ms.locfileid: "78175221"
 
 4.  您可以直接執行原有的查詢，但可能要進行某些變更，例如加入函數以傳回特定成員。 例如，輸入`.members` **[Product Category]. [產品類別名稱]**。 如需詳細資訊，請參閱 [使用成員運算式](/sql/mdx/using-member-expressions)。
 
-##  <a name="bkmk_backup"></a>從範本建立 XMLA 腳本
- 範本總管隨附的 XMLA 命令範本可用於建立監視及更新 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的指令碼，不論執行個體處於多維度和資料採礦模式或表格式模式。 
-  **XMLA** 範本包含下列類型的指令碼範例：
+##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a> 從範本建立 XMLA 指令碼
+ 範本總管隨附的 XMLA 命令範本可用於建立監視及更新 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的指令碼，不論執行個體處於多維度和資料採礦模式或表格式模式。 **XMLA** 範本包含下列類型的指令碼範例：
 
 -   備份、還原與同步處理作業
 
@@ -109,7 +107,7 @@ ms.locfileid: "78175221"
 
 5.  按兩下 [ \<檔案>] 元素內的文字。 輸入備份檔案的名稱，包括 .abf 副檔名。 如果您不使用預設的備份位置，請指定完整檔案路徑。 如需詳細資訊，請參閱[備份、還原和同步處理資料庫 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。
 
-##  <a name="bkmk_schemarowset"></a>使用 XMLA 範本產生架構資料列集查詢
+##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a> 使用 XMLA 範本產生結構描述資料列集查詢
  範本總管**** 只包含一個用於結構描述資料列集查詢的範本。 若要使用此範本，您必須熟悉所要使用之個別結構描述資料列集的需求，包括任何必要元素，以及可做為限制的資料行。 如需詳細資訊，請參閱 [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。
 
  請注意，為了簡單起見，許多結構描述資料列集也已公開做為動態管理檢視 (DMV)。 透過使用對應的 DMV，您可以使用類似 Transact-SQL 的語法來查詢結構描述資料列集。 例如，下列查詢傳回相同的結果，但一個是 XML 格式的查詢，一個是表格式查詢。 如需 DMV 的詳細資訊，請參閱[使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。
@@ -147,7 +145,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
 3.  在範本中，將[&#40;XMLA&#41;元素的 RequestType 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)取代為下列文字：`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`
 
-4.  按一下 **[執行]** 。
+4.  按一下 **[執行]**。
 
      預期的結果：
 
@@ -164,7 +162,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
     ```
 
-##  <a name="bkmk_Ref"></a>Analysis Services 範本參考
+##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a> Analysis Services 範本參考
  下列範本可用於 Analysis Services 資料庫和資料庫物件，包括採礦結構與採礦模型、Cube，以及表格式模型：
 
 |類別|項目範本|描述|
@@ -224,7 +222,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||效能計數器|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_PERFORMANCE_COUNTERS 結構描述資料列集的內容。|
 ||工作階段|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_SESSIONS 結構描述資料列集的內容。|
 ||追蹤|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_TRACES 結構描述資料列集的內容。|
-||交易|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_TRANSACTIONS 結構描述資料列集的內容。|
+||異動|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_TRANSACTIONS 結構描述資料列集的內容。|
 
 ## <a name="see-also"></a>另請參閱
  [&#40;MDX 的多維度運算式&#41; 參考](/sql/mdx/multidimensional-expressions-mdx-reference)[資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference) [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)

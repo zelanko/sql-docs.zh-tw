@@ -11,24 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929438"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>SQL Server Managed Backup 到 Azure 的疑難排解
   本主題說明[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]作業期間，針對其中可能發生的錯誤所使用的工作和工具進行疑難排解。  
   
 ## <a name="overview"></a>概觀  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]內建有檢查和疑難排解程序，所以在許多情況中，內部失敗會由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]程序自行處理。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]內建有檢查和疑難排解程序，所以在許多情況中，內部失敗會由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]程序自行處理。  
   
  其中一種情況的範例是刪除備份檔案，而導致記錄檔鏈中斷影響復原能力- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會識別記錄鏈中的中斷，並排程立即取得備份。 不過，建議您監視狀態及處理需要手動介入的所有錯誤。  
   
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用系統預存程序、系統檢視和擴充事件記錄事件和錯誤。 系統檢視和預存程序皆提供[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]組態資訊、備份排程備份的狀態，以及擴充事件所擷取到的錯誤。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用擴充事件擷取錯誤，供疑難排解之用。 刪除記錄事件之外，SQL Server Smart Admin 原則會提供電子郵件通知工作所使用的健康情況，以提供通知或錯誤與問題。 如需詳細資訊，請參閱[監視 SQL Server 受控備份至 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用系統預存程序、系統檢視和擴充事件記錄事件和錯誤。 系統檢視和預存程序皆提供[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]組態資訊、備份排程備份的狀態，以及擴充事件所擷取到的錯誤。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用擴充事件擷取錯誤，供疑難排解之用。 刪除記錄事件之外，SQL Server Smart Admin 原則會提供電子郵件通知工作所使用的健康情況，以提供通知或錯誤與問題。 如需詳細資訊，請參閱[監視 SQL Server 受控備份至 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]也會使用手動備份至 Azure 儲存體時所使用的相同記錄（SQL Server 備份至 URL）。 如需備份至 URL 相關問題的詳細資訊，請參閱[SQL Server 備份至 url 的最佳作法和疑難排解](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)中的疑難排解一節。  
   
@@ -36,8 +33,7 @@ ms.locfileid: "76929438"
   
 1.  啟用電子郵件通知，開始接收錯誤和警告的電子郵件。  
   
-     此外，您也可以定期執行 `smart_admin.fn_get_health_status`，藉以檢查彙總錯誤和計數。 例如，`number_of_invalid_credential_errors` 是智慧型備份嘗試備份，但卻得到無效認證錯誤的次數。 
-  `Number_of_backup_loops` 和 `number_of_retention_loops` 不是錯誤；他們會指出備份執行緒與保留執行緒掃描資料庫清單的次數。 一般而言，當@begin_time未@end_time提供和時，函式會顯示過去30分鐘內的資訊，因此，通常應該會看到這兩個數據行的非零值。 若出現零值，有可能是系統過載或甚至是系統無回應。 如需詳細資訊，請參閱本主題稍後的針對**系統問題進行疑難排解**一節。  
+     此外，您也可以定期執行 `smart_admin.fn_get_health_status`，藉以檢查彙總錯誤和計數。 例如，`number_of_invalid_credential_errors` 是智慧型備份嘗試備份，但卻得到無效認證錯誤的次數。 `Number_of_backup_loops` 和 `number_of_retention_loops` 不是錯誤；他們會指出備份執行緒與保留執行緒掃描資料庫清單的次數。 一般而言，當@begin_time未@end_time提供和時，函式會顯示過去30分鐘內的資訊，因此，通常應該會看到這兩個數據行的非零值。 若出現零值，有可能是系統過載或甚至是系統無回應。 如需詳細資訊，請參閱本主題稍後的針對**系統問題進行疑難排解**一節。  
   
 2.  檢閱擴充事件記錄，了解錯誤和其他相關事件的詳細資料。  
   
@@ -62,8 +58,7 @@ ms.locfileid: "76929438"
   
      錯誤：「無法存取儲存體 URL ...。請提供有效的 SQL 認證 ...」：您可能會看到此錯誤，以及參考 SQL 認證的其他類似錯誤。  在這種情況下，請檢查您提供的 SQL 認證名稱，以及儲存在 SQL 認證中的資訊-儲存體帳戶名稱和儲存體存取金鑰，並確保它們是最新且有效的。  
   
-     錯誤：「.。。無法設定資料庫 ...。因為它是系統資料庫」：如果您嘗試針對系統資料庫啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ，就會看到此錯誤。  
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支援系統資料庫的備份。  若要設定系統資料庫的備份，請使用其他 SQL Server 備份技術 (例如維護計劃)。  
+     錯誤：「.。。無法設定資料庫 ...。因為它是系統資料庫」：如果您嘗試針對系統資料庫啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ，就會看到此錯誤。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支援系統資料庫的備份。  若要設定系統資料庫的備份，請使用其他 SQL Server 備份技術 (例如維護計劃)。  
   
      錯誤：「.。。提供保留期限 ...」：如果您在第一次設定這些值時未指定資料庫或實例的保留期限，您可能會看到關於保留期間的錯誤。 如果您提供的值不是 1 到 30 之間的數字，也可能會看到錯誤。 保留期限的允許值是 1 到 30 之間的數字。  
   

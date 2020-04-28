@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ff8490824c6a0ccb45b383535e830cabff83407
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77479346"
 ---
 # <a name="sequences-transact-sql"></a>順序（Transact-sql）
@@ -59,4 +59,4 @@ SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 ## <a name="see-also"></a>另請參閱
 
 - [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [&#40;Transact-sql&#41;的 sys 順序](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)
+- [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

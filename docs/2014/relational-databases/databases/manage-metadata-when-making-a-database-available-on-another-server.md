@@ -35,10 +35,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929909"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 (SQL Server)
@@ -54,14 +54,14 @@ ms.locfileid: "76929909"
   
 -   在另一個伺服器執行個體上附加資料庫的副本。  
   
- 某些應用程式會相依於超出單一使用者資料庫範圍之外的資訊、實體和/或物件。 一般而言，應用程式會相依于**master**和**msdb**資料庫，也會在使用者資料庫上。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入會以中繼資料的形式儲存在**master**資料庫中，而且必須在目的地伺服器上重新建立。 如果應用程式或資料庫維護計畫相依於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，而其中繼資料儲存於 **msdb** 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 同樣地，伺服器層級觸發程式的中繼資料會儲存在**master**中。  
+ 某些應用程式會相依於超出單一使用者資料庫範圍之外的資訊、實體和/或物件。 一般而言，應用程式相依於 **master** 和 **msdb** 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 **master** 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 如果應用程式或資料庫維護計畫相依於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，而其中繼資料儲存於 **msdb** 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 同樣的，伺服器層級觸發程序的中繼資料會儲存在 **master**中。  
   
- 當您將應用程式的資料庫移至另一個伺服器實例時，您必須在目的地伺服器實例上重新建立**master**和**msdb**中的相依實體和物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為**master**資料庫中的這些觸發程式重新建立中繼資料，否則資料庫將無法如預期般運作。  
+ 當您將應用程式的資料庫移至其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 **master** 和 **msdb** 中相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 **master** 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。  
   
-##  <a name="information_entities_and_objects"></a>儲存在使用者資料庫外部的資訊、實體和物件  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> 儲存在使用者資料庫外部的資訊、實體和物件  
  本主題剩下的篇幅將摘要說明在其他伺服器執行個體上提供資料庫時，可能對該資料庫造成影響的潛在問題。 您可能需要重新建立下列清單列出的其中一個或多個資訊、實體或物件類型。 若要查看摘要，請按一下各項目的連結。  
   
--   [伺服器設定](#server_configuration_settings)  
+-   [伺服器組態設定](#server_configuration_settings)  
   
 -   [認證](#credentials)  
   
@@ -73,15 +73,15 @@ ms.locfileid: "76929909"
   
 -   [加密的資料](#encrypted_data)  
   
--   [使用者定義的錯誤訊息](#user_defined_error_messages)  
+-   [使用者自訂錯誤訊息](#user_defined_error_messages)  
   
--   [事件通知和 Windows Management Instrumentation （WMI）事件（伺服器層級）](#event_notif_and_wmi_events)  
+-   [事件通知和 Windows Management Instrumentation (WMI) 事件 (伺服器層級)](#event_notif_and_wmi_events)  
   
 -   [擴充預存程序](#extended_stored_procedures)  
   
--   [SQL Server 屬性的全文檢索引擎](#ifts_service_properties)  
+-   [Full-Text Engine for SQL Server 屬性](#ifts_service_properties)  
   
--   [工作](#jobs)  
+-   [作業](#jobs)  
   
 -   [登入](#logins)  
   
@@ -91,53 +91,48 @@ ms.locfileid: "76929909"
   
 -   [Service Broker 應用程式](#sb_applications)  
   
--   [啟動程式](#startup_procedures)  
+-   [啟動程序](#startup_procedures)  
   
--   [觸發程式（在伺服器層級）](#triggers)  
+-   [觸發程序 (伺服器層級)](#triggers)  
   
-##  <a name="server_configuration_settings"></a>伺服器設定  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本會選擇性地安裝並啟動主要服務與功能。 這可有助於減少系統易受攻擊的介面區。 在新安裝的預設組態中，許多功能都不會啟用。 如果資料庫仰賴預設關閉的任何服務或功能，您就必須在目的地伺服器執行個體上啟用這項服務或功能。  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本會選擇性地安裝並啟動主要服務與功能。 這可有助於減少系統易受攻擊的介面區。 在新安裝的預設組態中，許多功能都不會啟用。 如果資料庫仰賴預設關閉的任何服務或功能，您就必須在目的地伺服器執行個體上啟用這項服務或功能。  
   
  如需設定和啟用或停用服務或功能的詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="credentials"></a>憑證  
+##  <a name="credentials"></a><a name="credentials"></a>憑證  
  認證是包含驗證資訊的記錄，該項資訊是連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部資源時所需的資訊。 大部分認證由 Windows 登入和密碼組成。  
   
  如需此功能的詳細資訊，請參閱[認證 &#40;Database Engine&#41;](../security/authentication-access/credentials-database-engine.md)。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) 系統資料表。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) 系統資料表。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="cross_database_queries"></a>跨資料庫查詢  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a>跨資料庫查詢  
  DB_CHAINING 和 TRUSTWORTHY 資料庫選項預設是 OFF。 如果原始資料庫的其中一個選項設定為 ON，您就必須在目的地伺服器執行個體的資料庫上啟用該選項。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
  附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱 [跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
   
  如需詳細資訊，另請參閱[設定鏡像資料庫可使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="database_ownership"></a>資料庫擁有權  
+##  <a name="database-ownership"></a><a name="database_ownership"></a>資料庫擁有權  
  當資料庫在另一部電腦上還原時，起始還原作業的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者會自動變成新資料庫的擁有者。 還原資料庫時，系統管理員或新的資料庫擁有者可以變更資料庫擁有權。  
   
-##  <a name="distributed_queries_and_linked_servers"></a>分散式查詢和連結的伺服器  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>分散式查詢和連結的伺服器  
  OLE DB 應用程式支援分散式查詢和連結的伺服器。 分散式查詢會從相同或不同電腦上的多重異質資料來源存取資料。 連結伺服器的組態可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對遠端伺服器上的 OLE DB 資料來源執行命令。 如需這些功能的詳細資訊，請參閱[連結的伺服器 &#40;Database Engine&#41;](../linked-servers/linked-servers-database-engine.md)。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="encrypted_data"></a>加密的資料  
- 如果您在另一個伺服器執行個體上提供的可用資料庫包含加密的資料，而且資料庫主要金鑰受到原始伺服器的服務主要金鑰保護時，可能就必須重新建立服務主要金鑰加密。 
-  *「資料庫主要金鑰」* 是一個用來保護加密資料庫中憑證私密金鑰和非對稱金鑰的對稱金鑰。 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密資料主要金鑰。  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a>加密的資料  
+ 如果您在另一個伺服器執行個體上提供的可用資料庫包含加密的資料，而且資料庫主要金鑰受到原始伺服器的服務主要金鑰保護時，可能就必須重新建立服務主要金鑰加密。 *「資料庫主要金鑰」* 是一個用來保護加密資料庫中憑證私密金鑰和非對稱金鑰的對稱金鑰。 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密資料主要金鑰。  
   
- 若要在伺服器執行個體上啟用資料庫主要金鑰的自動解密，就要使用服務主要金鑰來加密此金鑰的副本。 這個加密的副本會同時存放在資料庫和 **master**中。 通常，每當主要金鑰變更時，儲存在**master**中的副本就會以無訊息模式更新。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先嘗試使用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果該解密失敗， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。 未以服務主要金鑰加密的主要金鑰必須使用 OPEN MASTER KEY 陳述式和密碼來開啟。  
+ 若要在伺服器執行個體上啟用資料庫主要金鑰的自動解密，就要使用服務主要金鑰來加密此金鑰的副本。 這個加密的副本會同時存放在資料庫和 **master**中。 通常，每當主要金鑰變更時，儲存在**master**中的副本就會以無訊息模式更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先嘗試使用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果該解密失敗， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。 未以服務主要金鑰加密的主要金鑰必須使用 OPEN MASTER KEY 陳述式和密碼來開啟。  
   
  當加密的資料庫複製、還原或附加至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，以服務主要金鑰加密的資料庫主要金鑰副本並不會存放在目的地伺服器執行個體的 **master** 中。 您必須在目的地伺服器執行個體上，開啟資料庫的主要金鑰。 若要開啟主要金鑰，請執行下列陳述式：OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**。 建議您接著執行下列陳述式來啟用資料庫主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 這個 ALTER MASTER KEY 陳述式會將以服務主要金鑰加密的資料庫主要金鑰副本提供給伺服器執行個體。 如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)。  
   
@@ -151,14 +146,14 @@ ms.locfileid: "76929909"
   
 -   [在兩部伺服器上建立相同的對稱金鑰](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="user_defined_error_messages"></a>使用者定義的錯誤訊息  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a>使用者定義的錯誤訊息  
  使用者定義錯誤訊息位於 [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) 目錄檢視中。 此目錄檢視會存放在 **master**內。 如果資料庫應用程式仰賴使用者定義錯誤訊息，而且此資料庫可在另一個伺服器執行個體上使用時，請使用 [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) ，在目的地伺服器執行個體上加入這些使用者定義訊息。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a>事件通知和 Windows Management Instrumentation （WMI）事件（伺服器層級）  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （伺服器層級）  
   
 ### <a name="server-level-event-notifications"></a>伺服器層級事件通知  
  伺服器層級事件通知會存放在 **msdb**中。 因此，如果資料庫應用程式依賴伺服器層級事件通知，就必須在目的地伺服器執行個體上重新建立該事件通知。 若要檢視伺服器執行個體上的事件通知，請使用 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) 目錄檢視。 如需詳細資訊，請參閱 [Event Notifications](../service-broker/event-notifications.md)。  
@@ -171,7 +166,7 @@ ms.locfileid: "76929909"
 > [!NOTE]  
 >  如需詳細資訊，請參閱 [伺服器事件的 WMI 提供者概念](../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
   
- **使用 SQL Server Management Studio 建立 WMI 警示**  
+ **若要使用 SQL Server Management Studio 建立 WMI 警示**  
   
 -   [建立 WMI 事件警示](../../ssms/agent/create-a-wmi-event-alert.md)  
   
@@ -186,15 +181,14 @@ ms.locfileid: "76929909"
   
 -   如果起始端服務在鏡像資料庫中，則目標服務必須有回到起始端的鏡像路由，才能傳送收條與回應。 不過，起始端可以有指向目標的一般路由。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="extended_stored_procedures"></a>擴充預存程式  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a>擴充預存程式  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[CLR 整合](../clr-integration/common-language-runtime-integration-overview.md)。  
   
- 擴充預存程序是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充預存程序 API 進行程式設計的。 
-  **sysadmin** 固定伺服器角色的成員可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來註冊擴充預存程序並授與使用者執行該程序的權限。 擴充預存程序只能加入 **master** 資料庫。  
+ 擴充預存程序是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充預存程序 API 進行程式設計的。 **sysadmin** 固定伺服器角色的成員可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來註冊擴充預存程序並授與使用者執行該程序的權限。 擴充預存程序只能加入 **master** 資料庫。  
   
  擴充預存程序會直接在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位址空間中執行，而且它們可能會產生降低伺服器效能和可靠性的記憶體遺漏或其他問題。 您應考慮將擴充預存程序與參考資料儲存在不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中。 同時應考慮使用分散式查詢來存取資料庫。  
   
@@ -203,9 +197,9 @@ ms.locfileid: "76929909"
   
  如需詳細資訊，請參閱 [GRANT 物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql)、[DENY 物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-object-permissions-transact-sql) 和 [REVOKE 物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-object-permissions-transact-sql)。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="ifts_service_properties"></a>SQL Server 屬性的全文檢索引擎  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a>SQL Server 屬性的全文檢索引擎  
  全文檢索引擎的屬性是由 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)所設定。 請確定目的地伺服器執行個體具有這些屬性的必要設定。 如需這些屬性的詳細資訊，請參閱 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)。  
   
  此外，如果 [斷詞工具與字幹分析器](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 元件或 [全文檢索搜尋篩選](../search/configure-and-manage-filters-for-search.md) 元件在原始和目的地伺服器執行個體上具有不同的版本，全文檢索索引和查詢就可能會有不同的行為方式。 而且， [同義字](../search/full-text-search.md) 會存放在執行個體專用的檔案中。 您必須將這些檔案的副本傳送至目的地伺服器執行個體上的對等位置，或在新執行個體上重新建立這些檔案。  
@@ -219,55 +213,51 @@ ms.locfileid: "76929909"
   
 -   [資料庫鏡像和全文檢索目錄 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="jobs"></a>作業  
+##  <a name="jobs"></a><a name="jobs"></a>作業  
  如果資料庫仰賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您就必須在目的地伺服器執行個體上重新建立這些作業。 作業會仰賴所屬的環境。 如果您打算在目的地伺服器執行個體上重新建立現有的作業，可能必須修改目的地伺服器執行個體，以便符合該作業在原始伺服器執行個體上的環境。 下列環境因素相當重要：  
   
 -   作業使用的登入  
   
      若要建立或執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您必須先將作業所需的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至目的地伺服器執行個體。 如需詳細資訊，請參閱 [設定使用者可建立及管理 SQL Server Agent 作業](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶  
   
      服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 Agent 服務的內容會影響作業及其執行環境的設定。 此帳戶必須具有作業所需之資源 (例如，網路共用) 的存取權。 如需如何選取和修改服務啟動帳戶的相關資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。  
   
      為了正確運作，服務啟動帳戶必須設定成具有正確的網域、檔案系統和登錄權限。 此外，作業可能會需要使用必須針對服務帳戶設定的共用網路資源。 如需相關資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務 (與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定執行個體相關聯) 具有自己的登錄區，而且它的作業通常會相依於此登錄區中的一或多項設定。 為了如預期方式運作，作業會需要使用這些登錄設定。 如果您使用指令碼在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務中重新建立作業，其登錄可能不會有該作業的正確設定。 為了讓重新建立的作業在目的地伺服器執行個體上正確運作，原始和目的地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務都應該具有相同的登錄設定。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務 (與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定執行個體相關聯) 具有自己的登錄區，而且它的作業通常會相依於此登錄區中的一或多項設定。 為了如預期方式運作，作業會需要使用這些登錄設定。 如果您使用指令碼在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務中重新建立作業，其登錄可能不會有該作業的正確設定。 為了讓重新建立的作業在目的地伺服器執行個體上正確運作，原始和目的地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務都應該具有相同的登錄設定。  
   
     > [!CAUTION]  
     >  如果目前的設定是其他作業所需，在目的地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務上變更登錄設定以便處理重新建立的作業可能會產生問題。 此外，不當編輯登錄可能會造成系統嚴重受損。 在變更登錄之前，我們建議您先備份電腦上所有重要的資料。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 可定義指定之作業步驟的安全性內容。 為了讓作業在目的地伺服器執行個體上執行，您必須在該執行個體上手動重新建立此作業所需的所有 Proxy。 如需詳細資訊，請參閱 [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md) 和 [疑難排解使用 Proxy 的多伺服器作業](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 可定義指定之作業步驟的安全性內容。 為了讓作業在目的地伺服器執行個體上執行，您必須在該執行個體上手動重新建立此作業所需的所有 Proxy。 如需詳細資訊，請參閱 [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md) 和 [疑難排解使用 Proxy 的多伺服器作業](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)。  
   
  如需詳細資訊，請參閱：  
   
 -   [實作作業](../../ssms/agent/implement-jobs.md)  
   
--   [在角色切換後管理登入和作業 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) （適用于資料庫鏡像）  
+-   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (適用於資料庫鏡像)  
   
--   [設定 Windows 服務帳戶和許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)（當您安裝的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例時）  
+-   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時)  
   
--   [設定 SQL Server Agent](../../ssms/agent/sql-server-agent.md) （當您安裝的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例時）  
+-   [設定 SQL Server Agent](../../ssms/agent/sql-server-agent.md) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時)  
   
 -   [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
- **若要查看現有的作業及其屬性**  
+ **若要檢視現有的作業及其屬性**  
   
 -   [監視作業活動](../../ssms/agent/monitor-job-activity.md)  
   
--   [sp_help_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-job-transact-sql)  
+-   [sp_help_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-job-transact-sql)  
   
 -   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
--   [sysjobs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
+-   [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
   
  **若要建立作業**  
   
@@ -278,9 +268,9 @@ ms.locfileid: "76929909"
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>使用指令碼來重新建立作業的最佳作法  
  我們建議您先編寫簡單作業的指令碼、在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務上重新建立作業，然後執行該作業，看看是否如預期方式運作。 這項作法可讓您識別不相容性並嘗試加以解決。 如果以指令碼編寫的作業無法如預期方式在新環境中運作，建議您建立可在該環境下正確運作的對等作業。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="logins"></a>登錄  
+##  <a name="logins"></a><a name="logins"></a>登錄  
  登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入是用於驗證處理序，可確認主體是否能連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 在伺服器執行個體上未定義或定義不正確之對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者無法登入此執行個體。 這類使用者就是伺服器執行個體上的資料庫 *「被遺棄使用者」* (Orphaned User)。 當資料庫還原、附加或複製到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體後，資料庫使用者就可能會成為被遺棄使用者。  
   
  若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]**。  
@@ -288,9 +278,9 @@ ms.locfileid: "76929909"
 > [!NOTE]  
 >  如需如何設定鏡像資料庫登入的相關資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="permissions"></a> 權限  
+##  <a name="permissions"></a><a name="permissions"></a> 權限  
  當您在其他伺服器執行個體上提供資料庫時，可能會影響下列類型的權限。  
   
 -   系統物件的 GRANT、REVOKE 或 DENY 權限  
@@ -305,7 +295,7 @@ ms.locfileid: "76929909"
 > [!IMPORTANT]  
 >  當您在編寫登入的指令碼時，密碼並不會編寫在指令碼中。 如果您具有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，就必須修改目的地上的指令碼。  
   
- 您可以在 [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) 目錄檢視中看到系統物件。 您可以在 [master](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) 資料庫的 **sys.database_permissions** 目錄檢視中，看到系統物件的權限。 如需查詢這些目錄檢視和授與系統物件權限的詳細資訊，請參閱 [GRANT 系統物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql)。 如需詳細資訊，請參閱 [REVOKE 系統物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql) 和 [DENY 系統物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql)。  
+ 您可以在 [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) 目錄檢視中看到系統物件。 系統物件的許可權會顯示在**master**資料庫的[database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)目錄檢視中。 如需查詢這些目錄檢視和授與系統物件權限的詳細資訊，請參閱 [GRANT 系統物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql)。 如需詳細資訊，請參閱 [REVOKE 系統物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql) 和 [DENY 系統物件權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql)。  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>伺服器執行個體的 GRANT、REVOKE 及 DENY 權限  
  伺服器範圍的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。 如需伺服器執行個體之伺服器權限的詳細資訊，請查詢 [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) 目錄檢視。如需伺服器主體的詳細資訊，請查詢 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)目錄檢視。如需伺服器角色之成員資格的詳細資訊，請查詢 [sys.server_role_members](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql) 目錄檢視。  
@@ -320,7 +310,7 @@ ms.locfileid: "76929909"
   
  對應的登入及其權限都位於 **master**中。 如果憑證或非對稱金鑰位於 **master**以外的資料庫中，您就必須在 **master** 中重新建立此項目並將它對應至登入。 如果您將資料庫移動、複製或還原至另一個伺服器執行個體，就必須在目的地伺服器執行個體的 **master** 資料庫中重新建立其憑證或非對稱金鑰、將它對應至登入，然後將所需的伺服器層級權限授與此登入。  
   
- **建立憑證或非對稱金鑰**  
+ **若要建立憑證或非對稱金鑰**  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
@@ -330,47 +320,46 @@ ms.locfileid: "76929909"
   
 -   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
- **指派許可權給對應的登入**  
+ **若要將權限指派給對應的登入**  
   
--   [&#40;Transact-sql&#41;授與伺服器許可權](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
+-   [GRANT 伺服器權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
   
  如需憑證和非對稱金鑰的詳細資訊，請參閱＜ [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)＞。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="replication_settings"></a>複寫設定  
+##  <a name="replication-settings"></a><a name="replication_settings"></a>複寫設定  
  如果您將複寫資料庫的備份還原到另一個伺服器或資料庫，將無法保留複寫設定。 在此情況下，您必須在還原備份之後，重新建立所有發行集和訂閱。 若要讓此程序更簡單，請針對目前的複寫設定和啟用及停用複寫，建立指令碼。 若要協助重新建立複寫設定，請複製這些指令碼並變更伺服器名稱參考，以便針對目的地伺服器執行個體運作。  
   
  如需詳細資訊，請參閱[備份及還原複寫的資料庫](../replication/administration/back-up-and-restore-replicated-databases.md)、[資料庫鏡像和複寫 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) 和[記錄傳送和複寫 &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="sb_applications"></a>Service Broker 應用程式  
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 應用程式的許多部分都會隨資料庫移動。 不過，此應用程式的某些部分則必須在新位置中重新建立或重新設定。  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a>Service Broker 應用程式  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 應用程式的許多部分都會隨資料庫移動。 不過，此應用程式的某些部分則必須在新位置中重新建立或重新設定。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="startup_procedures"></a>啟動程式  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a>啟動程式  
  啟動程序是指標示為自動執行而且每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時都會執行的預存程序。 如果資料庫仰賴任何啟動程序，您就必須在目的地伺服器執行個體上定義這些程序，並將它們設定為啟動時自動執行。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
-##  <a name="triggers"></a>觸發程式（在伺服器層級）  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a>觸發程式（在伺服器層級）  
  DDL 觸發程序會引發預存程序，以便回應各種資料定義語言 (DDL) 事件。 這些事件主要對應至以 CREATE、ALTER 和 DROP 關鍵字開頭的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 執行類似 DDL 作業的某些系統預存程序也可能引發 DDL 觸發程序。  
   
  如需有關這項功能的詳細資訊，請參閱＜ [DDL Triggers](../triggers/ddl-triggers.md)＞。  
   
- [&#91;Top&#93;](#information_entities_and_objects)  
+ [[頁首]](#information_entities_and_objects)  
   
 ## <a name="see-also"></a>另請參閱  
  [自主資料庫](contained-databases.md)   
  [將資料庫複製到其他伺服器](copy-databases-to-other-servers.md)   
  [資料庫卸離和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [故障切換至記錄傳送次要 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
- [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [資料庫鏡像會話期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [SQL Server 組態管理員](../sql-server-configuration-manager.md)   
- [針對孤立使用者進行疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
+ [孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   

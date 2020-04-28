@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9792dd40381c9870198ccaf0c4a6457aae19def2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175187"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件的效能計數器 (原生模式)
@@ -30,7 +30,7 @@ ms.locfileid: "78175187"
 > [!NOTE]
 >  這些效能物件會監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非向外延展部署。
 
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]原生模式
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式
 
  Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx) 。
 
@@ -44,9 +44,8 @@ ms.locfileid: "78175187"
 
 -   [使用 PowerShell 指令程式傳回清單](#bkmk_powershell)
 
-##  <a name="bkmk_webservice"></a>MSRS 2014 Web 服務效能計數器
- 
-  `MSRS 2014 Web Service` 效能物件會監視報表伺服器效能。 此效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 當您設定此計數器時，可以將此計數器套用至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的所有執行個體，也可以選取特定的執行個體 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。
+##  <a name="msrs-2014-web-service-performance-counters"></a><a name="bkmk_webservice"></a>MSRS 2014 Web 服務效能計數器
+ `MSRS 2014 Web Service` 效能物件會監視報表伺服器效能。 此效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 當您設定此計數器時，可以將此計數器套用至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的所有執行個體，也可以選取特定的執行個體 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。
 
  下表將列出 `MSRS 2014 Web Service` 效能物件所包含的計數器。
 
@@ -58,7 +57,7 @@ ms.locfileid: "78175187"
 |`Cache Misses/Sec`|每秒無法從快取傳回報表的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|
 |`Cache Misses/Sec (Semantic Models)`|每秒無法從快取傳回模型的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|
 |`First Session Requests/Sec`|每秒從報表伺服器快取啟動的新使用者工作階段數目。|
-|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *記憶體*內部快取是在 CPU 記憶體中儲存報表的快取的一部分。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|
+|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|
 |`Memory Cache Misses/Sec`|每秒無法從記憶體中快取擷取報表的次數。|
 |`Next Session Requests/Sec`|在現有的工作階段中開啟之報表 (例如，從工作階段快照集轉譯的報表) 的每秒要求數目。|
 |`Report Requests`|目前使用中且受到報表伺服器所管理的報表數目。|
@@ -68,16 +67,15 @@ ms.locfileid: "78175187"
 |`Total Cache Hits (Semantic Models)`|服務啟動之後，來自快取之模型要求的總數。 每當 ASP.NET 停止報表伺服器 Web 服務時，此計數器就會重設。|
 |`Total Cache Misses`|服務啟動之後，無法從快取傳回報表的總次數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 您可以使用此計數器來判斷磁碟空間與記憶體是否足夠。|
 |`Total Cache Misses (Semantic Models)`|服務啟動之後，無法從快取傳回模型的總次數。 每當 ASP.NET 停止報表伺服器 Web 服務時，此計數器就會重設。 您可以使用此計數器來判斷磁碟空間與記憶體是否足夠。|
-|`Total Memory Cache Hits`|服務啟動之後，從記憶體中快取傳回之快取報表的總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 *記憶體*內部快取是在 CPU 記憶體中儲存報表的快取的一部分。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|
+|`Total Memory Cache Hits`|服務啟動之後，從記憶體中快取傳回之快取報表的總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|
 |`Total Memory Cache Misses`|啟動服務之後，針對記憶體中快取的遺漏總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|
 |`Total Processing Failures`|報表伺服器 Web 服務的要求處理錯誤數。|
 |`Total Rejected Threads`|拒絕非同步處理之執行緒，以及後續在同一執行緒中當成同步處理之執行緒的總數。 每一個資料來源在一個執行緒上處理。 如果執行緒的數量超出容量，就會拒絕執行緒的非同步處理，然後以序列方式處理。|
 |`Total Reports Executed`|啟動服務之後，成功執行的報表總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|
 |`Total Requests`|服務啟動之後，對報表伺服器進行之所有要求的總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|
 
-##  <a name="bkmk_windowsservice"></a>MSRS 2014 Windows 服務效能計數器
- 
-  `MSRS 2014 Windows Service` 效能物件會監視報表伺服器 Windows 服務。 此效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 排程的作業可能包括訂閱與傳遞、報表執行快照集和報表記錄。 當您設定此計數器時，可以將此計數器套用至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的所有執行個體，也可以選取特定的執行個體
+##  <a name="msrs-2014-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a>MSRS 2014 Windows 服務效能計數器
+ `MSRS 2014 Windows Service` 效能物件會監視報表伺服器 Windows 服務。 此效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 排程的作業可能包括訂閱與傳遞、報表執行快照集和報表記錄。 當您設定此計數器時，可以將此計數器套用至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的所有執行個體，也可以選取特定的執行個體
 
  下表將列出 `MSRS 2014 Windows Service` 效能物件所包含的計數器。
 
@@ -92,7 +90,7 @@ ms.locfileid: "78175187"
 |`Delivers/Sec`|每秒來自任何傳遞延伸模組的報表傳遞數目。|
 |`Events/Sec`|每秒處理的事件數目。 監視的事件包括 `SnapshotUpdated` 和 `TimedSubscription`。|
 |`First Session Requests/Sec`|每秒建立的新報表執行工作階段數目。|
-|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *記憶體*內部快取是在 CPU 記憶體中儲存報表的快取的一部分。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|
+|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|
 |`Memory Cache Misses/Sec`|每秒無法從記憶體中快取擷取報表的次數。|
 |`Next Session Requests/Sec`|在現有的工作階段中開啟之報表 (例如，從工作階段快照集轉譯的報表) 的每秒要求數目。|
 |`Report Requests`|目前使用中且受到報表伺服器所管理的報表數目。 使用此計數器以評估快取策略。 要求的數目可能比產生的報表還要多。|
@@ -100,10 +98,10 @@ ms.locfileid: "78175187"
 |`Requests/Sec`|報表伺服器服務每秒處理的成功要求總數。|
 |`Snapshot Updates/Sec`|報表執行快照集每秒更新總數。|
 |`Total App Domain Recycles`|報表伺服器 Windows 服務啟動之後，應用程式定義域回收的總數。|
-|**快取排清總數**|啟動服務之後，報表伺服器快取更新的總數。 當應用程式定義域回收時，這個計數器會重設。 請參閱 `Cache Flushes/Sec`。|
-|`Total Cache Hits`|報表伺服器 Windows 服務啟動之後，直接從快取處理報表的要求總數。 當應用程式定義域回收時，這個計數器會重設。 請參閱 `Cache Hits/Sec`。|
-|`Total Cache Hits (Semantic Models)`|報表伺服器 Windows 服務啟動之後，直接從快取處理模型的要求總數。 當應用程式定義域回收時，這個計數器會重設。 請參閱 `Cache Hits/Sec`。|
-|`Total Cache Misses`|報表伺服器 Windows 服務啟動之後，無法從快取傳回報表的總次數。 當應用程式定義域回收時，這個計數器會重設。 請參閱 `Cache Misses/Sec`。|
+|**Total Cache Flushes**|啟動服務之後，報表伺服器快取更新的總數。 當應用程式定義域回收時，這個計數器會重設。 請參閱＜`Cache Flushes/Sec`＞。|
+|`Total Cache Hits`|報表伺服器 Windows 服務啟動之後，直接從快取處理報表的要求總數。 當應用程式定義域回收時，這個計數器會重設。 請參閱＜`Cache Hits/Sec`＞。|
+|`Total Cache Hits (Semantic Models)`|報表伺服器 Windows 服務啟動之後，直接從快取處理模型的要求總數。 當應用程式定義域回收時，這個計數器會重設。 請參閱＜`Cache Hits/Sec`＞。|
+|`Total Cache Misses`|報表伺服器 Windows 服務啟動之後，無法從快取傳回報表的總次數。 當應用程式定義域回收時，這個計數器會重設。 請參閱＜`Cache Misses/Sec`＞。|
 |`Total Cache Misses (Semantic Models)`|報表伺服器 Windows 服務啟動之後，無法從快取傳回模型的總次數。 當應用程式定義域回收時，這個計數器會重設。|
 |`Total Deliveries`|透過排程與傳遞處理器針對所有傳遞延伸模組傳遞的報表總數。 當應用程式定義域回收時，這個計數器會重設。|
 |`Total Events`|報表伺服器 Windows 服務啟動之後的事件總數。 當應用程式定義域回收時，這個計數器會重設。|
@@ -115,8 +113,8 @@ ms.locfileid: "78175187"
 |`Total Requests`|啟動服務之後，成功執行的報表總數。 當應用程式定義域回收時，這個計數器會重設。|
 |`Total Snapshot Updates`|報表執行快照集更新總數|
 
-##  <a name="bkmk_powershell"></a>使用 PowerShell Cmdlet 來傳回清單
- ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容")下列 Windows PowerShell 腳本會傳回 CounterSetName 開頭為 "msr" 的計數器集合：
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a>使用 PowerShell Cmdlet 來傳回清單
+ ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容")下列 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 "msr" 的計數器集合：
 
 ```powershell
 Get-Counter -ListSet msr*

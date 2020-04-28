@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903897"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "77903897"
 
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|  
-|**課堂**|**int**|識別分類所在專案的類別。 一定會有值1（表示資料行）|  
+|**class**|**int**|識別分類所在專案的類別。 一定會有值1（表示資料行）|  
 |**class_desc**|**Varchar （16）**|分類所在專案的類別描述。 一定會有值*OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|表示包含分類資料行之資料表的識別碼，其對應于 sys.databases all_objects。 object_id|  
 |**minor_id**|**int**|代表分類所在之資料行的識別碼，其對應于 sys.databases. all_columns。 column_id|   

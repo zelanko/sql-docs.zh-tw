@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174273"
 ---
 # <a name="granting-process-database-permissions"></a>授與處理資料庫權限
@@ -56,6 +56,6 @@ ms.locfileid: "78174273"
 >  您可以下載並安裝範例，取得完成第 10 課的專案。 如需詳細資訊，請參閱[安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](install-sample-data-and-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
- [角色和許可權 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)
+ [角色與權限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)
 
 

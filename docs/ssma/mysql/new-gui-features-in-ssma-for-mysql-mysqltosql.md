@@ -10,10 +10,10 @@ ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4fd1316850a064a8d1aed3d2994642d44111f421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909678"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新 GUI 功能 (MySQLToSQL)
@@ -47,7 +47,7 @@ ms.locfileid: "76909678"
 ## <a name="bookmarks"></a>書籤  
 這項功能可讓您在來源或目的程式代碼中設定一或多個書簽，使用快捷方式快速找到書簽，並以易記的對話方塊管理書簽。  
   
-### <a name="toggle-bookmark"></a>切換書簽  
+### <a name="toggle-bookmark"></a>切換書籤  
 您可以透過下列方式來設定/移除書簽：  
   
 -   在來源或目標 SQL 視窗頂端使用按鈕切換書簽  
@@ -72,7 +72,7 @@ ms.locfileid: "76909678"
   
 -   在 [管理書簽] 對話方塊中使用按鈕移除或移除所有  
   
-### <a name="manage-bookmarks"></a>管理書簽  
+### <a name="manage-bookmarks"></a>管理書籤  
 若要開啟 [管理書簽] 對話方塊，請按一下 [編輯] 功能表上的 [管理書簽]。 在對話方塊中，您會看到現有書簽的清單。 您可以使用對話方塊右側的按鈕來管理書簽。  
   
 ## <a name="object-history"></a>物件歷程記錄  

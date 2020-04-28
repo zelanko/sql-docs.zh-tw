@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: 0381fd3b76933db7bb1c1ee6a3b29de1f08c7ce4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77646328"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 功能的行為變更
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
   
-## <a name="SQL14"></a>中的行為變更[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-sssql14"></a><a name="SQL14"></a>中的行為變更[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，針對包含超過特定長度 (超過 4020 個字元) 之字串的 XML 文件進行查詢，可能會傳回不正確的結果。 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，這類查詢會傳回正確的結果。  
   
-## <a name="Denali"></a>中的行為變更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>中的行為變更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>中繼資料探索  
  中的[!INCLUDE[ssDE](../includes/ssde-md.md)]改良功能， [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]可讓 SQLDescribeCol 取得比舊版中的 SQLDescribeCol 所傳回的預期結果更精確的描述[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[中繼資料探索](../relational-databases/native-client/features/metadata-discovery.md)。  
@@ -76,14 +76,14 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `LOG`函數現在有選擇性的*基底*參數。 如需詳細資訊，請參閱[LOG &#40;transact-sql&#41;](/sql/t-sql/functions/log-transact-sql)。  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>分割區索引作業期間的統計資料計算已變更  
-在[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中，當建立或重建資料分割索引時，不會藉由掃描資料表中的所有資料列來建立統計資料。 相反地，查詢最佳化工具會使用預設的取樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 若要在掃描資料表中所有資料列時取得分割區索引的統計資料，使用子句 `FULLSCAN` 時請使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS`。  
+ 並不會在建立或重建分割區索引之後掃描資料表中所有的資料列建立統計資料。 相反地，查詢最佳化工具會使用預設的取樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 若要在掃描資料表中所有資料列時取得分割區索引的統計資料，使用子句 `FULLSCAN` 時請使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS`。  
   
 ### <a name="data-type-conversion-by-the-xml-value-method-has-changed"></a>XML value 方法的資料類型轉換已變更  
-`xml`資料類型之`value`方法的內部行為已變更。 此方法會針對 XML 執行 XQuery 並傳回指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型的純量值。 xs 類型必須轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 以前 `value` 方法會在內部將來源值轉換為 xs:string，然後將 xs:string 轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，下列情況下會略過 xs:string 的轉換：  
+資料類型之 方法的內部行為已變更。 此方法會針對 XML 執行 XQuery 並傳回指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型的純量值。 xs 類型必須轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 以前 `value` 方法會在內部將來源值轉換為 xs:string，然後將 xs:string 轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，下列情況下會略過 xs:string 的轉換：  
   
 |來源 XS 資料類型|目的地 SQL Server 資料類型|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> BIGINT<br /><br /> decimal<br /><br /> NUMERIC|  
+|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> int<br /><br /> BIGINT<br /><br /> decimal<br /><br /> NUMERIC|  
 |decimal|decimal<br /><br /> NUMERIC|  
 |FLOAT|real|  
 |double|FLOAT|  

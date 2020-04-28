@@ -15,10 +15,10 @@ ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac845019bf2f8a8582f20adb5d4f8861f622fe44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925487"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 屬性範例 (VC++)

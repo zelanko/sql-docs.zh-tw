@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172517"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>在 SharePoint 2010 伺服器陣列中使用 SQL Server BI 功能的指引
@@ -32,7 +32,7 @@ ms.locfileid: "78172517"
 
 -   [執行 SharePoint 安裝的需求與建議](#bkmk_install)
 
-##  <a name="bkmk_generalsharepoint"></a>SharePoint 2010 的一般需求
+##  <a name="general-sharepoint-2010-requirements"></a><a name="bkmk_generalsharepoint"></a>SharePoint 2010 的一般需求
 
 -   SharePoint 2010 產品只有 64 位元版本。 如果您已經安裝 32 位元版本的舊版 SharePoint，並在 SharePoint 整合模式下安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您將無法升級至 SharePoint 2010。 如需詳細資訊，請檢閱 SharePoint 文件集。
 
@@ -40,19 +40,17 @@ ms.locfileid: "78172517"
 
 -   SharePoint 開發人員工具僅支援 SharePoint 獨立組態。  如需詳細資訊，請參閱 SharePoint 檔：[開發 Sharepoint 方案的需求](https://msdn.microsoft.com/library/ee231582.aspx)。
 
-##  <a name="bkmk_vers"></a>SharePoint 版本和 BI 功能支援
+##  <a name="sharepoint-editions-and-bi-feature-support"></a><a name="bkmk_vers"></a>SharePoint 版本和 BI 功能支援
  某些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 商業智慧功能只有特定的 SharePoint 產品版本才有支援。
 
 |支援的功能|SharePoint 產品|
 |------------------------|------------------------|
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，這是適用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition 之增益集的功能。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]資料警示。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|
-  [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|
-|一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表檢視以及 SharePoint 的功能整合。|
-  [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，這是適用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition 之增益集的功能。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|
+|一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表檢視以及 SharePoint 的功能整合。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
 
  如需詳細資訊，請參閱[SQL Server 2012 版本所支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)。
 
-##  <a name="bkmk_sp1"></a>SharePoint 2010 Service Pack 1 （SP1）
+##  <a name="sharepoint-2010-service-pack-1-sp1"></a><a name="bkmk_sp1"></a>SharePoint 2010 Service Pack 1 （SP1）
  建議您將 SharePoint 2010 安裝更新為 SharePoint 2010 Service Pack 1 (SP1)。 下列情況都需要 SharePoint SP1：
 
 -   您想要針對 SharePoint 內容資料庫或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 目錄資料庫使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本的 Database Engine。
@@ -75,17 +73,16 @@ ms.locfileid: "78172517"
 
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>具有 SQL Server BI 功能的 SharePoint 安裝
 
-###  <a name="bkmk_prereq"></a>SharePoint 2010 產品準備工具
+###  <a name="sharepoint-2010-products-preparation-tool"></a><a name="bkmk_prereq"></a>SharePoint 2010 產品準備工具
  SharePoint 產品準備工具可啟用作業系統中的伺服器角色，並安裝 SharePoint 安裝所需的其他必要條件軟體。 下表識別針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 設定伺服器的其他步驟。
 
 |元件|動作|
 |---------------|------------|
-|Reporting Services 增益集|SharePoint 2010 產品準備工具會安裝 Reporting Service 增益集的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能需要使用的新版本增益集。 您可以使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 安裝增益集，也可以從 MSDN 下載增益集。 如需有關如何取得目前版本的增益集及其安裝方式的詳細資訊，請參閱[尋找適用于 Sharepoint 產品的 Reporting Services 增益集](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)和[安裝或卸載適用于 sharepoint &#40;SharePoint 2010 和 sharepoint 2013 的 Reporting Services 增益集&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。|
-|Analysis Services OLE DB Provider (MSOLAP)|SharePoint 2010 會將 SQL Server 2008 版的 OLE DB 提供者當做 Excel Services 部署的一部分來安裝。 此版本不支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。 您應該在 SharePoint 伺服器上，安裝支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料連接的更新版提供者。 如需詳細資訊，請參閱[在 SharePoint 伺服器上安裝 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|
+|Reporting Services 增益集|SharePoint 2010 產品準備工具會安裝 Reporting Service 增益集的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能需要使用的新版本增益集。 您可以使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 安裝增益集，也可以從 MSDN 下載增益集。 如需有關如何取得目前版本的增益集及其安裝方式的詳細資訊，請參閱[尋找適用于 Sharepoint 產品的 Reporting Services 增益集](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)和[安裝或卸載適用于 sharepoint &#40;SharePoint 2010 和 sharepoint 2013 的 Reporting Services 增益集&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。|
+|Analysis Services OLE DB 提供者 (MSOLAP)|SharePoint 2010 會將 SQL Server 2008 版的 OLE DB 提供者當做 Excel Services 部署的一部分來安裝。 此版本不支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。 您應該在 SharePoint 伺服器上，安裝支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料連接的更新版提供者。 如需詳細資訊，請參閱[在 SharePoint 伺服器上安裝 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|
 |ADO.NET 服務|SharePoint 2010 在先決條件清單中列出 ADO.NET 服務，但是先決條件安裝程式不會安裝此服務。 若要加入 ADO.NET 服務，您必須手動予以安裝。 如果您想使用 SharePoint 清單做為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或 Reporting Services 報表的資料摘要，則必須安裝 ADO.NET 服務。 如需指示，請參閱[Install ADO.NET 資料服務以支援 SharePoint 清單的資料摘要匯出](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。|
 
-###  <a name="bkmk_install"></a>執行 SharePoint 安裝的需求和建議
+###  <a name="requirements-and-suggestions-for-running-the-sharepoint-installation"></a><a name="bkmk_install"></a>執行 SharePoint 安裝的需求和建議
  您安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能和安裝這些功能的順序，會決定與 SharePoint 整合的可能層級。 例如，雖然有些功能整合層級可透過使用內建資料庫之 SharePoint 伺服器上的 Reporting Services 提供，但是大多數功能整合案例還是需要 SharePoint 的伺服器陣列安裝，因為只有伺服器陣列安裝可以提供某些 BI 功能所需的基礎結構。
 
  SharePoint 伺服器陣列可以是單一伺服器或多部伺服器。 伺服器陣列安裝與獨立安裝的不同之處在於額外的基礎結構，例如「對 Windows Token 服務的宣告」。
@@ -94,7 +91,7 @@ ms.locfileid: "78172517"
 
  ![GMNI_SetupUI_SharePoint2010InstallType](../../../2014/sql-server/install/media/gmni-setupui-sharepoint2010installtype.gif "GMNI_SetupUI_SharePoint2010InstallType")
 
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 或[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]共用服務也需要完整的伺服器安裝。
+  for SharePoint 或  共用服務也需要完整的伺服器安裝。
 
  ![GMNI_SetupUI_SharePoint2010ServerType](../../../2014/sql-server/install/media/gmni-setupui-sharepoint2010servertype.gif "GMNI_SetupUI_SharePoint2010ServerType")
 

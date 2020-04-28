@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4024ae380a1ab6513f8bc055680d8848e97fbf6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173302"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式是從 SharePoint 管理中心進行管理。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式是從 SharePoint 管理中心進行管理。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。
 
  本主題涵蓋下列資訊：
 
--   [若要開啟服務應用程式管理頁面](#bkmk_openpages)
+-   [開啟服務應用程式管理頁面](#bkmk_openpages)
 
--   [[系統設定] 頁面](#bkmk_systemsettings)
+-   [系統設定頁面](#bkmk_systemsettings)
 
 -   [管理作業](#bkmk_managejobs)
 
@@ -45,7 +45,7 @@ ms.locfileid: "78173302"
 
  如需服務應用程式屬性的詳細資訊，請參閱 [步驟 3：建立 Reporting Services 服務應用程式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)。
 
-##  <a name="bkmk_openpages"></a>若要開啟服務應用程式管理頁面
+##  <a name="to-open-service-application-management-pages"></a><a name="bkmk_openpages"></a>若要開啟服務應用程式管理頁面
  若要開啟 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面，請完成下列步驟：
 
 1.  在 [管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]**。
@@ -54,7 +54,7 @@ ms.locfileid: "78173302"
 
 3.  您也可以在名稱附近按一下，或按一下服務應用程式的 **[類型]** 資料行選取整個資料列，然後按一下 SharePoint 功能區中的 **[管理]** 。
 
-##  <a name="bkmk_systemsettings"></a>[系統設定] 頁面
+##  <a name="system-settings-page"></a><a name="bkmk_systemsettings"></a>[系統設定] 頁面
  系統設定頁面可讓您設定服務應用程式的行為和使用者體驗，包括各種逾時。
 
 -   [報表設定](#bkmk_report_settings_section)
@@ -67,60 +67,59 @@ ms.locfileid: "78173302"
 
 -   [用戶端設定](#bkmk_client_settings_section)
 
-###  <a name="bkmk_report_settings_section"></a>報表設定
+###  <a name="report-settings"></a><a name="bkmk_report_settings_section"></a>報表設定
 
-|設定|註解|
+|設定|評價|
 |-------------|--------------|
 |外部影像逾時|預設值為 600 秒。|
 |快照集壓縮|預設值是 SQL|
-|系統報表逾時|預設值為 1800 秒。<br /><br /> 指定報表伺服器上的報表處理是否在經過特定秒數之後逾時。 此值會套用至報表伺服器上的報表處理。 它不會影響提供報表資料的資料庫伺服器上的資料處理。 報表處理計時器時鐘在選取報表時會開始，而當報表開啟時就會結束。 您所指定的值應該足以完成資料處理和報表處理。|
+|系統報表逾時|預設值是 1800 秒。<br /><br /> 指定報表伺服器上的報表處理是否在經過特定秒數之後逾時。 此值會套用至報表伺服器上的報表處理。 它不會影響提供報表資料的資料庫伺服器上的資料處理。 報表處理計時器時鐘在選取報表時會開始，而當報表開啟時就會結束。 您所指定的值應該足以完成資料處理和報表處理。|
 |系統快照集限制|預設值為 -1，表示沒有限制。<br /><br /> 設定整個網站要保留之報表記錄副本數目的預設值。 預設值會提供初始設定，以建立每個報表可儲存的快照集數目。 您可以在特定報表的屬性頁中指定不同的限制。|
 |預存參數存留期|預設值是 180|
 |預存參數臨界值|預設值為 1500 天。|
 
-###  <a name="bkmk_session_settings_section"></a>會話設定
+###  <a name="session-settings"></a><a name="bkmk_session_settings_section"></a>會話設定
 
-|設定|註解|
+|設定|評價|
 |-------------|--------------|
 |工作階段逾時|預設值為 600 秒。|
 |使用工作階段 Cookie|預設值是 TRUE。|
-|EDLX 報表逾時|預設值為 1800 秒。|
+|EDLX 報表逾時|預設值是 1800 秒。|
 
-###  <a name="bkmk_logging_settings_section"></a>用於記錄的系統設定
+###  <a name="system-settings-for-logging"></a><a name="bkmk_logging_settings_section"></a>用於記錄的系統設定
 
-|設定|註解|
+|設定|評價|
 |-------------|--------------|
 |啟用執行記錄|預設值是 TRUE。<br /><br /> 指定報表伺服器是否產生追蹤記錄以及這些記錄的保存天數。 . 記錄會儲存在報表伺服器電腦的下列資料夾中：\Microsoft SQL Server\MSSQL.n\ReportServer\Log。 每次服務重新啟動時，就會啟動新的記錄。 如需有關記錄檔的詳細資訊，請參閱＜ [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)＞|
 |執行記錄保留天數|預設值是 60 天。|
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
 
-###  <a name="bkmk_security_settings_section"></a>安全性設定
+###  <a name="security-settings"></a><a name="bkmk_security_settings_section"></a>安全性設定
 
-|設定|註解|
+|設定|評價|
 |-------------|--------------|
 |啟用整合式安全性|預設值是 TRUE。<br /><br /> 指定是否可以使用要求報表之使用者的 Windows 安全性 Token 來建立報表資料來源的連接。|
 |啟用載入報表定義|預設值是 TRUE。|
 |啟用遠端錯誤|預設值是 FALSE|
 |啟用測試連接詳細錯誤|預設值是 TRUE。|
 
-###  <a name="bkmk_client_settings_section"></a>用戶端設定
+###  <a name="client-settings"></a><a name="bkmk_client_settings_section"></a>用戶端設定
 
-|設定|註解|
+|設定|評價|
 |-------------|--------------|
 |啟用報表產生器下載|預設值是 TRUE。<br /><br /> 指定用戶端是否能夠看到下載報表產生器應用程式的按鈕。|
-|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這項設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值：http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|
+|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值：http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|
 |啟用用戶端列印|預設值是 TRUE。<br /><br /> 指定使用者是否可以下載提供列印選項的用戶端控制項。|
 |編輯工作階段逾時|預設值是 7200 秒。|
 |編輯工作階段快取限制|預設值為 5。|
 
-##  <a name="bkmk_managejobs"></a>管理作業
+##  <a name="manage-jobs"></a><a name="bkmk_managejobs"></a>管理作業
  您可以檢視和刪除執行中的作業，例如報表訂閱及資料驅動訂閱所建立的作業。 此頁面並非用來管理訂閱，而是管理訂閱所觸發的作業。 例如，排程為每小時執行一次的訂閱將會每小時產生作業，該作業會出現在 **[管理作業]** 頁面上。
 
- ![管理執行中的作業](media/ssrs-manage-jobs.gif "管理正在執行的作業")
+ ![管理執行中的作業](media/ssrs-manage-jobs.gif "管理執行中的作業")
 
-##  <a name="bkmk_keymgt"></a>金鑰管理
+##  <a name="key-management"></a><a name="bkmk_keymgt"></a>金鑰管理
  下表摘要說明 [金鑰管理] 頁面
 
 > [!IMPORTANT]
@@ -133,7 +132,7 @@ ms.locfileid: "78173302"
 |變更加密金鑰|這項作業將建立新的金鑰，並且重新加密已加密的內容。 如果您擁有許多內容，這項作業可能需要數小時才能完成。<br /><br /> 變更加密金鑰作業完成時，建議您製作新金鑰的備份。|
 |刪除加密的內容|刪除的內容無法復原。<br /><br /> ** \* \*重要\*事項**刪除和重新建立對稱金鑰的動作無法反轉或復原。 刪除或重新建立金鑰可能會對您目前的安裝造成重大的影響。 如果您刪除金鑰，將會一併刪除對稱金鑰所加密的任何現有資料。 刪除的資料包括外部報表資料來源的連接字串、預存連接字串和一些訂閱資訊。|
 
-##  <a name="bkmk_executionaccount"></a>執行帳戶
+##  <a name="execution-account"></a><a name="bkmk_executionaccount"></a>執行帳戶
  使用此頁面，即可設定自動處理所使用的帳戶。 當其他認證來源無法使用的特殊情況下，請使用此帳戶：
 
 -   當報表伺服器連接到不需要認證的資料來源時。 可能不需要認證的資料來源範例包括 XML 文件和某些用戶端資料庫應用程式。
@@ -156,26 +155,26 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
 
  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。
 
-### <a name="options"></a>選項。
- **指定執行帳戶**選取以指定帳戶。
+### <a name="options"></a>選項
+ **指定執行帳戶** 選取此項目來指定帳戶。
 
- **帳戶**輸入 Windows 網域使用者帳戶。 請使用此格式： * \<網域\\><使用者\>帳戶*。
+ **帳戶** 輸入 Windows 網域使用者帳戶。 請使用此格式： * \<網域\\><使用者\>帳戶*。
 
- **密碼**輸入密碼。
+ **密碼** 輸入密碼。
 
- **確認密碼**重新輸入密碼。
+ **確認密碼** 重新輸入密碼。
 
-##  <a name="bkmk_email"></a>電子郵件設定
+##  <a name="e-mail-settings"></a><a name="bkmk_email"></a>電子郵件設定
  使用此頁面，即可指定會啟用從報表伺服器傳遞報表伺服器電子郵件的 Simple Mail Transport Protocol (SMTP) 設定。 您可以使用報表伺服器電子郵件傳遞延伸模組，透過電子郵件訂閱來散發報表或報表處理通知。 報表伺服器電子郵件傳遞延伸模組，需要使用 [從:] 欄位中的 SMTP 伺服器和電子郵件地址。
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
  **使用 SMTP 伺服器**指定報表伺服器電子郵件是透過 SMTP 伺服器進行路由傳送。
 
- **輸出 SMTP 伺服器**指定要使用的 SMTP 伺服器或閘道。 您可以在網路上使用本機伺服器或 SMTP 伺服器。
+ **傳出 SMTP 伺服器** 指定要使用的 SMTP 伺服器或閘道。 您可以在網路上使用本機伺服器或 SMTP 伺服器。
 
  **寄件者位址**在產生的電子郵件的 [寄件者：] 欄位中，指定要使用的電子郵件地址。 您必須指定有權從 SMTP 伺服器傳送郵件的使用者帳戶。
 
-##  <a name="bkmk_provisionsubscriptions"></a>布建訂閱和警示
+##  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provisionsubscriptions"></a>布建訂閱和警示
  使用此頁面驗證 SQL Server Agent 是否正在執行，並且提供存取權讓報表服務能夠使用 SQL Server Agent。 SQL Server Agent 為 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱、排程和資料警示所需。 [SSRS 服務應用程式的佈建訂閱及警示](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)
 
 ## <a name="proxy-association"></a>Proxy 關聯

@@ -15,10 +15,10 @@ ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8b694c8d8e7381a8237511f8bba3ffd444cd5d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76910531"
 ---
 # <a name="create-method-example-vc"></a>Create 方法範例 (VC++)

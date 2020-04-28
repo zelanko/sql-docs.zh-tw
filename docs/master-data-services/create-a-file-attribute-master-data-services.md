@@ -14,10 +14,10 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175140"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>建立檔案屬性 (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "78175140"
 
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。
 
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。
 
 -   建立屬性的實體必須存在。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。
 
@@ -52,11 +52,11 @@ ms.locfileid: "78175140"
 
 -   **建立者**：建立屬性的使用者名稱。
 
--   **于**：建立屬性的日期和時間。
+-   **時間**：建立屬性的日期與時間。
 
 -   **更新者**：上次更新屬性的使用者名稱。
 
--   **于**：上次更新屬性的日期和時間。
+-   **時間**：上次更新屬性的日期與時間。
 
 ### <a name="to-create-a-file-attribute"></a>若要建立檔案屬性
 
@@ -76,7 +76,7 @@ ms.locfileid: "78175140"
 
     -   如果是集合的屬性，請選取 [成員類型] **** 清單方塊的 [集合] **** 。
 
-6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應該當做屬性名稱使用的字詞清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)。
+6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應當做屬性名稱使用的字組清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)。
 
 7.  (選擇性) 輸入顯示名稱，然後在 [描述] **** 方塊中輸入屬性的描述。
 

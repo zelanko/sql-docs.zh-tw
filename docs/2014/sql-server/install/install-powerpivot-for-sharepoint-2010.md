@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b7d478761a1051114e0189c7fd11eddafcef086b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172337"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>安裝 PowerPivot for SharePoint 2010
-  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是中間層級後端服務的集合，可以在 SharePoint 2010 伺服器陣列中提供 PowerPivot 資料存取功能。 如果您的組織使用用戶端應用程式 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 來建立包含分析資料的活頁簿，您必須要有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，才能在伺服器環境中存取該資料。 本主題會逐步引導您完成基本安裝程序，而且提供了其他主題的連結，可協助您設定 PowerPivot。
 
 ||
@@ -33,8 +32,7 @@ ms.locfileid: "78172337"
 
 1.  您必須是本機系統管理員，才能執行 SQL Server 安裝程式。
 
-2.  
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 需要 SharePoint Server 2010 Enterprise 版。 您也可以使用 Evaluation Enterprise 版。
+2.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 需要 SharePoint Server 2010 Enterprise 版。 您也可以使用 Evaluation Enterprise 版。
 
 3.  您必須安裝 SharePoint Server 2010 SP2。 若未安裝，則無法設定伺服器陣列使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能。
 
@@ -44,7 +42,7 @@ ms.locfileid: "78172337"
 
 6.  必須要有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 執行個體名稱。 在您要安裝 PowerPivot for SharePoint 的電腦上，不能有現存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。
 
-7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]實例不能是 SQL Server 容錯移轉叢集的一部分。 使用 SharePoint 產品的高可用性功能。 例如，Excel Services 會管理 PowerPivot for SharePoint 伺服器的負載平衡。 如需詳細資訊，請參閱[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （https://technet.microsoft.com/library/jj219780.aspx)。
+7.   執行個體不得為 SQL Server 容錯移轉叢集的一部分。 使用 SharePoint 產品的高可用性功能。 例如，Excel Services 會管理 PowerPivot for SharePoint 伺服器的負載平衡。 如需詳細資訊，請參閱[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （https://technet.microsoft.com/library/jj219780.aspx)。
 
 8.  如果您要在現存的伺服器陣列上安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，必須要有一個或多個為傳統模式驗證所設定的 SharePoint Web 應用程式。 Web 應用程式必須支援傳統模式驗證，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取才能運作。 如需傳統模式需求的詳細資訊，請參閱[PowerPivot 驗證和授權](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization)。
 
@@ -52,7 +50,7 @@ ms.locfileid: "78172337"
 
     -   [在 SharePoint 2010 伺服器陣列中使用 SQL Server BI 功能的指引](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)
 
-##  <a name="InstallSQL"></a>步驟1：安裝 PowerPivot for SharePoint
+##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>步驟1：安裝 PowerPivot for SharePoint
  在此步驟中，您要執行 SQL Server 安裝程式來安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 在後續步驟中，您會將伺服器設定為安裝後工作。
 
 1.  插入安裝媒體或開啟包含 SQL Server 安裝檔的資料夾，然後按兩下 [ **setup.exe**]。
@@ -112,12 +110,12 @@ ms.locfileid: "78172337"
 
 20. 在其餘每個頁面上按 **[下一步]** ，直到您進入 [準備安裝] 頁面為止。
 
-21. 按一下 **[安裝]**。
+21. 按一下 [Install]  。
 
 > [!TIP]
 >  如果您需要排除 SQL Server 安裝的問題，請參閱[查看和閱讀 SQL Server 安裝程式記錄](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)檔。
 
-##  <a name="bkmk_config"></a>步驟2：設定伺服器
+##  <a name="step-2-configure-the-server"></a><a name="bkmk_config"></a>步驟2：設定伺服器
 
 > [!IMPORTANT]
 >  您必須先安裝 SharePoint 2010 SP2，才能設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 或是使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫伺服器的 SharePoint 伺服器陣列。 如果您尚未安裝該 Service Pack，請在開始設定伺服器之前先加以安裝。
@@ -126,17 +124,16 @@ ms.locfileid: "78172337"
 
 -   [設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 設定工具&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)
 
--   [管理中心的 PowerPivot 伺服器管理和組態](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)
+-   [管理中心的 PowerPivot 伺服器管理和設定](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)
 
--   [使用 Windows PowerShell 的 PowerPivot 組態](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)
+-   [使用 Windows PowerShell 的 PowerPivot 設定](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)
 
  **連接到 Database Engine 執行個體。** 當您安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，SQL Server 安裝程式會提供您將 Database Engine 執行個體加入安裝中的選項。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會將資料庫引擎實例新增至您的安裝。 如果您已加入 Database Engine，其會安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該 wizard 設定伺服器陣列，請在伺服器陣列設定 wizard 中），請記得以此格式輸入資料庫名稱： <`servername`> \powerpivot。
 
-##  <a name="bkmk_redist"></a>步驟3：在 Excel Services 應用程式伺服器上安裝 Analysis Services OLE DB 提供者
+##  <a name="step-3-install-analysis-services-ole-db-providers-on-excel-services-application-servers"></a><a name="bkmk_redist"></a>步驟3：在 Excel Services 應用程式伺服器上安裝 Analysis Services OLE DB 提供者
  如果您在個別的應用程式伺服器上執行 Excel Calculation Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，則需要額外的安裝步驟。 在執行 Excel Calculation Services 的應用程式伺服器上，安裝 Analysis Services OLE DB 提供者 (MSOLAP) 的適當版本。
 
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP 包含在 SQL Server 安裝程式中，因此只有在應用程式伺服器不是 PowerPivot 應用程式伺服器時，才需要明確安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP。
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP 包含在 SQL Server 安裝程式中，因此只有在應用程式伺服器不是 PowerPivot 應用程式伺服器時，才需要明確安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP。
 
     > [!NOTE]
     >  Excel Calculation Services 應用程式伺服器也需要通用群組件中**microsoft.analysisservices**檔案的實例。 若要將此 .dll 安裝在應用程式伺服器上，請安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 SQL Server 安裝程式] 的 [**特徵選取**] 頁面上，選取 [管理工具-完成]。
@@ -145,7 +142,7 @@ ms.locfileid: "78172337"
 
  如需安裝提供者的詳細資訊（包括驗證步驟），請參閱[在 SharePoint 伺服器上安裝 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)
 
-##  <a name="bkmk_verify"></a>步驟4：驗證安裝
+##  <a name="step-4-verify-the-installation"></a><a name="bkmk_verify"></a>步驟4：驗證安裝
  在這個最後步驟中，您將驗證 SharePoint 2010 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 都能完整運作。 如需相關指示，請參閱[Verify a PowerPivot for SharePoint 安裝](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)。
 
 ## <a name="see-also"></a>另請參閱

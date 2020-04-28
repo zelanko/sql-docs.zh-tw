@@ -16,10 +16,10 @@ ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd6117e48fbdf79af24227b9b5b499afd1a60288
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939596"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 和 DateModified 屬性範例 (VC++)

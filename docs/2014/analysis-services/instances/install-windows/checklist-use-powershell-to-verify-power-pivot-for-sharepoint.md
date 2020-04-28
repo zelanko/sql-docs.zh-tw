@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174347"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
@@ -28,27 +28,26 @@ ms.locfileid: "78174347"
 |-|
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|
 
- **在本主題中**：下列目錄中的字母專案對應到圖表的區域。 此圖表將說明
+ **本主題內容**：以下目錄中的字母項目對應到圖表的區域。 此圖表將說明
 
 |||
 |-|-|
-|[準備您的 PowerShell 環境](#bkmk_prerequisites)<br /><br /> [徵兆和建議的動作](#bkmk_symptoms)<br /><br /> **（A）** [Analysis Services Windows 服務](#bkmk_windows_service)<br /><br /> **（B）** [PowerPivotSystemService 和 PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **（C）** [PowerPivot 服務應用程式和](#bkmk_powerpivot_service_application)proxy<br /><br /> **（D）** [資料庫](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [計時器工作](#bkmk_timer_jobs)<br /><br /> [健全狀況規則](#bkmk_health_rules)<br /><br /> **（E）** [Windows 和 ULS 記錄](#bkmk_logs)<br /><br /> [MSOLAP 提供者](#bkmk_msolap)<br /><br /> [ADOMD.Net 用戶端程式庫](#bkmk_adomd)<br /><br /> [健全狀況資料收集規則](#bkmk_health_collection)<br /><br /> [方案](#bkmk_solutions)<br /><br /> [手動驗證步驟](#bkmk_manual)<br /><br /> [其他資源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 腳本](#bkmk_full_script)|![powershell 的 powerpivot 驗證](../../../sql-server/install/media/ssas-powershell-component-verification.png "powershell 的 powerpivot 驗證")|
+|[準備您的 PowerShell 環境](#bkmk_prerequisites)<br /><br /> [徵兆和建議的動作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 服務](#bkmk_windows_service)<br /><br /> **（B）** [PowerPivotSystemService 和 PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot 服務應用程式與 Proxy](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [資料庫](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [計時器工作](#bkmk_timer_jobs)<br /><br /> [健全狀況規則](#bkmk_health_rules)<br /><br /> **(E)** [Windows 和 ULS 記錄](#bkmk_logs)<br /><br /> [MSOLAP 提供者](#bkmk_msolap)<br /><br /> [ADOMD.Net 用戶端程式庫](#bkmk_adomd)<br /><br /> [健全狀況資料收集規則](#bkmk_health_collection)<br /><br /> [方案](#bkmk_solutions)<br /><br /> [手動驗證步驟](#bkmk_manual)<br /><br /> [其他資源](#bkmk_more_resources)<br /><br /> [完整 PowerShell 指令碼](#bkmk_full_script)|![powershell 的 powerpivot 驗證](../../../sql-server/install/media/ssas-powershell-component-verification.png "powershell 的 powerpivot 驗證")|
 
-##  <a name="bkmk_prerequisites"></a>準備您的 PowerShell 環境
+##  <a name="prepare-your-powershell-environment"></a><a name="bkmk_prerequisites"></a>準備您的 PowerShell 環境
  本節的步驟會準備您的 PowerShell 環境。 根據目前設定指令碼環境的方式，可能不需要這些步驟。
 
- **PowerShell 許可權**
+ **PowerShell 權限**
 
  使用 **系統管理權限**開啟 PowerShell 視窗或 PowerShell ISE (整合式指令碼環境)。 如果當您執行命令時沒有系統管理權限，您將會看到類似下面的錯誤訊息：
 
  Get-SPLogEvent：您必須擁有電腦的 **系統管理員權限** 才能執行此指令程式。
 
- **SharePoint 和[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] **Module
+ **SharePoint 和 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]** 模組
 
  如果當您執行 SharePoint 相關的指令程式時看到類似下面的錯誤訊息，請執行 Add-PSSnapin 命令：
 
- 
-  **無法辨識**'Get-PowerPivotSystemService' 詞彙是否為 Cmdlet、函數、指令檔或可執行程式的名稱。 請檢查名稱拼字，如果名稱含有路徑，請確認路徑正確，然後再試一次。
+ **無法辨識**'Get-PowerPivotSystemService' 詞彙是否為 Cmdlet、函數、指令檔或可執行程式的名稱。 請檢查名稱拼字，如果名稱含有路徑，請確認路徑正確，然後再試一次。
 
 ```
 Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
@@ -62,7 +61,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |-|-|
 |![sharepoint 一般應用程式設定中的 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 一般應用程式設定中的 powerpivot")|您可以選擇使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板來驗證管理中心的大多數元件。 若要在管理中心開啟儀表板，請按一下 **[一般應用程式設定]**，然後按一下 **[PowerPivot]** 中的 **[管理儀表板]**。 如需有關儀表板的詳細資訊，請參閱＜ [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)＞。|
 
-##  <a name="bkmk_symptoms"></a>徵兆和建議的動作
+##  <a name="symptoms-and-recommended-actions"></a><a name="bkmk_symptoms"></a>徵兆和建議的動作
  下表是徵兆或問題清單以及這個主題的建議章節，您可參考這些章節來幫助您解決問題。
 
 |徵狀|請參閱章節|
@@ -72,7 +71,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |管理儀表板的某些部分|如果您將 PowerPivot for SharePoint 安裝到具有管理中心拓撲的伺服陣列中，但沒有 Excel Services 或 PowerPivot for SharePoint，如果您想要完整存取 PowerPivot 管理儀表板中的內建報表，您必須下載及安裝 Microsoft ADOMD.NET 用戶端程式庫。 儀表板中的某些報表會使用 ADOMD.NET 來存取內部資料，這些資料會提供關於在伺服陣列中 PowerPivot 查詢處理和伺服器健全狀況的報告資料。 請參閱 [ADOMD.Net 用戶端程式庫](#bkmk_adomd) 一節和 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)主題。|
 |\<未來內容>||
 
-##  <a name="bkmk_windows_service"></a>Analysis Services Windows 服務
+##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a>Analysis Services Windows 服務
  本節的指令碼會在 SharePoint 模式下驗證 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體。 確認**服務正在執行。**
 
 ```powershell
@@ -85,7 +84,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running
 ```
 
-##  <a name="bkmk_engine_and_system_service"></a>PowerPivotSystemService 和 PowerPivotEngineService
+##  <a name="powerpivotsystemservice-and-powerpivotengineservice"></a><a name="bkmk_engine_and_system_service"></a>PowerPivotSystemService 和 PowerPivotEngineService
  本節的指令碼會驗證 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 系統服務。 有一個適用於 SharePoint 2013 部署的系統服務以及適用於 SharePoint 2010 部署的兩個服務。
 
  **PowerPivotSystemService**
@@ -105,7 +104,7 @@ SQL Server PowerPivot Service Application Online {Default PowerPivot Service App
  **PowerPivotEngineService**
 
 > [!NOTE]
->  如果您使用 SharePoint 2013，**請略過這個腳本**。 PowerPivotEngineService 不是 SharePoint 2013 部署的一部分。 如果您在 SharePoint 2013 上執行 Get-PowerPivot**Engine**Service Cmdlet，您會看到類似下面的錯誤訊息。 即使您已經執行本主題的＜必要條件＞一節所描述的 Add-PSSnapin 命令，還是會傳回這個錯誤訊息。
+>  如果您正在使用 SharePoint 2013，請**略過這個指令碼** 。 PowerPivotEngineService 不是 SharePoint 2013 部署的一部分。 如果您在 SharePoint 2013 上執行 Get-PowerPivot**Engine**Service 指令程式，您將會看到類似下面的錯誤訊息。 即使您已經執行本主題的＜必要條件＞一節所描述的 Add-PSSnapin 命令，還是會傳回這個錯誤訊息。
 > 
 >  'Get-PowerPivotEngineService' 詞彙無法辨識為指令程式名稱
 
@@ -123,7 +122,7 @@ Instances : {POWERPIVOT}
 Farm      : SPFarm Name=SharePoint_Config
 ```
 
-##  <a name="bkmk_powerpivot_service_application"></a>PowerPivot 服務應用程式和 proxy
+##  <a name="powerpivot-service-applications-and-proxies"></a><a name="bkmk_powerpivot_service_application"></a>PowerPivot 服務應用程式和 proxy
  確認狀態為 **線上**。 Excel Services 應用程式不會使用服務應用程式資料庫，因此指令程式不會傳回資料庫名稱。 請記下 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式所使用的資料庫，好讓您能夠在本主題稍後的＜資料庫＞一節中確認資料庫為線上狀態。
 
  **PowerPivot 和 Excel 服務應用程式**
@@ -188,7 +187,7 @@ PowerPivot Service Application Proxy                     Online PowerPivotUnatte
 Excel Services Application Web Service Application Proxy Online                             Excel Services Application
 ```
 
-##  <a name="bkmk_databases"></a>資料庫
+##  <a name="databases"></a><a name="bkmk_databases"></a>資料庫
  下列指令碼會傳回服務應用程式資料庫及所有內容資料庫的狀態。 確認狀態為 **線上**。
 
 ```powershell
@@ -203,7 +202,7 @@ DefaultWebApplicationDB-f0db1a8e-4c22-408c-b9b9-153bd74b0312               Onlin
 SharePoint_Admin_3cadf0b098bf49e0bb15abd487f5c684                          Online TESTSERVER\POWERPIVOT    Content Database
 ```
 
-##  <a name="bkmk_features"></a>SharePoint 功能
+##  <a name="sharepoint-features"></a><a name="bkmk_features"></a>SharePoint 功能
  確認網站、Web 和伺服器陣列功能都在線上。
 
 ```powershell
@@ -218,7 +217,7 @@ PowerPivotAdmin Online   Web SPFarm Name=SharePoint_Config
 PowerPivot      Online  Farm SPFarm Name=SharePoint_Config
 ```
 
-##  <a name="bkmk_timer_jobs"></a>計時器工作
+##  <a name="timer-jobs"></a><a name="bkmk_timer_jobs"></a>計時器工作
  確認計時器工作在 **線上**。 SharePoint 2013 上並未安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] EngineService，因此指令碼將不會在 SharePoint 2013 部署中列出 EngineService 計時器工作。
 
 ```powershell
@@ -241,7 +240,7 @@ Online Health Analysis Job (Weekly, SQL Server PowerPivot Service Application, A
 Online PowerPivot Setup Extension Timer Job                                                 4/1/2014 1:40:31 AM  MidTierService
 ```
 
-##  <a name="bkmk_health_rules"></a>健全狀況規則
+##  <a name="health-rules"></a><a name="bkmk_health_rules"></a>健全狀況規則
  SharePoint 2013 部署中的規則較少。 如需每個 SharePoint 環境的完整規則清單以及如何使用規則的說明，請參閱[PowerPivot 健全狀況規則-設定](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md)。
 
 ```powershell
@@ -260,14 +259,14 @@ ASADOMDNETHealthRule             True PowerPivot: ADOMD.NET is not installed on 
 MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should have 'Full Read' permission on all associated SPWebApplications.
 ```
 
-##  <a name="bkmk_logs"></a>Windows 和 ULS 記錄檔
+##  <a name="windows-and-uls-logs"></a><a name="bkmk_logs"></a>Windows 和 ULS 記錄檔
  **Windows 事件記錄檔**
 
  下列命令將會搜尋 Windows 事件記錄檔，以便找出 SharePoint 模式下與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體有關的事件。 如需停用事件或變更事件層級的詳細資訊，請參閱[設定及查看 SharePoint 記錄檔和診斷記錄 &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。
 
- **服務名稱：** MSOLAP $ POWERPIVOT
+ **服務名稱** ：MSOLAP$POWERPIVOT
 
- **Windows 服務中的顯示名稱：** SQL Server Analysis Services （POWERPIVOT）
+ **Windows 服務中的顯示名稱** ：SQL Server Analysis Services (POWERPIVOT)
 
 ```powershell
 Get-EventLog "application" | Where-Object {$_.source -Like "msolap`$powerpivot*"}  | Select timegenerated, entrytype , source, message | Format-Table -property * -AutoSize | Out-Default
@@ -282,7 +281,7 @@ TimeGenerated           EntryType Source            Message
 4/14/2014 6:45:37 PM  Information MSOLAP$POWERPIVOT Software usage metrics are disabled.
 ```
 
- **SharePoint ULS 記錄檔，過去48小時**
+ **SharePoint ULS 記錄 (過去 48 個小時)**
 
  下列命令將會從過去 48 小時內建立的 ULS 記錄傳回 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 訊息。 針對您的需要調整 addhours 參數。
 
@@ -319,7 +318,7 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
               System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout...
 ```
 
-##  <a name="bkmk_msolap"></a>MSOLAP 提供者
+##  <a name="msolap-provider"></a><a name="bkmk_msolap"></a>MSOLAP 提供者
  驗證 MSOLAP 提供者。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]需要 MSOLAP. 5。
 
 ```powershell
@@ -338,7 +337,7 @@ MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0
 
  如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://technet.microsoft.com/library/hh758436.aspx)。
 
-##  <a name="bkmk_adomd"></a>ADOMD.Net 用戶端程式庫
+##  <a name="adomdnet-client-library"></a><a name="bkmk_adomd"></a>ADOMD.Net 用戶端程式庫
 
 ```powershell
 Get-WMIObject -Class win32_product | Where-Object {$_.name -Like "*ado*"} | Select name, version, vendor | Format-Table -Property * -AutoSize | out-default
@@ -353,7 +352,7 @@ Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Cor
 
  如需詳細資訊，請參閱 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)。
 
-##  <a name="bkmk_health_collection"></a>健全狀況資料收集規則
+##  <a name="health-data-collection-rules"></a><a name="bkmk_health_collection"></a>健全狀況資料收集規則
  確認 **[狀態]** 為線上，而且 **[已啟用]** 成立。
 
 ```powershell
@@ -371,7 +370,7 @@ PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads             
 
  如需詳細資訊，請參閱 [PowerPivot Usage Data Collection](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md)。
 
-##  <a name="bkmk_solutions"></a>適用
+##  <a name="solutions"></a><a name="bkmk_solutions"></a>適用
  如果其他元件在線上，您可以略過方案的驗證。 不過，如果遺漏了健全狀況規則，請確認這兩個方案都存在，並確認兩個 PowerPivot 方案為 **線上** 和 **已部署**狀態。
 
 ```powershell
@@ -399,29 +398,28 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 
  如需如何部署 SharePoint 方案的詳細資訊，請參閱 [部署方案套件 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc262995\(v=office.14\).aspx)。
 
-##  <a name="bkmk_manual"></a>手動驗證步驟
+##  <a name="manual-verification-steps"></a><a name="bkmk_manual"></a>手動驗證步驟
  本節描述無法使用 PowerShell 指令程式完成的步驟。
 
- 已**排程的資料**重新整理：設定 [重新整理活頁簿的排程]**也會儘快**重新整理。  如需詳細資訊，請參閱[排程資料重新整理和不支援 Windows 驗證的資料來源 &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md)中的「確認資料重新整理」一節。
+ **排定的資料重新整理** ：將重新整理活頁簿排程設定為 **[並且盡快重新整理]**。  如需詳細資訊，請參閱[排程資料重新整理和不支援 Windows 驗證的資料來源 &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md)中的「確認資料重新整理」一節。
 
-##  <a name="bkmk_more_resources"></a>其他資源
- [Windows PowerShell 中的網頁伺服器（IIS）管理 Cmdlet](https://technet.microsoft.com/library/ee790599.aspx)。
+##  <a name="more-resources"></a><a name="bkmk_more_resources"></a>其他資源
+ [Windows PowerShell 中的 Web 伺服器 (IIS) 管理指令程式](https://technet.microsoft.com/library/ee790599.aspx)。
 
  [要在 SharePoint 中檢查服務、IIS 網站和應用程式集區狀態的 PowerShell](https://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0)。
 
- [Windows PowerShell for SharePoint 2013 參考](https://technet.microsoft.com/library/ee890108\(v=office.15\).aspx)
+ [SharePoint Server 2013 的 Windows PowerShell 參考](https://technet.microsoft.com/library/ee890108\(v=office.15\).aspx)
 
- [Windows PowerShell for SharePoint Foundation 2010 參考](https://technet.microsoft.com/library/ee890105\(v=office.14\).aspx)
+ [SharePoint Foundation 2010 的 Windows PowerShell 參考](https://technet.microsoft.com/library/ee890105\(v=office.14\).aspx)
 
- [使用 Windows PowerShell 管理 Excel Services （SharePoint Server 2010）](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)
+ [使用 Windows PowerShell 管理 Excel Services (SharePoint Server 2010)](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)
 
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 
- [使用 Get-evenlog Cmdlet](https://technet.microsoft.com/library/ee176846.aspx)
+ [使用 Get-EvenLog 指令程式](https://technet.microsoft.com/library/ee176846.aspx)
 
-##  <a name="bkmk_full_script"></a>完整的 PowerShell 腳本
- 下列指令碼包含之前章節中的所有命令。 此指令碼會依照命令出現在本主題的相同順序來執行命令。 此指令碼包含本主題所註明的一些選擇性命令變化，以免您需要額外的篩選。 這些變化會以註解字元 (#) 停用。 此指令碼也包含用來驗證 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式的一些陳述式。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 陳述式會以註解字元 (#) 停用。
+##  <a name="full-powershell-script"></a><a name="bkmk_full_script"></a>完整的 PowerShell 腳本
+ 下列指令碼包含之前章節中的所有命令。 此指令碼會依照命令出現在本主題的相同順序來執行命令。 此指令碼包含本主題所註明的一些選擇性命令變化，以免您需要額外的篩選。 這些變化會以註解字元 (#) 停用。 此指令碼也包含用來驗證 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式的一些陳述式。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 陳述式會以註解字元 (#) 停用。
 
 ```powershell
 # This script audits services related to PowerPivot for SharePoint

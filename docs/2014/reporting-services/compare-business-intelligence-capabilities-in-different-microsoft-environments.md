@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
 ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656585"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比較不同 Microsoft 環境中的商業智慧功能
@@ -26,26 +26,25 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商業智慧可
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online 方案 2|Power BI for Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|BI 網站|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]效果|否|Power BI 網站|  
+|BI 網站|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 組件庫|否|Power BI 網站|  
 |資料監管中心及查詢共用與管理|否|否|是** <sup>1</sup>**|  
 |Master Data Services (MDS) 與 Data Quality Services (DQS) 整合|是|否|否|  
 |排程資料重新整理。|是，但並不支援包含 Power Query 資料的活頁簿。|否|是|  
 |自然語言查詢（Q&A）|否|否|是** <sup>2</sup>**|  
 |預測預估|否|否|是** <sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合|是|否|否|  
-|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 整合 (多維度與表格式)|是|否|否|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 整合|是|否|否|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 整合 (多維度與表格式)|是|否|否|  
 |將互動式 Power View 儀表板匯出至 PowerPoint 簡報|是|否|否|  
 |瀏覽器中的儀表板撰寫|是|否|否|  
 |使用量監視|是|否|是|  
 |利用資料列層級安全性的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube|是|否|否|  
 |||||
 
- **<sup>1</sup>**  [瞭解資料管理和影片中的資料負責人角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) [： Power BI 資訊管理和資料監管](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
+ **<sup>1</sup>**  [了解資料管理中之資料管理員的角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) 及 [影片：Power BI 資訊管理及資料監管中心](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
   
  **<sup>2</sup>**  [Power BI Q&A：優化 Power BI 活頁簿（雲端模型）](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/)。  
   
- **<sup>3</sup>**  [在 Power View for Office 365 中推出新的預測功能](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。  
+ **<sup>3</sup>**  [Power View for Office 365 中的新預測功能簡介](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。  
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>檢視及瀏覽 BI 資料、報表與儀表板  
   
@@ -60,9 +59,9 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商業智慧可
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)。  
   
- **<sup>2</sup>**  [以 PowerPivot 活頁簿做為資料來源](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
+ **<sup>2</sup>**  [以 PowerPivot 活頁簿為資料來源](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
- **<sup>3</sup>**  [跨商業智慧（BI）工具](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx)的行動支援和[規劃 Reporting Services 和 Power View 瀏覽器支援（Reporting Services 2014）](https://msdn.microsoft.com/library/ms156511.aspx)。  
+ **<sup>3</sup>**  [跨商業智慧 (BI) 工具的行動支援](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) 及 [規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx)。  
   
 ## <a name="more-information"></a>詳細資訊  
   
@@ -70,7 +69,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商業智慧可
   
 - 如需使用同義字之需求的詳細資訊，請參閱在 pragmaticworks.com 上[使用同義字 & 片語優化 Power BI Q&A](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) 。  
   
-- [Office Online，挑選您的企業社交網路： Yammer 或新聞摘要？](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US)。  
+- [Office Online，挑選您公司的社交網路：Yammer 或新聞摘要？](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US)。  
   
 - [Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx)。  
   

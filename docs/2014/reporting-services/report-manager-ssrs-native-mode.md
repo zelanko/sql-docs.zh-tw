@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 5cefc88469ac3c98f3bb944c0e490f1ce7e88472
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172371"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>報表管理員 (SSRS 原生模式)
@@ -25,7 +25,7 @@ ms.locfileid: "78172371"
 
 -   [圖示描述](#bkmk_icon_descriptions)
 
-##  <a name="bkmk_whatis_report_manager"></a>什麼是報表管理員？
+##  <a name="what-is-report-manager"></a><a name="bkmk_whatis_report_manager"></a>什麼是報表管理員？
  您可以使用報表管理員執行下列工作：
 
 -   檢視、搜尋、列印與訂閱報表。
@@ -61,7 +61,7 @@ ms.locfileid: "78172371"
 
  如果您使用的是 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 或 Windows Server 2008，就必須設定報表管理員以進行本機管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
-##  <a name="bkmk_start_report_manager"></a>啟動和使用報表管理員
+##  <a name="start-and-use-report-manager"></a><a name="bkmk_start_report_manager"></a>啟動和使用報表管理員
  報表管理員是一種 Web 應用程式，您可以在瀏覽器視窗的位址列中輸入報表管理員 URL 來開啟。 當您啟動報表管理員時，您所看到的頁面、連結和選項會依據您所擁有的報表伺服器權限而有所不同。 若要執行工作，您必須被指派包含此工作的角色。 指派至具有完整權限之角色的使用者，可以存取用於管理報表伺服器的完整應用程式功能表與頁面。 指派至具有檢視和執行報表權限之角色的使用者，只看得到支援這些活動的功能表與頁面。 每個使用者可以有針對不同報表伺服器的不同角色指派，甚至針對儲存在單一報表伺服器上之各種報表與資料夾的不同角色指派。
 
  如需角色的詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](security/granting-permissions-on-a-native-mode-report-server.md)。
@@ -86,7 +86,7 @@ ms.locfileid: "78172371"
 
  您只能以少數方式自訂報表管理員。 例如，您可以在 [站台設定] 頁面修改應用程式標題。 如果您是 Web 開發人員，則可以修改包含報表管理員使用之樣式資訊的樣式表。 由於報表管理員並非專門為支援自訂而設計，因此您必須仔細地測試您所做的任何修改。 如果您覺得報表管理員並不符合您的需求，您可以開發自訂報表檢視器，或是設定 SharePoint Web 組件，以便在 SharePoint 網站中尋找及檢視報表。 如需詳細資訊，請參閱[設定報表管理員 &#40;原生模式&#41;](report-server/configure-web-portal.md)。
 
-##  <a name="bkmk_icon_descriptions"></a>圖示描述
+##  <a name="icon-descriptions"></a><a name="bkmk_icon_descriptions"></a>圖示描述
  下表描述報表管理員中使用的圖示。 如需報告工具列中所出現圖示的詳細資訊，請參閱[HTML 檢視器和報告工具列](html-viewer-and-the-report-toolbar.md)。
 
 |圖示|描述|動作|

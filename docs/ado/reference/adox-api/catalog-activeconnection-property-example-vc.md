@@ -15,10 +15,10 @@ ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925608"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection 屬性範例 (VC++)

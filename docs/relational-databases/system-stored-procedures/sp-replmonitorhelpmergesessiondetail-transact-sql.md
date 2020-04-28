@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321616"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -48,7 +48,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**ArticleName**|**sysname**|這是正在同步處理的發行項名稱。 **ArticleName**也包含結果集中不代表發行項詳細資料之資料列的摘要資訊。|  
 |**百分比**|**decimal**|針對目前執行中或已失敗的工作階段，指出套用在給定發行項詳細資料列的總變更量之百分比。|  
 |**RelativeCost**|**decimal**|指出同步處理發行項所花的時間，相當於該工作階段同步處理總時間的百分比。|  
-|**有效期間**|**int**|代理程式工作階段的長度。|  
+|**Duration**|**int**|代理程式工作階段的長度。|  
 |**Inserts**|**int**|工作階段中的插入數。|  
 |**更新**|**int**|工作階段中的更新數。|  
 |**Deletes**|**int**|工作階段中的刪除數。|  

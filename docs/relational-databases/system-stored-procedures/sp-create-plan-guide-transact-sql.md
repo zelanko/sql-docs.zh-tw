@@ -18,10 +18,10 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e55b45cf43e34982033d941ad9626f75afdec554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688230"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
@@ -135,8 +135,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會忽略第一項查詢內的歸位字元、換行字元和空白字元。 在第二項查詢中，順序 `WHERE b = 10` 的解譯與 `WHERE a = 10` 不同。 比對作業會區分大小寫以及區分腔調字 (即使資料庫定序不區分大小寫亦然)，關鍵字例外，它不區分大小寫。 比對作業不區分縮寫格式的關鍵字。 例如，關鍵字 `EXECUTE`、`EXEC` 和 `execute` 被視為相同。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會忽略第一項查詢內的歸位字元、換行字元和空白字元。 在第二項查詢中，順序 `WHERE b = 10` 的解譯與 `WHERE a = 10` 不同。 比對作業會區分大小寫以及區分腔調字 (即使資料庫定序不區分大小寫亦然)，關鍵字例外，它不區分大小寫。 比對作業不區分縮寫格式的關鍵字。 例如，關鍵字 `EXECUTE`、`EXEC` 和 `execute` 被視為相同。  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>計畫快取的計劃指南效果  
  針對某個模組建立計畫指南時，就會從計畫快取中移除該模組的查詢計畫。 針對某個批次建立 OBJECT 或 SQL 類型的計畫指南時，就會移除具有相同雜湊值之批次的查詢計畫。 建立 TEMPLATE 類型的計畫指南時，就會從該資料庫內部的計畫快取中移除所有單一陳述式批次。  
@@ -330,9 +329,9 @@ GO
  [sp_control_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [plan_guides &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [fn_validate_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   

@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174037"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "78174037"
 
  下圖說明此程序。
 
- ![使用 OPENXML 剖析 XML](../../database-engine/media/xmlsp.gif "正在使用 OPENXML 剖析 XML")
+ ![使用 OPENXML 剖析 XML](../../database-engine/media/xmlsp.gif "使用 OPENXML 剖析 XML")
 
  請注意，若要了解 OPENXML，您必須先熟悉 XPath 查詢，並了解 XML。 如需 SQL Server 中 XPath 支援的詳細資訊，請參閱 [在 SQLXML 4.0 中使用 XPath 查詢](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)。
 

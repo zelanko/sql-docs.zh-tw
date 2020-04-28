@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320772"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -62,8 +62,8 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|複寫效能標準的識別碼，它可以是下列項目之一。<br /><br /> **1expiration** -監視交易式發行集的訂閱是否即將到期。<br /><br /> **2latency** -監視交易式發行集之訂閱的效能。<br /><br /> **4mergeexpiration** -監視合併式發行集的訂閱是否即將到期。<br /><br /> **5mergeslowrunduration** -監視透過低頻寬（撥號）連接進行合併同步處理的持續時間。<br /><br /> **6mergefastrunduration** -監視透過高頻寬（LAN）連接進行合併同步處理的持續時間。<br /><br /> **7mergefastrunspeed** -監視透過高頻寬（LAN）連接進行合併同步處理的同步處理速率。<br /><br /> **8mergeslowrunspeed** -監視透過低頻寬（撥號）連接進行合併同步處理的同步處理速率。|  
-|**主題**|**sysname**|複寫效能標準的名稱。|  
-|**value**|**int**|效能標準的臨界值。|  
+|**title**|**sysname**|複寫效能標準的名稱。|  
+|**值**|**int**|效能標準的臨界值。|  
 |**shouldalert**|**bit**|這是指當計量超出此發行集定義的臨界值時，是否應該產生警示;值為**1**表示應該引發警示。|  
 |**isenabled**|**bit**|這是指是否針對此發行集的這個複寫效能標準啟用監視;值為**1**表示已啟用監視。|  
   

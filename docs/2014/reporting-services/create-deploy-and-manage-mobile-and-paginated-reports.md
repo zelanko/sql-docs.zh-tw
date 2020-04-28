@@ -17,15 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e67d718c928785d85712eb5307130af22570c26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173907"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供完整的現成工具和服務，協助您建立、部署及管理組織的報告。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可讓您擴充和自訂報表功能的程式設計功能。
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供完整的現成工具和服務，協助您建立、部署及管理組織的報告。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可讓您擴充和自訂報表功能的程式設計功能。
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]是以伺服器為基礎的報告平臺，可針對各種資料來源提供完整的報告功能。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]包括一組完整的工具，可讓您建立、管理和傳遞報表，以及可讓開發人員在自訂應用程式中整合或擴充資料和報表處理的 Api。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]工具會在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]環境中工作，並與[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]工具和元件完全整合。
 
@@ -45,7 +44,7 @@ ms.locfileid: "78173907"
 
  ![資料夾圖示](media/hlp-16folder.gif "資料夾圖示")[報表報表設計師 &#40;SSRS 中的元件&#41;](report-design/report-parts-in-report-designer-ssrs.md)
 
- ![資料夾圖示](media/hlp-16folder.gif "資料夾圖示") [](subscriptions/schedules.md)排程
+ ![資料夾圖示](media/hlp-16folder.gif "資料夾圖示") [Schedules](subscriptions/schedules.md)排程
 
  ![資料夾圖示](media/hlp-16folder.gif "資料夾圖示")[訂閱和傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)
 

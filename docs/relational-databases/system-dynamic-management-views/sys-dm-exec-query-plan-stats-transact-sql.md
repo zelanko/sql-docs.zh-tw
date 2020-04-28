@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656990"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys.databases dm_exec_query_plan_stats （Transact-sql）
@@ -58,8 +58,8 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
 |**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。|  
 |**number**|**smallint**|編號預存程序整數。 例如，**orders** 應用程式的一組程序可以命名為 **orderproc;1**、**orderproc;2**，依此類推。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。|  
-|**加密**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
-|**query_plan**|**stl**|包含以*plan_handle*指定之實際查詢執行計畫的上次已知執行時間顯示計畫標記法。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。| 
+|**encrypted**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
+|**query_plan**|**xml**|包含以*plan_handle*指定之實際查詢執行計畫的上次已知執行時間顯示計畫標記法。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。| 
 
 ## <a name="remarks"></a>備註
 從[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 開始提供此系統函數。
@@ -75,13 +75,13 @@ Sys 的執行程式表輸出 dm_exec_query_plan_stats 包含下列資訊：
 在下列情況下，會在**dm_exec_query_plan_stats**的傳回資料表的**query_plan**資料行中，傳回**相當於實際執行計畫**的顯示計畫輸出：  
 
 -   您可以在 sys.databases 中找到此方案[dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)。     
-    **AND**    
+    **和**    
 -   正在執行的查詢很複雜或耗用資源。
 
 在下列情況下，會在傳回之資料表的**query_plan**資料行中，傳回一個**簡化的<sup>1</sup> **執行程式表輸出，以供**dm_exec_query_plan_stats**：  
 
 -   您可以在 sys.databases 中找到此方案[dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)。     
-    **AND**    
+    **和**    
 -   查詢夠簡單，通常會分類為 OLTP 工作負載的一部分。
 
 <sup>1</sup>從[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 開始，這是指只包含根節點運算子（SELECT）的執行程式表。 對於[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4，這是指透過`sys.dm_exec_cached_plans`提供的快取計畫。
@@ -148,6 +148,6 @@ GO
 
 ## <a name="see-also"></a>另請參閱
   [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40;Transact-sql&#41;執行相關的動態管理檢視](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925593"
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
@@ -159,7 +159,7 @@ ms.locfileid: "76925593"
  資料提供者或資料指標服務特有的屬性。 物件的 Properties 集合會自動填入這些**屬性**（「動態」）。 物件在透過特定資料提供者連接到資料來源之前，沒有動態屬性。 另請參閱資料提供者、資料指標。  
   
 ## <a name="e"></a>E  
- 列舉  
+ 列舉型別  
  具名常數的清單。 列舉值不需要是唯一的。 不過，在定義列舉的範圍內，每個值的名稱都必須是唯一的。 在 ADO 中，列舉是用於數值參數和傳回值，以將意義新增至 ADO 程式碼，並讓開發人員不受數值的保護（這可能會從版本變更為版本）。 例如，若要開啟靜態**記錄集**，請使用**adOpenStatic**列舉值：`Recordset.Open ,,adOpenStatic`  
   
  也稱為*列舉常數*。 另請參閱*常數*。  
@@ -171,7 +171,7 @@ ms.locfileid: "76925593"
  事件處理常式是事件發生時所執行的程式碼。 另請參閱事件。  
   
 ## <a name="h"></a>H  
- 處理常式  
+ handler (處理常式)  
  管理一般和較簡單條件或作業的常式，例如錯誤修復或資料管理。  
   
  階層式記錄集  
@@ -190,7 +190,7 @@ ms.locfileid: "76925593"
  唯一識別資料列的資料表中的一個或多個資料行;通常用來編制資料表索引。  
   
 ## <a name="m"></a>M  
- 時會  
+ marshaling  
  跨執行緒或進程界限封裝、傳送和 unpackaging 介面方法參數的程式。  
   
  中介層  
@@ -291,5 +291,5 @@ ms.locfileid: "76925593"
  樹狀結構  
  結構，代表元素（節點）之間的階層式關聯性。 樹狀結構的最上層（根）有一個節點。 在根底下，可以有多個子系。 每個子系可能會變成其他子系的父系，因此會像樹狀一樣進行分支。 包含檔和其他資料夾的資料夾是樹狀結構的典型範例。 另請參閱階層、節點、根、子系、父系。  
   
- Web 伺服器  
+ 網頁伺服器  
  提供 Web 服務和網頁給內部網路和網際網路使用者的電腦。

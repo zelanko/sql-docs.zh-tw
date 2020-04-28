@@ -15,10 +15,10 @@ ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f01656c93d6699403657e970034076200255d0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76928012"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog 屬性範例 (VC++)

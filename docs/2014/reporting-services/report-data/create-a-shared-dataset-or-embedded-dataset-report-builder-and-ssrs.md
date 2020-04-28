@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 644fa33aa0a9fd8bd51521270cfb89636ac63791
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173188"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
@@ -43,13 +43,12 @@ ms.locfileid: "78173188"
 
 ### <a name="to-open-report-builder-and-create-a-shared-dataset"></a>若要開啟報表產生器，並建立共用資料集
 
-1.  開啟報表產生器。 
-  **[新增報表或資料集]** 窗格隨即開啟，如下圖所示：
+1.  開啟報表產生器。 **[新增報表或資料集]** 窗格隨即開啟，如下圖所示：
 
      ![rs_NewSharedDataset](../media/rs-newshareddataset.gif "rs_NewSharedDataset")
 
     > [!NOTE]
-    >  如果 [New report or dataset pane (新增報表或資料集窗格)]**** 未出現，請從 [報表產生器] 按鈕按一下 [新增]****。
+    >   如果 **[新增報表或資料集]** 窗格未出現，請從 [報表產生器] 按鈕按一下 **[新增]**。
 
 2.  在左窗格的 **[建立資料集]** 底下，按一下 **[共用資料集]**。
 
@@ -57,7 +56,7 @@ ms.locfileid: "78173188"
 
 4.  在查詢設計工具中，指定要併入資料集的欄位。
 
-5.  按一下 **「執行」** (**!**) 來執行查詢。
+5.  按一下 [**執行**] （**！**）來執行查詢。
 
 6.  在 **[報表產生器]** 按鈕上，按一下 **[儲存]** 或 **[另存新檔]** ，將共用資料集儲存在報表伺服器上。
 
@@ -67,7 +66,7 @@ ms.locfileid: "78173188"
 
 1.  開啟報表產生器。
 
-2.  按一下 **[開啟]** 。
+2.  按一下 [開啟]  。
 
 3.  瀏覽至報表伺服器，並選取共用資料來源的資料夾。
 
@@ -77,15 +76,14 @@ ms.locfileid: "78173188"
 
 6.  在功能區上，按一下 **[資料集屬性]**。
 
-7.  按一下 **[參數]** 。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]****。 如需詳細資訊，請參閱[資料集屬性對話方塊、參數 &#40;報表產生器&#41;](../dataset-properties-dialog-box-parameters-report-builder.md)。
+7.  按一下 **[參數]**。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]****。 如需詳細資訊，請參閱[資料集屬性對話方塊、參數 &#40;報表產生器&#41;](../dataset-properties-dialog-box-parameters-report-builder.md)。
 
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]
 
 
 ### <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>若要從 SQL Server 關聯式資料庫建立資料集
 
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源的名稱，然後按一下 **[加入資料集]**。 
-  **[資料集屬性]** 對話方塊的 **[查詢]** 頁面隨即開啟。
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源的名稱，然後按一下 **[加入資料集]**。 **[資料集屬性]** 對話方塊的 **[查詢]** 頁面隨即開啟。
 
 2.  在 **[名稱]** 中，輸入資料集名稱或是接受預設名稱。
 

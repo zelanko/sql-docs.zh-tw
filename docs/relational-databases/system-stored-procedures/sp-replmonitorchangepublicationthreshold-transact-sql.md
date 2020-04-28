@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322223"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -63,14 +63,14 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id`這是要變更之發行集臨界值標準的識別碼。 *metric_id*是**int**，預設值是 Null，它可以是下列值之一。  
   
-|值|度量名稱|  
+|值|標準名稱|  
 |-----------|-----------------|  
-|**1**|**到期**-監視交易式發行集的訂閱是否即將到期。|  
-|**2**|**延遲**-監視交易式發行集之訂閱的效能。|  
-|**4**|**mergeexpiration** -監視合併式發行集的訂閱是否即將到期。|  
-|**第**|**mergeslowrunduration** -監視透過低頻寬（撥號）連接進行合併同步處理的持續時間。|  
+|**1**|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
+|**2**|**latency** - 監視交易式發行集的訂閱效能。|  
+|**4**|**mergeexpiration** - 監視合併式發行集的訂閱是否即將到期。|  
+|**5**|**mergeslowrunduration** -監視透過低頻寬（撥號）連接進行合併同步處理的持續時間。|  
 |**6**|**mergefastrunduration 利用**-監視透過高頻寬區域網路（LAN）連接進行合併同步處理的持續時間。|  
-|**utf-7**|**mergefastrunspeed 利用**-監視透過高頻寬（LAN）連接進行合併同步處理的同步處理速率。|  
+|**7**|**mergefastrunspeed** - 監視透過高頻寬 (LAN) 連接進行合併同步處理的同步處理速率。|  
 |**8**|**mergeslowrunspeed** -監視透過低頻寬（撥號）連接進行合併同步處理的同步處理速率。|  
   
  您必須指定*metric_id*或*thresholdmetricname*。 如果指定*thresholdmetricname* ，則*METRIC_ID*應該是 Null。  

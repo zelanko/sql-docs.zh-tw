@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971397"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>在原生模式報表伺服器上授與權限
@@ -41,7 +41,7 @@ ms.locfileid: "76971397"
   
 1.  檢閱預先定義的角色來判斷您是否能夠依原狀使用它們。 如果您需要調整工作或定義其他角色，就應該先進行這些作業，然後再指派使用者至特定角色。 如需各個角色的詳細資訊，請參閱 [Predefined Roles](role-definitions-predefined-roles.md)。  
   
-2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]** 。  
+2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]**。  
   
 3.  您可以使用報表管理員，針對需要存取權的每個使用者或群組，指派 [主資料夾] 資料夾 (這是報表伺服器資料夾階層的最上層資料夾) 的角色。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "76971397"
 |報表管理員 - 用於指派使用者和群組給角色。|[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [修改或刪除角色指派 &#40;報表管理員&#41;](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Predefined Roles](role-definitions-predefined-roles.md)   
- [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [預先定義的角色](role-definitions-predefined-roles.md)   
+ [授與 SharePoint 網站上報表伺服器專案的許可權](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [使用報表伺服器驗證](authentication-with-the-report-server.md)   
  （create-and-manage-role-assignments.md）   
- [Reporting Services 安全性與保護](reporting-services-security-and-protection.md)   
+ [Reporting Services 的安全性與保護](reporting-services-security-and-protection.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

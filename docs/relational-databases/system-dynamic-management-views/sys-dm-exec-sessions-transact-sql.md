@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76516266"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
@@ -44,13 +44,13 @@ ms.locfileid: "76516266"
 |program_name|**nvarchar(128)**|起始工作階段的用戶端程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |host_process_id|**int**|起始工作階段之用戶端程式的處理序識別碼。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_version|**int**|用戶端連接伺服器所用介面的 TDS 通訊協定版本。 內部工作階段的值為 NULL。 可為 Null。|  
-|client_interface_name|**Nvarchar （32）**|用戶端用來與伺服器通訊的程式庫/驅動程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
+|client_interface_name|**nvarchar(32)**|用戶端用來與伺服器通訊的程式庫/驅動程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |security_id|**Varbinary （85）**|與登入相關聯之 Microsoft Windows 安全性識別碼。 不可為 Null。|  
 |login_name|**nvarchar(128)**|目前用來執行工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的登入名稱或 Windows 驗證的網域使用者名稱。 不可為 Null。|  
 |nt_domain|**nvarchar(128)**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 用戶端的 Windows 網域 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |nt_user_name|**nvarchar(128)**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 用戶端的 Windows 使用者名稱 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
-|status|**Nvarchar （30）**|工作階段的狀態。 可能的值：<br /><br /> 執行**中-目前正在執行**一或多個要求<br /><br /> **睡眠**-目前不執行任何要求<br /><br /> **休眠**-會話已因連接共用而重設，且目前處於預先登入狀態。<br /><br /> **Preconnect** -會話位於 Resource Governor 分類器中。<br /><br /> 不可為 Null。|  
-|context_info|**Varbinary （128）**|工作階段的 CONTEXT_INFO 值。 內容資訊是由使用者使用[set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)語句來設定。 可為 Null。|  
+|status|**nvarchar(30)**|工作階段的狀態。 可能的值：<br /><br /> **執行中** - 目前執行一或多項要求<br /><br /> **睡眠中** - 目前不執行任何要求<br /><br /> **休眠**-會話已因連接共用而重設，且目前處於預先登入狀態。<br /><br /> **Preconnect** - 工作階段在資源管理員類別器中。<br /><br /> 不可為 Null。|  
+|context_info|**varbinary(128)**|工作階段的 CONTEXT_INFO 值。 內容資訊是由使用者使用[set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)語句來設定。 可為 Null。|  
 |cpu_time|**int**|工作階段所使用的 CPU 時間，以毫秒為單位。 不可為 Null。|  
 |memory_usage|**int**|此工作階段所用記憶體的 8 KB 頁數。 不可為 Null。|  
 |total_scheduled_time|**int**|工作階段 (內含要求) 排程執行的總時間，以毫秒為單位。 不可為 Null。|  
@@ -58,9 +58,9 @@ ms.locfileid: "76516266"
 |endpoint_id|**int**|工作階段所關聯的端點識別碼。 不可為 Null。|  
 |last_request_start_time|**datetime**|工作階段最後一項要求的開始時間。 其中包括目前在執行的要求。 不可為 Null。|  
 |last_request_end_time|**datetime**|工作階段要求最後完成的時間。 可為 Null。|  
-|reads|**Bigint**|在此工作階段期間，此工作階段的要求所執行的讀取次數。 不可為 Null。|  
-|writes|**Bigint**|在此工作階段期間，此工作階段的要求所執行的寫入次數。 不可為 Null。|  
-|logical_reads|**Bigint**|工作階段所執行的邏輯讀取數。 不可為 Null。|  
+|reads|**bigint**|在此工作階段期間，此工作階段的要求所執行的讀取次數。 不可為 Null。|  
+|writes|**bigint**|在此工作階段期間，此工作階段的要求所執行的寫入次數。 不可為 Null。|  
+|logical_reads|**bigint**|工作階段所執行的邏輯讀取數。 不可為 Null。|  
 |is_user_process|**bit**|如果工作階段是系統工作階段，便是 0。 否則，便為 1。 不可為 Null。|  
 |text_size|**int**|工作階段的 TEXTSIZE 設定。 不可為 Null。|  
 |語言|**nvarchar(128)**|工作階段的 LANGUAGE 設定。 可為 Null。|  
@@ -77,19 +77,19 @@ ms.locfileid: "76516266"
 |transaction_isolation_level|**smallint**|工作階段的交易隔離等級。<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncommitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = RepeatableRead<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot<br /><br /> 不可為 Null。|  
 |lock_timeout|**int**|工作階段的 LOCK_TIMEOUT 設定。 值會以毫秒來表示。 不可為 Null。|  
 |deadlock_priority|**int**|工作階段的 DEADLOCK_PRIORITY 設定。 不可為 Null。|  
-|row_count|**Bigint**|到目前為止，工作階段傳回的資料列數。 不可為 Null。|  
+|row_count|**bigint**|到目前為止，工作階段傳回的資料列數。 不可為 Null。|  
 |prev_error|**int**|在工作階段傳回的最後一個錯誤的識別碼。 不可為 Null。|  
 |original_security_id|**Varbinary （85）**|與 original_login_name 相關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全性識別碼。 不可為 Null。|  
 |original_login_name|**nvarchar(128)**|用戶端建立此工作階段所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 這可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入名稱、Windows 驗證網域使用者名稱或自主資料庫使用者。 請注意，在初始連接之後，工作階段可能已經歷過多次隱含或明確內容切換。 例如，如果使用[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ，則為。 不可為 Null。|  
 |last_successful_logon|**datetime**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 目前工作階段開始之前，original_login_name 上一次登入成功的時間。|  
 |last_unsuccessful_logon|**datetime**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 目前工作階段開始之前，original_login_name 上一次登入不成功的時間。|  
-|unsuccessful_logons|**Bigint**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 在 last_successful_logon 與 login_time 之間，original_login_name 嘗試登入不成功的次數。|  
+|unsuccessful_logons|**bigint**|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 在 last_successful_logon 與 login_time 之間，original_login_name 嘗試登入不成功的次數。|  
 |group_id|**int**|這個工作階段所屬之工作負載群組的識別碼。 不可為 Null。|  
 |database_id|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 每個工作階段之目前資料庫的識別碼。|  
 |authenticating_database_id|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 驗證主體之資料庫的識別碼。 如果是登入，此值會是 0。 如果是自主資料庫使用者，此值會是自主資料庫的資料庫識別碼。|  
 |open_transaction_count|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 每個工作階段的開啟交易數目。|  
 |pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
-|page_server_reads|**Bigint**|**適用于**： Azure SQL Database 超大規模資料庫<br /><br /> 在此會話期間，此會話中的要求所執行的頁面伺服器讀取數目。 不可為 Null。|  
+|page_server_reads|**bigint**|**適用于**： Azure SQL Database 超大規模資料庫<br /><br /> 在此會話期間，此會話中的要求所執行的頁面伺服器讀取數目。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  
 每個人都可以看到自己的會話資訊。  
@@ -184,8 +184,8 @@ WHERE c.session_id = @@SPID;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

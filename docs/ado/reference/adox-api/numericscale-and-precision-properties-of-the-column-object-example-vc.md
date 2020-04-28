@@ -16,10 +16,10 @@ ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc6dac85217a3f815511fa94e19a9adccc1f2ba1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918404"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column 物件的 NumericScale 和 Precision 屬性範例 (VC++)

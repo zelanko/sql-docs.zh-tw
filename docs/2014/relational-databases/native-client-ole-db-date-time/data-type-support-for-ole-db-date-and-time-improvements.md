@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82d8de1aa71507b8d1397befc287041def1ab839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929543"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>對 OLE DB 日期和時間改善的資料類型支援
@@ -26,7 +26,7 @@ ms.locfileid: "76929543"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應  
  OLE DB 提供兩種新的資料類型來支援新的伺服器類型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表顯示完整伺服器類型的對應：  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|OLE DB 資料類型|值|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|值|  
 |-----------------------------------------|----------------------|-----------|  
 |Datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -37,7 +37,7 @@ ms.locfileid: "76929543"
   
 ## <a name="data-formats-strings-and-literals"></a>資料格式：字串和常值  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|OLE DB 資料類型|用於用戶端轉換的字串格式|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|用於用戶端轉換的字串格式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
 |Datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 針對 Datetime，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多支援三個小數秒位數。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此資料類型的精確度為一分鐘。 輸出時，秒數元件為零，而在輸入時，將會由伺服器捨去。|  
@@ -156,7 +156,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 如果基礎結構描述更新為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而非 `sql_variant`，將需要更新移轉至使用 `datetime` 並依賴 `datetime2` 限制有效位數之 `datetime` Native Client 的應用程式。  
+ 如果基礎結構描述更新為使用 `sql_variant` 而非 `datetime`，將需要更新移轉至使用 `datetime2` 並依賴 `datetime` 限制有效位數之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的應用程式。  
   
  SSVARIANT 的存取巨集也已經透過加入下列項目來擴充：  
   
@@ -168,18 +168,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的資料類型對應  
- 下列類型對應會與 ITableDefinition：： CreateTable 所使用的 DBCOLUMNDESC 結構搭配使用：  
+ 下列類型對應會搭配 ITableDefinition::CreateTable 所使用的 DBCOLUMNDESC 結構使用：  
   
-|OLE DB 資料類型（*wType*）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|注意|  
+|OLE DB 資料類型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|注意|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`p&id|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
-|DBTYPE_DBTIME2|`time`p&id|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`p&id|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
+|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
   
  當應用程式在*wType*中指定 DBTYPE_DBTIMESTAMP 時，它可以藉`datetime2`由在*pwszTypeName*中提供類型名稱來覆寫的對應。 如果`datetime`指定了， *bScale*必須是3。 如果`smalldatetime`指定了， *bScale*必須是0。 如果*bScale*與*wType*和*pwszTypeName*不一致，則會傳回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;OLE DB 的日期和時間改善&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和時間改善 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

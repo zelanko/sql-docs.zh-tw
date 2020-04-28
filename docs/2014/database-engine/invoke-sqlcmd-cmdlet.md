@@ -16,19 +16,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76928030"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
-  **Invoke-Sqlcmd**是執行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]腳本的 Cmdlet，其中包含來自**Sqlcmd**公用程式所[!INCLUDE[tsql](../includes/tsql-md.md)]支援之語言（和 XQuery）和命令的語句。  
+  **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 **sqlcmd** 公用程式所支援之語言 ([!INCLUDE[tsql](../includes/tsql-md.md)] 及 XQuery) 與命令的陳述式。  
   
 ## <a name="using-invoke-sqlcmd"></a>使用 Invoke-Sqlcmd  
- 
-  **Invoke-Sqlcmd** Cmdlet 可讓您在 Windows PowerShell 環境中執行 **sqlcmd** 指令碼檔案。 
-  **sqlcmd** 可以執行的大多數作業，也可利用 **Invoke-Sqlcmd**進行。  
+ **Invoke-Sqlcmd** Cmdlet 可讓您在 Windows PowerShell 環境中執行 **sqlcmd** 指令碼檔案。 **sqlcmd** 可以執行的大多數作業，也可利用 **Invoke-Sqlcmd**進行。  
   
  這是呼叫 Invoke-Sqlcmd 執行簡單查詢的範例，類似於指定 **sqlcmd** 且使用 **-Q** 和 **-S** 選項：  
   
@@ -91,14 +89,13 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
  當 Invoke-Sqlcmd 使用路徑資料庫內容時，它會提供警告。 您可以使用 -SuppressProviderContextWarning 參數來關閉警告訊息。 您可以使用 -IgnoreProviderContext 參數來告知 Invoke-Sqlcmd 一律使用預設資料庫進行登入。  
   
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>比較 Invoke-Sqlcmd 和 sqlcmd 公用程式  
- **Invoke-sqlcmd**可以用來執行可使用**sqlcmd**公用程式執行的許多腳本。 但是， **Invoke-Sqlcmd** 執行所在的 Windows PowerShell 環境，與 **sqlcmd** 執行所在的命令提示字元環境不同。 
-  **Invoke-Sqlcmd** 的行為已經過修改，可在 Windows PowerShell 環境中工作。  
+ **Invoke-Sqlcmd** 可用於執行可使用 **sqlcmd** 公用程式執行的許多指令碼。 但是， **Invoke-Sqlcmd** 執行所在的 Windows PowerShell 環境，與 **sqlcmd** 執行所在的命令提示字元環境不同。 **Invoke-Sqlcmd** 的行為已經過修改，可在 Windows PowerShell 環境中工作。  
   
  並非所有的 **sqlcmd** 命令都實作於 **Invoke-Sqlcmd**中。 未實作的命令包含以下項目： **:!!**、 **:connect**、 **:error**、 **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace**和 **:serverlist**。  
   
- **Invoke-sqlcmd**不會初始化**sqlcmd**環境或腳本變數，例如 SQLCMDDBNAME 或 SQLCMDWORKSTATION。  
+ **Invoke-Sqlcmd** 不會初始化 **sqlcmd** 環境或指令碼變數，例如 SQLCMDDBNAME 或 SQLCMDWORKSTATION。  
   
- **Invoke-Sqlcmd**不會顯示訊息（例如 PRINT 語句的輸出），除非您指定 Windows PowerShell **-Verbose**一般參數。 例如：  
+ **Invoke-Sqlcmd** 不會顯示訊息 (例如 PRINT 陳述式的輸出)，除非您指定 Windows PowerShell **-Verbose** 一般參數。 例如：  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -111,9 +108,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |伺服器和執行個體名稱。|-S|-ServerInstance|  
 |要使用的初始資料庫。|-d|-Database|  
 |執行指定的查詢並結束。|-Q|-Query|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入識別碼。|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證密碼。|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入識別碼。|-U|-Username|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證密碼。|-P|-Password|  
 |變數定義。|-v|-Variable|  
 |查詢逾時間隔。|-t|-QueryTimeout|  
 |發生錯誤時停止執行|-b|-AbortOnError|  
@@ -132,12 +128,12 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |顯示錯誤|無參數|-OutputSqlErrors|  
 |輸出訊息至 stderr。|-r|無參數|  
 |使用用戶端的地區設定|-R|無參數|  
-|執行指定的查詢並維持執行中狀態。|-q|無參數|  
+|執行指定的查詢並維持執行中狀態。|-Q|無參數|  
 |用於輸出資料的字碼頁。|-f|無參數|  
 |變更密碼並維持執行中狀態|-Z|無參數|  
 |封包大小|-a|無參數|  
-|資料行分隔符號|-s|無參數|  
-|控制項輸出標頭|-h|無參數|  
+|資料行分隔符號|-S|無參數|  
+|控制項輸出標頭|-H|無參數|  
 |指定控制字元|-k|無參數|  
 |固定長度的顯示寬度|-y|無參數|  
 |變動長度的顯示寬度|-y|無參數|  

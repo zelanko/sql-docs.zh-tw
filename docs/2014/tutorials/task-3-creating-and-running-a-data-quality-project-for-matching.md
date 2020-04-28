@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171767"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>工作 3：建立及執行資料品質專案以進行比對
@@ -26,7 +26,7 @@ ms.locfileid: "78171767"
 
 3.  從 [**使用知識庫**] 欄位的 kb 清單中選取 [**供應商**]。 在上一課，您已經在此知識庫中建立比對原則。
 
-4.  從右下方的 [**活動] 清單**中選取 [比對]。 ****
+4.  從右下方的 [**活動] 清單**中選取 [比對]。 **Matching**
 
      ![新增資料品質專案 - 已選取 [比對]](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "新增資料品質專案 - 已選取 [比對]")
 

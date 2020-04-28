@@ -159,10 +159,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a639fa3dcdc6f87f1b7f81cb724ec04020a8f51e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172627"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
@@ -180,7 +180,7 @@ ms.locfileid: "78172627"
 
  ![量測計元素圖表](../media/gauge-elements-diagram.gif "量測計元素圖表")
 
- 如需使用量測計作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。
+ 如需使用量測計作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。
 
 > [!NOTE]
 >  您可以將量測計當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]
@@ -188,9 +188,8 @@ ms.locfileid: "78172627"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="GaugeTypes"></a>量測計類型
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供兩種量測計類型：星形和線性。 星形量測計通常是在您想要將資料表示為速度時使用。 線性量測計則用來將資料表示為溫度或標尺值。
+##  <a name="gauge-types"></a><a name="GaugeTypes"></a>量測計類型
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供兩種量測計類型：星形和線性。 星形量測計通常是在您想要將資料表示為速度時使用。 線性量測計則用來將資料表示為溫度或標尺值。
 
  兩個類型之間的主要差異在於量測計的整體圖案和可用的量測計指標。 星形量測計是圓形，或圓形的度數，類似於里程計。 量測計指標通常是指針，但可以是標記或橫條。
 
@@ -213,7 +212,7 @@ ms.locfileid: "78172627"
  線性量測計選項：水平、垂直、多橫條指標、雙標尺、三色範圍、對數、溫度計、華氏/攝氏溫度計以及項目符號圖表。
 
 
-##  <a name="AddingData"></a>將資料加入至量測計
+##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> 將資料加入至量測計
  將量測計加入至設計介面之後，將資料集欄位拖曳到量測計資料窗格中。 量測計預設會將欄位值彙總為量測計上顯示的一個值。 您可以使用 Value 屬性，將該值附加至指標中。 根據欄位的資料類型，量測計會使用 SUM 或 COUNT 彙總。 當您使用適合加法的數值資料時，量測計會使用 SUM 函數。 否則，它會使用 COUNT 彙總。 指標的值可以使用不同的彙總或不使用彙總。
 
  您可以將群組加入到量測計中，以便在量測計上檢視個別的群組或個別的資料列。 套用群組和篩選後，量測計會使用指標值來顯示傳回之資料集中的最後一個群組或資料列。
@@ -256,7 +255,7 @@ ms.locfileid: "78172627"
  您可以在量測值上加入群組，例如，當您要在資料表或清單中顯示多個量測計，而且您想要顯示依群組彙總的資料時。 如需詳細資訊，請參閱[在資料區域中新增或刪除群組 &#40;報表產生器和 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。
 
 
-##  <a name="PositioningData"></a>將元素放置在量測計中
+##  <a name="positioning-elements-in-a-gauge"></a><a name="PositioningData"></a>將元素放置在量測計中
  量測計面板是最上層的容器，其中保存一個或多個量測計。 您只要按一下量測計的外部，就可以檢視 **[量測計面板屬性]** 對話方塊。 每個量測計都會依序包含數個量測計項目：量測計標尺、量測計範圍，以及量測計指標。 當您要使用量測計時，需要了解如何在量測計面板中測量項目，以修改這些項目的大小與位置。
 
 ### <a name="understanding-size-and-position-measurements"></a>了解大小與位置的測量
@@ -269,8 +268,7 @@ ms.locfileid: "78172627"
 
  當新的量測計加入到量測計面板時，該量測計會被調整大小並以量測計面板中其他所有量測計的等比例放置。 例如，如果將星形量測計加入到已經包含星形量測計的量測計面板中，將會自動調整兩個量測計的大小，讓每個量測計各佔面板的一半位置。
 
- 您可以將新的量測計加入到已經包含量測計的量測計面板中。 若要這樣做，以滑鼠右鍵按一下量測計面板上的任何位置，將滑鼠停留在 **[加入新量測計]** ，然後選取 **[子系]**。 
-  **[選取量測計類型]** 對話方塊將會出現。 當新的量測計當做子系加入時，則會以下列其中一種方式加入。 在星形量測計中，子量測計會放在第一個量測計的左上角。 在線性量測計中，子量測計會放在第一個量測計的中間。 您可以使用 [位置] 屬性，將子量測計放置在相對於父量測計的位置。 如同其他所有元素，位置的量值會以其父元素的百分比計算。
+ 您可以將新的量測計加入到已經包含量測計的量測計面板中。 若要這樣做，以滑鼠右鍵按一下量測計面板上的任何位置，將滑鼠停留在 **[加入新量測計]** ，然後選取 **[子系]**。 **[選取量測計類型]** 對話方塊將會出現。 當新的量測計當做子系加入時，則會以下列其中一種方式加入。 在星形量測計中，子量測計會放在第一個量測計的左上角。 在線性量測計中，子量測計會放在第一個量測計的中間。 您可以使用 [位置] 屬性，將子量測計放置在相對於父量測計的位置。 如同其他所有元素，位置的量值會以其父元素的百分比計算。
 
 ### <a name="positioning-gauge-scale-labels-and-gauge-ranges"></a>放置量測計標尺標籤與量測計範圍
  有兩個屬性可以決定標籤在量測計標尺上的位置。 您可以設定量測計標尺的 **[位置]** 屬性，以指定標籤要顯示在標尺列內部、外部，還是跨標尺列顯示。 您也可以指定 **[距標尺距離]** 屬性的數值，這會指定從位置增加或減少的單位數以決定標籤位置。 例如，如果 **[位置]** 設定為 **[外部]** ，而且您已經將 **[距標尺距離]** 設定為 10，這些標籤將放置在距量測計標尺外緣 10 個單位處，其中 1 個單位為：
@@ -279,17 +277,16 @@ ms.locfileid: "78172627"
 
 -   線性量測計之量測計高度或寬度最小值的 1%。
 
- 
-  **[位置]** 和 **[距標尺距離]** 屬性也適用於量測計範圍。
+ **[位置]** 和 **[距標尺距離]** 屬性也適用於量測計範圍。
 
 ### <a name="maintaining-aspect-ratio-on-a-linear-gauge"></a>維持線性量測計的外觀比例
  星形量測計假設為圓形形式，因此，此量測計類型通常會維持相同的寬度和高度值。 不過，線性量測計假設為矩形形式，寬度和高度間的比例通常不平均。 量測計的外觀比例會決定調整量測計大小時，應該維持之寬度對高度的比例。 例如，如果此值設定為 2，不論如何調整量測計的大小，量測計的寬度將永遠為量測計高度的兩倍。 若要設定外觀比例，您可以從 [線性量測計屬性]**** 對話方塊設定 AspectRatio 屬性。
 
 
-##  <a name="HowTo"></a> 如何主題
+##  <a name="how-to-topics"></a><a name="HowTo"></a>How To 主題
  本節列出向您逐步示範如何使用報表中的量測計；如果取得資料以便在量測計中有效顯示；以及如何加入與設定量測計及其元素的程序。
 
--   [將量測計加入報表 &#40;報表產生器和 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)
+-   [將量測計加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)
 
 -   [設定量測計的最小值或最大值 &#40;報表產生器及 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)
 
@@ -298,7 +295,7 @@ ms.locfileid: "78172627"
 -   [將影像指定為量測計 &#40;報表產生器和 SSRS 的指標&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)
 
 
-##  <a name="InThisSection"></a> 本節內容
+##  <a name="in-this-section"></a><a name="InThisSection"></a>本節內容
  下列主題會提供有關使用量測計的其他資訊。
 
 |||
@@ -306,7 +303,7 @@ ms.locfileid: "78172627"
 |詞彙|定義|
 |[格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之標尺的一般資訊，以及有關格式化星形與線性量測計上標尺之選項的詳細資訊。|
 |[格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之指標的一般資訊，以及有關格式化星形與線性量測計上可用指標樣式之選項的詳細資訊。|
-|[格式化量測計上的範圍 &#40;報表產生器和 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|
+|[格式化量測計上的範圍 &#40;報表產生器及 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|
 
 
 ## <a name="see-also"></a>另請參閱

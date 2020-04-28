@@ -15,10 +15,10 @@ ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e119dba2a24df76a918e87a6a5a28d66e381400
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929425"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 屬性範例 (VC++)

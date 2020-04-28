@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a5229f0f26dfe701a425653b3d7f5a4ece842
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171927"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>狀態選項 (Distributed Replay 管理工具)
@@ -22,7 +22,7 @@ ms.locfileid: "78171927"
 
  **status** 選項會查詢控制器，並顯示目前的狀態。
 
- ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示") 如需搭配系統管理工具語法使用的語法慣例詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。
+ ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。
 
 ## <a name="syntax"></a>語法
 
@@ -41,8 +41,7 @@ dreplay status [-mcontroller] [-fstatus_interval]
  如果未指定 **-f** 參數，預設間隔為 30 秒。
 
 ## <a name="examples"></a>範例
- 在下列範例中，每隔 60 秒顯示目前狀態。 
-  `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。
+ 在下列範例中，每隔 60 秒顯示目前狀態。 `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。
 
 ```
 dreplay status -m localhost -f 60
