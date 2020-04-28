@@ -1,5 +1,5 @@
 ---
-title: 儲存過程,ODBC 呼叫輸出
+title: 預存程式、ODBC 呼叫、輸出
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e50e3937137b44c273d10914968dde2cfefdc5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302211"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 及處理輸出執行預存程序

@@ -1,5 +1,5 @@
 ---
-title: ODBC 中的交易 |微軟文件
+title: ODBC 中的交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 093eae04962409b5ac426713aedc74aa1bd0703b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303646"
 ---
 # <a name="performing-transactions-in-odbc"></a>在 ODBC 中執行交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ODBC 中的交易會在連接層級進行管理。 當應用程式完成交易時，它會認可或回復透過該連接之所有陳述式控制代碼完成的所有工作。 要提交或回滾事務,應用程式應呼叫[SQLEndTran 而不是](../../../relational-databases/native-client-odbc-api/sqlendtran.md)提交 COMMIT 或 ROLLBACK 語句。  
+  ODBC 中的交易會在連接層級進行管理。 當應用程式完成交易時，它會認可或回復透過該連接之所有陳述式控制代碼完成的所有工作。 若要認可或回復交易，應用程式應該呼叫[SQLEndTran](../../../relational-databases/native-client-odbc-api/sqlendtran.md) ，而不是提交 COMMIT 或 ROLLBACK 語句。  
   
- 應用程式呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)在管理事務的兩種 ODBC 模式之間切換:  
+ 應用程式會呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以便在管理交易的兩個 ODBC 模式之間切換：  
   
 -   自動認可模式  
   
@@ -35,15 +35,15 @@ ms.locfileid: "81303646"
   
 -   手動認可模式  
   
-     所有執行的語句都包含在同一事務中,直到通過調用**SQLEndTran**專門停止為止。  
+     所有執行的語句都會包含在相同的交易中，直到藉由呼叫**SQLEndTran**特別停止為止。  
   
- 自動認可模式是 ODBC 的預設交易模式。 建立連接時,它處於自動提交模式,直到調用**SQLSetConnectAttr**通過關閉自動提交模式來切換到手動提交模式。 當應用程式關閉自動認可時，傳送到資料庫的下一個陳述式會啟動交易。 然後,事務將保持有效,直到應用程式使用SQL_COMMIT或SQL_ROLLBACK選項調用**SQLEndTran。** **SQLEndTran**啟動下一個事務後發送到資料庫的命令。  
+ 自動認可模式是 ODBC 的預設交易模式。 建立連線時，它會處於自動認可模式，直到呼叫**SQLSetConnectAttr** ，藉由設定自動認可模式來切換為手動認可模式。 當應用程式關閉自動認可時，傳送到資料庫的下一個陳述式會啟動交易。 然後，交易會維持有效，直到應用程式使用 SQL_COMMIT 或 SQL_ROLLBACK 選項呼叫**SQLEndTran**為止。 **SQLEndTran**啟動下一個交易之後，傳送至資料庫的命令。  
   
  如果應用程式從手動認可模式切換到自動認可模式，驅動程式會認可目前在連接上開啟的所有交易。  
   
- ODBC 應用程式不應使用 Transact-SQL 交易陳述式 (例如，BEGIN TRANSACTION、COMMIT TRANSACTION 或 ROLLBACK TRANSACTION)，因為這可能會在驅動程式上造成未定的行為。 ODBC 應用程式應在自動提交模式下運行,不使用任何事務管理函數或語句,或在手動提交模式下運行,並使用 ODBC **SQLEndTran**函數提交或回滾事務。  
+ ODBC 應用程式不應使用 Transact-SQL 交易陳述式 (例如，BEGIN TRANSACTION、COMMIT TRANSACTION 或 ROLLBACK TRANSACTION)，因為這可能會在驅動程式上造成未定的行為。 ODBC 應用程式應該在自動認可模式中執行，而不是使用任何交易管理函數或語句，或在手動認可模式下執行，並使用 ODBC **SQLEndTran**函數來認可或回復交易。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行交易&#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+ [&#40;ODBC&#41;執行交易](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

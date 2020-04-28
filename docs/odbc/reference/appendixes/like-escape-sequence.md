@@ -1,5 +1,5 @@
 ---
-title: 喜歡轉義序列 |微軟文件
+title: LIKE Escape 序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 517c21f7b64fa7ceb662af9839a9fed1a1e6eff6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304919"
 ---
 # <a name="like-escape-sequence"></a>LIKE 逸出序列
-ODBC 使用 LIKE 子句的轉義序列。 此逸出序列的語法如下:  
+ODBC 會針對 LIKE 子句使用 escape 序列。 此 escape 序列的語法如下：  
   
 ```  
 {'escape-character'}  
 ```  
   
 ## <a name="remarks"></a>備註  
- 在 BNF 符號中,語法如下所示:  
+ 在 BNF 標記法中，語法如下所示：  
   
- *ODBC 類似轉義*::*  
+ *類似 ODBC 的-escape* ：： =  
   
- *ODBC-esc-發端器*逃生'*逃生字元**'ODBC-esc終結器*  
+ *Odbc-esc-啟動器*escape '*escape-字元*' *ODBC-esc-結束字元*  
   
- *轉義字元*::**字元*  
+ *escape 字元*：： =*字元*  
   
- *ODBC-esc -發物人*::*  
+ *ODBC-esc-啟動器*：： = {  
   
- *ODBC-esc 終結器*:*|  
+ *ODBC-esc-結束字元*：： =}  
   
- 要確定驅動程式是否支援 LIKE 轉義序列,應用程式可以使用SQL_LIKE_ESCAPE_CLAUSE資訊類型調用**SQLGetInfo。**
+ 若要判斷驅動程式是否支援 LIKE 逸出序列，應用程式可以使用 SQL_LIKE_ESCAPE_CLAUSE 資訊類型來呼叫**SQLGetInfo** 。

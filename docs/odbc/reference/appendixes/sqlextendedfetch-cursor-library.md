@@ -1,5 +1,5 @@
 ---
-title: SQL 延伸取得(游標庫) |微軟文件
+title: SQLExtendedFetch （資料指標程式庫） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: fe39b2d2cbbaf72ce3844c35187040589d1dac58
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302059"
 ---
 # <a name="sqlextendedfetch-cursor-library"></a>SQLExtendedFetch (資料指標程式庫)
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 本主題討論在游標庫中使用**SQL 擴展獲取**函數。 有關 SQL**擴充取得**的一般資訊,請參考[SQL 擴充取得函數](../../../odbc/reference/syntax/sqlextendedfetch-function.md)。  
+ 本主題討論如何在資料指標程式庫中使用**SQLExtendedFetch**函數。 如需有關**SQLExtendedFetch**的一般資訊，請參閱[SQLExtendedFetch 函數](../../../odbc/reference/syntax/sqlextendedfetch-function.md)。  
   
- 游標庫透過在驅動程式中重複調用**SQLFetch**實現**SQL 擴展。**  
+ 資料指標程式庫會藉由重複呼叫驅動程式中的**SQLFetch**來執行**SQLExtendedFetch** 。  
   
- 游標庫支援使用SQL_FETCH_BOOKMARK*的提取方向*呼叫**SQL 延伸 。**  
+ 資料指標程式庫支援以 SQL_FETCH_BOOKMARK 的*FetchOrientation*呼叫**SQLExtendedFetch** 。  
   
- 使用游標庫時,對**SQLAaFetch 的**調用不能與**SQLFetchScroll 或** **SQLFetch**的調用混合。
+ 使用資料指標程式庫時， **SQLExtendedFetch**的呼叫不能與**SQLFetchScroll**或**SQLFetch**的呼叫混合使用。

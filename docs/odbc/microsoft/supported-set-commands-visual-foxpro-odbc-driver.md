@@ -1,5 +1,5 @@
 ---
-title: 支援的 SET 命令(可視化福克斯 Pro ODBC 驅動程式) |微軟文件
+title: 支援的 SET 命令（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303129"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>支援的 SET 命令 (Visual FoxPro ODBC Driver)
-您的應用程式可以將以下 Visual FoxPro **SET**命令傳送到資料來源:  
+您的應用程式可以將下列 Visual FoxPro **SET**命令傳送至資料來源：  
   
- [SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
+ [設定 ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [設定區塊大小](../../odbc/microsoft/set-blocksize-command.md)  
+ [設定區塊](../../odbc/microsoft/set-blocksize-command.md)  
   
- [設定準則](../../odbc/microsoft/set-collate-command.md)  
+ [設定 COLLATE](../../odbc/microsoft/set-collate-command.md)  
   
- [設定刪除](../../odbc/microsoft/set-deleted-command.md)  
+ [設定已刪除](../../odbc/microsoft/set-deleted-command.md)  
   
  [設定精確](../../odbc/microsoft/set-exact-command.md)  
   

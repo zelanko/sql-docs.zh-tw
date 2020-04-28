@@ -1,5 +1,5 @@
 ---
-title: 游標行為 |微軟文件
+title: 資料指標行為 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -22,16 +22,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2e3400e52cd0b7574c07a3cf813b4cbca317df2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305456"
 ---
 # <a name="cursor-behaviors"></a>資料指標行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ODBC 透過指定資料指標的可捲動性和敏感度，支援指定其行為的 ISO 選項。 這些行為是通過在調用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)時設置SQL_ATTR_CURSOR_SCROLLABLE和SQL_ATTR_CURSOR_SENSITIVITY選項來指定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會要求包含下列特性的伺服器資料指標，藉以實作這些選項。  
+  ODBC 透過指定資料指標的可捲動性和敏感度，支援指定其行為的 ISO 選項。 這些行為是藉由在[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)的呼叫上設定 SQL_ATTR_CURSOR_SCROLLABLE 和 SQL_ATTR_CURSOR_SENSITIVITY 選項來指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會要求包含下列特性的伺服器資料指標，藉以實作這些選項。  
   
 |資料指標行為設定|要求的伺服器資料指標特性|  
 |------------------------------|---------------------------------------------|  
@@ -42,15 +42,15 @@ ms.locfileid: "81305456"
 |SQL_NONSCROLLABLE 和 SQL_INSENSITIVE|預設結果集 (順向、唯讀)|  
 |SQL_NONSCROLLABLE 和 SQL_UNSPECIFIED|預設結果集 (順向、唯讀)|  
   
- 基於版本的樂觀併發需要基礎表中**的時間戳**列。 如果在沒有**時間戳**列的表上請求基於版本的樂觀併發控制,則伺服器將使用基於值的樂觀併發。  
+ 以版本為基礎的開放式平行存取需要基礎資料表中的**timestamp**資料行。 如果在沒有**timestamp**資料行的資料表上要求以版本為基礎的開放式並行存取控制，伺服器就會使用以值為基礎的開放式平行存取。  
   
 ## <a name="scrollability"></a>可捲動性  
- 當SQL_ATTR_CURSOR_SCROLLABLE設置為SQL_SCROLLABLE時,游標支援[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的*Fetch 方向*參數的所有不同值。 當SQL_ATTR_CURSOR_SCROLLABLE設置為SQL_NONSCROLLABLE時,游標僅支援"*提取方向"* 值SQL_FETCH_NEXT。  
+ 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_SCROLLABLE 時，資料指標會針對[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的*FetchOrientation*參數支援所有不同的值。 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_NONSCROLLABLE 時，資料指標只支援 SQL_FETCH_NEXT 的*FetchOrientation*值。  
   
 ## <a name="sensitivity"></a>敏感度  
  當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_SENSITIVE 時，資料指標會將目前使用者所進行或其他使用者所認可的資料修改反映出來。 當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_INSENSITIVE 時，資料指標不會反映資料修改。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用游標 (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [游標屬性](properties/cursor-properties.md) 
+ [使用資料指標（ODBC）](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)資料[指標屬性](properties/cursor-properties.md) 
   
   

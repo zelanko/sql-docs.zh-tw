@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption(文字檔案驅動程式) |微軟文件
+title: SQLSetConnectOption （文字檔驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6442134086ea6fe15b393b87d6c80019a076be2a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306133"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (文字檔驅動程式)
 > [!NOTE]  
->  本主題提供特定於文本檔驅動程序的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
+>  本主題提供文字檔驅動程式特定的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
 |fOption|註解|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設置為SQL_MODE_READ_ONLY或SQL_MODE_READ_WRITE。 但是,如果SQL_ACCESS_MODE設置為SQL_MODE_READ_ONLY,則驅動程式不會阻止更新。|  
-|SQL_AUTOCOMMIT|文字驅動程式僅支援SQL_AUTOCOMMIT設定為 ON(預設狀態),因為它們不支援事務。|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設定為 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，如果 SQL_ACCESS_MODE 設定為 SQL_MODE_READ_ONLY，驅動程式不會阻止更新。|  
+|SQL_AUTOCOMMIT|文字驅動程式只支援將 SQL_AUTOCOMMIT 設定為 ON （預設狀態），因為它們不支援交易。|  
 |SQL_CURRENT_QUALIFIER|支援。|  
 |SQL_LOGIN_TIMEOUT|不支援。|  
 |SQL_OPT_TRACE|支援。|  

@@ -1,5 +1,5 @@
 ---
-title: ODBC 用戶端中的服務主體名稱 (SPN)
+title: ODBC 用戶端中的服務主體名稱（Spn）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3f83b227a6f67c5700ff07a0cd9dbc78065adf9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303657"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>用戶端連接 (ODBC) 中的服務主要名稱 (SPN)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 ODBC 屬性和函數。 有關用戶端應用程式中的 SPN 的詳細資訊,請參閱[服務主體名稱&#40;SPN&#41;客户端连接中的支持](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md),以及[取得相互 Kerberos 身份驗證](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md)。  
+  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 ODBC 屬性和函數。 如需有關用戶端應用程式中 Spn 的詳細資訊，請參閱[用戶端連線中的服務主體名稱 &#40;spn&#41; 支援](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)和[取得相互 Kerberos 驗證](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md)。  
   
 ## <a name="connection-string-keywords"></a>連接字串關鍵字  
  下列連接字串關鍵字可讓用戶端應用程式指定 SPN。  
   
 |關鍵字|值|  
 |-------------|-----------|  
-|**伺服器SPN**|伺服器的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驅動程式產生的預設 SPN。|  
+|**ServerSPN**|伺服器的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驅動程式產生的預設 SPN。|  
 |**FailoverPartnerSPN**|容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驅動程式產生的預設 SPN。|  
   
 ## <a name="connection-attributes"></a>連接屬性  

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304369"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "81304369"
 
   本主題討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 OLE DB 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 有關本機客戶端[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 對大型 CLR UDT 的支援的詳細資訊,請參閱[大型 CLR 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR UDT &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 如需 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大型 clr udt 支援的詳細資訊，請參閱[大型 Clr 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR UDT &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>資料格式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 來代表大型物件 (LOB) 類型的無限制大小的值長度。 ~0 也代表大於 8,000 個位元組的 CLR UDT 大小。  
@@ -138,7 +138,7 @@ ms.locfileid: "81304369"
 |3|資料會從二進位資料轉換成十六進位字串。|  
 |4|在使用 **CreateAccessor** 或 **GetNextRows** 時可能會發生驗證。 錯誤是 DB_E_ERRORSOCCURRED。 繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
 |5|可能會使用 BY_REF。|  
-|6|UDT 參數可以在 DBBINDING 中繫結為 DBTYPE_IUNKNOWN。 繫結至 DBTYPE_IUNKNOWN 表示應用程式想要使用 ISequentialStream 介面將資料處理為資料流。 當消費者在綁定中指定*wType*為類型DBTYPE_IUNKNOWN,並且儲存過程的相應列或輸出參數為 UDT 時,SQL Server 本機用戶端將返回 ITt。 對輸入參數,SQL Server 本機客戶端將查詢 I 順序串態介面的 。<br /><br /> 在大型 UDT 的情況下，您可以選擇不要在使用 DBTYPE_IUNKNOWN 繫結時繫結 UDT 資料的長度。 不過，小型 UDT 則必須繫結長度。 如果下列其中一項或多項成立，則 DBTYPE_UDT 參數可以指定為大型 UDT：<br />*ulParamParamSize* 為 ~0。<br />DBPARAMFLAGS_ISLONG 會在 DBPARAMBINDINFO 結構中設定。<br /><br /> 對於資料列資料而言，DBTYPE_IUNKNOWN 繫結只適用於大型 UDT。 您可以使用資料列集或命令物件之 IColumnsInfo 介面上的 IColumnsInfo::GetColumnInfo 方法，來查明資料行是否為大型 UDT 型別。 如果下列其中一項或多項成立，則 DBTYPE_UDT 資料行會是大型 UDT 資料行：<br />DBCOLUMNFLAGS_ISLONG 旗標會在 DBCOLUMNINFO 結構的 *dwFlags* 成員上設定。 <br />DBCOLUMNINFO 的 *ulColumnSize* 成員為 ~0。|  
+|6|UDT 參數可以在 DBBINDING 中繫結為 DBTYPE_IUNKNOWN。 繫結至 DBTYPE_IUNKNOWN 表示應用程式想要使用 ISequentialStream 介面將資料處理為資料流。 當取用者在系結中將*wType*指定為類型 DBTYPE_IUNKNOWN，而預存程式的對應資料行或輸出參數為 UDT 時，SQL Server Native Client 會傳回 ISequentialStream。 對於輸入參數，SQL Server Native Client 將會查詢 ISequentialStream 介面的。<br /><br /> 在大型 UDT 的情況下，您可以選擇不要在使用 DBTYPE_IUNKNOWN 繫結時繫結 UDT 資料的長度。 不過，小型 UDT 則必須繫結長度。 如果下列其中一項或多項成立，則 DBTYPE_UDT 參數可以指定為大型 UDT：<br />*ulParamParamSize* 為 ~0。<br />DBPARAMFLAGS_ISLONG 會在 DBPARAMBINDINFO 結構中設定。<br /><br /> 對於資料列資料而言，DBTYPE_IUNKNOWN 繫結只適用於大型 UDT。 您可以使用資料列集或命令物件之 IColumnsInfo 介面上的 IColumnsInfo::GetColumnInfo 方法，來查明資料行是否為大型 UDT 型別。 如果下列其中一項或多項成立，則 DBTYPE_UDT 資料行會是大型 UDT 資料行：<br />DBCOLUMNFLAGS_ISLONG 旗標會在 DBCOLUMNINFO 結構的 *dwFlags* 成員上設定。 <br />DBCOLUMNINFO 的 *ulColumnSize* 成員為 ~0。|  
   
  DBTYPE_NULL 和 DBTYPE_EMPTY 可以針對輸入參數而繫結，但是不能針對輸出參數或結果而繫結。 當針對輸入參數來繫結時，狀態必須針對 DBTYPE_NULL 設定為 DBSTATUS_S_ISNULL，或針對 DBTYPE_EMPTY 設定為 DBSTATUS_S_DEFAULT。 DBTYPE_BYREF 不適用於 DBTYPE_NULL 或 DBTYPE_EMPTY。  
   

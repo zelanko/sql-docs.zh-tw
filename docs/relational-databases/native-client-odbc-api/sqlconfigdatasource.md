@@ -1,5 +1,5 @@
 ---
-title: SQLConfigData 來源 |微軟文件
+title: SQLConfigDataSource |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 816ce460d140ddbdd1c018092cb0c3b0857355b8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302559"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 ODBC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驅動程式支援 資料來源配置屬性字串的各種特定關鍵字/ 值對。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式支援資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]源設定屬性字串的各種特定關鍵字/值配對。  
   
- 關於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這個機客戶端 ODBC 驅動程式中可用的關鍵字列表,請參閱[使用與 SQL Server 本機客戶端的連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式中可用的關鍵字清單，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLConfigData來源函數](https://go.microsoft.com/fwlink/?LinkId=59337)   
+ [SQLConfigDataSource 函式](https://go.microsoft.com/fwlink/?LinkId=59337)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

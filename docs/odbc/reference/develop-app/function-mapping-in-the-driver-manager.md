@@ -1,5 +1,5 @@
 ---
-title: 驅動程式管理員中的功能映射 |微軟文件
+title: 驅動程式管理員中的函數對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,37 +15,37 @@ ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: db8e525bb7e8f3e167deb8061a4dd5b75073933c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305579"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>驅動程式管理員中的函式對應
-驅動程式管理員支援具有字串參數的函數的兩個入口點。 未修飾函數 (**SQLDriverConnect**) 是函數的 ANSI 形式. Unicode 窗體用**W(SQLDriverConnectW** *W* )裝飾。  
+驅動程式管理員支援採用字串引數之函式的兩個進入點。 未修飾函式（**SQLDriverConnect**）是函式的 ANSI 形式。 Unicode 格式會以*W* （**SQLDriverConnectW**）裝飾。  
   
- ODBC 標頭檔支援使用*A(* **SQLDriverConnectA**) 修飾的功能,以方便混合 ANSI/Unicode 應用程式。 對**A**函數進行的調用實際上是對未修飾的入口點 **(SQLDriverConnect**)的調用。  
+ ODBC 標頭檔也支援以*A、* （**SQLDriverConnectA**）裝飾的函式，以方便混合 ANSI/Unicode 應用程式。 對函式所**做的呼叫**實際上會呼叫未修飾的進入點（**SQLDriverConnect**）。  
   
- 如果應用程式使用 **_UNICODE#define**編譯,則 ODBC 標頭檔將未修飾的函數呼叫 **(SQLDriverConnect)** 映射到 Unicode 版本 **(SQLDriverConnectW**).  
+ 如果應用程式是使用 _UNICODE **#define**進行編譯，則 ODBC 標頭檔會將未裝飾的函式呼叫（**SQLDriverConnect**）對應到 UNICODE 版本（**SQLDriverConnectW**）。  
   
- 如果驅動程式支援**SQLConnectW,** 驅動程式管理器會將驅動程式識別為 Unicode 驅動程式。  
+ 如果驅動程式支援**SQLConnectW** ，驅動程式管理員會將驅動程式辨識為 Unicode 驅動程式。  
   
- 如果驅動程式是 Unicode 驅動程式,驅動程式管理員會按照如下方式進行函數呼叫:  
+ 如果驅動程式是 Unicode 驅動程式，驅動程式管理員會進行函數呼叫，如下所示：  
   
--   將沒有字串參數或參數的函數直接傳遞給驅動程式。  
+-   將沒有字串引數或參數的函式直接傳遞至驅動程式。  
   
--   將 Unicode 函數(帶*W*後綴)直接傳遞到驅動程式。  
+-   將 Unicode 函式（含*W*尾碼）直接傳遞至驅動程式。  
   
--   通過將字串參數轉換為 Unicode 字元並將 Unicode 函數傳遞給驅動程式,將 ANSI 函數(帶*A*後綴)轉換為 Unicode 函數(帶*W*後置)。  
+-   藉由將字串引數轉換*A*成 unicode 字元，並將 unicode 函式傳遞給驅動程式，將 ANSI 函式（含後置詞）轉換成 unicode 函數（使用*W*尾碼）。  
   
- 如果驅動程式是 ANSI 驅動程式,則驅動程式管理員進行函數呼叫,如下所示:  
+ 如果驅動程式是 ANSI 驅動程式，驅動程式管理員會進行函數呼叫，如下所示：  
   
--   將沒有字串參數或參數的函數直接傳遞給驅動程式。  
+-   將沒有字串引數或參數的函式直接傳遞至驅動程式。  
   
--   將 Unicode 函數(帶*W*後置)轉換為 ANSI 函數調用,並將其傳遞給驅動程式。  
+-   將 Unicode 函式（含*W*後置字元）轉換為 ANSI 函式呼叫，並將其傳遞給驅動程式。  
   
--   將 ANSI 函數直接傳遞給驅動程式。  
+-   將 ANSI 函數直接傳遞至驅動程式。  
   
- 驅動程式管理員在內部啟用 Unicode。 因此,使用 Unicode 驅動程式的 Unicode 應用程式獲得了最佳性能,因為驅動程式管理器只需將 Unicode 函數傳遞給驅動程式即可。 當 ANSI 應用程式使用 ANSI 驅動程式時,驅動程式管理器在處理某些函數(如**SQLDriverConnect**)時,必須將字串從 ANSI 轉換為 Unicode。 處理函數後,驅動程式管理員必須將 Unicode 字串轉換回 ANSI,然後再將函數發送到 ANSI 驅動程式。  
+ 驅動程式管理員在內部啟用 Unicode。 因此，使用 Unicode 驅動程式的 Unicode 應用程式會取得最佳效能，因為驅動程式管理員只會將 Unicode 函式傳遞至驅動程式。 當 ANSI 應用程式使用 ANSI 驅動程式時，驅動程式管理員必須在處理某些函式（例如**SQLDriverConnect**）時，將字串從 ANSI 轉換成 Unicode。 處理函式之後，驅動程式管理員必須先將 Unicode 字串轉換回 ANSI，然後再將函數傳送至 ANSI 驅動程式。  
   
- 當驅動程式返回SQL_STILL_EXECUTING或SQL_NEED_DATA時,應用程式不應修改或讀取其綁定參數緩衝區。 驅動程式管理員將緩衝區綁定到 ANSI,直到驅動程式返回SQL_SUCCESS、SQL_SUCCESS_WITH_INFO或SQL_ERROR。 多線程應用程式不應存取另一個線程正在執行 SQL 語句的任何綁定參數值。 驅動程式管理員將資料從 Unicode 轉換為 ANSI"就位",另一個線程可能會在這些緩衝區中看到 ANSI 資料,而驅動程式仍在處理 SQL 語句。 將 Unicode 資料繫結到 ANSI 驅動程式的應用程式不得將兩個不同的列綁定到同一位址。
+ 當驅動程式傳回 SQL_STILL_EXECUTING 或 SQL_NEED_DATA 時，應用程式不應該修改或讀取其系結的參數緩衝區。 驅動程式管理員會保留系結至 ANSI 的緩衝區，直到驅動程式傳回 SQL_SUCCESS、SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 為止。 多執行緒應用程式不應取得另一個執行緒在上執行 SQL 語句之任何系結參數值的存取權。 驅動程式管理員會將資料從 Unicode 轉換成 ANSI，而另一個執行緒可能會在驅動程式仍在處理 SQL 語句時，看到這些緩衝區中的 ANSI 資料。 系結 Unicode 資料至 ANSI 驅動程式的應用程式，不能將兩個不同的資料行系結至相同的位址。

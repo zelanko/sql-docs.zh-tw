@@ -1,5 +1,5 @@
 ---
-title: 對應資料型態 (ODBC) |微軟文件
+title: 對應資料類型（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,37 +21,37 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 92426c854758d07a9d62ec57510d202b870dd9f2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304620"
 ---
 # <a name="mapping-data-types-odbc"></a>對應資料類型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 ODBC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驅動程式 將 SQL 資料類型映射到 ODBC SQL 資料類型。 下列章節討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 資料類型和它們所對應的 ODBC SQL 資料類型。 這些章節也討論 ODBC SQL 資料類型及其對應的 ODBC C 資料類型，以及支援的和預設的轉換。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將 SQL 資料類型對應至 ODBC sql 資料類型。 下列章節討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 資料類型和它們所對應的 ODBC SQL 資料類型。 這些章節也討論 ODBC SQL 資料類型及其對應的 ODBC C 資料類型，以及支援的和預設的轉換。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**時間戳**資料類型映射到SQL_BINARY或SQL_VARBINARY ODBC 數據類型,因為**時間戳**列中的值不是**日期時間**值,而是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指示行上活動序列的**二進位(8)** 或**varbinary(8)** 值。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式遇到奇數位元組的 SQL_C_WCHAR (Unicode) 值，則尾端的奇數位元組會被截斷。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**時間戳記**資料類型會對應至 SQL_BINARY 或 SQL_VARBINARY 的 ODBC 資料類型，因為**timestamp**資料行中的值不是**datetime**值，而是**BINARY （8）** 或**VARBINARY （8）** 值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表示資料列上的活動順序。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式遇到奇數位元組的 SQL_C_WCHAR (Unicode) 值，則尾端的奇數位元組會被截斷。  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>處理 ODBC 中的 sql_variant 資料類型  
- **sql_variant**資料型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]態列 可以包含除大型物件 (LOB) 以外的任何資料類型,如**文字****、ntext**和**影像**。 例如,該列可以包含某些行**的較小值**、其他行的**浮動**值和其餘行中的**char/nchar**值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除了大型物件（lob）（例如**text**、 **Ntext**和**image**）之外， **SQL_variant**資料類型資料行還可以包含任何資料類型。 例如，資料行可能包含某些資料列的**Smallint**值、其他資料列的**浮點**值，以及餘數中的**char/Nchar**值。  
   
- **sql_variant**數據類型類似於 Microsoft 視覺化基本®中的**變體**資料類型。  
+ **Sql_variant**資料類型類似于 Microsoft Visual Basic®中的**variant**資料類型。  
   
 ### <a name="retrieving-data-from-the-server"></a>從伺服器擷取資料  
- ODBC 沒有變體型態的概念,限制在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用**sql_variant**資料類型與 ODBC 驅動程式在 。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中,如果指定綁定,則**sql_variant**數據類型必須綁定到一個已記錄的 ODBC 數據類型。 **SQL_CA_SS_VARIANT_TYPE**(一個特定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]於 本機用戶端 ODBC 驅動程式的新屬性)將**sql_variant**列中實例的數據類型返回給使用者。  
+ ODBC 沒有 variant 類型的概念，會限制在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**SQL_variant**資料類型與 ODBC 驅動程式。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，如果指定了 binding，則**SQL_variant**資料類型必須系結至其中一個已記載的 ODBC 資料類型。 **SQL_CA_SS_VARIANT_TYPE**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特定的新屬性會將**SQL_variant**資料行中實例的資料類型傳回給使用者。  
   
- 如果未指定繫結,[則 SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)函數可用於確定**sql_variant**列中實體的資料類型。  
+ 如果未指定系結，則可以使用[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)函數來判斷實例在**SQL_variant**資料行中的資料類型。  
   
- 要檢索**sql_variant,** 請按照以下步驟操作。  
+ 若要取得**SQL_variant**資料，請遵循下列步驟。  
   
-1.  調用**SQLFetch**以定位到檢索的行。  
+1.  呼叫**SQLFetch** ，以定位至抓取的資料列。  
   
-2.  呼叫**SQLGetData**,為類型指定SQL_C_BINARY,為資料長度指定 0。 這將強制驅動程式讀取**sql_variant**標頭。 標頭在**sql_variant**列中提供該實例的數據類型。 **SQLGetData**傳回值的大小(以位元組為單位)。  
+2.  呼叫**SQLGetData**，並指定類型的 SQL_C_BINARY，並將資料長度指定為0。 這會強制驅動程式讀取**SQL_variant**標頭。 標頭會在**SQL_variant**資料行中提供該實例的資料類型。 **SQLGetData**會傳回值的大小（以位元組為單位）。  
   
-3.  通過將**SQL_CA_SS_VARIANT_TYPE**指定為其屬性值來呼叫[SQLColAttribute。](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) 此函數將**sql_variant**列中實例的C數據類型返回給用戶端。  
+3.  藉由指定**SQL_CA_SS_VARIANT_TYPE**做為其屬性值來呼叫[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) 。 此函式會將**SQL_variant**資料行中實例的 C 資料類型傳回至用戶端。  
   
  下列程式碼片段顯示前述的步驟。  
   
@@ -86,12 +86,12 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 }  
 ```  
   
- 如果使用者使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)創建綁定,則驅動程式讀取元數據和數據。 驅動程式會接著將資料轉換為繫結中指定的適當 ODBC 類型。  
+ 如果使用者使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)建立系結，驅動程式會讀取中繼資料和資料。 驅動程式會接著將資料轉換為繫結中指定的適當 ODBC 類型。  
   
 ### <a name="sending-data-to-the-server"></a>將資料傳送到伺服器  
- **SQL_SS_VARIANT**(一種特定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]於 本機用戶端 ODBC 驅動程式的新數據類型)用於發送到**sql_variant**列的數據。 使用參數(例如,插入表名稱值(?,?))將資料發送到伺服器時[,SQLBind 參數](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)用於指定參數資訊,包括[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]C 類型和相應的類型。 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 ODBC 驅動程式將 C 數據類型轉換為適當的**sql_variant**子類型之一。  
+ **SQL_SS_VARIANT**是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特定的新資料類型，會用於傳送至**SQL_variant**資料行的資料。 使用參數將資料傳送至伺服器時（例如，插入 TableName 值（?,?））， [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)是用來指定參數資訊，包括 C 類型和對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會將 C 資料類型轉換成其中一個適當的**SQL_variant**子類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [&#40;ODBC&#41;處理結果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

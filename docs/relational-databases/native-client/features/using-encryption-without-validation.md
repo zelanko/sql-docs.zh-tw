@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303189"
 ---
 # <a name="using-encryption-without-validation"></a>使用加密而不需驗證
@@ -30,9 +30,9 @@ ms.locfileid: "81303189"
 
 自我簽署憑證不保證安全性。 加密的交握會以 NT LAN Manager (NTLM) 為基礎。 強烈建議您在 SQL Server 上佈建可驗證的憑證，以提供安全連線能力。 傳輸層安全性 (TLS) 只能透過憑證驗證來保護。
 
-應用程式也可要求加密所有網路流量，其方式是使用連接字串關鍵字或連接屬性。 當使用具有**IDb 初始化的**提供程式字串時,這些關鍵字是 ODBC 和 OLE DB 的「加密」:初始化,或者使用初始化字串與**IData 初始化**時對 ADO 和 OLE DB 使用「數據加密」。 這也可以透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 使用 [強制通訊協定加密]**** 選項來設定，以及藉由將用戶端設定為要求加密連線來設定。 根據預設，加密連接的所有網路流量會要求在伺服器上提供憑證。 藉由將您的用戶端設定為信任伺服器上的憑證，您可能很容易受到中間人攻擊。 如果您在伺服器上部署可驗證的憑證，請務必將有關信任憑證的用戶端設定變更為 FALSE。
+應用程式也可要求加密所有網路流量，其方式是使用連接字串關鍵字或連接屬性。 當搭配**IDbInitialize：： Initialize**使用提供者字串時，關鍵字為 "Encrypt OLE DB"，或在搭配使用初始化字串與**IDataInitialize**時，使用 ADO 和 OLE DB 的 "Encryption for Data"。 這也可以透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 使用 [強制通訊協定加密]**** 選項來設定，以及藉由將用戶端設定為要求加密連線來設定。 根據預設，加密連接的所有網路流量會要求在伺服器上提供憑證。 藉由將您的用戶端設定為信任伺服器上的憑證，您可能很容易受到中間人攻擊。 如果您在伺服器上部署可驗證的憑證，請務必將有關信任憑證的用戶端設定變更為 FALSE。
 
-有關連接字串關鍵字的資訊,請參閱[使用 SQL Server 本機客戶端的連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+如需連接字串關鍵字的詳細資訊，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  若要在伺服器上尚未佈建憑證時使用加密，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員可用來設定 [強制通訊協定加密]**** 和 [信任伺服器憑證]**** 選項。 在此情況下，如果伺服器上未提供任何可驗證的憑證，加密將會使用自行簽署的伺服器憑證，而不需驗證。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "81303189"
 > 上表僅提供有關在不同設定下系統行為的指南。 針對安全連線能力，確定用戶端與伺服器都需要加密。 此外，也要確定伺服器具有可驗證的憑證，且用戶端上的 **TrustServerCertificate** 設定會設定為 FALSE。
 
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- 本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端 OLE DB 提供程式透過新增SSPROP_INIT_TRUST_SERVER_CERTIFICATE資料來源初始化屬性(在DBPROPSET_SQLSERVERDBINIT屬性集中實現)支援未經驗證的加密。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 no。 當使用服務元件時，它可接受 true 或 false 值；false 是預設值。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者透過新增 SSPROP_INIT_TRUST_SERVER_CERTIFICATE 資料來源初始化屬性（在 DBPROPSET_SQLSERVERDBINIT 屬性集內執行），而不需驗證，即可支援加密。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 no。 當使用服務元件時，它可接受 true 或 false 值；false 是預設值。  
   
  如需對 DBPROPSET_SQLSERVERDBINIT 屬性集所做之增強功能的詳細資訊，請參閱[初始化和授權屬性](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- 本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端 ODBC 驅動程式透過新增[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函數支援無需驗證的加密。 已經加入 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 來接受 SQL_TRUST_SERVER_CERTIFICATE_YES 或 SQL_TRUST_SERVER_CERTIFICATE_NO，預設值為 SQL_TRUST_SERVER_CERTIFICATE_NO。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 "no"。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式透過[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函式的新增功能，支援加密而不進行驗證。 已經加入 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 來接受 SQL_TRUST_SERVER_CERTIFICATE_YES 或 SQL_TRUST_SERVER_CERTIFICATE_NO，預設值為 SQL_TRUST_SERVER_CERTIFICATE_NO。 此外，也已經加入新的連接字串關鍵字 "TrustServerCertificate"。 它可接受 yes 或 no 值；預設值是 "no"。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

@@ -24,10 +24,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06e4964dcab38087119343ab2fbc900f29d60d14
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303149"
 ---
 # <a name="working-with-snapshot-isolation"></a>使用快照隔離
@@ -38,7 +38,7 @@ ms.locfileid: "81303149"
  在快照隔離下啟動的交易會根據交易啟動的時間而讀取資料庫快照。 其結果之一，就是索引鍵集、動態和靜態伺服器資料指標在快照交易內容內開啟時，其行為與在可序列化交易內開啟的靜態資料指標非常類似。 不過，當資料指標開啟時，快照隔離等級並不會鎖定，因而可能減少伺服器上發生封鎖的機會。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- 本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]具有利用 中 引入的快照隔離的增強功能。 這些增強功能包括對 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 屬性集所做的變更。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者具有增強功能，可利用中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進的快照集隔離。 這些增強功能包括對 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 屬性集所做的變更。  
   
 ### <a name="dbpropset_datasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  DBPROPSET_DATASOURCEINFO 屬性集已變更，現藉由加入用於 DBPROP_SUPPORTEDTXNISOLEVELS 屬性中的 DBPROPVAL_TI_SNAPSHOT 值來支援快照隔離等級。 這個新值代表不論資料庫上是否啟用版本控制，快照隔離等級都受到支援。 下列是 DBPROP_SUPPORTEDTXNISOLEVELS 值的清單：  
@@ -60,18 +60,18 @@ ms.locfileid: "81303149"
  如需如何在交易中支援快照集隔離的詳細資訊，請參閱[支援本機交易](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- 本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端 ODBC 驅動程式透過對[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)函數的增強提供快照隔離支援。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會提供快照集隔離的支援，但對[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)函式的增強功能。  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
- **SQLSetConnectAttr**函數現在支援使用SQL_COPT_SS_TXN_ISOLATION屬性。 將 SQL_COPT_SS_TXN_ISOLATION 設定為 SQL_TXN_SS_SNAPSHOT 代表交易會在快照隔離等級之下發生。  
+ **SQLSetConnectAttr**函數現在支援 SQL_COPT_SS_TXN_ISOLATION 屬性的使用。 將 SQL_COPT_SS_TXN_ISOLATION 設定為 SQL_TXN_SS_SNAPSHOT 代表交易會在快照隔離等級之下發生。  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)函數現在支援已添加到SQL_TXN_ISOLATION_OPTION資訊類型的SQL_TXN_SS_SNAPSHOT值。  
+ [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)函數現在支援已加入 SQL_TXN_ISOLATION_OPTION info 類型的 SQL_TXN_SS_SNAPSHOT 值。  
   
- 有關如何在事務中支援快照隔離的資訊,請參閱[遊標事務隔離級別](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)。  
+ 如需如何在交易中支援快照集隔離的詳細資訊，請參閱資料[指標交易隔離等級](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 伺服器本機用戶端功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [資料列集屬性和行為](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ODBC 驅動程式子鍵 :微軟文件
+title: ODBC 驅動程式子機碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: dd1f8d3293e35a543cce6b5079d9c6e10a331a88
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304029"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 驅動程式子機碼
-ODBC 驅動程式下鍵下的值列出了已安裝的驅動程式。 這些值的格式顯示在下表中。  
+ODBC 驅動程式子機碼底下的值會列出已安裝的驅動程式。 下表顯示這些值的格式。  
   
 |名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|*驅動程式描述*|REG_SZ|**安裝**|  
+|*驅動程式-描述*|REG_SZ|**已安裝**|  
   
- *驅動程式描述*名稱由驅動程式開發人員定義。 它通常是與驅動程式關聯的 DBMS 的名稱。  
+ 驅動程式的*描述*名稱是由驅動程式開發人員所定義。 這通常是與驅動程式相關聯的 DBMS 名稱。  
   
- 例如,假設已為格式化的文本檔和 SQL Server 安裝了驅動程式。 ODBC 驅動程式子鍵下的值可能是:  
+ 例如，假設已針對格式化的文字檔和 SQL Server 安裝驅動程式。 ODBC 驅動程式子機碼下的值可能是：  
   
 ```  
 Text : REG_SZ : Installed  

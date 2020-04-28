@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301071"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>對 OLE DB 日期和時間改善的資料類型支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題提供有關支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/時間數據類型的 OLE 資料庫(本機用戶端)類型的資訊。  
+  本主題提供支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/時間資料類型之 OLE DB （Native Client）類型的相關資訊。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應  
  OLE DB 提供兩種新的資料類型來支援新的伺服器類型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表顯示完整伺服器類型的對應：  
@@ -34,8 +34,8 @@ ms.locfileid: "81301071"
 |Datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
+|time|DBTYPE_DBTIME2|145（sqlncli .h）|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146（sqlncli .h）|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>資料格式：字串和常值  
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 如果基礎架構更新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為使用**datetime2**而不是**日期時間**,則必須更新遷移到使用**sql_variant**並依賴於**有限日期時間**精度的本機客戶端的應用程式。  
+ 如果基礎架構[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更新為使用**datetime2**而不是**datetime**，則遷移至使用**SQL_variant**並依賴有限精確度的**datetime**之 Native Client 的應用程式將需要更新。  
   
  SSVARIANT 的存取巨集也已經透過加入下列項目來擴充：  
   
@@ -176,11 +176,11 @@ enum SQLVARENUM {
 |OLE DB 資料類型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|注意|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式檢查 DBCOLUMDESC *bScale*成員以確定小數秒精度。|  
-|DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式檢查 DBCOLUMDESC *bScale*成員以確定小數秒精度。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式檢查 DBCOLUMDESC *bScale*成員以確定小數秒精度。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
+|DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
   
- 當應用程式在 *wType* 中指定 DBTYPE_DBTIMESTAMP 時，其可在 *pwszTypeName* 中提供一個類型名稱，藉以將對應覆寫到 **datetime2**。 如果指定了 **datetime**，*bScale* 必須是 3。 如果指定了 **smalldatetime**，*bScale* 必須是 0。 如果*bScale*與*wType*和*pwszTypeName*不一致,則返回DB_E_BADSCALE。  
+ 當應用程式在 *wType* 中指定 DBTYPE_DBTIMESTAMP 時，其可在 *pwszTypeName* 中提供一個類型名稱，藉以將對應覆寫到 **datetime2**。 如果指定了 **datetime**，*bScale* 必須是 3。 如果指定了 **smalldatetime**，*bScale* 必須是 0。 如果*bScale*與*wType*和*pwszTypeName*不一致，則會傳回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間改善 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

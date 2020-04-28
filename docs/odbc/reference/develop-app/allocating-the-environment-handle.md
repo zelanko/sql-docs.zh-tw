@@ -1,5 +1,5 @@
 ---
-title: 配置環境句柄 |微軟文件
+title: 配置環境控制碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303001"
 ---
 # <a name="allocating-the-environment-handle"></a>配置環境控制代碼
-任何 ODBC 應用程式的第一個任務是載入驅動程式管理員;如何做到這一點取決於操作系統。 例如,在運行 Microsoft ® Windows NT® 伺服器/Windows 2000 伺服器、Windows NT 工作站/Windows 2000 專業版或 Microsoft Windows ® 95/98 的電腦上,應用程式要麼連結到驅動程式管理器庫,要麼調用**LoadLibrary**來載入驅動程式管理器 DLL。  
+任何 ODBC 應用程式的第一項工作是載入驅動程式管理員;這項作業的執行方式與作業系統相依。 例如，在執行 Microsoft® Windows NT® Server/Windows 2000 Server、Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows®95/98 的電腦上，應用程式會連結到驅動程式管理員程式庫或呼叫**LoadLibrary**來載入驅動程式管理員 DLL。  
   
- 下一個工作,必須在應用程式呼叫任何其他 ODBC 函數之前完成,是初始化 ODBC 環境並分配環境句柄,如下所示:  
+ 下一個工作必須在應用程式可以呼叫任何其他 ODBC 函數之前完成，這是為了初始化 ODBC 環境並配置環境控制碼，如下所示：  
   
-1.  應用程式聲明 SQLHENV 類型的變數。 然後,它調用**SQLAllocHandle**並傳遞此變數的位址和SQL_HANDLE_ENV選項。 例如：  
+1.  應用程式會宣告 SQLHENV 類型的變數。 然後它會呼叫**SQLAllocHandle** ，並傳遞此變數的位址和 SQL_HANDLE_ENV 選項。 例如：  
   
     ```  
     SQLHENV henv1;  
@@ -38,12 +38,12 @@ ms.locfileid: "81303001"
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv1);  
     ```  
   
-2.  驅動程式管理員分配一個結構,用於存儲有關環境的資訊,並在變數中返回環境句柄。  
+2.  驅動程式管理員會配置用來儲存環境相關資訊的結構，並傳回變數中的環境控制碼。  
   
- 驅動程式管理器此時不會在驅動程式中調用**SQLAllocHandle,** 因為它不知道要調用哪個驅動程式。 它會延遲在驅動程式中調用**SQLAllocHandle,** 直到應用程式呼叫函數以連接到資料來源。 有關詳細資訊,請參閱[驅動程式管理器在連接過程中的角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md),請參閱本節後面的部分。  
+ 驅動程式管理員目前不會呼叫驅動程式中的**SQLAllocHandle** ，因為它不知道要呼叫哪一個驅動程式。 在應用程式呼叫函式以連接到資料來源之前，它會延遲在驅動程式中呼叫**SQLAllocHandle** 。 如需詳細資訊，請參閱本節稍後[的連接程式中的驅動程式管理員角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
   
- 當應用程式完成使用 ODBC 後,它將使用**SQLFreeHandle**釋放環境句柄。 釋放環境後,在調用 ODBC 函數時使用環境的句柄是一種應用程式程式設計錯誤;這樣做有未定義,但可能是致命的後果。  
+ 當應用程式使用 ODBC 完成時，它會釋出使用**SQLFreeHandle**的環境控制碼。 釋放環境之後，應用程式設計錯誤就是在 ODBC 函數的呼叫中使用環境的控制碼;這麼做並沒有定義，但可能會產生嚴重的後果。  
   
- 調用**SQLFreeHandle**時,驅動程式將釋放用於存儲有關環境的資訊的結構。 請注意,在釋放該環境句柄上的所有連接句柄之前,無法為環境句柄調用**SQLFreeHandle。**  
+ 呼叫**SQLFreeHandle**時，驅動程式會釋放用來儲存環境相關資訊的結構。 請注意，必須等到已釋放該環境控制碼上的所有連接控制碼之後，才能針對環境控制碼呼叫**SQLFreeHandle** 。  
   
- 關於環境句柄的詳細資訊,請參閱[環境句柄](../../../odbc/reference/develop-app/environment-handles.md)。
+ 如需環境控制碼的詳細資訊，請參閱[環境控制碼](../../../odbc/reference/develop-app/environment-handles.md)。

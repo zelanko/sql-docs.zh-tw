@@ -1,5 +1,5 @@
 ---
-title: Unicode |微軟文件
+title: Unicode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9824e76cebabb6f5f84505292801a0094e359f0f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302442"
 ---
 # <a name="unicode"></a>Unicode
-Unicode 定義多種語言中的字元的編碼。  
+Unicode 會定義許多語言的字元編碼。  
   
- 有關 Unicode 標準的詳細資訊,請參閱[Unicode 聯盟](https://www.unicode.org)。  
+ 如需 Unicode 標準的詳細資訊，請參閱[Unicode 聯盟](https://www.unicode.org)。  
   
- Unicode 定義通用字元集。 Windows ANSI 代碼頁定義一個字元集,通常包含一種語言的字元。 編寫需要使用不同的代碼頁的應用程式可能更加困難。  
+ Unicode 定義通用字元集。 Windows ANSI 字碼頁會定義一個字元集，其中通常包含一種語言的字元。 撰寫使用不同字碼頁所需的應用程式可能會比較棘手。  
   
- Unicode 不需要代碼頁。 每個代碼點都映射到一種語言的單個字元。  
+ Unicode 不需要字碼頁。 每個程式碼點都會以某種語言對應至單一字元。  
   
- 目前,ODBC 支援的唯一 Unicode 編碼是 UCS-2,它使用 16 位整數(固定長度)來表示字元。 Unicode 允許應用程式以不同的語言工作。  
+ 目前，ODBC 支援的唯一 Unicode 編碼是 UCS-2，它使用16位整數（固定長度）來代表字元。 Unicode 可讓應用程式使用不同的語言。  
   
- ODBC 3.5(或更高版本)驅動程式管理器啟用了 Unicode。 這會影響兩個主要區域:函數調用和字串數據類型。 驅動程式管理員根據應用程式和驅動程式的要求映射函數位串參數和字串資料,這兩個參數都可以啟用 Unicode 或啟用 ANSI。 這兩個區域將在[「Unicode 函數參數](../../../odbc/reference/develop-app/unicode-function-arguments.md)」和[「Unicode 資料](../../../odbc/reference/develop-app/unicode-data.md)」部分中詳細討論。  
+ ODBC 3.5 （或更新版本）驅動程式管理員具有 Unicode 功能。 這會影響兩個主要區域：函式呼叫和字串資料類型。 驅動程式管理員會依照應用程式和驅動程式的需求來對應函式字串引數和字串資料，這兩者都可以是啟用 Unicode 或啟用 ANSI 功能。 這兩個區域會在「Unicode 函式[引數](../../../odbc/reference/develop-app/unicode-function-arguments.md)」和「 [unicode 資料](../../../odbc/reference/develop-app/unicode-data.md)」小節中詳細討論。  
   
- ODBC 3.5(或更高版本)驅動程式管理員支援將 Unicode 驅動程式與 Unicode 應用程式和 ANSI 應用程式一起使用。 它還支援將 ANSI 驅動程式與 ANSI 應用程式一起使用。 驅動程式管理員為使用 ANSI 驅動程式的 Unicode 應用程式提供有限的 Unicode 到 ANSI 映射。  
+ ODBC 3.5 （或更新版本）驅動程式管理員支援使用 Unicode 驅動程式搭配 Unicode 應用程式和 ANSI 應用程式。 它也支援搭配 ANSI 應用程式使用 ANSI 驅動程式。 驅動程式管理員針對與 ANSI 驅動程式搭配使用的 Unicode 應用程式，提供有限的 Unicode 對 ANSI 對應。  
   
  此章節包含下列主題。  
   

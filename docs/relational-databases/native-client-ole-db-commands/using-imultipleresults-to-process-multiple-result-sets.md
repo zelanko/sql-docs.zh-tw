@@ -1,5 +1,5 @@
 ---
-title: I多倍結果,多個結果集
+title: IMultipleResults，多個結果集
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5e19cef4e00fc1c55e29e51ccea13c2fdb7a0e2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304441"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>使用 IMultipleResults 來處理多個結果集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  消費者使用**IMulti 結果**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]介面來處理 本機用戶端 OLE DB 提供程式命令執行返回的結果。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式提交執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]命令時, 執行語句並返回任何結果。  
+  取用者會使用**IMultipleResults**介面來處理 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供者命令執行所傳回的結果。 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者提交要執行的命令時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，會執行語句並傳回任何結果。  
   
- 用戶端必須處理命令執行所產生的所有結果。 由於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式提供程式命令執行可以生成多個行集物件作為結果,因此使用**IMulti 結果**介面確保應用程式數據檢索完成用戶端啟動的往返。  
+ 用戶端必須處理命令執行所產生的所有結果。 因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者命令執行可以產生多個資料列集物件做為結果，所以請使用**IMultipleResults**介面，以確保應用程式資料的抓取會完成用戶端起始的來回行程。  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會產生多個資料列集，其中一些包含來自 **OrderDetails** 資料表的資料列資料，另一些包含 COMPUTE BY 子句的結果：  
   
@@ -42,9 +42,9 @@ COMPUTE
     BY OrderID  
 ```  
   
- 如果取用者執行包含此文字的命令，並要求資料列集做為傳回的結果介面，則只會傳回第一組資料列。 取用者可能會處理傳回之資料列集中的所有資料列。 但是,如果DBPROP_MULTIPLECONNECTIONS資料來源屬性設置為VARIANT_FALSE,並且未在連接上啟用 MARS,則在取消命令之前,無法在工作階段物件上執行其他命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( 本機用戶端 OLE 資料庫提供者不會創建其他連接)。 如果在連接上未啟用 MARS,則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 DBPROP_MULTIPLECONNECTIONSVARIANT_FALSE,則本機用戶端 OLE DB 提供程式將返回DB_E_OBJECTOPEN錯誤,如果存在活動事務,則返回E_FAIL。  
+ 如果取用者執行包含此文字的命令，並要求資料列集做為傳回的結果介面，則只會傳回第一組資料列。 取用者可能會處理傳回之資料列集中的所有資料列。 但是，如果 [DBPROP_MULTIPLECONNECTIONS 資料來源] 屬性設定為 [VARIANT_FALSE，而且連接上沒有啟用 MARS，則會話物件上不能執行其他命令（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者將不會建立其他連接），直到取消命令為止。 如果沒有在連接上啟用 MARS， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會在 VARIANT_FALSE DBPROP_MULTIPLECONNECTIONS 時傳回 DB_E_OBJECTOPEN 錯誤，如果有使用中的交易，則傳回 E_FAIL。  
   
- 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]流式輸出參數時,本機用戶端 OLE DB 提供程式也將返回DB_E_OBJECTOPEN,並且應用程式在調用**IMultiResult::getResult**獲取下一個結果集之前,未使用所有返回的輸出參數值。 如果未啟用 MARS，而連接忙著執行的命令不會產生資料列集，或產生非伺服器資料指標的資料列集，且 DBPROP_MULTIPLECONNECTIONS 資料來源屬性設定為 VARIANT_TRUE，除非交易正在作用中 (在此情況下會傳回錯誤)，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會建立其他連接來支援並行的命令物件。 交易與鎖定是以連接為基礎，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理。 如果產生另一個連接，個別連接上的命令不會共用鎖定。 請務必藉由保留另一個命令要求之資料列上的鎖定來確保命令之間不會互相封鎖。 如果有啟用 MARS，在連接上可以有多個命令處於作用中狀態，而如果有使用明確交易，則所有命令都會共用一個公用交易。  
+ 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用資料流程輸出參數，而且應用程式在呼叫**IMultipleResults：： GetResults**以取得下一個結果集之前，尚未取用所有傳回的輸出參數值時，Native Client OLE DB 提供者也會傳回 DB_E_OBJECTOPEN。 如果未啟用 MARS，而連接忙著執行的命令不會產生資料列集，或產生非伺服器資料指標的資料列集，且 DBPROP_MULTIPLECONNECTIONS 資料來源屬性設定為 VARIANT_TRUE，除非交易正在作用中 (在此情況下會傳回錯誤)，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會建立其他連接來支援並行的命令物件。 交易與鎖定是以連接為基礎，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理。 如果產生另一個連接，個別連接上的命令不會共用鎖定。 請務必藉由保留另一個命令要求之資料列上的鎖定來確保命令之間不會互相封鎖。 如果有啟用 MARS，在連接上可以有多個命令處於作用中狀態，而如果有使用明確交易，則所有命令都會共用一個公用交易。  
   
  取用者可以使用 [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md)，或釋放保留在命令物件和衍生之資料列集上的所有參考，藉以取消命令。  
   

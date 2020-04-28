@@ -1,5 +1,5 @@
 ---
-title: 和謂詞限制 |微軟文件
+title: AND 述詞限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: b9f363af-a60a-40f0-9c22-28aa7b159e06
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3d490dfa6466442532a7d3a35da031f4ed2dd4f0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304669"
 ---
 # <a name="and-predicate-limitations"></a>AND 述詞限制
-最多支援 40 個。
+最多支援40。

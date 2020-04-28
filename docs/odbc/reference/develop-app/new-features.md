@@ -1,5 +1,5 @@
 ---
-title: 新功能 |微軟文件
+title: 新功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b40803dac6c9f296043a8dcac50f9bc69036875a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302396"
 ---
 # <a name="new-features"></a>新功能
-ODBC *3.x*中引入了以下新功能。 使用 ODBC *2.x*驅動程式的 ODBC *3.x*應用程式將無法使用此功能。 使用 ODBC *2.x*驅動程式時,ODBC *3.x*驅動程式管理器不會映射這些功能。  
+ODBC 3.x 中引進了下列新*功能。* 使用*odbc 2.x* *驅動程式的 odbc 3.x 應用程式*將無法使用這種功能。 使用 ODBC *2.x 驅動程式時，odbc 3.X* *驅動程式管理員*不會對應這些功能。  
   
--   以描述符句柄為參數的函數:SQLSetDescField、SQLGetDescField、SQLSetDescRec、SQLGetDescRec 和**SQLCopyDesc**。 **SQLSetDescField** **SQLGetDescField** **SQLSetDescRec** **SQLGetDescRec**  
+-   接受描述項控制碼做為引數的函式： **SQLSetDescField**、 **SQLGetDescField**、 **SQLSetDescRec**、 **SQLGetDescRec**和**SQLCopyDesc**。  
   
--   函數**SQLSetEnvAttr**與**SQLGetEnvAttr**。  
+-   函式會**SQLSetEnvAttr**和**SQLGetEnvAttr**。  
   
--   使用**SQLAllocHandle**來分配描述符句柄。 (使用**SQLAllocHandle**分配環境、連接和語句句柄是重複的,而不是新的功能。  
+-   使用**SQLAllocHandle**來配置描述項控制碼。 （使用**SQLAllocHandle**來配置環境、連接和語句控制碼是重複的，而不是新的功能）。  
   
--   使用**SQLGetConnect Attr**獲取SQL_ATTR_AUTO_IPD連接屬性。 (使用**SQLSetConnectAttr**設定,並使用**SQLGetConnectAttr**來取得其他連接屬性是重複的,而不是新的功能。  
+-   使用**SQLGetConnectAttr**來取得 SQL_ATTR_AUTO_IPD 連接屬性。 （使用**SQLSetConnectAttr**來設定，而**SQLGetConnectAttr**要取得，其他連接屬性則是重複的，而不是新的功能）。  
   
--   使用**SQLSetStmtAttr 設定 SQLTmtAttr,** 以及**SQLGetStmtAttr**來獲取以下語句屬性。 (使用**SQLSetStmtAttr**來設置,並且**SQLGetStmtAttr**來獲取其他語句屬性是重複的,而不是新的。  
+-   使用**SQLSetStmtAttr**來設定和**SQLGetStmtAttr**以取得下列語句屬性。 （使用**SQLSetStmtAttr**來設定和**SQLGetStmtAttr**以取得，其他語句屬性則是重複的，而不是新的功能）。  
   
      SQL_ATTR_APP_ROW_DESC  
   
@@ -66,46 +66,46 @@ ODBC *3.x*中引入了以下新功能。 使用 ODBC *2.x*驅動程式的 ODBC *
   
      SQL_ATTR_ROW_ARRAY_SIZE  
   
--   使用**SQLGetStmtAttr**獲取以下語句屬性。 (使用**SQLGetStmtAttr**獲取其他語句屬性是重複的功能,而不是新功能。  
+-   使用**SQLGetStmtAttr**來取得下列語句屬性。 （使用**SQLGetStmtAttr**取得其他語句屬性是重複的功能，而不是新的功能）。  
   
-     SQL_ATTR_IMP_ROW_DESCSQL_ATTR_IMP_PARAM_DESC  
+     SQL_ATTR_IMP_ROW_DESC SQL_ATTR_IMP_PARAM_DESC  
   
--   使用間隔 C 數據類型、間隔 SQL 資料類型、BIGINT C 數據類型和SQL_C_NUMERIC數據結構。  
+-   使用 interval C 資料類型、間隔 SQL 資料類型、BIGINT C 資料類型，以及 SQL_C_NUMERIC 的資料結構。  
   
--   參數的行綁定。  
+-   參數的資料列取向系結。  
   
--   基於偏移的書籤提取,例如使用fetch*方向*參數SQL_FETCH_BOOKMARK調用**SQLFetchScroll,** 並指定偏移量(而不是 0)。  
+-   以位移為基礎的書簽提取，例如以 SQL_FETCH_BOOKMARK 的*FetchOrientation*引數呼叫**SQLFetchScroll** ，並指定0以外的位移。  
   
--   **SQLFetch**傳回行狀態陣列、提取的行數、獲取多行、將呼叫與**SQLFetchScroll**混合,以及將呼叫與**SQLBulk 操作**或**SQLSetPos**混合。 有關詳細資訊,請參閱下一節「[區塊游標、可滾動游標」 與 ODBC 3.x 應用程式的向後相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)。  
+-   **SQLFetch**會傳回資料列狀態陣列、提取的資料列數目、提取多個資料列、使用**SQLFetchScroll**的混合呼叫，以及使用**SQLBulkOperations**或**SQLSetPos**的混合呼叫。 如需詳細資訊，請參閱下一節： [ODBC 3.X 應用程式的區塊資料指標、可滾動游標和回溯相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)。  
   
--   命名參數。  
+-   具名引數。  
   
--   任何 ODBC *3.x*特定**SQLGetInfo**選項。 (如果使用 ODBC *2.x*驅動程式的 ODBC *3.x*應用程式呼叫SQL_XXX_CURSOR_ATTRIBUTES1資訊類型,這些類型已替換了多個 ODBC *2.x*資訊類型,則某些資訊可能可靠,但有些資訊可能不可靠。 有關詳細資訊,請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)  
+-   任何*ODBC 3.x*特定**SQLGetInfo**選項。 （如果*使用 odbc 2.x* *驅動程式的 odbc 3.x 應用程式*呼叫了 SQL_XXX_CURSOR_ATTRIBUTES1 資訊類型，而這種情況已經取代了數個*ODBC 2.x*資訊類型，部分資訊可能會很可靠，但有些則可能不可靠。 如需詳細資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)）。  
   
--   綁定偏移。  
+-   系結位移。  
   
--   按書籤(透過呼叫**SQLBulk 操作**)更新、刷新和刪除。  
+-   依書簽更新、重新整理和刪除（透過呼叫**SQLBulkOperations**）。  
   
--   在 S5 狀態下調用**SQLBulk 操作**或**SQLSetPos。**  
+-   在 S5 狀態中呼叫**SQLBulkOperations**或**SQLSetPos** 。  
   
--   診斷記錄中ROW_NUMBER和COLUMN_NUMBER欄位(必須透過替換函數**SQLGetDiagField**或**SQLGetDiagRec**檢索)。  
+-   診斷記錄中的 ROW_NUMBER 和 COLUMN_NUMBER 欄位（必須由取代函數**SQLGetDiagField**或**SQLGetDiagRec**抓取）。  
   
--   近似行計數。  
+-   大約的資料列計數。  
   
--   警告資訊(從**SQLFetchScroll SQL_ROW_SUCCESS_WITH_INFO)。**  
+-   警告資訊（來自**SQLFetchScroll**的 SQL_ROW_SUCCESS_WITH_INFO）。  
   
--   可變長度書籤。  
+-   可變長度的書簽。  
   
--   參數陣列的擴展錯誤資訊。  
+-   參數陣列的延伸錯誤資訊。  
   
--   目錄函數返回的結果集中的所有新列。  
+-   目錄函式所傳回之結果集中的所有新資料行。  
   
--   在列 0 上使用**SQLDescribeCol**和**SQLColAttribute。**  
+-   在資料行0上使用**SQLDescribeCol**和**SQLColAttribute** 。  
   
--   在調用**SQLColAttribute**中使用任何 ODBC *3.x*特定的列屬性。  
+-   在**SQLColAttribute**的呼叫中使用*任何 ODBC 3.x 特定的資料*行屬性。  
   
--   使用多個環境句柄。  
+-   使用多個環境控制碼。  
   
- 本節包含以下主題。  
+ 本章節包含下列主題。  
   
 -   [適用於 ODBC 3.x 應用程式的區塊資料指標、可捲動的資料指標和回溯相容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)

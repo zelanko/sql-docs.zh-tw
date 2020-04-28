@@ -1,5 +1,5 @@
 ---
-title: 處理儲存過程結果 |微軟文件
+title: 處理預存程式結果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d246756161e129f3f1d4c6efe5192ce39ff777d0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304534"
 ---
 # <a name="processing-stored-procedure-results"></a>處理預存程序結果
@@ -35,7 +35,7 @@ ms.locfileid: "81304534"
   
 -   程序可以有一個整數的傳回碼。  
   
- 應用程式必須能夠處理預存程序中的所有這些輸出。 CALL 或 EXECUTE 陳述式應該包含適用於傳回碼和輸出參數的參數標記。 使用[SQLBind 參數](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)將它們全部綁定為輸出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]參數, 本機用戶端 ODBC 驅動程式將輸出值傳輸到綁定變數。 輸出參數和返回代碼是返回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]給客戶端的最後一項。在[SQLMore 結果](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)返回SQL_NO_DATA之前,它們不會返回到應用程式。  
+ 應用程式必須能夠處理預存程序中的所有這些輸出。 CALL 或 EXECUTE 陳述式應該包含適用於傳回碼和輸出參數的參數標記。 使用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)將它們全部系結為輸出參數， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會將輸出值傳送至系結變數。 輸出參數和傳回碼是最後一個傳回到用戶端的專案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];在[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)傳回 SQL_NO_DATA 之前，它們不會傳回到應用程式。  
   
  ODBC 不支援繫結 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料指標參數。 由於所有輸出參數都必須在執行程序之前進行繫結，因此，ODBC 應用程式無法呼叫包含輸出資料指標參數的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。  
   

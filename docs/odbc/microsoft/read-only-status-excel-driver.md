@@ -1,5 +1,5 @@
 ---
-title: 唯讀狀態(Excel 驅動程式) |微軟文件
+title: 唯讀狀態（Excel 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: eb585d4712b6cac5e09b65ee8e13604763cd0164
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304019"
 ---
 # <a name="read-only-status-excel-driver"></a>唯讀狀態 (Excel 驅動程式)
-使用 Microsoft Excel 驅動程式時,預設情況下,數據源表作為唯讀表打開,並且一次只能由一個使用者打開。 但是,即使表具有唯讀狀態,應用程式也可以對 Microsoft Excel 表執行插入和更新。  
+使用 Microsoft Excel 驅動程式時，資料來源資料表預設會以唯讀方式開啟，而且一次只能由一個使用者開啟。 不過，即使資料表具有唯讀狀態，應用程式還是可以執行 Microsoft Excel 資料表的插入和更新。  
   
- 當應用程式透過 Microsoft Excel 驅動程式對 Microsoft Excel 資料執行「保存為」命令時,應用程式應創建一個新表並將要儲存的資料插入到新表中。 插入會導致表追加。 在表關閉並重新打開之前,無法對表執行任何其他操作。 關閉表後,無法執行後續插入,因為該表是唯讀表。  
+ 當應用程式透過 Microsoft Excel 驅動程式在 Microsoft Excel 上執行 [另存新檔] 命令時，應用程式應該建立新的資料表，並插入要儲存到新資料表中的資料。 將附加中的結果插入資料表。 無法在資料表上執行其他作業，直到它關閉並重新開啟為止。 一旦資料表關閉之後，就不會執行後續的插入作業，因為資料表是唯讀資料表。  
   
- 使用 Microsoft Excel 驅動程式時可以更新值,但不能從基於 Microsoft Excel 電子表格的表中刪除行,因此 Microsoft Excel 驅動程式不被視為正式支援更新。
+ 使用 Microsoft Excel 驅動程式時，可以更新值，但無法從以 Microsoft Excel 試算表為基礎的資料表中刪除資料列，因此 Microsoft Excel 驅動程式不會將更新視為正式支援。

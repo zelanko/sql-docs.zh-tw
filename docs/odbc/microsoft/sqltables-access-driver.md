@@ -1,5 +1,5 @@
 ---
-title: SQLTables(存取驅動程式) |微軟文件
+title: SQLTables （Access 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: df3a23af365efbef6a0f0da2c52568501425ecb3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306089"
 ---
 # <a name="sqltables-access-driver"></a>SQLTables (Access 驅動程式)
 > [!NOTE]  
->  本主題提供特定於訪問驅動程序的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
+>  本主題提供存取驅動程式特定的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
-|引數|註解|  
+|引數|評價|  
 |--------------|--------------|  
-|*szTable 擁有者*|*szTableOwner*的唯一有效參數是 NULL,因為沒有任何驅動程式支援擁有者名稱。 將*szTableOwner*設定為 NULL 時,將傳回所有表。 NULL 在TABLE_OWNER列中返回。|  
-|*szTable限定*|在TABLE_QUALIFIER列中 **,SQLTables**將路徑傳回到資料庫檔。|  
-|*SzTable 類型*|使用 Microsoft 存取驅動程式時,系統表的*szTableType*支援"SYSTEM TABLE",附加表支援"SYNONYM",對於返回行的查詢支援"VIEW"。|  
+|*szTableOwner*|*SzTableOwner*的唯一有效引數為 Null，因為沒有任何驅動程式支援擁有者名稱。 當*szTableOwner*設為 Null 時，就會傳回所有資料表。 TABLE_OWNER 資料行中傳回 Null。|  
+|*szTableQualifier*|在 [TABLE_QUALIFIER] 資料行中， **SQLTables**會傳回資料庫檔案的路徑。|  
+|*SzTableType*|使用 Microsoft Access 驅動程式時，系統資料表的*szTableType*支援「系統資料表」，附加資料表支援「同義字」，而且資料列傳回查詢支援「VIEW」。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLTables 函式](../../odbc/reference/syntax/sqltables-function.md)

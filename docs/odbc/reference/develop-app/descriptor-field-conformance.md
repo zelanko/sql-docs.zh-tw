@@ -1,5 +1,5 @@
 ---
-title: 描述符欄位一致性 |微軟文件
+title: 描述項欄位一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,26 @@ ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cce33adfdbfceef56936b22c549b6762521b4798
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305929"
 ---
 # <a name="descriptor-field-conformance"></a>描述項欄位一致性
-下表指示每個 ODBC 描述符標頭欄位的一致性級別,其中定義良好。  
+下表指出每個 ODBC 描述元標頭欄位的一致性層級，這是妥善定義的。  
   
 |函式|一致性層級|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|核心|  
 |SQL_DESC_ARRAY_SIZE|核心|  
-|SQL_DESC_ARRAY_STATUS_PTR|核心(用於 APD、智慧財產權和 IRD);等級 1(用於 ARD)|  
+|SQL_DESC_ARRAY_STATUS_PTR|Core （適用于 APD、IPR 和 IRD）;層級1（適用于 ARD）|  
 |SQL_DESC_BIND_OFFSET_PTR|核心|  
 |SQL_DESC_BIND_TYPE|核心|  
 |SQL_DESC_COUNT|核心|  
 |SQL_DESC_ROWS_PROCESSED_PTR|核心|  
   
- 下表指示每個 ODBC 描述符記錄欄位的一致性級別,其中定義良好。  
+ 下表指出每個「ODBC 描述項記錄」欄位的一致性層級，這是妥善定義的。  
   
 |函式|一致性層級|  
 |--------------|-----------------------|  
@@ -46,8 +46,8 @@ ms.locfileid: "81305929"
 |SQL_DESC_CATALOG_NAME|層級 2|  
 |SQL_DESC_CONCISE_TYPE|核心|  
 |SQL_DESC_DATA_PTR|核心|  
-|SQL_DESC_DATETIME_INTERVAL_代碼|核心[1]|  
-|SQL_DESC_DATETIME_INTERVAL_精度|核心[1]|  
+|SQL_DESC_DATETIME_INTERVAL_ 程式碼|核心 [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ 精確度|核心 [1]|  
 |SQL_DESC_DISPLAY_SIZE|核心|  
 |SQL_DESC_FIXED_PREC_SCALE|核心|  
 |SQL_DESC_INDICATOR_PTR|核心|  
@@ -60,7 +60,7 @@ ms.locfileid: "81305929"
 |SQL_DESC_NULLABLE|核心|  
 |SQL_DESC_OCTET_LENGTH|核心|  
 |SQL_DESC_OCTET_LENGTH_PTR|核心|  
-|SQL_DESC_PARAMETER_TYPE|核心/級別 2[2]|  
+|SQL_DESC_PARAMETER_TYPE|核心/層級 2 [2]|  
 |SQL_DESC_PRECISION|核心|  
 |SQL_DESC_ROWVER|層級 1|  
 |SQL_DESC_SCALE|核心|  
@@ -73,6 +73,6 @@ ms.locfileid: "81305929"
 |SQL_DESC_UNSIGNED|核心|  
 |SQL_DESC_UPDATABLE|核心|  
   
- [1] 僅當驅動程式支援適用的數據類型時,才需要對這些記錄欄位的支援。  
+ [1] 只有在驅動程式支援適用的資料類型時，才需要支援這些記錄欄位。  
   
- [2] 對於核心級符合性,驅動程式必須支援SQL_PARAM_INPUT。 對於 2 級介面一致性,驅動程式還必須支援SQL_PARAM_INPUT_OUTPUT和SQL_PARAM_OUTPUT。
+ [2] 針對核心層級的一致性，驅動程式必須支援 SQL_PARAM_INPUT。 針對層級2介面一致性，驅動程式也必須支援 SQL_PARAM_INPUT_OUTPUT 和 SQL_PARAM_OUTPUT。

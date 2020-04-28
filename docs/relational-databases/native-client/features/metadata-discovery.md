@@ -11,20 +11,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d822362e9f9f7e70e4421056383aae8ddef03dc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303349"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  中的[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中繼資料發現[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]改進允許 本機客戶端應用程式確保從執行查詢返回的列或參數元資料與執行查詢之前指定的中繼資料格式相同或相容。 如果查詢執行之後傳回的中繼資料與您在查詢執行之前指定的中繼資料格式不相容，您就會收到錯誤。  
+  中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的中繼資料探索改進[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可讓原生用戶端應用程式確保查詢執行所傳回的資料行或參數中繼資料，與您在執行查詢之前指定的元資料格式完全相同或相容。 如果查詢執行之後傳回的中繼資料與您在查詢執行之前指定的中繼資料格式不相容，您就會收到錯誤。  
   
  在 bcp 和 ODBC 函數以及 IBCPSession 和 IBCPSession2 介面中，您現在可以指定延遲讀取 (延遲中繼資料探索)，避免針對查詢輸出作業進行中繼資料探索。 這樣做可改善效能並排除中繼資料探索失敗。  
   
- 如果使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中的 本機客戶端開發應用程式,但連接到伺服器[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本早於 ,元數據發現功能將對應於伺服器的版本。  
+ 如果您使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的 Native Client 開發應用程式，但連接到早于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的伺服器版本，則中繼資料探索功能將對應至伺服器的版本。  
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 bcp 函數，以便提供改良的中繼資料探索：  
@@ -39,9 +39,9 @@ ms.locfileid: "81303349"
   
 -   [bcp_setcolfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
- 使用[bcp_setbulkmode](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)指定中繼資料格式時,您還會看到性能改進。  
+ 使用[bcp_setbulkmode](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)指定元資料格式時，您也會看到效能改進。  
   
- [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)有一個新的*eOption*來控制bcp_readfmt的行為 **:BCPDELAYREADFMT。**  
+ [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)有一個新的*eOption* ，可控制 Bcp_readfmt 的行為： **BCPDELAYREADFMT**。  
   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 ODBC 函數，以便提供改良的中繼資料探索：  
   

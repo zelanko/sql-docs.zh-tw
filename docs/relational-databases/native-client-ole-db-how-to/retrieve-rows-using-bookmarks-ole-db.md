@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f12644175b20d9055d3a5a73a4ad1e1b003805b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302169"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用書籤擷取資料列 (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "81302169"
   取用者會將繫結結構的 **dwFlag** 欄位值設定為 DBCOLUMNSINFO_ISBOOKMARK，表示該資料行會當做書籤使用。 取用者也會將資料列集屬性 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE。 這可讓資料行 0 出現在資料列集中。 然後使用 **IRowsetLocate::GetRowsAt** 來擷取資料列，從書籤中指定為位移的資料列開始。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果必須保留認證,則應使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)對其進行加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>使用書籤擷取資料列  
   

@@ -1,5 +1,5 @@
 ---
-title: 功能摘要 |微軟文件
+title: 函數摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b14480c2621a77472da78382082ec6d7a89c2f67
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306019"
 ---
 # <a name="function-summary"></a>函式摘要
-以下各節總結了支援ODBC的應用程式和相關軟體所使用的功能。  
+下列各節摘要說明啟用 ODBC 的應用程式和相關軟體所使用的功能。  
   
 -   [ODBC 函式摘要](../../../odbc/reference/syntax/odbc-function-summary.md)  
   

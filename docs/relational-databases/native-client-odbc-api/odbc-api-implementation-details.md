@@ -1,5 +1,5 @@
 ---
-title: ODBC API 實施詳細資訊 |微軟文件
+title: ODBC API 執行詳細資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 880c38483b3896f95ccfde4f8237d6d0acbf8e3c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302701"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 實作詳細資料
@@ -30,7 +30,7 @@ ms.locfileid: "81302701"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式參考不會列出所有 ODBC 函數呼叫。 只會討論與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式搭配使用時，具有驅動程式特有參數或行為的函數。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合 ODBC 3.51 規格。 有關 ODBC 3.51 的全面參考,請從[資料存取和儲存式開發人員中心](https://go.microsoft.com/fwlink?linkid=4173)下載 Microsoft 資料存取元件 SDK,或線上查看[ODBC 程式員的參考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合 ODBC 3.51 規格。 如需 ODBC 3.51 的完整參考，請從[資料存取和儲存開發人員中心](https://go.microsoft.com/fwlink?linkid=4173)下載 Microsoft Data ACCESS Components SDK，或參閱《 [odbc](https://go.microsoft.com/fwlink/?LinkId=45250)程式設計人員參考》線上。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -135,7 +135,7 @@ ms.locfileid: "81302701"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 伺服器本機用戶端&#40;ODBC&#41; 參考](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server Native Client &#40;ODBC&#41; 參考](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [使用 SQL Server Native Client 建立應用程式](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

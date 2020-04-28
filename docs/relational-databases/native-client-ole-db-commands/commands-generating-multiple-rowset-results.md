@@ -19,23 +19,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2cbdba7e16240b5adfd14c43a5916aaaf8cf0400
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304479"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>產生多個資料列集結果的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]者可以從 語句返回多個行集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者可以從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語句傳回多個資料列集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
   
 -   批次的 SQL 陳述式以單一命令提交。  
   
 -   預存程序實作 SQL 陳述式批次。  
   
 ## <a name="batches"></a>批次  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機客戶端 OLE 資料庫提供程式將分號字元識別為 SQL 語句的批次處理分隔符:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將分號字元辨識為 SQL 語句的批次分隔符號：  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

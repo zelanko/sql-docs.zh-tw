@@ -1,5 +1,5 @@
 ---
-title: SQLClose游標 |微軟文件
+title: SQLCloseCursor |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb20bfa7ca76b8156ef2400e6db3235c590680ba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302619"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLCloseCursor**將[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)替換為*選項*值 SQL_CLOSE。 收到**SQLCloseCursor**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]後, 本機用戶端 ODBC 驅動程式將丟棄掛起的結果集行。 請注意 **,SQLCloseCursor**不會更改語句的列和參數綁定(如果存在)。  
+  **SQLCloseCursor**會將[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)取代為 SQL_CLOSE 的*選項*值。 在收到**SQLCloseCursor**時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會捨棄暫止的結果集資料列。 請注意， **SQLCloseCursor**不會改變語句的資料行和參數系結（如果有的話）。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   

@@ -1,5 +1,5 @@
 ---
-title: 傳回代碼 ODBC |微軟文件
+title: 傳回碼 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 15e434025ed1201ca61371c2fb88e70143e131a5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304309"
 ---
 # <a name="return-codes-odbc"></a>傳回碼 ODBC
-ODBC 中的每個函數傳回一個代碼,稱為*返回代碼,* 它指示函數的總體成功或失敗。 程式邏輯通常會以傳回碼為基礎。  
+ODBC 中的每個函式都會傳回稱為其傳回碼的程式碼 *，* 以指出函數的整體成功或失敗。 程式邏輯通常會以傳回碼為基礎。  
   
- 例如,以下代碼調用**SQLFetch**來檢索結果集中的行。 它檢查函數的返回代碼,以確定是否到達了結果集的末尾(SQL_NO_DATA)、是否返回了任何警告資訊(SQL_SUCCESS_WITH_INFO),或者是否發生了錯誤(SQL_ERROR)。  
+ 例如，下列程式碼會呼叫**SQLFetch**來取出結果集中的資料列。 它會檢查函式的傳回碼，以判斷是否已達到結果集的結尾（SQL_NO_DATA）、是否已傳回任何警告資訊（SQL_SUCCESS_WITH_INFO），或者是否發生錯誤（SQL_ERROR）。  
   
 ```  
 SQLRETURN   rc;  
@@ -42,14 +42,14 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  傳回碼 SQL_INVALID_HANDLE 永遠會指出程式設計錯誤，而且絕不會在執行階段發生。 雖然 SQL_ERROR 可能會指出程式設計錯誤，其他所有傳回碼還是會提供執行階段資訊。  
   
- 下表定義了返回代碼。  
+ 下表定義傳回碼。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
-|SQL_SUCCESS|功能已成功完成。 應用程式調用**SQLGetDiagField**從標頭記錄檢索其他資訊。|  
-|SQL_SUCCESS_WITH_INFO|功能成功完成,可能帶有非致命錯誤(警告)。 該應用程式調用**SQLGetDiagRec**或**SQLGetDiagField**來檢索其他資訊。|  
-|SQL_ERROR|功能失敗。 該應用程式調用**SQLGetDiagRec**或**SQLGetDiagField**來檢索其他資訊。 函數的任何輸出參數的內容都是未定義的。|  
-|SQL_INVALID_HANDLE|由於環境、連接、語句或描述符句柄無效,功能失敗。 這表示程式設計錯誤。 **SQLGetDiagRec**或**SQLGetDiagField**沒有其他資訊。 僅當句柄為空指標或類型錯誤(例如為需要連接句柄的參數傳遞語句句柄時)才返回此代碼。|  
-|SQL_NO_DATA|沒有更多的數據可用。 該應用程式調用**SQLGetDiagRec**或**SQLGetDiagField**來檢索其他資訊。 可以返回 02xxx 類中的一個或多個驅動程式定義的狀態記錄。 **註:** 在 ODBC 2 中。*x*,此返回碼SQL_NO_DATA_FOUND。|  
-|SQL_NEED_DATA|需要更多的數據,例如何時在執行時發送參數資料或需要額外的連接資訊。 該應用程式調用**SQLGetDiagRec**或**SQLGetDiagField**來檢索其他資訊(如果有)。|  
-|SQL_STILL_EXECUTING|以非同步方式啟動的函數仍在執行中。 該應用程式調用**SQLGetDiagRec**或**SQLGetDiagField**來檢索其他資訊(如果有)。|
+|SQL_SUCCESS|函數已順利完成。 應用程式會呼叫**SQLGetDiagField** ，以從標頭記錄中取得其他資訊。|  
+|SQL_SUCCESS_WITH_INFO|函數已順利完成，可能發生非嚴重錯誤（警告）。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField** ，以取得其他資訊。|  
+|SQL_ERROR|函數失敗。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField** ，以取得其他資訊。 函式的任何輸出引數內容都未定義。|  
+|SQL_INVALID_HANDLE|因為環境、連接、語句或描述項控制碼無效，所以函數失敗。 這表示程式設計錯誤。 **SQLGetDiagRec**或**SQLGetDiagField**中不提供任何其他資訊。 只有當控制碼為 null 指標或類型錯誤時（例如，針對需要連接控制碼的引數傳遞語句控制碼時），才會傳回此程式碼。|  
+|SQL_NO_DATA|沒有其他可用的資料。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField** ，以取得其他資訊。 可能會傳回類別02xxx 中的一或多個驅動程式定義狀態記錄。 **注意：** 在 ODBC 2 中。*x*，此傳回碼的名稱為 SQL_NO_DATA_FOUND。|  
+|SQL_NEED_DATA|需要更多資料，例如在執行時間傳送參數資料，或需要其他連接資訊。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField**來取得其他資訊（如果有的話）。|  
+|SQL_STILL_EXECUTING|以非同步方式啟動的函式仍在執行中。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField**來取得其他資訊（如果有的話）。|

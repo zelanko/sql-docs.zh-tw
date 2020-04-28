@@ -16,20 +16,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8779b68d6ab1070514f8ef6685ef378437d09539
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302518"
 ---
-# <a name="transactions"></a>交易
+# <a name="transactions"></a>異動
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式實現本地事務支援。 取用者可以使用 Microsoft 分散式交易協調器 (MS DTC) 來使用分散式或協調的交易。 對於需要跨多個工作階段的事務控制的消費者,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供者可以聯接 MS DTC 啟動和維護的事務。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實行本機交易支援。 取用者可以使用 Microsoft 分散式交易協調器 (MS DTC) 來使用分散式或協調的交易。 若取用者需要跨多個會話的交易控制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供者可以聯結由 MS DTC 所起始和維護的交易。  
   
- 預設情況下,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式使用自動提交事務模式,其中消費者會話上的每個離散操作包括針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的完整 事務。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式自動提交模式是本地的,並且自動提交事務永遠不會超過單個工作階段。  
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會使用自動認可交易模式，其中取用者會話上的每個離散動作都是針對實例所[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組成的完整交易。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者自動認可模式為本機，而自動認可交易絕不會跨越一個以上的會話。  
   
- 本機用戶端 OLE 資料庫提供程式公開**ITransactionLocal**介面,允許消費者在單個連接上顯式和隱式啟動到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的事務。 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供者不支援嵌套本地事務。  
+ Native Client OLE DB 提供者會公開**ITransactionLocal**介面，讓取用者在實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]單一連接上，明確地使用並隱含啟動交易。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不支援嵌套的本機交易。  
   
 ## <a name="in-this-section"></a>本節內容  
   

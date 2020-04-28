@@ -1,5 +1,5 @@
 ---
-title: 使用伺服器游標 |微軟文件
+title: 使用伺服器資料指標 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ede31d9d59ef7d01dfd7e7b610edae273cbc5d64
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305373"
 ---
 # <a name="using-server-cursors"></a>使用伺服器資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  如果 ODBC 應用程式將任何 ODBC 游標屬性設定為預設值以外[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的任何屬性, 本機用戶端 ODBC 驅動程式將請求伺服器實現相同類型的 API 伺服器游標。 使用 API 伺服器資料指標可以釋放用戶端上的記憶體，而且可以大幅降低用戶端與伺服器之間的網路流量。  
+  如果 ODBC 應用程式將任何 ODBC 資料指標屬性設定為預設值以外的任何專案， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會要求伺服器執行相同類型的 API 伺服器資料指標。 使用 API 伺服器資料指標可以釋放用戶端上的記憶體，而且可以大幅降低用戶端與伺服器之間的網路流量。  
   
  API 伺服端資料指標的潛在缺點是目前不支援所有 SQL 陳述式。 API 伺服端資料指標無法用來執行：  
   

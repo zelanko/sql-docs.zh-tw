@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dfbd03d5a964ea9e997e2d5900b4b762d4dad49c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303801"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
@@ -35,7 +35,7 @@ ms.locfileid: "81303801"
 >  用戶端應用程式所指定的 SPN 僅能在建立與 Windows 整合式安全性的連接時使用。  
   
 > [!TIP]  
->  **Kerberos 設定管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]員 是一種診斷工具,可幫助解決 Kerberos[!INCLUDE[msCoName](../../../includes/msconame-md.md)]相關連接問題。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **的 kerberos Configuration Manager [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]是一種診斷工具，可協助疑難排解的 kerberos 相關連接問題。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
  如需有關 Kerberos 的詳細資訊，請參閱下列文件：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "81303801"
  新的連接行為會由用戶端實作，因此，該行為對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本而言不是專屬的。  
   
 ## <a name="linked-servers-and-delegation"></a>連結的伺服器與委派  
- 建立連結伺服器時,[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)**\@可以使用sp_addlinkedserver的參數**來指定伺服器和故障轉移夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
+ 建立連結的伺服器時， [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的** \@provstr**參數可以用來指定伺服器和容錯移轉夥伴 spn。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
   
  利用連結的伺服器委派需要 Kerberos 驗證。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "81303801"
   
 |語法|描述|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn*是一個完全合格的功能變數名稱。|  
-|MSSQLSvc/*fqdn*:*連接埠*|使用 TCP 時，此為提供者產生的預設 SPN。<br /><br /> *埠*是 TCP 埠號。|  
-|MSSQLSvc/*fqdn*:*實體名稱*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。<br /><br /> *InstanceName* 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
+|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn*是完整功能變數名稱。|  
+|MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。<br /><br /> *port* 是 TCP 通訊埠編號。|  
+|MSSQLSvc/*fqdn*：*InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。<br /><br /> *InstanceName* 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|對應到 Windows 自動註冊之內建電腦帳戶的 SPN。|  
 |*使用者名稱*@*網域*|網域帳戶的直接規格。<br /><br /> *Username* 是 Windows 使用者帳戶名稱。<br /><br /> *Domain* 是 Windows 網域名稱或完整的網域名稱。|  
-|*機器名稱*$@*網域*|電腦帳戶的直接規格。<br /><br /> (如果您所連接的伺服器是以 LOCAL SYSTEM 或 NETWORK SERVICE 帳戶執行，若要取得 Kerberos 驗證， **ServerSPN** 可以是 *MachineName*$@*Domain* 格式)。|  
-|*KDCKey*/*機器名稱*|使用者指定的 SPN。<br /><br /> *KDCKey* 是符合 KDC 金鑰規則的英數字串。|  
+|*MachineName*$@*網域*|電腦帳戶的直接規格。<br /><br /> (如果您所連接的伺服器是以 LOCAL SYSTEM 或 NETWORK SERVICE 帳戶執行，若要取得 Kerberos 驗證， **ServerSPN** 可以是 *MachineName*$@*Domain* 格式)。|  
+|*KDCKey*/*MachineName*|使用者指定的 SPN。<br /><br /> *KDCKey* 是符合 KDC 金鑰規則的英數字串。|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>支援 SPN 的 ODBC 和 OLE DB 語法  
  如需語法專屬的資訊，請參閱下列主題：  

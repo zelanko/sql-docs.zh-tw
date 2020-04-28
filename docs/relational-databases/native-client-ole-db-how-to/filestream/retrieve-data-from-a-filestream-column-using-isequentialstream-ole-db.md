@@ -1,5 +1,5 @@
 ---
-title: 使用 I 順序串流 (OLE DB)的 FILESTREAM
+title: 使用 ISequentialStream 的 FILESTREAM （OLE DB）
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca29a19aeae6631606559b6aee00b83b7f138f8a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302241"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 從 FILESTREAM 資料行擷取資料 (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81302241"
 
   此範例會範例如何在 ICommandText 介面中使用 ISequentialStream 介面來擷取 Filestream 資料行中的單一記錄。  
   
- 有關檔案串流功能的詳細資訊,請參閱[FILESTREAM 支援&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  

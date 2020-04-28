@@ -1,5 +1,5 @@
 ---
-title: 數據緩衝區長度 |微軟文件
+title: 資料緩衝區長度 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d4a4e9a739201d74cfc6c4f7c18e64b91e0fabe4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305259"
 ---
 # <a name="data-buffer-length"></a>資料緩衝區長度
-應用程式將數據緩衝區的位元組長度傳遞給參數中的驅動程式,稱為*BufferLength*或類似名稱。 例如,在以下對**SQLBindCol**的呼叫中,應用程式指定*ValuePtr*緩衝區的長度 **(sizeof(***ValuePtr):*** **  
+應用程式會在名為*BufferLength*的引數或類似的名稱中，將資料緩衝區的位元組長度傳遞給驅動程式。 例如，在下列對**SQLBindCol**的呼叫中，應用程式會指定*valueptr 是*緩衝區的長度（**sizeof （***valueptr 是***）**）：  
   
 ```  
 SQLCHAR      ValuePtr[50];  
@@ -31,17 +31,17 @@ SQLINTEGER   ValueLenOrInd;
 SQLBindCol(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);  
 ```  
   
- 驅動程式將始終返回具有輸出字串參數的任何函數的緩衝區長度參數中的位元組數,而不是字元數。  
+ 驅動程式一律會傳回任何具有輸出字串引數之函數的緩衝區長度引數中的位元組數目，而不是字元數。  
   
- 數據緩衝區長度僅適用於輸出緩衝區;驅動程式使用它們來避免寫入緩衝區的末尾。 但是,驅動程式僅在緩衝區包含可變長度數據(如字元或二進位數據)時檢查數據緩衝區長度。 如果緩衝區包含固定長度數據(如整數或日期結構),則驅動程式將忽略數據緩衝區長度,並假定緩衝區足夠大以容納數據;如果緩衝區大小,則驅動程式將忽略數據緩衝區長度,並假定緩衝區足夠大,足以保存數據。也就是說,它永遠不會截截固定長度的數據。 因此,應用程式為固定長度數據分配足夠大的緩衝區非常重要。  
+ 只有輸出緩衝區才需要資料緩衝區長度;驅動程式會使用它們來避免寫入超過緩衝區結尾。 不過，只有當緩衝區包含可變長度的資料（例如字元或二進位資料）時，驅動程式才會檢查資料緩衝區長度。 如果緩衝區包含固定長度的資料，例如整數或日期結構，驅動程式會忽略資料緩衝區長度，並假設緩衝區夠大，足以容納資料。也就是說，它絕對不會截斷固定長度的資料。 因此，應用程式必須為固定長度的資料配置夠大的緩衝區。  
   
- 當出現非資料輸出字串的截斷(例如為**SQLGetCursorName**傳回的游標名稱)時,緩衝區長度參數中返回的長度是可能的最大字元長度。  
+ 當發生非資料輸出字串截斷時（例如針對**SQLGetCursorName**傳回的資料指標名稱），緩衝區長度引數中傳回的長度就是可能的最大字元長度。  
   
- 輸入緩衝區不需要數據緩衝區長度,因為驅動程式不寫入這些緩衝區。  
+ 輸入緩衝區不需要資料緩衝區長度，因為驅動程式不會寫入這些緩衝區。  
   
  此章節包含下列主題。  
   
--   [使用長度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
+-   [使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
   
 -   [資料長度、緩衝區長度和截斷](../../../odbc/reference/develop-app/data-length-buffer-length-and-truncation.md)  
   

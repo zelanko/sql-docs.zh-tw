@@ -14,10 +14,10 @@ ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: bf8ddb4e3794c8ad7889f395726fb325e071deb3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303860"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
@@ -25,22 +25,22 @@ ms.locfileid: "81303860"
 
   FILESTREAM 提供透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或直接存取 Windows 檔案系統來儲存及存取大型二進位值的方式。 大型二進位值是大於 2 GB 的值。 如需有關增強型 FILESTREAM 支援的詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)。  
   
- 打開資料庫連接時,**\@\@預設情況下,TEXTSIZE**將設置為 -1("無限制")。  
+ 開啟資料庫連接時，預設會將** \@ \@TEXTSIZE**設定為-1 （無限制）。  
   
  也可以使用 Windows 檔案系統 API 來存取及更新 FILESTREAM 資料行。  
   
  如需詳細資訊，請參閱下列主題：  
   
--   [檔案流支援&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM 支援 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [檔案串流支援&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [FILESTREAM 支援 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [使用 OpenSqlFilestream 存取 FILESTREAM 資料](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>查詢是否有 FILESTREAM 資料行  
  OLE DB 中的結構描述資料列集將不會報告某個資料行是否為 FILESTREAM 資料行。 OLE DB 中的 ITableDefinition 不能用來建立 FILESTREAM 資料行。  
   
- 目錄函數(如 ODBC 中的 SQLColumn)不會報告列是否是 FILESTREAM 列。  
+ 在 ODBC 中的目錄函數（例如 SQLColumns）不會報告資料行是否為 FILESTREAM 資料行。  
   
  若要建立 FILESTREAM 資料行或是偵測哪些現有資料行為 FILESTREAM 資料行，您可以使用 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 目錄檢視的 **is_filestream** 資料行。  
   
@@ -58,11 +58,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下層相容性  
- 如果用戶端是使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]附[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]帶 的本機用戶端版本編譯的,並且應用程式[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]連接到 **,varbinary(max)** 行為將[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]與 相容。 也就是說，傳回之資料的大小最大值受限於 2 GB。 如果結果值大於 2 GB，將會發生截斷，而且將會傳回「字串資料右邊截斷」警告。  
+ 如果您的用戶端是使用隨附于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 Native client 版本所編譯[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，而且應用程式連接到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，則**Varbinary （max）** 行為將與[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]相容。 也就是說，傳回之資料的大小最大值受限於 2 GB。 如果結果值大於 2 GB，將會發生截斷，而且將會傳回「字串資料右邊截斷」警告。  
   
  當資料類型相容性設定為 80 時，用戶端行為將會與下層用戶端行為一致。  
   
- 對於使用 SQLOLEDB 或其他提供[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]程式在 本機用戶端版本之前發布的用戶端 **,varbinary(max)** 將映射到映射。  
+ 若用戶端使用 SQLOLEDB 或在[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 版本之前發行的其他提供者， **Varbinary （max）** 將會對應到 image。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

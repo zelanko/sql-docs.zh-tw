@@ -1,5 +1,5 @@
 ---
-title: 連線有效共用記憶體 dbmslpcn.dll
+title: ConnectionValidSharedMemory dbmslpcn .dll
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f3bb097965563afb458b4529676d1e9967e4899
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303878"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>dbmslpcn.dll 共用記憶體中的 ConnectionValidSharedMemory 函式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  該函數確定是否安裝 SQL Server 共用記憶體並處於活動狀態。  
+  函式會判斷是否已安裝和使用 SQL Server 的共用記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,15 +29,15 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
 ```  
   
 ## <a name="parameters"></a>參數  
- *szServer名稱*  
+ *szServerName*  
   
--   型態:**\*字元**  
+-   類型： **char\* **  
   
--   SQL 伺服器的名稱。  
+-   SQL server 的名稱。  
   
 ## <a name="return-value"></a>傳回值  
- 型態: **BOOL**  
+ 類型： **BOOL**  
   
- 返回 0(如果無效);否則返回非零。  
+ 如果無效，則傳回 0;否則會傳回非零值。  
   
   

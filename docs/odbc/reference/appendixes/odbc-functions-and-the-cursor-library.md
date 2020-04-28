@@ -1,5 +1,5 @@
 ---
-title: ODBC 函數和游標庫 |微軟文件
+title: ODBC 函式和資料指標程式庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304339"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函式和資料指標程式庫
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 啟用連接的 ODBC 游標庫後,驅動程式管理員將調用遊標庫中的函數,而不是在驅動程式中調用函數。 游標庫要麼執行該函數,要麼在指定的驅動程式中調用它。  
+ 當 ODBC 資料指標程式庫已針對連接啟用時，驅動程式管理員會呼叫游標程式庫中的函式，而不是驅動程式中的函數。 資料指標程式庫會執行函數，或在指定的驅動程式中呼叫它。  
   
  此章節包含下列主題。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "81304339"
   
 -   [SQLBindParameter (資料指標程式庫)](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
--   [SQLBulk 操作(游標庫)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
+-   [SQLBulkOperations （資料指標程式庫）](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
--   [SQLCloseCursor(游標庫)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
+-   [SQLCloseCursor （資料指標程式庫）](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
 -   [SQLEndTran (資料指標程式庫)](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81304339"
   
 -   [SQLSetDescField 和 SQLSetDescRec (資料指標程式庫)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
--   [SQLSetEnvAttr(游標庫)](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
+-   [SQLSetEnvAttr （資料指標程式庫）](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
 -   [SQLSetPos (資料指標程式庫)](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 支援的 ODBC SQL 語法(可視化福克斯 Pro ODBC 驅動程式) |微軟文件
+title: 支援的 ODBC SQL 文法（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,44 +19,44 @@ ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304081"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>支援的 ODBC SQL 文法 (Visual FoxPro ODBC Driver)
-微軟視覺化福斯Pro ODBC驅動程式支援以下內容:  
+Microsoft Visual FoxPro ODBC 驅動程式支援下列各項：  
   
--   ODBC 最小 SQL 語法中的所有 SQL 語句和子句  
+-   ODBC 最少 SQL 文法中的所有 SQL 語句和子句  
   
--   從 ODBC 核心 SQL 語法的附加 SQL 語句  
+-   ODBC core SQL 文法中的其他 SQL 語句  
   
- 下表列出了驅動程式支援的項,由 ODBC SQL 語法級別列出。  
+ 下表列出由 ODBC SQL 文法層級驅動程式支援的專案。  
   
-|層級|項目|Item|  
+|層級|元素|項目|  
 |-----------|--------------|----------|  
 |最小值|資料定義語言 (DDL)|CREATE TABLE 和 DROP TABLE|  
-||資料操作語言 (DML)|選擇、插入、更新與移除|  
-||運算式|簡單(如 A>B+C)|  
-||資料類型|查爾、瓦爾查爾或長瓦爾查爾|  
+||資料操作語言 (DML)|SELECT、INSERT、UPDATE 和 DELETE|  
+||運算式|簡單（例如>B + C）|  
+||資料類型|CHAR、VARCHAR 或 LONG VARCHAR|  
   
- 除了支援的 ODBC SQL 語法外,Visual FoxPro ODBC 驅動程式還支援完整的本機 Visual FoxPro 語言文法,用於以下 Visual FoxPro 命令:  
+ 除了支援的 ODBC SQL 文法之外，Visual FoxPro ODBC 驅動程式還支援下列 Visual FoxPro 命令的完整原生 Visual FoxPro 語言語法：  
   
- [變更表](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
- [刪除](../../odbc/microsoft/delete-sql-command.md)  
+ [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
- [刪除標籤](../../odbc/microsoft/delete-tag-command.md)  
+ [刪除標記](../../odbc/microsoft/delete-tag-command.md)  
   
- [掉落表](../../odbc/microsoft/drop-table-command.md)  
+ [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
  [指數](../../odbc/microsoft/index-command.md)  
   
  [插入](../../odbc/microsoft/insert-sql-command.md)  
   
- [SELECT](../../odbc/microsoft/select-sql-command.md)  
+ [請](../../odbc/microsoft/select-sql-command.md)  
   
  [更新](../../odbc/microsoft/update-sql-command.md)

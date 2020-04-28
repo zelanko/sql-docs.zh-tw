@@ -1,5 +1,5 @@
 ---
-title: ODBC 和標準 CLI |微軟文件
+title: ODBC 和標準 CLI |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,65 +17,65 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305139"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和標準 CLI
-ODBC 符合與呼叫級介面 (CLI) 打交道的以下規範和標準。 (ODBC 功能是每個標準的超級集。  
+ODBC 會與處理呼叫層級介面（CLI）的下列規格和標準一致。 （ODBC 功能是每個標準的超集合）。  
   
--   打開組 CAE 規範"數據管理:SQL 調用級介面 (CLI)"  
+-   Open Group CAE 規格 "資料管理： SQL 呼叫層級介面（CLI）"  
   
--   ISO/IEC 9075-3:1995 (E) 呼叫級介面 (SQL/CLI)  
+-   ISO/IEC 9075-3:1995 （E）呼叫層級介面（SQL/CLI）  
   
- 由於這種對齊方式,以下情況為 true:  
+ 由於這項調整的結果，下列條件成立：  
   
--   寫入 Open Group 和 ISO CLI 規範的應用程式在使用 ODBC *3.x*標頭檔編譯並與 ODBC *3.x*庫連結時,以及透過 ODBC *3.x*驅動程式管理員存取驅動程式時,將使用 ODBC *3.x*驅動程式或符合標準的驅動程式。  
+-   寫入 Open 群組和 ISO CLI 規格的應用程式，會*使用 odbc 3.x 驅動程式*或符合標準的驅動程式（當它使用 odbc 3.x 標頭檔進行編譯並*與 odbc 3.x* *程式庫一起*使用時），以及當它透過 odbc *3.x 驅動程式*管理員取得驅動程式的存取權時。  
   
--   寫入 Open Group 和 ISO CLI 規範的驅動程式在使用 ODBC *3.x*標頭檔編譯並與 ODBC *3.x*庫連結時,以及當應用程式透過 ODBC *3.x*驅動程式管理員存取驅動程式時,它將與 ODBC *3.x*應用程式或符合標準的應用程式配合使用。 (關於詳細資訊,請參考[符合標準的應用程式和驅動程式](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
+-   寫入開放式群組和 ISO CLI 規格的驅動程式，會*使用 odbc 3.x 應用程式*或符合標準的應用程式，當它是使用 odbc 3.x 標頭檔進行編譯並*與 odbc 3.x* *程式庫相*連結時，以及當應用程式透過 odbc *3.x 驅動程式*管理員取得驅動程式的存取權時。 （如需詳細資訊，請參閱[符合標準的應用程式和驅動](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)程式。  
   
- 核心介面一致性級別包含 ISO CLI 中的所有功能以及開放組 CLI 中的所有非可選功能。 開放組 CLI 的可選功能顯示在更高的介面符合性級別中。 由於所有 ODBC *3.x*驅動程式都需要支援核心介面一致性級別的功能,因此如下所示:  
+ 核心介面一致性層級包含 ISO CLI 中的所有功能，以及開放式群組 CLI 中的所有 nonoptional 功能。 開放式群組 CLI 的選擇性功能會出現在更高的介面一致性層級中。 由於所有的*ODBC 3.x*驅動程式都必須支援核心介面一致性層級的功能，因此下列條件成立：  
   
--   ODBC *3.x*驅動程式將支援符合標準的應用程式使用的所有功能。  
+-   *ODBC 3.x 驅動程式將*支援符合標準的應用程式所使用的所有功能。  
   
--   僅使用 ISO CLI 中的功能和開放組 CLI 的非可選功能的 ODBC *3.x*應用程式將與任何符合標準的驅動程式配合使用。  
+-   僅使用 ISO CLI 中的功能和 Open Group CLI 的 nonoptional 功能的 ODBC 3.x 應用程式，將適用于任何符合標準的*驅動程式。*  
   
- 除了 ISO/IEC 和開放組 CLI 標準中包含的呼叫級介面規範外,ODBC 還實現了以下功能。 (其中一些功能存在於 ODBC *3.x*之前的 ODBC 版本中。  
+ 除了 ISO/IEC 和 Open Group CLI 標準中包含的呼叫層級介面規格之外，ODBC 還會執行下列功能。 （其中有一些功能存在於 ODBC 3.x 之前*的 odbc 版本中）。*  
   
--   以單函式呼叫取得多行  
+-   多資料列由單一函式呼叫提取  
   
--   繫結到參數陣列  
+-   系結至參數陣列  
   
--   書籤支援,包括按書籤提取、可變長度書籤以及批量更新和刪除不連續行上的書籤操作  
+-   書簽支援，包括依書簽提取、可變長度的書簽，以及在不連續資料列上進行書簽作業的大量更新和刪除  
   
 -   資料列取向的繫結  
   
--   繫結位移  
+-   系結位移  
   
--   支援批次處理 SQL 語句,無論是在儲存過程中,還是作為透過 SQLExecute 或**SQLExecDirect****SQLExecDirect**執行的 SQL 語句序列  
+-   支援 SQL 語句的批次，不論是在預存程式中，或是透過**SQLExecute**或**SQLEXECDIRECT**執行的 sql 語句序列。  
   
--   精確或近似游標行計數  
+-   精確或近似的資料指標資料列計數  
   
--   定位更新與移除操作以及按函式呼叫 **(SQLSetPos)** 批次處理更新與刪除  
+-   以函式呼叫（**SQLSetPos**）定點更新和刪除作業，以及批次更新和刪除  
   
--   目錄函數,無需支援資訊架構檢視,即可從資訊架構中提取資訊  
+-   從資訊架構解壓縮資訊，而不需要支援資訊架構視圖的目錄函式  
   
--   外部聯結、標量函數、日期時間文字、間隔文字和儲存過程的轉義序列  
+-   外部聯結、純量函數、datetime 常值、間隔常值和預存程式的轉義順序  
   
--   代碼頁翻譯庫  
+-   字碼頁轉譯程式庫  
   
--   報告驅動程式的 ANSI 符合性層級與 SQL 支援  
+-   報告驅動程式的 ANSI 一致性層級和 SQL 支援  
   
--   依需要自動填充設定參數的描述  
+-   視需要自動擴展的執行參數描述項  
   
--   增強的診斷及列和參數狀態陣列  
+-   增強的診斷和資料列和參數狀態陣列  
   
--   日期時間、間隔、數位/十進位和 64 位元整數應用程式緩衝區類型  
+-   Datetime、interval、numeric/decimal 和64位整數應用程式緩衝區類型  
   
 -   非同步執行  
   
--   儲存程序支援,包括轉義序列、輸出參數繫結機制及目錄函數  
+-   預存程式支援，包括逸出序列、輸出參數系結機制和目錄函數  
   
--   連線增強功能,包括支援連接屬性和屬性瀏覽
+-   連接增強功能，包括支援連接屬性和屬性流覽

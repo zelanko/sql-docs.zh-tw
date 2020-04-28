@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba57776d99c962460c8c09075b4c2cc39abfd1a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303836"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 使用者定義型別
@@ -24,10 +24,10 @@ ms.locfileid: "81303836"
 
   在 SQL Server 2005，Common Language Runtime (CLR) 中的使用者定義型別 (UDT) 在大小上限制為 8,000 個位元組。 在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更新版本中已提高此限制。 CLR UDT 現在會以大型物件 (LOB) 類型類似的方式處理。 也就是說，小於或等於 8,000 個位元組的 UDT 行為與 SQL Server 2005 相同，但是支援較大的 UDT，而且會將其大小報告為「無限制」。  
   
- 有關詳細資訊,請參閱大型[CLR 使用者定義類型&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)和[大型 CLR 使用者定義類型&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ 如需詳細資訊，請參閱[大型 Clr 使用者自訂類型 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)和[大型 Clr 使用者定義類型 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="use-cases"></a>使用案例  
- 對於 ODBC，大型 UDT 的支援包括能夠以片段當做資料執行中 (data-at-execution) 參數傳送 UDT 值。 這是通過使用 SQLPutData 完成的。  
+ 對於 ODBC，大型 UDT 的支援包括能夠以片段當做資料執行中 (data-at-execution) 參數傳送 UDT 值。 這項作業是使用 SQLPutData 來完成。  
   
  對於 OLE DB，大型 UDT 的支援包括能夠使用 ISequentialStream 繫結，在伺服器來回串流 UDT 值。  
   

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60da6e10349c94f491f711a00136949f2e886c9a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302236"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>取得 FAST_FORWARD 資料指標
@@ -25,10 +25,10 @@ ms.locfileid: "81302236"
 
   若要取得順向的唯讀資料指標，將資料列集屬性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 設為 VARIANT_TRUE。  
   
- 完整的範例示範如何設定資料列集屬性，以取得 FAST_FORWARD 資料指標。 設置屬性後,將執行 SELECT 語句以檢索和顯示**AdventureWorks**資料庫中的 **「採購.供應商」** 表**的名稱**列。  
+ 完整的範例示範如何設定資料列集屬性，以取得 FAST_FORWARD 資料指標。 設定屬性之後，會執行 SELECT 語句來抓取和顯示**AdventureWorks**資料庫中 [**購買廠商**] 資料表的 [**名稱**] 資料行。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果必須保留認證,則應使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)對其進行加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>取得 FAST_FORWARD 資料指標  
   

@@ -1,5 +1,5 @@
 ---
-title: 執行預存過程 |微軟文件
+title: 執行預存程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b69a9177f98c8ee1096c18f368af12b11d6b325
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304546"
 ---
 # <a name="running-stored-procedures"></a>執行預存程序
@@ -58,7 +58,7 @@ ms.locfileid: "81304546"
   
      擴充預存程序可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中未提供的 C 和 C++ 功能。  
   
-     有關如何調用儲存過程的範例,請參閱[&#40;ODBC &#40;的流程返回代码和输出参数&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+     如需如何呼叫預存程式的範例，請參閱[&#40;ODBC&#41;處理傳回碼和輸出參數](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -69,7 +69,7 @@ ms.locfileid: "81304546"
 -   [處理預存程序結果](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 伺服器本機用戶端&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [執行預存作業操作主題&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [執行預存程式的 how to 主題 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

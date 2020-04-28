@@ -1,5 +1,5 @@
 ---
-title: BLOB 資料到 SQL, IROWSETFASTLOAD、 I,順序流
+title: BLOB 資料至 SQL、IROWSETFASTLOAD、ISEQUENTIALSTREAM
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ea3838f1353318461f6ad725ad31fc372759f4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303039"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER (OLE DB)
@@ -36,7 +36,7 @@ ms.locfileid: "81303039"
  如需詳細資訊，請參閱 [BLOB 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果必須保留認證,則應使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)對其進行加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ## <a name="example"></a>範例  
  執行第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以建立應用程式所使用的資料表。  

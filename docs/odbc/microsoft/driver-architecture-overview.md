@@ -1,5 +1,5 @@
 ---
-title: 驅動程式體系結構概述 |微軟文件
+title: 驅動程式架構總覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cd55290e09fbd35f5a1559ce4209693ef8eaaf73
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303459"
 ---
 # <a name="driver-architecture-overview"></a>驅動程式架構概觀
-Microsoft Visual FoxPro ODBC 驅動程式是一個 32 位元驅動程式,使您能夠透過開放資料庫連接 (ODBC) 介面打開和查詢 Microsoft Visual FoxPro 資料庫或 FoxPro 表。 您可以使用以下類型的應用程式存取 FoxPro 資料:  
+Microsoft Visual FoxPro ODBC Driver 是一個32位驅動程式，可讓您透過開放式資料庫連接（ODBC）介面，開啟及查詢 Microsoft Visual FoxPro 資料庫或 FoxPro 資料表。 您可以使用下列類型的應用程式來存取 FoxPro 資料：  
   
--   使用微軟查詢與 ODBC 通訊的微軟 Office 應用程式,如 Microsoft Excel 或 Microsoft Word。  
+-   Microsoft Office 的應用程式（例如 Microsoft Excel 或 Microsoft Word），會使用 Microsoft Query 與 ODBC 進行通訊。  
   
--   使用 ODBC SDK API 在 Microsoft 視覺C++或 C 編寫的應用程式。  
+-   以 Microsoft Visual C++ 或 C 撰寫並使用 ODBC SDK API 的應用程式。  
   
--   以 Microsoft 視覺化基本版或 Microsoft 應用程式視覺基本版編寫的應用程式。  
+-   以 Microsoft Visual Basic 或 Microsoft Visual Basic for Applications 撰寫的應用程式。  
   
- 在每種情況下,資訊請求都使用 ODBC API。 ODBC 驅動程式管理員與 Visual FoxPro ODBC 驅動程式合作,從 FoxPro 表和資料庫打開和檢索數據。  
+ 在每個案例中，資訊的要求都會使用 ODBC API。 ODBC 驅動程式管理員可與 Visual FoxPro ODBC 驅動程式搭配使用，以開啟和抓取 FoxPro 資料表和資料庫中的資料。  
   
- 體系結構在下圖中表示:  
+ 架構會在下圖中表示：  
   
- ![顯示 ODBC 驅動程式架構結構](../../odbc/microsoft/media/vfparch.gif "vfparch")  
+ ![顯示 ODBC 驅動程式架構](../../odbc/microsoft/media/vfparch.gif "vfparch")  
   
  此章節包含下列主題。  
   
 -   [Visual FoxPro 術語](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
--   [安裝並設定視覺化福斯Pro ODBC驅動程式](../../odbc/microsoft/installing-and-configuring.md)  
+-   [安裝和設定 Visual FoxPro ODBC 驅動程式](../../odbc/microsoft/installing-and-configuring.md)  
   
 -   [使用 Visual FoxPro ODBC Driver](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver.md)

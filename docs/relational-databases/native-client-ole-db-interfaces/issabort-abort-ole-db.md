@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ce2c92dad8c0ff97cdbcf4e77a58e8dd6ceb18c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303979"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
@@ -28,9 +28,9 @@ ms.locfileid: "81303979"
 
   取消目前的資料列集加上與目前命令相關聯之任何批次處理的命令。  
   
-**ISSAbort**介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 本機用戶端 OLE 資料庫提供程式中公開,它提供**ISSAbort::abort**方法,該方法用於取消當前行集以及使用最初生成行集的命令批處理且尚未完成執行的命令生成的任何命令。  
+**ISSAbort**介面（在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中公開）提供了**ISSAbort：： Abort**方法，可用於取消目前的資料列集，加上使用命令批次處理的任何命令，這是一開始產生資料列集，而且尚未完成執行。  
   
- **ISSAbort**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是一個本機用戶端提供程式特定的介面,可通過在**ICommand:執行**或**IOpenRowset::OpenRowset**返回的**IMulti 結果**物件上使用**查詢介面**可用。  
+ **ISSAbort** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是原生用戶端提供者特定的介面，可在**ICommand：： Execute**或**IOpenRowset：： OpenRowset**所傳回的**IMultipleResults**物件上使用**QueryInterface** 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ HRESULT Abort(void);
 ## <a name="remarks"></a>備註  
  如果要中止的命令位於預存程序中，預存程序 (以及已經呼叫該程序的任何程序) 以及包含預存程序呼叫之命令批次的執行將會結束。 如果伺服器正在將結果集傳送到用戶端，將會停止這個動作。 如果用戶端不想要取用結果集，在釋放資料列集前呼叫 **ISSAbort::Abort** 將會加速資料列集的釋放，但是如果有開啟的交易，而且 XACT_ABORT 為 ON，呼叫 **ISSAbort::Abort** 時，將會回復交易  
   
- **在 ISSAbort::abort**返回S_OK後,關聯的**IMulti 結果**介面將進入不可用狀態,並返回DB_E_CANCELED所有方法調用 **(I未知**介面定義的方法除外),直到釋放它。 如果在呼叫 **Abort** 前已經從 **IMultipleResults** 取得 **IRowset**，它也會進入無法使用狀態，並將 DB_E_CANCELED 傳回到所有方法呼叫 (除了 **IUnknown** 介面和 **IRowset::ReleaseRows** 所定義的方法以外)，直到成功呼叫 **ISSAbort::Abort** 後釋放它為止。  
+ 在**ISSAbort：： Abort**傳回 S_OK 之後，相關聯的**IMultipleResults**介面會進入無法使用的狀態，並將 DB_E_CANCELED 傳回給所有方法呼叫（除了**IUnknown**介面定義的方法以外），直到釋放它為止。 如果在呼叫 **Abort** 前已經從 **IMultipleResults** 取得 **IRowset**，它也會進入無法使用狀態，並將 DB_E_CANCELED 傳回到所有方法呼叫 (除了 **IUnknown** 介面和 **IRowset::ReleaseRows** 所定義的方法以外)，直到成功呼叫 **ISSAbort::Abort** 後釋放它為止。  
   
 > [!NOTE]  
 >  從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，如果伺服器 XACT_ABORT 狀態為 ON，執行 **ISSAbort::Abort** 會終止並回復連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何目前隱含或明確交易。 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將不會中止目前的交易。  
@@ -61,7 +61,7 @@ HRESULT Abort(void);
  批次未取消。  
   
  E_FAIL  
- 發生提供程式特定錯誤;有關詳細資訊,請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，物件會因為已經呼叫 **ISSAbort::Abort** 而處於廢止狀態。  

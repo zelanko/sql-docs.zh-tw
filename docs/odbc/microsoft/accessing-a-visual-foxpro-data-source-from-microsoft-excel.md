@@ -1,5 +1,5 @@
 ---
-title: 從微軟 Excel 訪問可視化 FoxPro 數據源 |微軟文件
+title: 從 Microsoft Excel 存取 Visual FoxPro 資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,35 +16,35 @@ ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b4afaeebb5b3a0d2430eafc6febf98f2fb9c16bf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302072"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>從 Microsoft Excel 存取 Visual FoxPro 資料來源
-如果安裝了 Microsoft 查詢,則可以在 Microsoft Excel 中建立連接到 Visual FoxPro 資料的資料來源。  
+如果您已安裝 Microsoft Query，您可以在 Microsoft Excel 中建立連接到 Visual FoxPro 資料的資料來源。  
   
-### <a name="to-access-visual-foxpro-data-from-microsoft-excel"></a>從微軟 Excel 存取視覺化 FoxPro 資料  
+### <a name="to-access-visual-foxpro-data-from-microsoft-excel"></a>從 Microsoft Excel 存取 Visual FoxPro 資料  
   
-1.  打開 Microsoft Excel 電子表格。  
+1.  開啟 Microsoft Excel 試算表。  
   
-2.  在「數據」功能表中,選擇「獲取外部數據」。 打開微軟查詢。  
+2.  從 [資料] 功能表中，選擇 [取得外部資料]。 Microsoft Query 隨即開啟。  
   
-3.  在「選擇數據源」對話框中,按一下「其他」。  
+3.  在 [選取資料來源] 對話方塊中，按一下 [其他]。  
   
-4.  在 ODBC 資料源對話方塊中,按兩下"新建"  
+4.  在 [ODBC 資料來源] 對話方塊中，按一下 [新增]。  
   
-5.  在「添加數據源」對話框中,從「已安裝的 ODBC 驅動程式」清單框中選擇 Microsoft 視覺化 FoxPro 驅動程式,然後單擊「確定」。  
+5.  在 [新增資料來源] 對話方塊中，從 [已安裝的 ODBC 驅動程式] 清單方塊中選取 [Microsoft Visual FoxPro Driver]，然後按一下 [確定]。  
   
-6.  在[ODBC Visual FoxPro 安裝程式對話框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)中,輸入資料源名稱,選擇資料庫類型,輸入資料庫或目錄的路徑,然後單擊"確定」。  
+6.  在 [ [ODBC Visual FoxPro 安裝程式] 對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)中，輸入 [資料來源名稱]、選取 [資料庫類型]、輸入資料庫或目錄的路徑，然後按一下 [確定]。  
   
-     新的資料來源名稱顯示在 ODBC 資料源對話框的「輸入資料來源文本」 框中。  
+     新的資料來源名稱會顯示在 [ODBC 資料來源] 對話方塊的 [輸入資料來源] 文字方塊中。  
   
 7.  按一下 [確定]。  
   
-     在「選擇資料源」 對話方塊的「可用資料來源」 文字框選擇了新的資料來源名稱。  
+     新的資料來源名稱會在 [選取資料來源] 對話方塊的 [可用的資料來源] 文字方塊中選取。  
   
 8.  按一下 [使用]。  
   
- 您現在可以將表添加到打開的查詢。 有關生成查詢的詳細資訊,請參閱[從 Visual FoxPro 資料庫將數據導入 Microsoft Excel。](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)
+ 您現在可以將資料表加入至開啟的查詢。 如需建立查詢的詳細資訊，請參閱[從 Visual FoxPro 資料庫將資料匯入 Microsoft Excel](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)。

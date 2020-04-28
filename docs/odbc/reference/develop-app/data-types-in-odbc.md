@@ -1,5 +1,5 @@
 ---
-title: ODBC 中的數據型態 :微軟文件
+title: ODBC 中的資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a9a602c43a257dba2cd856625c1520077188bb20
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305189"
 ---
 # <a name="data-types-in-odbc"></a>ODBC 中的資料類型
-ODBC 使用兩組資料類型:SQL 資料類型和 C 數據類型。 SQL 資料類型用於資料來源,C 資料類型在應用程式中的 C 代碼中使用。  
+ODBC 使用兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型是用於資料來源中，而 C 資料類型則是在應用程式的 C 程式碼中使用。  
   
- 本節包含以下主題。  
+ 本章節包含下列主題。  
   
 -   [類型識別碼](../../../odbc/reference/develop-app/type-identifiers.md)  
   

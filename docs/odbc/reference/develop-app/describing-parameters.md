@@ -1,5 +1,5 @@
 ---
-title: 描述參數 |微軟文件
+title: 描述參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f4d9284294707da0a469bf75ff9812ad5f7855bb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305939"
 ---
 # <a name="describing-parameters"></a>描述參數
-**SQLBind參數**具有描述參數的參數:其 SQL 類型、精度和縮放。 驅動程式使用此資訊或*元資料*將參數值轉換為數據源所需的類型。 乍一看,驅動程式似乎比應用程式更瞭解參數元數據;畢竟,驅動程式可以輕鬆地發現結果集列的元數據。 事實證明,情況並非如此。 首先,大多數數據源不為驅動程式提供發現參數元數據的方法。 其次,大多數應用程式已經知道元數據。  
+**SQLBindParameter**具有可描述參數的引數：其 SQL 類型、有效位數和小數位數。 驅動程式會使用這項資訊或*中繼資料，* 將參數值轉換成資料來源所需的類型。 乍一眼，驅動程式可能會比應用程式更能知道參數中繼資料的位置;畢竟，驅動程式可以輕鬆地探索結果集資料行的中繼資料。 事實上，這種情況並非如此。 首先，大部分的資料來源都不會提供驅動程式探索參數中繼資料的方法。 第二，大部分的應用程式都已經知道中繼資料了。  
   
- 如果 SQL 語句在應用程式中是硬編碼的,則應用程式編寫器已經知道每個參數的類型。 如果 SQL 語句由應用程式在運行時建構,則應用程式可以在生成語句時確定元數據。 例如,當應用程式建構子句時  
+ 如果 SQL 語句在應用程式中為硬式編碼，應用程式寫入器已經知道每個參數的類型。 如果 SQL 語句是由應用程式在執行時間所建立，則應用程式可以在建立語句時判斷中繼資料。 例如，當應用程式建立子句時  
   
 ```  
 WHERE OrderID = ?  
 ```  
   
- 它可以為 OrderID 列調用**SQLColumn。**  
+ 它可以呼叫**SQLColumns**作為 [訂單] 資料行。  
   
- 應用程式無法輕鬆確定參數元數據的唯一情況是使用者輸入參數化語句。 在這種情況下,應用程式調用**SQLPrepare**來準備敘述 **,SQLNumParams**來確定參數數 **,SQLDescribeParam**來描述每個參數。 但是,如前所述,大多數數據源不為驅動程式提供發現參數元數據的方法,因此**SQLDescribeParam**並不得到廣泛支援。
+ 唯一的情況是當使用者輸入參數化語句時，應用程式無法輕易地判斷參數中繼資料。 在此情況下，應用程式會呼叫**SQLPrepare**來準備語句、 **SQLNumParams**以判斷參數的數目，以及**SQLDescribeParam**來描述每個參數。 不過，如先前所述，大部分的資料來源都不會提供驅動程式探索參數中繼資料的方法，因此不會廣泛支援**SQLDescribeParam** 。

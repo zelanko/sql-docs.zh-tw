@@ -15,22 +15,22 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7dadb038bcb77ee13abdbead023aed164cbe2a8b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306117"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和時間改善 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 有關新日期和時間資料類型的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機客戶端支援概述,請參閱[日期和時間改進](../../relational-databases/native-client/features/date-and-time-improvements.md)。 如需範例，請參閱[使用增強型日期和時間功能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需有關新日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和時間資料類型之 Native Client 支援的總覽，請參閱[日期和時間改善](../../relational-databases/native-client/features/date-and-time-improvements.md)。 如需範例，請參閱[使用增強型日期和時間功能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
   
  如需更多日期和時間資料類型的一般資訊，請參閱 [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [對 OLE DB 日期和時間改善的資料類型支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- 提供有關支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期和時間數據類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 OLE 資料庫(本機用戶端)類型的資訊。  
+ 提供支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期和時間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型之 OLE DB （Native Client）類型的相關資訊。  
   
  [中繼資料 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
  包含 DBBINDING 結構、**ICommandWithParameters::GetParameterInfo**、**ICommandWithParameters::SetParameterInfo**、**IColumnsRowset::GetColumnsRowset** 及 I**ColumnsInfo::GetColumnInfo** 的相關資訊。 同時提供有關 OLE DB 結構描述資料列集更新的資訊。  
@@ -38,7 +38,7 @@ ms.locfileid: "81306117"
  [繫結和轉換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  描述在伺服器和用戶端之間，針對現有日期類型和新日期類型進行轉換的規則。  
   
- [用於增強日期和時間類型的批次複製變更,&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
+ [增強型日期和時間類型的大量複製變更 &#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  描述可支援大量複製作業的日期/時間增強功能。  
   
  [OLE DB API 對日期和時間增強功能的支援](../../relational-databases/native-client-ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "81306117"
  [IRowsetFind 的相容性](../../relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind.md)  
  描述日期/時間類型和 **IRowsetFind**。  
   
- [具有以前 SQL 伺服器版本的新日期和時間功能&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
+ [先前 SQL Server 版本的新日期和時間功能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
  描述使用日期和時間增強功能的應用程式與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行通訊時，以及使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 編譯的用戶端將命令傳送到支援日期和時間增強功能的伺服器時的預期行為。  
   
 ## <a name="see-also"></a>另請參閱  
