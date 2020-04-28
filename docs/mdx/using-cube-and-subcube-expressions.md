@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893533"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用 Cube 及 Subcube 運算式
@@ -73,6 +73,6 @@ ms.locfileid: "68893533"
  [在 MDX 中建立 Subcube &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [建立 &#40;MDX&#41;的子集語句](../mdx/mdx-data-definition-create-subcube.md)   
  [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)   
- [SCOPE 語句 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
+ [SCOPE 陳述式 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811235"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
@@ -303,7 +303,7 @@ GO
   
 -   記憶體最佳化資料表中不支援外部索引鍵、唯一條件約束、觸發程序、結構描述修改、ROWGUIDCOL、計算資料行、資料壓縮、別名資料類型、版本設定及鎖定。 如需詳細資訊，請參閱＜ [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) ＞。  
   
-##  <a name="Schema"></a> 修改結構描述檔案  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>修改架構檔案  
   
 -   不支援叢集索引。 將任何叢集索引變更為非叢集索引。  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING 必須為 ON。  
   
-##  <a name="PrimaryKey"></a>將變更複寫至主要金鑰  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>將變更複寫至主要金鑰  
  記憶體最佳化資料表的主索引鍵無法更新。 若要複寫訂閱者端的主索引鍵更新，請修改更新預存程序，將更新做為刪除和插入組傳遞。  
   
 ## <a name="see-also"></a>另請參閱  

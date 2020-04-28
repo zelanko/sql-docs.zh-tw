@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891871"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
@@ -65,10 +65,10 @@ ms.locfileid: "68891871"
   
 -   透過撰寫將某個結果集資料行中所有資料轉換成含有不同資料類型之新資料行的運算式，根據現有的報表資料集欄位建立導出欄位。 例如，下列運算式會將欄位 Year 從整數值轉換成字串值： `=CStr(Fields!Year.Value)`。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
--   檢查您所使用的資料處理延伸模組是否包含擷取預先格式化資料的中繼資料。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢會針對處理 cube 時已經格式化的 cube 值包含 FORMATTED_VALUE 擴充屬性。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
+-   檢查您所使用的資料處理延伸模組是否包含擷取預先格式化資料的中繼資料。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢包含在處理 Cube 時已經格式化的 Cube 值 FORMATTED_VALUE 擴充屬性。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解參數資料類型  
- 報表參數必須屬於下列其中一種資料類型：Boolean、DateTime、Integer、Float 或 Text (也稱為 String)。 當資料集查詢包含查詢參數時，系統就會自動建立報表參數並將它們連結至查詢參數。 報表參數的預設資料類型為 String。 若要變更報表參數的預設資料類型，請在 [報表參數屬性]**** 對話方塊的 [一般]**** 頁面上，從 [資料類型]**** 下拉式清單中選取正確的值。  
+ 報表參數必須屬於下列其中一種資料類型：Boolean、DateTime、Integer、Float 或 Text (也稱為 String)。 當資料集查詢包含查詢參數時，系統就會自動建立報表參數並將它們連結至查詢參數。 報表參數的預設資料類型為 String。 若要變更報表參數的預設資料類型，請在 [報表參數屬性]  對話方塊的 [一般]  頁面上，從 [資料類型]  下拉式清單中選取正確的值。  
   
 > [!NOTE]  
 >  屬於 DateTime 資料類型的報表參數不支援毫秒。 雖然您可以根據包含毫秒的值建立參數，但是無法從包含毫秒之日期或時間值的可用值下拉式清單中選取值。  
@@ -104,7 +104,7 @@ ms.locfileid: "68891871"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 這個範例會顯示日期 (2008 年 7 月 1 日)、接著 7 位數精確度的時間 (上午 6:05:07.9999999)，然後接著以小時和分鐘為單位的 UTC 時區時差 (加上 8 小時，0 分)。 在下列範例中，這個值已經放置於稱為 `String` 的 `MyDateTime.Value` 欄位中。  
+ 這個範例會顯示日期 (2008 年 7 月 1 日)、接著 7 位數精確度的時間 (上午 6:05:07.9999999)，然後接著以小時和分鐘為單位的 UTC 時區時差 (加上 8 小時，0 分)。 在下列範例中，這個值已經放置於稱為 `MyDateTime.Value` 的 `String` 欄位中。  
   
  您可以使用下列其中一種策略，將這項資料轉換成一個或多個 CLR 值：  
   
@@ -138,7 +138,7 @@ ms.locfileid: "68891871"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料類型的詳細資訊，請參閱 [SQL Server 線上叢書](/sql/t-sql/data-types/data-types-transact-sql)中的[資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) 及[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](https://go.microsoft.com/fwlink/?linkid=120955)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料類型的詳細資訊，請參閱 [SQL Server 線上叢書](https://go.microsoft.com/fwlink/?linkid=120955)中的[資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) 及[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料類型的詳細資訊，請參閱《 [SQL Server 線上叢書](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) 》中的 [SQL Server Books Onl》中的e](https://go.microsoft.com/fwlink/?linkid=120955)。  
   

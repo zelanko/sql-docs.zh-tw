@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941059"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
@@ -44,17 +44,17 @@ ms.locfileid: "68941059"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   有些屬性在建立了發行集後無法再修改，而另一些當存在發行集的訂閱時便無法修改。 無法修改的屬性以唯讀顯示。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   建立發行集之後，某些屬性變更需要新的快照集。 如果發行集有訂閱，則某些變更還需要重新初始化所有訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在位於  **與複寫監視器的 [發行集屬性 - \<發行集>]** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。  
   
  [發行集屬性 - **發行集>]\<** 對話方塊上包含下列頁面：  
@@ -97,7 +97,7 @@ ms.locfileid: "68941059"
   
 3.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式修改發行集及傳回其屬性。 您使用的預存程序將根據發行集的類型而定。  
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>檢視快照式或交易式發行集的屬性  
@@ -130,7 +130,7 @@ ms.locfileid: "68941059"
   
 1.  執行 [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)，針對適當的快照集參數指定一或多個新的快照集屬性。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個異動複寫範例會傳回發行集的屬性。  
   
  [!code-sql[HowTo#sp_helppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
@@ -147,7 +147,7 @@ ms.locfileid: "68941059"
   
  [!code-sql[HowTo#sp_changemergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式修改發行集及存取其屬性。 用來檢視或修改發行集屬性的 RMO 類別，將取決於發行集的類型而定。  
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>檢視或修改快照式或交易式發行集的屬性  
@@ -160,7 +160,7 @@ ms.locfileid: "68941059"
   
 4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (Microsoft Visual C# 中的 `&` 及 Microsoft Visual Basic 中的 `And`)，以判斷是否已針對 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定給定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  (選擇性) 如果您已針對 `true` 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 `false` 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
+5.  (選擇性) 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `true` 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `false` 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>檢視或修改合併式發行集的屬性  
   
@@ -172,9 +172,9 @@ ms.locfileid: "68941059"
   
 4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (Visual C# 中的 `&` 及 Visual Basic 中的 `And`)，以判斷是否已針對 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定給定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  (選擇性) 如果您已針對 `true` 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 `false` 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
+5.  (選擇性) 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `true` 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `false` 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例會設定交易式發行集的發行集屬性。 這些變更在明確傳送到伺服器之前，會先加以快取。  
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  

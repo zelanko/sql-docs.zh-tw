@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264451"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>開始使用 SSMA for Oracle (OracleToSQL)
@@ -101,7 +101,7 @@ SSMA 有兩個工具列： [專案] 工具列和 [遷移] 工具列。
 |**檢視**|包含**同步處理中繼資料**的流覽命令。 這會同步處理 Oracle Metadata Explorer 與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata explorer 之間的物件。 也包含用來顯示和隱藏**輸出**和**錯誤清單**窗格的命令，以及用來管理版面配置的選項**版面**配置。|  
 |**工具**|包含用來建立報表和遷移物件和資料的命令。 也會提供 [**全域設定**] 和 [**專案設定**] 對話方塊的存取權。|  
 |**測試人員**|包含用來建立和使用測試案例、儲存機制和備份管理系統的命令。|  
-|**説明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
+|**說明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>輸出窗格和錯誤清單窗格  
 [ **View** ] 功能表提供命令來切換 [輸出] 窗格和 [錯誤清單] 窗格的可見度：  

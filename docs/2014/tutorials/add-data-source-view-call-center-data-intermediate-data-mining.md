@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888680"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>加入用於撥接中心資料的資料來源檢視 (中繼資料採礦教學課程)
@@ -69,13 +69,13 @@ ms.locfileid: "68888680"
 |FactCallCenterID|當資料匯入資料倉儲時建立的任意索引鍵。<br /><br /> 此資料行會識別唯一記錄，應該做為資料採礦模型的案例索引鍵。|  
 |DateKey|撥接中心作業的日期，以整數表示。 資料倉儲中通常使用整數日期索引鍵，但是如果您要依日期值進行分組，可能想要取得日期/時間格式的日期。<br /><br /> 請注意，日期不是唯一的，因為廠商會在作業的每一天，為每個排班提供一個個別的報表。|  
 |WageType|表示該日期為工作日、週末或假日。<br /><br /> 客戶服務在週末與工作日的品質可能有所差異，因此您將使用此資料行做為輸入。|  
-|移位|表示記錄電話當時的排班。 此撥接中心將工作日分成四個排班：AM、PM1、PM2，以及 Midnight。<br /><br /> 排班可能對客戶服務品質造成影響，因此您將它做為輸入。|  
+|Shift|表示記錄電話當時的排班。 此撥接中心將工作日分成四個排班：AM、PM1、PM2，以及 Midnight。<br /><br /> 排班可能對客戶服務品質造成影響，因此您將它做為輸入。|  
 |LevelOneOperators|表示待命的一級操作員數目。<br /><br /> 撥接中心員工從一級開始，因此這些員工資歷較淺。|  
 |LevelTwoOperators|表示待命的二級操作員數目。<br /><br /> 員工必須記錄特定的服務時數才能限定為二級操作員。|  
 |TotalOperators|排班期間出現的操作員總數。|  
 |Calls|排班期間接到的電話通數。|  
 |AutomaticResponses|完全由自動化電話處理 (互動式語音應答，也就是 IVR) 所處理的電話通數。|  
-|訂單|來自電話的訂單數目。|  
+|Orders|來自電話的訂單數目。|  
 |IssuesRaised|由電話產生、需要後續追蹤的問題數目。|  
 |AverageTimePerIssue|回應來電所需的平均時間。|  
 |ServiceGrade|指出一般服務品質的度量，以整個排班的*放棄速率*來測量。 放棄率越高，客戶越可能不滿意，而且可能會遺失潛在的訂單。|  

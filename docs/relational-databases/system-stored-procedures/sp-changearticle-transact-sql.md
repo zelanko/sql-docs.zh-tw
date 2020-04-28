@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771405"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -62,7 +62,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新的目的地資料表。|  
 |**destination_owner**||目的地物件的擁有者名稱。|  
 |**出**||用於篩選資料表 (水平篩選) 的新預存程序。 預設值是 NULL。 點對點複寫發行集的這個項目不能變更。|  
-|**fire_triggers_on_snapshot**|**真正**|在套用初始快照集時，執行複寫的使用者觸發程序。<br /><br /> 注意：若要複寫觸發程式， *schema_option*的位元遮罩值必須包含值**0x100**。|  
+|**fire_triggers_on_snapshot**|**true**|在套用初始快照集時，執行複寫的使用者觸發程序。<br /><br /> 注意：若要複寫觸發程式， *schema_option*的位元遮罩值必須包含值**0x100**。|  
 ||**false**|在套用初始快照集時，不執行複寫的使用者觸發程序。|  
 |**identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
 |**ins_cmd**||要執行的 INSERT 陳述式；否則，便從記錄檔中建構它。|  
@@ -107,7 +107,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x40000000**|複寫權限。|  
 ||**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
 ||**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。<br /><br /> 請參閱相關的選項**0x800000000**。|  
-||**0x200000000**|將中導[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x200000000**|將中導[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 ||**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
 ||**0x1000000000**|將大於8000個位元組的 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的訂閱者。|  
@@ -118,7 +118,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|複寫資料行的 SPARSE 屬性。 如需這個屬性的詳細資訊，請參閱[使用稀疏資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
 ||**0x40000000000**|啟用「快照集代理程式」的腳本，以在「訂閱者」上建立記憶體優化資料表。|  
 ||**0x80000000000**|將記憶體優化文章的叢集索引轉換為非叢集索引。|  
-|**狀態**||指定屬性的新狀態。|  
+|**status**||指定屬性的新狀態。|  
 ||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|資料行名稱包括在複寫的 INSERT 陳述式中。|  
 ||**no column names**|資料行名稱不包括在複寫的 INSERT 陳述式中。|  
@@ -160,7 +160,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -198,7 +198,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **ins_cmd**  
   
--   **狀態**  
+-   **status**  
   
 -   **upd_cmd**  
   

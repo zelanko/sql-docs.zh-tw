@@ -1,5 +1,5 @@
 ---
-title: 呼叫方法 |微軟文件
+title: 呼叫方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 471549e5a42f8d08a62da37c4e98e66bc9b67413
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148766"
 ---
 # <a name="calling-methods"></a>呼叫方法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  方法執行與物件相關的特定任務,例如在資料庫上頒發**檢查點**或請求[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例 的枚舉登錄清單。  
+  方法會執行與物件相關的特定工作，例如在資料庫上發出**檢查點**，或要求實例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登入列舉清單。  
   
  方法會在物件上執行作業。 方法可以採用參數，而且通常有一個傳回值。 傳回值可以是簡單資料類型、複雜物件，或包含許多成員的結構。  
   
  使用例外狀況處理來偵測方法是否成功。 如需詳細資訊，請參閱 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 有關詳細資訊,請參閱[在可視化工作室 .NET 中建立可視化 C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>在 Visual Basic 中使用簡單 SMO 方法  

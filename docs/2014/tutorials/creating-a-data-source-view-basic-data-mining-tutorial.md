@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888642"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>建立資料來源檢視 (基本資料採礦教學課程)
@@ -50,6 +50,6 @@ ms.locfileid: "68888642"
  [第2課：建立目標郵寄結構 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [定義資料來源視圖 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
+ [定義資料來源檢視 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

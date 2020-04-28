@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148749"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>連接到 SQL Server 的執行個體
@@ -28,7 +28,7 @@ ms.locfileid: "70148749"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理物件（SMO）應用程式中的第一個程式設計步驟，是建立<xref:Microsoft.SqlServer.Management.Smo.Server>物件的實例，並建立其與實例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連接。  
   
- 您可以用三種方式建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的執行個體，並建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 第一種方式是，使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件變數來提供連接資訊。 第二種方式是，明確地設定 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件屬性來提供連接資訊。 第三種方式是，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件建構函式中傳遞 <xref:Microsoft.SqlServer.Management.Smo.Server> 執行個體的名稱。 
+ 您可以用三種方式建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的執行個體，並建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 第一種方式是，使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件變數來提供連接資訊。 第二種方式是，明確地設定 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件屬性來提供連接資訊。 第三種方式是，在 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件建構函式中傳遞 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 
   
  **使用 ServerConnection 物件**  
   
@@ -40,8 +40,7 @@ ms.locfileid: "70148749"
   
  **在 Server 物件建構函式中提供 SQL Server 執行個體名稱**  
   
- 宣告 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件變數，然後傳遞 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱，做為建構函式中的字串參數。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> 物件會利用包含預設連接設定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體建立連接。  
+ 宣告 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件變數，然後傳遞 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱，做為建構函式中的字串參數。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件會利用包含預設連接設定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體建立連接。  
   
 ## <a name="connection-pooling"></a>連接共用  
  通常不需要呼叫 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 物件的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 方法。 SMO 將會在需要時，自動建立連接，並在執行作業完畢之後，將連接釋放到連接集區。 呼叫 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法時，並不會將連接釋放到集區。 若要將連接釋放到集區，必須明確地呼叫 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 此外，您可以設定 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> 物件的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 屬性來要求非集區的連接。  

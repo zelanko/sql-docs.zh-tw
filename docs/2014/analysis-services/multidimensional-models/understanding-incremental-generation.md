@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811064"
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
@@ -85,6 +85,6 @@ ms.locfileid: "68811064"
   
 ## <a name="see-also"></a>另請參閱  
  [管理資料來源視圖和資料來源的變更](manage-changes-to-data-source-views-and-data-sources.md)   
- [架構產生嚮導 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

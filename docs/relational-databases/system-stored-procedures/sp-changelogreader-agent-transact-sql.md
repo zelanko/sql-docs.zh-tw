@@ -16,10 +16,10 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768876"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
@@ -78,7 +78,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changelogreader_agent**。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [查看及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_helplogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   

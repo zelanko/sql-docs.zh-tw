@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890462"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
   使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](control-flow/data-mining-query-task.md) 和 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ## <a name="general-options"></a>一般選項  
  **名稱**  
@@ -37,7 +37,7 @@ ms.locfileid: "68890462"
  輸入資料採礦查詢工作的描述。  
   
 ## <a name="output-tab-options"></a>輸出索引標籤選項  
- **[連接]**  
+ **建立**  
  在清單中選取連線管理員，或按一下 [新增]**** 來建立新的連線管理員。  
   
  **新增**  
@@ -46,7 +46,7 @@ ms.locfileid: "68890462"
  **輸出資料表**  
  指定供預測查詢撰寫其結果的資料表。  
   
- **卸載並重新建立輸出資料表**  
+ **卸除並重新建立輸出資料表**  
  指出預測查詢是否應藉由卸除然後重新建立資料表，來覆寫目的地資料表的內容。  
   
 ## <a name="see-also"></a>另請參閱  

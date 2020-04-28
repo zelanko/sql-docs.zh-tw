@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264406"
 ---
 # <a name="global-settings-tester-oracletosql"></a>全域設定 (測試器) (OracleToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "68264406"
   
 若要存取測試人員設定，請在 [**工具**] 功能表上選取 [**通用設定**]，然後按一下左窗格底部的 [**測試人員**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **可測試的物件分析**  
 此設定指定是否要執行可測試物件的分析。 如果您想要讓 SSMA 測試人員分析並自動檢查相依物件，請選取 **[是]** 。 預設選項群組為 **[是]**。  
   

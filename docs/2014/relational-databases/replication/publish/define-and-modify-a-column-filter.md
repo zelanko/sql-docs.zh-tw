@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e00ceeae68ccc791c3680e029e13844fa6ec683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68731064"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定義及修改資料行篩選
@@ -37,13 +37,13 @@ ms.locfileid: "68731064"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   某些資料行無法進行篩選；如需詳細資訊，請參閱[篩選發行的資料](filter-published-data.md)。 如果您要在初始化訂閱後修改資料行篩選，則必須在進行變更後產生新的快照集並重新初始化所有訂閱。 如需屬性變更需求的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在「新增發行集精靈」的 **[發行項]** 頁面中定義資料行篩選。 如需使用「新增發行集精靈」的詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
  在 [發行集屬性 - **發行集>]** **對話方塊的 [發行項]\<** 頁面上定義及修改資料行篩選。 如需發行集和發行項屬性的詳細資訊，請參閱[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "68731064"
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  在建立資料表發行項時，您可以定義要將哪些資料行包含在發行項中，並在定義發行項之後變更資料行。 您可以使用複寫預存程序來以程式設計的方式建立及修改篩選的資料行。  
   
 > [!NOTE]  
@@ -126,7 +126,7 @@ ms.locfileid: "68731064"
   
 3.  重新初始化訂閱。 如需詳細資訊，請參閱 [重新初始化訂閱](../reinitialize-subscriptions.md)。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此異動複寫範例會從根據 `DaysToManufacture` 資料表的發行項中移除 `Product` 資料行。  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  

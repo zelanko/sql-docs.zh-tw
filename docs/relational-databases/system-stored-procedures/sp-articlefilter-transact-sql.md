@@ -16,10 +16,10 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d90cd0ba957da820ce5a937ae687e39ca0302025
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769062"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
@@ -90,7 +90,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [定義及修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
+ [定義和修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articleview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   

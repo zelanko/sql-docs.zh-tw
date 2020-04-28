@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892719"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
@@ -31,10 +31,10 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ```  
   
 ## <a name="arguments"></a>引數  
- *model*  
+ *模型*  
  模型識別碼。  
   
- *表示*  
+ *structure*  
  結構識別碼。  
   
  *對應的模型資料行*  
@@ -93,7 +93,7 @@ INSERT INTO [MINING MODEL] <model>
  如需資料來源類型的詳細資訊，請參閱[&#60;來源資料查詢&#62;](../dmx/source-data-query.md)。  
   
 ## <a name="basic-example"></a>基本範例  
- 下列範例會根據**** [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫中的目標郵寄資料，使用 OPENQUERY 來定型貝氏貝氏機率分類模型。  
+ 下列範例會根據**OPENQUERY** [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫中的目標郵寄資料，使用 OPENQUERY 來定型貝氏貝氏機率分類模型。  
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  
@@ -122,6 +122,6 @@ AS [Models]
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889072"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
@@ -37,7 +37,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ```  
   
 ## <a name="arguments"></a>引數  
- *model*  
+ *模型*  
  模型的唯一名稱。  
   
  *資料行定義清單*  
@@ -96,11 +96,11 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [資料類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [&#40;資料採礦&#41;的內容類型](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [內容類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [資料採礦&#41;的資料行發行 &#40;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [資料行分佈 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [資料採礦&#41;的模型旗標 &#40;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [模型旗標 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列\<資料行關聯性> 子句。  
   
@@ -189,6 +189,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

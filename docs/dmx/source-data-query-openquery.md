@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887731"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;來源資料查詢&gt; -OPENQUERY
@@ -53,6 +53,6 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
 ## <a name="see-also"></a>另請參閱  
  [&#60;來源資料查詢&#62;](../dmx/source-data-query.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

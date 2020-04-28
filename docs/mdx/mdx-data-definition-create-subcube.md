@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887440"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義 - CREATE SUBCUBE
@@ -42,7 +42,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
 |原始的預設成員|可以彙總|子選擇|修訂過的預設成員|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|是|{Time.Year.2003}|無變更|  
+|Time.Year.All|是|{Time.Year.2003}|沒有變更|  
 |時間. 年。[1997]|是|{Time.Year.2003}|Time.Year.All|  
 |時間. 年。[1997]|否|{Time.Year.2003}|時間. 年。[2003]|  
 |時間. 年。[1997]|是|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
@@ -131,6 +131,6 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [MDX 中的重要概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 腳本語句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [&#40;MDX&#41;的 DROP 子資料集語句](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT 語句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
+ [SELECT 陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893117"
 ---
 # <a name="usage-dmx"></a>使用方式 (DMX)
@@ -20,7 +20,7 @@ ms.locfileid: "68893117"
 
   當您使用資料採礦延伸模組（DMX）在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定義新的資料採礦模型時，您必須指定建立模型的資料採礦演算法將如何使用每個資料行。 您可以將資料行指定為下列類型其中之一：  
   
--   **索引鍵**  
+-   **關鍵**  
   
 -   **Key Sequence**  
   

@@ -16,10 +16,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264515"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 主控台中的命令列選項 (OracleToSQL)

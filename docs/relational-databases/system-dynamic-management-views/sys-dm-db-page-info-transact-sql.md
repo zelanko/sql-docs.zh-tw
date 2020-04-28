@@ -21,10 +21,10 @@ ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68841602"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
@@ -99,17 +99,17 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |ml_map_page_id |int |對應最小記錄點陣圖頁面的頁面識別碼 |
 |ml_status |bit |指出頁面是否為最低限度記錄的位 |
 |ml_status_desc |Nvarchar （64） |最低記錄狀態位的描述 |
-|prev_page_file_id |smallint |先前的分頁檔案識別碼 |
+|prev_page_file_id |SMALLINT |先前的分頁檔案識別碼 |
 |prev_page_page_id |int |上一頁頁面識別碼 |
-|next_page_file_id |smallint |下一個分頁檔案識別碼 |
+|next_page_file_id |SMALLINT |下一個分頁檔案識別碼 |
 |next_page_page_id |int |下一頁頁面識別碼 |
-|fixed_length |smallint |固定大小資料列的長度 |
-|slot_count |smallint |插槽總數（已使用和未使用） <br> 若為數據頁，這個數位就相當於資料列數目。 |
-|ghost_rec_count |smallint |頁面上標示為幻影的記錄數目 <br> 准刪除記錄是指已標示為要刪除但尚未移除的記錄。 |
-|free_bytes |smallint |頁面上的可用位元組數 |
+|fixed_length |SMALLINT |固定大小資料列的長度 |
+|slot_count |SMALLINT |插槽總數（已使用和未使用） <br> 若為數據頁，這個數位就相當於資料列數目。 |
+|ghost_rec_count |SMALLINT |頁面上標示為幻影的記錄數目 <br> 准刪除記錄是指已標示為要刪除但尚未移除的記錄。 |
+|free_bytes |SMALLINT |頁面上的可用位元組數 |
 |free_data_offset |int |資料區域結尾的可用空間位移 |
-|reserved_bytes |smallint |所有交易保留的可用位元組數（如果堆積） <br> 幻影資料列數（如果是索引分葉） |
-|reserved_bytes_by_xdes_id |smallint |M_xdesID 所貢獻的空間 m_reservedCnt <br> 僅供偵錯工具之用 |
+|reserved_bytes |SMALLINT |所有交易保留的可用位元組數（如果堆積） <br> 幻影資料列數（如果是索引分葉） |
+|reserved_bytes_by_xdes_id |SMALLINT |M_xdesID 所貢獻的空間 m_reservedCnt <br> 僅供偵錯工具之用 |
 |xdes_id |Nvarchar （64） |由 m_reserved 所貢獻的最新交易 <br> 僅供偵錯工具之用 |
 ||||
 
@@ -148,9 +148,9 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ```
 
 ## <a name="see-also"></a>另請參閱  
-[動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

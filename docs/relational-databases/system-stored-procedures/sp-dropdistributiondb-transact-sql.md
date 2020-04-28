@@ -16,10 +16,10 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768862"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)

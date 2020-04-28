@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530844"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 課：定義計算
@@ -41,7 +41,7 @@ ms.locfileid: "69530844"
  如需詳細資訊，請參閱 [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)和 [多維度模型中的計算](multidimensional-models/calculations-in-multidimensional-models.md)。  
   
 > [!NOTE]  
->  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866)以下載本教學課程所使用的範例專案。  
+>  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
   
  這一課包含下列工作：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69530844"
  在這項工作中，您要學習定義命名集。  
   
 ## <a name="next-lesson"></a>下一課  
- [第7課：定義 &#40;Kpi 的關鍵效能指標&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [第 7 課：定義關鍵效能指標 &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   

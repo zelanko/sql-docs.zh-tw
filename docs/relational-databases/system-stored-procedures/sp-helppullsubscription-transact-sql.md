@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771439"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -60,21 +60,21 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**散發代理程式**|**Nvarchar （100）**|處理訂閱的散發代理程式。|  
 |**publication description**|**nvarchar(255)**|發行集的描述。|  
 |**last updating time**|**date**|更新訂閱資訊的時間。 這是 ISO 日期 (114) + ODBC 時間 (121) 的 UNICODE 字串。 格式為 yyyymmdd hh:mi:sss.mmm，其中 'yyyy' 是年份，'mm' 是月份，'dd' 是日期，'hh' 是小時，'mi' 是分鐘，'sss' 是秒鐘，'mmm' 是毫秒。|  
-|**訂用帳戶名稱**|**Varchar （386）**|訂用帳戶的名稱。|  
-|**上次交易時間戳記**|**Varbinary （16）**|最後一次複寫交易的時間戳記。|  
+|**訂用帳戶名稱**|**Varchar （386）**|訂閱的名稱。|  
+|**上次交易時間戳記**|**varbinary(16)**|最後一次複寫交易的時間戳記。|  
 |**update mode**|**tinyint**|允許的更新類型。|  
 |**distribution agent job_id**|**int**|散發代理程式的作業識別碼。|  
 |**enabled_for_synmgr**|**int**|是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager 同步處理訂閱。|  
-|**subscription guid**|**binary （16）**|發行集訂閱版本的全域識別碼。|  
-|**subid**|**binary （16）**|匿名訂閱的全域識別碼。|  
+|**subscription guid**|**binary(16)**|發行集訂閱版本的全域識別碼。|  
+|**subid**|**binary(16)**|匿名訂閱的全域識別碼。|  
 |**immediate_sync**|**bit**|每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
 |**發行者登入**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**發行者密碼**|**Nvarchar （524）**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**publisher security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將*發行者*定義為遠端伺服器或連結的伺服器。|  
+|**publisher security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將*發行者*定義為遠端伺服器或連結的伺服器。|  
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**distributor_password**|**Nvarchar （524）**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
 |**ftp_address**|**sysname**|只是為了與舊版相容。|  
 |**ftp_port**|**int**|只是為了與舊版相容。|  
 |**ftp_login**|**sysname**|只是為了與舊版相容。|  

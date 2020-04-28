@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493998"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>第 1 課：準備 Analysis Services 資料庫 (基本資料採礦教學課程)

@@ -20,17 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68290359"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  執行可重複使用許多次或已動態建立的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次可包含內嵌參數。  
+  執行可重複使用許多次或已動態建立的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次可包含內嵌參數。  
   
 > [!IMPORTANT]  
 >  執行階段編譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可能會讓應用程式面臨惡意攻擊的威脅。  
@@ -131,8 +130,7 @@ SELECT @max_title;
   
 -   由於在各次執行之間，sp_executesql 字串中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的實際文字不會改變，因此，查詢最佳化工具可能會符合第二次執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與針對第一次執行所產生的執行計畫。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不需要編譯第二個陳述式。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 字串只建立一次。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 字串只建立一次。  
   
 -   整數參數用原生格式來指定。 不需要轉換成 Unicode。  
   
@@ -236,7 +234,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. 執行簡單的 SELECT 陳述式  
  下列範例會建立和執行包含名稱為 `SELECT` 的內嵌參數之簡單 `@level` 陳述式。  

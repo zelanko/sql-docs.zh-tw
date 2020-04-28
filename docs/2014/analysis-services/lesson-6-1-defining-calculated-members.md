@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493878"
 ---
 # <a name="defining-calculated-members"></a>定義導出成員
@@ -53,15 +53,15 @@ ms.locfileid: "69493878"
      您可以將中繼資料元素，從 [計算工具]**** 窗格拖曳到 [運算式]**** 方塊中，再加上運算子和其他元素，來建立多維度運算式 (MDX) 運算式。 或者，您也可以在 [運算式]**** 方塊中，直接輸入 MDX 運算式。  
   
     > [!NOTE]  
-    >  如果您無法在 [計算工具]**** 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]****。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。  
+    >  如果您無法在 [計算工具]**** 窗格檢視任何中繼資料，請在工具列上按一下 [重新連接]****。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。  
   
 5.  從 [計算工具]**** 窗格的 [中繼資料]**** 索引標籤，將 [網際網路銷售 - 銷售量]**** 拖曳到 [計算運算式]**** 窗格中的 [運算式]**** 方塊。  
   
-6.  在 [運算式]**** 方塊的 [量值].[網際網路銷售 - 銷售量] 後面，輸入一個加號 (`+`****)。  
+6.  在 [運算式]**** 方塊的 [量值].[網際網路銷售 - 銷售量]**** 後面，輸入一個加號 (`+`)。  
   
 7.  在 [計算工具]**** 窗格的 [中繼資料]**** 索引標籤中，展開 [轉售商銷售]****，再將 [轉售商銷售 - 銷售量]**** 拖曳到 [計算運算式]**** 窗格中 [運算式]**** 方塊的加號 (+) 後面。  
   
-8.  在 [格式字串]**** 清單中，選取 [貨幣]****。  
+8.  在 [**格式字串**] 清單中，選取 **[貨幣]。**  
   
 9. 在 [非空白行為]**** 清單中，勾選 [網際網路銷售 - 銷售量]**** 和 [轉售商銷售 - 銷售量]**** 的核取方塊，然後按一下 [確定]****。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493878"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. 在 [**格式字串**] 清單中，選取 **[貨幣]**。  
+14. 在 [格式字串]**** 清單中，選取 [貨幣]****。  
   
 15. 在 [非空白行為]**** 清單中，勾選 [網際網路銷售 - 總產品成本]**** 和 [轉售商銷售 - 總產品成本]**** 的核取方塊，然後按一下 [確定]****。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "69493878"
   
 ## <a name="browsing-the-new-calculated-members"></a>瀏覽新的導出成員  
   
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
 2.  順利完成部署之後，切換到 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]****。  
   

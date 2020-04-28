@@ -12,11 +12,11 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c67150d5345b95b025e4005642ebccac63f86f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889494"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本機 Cube (Analysis Services - 多維度資料)
@@ -24,7 +24,7 @@ ms.locfileid: "68889494"
   
  本機 Cube 和本機採礦模型可讓用戶端工作站與網路中斷連接時，仍能進行分析。 例如，用戶端應用程式可能會呼叫 OLE DB for OLAP 9.0 Provider (MSOLAP.3)，以便載入本機 Cube 引擎來建立及查詢本機 Cube，如下圖所示：  
   
- ![本機 Cube 和模型的用戶端架構](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-localcubearch9.gif "本機 Cube 和模型的用戶端架構")  
+ ![本機 Cube 和模型的用戶端架構](../../../analysis-services/dev-guide/media/as-localcubearch9.gif "本機 Cube 和模型的用戶端架構")  
   
  與本機 Cube 進行互動時，ADMOD.NET 和分析管理物件 (AMO) 也會載入本機 Cube 引擎。 只有單一處理序可以存取本機 Cube 檔案，因為當本機 Cube 引擎建立本機 Cube 的連接時，它就會以獨佔方式鎖定本機 Cube 檔案。 透過處理序，最多允許五個同時連接。  
   

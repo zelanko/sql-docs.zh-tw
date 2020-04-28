@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265715"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "68265715"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**Nchar （128）**|這個計數器所屬的類別目錄。|  
-|**counter_name**|**Nchar （128）**|計數器的名稱。 若要取得計數器的詳細資訊，這是[使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)的計數器清單中所要選取的主題名稱。 |  
-|**instance_name**|**Nchar （128）**|計數器的特定執行個體名稱。 通常包含資料庫名稱。|  
-|**cntr_value**|**Bigint**|計數器的目前值。<br /><br /> **注意：** 針對每秒的計數器，此值為累計。 必須以不連續時間間隔取樣值來計算該速率值。 任何兩個連續取樣值之間的差等於所使用的時間間隔速率。|  
+|**object_name**|**nchar(128)**|這個計數器所屬的類別目錄。|  
+|**counter_name**|**nchar(128)**|計數器的名稱。 若要取得計數器的詳細資訊，這是[使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)的計數器清單中所要選取的主題名稱。 |  
+|**instance_name**|**nchar(128)**|計數器的特定執行個體名稱。 通常包含資料庫名稱。|  
+|**cntr_value**|**bigint**|計數器的目前值。<br /><br /> **注意：** 針對每秒的計數器，此值為累計。 必須以不連續時間間隔取樣值來計算該速率值。 任何兩個連續取樣值之間的差等於所使用的時間間隔速率。|  
 |**cntr_type**|**int**|Windows 效能架構所定義的計數器類型。 如需效能計數器類型的詳細資訊，請參閱檔上的[WMI 效能計數器類型](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types)或您的 Windows Server 檔。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   

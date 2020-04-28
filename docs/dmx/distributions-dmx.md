@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fda2eb169985eb670614f611764fbf149c71a42d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892796"
 ---
 # <a name="distributions-dmx"></a>散發 (DMX)
@@ -20,8 +20,7 @@ ms.locfileid: "68892796"
 
   在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，您可以在採礦結構中定義資料行的內容，以影響當您建立採礦模型時，演算法如何處理這些資料行中的資料。 針對某些演算法，若已知資料行包含值的通用散發，則在處理模型前先定義任何連續資料行的散發很有用。 如果您未定義散發，則產生之採礦模型所做出的預測，可能不如定義了散發的預測那般精確，因為演算法能用來解譯資料的資訊比較少。  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 資料採礦演算法支援下列散發類型：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 資料採礦演算法支援下列散發類型：  
   
  **一般**  
  連續資料行的值形成一般高斯分佈的長條圖。  

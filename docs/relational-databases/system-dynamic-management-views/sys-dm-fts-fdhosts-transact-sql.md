@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265956"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68265956"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|篩選背景程式主機的識別碼。|  
-|**fdhost_name**|**Nvarchar （120）**|篩選背景程式主機的名稱。|  
+|**fdhost_name**|**nvarchar(120)**|篩選背景程式主機的名稱。|  
 |**fdhost_process_id**|**int**|篩選背景程式主機的 Windows 處理序識別碼。|  
-|**fdhost_type**|**Nvarchar （120）**|篩選背景程式主機正在處理的文件類型，為以下其中一項：<br /><br /> 單一執行緒<br /><br /> 多執行緒<br /><br /> 大型文件|  
+|**fdhost_type**|**nvarchar(120)**|篩選背景程式主機正在處理的文件類型，為以下其中一項：<br /><br /> 單一執行緒<br /><br /> 多執行緒<br /><br /> 大型文件|  
 |**max_thread**|**int**|篩選背景程式主機中的最大執行緒數目。|  
 |**batch_count**|**int**|篩選背景程式主機內正在處理的批次數。|  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262206"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
@@ -36,41 +36,41 @@ ms.locfileid: "68262206"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|觸發程序所在的資料庫識別碼。|  
 |**object_id**|**int**|觸發程序的物件識別碼。|  
-|**type**|**char （2）**|物件的類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
-|**Type_desc**|**Nvarchar （60）**|物件類型的描述：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**Varbinary （64）**|這可以用來與從這個觸發程式內執行的**dm_exec_query_stats**中的查詢相互關聯。|  
-|**plan_handle**|**Varbinary （64）**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。|  
+|**type**|**char(2)**|物件的類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
+|**Type_desc**|**nvarchar(60)**|物件類型的描述：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**varbinary(64)**|這可以用來與從這個觸發程式內執行的**dm_exec_query_stats**中的查詢相互關聯。|  
+|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。|  
 |**cached_time**|**datetime**|在快取中加入觸發程序的時間。|  
 |**last_execution_time**|**datetime**|上次執行觸發程序的時間。|  
-|**execution_count**|**Bigint**|觸發程式從上次編譯以來執行的次數。|  
-|**total_worker_time**|**Bigint**|這個觸發程式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。|  
-|**last_worker_time**|**Bigint**|觸發程序上次執行所耗用的 CPU 時間 (以微秒為單位)。|  
-|**min_worker_time**|**Bigint**|此觸發程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。|  
-|**max_worker_time**|**Bigint**|此觸發程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。|  
-|**total_physical_reads**|**Bigint**|這個觸發程式在編譯以來執行所執行的實體讀取總數。|  
-|**last_physical_reads**|**Bigint**|上次執行觸發程式時所執行的實體讀取數。|  
-|**min_physical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最小實體讀取數。|  
-|**max_physical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最大實體讀取數。|  
-|**total_logical_writes**|**Bigint**|這個觸發程式在編譯以來執行所執行的邏輯寫入總數。|  
-|**last_logical_writes**|**Bigint**|上次執行觸發程式時所執行的邏輯寫入數。|  
-|**min_logical_writes**|**Bigint**|此觸發程式在單次執行期間曾執行的最小邏輯寫入數。|  
-|**max_logical_writes**|**Bigint**|此觸發程式在單次執行期間曾執行的最大邏輯寫入數。|  
-|**total_logical_reads**|**Bigint**|這個觸發程式在編譯以來執行所執行的邏輯讀取總數。|  
-|**last_logical_reads**|**Bigint**|上次執行觸發程式時所執行的邏輯讀取數。|  
-|**min_logical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最小邏輯讀取數。|  
-|**max_logical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最大邏輯讀取數。|  
-|**total_elapsed_time**|**Bigint**|此觸發程式完成執行的總時間（以微秒為單位）。|  
-|**last_elapsed_time**|**Bigint**|這個觸發程序最近完成執行經歷的時間 (以微秒為單位)。|  
-|**min_elapsed_time**|**Bigint**|此觸發程式完成執行所經歷的最小時間（以微秒為單位）。|  
-|**max_elapsed_time**|**Bigint**|此觸發程式已完成執行的最大耗用時間（以微秒為單位）。| 
-|**total_spills**|**Bigint**|此觸發程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**last_spills**|**Bigint**|上次執行觸發程式時所溢出的頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**min_spills**|**Bigint**|此觸發程式在單次執行期間曾發生的最小頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**max_spills**|**Bigint**|此觸發程式在單次執行期間曾溢出的最大頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**total_page_server_reads**|**Bigint**|這個觸發程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
-|**last_page_server_reads**|**Bigint**|上次執行觸發程式時所執行的頁面伺服器讀取數目。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
-|**min_page_server_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
-|**max_page_server_reads**|**Bigint**|這個觸發程式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**execution_count**|**bigint**|觸發程式從上次編譯以來執行的次數。|  
+|**total_worker_time**|**bigint**|這個觸發程式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。|  
+|**last_worker_time**|**bigint**|觸發程序上次執行所耗用的 CPU 時間 (以微秒為單位)。|  
+|**min_worker_time**|**bigint**|此觸發程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。|  
+|**max_worker_time**|**bigint**|此觸發程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。|  
+|**total_physical_reads**|**bigint**|這個觸發程式在編譯以來執行所執行的實體讀取總數。|  
+|**last_physical_reads**|**bigint**|上次執行觸發程式時所執行的實體讀取數。|  
+|**min_physical_reads**|**bigint**|此觸發程式在單次執行期間曾執行的最小實體讀取數。|  
+|**max_physical_reads**|**bigint**|此觸發程式在單次執行期間曾執行的最大實體讀取數。|  
+|**total_logical_writes**|**bigint**|這個觸發程式在編譯以來執行所執行的邏輯寫入總數。|  
+|**last_logical_writes**|**bigint**|上次執行觸發程式時所執行的邏輯寫入數。|  
+|**min_logical_writes**|**bigint**|此觸發程式在單次執行期間曾執行的最小邏輯寫入數。|  
+|**max_logical_writes**|**bigint**|此觸發程式在單次執行期間曾執行的最大邏輯寫入數。|  
+|**total_logical_reads**|**bigint**|這個觸發程式在編譯以來執行所執行的邏輯讀取總數。|  
+|**last_logical_reads**|**bigint**|上次執行觸發程式時所執行的邏輯讀取數。|  
+|**min_logical_reads**|**bigint**|此觸發程式在單次執行期間曾執行的最小邏輯讀取數。|  
+|**max_logical_reads**|**bigint**|此觸發程式在單次執行期間曾執行的最大邏輯讀取數。|  
+|**total_elapsed_time**|**bigint**|此觸發程式完成執行的總時間（以微秒為單位）。|  
+|**last_elapsed_time**|**bigint**|這個觸發程序最近完成執行經歷的時間 (以微秒為單位)。|  
+|**min_elapsed_time**|**bigint**|此觸發程式完成執行所經歷的最小時間（以微秒為單位）。|  
+|**max_elapsed_time**|**bigint**|此觸發程式已完成執行的最大耗用時間（以微秒為單位）。| 
+|**total_spills**|**bigint**|此觸發程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**last_spills**|**bigint**|上次執行觸發程式時所溢出的頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**min_spills**|**bigint**|此觸發程式在單次執行期間曾發生的最小頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**max_spills**|**bigint**|此觸發程式在單次執行期間曾溢出的最大頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**total_page_server_reads**|**bigint**|這個觸發程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**last_page_server_reads**|**bigint**|上次執行觸發程式時所執行的頁面伺服器讀取數目。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**min_page_server_reads**|**bigint**|此觸發程式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**max_page_server_reads**|**bigint**|這個觸發程式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
 
   
 ## <a name="remarks"></a>備註  

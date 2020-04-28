@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892887"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>資料採礦延伸模組 (DMX) 參考
@@ -33,7 +33,7 @@ ms.locfileid: "68892887"
   
  **如需詳細資訊：** [&#40;Analysis Services 的採礦結構-資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="BKMK_DMXStatements"></a>DMX 語句  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>DMX 語句  
  您可以使用 DMX 陳述式建立、處理、刪除、複製、瀏覽與預測資料採礦模型。 DMX 中有兩種陳述式類型：資料定義陳述式與資料操作陳述式。 您可以使用每一種陳述式執行不同種類的工作。  
   
  下列各區段提供有關使用 DMX 陳述式的詳細資訊：  
@@ -44,7 +44,7 @@ ms.locfileid: "68892887"
   
 -   [查詢基本概念](#BKMK_Queries)  
   
-###  <a name="BKMK_DDL"></a>資料定義語句  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>資料定義語句  
  使用 DMX 中的資料定義陳述式建立及定義新的採礦結構與模型，以匯入與匯出採礦模型與採礦結構，以及從資料庫卸除現有的模型。 DMX 中的資料定義陳述式是資料定義語言 (DDL) 的一部份。  
   
  您可以使用 DMX 中的資料定義陳述式執行下列工作：  
@@ -63,7 +63,7 @@ ms.locfileid: "68892887"
   
  [回到 DMX 陳述式](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_DML"></a>資料動作陳述式  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>資料動作陳述式  
  使用 DMX 中的資料操作陳述式處理現有的採礦模型、瀏覽模型，以及針對模型建立預測。 DMX 中的資料操作陳述式是資料管理語言 (DML) 的一部份。  
   
  您可以使用 DMX 中的資料操作陳述式執行下列工作：  
@@ -90,7 +90,7 @@ ms.locfileid: "68892887"
   
  [回到 DMX 陳述式](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_Queries"></a>DMX 查詢基本概念  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>DMX 查詢基本概念  
  SELECT 語句是大部分 DMX 查詢的基礎。 根據搭配這些陳述式使用的子句，您可以針對採礦模型瀏覽、複製或預測。 預測查詢會使用 SELECT 形式來根據現有的採礦模型來建立預測。 函數會將您瀏覽與查詢採礦模型的能力擴充到資料採礦模型的內建功能之外。  
   
  您可以使用 DMX 函數，取得在培訓模型過程中探索到的資訊，以及計算新資訊。 這些函數可以用於許多用途，包括傳回描述基礎資料或預測精確度的統計資料，以及傳回預測的擴充說明。  

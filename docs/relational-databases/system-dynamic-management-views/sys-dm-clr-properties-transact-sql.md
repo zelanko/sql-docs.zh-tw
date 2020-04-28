@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266057"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68266057"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|屬性的名稱。|  
-|**value**|**nvarchar(128)**|屬性的值。|  
+|**值**|**nvarchar(128)**|屬性的值。|  
   
 ## <a name="properties"></a>屬性  
  **Directory**屬性會指出 .NET Framework 安裝在伺服器上的目錄。 伺服器電腦上可能有多個 .NET Framework 安裝，而這個值可以指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用哪一個安裝。  
   
  **Version**屬性會指出伺服器上的 .NET Framework 版本和主控的 CLR。  
   
- **Dm_clr_properties**動態受控視圖可以針對**state**屬性傳回六個不同的值，這會反映[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主控 clr 的狀態。 如下：  
+ **Dm_clr_properties**動態受控視圖可以針對**state**屬性傳回六個不同的值，這會反映[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主控 clr 的狀態。 其中包括：  
   
 -   未載入 Mscoree。  
   
@@ -85,7 +85,7 @@ FROM sys.dm_clr_properties;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Common Language Runtime 相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

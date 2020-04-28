@@ -11,14 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154332"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
-  **認證：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+# <a name="lesson-2-create-a-sql-server-credential"></a>第 2 課：建立 SQL Server 認證
+  **認證：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  如需認證的一般資訊，請參閱[認證](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70154332"
   
 2.  在 [物件總管] 中，連接到已安裝 AdventureWorks2012 資料庫的 Database Engine 執行個體，或使用您計畫要用於此教學課程的自訂資料庫。  
   
-3.  在 [**標準**] 工具列上，按一下 [追加**查詢**]。  
+3.  在 **[標準]** 工具列上，按一下 **[新增查詢]**。  
   
 4.  將下列範例複製並貼入查詢視窗中，並視需要修改。  
   

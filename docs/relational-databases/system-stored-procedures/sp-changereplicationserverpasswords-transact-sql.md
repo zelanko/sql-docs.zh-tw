@@ -16,10 +16,10 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762246"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
@@ -44,7 +44,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = Windows 整合式驗證  
   
- ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證  
+ **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證  
   
 `[ @login = ] 'login'`這是要變更的 Windows 帳戶或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱。 *登*入是**Nvarchar （257）**，沒有預設值  
   
@@ -72,6 +72,6 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_changereplicationserverpasswords**。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
+ [查看及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259780"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access 主控台（AccessToSQL）
@@ -26,7 +26,7 @@ ms.locfileid: "68259780"
   
 |||  
 |-|-|  
-|**一些**|**說明**|  
+|**主題**|**說明**|  
 |[消費者入門使用適用于 Access 主控台的 SSMA &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|說明執行主控台應用程式的步驟。|  
 |[SSMA 主控台中的命令列選項 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|說明用來操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令檔 &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)|說明如何建立腳本檔案。|  

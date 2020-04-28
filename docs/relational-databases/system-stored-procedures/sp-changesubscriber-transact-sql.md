@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762784"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`這是訂閱者類型。 *類型*是**Tinyint**，預設值是 Null。 **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 資料來源伺服器訂閱者。  
   
-`[ @login = ] 'login'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入識別碼。 *login*是**sysname**，預設值是 Null。  
+`[ @login = ] 'login'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
   
 `[ @password = ] 'password'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證密碼。 *password*是**sysname**，預設值是**%**。 **%** 表示密碼屬性沒有任何變更。  
   
@@ -76,12 +76,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
   
 `[ @frequency_interval = ] frequency_interval`這是*frequency_type*的間隔。 *frequency_interval*是**int**，預設值是 Null。  
   
@@ -89,11 +89,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1**|第一頁|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是在定義的*frequency_type*期間，散發工作應重複發生的頻率。 *frequency_recurrence_factor*是**int**，預設值是 Null。  
   
@@ -102,9 +102,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4**|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequence_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
   
@@ -128,7 +128,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

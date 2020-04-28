@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68764346"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
@@ -52,7 +52,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`如果發行集的類型，則為。 *publication_type*是**int**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  
@@ -63,14 +63,14 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|傳回所有訂閱。|  
+|**0** (預設)|傳回所有訂閱。|  
 |**1**|僅傳回有錯誤的訂閱。|  
 |**2**|僅傳回產生臨界值標準警告的訂閱。|  
-|**第**|僅傳回有錯誤或產生臨界值標準警告的訂閱。|  
+|**3**|僅傳回有錯誤或產生臨界值標準警告的訂閱。|  
 |**4**|傳回前25個最差的執行中訂閱。|  
-|**第**|傳回前 50 個執行最差的訂閱。|  
+|**5**|傳回前 50 個執行最差的訂閱。|  
 |**6**|僅傳回目前同步處理中的訂閱。|  
-|**utf-7**|僅傳回目前不在同步處理中的訂閱。|  
+|**7**|僅傳回目前不在同步處理中的訂閱。|  
   
 `[ @topnum = ] topnum`將結果集限制為只在傳回的資料頂端指定的訂用帳戶數目。 *t*是**int**，沒有預設值。  
   
@@ -89,7 +89,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|這是發行集資料庫的名稱。|  
 |**發行集**|**sysname**|這是發行集的名稱。|  
 |**publication_type**|**int**|這是發行集的類型，可以是下列其中一個值：<br /><br /> **0** = 交易式發行集<br /><br /> **1** = 快照式發行集<br /><br /> **2** = 合併式發行集|  
-|**類型**|**int**|這是訂閱類型，它可以是下列其中一個值：<br /><br /> **0** = 推播<br /><br /> **1** = 提取<br /><br /> **2** = 匿名|  
+|**subtype**|**int**|這是訂閱類型，它可以是下列其中一個值：<br /><br /> **0** = 推播<br /><br /> **1** = 提取<br /><br /> **2** = 匿名|  
 |**造成**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的最高延遲 (以秒為單位)。|  
 |**latencythreshold**|**int**|這是交易式發行集引發警告的最大延遲。|  
 |**agentnotrunning**|**int**|這是代理程式未執行的時間長度 (以小時為單位)。|  
@@ -106,8 +106,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|這是訂閱上一次同步處理的傳遞速率。|  
 |**mergerunduration**|**int**|這是完成上一次訂閱同步處理的時間長度。|  
 |**monitorranking**|**int**|這是對結果集裡的訂閱進行排序所用的次序值，它可以是下列值之一：<br /><br /> 對於交易式發行集：<br /><br /> **60** = 錯誤<br /><br /> **56** = 警告：效能嚴重不足<br /><br /> **52** = 警告：即將過期或已過期<br /><br /> **50** = 警告：訂閱未初始化<br /><br /> **40** = 重試失敗的命令<br /><br /> **30** = 未執行（成功）<br /><br /> **20** = 正在執行（啟動中、正在執行或閒置）<br /><br /> 對於合併式發行集：<br /><br /> **60** = 錯誤<br /><br /> **56** = 警告：效能嚴重不足<br /><br /> **54** = 警告：長時間執行的合併<br /><br /> **52** = 警告：即將過期<br /><br /> **50** = 警告：訂閱未初始化<br /><br /> **40** = 重試失敗的命令<br /><br /> **30** = 正在執行（啟動中、正在執行或閒置）<br /><br /> **20** = 未執行（成功）|  
-|**distributionagentjobid**|**binary （16）**|訂閱交易式發行集之散發代理程式作業的識別碼。|  
-|**mergeagentjobid**|**binary （16）**|訂閱合併式發行集之合併代理程式作業的識別碼。|  
+|**distributionagentjobid**|**binary(16)**|訂閱交易式發行集之散發代理程式作業的識別碼。|  
+|**mergeagentjobid**|**binary(16)**|訂閱合併式發行集之合併代理程式作業的識別碼。|  
 |**distributionagentid**|**int**|訂閱之散發代理程式作業的識別碼。|  
 |**distributionagentprofileid**|**int**|散發代理程式所用代理程式設定檔的識別碼。|  
 |**mergeagentid**|**int**|訂閱之合併代理程式作業的識別碼。|  

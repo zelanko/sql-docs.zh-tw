@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132954"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68132954"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|連結伺服器的本機識別碼。|  
 |**name**|**sysname**|當**server_id** = 0 時，傳回的值就是伺服器名稱。<br /><br /> 當**server_id** > 0 時，傳回的值就是連結伺服器的本機名稱。|  
-|**基礎**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示的另一個實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**product**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示的另一個實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**那裡**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 資料來源連接屬性。|  
-|**位置**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
+|**location**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 提供者字串連接屬性。<br /><br /> 除非呼叫端具有 ALTER ANY LINKED SERVER 權限，否則為 NULL。|  
 |**目錄**|**sysname**|OLEDB 目錄連接屬性。 如果沒有，則為 NULL。|  
 |**connect_timeout**|**int**|連接逾時 (以秒為單位)，如果沒有，則為 0。|  
@@ -69,13 +69,13 @@ ms.locfileid: "68132954"
   
  如果刪除預設登入對應，則只有已明確加入成為連結登入或遠端登入的使用者可以檢視他們所擁有之登入的連結伺服器或遠端伺服器。  需要下列許可權，才能在預設登入對應之後，查看所有連結和遠端伺服器：  
   
-- `ALTER ANY LINKED SERVER`或`ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` 或 `ALTER ANY LOGIN ON SERVER`  
 - **Setupadmin**或**系統管理員（sysadmin** ）固定伺服器角色中的成員資格  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [連結伺服器目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

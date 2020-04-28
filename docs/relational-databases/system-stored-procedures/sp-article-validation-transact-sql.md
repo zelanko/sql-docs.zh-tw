@@ -16,10 +16,10 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769016"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
@@ -62,7 +62,7 @@ sp_article_validation [ @publication = ] 'publication'
 |---------------|---------------------|  
 |**0**|利用 COUNT(*) 執行完整計數。|  
 |**1**|從**sysindexes**執行快速計數。 計算**sysindexes**中的資料列，比計算實際資料表中的資料列快。 不過， **sysindexes**會延遲更新，而且資料列計數可能不正確。|  
-|**2** （預設值）|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 Null，而預存程式是用來取得值，則一律會使用完整的 COUNT （*）。|  
+|**2** (預設值)|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 Null，而預存程式是用來取得值，則一律會使用完整的 COUNT （*）。|  
   
 `[ @shutdown_agent = ] shutdown_agent`指定在驗證完成時，是否應該立即關閉散發代理程式。 *shutdown_agent*是**bit**，預設值是**0**。 如果為**0**，則不會關閉散發代理程式。 如果是**1**，就會在驗證發行項之後關閉散發代理程式。  
   
@@ -73,7 +73,7 @@ sp_article_validation [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端要求驗證時，不應使用「發行者」。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端要求驗證時，不應使用「發行者」。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

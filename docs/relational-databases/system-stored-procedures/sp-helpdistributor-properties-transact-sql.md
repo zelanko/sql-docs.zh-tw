@@ -16,10 +16,10 @@ ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770925"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)

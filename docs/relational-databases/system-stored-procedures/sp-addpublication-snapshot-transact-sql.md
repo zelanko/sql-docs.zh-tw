@@ -16,10 +16,10 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769106"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
@@ -88,9 +88,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4** （預設值）|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4** （預設值）|Minute|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是5，表示每5分鐘一次。  
   
@@ -130,7 +130,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端建立快照集代理程式時，不應使用 publisher。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端建立快照集代理程式時，不應使用 publisher。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890715"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
   使用 [資料採礦查詢工作]**** 對話方塊的 [查詢]**** 索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](control-flow/data-mining-query-task.md) 和 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ## <a name="general-options"></a>一般選項  
  **名稱**  

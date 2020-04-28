@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255357"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68255357"
 |名稱|資料類型|描述|  
 |----------|---------------|-----------------|  
 |**抵禦**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
-|**次出現**|**Bigint**|這個計數器最佳化事件的出現次數。|  
-|**value**|**float**|每一事件發生的平均屬性值。|  
+|**occurrence**|**bigint**|這個計數器最佳化事件的出現次數。|  
+|**值**|**float**|每一事件發生的平均屬性值。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限  
@@ -76,7 +76,7 @@ ms.locfileid: "68255357"
 |UPDATE 陳述式|UPDATE 陳述式的最佳化數目。|不適用|  
 |包含子查詢|包含至少一個子查詢之查詢的最佳化數目。|不適用|  
 |UNNEST 失敗|僅供內部使用|僅供內部使用|  
-|tables|最佳化的總數。|每一最佳化查詢所參考資料表的平均數。|  
+|資料表|最佳化的總數。|每一最佳化查詢所參考資料表的平均數。|  
 |提示|指定某個提示的次數。 計數的提示包括：JOIN、GROUP、UNION 和 FORCE ORDER 查詢提示、FORCE PLAN 設定選項，以及聯結提示。|不適用|  
 |ORDER 提示|指定 FORCE ORDER 提示的次數。|不適用|  
 |聯結提示|聯結提示強制執行聯結演算法的次數。|不適用|  
@@ -128,8 +128,8 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

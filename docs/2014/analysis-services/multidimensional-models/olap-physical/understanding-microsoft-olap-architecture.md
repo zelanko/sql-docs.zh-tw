@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530903"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 架構
@@ -39,9 +39,9 @@ ms.locfileid: "69530903"
  [其他 .。。](understanding-microsoft-olap-physical-architecture.md)  
   
  ![小型檔案資料夾圖示](../../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")程式**設計架構**  
- [流量分析管理物件 &#40;AMO 進行開發&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [使用 Analysis Services 指令碼語言進行開發 &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [使用 ADOMD.NET 來開發](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   

@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154345"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>設定受管理的備份 (SQL Server Management Studio)
-  
   **[受管理的備份]** 對話方塊可讓您設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 預設值。 本主題說明如何使用此對話方塊來設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 預設設定，和您在這麼做時必須考量的選項。 在設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 時，設定會套用至之後建立的任何新資料庫。  
   
  如果您想要針對[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]特定資料庫進行設定，請參閱[針對資料庫啟用和設定 SQL Server 受控備份至 Azure](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure)。  
@@ -30,11 +29,11 @@ ms.locfileid: "70154345"
   
 ## <a name="task-list"></a>工作清單  
   
-## <a name="includess_smartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Backup Interface 介面的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 函數  
+## <a name="ss_smartbackup-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Backup Interface 介面的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 函數  
  在此版本中，您只可以使用 **[管理備份]** 介面設定的執行個體層級的預設設定。 您無法設定資料庫的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 、暫停或繼續 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 作業，或設定電子郵件通知。 如需如何透過**受管理的備份**介面執行目前不支援之作業的相關資訊，請參閱[SQL Server 受控備份至 Azure-保留和儲存體設定](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  
   
 ## <a name="permissions"></a>權限  
- **View 受管理的備份節點 SQL Server Management Studio：** 若要在**物件總管**中查看**受管理的備份**節點，您必須是系統管理員，或已特別授與您的使用者帳戶的下列許可權：  
+ **在 SQL Server Management Studio 中檢視 Managed Backup 節點：** 若要在  **[物件總管]** 中檢視 **Managed Backup**節點，您必須是系統管理員，或具有下列為您的使用者帳戶特別授與的權限：  
   
 -   `db_backupoperator`  
   
@@ -44,30 +43,26 @@ ms.locfileid: "70154345"
   
 -   `VIEW ANY DEFINITION`  
   
--   `EXECUTE`在`smart_admin.fn_is_master_switch_on`上。  
+-   `EXECUTE` 上的 `smart_admin.fn_is_master_switch_on`。  
   
--   `SELECT`在`smart_admin.fn_backup_instance_config`上。  
+-   `SELECT` 上的 `smart_admin.fn_backup_instance_config`。  
   
- **若要設定受管理的備份：** 若要在 SQL Server Management Studio 中設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ，您必須是系統管理員或具有下列許可權：  
+ **若要設定 Managed Backup：** 若要在 SQL Server Management Studio 中設定 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ，您必須是系統管理員，或具有下列權限：  
   
- 
-  `db_backupoperator` 資料庫角色的成員資格，且該角色必須具有 `ALTER ANY CREDENTIAL` 權限，以及 `EXECUTE` 預存程序的 `sp_delete_backuphistory` 權限。  
+ `db_backupoperator` 資料庫角色的成員資格，且該角色必須具有 `ALTER ANY CREDENTIAL` 權限，以及 `sp_delete_backuphistory` 預存程序的 `EXECUTE` 權限。  
   
- 
-  `SELECT` 函數的 `smart_admin.fn_get_current_xevent_settings` 權限。  
+ `smart_admin.fn_get_current_xevent_settings` 函數的 `SELECT` 權限。  
   
  `EXECUTE`預存程式`smart_admin.sp_get_backup_diagnostics`的許可權。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
   
- 
-  `EXECUTE` 的 `smart_admin.sp_set_instance_backup` 權限和 `smart_admin.sp_backup_master_switch`。  
+ `smart_admin.sp_set_instance_backup` 的 `EXECUTE` 權限和 `smart_admin.sp_backup_master_switch`。  
   
-## <a name="configure-includess_smartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- 從 **[物件總管]** 展開 **[管理]** 節點，並以滑鼠右鍵按一下 **[Managed Backup]**。 選取 [**設定**]。 這樣會開啟 **[Managed Backup]** 對話方塊。  
+## <a name="configure-ss_smartbackup-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+ 從 **[物件總管]** 展開 **[管理]** 節點，並以滑鼠右鍵按一下 **[Managed Backup]**。 選取 [設定]  。 這樣會開啟 **[Managed Backup]** 對話方塊。  
   
  勾選 **[啟用 Managed Backup]** 選項，並指定組態值：  
   
- 
-  **[檔案保留]** 期間以天為單位指定，且應介於 1 到 30 之間。  
+ **[檔案保留]** 期間以天為單位指定，且應介於 1 到 30 之間。  
   
  您選取的 **[SQL 認證]** 應符合儲存體帳戶。 如果您目前沒有儲存驗證資訊的 SQL 認證，您可以按一下 **[建立]** 加以建立。 您也可以使用 CREATE CREDENTIAL Transact-SQL 陳述式來建立認證，並提供識別的儲存體帳戶名稱和 SECRET 參數的存取金鑰。 如需詳細資訊，請參閱＜ [Create a Credential](../relational-databases/backup-restore/sql-server-backup-to-url.md#credential)＞。  
   

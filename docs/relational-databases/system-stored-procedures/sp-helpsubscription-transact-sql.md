@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771575"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是相關聯發行集的名稱。 *發行*集是**sysname**，預設值是**%**，它會傳回此伺服器的所有訂閱資訊。  
   
-`[ @article = ] 'article'`這是發行項的名稱。 發行項**** **%** 是 sysname，預設值是，它會傳回所選發行集和訂閱者的所有訂閱資訊。 ** 如果是**all**，發行集的完整訂閱只會傳回一個專案。  
+`[ @article = ] 'article'`這是發行項的名稱。 發行項**sysname** **%** 是 sysname，預設值是，它會傳回所選發行集和訂閱者的所有訂閱資訊。 *article* 如果是**all**，發行集的完整訂閱只會傳回一個專案。  
   
 `[ @subscriber = ] 'subscriber'`這是要取得訂用帳戶資訊的訂閱者名稱。 *訂閱者*是**sysname**，預設值是**%**，它會傳回所選發行集和發行項的所有訂閱資訊。  
   
@@ -73,9 +73,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**同步處理類型**|**tinyint**|訂閱同步處理類型：<br /><br /> **1** = 自動<br /><br /> **2** = 無|  
 |**訂用帳戶類型**|**int**|訂閱的類型：<br /><br /> **0** = 推播<br /><br /> **1** = 提取<br /><br /> **2** = 匿名|  
 |**full subscription**|**bit**|訂閱是否針對發行集中的所有發行項：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
-|**訂用帳戶名稱**|**nvarchar(255)**|訂用帳戶的名稱。|  
+|**訂用帳戶名稱**|**nvarchar(255)**|訂閱的名稱。|  
 |**update mode**|**int**|**0** = 唯讀<br /><br /> **1** = 立即更新訂閱|  
-|**distribution job id**|**binary （16）**|散發代理程式的作業識別碼。|  
+|**distribution job id**|**binary(16)**|散發代理程式的作業識別碼。|  
 |**loopback_detection**|**bit**|回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **0** = 傳回。<br /><br /> **1** = 不傳回。<br /><br /> 搭配雙向異動複寫來使用。 如需詳細資訊，請參閱[雙向異動複寫](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |**offload_enabled**|**bit**|指定是否已將複寫代理程式的卸載執行設成執行於訂閱者端。<br /><br /> 如果是**0**，則 agent 會在發行者端執行。<br /><br /> 如果是**1**，就會在訂閱者端執行 agent。|  
 |**offload_server**|**sysname**|啟用遠端代理程式啟動的伺服器名稱。 如果是 Null，則會使用[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)資料表中所列的目前 offload_server。|  

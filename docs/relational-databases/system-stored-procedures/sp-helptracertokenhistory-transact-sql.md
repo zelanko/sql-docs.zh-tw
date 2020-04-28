@@ -16,10 +16,10 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b8755bea5e318d1ded2631a2253134fd8721a421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771146"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
@@ -55,11 +55,11 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**distributor_latency**|**Bigint**|在發行者端認可的追蹤 Token 記錄和在散發者端認可的記錄之間的秒數。|  
+|**distributor_latency**|**bigint**|在發行者端認可的追蹤 Token 記錄和在散發者端認可的記錄之間的秒數。|  
 |**預訂**|**sysname**|接收追蹤 Token 的訂閱者名稱。|  
 |**subscriber_db**|**sysname**|追蹤 Token 記錄插入其中的訂閱資料庫名稱。|  
-|**subscriber_latency**|**Bigint**|在散發者端認可的追蹤 Token 記錄和在訂閱者端認可的記錄之間的秒數。|  
-|**overall_latency**|**Bigint**|在發行者端認可的追蹤 Token 記錄和在訂閱者端認可的 Token 記錄之間的秒數。|  
+|**subscriber_latency**|**bigint**|在散發者端認可的追蹤 Token 記錄和在訂閱者端認可的記錄之間的秒數。|  
+|**overall_latency**|**bigint**|在發行者端認可的追蹤 Token 記錄和在訂閱者端認可的 Token 記錄之間的秒數。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -78,7 +78,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  只有**系統管理員（sysadmin** ）固定伺服器角色、發行集資料庫中的**db_owner**固定資料庫角色，或散發資料庫中**db_owner**固定資料庫或**replmonitor**角色的成員，才能夠執行**sp_helptracertokenhistory**。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [測量異動複寫的延遲並驗證連接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [sp_deletetracertokenhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

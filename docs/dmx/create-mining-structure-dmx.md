@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892818"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引數  
- *表示*  
+ *structure*  
  結構的唯一名稱。  
   
  *資料行定義清單*  
@@ -97,11 +97,11 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   [資料類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [&#40;資料採礦&#41;的內容類型](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [內容類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [資料採礦&#41;的資料行發行 &#40;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [資料行分佈 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [資料採礦&#41;的模型旗標 &#40;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [模型旗標 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  您可以為一個資料行定義多個模型旗標值。 不過，對於一個資料行，您僅能擁有一個內容類型和一個資料類型。  
   
@@ -180,6 +180,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

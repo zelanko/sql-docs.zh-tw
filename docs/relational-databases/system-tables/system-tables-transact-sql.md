@@ -23,10 +23,10 @@ ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 292b6cdce6b2f13445e50f79c956f07eb8d33de7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69903601"
 ---
 # <a name="system-tables-transact-sql"></a>系統資料表 (Transact-SQL)
@@ -40,18 +40,15 @@ ms.locfileid: "69903601"
   
 -   系統預存程序  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和函數  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和函數  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)  
   
 -   Replication Management Objects (RMO)  
   
 -   資料庫 API 目錄函數  
   
- 這些元件組成已發行的 API，以用來取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的系統資訊。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 會維護這些元件在各版本之間的相容性。 系統資料表的格式視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部架構而定，各版本之間可能不相同。 因此，直接存取系統資料表未記載之資料行的應用程式，可能需要改變，然後才能存取較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
+ 這些元件組成已發行的 API，以用來取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的系統資訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 會維護這些元件在各版本之間的相容性。 系統資料表的格式視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部架構而定，各版本之間可能不相同。 因此，直接存取系統資料表未記載之資料行的應用程式，可能需要改變，然後才能存取較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
   
 ## <a name="in-this-section"></a>本節內容  
  系統資料表主題依下列功能區來組織：  

@@ -16,17 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890403"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
   「資料採礦查詢」工作會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]內建的資料採礦模型執行預測查詢。 預測查詢會使用採礦模型建立新資料的預測。 例如，預測查詢可預測夏季各月間可能出售的帆船數目，或產生可能購買帆船的預期客戶清單。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 亦提供執行其他商業智慧作業的工作，例如執行「資料定義語言」(DDL) 陳述式和處理分析物件。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 亦提供執行其他商業智慧作業的工作，例如執行「資料定義語言」(DDL) 陳述式和處理分析物件。  
   
  如需其他商業智慧工作的詳細資訊，請按下列其中一個主題：  
   
@@ -46,17 +45,17 @@ ms.locfileid: "68890403"
  如果結果包含巢狀，則會在儲存之前扁平化結果。 扁平化結果會將巢狀結果集變更成資料表。 例如，扁平化含有 **Customer** 資料行和巢狀 **Product** 資料行的巢狀結果，會將資料列加入至 **Customer** 資料行，以製作包含各客戶之產品資料的資料表。 例如，擁有三種不同產品的客戶會變成擁有三個資料列的資料表，各資料列中會重複該客戶並包含不同的產品。 如果省略 FLATTENED 關鍵字，則資料表只會包含 **Customer** 資料行，且每個客戶只有一個資料列。 如需詳細資訊，請參閱 [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)。  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>設定資料採礦查詢工作  
- 「資料採礦查詢」工作需要兩個連接。 第一個連接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]是連接管理員，會連接到的實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]或包含該採礦結構[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和採礦模型的專案。 第二個連接是 OLE DB 連接管理員，會連接到含有工作所寫入資料表的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) 及 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
+ 「資料採礦查詢」工作需要兩個連接。 第一個連線是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，其會連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，或含有採礦結構和採礦模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 第二個連接是 OLE DB 連接管理員，會連接到含有工作所寫入資料表的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) 及 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [資料採礦查詢工作編輯器 &#40;[模型] 索引標籤&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [資料採礦查詢工作編輯器 &#40;採礦模型索引標籤&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [[資料採礦查詢工作編輯器] &#40;查詢] 索引標籤&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [資料採礦查詢工作編輯器 &#40;查詢索引標籤&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [資料採礦查詢工作編輯器 &#40;輸出] 索引標籤&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [資料採礦查詢工作編輯器 &#40;輸出索引標籤&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  「資料採礦查詢編輯器」沒有「運算式」頁面， 而是另外使用 **[屬性]** 視窗存取用來建立和管理「資料採礦查詢」工作屬性之屬性運算式的工具。  

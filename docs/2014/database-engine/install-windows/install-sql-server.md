@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889245"
 ---
 # <a name="install-sql-server-2014"></a>安裝 SQL Server 2014
-## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[下載 SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## <a name="download-sql-server-2014-express"></a>[下載 SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **感謝[Scott Hanselman](http://www.hanselman.com/)在一處收集所有安裝程式套件連結！**
   
  本主題提供可以用於安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之不同安裝選項的概觀。 如需可安裝之各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件和安裝程式的詳細資訊，請參閱[SQL Server 2014 的安裝](installation-for-sql-server.md)。  
@@ -32,9 +32,9 @@ ms.locfileid: "68889245"
  安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先檢閱安裝需求、系統組態檢查與安全性考量。 如需詳細資訊，請參閱 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)。 如需有關不同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝案例的詳細資訊，請參閱下節中的主題。  
   
   
-## <a name="install-includesscurrentincludessscurrent-mdmd-components"></a>安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]元件  
+## <a name="install-sscurrent-components"></a>安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]元件  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[關於 SQL Server Database Engine](../sql-server-database-engine-overview.md)|描述如何安裝及設定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 |[安裝 SQL Server 複寫](install-sql-server-replication.md)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication。|  
@@ -42,7 +42,7 @@ ms.locfileid: "68889245"
 |[安裝 SQL Server 管理工具](../../sql-server/install/install-sql-server-management-tools.md)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
 |[安裝 SQL Server PowerShell](install-sql-server-powershell.md)|描述安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 元件時的考量。|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>如何安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-sscurrent"></a>如何安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |Title|描述|  
 |-----------|-----------------|  
@@ -51,9 +51,9 @@ ms.locfileid: "68889245"
 |[驗證 SQL Server 安裝](validate-a-sql-server-installation.md)|檢閱 SQL 探索報告的使用狀況，以驗證電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。|  
 |[檢查 System Configuration Checker 的參數](check-parameters-for-the-system-configuration-checker.md)|討論系統組態檢查 (SCC) 的功能。|  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|本主題提供防火牆組態及如何設定 Windows 防火牆的概觀。|  
 |[設定多重主目錄電腦進行 SQL Server 存取](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|此主題描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。|  
@@ -61,12 +61,10 @@ ms.locfileid: "68889245"
   
 ## <a name="related-sections"></a>相關章節  
  [安裝 SQL Server 2014 BI 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
- 屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BI 平台的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]，以及數種用來建立或處理分析資料的用戶端應用程式。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的這一節將說明如何安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+ 屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BI 平台的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]，以及數種用來建立或處理分析資料的用戶端應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的這一節將說明如何安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
  [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的這一節將說明如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的這一節將說明如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
   
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)   

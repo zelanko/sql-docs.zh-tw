@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262656"
 ---
 # <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys.databases dm_tran_version_store_space_usage （Transact-sql）
@@ -39,8 +39,8 @@ ms.locfileid: "68262656"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫的資料庫識別碼。|  
-|**reserved_page_count**|**Bigint**|資料庫的版本存放區記錄之 tempdb 中保留的總頁數。|  
-|**reserved_space_kb**|**Bigint**|資料庫的版本存放區記錄在 tempdb 中使用的總空間（以 kb 為單位）。|  
+|**reserved_page_count**|**bigint**|資料庫的版本存放區記錄之 tempdb 中保留的總頁數。|  
+|**reserved_space_kb**|**bigint**|資料庫的版本存放區記錄在 tempdb 中使用的總空間（以 kb 為單位）。|  
   
 ## <a name="permissions"></a>權限  
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
@@ -68,6 +68,6 @@ WideWorldImporters        20                   160
 ```
  
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

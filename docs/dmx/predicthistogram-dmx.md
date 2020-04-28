@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893854"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
@@ -47,13 +47,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法不支援 **$ProbabilityVariance**。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法不支援 **$ProbabilityVariance**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法不支援 **$ProbabilityStdev**。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法不支援 **$ProbabilityStdev**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
   
 -   **$AdjustedProbability**  
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263793"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
@@ -47,8 +47,7 @@ ms.locfileid: "68263793"
 |**句**|**nvarchar(4000)**|遺漏索引所在之資料表的名稱。|  
   
 ## <a name="remarks"></a>備註  
- 
-  **sys.dm_db_missing_index_details** 傳回的資訊會在查詢最佳化工具進行最佳化查詢時更新，而不會一直保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  
+ **sys.dm_db_missing_index_details** 傳回的資訊會在查詢最佳化工具進行最佳化查詢時更新，而不會一直保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  
   
  若要判斷特定遺漏索引屬於哪些遺漏索引群組，您可以依據 **index_handle** 資料行，將該遺漏索引與 **sys.dm_db_missing_index_details** 等聯結，以便查詢 **sys.dm_db_missing_index_groups** 動態管理檢視。  
 

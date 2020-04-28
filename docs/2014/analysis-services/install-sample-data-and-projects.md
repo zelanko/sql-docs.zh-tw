@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530825"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安裝 Analysis Services 多維度模型化教學課程的範例資料和專案
@@ -29,7 +29,7 @@ ms.locfileid: "69530825"
   
      Analysis Services 僅適用於下列版本：Evaluation、Enterprise、Business Intelligence、Standard。  
   
-     請注意，SQL Server Express 版本不包含 Analysis Services。 如果您想要免費試用軟體，請[下載評估版](https://go.microsoft.com/fwlink/?LinkId=392824)。  
+     請注意，SQL Server Express 版本不包含 Analysis Services。 如果您想要免費試用軟體，請[下載 Evaluation Edition](https://go.microsoft.com/fwlink/?LinkId=392824) 。  
   
      根據預設，Analysis Services 會安裝成多維度執行個體，您可以在 [安裝精靈] 的伺服器組態頁面中選擇 [表格式伺服器模式] 來覆寫。 如果您想要同時執行兩種伺服器模式，請在相同電腦上重新執行 SQL Server 安裝程式，以另一個模式來安裝第二個 Analysis Services 執行個體。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69530825"
 ## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>步驟2：下載 SQL Server Data Tools-Visual Studio 2012 的商業智慧  
  在此版本中，SQL Server Data Tools 要與其他 SQL Server 功能分開下載及安裝。 現在可以在網路上免費下載用來建立 BI 模型和報表的設計工具和專案範本。  
   
--   [下載 SQL Server Data Tools 的商業智慧版本](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 檔案會儲存至 Downloads 資料夾。 執行安裝程式來安裝該工具。  
+-   [下載商業智慧版 SQL Server Data Tools ](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 檔案會儲存至 Downloads 資料夾。 執行安裝程式來安裝該工具。  
   
      重新開機以完成安裝。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "69530825"
   
 4.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [附加]****。  
   
-5.  按一下 [新增]  。  
+5.  按一下 **[新增]** 。  
   
 6.  選取 **AdventureWorksDW2012_Data.mdf** 資料庫檔案，然後按一下 [確定]****。 如果未列出檔案，請檢查 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 資料夾以確認該檔案位於該處。  
   

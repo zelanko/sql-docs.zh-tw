@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493854"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>在使用者定義階層的屬性之間指定屬性關聯性
@@ -84,7 +84,7 @@ ms.locfileid: "69493854"
   
      請注意，當您刪除 [地理位置]**** 與其他屬性間的最後一個屬性關聯性時，就會刪除該 [地理位置]**** 本身。 這是因為不再使用該屬性。  
   
-24. 按一下 [檔案] 功能表上的 [全部儲存]  。  
+24. 按一下 [ 檔案 ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>在 [銷售領域] 階層中定義屬性的屬性關聯性  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69493854"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     [銷售領域]**群組**現在連結到 [銷售領域] [**國家/** 地區]，而 [銷售領域] [**國家/地區**] 現在連結到 [**銷售** 其中每個關聯性的 [RelationshipType]**** 屬性會設為 [彈性]****，因為國家 (地區) 內的地區群組可能會隨著時間而變更，而且將國家 (地區) 分成群組的分組設定也可能會隨著時間而變更。  
+     [銷售領域群組]**** 現在連結到 [銷售領域國家 (地區)]****，而 [銷售領域國家 (地區)]**** 現在則連結到 [銷售領域地區]****。 其中每個關聯性的 [RelationshipType]**** 屬性會設為 [彈性]****，因為國家 (地區) 內的地區群組可能會隨著時間而變更，而且將國家 (地區) 分成群組的分組設定也可能會隨著時間而變更。  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>在 [產品型號線] 階層中定義屬性的屬性關聯性  
   
@@ -104,13 +104,13 @@ ms.locfileid: "69493854"
   
 2.  在圖表中，以滑鼠右鍵按一下 [模型名稱]**** 屬性，然後選取 [新增屬性關聯性]****。  
   
-3.  在 [建立屬性關聯性]**** 對話方塊中，[來源屬性]**** 是 [型號名稱]****。 將 [相關屬性]**** 設定為 [產品線]****。 在 [關聯性類型]**** 清單中，保持關聯性類型設定為 [彈性]****。  
+3.  在 [建立屬性關聯性]**** 對話方塊中，[來源屬性]**** 是 [模型名稱]****。 將 [相關屬性]**** 設定為 [產品線]****。 在 [關聯性類型]**** 清單中，保持關聯性類型設定為 [彈性]****。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-fiscal-date-hierarchy"></a>在會計日期階層中定義屬性的屬性關聯性  
   
-1.  請針對 [日期] 維度切換至 [維度設計師]****，然後按一下 [屬性關聯性]**** 索引標籤。  
+1.  請針對 [日期]**** 維度切換至 [維度設計師]，然後按一下 [屬性關聯性]**** 索引標籤。  
   
 2.  在圖表中，以滑鼠右鍵按一下 [月份]**** 屬性，然後選取 [新增屬性關聯性]****。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "69493854"
   
 13. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-14. 在 ** 的 [建立]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
+14. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [定義未知的成員和 Null 處理屬性](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  

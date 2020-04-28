@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153756"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
-  當連接到的實例或在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **已註冊的伺服器**上註冊[!INCLUDE[ssDE](../../includes/ssde-md.md)]時，使用此索引標籤來查看或指定選項。 當連接到實例時， **[連接**] 和 [**選項**] 才會出現[!INCLUDE[ssDE](../../includes/ssde-md.md)]在這個對話方塊中。 註冊[!INCLUDE[ssDE](../../includes/ssde-md.md)]時，只會在此對話方塊中顯示 [**測試**] 和 [**儲存**]。  
+  當您連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體或在 [已註冊的伺服器]  中註冊 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體時，[連接]  和 [選項]  才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，[測試]  和 [儲存]  才會出現在這個對話方塊中。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線到資料庫**  
  從清單中選取要連接的資料庫。 如果您選取** \<[預設>**]，則會連接到伺服器的預設資料庫。 如果您選取** \<[流覽伺服器>**]，則可以流覽伺服器以取得要連接的資料庫。  
   
- 透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫引擎的實例時，您必須使用驗證，並在 [連線**到伺服器**] 對話方塊的 [**連接屬性**] 索引標籤上指定資料庫。請確定您選取 [**加密連接**] 核取方塊。  
+ 當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器]  對話方塊的 [連接屬性]  索引標籤上指定資料庫。請務必選取 [加密連接]  核取方塊。  
   
  根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱[Azure SQL Database 總覽](/azure/sql-database/sql-database-technical-overview)。  
   
@@ -57,16 +57,16 @@ ms.locfileid: "70153756"
  **全部重設**  
  將所有手動輸入的連接屬性值取代成預設值。  
   
- **連線**  
+ **[連接]**  
  使用列出的值嘗試進行連接。  
   
  **選項**  
  按一下即可變更對話方塊，並隱藏其他伺服器連接選項，例如記住密碼。  
   
- **測驗**  
- 在 [已註冊的伺服器][!INCLUDE[ssDE](../../includes/ssde-md.md)]** 中註冊 ** 時，請按一下以測試連接。  
+ **測試**  
+ 在 [已註冊的伺服器]**** 中註冊 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，請按一下以測試連接。  
   
- **另**  
+ **儲存**  
  儲存 [已註冊的伺服器]**** 中的設定。  
   
 ## <a name="see-also"></a>另請參閱  

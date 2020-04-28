@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494019"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>建立資料來源 (基本資料採礦教學課程)
@@ -63,6 +63,6 @@ ms.locfileid: "69494019"
 ## <a name="see-also"></a>另請參閱  
  [建立 &#40;SSAS 多維度&#41;的資料來源](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [定義資料來源](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [設定 &#40;SSAS 的模擬選項-多維度&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [設定模擬選項 &#40;SSAS - 多維度&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

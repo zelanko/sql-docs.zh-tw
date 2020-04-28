@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f0e03483ab0e2470df24fa2a00e6b7965b2199f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265894"
 ---
 # <a name="sysdm_fts_outstanding_batches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
@@ -45,8 +45,8 @@ ms.locfileid: "68265894"
 |hr_batch|**int**|此批次最近一次的錯誤碼|  
 |is_retry_batch|**bit**|指示這是否為重試批次：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |retry_hints|**int**|批次所需的重試類型：<br /><br /> 0 = 無重試<br /><br /> 1 = 多執行緒重試<br /><br /> 2 = 單一執行緒重試<br /><br /> 3 = 單一和多執行緒重試<br /><br /> 5 = 多執行緒最後重試<br /><br /> 6 = 單一執行緒最後重試<br /><br /> 7 = 單一和多執行緒最後重試|  
-|retry_hints_description|**Nvarchar （120）**|所需之重試類型的描述：<br /><br /> NO RETRY<br /><br /> MULTI THREAD RETRY<br /><br /> SINGLE THREAD RETRY<br /><br /> SINGLE AND MULTI THREAD RETRY<br /><br /> MULTI THREAD FINAL RETRY<br /><br /> SINGLE THREAD FINAL RETRY<br /><br /> SINGLE AND MULTI THREAD FINAL RETRY|  
-|doc_failed|**Bigint**|批次中失敗的文件數目|  
+|retry_hints_description|**nvarchar(120)**|所需之重試類型的描述：<br /><br /> NO RETRY<br /><br /> MULTI THREAD RETRY<br /><br /> SINGLE THREAD RETRY<br /><br /> SINGLE AND MULTI THREAD RETRY<br /><br /> MULTI THREAD FINAL RETRY<br /><br /> SINGLE THREAD FINAL RETRY<br /><br /> SINGLE AND MULTI THREAD FINAL RETRY|  
+|doc_failed|**bigint**|批次中失敗的文件數目|  
 |batch_timestamp|**timestamp**|建立批次時取得的時間戳記值。|  
   
 ## <a name="permissions"></a>權限  

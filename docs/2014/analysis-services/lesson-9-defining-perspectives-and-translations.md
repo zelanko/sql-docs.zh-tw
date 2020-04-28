@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530833"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 課：定義檢視方塊和翻譯
   在這一課中，您要學習定義檢視方塊和翻譯。 您可以定義檢視方塊，來減少 Cube 明顯的複雜性，以及定義翻譯，讓使用者自己選擇語言來檢視 Cube 中繼資料。  
   
 > [!NOTE]  
->  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866)以下載本教學課程所使用的範例專案。  
+>  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
   
  這一課包含下列工作：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69530833"
  在這項工作中，您要定義和瀏覽特定語言的特定中繼資料翻譯。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 10 課：定義管理角色](lesson-10-defining-administrative-roles.md)  
+ [第10課：定義系統管理角色](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   

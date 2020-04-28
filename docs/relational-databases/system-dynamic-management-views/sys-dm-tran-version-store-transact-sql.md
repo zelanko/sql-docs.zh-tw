@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262596"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -47,16 +47,16 @@ sys.dm_tran_version_store
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**Bigint**|產生記錄版本之交易的序號。|  
-|**version_sequence_num**|**Bigint**|版本記錄序號。 這個值在版本產生交易內是唯一的。|  
+|**transaction_sequence_num**|**bigint**|產生記錄版本之交易的序號。|  
+|**version_sequence_num**|**bigint**|版本記錄序號。 這個值在版本產生交易內是唯一的。|  
 |**database_id**|**int**|版本控制記錄的資料庫識別碼。|  
-|**rowset_id**|**Bigint**|記錄的資料列集識別碼。|  
-|**狀態**|**tinyint**|指出版本控制記錄是否已分割成兩個記錄。 如果值設為 0，表示記錄是儲存在一個頁面。 如果值設為 1，表示記錄分割成儲存在兩個不同頁面的兩個記錄。|  
+|**rowset_id**|**bigint**|記錄的資料列集識別碼。|  
+|**status**|**tinyint**|指出版本控制記錄是否已分割成兩個記錄。 如果值設為 0，表示記錄是儲存在一個頁面。 如果值設為 1，表示記錄分割成儲存在兩個不同頁面的兩個記錄。|  
 |**min_length_in_bytes**|**smallint**|記錄的最小長度 (以位元組為單位)。|  
 |**record_length_first_part_in_bytes**|**smallint**|版本控制記錄第一部份的長度 (以位元組為單位)。|  
-|**record_image_first_part**|**Varbinary （8000）**|版本記錄第一部份的二進位檔映像。|  
+|**record_image_first_part**|**varbinary(8000)**|版本記錄第一部份的二進位檔映像。|  
 |**record_length_second_part_in_bytes**|**smallint**|版本記錄第二部份的長度 (以位元組為單位)。|  
-|**record_image_second_part**|**Varbinary （8000）**|版本記錄第二部份的二進位檔映像。|  
+|**record_image_second_part**|**varbinary(8000)**|版本記錄第二部份的二進位檔映像。|  
   
 ## <a name="permissions"></a>權限
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  輸出中顯示 XSN-57 已從一個資料表建立三個資料列版本，而 XSN-58 則從另一個資料表建立一個資料列版本。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

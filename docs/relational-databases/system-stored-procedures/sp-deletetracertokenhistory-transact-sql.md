@@ -16,10 +16,10 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771145"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
@@ -49,10 +49,10 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 這是要刪除之追蹤 Token 的識別碼。 資料類型為**int**。預設值為*null*。 如果是*null*，則會刪除屬於發行集的所有追蹤 token。
 
 `[ @cutoff_date= ] cutoff_date`  
-在刪除此日期之前，插入發行集的追蹤 token。 資料類型為**datetime**。 預設值為*null*。
+在刪除此日期之前，插入發行集的追蹤 token。 資料類型為**datetime**。 預設值為 *null*。
 
 `[ @publisher= ] 'publisher'`  
-這是發行者的名稱。 資料類型為**sysname**。 預設值為*null*。
+這是發行者的名稱。 資料類型為**sysname**。 預設值為 *null*。
 
 > [!NOTE]
 > 只有在非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者或從散發者執行預存程式時，才應該指定這個參數。
@@ -88,6 +88,6 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 ## <a name="see-also"></a>另請參閱
 
-[針對異動複寫測量延遲及驗證連接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+[針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
 [sp_helptracertokenhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

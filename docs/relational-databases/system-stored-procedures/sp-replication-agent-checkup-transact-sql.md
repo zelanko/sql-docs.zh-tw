@@ -16,10 +16,10 @@ ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b434d4bda50cf03442020ba2f0c029aaa1e09cd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771234"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)

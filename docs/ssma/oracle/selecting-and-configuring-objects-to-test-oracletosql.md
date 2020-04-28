@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264645"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選取及設定要測試的受影響物件 (OracleToSQL)

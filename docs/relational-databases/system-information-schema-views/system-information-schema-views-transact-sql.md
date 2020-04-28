@@ -19,18 +19,17 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670568"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>系統資訊架構 Views （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-資訊結構描述檢視是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來取得中繼資料的方法之一。 資訊結構描述檢視提供一種與內部系統資料表無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料檢視。 資訊結構描述檢視使應用程式在基礎系統資料表有了重大變更的情況下，仍然能夠正確運作。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所包含的資訊結構描述檢視符合 INFORMATION_SCHEMA 的 ISO 標準定義。
+資訊結構描述檢視是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來取得中繼資料的方法之一。 資訊結構描述檢視提供一種與內部系統資料表無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料檢視。 資訊結構描述檢視使應用程式在基礎系統資料表有了重大變更的情況下，仍然能夠正確運作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所包含的資訊結構描述檢視符合 INFORMATION_SCHEMA 的 ISO 標準定義。
 
 > [!IMPORTANT]
 > 資訊結構描述檢視的某些變更會造成無法與舊版相容。 特定檢視的主題會描述這些變更。
@@ -51,13 +50,13 @@ ms.locfileid: "68670568"
 |[CHECK_CONSTRAINTS](../../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)|[REFERENTIAL_CONSTRAINTS](../../relational-databases/system-information-schema-views/referential-constraints-transact-sql.md)|
 |[COLUMN_DOMAIN_USAGE](../../relational-databases/system-information-schema-views/column-domain-usage-transact-sql.md)|[ROUTINES](../../relational-databases/system-information-schema-views/routines-transact-sql.md)|
 |[COLUMN_PRIVILEGES](../../relational-databases/system-information-schema-views/column-privileges-transact-sql.md)|[ROUTINE_COLUMNS](../../relational-databases/system-information-schema-views/routine-columns-transact-sql.md)|
-|[COLUMNS](../../relational-databases/system-information-schema-views/columns-transact-sql.md)|[SCHEMATA](../../relational-databases/system-information-schema-views/schemata-transact-sql.md)|
+|[資料行](../../relational-databases/system-information-schema-views/columns-transact-sql.md)|[SCHEMATA](../../relational-databases/system-information-schema-views/schemata-transact-sql.md)|
 |[CONSTRAINT_COLUMN_USAGE](../../relational-databases/system-information-schema-views/constraint-column-usage-transact-sql.md)|[TABLE_CONSTRAINTS](../../relational-databases/system-information-schema-views/table-constraints-transact-sql.md)|
 |[CONSTRAINT_TABLE_USAGE](../../relational-databases/system-information-schema-views/constraint-table-usage-transact-sql.md)|[TABLE_PRIVILEGES](../../relational-databases/system-information-schema-views/table-privileges-transact-sql.md)|
-|[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[TABLES](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|
-|[DOMAINS](../../relational-databases/system-information-schema-views/domains-transact-sql.md)|[VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)|
+|[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[多](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|
+|[網域](../../relational-databases/system-information-schema-views/domains-transact-sql.md)|[VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)|
 |[KEY_COLUMN_USAGE](../../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md)|[VIEW_TABLE_USAGE](../../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)|
-|[PARAMETERS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
+|[參數](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[視圖](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
 
 另外，部分檢視也會包含不同資料類別的參考，如字元資料或二進位資料。
 

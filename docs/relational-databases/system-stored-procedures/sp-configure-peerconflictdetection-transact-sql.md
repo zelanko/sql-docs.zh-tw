@@ -16,10 +16,10 @@ ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68215947"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
@@ -85,7 +85,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [點對點複寫中的衝突偵測](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [點對點異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

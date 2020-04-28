@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891432"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>建立方案與資料來源 (中繼資料採礦教學課程)
   若要使用資料採礦，您必須先在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 **[Analysis Services 多維度和資料採礦專案]** 範本建立專案。 當您開啟範本時，它會自動將您進行資料採礦可能需要的所有結構描述載入設計師中：資料來源、採礦結構和資料模型，甚至是 Cube (如果您的採礦結構使用多維度資料)。  
   
- 當您使用建立專案時，直到部署方案之前，方案都會儲存為本機檔案。 當您部署方案時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會尋找專案屬性中指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器，並且用專案的名稱建立新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設會針對新專案使用 **localhost** 執行個體。 如果您要使用具名執行個體，或者如果為預設執行個體指定了不同名稱，您必須將專案的部署資料庫屬性變更到您要建立資料採礦物件的位置。  
+ 當您使用建立專案時，直到部署方案之前，方案都會儲存為本機檔案。 當您部署方案時， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會尋找專案屬性中指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器，並且用專案的名稱建立新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設會針對新專案使用 **localhost** 執行個體。 如果您要使用具名執行個體，或者如果為預設執行個體指定了不同名稱，您必須將專案的部署資料庫屬性變更到您要建立資料採礦物件的位置。  
   
  如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案的詳細資訊，請參閱[&#40;SSDT&#41;建立 Analysis Services 專案](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)。  
   
@@ -29,7 +28,7 @@ ms.locfileid: "68891432"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
   
 3.  從 **[已安裝的範本]** 窗格選取 **[Analysis Services 多維度和資料採礦專案]** 。  
   
@@ -71,9 +70,9 @@ ms.locfileid: "68891432"
 |狀況|資料來源檢視中包含的資料|  
 |--------------|-------------------------------------------|  
 |[第2課：建立預測案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|不同區域自行車型號的每月銷售報表，收集為單一檢視。|  
-|[第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|一個包含客戶訂單清單的資料表，和一個顯示每個客戶個別購買情況的巢狀資料表。|  
+|[第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|一個包含客戶訂單清單的資料表，和一個顯示每個客戶個別購買情況的巢狀資料表。|  
 |[第4課：建立時序群集案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|用於購物籃分析的相同資料，其中加入了識別碼，用來顯示項目購買的順序。|  
-|[第5課：建立類神經網路和羅吉斯回歸模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|單一資料表，其中包含來自客服中心的一些初步效能追蹤資料。|  
+|[第五課：建立類神經網路和羅吉斯迴歸模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|單一資料表，其中包含來自客服中心的一些初步效能追蹤資料。|  
   
 ## <a name="next-lesson"></a>下一課  
  [第2課：建立預測案例 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  

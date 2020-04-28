@@ -40,10 +40,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68418880"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
@@ -51,21 +51,21 @@ ms.locfileid: "68418880"
   
 
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
- 使用 [DatabaseMail XP]  選項，可在此伺服器上啟用 Database Mail。 如需詳細資訊，請參閱 [Database Mail XPs 伺服器組態選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 參考主題。  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
+ 使用 [DatabaseMail XP]**** 選項，可在此伺服器上啟用 Database Mail。 如需詳細資訊，請參閱 [Database Mail XPs 伺服器組態選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 參考主題。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  在任何資料庫中啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要資料庫鎖定。 如果已在 **msdb**中停用 Service Broker，則啟用 Database Mail 的第一步是停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，好讓 Service Broker 可以取得必要的鎖定。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  若要設定 Database Mail，您必須是 **系統管理員** 固定伺服器角色的成員。 若要傳送 Database Mail，您必須是 **msdb** 資料庫之 **DatabaseMailUserRole** 資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a>使用 Database Mail Configuration Wizard  
- **使用 wizard 設定 Database Mail**  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> 使用 Database Mail 組態精靈  
+ **若要使用精靈設定 Database Mail**  
   
 1.  在物件總管中，展開您想要設定 Database Mail 之執行個體的節點。  
   
-2.  展開 **[管理]** 節點。  
+2.  展開 [**管理**] 節點。  
   
 3.  以滑鼠右鍵按一下 [Database Mail]****，然後按一下 [設定 Database Mail]****。  
   
@@ -75,22 +75,22 @@ ms.locfileid: "68418880"
   
   
   
-###  <a name="Welcome"></a>歡迎頁面  
+###  <a name="welcome-page"></a><a name="Welcome"></a>歡迎頁面  
  此頁說明設定 Database Mail 的步驟。  
   
  **不要再顯示此頁面**-核取此選項可略過此歡迎頁面，而不會在未來顯示。  
   
- **下一步**-繼續進行 [**選取設定工作**] 頁面。  
+ **下一步** - 繼續 [選取組態工作]**** 頁面。  
   
  **取消**-結束嚮導而不設定 Database Mail  
   
  
   
-###  <a name="ConfigTask"></a>選取設定工作  
+###  <a name="select-configuration-task"></a><a name="ConfigTask"></a>選取設定工作  
  使用 [選取組態工作]**** 頁面可指出您每次使用精靈時，會完成哪個工作。 如果您在完成精靈之前變更了主意，請使用 [上一步]**** 按鈕回到此頁面，然後選取不同的工作。  
   
 > [!NOTE]  
->  如果尚未啟用 Database Mail，您就會接收到訊息： **[無法使用 Database Mail 功能。您要啟用此功能嗎?]** 回應 [是]**** 就相當於使用 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 系統預存程序的 **Database Mail XP 選項**來啟用 Database Mail。  
+>  如果尚未啟用 Database Mail，您就會接收到訊息： **[無法使用 Database Mail 功能。您要啟用此功能嗎?]** 回應 [是]**** 就相當於使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)來啟用 Database Mail。  
   
  **執行下列工作來設定 Database Mail**  
  執行第一次設定 Database Mail 所需的所有工作。 此選項包含所有其他三個選項。  
@@ -101,12 +101,12 @@ ms.locfileid: "68418880"
  **管理設定檔安全性**  
  設定哪些使用者才能夠存取 Database Mail 設定檔。  
   
- **查看或變更系統參數**  
+ **檢視或變更系統參數**  
  設定 Database Mail 系統參數，例如附件的檔案大小上限。  
   
 
   
-###  <a name="NewAccount"></a>[新增帳戶] 頁面  
+###  <a name="new-account-page"></a><a name="NewAccount"></a>[新增帳戶] 頁面  
  使用這個頁面建立新的 Database Mail 帳戶。 Database Mail 帳戶包含傳送電子郵件到 SMTP 伺服器的資訊。  
   
  Database Mail 帳戶包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來傳送電子郵件訊息到 SMTP 伺服器的資訊。 每個帳戶包含一個電子郵件伺服器的資訊。  
@@ -125,19 +125,19 @@ ms.locfileid: "68418880"
  **顯示名稱**  
  鍵入顯示於由這個帳戶傳送之電子郵件訊息上的名稱。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是「SQL Server Agent Automated Mailer」。  
   
- **回復電子郵件**  
+ **回覆電子郵件**  
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
  輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 通常這種格式類似`smtp.`于 *<your_company>* `.com`。 如需相關說明，請洽詢您的郵件管理員。  
   
- **埠號碼**  
+ **連接埠號碼**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
   
- **這部伺服器需要安全連線（SSL）**  
+ **這個伺服器需要安全連接 (SSL)**  
  使用安全通訊端層 (SSL) 將通訊加密。  
   
- **使用資料庫引擎服務認證的 Windows 驗證**  
+ **使用 Database Engine 服務認證的 Windows 驗證**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務設定的認證，來建立 SMTP 伺服器的連接。  
   
  **基本驗證**  
@@ -157,7 +157,7 @@ ms.locfileid: "68418880"
   
  
   
-###  <a name="ExistingAccount"></a>[管理現有帳戶] 頁面  
+###  <a name="manage-existing-account-page"></a><a name="ExistingAccount"></a>[管理現有帳戶] 頁面  
  使用此頁面來管理現有的 Database Mail 帳戶。  
   
  **帳戶名稱**  
@@ -175,19 +175,19 @@ ms.locfileid: "68418880"
  **顯示名稱**  
  檢視或更新名稱，以顯示在由這個帳戶傳送的電子郵件訊息上。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如，SQL Server Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是 **SQL Server Agent Automated Mailer** 。  
   
- **回復電子郵件**  
+ **回覆電子郵件**  
  檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回復 SQL Server Agent 的帳戶可能會前往資料庫管理員**danw@Adventure-Works.com**。  
   
  **伺服器名稱**  
- 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 這通常會採用類似 smtp 的格式。 **<your_company> .com**。 如需相關說明，請洽詢您的郵件管理員。  
+ 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。 如需相關說明，請洽詢您的郵件管理員。  
   
- **埠號碼**  
+ **連接埠號碼**  
  檢視或更新此帳戶的 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
   
- **這部伺服器需要安全連線（SSL）**  
+ **這個伺服器需要安全連接 (SSL)**  
  使用安全通訊端層 (SSL) 將通訊加密。  
   
- **使用資料庫引擎服務認證的 Windows 驗證**  
+ **使用 Database Engine 服務認證的 Windows 驗證**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務設定的認證，來建立 SMTP 伺服器的連接。  
   
  **基本驗證**  
@@ -207,12 +207,12 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="NewProfile"></a>新增設定檔頁面面  
- 使用此頁面可建立 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱[建立 Database Mail 設定檔](create-a-database-mail-profile.md)。  
+###  <a name="new-profile-page"></a><a name="NewProfile"></a> 新增設定檔頁面  
+ 使用此頁面可建立 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱 [建立 Database Mail 設定檔](create-a-database-mail-profile.md)。  
   
- 使用 [上移]**** 和 [下移]**** 按鈕，即可變更使用 Database Mail 帳戶的順序。 此順序是由一個值 (稱為序號) 決定。 [**上移**] 會減少序號，而 **[下移]** 會增加序號。 序號決定了 Database Mail 使用設定檔中之帳戶的順序。 如果是新的電子郵件訊息，Database Mail 會從序號最低的帳戶開始。 如果這個帳戶失敗，Database Mail 會使用序號次高的帳戶，依此類推，直到 Database Mail 傳送訊息成功為止，或直到序號最高的帳戶失敗為止。 如果序號最高的帳戶失敗，Database Mail 會暫停嘗試傳送郵件一段時間，這段時間是在 Database Mail **AccountRetryDelay** 參數中設定，然後從最低序號開始，再次開始嘗試傳送郵件。 使用 Database Mail **AccountRetryAttempts** 參數，即可設定外部郵件處理序使用指定之設定檔內的每個帳戶，嘗試傳送電子郵件訊息的次數。 您可以在 Database Mail 組態精靈的 [設定系統參數]**** 頁面上，設定 **AccountRetryDelay** 和 **AccountRetryAttempts** 參數。  
+ 使用 [上移]**** 和 [下移]**** 按鈕，即可變更使用 Database Mail 帳戶的順序。 此順序是由一個值 (稱為序號) 決定。 [上移]**** 會減少序號，而 [下移]**** 會增加序號。 序號決定了 Database Mail 使用設定檔中之帳戶的順序。 如果是新的電子郵件訊息，Database Mail 會從序號最低的帳戶開始。 如果這個帳戶失敗，Database Mail 會使用序號次高的帳戶，依此類推，直到 Database Mail 傳送訊息成功為止，或直到序號最高的帳戶失敗為止。 如果序號最高的帳戶失敗，Database Mail 會暫停嘗試傳送郵件一段時間，這段時間是在 Database Mail **AccountRetryDelay** 參數中設定，然後從最低序號開始，再次開始嘗試傳送郵件。 使用 Database Mail **AccountRetryAttempts** 參數，即可設定外部郵件處理序使用指定之設定檔內的每個帳戶，嘗試傳送電子郵件訊息的次數。 您可以在 Database Mail 組態精靈的 [設定系統參數]**** 頁面上，設定 **AccountRetryDelay** 和 **AccountRetryAttempts** 參數。  
   
- **設定檔名稱**  
+ [設定檔名稱]****  
  輸入新設定檔的名稱。 系統會使用此名稱來建立設定檔。 請勿使用現有設定檔的名稱。  
   
  **說明**  
@@ -235,12 +235,12 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="ExistingProfile"></a>管理現有的設定檔頁面面  
- 使用此頁面可管理現有的 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱[建立 Database Mail 設定檔](create-a-database-mail-profile.md)。  
+###  <a name="manage-existing-profile-page"></a><a name="ExistingProfile"></a>管理現有的設定檔頁面面  
+ 使用此頁面可管理現有的 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱 [建立 Database Mail 設定檔](create-a-database-mail-profile.md)。  
   
- 使用 [上移]**** 和 [下移]**** 按鈕，即可變更使用 Database Mail 帳戶的順序。 此順序是由一個值 (稱為序號) 決定。 [**上移**] 會減少序號，而 **[下移]** 會增加序號。 序號決定了 Database Mail 使用設定檔中之帳戶的順序。 如果是新的電子郵件訊息，Database Mail 會從序號最低的帳戶開始。 如果這個帳戶失敗，Database Mail 會使用序號次高的帳戶，依此類推，直到 Database Mail 傳送訊息成功為止，或直到序號最高的帳戶失敗為止。 如果序號最高的帳戶失敗，Database Mail 會暫停嘗試傳送郵件一段時間，這段時間是在 Database Mail **AccountRetryDelay** 參數中設定，然後從最低序號開始，再次開始嘗試傳送郵件。 使用 Database Mail **AccountRetryAttempts** 參數，即可設定外部郵件處理序使用指定之設定檔內的每個帳戶，嘗試傳送電子郵件訊息的次數。 您可以在 Database Mail 組態精靈的 [設定系統參數]**** 頁面上，設定 **AccountRetryDelay** 和 **AccountRetryAttempts** 參數。  
+ 使用 [上移]**** 和 [下移]**** 按鈕，即可變更使用 Database Mail 帳戶的順序。 此順序是由一個值 (稱為序號) 決定。 [上移]**** 會減少序號，而 [下移]**** 會增加序號。 序號決定了 Database Mail 使用設定檔中之帳戶的順序。 如果是新的電子郵件訊息，Database Mail 會從序號最低的帳戶開始。 如果這個帳戶失敗，Database Mail 會使用序號次高的帳戶，依此類推，直到 Database Mail 傳送訊息成功為止，或直到序號最高的帳戶失敗為止。 如果序號最高的帳戶失敗，Database Mail 會暫停嘗試傳送郵件一段時間，這段時間是在 Database Mail **AccountRetryDelay** 參數中設定，然後從最低序號開始，再次開始嘗試傳送郵件。 使用 Database Mail **AccountRetryAttempts** 參數，即可設定外部郵件處理序使用指定之設定檔內的每個帳戶，嘗試傳送電子郵件訊息的次數。 您可以在 Database Mail 組態精靈的 [設定系統參數]**** 頁面上，設定 **AccountRetryDelay** 和 **AccountRetryAttempts** 參數。  
   
- **設定檔名稱**  
+ [設定檔名稱]****  
  選取要管理之設定檔的名稱。  
   
  **刪除**  
@@ -275,7 +275,7 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="AddAccount"></a>將帳戶加入至設定檔頁面面  
+###  <a name="add-account-to-profile-page"></a><a name="AddAccount"></a>將帳戶加入至設定檔頁面面  
  使用此頁面可選擇要加入至設定檔的帳戶。 從 [帳戶名稱]**** 方塊中選擇現有的帳戶，或是按一下 [新增帳戶]****  
   
  **帳戶名稱**  
@@ -292,13 +292,13 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="AccountsProfiles"></a>管理帳戶和設定檔頁面面  
+###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> 管理帳戶和設定檔頁面  
  使用此頁面可選擇用來管理設定檔或帳戶的工作。  
   
  **建立新帳戶**  
  建立新帳戶。  
   
- **查看、變更或刪除現有的帳戶**  
+ **檢視、變更或刪除現有的帳戶**  
  管理或刪除現有的帳戶。  
   
  **建立新的設定檔**  
@@ -309,14 +309,14 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="ProfileSecurityPublic"></a>管理設定檔安全性，公用索引標籤  
+###  <a name="manage-profile-security-public-tab"></a><a name="ProfileSecurityPublic"></a>管理設定檔安全性，公用索引標籤  
  使用此頁面來設定公用設定檔。  
   
  設定檔是公用或私人的。 私人設定檔只有特定使用者或角色能夠存取。 公用設定檔允許擁有郵件主機資料庫 (**msdb**) 存取權的任何使用者或角色，使用該設定檔傳送電子郵件。  
   
  設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。 只有一個設定檔可以標示為預設的設定檔。  
   
- **公立**  
+ **公開**  
  選取此選項使指定的設定檔成為公用的。  
   
  **設定檔名稱**  
@@ -330,7 +330,7 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="ProfileSecurityPrivate"></a>管理設定檔安全性，私用索引標籤  
+###  <a name="manage-profile-security-private-tab"></a><a name="ProfileSecurityPrivate"></a>管理設定檔安全性，私用索引標籤  
  使用此頁面來設定私人設定檔。  
   
  設定檔是公用或私人的。 私人設定檔只有特定使用者或角色能夠存取。 公用設定檔允許擁有郵件主機資料庫 (**msdb**) 存取權的任何使用者或角色，使用該設定檔傳送電子郵件。  
@@ -340,13 +340,13 @@ ms.locfileid: "68418880"
  **使用者名稱**  
  選取 **msdb** 資料庫中使用者或角色的名稱。  
   
- **Access**  
+ **存取**  
  選取使用者或角色是否能夠存取指定的設定檔。  
   
- **設定檔名稱**  
+ [設定檔名稱]****  
  檢視設定檔的名稱。  
   
- **是預設設定檔**  
+ **是預設的設定檔**  
  選取設定檔是否是使用者或角色的預設設定檔。 每個使用者或角色只可以有一個預設的設定檔。  
   
  **只顯示此使用者的現有私人設定檔**  
@@ -354,26 +354,26 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="SystemParameters"></a>設定系統參數  
+###  <a name="configure-system-parameters"></a><a name="SystemParameters"></a>設定系統參數  
  使用此頁面來指定 Database Mail 系統參數。 檢視系統參數以及每個參數目前的值。 選取參數，以便在資訊窗格中檢視簡短的描述。  
   
  **帳戶重試嘗試**  
  外部郵件處理序嘗試利用指定設定檔中的每個帳戶來傳送電子郵件訊息的次數。  
   
- **帳戶重試延遲（秒）**  
+ **帳戶重試延遲 (秒)**  
  外部郵件處理序在使用設定檔中的所有帳戶，來嘗試傳遞訊息之後，其在再次嘗試使用所有帳戶之前，所需等候的時間 (以秒為單位)。  
   
- **檔案大小上限（位元組）**  
+ **檔案大小上限 (位元組)**  
  附件的大小上限 (以位元組為單位)。  
   
  **禁止的附加檔案副檔名**  
  無法作為電子郵件訊息附件來傳送的副檔名清單 (以逗號分隔)。 按一下瀏覽按鈕 ([...]****)，加入其他副檔名。  
   
- **Database Mail 可執行檔最小存留期（秒）**  
+ **Database Mail 可執行檔最小存留期間 (秒)**  
  外部郵件處理序維持使用中的最短時間 (以秒為單位)。 只要在 Database Mail 佇列中有電子郵件，此處理序就會保持在使用中。 此參數指定當沒有要處理的訊息時，處理序保持在使用中的時間。  
   
  **記錄層級**  
- 指定哪些訊息要記錄在 Database Mail 記錄中。 可能的值為：  
+ 指定哪些訊息要記錄在 Database Mail 記錄中。 可能的值包括：  
   
 -   一般 - 只記錄錯誤  
   
@@ -388,13 +388,13 @@ ms.locfileid: "68418880"
   
 
   
-###  <a name="CompleteWizard"></a>完成嚮導頁面  
+###  <a name="complete-the-wizard-page"></a><a name="CompleteWizard"></a>完成嚮導頁面  
  使用此頁面來檢閱 [Database Mail 組態精靈]**** 將要執行的動作。 在精靈結束之前將不會做任何變更。  
   
 
   
-###  <a name="TestEmail"></a>傳送測試電子郵件頁面  
- 使用 _<instance_name>_ ] 頁面的 [**傳送測試電子郵件**]，以使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
+###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a>傳送測試電子郵件頁面  
+ 使用 [從 <執行個體名稱>__ 傳送測試電子郵件]**** 頁面，以使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
   
  **Database Mail 設定檔**  
  從清單中選取 Database Mail 設定檔。 這是必要的欄位。 如果未顯示任何設定檔，就表示沒有設定檔，或者您沒有設定檔的存取權限。 使用 **[Database Mail 組態精靈]** 來建立及設定設定檔。 如果未列出任何設定檔，請使用 Database Mail 組態精靈來建立供您使用的設定檔。  
@@ -402,7 +402,7 @@ ms.locfileid: "68418880"
  **自**  
  訊息收件者的電子郵件地址。 至少需要一位收件者。  
   
- **主題**  
+ **主旨**  
  測試電子郵件的主旨列。 變更預設主旨，以便更適當地識別您的電子郵件進行疑難排解。  
   
  **人體**  
@@ -410,7 +410,7 @@ ms.locfileid: "68418880"
   
  [Database Mail 測試電子郵件]**** 對話方塊會確認 Database Mail 已嘗試傳送測試訊息，並提供測試電子郵件訊息的 **mailitem_id**。 與收件者聯繫來判斷電子郵件是否送達。 電子郵件一般都會在數分鐘內收到，但是電子郵件可能因為緩慢的網路效能、在郵件伺服器上積存訊息，或伺服器暫時不能使用等原因而延遲。 使用 **mailitem_id** 來進行疑難排解。  
   
- **已傳送電子郵件**  
+ **傳送電子郵件**  
  測試電子郵件訊息的 **mailitem_id** 。  
   
  **疑難排解**  
@@ -418,8 +418,8 @@ ms.locfileid: "68418880"
   
 
   
-##  <a name="Template"></a>使用範本  
- **建立 Database Mail 設定腳本**  
+##  <a name="using-templates"></a><a name="Template"></a> 使用範本  
+ **若要建立 Database Mail 組態指令碼**  
   
 1.  在 [檢視]**** 功能表中，選取 [範本總管]****。  
   
@@ -429,10 +429,10 @@ ms.locfileid: "68418880"
   
 4.  在 [查詢]**** 功能表上，選取 [指定範本參數的值]****。 即會開啟 [取代範本參數]**** 視窗。  
   
-5.  輸入 **profile_name**、**account_name**、**SMTP_servername**、**email_address** 和 **display_name** 的值。 SQL Server Management Studio 就會將您提供的值填入範本中。  
+5.  輸入 **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address**和 **display_name**的值。 SQL Server Management Studio 就會將您提供的值填入範本中。  
   
 6.  執行指令碼以建立組態。  
   
-7.  此指令碼不會將資料庫使用者存取權授與給設定檔。 因此，依預設只有**系統管理員**固定安全性角色的成員才能使用此設定檔。 如需授與設定檔存取權限的詳細資訊，請參閱 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)。  
+7.  此指令碼不會將資料庫使用者存取權授與給設定檔。 因此，依預設只有 **系統管理員** 固定安全性角色的成員才能使用此設定檔。 如需授與設定檔存取權限的詳細資訊，請參閱 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)。  
   
   

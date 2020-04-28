@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4394483cd17510c998126a70c12f4d669c9282aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264492"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
@@ -34,11 +34,11 @@ ms.locfileid: "68264492"
   
 ||||  
 |-|-|-|  
-|**資料行名稱**|**型別**|**說明**|  
+|**資料行名稱**|**類型**|**說明**|  
 |**object_id**|int|包含索引之資料表的物件識別碼。|  
-|**fulltext_index_page_count**|**Bigint**|擷取的邏輯大小 (索引頁數)。|  
-|**keyphrase_index_page_count**|**Bigint**|擷取的邏輯大小 (索引頁數)。|  
-|**similarity_index_page_count**|**Bigint**|擷取的邏輯大小 (索引頁數)。|  
+|**fulltext_index_page_count**|**bigint**|擷取的邏輯大小 (索引頁數)。|  
+|**keyphrase_index_page_count**|**bigint**|擷取的邏輯大小 (索引頁數)。|  
+|**similarity_index_page_count**|**bigint**|擷取的邏輯大小 (索引頁數)。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如需詳細資訊，請參閱[管理和監視語義搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  

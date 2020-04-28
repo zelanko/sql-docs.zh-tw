@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68894046"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -102,12 +102,12 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64** （預設值）|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
   
 > [!NOTE]  
 >  指定值**64**會導致散發代理程式以連續模式執行。 這對應于設定代理程式的 **-連續**參數。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
@@ -118,11 +118,11 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1** （預設值）|第一頁|  
-|**2**|秒|  
+|**1** (預設值)|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是0。  
   
@@ -131,9 +131,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4** （預設值）|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4** （預設值）|Minute|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是5。  
   
@@ -160,15 +160,15 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`這是用來註冊非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源之 OLE DB 提供者的唯一程式設計識別碼（PROGID）。 *subscriber_provider*是**sysname**，預設值是 Null。 針對散發者上所安裝的 OLE DB 提供者， *subscriber_provider*必須是唯一的。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_provider。  
+`[ @subscriber_provider = ] 'subscriber_provider'`這是用來註冊非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源之 OLE DB 提供者的唯一程式設計識別碼（PROGID）。 *subscriber_provider*是**sysname**，預設值是 Null。 針對散發者上所安裝的 OLE DB 提供者， *subscriber_provider*必須是唯一的。 *subscriber_provider*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_provider。  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`這是 OLE DB 提供者所瞭解的資料來源名稱。 *subscriber_datasrc*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_datasrc*會當做 DBPROP_INIT_DATASOURCE 屬性傳遞，以初始化 OLE DB 提供者。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_datasrc。  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`這是 OLE DB 提供者所瞭解的資料來源名稱。 *subscriber_datasrc*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_datasrc*會當做 DBPROP_INIT_DATASOURCE 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_datasrc*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_datasrc。  
   
-`[ @subscriber_location = ] 'subscriber_location'`這是 OLE DB 提供者所瞭解的資料庫位置。 *subscriber_location*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_location*會當做 DBPROP_INIT_LOCATION 屬性傳遞，以初始化 OLE DB 提供者。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_location。  
+`[ @subscriber_location = ] 'subscriber_location'`這是 OLE DB 提供者所瞭解的資料庫位置。 *subscriber_location*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_location*會當做 DBPROP_INIT_LOCATION 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_location*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_location。  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`這是用來識別資料來源的 OLE DB 提供者特定的連接字串。 *subscriber_provider_string*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_provider_string*會傳遞至 IDataInitialize 或設定為 DBPROP_INIT_PROVIDERSTRING 屬性，以初始化 OLE DB 提供者。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_provider_string。  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`這是用來識別資料來源的 OLE DB 提供者特定的連接字串。 *subscriber_provider_string*是**Nvarchar （4000）**，預設值是 Null。 *subscriber_provider_string*會傳遞至 IDataInitialize 或設定為 DBPROP_INIT_PROVIDERSTRING 屬性，以初始化 OLE DB 提供者。 *subscriber_provider_string*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_provider_string。  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`這是連接到 OLE DB 提供者時所要使用的目錄。 *subscriber_catalog*是**sysname**，預設值是 Null。 *subscriber_catalog*會當做 DBPROP_INIT_CATALOG 屬性傳遞，以初始化 OLE DB 提供者。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_catalog。  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`這是連接到 OLE DB 提供者時所要使用的目錄。 *subscriber_catalog*是**sysname**，預設值是 Null。 *subscriber_catalog*會當做 DBPROP_INIT_CATALOG 屬性傳遞，以初始化 OLE DB 提供者。 *subscriber_catalog*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者才支援 subscriber_catalog。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -183,10 +183,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_addpushsubscription_agent**。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)   
  [為非 SQL Server 的訂閱者建立訂用帳戶](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
- [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

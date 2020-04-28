@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493989"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 課：定義進階屬性和維度屬性
@@ -47,7 +47,7 @@ ms.locfileid: "69493989"
  在這項工作中，您會設定 UnknownMember 和 UnknownMemberName 屬性，處理 Null 維度成員所造成的錯誤狀況。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 5 課：在維度和量值群組之間定義關聯性](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [第5課：定義維度和量值群組之間的關聯性](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   

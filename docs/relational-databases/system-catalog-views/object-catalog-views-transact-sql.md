@@ -16,10 +16,10 @@ ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a64052771d767f64880118f3940461b7f0fb1a4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68220349"
 ---
 # <a name="object-catalog-views-transact-sql"></a>物件目錄檢視 (Transact-SQL)

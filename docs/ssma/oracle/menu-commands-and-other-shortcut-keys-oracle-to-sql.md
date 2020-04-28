@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264556"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>功能表命令和其他快速鍵 (Oracle 到 SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "68264556"
 |尋找上一個。|ALT + E + F + P 或 CTRL + SHIFT + F3|  
 |尋找下一個|ALT + E + F + N 或 CTRL + F3|  
   
-## <a name="view-menu-commands"></a>View menu 命令  
+## <a name="view-menu-commands"></a>檢視功能表命令  
 若要存取 [流覽] 功能表，使用的鍵盤快速鍵為 ALT + V。下表描述用來存取 [視圖] 功能表下之功能表項目的鍵盤快速鍵。  
   
 |若要這樣做|出版|  
@@ -105,7 +105,7 @@ ms.locfileid: "68264556"
 |針對 SQL Server] 對話方塊顯示 [從備份還原資料表]。|ALT + S + M + R|  
 |顯示 SQL Server] 對話方塊的 [管理備份內容]。|ALT + S + M + C|  
   
-## <a name="help-menu-commands"></a>[說明] 功能表命令  
+## <a name="help-menu-commands"></a>說明功能表命令  
 若要存取 [說明] 功能表，使用的鍵盤快速鍵為 ALT + H。下表描述用來存取 [說明] 功能表下之功能表項目的鍵盤快速鍵。  
   
 |若要這樣做|出版|  

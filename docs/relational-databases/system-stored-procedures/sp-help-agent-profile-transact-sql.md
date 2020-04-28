@@ -16,10 +16,10 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771461"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |-----------|-----------------|  
 |**1**|快照集代理程式|  
 |**2**|記錄讀取器代理程式|  
-|**第**|散發代理程式|  
+|**3**|散發代理程式|  
 |**4**|合併代理程式|  
 |**9**|佇列讀取器代理程式|  
   
@@ -57,7 +57,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|設定檔的識別碼。|  
 |**profile_name**|**sysname**|對代理程式類型而言是唯一的。|  
 |**agent_type**|**int**|**1** = 快照集代理程式<br /><br /> **2** = 記錄讀取器代理程式<br /><br /> **3** = 散發代理程式<br /><br /> **4** = 合併代理程式<br /><br /> **9** = 佇列讀取器代理程式|  
-|**型別**|**int**|**0** = 系統<br /><br /> **1** = 自訂|  
+|**類型**|**int**|**0** = 系統<br /><br /> **1** = 自訂|  
 |**描述**|**Varchar （3000）**|設定檔的描述。|  
 |**def_profile**|**bit**|指定這個設定檔是否為這個代理程式類型的預設值。|  
   

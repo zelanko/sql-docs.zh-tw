@@ -16,10 +16,10 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768952"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -63,12 +63,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
 |NULL (預設值)||  
   
 `[ @frequency_interval = ] frequency_interval`代理程式的執行天數。 *frequency_interval*是**int**，而且可以是下列其中一個值。  
@@ -77,14 +77,14 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
-|**第**|Tuesday|  
-|**4**|Wednesday|  
-|**第**|Thursday|  
+|**3**|Tuesday|  
+|**4**|星期三|  
+|**5**|Thursday|  
 |**6**|星期五|  
-|**utf-7**|星期六|  
+|**7**|星期六|  
 |**8**|Day|  
 |**9**|工作日|  
-|**十大**|週末|  
+|**10**|週末|  
 |NULL (預設值)||  
   
 `[ @frequency_subday = ] frequency_subday`這是在定義的期間內重新排定的頻率。 *frequency_subday*是**int**，而且可以是下列其中一個值。  
@@ -92,9 +92,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4**|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|Hour|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -103,11 +103,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1**|第一頁|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
 |NULL (預設值)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是 Null。  
@@ -139,7 +139,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changedynamicsnapshot_job**。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [具有參數化篩選之合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [查看及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [含參數化篩選之合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

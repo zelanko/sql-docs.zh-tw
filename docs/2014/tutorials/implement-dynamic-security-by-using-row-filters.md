@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530885"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>使用資料列篩選器實作動態安全性
@@ -26,7 +26,7 @@ ms.locfileid: "69530885"
   
  您將要完成一系列工作，才能完成這個補充課程。 這麼一來，便會識別此 Adventure Works 表格式模型案例獨有，但不一定適用於真實案例的工作。 每個工作都包含描述工作目的的其他資訊。  
   
- 完成本課程的估計時間： **30 分鐘**  
+ 這堂課的預估完成時間：**30 分鐘**  
   
 ## <a name="prerequisites"></a>Prerequisites  
  此補充課程主題是表格式模型教學課程的一部分，請依序完成。 在此補充課程中執行工作之前，您必須已完成所有前面的課程。  

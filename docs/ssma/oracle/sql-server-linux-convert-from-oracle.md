@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266522"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 移轉小幫手將 Oracle 架構遷移至 Linux 上的 SQL Server 2017
@@ -71,7 +71,7 @@ SSMA for Oracle 預設不會使用 Oracle 範例架構。 若要啟用 HR 架構
 
    ![連接到 Oracle](./media/sql-server-linux-convert-from-oracle/ConnectToOracle.png)
 
-1. 接著，按一下 **[連接]**。 幾分鐘後，SSMA for Oracle 就會連接到您的資料庫並讀取其中繼資料。
+1. 然後按一下 [ **連接**]。 幾分鐘後，SSMA for Oracle 就會連接到您的資料庫並讀取其中繼資料。
 
 ## <a name="create-a-report"></a>建立報表
 

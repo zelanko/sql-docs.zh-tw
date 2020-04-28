@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5e4febf0882f57f7d1545f86cbe4c65e322226dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263975"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68263975"
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|工作階段識別碼。<br /><br /> **session_id**對應到[sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)中的**session_id** 。|  
 |**database_id**|**smallint**|資料庫識別碼。|  
-|**user_objects_alloc_page_count**|**Bigint**|這個工作階段所保留或配置給使用者物件的頁數。|  
-|**user_objects_dealloc_page_count**|**Bigint**|這個工作階段已取消配置且不再保留給使用者物件的頁數。|  
-|**internal_objects_alloc_page_count**|**Bigint**|這個工作階段所保留或配置給內部物件的頁數。|  
-|**internal_objects_dealloc_page_count**|**Bigint**|這個工作階段已取消配置且不再保留給內部物件的頁數。|  
-|**user_objects_deferred_dealloc_page_count**|**Bigint**|已標示為延後解除配置的頁面數目。<br /><br /> **注意：** 于和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的 service pack 中引進。|  
+|**user_objects_alloc_page_count**|**bigint**|這個工作階段所保留或配置給使用者物件的頁數。|  
+|**user_objects_dealloc_page_count**|**bigint**|這個工作階段已取消配置且不再保留給使用者物件的頁數。|  
+|**internal_objects_alloc_page_count**|**bigint**|這個工作階段所保留或配置給內部物件的頁數。|  
+|**internal_objects_dealloc_page_count**|**bigint**|這個工作階段已取消配置且不再保留給內部物件的頁數。|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|已標示為延後解除配置的頁面數目。<br /><br /> **注意：** 于和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的 service pack 中引進。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限  
@@ -97,13 +97,13 @@ ms.locfileid: "68263975"
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|一對一|  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [dm_db_file_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+ [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   
 

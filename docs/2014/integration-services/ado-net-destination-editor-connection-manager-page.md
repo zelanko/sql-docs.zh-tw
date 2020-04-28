@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154026"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目的地編輯器 (連線管理員頁面)
@@ -39,14 +39,14 @@ ms.locfileid: "70154026"
  **新增**  
  使用 [設定 ADO.NET 連線管理員]**** 對話方塊建立新的連線管理員。  
   
- **使用資料表或視圖**  
- 從清單中選取現有的資料表或視圖，或按一下 [**新增**] 來建立新的資料表。  
+ **使用資料表或檢視**  
+ 從清單中選取現有的資料表或檢視，或按一下 [新增]**** 來建立新的資料表。  
   
  **新增**  
  使用 [建立資料表]**** 對話方塊來建立新的資料表或檢視。  
   
 > [!NOTE]  
->  當您按一下****[新增[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ] 時，會根據連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  當您按一下**New**[新增[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ] 時，會根據連接的資料來源產生預設的 CREATE TABLE 語句。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **預覽**  
  使用 [預覽查詢結果]**** 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
@@ -61,7 +61,7 @@ ms.locfileid: "70154026"
  如果您選取 [盡可能使用大量插入]****，並將 [錯誤]**** 選項設定為 [重新導向資料列]****，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](data-flow/error-handling-in-data.md)。 如需 [錯誤]**** 選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 來源資料表包含識別欄位，您就必須使用「執行 SQL」工作，在 ADO NET 目的地前後執行 SET IDENTITY_INSERT 陳述式。 識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓明確值插入識別欄位中。 若要在相同的資料庫連接上執行 CREATE TABLE 和 SET IDENTITY 陳述式，請將 `RetainSameConnection` 連接管理員的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 屬性設定為 `True`。 此外，您可以針對「執行 SQL」工作和 ADO NET 目的地使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員。  
+>  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 來源資料表包含識別欄位，您就必須使用「執行 SQL」工作，在 ADO NET 目的地前後執行 SET IDENTITY_INSERT 陳述式。 識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓明確值插入識別欄位中。 若要在相同的資料庫連接上執行 CREATE TABLE 和 SET IDENTITY 陳述式，請將 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連接管理員的 `RetainSameConnection` 屬性設定為 `True`。 此外，您可以針對「執行 SQL」工作和 ADO NET 目的地使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員。  
 >   
 >  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。  
   

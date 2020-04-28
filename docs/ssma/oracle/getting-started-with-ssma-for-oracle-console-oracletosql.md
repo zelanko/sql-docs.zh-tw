@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264497"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>開始使用 SSMA for Oracle 主控台 (OracleToSQL)

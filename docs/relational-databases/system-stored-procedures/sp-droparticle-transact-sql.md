@@ -16,10 +16,10 @@ ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 882c57c552d9666ec3ef308f63a6c5058c21e8e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768926"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
@@ -57,7 +57,7 @@ sp_droparticle [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
   
 `[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

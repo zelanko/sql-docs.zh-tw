@@ -16,10 +16,10 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762546"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)

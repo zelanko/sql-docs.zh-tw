@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0bd7f1870a88ae2050445050565e0f268f4d9b0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148283"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys.databases query_store_runtime_stats （Transact-sql）
@@ -35,73 +35,73 @@ ms.locfileid: "70148283"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**Bigint**|資料列的識別碼，代表**plan_id**、 **execution_type**和**runtime_stats_interval_id**的執行時間執行統計資料。 只有過去的執行時間統計資料間隔才是唯一的。 對於目前作用中的間隔，可能會有多個資料列代表**plan_id**所參考之計畫的執行時間統計資料，並以**execution_type**表示的執行類型。 通常，一個資料列代表排清到磁片的執行時間統計資料，而其他則表示記憶體中的狀態。 因此，若要取得每個間隔的實際狀態，您需要匯總計量、依**plan_id**分組、 **execution_type**和**runtime_stats_interval_id**。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**plan_id**|**Bigint**|外鍵。 [Query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)的聯結。|  
-|**runtime_stats_interval_id**|**Bigint**|外鍵。 [Query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)的聯結。|  
+|**runtime_stats_id**|**bigint**|資料列的識別碼，代表**plan_id**、 **execution_type**和**runtime_stats_interval_id**的執行時間執行統計資料。 只有過去的執行時間統計資料間隔才是唯一的。 對於目前作用中的間隔，可能會有多個資料列代表**plan_id**所參考之計畫的執行時間統計資料，並以**execution_type**表示的執行類型。 通常，一個資料列代表排清到磁片的執行時間統計資料，而其他則表示記憶體中的狀態。 因此，若要取得每個間隔的實際狀態，您需要匯總計量、依**plan_id**分組、 **execution_type**和**runtime_stats_interval_id**。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**plan_id**|**bigint**|外鍵。 [Query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)的聯結。|  
+|**runtime_stats_interval_id**|**bigint**|外鍵。 [Query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)的聯結。|  
 |**execution_type**|**tinyint**|決定查詢執行的類型：<br /><br /> 0-正常執行（成功完成）<br /><br /> 3-用戶端起始的中止執行<br /><br /> 4-例外狀況已中止執行|  
 |**execution_type_desc**|**nvarchar(128)**|執行類型欄位的文字描述：<br /><br /> 0-一般<br /><br /> 3-已中止<br /><br /> 4-例外狀況|  
 |**first_execution_time**|**datetimeoffset**|匯總間隔內查詢計劃的首次執行時間。 這是指查詢執行的結束時間。|  
 |**last_execution_time**|**datetimeoffset**|匯總間隔內查詢計劃的上次執行時間。 這是指查詢執行的結束時間。|  
-|**count_executions**|**Bigint**|匯總間隔內查詢計劃的執行次數總計。|  
+|**count_executions**|**bigint**|匯總間隔內查詢計劃的執行次數總計。|  
 |**avg_duration**|**float**|匯總間隔內查詢計劃的平均持續時間（以微秒為單位來報告）。|  
-|**last_duration**|**Bigint**|匯總間隔內查詢計劃的最後持續時間（以微秒為單位來報告）。|  
-|**min_duration**|**Bigint**|匯總間隔內查詢計劃的最短持續時間（以微秒為單位）。|  
-|**max_duration**|**Bigint**|匯總間隔內查詢計劃的最長持續時間（以微秒為單位）。|  
+|**last_duration**|**bigint**|匯總間隔內查詢計劃的最後持續時間（以微秒為單位來報告）。|  
+|**min_duration**|**bigint**|匯總間隔內查詢計劃的最短持續時間（以微秒為單位）。|  
+|**max_duration**|**bigint**|匯總間隔內查詢計劃的最長持續時間（以微秒為單位）。|  
 |**stdev_duration**|**float**|匯總間隔中查詢計劃的持續時間標準差（以微秒為單位）。|  
 |**avg_cpu_time**|**float**|匯總間隔中查詢計劃的平均 CPU 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_cpu_time**|**Bigint**|匯總間隔內查詢計劃的最後 CPU 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_cpu_time**|**Bigint**|匯總間隔內查詢計劃的最小 CPU 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_cpu_time**|**Bigint**|匯總間隔內查詢計劃的最大 CPU 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_cpu_time**|**bigint**|匯總間隔內查詢計劃的最後 CPU 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_cpu_time**|**bigint**|匯總間隔內查詢計劃的最小 CPU 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_cpu_time**|**bigint**|匯總間隔內查詢計劃的最大 CPU 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_cpu_time**|**float**|匯總間隔中查詢計劃的 CPU 時間標準差（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_logical_io_reads**|**float**|匯總間隔中查詢計劃的平均邏輯 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_logical_io_reads**|**Bigint**|匯總間隔內查詢計劃的最後邏輯 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_logical_io_reads**|**Bigint**|匯總間隔內查詢計劃的最小邏輯 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_logical_io_reads**|**Bigint**|匯總間隔內查詢計劃的邏輯 i/o 讀取數上限。（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_logical_io_reads**|**bigint**|匯總間隔內查詢計劃的最後邏輯 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_logical_io_reads**|**bigint**|匯總間隔內查詢計劃的最小邏輯 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_logical_io_reads**|**bigint**|匯總間隔內查詢計劃的邏輯 i/o 讀取數上限。（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_logical_io_reads**|**float**|邏輯 i/o 的數目會在匯總間隔內讀取查詢計劃的標準差。 （以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_logical_io_writes**|**float**|匯總間隔中查詢計劃的平均邏輯 i/o 寫入數。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_logical_io_writes**|**Bigint**|匯總間隔中查詢計劃的最後邏輯 i/o 寫入數。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_logical_io_writes**|**Bigint**|匯總間隔內查詢計劃的邏輯 i/o 寫入數目下限。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_logical_io_writes**|**Bigint**|匯總間隔內查詢計劃的邏輯 i/o 寫入數目上限。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_logical_io_writes**|**bigint**|匯總間隔中查詢計劃的最後邏輯 i/o 寫入數。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_logical_io_writes**|**bigint**|匯總間隔內查詢計劃的邏輯 i/o 寫入數目下限。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_logical_io_writes**|**bigint**|匯總間隔內查詢計劃的邏輯 i/o 寫入數目上限。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_logical_io_writes**|**float**|邏輯 i/o 的數目會在匯總間隔內寫入查詢計劃的標準差。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_physical_io_reads**|**float**|匯總間隔中查詢計劃的平均實體 i/o 讀取數（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_physical_io_reads**|**Bigint**|匯總間隔中查詢計劃的最後實體 i/o 讀取數（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_physical_io_reads**|**Bigint**|匯總間隔中查詢計劃的最小實體 i/o 讀取數（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_physical_io_reads**|**Bigint**|匯總間隔內查詢計劃的實體 i/o 讀取數目上限（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_physical_io_reads**|**bigint**|匯總間隔中查詢計劃的最後實體 i/o 讀取數（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_physical_io_reads**|**bigint**|匯總間隔中查詢計劃的最小實體 i/o 讀取數（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_physical_io_reads**|**bigint**|匯總間隔內查詢計劃的實體 i/o 讀取數目上限（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_physical_io_reads**|**float**|實體 i/o 的數目會在匯總間隔內讀取查詢計劃的標準差（以讀取的8KB 頁數表示）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_clr_time**|**float**|匯總間隔中查詢計劃的平均 CLR 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_clr_time**|**Bigint**|匯總間隔內查詢計劃的上次 CLR 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_clr_time**|**Bigint**|匯總間隔中查詢計劃的最小 CLR 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_clr_time**|**Bigint**|匯總間隔內查詢計劃的 CLR 時間上限（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_clr_time**|**bigint**|匯總間隔內查詢計劃的上次 CLR 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_clr_time**|**bigint**|匯總間隔中查詢計劃的最小 CLR 時間（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_clr_time**|**bigint**|匯總間隔內查詢計劃的 CLR 時間上限（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_clr_time**|**float**|匯總間隔中查詢計劃的 CLR 時間標準差（以微秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_dop**|**float**|匯總間隔內查詢計劃的平均 DOP （平行處理原則程度）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_dop**|**Bigint**|匯總間隔內查詢計劃的最後 DOP （平行處理原則程度）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_dop**|**Bigint**|匯總間隔內查詢計劃的最小 DOP （平行處理原則程度）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_dop**|**Bigint**|匯總間隔內查詢計劃的最大 DOP （平行處理原則程度）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_dop**|**bigint**|匯總間隔內查詢計劃的最後 DOP （平行處理原則程度）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_dop**|**bigint**|匯總間隔內查詢計劃的最小 DOP （平行處理原則程度）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_dop**|**bigint**|匯總間隔內查詢計劃的最大 DOP （平行處理原則程度）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_dop**|**float**|匯總間隔中查詢計劃的 DOP （平行處理原則程度）標準差。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_query_max_used_memory**|**float**|匯總間隔內查詢計劃的平均記憶體授與（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_query_max_used_memory**|**Bigint**|匯總間隔內的查詢計劃的上次記憶體授與（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_query_max_used_memory**|**Bigint**|匯總間隔內查詢計劃的最小記憶體授與（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_query_max_used_memory**|**Bigint**|匯總間隔內查詢計劃的最大記憶體授與（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_query_max_used_memory**|**bigint**|匯總間隔內的查詢計劃的上次記憶體授與（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_query_max_used_memory**|**bigint**|匯總間隔內查詢計劃的最小記憶體授與（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_query_max_used_memory**|**bigint**|匯總間隔內查詢計劃的最大記憶體授與（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_query_max_used_memory**|**float**|匯總間隔內的查詢計劃記憶體授與標準差（回報為 8 KB 頁面的數目）。 若為使用原生編譯記憶體優化程式的查詢，一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_rowcount**|**float**|匯總間隔內查詢計劃的平均傳回資料列數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_rowcount**|**Bigint**|在匯總間隔內最後一次執行查詢計劃時，所傳回的資料列數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_rowcount**|**Bigint**|匯總間隔內查詢計劃的傳回資料列數目下限。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_rowcount**|**Bigint**|匯總間隔內查詢計劃的傳回資料列數目上限。|  
+|**last_rowcount**|**bigint**|在匯總間隔內最後一次執行查詢計劃時，所傳回的資料列數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_rowcount**|**bigint**|匯總間隔內查詢計劃的傳回資料列數目下限。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_rowcount**|**bigint**|匯總間隔內查詢計劃的傳回資料列數目上限。|  
 |**stdev_rowcount**|**float**|在匯總間隔內，查詢計劃的傳回資料列數目標準差。|
 |**avg_log_bytes_used**|**float**|查詢計劃所使用之資料庫記錄中的平均位元組數目（匯總間隔內）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_log_bytes_used**|**Bigint**|在匯總間隔內，上次執行查詢計劃所使用的資料庫記錄檔中的位元組數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**min_log_bytes_used**|**Bigint**|查詢計劃所使用的資料庫記錄檔中的最小位元組數目，在匯總間隔內。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_log_bytes_used**|**Bigint**|查詢計劃所使用的資料庫記錄檔中的最大位元組數目（在匯總間隔內）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_log_bytes_used**|**bigint**|在匯總間隔內，上次執行查詢計劃所使用的資料庫記錄檔中的位元組數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**min_log_bytes_used**|**bigint**|查詢計劃所使用的資料庫記錄檔中的最小位元組數目，在匯總間隔內。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_log_bytes_used**|**bigint**|查詢計劃所使用的資料庫記錄檔中的最大位元組數目（在匯總間隔內）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**stdev_log_bytes_used**|**float**|查詢計劃所使用之資料庫記錄中的位元組數目標準差（在匯總間隔內）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**avg_tempdb_space_used**|**float**|匯總間隔內查詢計劃的平均分頁讀取數。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**last_tempdb_space_used**|**Bigint**|匯總間隔內查詢計劃的最後頁面讀取數目。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**min_tempdb_space_used**|**Bigint**|匯總間隔內查詢計劃的頁面讀取數目下限。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**max_tempdb_space_used**|**Bigint**|匯總間隔內查詢計劃的頁面讀取數目上限。（以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**last_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的最後頁面讀取數目。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**min_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的頁面讀取數目下限。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**max_tempdb_space_used**|**bigint**|匯總間隔內查詢計劃的頁面讀取數目上限。（以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**stdev_tempdb_space_used**|**float**|分頁數目會在匯總間隔內讀取查詢計劃的標準差。 （以讀取的8KB 頁數表示）。<br><br/>**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從起[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**avg_page_server_io_reads**|**float**|匯總間隔內查詢計劃的頁面伺服器 i/o 讀取平均數目。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
-|**last_page_server_io_reads**|**Bigint**|匯總間隔內查詢計劃的最後頁面伺服器 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
-|**min_page_server_io_reads**|**Bigint**|匯總間隔內查詢計劃的頁面伺服器 i/o 讀取次數下限。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
-|**max_page_server_io_reads**|**Bigint**|匯總間隔內查詢計劃的頁面伺服器 i/o 讀取數上限。（以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
+|**last_page_server_io_reads**|**bigint**|匯總間隔內查詢計劃的最後頁面伺服器 i/o 讀取數。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
+|**min_page_server_io_reads**|**bigint**|匯總間隔內查詢計劃的頁面伺服器 i/o 讀取次數下限。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
+|**max_page_server_io_reads**|**bigint**|匯總間隔內查詢計劃的頁面伺服器 i/o 讀取數上限。（以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
 |**stdev_page_server_io_reads**|**float**|頁面伺服器 i/o 的數目會在匯總間隔內讀取查詢計劃的標準差。 （以讀取的8KB 頁數表示）。<br><br/>**適用物件：** Azure SQL Database 超大規模資料庫</br>**注意：** Azure SQL 資料倉儲，Azure SQL DB，MI （非超大規模資料庫）一律會傳回零（0）。|
   
 ## <a name="permissions"></a>權限  
@@ -113,10 +113,10 @@ ms.locfileid: "70148283"
  [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查詢存放區預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

@@ -16,10 +16,10 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771557"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
@@ -64,11 +64,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publication_type**|**int**|發行集的類型：<br /><br /> **0** = 交易式<br /><br /> **1** = 快照集<br /><br /> **2** = 合併|  
 |**publisher_login**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**|**Nvarchar （524）**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證 (加密) 的密碼。|  
-|**publisher_security_mode**|**int**|發行者端所用的安全性模式：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**publisher_security_mode**|**int**|發行者端所用的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|散發者登入。|  
 |**distributor_password**|**Nvarchar （524）**|散發者密碼 (加密)。|  
-|**distributor_security_mode**|**int**|散發者端所用的安全性模式：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**distributor_security_mode**|**int**|散發者端所用的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
 |**ftp_address**|**sysname**|只是為了與舊版相容。 散發者的檔案傳輸通訊協定 (FTP) 服務的網路位址。|  
 |**ftp_port**|**int**|只是為了與舊版相容。 散發者的 FTP 服務通訊埠編號。|  
 |**ftp_login**|**sysname**|只是為了與舊版相容。 用來連接到 FTP 服務的使用者名稱。|  
@@ -88,7 +88,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**Nvarchar （524）**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**int**|當連接到主控 Web 同步處理的 Web 服務器時所使用的驗證模式，其中**1**值表示 Windows 驗證，值為**0**表示基本驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
-|**名稱**|**nvarchar(128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
+|**hostname**|**nvarchar(128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770927"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|保留記錄的時數。|  
 |**history_cleanup_agent**|**sysname**|記錄清除代理程式的名稱。|  
 |**distribution_cleanup_agent**|**sysname**|散發清除代理程式的名稱。|  
-|**狀態**|**int**|僅供內部使用。|  
+|**status**|**int**|僅供內部使用。|  
 |**data_folder**|**nvarchar(255)**|用來儲存資料庫檔案的目錄名稱。|  
 |**data_file**|**nvarchar(255)**|資料庫檔案的名稱。|  
 |**data_file_size**|**int**|初始資料檔大小 (以 MB 為單位)。|  
@@ -67,7 +67,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  在散發資料庫中， **db_owner**固定資料庫角色或**replmonitor**角色的成員，以及使用散發資料庫之發行集的發行集存取清單中的使用者，都可以執行**sp_helpdistributiondb**來傳回檔案相關資訊。 **Public**角色的成員可以執行**sp_helpdistributiondb** ，以傳回其具有存取權之散發資料庫的非檔案相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [查看和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

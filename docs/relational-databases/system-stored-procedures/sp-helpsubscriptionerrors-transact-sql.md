@@ -16,10 +16,10 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771516"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
@@ -55,14 +55,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|錯誤的識別碼|  
+|**id**|**int**|錯誤的識別碼|  
 |**time**|**datetime**|發生錯誤的時間。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|錯誤來源類型識別碼。|  
 |**source_name**|**Nvarchar （100）**|錯誤來源的名稱。|  
 |**error_code**|**sysname**|錯誤碼。|  
 |**error_text**|**ntext**|錯誤訊息。|  
-|**xact_seqno**|**Varbinary （16）**|執行失敗之批次的起始交易記錄序號。 只供散發代理程式使用，這是在執行失敗的批次中，第一項交易的交易記錄序號。|  
+|**xact_seqno**|**varbinary(16)**|執行失敗之批次的起始交易記錄序號。 只供散發代理程式使用，這是在執行失敗的批次中，第一項交易的交易記錄序號。|  
 |**command_id**|**int**|執行失敗之批次的命令識別碼。 只供散發代理程式使用，這是在執行失敗的批次中，第一個命令的命令識別碼。|  
 |**session_id**|**int**|發生錯誤之代理程式工作階段的識別碼。|  
   
@@ -77,6 +77,6 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

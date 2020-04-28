@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771012"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
@@ -49,8 +49,8 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**發行項識別碼**|**int**|發行項的識別碼。|  
 |**partial_command**|**bit**|指出這是否為部分命令。|  
 |**命令**|**Varbinary （1024）**|命令值。|  
-|**xactid**|**binary （10）**|交易識別碼。|  
-|**xact_seqno**|**Varbinary （16）**|交易序號。|  
+|**xactid**|**binary(10)**|交易識別碼。|  
+|**xact_seqno**|**varbinary(16)**|交易序號。|  
 |**publication_id**|**int**|發行集的識別碼。|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)中的命令識別碼。|  
 |**command_type**|**int**|命令的類型。|  
@@ -59,7 +59,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|僅供內部使用。|  
 |**originator_publication_id**|**int**|引發交易的發行集識別碼。|  
 |**originator_db_version**|**int**|引發交易的資料庫版本。|  
-|**originator_lsn**|**Varbinary （16）**|識別命令在原始發行集中的記錄序號 (LSN)。|  
+|**originator_lsn**|**varbinary(16)**|識別命令在原始發行集中的記錄序號 (LSN)。|  
   
 ## <a name="remarks"></a>備註  
  異動複寫中的記錄讀取器進程會使用**sp_replcmds** 。  
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  嘗試在相同資料庫內執行**sp_replcmds**的用戶端會收到錯誤18752，直到第一個用戶端中斷連線為止。 第一個用戶端中斷連線之後，另一個用戶端可以執行**sp_replcmds**，並成為新的記錄讀取器。  
   
- 如果 sp_replcmds 無法複寫文字命令，則會在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔和[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄**** 檔中加入警告訊息編號18759，因為不會在相同的交易中抓取文字指標。  
+ 如果 sp_replcmds 無法複寫文字命令，則會在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔和[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄**sp_replcmds**檔中加入警告訊息編號18759，因為不會在相同的交易中抓取文字指標。  
   
 ## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_replcmds**。  

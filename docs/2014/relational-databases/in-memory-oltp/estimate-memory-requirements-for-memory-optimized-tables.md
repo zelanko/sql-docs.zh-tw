@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811015"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
@@ -36,7 +36,7 @@ ms.locfileid: "68811015"
   
 -   [配置給成長的記憶體](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable"></a> 記憶體最佳化資料表範例  
+##  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>記憶體優化資料表範例  
  請考慮下列記憶體最佳化資料表結構描述：  
   
 ```sql  
@@ -61,7 +61,7 @@ GO
   
  我們將透過此結構描述，來判斷此記憶體最佳化資料所需的最小記憶體。  
   
-##  <a name="bkmk_MemoryForTable"></a> 配置給資料表的記憶體  
+##  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>資料表的記憶體  
  記憶體最佳化資料表資料列包含三個部分：  
   
 -   **時間戳記**   
@@ -70,7 +70,7 @@ GO
 -   **索引指標**   
     針對資料表中的每個雜湊索引，每個資料列具有 8 位元組位址指標，指向索引的下一個資料列。  由於有 4 個索引，因此每個資料列都會配置 32 個位元組給索引指標 (每個索引有 8 位元組指標)。  
   
--   **資料**   
+-   **Data**   
     資料列的資料部分大小是由每個資料行的類型大小總和來判斷。  在資料表中，我們有五個 4 位元組整數、三個 50 位元組字元資料行，以及一個 30 位元組字元資料行。  因此，每個資料列的資料部分為 4 + 4 + 4 + 4 + 4 + 50 + 50 + 30 + 50 (或 200) 個位元組。  
   
  以下是記憶體最佳化資料表中 5,000,000 (5 百萬) 個資料列的大小計算。 資料列所使用的記憶體總數估計如下：  
@@ -79,7 +79,7 @@ GO
   
  從上述計算得知，記憶體最佳化資料表的每個資料列大小為 24 + 32 + 200 (或 256) 個位元組。  由於我們有 5 百萬個資料列，因此資料表會耗用 5,000,000 * 256 (或 1,280,000,000) 個位元組，大約是 1.28 GB。  
   
-##  <a name="bkmk_IndexMeemory"></a> 配置給索引的記憶體  
+##  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>索引的記憶體  
  **配置給每個雜湊索引的記憶體**  
   
  每個雜湊索引是 8 位元組位址指標的雜湊陣列。  陣列的大小是由該索引的唯一索引值數目來判斷；例如，t1c2_index 的陣列大小可以從唯一的 Col2 值數目開始。 雜湊陣列太大會浪費記憶體。  雜湊陣列太小會降低效能，因為雜湊處理至相同索引的索引值會引起太多衝突。  
@@ -138,7 +138,7 @@ SELECT COUNT(DISTINCT [Col2])
 -   **配置給非分葉節點的記憶體**   
     在一般組態中，配置給非分葉節點的記憶體只佔索引所使用之整體記憶體的很小比例。 因為很小，所以可以放心忽略。  
   
--   **配置給分葉節點的記憶體**   
+-   **分葉節點的記憶體**   
     分葉節點中對於資料表內的每個唯一索引鍵都有一個資料列，指向該唯一索引鍵的資料列。  如果相同索引鍵有多個資料列 (亦即有非唯一的非叢集索引)，則索引分葉節點中只有一個資料列會指向其中一個資料列，而其他資料列會彼此連結。  因此，所需的總記憶體大約是：   
     memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
@@ -150,7 +150,7 @@ SELECT * FROM t_hk
    WHERE c2 > 5  
 ```  
   
-##  <a name="bkmk_MemoryForRowVersions"></a> 配置給資料列版本設定的記憶體  
+##  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a>用於資料列版本設定的記憶體  
  更新或刪除資料列時，記憶體中 OLTP 會使用開放式並行存取來避免鎖定。 這表示當更新資料列時，會建立該資料列的其他版本。 在可能使用舊版本的所有交易完成執行之前，系統會保留舊版本可用。 刪除資料列時，系統會以類似更新的方式來執行，並保留版本可用，直到不再需要為止。 讀取和插入並不會建立額外的資料列版本資料。  
   
  由於等待記憶體回收循環釋放記憶體時，記憶體中可能會有許多其他的資料列，因此您必須有足夠的記憶體來容納這些其他的資料列。  
@@ -165,12 +165,12 @@ SELECT * FROM t_hk
   
  `memoryForRowVersions = rowVersions * rowSize`  
   
-##  <a name="bkmk_TableVariables"></a> 配置給資料表變數的記憶體  
+##  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>資料表變數的記憶體  
  資料表變數所使用的記憶體只會在資料表變數超出範圍時釋出。 從資料表變數中刪除的資料列 (包括隨更新刪除的資料列) 則不受記憶體回收限制。 在資料表變數離開範圍之前，不會釋出記憶體。  
   
  在大型 SQL 批次中定義的資料表變數 (與程序範圍相反) 會在許多交易中使用，且可能會耗用大量的記憶體。 由於它們不會進行記憶體回收，因此資料表變數中已刪除的資料列可能會耗用大量記憶體並降低效能，因為讀取作業需要掃描已刪除的資料列。  
   
-##  <a name="bkmk_MemoryForGrowth"></a> 配置給成長的記憶體  
+##  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>成長的記憶體  
  上述計算依資料表的現狀來估計資料表的記憶體需求。 除了此記憶體之外，您還需要估計資料表的成長，並提供足夠的記憶體來容納該成長幅度。  例如，如果您預期會成長 10%，則需要將上述結果乘以 1.1，以取得資料表所需的總記憶體。  
   
 ## <a name="see-also"></a>另請參閱  

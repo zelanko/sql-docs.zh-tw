@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 9bc37626879b743eb3a5d0864490dc3543a8d8a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70152057"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL Database)
@@ -44,7 +44,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>引數  
  下表示范中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支援的引數和選項。  
   
-|名稱|Datatype|描述|  
+|名稱|資料類型|描述|  
 |----------|--------------|-----------------|  
 |[@name =]檔案名|**NVARCHAR （128）**|用來描述和區分伺服器層級防火牆設定的名稱。|  
 |[@start_ip_address =]' start_ip_address '|**VARCHAR （50）**|伺服器層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器。 可能的最低 IP 位址為 `0.0.0.0`。|  

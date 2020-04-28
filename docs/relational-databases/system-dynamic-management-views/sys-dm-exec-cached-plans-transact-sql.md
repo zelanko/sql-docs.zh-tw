@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263944"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
@@ -40,13 +40,13 @@ ms.locfileid: "68263944"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|這是快取項目的雜湊值區識別碼。 這個值的範圍從 0 開始，一直到該快取類型的雜湊資料表大小。<br /><br /> 若為 SQL 計畫和物件計畫快取，雜湊資料表在 32 位元系統上最大為 10007，在 64 位元系統上最大為 40009。 若為 Bound Trees 快取，雜湊資料表在 32 位元系統上最大為 1009，在 64 位元系統上最大為 4001。 若為擴充預存程序快取，雜湊資料表在 32 位元和 64 位元系統上最大為 127。|  
-|refcounts|**int**|參考這個快取物件的快取物件數目。 **Refcounts**必須至少為1，專案才會出現在快取中。|  
+|refcounts|**int**|參考這個快取物件的快取物件數目。 **Refcounts** 必須至少為 1，快取中才能有項目。|  
 |usecounts|**int**|已經查閱快取物件的次數。 當參數化查詢在快取中找到計畫時，不會累加。 但是，使用執行程序表時，可能會累加多次。|  
 |size_in_bytes|**int**|快取物件所耗用的位元組數目。|  
 |memory_object_address|**varbinary(8)**|快取項目的記憶體位址。 這個值可以與 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 一起使用，以取得快取計畫的記憶體細分，也可以與 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) 一起使用，以取得快取項目的成本。|  
-|cacheobjtype|**Nvarchar （34）**|快取中的物件類型。 值可以是下列其中一種：<br /><br /> 編譯的計畫<br /><br /> 已編譯計畫虛設常式<br /><br /> 剖析樹狀結構<br /><br /> 擴充程序<br /><br /> CLR 編譯的函數<br /><br /> CLR 編譯的程序|  
+|cacheobjtype|**Nvarchar （34）**|快取中的物件類型。 這個值可以是下列值之一：<br /><br /> 編譯的計畫<br /><br /> 已編譯計畫虛設常式<br /><br /> 剖析樹狀結構<br /><br /> 擴充程序<br /><br /> CLR 編譯的函數<br /><br /> CLR 編譯的程序|  
 |objtype|**Nvarchar （16）**|物件的類型。 以下是可能的值及其對應的描述。<br /><br /> Proc：預存程式<br />備妥：備妥的語句<br />臨機操作：特定查詢。 指的[!INCLUDE[tsql](../../includes/tsql-md.md)]是使用**osql**或**sqlcmd** （而非遠端程序呼叫）提交為語言事件。<br />ReplProc：複寫-篩選器-程式<br />觸發程式：觸發程式<br />View： View<br />預設值：預設值<br />UsrTab：使用者資料表<br />SysTab：系統資料表<br />檢查：檢查條件約束<br />規則：規則|  
-|plan_handle|**Varbinary （64）**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可以與下列動態管理函數一起使用：<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
+|plan_handle|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可以與下列動態管理函數一起使用：<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|計算此計畫記憶體使用量代表之資源集區的識別碼。|  
 |pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [dm_exec_plan_attributes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   

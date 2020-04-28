@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762259"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
@@ -65,12 +65,12 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
 |NULL (預設值)||  
   
 `[ @frequency_interval = ] frequency_interval`指定代理程式的執行天數。 *frequency_interval*是**int**，而且可以是下列其中一個值。  
@@ -79,14 +79,14 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
-|**第**|Tuesday|  
-|**4**|Wednesday|  
-|**第**|Thursday|  
+|**3**|Tuesday|  
+|**4**|星期三|  
+|**5**|Thursday|  
 |**6**|星期五|  
-|**utf-7**|星期六|  
+|**7**|星期六|  
 |**8**|Day|  
 |**9**|工作日|  
-|**十大**|週末|  
+|**10**|週末|  
 |NULL (預設值)||  
   
 `[ @frequency_subday = ] frequency_subday`這是*freq_subday_interval*的單位。 *frequency_subday*是**int**，而且可以是下列其中一個值。  
@@ -94,9 +94,9 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4**|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|Hour|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -137,7 +137,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端建立快照集代理程式時，不應使用 publisher。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者端建立快照集代理程式時，不應使用 publisher。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

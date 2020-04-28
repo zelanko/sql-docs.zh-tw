@@ -16,10 +16,10 @@ ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771055"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)

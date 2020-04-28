@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028900"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間索引預存程式-引數和屬性
@@ -319,7 +319,7 @@ ms.locfileid: "69028900"
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的空間索引預存程式](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
- [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [空間索引總覽](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基本概念](../../xquery/xquery-basics.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   

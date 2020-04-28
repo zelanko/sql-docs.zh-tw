@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811114"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
@@ -100,20 +100,20 @@ ms.locfileid: "68811114"
 
 |資料行名稱    |資料類型  |is_hidden  |註解  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |內部`graph_id`資料行  |
+|graph_id_\<hex_string> |bigint |1  |內部`graph_id`資料行  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |外部節點`node_id`資料行  |
 
 邊緣資料表中的隱含資料行
 
 |資料行名稱    |資料類型  |is_hidden  |註解  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |內部`graph_id`資料行  |
+|graph_id_\<hex_string> |bigint |1  |內部`graph_id`資料行  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |外部`edge_id`資料行  |
 |from_obj_id_\<hex_string>  |INT    |1  |節點內部`object_id`  |
-|from_id_\<hex_string>  |BIGINT |1  |節點內部`graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |節點內部`graph_id`  |
 |$from _id_\<hex_string> |NVARCHAR   |0  |來自節點的外部`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |節點內部`object_id`  |
-|to_id_\<hex_string>    |BIGINT |1  |節點內部`graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |節點內部`graph_id`  |
 |$to _id_\<hex_string>   |NVARCHAR   |0  |節點外部`node_id`  |
  
 ### <a name="system-functions"></a>系統函數
@@ -135,18 +135,18 @@ ms.locfileid: "68811114"
  
 ### <a name="data-definition-language-ddl-statements"></a>資料定義語言 (DDL) 陳述式
 
-|Task   |相關文章  |注意
+|工作   |相關文章  |注意
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE`現在已擴充，可支援將資料表建立為節點或邊緣。 請注意，邊緣資料表不一定有任何使用者定義的屬性。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|節點和邊緣資料表可以使用與關聯式資料表相同的方式來改變`ALTER TABLE`。 使用者可以加入或修改使用者定義的資料行、索引或條件約束。 不過，修改內部圖形資料行（ `$node_id`例如`$edge_id`或）將會導致錯誤。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |使用者可以在節點和邊緣資料表中的虛擬資料行和使用者定義的資料行上建立索引。 支援所有索引類型，包括叢集和非叢集資料行存放區索引。  |
 |建立邊緣條件約束    |[&#40;Transact-sql 的邊緣條件約束&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |使用者現在可以在邊緣資料表上建立邊緣條件約束，以強制執行特定的語義，同時維持資料完整性  |
-|DROP TABLE |[DROP TABLE &#40;Transact-sql&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點和邊緣資料表可以使用與關聯式資料表相同的方式來卸載`DROP TABLE`。 不過，在此版本中，沒有任何條件約束可確保不會在刪除節點或節點資料表時，不會有任何邊緣指向已刪除的節點，也不會對邊緣進行串聯刪除。 建議您在卸載節點資料表時，以手動方式卸載連接到該節點資料表中之節點的任何邊緣，以維護圖形的完整性。  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點和邊緣資料表可以使用與關聯式資料表相同的方式來卸載`DROP TABLE`。 不過，在此版本中，沒有任何條件約束可確保不會在刪除節點或節點資料表時，不會有任何邊緣指向已刪除的節點，也不會對邊緣進行串聯刪除。 建議您在卸載節點資料表時，以手動方式卸載連接到該節點資料表中之節點的任何邊緣，以維護圖形的完整性。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>資料操作語言 (DML) 陳述式
 
-|Task   |相關文章  |注意
+|工作   |相關文章  |注意
 |---  |---  |---  |
 |Insert |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|插入節點資料表與插入關聯式資料表並無不同。 [資料`$node_id`行] 的值會自動產生。 嘗試在或`$edge_id`資料行中`$node_id`插入一個值將會導致錯誤。 在插入邊緣資料表時`$from_id` ， `$to_id`使用者必須提供和資料行的值。 `$from_id`和`$to_id`是指定`$node_id`邊緣連接的節點值。  |
 |刪除 | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|節點或邊緣資料表中的資料可以從關聯式資料表中刪除的相同方式刪除。 不過，在此版本中，沒有任何條件約束可確保在刪除節點時不支援邊緣指向已刪除的節點，也不會對邊緣進行串聯刪除。 建議每次刪除節點時，也會一併刪除該節點的所有連接邊緣，以維護圖形的完整性。  |
@@ -156,7 +156,7 @@ ms.locfileid: "68811114"
 
 ### <a name="query-statements"></a>查詢語句
 
-|Task   |相關文章  |注意
+|工作   |相關文章  |注意
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|節點和邊緣會在內部儲存為數據表，因此在 SQL Server 或 Azure SQL Database 的資料表上支援的大部分作業，在節點和邊緣資料表上都支援。  |
 |MATCH  | [MATCH &#40;Transact-sql&#41;](../../t-sql/queries/match-sql-graph.md)|會引進符合內建的，以支援模式比對和透過圖形進行遍歷。  |

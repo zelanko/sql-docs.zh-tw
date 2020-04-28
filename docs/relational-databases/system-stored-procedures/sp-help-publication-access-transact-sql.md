@@ -16,10 +16,10 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770986"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)

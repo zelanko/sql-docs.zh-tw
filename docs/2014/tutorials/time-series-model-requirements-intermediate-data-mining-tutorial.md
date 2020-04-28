@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892967"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>了解時間序列模型的需求 (中繼資料採礦教學課程)
@@ -24,8 +24,7 @@ ms.locfileid: "68892967"
   
  在本教學課程中，每天於交易式銷售資料庫中收集銷售資料，但對於資料採礦，則使用檢視，依月預先彙總資料。  
   
- 此外，對於分析，資料的間距愈少愈好。 如果您計劃分析多個資料數列，所有數列的開始和結束時間最好應該在同一天。 如果資料有間距，但間距不在數列開頭或結尾處，您可以使用 MISSING_VALUE_SUBSTITUTION 參數來填滿數列。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 也提供數個選項，讓您以值 (例如平均值或常數) 取代遺漏資料。  
+ 此外，對於分析，資料的間距愈少愈好。 如果您計劃分析多個資料數列，所有數列的開始和結束時間最好應該在同一天。 如果資料有間距，但間距不在數列開頭或結尾處，您可以使用 MISSING_VALUE_SUBSTITUTION 參數來填滿數列。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 也提供數個選項，讓您以值 (例如平均值或常數) 取代遺漏資料。  
   
 > [!WARNING]  
 >  我們不再提供舊版資料來源檢視設計工具隨附的樞紐分析圖和樞紐分析表工具。 建議您使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 隨附的資料分析工具等工具，事先識別時間序列資料的間距。  

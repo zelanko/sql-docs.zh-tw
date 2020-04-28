@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148720"
 ---
 # <a name="handling-smo-events"></a>處理 SMO 事件
@@ -28,14 +28,12 @@ ms.locfileid: "70148720"
 
   有些伺服器事件類型可以藉由事件處理常式和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件進行訂閱。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中的許多執行個體類別，都會在伺服器上發生特定動作時觸發事件。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中的許多執行個體類別，都會在伺服器上發生特定動作時觸發事件。  
   
  這些事件可以藉由設定事件處理常式及訂閱相關事件，以程式設計的方式來處理。 這種事件處理類型是暫時性的，因為當 SMO 用戶端程式結束時會將訂閱全數移除。  
   
 ## <a name="connectioncontext-event-handling"></a>ConnectionContext 事件處理  
- 
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件支援數種事件類型。 事件屬性必須設定為具有適當事件處理常式的執行個體，而事件處理常式物件則必須定義為可以處理事件的受保護函數。  
+ <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件支援數種事件類型。 事件屬性必須設定為具有適當事件處理常式的執行個體，而事件處理常式物件則必須定義為可以處理事件的受保護函數。  
   
 ## <a name="event-subscription"></a>事件訂閱  
  您可藉由下列步驟來處理事件：撰寫事件處理常式類別、建立其執行個體、將事件處理常式指派給父物件，然後再訂閱事件。  

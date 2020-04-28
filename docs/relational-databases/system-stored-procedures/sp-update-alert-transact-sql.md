@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890839"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
@@ -84,7 +84,7 @@ sp_update_alert
 |**1**|電子郵件|  
 |**2**|呼叫器|  
 |**4**|**net send**|  
-|**utf-7**|全部|  
+|**7**|全部|  
   
 `[ @database_name = ] 'database'`必須發生錯誤，才會引發警示的資料庫名稱。 *資料庫*為**sysname。** 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
@@ -114,7 +114,7 @@ sp_update_alert
   
 |格式元素|描述|  
 |--------------------|-----------------|  
-|*Item*|計數器的效能物件、效能計數器或具名執行個體|  
+|*項目*|計數器的效能物件、效能計數器或具名執行個體|  
 |*比較子*|下列其中一個運算子： **>**、 **<**、**=**|  
 |*ReplTest1*|計數器的數值|  
   
@@ -128,7 +128,7 @@ sp_update_alert
  **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 只有**** 寫入 Windows 應用程式[!INCLUDE[msCoName](../../includes/msconame-md.md)]記錄檔的 sysmessages 才會引發警示。  
+ 只有**sysmessages**寫入 Windows 應用程式[!INCLUDE[msCoName](../../includes/msconame-md.md)]記錄檔的 sysmessages 才會引發警示。  
   
  **sp_update_alert**只會變更提供參數值的警示設定。 如果省略某個參數，就會保留目前的設定。  
   
@@ -149,7 +149,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

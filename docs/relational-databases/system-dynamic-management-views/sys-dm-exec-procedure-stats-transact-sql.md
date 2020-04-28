@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742906"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
@@ -43,42 +43,42 @@ ms.locfileid: "68742906"
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|預存程序所在的資料庫識別碼。|  
 |**object_id**|**int**|預存程序的物件識別碼。|  
-|**type**|**char （2）**|物件的類型：<br /><br /> P = SQL 預存程序<br /><br /> PC = 組件 (CLR) 預存程序<br /><br /> X = 擴充預存程序|  
-|**type_desc**|**Nvarchar （60）**|物件類型的描述：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**Varbinary （64）**|這可以用來與從這個預存程式中執行的**dm_exec_query_stats**中的查詢相互關聯。|  
-|**plan_handle**|**Varbinary （64）**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
+|**type**|**char(2)**|物件的類型：<br /><br /> P = SQL 預存程序<br /><br /> PC = 組件 (CLR) 預存程序<br /><br /> X = 擴充預存程序|  
+|**type_desc**|**nvarchar(60)**|物件類型的描述：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary(64)**|這可以用來與從這個預存程式中執行的**dm_exec_query_stats**中的查詢相互關聯。|  
+|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
 |**cached_time**|**datetime**|在快取中加入預存程序的時間。|  
 |**last_execution_time**|**datetime**|上次執行預存程序的時間。|  
-|**execution_count**|**Bigint**|預存程式自上次編譯以來執行的次數。|  
-|**total_worker_time**|**Bigint**|這個預存程式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。<br /><br /> 如果原生編譯預存程序執行數次的時間都少於 1 毫秒， **total_worker_time** 可能就不準確。|  
-|**last_worker_time**|**Bigint**|預存程序上次執行所耗用的 CPU 時間 (以微秒為單位)。 <sup>1</sup>|  
-|**min_worker_time**|**Bigint**|這個預存程式在單次執行期間曾耗用的最小 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**max_worker_time**|**Bigint**|這個預存程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**total_physical_reads**|**Bigint**|這個預存程式在編譯以來執行所執行的實體讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**last_physical_reads**|**Bigint**|上次執行預存程式時所執行的實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_physical_reads**|**Bigint**|這個預存程式在單次執行期間曾執行的最小實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_physical_reads**|**Bigint**|這個預存程式在單次執行期間曾執行的最大實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_logical_writes**|**Bigint**|這個預存程式在編譯以來執行所執行的邏輯寫入總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**last_logical_writes**|**Bigint**|上次執行計畫時變動的緩衝集區頁面數目。 如果已修改頁面，則不會計算寫入。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_logical_writes**|**Bigint**|這個預存程式在單次執行期間曾執行的最小邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_logical_writes**|**Bigint**|這個預存程式在單次執行期間曾執行的最大邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_logical_reads**|**Bigint**|這個預存程式在編譯以來執行所執行的邏輯讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**last_logical_reads**|**Bigint**|上次執行預存程式時，所執行的邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_logical_reads**|**Bigint**|這個預存程式在單次執行期間曾執行的最小邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_logical_reads**|**Bigint**|這個預存程式在單次執行期間曾執行的最大邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_elapsed_time**|**Bigint**|這個預存程式已完成執行的總時間（以微秒為單位）。|  
-|**last_elapsed_time**|**Bigint**|這個預存程式最近完成執行所經過的時間（以微秒為單位）。|  
-|**min_elapsed_time**|**Bigint**|這個預存程式已完成執行的最小經過時間（以微秒為單位）。|  
-|**max_elapsed_time**|**Bigint**|這個預存程式已完成執行的最大經過時間（以微秒為單位）。|  
-|**total_spills**|**Bigint**|這個預存程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**last_spills**|**Bigint**|上次執行預存程式時所溢出的頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**min_spills**|**Bigint**|這個預存程式在單次執行期間曾溢出的最小頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**max_spills**|**Bigint**|這個預存程式在單次執行期間曾發生過的最大頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**execution_count**|**bigint**|預存程式自上次編譯以來執行的次數。|  
+|**total_worker_time**|**bigint**|這個預存程式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。<br /><br /> 如果原生編譯預存程序執行數次的時間都少於 1 毫秒， **total_worker_time** 可能就不準確。|  
+|**last_worker_time**|**bigint**|預存程序上次執行所耗用的 CPU 時間 (以微秒為單位)。 <sup>1</sup>|  
+|**min_worker_time**|**bigint**|這個預存程式在單次執行期間曾耗用的最小 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**max_worker_time**|**bigint**|這個預存程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|這個預存程式在編譯以來執行所執行的實體讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**last_physical_reads**|**bigint**|上次執行預存程式時所執行的實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_physical_reads**|**bigint**|這個預存程式在單次執行期間曾執行的最小實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_physical_reads**|**bigint**|這個預存程式在單次執行期間曾執行的最大實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_logical_writes**|**bigint**|這個預存程式在編譯以來執行所執行的邏輯寫入總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**last_logical_writes**|**bigint**|上次執行計畫時變動的緩衝集區頁面數目。 如果已修改頁面，則不會計算寫入。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_logical_writes**|**bigint**|這個預存程式在單次執行期間曾執行的最小邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_logical_writes**|**bigint**|這個預存程式在單次執行期間曾執行的最大邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_logical_reads**|**bigint**|這個預存程式在編譯以來執行所執行的邏輯讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**last_logical_reads**|**bigint**|上次執行預存程式時，所執行的邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_logical_reads**|**bigint**|這個預存程式在單次執行期間曾執行的最小邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_logical_reads**|**bigint**|這個預存程式在單次執行期間曾執行的最大邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_elapsed_time**|**bigint**|這個預存程式已完成執行的總時間（以微秒為單位）。|  
+|**last_elapsed_time**|**bigint**|這個預存程式最近完成執行所經過的時間（以微秒為單位）。|  
+|**min_elapsed_time**|**bigint**|這個預存程式已完成執行的最小經過時間（以微秒為單位）。|  
+|**max_elapsed_time**|**bigint**|這個預存程式已完成執行的最大經過時間（以微秒為單位）。|  
+|**total_spills**|**bigint**|這個預存程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**last_spills**|**bigint**|上次執行預存程式時所溢出的頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**min_spills**|**bigint**|這個預存程式在單次執行期間曾溢出的最小頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**max_spills**|**bigint**|這個預存程式在單次執行期間曾發生過的最大頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
 |**pdw_node_id**|**int**|此散發所在節點的識別碼。<br /><br />**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
-|**total_page_server_reads**|**Bigint**|這個預存程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
-|**last_page_server_reads**|**Bigint**|上次執行預存程式時，所執行的頁面伺服器讀取數目。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
-|**min_page_server_reads**|**Bigint**|這個預存程式在單次執行期間曾執行的頁面伺服器讀取次數下限。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
-|**max_page_server_reads**|**Bigint**|這個預存程式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**total_page_server_reads**|**bigint**|這個預存程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**last_page_server_reads**|**bigint**|上次執行預存程式時，所執行的頁面伺服器讀取數目。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**min_page_server_reads**|**bigint**|這個預存程式在單次執行期間曾執行的頁面伺服器讀取次數下限。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**max_page_server_reads**|**bigint**|這個預存程式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
   
  <sup>1</sup>在啟用統計資料收集時，原生編譯預存程式會收集工作者時間（以毫秒為單位）。 若查詢的執行時間少於一毫秒，其值將會是 0。  
   

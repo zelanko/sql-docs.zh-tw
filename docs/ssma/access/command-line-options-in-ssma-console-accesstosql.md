@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265529"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 主控台中的命令列選項（AccessToSQL）

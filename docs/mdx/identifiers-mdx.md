@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891214"
 ---
 # <a name="identifiers-mdx"></a>識別碼 (MDX)
@@ -83,8 +83,7 @@ ms.locfileid: "68891214"
   
 -   當物件名稱使用未列為限定識別碼的字元時。  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允許分隔識別碼使用目前字碼頁中的任何字元。 不過，於物件名稱任意使用特殊字元，會使 MDX 陳述式和指令碼難以讀懂和維護。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允許分隔識別碼使用目前字碼頁中的任何字元。 不過，於物件名稱任意使用特殊字元，會使 MDX 陳述式和指令碼難以讀懂和維護。  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>分隔識別碼的格式化規則  
  分隔識別碼的主體可以包含目前字碼頁中的任何字元組合，包括分隔字元本身在內。 如果分隔識別碼的主體包含分隔字元，就需要特殊的處理：  
@@ -126,6 +125,6 @@ ms.locfileid: "68891214"
 ## <a name="see-also"></a>另請參閱  
  [Mdx 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [MDX 查詢基本概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Mdx 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

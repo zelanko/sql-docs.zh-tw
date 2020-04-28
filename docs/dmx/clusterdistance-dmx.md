@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892389"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -47,8 +47,7 @@ ClusterDistance([<ClusterID expression>])
  ClusterDistance （N） = 1-ClusterProbability （N））  
   
 ## <a name="related-prediction-functions"></a>相關的預測函數  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供下列額外的函數來查詢群集模型：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供下列額外的函數來查詢群集模型：  
   
 -   使用叢集[&#40;DMX&#41;](../dmx/cluster-dmx.md)函數來傳回最可能的叢集。  
   
@@ -129,6 +128,6 @@ NATURAL PREDICTION JOIN
  [&#40;DMX&#41;的叢集](../dmx/cluster-dmx.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;的函數 &#40;](../dmx/functions-dmx.md)   
- [群集模型的模型內容 &#40;Analysis Services-資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

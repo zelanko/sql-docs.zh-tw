@@ -22,10 +22,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260215"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>準備 Access 資料庫以進行遷移（AccessToSQL）
@@ -42,7 +42,7 @@ Jet 資料庫引擎是用來做為 Access 的資料庫引擎，它是一種彈�
    > [!NOTE]
    > 並非所有存取功能和設定都受到的支援，或者可以輕鬆地轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在您開始遷移資料庫之前，請參閱[不相容的存取功能](incompatible-access-features-accesstosql.md)。
   
-## <a name="preparing-for-migration"></a>準備進行遷移  
+## <a name="preparing-for-migration"></a>準備進行移轉  
 使用下列指導方針來協助您準備存取資料庫，以便遷移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至。  
   
 ### <a name="upgrading-older-access-databases"></a>升級較舊的 Access 資料庫  
@@ -61,7 +61,7 @@ SSMA 無法遷移使用工作組保護的資料庫。 若要從 Access 資料庫
   
 5.  選取 [**群組**] 選項，選取 [**使用者**] 群組，然後確定已選取 [**管理**] 許可權。  
   
-6.  按一下 **[確定]**，**然後在 [** 檔案] 功能表**** 上，按一下 [結束]。  
+6.  按一下 **[確定]**，**然後在 [** 檔案] 功能表**Exit**上，按一下 [結束]。  
   
 您現在可以使用 SSMA 來遷移已複製的資料庫。 將架構載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，您可以在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]手動保護資料庫。  
   

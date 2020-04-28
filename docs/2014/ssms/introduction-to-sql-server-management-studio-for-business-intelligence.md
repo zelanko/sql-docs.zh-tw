@@ -15,41 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a914aeeae889189453b4f4e6f47ebfbcd0fc44c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892268"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>適用於商業智慧的 SQL Server Management Studio 簡介
-  若要存取、設定及管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 雖然這三種商業智慧技術全都依賴 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，但是與每一項技術有關的管理工作則會有些微的差異。  
+  若要存取、設定及管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 雖然這三種商業智慧技術全都依賴 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，但是與每一項技術有關的管理工作則會有些微的差異。  
   
 > [!NOTE]  
->  若要建立及修改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 解決方案，請使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，而不要使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 是一個以 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]為根據的開發環境。  
+>  若要建立及修改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 解決方案，請使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，而不要使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 是一個以 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]為根據的開發環境。  
   
 ## <a name="managing-analysis-services-solutions-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理 Analysis Services 解決方案  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可讓您管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件，例如執行備份及處理物件。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可讓您管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件，例如執行備份及處理物件。  
   
- 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 會提供一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案，您可在其中開發及儲存使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 和 XML for Analysis (XMLA) 所撰寫的指令碼。 您可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案來執行管理工作或是在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上重新建立物件，例如資料庫和 Cube。 例如，您可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案中開發 XMLA 指令碼，該指令碼會直接在現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上建立新的物件。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案可儲存成為方案的一部分，並與原始程式碼控制整合。  
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 會提供一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案，您可在其中開發及儲存使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 和 XML for Analysis (XMLA) 所撰寫的指令碼。 您可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案來執行管理工作或是在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上重新建立物件，例如資料庫和 Cube。 例如，您可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案中開發 XMLA 指令碼，該指令碼會直接在現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上建立新的物件。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案可儲存成為方案的一部分，並與原始程式碼控制整合。  
   
  如需如何使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的詳細資訊，請參閱[SQL Server Management Studio 中的 Analysis Services 腳本專案](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)。  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理 Integration Services 解決方案  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可讓您使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務來管理套件及監視執行中的套件。 您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 將封裝組織成資料夾、執行封裝、匯入及匯出封裝、移轉 Data Transformation Services (DTS) 封裝及升級 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可讓您使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務來管理套件及監視執行中的套件。 您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 將封裝組織成資料夾、執行封裝、匯入及匯出封裝、移轉 Data Transformation Services (DTS) 封裝及升級 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
 ## <a name="managing-reporting-services-projects-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來管理 Reporting Services 專案  
  使用 SQL Server Management Studio 可啟用 Reporting Services 功能、管理服務和資料庫，以及管理角色和作業。  
   
  您可使用 [共用排程] 資料夾來管理共用排程，並管理報表伺服器資料庫 (ReportServer、ReportServerTempdb)。 當您將報表伺服器資料庫移到新的或不同的 SQL Server 資料庫引擎（[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]）時，也會在 Master 系統資料庫中建立 RSExecRole。 如需有關這些工作的詳細資訊，請參閱下列主題：  
   
--   [SQL Server Management Studio &#40;SSRS&#41;中的 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+-   [SQL Server Management Studio 中的 Reporting Services &#40;SSRS&#41;](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
--   [&#40;SSRS 原生模式管理報表伺服器資料庫&#41;](../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+-   [管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
   
 -   [建立 RSExecRole](../reporting-services/security/create-the-rsexecrole.md)  
   

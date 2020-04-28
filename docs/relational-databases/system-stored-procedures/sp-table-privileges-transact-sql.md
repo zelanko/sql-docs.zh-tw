@@ -18,10 +18,10 @@ ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 595f8adb46602109751b1912feed99ae4702fb55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702839"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)

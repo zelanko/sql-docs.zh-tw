@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 026c13a461d6b4efe7244a08a9f3cdbe117deee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255278"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
@@ -42,16 +42,16 @@ ms.locfileid: "68255278"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**resource_semaphore_id**|**smallint**|資源信號的非唯一識別碼。 一般資源信號為 0，而小型查詢資源信號則為 1。|  
-|**target_memory_kb**|**Bigint**|授與使用目標 (以 KB 為單位)。|  
-|**max_target_memory_kb**|**Bigint**|最大的可能目標 (以 KB 為單位)。 小型查詢資源信號為 NULL。|  
-|**total_memory_kb**|**Bigint**|資源信號擁有的記憶體 (以 KB 為單位)。 如果系統有記憶體不足的壓力，或是經常授與強制的最小記憶體，這個值可能會大於**target_memory_kb**或**max_target_memory_kb**值。 總記憶體是可用記憶體和授與記憶體的總和。|  
-|**available_memory_kb**|**Bigint**|新授與的可用記憶體 (以 KB 為單位)。|  
-|**granted_memory_kb**|**Bigint**|授與的總記憶體 (以 KB 為單位)。|  
-|**used_memory_kb**|**Bigint**|授與記憶體的實際使用部分 (以 KB 為單位)。|  
+|**target_memory_kb**|**bigint**|授與使用目標 (以 KB 為單位)。|  
+|**max_target_memory_kb**|**bigint**|最大的可能目標 (以 KB 為單位)。 小型查詢資源信號為 NULL。|  
+|**total_memory_kb**|**bigint**|資源信號擁有的記憶體 (以 KB 為單位)。 如果系統有記憶體不足的壓力，或是經常授與強制的最小記憶體，這個值可能會大於**target_memory_kb**或**max_target_memory_kb**值。 總記憶體是可用記憶體和授與記憶體的總和。|  
+|**available_memory_kb**|**bigint**|新授與的可用記憶體 (以 KB 為單位)。|  
+|**granted_memory_kb**|**bigint**|授與的總記憶體 (以 KB 為單位)。|  
+|**used_memory_kb**|**bigint**|授與記憶體的實際使用部分 (以 KB 為單位)。|  
 |**grantee_count**|**int**|已滿足其授與的使用中查詢數目。|  
 |**waiter_count**|**int**|等候要滿足授與的查詢數目。|  
-|**timeout_error_count**|**Bigint**|伺服器啟動後逾時錯誤的總數。 小型查詢資源信號為 NULL。|  
-|**forced_grant_count**|**Bigint**|伺服器啟動後強制最小記憶體授與的總數。 小型查詢資源信號為 NULL。|  
+|**timeout_error_count**|**bigint**|伺服器啟動後逾時錯誤的總數。 小型查詢資源信號為 NULL。|  
+|**forced_grant_count**|**bigint**|伺服器啟動後強制最小記憶體授與的總數。 小型查詢資源信號為 NULL。|  
 |**pool_id**|**int**|這個資源信號所屬資源集區的識別碼。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68255278"
   
 ## <a name="see-also"></a>另請參閱  
  [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   
   
 

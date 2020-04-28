@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7ba563c848179e8cf3dc12f64d2b3c4233955159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892158"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX 資料定義 - CREATE CELL CALCULATION
@@ -49,7 +49,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Set_Expression*  
  傳回集合的有效 MDX 運算式。  
   
- *String*  
+ *字串*  
  有效的字串值。  
   
  *MDX_Expression*  

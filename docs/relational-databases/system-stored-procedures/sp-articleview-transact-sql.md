@@ -16,10 +16,10 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768987"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
@@ -71,7 +71,7 @@ sp_articleview [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行時，不應使用「發行者」。  
+>  *publisher*從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行時，不應使用「發行者」。  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs`這是指是否自動重新建立用來同步處理複寫的預存程式。 *refreshsynctranprocs*是**bit**，預設值是1。  
   
@@ -105,7 +105,7 @@ sp_articleview [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [定義及修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
+ [定義和修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   

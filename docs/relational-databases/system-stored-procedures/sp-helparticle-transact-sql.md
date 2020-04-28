@@ -16,10 +16,10 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771104"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -43,14 +43,14 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是發行集中的發行項名稱。 ** 發行項**** **%** 是 sysname，預設值是。 如果未提供發行項，則會傳回指定之發行集的*所有文章相關*資訊。  
+`[ @article = ] 'article'`這是發行集中的發行項名稱。 *article*發行項**sysname** **%** 是 sysname，預設值是。 如果未提供發行項，則會傳回指定之發行集的*所有文章相關*資訊。  
   
 `[ @returnfilter = ] returnfilter`指定是否應該傳回篩選子句。 *returnfilter*是**bit**，預設值是**1**，會傳回篩選子句。  
   
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行之發行項的資訊時，不應指定發行者。  
+>  *publisher*要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行之發行項的資訊時，不應指定發行者。  
   
 `[ @found = ] found OUTPUT`僅供內部使用。  
   
@@ -64,7 +64,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**目的地物件**|**sysname**|目的地 (訂閱) 資料表的名稱。|  
 |**synchronization object**|**Nvarchar （257）**|定義已發行的發行項之檢視的名稱。|  
 |**type**|**smallint**|發行項的類型：<br /><br /> **1** = 以記錄為基礎。<br /><br /> **3** = 以手動篩選進行記錄式。<br /><br /> **5** = 以手動視圖進行記錄式。<br /><br /> **7** = 以手動篩選和手動視圖進行記錄式。<br /><br /> **8** = 預存程式執行。<br /><br /> **24** = 可序列化預存程式執行。<br /><br /> **32** = 預存程式（僅限架構）。<br /><br /> **64** = View （僅限架構）。<br /><br /> **96** = 彙總函式（僅限架構）。<br /><br /> **128** = 函數（僅限架構）。<br /><br /> **257** = 以記錄為基礎的索引視圖。<br /><br /> **259** = 具有手動篩選的以記錄為基礎的索引視圖。<br /><br /> **261** = 具有手動視圖之以記錄為基礎的索引視圖。<br /><br /> **263** = 具有手動篩選和手動視圖的記錄式索引視圖。<br /><br /> **320** = 索引視圖（僅限架構）。<br /><br />|  
-|**狀態**|**tinyint**|可以是一或多個或這些發行項屬性的[& （位 and）](../../t-sql/language-elements/bitwise-and-transact-sql.md)結果：<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = 發行項在使用中。<br /><br /> **0x08** = 在 insert 語句中包含資料行名稱。<br /><br /> **0x16** = 使用參數化語句。<br /><br /> **0x32** = 使用參數化語句，並在 insert 語句中包含資料行名稱。|  
+|**status**|**tinyint**|可以是一或多個或這些發行項屬性的[& （位 and）](../../t-sql/language-elements/bitwise-and-transact-sql.md)結果：<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = 發行項在使用中。<br /><br /> **0x08** = 在 insert 語句中包含資料行名稱。<br /><br /> **0x16** = 使用參數化語句。<br /><br /> **0x32** = 使用參數化語句，並在 insert 語句中包含資料行名稱。|  
 |**出**|**Nvarchar （257）**|用來水平篩選資料表的預存程序。 必須已利用 FOR REPLICATION 子句來建立這個預存程序。|  
 |**描述**|**nvarchar(255)**|發行項的描述項目。|  
 |**insert_command**|**nvarchar(255)**|當隨著資料表發行項而複寫插入時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
@@ -84,8 +84,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**unqua_filter**|**sysname**|篩選的名稱，不含擁有者名稱。|  
 |**auto_identity_range**|**int**|這是一個旗標，指出在前次建立發行集時，開啟了自動識別範圍處理。 **1**表示已啟用自動識別範圍;**0**表示已停用。|  
 |**publisher_identity_range**|**int**|如果發行項的*identityrangemanagementoption*設為**auto** ，或**auto_identity_range**設定為**true**，則為發行者端識別範圍的範圍大小。|  
-|**identity_range**|**Bigint**|如果發行項的*identityrangemanagementoption*設為**auto** ，或**auto_identity_range**設定為**true**，則為訂閱者端之識別範圍的範圍大小。|  
-|**閾值**|**Bigint**|這是一個百分比值，指出散發代理程式指派新識別範圍的時機。|  
+|**identity_range**|**bigint**|如果發行項的*identityrangemanagementoption*設為**auto** ，或**auto_identity_range**設定為**true**，則為訂閱者端之識別範圍的範圍大小。|  
+|**閾值**|**bigint**|這是一個百分比值，指出散發代理程式指派新識別範圍的時機。|  
 |**identityrangemanagementoption**|**int**|指出處理發行項的識別範圍管理。|  
 |**fire_triggers_on_snapshot**|**bit**|這是指在套用初始快照集時，是否執行複寫的使用者觸發程序。<br /><br /> **1** = 執行使用者觸發程式。<br /><br /> **0** = 不執行使用者觸發程式。|  
   

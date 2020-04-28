@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8cc28e9394cabee4dd32e8e84ee02517de415a75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893076"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>了解 DMX Select 陳述式
@@ -44,42 +44,42 @@ ms.locfileid: "68893076"
   
  **重要事項：** 運算式清單或**WHERE**子句中包含的任何專案，都必須來自**from**子句所定義的資料網域。 您不能混用資料網域。  
   
-##  <a name="Select_Types"></a>選取類型  
+##  <a name="select-types"></a><a name="Select_Types"></a>選取類型  
  **SELECT**語句的語法支援許多不同的工作。 請使用下列模式執行這些工作：  
   
 -   [預測](#Predicting)  
   
--   [流覽](#Browsing)  
+-   [瀏覽](#Browsing)  
   
 -   [複製](#Copying)  
   
 -   [鑽研](#Drillthrough)  
   
-###  <a name="Predicting"></a>未來  
+###  <a name="predicting"></a><a name="Predicting"></a>未來  
  您可以使用下列查詢類型，根據採礦模型執行預測。  
   
  您可以在預測聯結**SELECT**語句的**FROM**和**WHERE**子句中，包含任何一個流覽或預測**SELECT**語句。  
   
 |查詢類型|描述|  
 |----------------|-----------------|  
-|SELECT FROM [天然] 預測聯結|傳回將採礦模型中的資料行聯結至內部資料來源的資料行所建立的預測。<br /><br /> 這種查詢類型的網域是模型中的可預測資料行，以及輸入資料來源中的資料行。<br /><br /> [從 &#60;模型選取&#62; 預測聯結 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [&#40;資料採礦&#41;的預測查詢](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|從* \<模型選取>*|只根據採礦模型傳回可預測資料行的最可能狀態。 這種查詢類型是建立具有空白預測聯結之預測的捷徑。<br /><br /> 這種查詢類型的網域是模型中的可預測資料行。<br /><br /> [從 &#60;模型&#62; &#40;DMX&#41;中選取](../dmx/select-from-model-dmx.md)<br /><br /> [&#40;資料採礦&#41;的預測查詢](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SELECT FROM [天然] 預測聯結|傳回將採礦模型中的資料行聯結至內部資料來源的資料行所建立的預測。<br /><br /> 這種查詢類型的網域是模型中的可預測資料行，以及輸入資料來源中的資料行。<br /><br /> [從 &#60;模型選取&#62; 預測聯結 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [預測查詢 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|從* \<模型選取>*|只根據採礦模型傳回可預測資料行的最可能狀態。 這種查詢類型是建立具有空白預測聯結之預測的捷徑。<br /><br /> 這種查詢類型的網域是模型中的可預測資料行。<br /><br /> [從 &#60;模型&#62; &#40;DMX&#41;中選取](../dmx/select-from-model-dmx.md)<br /><br /> [預測查詢 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [回到選取類型](#Select_Types)  
   
-###  <a name="Browsing"></a>流覽  
+###  <a name="browsing"></a><a name="Browsing"></a>流覽  
  您可以使用下列查詢類型瀏覽採礦模型的內容。  
   
 |查詢類型|描述|  
 |----------------|-----------------|  
-|從模型選取不同的* \<>*|傳回指定資料行之採礦模型的所有狀態值。<br /><br /> 這個查詢類型的資料網域是資料採礦模型。<br /><br /> [從 &#60;模型 &#62; &#40;DMX 中選取 [相異]&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [&#40;資料採礦&#41;的內容查詢](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|選取 [從* \<模型>*]。CONTENT|傳回描述採礦模型的內容。<br /><br /> 這個查詢類型的資料網域是內容結構描述資料列集。<br /><br /> [從 &#60;模型&#62; 中選取。DMX&#41;的內容 &#40;](../dmx/select-from-model-content-dmx.md)<br /><br /> [&#40;資料採礦&#41;的內容查詢](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|從模型選取不同的* \<>*|傳回指定資料行之採礦模型的所有狀態值。<br /><br /> 這個查詢類型的資料網域是資料採礦模型。<br /><br /> [從 &#60;模型 &#62; &#40;DMX 中選取 [相異]&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [內容查詢 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|選取 [從* \<模型>*]。CONTENT|傳回描述採礦模型的內容。<br /><br /> 這個查詢類型的資料網域是內容結構描述資料列集。<br /><br /> [從 &#60;模型&#62; 中選取。DMX&#41;的內容 &#40;](../dmx/select-from-model-content-dmx.md)<br /><br /> [內容查詢 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
 |選取 [從* \<模型>*]。DIMENSION_CONTENT|傳回描述採礦模型的內容。<br /><br /> 這個查詢類型的資料網域是內容結構描述資料列集。<br /><br /> [從 &#60;模型&#62; 中選取。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
 |選取 [從* \<模型>*]。PMML|針對支援此功能的演算法，傳回採礦模型的預測模型標記語言 (PMML) 表示。<br /><br /> 這種查詢類型的網域是 PMML 結構描述資料列集。<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [回到選取類型](#Select_Types)  
   
-###  <a name="Copying"></a>複製  
+###  <a name="copying"></a><a name="Copying"></a>複製  
  您可以將採礦模型與其相關聯的採礦結構複製到新模型，然後重新命名陳述式中的模型。  
   
 |查詢類型|描述|  
@@ -88,14 +88,14 @@ ms.locfileid: "68893076"
   
  [回到選取類型](#Select_Types)  
   
-###  <a name="Drillthrough"></a>取  
+###  <a name="drillthrough"></a><a name="Drillthrough"></a>取  
  您可以使用下列查詢類型，瀏覽用於培訓模型的案例或案例的表示。  
   
 |查詢類型|描述|  
 |----------------|-----------------|  
 |選取 [從* \<模型>*]。種|傳回用來定型採礦模型的案例。<br /><br /> 這個查詢類型的網域是資料採礦模型。<br /><br /> [從 &#60;模型&#62; 中選取。DMX&#41;&#40;案例](../dmx/select-from-model-cases-dmx.md)<br /><br /> [使用 DMX 建立鑽研查詢](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
 |選取 [從* \<模型>*]。SAMPLE_CASES|傳回範例案例，這是用來定型採礦模型之案例的代表性案例。<br /><br /> 這個查詢類型的網域是資料採礦模型。<br /><br /> [從 &#60;模型&#62; 中選取。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|選取 [從* \<結構>*]。 種|從基礎採礦結構傳回詳細的資料列，即使部分詳細資料未用於定型採礦模型亦然。<br /><br /> [從 &#60;結構&#62; 中選取。種](../dmx/select-from-structure-cases.md)<br /><br /> [資料採礦&#41;&#40;的鑽取查詢](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|選取 [從* \<結構>*]。 種|從基礎採礦結構傳回詳細的資料列，即使部分詳細資料未用於定型採礦模型亦然。<br /><br /> [從 &#60;結構&#62; 中選取。種](../dmx/select-from-structure-cases.md)<br /><br /> [鑽研查詢 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [回到選取類型](#Select_Types)  
   

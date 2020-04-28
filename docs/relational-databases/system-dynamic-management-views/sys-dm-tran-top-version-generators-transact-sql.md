@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262615"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
@@ -47,7 +47,7 @@ sys.dm_tran_top_version_generators
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫識別碼。|  
-|**rowset_id**|**Bigint**|資料列集識別碼。|  
+|**rowset_id**|**bigint**|資料列集識別碼。|  
 |**aggregated_record_length_in_bytes**|**int**|版本存放區中每個**database_id**和**rowset_id 配對**的記錄長度總和。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
@@ -92,7 +92,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
  輸出顯示所有版本都是由`database_id``9`建立，而且版本是從兩個數據表產生。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

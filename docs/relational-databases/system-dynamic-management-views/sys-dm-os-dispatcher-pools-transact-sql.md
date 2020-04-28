@@ -20,10 +20,10 @@ ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf8e1700f51f808811a1f5a61f86777547c9cb65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265846"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)

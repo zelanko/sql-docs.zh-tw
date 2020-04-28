@@ -16,10 +16,10 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771065"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)

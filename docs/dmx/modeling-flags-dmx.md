@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893934"
 ---
 # <a name="modeling-flags-dmx"></a>模型旗標 (DMX)
@@ -20,15 +20,13 @@ ms.locfileid: "68893934"
 
   您可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的模型旗標，為資料採礦演算法提供案例資料表中所定義資料的其他資訊。 演算法可以使用此一資訊建立更精確的資料採礦模型。 您可以在採礦結構資料行與採礦模型資料行上定義模型旗標。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列模型旗標：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列模型旗標：  
   
- **NOT NULL**  
+ **非 Null**  
  屬性資料行的值絕對不能包含 Null 值。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在模型培訓處理過程中遇到這個屬性資料行的 Null 值，將會產生錯誤。 這個旗標是在採礦結構資料行定義。  
   
  **回歸輸入變數**  
- 指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 線性迴歸與 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法支援這個旗標，而這個旗標是在採礦模型資料行定義。  
+ 指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 線性迴歸與 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法支援這個旗標，而這個旗標是在採礦模型資料行定義。  
   
  **MODEL_EXISTENCE_ONLY**  
  屬性存在比屬性資料行的值更重要。 這個旗標是在採礦模型資料行定義。  

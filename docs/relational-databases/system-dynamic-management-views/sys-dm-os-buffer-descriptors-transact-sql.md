@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265858"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
@@ -42,13 +42,13 @@ ms.locfileid: "68265858"
 |file_id|**int**|儲存頁面之保存影像的檔案識別碼。 可為 Null。|  
 |page_id|**int**|檔案內的頁面識別碼。 可為 Null。|  
 |page_level|**int**|頁面的索引層級。 可為 Null。|  
-|allocation_unit_id|**Bigint**|頁面的配置單位識別碼。 這個值可以用來聯結 sys.allocation_units。 可為 Null。|  
-|page_type|**Nvarchar （60）**|頁面的類型，例如：資料頁或索引頁。 可為 Null。|  
+|allocation_unit_id|**bigint**|頁面的配置單位識別碼。 這個值可以用來聯結 sys.allocation_units。 可為 Null。|  
+|page_type|**nvarchar(60)**|頁面的類型，例如：資料頁或索引頁。 可為 Null。|  
 |row_count|**int**|頁面上的資料列數。 可為 Null。|  
 |free_space_in_bytes|**int**|頁面上的可用空間量 (以位元組為單位)。 可為 Null。|  
 |is_modified|**bit**|1 = 頁面從磁碟讀取之後，已經修改過了。 可為 Null。|  
 |numa_node|**int**|緩衝區的非統一記憶體存取節點。 可為 Null。|  
-|read_microsec|**Bigint**|將頁面讀取至緩衝區所需的實際時間 (單位毫秒)。 這個數字會在重複使用緩衝區時重設。 可為 Null。|  
+|read_microsec|**bigint**|將頁面讀取至緩衝區所需的實際時間 (單位毫秒)。 這個數字會在重複使用緩衝區時重設。 可為 Null。|  
 |is_in_bpool_extension|**bit**|1 = 分頁在緩衝集區延伸中。 可為 Null。|  
 |pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
@@ -117,7 +117,7 @@ ORDER BY cached_pages_count DESC;
  
  [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 資料庫](../../relational-databases/databases/resource-database.md)   
- [dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493819"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
@@ -64,7 +64,7 @@ ms.locfileid: "69493819"
   
 1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
-2.  順利完成部署之後，針對 ** 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]**** 按鈕。  
+2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]**** 按鈕。  
   
 3.  啟動 Excel。  
   
@@ -74,8 +74,7 @@ ms.locfileid: "69493819"
   
 6.  在樞紐分析表的 [客戶地理位置]**** 中，加入選取單一客戶的篩選。 依序展開 [所有客戶]****、[澳大利亞]****、[昆士蘭]****、[布里斯本]****、[4000]****，選取 [Adam Powell]**** 的核取方塊，然後按一下 [確定]****。  
   
-     
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 到 Adam Powell 的產品總銷售會顯示在資料區域中。  
+     [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 到 Adam Powell 的產品總銷售會顯示在資料區域中。  
   
 7.  以滑鼠右鍵按一下銷售量，指向 [其他動作]****，然後按一下 [鑽研至訂單詳細資料]****。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "69493819"
   
 8.  將 [出**貨日期索引鍵**] 屬性的 [ `Ship Date`**名稱**] 屬性變更為，然後將這個屬性的 [名稱] 資料**行**屬性變更為**SimpleDate （WChar）**。  
   
-9. 針對 ** 教學課程 Cube，切換到 [Cube 設計師] 的 [動作]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤。  
+9. 針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [動作]**** 索引標籤。  
   
 10. 在 [鑽研資料行]**** 方塊中，選取核取方塊，以便下列資料行加入 [傳回資料行]**** 清單，然後按一下 [確定]****：  
   
@@ -129,7 +128,7 @@ ms.locfileid: "69493819"
   
 1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
-2.  順利完成部署之後，針對 ** 教學課程 Cube，切換至 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]**** 按鈕。  
+2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換至 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]**** 按鈕。  
   
 3.  啟動 Excel。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "69493819"
      ![運送給 Adam Powell 的訂購貨品](../../2014/tutorials/media/l8-action8.gif "運送給 Adam Powell 的訂購貨品")  
   
 ## <a name="next-lesson"></a>下一課  
- [第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)  
+ [第9課：定義觀點和翻譯](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Analysis Services 多維度資料的動作&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

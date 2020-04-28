@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262084"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys.databases dm_db_log_info （Transact-sql）
@@ -52,15 +52,15 @@ sys.dm_db_log_info ( database_id )
 |-----------------|---------------|-----------------|  
 |database_id|**int**|資料庫識別碼。|
 |file_id|**smallint**|交易記錄檔的檔案識別碼。|  
-|vlf_begin_offset|**Bigint** |從交易記錄檔開頭的[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的位移位置。|
+|vlf_begin_offset|**bigint** |從交易記錄檔開頭的[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的位移位置。|
 |vlf_size_mb |**float** |[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)大小，以 MB 為單位，四捨五入為2個小數位數。|     
-|vlf_sequence_number|**Bigint** |建立的順序中的[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序號。 用來唯一識別記錄檔中的 Vlf。|
+|vlf_sequence_number|**bigint** |建立的順序中的[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序號。 用來唯一識別記錄檔中的 Vlf。|
 |vlf_active|**bit** |指出[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)是否正在使用中。 <br />0-VLF 不在使用中。<br />1-VLF 為使用中狀態。|
 |vlf_status|**int** |[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的狀態。 可能的值包括 <br />0-VLF 為非作用中 <br />1-VLF 已初始化但未使用 <br /> 2-VLF 為使用中狀態。|
 |vlf_parity|**tinyint** |[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的同位檢查。在內部用來判斷 VLF 內記錄檔的結尾。|
 |vlf_first_lsn|**Nvarchar （48）** |虛擬記錄檔中第一筆記錄的記錄[序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) [（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 |vlf_create_lsn|**Nvarchar （48）** |建立[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)之記錄檔記錄的[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
-|vlf_encryptor_thumbprint|**Varbinary （20）**| **適用物件：**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 如果使用[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md)加密 VLF，則顯示 VLF 的加密器指紋，否則為 Null。 |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **適用於：** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 如果使用[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md)加密 VLF，則顯示 VLF 的加密器指紋，否則為 Null。 |
 
 ## <a name="remarks"></a>備註
 `sys.dm_db_log_info`動態管理函數會取代`DBCC LOGINFO`語句。    
@@ -110,8 +110,8 @@ GO
 ```
 
 ## <a name="see-also"></a>另請參閱  
-[動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[dm_db_log_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

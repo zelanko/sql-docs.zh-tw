@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889868"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
@@ -36,10 +36,10 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>引數  
- *表示*  
+ *structure*  
  要對其加入採礦模型之採礦結構的名稱。  
   
- *model*  
+ *模型*  
  採礦模型的唯一名稱。  
   
  *資料行定義清單*  
@@ -103,8 +103,7 @@ USING <algorithm> [(<parameter list>)]
  您可以將篩選準則運算式加在巢狀資料表資料行定義之後，以定義套用至巢狀資料表的篩選運算式。  
   
 ### <a name="modeling-flags"></a>模型旗標  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列用於採礦模型資料行的模型旗標：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列用於採礦模型資料行的模型旗標：  
   
 > [!NOTE]  
 >  NOT_NULL 模型旗標適用於採礦結構資料行。 如需詳細資訊，請參閱 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
@@ -204,6 +203,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

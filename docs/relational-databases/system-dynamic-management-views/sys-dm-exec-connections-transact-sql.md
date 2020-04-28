@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263799"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
@@ -40,25 +40,25 @@ ms.locfileid: "68263799"
 |session_id|**int**|識別這項連接的相關工作階段。 可為 Null。|  
 |most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 （SOAP 連接可以由另一個會話重複使用）。可為 null。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|net_transport|**Nvarchar （40）**|當連接啟用 multiple active result sets （MARS）時，一律會傳回**Session** 。<br /><br /> **注意：** 描述此連接所使用的實體傳輸通訊協定。 不可為 Null。|  
-|protocol_type|**Nvarchar （40）**|指定裝載的通訊協定類型。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  
+|net_transport|**nvarchar(40)**|當連接啟用 multiple active result sets （MARS）時，一律會傳回**Session** 。<br /><br /> **注意：** 描述此連接所使用的實體傳輸通訊協定。 不可為 Null。|  
+|protocol_type|**nvarchar(40)**|指定裝載的通訊協定類型。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  
 |protocol_version|**int**|這項連接的相關資料存取通訊協定的版本。 可為 Null。|  
 |endpoint_id|**int**|描述其為何種連接類型的識別碼。 這個 endpoint_id 可用來查詢 sys.endpoints 檢視。 可為 Null。|  
-|encrypt_option|**Nvarchar （40）**|描述這項連接是否啟用加密的布林值。 不可為 Null。|  
-|auth_scheme|**Nvarchar （40）**|指定搭配這個連接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 驗證配置。 不可為 Null。|  
+|encrypt_option|**nvarchar(40)**|描述這項連接是否啟用加密的布林值。 不可為 Null。|  
+|auth_scheme|**nvarchar(40)**|指定搭配這個連接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 驗證配置。 不可為 Null。|  
 |node_affinity|**smallint**|識別此連接具有相似性的記憶體節點。 不可為 Null。|  
 |num_reads|**int**|此連接上已發生的位元組讀取數。 可為 Null。|  
 |num_writes|**int**|此連接上已發生的位元組寫入數。 可為 Null。|  
 |last_read|**datetime**|這項連接期間最後一次讀取的時間戳記。 可為 Null。|  
 |last_write|**datetime**|這項連接期間最後一次寫入的時間戳記。 不可設為 Null。|  
 |net_packet_size|**int**|用來傳送資訊和資料的網路封包大小。 可為 Null。|  
-|client_net_address|**Varchar （48）**|連接到這部伺服器之用戶端的主機位址。 可為 Null。<br /><br /> 在 V12 之前的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此資料行一律會傳回 NULL。|  
+|client_net_address|**varchar(48)**|連接到這部伺服器之用戶端的主機位址。 可為 Null。<br /><br /> 在 V12 之前的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此資料行一律會傳回 NULL。|  
 |client_tcp_port|**int**|與這項連接相關聯的用戶端電腦上的通訊埠編號。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
-|local_net_address|**Varchar （48）**|代表這項連接的目標伺服器的 IP 位址。 只適用於使用 TCP 傳輸提供者的連接。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
+|local_net_address|**varchar(48)**|代表這項連接的目標伺服器的 IP 位址。 只適用於使用 TCP 傳輸提供者的連接。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
 |local_tcp_port|**int**|當這項連接是使用 TCP 傳輸的連接時，代表這項連接的目標伺服器 TCP 埠。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
 |connection_id|**uniqueidentifier**|這用來唯一識別各項連接。 不可為 Null。|  
 |parent_connection_id|**uniqueidentifier**|這用來識別 MARS 工作階段在使用的主要連接。 可為 Null。|  
-|most_recent_sql_handle|**Varbinary （64）**|這項連接所執行之前一項要求的 SQL 控制代碼。 most_recent_sql_handle 資料行一律與 most_recent_session_id 資料行同步。 可為 Null。|  
+|most_recent_sql_handle|**varbinary(64)**|這項連接所執行之前一項要求的 SQL 控制代碼。 most_recent_sql_handle 資料行一律與 most_recent_session_id 資料行同步。 可為 Null。|  
 |pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
@@ -95,7 +95,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>另請參閱  
 
- [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

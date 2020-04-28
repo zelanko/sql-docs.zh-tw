@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494036"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>建立 Analysis Services 專案 (基本資料採礦教學課程)
-  每[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]個專案都會在單一[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫中定義物件。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫可包含許多不同類型的物件  
+  每[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]個專案都會在單一[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫中定義物件。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫可包含許多不同類型的物件  
   
 -   多維度模型 (Cube)  
   
@@ -29,10 +28,9 @@ ms.locfileid: "69494036"
   
  請注意，您 **不需要** Cube 便能進行資料採礦。 如果您必須對現有的 Cube 進行資料採礦，就應該將資料採礦模型加入至您用來建立 Cube 的相同專案。 不過，大多數的用途情況下您都能根據關聯式資料來源 (例如資料倉儲) 建立模型，只要不涉及 Cube 即可有更好的效能。  
   
- 在本教學課程中，您將使用關聯式資料倉儲 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]做為資料來源。 您會將所有的資料採礦物件部署到名稱為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 `BasicDataMining` 資料庫，僅供用於資料採礦。  
+ 在本教學課程中，您將使用關聯式資料倉儲 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]做為資料來源。 您會將所有的資料採礦物件部署到名稱為 `BasicDataMining` 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，僅供用於資料採礦。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設會針對新專案使用 **localhost** 執行個體。 如果您要使用具名執行個體或不同的伺服器，您必須先建立並開啟專案，然後變更執行個體名稱。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設會針對新專案使用 **localhost** 執行個體。 如果您要使用具名執行個體或不同的伺服器，您必須先建立並開啟專案，然後變更執行個體名稱。  
   
  如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案的詳細資訊，請參閱[建立 Analysis Services 專案](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)。  
   

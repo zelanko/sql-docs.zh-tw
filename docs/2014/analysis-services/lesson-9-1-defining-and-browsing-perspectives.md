@@ -1,5 +1,5 @@
 ---
-title: 定義和瀏覽透視 |微軟文件
+title: 定義和流覽透視圖 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493768"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定義和瀏覽檢視方塊
@@ -41,7 +41,7 @@ ms.locfileid: "69493768"
   
      ![檢視方塊名稱資料行中的檢視方塊](../../2014/tutorials/media/l9-perspectives-2.gif "檢視方塊名稱資料行中的檢視方塊")  
   
-3.  將透視名稱變更為`Internet Sales`。  
+3.  將 [觀點名稱] `Internet Sales`變更為。  
   
 4.  在下一個資料列上，將 [DefaultMeasure] 設定為 [網際網路銷售 - 銷售量]****。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69493768"
   
 5.  清除下列物件的核取方塊：  
   
-    -   `Reseller Sales`量組  
+    -   `Reseller Sales`量值群組  
   
     -   [銷售配額]**** 量值群組  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493768"
   
 1.  在 [檢視方塊]**** 索引標籤的工具列上，按一下 [新增檢視方塊]**** 按鈕。  
   
-2.  將新透檢視的名稱變更為`Reseller Sales`。  
+2.  將新觀點的名稱變更為`Reseller Sales`。  
   
 3.  將 [轉售商銷售 - 銷售量]**** 設為預設量值。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493768"
   
 4.  清除下列物件的核取方塊：  
   
-    -   `Internet Sales`量組  
+    -   `Internet Sales`量值群組  
   
     -   [網際網路銷售原因]**** 量值群組  
   
@@ -131,16 +131,16 @@ ms.locfileid: "69493768"
   
 1.  在 [檢視方塊]**** 索引標籤的工具列上，按一下 [新增檢視方塊]**** 按鈕。  
   
-2.  將新透檢視的名稱變更為`Sales Summary`。  
+2.  將新觀點的名稱變更為`Sales Summary`。  
   
     > [!NOTE]  
     >  您不可以將導出量值指定為預設量值。  
   
 3.  清除下列物件的核取方塊：  
   
-    -   `Internet Sales`量組  
+    -   `Internet Sales`量值群組  
   
-    -   `Reseller Sales`量組  
+    -   `Reseller Sales`量值群組  
   
     -   [網際網路銷售原因]**** 量值群組  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493768"
   
      ![Excel 中的資料連線精靈](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel 中的資料連線精靈")  
   
-6.  在`Internet Sales`**透視清單**中選擇,然後查看元資料窗格中的度量值和維度。  
+6.  在`Internet Sales` [**透視圖**] 清單中選取，然後在 [中繼資料] 窗格中檢查量值和維度。  
   
      請注意，只有那些針對 [網際網路銷售] 檢視方塊所指定的物件才會顯示出來。  
   
 7.  在 [中繼資料] 窗格中，展開 [量值]****。  
   
-     請注意,只顯示`Internet Sales`度量值組,以及**Internet GPM**和**Internet 銷售比率到所有產品**計算成員。  
+     請注意，只有`Internet Sales`量值群組會出現，以及 [**網際網路毛利率**] 和 [**網際網路銷售與所有產品的比率**] 導出成員。  
   
 8.  在模型中，再次選取 Excel。 選取 `Sales Summary`。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493768"
  [定義和瀏覽翻譯](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [觀點](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [視角](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [多維度模型中的檢視方塊](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

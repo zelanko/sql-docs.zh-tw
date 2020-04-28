@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262696"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -60,15 +60,15 @@ sys.dm_tran_active_snapshot_database_transactions
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**transaction_id**|**Bigint**|指派給交易的唯一識別碼。 交易識別碼主要是用來識別鎖定作業中的交易。|  
-|**transaction_sequence_num**|**Bigint**|交易序號。 這是交易啟動時指派給交易的唯一序號。 不產生版本記錄且不使用快照集掃描的交易不會接收到交易序號。|  
-|**commit_sequence_num**|**Bigint**|指出交易完成 (確定或停止) 的序號。 如果是作用中的交易，這個值就是 NULL。|  
+|**transaction_id**|**bigint**|指派給交易的唯一識別碼。 交易識別碼主要是用來識別鎖定作業中的交易。|  
+|**transaction_sequence_num**|**bigint**|交易序號。 這是交易啟動時指派給交易的唯一序號。 不產生版本記錄且不使用快照集掃描的交易不會接收到交易序號。|  
+|**commit_sequence_num**|**bigint**|指出交易完成 (確定或停止) 的序號。 如果是作用中的交易，這個值就是 NULL。|  
 |**is_snapshot**|**int**|0 = 不是快照集隔離交易。<br /><br /> 1 = 是快照集隔離交易。|  
 |**session_id**|**int**|啟動交易的工作階段識別碼。|  
-|**first_snapshot_sequence_num**|**Bigint**|產生快照集時作用中交易的最低交易序號。 執行時，快照集交易會產生當時所有作用中交易的快照集。 如果是非快照集交易，此資料行會顯示 0。|  
+|**first_snapshot_sequence_num**|**bigint**|產生快照集時作用中交易的最低交易序號。 執行時，快照集交易會產生當時所有作用中交易的快照集。 如果是非快照集交易，此資料行會顯示 0。|  
 |**max_version_chain_traversed**|**int**|為了尋找交易一致版本而往返之版本鏈結的最大長度。|  
-|**average_version_chain_traversed**|**即時**|在往返的版本鏈結中資料列版本的平均數目。|  
-|**elapsed_time_seconds**|**Bigint**|自從交易取得其交易序號以來的經歷時間。|  
+|**average_version_chain_traversed**|**real**|在往返的版本鏈結中資料列版本的平均數目。|  
+|**elapsed_time_seconds**|**bigint**|自從交易取得其交易序號以來的經歷時間。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
@@ -145,8 +145,7 @@ elapsed_time_seconds
   
  下列資訊會評估來自**sys. dm_tran_active_snapshot_database_transactions**的結果：  
   
--   XSN-57：因為此交易不是在快照隔離下執行， `is_snapshot`所以值`first_snapshot_sequence_num`和`0`為。 
-  `transaction_sequence_num` 顯示此筆交易已經指派了交易序號，因為 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 其中一個或兩個資料庫選項為 ON。  
+-   XSN-57：因為此交易不是在快照隔離下執行， `is_snapshot`所以值`first_snapshot_sequence_num`和`0`為。 `transaction_sequence_num` 顯示此筆交易已經指派了交易序號，因為 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 其中一個或兩個資料庫選項為 ON。  
   
 -   XSN-58：這筆交易不是在快照集隔離下執行，而且 XSN-57 的相同資訊也適用。  
   
@@ -156,7 +155,7 @@ elapsed_time_seconds
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;設定交易隔離等級](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

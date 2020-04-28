@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769129"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -93,9 +93,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每週|  
-|**十大**|每月|  
+|**10**|每月|  
 |**20**|每月，相對於頻率間隔|  
 |**40**|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時|  
 |NULL (預設值)||  
@@ -106,25 +106,25 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
-|**第**|Tuesday|  
-|**4**|Wednesday|  
-|**第**|Thursday|  
+|**3**|Tuesday|  
+|**4**|星期三|  
+|**5**|Thursday|  
 |**6**|星期五|  
-|**utf-7**|星期六|  
+|**7**|星期六|  
 |**8**|Day|  
 |**9**|工作日|  
-|**十大**|週末|  
+|**10**|週末|  
 |NULL (預設值)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`這是每個月中排程的頻率間隔合併出現次數。 *frequency_relative_interval*是**int**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**1**|第一頁|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
 |NULL (預設值)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是 Null。  
@@ -134,9 +134,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4**|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|Hour|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是每次合併之間*frequency_subday*發生的頻率。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -186,10 +186,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_addmergesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [互動式衝突解決方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
+ [互動式衝突解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

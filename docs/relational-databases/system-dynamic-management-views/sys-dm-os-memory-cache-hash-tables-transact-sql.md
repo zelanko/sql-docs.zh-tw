@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5a52fc7c614752cde43a1670f2fb299b35aa0ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265771"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68265771"
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|快取項目的位址 (主索引鍵)。 不可為 Null。|  
 |**name**|**nvarchar(256)**|快取的名稱。 不可為 Null。|  
-|**type**|**Nvarchar （60）**|快取的類型。 不可為 Null。|  
+|**type**|**nvarchar(60)**|快取的類型。 不可為 Null。|  
 |**table_level**|**int**|雜湊資料表號碼。 一個特定快取可以有多個雜湊資料表對應到不同的雜湊函數。 不可為 Null。|  
 |**buckets_count**|**int**|雜湊資料表中的值區數。 不可為 Null。|  
 |**buckets_in_use_count**|**int**|目前使用的值區數。 不可為 Null。|  
@@ -47,8 +47,8 @@ ms.locfileid: "68265771"
 |**buckets_max_length**|**int**|值區的最大快取項目數。 不可為 Null。|  
 |**buckets_avg_length**|**int**|每一個值區的平均快取項目數。 不可為 Null。|  
 |**buckets_max_length_ever**|**int**|自從伺服器啟動之後，這份雜湊資料表之雜湊值區的最大快取項目數。 不可為 Null。|  
-|**hits_count**|**Bigint**|快取叫用數。 不可為 Null。|  
-|**misses_count**|**Bigint**|快速遺漏數。 不可為 Null。|  
+|**hits_count**|**bigint**|快取叫用數。 不可為 Null。|  
+|**misses_count**|**bigint**|快速遺漏數。 不可為 Null。|  
 |**buckets_avg_scan_hit_length**|**int**|在找到搜尋的項目之前，值區的平均檢查項目數。 不可為 Null。|  
 |**buckets_avg_scan_miss_length**|**int**|在搜尋未成功結束之前，值區的平均檢查項目數。 不可為 Null。|  
 |**pdw_node_id**|**int**|此散發所在節點的識別碼。<br /><br /> **適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  

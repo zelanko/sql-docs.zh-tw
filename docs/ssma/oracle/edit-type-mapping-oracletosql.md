@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264227"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>編輯類型對應 (OracleToSQL)
@@ -28,13 +28,13 @@ ms.locfileid: "68264227"
   
 資料表特定類型對應會覆寫資料庫和專案類型對應。 資料庫特定對應會覆寫專案對應。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源類型**  
 選取要對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的源資料類型。  
   
 如果資料類型的長度可變，下欄欄位會出現在 [**來源類型**] 底下：  
   
-**從**  
+**From**  
 指定此對應的最小長度。 例如，針對**Nchar**資料類型，您可以輸入10來指定此對應是針對從**Nchar （10）** 開始的範圍。  
   
 **自**  

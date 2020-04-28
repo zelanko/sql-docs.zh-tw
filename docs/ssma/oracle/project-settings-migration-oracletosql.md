@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266596"
 ---
 # <a name="project-settings-migration-oracletosql"></a>專案設定 (移轉) (OracleToSQL)
@@ -43,9 +43,9 @@ ms.locfileid: "68266596"
 |**檢查條件約束**|指定當 SSMA 將資料插入 SQL Server 資料表時，是否應檢查條件約束。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
 |**資料移轉超時**|指定資料移轉期間使用的超時時間<br /><br />**預設模式**：15<br /><br />**開放式模式**：15<br /><br />**完整模式**：15|  
 |**擴充資料移轉選項**|在個別的 [詳細資料] 索引標籤中顯示每個資料表的額外資料移轉選項。<br /><br />**預設模式**：隱藏<br /><br />**開放式模式**：隱藏<br /><br />**完整模式**：隱藏|  
-|**引發觸發程式**|指定 SSMA 是否應該在將資料加入 SQL Server 資料表時，引發插入觸發程式。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
-|**保留身分識別**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： False|  
-|**保留 null**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
+|**引發觸發程序**|指定 SSMA 是否應該在將資料加入 SQL Server 資料表時，引發插入觸發程式。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
+|**保留識別**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： False|  
+|**保留 Null**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
 |**標記字串修剪作業，發生錯誤**|如果目標資料行大小小於來源字串長度，將會修剪此值並將其標示為錯誤。<br /><br />**預設模式**：是<br /><br />**開放式模式**：是<br /><br />**完整模式**：是|  
 |**發生錯誤時**|發生錯誤時停止資料移轉。 它有三個選項：<br /><br />**停止遷移：** 停止資料移轉作業<br /><br />**繼續進行下一個資料表：** 停止對目前資料表的資料移轉，並繼續進行下一個工作<br /><br />**繼續進行下一個批次：** 停止對目前批次的資料移轉，並繼續進行下一個<br /><br />**預設模式**：繼續進行下一個批次<br /><br />**開放式模式**：繼續進行下一個批次<br /><br />**完整模式**：繼續進行下一個批次|  
 |**取代不支援的日期**|指定 SSMA 是否應更正早于最早[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期**時間**的日期（1753年1月）。<br /><br />若要保留目前的日期值，請選取 [**不執行任何動作**]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將不會在日期時間資料行中接受01年 1753 1 月1日之前的日期。 如果您使用較舊的日期，您必須將日期時間值轉換成字元值。<br /><br />若要將在1753年1月01之前的日期轉換成 Null，請選取 [**以 Null 取代**]<br /><br />若要以支援的日期取代1753年1月之前的日期，請選取 [**取代為最接近的支援日期**]。<br /><br />**預設模式**：不執行任何動作<br /><br />**開放式模式**：不執行任何動作<br /><br />**完整模式**：取代為最接近的支援日期|  

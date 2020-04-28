@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890555"
 ---
 # <a name="partition-processing-destination"></a>資料分割處理目的地
-  「資料分割處理」目的地會載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]及處理資料分割。 如需資料分割的詳細資訊，請參閱[資料分割 &#40;Analysis Services - 多維度資料&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)。  
+  「資料分割處理」目的地會載入及處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料分割。 如需資料分割的詳細資訊，請參閱[資料分割 &#40;Analysis Services - 多維度資料&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)。  
   
  「資料分割處理」目的地包含下列功能：  
   
@@ -50,9 +50,9 @@ ms.locfileid: "68890555"
   
 -   [資料分割處理目的地編輯器 &#40;連線管理員頁面&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [分割區處理目的地編輯器 &#40;對應頁面&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [資料分割處理目的地編輯器 &#40;對應頁面&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [資料分割處理目的地編輯器 &#40;Advanced Page&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [資料分割處理目的地編輯器 &#40;進階頁面&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b74c767c50e8a62c2d65ad089e386a94b9c8a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151853"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>設定 Windows 防火牆以允許 Analysis Services 存取
@@ -42,26 +42,26 @@ ms.locfileid: "70151853"
   
  本主題包含下列幾節：  
   
--   [檢查 Analysis Services 的通訊埠和防火牆設定](#bkmk_checkport)  
+-   [檢查 Analysis Services 所使用的通訊埠和防火牆設定](#bkmk_checkport)  
   
 -   [Analysis Services 的預設實例設定 Windows 防火牆](#bkmk_default)  
   
--   [為 Analysis Services 的已命名實例設定 Windows 防火牆存取](#bkmk_named)  
+-   [為 Analysis Services 的具名執行個體設定 Windows 防火牆存取](#bkmk_named)  
   
--   [Analysis Services 叢集的埠設定](#bkmk_cluster)  
+-   [Analysis Services 叢集的通訊埠組態](#bkmk_cluster)  
   
 -   [PowerPivot for SharePoint 的通訊埠組態](#bkmk_powerpivot)  
   
--   [針對預設或名為的實例使用固定通訊埠 Analysis Services](#bkmk_fixed)  
+-   [針對 Analysis Services 的預設或具名執行個體使用固定通訊埠](#bkmk_fixed)  
   
  如需預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
-##  <a name="bkmk_checkport"></a>檢查 Analysis Services 的通訊埠和防火牆設定  
+##  <a name="check-port-and-firewall-settings-for-analysis-services"></a><a name="bkmk_checkport"></a>檢查 Analysis Services 的通訊埠和防火牆設定  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支援的 Microsoft Windows 作業系統中，Windows 防火牆預設為開啟，並且封鎖了遠端連線。 您必須手動在防火牆中開啟通訊埠，允許傳入要求至 Analysis Services。 SQL Server 安裝程式不會為您執行此步驟。  
   
  您可以在 msmdsrv.ini 檔和 SQL Server Management Studio 之 Analysis Services 執行個體的 [一般屬性] 頁面中指定通訊埠設定。 如果 `Port` 設定為正整數，表示服務將接聽固定通訊埠。 如果 `Port` 設定為 0，表示服務將接聽通訊埠 2383 (Analysis Services 執行個體為預設執行個體) 或動態指派的通訊埠 (Analysis Services 執行個體為具名執行個體)。  
   
- 只有具名執行個體會使用動態通訊埠指派。 `MSOLAP$InstanceName`服務會在啟動時決定要使用的通訊埠。 您可以執行下列步驟，決定要由具名執行個體使用的實際通訊埠編號：  
+ 只有具名執行個體會使用動態通訊埠指派。  服務會在啟動時決定要使用的通訊埠。 您可以執行下列步驟，決定要由具名執行個體使用的實際通訊埠編號：  
   
 -   啟動 [ `MSOLAP$InstanceName`工作管理員]，然後按一下 [**服務**] 以取得的 PID。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "70151853"
   
  請注意，對於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，必須手動定義所有防火牆規則。 雖然 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 SQL Server Browser 會保留連接埠 2382 和 2383，但是 SQL Server 安裝程式與所有組態工具都不會定義可允許存取連接埠或程式可執行檔的防火牆規則。  
   
-##  <a name="bkmk_default"></a>Analysis Services 的預設實例設定 Windows 防火牆  
+##  <a name="configure-windows-firewall-for-a-default-instance-of-analysis-services"></a><a name="bkmk_default"></a> 為 Analysis Services 的預設執行個體設定 Windows 防火牆  
  預設的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會接聽 TCP 通訊埠 2383。 如果您安裝了預設執行個體，並要使用此連接埠，只需要在 Windows 防火牆中，解除封鎖對 TCP 通訊埠 2383 的傳入存取，即可從遠端存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的預設執行個體。 如果您安裝了預設執行個體，但要將服務設定為接聽固定連接埠，請參閱本主題中的 [針對 Analysis Services 的預設或具名執行個體使用固定連接埠](#bkmk_fixed) 。  
   
  若要確認服務是否做為預設執行個體 (MSSQLServerOLAPService) 在運作，請檢查 [SQL Server 組態管理員] 中的服務名稱。 Analysis Services 的預設執行個體一律會顯示為 **SQL Server Analysis Services (MSSQLSERVER)**。  
@@ -93,7 +93,7 @@ ms.locfileid: "70151853"
   
 3.  在 [規則類型] `Port`中，按一下，然後按 **[下一步]**。  
   
-4.  在 [通訊協定和埠**** ] 中，選取`2383` [TCP]，然後輸入**特定的本機埠**。  
+4.  在 [通訊協定和埠**TCP** ] 中，選取`2383` [TCP]，然後輸入**特定的本機埠**。  
   
 5.  在 [執行動作] 中按一下 [允許連線]****，然後按一下 [下一步]****。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70151853"
   
 7.  在 [名稱] 中，輸入此規則的描述性名稱（例如`SQL Server Analysis Services (tcp-in) 2383`，），然後按一下 **[完成]**。  
   
-8.  如果要確認有無啟用遠端連接，請在不同的電腦上開啟 SQL Server Management Studio 或 Excel，然後在 [伺服器名稱][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** 中指定伺服器的網路名稱，以連接至 **。  
+8.  如果要確認有無啟用遠端連接，請在不同的電腦上開啟 SQL Server Management Studio 或 Excel，然後在 [伺服器名稱]**** 中指定伺服器的網路名稱，以連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
     > [!NOTE]  
     >  您必須先授與其他使用者此伺服器的權限，才可存取此伺服器。 如需詳細資訊，請參閱[物件和作業的存取權授權 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
@@ -114,9 +114,8 @@ ms.locfileid: "70151853"
     netsh advfirewall firewall add rule name="SQL Server Analysis Services inbound on TCP 2383" dir=in action=allow protocol=TCP localport=2383 profile=domain  
     ```  
   
-##  <a name="bkmk_named"></a>為 Analysis Services 的已命名實例設定 Windows 防火牆存取  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的具名執行個體可以在固定通訊埠上接聽，也可在動態指派的通訊埠上接聽 (若為後者，SQL Server Browser 服務會在連接時提供最新服務連接資訊)。  
+##  <a name="configure-windows-firewall-access-for-a-named-instance-of-analysis-services"></a><a name="bkmk_named"></a>為 Analysis Services 的已命名實例設定 Windows 防火牆存取  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的具名執行個體可以在固定通訊埠上接聽，也可在動態指派的通訊埠上接聽 (若為後者，SQL Server Browser 服務會在連接時提供最新服務連接資訊)。  
   
  SQL Server Browser 服務會接聽 TCP 通訊埠 2382。 不使用 UDP。 TCP 是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]唯一使用的傳輸通訊協定。  
   
@@ -130,9 +129,9 @@ ms.locfileid: "70151853"
   
  如果您無法使用 SQL Server Browser 服務，您必須在連接字串中指派固定通訊埠，略過網域名稱解析。 在沒有 SQL Server Browser 服務的情況下，所有用戶端連接皆必須在連接字串中加入通訊埠編號 (例如 AW-SRV01:54321)。  
   
- **選項1：使用動態通訊埠指派，並解除封鎖對 SQL Server Browser 服務的存取**  
+ **選項 1：使用動態通訊埠指派，並解除對 SQL Server Browser 服務存取的封鎖**  
   
- 當服務啟動時， `MSOLAP$InstanceName`會建立 Analysis Services 之已命名實例的動態通訊埠指派。 服務預設會宣告所找到的第一個可用通訊埠編號，而且每次重新啟動服務時，都會使用不同的通訊埠編號。  
+  會在此服務啟動之時，建立 Analysis Services 之具名執行個體的動態通訊埠指派。 服務預設會宣告所找到的第一個可用通訊埠編號，而且每次重新啟動服務時，都會使用不同的通訊埠編號。  
   
  執行個體名稱解析是由 SQL Server Browser 服務處理。 如果要並用動態通訊埠指派與具名執行個體，必須解除對 SQL Server Browser 服務之 TCP 通訊埠 2382 的封鎖。  
   
@@ -147,7 +146,7 @@ ms.locfileid: "70151853"
   
 3.  在 [規則類型] `Port`中，按一下，然後按 **[下一步]**。  
   
-4.  在 [通訊協定和埠**** ] 中，選取`2382` [TCP]，然後輸入**特定的本機埠**。  
+4.  在 [通訊協定和埠**TCP** ] 中，選取`2382` [TCP]，然後輸入**特定的本機埠**。  
   
 5.  在 [執行動作] 中按一下 [允許連線]****，然後按一下 [下一步]****。  
   
@@ -157,7 +156,7 @@ ms.locfileid: "70151853"
   
 8.  若要確認是否已啟用遠端連線，請在不同的電腦上開啟 SQL Server Management Studio 或 Excel，然後使用下列格式指定伺服器的網路名稱和實例名稱，以連接到 Analysis Services \<： servername \\><\>instancename。 例如，在名稱為 **AW-SRV01** 且具有 **Finance** 具名執行個體的伺服器上，伺服器名稱為 **AW-SRV01\Finance**。  
   
- **選項2：針對已命名的實例使用固定通訊埠**  
+ **選項 2：針對具名執行個體使用固定通訊埠**  
   
  或者，您也可以指派固定通訊埠，然後解除封鎖該通訊埠的存取權限。 此方法相較於允許存取程式可執行檔，可以提供更好的稽核功能。 因此在存取任何 Analysis Services 執行個體時，建議您使用固定通訊埠的方法。  
   
@@ -195,7 +194,7 @@ ms.locfileid: "70151853"
     netsh advfirewall firewall add rule name="SQL Server Browser Services inbound on TCP 2382" dir=in action=allow protocol=TCP localport=2382 profile=domain  
     ```  
   
-##  <a name="bkmk_fixed"></a>針對預設或名為的實例使用固定通訊埠 Analysis Services  
+##  <a name="use-a-fixed-port-for-a-default-or-named-instance-of-analysis-services"></a><a name="bkmk_fixed"></a>針對預設或名為的實例使用固定通訊埠 Analysis Services  
  本節說明如何將 Analysis Services 設定為接聽固定通訊埠。 如果將 Analysis Services 安裝成具名執行個體，一般會使用固定通訊埠；但如果是因為商務或安全性需要而必須使用非預設的通訊埠指派，也可使用此方法。  
   
  請注意，使用固定通訊埠時，由於必須將通訊埠編號附加至伺服器名稱，因此將變更預設執行個體的連接語法。 例如連接到 SQL Server Management Studio 中接聽通訊埠 54321 的本機預設 Analysis Services 執行個體時，必須在 Management Studio 的 [連接到伺服器] 對話方塊中輸入 localhost:54321 做為伺服器名稱。  
@@ -214,11 +213,10 @@ ms.locfileid: "70151853"
   
 5.  以本機方式連接 (在 Management Studio 中)，然後從其他電腦上的用戶端應用程式以遠端方式連接，確認上述通訊埠是否已開啟。 若要使用 Management Studio，請以下列格式指定伺服器名稱，以連接到 Analysis Services 的預設\<實例： servername\<>： portnumber>。 若為已命名的實例，請將伺服器\<名稱指定\\為 servername\>><instancename。  
   
-##  <a name="bkmk_cluster"></a>Analysis Services 叢集的埠設定  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 容錯移轉叢集一定會接聽 TCP 通訊埠 2383，不論您將它安裝為預設執行個體還是具名執行個體。 在 Windows 容錯移轉叢集上安裝時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不會使用動態連接埠指派。 請務必在叢集中執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每個節點上開啟 TCP 2383。 如需叢集化 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的詳細資訊，請參閱 [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)(如何將 SQL Server Analysis Services 叢集化)。  
+##  <a name="port-configuration-for-an-analysis-services-cluster"></a><a name="bkmk_cluster"></a>Analysis Services 叢集的埠設定  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 容錯移轉叢集一定會接聽 TCP 通訊埠 2383，不論您將它安裝為預設執行個體還是具名執行個體。 在 Windows 容錯移轉叢集上安裝時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不會使用動態連接埠指派。 請務必在叢集中執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每個節點上開啟 TCP 2383。 如需叢集化 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的詳細資訊，請參閱 [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)(如何將 SQL Server Analysis Services 叢集化)。  
   
-##  <a name="bkmk_powerpivot"></a>PowerPivot for SharePoint 的埠設定  
+##  <a name="port-configuration-for-powerpivot-for-sharepoint"></a><a name="bkmk_powerpivot"></a>PowerPivot for SharePoint 的埠設定  
  根據使用的 SharePoint 版本， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的伺服器架構有本質上的不同。  
   
  **SharePoint 2013**  

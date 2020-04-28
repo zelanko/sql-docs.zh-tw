@@ -16,10 +16,10 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771492"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
@@ -51,11 +51,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
-|**type**|**tinyint**|訂閱者的類型：<br /><br /> ****  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]資料庫 1 = ODBC 資料來源**** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**登入**|**sysname**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
-|**許可權**|**sysname**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。|  
+|**type**|**tinyint**|訂閱者的類型：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]資料庫 1 = ODBC 資料來源**1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
+|**password**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。|  
 |**commit_batch_size**|**int**|不支援。|  
 |**status_batch_size**|**int**|不支援。|  
 |**flush_frequency**|**int**|不支援。|  
@@ -72,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|不支援。|  
 |**retrydelay**|**int**|不支援。|  
 |**描述**|**nvarchar(255)**|訂閱者的文字描述。|  
-|**security_mode**|**int**|實作的安全性模式：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> ****  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證|  
+|**security_mode**|**int**|實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證|  
 |**frequency_type2**|**int**|合併代理程式的執行頻率：<br /><br /> **1** = 一次<br /><br /> **2** = 視需要<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月相對<br /><br /> **64** = 自動啟動<br /><br /> **128** = 週期性|  
 |**frequency_interval2**|**int**|套用至*frequency_type*所設定之頻率的值。|  
 |**frequency_relative_interval2**|**int**|當*frequency_type*設定為32（每月相對）時，所用合併代理程式的日期：<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  

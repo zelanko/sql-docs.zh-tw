@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890363"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 處理工作編輯器 (Analysis Services 頁面)
@@ -36,20 +36,20 @@ ms.locfileid: "68890363"
   
  若要了解這個工作，請參閱 [Analysis Services 處理工作](control-flow/analysis-services-processing-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Analysis Services 連線管理員**  
  在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增]**** 以建立新的連接管理員。  
   
  **新增**  
  建立新的 Analysis Services 連接管理員。  
   
- **相關主題：** [Analysis Services 連接管理員](connection-manager/analysis-services-connection-manager.md)、[加入 ANALYSIS SERVICES 連線管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相關主題：** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)、 [加入 Analysis Services 連接管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **物件清單**  
  |屬性|描述|  
 |--------------|-----------------|  
 |**Object Name**|列出指定的物件名稱。|  
-|**型別**|列出指定的物件類型。|  
+|**類型**|列出指定的物件類型。|  
 |**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題**：多[維度模型物件處理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|列出指定物件的處理設定。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68890363"
  **影響分析**  
  執行選取之物件的影響分析。  
   
- **相關主題：** [[影響分析] 對話方塊 &#40;Analysis Services-多維度資料&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **相關主題：** [影響分析對話方塊 &#40;Analysis Services - 多維度資料&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批次設定摘要**  
  |屬性|描述|  
@@ -70,13 +70,13 @@ ms.locfileid: "68890363"
 |**處理順序**|指定循序地或在批次中處理物件；如果使用平行處理，請指定要並行處理的物件數目。|  
 |**交易模式**|指定循序處理的交易模式。|  
 |**維度錯誤**|指定發生錯誤時的工作行為。|  
-|**維度索引鍵錯誤記錄檔路徑**|指定記錄錯誤的檔案路徑。|  
+|**維度索引鍵錯誤記錄路徑**|指定記錄錯誤的檔案路徑。|  
 |**處理受影響的物件**|指出是否也處理相依物件或受影響的物件。|  
   
  **變更設定**  
  變更維度索引鍵中的處理選項和錯誤處理。  
   
- **相關主題：** [[變更設定] 對話方塊 &#40;Analysis Services-多維度資料&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **相關主題：** [變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

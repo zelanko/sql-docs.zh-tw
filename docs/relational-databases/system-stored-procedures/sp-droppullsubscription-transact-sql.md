@@ -16,10 +16,10 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771446"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)

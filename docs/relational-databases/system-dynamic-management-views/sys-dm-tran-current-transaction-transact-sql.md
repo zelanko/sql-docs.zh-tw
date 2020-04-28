@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4d1817910457d9d4e46dd1f923058ce98f02f51e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262626"
 ---
 # <a name="sysdm_tran_current_transaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
@@ -46,12 +46,12 @@ sys.dm_tran_current_transaction
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**transaction_id**|**Bigint**|目前快照集的交易識別碼。|  
-|**transaction_sequence_num**|**Bigint**|產生記錄版本之交易的序號。|  
+|**transaction_id**|**bigint**|目前快照集的交易識別碼。|  
+|**transaction_sequence_num**|**bigint**|產生記錄版本之交易的序號。|  
 |**transaction_is_snapshot**|**bit**|快照集隔離狀態。 如果交易是在快照集隔離下啟動，這個值就是 1。 否則，這個值便為 0。|  
-|**first_snapshot_sequence_num**|**Bigint**|產生快照集時作用中交易的最低交易序號。 執行時，快照集交易會產生當時所有作用中交易的快照集。 如果是非快照集交易，此資料行會顯示 0。|  
-|**last_transaction_sequence_num**|**Bigint**|全域序號。 這個值代表系統所產生的最後一個交易序號。|  
-|**first_useful_sequence_num**|**Bigint**|全域序號。 這個值代表最舊的交易序號，而這種交易具有必須保留在版本存放區的資料列版本。 您可以移除先前交易建立的資料列版本。|  
+|**first_snapshot_sequence_num**|**bigint**|產生快照集時作用中交易的最低交易序號。 執行時，快照集交易會產生當時所有作用中交易的快照集。 如果是非快照集交易，此資料行會顯示 0。|  
+|**last_transaction_sequence_num**|**bigint**|全域序號。 這個值代表系統所產生的最後一個交易序號。|  
+|**first_useful_sequence_num**|**bigint**|全域序號。 這個值代表最舊的交易序號，而這種交易具有必須保留在版本存放區的資料列版本。 您可以移除先前交易建立的資料列版本。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
@@ -120,7 +120,7 @@ first_useful_sequence_num
  由於 XSN-57 並不是快照集交易，因此 `first_snapshot_sequence_num` 是 `NULL`。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

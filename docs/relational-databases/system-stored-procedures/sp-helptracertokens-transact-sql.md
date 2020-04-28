@@ -16,10 +16,10 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771545"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
@@ -70,7 +70,7 @@ sp_helptracertokens [ @publication = ] 'publication'
  只有**系統管理員（sysadmin** ）固定伺服器角色、發行集資料庫中的**db_owner**固定資料庫角色，或散發資料庫中**db_owner**固定資料庫或**replmonitor**角色的成員，才能夠執行**sp_helptracertokenhistory**。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [測量異動複寫的延遲並驗證連接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [sp_deletetracertokenhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

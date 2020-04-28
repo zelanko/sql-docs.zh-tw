@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266576"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 (類型對應) (OracleToSQL)
@@ -28,13 +28,13 @@ ms.locfileid: "68266576"
   
 若要指定目前物件或物件類別的設定，請使用主要 SSMA 視窗中的 [**類型對應**] 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 下表顯示 [**類型對應**] 索引標籤選項：  
   
 **來源類型**  
 對應的 Oracle 資料類型。  
   
-**目標類型**  
+**目標型別**  
 指定之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 資料類型的目標資料類型。  
   
 如需 Oracle 類型對應的預設 SSMA，請參閱下一節中的表格。  
@@ -95,8 +95,8 @@ ms.locfileid: "68266576"
 |raw|varbinary(max)|  
 |real|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
-|signtype|smallint|  
-|smallint|smallint|  
+|signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |字串|varchar(max)|  
 |timestamp|datetime2|  
 |具有當地時區的時間戳記|datetimeoffset|  
@@ -165,7 +165,7 @@ ms.locfileid: "68266576"
 |原始 [*.。\*]|Varbinary [*]|  
 |real|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
-|smallint|smallint|  
+|SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |具有當地時區的時間戳記|datetimeoffset|  
 |具有當地時區的時間戳記 [*.。\*]|datetimeoffset [*]|  
@@ -247,8 +247,8 @@ ms.locfileid: "68266576"
 |原始 [8001 ... *]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |字串 [*.。8000]|Varchar [*]|  
 |string [8001.. *]|varchar(max)|  
 |timestamp|datetime2|  

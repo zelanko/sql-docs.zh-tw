@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530954"
 ---
 # <a name="developer39s-guide-database-engine"></a>開發人員&#39;s 指南（資料庫引擎）
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供了一組豐富的工具，可用來開發、管理和控制資料庫應用程式。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一組豐富的工具來開發、管理與控制資料庫應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

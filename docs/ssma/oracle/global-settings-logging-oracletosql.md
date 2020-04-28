@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264434"
 ---
 # <a name="global-settings-logging-oracletosql"></a>全域設定 (記錄) (OracleToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "68264434"
   
 若要存取此對話方塊，請在 [**工具**] 功能表上選取 [**通用設定**]，然後按一下左窗格底部的 [**記錄**] 按鈕。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **訊息層級**  
 下列選項適用于 [**訊息層級**] 底下：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68264434"
 |**收集器**|收集有關來源架構的中繼資料，並將其儲存至專案。|  
 |**轉換器**|將源資料庫物件的結構（例如資料表和預存程式）轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應的結構。|  
 |**資料移轉**|將源資料庫中的資料移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至。|  
-|**程式**|轉換器的子元件，會產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架構的腳本。|  
+|**格式器**|轉換器的子元件，會產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架構的腳本。|  
 |**圖形化使用者介面**|當您使用 SSMA 工具時所顯示的訊息。|  
 |**連結器**|解析 SQL 識別碼並提供資訊給其他元件。|  
 |**其他**|所有不在其他類別中的訊息。|  
@@ -47,7 +47,7 @@ ms.locfileid: "68264434"
 |-|-|  
 |**嚴重錯誤**|只將嚴重錯誤訊息寫入記錄檔。|  
 |**錯誤**|將錯誤和嚴重錯誤訊息寫入記錄檔。|  
-|**警告**|將警告、錯誤和嚴重錯誤訊息寫入記錄檔。|  
+|**Warning**|將警告、錯誤和嚴重錯誤訊息寫入記錄檔。|  
 |**資訊**|將資訊、警告、錯誤和嚴重錯誤訊息寫入記錄檔。|  
 |**偵錯**|將所有訊息（包括調試訊息）寫入至記錄檔。|  
   

@@ -13,23 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530888"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
   本主題將描述物件命名慣例以及任何物件名稱 (以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的程式碼或指令碼形式) 中無法使用的保留字和字元。  
   
-##  <a name="bkmk_Names"></a>命名慣例  
+##  <a name="naming-conventions"></a><a name="bkmk_Names"></a>命名慣例  
  每個物件都有在父集合的範圍內必須是唯一的 `Name` 和 `ID` 屬性。 例如，兩個維度可以擁有相同的名稱，前提是每個維度都位在不同的資料庫內。  
   
  雖然您可以手動指定它，但是在建立物件時通常會自動產生 `ID`。 一旦您開始建立模型之後，絕對不要變更 `ID`。 整個模型中的所有物件參考都是根據 `ID`。 因此，變更 `ID` 很容易導致模型損毀。  
   
- 
-  `DataSource` 和 `DataSourceView` 物件有顯著的命名慣例例外。 
-  `DataSource` 識別碼可以設定為一個非唯一的點 (.)，當做目前資料庫的參考。 第二個例外狀況為 `DataSourceView`，它會遵守針對 .NET Framework 中的 `DataSet` 物件所定義的命名慣例，其中會使用 `Name` 當做識別碼。  
+ `DataSource` 和 `DataSourceView` 物件有顯著的命名慣例例外。 `DataSource` 識別碼可以設定為一個非唯一的點 (.)，當做目前資料庫的參考。 第二個例外狀況為 `DataSourceView`，它會遵守針對 .NET Framework 中的 `DataSet` 物件所定義的命名慣例，其中會使用 `Name` 當做識別碼。  
   
  下列規則會套用到 `Name` 和 `ID` 屬性。  
   
@@ -41,7 +39,7 @@ ms.locfileid: "69530888"
   
 -   識別項的第一個字元沒有特殊規定。 第一個字元可能會是任何有效的字元。  
   
-##  <a name="bkmk_reserved"></a>保留字和字元  
+##  <a name="reserved-words-and-characters"></a><a name="bkmk_reserved"></a>保留字和字元  
  保留字為英文，而且會套用到物件名稱，而不是標題。 如果您不小心在物件名稱中使用保留字，將會發生驗證錯誤。 如果是多維度和資料採礦模型，底下所述的保留字在任何時候都無法在任何物件名稱中使用。  
   
  如果是資料庫相容性設定為 1103 的表格式模型，對於不符合擴充字元要求及某些用戶端應用程式命名慣例的特定物件而言，驗證規則已經鬆綁。 符合這些準則的資料庫受限於比較不嚴謹的驗證規則。 在此情況下，有可能物件名稱包含受限的字元而且依然通過驗證。  
@@ -68,12 +66,12 @@ ms.locfileid: "69530888"
   
  下表列出特定物件的無效字元。  
   
-|Object|無效的字元|  
+|Object|無效字元|  
 |------------|------------------------|  
 |`Server`|在命名伺服器物件時要遵守 Windows 伺服器命名慣例。 如需詳細資訊，請參閱[命名慣例（Windows）](/windows/desktop/DNS/naming-conventions) 。|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level`或`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension`或`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level` 或 `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` 或 `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |所有其他物件|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **例外狀況：當允許保留的字元時**  

@@ -18,10 +18,10 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770672"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
@@ -73,15 +73,15 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|當連接到訂閱者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**subscriber_provider**||非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的 OLE DB 提供者登錄所用的唯一程式設計識別碼 (PROGID)。 *此屬性只對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者有效。*|  
 |**subscriber_providerstring**||OLE DB 提供者特定的連接字串，用來識別資料來源。 *此屬性只對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者有效。*|  
-|**subscriptionstreams**||這是每個散發代理程式將數批變更並行套用在訂閱者時所能使用的連接數目。 發行者支援從1到**64**的值範圍。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者、Oracle 發行者或點對點訂閱，此屬性必須為**0** 。|  
+|**subscriptionstreams**||這是每個散發代理程式將數批變更並行套用在訂閱者時所能使用的連接數目。 發行者支援從1到**64**的值範圍。 **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者、Oracle 發行者或點對點訂閱，此屬性必須為**0** 。|  
 |**subscriber_type**|**1**|ODBC 資料來源伺服器|  
-||**第**|OLE DB 提供者|  
+||**3**|OLE DB 提供者|  
 |**memory_optimized**|**bit**|表示訂用帳戶支援記憶體優化資料表。 *memory_optimized*是**bit**，其中1等於 true （訂閱支援記憶體優化資料表）。|  
   
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 發行者不應指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  *publisher*發行者不應指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

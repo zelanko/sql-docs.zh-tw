@@ -16,10 +16,10 @@ ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aa9738232eae175c78596f741d3f1bcce0910b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887383"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 和 DefinedSize 屬性範例（VB）

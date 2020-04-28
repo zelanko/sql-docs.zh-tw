@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742828"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys.databases dm_exec_function_stats （Transact-sql）
@@ -40,37 +40,37 @@ ms.locfileid: "68742828"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|函數所在的資料庫識別碼。|  
 |**object_id**|**int**|函數的物件識別碼。|  
-|**type**|**char （2）**|物件的類型： FN = 純量值函式|  
-|**type_desc**|**Nvarchar （60）**|物件類型的描述： SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**Varbinary （64）**|這可以用來與從這個函式中執行的**dm_exec_query_stats**中的查詢相互關聯。|  
-|**plan_handle**|**Varbinary （64）**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。<br /><br /> 當原生編譯的函數查詢記憶體優化資料表時，一律會0x000。|  
+|**type**|**char(2)**|物件的類型： FN = 純量值函式|  
+|**type_desc**|**nvarchar(60)**|物件類型的描述： SQL_SCALAR_FUNCTION|  
+|**sql_handle**|**varbinary(64)**|這可以用來與從這個函式中執行的**dm_exec_query_stats**中的查詢相互關聯。|  
+|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。<br /><br /> 當原生編譯的函數查詢記憶體優化資料表時，一律會0x000。|  
 |**cached_time**|**datetime**|函數新增至快取的時間。|  
 |**last_execution_time**|**datetime**|上次執行函數的時間。|  
-|**execution_count**|**Bigint**|函式自上次編譯以來執行的次數。|  
-|**total_worker_time**|**Bigint**|此函式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。<br /><br /> 對於原生編譯的函式，如果多個執行花費的時間少於1毫秒， **total_worker_time**可能會不正確。|  
-|**last_worker_time**|**Bigint**|上次執行函數時所耗用的 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**min_worker_time**|**Bigint**|此函式在單次執行期間曾耗用的最小 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**max_worker_time**|**Bigint**|此函式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**total_physical_reads**|**Bigint**|此函式在編譯以來執行所執行的實體讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**last_physical_reads**|**Bigint**|上次執行函數時所執行的實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_physical_reads**|**Bigint**|此函式在單次執行期間曾執行的最小實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_physical_reads**|**Bigint**|此函式在單次執行期間曾執行的最大實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_logical_writes**|**Bigint**|這個函式在編譯後執行的邏輯寫入總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**last_logical_writes**|**Bigint**|上次執行計畫時修改的緩衝集區頁數。 如果已修改頁面，則不會計算寫入。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_logical_writes**|**Bigint**|這個函數在單次執行期間曾執行的最小邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_logical_writes**|**Bigint**|這個函數在單次執行期間曾執行的最大邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_logical_reads**|**Bigint**|此函式在編譯以來執行所執行的邏輯讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**last_logical_reads**|**Bigint**|上次執行函數時所執行的邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_logical_reads**|**Bigint**|此函式在單次執行期間曾執行的最小邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_logical_reads**|**Bigint**|此函式在單次執行期間曾執行的最大邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_elapsed_time**|**Bigint**|此函式的完成執行經歷的總時間（以微秒為單位）。|  
-|**last_elapsed_time**|**Bigint**|最近完成執行此函式的經過時間（以微秒為單位）。|  
-|**min_elapsed_time**|**Bigint**|此函式已完成執行的最小經過時間（以微秒為單位）。|  
-|**max_elapsed_time**|**Bigint**|此函式已完成執行的已耗用時間上限（以微秒為單位）。|  
-|**total_page_server_reads**|**Bigint**|此函式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
-|**last_page_server_reads**|**Bigint**|上次執行函數時所執行的頁面伺服器讀取數目。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
-|**min_page_server_reads**|**Bigint**|這個函式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
-|**max_page_server_reads**|**Bigint**|這個函式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|
+|**execution_count**|**bigint**|函式自上次編譯以來執行的次數。|  
+|**total_worker_time**|**bigint**|此函式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。<br /><br /> 對於原生編譯的函式，如果多個執行花費的時間少於1毫秒， **total_worker_time**可能會不正確。|  
+|**last_worker_time**|**bigint**|上次執行函數時所耗用的 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**min_worker_time**|**bigint**|此函式在單次執行期間曾耗用的最小 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**max_worker_time**|**bigint**|此函式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|此函式在編譯以來執行所執行的實體讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**last_physical_reads**|**bigint**|上次執行函數時所執行的實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_physical_reads**|**bigint**|此函式在單次執行期間曾執行的最小實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_physical_reads**|**bigint**|此函式在單次執行期間曾執行的最大實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_logical_writes**|**bigint**|這個函式在編譯後執行的邏輯寫入總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**last_logical_writes**|**bigint**|上次執行計畫時修改的緩衝集區頁數。 如果已修改頁面，則不會計算寫入。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_logical_writes**|**bigint**|這個函數在單次執行期間曾執行的最小邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_logical_writes**|**bigint**|這個函數在單次執行期間曾執行的最大邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_logical_reads**|**bigint**|此函式在編譯以來執行所執行的邏輯讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**last_logical_reads**|**bigint**|上次執行函數時所執行的邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_logical_reads**|**bigint**|此函式在單次執行期間曾執行的最小邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_logical_reads**|**bigint**|此函式在單次執行期間曾執行的最大邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_elapsed_time**|**bigint**|此函式的完成執行經歷的總時間（以微秒為單位）。|  
+|**last_elapsed_time**|**bigint**|最近完成執行此函式的經過時間（以微秒為單位）。|  
+|**min_elapsed_time**|**bigint**|此函式已完成執行的最小經過時間（以微秒為單位）。|  
+|**max_elapsed_time**|**bigint**|此函式已完成執行的已耗用時間上限（以微秒為單位）。|  
+|**total_page_server_reads**|**bigint**|此函式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
+|**last_page_server_reads**|**bigint**|上次執行函數時所執行的頁面伺服器讀取數目。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
+|**min_page_server_reads**|**bigint**|這個函式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
+|**max_page_server_reads**|**bigint**|這個函式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|
   
 ## <a name="permissions"></a>權限  
 

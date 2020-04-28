@@ -16,10 +16,10 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a02082715dfc77384ebfde58d4c29f94cd3dd44c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769067"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
@@ -67,7 +67,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="see-also"></a>另請參閱  
  [啟用交易式發行集的更新訂閱](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
  [升級複寫腳本 &#40;複寫 Transact-sql 程式設計&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [異動複寫的可更新訂閱](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_changeqreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
  [sp_helpqreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
   

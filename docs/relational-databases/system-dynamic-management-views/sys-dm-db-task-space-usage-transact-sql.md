@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ee20a77440fd769e813f8335148c2b67a34d7bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263957"
 ---
 # <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
@@ -44,10 +44,10 @@ ms.locfileid: "68263957"
 |**request_id**|**int**|工作階段內的要求識別碼。<br /><br /> 要求也叫作批次，可包含一或多項查詢。 一個工作階段可以同時有多項作用中要求。 如果使用平行執行計畫，則要求中的每一項查詢可啟動多個執行緒 (工作)。|  
 |**exec_context_id**|**int**|工作的執行內容識別碼。 如需詳細資訊，請參閱[dm_os_tasks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。|  
 |**database_id**|**smallint**|資料庫識別碼。|  
-|**user_objects_alloc_page_count**|**Bigint**|這項工作所保留或配置給使用者物件的頁數。|  
-|**user_objects_dealloc_page_count**|**Bigint**|這項工作已取消配置且不再保留給使用者物件的頁數。|  
-|**internal_objects_alloc_page_count**|**Bigint**|這項工作所保留或配置給內部物件的頁數。|  
-|**internal_objects_dealloc_page_count**|**Bigint**|這項工作已取消配置且不再保留給內部物件的頁數。|  
+|**user_objects_alloc_page_count**|**bigint**|這項工作所保留或配置給使用者物件的頁數。|  
+|**user_objects_dealloc_page_count**|**bigint**|這項工作已取消配置且不再保留給使用者物件的頁數。|  
+|**internal_objects_alloc_page_count**|**bigint**|這項工作所保留或配置給內部物件的頁數。|  
+|**internal_objects_dealloc_page_count**|**bigint**|這項工作已取消配置且不再保留給內部物件的頁數。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
@@ -97,13 +97,13 @@ ms.locfileid: "68263957"
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|一對一|  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [dm_db_session_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
- [dm_db_file_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+ [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   
 

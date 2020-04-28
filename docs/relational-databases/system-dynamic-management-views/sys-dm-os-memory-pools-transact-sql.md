@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbd5ce36c9d83eb6347bcba71c26c3fd71c4513d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265742"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
@@ -39,11 +39,11 @@ ms.locfileid: "68265742"
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|代表記憶體集區之項目的記憶體位址。 不可為 Null。|  
 |**pool_id**|**int**|一組集區中某個特定集區的識別碼。 不可為 Null。|  
-|**type**|**Nvarchar （60）**|物件集區的類型。 不可為 Null。 如需詳細資訊，請參閱[dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|**type**|**nvarchar(60)**|物件集區的類型。 不可為 Null。 如需詳細資訊，請參閱[dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
 |**name**|**nvarchar(256)**|這個記憶體物件之系統指派的名稱。 不可為 Null。|  
-|**max_free_entries_count**|**Bigint**|集區最多所能容納的可用項目數。 不可為 Null。|  
-|**free_entries_count**|**Bigint**|目前在集區中的可用項目數。 不可為 Null。|  
-|**removed_in_all_rounds_count**|**Bigint**|自  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體啟動之後，從集區移除的項目數。 不可為 Null。|  
+|**max_free_entries_count**|**bigint**|集區最多所能容納的可用項目數。 不可為 Null。|  
+|**free_entries_count**|**bigint**|目前在集區中的可用項目數。 不可為 Null。|  
+|**removed_in_all_rounds_count**|**bigint**|自  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體啟動之後，從集區移除的項目數。 不可為 Null。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
@@ -52,8 +52,7 @@ ms.locfileid: "68265742"
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="remarks"></a>備註  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件有時會使用一個共用集區架構，來快取異質、非靜態類型的資料。 集區架構比快取架構更簡單。 集區中所有的項目都視為相同。 集區在內部相當於記憶體 Clerk，可以取代記憶體 Clerk 使用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件有時會使用一個共用集區架構，來快取異質、非靜態類型的資料。 集區架構比快取架構更簡單。 集區中所有的項目都視為相同。 集區在內部相當於記憶體 Clerk，可以取代記憶體 Clerk 使用。  
   
 ## <a name="see-also"></a>另請參閱  
  

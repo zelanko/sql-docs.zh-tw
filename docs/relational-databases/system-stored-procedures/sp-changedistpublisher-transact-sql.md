@@ -16,10 +16,10 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771358"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -55,11 +55,11 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |屬性|值|描述|  
 |--------------|------------|-----------------|  
-|**主動**|**真正**|啟動發行者。|  
+|**作用中**|**true**|啟動發行者。|  
 ||**false**|停用發行者|  
 |**distribution_db**||散發資料庫的名稱。|  
-|**登入**||登入名稱。|  
-|**許可權**||提供之登入的增強式密碼。|  
+|**login**||登入名稱。|  
+|**password**||提供之登入的增強式密碼。|  
 |**security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。 *這無法針對非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者*進行變更。|  
 ||**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 *這無法針對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者*進行變更。|  
 |**working_directory**||用來儲存發行集資料和結構描述檔案的工作目錄。|  
@@ -76,7 +76,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_changedistpublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [查看和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   

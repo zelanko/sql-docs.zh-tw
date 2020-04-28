@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264545"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>進階物件選取 (OracleToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "68264545"
   
 使用此對話方塊之前，您可能會想要強制 SSMA 藉由轉換架構或儲存專案來載入所有中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **檢查所有專案**  
 在 [所有專案] 旁邊加入核取記號。 這些專案會立即在 [中繼資料瀏覽器] 中選取。  
   

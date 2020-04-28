@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e557ffae3c4a530f448e0dfe78594f3f2c63feaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893172"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多維度運算式 (MDX) 參考
@@ -23,8 +23,8 @@ ms.locfileid: "68893172"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[Mdx 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|描述 MDX 語言中 MDX 運算式、陳述式及指令碼可用的不同語法元素。|  
-|[Mdx 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|描述定義 MDX 語言的陳述式、運算子及函數。|  
+|[MDX 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|描述 MDX 語言中 MDX 運算式、陳述式及指令碼可用的不同語法元素。|  
+|[MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|描述定義 MDX 語言的陳述式、運算子及函數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 MDX 查詢多維度資料](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   

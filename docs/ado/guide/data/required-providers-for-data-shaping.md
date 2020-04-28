@@ -14,10 +14,10 @@ ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 732563fc2c4e1cc93beac8712d845b960ae56aaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68661271"
 ---
 # <a name="required-providers-for-data-shaping"></a>資料成形所需的提供者

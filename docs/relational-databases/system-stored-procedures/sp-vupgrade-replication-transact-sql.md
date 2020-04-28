@@ -16,10 +16,10 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771553"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
@@ -41,7 +41,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @login = ] 'login'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員登入。 *login*是**sysname**，預設值是 Null。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
+`[ @login = ] 'login'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
   
 > [!NOTE]  
 >  當您升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本時，會忽略這個參數。  
@@ -57,7 +57,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`這是在散發資料庫中建立新的系統物件時，所要使用的登入安全性模式。 *security_mode*是**bit** ，預設值是**0**。 如果**** 是 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則會使用驗證。 如果是**1**，則會使用 Windows 驗證。  
+`[ @security_mode = ] 'security_mode'`這是在散發資料庫中建立新的系統物件時，所要使用的登入安全性模式。 *security_mode*是**bit** ，預設值是**0**。 如果**0**是 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則會使用驗證。 如果是**1**，則會使用 Windows 驗證。  
   
 > [!NOTE]  
 >  當您升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本時，會忽略這個參數。  
@@ -72,7 +72,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_vupgrade_replication**。  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

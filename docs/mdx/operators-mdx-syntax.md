@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892108"
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
@@ -37,7 +37,7 @@ ms.locfileid: "68892108"
 |測試條件的真實性，例如 AND、OR、NOT 或 XOR。|[位元運算子](../mdx/bitwise-operators.md)|  
 |針對另一個值或運算式來比較某值。|[比較運算子](../mdx/comparison-operators.md)|  
 |永久或暫時將兩個字串結合成一個字串。|[串連運算子](../mdx/concatenation-operators.md)|  
-|永久或暫時將兩個集合運算式結合成單一集合。|[集合運算子](../mdx/set-operators.md)|  
+|永久或暫時將兩個集合運算式結合成單一集合。|[設定運算子](../mdx/set-operators.md)|  
 |在一個運算元上執行運算。|[一元運算子](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "68892108"
   
 -   XOR  
   
--   OR  
+-   或者  
   
  如需 MDX 中運算子的詳細資訊，請參閱 mdx[運算子參考 &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "68892108"
 |原始類型|所需類型|轉換|  
 |-------------------|-----------------|----------------|  
 |層級|設定|\<層級>。成員|  
-|階層|成員|\<階層>. defaultmember|  
-|成員|Tuple|（\<成員>）|  
-|Tuple|成員|\<元組> 專案（0）|  
+|階層|member|\<階層>. defaultmember|  
+|member|Tuple|（\<成員>）|  
+|Tuple|member|\<元組> 專案（0）|  
 |Tuple|純量|\<元組> 值|  
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 運算子參考 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Mdx 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

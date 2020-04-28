@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265692"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.databases dm_os_spinlock_stats （Transact-sql）
@@ -39,10 +39,10 @@ ms.locfileid: "68265692"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(256)**|Spinlock 類型的名稱。|  
-|次數|**Bigint**|執行緒嘗試取得 spinlock 並遭到封鎖的次數，因為另一個執行緒目前持有 spinlock。|  
-|順|**Bigint**|嘗試取得 spinlock 時，執行緒執行迴圈的次數。|  
-|spins_per_collision|**即時**|每個衝突的旋轉比例。|  
-|sleep_time|**Bigint**|在輪詢的事件中，執行緒花在睡眠狀態的時間量（以毫秒為單位）。|  
+|次數|**bigint**|執行緒嘗試取得 spinlock 並遭到封鎖的次數，因為另一個執行緒目前持有 spinlock。|  
+|順|**bigint**|嘗試取得 spinlock 時，執行緒執行迴圈的次數。|  
+|spins_per_collision|**real**|每個衝突的旋轉比例。|  
+|sleep_time|**bigint**|在輪詢的事件中，執行緒花在睡眠狀態的時間量（以毫秒為單位）。|  
 |輪詢之外機率|**int**|「旋轉」執行緒無法取得 spinlock 並產生排程器的次數。|  
 
 
@@ -67,7 +67,7 @@ GO
 >  如果重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將無法保存這些統計資料。 所有的資料都是從上次重設統計資料之後，或是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之後開始累加計算。  
   
 ## <a name="spinlocks"></a>執行緒同步鎖定  
- Spinlock 是輕量同步處理物件，用來序列化資料結構的存取，通常會在短時間內保存。 當執行緒嘗試存取由另一個執行緒持有的 spinlock 所保護的資源時，執行緒會執行迴圈，或「微調」並嘗試再次存取資源，而不是立即以閂鎖或其他資源來產生排程器等候. 執行緒會繼續旋轉，直到資源可供使用，或迴圈完成為止，此時執行緒會產生排程器並回到可執行檔佇列。 這種作法有助於減少過度的執行緒內容切換，但當 spinlock 的爭用很高時，可能會觀察到明顯的 CPU 使用率。
+ Spinlock 是輕量同步處理物件，用來序列化資料結構的存取，通常會在短時間內保存。 當執行緒嘗試存取由另一個執行緒所持有的 spinlock 所保護的資源時，執行緒會執行迴圈，或「微調」並嘗試再次存取資源，而不是立即以閂鎖或其他資源等候來產生排程器。 執行緒會繼續旋轉，直到資源可供使用，或迴圈完成為止，此時執行緒會產生排程器並回到可執行檔佇列。 這種作法有助於減少過度的執行緒內容切換，但當 spinlock 的爭用很高時，可能會觀察到明顯的 CPU 使用率。
    
  下表包含一些最常見 spinlock 類型的簡短描述。  
   
@@ -177,7 +177,7 @@ GO
 |HTTP|僅供內部使用。|
 |HTTP_CONNCACHE|僅供內部使用。|
 |HTTP_ENDPOINT|僅供內部使用。|
-|身分識別|僅供內部使用。|
+|IDENTITY|僅供內部使用。|
 |INDEX_CREATE|僅供內部使用。|
 |IO_DISPENSER_PAUSE|僅供內部使用。|
 |IO_RG_VOLUME_HASHTABLE|僅供內部使用。|
@@ -406,7 +406,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  
- [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
  [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 

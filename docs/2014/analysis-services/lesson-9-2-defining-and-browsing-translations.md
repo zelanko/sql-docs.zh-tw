@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493783"
 ---
 # <a name="defining-and-browsing-translations"></a>定義和瀏覽翻譯
@@ -26,8 +26,7 @@ ms.locfileid: "69493783"
   
 1.  開啟適用於 [日期]**** 維度的維度設計師，然後按一下 [翻譯]**** 索引標籤。  
   
-     此時會出現每一個維度物件以預設語言表示的中繼資料。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的預設語言是英文。  
+     此時會出現每一個維度物件以預設語言表示的中繼資料。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的預設語言是英文。  
   
 2.  在 [翻譯]**** 索引標籤的工具列上，按一下 [新增翻譯]**** 按鈕。  
   
@@ -65,8 +64,7 @@ ms.locfileid: "69493783"
   
 1.  切換到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的 Cube 設計師，然後再切換到 [翻譯]**** 索引標籤。  
   
-     此時會出現每一個 Cube 物件以預設語言表示的中繼資料，如下圖所示。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的預設語言是英文。  
+     此時會出現每一個 Cube 物件以預設語言表示的中繼資料，如下圖所示。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的預設語言是英文。  
   
      ![翻譯索引標籤中的預設語言](../../2014/tutorials/media/l9-translations-5.gif "翻譯索引標籤中的預設語言")  
   
@@ -96,7 +94,7 @@ ms.locfileid: "69493783"
   
 2.  順利完成部署之後，切換到 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]****。  
   
-3.  從 [資料]**** 窗格中移除所有階層和量值，然後在 [檢視方塊][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]** 清單中選取 ** 教學課程。  
+3.  從 [資料]**** 窗格中移除所有階層和量值，然後在 [檢視方塊]**** 清單中選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程。  
   
 4.  在 [中繼資料] 窗格中，展開 [量值]****，然後再展開 [網際網路銷售]****。  
   
@@ -125,7 +123,7 @@ ms.locfileid: "69493783"
      請注意，現在月份會以法文顯示，與量值名稱一樣。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 10 課：定義管理角色](lesson-10-defining-administrative-roles.md)  
+ [第10課：定義系統管理角色](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度翻譯](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

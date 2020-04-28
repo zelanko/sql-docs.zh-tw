@@ -11,20 +11,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264246"
 ---
 # <a name="data-migration-report--oracletosql"></a>資料移轉報告 (OracleToSQL)
 將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，[**資料移轉報表**] 對話方塊隨即出現。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **狀態**  
 顯示從來源到目標資料庫的資料移轉狀態。  
   
-**從**  
+**From**  
 來源資料表。  
   
 **自**  

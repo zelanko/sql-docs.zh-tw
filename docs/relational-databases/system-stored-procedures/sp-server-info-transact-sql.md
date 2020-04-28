@@ -18,10 +18,10 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702848"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
@@ -59,12 +59,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x. xx. xxxx*|  
-|**十大**|OWNER_TERM|owner|  
+|**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|資料表|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**十三**|TABLE_LENGTH<br /><br /> 指定資料表名稱的最大字元數目。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 指定資料表限定詞 (三部份資料表名稱的第一部份) 名稱的最大長度。|128|  
-|**次**|COLUMN_LENGTH<br /><br /> 指定資料行名稱的最大字元數目。|128|  
+|**15**|COLUMN_LENGTH<br /><br /> 指定資料行名稱的最大字元數目。|128|  
 |**1600**|IDENTIFIER_CASE<br /><br /> 指定資料庫 (系統目錄中的物件案例) 中的使用者自訂名稱 (資料表名稱、資料行名稱、預存程序名稱)。|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> 指定伺服器假設的初始交易隔離等級，它對應於 SQL-92 所定義的隔離等級。|2|  
 |**18**|COLLATION_SEQ<br /><br /> 指定這部伺服器的字元集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  

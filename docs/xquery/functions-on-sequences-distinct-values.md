@@ -16,10 +16,10 @@ ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68223729"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>序列的相關函式 - distinct-values

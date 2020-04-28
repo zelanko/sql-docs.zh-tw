@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530936"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
@@ -92,14 +92,13 @@ ms.locfileid: "69530936"
   
 6.  當處理完成時，請按一下 **[關閉]**。  
   
-##  <a name="bkmk_impactanalysis"></a>執行影響分析以識別物件相依性和作業範圍  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>執行影響分析以識別物件相依性和作業範圍  
   
 1.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中處理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]物件之前，您可以按一下其中一個 **[處理物件]** 對話方塊中的 **[影響分析]** ，來分析對相關物件的影響。  
   
 2.  以滑鼠右鍵按一下維度、Cube、量值群組或分割區，開啟 [處理物件]**** 對話方塊。  
   
-3.  按一下 **[影響分析]**。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會掃描模型，並報告與已選取進行處理物件相關之物件的重新處理需求。  
+3.  按一下 **[影響分析]**。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會掃描模型，並報告與已選取進行處理物件相關之物件的重新處理需求。  
   
 ### <a name="processing-objects-using-xmla"></a>使用 XMLA 處理物件  
   
@@ -123,13 +122,13 @@ ms.locfileid: "69530936"
   
 1.  從這個版本的 SQL Server 開始，您可以使用 Analysis Services PowerShell 指令程式處理物件。 下列指令程式可以以互動方式或指令碼執行：  
   
-    -   [Invoke-processcube 程式 Cmdlet](/powershell/module/sqlserver/invoke-processcube)  
+    -   [Invoke-ProcessCube 指令程式](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-processdimension Cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
+    -   [Invoke-ProcessDimension 指令程式](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [ProcessPartition Cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Invoke-ProcessPartition 指令程式](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [ASCmd 指令程式](/powershell/module/sqlserver/invoke-ascmd)，可用於執行包含處理命令的 XMLA、MDX 或 DMX 腳本。  
+    -   [Invoke-ASCmd Cmdlet](/powershell/module/sqlserver/invoke-ascmd)，可用來執行包含處理命令的 XMLA、MDX 或 DMX 指令碼。  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>使用 SQL Server Profiler 監視物件處理  
   
@@ -139,13 +138,13 @@ ms.locfileid: "69530936"
   
 3.  選擇下列事件：  
   
-    -   啟動和停止處理時所要顯示的**命令開始**和**命令結束**  
+    -   **[命令開始]** 和 **[命令結束]** 以顯示何時處理啟動和停止  
   
-    -   用來捕捉任何錯誤的**錯誤**  
+    -   **[錯誤]** 以擷取任何錯誤  
   
-    -   [**進度報表開始**]、[**目前的進度報表**] 和 [**進度報表結束**] 以報告處理狀態，並顯示用來抓取資料的 SQL 查詢  
+    -   **[進度報表開始]**、 **[目前的進度報表]** 和 **[進度報表結束]** 以報告處理狀態並顯示用來擷取資料的 SQL 查詢  
   
-    -   **執行 Mdx 腳本開始**和**執行 mdx 腳本結束**以顯示 cube 計算  
+    -   **[執行 MDX 指令碼開始]** 和 **[執行 MDX 指令碼結束]** 以顯示 Cube 計算  
   
     -   (選擇性) 如果您要診斷處理相關的效能問題，可加入鎖定事件  
   

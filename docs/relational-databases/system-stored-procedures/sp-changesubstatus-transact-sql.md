@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771332"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
@@ -66,7 +66,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**%**。 如果未指定發行集，則會影響所有*發行*集。  
   
-`[ @article = ] 'article'`這是發行項的名稱。 對發行集而言，它必須是唯一的。 ** 發行項**** **%** 是 sysname，預設值是。 如果未指定發行項 *，則會*影響所有發行項。  
+`[ @article = ] 'article'`這是發行項的名稱。 對發行集而言，它必須是唯一的。 *article*發行項**sysname** **%** 是 sysname，預設值是。 如果未指定發行項 *，則會*影響所有發行項。  
   
 `[ @subscriber = ] 'subscriber'`這是要變更狀態的訂閱者名稱。 *訂閱者*是**sysname**，預設值是**%**。 如果未指定「*訂閱者*」，則會針對指定之發行項的所有訂閱者變更狀態。  
   
@@ -74,9 +74,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |值|描述|  
 |-----------|-----------------|  
-|**主動**|已同步處理訂閱者，正在接收資料。|  
+|**作用中**|已同步處理訂閱者，正在接收資料。|  
 |**非使用**|訂閱者項目存在，但不含訂閱。|  
-|**已訂閱**|訂閱者在要求資料，但尚未同步處理。|  
+|**subscribed**|訂閱者在要求資料，但尚未同步處理。|  
   
 `[ @previous_status = ] 'previous_status'`這是訂用帳戶的先前狀態。 *previous_status*是**sysname**，預設值是 Null。 這個參數可讓您變更目前具有該狀態的任何訂用帳戶，藉此允許一組特定訂用帳戶的群組函式（例如，將所有作用中的訂閱設定回**訂閱**）。  
   
@@ -90,11 +90,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |值|描述|  
 |-----------|-----------------|  
-|**1**|第一頁|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
 |NULL (預設值)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是 Null。  
@@ -104,9 +104,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4**|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|Hour|  
 |NULL (預設值)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
@@ -151,7 +151,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者上變更發行項屬性時，不應使用「發行者」。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493898"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>依次要屬性來排序屬性成員
@@ -75,7 +75,7 @@ ms.locfileid: "69493898"
   
 1.  切換至 [客戶] 維度之 [維度設計師] 的 [瀏覽器]**** 索引標籤，然後瀏覽 [通勤距離]**** 屬性階層的成員。  
   
-     請注意，這個屬性階層的成員是依據成員索引鍵的 ASCII 值排序。 在這種情形下，按照屬性名稱或索引鍵排序並不會將通勤距離從小排到大。 在這項工作中，您會根據 **CommuteDistanceSort** 具名計算來排序屬性階層的成員，而適當的排序編號將歸因於資料行的每一個相異值。 為了節省時間，這個具名計算已經新增至 **DW 資料來源檢視的** Customer [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料表。 您可以切換至這個資料來源檢視，以便檢視此具名計算中使用的 SQL 指令碼。 如需詳細資訊，請參閱[在資料來源 View 中定義指名的計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)。  
+     請注意，這個屬性階層的成員是依據成員索引鍵的 ASCII 值排序。 在這種情形下，按照屬性名稱或索引鍵排序並不會將通勤距離從小排到大。 在這項工作中，您會根據 **CommuteDistanceSort** 具名計算來排序屬性階層的成員，而適當的排序編號將歸因於資料行的每一個相異值。 為了節省時間，這個具名計算已經新增至 **DW 資料來源檢視的** Customer [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料表。 您可以切換至這個資料來源檢視，以便檢視此具名計算中使用的 SQL 指令碼。 如需詳細資訊，請參閱[在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)。  
   
      下圖顯示 [通勤距離]**** 屬性階層的成員，它們是按照成員索引鍵的 ASCII 值來排序。  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893591"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
@@ -85,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基本概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

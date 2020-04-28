@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148650"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
@@ -33,8 +33,7 @@ ms.locfileid: "70148650"
   
 -   批次執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 以批次方式處理陳述式來改善網路效能。  
   
--   擷取 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 允許將任何作業擷取到指令碼中。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會使用這個功能來為作業編碼，而不是立即執行它。  
+-   擷取 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 允許將任何作業擷取到指令碼中。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會使用這個功能來為作業編碼，而不是立即執行它。  
   
 -   使用 WMI 提供者管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 可以用程式設計的方式來啟動、停止和暫停 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
@@ -54,31 +53,28 @@ ms.locfileid: "70148650"
   
 -   用於建立唯讀資料庫複本的快照集資料庫。  
   
--   
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 可支援以訊息為基礎的通訊。 如需詳細資訊，請參閱[SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)。  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 可支援以訊息為基礎的通訊。 如需詳細資訊，請參閱[SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件多個名稱的同義字支援。 如需詳細資訊，請參閱[同義字 &#40;資料庫引擎&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件多個名稱的同義字支援。 如需詳細資訊，請參閱[同義字 &#40;資料庫引擎&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)。  
   
 -   Database Mail 的管理，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立電子郵件伺服器、電子郵件設定檔和電子郵件帳戶。 如需詳細資訊，請參閱 [Database Mail](../../relational-databases/database-mail/database-mail.md)。  
   
 -   已註冊的伺服器支援，可用於註冊連接資訊。 如需詳細資訊，請參閱[註冊伺服器](../../tools/sql-server-management-studio/register-servers.md)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的追蹤和重新執行。 如需詳細資訊，請參閱[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)和[擴充事件](../../relational-databases/extended-events/extended-events.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的追蹤和重新執行。 如需詳細資訊，請參閱[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)和[擴充事件](../../relational-databases/extended-events/extended-events.md)。  
   
 -   憑證和金鑰的支援，可用於安全性控制。 如需詳細資訊，請參閱[加密](../../relational-databases/security/encryption/encryption-hierarchy.md)階層。  
   
 -   DDL 觸發程序，可在 DDL 事件發生時加入功能。 如需詳細資訊，請參閱 [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。  
   
- SMO 命名空間為 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件。 這表示在使用 SMO 物件以前，必須從 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版安裝 Common Language Runtime。 預設會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 選項將 SMO 組件安裝到全域組件快取 (GAC) 中。 這些元件位於 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\。 如需詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件集。  
+ SMO 命名空間為 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件。 這表示在使用 SMO 物件以前，必須從 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版安裝 Common Language Runtime。 預設會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 選項將 SMO 組件安裝到全域組件快取 (GAC) 中。 這些元件位於 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\。 如需詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件。  
   
 ## <a name="smo-classes"></a>SMO 類別  
  SMO 類別包含兩種類別目錄：執行個體類別和公用程式類別。  
   
  **執行個體類別**  
   
- 執行個體類別代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，例如伺服器、資料庫、資料表、觸發程序和預存程序。 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>類別是用來建立與實例的連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並控制傳送給它的命令的捕捉模式。  
+ 執行個體類別代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，例如伺服器、資料庫、資料表、觸發程序和預存程序。  類別是用來建立與  執行個體的連接，並控制傳送給它之命令的擷取模式。  
   
  SMO 執行個體物件會組成一個代表資料庫伺服器階層的階層。 最上面是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，底下是資料庫，隨後的則是資料庫、資料行、觸發程序等等。 如果一個父項對多個子項的關聯性符合邏輯 (例如具有一或多個資料行的資料表)，則子項會由物件的集合來表示。 否則子項只會由物件表示。  
   
@@ -162,8 +158,7 @@ ms.locfileid: "70148650"
   
  **頁面確認**  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 物件表示資料庫頁面確認選項。  
+ <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 物件表示資料庫頁面確認選項。  
   
  **快照集資料庫**  
   
@@ -171,13 +166,11 @@ ms.locfileid: "70148650"
   
  **Service Broker**  
   
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和它的功能是由一組物件所表示。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和它的功能是由一組物件所表示。  
   
  **索引增強功能**  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引增強功能是由 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件中的新屬性所表示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引增強功能是由 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件中的新屬性所表示。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫管理物件概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  

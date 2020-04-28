@@ -16,10 +16,10 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769048"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
@@ -55,7 +55,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|散發代理程式|  
+|**0** (預設)|散發代理程式|  
 |**1**|合併代理程式|  
   
 `[ @frequency_type = ] frequency_type`這是用來排程散發代理程式的頻率。 *frequency_type*是**int**，而且可以是下列其中一個值。  
@@ -64,12 +64,12 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64** （預設值）|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
   
 `[ @frequency_interval = ] frequency_interval`這是要套用至*frequency_type*所設定之頻率的值。 *frequency_interval*是**int**，預設值是**1**。  
   
@@ -77,11 +77,11 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1** （預設值）|第一頁|  
-|**2**|秒|  
+|**1** (預設值)|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是**0**。  
   
@@ -90,9 +90,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4** （預設值）|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4** （預設值）|Minute|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是**5**。  
   
@@ -107,7 +107,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 發行者不應指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  *publisher*發行者不應指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

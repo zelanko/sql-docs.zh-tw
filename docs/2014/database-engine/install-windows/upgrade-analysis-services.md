@@ -21,17 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889188"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式來升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關以 SharePoint [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]模式升級的詳細資訊，請參閱[升級 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)。 如需升級現有 SQL Server 實例的詳細資訊，請參閱[使用安裝精靈升級至 SQL Server 2014 &#40;安裝程式&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
 ## <a name="known-upgrade-issues"></a>已知的升級問題  
- 在升級至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之前，請檢查下列事項：  
+ 在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之前，請檢閱下列文章：  
   
 -   [SQL Server 2014 版本](https://go.microsoft.com/fwlink/?LinkID=296445)資訊。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68889188"
   
 -   [支援的版本與版本升級](supported-version-and-edition-upgrades.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [檢查 System Configuration Checker 的參數](check-parameters-for-the-system-configuration-checker.md)  
   

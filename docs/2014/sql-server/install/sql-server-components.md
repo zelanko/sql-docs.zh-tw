@@ -22,16 +22,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811095"
 ---
 # <a name="sql-server-components"></a>SQL Server 元件
   您可以[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]針對已安裝、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的本機或遠端電腦執行 Upgrade Advisor 分析 Wizard。 升級前分析的第一個步驟是識別要分析的電腦和元件。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **電腦名稱稱**  
  指定要分析之電腦的名稱。 Upgrade Advisor 會在 [**伺服器名稱**] 方塊中填入本機電腦名稱稱。 您也可以使用 "." 和 "localhost" 來連接至本機電腦。  
   

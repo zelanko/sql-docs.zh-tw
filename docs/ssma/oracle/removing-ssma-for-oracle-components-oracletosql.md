@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266557"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>移除 SSMA for Oracle 元件 (OracleToSQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68266557"
   
 **卸載 SSMA**  
   
-1.  在 [控制台] 中，開啟 ****[新增或移除程式]。  
+1.  在 [控制台] 中，開啟 [新增或移除程式]。  
   
 2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)]選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [移轉小幫手**] 做為 [Oracle]，然後按一下 [**移除**]。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68266557"
   
 **卸載擴充功能套件**  
   
-1.  在 [控制台] 中，開啟 ****[新增或移除程式]。  
+1.  在 [控制台] 中，開啟 [新增或移除程式]。  
   
 2.  選取 [ **Microsoft SQL Server 移轉小幫手 Oracle 延伸模組套件**]，然後按一下 [**移除**]。  
   

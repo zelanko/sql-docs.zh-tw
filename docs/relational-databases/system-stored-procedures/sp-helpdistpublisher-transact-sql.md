@@ -16,10 +16,10 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770955"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
@@ -48,13 +48,13 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|發行者的名稱。|  
 |**distribution_db**|**sysname**|指定之發行者的散發資料庫。|  
-|**security_mode**|**int**|安全性模式只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
-|**登入**|**sysname**|登入名稱只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。|  
-|**許可權**|**Nvarchar （524）**|傳回的密碼 (以簡單加密形式)。 **系統管理員（sysadmin**）以外的使用者的密碼為 Null。|  
-|**主動**|**bit**|遠端發行者是否利用本機伺服器來作為散發者：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**security_mode**|**int**|安全性模式只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**login**|**sysname**|登入名稱只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。|  
+|**password**|**Nvarchar （524）**|傳回的密碼 (以簡單加密形式)。 **系統管理員（sysadmin**）以外的使用者的密碼為 Null。|  
+|**作用中**|**bit**|遠端發行者是否利用本機伺服器來作為散發者：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**working_directory**|**nvarchar(255)**|工作目錄的名稱。|  
 |**trusted**|**bit**|當發行者連接到散發者時，是否需要密碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]在和更新版本中，這應該一律傳回**0**，表示需要密碼。|  
-|**thirdparty_flag**|**bit**|發行集是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用，或由協力廠商應用程式啟用：<br /><br /> ****  = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle 或 oracle 閘道發行者。<br /><br /> **1** = 發行者已與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用協力廠商應用程式整合。|  
+|**thirdparty_flag**|**bit**|發行集是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用，或由協力廠商應用程式啟用：<br /><br /> **0**  = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle 或 oracle 閘道發行者。<br /><br /> **1** = 發行者已與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用協力廠商應用程式整合。|  
 |**publisher_type**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|發行者之 OLE DB 資料來源的名稱。|  
 |**storage_connection_string**|**nvarchar(4000)**|Azure SQL Database 中的散發者或發行者時，工作目錄的儲存體存取金鑰。|  
@@ -71,7 +71,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
  **系統管理員（sysadmin** ）固定伺服器角色的成員，可以針對使用本機伺服器做為散發者的任何發行者執行**sp_helpdistpublisher** 。 **Db_owner**固定資料庫角色的成員或散發資料庫中的**replmonitor**角色，可能會針對使用該散發資料庫的任何發行者執行**sp_helpdistpublisher** 。 在指定*發行者*端之發行集的發行集存取清單中的使用者，可能會執行**sp_helpdistpublisher**。 如果未指定*publisher* ，則會傳回使用者有權存取之所有發行者的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [查看和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  

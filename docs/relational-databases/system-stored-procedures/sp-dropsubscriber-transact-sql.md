@@ -16,10 +16,10 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768290"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)

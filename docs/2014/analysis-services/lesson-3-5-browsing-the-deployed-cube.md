@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493980"
 ---
 # <a name="browsing-the-deployed-cube"></a>瀏覽已部署的 Cube
@@ -22,7 +22,7 @@ ms.locfileid: "69493980"
   
 ### <a name="to-browse-the-deployed-cube"></a>瀏覽已部署的 Cube  
   
-1.  若要切換至中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 [Cube 設計師]，請在 [方案總管的 [cube] 資料夾中，按兩下 [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學**課程] Cube。 ****  
+1.  若要切換至中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 [Cube 設計師]，請在 [方案總管的 [cube] 資料夾中，按兩下 [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學**課程] Cube。 **Cubes**  
   
 2.  開啟 [瀏覽器]**** 索引標籤，然後按一下設計師工具列上的 [重新連接]**** 按鈕。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "69493980"
      ![依區域和產品線區分的網際網路銷售額](../../2014/tutorials/media/l3-cube-browser-finish.gif "依區域和產品線區分的網際網路銷售額")  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課：定義進階屬性和維度屬性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [第4課：定義 Advanced 屬性和維度屬性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

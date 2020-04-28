@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255604"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -46,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|屬性|**Varchar（128**|與這份計畫相關聯的屬性名稱。 緊接在這個下的資料表會列出可能的屬性、其資料類型，以及其描述。|  
+|屬性|**varchar(128)**|與這份計畫相關聯的屬性名稱。 緊接在這個下的資料表會列出可能的屬性、其資料類型，以及其描述。|  
 |value|**sql_variant**|與這份計畫相關聯的屬性值。|  
 |is_cache_key|**bit**|指出屬性是否作為計畫快取查閱金鑰的一部分使用。|  
 
@@ -64,8 +64,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |date_first|**tinyint**|先顯示日期的值。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。|  
 |status|**int**|屬於快取查閱索引鍵一部分的內部狀態位元。|  
 |required_cursor_options|**int**|使用者指定的資料指標選項，例如資料指標類型。|  
-|acceptable_cursor_options|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會隱含轉換的目標資料指標選項，以支援執行陳述式。 例如，使用者可能指定動態資料指標，但查詢最佳化工具可以將這種資料指標類型轉換成靜態資料指標。|  
+|acceptable_cursor_options|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會隱含轉換的目標資料指標選項，以支援執行陳述式。 例如，使用者可能指定動態資料指標，但查詢最佳化工具可以將這種資料指標類型轉換成靜態資料指標。|  
 |inuse_exec_context|**int**|目前正在執行使用查詢計畫的批次數目。|  
 |free_exec_context|**int**|目前未使用的查詢計劃快取執行內容數目。|  
 |hits_exec_context|**int**|從計畫快取取得並重複使用執行內容的次數，這可減少重新編譯 SQL 陳述式的負擔。 這是到目前為止所有批次執行的總值。|  
@@ -168,11 +167,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

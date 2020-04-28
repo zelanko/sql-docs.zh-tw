@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652430"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652430"
 
   編譯提交之資料指標陳述式或批次的計畫，然後建立及擴展資料指標。 sp_cursorprepexec 結合 sp_cursorprepare 和 sp_cursorexecute 的功能。 這個程式的叫用方式是在表格式資料流程（TDS）封包中指定 ID = 5。  
   
- ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,7 +59,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  指定 stmt 值的規則與 sp_cursoropen 相同，唯一的例外是*stmt*字串資料類型必須是**Ntext**。  
   
- *選項*  
+ *options*  
  傳回資料指標結果集資料行描述的選擇性參數。 * 選項需要下列**int**輸入值。  
   
 |值|描述|  

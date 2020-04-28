@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892027"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 資料庫的擴充欄位屬性 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料處理延伸模組支援擴充欄位[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]屬性。 擴充欄位屬性是除了欄位屬性 `Value` 和 `IsMissing` 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 您可以在報表中包含擴充欄位屬性值，方法是撰寫使用內`Fields`建集合依名稱指定的運算式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 `Value` 和 `IsMissing` 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 您可以在報表中包含擴充欄位屬性值，方法是撰寫使用內`Fields`建集合依名稱指定的運算式。  
   
  擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源共通的屬性，這類屬性會對應到特定欄位屬性名稱，而且可透過內建的 `Fields` 集合按照名稱存取。 自訂屬性則是各個資料提供者專有的屬性，這類屬性可透過內建的 `Fields` 集合存取，但只能透過使用擴充屬性名稱做為字串的語法。  
   
@@ -29,16 +29,16 @@ ms.locfileid: "68892027"
   
  若要參考未預先定義的擴充屬性，請在運算式中使用下列語法：  
   
--   *欄位!FieldName （"PropertyName"）*  
+-   *Fields!FieldName("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>預先定義的欄位屬性  
  在大多數情況下，預先定義的欄位屬性會套用至量值、層級或維度。 預先定義的欄位屬性必須有儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源中的對應值。 如果值不存在，或者 (例如) 您在層級上指定了僅限量值的欄位屬性，則屬性會傳回 Null 值。  
   
  您可以使用下列任一語法，從運算式參考預先定義的屬性：  
   
--   *欄位!FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
--   *欄位!FieldName （"PropertyName"）*  
+-   *Fields!FieldName("PropertyName")*  
   
  下表提供您可以使用之預先定義的欄位屬性清單。  
   
@@ -123,7 +123,7 @@ CELL PROPERTIES
 |-------------------|-----------------|  
 |一月|2,481|  
 |二月|2,684|  
-|三月|2,749|  
+|3 月|2,749|  
 |四月|2,739|  
   
  這些屬性雖然是 MDX 選取陳述式的一部分，但是卻不會出現在結果集資料行中， 然而，報表還是可以透過使用擴充屬性功能來使用這些資料。 在的 [MDX 查詢結果] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]窗格中，您可以按兩下資料格，並查看資料格屬性值（如果 cube 中已設定的話）。 如果按兩下包含 1,379 的第一個 [Order Count] 資料格，就會出現內含下列資料格屬性的快顯視窗：  
@@ -150,7 +150,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [運算式中的內建集合 &#40;報表產生器和 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

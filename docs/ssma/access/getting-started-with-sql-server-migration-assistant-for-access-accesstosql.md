@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259919"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>開始使用 SQL Server 移轉小幫手進行存取（AccessToSQL）
@@ -107,7 +107,7 @@ SSMA 有兩個工具列： [專案] 工具列和 [遷移] 工具列。
   
 |按鈕|函式|  
 |----------|------------|  
-|**轉換、載入和遷移**|會轉換 Access 資料庫、將已轉換的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件載入或 AZURE sql db，並將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料移轉至或 azure sql db，全都在一個步驟中進行。|  
+|**轉換、載入和移轉**|會轉換 Access 資料庫、將已轉換的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件載入或 AZURE sql db，並將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料移轉至或 azure sql db，全都在一個步驟中進行。|  
 |**建立報表**|將選取的存取架構轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為或 AZURE SQL DB 語法，然後建立報表以顯示轉換成功的程度。<br /><br />只有在 [存取中繼資料瀏覽器] 中選取物件時，才能使用此命令。|  
 |**轉換架構**|將選取的存取架構轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為或 AZURE SQL DB 架構。<br /><br />只有在 [存取中繼資料瀏覽器] 中選取物件時，才能使用此命令。|  
 |**遷移資料**|將資料從 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE SQL DB。 執行此命令之前，您必須先將存取架構轉換為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE sql db 架構，然後將物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 azure sql db。<br /><br />只有在 [存取中繼資料瀏覽器] 中選取物件時，才能使用此命令。|  
@@ -122,7 +122,7 @@ SSMA 包含下列功能表：
 |**編輯**|包含在詳細資料頁面中尋找和使用文字的命令，例如從 [ [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL 詳細資料] 窗格複製。 若要開啟 [**管理書簽**] 對話方塊，請在 [編輯] 功能表上，按一下 [管理書簽]。 在對話方塊中，您會看到現有書簽的清單。 您可以使用對話方塊右側的按鈕來管理書簽。|  
 |**檢視**|包含**同步處理中繼資料**的流覽命令。 這會同步存取中繼資料 Explorer 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE SQL DB 中繼資料瀏覽器之間的物件。 也包含用來顯示和隱藏 [**輸出**] 和 [**錯誤清單**] 窗格的命令，以及要使用版面配置來管理的選項**版面**配置。|  
 |**工具**|包含用來建立報表、匯出資料、遷移物件和資料、連結資料表，以及提供全域和專案設定對話方塊存取的命令。|  
-|**説明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
+|**說明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>輸出窗格和錯誤清單窗格  
 [ **View** ] 功能表提供命令來切換 [輸出] 窗格和 [錯誤清單] 窗格的可見度：  

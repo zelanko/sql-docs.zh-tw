@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265731"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
@@ -48,15 +48,15 @@ ms.locfileid: "68265731"
 |memory_clerk_address|**varbinary(8)**|與這個節點相關聯之記憶體 Clerk 的位址。 與 sys.databases 的一對一關聯性[dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address。|  
 |io_completion_worker_address|**varbinary(8)**|指派給這個節點之 IO 完成的工作者位址。 與 sys.databases 的一對一關聯性[dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address。|  
 |memory_node_id|**smallint**|這個節點所屬之記憶體節點的識別碼。 與 sys.databases 的多對一關聯性[dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md). memory_node_id。|  
-|cpu_affinity_mask|**Bigint**|識別與這個節點相關之 CPU 的點陣圖。|  
+|cpu_affinity_mask|**bigint**|識別與這個節點相關之 CPU 的點陣圖。|  
 |online_scheduler_count|**smallint**|此節點所管理的線上排程器數目。|  
 |idle_scheduler_count|**smallint**|沒有使用中工作者之線上排程器的數目。|  
 |active_worker_count|**int**|在這個節點所管理之所有排程器上使用中的工作者數目。|  
 |avg_load_balance|**int**|這個節點上每個排程器的平均工作數目。|  
-|timer_task_affinity_mask|**Bigint**|識別可指派計時器工作給本身之排程器的點陣圖。|  
-|permanent_task_affinity_mask|**Bigint**|識別可指派永久工作給本身之排程器的點陣圖。|  
+|timer_task_affinity_mask|**bigint**|識別可指派計時器工作給本身之排程器的點陣圖。|  
+|permanent_task_affinity_mask|**bigint**|識別可指派永久工作給本身之排程器的點陣圖。|  
 |resource_monitor_state|**bit**|每個節點都具有一個指派給本身的資源監視器。 資源監視器可能是執行中或閒置。 值 1 是表示執行中，而值 0 則表示閒置。|  
-|online_scheduler_mask|**Bigint**|識別這個節點的處理序相似性遮罩。|  
+|online_scheduler_mask|**bigint**|識別這個節點的處理序相似性遮罩。|  
 |processor_group|**smallint**|識別這個節點的處理器群組。|  
 |cpu_count |**int** |此節點可用的 Cpu 數目。 |
 |pdw_node_id|**int**|此散發所在節點的識別碼。<br /><br /> **適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  

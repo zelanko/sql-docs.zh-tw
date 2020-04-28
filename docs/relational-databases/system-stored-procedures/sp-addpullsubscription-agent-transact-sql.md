@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028947"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -133,13 +133,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|一次性|  
-|**2** （預設值）|隨選|  
-|**4**|每天|  
+|**2** (預設值)|隨選|  
+|**4**|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64**|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
   
 > [!NOTE]  
 >  指定值**64**會導致散發代理程式以連續模式執行。 這對應于設定代理程式的 **-連續**參數。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
@@ -150,11 +150,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1** （預設值）|第一頁|  
-|**2**|秒|  
+|**1** (預設值)|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是**1**。  
   
@@ -162,10 +162,10 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1** （預設值）|單次|  
-|**2**|秒|  
-|**4**|分鐘|  
-|**8**|小時|  
+|**1** (預設值)|單次|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是**1**。  
   
@@ -241,11 +241,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

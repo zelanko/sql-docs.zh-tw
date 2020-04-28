@@ -16,10 +16,10 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769032"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -107,7 +107,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |作用中|訂閱已初始化且已做好接受變更的準備。 當*sync_type*的值為 none、initialize with backup 或 replication support only 時，就會設定此選項。|  
-|已訂閱|訂閱需要初始化。 當*sync_type*的值為 [自動] 時，就會設定此選項。|  
+|subscribed|訂閱需要初始化。 當*sync_type*的值為 [自動] 時，就會設定此選項。|  
   
  [ @subscription_type=]'*subscription_type*'  
  這是訂閱的類型。 *subscription_type*是**Nvarchar （4）**，預設值是 push。 它可以是 push 或 pull。 push 訂閱的散發代理程式位於散發者端，而 pull 訂閱的散發代理程式位於訂閱者端。 *subscription_type*可以提取，以建立發行者已知的已命名提取訂閱。 如需詳細資訊，請參閱[訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)。  
@@ -123,7 +123,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |read only (預設值)|訂閱是唯讀的。 在訂閱者端的變更不會傳給發行者。|  
 |sync tran|啟用立即更新訂閱的支援。 不支援 Oracle 發行者使用這個值。|  
 |queued tran|啟用佇列更新的訂閱。 資料修改可以在訂閱者端進行、儲存在佇列中，再傳播給發行者。 不支援 Oracle 發行者使用這個值。|  
-|容錯移轉|啟用立即更新的訂閱，且利用佇列更新來做為容錯移轉。 資料修改可以在訂閱者端進行，再立即傳播給發行者。 如果發行者和訂閱者並未連接，便可以變更更新模式，以便將在訂閱者端進行的資料修改儲存在佇列中，直到發行者和訂閱者重新連接為止。 不支援 Oracle 發行者使用這個值。|  
+|failover|啟用立即更新的訂閱，且利用佇列更新來做為容錯移轉。 資料修改可以在訂閱者端進行，再立即傳播給發行者。 如果發行者和訂閱者並未連接，便可以變更更新模式，以便將在訂閱者端進行的資料修改儲存在佇列中，直到發行者和訂閱者重新連接為止。 不支援 Oracle 發行者使用這個值。|  
 |queued failover|將訂閱啟用成能夠改成立即更新模式的佇列更新訂閱。 資料修改可以在訂閱者端進行，儲存在佇列中，直到重建訂閱者和發行者之間的連接為止。 當建立連續連接時，更新模式可以改成立即更新。 不支援 Oracle 發行者使用這個值。|  
   
  請注意，如果訂閱的發行集允許 DTS，則不允許 synctran 和佇列交易的值。  
@@ -144,12 +144,12 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |1|一次性|  
 |2|隨選|  
-|4|每天|  
+|4|每日|  
 |8|每週|  
 |16|每月|  
 |32|每月相對|  
 |64（預設值）|自動啟動|  
-|128|週期性|  
+|128|重複執行|  
   
  [ @frequency_interval=]*frequency_interval*  
  這是要套用至*frequency_type*所設定之頻率的值。 *frequency_interval*是**int**，預設值是 Null。  
@@ -159,11 +159,11 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|1|第一頁|  
-|2|秒|  
+|1|First|  
+|2|Second|  
 |4|第三個|  
 |8|第四個|  
-|16|最後一頁|  
+|16|Last|  
 |NULL (預設值)||  
   
  [ @frequency_recurrence_factor=]*frequency_recurrence_factor*  
@@ -175,9 +175,9 @@ sp_addsubscription [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |1|單次|  
-|2|秒|  
-|4|分鐘|  
-|8|小時|  
+|2|Second|  
+|4|Minute|  
+|8|Hour|  
 |NULL||  
   
  [ @frequency_subday_interval=]*frequency_subday_interval*  
@@ -232,7 +232,7 @@ sp_addsubscription [ @publication = ] 'publication'
  指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 發行者不應指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  *publisher*發行者不應指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
  [ @backupdevicetype= ]'*backupdevicetype*'  
  指定從備份中初始化訂閱者時所用的備份裝置類型。 *backupdevicetype*是**Nvarchar （20）**，它可以是下列其中一個值：  
@@ -260,7 +260,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @fileidhint= ]*fileidhint*  
  識別要還原之備份組的序數值。 *fileidhint*是**int**，預設值是 Null。  
   
- [ @unload= ]** 卸載  
+ [ @unload= ]*unload*卸載  
  指定在從備份初始化完成之後，是否應該卸載磁帶備份裝置。 *unload*是**bit**，預設值是1。 1 表示應該卸載磁帶。 只有當*backupdevicetype*是磁帶時，才會使用*unload* 。  
   
  [ @subscriptionlsn= ]*subscriptionlsn*  
@@ -270,8 +270,7 @@ sp_addsubscription [ @publication = ] 'publication'
  這是在維護許多使用單一執行緒時所提供的交易式特性時，每個散發代理程式可用來將變更批次並行套用在訂閱者上的連接數目。 *subscriptionstreams*是**Tinyint**，預設值是 Null。 支援的值範圍是 1-64。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者、Oracle 發行者或點對點訂閱不支援這個參數。 每當使用訂閱資料流時，msreplication_subscriptions 資料表就會加入其他資料列 (每個資料流 1 個資料列) 並將 agent_id 設定為 NULL。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]Subscriptionstreams 不適用於設定為傳遞  的發行項。 若要使用 subscriptionstreams，請改將發行項設定為傳遞預存程序呼叫。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)]Subscriptionstreams 不適用於設定為傳遞  的發行項。 若要使用 subscriptionstreams，請改將發行項設定為傳遞預存程序呼叫。  
   
  [ @subscriber_type=]*subscriber_type*  
  這是訂閱者的類型。 *subscriber_type*是**Tinyint**，而且可以是下列其中一個值。  
@@ -280,8 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |0 (預設值)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預訂|  
 |1|ODBC 資料來源伺服器|  
-|2|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 資料庫|  
+|2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 資料庫|  
 |3|OLE DB 提供者|  
   
  [ @memory_optimized=]*memory_optimized*  
@@ -318,9 +316,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)   
  [為非 SQL Server 的訂閱者建立訂用帳戶](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

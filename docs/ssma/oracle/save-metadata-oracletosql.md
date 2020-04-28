@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266512"
 ---
 # <a name="save-metadata--oracletosql"></a>儲存中繼資料 (OracleToSQL)
@@ -34,10 +34,10 @@ SSMA 會視需要將中繼資料載入專案。 當您流覽中繼資料和轉�
 **全選**  
 選取所有列出的資料庫。  
   
-**Clear**  
+**明確**  
 清除所有遺失中繼資料之資料庫的核取方塊。 如果已載入中繼資料，則無法清除此核取方塊。  
   
-**另**  
+**儲存**  
 儲存專案，並載入具有遺漏中繼資料之所選資料庫的中繼資料。  
   
 **取消**  

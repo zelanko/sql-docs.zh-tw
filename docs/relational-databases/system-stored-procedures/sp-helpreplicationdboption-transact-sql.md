@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771535"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`限制結果集只包含已啟用指定之複寫選項*類型*值的資料庫。 *類型*為**sysname**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**公佈**|允許異動複寫。|  
 |**合併發行**|允許合併式複寫。|  
@@ -55,8 +55,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|資料庫名稱。|  
-|**號**|**int**|資料庫識別碼。|  
+|**name**|**sysname**|資料庫的名稱。|  
+|**id**|**int**|資料庫識別碼。|  
 |**transpublish**|**bit**|如果資料庫已啟用快照集或交易式發行，則為，值為**1**時，表示已啟用快照式或交易式發行。|  
 |**mergepublish**|**bit**|如果資料庫已啟用合併發行，則為，值為**1**時，表示已啟用合併發行。|  
 |**dbowner**|**bit**|如果使用者是**db_owner**固定資料庫角色的成員，則為，其中， **1**的值表示使用者是這個角色的成員。|  

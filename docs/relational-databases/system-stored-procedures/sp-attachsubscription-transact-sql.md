@@ -16,10 +16,10 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768975"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)

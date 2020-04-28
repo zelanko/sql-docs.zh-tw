@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771242"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
@@ -46,17 +46,17 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours`這是傳回曆程代理程式會話資訊的時間範圍（以小時為單位）。 *小時*是**int**，它可以是下列其中一個範圍。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |< **0**|傳回有關過去代理程式的執行資訊，最多可傳回 100 筆的執行資訊。|  
-|**0** （預設值）|傳回所有過去代理程式的執行資訊。|  
+|**0** (預設)|傳回所有過去代理程式的執行資訊。|  
 |> **0**|傳回過去*小時*數中發生之代理程式執行的資訊。|  
   
 `[ @session_type = ] session_type`根據會話結束結果來篩選結果集。 *session_type*是**int**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|**1** （預設值）|結果為重試或成功的代理程式工作階段。|  
+|**1** (預設值)|結果為重試或成功的代理程式工作階段。|  
 |**0**|結果為失敗的代理程式工作階段。|  
   
 `[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 在訂閱者端執行**sp_replmonitorhelpmergesession**時，會使用這個參數。  
@@ -73,7 +73,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**狀態**|**int**|代理程式執行狀態：<br /><br /> **1** = 啟動<br /><br /> **2** = 成功<br /><br /> **3** = 進行中<br /><br /> **4** = 閒置<br /><br /> **5** = 重試<br /><br /> **6** = 失敗|  
 |**StartTime**|**datetime**|時間代理程式作業工作階段已開始。|  
 |**EndTime**|**datetime**|時間代理程式作業工作階段已完成。|  
-|**有效期間**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
+|**Duration**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
 |**UploadedCommands**|**int**|代理程式工作階段期間所上傳的命令數。|  
 |**DownloadedCommands**|**int**|代理程式工作階段期間所下載的命令數。|  
 |**ErrorMessages**|**int**|代理程式工作階段期間所產生的錯誤訊息數。|  

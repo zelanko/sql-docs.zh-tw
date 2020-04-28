@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702780"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -76,10 +76,8 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|保留供未來使用。|  
 |**NUM_OUTPUT_PARAMS**|**int**|保留供未來使用。|  
 |**NUM_RESULT_SETS**|**int**|保留供未來使用。|  
-|**標記**|**Varchar （254）**|程序的描述。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
-|**PROCEDURE_TYPE**|**smallint**|程序類型。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會傳回 2.0。 這個值可以是下列其中一個值：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**備註**|**Varchar （254）**|程序的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**PROCEDURE_TYPE**|**smallint**|程序類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會傳回 2.0。 這個值可以是下列其中一個值：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>備註  
  為了將互通性提升到最高點，閘道用戶端應該只會採用 SQL 標準模式比對 (百分比 (%) 和底線 (_) 萬用字元)。  

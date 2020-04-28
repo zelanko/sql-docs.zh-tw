@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265972"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -43,10 +43,10 @@ ms.locfileid: "68265972"
 |**memory_address**|**varbinary(8)**|配置給與這個全文檢索目錄有關之母體擴展活動的記憶體緩衝區位址。|  
 |**name**|**nvarchar(128)**|使用中全文檢索目錄的名稱。|  
 |**is_paused**|**bit**|指出使用中全文檢索目錄的母體擴展是否已經暫停。|  
-|**狀態**|**int**|全文檢索目錄的目前狀態。 下列其中之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 已就緒<br /><br /> 2 = 已暫停<br /><br /> 3 = 暫時錯誤<br /><br /> 4 = 需要重新掛載<br /><br /> 5 = 已關閉<br /><br /> 6 = 默認備份<br /><br /> 7 = 已備份整個目錄<br /><br /> 8 = 目錄已損毀|  
-|**status_description**|**Nvarchar （120）**|使用中全文檢索目錄目前狀態的描述。|  
+|**status**|**int**|全文檢索目錄的目前狀態。 下列其中之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 已就緒<br /><br /> 2 = 已暫停<br /><br /> 3 = 暫時錯誤<br /><br /> 4 = 需要重新掛載<br /><br /> 5 = 已關閉<br /><br /> 6 = 默認備份<br /><br /> 7 = 已備份整個目錄<br /><br /> 8 = 目錄已損毀|  
+|**status_description**|**nvarchar(120)**|使用中全文檢索目錄目前狀態的描述。|  
 |**previous_status**|**int**|全文檢索目錄的先前狀態。 下列其中之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 已就緒<br /><br /> 2 = 已暫停<br /><br /> 3 = 暫時錯誤<br /><br /> 4 = 需要重新掛載<br /><br /> 5 = 已關閉<br /><br /> 6 = 默認備份<br /><br /> 7 = 已備份整個目錄<br /><br /> 8 = 目錄已損毀|  
-|**previous_status_description**|**Nvarchar （120）**|使用中全文檢索目錄先前狀態的描述。|  
+|**previous_status_description**|**nvarchar(120)**|使用中全文檢索目錄先前狀態的描述。|  
 |**worker_count**|**int**|目前在使用這個全文檢索目錄的執行緒數目。|  
 |**active_fts_index_count**|**int**|擴展中的全文檢索索引數目。|  
 |**auto_population_count**|**int**|正為此全文檢索目錄進行自動母體擴展的資料表數目。|  
