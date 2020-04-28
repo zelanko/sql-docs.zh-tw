@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228723"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>建立及設定可用性群組 (SQL Server)
@@ -34,8 +34,8 @@ ms.locfileid: "75228723"
   
  
   
-##  <a name="RelatedTasks"></a> 相關工作  
- **若要設定的伺服器實例[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
+ **為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
   
 -   [啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75228723"
   
 -   [具有 AlwaysOn 可用性群組 &#40;SQL Server 的消費者入門&#41;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
- **若要建立及設定新的可用性群組**  
+ **建立並設定新的可用性群組**  
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75228723"
   
 -   [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [管理可用性群組之資料庫的登入和作業 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
+-   [管理可用性群組之資料庫的登入及工作 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
  **疑難排解**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75228723"
   
 -   [針對失敗的新增檔案作業進行疑難排解 &#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "75228723"
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **影片：**  
+-   **視頻**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第 1 部：新一代高可用性解決方案簡介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

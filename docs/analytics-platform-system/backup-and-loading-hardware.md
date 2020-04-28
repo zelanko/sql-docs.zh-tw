@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401364"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>備份和載入硬體總覽-平行處理資料倉儲
@@ -25,7 +25,7 @@ ms.locfileid: "74401364"
 若要備份 PDW 資料庫，您需要一或多部備份伺服器。 您可以使用自己現有的硬體，或購買新的硬體。 如需詳細資訊，請參閱[取得和設定備份伺服器](acquire-and-configure-backup-server.md)。 這些指示包含[備份伺服器容量規劃工作表](backup-capacity-planning-worksheet.md)，可協助您規劃適當的備份解決方案。  
   
 ## <a name="acquire-and-configure-loading-servers"></a>取得和設定載入伺服器  
-![載入處理序](media/loading-process.png "載入處理序")  
+![正在載入進程](media/loading-process.png "載入處理序")  
   
 若要載入資料，您需要一或多個載入伺服器。 您可以使用您自己現有的 ETL 或其他伺服器，也可以購買新的伺服器。 如需詳細資訊，請參閱[取得和設定載入伺服器](acquire-and-configure-loading-server.md)。 這些指示包括 [[載入伺服器容量規劃] 工作表](loading-server-capacity-planning-worksheet.md)，可協助您規劃適當的載入解決方案。  
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401480"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得及設定平行處理資料倉儲的載入伺服器
 本文說明如何取得並設定載入伺服器做為非設備的 Windows 系統，以將資料載入提交至平行處理資料倉儲（PDW）。  
   
-## <a name="Basics"></a>操作  
+## <a name="basics"></a><a name="Basics"></a>基本概念  
 載入伺服器：  
   
 -   不一定要是單一伺服器。 您可以同時載入多個載入伺服器。  
@@ -32,18 +32,18 @@ ms.locfileid: "74401480"
   
 -   位於您自己的客戶網域中，而不是設備網域。 您的客戶網域與設備網域之間沒有信任關係。  
   
-## <a name="Step1"></a>步驟1：判斷容量需求  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>步驟1：判斷容量需求  
 載入系統可以設計為一或多個執行並行載入的載入伺服器。 每個載入伺服器都不需要專用於載入，只要它會處理工作負載的效能和儲存需求。  
   
 載入伺服器的系統需求，幾乎完全取決於您自己的工作負載。 使用 [[載入伺服器容量規劃] 工作表](loading-server-capacity-planning-worksheet.md)，以協助判斷您的容量需求。  
   
-## <a name="Step2"></a>步驟2：取得 Server  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>步驟2：取得 Server  
 瞭解您的容量需求之後，您就可以規劃需要購買或布建的伺服器和網路元件。 將下列需求清單併入您的購買方案，然後購買您的伺服器或布建現有的伺服器。  
   
-### <a name="R"></a>軟體需求  
+### <a name="software-requirements"></a><a name="R"></a>軟體需求  
 支援的作業系統：  
   
--   Windows Server 2012 或 Windows Server 2012 R2。 這些作業系統需要 FDR 網路介面卡。  
+-   Windows Server 2012 或 Windows Server 2012 R2。 這些作業系統需要 FDR 網路介面卡。  
   
 -   Windows Server 2008 R2。 此 OS 需要 DDR 網路介面卡。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "74401480"
   
 3.  購買2個雙埠卡的 FDR 未使用纜線，或單一端口卡的 1 FDR 雙絞線纜線。 FDR 的無法進行的纜線會將載入伺服器連線到設備不會的網路。 根據您的環境，纜線長度取決於載入伺服器和設備未通過交換器之間的距離。  
   
-## <a name="Step3"></a>步驟3：將伺服器連接到不會的網路  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>步驟3：將伺服器連接到不會的網路  
 使用下列步驟，將載入伺服器連線到不會的網路。 如果伺服器不是使用不會的網路，請略過此步驟。  
   
 1.  讓伺服器靠近設備，以便您可以將它連接到設備不會的網路。  
@@ -75,7 +75,7 @@ ms.locfileid: "74401480"
   
 5.  設定網路介面卡的「未通過」和「DNS」設定。 如需設定指示，請參閱設定不確定的[網路介面卡](configure-infiniband-network-adapters.md)。  
   
-## <a name="Step4"></a>步驟4：安裝載入工具  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>步驟4：安裝載入工具  
 用戶端工具可從 Microsoft 下載中心下載。 
 
 若要安裝 dwloader，請從用戶端工具執行 dwloader 安裝。
@@ -85,8 +85,8 @@ ms.locfileid: "74401480"
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>步驟5：開始載入  
-您現在已準備好開始載入資料。 如需詳細資訊，請參閱  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>步驟5：開始載入  
+您現在已準備好開始載入資料。 如需詳細資訊，請參閱：  
   
 1.  [dwloader 命令列載入工具](dwloader.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "74401480"
 ## <a name="performance"></a>效能  
 如需 Windows Server 2012 和更高的效能，請開啟立即檔案初始化，以便在覆寫資料時，作業系統不會以零覆寫現有資料。 如果這是安全性風險，因為先前的資料仍然存在於磁片上，請務必關閉立即檔案初始化。  
   
-## <a name="Security"></a>安全性注意事項  
+## <a name="security-notices"></a><a name="Security"></a>安全性注意事項  
 由於要載入的資料不會儲存在應用裝置上，因此您的 IT 小組會負責管理安全性的所有層面，以便載入您的資料。 例如，這包括管理要載入的資料安全性、用來儲存負載的伺服器安全性，以及將載入伺服器連線到 SQL Server PDW 設備的網路基礎結構安全性。  
   
 > [!IMPORTANT]  

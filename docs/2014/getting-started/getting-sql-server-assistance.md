@@ -42,26 +42,24 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683607"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  
   
 -   文件會安裝為《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》的本機集合。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network (MSDN) 和 TechNet 上的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 網站。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network (MSDN) 和 TechNet 上的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 網站。  
   
 -   其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 網站上的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 資訊。  
   
  如果您在這些來源中找不到想要尋找的資訊，可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社群論壇和新聞群組中提出問題，也可以向 [!INCLUDE[msCoName](../includes/msconame-md.md)] 提交支援案例。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書  
+## <a name="ssnoversion-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書  
  《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》包含了使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所需的概念和程序。 《線上叢書》也包含了許多語言和程式設計介面的參考資料，可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用來儲存、擷取、報告和修改資料。  
   
  《線上叢書》可以透過下列方法存取：  
@@ -73,15 +71,13 @@ ms.locfileid: "74683607"
  當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 發行《[!INCLUDE[msCoName](../includes/msconame-md.md)]線上叢書》的更新時，MSDN Library 中的《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》複本以及可透過 [Help Library 管理員] 取得的線上叢書檔案都會重新整理。  
   
 ## <a name="information-on-msdn-and-technet"></a>MSDN 和 TechNet 上的資訊  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network (MSDN) 提供線上和離線服務，協助開發人員使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品和技術撰寫應用程式。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet Program 會傳遞完整的技術資源，協助 IT 專業人員有效地評估、部署和支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] 方案。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network (MSDN) 提供線上和離線服務，協助開發人員使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品和技術撰寫應用程式。 [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet Program 會傳遞完整的技術資源，協助 IT 專業人員有效地評估、部署和支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] 方案。  
   
  MSDN 和 TechNet 上的數個網站會針對特定使用者提供連結，以取得與其工作最相關的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資訊，包括 MSDN 或 TechNet 上《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》副本中的資訊。 這些網站還包含可用來擴充 SQL Server 線上叢書中可用資訊的資訊。  
   
  下表描述這些資源及其預期使用者。  
   
-|資源|對象|  
+|資源|適用對象|  
 |--------------|--------------|  
 |[SQL Server 程式開發人員中心](https://msdn.microsoft.com/sqlserver/)|正在建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、報表系統和商業智慧方案的開發人員，以及啟用其應用程式和網站以使用這些系統的開發人員。|  
 |[XML 程式開發人員中心](https://go.microsoft.com/fwlink/?LinkId=42458)|使用 XML 執行資料儲存和操作之站台和應用程式的網站建立者和應用程式開發人員。|  
@@ -95,9 +91,7 @@ ms.locfileid: "74683607"
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|提供有關將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 評估為資料儲存和商業智慧工具的售前資訊。|  
 |[Microsoft 知識庫](https://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術支援所撰寫之 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文件的可搜尋儲存機制。|    
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品有支援週期，可定義每一個版本可用的支援時間長度。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援會維護一個定義 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援週期的頁面。 此頁面包含其他頁面的連結，這些頁面會指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品支援的可用性。 如需詳細資訊，請參閱[Microsoft 支援服務生命週期](https://go.microsoft.com/fwlink/?LinkId=98306)。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品有支援週期，可定義每一個版本可用的支援時間長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援會維護一個定義 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援週期的頁面。 此頁面包含其他頁面的連結，這些頁面會指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品支援的可用性。 如需詳細資訊，請參閱 [Microsoft 支援週期](https://go.microsoft.com/fwlink/?LinkId=98306)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server 的產品文件集](../2014-toc/index.yml)  

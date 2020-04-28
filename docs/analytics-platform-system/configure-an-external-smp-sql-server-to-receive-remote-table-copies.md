@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401319"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>設定外部 SMP SQL Server 以接收遠端資料表複本-平行處理資料倉儲
@@ -30,7 +30,7 @@ ms.locfileid: "74401319"
   
 -   SQL Server 登入帳戶（如果已安裝 SQL Server），而且能夠在目的地資料庫上建立登入和授與許可權。  
   
-## <a name="HowToSQLServer"></a>設定外部 SMP SQL Server 以接收遠端資料表複本  
+## <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a><a name="HowToSQLServer"></a>設定外部 SMP SQL Server 以接收遠端資料表複本  
 遠端資料表複製功能會將資料表從 SQL Server PDW 設備複製到在 Windows 系統上執行的外部 SMP SQL Server 資料庫。 設定外部 Windows 系統以接收遠端資料表複本之後，下一步就是在 Windows 系統上安裝和設定 SQL Server。  
   
 若要設定 SQL Server，請使用下列步驟：  
@@ -45,7 +45,7 @@ ms.locfileid: "74401319"
   
 5.  判斷將用於驗證之 SMP SQL Server 上的 SQL Server 帳戶。 授與該帳戶建立、卸載及插入資料到目的地資料庫中之資料表的許可權，以進行平行資料匯出工作。  
   
-## <a name="BPSQLConfig"></a>SMP SQL Server 遠端資料表複本設定的最佳做法  
+## <a name="best-practices-for-smp-sql-server-configuration-for-remote-table-copy"></a><a name="BPSQLConfig"></a>SMP SQL Server 遠端資料表複本設定的最佳做法  
 設定 SMP SQL Server 以接收遠端資料表複本時，請使用下列最佳作法來改善效能。  
   
 1.  遵循 SQL Server 產品檔中所述的最佳作法。 例如，啟用資料加密。 如需保護 SQL Server 的詳細資訊，請參閱 MSDN 上的[保護 SQL Server](../relational-databases/security/securing-sql-server.md) 。  

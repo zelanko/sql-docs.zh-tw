@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243172"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>以指令碼變數使用 sqlcmd
@@ -33,8 +33,7 @@ ms.locfileid: "75243172"
  本主題也包含在 Cmd.exe 命令提示字元中使用 **SET**來定義環境變數的範例。  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>使用 setvar 命令設定指令碼變數  
- 
-  **setvar** 命令可用來定義指令碼變數。 使用 **setvar** 命令定義的變數會儲存在內部。 指令碼變數不應與在命令提示字元中使用 **SET**所定義的環境變數產生混淆。 如果指令碼參考非環境變數的變數，或不是使用 **setvar**所定義的變數，則會傳回錯誤訊息並停止執行指令碼。 如需詳細資訊，請參閱 **sqlcmd 公用程式** 中的 [-b](../../tools/sqlcmd-utility.md)選項。  
+ **setvar** 命令可用來定義指令碼變數。 使用 **setvar** 命令定義的變數會儲存在內部。 指令碼變數不應與在命令提示字元中使用 **SET**所定義的環境變數產生混淆。 如果指令碼參考非環境變數的變數，或不是使用 **setvar**所定義的變數，則會傳回錯誤訊息並停止執行指令碼。 如需詳細資訊，請參閱 **sqlcmd 公用程式** 中的 [-b](../../tools/sqlcmd-utility.md)選項。  
   
 ## <a name="variable-precedence-low-to-high"></a>變數優先順序 (由低至高)  
  如果有多個類型的變數具有相同的名稱，會使用具有最高優先順序的變數。  
@@ -45,12 +44,12 @@ ms.locfileid: "75243172"
   
 3.  在啟動**SET X=Y**之前，於命令提示字元設定命令殼層 ( **SET X=Y**)  
   
-4.  **sqlcmd-v**X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **： Setvar**X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] **** 中開啟 [系統] ****，然後按一下 [進階] **** 索引標籤。  
+>  若要檢視環境變數，請在 [控制台]  中開啟 [系統]  ，然後按一下 [進階]  索引標籤。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隱含設定指令碼變數  
  當您透過含有 **sqlcmd** 相關變數的選項啟動 **sqlcmd** 時，會將 **sqlcmd** 變數隱含設定為使用該選項所指定的值。 在下列範例中， `sqlcmd` 透過 `-l` 選項啟動。 這將會隱含地設定 SQLLOGINTIMEOUT 變數。  
@@ -65,8 +64,7 @@ ms.locfileid: "75243172"
   
  `FROM Person.Person x`  
   
- 
-  `WHERE c.`BusinessEntityID `< 5;`  
+ `WHERE c.`BusinessEntityID `< 5;`  
   
  您可以接著指定要使用 `-v` 選項傳回的資料行名稱：  
   
@@ -95,7 +93,7 @@ ms.locfileid: "75243172"
 -   如果引號是變數值的一部分，則必須逸出。 例如：`setvar MyVar "spac""e"`。  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Cmd.exe SET 變數值和名稱的指導方針  
- 使用 SET 所定義的變數是 Cmd.exe 環境的一部分，並且可供 **sqlcmd**參考。 請考慮下列指導方針：  
+ 使用 SET 所定義的變數是 Cmd.exe 環境的一部分，並且可供 **sqlcmd**參考。 請參考下列指引：  
   
 -   變數名稱不能包含空白字元或引號。  
   
@@ -113,8 +111,8 @@ ms.locfileid: "75243172"
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (秒)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 永遠等候|  
-|SQLCMDHEADERS|-h|R/W|"0"|  
-|SQLCMDCOLSEP|-s|R/W|" "|  
+|SQLCMDHEADERS|-H|R/W|"0"|  
+|SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|"0"|  
@@ -189,7 +187,7 @@ ms.locfileid: "75243172"
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 內使用使用者層級環境變數  
- 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%` ，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]**** 中按兩下 [系統]****。 按一下 [進階]**** 索引標籤，然後按一下 [環境變數]****。  
+ 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%` ，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]  中按兩下 [系統]  。 按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
  下列程式碼是在輸入檔 `c:\testscript.txt`中：  
   
@@ -269,8 +267,7 @@ ms.locfileid: "75243172"
  `>1 < user > is connected to < server > (9.00.2047.00)`  
   
 > [!NOTE]  
->  
-  **-X** 選項會停用啟動指令碼功能。  
+>  **-X** 選項會停用啟動指令碼功能。  
   
 ### <a name="f-variable-expansion"></a>F. 變數展開  
  下列範例顯示如何以 **sqlcmd** 變數的形式來使用資料。  
@@ -346,6 +343,6 @@ ms.locfileid: "75243172"
 ## <a name="see-also"></a>另請參閱  
  [使用 sqlcmd 公用程式](sqlcmd-use-the-utility.md)   
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [命令提示字元公用程式參考 &#40;資料庫引擎&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [命令提示字元公用程式參考 &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

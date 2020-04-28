@@ -17,16 +17,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228405"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 安裝
- ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[下載 SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-express"></a>[下載 SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **感謝[Scott Hanselman](http://www.hanselman.com/)在一處收集所有安裝程式套件連結！**
-  
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈提供了安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的單一功能樹狀目錄：  
   
@@ -46,8 +45,7 @@ ms.locfileid: "75228405"
   
 -   連接元件  
   
- 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的版本和元件之間做出最佳選擇，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位元和 64 位元兩種版本。
+ 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的版本和元件之間做出最佳選擇，請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位元和 64 位元兩種版本。
  
  **試試看：**  
   
@@ -75,13 +73,10 @@ ms.locfileid: "75228405"
  說明解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的程序。  
   
  [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的這一節將說明如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的這一節將說明如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
   
  [安裝 SQL Server 2014 BI 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬於 Microsoft BI 平台的功能包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，以及用來建立或處理分析資料的數種用戶端應用程式。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件中的這一節將說明如何安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬於 Microsoft BI 平台的功能包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，以及用來建立或處理分析資料的數種用戶端應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件中的這一節將說明如何安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 ## <a name="related-sections"></a>相關章節  
  [安裝的使用說明主題](../../sql-server/install/installation-how-to-topics.md)  
@@ -95,5 +90,5 @@ ms.locfileid: "75228405"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 安裝的新功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

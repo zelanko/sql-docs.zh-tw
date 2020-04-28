@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683581"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
@@ -53,12 +53,12 @@ ms.locfileid: "74683581"
   
  SharePoint 整合模式的 Analysis Service 伺服器執行個體會完成部署。 它會載入、查詢和卸載資料。 如果活頁簿設定為使用 PowerPivot 資料重新整理，它也會處理資料。  每個執行個體會與相同安裝中的本機 PowerPivot 系統服務緊密結合在一起。  
   
-##  <a name="bkmk_RelatedContent"></a> 本節內容  
- [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>本節內容  
+ [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [使用 Windows PowerShell 的 PowerPivot 組態](power-pivot-configuration-using-windows-powershell.md)  
+ [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
+ [PowerPivot 設定工具](power-pivot-configuration-tools.md)  
   
  [PowerPivot 驗證及授權](power-pivot-authentication-and-authorization.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74683581"
   
  [PowerPivot BI 語義模型連接 &#40;. bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
- **其他章節**  
+ **其他章節內容**  
   
 ## <a name="additional-topics"></a>其他主題  
  [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  

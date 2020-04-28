@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684088"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -27,16 +27,16 @@ ms.locfileid: "74684088"
   
  您必須知道包含 PowerPivot 圖庫或儲存活頁簿之其他文件庫的 SharePoint 網站之 URL 位址。 若要取得位址，請開啟包含文件庫的網站，以滑鼠右鍵按一下 [ **PowerPivot 圖庫**]，選取 [**屬性**]，然後複製包含伺服器名稱和網站路徑之位址（URL）的第一個部分。  
   
-##  <a name="overview"></a>簡要  
+##  <a name="overview"></a><a name="overview"></a> 概觀  
  一開始安裝 Excel Services 時，會指定 'http://' 做為其信任位置，也就是說，來自伺服陣列之任何網站的活頁簿都可以在伺服器上開啟。 如果您需要更嚴格控制視為值得信任的位置，您可以建立對應到伺服陣列中特定網站的新信任位置，然後針對每個位置變更設定與權限。  
   
  如果您想要針對其餘的伺服陣列保留預設值，同時套用對 PowerPivot 資料存取最有效的不同設定，針對主控 PowerPivot 活頁簿的網站建立新的信任位置將會很實用。 例如，針對 PowerPivot 活頁簿最佳化之信任位置的活頁簿大小上限為 50 MB，而其餘伺服陣列則使用預設值 10MB。  
   
  如果您使用 PowerPivot 圖庫文件庫來預覽發行的活頁簿，而且您遇到資料重新整理警告而不是您所預期的預覽影像，建議您建立信任的位置。 PowerPivot 圖庫使用文件中的資料和簡報資訊，來轉譯報表和活頁簿的縮圖影像。 如果為信任位置啟用資料重新整理時警告，則 PowerPivot 圖庫可能沒有足夠的權限來執行重新整理，這將會造成顯示錯誤，而不是顯示縮圖影像。 加入包含 PowerPivot 圖庫的網站做為新的信任位置可以排除這個問題。  
   
-##  <a name="create"></a>建立 PowerPivot 資料存取的信任位置  
+##  <a name="create-a-trusted-location-for-powerpivot-data-access"></a><a name="create"></a>建立 PowerPivot 資料存取的信任位置  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  按一下 [Excel Services 服務應用程式]。  
   

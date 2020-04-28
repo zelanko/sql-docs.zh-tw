@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 23a1392256e103fa1bc112f11b5c5b97f5c398f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75237707"
 ---
 # <a name="whats-new-in-sql-server-2014"></a>SQL Server 2014 的新功能
@@ -53,17 +53,16 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
   
 -   [Reporting Services 的新 &#40;&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
-## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
+## <a name="sssql14-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]（SP1）並未引入重大的新功能。
 -  [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/kb/3058865)。
--  [下載 Microsoft SQL Server 2014 的 service pack 1 下載 service pack 1 （適用于 Microsoft SQL Server 2014）。 ![ ](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=46694) [](https://www.microsoft.com/download/details.aspx?id=46694)
+-  [下載 Microsoft SQL Server 2014 的 service pack 1 下載 service pack 1 （適用于 Microsoft SQL Server 2014）。 ![ ](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
-## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]Service Pack 2 （SP2）
+## <a name="sssql14-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]Service Pack 2 （SP2）
 - [SQL Server 2014 Service Pack 2 版本資訊](https://support.microsoft.com/kb/3171021)。
--  [下載 service pack 2 for Microsoft SQL Server 2014 下載 service pack 2 for Microsoft SQL Server 2014。 ![ ](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [](https://go.microsoft.com/fwlink/?LinkID=821558)
--  [下載 SQL Server 2014 sp2 功能套件下載 SQL Server 2014 sp2 功能套件。 ![ ](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=53164) [](https://www.microsoft.com/download/details.aspx?id=53164)
+-  [下載 service pack 2 for Microsoft SQL Server 2014 下載 service pack 2 for Microsoft SQL Server 2014。 ![ ](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [Download Service Pack 2 for Microsoft SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=821558)
+-  [下載 SQL Server 2014 sp2 功能套件下載 SQL Server 2014 sp2 功能套件。 ![ ](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=53164) [Download the SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2包括下列改良功能：
 
@@ -97,7 +96,7 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
 ## <a name="additional-information"></a>其他資訊  
  [SQL Server 2014 資源](../2014-toc/index.yml)  
   
- [SQL Server 2014 版本資訊](https://go.microsoft.com/fwlink/p/?linkID=296445)  
+ [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/p/?linkID=296445)  
   
  [SQL Server 2014 資源中心](https://msdn.microsoft.com/sqlserver/dn135309)  
   

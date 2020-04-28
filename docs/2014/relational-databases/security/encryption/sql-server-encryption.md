@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957092"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
@@ -66,8 +66,8 @@ ms.locfileid: "74957092"
  有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [key_encryptions &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [SQL Server 和資料庫加密金鑰 &#40;資料庫引擎&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [備份與還原 Reporting Services 加密金鑰](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

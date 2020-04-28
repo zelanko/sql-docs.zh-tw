@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75225391"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多維度的全球化案例
@@ -36,7 +36,7 @@ ms.locfileid: "75225391"
   
 -   中繼資料 (例如物件名稱、識別碼和描述) 也可以任何 Unicode 語言和字集來表示。 即使工具和環境使用另一種語言，也是如此。 例如，在整個堆疊使用英文和拉丁文定序的開發環境中，您可以在模型中包含其名稱使用斯拉夫文字元的物件。  
   
-     標題和屬性成員可以翻譯表示 (僅限多維度模型)。 您可以定義一個或多個翻譯，然後再使用地區設定識別碼來決定要傳回用戶端的翻譯。 如需詳細資訊，請參閱下面的[功能](#bkmk_features)。  
+     標題和屬性成員可以翻譯表示 (僅限多維度模型)。 您可以定義一個或多個翻譯，然後再使用地區設定識別碼來決定要傳回用戶端的翻譯。 如需詳細資訊，請參閱下面的 [功能](#bkmk_features) 。  
   
 -   從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 引擎 (msmdsrv) 傳回的錯誤、警告和參考訊息已當地語系化為 Office 和 Office 365 支援的 43 種語言。 取得特定語言的訊息不需要進行設定。 用戶端應用程式的地區設定會決定要傳回的字串。  
   
@@ -44,8 +44,7 @@ ms.locfileid: "75225391"
   
 -   記錄檔會包含英文和當地語系化訊息的混合 (假設您在 Analysis Services 執行所在的 Windows Server 上已安裝語言套件)。  
   
--   
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 與 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]等文件與工具已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文與西班牙文。 若要使用特定語言版本的工具，請安裝特定語言版本的 SQL Server (例如，安裝德文版 SQL Server 以取得德文版 Management Studio)，或執行目標語言之 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]的獨立安裝程式。  
+-   [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 與 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]等文件與工具已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文與西班牙文。 若要使用特定語言版本的工具，請安裝特定語言版本的 SQL Server (例如，安裝德文版 SQL Server 以取得德文版 Management Studio)，或執行目標語言之 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]的獨立安裝程式。  
   
  Analysis Services 可讓您在整個物件階層中獨立設定語言、定序和翻譯。  
   
@@ -55,9 +54,8 @@ ms.locfileid: "75225391"
   
 -   開發和生產環境位於不同的國家/地區。 在一個國家/地區開發方案，再部署至另一個國家/地區，變得愈來愈普遍。 如果您負責準備將使用某種語言開發的方案，部署至使用不同語言套件的伺服器，就必須了解如何設定語言和定序屬性。 設定這些屬性可讓您覆寫繼承並取自原始主機系統的預設值。 如需詳細資訊，請參閱下面的 [語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) 。  
   
-##  <a name="bkmk_features"></a>建立全球化多維度解決方案的功能  
- 
-  [!INCLUDE[applies](../includes/applies-md.md)] 僅限多維度資料模型  
+##  <a name="features-for-building-a-globalized-multidimensional-solution"></a><a name="bkmk_features"></a>建立全球化多維度解決方案的功能  
+ [!INCLUDE[applies](../includes/applies-md.md)] 僅限多維度資料模型  
   
  在用戶端層級，使用或操作 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度資料的全球化應用程式可使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的多語系和多重文化功能：  
   
@@ -74,11 +72,11 @@ ms.locfileid: "75225391"
 |[語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的預設語言和 Windows 定序。 您的選擇會影響 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所管理的資料和中繼資料。|  
 |[翻譯 &#40;Analysis Services&#41;](translations-analysis-services.md)|定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫和資料庫所包含之物件的翻譯。 本主題說明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 如何解析來自用戶端應用程式的翻譯資料和中繼資料要求。|  
 |[貨幣轉換 &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|使用 [商業智慧精靈] 定義貨幣轉換。|  
-|[&#40;Analysis Services 的全球化秘訣和最佳作法&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
+|[全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows 應用程式的國際化](/windows/desktop/Intl/international-support)   
  [Microsoft 全球化檔](/globalization/)   
  [使用以地區設定為基礎的自動調整設計來撰寫 Windows Store 應用程式](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [使用 c # 和 XAML 開發通用 Windows 應用程式](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [使用 C# 和 XAML 開發通用 Windows 應用程式](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

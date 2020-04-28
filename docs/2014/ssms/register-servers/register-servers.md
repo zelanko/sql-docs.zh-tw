@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: abc12a642343e2c9bf259142680bf101cebf3e8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241315"
 ---
 # <a name="register-servers"></a>註冊伺服器

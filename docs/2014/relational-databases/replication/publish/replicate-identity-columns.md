@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479252"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
-  當您將 identity 屬性指派給資料行時[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，會自動為包含識別欄位之資料表中插入的新資料列產生序號。 如需詳細資訊，請參閱 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 由於識別欄位可能會做為主索引鍵的一部分，因此請務必避免在識別欄位中重複值。 若要在具有多個節點更新的複寫拓撲裡使用識別欄位，複寫拓撲中的每個節點必須使用不同的識別值範圍，以免出現重複。  
+  將 IDENTITY 屬性指派給資料行時，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會自動為含有識別欄位之資料表的新資料列產生序號。 如需詳細資訊，請參閱 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 由於識別欄位可能會做為主索引鍵的一部分，因此請務必避免在識別欄位中重複值。 若要在具有多個節點更新的複寫拓撲裡使用識別欄位，複寫拓撲中的每個節點必須使用不同的識別值範圍，以免出現重複。  
   
  例如，「發行者」可指派範圍 1-100、訂閱者 A 指派範圍 101-200，訂閱者 B 則指派範圍 201-300。 如果在「發行者」插入資料列，而且識別值是 65，該值就會複寫到每個「訂閱者」。 當複寫在每個「訂閱者」端插入資料時，不會遞增「訂閱者」資料表中的識別欄位值，而是插入常值 65。 只有使用者插入會導致識別欄位值遞增，複寫代理程式插入則不會。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "74479252"
 |`decimal` 和 `numeric`|-10^38+1 到 10^38-1|  
   
 > [!NOTE]  
->  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱[序號](../../sequence-numbers/sequence-numbers.md)。  
+>  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../sequence-numbers/sequence-numbers.md)。  
   
 ### <a name="merge-replication"></a>合併式複寫  
  識別範圍由「發行者」管理，並由「合併代理程式」傳播至「訂閱者」(在重新發行階層中，範圍由根「發行者」與重新發行者管理)。 識別值從「發行者」端的集區指派。 您在 [新增發行集精靈] 中或使用 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 將具有識別欄位的發行項新增至發行集時，指定下列的值：  
@@ -126,7 +126,7 @@ ms.locfileid: "74479252"
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
  [IDENT_CURRENT &#40;Transact-sql&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
- [IDENTITY &#40;屬性&#41; &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
- [sp_adjustpublisheridentityrange &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
+ [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
+ [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957152"
 ---
 # <a name="restore-a-database-master-key"></a>還原資料庫主要金鑰
@@ -30,11 +30,11 @@ ms.locfileid: "74957152"
   
      [安全性](#Security)  
   
--   [若要使用 Transact-sql 還原資料庫主要金鑰](#SSMSProcedure)  
+-   [若要使用 Transact-SQL 還原資料庫主要金鑰](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   當主要金鑰還原時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會解密所有利用目前作用中主要金鑰加密的金鑰，然後利用還原的主要金鑰加密這些金鑰。 這項需要大量資源的作業應該安排在低需求時進行。 如果目前資料庫主要金鑰未開啟或無法開啟，或者，如果利用該金鑰加密的任何金鑰無法解密，還原作業便會失敗。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "74957152"
   
 -   如果目前資料庫中沒有主要金鑰，RESTORE MASTER KEY 會建立主要金鑰。 不會自動利用服務主要金鑰來加密新的主要金鑰。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 CONTROL 權限。  
   
-##  <a name="SSMSProcedure"></a>搭配 Transact-sql 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="SSMSProcedure"></a>搭配 Transact-sql 使用 SQL Server Management Studio  
   
 #### <a name="to-restore-the-database-master-key"></a>若要還原資料庫主要金鑰  
   

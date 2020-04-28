@@ -13,52 +13,50 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228785"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>建立可用性群組 (Transact-SQL)
-  此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」* (Availability Replica))。  
+  此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
   
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
 
 > [!NOTE]  
->  
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)]以外的替代方案是，使用 [建立可用性群組精靈] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 指令程式。 如需詳細資訊，請參閱 [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)、 [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)或 [建立可用性群組 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)。  
+>  [!INCLUDE[tsql](../../../includes/tsql-md.md)]以外的替代方案是，使用 [建立可用性群組精靈] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 指令程式。 如需詳細資訊，請參閱 [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)、 [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)或 [建立可用性群組 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
   
-###  <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a>必要條件、限制和建議  
   
 -   建立可用性群組之前，請確認裝載可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體位於相同 Windows Server 容錯移轉叢集 (WSFC) 容錯移轉叢集的不同 WSFC 節點上。 此外，請確認每個伺服器執行個體都符合所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必要條件。 如需詳細資訊，強烈建議您閱讀 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-###  <a name="SummaryTsqlStatements"></a>工作和對應 Transact-sql 語句的摘要  
- 下表列出與建立和設定可用性群組有關的基本工作，並指出哪些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式要用於這些工作。 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> 工作和對應 Transact-SQL 陳述式的摘要  
+ 下表列出與建立和設定可用性群組有關的基本工作，並指出哪些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式要用於這些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
-|Task|Transact-SQL 陳述式|執行工作的位置**<sup>*</sup>**|  
+|工作|Transact-SQL 陳述式|執行工作的位置**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|[建立端點終結點](/sql/t-sql/statements/create-endpoint-transact-sql) *...* 針對 DATABASE_MIRRORING|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。|  
-|建立可用性群組|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|於裝載初始主要複本的伺服器執行個體上執行。|  
-|將次要複本加入可用性群組|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|在裝載次要複本的每一個伺服器執行個體上執行。|  
+|建立可用性群組|[建立可用性群組](/sql/t-sql/statements/create-availability-group-transact-sql)|於裝載初始主要複本的伺服器執行個體上執行。|  
+|將次要複本加入可用性群組|[ALTER AVAILABILITY GROUP 群組名稱](join-a-secondary-replica-to-an-availability-group-sql-server.md) ** JOIN|在裝載次要複本的每一個伺服器執行個體上執行。|  
 |準備次要資料庫|[備份](/sql/t-sql/statements/backup-transact-sql)與[還原](/sql/t-sql/statements/restore-statements-transact-sql)。|在裝載主要複本的伺服器執行個體上建立備份。<br /><br /> 使用 RESTORE WITH NORECOVERY，還原裝載次要複本之每個伺服器執行個體上的備份。|  
-|將每一個次要資料庫加入可用性群組來啟動資料同步處理。|[ALTER database](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *DATABASE_NAME*設定 HADR 可用性群組 = *group_name*|在裝載次要複本的每一個伺服器執行個體上執行。|  
+|將每一個次要資料庫加入可用性群組來啟動資料同步處理。|[ALTER DATABASE 資料庫名稱](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) ** SET HADR AVAILABILITY GROUP = 群組名稱**|在裝載次要複本的每一個伺服器執行個體上執行。|  
   
  **<sup>*</sup>** 若要執行指定的工作，請連接到指定的伺服器實例。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-sql 建立和設定可用性群組  
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 建立和設定可用性群組  
   
 > [!NOTE]  
->  如需包含每一個這類 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之程式碼範例的範例組態程序，請參閱 [範例：設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)。  
+>   如需包含每一個這類 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之程式碼範例的範例組態程序，請參閱 [範例：設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)。  
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
@@ -70,24 +68,23 @@ ms.locfileid: "75228785"
   
 5.  將每一個新的次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-##  <a name="ExampleConfigAGWinAuth"></a>範例：設定使用 Windows 驗證的可用性群組  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> 範例：設定使用 Windows 驗證的可用性群組  
  這個範例會建立範例 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 組態程序，此程序會使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 來設定使用 Windows 驗證的資料庫鏡像端點，並建立及設定可用性群組以及其次要資料庫。  
   
  此範例包含下列章節：  
   
 -   [使用範例設定程式的必要條件](#PrerequisitesForExample)  
   
--   [範例設定程式](#SampleProcedure)  
+-   [範例組態程序](#SampleProcedure)  
   
--   [範例設定程式的完整程式碼範例](#CompleteCodeExample)  
+-   [範例組態程序的完整程式碼範例](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a>使用範例設定程式的必要條件  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> 使用範例組態程序的必要條件  
  此範例程序有下列需求：  
   
--   伺服器執行個體必須支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)。  
+-   伺服器執行個體必須支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
--   
-  *MyDb1* 與 *MyDb2*這兩個範例資料庫必須存在於將裝載主要複本的伺服器執行個體上。 下列程式碼範例會建立及設定這兩個資料庫，並建立每一個資料庫的完整備份。 在您打算建立範例可用性群組的伺服器執行個體上，執行這些程式碼範例。 此伺服器執行個體將會裝載範例可用性群組的初始主要複本。  
+-   *MyDb1* 與 *MyDb2*這兩個範例資料庫必須存在於將裝載主要複本的伺服器執行個體上。 下列程式碼範例會建立及設定這兩個資料庫，並建立每一個資料庫的完整備份。 在您打算建立範例可用性群組的伺服器執行個體上，執行這些程式碼範例。 此伺服器執行個體將會裝載範例可用性群組的初始主要複本。  
   
     1.  下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 範例會建立這些資料庫，並加以更改為使用完整復原模式：  
   
@@ -119,7 +116,7 @@ ms.locfileid: "75228785"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a> 範例組態程序  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> 範例組態程序  
  在此範例組態中，將會於不同但受信任網域 (`DOMAIN1` 和 `DOMAIN2`) 底下執行其服務帳戶的兩個獨立伺服器執行個體上建立可用性複本。  
   
  下表摘要說明此範例組態中所使用的值。  
@@ -285,7 +282,7 @@ ms.locfileid: "75228785"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a> 範例組態程序的完整程式碼範例  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> 範例組態程序的完整程式碼範例  
  下列範例會合併範例組態程序之所有步驟的程式碼範例。 下表摘要說明此程式碼範例中所使用的預留位置值。 如需有關此程式碼範例中步驟的詳細資訊，請參閱本主題稍早的 [使用範例組態程序的必要條件](#PrerequisitesForExample) 和 [範例組態程序](#SampleProcedure)。  
   
 |預留位置|描述|  
@@ -440,7 +437,7 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要設定可用性群組和複本屬性**  
   
 -   [變更可用性複本的可用性模式 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -499,7 +496,7 @@ GO
   
 -   [針對失敗的新增檔案作業進行疑難排解 &#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

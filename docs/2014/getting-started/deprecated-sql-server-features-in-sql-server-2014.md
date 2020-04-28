@@ -11,16 +11,16 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228221"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 SQL Server 功能
   此主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中仍然可用之已被取代的功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
   
-## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>下一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的功能  
+## <a name="features-not-supported-in-the-next-version-of-ssnoversion"></a>下一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的功能  
  下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 「功能名稱」欄會出現在追蹤事件中當做 ObjectName，並在效能計數器和 sys.dm_os_performance_counters 中當做 instance_name。 「功能識別碼」會出現在追蹤事件中當做 ObjectId。  
   
 |類別|已被取代的功能|取代|功能名稱|功能識別碼|  

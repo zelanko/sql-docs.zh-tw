@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243238"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
   中斷點 [叫用時]  動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
   
-##  <a name="BKMK_ActionConsiderations"></a> 動作考量因素  
+##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> 動作考量因素  
  中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 **偵錯工具中 [叫用時]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出]  視窗。  
   
  列印訊息是在 [列印訊息]  選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  

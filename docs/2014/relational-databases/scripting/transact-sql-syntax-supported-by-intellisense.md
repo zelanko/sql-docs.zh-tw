@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242997"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
@@ -47,17 +47,17 @@ ms.locfileid: "75242997"
   
 |Transact-SQL 陳述式|支援的語法|  
 |-----------------------------|----------------------|  
-|[INSERT](/sql/t-sql/statements/insert-transact-sql)|所有語法，但 *execute_statement* 子句除外。|  
-|[UPDATE](/sql/t-sql/queries/update-transact-sql)|所有語法。|  
+|[插入](/sql/t-sql/statements/insert-transact-sql)|所有語法，但 *execute_statement* 子句除外。|  
+|[更新](/sql/t-sql/queries/update-transact-sql)|所有語法。|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|所有語法。|  
 |[聲明@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|所有語法。|  
-|[SET@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有語法。|  
-|[執行 CREATE 陳述式之前，請先執行](/sql/t-sql/language-elements/execute-transact-sql)|可執行使用者定義的預存程序、系統預存程序、使用者定義的函數以及系統函數。|  
+|[設定@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有語法。|  
+|[執行](/sql/t-sql/language-elements/execute-transact-sql)|可執行使用者定義的預存程序、系統預存程序、使用者定義的函數以及系統函數。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|所有語法。|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|所有語法。|  
+|[建立視圖](/sql/t-sql/statements/create-view-transact-sql)|所有語法。|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|所有語法，但有下列例外狀況：<br /><br /> EXTERNAL NAME 子句沒有任何 IntelliSense 支援。<br /><br /> 在 AS 子句中，IntelliSense 僅支援本主題所列的陳述式和語法。|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|所有語法，但有下列例外狀況：<br /><br /> EXTERNAL NAME 子句沒有任何 IntelliSense 支援。<br /><br /> 在 AS 子句中，IntelliSense 僅支援本主題所列的陳述式和語法。|  
-|[USE](/sql/t-sql/language-elements/use-transact-sql)|所有語法。|  
+|[使用](/sql/t-sql/language-elements/use-transact-sql)|所有語法。|  
   
 ## <a name="intellisense-in-supported-statements"></a>支援陳述式中的 IntelliSense  
  當下列語法元素用於其中一個支援的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 陳述式時， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中的 IntelliSense 便支援這些元素：  

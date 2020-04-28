@@ -21,22 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683627"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 程式設計概觀
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]有一個架構，可將資料移動和轉換從封裝控制流程和管理中分離出來。 定義這個架構的是兩個不同的引擎，當您針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，可以將這兩個引擎自動化及擴充。 執行階段引擎會實作控制流程和封裝管理基礎結構，該基礎結構可讓開發人員控制執行流程及設定記錄、事件處理常式和變數的選項。 資料流程引擎是一種特殊且高效率的引擎，它是專門用來擷取、轉換及載入資料。 在針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，您將會針對這兩個引擎進行程式設計。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的架構會區隔資料移動和轉換與套件控制流程和管理。 定義這個架構的是兩個不同的引擎，當您針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，可以將這兩個引擎自動化及擴充。 執行階段引擎會實作控制流程和封裝管理基礎結構，該基礎結構可讓開發人員控制執行流程及設定記錄、事件處理常式和變數的選項。 資料流程引擎是一種特殊且高效率的引擎，它是專門用來擷取、轉換及載入資料。 在針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，您將會針對這兩個引擎進行程式設計。  
   
  下列影像說明 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的架構。  
   
  ![Integration Services 架構](media/mw-dts-01.gif "Integration Services 架構")  
   
 ## <a name="integration-services-run-time-engine"></a>Integration Services 執行階段引擎  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段引擎會控制封裝的管理與執行，其方式是實作可啟用執行順序、記錄、變數和事件處理的基礎結構。 針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段引擎進行程式設計，可讓開發人員將封裝的建立、組態設定和執行自動化，並建立自訂工作和其他延伸模組。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段引擎會控制封裝的管理與執行，其方式是實作可啟用執行順序、記錄、變數和事件處理的基礎結構。 針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段引擎進行程式設計，可讓開發人員將封裝的建立、組態設定和執行自動化，並建立自訂工作和其他延伸模組。  
   
  如需詳細資訊，請參閱[以指令碼工作擴充套件](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)、[開發自訂工作](extending-packages-custom-objects/task/developing-a-custom-task.md)和[以程式設計方式建置套件](building-packages-programmatically/building-packages-programmatically.md)。  
   
@@ -46,26 +45,22 @@ ms.locfileid: "74683627"
  如需詳細[資訊，請](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)參閱 [使用腳本元件擴充資料流程] （擴充-封裝-腳本/資料流程---------------------------------- [ ](building-packages-programmatically/building-packages-programmatically.md)---------------------  
   
 ## <a name="supported-languages"></a>支援的語言  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]完全支援[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 如此可讓開發人員使用所選的 .NET 相容語言來針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計。 雖然執行階段引擎和資料流程引擎都是以機器碼所撰寫，但是兩者都可透過完全受管理的物件模型來使用。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 完全支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 如此可讓開發人員使用所選的 .NET 相容語言來針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計。 雖然執行階段引擎和資料流程引擎都是以機器碼所撰寫，但是兩者都可透過完全受管理的物件模型來使用。  
   
- 您可以在[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]或其他程式碼或文字編輯器中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，設計封裝、自訂工作和元件。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供開發人員許多工具與功能，使之可以簡化及加快反覆執行程式碼撰寫、偵錯與測試週期的速度。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 也可簡化部署工作。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 編譯及建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程式碼專案。 
-  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包含 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 編譯器與相關工具。  
+ 您可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 或是其他程式碼或文字編輯器中設計 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 套件、自訂工作和元件的程式。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供開發人員許多工具與功能，使之可以簡化及加快反覆執行程式碼撰寫、偵錯與測試週期的速度。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 也可簡化部署工作。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 編譯及建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程式碼專案。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包含 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 編譯器與相關工具。  
   
 > [!IMPORTANT]  
 >  依預設，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 會隨 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安裝，但是不會安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非已在電腦上安裝 SDK，而且 SDK 文件集是包含在線上叢書集合中，否則本節中的 SDK 內容連結將不會有任何作用。 在安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 之後，您可以遵循[新增或移除 SQL Server 的產品文件集](../2014-toc/index.yml)中的指示，將 SDK 文件集新增至線上叢書集合和目錄。  
   
- 腳本[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]工作和腳本元件會使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications （VSTA）做為內嵌的腳本環境。 VSTA 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼工作和指令碼元件會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作為內嵌指令碼環境使用。 VSTA 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 應用程式開發介面與 COM 指令碼語言 (如 VBScript) 不相容。  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 應用程式開發介面與 COM 指令碼語言 (如 VBScript) 不相容。  
   
 ## <a name="locating-assemblies"></a>尋找組件  
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 *磁碟機>\<* :\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 組件。  
   
- 如同舊版[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，核心[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]擴充性 .dll 檔案也位於* \<磁片磁碟機>*： \Program Files\Microsoft SQL server\100\sdk\assemblies。  
+ 如同舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，核心 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 擴充性 .dll 檔案也位於 *磁碟機>\<* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies。  
   
 ## <a name="commonly-used-assemblies"></a>常用的組件  
  下表列出在使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 開發 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 程式時經常使用的組件。  

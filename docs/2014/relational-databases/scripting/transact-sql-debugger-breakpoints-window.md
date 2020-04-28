@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243111"
 ---
 # <a name="breakpoints-window"></a>中斷點視窗
@@ -25,7 +25,7 @@ ms.locfileid: "75243111"
 ## <a name="task-list"></a>工作清單  
  **存取中斷點視窗**  
   
--   在 **[偵錯]** 功能表上，按一下 **[視窗]** ，然後按一下 **[中斷點]** 。  
+-   在 **[偵錯]** 功能表上，按一下 **[視窗]**，然後按一下 **[中斷點]**。  
   
 ## <a name="breakpoints-window-columns"></a>中斷點視窗資料行  
  根據預設，[中斷點]  視窗會列出以下資料行。  
@@ -34,8 +34,7 @@ ms.locfileid: "75243111"
  顯示中斷點的名稱。 中斷點名稱是由偵錯工具所提供。 此名稱包含內含中斷點的 Database Engine 查詢編輯器視窗名稱，以及查詢編輯器內中斷點設定所在的行號。  
   
  **Condition**  
- 顯示 [(無條件)]  。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援中斷點條件的設定。  
+ 顯示 [(無條件)]  。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援中斷點條件的設定。  
   
  **叫用計數**  
  顯示 [永遠中斷]****。  
@@ -43,8 +42,7 @@ ms.locfileid: "75243111"
  您可以加入及移除以下資料行，其方式是在 [資料行]  清單中選取這些資料行。  
   
  **Filter**  
- 顯示 [(無)]  。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援中斷點篩選的設定。  
+ 顯示 [(無)]  。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援中斷點篩選的設定。  
   
  **叫用時**  
  顯示 [中斷]  。  
@@ -59,8 +57,7 @@ ms.locfileid: "75243111"
  顯示包含中斷點的來源檔案名稱以及設定中斷點的行號。  
   
  **位址**  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援這個功能。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援這個功能。  
   
  **處理**  
  顯示 [SQL]  來指示這個是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序。 這後面接著程式碼執行所在的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體名稱。  

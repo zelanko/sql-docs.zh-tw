@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401440"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>分析平臺系統的設備安裝和設定
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. 安裝硬體  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. 安裝硬體  
 您的新設備將會在您的資料中心上傳遞至 dock 的託盤上。  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ Before you begin to install, configure, and use your new appliance, we recommend
 |確認檔|確認您已從獨立硬體廠商（IHV）收到所有必要的檔和資訊。 請參閱[從您的 IHV &#40;分析平臺系統&#41;取得的資訊](information-to-obtain-from-your-ihv.md)。|  
 |安裝硬體|確認資料中心可以容納設備。 將設備元件移至資料中心。 機架網路交換器、Pdu 和纜線。 請參閱[&#40;分析平臺系統&#41;的硬體安裝](hardware-installation.md)。|  
   
-## <a name="PowerOnAppliance"></a>2. 設備上的電源  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. 設備上的電源  
   
 |||  
 |-|-|  
 |**Task**|**說明**|  
 |設備電源|以必要順序開啟每個設備元件節點上的電源，並視需要等候以確認未發生任何錯誤。|  
   
-## <a name="ConfigureAppliance"></a>3. 設定設備  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. 設定設備  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 > [!WARNING]  
 > 只能使用 SQL Server PDW**Configuration Manager**來進行設定變更。 不支援透過**Configuration Manager**公開的變更。 例如，SQL Server PDW 設備只支援美國-英文的語言設定。  
   
-## <a name="SoftwareServicing"></a>4. 設定軟體服務  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. 設定軟體服務  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 |套用 SQL Server PDW 更新|選擇性您可能需要套用一或多個 SQL Server PDW 更新，以將您的 SQL Server PDW 軟體更新為最新版本。 請參閱[將分析平臺系統修補程式 &#40;分析平臺系統&#41;](apply-analytics-platform-system-hotfixes.md)。|  
 |設定 Windows Server Update Services|設定設備以接收來自 Windows Server Update Services 的更新，以支援軟體。 請參閱[下載並套用 Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)。|  
   
-## <a name="NextSteps"></a>後續步驟  
+## <a name="next-steps"></a><a name="NextSteps"></a>後續步驟  
 完成上述所有步驟之後，您的設備就可供使用。 您或您的位置中的其他人員可以繼續執行下列工作。  
   
 |||  

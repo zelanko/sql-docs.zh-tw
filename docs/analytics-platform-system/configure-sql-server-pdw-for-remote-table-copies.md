@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401258"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>設定遠端資料表複本的平行處理資料倉儲
@@ -28,7 +28,7 @@ ms.locfileid: "74401258"
   
 -   知道目的地伺服器的主機名稱或 IP 名稱。  
   
-## <a name="HowToPDW"></a>設定遠端資料表複本的 SQL Server PDW：更新 DNS 中的主機名稱  
+## <a name="configure-sql-server-pdw-for-remote-table-copy-update-host-names-in-dns"></a><a name="HowToPDW"></a>設定遠端資料表複本的 SQL Server PDW：更新 DNS 中的主機名稱  
 **CREATE REMOTE table**語句是用於遠端資料表複本，它會使用 SMP Windows 系統的 ip 位址或 ip 名稱來指定目的地伺服器。 若要使用 IP 名稱，您必須將成功名稱解析的專案新增至 DNS 伺服器。  
   
 下列步驟概述如何更新 DNS 伺服器。  

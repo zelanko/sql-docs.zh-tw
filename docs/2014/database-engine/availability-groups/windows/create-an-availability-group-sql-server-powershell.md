@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8085fa23357c5901ed350e81410ae4d38a3005dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228801"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>建立可用性群組 (SQL Server PowerShell)
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，透過 PowerShell 指令程式建立及設定 AlwaysOn 可用性群組。 
-  *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，透過 PowerShell 指令程式建立及設定 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
   
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -29,23 +28,22 @@ ms.locfileid: "75228801"
 > [!NOTE]  
 >  若不使用 PowerShell 指令程式，您可以使用 [建立可用性群組精靈] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 如需詳細資訊，請參閱 [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 或 [建立可用性群組 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
   
-###  <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
   
 -   建立可用性群組之前，請確認 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機執行個體分別位於 Windows Server 容錯移轉叢集 (WSFC) 容錯移轉叢集的不同 WSFC 節點上。 此外，請確認您的伺服器執行個體符合其他伺服器執行個體必要條件和所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需求，而且您了解建議事項。 如需詳細資訊，強烈建議您閱讀 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-###  <a name="SummaryPSStatements"></a>工作和對應的 PowerShell Cmdlet 的摘要  
- 下表列出與設定可用性群組有關的基本工作，並指出 PowerShell 指令程式支援哪些工作。 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
+###  <a name="summary-of-tasks-and-corresponding-powershell-cmdlets"></a><a name="SummaryPSStatements"></a>工作和對應的 PowerShell Cmdlet 的摘要  
+ 下表列出與設定可用性群組有關的基本工作，並指出 PowerShell 指令程式支援哪些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
-|Task|PowerShell 指令程式 (如果可用) 或 Transact-SQL 陳述式|執行工作的位置**<sup>*</sup>**|  
+|工作|PowerShell 指令程式 (如果可用) 或 Transact-SQL 陳述式|執行工作的位置**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
 |建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|`New-SqlHadrEndPoint`|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。<br /><br /> 注意：若要變更現有資料庫鏡像端點，請使用 `Set-SqlHadrEndpoint`。|  
 |建立可用性群組|首先，使用 `New-SqlAvailabilityReplica` 指令程式搭配 `-AsTemplate` 參數，針對您打算包含在可用性群組內之兩個可用性複本的每一個來建立記憶體內的可用性複本物件。<br /><br /> 然後，使用 `New-SqlAvailabilityGroup` 指令程式及參考可用性複本物件來建立可用性群組。|於裝載初始主要複本的伺服器執行個體上執行。|  
@@ -55,13 +53,13 @@ ms.locfileid: "75228801"
   
  **<sup>*</sup>** 若要執行指定的工作，請將`cd`目錄（）變更為指定的伺服器實例或實例。  
   
-###  <a name="PsProviderLinks"></a>若要設定及使用 SQL Server PowerShell 提供者  
+###  <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a><a name="PsProviderLinks"></a>若要設定及使用 SQL Server PowerShell 提供者  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell 建立和設定可用性群組  
+##  <a name="using-powershell-to-create-and-configure-an-availability-group"></a><a name="PowerShellProcedure"></a>使用 PowerShell 建立和設定可用性群組  
   
 > [!NOTE]  
 >  若要檢視給定指令程式的語法和範例，請使用 `Get-Help` PowerShell 環境中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
@@ -88,7 +86,7 @@ ms.locfileid: "75228801"
 > [!NOTE]  
 >  如果伺服器執行個體的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶在不同的網域使用者帳戶下執行，請在每一個伺服器執行個體上建立其他伺服器執行個體的登入，並將此登入 CONNECT 權限授與本機資料庫鏡像端點。  
   
-##  <a name="ExampleConfigureGroup"></a>範例：使用 PowerShell 建立可用性群組  
+##  <a name="example-using-powershell-to-create-an-availability-group"></a><a name="ExampleConfigureGroup"></a>範例：使用 PowerShell 建立可用性群組  
  下列 PowerShell 範例會建立及設定一個名為 `MyAG` 的簡單可用性群組，其包含兩個可用性複本和一個可用性資料庫。 範例：  
   
 1.  備份 `MyDatabase` 及其交易記錄。  
@@ -164,7 +162,7 @@ Join-SqlAvailabilityGroup -Path "SQLSERVER:\SQL\SecondaryComputer\Instance" -Nam
 Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\AvailabilityGroups\MyAG" -Database "MyDatabase"  
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要設定 AlwaysOn 可用性群組的伺服器執行個體**  
   
 -   [啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -215,7 +213,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [針對失敗的新增檔案作業進行疑難排解 &#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   
@@ -227,7 +225,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **影片：**  
+-   **視頻**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第 1 部：新一代高可用性解決方案簡介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

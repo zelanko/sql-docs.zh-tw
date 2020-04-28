@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: ae7d1e66d4cbd9b74ad8e58d3ac59c7ddda920a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244613"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>建立或編輯伺服器群組 (SQL Server Management Studio)

@@ -1,5 +1,5 @@
 ---
-title: 將資料插入資料表值參數 |Microsoft Docs
+title: 將資料插入至資料表值參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c195d2bba2bacfe5ee05ed423dcc2bea1b7581e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231788"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
@@ -30,9 +30,9 @@ ms.locfileid: "75231788"
   
  取用者應該在執行命令前，提供所有資料表值參數資料給提供者。 若要提供資料，取用者要針對每個資料表值參數擴展資料表值參數資料列集物件。 資料表值參數資料列集物件會公開資料列集的 Insert、Set 和 Delete 作業，取用者會使用這些作業來操作資料表值參數資料。 提供者將會在執行時間，從此資料表值參數資料列集物件提取資料。  
   
- 將資料表值參數資料列集物件提供給取用者時，取用者可以將其當做資料列集物件處理。 取用者可以使用 IColumnsInfo：： GetColumnInfo 或 IColumnsRowset：： GetColumnsRowset 介面方法，取得每個資料行的類型資訊（類型、最大長度、有效位數和小數位數）。 接著，取用者會建立存取子來指定資料的繫結。 下一步是將資料的資料列插入到資料表值參數資料列集。 您可以使用 IRowsetChange：： InsertRow 來完成這項作業。 如果您必須運算元據，IRowsetChange：： SetData 或 IRowsetChange：:D eleteRows 也可以用於資料表值參數資料列集物件。 資料表值參數資料列集物件是計數的參考，類似於資料流物件。  
+ 將資料表值參數資料列集物件提供給取用者時，取用者可以將其當做資料列集物件處理。 取用者可以使用 IColumnsInfo::GetColumnInfo 或 IColumnsRowset::GetColumnsRowset 介面方法，取得每個資料行的類型資訊 (類型、最大長度、精確度與小數位數)。 接著，取用者會建立存取子來指定資料的繫結。 下一步是將資料的資料列插入到資料表值參數資料列集。 您可以使用 IRowsetChange::InsertRow 來完成此作業。 如果您必須操作資料，也可以在資料表值參數資料列集物件上使用 IRowsetChange::SetData 或 IRowsetChange::DeleteRows。 資料表值參數資料列集物件是計數的參考，類似於資料流物件。  
   
- 如果使用 IColumnsRowset：： GetColumnsRowset，則會在產生之資料行的資料列集物件上，進行 IRowset：： GetNextRows、IRowset：：和 IRowset：： ReleaseRows 方法的後續呼叫。  
+ 如果使用 IColumnsRowset::GetColumnsRowset，則會在產生之資料行的資料列集物件上，進行 IRowset::GetNextRows、IRowset::GetData 和 IRowset::ReleaseRows 方法的後續呼叫。  
   
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者開始執行命令之後，就會從這個資料表值參數資料列集物件提取資料表值參數值，並將其傳送至伺服器。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75231788"
   
  在提取模型中，取用者會視需要提供資料給提供者。 如果您的應用程式有許多資料插入，而且記憶體中的資料表值參數資料列集資料會導致過量的記憶體存取，請使用此方法。 如果使用多個 OLE DB 提供者，取用者提取模型會讓取用者提供任何資料列集物件，當做資料表值參數值。  
   
- 若要使用提取模型，取用者必須提供資料列集物件自己的實作。 搭配資料表值參數資料列集（CLSID_ROWSET_TVP）使用提取模型時，取用者必須匯總提供者透過 ITableDefinitionWithConstraints 所公開的資料表值參數資料列集物件：：CreateTableWithConstraints 方法或 IOpenRowset：： OpenRowset 方法。 只有取用者物件會覆寫 IRowset 介面實作。 您必須覆寫下列函數：  
+ 若要使用提取模型，取用者必須提供資料列集物件自己的實作。 搭配資料表值參數資料列集 (CLSID_ROWSET_TVP) 使用提取模型時，需要取用者彙總提供者透過 ITableDefinitionWithConstraints::CreateTableWithConstraints 方法或 IOpenRowset::OpenRowset 方法公開的資料表值參數資料列集物件。 只有取用者物件會覆寫 IRowset 介面實作。 您必須覆寫下列函數：  
   
 -   IRowset::GetNextRows  
   
@@ -59,10 +59,9 @@ ms.locfileid: "75231788"
   
 -   IRowset::RestartPosition  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會從取用者資料列集物件一次讀取一或多個資料列，以支援資料表值參數中的資料流行為。 例如，使用者在磁碟 (不在記憶體) 上可能有資料表值參數資料列集資料，而且可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者需要時，從磁碟實作功能來讀取資料。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會從取用者資料列集物件一次讀取一或多個資料列，以支援資料表值參數中的資料流行為。 例如，使用者在磁碟 (不在記憶體) 上可能有資料表值參數資料列集資料，而且可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者需要時，從磁碟實作功能來讀取資料。  
   
- 取用者會在資料表值參數資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列集物件上使用 IAccessor：： CreateAccessor，將其資料格式傳達給 Native Client OLE DB 提供者。 從取用者緩衝區讀取資料時，提供者會確認透過至少一個存取子控制代碼可以取得所有可寫入，而且非預設的資料行，並使用對應的控制代碼來讀取資料行資料。 為避免模稜兩可的情況，在資料表值參數資料列集資料行和繫結之間應該有一對一的對應。 相同資料行的重複繫結將會導致錯誤。 此外，每個存取子的順序都應該是 DBBindings 的*iOrdinal*成員。 IRowset::GetData 的呼叫將會與每個資料列的存取子數目一樣多，而且呼叫的順序將會以 *iOrdinal* 值的順序為基礎 (從低到高)。  
+ 取用者會在資料表值參數資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列集物件上使用 IAccessor：： CreateAccessor，將其資料格式傳達給 Native Client OLE DB 提供者。 從取用者緩衝區讀取資料時，提供者會確認透過至少一個存取子控制代碼可以取得所有可寫入，而且非預設的資料行，並使用對應的控制代碼來讀取資料行資料。 為避免模稜兩可的情況，在資料表值參數資料列集資料行和繫結之間應該有一對一的對應。 相同資料行的重複繫結將會導致錯誤。 同時，每個存取子依序都應該有 DBBindings 的 *iOrdinal* 成員。 IRowset::GetData 的呼叫將會與每個資料列的存取子數目一樣多，而且呼叫的順序將會以 *iOrdinal* 值的順序為基礎 (從低到高)。  
   
  提供者應該實作透過資料表值參數資料列集物件所公開的大部分介面。 取用者將會以最少的介面 (IRowset) 實作資料列集物件。 由於未公開彙總的緣故，剩餘的強制資料列集物件介面將會透過資料表值參數資料列集物件實作。  
   

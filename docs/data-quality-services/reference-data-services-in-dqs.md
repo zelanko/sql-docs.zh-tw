@@ -10,10 +10,10 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244141"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
@@ -22,8 +22,7 @@ ms.locfileid: "75244141"
 
   參考資料指的是一組精確且完整的相關或已分類的全域資料 (在企業界限範圍之外)，這些資料是在可靠的公用網域或是由優質商業內容提供者所提供。  
   
- 
-  [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的參考資料服務功能可讓您訂閱協力廠商參考資料提供者，並針對高品質資料來驗證您的商務資料，輕鬆地清理及豐富這些商務資料。 您可以使用 DQS 中主要 Data Quality Services 提供者的服務，在清除程序中標準化、更正或豐富您的資料。 例如，您可以針對參考資料使用區碼或郵遞區號的清單，以驗證客戶的地址。  
+ [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的參考資料服務功能可讓您訂閱協力廠商參考資料提供者，並針對高品質資料來驗證您的商務資料，輕鬆地清理及豐富這些商務資料。 您可以使用 DQS 中主要 Data Quality Services 提供者的服務，在清除程序中標準化、更正或豐富您的資料。 例如，您可以針對參考資料使用區碼或郵遞區號的清單，以驗證客戶的地址。  
   
  參考資料服務功能具有以下優點：  
   
@@ -33,7 +32,7 @@ ms.locfileid: "75244141"
   
 -   支援使用來自 Azure Marketplace 的參考資料，以及直接從協力廠商參考資料提供者。  
   
-##  <a name="Marketplace"></a>使用來自 Azure Marketplace 的參考資料  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>使用來自 Azure Marketplace 的參考資料  
  DQS 支援使用來自 Azure Marketplace 的參考資料，讓內容提供者透過 Marketplace 提供參考資料服務。 服務商場是 Microsoft 的服務，可針對高品質資料和應用程式提供單一服務商場和傳遞通道，並提供雲端服務。 如需 Marketplace 的詳細資訊，請參閱[瞭解 Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) （https://azuremarketplace.microsoft.com/about)。
   
  服務商場與 DQS 之間的順暢整合會簡化與探索、瀏覽及取得 DQS 內的資料品質專案資訊相關的步驟。 這些資料是從 DQS 取用，而且有助於 DQS 使用者以創新方式將 DQS、服務商場和參考資料服務提供者結合在一起，以達成高資料品質。  
@@ -50,13 +49,13 @@ ms.locfileid: "75244141"
   
  在 **中，您可以在** [組態] **畫面的** [參考資料] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]索引標籤上執行這些活動。  
   
-##  <a name="Direct"></a>直接從協力廠商參考資料提供者使用參考資料  
+##  <a name="using-reference-data-directly-from-the-third-party-reference-data-providers"></a><a name="Direct"></a> 使用直接從協力廠商參考資料提供者所提供的參考資料  
  如果您未連接到網際網路而無法使用服務商場，DQS 也支援您的組織網路中所提供之資料提供者的直接連接。 若要使用直接線上協力廠商參考資料提供者所提供的參考資料，您必須為 DQS 中的資料提供者建立記錄。  
   
-##  <a name="HowToCleanse"></a>如何使用參考資料清理資料  
+##  <a name="how-to-cleanse-data-by-using-the-reference-data"></a><a name="HowToCleanse"></a> 如何使用參考資料清理資料  
  使用參考資料在 DQS 中清理資料包括以下三個步驟：  
   
-1.  **在 dqs 中設定參考資料提供者詳細**資料：在您可以在 dqs 中使用參考資料之前，您必須先在 dqs 中設定參考資料服務詳細資料。  
+1.  **在 DQS 中設定參考資料提供者詳細資料**：在您可以在 DQS 中使用參考資料之前，您必須先在 DQS 中設定參考資料服務詳細資料。  
   
     1.  如果您使用 Marketplace，請提供有效的 Marketplace 帳戶金鑰，流覽至 Marketplace 中的[資料服務](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services)資料類別，並訂閱所需的提供者。  
   
@@ -64,9 +63,9 @@ ms.locfileid: "75244141"
   
      在 DQS 中設定參考資料提供者詳細資料對於特定資料提供者而言是一次性的活動。 只有 DQS 管理員可以在 DQS 中設定參考資料設定。  
   
-2.  將**知識庫中的定義域/複合定義域對應至參考資料服務**：將定義域/複合定義域對應至步驟1中訂閱/加入的適當參考資料服務。  
+2.  **將知識庫中的定義域/複合定義域對應至參考資料服務**：將定義域/複合定義域對應至步驟 1 所訂閱/加入的適當參考資料服務。  
   
-3.  **在資料品質專案中將對應的定義域用於清理活動**：為 [**清理**] 活動建立資料品質專案時，請選取包含與步驟2中的參考資料服務對應之定義域/複合定義域的知識庫，並執行清理活動。  
+3.  **在資料品質專案中將對應的定義域用於清理活動**：在針對 **[清理]** 活動建立資料品質專案時，請選取包含定義域/複合定義域的知識庫 (這些定義域與步驟 2 中的參考資料服務相對應)，並執行清理活動。  
   
 ## <a name="related-tasks"></a>相關工作  
   

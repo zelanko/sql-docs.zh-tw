@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401296"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>為分析平臺系統設定不適用的網路介面卡
 說明如何在非應用裝置用戶端伺服器上設定「未使用的網路介面卡」，以連線至平行處理資料倉儲（PDW）上的控制節點。 請使用這些指示來取得基本連線能力，並提供高可用性，讓載入、備份和其他進程自動連接到作用中的未使用網路。  
   
-## <a name="Basics"></a>描述  
+## <a name="description"></a><a name="Basics"></a>描述  
 這些指示會示範如何在未連線的伺服器上尋找並設定正確的未處理 IP 位址和子網路遮罩。 同時也會說明如何將伺服器設定為使用 AP 應用裝置 DNS，讓您的連線能夠解析成作用中的未執行網路。  
   
 為了達到高可用性，AP 有兩個未使用的網路，一個主動和一個被動。 每個未使用的網路都有不同的 IP 位址可用於控制節點。 如果作用中的「未使用」網路中斷，被動式的網路會變成作用中的網路。 當這種情況發生時，腳本或程式會自動連接到使用中的未受影響網路，而不需要變更腳本參數。  
@@ -32,7 +32,7 @@ ms.locfileid: "74401296"
   
     1.  如果您有兩個未使用的網路介面卡，您可以在第一個網路介面卡（稱為 TeamIB1）中設定一個介面卡，並在第二個未使用的網路（稱為 TeamIB2）中，為另一個介面卡提供可用的 IP 位址。 使用 appliance_domain-AD01 TeamIB1 IP 位址做為慣用的 DNS 伺服器，並 appliance_domain-AD02 TeamIB1 IP 位址做為 TeamIB1 網路介面卡的替代 DNS 伺服器。 使用 appliance_domain-AD01 TeamIB2 IP 位址做為慣用的 DNS 伺服器，並 appliance_domain-AD02 TeamIB2 IP 位址做為 TeamIB2 網路介面卡的替代 DNS 伺服器。  
   
-    2.  如果您只有一個不受使用的網路介面卡，您可以使用其中一個不受網路的 IP 位址來設定介面卡。 接著，您可以使用 appliance_domain-AD01 TeamIB1 和 appliance_domain-AD02 TeamIB1，或使用 appliance_domain-AD01 TeamIB2 和 appliance_domain-AD02 TeamIB2 （以相同的方式），在此介面卡上設定慣用和替代 DNS 伺服器。[網路] 做為所設定的介面卡，分別作為慣用和替代 DNS 伺服器。  
+    2.  如果您只有一個不受使用的網路介面卡，您可以使用其中一個不受網路的 IP 位址來設定介面卡。 接著，您可以使用 appliance_domain-AD01 TeamIB1 和 appliance_domain-AD02 TeamIB1，或使用 appliance_domain-AD01 TeamIB2 和 appliance_domain-AD02 TeamIB2，在此介面卡上設定慣用和替代 DNS 伺服器，並分別以所設定介面卡作為慣用和替代 DNS 伺服器的相同網路上。  
   
 3.  將您的「未使用網路介面卡」設定為使用 AP DNS 伺服器，以將您的連線解析成作用中的未執行網路  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74401296"
   
 -   `dwloader -S MYPDW-SQLCTL01`  
   
-## <a name="BeforeBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>開始之前  
   
 ### <a name="requirements"></a>需求  
 您需要有一個 AP 設備網域帳戶，才能登入 [AD01] 節點。 例如，F12345 * \Administrator。  
@@ -61,7 +61,7 @@ ms.locfileid: "74401296"
   
 若要符合您自己的商務需求，您也可以將用戶端伺服器加入您自己的非應用裝置工作組或 Windows 網域。  
   
-## <a name="Sec1"></a>步驟1：取得設備不會的網路設定  
+## <a name="step-1-obtain-the-appliance-infiniband-network-settings"></a><a name="Sec1"></a>步驟1：取得設備不會的網路設定  
 *取得設備的網路設定*  
   
 1.  使用 appliance_domain \Administrator 帳戶來登入應用裝置的 [AD01] 節點。  
@@ -96,7 +96,7 @@ ms.locfileid: "74401296"
   
     若要尋找未使用的 IP 位址，請開啟命令視窗，並嘗試 ping 設備位址範圍內的 IP 位址。 在此範例中，TeamIB2 網路的 IP 位址是172.16.18.30。 尋找以172.16.18 開頭且未使用的 IP 位址。 例如，從命令列輸入 "ping 172.16.18.254"。 如果 ping 要求不成功，則可以使用 IP 位址。  
   
-## <a name="Sec2"></a>步驟2：在用戶端伺服器上設定未設定的網路介面卡  
+## <a name="step-2-configure-the-infiniband-network-adapter-settings-on-your-client-server"></a><a name="Sec2"></a>步驟2：在用戶端伺服器上設定未設定的網路介面卡  
 
 ### <a name="notes"></a>注意  
   
@@ -151,7 +151,7 @@ ms.locfileid: "74401296"
     4.  將替代 DNS 伺服器設定為您先前從 appliance_domain *-AD02 節點記下的 TeamIB2 IP 位址。  
   
         > [!NOTE]  
-        > 如果您只有一張網路介面卡，請使用設備 AD01 TeamIB1 和設備 AD02 TeamIB1 做為慣用和替代 DNS 伺服器，分別設定慣用和替代 DNS 伺服器，或使用設備 AD01 TeamIB2 和應用裝置 AD02 TeamIB2 作為慣用和替代 DNS 伺服器（視 AD 虛擬機器是否已故障切換而定）。  
+        > 如果您只有一個網路介面卡，請使用設備 AD01 TeamIB1 和設備 AD02 TeamIB1 作為慣用和替代 DNS 伺服器，以設定慣用和替代 DNS 伺服器，或使用設備 AD01 TeamIB2 和設備 AD02 TeamIB2 做為慣用和替代 DNS 伺服器，視 AD 虛擬機器是否故障切換而定。  
   
         ![未用1網路介面卡屬性](media/network-ib1-properties.png "未用1網路介面卡屬性")  
   

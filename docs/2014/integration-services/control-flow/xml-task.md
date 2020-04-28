@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232731"
 ---
 # <a name="xml-task"></a>XML 工作
@@ -119,7 +119,7 @@ ms.locfileid: "75232731"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [[XML 工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML 工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [以 XML 工作驗證 XML](xml-task.md)  
   

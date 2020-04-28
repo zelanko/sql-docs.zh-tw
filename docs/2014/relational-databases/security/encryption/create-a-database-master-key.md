@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957242"
 ---
 # <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
@@ -29,23 +29,23 @@ ms.locfileid: "74957242"
 
   [安全性](#Security)
 
-- [若要使用 Transact-sql 建立資料庫主要金鑰](#TsqlProcedure)
+- [若要使用 Transact-SQL 建立資料庫主要金鑰](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 開始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 權限
+#### <a name="permissions"></a><a name="Permissions"></a> 權限
 
 需要資料庫的 CONTROL 權限。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>若要建立資料庫主要金鑰
 
 1. 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。
 2. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。
-3. 展開 [系統資料庫]  ，以滑鼠右鍵按一下 `master`，然後按一下 [新增查詢]  。
+3. 展開 [系統資料庫]****，以滑鼠右鍵按一下 `master`，然後按一下 [新增查詢]****。
 4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。
 
   ```sql

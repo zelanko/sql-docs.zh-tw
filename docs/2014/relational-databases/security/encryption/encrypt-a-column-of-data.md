@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957197"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
@@ -29,13 +29,13 @@ ms.locfileid: "74957197"
   
      [安全性](#Security)  
   
--   [若要使用 Transact-sql 來加密資料行](#TsqlProcedure)  
+-   [若要使用 Transact-SQL 來加密資料行](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要下列權限，才能執行以下步驟：  
   
 -   資料庫的 CONTROL 權限。  
@@ -46,7 +46,7 @@ ms.locfileid: "74957197"
   
 -   金鑰的某種權限，而且絕不能被拒絕 VIEW DEFINITION 權限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
   

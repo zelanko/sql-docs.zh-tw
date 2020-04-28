@@ -10,16 +10,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75238645"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="microsoft-software-license-terms"></a>Microsoft 軟體授權條款
+## <a name="microsoft-software-license-terms"></a>MICROSOFT 軟體授權條款
 **MICROSOFT SQL SERVER 2017 共用管理物件**
 
 ---
@@ -31,7 +31,7 @@ ms.locfileid: "75238645"
 
 但若上述項目另附有其他條款， 則其他條款優先適用。
 
-**藉由使用軟體，即表示您接受這些條款。如果您不接受這些條款，請勿使用軟體。**
+**軟體一經使用，即表示　貴用戶同意接受這些授權條款。若貴用戶不同意這些授權條款，請不要使用軟體。**
 
 ---
 **若貴使用者遵守這些授權條款，則貴使用者必須享有下列權利。**
@@ -40,12 +40,12 @@ ms.locfileid: "75238645"
 
 &nbsp;&nbsp;貴使用者得在裝置上安裝並使用任意數量的軟體複本，以設計、開發和測試您的程式。
 
-**2. 其他授權需求和（或）使用權利。**
+**2.  其他授權要件及/或使用權利。**
 
 &nbsp;&nbsp;**可散發的程式碼。**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. 使用和散佈的權利。如果您遵守下列條款：**
-*   您可以在您開發的程式中，複製並散佈軟體的目的碼形式（「可散發程式碼」）;和
+*   貴用戶得於所開發的程式中以目的碼形式複製與散布軟體 (以下稱「可散發程式碼」)；以及
 *   貴用戶得同意程式經銷商將「可散布程式碼」視為　貴用戶之程式的一部分，進行複製與散布。
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii. 散發需求。針對您發佈的任何可散發程式碼，您必須**
@@ -73,17 +73,17 @@ ms.locfileid: "75238645"
 
 **4. 協力廠商聲明。** 軟體可能包含不同的法律注意事項或由其他合約所規範的協力廠商元件，可能如軟體隨附的 ThirdPartyNotices 檔案中所述。  即使這類元件受到其他合約所規範，但在免責聲明和限制方面，同時也適用於下列損害賠償責任之排除。
 
-**5. 備份複本。** 貴用戶得製作軟體的一份備份。 　貴用戶僅得用它來重新安裝軟體。
+**5.  備份。** 貴用戶得製作軟體的一份備份。 貴用戶僅得用它來重新安裝軟體。
 
-**6. 檔。** 對　貴用戶之電腦或內部網路具備有效存取權的任何個人得基於內部參考之用途而複製及使用文件集。
+**6.  文件集。** 對　貴用戶之電腦或內部網路具備有效存取權的任何個人得基於內部參考之用途而複製及使用文件集。
 
-**7. 出口限制。** 本軟體受到美國出口法令規定之規範。 貴用戶必須遵守適用於軟體之一切本國及國際出口法規。 這些法規包括目的地限制、終端使用者限制和終端使用用途限制。 如需其他資訊， [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)請參閱。
+**7.  出口限制。** 本軟體受到美國出口法令規定之規範。 貴用戶必須遵守適用於軟體之一切本國及國際出口法規。 這些法規包括目的地限制、終端使用者限制和終端使用用途限制。 如需其他資訊， [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)請參閱。
 
-**8. 支援服務。** 因為此軟體為「依原樣」，我們可能不會為其提供支援服務。
+**8.  支援服務。** 由於本軟體係依「現況」提供，本公司可能不提供該軟體之支援服務。
 
 **9. 整份合約**。 本合約以及　貴用戶所使用的增補程式、更新程式、網際網路服務和支援服務之條款構成關於軟體和支援服務之整份合約。
 
-**10. 適用的法律。**
+**10. 準據法。**
 
 &nbsp;&nbsp;**答：美國。** 若　貴用戶在美國境內取得軟體，本合約之解釋或任何違反本合約所衍生的訴訟，無論是否有法規衝突產生，均應以美國華盛頓州之法律做為準據法。 所有其他訴訟將以　貴用戶居住之州/省法律為準據法，包含違反州/省消費者保護法、不當競爭法和侵權行為的訴訟。
 

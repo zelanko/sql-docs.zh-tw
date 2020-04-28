@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241325"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>移動已註冊的伺服器或已註冊的伺服器群組 (SQL Server Management Studio)
@@ -30,9 +30,9 @@ ms.locfileid: "75241325"
   
 #### <a name="to-move-a-registered-server-or-server-group"></a>若要移動已註冊的伺服器或伺服器群組  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，然後按一下 [移至]****。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，然後按一下 [移至]  。  
   
-2.  在 **[移動伺服器註冊]** 對話方塊中，展開伺服器群組的清單，按一下您希望伺服器或伺服器群組出現的節點位置，然後按一下 **[確定]**。  
+2.  在 **[移動伺服器註冊]** 對話方塊中，展開伺服器群組的清單，按一下您希望伺服器或伺服器群組出現的節點位置，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [註冊伺服器](register-servers.md)   

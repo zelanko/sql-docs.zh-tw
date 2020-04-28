@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401240"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>連線至分析平臺系統中的應用裝置節點
@@ -22,7 +22,7 @@ ms.locfileid: "74401240"
 ## <a name="connecting-with-hadoop"></a>連接 Hadoop  
 使用 Hadoop 搭配 SQL Server PDW 之前，請要求您的裝置管理員將 JAVA Runtime Environment 安裝到 SQL Server PDW 上。 如需指示，請參閱設備操作指南中的[設定與外部資料的 PolyBase 連線 &#40;分析平臺系統&#41;](configure-polybase-connectivity-to-external-data.md) 。  
   
-## <a name="ConnectingToIndividualNodes"></a>連接到設備節點  
+## <a name="connecting-to-appliance-nodes"></a><a name="ConnectingToIndividualNodes"></a>連接到設備節點  
 每個設備節點只會在特定使用案例和特定使用者類型的情況下，直接存取。 下表列出每個設備節點，以及使用者會直接連線到該節點的案例。  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  

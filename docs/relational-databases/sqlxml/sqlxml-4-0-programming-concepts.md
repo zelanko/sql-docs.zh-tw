@@ -15,25 +15,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242616"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SQLXML 3.0 會以 Web 發行的形式提供了額外的用戶端 XML 功能以及現有功能的增強功能，例如註解 XSD 結構描述、XML 大量載入、Web 服務 (SOAP) 支援和 Updategram。  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了 SQLXML 4.0，繼續提供與 SQLXML 3.0 相同的功能，以及配合 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入之新功能的其他更新。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了 SQLXML 4.0，繼續提供與 SQLXML 3.0 相同的功能，以及配合 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入之新功能的其他更新。  
   
  本節會提供 SQLXML 4.0 的相關資訊。  
   
  [SQLXML 不會安裝在 SQL Server 中](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
  說明如何安裝 SQLXML 4.0。  
   
- [SQLXML 4.0 SP1 的新增功能](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
+ [SQLXML 4.0 SP1 的新功能](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
  說明 SQLXML 4.0 中的更新和增強功能，並提供此文件中的相關主題連結。  
   
  [使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  

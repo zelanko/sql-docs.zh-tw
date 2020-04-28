@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a3d31af206653ee5dbbaaf1e1b54b8c05d79027
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242072"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "75242072"
 |描述如何使用 [快速諮詢]，取得用來描述識別碼的工具提示 (例如資料表或檢視表名稱)。|[快速諮詢 &#40;IntelliSense&#41;](quick-info-intellisense.md)|  
 |描述如何讓 IntelliSense 在您輸入足夠的名稱之後完成識別碼的其他部分，以取得其名稱開頭為相同字串之物件的簡短清單。|[自動完成文字 &#40;IntelliSense&#41;](complete-word-intellisense.md)|  
 |描述 IntelliSense 如何識別成對分隔符號的兩端，以及如何在該配對的兩端切換。|[語法組的自動比對](automatic-matching-of-syntax-pairs.md)|  
-|描述 IntelliSense 可能無法運作的狀況。|[疑難排解 IntelliSense (SQL Server Management Studio)](troubleshooting-intellisense.md)|  
+|描述 IntelliSense 可能無法運作的狀況。|[針對 IntelliSense (SQL Server Management Studio) 進行疑難排解](troubleshooting-intellisense.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  

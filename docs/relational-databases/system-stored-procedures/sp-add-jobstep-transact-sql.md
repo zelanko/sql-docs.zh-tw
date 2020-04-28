@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412852"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74412852"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+  > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資訊，請參閱[Azure SQL Database 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>語法  
   
@@ -86,16 +86,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**QueueReader**'|複寫佇列讀取器代理程式作業|  
 |'**ANALYSISQUERY**'|Analysis Services 查詢 (MDX、DMX)。|  
 |'**ANALYSISCOMMAND**'|Analysis Services 命令 (XMLA)。|  
-|'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝執行|  
+|'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝執行|  
 |'**PowerShell**'|PowerShell 指令碼|  
-|'**TSQL**' （預設值）|[!INCLUDE[tsql](../../includes/tsql-md.md)]句|  
+|'**TSQL**' （預設值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式|  
   
 `[ @command = ] 'command'`由**SQLServerAgent**服務透過*子系統*執行的命令。 *command*是**Nvarchar （max）**，預設值是 Null。 SQL Server Agent 所提供的 Token 替代可在您撰寫軟體程式時，提供變數所提供的同等彈性。  
   
 > [!IMPORTANT]  
 >  逸出巨集現在必須伴隨著作業步驟中使用的所有 Token 一起執行，否則這些作業步驟將會失敗。 此外，您現在必須用括號括住 Token 名稱，並且在 Token 語法的開頭加上貨幣符號 (`$`)。 例如：  
 >   
->  `$(ESCAPE_`*宏名稱*`(DATE))`  
+>  `$(ESCAPE_` *macro name* `(DATE))`  
   
  如需這些權杖的詳細資訊，以及如何將作業步驟更新為使用新的權杖語法，請參閱[在作業步驟中使用權杖](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
@@ -112,9 +112,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |值|描述 (動作)|  
 |-----------|----------------------------|  
-|**1** （預設值）|成功而結束|  
+|**1** (預設值)|成功而結束|  
 |**2**|失敗而結束|  
-|**第**|移至下一步驟|  
+|**3**|移至下一步驟|  
 |**4**|移至步驟*on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`當步驟成功且*success_action*為**4**時，此作業中要執行之步驟的識別碼。 *success_step_id*是**int**，預設值是**0**。  
@@ -124,8 +124,8 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |值|描述 (動作)|  
 |-----------|----------------------------|  
 |**1**|成功而結束|  
-|**2** （預設值）|失敗而結束|  
-|**第**|移至下一步驟|  
+|**2** (預設值)|失敗而結束|  
+|**3**|移至下一步驟|  
 |**4**|移至步驟*on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`如果步驟失敗且*fail_action*為**4**時，此作業中要執行之步驟的識別碼。 *fail_step_id*是**int**，預設值是**0**。  
@@ -148,7 +148,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|覆寫輸出檔|  
+|**0** (預設)|覆寫輸出檔|  
 |**2**|附加至輸出檔。|  
 |**4**|將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟輸出寫入步驟記錄。|  
 |**8**|將記錄寫入資料表 (覆寫現有的記錄)。|  
@@ -176,7 +176,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Proxy 可透過*proxy_name*或*proxy_id*來識別。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+ 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   

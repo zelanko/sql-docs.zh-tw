@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74564746"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.databases dm_pdw_resource_waits （Transact-sql）
@@ -26,16 +26,16 @@ ms.locfileid: "74564746"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**Bigint**|要求在等候清單中的位置。|以零為基底的序數。 這在所有等候專案中都不是唯一的。|  
-|session_id|**Nvarchar （32）**|發生等候狀態之會話的識別碼。|請參閱[dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
+|wait_id|**bigint**|要求在等候清單中的位置。|以零為基底的序數。 這在所有等候專案中都不是唯一的。|  
+|session_id|**nvarchar(32)**|發生等候狀態之會話的識別碼。|請參閱[dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
 |type|**nvarchar(255)**|此專案所代表的等候類型。|可能的值：<br /><br /> Connection<br /><br /> 區域變數並行查詢<br /><br /> 分散式查詢並行<br /><br /> DMS 並行<br /><br /> 備份並行|  
-|object_type|**nvarchar(255)**|受等候影響的物件類型。|可能的值：<br /><br /> **目標**<br /><br /> **DATABASE**<br /><br /> **筆記本電腦**<br /><br /> **SCHEMA**<br /><br /> **應用程式**|  
+|object_type|**nvarchar(255)**|受等候影響的物件類型。|可能的值：<br /><br /> **目標**<br /><br /> **資料**<br /><br /> **筆記本電腦**<br /><br /> **SCHEMA**<br /><br /> **應用程式**|  
 |object_name|**Nvarchar （386）**|受等候影響之指定物件的名稱或 GUID。|資料表和 views 會以三個部分的名稱顯示。<br /><br /> 索引和統計資料會顯示四部分名稱。<br /><br /> 名稱、主體和資料庫都是字串名稱。|  
-|request_id|**Nvarchar （32）**|發生等候狀態之要求的識別碼。|要求的 QID 識別碼。<br /><br /> 載入要求的 GUID 識別碼。|  
+|request_id|**nvarchar(32)**|發生等候狀態之要求的識別碼。|要求的 QID 識別碼。<br /><br /> 載入要求的 GUID 識別碼。|  
 |request_time|**datetime**|要求鎖定或資源的時間。||  
 |acquire_time|**datetime**|取得鎖定或資源的時間。||  
-|state|**nvarchar(50)**|等候狀態的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|優先順序|**int**|等待專案的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|State|**nvarchar(50)**|等候狀態的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|priority|**int**|等待專案的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |concurrency_slots_used|**int**|內部|請參閱下方的[監視資源等候](#monitor-resource-waits)|  
 |resource_class|**Nvarchar （20）**|內部 |請參閱下方的[監視資源等候](#monitor-resource-waits)|  
   

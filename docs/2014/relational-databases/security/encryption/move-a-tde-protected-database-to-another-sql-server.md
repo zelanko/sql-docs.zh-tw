@@ -14,14 +14,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957163"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 加密會使用資料庫加密金鑰 (DEK)，此金鑰會儲存在資料庫開機記錄中，以在復原期間提供可用性。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 `master` 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 加密會使用資料庫加密金鑰 (DEK)，此金鑰會儲存在資料庫開機記錄中，以在復原期間提供可用性。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 `master` 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
   
  **本主題內容**  
   
@@ -31,21 +31,21 @@ ms.locfileid: "74957163"
   
      [安全性](#Security)  
   
--   **若要建立以透明資料加密保護的資料庫，請使用：**  
+-   **若要使用下列項目，建立透明資料加密所保護的資料庫：**  
   
      [Transact-SQL](#SSMSCreate)  
   
      [Transact-SQL](#TsqlCreate)  
   
--   **若要移動資料庫，請使用：**  
+-   **若要使用下列項目移動資料庫：**  
   
      [Transact-SQL](#SSMSMove)  
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   移動 TDE 保護的資料庫時，您也必須移動用來開啟 DEK 的憑證或非對稱金鑰。 憑證或非對稱金鑰必須安裝在目的地伺服器`master`的資料庫中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]才能存取資料庫檔案。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](transparent-data-encryption.md)。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957163"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]將此處建立的檔案儲存在**C:\Program FILES\MICROSOFT SQL Server\MSSQL12。** 預設為 MSSQLSERVER\MSSQL\DATA。 您的檔案名稱和位置可能會不同。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   需要`CONTROL DATABASE`資料庫的`master`許可權，才能建立資料庫主要金鑰。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74957163"
   
 -   需要加密資料庫的 `CONTROL DATABASE` 權限，以及用於加密資料庫加密金鑰之憑證或非對稱金鑰的 `VIEW DEFINITION` 權限。  
   
-##  <a name="SSMSProcedure"></a>建立透明資料加密所保護的資料庫  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a>建立透明資料加密所保護的資料庫  
   
-###  <a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
 1.  在`master`資料庫中建立資料庫主要金鑰和憑證。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
@@ -75,18 +75,16 @@ ms.locfileid: "74957163"
   
 4.  在 **[新增資料庫]** 對話方塊的 **[資料庫名稱]** 方塊中，輸入新資料庫的名稱。  
   
-5.  在 **[擁有者]** 方塊中，輸入新資料庫擁有者的名稱。 或者，按一下省略號 **（...）** ，開啟 [**選取資料庫擁有**者] 對話方塊。 如需有關建立新資料庫的詳細資訊，請參閱＜ [Create a Database](../../databases/create-a-database.md)＞。  
+5.  在 **[擁有者]** 方塊中，輸入新資料庫擁有者的名稱。 或者，按一下省略符號 **(...)**，開啟 [選取資料庫擁有者]**** 對話方塊。 如需有關建立新資料庫的詳細資訊，請參閱＜ [Create a Database](../../databases/create-a-database.md)＞。  
   
 6.  在 [物件總管] 中，按一下加號展開 **[資料庫]** 資料夾。  
   
 7.  以滑鼠右鍵按一下建立的資料庫，指向 **[工作]**，然後選取 **[管理資料庫加密]**。  
   
-     
-  **[管理資料庫加密]** 對話方塊有下列選項。  
+     **[管理資料庫加密]** 對話方塊有下列選項。  
   
      **加密演算法**  
-     顯示或設定要用於資料庫加密的演算法。 
-  `AES128` 是預設演算法。 這個欄位不能空白。 如需有關加密演算法的詳細資訊，請參閱＜ [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)＞。  
+     顯示或設定要用於資料庫加密的演算法。 `AES128` 是預設演算法。 這個欄位不能空白。 如需有關加密演算法的詳細資訊，請參閱＜ [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)＞。  
   
      **使用伺服器憑證**  
      設定由憑證維護安全的加密。 從清單中選取一項。 如果您沒有伺服器憑證的 `VIEW DEFINITION` 權限，此清單將會是空的。 如果選取了憑證方法的加密，這個值就不能是空的。 如需有關憑證的詳細資訊，請參閱＜ [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)＞。  
@@ -94,12 +92,12 @@ ms.locfileid: "74957163"
      **使用伺服器非對稱金鑰**  
      設定由非對稱金鑰維護安全的加密。 只會顯示可用的非對稱金鑰。 受到 EKM 模組所保護的非對稱金鑰可以使用 TDE 加密資料庫。  
   
-     **設定資料庫加密于**  
+     **將資料庫加密設為開啟**  
      將資料庫改變為開啟 (核取) 或關閉 (不核取) TDE。  
   
-8.  完成後，請按一下 **[確定]** 。  
+8.  完成時按一下 **[確定]**。  
   
-###  <a name="TsqlCreate"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> 使用 Transact-SQL  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
@@ -145,7 +143,7 @@ ms.locfileid: "74957163"
     GO  
     ```  
   
- 如需詳細資訊，請參閱  
+ 如需詳細資訊，請參閱：  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -159,14 +157,13 @@ ms.locfileid: "74957163"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a>若要移動資料庫  
+##  <a name="to-move-a-database"></a><a name="TsqlProcedure"></a>若要移動資料庫  
   
-###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下上方加密的資料庫，指向 [工作]**** ，然後選取 [卸離...]****。  
   
-     
-  **[卸離資料庫]** 對話方塊有下列選項。  
+     **[卸離資料庫]** 對話方塊有下列選項。  
   
      **要卸離的資料庫**  
      列出要卸離的資料庫。  
@@ -192,9 +189,9 @@ ms.locfileid: "74957163"
      **訊息**  
      **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
   
-    -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]** 。  
+    -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
   
-    -   當資料庫有一或多個使用中的連線時，[狀態]  為 [未就緒]  且 [訊息]  資料行顯示 [<使用中連線數目> 個使用中的連線]   ，例如：[1 個使用中的連線]  。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個使用中的連接時，**狀態**會是 [**未就緒**]，且 [**訊息**] 資料行會顯示 _<number_of_active_connections>_ 使用中**的連接，** 例如：1個使用中的**連接**。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
@@ -214,15 +211,13 @@ ms.locfileid: "74957163"
   
 9. 在 [**尋找資料庫檔案-**_server_name_ ] 對話方塊中，選取要附加至新伺服器的資料庫檔案，然後按一下 **[確定]**。  
   
-     
-  **[附加資料庫]** 對話方塊有下列選項。  
+     **[附加資料庫]** 對話方塊有下列選項。  
   
-     **要附加的資料庫**  
+     **[要附加的資料庫]**  
      顯示有關所選資料庫的資訊。  
   
-     
      \<無資料行標頭>  
-  顯示指出附加作業之狀態的圖示。 可能的圖示將在以下的 **[狀態]** 描述中加以描述。  
+     顯示指出附加作業之狀態的圖示。 可能的圖示將在以下的 **[狀態]** 描述中加以描述。  
   
      **MDF 檔案位置**  
      顯示選取之 MDF 檔的路徑和檔案名稱。  
@@ -243,7 +238,7 @@ ms.locfileid: "74957163"
     |----------|-----------------|-----------------|  
     |(無圖示)|(沒有文字)|附加作業尚未啟動或是針對此物件進行暫止。 當對話方塊開啟時，這是預設的動作。|  
     |綠色、指向右方的三角形|進行中|附加作業已啟動，但尚未完成。|  
-    |綠色的核取記號|Success|已順利附加物件。|  
+    |綠色的核取記號|成功|已順利附加物件。|  
     |包含白色十字的紅色圓圈|錯誤|附加作業發生錯誤，且未順利完成。|  
     |包含兩個黑色的象限 (在左方和右方) 以及兩個白色的象限 (在上方和下方)|已停止|附加作業未順利完成，因為使用者已停止作業。|  
     |包含指向逆時針方向之彎曲箭頭的圓圈|已回復|附加作業已順利完成，但是因為在附加其他物件的期間發生了錯誤，所以已將其回復。|  
@@ -257,7 +252,7 @@ ms.locfileid: "74957163"
      **移除**  
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
-     **** 「 _<database_name>_ 」**資料庫詳細資料**  
+     **"** 「 _<database_name>_ 」**資料庫詳細資料**  
      顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下**流覽**按鈕（**...**）。  
   
     > [!NOTE]  
@@ -273,9 +268,9 @@ ms.locfileid: "74957163"
      顯示選取之資料庫檔案的路徑。 路徑可以用手動的方式編輯。  
   
      **訊息**  
-     顯示空白訊息或 **「找不到檔案」** 超連結。  
+     顯示空白訊息或「找**不到**檔案」超連結。  
   
-###  <a name="TsqlMove"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> 使用 Transact-SQL  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
@@ -316,7 +311,7 @@ ms.locfileid: "74957163"
     GO  
     ```  
   
- 如需詳細資訊，請參閱  
+ 如需詳細資訊，請參閱：  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
@@ -327,6 +322,6 @@ ms.locfileid: "74957163"
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   

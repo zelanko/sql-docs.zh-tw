@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232284"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
@@ -59,11 +59,9 @@ ms.locfileid: "75232284"
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**十進位、可\<為 null 的十進位>**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` 比較適合資料傳輸和存取，而 `SQLString` 比較適合執行 String 作業。|`String, Char[]`|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` 比較適合資料傳輸和存取，而 `SQLString` 比較適合執行 String 作業。|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、String、Char []、可\<為 null 的 Char>**|  
-|`real`|
-  `SqlSingle` (`SqlSingle` 的範圍，但大於 `real`)|**單一、可\<為 null 的單一>**|  
+|`real`|`SqlSingle` (`SqlSingle` 的範圍，但大於 `real`)|**單一、可\<為 null 的單一>**|  
 |`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16、可\<為 null 的 int16>**|  
 |`smallmoney`|`SqlMoney`|**十進位、可\<為 null 的十進位>**|  
@@ -98,7 +96,7 @@ Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)
 End Sub  
 ```  
   
- 在資料庫中建置與建立組件之後，就會使用下列 Transact-SQL，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立預存程序，這會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `int` 資料類型指定為 OUTPUT 參數：  
+ 在資料庫中建置與建立組件之後，就會使用下列 Transact-SQL，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立預存程序，這會將 `int` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型指定為 OUTPUT 參數：  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  

@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401488"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得及設定平行處理資料倉儲的備份伺服器
 本文說明如何將非設備的 Windows 系統設定為備份伺服器，以搭配分析平臺系統（AP）和平行處理資料倉儲（PDW）中的備份和還原功能使用。  
   
   
-## <a name="Basics"></a>備份伺服器基本概念  
+## <a name="backup-server-basics"></a><a name="Basics"></a>備份伺服器基本概念  
 備份伺服器：  
   
 -   由您自己的 IT 小組提供及管理。  
@@ -35,12 +35,12 @@ ms.locfileid: "74401488"
   
 -   裝載備份檔案共用，這是使用伺服器訊息區（SMB）應用層級網路通訊協定的 Windows 檔案共用。 備份檔案共用許可權會授與 Windows 網域使用者（通常是專用的備份使用者）在共用上執行備份和還原作業的能力。 Windows 網域使用者的「使用者名稱」和「密碼」認證會儲存在 PDW 中，讓 PDW 可以在備份檔案共用上執行備份和還原作業。  
   
-## <a name="Step1"></a>步驟1：判斷容量需求  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>步驟1：判斷容量需求  
 備份伺服器的系統需求，幾乎完全取決於您自己的工作負載。 在購買或布建備份伺服器之前，您必須先找出您的容量需求。 備份伺服器不需要只專用於備份，只要它會處理工作負載的效能和儲存需求。 您也可以有多部備份伺服器，以便備份和還原每個資料庫到數部伺服器的其中一個。  
   
 使用 [[備份伺服器容量規劃] 工作表](backup-capacity-planning-worksheet.md)，以協助判斷您的容量需求。  
   
-## <a name="Step2"></a>步驟2：取得備份伺服器  
+## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>步驟2：取得備份伺服器  
 瞭解您的容量需求之後，您就可以規劃需要購買或布建的伺服器和網路元件。 將下列需求清單併入您的購買方案，然後購買您的伺服器或布建現有的伺服器。  
   
 ### <a name="software-requirements"></a>軟體需求  
@@ -61,7 +61,7 @@ ms.locfileid: "74401488"
   
 3.  購買2個雙埠卡的 FDR 未使用纜線，或單一端口卡的 1 FDR 雙絞線纜線。 FDR 的無法進行的纜線會將載入伺服器連線到設備不會的網路。 根據您的環境，纜線長度取決於載入伺服器和設備未通過交換器之間的距離。  
   
-## <a name="Step3"></a>步驟3：將伺服器連接到不會的網路  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>步驟3：將伺服器連接到不會的網路  
 使用下列步驟，將載入伺服器連線到不會的網路。 如果伺服器不是使用不會的網路，請略過此步驟。  
   
 1.  讓伺服器靠近設備，以便您可以將它連接到設備不會的網路。  
@@ -76,7 +76,7 @@ ms.locfileid: "74401488"
   
 5.  設定網路介面卡的「未通過」和「DNS」設定。 如需設定指示，請參閱設定不確定的[網路介面卡](configure-infiniband-network-adapters.md)。  
   
-## <a name="Step4"></a>步驟4：設定備份檔案共用  
+## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>步驟4：設定備份檔案共用  
 PDW 會透過 UNC 檔案共用存取備份伺服器。 若要設定檔案共用：  
   
 1.  在備份伺服器上建立用來儲存備份的資料夾。  
@@ -101,7 +101,7 @@ PDW 會透過 UNC 檔案共用存取備份伺服器。 若要設定檔案共用�
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>步驟5：開始備份您的資料  
+## <a name="step-5-start-backing-up-your-data"></a><a name="Step5"></a>步驟5：開始備份您的資料  
 您現在已準備好開始將資料備份到備份伺服器。  
   
 若要備份資料，請使用查詢用戶端連接到 SQL Server PDW，然後提交備份資料庫或還原資料庫命令。 使用 DISK = 子句來指定備份伺服器和備份位置。  
@@ -118,13 +118,13 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-如需詳細資訊，請參閱 
+如需詳細資訊，請參閱： 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
 -   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
-## <a name="Security"></a>安全性注意事項  
+## <a name="security-notices"></a><a name="Security"></a>安全性注意事項  
 備份伺服器未加入設備的私人網域。 它位於您自己的網路中，而且您自己的網域和私人設備網域之間沒有信任關係。  
   
 由於 PDW 備份不會儲存在應用裝置上，因此您的 IT 小組會負責管理備份安全性的所有層面。 例如，這包括管理備份資料的安全性、用來儲存備份之伺服器的安全性，以及將備份伺服器連接到 AP 設備的網路基礎結構安全性。  

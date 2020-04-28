@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401196"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下載並套用適用于分析平臺系統的 Microsoft 更新
 本主題討論如何將更新從 Microsoft Update 目錄下載至 Windows Server Update Services （WSUS），並將這些更新套用至分析平臺系統裝置伺服器。 Microsoft Update 將會安裝 Windows 和 SQL Server 的所有適用更新。 WSUS 安裝在設備的 VMM 虛擬機器上。  
   
-## <a name="TOP"></a>開始之前  
+## <a name="before-you-begin"></a><a name="TOP"></a>開始之前  
   
 > [!WARNING]  
 > 如果您的應用裝置或任何應用裝置元件關閉或處於故障狀態，請勿嘗試套用更新。 在此情況下，請聯絡支援人員以尋求協助。  
@@ -35,9 +35,9 @@ ms.locfileid: "74401196"
   
 -   擁有具有許可權的登入，可存取分析平臺系統管理主控台及查看設備狀態資訊。  
   
--   在大部分情況下，WSUS 需要存取設備以外的伺服器。 若要支援此使用案例，可以將分析平臺系統 DNS 設定為支援外部名稱轉寄站，以允許分析平臺系統主機和虛擬機器（Vm）使用外部 DNS 伺服器來解析位於以外的名稱台. 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非設備 DNS 名稱 &#40;分析平臺系統&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
+-   在大部分情況下，WSUS 需要存取設備以外的伺服器。 若要支援此使用案例，可以將分析平臺系統 DNS 設定為支援外部名稱轉寄站，以允許分析平臺系統主機和虛擬機器（Vm）使用外部 DNS 伺服器來解析設備以外的名稱。 如需詳細資訊，請參閱[使用 DNS 轉寄站來解析非設備 DNS 名稱 &#40;分析平臺系統&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
-## <a name="bkmk_ImportUpdates"></a>下載並套用 Microsoft update  
+## <a name="to-download-and-apply-microsoft-updates"></a><a name="bkmk_ImportUpdates"></a>下載並套用 Microsoft update  
   
 #### <a name="verify-the-appliance-state-indicators"></a>確認設備狀態指示器  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74401196"
   
 1.  在 [WSUS 主控台] 的左窗格中，按一下 [**所有更新**]。  
   
-2.  在 [**所有更新**] 窗格中，按一下 [**核准**] 下拉式功能表，將 [**核准**] 設定為 [拒絕]**以外的任何**一個。 按一下 [**狀態**] 下拉式功能表，將 [**狀態**] 設定為 [**任何**]。 按一下 [重新整理]  。  
+2.  在 [**所有更新**] 窗格中，按一下 [**核准**] 下拉式功能表，將 [**核准**] 設定為 [拒絕]**以外的任何**一個。 按一下 [**狀態**] 下拉式功能表，將 [**狀態**] 設定為 [**任何**]。 按一下 [重新整理]****。  
   
     以滑鼠右鍵按一下 [**標題**] 資料行，然後選取 [檔案**狀態**]，以在下載完成後確認檔案狀態。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74401196"
   
 4.  選取您在[設定 Windows Server Update Services &#40;WSUS&#41; &#40;分析平臺系統&#41;](configure-windows-server-update-services-wsus.md)中所建立的設備伺服器群組。  
   
-5.  按一下 [已核准安裝]****，然後按一下 [確定]****。  
+5.  按一下 [已核准安裝]  ，然後按一下 [確定]  。  
   
     ![核准您的電腦群組更新。](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
@@ -129,7 +129,7 @@ ms.locfileid: "74401196"
   
 8.  在 [**所有更新**] 視窗中，將 [**狀態**] 設定為 [**失敗] 或 [必要**]  
   
-9. 按一下 [重新整理]  。  
+9. 按一下 [重新整理]****。  
   
 10. 如果**需要的更新**大於零，請聯絡支援以取得協助。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "74401196"
   
 2.  確認 [叢集 **] 和 [** **網路**] 資料行顯示所有節點的綠色（或 NA）。 如果任一個資料行中存在任何警示，設備可能無法正確安裝更新。 如果有任何重大警示，請聯絡支援人員。  
   
-## <a name="RunUpdateWizard"></a>執行更新程式  
+## <a name="run-the-update-program"></a><a name="RunUpdateWizard"></a>執行更新程式  
 請遵循這些指示來執行分析平臺系統更新程式。  
   
 > [!NOTE]  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229000"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>可用性群組的管理 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75229000"
 -   針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉  
   
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **設定現有的可用性群組**  
   
 -   [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "75229000"
   
 -   [設定彈性容錯移轉原則，以控制自動容錯移轉 &#40;AlwaysOn 可用性群組的條件&#41;](configure-flexible-automatic-failover-policy.md)  
   
- **若要管理可用性群組**  
+ **管理可用性群組**  
   
 -   [設定可用性複本的備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75229000"
   
 -   [移除可用性群組 &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
   
- **若要管理可用性複本**  
+ **管理可用性複本**  
   
 -   [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75229000"
   
 -   [變更可用性複本的工作階段逾時期限 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **若要管理可用性資料庫**  
+ **管理可用性資料庫**  
   
 -   [將資料庫加入至可用性群組 &#40;SQL Server&#41;](availability-group-add-a-database.md)  
   
@@ -102,18 +102,18 @@ ms.locfileid: "75229000"
   
 -   [繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
- **若要監視可用性群組**  
+ **監視可用性群組**  
   
 -   [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
- **支援將可用性群組遷移至新的 WSFC 叢集（跨叢集遷移）**  
+ **若要支援將可用性群組移轉至新的 WSFC 叢集 (跨叢集移轉)**  
   
 -   [變更伺服器執行個體的 HADR 叢集內容 &#40;SQL Server&#41;](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
 -   [讓可用性群組離線 &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

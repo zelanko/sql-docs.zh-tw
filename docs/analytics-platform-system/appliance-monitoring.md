@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401418"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>分析平臺系統的設備監視
 此設備監視指南說明用來監視分析平臺系統裝置的工具和工作。  
   
-## <a name="Basics"></a>監視基本概念和工具  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>監視基本概念和工具  
 可以在 SQL Server PDW 設備上監視的值和資訊很廣泛。 例如，下列是一般的監視工作。  
   
 -   檢查 SQL Server PDW 發出的任何警示。  
@@ -38,13 +38,13 @@ ms.locfileid: "74401418"
 有多種工具可用來監視設備。  
   
 管理主控台  
-SQL Server PDW 具有管理主控台。 這是以 web 為基礎的工具，可顯示查詢、載入、備份和還原、鎖定、會話、警示和設備狀態的相關資訊。 管理主控台會在設備上執行;使用者透過 Internet Explorer 連接到管理主控台。 如需詳細資訊，請參閱  
+SQL Server PDW 具有管理主控台。 這是以 web 為基礎的工具，可顯示查詢、載入、備份和還原、鎖定、會話、警示和設備狀態的相關資訊。 管理主控台會在設備上執行;使用者透過 Internet Explorer 連接到管理主控台。 如需詳細資訊，請參閱：  
   
 -   [使用管理主控台 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 ![PDW 管理主控台警示](./media/appliance-monitoring/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
   
-系統檢視  
+系統檢視表  
 SQL Server PDW 包含完整的系統檢視，可讓您取得有關設備健全狀況、狀態和效能的詳細資訊。 如需監視工作的系統檢視清單，請參閱：  
   
 -   [使用系統檢視 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-views.md)  
@@ -61,7 +61,7 @@ SQL Server PDW 與 Systems Center Operations Manager 有廣泛的整合。 SQL S
   
 -   [SQL Server PDW 的 Power Shell 監視範例](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>相關監視工作  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>相關監視工作  
   
 |監視工作|描述|  
 |-------------------|---------------|  

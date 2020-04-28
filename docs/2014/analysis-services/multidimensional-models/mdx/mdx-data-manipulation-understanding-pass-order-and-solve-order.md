@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229434"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>了解行程順序與解決順序 (MDX)
@@ -39,8 +39,7 @@ ms.locfileid: "75229434"
   
 -   評估維度、成員[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、匯出成員、自訂匯總和匯出資料格的順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估自訂成員、導出成員、自訂積存和導出資料格的順序。  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估自訂成員、導出成員、自訂積存和導出資料格的順序。  
   
  擁有最高解決順序的成員優先。  
   
@@ -93,7 +92,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**年差異**|($20,160.56)|$2,878.06|  
+|**Year Difference**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>查詢 2-費用後的收入百分比  
  在第二個查詢中，使用以下 MDX 查詢來計算每年扣除費用後的收益百分比：  
@@ -126,8 +125,7 @@ FROM [Adventure Works]
 ### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查詢 3-結合年份差異和淨收益計算  
  在結合上述兩個範例到單一 MDX 查詢的最終查詢中，求解順序就變得很重要，因為會同時計算資料行和資料列。 若要確定以正確的順序進行計算，請使用 `SOLVE_ORDER` 關鍵字定義計算順序。  
   
- 
-  `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 和 `SOLVE_ORDER` 關鍵字並用的整數值是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出成員沒有以 `SOLVE_ORDER` 關鍵字定義，該導出成員的預設值為零。  
+ `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 和 `SOLVE_ORDER` 關鍵字並用的整數值是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出成員沒有以 `SOLVE_ORDER` 關鍵字定義，該導出成員的預設值為零。  
   
  例如，如果您結合前兩個範例查詢中使用的計算，兩個導出成員 `Year Difference` 和 `Profit Margin`會在 MDX 查詢範例之結果資料集中的單一資料格中產生交集。 決定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 如何評估此資料格的唯一方式，就是解決順序。 用來建立此資料格的公式會根據兩個導出成員的解決順序，來產生不同的結果。  
   
@@ -151,14 +149,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- 在此結合的 MDX 查詢範例中， `Profit Margin` 擁有最高的解決順序，所以當兩個運算式有交集時會優先處理它。 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會使用 `Profit Margin` 公式來評估有問題的資料格。 此巢狀計算的結果，如下表所示。  
+ 在此結合的 MDX 查詢範例中， `Profit Margin` 擁有最高的解決順序，所以當兩個運算式有交集時會優先處理它。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會使用 `Profit Margin` 公式來評估有問題的資料格。 此巢狀計算的結果，如下表所示。  
   
 ||Internet Sales Amount|Internet Total Product Cost|獲利率|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**年差異**|($20,160.56)|$2,878.06|114.28%|  
+|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
   
  共用資料格中的結果是以 `Profit Margin`的公式為基礎。 也就是說， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會計算含有 `Year Difference` 資料之共用資料格的結果，產生下列公式 (為了清楚起見，結果為四捨五入)：  
   
@@ -198,7 +195,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**年差異**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
   
  因為此查詢使用含有 `Year Difference` 資料的 `Profit Margin` 公式，所以共用資料格的公式會類似以下計算：  
   
@@ -219,5 +216,5 @@ FROM [Adventure Works]
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
  [&#40;MDX&#41;的 CREATE MEMBER 語句](/sql/mdx/mdx-data-definition-create-member)   
- [&#40;MDX&#41;運算元據](mdx-data-manipulation-manipulating-data.md)  
+ [操作資料 &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   

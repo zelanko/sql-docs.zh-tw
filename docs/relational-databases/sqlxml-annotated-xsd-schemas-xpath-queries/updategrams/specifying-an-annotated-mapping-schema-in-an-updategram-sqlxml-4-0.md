@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243571"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
@@ -236,11 +236,9 @@ ms.locfileid: "75243571"
   
  這個範例假設下列資料表是在**tempdb**資料庫中：  
   
--   
-  `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 是主索引鍵  
+-   `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 是主索引鍵  
   
--   
-  `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是參考 `CustomerID` 資料表內之 `Cust` 主索引鍵的外部索引鍵。  
+-   `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是參考 `CustomerID` 資料表內之 `Cust` 主索引鍵的外部索引鍵。  
   
  updategram 會使用以下 XSD 結構描述，將記錄插入 Cust 和 Ord 資料表中：  
   

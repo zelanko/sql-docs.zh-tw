@@ -18,17 +18,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232299"
 ---
 # <a name="creating-an-assembly"></a>建立組件
   預存程序或觸發程序之類的 Managed 資料庫物件會經過編譯，然後再稱為組件的單元中進行部署。 Managed DLL 元件必須先在中[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]註冊，然後才能使用元件提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中註冊組件，請使用 CREATE ASSEMBLY 陳述式。 本主題討論如何在資料庫中使用 CREATE ASSEMBLY 陳述式註冊組件，以及如何指定組件的安全性設定。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY 陳述式  
- CREATE ASSEMBLY 陳述式用於在資料庫中註冊組件。 下列是一個範例：  
+ CREATE ASSEMBLY 陳述式用於在資料庫中註冊組件。 範例如下：  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -37,8 +37,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  FROM 子句會指定要建立之組件的路徑名稱。 此路徑可以是通用命名慣例 (UNC) 路徑，或是本機電腦的實體檔案路徑。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允許註冊具有相同名稱、文化特性及公開金鑰之不同版本的組件。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允許註冊具有相同名稱、文化特性及公開金鑰之不同版本的組件。  
   
  您可以建立參考其他組件的組件。 當中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立元件時，如果參考的元件尚未建立到資料庫中，則也會建立根層級元件所參考的元件。  
   
@@ -53,8 +52,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ## <a name="specifying-security-when-creating-assemblies"></a>建立組件時指定安全性  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中建立組件時，您可以在能夠執行程式碼的三個不同安全性層級中，指定一個安全性層級：`SAFE`、`EXTERNAL_ACCESS` 或 `UNSAFE`。 執行 `CREATE ASSEMBLY` 陳述式時，系統會在可能造成組件無法在伺服器上註冊的程式碼組件上執行某些檢查。 如需詳細資訊，請參閱[CodePlex](https://msftengprodsamples.codeplex.com/)上的模擬範例。  
   
- 
-  `SAFE` 是預設的權限集，而且適用於大部分的狀況。 若要指定給定的安全性層級，您要修改 CREATE ASSEMBLY 陳述式的語法，如下所示：  
+ `SAFE` 是預設的權限集，而且適用於大部分的狀況。 若要指定給定的安全性層級，您要修改 CREATE ASSEMBLY 陳述式的語法，如下所示：  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -72,12 +70,11 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  當組件中的程式碼在 `SAFE` 權限集下執行時，只能在伺服器內透過同處理序 Managed 提供者進行計算與資料存取。  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>建立 EXTERNAL_ACCESS 和 UNSAFE 組件  
- 
-  `EXTERNAL_ACCESS` 會處理程序碼需要存取伺服器外部資源的狀況，例如，檔案、網路、登錄和環境變數。 每當伺服器存取外部資源時，它會模擬呼叫 Managed 程式碼之使用者的安全性內容。  
+ `EXTERNAL_ACCESS` 會處理程序碼需要存取伺服器外部資源的狀況，例如，檔案、網路、登錄和環境變數。 每當伺服器存取外部資源時，它會模擬呼叫 Managed 程式碼之使用者的安全性內容。  
   
- 在組件不是可驗證的安全，或者需要對於 `UNSAFE` Win32 API 之類的限制資源之額外存取時，可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 程式碼權限。  
+ 在組件不是可驗證的安全，或者需要對於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API 之類的限制資源之額外存取時，可以使用 `UNSAFE` 程式碼權限。  
   
- 若要在 `EXTERNAL_ACCESS` 中建立 `UNSAFE` 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組件，必須符合下列其中一個條件：  
+ 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中建立 `EXTERNAL_ACCESS` 或 `UNSAFE` 組件，必須符合下列其中一個條件：  
   
 1.  組件是用強式名稱簽署，或用包含憑證的 Authenticode 簽署。 此強式名稱 (或憑證) 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中會當做非對稱金鑰 (或憑證) 建立，而且擁有包含 `EXTERNAL ACCESS ASSEMBLY` 權限 (用於外部存取組件) 或 `UNSAFE ASSEMBLY` 權限 (用於不安全的組件) 的對應登入。  
   

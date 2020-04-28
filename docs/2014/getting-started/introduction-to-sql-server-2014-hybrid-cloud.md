@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228065"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 混合雲端簡介
@@ -39,7 +39,7 @@ ms.locfileid: "75228065"
  
 ### <a name="hybrid-cloud-scenarios-for-sql-server-and-microsoft-azure"></a>SQL Server 和 Microsoft Azure 的混合式雲端案例 
  
-#### <a name="backup"></a>Azure 儲存體備份和還原資料庫 
+#### <a name="backup-and-restore-databases-tofrom-azure-storage"></a><a name="backup"></a>Azure 儲存體備份和還原資料庫 
  其中一項最基本的管理員工作就是備份和還原資料庫。 有了 SQL Server 和 Azure，您就可以在雲端中安全地備份您的資料庫。 
  
  使用 SQL Server 的備份與還原功能搭配 Azure 儲存體作為備份目的地的主要優點包括： 
@@ -64,7 +64,7 @@ ms.locfileid: "75228065"
  
 -  [SQL Server 備份至 Azure 工具](https://www.microsoft.com/download/details.aspx?id=40740)可讓備份 Azure Blob 儲存體，並加密和壓縮儲存在本機或雲端中的 SQL Server 備份。 此工具會啟用橫跨數個 SQL Server 版本的單一雲端備份策略，例如 SQL Server 2005、2008、2008 R2 和 2014。 
  
-#### <a name="replica"></a>維護 Azure 虛擬機器上的資料庫複本 
+#### <a name="maintain-database-replicas-on-azure-virtual-machines"></a><a name="replica"></a>維護 Azure 虛擬機器上的資料庫複本 
  針對您的資料庫擁有穩定的嚴重損壞修復解決方案，對於您的企業成功來說是不可或缺的。 大多數的客戶都需要設定災害復原網站及針對資料庫複本購買額外的硬體。 透過 SQL Server 和 Azure，您可以在雲端中維護資料庫的一個或多個複本。 
  
  在 Azure 中維護次要複本的主要優點包括： 
@@ -81,7 +81,7 @@ ms.locfileid: "75228065"
  
 -  AlwaysOn 可用性群組、資料庫鏡像和記錄傳送都是最常見的技術，可讓您用來解決應用程式的高可用性和嚴重損壞修復需求。 如需詳細資訊，請參閱[Azure 虛擬機器中 SQL Server 的高可用性和嚴重損壞修復](https://msdn.microsoft.com/library/azure/jj870962.aspx)。 
  
-#### <a name="store"></a>將 SQL Server 的資料檔案儲存在 Azure 儲存體 
+#### <a name="store-sql-server-data-files-in-azure-storage"></a><a name="store"></a>將 SQL Server 的資料檔案儲存在 Azure 儲存體 
  將內部部署 SQL Server 資料檔案儲存在 Azure 儲存體為您的資料庫提供彈性、可靠且無限制的離站儲存體。 從 SQL Server 2014 開始，您可以[在 Miceosoft Azure 中使用 SQL Server 的資料檔案](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure)，在 Azure 儲存體中儲存 SQL Server 資料庫檔案。 透過這項功能，您可以將資料和記錄檔從內部部署資料庫移至 Azure 儲存體，同時將 SQL Server 的計算節點保留在內部部署環境中執行。 這項功能可讓您在 Azure 儲存體中擁有不受限制的儲存容量。 
  
  儲存 SQL Server 資料檔案的主要優點 Azure 儲存體包括： 
@@ -92,7 +92,7 @@ ms.locfileid: "75228065"
  
 -  您可藉由分隔運算執行個體 (SQL Server 執行個體) 與資料 (SQL Server 資料檔案) 來加速災害復原。 這可讓您輕鬆地將資料庫附加到內部部署環境中的另一個 SQL Server 實例，或在發生嚴重損壞時于 Azure 虛擬機器中。 
  
-#### <a name="migrate"></a>將現有 SQL Server 資料庫移轉至 Azure 虛擬機器 
+#### <a name="migrate-existing-sql-server-databases-to-azure-virtual-machines"></a><a name="migrate"></a>將現有 SQL Server 資料庫移轉至 Azure 虛擬機器 
  雲端運算為企業帶來一些重要的好處，例如，不受限制的虛擬化資源將會以按次計費方式提供給您使用，您可以利用公開可用的雲端資料中心，而不用自行建立及管理資料中心，因此可大幅降低 IT 和硬體成本。 
  
  使用[Azure 虛擬機器中的 SQL Server](https://msdn.microsoft.com/library/azure/jj823132.aspx)，您可以將現有的內部部署應用程式移至 azure，只需變更程式碼即可。 管理員和開發人員仍然可以使用在內部部署環境提供的相同開發和管理工具。 

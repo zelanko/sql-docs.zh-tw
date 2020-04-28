@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 55b77ddf4284dc4f06e8036d0ae1b0c86b3544f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244635"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
@@ -37,20 +37,20 @@ ms.locfileid: "75244635"
   
      [Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  由於中央管理伺服器所維護的連接會在使用者的內容中執行，所以使用 Windows 驗證時，已註冊之伺服器上的有效權限可能會不同。 例如，雖然使用者可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 執行個體上具有有限的權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-execute-statements-against-multiple-configuration-targets-simultaneously"></a>同時針對多個組態目標執行陳述式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]**。  
   
-2.  展開中央管理伺服器，以滑鼠右鍵按一下伺服器群組，指向 [連接]  ，然後按一下 [新增查詢]  。  
+2.  展開中央管理伺服器，以滑鼠右鍵按一下伺服器群組，指向 [連接]****，然後按一下 [新增查詢]****。  
   
 3.  在 [查詢編輯器] 中，輸入並執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，例如下列陳述式：  
   
@@ -65,11 +65,11 @@ ms.locfileid: "75244635"
   
 #### <a name="to-change-the-multiserver-results-options"></a>變更多伺服器結果選項  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]** 。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]**。  
   
-2.  展開 **[查詢結果]** 、展開 **[SQL Server]** ，然後按一下 **[多伺服器結果]** 。  
+2.  展開 **[查詢結果]**、展開 **[SQL Server]**，然後按一下 **[多伺服器結果]**。  
   
-3.  在 **[多伺服器結果]** 頁面上，指定您想要的選項設定，然後按一下 **[確定]** 。  
+3.  在 **[多伺服器結果]** 頁面上，指定您想要的選項設定，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用中央管理伺服器管理多部伺服器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  

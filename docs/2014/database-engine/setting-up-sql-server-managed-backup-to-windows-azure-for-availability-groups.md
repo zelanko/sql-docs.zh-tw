@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228198"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>針對可用性群組設定 SQL Server Managed Backup 到 Azure
@@ -27,7 +27,7 @@ ms.locfileid: "75228198"
   
 -   網路頻寬：這適用于複本位於不同的實體位置（例如在混合式雲端中），或僅限雲端設定中的不同 Azure 區域的實施。 網路頻寬可能會影響次要複本的延遲，而且如果次要複本設定為同步複寫，這可能會導致主要複本上的記錄增加。 如果次要複本設定為同步複寫，次要複本可能會因為網路延遲的緣故而跟不上同步，萬一容錯移轉到次要複本就可能會發生資料遺失。  
   
-### <a name="configuring-includess_smartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
+### <a name="configuring-ss_smartbackup-for-availability-databases"></a>設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
  **無權**  
   
 -   需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權`EXECUTE` ，以及**sp_delete_backuphistory**預存程式的許可權。  
@@ -40,12 +40,11 @@ ms.locfileid: "75228198"
   
  以下是使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定 AlwaysOn 可用性群組的基本步驟。 本主題稍後將說明詳細的逐步教學課程。  
   
-1.  建立可用性群組之後，請設定慣用的備份複本。 可用性群組的此設定也會用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]來判斷要用於備份的複本。 如需如何設定備份喜好設定的逐步指示，請參閱[在可用性複本上設定備份 &#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。  如果您要建立新的 AlwaysOn 可用性群組，請參閱[具有 AlwaysOn 可用性群組 &#40;SQL Server&#41;的消費者入門](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)。  
+1.  建立可用性群組之後，請設定慣用的備份複本。 也會使用可用性群組的這項設定來決定用於備份的複本。 如需如何設定備份喜好設定的逐步指示，請參閱[在可用性複本上設定備份 &#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。  如果您要建立新的 AlwaysOn 可用性群組，請參閱[具有 AlwaysOn 可用性群組 &#40;SQL Server&#41;的消費者入門](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)。  
   
 2.  設定次要複本的唯讀連接存取。 如需如何設定唯讀存取的逐步指示，請參閱[設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
-3.  指定備份複本。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用慣用的備份複本設定來決定用於排程備份的資料庫。  若要判斷目前的複本是否為慣用的備份複本，請使用[fn_hadr_backup_is_preferred_replica &#40;transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)函數。  
+3.  指定備份複本。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用慣用的備份複本設定來決定用於排程備份的資料庫。  若要判斷目前的複本是否為慣用的備份複本，請使用[fn_hadr_backup_is_preferred_replica &#40;transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)函數。  
   
 4.  在每個複本[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上，使用**智慧型-admin. sp_set_db_backup**預存程式來執行資料庫的設定。  
   
@@ -56,9 +55,9 @@ ms.locfileid: "75228198"
   
 -   參與相同可用性群組之所有 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 節點上的所有資料庫，都應該具有相同的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]組態設定。 您可以在資料庫層級針對主要及所有複本設定相同的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]組態，或在參與可用性群組的所有節點上設定相同的預設[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定，來達成此目的。 建議在資料庫設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，因為在資料庫層級設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，可讓您將資料庫與變更的設定，與會影響執行個體上所有其他資料庫的預設值相隔開。  
   
--   指定備份複本。 會使用慣用的備份複本設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]來排程備份。 若要判斷目前的複本是否為慣用的備份複本，請使用[fn_hadr_backup_is_preferred_replica &#40;transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)函數。  
+-   指定備份複本。 會利用慣用的備份複本，排定備份時程。 若要判斷目前的複本是否為慣用的備份複本，請使用[fn_hadr_backup_is_preferred_replica &#40;transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)函數。  
   
--   如果將次要複本設定為慣用的複本，請將此複本設定為至少具有唯讀連接存取。 不支援無法對次要資料庫進行連接存取的可用性群組。  如需詳細資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+-   如果將次要複本設定為慣用的複本，請將此複本設定為至少具有唯讀連接存取。 不支援無法對次要資料庫進行連接存取的可用性群組。  如需詳細資訊，請參閱[在可用性複本上設定唯讀存取 &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
 -   如果在設定可用性群組之後設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會嘗試複製以此可用性群組為基礎的所有現有備份，並複製到儲存體容器。  如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]找不到或無法存取現有的備份，則會排程進行完整資料庫備份。 這樣做的原因主要是為了最佳化可用性群組資料庫的備份作業。  
   
@@ -66,15 +65,14 @@ ms.locfileid: "75228198"
   
 -   當使用加密時，請針對所有複本使用相同的憑證。 這樣萬一容錯移轉或還原到不同的複本時，有助於進行持續和不中斷的備份作業。  
   
-#### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>啟用及設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+#### <a name="enable-and-configure-ss_smartbackup-for-an-availability-database"></a>啟用及設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  此教學課程說明為電腦 Node1 和 Node2 上資料庫 (AGTestDB) 啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的步驟，後面接著啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]健康情況之監視功能的步驟。  
   
-1.  **建立 Azure 儲存體帳戶：** 這些備份會儲存在 Azure Blob 儲存體服務中。 如果您還沒有 Azure 儲存體帳戶，您必須先建立它。 如需詳細資訊，請參閱[建立 Azure 儲存體帳戶](https://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 記下儲存體帳戶的儲存體帳戶名稱、存取金鑰和 URL。 儲存體帳戶名稱和存取金鑰資訊可用來建立 SQL 認證。 在備份作業[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]期間，會使用 SQL 認證來驗證儲存體帳戶。  
+1.  **建立 Azure 儲存體帳戶：** 這些備份會儲存在 Azure Blob 儲存體服務中。 如果您還沒有 Azure 儲存體帳戶，您必須先建立它。 如需詳細資訊，請參閱[建立 Azure 儲存體帳戶](https://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 記下儲存體帳戶的儲存體帳戶名稱、存取金鑰和 URL。 儲存體帳戶名稱和存取金鑰資訊可用來建立 SQL 認證。 會在備份作業期間使用 SQL 認證來驗證儲存體帳戶。  
   
 2.  **建立 SQL 認證：** 使用儲存體帳戶的名稱做為身分識別，並使用儲存體存取金鑰做為密碼，以建立 SQL 認證。  
   
-3.  **確定 SQL Server Agent 服務已啟動且正在執行：** 如果目前未執行，請啟動 SQL Server Agent。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要在執行個體上執行 SQL Server Agent，才能執行備份作業。  您可能需要將 SQL Agent 設定為自動執行，以確保能定期執行備份作業。  
+3.  **確認 SQL Server Agent 服務已啟動且在執行中：** 如果目前尚未執行 SQL Server Agent，請加以啟動。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要在執行個體上執行 SQL Server Agent，才能執行備份作業。  您可能需要將 SQL Agent 設定為自動執行，以確保能定期執行備份作業。  
   
 4.  **決定保留期限：** 決定您想要用於備份檔案的保留期限。 保留週期的指定單位為天，範圍從 1 到 30。 保留週期可決定資料庫的復原能力時間範圍。  
   
@@ -116,8 +114,7 @@ ms.locfileid: "75228198"
   
     ```  
   
-     
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 已在您指定的資料庫上啟用。 資料庫上的備份作業可能需要 15 分鐘才會開始執行。 此備份會在慣用的備份複本上進行。  
+     [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 已在您指定的資料庫上啟用。 資料庫上的備份作業可能需要 15 分鐘才會開始執行。 此備份會在慣用的備份複本上進行。  
   
 8.  **審查擴充事件的預設設定：** 在用來排程備份的複本[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上執行下列 transact-sql 語句，以檢查擴充事件設定。 這通常是資料庫所屬之可用性群組的慣用備份複本設定。  
   
@@ -127,13 +124,13 @@ ms.locfileid: "75228198"
   
      預設會顯示已經啟用 Admin、Operational 和 Analytical 通道事件，且無法予以停用。 這應該足以監視需要手動介入的事件。  您可以啟用偵錯事件，不過這些通道包含[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]用來偵測及解決問題的資訊和偵錯事件。 如需詳細資訊，請參閱[監視 SQL Server 受控備份至 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
-9. **啟用和設定健全狀況狀態的通知：** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]具有預存程式，可建立 agent 作業來傳送電子郵件通知，指出可能需要注意的錯誤或警告。  若要接收這類通知，必須啟用 [執行預存程序]，以建立 SQL Server Agent 工作。 下列步驟描述啟用及設定電子郵件通知的程序：  
+9. **啟用及設定健全狀態通知：** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的預存程序會建立代理程式作業，以針對可能需要注意的錯誤或警告傳送電子郵件通知。  若要接收這類通知，必須啟用 [執行預存程序]，以建立 SQL Server Agent 工作。 下列步驟描述啟用及設定電子郵件通知的程序：  
   
     1.  如果執行個體上尚未啟用，請設定 Database Mail。 如需詳細資訊，請參閱＜ [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md)＞。  
   
-    2.  設定 SQL Server Agent 通知使用 Database Mail。 如需詳細資訊，請參閱[Configure SQL Server Agent Mail To Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
+    2.  設定 SQL Server Agent 通知使用 Database Mail。 如需詳細資訊，請參閱 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **啟用電子郵件通知，以接收備份錯誤和警告：** 從查詢視窗中，執行下列 Transact-sql 語句：  
+    3.  **啟用電子郵件通知，以接收備份錯誤及警告：** 在查詢視窗中，執行下列 Transact-SQL 陳述式：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -146,7 +143,7 @@ ms.locfileid: "75228198"
   
 10. **查看 Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 管理入口網站連接到儲存體帳戶。 您會看到裝載設定為使用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的資料庫之 SQL Server 執行個體的容器。 您也會在啟用資料庫之 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的 15 分鐘內，看到資料庫和記錄備份。  
   
-11. **監視健全狀況狀態：** 您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
+11. **監視健全狀態：**  您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
   
     ```  
     --  view all admin events  

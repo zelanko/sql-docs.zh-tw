@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232465"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2：加入和設定 Foreach 迴圈容器
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2:新增和設定 Foreach 迴圈容器
   在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
   
  您加入的 Foreach 迴圈容器必須能夠連接到資料夾的每個一般檔案。 由於資料夾的所有檔案都具有相同格式，所以 Foreach 迴圈容器可以使用相同的一般檔案連接管理員來連接每一個檔案。 容器要使用的一般檔案連接管理員與您在第 1 課建立的一般檔案連接管理員相同。  
   
  目前，第 1 課的一般檔案連接管理員只連接一個特定的一般檔案。 若要反覆連接到資料夾的每個一般檔案，您必須同時設定 Foreach 迴圈容器和一般檔案連接管理員，如下所示：  
   
--   **Foreach 迴圈容器：** 您會將容器的列舉值對應至使用者定義的封裝變數。 然後容器會使用此使用者自訂變數，動態修改一般檔案連接管理員的 `ConnectionString` 屬性，並反覆連接到資料夾的每個一般檔案。  
+-   **Foreach 迴圈容器** ：您將容器的列舉值對應至使用者定義的套件變數。 然後容器會使用此使用者自訂變數，動態修改一般檔案連接管理員的 `ConnectionString` 屬性，並反覆連接到資料夾的每個一般檔案。  
   
 -   一般檔案**連線管理員：** 您將使用使用者定義變數來填入連接管理員的`ConnectionString`屬性，以修改第1課所建立的連線管理員。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75232465"
   
 3.  以滑鼠右鍵按一下剛新增的 [Foreach 迴圈容器]****，並選取 [編輯]****。  
   
-4.  在 [ **Foreach 迴圈編輯器**] 對話方塊的 [**一般**] 頁面上， **** 針對 [名稱`Foreach File in Folder`] 輸入。 按一下 [確定]  。  
+4.  在 [ **Foreach 迴圈編輯器**] 對話方塊的 [**一般**] 頁面上， **Name**針對 [名稱`Foreach File in Folder`] 輸入。 按一下 [確定]  。  
   
 5.  以滑鼠右鍵按一下 [Foreach 迴圈] 容器，按一下 [**屬性**]，然後在 [屬性視窗`LocaleID`中，確認屬性是設為 [**英文（美國）**]。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75232465"
   
     1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  按一下 **[下載]** 索引標籤。  
+    2.  按一下 [**下載**] 索引標籤。  
   
     3.  按一下 [SQL2012]https://msftisprodsamples.codeplex.com/downloads/get/578097超連結。Integration_Services. Create_Simple_ETL_Tutorial 範例 .zip 檔案。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75232465"
   
 2.  在 [**變數**對應] 頁面的 [**變數**] 資料行中，按一下空白資料格，然後選取** \<[新增變數 ...] >**。  
   
-3.  在 [**加入變數**] 對話方塊中， **** 針對 [名稱`varFileName`] 輸入。  
+3.  在 [**加入變數**] 對話方塊中， **Name**針對 [名稱`varFileName`] 輸入。  
   
     > [!IMPORTANT]  
     >  變數名稱會區分大小寫。  
@@ -89,9 +89,9 @@ ms.locfileid: "75232465"
 -   將 [**解壓縮範例貨幣資料**] 資料流程工作拖曳至 [Foreach 迴圈] 容器`Foreach File in Folder`現在已重新命名。  
   
 ## <a name="next-lesson-task"></a>下一課的工作  
- [步驟 3：修改一般檔案連接管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [步驟 3：修改一般檔案連線管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Foreach 迴圈容器](control-flow/foreach-loop-container.md)   
- [在套件中使用變數](use-variables-in-packages.md)  
+ [在封裝中使用變數](use-variables-in-packages.md)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401368"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>套用 Analytics Platform System Hotfix
@@ -34,7 +34,7 @@ ms.locfileid: "74401368"
   
 -   瞭解用來連線至 _<domain_name>_ **-HST01**節點的網狀架構網域系統管理員帳戶。  
   
-## <a name="HowToInstallPDW"></a>套用 Analytics Platform System 的修復程式  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>套用 Analytics Platform System 的修復程式  
 不同于 Microsoft updates，分析平臺系統軟體的修補程式不會透過 WSUS 來處理。 它們有不同的工作流程，並藉由執行修補程式套件來安裝。  
   
 1.  **確認設備狀態指示器。**  

@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401304"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>設定 System Center Operations Manager （SCOM）以監視分析平臺系統
 請遵循下列步驟來設定 Analytics Platform System 的 System Center Operations Manager （SCOM）管理元件。 需要管理元件，才能從 SCOM 監視分析平臺系統。  
   
-## <a name="BeforeBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>開始之前  
 **必要條件**  
   
 System Center Operations Manager 2007 R2 必須已安裝且正在執行。  
   
 必須安裝並設定管理元件。 請參閱[&#40;分析平臺系統安裝 Scom 管理元件&#41;](install-the-scom-management-packs.md)並匯[入適用于 PDW 的 scom 管理元件 &#40;分析平臺系統&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
-## <a name="ConfigureRunAsProfile"></a>在 System Center 中設定執行身分設定檔  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>在 System Center 中設定執行身分設定檔  
 若要設定 System Center，您必須執行下列步驟：  
   
 -   為「 **ap**監看員」網域使用者建立執行身分帳戶，並將它對應到 Microsoft ap 監看員**帳戶。**  
@@ -71,7 +71,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     3.  [**執行身分設定檔嚮導**] 對話方塊隨即開啟。 按一下 **[下一步]**，略過 [**簡介**] 頁面。  
   
-    4.  在 [**一般屬性**] 頁面上，按 **[下一步]**。  
+    4.  在 [一般內容] **** 頁面上，按一下 [下一步] ****。  
   
     5.  在 [**執行身分帳戶**] 頁面上，按一下 [**新增 ...** ] 按鈕，然後選取先前建立的「 **ap**監看員」執行身分帳戶。  
   

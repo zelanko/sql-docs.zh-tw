@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242975"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>疑難排解 IntelliSense (SQL Server Management Studio)
@@ -51,8 +51,7 @@ ms.locfileid: "75242975"
 ## <a name="database-engine-query-intellisense"></a>Database Engine 查詢 IntelliSense  
  下列問題適用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查詢編輯器：  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的 IntelliSense 功能不支援所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 參數說明不支援某些物件中的參數，例如擴充預存程序。 如需詳細資訊，請參閱 [IntelliSense 所支援的 Transact-SQL 語法](transact-sql-syntax-supported-by-intellisense.md)。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的 IntelliSense 功能不支援所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 參數說明不支援某些物件中的參數，例如擴充預存程序。 如需詳細資訊，請參閱 [IntelliSense 所支援的 Transact-SQL 語法](transact-sql-syntax-supported-by-intellisense.md)。  
   
 -   只有當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更新版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行個體時，才能使用 IntelliSense。 當查詢編輯器連接至舊版 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，則無法使用 IntelliSense。  
   

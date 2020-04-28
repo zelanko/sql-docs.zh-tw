@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243697"
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
@@ -103,9 +103,9 @@ ms.locfileid: "75243697"
 |無法使用|**加入監看式**|無法使用|無法使用|將選取的運算式加入至 **[監看式]** 視窗。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Transact-SQL 偵錯工具](transact-sql-debugger.md)   
+ [Transact-sql 偵錯工具](transact-sql-debugger.md)   
  [逐步執行 Transact-sql 程式碼](step-through-transact-sql-code.md)   
- [Transact-SQL 偵錯工具資訊](transact-sql-debugger-information.md)   
+ [Transact-sql 偵錯工具資訊](transact-sql-debugger-information.md)   
  [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

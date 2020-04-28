@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74685339"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>設定和管理報表伺服器 (Reporting Services SharePoint 模式)
@@ -33,7 +33,7 @@ ms.locfileid: "74685339"
   
     -   [管理共用資料集](report-data/manage-shared-datasets.md)  
   
-    -   [在已發行的報表上設定參數 &#40;SharePoint 整合模式下的 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
+    -   [在已發行的報表上設定參數 &#40;SharePoint 整合模式中的 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
@@ -43,18 +43,18 @@ ms.locfileid: "74685339"
   
 -   [在 SharePoint 中啟用報表伺服器和 Power View 整合功能](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
--   [&#40;SharePoint 模式下 Reporting Services 網站設定和網站功能&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
+-   [Reporting Services 網站設定和網站功能 &#40;SharePoint 模式&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   
--   [在 SharePoint 管理中心內啟用報表伺服器檔案同步處理功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
+-   [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
 -   [將報表伺服器內容類型加入至 SharePoint 整合模式下的程式庫 &#40;Reporting Services&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [在報表檢視器中的原生模式與連接模式報表 &#40;在 SharePoint 模式中 Reporting Services&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   [比較報表檢視器中的本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
--   [將檔上傳至 sharepoint 文件庫 &#40;sharepoint 模式中的 Reporting Services&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
+-   [將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
 -   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- 如需有關 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的更多一般資訊，請參閱《[ 線上叢書》中的 ](create-deploy-and-manage-mobile-and-paginated-reports.md)Reporting Services &#40;SSRS&#41;[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需有關其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件、工具和資源的詳細資訊，請參閱《 [SQL Server 線上叢書](../2014-toc/index.yml)》。  
+ 如需有關 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的更多一般資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中的 [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。 如需有關其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件、工具和資源的詳細資訊，請參閱《 [SQL Server 線上叢書](../2014-toc/index.yml)》。  
   
   

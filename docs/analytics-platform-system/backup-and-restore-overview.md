@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401353"
 ---
 # <a name="backup-and-restore"></a>備份與還原
 
 說明如何針對平行處理資料倉儲（PDW）進行資料備份和還原。 備份和還原作業會用於嚴重損壞修復。 備份和還原也可以用來將資料庫從一個應用裝置複製到另一個應用裝置。  
     
-## <a name="BackupRestoreBasics"></a>備份與還原的基本概念
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>備份與還原的基本概念
 
 PDW*資料庫備份*是設備資料庫的複本，以格式儲存，讓它可以用來將原始資料庫還原至應用裝置。  
   
@@ -36,7 +36,7 @@ PDW 使用 SQL Server 備份技術來備份和還原設備資料庫。 SQL Serve
   
 備份會儲存在備份伺服器上，做為 Windows 檔案系統中的一組檔案。 PDW 資料庫備份只能還原至 PDW。 不過，您可以使用標準的 Windows 檔案備份程式，將資料庫備份從備份伺服器封存到另一個位置。 如需備份伺服器的詳細資訊，請參閱[取得和設定備份伺服器](acquire-and-configure-backup-server.md)。  
   
-## <a name="BackupTypes"></a>資料庫備份類型
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>資料庫備份類型
 
 有兩種類型的資料需要備份：使用者資料庫和系統資料庫（例如 master 資料庫）。 PDW 不會備份交易記錄。  
   
@@ -50,7 +50,7 @@ PDW 使用 SQL Server 備份技術來備份和還原設備資料庫。 SQL Serve
   
 若要備份整個應用裝置，您必須執行所有使用者資料庫的備份，以及 master 資料庫的備份。  
   
-## <a name="BackupProc"></a>資料庫備份進程
+## <a name="database-backup-process"></a><a name="BackupProc"></a>資料庫備份進程
 
 下圖顯示資料庫備份期間的資料流程。  
   
@@ -84,7 +84,7 @@ PDW 使用 SQL Server 備份技術來備份和還原設備資料庫。 SQL Serve
   
     -   您不能在執行還原之前變更備份的名稱。 備份目錄的名稱必須符合備份原始名稱的名稱。 備份的原始名稱位於備份目錄內的備份 .xml 檔案中。 若要將資料庫還原成不同的名稱，您可以在 restore 命令中指定新的名稱。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ` 。  
   
-## <a name="RestoreModes"></a>資料庫還原模式
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>資料庫還原模式
 
 完整資料庫還原會使用資料庫備份中的資料重新建立 PDW 資料庫。 資料庫還原的執行方式是先還原完整備份，然後選擇性地還原一個差異備份。 資料庫還原包含資料庫使用者和資料庫角色。  
   
@@ -92,7 +92,7 @@ PDW 使用 SQL Server 備份技術來備份和還原設備資料庫。 SQL Serve
   
 「設備還原」是整個應用裝置的還原。 這包括還原所有的使用者資料庫和 master 資料庫。  
   
-## <a name="RestoreProc"></a>還原程式
+## <a name="restore-process"></a><a name="RestoreProc"></a>還原程式
 
 下圖顯示資料庫還原期間的資料流程。  
   

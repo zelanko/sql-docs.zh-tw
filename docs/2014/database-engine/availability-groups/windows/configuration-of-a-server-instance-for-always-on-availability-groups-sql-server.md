@@ -14,38 +14,38 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3dcd239c782f53ec11970e94f89e5acfac982785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228808"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>設定 AlwaysOn 可用性群組的伺服器執行個體 (SQL Server)
   本主題包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體以支援 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之需求的相關資訊。  
   
 > [!IMPORTANT]  
->  如需 Windows Server 容錯移轉叢集 (WSFC) 節點和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必要條件與限制的基本資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+>  如需 Windows Server 容錯移轉叢集 (WSFC) 節點和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必要條件與限制的基本資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
  
   
-##  <a name="TermsAndDefinitions"></a>詞彙和定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>詞彙和定義  
   
- 提供企業級資料庫鏡像替代方案的高可用性與災害復原解決方案。 *可用性群組*支援一組可一起容錯移轉之離散化使用者資料庫（稱為「*可用性資料庫*」（availability database））的容錯移轉環境。  
+ 提供企業級資料庫鏡像替代方案的高可用性與災害復原解決方案。 *「可用性群組」* (Availability Group) 支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的 *「可用性資料庫」*(Availability Database)。  
   
- 可用性複本  
+ 「可用性複本」  
  特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* (Primary Replica) 以及一到四個 *「次要複本」*(Secondary Replica)。 針對給定可用性群組裝載可用性複本的伺服器執行個體必須位於單一 Windows Server 容錯移轉叢集 (WSFC) 叢集的不同節點上。  
   
  [資料庫鏡像端點](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  端點是 SQL Server 物件，可讓 SQL Server 在網路上進行通訊。 若要參與資料庫鏡像及/或 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，伺服器執行個體需要特殊的專用端點。 伺服器執行個體上的所有鏡像和可用性群組連接都會使用相同的資料庫鏡像端點。 這個端點是特殊目的之端點，專門用來接收其他伺服器執行個體的這些連接。  
   
-##  <a name="ConfigSI"></a>若要將伺服器實例設定為支援 AlwaysOn 可用性群組  
+##  <a name="to-configure-a-server-instance-to-support-alwayson-availability-groups"></a><a name="ConfigSI"></a>若要將伺服器實例設定為支援 AlwaysOn 可用性群組  
  若要支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，伺服器執行個體必須位於裝載可用性群組之 WSFC 容錯移轉叢集中的節點、已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，而且擁有資料庫鏡像端點。  
   
 1.  在要參與一個或多個可用性群組的每一個伺服器執行個體上啟用 AlwaysOn 可用性群組功能。 給定伺服器執行個體只能裝載給定可用性群組的單一可用性複本。  
   
 2.  確定伺服器執行個體擁有資料庫鏡像端點。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要啟用 AlwaysOn 可用性群組**  
   
 -   [啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "75228808"
   
 -   [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75228808"
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **影片：**  
+-   **視頻**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第 1 部：新一代高可用性解決方案簡介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

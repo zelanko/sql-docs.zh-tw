@@ -14,10 +14,10 @@ ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75240162"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll 中不允許的型別和成員

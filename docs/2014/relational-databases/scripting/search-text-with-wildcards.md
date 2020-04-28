@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243281"
 ---
 # <a name="search-text-with-wildcards"></a>使用萬用字元搜尋文字
-  下列運算式可以取代 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **尋找和取代**] 對話方塊的 [**尋找目標**] 欄位中的字元或數位。  
+  下列運算式可以取代  **[尋找和取代]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊中 [尋找目標]  欄位的字元或數字。  
   
 #### <a name="to-search-using-wildcards"></a>若要利用萬用字元搜尋  
   
-1.  若要在 [快速尋找]、 **[檔案中尋找]** 、 **[快速取代]** 或 **[檔案中取代]** 等作業期間，在 **[尋找目標]** 欄位中啟用萬用字元，請在 **[尋找選項]** 之下，選取 **[使用]** 選項，再選擇 **[萬用字元]**。  
+1.  若要在 [快速尋找]、 **[檔案中尋找]** 、 **[快速取代]** 或 **[檔案中取代]** 等作業期間，在 **[尋找目標]** 欄位中啟用萬用字元，請在 **[尋找選項]** 之下，選取 **[使用]** 選項，再選擇 **[萬用字元]** 。  
   
 2.  之後，就可以使用 **[尋找目標]** 欄位旁三角形的 **[參考清單]** 按鈕。 請按一下這個按鈕來顯示可用萬用字元的清單。 當您從 **[參考清單]** 中選擇任何項目時，項目會插入 **[尋找目標]** 字串中。  
   

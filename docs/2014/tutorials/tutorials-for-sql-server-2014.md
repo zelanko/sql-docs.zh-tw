@@ -11,14 +11,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242061"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>適用於 SQL Server 2014 的教學課程
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引進了許多新技術和新功能。  
   
  我們規劃在未來提供更多的教學課程。 同時，您可以繼續學習 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 教學課程。 在某些情況下，您可能會發現 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 與 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 的使用者介面稍有差異，而且教學課程必要條件也有些微的不同。 如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該下載和使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本。  
@@ -41,9 +40,9 @@ ms.locfileid: "75242061"
 ## <a name="in-this-section"></a>本節內容  
  教學課程可供運用於下列 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 技術。  
   
-|Technology|描述|  
+|技術|描述|  
 |----------------|-----------------|  
-|[Analysis Services SSAS &#40;教學課程&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
+|[Analysis Services 教學課程 &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
 |[Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何建立基本報表和訂閱。|  
 |[Integration Services 教學課程](../integration-services/integration-services-tutorials.md)|了解如何建立及部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。|  
 |[Database Engine 教學課程](../relational-databases/database-engine-tutorials.md)|了解如何連接到 Database Engine 的執行個體，然後建立及執行 Transact-SQL 陳述式。|  

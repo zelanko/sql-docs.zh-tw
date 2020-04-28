@@ -42,10 +42,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479320"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
@@ -197,7 +197,7 @@ ms.locfileid: "74479320"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 **[發行項屬性 -\<***發行項***>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)、[定義發行項](define-an-article.md)和[檢視和修改發行項屬性](view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 **[發行項屬性 -\<***發行項***>] **對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)、[定義發行項](define-an-article.md)和[檢視和修改發行項屬性](view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>將資料發行給執行舊版 SQL Server 的訂閱者  
   

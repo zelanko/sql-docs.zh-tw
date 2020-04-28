@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 1ff075880833be8179697cb4047babee67cfe61e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957223"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在兩部伺服器上建立相同的對稱金鑰
@@ -30,22 +30,22 @@ ms.locfileid: "74957223"
   
      [安全性](#Security)  
   
--   [若要使用 Transact-sql 在兩部不同的伺服器上建立相同的對稱金鑰](#TsqlProcedure)  
+-   [若要使用 Transact-SQL 在兩部不同的伺服器上建立相同的對稱金鑰](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   當建立對稱金鑰時，至少必須利用下列一項來加密對稱金鑰：憑證、密碼、對稱金鑰、非對稱金鑰或 PROVIDER。 針對每一種類型，金鑰都可以有多個加密。 換句話說，可以同時利用多個憑證、密碼、對稱金鑰及非對稱金鑰來加密單一對稱金鑰。  
   
 -   如果是利用密碼 (而不是利用資料庫主要金鑰的公開金鑰) 來加密對稱金鑰，則會使用 TRIPLE DES 加密演算法。 因此，利用強式加密演算法 (如 AES) 建立的金鑰，其本身的安全是由較弱的演算法來維護的。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER ANY SYMMETRIC KEY 權限。 如果指定了 AUTHORIZATION，則需要資料庫使用者的 IMPERSONATE 權限或應用程式角色的 ALTER 權限。 如果是利用憑證或非對稱金鑰來加密，則需要憑證或非對稱金鑰的 VIEW DEFINITION 權限。 只有 Windows 登入、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入，以及應用程式角色可以擁有對稱金鑰。 群組和角色無法擁有對稱金鑰。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>若要在兩部不同的伺服器上建立相同的對稱金鑰  
   

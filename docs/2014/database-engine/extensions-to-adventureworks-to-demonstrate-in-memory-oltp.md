@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228471"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
@@ -41,13 +41,13 @@ ms.locfileid: "75228471"
   
 -   [範例中的記憶體和磁碟空間使用量](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-評估版、開發人員或企業版  
   
 -   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 如需硬體的[!INCLUDE[hek_2](../includes/hek-2-md.md)]一般指導方針，請參閱下列 blog 文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以[!INCLUDE[hek_2](../includes/hek-2-md.md)] AdventureWorks 為基礎的範例  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以[!INCLUDE[hek_2](../includes/hek-2-md.md)] AdventureWorks 為基礎的範例  
  請遵循下列步驟來安裝範例：  
   
 1.  下載 AdventureWorks2014 資料庫的完整備份封存：  
@@ -121,7 +121,7 @@ ms.locfileid: "75228471"
   
         4.  按一下 [執行] 按鈕以執行腳本  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> 範例資料表和程序描述  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> 範例資料表和程序描述  
  此範例以 AdventureWorks 中的現有資料表為基礎，為產品和銷售訂單建立新資料表。 新資料表的結構描述類似現有的資料表，但有一些差異 (如下所述)。  
   
  新的記憶體最佳化資料表具有後置詞 '_inmem'。 此範例也會包含具有後置詞 '_ondisk' 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
@@ -180,22 +180,22 @@ ms.locfileid: "75228471"
   
  Sales.SalesOrderHeader_inmem  
   
--   記憶體最佳化資料表支援「預設條件約束」  ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
+-   記憶體最佳化資料表支援「預設條件約束」** ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
   
--   *別名 udt* -原始資料表使用兩個別名使用者定義資料類型（udt） dbo。OrderNumber 和 dbo。AccountNumber，分別適用于 PurchaseOrderNumber 和 AccountNumber 資料行。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
+-   「別名 UDT」** - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
   
--   「索引鍵中的資料行可為 Null」  - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
+-   「索引鍵中的資料行可為 Null」** - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
   
--   「計算資料行」  - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
+-   「計算資料行」** - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
   
--   中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的記憶體優化資料表不支援*Foreign key 條件約束*。 此外，SalesOrderHeader_inmem 是範例工作負載中的作用資料表，而外部索引鍵條件約束需要對所有 DML 作業進行額外的處理，因為它需要查閱這些條件約束中參考的其他所有資料表。 因此，此處的假設是應用程式會確保參考完整性，但插入資料列時不會驗證參考完整性。 您可以使用預存程序 dbo.usp_ValidateIntegrity 驗證此資料表中資料的參考完整性，其指令碼如下：  
+-   在*中，記憶體最佳化資料表不支援「外部索引鍵條件約束」*[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是範例工作負載中的作用資料表，而外部索引鍵條件約束需要對所有 DML 作業進行額外的處理，因為它需要查閱這些條件約束中參考的其他所有資料表。 因此，此處的假設是應用程式會確保參考完整性，但插入資料列時不會驗證參考完整性。 您可以使用預存程序 dbo.usp_ValidateIntegrity 驗證此資料表中資料的參考完整性，其指令碼如下：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   SQ 伺服器2014中的記憶體優化資料表不支援*Check 條件約束*。 使用下列指令碼可驗證網域完整性及參考完整性：  
+-   在 SQ Server 2014 中，記憶體最佳化資料表不支援「檢查條件約束」** 。 使用下列指令碼可驗證網域完整性及參考完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -227,7 +227,7 @@ ms.locfileid: "75228471"
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
--   *唯一*的、 *Check*和*Foreign Key 條件約束*的考慮方式有兩種：預存程式 Product. usp_InsertProduct_inmem 和 Product. usp_DeleteProduct_inmem 可用來插入和刪除產品;這些程式會驗證網域和參考完整性，如果違反完整性，將會失敗。 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
+-   「唯一條件約束」**, ** 及「外部索引鍵條件約束」 ** are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 及「外部索引鍵條件約束」 Product.usp_DeleteProduct_inmem can be used to insert 及「外部索引鍵條件約束」 delete products; these procedures validate domain 及「外部索引鍵條件約束」 referential integrity, 及「外部索引鍵條件約束」 will fail if integrity is violated. 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -238,7 +238,7 @@ ms.locfileid: "75228471"
   
  Sales.SpecialOffer  
   
--   *Check*和*Foreign Key 條件約束*的考慮方式有兩種：預存程式 Sales. usp_InsertSpecialOffer_inmem 和 sales. usp_DeleteSpecialOffer_inmem 可用來插入和刪除特殊供應專案;這些程式會驗證網域和參考完整性，如果違反完整性，將會失敗。 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
+-   「檢查條件約束」** 和「外部索引鍵條件約束」 ** are accounted for in two ways: the stored procedures Sales.usp_InsertSpecialOffer_inmem 和「外部索引鍵條件約束」 Sales.usp_DeleteSpecialOffer_inmem can be used to insert 和「外部索引鍵條件約束」 delete special offers; these procedures validate domain 和「外部索引鍵條件約束」 referential integrity, 和「外部索引鍵條件約束」 will fail if integrity is violated. 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -249,7 +249,7 @@ ms.locfileid: "75228471"
   
  Sales.SpecialOfferProduct  
   
--   *外鍵條件約束*的考慮方式有兩種：預存程式 Sales. usp_InsertSpecialOfferProduct_inmem 可用來插入特殊供應專案與產品之間的關聯性;此程式會驗證參考完整性，如果違反完整性，將會失敗。 此外，下列指令碼可用來驗證參考完整性的現狀：  
+-   「外部索引鍵條件約束」** 的說明包含兩點：預存程序 Sales.usp_InsertSpecialOfferProduct_inmem 可用來插入特殊供應項目與產品之間的關聯性，此程序會驗證參考完整性，如果違反完整性則會失敗。 此外，下列指令碼可用來驗證參考完整性的現狀：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
@@ -323,8 +323,7 @@ ms.locfileid: "75228471"
   
         -   @ShipMethodID [int]  
   
-        -   
-  @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含訂單明細項目的 TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含訂單明細項目的 TVP  
   
     -   輸入參數 (選擇性)：  
   
@@ -386,7 +385,7 @@ ms.locfileid: "75228471"
   
     -   此程序依賴協助程式程序 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 來產生執行完整性檢查所需的 T-SQL。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用工作負載示範的效能度量  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a>使用工作負載示範的效能測量  
  Ostress 是由 [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援小組所開發的命令列工具。 此工具可用來平行執行查詢或執行預存程序。 您可以設定平行執行給定 T-SQL 陳述式的執行緒數目，以及指定此執行緒上應該執行陳述式的次數，ostress 會加快執行緒的速度，並平行執行所有執行緒上的陳述式。 所有執行緒完成執行之後，ostress 會報告所有執行緒完成執行所花費的時間。  
   
 ### <a name="installing-ostress"></a>安裝 ostress  
@@ -520,8 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  在具有總數 8 個實體 (16 個邏輯) 核心的測試伺服器上，此作業需要 41 分 25 秒。 在具有 24 個實體 (48 個邏輯) 核心的第二部測試伺服器上，此作業需要 52 分 16 秒。  
   
- 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 
-  [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，因此可讓[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]充分利用 CPU。  
+ 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，因此可讓[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]充分利用 CPU。  
   
  您可以觀察執行工作負載時的 CPU 使用率，例如使用工作管理員。 您會看到磁碟資料表的 CPU 使用率遠低於 100%。 在具有 16 個邏輯處理器的測試組態中，使用率保持在 24% 左右。  
   
@@ -538,24 +536,23 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  建議每次執行示範之後將其重設。 由於此工作負載只能插入，每次執行會耗用更多記憶體，因此需要重設以防止記憶體不足。 [執行工作負載之後的記憶體使用量](#Memoryutilizationafterrunningtheworkload)章節中會討論執行後的記憶體耗用量。  
   
-###  <a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試疑難排解  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試疑難排解  
  測試結果通常會隨硬體而有所不同，也會隨測試執行中使用並行的程度而有所不同。 如果結果不如預期，可注意下列幾點：  
   
 -   並行交易數目：在單一執行緒上執行工作負載時，透過 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
   
     -   徵兆：執行磁碟資料表上的工作負載時，如果 CPU 使用率很高，並不是指競爭很多，而是指缺少並行。  
   
--   記錄磁碟機的速度：如果記錄磁碟機跟不上系統中的交易輸送量層級，則工作負載會在記錄 IO 上成為瓶頸。 雖然 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
+-   記錄磁碟機的速度：如果記錄磁碟機跟不上系統中的交易輸送量層級，工作負載會在記錄 IO 上成為瓶頸。 雖然 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
   
     -   徵兆：執行記憶體最佳化資料表上的工作負載時，如果 CPU 使用率離 100% 有段距離或急起急落，可能會發生記錄 IO 瓶頸。 您可以開啟資源監視器並查看記錄磁碟機的佇列長度，以確認是否發生此瓶頸。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 範例中的記憶體和磁碟空間使用量  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> 範例中的記憶體和磁碟空間使用量  
  以下將描述範例資料庫之記憶體和磁碟空間使用量的預期結果。 我們也將顯示在具有 16 個邏輯核心的測試伺服器上看到的結果。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 記憶體最佳化資料表的記憶體使用量  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> 記憶體最佳化資料表的記憶體使用量  
   
 #### <a name="overall-utilization-of-the-database"></a>資料庫的整體使用情況  
  下列查詢可用來取得系統中 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的總記憶體使用量。  
@@ -608,7 +605,7 @@ WHERE t.type='U'
   
  此處值得注意的是，與資料表資料大小相較下，配置給索引的記憶體大小。 這是因為範例中的雜湊索引會預留大小以容納較大的資料。 請注意，雜湊索引有固定的大小，因此其大小不會隨資料表中的資料大小增加。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> 執行工作負載之後的記憶體使用量  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a>執行工作負載之後的記憶體使用量  
  插入 1,000 萬個銷售訂單之後，總記憶體使用量會類似如下：  
   
 ```  
@@ -655,7 +652,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>重設示範之後  
  您可以使用預存程序 Demo.usp_DemoReset 重設示範。 此預存程序會刪除資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的資料，然後重新植入原始資料表 SalesOrderHeader 和 SalesOrderDetail 中的資料。  
   
- 現在，即使已刪除資料表中的資料列，也不表示會立即回收記憶體。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]視需要在背景回收記憶體優化資料表中已刪除資料列的記憶體。 由於系統上沒有交易式工作負載，因此重設示範之後，您會立即看到系統尚未對已刪除的資料列進行記憶體回收：  
+ 現在，即使已刪除資料表中的資料列，也不表示會立即回收記憶體。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會視需要在背景回收記憶體最佳化資料表中已刪除資料列的記憶體。 由於系統上沒有交易式工作負載，因此重設示範之後，您會立即看到系統尚未對已刪除的資料列進行記憶體回收：  
   
 ```  
 SELECT type  
@@ -748,7 +745,7 @@ ORDER BY state, file_type
 |建構中|DATA|1|128|  
 |建構中|DELTA|1|8|  
   
- 如您所見，預先建立的資料和差異檔案使用了大部分空間。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]針對每個邏輯處理器預先建立一組（資料、差異）檔案。 此外，系統會為資料檔案預留 128MB 的大小，並為差異檔案預留 8MB 的大小，以便更有效率地將資料插入這些檔案。  
+ 如您所見，預先建立的資料和差異檔案使用了大部分空間。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會針對每個邏輯處理器預先建立一組 (資料和差異) 檔案。 此外，系統會為資料檔案預留 128MB 的大小，並為差異檔案預留 8MB 的大小，以便更有效率地將資料插入這些檔案。  
   
  記憶體最佳化資料表中的實際資料會包含在單一資料檔案中。  
   

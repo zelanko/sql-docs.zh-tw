@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957262"
 ---
 # <a name="back-up-a-database-master-key"></a>備份資料庫主要金鑰
@@ -30,22 +30,22 @@ ms.locfileid: "74957262"
   
      [安全性](#Security)  
   
--   [若要使用 Transact-sql 備份資料庫主要金鑰](#Procedure)  
+-   [若要使用 Transact-SQL 備份資料庫主要金鑰](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   主要金鑰必須開啟，因此，將它備份之前必須先將它解密。 如果是利用服務主要金鑰來加密主要金鑰，則不必明確開啟主要金鑰。 不過，如果只利用密碼加密主要金鑰，則必須明確開啟主要金鑰。  
   
 -   我們建議您在建立主要金鑰後立即將它備份，然後將該備份儲存在安全的離站位置。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 CONTROL 權限。  
   
-##  <a name="Procedure"></a>搭配 Transact-sql 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a>搭配 Transact-sql 使用 SQL Server Management Studio  
   
 #### <a name="to-back-up-the-database-master-key"></a>若要備份資料庫主要金鑰  
   

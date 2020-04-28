@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401184"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Dwloader 的資料類型轉換規則-平行處理資料倉儲
 本主題描述在將資料載入至 PDW 時， [Dwloader 命令列載入](dwloader.md)器支援的輸入資料格式和隱含資料類型轉換。 當輸入資料與 SQL Server PDW 目標資料表中的資料類型不相符時，就會發生隱含資料轉換。 設計您的載入程式時，請使用此資訊，以確保您的資料成功載入 SQL Server PDW。  
    
   
-## <a name="InsertBinaryTypes"></a>將常值插入二進位類型  
+## <a name="inserting-literals-into-binary-types"></a><a name="InsertBinaryTypes"></a>將常值插入二進位類型  
 下表定義接受的常數值型別、格式和轉換規則，用於將常值載入至**binary**類型的 SQL Server PDW 資料行（*n*）或**Varbinary**（*n*）。  
   
 |輸入資料類型|輸入資料範例|轉換成 binary 或 Varbinary 資料類型|  
 |-------------------|-----------------------|-----------------------------------------------|  
 |二進位常值|0x*hexidecimal_string*<br /><br />範例：12Ef 或0x12Ef|0x 前置詞是選擇性的。<br /><br />資料來源長度不能超過為資料類型所指定的位元組數目。<br /><br />如果資料來源長度小於**二進位**資料類型的大小，資料會向右填補，而零會到達資料類型大小。|  
   
-## <a name="InsertDateTimeTypes"></a>將常值插入日期和時間類型  
+## <a name="inserting-literals-into-date-and-time-types"></a><a name="InsertDateTimeTypes"></a>將常值插入日期和時間類型  
 日期和時間常值是使用特定格式的字串常值來表示，並以單引號括住。 下表定義允許的常數值型別、格式和轉換規則，用於將日期或時間常值載入至**datetime**、 **Smalldatetime**、 **date**、 **time**、 **datetimeoffset**或**datetime2**類型的資料行。 資料表會定義給定資料類型的預設格式。 可以指定的其他格式定義于[Datetime 格式](#DateFormats)一節中。 日期和時間常值不能包含開頭或尾端空格。 不能在固定寬度模式中載入**date**、 **Smalldatetime**和 null 值。  
   
 ### <a name="datetime-data-type"></a>datetime 資料類型  
@@ -83,7 +83,7 @@ ms.locfileid: "74401184"
 |**日期**格式的字串常值|' yyyy-mm-dd '<br /><br />範例： ' 2007-05-08 '|插入值時，時間值（小時、分鐘、秒和分數）會設定為0。 例如，常值 ' 2007-05-08 ' 會插入為 ' 2007-05-08 12：00： 00.0000000 '。|  
 |**Datetime2**格式的字串常值|' yyyy-MM-dd hh： MM： ss： fffffff '<br /><br />範例： ' 2007-05-08 12：35： 29.1234567 '|如果資料來源包含的資料和時間元件小於或等於**datetime2**（*n*）中指定的值，則會插入資料;否則會產生錯誤。|  
   
-### <a name="DateFormats"></a>日期時間格式  
+### <a name="datetime-formats"></a><a name="DateFormats"></a>日期時間格式  
 Dwloader 針對載入 SQL Server PDW 的輸入資料，支援下列資料格式。 資料表後面會列出更多詳細資料。  
   
 |Datetime|smalldatetime|date|datetime2|datetimeoffset|  
@@ -115,7 +115,7 @@ Dwloader 針對載入 SQL Server PDW 的輸入資料，支援下列資料格式�
   
 -   字母 'zzz' 會以 {+|-}HH:ss] 格式，指定系統目前時區的時區差距。  
   
-## <a name="InsertNumerictypes"></a>將常值插入數數值型別  
+## <a name="inserting-literals-into-numeric-types"></a><a name="InsertNumerictypes"></a>將常值插入數數值型別  
 下表定義預設格式和轉換規則，用於將常值載入至使用數數值型別的 SQL Server PDW 資料行。  
   
 ### <a name="bit-data-type"></a>bit 資料類型  
@@ -162,7 +162,7 @@ Money 常值是以數位字串表示，其中包含選擇性的小數點和選�
 |十進位常值|123344.34455|如果小數點後的位數超過4，此值會無條件進位到最接近的值。 例如，值123344.34455 會插入為123344.3446。|  
 |Money 常值|$123456.7890|不會使用值插入貨幣符號。<br /><br />如果小數點後的位數超過4，此值會無條件進位到最接近的值。|  
   
-## <a name="InsertStringTypes"></a>將常值插入字串類型  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertStringTypes"></a>將常值插入字串類型  
 下表定義預設格式和轉換規則，用於將常值載入至使用字串類型的 SQL Server PDW 資料行。  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char、Varchar、Nchar 和 Nvarchar 資料類型  

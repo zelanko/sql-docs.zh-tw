@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241341"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>註冊連接的伺服器 (SQL Server Management Studio)
@@ -27,11 +27,11 @@ ms.locfileid: "75241341"
   
  **本主題內容**  
   
--   **若要註冊伺服器，請使用：**  
+-   **若要使用下列項目註冊伺服器：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>若要註冊連接的伺服器  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75241341"
      **新增群組**  
      按一下即可啟動 [新增群組]**** 對話方塊，您可以在此為已註冊的伺服器建立新的伺服器群組。  
   
-     **另**  
+     **儲存**  
      按一下即可儲存您所輸入的資訊，然後建立已註冊的伺服器。  
   
   

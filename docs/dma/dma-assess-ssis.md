@@ -15,10 +15,10 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687163"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 執行 SQL Server 整合服務遷移評估
@@ -44,7 +44,7 @@ DMA 必須以**系統管理員**存取權執行，才能評估封裝存放區中
 
     選取 [來源] 做為 [ **SQL Server**]，並將 [目標伺服器類型] 設定為 [ **Azure SQL Database** ] 或**Azure SQL Database 受控實例**]。
 
-1. 按一下 **[建立]**。
+1. 按一下頁面底部的 [新增]  。
 
     ![建立評量](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -74,5 +74,5 @@ DMA 必須以**系統管理員**存取權執行，才能評估封裝存放區中
 ## <a name="next-steps"></a>後續步驟
 
 - [將內部部署 SSIS 工作負載遷移至 ADF 中的 SSIS 總覽](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [將 SQL Server Integration Services 封裝遷移至 Azure SQL Database 受控實例](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [將 SQL Server Integration Services 套件遷移至 Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [將 SQL Server Integration Services 封裝重新部署至 Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401308"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>設定外部 Windows 系統，以使用不限型的平行處理資料倉儲接收遠端資料表複本
@@ -33,7 +33,7 @@ ms.locfileid: "74401308"
   
 3.  從您的設備硬體廠商購買無法使用的纜線和不受的網路介面卡。 我們建議使用兩個埠來購買網路介面卡，以在接收匯出的資料時容錯。 建議使用兩個埠網路介面卡，但不是必要條件。  
   
-## <a name="HowToWindows"></a>設定外部 Windows 系統以接收遠端資料表複本  
+## <a name="configure-an-external-windows-system-to-receive-remote-table-copies"></a><a name="HowToWindows"></a>設定外部 Windows 系統以接收遠端資料表複本  
 若要設定外部 Windows 系統，請使用下列步驟：  
   
 1.  將 [未執行的網路介面卡] 安裝到您的 Windows 系統。  

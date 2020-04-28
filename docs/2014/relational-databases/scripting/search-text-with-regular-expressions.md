@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243317"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
-  規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 ** [尋找和取代]** 對話方塊的 [尋找目標][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **** 欄位。  
+  規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在  **[尋找和取代]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊的 [尋找目標]  欄位。  
   
 #### <a name="to-find-using-regular-expressions"></a>若要使用規則運算式來尋找  
   

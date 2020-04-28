@@ -18,10 +18,10 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74866031"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
@@ -40,16 +40,16 @@ ms.locfileid: "74866031"
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = Push。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
 |**sync_type**|**tinyint**|同步處理的類型：<br /><br /> **1** = 自動。<br /><br /> **2** = 無同步處理。|  
-|**狀態**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 已訂閱。<br /><br /> **2** = 使用中。|  
-|**subscription_seqno**|**Varbinary （16）**|快照集交易序號。|  
+|**status**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 已訂閱。<br /><br /> **2** = 使用中。|  
+|**subscription_seqno**|**varbinary(16)**|快照集交易序號。|  
 |**snapshot_seqno_flag**|**bit**|指出快照集交易序號的來源，其中**1**值表示**subscription_seqno**是快照序號。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**subscription_time**|**datetime**|僅供內部使用。|  
 |**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **1** = 不傳回。<br /><br /> **0** = 傳回。<br /><br />|  
 |**agent_id**|**int**|代理程式的識別碼。|  
 |**update_mode**|**tinyint**|更新的類型。|  
-|**publisher_seqno**|**Varbinary （16）**|這項訂閱在發行者端的交易序號。|  
-|**ss_cplt_seqno**|**Varbinary （16）**|用來指定並行快照集處理完成的序號。|  
+|**publisher_seqno**|**varbinary(16)**|這項訂閱在發行者端的交易序號。|  
+|**ss_cplt_seqno**|**varbinary(16)**|用來指定並行快照集處理完成的序號。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

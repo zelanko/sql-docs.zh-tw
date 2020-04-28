@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232285"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 資料表值函式
@@ -34,14 +34,12 @@ ms.locfileid: "75232285"
 >  對於資料表值函式而言，傳回資料表類型的資料行不得包含時間戳記資料行或非 Unicode 字串資料類型資料行 (例如，`char`、`varchar` 和 `text`)。 不支援 NOT NULL 條件約束。  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL 和 CLR 資料表值函式之間的差異  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值函式會將呼叫函數的結果具體化為中繼資料表。 由於 TVF 使用中繼資料表，因此可以透過結果支援條件約束和唯一的索引。 當傳回較大的結果時，這些功能會非常有用。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值函式會將呼叫函數的結果具體化為中繼資料表。 由於 TVF 使用中繼資料表，因此可以透過結果支援條件約束和唯一的索引。 當傳回較大的結果時，這些功能會非常有用。  
   
  相反地，CLR 資料表值函式則是屬於以資料流模型進行處理的替代方案。 整組結果不需要在單一資料表中具體化。 Managed 函數所傳回的 `IEnumerable` 物件會透過呼叫資料表值函式的查詢執行計畫直接呼叫，而其結果會以累加的方式取用。 此資料流模型能確保第一個資料列可供使用之後，就立即使用結果，而不會等待整個資料表填入完成。 如果傳回大量的資料列，這也是一個較好的替代方式，因為它們不必整體在記憶體中進行實體化。 例如，Managed 資料表值函式可用來剖析文字檔案，並將每一行以資料列的方式傳回。  
   
 ## <a name="implementing-table-valued-functions"></a>實作資料表數值函數  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件中，將資料表值函式當做類別上的方法實作。 您的資料表值函式程式碼必須實作 `IEnumerable` 介面。 
-  `IEnumerable` 介面是在 .NET Framework 中定義的。 在 .NET Framework 中，代表陣列和集合的類型已經實作 `IEnumerable` 介面。 這樣您就可以輕易地撰寫出能將集合或陣列轉換為結果集的資料表值函式。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件中，將資料表值函式當做類別上的方法實作。 您的資料表值函式程式碼必須實作 `IEnumerable` 介面。 `IEnumerable` 介面是在 .NET Framework 中定義的。 在 .NET Framework 中，代表陣列和集合的類型已經實作 `IEnumerable` 介面。 這樣您就可以輕易地撰寫出能將集合或陣列轉換為結果集的資料表值函式。  
   
 ## <a name="table-valued-parameters"></a>資料表值參數  
  資料表值參數是傳入到程序或函數中的使用者定義資料表類型，能提供有效的方式將資料的多個資料列傳遞到伺服器。 資料表值參數提供的功能與參數陣列相似，但是具備了更大的彈性並且和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密地整合。 它們也能夠協助您獲得更佳的效能。 資料表值參數也可以減少與伺服器之間的往返次數。 資料能以資料表值參數的形式傳送到伺服器，而不是傳送多個要求到伺服器，例如一併傳送純量參數的清單。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../tables/use-table-valued-parameters-database-engine.md)。  
@@ -78,7 +76,7 @@ select * from table t cross apply function(t.column);
   
 -   當資料表值函式是從外部資料產生時。 例如，讀取事件記錄檔並將其以資料表的方式公開的資料表值函式。  
   
- **注意**資料表值函式只能透過[!INCLUDE[tsql](../../includes/tsql-md.md)] `InitMethod`方法中的查詢，而不是在`FillRow`方法中執行資料存取。 如果執行 `InitMethod` 查詢，應該以 `SqlFunction.DataAccess.Read` 屬性 (Attribute) 的屬性 (Property) 來標記 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ **注意**資料表值函式只能透過[!INCLUDE[tsql](../../includes/tsql-md.md)] `InitMethod`方法中的查詢，而不是在`FillRow`方法中執行資料存取。 如果執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，應該以 `InitMethod` 屬性 (Attribute) 的屬性 (Property) 來標記 `SqlFunction.DataAccess.Read`。  
   
 ## <a name="a-sample-table-valued-function"></a>資料表值函式範例  
  下列資料表值函式會從系統事件記錄檔傳回資訊。 該函數使用包含要讀取之事件記錄檔名稱的單一字串引數。  

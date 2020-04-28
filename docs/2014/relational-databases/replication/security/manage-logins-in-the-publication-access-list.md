@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce984303ea0a9e9a85f20e7d921a720be6ef299
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479244"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理發行集存取清單中的登入
@@ -38,13 +38,13 @@ ms.locfileid: "74479244"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   您必須先將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入與發行集資料庫中的資料庫使用者產生關聯，才能將該登入加入 PAL 中。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以利用發行集存取清單 (PAL) 來管理登入，此清單位於 [發行集屬性 - **發行集>]** **對話方塊的 [發行集存取清單]\<** 頁面中。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-manage-logins-in-the-pal"></a>若要在 PAL 中管理登入  
@@ -56,7 +56,7 @@ ms.locfileid: "74479244"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>檢視屬於 PAL 的群組和登入  
   
