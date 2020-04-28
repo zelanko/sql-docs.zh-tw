@@ -15,10 +15,10 @@ ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4d6f86539e1abc7ee74087b130e0186322346e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925671"
 ---
 # <a name="cursor-and-lock-characteristics"></a>資料指標與鎖定的特性

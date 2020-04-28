@@ -14,10 +14,10 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921102"
 ---
 # <a name="ado-collections"></a>ADO 集合
@@ -27,7 +27,7 @@ ms.locfileid: "67921102"
   
 |||  
 |-|-|  
-|[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|包含為了回應單一提供者相關的失敗所建立的所有**錯誤**物件。|  
+|[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)|包含為了回應單一提供者相關的失敗所建立的所有**錯誤**物件。|  
 |[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)|包含**記錄集**物件的所有**Field**物件。|  
 |[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含**Command**物件的所有**參數**物件。|  
 |[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)|包含物件之特定實例的所有**屬性**物件。|  

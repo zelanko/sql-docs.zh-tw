@@ -13,10 +13,10 @@ ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce8679c0c7b20dfaa641918f0447a2f77bfd474a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925447"
 ---
 # <a name="editing-existing-records"></a>編輯現有的記錄

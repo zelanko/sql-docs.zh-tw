@@ -15,10 +15,10 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926640"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 總覽
@@ -57,7 +57,7 @@ Microsoft.Jet.OLEDB.4.0
 
  下表列出這些屬性，以及括弧中對應的 OLE DB 屬性名稱。
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |Jet OLEDB：精簡回收的空間數量（DBPROP_JETOLEDB_COMPACTFREESPACESIZE）|表示壓縮資料庫可回收的空間量估計（以位元組為單位）。 只有在建立資料庫連接之後，這個值才有效。|
 |Jet OLEDB：連接控制（DBPROP_JETOLEDB_CONNECTIONCONTROL）|指出使用者是否可以連接到資料庫。|
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |最大資料列大小|DBPROP_MAXROWSIZE|
 |最大資料列大小包含 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT 中的資料表上限|DBPROP_MAXTABLESINSELECT|
-|模式|DBPROP_INIT_MODE|
+|[模式]|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存物件|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -179,7 +179,7 @@ Microsoft.Jet.OLEDB.4.0
 |交易 DDL|DBPROP_SUPPORTEDTXNDDL|
 |使用者識別碼|DBPROP_AUTH_USERID|
 |使用者名稱|DBPROP_USERNAME|
-|視窗控制碼|DBPROP_INIT_HWND|
+|視窗控制代碼|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>記錄集動態屬性
  下列屬性會加入至**記錄集**物件的**properties**集合中。

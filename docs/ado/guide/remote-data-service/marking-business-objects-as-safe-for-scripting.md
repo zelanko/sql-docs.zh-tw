@@ -13,10 +13,10 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922600"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>將商務物件標示為可安全編寫指令碼
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  在最後一個步驟中，應用程式安裝精靈會建立 .htm 和 .cab 檔案。 接著，您可以將這兩個檔案複製到目的電腦，然後按兩下 .htm 檔案以載入頁面，並正確地註冊伺服器。  
   
- 因為商務物件預設會安裝在 Windows\System32\Occache 目錄中，所以請將它移至 Windows\System32 目錄，並將**HKEY_CLASSES_ROOT \clsid\\****>\\\<MyActiveXGUID**InprocServer32**登錄機碼變更為符合正確的路徑。
+ 因為商務物件預設會安裝在 Windows\System32\Occache 目錄中，所以請將它移至 Windows\System32 目錄，並將**HKEY_CLASSES_ROOT \clsid\\***MyActiveXGUID*>\\\<MyActiveXGUID**InprocServer32**登錄機碼變更為符合正確的路徑。
 
 

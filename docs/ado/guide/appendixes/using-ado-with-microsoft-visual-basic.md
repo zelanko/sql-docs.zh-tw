@@ -16,10 +16,10 @@ ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926561"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>搭配使用 ADO 與 Microsoft Visual Basic 和 Visual Basic for Applications

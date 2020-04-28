@@ -15,10 +15,10 @@ ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34649bba37f922e7597bf09870e3e9d3bcf522dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924621"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>保存階層式資料錄集

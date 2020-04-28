@@ -15,10 +15,10 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924186"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
@@ -74,7 +74,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   TABLE 關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *子別名*  
+ *child-alias*  
  參考子**記錄集**的別名。  
   
  *父系-資料行*  

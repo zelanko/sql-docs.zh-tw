@@ -13,10 +13,10 @@ ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52a1968250f58102089b353e35e93689db653240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926952"
 ---
 # <a name="appendix-b-ado-error-codes"></a>附錄 B： ADO 錯誤碼

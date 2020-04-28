@@ -13,10 +13,10 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923346"
 ---
 # <a name="xslt-transformations"></a>XSLT 轉換

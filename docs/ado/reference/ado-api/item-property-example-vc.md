@@ -15,10 +15,10 @@ ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f157532dd1029e2966f0259701c59ffb50928c4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932299"
 ---
 # <a name="item-property-example-vc"></a>Item 屬性範例 (VC++)

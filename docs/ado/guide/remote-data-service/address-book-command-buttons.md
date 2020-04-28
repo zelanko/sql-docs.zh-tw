@@ -14,10 +14,10 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922989"
 ---
 # <a name="address-book-command-buttons"></a>通訊錄命令按鈕

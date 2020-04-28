@@ -13,10 +13,10 @@ ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928558"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
@@ -24,7 +24,7 @@ ms.locfileid: "67928558"
   
  已定義下列列舉常數。  
   
-|列舉|描述|  
+|列舉型別|描述|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定呼叫**SetPermissions**時所要執行的動作類型。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定是否要為具有 null 值的記錄編制索引。|  

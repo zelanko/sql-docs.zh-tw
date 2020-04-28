@@ -15,10 +15,10 @@ ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920819"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 語法索引
@@ -44,7 +44,7 @@ ADO 語言參考使用 Microsoft Visual Basic 程式設計語言來說明 ADO �
   
 ## <a name="remote-data-service"></a>遠端資料服務  
   
--   [空間](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
+-   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   

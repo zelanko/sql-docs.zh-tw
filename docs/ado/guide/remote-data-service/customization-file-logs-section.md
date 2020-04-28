@@ -14,10 +14,10 @@ ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922793"
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案 Logs 區段
@@ -41,7 +41,7 @@ FileName
 |部分|描述|  
 |----------|-----------------|  
 |**err**|表示這是記錄檔專案的常值字串。|  
-|*名稱*|完整的路徑和檔案名。 一般檔案名是**c:\msdfmap.log**。|  
+|*FileName*|完整的路徑和檔案名。 一般檔案名是**c:\msdfmap.log**。|  
   
  記錄檔會包含每個錯誤的使用者名稱、HRESULT、日期和時間。  
   

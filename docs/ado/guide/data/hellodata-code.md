@@ -13,10 +13,10 @@ ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c9ecf51a777ad4d31363eb031af9ab4c448e6bf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925119"
 ---
 # <a name="hellodata-code"></a>HelloData 程式碼

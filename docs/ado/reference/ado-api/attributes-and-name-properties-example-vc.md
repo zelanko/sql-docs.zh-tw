@@ -16,10 +16,10 @@ ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920530"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes 和 Name 屬性範例（VC + +）

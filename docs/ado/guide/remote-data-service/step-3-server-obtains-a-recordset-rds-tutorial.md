@@ -13,10 +13,10 @@ ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 685dd476b5d434ff9dd8feb0e23400dd703ca0d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922086"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3：伺服器取得資料錄集 (RDS 教學課程)

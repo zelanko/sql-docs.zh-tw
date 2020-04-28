@@ -14,10 +14,10 @@ ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922962"
 ---
 # <a name="address-book-navigation-buttons"></a>通訊錄導覽按鈕

@@ -14,10 +14,10 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f9d928cf008396346067a3e166fa281be4093d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931719"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 語法)

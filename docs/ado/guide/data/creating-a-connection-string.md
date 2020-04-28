@@ -14,10 +14,10 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925768"
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
@@ -34,8 +34,8 @@ ms.locfileid: "67925768"
 |引數|描述|  
 |--------------|-----------------|  
 |*提供者*|指定要用於連接的提供者名稱。|  
-|*檔案名*|指定包含預設連接資訊的提供者特定檔案（例如保存的資料來源物件）的名稱。|  
-|*連結*|將連接字串指定為識別資源（例如檔案或目錄）的絕對 URL。|  
+|*檔案名稱*|指定包含預設連接資訊的提供者特定檔案（例如保存的資料來源物件）的名稱。|  
+|*URL*|將連接字串指定為識別資源（例如檔案或目錄）的絕對 URL。|  
 |*遠端提供者*|指定開啟用戶端連接時所要使用的提供者名稱。 （僅限遠端資料服務）。|  
 |*遠端伺服器*|指定要在開啟用戶端連接時使用的伺服器路徑名稱。 （僅限遠端資料服務）。|  
   

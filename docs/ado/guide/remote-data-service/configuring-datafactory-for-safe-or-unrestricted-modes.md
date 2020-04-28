@@ -13,10 +13,10 @@ ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92e3b029d2b18065faf50dcd0343f64b7b01654e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922946"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>為安全或不受限制模式設定 DataFactory

@@ -13,10 +13,10 @@ ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923640"
 ---
 # <a name="using-a-connection-object"></a>使用 Connection 物件

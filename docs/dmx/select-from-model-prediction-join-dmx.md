@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928337"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>從&lt;模型&gt;預測聯結（DMX）選取
@@ -38,7 +38,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *選取運算式清單*  
  從採礦模型衍生之資料行識別碼與運算式的逗號分隔清單。  
   
- *model*  
+ *模型*  
  模型識別碼。  
   
  *子 select*  
@@ -189,6 +189,6 @@ NATURAL PREDICTION JOIN
  [選取 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

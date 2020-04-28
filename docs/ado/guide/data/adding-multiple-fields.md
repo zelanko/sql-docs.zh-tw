@@ -16,10 +16,10 @@ ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926271"
 ---
 # <a name="adding-multiple-fields-and-values"></a>新增多個欄位和值

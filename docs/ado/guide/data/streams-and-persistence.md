@@ -14,10 +14,10 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924023"
 ---
 # <a name="streams-and-persistence"></a>資料流和保存
@@ -29,7 +29,7 @@ ms.locfileid: "67924023"
   
  下列幾個案例會示範如何使用**資料流程**物件和持續性。  
   
-## <a name="scenario-1"></a>案例 1  
+## <a name="scenario-1"></a>實例 1  
  此案例只會將**記錄集**儲存至檔案，然後儲存至**資料流程**。 然後，它會將保存的資料流程開啟至另一個**記錄集**。  
   
 ```  

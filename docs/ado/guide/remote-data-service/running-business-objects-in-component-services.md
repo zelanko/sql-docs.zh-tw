@@ -13,10 +13,10 @@ ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87eab0ac5611b437f6e0cbe1957a4d6e8652c4b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922272"
 ---
 # <a name="running-business-objects-in-component-services"></a>在 Component Services 中執行商務物件

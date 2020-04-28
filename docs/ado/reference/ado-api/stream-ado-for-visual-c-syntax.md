@@ -16,10 +16,10 @@ ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec7e5ac51718bd703586b0c60f77dad0c77cb938
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930699"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (ADO for Visual C++ 語法)

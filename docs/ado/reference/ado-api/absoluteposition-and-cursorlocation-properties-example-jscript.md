@@ -16,10 +16,10 @@ ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921790"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 屬性範例（JScript）

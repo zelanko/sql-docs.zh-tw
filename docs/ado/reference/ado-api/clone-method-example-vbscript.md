@@ -15,10 +15,10 @@ ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919997"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 方法範例 (VBScript)

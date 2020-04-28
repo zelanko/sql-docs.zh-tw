@@ -17,10 +17,10 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923909"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>適用於網際網路發佈的 OLE DB 提供者

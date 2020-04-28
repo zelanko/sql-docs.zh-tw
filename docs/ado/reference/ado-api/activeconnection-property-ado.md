@@ -18,10 +18,10 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921517"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 屬性 (ADO)

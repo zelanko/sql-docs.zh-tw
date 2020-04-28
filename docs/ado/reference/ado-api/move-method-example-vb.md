@@ -15,10 +15,10 @@ ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932126"
 ---
 # <a name="move-method-example-vb"></a>Move 方法範例 (VB)

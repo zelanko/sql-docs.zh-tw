@@ -15,10 +15,10 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926368"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
@@ -38,7 +38,7 @@ URL 會指定儲存在本機或網路電腦上之目標的位置。 目標可以
  *伺服器*  
  指定*資源*所在電腦的名稱。  
   
- *路徑名*  
+ *path*  
  指定通向目標的目錄順序。 如果省略*資源*，目標就是*path*中的最後一個目錄。  
   
  *resource*  

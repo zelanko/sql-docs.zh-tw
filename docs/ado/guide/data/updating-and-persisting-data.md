@@ -15,10 +15,10 @@ ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923728"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保存資料

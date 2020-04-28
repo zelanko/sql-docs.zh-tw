@@ -16,10 +16,10 @@ ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919773"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>命令（使用 #import Visual C++ 語法索引）

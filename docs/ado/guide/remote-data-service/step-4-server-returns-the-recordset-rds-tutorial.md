@@ -13,10 +13,10 @@ ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bd243b21b7003c524c3483f5b8d7bb92be1e18d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922065"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4：伺服器傳回資料錄集 (RDS 教學課程)

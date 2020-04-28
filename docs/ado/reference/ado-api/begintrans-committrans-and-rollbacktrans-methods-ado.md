@@ -23,10 +23,10 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920520"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
@@ -63,7 +63,7 @@ object.RollbackTrans
   
  在您呼叫**BeginTrans**方法之後，提供者將不會再立即認可您所做的變更，直到您呼叫**CommitTrans**或**RollbackTrans**結束交易為止。  
   
- 對於支援嵌套交易的提供者，在開啟的交易內呼叫**BeginTrans**方法會啟動新的、嵌套的交易。 傳回值會指出嵌套的層級：傳回值 "1" 表示您已開啟最上層交易（也就是交易未在另一個交易中嵌套），"2" 表示您已開啟第二層交易（a在最上層交易內的交易）等等。 呼叫**CommitTrans**或**RollbackTrans**只會影響最近開啟的交易;您必須先關閉或回復目前的交易，才能解決任何較高層級的交易。  
+ 對於支援嵌套交易的提供者，在開啟的交易內呼叫**BeginTrans**方法會啟動新的、嵌套的交易。 傳回值會指出嵌套的層級：傳回值 "1" 表示您已開啟最上層交易（也就是交易未在另一個交易中嵌套），"2" 表示您已開啟第二層交易（在最上層交易內的交易），依此類推。 呼叫**CommitTrans**或**RollbackTrans**只會影響最近開啟的交易;您必須先關閉或回復目前的交易，才能解決任何較高層級的交易。  
   
  呼叫**CommitTrans**方法會儲存在連接上開啟的交易內所做的變更，並結束交易。 呼叫**RollbackTrans**方法會反轉在開啟的交易內所做的任何變更，並結束交易。 當沒有開啟的交易時呼叫任一方法會產生錯誤。  
   

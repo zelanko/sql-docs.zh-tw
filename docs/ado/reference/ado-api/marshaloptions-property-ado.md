@@ -16,10 +16,10 @@ ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0212f3b4cb663bd56adaa1bdbc3ab6675c3ce888
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932274"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 屬性 (ADO)

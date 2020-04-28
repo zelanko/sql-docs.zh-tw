@@ -15,10 +15,10 @@ ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922361"
 ---
 # <a name="registering-a-custom-business-object"></a>註冊自訂商務物件

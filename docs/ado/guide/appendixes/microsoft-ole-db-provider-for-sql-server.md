@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926619"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>適用于 SQL Server 的 Microsoft OLE DB 提供者總覽
@@ -61,14 +61,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>提供者特定的連接參數
  除了 ADO 所定義的連接參數之外，提供者也支援數個提供者特定的連線參數。 如同 ADO 連接屬性，這些提供者專屬的屬性可以透過[連接](../../../ado/reference/ado-api/connection-object-ado.md)的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合來設定，也可以設定為**ConnectionString**的一部分。
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |Trusted_Connection|表示使用者驗證模式。 這可以設定為 **[是] 或 [** **否**]。 預設值為 [**否**]。 如果此屬性設定為 **[是]**，SQLOLEDB 會使用 MICROSOFT Windows NT 驗證模式來授權使用者存取**Location**和[Datasource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性值所指定的 SQL Server 資料庫。 如果此屬性設定為 [**否**]，SQLOLEDB 會使用混合模式來授權使用者存取 SQL Server 資料庫。 [**使用者識別碼**] 和 [**密碼**] 屬性中指定了 SQL Server 登入和密碼。|
 |目前的語言|表示 SQL Server 的語言名稱。 識別系統訊息選取與格式所使用的語言。 語言必須安裝在 SQL Server 上，否則開啟連接將會失敗。|
 |網路位址|指出**Location**屬性所指定 SQL Server 的網路位址。|
 |Network Library|指出用來與 SQL Server 通訊的網路程式庫（DLL）的名稱。 名稱不得包含路徑或 .dll 副檔名。 預設值是由 SQL Server 用戶端設定所提供。|
 |使用準備程式|決定當準備命令時，SQL Server 是否會建立暫存預存程序（由**備**妥的屬性）。|
-|自動轉譯|指出是否轉換 OEM/ANSI 字元。 這個屬性可以設定為**True**或**False**。 預設值為 **True**。 如果此屬性設定為**True**，則 SQLOLEDB 會在從 SQL Server 抓取多位元組字元字串或將其傳送至時，執行 OEM/ANSI 字元轉換。 如果此屬性設定為**False**，SQLOLEDB 不會在多位元組字元字串資料上執行 OEM/ANSI 字元轉換。|
+|自動轉譯|指出是否轉換 OEM/ANSI 字元。 這個屬性可以設定為**True**或**False**。 預設值是 **True**。 如果此屬性設定為**True**，則 SQLOLEDB 會在從 SQL Server 抓取多位元組字元字串或將其傳送至時，執行 OEM/ANSI 字元轉換。 如果此屬性設定為**False**，SQLOLEDB 不會在多位元組字元字串資料上執行 OEM/ANSI 字元轉換。|
 |Packet Size|表示網路封包大小（以位元組為單位）。 封包大小屬性值必須介於512和32767之間。 預設的 SQLOLEDB 網路封包大小為4096。|
 |應用程式名稱|表示用戶端應用程式名稱。|
 |工作站 ID|識別工作站的字串。|
@@ -201,7 +201,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |交易 DDL|DBPROP_SUPPORTEDTXNDDL|
 |使用者識別碼|DBPROP_AUTH_USERID|
 |使用者名稱|DBPROP_USERNAME|
-|視窗控制碼|DBPROP_INIT_HWND|
+|視窗控制代碼|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>記錄集動態屬性
  下列屬性會加入至**記錄集**物件的**properties**集合中。

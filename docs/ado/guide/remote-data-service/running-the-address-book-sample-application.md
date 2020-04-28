@@ -14,10 +14,10 @@ ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45324642d2f323297ecbe091617fbb14cc5fc785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922241"
 ---
 # <a name="running-the-address-book-sample-application"></a>執行通訊錄應用程式範例

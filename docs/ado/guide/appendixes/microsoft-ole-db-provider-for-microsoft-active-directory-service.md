@@ -16,10 +16,10 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926670"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服務
@@ -59,12 +59,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*Root*|表示要從中開始搜尋的**ADsPath**物件（也就是搜尋的根）。|  
+|*路徑*|表示要從中開始搜尋的**ADsPath**物件（也就是搜尋的根）。|  
 |*Filter*|以 RFC 1960 格式表示搜尋篩選準則。|  
 |*屬性*|表示要傳回的屬性清單（以逗號分隔）。|  
-|*影響範圍*|選擇性。 指定搜尋範圍的**字串**。 可以是下列其中一項：<br /><br /> -Base-僅搜尋基底物件（搜尋的根目錄）。<br />-OneLevel-僅搜尋一個層級。<br />-子樹-搜尋整個子樹。|  
+|*範圍*|選擇性。 指定搜尋範圍的**字串**。 可以是下列其中一項：<br /><br /> -Base-僅搜尋基底物件（搜尋的根目錄）。<br />-OneLevel-僅搜尋一個層級。<br />-子樹-搜尋整個子樹。|  
   
  例如：  
   
@@ -108,19 +108,19 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|唯讀|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|唯讀|  
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|  
+|[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|  
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|  
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|  
   
  **標準 ADO 記錄集方法的可用性：**  
   
-|方法|只有?|  
+|方法|是否可用？|  
 |------------|----------------|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|否|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|  
-|[副本](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|  
 |[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|  
@@ -132,7 +132,7 @@ objectClass='user' AND objectCategory='Person'"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|是|  
 |[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|  
 |[再次](../../../ado/reference/ado-api/requery-method.md)|是|  
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|  
+|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|是|  
 |[支援](../../../ado/reference/ado-api/supports-method.md)|是|  
 |[更新](../../../ado/reference/ado-api/update-method.md)|否|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  

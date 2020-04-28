@@ -16,10 +16,10 @@ ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa9e680e1626311f2cc10aa7c79fb583841fbc38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920119"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 方法 (ADO)

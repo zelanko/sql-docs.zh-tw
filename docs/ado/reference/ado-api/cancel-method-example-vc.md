@@ -15,10 +15,10 @@ ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920170"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel 方法範例 (VC++)

@@ -16,10 +16,10 @@ ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b97aebefa2176d3569b818751cd3b8ff039bfc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931775"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parameter (ADO for Visual C++ 語法)

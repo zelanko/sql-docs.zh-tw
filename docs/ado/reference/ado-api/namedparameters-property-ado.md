@@ -16,10 +16,10 @@ ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d63c413ebed585782ca5ce0568119dd7e05bf8ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932067"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters 屬性 (ADO)

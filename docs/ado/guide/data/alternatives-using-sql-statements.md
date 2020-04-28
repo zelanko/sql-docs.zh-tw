@@ -15,10 +15,10 @@ ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f41ef7f0641877056a6e2f3d85fd6a40ff7826db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925994"
 ---
 # <a name="alternatives-using-sql-statements"></a>替代方案：使用 SQL 陳述式

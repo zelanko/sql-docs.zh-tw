@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927031"
 ---
 # <a name="ado-security-design-features"></a>ADO 安全性設計功能
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  先前的訊息可讓使用者做出更明智的決策，並據此繼續進行。
 
 > [!NOTE]
->  針對不受信任的網站（也就是未列在 [信任的網站] 區域清單中的網站），如果提供者也不受信任（如本節稍早所述），則使用者可能會在資料列中看到兩個安全性警告、不安全提供者的警告，以及有關的第二個警告。嘗試使用其身分識別。 如果使用者在第一個警告中按一下 [確定]，則會執行上表中所述的 Internet Explorer 設定和回應行為程式碼。
+>  針對不受信任的網站（也就是未列在 [信任的網站] 區域清單中的網站），如果提供者也不受信任（如本節稍早所述），則使用者可能會在資料列中看到兩個安全性警告、不安全提供者的警告，以及有關嘗試使用其身分識別的第二個警告。 如果使用者在第一個警告中按一下 [確定]，則會執行上表中所述的 Internet Explorer 設定和回應行為程式碼。
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>控制是否要在 ADO 連接字串中傳回密碼文字
  當您嘗試取得 ADO**連接**物件的[ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md)屬性值時，會發生下列事件：

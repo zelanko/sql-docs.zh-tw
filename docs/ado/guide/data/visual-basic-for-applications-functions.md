@@ -16,10 +16,10 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923466"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函式
@@ -33,17 +33,17 @@ ms.locfileid: "67923466"
 |Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |錯誤|Error$|Exp|修正|[格式]|Format$|  
-|FV|Hex|Hex$|小時|IIF|InStr|  
+|FV|Hex|Hex$|Hour|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
 |LeftB|Left$|LeftB $|Len|Log|LTrim|  
-|LTrim$|Mid|Mid$|分鐘|MIRR|Month|  
+|LTrim$|Mid|Mid$|Minute|MIRR|Month|  
 |Now|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|費率|RGB|Right|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
-|秒|Sgn|Sin|SLN|空白字元|Space$|  
+|Second|Sgn|Sin|SLN|Space|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|Time|Time$|計時器|  
+|String$|SYD|Tan|時間|Time$|計時器|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Year||  
   

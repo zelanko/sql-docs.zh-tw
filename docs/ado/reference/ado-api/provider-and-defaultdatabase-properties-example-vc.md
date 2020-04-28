@@ -16,10 +16,10 @@ ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931489"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 和 DefaultDatabase 屬性範例 (VC++)

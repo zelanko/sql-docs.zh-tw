@@ -16,10 +16,10 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926379"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++ Extensions for ADO

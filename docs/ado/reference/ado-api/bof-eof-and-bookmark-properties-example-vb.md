@@ -17,10 +17,10 @@ ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920433"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF 和 Bookmark 屬性範例 (VB)

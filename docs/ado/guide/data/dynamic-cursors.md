@@ -14,10 +14,10 @@ ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925501"
 ---
 # <a name="dynamic-cursors"></a>動態資料指標

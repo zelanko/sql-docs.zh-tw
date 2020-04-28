@@ -15,10 +15,10 @@ ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a13e09895a25ac095888b42097bf47cbe27b369
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931230"
 ---
 # <a name="resync-method-example-vc"></a>Resync 方法範例 (VC++)

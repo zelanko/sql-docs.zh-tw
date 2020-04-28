@@ -17,10 +17,10 @@ ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad832a1e0028005ff1893df43fbadcd078bc2859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921858"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、PageCount 和 PageSize 屬性範例（VB）

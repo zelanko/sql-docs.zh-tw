@@ -14,10 +14,10 @@ ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924742"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非參數化命令的作業

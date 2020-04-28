@@ -18,10 +18,10 @@ ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931476"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 屬性 (ADO)

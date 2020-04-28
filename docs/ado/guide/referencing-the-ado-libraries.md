@@ -15,10 +15,10 @@ ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a5d11102989e3194f3b878b94610e4802084f97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922997"
 ---
 # <a name="referencing-the-ado-libraries"></a>參考 ADO 程式庫

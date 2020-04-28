@@ -16,10 +16,10 @@ ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921446"
 ---
 # <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
@@ -29,7 +29,7 @@ ms.locfileid: "67921446"
   
 |持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**|1|預設。 每當**MSDataShape**提供者判斷計算結果欄所依賴的值已變更時重新計算。|  
+|**adRecalcAlways**|1|預設值。 每當**MSDataShape**提供者判斷計算結果欄所依賴的值已變更時重新計算。|  
 |**adRecalcUpFront**|0|只有在一開始建立階層式**記錄集**時才會計算。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等  

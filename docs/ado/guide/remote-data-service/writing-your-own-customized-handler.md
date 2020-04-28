@@ -14,10 +14,10 @@ ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921881"
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式

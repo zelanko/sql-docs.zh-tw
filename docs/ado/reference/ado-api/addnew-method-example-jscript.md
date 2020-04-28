@@ -15,10 +15,10 @@ ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ed77c7ca8e04e346c87a32d38499a272ff5fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921296"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 方法範例 (JScript)

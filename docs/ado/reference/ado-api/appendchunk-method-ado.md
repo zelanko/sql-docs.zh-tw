@@ -17,10 +17,10 @@ ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920568"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)

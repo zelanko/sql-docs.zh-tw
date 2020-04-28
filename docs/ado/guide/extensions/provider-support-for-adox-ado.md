@@ -13,10 +13,10 @@ ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b07f4563d54254310c08c8c132d0729b8ccdc6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923211"
 ---
 # <a name="provider-support-for-adox-ado"></a>ADOX (ADO) 的提供者支援

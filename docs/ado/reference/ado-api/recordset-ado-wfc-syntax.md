@@ -14,10 +14,10 @@ ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931383"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 語法)

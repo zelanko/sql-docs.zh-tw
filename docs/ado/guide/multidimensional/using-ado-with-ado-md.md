@@ -13,10 +13,10 @@ ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923140"
 ---
 # <a name="using-ado-with-ado-md"></a>搭配 ADO MD 使用 ADO

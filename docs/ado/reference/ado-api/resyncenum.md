@@ -16,10 +16,10 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931233"
 ---
 # <a name="resyncenum"></a>ResyncEnum
@@ -27,7 +27,7 @@ ms.locfileid: "67931233"
   
 |持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adResyncAllValues**|2|預設。 會覆寫資料，並取消暫止的更新。|  
+|**adResyncAllValues**|2|預設值。 會覆寫資料，並取消暫止的更新。|  
 |**adResyncUnderlyingValues**|1|不會覆寫資料，也不會取消暫止的更新。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等  

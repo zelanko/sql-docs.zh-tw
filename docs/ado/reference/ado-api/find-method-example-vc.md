@@ -15,10 +15,10 @@ ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932520"
 ---
 # <a name="find-method-example-vc"></a>Find 方法範例 (VC++)

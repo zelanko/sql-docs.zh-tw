@@ -16,10 +16,10 @@ ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919697"
 ---
 # <a name="commandtype-property-ado"></a>CommandType 屬性 (ADO)

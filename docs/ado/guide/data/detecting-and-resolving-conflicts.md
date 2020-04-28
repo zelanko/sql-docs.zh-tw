@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925569"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
@@ -30,7 +30,7 @@ ms.locfileid: "67925569"
   
  當您呼叫 BatchUpdate 時，ADO 和提供者會產生 SQL 語句，以便在資料來源上執行更新。 請記住，某些資料來源對於 WHERE 子句中可使用的資料行類型有一些限制。  
   
- 接下來，通話記錄集上的 Resync 方法，並將 AffectRecords 引數設定為等於 adAffectGroup，並將 ResyncValues 引數設定為等於 adResyncUnderlyingValues。 Resync 方法會從基礎資料庫更新目前記錄集物件中的資料。 藉由使用 adAffectGroup，您可以確保只有目前篩選設定可見的記錄（也就是只有衝突的記錄）會與資料庫重新同步處理。 如果您處理的是大型記錄集，這可能會造成顯著的效能差異。 藉由在呼叫重新同步時將 ResyncValues 引數設定為 adResyncUnderlyingValues，您可以確保 UnderlyingValue 屬性會包含資料庫中的（衝突）值，而 Value 屬性將會維護使用者輸入的值，而OriginalValue 屬性會保留字段的原始值（在最後一個成功的 UpdateBatch 呼叫之前，它所擁有的值）。 接著，您可以使用這些值來以程式設計方式解決衝突，或要求使用者選取將使用的值。  
+ 接下來，通話記錄集上的 Resync 方法，並將 AffectRecords 引數設定為等於 adAffectGroup，並將 ResyncValues 引數設定為等於 adResyncUnderlyingValues。 Resync 方法會從基礎資料庫更新目前記錄集物件中的資料。 藉由使用 adAffectGroup，您可以確保只有目前篩選設定可見的記錄（也就是只有衝突的記錄）會與資料庫重新同步處理。 如果您處理的是大型記錄集，這可能會造成顯著的效能差異。 藉由在呼叫重新同步時，將 ResyncValues 引數設定為 adResyncUnderlyingValues，您可以確保 UnderlyingValue 屬性會包含資料庫中的（衝突）值，而 Value 屬性會維護使用者輸入的值，而 OriginalValue 屬性會保留字段的原始值（最後一個成功的 UpdateBatch 呼叫之前的值）。 接著，您可以使用這些值來以程式設計方式解決衝突，或要求使用者選取將使用的值。  
   
  下列程式碼範例會顯示這項技術。 這個範例會在呼叫 UpdateBatch 之前，使用個別的記錄集來變更基礎資料表中的值，以建立衝突。  
   

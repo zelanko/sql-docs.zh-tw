@@ -16,10 +16,10 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931647"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 屬性 (ADO)
@@ -40,7 +40,7 @@ record.Open "second"
   
  現在， `the` **ParentURL**屬性的值是`"https://first"`，與**ActiveConnection**相同。  
   
- 來源也可以是絕對 URL，例如， `"https://first/second"`。 然後**** `"https://first"`，ParentURL 屬性會是上方`"second"`的層級。  
+ 來源也可以是絕對 URL，例如， `"https://first/second"`。 然後**ParentURL** `"https://first"`，ParentURL 屬性會是上方`"second"`的層級。  
   
  如果下列情況，這個屬性可能是 null 值：  
   

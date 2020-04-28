@@ -17,10 +17,10 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931909"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 (ADO Recordset)
@@ -34,7 +34,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ```  
   
 #### <a name="parameters"></a>參數  
- *Source*  
+ *來源*  
  選擇性。 評估為有效[命令](../../../ado/reference/ado-api/command-object-ado.md)物件、SQL 語句、資料表名稱、預存程序呼叫、URL，或包含持續儲存之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之檔案或[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件名稱的**Variant** 。  
   
  *ActiveConnection*  

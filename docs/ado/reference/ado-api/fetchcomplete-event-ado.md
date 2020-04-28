@@ -17,10 +17,10 @@ ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932838"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)

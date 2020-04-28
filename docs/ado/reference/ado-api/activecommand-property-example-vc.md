@@ -15,10 +15,10 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921639"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 屬性範例 (VC++)
@@ -212,7 +212,7 @@ void PrintComError(_com_error &e) {
 Ringer  
 ```  
   
-## <a name="sample-output"></a>取樣輸出  
+## <a name="sample-output"></a>範例輸出  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  

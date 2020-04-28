@@ -14,10 +14,10 @@ ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925301"
 ---
 # <a name="forward-only-cursors"></a>順向資料指標

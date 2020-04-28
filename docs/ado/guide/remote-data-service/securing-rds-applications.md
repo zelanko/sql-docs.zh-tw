@@ -13,10 +13,10 @@ ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d91b8f41c344d45bfde646d24819e73c0cd8f283
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922228"
 ---
 # <a name="securing-rds-applications"></a>保護 RDS 應用程式

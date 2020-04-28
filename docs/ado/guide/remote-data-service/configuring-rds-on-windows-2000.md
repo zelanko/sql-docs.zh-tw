@@ -13,10 +13,10 @@ ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6230fb7ffbaa1226bc65d391d988ad064617998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922890"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上設定 RDS

@@ -15,10 +15,10 @@ ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ad96904c913cadc451bc7d4c67fb5e4f8c59c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921666"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 屬性範例 (JScript)

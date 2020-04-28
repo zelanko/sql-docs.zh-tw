@@ -14,10 +14,10 @@ ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926860"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>附錄 D： Windows SDK 中的 ADO 範例

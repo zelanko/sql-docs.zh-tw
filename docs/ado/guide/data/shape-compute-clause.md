@@ -15,10 +15,10 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924149"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
@@ -35,7 +35,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>描述  
  此子句的部分如下所示：  
   
- *子命令*  
+ *child-command*  
  包含下列其中一項：  
   
 -   大括弧（"{}"）內的查詢命令，會傳回子**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
@@ -46,13 +46,13 @@ SHAPE child-command [AS] child-alias
   
 -   TABLE 關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *子別名*  
+ *child-alias*  
  用來參考*子命令*所傳回之**記錄集**的別名。 在 COMPUTE 子句的資料行清單中，需要*子別名*，並定義父**記錄集**物件與子 Recordset 物件之間的關聯性。  
   
- *附加-資料行清單*  
+ *appended-column-list*  
  清單，其中的每個元素會定義所產生之父系中的資料行。 每個元素都包含一個章節資料行、新的資料行、匯出資料行，或子**記錄集**上彙總函式所產生的值。  
   
- *grp-欄位清單*  
+ *grp-field-list*  
  父系和子**記錄集**物件中的資料行清單，指定如何在子系中群組資料列。  
   
  對於*grp 欄位清單*中的每個資料行，子系和父**記錄集**物件中都有對應的資料行。 對於父**記錄集中**的每個資料列而言， *grp 欄位清單*資料行都有唯一的值，而父資料列所參考的子**記錄集**只包含*grp 欄位清單*資料行具有相同值的子資料列。  
@@ -79,12 +79,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
 |State|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|CA|洛杉磯|800,000|  
+|或者|Medford|200,000|  
+|或者|Portland|400,000|  
+|CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|OR|Corvallis|300,000|  
+|或者|Corvallis|300,000|  
   
  現在，請發出此圖形命令：  
   
@@ -108,13 +108,13 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 的參考|CA|  
 |1,200,000|Child2 的參考|WA|  
-|1,100,000|Child3 的參考|OR|  
+|1,100,000|Child3 的參考|或者|  
   
 ## <a name="child1"></a>Child1  
   
 |State|City|母體|  
 |-----------|----------|----------------|  
-|CA|洛杉磯|800,000|  
+|CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
@@ -128,9 +128,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |State|City|母體|  
 |-----------|----------|----------------|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|OR|Corvallis|300,000|  
+|或者|Medford|200,000|  
+|或者|Portland|400,000|  
+|或者|Corvallis|300,000|  
   
 ## <a name="see-also"></a>另請參閱  
  [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

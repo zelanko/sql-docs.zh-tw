@@ -16,10 +16,10 @@ ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919791"
 ---
 # <a name="command-object-ado"></a>Command 物件 (ADO)

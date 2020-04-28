@@ -16,10 +16,10 @@ ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931429"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
@@ -31,7 +31,7 @@ ms.locfileid: "67931429"
 |**adDelayFetchStream**|0x4000|向提供者指出與**記錄**相關聯的預設資料流程一開始不需要抓取。 預設行為（由不存在此旗標表示）是抓取與**Record**物件相關聯的預設資料流程。|  
 |**adOpenAsync**|0x1000|表示以非同步模式開啟**記錄**物件。|  
 |**adOpenExecuteCommand**|0x10000|表示來源字串包含應執行的命令文字。 這個值相當於記錄集上的**adCmdText**選項 **。開啟**。|  
-|**adOpenRecordUnspecified**|-1|預設。 指出未指定任何選項。|  
+|**adOpenRecordUnspecified**|-1|預設值。 指出未指定任何選項。|  
 |**adOpenOutput**|0x800000|指出來源是否指向包含可執行腳本的節點（例如）。[ASP] 頁面），則開啟的**記錄**將包含已執行之腳本的結果。 這個值只適用于非集合記錄。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等  

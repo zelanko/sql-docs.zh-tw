@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926631"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 總覽
@@ -52,10 +52,10 @@ MSDASQL
 |關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 ODBC 的 OLE DB 提供者。|
-|**網上**|指定資料來源名稱。|
+|**DSN**|指定資料來源名稱。|
 |**UID**|指定使用者名稱。|
 |**PWD**|指定使用者密碼。|
-|**連結**|指定在 Web 資料夾中發佈之檔案或目錄的 URL。|
+|**URL**|指定在 Web 資料夾中發佈之檔案或目錄的 URL。|
 
  因為這是 ADO 的預設提供者，所以如果您省略連接字串的**provider =** 參數，ADO 會嘗試建立與此提供者的連接。
 
@@ -87,7 +87,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  您也可以在 ODBC 特定參數或標準 ADO 定義的*使用者*和*密碼*參數中，指定使用者帳戶名稱（**UID =**）和使用者帳戶的密碼（**PWD =**）。
 
- 雖然**dsn**定義已經*指定資料庫，* 但是除了**dsn**以外，您還可以指定*資料庫*參數來連接到不同的資料庫。 當您使用**DSN**時，一律包含** *資料庫*參數是個不錯的主意。 這可確保您在上次檢查**DSN**定義之後，如果另一位使用者變更了預設的資料庫參數，就可以連接到正確的資料庫。
+ 雖然**dsn**定義已經*指定資料庫，* 但是除了**dsn**以外，您還可以指定*資料庫*參數來連接到不同的資料庫。 當您使用**DSN**時，一律包含*the* *資料庫*參數是個不錯的主意。 這可確保您在上次檢查**DSN**定義之後，如果另一位使用者變更了預設的資料庫參數，就可以連接到正確的資料庫。
 
 ## <a name="provider-specific-connection-properties"></a>提供者特定的連接屬性
  ODBC 的 OLE DB 提供者會將數個屬性加入至**Connection**物件的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中。 下表列出這些屬性，並在括弧中加上對應的 OLE DB 屬性名稱。
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準 ADO**記錄集**屬性的可用性：
 
-|屬性|ForwardOnly|Dynamic|索引鍵集|靜態|
+|屬性|ForwardOnly|動態|索引鍵集|靜態|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
@@ -190,7 +190,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|讀取/寫入|無法使用|唯讀|唯讀|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|讀取/寫入|無法使用|唯讀|唯讀|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
+|[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|唯讀|唯讀|唯讀|
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|唯讀|唯讀|唯讀|
 
@@ -198,13 +198,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準 ADO**記錄集**方法的可用性：
 
-|方法|ForwardOnly|Dynamic|索引鍵集|靜態|
+|方法|ForwardOnly|動態|索引鍵集|靜態|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|是|是|是|是|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|是|是|是|是|
-|[副本](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|是|
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|是|
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|是|是|是|
 |[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
@@ -216,7 +216,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|是|是|是|是|
 |[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|是|是|是|
 |[再次](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|否|否|是|是|
+|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|否|否|是|是|
 |[支援](../../../ado/reference/ado-api/supports-method.md)|是|是|是|是|
 |[更新](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |最大資料列大小|DBPROP_MAXROWSIZE|
 |最大資料列大小包含 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT 中的資料表上限|DBPROP_MAXTABLESINSELECT|
-|模式|DBPROP_INIT_MODE|
+|[模式]|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存物件|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -295,7 +295,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |交易 DDL|DBPROP_SUPPORTEDTXNDDL|
 |使用者識別碼|DBPROP_AUTH_USERID|
 |使用者名稱|DBPROP_USERNAME|
-|視窗控制碼|DBPROP_INIT_HWND|
+|視窗控制代碼|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>記錄集動態屬性
  下列屬性會加入至**記錄集**物件的**properties**集合中。

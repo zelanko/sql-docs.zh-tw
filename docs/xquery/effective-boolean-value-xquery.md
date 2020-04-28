@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929951"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布林值 (XQuery)
@@ -70,8 +70,7 @@ go
   
 -   建立並查詢具類型的**xml**變數。  
   
--   
-  `data(/b[1])` 運算式會傳回布林值 True。 因此，此情況中的有效布林值是 True。  
+-   `data(/b[1])` 運算式會傳回布林值 True。 因此，此情況中的有效布林值是 True。  
   
 -   運算式`data(/b[2])`會傳回布林值 false。 因此，此情況中的有效布林值是 False。  
   

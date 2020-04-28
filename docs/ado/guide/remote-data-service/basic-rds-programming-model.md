@@ -13,10 +13,10 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922952"
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
@@ -48,6 +48,6 @@ ms.locfileid: "67922952"
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS 使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
+ [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

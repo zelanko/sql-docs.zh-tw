@@ -11,10 +11,10 @@ ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 83d9430dc368a3dc9eb93719f9698b0d39b1385b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925161"
 ---
 # <a name="handling-errors-in-other-languages"></a>處理其他語言的錯誤

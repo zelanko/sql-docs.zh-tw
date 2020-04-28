@@ -15,10 +15,10 @@ ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecdbf24ea70da0e16d05e4d866c0b2f0f9470c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919978"
 ---
 # <a name="clone-method-example-vc"></a>Clone 方法範例 (VC++)

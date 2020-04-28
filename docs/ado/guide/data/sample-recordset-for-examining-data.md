@@ -14,10 +14,10 @@ ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924301"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用於檢查資料的範例資料錄集

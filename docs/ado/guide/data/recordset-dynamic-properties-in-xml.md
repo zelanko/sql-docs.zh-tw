@@ -13,10 +13,10 @@ ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924449"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML 中的資料錄集動態屬性

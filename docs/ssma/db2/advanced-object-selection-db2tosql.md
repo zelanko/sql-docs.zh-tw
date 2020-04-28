@@ -10,10 +10,10 @@ ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927783"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Advanced 物件選取專案（DB2ToSQL）
@@ -25,7 +25,7 @@ ms.locfileid: "67927783"
   
 使用此對話方塊之前，您可能會想要強制 SSMA 藉由轉換架構或儲存專案來載入所有中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **檢查所有專案**  
 在 [所有專案] 旁邊加入核取記號。 這些專案會立即在 [中繼資料瀏覽器] 中選取。  
   

@@ -16,10 +16,10 @@ ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49a82682e619bb2a33e5c04e049b40ac4733f427
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919876"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (ADO for Visual C++ 語法)

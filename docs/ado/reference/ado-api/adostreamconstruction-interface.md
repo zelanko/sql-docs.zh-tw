@@ -16,10 +16,10 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920780"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
@@ -38,7 +38,7 @@ ms.locfileid: "67920780"
  無。  
   
 ## <a name="remarks"></a>備註  
- 假設有一個**** OLE DB 的 IStream`pStream`物件（），將 ADO **Stream**物件（`adoStr`）的結構為下列三個基本作業：  
+ 假設有一個**IStream** OLE DB 的 IStream`pStream`物件（），將 ADO **Stream**物件（`adoStr`）的結構為下列三個基本作業：  
   
 1.  建立 ADO**資料流程**物件：  
   

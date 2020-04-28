@@ -14,10 +14,10 @@ ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925540"
 ---
 # <a name="determining-edit-mode"></a>判斷編輯模式

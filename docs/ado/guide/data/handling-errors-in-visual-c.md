@@ -16,10 +16,10 @@ ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925122"
 ---
 # <a name="handling-errors-in-visual-c"></a>處理 Visual C++ 的錯誤

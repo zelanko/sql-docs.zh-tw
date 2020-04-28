@@ -13,10 +13,10 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923419"
 ---
 # <a name="working-with-recordsets"></a>使用資料錄集
@@ -48,7 +48,7 @@ ms.locfileid: "67923419"
   
  **Find**方法會將您的搜尋限制為一個欄位的內容。 **搜尋**方法需要您擁有索引，而且也有其他限制。 如果您必須搜尋不是索引基礎的多個欄位，或如果您的提供者不支援索引，您可以使用**Recordset**物件的**Filter**屬性來限制結果。  
   
-### <a name="find"></a>尋找  
+### <a name="find"></a>Find  
  **Find**方法會搜尋**記錄集**，尋找符合指定之準則的資料列。 您可以選擇性地指定搜尋的方向、起始資料列，以及起始資料列的位移。 如果符合條件，就會在找到的記錄上設定目前的資料列位置。否則，視搜尋方向而定，位置會設定為**記錄集**的結束（或開始）。  
   
  只能為準則指定單一資料行名稱。 換句話說，這個方法不支援多重列搜尋。  

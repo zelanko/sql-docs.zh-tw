@@ -14,10 +14,10 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926350"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>存取階層式記錄集中的資料列（範例）

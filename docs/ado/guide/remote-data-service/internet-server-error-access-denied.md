@@ -13,10 +13,10 @@ ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: adbfc4e56c49447d88fb354d1e67c2c5e3e30b71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922628"
 ---
 # <a name="internet-server-error-access-denied"></a>網際網路伺服器錯誤：拒絕存取

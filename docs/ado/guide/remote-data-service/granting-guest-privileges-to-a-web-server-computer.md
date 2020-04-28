@@ -13,10 +13,10 @@ ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922641"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>將來賓權限授與網頁伺服器電腦

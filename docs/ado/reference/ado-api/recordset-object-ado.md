@@ -16,10 +16,10 @@ ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931369"
 ---
 # <a name="recordset-object-ado"></a>Recordset 物件 (ADO)
@@ -50,7 +50,7 @@ ms.locfileid: "67931369"
   
  您可以使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 **MoveLast**、 **MoveNext**和**MovePrevious**方法;[Move](../../../ado/reference/ado-api/move-method-ado.md)方法;和 [ [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)]、[ [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)] 和 [[篩選](../../../ado/reference/ado-api/filter-property.md)] 屬性，以重新調整目前的記錄，假設提供者支援相關的功能。 順向**記錄集**物件只支援[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。 當您使用**Move**方法來流覽每一筆記錄（或列舉**記錄集**）時，您可以使用**BOF**和**EOF**屬性來判斷您是否已移至**記錄集**的開頭或結尾之外。  
   
- 在使用**記錄集**物件的任何功能之前，您必須先在物件上呼叫**支援**方法，以確認功能已受到支援或可供使用。 當**支援**的方法傳回 false 時，您不能使用此功能。 例如，只有在傳回**True**時**** `Recordset.Supports(adMovePrevious)` ，才可以使用 MovePrevious 方法。 否則，您將會收到錯誤，因為**記錄集**物件可能已關閉，而且在實例上呈現無法使用的功能。 如果您感興趣的功能不受支援，則**支援**也會傳回 false。 在此情況下，您應該避免在**記錄集**物件上呼叫對應的屬性或方法。  
+ 在使用**記錄集**物件的任何功能之前，您必須先在物件上呼叫**支援**方法，以確認功能已受到支援或可供使用。 當**支援**的方法傳回 false 時，您不能使用此功能。 例如，只有在傳回**True**時**MovePrevious** `Recordset.Supports(adMovePrevious)` ，才可以使用 MovePrevious 方法。 否則，您將會收到錯誤，因為**記錄集**物件可能已關閉，而且在實例上呈現無法使用的功能。 如果您感興趣的功能不受支援，則**支援**也會傳回 false。 在此情況下，您應該避免在**記錄集**物件上呼叫對應的屬性或方法。  
   
  **記錄集**物件可以支援兩種類型的更新：立即和批次處理。 在立即更新中，一旦您呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法，資料的所有變更都會立即寫入基礎資料來源。 您也可以使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)和**Update**方法將值陣列當做參數傳遞，並同時更新記錄中的數個欄位。  
   

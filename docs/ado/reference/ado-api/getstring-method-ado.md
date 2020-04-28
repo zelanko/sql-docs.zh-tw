@@ -17,10 +17,10 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932464"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)

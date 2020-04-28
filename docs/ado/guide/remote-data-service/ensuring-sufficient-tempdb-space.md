@@ -13,10 +13,10 @@ ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922651"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>確認 TempDB 有足夠空間

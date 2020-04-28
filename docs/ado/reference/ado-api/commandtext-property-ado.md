@@ -16,17 +16,17 @@ ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919721"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 屬性 (ADO)
 表示要對提供者發出的命令文字。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 取得或設定**字串**值，其中包含提供者命令，例如 SQL 語句、資料表名稱、相對 URL 或預存程序呼叫。 預設值為空字串（""）。  
+ 取得或設定**字串**值，其中包含提供者命令，例如 SQL 語句、資料表名稱、相對 URL 或預存程序呼叫。 預設值為空字串 ("")。  
   
 ## <a name="remarks"></a>備註  
  使用**CommandText**屬性來設定或傳回[命令](../../../ado/reference/ado-api/command-object-ado.md)物件所代表之命令的文字。 這通常會是 SQL 語句，但也可以是提供者所識別的任何其他類型的命令語句，例如預存程序呼叫。 SQL 語句必須是提供者的查詢處理器所支援的特定方言或版本。  

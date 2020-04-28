@@ -15,10 +15,10 @@ ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b0886302a48f7b9b3ee8e261014c0784d51fc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930411"
 ---
 # <a name="catalog-example-vb"></a>Catalog 範例 (VB)

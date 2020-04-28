@@ -14,10 +14,10 @@ ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8e4e59606f3b68fbd9ce272db8ea8a50ab53e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922710"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>讀取可重複的隔離等級發生死結

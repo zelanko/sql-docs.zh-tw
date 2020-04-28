@@ -13,10 +13,10 @@ ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4790fa7fc1a2859013500f44dcd4a266719f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924316"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件

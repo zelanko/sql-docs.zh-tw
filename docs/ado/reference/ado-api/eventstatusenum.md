@@ -16,10 +16,10 @@ ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932861"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum

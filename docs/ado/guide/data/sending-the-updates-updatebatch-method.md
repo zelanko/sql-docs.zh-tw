@@ -11,10 +11,10 @@ ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924250"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>傳送更新：UpdateBatch 方法

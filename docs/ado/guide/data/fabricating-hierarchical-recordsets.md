@@ -16,10 +16,10 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925329"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>產生階層式資料錄集

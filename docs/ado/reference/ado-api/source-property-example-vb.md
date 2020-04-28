@@ -15,10 +15,10 @@ ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5161dc2aa0a0a213095a160cf0473c138cdf2cf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930911"
 ---
 # <a name="source-property-example-vb"></a>Source 屬性範例 (VB)

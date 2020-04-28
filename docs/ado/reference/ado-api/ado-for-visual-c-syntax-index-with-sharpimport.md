@@ -18,10 +18,10 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920968"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>使用 #import Visual C++ 語法索引的 ADO
@@ -53,7 +53,7 @@ ms.locfileid: "67920968"
   
 -   [Stream 物件](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
--   [連接事件](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Connection 事件](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [記錄集事件](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   

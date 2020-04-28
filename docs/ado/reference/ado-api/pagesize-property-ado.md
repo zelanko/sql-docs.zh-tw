@@ -16,10 +16,10 @@ ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931760"
 ---
 # <a name="pagesize-property-ado"></a>PageSize 屬性 (ADO)

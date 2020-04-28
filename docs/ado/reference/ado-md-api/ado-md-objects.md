@@ -14,10 +14,10 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930579"
 ---
 # <a name="ado-md-objects"></a>ADO MD 物件
@@ -26,20 +26,20 @@ ms.locfileid: "67930579"
 |-|-|  
 |[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|表示儲存格集的位置或篩選軸，其中包含一或多個維度的選取成員。|  
 |[目錄](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|包含多維度資料提供者（MDP）特有的多維度架構資訊（也就是 cube 和基礎維度、階層、層級和成員）。|  
-|[資料格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|代表資料格集內所含軸座標交集的資料。|  
-|[集中](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|表示多維度查詢的結果。 這是從 cube 或其他資料格集中選取的資料格集合。|  
+|[格值](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|代表資料格集內所含軸座標交集的資料。|  
+|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|表示多維度查詢的結果。 這是從 cube 或其他資料格集中選取的資料格集合。|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|代表多維架構中的 cube，其中包含一組相關維度。|  
-|[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|表示多維度 cube 的其中一個維度，其中包含一或多個成員的階層。|  
+|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|表示多維度 cube 的其中一個維度，其中包含一或多個成員的階層。|  
 |[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|表示維度成員可以匯總或「匯總」的一種方式。 維度可以沿著一或多個階層匯總。|  
-|[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一組成員，其中每一個都在階層內具有相同的次序。|  
+|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一組成員，其中每一個都在階層內具有相同的次序。|  
 |[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)|代表 cube 中層級的成員、層級成員的子系，或沿著資料格集軸之位置的成員。|  
-|[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)|代表一組不同維度的一或多個成員，定義沿著軸的點。|  
+|[移動](../../../ado/reference/ado-md-api/position-object-ado-md.md)|代表一組不同維度的一或多個成員，定義沿著軸的點。|  
   
  此外，**目錄**物件也會連接到包含在標準 ado 程式庫中的 ado**連接**物件：  
   
 |Object|描述|  
 |------------|-----------------|  
-|[[連接]](../../../ado/reference/ado-api/connection-object-ado.md)|表示與資料來源的開啟連接。|  
+|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|表示資料來源的開啟連接。|  
   
  這些物件之間的關聯性會在[ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)中說明。  
   

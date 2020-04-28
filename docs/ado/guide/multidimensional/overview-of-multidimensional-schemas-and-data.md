@@ -13,10 +13,10 @@ ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923182"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀

@@ -18,10 +18,10 @@ ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930839"
 ---
 # <a name="status-property-ado-field"></a>Status 屬性 (ADO Field)

@@ -18,10 +18,10 @@ ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93436a5180f1a01269f1612f7e608b71b4c073e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923803"
 ---
 # <a name="types-of-locks"></a>鎖定的類型

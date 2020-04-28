@@ -13,10 +13,10 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923451"
 ---
 # <a name="what-is-a-cursor"></a>什麼是資料指標？

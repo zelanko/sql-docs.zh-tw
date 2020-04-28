@@ -14,10 +14,10 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a01e17ea9c786a724e5869a28bf4d8927b58ac81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925698"
 ---
 # <a name="current-record-and-size-of-recordset"></a>目前的記錄和資料錄集的大小

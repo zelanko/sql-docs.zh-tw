@@ -13,10 +13,10 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923383"
 ---
 # <a name="xml-persistence-format"></a>XML 保存格式

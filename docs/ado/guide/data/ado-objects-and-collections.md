@@ -13,10 +13,10 @@ ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926046"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 物件和集合
@@ -25,7 +25,7 @@ ADO 包含下列九個物件和四個集合。
 |物件或集合|描述|  
 |--------------------------|-----------------|  
 |**Connection**物件|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統的情況下，它可能相當於與伺服器的實際網路連接。 視提供者支援的功能而定，可能無法使用**連接**物件的某些集合、方法或屬性。|  
-|**Command**物件|用來定義特定的命令，例如要針對資料來源執行的 SQL 查詢。|  
+|**Command** 物件|用來定義特定的命令，例如要針對資料來源執行的 SQL 查詢。|  
 |**Recordset**物件|代表基表的整組記錄或已執行命令的結果。 所有記錄**集**物件都是由記錄（資料列）和欄位（資料行）所組成。|  
 |**Record**物件|表示單一資料列，不論是從**記錄集**或提供者。 此記錄可能代表資料庫記錄或其他類型的物件（例如檔案或目錄），視您的提供者而定。|  
 |**Stream**物件|表示二進位或文字資料的資料流程。 例如，您可以將 XML 檔載入資料流程以進行命令輸入，或從特定提供者傳回做為查詢的結果。 **資料流程**物件可以用來操作包含這些資料資料流程的欄位或記錄。|  

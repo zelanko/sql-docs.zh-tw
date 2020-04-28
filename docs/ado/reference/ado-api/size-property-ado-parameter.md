@@ -16,10 +16,10 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931058"
 ---
 # <a name="size-property-ado-parameter"></a>Size 屬性 (ADO 參數)

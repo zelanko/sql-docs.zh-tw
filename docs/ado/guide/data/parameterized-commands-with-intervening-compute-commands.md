@@ -16,10 +16,10 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924729"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>參數化命令與中介 COMPUTE 命令

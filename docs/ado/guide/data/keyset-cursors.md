@@ -14,10 +14,10 @@ ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7a12d1579af407bca77c9fa61d660a84a09f04e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924900"
 ---
 # <a name="keyset-cursors"></a>索引鍵集資料指標

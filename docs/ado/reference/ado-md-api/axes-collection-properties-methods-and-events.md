@@ -13,10 +13,10 @@ ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cb4546839d09954f7d08f71164ecba59595fbd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930516"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Axes 集合屬性、方法和事件

@@ -14,10 +14,10 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922978"
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
@@ -53,7 +53,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |參數|描述|  
 |---------------|-----------------|  
 |***CLASSID***|唯一的128位數位，可識別系統的內嵌物件類型。 此識別碼會保留在本機電腦的系統登錄中。 （適用于 RDS 的類別識別碼 **。DataControl**物件，請參閱[RDS。DataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)）。|  
-|***ID***|定義用來在程式碼中識別之内嵌物件的檔範圍識別碼。|  
+|***識別碼***|定義用來在程式碼中識別之内嵌物件的檔範圍識別碼。|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>句.DataControl 標記參數  
  下表描述 RDS 特有的參數 **。DataControl**物件。 （如需 RDS 的完整清單，請使用 **。DataControl**物件參數，以及執行它們的時機，請參閱[RDS。DataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)）。  
@@ -62,7 +62,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |---------------|-----------------|  
 |[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用的是 HTTP，此值會是前面加上的伺服器電腦`https://`名稱。|  
 |[到](../../../ado/reference/rds-api/connect-property-rds.md)|提供 RDS 的必要連接資訊 **。DataControl**以連接到 SQL Server。|  
-|[SERVER](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的查詢字串。|  
+|[SQL](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的查詢字串。|  
   
 ## <a name="see-also"></a>另請參閱  
  [通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)

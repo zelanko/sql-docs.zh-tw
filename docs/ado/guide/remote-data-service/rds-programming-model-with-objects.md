@@ -14,10 +14,10 @@ ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922469"
 ---
 # <a name="rds-programming-model-with-objects"></a>具有物件的 RDS 程式設計模型
@@ -48,6 +48,6 @@ RDS 的目標是要透過像是 IIS 的媒介來取得及更新資料來源。 �
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS 使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
+ [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

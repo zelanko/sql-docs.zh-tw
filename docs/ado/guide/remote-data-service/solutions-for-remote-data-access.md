@@ -13,10 +13,10 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922171"
 ---
 # <a name="solutions-for-remote-data-access"></a>遠端資料存取的解決方案
@@ -46,6 +46,6 @@ ms.locfileid: "67922171"
  [基本 RDS 程式設計模型](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
+ [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

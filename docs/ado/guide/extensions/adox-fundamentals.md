@@ -13,10 +13,10 @@ ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923266"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基本概念

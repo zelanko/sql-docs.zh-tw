@@ -15,10 +15,10 @@ ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921183"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 程式碼範例

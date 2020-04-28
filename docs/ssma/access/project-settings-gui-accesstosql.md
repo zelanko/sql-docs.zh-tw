@@ -10,10 +10,10 @@ ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e460a5b571988de65f1d3921f73f011520e6ca15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929446"
 ---
 # <a name="project-settings-gui-accesstosql"></a>專案設定（GUI）（AccessToSQL）
@@ -25,7 +25,7 @@ GUI 專案設定可讓您設定資料在 [**資料**] 索引標籤上的顯示�
   
 -   使用 [**預設專案設定**] 對話方塊，即可設定所有專案的使用者介面選項。 若要存取 GUI 設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，然後按一下左窗格底部的 [ **GUI** ]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源的最大資料列數目**  
 設定所選來源資料表的 [**資料**] 索引標籤上顯示的資料列數目。  
   

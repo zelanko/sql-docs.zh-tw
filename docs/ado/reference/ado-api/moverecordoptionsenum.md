@@ -16,10 +16,10 @@ ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932040"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
@@ -27,7 +27,7 @@ ms.locfileid: "67932040"
   
 |持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adMoveUnspecified**|-1|預設。 執行預設的移動作業：如果目的地檔案或目錄已經存在，作業就會失敗，而且作業會更新超文字連結。|  
+|**adMoveUnspecified**|-1|預設值。 執行預設的移動作業：如果目的地檔案或目錄已經存在，作業就會失敗，而且作業會更新超文字連結。|  
 |**adMoveOverWrite**|1|覆寫目的地檔案或目錄，即使它已經存在。|  
 |**adMoveDontUpdateLinks**|2|藉由不更新來源**記錄**的超文字連結，修改**MoveRecord**方法的預設行為。 預設行為取決於提供者的功能。 如果提供者能夠運作，請移動作業更新連結。 如果提供者無法修正連結，或未指定此值，則即使未修正連結，移動也會成功。|  
 |**adMoveAllowEmulation**|4|要求提供者嘗試模擬移動（使用下載、上傳和刪除作業）。 如果嘗試移動**記錄**失敗，因為目的地 URL 位於不同的伺服器上，或由不同于來源的提供者所服務，這可能會造成延遲或資料遺失增加，因為在提供者之間移動資源時，有不同的提供者功能。|  

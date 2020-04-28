@@ -13,10 +13,10 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924810"
 ---
 # <a name="namespaces"></a>命名空間
@@ -28,7 +28,7 @@ ADO 中的 XML 持續性格式會使用下列四個命名空間。
 |前置詞|描述|  
 |------------|-----------------|  
 |s|參考「XML 資料」命名空間，其中包含定義目前記錄集之架構的元素和屬性。|  
-|樹|參考資料類型定義規格。|  
+|dt|參考資料類型定義規格。|  
 |rs|參考包含 ADO 記錄集屬性和屬性特定專案和屬性的命名空間。|  
 |z|參考目前資料列集的架構。|  
   

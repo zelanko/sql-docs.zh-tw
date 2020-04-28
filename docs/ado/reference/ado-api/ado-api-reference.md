@@ -13,10 +13,10 @@ ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921224"
 ---
 # <a name="ado-api-reference"></a>ADO API 參考

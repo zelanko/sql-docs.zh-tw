@@ -14,10 +14,10 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923446"
 ---
 # <a name="what-is-a-lock"></a>什麼是鎖定？

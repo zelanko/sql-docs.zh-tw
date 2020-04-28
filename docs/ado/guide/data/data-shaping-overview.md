@@ -13,10 +13,10 @@ ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925626"
 ---
 # <a name="data-shaping-overview"></a>資料成形概觀

@@ -11,10 +11,10 @@ ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924055"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步驟 3：填入 [欄位] 清單方塊

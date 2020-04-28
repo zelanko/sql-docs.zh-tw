@@ -15,10 +15,10 @@ ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924959"
 ---
 # <a name="intervening-shape-compute-clauses"></a>中介 Shape COMPUTE 子句

@@ -14,10 +14,10 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921099"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 動態屬性
@@ -30,7 +30,7 @@ ms.locfileid: "67921099"
 |||  
 |-|-|  
 |[最優化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否應該在此欄位上建立索引。|  
-|[及時](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定 OLE DB 提供者是否應該提示使用者提供初始化資訊。|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定 OLE DB 提供者是否應該提示使用者提供初始化資訊。|  
 |[重新調整名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指定**記錄集**物件的名稱。|  
 |[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|指定使用者提供的命令字串，重新**同步**處理方法會發出此錯誤，以重新整理**唯一資料表**動態屬性中名為的資料表中的資料。|  
 |[唯一的資料表、唯一的架構、唯一的目錄](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**唯一資料表**指定允許更新、插入和刪除的基表名稱。<br /><br /> **唯一的架構**指定資料表的架構或擁有者的名稱。<br /><br /> **唯一目錄**指定包含資料表的目錄或資料庫名稱。|  

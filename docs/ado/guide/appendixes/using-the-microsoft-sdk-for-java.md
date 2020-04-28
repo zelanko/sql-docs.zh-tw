@@ -14,10 +14,10 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926461"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java

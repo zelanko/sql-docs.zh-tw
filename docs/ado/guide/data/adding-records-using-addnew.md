@@ -15,10 +15,10 @@ ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926287"
 ---
 # <a name="adding-records-using-addnew-method"></a>使用 AddNew 方法加入記錄

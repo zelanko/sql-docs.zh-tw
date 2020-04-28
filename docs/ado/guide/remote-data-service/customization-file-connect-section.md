@@ -14,10 +14,10 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922800"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案 Connect 區段
@@ -55,9 +55,9 @@ connectionString
   
 |部分|描述|  
 |----------|-----------------|  
-|**連線**|表示這是連接字串專案的常值字串。|  
+|**[連接]**|表示這是連接字串專案的常值字串。|  
 |**_connectionString_**|取代整個用戶端連接字串的字串。|  
-|**Access**|表示這是存取專案的常值字串。|  
+|**存取**|表示這是存取專案的常值字串。|  
 |**_accessRight_**|下列其中一個存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入資料來源。|  
   
  如果您想要允許任何連接（實際上是停用預設的處理常式行為），請將 [**連接預設值]** 區段中`Access=ReadWrite`的存取專案設定為，並刪除或批註其他任何 **[連接**_識別碼_] 區段。  

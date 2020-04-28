@@ -13,10 +13,10 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921963"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
@@ -44,7 +44,7 @@ identifier
 |部分|描述|  
 |----------|-----------------|  
 |**connect**|修改連接字串的常值字串。|  
-|**sql**|修改命令字串的常值字串。|  
+|**server**|修改命令字串的常值字串。|  
 |**userlist**|修改特定使用者存取權限的常值字串。|  
 |**退出**|指定記錄檔記錄操作錯誤的常值字串。|  
 |**預設**|如果未指定或找不到識別碼，則會使用常值字串。|  

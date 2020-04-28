@@ -13,10 +13,10 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922297"
 ---
 # <a name="required-client-settings"></a>必要用戶端設定

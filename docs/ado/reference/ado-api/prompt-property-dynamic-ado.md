@@ -14,10 +14,10 @@ ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931586"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 動態屬性 (ADO)

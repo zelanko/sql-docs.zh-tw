@@ -13,10 +13,10 @@ ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b951587fcc00788e92555eed208ea7f99b525a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923651"
 ---
 # <a name="updating-joined-results-unique-table"></a>更新聯結的結果：唯一資料表

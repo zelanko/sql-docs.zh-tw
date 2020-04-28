@@ -15,10 +15,10 @@ ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924940"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>發出命令給基礎資料提供者

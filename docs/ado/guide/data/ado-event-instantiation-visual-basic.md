@@ -13,10 +13,10 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926073"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO 事件具現化：Visual Basic

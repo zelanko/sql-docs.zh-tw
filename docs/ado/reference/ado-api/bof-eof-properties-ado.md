@@ -18,10 +18,10 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920381"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 屬性 (ADO)
@@ -61,9 +61,9 @@ ms.locfileid: "67920381"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**、 **MoveLast**|設定為**True**|設定為**True**|  
-|**移動**0|無變更|無變更|  
-|**MovePrevious**，**移動**< 0|設定為**True**|無變更|  
-|**MoveNext**，**移動**> 0|無變更|設定為**True**|  
+|**移動**0|沒有變更|沒有變更|  
+|**MovePrevious**，**移動**< 0|設定為**True**|沒有變更|  
+|**MoveNext**，**移動**> 0|沒有變更|設定為**True**|  
   
 ## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

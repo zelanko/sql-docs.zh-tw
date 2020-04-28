@@ -15,10 +15,10 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931590"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 屬性範例 (VB)

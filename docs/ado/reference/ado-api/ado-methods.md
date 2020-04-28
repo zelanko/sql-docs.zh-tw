@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920922"
 ---
 # <a name="ado-methods"></a>ADO 方法
@@ -25,14 +25,14 @@ ms.locfileid: "67920922"
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|建立可更新之**記錄集**物件的新記錄。|  
-|[附加](../../../ado/reference/ado-api/append-method-ado.md)|將物件附加至集合。 如果集合是**欄位**，則可以在附加至集合之前，建立新的**Field**物件。|  
+|[追加](../../../ado/reference/ado-api/append-method-ado.md)|將物件附加至集合。 如果集合是**欄位**，則可以在附加至集合之前，建立新的**Field**物件。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|將資料附加至大型文字或二進位資料**欄位**或**參數**物件。|  
 |[BeginTrans、CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理**連接**物件內的交易處理，如下所示：<br /><br /> **BeginTrans** -開始新的交易。<br /><br /> **CommitTrans** -儲存任何變更，並結束目前的交易。 它也可能會開始新的交易。<br /><br /> **RollbackTrans** -取消任何變更，並結束目前的交易。 它也可能會開始新的交易。|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止的非同步方法呼叫。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消暫止的批次更新。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|在呼叫**Update**方法之前，取消對**記錄集**物件的目前或新資料列或**記錄**物件的**Fields**集合所做的任何變更。|  
-|[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|從**Errors**集合中移除所有**錯誤**物件。|  
-|[副本](../../../ado/reference/ado-api/clone-method-ado.md)|從現有的**記錄集**物件建立重複的**記錄集**物件。 （選擇性）指定複製為唯讀。|  
+|[明確](../../../ado/reference/ado-api/clear-method-ado.md)|從**Errors**集合中移除所有**錯誤**物件。|  
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|從現有的**記錄集**物件建立重複的**記錄集**物件。 （選擇性）指定複製為唯讀。|  
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|關閉開啟的物件和任何相依物件。|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|比較兩個書簽，並傳回其相對值的指示。|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|將檔案或目錄及其內容複寫到另一個位置。|  
@@ -65,10 +65,10 @@ ms.locfileid: "67920922"
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|這個方法不會執行任何作業，它一律會傳回 S_OK。|  
 |[讀取](../../../ado/reference/ado-api/read-method.md)|從**資料流程**物件讀取指定的位元組數目。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|從文字**資料流程**物件讀取指定的字元數。|  
-|[[重新整理]](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的物件，以反映提供者所提供的物件。|  
+|[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的物件，以反映提供者所提供的物件。|  
 |[再次](../../../ado/reference/ado-api/requery-method.md)|藉由重新執行物件所依據的查詢，更新**記錄集**物件中的資料。|  
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|從基礎資料庫重新整理目前**記錄集**物件中的資料，或**記錄**物件的**Fields**集合。|  
-|[另](../../../ado/reference/ado-api/save-method.md)|將**記錄集**儲存在檔案或**資料流程**物件中。|  
+|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|從基礎資料庫重新整理目前**記錄集**物件中的資料，或**記錄**物件的**Fields**集合。|  
+|[儲存](../../../ado/reference/ado-api/save-method.md)|將**記錄集**儲存在檔案或**資料流程**物件中。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|將**資料流程**的二進位內容儲存至檔案。|  
 |[Seek](../../../ado/reference/ado-api/seek-method.md)|搜尋**記錄集**的索引，以快速找出符合指定值的資料列，並將目前的資料列位置變更為該資料列。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|設定為數據流結尾的位置。|  

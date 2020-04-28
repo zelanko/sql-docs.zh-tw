@@ -13,10 +13,10 @@ ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922521"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 程式設計模型詳述
@@ -77,7 +77,7 @@ ms.locfileid: "67922521"
  [空間物件（RDS）](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
+ [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 
 

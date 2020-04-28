@@ -15,10 +15,10 @@ ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7ddf42eb5a34d17c735066cd4e936c75e64ff64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921219"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript 中的 ADO 程式碼範例

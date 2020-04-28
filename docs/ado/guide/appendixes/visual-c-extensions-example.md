@@ -16,10 +16,10 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926396"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ Extensions 範例

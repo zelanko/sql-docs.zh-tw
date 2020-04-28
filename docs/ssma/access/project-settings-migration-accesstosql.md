@@ -13,10 +13,10 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929398"
 ---
 # <a name="project-settings-migration-accesstosql"></a>專案設定（遷移）（AccessToSQL）
@@ -28,7 +28,7 @@ ms.locfileid: "67929398"
   
 -   使用 [**預設專案設定**] 對話方塊，即可設定所有專案的設定選項。 若要存取遷移設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，在您想要存取設定的 [**遷移目標版本**] 下拉式方塊中選取專案類型，按一下左窗格底部的 **[一般**]，然後按一下 [**遷移**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **檢查條件約束**  
 指定在將資料加入資料表時，SSMA 是否應該檢查條件約束。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67929398"
   
 -   **完整模式**： False  
   
-**引發觸發程式**  
+**引發觸發程序**  
 指定在將資料新增至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表時，SSMA 是否應該引發插入觸發程式。  
   
 -   **預設模式**： False  
@@ -47,7 +47,7 @@ ms.locfileid: "67929398"
   
 -   **完整模式**： False  
   
-**保留身分識別**  
+**保留識別**  
 指定當 SSMA 將資料新增至時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否保留存取識別值。 如果此值為 False， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則指派識別值。  
   
 -   **預設模式**： True  
@@ -56,7 +56,7 @@ ms.locfileid: "67929398"
   
 -   **完整模式**： False  
   
-**保留 null**  
+**保留 Null**  
 指定在將資料新增至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，SSMA 是否會在來源資料中保留 null 值，而不論中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定的預設值為何。  
   
 -   **預設模式**： True  

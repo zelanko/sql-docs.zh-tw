@@ -16,10 +16,10 @@ ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920798"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
@@ -42,7 +42,7 @@ ms.locfileid: "67920798"
  無。  
   
 ## <a name="remarks"></a>備註  
- 假設有一個**** OLE DB 的資料`pRowset`列集物件（），將 ADO**記錄集**物件（`adoRs`）的結構為下列三個基本作業：  
+ 假設有一個**Rowset** OLE DB 的資料`pRowset`列集物件（），將 ADO**記錄集**物件（`adoRs`）的結構為下列三個基本作業：  
   
 1.  建立 ADO**記錄集**物件：  
   

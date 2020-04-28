@@ -17,10 +17,10 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931867"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
@@ -40,7 +40,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *QueryType*  
  代表要執行之架構查詢類型的任何[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)值。  
   
- *準則*  
+ *指標*  
  選擇性。 每個*QueryType*選項的查詢準則約束陣列，如[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)中所列。  
   
  *SchemaID*  

@@ -17,10 +17,10 @@ ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923516"
 ---
 # <a name="using-pages"></a>使用頁面

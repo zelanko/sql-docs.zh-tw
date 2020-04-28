@@ -13,10 +13,10 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924295"
 ---
 # <a name="schema-section"></a>結構描述區段

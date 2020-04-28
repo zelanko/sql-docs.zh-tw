@@ -16,10 +16,10 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920662"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
@@ -46,7 +46,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *名稱*  
  **字串**值，其中包含新**欄位**物件的名稱，而且不得與*欄位*中的任何其他物件名稱相同。  
   
- *型別*  
+ *類型*  
  [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，其預設值為**adEmpty**，指定新欄位的資料類型。 ADO 不支援下列資料類型，而且不應在將新欄位附加至[記錄集物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)時使用： **adIDispatch**、 **adIUnknown**、 **adVariant**。  
   
  *DefinedSize*  

@@ -14,10 +14,10 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926190"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 連接和記錄集事件

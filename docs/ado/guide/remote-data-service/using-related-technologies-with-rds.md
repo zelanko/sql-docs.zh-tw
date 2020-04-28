@@ -13,18 +13,18 @@ ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921891"
 ---
 # <a name="using-related-technologies-with-rds"></a>搭配 RDS 使用相關技術
 此章節包含下列主題。  
   
--   [搭配 ODBC 連線集區使用 RDS](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
+-   [搭配 ODBC 連線共用使用 RDS](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
   
--   [在 Component Services 中執行商務物件](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
+-   [在元件服務中執行商務物件](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  

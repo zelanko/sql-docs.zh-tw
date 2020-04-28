@@ -16,10 +16,10 @@ ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921668"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 屬性 (ADO)

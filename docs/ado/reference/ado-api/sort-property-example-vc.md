@@ -15,10 +15,10 @@ ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930962"
 ---
 # <a name="sort-property-example-vc"></a>Sort 屬性範例 (VC++)

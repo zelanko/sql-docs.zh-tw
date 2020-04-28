@@ -16,10 +16,10 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926456"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 延伸模組
@@ -35,7 +35,7 @@ ms.locfileid: "67926456"
 
  ADO 會在內部將這些宏中的參數對應至 OLE DB **DBBINDING**結構，並建立 OLE DB**存取**子物件，以管理欄位與變數之間的資料移動和轉換。 OLE DB 會定義包含三個部分的資料：儲存資料的*緩衝區*;*狀態*，指出欄位是否已成功儲存在緩衝區中，或變數應該如何還原至欄位;和資料的*長度*。 （如需詳細資訊，請參閱 OLE DB 程式設計人員參考中的[取得和設定資料（OLE DB）](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)。
 
-## <a name="header-file"></a>標頭檔
+## <a name="header-file"></a>標頭檔案
  在您的應用程式中包含下列檔案，以便使用適用于 ADO 的 Visual C++ 延伸模組：
 
 ```cpp
@@ -108,18 +108,18 @@ Update(CADORecordBinding *binding)
  **ADO_VARIABLE_LENGTH_ENTRY4**（*序數、資料類型、緩衝區、大小、修改*）
 
 ### <a name="end-binding-entries"></a>結束系結專案
- **END_ADO_BINDING**（）
+ **END_ADO_BINDING**()
 
 |參數|描述|
 |---------------|-----------------|
-|*課堂*|定義系結專案和 C/c + + 變數的類別。|
-|*Ordinal*|與 C/c + + 變數對應之**記錄集**欄位的序數（從1開始計算）。|
+|*類別*|定義系結專案和 C/c + + 變數的類別。|
+|*序數*|與 C/c + + 變數對應之**記錄集**欄位的序數（從1開始計算）。|
 |*DataType*|C/c + + 變數的對等 ADO 資料類型（如需有效資料類型的清單，請參閱[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) ）。 必要時，會將 [**記錄集**] 欄位的值轉換成這個資料類型。|
-|*Buffer*|將儲存**記錄集**欄位之 C/c + + 變數的名稱。|
+|*緩衝區*|將儲存**記錄集**欄位之 C/c + + 變數的名稱。|
 |*大小*|*緩衝區*的大小上限（以位元組為單位）。 如果*Buffer*會包含可變長度的字串，請允許終止零的空間。|
 |*狀態*|變數的名稱，指出*緩衝區*的內容是否有效，以及是否成功地將欄位轉換為*DataType* 。<br /><br /> 這個變數的兩個最重要的值是**adFldOK**，這表示轉換成功;和**adFldNull**，這表示欄位的值會是 VT_Null 類型的變體，而不只是空的。<br /><br /> 下表「狀態值」中會列出*狀態*的可能值。|
 |*修改*|布林值旗標;若為 TRUE，表示可以使用包含在*Buffer*中的值來更新對應的**記錄集**欄位。<br /><br /> 將 [布林值*修改*] 參數設定為 [TRUE]，讓 ADO 更新系結欄位，如果您想要檢查欄位但不加以變更，則為 FALSE。|
-|*Precision*|數值變數中可以表示的位數。|
+|*有效位數*|數值變數中可以表示的位數。|
 |*調整*|數值變數中的小數位數。|
 |*長度*|四個位元組的變數名稱，其中將包含*緩衝區*中的實際資料長度。|
 

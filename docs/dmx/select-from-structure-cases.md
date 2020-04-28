@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928299"
 ---
 # <a name="select-from-ltstructuregtcases"></a>選取 [ &lt;從&gt;結構]。種
@@ -46,7 +46,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  運算式可以包含資料行識別碼、使用者定義函數，以及 VBA 函數。  
   
- *表示*  
+ *structure*  
  結構的名稱。  
   
  *條件運算式*  
@@ -92,6 +92,6 @@ WHERE IsTestCase();
  [選取 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

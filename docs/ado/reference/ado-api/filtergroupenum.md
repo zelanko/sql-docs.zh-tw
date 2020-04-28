@@ -16,10 +16,10 @@ ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97add08a1d656e8c163600bb0ea8dda7fca264b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932648"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum

@@ -15,10 +15,10 @@ ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930810"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 屬性範例 (VB)

@@ -15,10 +15,10 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919600"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks 方法範例 (VB)

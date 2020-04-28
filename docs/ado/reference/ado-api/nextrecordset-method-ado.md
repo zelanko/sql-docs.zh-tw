@@ -18,10 +18,10 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932039"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)

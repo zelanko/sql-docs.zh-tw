@@ -14,10 +14,10 @@ ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0faa6f595f4f2001dc3456fde6d01cac0d52355c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922309"
 ---
 # <a name="remote-data-service-rds"></a>遠端資料服務 (RDS)
@@ -32,7 +32,7 @@ ms.locfileid: "67922309"
   
 -   [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)  
   
--   [RDS 使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
+-   [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 
 

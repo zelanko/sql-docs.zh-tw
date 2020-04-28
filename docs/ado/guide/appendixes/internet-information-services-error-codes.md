@@ -14,10 +14,10 @@ ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5aa425cd6035a51f7856cc27b5d53f3144854c5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926820"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>遠端資料服務的 Internet Information Services 錯誤碼

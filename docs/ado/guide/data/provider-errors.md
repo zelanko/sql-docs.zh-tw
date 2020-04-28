@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924540"
 ---
 # <a name="provider-errors"></a>提供者錯誤
@@ -70,7 +70,7 @@ End Function
 |**HelpCoNtext，説明**|指的是包含所發生錯誤描述的說明主題和說明檔。|  
 |**NativeError**|提供者特定的錯誤號碼。|  
 |**項數**|長整數，表示所發生之錯誤的數目（在**ErrorValueEnum**中列出）。|  
-|**Source**|表示產生錯誤之物件或應用程式的名稱。|  
+|**來源**|表示產生錯誤之物件或應用程式的名稱。|  
 |**SQLState**|在 SQL 語句的過程中，提供者所傳回的五個字元的錯誤碼。|  
   
  ADO**錯誤**物件與標準 Visual Basic **Err**物件非常類似。 其屬性會描述發生的錯誤。 除了錯誤的數目之外，您還會收到兩個相關的資訊片段。 **NativeError**屬性包含您所使用之提供者的特定錯誤號碼。 在上述範例中，提供者是適用于 SQL Server 的 Microsoft OLE DB 提供者，因此**NativeError**會包含 SQL Server 特定的錯誤。 **SQLState**屬性具有五個字母的代碼，可描述 SQL 語句中的錯誤。  

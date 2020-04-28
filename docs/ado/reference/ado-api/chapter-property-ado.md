@@ -18,10 +18,10 @@ ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920100"
 ---
 # <a name="chapter-property-ado"></a>Chapter 屬性 (ADO)

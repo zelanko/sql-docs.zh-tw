@@ -15,10 +15,10 @@ ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921192"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic 中的 ADO 程式碼範例

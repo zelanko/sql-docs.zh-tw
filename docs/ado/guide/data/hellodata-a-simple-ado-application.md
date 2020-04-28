@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925132"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData：簡易 ADO 應用程式
@@ -51,10 +51,10 @@ ms.locfileid: "67925132"
 |TextBox|名稱|txtDisplay1|  
 ||多行|true|  
 |命令按鈕|名稱|cmdGetData|  
-||Caption|[取得資料]|  
+||Caption|取得資料|  
 |命令按鈕|名稱|cmdExamineData|  
 ||Caption|檢查資料|  
 |命令按鈕|名稱|cmdEditData|  
-||Caption|編輯資料|  
+||Caption| 編輯資料|  
 |命令按鈕|名稱|cmdUpdateData|  
 ||Caption|更新資料|

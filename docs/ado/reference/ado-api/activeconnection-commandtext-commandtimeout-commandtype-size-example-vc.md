@@ -19,10 +19,10 @@ ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff30099e951ec5b461b9f0e22c21164e7258ccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921623"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（VC + +）
@@ -202,7 +202,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>取樣輸出  
+## <a name="sample-output"></a>範例輸出  
   
 ```  
 Authors With  25  Percent Royalty  

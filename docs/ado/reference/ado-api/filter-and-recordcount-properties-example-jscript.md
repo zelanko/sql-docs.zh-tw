@@ -16,10 +16,10 @@ ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932651"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 和 RecordCount 屬性範例（JScript）

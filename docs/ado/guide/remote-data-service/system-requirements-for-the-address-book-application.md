@@ -14,10 +14,10 @@ ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922030"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>通訊錄應用程式的系統需求
@@ -53,6 +53,6 @@ ms.locfileid: "67922030"
 ## <a name="see-also"></a>另請參閱  
  [執行通訊錄 SQL 腳本](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [DataControl 物件（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [執行通訊錄應用程式範例](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
+ [執行通訊錄範例應用程式](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

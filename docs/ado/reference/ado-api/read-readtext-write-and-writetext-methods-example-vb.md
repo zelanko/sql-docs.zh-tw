@@ -18,10 +18,10 @@ ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931447"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read、ReadText、Write 和 WriteText 方法範例（VB）

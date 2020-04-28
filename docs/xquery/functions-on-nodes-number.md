@@ -16,10 +16,10 @@ ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930110"
 ---
 # <a name="functions-on-nodes---number"></a>節點的相關函式 - number

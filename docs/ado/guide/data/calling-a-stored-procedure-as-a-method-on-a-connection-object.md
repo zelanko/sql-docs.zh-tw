@@ -15,10 +15,10 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925891"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>以 Connection 物件方法的形式來呼叫預存程序

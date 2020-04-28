@@ -13,10 +13,10 @@ ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd8992acf5652d4fad1e4e14a67c847bb30c6d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919819"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Command 物件屬性、方法和事件

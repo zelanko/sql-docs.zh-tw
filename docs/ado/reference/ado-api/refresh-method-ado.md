@@ -18,10 +18,10 @@ ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931257"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)

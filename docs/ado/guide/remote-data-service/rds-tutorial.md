@@ -13,10 +13,10 @@ ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922417"
 ---
 # <a name="rds-tutorial"></a>RDS 教學課程

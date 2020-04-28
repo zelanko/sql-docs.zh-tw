@@ -14,10 +14,10 @@ ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921117"
 ---
 # <a name="ado-code-examples"></a>ADO 程式碼範例

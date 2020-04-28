@@ -16,10 +16,10 @@ ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920802"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
@@ -41,7 +41,7 @@ ms.locfileid: "67920802"
  無。  
   
 ## <a name="remarks"></a>備註  
- 假設有一個**** OLE DB 的資料`pRow`列物件（），即 ADO **Record**物件（`adoR`）的結構，其數量為下列三個基本作業：  
+ 假設有一個**Row** OLE DB 的資料`pRow`列物件（），即 ADO **Record**物件（`adoR`）的結構，其數量為下列三個基本作業：  
   
 1.  建立 ADO**記錄**物件：  
   

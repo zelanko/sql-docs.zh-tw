@@ -15,10 +15,10 @@ ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932020"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset 方法範例 (VC++)

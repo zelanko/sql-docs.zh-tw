@@ -17,10 +17,10 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923819"
 ---
 # <a name="types-of-events"></a>事件的類型
@@ -35,7 +35,7 @@ ms.locfileid: "67923819"
  和完整的事件通常會成對使用。  
   
 ## <a name="other-events"></a>其他事件  
- 其他事件處理常式（也就是，其名稱不是其形式的事件）<strong>將會** </strong> <strong> ** 完成</strong>，只有在作業完成之後才會呼叫。 這些事件為**Disconnect**、 **EndOfRecordset**和**InfoMessage**。  
+ 其他事件處理常式（也就是，其名稱不是其形式的事件）<strong>將會*Event* </strong> <strong> *Event*完成</strong>，只有在作業完成之後才會呼叫。 這些事件為**Disconnect**、 **EndOfRecordset**和**InfoMessage**。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   

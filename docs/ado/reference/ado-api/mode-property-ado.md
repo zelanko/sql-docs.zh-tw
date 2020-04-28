@@ -18,10 +18,10 @@ ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932221"
 ---
 # <a name="mode-property-ado"></a>Mode 屬性 (ADO)

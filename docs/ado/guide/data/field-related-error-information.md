@@ -14,10 +14,10 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925317"
 ---
 # <a name="field-related-error-information"></a>欄位相關的錯誤資訊

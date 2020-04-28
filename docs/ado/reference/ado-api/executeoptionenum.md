@@ -16,10 +16,10 @@ ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932849"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum

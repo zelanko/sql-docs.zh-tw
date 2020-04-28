@@ -14,10 +14,10 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928540"
 ---
 # <a name="adox-methods"></a>ADOX 方法

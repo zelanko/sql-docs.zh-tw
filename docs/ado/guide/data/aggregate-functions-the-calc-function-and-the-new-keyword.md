@@ -16,10 +16,10 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926002"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字

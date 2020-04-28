@@ -17,10 +17,10 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931179"
 ---
 # <a name="save-method"></a>Save 方法
@@ -34,7 +34,7 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>參數  
- *目的地*  
+ *Destination*  
  選擇性。 **Variant** ，代表要儲存**記錄集**之檔案的完整路徑名稱，或**資料流程**物件的參考。  
   
  *PersistFormat*  

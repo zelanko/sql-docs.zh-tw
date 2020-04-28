@@ -15,10 +15,10 @@ ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925869"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>使用命令呼叫預存程序

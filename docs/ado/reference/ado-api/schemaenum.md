@@ -16,10 +16,10 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931116"
 ---
 # <a name="schemaenum"></a>SchemaEnum
@@ -43,21 +43,21 @@ ms.locfileid: "67931116"
 |**adSchemaCollations**|3|傳回在目錄中定義的字元定序，指定的使用者可以存取該定序。<br /><br /> （定序資料列集）|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  
 |**adSchemaColumnPrivileges**|13|傳回在目錄中所定義之資料表資料行的許可權，可供指定的使用者使用或授與。<br /><br /> （COLUMN_PRIVILEGES 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|傳回在目錄中所定義且可供指定使用者存取之資料表的資料行（包括 views）。<br /><br /> （資料行資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|傳回目錄中定義的資料行，這些資料行會相依于目錄中所定義且由指定使用者所擁有的定義域。<br /><br /> （COLUMN_DOMAIN_USAGE 資料列集）|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
-|**adSchemaConstraintColumnUsage**|6|傳回參考條件約束、唯一條件約束、檢查條件約束和判斷提示所使用的資料行，這些資料行會定義于目錄中，並由指定的使用者所擁有。<br /><br /> （CONSTRAINT_COLUMN_USAGE 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaConstraintTableUsage**|7|傳回參考條件約束、唯一條件約束、檢查條件約束和指定的使用者所擁有的宣告所使用的資料表。<br /><br /> （CONSTRAINT_TABLE_USAGE 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
+|**adSchemaColumnsDomainUsage**|11|會傳回在資料庫目錄中所定義的資料行，而資料行會相依於資料庫目錄中定義的領域，並且由指定使用者擁有。<br /><br /> （COLUMN_DOMAIN_USAGE 資料列集）|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
+|**adSchemaConstraintColumnUsage**|6|會傳回參考條件約束、唯一條件約束、檢查條件約束和判斷提示所使用的資料行 (定義在資料庫目錄中，並且由指定使用者所擁有)。<br /><br /> （CONSTRAINT_COLUMN_USAGE 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaConstraintTableUsage**|7|會傳回參考條件約束、唯一條件約束、檢查條件約束和判斷提示所使用的資料行 (定義在資料庫目錄中，並且由指定使用者所擁有)。<br /><br /> （CONSTRAINT_TABLE_USAGE 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|傳回架構中可用 cube 的相關資訊（如果提供者不支援架構，則會傳回目錄）。<br /><br /> （CUBE 資料列集 *）|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
-|**adSchemaDBInfoKeywords**|30|傳回提供者特定關鍵字的清單。<br /><br /> （IDBInfo：： GetKeywords）|\<無>|  
-|**adSchemaDBInfoLiterals**|31|傳回文字命令中使用的提供者特定常值清單。<br /><br /> （IDBInfo：： GetLiteralInfo）|\<無>|  
+|**adSchemaDBInfoKeywords**|30|會傳回提供者特定之關鍵字的清單。<br /><br /> （IDBInfo：： GetKeywords）|\<無>|  
+|**adSchemaDBInfoLiterals**|31|會傳回文字命令中所使用之提供者特定常值 (Literal) 的清單。<br /><br /> （IDBInfo：： GetLiteralInfo）|\<無>|  
 |**adSchemaDimensions**|33|傳回給定 cube 中之維度的相關資訊。 每個維度都有一個資料列。<br /><br /> （維度資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
-|**adSchemaForeignKeys**|27|傳回指定使用者在目錄中定義的外鍵資料行。<br /><br /> （FOREIGN_KEYS 資料列集）|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
+|**adSchemaForeignKeys**|27|會傳回由指定使用者在資料庫目錄中定義的外部索引鍵資料行。<br /><br /> （FOREIGN_KEYS 資料列集）|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|傳回維度中可用階層的相關資訊。<br /><br /> （階層資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
 |**adSchemaIndexes**|12|傳回由指定使用者所擁有的目錄中定義的索引。<br /><br /> （索引資料列集）|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME 類型 TABLE_NAME|  
 |**adSchemaKeyColumnUsage**|8|傳回目錄中定義的資料行，其受限於指定使用者的索引鍵。<br /><br /> （KEY_COLUMN_USAGE 資料列集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|傳回維度中可用層級的相關資訊。<br /><br /> （層級資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|傳回可用量值的相關資訊。<br /><br /> （量值資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|傳回可用成員的相關資訊。<br /><br /> （成員資料列集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE Tree 運算子。 如需詳細資訊，請參閱線上分析處理（OLAP） OLE DB。|  
-|**adSchemaPrimaryKeys**|28|傳回指定使用者在目錄中定義的主鍵資料行。<br /><br /> （PRIMARY_KEYS 資料列集）|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
+|**adSchemaPrimaryKeys**|28|會傳回由指定使用者在資料庫目錄中定義的主索引鍵資料行。<br /><br /> （PRIMARY_KEYS 資料列集）|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
 |**adSchemaProcedureColumns**|29|會傳回由程序所傳回資料列集之資料行的相關資訊。<br /><br /> （PROCEDURE_COLUMNS 資料列集）|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
 |**adSchemaProcedureParameters**|26|會傳回程序的參數和傳回碼的相關資訊。<br /><br /> （PROCEDURE_PARAMETERS 資料列集）|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
 |**adSchemaProcedures**|16|傳回由指定使用者所擁有的目錄中定義的程式。<br /><br /> （程式資料列集）|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
@@ -66,17 +66,17 @@ ms.locfileid: "67931116"
 |**adSchemaProviderTypes**|22|傳回資料提供者所支援的（基底）資料類型。<br /><br /> （PROVIDER_TYPES 資料列集）|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|傳回指定之使用者所擁有的目錄中定義的參考條件約束。<br /><br /> （REFERENTIAL_CONSTRAINTS 資料列集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|傳回指定使用者所擁有的架構（資料庫物件）。<br /><br /> （架構資料列集）|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|傳回目錄中定義的 SQL 部署處理資料所支援的一致性層級、選項和方言。<br /><br /> （SQL_LANGUAGES 資料列集）|\<無>|  
+|**adSchemaSQLLanguages**|18|會傳回由資料庫目錄中定義的 SQL 實作處理資料所支援的一致性層級、選項和用語。<br /><br /> （SQL_LANGUAGES 資料列集）|\<無>|  
 |**adSchemaStatistics**|19|傳回指定使用者所擁有的目錄中定義的統計資料。<br /><br /> （STATISTICS 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|傳回指定使用者所擁有之目錄中定義的資料表條件約束。<br /><br /> （TABLE_CONSTRAINTS 資料列集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
-|**adSchemaTablePrivileges**|14|傳回在目錄中所定義之資料表的許可權，可供指定的使用者使用或授與。<br /><br /> （TABLE_PRIVILEGES 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
-|**adSchemaTables**|20|傳回在目錄中所定義且可供指定使用者存取的資料表（包括 views）。<br /><br /> （資料表資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
+|**adSchemaTablePrivileges**|14|會傳回指定使用者可以取得或授與的資料表權限 (定義在資料庫目錄中)。<br /><br /> （TABLE_PRIVILEGES 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
+|**adSchemaTables**|20|會傳回指定使用者可以存取的資料庫目錄中所定義的資料表 (包括檢視表)。<br /><br /> （資料表資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|傳回在目錄中定義的字元翻譯，可供指定的使用者存取。<br /><br /> （翻譯資料列集）|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|保留供未來使用。||  
 |**adSchemaUsagePrivileges**|15|傳回目錄中定義之物件的許可權，這些物件可由指定的使用者取得或授與。<br /><br /> （USAGE_PRIVILEGES 資料列集）|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE 授權者被授與者|  
 |**adSchemaViewColumnUsage**|24|傳回在目錄中所定義且由指定使用者所擁有之已查看資料表的資料行相依。<br /><br /> （VIEW_COLUMN_USAGE 資料列集）|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|傳回在目錄中定義的視圖，可供指定的使用者存取。<br /><br /> （VIEWS 資料列集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
-|**adSchemaViewTableUsage**|25|傳回資料表，其中的已查看資料表（定義于目錄中，並由指定的使用者所擁有）相依。<br /><br /> （VIEW_TABLE_USAGE 資料列集）|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViewTableUsage**|25|會傳回所檢視資料表 (定義在資料庫目錄中，並且由指定使用者所擁有) 是相依的資料表。<br /><br /> （VIEW_TABLE_USAGE 資料列集）|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
  Package： **.com. wfc. 資料**  

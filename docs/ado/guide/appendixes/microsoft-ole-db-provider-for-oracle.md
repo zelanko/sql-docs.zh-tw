@@ -15,10 +15,10 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926626"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 總覽
@@ -62,12 +62,12 @@ MSDAORA
 
  這些參數會在 OLE DB 程式設計[人員參考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)中完整描述。 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)會提供這些參數名稱與對應 OLE DB 屬性之間的交互參考。
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|**視窗控制碼**|表示用來提示提供其他資訊的視窗控制碼。|
+|**視窗控制代碼**|表示用來提示提供其他資訊的視窗控制碼。|
 |**地區設定識別碼**|表示唯一32位數位（例如1033），指定與使用者語言相關的喜好設定。 這些喜好設定會指出日期和時間的格式化方式、專案會依字母順序排序、比較字串等等。|
 |**OLE DB 服務**|表示指定要啟用或停用 OLE DB 服務的位元遮罩。|
-|**及時**|指出是否要在建立連接時提示使用者。|
+|**Prompt**|指出是否要在建立連接時提示使用者。|
 |**擴充屬性**|字串，包含提供者特定的延伸連接資訊。 此屬性僅適用于無法透過屬性機制描述的提供者特定連接資訊。|
 
 ## <a name="see-also"></a>另請參閱

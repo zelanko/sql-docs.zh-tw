@@ -15,10 +15,10 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924340"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>將結果集擷取為資料流

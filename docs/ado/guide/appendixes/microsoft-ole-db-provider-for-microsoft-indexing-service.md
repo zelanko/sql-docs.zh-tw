@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926669"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務總覽
@@ -85,7 +85,7 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|唯讀|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|唯讀|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|
+|[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|
 
@@ -93,13 +93,13 @@ MSIDXS
 
  **標準 ADO 記錄集方法的可用性：**
 
-|方法|只有?|
+|方法|是否可用？|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|
-|[副本](../../../ado/reference/ado-api/clone-method-ado.md)|是|
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|是|
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|
 |[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|
@@ -108,7 +108,7 @@ MSIDXS
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|是|
 |[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|
 |[再次](../../../ado/reference/ado-api/requery-method.md)|是|
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|
+|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|是|
 |[支援](../../../ado/reference/ado-api/supports-method.md)|是|
 |[更新](../../../ado/reference/ado-api/update-method.md)|否|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|

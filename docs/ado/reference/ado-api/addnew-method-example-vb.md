@@ -15,10 +15,10 @@ ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 043855dc4f2af915b7e1f61bffe99ae89956c3be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921309"
 ---
 # <a name="addnew-method-example-vb"></a>AddNew 方法範例 (VB)

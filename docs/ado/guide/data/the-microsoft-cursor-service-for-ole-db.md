@@ -14,10 +14,10 @@ ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aeac8c848f01f01e8969f94c571ad15f5e7f615a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923912"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>適用於 OLE DB 的 Microsoft 資料指標服務

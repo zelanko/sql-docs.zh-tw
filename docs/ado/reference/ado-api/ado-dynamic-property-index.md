@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921086"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動態屬性索引
@@ -56,7 +56,7 @@ ms.locfileid: "67921086"
 |最大資料列大小|DBPROP_MAXROWSIZE|  
 |最大資料列大小包含 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |SELECT 中的資料表上限|DBPROP_MAXTABLESINSELECT|  
-|模式|DBPROP_INIT_MODE|  
+|[模式]|DBPROP_INIT_MODE|  
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|  
 |多個結果|DBPROP_MULTIPLERESULTS|  
 |多個儲存物件|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -91,7 +91,7 @@ ms.locfileid: "67921086"
 |交易 DDL|DBPROP_SUPPORTEDTXNDDL|  
 |使用者識別碼|DBPROP_AUTH_USERID|  
 |使用者名稱|DBPROP_USERNAME|  
-|視窗控制碼|DBPROP_INIT_HWND|  
+|視窗控制代碼|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>記錄集動態屬性  
  請注意，當**記錄集**關閉時，**記錄集**物件的**動態屬性**會移出範圍（變成無法使用）。  

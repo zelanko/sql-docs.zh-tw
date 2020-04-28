@@ -15,10 +15,10 @@ ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925018"
 ---
 # <a name="immediate-mode"></a>即時模式

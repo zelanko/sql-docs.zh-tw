@@ -16,10 +16,10 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932312"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 屬性範例（VC + +）

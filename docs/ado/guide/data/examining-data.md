@@ -16,10 +16,10 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925351"
 ---
 # <a name="examining-data"></a>檢查資料

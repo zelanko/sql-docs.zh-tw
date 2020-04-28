@@ -15,10 +15,10 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925229"
 ---
 # <a name="handling-ado-events"></a>處理 ADO 事件
@@ -37,7 +37,7 @@ ADO 事件模型支援在作業開始之前或完成之後，發出*事件*或�
   
 -   [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)  
   
--   [事件的類型](../../../ado/guide/data/types-of-events.md)  
+-   [事件種類](../../../ado/guide/data/types-of-events.md)  
   
 -   [事件參數](../../../ado/guide/data/event-parameters.md)  
   
@@ -50,4 +50,4 @@ ADO 事件模型支援在作業開始之前或完成之後，發出*事件*或�
  [依語言的 ADO 事件具現化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   
- [事件的類型](../../../ado/guide/data/types-of-events.md)
+ [事件種類](../../../ado/guide/data/types-of-events.md)

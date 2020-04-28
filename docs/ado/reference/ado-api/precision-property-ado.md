@@ -17,10 +17,10 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931633"
 ---
 # <a name="precision-property-ado"></a>Precision 屬性 (ADO)

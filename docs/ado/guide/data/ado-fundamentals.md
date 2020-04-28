@@ -11,10 +11,10 @@ ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926066"
 ---
 # <a name="ado-fundamentals"></a>ADO 基本概念
@@ -62,4 +62,4 @@ ADO 為開發人員提供功能強大的邏輯物件模型，可讓您透過 OLE
   
 -   [OLE DB 提供者](../../../ado/guide/data/ole-db-providers-ado.md)  
   
--   [Errors](../../../ado/guide/data/errors-ado.md)
+-   [錯誤](../../../ado/guide/data/errors-ado.md)

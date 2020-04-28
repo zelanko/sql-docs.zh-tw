@@ -15,10 +15,10 @@ ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d97f655c89c07f7866fbdee6aab236f942b5499c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921685"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 屬性範例 (VB)

@@ -18,10 +18,10 @@ ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f544afd1a82a2e42a7fae110f20dc51f865a69f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932070"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例（VC + +）

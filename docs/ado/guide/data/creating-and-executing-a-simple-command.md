@@ -14,10 +14,10 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925731"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>建立和執行簡單的命令

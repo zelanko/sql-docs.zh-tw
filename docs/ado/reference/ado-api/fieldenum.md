@@ -16,10 +16,10 @@ ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5fe89d90510e95468e18b0d744ff566f69654320
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932686"
 ---
 # <a name="fieldenum"></a>FieldEnum

@@ -16,10 +16,10 @@ ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931920"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum

@@ -16,10 +16,10 @@ ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea893a019ab6d1333cecc5da5f1f66928467adfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931789"
 ---
 # <a name="pagecount-property-ado"></a>PageCount 屬性 (ADO)

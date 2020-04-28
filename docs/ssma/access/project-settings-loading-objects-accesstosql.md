@@ -10,10 +10,10 @@ ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929420"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>專案設定（載入物件）（AccessToSQL）
@@ -27,7 +27,7 @@ ms.locfileid: "67929420"
   
 -   若要指定目前專案的設定，請在 [**工具**] 功能表上，按一下 [**專案設定**]，然後按一下左窗格底部的 [**載入物件**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ##### <a name="misc"></a>其他  
   

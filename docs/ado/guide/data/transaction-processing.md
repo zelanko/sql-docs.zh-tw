@@ -16,10 +16,10 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923866"
 ---
 # <a name="transaction-processing"></a>交易處理
@@ -44,4 +44,4 @@ ms.locfileid: "67923866"
  使用**IsolationLevel**屬性，即可設定**連接**物件上交易的隔離等級。 在下一次呼叫[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法之前，設定不會生效。 如果您要求的隔離層級無法使用，提供者可能會傳回下一個較高層級的隔離。 如需有效值的詳細資訊，請參閱 ADO 程式設計人員參考中的**IsolationLevel**屬性。  
   
 ## <a name="nested-transactions"></a>嵌套交易  
- 對於支援嵌套交易的提供者，在開啟的交易內呼叫**BeginTrans**方法會啟動新的、嵌套的交易。 傳回值會指出嵌套的層級：傳回值 "1" 表示您已開啟最上層交易（也就是交易未在另一個交易中嵌套），"2" 表示您已開啟第二層交易（a在最上層交易內的交易）等等。 呼叫**CommitTrans**或**RollbackTrans**只會影響最近開啟的交易;您必須先關閉或回復目前的交易，才能解決任何較高層級的交易。
+ 對於支援嵌套交易的提供者，在開啟的交易內呼叫**BeginTrans**方法會啟動新的、嵌套的交易。 傳回值會指出嵌套的層級：傳回值 "1" 表示您已開啟最上層交易（也就是交易未在另一個交易中嵌套），"2" 表示您已開啟第二層交易（在最上層交易內的交易），依此類推。 呼叫**CommitTrans**或**RollbackTrans**只會影響最近開啟的交易;您必須先關閉或回復目前的交易，才能解決任何較高層級的交易。

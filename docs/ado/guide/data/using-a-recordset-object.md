@@ -13,10 +13,10 @@ ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dda89464598ddc4ecfee0078b36aadd01b4486f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923636"
 ---
 # <a name="using-a-recordset-object"></a>使用 Recordset 物件

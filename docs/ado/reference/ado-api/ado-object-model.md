@@ -13,10 +13,10 @@ ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 603b0a95dbf469041247a2b73da67b6ebe272079
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920918"
 ---
 # <a name="ado-object-model"></a>ADO 物件模型
