@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176103"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>第 1 課：建立 Azure 儲存體物件
@@ -29,8 +29,7 @@ ms.locfileid: "70176103"
   
 2.  使用[這裡](https://go.microsoft.com/fwlink/?LinkId=271926)詳述的逐步指示來建立儲存體帳戶。  
   
-3.  瀏覽至您在上一個步驟中建立的儲存體帳戶。 從網頁的正下方，按一下 [**管理金鑰**]。 帳戶資訊隨即顯示。 複製儲存體帳戶名稱以及存取金鑰。 這項資訊是建立 SQL 預存認證的必要資訊。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用這項資訊來存取儲存體帳戶並建立備份。  
+3.  瀏覽至您在上一個步驟中建立的儲存體帳戶。 從網頁的正下方，按一下 [**管理金鑰**]。 帳戶資訊隨即顯示。 複製儲存體帳戶名稱以及存取金鑰。 這項資訊是建立 SQL 預存認證的必要資訊。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用這項資訊來存取儲存體帳戶並建立備份。  
   
      ![Azure 儲存體帳戶金鑰的螢幕擷取畫面](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Azure 儲存體帳戶金鑰的螢幕擷取畫面")  
   
@@ -38,7 +37,7 @@ ms.locfileid: "70176103"
     >  您也可以使用 REST API，以程式設計方式建立儲存體帳戶。 如需詳細資訊，請參閱[建立儲存體帳戶](https://go.microsoft.com/fwlink/?LinkId=271928)。  
   
 ### <a name="create-a-blob-container"></a>建立 Blob 容器  
- 容器可對一組 Blob 進行分組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限數目的容器，但是至少必須具有一個容器。 容器可以儲存無限制的 Blob。  
+ 容器會提供一組 Blob 的群組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限數目的容器，但是至少必須具有一個容器。 容器可以儲存不限數目的 Blob。  
   
  若要建立容器，請使用下列步驟：  
   

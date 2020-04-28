@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782673"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
@@ -31,10 +31,10 @@ ms.locfileid: "72782673"
   
 2.  **若要升級 DAC，請使用下列方式：** [檢視 DAC 內容](#ViewDACContents)、[檢視資料庫變更](#ViewDBChanges)、[檢視升級動作](#ViewUpgradeActions)、[比較 DAC](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  
   
-##  <a name="ViewDACContents"></a> 檢視 DAC 內容  
+##  <a name="view-the-contents-of-a-dac"></a><a name="ViewDACContents"></a> 檢視 DAC 內容  
  有兩個機制可檢視資料層應用程式 (DAC) 封裝的內容。 您可以在 SQL Server Developer Tools 中將 DAC 封裝匯入 DAC 專案。 您可以將封裝的內容解除封裝到資料夾中。  
   
  **在 SQL Server Developer Tools 中檢視 DAC**  
@@ -61,7 +61,7 @@ ms.locfileid: "72782673"
   
 -   使用記事本這類工具檢視文字檔的內容。  
   
-##  <a name="ViewDBChanges"></a> 檢視資料庫變更  
+##  <a name="view-database-changes"></a><a name="ViewDBChanges"></a> 檢視資料庫變更  
  將 DAC 的目前版本部署至實際執行環境之後，直接對相關聯資料庫進行的變更可能會與新版 DAC 中所定義的結構描述衝突。 升級至新版 DAC 之前，請確認是否已經對資料庫進行這類變更。  
   
  **使用精靈檢視資料庫變更**  
@@ -105,10 +105,10 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a>查看升級動作  
+##  <a name="view-upgrade-actions"></a><a name="ViewUpgradeActions"></a> 檢視升級動作  
  使用新版 DAC 封裝升級從舊版 DAC 封裝部署的 DAC 之前，可以產生一份報表，其中包含會在升級期間執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，然後檢閱這些陳述式。  
   
- **使用 Wizard 來報告升級動作**  
+ **使用精靈來報告升級動作**  
   
 1.  執行 [升級資料層應用程式精靈]****，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
   
@@ -161,7 +161,7 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a>比較 Dac  
+##  <a name="compare-dacs"></a><a name="CompareDACs"></a>比較 Dac  
  在升級 DAC 之前，最好先檢閱目前 DAC 與新 DAC 之間的資料庫和執行個體層級物件的差異。 如果您沒有目前 DAC 封裝的複本，您可以從目前的資料庫擷取封裝。  
   
  如果您在 SQL Server Developer Tools 中將這兩個 DAC 封裝匯入至 DAC 專案，則可以使用結構描述比較工具來分析這兩個 DAC 的差異。  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304890"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -47,7 +47,7 @@ sp_help_fulltext_system_components
   
 `[ @component_type = ] component_type`指定元件的類型。 *component_type*可以是下列其中一項：  
   
--   **wordbreaker**  
+-   **系統**  
   
 -   **出**  
   
@@ -71,7 +71,7 @@ sp_help_fulltext_system_components
 |**componentname**|**sysname**|元件的名稱。|  
 |**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
 |**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是**serveradmin**固定伺服器角色的成員。|  
-|**版本**|**Nvarchar （30）**|元件的版本。|  
+|**version**|**nvarchar(30)**|元件的版本。|  
 |**manufacturer**|**sysname**|元件的製造商名稱。|  
   
  只有在有一或多個使用*component_type*的全文檢索目錄存在時，才會傳回下列結果集。  
@@ -126,7 +126,7 @@ GO
  根據預設，不會安裝這個篩選，所以結果集是空的。  
   
 ### <a name="e-listing-a-specific-dll-file"></a>E. 列出特定的 .dll 檔案  
- 下列範例會列出特定的 ddl 檔案（ `nlhtml.dll`預設會安裝）。  
+ 下列範例會列出特定的 .dll 檔 ，預設情況下會安裝這個檔案。  
   
 ```  
 EXEC sp_help_fulltext_system_components 'fullpath',   

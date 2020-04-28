@@ -17,20 +17,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952119"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 組態選項 (SSRS)
-  您可以使用 **** 安裝精靈的 [Reporting Services 組態][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來指定報表伺服器的安裝和設定方式。 某個安裝選項的可用與否，取決於您先前在 [特徵選取]**** 頁面上選擇的選項，以及在安裝報表伺服器時是否也一併安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本機執行個體。  
+  您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈的 [Reporting Services 組態]**** 頁面來指定報表伺服器的安裝和設定方式。 某個安裝選項的可用與否，取決於您先前在 [特徵選取]**** 頁面上選擇的選項，以及在安裝報表伺服器時是否也一併安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本機執行個體。  
   
  在某些情況下，如果安全通訊端層 (SSL) 憑證安裝在電腦上，並繫結至強式萬用字元，則安裝程式將會使用 HTTPS 前置詞建立 Reporting Services URL。 如需如何將憑證對應至 Reporting Services url 的詳細資訊，請參閱設定[安全通訊端層（SSL）連接的報表伺服器](https://go.microsoft.com/fwlink/?LinkId=199089)（https://go.microsoft.com/fwlink/?LinkId=199089)在 SQL Server 線上叢書中。  
   
  如需有關此版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以及安裝和設定的最新資訊，請參閱[其他安裝資訊](https://go.microsoft.com/fwlink/?LinkId=207425)（https://go.microsoft.com/fwlink/?LinkId=207425)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="reporting-services-native-mode"></a>Reporting Services 原生模式  
  如果安裝程式因一項或多項需求不符而無法執行預設報表伺服器組態，安裝精靈可讓您執行最小安裝選項。它會複製您需要的檔案，不過，安裝完成之後，您必須利用 Reporting Services 組態管理員來設定原生模式報表伺服器。  
@@ -38,7 +38,7 @@ ms.locfileid: "71952119"
 > [!NOTE]  
 >  如果您選擇預設安裝選項的其中一個，現有的報表伺服器資料庫檔案會導致安裝失敗。 當您選擇預設安裝選項時，安裝程式會嘗試使用預設名稱來建立報表伺服器資料庫。 如果已有該名稱的資料庫存在，則安裝程式將會失敗，而且您必須回復安裝。 若要避免這個問題，則可在執行安裝程式之前重新命名現有的資料庫，或選擇 [只安裝]**** 選項，讓您可在安裝完成之後指定自訂資料庫設定。  
   
-#### <a name="install-and-configure"></a>安裝及設定  
+#### <a name="install-and-configure"></a>安裝和設定  
  使用報表伺服器資料庫、服務帳戶和 URL 保留項目的預設值，以原生模式安裝報表伺服器執行個體。 當您選擇這個選項時，安裝完成之後，報表伺服器執行個體便已備妥，隨時可以使用。 安裝程式會利用本機 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體來建立報表伺服器資料庫，並會將報表伺服器設定成使用預設值。  
   
  報表伺服器安裝架構所用的預設值必須對您的系統有效，您才能使用這個選項。 這個選項適合想要在本機安裝所有元件的開發人員以及要試用本軟體的使用者。  

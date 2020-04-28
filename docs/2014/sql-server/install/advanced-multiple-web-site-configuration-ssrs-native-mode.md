@@ -13,15 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952674"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>進階多重網站組態 (SSRS 原生模式)
-  使用此對話方塊可建立及管理用來存取報表伺服器或報表管理員的 URL。 
-  **[進階多重網站組態]** 對話方塊是用來建立其他 URL (亦即包含主機標頭名稱的自訂 URL)，或是指定 IPv4 或 IPv6 格式的 IP 位址。  
+  使用此對話方塊可建立及管理用來存取報表伺服器或報表管理員的 URL。 **[進階多重網站組態]** 對話方塊是用來建立其他 URL (亦即包含主機標頭名稱的自訂 URL)，或是指定 IPv4 或 IPv6 格式的 IP 位址。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
@@ -31,17 +30,17 @@ ms.locfileid: "71952674"
   
  按一下 [確定]**** 以儲存您的變更。 如果您加入或移除 URL，然後沒有先按一下 **[確定]** 就關閉此對話方塊，您的變更將會遺失。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **IP 位址**  
  識別 TCP/IP 網路上的報表伺服器電腦。 有效值包括：  
   
--   [**全部指派**] 會指定指派給電腦的任何 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
+-   **[全部指派]** 會指定指派給電腦的任何一個 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
   
--   [**全部未指派**] 會指定報表伺服器將接受完全不符合 IP 位址或主機名稱的任何要求。 如果有另一個 Web 應用程式已經在使用這個值，請勿使用它。 如果您這樣做，您將會中斷其他應用程式的服務。  
+-   **[全未指派]** 會指定報表伺服器將會接受未完全符合 IP 位址或主機名稱的任何要求。 如果有另一個 Web 應用程式已經在使用這個值，請勿使用它。 如果您這樣做，您將會中斷其他應用程式的服務。  
   
--   **127.0.0.1**是用來存取 localhost。 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
+-   **[127.0.0.1]** 是用來存取 localhost， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
--   *Nnn* . nnn 是電腦上網路介面卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<標頭>：*nnnn： nnnn： nnnn： nnnn*。  
+-   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<標頭>：*nnnn： nnnn： nnnn： nnnn*。  
   
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "71952674"
   
  主機標頭是可讓多個網站共用單一 IP 位址和通訊埠的唯一名稱。 主機標頭名稱要比 IP 位址和通訊埠編號更容易記得和輸入。 主機標頭名稱的一個範例為 www.adventure-works.com 。  
   
- **SSL 埠**  
+ **SSL 通訊埠**  
  為 SSL 連接指定通訊埠。 SSL 的預設通訊埠是 443。  
   
  **SSL 憑證**  
@@ -77,7 +76,7 @@ ms.locfileid: "71952674"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [設定 SSRS Configuration Manager &#40;的 URL&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

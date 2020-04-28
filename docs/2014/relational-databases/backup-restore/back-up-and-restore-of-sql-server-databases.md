@@ -23,23 +23,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176031"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
   此主題描述備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的優點、基本備份和還原詞彙，並介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原策略，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的安全性考量。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降至最低，您必須備份資料庫，以定期保存您對資料所做的修改。 規劃完善的備份和還原策略有助於保護資料庫，以防止各種失敗所導致的資料遺失。 藉由還原一組備份並復原資料庫來測試您的策略，以做好有效因應災害的準備。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降至最低，您必須備份資料庫，以定期保存您對資料所做的修改。 規劃完善的備份和還原策略有助於保護資料庫，以防止各種失敗所導致的資料遺失。 藉由還原一組備份並復原資料庫來測試您的策略，以做好有效因應災害的準備。  
   
  除了儲存備份的本機儲存體之外，SQL Server 也支援備份至與還原自 Azure Blob 儲存體服務。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 
   
-##  <a name="Benefits"></a> 優點  
+##  <a name="benefits"></a><a name="Benefits"></a>各種  
   
 -   備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、針對備份執行測試還原程序，並將備份的複本儲存在安全的異地位置，即可避免可能發生的重大資料遺失。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "70176031"
   
 
   
-##  <a name="TermsAndDefinitions"></a>元件和概念  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>元件和概念  
  備份 (back up) [動詞]  
  將資料或記錄檔記錄從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫或其交易記錄複製至備份裝置 (例如磁碟)，以建立資料備份或記錄備份。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "70176031"
   
 
   
-##  <a name="BnrStrategies"></a>備份與還原策略簡介  
+##  <a name="introduction-to-backup-and-restore-strategies"></a><a name="BnrStrategies"></a>備份與還原策略簡介  
  備份和還原資料作業必須依特定環境自訂，而且也必須使用可用的資源。 因此，為了可靠地使用備份和還原作業進行復原，您需要擬定備份和還原策略。 設計良好的備份和還原策略可充分提高資料可用性，並使資料損失降至最少，同時考慮到您的特定業務需求。  
   
 > [!IMPORTANT]  
@@ -110,7 +109,7 @@ ms.locfileid: "70176031"
   
  備份和還原策略包含備份部分與還原部分。 策略的備份部分定義備份的類型和頻率、所需硬體的本質和速度、測試備份的方法，以及儲存備份媒體的位置與方法 (包括安全性考量)。 策略的還原部分定義誰負責執行還原，以及應該如何執行還原，以達到資料庫可用性並將資料損失降到最低的目標。 建議您寫下備份和還原程序，並將文件的副本保留在執行書中。  
   
- 設計有效的備份和還原策略需要仔細計畫、實作及測試。 測試是必要的。 在利用還原策略中包含的所有備份組合順利完成還原之前，您還稱不上有備份策略。 您必須考慮各種因素。 其中包括：  
+ 設計有效的備份和還原策略需要仔細計畫、實作及測試。 測試是必要的。 在利用還原策略中包含的所有備份組合順利完成還原之前，您還稱不上有備份策略。 您必須考慮各種因素。 這些選項包括：  
   
 -   您的組織對於資料庫的生產目標，特別是對資料可用性以及保護資料免於遺失的需求。  
   
@@ -119,8 +118,7 @@ ms.locfileid: "70176031"
 -   相關資源的限制，例如：硬體、人員、儲存備份媒體的空間、儲存媒體的實體安全性等等。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟儲存格式在 64 位元與 32 位元環境下都相同。 因此，備份與還原可在 32 位元和 64 位元環境中運作。 在其中一種環境中執行之伺服器執行個體上建立的備份可還原至另一種環境中執行的伺服器執行個體。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟儲存格式在 64 位元與 32 位元環境下都相同。 因此，備份與還原可在 32 位元和 64 位元環境中運作。 在其中一種環境中執行之伺服器執行個體上建立的備份可還原至另一種環境中執行的伺服器執行個體。  
   
 
   
@@ -152,7 +150,7 @@ ms.locfileid: "70176031"
   
      如需詳細資訊，請參閱本節後面的[估計完整資料庫備份的大小](#EstimateDbBuSize)。  
   
-####  <a name="EstimateDbBuSize"></a>估計完整資料庫備份的大小  
+####  <a name="estimate-the-size-of-a-full-database-backup"></a><a name="EstimateDbBuSize"></a>估計完整資料庫備份的大小  
  在實作備份和還原策略前，您必須估計完整資料庫備份將使用多少磁碟空間。 備份作業會將資料庫中的資料複製到備份檔中。 備份僅包含資料庫中的實際資料，而不包含任何未使用的空間。 因此，備份通常會比資料庫本身還小。 您可以使用 **sp_spaceused** 系統預存程序來估計完整資料庫備份的大小。 如需詳細資訊，請參閱 [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)。  
   
 ### <a name="schedule-backups"></a>排程備份  
@@ -168,7 +166,7 @@ ms.locfileid: "70176031"
   
  建議您維護每個資料庫的作業手冊。 這份作業手冊應記載備份位置、備份裝置名稱 (如果有的話)，以及還原測試備份所需的時間量。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 ### <a name="scheduling-backup-jobs"></a>排程備份作業  
   
@@ -176,7 +174,7 @@ ms.locfileid: "70176031"
   
 -   [建立作業](../../ssms/agent/create-a-job.md)  
   
--   [排定作業執行時間](../../ssms/agent/schedule-a-job.md)  
+-   [排程作業](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>使用備份裝置和備份媒體  
   
@@ -184,15 +182,15 @@ ms.locfileid: "70176031"
   
 -   [定義磁帶機的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [指定磁片或磁帶做為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [指定磁碟或磁帶作為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [刪除備份裝置 &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [在備份 &#40;SQL Server 上設定到期日&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [設定備份的到期日 &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [檢視備份磁帶或檔案的內容 &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [查看備份組中的資料和記錄檔 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [檢視備份組中的資料和記錄檔 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -268,7 +266,7 @@ ms.locfileid: "70176031"
 ### <a name="additional-restore-tasks"></a>其他還原工作  
  **使用 Transact-sql**  
   
--   [&#40;Transact-sql 重新開機中斷的還原作業&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [重新啟動中斷的還原作業 &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [在不還原資料的情況下復原資料庫 &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
@@ -279,8 +277,8 @@ ms.locfileid: "70176031"
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Analysis Services 資料庫的備份與還原](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
- [備份和還原全文檢索目錄和索引](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [備份與還原 Analysis Services 資料庫](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
+ [備份並還原全文檢索目錄與索引。](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [備份及還原複寫的資料庫](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [交易記錄 &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [復原模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   

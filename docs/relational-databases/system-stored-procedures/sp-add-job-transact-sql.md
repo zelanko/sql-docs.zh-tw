@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381905"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72381905"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支援所有 SQL Server Agent 功能。 如需詳細資訊，請參閱[Azure SQL Database 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
  
 ## <a name="syntax"></a>語法  
   
@@ -77,8 +77,8 @@ sp_add_job [ @job_name = ] 'job_name'
 |-----------|-----------------|  
 |**0**|永不|  
 |**1**|成功時|  
-|**2** （預設值）|失敗時|  
-|**第**|一律|  
+|**2** (預設值)|失敗時|  
+|**3**|一律|  
   
 `[ @notify_level_email = ] email_level`值，指出在此作業完成時，何時傳送電子郵件。 *email_level*是**int**，預設值是**0**，表示 never。 *email_level*使用與*eventlog_level*相同的值。  
   
@@ -112,8 +112,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  如果作業將在多伺服器環境中的一或多個目標伺服器上執行，請使用**sp_apply_job_to_targets**來設定作業的目標伺服器或目標伺服器群組。 若要移除目標伺服器或目標伺服器群組中的作業，請使用**sp_remove_job_from_targets**。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
 ## <a name="permissions"></a>權限  
  若要執行這個預存程式，使用者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員，或被授[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與在**msdb**資料庫中的下列其中一個 Agent 固定資料庫角色：  

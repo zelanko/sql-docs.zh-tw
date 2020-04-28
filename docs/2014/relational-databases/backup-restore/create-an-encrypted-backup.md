@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154749"
 ---
 # <a name="create-an-encrypted-backup"></a>建立加密的備份
@@ -29,7 +29,7 @@ ms.locfileid: "70154749"
   
  使用下列步驟建立要存放到本機磁碟的資料庫加密備份。 此範例會使用稱為 MyTestDB 的使用者資料庫。  
   
-1.  **建立 Master 資料庫的資料庫主要金鑰：** 選擇用來加密將儲存在資料庫中之主要金鑰複本的密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]****。  
+1.  **建立主要資料庫的資料庫主要金鑰︰** 選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]****。  
   
     ```  
     -- Creates a database master key.   
@@ -52,7 +52,7 @@ ms.locfileid: "70154749"
   
     ```  
   
-3.  **備份資料庫：** 指定要使用的加密演算法和憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
+3.  **備份資料庫：** 指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -76,11 +76,11 @@ ms.locfileid: "70154749"
   
  **要求**  
   
--   一個視窗儲存體帳戶和容器。 如需詳細資訊，請參閱： [第1課：建立 Azure 儲存體物件](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)。  
+-   一個視窗儲存體帳戶和容器。 如需詳細資訊，請參閱。 [第1課：建立 Azure 儲存體物件](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)。  
   
 -   主要資料庫的資料主要金鑰，以及 SQL Server 執行個體的憑證或非對稱金鑰。 如需加密需求及權限的資訊，請參閱 [備份加密](backup-encryption.md)。  
   
-1.  **建立 SQL Server 認證：** 若要建立 SQL Server 認證，請連接到資料庫引擎、開啟新的查詢視窗，然後複製並貼上下列範例，然後按一下 [**執行**]。  
+1.  **建立 SQL Server 認證：** 若要建立 SQL Server 認證，請連接到 Database Engine，再開啟新的查詢視窗，複製並貼上下列範例，然後按一下 [執行]****。  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -88,7 +88,7 @@ ms.locfileid: "70154749"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **建立資料庫主要金鑰：** 選擇用來加密將儲存在資料庫中之主要金鑰複本的密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]****。  
+2.  **建立資料庫主要金鑰︰** 選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]****。  
   
     ```  
     -- Creates a database master key.  
@@ -100,7 +100,7 @@ ms.locfileid: "70154749"
   
     ```  
   
-3.  **建立備份憑證：** 在 master 資料庫中建立備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]****。  
+3.  **建立備份憑證︰** 建立主要資料庫的備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]****。  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "70154749"
   
     ```  
   
-4.  **備份資料庫：** 指定要使用的加密演算法和憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
+4.  **備份資料庫：** 指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

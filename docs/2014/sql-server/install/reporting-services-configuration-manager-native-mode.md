@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952487"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
-  您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。  
+  您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "71952487"
  [針對 &#40;SSRS Configuration Manager 的電子郵件傳遞設定報表伺服器&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  描述如何設定報表伺服器，以支援電子郵件報表散發。  
   
- [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [設定原生模式報表伺服器向外延展部署 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供有關設定多個報表伺服器執行個體使用共用報表伺服器資料庫的資訊。  
   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
@@ -69,9 +68,9 @@ ms.locfileid: "71952487"
   
 -   [需求](#bkmk_requirements)  
   
--   [若要啟動 Reporting Services 組態管理員](#bkmk_start_configuration_manager)  
+-   [啟動 Reporting Services 組態管理員](#bkmk_start_configuration_manager)  
   
-##  <a name="bkmk_scenarios"></a>使用 Reporting Services 組態管理員的案例  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a>使用 Reporting Services 組態管理員的案例  
  您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員執行下列工作：  
   
 -   設定報表伺服器服務帳戶。 此帳戶一開始是在安裝過程中設定，但是如果您更新密碼或想要使用其他帳戶，則可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來修改。  
@@ -80,21 +79,18 @@ ms.locfileid: "71952487"
   
 -   建立和設定報表伺服器資料庫。 報表伺服器是需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫做為內部儲存的無狀態伺服器。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來建立及設定報表伺服器資料庫的連接。 您也可以選取已經包含您要使用之內容的現有報表伺服器資料庫。  
   
--   設定原生模式向外延展部署。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援部署拓撲，可讓多個報表伺服器執行個體使用單一的共用報表伺服器資料庫。 若要部署報表伺服器向外延展部署，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，將每個報表伺服器連接到共用報表伺服器資料庫。  
+-   設定原生模式向外延展部署。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援部署拓撲，可讓多個報表伺服器執行個體使用單一的共用報表伺服器資料庫。 若要部署報表伺服器向外延展部署，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，將每個報表伺服器連接到共用報表伺服器資料庫。  
   
 -   備份、還原或取代用於加密已儲存之連接字串和認證的對稱金鑰。 如果您要變更服務帳戶，或將報表伺服器資料庫移到另一部電腦，您必須先備份對稱金鑰。  
   
 -   設定自動執行帳戶。 在排程作業期間或沒有使用者認證時，此帳戶用於遠端連接。  
   
--   設定報表伺服器電子郵件。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含報表伺服器電子郵件傳遞延伸模組，可使用簡易郵件傳送通訊協定 (SMTP) 將報表或報表處理通知傳遞到電子郵件信箱中。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員指定要使用您網路上的哪個 SMTP 伺服器或閘道傳遞電子郵件。  
+-   設定報表伺服器電子郵件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含報表伺服器電子郵件傳遞延伸模組，可使用簡易郵件傳送通訊協定 (SMTP) 將報表或報表處理通知傳遞到電子郵件信箱中。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員指定要使用您網路上的哪個 SMTP 伺服器或閘道傳遞電子郵件。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您也使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來啟用其他功能或修改預設值，並報表管理員來授與使用者對伺服器的存取權。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您也使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來啟用其他功能或修改預設值，並報表管理員來授與使用者對伺服器的存取權。  
   
-##  <a name="bkmk_requirements"></a>滿足  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager 是特定版本。 隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本一起安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法用來設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您在相同電腦上並存執行舊版和新版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就必須使用每一個版本所隨附的 Reporting Service 組態管理員來設定每一個執行個體。  
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> 需求  
+  組態管理員為特定版本所專用。 隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本一起安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法用來設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您在相同電腦上並存執行舊版和新版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就必須使用每一個版本所隨附的 Reporting Service 組態管理員來設定每一個執行個體。  
   
  若要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，您必須：  
   
@@ -102,14 +98,13 @@ ms.locfileid: "71952487"
   
 -   您必須擁有在用來主控報表伺服器資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上，建立資料庫的權限。  
   
--   進行設定的報表伺服器必須啟用並執行 Windows Management Instrumentation (WMI) 服務。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會使用報表伺服器 WMI 提供者來連接本機與遠端報表伺服器。 如果要設定遠端報表伺服器，該電腦必須允許遠端 WMI 存取。 如需詳細資訊，請參閱 [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
+-   進行設定的報表伺服器必須啟用並執行 Windows Management Instrumentation (WMI) 服務。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會使用報表伺服器 WMI 提供者來連接本機與遠端報表伺服器。 如果要設定遠端報表伺服器，該電腦必須允許遠端 WMI 存取。 如需詳細資訊，請參閱 [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
   
 -   在您可以連接及設定遠端報表伺服器執行個體之前，您必須先啟用要通過 Windows 防火牆傳遞的 Windows Management Instrumentation (WMI) 呼叫。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) 設定報表伺服器來進行遠端管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，會自動安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-##  <a name="bkmk_start_configuration_manager"></a>若要啟動 Reporting Services 組態管理員  
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a>若要啟動 Reporting Services 組態管理員  
   
 #### <a name="to-start-reporting-services-configuration"></a>若要啟動 Reporting Services 組態  
   
@@ -123,14 +118,13 @@ ms.locfileid: "71952487"
   
          按一下 **[Reporting Services 組態管理員]**。  
   
-2.  
-  **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 按一下 [ **連接**]。  
+2.  **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 按一下 [ **連接**]。  
   
 3.  在 **[伺服器名稱]** 中，指定安裝報表伺服器執行個體的電腦名稱。 預設會出現本機電腦的名稱，但是如果您想要連接到遠端電腦上所安裝的報表伺服器，也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
 4.  如果您指定遠端電腦，請按一下 **[尋找]** 來建立連接。  
   
-5.  在 **Report Server 在stance**中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+5.  在 [報表伺服器執行個體]**** 中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 6.  按一下 [ **連接**]。  
   

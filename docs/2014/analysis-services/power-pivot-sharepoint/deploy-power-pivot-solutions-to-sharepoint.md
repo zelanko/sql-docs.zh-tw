@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782824"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>將 PowerPivot 方案部署到 SharePoint
@@ -28,7 +28,7 @@ ms.locfileid: "72782824"
   
  [必要條件：確認 Web 應用程式使用傳統模式驗證](#bkmk_classic)  
   
- [步驟1：部署伺服器陣列方案](#bkmk_farm)  
+ [步驟 1：部署伺服器陣列方案](#bkmk_farm)  
   
  [步驟 2：將 PowerPivot Web 應用程式方案部署到管理中心](#deployCA)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72782824"
   
  [關於 PowerPivot 方案](#intro)  
   
-##  <a name="bkmk_classic"></a>必要條件：確認 Web 應用程式使用傳統模式驗證  
+##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> 必要條件：驗證 Web 應用程式是否使用傳統模式驗證  
  使用 Windows 傳統模式驗證的 Web 應用程式才支援 PowerPivot for SharePoint。 若要檢查應用程式是否使用傳統模式，請從**sharepoint 2010 管理命令**介面執行下列 PowerShell Cmdlet， `http://<top-level site name>`並將取代為您的 sharepoint 網站名稱：  
   
 ```powershell
@@ -47,7 +47,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  傳回值應為 **false**。 若為**true**，則無法使用此 web 應用程式來存取 PowerPivot 資料。  
   
-##  <a name="bkmk_farm"></a>步驟1：部署伺服器陣列方案  
+##  <a name="step-1-deploy-the-farm-solution"></a><a name="bkmk_farm"></a>步驟1：部署伺服器陣列方案  
  本節示範如何使用 PowerShell 部署方案，但是您也可以使用 PowerPivot 組態工具完成此工作。 如需詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 設定工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。  
   
  此工作只需要在安裝 PowerPivot for SharePoint 之後執行一次。  
@@ -68,7 +68,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a>步驟2：將 PowerPivot Web 應用程式方案部署到管理中心  
+##  <a name="step-2-deploy-the-powerpivot-web-application-solution-to-central-administration"></a><a name="deployCA"></a>步驟2：將 PowerPivot Web 應用程式方案部署到管理中心  
  部署伺服器陣列方案之後，您必須將 Web 應用程式方案部署到管理中心。 此步驟會將 PowerPivot 管理儀表板加入至管理中心。  
   
 1.  使用 **[以系統管理員身分執行]** 選項，開啟 SharePoint 2010 管理命令介面。  
@@ -95,12 +95,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  現在 Web 應用程式方案已部署到管理中心，您可以使用管理中心完成所有其餘組態步驟。  
   
-##  <a name="deployUI"></a>步驟3：將 PowerPivot Web 應用程式方案部署到其他 Web 應用程式  
+##  <a name="step-3-deploy-the-powerpivot-web-application-solution-to-other-web-applications"></a><a name="deployUI"></a>步驟3：將 PowerPivot Web 應用程式方案部署到其他 Web 應用程式  
  在上一個工作中，您已經將 Powerpivotwebapp.wsp 部署到管理中心。 在本節中，您會在支援 PowerPivot 資料存取的每個現有 Web 應用程式上部署 powerpivotwebapp.wsp。 如果您之後加入更多 Web 應用程式，務必針對其他 Web 應用程式重複此步驟。  
   
 1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]**。  
   
-2.  按一下 **[powerpivotwebapp.wsp]**。  
+2.  按一下 [ **powerpivotwebapp.wsp**]。  
   
 3.  按一下 **[部署方案]**。  
   
@@ -110,7 +110,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 6.  針對其他也支援 PowerPivot 資料存取的 SharePoint Web 應用程式重複以上步驟。  
   
-##  <a name="retract"></a>重新部署或撤銷方案  
+##  <a name="redeploy-or-retract-the-solution"></a><a name="retract"></a>重新部署或撤銷方案  
  雖然 SharePoint 管理中心會提供方案撤銷，但是除非您有系統地排除安裝或修補程式的部署問題，否則不需要撤銷 powerpivotwebapp.wsp 檔。  
   
 1.  在 SharePoint 2010 管理中心的 [系統設定] 中，按一下 **[管理伺服陣列方案]**。  
@@ -131,7 +131,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 4.  將 PowerPivot Web 應用程式方案重新部署至所有 SharePoint Web 應用程式。  
   
-##  <a name="intro"></a>關於 PowerPivot 方案  
+##  <a name="about-the-powerpivot-solutions"></a><a name="intro"></a>關於 PowerPivot 方案  
  PowerPivot for SharePoint 會使用兩個方案套件，將它的應用程式頁面和程式檔案從伺服陣列部署到個別 Web 應用程式。  
   
 -   伺服器陣列方案為全域所通用， 這個方案會部署一次，然後自動提供給您之後加入至伺服器陣列的任何新 PowerPivot for SharePoint 伺服器使用。  
@@ -142,7 +142,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  此 Web 應用程式方案一開始會部署到管理中心，隨後會將後續方案部署到支援 PowerPivot 資料要求的其他任何 Web 應用程式。 若要將 Web 應用程式方案部署到管理中心，您必須使用 PowerPivot 組態工具或 PowerShell 指令程式。 如果是所有其他 Web 應用程式，您可以使用管理中心或 PowerShell 來手動部署 Web 應用程式方案。  
   
-|方案|描述|  
+|解決方法|描述|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|將 Microsoft.AnalysisServices.SharePoint.Integration.dll 加入至全域組件。<br /><br /> 將 Microsoft.AnalysisServices.ChannelTransport.dll 加入至全域組件。<br /><br /> 安裝功能和資源檔，並註冊內容類型。<br /><br /> 加入 PowerPivot 圖庫和資料摘要庫的文件庫範本。<br /><br /> 為服務應用程式組態、PowerPivot 管理儀表板、資料重新整理及 PowerPivot 圖庫加入應用程式頁面。|  
 |[powerpivotwebapp.wsp]|將 Microsoft.AnalysisServices.SharePoint.Integration.dll 資源檔加入至 Web 前端的 Web Server Extensions 資料夾。<br /><br /> 將 PowerPivot Web 服務加入至 Web 前端。<br /><br /> 加入 PowerPivot 圖庫產生的縮圖影像。|  
@@ -150,4 +150,4 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
 ## <a name="see-also"></a>另請參閱  
  [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [管理中心的 PowerPivot 服務器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [使用 Windows PowerShell 的 PowerPivot 組態](power-pivot-configuration-using-windows-powershell.md)  
+ [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  

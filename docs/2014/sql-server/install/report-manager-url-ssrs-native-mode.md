@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952416"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>報表管理員 URL (SSRS 原生模式)
@@ -31,18 +31,18 @@ ms.locfileid: "71952416"
 > [!NOTE]  
 >  如果報表管理員尚未啟用，您就無法設定此頁面上的選項。 如需啟用報表管理員的詳細資訊，請參閱[Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **虛擬目錄**  
  為報表管理員指定虛擬目錄名稱。 相同電腦上的每一個報表管理員執行個體只能有一個虛擬目錄名稱。  
   
- **Url**  
+ **URL**  
  顯示為目前報表管理員執行個體定義的 URL。  
   
  **進階**  
  為目前報表管理員執行個體加入額外的 URL。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [設定 SSRS Configuration Manager &#40;的 URL&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [&#40;SSRS Configuration Manager 的設定檔中的 Url&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

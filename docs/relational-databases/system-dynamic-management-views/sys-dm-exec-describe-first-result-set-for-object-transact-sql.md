@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199340"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>引數  
  *\@object_id*  
- 預存程式或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程式的。 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id的類型為**int**。  
+ 預存程式或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程式的。 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id 的類型為 **int**。  
   
  *\@include_browse_information*  
  @include_browse_information為類型**位**。 如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
@@ -62,7 +62,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_name**|**nvarchar(256)**|包含資料類型名稱。 包含指定給資料行之資料類型的引數 (例如長度、有效位數、小數位數)。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
 |**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**。<br /><br /> 若為**文字**資料行， **max_length**值會是16，或**sp_tableoption ' text in row '** 所設定的值。|  
 |**有效位數**|**tinyint**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
-|**尺度**|**tinyint**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
+|**scale**|**tinyint**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
 |**user_type_id**|**int**|針對 CLR 和別名類型，會如同 sys.types 中所指定，包含資料行資料類型的 user_type_id。 否則，便為 NULL。|  
 |**user_type_database**|**sysname**|針對 CLR 和別名類型，會包含定義類型之資料庫的名稱。 否則，便為 NULL。|  
@@ -94,7 +94,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|包含函數傳回的狀態訊息。 如果未發生錯誤， 則資料行會包含 NULL。|  
 |**error_message**|**Nvarchar （4096）**|包含函數傳回的訊息。 如果未發生錯誤，則資料行會包含 NULL。|  
 |**error_type**|**int**|包含整數，代表要傳回的錯誤。 對應到 error_type_desc。 請參閱備註下的清單。|  
-|**error_type_desc**|**Nvarchar （60）**|包含簡短大寫字串，表示要傳回的錯誤。 對應到 error_type。 請參閱備註下的清單。|  
+|**error_type_desc**|**nvarchar(60)**|包含簡短大寫字串，表示要傳回的錯誤。 對應到 error_type。 請參閱備註下的清單。|  
   
 ## <a name="remarks"></a>備註  
  這個函數與 **sp_describe_first_result_set** 使用相同的演算法。 如需詳細資訊，請參閱[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
@@ -104,7 +104,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |error_type|error_type|描述|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未說明的所有錯誤。|  
-|2|語法|批次發生語法錯誤。|  
+|2|SYNTAX|批次發生語法錯誤。|  
 |3|CONFLICTING_RESULTS|因為兩個可能的第一個陳述式之間的衝突，無法判定結果。|  
 |4|DYNAMIC_SQL|因為動態 SQL 可能傳回第一個結果，無法判定結果。|  
 |5|CLR_PROCEDURE|因為 CLR 預存程序可能傳回第一個結果，無法判定結果。|  

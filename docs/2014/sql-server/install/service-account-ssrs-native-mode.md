@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952388"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服務帳戶 (SSRS 原生模式)
@@ -31,7 +31,7 @@ ms.locfileid: "71952388"
 > [!IMPORTANT]  
 >  每當您需要更新帳戶或密碼時，強烈建議您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 使用組態管理員更新帳戶可確保取決於此服務識別的其他內部設定會同時自動更新。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用內建帳戶**  
  從清單中選取 **[網路服務]**、 **[本機系統]** 或 **[本機服務]** 。 只建議您使用 **[網路服務]** ；但是，您可以設定此帳戶使用任何可用的帳戶。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "71952388"
 |帳戶|說明|  
 |-------------|-----------------|  
 |網域使用者帳戶|如果您的 Windows 網域使用者帳戶具有報表伺服器作業所需的最低權限，您應該使用此帳戶。<br /><br /> 建議使用網域使用者帳戶，因為它會將報表伺服器服務與其他應用程式隔離。 在共用帳戶 (如網路服務) 下執行多個應用程式增加了惡意使用者控管報表伺服器的風險，因為任何一個應用程式的安全性缺口都可輕易地延伸到在相同帳戶下執行的所有應用程式。<br /><br /> 如果您設定報表伺服器進行限制委派，或是用於搭配 SharePoint 2010 產品的 SharePoint 整合模式 (這些產品需要網域使用者帳戶而不是內建電腦帳戶)，此時就需要網域使用者帳戶。<br /><br /> 請注意，如果您使用網域使用者帳戶，則當您的組織強制實施密碼到期原則時，您將必須定期變更密碼。 您也可能需要使用此使用者帳戶來註冊服務。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。<br /><br /> 避免使用本機 Windows 使用者帳戶。 本機帳戶通常沒有足夠的權限可存取其他電腦上的資源。 如需使用本機帳戶如何限制報表伺服器功能的詳細資訊，請參閱本主題中的 [使用本機帳戶的考量](#localaccounts) 。|  
-|**網路服務**|**Network Service**是內建的最低許可權帳戶，具有網路登入許可權。 如果您沒有可用的網域使用者帳戶，或是您想要避免因密碼逾期原則所可能產生的任何服務中斷，則建議您使用此帳戶。<br /><br /> 如果您選取 **[網路服務]**，請嘗試將相同帳戶下執行的其他服務數目降到最低。 任何一個應用程式的安全性缺口都將危害相同帳戶下執行之所有其他應用程式的安全。|  
-|**本機服務**|[**本機服務**] 是內建帳戶，類似于已驗證的本機 Windows 使用者帳戶。 以 **[本機服務]** 帳戶身分執行的服務會以不含認證的 Null 工作階段來存取網路資源。 此帳戶不適合內部網路部署狀況，在此狀況下，報表伺服器必須連接到遠端報表伺服器資料庫或網域控制站，才能在開啟報表或處理訂閱之前先驗證使用者。|  
-|**本機系統**|[**本機系統**] 是具有高許可權的帳戶，不需要執行報表伺服器。 請避免使用此帳戶進行報表伺服器安裝。 請改為選擇網域帳戶或 **[網路服務]** 。|  
+|**網路服務**|[網路服務]**** 是權限最低的內建帳戶，具有網路登入權限。 如果您沒有可用的網域使用者帳戶，或是您想要避免因密碼逾期原則所可能產生的任何服務中斷，則建議您使用此帳戶。<br /><br /> 如果您選取 **[網路服務]**，請嘗試將相同帳戶下執行的其他服務數目降到最低。 任何一個應用程式的安全性缺口都將危害相同帳戶下執行之所有其他應用程式的安全。|  
+|**本機服務**|**[本機服務]** 是一個內建帳戶，類似於經過驗證的本機 Windows 使用者帳戶。 以 **[本機服務]** 帳戶身分執行的服務會以不含認證的 Null 工作階段來存取網路資源。 此帳戶不適合內部網路部署狀況，在此狀況下，報表伺服器必須連接到遠端報表伺服器資料庫或網域控制站，才能在開啟報表或處理訂閱之前先驗證使用者。|  
+|**Local System (本機系統)**|**[本機系統]** 是具有高權限的帳戶，執行報表伺服器不需要使用它。 請避免使用此帳戶進行報表伺服器安裝。 請改為選擇網域帳戶或 **[網路服務]** 。|  
   
-##  <a name="localaccounts"></a>使用本機帳戶的考慮  
+##  <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a>使用本機帳戶的考慮  
  使用本機帳戶的主要考量為報表伺服器是否需要存取遠端資料庫伺服器、郵件伺服器和網域控制站。 如果您設定報表伺服器以本機 Windows 使用者帳戶、本機服務或本機系統的身分執行，您就必須考量您要如何設定其他組態設定，以及考量訂閱的建立和傳遞方式：  
   
 -   如果使用本機帳戶執行服務，則您稍後在設定遠端報表伺服器資料庫的連接時，所能使用的選項將會受到限制。 更明確地說，如果您使用遠端報表伺服器資料庫，您就必須將連接設定為使用網域使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者 (該使用者具有登入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的權限)。  
@@ -72,7 +72,7 @@ ms.locfileid: "71952388"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [設定服務帳戶 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [&#40;SSRS Configuration Manager 設定服務帳戶&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 組態管理員 &#40;SSRS 原生模式的 F1 說明主題&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

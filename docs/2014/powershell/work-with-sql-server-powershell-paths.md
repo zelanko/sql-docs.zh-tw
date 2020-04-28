@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782724"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL Server PowerShell 路徑
@@ -22,9 +22,9 @@ ms.locfileid: "72782724"
   
 1.  [開始之前](#BeforeYouBegin)  
   
-2.  [使用方法和屬性](#UsePropMeth)**來處理路徑節點：**[列出方法和屬性](#ListPropMeth)    
+2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  當您導覽至 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供者路徑中的節點之後，可以執行兩種動作：  
   
 -   您可以執行在節點上運作的 Windows PowerShell Cmdlet，例如 **Rename-Item**。  
@@ -33,7 +33,7 @@ ms.locfileid: "72782724"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者是用來管理 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體中的物件， 而不是用來處理資料庫中的資料。 如果您導覽至資料表或檢視表，即無法使用此提供者選取、插入、更新或刪除資料。 使用 **Invoke-Sqlcmd** Cmdlet 可從 Windows PowerShell 環境中，查詢或變更資料表與檢視中的資料。 如需詳細資訊，請參閱 [Invoke-Sqlcmd Cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)。  
   
-##  <a name="ListPropMeth"></a> 列出方法與屬性
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> 列出方法與屬性
   
  請使用 **Get-Member** Cmdlet，以檢視特定物件或物件類別適用的方法或屬性。  
   
@@ -62,12 +62,12 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a>使用 SMO 方法和屬性  
+##  <a name="using-smo-methods-and-properties"></a><a name="UsePropMeth"></a>使用 SMO 方法和屬性  
   
  若要從 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供者路徑對物件進行工作，可以使用 SMO 方法與屬性。  
   
 ### <a name="examples-using-methods-and-properties"></a>範例：使用方法與屬性  
- 此範例會使用 SMO [結構描述]  屬性來取得 AdventureWorks2012中 Sales 結構描述內的資料表清單：  
+ 此範例會使用 SMO [結構描述]**** 屬性來取得 AdventureWorks2012中 Sales 結構描述內的資料表清單：  
   
 ```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables  
@@ -95,8 +95,8 @@ $MyDBVar.State
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
- [導覽 SQL Server PowerShell 路徑](navigate-sql-server-powershell-paths.md)   
- [將 URN 轉換成 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [流覽 SQL Server PowerShell 路徑](navigate-sql-server-powershell-paths.md)   
+ [將 Urn 轉換為 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

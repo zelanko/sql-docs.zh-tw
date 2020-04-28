@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72289357"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
@@ -48,23 +48,23 @@ ms.locfileid: "72289357"
 |is_in_polling_io_completion_routine|**bit**|1 = 工作者目前針對暫止 I/O 執行 I/O 完成常式。 如需詳細資訊，請參閱[dm_io_pending_io_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md)。|  
 |context_switch_count|**int**|這個工作者執行的排程器內容切換數目。|  
 |pending_io_count|**int**|此工作者執行的實體 I/O 數目。|  
-|pending_io_byte_count|**Bigint**|這個工作者之所有暫止實體 I/O 的總位元組數。|  
+|pending_io_byte_count|**bigint**|這個工作者之所有暫止實體 I/O 的總位元組數。|  
 |pending_io_byte_average|**int**|這個工作者之實體 I/O 的平均位元組數。|  
-|wait_started_ms_ticks|**Bigint**|當此工作者進入暫停狀態時， [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)的時間點。 從 sys 中的 ms_ticks 減去此值[。 dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)會傳回工作者等待的毫秒數。|  
-|wait_resumed_ms_ticks|**Bigint**|當此工作者進入可執行狀態時，在[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)的時間點。 從 sys 中的 ms_ticks 減去此值[。 dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)會傳回背景工作角色在可執行佇列中的毫秒數。|  
-|task_bound_ms_ticks|**Bigint**|當工作系結至這個工作者時的時間點，以[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。|  
-|worker_created_ms_ticks|**Bigint**|建立背景工作角色時的時間點，以[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。|  
+|wait_started_ms_ticks|**bigint**|當此工作者進入暫停狀態時， [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)的時間點。 從 sys 中的 ms_ticks 減去此值[。 dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)會傳回工作者等待的毫秒數。|  
+|wait_resumed_ms_ticks|**bigint**|當此工作者進入可執行狀態時，在[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)的時間點。 從 sys 中的 ms_ticks 減去此值[。 dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)會傳回背景工作角色在可執行佇列中的毫秒數。|  
+|task_bound_ms_ticks|**bigint**|當工作系結至這個工作者時的時間點，以[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。|  
+|worker_created_ms_ticks|**bigint**|建立背景工作角色時的時間點，以[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。|  
 |exception_num|**int**|此工作者遇到之最後例外狀況的錯誤號碼。|  
 |exception_severity|**int**|這個工作者遇到之最後例外狀況的嚴重性。|  
 |exception_address|**varbinary(8)**|擲出例外狀況的程式碼位址|  
-|affinity|**Bigint**|工作者的執行緒相似性。 符合 sys.databases 中的執行緒親[和性 dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
-|state|**Nvarchar （60）**|工作者狀態。 可以是下列其中一個值：<br /><br /> INIT = 目前正在初始化的工作者。<br /><br /> RUNNING = 工作者目前以非先佔式或先佔式執行。<br /><br /> RUNNABLE = 工作者準備在排程器執行。<br /><br /> SUSPENDED = 工作者目前暫停，等待事件傳送信號給它。|  
-|start_quantum|**Bigint**|此工作者目前執行的開始時間 (以毫秒為單位)。|  
-|end_quantum|**Bigint**|此工作者目前執行的結束時間 (以毫秒為單位)。|  
-|last_wait_type|**Nvarchar （60）**|最後等待的類型。 如需等候類型的清單，請參閱[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
-|return_code|**int**|從最後等待傳回值。 可以是下列其中一個值：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**Bigint**|僅供內部使用。|  
-|max_quantum|**Bigint**|僅供內部使用。|  
+|affinity|**bigint**|工作者的執行緒相似性。 符合 sys.databases 中的執行緒親[和性 dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
+|State|**nvarchar(60)**|工作者狀態。 可以是下列值之一：<br /><br /> INIT = 目前正在初始化的工作者。<br /><br /> RUNNING = 工作者目前以非先佔式或先佔式執行。<br /><br /> RUNNABLE = 工作者準備在排程器執行。<br /><br /> SUSPENDED = 工作者目前暫停，等待事件傳送信號給它。|  
+|start_quantum|**bigint**|此工作者目前執行的開始時間 (以毫秒為單位)。|  
+|end_quantum|**bigint**|此工作者目前執行的結束時間 (以毫秒為單位)。|  
+|last_wait_type|**nvarchar(60)**|最後等待的類型。 如需等候類型的清單，請參閱[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
+|return_code|**int**|從最後等待傳回值。 可以是下列值之一：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|quantum_used|**bigint**|僅供內部使用。|  
+|max_quantum|**bigint**|僅供內部使用。|  
 |boost_count|**int**|僅供內部使用。|  
 |tasks_processed_count|**int**|這個工作者所處理的工作數。|  
 |fiber_address|**varbinary(8)**|這個工作者相關聯之 Fiber 的記憶體位址。<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未設定為輕量型共用。|  
@@ -79,8 +79,7 @@ ms.locfileid: "72289357"
 ## <a name="remarks"></a>備註  
  如果工作者狀態是 RUNNING，且工作者是以非先佔式執行，則工作者位址會符合 sys.dm_os_schedulers 中的 active_worker_address。  
   
- 當通知等待事件的工作者時，會將工作者放在可執行佇列的開頭。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓它在資料列出現一千次，之後就會將工作者放在佇列結尾。 將工作者移到佇列結尾，會有一些效能隱含作用。  
+ 當通知等待事件的工作者時，會將工作者放在可執行佇列的開頭。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓它在資料列出現一千次，之後就會將工作者放在佇列結尾。 將工作者移到佇列結尾，會有一些效能隱含作用。  
   
 ## <a name="permissions"></a>權限
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   

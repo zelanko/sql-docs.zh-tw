@@ -18,10 +18,10 @@ ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 251dbb143c1b5aa150cc094ce67943dd0139ee6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305019"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
@@ -34,11 +34,11 @@ ms.locfileid: "72305019"
 |**artid**|**int**|發行項的唯一識別碼。|  
 |**srvid**|**smallint**|訂閱者的伺服器識別碼。|  
 |**dest_db**|**sysname**|目的地資料庫的名稱。|  
-|**狀態**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 已訂閱。<br /><br /> **2** = 使用中。|  
+|**status**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 已訂閱。<br /><br /> **2** = 使用中。|  
 |**sync_type**|**tinyint**|初始同步處理的類型：<br /><br /> **1** = 自動。<br /><br /> **2** = 無|  
 |**login_name**|**sysname**|用來加入訂閱的登入名稱。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> 0 = 發送 - 散發代理程式執行於散發者端。<br /><br /> 1 = 提取 - 散發代理程式執行於訂閱者端。|  
-|**distribution_jobid**|**binary （16）**|散發代理程式的作業識別碼。|  
+|**distribution_jobid**|**binary(16)**|散發代理程式的作業識別碼。|  
 |**timestamp**|**timestamp**|時間戳記。|  
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 唯讀。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **0** = 傳回。<br /><br /> **1** = 不傳回。|  

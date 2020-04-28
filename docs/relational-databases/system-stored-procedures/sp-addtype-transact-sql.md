@@ -18,10 +18,10 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305131"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
@@ -50,12 +50,12 @@ sp_addtype [ @typename = ] type,
   
 ||||  
 |-|-|-|  
-|**Bigint**|**binary(n)**|**bit**|  
+|**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
 |**float**|**image**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**數值**|**nvarchar(n)**|**即時**|  
-|**smalldatetime**|**smallint**|**SMALLMONEY**|  
+|**money**|**Nchar （n）**|**ntext**|  
+|**numeric**|**Nvarchar （n）**|**real**|  
+|**smalldatetime**|**smallint**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
@@ -64,7 +64,7 @@ sp_addtype [ @typename = ] type,
  *n*  
  這是非負數整數，表示所選資料類型的長度。  
   
- *P&id*  
+ *P*  
  這是一個非負數整數，它指出可儲存的最大十進位數總數，小數點左右兩側都包括在內。 如需詳細資訊，請參閱 [decimal 和 numeric &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  *今日*  
@@ -99,8 +99,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. 建立不允許 Null 值的別名資料型別  
- 下列範例會根據提供的`ssn` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Varchar**資料類型，建立名為（社會保險號碼）的別名資料類型。 
-  `ssn` 資料類型用於保留 11 位數之社會保險號碼 (999-99-9999) 的資料行。 該資料行不能是 NULL。  
+ 下列範例會根據提供的`ssn` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Varchar**資料類型，建立名為（社會保險號碼）的別名資料類型。 `ssn` 資料類型用於保留 11 位數之社會保險號碼 (999-99-9999) 的資料行。 該資料行不能是 NULL。  
   
  請注意，`varchar(11)` 以單引號括住，因為它包含標點 (括號)。  
   
@@ -134,13 +133,13 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
+ [CREATE TYPE &#40;Transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [CREATE RULE &#40;Transact-sql&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_droptype &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
- [sp_rename &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [sp_unbindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

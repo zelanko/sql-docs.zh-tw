@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782756"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
@@ -63,12 +63,12 @@ ms.locfileid: "72782756"
  例如，您可以指定 Server 來代表 **ServerCollection** 類別，或指定 Database 來代表 **DatabaseCollection** 類別。  
   
  \@*PropertyName*  
- 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
+ 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，針對 [ \@**資料庫**類別] 屬性 [ **IsAnsiNull**] 指定 IsAnsiNull。  
   
- \@*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*= true （）  
  列舉指定之布林屬性設定為 TRUE 的所有物件。  
   
- \@*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*= false （）  
  列舉指定之布林屬性設定為 FALSE 的所有物件。  
   
  contains(\@*StringPropertyName*, '*PatternString*')  
@@ -103,7 +103,7 @@ ms.locfileid: "72782756"
   
  查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
   
- 如果未針對物件指定 *\<FilterExpression>* ，就會列舉該節點上的所有物件。  
+ 如果未指定物件的* \<FilterExpression>* ，則會列舉該節點上的所有物件。  
   
 ## <a name="uniform-resource-names-urn"></a>統一資源名稱 (URN)  
  URN 是查詢運算式的子集。 每個 URN 都會構成單一物件的完整參考。 一般的 URN 會使用 Name 屬性來識別位於每個節點的單一物件。 例如，這個 URN 會參考特定資料行：  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Invoke-PolicyEvaluation 指令程式](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Invoke-policyevaluation Cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

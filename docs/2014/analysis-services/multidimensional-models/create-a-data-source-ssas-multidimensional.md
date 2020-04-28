@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175912"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
@@ -34,20 +34,20 @@ ms.locfileid: "70175912"
   
  [設定認證和模擬選項](#bkmk_impersonation)  
   
- [查看或編輯連接屬性](#bkmk_ConnectionString)  
+ [檢視或編輯連接屬性](#bkmk_ConnectionString)  
   
- [使用資料來源建立資料來源 Wizard](#bkmk_steps)  
+ [使用資料來源精靈建立資料來源](#bkmk_steps)  
   
  [使用現有的連接建立資料來源](#bkmk_connection)  
   
  [將多個資料來源加入至模型](#bkmk_multipleDS)  
   
-##  <a name="bkmk_provider"></a>選擇 Data Provider  
+##  <a name="choose-a-data-provider"></a><a name="bkmk_provider"></a> 選擇資料提供者  
  您可以使用 Managed [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或原生 OLE DB 提供者進行連接。 建議之 SQL Server 資料來源的資料提供者是 SQL Server Native Client，因為其通常提供較佳的效能。  
   
  若為 Oracle 及其他協力廠商資料來源，請檢查協力廠商是否提供原生 OLE DB 提供者，並先嘗試此原生 OLE DB 提供者。 如果發生錯誤，請嘗試 [連接管理員] 中列出的其他 .NET 提供者或原生 OLE DB 提供者。 確定您使用的任何資料提供者，已安裝在用來開發及執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的所有電腦上。  
   
-##  <a name="bkmk_impersonation"></a>設定認證和模擬選項  
+##  <a name="set-credentials-and-impersonation-options"></a><a name="bkmk_impersonation"></a> 設定認證和模擬選項  
  資料來源連接有時可以使用 Windows 驗證或資料庫管理系統提供的驗證服務，例如連接至 SQL Azure 資料庫時使用 SQL Server 驗證。 您指定的帳戶必須擁有遠端資料庫伺服器的登入及外部資料庫的讀取權限。  
   
 ### <a name="windows-authentication"></a>Windows 驗證  
@@ -63,13 +63,12 @@ ms.locfileid: "70175912"
  在模型中儲存資料來源物件之後，即會加密連接字串和密碼。  基於安全性的理由，當您後續在工具、指令碼或程式碼中檢視時，會隱藏連接字串中的密碼。  
   
 > [!NOTE]  
->  依預設， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不會在連接字串中儲存密碼。 如果未儲存此密碼， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在需要時提示您輸入密碼。 如果您選擇儲存密碼，此密碼會以加密格式儲存在資料連接字串中。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用包含資料來源之資料庫的資料庫加密金鑰來加密資料來源的密碼資訊。 將連接資訊加密之後，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶或密碼，否則將無法復原加密的資訊。 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
+>  依預設， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不會在連接字串中儲存密碼。 如果未儲存此密碼， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在需要時提示您輸入密碼。 如果您選擇儲存密碼，此密碼會以加密格式儲存在資料連接字串中。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用包含資料來源之資料庫的資料庫加密金鑰來加密資料來源的密碼資訊。 將連接資訊加密之後，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶或密碼，否則將無法復原加密的資訊。 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>定義資料採礦物件的模擬資訊  
  資料採礦查詢可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶的內容中執行，但是也可以在使用者提交查詢的內容或指定之使用者的內容中執行； 查詢執行所在的內容可能會影響查詢結果。 如果是資料採礦 `OPENQUERY` 類型的作業，您可能會希望資料採礦查詢在目前使用者的內容或指定之使用者的內容中執行 (不論執行查詢的使用者是誰)，而不是在此服務帳戶的內容中執行， 如此可使用有限的安全性認證來執行查詢。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模擬目前的使用者或是模擬指定的使用者，請選取 [使用特定的使用者名稱和密碼]**** 或 [使用目前使用者的認證]**** 選項。  
   
-##  <a name="bkmk_steps"></a>使用資料來源建立資料來源 Wizard  
+##  <a name="create-a-data-source-using-the-data-source-wizard"></a><a name="bkmk_steps"></a>使用資料來源建立資料來源 Wizard  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟您想要在其中定義資料來源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，或是連接到您想要在其中定義資料來源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
@@ -87,9 +86,9 @@ ms.locfileid: "70175912"
   
 5.  輸入選定提供者所要求的資訊，以連接到基礎資料來源。 如果已選取 **原生 OLE DB\SQL Server Native Client** 提供者，請輸入下列資訊：  
   
-    1.  [**伺服器名稱**] 是資料庫引擎實例的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝為已命名的實例，您必須包含實例名稱（例如， \<computername>\\<instancename\>）。  
+    1.  [伺服器名稱]**** 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝為已命名的實例，您必須包含實例名稱（例如， \<computername>\\<instancename\>）。  
   
-    2.  **[登入伺服器**] 會指定連接的驗證方式。 [**使用 Windows 驗證**] 會使用 windows 驗證。 **使用 SQL Server 驗證**會指定 Azure SQL 資料庫的資料庫使用者登入，或支援混合模式驗證的 SQL Server 實例。  
+    2.  [登入伺服器]**** 會指定驗證連接的方式。 [使用 Windows 驗證]**** 會使用 Windows 驗證。 **使用 SQL Server 驗證**會指定 Azure SQL 資料庫的資料庫使用者登入，或支援混合模式驗證的 SQL Server 實例。  
   
         > [!IMPORTANT]  
         >  [連線管理員] 會針對使用 SQL Server 驗證的連接加入 [儲存我的密碼]**** 核取方塊。 雖然系統一定會顯示此核取方塊，但是不一定會使用它。  
@@ -98,7 +97,7 @@ ms.locfileid: "70175912"
         >   
         >  這種行為僅適用於 a) 保存在 Analysis Services 伺服器執行個體上的資料庫，以及 b) 使用 SQL Server 驗證來重新整理或處理關聯式資料的資料庫。 它不適用於您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定而且僅用於工作階段持續時間的資料來源連接。 雖然您無法移除已經儲存的密碼，不過可以使用不同的認證或 Windows 驗證來覆寫目前與資料庫一起儲存的使用者資訊。  
   
-    3.  [**選取或輸入資料庫名稱**] 或 [**附加資料庫**檔案] 是用來指定資料庫。  
+    3.  [選取或輸入資料庫名稱]**** 或 [附加資料庫檔案]**** 是用來指定資料庫。  
   
     4.  在此對話方塊的左側按一下 [全部]****，即可檢視這個連接的其他設定，包括這個提供者的所有預設值。  
   
@@ -112,9 +111,9 @@ ms.locfileid: "70175912"
   
      根據您使用資料來源的方式而定，選擇模擬選項的指導方針會有所不同。 如果是處理工作， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務在連接到資料來源時，必須在其服務帳戶或指定之使用者帳戶的安全性內容中執行。  
   
-    -   **使用特定的 Windows 使用者名稱和密碼**來指定一組唯一的最低許可權認證。  
+    -   [使用特定的 Windows 使用者名稱和密碼]**** 會指定一組唯一的最低權限認證。  
   
-    -   **使用服務帳戶**來處理使用服務識別的資料。  
+    -   [使用服務帳戶]**** 會使用服務識別處理資料。  
   
      您指定的帳戶必須擁有資料來源的讀取權限。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "70175912"
   
 9. 按一下 [完成]  。  方案總管中的 [資料來源]**** 資料夾會顯示新的資料來源。  
   
-##  <a name="bkmk_connection"></a>使用現有的連接建立資料來源  
+##  <a name="create-a-data-source-using-an-existing-connection"></a><a name="bkmk_connection"></a>使用現有的連接建立資料來源  
  當您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中工作時，您的資料來源可以根據方案中的現有資料來源，也可以根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 [資料來源精靈] 提供幾個選項用於建立資料來源物件，包括使用相同專案中的現有連接。  
   
 -   根據方案中的現有資料來源來建立資料來源時，可讓您定義與現有資料來源同步的資料來源。 當建立包含這個新資料來源的專案時，會使用基礎資料來源中的資料來源設定。  
@@ -131,7 +130,7 @@ ms.locfileid: "70175912"
   
  當您參考資料來源物件時，只能在參考的物件或專案中編輯該物件， 您無法在包含此參考的資料來源物件中編輯連接字串。 參考的物件或專案中的連接資訊變更會在建立新的資料來源時，出現在其中。 當您建立專案或清除資料來源設計師中的參考時，會同步處理出現在專案之資料來源 (.ds) 檔案中的連接字串資訊。  
   
-##  <a name="bkmk_ConnectionString"></a>查看或編輯連接屬性  
+##  <a name="view-or-edit-connection-properties"></a><a name="bkmk_ConnectionString"></a>查看或編輯連接屬性  
  連接字串是根據您在 [資料來源設計師] 或 [新增資料來源精靈] 中選取的屬性所構成。 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中檢視連接字串及其他屬性。  
   
  **若要編輯連接字串**  
@@ -148,7 +147,7 @@ ms.locfileid: "70175912"
   
  您可清除核取方塊來移除參考。 這樣即可結束物件間的同步處理，並讓您可以變更資料來源中的連接字串。  
   
-##  <a name="bkmk_multipleDS"></a>將多個資料來源加入至模型  
+##  <a name="add-multiple-data-sources-to-a-model"></a><a name="bkmk_multipleDS"></a> 在模型中加入多個資料來源  
  您可以建立多個資料來源物件，以支援與其他資料來源的連接。 每個資料來源都必須擁有可用來建立關聯性的資料行。  
   
 > [!NOTE]  

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305234"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys.databases pdw_nodes_partitions （Transact-sql）
@@ -26,20 +26,20 @@ ms.locfileid: "72305234"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|partition_id|**Bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。|  
+|partition_id|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。|  
 |object_id|**int**|此資料分割所屬物件的識別碼。 每份資料表或檢視表至少都是由一個資料分割組成。|  
 |index_id|**int**|此資料分割所屬物件內的索引識別碼。|  
 |partition_number|**int**|在作為擁有索引或堆積內，以 1 為底的資料分割編號。 若[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]為，則此資料行的值為1。|  
-|hobt_id|**Bigint**|資料堆積或 B 型樹狀目錄（HoBT）的識別碼，其中包含此分割區的資料列。|  
-|rows|**BIGINT**|這個資料分割中的近似資料列數。 |  
+|hobt_id|**bigint**|資料堆積或 B 型樹狀目錄（HoBT）的識別碼，其中包含此分割區的資料列。|  
+|rows|**bigint**|這個資料分割中的近似資料列數。 |  
 |data_compression|**int**|表示每個資料分割的壓縮狀態：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**Nvarchar （60）**|表示每個資料分割的壓縮狀態。 可能的值是 NONE、ROW 和 PAGE。|  
+|data_compression_desc|**nvarchar(60)**|表示每個資料分割的壓縮狀態。 可能的值是 NONE、ROW 和 PAGE。|  
 |pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點的唯一識別碼。|  
   
 ## <a name="permissions"></a>權限  
  需要 `CONTROL SERVER` 權限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>範例 A：顯示每個散發中每個資料分割內的資料列 
 
@@ -49,7 +49,7 @@ ms.locfileid: "72305234"
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>範例 B：使用系統檢視來查看資料表之每個散發的每個資料分割中的資料列
 
-**適用物件：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 此查詢會傳回資料表`myTable`中每個散發的每個資料分割中的資料列數目。  
  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

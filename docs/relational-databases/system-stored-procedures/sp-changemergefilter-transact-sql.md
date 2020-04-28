@@ -16,10 +16,10 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304945"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -59,11 +59,11 @@ sp_changemergefilter [ @publication= ] 'publication'
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|聯結篩選。<br /><br /> 支援 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者需要這個選項。|  
 ||**2**|邏輯記錄關聯性。|  
-||**第**|聯結篩選也是一項邏輯記錄關聯性。|  
+||**3**|聯結篩選也是一項邏輯記錄關聯性。|  
 |**filtername**||篩選的名稱。|  
 |**join_articlename**||聯結發行項的名稱。|  
 |**join_filterclause**||篩選子句。|  
-|**join_unique_key**|**真正**|聯結作用於唯一索引鍵|  
+|**join_unique_key**|**true**|聯結作用於唯一索引鍵|  
 ||**false**|聯結不作用於唯一索引鍵|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`認可這個預存程式所採取的動作可能會使現有的快照集失效。 *force_invalidate_snapshot*是**bit**，預設值是**0**。  

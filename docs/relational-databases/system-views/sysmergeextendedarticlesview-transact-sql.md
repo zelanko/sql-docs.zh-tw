@@ -18,10 +18,10 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278178"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "72278178"
 |**pubid**|**uniqueidentifier**|目前發行項所屬發行集的識別碼。|  
 |**昵稱**|**int**|發行項識別的暱稱對應。|  
 |**column_tracking**|**int**|指出是否實作發行項的資料行追蹤。|  
-|**狀態**|**tinyint**|指出發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 未同步-發行資料表的初始處理腳本會在下一次執行快照集代理程式時執行。<br /><br /> **2** = 主動-已執行發行資料表的初始處理腳本。<br /><br /> **5** = 要加入 New_inactive。<br /><br /> **6** = 要加入 New_active。|  
+|**status**|**tinyint**|指出發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 未同步-發行資料表的初始處理腳本會在下一次執行快照集代理程式時執行。<br /><br /> **2** = 主動-已執行發行資料表的初始處理腳本。<br /><br /> **5** = 要加入 New_inactive。<br /><br /> **6** = 要加入 New_active。|  
 |**conflict_table**|**sysname**|包含目前發行項的衝突記錄之本機資料表的名稱。 提供這份資料表只供參考，自訂衝突解決常式可以修改或刪除它的內容，管理員也可以直接修改或刪除它的內容。|  
 |**creation_script**|**nvarchar(255)**|這個發行項的建立指令碼。|  
 |**conflict_script**|**nvarchar(255)**|這個發行項的衝突指令碼。|  
@@ -54,14 +54,14 @@ ms.locfileid: "72278178"
 |**schema_option**|**binary （8）**|如需*schema_option*的支援值，請參閱[sp_addmergearticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 |**destination_object**|**sysname**|在訂閱者端建立之資料表的名稱。|  
 |**resolver_clsid**|**nvarchar(50)**|自訂衝突解析程式的識別碼。|  
-|**subset_filterclause**|**Nvarchar （1000）**|這個發行項的篩選子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|這個發行項的篩選子句。|  
 |**missing_col_count**|**int**|遺漏的資料行數。|  
-|**missing_cols**|**Varbinary （128）**|遺漏資料行的點陣圖。|  
-|**資料行**|**Varbinary （128）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**missing_cols**|**varbinary(128)**|遺漏資料行的點陣圖。|  
+|**資料行**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resolver_info**|**nvarchar(255)**|自訂衝突解析程式所需要之其他資訊的儲存體。|  
 |**view_sel_proc**|**Nvarchar （290）**|合併代理程式用來初始擴展動態篩選發行集的發行項以及列舉任何篩選發行集中已變更之資料列的預存程序名稱。|  
 |**gen_cur**|**int**|發行項基底資料表的本機變更產生數目。|  
-|**excluded_cols**|**Varbinary （128）**|在傳送給訂閱者的發行項中排除資料行的點陣圖。|  
+|**excluded_cols**|**varbinary(128)**|在傳送給訂閱者的發行項中排除資料行的點陣圖。|  
 |**excluded_col_count**|**int**|排除的資料行數。|  
 |**vertical_partition**|**int**|指定是否啟用資料表發行項的資料行篩選。 **0**表示沒有垂直篩選，而且會發行所有資料行。|  
 |**identity_support**|**int**|指定是否啟用自動識別範圍處理。 **1**表示已啟用識別範圍處理， **0**表示不支援識別範圍。|  
@@ -81,8 +81,8 @@ ms.locfileid: "72278178"
 |**before_upd_view_objid**|**int**|在更新之前，資料表的檢視之識別碼。|  
 |**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不復寫刪除。<br /><br /> **1** = 已複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當*delete_tracking*的值為**0**時，必須在發行者端手動移除在訂閱者端刪除的資料列，而且必須在訂閱者端手動移除在發行者端刪除的資料列。<br /><br /> 注意： **0**值會導致非聚合。|  
 |**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作已停用。<br /><br /> **1** = 無法在訂閱者或發行者端套用的變更，一律會導致補償動作復原這些變更，這是合併式複寫的預設行為。<br /><br /> 注意： **0**值會導致非聚合。|  
-|**pub_range**|**Bigint**|發行者識別範圍大小。|  
-|**格或**|**Bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
+|**pub_range**|**bigint**|發行者識別範圍大小。|  
+|**格或**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
 |**閾值**|**int**|識別範圍臨界值百分比。|  
 |**metadata_select_proc**|**sysname**|用來存取合併式複寫系統資料表中的中繼資料之自動產生預存程序的名稱。|  
 |**stream_blob_columns**|**bit**|指定當複寫二進位大型物件資料行時，是否使用資料流最佳化。 **1**表示將嘗試優化。|  

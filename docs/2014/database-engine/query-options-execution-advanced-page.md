@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199322"
 ---
 # <a name="query-options-execution-advanced-page"></a>查詢選項執行 (進階頁面)
@@ -35,11 +35,11 @@ ms.locfileid: "71199322"
   
 **設定 SHOWPLAN_TEXT**選取這個核取方塊時，會以文字形式傳回查詢計劃與每個查詢。 依預設，會清除此選項。
   
-**設定統計資料時間**選取此核取方塊時，每個查詢都會傳回時間統計資料。 依預設，會清除此選項。
+**SET STATISTICS TIME** 如果選取此核取方塊，則每個查詢就會一併傳回時間統計資料。 依預設，會清除此選項。
   
 **設定統計資料 IO**如果選取此核取方塊，每個查詢都會傳回關於輸入/輸出（i/o）的統計資料。 依預設，會清除此選項。
   
-**設定交易隔離等級**預設會設定讀取認可的交易隔離等級。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。 無法使用快照集交易隔離等級。 若要使用 SNAPSHOT 隔離，請加入下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式：
+**SET TRANSACTION ISOLATION LEVEL** 依預設，會設定 READ COMMITTED 交易隔離等級。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。 無法使用快照集交易隔離等級。 若要使用 SNAPSHOT 隔離，請加入下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式：
   
   ```sql
   SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
@@ -66,4 +66,4 @@ ms.locfileid: "71199322"
 
 如需詳細資訊，請參閱[使用 secure 記憶體保護區](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions)和[secure 記憶體保護區證明](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)Always Encrypted。
 
-**重設為預設值**將此頁面上的所有值重設為原始的預設值。
+**重設為預設值** 將此頁面上的所有值重設為原始預設值。

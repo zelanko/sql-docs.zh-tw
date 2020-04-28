@@ -16,10 +16,10 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72173549"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -67,7 +67,7 @@ sp_table_validation [ @table = ] 'table'
 |-----------|-----------------|  
 |**0**|利用 COUNT(*) 執行完整計數。|  
 |**1**|會從**sysindexes**快速計數。 計算**sysindexes**中的資料列，比計算實際資料表中的資料列快很多。 不過，因為**sysindexes**會延遲更新，所以資料列計數可能不正確。|  
-|**2** （預設值）|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 Null，而預存程式是用來取得值，則一律會使用完整的 COUNT （*）。|  
+|**2** (預設值)|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 Null，而預存程式是用來取得值，則一律會使用完整的 COUNT （*）。|  
   
 `[ @shutdown_agent = ] shutdown_agent`如果散發代理程式是**sp_table_validation**執行，則指定是否要在驗證完成時立即關閉散發代理程式。 *shutdown_agent*是**bit**，預設值是**0**。 如果是**0**，就不會關閉複寫代理程式。 如果是**1**，就會引發錯誤20578，並將複寫代理程式發出信號關閉。 當使用者直接執行**sp_table_validation**時，就會忽略這個參數。  
   

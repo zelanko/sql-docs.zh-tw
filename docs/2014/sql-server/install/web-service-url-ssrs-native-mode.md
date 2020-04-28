@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952358"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服務 URL (SSRS 原生模式)
@@ -34,24 +34,24 @@ ms.locfileid: "71952358"
   
  如果您已重新安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後發現您在嘗試使用 [全部指派] 的預設 IP 位址值和通訊埠 80 時得到錯誤，通常可以在重新啟動此服務之後，重新建立 URL 來解決錯誤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **虛擬目錄**  
  為報表伺服器 Web 服務指定虛擬目錄名稱。 相同電腦上的每一個報表伺服器 Web 服務執行個體只能有一個虛擬名稱。  
   
  **IP 位址**  
  識別 TCP/IP 網路上的報表伺服器電腦。 有效值包括：  
   
--   [**全部指派**] 會指定指派給電腦的任何 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
+-   **[全部指派]** 會指定指派給電腦的任何一個 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
   
--   [**全部未指派**] 會指定報表伺服器將接受完全不符合 IP 位址或主機名稱的任何要求。 如果有另一個 Web 應用程式已經在使用這個值，請勿使用它。 如果您這樣做，您將會中斷其他應用程式的服務。  
+-   **[全未指派]** 會指定報表伺服器將會接受未完全符合 IP 位址或主機名稱的任何要求。 如果有另一個 Web 應用程式已經在使用這個值，請勿使用它。 如果您這樣做，您將會中斷其他應用程式的服務。  
   
--   **127.0.0.1**是用來存取 localhost。 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
+-   **[127.0.0.1]** 是用來存取 localhost， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
--   *Nnn* . nnn 是電腦上網路介面卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<標頭>：*nnnn： nnnn： nnnn： nnnn*  
+-   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<標頭>：*nnnn： nnnn： nnnn： nnnn*  
   
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
- **[TCP 動態通訊埠]**  
+ **TCP 埠**  
  指定報表伺服器用來監視 HTTP 要求的通訊埠，看看是否有包含報表伺服器虛擬目錄名稱的 URL。  
   
  **SSL 憑證**  
@@ -59,10 +59,10 @@ ms.locfileid: "71952358"
   
  如果您要使用憑證，也必須修改 RSReportServer.config 檔案中的 `UrlRoot` 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 在原生模式報表伺服器上設定 SSL 連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **SSL 埠**  
+ **SSL 通訊埠**  
  為 SSL 連接指定通訊埠。  
   
- **Url**  
+ **URL**  
  顯示為目前報表伺服器執行個體定義的 URL。  
   
  **進階**  

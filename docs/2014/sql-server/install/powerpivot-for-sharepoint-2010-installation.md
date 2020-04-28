@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952056"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 安裝
-  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是一種伺服器元件的集合，針對發行至 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿提供查詢處理和管理控制。 服務包括 Analysis Services 引擎和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務。  
   
 > [!NOTE]  
@@ -26,8 +25,7 @@ ms.locfileid: "71952056"
 >   
 >  -   [SQL Server 服務安裝的總覽](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)中的「SQL SERVER 2012 SP1」一節。  
   
- Analysis Services 會為含有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 工作簿，提供伺服器端的處理。 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會與 Analysis Services 一起運作，並加入 SharePoint 整合、負載平衡及連接管理。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]藉由將其大規模資料處理功能與 Excel 提供的資料轉譯服務配對，來擴充 Excel Services。  
+ Analysis Services 會為含有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 工作簿，提供伺服器端的處理。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會與 Analysis Services 一起運作，並加入 SharePoint 整合、負載平衡及連接管理。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]藉由將其大規模資料處理功能與 Excel 提供的資料轉譯服務配對，來擴充 Excel Services。  
   
  若要安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，請使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝媒體。  
   
@@ -51,6 +49,6 @@ ms.locfileid: "71952056"
  [初始設定 &#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [管理中心的 PowerPivot 伺服器管理和組態](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
+ [管理中心的 PowerPivot 伺服器管理和設定](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

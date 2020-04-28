@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952037"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 組態管理員 F1 說明主題 (SSRS 原生模式)
@@ -38,7 +38,7 @@ ms.locfileid: "71952037"
   
 -   [Database](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
--   [變更資料庫 Wizard](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
+-   [變更資料庫精靈](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
 -   [變更認證精靈](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   

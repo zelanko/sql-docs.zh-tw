@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689044"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -46,7 +46,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是 sysname，預設值是 Null。  
   
 > [!NOTE]  
->  ** 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者要求發行集資訊時，不應指定發行者。  
+>  *publisher*從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者要求發行集資訊時，不應指定發行者。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -56,7 +56,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |NAME|**sysname**|發行集的名稱。|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|發行集的目前狀態。<br /><br /> **0** = 非使用中。<br /><br /> **1** = 使用中。|  
-|工作||使用這個項目的目的，是為了與舊版相容。|  
+|工作 (task)||使用這個項目的目的，是為了與舊版相容。|  
 |replication frequency|**tinyint**|複寫頻率的類型：<br /><br /> **0** = 交易式<br /><br /> **1** = 快照集|  
 |synchronization method|**tinyint**|同步模式：<br /><br /> **0** = 原生大量複製程式（**bcp**公用程式）<br /><br /> **1** = 字元大量複製<br /><br /> **3** = 並行，這表示會使用原生大量複製（**bcp**公用程式），但在快照集期間，不會鎖定資料表<br /><br /> **4** = Concurrent_c，這表示會使用字元大量複製，但在快照集期間，不會鎖定資料表|  
 |description|**nvarchar(255)**|發行集的選擇性描述。|  
@@ -69,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|快照代理程式是否要產生快照集供新訂閱使用。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，才會定義這個參數。|  
 |allow_sync_tran|**bit**|發行集是否允許立即更新訂閱。|  
 |autogen_sync_procs|**bit**|是否要自動產生預存程序，以支援立即更新訂閱。|  
-|snapshot_jobid|**binary （16）**|排程工作識別碼。|  
+|snapshot_jobid|**binary(16)**|排程工作識別碼。|  
 |retention|**int**|給定發行集的變更儲存量 (以小時為單位)。|  
 |has subscription|**bit**|發行集是否有使用中的訂閱。 **1**表示發行集具有使用中的訂閱，而**0**表示發行集沒有訂閱。|  
 |allow_queued_tran|**bit**|指定是否停用在訂閱者端將變更放入佇列中，直到可以在發行者端套用這些變更為止。 如果是**0**，就不會將訂閱者端的變更排入佇列。|  
@@ -88,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|指定衝突保留週期 (以天為單位)。|  
 |conflict_policy|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 發行者在衝突中獲勝。<br /><br /> **2** = 訂閱者在衝突中獲勝。<br /><br /> **3** = 重新初始化訂閱。|  
 |queue_type||指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列來儲存交易。<br /><br /> **sql** = 用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 注意：訊息佇列的支援已停用。|  
-|backward_comp_level||資料庫相容性層級，它可以是下列項目之一：<br /><br /> ****  =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> ****  =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90**  =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 值為**1**表示已發行，而值為**0**則表示未發行。|  
 |allow_initialize_from_backup|**bit**|指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 **1**表示可以從備份初始化訂閱，而**0**表示它們不能。 如需詳細資訊，請參閱[初始化交易式訂閱，而不建立](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)快照集的交易式訂閱者。|  
 |replicate_ddl|**int**|指出是否支援發行集的結構描述複寫。 **1**表示複寫在發行者端執行的資料定義語言（ddl）語句， **0**表示不復寫 DDL 語句。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952617"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列
@@ -33,11 +33,11 @@ ms.locfileid: "71952617"
 ## <a name="installation-scenarios"></a>安裝案例  
  下表說明將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝至現有 SharePoint 伺服器陣列中的可能案例。 本機模式可讓您從 SharePoint 文件庫本機轉譯報表，而不需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 需要 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集，但不需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 如需原生模式的詳細資訊，請參閱[報表檢視器中的原生模式與連接模式報表 &#40;在 Sharepoint 模式中 Reporting Services&#41;](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)以及[尋找適用于 sharepoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
-|正在啟動組態|工作流程|正在結束組態|註解|  
+|正在啟動組態|工作流程|正在結束組態|評價|  
 |----------------------------|--------------|--------------------------|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]在原生模式中|安裝|已連接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  
-|連接模式[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|就地升級|已連接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  
-|連接模式[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|遷移|已連接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  
+|本機模式的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|安裝|已連接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  
+|已連接模式  或 |就地升級|已連接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  
+|已連接模式  或 |移轉|已連接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  
   
 ## <a name="installation-and-in-place-upgrade-checklist"></a>安裝和就地升級檢查清單  
  下表摘要說明您應檢閱及用於安裝的步驟、工具及資訊：  
@@ -51,7 +51,7 @@ ms.locfileid: "71952617"
 |**其他設定**||  
 |將 SSRS 內容類型加入您的文件庫。|[將報表伺服器內容類型加入至 SharePoint 整合模式下的程式庫 &#40;Reporting Services&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |佈建 SQL Server Agent|[SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
-|設定服務應用程式的電子郵件設定|[&#40;SharePoint 2010 和 SharePoint 2013 設定 Reporting Services 服務應用程式的電子郵件&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|設定服務應用程式的電子郵件設定|[設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |設定對 Windows Token 服務的宣告 (c2WTS)|[對 Windows Token 服務的宣告 &#40;C2WTS&#41; 和 Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>移轉檢查清單  
@@ -59,15 +59,12 @@ ms.locfileid: "71952617"
   
 |步驟|連結|  
 |----------|----------|  
-|安裝及設定新伺服器。 這包括下列項目：<br /><br /> SharePoint 產品準備工具<br /><br /> SharePoint 2010 產品<br /><br /> SharePoint 2010 SP1<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式中的<br /><br /> SharePoint 2010 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集|[安裝 SharePoint 2010 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|安裝及設定新伺服器。 這包括下列項目：<br /><br /> SharePoint 產品準備工具<br /><br /> SharePoint 2010 產品<br /><br /> SharePoint 2010 SP1<br /><br /> SharePoint 模式的 <br /><br /> SharePoint 2010 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集|[安裝 SharePoint 2010 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |至少建立一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式||  
 |備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫||  
 |備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰||  
 |還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫和加密金鑰||  
-|將所有 Web 應用程式對應至新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式|
-  **
-  **
-|  
+|將所有 Web 應用程式對應至新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式|****|  
 |移除舊伺服器上的整合 URL。|從 SharePoint 管理中心的 **[一般應用程式設定]** 頁面上，按一下 **[Reporting Services 整合]**。|  
 |視需要從舊安裝解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。||  
   

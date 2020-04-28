@@ -18,10 +18,10 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305296"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
@@ -75,13 +75,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event (7.0 Insert)|發生在執行 SELECT、INSERT 或 UPDATE 陳述式之前。|  
 |29-31|Reserved|改用事件 28。|  
 |32|Reserved|Reserved|  
-|33|Exception|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生例外狀況。|  
+|33|例外狀況|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生例外狀況。|  
 |34|SP:CacheMiss|指出在程序快取中找不到預存程序。|  
 |35|SP:CacheInsert|指出項目已插入程序快取中。|  
 |36|SP:CacheRemove|指出已從程序快取中移除項目。|  
 |37|SP:Recompile|指出已重新編譯預存程序。|  
 |38|SP:CacheHit|指出在程序快取中找到預存程序。|  
-|39|取代|取代|  
+|39|已被取代|已被取代|  
 |40|SQL:StmtStarting|發生在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式已啟動之時。|  
 |41|SQL:StmtCompleted|發生在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式已完成之時。|  
 |42|SP:Starting|指出已啟動預存程序。|  
@@ -118,8 +118,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|關閉 ODBC、OLE DB 或 DB-Library 先前已開啟的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式資料指標。|  
 |79|Missing Column Statistics|無法取得最佳化工具可能用到的資料行統計資料。|  
 |80|Missing Join Predicate|正在執行沒有聯結述詞的查詢。 這可能造成長時間執行的查詢。|  
-|81|Server Memory Change|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體用量已增加或減少 1 MB 或最大伺服器記憶體的 5%，兩者中取較大者。|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體用量已增加或減少 1 MB 或最大伺服器記憶體的 5%，兩者中取較大者。|  
 |82-91|User Configurable (0 -9)|使用者所定義的事件資料。|  
 |92|Data File Auto Grow|指出伺服器已自動擴充資料檔。|  
 |93|Log File Auto Grow|指出伺服器已自動擴充記錄檔。|  
@@ -248,21 +247,21 @@ sp_trace_setevent [ @traceid = ] trace_id
 |3|**DatabaseID**|由 USE *database*語句所指定的資料庫識別碼，或者如果沒有針對指定連接發出 use *database*語句，則是預設的資料庫。<br /><br /> 您可以利用 DB_ID 函數來決定資料庫的值。|  
 |4|**TransactionID**|由系統指派給交易的識別碼。|  
 |5|**LineNumber**|包含錯誤行號。 如果事件與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如 **SP:StmtStarting**) 有關， **LineNumber** 便會將陳述式的行數包含在預存程序或批次中。|  
-|6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 使用者名稱。|  
+|6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者名稱。|  
 |7|**NTDomainName**|使用者所隸屬的 Windows 網域。|  
-|8|**名稱**|引發要求的用戶端電腦名稱。|  
+|8|**HostName**|引發要求的用戶端電腦名稱。|  
 |9|**ClientProcessID**|用戶端電腦指派給執行用戶端應用程式之處理序的識別碼。|  
 |10|**ApplicationName**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|  
 |11|**LoginName**|用戶端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。|  
 |12|**SPID**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|  
-|13|**有效期間**|事件所經歷的時間 (以百萬分之一秒為單位)。 這個資料行不是由 Hash Warning 事件來擴展。|  
+|13|**Duration**|事件所經歷的時間 (以百萬分之一秒為單位)。 這個資料行不是由 Hash Warning 事件來擴展。|  
 |14|**StartTime**|事件的開始時間 (如果可以取得的話)。|  
 |15|**EndTime**|事件結束的時間。 啟動事件類別 (如 **SQL:BatchStarting** 或 **SP:Starting**) 不會擴展這個資料行。 **雜湊警告**事件也不會填入此專案。|  
-|16|**讀取**|伺服器代表事件執行的邏輯磁碟讀取數。 **Lock：已釋放**事件不會填入此資料行。|  
+|16|**顯示**|伺服器代表事件執行的邏輯磁碟讀取數。 **Lock：已釋放**事件不會填入此資料行。|  
 |17|**寫入**|伺服器代表事件執行的實體磁碟寫入數。|  
-|18|**CPU**|事件所用的 CPU 時間 (以毫秒為單位)。|  
+|18|**使用率**|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |19|**權限**|代表權限的點陣圖；供安全性稽核使用。|  
-|20|**Severity**|例外狀況的嚴重性層級。|  
+|20|**嚴重性**|例外狀況的嚴重性層級。|  
 |21|**EventSubClass**|事件子類別的類型。 所有事件類別的這個資料行都不會擴展。|  
 |22|**ObjectID**|系統指派給物件的識別碼。|  
 |23|「成功」 |嘗試使用權限成功；用來進行稽核。<br /><br /> **1** = 成功**0** = 失敗|  
@@ -274,11 +273,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |29|**NestLevel**|這個預存程序正在執行的巢狀層級。 請[參閱@NESTLEVEL @ &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
 |30|**State**|發生錯誤時的伺服器狀態。|  
 |31|**錯誤**|錯誤號碼。|  
-|32|**模式**|取得的鎖定之鎖定模式。 **Lock：已釋放**事件不會填入此資料行。|  
-|33|**圖**|事件所參考之物件的控制代碼。|  
+|32|**Mode**|取得的鎖定之鎖定模式。 **Lock：已釋放**事件不會填入此資料行。|  
+|33|**Handle**|事件所參考之物件的控制代碼。|  
 |34|**ObjectName**|所存取之物件的名稱。|  
 |35|**DatabaseName**|USE *database*語句中指定的資料庫名稱。|  
-|36|**名稱**|修改的檔案名稱之邏輯名稱。|  
+|36|**FileName**|修改的檔案名稱之邏輯名稱。|  
 |37|**OwnerName**|參考的物件之擁有者名稱。|  
 |38|**RoleName**|陳述式的目標資料庫或伺服器範圍的角色名稱。|  
 |39|**TargetUserName**|某動作的目標使用者名稱。|  
@@ -287,10 +286,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |42|**TargetLoginName**|某動作的目標登入名稱。|  
 |43|**TargetLoginSid**|某動作之目標登入的 SID。|  
 |44|**ColumnPermissions**|資料行層級的權限狀態；供安全性稽核使用。|  
-|45|**連結**|連結伺服器的名稱。|  
+|45|**LinkedServerName**|連結伺服器的名稱。|  
 |46|**ProviderName**|OLE DB 提供者的名稱。|  
 |47|**名稱**|OLE DB 方法的名稱。|  
-|48|**資料列計數**|批次中的資料列數。|  
+|48|**RowCounts**|批次中的資料列數。|  
 |49|**RequestID**|包含陳述式之要求的識別碼。|  
 |50|**XactSequence**|用來描述目前交易的 Token。|  
 |51|**EventSequence**|此事件的序號。|  
@@ -299,13 +298,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|這是一個 GUID 值，會隨著追蹤所擷取的事件類別而不同。|  
 |55|**IntegerData2**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
 |56|**ObjectID2**|相關物件或實體的識別碼 (如果可以取得的話)。|  
-|57|**型別**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
+|57|**類型**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
 |58|**OwnerID**|擁有鎖定的物件類型。 只適用於鎖定事件。|  
 |59|**ParentName**|物件所在結構描述的名稱。|  
 |60|**IsSystem**|指出事件是發生在系統處理序或使用者處理序。<br /><br /> **1** = 系統<br /><br /> **0** = 使用者。|  
-|61|**投影**|預存程序或批次內之陳述式的起始位移。|  
+|61|**Offset**|預存程序或批次內之陳述式的起始位移。|  
 |62|**SourceDatabaseID**|物件來源所在的資料庫識別碼。|  
-|63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
+|63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 此值可以傳遞給**sys.databases dm_exec_sql_text （）** ，以取得相關聯的 sql 文字。|  
 |64|**SessionLoginName**|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
   
  **[ @on=]** *開啟*  
@@ -336,7 +335,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|指定的資料行無效。|  
 |9|指定的追蹤控制代碼無效。|  
 |11|在內部使用指定的資料行，無法將它移除。|  
-|13|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|13|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
 |16|函數對於這項追蹤無效。|  
   
 ## <a name="remarks"></a>備註  
@@ -359,7 +358,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>另請參閱  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  

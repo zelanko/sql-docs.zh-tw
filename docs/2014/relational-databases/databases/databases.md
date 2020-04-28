@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154577"
 ---
 # <a name="databases"></a>資料庫
@@ -42,20 +42,20 @@ ms.locfileid: "70154577"
 |-|-|  
 |[系統資料庫](system-databases.md)|[刪除資料庫的資料或記錄檔](delete-data-or-log-files-from-a-database.md)|  
 |[自主資料庫](contained-databases.md)|[顯示資料庫的資料和記錄空間資訊](display-data-and-log-space-information-for-a-database.md)|  
-|[Azure 中的 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
+|[在 Azure 中 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
 |[資料庫檔案與檔案群組](database-files-and-filegroups.md)|[重新命名資料庫](rename-a-database.md)|  
 |[資料庫狀態](database-states.md)|[將資料庫設定為單一使用者模式](set-a-database-to-single-user-mode.md)|  
 |[檔案狀態](file-states.md)|[壓縮資料庫](shrink-a-database.md)|  
 |[估計資料庫的大小](estimate-the-size-of-a-database.md)|[壓縮檔案](shrink-a-file.md)|  
 |[複製資料庫至其他伺服器](copy-databases-to-other-servers.md)|[檢視或變更資料庫的屬性](view-or-change-the-properties-of-a-database.md)|  
-|[資料庫卸離與附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[檢視 SQL Server 執行個體上的資料庫清單](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
+|[資料庫卸離和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[檢視 SQL Server 執行個體上的資料庫清單](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[將資料或記錄檔加入資料庫](add-data-or-log-files-to-a-database.md)|[檢視或變更資料庫的相容性層級](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[變更資料庫的組態設定](change-the-configuration-settings-for-a-database.md)|[使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[建立資料庫](create-a-database.md)|[建立使用者定義資料類型別名](create-a-user-defined-data-type-alias.md)|  
 |[刪除資料庫](delete-a-database.md)|[資料庫快照集 &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>相關內容  
- [索引數](../indexes/indexes.md)  
+ [索引](../indexes/indexes.md)  
   
  [檢視](../views/views.md)  
   

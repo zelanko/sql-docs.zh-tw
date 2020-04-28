@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 62b4910d6073da7ec845cc5e754a4e005f5d1461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252162"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>適用于 DB2 的 SQL Server 移轉小幫手（DB2ToSQL）

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713315"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安裝 SSMA 元件（OracleToSQL）
@@ -62,13 +62,13 @@ SSMA 延伸模組套件會將**sysdb**和**ssmatesterdb**資料庫加入至指�
   
 3. 按兩下 [ **SSMA For Oracle Extension Pack]。*n*。安裝 .exe**。  
   
-4. 在 [歡迎]**** 頁面上，選取 [下一步]****。  
+4. 在 [歡迎]  頁面上，選取 [下一步]  。  
   
 5. 在 [**使用者授權合約**] 頁面上，閱讀授權合約。 如果您同意，請選取 [**我接受授權合約中的條款**] 核取方塊，然後選取 **[下一步]**。  
   
 6. 在 [**選擇安裝類型**] 頁面上，選取 [**一般**]。  
   
-7. 在 [**準備安裝**] 頁面上，選取 [**安裝**]。  
+7. 在 [已可安裝] **** 頁面上，選取 [安裝] ****。  
   
 8. 在 [**完成安裝的第一個步驟**] 頁面上，選取 **[下一步]**。  
   

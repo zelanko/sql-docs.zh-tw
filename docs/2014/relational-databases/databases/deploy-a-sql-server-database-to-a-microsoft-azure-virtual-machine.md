@@ -43,10 +43,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175735"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
@@ -54,7 +54,7 @@ ms.locfileid: "70175735"
   
  您不能針對差異備份使用此精靈，因為此精靈將不會覆寫資料庫名稱相同的現有資料庫。 若要取代 VM 上現有的資料庫，您必須先卸除現有資料庫或變更資料庫的名稱。 如果進行中部署作業的資料庫名稱與 VM 上的現有資料庫發生名稱衝突，此精靈將會建議針對進行中的資料庫附加資料庫名稱，好讓您完成作業。  
   
-##  <a name="before_you_begin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="before_you_begin"></a> 開始之前  
  若要完成這個精靈，您必須提供下列資訊並且完成以下組態設定：  
   
 -   與您的 Azure 訂用帳戶相關聯的 Microsoft 帳戶詳細資料。  
@@ -92,7 +92,7 @@ ms.locfileid: "70175735"
   
 -   啟用 JavaScript：[Internet Explorer] > [網際網路選項] > [安全性] > [自訂等級] > [指令碼處理] > [動態指令碼處理]：[啟用]****。  
   
-###  <a name="limitations"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="limitations"></a> 限制事項  
  此作業的資料庫大小限制為 1 TB。  
   
  適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的 SQL Server Management Studio 中提供此部署功能。  
@@ -119,14 +119,14 @@ ms.locfileid: "70175735"
   
  如果進行中部署作業的資料庫名稱與 VM 上的現有資料庫發生名稱衝突，此精靈將會建議針對進行中的資料庫附加資料庫名稱，好讓您完成作業。  
   
-###  <a name="filestream"></a>將啟用 FILESTREAM 的資料庫部署至 Azure VM 的考慮  
+###  <a name="considerations-for-deploying-a-filestream-enabled-database-to-an-azure-vm"></a><a name="filestream"></a> 將啟用 FILESTREAM 的資料庫部署至 Azure VM 的考量  
  所部署資料庫的 FILESTREAM 物件中有儲存的 BLOBS 時，請注意下列指導方針和限制：  
   
 -   部署功能無法將啟用 FILESTREAM 的資料庫部署至新的 VM。 如果在您執行精靈之前，FILESTREAM 未在 VM 中啟用，則資料庫還原作業將會失敗，而且精靈作業將無法順利完成。 若要成功部署使用 FILESTREAM 的資料庫，請在啟動精靈之前，於主 VM 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中啟用 FILESTREAM。 如需詳細資訊，請參閱 [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx)。  
   
 -   如果您的資料庫使用記憶體中 OLTP，則不需對資料庫進行任何修改，就可將資料庫部署到 Azure VM。 如需詳細資訊，請參閱 [In-Memory OLTP (記憶體中最佳化)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx)。  
   
-###  <a name="geography"></a>資產地理分佈的考慮  
+###  <a name="considerations-for-geographic-distribution-of-assets"></a><a name="geography"></a>資產地理分佈的考慮  
  請注意，下列資產必須位於同一個地理區域：  
   
 -   服務雲端  
@@ -137,14 +137,14 @@ ms.locfileid: "70175735"
   
  如果上列資產並非位於相同位置，則精靈將無法順利完成。  
   
-###  <a name="configuration_settings"></a>Wizard Configuration 設定  
+###  <a name="wizard-configuration-settings"></a><a name="configuration_settings"></a> 精靈組態設定  
  使用下列組態詳細資料修改設定，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署至 Azure VM。  
   
--   **設定檔案的預設路徑**-%LOCALAPPDATA%\SQL SERVER\DEPLOY TO to SQL in WA VM\DeploymentSettings.xml  
+-   **組態檔的預設路徑** - %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
   
 -   **組態檔結構**  
   
-    -   \<Deploymentsettings.json>  
+    -   \<DeploymentSettings>  
   
         -   <OtherSettings  
   
@@ -164,15 +164,14 @@ ms.locfileid: "70175735"
   
             -   Publisher="" />  
   
-    -   
-  \</DeploymentSettings>  
+    -   \</DeploymentSettings>  
   
- **設定檔值**  
+ **組態檔值**  
   
-###  <a name="permissions"></a> 權限  
+###  <a name="permissions"></a><a name="permissions"></a> 權限  
  部署的資料庫必須處於正常狀態、資料庫必須可供執行此精靈的使用者帳戶存取，而且使用者帳戶必須擁有執行備份作業的權限。  
   
-##  <a name="launch_wizard"></a>使用將資料庫部署至 Azure VM Wizard  
+##  <a name="using-the-deploy-database-to-azure-vm-wizard"></a><a name="launch_wizard"></a>使用將資料庫部署至 Azure VM Wizard  
  **若要啟動此精靈，請使用下列步驟：**  
   
 1.  使用 SQL Server Management Studio 連接到具有您想要部署之資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -183,31 +182,31 @@ ms.locfileid: "70175735"
   
 
   
-##  <a name="Introduction"></a> 簡介頁面  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面說明**如何將 SQL Server 資料庫部署至 AZURE VM**的 wizard。  
   
  **選項**  
   
 -   **不要再顯示此頁面。** - 按一下此核取方塊可不再顯示 [簡介] 頁面。  
   
--   **下一步**-繼續進行 [**來源設定**] 頁面。  
+-   **下一步** - 繼續進行 **[來源設定]** 頁面。  
   
--   **取消** - 取消作業並關閉精靈。  
+-   **取消**-取消作業並關閉嚮導。  
   
 -   說明 **-啟動**嚮導的 MSDN 說明主題。  
   
-##  <a name="Source_settings"></a>來源設定  
+##  <a name="source-settings"></a><a name="Source_settings"></a>來源設定  
  使用此頁面來連接到裝載您想[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要部署至 Azure VM 之資料庫的實例。 您也會指定暫存位置，以便從本機電腦儲存檔案，然後再將它們傳輸至 Azure。 這個位置可以是共用的網路位置。  
   
  **選項**  
   
 -   按一下 [**連接 ...]** ，然後針對裝載要部署之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫的實例指定連接詳細資料。  
   
--   使用 [選取資料庫]**** 下拉式清單來指定要部署的資料庫。  
+-   使用 **[選取資料庫]** 下拉式清單來指定要部署的資料庫。  
   
 -   在 [**其他設定**] 欄位中，指定可供 Azure VM 服務存取的共用資料夾。  
   
-##  <a name="Azure_sign-in"></a>Azure 登入  
+##  <a name="azure-sign-in"></a><a name="Azure_sign-in"></a>Azure 登入  
  使用此頁面來連線到 Azure，並提供管理憑證或發行設定檔詳細資料。  
   
  **選項**  
@@ -220,7 +219,7 @@ ms.locfileid: "70175735"
   
 -   **訂**用帳戶-選取、輸入或貼上符合本機憑證存放區或發行設定檔之管理憑證的 Azure 訂用帳戶識別碼。  
   
-##  <a name="Deployment_settings"></a>[部署設定] 頁面  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a>[部署設定] 頁面  
  使用此頁面來指定目的地伺服器以及提供新資料庫的詳細資料。  
   
  **選項**  
@@ -241,12 +240,12 @@ ms.locfileid: "70175735"
   
 -   **資料庫**-指定或確認新資料庫的名稱。 如果目的地 SQL Server 執行個體上已經有該資料庫名稱存在，建議您指定另一個修改的資料庫名稱。  
   
-##  <a name="Summary"></a> 摘要頁面  
- 使用此頁面可檢閱此作業的指定設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束精靈，請按一下 **[取消]**。  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
+ 使用此頁面可檢閱此作業的指定設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束嚮導，請按一下 [**取消**]。  
   
  將資料庫詳細資料部署至 Azure VM 上的 SQL Server 資料庫時，可能需要進行手動步驟。 我們將會詳細說明這些步驟。  
   
-##  <a name="Results"></a> 結果頁面  
+##  <a name="results-page"></a><a name="Results"></a>結果頁面  
  此頁面會報告部署作業成功或失敗，並顯示每個動作的結果。 發生錯誤的所有動作都會在 **[結果]** 資料行中指出。 按一下連結，即可檢視該動作的錯誤報告。  
   
  按一下 **[完成]** 關閉精靈。  

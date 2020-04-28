@@ -13,17 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c5c1a0593c6287cca48b4e241854b4145f4518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782322"
 ---
 # <a name="creating-altering-and-removing-rules"></a>建立、改變和移除規則
   在 SMO 中，規則會以 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件表示， 並由 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 屬性定義，該屬性是文字字串，包含使用運算子或述詞 (例如 IN、LIKE 或 BETWEEN) 的條件運算式。 規則不能參考資料行或其他資料庫物件。 未參考資料庫物件的內建函數可以包括在內。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 屬性中的定義必須包含參考所輸入之資料值的變數。 建立規則時，可以使用任何名稱或符號來代表值，但第一個字元必須是\@符號。  
+ <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 屬性中的定義必須包含參考所輸入之資料值的變數。 建立規則時，可以使用任何名稱或符號來代表值，但第一個字元必須是\@符號。  
   
 ## <a name="example"></a>範例  
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio .Net 中建立 VISUAL C&#35; SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
@@ -31,16 +30,14 @@ ms.locfileid: "72782322"
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- 
-  `Dim` 物件的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 陳述式會以完整的組件路徑指定，以避免與 System.Data 組件中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件混淆。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的 `Dim` 陳述式會以完整的組件路徑指定，以避免與 System.Data 組件中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件混淆。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBRules1](SMO How to#SMO_VBRules1)]  -->  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>在 Visual C# 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- 
-  `Dim` 物件的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 陳述式會以完整的組件路徑指定，以避免與 System.Data 組件中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件混淆。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的 `Dim` 陳述式會以完整的組件路徑指定，以避免與 System.Data 組件中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件混淆。  
   
 ```csharp
 {  
@@ -73,8 +70,7 @@ ms.locfileid: "72782322"
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>在 PowerShell 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- 
-  `Dim` 物件的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 陳述式會以完整的組件路徑指定，以避免與 System.Data 組件中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件混淆。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的 `Dim` 陳述式會以完整的組件路徑指定，以避免與 System.Data 組件中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件混淆。  
   
 ```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

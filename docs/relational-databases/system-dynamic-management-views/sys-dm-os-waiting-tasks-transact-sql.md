@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72260386"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -40,8 +40,8 @@ ms.locfileid: "72260386"
 |**waiting_task_address**|**varbinary(8)**|等候工作的位址。|  
 |**session_id**|**smallint**|與這項工作相關聯的工作階段識別碼。|  
 |**exec_context_id**|**int**|與這項工作相關聯的執行內容識別碼。|  
-|**wait_duration_ms**|**Bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這一段時間包含**signal_wait_time**。|  
-|**wait_type**|**Nvarchar （60）**|等候類型的名稱。|  
+|**wait_duration_ms**|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這一段時間包含**signal_wait_time**。|  
+|**wait_type**|**nvarchar(60)**|等候類型的名稱。|  
 |**resource_address**|**varbinary(8)**|工作在等候的資源位址。|  
 |**blocking_task_address**|**varbinary(8)**|目前保留這項資源的工作。|  
 |**blocking_session_id**|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，而無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  

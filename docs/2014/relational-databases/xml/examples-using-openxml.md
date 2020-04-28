@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874697"
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
@@ -95,8 +95,7 @@ LILAS      Carlos Gonzlez
   
  由於 <`Customer`> 元素不具有任何子元素，若相同的 SELECT 陳述式以 *flags* 設為 **2** 來執行 (表示元素中心的對應)，則兩個客戶的 **CustomerID** 及 **ContactName** 值將以 NULL 傳回。  
   
- 
-  @xmlDocument 也可以是 **ML** 類型或 **(n)varchar(max)** 類型。  
+ @xmlDocument 也可以是 **ML** 類型或 **(n)varchar(max)** 類型。  
   
  如果 XML 文件中的 <`CustomerID`> 和 <`ContactName`> 是子元素，元素中心的對應會擷取這些值。  
   

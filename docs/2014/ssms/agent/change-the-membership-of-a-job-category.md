@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782793"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>變更作業類別的成員資格
@@ -33,7 +33,7 @@ ms.locfileid: "72782793"
   
      [安全性](#Security)  
   
--   **若要變更作業類別目錄的成員資格，請使用：**  
+-   **若要使用下列項目變更作業類別目錄的成員資格：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -41,30 +41,30 @@ ms.locfileid: "72782793"
   
      [SQL Server 管理物件](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>變更作業類別目錄的成員資格  
   
 1.  在 **[物件總管]** 中，按一下加號展開要編輯作業類別目錄所在的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]** 。  
+2.  按一下加號展開 **[SQL Server Agent]**。  
   
 3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [管理作業類別目錄]****。  
   
-4.  在 [**管理作業類別目錄**_server_name_ ] 對話方塊中，選取您要編輯的作業類別目錄，然後按一下 [**查看作業**]。  
+4.  在 [管理作業類別目錄 <伺服器名稱>]****__ 對話方塊中，選取要編輯的作業類別目錄，然後按一下 [檢視作業]****。  
   
 5.  選取 **[顯示所有作業]** 核取方塊。  
   
-6.  若要將作業加入至類別目錄，在主要方格中選取該作業所對應之 **[選取]** 資料行中的核取方塊。 若要移除類別目錄中的作業，請清除該方塊。 完成後，請按一下 **[確定]** 。  
+6.  若要將作業加入至類別目錄，在主要方格中選取該作業所對應之 **[選取]** 資料行中的核取方塊。 若要移除類別目錄中的作業，請清除該方塊。 完成時按一下 **[確定]**。  
   
-7.  關閉 [**管理作業類別目錄**_server_name_ ] 對話方塊。  
+7.  關閉 [管理作業類別目錄 <伺服器名稱>]****__ 對話方塊。  
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>變更作業類別目錄的成員資格  
   
@@ -86,7 +86,7 @@ ms.locfileid: "72782793"
   
  如需詳細資訊，請參閱[sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)。  
   
-##  <a name="SMO"></a>使用 SQL Server 管理物件  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
  **變更作業類別目錄的成員資格**  
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `JobCategory` 類別。  

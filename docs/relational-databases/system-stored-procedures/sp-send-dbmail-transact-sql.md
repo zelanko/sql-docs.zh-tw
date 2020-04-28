@@ -19,10 +19,10 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71974370"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
@@ -143,7 +143,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 > [!NOTE]  
 >  當與大量資料搭配使用時， \@ **query_no_truncate**選項會耗用額外的資源，而且可能會降低伺服器效能。  
   
-`[ @query_result_no_padding ] @query_result_no_padding`此類型為 bit。 預設值是 0。 當您將設為1時，不會填補查詢結果，可能會減少檔案大小。如果您將\@query_result_no_padding 設定為1，並且設定\@query_result_width 參數，則\@query_result_no_padding 參數會覆\@寫 query_result_width 參數。  
+`[ @query_result_no_padding ] @query_result_no_padding`此類型為 bit。 預設值為 0。 當您將設為1時，不會填補查詢結果，可能會減少檔案大小。如果您將\@query_result_no_padding 設定為1，並且設定\@query_result_width 參數，則\@query_result_no_padding 參數會覆\@寫 query_result_width 參數。  
   
  在此情況下，不會發生任何錯誤。  
  
@@ -249,6 +249,6 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
   

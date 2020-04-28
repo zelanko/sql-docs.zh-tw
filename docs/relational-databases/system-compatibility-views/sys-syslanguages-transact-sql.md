@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874876"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -36,23 +36,20 @@ ms.locfileid: "70874876"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|唯一語言識別碼。|  
-|dateformat|**Nchar （3）**|日期的順序，例如 DMY。|  
+|dateformat|**nchar(3)**|日期的順序，例如 DMY。|  
 |datefirst|**tinyint**|每週第一天：1 代表星期一，2 代表星期二，依此類推，7 則代表星期日。|  
 |升級|**int**|保留供系統使用。|  
 |NAME|**sysname**|官方語言名稱，例如 Fran&#xE7;ais。|  
 |alias|**sysname**|替代語言名稱，例如 French。|  
-|months|**Nvarchar （372）**|以逗號分隔的清單，依一月至十二月的順序列出完整長度的月份名稱，每個名稱最多可有 20 個字元。|  
-|shortmonths|**Nvarchar （132）**|以逗號分隔的清單，依一月至十二月的順序列出簡短的月份名稱，每個名稱最多可有 9 個字元。|  
-|days|**Nvarchar （217）**|以逗號分隔的清單，依星期一至星期日的順序列出各日的名稱，每個名稱最多可有 30 個字元。|  
-|lcid|**int**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 語言的 Windows 地區設定識別碼|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]訊息群組識別碼。|  
+|months|**nvarchar(372)**|以逗號分隔的清單，依一月至十二月的順序列出完整長度的月份名稱，每個名稱最多可有 20 個字元。|  
+|shortmonths|**nvarchar(132)**|以逗號分隔的清單，依一月至十二月的順序列出簡短的月份名稱，每個名稱最多可有 9 個字元。|  
+|days|**nvarchar(217)**|以逗號分隔的清單，依星期一至星期日的順序列出各日的名稱，每個名稱最多可有 30 個字元。|  
+|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 語言的 Windows 地區設定識別碼|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 訊息群組識別碼。|  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包含下列已安裝的語言。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包含下列已安裝的語言。  
   
-|英文名稱|Windows LCID|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 訊息群組識別碼|  
+|英文名稱|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 訊息群組識別碼|  
 |---------------------|------------------|-----------------------------------------|  
 |英文|1033|1033|  
 |德文|1031|1031|  

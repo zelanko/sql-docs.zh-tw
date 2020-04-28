@@ -11,10 +11,10 @@ ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70212337"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件具現化：ADO 和 WFC
@@ -65,4 +65,4 @@ ADO for Windows Foundation 類別（ADO/WFC）是以 ADO 事件模型為基礎�
  [ADO-WFC 語法索引](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   
  [事件處理常式如何搭配使用](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [事件的類型](../../../ado/guide/data/types-of-events.md)
+ [事件種類](../../../ado/guide/data/types-of-events.md)

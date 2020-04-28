@@ -10,10 +10,10 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252131"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
@@ -50,11 +50,11 @@ Microsoft SQL Server 移轉小幫手 (SSMA) 工具的設計目的，是要自動
 
 ## <a name="downloads"></a>下載
 
-- [存取的 SSMA](https://aka.ms/ssmaforaccess)
-- [適用于 DB2 的 SSMA](https://aka.ms/ssmafordb2)
-- [適用于 MySql 的 SSMA](https://aka.ms/ssmaformysql)
-- [適用于 Oracle 的 SSMA](https://aka.ms/ssmafororacle)
-- [適用于 SAP ASE 的 SSMA](https://aka.ms/ssmaforsybase)
+- [SSMA for Access](https://aka.ms/ssmaforaccess)
+- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [SSMA for MySql](https://aka.ms/ssmaformysql)
+- [SSMA for Oracle](https://aka.ms/ssmafororacle)
+- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>取得 SSMA 支援  
 

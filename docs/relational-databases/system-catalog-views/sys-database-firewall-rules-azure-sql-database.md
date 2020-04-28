@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 61402b762b7a6b4d944214d59e187e1457e93f93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155773"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
@@ -31,12 +31,11 @@ ms.locfileid: "70155773"
 
   傳回與您[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的相關聯的資料庫層級防火牆設定資訊。 使用自主的資料庫使用者時，資料庫層級防火牆設定特別有用。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
- 
-  `sys.database_firewall_rules` 檢視包含下列資料行：  
+  檢視表包含下列資料行：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|id|**介於**|資料庫層級防火牆設定的識別碼。|  
+|id|**INTEGER**|資料庫層級防火牆設定的識別碼。|  
 |NAME|**NVARCHAR （128）**|您選擇用來描述和區分資料庫層級防火牆設定的名稱。|  
 |start_ip_address|**VARCHAR （45）**|資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。|  
 |end_ip_address|**VARCHAR （45）**|防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。<br /><br /> 注意：當此欄位和 [ **start_ip_address** ] 欄位等於`0.0.0.0`時，便允許 Azure 連接嘗試。|  

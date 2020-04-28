@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251957"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  針對任何其他資料類型或**Varbinary （max）** columnthat 的資料行要求路徑名稱時，不會有 FILESTREAM 儲存屬性會造成查詢編譯時期錯誤。  
   
  *\@件*  
- 定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 選項可以是下列其中一個值。 * \@ * 預設值是 0。  
+ 定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 選項可以是下列其中一個值。 * \@ * 預設值為 0。  
   
 |值|描述|  
 |-----------|-----------------|  

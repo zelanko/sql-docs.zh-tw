@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952591"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>在報表伺服器上偵測到自訂延伸模組 (Upgrade Advisor)
@@ -28,7 +28,7 @@ ms.locfileid: "71952591"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; SharePoint 模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "71952591"
   
  如果您決定不要繼續進行升級，可能會決定改為移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如需遷移自訂擴充功能的步驟，請參閱本主題中的[遷移自訂擴充](#migrcustext)功能。  
   
-###  <a name="dataprocdeliver"></a>自訂資料處理或傳遞延伸模組  
+###  <a name="custom-data-processing-or-delivery-extensions"></a><a name="dataprocdeliver"></a>自訂資料處理或傳遞延伸模組  
  如果 Upgrade Advisor 偵測到自訂資料處理或傳遞延伸模組，系統並不會封鎖升級程序。 不過，升級完成之後，您可能必須先執行其他步驟，然後這些延伸模組所提供的自訂功能才能正常運作。 例如，如果自訂延伸模組檔案安裝在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝資料夾中，您就必須執行其他步驟。  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>自訂資料處理或傳遞延伸模組的升級後步驟  
@@ -75,7 +75,7 @@ ms.locfileid: "71952591"
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜部署資料處理延伸模組＞和＜實作傳遞延伸模組＞。  
   
-###  <a name="render"></a>自訂轉譯延伸模組  
+###  <a name="custom-rendering-extensions"></a><a name="render"></a>自訂轉譯延伸模組  
  如果 Upgrade Advisor 偵測到自訂轉譯延伸模組，系統就會封鎖升級程序。 您可以從組態檔中移除自訂延伸模組的組態項目，藉以繼續進行升級程序。 不過，這樣做將會導致升級完成之後，使用者無法使用自訂延伸模組。 如果您在升級之後需要自訂轉譯延伸模組，就必須建立更新的轉譯延伸模組，或是向自訂延伸模組供應商取得更新的轉譯延伸模組。  
   
  您必須執行一些步驟來啟用升級，或者您可能會選擇改為移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
@@ -95,7 +95,7 @@ ms.locfileid: "71952591"
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜實作轉譯延伸模組＞。  
   
-###  <a name="secauth2000"></a>SQL Server 2000 報表伺服器上的自訂安全性或驗證延伸模組  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2000-report-server"></a><a name="secauth2000"></a>SQL Server 2000 報表伺服器上的自訂安全性或驗證延伸模組  
  如果 Upgrade Advisor 在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 報表伺服器上偵測到自訂安全性或驗證延伸模組，系統就會封鎖升級程序。 您必須執行一些步驟來啟用升級，或者您可能會選擇改為移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 不論是哪一種情況，您都必須使用 Microsoft.ReportingServices.Interfaces.dll 中的最新介面來更新和重新編譯延伸模組，因為這些介面已經在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之間變更。  
   
 > [!IMPORTANT]  
@@ -115,7 +115,7 @@ ms.locfileid: "71952591"
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜實作安全性延伸模組＞。  
   
-###  <a name="secauth2005"></a>SQL Server 2005 報表伺服器上的自訂安全性或驗證延伸模組  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2005-report-server"></a><a name="secauth2005"></a>SQL Server 2005 報表伺服器上的自訂安全性或驗證延伸模組  
  如果 Upgrade Advisor 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 報表伺服器上偵測到自訂安全性或驗證延伸模組，系統就會封鎖升級程序。 您必須執行一些步驟來啟用升級，或者您可能會選擇改為移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>升級來自 SQL Server 2005 報表伺服器的自訂安全性或驗證延伸模組  
@@ -130,7 +130,7 @@ ms.locfileid: "71952591"
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜實作安全性延伸模組＞。  
   
-###  <a name="migrcustext"></a>遷移自訂擴充功能  
+###  <a name="migrating-custom-extensions"></a><a name="migrcustext"></a>遷移自訂擴充功能  
  如果您決定要移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 而非執行升級，請使用下列步驟，將自訂延伸模組移轉至新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>將自訂延伸模組移轉至新的 Reporting Services 執行個體  

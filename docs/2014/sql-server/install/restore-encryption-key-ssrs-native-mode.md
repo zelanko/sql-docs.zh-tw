@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952028"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>還原加密金鑰 (SSRS 原生模式)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用加密金鑰來保護儲存於報表伺服器資料庫中的敏感性資料安全。 為了確保您可持續存取加密的資料，一定要建立加密金鑰的備份，以免日後因為服務帳戶變更或進行規劃移轉時需要還原加密金鑰。 本主題提供如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員還原金鑰的概觀。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
@@ -36,20 +35,19 @@ ms.locfileid: "71952028"
   
  若要開啟 [還原加密金鑰] 對話方塊，請按一下 **組態管理員導覽窗格內的** [加密金鑰] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後按一下 **[還原]**。 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員內的 [服務帳戶] 頁面來更新服務帳戶時，這個對話方塊也會出現。 如需詳細資訊  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **檔案位置**  
  選取包含對稱金鑰副本的受密碼保護檔案。 預設的副檔名為 .snk。  
   
  **密碼**  
- 輸入解除檔案鎖定的密碼。 只有知道此密碼的使用者才可以還原金鑰。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會強制實施增強式密碼原則。 此密碼至少必須包含 8 個字元，以及包含大小寫英數字元和至少一個符號字元的組合。  
+ 輸入解除檔案鎖定的密碼。 只有知道此密碼的使用者才可以還原金鑰。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會強制實施增強式密碼原則。 此密碼至少必須包含 8 個字元，以及包含大小寫英數字元和至少一個符號字元的組合。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;SSRS 原生模式的 F1 說明主題&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [將報表伺服器初始化 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [備份和還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [刪除並重新建立 &#40;SSRS Configuration Manager 的加密金鑰&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [&#40;SSRS 原生模式的加密金鑰&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

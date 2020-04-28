@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782911"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件。 XEvent 子資料夾位於 SQLSERVER 磁碟機底下。 您可以使用下列其中一種方法來存取這個資料夾：  
   
--   在命令提示字元中輸入 `sqlps`，然後按下 ENTER。 輸入 `cd xevent`，然後按 ENTER。 從該處，您可以使用**cd**和`dir`命令（或**設定位置**和**get-childitem** Cmdlet）來流覽至伺服器名稱和實例名稱。  
+-   在命令提示字元中輸入 `sqlps`，然後按下 ENTER。 輸入 `cd xevent`，然後按 ENTER 鍵。 從該處，您可以使用**cd**和`dir`命令（或**設定位置**和**get-childitem** Cmdlet）來流覽至伺服器名稱和實例名稱。  
   
--   在物件總管中，展開執行個體名稱、展開 [管理]  、以滑鼠右鍵按一下 [擴充事件]  ，然後按一下 [啟動 PowerShell]  。 這樣就會在下列路徑中啟動 PowerShell：  
+-   在物件總管中，展開執行個體名稱、展開 [管理]****、以滑鼠右鍵按一下 [擴充事件]****，然後按一下 [啟動 PowerShell]****。 這樣就會在下列路徑中啟動 PowerShell：  
   
-     PS SQLSERVER:\XEvent\\伺服器名稱  \\執行個體名稱  >  
+     PS SQLSERVER： \ XEvent\\*ServerName*\\*實例*名稱>  
   
     > [!NOTE]  
-    >  您可以從 [擴充事件]  底下的任何節點啟動 PowerShell。 例如，您可以用滑鼠右鍵按一下 [工作階段]  ，然後按一下 [啟動 PowerShell]  。 這樣就會在下一個層級 (Sessions 資料夾) 啟動 PowerShell。  
+    >  您可以從 [擴充事件]**** 底下的任何節點啟動 PowerShell。 例如，您可以用滑鼠右鍵按一下 [工作階段]****，然後按一下 [啟動 PowerShell]****。 這樣就會在下一個層級 (Sessions 資料夾) 啟動 PowerShell。  
   
  您可以瀏覽 XEvent 資料夾樹狀目錄來檢視現有的擴充事件工作階段及其相關聯的事件、目標和述詞。 例如，從 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*> 路徑，如果您輸入`cd sessions`，請按 enter，輸入`dir`，然後按 enter 鍵，即可看到儲存在該實例上的會話清單。 您也可以檢視工作階段是否正在執行 (如果有，執行的時間長度)，以及工作階段是否設定為在執行個體啟動時啟動。  
   
@@ -111,5 +111,5 @@ $session.Create()
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
- [使用 system_health 工作階段](use-the-ssms-xe-profiler.md)   
+ [使用 system_health 會話](use-the-ssms-xe-profiler.md)   
  [擴充事件工具](extended-events-tools.md)  

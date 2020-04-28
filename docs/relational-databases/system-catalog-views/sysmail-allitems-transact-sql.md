@@ -18,10 +18,10 @@ ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745457"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
@@ -39,9 +39,9 @@ ms.locfileid: "70745457"
 |**copy_recipients**|**varchar(max)**|訊息副本收件者的電子郵件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|名稱未顯示於訊息標頭之訊息副本收件者的電子郵件地址。|  
 |**主題**|**Nvarchar （510）**|訊息的主旨。|  
-|**人體**|**varchar(max)**|訊息內文。|  
+|**body**|**varchar(max)**|訊息的主體。|  
 |**body_format**|**Varchar （20）**|訊息的主體格式。 可能的值是 TEXT 和 HTML。|  
-|**重要性**|**Varchar （6）**|訊息的**重要性**參數。|  
+|**importance**|**Varchar （6）**|訊息的**重要性**參數。|  
 |**重音**|**Varchar （12）**|訊息的**敏感度**參數。|  
 |**file_attachments**|**varchar(max)**|附加至電子郵件訊息中的檔案名稱清單，用分號分隔各檔案名稱。|  
 |**attachment_encoding**|**Varchar （20）**|郵件附加檔案的類型。|  
@@ -56,7 +56,7 @@ ms.locfileid: "70745457"
 |**send_request_date**|**datetime**|訊息置於郵件佇列的日期和時間。|  
 |**send_request_user**|**sysname**|提交訊息的使用者。 這是 Database Mail 程序的使用者內容，不是訊息的「寄件者:」欄位。|  
 |**sent_account_id**|**int**|用來傳送訊息之 Database Mail 帳戶的識別碼。|  
-|**sent_status**|**Varchar （8）**|郵件的狀態。 可能的值為：<br /><br /> **已傳送**-郵件已傳送。<br /><br /> 未**傳送-Database** mail 仍在嘗試傳送訊息。<br /><br /> **重試**-Database Mail 無法傳送訊息，但嘗試重新傳送。<br /><br /> **失敗**-Database mail 無法傳送訊息。|  
+|**sent_status**|**Varchar （8）**|郵件的狀態。 可能的值包括：<br /><br /> **已傳送**-郵件已傳送。<br /><br /> 未**傳送-Database** mail 仍在嘗試傳送訊息。<br /><br /> **重試**-Database Mail 無法傳送訊息，但嘗試重新傳送。<br /><br /> **失敗**-Database mail 無法傳送訊息。|  
 |**sent_date**|**datetime**|訊息傳送的日期和時間。|  
 |**last_mod_date**|**datetime**|資料列上次修改的日期和時間。|  
 |**last_mod_user**|**sysname**|上次修改資料列的使用者。|  

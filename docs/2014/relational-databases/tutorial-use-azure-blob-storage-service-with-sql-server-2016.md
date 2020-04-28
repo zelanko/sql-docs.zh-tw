@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176082"
 ---
 # <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>教學課程：Azure 儲存體服務中的 SQL Server 資料檔案
@@ -55,6 +55,6 @@ ms.locfileid: "70176082"
  在這一課，您會使用 [還原資料庫] [移動] 選項，從 Azure 儲存體還原資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [Azure 中的 SQL Server 資料檔案](databases/sql-server-data-files-in-microsoft-azure.md)  
+ [在 Azure 中 SQL Server 資料檔案](databases/sql-server-data-files-in-microsoft-azure.md)  
   
   

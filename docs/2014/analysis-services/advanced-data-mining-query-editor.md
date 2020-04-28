@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313607"
 ---
 # <a name="advanced-data-mining-query-editor"></a>進階資料採礦查詢編輯器
@@ -60,7 +60,7 @@ ms.locfileid: "72313607"
   
  您也可以在 [DMX 查詢] 窗格中，按一下 [反白顯示** \<的對應>** ] 連結。  
   
- **新增輸出**  
+ **加入輸出**  
  按一下即可選擇應輸出成為預測查詢一部分的資料行。  
   
  您也可以按一下 [DMX 查詢] 窗格中反白顯示** \<的 [新增輸出>** ] 連結。  

@@ -13,23 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952423"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>向外延展部署 (原生模式報表伺服器)
-  請使用 **組態管理員中的** [向外延展部署] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面檢視向外延展部署的初始化狀態，或將報表伺服器聯結到向外延展部署。 
-  *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
+  請使用 **組態管理員中的** [向外延展部署] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面檢視向外延展部署的初始化狀態，或將報表伺服器聯結到向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
- 
-  *「已初始化的報表伺服器」* (Initialized Report Server) 會描述可加密和解密儲存在報表伺服器資料庫中之敏感性資料的伺服器 (例如，預存認證和連接字串都是儲存於資料庫中之加密資料的範例)。 報表伺服器初始化是報表伺服器作業的需求。  
+ *「已初始化的報表伺服器」* (Initialized Report Server) 會描述可加密和解密儲存在報表伺服器資料庫中之敏感性資料的伺服器 (例如，預存認證和連接字串都是儲存於資料庫中之加密資料的範例)。 報表伺服器初始化是報表伺服器作業的需求。  
   
- 
-  *「向外延展部署」* (Scale-out Deployment) 的使用案例如下：  
+ *「向外延展部署」* (Scale-out Deployment) 的使用案例如下：  
   
 -   這是讓伺服器叢集內的多部報表伺服器負載平衡的必要條件。 在您可以讓多部報表伺服器負載平衡之前，您必須先設定這些伺服器，讓它們共用相同的報表伺服器資料庫。  
   
@@ -39,7 +36,7 @@ ms.locfileid: "71952423"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並選取導覽窗格中的 **[向外延展部署]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SQL Server 名稱**  
  指定主控報表伺服器資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]之實例的名稱。  
   
@@ -66,7 +63,7 @@ ms.locfileid: "71952423"
   
      如果報表伺服器已經是向外延展部署的一部分，您可以使用此頁面來加入或移除節點。  
   
- **格式化**  
+ **[初始化]**  
  按一下 **[初始化]** ，將報表伺服器加入向外延展部署中。 這個步驟會設定報表伺服器在共用報表伺服器資料庫中使用對稱金鑰。 您可以使用 **[初始化]** 將報表伺服器執行個體加入向外延展部署中，或疑難排解移轉或安裝問題。  
   
  只有在先前已設定共用報表伺服器資料庫的連接時，您才可以使用報表伺服器執行個體。 此外，您必須從已初始化為使用報表伺服器資料庫的報表伺服器中執行初始化。  
@@ -79,8 +76,8 @@ ms.locfileid: "71952423"
  如果您不再需要加密資料，或者如果您沒有金鑰的備份副本，則必須刪除加密資料。 如需詳細資訊，請參閱[&#40;SSRS 原生模式&#41;的加密金鑰](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表伺服器初始化 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [設定和管理 &#40;SSRS Configuration Manager 的加密金鑰&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [設定原生模式報表伺服器向外延展部署 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

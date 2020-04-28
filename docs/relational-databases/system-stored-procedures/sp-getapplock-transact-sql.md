@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72717254"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  取得應用程式鎖定之後，只會擷取純文字中的前 32 個字元，其餘部分會予以雜湊。  
   
  [ @LockMode= ]'*lock_mode*'  
- 這是要取得的特定資源鎖定模式。 *lock_mode*是**Nvarchar （32）** ，而且沒有預設值。 此值可以是下列任何一項： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 如需詳細資訊，請參閱[鎖定模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
+ 這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 此值可以是下列任何一項： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 如需詳細資訊，請參閱[鎖定模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
  [ @LockOwner= ]'*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner*是**Nvarchar （32）**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
   
  [ @LockTimeout= ]'*value*'  
  這是鎖定逾時值 (以毫秒為單位)。 預設值與 @@LOCK_TIMEOUT所傳回的值相同。 若要指出鎖定要求應傳回-1 的傳回碼，而不是在無法立即授與要求時等待鎖定，請指定0。  
@@ -85,11 +85,9 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 -   包含鎖定資源之資料庫的資料庫識別碼。  
   
--   
-  @DbPrincipal 參數中指定的資料庫主體。  
+-   @DbPrincipal 參數中指定的資料庫主體。  
   
--   
-  @Resource 參數中指定的鎖定名稱。  
+-   @Resource 參數中指定的鎖定名稱。  
   
  只有 @DbPrincipal 參數中指定的資料庫主體成員，才能夠取得指定這個主體的應用程式鎖定。 dbo 和 db_owner 角色的成員會隱含地被視為所有角色的成員。  
   
@@ -113,7 +111,7 @@ GO
   
  含應用程式鎖定的死結不會回復要求應用程式鎖定的交易。 當因為傳回值而可能需要進行任何回復時，您必須手動回復。 因此，建議您在程式碼中併入錯誤檢查，以便在傳回某些值 (如 -3) 時，起始 ROLLBACK TRANSACTION 或替代動作。  
   
- 下列是一個範例：  
+ 範例如下：  
   
 ```  
 USE AdventureWorks2012;  
@@ -134,8 +132,7 @@ END;
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用目前資料庫識別碼來限定資源。 因此，如果執行 sp_getapplock，即使不同資料庫使用相同參數值，結果是不同資源也會有不同的鎖定。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用目前資料庫識別碼來限定資源。 因此，如果執行 sp_getapplock，即使不同資料庫使用相同參數值，結果是不同資源也會有不同的鎖定。  
   
  請利用 sys.dm_tran_locks 動態管理檢視或 sp_lock 系統預存程序來檢查鎖定資訊，或利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視鎖定。  
   
@@ -169,6 +166,6 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [APPLOCK_MODE &#40;Transact-sql&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-sql&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

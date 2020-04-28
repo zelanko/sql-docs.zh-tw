@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions|| = azure-sqldw-latest
 ms.openlocfilehash: 9b3e389b97cee8a8a6d548eb93ad70b94d09ba40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70160743"
 ---
 # <a name="sysuser_token-transact-sql"></a>sys.user_token (Transact-SQL)
@@ -40,9 +40,9 @@ ms.locfileid: "70160743"
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|主體的識別碼。 該值在資料庫中是唯一的。|  
 |**sid**|**Varbinary （85）**|如果主體是定義在資料庫外部，則為該主體的安全性識別碼。 例如，它可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入、Windows 登入、Windows 群組登入或是對應到憑證的登入，否則這個值為 NULL。|  
-|**name**|**nvarchar (128)**|主體的名稱。 該值在資料庫中是唯一的。|  
-|**type**|**nvarchar (128)**|主體類型的描述。 所有類型都會對應到**sid**。 值可以是下列其中一種：<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
-|**實例**|**nvarchar (128)**|指出主體參與了 GRANT 或 DENY 權限的評估，或者作為驗證器使用。<br /><br /> 這個值可以是下列其中一個值：<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
+|**name**|**Nvarchar （128）**|主體的名稱。 該值在資料庫中是唯一的。|  
+|**type**|**Nvarchar （128）**|主體類型的描述。 所有類型都會對應到**sid**。 這個值可以是下列值之一：<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**實例**|**Nvarchar （128）**|指出主體參與了 GRANT 或 DENY 權限的評估，或者作為驗證器使用。<br /><br /> 這個值可以是下列其中一個值：<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>另請參閱  
  [login_token &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   

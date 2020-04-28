@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176120"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務
@@ -26,7 +26,7 @@ ms.locfileid: "70176120"
  [第 1 課：建立 Azure 儲存體物件](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  在這一課，您會建立 Azure 儲存體帳戶和 Blob 容器。  
   
- [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ [第 2 課：建立 SQL Server 認證](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  在這一課，您會建立認證以儲存用來存取 Azure 儲存體帳戶的安全性資訊。  
   
  [第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
@@ -51,6 +51,6 @@ ms.locfileid: "70176120"
   
 1.  [使用 Azure Blob 儲存體服務的 SQL Server 備份及還原](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [SQL Server 備份至 URL 的最佳做法和疑難排解](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [SQL Server 備份至 URL 的最佳作法和疑難排解](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

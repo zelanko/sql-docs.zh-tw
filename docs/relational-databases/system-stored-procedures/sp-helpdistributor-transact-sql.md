@@ -16,10 +16,10 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745387"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**散發資料庫**|**sysname**|散發資料庫的名稱。|  
 |**directory**|**nvarchar(255)**|工作目錄的名稱。|  
-|**帳戶**|**nvarchar(255)**|Windows 使用者帳戶的名稱。|  
+|**登入**|**nvarchar(255)**|Windows 使用者帳戶的名稱。|  
 |**min distrib retention**|**int**|最小散發保留期限。|  
 |**max distrib retention**|**int**|最大散發保留期限。|  
 |**history retention**|**int**|記錄保留期限。|  
@@ -105,7 +105,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |結果集資料行|輸出參數|  
 |-----------------------|----------------------|  
-|帳戶|**\@帳戶**|  
+|account|**\@帳戶**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
@@ -115,7 +115,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  下列結果集資料行會傳回給在散發者端的發行集之發行集存取清單中的使用者：  
   
--   目錄  
+-   directory  
   
  下列結果集資料行會傳回給所有使用者。  
   
@@ -127,7 +127,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [查看和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   

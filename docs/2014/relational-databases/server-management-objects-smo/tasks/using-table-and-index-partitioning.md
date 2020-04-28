@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781825"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用資料表和索引資料分割
@@ -28,8 +28,7 @@ ms.locfileid: "72781825"
 ## <a name="index-and-table-partitioning"></a>索引和資料表資料分割  
  此功能可以讓索引和資料表資料散佈到資料分割中的多個檔案群組。 資料分割函數會定義資料表的資料列或索引如何依據某些資料行 (稱為分割資料行) 的值對應到資料分割集。 資料分割配置則會將資料分割函數所指定的每個資料分割都對應到檔案群組。 如此您就可以開發出封存策略，讓資料表可以擴充到檔案群組，並進而擴充到實體裝置。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Database> 物件包含表示所實作之資料分割函數的 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 物件集合，以及描述資料如何對應到檔案群組的 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 物件集合。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 物件包含表示所實作之資料分割函數的 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 物件集合，以及描述資料如何對應到檔案群組的 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 物件集合。  
   
  每個 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件都會在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 屬性中指定所使用的資料分割配置，並在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定資料行。  
   

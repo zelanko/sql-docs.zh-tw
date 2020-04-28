@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154832"
 ---
 # <a name="back-up-database-media-options-page"></a>備份資料庫 (媒體選項頁面)
@@ -56,7 +56,7 @@ ms.locfileid: "70154832"
  **覆寫所有現有的備份組**  
  以目前的備份來取代現有媒體集上之任何先前的備份。  
   
- **檢查媒體集名稱及備份組的到期日**  
+ **檢查媒體集名稱及備份組是否逾期**  
  如果選擇性地備份到現有的媒體集，則備份作業必須確認媒體集的名稱以及備份組的到期日。  
   
  **媒體集名稱**  
@@ -86,7 +86,7 @@ ms.locfileid: "70154832"
  即使發生一或多個錯誤，備份作業也會繼續執行。  
   
 ### <a name="transaction-log"></a>交易記錄  
- [交易記錄]**** 面板的選項控制交易記錄備份的行為。 只有在完整復原模式或大量記錄復原模式之下，這些選項才具有相關性。 只有在 [備份資料庫] 對話方塊的 [**一般**] 頁面中的 [備份類型] 欄位中，選取 [交易記錄] 後，才會啟動這些選項。****[](../../integration-services/general-page-of-integration-services-designers-options.md)****  
+ [交易記錄]**** 面板的選項控制交易記錄備份的行為。 只有在完整復原模式或大量記錄復原模式之下，這些選項才具有相關性。 只有在 [備份資料庫] 對話方塊的 [[一般](../../integration-services/general-page-of-integration-services-designers-options.md)] 頁面中的 [備份類型] 欄位中，選取 [交易記錄] 後，才會啟動這些選項。************  
   
 > [!NOTE]  
 >  如需交易記錄備份的相關資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)。  
@@ -94,13 +94,13 @@ ms.locfileid: "70154832"
  **截斷交易記錄**  
  備份交易記錄並截斷，以釋放記錄空間。 資料庫仍維持在線上。 這是預設選項。  
   
- **備份記錄檔的結尾，並讓資料庫保持在還原狀態**  
+ **備份記錄的結尾，並讓資料庫保持在還原狀態**  
  備份記錄的結尾，並讓資料庫保持在還原狀態。 此選項會建立「結尾記錄備份」，其會為尚未備份的記錄 (使用中的記錄) 進行備份，一般而言，是為還原資料庫做準備。** 資料庫完全還原之前，使用者無法使用資料庫。  
   
  選取此選項相當於在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH NO_TRUNCATE, NORECOVERY。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](tail-log-backups-sql-server.md)。  
   
 ### <a name="tape-drive"></a>磁帶機  
- [磁帶機]**** 面板的選項控制備份作業的磁帶管理。 只有在 [備份資料庫] 對話方塊的 [**一般**] 頁面中的 [目的地] 面板中，選取 [磁帶] 後，才會啟動這些選項。****[](../../integration-services/general-page-of-integration-services-designers-options.md)****  
+ [磁帶機]**** 面板的選項控制備份作業的磁帶管理。 只有在 [備份資料庫] 對話方塊的 [[一般](../../integration-services/general-page-of-integration-services-designers-options.md)] 頁面中的 [目的地] 面板中，選取 [磁帶] 後，才會啟動這些選項。************  
   
 > [!NOTE]  
 >  如需有關如何使用磁帶裝置的資訊，請參閱[備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)。  
@@ -108,7 +108,7 @@ ms.locfileid: "70154832"
  **備份後卸載磁帶**  
  備份完成之後再卸載磁帶。  
   
- **卸載前倒轉磁帶**  
+ **卸載之前倒轉磁帶**  
  卸載磁帶之前先將其釋放及倒轉。 只有在選取 [備份後卸除磁帶]**** 時才會啟用這個選項。  
   
 ## <a name="see-also"></a>另請參閱  

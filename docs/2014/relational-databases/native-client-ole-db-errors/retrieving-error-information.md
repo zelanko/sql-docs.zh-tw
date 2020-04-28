@@ -1,5 +1,5 @@
 ---
-title: 正在抓取錯誤資訊 |Microsoft Docs
+title: 擷取錯誤資訊 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874595"
 ---
 # <a name="retrieving-error-information"></a>擷取錯誤資訊
@@ -217,6 +217,6 @@ void DumpErrorInfo
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Errors](errors.md)  
+ [錯誤](errors.md)  
   
   

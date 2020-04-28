@@ -19,10 +19,10 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71682133"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
@@ -59,7 +59,7 @@ sp_estimate_data_compression_savings
  這是包含資料表或索引檢視表的資料庫結構描述名稱。 *schema_name*是**sysname**。 如果*schema_name*為 Null，則會使用目前使用者的預設架構。  
   
  [ @object_name= ]'*object_name*'  
- 這是索引所在的資料表或索引檢視表名稱。 *object_name*是**sysname**。  
+ 這是索引所在的資料表或索引檢視表名稱。 *object_name* 是 **sysname**.  
   
  [ @index_id= ]*index_id*  
  這是索引的識別碼。 *index_id*是**int**，而且可以是下列其中一個值：索引的識別碼、Null 或0（如果*object_id*是堆積）。 若要傳回基底資料表或檢視表的所有索引相關資訊，請指定 NULL。 如果您指定 Null，則也必須為*partition_number*指定 null。  
@@ -84,10 +84,10 @@ sp_estimate_data_compression_savings
 |schema_name|**sysname**|資料表或索引檢視表的結構描述。|  
 |index_id|**int**|索引的索引識別碼：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> > 1 = 非叢集索引|  
 |partition_number|**int**|資料分割編號。 如果是非資料分割的資料表或索引，則會傳回 1。|  
-|size_with_current_compression_setting (KB)|**Bigint**|目前存在且要求之資料表、索引或資料分割的大小。|  
-|size_with_requested_compression_setting (KB)|**Bigint**|使用要求之壓縮設定的資料表、索引或資料分割的估計大小，以及適用的現有填滿因數 (假設沒有片段)。|  
-|sample_size_with_current_compression_setting (KB)|**Bigint**|包含目前壓縮設定之樣本的大小。 其中包含所有片段。|  
-|sample_size_with_requested_compression_setting (KB)|**Bigint**|使用要求之壓縮設定所建立的樣本大小，以及適用的現有填滿因數 (沒有片段)。|  
+|size_with_current_compression_setting (KB)|**bigint**|目前存在且要求之資料表、索引或資料分割的大小。|  
+|size_with_requested_compression_setting (KB)|**bigint**|使用要求之壓縮設定的資料表、索引或資料分割的估計大小，以及適用的現有填滿因數 (假設沒有片段)。|  
+|sample_size_with_current_compression_setting (KB)|**bigint**|包含目前壓縮設定之樣本的大小。 其中包含所有片段。|  
+|sample_size_with_requested_compression_setting (KB)|**bigint**|使用要求之壓縮設定所建立的樣本大小，以及適用的現有填滿因數 (沒有片段)。|  
   
 ## <a name="remarks"></a>備註  
  用`sp_estimate_data_compression_savings`來估計當您啟用資料列、頁面、資料行存放區或資料行存放區封存壓縮的資料表或資料分割時，可能會發生的節約。 例如，如果資料列的平均大小可縮減 40%，您就可能會將物件的大小縮減 40%。 您可能無法節省空間，因為這是根據填滿因數和資料列的大小而定。 例如，如果您有一個長度為8000個位元組的資料列，而您將其大小縮減為40%，則您仍然只能在資料頁面上容納一個資料列。 無法節省任何空間。  
@@ -123,7 +123,7 @@ sp_estimate_data_compression_savings
  |叢集資料行存放區索引|叢集資料行存放區索引|
 
 > [!NOTE]  
-> 當您從 rowstore 來源物件（叢集索引、非叢集索引或堆積）評估資料行存放區壓縮時，如果來源物件中的任何資料行具有資料行存放區索引不支援的資料類型，sp_estimate_compression_savings將會失敗並產生錯誤。
+> 當您從 rowstore 來源物件（叢集索引、非叢集索引或堆積）評估資料行存放區壓縮時，如果來源物件中的任何資料行具有資料行存放區索引不支援的資料類型，sp_estimate_compression_savings 將會失敗並產生錯誤。
 
  同樣地，當`@data_compression`參數設定為`NONE`、 `ROW`或`PAGE` ，而來源物件為數據行存放區索引時，下表會列出所使用的參考物件。
 
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE TABLE &#40;Transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

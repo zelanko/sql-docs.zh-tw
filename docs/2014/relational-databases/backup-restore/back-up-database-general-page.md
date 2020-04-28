@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155081"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
-  使用 [**備份資料庫**] 對話方塊的 [**一般**] 頁面，即可查看或修改資料庫備份作業的設定。  
+  使用 **[備份資料庫]** 對話方塊上的 **[一般]** 頁面，檢視或修改資料庫備份作業設定。  
   
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼][!INCLUDE[tsql](../../includes/tsql-md.md)][ 按鈕，然後選取指令碼的目的地，以產生相對應的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按一下 [指令碼]**** 按鈕，然後選取指令碼目的地來產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   
@@ -43,8 +43,7 @@ ms.locfileid: "70155081"
 ## <a name="options"></a>選項。  
   
 ### <a name="source"></a>來源  
- 
-  **[來源]** 面板的選項會識別資料庫，並指定備份作業的備份類型和元件。  
+ **[來源]** 面板的選項會識別資料庫，並指定備份作業的備份類型和元件。  
   
  **Database**  
  選取要備份的資料庫。  
@@ -61,8 +60,8 @@ ms.locfileid: "70155081"
 |差異|資料庫、檔案及檔案群組|在簡單復原模式之下，檔案和檔案群組備份只可用於唯讀檔案群組。|  
 |交易記錄|交易記錄|交易記錄備份無法使用於簡單復原模式。|  
   
- **僅複本備份**  
- 選取此選項，即可建立只複製備份。 「*只複本備份*」是與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份順序無關的備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
+ **只複製備份**  
+ 選取此選項，即可建立只複製備份。 「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
 >  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
@@ -75,11 +74,10 @@ ms.locfileid: "70155081"
 |||  
 |-|-|  
 |**Database**|指定備份整個資料庫。|  
-|**檔案和檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]** 之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
+|**檔案與檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]** 之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
   
 ### <a name="destination"></a>Destination  
- 
-  **[目的地]** 面板的選項可讓您指定備份作業的備份裝置類型，並尋找現有的邏輯或實體備份裝置。  
+ **[目的地]** 面板的選項可讓您指定備份作業的備份裝置類型，並尋找現有的邏輯或實體備份裝置。  
   
 > [!NOTE]  
 >  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置的相關資訊，請參閱[備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)。  
@@ -89,9 +87,9 @@ ms.locfileid: "70155081"
   
 |||  
 |-|-|  
-|**硬碟**|備份至磁碟。 這可能是針對資料庫所建立的系統檔案，或以磁碟為基礎的邏輯備份裝置。 目前選取的磁碟會出現在 **[備份至]** 清單中。 您最多可以為備份作業選取 64 個磁碟裝置。|  
+|**磁碟**|備份至磁碟。 這可能是針對資料庫所建立的系統檔案，或以磁碟為基礎的邏輯備份裝置。 目前選取的磁碟會出現在 **[備份至]** 清單中。 您最多可以為備份作業選取 64 個磁碟裝置。|  
 |**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
-|**連結**|備份至 Azure Blob 儲存體。|  
+|**URL**|備份至 Azure Blob 儲存體。|  
   
  所顯示的下一組選項取決於選取的目的地類型。 如果選取 [磁碟] 或 [磁帶]，則會顯示下列選項。  
   
@@ -101,12 +99,12 @@ ms.locfileid: "70155081"
  **移除**  
  從 **[備份至]** 清單中，移除一個或多個目前選取的裝置。  
   
- **內容**  
+ **Contents**  
  顯示選取之裝置的媒體內容。  
   
  如果選取 URL 做為備份目的地，則會顯示下列選項：  
   
- **檔案名**  
+ **檔案名稱**  
  指定備份檔案的名稱。  
   
  **SQL 認證**  
@@ -124,8 +122,8 @@ ms.locfileid: "70155081"
 ## <a name="see-also"></a>另請參閱  
  [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [備份檔案和檔案群組 &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [定義磁帶機的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [定義磁片檔案的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [定義磁帶磁片磁碟機的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [復原模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

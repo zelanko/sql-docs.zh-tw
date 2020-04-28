@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155050"
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "70155050"
   
 -   [詞彙和定義](#TermsAndDefinitions)  
   
--   [使用磁片備份裝置](#DiskBackups)  
+-   [使用磁碟備份裝置](#DiskBackups)  
   
 -   [使用磁帶裝置](#TapeDevices)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70155050"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a>詞彙和定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>詞彙和定義  
  備份磁碟  
  包含一個或多個備份檔案的硬碟或其他磁碟儲存媒體。 備份檔案是一般作業系統檔案。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "70155050"
   
  除了磁碟或磁帶之外，SQL Server 備份也可以寫入 Azure Blob 儲存體服務。  
   
-##  <a name="DiskBackups"></a>使用磁片備份裝置  
+##  <a name="using-disk-backup-devices"></a><a name="DiskBackups"></a>使用磁片備份裝置  
  **本節內容：**  
   
 -   [使用實體名稱來指定備份檔案 (Transact-SQL)](#BackupFileUsingPhysicalName)  
@@ -76,13 +76,12 @@ ms.locfileid: "70155050"
   
  磁碟備份裝置可以是簡單的磁碟裝置，例如 ATA 磁碟機。 或者，您也可以使用可熱抽換的 (Hot-swappable) 磁碟機，以便您將磁碟機上寫滿的磁碟直接了當地更換成空的磁碟。 備份磁碟可以是伺服器上的本機磁碟，也可以是屬於共用網路資源的遠端磁碟。 如需有關如何使用遠端磁碟的詳細資訊，請參閱本主題後面的＜ [備份至網路共用上的檔案](#NetworkShare)＞。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具在處理磁碟備份裝置時相當有彈性，因為它們會自動在磁碟檔案上產生具有時間戳記的名稱。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具在處理磁碟備份裝置時相當有彈性，因為它們會自動在磁碟檔案上產生具有時間戳記的名稱。  
   
 > [!IMPORTANT]  
 >  我們建議備份磁碟應該與資料庫資料和記錄磁碟使用不同的磁碟。 為了確保您可以在資料或記錄磁碟故障時存取備份，這樣做有其必要。  
   
-###  <a name="BackupFileUsingPhysicalName"></a>使用機構名稱來指定備份檔案（Transact-sql）  
+###  <a name="specifying-a-backup-file-by-using-its-physical-name-transact-sql"></a><a name="BackupFileUsingPhysicalName"></a>使用機構名稱來指定備份檔案（Transact-sql）  
  使用實體裝置名稱來指定備份檔案的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 語法為：  
   
  BACKUP DATABASE *database_name*  
@@ -110,7 +109,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
   
-###  <a name="BackupFileDiskPath"></a>指定磁片備份檔案的路徑  
+###  <a name="specifying-the-path-of-a-disk-backup-file"></a><a name="BackupFileDiskPath"></a>指定磁片備份檔案的路徑  
  指定備份檔案時，您應該輸入完整路徑及檔案名稱。 當您要備份至檔案時，如果僅指定檔案名稱或相對路徑，便會將備份檔案放在預設的備份目錄中。 預設的備份目錄為 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup，其中 *n* 是伺服器執行個體的編號。 因此，對預設的伺服器執行個體而言，其預設備份目錄為：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup。  
   
  若要避免模稜兩可的情形 (特別是在指令碼中)，建議您在每個 DISK 子句中明確指定備份目錄的路徑。 不過，當您使用「查詢編輯器」時，這就不是那麼重要。 在這種情況下，如果您確定備份檔案是在預設的備份目錄中，即可省略 DISK 子句中的路徑。 例如，下列 `BACKUP` 陳述式會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份到預設備份目錄。  
@@ -124,7 +123,7 @@ GO
 > [!NOTE]  
 >  預設位置會儲存在 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 下的 **BackupDirectory**登錄機碼。  
   
-###  <a name="NetworkShare"></a>備份至網路共用上的檔案  
+###  <a name="backing-up-to-a-file-on-a-network-share"></a><a name="NetworkShare"></a>備份至網路共用上的檔案  
  為了讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取遠端磁碟檔案， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須具有網路共用的存取權。 這包括具有讓備份作業寫入網路共用以及讓還原作業從中讀取所需的權限。 網路磁碟機和權限的可用性會根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務執行的內容而定：  
   
 -   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在網域使用者帳戶下執行時，若要備份至網路磁碟機，共用磁碟機就必須對應成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在執行之工作階段中的網路磁碟機。 如果是從命令列啟動 Sqlservr.exe， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便看得到您登入工作階段中已對應的所有網路磁碟機。  
@@ -137,7 +136,7 @@ GO
     >  透過網路備份資料可能會受到網路問題的影響。因此，我們建議您在使用遠端磁碟時，於備份作業完成後進行驗證。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)。  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>指定通用命名慣例 (UNC) 名稱  
- 若要在備份或還原命令中指定網路共用，您應該要使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式** \\**為_Systemname_**\\**的_共用名稱_**\\**__**\\**_。_  
+ 若要在備份或還原命令中指定網路共用，您應該要使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式** \\**為_Systemname_**\\**的_共用名稱_**\\**_Path_**\\**_。_  
   
  例如：  
   
@@ -147,7 +146,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="TapeDevices"></a>使用磁帶裝置  
+##  <a name="using-tape-devices"></a><a name="TapeDevices"></a>使用磁帶裝置  
   
 > [!NOTE]  
 >  未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。  
@@ -156,7 +155,7 @@ GO
   
 -   [使用實體名稱來指定備份磁帶 (Transact-SQL)](#BackupTapeUsingPhysicalName)  
   
--   [磁帶特定的 BACKUP 和 RESTORE 選項（Transact-sql）](#TapeOptions)  
+-   [磁帶專用的 BACKUP 和 RESTORE 選項 (Transact-SQL)](#TapeOptions)  
   
 -   [管理開啟的磁帶](#OpenTapes)  
   
@@ -170,7 +169,7 @@ GO
   
 -   如果在備份作業進行時磁帶備份裝置填滿，但還必須寫入更多資料的話， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示換新磁帶，並於載入新磁帶後繼續進行備份作業。  
   
-###  <a name="BackupTapeUsingPhysicalName"></a>使用機構名稱來指定備份磁帶（Transact-sql）  
+###  <a name="specifying-a-backup-tape-by-using-its-physical-name-transact-sql"></a><a name="BackupTapeUsingPhysicalName"></a>使用機構名稱來指定備份磁帶（Transact-sql）  
  使用磁帶機之實體裝置名稱來指定備份磁帶的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 語法為：  
   
  BACKUP { DATABASE | LOG } *database_name*  
@@ -191,7 +190,7 @@ GO
   
  從磁帶**=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
-###  <a name="TapeOptions"></a>磁帶特定的 BACKUP 和 RESTORE 選項（Transact-sql）  
+###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a>磁帶特定的 BACKUP 和 RESTORE 選項（Transact-sql）  
  為了方便磁帶管理作業，BACKUP 陳述式提供了下列磁帶專用的選項：  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -205,7 +204,7 @@ GO
 > [!NOTE]  
 >  如需 BACKUP 語法和引數的詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。 如需 RESTORE 語法和引數的詳細資訊，請分別參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) 和 [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。  
   
-###  <a name="OpenTapes"></a>管理開啟的磁帶  
+###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a>管理開啟的磁帶  
  若要檢視開啟的磁帶裝置清單以及掛載要求的狀態，請查詢 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 動態管理檢視。 這個檢視顯示所有開啟的磁帶。 這包括正在等待下一個 BACKUP 或 RESTORE 作業而暫時閒置的使用中磁帶。  
   
  如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式就是使用下列命令： RESTORE REWINDONLY FROM 磁帶**=** _backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
@@ -213,9 +212,8 @@ GO
 ## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 儲存體服務  
  SQL Server 備份可以寫入 Azure Blob 儲存體服務。  如需有關如何使用 Azure Blob 儲存體服務進行備份的詳細資訊，請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
-##  <a name="LogicalBackupDevice"></a>使用邏輯備份裝置  
- 
-  *「邏輯備份裝置」* (Logical backup device) 是選擇性的使用者自訂名稱，而且它會指向特定的實體備份裝置 (磁碟檔案或磁帶機)。 邏輯備份裝置可讓您在參考對應的實體備份裝置時，使用間接取值。  
+##  <a name="using-a-logical-backup-device"></a><a name="LogicalBackupDevice"></a>使用邏輯備份裝置  
+ *「邏輯備份裝置」* (Logical backup device) 是選擇性的使用者自訂名稱，而且它會指向特定的實體備份裝置 (磁碟檔案或磁帶機)。 邏輯備份裝置可讓您在參考對應的實體備份裝置時，使用間接取值。  
   
  定義邏輯備份裝置會需要將邏輯名稱指派給實體裝置。 例如，您可以將邏輯裝置 AdventureWorksBackups 定義為指向 Z:\SQLServerBackups\AdventureWorks2012.bak 檔案或 \\\\.\tape0 磁帶機。 備份和還原命令便可以將 AdventureWorksBackups 指定為備份裝置，而不需設定 DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' 或 TAPE = '\\\\.\tape0'。  
   
@@ -240,25 +238,25 @@ GO
   
 2.  定義使用原始邏輯裝置名稱，但對應至不同實體備份裝置的新邏輯備份裝置。 邏輯備份裝置對於識別磁帶備份裝置特別有用。  
   
-##  <a name="MirroredMediaSets"></a>鏡像備份媒體集  
+##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a>鏡像備份媒體集  
  備份媒體集的鏡像功能可減少備份裝置功能異常時的影響。 這些功能異常會特別嚴重，因為備份是避免資料遺失的最後一道防線。 隨著資料庫大小的成長，備份裝置或媒體故障而導致備份無法還原的可能性也越大。 鏡像備份媒體可透過提供實體備份裝置的備援性，藉以提升備份的可靠性。 如需詳細資訊，請參閱本主題稍後的 [鏡像備份媒體集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)的使用者閱讀。  
   
 > [!NOTE]  
 >  只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更新版本才支援鏡像備份媒體集。  
   
-##  <a name="Archiving"></a>封存 SQL Server 備份  
+##  <a name="archiving-sql-server-backups"></a><a name="Archiving"></a>封存 SQL Server 備份  
  建議您使用檔案系統備份公用程式來封存磁碟備份，並將封存保存在異地。 使用磁碟的優點是，您可以使用網路將封存的備份寫入異地磁碟。 Azure Blob 儲存體服務可作為異地封存選項。  您可以上傳磁碟備份，或是直接將備份寫入 Azure Blob 儲存體服務中。  
   
  另一種常見的封存方法是將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入本機備份磁碟、將備份封存至磁帶，然後將磁帶存放在異地。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
- **指定磁片裝置（SQL Server Management Studio）**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
+ **指定磁碟裝置 (SQL Server Management Studio)**  
   
--   [指定磁片或磁帶做為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [指定磁碟或磁帶作為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
- **指定磁帶裝置（SQL Server Management Studio）**  
+ **指定磁帶裝置 (SQL Server Management Studio)**  
   
--   [指定磁片或磁帶做為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [指定磁碟或磁帶作為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
  **定義邏輯備份裝置**  
   
@@ -272,7 +270,7 @@ GO
   
  **使用邏輯備份裝置**  
   
--   [指定磁片或磁帶做為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [指定磁碟或磁帶作為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [從裝置還原備份 &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
@@ -280,9 +278,9 @@ GO
   
 -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
- **若要查看備份裝置的相關資訊**  
+ **檢視有關備份裝置的資訊**  
   
--   [備份歷程記錄和標頭資訊 &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)  
+-   [備份記錄與標頭資訊 &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)  
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -298,10 +296,10 @@ GO
  [SQL Server，備份裝置物件](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [維護計畫](../maintenance-plans/maintenance-plans.md)   
- [媒體集、媒體家族和備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
- [sys.backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [RESTORE LABELONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [backup_devices &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
  [dm_io_backup_tapes &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
  [鏡像備份媒體集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   

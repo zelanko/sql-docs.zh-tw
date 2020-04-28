@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154783"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>還原資料庫備份 (SQL Server Management Studio)
@@ -32,13 +32,13 @@ ms.locfileid: "70154783"
 > [!IMPORTANT]  
 >  在完整或大量記錄復原模式下，您必須先備份使用中的交易記錄檔 (也稱為記錄檔的結尾)，才能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中還原資料庫。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。 若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
- 請注意，如果您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項]**** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]**** 或 [重建]****，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]**** 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
+ 請注意，如果您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項]**** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]**** 或 [重建]****，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 另請注意，當升級選項設定為 [匯**入**] 時，如果全文檢索目錄無法使用，則會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
 ### <a name="to-restore-a-full-database-backup"></a>還原完整資料庫備份  
   
-1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
+1.  連接到適當的實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之後，請在物件總管中，按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]** 。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫]  ，再選取系統資料庫。  
+2.  展開 **[資料庫]** 。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ****，再選取系統資料庫。  
   
 3.  以滑鼠右鍵按一下資料庫，指向 [工作 **]，再**指向 [**還原**]，然後按一下 [**資料庫**]，這會開啟 [**還原資料庫**] 對話方塊。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "70154783"
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
-         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
+         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
   
         > [!NOTE]  
         >  這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
@@ -96,14 +96,13 @@ ms.locfileid: "70154783"
   
 9. 若要檢視或選取進階選項，在 **[選項]** 頁面的 **[還原選項]** 面板中，您可以選取下列任何選項 (如果情況適用)：  
   
-    1.  
-  `WITH` 選項 (非必要)：  
+    1.  `WITH` 選項 (非必要)：  
   
-        -   **覆寫現有的資料庫 (WITH REPLACE)**  
+        -   **覆寫現有的資料庫（WITH REPLACE）**  
   
-        -   **保留複寫設定 (WITH KEEP_REPLICATION)**  
+        -   **保留複寫設定（使用 KEEP_REPLICATION）**  
   
-        -   **限制對還原資料庫的存取 (WITH RESTRICTED_USER)**  
+        -   **限制對還原資料庫的存取（使用 RESTRICTED_USER）**  
   
     2.  針對 **[還原狀態]** 方塊，選取選項。 此方塊決定資料庫在還原作業之後的狀態。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "70154783"
   
         -   **RESTORE WITH STANDBY** ，讓資料庫處於唯讀模式。 它會復原未認可的交易，但會將復原動作儲存在待命資料庫檔案中，以還原復原影響。  
   
-    3.  如果您選取的時間點需要，則會選取 [**還原前先進行尾記錄備份**]。 您不需要修改這個設定，但是即使不需要，還是可以選擇備份記錄結尾。 在這裡的檔案名稱？ 如果 [**一般**] 頁面中的第一個備份組是在 Azure 中，則結尾記錄也會備份至相同的儲存體容器。  
+    3.  如果選取的時間點需要 [還原前先進行結尾記錄備份]****，則會予以選取。 您不需要修改這個設定，但是即使不需要，還是可以選擇備份記錄結尾。 在這裡的檔案名稱？ 如果 [**一般**] 頁面中的第一個備份組是在 Azure 中，則結尾記錄也會備份至相同的儲存體容器。  
   
     4.  若資料庫有使用中的連接，還原作業可能會失敗。 核取 **[關閉現有的連接選項]** ，確定已關閉 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 與資料庫之間的所有使用中連接。 這個核取方塊會在執行還原作業之前將資料庫設定為單一使用者模式，並在完成後將資料庫設定為多使用者模式。  
   

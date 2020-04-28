@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175990"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -42,13 +42,12 @@ ms.locfileid: "70175990"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a>元件和概念  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>元件和概念  
  備份 (back up) [動詞]  
  將資料或記錄檔記錄從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫或其交易記錄複製至備份裝置 (例如磁碟)，以建立資料備份或記錄備份。  
   
  備份 (backup) [名詞]  
- 失敗後可用來還原和復原資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料副本。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料備份會在資料庫層級或者一個或多個資料庫檔案或檔案群組層級建立。 無法建立資料表層級備份。 除了資料備份之外，完整復原模式也需要建立交易記錄備份。  
+ 失敗後可用來還原和復原資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料備份會在資料庫層級或者一個或多個資料庫檔案或檔案群組層級建立。 無法建立資料表層級備份。 除了資料備份之外，完整復原模式也需要建立交易記錄備份。  
   
  [復原模式](recovery-models-sql-server.md)  
  控制資料庫上交易記錄維護的資料庫屬性。 復原模式共有三種：簡單、完整和大量記錄。 資料庫的復原模式決定其備份和還原需求。  
@@ -81,10 +80,10 @@ ms.locfileid: "70175990"
  [檔案備份](full-file-backups-sql-server.md)  
  一個或多個資料庫檔案或檔案群組的備份。  
   
- [部份備份](partial-backups-sql-server.md)  
+ [部分備份](partial-backups-sql-server.md)  
  僅包含資料庫中某些檔案群組中的資料，包括主要檔案群組、每個讀取/寫入檔案群組，以及任何選擇性指定之唯讀檔案中的資料。  
   
- **備份媒體詞匯和定義**  
+ **備份媒體詞彙和定義**  
   
  [備份裝置](backup-devices-sql-server.md)  
  寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
@@ -104,11 +103,10 @@ ms.locfileid: "70175990"
  [鏡像媒體集](mirrored-backup-media-sets-sql-server.md)  
  多份媒體集副本 (鏡像)。  
   
-##  <a name="BackupCompression"></a>備份壓縮  
- 
-  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新版本支援壓縮備份，而 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本可以還原壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a>備份壓縮  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新版本支援壓縮備份，而 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本可以還原壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
   
-##  <a name="Restrictions"></a>SQL Server 中的備份作業限制  
+##  <a name="restrictions-on-backup-operations-in-sql-server"></a><a name="Restrictions"></a>SQL Server 中的備份作業限制  
  可在資料庫仍在線上運作以及正在使用中的時候進行備份。 不過，會有下列限制：  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>無法備份離線資料  
@@ -125,8 +123,7 @@ ms.locfileid: "70175990"
  一般而言，即使有一個或多個資料檔案無法使用，記錄備份都會成功。 不過，如果在大量記錄復原模式下變更任何包含大量記錄的檔案，則必須所有檔案都在線上，才能讓備份成功。  
   
 ### <a name="concurrency-restrictions-during-backup"></a>備份期間的並行限制  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用線上備份處理序，使您能夠在資料庫處於使用狀態時備份資料庫。 在備份期間，您可以執行大部分的作業；例如，在備份作業期間，您可以執行 INSERT、UPDATE 或 DELETE 陳述式。 不過，如果試圖在建立或刪除資料庫檔案過程中啟動備份作業，則備份作業會等候到建立或刪除作業完成，或備份逾時為止。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用線上備份處理序，使您能夠在資料庫處於使用狀態時備份資料庫。 在備份期間，您可以執行大部分的作業；例如，在備份作業期間，您可以執行 INSERT、UPDATE 或 DELETE 陳述式。 不過，如果試圖在建立或刪除資料庫檔案過程中啟動備份作業，則備份作業會等候到建立或刪除作業完成，或備份逾時為止。  
   
  資料庫備份或交易記錄備份期間所無法執行的作業包括：  
   
@@ -138,22 +135,22 @@ ms.locfileid: "70175990"
   
  如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二個作業都會等待第一個作業所設定的鎖定超時。（超時時間是由會話超時設定所控制）。如果在超時期間釋放鎖定，則會繼續進行第二個作業。 如果鎖定逾時，第二項作業就會失敗。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用備份裝置和備份媒體**  
   
 -   [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [定義磁帶機的邏輯備份裝置 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [指定磁片或磁帶做為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [指定磁碟或磁帶作為備份目的地 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [刪除備份裝置 &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [在備份 &#40;SQL Server 上設定到期日&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [設定備份的到期日 &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [檢視備份磁帶或檔案的內容 &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [查看備份組中的資料和記錄檔 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [檢視備份組中的資料和記錄檔 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1d0b1d2ef6eed113061cd0f79508a637ec078495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952609"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>安裝 BI 功能來搭配 SharePoint 的檢查清單
@@ -27,6 +27,6 @@ ms.locfileid: "71952609"
   
  [部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- [部署檢查清單：將 Reporting Services 安裝到現有的 SharePoint 伺服器陣列](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586741"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>識別您內部部署資料庫的正確 Azure SQL Database/受控執行個體 SKU
@@ -102,7 +102,7 @@ ms.locfileid: "72586741"
     - **/AzureAuthenticationTenantId**：驗證租使用者。
     - **/AzureAuthenticationClientId**：用於驗證之 AAD 應用程式的用戶端識別碼。
     - 下列其中一個驗證選項：
-      - 互動式
+      - Interactive (互動式)
         - **AzureAuthenticationInteractiveAuthentication**：如果是驗證快顯視窗，請將設定為 true。
       - 以憑證為基礎
         - **AzureAuthenticationCertificateStoreLocation**：設定為憑證存放區位置（例如 "CurrentUser"）。

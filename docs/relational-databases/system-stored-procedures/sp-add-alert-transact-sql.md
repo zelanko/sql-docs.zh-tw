@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174265"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
@@ -103,7 +103,7 @@ sp_add_alert [ @name = ] 'name'
   
 |格式元素|描述|  
 |--------------------|-----------------|  
-|*Item*|計數器的效能物件、效能計數器或具名執行個體|  
+|*項目*|計數器的效能物件、效能計數器或具名執行個體|  
 |*比較子*|下列其中一個運算子： >、< 或 =|  
 |*ReplTest1*|計數器的數值|  
   
@@ -132,20 +132,17 @@ sp_add_alert [ @name = ] 'name'
   
 -   使用**xp_logevent**記錄的任何事件  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理整個警示系統，建議您利用這個方式來設定警示基礎結構。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理整個警示系統，建議您利用這個方式來設定警示基礎結構。  
   
  如果警示無法正常作，請檢查情況是否如下：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務正在執行。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務正在執行。  
   
 -   事件出現在 Windows 應用程式記錄檔中。  
   
 -   已啟用警示。  
   
--   
-  **xp_logevent** 產生的事件出現在 master 資料庫中。 因此，除非警示的 **** database_name** 是 \@'master'** 或 NULL，否則，**xp_logevent** 不會觸發警示。  
+-   **xp_logevent** 產生的事件出現在 master 資料庫中。 因此，除非警示的 **\@database_name** 是 **'master'** 或 NULL，否則，**xp_logevent** 不會觸發警示。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行 **sp_add_alert**。  

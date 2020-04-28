@@ -14,23 +14,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176013"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>適用 SQL Server 的雲端配接器
-  在 Azure VM 上布建的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]過程中，會建立雲端配接器服務。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以**本機系統**帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器也會建立 Windows 防火牆規則，以允許其在預設通訊埠 11435 的傳入 TCP 連接。  
+  在 Azure VM 上布建的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]過程中，會建立雲端配接器服務。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以 **本機系統** 帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器也會建立 Windows 防火牆規則，以允許其在預設通訊埠 11435 的傳入 TCP 連接。  
   
- 雲端配接器是無狀態的同步服務，可從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的內部部署執行個體接收訊息。 當雲端配接器服務停止時，它會停止遠端存取雲端配接器、將 SSL 憑證解除繫結，並且停用 Windows 防火牆規則。  
+ 雲端配接器是無狀態的同步服務，可從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的內部部署執行個體接收訊息。 當雲端配接器服務停止時，它會停止遠端存取雲端配接器、將 SSL 憑證解除繫結，並且停用 Windows 防火牆規則。  
   
 ## <a name="cloud-adapter-requirements"></a>雲端配接器需求  
- 請注意下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 適用之安裝、啟用和執行雲端配接器的需求：  
+ 請注意下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]適用之安裝、啟用和執行雲端配接器的需求：  
   
 -   雲端配接器可在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 及更高版本上支援。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 上，適用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的雲端配接器需要 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 適用的 SQL 管理物件。  
   
--   雲端配接器 Web 服務會以**本機系統**帳戶執行，並且在執行任何工作之前驗證用戶端認證。 用戶端提供的認證必須屬於遠端電腦上本機系統**管理員**群組成員的使用帳戶。  
+-   雲端配接器 Web 服務會以 **本機系統** 帳戶執行，並且在執行任何工作之前驗證用戶端認證。 用戶端提供的認證必須屬於遠端電腦上本機系統**管理員**群組成員的使用帳戶。  
   
 -   雲端配接器只支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "70176013"
   
 -   **設定檔參數** -  
   
-    -   \<設定>  
+    -   \<configuration>  
   
         -   \<appSettings>  
   
@@ -71,14 +71,14 @@ ms.locfileid: "70176013"
   
  **設定檔值**：  
   
-|設定|值|預設|註解|  
+|設定|值|預設|評價|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|若未指定，則使用 11435。|  
 |WebServiceCertificate|指模|空白|如為空白，則會產生新的自我簽署憑證。|  
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>雲端配接器疑難排解  
- 請利用下列資訊對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 適用的雲端配接器進行疑難排解：  
+ 請利用下列資訊對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]適用的雲端配接器進行疑難排解：  
   
 -   **錯誤處理和記錄**-錯誤和狀態訊息會寫入應用程式事件記錄檔。  
   

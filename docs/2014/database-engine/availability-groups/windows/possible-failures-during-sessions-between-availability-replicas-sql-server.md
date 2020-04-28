@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874468"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>工作階段期間可用性複本之間可能發生失敗 (SQL Server)
@@ -59,8 +59,7 @@ ms.locfileid: "70874468"
   
 -   未插上纜線。  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 具有封鎖特定通訊埠的防火牆。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 具有封鎖特定通訊埠的防火牆。  
   
 -   正在監視通訊埠的應用程式失敗。  
   
@@ -93,13 +92,13 @@ ms.locfileid: "70874468"
  不論錯誤的類型為何，偵測到錯誤的伺服器執行個體都會根據執行個體的角色、工作階段的可用性模式和工作階段中其他連接的狀態，進行適當的回應。 如需有關遺失夥伴時所發生之情況的詳細資訊，請參閱[可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- **變更超時值（僅限同步認可的可用性模式）**  
+ **若要變更逾時值 (僅限同步認可可用性模式)**  
   
 -   [變更可用性複本的工作階段逾時期限 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **若要查看目前的超時值**  
+ **若要檢視目前的逾時值**  
   
--   查詢 **sys.availability_replicas &#40;Transact-SQL&#41;** 中的 [session_timeout](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)。  
+-   查詢 [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql) 中的 **session_timeout**。  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  

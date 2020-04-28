@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ff94bf10dee2bda0a61b573b87621fa5d3256b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781803"
 ---
 # <a name="using-messages"></a>使用訊息
-  在 SMO 中，系統訊息是由屬於 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 物件的 `Server` 物件表示。 因為系統訊息無法修改，所以 `SystemMessage` 物件屬性是唯讀的。  
+  在 SMO 中，系統訊息是由屬於 `Server` 物件的 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 物件表示。 因為系統訊息無法修改，所以 `SystemMessage` 物件屬性是唯讀的。  
   
  在 SMO 中，使用者定義的訊息是由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 物件以程式設計的方式表示。 現有的使用者定義的訊息可以藉由反覆運算集合而找到。 新的使用者定義訊息則可藉由具現化新的 `UserDefinedMessage` 物件和設定適當的屬性來建立。  
   

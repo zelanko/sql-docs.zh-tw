@@ -17,10 +17,10 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305159"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys.databases sp_rda_test_connection （Transact-sql）
@@ -72,7 +72,7 @@ EXECUTE sys.sp_rda_test_connection
 |-----------------|---------------|-----------------|  
 |link_state|int|下列其中一個值，對應至**link_state_desc**的值。<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
 |link_state_desc| varchar(32)|下列其中一個值，對應至**link_state**前面的值。<br /><br /> -狀況良好<br />     SQL Server 和遠端 Azure 伺服器之間的狀況良好。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火牆會阻止 SQL Server 和遠端 Azure 伺服器之間的連結。<br />-ERROR_NO_CONNECTION<br />     SQL Server 無法建立與遠端 Azure 伺服器的連接。<br />-ERROR_AUTH_FAILURE<br />     驗證失敗，導致 SQL Server 和遠端 Azure 伺服器之間的連結無法使用。<br />-錯誤<br />     不是驗證問題、連線問題或防火牆問題的錯誤，導致 SQL Server 和遠端 Azure 伺服器之間的連結無法使用。|  
-|error_number|int|錯誤的數目。 如果沒有錯誤，此欄位會是 Null。|  
+|error_number|int|錯誤的號碼。 如果沒有錯誤，此欄位會是 Null。|  
 |error_message|nvarchar(1024)|錯誤訊息。 如果沒有錯誤，此欄位會是 Null。|  
   
 ## <a name="permissions"></a>權限  
