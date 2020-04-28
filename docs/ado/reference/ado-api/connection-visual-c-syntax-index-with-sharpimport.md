@@ -16,10 +16,10 @@ ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933511"
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>Connection （Visual C++ 語法索引與 #import）

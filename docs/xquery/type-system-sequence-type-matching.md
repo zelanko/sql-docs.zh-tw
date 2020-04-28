@@ -16,10 +16,10 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946222"
 ---
 # <a name="type-system---sequence-type-matching"></a>類型系統 - 序列類型比對
@@ -102,8 +102,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:decimal')
 GO  
 ```  
   
- 現在，請將 `a` 屬性值變更為字串類型。 
-  `instance of xs:string` 將傳回 True。  
+ 現在，請將 `a` 屬性值變更為字串類型。 `instance of xs:string` 將傳回 True。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -292,16 +291,14 @@ GO
   
  您也可以使用下列各項：  
   
--   
-  `element(ElementName, ElementType?)` 序列類型語法，如下列查詢所示。 它會比對名稱為 `firstName` 且類型為 `xs:string` 的元素節點 (Nilled 或 Non-nilled)。  
+-   `element(ElementName, ElementType?)` 序列類型語法，如下列查詢所示。 它會比對名稱為 `firstName` 且類型為 `xs:string` 的元素節點 (Nilled 或 Non-nilled)。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS";   
     (/x:customer/*)[1] instance of element (firstName, xs:string?)')  
     ```  
   
--   
-  `element(*, type?)` 序列類型語法，如下列查詢所示。 如果類型是 `xs:string`，不論名稱是什麼，即會符合元素節點。  
+-   `element(*, type?)` 序列類型語法，如下列查詢所示。 如果類型是 `xs:string`，不論名稱是什麼，即會符合元素節點。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS"; (/x:customer/*)[1] instance of element (*, xs:string?)')  

@@ -13,10 +13,10 @@ ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86fb1c06f34f3c8c6688c234b8c2714cd61c089e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938526"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Dimension 物件屬性、方法和事件

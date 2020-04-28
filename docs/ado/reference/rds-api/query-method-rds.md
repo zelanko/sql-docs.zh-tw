@@ -14,10 +14,10 @@ ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963822"
 ---
 # <a name="query-method-rds"></a>Query 方法 (RDS)
@@ -34,13 +34,13 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ```  
   
 #### <a name="parameters"></a>參數  
- *資料錄集*  
+ *Recordset*  
  代表**記錄集**物件的物件變數。  
   
  *DataFactory*  
  代表[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件的物件變數。  
   
- *[連接]*  
+ *建立*  
  包含伺服器連接資訊的**字串**值。 這類似于[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性。  
   
  *查詢*  

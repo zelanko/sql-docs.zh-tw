@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946601"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模組和初構 - XQuery 初構
@@ -29,7 +29,7 @@ ms.locfileid: "67946601"
 
   XQuery 查詢是由初構及主體所組成。 XQuery 初構是一系列的宣告和定義，由這二者共同建立查詢處理所需的環境。 在 SQL Server 中，XQuery 初構可以包含命名空間宣告。 XQuery 主體則由一系列的運算式所組成，可指定所想要得到的查詢結果。  
   
- 例如，下列 XQuery 是針對將製造指示儲存為 XML 的**xml**類型的 [指示] 資料行所指定。 該查詢會擷取工作中心位置 `10` 的製造指示。 Xml `query()`資料類型的**** 方法是用來指定 XQuery。  
+ 例如，下列 XQuery 是針對將製造指示儲存為 XML 的**xml**類型的 [指示] 資料行所指定。 該查詢會擷取工作中心位置 `10` 的製造指示。 Xml `query()`資料類型的**xml**方法是用來指定 XQuery。  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -43,11 +43,9 @@ WHERE ProductModelID=7
   
 -   XQuery 初構包含命名空間前置詞（AWMI）宣告`(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`（）。  
   
--   
-  `declare namespace` 關鍵字定義稍後要用在查詢主體中的命名空間前置詞。  
+-   `declare namespace` 關鍵字定義稍後要用在查詢主體中的命名空間前置詞。  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` 則是查詢主體。  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` 則是查詢主體。  
   
 ## <a name="namespace-declarations"></a>命名空間宣告  
  命名空間宣告會定義前置詞，並將其與命名空間 URI 產生關聯，如下列查詢所示。 在查詢中， `CatalogDescription`是**xml**類型資料行。  

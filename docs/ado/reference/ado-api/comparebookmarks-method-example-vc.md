@@ -15,10 +15,10 @@ ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 137805600b30876baa96e8b795b99b62b140e915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933590"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 方法範例 (VC++)

@@ -16,10 +16,10 @@ ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965187"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
@@ -27,7 +27,7 @@ ms.locfileid: "67965187"
   
 |持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|1|預設。 資料行的排序次序為遞增。|  
+|**adSortAscending**|1|預設值。 資料行的排序次序為遞增。|  
 |**adSortDescending**|2|資料行的排序次序為遞減。|  
   
 ## <a name="applies-to"></a>套用至  

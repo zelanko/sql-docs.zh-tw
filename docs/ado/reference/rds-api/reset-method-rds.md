@@ -14,10 +14,10 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963498"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
@@ -37,7 +37,7 @@ DataControl.Reset(value)
  *DataControl*  
  代表 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
- *value*  
+ *值*  
  選擇性。 **布林**值，如果您想要篩選目前的「已篩選」資料列集，則為**True** （預設值）。 **False**表示您會篩選原始資料列集，並移除任何先前的篩選選項。  
   
 ## <a name="remarks"></a>備註  

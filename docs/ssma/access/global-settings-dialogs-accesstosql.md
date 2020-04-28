@@ -10,10 +10,10 @@ ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5b8ef85b9d0d997ed8aae05fc53aa685a2dcacfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986413"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>全域設定（對話方塊）（AccessToSQL）
@@ -21,7 +21,7 @@ ms.locfileid: "67986413"
   
 若要存取 [**工具**] 功能表上的對話方塊設定，請選取 [**全域設定**]，按一下左窗格底部的 [ **GUI** ]，然後選取 [**對話方塊**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **啟動時顯示遷移嚮導**  
 在 [存取的 SSMA] 中，您可以選擇在啟動 SSMA 應用程式時啟用或停用 [**遷移嚮導]** 。 根據預設，此選項為**True**。  
   

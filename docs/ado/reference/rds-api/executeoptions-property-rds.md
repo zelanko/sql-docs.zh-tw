@@ -14,10 +14,10 @@ ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964189"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 屬性 (RDS)
@@ -32,7 +32,7 @@ ms.locfileid: "67964189"
 |持續性|描述|  
 |--------------|-----------------|  
 |**adcExecSync**|以同步方式執行[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的下一次重新整理。|  
-|**adcExecAsync**|預設。 以非同步方式執行**記錄集**的下一次重新整理。|  
+|**adcExecAsync**|預設值。 以非同步方式執行**記錄集**的下一次重新整理。|  
   
 > [!NOTE]
 >  使用這些常數的每個可執行檔都必須提供宣告給它們。 您可以從位於 RDS 程式庫的預設安裝資料夾中的 Adcvbs 檔案，剪下並貼上您想要的常數宣告。  

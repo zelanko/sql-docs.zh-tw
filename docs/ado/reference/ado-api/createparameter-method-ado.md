@@ -17,10 +17,10 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933292"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
@@ -40,7 +40,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *名稱*  
  選擇性。 包含**參數**物件名稱的**字串**值。  
   
- *型別*  
+ *類型*  
  選擇性。 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，指定**參數**物件的資料類型。  
   
  *方向*  

@@ -21,10 +21,10 @@ ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938579"
 ---
 # <a name="description-property-ado-md"></a>Description 屬性 (ADO MD)

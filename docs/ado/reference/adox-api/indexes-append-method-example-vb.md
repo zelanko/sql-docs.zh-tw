@@ -15,10 +15,10 @@ ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d164c650c67498a89b784cc49779384a198c669
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966058"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append 方法範例 (VB)

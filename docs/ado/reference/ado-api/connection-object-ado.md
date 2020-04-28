@@ -16,14 +16,14 @@ ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933567"
 ---
 # <a name="connection-object-ado"></a>Connection 物件 (ADO)
-表示與資料來源的開啟連接。  
+表示資料來源的開啟連接。  
   
 ## <a name="remarks"></a>備註  
  **Connection**物件代表具有資料來源的唯一會話。 在用戶端/伺服器資料庫系統中，它可能相當於與伺服器的實際網路連接。 視提供者支援的功能而定，可能無法使用**連接**物件的某些集合、方法或屬性。  

@@ -13,10 +13,10 @@ ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81603a2a8ab558d0f574e08c90992ea68afffc80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949519"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels 集合屬性、方法和事件

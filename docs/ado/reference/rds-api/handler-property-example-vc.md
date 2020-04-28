@@ -15,10 +15,10 @@ ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15bbdd0b1e3627453a3ea10a4ea6207f446988f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964066"
 ---
 # <a name="handler-property-example-vc"></a>Handler 屬性範例 (VC++)

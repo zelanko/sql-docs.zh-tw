@@ -17,10 +17,10 @@ ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1e62432f5d5d91cbce2079eb161a152773ed1af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949594"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth 屬性 (ADO MD)

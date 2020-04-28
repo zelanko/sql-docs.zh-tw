@@ -20,10 +20,10 @@ ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984875"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
@@ -33,11 +33,10 @@ ms.locfileid: "67984875"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的識別碼。 這個值會對應至**sysproxies**資料表中的**proxy_id**資料行。|  
+|**proxy_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的識別碼。 這個值會對應至**sysproxies**資料表中的**proxy_id**資料行。|  
 |**sid**|**Varbinary （85）**|適用于 SQL Server 登入的 Microsoft Windows *security_identifier* 。|  
 |**principal_id**|**int**|有權使用指定子系統步驟的 Proxy 帳戶之使用者或群組的識別碼。|  
-|**旗幟**|**int**|登入類型：<br /><br /> **0** = Windows 使用者或群組，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。<br /><br /> ****  =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定系統角色<br /><br /> **2** = **msdb**資料庫角色|  
+|**flags**|**int**|登入類型：<br /><br /> **0** = Windows 使用者或群組，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。<br /><br /> **1**  =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定系統角色<br /><br /> **2** = **msdb**資料庫角色|  
   
 ## <a name="remarks"></a>備註  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠存取此資料表。  

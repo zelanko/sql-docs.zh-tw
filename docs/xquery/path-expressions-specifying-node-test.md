@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946439"
 ---
 # <a name="path-expressions---specifying-node-test"></a>路徑運算式 - 指定節點測試
@@ -71,7 +71,7 @@ child::ProductDescription
   
  因此，針對**ProductModel**資料表中的產品類別目錄 XML 檔執行此運算式時，它會抓取\< \<ProductDescription> 專案的功能> 專案節點子系的所有元素節點子系。  
   
- 路徑運算式`/child::PD:ProductDescription/attribute::ProductModelID`是由兩個步驟所組成。 這兩步均指定節點名稱做為節點測試。 另外，第二步會使用屬性軸。 因此，每一步所選取的軸之主要節點種類的節點，其所指定的名稱均與節點測試相同。 因此，運算式會傳回**** \<ProductDescription> 元素節點的 ProductModelID 屬性節點。  
+ 路徑運算式`/child::PD:ProductDescription/attribute::ProductModelID`是由兩個步驟所組成。 這兩步均指定節點名稱做為節點測試。 另外，第二步會使用屬性軸。 因此，每一步所選取的軸之主要節點種類的節點，其所指定的名稱均與節點測試相同。 因此，運算式會傳回**ProductModelID** \<ProductDescription> 元素節點的 ProductModelID 屬性節點。  
   
  當為節點測試指定節點名稱時，您可以使用萬用字元 (*) 指定節點的本機名稱或用於節點的命名空間前置詞，如下列範例所示：  
   
@@ -94,14 +94,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |節點類型|傳回值|範例|  
 |---------------|-------------|-------------|  
-|`comment()`|註解節點會傳回 True。|
-  `following::comment()` 會選取所有出現在內容節點後面的註解節點。|  
-|`node()`|任何種類的節點均會傳回 True。|
-  `preceding::node()` 會選取所有出現在內容節點前面的節點。|  
-|`processing-instruction()`|處理指示節點會傳回 True。|
-  `self::processing instruction()` 會選取所有在內容節點內的處理指示節點。|  
-|`text()`|文字節點會傳回 True。|
-  `child::text()` 會選取內容節點子系的文字節點。|  
+|`comment()`|註解節點會傳回 True。|`following::comment()` 會選取所有出現在內容節點後面的註解節點。|  
+|`node()`|任何種類的節點均會傳回 True。|`preceding::node()` 會選取所有出現在內容節點前面的節點。|  
+|`processing-instruction()`|處理指示節點會傳回 True。|`self::processing instruction()` 會選取所有在內容節點內的處理指示節點。|  
+|`text()`|文字節點會傳回 True。|`child::text()` 會選取內容節點子系的文字節點。|  
   
  如果節點類型 (例如 text() 或 comment()) 是指定為節點測試，該步只會傳回指定種類的節點，不論軸的主要節點種類為何。 例如，下列路徑運算式只會傳回內容節點的註解節點子系：  
   

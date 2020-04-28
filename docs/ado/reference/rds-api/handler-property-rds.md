@@ -14,10 +14,10 @@ ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963998"
 ---
 # <a name="handler-property-rds"></a>Handler 屬性 (RDS)
@@ -39,7 +39,7 @@ DataControl.Handler = String
  *DataControl*  
  代表 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
- *String*  
+ *字串*  
  包含處理常式名稱和任何參數的**字串**值，全都以逗號分隔（ `"handlerName,parm1,parm2,...,parm`例如*N*`"`）。  
   
 ## <a name="remarks"></a>備註  

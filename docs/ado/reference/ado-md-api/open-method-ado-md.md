@@ -17,10 +17,10 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949381"
 ---
 # <a name="open-method-ado-md"></a>Open 方法 (ADO MD)
@@ -34,7 +34,7 @@ Cellset.Open Source, ActiveConnection
 ```  
   
 #### <a name="parameters"></a>參數  
- *Source*  
+ *來源*  
  選擇性。 評估為有效多維度查詢的**Variant** ，例如多維度運算式（MDX）查詢。 *Source*引數會對應至[source](../../../ado/reference/ado-md-api/source-property-ado-md.md)屬性。 如需 MDX 的詳細資訊，請參閱 Microsoft Data Access Components SDK 中的[線上分析處理（OLAP）的 OLE DB](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3)檔。  
   
  *ActiveConnection*  

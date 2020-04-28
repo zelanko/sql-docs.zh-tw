@@ -18,10 +18,10 @@ ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990050"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67990050"
 |**sequence_number**|**int**|這是一個累加數字，指出跨越多項記錄之錯誤資訊的正確順序。|  
 |**log_time**|**datetime**|建立記錄的日期和時間。|  
 |**log_time_utc**|**datetime**|建立記錄的日期和時間，用國際標準時間 (UTC) 來表示。|  
-|**消息**|**nvarchar**|訊息文字。|  
+|**message**|**nvarchar**|訊息文字。|  
 |**來源**|**nvarchar**|錯誤訊息或事件的來源。|  
 |**help_url**|**nvarchar**|能夠找到更多錯誤相關資訊的 URL (如果有的話)。|  
   

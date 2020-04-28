@@ -16,10 +16,10 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965249"
 ---
 # <a name="ruleenum"></a>RuleEnum
@@ -28,7 +28,7 @@ ms.locfileid: "67965249"
 |持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Cascade 變更。|  
-|**adRINone**|0|預設。 不採取任何動作。|  
+|**adRINone**|0|預設值。 不採取任何動作。|  
 |**adRISetDefault**|3|[外鍵值] 設定為預設值。|  
 |**adRISetNull**|2|外鍵值設定為 null。|  
   

@@ -18,10 +18,10 @@ ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949214"
 ---
 # <a name="positions-collection-ado-md"></a>Positions 集合 (ADO MD)

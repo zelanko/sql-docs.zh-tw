@@ -14,10 +14,10 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964128"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 屬性 (RDS)
@@ -33,7 +33,7 @@ ms.locfileid: "67964128"
 |--------------|-----------------|  
 |**adcFetchUpFront**|將控制權傳回給應用程式之前，會提取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有記錄。 在允許應用程式對其執行任何動作之前，會先提取完整的**記錄集**。|  
 |**adcFetchBackground**|一旦提取記錄的第一個批次之後，控制項就可以返回應用程式。 後續讀取記錄**集**時，如果嘗試存取未提取在第一個批次中的記錄，將會延遲到實際提取記錄為止，此時控制項會回到應用程式。|  
-|**adcFetchAsync**|預設。 當記錄在背景中提取時，控制項會立即返回應用程式。 如果應用程式嘗試讀取尚未提取的記錄，則會讀取最接近搜尋記錄的記錄，且控制權會立即傳回，表示已達到**記錄集**目前的結尾。 例如， [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)的呼叫會將目前的記錄位置移至實際提取的最後一筆記錄，即使有更多的記錄會繼續填入**記錄集**也一樣。|  
+|**adcFetchAsync**|預設值。 當記錄在背景中提取時，控制項會立即返回應用程式。 如果應用程式嘗試讀取尚未提取的記錄，則會讀取最接近搜尋記錄的記錄，且控制權會立即傳回，表示已達到**記錄集**目前的結尾。 例如， [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)的呼叫會將目前的記錄位置移至實際提取的最後一筆記錄，即使有更多的記錄會繼續填入**記錄集**也一樣。|  
   
 > [!NOTE]
 >  每個使用這些常數的用戶端可執行檔都必須提供宣告給它們。 您可以從位於 RDS 程式庫的預設安裝資料夾中的 Adcvbs 檔案，剪下並貼上您想要的常數宣告。  

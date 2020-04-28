@@ -10,10 +10,10 @@ ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944622"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>使用者介面參考 (MySQLToSQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67944622"
 |[編輯類型對應 &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|使用 [**編輯類型對應**] 對話方塊，即可建立或修改來源與目標資料庫與資料庫物件之間的資料類型對應。|  
 |[&#40;編輯器的全域設定&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|使用 [**通用設定**] 對話方塊的 [編輯器] 頁面，即可設定程式碼編輯器選項。|  
 |[&#40;對話方塊的全域設定&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|使用 [**通用設定**] 對話方塊的 [對話方塊] 頁面，即可設定預設對話方塊和警告設定。|  
-|[全域設定（記錄）](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|使用 [**通用設定**] 對話方塊的 [記錄] 頁面，即可設定記錄。|  
+|[全域設定 (記錄)](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|使用 [**通用設定**] 對話方塊的 [記錄] 頁面，即可設定記錄。|  
 |[全域設定 &#40;輸出視窗&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|使用 [**通用設定**] 對話方塊來設定 SSMA for MySQL 使用者介面的喜好設定。|  
 |[新專案 &#40;SSMA&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|使用 [**新增專案**] 對話方塊來建立新的 MYSQL 專案 SSMA。|  
 |[專案設定 &#40;轉換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|使用 [**專案設定**] 對話方塊的 [轉換] 頁面，即可指定 MYSQL 的 SSMA 如何轉換函式和全域變數。|  

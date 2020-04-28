@@ -13,10 +13,10 @@ ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b6f683685c4d961ccf63cecde71b6f37e7675d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965849"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Key 物件屬性、方法和事件

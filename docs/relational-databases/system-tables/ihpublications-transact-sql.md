@@ -18,10 +18,10 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990329"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67990329"
 |**pubid**|**int**|提供發行集唯一識別碼的識別欄位。|  
 |**name**|**sysname**|與發行集相關聯的唯一名稱。|  
 |**repl_freq**|**tinyint**|複寫頻率：<br /><br /> **0** = 以交易為基礎。<br /><br /> **1** = 已排程的資料表重新整理。|  
-|**狀態**|**tinyint**|發行集的狀態，它可以是下列項目之一。<br /><br /> **0** = 非使用中。<br /><br /> **1** = 使用中。|  
+|**status**|**tinyint**|發行集的狀態，它可以是下列項目之一。<br /><br /> **0** = 非使用中。<br /><br /> **1** = 使用中。|  
 |**sync_method**|**tinyint**|同步處理方法：<br /><br /> **1** = 字元大量複製。<br /><br /> **4** = Concurrent_c，這表示會使用字元大量複製，但在快照集期間，不會鎖定資料表。|  
 |**snapshot_jobid**|**binary**|已排程的工作識別碼。|  
 |**enabled_for_internet**|**bit**|指出發行集的同步處理檔案是否透過 FTP 和其他服務公開到網際網路，其中**1**表示可以從網際網路存取。|  
@@ -59,7 +59,7 @@ ms.locfileid: "67990329"
 |**conflict_policy**|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 發行者在衝突中獲勝。<br /><br /> **2** = 訂閱者在衝突中獲勝。<br /><br /> **3** = 重新初始化訂閱。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
 |**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列來儲存交易。<br /><br /> **2** = sql，用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者不使用這個資料行。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列已被取代，不再受到支援。<br /><br /> *非 SQL 發行者不支援此資料行。*|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼（GUID）會指定在[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行發行集，而 GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。 *不支援非 SQL 發行者使用這個項目。*|  
-|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> ****  = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> ****  = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
+|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90**  = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100**  = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> *不支援非 SQL 發行者使用這個項目。*|  
 |**描述**|**nvarchar(255)**|發行集的描述項目。|  
 |**independent_agent**|**bit**|指定這個發行集是否有獨立的散發代理程式。<br /><br /> **0** = 發行集使用共用的散發代理程式，而且每個發行者資料庫/訂閱者資料庫配對都有單一的共用代理程式。<br /><br /> **1** = 此發行集有一個獨立的散發代理程式。|  
 |**immediate_sync**|**bit**|指出每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案， **1**表示每次執行代理程式時都會建立它們。|  
@@ -70,7 +70,7 @@ ms.locfileid: "67990329"
 |**allow_initialize_from_backup**|**bit**|指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 **1**表示可以從備份初始化訂閱，而**0**表示它們不能。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。 *不支援非 SQL 發行者使用這個項目。*|  
 |**min_autonosync_lsn**|**二進位（1）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|指出是否支援發行集的結構描述複寫。 **1**表示複寫在發行者端執行的 ddl 語句， **0**表示不復寫 ddl 語句。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。 *不支援非 SQL 發行者使用這個項目。*|  
-|**選項**|**int**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用點對點複寫。<br /><br /> **0x2** -只發行本機變更。<br /><br /> **0x4** -啟用非 SQL Server 的訂閱者。|  
+|**options**|**int**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用點對點複寫。<br /><br /> **0x2** -只發行本機變更。<br /><br /> **0x4** -啟用非 SQL Server 的訂閱者。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

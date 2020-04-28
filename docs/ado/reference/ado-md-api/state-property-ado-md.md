@@ -17,10 +17,10 @@ ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c11bb74b62d54b1e2489cba5dd7cd35ee376a41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949150"
 ---
 # <a name="state-property-ado-md"></a>State 屬性 (ADO MD)

@@ -19,10 +19,10 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965221"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
@@ -45,7 +45,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *動作*  
  **Long**值，可以是其中一個[ActionEnum](../../../ado/reference/adox-api/actionenum.md)常數，指定設定許可權時要執行的動作類型。  
   
- *Rights*  
+ *權限*  
  **長**數值，可以是一或多個[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常數的位元遮罩，表示要設定的許可權。  
   
  *都會*  

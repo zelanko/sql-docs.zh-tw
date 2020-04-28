@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964519"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
@@ -65,7 +65,7 @@ object.CreateRecordset(ColumnInfos)
   
  針對某些變數資料類型，類型可以強制轉型為替代欄位中所記下的類型。 在建立並填入**記錄集**之前，您將不會看到替換。 然後，您可以視需要檢查實際的資料類型。  
   
-|長度|持續性|Number|替代字元|  
+|長度|持續性|Number|Substitution|  
 |------------|--------------|------------|------------------|  
 |已修正|**adTinyInt**|16||  
 |已修正|**adSmallInt**|2||  

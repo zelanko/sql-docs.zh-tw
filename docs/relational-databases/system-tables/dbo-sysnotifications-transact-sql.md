@@ -20,10 +20,10 @@ ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ef7a5456f0bae470bcbf1f12f37843aa6c311d78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984916"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)

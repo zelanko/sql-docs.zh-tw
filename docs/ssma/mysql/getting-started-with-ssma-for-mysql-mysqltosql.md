@@ -14,10 +14,10 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984543"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>開始使用 SSMA for MySQL (MySQLToSQL)
@@ -112,7 +112,7 @@ SSMA 有兩個工具列： [專案] 工具列和 [遷移] 工具列。
 |**編輯**|包含在 [詳細資料] 頁面中尋找和使用文字的命令。 若要開啟 [**管理書簽**] 對話方塊，請按一下 [編輯] 功能表上的 [管理書簽]。 在對話方塊中，您會看到現有書簽的清單。 您可以使用對話方塊右側的按鈕來管理書簽。|  
 |**檢視**|包含**同步處理中繼資料**的流覽命令。 這會在 MySQL Metadata Explorer 和 SQL Server 或 Azure SQL DB 中繼資料 Explorer 之間同步處理物件。 也包含用來顯示和隱藏 [**輸出**] 和 [**錯誤清單**] 窗格的命令，以及用來管理版面配置的選項**版面**配置。|  
 |**工具**|包含用來建立報表、轉換架構、從資料庫重新整理、遷移物件和資料，以及另存為腳本的命令。 也提供 [**全域設定]、[預設專案設定**] 和 [**專案設定**] 對話方塊的存取權。|  
-|**説明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
+|**說明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>輸出窗格和錯誤清單窗格  
 [ **View** ] 功能表提供命令來切換 [輸出] 窗格和 [錯誤清單] 窗格的可見度：  

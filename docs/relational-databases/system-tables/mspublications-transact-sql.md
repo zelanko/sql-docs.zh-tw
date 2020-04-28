@@ -18,10 +18,10 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939016"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67939016"
 |**發行集**|**sysname**|發行集的名稱。|  
 |**publication_id**|**int**|發行集的識別碼。|  
 |**publication_type**|**int**|發行集類型：<br /><br /> **0** = 交易式。<br /><br /> **1** = 快照集。<br /><br /> **2** = Merge。|  
-|**thirdparty_flag**|**bit**|指出發行集是否為[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫：<br /><br /> ****  = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料來源。|  
+|**thirdparty_flag**|**bit**|指出發行集是否為[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫：<br /><br /> **0**  = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料來源。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**immediate_sync**|**bit**|指出每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
 |**allow_push**|**bit**|指出是否能夠建立給定發行集的發送訂閱。|  
@@ -49,7 +49,7 @@ ms.locfileid: "67939016"
 |**allow_subscription_copy**|**bit**|啟用或停用複製訂閱這個發行集之訂閱資料庫的能力。 **0**表示已停用複製， **1**表示已啟用。|  
 |**thirdparty_options**|**int**|指定是否隱藏在的 Replication 資料夾[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中顯示發行集：<br /><br /> **0** = 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 Replication 資料夾中顯示異類發行集。<br /><br /> **1** = 隱藏在的 Replication 資料夾中顯示異類發行集[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。|  
 |**allow_queued_tran**|**bit**|指定發行集是否允許佇列更新：<br /><br /> **0 =** 發行集未排入佇列。<br /><br /> **1** = 發行集已排入佇列。|  
-|**選項**|**int**|這個版本沒有可用的資訊。|  
+|**options**|**int**|這個版本沒有可用的資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984912"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67984912"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|操作員的識別碼。|  
+|**id**|**int**|操作員的識別碼。|  
 |**name**|**sysname**|操作員的名稱。|  
 |**後**|**tinyint**|警示通知的狀態 (布林)。 如果是**1**，此操作員可以在發生警示時收到通知。|  
 |**email_address**|**Nvarchar （100）**|這位操作員的電子郵件地址。|  

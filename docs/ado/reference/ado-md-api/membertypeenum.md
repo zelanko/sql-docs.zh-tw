@@ -16,10 +16,10 @@ ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949405"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
@@ -30,5 +30,5 @@ ms.locfileid: "67949405"
 |**adMemberAll**|4|表示**成員**物件代表層級的所有成員。|  
 |**adMemberFormula**|3|表示使用公式運算式來計算**成員**物件。|  
 |**adMemberMeasure**|2|表示**成員**物件屬於量值維度，並代表量化屬性。|  
-|**adMemberRegular**|1|預設。 表示**成員**物件代表商務實體的實例。|  
+|**adMemberRegular**|1|預設值。 表示**成員**物件代表商務實體的實例。|  
 |**adMemberUnknown**|0|無法判斷成員的類型。|

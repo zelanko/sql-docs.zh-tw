@@ -14,10 +14,10 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964549"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
@@ -40,10 +40,10 @@ ms.locfileid: "67964549"
  *Object*  
  評估為*ProgID*中所指定類型之物件的物件變數。  
   
- *空間*  
+ *DataSpace*  
  代表 RDS 的物件變數[。](../../../ado/reference/rds-api/dataspace-object-rds.md)用來建立新物件實例的空間物件。  
   
- *進程*  
+ *ProgID*  
  **字串**值，其中包含指定用來執行應用程式之商務規則的伺服器端商務物件的程式設計識別碼。  
   
  *awebsrvr*或*computername*  

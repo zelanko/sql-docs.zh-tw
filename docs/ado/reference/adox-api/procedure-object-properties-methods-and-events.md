@@ -13,10 +13,10 @@ ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bec9c19f406586136ce4181805cf5d1c4333fcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965465"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Procedure 物件屬性、方法和事件

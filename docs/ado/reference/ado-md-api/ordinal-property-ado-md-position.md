@@ -17,10 +17,10 @@ ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c212b9a31c72b96444649129f0c54a4c52226de4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949309"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal 屬性 (ADO MD Position)

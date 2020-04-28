@@ -17,16 +17,15 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946301"
 ---
 # <a name="sequence-expressions-xquery"></a>序列運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可支援用來建構、篩選和結合項目序列的 XQuery 運算子。 項目可以是不可部份完成值或節點。  
   
 ## <a name="constructing-sequences"></a>建構序列  
@@ -188,8 +187,7 @@ set @x = '
 '  
 ```  
   
- 
-  `(/a, /b)` 中的運算式會建構一個含有子樹 `/a` 及 `/b` 的序列，運算式並會從產生的序列篩選元素 `<c>`。  
+ `(/a, /b)` 中的運算式會建構一個含有子樹 `/a` 及 `/b` 的序列，運算式並會從產生的序列篩選元素 `<c>`。  
   
 ```  
 SELECT @x.query('  

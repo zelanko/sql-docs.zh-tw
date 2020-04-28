@@ -16,10 +16,10 @@ ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ccbeda01726a3473f8e955676c3ebd62a93fd630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985733"
 ---
 # <a name="arithmetic-expressions-xquery"></a>算術運算式 (XQuery)

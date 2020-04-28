@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946486"
 ---
 # <a name="path-expressions---specifying-axis"></a>路徑運算式 - 指定軸
@@ -45,12 +45,12 @@ ms.locfileid: "67946486"
   
 |軸|描述|  
 |----------|-----------------|  
-|**子**|傳回內容節點的子系。|  
-|**子體**|傳回內容節點的所有下階。|  
+|**child**|傳回內容節點的子系。|  
+|**descendant**|傳回內容節點的所有下階。|  
 |**父**|傳回內容節點的父系。|  
 |**特性**|傳回內容節點的屬性。|  
 |**供電**|傳回內容節點本身。|  
-|**子代或自我**|傳回內容節點及內容節點的所有下階。|  
+|**descendant-or-self**|傳回內容節點及內容節點的所有下階。|  
   
  除了**父**軸以外，所有這些軸都是順向軸。 **父**軸是反向軸，因為它會在檔階層中向後搜尋。 例如，相對路徑運算式 `child::ProductDescription/child::Summary` 有兩個步驟，而且每個步驟都指定 `child` 軸。 第一個步驟會抓取\<內容節點的 ProductDescription> 元素子系。 針對每\<個 ProductDescription> 元素節點，第二個步驟\<會抓取摘要> 元素節點子系。  
   
@@ -72,7 +72,7 @@ WHERE ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
--   Xml `query()`資料類型的**** 方法會指定路徑運算式。  
+-   Xml `query()`資料類型的**xml**方法會指定路徑運算式。  
   
 -   在路徑運算式中的步驟可指定 `child` 軸和節點名稱、`ProductDescription` 與 `Features` 做為節點測試。 如需節點測試的詳細資訊，請參閱[在路徑運算式步驟中指定節點測試](../xquery/path-expressions-specifying-node-test.md)。  
   

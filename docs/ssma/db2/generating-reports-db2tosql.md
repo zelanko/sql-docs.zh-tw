@@ -10,10 +10,10 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2d96b82e3ce883bcf9e704ea001024228be81761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989653"
 ---
 # <a name="generating-reports-db2tosql"></a>產生報表（DB2ToSQL）
@@ -38,7 +38,7 @@ ms.locfileid: "67989653"
     > [!IMPORTANT]  
     > 輸出報告與評量報告不同。 前者是已執行命令的效能報告，後者則是以程式設計方式取用的 XML 報表。  
   
-    適用于輸出報告的命令選項（從 Sl）。 否。 2-4），請參閱[執行 SSMA 主控台 &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)一節。  
+    適用于輸出報告的命令選項（從 Sl）。 不可以。 2-4），請參閱[執行 SSMA 主控台 &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)一節。  
   
 2.  使用報表詳細資訊設定，指出您想要在輸出報告中的詳細程度：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "67989653"
     > [!NOTE]  
     > 上述指定的錯誤報表設定適用于產生-評估-報告、轉換架構、遷移資料、轉換-sql 語句命令。  
   
-**實例**  
+**範例：**  
   
 ```  
 <generate-assessment-report  

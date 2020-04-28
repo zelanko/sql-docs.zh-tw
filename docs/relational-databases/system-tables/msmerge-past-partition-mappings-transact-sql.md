@@ -18,10 +18,10 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984886"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67984886"
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
 |**partition_id**|**int**|資料列所屬的資料分割識別碼。 如果資料列變更與所有訂閱者相關，則此值為-1。|  
-|**代數**|**Bigint**|發生資料分割變更的層代 (Generation) 值。|  
+|**代數**|**bigint**|發生資料分割變更的層代 (Generation) 值。|  
 |**原因**|**tinyint**|僅供內部使用。|  
   
 ## <a name="see-also"></a>另請參閱  

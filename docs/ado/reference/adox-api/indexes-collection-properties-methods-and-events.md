@@ -13,10 +13,10 @@ ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a26f602e5746f1dfc0556d16448514ae8df7215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966023"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes 集合屬性、方法和事件

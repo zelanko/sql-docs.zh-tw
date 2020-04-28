@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942501"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67942501"
 |**is_not_for_replication**|**bit**|CHECK 條件約束是利用 NOT FOR REPLICATION 選項來建立的。|  
 |**is_not_trusted**|**bit**|不是所有資料列的 CHECK 條件約束都經過系統驗證過了。|  
 |**parent_column_id**|**int**|0 表示資料表層級 CHECK 條件約束。<br /><br /> 非零值則表示這是在具有指定識別碼值之資料行定義的資料行層級 CHECK 條件約束。|  
-|**清晰**|**nvarchar(max)**|定義這個 CHECK 條件約束的 SQL 運算式。|  
+|**definition**|**nvarchar(max)**|定義這個 CHECK 條件約束的 SQL 運算式。|  
 |**uses_database_collation**|**bit**|1 = 條件約束定義須依據資料庫的預設定序進行正確評估；否則為 0。 這種相依性可以防止資料庫預設定序變更。|  
 |**is_system_named**|**bit**|1 = 名稱是系統所產生。<br /><br /> 0 = 名稱是使用者所提供。|  
   

@@ -12,10 +12,10 @@ ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944602"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>檢視測試案例報表 (SybaseToSQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67944602"
 **必要條件錯誤**  
 顯示**必要條件**步驟中發生的任何錯誤。 通常會略過。  
   
-**初始**  
+**初始化**  
 將執行狀態顯示為**成功**或**失敗**。  
   
 **測試物件結果**  

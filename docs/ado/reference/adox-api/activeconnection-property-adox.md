@@ -22,10 +22,10 @@ ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ddd18225f8497294f1f44fa134a2d02040c8ada
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67952177"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 屬性 (ADOX)

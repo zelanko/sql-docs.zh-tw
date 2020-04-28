@@ -10,10 +10,10 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989872"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>轉換 DB2 架構（DB2ToSQL）
@@ -42,10 +42,10 @@ ms.locfileid: "67989872"
 |序列|已對應。|  
 |SELECT 陳述式|**SSMA maps SELECT 具有下列例外狀況：**<br /><br />資料-變更資料表參考子句-部分對應，但不支援最終資料表<br /><br />資料表參考子句-部分對應，但僅限資料表參考、外部資料表參考、analyze_table 運算式、集合衍生資料表、xmltable 運算式未對應至 SQL server 語義<br /><br />Period-規格子句-未對應。<br /><br />Continue-處理常式子句-未對應。<br /><br />具類型的相互關聯子句-未對應。<br /><br />平行存取解析子句-未對應。|  
 |VALUES 語句|已對應。|  
-|INSERT 陳述式|已對應。|  
-|UPDATE 陳述式|S**SMA 對應更新，但有下列例外狀況：**<br /><br />僅限資料表參考子句-資料表參考未對應至 SQL server 語義<br /><br />Period 子句-未對應。|  
+|INSERT 語句|已對應。|  
+|UPDATE 語句|S**SMA 對應更新，但有下列例外狀況：**<br /><br />僅限資料表參考子句-資料表參考未對應至 SQL server 語義<br /><br />Period 子句-未對應。|  
 |MERGE 陳述式|**SSMA maps MERGE 具有下列例外狀況：**<br /><br />單一與多次出現的每個子句-會對應至每個子句的有限出現次數的 SQL server 語義<br /><br />信號子句-未對應至 SQL Server 的語義<br /><br />混合的 UPDATE 和 DELETE 子句-不會對應到 SQL Server 的語義<br /><br />Period-子句-不會對應至 SQL Server 的語義|  
-|DELETE 陳述式|**SSMA 對應刪除，但有下列例外狀況：**<br /><br />僅限資料表參考子句-資料表參考未對應至 SQL server 語義<br /><br />Period 子句-未對應至 SQL Server 的語義|  
+|DELETE 子句|**SSMA 對應刪除，但有下列例外狀況：**<br /><br />僅限資料表參考子句-資料表參考未對應至 SQL server 語義<br /><br />Period 子句-未對應至 SQL Server 的語義|  
 |隔離等級和鎖定類型|已對應。|  
 |程式（SQL）|已對應。|  
 |程式（外部）|需要手動更新。|  
@@ -73,7 +73,7 @@ ms.locfileid: "67989872"
 |昵稱|部分對應。 基礎物件需要手動處理|  
 |同義字|已對應。|  
 |DB2 中的標準函式|當 SQL Server 中有對等的函式時，SSMA 對應 DB2 標準函數：|  
-|Authorization|未對應。|  
+|授權|未對應。|  
 |述詞|已對應。|  
 |SELECT INTO 陳述式|未對應。|  
 |值 INTO 語句|未對應。|  

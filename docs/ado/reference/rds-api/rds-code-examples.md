@@ -13,10 +13,10 @@ ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07cf393fc46ca9cfe96cb116886f37ab8abd1b1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963702"
 ---
 # <a name="rds-code-examples"></a>RDS 程式碼範例

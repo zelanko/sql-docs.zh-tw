@@ -18,10 +18,10 @@ ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc41c630b8201651e933f5d6538e6887e7933c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966509"
 ---
 # <a name="datemodified-property-adox"></a>DateModified 屬性 (ADOX)

@@ -14,10 +14,10 @@ ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3885b805f32661f328552674bf9a9d1e98e6fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963670"
 ---
 # <a name="rds-objects"></a>RDS 物件

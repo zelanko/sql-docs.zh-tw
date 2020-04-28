@@ -10,10 +10,10 @@ ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4efd9989e0893d8941f3f6fcb9496f5f4744b0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989738"
 ---
 # <a name="data-migration-settings-db2tosql"></a>資料移轉設定（DB2ToSQL）

@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945999"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 函數
@@ -38,7 +38,7 @@ ms.locfileid: "67945999"
 ||[車間](../xquery/numeric-values-functions-floor.md)|  
 ||[進行](../xquery/numeric-values-functions-round.md)|  
 |[字串值的相關 XQuery 函數](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
-||[包含](../xquery/functions-on-string-values-contains.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[子字串](../xquery/functions-on-string-values-substring.md)|  
 ||[小寫函數 &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[字串長度](../xquery/functions-on-string-values-string-length.md)|  
@@ -55,11 +55,11 @@ ms.locfileid: "67945999"
 |[&#40;XQuery&#41;的彙總函式](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[計數](../xquery/aggregate-functions-count.md)|  
 ||[avg](../xquery/aggregate-functions-avg.md)|  
 ||[分鐘](../xquery/aggregate-functions-min.md)|  
-||[讀數](../xquery/aggregate-functions-max.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
 ||[要求](../xquery/aggregate-functions-sum.md)|  
 |[&#40;XQuery&#41;的函式函數](../xquery/constructor-functions-xquery.md)|[建構函式](../xquery/constructor-functions-xquery.md)|  
-|[Data Accessor 函數](../xquery/data-accessor-functions.md)|[字串](../xquery/data-accessor-functions-string-xquery.md)|  
-||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[Data Accessor 函數](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+||[資料](../xquery/data-accessor-functions-data-xquery.md)|  
 |[&#40;XQuery&#41;的布林函式函數](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 函數 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 函數 (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[與 QNames &#40;XQuery&#41;相關的函數](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  

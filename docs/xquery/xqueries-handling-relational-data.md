@@ -16,10 +16,10 @@ ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946161"
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries 處理關聯式資料
@@ -29,9 +29,9 @@ ms.locfileid: "67946161"
   
  執行 XQuery 而產生的 XML，可以包含從其他 Transact-SQL 變數或資料列集資料行擷取的值。 若要將非 XML 關聯式資料繫結到產生的 XML，SQL Server 可提供以下虛擬函數做為 XQuery 延伸模組：  
   
--   **sql： column （）** 函數  
+-   **sql:column()** function  
   
--   **sql： variable （）** 函數  
+-   **sql:variable()** function  
   
  在**xml**資料類型的**query （）** 方法中指定 xquery 時，您可以使用這些 xquery 延伸模組。 因此， **query （）** 方法可以產生結合 xml 和非**XML**資料類型之資料的 XML。  
   

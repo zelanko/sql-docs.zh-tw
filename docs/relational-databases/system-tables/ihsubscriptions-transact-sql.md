@@ -18,10 +18,10 @@ ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b677e0f6c9be058650a46aee3465811b8f3eecc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990151"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "67990151"
 |**srvid**|**smallint**|訂閱者的伺服器識別碼。|  
 |**dest_db**|**sysname**|目的地資料庫的名稱|  
 |**login_name**|**sysname**|用來加入訂閱的登入名稱。|  
-|**distribution_jobid**|**binary （16）**|散發代理程式的作業識別碼|  
+|**distribution_jobid**|**binary(16)**|散發代理程式的作業識別碼|  
 |**timestamp**|**timestamp**|建立訂閱的日期和時間。|  
 |**queued_reinit**|**bit**|指定發行項是否標示初始化或重新初始化。 值為**1**時，表示訂閱的發行項已標示為要初始化或重新初始化。|  
-|**狀態**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 已訂閱。<br /><br /> **2** = 使用中。|  
+|**status**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 已訂閱。<br /><br /> **2** = 使用中。|  
 |**sync_type**|**tinyint**|初始同步處理的類型：<br /><br /> **1** = 自動。<br /><br /> **2** = 無。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = Push-散發代理程式會在訂閱者端執行。<br /><br /> **1** = 提取-散發代理程式會在散發者端執行。|  
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 唯讀。<br /><br /> **1** = 立即更新。|  

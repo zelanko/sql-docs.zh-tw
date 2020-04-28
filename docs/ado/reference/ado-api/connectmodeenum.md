@@ -16,10 +16,10 @@ ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933450"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
@@ -34,7 +34,7 @@ ms.locfileid: "67933450"
 |**adModeShareDenyRead**|4|防止其他人開啟具有讀取權限的連接。|  
 |**adModeShareDenyWrite**|8|防止其他人開啟具有寫入權限的連接。|  
 |**adModeShareExclusive**|12|防止其他人開啟連接。|  
-|**adModeUnknown**|0|預設。 指出尚未設定或無法判斷許可權。|  
+|**adModeUnknown**|0|預設值。 指出尚未設定或無法判斷許可權。|  
 |**adModeWrite**|2|表示僅限寫入權限。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等  

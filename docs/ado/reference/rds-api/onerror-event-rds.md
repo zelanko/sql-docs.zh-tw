@@ -14,10 +14,10 @@ ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963849"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
@@ -40,7 +40,7 @@ onError SCode, Description, Source, CancelDisplay
  *說明*  
  表示錯誤描述的**字串**。  
   
- *Source*  
+ *來源*  
  **字串**，表示造成錯誤的查詢或命令。  
   
  *CancelDisplay*  

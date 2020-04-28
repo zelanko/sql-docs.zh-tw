@@ -14,10 +14,10 @@ ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16a1a97f08ff15e1b19573f35e81a1e10d5c7331
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963850"
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 介面 (RDS)

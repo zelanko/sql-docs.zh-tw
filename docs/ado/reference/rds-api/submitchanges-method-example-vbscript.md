@@ -14,10 +14,10 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a74f69947d6d1a1d730d39875f32a0cfc7286705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963360"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 方法範例 (VBScript)

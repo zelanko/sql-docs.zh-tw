@@ -17,10 +17,10 @@ ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09e83fd8645a5c0ab604a640478c4cced4870742
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949816"
 ---
 # <a name="close-method-ado-md"></a>Close 方法 (ADO MD)

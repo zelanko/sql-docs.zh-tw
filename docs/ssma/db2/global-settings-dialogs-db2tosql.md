@@ -10,10 +10,10 @@ ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: de6df03f894d43819cf9d27be3fd35a977631f29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989636"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>全域設定（對話方塊）（DB2ToSQL）
@@ -21,7 +21,7 @@ ms.locfileid: "67989636"
   
 若要存取 [**工具**] 功能表上的對話方塊設定，請選取 [**全域設定**]，按一下左窗格底部的 [ **GUI** ]，然後選取 [**對話方塊**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **在覆寫物件之前發出警告**  
 當 SSMA 將物件轉換成 SQL Server 時，某些物件可能已經存在於專案的 SQL Server 中繼資料中。 這些物件可能已經轉換，或物件在目標架構中的名稱可能與您要轉換的物件相同。  
   

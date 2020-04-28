@@ -17,10 +17,10 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967320"
 ---
 # <a name="append-method-adox-columns"></a>Append 方法 (ADOX Columns)
@@ -37,7 +37,7 @@ Columns.Append Column [,Type] [,DefinedSize]
  *資料行*  
  要附加的資料**行**物件，或要建立和附加的資料行名稱。  
   
- *型別*  
+ *類型*  
  選擇性。 **Long**值，指定資料行的資料類型。 *型*別參數會對應至資料**行**物件的[type](../../../ado/reference/adox-api/type-property-column-adox.md)屬性。  
   
  *DefinedSize*  

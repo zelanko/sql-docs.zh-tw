@@ -10,16 +10,16 @@ ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 70d916526f5b7d7d36c9237624ef311befca39c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938353"
 ---
 # <a name="appendix---1-db2tosql"></a>附錄-1 （DB2ToSQL）
 SSMA 主控台命令列選項的快速觀點：  
   
-|Sl. 否。|Switch|必要？|切換引數|允許的值|  
+|Sl. 不可以。|Switch|必要項？|切換引數|允許的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/腳本|是|scriptfile|有效的 XML 檔案名。<br /><br />主控台腳本定義檔。|  
 |2|-v/變數|否|variablevaluefile|有效的 XML 檔案名。<br /><br />如果腳本檔案中使用了變數，則必須指定此檔案。|  

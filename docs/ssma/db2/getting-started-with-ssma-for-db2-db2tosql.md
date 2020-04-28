@@ -10,10 +10,10 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989645"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>SSMA for DB2 的消費者入門（DB2ToSQL）
@@ -94,7 +94,7 @@ SSMA 有兩個工具列： [專案] 工具列和 [遷移] 工具列。
 |**編輯**|包含在詳細資料頁面中尋找和使用文字的命令，例如從 [ [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL 詳細資料] 窗格複製。 同時包含 [**管理書簽**] 選項，您可以在其中看到現有書簽的清單。 您可以使用對話方塊右側的按鈕來管理書簽。|  
 |**檢視**|包含**同步處理中繼資料**的流覽命令。 這會同步處理 DB2 Metadata Explorer 與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata explorer 之間的物件。 也包含用來顯示和隱藏**輸出**和**錯誤清單**窗格的命令，以及用來管理版面配置的選項**版面**配置。|  
 |**工具**|包含用來建立報表和遷移物件和資料的命令。 也會提供 [**全域設定**] 和 [**專案設定**] 對話方塊的存取權。|  
-|**説明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
+|**說明**|提供 SSMA 說明和 [**關於**] 對話方塊的存取權。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>輸出窗格和錯誤清單窗格  
 [ **View** ] 功能表提供命令來切換 [輸出] 窗格和 [錯誤清單] 窗格的可見度：  

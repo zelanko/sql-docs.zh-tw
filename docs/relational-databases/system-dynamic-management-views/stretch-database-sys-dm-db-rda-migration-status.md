@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937067"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
@@ -38,7 +38,7 @@ ms.locfileid: "67937067"
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|資料列遷移來源之資料表的識別碼。|  
 |**database_id**|**int**|資料列遷移來源所在的資料庫識別碼。|  
-|**migrated_rows**|**Bigint**|在此批次中遷移的資料列數目。|  
+|**migrated_rows**|**bigint**|在此批次中遷移的資料列數目。|  
 |**start_time_utc**|**datetime**|批次開始的 UTC 時間。|  
 |**end_time_utc**|**datetime**|批次完成的 UTC 時間。|  
 |**error_number**|**int**|如果批次失敗，則為發生錯誤的錯誤號碼;否則為 null。|  

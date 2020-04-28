@@ -17,10 +17,10 @@ ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967243"
 ---
 # <a name="append-method-adox-tables"></a>Append 方法 (ADOX Tables)
@@ -34,7 +34,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>參數  
- *Table*  
+ *目錄*  
  **Variant**值，其中包含要附加之**資料表**的參考，或要建立和附加之資料表的名稱。  
   
 ## <a name="remarks"></a>備註  

@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946287"
 ---
 # <a name="sequencetype-expressions-xquery"></a>時序類型運算式 (XQuery)
@@ -138,7 +138,7 @@ where ProductModelID=19
  此查詢會傳回 True。  
   
 ### <a name="example-c"></a>範例 C  
- 在使用聯集類型時，`instance of` 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 運算式有一個限制：具體而言，當元素或屬性的類型是聯集類型時，`instance of` 可能無法判斷正確的類型。 因此，除非 SequenceType 中所使用的不可部份完成類型是 simpleType 階層中運算式之實際類型的最高父系，否則查詢會傳回 False。 也就是，在 SequenceType 中所指定的不可部份完成類型必須是 anySimpleType 的直接子系。 如需類型階層的詳細資訊，請參閱[XQuery 中的類型轉換規則](../xquery/type-casting-rules-in-xquery.md)。  
+ 在使用聯集類型時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 `instance of` 運算式有一個限制：具體而言，當元素或屬性的類型是聯集類型時，`instance of` 可能無法判斷正確的類型。 因此，除非 SequenceType 中所使用的不可部份完成類型是 simpleType 階層中運算式之實際類型的最高父系，否則查詢會傳回 False。 也就是，在 SequenceType 中所指定的不可部份完成類型必須是 anySimpleType 的直接子系。 如需類型階層的詳細資訊，請參閱[XQuery 中的類型轉換規則](../xquery/type-casting-rules-in-xquery.md)。  
   
  下個查詢範例將執行下列動作：  
   
@@ -351,8 +351,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在此查詢中，不需要明確使用**資料（）** 。 
-  `cast as` 運算式可在輸入運算式上執行隱含的不可部份完成。  
+ 在此查詢中，不需要明確使用**資料（）** 。 `cast as` 運算式可在輸入運算式上執行隱含的不可部份完成。  
   
 ### <a name="constructor-functions"></a>建構函式  
  您可以使用不可部份完成類型的建構函式。 例如，您可以使用`cast as` **xs： integer （）** 函數（如下列範例所示），而不是使用運算子`"2" cast as xs:integer?`：  

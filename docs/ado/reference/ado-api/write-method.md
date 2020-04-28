@@ -17,10 +17,10 @@ ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84e10e8edb6cca3c4e56ac1dd0106b3c641af872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945900"
 ---
 # <a name="write-method"></a>Write 方法
@@ -34,7 +34,7 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>參數  
- *Buffer*  
+ *緩衝區*  
  **Variant** ，包含要寫入的位元組陣列。  
   
 ## <a name="remarks"></a>備註  

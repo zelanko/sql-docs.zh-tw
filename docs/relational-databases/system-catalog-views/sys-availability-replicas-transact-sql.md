@@ -21,10 +21,10 @@ ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6623d6b95dfe0ebd4e45b13d190d8176bcab1a3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942612"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
@@ -44,14 +44,14 @@ ms.locfileid: "67942612"
 |**owner_sid**|**Varbinary （85）**|針對這個可用性複本的外部擁有者，註冊給這個伺服器執行個體的安全性識別碼 (SID)。<br /><br /> 非本機可用性複本為 NULL。|  
 |**endpoint_url**|**nvarchar(128)**|使用者指定之資料庫鏡像端點的字串表示法，該端點是由主要與次要複本之間的資料同步處理連接所使用。 如需這些端點 URL 語法的相關資訊，請參閱[在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。<br /><br /> NULL = 無法聯繫 WSFC 容錯移轉叢集。<br /><br /> 若要變更此端點，請使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 ENDPOINT_URL 選項。|  
 |**availability_mode**|**tinyint**|複本的可用性模式，下列其中一項：<br /><br /> 0 &#124; 非同步認可。 主要複本可認可交易，而不需要等候次要複本將記錄寫入磁碟中。<br /><br /> 1 &#124; 同步認可。 主要複本會等候認可給定交易，直到次要複本將交易寫入磁碟為止。<br /><br />4僅 &#124; 設定。 主要複本會以同步方式將可用性群組設定中繼資料傳送至複本。 使用者資料不會傳送至複本。 適用于 SQL Server 2017 CU1 和更新版本。<br /><br /> 如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。|  
-|**availability_mode_desc**|**Nvarchar （60）**|**可用性\_模式**的描述，下列其中一個：<br /><br /> 非同步\_認可<br /><br /> 同步\_認可<br /><br /> \_僅限設定<br /><br /> 若要變更可用性複本的可用性模式，請使用[ALTER availability GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 AVAILABILITY_MODE 選項。<br/><br>您無法將複本的可用性模式變更為 [\_僅設定]。 您無法將\_僅限設定的複本變更為次要或主要複本。 |  
+|**availability_mode_desc**|**nvarchar(60)**|**可用性\_模式**的描述，下列其中一個：<br /><br /> 非同步\_認可<br /><br /> 同步\_認可<br /><br /> \_僅限設定<br /><br /> 若要變更可用性複本的可用性模式，請使用[ALTER availability GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 AVAILABILITY_MODE 選項。<br/><br>您無法將複本的可用性模式變更為 [\_僅設定]。 您無法將\_僅限設定的複本變更為次要或主要複本。 |  
 |**故障\_轉移模式**|**tinyint**|可用性複本的[容錯移轉模式](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)，下列其中一個：<br /><br /> 0 &#124; 自動容錯移轉。 此複本可能是自動容錯移轉的目標。  只有當可用性模式設定為同步認可（**可用性\_模式**= 1）且可用性複本目前已同步處理時，才支援自動容錯移轉。<br /><br /> 1 &#124; 手動容錯移轉。 如果容錯移轉到次要複本的程序設定為手動容錯移轉，則必須由資料庫管理員手動起始。 執行的容錯移轉類型將取決於次要複本是否同步處理，如下所示：<br /><br /> 如果可用性複本並未同步處理或者依然在同步處理，只會發生強制容錯移轉 (可能會遺失資料)。<br /><br /> 如果可用性模式設定為同步認可（**可用性\_模式**= 1），而且可用性複本目前已同步處理，則可能會發生不遺失資料的手動容錯移轉。<br /><br /> 若要在可用性複本中查看每個可用性資料庫的資料庫同步處理健全狀況匯總套件，請使用[dm_hadr_availability_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)動態管理檢視的 [**同步\_處理健全狀況**] 和 [**同步\_處理健全狀況\_desc** ] 資料行。 此積存會考量每個可用性資料庫的同步處理狀態及其可用性複本的可用性模式。<br /><br /> **注意：** 若要查看給定可用性資料庫的同步處理健全狀況，請查詢 [ [dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)動態管理] 視圖的 [ ** \_同步處理狀態**] 和 [同步**\_處理健全狀況**] 資料行。|  
-|**故障\_轉移\_模式 desc**|**Nvarchar （60）**|**容錯移轉\_模式**的描述，下列其中一個：<br /><br /> MANUAL<br /><br /> AUTOMATIC<br /><br /> 若要變更容錯移轉模式，請使用\_ [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 [容錯移轉模式] 選項。|  
+|**故障\_轉移\_模式 desc**|**nvarchar(60)**|**容錯移轉\_模式**的描述，下列其中一個：<br /><br /> MANUAL<br /><br /> AUTOMATIC<br /><br /> 若要變更容錯移轉模式，請使用\_ [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 [容錯移轉模式] 選項。|  
 |**會話\_超時**|**int**|逾時期間 (以秒為單位)。 逾時期間是將主要複本與次要複本之間的連接視為失敗之前，複本等待接收另一個複本之訊息的時間上限。 工作階段逾時會偵測次要複本是否連接到主要複本。<br /><br /> 在偵測與次要複本的失敗連接時，主要複本會將次要複本視為未\_同步處理。 一旦偵測到與主要複本之間的連接失敗時，次要複本只會嘗試重新連接。<br /><br /> **注意：** 會話超時不會造成自動容錯移轉。<br /><br /> 若要變更此值，請使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 SESSION_TIMEOUT 選項。|  
 |**主要\_角色\_允許\_連接**|**tinyint**|可用性允許所有連接還是只允許讀寫連接，下列其中一項：<br /><br /> 2 = 所有連接 (預設值)<br /><br /> 3 = 讀寫連接|  
-|**主要\_角色\_允許\_連接\_desc**|**Nvarchar （60）**|**主要\_\_角色允許\_連接**的描述，下列其中一個：<br /><br /> ALL<br /><br /> 讀\_寫|  
-|**次要\_角色\_允許\_連接**|**tinyint**|執行次要角色的可用性複本 (也就是次要複本) 是否可接受來自用戶端的連接，下列其中一個值：<br /><br /> 0 = 否。 不允許連接次要複本的資料庫，這些資料庫也不可用於讀取存取。 這是預設值。<br /><br /> 1 = 唯讀。 只允許與次要複本的資料庫進行唯讀連接。 可讀取複本中的所有資料庫。<br /><br /> 2 = 全部。 次要複本的資料庫允許所有連接進行唯讀存取。<br /><br /> 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。|  
-|**secondary_role_allow_connections_desc**|**Nvarchar （60）**|**Secondary_role_allow_connections**的描述，下列其中一個：<br /><br /> 否<br /><br /> READ_ONLY<br /><br /> ALL|  
+|**主要\_角色\_允許\_連接\_desc**|**nvarchar(60)**|**主要\_\_角色允許\_連接**的描述，下列其中一個：<br /><br /> ALL<br /><br /> 讀\_寫|  
+|**次要\_角色\_允許\_連接**|**tinyint**|執行次要角色的可用性複本 (也就是次要複本) 是否可接受來自用戶端的連接，下列其中一個值：<br /><br /> 0 = 否。 不允許連接次要複本的資料庫，這些資料庫也不可用於讀取存取。 這是預設值。<br /><br /> 1 = 唯讀。 只允許與次要複本的資料庫進行唯讀連接。 可讀取複本中的所有資料庫。<br /><br /> 2 = 全部。 次要複本的資料庫允許所有連接進行唯讀存取。<br /><br /> 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。|  
+|**secondary_role_allow_connections_desc**|**nvarchar(60)**|**Secondary_role_allow_connections**的描述，下列其中一個：<br /><br /> 否<br /><br /> READ_ONLY<br /><br /> ALL|  
 |**create_date**|**datetime**|建立複本的日期。<br /><br /> NULL = 複本不在這個伺服器執行個體上。|  
 |**modify_date**|**datetime**|上次修改複本的日期。<br /><br /> NULL = 複本不在這個伺服器執行個體上。|  
 |**backup_priority**|**int**|表示使用者為了在這個複本上執行備份所指定的優先權 (相對於相同可用性群組中的其他複本)。 這個值是 0 到 100 範圍之間的整數。<br /><br /> 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。|  
@@ -63,10 +63,10 @@ ms.locfileid: "67942612"
  需要伺服器執行個體的 VIEW ANY DEFINITION 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [availability_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

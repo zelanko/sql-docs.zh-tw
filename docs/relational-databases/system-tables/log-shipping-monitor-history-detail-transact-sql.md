@@ -18,10 +18,10 @@ ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989999"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67989999"
 |**session_status**|**tinyint**|工作階段的狀態。<br /><br /> 0 = 啟動中。<br /><br /> 1 = 執行中。<br /><br /> 2 = 成功。<br /><br /> 3 = 錯誤。<br /><br /> 4 = 警告。|  
 |**log_time**|**datetime**|建立記錄的日期和時間。|  
 |**log_time_utc**|**datetime**|建立記錄的日期和時間，用國際標準時間 (UTC) 來表示。|  
-|**消息**|**nvarchar(max)**|訊息文字。|  
+|**message**|**nvarchar(max)**|訊息文字。|  
   
 ## <a name="remarks"></a>備註  
  這份資料表包含記錄傳送代理程式的記錄詳細資料。 若要識別代理程式會話，請使用**agent_id**、 **agent_type**和**session_id**的資料行。 若要查看代理程式會話的歷程記錄詳細資料，請依**log_time**排序。  

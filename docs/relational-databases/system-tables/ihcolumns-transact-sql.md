@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990394"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67990394"
 |**article_id**|**int**|識別欄位所屬的發行項。|  
 |**column_ordinal**|**int**|依序識別欄位。|  
 |**mapped_type**|**tinyint**|訂閱者之目的地資料行的資料行資料類型。|  
-|**mapped_length**|**Bigint**|訂閱者的資料行長度。|  
+|**mapped_length**|**bigint**|訂閱者的資料行長度。|  
 |**mapped_prec**|**int**|訂閱者的資料行有效位數。|  
 |**mapped_scale**|**int**|訂閱者的資料行小數位數。|  
 |**mapped_nullable**|**bit**|指出訂閱者端的資料行是否接受 Null 值，其中**1**表示接受 null 值。|  

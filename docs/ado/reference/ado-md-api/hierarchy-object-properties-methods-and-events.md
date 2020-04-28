@@ -13,10 +13,10 @@ ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 366e40cd507970b88a1a844454eeae8699ae699b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949647"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy 物件屬性、方法和事件

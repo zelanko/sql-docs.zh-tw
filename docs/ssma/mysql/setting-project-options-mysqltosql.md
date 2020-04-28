@@ -12,10 +12,10 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944683"
 ---
 # <a name="setting-project-options-mysqltosql"></a>設定專案選項 (MySQLToSQL)
@@ -44,7 +44,7 @@ SSMA 有五組專案設定：
   
 -   完整  
   
--   Custom  
+-   自訂  
   
 建議大多數使用者使用預設模式。 開放式模式會保留更多目前的 MySQL 語法，而且較容易閱讀。 不過，保留目前的語法可能會不正確。 如果 MySQL 語法必須轉換成對等的 SQL Server 或 SQL Azure 語法，則完整模式會執行最完整的轉換。 不過，產生的程式碼可能會更容易閱讀。 在 [自訂] 模式中，您可以設定選項。  
   

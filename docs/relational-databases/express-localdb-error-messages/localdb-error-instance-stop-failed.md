@@ -10,10 +10,10 @@ ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 593d85d16f7ef2dd7225d341d28d6f3eba3113a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995806"
 ---
 # <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED

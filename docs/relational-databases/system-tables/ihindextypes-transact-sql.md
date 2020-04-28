@@ -18,10 +18,10 @@ ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4c7c1bca0f400085ad55ac69b692e5a5fc1ec4c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990366"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)

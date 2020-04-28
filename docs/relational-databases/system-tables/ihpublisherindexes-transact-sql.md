@@ -18,10 +18,10 @@ ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 114ffee3ca13d7b5a42c3843957df0a2450b787f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990250"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)

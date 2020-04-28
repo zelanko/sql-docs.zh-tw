@@ -14,10 +14,10 @@ ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964057"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue 屬性 (RDS)
@@ -37,7 +37,7 @@ DataControl.FilterValue = String
  *DataControl*  
  代表 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
- *String*  
+ *字串*  
  **字串**值，表示用來篩選記錄的資料值（例如， `'Programmer'`或`125`）。  
   
 ## <a name="remarks"></a>備註  

@@ -20,10 +20,10 @@ ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcd0e70dd9c505b9e2b0752c33b9e768b9127472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967143"
 ---
 # <a name="attributes-property-adox"></a>Attributes 屬性 (ADOX)

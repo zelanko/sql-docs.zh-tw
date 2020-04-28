@@ -10,10 +10,10 @@ ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3801526bfec64fa8efeb992ec7552a232d2e13c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989516"
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>在 SQL Server 上安裝 SSMA 元件（DB2ToSQL）

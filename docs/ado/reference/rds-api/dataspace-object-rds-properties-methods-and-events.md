@@ -14,10 +14,10 @@ ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd5115b4dcf4db7e8f7d5e4c1e2b5d4d4159e8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964346"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>DataSpace 物件 (RDS) 屬性、方法和事件

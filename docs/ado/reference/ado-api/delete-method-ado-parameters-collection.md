@@ -17,10 +17,10 @@ ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933170"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 方法 (ADO Parameters 集合)
@@ -34,7 +34,7 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>參數  
- *指數*  
+ *索引*  
  **字串**值，其中包含您想要刪除之物件的名稱，或物件在集合中的序數位置（索引）。  
   
 ## <a name="remarks"></a>備註  

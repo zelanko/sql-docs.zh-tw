@@ -14,10 +14,10 @@ ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938801"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>更新重新同步動態屬性 (ADO)

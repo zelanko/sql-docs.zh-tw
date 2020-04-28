@@ -18,10 +18,10 @@ ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44987e1b610483e6ce3cbca26c1efb8a1ef4c241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990258"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67990258"
 |**table_id**|**int**|從[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)識別條件約束所屬的資料表。|  
 |**publisher_id**|**smallint**|識別發行資料行所在位置的非 SQL Server 發行者。|  
 |**名稱**|**Sysname**|已發行之條件約束的名稱。|  
-|**型別**|**nvarchar(255)**|來自[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系統資料表的支援條件約束類型。|  
+|**類型**|**nvarchar(255)**|來自[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系統資料表的支援條件約束類型。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

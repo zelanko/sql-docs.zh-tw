@@ -17,10 +17,10 @@ ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967150"
 ---
 # <a name="append-method-adox-views"></a>Append 方法 (ADOX Views)
@@ -46,7 +46,7 @@ Views.Append Name, Command
  如果使用者指定的命令文字代表程式，而不是 view，則行為取決於提供者。 如果提供者不支援持續性命令，**附加**將會失敗。  
   
 > [!NOTE]
->  使用 Microsoft Jet 的 OLE DB 提供者時， **Views**集合**Append**方法可讓您在*命令*參數中指定程式 **，而不是** **View** 。 此**程式將會加入**至資料來源，並加入至**Views**集合。 在**附加**之後，如果**程式**和**Views**集合重新整理，則程式不會再出現在**Views**集合中，而且會顯示在 Procedure**集合中**。 ****  
+>  使用 Microsoft Jet 的 OLE DB 提供者時， **Views**集合**Append**方法可讓您在*命令*參數中指定程式 **，而不是** **View** 。 此**程式將會加入**至資料來源，並加入至**Views**集合。 在**附加**之後，如果**程式**和**Views**集合重新整理，則程式不會再出現在**Views**集合中，而且會顯示在 Procedure**集合中**。 **Procedure**  
   
 ## <a name="applies-to"></a>套用至  
  [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  

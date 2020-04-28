@@ -13,10 +13,10 @@ ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9a7b7f3939ff617ab67589d7566cdbf28719731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964961"
 ---
 # <a name="user-object-properties-methods-and-events"></a>User 物件屬性、方法和事件

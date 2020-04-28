@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946206"
 ---
 # <a name="type-system-xquery"></a>類型系統 (XQuery)
@@ -72,8 +72,7 @@ WHERE ProductModelID=7
   
 -   不支援**xdt： dayTimeDuration**和**xdt： yearMonthDuration**類型。  
   
- 在下列範例中，查詢是針對不具類型的 XML 變數所指定。 運算式 `data(/a[1]`) 會傳回含有一個不可部份完成值的序列。 
-  `data()` 函數會傳回 `<a>` 元素的具類型值。 因為要查詢的 XML 不具類型，所以傳回的值類型是 `xdt:untypedAtomic`。 因此，`instance of` 傳回 true。  
+ 在下列範例中，查詢是針對不具類型的 XML 變數所指定。 運算式 `data(/a[1]`) 會傳回含有一個不可部份完成值的序列。 `data()` 函數會傳回 `<a>` 元素的具類型值。 因為要查詢的 XML 不具類型，所以傳回的值類型是 `xdt:untypedAtomic`。 因此，`instance of` 傳回 true。  
   
 ```  
 DECLARE @x xml  
@@ -81,8 +80,7 @@ SET @x='<a>20</a>'
 SELECT @x.query( 'data(/a[1]) instance of xdt:untypedAtomic' )  
 ```  
   
- 下列範例中的運算式 (`/a[1]`) 不會擷取具類型值，而會傳回一個元素 (`<a>` 元素) 的序列。 
-  `instance of` 運算式會使用元素測試來確認運算式傳回的值為 `xdt:untyped type` 的元素節點。  
+ 下列範例中的運算式 (`/a[1]`) 不會擷取具類型值，而會傳回一個元素 (`<a>` 元素) 的序列。 `instance of` 運算式會使用元素測試來確認運算式傳回的值為 `xdt:untyped type` 的元素節點。  
   
 ```  
 DECLARE @x xml  
@@ -151,7 +149,7 @@ WHERE ProductModelID=7
 >  此範例中的**資料（）** 函數明確使用僅供說明之用。 如果未指定， **sum （）** 會隱含地套用**data （）** 函數，以解壓縮節點的具類型值。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler 範本和許可權](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [XQuery 基本概念](../xquery/xquery-basics.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966160"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups 集合屬性、方法和事件

@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963477"
 ---
 # <a name="server-property-rds"></a>Server 屬性 (RDS)
@@ -54,7 +54,7 @@ awebsrvr:port
   
 ```  
   
- **IP-HTTPS**  
+ **HTTPS**  
   
  設計階段語法  
   
@@ -70,7 +70,7 @@ awebsrvr:port
 DataControl.Server="https://awebsrvr:port"  
 ```  
   
- **DCOM-IN**  
+ **DCOM**  
   
  設計階段語法  
   

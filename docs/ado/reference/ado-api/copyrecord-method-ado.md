@@ -17,10 +17,10 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933410"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
@@ -34,10 +34,10 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>參數  
- *Source*  
+ *來源*  
  選擇性。 **字串**值，其中包含指定要複製之實體的 URL （例如，檔案或目錄）。 如果省略*Source*或指定空字串，則會複製目前[記錄](../../../ado/reference/ado-api/record-object-ado.md)所代表的檔案或目錄。  
   
- *目的地*  
+ *Destination*  
  選擇性。 **字串**值，其中包含指定要複製*來源*之位置的 URL。  
   
  *UserName*  

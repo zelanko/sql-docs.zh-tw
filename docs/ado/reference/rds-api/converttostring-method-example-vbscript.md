@@ -15,10 +15,10 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1feada03927b1c2359babf7d68d6c9a8ffcba2b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964552"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString 方法範例 (VBScript)

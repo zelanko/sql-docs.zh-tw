@@ -17,10 +17,10 @@ ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966679"
 ---
 # <a name="create-method-adox"></a>Create 方法 (ADOX)

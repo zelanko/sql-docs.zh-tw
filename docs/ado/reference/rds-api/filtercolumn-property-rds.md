@@ -14,10 +14,10 @@ ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964086"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 屬性 (RDS)
@@ -37,7 +37,7 @@ DataControl.FilterColumn = String
  *DataControl*  
  代表 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
- *String*  
+ *字串*  
  **字串**值，指定要在其上評估篩選準則的資料行。 篩選準則會在[FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)屬性中指定。  
   
 ## <a name="remarks"></a>備註  

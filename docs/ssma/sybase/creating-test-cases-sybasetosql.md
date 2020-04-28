@@ -12,10 +12,10 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b3f54a38ae995dd2c83fd36647393f81b802fde2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948456"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>建立測試案例 (SybaseToSQL)

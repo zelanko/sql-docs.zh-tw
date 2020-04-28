@@ -18,10 +18,10 @@ ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4538b78cb64a5017230f0a879f5bf20a02df0341
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946510"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Ordered 和 Unordered 運算式 (XQuery)

@@ -15,10 +15,10 @@ ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7596f9728f7a51a5d28a3c1a19943efff783ac62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963995"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 屬性範例 (VC++)

@@ -18,10 +18,10 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946086"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 與靜態類型
@@ -86,8 +86,7 @@ ms.locfileid: "67946086"
  在 XQuery 內容中，"average" 函數`fn:avg (//r)`會傳回靜態錯誤，因為 XQuery 編譯器無法針對> **fn： avg （）** 引數中的 <`r` ，加入不同類型的值（**xs： int**、 **xs： float**或**xs： double**）。 若要解決這個問題，請將函數引動過程改寫成 `fn:avg(for $r in //r return $r cast as xs:double ?)`。  
   
 ### <a name="example-operator-over-union-type"></a>範例：聯集類型的運算子  
- 加法運算 ('+') 需要精確的運算元類型。 因此，運算式`(//r)[1] + 1`會傳回靜態錯誤，其中具有先前描述的元素 <`r`> 的類型定義。 有一種解決方法，就是將它改寫成 `(//r)[1] cast as xs:int? +1`，其中 "?" 表示出現次數 0 或 1。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要 "cast as" 含有 "?"，因為任何轉換都可能會因執行階段錯誤，而造成空的序列。  
+ 加法運算 ('+') 需要精確的運算元類型。 因此，運算式`(//r)[1] + 1`會傳回靜態錯誤，其中具有先前描述的元素 <`r`> 的類型定義。 有一種解決方法，就是將它改寫成 `(//r)[1] cast as xs:int? +1`，其中 "?" 表示出現次數 0 或 1。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要 "cast as" 含有 "?"，因為任何轉換都可能會因執行階段錯誤，而造成空的序列。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

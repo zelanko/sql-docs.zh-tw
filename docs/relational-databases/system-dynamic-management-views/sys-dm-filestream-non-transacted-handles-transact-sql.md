@@ -19,10 +19,10 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950986"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67950986"
   
  如需詳細資訊，請參閱 [管理作業步驟](../../relational-databases/blob/manage-filetables.md)。  
   
-|**資料行**|**型別**|**說明**|  
+|**資料行**|**類型**|**說明**|  
 |----------------|--------------|---------------------|  
 |database_id|int|與控制代碼相關聯的資料庫識別碼。|  
 |object_id|int|控制代碼之相關 FileTable 的物件識別碼。|  
@@ -44,7 +44,7 @@ ms.locfileid: "67950986"
 |correlation_process_id|varbinary(8)|包含引發要求之處理序的唯一識別碼。|  
 |correlation_thread_id|varbinary(8)|包含引發要求之執行緒的唯一識別碼。|  
 |file_context|varbinary(8)|這個控制代碼所用之檔案物件的指標。|  
-|state|int|控制代碼的目前狀態。 可能是作用中、已關閉或已終止。|  
+|State|int|控制代碼的目前狀態。 可能是作用中、已關閉或已終止。|  
 |state_desc|nvarchar(120)|"ACTIVE"，<br />「已關閉」，<br />取消|  
 |current_workitem_type|int|目前所處理之控制代碼的狀態。|  
 |current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType",<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem",<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem",<br />"FFtPreCloseWorkitem",<br />"FFtQueryDirectoryWorkItem",<br />"FFtQueryInfoWorkItem",<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem",<br />"FFtWriteCompletionWorkitem"|  

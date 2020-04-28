@@ -16,10 +16,10 @@ ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0cd42034bb143476862b4460ef28d1f02dcca027
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946199"
 ---
 # <a name="validate-expressions-xquery"></a>驗證運算式 (XQuery)

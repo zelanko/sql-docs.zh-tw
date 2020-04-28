@@ -16,10 +16,10 @@ ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933492"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
@@ -58,7 +58,7 @@ ms.locfileid: "67933492"
   
 |預設 ADO 提供者|Windows 作業系統|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> （若要改善原始程式碼的可讀性，請在連接字串中明確指定提供者名稱）。|Windows 2000 （32位）<br /><br /> Windows XP （32位）<br /><br /> Windows 2003 Server （32位）<br /><br /> Windows Vista （32位）<br /><br /> Windows Vista Service Pack 1 或更新版本（32位和64位）<br /><br /> Windows Vista 之後的 windows 版本（32位和64位）|  
+|MSDASQL<br /><br /> （若要改善原始程式碼的可讀性，請在連接字串中明確指定提供者名稱）。|Windows 2000 （32位）<br /><br /> Windows XP (32 位元)<br /><br /> Windows 2003 Server （32位）<br /><br /> Windows Vista (32 位元)<br /><br /> Windows Vista Service Pack 1 或更新版本（32位和64位）<br /><br /> Windows Vista 之後的 windows 版本（32位和64位）|  
 |沒有預設值。<br /><br /> 當 ADO 應用程式在下列作業系統上執行，而且未明確指定提供者時，ADO 會傳回下列錯誤：「ADODB。連接：未指定提供者，而且沒有指定的預設提供者」|Windows 2000 （64位）<br /><br /> Windows XP (64 位元)<br /><br /> Windows 2003 Server （64位）<br /><br /> Windows Vista (64 位元)|  
   
 ## <a name="applies-to"></a>套用至  

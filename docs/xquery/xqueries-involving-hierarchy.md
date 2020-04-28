@@ -16,10 +16,10 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946109"
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
@@ -30,7 +30,7 @@ ms.locfileid: "67946109"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 從製造指示文件中，擷取工作中心位置以及這些位置上的第一個製造步驟  
- 若為產品型號7，查詢會使用**ProductModelID**和 ProductModelName 屬性`ManuInstr` ，以及一或多個**** <`Location`> 子項目，來建立包含 <> 元素的 XML。  
+ 若為產品型號7，查詢會使用**ProductModelID**和 ProductModelName 屬性`ManuInstr` ，以及一或多個**ProductModelName** <`Location`> 子項目，來建立包含 <> 元素的 XML。  
   
  每個`Location` <> 元素都有自己的屬性集，以及`step`一個 <> 子項目。 這個 <`step`> 子項目是工作中心位置的第一個製造步驟。  
   

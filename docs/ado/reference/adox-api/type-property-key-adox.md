@@ -20,10 +20,10 @@ ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e72c93cf7f2126e26d5ed09d3cff246319e0495a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965049"
 ---
 # <a name="type-property-key-adox"></a>Type 屬性 (Key) (ADOX)

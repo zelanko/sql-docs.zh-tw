@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942289"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,11 +46,10 @@ sp_filestream_force_garbage_collection
  表示要執行記憶體回收行程之資料庫的名稱。  
   
 > [!NOTE]  
-> `@dbname`為**sysname**。 如果未指定，則假設目前的資料庫。  
+> `@dbname` 為 **sysname**。 如果未指定，則假設目前的資料庫。  
   
  `[ @filename = ] 'logical_file_name'`  
- 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 
-  `@filename` 為選擇性。 如果未指定邏輯檔案名，垃圾收集行程就會清除指定之資料庫中的所有 FILESTREAM 容器。  
+ 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 `@filename` 是選擇性的。 如果未指定邏輯檔案名，垃圾收集行程就會清除指定之資料庫中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
   
@@ -107,7 +106,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[檔案資料流](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 及 FileTable 動態管理檢視 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

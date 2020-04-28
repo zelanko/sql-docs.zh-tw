@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938063"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 預測查詢的結構和使用方式
@@ -44,11 +44,11 @@ ms.locfileid: "67938063"
   
 -   **頂端**  
   
--   *****從\<模型>***預測聯結**      
+-   **FROM***從\<模型>***預測聯結**      
   
 -   **開啟**  
   
--   **WHERE**  
+-   **希望**  
   
 -   **排序依據**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938063"
   
 -   傳回資料行的函數。  
   
- **** *FROM \<model>* **預測聯結**元素會定義要用來建立預測的來源資料。 若是單一查詢，這是指派至資料行的一連串值。 若是空白預測聯結，這會保持空白。  
+ **FROM** *FROM \<model>* **預測聯結**元素會定義要用來建立預測的來源資料。 若是單一查詢，這是指派至資料行的一連串值。 若是空白預測聯結，這會保持空白。  
   
  **ON**元素會將在採礦模型中定義的資料行對應至外部資料集內的資料行。 如果是建立空白預測聯結查詢或自然預測聯結，不必包含這個元素。  
   

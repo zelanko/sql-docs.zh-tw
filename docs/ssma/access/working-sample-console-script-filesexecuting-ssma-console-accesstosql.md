@@ -10,10 +10,10 @@ ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938389"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>使用範例主控台腳本 FilesExecuting SSMA 主控台（AccessToSQL）
@@ -56,7 +56,7 @@ ms.locfileid: "67938389"
   
 -   **ConversionAndDataMigrationSample .xml：** 這個範例可讓使用者執行端對端遷移，使其無法轉換為資料移轉。 如下所示，需要變更的必要屬性值清單如下：  
   
-    |命令名稱|描述|屬性|  
+    |命令名稱：|描述|屬性|  
     |----------------|---------------|-------------|  
     |`map-schema`|源資料庫與目標架構的架構對應。|`source-schema:`指定需要轉換的源資料庫。<br /><br />`sql-server-schema`：指定要遷移至的目標資料庫|  
     |`convert-schema`|執行從來源到目標架構的架構轉換。<br /><br />如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`convert-schema`主控台指令檔的範例4所示。|`object-name`：指定需要轉換的源資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`|  

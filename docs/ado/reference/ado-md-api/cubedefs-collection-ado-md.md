@@ -17,10 +17,10 @@ ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6753c5a2cf70557868a25b2c4e2675a53d26d07b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938620"
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs 集合 (ADO MD)

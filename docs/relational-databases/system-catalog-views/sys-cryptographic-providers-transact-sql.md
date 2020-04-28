@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940293"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67940293"
 |**provider_id**|**int**|密碼編譯提供者的識別碼。|  
 |**name**|**sysname**|密碼編譯提供者的名稱。|  
 |**guid**|**uniqueidentifier**|唯一的提供者 GUID。|  
-|**版本**|**nvarchar(50)**|提供者的版本，格式為 '*aa.bb.cccc.dd*'。|  
+|**version**|**nvarchar(50)**|提供者的版本，格式為 '*aa.bb.cccc.dd*'。|  
 |**dll_path**|**nvarchar(512)**|實作可延伸金鑰管理 (EKM) 應用程式介面 (API) 的 DLL 路徑。|  
 |**is_enabled**|**bit**|在伺服器上是否有啟用提供者。<br /><br /> 0 = 未啟用 (預設值)<br /><br /> 1 = 已啟用|  
   

@@ -17,10 +17,10 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937011"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
@@ -34,7 +34,7 @@ ms.locfileid: "67937011"
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|正在更新其遠端資料封存架構的本機已啟用 Stretch 之資料表的識別碼。|  
 |**database_id**|**int**|包含本機已啟用 Stretch 之資料表的資料庫識別碼。|  
-|**task_id**|**Bigint**|遠端資料封存架構更新工作的識別碼。|  
+|**task_id**|**bigint**|遠端資料封存架構更新工作的識別碼。|  
 |**task_type**|**int**|遠端資料封存架構更新工作的類型。|  
 |**task_type_desc**|**nvarchar**|遠端資料封存架構更新工作的類型描述。|  
 |**task_state**|**int**|遠端資料封存架構更新工作的狀態。|  
