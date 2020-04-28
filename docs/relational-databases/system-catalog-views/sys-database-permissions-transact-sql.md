@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982731"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
@@ -37,16 +37,16 @@ ms.locfileid: "73982731"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**課堂**|**tinyint**|識別權限所在的類別。<br /><br /> 0 = 資料庫<br />1 = 物件或資料行<br />3 = 結構描述<br />4 = 資料庫主體<br />5 = 元件-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />6 = 類型<br />10 = XML 架構集合- <br />                      **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />15 = 訊息類型-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />16 = 服務合約-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />17 = Service-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />18 = 遠端服務系結-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />19 = Route-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />23 = 全文檢索目錄-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本。<br />24 = 對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />25 = 憑證-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />26 = 非對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。|  
-|**class_desc**|**Nvarchar （60）**|權限所在類別的描述。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
+|**class**|**tinyint**|識別權限所在的類別。<br /><br /> 0 = 資料庫<br />1 = 物件或資料行<br />3 = 結構描述<br />4 = 資料庫主體<br />5 = 元件-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />6 = 類型<br />10 = XML 架構集合- <br />                      **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br />15 = 訊息類型-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />16 = 服務合約-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />17 = Service-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />18 = 遠端服務系結-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />19 = Route-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />23 = 全文檢索目錄-**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本。<br />24 = 對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />25 = 憑證-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。<br />26 = 非對稱金鑰-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本。|  
+|**class_desc**|**nvarchar(60)**|權限所在類別的描述。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|權限所在項目的識別碼，它是根據類別加以解譯。 一般來說， **major_id**只是適用于類別所代表之識別碼的類型。 <br /><br /> 0 = 資料庫本身 <br /><br /> >0 = 使用者物件的物件識別碼 <br /><br /> \<0 = 系統物件的物件識別碼 |  
 |**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。 **Minor_id**通常是零，因為物件的類別沒有可用的子類別。 否則，它是資料表的資料行識別碼。|  
 |**grantee_principal_id**|**int**|獲授與權限的資料庫主體識別碼。|  
 |**grantor_principal_id**|**int**|這些權限之同意授權者的資料庫主體識別碼。|  
 |**type**|**char （4）**|資料庫權限類型。 如需權限類型的清單，請參閱下表。|  
 |**permission_name**|**nvarchar(128)**|權限名稱。|  
-|**狀態**|**char （1）**|權限狀態：<br /><br /> D = 拒絕<br /><br /> R = 撤銷<br /><br /> G = 授與<br /><br /> W = 以授與選項授與|  
-|**state_desc**|**Nvarchar （60）**|權限狀態的描述：<br /><br /> 拒絕<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state**|**char （1）**|權限狀態：<br /><br /> D = 拒絕<br /><br /> R = 撤銷<br /><br /> G = 授與<br /><br /> W = 以授與選項授與|  
+|**state_desc**|**nvarchar(60)**|權限狀態的描述：<br /><br /> 拒絕<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>資料庫權限   
 可以是下列類型的許可權。
@@ -168,7 +168,7 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>另請參閱  
  [安全性實體](../../relational-databases/security/securables.md)   
- [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [許可權階層 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

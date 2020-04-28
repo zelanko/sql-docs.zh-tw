@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399438"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平臺系統中的工作負載管理
@@ -28,7 +28,7 @@ SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員將�
   
 -   針對執行緩慢的雜湊聯結進行疑難排解，以查看它是否需要更多記憶體，然後提供更多記憶體。  
   
-## <a name="Basics"></a>工作負載管理基本概念  
+## <a name="workload-management-basics"></a><a name="Basics"></a>工作負載管理基本概念  
   
 ### <a name="key-terms"></a>主要詞彙：  
 工作負載管理  
@@ -55,12 +55,12 @@ For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../s
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>資源類別描述  
+## <a name="resource-class-descriptions"></a><a name="RC"></a>資源類別描述  
 下表描述資源類別及其系統資源配置。  
   
 |資源類別|要求重要性|最大記憶體使用量 *|平行存取插槽數（最大值 = 32）|描述|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|預設|中|400 MB|1|根據預設，每個登入都允許少量的記憶體和並行處理資源來處理其要求。<br /><br />當登入新增至資源類別時，新的類別會優先使用。 從所有資源類別中卸載登入時，登入會還原回預設資源配置。|  
+|default|中|400 MB|1|根據預設，每個登入都允許少量的記憶體和並行處理資源來處理其要求。<br /><br />當登入新增至資源類別時，新的類別會優先使用。 從所有資源類別中卸載登入時，登入會還原回預設資源配置。|  
 |MediumRC|中|1200 MB|3|可能需要中型資源類別的要求範例：<br /><br />CTAS 具有大型雜湊聯結的作業。<br /><br />選取需要更多記憶體的作業，以避免快取至磁片。<br /><br />將資料載入叢集資料行存放區索引。<br /><br />針對具有10-15 資料行的小型資料表，建立、重建和重新組織叢集資料行存放區索引。|  
 |Largerc|高|2.8 GB|7|可能需要大型資源類別的要求範例：<br /><br />非常大型的 CTAS 作業，具有大量的雜湊聯結或包含大型的匯總，例如大型 ORDER BY 或 GROUP BY 子句。<br /><br />針對雜湊聯結之類的作業，或 ORDER BY 或 GROUP BY 子句之類的匯總，選取需要海量儲存體的作業<br /><br />將資料載入叢集資料行存放區索引。<br /><br />針對具有10-15 資料行的小型資料表，建立、重建和重新組織叢集資料行存放區索引。|  
 |xlargerc|高|8.4 GB|22|超大型資源類別適用于在執行時間需要額外耗用大量資源的要求。|  
@@ -98,7 +98,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 在每個資源類別中，要求會以先進先出（FIFO）循序執行。  
   
-## <a name="GeneralRemarks"></a>一般備註  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>一般備註  
 如果登入是一個以上資源類別的成員，則會優先使用具有大部分資源的類別。  
   
 在資源類別中加入或卸載登入時，此變更會立即針對所有未來的要求生效;目前正在執行或等待中的要求不會受到影響。 登入不需要中斷連線再重新連線，即可進行變更。  
@@ -137,10 +137,10 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 -   選取，排除僅限 DMV 的查詢  
   
-## <a name="Limits"></a>限制事項  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>限制事項  
 資源類別會管理記憶體和並行配置。  它們不會管理輸入/輸出作業。  
   
-## <a name="Metadata"></a>中繼資料  
+## <a name="metadata"></a><a name="Metadata"></a>中繼資料  
 Dmv，其中包含資源類別和資源類別成員的相關資訊。  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -177,7 +177,7 @@ Dmv，其中包含要求狀態和所需資源的相關資訊：
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>相關工作  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>相關工作  
 [工作負載管理工作](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982765"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
@@ -86,8 +86,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-refreshing-a-user-defined-function"></a>A. 重新整理使用者自訂函數  
- 下列範例會重新整理使用者自訂函數。 這個範例會建立別名資料類型 `mytype`，以及使用 `to_upper` 的使用者自訂函數 `mytype`。 接著，`mytype` 會重新命名為 `myoldtype`，而且會建立有不同定義的新 `mytype`。 
-  `dbo.to_upper` 函數會重新整理，以參考 `mytype` 的新實作，而非舊實作。  
+ 下列範例會重新整理使用者自訂函數。 這個範例會建立別名資料類型 `mytype`，以及使用 `to_upper` 的使用者自訂函數 `mytype`。 接著，`mytype` 會重新命名為 `myoldtype`，而且會建立有不同定義的新 `mytype`。 `dbo.to_upper` 函數會重新整理，以參考 `mytype` 的新實作，而非舊實作。  
   
 ```  
 -- Create an alias type.  

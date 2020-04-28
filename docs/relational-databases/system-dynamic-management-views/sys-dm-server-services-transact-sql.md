@@ -19,10 +19,10 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095376"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "74095376"
 |process_id|**int**|服務的處理序識別碼。 不可為 null。|  
 |last_startup_time|**datetimeoffset(7)**|服務上次啟動的日期和時間。 可為 Null。|  
 |service_account|**nvarchar(256)**|已獲授權可控制服務的帳戶。 這個帳戶可以啟動或停止服務，或修改服務屬性。 不可為 null。|  
-|檔名|**nvarchar(256)**|服務可執行檔的路徑和檔案名稱。 不可為 null。|  
+|filename|**nvarchar(256)**|服務可執行檔的路徑和檔案名稱。 不可為 null。|  
 |is_clustered|**Nvarchar （1）**|指出服務是否安裝為叢集伺服器的資源。 不可為 null。|  
 |cluster_nodename|**nvarchar(256)**|安裝服務所在之叢集節點的名稱。 可為 Null。|
 |instant_file_initialization_enabled|**Nvarchar （1）**|指定是否為[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服務啟用立即檔案初始化。<br /><br />Y = 已針對服務啟用立即檔案初始化。<br /><br />N = 已停用服務的立即檔案初始化。<br /><br /> 可為 Null。<br /><br /> **注意：** 不適用於其他服務，例如 SQL Server Agent。<br /><br /> **適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （從[!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 開始，以及[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本）。|  

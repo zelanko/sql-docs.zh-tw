@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095160"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
@@ -28,8 +28,7 @@ ms.locfileid: "74095160"
 
   WMI 提供者是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) 用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務和網路通訊協定的已發行介面。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件表示 WMI 提供者。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可獨立操作，不受使用 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所建立連接的影響，並會使用 Windows 認證連接到 WMI 服務。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可獨立操作，不受使用 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所建立連接的影響，並會使用 Windows 認證連接到 WMI 服務。  
   
 ## <a name="example"></a>範例  
 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

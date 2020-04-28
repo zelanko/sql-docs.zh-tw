@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982259"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
@@ -83,13 +83,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   資料列包含足夠的空間。  
   
- 當 BLOB 字串儲存在資料列中時，讀取和寫入**text**、 **Ntext**或**image**字串的速度會與讀取或寫入字元和二進位字串一樣快。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必存取個別頁面，即可讀取或寫入 BLOB 字串。  
+ 當 BLOB 字串儲存在資料列中時，讀取和寫入**text**、 **Ntext**或**image**字串的速度會與讀取或寫入字元和二進位字串一樣快。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必存取個別頁面，即可讀取或寫入 BLOB 字串。  
   
  如果**text**、 **Ntext**或**image**字串大於指定的限制或資料列中的可用空間，則會改為將指標儲存在資料列中。 將 BLOB 字串儲存在資料列的條件仍適用，不過，資料列必須有足以保留指標的空間。  
   
- 儲存在資料表資料列中之 BLOB 字串和指標的處理方式，類似於可變長度的字串。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會使用儲存字串或指標所需要的位元組數。  
+ 儲存在資料表資料列中之 BLOB 字串和指標的處理方式，類似於可變長度的字串。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會使用儲存字串或指標所需要的位元組數。  
   
  當第一次啟用 text in row 時，不會立即轉換現有的 BLOB 字串。 只有在更新字串時，才會轉換字串。 同樣地，當 text in row 選項限制增加時，資料列中已有的**text**、 **Ntext**或**image**字串將不會轉換成遵守新的限制，直到更新為止。  
   
@@ -138,7 +136,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ## <a name="see-also"></a>另請參閱  
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

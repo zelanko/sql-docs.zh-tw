@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400625"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>為分析平臺系統開啟或關閉設備電源
@@ -25,7 +25,7 @@ ms.locfileid: "74400625"
   
 您可以使用指派給節點的 IP 位址，或從**HST01**電腦使用**容錯移轉叢集管理員**（**cluadmin.msc**）或**hyper-v 管理員**（**virtmgmt**）應用程式，並以滑鼠右鍵按一下節點名稱，來連接 SQL Server PDW 節點。  
   
-## <a name="PowerOff"></a>關閉設備電源  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>關閉設備電源  
   
 ### <a name="before-you-begin"></a>開始之前  
 在關閉設備電源之前，您應該先結束設備上的所有活動。 結束所有活動：  
@@ -61,7 +61,7 @@ ms.locfileid: "74400625"
   
 9. 關閉電源配置單位（Pdu）。  
   
-## <a name="PowerOn"></a>設備電源  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>設備電源  
   
 ### <a name="to-power-on-the-appliance"></a>若要在設備上開啟電源  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401024"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>使用 INSERT 將資料載入平行處理資料倉儲
@@ -21,14 +21,14 @@ ms.locfileid: "74401024"
 您可以使用 tsql INSERT 語句，將資料載入至 SQL Server 平行處理資料倉儲（PDW）分散式或複寫資料表。 如需 INSERT 的詳細資訊，請參閱[insert](../t-sql/statements/insert-transact-sql.md)。 針對複寫資料表和分散式資料表中的所有非散發資料行，PDW 會使用 SQL Server，將語句中指定的資料值隱含轉換為目的地資料行的資料類型。 如需 SQL Server 資料轉換規則的詳細資訊，請參閱[SQL 的資料類型轉換](../t-sql/data-types/data-type-conversion-database-engine.md)。 不過，針對散發資料行，PDW 僅支援 SQL Server 支援的隱含轉換子集。 因此，當您使用 INSERT 語句將資料載入散發資料行時，來源資料必須以下表中定義的其中一種格式來指定。  
   
   
-## <a name="InsertingLiteralsBinary"></a>將常值插入二進位類型  
+## <a name="insert-literals-into-binary-types"></a><a name="InsertingLiteralsBinary"></a>將常值插入二進位類型  
 下表定義接受的常數值型別、格式和轉換規則，用於將常值插入**binary**類型的散發資料行（*n*）或**Varbinary**（*n*）。  
   
 |常值型別|[格式]|轉換規則|  
 |----------------|----------|--------------------|  
 |二進位常值|0x*hexidecimal_string*<br /><br />範例：0x12Ef|二進位常值的前面必須加上0x。<br /><br />資料來源長度不能超過為資料類型所指定的位元組數目。<br /><br />如果資料來源長度小於**二進位**資料類型的大小，資料會向右填補，而零會到達資料類型大小。|  
   
-## <a name="InsertingLiteralsDateTime"></a>將常值插入日期和時間類型  
+## <a name="insert-literals-into-date-and-time-types"></a><a name="InsertingLiteralsDateTime"></a>將常值插入日期和時間類型  
 日期和時間常值是使用特定格式的字元值來表示，並以單引號括住。 下表定義允許的常數值型別、格式和轉換規則，用於將日期或時間常值插入**datetime**、 **Smalldatetime**、 **date**、 **time**、 **datetimeoffset**或**datetime2**類型的 SQL Server PDW 散發資料行中。  
   
 ### <a name="datetime-data-type"></a>datetime 資料類型  
@@ -75,7 +75,7 @@ ms.locfileid: "74401024"
 |**Datetimeoffset**格式的字串常值|' YYYY-MM-DD hh： mm： ss. nnnnnnn {+&#124;-} hh： mm '<br /><br />範例： ' 2007-05-08 12：35： 29.1234567 + 12:15 '|來源資料不能超過 datetimeoffset 資料行中指定的小數秒數。 如果資料來源的小數秒數較小或相等，資料會向右填補零。 例如，如果資料類型為 datetimeoffset （5），則常值 ' 2007-05-08 12：35： 29.123 + 12:15 ' 會插入為 ' 12：35： 29.12300 + 12:15 '。|  
   
 ### <a name="datetime2-data-type"></a>datetime2 資料類型  
-下表定義接受的格式，以及將常值插入至**datetime2**類型之散發資料行的規則**。 預設格式為 ' YYYY-MM-DD hh： MM： ss. nnnnnnn '。 空字串（' '）會轉換成預設值 ' 1900-01-01 12:00:00 '。 只包含空格（' '）的字串會產生錯誤。 小數數位的數目取決於資料行定義。 例如，定義為**datetime2** （2）的資料行將會有兩個小數位數。  
+下表定義接受的格式，以及將常值插入至**datetime2**類型之散發資料行的規則*n*。 預設格式為 ' YYYY-MM-DD hh： MM： ss. nnnnnnn '。 空字串（' '）會轉換成預設值 ' 1900-01-01 12:00:00 '。 只包含空格（' '）的字串會產生錯誤。 小數數位的數目取決於資料行定義。 例如，定義為**datetime2** （2）的資料行將會有兩個小數位數。  
   
 |常值型別|[格式]|轉換規則|  
 |----------------|----------|--------------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "74401024"
 |**日期**格式的字串常值|' YYYY-MM-DD '<br /><br />範例： ' 2007-05-08 '|插入值時，時間值（小時、分鐘、秒和分數）會設定為0。 例如，常值 ' 2007-05-08 ' 會插入為 ' 2007-05-08 12：00： 00.0000000 '。|  
 |**Datetime2**格式的字串常值|' YYYY-MM-DD hh： MM： ss： nnnnnnn '<br /><br />範例： ' 2007-05-08 12：35： 29.1234567 '|如果資料來源包含的資料和時間元件小於或等於**datetime2**（*n*）中指定的值，則會插入資料;否則會產生錯誤。|  
   
-## <a name="InsertLiteralsNumeric"></a>將常值插入數數值型別  
+## <a name="insert-literals-into-numeric-types"></a><a name="InsertLiteralsNumeric"></a>將常值插入數數值型別  
 下表定義接受的格式和轉換規則，用於將常值插入至使用數數值型別的 SQL Server PDW 散發資料行。  
   
 ### <a name="bit-data-type"></a>bit 資料類型  
@@ -140,7 +140,7 @@ Money 常值會以數位表示，並以選擇性的小數點和貨幣符號做�
 |十進位常值|nnnnnn. nnnnn<br /><br />範例：123344.34455|如果小數點後的位數超過4，此值會無條件進位到最接近的值。 例如，值123344.34455 會插入為123344.3446。|  
 |Money 常值|$nnnnnn nnnn<br /><br />範例： $123456.7890|選擇性貨幣符號不會插入值。<br /><br />如果小數點後的位數超過4，此值會無條件進位到最接近的值。|  
   
-## <a name="InsertLiteralsString"></a>將常值插入字串類型  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertLiteralsString"></a>將常值插入字串類型  
 下表定義接受的格式和轉換規則，將常值插入至使用字串類型的 SQL Server PDW 資料行中。  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char、Varchar、Nchar 和 Nvarchar 資料類型  
@@ -158,7 +158,7 @@ Money 常值會以數位表示，並以選擇性的小數點和貨幣符號做�
 ## <a name="see-also"></a>另請參閱  
  
 [分散式資料](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[INSERT](../t-sql/statements/insert-transact-sql.md)  
+[插入](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

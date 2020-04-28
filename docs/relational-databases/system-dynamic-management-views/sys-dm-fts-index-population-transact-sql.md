@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983108"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
@@ -39,18 +39,18 @@ ms.locfileid: "73983108"
 |**table_id**|**int**|要擴展全文檢索索引的資料表識別碼。|  
 |**memory_address**|**varbinary(8)**|用來表示使用中母體擴展之內部資料結構的記憶體位址。|  
 |**population_type**|**int**|母體擴展的類型。 下列其中之一：<br /><br /> 1 = 完整母體擴展。<br /><br /> 2 = 累加、以時間戳記為基礎的母體擴展<br /><br /> 3 = 追蹤變更的手動更新。<br /><br /> 4 = 追蹤變更的背景更新。|  
-|**population_type_description**|**Nvarchar （120）**|母體擴展類型的描述。|  
+|**population_type_description**|**nvarchar(120)**|母體擴展類型的描述。|  
 |**is_clustered_index_scan**|**bit**|指出母體擴展是否涉及叢集索引上的掃描。|  
 |**range_count**|**int**|這個母體擴展平行處理的子範圍數目。|  
 |**completed_range_count**|**int**|完成處理的範圍數目。|  
 |**outstanding_batch_count**|**int**|目前此母體擴展未處理的批次數目。 如需詳細資訊，請參閱[dm_fts_outstanding_batches &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
-|**狀態**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 這個母體擴展的狀態。 注意：有些狀態是暫時性。 下列其中之一：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 例如，當自動合併正在進行時，就會發生這個狀態。<br /><br /> 11 = 母體擴展中止<br /><br /> 12 = 正在處理語意相似度擷取|  
-|**status_description**|**Nvarchar （120）**|母體擴展狀態的描述。|  
+|**status**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 這個母體擴展的狀態。 注意：有些狀態是暫時性。 下列其中之一：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 例如，當自動合併正在進行時，就會發生這個狀態。<br /><br /> 11 = 母體擴展中止<br /><br /> 12 = 正在處理語意相似度擷取|  
+|**status_description**|**nvarchar(120)**|母體擴展狀態的描述。|  
 |**completion_type**|**int**|這個母體擴展如何完成的狀態。|  
-|**completion_type_description**|**Nvarchar （120）**|完成類型的描述。|  
+|**completion_type_description**|**nvarchar(120)**|完成類型的描述。|  
 |**worker_count**|**int**|這個值一定是 0。|  
 |**queued_population_type**|**int**|母體擴展的類型，以追蹤變更為基礎，將遵照目前的母體擴展 (如果有的話)。|  
-|**queued_population_type_description**|**Nvarchar （120）**|要遵照之母體擴展的描述 (如果有的話)。 例如，當 CHANGE TRACKING = AUTO 而且初始完整母體擴展正在進行時，這個資料行就會顯示「自動母體擴展」。|  
+|**queued_population_type_description**|**nvarchar(120)**|要遵照之母體擴展的描述 (如果有的話)。 例如，當 CHANGE TRACKING = AUTO 而且初始完整母體擴展正在進行時，這個資料行就會顯示「自動母體擴展」。|  
 |**start_time**|**datetime**|啟動母體擴展的時間。|  
 |**incremental_timestamp**|**timestamp**|代表完整母體擴展的起始時間戳記。 如果是其他所有母體擴展類型，這個值是最後一個認可的檢查點，代表母體擴展的進度。|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73983108"
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|多對一|  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [全文檢索搜尋和語義搜尋動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

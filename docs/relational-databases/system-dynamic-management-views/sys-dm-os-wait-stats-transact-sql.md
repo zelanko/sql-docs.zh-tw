@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190353"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "74190353"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|wait_type|**Nvarchar （60）**|等候類型的名稱。 如需詳細資訊，請參閱這個主題稍後的＜[等候的類型](#WaitTypes)＞。|  
-|waiting_tasks_count|**Bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
-|wait_time_ms|**Bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
-|max_wait_time_ms|**Bigint**|這個等候類型的等候時間上限。|  
-|signal_wait_time_ms|**Bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
+|wait_type|**nvarchar(60)**|等候類型的名稱。 如需詳細資訊，請參閱這個主題稍後的＜[等候的類型](#WaitTypes)＞。|  
+|waiting_tasks_count|**bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
+|wait_time_ms|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
+|max_wait_time_ms|**bigint**|這個等候類型的等候時間上限。|  
+|signal_wait_time_ms|**bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
 |pdw_node_id|**int**|此散發所在節點的識別碼。 <br/> **適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>權限
@@ -49,7 +49,7 @@ ms.locfileid: "74190353"
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
-##  <a name="WaitTypes"></a>等候的類型  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>等候的類型  
  **資源等候**當背景工作要求存取無法使用的資源時，就會發生資源等候，因為資源正由某個其他背景工作角色使用，或是尚未提供。 鎖定、閂鎖、網路和磁碟 I/O 等候，都是資源等候的範例。 鎖定和閂鎖等候是同步處理物件的等候。  
   
 **佇列等候**  
@@ -58,8 +58,7 @@ ms.locfileid: "74190353"
  **外部等候**  
  外部等候是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作者正在等候外部事件 (例如，擴充預存程序呼叫或連結伺服器查詢) 完成時發生。 記住，當您診斷封鎖問題時，外部等候不會一直暗示工作者正在閒置，因為工作者可能很積極的在執行一些外部程式碼。  
   
- 
-  `sys.dm_os_wait_stats` 顯示已完成等候的時間。 此動態管理檢視不會顯示目前的等候。  
+ `sys.dm_os_wait_stats` 顯示已完成等候的時間。 此動態管理檢視不會顯示目前的等候。  
   
  在下列任何一種情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作者執行緒都不算是在等候中：  
   
@@ -217,7 +216,7 @@ GO
 |ENABLE_EMPTY_VERSIONING |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |ENABLE_VERSIONING |當 SQL Server 等候這個資料庫中的所有更新交易完成，然後才宣告資料庫準備好轉換成快照隔離允許狀態時，就會發生這種情況。 當 SQL Server 使用 ALTER DATABASE 語句來啟用快照集隔離時，會使用此狀態。| 
 |ERROR_REPORTING_MANAGER |在同步處理多個並行錯誤記錄檔的初始化時發生。| 
-|EXCHANGE |在平行查詢期間同步處理查詢處理器交換重複時發生。| 
+|EXCHANGE  |在平行查詢期間同步處理查詢處理器交換重複時發生。| 
 |EXECSYNC  |平行查詢期間在與交換重複無關之區域的查詢處理器中進行同步處理時發生。 這類區域的範例包括點陣圖、大型二進位物件 (LOB) 和多工緩衝處理重複。 LOB 可能會經常使用這個等候狀態。| 
 |EXECUTION_PIPE_EVENT_INTERNAL |在透過連接內容傳送的批次執行產生者與取用者部分之間同步處理期間發生。| 
 |EXTERNAL_RG_UPDATE |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本。| 
@@ -669,7 +668,7 @@ GO
 |PREEMPTIVE_OS_SETFILEVALIDDATA |僅供內部使用。| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |僅供內部使用。| 
 |PREEMPTIVE_OS_SQLCLROPS |僅供內部使用。| 
-|PREEMPTIVE_OS_SQMLAUNCH |僅供內部使用。 <br /> **適用**于： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]至[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。 |  
+|PREEMPTIVE_OS_SQMLAUNCH |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。 |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |僅供內部使用。| 
 |PREEMPTIVE_OS_VERIFYTRUST |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本。| 
 |PREEMPTIVE_OS_VSSOPS |僅供內部使用。| 
@@ -936,7 +935,7 @@ GO
 |VIA_ACCEPT |當虛擬介面卡 (VIA) 提供者連接在啟動期間完成時發生。| 
 |VIEW_DEFINITION_MUTEX |在同步處理快取檢視定義的存取作業時發生。| 
 |WAIT_FOR_RESULTS |在等候查詢通知被觸發時發生。| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |在等候同步統計資料更新完成，然後查詢編譯和執行可以繼續時發生。<br /> **適用于**：開頭為[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |在等候同步統計資料更新完成，然後查詢編譯和執行可以繼續時發生。<br /> **適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。| 
 |WAIT_XLOGREAD_SIGNAL |僅供內部使用。 <br /> **適用對象**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更新版本。| 

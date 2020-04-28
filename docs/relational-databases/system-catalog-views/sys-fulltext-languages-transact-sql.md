@@ -22,16 +22,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981769"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列都會顯示語言的 LCID 和名稱。 為語言註冊斷詞工具時，其其他語言資源（字幹分析器、非搜尋字（停用字詞）和同義字檔案）就會變成可供全文檢索索引/查詢作業使用。 可以在全文檢索查詢**** 和全文檢索索引[!INCLUDE[tsql](../../includes/tsql-md.md)]語句中指定**name**或 lcid 的值。  
+  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列都會顯示語言的 LCID 和名稱。 為語言註冊斷詞工具時，其其他語言資源（字幹分析器、非搜尋字（停用字詞）和同義字檔案）就會變成可供全文檢索索引/查詢作業使用。 可以在全文檢索查詢**lcid**和全文檢索索引[!INCLUDE[tsql](../../includes/tsql-md.md)]語句中指定**name**或 lcid 的值。  
    
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "73981769"
   
 ## <a name="see-also"></a>另請參閱  
  [sp_fulltext_load_thesaurus_file &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_service &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

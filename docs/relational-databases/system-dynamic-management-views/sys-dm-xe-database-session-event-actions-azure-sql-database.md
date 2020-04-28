@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 322a54a4f3bbd5f4880df6f52a085f5d7141d335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844454"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
@@ -30,9 +30,9 @@ ms.locfileid: "73844454"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 不可為 Null。|  
-|action_name|**Nvarchar （60）**|動作的名稱。 不可為 Null。|  
+|action_name|**nvarchar(60)**|動作的名稱。 不可為 Null。|  
 |action_package_guid|**uniqueidentifier**|包含此動作之封裝的 GUID。 不可為 Null。|  
-|event_name|**Nvarchar （60）**|此動作繫結之事件的名稱。 不可為 Null。|  
+|event_name|**nvarchar(60)**|此動作繫結之事件的名稱。 不可為 Null。|  
 |event_package_guid|**uniqueidentifier**|包含此事件之封裝的 GUID。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  

@@ -1,5 +1,5 @@
 ---
-title: 系統管理員
+title: Administrators
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729799"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
@@ -52,7 +52,7 @@ ms.locfileid: "73729799"
 ## <a name="master-data-services-super-user"></a>Master Data Services 進階使用者  
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以將 [進階使用者] 功能區域的權限指派給使用者。 具有 [進階使用者] 功能區域權限的使用者實際上具有所有模型的 [Admin (系統管理員)] 權限，而且具有所有其他功能區域權限。 如需功能區域權限的相關資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
- 當您使用**建立資料庫精靈 &#40;Master Data Services 組態管理員&#41;** 建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，會為 [系統管理員帳戶][](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) 指定這個預設進階使用者。  
+ 當您使用[建立資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) 建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，會為 [系統管理員帳戶]**** 指定這個預設進階使用者。  
   
  進階使用者可以執行下列作業：  
   
@@ -66,8 +66,7 @@ ms.locfileid: "73729799"
   
 |管理員類型|描述|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]超級使用者|
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中所指派權限不會影響系統管理員的存取。<br /><br /> 根據明確指派之功能區域權限或繼承自群組的權限，使用者可以是進階使用者。<br /><br /> 自動擁有所有模型的所有權限。<br /><br /> 自動擁有所有功能區域的存取權。|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 進階使用者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中所指派權限不會影響系統管理員的存取。<br /><br /> 根據明確指派之功能區域權限或繼承自群組的權限，使用者可以是進階使用者。<br /><br /> 自動擁有所有模型的所有權限。<br /><br /> 自動擁有所有功能區域的存取權。|  
 |模型管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是模型系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定模型中的所有物件和成員的所有權限。|  
 |實體系統管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是實體系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定實體中所有物件和成員的所有權限。<br /><br /> 如果實體變更需要核准時，就可以核准暫止的變更集。|  
   

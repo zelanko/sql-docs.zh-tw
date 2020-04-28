@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73980307"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys.databases index_resumable_operations （Transact-sql）
@@ -40,13 +40,13 @@ ms.locfileid: "73980307"
 |**sql_text**|**nvarchar(max)**|DDL T-sql 語句文字|
 |**last_max_dop**|**smallint**|上次使用的 MAX_DOP （預設值 = 0）|
 |**partition_number**|**int**|擁有索引或堆積內的資料分割編號。 若為非資料分割資料表和索引，或在重建所有分割區時，此資料行的值為 Null。|
-|**狀態**|**tinyint**|可繼續索引的操作狀態：<br /><br />0 = 正在執行<br /><br />1 = 暫停|
-|**state_desc**|**Nvarchar （60）**|可繼續索引的操作狀態原因（執行中或已暫停）|  
+|**state**|**tinyint**|可繼續索引的操作狀態：<br /><br />0 = 正在執行<br /><br />1 = 暫停|
+|**state_desc**|**nvarchar(60)**|可繼續索引的操作狀態原因（執行中或已暫停）|  
 |**start_time**|**datetime**|索引作業開始時間（不可為 null）|
 |**last_pause_time**|**datatime**| 索引作業上次暫停時間（可為 null）。 如果作業正在執行且永遠不會暫停，則為 Null。|
 |**total_execution_time**|**int**|從開始時間（以分鐘為單位）的總執行時間（不可為 null）|
-|**percent_complete**|**即時**|% 中的索引作業進度完成（不可為 null）。|
-|**page_count**|**Bigint**|索引建立作業為新的和對應索引所配置的索引頁面總數（不可為 null）。
+|**percent_complete**|**real**|% 中的索引作業進度完成（不可為 null）。|
+|**page_count**|**bigint**|索引建立作業為新的和對應索引所配置的索引頁面總數（不可為 null）。
 
 ## <a name="permissions"></a>權限
 
@@ -63,7 +63,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 ## <a name="see-also"></a>另請參閱
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [建立索引](../../t-sql/statements/create-index-transact-sql.md)
 - [目錄檢視](catalog-views-transact-sql.md)
 - [物件目錄檢視](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)

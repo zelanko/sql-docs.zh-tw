@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882378"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
@@ -50,24 +50,24 @@ ms.locfileid: "73882378"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   若要停用發行和散發，所有散發和發行集資料庫都必須在線上。 如果存在散發或發行集資料庫的任何 *「資料庫快照集」* ，則必須先卸除這些快照集，然後才能停用發行和散發。 資料庫快照集是資料庫的唯讀離線副本，與複寫快照集無關聯。 如需詳細資訊，請參閱[資料庫快照集 &#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「停用發行與散發精靈」停用發行和散發。  
   
 #### <a name="to-disable-publishing-and-distribution"></a>停用發行和散發  
   
-1.  連接到您要在中停用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的「發行者」或「散發者」，然後展開伺服器節點。  
+1.  連線到您要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中停用的「發行者」或「散發者」，然後展開伺服器節點。  
   
-2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[停用發行與散發]**。  
+2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[停用發行與散發]** 。  
   
 3.  完成「停用散發暨發行精靈」中的步驟。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式停用發行和散發。  
   
 #### <a name="to-disable-publishing-and-distribution"></a>停用發行和散發  
@@ -89,7 +89,7 @@ ms.locfileid: "73882378"
     > [!NOTE]  
     >  如果在您執行 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 和 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)之前，尚未卸除所有複寫發行和散發物件，這些程序將會傳回錯誤。 若要在卸載發行者或散發者時卸載所有複寫相關的物件， ** \@no_checks**參數必須設定為**1**。 如果發行者或散發者已離線或無法連線， ** \@ignore_distributor**參數可以設定為**1** ，以便卸載。不過，必須以手動方式移除任何剩餘的發行和散發物件。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例指令碼會從訂閱資料庫中移除複寫物件。  
   
  [!code-sql[HowTo#sp_removedbreplication](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_removedbreplication)]  
@@ -98,7 +98,7 @@ ms.locfileid: "73882378"
   
  [!code-sql[HowTo#sp_DropDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_dropdistpub)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
 #### <a name="to-disable-publishing-and-distribution"></a>停用發行和散發  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73882378"
   
 8.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 傳遞`true` for *force*的值，以在散發者端移除所有複寫物件，而不需要先確認是否已停用所有本機發行集資料庫，而且已卸載散發資料庫。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例會移除散發者上的發行者註冊、捨棄散發資料庫，以及解除安裝散發者。  
   
  [!code-csharp[HowTo#rmo_DropDistPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_dropdistpub)]  

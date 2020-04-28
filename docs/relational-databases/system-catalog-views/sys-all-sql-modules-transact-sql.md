@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b21f7e2bbed731e29334be1a87f5089ccfc1145
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981846"
 ---
 # <a name="sysall_sql_modules-transact-sql"></a>sys.all_sql_modules (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "73981846"
 
   傳回 sys.databases 的聯集**sql_modules**和**sys.databases system_sql_modules**。  
   
- 此視圖會針對每個原生編譯的純量使用者定義函數，各傳回一個資料列。 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函式](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
+ 此視圖會針對每個原生編譯的純量使用者定義函數，各傳回一個資料列。 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|包含物件的物件識別碼。 在資料庫中，這是唯一的。|  
-|**清晰**|**nvarchar(max)**|定義這個模組的 SQL 文字。<br /><br /> NULL = 已加密|  
+|**definition**|**nvarchar(max)**|定義這個模組的 SQL 文字。<br /><br /> NULL = 已加密|  
 |**uses_ansi_nulls**|**bit**|模組是以 SET ANSI_NULLS ON 加以建立。|  
 |**uses_quoted_identifier**|**bit**|模組是以 SET QUOTED_IDENTIFIER ON 加以建立。|  
 |**is_schema_bound**|**bit**|模組是以 SCHEMABINDING 選項加以建立。|  
@@ -51,9 +51,9 @@ ms.locfileid: "73981846"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [system_sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-sql-modules-transact-sql.md)   
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

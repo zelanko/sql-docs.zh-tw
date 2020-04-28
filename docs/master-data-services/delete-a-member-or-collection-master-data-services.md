@@ -17,17 +17,17 @@ ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729373"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>刪除成員或集合 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，刪除您不再需要的成員或集合。 如果您要大量刪除成員，請改用暫存表格。 如需詳細資訊，請參閱[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，刪除您不再需要的成員或集合。 如果您要大量刪除成員，請改用暫存表格。 如需詳細資訊，請參閱[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)。  
   
 > [!NOTE]  
 >  如果某個成員是當做另一個成員的網域屬性值使用，您就無法刪除該成員。  
@@ -35,7 +35,7 @@ ms.locfileid: "73729373"
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 -   針對成員，您至少必須擁有分葉模型物件的 **刪除** 權限，才能從中刪除成員。  
   
@@ -68,6 +68,6 @@ ms.locfileid: "73729373"
 ## <a name="see-also"></a>另請參閱  
  [&#40;Master Data Services 重新啟用成員或集合&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)  
+ [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

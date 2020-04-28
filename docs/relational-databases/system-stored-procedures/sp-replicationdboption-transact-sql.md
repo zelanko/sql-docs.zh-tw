@@ -16,10 +16,10 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056767"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
@@ -49,7 +49,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |-----------|-----------------|  
 |**合併發行**|可用於合併式發行集的資料庫。|  
 |**公佈**|資料庫可用於其他類型的發行集。|  
-|**預定**|資料庫是訂閱資料庫。|  
+|**訂閱**|資料庫是訂閱資料庫。|  
 |**sync with backup**|啟用資料庫的協調備份。 如需詳細資訊，請參閱為[異動複寫啟用協調備份 &#40;複寫 transact-sql 程式設計&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
 `[ @value = ] 'value'`這是指是否要啟用或停用給定的複寫資料庫選項。 *值*為**sysname**，而且可以是**true**或**false**。 當此值為**false**且*optname*為**merge publish**時，也會卸載合併發行資料庫的訂閱。  
@@ -72,11 +72,11 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_replicationdboption**。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [刪除發行集](../../relational-databases/replication/publish/delete-a-publication.md)   
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

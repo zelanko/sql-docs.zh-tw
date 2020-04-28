@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401137"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>硬體設定-Analytics Platform System
@@ -26,7 +26,7 @@ ms.locfileid: "74401137"
 -   [多機架設定](#section2)  
 
   
-## <a name="section1"></a>一機架設定  
+## <a name="one-rack-configurations"></a><a name="section1"></a>一機架設定  
 設備中的第一個機架包含執行 PDW 所需的元件。 最小設備設定是一個機架和網路，再加上一個基本的縮放單位。 這些圖表會顯示裝置的第一個機架的設定方式。 您的第一個機架中可以有2到9個計算節點，視硬體廠商而定。  
   
 ### <a name="first-rack-configurations---dell"></a>第一個機架設定-DELL  
@@ -39,7 +39,7 @@ HPE 設備的最低設定有2個計算節點。 您最多可以將3個數據縮�
   
 ![適用于 HPE 的 HPE 第一個機架設定](media/first-rack-configurations-hpe.png "HPE 第一個機架設定")  
   
-## <a name="section2"></a>多機架設定  
+## <a name="multi-rack-configurations"></a><a name="section2"></a>多機架設定  
 若要將容量新增至 PDW，您可以視需要新增資料縮放單位以及額外的機架 & 網路元件，以提供適當的電源、網路和機架基礎結構。 每個額外的機架 & 網路都需要被動主機。  
   
 每個硬體廠商都會指定您的應用裝置容量可新增的資料縮放單位數目。 我們建議您新增足夠的資料縮放單位，以在效能中至少看到20% 的升級。 例如，將一個資料縮放單位新增至已有20個數據縮放單位的應用裝置，可能會導致效能得到微不足道。 Net 增益並不值得成本和努力。  

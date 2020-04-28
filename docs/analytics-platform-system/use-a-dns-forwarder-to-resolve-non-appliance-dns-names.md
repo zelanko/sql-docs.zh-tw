@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399437"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 轉寄站來解析分析平臺系統中的非設備 DNS 名稱
 您可以在分析平臺系統應用裝置的 Active Directory Domain Services 節點（**_設備\_網域_-AD01**和**_設備\_網域_-AD02**）上設定 DNS 轉寄站，以允許腳本和軟體應用程式存取外部伺服器。  
   
-## <a name="ResolveDNS"></a>使用 DNS 轉寄站  
+## <a name="using-a-dns-forwarder"></a><a name="ResolveDNS"></a>使用 DNS 轉寄站  
 分析平臺系統裝置已設定為防止解析不在設備中之伺服器的 DNS 名稱。 某些處理常式（例如 Windows Software Update Services （WSUS））需要存取設備外的伺服器。 若要支援此使用案例，可以將分析平臺系統 DNS 設定為支援外部名稱轉寄站，以允許分析平臺系統主機和虛擬機器（Vm）使用外部 DNS 伺服器來解析設備以外的名稱。 不支援 DNS 尾碼的自訂設定，這表示您必須使用完整功能變數名稱來解析非設備伺服器名稱。  
   
 **使用 DNS GUI 建立 DNS 轉寄站**  

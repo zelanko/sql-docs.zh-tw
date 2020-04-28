@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74094390"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
@@ -27,20 +27,15 @@ ms.locfileid: "74094390"
 
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 是由下列物件表示：  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 物件具有三個作業、警示和運算子的集合。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 物件具有三個作業、警示和運算子的集合。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 物件表示呼叫器、電子郵件地址和網路傳送操作員的清單，在發生事件時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會自動加以通知。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 物件表示呼叫器、電子郵件地址和網路傳送操作員的清單，在發生事件時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會自動加以通知。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 物件表示系統事件或效能條件之類情況的清單，這些情況都受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的監視。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 物件表示系統事件或效能條件之類情況的清單，這些情況都受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的監視。  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 物件就稍微複雜一點， 它表示會在指定排程執行的多重步驟工作的清單。 步驟和排程資訊會儲存在 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 和 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 物件中。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 物件就稍微複雜一點， 它表示會在指定排程執行的多重步驟工作的清單。 步驟和排程資訊會儲存在 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 和 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 物件中。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
   
 ## <a name="examples"></a>範例  
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

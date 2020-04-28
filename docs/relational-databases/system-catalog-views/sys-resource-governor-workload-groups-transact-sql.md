@@ -20,10 +20,10 @@ ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 785062784aa465c438ab842a642d09cad03c799b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982967"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982967"
 |request_max_cpu_time_sec|**int**|單一要求的最大 CPU 使用限制 (以秒為單位)。 預設值為 0 時，不會指定任何限制。 不可為 Null。<br /><br /> **注意：** 如需詳細資訊，請參閱[CPU 閾值已超過事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
 |request_memory_grant_timeout_sec|**int**|單一要求的記憶體授權逾時 (以秒為單位)。 預設值為 0 時，會根據查詢成本使用內部計算。 不可為 Null。|  
 |max_dop|**int**|工作負載群組之平行處理原則的最大程度。 預設值為 0 時，使用全域設定。 不可為 Null。<br /><br /> **Node：** 這項設定將會覆寫查詢選項**maxdop**。|  
-|group_max_requests|**int**|並行要求數上限。 預設值為 0 時，不會指定任何限制。 不可為 Null。|  
+|group_max_requests|**int**|並行要求的最大數目。 預設值為 0 時，不會指定任何限制。 不可為 Null。|  
 |pool_id|**int**|這個工作負載群組所使用之資源集區的識別碼。|  
 |external_pool_id|**int**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 此工作負載群組所使用之外部資源集區的識別碼。|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73982967"
   
 ## <a name="see-also"></a>另請參閱  
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Resource Governor 目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

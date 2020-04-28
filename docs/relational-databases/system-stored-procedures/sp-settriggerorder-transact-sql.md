@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982236"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
@@ -54,7 +54,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |-----------|-----------------|  
 |**頭**|最先引發觸發程序。|  
 |**次**|最後引發觸發程序。|  
-|**無**|觸發程序的引發，沒有任何既定順序。|  
+|**None**|觸發程序的引發，沒有任何既定順序。|  
   
 `[ @stmttype = ] 'statement_type'`指定引發觸發程式的 SQL 語句。 *statement_type*為**Varchar （50）** ，而且可以是 INSERT、UPDATE、DELETE、LOGON，或[!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中所列的任何語句事件。 您不能指定事件群組。  
   
@@ -75,7 +75,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="dml-triggers"></a>DML 觸發程序  
  單一資料表上的每個語句都只能有一個**第一個**和**最後**一個觸發程式。  
   
- 如果資料表、資料庫或伺服器上已定義了**第一個**觸發程式，您就不能針對相同的 statement_type **，為相同**的資料表、資料庫或伺服器指定新的觸發** 程式。 這種限制也會套用**最後**的觸發程式。  
+ 如果資料表、資料庫或伺服器上已定義了**第一個**觸發程式，您就不能針對相同的 statement_type **，為相同**的資料表、資料庫或伺服器指定新的觸發*statement_type*程式。 這種限制也會套用**最後**的觸發程式。  
   
  複寫會為包含在即時更新或佇列式更新訂閱的資料表，自動產生第一個觸發程序。 複寫需要觸發程序是第一個觸發程序。 當您嘗試將含有第一個觸發程序的資料表包括在立即更新或佇列更新訂閱中，複寫會引發錯誤。 如果您嘗試在資料表已加入訂閱後，將觸發程序變成第一個觸發程序，則 **sp_settriggerorder** 會傳回錯誤。 如果您對複寫觸發程式使用 ALTER TRIGGER，或使用**sp_settriggerorder**將複寫觸發程式變更為**最後一個**或**無**觸發程式，則訂閱無法正常運作。  
   
@@ -118,7 +118,7 @@ sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stm
 ```  
   
 ### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. 設定 DDL 觸發程序的引發順序  
- 下列範例將 `ddlDatabaseTriggerLog` 觸發程序指定為 `ALTER_TABLE` 資料庫發生 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 事件之後，所引發的第一個觸發程序。  
+ 下列範例將 `ddlDatabaseTriggerLog` 觸發程序指定為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫發生 `ALTER_TABLE` 事件之後，所引發的第一個觸發程序。  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,7 +127,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400145"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>平行處理資料倉儲中的 tempdb 資料庫
@@ -21,7 +21,7 @@ ms.locfileid: "74400145"
   
 如需系統資料庫的詳細資訊，請參閱[系統資料庫](system-databases.md)。  
   
-## <a name="Basics"></a>主要詞彙和概念  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>主要詞彙和概念  
 *本機臨時表*  
 *本機臨時表*在資料表名稱前面使用 # 前置詞，而且是由本機使用者會話所建立的臨時表。 每個會話只能針對自己的會話存取本機臨時表中的資料。  
   
@@ -51,7 +51,7 @@ SQL Server PDW 會在下列情況中從**tempdb**卸載資料表：
 ## <a name="general-remarks"></a>一般備註  
 除非明確指定，否則 SQL Server PDW 會在臨時表和永久資料表上執行相同的作業。 例如，本機臨時表中的資料就像永久資料表一樣，會分散或複寫到計算節點。  
   
-## <a name="LimitationsRestrictions"></a>限制事項  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>限制事項  
 SQL Server PDW**tempdb**資料庫的限制和限制。 您*不能：*  
   
 -   建立以 # # 開頭的全域臨時表。  
@@ -82,7 +82,7 @@ SQL Server PDW**tempdb**資料庫的限制和限制。 您*不能：*
 ## <a name="permissions"></a>權限  
 任何使用者都可以在 tempdb 中建立暫時物件。 除非收到其他權限，否則使用者只能存取自己的物件。 您可以撤銷 tempdb 的連接權限來阻止使用者使用 tempdb，不過不建議您這樣做，因為有些常式作業需要使用 tempdb。  
   
-## <a name="RelatedTasks"></a>相關工作  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>相關工作  
   
 |工作|描述|  
 |---------|---------------|  

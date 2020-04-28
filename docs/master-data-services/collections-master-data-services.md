@@ -14,10 +14,10 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19a9d925b07b83e5ed26b73484cea955773364c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728599"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
@@ -47,13 +47,13 @@ ms.locfileid: "73728599"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立新集合。|[建立 &#40;Master Data Services 的集合&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
-|將成員加入至現有的集合。|[將成員新增至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|建立新集合。|[建立集合 &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
+|將成員加入至現有的集合。|[將成員加入至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [總覽：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   

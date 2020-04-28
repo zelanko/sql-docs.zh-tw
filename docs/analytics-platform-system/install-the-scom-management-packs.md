@@ -10,21 +10,21 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401076"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安裝適用于 Analytics Platform System 的 SQL Server Operations Manager （SCOM）管理元件
 請遵循下列步驟來下載並安裝適用于 SQL Server PDW 的 System Center Operations Manager （SCOM）管理元件。 需要管理元件，才能從 SCOM 監視 SQL Server PDW。  
   
-## <a name="BeforeBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>開始之前  
 **必要條件**  
   
 System Center Operations Manager 必須已安裝且正在執行。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、System Center Operations Manager 2012 或 System Center Operations Manager 2012 Service Pack 1。  
   
-## <a name="Step1"></a>步驟1：下載管理元件  
+## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>步驟1：下載管理元件  
 針對 [AP PDW] 工作負載，請下載[Microsoft Analytics Platform System 的 System Center 管理元件](https://go.microsoft.com/fwlink/?LinkId=396857)。  
   
 針對裝置管理，請下載[SQL Server 的設備基礎管理元件](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10))。  
@@ -33,7 +33,7 @@ System Center Operations Manager 必須已安裝且正在執行。 SQL Server PD
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>步驟2：安裝管理元件  
+## <a name="step-2-install-the-management-packs"></a><a name="Step2"></a>步驟2：安裝管理元件  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>安裝 SQL Server 設備基礎管理元件  
   
@@ -47,11 +47,11 @@ System Center Operations Manager 必須已安裝且正在執行。 SQL Server PD
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  按一下 **[安裝]**。  
+4.  按一下 [Install]  。  
   
     ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
     ![按一下 [關閉]](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -67,11 +67,11 @@ System Center Operations Manager 必須已安裝且正在執行。 SQL Server PD
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  按一下 **[安裝]**。  
+4.  按一下 [Install]  。  
   
     ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
     ![安裝完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

@@ -14,10 +14,10 @@ ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0fa359de1daa844fbcce073b0c67efdd5f721b37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728598"
 ---
 # <a name="commit-a-version-master-data-services"></a>認可版本 (Master Data Services)
@@ -31,13 +31,13 @@ ms.locfileid: "73728598"
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   版本的狀態必須是 [已鎖定]****。 如需詳細資訊，請參閱 [鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)(管理員 (Master Data Services))。  
   
 -   所有成員必須都已驗證成功。  
   
--   您必須具有存取 [版本管理] 功能區域的權限。 如需詳細資訊，請參閱[功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必須擁有存取 [版本管理] 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 ### <a name="to-commit-a-version"></a>若要認可版本  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73728598"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [建立 &#40;Master Data Services 的版本旗標&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
 -   [將旗標指派給版本 &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

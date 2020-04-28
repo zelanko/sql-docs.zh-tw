@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882360"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
@@ -74,8 +74,7 @@ ms.locfileid: "73882360"
      **-MaxCmdsInTran**參數會指定當記錄讀取器將命令寫入散發資料庫時，分組到交易中的最大語句數目。 使用此參數可讓「記錄讀取器代理程式」和「散發作業代理程式」在「訂閱者」端套用命令時，於「發行者」端將大型交易 (由許多命令組成) 分割成幾個較小的交易。 指定此參數可以降低「散發者」的競爭，並減少「發行者」和「訂閱者」之間的延遲。 因為原始交易是以較小的單位來套用，所以「訂閱者」在原始交易結束之前可以存取大量的邏輯「發行者」交易資料列，打破了嚴格的交易不可部份完成性。 預設值為 **0**，保留「發行者」的交易界限。 此參數不會套用至 Oracle 發行者。  
   
     > [!WARNING]  
-    >  
-  `MaxCmdsInTran` 的設計不是為了要永遠開啟。 其存在的目的是為了解決有人不小心在單一交易中執行大量 DML 作業的狀況 (使得整筆交易在散發資料庫之前延遲命令的散發、鎖定持有等等)。 如果您習慣性地遇到這個狀況，您應該檢閱您的應用程式，並找出減少交易大小的方法。  
+    >  `MaxCmdsInTran` 的設計不是為了要永遠開啟。 其存在的目的是為了解決有人不小心在單一交易中執行大量 DML 作業的狀況 (使得整筆交易在散發資料庫之前延遲命令的散發、鎖定持有等等)。 如果您習慣性地遇到這個狀況，您應該檢閱您的應用程式，並找出減少交易大小的方法。  
   
 -   針對散發代理程式，請使用 **-SubscriptionStreams**參數。  
   
@@ -93,14 +92,13 @@ ms.locfileid: "73882360"
   
 -   為「記錄讀取器代理程式」減少 **-PollingInterval** 參數的值。  
   
-     
-  **-PollingInterval** 參數指定針對待複寫交易查詢已發行資料庫之交易記錄檔的頻率。 預設值是 5 秒。 如果減小此值，記錄檔輪詢將更頻繁，這會降低從發行集資料庫到散發資料庫之交易傳遞的延遲。 但是，您應在降低延遲需求和因更頻繁地輪詢而導致伺服器負載增加之間進行平衡。  
+     **-PollingInterval** 參數指定針對待複寫交易查詢已發行資料庫之交易記錄檔的頻率。 預設值是 5 秒。 如果減小此值，記錄檔輪詢將更頻繁，這會降低從發行集資料庫到散發資料庫之交易傳遞的延遲。 但是，您應在降低延遲需求和因更頻繁地輪詢而導致伺服器負載增加之間進行平衡。  
   
  可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
 -   [處理複寫代理程式設定檔](../agents/replication-agent-profiles.md)  
   
--   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
 -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   

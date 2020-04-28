@@ -21,10 +21,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844474"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
@@ -35,7 +35,7 @@ ms.locfileid: "73844474"
   
 |統計資料|類型|描述|  
 |---------------|----------|-----------------|  
-|**database_name**|**sysname**|資料庫名稱。|  
+|**database_name**|**sysname**|資料庫的名稱。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time**一定會比相同資料列中的對應**start_time**剛好晚5分鐘。|  
 |**success_count**|**int**|成功連接的數目。|  

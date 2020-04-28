@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165916"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.databases dm_user_db_resource_governance （Transact-sql）
@@ -43,11 +43,11 @@ ms.locfileid: "74165916"
 |**slo_name**|NVARCHAR|服務等級目標，包括硬體世代。|
 |**dtu_limit**|int|資料庫的 DTU 限制（vCore 為 Null）。|
 |**cpu_limit**|int|資料庫的 vCore 限制（DTU 資料庫為 Null）。|
-|**min_cpu**|tinyint|使用者工作負載資源集區的 MIN_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**max_cpu**|tinyint|使用者工作負載資源集區的 MAX_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**cap_cpu**|tinyint|使用者工作負載資源集區的 CAP_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
-|**min_cores**|smallint|僅供內部使用。|
-|**max_dop**|smallint|使用者工作負載群組的 MAX_DOP 值。 請參閱[建立工作負載群組](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
+|**min_cpu**|TINYINT|使用者工作負載資源集區的 MIN_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**max_cpu**|TINYINT|使用者工作負載資源集區的 MAX_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**cap_cpu**|TINYINT|使用者工作負載資源集區的 CAP_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**min_cores**|SMALLINT|僅供內部使用。|
+|**max_dop**|SMALLINT|使用者工作負載群組的 MAX_DOP 值。 請參閱[建立工作負載群組](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
 |**min_memory**|int|使用者工作負載資源集區的 MIN_MEMORY_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
 |**max_memory**|int|使用者工作負載資源集區的 MAX_MEMORY_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
 |**max_sessions**|int|使用者工作負載群組中允許的會話數目上限。|

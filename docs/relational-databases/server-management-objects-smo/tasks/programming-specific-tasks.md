@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095204"
 ---
 # <a name="programming-specific-tasks"></a>程式設計特有的工作
@@ -37,7 +37,7 @@ ms.locfileid: "74095204"
 |[在 SMO 中設定 SQL Server](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|描述如何在 SMO 中檢視與修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的組態設定。|  
 |[使用資料表和索引資料分割](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|描述如何在 SMO 中使用索引和資料表資料分割。|  
 |[使用檔案群組和檔案來儲存資料](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|描述如何在 SMO 中使用檔案群組。|  
-|[使用 WMI 提供者管理服務和網路設定](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|描述使用代表組態管理的 WMI 提供者之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件，追蹤 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 執行個體的數個方式。|  
+|[使用 WMI 提供者管理服務和網路設定](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|描述使用代表組態管理的 WMI 提供者之 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件，追蹤 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的數個方式。|  
 |[使用資料庫物件](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|描述如何建立代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之物件的執行個體類別。|  
 |[管理使用者、角色和登入](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|描述如何在 SMO 中使用安全性角色。|  
 |[授與、撤銷和拒絕權限](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|描述如何使用 SMO 授與、撤銷與拒絕使用者或角色成員的權限。|  

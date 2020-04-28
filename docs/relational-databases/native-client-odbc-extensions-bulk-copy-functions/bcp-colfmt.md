@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783147"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -61,7 +61,7 @@ RETCODE bcp_colfmt (
   
  若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。  
   
- 當 EUserDataType 為 SQLDECIMAL 或 SQLNUMERIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，將大量複製** 到檔案中：  
+ 當 EUserDataType 為 SQLDECIMAL 或 SQLNUMERIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，將大量複製*eUserDataType*到檔案中：  
   
 -   如果來源資料行不是**decimal**或**numeric**，就會使用預設的有效位數和小數位數。  
   
@@ -89,8 +89,7 @@ RETCODE bcp_colfmt (
   
  如果 *cbUserData* 為 0 或正值，則系統會使用 *cbUserData* 當作最大的資料長度。 不過，如果除了正的 *cbUserData* 之外，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方式決定資料長度。  
   
- 
-  *cbUserData* 值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則 *cbUserData* 正參數值表示字元數乘以每個字元的大小 (以位元組為單位)。  
+ *cbUserData* 值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則 *cbUserData* 正參數值表示字元數乘以每個字元的大小 (以位元組為單位)。  
   
  *pUserDataTerm*  
  這是要用於此資料行的結束字元順序。 此參數主要用於字元資料類型，因為其他所有類型都屬固定長度；如果是二進位資料，則需要一個長度指標，才能正確記錄出現的位元組數目。  

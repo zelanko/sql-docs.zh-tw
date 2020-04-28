@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882231"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
@@ -28,7 +28,7 @@ ms.locfileid: "73882231"
 
   交易式與合併式複寫可以讓您驗證訂閱者端的資料是否與發行者端的資料相符。 可以驗證特定的訂閱或發行的所有訂閱。 指定下列其中一種驗證類型，「散發代理程式」或「合併代理程式」將在下次執行時驗證資料：  
   
--   **只行數**。 這將會驗證「訂閱者」上的資料表與「發行者」上的資料表是否具有相同數量的資料列，但無法驗證資料列內容是否相符。 資料列計數驗證提供一種輕量型驗證方法，可讓您發現資料中的問題。    
+-   **僅限資料列計數**。 這將會驗證「訂閱者」上的資料表與「發行者」上的資料表是否具有相同數量的資料列，但無法驗證資料列內容是否相符。 資料列計數驗證提供一種輕量型驗證方法，可讓您發現資料中的問題。    
 -   **資料列計數與二進位總和檢查碼。** 除了統計「發行者」與「訂閱者」上的資料列數量之外，也會使用總和檢查碼演算法計算所有資料的總和檢查碼。 如果資料列計數失敗，就不會執行總和檢查碼。  
   
  除驗證「訂閱者」與「發行者」上的資料是否相符外，合併代理程式還可以驗證是否為每個「訂閱者」正確分割資料。 如需詳細資訊，請參閱[驗證合併訂閱者的資料分割資訊](validate-partition-information-for-a-merge-subscriber.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "73882231"
 -   由於總和檢查碼與二進位總和檢查碼在驗證大型資料集時，可能需要使用大量的處理器資源，因此應該將驗證排在伺服器複寫活動最少的時間來進行。    
 -   複寫僅驗證資料表；它無法驗證只有結構描述的發行項 (例如預存程序) 在「發行者」與「訂閱者」上是否相同。    
 -   二進位總和檢查碼可以與任何已發行資料表一起使用。 總和檢查碼無法驗證具有資料行篩選或其中資料行位移不同 (由於 ALTER TABLE 陳述式卸除或新增資料行) 的邏輯資料表結構的資料表。    
--   複製驗證使用`checksum`和**binary_checksum**函數。 如需其行為的資訊，請參閱[總和檢查碼 &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) 和 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)。  
+-   複寫驗證會使用`checksum`和**binary_checksum**函數。 如需其行為的資訊，請參閱[總和檢查碼 &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) 和 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)。  
   
 -   如果「訂閱者」與「發行者」端的資料類型不同，則使用二進位總和檢查碼或總和檢查碼的驗證可能會誤報失敗。 如果執行下列任何一項作業，就可能發生上述情況：    
     -   將結構描述選項明確地設定為對應舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料類型。    
@@ -79,7 +79,7 @@ ms.locfileid: "73882231"
   
  若要處理驗證失敗，請考慮下列各項：  
   
--   設定名稱為 **複寫: 訂閱者資料驗證失敗** 的複寫警示，以便通知您失敗的情況。 有關詳細資訊,請參閱 [配置預定義的複製警報&#40;SQL 伺服器管理工作室&#41(管理/配置預定義複製-警報-sql-伺服器-管理-studio.md)。  
+-   設定名稱為 **複寫: 訂閱者資料驗證失敗** 的複寫警示，以便通知您失敗的情況。 如需詳細資訊，請參閱 [設定預先定義的複寫警示 &#40;SQL Server Management Studio& # 41 （[管理]/[預先定義-複寫-警示-SQL-Server Management-Studio md）]。  
   
 -   您的應用程式是否有驗證失敗的問題？ 如果有驗證失敗的問題，請手動更新資料以便對其進行同步處理，或重新初始化訂閱：  
   
@@ -112,7 +112,7 @@ ms.locfileid: "73882231"
 
 #### <a name="all-articles"></a>所有發行項
   
-1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)。 **為\@rowcount_only**指定**\@的設定**與以下值之一:    
+1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)。 指定** \@發行**集，以及** \@rowcount_only**的下列其中一個值：    
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "73882231"
   
 #### <a name="single-article"></a>單一發行項 
   
-1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定**\@在****\@****\@%** 的文章名稱與 rowcount_only的以下值之一:    
+1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@發行**集、發行** \@項的名稱，以及** ** \@rowcount_only**的下列其中一個值：    
     -   **1** - 只限列數檢查 (預設值)    
-    -   **2** - 行計數和二進制校驗和。  
+    -   **2** -資料列計數和二進位總和檢查碼。  
   
     > [!NOTE]  
     >  若要成功地執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)，您必須有已發行基底資料表之所有資料行的 SELECT 權限。  
@@ -137,11 +137,11 @@ ms.locfileid: "73882231"
 #### <a name="single-subscriber"></a>單一訂閱者
   
 1.  在發行集資料庫的發行者端，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql) 來開啟明確交易。    
-2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)。 指定**\@出版物的發佈**、**\@訂閱者**的訂閱者名稱以及**\@destination_db**訂閱資料庫的名稱。    
+2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)。 指定** \@發行**集、 ** \@訂閱**者的訂閱者名稱，以及** \@destination_db**的訂閱資料庫名稱。    
 3.  (選擇性) 針對每個要驗證的訂閱重複步驟 2。    
-4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定**\@在****\@****\@%** 的文章名稱與 rowcount_only的以下值之一:    
+4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)。 指定** \@發行**集、發行** \@項的名稱，以及** ** \@rowcount_only**的下列其中一個值：    
     -   **1** - 只限列數檢查 (預設值)    
-    -   **2** - 行計數和二進制校驗和。  
+    -   **2** -資料列計數和二進位總和檢查碼。  
   
     > [!NOTE]  
     >  若要成功地執行 [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)，您必須有已發行基底資料表之所有資料行的 SELECT 權限。  
@@ -151,7 +151,7 @@ ms.locfileid: "73882231"
 7.  (選擇性) 啟動「散發代理程式」(如果尚未執行)。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 以及 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)。    
 8.  檢查代理程式輸出，以取得驗證的結果。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  
 
-##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>所有推送到事務發佈訂閱 
+##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>交易式發行集的所有發送訂閱 
 
 ### <a name="using-replication-monitor"></a>使用複寫監視器
   
@@ -187,7 +187,7 @@ ms.locfileid: "73882231"
 
 ### <a name="using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL)
 
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)。 指定**\@訂閱****\@者**訂閱者的名稱**\@、subscriber_db**訂閱資料庫的名稱以及**\@等級**以下值之一:   
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)。 指定** \@發行**集、 ** \@訂閱**者的訂閱者名稱、 ** \@subscriber_db**的訂閱資料庫名稱，以及** \@level**的下列其中一個值：   
     -   **1** - 只驗證列數。    
     -   **3** - 驗證列數二進位總和檢查碼。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "73882231"
 3.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證所有訂閱]**。    
 4.  在 **[驗證所有訂閱]** 對話方塊中，指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)。    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
-6.  在複製監視器或「**檢視同步狀態」** 對話框中查看驗證結果。 針對每個訂閱：    
+6.  在「複寫監視器」或 [ **View 同步**處理的狀態] 對話方塊中，查看驗證結果。 針對每個訂閱：    
     1.  展開發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]**。   
     2.  如果代理程式未執行，請按一下 **[檢視同步處理的狀態]** 對話方塊中的 **[啟動]** 。 對話方塊就會顯示關於驗證的參考用訊息。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "73882231"
 
 ### <a name="using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL)
 
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)。 指定**\@指定**與以下值的等級**\@:**    
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)。 **為\@[層級**] 指定** \@[發行**集] 和下列其中一個值：    
     -   **1** - 只驗證列數。    
     -   **3** - 驗證列數二進位總和檢查碼。  
   
@@ -259,7 +259,7 @@ ms.locfileid: "73882231"
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。  
   
   
-## <a name="validate-data-using-merge-agent-parameters"></a>使用合併代理參數驗證資料
+## <a name="validate-data-using-merge-agent-parameters"></a>使用合併代理程式參數來驗證資料
   
 1.  以下列其中一種方法，從命令提示字元啟動「合併代理程式」(在「訂閱者」端的為提取訂閱，在「散發者」端的則為發送訂閱)。    
     -   針對 **-Validate** 參數，指定值 **1** (列數) 或 **3** (列數和二進位總和檢查碼)。   
@@ -303,7 +303,7 @@ ms.locfileid: "73882231"
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> 方法。 傳遞正在進行驗證之「訂閱者」和訂閱資料庫的名稱以及所要的 <xref:Microsoft.SqlServer.Replication.ValidationOption>。    
 5.  為訂閱執行「合併代理程式」以啟動驗證，或等候下一個排程的代理程式執行。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 以及 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)。 驗證作業的結果會寫入至代理程式記錄，您可使用「複寫監視器」來加以檢視。 如需詳細資訊，請參閱 [Monitoring Replication](monitoring-replication.md)。  
   
-###  <a name="example-rmo"></a><a name="RMOExample"></a>範例 (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a>範例（RMO）  
  此範例會標示交易式發行集的所有訂閱，以進行列數驗證。  
   
  [!code-csharp[HowTo#rmo_ValidateTranPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_validatetranpub)]  

@@ -13,10 +13,10 @@ ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: aaedf62b9702d5cec44116cb906acdf9aa415c39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729805"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>將成員加入至集合 (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "73729805"
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 -   針對要加入成員的集合模型物件，您至少必須擁有 **[更新]** 權限。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "73729805"
 11. 或者，按一下 **[加權]** 資料行中的值來設定加權值。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)  
+ [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

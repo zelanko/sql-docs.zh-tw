@@ -10,20 +10,20 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400947"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>使用管理主控台分析平臺系統來監視設備
 管理主控台是一個 SQL Server PDW web 應用程式，可呈現設備狀態、健康情況和效能資訊。 使用者透過 Internet Explorer 連接到管理主控台。  
   
-## <a name="About"></a>關於管理主控台  
+## <a name="about-the-admin-console"></a><a name="About"></a>關於管理主控台  
 ![應用裝置主控台首頁](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **台**  
-首頁  
+Home  
 提供設備狀態的快速摘要。  
   
 健康情況  
@@ -35,7 +35,7 @@ ms.locfileid: "74400947"
 顯示效能監視器圖形。  
   
 **平行處理資料倉儲**  
-首頁  
+Home  
 提供 PDW 狀態的快速摘要。  
   
 工作階段  
@@ -67,7 +67,7 @@ ms.locfileid: "74400947"
 > [!NOTE]  
 > 管理主控台具有1024x768 的螢幕解析度。 系統管理主控台顯示的最佳螢幕解析度為 1280 X 1024 或更高。  
   
-## <a name="Connect"></a>連接到管理主控台  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>連接到管理主控台  
 若要連接到管理主控台，需要：  
   
 -   至少要有 Internet Explorer 第10版。  
@@ -78,7 +78,7 @@ ms.locfileid: "74400947"
   
 若要連接到管理主控台，請使用 Internet Explorer 和 HTTPs 流覽至控制節點叢集的 IP 位址。 例如，如果控制節點叢集的 IP 位址是`10.192.63.102`，請在您的`https://10.192.63.102`瀏覽器網址列中輸入。 第一個畫面會要求您的**登**入和**密碼**。 提供 SQL Server Authentication 登入和密碼，或是 Windows 驗證登入和 Windows 密碼。 如果使用 Windows 驗證登入，管理主控台將會使用模擬。  
   
-## <a name="RelatedTasks"></a>管理主控台工作  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>管理主控台工作  
 管理主控台提供監視下列功能的能力：  
   
 |||  

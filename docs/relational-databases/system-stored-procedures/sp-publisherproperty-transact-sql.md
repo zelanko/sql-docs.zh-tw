@@ -16,10 +16,10 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962383"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
@@ -43,7 +43,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'`這是要設定之屬性的名稱。 *propertyname*是**sysname**，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**xactsetbatching**|如果發行者端的交易分組成在交易上一致的各個組 (稱為 Xactsets)，以便進行後續處理。 [**已啟用**] 值表示可以建立 Xactsets，這是預設值。 [**已停用**] 值表示現有的 Xactsets 是由不會建立任何新 Xactsets 所處理。|  
 |**xactsetjob**|如果啟用建立 Xactsets 的 Xactsets 作業， 「**已啟用**」值表示 Xactset 作業會定期執行，以在「發行者」端建立 Xactsets。 [**已停用**] 值表示只有記錄讀取器代理程式在輪詢發行者進行變更時，才會建立 Xactsets。|  

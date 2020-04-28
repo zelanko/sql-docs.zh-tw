@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844407"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials （SQL 資料倉儲）
@@ -62,7 +62,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="general-remarks"></a>一般備註  
  這個預存程式[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]會將網路認證新增至的 NetworkService 帳戶。 NetworkService 帳戶會在控制節點和計算[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]節點上執行 SMP 的每個實例。 例如，當備份作業執行時，控制節點和每個計算節點都會使用 NetworkService 帳號憑證來取得目標伺服器的讀取和寫入權限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 新增用於執行資料庫備份的認證  
  下列範例會將網域使用者 seattle\david 的使用者名稱和密碼認證，與 IP 位址為10.172.63.255 的目標伺服器產生關聯。 使用者 seattle\david 具有目標伺服器的讀取/寫入權限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]會儲存這些認證，並根據備份和還原作業的需要，使用它們在目標伺服器上進行讀取和寫入。  

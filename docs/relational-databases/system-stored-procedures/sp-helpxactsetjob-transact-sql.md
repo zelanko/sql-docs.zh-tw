@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056789"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**Varchar （22）**|變更的時間|  
 |**nextdate**|**Varchar （22）**|下次作業執行的日期。|  
 |**broken**|**varchar(1)**|指出作業是否中斷的旗標。|  
-|**期間**|**Varchar （200）**|作業的間隔時間。|  
+|**interval**|**Varchar （200）**|作業的間隔時間。|  
 |**故障**|**int**|作業的失敗次數。|  
 |**xactsetjobwhat**|**Varchar （200）**|作業所執行的程序名稱。|  
 |**xactsetjob**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -已啟用作業。<br /><br /> **0** -作業已停用。|  

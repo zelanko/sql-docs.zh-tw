@@ -11,10 +11,10 @@ ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729015"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成員 [Master Data Services]
@@ -26,9 +26,9 @@ ms.locfileid: "73729015"
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序。  
   
--   您必須具有存取 [版本管理] 功能區域的權限。  
+-   您必須擁有存取 [版本管理] 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="to-purge-soft-deleted-members"></a>清除虛刪除的成員  
   

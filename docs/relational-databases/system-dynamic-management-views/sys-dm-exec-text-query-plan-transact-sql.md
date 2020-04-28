@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983136"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
@@ -81,7 +81,7 @@ sys.dm_exec_text_query_plan
   
 *statement_start_offset*為**int**。  
   
--1 值代表批次的結尾。 預設值為-1。  
+-1 值代表批次的結尾。 預設值為 -1。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -90,7 +90,7 @@ sys.dm_exec_text_query_plan
 |**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
 |**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。|  
 |**number**|**smallint**|編號預存程序整數。 例如，**orders** 應用程式的一組程序可以命名為 **orderproc;1**、**orderproc;2**，依此類推。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。|  
-|**加密**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
+|**encrypted**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
 |**query_plan**|**nvarchar(max)**|包含以*plan_handle*指定之查詢執行計畫的編譯時間顯示計畫標記法。 顯示計畫是文字格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
   
 ## <a name="remarks"></a>備註  
@@ -124,8 +124,7 @@ EXEC sp_who;
 GO  
 ```  
   
- 
-  `sp_who` 傳回的結果集指出 SPID 是 `54`。 您可以搭配 `sys.dm_exec_requests` 動態管理檢視來使用 SPID，以利用下列查詢來擷取計畫控制代碼：  
+ `sp_who` 傳回的結果集指出 SPID 是 `54`。 您可以搭配 `sys.dm_exec_requests` 動態管理檢視來使用 SPID，以利用下列查詢來擷取計畫控制代碼：  
   
 ```sql  
 USE master;  
@@ -135,8 +134,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- 
-  **sys.dm_exec_requests** 傳回的資料表指出執行緩慢的查詢或批次的計畫控制代碼是 `0x06000100A27E7C1FA821B10600`。 下列範例會傳回指定計畫控制代碼的查詢計畫，並使用預設值 0 和 -1 傳回查詢或批次中的所有陳述式。  
+ **sys.dm_exec_requests** 傳回的資料表指出執行緩慢的查詢或批次的計畫控制代碼是 `0x06000100A27E7C1FA821B10600`。 下列範例會傳回指定計畫控制代碼的查詢計畫，並使用預設值 0 和 -1 傳回查詢或批次中的所有陳述式。  
   
 ```sql  
 USE master;  
@@ -170,8 +168,7 @@ GO
 ```  
   
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 擷取按平均 CPU 時間排列之前五項查詢的相關資訊  
- 下列範例會傳回前五項查詢的查詢計畫和平均 CPU 時間。 
-  **sys.dm_exec_text_query_plan** 函數會指定預設值 0 和 -1，傳回查詢計畫中批次的所有陳述式。  
+ 下列範例會傳回前五項查詢的查詢計畫和平均 CPU 時間。 **sys.dm_exec_text_query_plan** 函數會指定預設值 0 和 -1，傳回查詢計畫中批次的所有陳述式。  
   
 ```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  

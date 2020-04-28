@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400936"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>平行處理資料倉儲元件-Analytics Platform System
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![平行處理資料倉儲軟體](media/parallel-data-warehouse-software.png "平行處理資料倉儲軟體")  
   
-## <a name="sec1"></a>設備軟體-查詢處理和使用者資料儲存  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>設備軟體-查詢處理和使用者資料儲存  
   
 ### <a name="control-node"></a>控制節點  
 MPP 引擎  
-MPP 引擎是大規模平行處理（MPP）系統的大腦。 它具有下列功能：  
+MPP 引擎是大規模平行處理（MPP）系統的大腦。 它會執行下列工作：  
   
 -   建立平行查詢計劃，並協調計算節點上的平行查詢執行。  
   
@@ -55,7 +55,7 @@ MPP 引擎是大規模平行處理（MPP）系統的大腦。 它具有下列功
 -   追蹤硬體和軟體狀態。  
   
 ### <a name="data-movement-service-dms"></a>資料移動服務（DMS）  
-資料移動服務（DMS）是 PDW 「秘密 sauce」的一部分。 它具有下列功能：  
+資料移動服務（DMS）是 PDW 「秘密 sauce」的一部分。 它會執行下列工作：  
   
 -   將資料傳輸到 SQL Server PDW 的節點，以及從其傳出。  
   
@@ -66,7 +66,7 @@ MPP 引擎是大規模平行處理（MPP）系統的大腦。 它具有下列功
 ### <a name="admin-console"></a>管理主控台  
 管理主控台是一種 web 應用程式，可提供設備狀態、健康情況和效能資訊。  
   
-### <a name="configuration-manager"></a>組態管理員  
+### <a name="configuration-manager"></a>Configuration Manager  
 Configuration Manager （dwconfig .exe）是設備系統管理員用來設定分析平臺系統的工具。  
   
 ### <a name="control-node-databases"></a>控制節點資料庫  
@@ -127,7 +127,7 @@ Windows 儲存空間會將使用者資料管理為一小組計算節點的儲存
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-v Server 提供簡單又可靠的虛擬化解決方案。 分析平臺系統會使用虛擬化來平衡 CPU 資源，並為 PDW 節點和設備網狀架構元件提供高可用性。  
   
-## <a name="sec2"></a>非關聯式資料
+## <a name="non-relational-data"></a><a name="sec2"></a>非關聯式資料
 PolyBase 技術將 SQL Server PDW 資料與外部 Hadoop 資料整合在一起。 Hadoop 資料可以儲存在下列任何 Hadoop 資料來源上：  
   
 -   Hortonworks Hadoop 散發  
@@ -243,7 +243,7 @@ Analytics Platform System 有數種方式可監視設備活動
   
 如需詳細資訊，請參閱[使用管理主控台監視設備 &#40;分析平臺系統&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
-### <a name="system-views"></a>系統檢視  
+### <a name="system-views"></a>系統檢視表  
 管理主控台是以系統檢視查詢為基礎。 您可以個別查詢系統檢視，以取得所需的特定資訊片段。  
 
 如需詳細資訊，請參閱[使用系統檢視來監視設備 &#40;分析平臺系統&#41;](monitor-the-appliance-by-using-system-views.md) 

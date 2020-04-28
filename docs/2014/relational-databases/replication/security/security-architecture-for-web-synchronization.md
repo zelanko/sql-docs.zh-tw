@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff0c6336bcbd3f9ad8c09f5a25f7317c0d2c4c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73912814"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步處理的安全性架構
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟用 Web 同步處理安全性設定的精細控制。 本主題提供一份完整清單，其中列有可併入 Web 同步處理組態中的所有元件，並提供有關元件之間所建立的連接資訊。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可讓您精確控制 Web 同步處理安全性的設定。 本主題提供一份完整清單，其中列有可併入 Web 同步處理組態中的所有元件，並提供有關元件之間所建立的連接資訊。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  下圖顯示所有可能的連接，但特定拓撲中可能不需要某些連接。 例如，只有在利用 FTP 傳遞快照集時，才需要連接 FTP 伺服器。  
   
- ![Web 同步處理中的元件和連結](../media/websyncarchitecture.gif "Web 同步處理中的元件和連結")  
+ ![Web 同步處理中的元件和連線](../media/websyncarchitecture.gif "Web 同步處理中的元件和連線")  
   
  下表描述圖解中顯示的元件和連接。  
   
@@ -34,8 +34,7 @@ ms.locfileid: "73912814"
 |帳戶類型|指定帳戶的位置|  
 |---------------------|------------------------------------|  
 |Windows 使用者|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)的** \@job_login**和** \@job_password**參數。<br /><br /> RMO (Replication Management Objects)： <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>屬性。|  
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 的 Windows 服務帳戶|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 的 Windows 服務帳戶|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員|  
 |獨立應用程式|合併代理程式在執行應用程式之 Windows 使用者的內容下執行。|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. 連接訂閱者  
@@ -130,14 +129,14 @@ ms.locfileid: "73912814"
   
 -   Xmlsub  
   
- 此帳戶也應該是 IIS_WPG 群組的一部分。 如需詳細資訊，請參閱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]針對 Web 同步處理設定 IIS[中的＜設定 ](../configure-iis-for-web-synchronization.md) Replication Listener 的權限＞一節。  
+ 此帳戶也應該是 IIS_WPG 群組的一部分。 如需詳細資訊，請參閱[針對 Web 同步處理設定 IIS](../configure-iis-for-web-synchronization.md)中的＜設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener 的權限＞一節。  
   
 |帳戶類型|指定帳戶的位置|  
 |---------------------|------------------------------------|  
 |任何擁有所需權限的 Windows 使用者。|Internet Information Services (IIS) 管理員。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 Web 同步處理](../configure-web-synchronization.md)   
+ [Configure Web Synchronization](../configure-web-synchronization.md)   
  [Replication Merge Agent](../agents/replication-merge-agent.md)  
   
   

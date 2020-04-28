@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165908"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -58,7 +58,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  指定*stmt*值的規則與 sp_cursoropen 相同，唯一的例外是*stmt*字串資料類型必須是**Ntext**。  
   
- *選項*  
+ *options*  
  傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列**int**輸入值。  
   
 |值|描述|  
@@ -111,7 +111,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |值|描述|  
 |-----------|-----------------|  
-|0|Success|  
+|0|成功|  
 |0x0001|失敗|  
 |1FF6|無法傳回中繼資料。<br /><br /> 注意：這是因為語句不會產生結果集。例如，它是 INSERT 或 DDL 語句。|  
   

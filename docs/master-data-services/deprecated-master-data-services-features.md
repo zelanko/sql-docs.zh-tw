@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729342"
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
@@ -43,13 +43,13 @@ ms.locfileid: "73729342"
   
 -   [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)  
+-   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
 -   [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
 ## <a name="attribute-entity-transaction-log-type"></a>屬性實體交易記錄類型  
 已淘汰 [屬性] 實體交易記錄類型，請移轉至 [成員] 實體交易記錄類型。 如需實體交易記錄類型的相關資訊，請參閱下列主題：
-* [變更實體事務歷史記錄類型（Master Data Services）](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+* [變更實體交易記錄類型 (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [成員修訂歷程記錄](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部資源  

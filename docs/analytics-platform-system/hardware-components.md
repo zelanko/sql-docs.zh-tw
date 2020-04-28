@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401138"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>分析平臺系統的硬體元件
@@ -21,13 +21,13 @@ ms.locfileid: "74401138"
 分析平臺系統（AP）使用可擴充的元件，因此您可以根據業務需求購買正確的處理和儲存體數量。 當您訂購 AP 時，您將需要這些核心硬體元件的組合。 特定硬體廠商可能會使用不同的命名慣例或具有其他元件。  
  
   
-## <a name="rackandnetwork"></a>機架和網路 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>機架和網路 
  
 AP 元件全都儲存在一或多個符合您資料中心的機架中。 每個機架都隨附配電裝置（Pdu）、兩個不強大的交換器，以及兩個乙太網路交換器。  
   
 ![機架和網路](media/rack-and-network.png "AP 機架和網路")  
   
-## <a name="datascaleunit"></a>資料縮放單位
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>資料縮放單位
  
 資料縮放單位包含資料主機和直接連接儲存體（DAS），可用於處理和儲存使用者資料。 若要新增容量，您可以根據硬體廠商支援的設定來新增資料縮放單位。 隨著資料縮放單位數目的增加，您必須視需要新增額外的機架 & 網路元件，以提供更多的電源、網路和機架的基礎結構。  
   
@@ -65,7 +65,7 @@ AP 元件全都儲存在一或多個符合您資料中心的機架中。 每個�
   
 **針對磁片大小**，直接連接的存放裝置可以有1、2或 3 tb 的磁片磁碟機。 所有資料縮放單位都必須有相同大小的磁片。  
   
-## <a name="basescaleunit"></a>基本縮放單位 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>基本縮放單位 
  
 基礎縮放單位包含設備所需的大腦電力主機、資料主機和直接連接儲存體的最小數目。 其中包含下列元件。 
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65512a212290db4cc9a470402e2ae75175c23cb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882311"
 ---
 # <a name="define-an-article"></a>定義發行項
@@ -36,7 +36,7 @@ ms.locfileid: "73882311"
   
      [安全性](#Security)  
   
--   **若要使用下列專案定義發行項：**  
+-   **若要定義發行項，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -44,25 +44,25 @@ ms.locfileid: "73882311"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   發行項名稱不能包含下列任何字元：% , * , [ , ] , | , : , " , ? 、'、\、/、 \< >。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於物件名稱的發行項名稱。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - **發行集>]\<** 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](create-a-publication-from-an-oracle-database.md)。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
-1.  連接到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。  
+1.  連線到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的發行者，然後展開伺服器節點。  
   
 2.  展開 **[複寫]** 資料夾，然後以滑鼠右鍵按一下 **[本機發行集]** 資料夾。  
   
-3.  按一下 **[新增發行集]**。  
+3.  按一下 **[新增發行集]** 。  
   
 4.  遵循「新增發行集精靈」中的頁面，執行：  
   
@@ -86,14 +86,11 @@ ms.locfileid: "73882311"
   
     -   指定下列複寫代理程式執行時使用的認證，並建立連接：  
   
-         
-  \- 快照集代理程式 (針對所有發行集)。  
+         \- 快照集代理程式 (針對所有發行集)。  
   
-         
-  \- 記錄讀取器代理程式 (針對所有交易式發行集)。  
+         \- 記錄讀取器代理程式 (針對所有交易式發行集)。  
   
-         
-  \- 佇列讀取器代理程式 (針對允許更新訂閱的交易式發行集)。  
+         \- 佇列讀取器代理程式 (針對允許更新訂閱的交易式發行集)。  
   
          如需相關資訊，請參閱 [Replication Agent Security Model](../security/replication-agent-security-model.md) 以及 [Replication Security Best Practices](../security/replication-security-best-practices.md)。  
   
@@ -101,7 +98,7 @@ ms.locfileid: "73882311"
   
     -   指定發行集的名稱。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  在建立發行集之後，可以使用複寫預存程序來以程式設計的方式建立發行項。 要使用哪些預存程序來建立發行項，將取決於定義此發行項的發行集類型而定。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集定義發行項  
@@ -123,13 +120,13 @@ ms.locfileid: "73882311"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>為合併式發行集定義發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 針對** \@發行**集指定發行集的名稱、發行項的** \@** 發行項名稱，以及要為** \@source_object**發佈的物件。 若要以水準方式篩選資料表資料列，請指定** \@subset_filterclause**的值。 如需相關資訊，請參閱 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。 如果發行項不是資料表發行項，請指定** \@類型**的發行項類型。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](specify-article-types-replication-transact-sql-programming.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 針對** \@發行**集指定發行集的名稱、發行項的** \@** 發行項名稱，以及要為** \@source_object**發佈的物件。 若要以水準方式篩選資料表資料列，請指定** \@subset_filterclause**的值。 如需相關資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [定義及修改靜態資料列篩選](define-and-modify-a-static-row-filter.md)。 如果發行項不是資料表發行項，請指定** \@類型**的發行項類型。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) ，以定義兩個發行項之間的聯結篩選。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 3.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ，以篩選資料表資料行。 如需詳細資訊，請參閱 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例是根據交易式發行集的 `Product` 資料表來定義發行項，其中會以水平和垂直方式篩選發行項。  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
@@ -138,10 +135,10 @@ ms.locfileid: "73882311"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式定義發行項。 用於定義發行項的 RMO 類別，將取決於定義發行項的發行集類型而定。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  下列範例會將具有資料列篩選和資料行篩選的發行項加入交易式發行集中。  
   
  [!code-csharp[HowTo#rmo_CreateTranArticles](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranarticles)]  
@@ -157,7 +154,7 @@ ms.locfileid: "73882311"
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](create-a-publication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [在現有發行集中加入和卸載發行項](add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [在現有發行集中加入和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [篩選發行的資料](filter-published-data.md)   
  [發行資料和資料庫物件](publish-data-and-database-objects.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  

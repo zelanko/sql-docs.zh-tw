@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729024"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在受控實例上裝載 MDS 資料庫
@@ -26,7 +26,7 @@ ms.locfileid: "73729024"
 
   本文涵蓋如何在受控實例上設定 Master Data Services （MDS）資料庫。
   
-## <a name="preparation"></a>準備工作
+## <a name="preparation"></a>準備
 
 若要準備，您必須建立並設定 Azure SQL Database 受控實例，並設定您的 web 應用程式電腦。
 
@@ -48,7 +48,7 @@ ms.locfileid: "73729024"
      - Web 管理工具
      - IIS 管理主控台
      - World Wide Web 服務
-     - 影片應用程式開發
+     - 應用程式開發
      - .NET 擴充性 3.5
      - .NET 擴充性 4.5
      - ASP.NET 3.5
@@ -71,7 +71,7 @@ ms.locfileid: "73729024"
        > [!NOTE]
        > 不要安裝 WebDAV 發行
 
-   - 功能：
+   - 特色：
      - .NET Framework 3.5 (包括 .NET 2.0 和 3.0)
      - .NET Framework 4.5 進階服務
      - ASP.NET 4.5
@@ -94,7 +94,7 @@ ms.locfileid: "73729024"
 
 1. 開啟`Setup.exe`，並遵循安裝精靈中的步驟。
 
-2. 在 [功能選擇][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]** 頁面中，選取 [共用功能]**** 底下的 **。
+2. 在 [功能選擇]**** 頁面中，選取 [共用功能]**** 底下的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。
 此動作會安裝：
    - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
    - 組件
@@ -170,7 +170,7 @@ ms.locfileid: "73729024"
 
    ![mds-SQLServer2019-Config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
 
-1. 選取 [套用] ****。 您會看到設定**完成**訊息。 在訊息方塊中選取 **[確定]** ，以啟動 web 應用程式。 網址為`http://server name/web application/`。
+1. 選取 [套用]  。 您會看到設定**完成**訊息。 在訊息方塊中選取 **[確定]** ，以啟動 web 應用程式。 網址為`http://server name/web application/`。
 
 ## <a name="configure-authentication"></a>設定驗證
 
@@ -198,9 +198,9 @@ MDS 也支援 Active Directory 密碼驗證和 SQL Server 驗證，如下列範�
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>升級[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]和 SQL Database 版本
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>升級[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]和 SQL Database 版本
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>更新[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>更新[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 安裝**SQL Server 2019 累計更新**。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]將會自動更新。
 
@@ -233,5 +233,5 @@ MDS 也支援 Active Directory 密碼驗證和 SQL Server 驗證，如下列範�
 
 - [Master Data Services 資料庫](../master-data-services/master-data-services-database.md)
 - [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)
-- [[資料庫設定] 頁面 &#40;Master Data Services 組態管理員&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [Master Data Services &#40;MDS 的新功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [資料庫組態頁面 &#40;Master Data Services 組態管理員&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Master Data Services &#40;MDS&#41; 的新功能](../master-data-services/what-s-new-in-master-data-services-mds.md)

@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401118"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>分析平臺系統（AP）設備的硬體安裝
 本文說明如何針對您的 SQL Server PDW 設備移動、打開封裝和安裝硬體。 本文僅供參考，其目的是協助您瞭解此程式。 您的設備應該先解壓縮、安裝及驗證，然後才會變成您的裝置。 資料中心存取、電力和乙太網路連線等專案都需要客戶參與。  
   
-## <a name="BeforeMoving"></a>從載入 Dock 移動任何元件之前  
+## <a name="before-you-move-any-components-from-the-loading-dock"></a><a name="BeforeMoving"></a>從載入 Dock 移動任何元件之前  
 在您移動、解除封裝或機架任何設備元件之前，請執行下列工作。  
   
-|Task|描述|  
+|工作|描述|  
 |--------|---------------|  
 |確認所有元件都已抵達|使用「物料單」（BOM）來確認所有元件都已抵達，而且位於其在您的資料中心接收 dock 的託盤上。|  
 |確認資料中心符合設備的所有需求|請查看您的 IHV 提供的硬體規格和纜線圖來啟動此工作。 接下來的步驟提供有關機架空間和連線需求的細節。|  
@@ -32,7 +32,7 @@ ms.locfileid: "74401118"
 |保護資料中心機架|視您資料中心位置的需求，使用額外的設備來保護資料中心機架的安全，例如，在地理區域中容易發生地震的地震母線。|  
 |準備傳輸元件的協助|事先決定您必須安全地處理每個元件，而不會造成損害的協助、設備及工具。|  
   
-## <a name="Moving"></a>將機架從載入 Dock 移到資料中心  
+## <a name="move-the-racks-from-the-loading-dock-into-the-data-center"></a><a name="Moving"></a>將機架從載入 Dock 移到資料中心  
 每個託盤都包含一個設備機架的所有元件，包括節點、纜線、電源線等等。  
   
 使用下列檢查清單，將每個設備機架從載入 dock 的託盤移至其在資料中心的機架位置。 先移動控制機架，然後移動其他設備資料機架。  
@@ -42,7 +42,7 @@ ms.locfileid: "74401118"
 >   
 > 絕對不要嘗試增益或行動裝置節點或其他大量元件，而不需要協助或適當的設備。 請洽詢您的 IHV 以取得每個元件的權數資訊，讓您可以事先判斷需要哪些協助、設備和工具，才能安全地處理每個元件，而不會造成損害。  
   
-|Task|描述|  
+|工作|描述|  
 |--------|---------------|  
 |確認託盤為層級|開始移動或解除封裝貨之前，請確定它是在層級上。|  
 |從託盤 Unbolt 節點|從託盤頂端開始，從託盤中 unbolt 最上層節點。|  
@@ -51,10 +51,10 @@ ms.locfileid: "74401118"
 |保護資料中心機架中的節點|保護資料中心機架中的節點。|  
 |針對下一個節點或元件重複這些步驟|重複這些步驟，將下一個節點或其他設備元件移至資料中心。|  
   
-## <a name="AfterMoving"></a>安裝其他元件  
+## <a name="install-additional-components"></a><a name="AfterMoving"></a>安裝其他元件  
 請使用下列檢查清單來安裝其他元件。  
   
-|Task|描述||  
+|工作|描述||  
 |--------|---------------|-|  
 |打開包裝和機架網路交換器和 Pdu|使用機架圖表將網路交換器和 Pdu 放在機架中的適當位置。||  
 |根據纜線標籤來連接未通過和乙太網路纜線|請參閱纜線圖。 每個纜線的每一端都有一個標籤，以指定需要連線的位置。||  

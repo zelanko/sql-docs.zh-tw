@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399802"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>分析平臺系統平行處理資料倉儲的系統檢視
@@ -61,7 +61,7 @@ ms.locfileid: "74399802"
 下列 Dmv 適用于平行處理資料倉儲，但必須藉由連接到**master**資料庫來執行。
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
-* [sys. dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+* [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
 * [sys. fn_helpcollations （）](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
 
 ## <a name="sql-server-catalog-views"></a>SQL Server 目錄檢視
@@ -105,7 +105,7 @@ ms.locfileid: "74399802"
 * [sys.partition_schemes](https://msdn.microsoft.com/library/ms189752.aspx)
 * [sys.partitions](https://msdn.microsoft.com/library/ms175012.aspx)
 * [sys.procedures](https://msdn.microsoft.com/library/ms188737.aspx)
-* [sys 架構](https://msdn.microsoft.com/library/ms176011.aspx)
+* [sys.schemas](https://msdn.microsoft.com/library/ms176011.aspx)
 * [sys.securable_classes](https://msdn.microsoft.com/library/ms408301.aspx)
 * [sys.sql_expression_dependencies](https://msdn.microsoft.com/library/bb677315.aspx)
 * [sys.sql_modules](https://msdn.microsoft.com/library/ms175081.aspx)
@@ -215,14 +215,14 @@ ms.locfileid: "74399802"
 
 ## <a name="sql-server-information_schema-views"></a>SQL Server INFORMATION_SCHEMA 檢視表
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
-* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
-* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
+* [資料行](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [參數](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
+* [多](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
+* [視圖](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>後續步驟
 如需更多的參考資訊，請參閱[t-sql 語言元素](tsql-language-elements.md)和[t-sql 語句](tsql-statements.md)。

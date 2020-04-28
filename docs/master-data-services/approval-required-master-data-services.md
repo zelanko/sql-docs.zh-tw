@@ -11,10 +11,10 @@ ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729753"
 ---
 # <a name="approval-required-master-data-services"></a>需要核准 (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "73729753"
   
 -   您必須擁有存取 [系統管理] 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   您必須是模型管理員。 如需詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
 -   實體必須存在。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73729753"
   
 1.  在 [ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [管理模型]**** 頁面上，從方格中選取模型，然後按一下 [實體]****。  
+2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
   
 3.  在 [管理實體]**** 頁面上，從方格中選取含有您想要啟用 [需要核准]**** 之實體的資料列。  
   

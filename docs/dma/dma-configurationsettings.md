@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056545"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration Assistant 的設定
@@ -41,7 +41,7 @@ ms.locfileid: "74056545"
 
 Data Migration Assistant 會以平行方式評估多個資料庫。 在評估期間 Data Migration Assistant 會將資料層應用程式（dacpac）解壓縮，以瞭解資料庫架構。如果同一部伺服器上的多個資料庫以平行方式進行評估，此作業可能會超時。 
 
-從 Data Migration Assistant v2.0 開始，您可以藉由設定 parallelDatabases 設定值來控制此項。 預設值為8。
+從 Data Migration Assistant v2.0 開始，您可以藉由設定 parallelDatabases 設定值來控制此項。 預設值為 8。
 
 ```
 <advisorGroup>

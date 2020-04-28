@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84918dd3f50d129485911fc880e67c0152fa905c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882250"
 ---
 # <a name="replicate-schema-changes"></a>複寫結構描述變更
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中複寫結構描述變更。  
   
- 如果您對已發行的文章進行下列架構變更，則預設會將它們傳播到[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]訂閱者：  
+ 如果您要針對發佈的發行項進行下列結構描述變更，則這些變更預設會傳播到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者：  
   
 -   ALTER TABLE  
   
@@ -41,30 +41,30 @@ ms.locfileid: "73882250"
   
      [限制事項](#Restrictions)  
   
--   **若要複寫架構變更，請使用：**  
+-   **若要複寫結構描述變更，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   ALTER TABLE .。。DROP COLUMN 語句一律會複寫至訂閱包含要卸載之資料行的所有「訂閱者」，即使您停用架構變更的複寫也是如此。  
+-   ALTER TABLE ...DROP COLUMN 陳述式一定會複寫至訂閱包含要卸除之資料行的所有「訂閱者」，即使您停用結構描述變更的複寫也是如此。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 如果您不想複寫發行集的結構描述變更，請在 [發行集屬性 - **發行集>]\<** 對話方塊中停用結構描述變更的複寫。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 如果您不想複寫發行集的結構描述變更，請在 [發行集屬性 - \<發行集>]  對話方塊中停用結構描述變更的複寫。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>若要停用結構描述變更的複寫  
   
-1.  在 [發行集屬性 - **發行集>]**** 對話方塊的 [訂閱選項]\<** 頁面上，將 [複寫結構描述變更]**** 屬性的值設定為 [False]****。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面上，將 [複寫結構描述變更]  屬性的值設定為 [False]  。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
      若只要傳播特定的結構描述變更，請在結構描述變更之前將屬性設定為 **[True]** ，然後在進行變更後將屬性設定為 **[False]** 。 相反的，若要傳播大多數結構描述變更，而不是給定變更，請在結構描述變更之前將屬性設定為 **[False]** ，然後在進行變更後將屬性設定為 **[True]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來指定是否要複寫這些結構描述變更。 您使用的預存程序取決於發行集的類型而定。  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>建立不會複寫結構描述變更的快照式或交易式發行集  
@@ -92,7 +92,7 @@ ms.locfileid: "73882250"
 3.  選擇性藉由執行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)來重新啟用複寫架構變更，為** \@屬性**指定**replicate_ddl**的值，並為** \@值**指定**1**的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [對發行集資料庫進行架構變更](make-schema-changes-on-publication-databases.md)   
+ [對發行集資料庫進行結構描述變更](make-schema-changes-on-publication-databases.md)   
  [對發行集資料庫進行結構描述變更](make-schema-changes-on-publication-databases.md)  
   
   

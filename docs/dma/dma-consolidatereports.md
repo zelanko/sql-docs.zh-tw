@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056654"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
@@ -28,7 +28,7 @@ ms.locfileid: "74056654"
 ## <a name="prerequisites"></a>Prerequisites
 
 - 指定您網路上將從中起始 DMA 的工具電腦。 確定這部電腦可連線到您的 SQL Server 目標。
-- 下載並安裝：
+- 下載與安裝：
   - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 3.6 或更新版本。
   - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更新版本。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) 4.5 或更新版本。
@@ -64,7 +64,7 @@ ms.locfileid: "74056654"
 
     PowerShell 現在應該會在新的 PowerShell 會話啟動時自動載入這些模組。
 
-## <a name="create-inventory"></a>建立 SQL Server 的清查
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>建立 SQL Server 的清查
 
 執行 PowerShell 腳本來評估您的 SQL Server 之前，您必須先建立要評估的 SQL Server 清查。
 
@@ -263,7 +263,7 @@ Power BI 報告中顯示的詳細資料會顯示在下列各節中。
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- 標題
 - ObjectType
 - ImpactedObjectName
 

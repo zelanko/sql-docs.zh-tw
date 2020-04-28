@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399869"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.databases pdw_nodes_column_store_row_groups （Transact-sql）
@@ -30,11 +30,11 @@ ms.locfileid: "74399869"
 |**index_id**|**int**|*Object_id*資料表上叢集資料行存放區索引的識別碼。|  
 |**partition_number**|**int**|保留資料列群組*row_group_id*之資料表資料分割的識別碼。 您可以使用*partition_number*將此 DMV 加入至 sys.databases。|  
 |**row_group_id**|**int**|此資料列群組的識別碼。 此號碼在分割區中是唯一的。|  
-|**dellta_store_hobt_id**|**Bigint**|差異資料列群組的 hobt_id，如果資料列群組類型不是差異，則為 NULL。 差異資料列群組是讀取/寫入資料列群組，可接受新記錄。 差異資料列群組具有 [**開啟**] 狀態。 差異資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。|  
-|**狀態**|**tinyint**|與 state_description 相關聯的識別碼。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**Nvarchar （60）**|資料列群組的持續狀態描述：<br /><br /> 開啟-接受新記錄的讀取/寫入資料列群組。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> CLOSED-已填滿但尚未由元組移動程式壓縮的資料列群組。<br /><br /> 已壓縮-已填滿和壓縮的資料列群組。|  
-|**total_rows**|**Bigint**|實際儲存在資料列群組中的總列數。 有些可能已刪除，但是仍然保存。 資料列群組中資料列數目的上限為 1,048,576 (十六進位 FFFFF)。|  
-|**deleted_rows**|**Bigint**|實際儲存在標示為要刪除之資料列群組中的資料列數目。<br /><br /> 差異資料列群組一律為0。|  
+|**dellta_store_hobt_id**|**bigint**|差異資料列群組的 hobt_id，如果資料列群組類型不是差異，則為 NULL。 差異資料列群組是讀取/寫入資料列群組，可接受新記錄。 差異資料列群組具有 [**開啟**] 狀態。 差異資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。|  
+|**state**|**tinyint**|與 state_description 相關聯的識別碼。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state_desccription**|**nvarchar(60)**|資料列群組的持續狀態描述：<br /><br /> 開啟-接受新記錄的讀取/寫入資料列群組。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> CLOSED-已填滿但尚未由元組移動程式壓縮的資料列群組。<br /><br /> 已壓縮-已填滿和壓縮的資料列群組。|  
+|**total_rows**|**bigint**|實際儲存在資料列群組中的總列數。 有些可能已刪除，但是仍然保存。 資料列群組中資料列數目的上限為 1,048,576 (十六進位 FFFFF)。|  
+|**deleted_rows**|**bigint**|實際儲存在標示為要刪除之資料列群組中的資料列數目。<br /><br /> 差異資料列群組一律為0。|  
 |**size_in_bytes**|**int**|此資料列群組中所有頁面的組合大小（以位元組為單位）。 此大小不包含儲存中繼資料或共用字典所需的大小。|  
 |**pdw_node_id**|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點的唯一識別碼。|  
 |**distribution_id**|**int**|散發的唯一識別碼。|
@@ -51,9 +51,9 @@ ms.locfileid: "74399869"
  當資料行存放區資料列群組已滿時，就會進行壓縮，並停止接受新的資料列。 資料列從壓縮的群組中刪除時仍會持續存在，但會標示為已刪除。 對壓縮的群組進行更新的實作方式，是從壓縮的群組中刪除，然後插入開啟的群組。  
   
 ## <a name="permissions"></a>權限  
- 需要**VIEW SERVER STATE**許可權。  
+ 需要 **VIEW SERVER STATE** 權限。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會將**sys.databases pdw_nodes_column_store_row_groups**資料表聯結至其他系統資料表，以傳回特定資料表的相關資訊。 導出的 `PercentFull` 資料行是資料列群組的效率預估。 若要尋找單一資料表上的資訊，請移除 WHERE 子句前面的批註連字號，並提供資料表名稱。  
   
 ```  
@@ -105,7 +105,7 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [建立資料行存放區索引 &#40;Transact-sql&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  

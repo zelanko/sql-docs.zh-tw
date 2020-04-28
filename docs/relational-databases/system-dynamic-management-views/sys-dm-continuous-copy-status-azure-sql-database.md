@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844496"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
@@ -52,7 +52,7 @@ ms.locfileid: "73844496"
  若要取得資料，需要**db_owner**資料庫角色中的成員資格。 Dbo 使用者、 **dbmanager**資料庫角色的成員，以及 sa 登入也可以同時查詢此視圖。  
   
 ## <a name="remarks"></a>備註  
- 系統會在**resource**資料庫中建立**dm_continuous_copy_status**視圖，並顯示在所有資料庫中，包括邏輯 master。 不過，在邏輯主機中查詢此檢視會傳回空集合。  
+ 系統會在**resource**資料庫中建立**dm_continuous_copy_status**視圖，並顯示在所有資料庫中，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
  如果資料庫上的連續複製關聯性已終止，則**dm_continuous_copy_status**視圖中該資料庫的資料列就會消失。  
   

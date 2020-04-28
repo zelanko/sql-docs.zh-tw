@@ -11,22 +11,21 @@ ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6d8c277796f743b31dfb5df349352bb6c7470421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728626"
 ---
 # <a name="changesets-master-data-services"></a>變更集 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 現可支援將任何暫止的實體變更儲存為變更集的功能。 這項功能有下列兩個使用案例：  
   
 -   **實體管理員開啟「需要核准」時的變更**  
   
-     如果實體管理員指定特定實體所做的變更需經核准後才能獲得認可，則實體的任何變更均需先儲存到新的或現有的變更集才能提交核准。  如需詳細資訊，請參閱[&#40;Master Data Services 的核准&#41;](../master-data-services/approval-required-master-data-services.md)  
+     如果實體管理員指定特定實體所做的變更需經核准後才能獲得認可，則實體的任何變更均需先儲存到新的或現有的變更集才能提交核准。  如需詳細資訊，請參閱[需要核准 &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md)。  
   
      您會進行下列工作流程：  
   
@@ -40,7 +39,7 @@ ms.locfileid: "73728626"
   
     5.  核准的變更集將會自動獲得認可。 如果變更成功獲得認可，變更集就會處於已認可狀態。  
   
--   **本機使用者變更**  
+-   **本機使用者的變更**  
   
      如果您只想要儲存本機的變更，以供日後使用或擷取，您可以使用變更集來達成此目標。  
   

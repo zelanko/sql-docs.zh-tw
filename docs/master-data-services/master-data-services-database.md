@@ -14,18 +14,17 @@ ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729045"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 資料庫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  此資料庫包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統的所有資訊。 它是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 部署的核心。 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫：  
+  此資料庫包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統的所有資訊。 它是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 部署的核心。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫：  
   
 -   儲存 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統所需的設定、資料庫物件和資料。  
   
@@ -39,13 +38,13 @@ ms.locfileid: "73729045"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [分葉成員臨時表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [合併成員臨時表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [關聯性臨時表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
+-   [關聯性暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
--   [暫存進程錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+-   [暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 Master Data Services 資料庫](../master-data-services/install-windows/create-a-master-data-services-database.md)   

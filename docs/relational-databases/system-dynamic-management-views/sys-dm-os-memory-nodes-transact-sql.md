@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f68524b2713b9d662c9e9ed0950334ea0a94ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983127"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部的配置會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員。 追蹤來自 sys.databases 的進程記憶體計數器之間的差異**dm_os_process_memory**和內部計數器，可以表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記憶體空間中外部元件的記憶體使用量。  
   
  每個實體 NUMA 記憶體節點都會建立一些節點。 這些可能會與 sys.databases 中的 CPU 節點不同**dm_os_nodes**。  
@@ -43,19 +42,19 @@ ms.locfileid: "73983127"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**memory_node_id**|**smallint**|指定記憶體節點的識別碼。 與**dm_os_memory_clerks**的**memory_node_id**相關。 不可為 Null。|  
-|**virtual_address_space_reserved_kb**|**Bigint**|指出未經認可也沒有對應至實體頁面的虛擬位址保留數目 (以 KB 為單位)。 不可為 Null。|  
-|**virtual_address_space_committed_kb**|**Bigint**|指定已經認可或對應至實體頁面的虛擬位址數量 (以 KB 為單位)。 不可為 Null。|  
-|**locked_page_allocations_kb**|**Bigint**|指定已經由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定的實體記憶體數量 (以 KB 為單位)。 不可為 Null。|  
-|**single_pages_kb**|**Bigint**|**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 由這個節點上執行之執行緒使用單一頁面配置器所配置的認可記憶體數量 (以 KB 為單位)。 這個記憶體是從緩衝集區配置。 這個值會指出發生配置要求的節點，而非滿足配置要求的實體位置。|  
-|**pages_kb**|**Bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指定由 Memory Manager 頁面配置器從這個 NUMA 節點所配置的認可記憶體數量 (以 KB 為單位)。 不可為 Null。|  
-|**multi_pages_kb**|**Bigint**|**適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 由這個節點上執行之執行緒使用多頁配置器所配置的認可記憶體數量 (以 KB 為單位)。 這個記憶體是在緩衝集區外部配置。 這個值會指出發生配置要求的節點，而非滿足配置要求的實體位置。|  
-|**shared_memory_reserved_kb**|**Bigint**|指定已經從這個節點保留的共用記憶體數量 (以 KB 為單位)。 不可為 Null。|  
-|**shared_memory_committed_kb**|**Bigint**|指定已經在這個節點上認可的共用記憶體數量 (以 KB 為單位)。 不可為 Null。|  
-|**cpu_affinity_mask**|**Bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 僅供內部使用。 不可為 Null。|  
-|**online_scheduler_mask**|**Bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 僅供內部使用。 不可為 Null。|  
+|**virtual_address_space_reserved_kb**|**bigint**|指出未經認可也沒有對應至實體頁面的虛擬位址保留數目 (以 KB 為單位)。 不可為 Null。|  
+|**virtual_address_space_committed_kb**|**bigint**|指定已經認可或對應至實體頁面的虛擬位址數量 (以 KB 為單位)。 不可為 Null。|  
+|**locked_page_allocations_kb**|**bigint**|指定已經由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定的實體記憶體數量 (以 KB 為單位)。 不可為 Null。|  
+|**single_pages_kb**|**bigint**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 由這個節點上執行之執行緒使用單一頁面配置器所配置的認可記憶體數量 (以 KB 為單位)。 這個記憶體是從緩衝集區配置。 這個值會指出發生配置要求的節點，而非滿足配置要求的實體位置。|  
+|**pages_kb**|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指定由 Memory Manager 頁面配置器從這個 NUMA 節點所配置的認可記憶體數量 (以 KB 為單位)。 不可為 Null。|  
+|**multi_pages_kb**|**bigint**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 由這個節點上執行之執行緒使用多頁配置器所配置的認可記憶體數量 (以 KB 為單位)。 這個記憶體是在緩衝集區外部配置。 這個值會指出發生配置要求的節點，而非滿足配置要求的實體位置。|  
+|**shared_memory_reserved_kb**|**bigint**|指定已經從這個節點保留的共用記憶體數量 (以 KB 為單位)。 不可為 Null。|  
+|**shared_memory_committed_kb**|**bigint**|指定已經在這個節點上認可的共用記憶體數量 (以 KB 為單位)。 不可為 Null。|  
+|**cpu_affinity_mask**|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 僅供內部使用。 不可為 Null。|  
+|**online_scheduler_mask**|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 僅供內部使用。 不可為 Null。|  
 |**processor_group**|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 僅供內部使用。 不可為 Null。|  
-|**foreign_committed_kb**|**Bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指定來自其他記憶體節點的認可記憶體數量 (以 KB 為單位)。 不可為 Null。|  
-|**target_kb** |**Bigint** |**適用於**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指定記憶體節點的記憶體目標（以 KB 為單位）。 |   
+|**foreign_committed_kb**|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指定來自其他記憶體節點的認可記憶體數量 (以 KB 為單位)。 不可為 Null。|  
+|**target_kb** |**bigint** |**適用**于： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]和更新版本[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，。<br /><br /> 指定記憶體節點的記憶體目標（以 KB 為單位）。 |   
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限

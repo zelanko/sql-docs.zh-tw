@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401009"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>將具有 Integration Services 的資料載入平行處理資料倉儲
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>操作  
+## <a name="basics"></a><a name="Basics"></a>基本概念  
 Integration Services 是資料的高效能解壓縮、轉換和載入（ETL）的 SQL Server 元件，通常用來填入並更新資料倉儲。  
   
 PDW 目的地介面卡是一個 Integration Services 元件，可讓您使用 Integration Services .dtsx 套件，將資料載入至 PDW。 在 SQL ServerPDW 的封裝工作流程中，您可以從多個來源載入和合併資料，並將資料載入至多個目的地。 在封裝內以及同時執行的多個封裝之間，載入作業都是平行進行，同一應用裝置中最多可以有 10 個載入作業平行執行。  
@@ -42,7 +42,7 @@ PDW 目的地介面卡是一個 Integration Services 元件，可讓您使用 In
   
 如需 Integration Services 的完整檔，請參閱[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。  
   
-## <a name="HowToDeployPackage"></a>執行 Integration Services 封裝的方法  
+## <a name="methods-for-running-an-integration-services-package"></a><a name="HowToDeployPackage"></a>執行 Integration Services 封裝的方法  
 使用其中一種方法來執行 Integration Services 套件。  
   
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>從 SQL Server 2008 R2 Business Intelligence Development Studio （投標）執行  
@@ -63,7 +63,7 @@ PDW 目的地介面卡是一個 Integration Services 元件，可讓您使用 In
   
 例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>資料類型  
+## <a name="data-types"></a><a name="DataTypes"></a>資料類型  
 當您使用 Integration Services 將資料從資料來源載入 SQL Server PDW 資料庫時，資料會先從來源資料對應到 Integration Services 的資料類型。 這樣可以讓多個資料來源的資料對應至共同的一組資料類型。  
   
 然後，資料會從 Integration Services 對應到 SQL Server PDW 的資料類型。 針對每個 SQL Server PDW 資料類型，下表列出可以轉換成 SQL Server PDW 資料類型的 Integration Services 資料類型。  
@@ -71,7 +71,7 @@ PDW 目的地介面卡是一個 Integration Services 元件，可讓您使用 In
 |PDW 資料類型|對應至 PDW 資料類型 Integration Services 資料類型|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|BIGINT|DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4|  
+|bigint|DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4|  
 |CHAR|DT_STR|  
 |日期|DT_DBDATE|  
 |DATETIME|DT_DATE、DT_DBDATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2|  
@@ -126,10 +126,10 @@ SQL Server PDW 不支援下列 Integration Services 的資料類型：
   
 -   如果沒有使用任何臨時資料庫，請在目的地資料庫上建立許可權。 這是用來建立臨時表。  
   
-## <a name="GenRemarks"></a>一般備註  
+## <a name="general-remarks"></a><a name="GenRemarks"></a>一般備註  
 當 Integration Services 封裝有多個 SQL Server PDW 目的地執行，而其中一個連接已終止時，Integration Services 會停止將資料推送至所有 SQL Server PDW 目的地。  
   
-## <a name="Limits"></a>限制事項  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>限制事項  
 若為 Integration Services 封裝，相同資料來源的 SQL Server PDW 目的地數目會受限於作用中負載的最大數目。 上限是預先設定的，使用者無法設定。 
 
 <!-- MISSING LINKS
@@ -146,12 +146,12 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
 > 當來源資料表包含具有 SQL 定序的 char 和 Varchar 資料行時，使用 SSIS 中的 OLE DB 資料來源搭配 PDW 目的地介面卡，可能會導致資料損毀。 如果來源資料表包含具有 SQL 定序的 char 或 Varchar 資料行，我們建議使用 ADO.NET 的來源。 
 
   
-## <a name="Locks"></a>鎖定行為  
+## <a name="locking-behavior"></a><a name="Locks"></a>鎖定行為  
 使用 Integration Services 載入資料時，SQL ServerPDW 會使用資料列層級鎖定來更新目的地資料表中的資料。 這表示在更新每個資料列時，都會鎖定其讀取和寫入功能。 將資料載入暫存資料表時，並不會鎖定目的地資料表中的資料列。  
   
-## <a name="Examples"></a>範例  
+## <a name="examples"></a><a name="Examples"></a>範例  
   
-### <a name="Walkthrough"></a>A. 一般檔案中的簡單載入  
+### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. 一般檔案中的簡單載入  
 下列逐步解說示範使用 Integration Services 將一般檔案資料載入 SQL Server PDW 設備的簡單資料載入。  這個範例假設已在用戶端電腦上安裝 Integration Services，而且已安裝 SQL Server PDW 目的地，如上所述。  
   
 在此範例中，我們將載入`Orders`具有下列 DDL 的資料表。 `Orders`資料表是`LoadExampleDB`資料庫的一部分。  
@@ -216,7 +216,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  選取 [**建立新的連接**]。  
   
-5.  在 [伺服器]、[使用者]、[密碼] 和 [目的地] 資料庫中填入您應用裝置特定資訊的資訊。 （範例如下所示）。 然後按一下 **[確定]**。  
+5.  在 [伺服器]、[使用者]、[密碼] 和 [目的地] 資料庫中填入您應用裝置特定資訊的資訊。 （範例如下所示）。 然後按一下 [ **確定**]。  
   
     針對 [未連接的連線]，**伺服器名稱**：輸入 <設備名稱>-SQLCTL01，17001。  
   
@@ -236,7 +236,7 @@ id,city,lastUpdateDate,orderDate
   
 1.  在 [**資料流程**] 窗格中，將綠色箭號從 [一般檔案**來源**] 方塊拖曳到 [ **SQL Server PDW 目的地**] 方塊中。  
   
-2.  按兩下 [ **SQL Server PDW 目的地**] 方塊，讓您再次看到 [ **SQL Server PDW 目的地編輯器**]。 在 [未對應的**輸入資料行**] 底下，您應該會看到位於左側一般檔案的資料行名稱。 您應該會在 [未對應的**目的地資料行**] 底下的右邊，看到目的地資料表的資料行名稱。 在對應的 [**輸入資料行**] 和 [未**對應**的**目的地資料行**] 清單中，拖曳或按兩下相符的資料行名稱，以對應資料行。 按一下 **[確定]** 儲存您的設定。  
+2.  按兩下 [ **SQL Server PDW 目的地**] 方塊，讓您再次看到 [ **SQL Server PDW 目的地編輯器**]。 在 [未對應的**輸入資料行**] 底下，您應該會看到位於左側一般檔案的資料行名稱。 您應該會在 [未對應的**目的地資料行**] 底下的右邊，看到目的地資料表的資料行名稱。 在對應的 [**輸入資料行**] 和 [未**對應**的**目的地資料行**] 清單中，拖曳或按兩下相符的資料行名稱，以對應資料行。 按一下 [確定] **** 儲存設定。  
   
 3.  按一下 [檔案] 功能表中的 [**儲存** **]，以**儲存封裝。  
   

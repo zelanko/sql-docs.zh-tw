@@ -14,10 +14,10 @@ ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729402"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>刪除商務規則 (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "73729402"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-business-rule"></a>若要刪除商務規則  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73729402"
   
 2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
   
-3.  在 [商務規則] **** 頁面上，從 [模型] **** 下拉式清單選取模型。  
+3.  在 [**商務規則**] 頁面上，從 [**模型**] 下拉式清單中選取模型。  
   
 4.  從 [實體] **** 下拉式清單選取實體。  
   

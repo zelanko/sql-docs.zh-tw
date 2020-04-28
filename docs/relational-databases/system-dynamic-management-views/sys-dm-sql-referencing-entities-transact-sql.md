@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982345"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982345"
   
 -   伺服器層級 DDL 觸發程序  
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本） [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +80,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|參考實體的名稱。 不可為 Null。|  
 |referencing_id|**int**|參考實體的識別碼。 不可為 Null。|  
 |referencing_class|**tinyint**|參考實體的類別。 不可為 Null。<br /><br /> 1 = 物件<br /><br /> 12 = 資料庫層級 DDL 觸發程序<br /><br /> 13 = 伺服器層級 DDL 觸發程序|  
-|referencing_class_desc|**Nvarchar （60）**|參考實體之類別的描述。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|參考實體之類別的描述。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|指出在執行階段發生之受參考實體識別碼的解析，因為它會相依於呼叫端的結構描述。<br /><br /> 1 = 參考實體可能會參考此實體。不過，受參考實體識別碼的解析是呼叫端相依而且無法判斷。 只有預存程序的非結構描述繫結參考、擴充預存程序，或在 EXECUTE 陳述式內部呼叫的使用者定義函數，才會發生這個事件。<br /><br /> 0 = 受參考的實體不是呼叫端相依。|  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -103,17 +103,14 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|是*|是|  
 |檢視|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程式 * *|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
 |CLR 預存程序|否|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]使用者定義函數|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數|是|是|  
 |CLR 使用者定義函數|否|是|  
 |CLR 觸發程序 (DML 和 DDL)|否|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程序|是|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫層級 DDL 觸發程序|是|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器層級 DDL 觸發程序|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程序|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫層級 DDL 觸發程序|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器層級 DDL 觸發程序|是|否|  
 |擴充預存程序|否|是|  
 |佇列|否|是|  
 |同義字|否|是|  
@@ -127,13 +124,13 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="permissions"></a>權限  
   
-### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="sskatmai---sssql11"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   需要所參考物件的 CONTROL 權限。 當受參考實體為資料分割函數時，便需要資料庫的 CONTROL 權限。  
   
 -   需要 sys. dm_sql_referencing_entities 的 SELECT 許可權。 根據預設，SELECT 權限會授與 public。  
   
-### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   不需要所參考物件的權限。 如果使用者有其中一部分參考實體的 VIEW DEFINITION，則會傳回部分結果。  
   
@@ -178,7 +175,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>另請參閱  
- [dm_sql_referenced_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

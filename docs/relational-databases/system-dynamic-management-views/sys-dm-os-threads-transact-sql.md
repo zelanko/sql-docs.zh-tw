@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982535"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
@@ -43,16 +43,16 @@ ms.locfileid: "73982535"
 |status|**int**|內部狀態旗標。|  
 |instruction_address|**varbinary(8)**|目前執行的指示位址。|  
 |creation_time|**datetime**|建立這個執行緒的時間。|  
-|kernel_time|**Bigint**|這個執行緒使用的核心時間量。|  
-|usermode_time|**Bigint**|這個執行緒使用的使用者時間量。|  
+|kernel_time|**bigint**|這個執行緒使用的核心時間量。|  
+|usermode_time|**bigint**|這個執行緒使用的使用者時間量。|  
 |stack_base_address|**varbinary(8)**|這個執行緒之最高堆疊位址的記憶體位址。|  
 |stack_end_address|**varbinary(8)**|這個執行緒之最低堆疊位址的記憶體位址。|  
 |stack_bytes_committed|**int**|堆疊中已認可的位元組數。|  
 |stack_bytes_used|**int**|執行緒目前使用的位元組數。|  
-|affinity|**Bigint**|這個執行緒正在執行的 CPU 遮罩。 這取決於**ALTER SERVER CONFIGURATION SET 進程親和性**語句所設定的值。 若是軟相似性，可能與排程器不同。|  
+|affinity|**bigint**|這個執行緒正在執行的 CPU 遮罩。 這取決於**ALTER SERVER CONFIGURATION SET 進程親和性**語句所設定的值。 若是軟相似性，可能與排程器不同。|  
 |優先順序|**int**|這個執行緒的優先權值。|  
 |Locale|**int**|執行緒的快取地區設定 LCID。|  
-|token|**varbinary(8)**|執行緒的快取模擬 Token 控制代碼。|  
+|Token|**varbinary(8)**|執行緒的快取模擬 Token 控制代碼。|  
 |is_impersonating|**int**|指出這個執行緒是否使用 Win32 模擬。<br /><br /> 1 = 執行緒使用不同於處理序預設值的安全性認證。 這指出執行緒模擬的實體不是建立處理序的實體。|  
 |is_waiting_on_loader_lock|**int**|執行緒是否在等待載入程式鎖定的作業系統狀態。|  
 |fiber_data|**varbinary(8)**|在執行緒上執行的目前 Win32 Fiber。 這只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為輕量型共用的情況。|  
@@ -75,8 +75,7 @@ ms.locfileid: "73982535"
 由於 SQL 引擎在 Linux 中的運作方式，部分資訊與 Linux 診斷資料並不相符。 例如`os_thread_id` ，不符合類似`ps` `top`或 procfs （/proc/`pid`）等工具的結果。  這是因為平臺抽象層（SQLPAL），是 SQL Server 元件與作業系統之間的一層。
 
 ## <a name="examples"></a>範例  
- 在啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟動執行緒，然後使工作者與這些執行緒產生關聯。 不過，外部元件 (例如擴充預存程序) 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下啟動執行緒。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並沒有這些執行緒的控制權。 dm_os_threads 可以提供在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]進程中取用資源之惡意執行緒的相關資訊。  
+ 在啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟動執行緒，然後使工作者與這些執行緒產生關聯。 不過，外部元件 (例如擴充預存程序) 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下啟動執行緒。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並沒有這些執行緒的控制權。 dm_os_threads 可以提供在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]進程中取用資源之惡意執行緒的相關資訊。  
   
  下列查詢可用來尋找正在執行不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之執行緒的工作者，以及執行使用的時間。  
   

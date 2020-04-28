@@ -14,10 +14,10 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729449"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73729449"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>若要建立及發行商務規則  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73729449"
   
 5.  從 [成員類型] **** 下拉式清單中，選取要套用商務規則的成員類型。  
   
-6.  按一下 [新增]  。  
+6.  按一下 **[新增]** 。  
   
 7.  在 [名稱] **** 方塊中，輸入商務規則的名稱。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73729449"
     > [!NOTE]  
     >  只針對包含驗證動作的規則才傳送通知。  
   
-10. 在 [If]**** 區塊下，按一下 [新增]****。 面板隨即出現。  
+10. 在 [If]**** 區塊下，按一下 [新增]****。 面板隨即顯示。  
   
 11. 從 [屬性] **** 下拉式清單中，選取屬性。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73729449"
   
 15. 選擇性地將多個條件加入至規則。 如需詳細資訊，請參閱 [將多個條件加入至商務規則 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)(管理員 (Master Data Services))。  
   
-16. 在 [Then]**** 區塊下，按一下 [新增]****。 面板隨即出現。  
+16. 在 [Then]**** 區塊下，按一下 [新增]****。 面板隨即顯示。  
   
 17. 從 [屬性] **** 下拉式清單中，選取屬性。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "73729449"
   
 21. 或者，若要新增 **Else** 動作，請完成下列步驟。  
   
-    1.  在 [Else]**** 區塊下，按一下 [新增]****。 面板隨即出現。  
+    1.  在 [Else]**** 區塊下，按一下 [新增]****。 面板隨即顯示。  
   
     2.  從 [屬性] **** 下拉式清單中，選取屬性。  
   

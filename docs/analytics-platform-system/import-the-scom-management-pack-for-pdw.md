@@ -10,33 +10,33 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401087"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>匯入 SCOM 管理元件-Analytics Platform System
 請遵循下列步驟來匯入適用于分析平臺系統（AP）的 System Center Operations Manager （SCOM）管理元件。 需要管理元件，才能從 SCOM 監視平行資料倉儲。 
   
-## <a name="BeforeBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>開始之前  
 **必要條件**  
   
 System Center Operations Manager 2007 R2 必須已安裝且正在執行。  
   
 必須安裝管理元件。 請參閱[安裝 SCOM 管理元件 &#40;分析平臺系統&#41;](install-the-scom-management-packs.md)。  
   
-## <a name="Step1"></a>步驟1：匯入 SQL Server 設備基礎管理元件  
+## <a name="step-1-import-the-sql-server-appliance-base-management-pack"></a><a name="Step1"></a>步驟1：匯入 SQL Server 設備基礎管理元件  
   
 1.  以 Operations Manager 2007 管理群組的 Operations Manager 管理員角色成員帳戶登入電腦。  
   
-2.  在 Operations 主控台中，按一下 [系統管理]****。  
+2.  在 Operations 主控台中，按一下 [系統管理]  。  
   
-3.  在 [**管理元件**] 節點上按一下滑鼠右鍵，然後按一下 [匯**入管理元件**]。  
+3.  在 [管理組件] **** 節點上按一下滑鼠右鍵，然後按一下 [匯入管理組件] ****。  
   
     ![按一下 [匯入管理組件]](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  在管理元件清單中，選取您要匯入的管理元件，按一下 [**選取**]，然後按一下 [**新增**]。  
+4.  在管理組件清單中，選取您要匯入的管理組件、按一下 [選取]****，然後按一下 [新增]****。  
   
     ![管理元件清單](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
@@ -48,7 +48,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![選取這兩個管理組件](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png "SCOM_IMP4")  
   
-7.  按一下 **[安裝]**。  
+7.  按一下 [Install]  。  
   
     ![按一下 [安裝]](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
@@ -56,9 +56,9 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![完成時，請按一下 [關閉]](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP6.png "SCOM_IMP6")  
   
-## <a name="Step2"></a>匯入 Microsoft SQL Server 2008 R2 平行處理資料倉儲設備的監視元件  
+## <a name="import-the-monitoring-pack-for-microsoft-sql-server-2008-r2-parallel-data-warehouse-appliance"></a><a name="Step2"></a>匯入 Microsoft SQL Server 2008 R2 平行處理資料倉儲設備的監視元件  
   
-1.  在 [**管理元件**] 節點上按一下滑鼠右鍵，然後按一下 [匯**入管理元件**]。  
+1.  在 [管理組件] **** 節點上按一下滑鼠右鍵，然後按一下 [匯入管理組件] ****。  
   
 2.  選擇 [**從磁片加入**]。  
   
@@ -68,11 +68,11 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![選取管理元件](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
   
-4.  按一下 **[安裝]**。  
+4.  按一下 [Install]  。  
   
     ![按一下 [安裝]](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  按一下 [關閉]  。  
+5.  按一下 **關閉**。  
   
     ![按一下 [關閉]](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   

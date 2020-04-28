@@ -14,10 +14,10 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729232"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
@@ -45,7 +45,7 @@ ms.locfileid: "73729232"
 |**刪除**|顯示成員，而且使用者可加以刪除。|  
 |**拒絕**|不顯示成員。|  
   
- 在 [階層成員]**** 索引標籤上，您指派的權限不會立即生效。 權限套用的頻率取決於 ** 資料庫中 [系統設定] 資料表內的 [成員安全性處理間隔設定]**[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。 遵循 [立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)中的步驟，可以立即套用成員權限。  
+ 在 [階層成員]**** 索引標籤上，您指派的權限不會立即生效。 權限套用的頻率取決於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中 [系統設定] 資料表內的 [成員安全性處理間隔設定]****。 遵循 [立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)中的步驟，可以立即套用成員權限。  
   
 > [!NOTE]  
 >  您無法將階層成員權限指派給遞迴階層、具有明確頂層的衍生階層，以及具有隱藏層級的衍生階層。  
@@ -70,6 +70,6 @@ ms.locfileid: "73729232"
  [如何判斷許可權 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [階層 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [立即將成員許可權套用 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   

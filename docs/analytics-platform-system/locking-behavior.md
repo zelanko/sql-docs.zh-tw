@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401005"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>平行處理資料倉儲中的鎖定行為
 瞭解平行資料倉儲如何使用鎖定來確保交易的完整性，以及在多個使用者同時存取資料時，維護資料庫的一致性。  
   
-## <a name="Basics"></a>鎖定基本概念  
+## <a name="locking-basics"></a><a name="Basics"></a>鎖定基本概念  
 **方式**  
   
 SQL Server PDW 支援四種鎖定模式：  
@@ -27,7 +27,7 @@ SQL Server PDW 支援四種鎖定模式：
 獨佔  
 獨佔鎖定會禁止寫入或讀取鎖定的物件，直到保存獨佔鎖定的交易完成為止。 當獨佔鎖定生效時，不允許任何模式的其他鎖定。 例如，DROP TABLE 和 CREATE DATABASE 會使用獨佔鎖定。  
   
-共用  
+Shared  
 共用鎖定會禁止起始受影響物件的獨佔鎖定，但允許其他所有鎖定模式。 例如，SELECT 語句會起始共用鎖定，因此允許多個查詢同時存取選取的資料，但會防止更新讀取的記錄，直到 SELECT 語句完成為止。  
   
 ExclusiveUpdate  
@@ -38,9 +38,9 @@ SharedUpdate 鎖定會禁止獨佔和 ExclusiveUpdate 鎖定模式，並允許�
   
 **資源類別**  
   
-鎖定會保留在下列物件類別中：資料庫、架構、物件（資料表、view 或 procedure）、應用程式（在內部使用）、EXTERNALDATASOURCE、EXTERNALFILEFORMAT 和 SCHEMARESOLUTION （建立、改變或時所採用的資料庫層級鎖定卸載架構物件或資料庫使用者）。 這些物件類別可以出現在[dm_pdw_waits sys.databases](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)的 object_type 資料行中。  
+鎖定會保留在下列物件類別中：資料庫、架構、物件（資料表、view 或 procedure）、應用程式（在內部使用）、EXTERNALDATASOURCE、EXTERNALFILEFORMAT 和 SCHEMARESOLUTION （建立、改變或卸載架構物件或資料庫使用者時所建立的資料庫層級鎖定）。 這些物件類別可以出現在[dm_pdw_waits sys.databases](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)的 object_type 資料行中。  
   
-## <a name="Remarks"></a>一般備註  
+## <a name="general-remarks"></a><a name="Remarks"></a>一般備註  
 鎖定可以套用至資料庫、資料表或 views。  
   
 SQL Server PDW 不會執行任何可設定的隔離等級。 它支援 ANSI 標準所定義的 READ_UNCOMMITTED 隔離等級。 不過，由於讀取作業是在 READ_UNCOMMITTED 之下執行，因此非常少的封鎖作業實際上會發生或導致系統中的競爭。  

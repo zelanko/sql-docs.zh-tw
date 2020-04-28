@@ -16,10 +16,10 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962416"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
@@ -66,13 +66,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者|  
+|**0** (預設)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者|  
 |**1**|ODBC 資料來源伺服器|  
-|**2**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 資料庫|  
-|**第**|OLE DB 提供者|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 資料庫|  
+|**3**|OLE DB 提供者|  
   
-`[ @login = ] 'login'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的登入識別碼。 *login*是**sysname**，預設值是 Null。  
+`[ @login = ] 'login'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時，現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
@@ -106,12 +105,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|隨選|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每週|  
 |**1600**|每月|  
 |**32**|每月相對|  
 |**64** （預設值）|自動啟動|  
-|**128**|週期性|  
+|**128**|重複執行|  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時，現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
@@ -125,11 +124,11 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |值|描述|  
 |-----------|-----------------|  
-|**1** （預設值）|第一頁|  
-|**2**|秒|  
+|**1** (預設值)|First|  
+|**2**|Second|  
 |**4**|第三個|  
 |**8**|第四個|  
-|**1600**|最後一頁|  
+|**1600**|Last|  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時，現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
@@ -144,9 +143,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |值|描述|  
 |-----------|-----------------|  
 |**1**|單次|  
-|**2**|秒|  
-|**4** （預設值）|分鐘|  
-|**8**|小時|  
+|**2**|Second|  
+|**4** （預設值）|Minute|  
+|**8**|Hour|  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時，現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
@@ -188,7 +187,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 `[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  ** 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行時，不應使用「發行者」。  
+>  *publisher*從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行時，不應使用「發行者」。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -204,10 +203,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_addsubscriber**。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f973b47d4b55624e0f78658f7dfa13ec1aebd80c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095957"
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中設定 SQL Server
@@ -26,25 +26,20 @@ ms.locfileid: "74095957"
 
   <xref:Microsoft.SqlServer.Management.Smo.Information>在 SMO <xref:Microsoft.SqlServer.Management.Smo.Settings>中，物件、物件、 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>物件和<xref:Microsoft.SqlServer.Management.Smo.Configuration>物件都包含實例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]設定和資訊。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有多個描述已安裝之執行個體行為的屬性。 這些屬性描述啟動選項、伺服器預設值、檔案和目錄、系統和處理資訊、產品和版本、連接資訊、記憶體選項、語言和定序選取項目，以及驗證模式。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有多個描述已安裝之執行個體行為的屬性。 這些屬性描述啟動選項、伺服器預設值、檔案和目錄、系統和處理資訊、產品和版本、連接資訊、記憶體選項、語言和定序選取項目，以及驗證模式。  
   
 ## <a name="sql-server-configuration"></a>SQL Server 組態  
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Information> 物件屬性包含有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (例如處理器和平台) 的詳細資訊。  
+ <xref:Microsoft.SqlServer.Management.Smo.Information> 物件屬性包含有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (例如處理器和平台) 的詳細資訊。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Settings> 物件屬性包含有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的詳細資訊。 除了郵件設定檔和伺服器帳戶外，您也可以修改預設的資料庫檔案和目錄。 在連接持續時間會保留這些屬性。  
+ <xref:Microsoft.SqlServer.Management.Smo.Settings> 物件屬性包含有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的詳細資訊。 除了郵件設定檔和伺服器帳戶外，您也可以修改預設的資料庫檔案和目錄。 在連接持續時間會保留這些屬性。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件屬性包含目前與算術、ANSI 標準和交易相關之連接行為的詳細資訊。  
+ <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件屬性包含目前與算術、ANSI 標準和交易相關之連接行為的詳細資訊。  
   
  此外也有一組由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件所代表的組態選項。 其中包含一組屬性，代表可由 **sp_configure** 預存程序修改的選項。 [**優先權提升**]、[復原**間隔**] 和 [**網路封包大小**] 等選項會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]控制實例的效能。 這其中許多選項都可以動態變更，但在某些情況下，當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體重新啟動時，會先設定值然後再加以變更。  
   
  每個組態選項都有 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件屬性。 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 物件來修改全域組態設定。 許多屬性都擁有最大和最小值，這些值也會儲存為 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 屬性。 這些屬性需要<xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A>方法才能認可對實例的變更[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件中的所有組態選項都必須由系統管理員變更。  
+ <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件中的所有組態選項都必須由系統管理員變更。  
   
 ## <a name="examples"></a>範例  
  在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

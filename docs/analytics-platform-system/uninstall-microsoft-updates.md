@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399459"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>卸載 Analytics Platform System 中的 Microsoft updates
@@ -28,7 +28,7 @@ ms.locfileid: "74399459"
   
 -   瞭解用來登入<em> <Fabric Domain> </em> **-HST01**節點的網狀架構網域系統管理員帳戶。  
   
-## <a name="HowToUninstallMSFT"></a>卸載 Microsoft updates  
+## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>卸載 Microsoft updates  
   
 1.  以網狀架構網域<em> <Fabric Domain> </em>系統管理員身分登入 **-HST01**節點。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74399459"
     ```  
   
 ## <a name="next-steps"></a>後續步驟
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 - [下載並套用 Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) 
 - [將分析平臺系統修補程式套用 &#40;分析平臺系統&#41;](apply-analytics-platform-system-hotfixes.md)  
 - [&#40;分析平臺系統&#41;卸載分析平臺系統修補程式](uninstall-analytics-platform-system-hotfixes.md)  

@@ -1,5 +1,5 @@
 ---
-title: 交易
+title: 異動
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728896"
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
@@ -48,7 +48,7 @@ ms.locfileid: "73728896"
 > [!NOTE]  
 >  只要系統管理員的 [版本管理]**** 功能區域未套用唯讀權限層級，即可檢視所有使用者的全數交易。 例如，如果系統管理員設定了唯讀權限和更新權限等級，系統管理員就無法查看其他使用者的交易，因為唯讀權限的優先順序高於更新權限。
   
- 若要設定交易記錄資料保留的時間長度，您可以設定 ** 資料庫系統設定中的 **Log retention in Days[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 屬性，或是在建立或編輯模型時設定 [記錄保留天數]****。 如需詳細資訊，請參閱[系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) 和[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
+ 若要設定交易記錄資料保留的時間長度，您可以設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫系統設定中的 **Log retention in Days** 屬性，或是在建立或編輯模型時設定 [記錄保留天數]****。 如需詳細資訊，請參閱[系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) 和[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
  SQL Server Agent 工作 MDS_MDM_Sample_Log_Maintenace，會觸發清除交易記錄的程序，並於每晚執行。 您可以使用 SQL Server Agent 來修改此工作的排程。  
   
@@ -97,8 +97,8 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>相關內容  
   
--   [系統管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [批註 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [註解 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   

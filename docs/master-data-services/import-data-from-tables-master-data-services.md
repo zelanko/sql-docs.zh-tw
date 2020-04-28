@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729251"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
@@ -25,9 +25,9 @@ ms.locfileid: "73729251"
   
  **必要條件**  
   
--   您必須具備權限，才能將資料插入 \< 資料庫的 stg.\<名稱>_Leaf、stg.\<名稱>_Consolidated、stg.[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]名稱>_Relationship 資料表中。  
+-   您必須具備權限，才能將資料插入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 stg.\<名稱>_Leaf、stg.\<名稱>_Consolidated、stg.\<名稱>_Relationship 資料表中。  
   
--   您必須具備權限，才能執行 \< 資料庫中的 stg.udp_\_名稱>_Leaf、stg.udp\<\_名稱>_Consolidated 或 stg.udp\<[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]名稱>_Relationship 預存程序。  
+-   您必須具備權限，才能執行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的 stg.udp_\<名稱>_Leaf、stg.udp\_\<名稱>_Consolidated 或 stg.udp\_\<名稱>_Relationship 預存程序。  
   
 -   模型的狀態不得為 [已認可] ****。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73729251"
   
          ![主資料管理員中的暫存批次頁面](../master-data-services/media/mds-stagingbatchespage.png "主資料管理員中的暫存批次頁面")  
   
-         暫存程序的啟動間隔，由 ** 中的 [暫存批次間隔]**[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+         暫存程序的啟動間隔，由 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的 [暫存批次間隔]**** 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 5.  檢視暫存期間發生的錯誤。 如需詳細資訊，請參閱[檢視暫存期間發生的錯誤 &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md) 和[暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)。  
   

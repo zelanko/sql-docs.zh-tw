@@ -14,10 +14,10 @@ ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729815"
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
@@ -45,7 +45,7 @@ ms.locfileid: "73729815"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [指派功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [指派功能區域權限 &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  

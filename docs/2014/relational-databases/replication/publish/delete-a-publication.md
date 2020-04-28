@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882283"
 ---
 # <a name="delete-a-publication"></a>刪除發行集
@@ -35,7 +35,7 @@ ms.locfileid: "73882283"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  從 **的** [本機發行集] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]資料夾中刪除發行集。  
   
 #### <a name="to-delete-a-publication"></a>若要刪除出版品  
@@ -46,7 +46,7 @@ ms.locfileid: "73882283"
   
 3.  以滑鼠右鍵按一下您想刪除的發行集，然後按一下 **[刪除]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序以程式設計的方式刪除發行集。 使用哪些預存程序取決於所要刪除的發行集類型而定。  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "73882283"
   
 3.  (選擇性) 在訂閱資料庫的訂閱者端，執行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql) 來移除訂閱資料庫中任何剩餘的複寫中繼資料。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會示範如何移除交易式發行集，並針對資料庫停用交易式發行。 這個範例假設之前已移除所有的訂閱。 如需相關資訊，請參閱 [Delete a Pull Subscription](../delete-a-pull-subscription.md) 或 [Delete a Push Subscription](../delete-a-push-subscription.md)。  
   
  [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
@@ -91,7 +91,7 @@ ms.locfileid: "73882283"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式刪除發行集。 用來移除發行集的 RMO 類別，將取決於所移除的發行集類型而定。  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>移除快照式或交易式發行集  
@@ -142,7 +142,7 @@ ms.locfileid: "73882283"
   
 7.  關閉連接。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  下列範例會刪除交易式發行集。 如果此資料庫沒有任何其他的交易式發行集存在，則也會停用交易式發行。  
   
  [!code-csharp[HowTo#rmo_DropTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  

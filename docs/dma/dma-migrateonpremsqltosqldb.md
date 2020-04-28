@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056608"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant，將內部部署 SQL Server 或 Azure Vm 上的 SQL Server 遷移至 Azure SQL Database
@@ -41,7 +41,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 1. 針對 [來源]，在 [連線**至來源伺服器]** 底下的 [**伺服器名稱**] 文字方塊中，輸入來源 SQL Server 實例的名稱。
 
-2. 選取來源 SQL Server 實例所支援的**驗證類型**。
+2. 選取來源 SQL Server 執行個體所支援的 [驗證類型]****。
 
    > [!NOTE]
    > 建議您選取 [連線**poperties**] 底下的 [**加密**連線] 核取方塊來加密連接。
@@ -72,7 +72,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 3. 選取 [連接]  。
 
-4. 選取要遷移的單一目標資料庫。
+4. 選取要移轉至的單一目標資料庫。
 
    > [!NOTE]
    > 如果您想要遷移 Windows 使用者，請在 [**目標外部使用者功能變數名稱**] 文字方塊中，確定已正確指定目標外部使用者功能變數名稱。
@@ -81,11 +81,11 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 5. 選取 [下一步]  。
 
-## <a name="select-schema-objects"></a>選取架構物件
+## <a name="select-schema-objects"></a>選取結構描述物件
 
-1. 從您要遷移到 Azure SQL Database 的源資料庫中選取架構物件。
+1. 從來源資料庫中，選取您要遷移至 Azure SQL Database 的結構描述物件。
 
-    ![選取架構物件](../dma/media/select-schema-objects.png)
+    ![選取結構描述物件](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
        > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
@@ -98,17 +98,17 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![產生的腳本](../dma/media/generated-script.png)
 
-## <a name="deploy-schema"></a>部署架構
+## <a name="deploy-schema"></a>部署結構描述
 
 1. 選取 [**部署架構**]。
 
-2. 檢查架構部署的結果。
+2. 檢閱結構描述部署的結果。
 
     ![架構部署結果](../dma/media/schema-deployment-results.png)
 
 3. 選取 [**遷移資料**] 以起始資料移轉程式。
 
-4. 選取含有您想要遷移之資料的資料表。
+4. 選取內含所要移轉資料的資料表。
 
     ![選取要遷移的資料表](../dma/media/select-tables-to-migrate.png) 
 

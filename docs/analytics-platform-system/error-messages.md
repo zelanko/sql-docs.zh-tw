@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401160"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>平行處理資料倉儲中的錯誤訊息
 
 平行處理資料倉儲（PDW）錯誤訊息會報告 PDW 元件遇到的錯誤和問題，而且也可以包含透過 PDW 呈現的 SQL Server 錯誤。 這些錯誤訊息會使用一致的語法來呈現資訊。 瞭解此語法可讓您找出並修正 SQL Server PDW 上的問題。  
   
-## <a name="Basics"></a>錯誤訊息基本概念  
+## <a name="error-message-basics"></a><a name="Basics"></a>錯誤訊息基本概念  
 傳回的錯誤訊息會遵循相同的語法。  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  

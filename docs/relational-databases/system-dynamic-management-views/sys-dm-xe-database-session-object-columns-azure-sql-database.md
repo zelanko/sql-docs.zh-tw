@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 36dfed5d0c24082d01248d7e6e8e1e62e1725e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844424"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
@@ -30,11 +30,11 @@ ms.locfileid: "73844424"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 與 sys.databases 具有多對一關聯性。 dm_xe_database_sessions 位址。 不可為 Null。|  
-|column_name|**Nvarchar （60）**|組態值的名稱。 不可為 Null。|  
+|column_name|**nvarchar(60)**|組態值的名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。 不可為 Null。|  
-|column_value|**Nvarchar （2048）**|資料行的設定值。 可為 Null。|  
-|object_type|**Nvarchar （60）**|物件的型別。  不可為 null。 object_type 是下列其中一個：<br /><br /> event<br /><br /> 目標|  
-|object_name|**Nvarchar （60）**|這個資料行所屬之物件的名稱。 不可為 Null。|  
+|column_value|**nvarchar(2048)**|資料行的設定值。 可為 Null。|  
+|object_type|**nvarchar(60)**|物件的型別。  不可為 null。 object_type 是下列其中一個：<br /><br /> event<br /><br /> 目標|  
+|object_name|**nvarchar(60)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  

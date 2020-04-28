@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056528"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>使用 Data Migration Assistant 升級 SQL Server
@@ -41,7 +41,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 1. 針對 [來源]，在 [**來源伺服器詳細資料**] 區段的 [**伺服器名稱**] 欄位中輸入 SQL Server 實例名稱。 
 
-2. 選取來源 SQL Server 實例所支援的**驗證類型**。
+2. 選取來源 SQL Server 執行個體所支援的 [驗證類型]****。
 
 3. 針對 [目標]，在 [**目標伺服器詳細資料**] 區段的 [**伺服器名稱**] 欄位中輸入 SQL Server 實例名稱。 
 

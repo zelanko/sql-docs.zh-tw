@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095970"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何：在 Visual Studio .NET 中建立 Visual C# SMO 專案
@@ -31,7 +31,7 @@ ms.locfileid: "74095970"
   
 1. 啟動 Visual Studio
   
-2. **在 [檔案**] 功能表上，依序按一下 [**新增**] 和 [**專案**]。  此時會出現 [新增專案]**** 對話方塊。   
+2. **在 [檔案**] 功能表上，依序按一下 [**新增**] 和 [**專案**]。  [新增專案]  對話方塊隨即出現。   
   
 3. 在 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **已安裝**] 窗格中，流覽至 [**範本**\\] [**Visual c #**\\**視窗**]，然後選取 [**主控台應用**  
   

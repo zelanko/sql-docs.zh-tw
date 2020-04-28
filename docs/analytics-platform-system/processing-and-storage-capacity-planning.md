@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400539"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>分析平臺系統中的處理和儲存容量
 您的業務需求會決定資料縮放單位的數目，以及您的分析平臺系統（AP）應用裝置所需的計算節點磁片大小。 使用這些處理和儲存體計算來引導您的容量購買和規劃決策。  
   
   
-## <a name="section1"></a>規劃處理容量  
+## <a name="planning-for-processing-capacity"></a><a name="section1"></a>規劃處理容量  
 SQL Server 平行資料倉儲（PDW）的查詢效能主要取決於平行處理資料的 CPU 核心數目。 在限制範圍內，提高平行處理原則可改善大量平行處理（MPP）查詢效能。 即使您的資料大小相對較小，還是會藉由具有更大的平行處理原則來增強 MPP 查詢引擎的能力。  
   
 例如，具有12個計算節點的設備具有 192 CPU 核心，可平行處理您的資料。 這是192路平行處理原則！ 具有56計算節點的設備，有896核心全都以平行方式運作。 如果沒有 MPP 運算，就無法達成這種程度的平行處理原則。  
@@ -72,13 +72,13 @@ SQL Server 平行資料倉儲（PDW）的查詢效能主要取決於平行處理
 |5|15|240|3840|25%|  
 |6|18|288|4608|20%|  
 |7|21|336|5376|17%|  
-|8|24|384|6,144|14|  
+|8|24|384|6,144|14%|  
 |9|27|432|6912|13%|  
 |12|36|576|9216|33%|  
 |15|45|720|11520|25%|  
 |18|54|864|13824|20%|  
   
-## <a name="section2"></a>規劃儲存容量  
+## <a name="planning-for-storage-capacity"></a><a name="section2"></a>規劃儲存容量  
 下表估計您可以在完整建立的分析平臺系統應用裝置上，載入並儲存最多 6 pb 的未壓縮資料。 
   
 |廠商|磁碟機大小|每個計算節點的實體資料儲存體|每個機架的計算節點上限|每個機架的實體最大資料儲存空間|每個機架估計的最大使用者資料儲存空間|最大機架|每個設備估計的最大使用者資料儲存空間|  
@@ -86,9 +86,9 @@ SQL Server 平行資料倉儲（PDW）的查詢效能主要取決於平行處理
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4480 TB|  
 |HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8960 TB|  
-|戴爾會|1 TB|16 TB|9|144 TB|360 TB|6|2160 TB|  
-|戴爾會|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
-|戴爾會|4 TB|64 TB|9|576 TB|1440 TB|6|8640 TB|   
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2160 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
+|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8640 TB|   
   
 簡短  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401042"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>將資料載入平行處理資料倉儲
@@ -25,7 +25,7 @@ ms.locfileid: "74401042"
 ## <a name="load-with-dwloader"></a>使用 dwloader 載入  
 使用[Dwloader 命令列載入](dwloader.md)器是將資料載入 PDW 的最快方式。  
   
-![載入處理序](media/loading-process.png "載入處理序")  
+![正在載入進程](media/loading-process.png "載入處理序")  
   
 dwloader 會將資料直接載入計算節點，而不需透過控制節點傳遞資料。 為了載入資料，dwloader 會先與控制節點進行通訊，以取得計算節點的連絡人資訊。 dwloader 會設定每個計算節點的通道，然後以迴圈配置資源方式將256個區塊的資料傳送至計算節點。  
   
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>相關工作  
   
-|Task|描述|  
+|工作|描述|  
 |--------|---------------|  
 |建立臨時資料庫。|[建立臨時資料庫](staging-database.md)|  
 |使用 Integration Services 載入。|[使用 Integration Services 載入](load-with-ssis.md)|  

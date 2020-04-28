@@ -11,10 +11,10 @@ ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728618"
 ---
 # <a name="change-the-order-of-attributes"></a>變更屬性的順序
@@ -28,7 +28,7 @@ ms.locfileid: "73728618"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>若要變更屬性的順序  
   
@@ -56,6 +56,6 @@ ms.locfileid: "73728618"
 7.  按一下 [上移]**** 或 [下移]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

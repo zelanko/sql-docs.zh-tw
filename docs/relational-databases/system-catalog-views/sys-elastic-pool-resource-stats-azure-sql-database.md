@@ -19,10 +19,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843865"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
@@ -46,7 +46,7 @@ ms.locfileid: "73843865"
 |**max_worker_percent**|**decimal （5，2）**|集區限制的並行背景工作角色 (要求) 百分比。|  
 |**max_session_percent**|**decimal （5，2）**|集區限制的並行工作階段百分比。|  
 |**elastic_pool_dtu_limit**|**int**|間隔期間此彈性集區目前最大的彈性集區 DTU 設定。|  
-|**elastic_pool_storage_limit_mb**|**Bigint**|間隔期間此彈性集區目前最大的彈性集區儲存體限制設定 (MB)。|
+|**elastic_pool_storage_limit_mb**|**bigint**|間隔期間此彈性集區目前最大的彈性集區儲存體限制設定 (MB)。|
 |**avg_allocated_storage_percent**|**decimal （5，2）**|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區之資料大小上限的資料空間比例。  如需詳細資訊，請參閱： [SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>備註

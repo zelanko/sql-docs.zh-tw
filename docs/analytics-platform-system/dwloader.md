@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401170"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>平行處理資料倉儲的 dwloader 命令列載入器
@@ -157,7 +157,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name。*[*架構*]。*table_name*  
+**-T** *target_database_name。* [ *架構*]。*table_name*  
 目的地資料表的三部分名稱。  
   
 **-I** *source_data_location*  
@@ -209,7 +209,7 @@ For more information about this install option, see [Install dwloader Command-Li
 如果發生載入失敗， **dwloader**會儲存無法載入的資料列，而失敗會將失敗資訊描述在名為*load_failure_file_name*的檔案中。 如果此檔案已經存在，dwloader 就會覆寫現有的檔案。 當第一次失敗時，會建立*load_failure_file_name* 。 如果所有資料列都載入成功，則不會建立*load_failure_file_name* 。  
   
 **-fh** *number_header_rows*  
-*Source_data_file_name*開頭要忽略的行（列）數目。 預設值是 0。  
+*Source_data_file_name*開頭要忽略的行（列）數目。 預設值為 0。  
   
 <variable_length_column_options>  
 具有以字元分隔之可變長度資料行的*source_data_file_name*選項。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
@@ -419,7 +419,7 @@ upsert **-K**  *merge_column* [,.。。*n* ]
   
 從 SQL Server 2012 PDW 開始，控制節點預設會動態計算每個負載的批次大小。 此自動計算是根據數個參數，例如記憶體大小、目標資料表類型、目標資料表架構、載入類型、檔案大小，以及使用者的資源類別。  
   
-例如，如果載入模式是 FASTAPPEND，且資料表具有叢集資料行存放區索引，SQL Server PDW 預設會嘗試使用批次大小1048576，如此資料列群組就會立即關閉並載入至資料行存放區，而不需要經過差異存放區。 如果記憶體不允許批次大小為1048576，dwloader 會選擇較小的 batchsize。  
+例如，如果載入模式為 FASTAPPEND，且資料表具有叢集資料行存放區索引，則 SQL Server PDW 預設會嘗試使用批次大小1048576，讓資料列群組會立即關閉並載入至資料行存放區，而不會經過差異存放區。 如果記憶體不允許批次大小為1048576，dwloader 會選擇較小的 batchsize。  
   
 如果載入類型為 FASTAPPEND，則*batchsize*適用于將資料載入資料表中，否則*batchsize*適用于將資料載入至臨時表。  
   
@@ -554,13 +554,13 @@ Append 可以在多重交易模式下執行（使用-m 引數），但它不是�
   
 |資料表類型|多重交易<br />模式（-m）|資料表是空的|支援的並行|記錄|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|堆積|是|是|是|有限|  
-|堆積|是|否|是|有限|  
-|堆積|否|是|否|有限|  
-|堆積|否|否|否|有限|  
-|Cl|是|是|否|有限|  
+|堆積|是|是|是|最小|  
+|堆積|是|否|是|最小|  
+|堆積|否|是|否|最小|  
+|堆積|否|否|否|最小|  
+|Cl|是|是|否|最小|  
 |Cl|是|否|是|完整|  
-|Cl|否|是|否|有限|  
+|Cl|否|是|否|最小|  
 |Cl|否|否|是|完整|  
   
 上表顯示使用附加模式載入至堆積或叢集索引（CI）資料表的**dwloader** ，其中包含或不含多重交易旗標，並載入至空白資料表或非空白資料表。 每個這種負載組合的鎖定和記錄行為都會顯示在資料表中。 例如，以附加模式將（第2個）階段載入至不含多重交易模式的叢集索引，且在空的資料表中，將會在資料表上建立獨佔鎖定，而且記錄是最小的。 這表示客戶將無法同時載入（第二個）階段，並同時查詢到空白資料表。 不過，使用相同的設定載入非空白資料表時，PDW 不會發出資料表的獨佔鎖定，而且可能會進行平行存取。 可惜的是，完整的記錄會使程式變慢。  

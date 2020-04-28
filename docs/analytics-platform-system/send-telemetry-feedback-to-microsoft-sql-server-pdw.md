@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400366"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>將遙測意見反應傳送給 Microsoft 以分析平臺系統
@@ -22,10 +22,10 @@ Analytics Platform System 具有選擇性的遙測功能，可將管理主控台
 > [!NOTE]  
 > 在此版本中，Microsoft 不會主動監視遙測資料。 收集的資料僅供分析之用。  
   
-## <a name="privacy"></a>隱私權  
+## <a name="privacy"></a><a name="privacy"></a>隱私權  
 為了提供最高隱私權保護，AP 會在不啟用遙測的情況下寄送。 啟用這項功能之前，請先參閱[Microsoft Analytics Platform System 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=400902)。 若要加入宣告，請執行下列所述的 PowerShell 腳本。  
   
-## <a name="enable"></a>啟用遙測  
+## <a name="enable-telemetry"></a><a name="enable"></a>啟用遙測  
 **DNS 轉送：** 將遙測資料傳送至 Microsoft 需要分析平臺系統透過 DNS 轉寄站連接到網際網路。 若要啟用這項功能，您必須啟用所有主機和工作負載 Vm 上的 DNS 轉送。 使用`SetupDnsForwarder`選項`Enable-RemoteMonitoring`來叫用命令，以正確設定 DNS 轉送和啟用遙測。 當 DNS `Enable-RemoteMonitoring`轉送已設定`SetupDnsForwarder` ，而您只想要啟用活動訊號監視時，叫用命令，而不使用選項。  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ Analytics Platform System 具有選擇性的遙測功能，可將管理主控台
     > [!NOTE]  
     > 若要匯入，您必須在命令中使用兩個句點。  
   
-    **實例**  
+    **範例：**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -75,7 +75,7 @@ Analytics Platform System 具有選擇性的遙測功能，可將管理主控台
   
 執行`Enable-RemoteMonitoring`命令多次並不會有任何傷害。 如果已設定 DNS 轉寄站，您會收到一則警告訊息，指出這是案例。  
   
-## <a name="disable"></a>停用遙測  
+## <a name="disable-telemetry"></a><a name="disable"></a>停用遙測  
 停用遙測將會停止將設備狀態相關資訊傳送至雲端中的「AP 監視」服務的所有作業。  
   
 > [!IMPORTANT]  
@@ -92,7 +92,7 @@ Analytics Platform System 具有選擇性的遙測功能，可將管理主控台
     > [!NOTE]  
     > 若要匯入，您必須在命令中使用兩個句點。  
   
-    **實例**  
+    **範例：**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Analytics Platform System 具有選擇性的遙測功能，可將管理主控台
   
 4.  叫用`Disable-RemoteMonitoring`不含參數的命令。 此命令將會停止傳送意見反應。 （這不會影響本機監視）。不過，此命令不會停用 DNS 轉寄站，也不會停用任何網際網路連線能力。 這必須在成功停用意見反應之後手動完成。  
   
-    **實例**  
+    **範例：**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -111,7 +111,7 @@ Analytics Platform System 具有選擇性的遙測功能，可將管理主控台
 執行`Disable-RemoteMonitoring`命令多次並不會有任何傷害。  
   
 ## <a name="next-steps"></a>後續步驟
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 - [使用管理主控台 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [使用系統檢視 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [使用 System Center Operations Manager &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

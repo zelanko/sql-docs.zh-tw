@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74164904"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
@@ -38,10 +38,10 @@ ms.locfileid: "74164904"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|物件的記憶體位址。|  
-|**task_state**|**Nvarchar （60）**|工作的狀態。 這可以是下列其中一項：<br /><br /> PENDING；等待工作者執行緒。<br /><br /> RUNNABLE：可執行的，但等待接收配量。<br /><br /> RUNNING：目前在排程器上執行。<br /><br /> SUSPENDED：有工作者，但等待事件。<br /><br /> DONE：已完成。<br /><br /> SPINLOOP：卡在微調鎖定中。|  
+|**task_state**|**nvarchar(60)**|工作的狀態。 這可以是下列項目之一：<br /><br /> PENDING；等待工作者執行緒。<br /><br /> RUNNABLE：可執行的，但等待接收配量。<br /><br /> RUNNING：目前在排程器上執行。<br /><br /> SUSPENDED：有工作者，但等待事件。<br /><br /> DONE：已完成。<br /><br /> SPINLOOP：卡在微調鎖定中。|  
 |**context_switches_count**|**int**|這項工作已完成的排程器內容切換數目。|  
 |**pending_io_count**|**int**|這項工作執行的實體 I/O 數目。|  
-|**pending_io_byte_count**|**Bigint**|這項工作執行之 I/O 的總位元組計數。|  
+|**pending_io_byte_count**|**bigint**|這項工作執行之 I/O 的總位元組計數。|  
 |**pending_io_byte_average**|**int**|這項工作執行之 I/O 的平均位元組計數。|  
 |**scheduler_id**|**int**|父排程器的識別碼。 這是這項工作之排程器資訊的控制代碼。 如需詳細資訊，請參閱[dm_os_schedulers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
 |**session_id**|**smallint**|與這項工作相關聯的工作階段識別碼。|  

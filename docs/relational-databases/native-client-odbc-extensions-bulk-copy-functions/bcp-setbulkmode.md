@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782393"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  如果您嘗試使用包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫序列來呼叫 bcp_setbulkmode，其中一個函式呼叫會傳回序列錯誤失敗。 如果您選擇更正失敗，請呼叫 bcp_init 以重設所有設定並重新開始。  
   
- 以下是一些會導致函式順序錯誤的函式呼叫範例：  
+ 以下是會產生函式順序錯誤的一些函式呼叫範例：  
   
 ```  
 bcp_init("table", DB_IN);  

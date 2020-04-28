@@ -11,10 +11,10 @@ ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729106"
 ---
 # <a name="member-revision-history-master-data-services"></a>成員修訂歷程記錄 (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "73729106"
 ## <a name="view-and-manage-revision-history-by-entity"></a>依實體檢視及管理修訂歷程記錄  
  在 Explorer 功能區域中，您可以檢視實體中所有成員的修訂。 如果您有更新的權限，即可將成員復原回先前的修訂版本。  
   
- **若要查看及管理修訂歷程記錄**  
+ **若要檢視及管理修訂歷程記錄**  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，選取模型和版本，然後按一下 [Explorer] ****。  
   
