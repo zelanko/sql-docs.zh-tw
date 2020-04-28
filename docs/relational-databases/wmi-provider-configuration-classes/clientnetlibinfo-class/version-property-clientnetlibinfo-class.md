@@ -18,10 +18,10 @@ ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d795f4f76f58829c9c52a6ba3e28f3afa7103080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659160"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 屬性 (ClientNetLibInfo 類別)

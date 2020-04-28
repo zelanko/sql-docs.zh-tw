@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728476"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>建立訂閱檢視以匯出資料 (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728476"
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
--   您必須擁有存取 **[整合管理]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必須擁有存取 **[整合管理]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>建立和編輯訂閱檢視  
   
@@ -73,24 +73,24 @@ ms.locfileid: "73728476"
 |版本|版本名稱。|  
 |版本旗標|版本旗標名稱。|  
 |衍生階層|衍生階層名稱。|  
-|實體|實體名稱。|  
+|單位|實體名稱。|  
 |[格式]|指定檢視中資料的類型。|  
 |層級|指定檢視中的層級數目 (僅用於明確層級或衍生層級檢視格式)。|  
 |包含刪除成員|表示檢視中是否包含虛刪除成員。|  
   
  當您按一下檢視時，會顯示下列資訊。  
   
--   **建立者**：建立視圖的使用者名稱。  
+-   **建立者**：建立檢視的使用者名稱。  
   
--   **于**：建立視圖的日期和時間。  
+-   **於**：檢視的建立日期和時間。  
   
--   **更新者**：上次更新視圖的使用者名稱。  
+-   **更新者**：上次更新檢視的使用者名稱。  
   
--   **于**：上次更新視圖的日期和時間。  
+-   **於**：上次更新檢視的日期和時間。  
   
 ## <a name="see-also"></a>另請參閱  
  [總覽：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [刪除訂閱視圖 &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [建立 &#40;Master Data Services 的版本旗標&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

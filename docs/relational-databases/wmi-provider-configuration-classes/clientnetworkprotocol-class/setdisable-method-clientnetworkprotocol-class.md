@@ -18,10 +18,10 @@ ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f2e47e881236819de972d427f902fa5854f0b8b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660224"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法 (ClientNetworkProtocol 類別)

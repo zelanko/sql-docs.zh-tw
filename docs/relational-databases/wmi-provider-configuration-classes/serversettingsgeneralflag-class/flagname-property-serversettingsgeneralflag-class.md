@@ -18,10 +18,10 @@ ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1061ed77fd52764b70c56b97d161d960e11e8129
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660296"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 屬性 (ServerSettingsGeneralFlag 類別)

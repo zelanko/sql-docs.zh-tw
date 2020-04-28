@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798028"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
@@ -48,9 +48,9 @@ ms.locfileid: "72798028"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   在明確或隱含的交易中，並不允許使用 BACKUP 陳述式。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72798028"
   
 -   如需詳細資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」*(Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
   
@@ -66,24 +66,24 @@ ms.locfileid: "72798028"
   
 -   根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
-###  <a name="Security"></a> Security  
- 資料庫備份上的 TRUSTWORTHY 是設為 OFF。 如需如何將 TRUSTWORTHY 設為 ON，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+###  <a name="security"></a><a name="Security"></a> Security  
+ 資料庫備份上的 TRUSTWORTHY 是設為 OFF。 如需如何將 TRUSTWORTHY 設成 ON 的資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，建立備份的 `PASSWORD` 和 `MEDIAPASSWORD` 選項已遭到停用。 您仍然可以還原以密碼建立的備份。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
- 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並不會檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
+ 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並 不會 檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您按一下 [指令碼][!INCLUDE[tsql](../../includes/tsql-md.md)] [ 按鈕，再選取指令碼目的地，即可產生對應的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您按一下 [指令碼]**** 按鈕，再選取指令碼目的地，即可產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
   
 #### <a name="to-back-up-a-database"></a>備份資料庫  
   
-1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
+1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，根據資料庫選取使用者資料庫或展開 **[系統資料庫]** ，然後選取一個系統資料庫。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "72798028"
   
      請注意，您可在建立完整資料庫備份之後，建立差異資料庫備份。如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)。  
   
-7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「*只複本備份*」是與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份順序無關的備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
+7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」** 是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
   
     > [!NOTE]  
     >  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
@@ -170,7 +170,7 @@ ms.locfileid: "72798028"
 > [!NOTE]  
 >  或者，您可以使用「維護計畫精靈」來建立資料庫備份。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-full-database-backup"></a>建立完整資料庫備份  
   
@@ -191,7 +191,7 @@ ms.locfileid: "72798028"
     |選項|描述|  
     |------------|-----------------|  
     |*database*|為要備份的資料庫。|  
-    |*backup_device* [ **，**.。。*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> {DISK &#124; 磁帶}**=** _physical_backup_device_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
+    |*backup_device* [ **,** ...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> {DISK &#124; 磁帶}**=** _physical_backup_device_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
     |WITH *with_options* [ **,**...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
   
 2.  選擇性地指定一或多個 WITH 選項。 這裡描述的是一些基本的 WITH 選項。 如需所有 WITH 選項的資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  
@@ -222,7 +222,7 @@ ms.locfileid: "72798028"
         > [!IMPORTANT]  
         >  當您使用 BACKUP 陳述式的 FORMAT 子句時要非常小心，因為它會破壞備份媒體先前所儲存的任何備份。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
   
 #### <a name="a-backing-up-to-a-disk-device"></a>A. 備份到磁碟裝置  
  下列範例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立新的媒體集，以將整個 `FORMAT` 資料庫備份至磁碟。  
@@ -270,9 +270,9 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-1.  使用 `Backup-SqlDatabase` Cmdlet。 若要明確指出這是完整資料庫備份，請指定 **-BackupAction**參數及其預設值`Database`。 此參數在完整資料庫備份下是選擇性的。  
+1.  使用 `Backup-SqlDatabase` 指令程式。 若要明確指出這是完整資料庫備份，請指定 **-BackupAction**參數及其預設值`Database`。 此參數在完整資料庫備份下是選擇性的。  
   
      下列範例會在伺服器執行個體 `MyDB` 的預設備份位置，建立 `Computer\Instance`資料庫的完整資料庫備份。 這個範例指定了選擇性的 `-BackupAction Database`。  
   
@@ -280,13 +280,13 @@ GO
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Database  
     ```  
   
- **若要設定及使用 SQL Server PowerShell 提供者**  
+ **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
--   [備份資料庫（SQL Server）](create-a-full-database-backup-sql-server.md)  
+-   [備份資料庫 (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
 -   [建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
@@ -303,8 +303,8 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [媒體集、媒體家族和備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [備份資料庫 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)   

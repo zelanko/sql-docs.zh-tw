@@ -17,10 +17,10 @@ ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 545c13aaa062c0aa55a72d74c52cf4cc112dc9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660671"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag 類別

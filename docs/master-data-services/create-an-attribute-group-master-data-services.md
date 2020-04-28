@@ -14,24 +14,24 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 534e8bed6596c9b15e05ec179ece3d37a64b15ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728448"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>建立屬性群組 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  當您想要在總管[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**方格的個別索引標籤上顯示屬性時，可以在 ** 中建立屬性群組。  
+  當您想要在總管**** 方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   至少有一個屬性必須存在。 如需詳細資訊，請參閱 [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)(管理員 (Master Data Services))。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "73728448"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [讓使用者可以看到屬性群組 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [讓使用者看到屬性群組 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)   
  [變更屬性組名 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [刪除屬性群組 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
- [分葉許可權 &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
+ [分葉權限 &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
    
   
   

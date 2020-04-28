@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632857"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 總覽
@@ -75,7 +75,7 @@ Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 
 
 DMA 會取代所有舊版的 SQL Server Upgrade Advisor，而且應該用於大部分 SQL Server 版本的升級。 支援的來源和目標版本包括：
 
-**根源**
+**來源**
 
 - SQL Server 2005
 - SQL Server 2008

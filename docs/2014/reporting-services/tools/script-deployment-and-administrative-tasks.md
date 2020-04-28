@@ -23,14 +23,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0ea3b81f69b46fbb829879f9976cb45a11ab803
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783350"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援使用指令碼，以自動執行例行安裝、部署和管理工作。 部署報表伺服器是一個多步驟的程序， 您必須使用數個工具和程序來設定部署；並沒有單一程式或方法可用來自動化處理所有工作。  
   
  不是每一個步驟都應該自動化； 在某些情況下，手動執行步驟或是透過圖形工具是最簡單且最有效的方法。 例如，如果您想要部署大量的報表和模型，則複製報表伺服器資料庫要比撰寫程式碼來重新建立報表伺服器環境更為理想。  
@@ -54,31 +53,28 @@ ms.locfileid: "72783350"
 |設定向外延展部署。|請從下列自動化向外延展部署的方法中進行選擇：<br /><br /> 執行 rskeymgmt.exe 公用程式，將報表伺服器執行個體聯結到現有的安裝。 如需詳細資訊，請參閱[新增和移除向外延展部署的加密金鑰 &#40;SSRS 設定管理員&#41;](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。<br /><br /> 撰寫可對報表伺服器 WMI 提供者執行的自訂程式碼。|  
 |備份加密金鑰。|請從下列自動化加密金鑰備份的方法中進行選擇：<br /><br /> 執行 rskeymgmt.exe 公用程式來備份這些金鑰。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。<br /><br /> 撰寫可對報表伺服器 WMI 提供者執行的自訂程式碼。|  
 |設定報表伺服器電子郵件。|撰寫可對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者執行的自訂程式碼。 提供者支援電子郵件組態設定的子集。<br /><br /> 雖然 RSReportServer.config 檔案包含所有設定，但請不要以自動方式使用檔案。 亦即，請不要使用批次檔複製檔案到其他報表伺服器。 每個組態檔都包含適用於目前執行個體的值。 這些值對其他報表伺服器執行個體無效。<br /><br /> 如需設定的詳細資訊，請參閱[設定報表伺服器以進行電子郵件傳遞 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
-|設定自動執行帳戶。|請從下列讓自動處理帳戶組態自動化的方法中進行選擇：<br /><br /> 執行 rsconfig.exe 公用程式來設定此帳戶。 如需詳細資訊，請參閱[&#40;SSRS Configuration Manager&#41;設定自動執行帳戶](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 撰寫可呼叫報表伺服器 WMI 提供者的自訂程式碼。|  
-|在另一部報表伺服器上部署現有的內容，包括資料夾階層、角色指派、報表、訂閱、排程、資料來源和資源。|重新建立現有報表伺服器環境的最佳方式，就是將報表伺服器資料庫複製到新的報表伺服器執行個體。<br /><br /> 替代方式是撰寫以程式設計方式重新建立現有報表伺服器內容的自訂程式碼。 不過，請注意，訂閱、報表快照集和報表記錄不能以程式設計方式重新建立。<br /><br /> 某些部署會因為將這兩種技術一起使用而獲益 (也就是還原報表伺服器資料庫，然後執行會針對特定安裝而修改報表伺服器資料庫的自訂程式碼)。<br /><br /> 如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。<br /><br /> 如需重新放置報表伺服器資料庫的詳細資訊，請參閱[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 如需有關以程式設計方式建立報表伺服器環境的詳細資訊，請參閱本主題的「使用指令碼來移轉報表伺服器內容和資料夾」一節。|  
+|設定自動執行帳戶。|請從下列讓自動處理帳戶組態自動化的方法中進行選擇：<br /><br /> 執行 rsconfig.exe 公用程式來設定此帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 撰寫可呼叫報表伺服器 WMI 提供者的自訂程式碼。|  
+|在另一部報表伺服器上部署現有的內容，包括資料夾階層、角色指派、報表、訂閱、排程、資料來源和資源。|重新建立現有報表伺服器環境的最佳方式，就是將報表伺服器資料庫複製到新的報表伺服器執行個體。<br /><br /> 替代方式是撰寫以程式設計方式重新建立現有報表伺服器內容的自訂程式碼。 不過，請注意，訂閱、報表快照集和報表記錄不能以程式設計方式重新建立。<br /><br /> 某些部署會因為將這兩種技術一起使用而獲益 (也就是還原報表伺服器資料庫，然後執行會針對特定安裝而修改報表伺服器資料庫的自訂程式碼)。<br /><br />  如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。<br /><br /> 如需重新放置報表伺服器資料庫的詳細資訊，請參閱[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 如需有關以程式設計方式建立報表伺服器環境的詳細資訊，請參閱本主題的「使用指令碼來移轉報表伺服器內容和資料夾」一節。|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>自動化伺服器部署的工具和技術  
  下列清單摘要列出可用來自動化部署和維護工作的程式與介面。  
   
 -   安裝程式可以在自動模式中執行，以便安裝報表伺服器元件，有時也可以進行設定。 您必須使用「僅限檔案」安裝選項，才能讓安裝程式設定報表伺服器執行個體。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令列公用程式可用於本機和遠端伺服器組態。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令列公用程式可用於本機和遠端伺服器組態。  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者會公開類別、屬性和方法，讓您能夠設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的所有層面，包括指定服務帳戶、設定 URL、建立及設定報表伺服器資料庫，或是設定報表伺服器以進行電子郵件傳遞。 您必須撰寫自訂程式碼或指令碼，才能使用 WMI 提供者。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](access-the-reporting-services-wmi-provider.md)。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者會公開類別、屬性和方法，讓您能夠設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的所有層面，包括指定服務帳戶、設定 URL、建立及設定報表伺服器資料庫，或是設定報表伺服器以進行電子郵件傳遞。 您必須撰寫自訂程式碼或指令碼，才能使用 WMI 提供者。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](access-the-reporting-services-wmi-provider.md)。  
   
      撰寫程式碼的替代方案是使用命令列公用程式 (rsconfig.exe 和 rskeymgmt.exe)， 您可以撰寫批次檔來執行這些公用程式， 這些公用程式可用來自動化某些組態工作，而不是所有組態工作。  
   
--   報表伺服器腳本主機工具（cmd.exe）可以執行自訂[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]程式碼，您可能會撰寫此程式碼，以重新建立或將現有的內容從一部報表伺服器移至另一部。 當您使用這個方式時，會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫指令碼，並將其另存為 .rss 檔案，然後在目標報表伺服器上使用 rs.exe 來執行此指令碼。 您所撰寫的指令碼可以呼叫報表伺服器 Web 服務的 SOAP 介面。 部署指令碼是使用這種方法所撰寫，因為它可讓您重新建立報表伺服器資料夾命名空間與內容，以及重新建立以角色為基礎的安全性。  
+-   報表伺服器 Script Host 工具 (rs.exe) 可以執行您可能會撰寫的自訂 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，以便重新建立現有內容，或在報表伺服器之間移動現有內容。 當您使用這個方式時，會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫指令碼，並將其另存為 .rss 檔案，然後在目標報表伺服器上使用 rs.exe 來執行此指令碼。 您所撰寫的指令碼可以呼叫報表伺服器 Web 服務的 SOAP 介面。 部署指令碼是使用這種方法所撰寫，因為它可讓您重新建立報表伺服器資料夾命名空間與內容，以及重新建立以角色為基礎的安全性。  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版引進了適用於 SharePoint 整合模式的 PowerShell 指令程式。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版引進了適用於 SharePoint 整合模式的 PowerShell 指令程式。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>使用指令碼來移轉報表伺服器內容和資料夾  
  您可以撰寫指令碼來複製另一個報表伺服器執行個體上的報表伺服器環境。 部署指令碼通常是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫，然後使用報表伺服器 Script Host 公用程式處理。  
   
- 如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
+  如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
   
  使用指令碼，即可將資料夾、共用資料來源、資源、報表、角色指派以及設定從一部伺服器複製到另一部伺服器。 您為某個報表伺服器執行個體撰寫一個指令碼，然後在另一部伺服器上執行此指令碼，以重新建立報表伺服器命名空間。 如果您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署中有多個報表伺服器，可以分別在每一個伺服器上執行指令碼，以相同方式設定所有伺服器。  
   
@@ -105,7 +101,7 @@ ms.locfileid: "72783350"
  若要使用此指令碼，請將它儲存為 .rss 副檔名的檔案，然後使用 rs.exe 命令提示字元公用程式，在報表伺服器上執行這個檔案。 系統不會編譯此指令碼，所以不需要安裝 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 這個範例假設您具有主控報表伺服器之本機電腦的權限。 如果您不是在具有權限的帳戶之下登入，您必須透過其他命令列引數來指定帳戶資訊。 如需詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)。  
   
 > [!TIP]  
->  如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
+>   如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
   
 ```vb
 Public Sub Main()  
@@ -131,6 +127,6 @@ End Sub
  [從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [安裝 Reporting Services 原生模式報表伺服器](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [&#40;SSRS&#41;的報表伺服器命令提示字元公用程式](report-server-command-prompt-utilities-ssrs.md)   
+ [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [規劃 Reporting Services 和 Power View 瀏覽器支援 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services 工具](reporting-services-tools.md)  

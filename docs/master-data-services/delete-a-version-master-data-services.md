@@ -14,10 +14,10 @@ ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 8ac756143790e8d6c9494489438157ee44c02d06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728346"
 ---
 # <a name="delete-a-version-master-data-services"></a>刪除版本 (Master Data Services)

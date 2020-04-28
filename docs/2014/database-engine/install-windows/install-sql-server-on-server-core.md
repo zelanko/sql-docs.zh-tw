@@ -11,32 +11,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e3e244b2c4892d725e8e3ddf684b55a224138a50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637676"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>在 Server Core 上安裝 SQL Server 2014
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上安裝 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 本主題提供在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的安裝程式特定詳細資料。  
   
- 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 作業系統的 Server Core 安裝選項提供執行特定伺服器角色的基本環境， 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需在上[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]執行之 server core 的詳細資訊，請參閱適用于[Windows server 2008 R2 的伺服器核心](https://go.microsoft.com/fwlink/?LinkId=202439)（。https://go.microsoft.com/fwlink/?LinkId=202439) 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) 。  
+ [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 作業系統的 Server Core 安裝選項提供執行特定伺服器角色的基本環境， 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需在上[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]執行之 server core 的詳細資訊，請參閱適用于[Windows server 2008 R2 的伺服器核心](https://go.microsoft.com/fwlink/?LinkId=202439)（。https://go.microsoft.com/fwlink/?LinkId=202439) 如需在上[!INCLUDE[win8srv](../../includes/win8srv-md.md)]執行之 server core 的詳細資訊，請參閱適用于[Windows Server 2012 的伺服器核心](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx)（。https://msdn.microsoft.com/library/hh846323(VS.85).aspx)  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
 |需求|安裝方式|  
 |-----------------|--------------------|  
-|
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安裝中。 如果未啟用，安裝程式預設會予以啟用。<br /><br /> 2.0、3.0 和 3.5 無法在同一部電腦上並行執行。 當您安裝 .NET Framework 3.5 SP1 時，會自動取得 2.0 和 3.0 層。|  
-|
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 的 Server Core 安裝中。 如果未啟用，安裝程式預設會予以啟用。<br /><br /> 在 Windows 伺服器作業系統的電腦上，您必須先下載及安裝 .NET Framework 3.5 SP1，才能執行安裝程式以安裝相依於 .NET 3.5 SP1 的元件。<br /><br /> 如需有關如何在中[!INCLUDE[win8srv](../../includes/win8srv-md.md)]取得和啟用 .NET Framework 3.5 的建議和指導的詳細資訊，請參閱[Microsoft .NET Framework 3.5 部署考慮](https://msdn.microsoft.com/library/windows/hardware/hh975396)（https://msdn.microsoft.com/library/windows/hardware/hh975396)）。|  
-|
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|若是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以外的所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，安裝程式會將 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile 安裝為必要元件。<br /><br /> 若是[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，請從[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [適用于 Server Core 的 Microsoft .NET Framework 4 （獨立安裝程式）](https://www.microsoft.com/download/details.aspx?id=17718)下載 4 serverhttps://www.microsoft.com/download/details.aspx?id=17718)core 設定檔（並安裝它，再繼續進行安裝程式。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安裝中。 如果未啟用，安裝程式預設會予以啟用。<br /><br /> 2.0、3.0 和 3.5 無法在同一部電腦上並行執行。 當您安裝 .NET Framework 3.5 SP1 時，會自動取得 2.0 和 3.0 層。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 的 Server Core 安裝中。 如果未啟用，安裝程式預設會予以啟用。<br /><br /> 在 Windows 伺服器作業系統的電腦上，您必須先下載及安裝 .NET Framework 3.5 SP1，才能執行安裝程式以安裝相依於 .NET 3.5 SP1 的元件。<br /><br /> 如需有關如何在中[!INCLUDE[win8srv](../../includes/win8srv-md.md)]取得和啟用 .NET Framework 3.5 的建議和指導的詳細資訊，請參閱[Microsoft .NET Framework 3.5 部署考慮](https://msdn.microsoft.com/library/windows/hardware/hh975396)（https://msdn.microsoft.com/library/windows/hardware/hh975396)）。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|若是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以外的所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，安裝程式會將 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile 安裝為必要元件。<br /><br /> 若是[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，請從[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [適用于 Server Core 的 Microsoft .NET Framework 4 （獨立安裝程式）](https://www.microsoft.com/download/details.aspx?id=17718)下載 4 serverhttps://www.microsoft.com/download/details.aspx?id=17718)core 設定檔（並安裝它，再繼續進行安裝程式。|  
 |Windows Installer 4.5|隨附於 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安裝。|  
 |Windows PowerShell 2.0|隨附於 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安裝。|  
   
-##  <a name="BK_SupportedFeatures"></a> 支援的功能  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> 支援的功能  
  您可以使用下表來尋找 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]中支援的功能。  
   
 |功能|支援|  
@@ -75,13 +71,7 @@ ms.locfileid: "73637676"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 位版本<sup>[1]</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言|所有語言|  
 |作業系統語言/地區設定上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言 (組合)|JPN (日文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER (德文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS (簡體中文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA (阿拉伯文 (SA)) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA (泰文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK (土耳其文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT (葡萄牙文 - 葡萄牙) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG (英文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Windows 版本|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位元 x64 Datacenter<br /><br /> 
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位元 x64 Standard<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Data Center Server Core<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Enterprise Server Core<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Standard Server Core<br /><br /> 
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Web Server Core|  
+|Windows 版本|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位元 x64 Datacenter<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位元 x64 Standard<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Data Center Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Enterprise Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Standard Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元 x64 Web Server Core|  
   
  <sup>[1]</sup>在 Server Core 上不支援安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 32 位版本的版本。  
   
@@ -92,7 +82,7 @@ ms.locfileid: "73637676"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
 > [!IMPORTANT]  
->  在執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core SP1 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core 的電腦上，無法將 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 與舊版 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 並行安裝。  
+>  在執行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的電腦上，無法將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並行安裝。  
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
@@ -250,7 +240,7 @@ ms.locfileid: "73637676"
   
      下列範例顯示如何使用組態檔啟動安裝程式。  
   
-    -   設定檔案  
+    -   組態檔  
   
          以下是有關如何使用組態檔的部分範例：  
   
@@ -272,10 +262,10 @@ ms.locfileid: "73637676"
   
          如果 DefaultSetup.ini 檔案不存在，請建立檔案並將其複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源媒體根層級的 \x86 和 \x64 資料夾中。  
   
-## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>設定在 Server Core 上執行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的遠端存取  
+## <a name="configuring-remote-access-of-ssnoversion-running-on-server-core"></a>設定在 Server Core 上執行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的遠端存取  
  執行下面描述的動作，以設定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上執行之 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]執行個體的遠端存取。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用遠端連接  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用遠端連接  
  若要啟用遠端連接，請在本機使用 SQLCMD.exe，然後針對 Server Core 執行個體執行下列陳述式：  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -286,7 +276,7 @@ ms.locfileid: "73637676"
   
      `GO`  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>啟用及啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>啟用及啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務  
  根據預設，Browser 服務是停用的。  如果在 Server Core 上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已停用此服務，請從命令提示字元執行下列命令，以啟用服務：  
   
  `sc config SQLBROWSER start= auto`  
@@ -298,14 +288,14 @@ ms.locfileid: "73637676"
 ### <a name="create-exceptions-in-windows-firewall"></a>在 Windows 防火牆中建立例外狀況  
  若要在 Windows 防火牆中建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取的例外狀況，請遵循 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步驟。  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用 TCP/IP  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用 TCP/IP  
  您可以針對 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，透過 Windows PowerShell 啟用 TCP/IP 通訊協定。 請遵循下列步驟：  
   
 1.  在執行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的電腦上，啟動 [工作管理員]。  
   
-2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
+2.  在 [應用程式]**** 索引標籤上，按一下 [新工作]****。  
   
-3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中輸入 **sqlps.exe**，然後按一下 [確定]  。 隨即開啟 [ **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Powershell][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 視窗。  
+3.  在 [建立新工作]**** 對話方塊的 [開啟]**** 欄位中輸入 **sqlps.exe**，然後按一下 [確定]****。 這會開啟** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**視窗。  
   
 4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   
@@ -335,8 +325,8 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 >  如果您不小心關閉命令提示字元，您可以遵循下列步驟啟動新的命令提示字元：  
 > 
 >  1.  按 Ctrl+Shift+Esc 鍵顯示 [工作管理員]。  
-> 2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
-> 3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+> 2.  在 [應用程式]**** 索引標籤上，按一下 [新工作]****。  
+> 3.  在 [建立新工作]**** 對話方塊的 [開啟]**** 欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用設定檔安裝 SQL Server 2014](install-sql-server-using-a-configuration-file.md)   
@@ -345,4 +335,4 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [Server Core 安裝選項消費者入門指南](https://go.microsoft.com/fwlink/?LinkId=221422)   
  [設定 Server Core 安裝：總覽](https://go.microsoft.com/fwlink/?LinkId=221423)   
  [Windows PowerShell 中由工作焦點列出的容錯移轉叢集 Cmdlet](https://go.microsoft.com/fwlink/?LinkId=221419)   
- [針對容錯移轉叢集將 cluster.exe 命令對應到 Windows PowerShell Cmdlet](https://go.microsoft.com/fwlink/?LinkId=221421)  
+ [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters (針對容錯移轉叢集將 Cluster.exe 命令對應到 Windows PowerShell Cmdlet)](https://go.microsoft.com/fwlink/?LinkId=221421)  

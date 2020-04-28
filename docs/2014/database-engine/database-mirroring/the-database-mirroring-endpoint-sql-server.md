@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797899"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>資料庫鏡像端點 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "72797899"
 >  未來的 Microsoft SQL Server 版本將移除資料庫鏡像功能。 請避免在新的開發工作中使用這項功能，並規劃將目前使用資料庫鏡像的應用程式修改為使用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
   
   
-##  <a name="ServerNetworkAddress"></a> 伺服器網路位址  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> 伺服器網路位址  
  伺服器執行個體的網路位址 (其「伺服器網路位址」  或「端點 URL」  ) 包含其端點的通訊埠編號，以及其主機電腦的系統和網域名稱。 通訊埠編號會唯一識別特定伺服器執行個體。  
   
  下圖說明如何唯一識別相同伺服器上的兩個伺服器執行個體。 這兩個伺服器執行個體的伺服器網路位址包含相同的系統名稱 `MYSYSTEM`和網域名稱 `Adventure-Works.MyDomain.com`。 若要讓系統將連接傳送到伺服器執行個體，伺服器網路位址會包含與特定伺服器執行個體之鏡像端點相關聯的通訊埠編號。  
@@ -53,7 +53,7 @@ ms.locfileid: "72797899"
 >  請不要重新設定使用中資料庫鏡像端點。 伺服器執行個體會使用彼此的端點來了解其他系統的狀態。 如果端點重新設定，它可能會重新啟動，而這對其他伺服器執行個體可能會是一項錯誤。 對於自動容錯移轉模式，這點尤其重要，因為在這種模式中重新設定夥伴上的端點，可能會導致發生容錯移轉。  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> 決定資料庫鏡像端點的驗證類型  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> 決定資料庫鏡像端點的驗證類型  
  請務必了解，伺服器執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶會決定可用於資料庫鏡像端點的驗證類型，如下：  
   
 -   如果每個伺服器執行個體各自在網域服務帳戶下執行，您可以將 Windows 驗證用於資料庫鏡像端點。 如果所有伺服器執行個體是以相同的網域使用者帳戶執行，兩個 **master** 資料庫中都會自動存在正確的使用者登入。 這樣可簡化可用性資料庫的安全性組態，建議您使用。  
@@ -67,10 +67,10 @@ ms.locfileid: "72797899"
   
 -   如果有任何伺服器執行個體在內建帳戶之下執行 (例如本機系統、本機服務或網路服務，或是非網域帳戶)，您必須將憑證用於端點驗證。 如果您要針對資料庫鏡像端點使用憑證，您的系統管理員必須設定每一個伺服器執行個體同時在傳出和傳入的連接上使用憑證。  
   
-     沒有任何自動的方法可以設定使用憑證的資料庫鏡像安全性。 您將需要使用 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 `New-SqlHadrEndpoint` PowerShell 指令程式。 如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)。 如需在伺服器實例上啟用憑證驗證的相關資訊，請參閱[使用資料庫鏡像端點的憑證 &#40;transact-sql&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+     沒有任何自動的方法可以設定使用憑證的資料庫鏡像安全性。 您將需要使用 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 `New-SqlHadrEndpoint` PowerShell 指令程式。 如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)的相關資訊。 如需在伺服器實例上啟用憑證驗證的相關資訊，請參閱[使用資料庫鏡像端點的憑證 &#40;transact-sql&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>若要設定資料庫鏡像端點
   
@@ -95,6 +95,6 @@ ms.locfileid: "72797899"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [為資料庫鏡像組態進行疑難排解 &#40;SQL Server&#41; &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [針對資料庫鏡像設定進行疑難排解 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [dm_hadr_availability_replica_states &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [dm_db_mirroring_connections &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

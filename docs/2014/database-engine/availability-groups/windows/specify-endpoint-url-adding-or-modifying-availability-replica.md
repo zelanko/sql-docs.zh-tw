@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797974"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>在加入或修改可用性複本時指定端點 URL (SQL Server)
@@ -30,36 +30,36 @@ ms.locfileid: "72797974"
   
 -   [端點 URL 的語法](#SyntaxOfURL)  
   
--   [尋找系統的完整功能變數名稱](#Finding_FQDN)  
+-   [尋找系統的完整網域名稱](#Finding_FQDN)  
   
 -   [相關工作](#RelatedTasks)  
   
 -   [相關內容](#RelatedContent)  
   
-##  <a name="SyntaxOfURL"></a>端點 URL 的語法  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> 端點 URL 的語法  
  端點 URL 的語法採用以下格式：  
   
  TCP<strong>://</strong> *\<系統位址>* <strong>:</strong> *\<通訊埠>*  
   
- 其中  
+ where  
   
 -   系統位址>是可明確識別目的電腦系統的字串。 * \< * 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
   
     -   因為 Windows Server 容錯移轉叢集 (WSFC) 叢集的節點都是在相同網域中，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址>  **]** 。  
+    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須括在方括弧內，例如： **[** _<IPv6_address>_ **]**。  
   
          若要取得系統的 IP 位址，請在 Windows 命令提示字元下，輸入 **ipconfig** 命令。  
   
     -   完整網域名稱保證可以運作。 這是在不同位置會採用不同格式的本機定義位址字串。 完整網域名稱通常 (但不一定) 都是複合名稱，包含電腦名稱及一系列以句號分隔的網域區段，並採用下列格式：  
   
-         _電腦名稱_ **.** _網域區段_[... **.** _網域區段_]  
+         _電腦名稱_ **.** _網域區段_[...**.**_網域區段_]  
   
-         其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[... **.** _網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
+         其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[...**.**_網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
   
          網域區段的內容和數目是在公司或組織的內部決定的。 如需詳細資訊，請參閱本主題後面的＜ [尋找完整網域名稱](#Finding_FQDN)＞。  
   
--   *\<連接埠>* 是夥伴伺服器執行個體的鏡像端點所使用的連接埠號碼。  
+-   埠>是夥伴伺服器實例的鏡像端點所使用的通訊埠編號。 * \< *  
   
      資料庫鏡像端點可以使用電腦系統上任何可用的通訊埠。 每個通訊埠編號必須只與一個端點產生關聯，而且每個端點會與單一伺服器執行個體產生關聯，因此相同伺服器上的不同伺服器執行個體會在具有不同通訊埠的不同端點上接聽。 因此，當您指定可用性複本時，在端點 URL 中指定的通訊埠，會永遠把內送訊息導向到端點與該通訊埠產生關聯的伺服器執行個體。  
   
@@ -97,12 +97,12 @@ ms.locfileid: "72797974"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a>尋找系統的完整功能變數名稱  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a>尋找系統的完整功能變數名稱  
  若要尋找系統的完整網域名稱，請在該系統的 Windows 命令提示字元下，輸入：  
   
  **IPCONFIG /ALL**  
   
- 若要形成完整的網域名稱，請串連 <主機名稱>  和 <主要 DNS 尾碼>  的值，如下所示：  
+ 若要形成完整的網域名稱，請串連 <主機名稱>** 和 <主要 DNS 尾碼>** 的值，如下所示：  
   
  _<主機名稱>_ **.** _<主要 DNS 尾碼>_  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72797974"
 > [!NOTE]  
 >  如果您需要有關完整網域名稱的詳細資訊，請洽詢您的系統管理員。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要設定資料庫鏡像端點**  
   
 -   [建立 AlwaysOn 可用性群組 &#40;SQL Server PowerShell 的資料庫鏡像端點&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
@@ -142,15 +142,15 @@ ms.locfileid: "72797974"
   
  **若要加入可用性複本**  
   
--   [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [將次要複本新增至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [建立和設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  

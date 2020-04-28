@@ -18,10 +18,10 @@ ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4e5d3ad1a0caf0eb2fd835d04ed80e0a2a044983
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659324"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 方法 (ServerSettings 類別)
@@ -37,7 +37,7 @@ object.GetCurrentCertificate(SHA)
   
 ## <a name="parts"></a>組件  
  *目標*  
- 代表**** 實例上之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器設定的 ServerSettings 物件。  
+ 代表**ServerSettings**實例上之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器設定的 ServerSettings 物件。  
   
 #### <a name="parameters"></a>參數  
   

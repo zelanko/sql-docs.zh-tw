@@ -18,10 +18,10 @@ ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f5b002d205ea7077fded8c2d253e78017536b753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659395"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>SetEnable 方法 (ServerNetworkProtocolIPAddress 類別)

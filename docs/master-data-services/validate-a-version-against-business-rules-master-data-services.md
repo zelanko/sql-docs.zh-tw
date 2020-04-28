@@ -16,10 +16,10 @@ ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727831"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
@@ -38,7 +38,7 @@ ms.locfileid: "73727831"
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   版本的狀態必須是 [開啟]**** 或 [已鎖定]****。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73727831"
   
 3.  在 [驗證版本]**** 頁面上，選取要驗證的模型和版本。  
   
-4.  按一下 [驗證]****。  
+4.  按一下 **[驗證]** 。  
   
 5.  在確認對話方塊中按一下 **[確定]**。  
   

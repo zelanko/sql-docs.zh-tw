@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 177eef6f6280e236106f9ec67684e4a15ef479a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783076"
 ---
 # <a name="backup-encryption"></a>備份加密
   本主題提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的加密選項概觀。 內容包括在備份期間加密的用法、益處和建議做法等詳細資料。  
   
   
-##  <a name="Overview"></a> 概觀  
+##  <a name="overview"></a><a name="Overview"></a> 概觀  
  從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始，SQL Server 即擁有在建立備份時加密資料的能力。 在建立備份時透過指定加密演算法及加密程式 (憑證或非對稱金鑰)，即可建立加密的備份檔案。 所有儲存目的地：支援內部部署及 Window Azure 儲存體。 此外， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 作業可設定加密選項，此為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]引進的新功能。  
   
  若要在備份期間加密，您必須指定加密演算法以及確保加密金鑰的加密程式。 以下為支援的加密選項：  
@@ -37,7 +37,7 @@ ms.locfileid: "72783076"
   
  若您要從 TDE 加密資料庫中還原備份，TDE 憑證需可用於您要進行還原的執行個體上。  
   
-##  <a name="Benefits"></a> 優點  
+##  <a name="benefits"></a><a name="Benefits"></a> 優點  
   
 1.  加密資料庫備份能幫助您確保資料的安全：SQL Server 提供建立備份時加密備份資料的選項。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72783076"
 5.  您可以將加密金鑰與延伸金鑰管理 (EKM) 提供者整合。  
   
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  下列為加密備份的必要條件：  
   
 1.  **為 master 資料庫建立資料庫主要金鑰：** 資料庫主要金鑰是一個對稱金鑰，用來保護資料庫中出現之憑證和非對稱金鑰的私密金鑰。 如需詳細資訊，請參閱 [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "72783076"
     > [!IMPORTANT]  
     >  僅支援位於延伸金鑰管理 (EKM) 的非對稱金鑰。  
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
  下列為適用於加密選項的限制：  
   
 -   若您使用非對稱金鑰加密備份資料，則僅支援位於 EKM 提供者的非對稱金鑰。  
@@ -72,23 +72,23 @@ ms.locfileid: "72783076"
 -   加密備份不支援附加至現有備份組的選項。  
   
   
-##  <a name="Permissions"></a> 權限  
- **若要加密備份或從加密的備份還原：**  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
+ **加密備份或從加密的備份還原：**  
   
  用來加密資料庫備份之憑證或非對稱金鑰上的 `VIEW DEFINITION` 權限。  
   
 > [!NOTE]  
 >  備份或還原 TDE 所保護的資料庫並不需要存取 TDE 憑證。  
   
-##  <a name="Methods"></a>備份加密方法  
+##  <a name="backup-encryption-methods"></a><a name="Methods"></a>備份加密方法  
  下列章節將簡單介紹在備份期間加密資料的步驟。 如需有關使用 Transact-SQL 加密備份之不同步驟的完整逐步解說，請參閱 [建立加密的備份](create-an-encrypted-backup.md)。  
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
  在下列任一對話方塊中建立資料庫備份時，您可以加密備份：  
   
-1.  備份[資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)在 [**備份選項**] 頁面上，您可以選取 [**加密**]，並指定用於加密的加密演算法和憑證或非對稱金鑰。  
+1.  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)：您可以在 [備份選項]**** 頁面選取 [加密]****，並指定用於加密的加密演算法以及憑證或非對稱金鑰。  
   
-2.  [使用維護計畫嚮導](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)當您選取備份工作時，您可以在 [**定義備份（）** 工作] 頁面的 [**選項**] 索引標籤上，選取 [**備份加密**]，並指定用於加密的加密演算法和憑證或金鑰。  
+2.  [使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)：當您選取備份工作時，您可以在 [Define Backup ()Task (定義備份 () 工作)]**** 頁面的 [選項]**** 索引標籤上，選取 [備份加密]****，並指定用於加密的加密演算法以及憑證或金鑰。  
   
 ### <a name="using-transact-sql"></a>使用 Transact SQL  
  下列為加密備份檔案的範例 Transact-SQL 陳述式：  
@@ -117,7 +117,7 @@ $encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorTy
 Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
-##  <a name="RecommendedPractices"></a>建議做法  
+##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a>建議做法  
  建立加密憑證和金鑰的備份至您安裝執行個體的本機電腦以外的位置。 若考量到損毀復原狀況，請考慮將憑證或金鑰的備份儲存至異地位置。 若沒有用來加密此備份的憑證，您就無法還原加密的備份。  
   
  若要還原加密的備份，在相符的指模取得備份時所使用的原始憑證，應可用於您要進行還原的執行個體上。 因此，憑證不應該更新到期日或做其他任何的變更。 更新會導致觸發指模變更的憑證更新，而使憑證對備份檔案無效。 執行還原的帳戶應擁有備份時用以加密之憑證或非對稱金鑰的 VIEW DEFINITION 權限。  
@@ -126,7 +126,7 @@ Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.
   
  若資料庫已啟用 TDE，在加密資料庫和備份時請分別選擇不同的憑證或非對稱金鑰，以提升安全性。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 |主題/工作|描述|  
 |-----------------|-----------------|  

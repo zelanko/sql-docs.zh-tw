@@ -21,10 +21,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593809"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>sys.databases column_encryption_key_values （Transact-sql）
@@ -36,7 +36,7 @@ ms.locfileid: "73593809"
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|資料庫中 CEK 的識別碼。|  
 |**column_master_key_id**|**int**|用來加密 CEK 值的資料行主要金鑰識別碼。|  
-|**encrypted_value**|**Varbinary （8000）**|使用 column_master_key_id 中指定的 CMK 加密的 CEK 值。|  
+|**encrypted_value**|**varbinary(8000)**|使用 column_master_key_id 中指定的 CMK 加密的 CEK 值。|  
 |**encryption_algorithm_name**|**sysname**|用來加密 CEK 值的演算法名稱。<br /><br /> 用來加密值之加密演算法的名稱。 系統提供者的演算法必須**RSA_OAEP**。|  
   
 ## <a name="permissions"></a>權限  
@@ -56,7 +56,7 @@ ms.locfileid: "73593809"
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [使用安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Always Encrypted 的金鑰管理總覽](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [為具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
 
   
   

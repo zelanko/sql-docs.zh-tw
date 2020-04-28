@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bae8efeda0a82873498af93b0b79061f6135fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797595"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>健全狀況規則參考 (PowerPivot for SharePoint)
@@ -26,7 +26,7 @@ ms.locfileid: "72797595"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意：** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱下表中的「版本」資料行，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
+ **注意：** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱下表中的「版本」資料行，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  

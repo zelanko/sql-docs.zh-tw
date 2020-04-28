@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797632"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 健全狀況規則 - 設定
@@ -28,7 +28,7 @@ ms.locfileid: "72797632"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意：** 健全狀況規則設定會分別針對 SQL Server Analysis Services 實例和 PowerPivot 服務應用程式進行設定。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱[健全狀況規則參考 &#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)主題中的「版本」資料行，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
+ **注意** ：健全狀況規則設定是針對 SQL Server Analysis Services 執行個體和 PowerPivot 服務應用程式分別設定。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱[健全狀況規則參考 &#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)主題中的「版本」資料行，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
@@ -38,14 +38,14 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [檢視 PowerPivot 健全狀況規則](#bkmk_view)  
   
- [設定用來評估伺服器穩定性的健全狀況規則（SQL Server Analysis Services）](#bkmk_HR_SSAS)  
+ [設定用於評估伺服器穩定性的健全狀況規則 (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
   
  [設定用於評估應用程式穩定性的健全狀況規則 (PowerPivot 服務應用程式)](#bkmk_evaluate_application_stability)  
   
 ## <a name="prerequisites"></a>Prerequisites  
  您必須是服務應用程式管理員，才能變更 Analysis Services 執行個體與 PowerPivot 服務應用程式的組態屬性。  
   
-##  <a name="bkmk_view"></a>View PowerPivot 健全狀況規則  
+##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>View PowerPivot 健全狀況規則  
   
 1.  在 SharePoint 管理中心按一下 **[監視]**，然後在 **[狀況分析器]** 區段中按一下 **[檢閱規則定義]**。  
   
@@ -57,12 +57,12 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  若要這樣做，請按一下此規則來開啟其規則定義，然後在功能區中按一下 **[立即執行]** 。 按一下 **[關閉]** 回到 **[檢閱問題與方案]** 頁面來檢視報表。 如果此規則偵測到問題，則頁面上會報告警告或錯誤。 在某些情況下，可能需要幾分鐘的時間才會出現錯誤或警告。  
   
-##  <a name="bkmk_HR_SSAS"></a>設定用來評估伺服器穩定性的健全狀況規則（SQL Server Analysis Services）  
+##  <a name="configure-health-rules-used-to-evaluate-server-stability-sql-server-analysis-services"></a><a name="bkmk_HR_SSAS"></a>設定用來評估伺服器穩定性的健全狀況規則（SQL Server Analysis Services）  
  Analysis Services 執行個體包括可偵測系統層級 (快取用途的 CPU、記憶體與磁碟空間) 問題的健全狀況規則。 請使用下列指示來修改可觸發健全狀況規則的臨界值。  
   
 1.  在 SharePoint 管理中心內，按一下 **[系統設定]** 區段中的 **[管理伺服器上的服務]**。  
   
-2.  在頁面頂端，擁有 Analysis Services 執行個體的 SharePoint 伺服器陣列中選取伺服器 (在下圖中，伺服器名稱為 AW-SRV033)。 **SQL Server Analysis Services**將會出現在服務清單中。  
+2.  在頁面頂端，擁有 Analysis Services 執行個體的 SharePoint 伺服器陣列中選取伺服器 (在下圖中，伺服器名稱為 AW-SRV033)。 **[SQL Server Analysis Services]** 將會出現在服務清單中。  
   
      ![管理伺服器上的服務頁面的螢幕擷取畫面](../media/ssas-centraladmin-servicesonserver.gif "管理伺服器上的服務頁面的螢幕擷取畫面")  
   
@@ -98,9 +98,9 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      資料收集間隔 (小時)  
      您可以指定資料收集期間，該期間用來計算觸發健全狀況規則所使用的數字。 雖然系統會持續受到監控，但是用來觸發健全狀況規則警告的臨界值會使用一段預先定義之間隔內所產生的資料來計算。 預設間隔是 4 小時。 伺服器會擷取過去 4 小時所收集的系統和使用量資料，以評估使用者連接數目、磁碟空間使用量以及 CPU 和記憶體使用率。  
   
-##  <a name="bkmk_evaluate_application_stability"></a>設定用來評估應用程式穩定性的健全狀況規則（PowerPivot 服務應用程式）  
+##  <a name="configure-health-rules-used-to-evaluate-application-stability-powerpivot-service-application"></a><a name="bkmk_evaluate_application_stability"></a>設定用來評估應用程式穩定性的健全狀況規則（PowerPivot 服務應用程式）  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [**管理服務應用程式**]。  
   
 2.  在 [服務應用程式] 頁面中，按一下 **[預設的 PowerPivot 服務應用程式]**。  
   

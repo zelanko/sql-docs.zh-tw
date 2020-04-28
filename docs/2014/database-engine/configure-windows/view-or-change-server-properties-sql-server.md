@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783131"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>檢視或變更伺服器屬性 (SQL Server)
@@ -43,9 +43,9 @@ ms.locfileid: "72783131"
   
 -   **後續操作：** [變更伺服器屬性之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   使用 sp_configure 時，您必須在設定組態選項之後，執行 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE。 RECONFIGURE WITH OVERRIDE 陳述式通常是保留給應該非常小心使用的組態選項。 但是 RECONFIGURE WITH OVERRIDE 對所有組態選項都有效，所以它可以取代 RECONFIGURE。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "72783131"
   
 -   有些屬性頁面會透過 Windows Management Instrumentation (WMI) 取得資訊。 若要顯示這些頁面，您必須將 WMI 安裝在執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的電腦上。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  如需詳細資訊，請參閱 [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
  預設會將`sp_configure`不含參數或只含第一個參數的執行許可權授與給所有使用者。 若要`sp_configure`使用這兩個參數來執行，以變更設定選項，或執行重新設定語句，必須將 ALTER SETTINGS 伺服器層級許可權授與使用者。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>檢視或變更伺服器屬性  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72783131"
   
 2.  在 **[伺服器屬性]** 對話方塊中，按一下頁面以檢視或變更有關該頁面的伺服器資訊。 部分屬性是唯讀的。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>若要使用 SERVERPROPERTY 內建函數檢視伺服器屬性  
   
@@ -139,7 +139,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="PowerShellProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a> 使用 SQL Server 組態管理員  
  部分伺服器屬性可以使用 SQL Server 組態管理員檢視或變更。 例如，您可以檢視 SQL Server 執行個體的版本和版別，或是變更錯誤記錄檔儲存的位置。 您也可以藉由查詢 [伺服器相關的動態管理檢視與函數](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)的方式檢視這些屬性。  
   
 #### <a name="to-view-or-change-server-properties"></a>檢視或變更伺服器屬性  
@@ -150,9 +150,9 @@ GO
   
 3.  在詳細資料窗格中，以滑鼠右鍵按一下 [ **SQL Server （\<***instancename***>）**]，然後按一下 [**屬性**]。  
   
-4.  在 [SQL Server (**執行個體名稱>) 屬性]\<******** 對話方塊中，變更 [服務]**** 索引標籤或 [進階]**** 索引標籤上的伺服器屬性，然後按一下 [確定]****。  
+4.  在 [ **SQL Server （\<***instancename***>）屬性**] 對話方塊中，變更 [**服務**] 索引標籤或 [ **Advanced** ] 索引標籤上的伺服器屬性，然後按一下 **[確定**]。  
   
-##  <a name="FollowUp"></a> 後續操作：變更伺服器屬性之後  
+##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> 後續操作：變更伺服器屬性之後  
  對於某些屬性，伺服器可能必須重新啟動，變更才會生效。  
   
 ## <a name="see-also"></a>另請參閱  

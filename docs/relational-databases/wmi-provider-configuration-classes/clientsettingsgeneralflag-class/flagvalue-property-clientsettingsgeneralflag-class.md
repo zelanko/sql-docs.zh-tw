@@ -18,10 +18,10 @@ ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6bdcb53b4f9654114e92b6d5bb7154652201da67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660641"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 屬性 (ClientSettingsGeneralFlag 類別)

@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783209"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>存取 Reporting Services WMI 提供者
@@ -88,4 +88,4 @@ $rsconfig.GetAdminSiteUrl()
   
 ## <a name="see-also"></a>另請參閱
  [Reporting Services WMI 提供者程式庫參考 &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)  

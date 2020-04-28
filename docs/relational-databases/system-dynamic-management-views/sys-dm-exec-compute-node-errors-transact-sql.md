@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73532794"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.databases dm_exec_compute_node_errors （Transact-sql）
@@ -38,7 +38,7 @@ ms.locfileid: "73532794"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|與錯誤相關聯的唯一數值識別碼。|在系統中的所有查詢錯誤中都是唯一的|  
 |source|`nvarchar(255)`|來源執行緒或進程描述||  
-|type|`nvarchar(255)`|錯誤類型。||  
+|type|`nvarchar(255)`|錯誤的類型。||  
 |create_time|`datetime`|發生錯誤的時間||  
 |compute_node_id|`int`|特定計算節點的識別碼|請參閱[dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)的 compute_node_id&#41;|  
 |rexecution_id|`nvarchar(36)`|PolyBase 查詢的識別碼（如果有的話）。||  
@@ -50,7 +50,7 @@ ms.locfileid: "73532794"
   
 ## <a name="see-also"></a>另請參閱  
  [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

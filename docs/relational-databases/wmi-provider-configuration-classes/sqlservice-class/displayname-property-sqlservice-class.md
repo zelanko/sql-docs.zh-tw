@@ -18,10 +18,10 @@ ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3103c9d91b8cc55c5f99f3cfa545207483e97e35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659708"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName 屬性 (SqlService 類別)

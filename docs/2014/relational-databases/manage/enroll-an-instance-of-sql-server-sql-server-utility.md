@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798078"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)
@@ -86,17 +86,17 @@ ms.locfileid: "72798078"
   
 -   [正在註冊 SQL Server 的執行個體](#Enrolling)  
   
-##  <a name="Welcome"></a> 註冊執行個體精靈簡介  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> 註冊執行個體精靈簡介  
  若要啟動此精靈，請在公用程式控制點上展開 [公用程式總管] 樹狀目錄，以滑鼠右鍵按一下 [受控執行個體]  ，然後選取 [新增受控執行個體...]  。  
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Instance_name"></a> 指定 SQL Server 的執行個體  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> 指定 SQL Server 的執行個體  
  若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]  。使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)。  
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Connection_dialog"></a> 連線對話方塊  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 連線對話方塊  
  在 [連接到伺服器] 對話方塊中，確認伺服器類型、電腦名稱及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱資訊。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)。  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "72798078"
   
  若要繼續，請按一下 [連線...]  。  
   
-##  <a name="Proxy_configuration"></a> 公用程式收集組帳戶  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> 公用程式收集組帳戶  
  指定要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 Windows 網域帳戶。 此帳戶會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶來使用。 另外，您也可以使用現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶。 若要通過驗證需求，請使用下列方針來指定帳戶。  
   
  如果您指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶選項：  
@@ -113,7 +113,7 @@ ms.locfileid: "72798078"
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Validation_rules"></a> SQL Server 執行個體驗證  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> SQL Server 執行個體驗證  
  在這一版中，以下條件必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上成立，才能註冊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中：  
   
 |條件|更正動作|  
@@ -140,7 +140,7 @@ ms.locfileid: "72798078"
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Summary"></a> 註冊執行個體的摘要  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> 註冊執行個體的摘要  
  摘要頁面會列出有關加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。  
   
  受管理的執行個體設定：  
@@ -151,7 +151,7 @@ ms.locfileid: "72798078"
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Enrolling"></a> 正在註冊 SQL Server 的執行個體  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> 正在註冊 SQL Server 的執行個體  
  註冊頁面提供此作業的狀態：  
   
 -   正在準備執行個體以進行註冊。  
@@ -182,7 +182,7 @@ ms.locfileid: "72798078"
   
  若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除受管理的執行個體，請在**公用程式總管**瀏覽窗格中選取 [受管理的執行個體]  來填入受管理執行個體的清單檢視，然後以滑鼠右鍵按一下 [公用程式總管內容]  清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，再選取 [將執行個體設為未受管理]  。  
   
-##  <a name="PowerShell_enroll"></a> 使用 PowerShell 註冊 SQL Server 的執行個體  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> 使用 PowerShell 註冊 SQL Server 的執行個體  
  使用下列範例，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體註冊到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式：  
   
 ```powershell

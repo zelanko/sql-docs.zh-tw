@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 2b12e1a1400ec2d9d4bb85466671cda446511f24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145643"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml （Transact-sql）
@@ -32,9 +32,9 @@ ms.locfileid: "73145643"
 |node_id|**int**|與節點相關聯的唯一數值識別碼。|
 |session_id|**smallint**|工作階段的識別碼。 不可為 Null。|
 |request_id|**int**|要求的識別碼。 不可為 Null。|
-|sql_handle|**Varbinary （64）**|這是一個標記，可唯一識別查詢所屬的批次或預存程式。 可為 Null。|
-|plan_handle|**Varbinary （64）**|這是一個標記，可唯一識別目前執行之批次的查詢執行計畫。 可為 Null。|
-|query_plan|**stl**|包含指定之查詢執行計畫的執行時間執行程式表標記法，其*plan_handle*包含部分統計資料。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。 可為 Null。|
+|sql_handle|**varbinary(64)**|這是一個標記，可唯一識別查詢所屬的批次或預存程式。 可為 Null。|
+|plan_handle|**varbinary(64)**|這是一個標記，可唯一識別目前執行之批次的查詢執行計畫。 可為 Null。|
+|query_plan|**xml**|包含指定之查詢執行計畫的執行時間執行程式表標記法，其*plan_handle*包含部分統計資料。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。 可為 Null。|
 
 ## <a name="remarks"></a>備註
 [Dm_exec_query_statistics_xml](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql?view=sql-server-ver15)適用相同的備註。   

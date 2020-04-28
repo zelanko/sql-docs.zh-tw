@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798325"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>從命令提示字元安裝 PowerPivot
@@ -27,7 +27,7 @@ ms.locfileid: "72798325"
   
  電腦必須聯結至與 SharePoint 伺服器陣列相同的網域。  
   
-##  <a name="Commands"></a>以/ROLE 為基礎的安裝選項  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>以/ROLE 為基礎的安裝選項  
  在 PowerPivot for SharePoint 部署中，會使用 `/ROLE` 參數取代 `/FEATURES` 參數。 有效值包括：  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>修改命令語法  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>修改命令語法  
  使用下列步驟可修改範例命令語法。  
   
 1.  將下列命令複製到 [記事本] 中：  
@@ -62,22 +62,17 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
-     
-  `/q` 參數會以無訊息模式執行安裝程式，這樣會隱藏使用者介面。  
+     `/q` 參數會以無訊息模式執行安裝程式，這樣會隱藏使用者介面。  
   
      當針對自動安裝指定了 `/IAcceptSQLServerLicenseTerms` 或 `/q` 參數時，將需要 `/qs`。  
   
-     
-  `/action` 參數會指示安裝程式執行安裝。  
+     `/action` 參數會指示安裝程式執行安裝。  
   
-     
-  `/role` 參數會指示安裝程式安裝 PowerPivot for SharePoint 所需的 Analysis Services 程式和組態檔。 這個角色也會偵測及使用現有的伺服器陣列連接資訊，以存取 SharePoint 組態資料庫。 此為必要參數。 若要指定要安裝的元件，請使用這個參數，而非 `/features` 參數。  
+     `/role` 參數會指示安裝程式安裝 PowerPivot for SharePoint 所需的 Analysis Services 程式和組態檔。 這個角色也會偵測及使用現有的伺服器陣列連接資訊，以存取 SharePoint 組態資料庫。 此為必要參數。 若要指定要安裝的元件，請使用這個參數，而非 `/features` 參數。  
   
-     
-  `/instancename` 參數會將 'PowerPivot' 指定為具名執行個體。 這個值為硬式編碼，無法變更。 在命令中指定這個值是為了教育使用者，好讓使用者知道如何安裝此服務。  
+     `/instancename` 參數會將 'PowerPivot' 指定為具名執行個體。 這個值為硬式編碼，無法變更。 在命令中指定這個值是為了教育使用者，好讓使用者知道如何安裝此服務。  
   
-     
-  `/indicateprogress` 參數可讓您在命令提示字元視窗中監視進度。  
+     `/indicateprogress` 參數可讓您在命令提示字元視窗中監視進度。  
   
 2.  此命令會略過 `PID` 參數，這樣會造成 Evaluation Edition 的安裝。 如果您想要安裝 Enterprise Edition，請將 PID 加入至安裝程式命令，並提供有效的產品金鑰。  
   

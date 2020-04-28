@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73536211"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
@@ -60,8 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @configname = ] 'option_name'`這是設定選項的名稱。 *option_name* is **varchar(35)** ，預設值為 NULL。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會識別任何屬於組態名稱一部分的唯一字串。 若未指定，就會傳回完整的選項清單。  
+`[ @configname = ] 'option_name'`這是設定選項的名稱。 *option_name* is **varchar(35)**，預設值為 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會識別任何屬於組態名稱一部分的唯一字串。 若未指定，就會傳回完整的選項清單。  
   
  如需可用設定選項及其設定的詳細資訊，請參閱[&#40;SQL Server&#41;的伺服器設定選項](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
@@ -80,7 +79,7 @@ RECONFIGURE
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|組態選項的名稱。|  
-|**minimum**|**int**|組態選項的最小值。|  
+|**至少**|**int**|組態選項的最小值。|  
 |**maximum**|**int**|組態選項的最大值。|  
 |**config_value**|**int**|設定選項使用**sp_configure**的值（在**sys.databases**中為值）。 如需這些選項的詳細資訊，請參閱[伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|目前正在執行設定選項的值（sys.databases 中的值**value_in_use**）。<br /><br /> 如需詳細資訊，請參閱[&#40;transact-sql&#41;的 sys.databases ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
@@ -149,7 +148,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-list-all-available-configuration-settings"></a>C. 列出所有可用的組態設定  
  下列範例示範如何列出所有組態選項。  
@@ -173,8 +172,8 @@ EXEC sp_configure @configname='hadoop connectivity';
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [ALTER DATABASE 範圍設定 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [軟體 NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  

@@ -14,10 +14,10 @@ ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f77b7a36e51d08aa3ae82b5d42e28b0173d750cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659025"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 類別
@@ -78,7 +78,7 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>註解  
+## <a name="comments"></a>評價  
  當 WQL 語句中未提供*InstanceName*或*FileName*時，查詢將會傳回預設實例和目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔的資訊。 例如，下列 WQL 陳述式將傳回來自預設執行個體 (MSSQLSERVER) 上之目前記錄檔 (ERRORLOG) 的所有記錄事件。  
   
 ```  

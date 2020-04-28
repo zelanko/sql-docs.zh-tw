@@ -18,10 +18,10 @@ ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4e359dddea783e1ff3e553e6454d97184ea3694f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658810"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>SetNumValue 方法 (ClientNetworkProtocolProperty 類別)
@@ -43,7 +43,7 @@ object.SetNumValue [= value]
   
 |參數|描述|  
 |---------------|-----------------|  
-|*value*|**Uint32**值，指定參考之屬性的數值。|  
+|*值*|**Uint32**值，指定參考之屬性的數值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  

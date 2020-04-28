@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b70684a74677437d0491e1fc724c832bb7e0a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797695"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>設定 AlwaysOn 可用性群組的複寫 (SQL Server)
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
 
-##  <a name="step1"></a>1. 設定資料庫發行集和訂閱  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a>1. 設定資料庫發行集和訂閱  
 
 ### <a name="configure-the-distributor"></a>設定散發者
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797695"
   
 3.  建立複寫發行集、發行項和訂閱。 如需有關如何設定複寫的詳細資訊，請參閱＜發行資料和資料庫物件＞。  
   
-##  <a name="step2"></a>2. 設定 AlwaysOn 可用性群組  
+##  <a name="2-configure-the-alwayson-availability-group"></a><a name="step2"></a>2. 設定 AlwaysOn 可用性群組  
  在預期的主要複本上，建立具有已發行 (或即將發行) 資料庫做為成員資料庫的可用性群組。 如果使用可用性群組精靈，您就可以允許精靈一開始同步處理次要複本資料庫，也可以使用備份和還原來手動執行初始化。  
   
  針對可用性群組建立複寫代理程式將用來連接到目前主要複本的 DNS 接聽程式。 指定的接聽程式名稱將當做原始發行者/已發行資料庫配對的重新導向目標使用。 例如，如果您要使用 DDL 來設定可用性群組，可以使用下列程式碼範例，針對名為 `MyAG` 的現有可用性群組指定可用性群組接聽程式：  
@@ -107,7 +107,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
   
  如需詳細資訊，請參閱[建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)。  
   
-##  <a name="step3"></a>3. 確保所有次要複本主機都設定為複寫  
+##  <a name="3-insure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a>3. 確保所有次要複本主機都設定為複寫  
  在每個次要複本主機上，確認 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 已經設定為支援複寫。 您可以在每個次要複本主機上執行下列查詢，以便判斷是否已安裝複寫：  
   
 ```sql
@@ -120,7 +120,7 @@ SELECT @installed;
   
  如果*@installed*為0，則必須將複寫加入至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝。  
   
-##  <a name="step4"></a>4. 將次要複本主機設定為複寫發行者  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a>4. 將次要複本主機設定為複寫發行者  
  次要複本無法做為複寫發行者或重新發行者，但是您必須設定複寫，才能讓次要複本在容錯移轉之後接管。 在散發者端，設定每個次要複本主機的散發。 請指定當原始發行者加入至散發者時指定的相同散發資料庫和工作目錄。 如果您要使用預存程序來設定散發，請使用 `sp_adddistpublisher`，讓遠端發行者與散發者產生關聯。 如果*@login*和*@password*已用於原始發行者，請在您加入次要複本主機做為發行者時，為每個指定相同的值。  
   
 ```sql
@@ -147,7 +147,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a>5. 將原始發行者重新導向至 AG 接聽程式名稱  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a>5. 將原始發行者重新導向至 AG 接聽程式名稱  
  在散發者端的散發資料庫中，執行 `sp_redirect_publisher` 預存程序，以便讓原始發行者和已發行資料庫與可用性群組的可用性群組接聽程式名稱產生關聯。  
   
 ```sql
@@ -159,7 +159,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a>6. 執行複寫驗證預存程式以確認設定  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a>6. 執行複寫驗證預存程式以確認設定  
  在散發者端的散發資料庫中，執行 `sp_validate_replica_hosts_as_publishers` 預存程序，以便確認所有複本主機現在都設定為當做已發行資料庫的發行者。  
   
 ```sql
@@ -179,16 +179,16 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  訊息 21899，層級 11，狀態 1，程序 `sp_hadr_verify_subscribers_at_publisher`，行 109  
 >   
->  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目之查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息: 目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《`ALTER AVAILABILITY GROUP` 線上叢書》中的＜[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式＞」。  
+>  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目之查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息: 目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜`ALTER AVAILABILITY GROUP` 陳述式＞」。  
 >   
 >  複本主機 'MyReplicaHostName' 發生了一個或多個發行者驗證錯誤。  
   
  這是預期行為。 您必須直接在主機上查詢 sysserver 項目，藉以確認訂閱者伺服器項目是否存在這些次要複本主機上。  
   
-##  <a name="step7"></a>7. 將原始發行者加入至複寫監視器  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7.將原始發行者加入至複寫監視器  
  在每個可用性群組複本上，將原始發行者加入至複寫監視器。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **複寫**  
   
 -   [維護 AlwaysOn 發行集資料庫 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
@@ -197,7 +197,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **若要建立和設定可用性群組**  
+ **若要建立並設定可用性群組**  
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   

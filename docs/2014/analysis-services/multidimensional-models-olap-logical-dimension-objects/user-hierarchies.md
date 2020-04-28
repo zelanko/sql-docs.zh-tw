@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811597"
 ---
 # <a name="user-hierarchies"></a>使用者階層
@@ -37,17 +37,17 @@ ms.locfileid: "72811597"
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
-|1999|第一季|Jan|  
-|1999|第一季|Feb|  
-|1999|第一季|Mar|  
-|1999|第二季|Apr|  
-|1999|第二季|May|  
-|1999|第二季|Jun|  
-|1999|第三季|Jul|  
-|1999|第三季|Aug|  
+|1999|第一季|一月|  
+|1999|第一季|二月|  
+|1999|第一季|三月|  
+|1999|第二季|四月|  
+|1999|第二季|五月|  
+|1999|第二季|六月|  
+|1999|第三季|七月|  
+|1999|第三季|八月|  
 |1999|第三季|九月|  
 |1999|第四季|Oct|  
-|1999|第四季|Nov|  
+|1999|第四季|十一月|  
 |1999|第四季|Dec|  
   
  使用年份、季度和月份屬性，即可在時間維度中建構名為「日曆」的使用者自訂階層。 日曆維度 (一個一般維度) 的層級和成員之間的關聯性如下圖所示：  

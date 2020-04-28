@@ -19,10 +19,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593707"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption （Transact-sql）
@@ -67,7 +67,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_id**|**int**|資料行加密金鑰識別碼。注意：此識別碼代表 sys.databases 中的資料列[column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)目錄檢視。|  
 |**column_encryption_key_version**|**int**|保留供未來使用。 目前，一律包含1。|  
 |**column_encryption_key_metadata_version**|**binary （8）**|表示資料行加密金鑰之建立時間的時間戳記。|  
-|**column_encryption_key_encrypted_value**|**Varbinary （4000）**|資料行加密金鑰的加密值。|  
+|**column_encryption_key_encrypted_value**|**varbinary(4000)**|資料行加密金鑰的加密值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含資料行主要金鑰之金鑰存放區的提供者名稱，這是用來產生資料行加密金鑰的加密值。|  
 |**column_master_key_path**|**nvarchar(4000)**|資料行主要金鑰的索引鍵路徑，用來產生資料行加密金鑰的加密值。|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|用來產生資料行加密金鑰之加密值的加密演算法名稱。|  
@@ -84,7 +84,7 @@ sp_describe_parameter_encryption
 |**column_encryption_normalization_rule_version**|**tinyint**|類型正規化演算法的版本號碼。|  
   
 ## <a name="remarks"></a>備註  
- 支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always Encrypted 的用戶端驅動程式會自動呼叫**sp_describe_parameter_encryption** ，以取得應用程式所發出之參數化查詢的加密中繼資料。 接著，驅動程式會使用加密中繼資料來加密對應至受 Always Encrypted 保護之資料庫資料行的參數值，並以加密的取代應用程式所提交的純文字參數值參數值，然後再將查詢傳送至資料庫引擎。  
+ 支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always Encrypted 的用戶端驅動程式會自動呼叫**sp_describe_parameter_encryption** ，以取得應用程式所發出之參數化查詢的加密中繼資料。 接著，驅動程式會使用加密中繼資料來加密對應至以 Always Encrypted 保護之資料庫資料行的參數值，並以加密參數值取代應用程式所提交的純文字參數值，然後再將查詢傳送至資料庫引擎。  
   
 ## <a name="permissions"></a>權限  
  需要資料庫中的**VIEW ANY COLUMN ENCRYPTION KEY definition**和**VIEW ANY COLUMN MASTER KEY definition**許可權。  

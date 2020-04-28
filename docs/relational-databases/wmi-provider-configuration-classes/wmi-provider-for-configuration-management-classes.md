@@ -18,10 +18,10 @@ ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658930"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>組態管理類別的 WMI 提供者

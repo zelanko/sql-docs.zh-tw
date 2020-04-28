@@ -11,21 +11,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798214"
 ---
 # <a name="list-job-category-information"></a>列出作業類別目錄資訊
   如何使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理物件，在中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]列出作業類別目錄資訊。  
 
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
 
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-list-job-category-information"></a>若要列出作業類別目錄資訊  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72798214"
  如需詳細資訊，請參閱[sp_help_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)。  
   
   
-##  <a name="SMO"></a>使用 SQL Server 管理物件  
- **列出作業類別目錄資訊**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
+ **若要列出作業類別目錄資訊**  
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `JobCategory` 類別。 如需詳細資訊，請參閱[SQL Server 管理物件 &#40;SMO&#41; 程式設計手冊](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  

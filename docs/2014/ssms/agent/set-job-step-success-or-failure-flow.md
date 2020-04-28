@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798174"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
@@ -29,7 +29,7 @@ ms.locfileid: "72798174"
   
      [安全性](#Security)  
   
--   **若要設定作業步驟成功或失敗流程，請使用：**  
+-   **若要使用下列項目，設定作業步驟成功或失敗的流程：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -39,10 +39,10 @@ ms.locfileid: "72798174"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72798174"
   
 9. 若 **[指定執行時的身分]** 清單可用，請選取具有作業將會使用之認證的 Proxy 帳戶。  
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72798174"
   
  如需詳細資訊，請參閱[sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
-##  <a name="SMO"></a>使用 SQL Server 管理物件  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
 
 ### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程
   

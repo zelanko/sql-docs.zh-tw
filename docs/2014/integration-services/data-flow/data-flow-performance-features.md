@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637826"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
@@ -75,15 +75,12 @@ ms.locfileid: "73637826"
  平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在封裝中支援平行執行不同的工作，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性：`MaxConcurrentExecutables` 和 `EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 屬性  
- 
-  `MaxConcurrentExecutables` 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
+ `MaxConcurrentExecutables` 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
   
  若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 如果您將 `MaxConcurrentExecutables` 設定為 3，全部三個「資料流程」工作都可以同時執行。 不過，這是假設每個「資料流程」工作都有 10 的來源到目的地的執行樹狀結構。 將 `MaxConcurrentExecutables` 設定為 3 不能確保每個「資料流程」工作內的執行樹狀結構都可以平行執行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 屬性  
- 
-  `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 
-  `EngineThreads` 屬性同樣適用於資料流程引擎針對來源所建立的來源執行緒，以及該引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
+ `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 `EngineThreads` 屬性同樣適用於資料流程引擎針對來源所建立的來源執行緒，以及該引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
   
  若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 每個「資料流程」工作都包含 10 的來源到目的地的執行樹狀結構。 如果您將「資料流程」工作上的 EngineThreads 設定為 10，全部 30 個執行樹狀結構可能會同時執行。  
   
@@ -158,9 +155,7 @@ ms.locfileid: "73637826"
  您可能會發現將資料儲存至目的地所花費的時間超出預期。 若要識別速度很慢是否是因為目的地無法夠快地處理資料，您可以暫時使用「資料列計數器」轉換來取代目的地。 如果輸送量顯著提高，則很可能是正在載入資料的目的地導致速度變慢。  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>檢視進度索引標籤上的資訊  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 
-  **[進度]** 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。 此外，還會以執行順序列出資料流程元件，並包含有關進度 (以完成百分比顯示) 以及已經處理的資料列數目等資訊。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 **[進度]** 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。 此外，還會以執行順序列出資料流程元件，並包含有關進度 (以完成百分比顯示) 以及已經處理的資料列數目等資訊。  
   
  若要啟用或停用 **[進度]** 索引標籤上的訊息顯示，請在 **[SSIS]** 功能表上切換 **[偵錯進度報表]** 選項。 停用進度報告有助於在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行複雜封裝時改善效能。  
   
@@ -169,7 +164,7 @@ ms.locfileid: "73637826"
 -   [排序合併和合併聯結轉換的資料](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>相關內容  
- **文章和 Blog 文章**  
+ **文件和部落格文章**  
   
 -   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
@@ -187,7 +182,7 @@ ms.locfileid: "73637826"
   
 -   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](https://go.microsoft.com/fwlink/?LinkId=238156)  
   
- **視頻**  
+ **影片**  
   
 -   影片系列， [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)(設計及微調企業中 SSIS 封裝的效能 (SQL 影片系列))  
   
@@ -202,7 +197,7 @@ ms.locfileid: "73637826"
 -   technet.microsoft.com 上的影片： [平衡型資料散發者](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝開發的工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [套件執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [封裝開發的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

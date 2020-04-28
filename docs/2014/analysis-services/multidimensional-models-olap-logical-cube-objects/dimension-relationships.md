@@ -21,15 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797616"
 ---
 # <a name="dimension-relationships"></a>維度關聯性
-  維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 時[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，會嘗試藉由檢查 cube 的資料來源視圖中的維度資料表與事實資料表之間的關聯性，以及檢查維度中屬性之間的關聯性，來判斷維度的使用方式。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  
+  維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 時[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，會嘗試藉由檢查 cube 的資料來源視圖中的維度資料表與事實資料表之間的關聯性，以及檢查維度中屬性之間的關聯性，來判斷維度的使用方式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  
   
  維度與量值群組之間的關聯性，是由維度和參與關聯性的事實資料表所組成的，而資料粒度屬性則會指定特定量值群組中之維度的資料粒度。  
   
@@ -85,6 +84,6 @@ ms.locfileid: "72797616"
  如需多對多關聯性的詳細資訊，請參閱[定義多對多關聯性和多對多關聯性屬性](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度 &#40;Analysis Services 多維資料&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [維度 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

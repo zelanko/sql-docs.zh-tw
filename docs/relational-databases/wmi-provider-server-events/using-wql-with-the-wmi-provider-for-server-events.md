@@ -17,10 +17,10 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57f7e07de49b2591e9ab0ef74603d674543282e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660484"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>搭配伺服器事件的 WMI 提供者使用 WQL
@@ -49,7 +49,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 查詢的 `FROM` 子句中的引數 (`DDL_DATABASE_LEVEL_EVENTS`) 可以是能在其上建立事件通知的任何有效事件。 `SELECT`和`WHERE`子句中的引數可以指定與事件或其父事件相關聯的任何事件屬性。 如需有效事件和事件屬性的清單，請參閱[事件通知（資料庫引擎）](https://technet.microsoft.com/library/ms182602.aspx)。  
+ WQL 查詢的 `FROM` 子句中的引數 (`DDL_DATABASE_LEVEL_EVENTS`) 可以是能在其上建立事件通知的任何有效事件。  和  子句中的引數可以指定與事件或其上層事件相關的任何事件屬性。 如需有效事件和事件屬性的清單，請參閱[事件通知（資料庫引擎）](https://technet.microsoft.com/library/ms182602.aspx)。  
   
  下列 WQL 語法會由 WMI Provider for Server Events 明確支援。 也可以指定其他的 WQL 語法，但該語法並非此提供者所專屬，而會改由其他的 WMI 主機服務進行剖析。 如需有關 WMI 查詢語言的詳細資訊，請參閱 Microsoft Developer Network (MSDN) 上的 WQL 文件集。  
   
@@ -117,7 +117,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-querying-for-events-at-the-server-scope"></a>A. 查詢伺服器範圍的事件  
- 下列 WQL 查詢會針對任何發生於 `SERVER_MEMORY_CHANGE` 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤事件，擷取所有的事件屬性。  
+ 下列 WQL 查詢會針對任何發生於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 `SERVER_MEMORY_CHANGE` 追蹤事件，擷取所有的事件屬性。  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797647"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備次要資料庫 (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "72797647"
   
      [安全性](#Security)  
   
--   **若要準備次要資料庫，請使用：**  
+-   **若要使用下列項目來準備次要資料庫：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -49,11 +49,11 @@ ms.locfileid: "72797647"
   
 -   [相關備份和還原工作](#RelatedTasks)  
   
--   **後續操作：** [準備次要資料庫之後](#FollowUp)  
+-   **後續操作** [準備次要資料庫之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>必要條件和限制  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>必要條件和限制  
   
 -   請確定您規劃放置資料庫的系統已配備具有足夠空間來保存次要資料庫的磁碟機。  
   
@@ -67,26 +67,26 @@ ms.locfileid: "72797647"
   
 -   還原資料庫之後，您必須還原 (WITH NORECOVERY) 自從上次還原資料備份以來所建立的每個記錄備份。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的獨立執行個體上，我們建議，給定次要資料庫的檔案路徑 (包括磁碟機代號) 盡可能與對應主要資料庫的路徑完全相同。 這是因為，如果您在建立次要資料庫時移動資料庫檔案，之後在次要資料庫上加入檔案的作業可能會失敗，而且導致次要資料庫暫停。  
   
 -   準備次要資料庫之前，我們強烈建議您針對可用性群組中的資料庫暫停排程的記錄備份，直到次要複本的初始化完成為止。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  備份資料庫時，[可信任的[資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)會設定為 [關閉]。 因此，新還原資料庫上的 TRUSTWORTHY 一律為 OFF。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  
   
  當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)備份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
->  如果主控主要複本的伺服器執行個體和主控次要複本的每個執行個體之間的備份和還原檔案路徑相同，則您應該可以使用 [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md)、 [將複本加入至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或 [將資料庫加入至可用性群組精靈](availability-group-add-database-to-group-wizard.md)建立次要資料庫。  
+>   如果主控主要複本的伺服器執行個體和主控次要複本的每個執行個體之間的備份和還原檔案路徑相同，則您應該可以使用 [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md)、 [將複本加入至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或 [將資料庫加入至可用性群組精靈](availability-group-add-database-to-group-wizard.md)建立次要資料庫。  
   
- **準備次要資料庫**  
+ **若要準備次要資料庫**  
   
 1.  除非您已經擁有主要資料庫的最新資料庫備份，否則請建立新的完整或差異資料庫備份。 最佳作法是將這個備份和任何後續記錄備份放置於建議的網路共用。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "72797647"
 4.  若要完成次要資料庫的組態設定，您必須將次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  如需如何執行這些備份和還原作業的相關資訊，請參閱本節稍後的 [相關備份和還原工作](#RelatedTasks)。  
+>   如需有關如何執行這些備份和還原作業的詳細資訊，請參閱本節稍後的＜ [相關備份和還原工作](#RelatedTasks)＞。  
   
-###  <a name="RelatedTasks"></a>相關備份和還原工作  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a>相關備份和還原工作  
  **若要建立資料庫備份**  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -114,7 +114,7 @@ ms.locfileid: "72797647"
   
 -   [備份交易記錄 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **還原備份**  
+ **若要還原備份**  
   
 -   [還原資料庫備份 &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
@@ -124,8 +124,8 @@ ms.locfileid: "72797647"
   
 -   [將資料庫還原到新位置 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **準備次要資料庫**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
+ **若要準備次要資料庫**  
   
 > [!NOTE]  
 >  如需這個程序的範例，請參閱本主題前面的 [範例 (Transact-SQL)](#ExampleTsql)。  
@@ -144,10 +144,10 @@ ms.locfileid: "72797647"
 4.  若要完成次要資料庫的組態設定，您必須將次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  如需如何執行這些備份和還原作業的相關資訊，請參閱本主題稍後的 [相關備份和還原工作](#RelatedTasks)。  
+>   如需有關如何執行這些備份和還原作業的詳細資訊，請參閱本主題稍後的＜ [相關備份和還原工作](#RelatedTasks)＞。  
   
-###  <a name="ExampleTsql"></a>Transact-sql 範例  
- 下列範例會準備次要資料庫。 這個範例會使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a>Transact-sql 範例  
+ 下列範例會準備次要資料庫。 此範例使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。  
   
 1.  若要使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫，請將它修改為使用完整復原模式：  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72797647"
   
 4.  使用 RESTORE WITH NORECOVERY，將完整備份還原至裝載次要複本的伺服器執行個體。 還原命令需視主要與次要資料庫的路徑是否相同而定。  
   
-    -   **如果路徑相同：**  
+    -   **若路徑相同：**  
   
          在裝載次要複本的電腦上，依照下列方式還原完整備份：  
   
@@ -188,7 +188,7 @@ ms.locfileid: "72797647"
         GO  
         ```  
   
-    -   **如果路徑不同：**  
+    -   **若路徑不同：**  
   
          如果次要資料庫的路徑與主要資料庫的路徑不同 (例如，磁碟機代號不同)，則建立次要資料庫時，還原作業中必須包含 MOVE 子句。  
   
@@ -242,8 +242,8 @@ ms.locfileid: "72797647"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **準備次要資料庫**  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
+ **若要準備次要資料庫**  
   
 1.  如果您需要建立主要資料庫的最新備份，請變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
@@ -258,11 +258,11 @@ ms.locfileid: "72797647"
   
 5.  若要完成次要資料庫的組態設定，您必須將它聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
- **若要設定及使用 SQL Server PowerShell 提供者**  
+ **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a>範例備份與還原腳本和命令  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a>範例備份與還原腳本和命令  
  下列 PowerShell 命令會將完整資料庫備份和交易記錄備份至網路共用，並且從該共用還原這些備份。 此範例會假設還原資料庫的目標檔案路徑與備份資料庫的檔案路徑相同。  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a>後續操作：準備次要資料庫之後  
+##  <a name="follow-up-after-preparing-a-secondary-database"></a><a name="FollowUp"></a>後續操作：準備次要資料庫之後  
  若要完成次要資料庫的組態設定，您必須將新還原的資料庫聯結至可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [&#40;Transact-sql&#41;還原引數](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [針對失敗的新增檔案作業進行疑難排解 &#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

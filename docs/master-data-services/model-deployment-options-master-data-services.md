@@ -11,10 +11,10 @@ ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 692b207767dfc3d1ae4a032722e4cca6b2972ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727963"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署選項 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "73727963"
   
 -   建立模型封裝，並將它做為新模型部署到相同的環境。 在此情況下，您必須指定模型的新名稱。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  在 MDS 資料庫中，每個模型物件都有唯一識別碼 (ID)。 這些識別碼包含在模型部署封裝中。 當您部署封裝時，必須選擇如何處理這些識別碼。  
   
  下表有助於您在使用系統管理模型部署精靈或 MDSModelDeploy 工具部署模型時，決定選擇。  
@@ -44,6 +44,6 @@ ms.locfileid: "73727963"
 ## <a name="see-also"></a>另請參閱  
  [使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [使用 Wizard 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [&#40;Master Data Services 部署模型&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

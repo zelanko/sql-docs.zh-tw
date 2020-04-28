@@ -15,10 +15,10 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727942"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重疊的使用者和群組的權限 (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73727942"
   
  如果使用者是多個群組的成員，而且這些群組擁有 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的存取權，將適用以下規則：  
   
--   [**拒絕**] 會覆寫所有其他許可權。 如果一個群組的物件權限是 **拒絕** ，則有效權限是拒絕。  
+-   **[拒絕]** 會覆寫所有其他的權限。 如果一個群組的物件權限是 **拒絕** ，則有效權限是拒絕。  
   
 -   存取權限是群組之所有有效權限的聯集。 如果一個群組的物件權限是 **建立** ，另一個群組是 **更新** ，則有效權限是 **建立** 和 **更新**。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "73727942"
   
 ## <a name="see-also"></a>另請參閱  
  [如何判斷許可權 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [重迭的模型和成員許可權 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

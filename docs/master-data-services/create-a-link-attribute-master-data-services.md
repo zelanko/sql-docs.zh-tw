@@ -14,17 +14,17 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 929e363228b30889e163519786d802dd4caee049
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728492"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>建立連結屬性 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  當您想要讓使用者輸入超連結作為屬性值 (例如 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) 時，可以在 `https://www.contoso.com` 中建立連結屬性。  
+  當您想要讓使用者輸入超連結作為屬性值 (例如 `https://www.contoso.com`) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立連結屬性。  
   
 > [!NOTE]  
 >  當使用者輸入連結屬性的值時，字串開頭必須為 **https://**，否則將會顯示一個錯誤。  
@@ -34,7 +34,7 @@ ms.locfileid: "73728492"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   建立屬性的實體必須存在。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "73728492"
   
 -   **建立者**：建立屬性的使用者名稱。  
   
--   **于**：建立屬性的日期和時間。  
+-   **時間**：建立屬性的日期與時間。  
   
 -   **更新者**：上次更新屬性的使用者名稱。  
   
--   **于**：上次更新屬性的日期和時間。  
+-   **時間**：上次更新屬性的日期與時間。  
   
 ### <a name="to-create-a-link-attribute"></a>若要建立連結屬性  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73728492"
   
     -   如果是集合的屬性，請選取 [成員類型] **** 清單方塊的 [集合] **** 。  
   
-6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應該當做屬性名稱使用的字詞清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)。  
+6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應當做屬性名稱使用的字組清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)。  
   
 7.  (選擇性) 輸入顯示名稱，然後在 [描述] **** 方塊中輸入屬性的描述。  
   
@@ -99,6 +99,6 @@ ms.locfileid: "73728492"
  [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)   
  [變更屬性名稱和資料類型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [建立以網域為基礎的屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [&#40;Master Data Services 建立檔案屬性&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+ [建立檔案屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

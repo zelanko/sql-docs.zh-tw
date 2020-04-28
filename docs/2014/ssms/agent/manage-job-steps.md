@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798216"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
@@ -36,33 +36,30 @@ ms.locfileid: "72798216"
   
 -   可執行檔程式與作業系統命令。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，包括預存程序和擴充預存程序。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，包括預存程序和擴充預存程序。  
   
 -   PowerShell 指令碼。  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script。  
   
 -   複寫工作。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]任務.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工作。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]登記.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
  每個作業步驟都是在特定的安全性內容中執行。 如果作業步驟指定 Proxy，則作業步驟會在該 Proxy 認證的安全性內容中執行。 如果作業步驟未指定 Proxy，則作業步驟會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的內容中執行。 只有系統管理員 (sysadmin) 固定伺服器角色的成員，才可以建立未明確指定 Proxy 的作業。  
   
  因為作業步驟是在特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者的環境中執行，因此該使用者需具備讓作業步驟執行所需的權限和組態。 例如，如果您建立了一個作業，它需要磁碟機代號或通用命名慣例 (UNC) 路徑，則在測試工作時，其作業步驟可能會在您的 Windows 使用者帳戶下執行。 不過，作業步驟的 Windows 使用者也必須具備必要的權限、磁碟機代號組態或必要磁碟機的存取權， 否則，作業步驟會失敗。 若要防止此問題發生，請確定每一個作業步驟的 Proxy，對於作業步驟所執行的工作都具有必要權限。 如需詳細資訊，請參閱[SQL Server 資料庫引擎和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。  
   
 ## <a name="job-step-logs"></a>作業步驟記錄  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以將某些作業步驟的輸出寫入作業系統檔案，或寫入 msdb 資料庫中的 sysjobstepslogs 資料表。 以下作業步驟類型可以寫入輸出至兩個目的地：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以將某些作業步驟的輸出寫入作業系統檔案，或寫入 msdb 資料庫中的 sysjobstepslogs 資料表。 以下作業步驟類型可以寫入輸出至兩個目的地：  
   
 -   可執行檔程式與作業系統命令。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]任務.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工作。  
   
  當執行作業步驟的使用者是系統管理員 (sysadmin) 固定伺服器角色的成員時，這些作業步驟才可以將作業步驟輸出寫入作業系統檔案。 如果執行作業步驟的使用者是 msdb 資料庫中的 SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole 固定資料庫角色的成員，則這些作業步驟的輸出只能寫入 sysjobstepslogs 資料表中。  
   
@@ -92,12 +89,10 @@ ms.locfileid: "72798216"
   
  (選擇性) 您也可以開啟現有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 檔案做為作業步驟的命令。  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。 相反地，如果作業步驟的擁有者是系統管理員 (sysadmin) 固定伺服器角色的成員，則作業步驟會以作業步驟的擁有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的身分來執行。 系統管理員 (sysadmin) 固定伺服器角色的成員也可以指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟在另一個使用者內容之下執行，方法是使用 sp_add_jobstep 預存程序的 *database_user_name* 參數。 如需詳細資訊，請參閱[sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。 相反地，如果作業步驟的擁有者是系統管理員 (sysadmin) 固定伺服器角色的成員，則作業步驟會以作業步驟的擁有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的身分來執行。 系統管理員 (sysadmin) 固定伺服器角色的成員也可以指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟在另一個使用者內容之下執行，方法是使用 sp_add_jobstep 預存程序的 *database_user_name* 參數。 如需詳細資訊，請參閱[sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 > [!NOTE]  
->  單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含多個批次。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含內嵌 GO 命令。  
+>  單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含多個批次。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含內嵌 GO 命令。  
   
 ## <a name="powershell-scripting-job-steps"></a>PowerShell 指令碼作業步驟  
  當您建立 PowerShell 指令碼作業步驟時，必須指定其中一個設定當做此步驟的命令：  
@@ -154,17 +149,14 @@ Set oServer = nothing
  設定複寫時，您可以指定以三種方式的其中一種來執行複寫代理程式：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動之後持續執行、視需要執行或根據排程執行。 如需複寫代理程式的詳細資訊，請參閱 [複寫代理程式概觀](../../relational-databases/replication/agents/replication-agents-overview.md)。  
   
 ## <a name="analysis-services-job-steps"></a>SQL Server Analysis Services 作業步驟  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 支援兩個不同類型的 Analysis Services 作業步驟，即命令作業步驟和查詢作業步驟。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 支援兩個不同類型的 Analysis Services 作業步驟，即命令作業步驟和查詢作業步驟。  
   
 ### <a name="analysis-services-command-job-steps"></a>SQL Server Analysis Services 命令作業步驟  
  當您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命令作業步驟時，必須：  
   
 -   識別要執行作業步驟的資料庫 OLAP 伺服器。  
   
--   輸入要執行的陳述式。 
-  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
+-   輸入要執行的陳述式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** 方法的陳述式必須是 XML。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法的陳述式不可包含完整的 SOAP Envelope 或 XML。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
   
 ### <a name="analysis-services-query-job-steps"></a>SQL Server Analysis Services 查詢作業步驟  
  當您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 查詢作業步驟時，必須：  
@@ -208,16 +200,16 @@ Set oServer = nothing
 |-|-|  
 |**說明**|**主題**|  
 |描述如何建立包含可執行程式的作業步驟。|[建立 CmdExec 作業步驟](create-a-cmdexec-job-step.md)|  
-|描述如何重設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權限。|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|描述如何重設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權限。|[設定使用者可建立及管理 SQL Server Agent 作業](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |描述如何建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
 |描述如何定義 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Transact-SQL 作業步驟的選項。|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |描述如何建立 ActiveX 指令碼作業步驟。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
 |描述如何建立及定義執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令與查詢的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
-|描述作業執行期間發生錯誤時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該採取的動作。|[設定作業步驟成功或失敗的流程](set-job-step-success-or-failure-flow.md)|  
+|描述作業執行期間發生錯誤時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該採取的動作。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |描述如何檢視 [作業步驟屬性] 對話方塊中的作業步驟詳細資料。|[View Job Step Information](view-job-step-information.md)|  
 |描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [建立作業](create-jobs.md)   
- [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+ [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

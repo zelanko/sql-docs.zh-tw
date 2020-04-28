@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783223"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>使目標伺服器脫離主要伺服器
@@ -32,7 +32,7 @@ ms.locfileid: "72783223"
   
      [安全性](#Security)  
   
--   **若要脫離目標伺服器，請使用：**  
+-   **使用下列方法脫離目標伺服器：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -40,14 +40,14 @@ ms.locfileid: "72783223"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要執行這個預存程序，使用者必須是 `sysadmin` (系統管理員) 固定伺服器角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>若要使目標伺服器脫離主伺服器  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72783223"
   
 3.  按一下 **[是]** 以確定您要從主要伺服器脫離這台目標伺服器。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>若要使目標伺服器脫離主伺服器  
   
@@ -73,10 +73,10 @@ sp_msx_defect ;
   
  如需詳細資訊，請參閱[sp_msx_defect &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)。  
   
-##  <a name="PowerShellProcedure"></a>使用 SQL Server 管理物件（SMO）  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>使用 SQL Server 管理物件（SMO）  
  請使用 `MsxDefect Method`。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立多伺服器環境](create-a-multiserver-environment.md)   
  [跨企業進行自動化管理](automated-administration-across-an-enterprise.md)   
- [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
+ [從主要伺服器脫離多個目標伺服器](defect-multiple-target-servers-from-a-master-server.md)  

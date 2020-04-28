@@ -18,10 +18,10 @@ ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9f4456ab12a2da301d348f76ca0202bbd7522125
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659476"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate 屬性 (SecurityCertificate 類別)

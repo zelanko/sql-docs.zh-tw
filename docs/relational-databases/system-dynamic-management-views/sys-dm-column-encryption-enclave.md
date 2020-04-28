@@ -10,10 +10,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73599241"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
@@ -27,8 +27,8 @@ ms.locfileid: "73599241"
 |-----------------|---------------|-----------------|  
 |current_enclave_session_count|**int**|目前使用記憶體保護區的用戶端會話數目。|  
 |current_column_encryption_key_count|**int**|記憶體保護區目前保留的資料行加密金鑰計數。|  
-|current_memory_size_kb|**Bigint**|記憶體保護區記憶體大小（KB）|  
-|total_evicted_session_count|**Bigint**|自從上次伺服器重新開機後收回的記憶體保護區會話總數。|   
+|current_memory_size_kb|**bigint**|記憶體保護區記憶體大小（KB）|  
+|total_evicted_session_count|**bigint**|自從上次伺服器重新開機後收回的記憶體保護區會話總數。|   
   
 ## <a name="permissions"></a>權限  
 需要 `VIEW SERVER STATE` 權限。   

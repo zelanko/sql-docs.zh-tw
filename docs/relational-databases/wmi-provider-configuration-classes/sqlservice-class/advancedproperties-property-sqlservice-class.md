@@ -17,10 +17,10 @@ ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 85a0ce08d388bf79fa26172742bacb7fe05b32f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659724"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 屬性 (SqlService 類別)

@@ -11,10 +11,10 @@ ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728428"
 ---
 # <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
@@ -26,9 +26,9 @@ ms.locfileid: "73728428"
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
--   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  **建立索引**  
   
@@ -61,11 +61,11 @@ ms.locfileid: "73728428"
   
 -   **建立者**：建立索引的使用者名稱。  
   
--   **于**：建立索引的日期和時間。  
+-   **於**：建立索引的日期與時間。  
   
 -   **更新者**：上次更新索引的使用者名稱。  
   
--   **于**：上次更新索引的日期和時間。  
+-   **於**：建立索引的日期與時間。  
   
 ## <a name="next-steps"></a>後續步驟  
  [編輯和刪除索引 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

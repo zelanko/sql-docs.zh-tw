@@ -11,10 +11,10 @@ ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727923"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>回復成員修訂歷程記錄 (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "73727923"
   
 -   修訂歷程記錄只有在實體的交易記錄類型為成員時可用。  
   
- **復原成員修訂歷程記錄**  
+ **若要回復成員修訂歷程記錄**  
   
 1.  在 [主資料管理員] 中，按一下 [總管]。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "73727923"
   
 ## <a name="see-also"></a>另請參閱  
  [成員修訂歷程記錄 &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   
- [變更實體事務歷史記錄類型 &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
+ [變更實體交易記錄類型 &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
   

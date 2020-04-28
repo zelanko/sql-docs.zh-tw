@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727802"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
@@ -50,7 +50,7 @@ ms.locfileid: "73727802"
   
 1.  當您建立模型，並使用公司的主要資料填入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，便會自動建立初始版本。 根據權限，使用者可以視需要來變更這個版本。  
   
-2.  當您想要認可某個模型的版本時，請鎖定該版本，讓模型管理員才可以更新資料。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。 如果設定通知，每次版本狀態變更時，都會傳送電子郵件通知給模型管理員。 如需詳細資訊，請參閱[設定電子郵件通知 &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)。  
+2.  當您想要認可某個模型的版本時，請鎖定該版本，讓模型管理員才可以更新資料。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。 如果設定通知，每次版本狀態變更時，都會傳送電子郵件通知給模型管理員。 如需詳細資訊，請參閱[設定電子郵件通知 &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)。  
   
 3.  將商務規則套用至鎖定版本的資料，並檢閱任何驗證問題。 必要時，您可以填入遺失的資訊，或還原造成問題的交易。 您也可以解除鎖定版本，以供使用者進行變更。  
   
@@ -61,23 +61,22 @@ ms.locfileid: "73727802"
 ## <a name="sequential-or-simultaneous-versions"></a>循序版本或同時版本  
  您可以建立模型的循序版本或同時版本。  
   
--   **連續版本。** 每當您認可版本時，都可以建立新的複本，並為此版本提供下一個循序號碼。 例如，您可以複製模型的 **版本 7** ，並將此複本命名為 **版本 8**。  
+-   **循序版本。** 每當您認可版本時，都可以建立新的複本，並為此版本提供下一個循序號碼。 例如，您可以複製模型的 **版本 7** ，並將此複本命名為 **版本 8**。  
   
 -   **同時版本。** 當您想要一次處理兩個或多個版本的資料時，可以建立模型的同時版本。 當公司的重組或併購與正常的商業流程衝突，而且您想要判斷新的主資料是否適合現有的結構時，這個處理方式將會很實用。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的設定會決定您是否可以複製所有版本，還是只能複製已認可的版本。 若要建立同時版本，您必須設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 允許您複製所有版本。 此設定也可以在 [系統設定] 表格中使用。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+    >  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的設定會決定您是否可以複製所有版本，還是只能複製已認可的版本。 若要建立同時版本，您必須設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 允許您複製所有版本。 此設定也可以在 [系統設定] 表格中使用。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|變更現有版本的名稱。|[將版本名稱變更 &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|變更現有版本的名稱。|[變更版本名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
 |鎖定版本，僅讓管理員可以編輯其資料。|[鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |解除鎖定版本，讓使用者可以編輯其資料。|[解除鎖定版本 &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
 |在驗證所有資料之後認可版本。|[認可版本 &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|建立新旗標來標示版本。|[建立 &#40;Master Data Services 的版本旗標&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|建立新旗標來標示版本。|[建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |變更現有版本旗標的名稱。|[變更版本旗標名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |將現有旗標指派給版本。|[將旗標指派給版本 &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
 |建立現有版本的新副本|[複製版本 &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  

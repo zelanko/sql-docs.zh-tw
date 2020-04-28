@@ -18,10 +18,10 @@ ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 97d3de804e5edce5d25e1af3b832ebc4103a3815
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660176"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>ExpirationDate 屬性 (SecurityCertificate 類別)

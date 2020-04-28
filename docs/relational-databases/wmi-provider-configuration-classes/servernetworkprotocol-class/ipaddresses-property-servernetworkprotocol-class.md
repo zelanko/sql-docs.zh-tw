@@ -18,10 +18,10 @@ ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad88dbca2f3e71c6a68398e0f57748b8b517414b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660353"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses 屬性 (ServerNetworkProtocol 類別)
@@ -37,7 +37,7 @@ object.IpAddresses [= value]
   
 ## <a name="parts"></a>組件  
  *目標*  
- 代表**** 實例所使用之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的 ServerNetworkProtocol 物件。  
+ 代表**ServerNetworkProtocol**實例所使用之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的 ServerNetworkProtocol 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  [ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)物件的陣列，代表伺服器網路通訊協定所支援的 IP 位址。  

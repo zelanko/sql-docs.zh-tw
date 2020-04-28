@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: fd886217b2fb2caf0fe3f32e88b7bf0215ece1a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145673"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.databases pdw_nodes_dm_exec_sql_text （Transact-sql）
@@ -32,7 +32,7 @@ ms.locfileid: "73145673"
 |**dbid**|**smallint**|資料庫的識別碼。<br /><br /> 若為未規劃和備妥的 SQL 語句，則為編譯語句的資料庫識別碼。|  
 |**objectid**|**int**|物件的識別碼。<br /><br /> 特定和準備 SQL 陳述式的這個值是 NULL。|  
 |**number**|**smallint**|對於已編號的預存程序，這個資料行會傳回預存程序的編號。 如需詳細資訊，請參閱[numbered_procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 特定和準備 SQL 陳述式的這個值是 NULL。|  
-|**加密**|**bit**|1： SQL 文字已加密。<br /><br /> 0： SQL 文字未加密。|  
+|**encrypted**|**bit**|1： SQL 文字已加密。<br /><br /> 0： SQL 文字未加密。|  
 |**text**|**nvarchar(max)**|SQL 查詢的文字。<br /><br /> 加密物件的這個值是 NULL。|  
 
 ## <a name="remarks"></a>備註  

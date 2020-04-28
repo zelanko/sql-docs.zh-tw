@@ -18,10 +18,10 @@ ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7485a5603386b6eb0c3cf70964f8a0d4378eef8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660692"
 ---
 # <a name="clientsettings-class---instancename-property"></a>ClientSettings 類別 - InstanceName 屬性
@@ -37,7 +37,7 @@ object.InstanceName [= value]
   
 ## <a name="parts"></a>組件  
  *目標*  
- 代表**** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端實例上之設定的 ClientSettings 物件。  
+ 代表**ClientSettings** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端實例上之設定的 ClientSettings 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端執行個體名稱的字串值。  

@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633011"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -45,11 +45,11 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'`這是要對此架構採取的動作。 *operation*是**Nvarchar （4）**，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|**載入**|將指定的結構描述加入不適合發行的結構描述清單中。|  
+|**add**|將指定的結構描述加入不適合發行的結構描述清單中。|  
 |**下拉式**|從不適合發行的結構描述清單中，卸除指定的結構描述。|  
-|**説明**|傳回不適合發行的結構描述清單。|  
+|**說明**|傳回不適合發行的結構描述清單。|  
   
 ## <a name="result-sets"></a>結果集  
   

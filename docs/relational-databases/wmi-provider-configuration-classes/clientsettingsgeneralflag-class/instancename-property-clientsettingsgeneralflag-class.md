@@ -18,10 +18,10 @@ ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8467ffe1f372b80e79358dc80f08a2b42e77ad6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660193"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>InstanceName 屬性 (ClientSettingsGeneralFlag 類別)

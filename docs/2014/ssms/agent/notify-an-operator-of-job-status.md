@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798198"
 ---
 # <a name="notify-an-operator-of-job-status"></a>通知操作員作業狀態
@@ -33,7 +33,7 @@ ms.locfileid: "72798198"
   
      [安全性](#Security)  
   
--   **若要使用下列各項來通知操作員作業狀態：**  
+-   **若要使用下列項目通知操作員作業狀態：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -41,16 +41,16 @@ ms.locfileid: "72798198"
   
      [SQL Server 管理物件](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
-##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>若要通知操作員作業狀態  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在 [物件總管]**** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]****。  
   
@@ -58,29 +58,29 @@ ms.locfileid: "72798198"
   
 4.  如果您想以電子郵件通知操作員，請核取 [電子郵件]****、從清單選取操作員，然後選取下列其中一個選項：  
   
-    -   **當**作業成功完成時，通知操作員。  
+    -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
   
-    -   **當作業失敗時**，當作業未成功完成時，通知操作員。  
+    -   **[當作業失敗時]** 會在作業未順利完成時通知操作員。  
   
-    -   **當作業完成時**，不論完成狀態為何，都會通知操作員。  
+    -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
   
 5.  如果您想以呼叫器來通知操作員，請核取 **[呼叫器]**、從清單選取操作員，然後選取下列其中一個選項：  
   
-    -   **當**作業成功完成時，通知操作員。  
+    -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
   
-    -   **當作業失敗時**，當作業未成功完成時，通知操作員。  
+    -   **[當作業失敗時]** 會在作業未順利完成時通知操作員。  
   
-    -   **當作業完成時**，不論完成狀態為何，都會通知操作員。  
+    -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
   
 6.  如果您想以網路傳送的方式來通知操作員，請核取 **[網路傳送]**、從清單選取操作員，然後選取下列其中一個選項：  
   
-    -   **當**作業成功完成時，通知操作員。  
+    -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
   
-    -   **當作業失敗時**，當作業未成功完成時，通知操作員。  
+    -   **[當作業失敗時]** 會在作業未順利完成時通知操作員。  
   
-    -   **當作業完成時**，不論完成狀態為何，都會通知操作員。  
+    -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
   
-##  <a name="TSQL"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>若要通知操作員作業狀態  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72798198"
   
  如需詳細資訊，請參閱[sp_add_notification &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)。  
   
-##  <a name="SMO"></a>使用 SQL Server 管理物件  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
  **若要通知操作員作業狀態**  
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `Job` 類別。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

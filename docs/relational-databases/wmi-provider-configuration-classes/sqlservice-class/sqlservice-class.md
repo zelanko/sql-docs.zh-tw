@@ -18,10 +18,10 @@ ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660883"
 ---
 # <a name="sqlservice-class"></a>SqlService 類別
@@ -30,7 +30,7 @@ ms.locfileid: "73660883"
   
  [SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)是用來以程式設計方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理服務。 使用[SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)物件，您可以執行下列工作：  
   
--   連線至服務。  
+-   連接到服務。  
   
 -   修改用來連接服務的帳戶和密碼。  
   

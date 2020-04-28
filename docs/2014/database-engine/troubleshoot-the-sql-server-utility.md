@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797775"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>疑難排解 SQL Server 公用程式
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式問題的疑難排解可能包括解決 SQL Server 執行個體向 UCP 註冊作業失敗的問題、解決因無法收集資料而導致 UCP 上 Managed 執行個體清單檢視變為灰色圖示的問題、改善效能瓶頸或是解決資源健全狀況的問題。 如需有關減少[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP 所識別之資源健康狀態問題的詳細資訊，請參閱針對[SQL Server 資源健康狀態 &#40;SQL Server 公用程式&#41;進行疑難排解](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>SQL Server 執行個體向 SQL Server 公用程式註冊的作業失敗  
@@ -45,8 +44,7 @@ ms.locfileid: "72797775"
 ## <a name="failed-wmi-validation"></a>WMI 驗證失敗  
  如果沒有在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上正確設定 WMI，那麼 [建立 UCP] 與 [註冊受管理的執行個體] 作業會顯示警告，但是並不會封鎖作業。 此外，如果您變更 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 帳戶組態而讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 不具備存取必要 WMI 類別的權限，那麼在受影響之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體上進行的資料收集，會無法上傳到 UCP。 如此會造成 UCP 中顯示灰色圖示。  
   
- 對於受影響的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]受管理的執行個體，失敗的資料收集會造成 UCP 清單檢視中出現灰色狀態圖示。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體中的作業記錄指出 sysutility_mi_collect_and_upload 在步驟 2 失敗 (從 PowerShell 指令碼收集的階段資料)。  
+ 對於受影響的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]受管理的執行個體，失敗的資料收集會造成 UCP 清單檢視中出現灰色狀態圖示。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體中的作業記錄指出 sysutility_mi_collect_and_upload 在步驟 2 失敗 (從 PowerShell 指令碼收集的階段資料)。  
   
  簡化的錯誤訊息如下：  
   
@@ -160,7 +158,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  以滑鼠右鍵按一下 **[效能監視器使用者]** ，然後選取 **[加入群組]**。  
   
-    3.  按一下 [新增]  。  
+    3.  按一下 **[新增]** 。  
   
     4.  輸入用來執行 SQL Server Agent 服務的帳戶，然後按一下 **[確定]**。  
   

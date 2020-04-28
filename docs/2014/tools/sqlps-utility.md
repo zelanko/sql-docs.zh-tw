@@ -14,19 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798142"
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
-  
   `sqlps` 公用程式會啟動 Windows PowerShell 2.0 工作階段並且載入和註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者與指令程式。 您可以輸入 PowerShell 命令或指令碼，以便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 元件來處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及其物件。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]請改用 `sqlps` PowerShell 模組。 如需模組的`sqlps`詳細資訊，請參閱匯[入 SQLPS 模組](../database-engine/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]請改用 `sqlps` PowerShell 模組。 如需模組的`sqlps`詳細資訊，請參閱匯[入 SQLPS 模組](../database-engine/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -99,8 +97,7 @@ ms.locfileid: "72798142"
   
  根據預設， `sqlps`公用程式會執行，並將腳本執行原則設定為 [**受限制**]。 如此即不會執行任何 PowerShell 指令碼。 您可以使用 **Set-ExecutionPolicy** Cmdlet 來允許執行已簽署的指令碼或任何指令碼。 建議您只執行來自信任來源的指令碼，並且利用適當的 NTFS 權限來保護所有輸入和輸出檔案。 如需有關啟用 PowerShell 指令碼的詳細資訊，請參閱 [執行 Windows PowerShell 指令碼](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/)。  
   
- 
-  `sqlps` 和 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 公用程式版本實作為 Windows PowerShell 1.0 迷你 shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 `sqlps` 模組。  
+ [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的 `sqlps` 公用程式版本實作為 Windows PowerShell 1.0 迷你 shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 `sqlps` 模組。  
   
 ## <a name="examples"></a>範例  
 

@@ -17,14 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632731"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用 Upgrade Advisor 來準備升級
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 可以協助您完成升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的相關準備工作。 Upgrade Advisor 會分析已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版元件，然後產生報告，以指出在您升級之前或之後要修正的問題。  
   
 ## <a name="how-upgrade-advisor-works"></a>Upgrade Advisor 如何運作  
@@ -57,14 +56,13 @@ ms.locfileid: "73632731"
 >  報表可能包含「其他升級問題」項目。 這個項目會連結到 Upgrade Advisor 不會偵測，但您的伺服器或應用程式中可能存在的問題清單。 您應該檢閱無法偵測到的問題清單，並判斷您是否因為這些無法偵測到的問題，而必須變更伺服器或應用程式。  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>如何安裝和執行 Upgrade Advisor  
- 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 的位置取決於您要分析的項目。 Upgrade Advisor 支援所有支援元件 ([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 除外) 的遠端分析。 如果不要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的執行個體，可以將 Upgrade Advisor 安裝在可連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，且符合 Upgrade Advisor 必要條件的任何電腦上。 如需詳細資訊，請參閱[支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。 如果您要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的執行個體，則必須將 Upgrade Advisor 安裝在報表伺服器上。  
+ 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 的位置取決於您要分析的項目。 Upgrade Advisor 支援所有支援元件 ([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 除外) 的遠端分析。 如果不要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的執行個體，可以將 Upgrade Advisor 安裝在可連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，且符合 Upgrade Advisor 必要條件的任何電腦上。 如需詳細資訊，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。 如果您要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的執行個體，則必須將 Upgrade Advisor 安裝在報表伺服器上。  
   
  功能套件提供 Upgrade Advisor。  
   
  安裝及執行 Upgrade Advisor 的先決條件如下：  
   
--   
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1 及 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
+-   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1 及 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
 -   Windows Installer 從版本 4.5 開始。 您可以從[Windows Installer 的網站](https://www.microsoft.com/download/details.aspx?id=8483)安裝 Windows Installer。  
   

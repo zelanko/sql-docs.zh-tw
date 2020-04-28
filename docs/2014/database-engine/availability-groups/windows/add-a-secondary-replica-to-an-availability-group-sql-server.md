@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783006"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72783006"
   
      [安全性](#Security)  
   
--   **若要加入複本，請使用：**  
+-   **使用下列方法加入複本：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -37,24 +37,24 @@ ms.locfileid: "72783006"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：**  [加入次要複本之後](#FollowUp)  
+-   **待處理：**  [加入次要複本之後](#FollowUp)  
   
 ## <a name="before-you-begin"></a>開始之前  
  我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
   
-##  <a name="PrerequisitesRestrictions"></a>必要條件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a>必要條件和限制  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
- 如需詳細資訊，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- **若要加入複本**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ **加入複本**  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72783006"
   
          若要加入其他複本，請重複上述步驟。 當您指定好複本時，按一下 **[確定]** 以完成該作業。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **加入複本**  
   
 1.  連接到裝載主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
@@ -90,8 +90,8 @@ ms.locfileid: "72783006"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **若要加入複本**  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
+ **加入複本**  
   
 1.  變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "72783006"
     > [!NOTE]  
     >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定及使用 SQL Server PowerShell 提供者**  
+ **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>後續操作：加入次要複本之後  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a>後續操作：加入次要複本之後  
  若要將複本加入至現有的可用性群組，您必須執行下列步驟：  
   
 1.  連接到將要裝載新次要複本的伺服器執行個體。  
@@ -132,8 +132,8 @@ ms.locfileid: "72783006"
   
 4.  將每一個新的次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
- **若要管理可用性複本**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
+ **管理可用性複本**  
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -152,7 +152,7 @@ ms.locfileid: "72783006"
 ## <a name="see-also"></a>另請參閱  
  [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [建立和設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   

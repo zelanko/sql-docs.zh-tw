@@ -11,10 +11,10 @@ ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1062c7269c5afc0d6aecb781e7254e87c61bd65d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728002"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>合併衝突 (適用於 Excel 的 MDS 增益集)
@@ -26,7 +26,7 @@ ms.locfileid: "73728002"
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 -   針對要更新的實體分葉模型物件，您必須至少擁有最小的更新權限。  
   
@@ -51,6 +51,6 @@ ms.locfileid: "73728002"
 4.  按一下 [套用]**** 之後，您可以進行其他變更，並重新發佈。 或是按一下 [取消]**** 取消更新，並重新載入來自伺服器的最新版本。  
   
 ## <a name="see-also"></a>另請參閱  
- [總覽：從 excel 匯入資料 &#40;適用于 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

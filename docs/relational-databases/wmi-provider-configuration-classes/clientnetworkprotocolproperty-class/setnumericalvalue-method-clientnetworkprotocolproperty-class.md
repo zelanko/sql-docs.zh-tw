@@ -18,10 +18,10 @@ ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0c1c9ffc6ad69515d6e7b7cd291a2a5501980b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660723"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>SetNumericalValue 方法 (ClientNetworkProtocolProperty 類別)
@@ -43,7 +43,7 @@ object.SetNumericalValue [= value]
   
 |參數|描述|  
 |---------------|-----------------|  
-|*value*|**Uint32**值，指定參考之屬性的數值。|  
+|*值*|**Uint32**值，指定參考之屬性的數值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  

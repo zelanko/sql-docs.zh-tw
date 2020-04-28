@@ -11,10 +11,10 @@ ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728034"
 ---
 # <a name="manage-changesets-master-data-services"></a>管理變更集 (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728034"
   
 ## <a name="prerequisites"></a>Prerequisites  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 -   您必須至少具有實體或其中一個屬性的讀取存取權。  
   

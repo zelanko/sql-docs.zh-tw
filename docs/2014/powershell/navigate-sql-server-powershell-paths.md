@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797808"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
@@ -23,17 +23,16 @@ ms.locfileid: "72797808"
 ## <a name="before-you-begin"></a>開始之前  
  Windows PowerShell 實作指令程式以導覽路徑結構，而路徑結構代表 PowerShell 提供者所支援物件的階層。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。 由於 Cmdlet 會經常被使用，所以具有簡短、標準的別名。 也有一組別名會將指令程式對應到類似的命令提示字元命令，而且有另一組別名適用於 UNIX Shell 命令。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作提供者指令程式的子集，如下表所示。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作提供者指令程式的子集，如下表所示。  
   
 |Cmdlet|標準的別名|cmd 別名|UNIX Shell 別名|描述|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|取得目前的節點。|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|變更目前的節點。|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|列出儲存在目前節點上的物件。|  
+|**Get-childitem**|**gci**|**dir**|**！**|列出儲存在目前節點上的物件。|  
 |**Get-Item**|**gi**|||傳回目前項目的屬性。|  
-|**Rename-Item**|**rni**|**rn**|**ren**|重新命名物件。|  
-|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|移除物件。|  
+|**重新命名專案**|**rni**|**rn**|**ren**|重新命名物件。|  
+|**移除專案**|**ri**|**del, rd**|**rm, rmdir**|移除物件。|  
   
 > [!IMPORTANT]  
 >  某些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼 (物件名稱) 包含 Windows PowerShell 在路徑名稱中不支援的字元。 如需如何使用包含這些字元之名稱的詳細資訊，請參閱 [PowerShell 中的 SQL Server 識別碼](sql-server-identifiers-in-powershell.md)。  
@@ -45,7 +44,7 @@ ms.locfileid: "72797808"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|傳回本機電腦的名稱。 若您已經使用 SMO 或 WMI 連接到其他電腦上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體，也會列出這些電腦。|  
 |SQLSERVER:\SQL\\*ComputerName*|電腦上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的清單。|  
-|SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*|執行個體中最上層物件類型的清單，例如 Endpoints、Certificates 和 Databases。|  
+|SQLSERVER： \ SQL\\*ComputerName*\\*實例*名稱|執行個體中最上層物件類型的清單，例如 Endpoints、Certificates 和 Databases。|  
 |物件類別節點，例如 Databases|該類型的物件清單，例如資料庫的清單：master、model、AdventureWorks20008R2。|  
 |物件名稱節點，例如 AdventureWorks2012|此物件內所包含的物件類型清單。 例如，資料庫會列出資料表和檢視表之類的物件類型。|  
   
@@ -134,5 +133,5 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
  [使用 SQL Server PowerShell 路徑](work-with-sql-server-powershell-paths.md)   
- [將 URN 轉換成 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [將 Urn 轉換為 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

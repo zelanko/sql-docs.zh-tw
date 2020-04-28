@@ -18,10 +18,10 @@ ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 264a1cdfb9d9b6cc981bf446a5d7fe189485e914
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660655"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>SetEnable 方法 (ServerNetworkProtocol 類別)

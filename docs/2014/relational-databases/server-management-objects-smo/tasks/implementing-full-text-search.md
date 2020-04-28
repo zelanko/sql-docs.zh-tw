@@ -13,16 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796720"
 ---
 # <a name="implementing-full-text-search"></a>實作全文檢索搜尋
-  全文檢索搜尋可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的每個執行個體，在 SMO 中是由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 物件表示。 
-  <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 物件位於 `Server` 物件之下， 可用於管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文檢索搜尋服務的組態選項。 
-  <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 物件屬於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，且為 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 物件的集合 (這些物件表示針對資料庫所定義的全文檢索目錄)。 與一般索引不同的是，您只能為每個資料表定義一個全文檢索索引， 這是由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 物件中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 物件表示。  
+  全文檢索搜尋可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的每個執行個體，在 SMO 中是由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 物件位於 `Server` 物件之下， 可用於管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文檢索搜尋服務的組態選項。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 物件屬於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，且為 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 物件的集合 (這些物件表示針對資料庫所定義的全文檢索目錄)。 與一般索引不同的是，您只能為每個資料表定義一個全文檢索索引， 這是由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 物件中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 物件表示。  
   
  若要建立全文檢索搜尋服務，您必須在資料庫上定義全文檢索目錄，並在資料庫的其中一個資料表上定義全文檢索搜尋索引。  
   
@@ -32,7 +30,7 @@ ms.locfileid: "72796720"
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio .Net 中建立 VISUAL C&#35; SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>在 Visual Basic 中建立全文檢索搜尋服務  
- 此程式碼範例會針對 `ProductCategory` 範例資料庫中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  
+ 此程式碼範例會針對 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `ProductCategory` 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  
   
 ```vb
 ' compile with:   
@@ -92,7 +90,7 @@ End Class
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-visual-c"></a>在 Visual C# 中建立全文檢索搜尋服務  
- 此程式碼範例會針對 `ProductCategory` 範例資料庫中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  
+ 此程式碼範例會針對 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `ProductCategory` 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  
   
 ```csharp
 // compile with:   
@@ -152,7 +150,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-powershell"></a>在 PowerShell 中建立全文檢索搜尋服務  
- 此程式碼範例會針對 `ProductCategory` 範例資料庫中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  
+ 此程式碼範例會針對 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `ProductCategory` 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  
   
 ```powershell
 # Example of implementing a full text search on the default instance.  

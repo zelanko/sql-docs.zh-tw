@@ -11,18 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 701928a722e14cf3eb5c1e678a1dd764597f46ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783091"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>使用 PowerShell 將多個資料庫備份到 Azure Blob 儲存體服務
   本主題提供範例指令碼，可讓您使用 PowerShell Cmdlet，自動執行 Azure Blob 儲存體服務的備份作業。  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>備份與還原之 PowerShell 指令程式的概觀  
- 
-  `Backup-SqlDatabase` 和 `Restore-SqlDatabase` 是進行備份和還原作業所能使用的兩個主要指令程式。 此外，自動操作 Azure Blob 儲存體備份作業可能還需要其他 Cmdlet，例如 **SqlCredential** Cmdlet。以下是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供可用於備份及還原之 PowerShell Cmdlet 的清單︰  
+ `Backup-SqlDatabase` 和 `Restore-SqlDatabase` 是進行備份和還原作業所能使用的兩個主要指令程式。 此外，自動操作 Azure Blob 儲存體備份作業可能還需要其他 Cmdlet，例如 **SqlCredential** Cmdlet。以下是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供可用於備份及還原之 PowerShell Cmdlet 的清單︰  
   
  Backup-SqlDatabase  
  此指令程式可用於建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。  
@@ -50,11 +49,9 @@ ms.locfileid: "72783091"
   
  以下是範例指令碼的注意事項︰  
   
-1.  **導覽 SQL Server PowerShell 路徑：** Windows PowerShell 會執行 Cmdlet，以流覽代表 PowerShell 提供者所支援之物件階層的路徑結構。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。  
+1.  **導覽 SQL Server PowerShell 路徑︰** Windows PowerShell 會執行指令程式，以導覽代表 PowerShell 提供者所支援之物件階層的路徑結構。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。  
   
-2.  
-  `Get-ChildItem` 指令程式︰`Get-ChildItem` 傳回的資訊內容，視在 SQL Server PowerShell 路徑中的位置而定。 例如，如果位置在電腦層級，此指令程式會傳回所有安裝在電腦上的 SQL Server Database Engine 執行個體。 又例如，如果位置在物件層級 (例如資料庫)，此指令程式會傳回資料庫物件的清單。  
-  `Get-ChildItem` 指令程式預設不會傳回任何系統物件。  使用 -Force 參數即可看到系統物件。  
+2.  `Get-ChildItem` 指令程式︰`Get-ChildItem` 傳回的資訊內容，視在 SQL Server PowerShell 路徑中的位置而定。 例如，如果位置在電腦層級，此指令程式會傳回所有安裝在電腦上的 SQL Server Database Engine 執行個體。 又例如，如果位置在物件層級 (例如資料庫)，此指令程式會傳回資料庫物件的清單。  `Get-ChildItem` 指令程式預設不會傳回任何系統物件。  使用 -Force 參數即可看到系統物件。  
   
      如需詳細資訊，請參閱 [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md)。  
   

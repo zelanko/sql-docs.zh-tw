@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909089"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
@@ -63,11 +63,11 @@ sp_help [ [ @objname = ] 'name' ]
     |資料行名稱|資料類型|描述|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**Nvarchar （** 128 **）**|資料類型名稱。|  
-    |**Storage_type**|**Nvarchar （** 128 **）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型名稱。|  
+    |**Storage_type**|**Nvarchar （** 128 **）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型名稱。|  
     |**長度**|**smallint**|資料類型的實際長度 (以位元組為單位)。|  
     |**Prec**|**int**|有效位數 (總位數)。|  
     |**調整**|**int**|小數點右側的位數。|  
-    |**Nullable**|**Varchar （** 35 **）**|指出是否允許 NULL 值：[是] 或 [否]。|  
+    |**可為 Null**|**Varchar （** 35 **）**|指出是否允許 NULL 值：[是] 或 [否]。|  
     |**Default_name**|**Nvarchar （** 128 **）**|與這個類型繫結的預設值名稱。<br /><br /> NULL = 未繫結預設值。|  
     |**Rule_name**|**Nvarchar （** 128 **）**|與這個類型繫結的規則名稱。<br /><br /> NULL = 未繫結預設值。|  
     |**定序**|**sysname**|資料類型的定序。 非字元資料類型是 NULL。|  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**名稱**|**Nvarchar （** 128 **）**|資料表名稱|  
     |**擁有者**|**Nvarchar （** 128 **）**|資料表擁有者|  
-    |**型別**|**Nvarchar （** 31 **）**|資料表類型|  
+    |**類型**|**Nvarchar （** 31 **）**|資料表類型|  
     |**Created_datetime**|**datetime**|資料表的建立日期|  
   
      視指定的資料庫物件而定， **sp_help**會傳回額外的結果集。  
@@ -90,12 +90,12 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**Nvarchar （** 128 **）**|資料行名稱。|  
-        |**型別**|**Nvarchar （** 128 **）**|資料行資料類型。|  
+        |**類型**|**Nvarchar （** 128 **）**|資料行資料類型。|  
         |**過**|**Varchar （** 35 **）**|指出是否計算資料行中的值：[是] 或 [否]。|  
         |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意：如果資料類型是大數數值型別（**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**），此值會顯示為-1。|  
         |**Prec**|**char （** 5 **）**|資料行有效位數。|  
         |**調整**|**char （** 5 **）**|資料行小數位數。|  
-        |**Nullable**|**Varchar （** 35 **）**|指出資料行是否允許 NULL 值：[是] 或 [否]。|  
+        |**可為 Null**|**Varchar （** 35 **）**|指出資料行是否允許 NULL 值：[是] 或 [否]。|  
         |**TrimTrailingBlanks**|**Varchar （** 35 **）**|修剪尾端空白。 傳回 [是] 或 [否]。|  
         |**FixedLenNullInSource**|**Varchar （** 35 **）**|只是為了與舊版相容。|  
         |**定序**|**sysname**|資料行的定序。 非字元資料類型是 NULL。|  
@@ -104,9 +104,9 @@ sp_help [ [ @objname = ] 'name' ]
   
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
-        |**2x2**|**Nvarchar （** 128 **）**|資料類型宣告為識別的資料行名稱。|  
-        |**種子**|**數值**|識別欄位的起始值。|  
-        |**連續**|**數值**|這個資料行的值所用的遞增。|  
+        |**身分識別**|**Nvarchar （** 128 **）**|資料類型宣告為識別的資料行名稱。|  
+        |**種子**|**numeric**|識別欄位的起始值。|  
+        |**連續**|**numeric**|這個資料行的值所用的遞增。|  
         |**Not For Replication**|**int**|當複寫登入（例如**sqlrepl**）將資料插入資料表時，不會強制執行 IDENTITY 屬性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   在資料行上傳回的其他結果集：  
@@ -152,7 +152,7 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**Nvarchar （** 128 **）**|預存程序參數名稱。|  
-        |**型別**|**Nvarchar （** 128 **）**|預存程序參數的資料類型。|  
+        |**類型**|**Nvarchar （** 128 **）**|預存程序參數的資料類型。|  
         |**長度**|**smallint**|最大的實體儲存體長度 (以位元組為單位)。|  
         |**Prec**|**int**|有效位數或總位數。|  
         |**調整**|**int**|小數點右側的位數。|  
@@ -195,9 +195,9 @@ GO
  [sp_helpindex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helptrigger &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sysobjects &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

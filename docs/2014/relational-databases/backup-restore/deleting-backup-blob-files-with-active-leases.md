@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783060"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
@@ -29,16 +29,16 @@ ms.locfileid: "72783060"
 ## <a name="managing-orphaned-blobs"></a>管理被遺棄的 Blob  
  下列步驟將說明如何在備份或還原活動失敗之後進行清除。 所有步驟都可以使用 PowerShell 指令碼來完成。 下一節將提供程式碼範例：  
   
-1.  **識別擁有租用的 blob：** 如果您有執行備份程式的腳本或進程，您可能可以在腳本或進程中捕捉失敗，並使用它來清除 blob。   您也可以使用 LeaseStats 和 LeastState 屬性來識別擁有其租用的 Blob。 識別出 Blob 之後，我們建議您檢閱清單、確認備份檔案的有效性，然後再刪除 Blob。  
+1.  **識別擁有租用的 Blob：** 如果您有執行備份程序的指令碼或處理序，就可以在指令碼或處理序內部擷取失敗，並且使用該項資訊來清除 Blob。   您也可以使用 LeaseStats 和 LeastState 屬性來識別擁有其租用的 Blob。 識別出 Blob 之後，我們建議您檢閱清單、確認備份檔案的有效性，然後再刪除 Blob。  
   
-2.  **中斷租用：** 已授權的要求可以中斷租用，而不需要提供租用識別碼。 如需詳細資訊，請參閱 [此處](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
+2.  **中斷租用：** 授權要求可以中斷租用，而不需要提供租用識別碼。 如需詳細資訊，請參閱[這裡](https://go.microsoft.com/fwlink/?LinkID=275664)。  
   
     > [!TIP]  
     >  SQL Server 會發出租用識別碼，以便在還原作業期間確立獨佔存取權。 還原租用識別碼為 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
   
-3.  **正在刪除 Blob：** 若要刪除具有作用中租用的 blob，您必須先中斷租用。  
+3.  **刪除 Blob：** 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
   
-###  <a name="Code_Example"></a>PowerShell 腳本範例  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a>PowerShell 腳本範例  
  ** \* \*重要\*事項**如果您執行的是 PowerShell 2.0，載入 Microsoft Windowsazure.storage 元件時可能會發生問題。 我們建議您升級為 Powershell 3.0 以解決此問題。 您也可以針對 PowerShell 2.0 使用下列因應措施：  
   
 -   使用下列內容來建立或修改 powershell.exe.config 檔案，以便在執行階段載入 .NET 2.0 和 .NET 4.0 組件：  
@@ -73,15 +73,15 @@ ms.locfileid: "72783060"
   
 2.  如果沒有任何鎖定租用的 Blob，您應該會看見下列訊息：  
   
-     **沒有 blob 具有鎖定的租用狀態**  
+     **沒有任何處於鎖定租用狀態的 Blob**  
   
      如果有鎖定租用的 Blob，您應該會看見下列訊息：  
   
      **中斷租用**  
   
-     **Blob> 的\<租用是還原租用：只有當您的 blob 具有仍在使用中的還原租用時，您才會看到此訊息。**  
+     **\<Blob 的 URL> 的租用不是還原租用：只有當您的 Blob 擁有仍然使用中的還原租用時，您才會看見此訊息。**  
   
-     **Blob> 的\<租用 url 不是 Bob> url 上\<的還原租用中斷租用。**  
+     **\<Blob 的 URL> 的租用不是還原租用。正在中斷 \<Blob 的 URL> 的租用。**  
   
 ```powershell
 param(  
@@ -150,4 +150,4 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 備份至 URL 的最佳做法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [SQL Server 備份至 URL 的最佳作法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

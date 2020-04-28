@@ -17,20 +17,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797845"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation 指令程式
-  **Invoke-policyevaluation**是一個[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，它會報告 SQL Server 物件的目標集是否符合一個或多個以原則為基礎的管理原則中所指定的條件。  
+  **Invoke-PolicyEvaluation** 是一項 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，它會報告 SQL Server 物件的目標集是否符合在一或多個原則式管理原則中所指定的條件。  
   
 ## <a name="using-invoke-policyevaluation"></a>使用 Invoke-PolicyEvaluation  
- **Invoke-policyevaluation**會針對稱為目標集的一組 SQL Server 物件，評估一或多個原則。 目標物件集來自目標伺服器。 每個原則都會定義一些條件，而它們就是目標物件所允許的狀態。 例如， **可信任的資料庫** 原則表示 TRUSTWORTHY 資料庫屬性必須設定為 OFF。  
+ **Invoke-PolicyEvaluation** 會針對稱為目標集的一組 SQL Server 物件評估一或多個原則。 目標物件集來自目標伺服器。 每個原則都會定義一些條件，而它們就是目標物件所允許的狀態。 例如， **可信任的資料庫** 原則表示 TRUSTWORTHY 資料庫屬性必須設定為 OFF。  
   
- 
-  **-AdHocPolicyEvaluationMode** 參數會指定採取的動作：  
+ **-AdHocPolicyEvaluationMode** 參數會指定採取的動作：  
   
  勾選  
  使用目前登入的認證來報告目標物件的符合狀態。 請勿重新設定任何物件。 這是預設值。  
@@ -55,8 +54,7 @@ sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
- 這則範例會示範如何使用 Where-Object 來根據 **PolicyCategory** 屬性篩選原則存放區中的多個原則。 
-  **Invoke-PolicyEvaluation** 會取用 **Where-Object**傳送輸出的物件。  
+ 這則範例會示範如何使用 Where-Object 來根據 **PolicyCategory** 屬性篩選原則存放區中的多個原則。 **Invoke-PolicyEvaluation** 會取用 **Where-Object**傳送輸出的物件。  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
@@ -86,11 +84,11 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>指定目標集  
  您可以使用三種參數來指定目標物件集：  
   
--   **-TargetServerName**指定包含目標物件 SQL Server 的實例。 您可以在使用針對 <xref:System.Data.SqlClient.SqlConnection> 類別之 ConnectionString 屬性所定義格式的字串中指定這項資訊。 您可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 類別來建立格式正確的連接字串。 您也可以建立 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 物件，並將它傳遞給 **-TargetServer**傳送輸出的物件。 如果您提供只有伺服器名稱的字串， **Invoke-PolicyEvaluation** 就會使用 Windows 驗證來連接至伺服器。  
+-   **-TargetServerName** 會指定包含目標物件的 SQL Server 執行個體。 您可以在使用針對 <xref:System.Data.SqlClient.SqlConnection> 類別之 ConnectionString 屬性所定義格式的字串中指定這項資訊。 您可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 類別來建立格式正確的連接字串。 您也可以建立 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 物件，並將它傳遞給 **-TargetServer**傳送輸出的物件。 如果您提供只有伺服器名稱的字串， **Invoke-PolicyEvaluation** 就會使用 Windows 驗證來連接至伺服器。  
   
--   **-TargetObjects**會採用物件或物件陣列，代表目標集中的 SQL Server 物件。 例如，您可以建立要傳入 <xref:Microsoft.SqlServer.Management.Smo.Database> 的 **-TargetObjects**傳送輸出的物件。  
+-   **-TargetObjects** 會使用在目標集中代表 SQL Server 物件的物件或物件陣列。 例如，您可以建立要傳入 <xref:Microsoft.SqlServer.Management.Smo.Database> 的 **-TargetObjects**傳送輸出的物件。  
   
--   **-TargetExpressions**會採用包含查詢運算式的字串，以指定目標集內的物件。 查詢運算式的格式為以 '/' 字元分隔的節點。 每個節點的格式為 ObjectType[Filter]。 物件類型是 SQL Server 管理物件（SMO）物件階層中的其中一個物件。 篩選是篩選位於該節點之物件的運算式。 如需詳細資訊，請參閱 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
+-   **-TargetExpressions** 會使用字串，其中包含在目標集中指定物件的查詢運算式。 查詢運算式的格式為以 '/' 字元分隔的節點。 每個節點的格式為 ObjectType[Filter]。 物件類型是 SQL Server 管理物件（SMO）物件階層中的其中一個物件。 篩選是篩選位於該節點之物件的運算式。 如需詳細資訊，請參閱 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
  請指定 **-TargetObjects** 或 **-TargetExpression**，但不能同時指定。  
   
@@ -131,7 +129,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>格式化輸出  
- 根據預設， **Invoke-PolicyEvaluation** 的輸出會在命令提示字元視窗中以使用者可讀取的格式顯示成精簡報表。 您可以使用 **-OutputXML** 參數，指定此 Cmdlet 要改為將詳細的報表產生成 XML 檔。 **Invoke-policyevaluation**會使用系統模型化語言交換格式（SML）架構，因此 SML 會讀取檔案（如果是讀取器）。  
+ 根據預設， **Invoke-PolicyEvaluation** 的輸出會在命令提示字元視窗中以使用者可讀取的格式顯示成精簡報表。 您可以使用 **-OutputXML** 參數，指定此 Cmdlet 要改為將詳細的報表產生成 XML 檔。 **Invoke-PolicyEvaluation** 會使用「系統模組化語言交換格式」(Systems Modeling Language Interchange Format, SML-IF) 結構描述，所以 SML-IF 讀取器可以讀取此檔案。  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  

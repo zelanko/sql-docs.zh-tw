@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783115"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>備份交易記錄 (SQL Server)
@@ -43,34 +43,34 @@ ms.locfileid: "72783115"
      [PowerShell](#PowerShellProcedure)  
   
     > [!NOTE]  
-    >  或者，您也可以使用[維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)來建立備份。  
+    >   或者，您也可以使用[維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)來建立備份。  
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   在明確或隱含的交易中，並不允許使用 BACKUP 陳述式。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   如果資料庫使用完整復原模式或大量記錄復原模式，您必須定期備份交易記錄，使其足以保護您的資料，並讓交易記錄不要被填滿。 這會截斷記錄並支援將資料庫還原到特定時間點。  
   
 -   根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
- 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並不會檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
+ 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)並 不會 檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-back-up-a-transaction-log"></a>備份交易記錄檔  
   
-1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在物件總管中按一下伺服器名稱以展開伺服器樹狀目錄。  
+1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
 2.  展開 [**資料庫**]，然後視資料庫而定，選取使用者資料庫，或展開 [**系統**資料庫] 並選取系統資料庫。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72783115"
   
 6.  在 **[備份類型]** 清單方塊中，選取 **[交易記錄]**。  
   
-7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「*只複本備份*」是與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份順序無關的備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
+7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」** 是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
   
     > [!NOTE]  
     >  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
@@ -143,7 +143,7 @@ ms.locfileid: "72783115"
   
     -   [檢視或設定 backup compression default 伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
- **加密**  
+ [加密]****  
   
  若要加密備份檔案，請核取 **[加密備份]** 核取方塊。 選取要用於加密備份檔案的加密演算法，並提供憑證或非對稱金鑰。 可用於加密的演算法包括：  
   
@@ -155,7 +155,7 @@ ms.locfileid: "72783115"
   
 -   三重 DES  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-back-up-a-transaction-log"></a>備份交易記錄檔  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72783115"
   
     -   寫入交易記錄備份的備份裝置。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
   
 > [!IMPORTANT]  
 >  這個範例使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫，而該資料庫則是使用簡單復原模式。 為了允許記錄備份，在執行完整資料庫備份之前，此資料庫已設定為使用完整復原模式。 如需詳細資訊，請參閱[檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
@@ -178,7 +178,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 使用 `Backup-SqlDatabase` 指令程式，並且為 `Log` 參數指定 `-BackupAction` 值。  
   
@@ -190,16 +190,16 @@ GO
   
 若要設定及使用 SQL Server PowerShell 提供者，請參閱[SQL Server PowerShell 提供者](../../powershell/sql-server-powershell-provider.md)。
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [還原交易記錄備份 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
 -   [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [套用交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [將交易記錄備份套用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [維護計畫](../maintenance-plans/maintenance-plans.md)   
  [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md)  

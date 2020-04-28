@@ -16,21 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a51364838173f70c4d5daac794176caa6ea01221
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796543"
 ---
 # <a name="transferring-data"></a>傳送資料
-  <xref:Microsoft.SqlServer.Management.Smo.Transfer>類別是公用程式類別，可提供工具來傳送物件和資料。  
+   類別是一種公用程式類別，可提供工具來傳送物件和資料。  
   
- 資料庫結構描述中物件的傳送方式是藉由執行目標伺服器上產生的指令碼。 
-  <xref:Microsoft.SqlServer.Management.Smo.Table> 資料會隨著動態建立的 DTS 封裝一起傳送。  
+ 資料庫結構描述中物件的傳送方式是藉由執行目標伺服器上產生的指令碼。 <xref:Microsoft.SqlServer.Management.Smo.Table> 資料會隨著動態建立的 DTS 封裝一起傳送。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer>物件包含 sql-dmo 中<xref:Microsoft.SqlServer.Management.Smo.Transfer>物件的所有功能，以及其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能。 不過，在的 SMO [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中， <xref:Microsoft.SqlServer.Management.Smo.Transfer>物件會使用[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 來傳送資料。 此外，用來執行資料傳送的方法和屬性是位於 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件上，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件上。 將功能從執行個體類別移到公用程式類別與較輕的物件模型一致，因為只有在需要時才會載入特定工作的程式碼。  
+  物件包含了 DMO 中  物件的所有功能和其他  功能。 不過，在的 SMO [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中， <xref:Microsoft.SqlServer.Management.Smo.Transfer>物件會使用[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 來傳送資料。 此外，用來執行資料傳送的方法和屬性是位於 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件上，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件上。 將功能從執行個體類別移到公用程式類別與較輕的物件模型一致，因為只有在需要時才會載入特定工作的程式碼。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer>物件不支援將資料傳送到具有<xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A>小於實例版本的目標資料庫[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  物件不支援將資料傳送到  小於  執行個體版本的目標資料庫。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

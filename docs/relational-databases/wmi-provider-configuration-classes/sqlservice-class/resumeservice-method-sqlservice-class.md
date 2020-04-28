@@ -18,10 +18,10 @@ ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40c0822bc8b881153909f77ec50b0c9de9883dec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660939"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法 (SqlService 類別)

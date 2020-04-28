@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637651"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 範例
@@ -28,16 +28,14 @@ ms.locfileid: "73637651"
   
 4.  在 SQL Server 中卸除及加入該組件  
   
- CLR 預存程序本身的原始程式碼和組件不會變更。 系統會提供 `build.cmd` 指令碼，其示範如何編譯及連結資源組件。雖然應用程式的原始程式碼會根據目前正在執行的組件建立資源管理員，但是您不一定要在包含預存程序的 DLL 中內嵌文化特性中性的資源。 
-  `System.Resources.NeutralResourcesLanguage attribute` 允許文化特性中性的資源存在於附屬 DLL 中。 為此最好使用個別的 DLL，如此一來，當需要加入或變更當地語系化文字時，就無須變更包含 CLR 預存程序的主要 DLL。 這對 CLR 使用者定義型別特別有用，這些型別可能含有資料行及其他相依性，而使得型別難以卸除及重新加入。通常，附屬 DLL 版本必須與主組件版本相同。 不過，您也可以使用 `SatelliteContractVersion` 屬性來允許主組件更新，而不更新附屬組件。 如需詳細資訊，請參閱 Microsoft .NET 文件集中的 `ResourceManager` 類別。  
+ CLR 預存程序本身的原始程式碼和組件不會變更。 系統會提供 `build.cmd` 指令碼，其示範如何編譯及連結資源組件。雖然應用程式的原始程式碼會根據目前正在執行的組件建立資源管理員，但是您不一定要在包含預存程序的 DLL 中內嵌文化特性中性的資源。 `System.Resources.NeutralResourcesLanguage attribute` 允許文化特性中性的資源存在於附屬 DLL 中。 為此最好使用個別的 DLL，如此一來，當需要加入或變更當地語系化文字時，就無須變更包含 CLR 預存程序的主要 DLL。 這對 CLR 使用者定義型別特別有用，這些型別可能含有資料行及其他相依性，而使得型別難以卸除及重新加入。通常，附屬 DLL 版本必須與主組件版本相同。 不過，您也可以使用 `SatelliteContractVersion` 屬性來允許主組件更新，而不更新附屬組件。 如需詳細資訊，請參閱 Microsoft .NET 文件集中的 `ResourceManager` 類別。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  此範例僅適用於 SQL Server 2005 和更新版本。  
   
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://www.microsoft.com/sql-server/sql-server-editions-express)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
@@ -453,6 +451,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

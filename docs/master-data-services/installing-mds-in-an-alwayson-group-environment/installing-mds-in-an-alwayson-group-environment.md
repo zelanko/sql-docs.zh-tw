@@ -11,10 +11,10 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728099"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
@@ -29,7 +29,7 @@ ms.locfileid: "73728099"
 
 若要實作解決方案，您需要完成本文所涵蓋的下列工作。
 
-1. [安裝和設定 Windows Server 容錯移轉叢集（WSFC）](#windows-server-failover-cluster-wsfc)。
+1. [安裝和設定 Windows Server 容錯移轉叢集 (WSFC)](#windows-server-failover-cluster-wsfc)。
 
 2. [設定 Always On 可用性群組](#sql-server-always-on-availability-group)。
 
@@ -72,7 +72,7 @@ ms.locfileid: "73728099"
 
 ![Always On 可用性群組的一般設定](media/Fig1_TypicalConfig.png)
 
-圖 1. 一般 Always On 可用性群組設定
+圖 1。 一般 Always On 可用性群組設定
 
 如果您不需要考慮災害復原，則第二個資料中心內不需要有複本。 如果您需要改善 HA，則相同的主要資料中心內可以有更多的同步複本。
 
@@ -95,8 +95,7 @@ WSFC 是一種功能，可改善應用程式和服務的高可用性。 它包�
 Windows Server 作業系統安裝於所有執行個體上，並修補所有更新。
 
 > [!NOTE]
-> 
-  **強烈建議**在所有執行個體上安裝相同的 Windows 版本和相同的功能集，避免任何潛在的不相容問題。
+> **強烈建議**在所有執行個體上安裝相同的 Windows 版本和相同的功能集，避免任何潛在的不相容問題。
 
 ### <a name="install-failover-cluster-feature"></a>安裝容錯移轉叢集功能
 
@@ -210,7 +209,7 @@ Fci 提供實例層級的高可用性。 SQL Server 服務及其相關服務會�
    
 ### <a name="prerequisites"></a>Prerequisites
 
-- 在所有節點上安裝 SQL Server。 如需詳細資訊，請參閱[Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)。
+- 在所有節點上安裝 SQL Server。 如需詳細資訊，請參閱[安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)。
 
 - (建議) 在每個節點上安裝完全相同的 SQL Server 功能集和版本。 特別的是，您必須安裝 MDS。
 
@@ -243,7 +242,7 @@ Fci 提供實例層級的高可用性。 SQL Server 服務及其相關服務會�
 4. 按一下 [重新啟動]**** 重新啟動 [SQL Server]**** 服務，並讓此變更生效。 請參閱圖 10。
 
 > [!NOTE]
-> 您可以使用 [SQL Server 組態管理員]****，變更執行 SQL Server 服務的服務帳戶。 在 [SQL Server (MSSQLSERVER) 屬性]****** 對話方塊中，按一下 [登入]** **** 索引標籤。 請參閱圖 11。
+> 您可以使用 [SQL Server 組態管理員]****，變更執行 SQL Server 服務的服務帳戶。 在 [SQL Server (MSSQLSERVER) 屬性]**** **** 對話方塊中，按一下 [登入]**** 索引標籤。 請參閱圖 11。
 
 ### <a name="create-an-availability-group"></a>建立可用性群組
 
@@ -299,13 +298,13 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
    針對每個複本，設定下列 [同步認可]****、[自動容錯移轉]**** 和 [可讀取次要]**** 設定。 請參閱圖 17。
 
-**同步認可**：這可確保在資料庫的主要複本上認可交易時，也會在所有其他同步複本上認可交易。 非同步認可不保證這點，而且可能會落後於主要複本。
+**同步認可**：這確保如果在資料庫的主要複本上認可交易，則也會在所有其他同步複本上認可交易。 非同步認可不保證這點，而且可能會落後於主要複本。
 
 只有在兩個節點都位於相同的資料中心時，您通常才應該啟用同步認可。 如果它們位於不同的資料中心，則同步認可可能會降低資料庫效能。 如果未選取此核取方塊，則會使用非同步認可。
 
-**自動容錯移轉：** 當主要複本關閉時，當選取自動容錯移轉時，AG 會自動容錯移轉至其次要複本。 這只能在具有同步認可的複本上啟用。
+**自動容錯移轉**：如果選取自動容錯移轉，則在主要複本關閉時，AG 會自動容錯移轉至其次要複本。 這只能在具有同步認可的複本上啟用。
 
-**可讀取次要：** 根據預設，使用者無法連接到任何次要複本。 這可讓使用者連接到具有唯讀存取權的次要複本。
+**可讀取次要**：使用者預設無法連接到任何次要複本。 這可讓使用者連接到具有唯讀存取權的次要複本。
 
 8. 在 [指定複本]**** 頁面上，按一下 [接聽程式]**** 索引標籤，然後執行下列動作。 請參閱圖 18。
 
@@ -392,7 +391,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
 ## <a name="feedback"></a>意見反應
 
-本文對您有幫助嗎？ 請按一下文章頂端的 [意見]**** 提供您的意見反應。 
+這份技術白皮書對您是否有幫助？ 請按一下文章頂端的 [意見]**** 提供您的意見反應。 
 
 您的意見反應將協助我們改善未來發行的技術白皮書品質。 
 

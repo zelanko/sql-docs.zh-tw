@@ -11,22 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637739"
 ---
 # <a name="send-dataset-sample"></a>傳送資料集範例
-  這個「傳送 `DataSet`」範例會示範如何在伺服器端以 Common Language Runtime (CLR) 為基礎的預存程序內傳回以 ADO.NET 為基礎的 `DataSet`，做為用戶端的結果集。 例如，當這種預存程序使用查詢的結果填入 `DataSet`，然後操作該 `DataSet` 所包含的資料時，這個範例很有幫助。 另外，如果預存程序重新建立及擴展 `DataSet`，這也很有幫助。此範例包含兩個類別：`DataSetUtilities` 和 `TestSendDataSet`。 
-  `SendDataSet` 類別上的 `DataSetUtilities` 方法會實作一種通用方式來傳輸 `DataSet` 執行個體的內容給用戶端。 定義在 `DoTest` 類別上的 `TestSendDataSet` 方法會建立 `SendDataSet` 並以 `DataSet` Transact-SQL 預存程序中的資料填入其中，藉以確認 `uspGetTwoBOMTestData` 方法正常運作。 
-  `uspGetTwoBOMTestData` 會執行 Transact-SQL 預存程序 `uspGetBillOfMaterials` 兩次，以便遞迴地查詢已指定為 `usp_GetTwoBOMTestData` 預存程序參數之兩種產品的用料表。 通常，填入資料集之後，在叫用 `SendDataSet` 來傳遞資料集內的資料做為用戶端的結果集之前，會先修改資料。 為了簡單起見，此範例只傳回資料而不做修改。  
+  這個「傳送 `DataSet`」範例會示範如何在伺服器端以 Common Language Runtime (CLR) 為基礎的預存程序內傳回以 ADO.NET 為基礎的 `DataSet`，做為用戶端的結果集。 例如，當這種預存程序使用查詢的結果填入 `DataSet`，然後操作該 `DataSet` 所包含的資料時，這個範例很有幫助。 另外，如果預存程序重新建立及擴展 `DataSet`，這也很有幫助。此範例包含兩個類別：`DataSetUtilities` 和 `TestSendDataSet`。 `SendDataSet` 類別上的 `DataSetUtilities` 方法會實作一種通用方式來傳輸 `DataSet` 執行個體的內容給用戶端。 定義在 `DoTest` 類別上的 `TestSendDataSet` 方法會建立 `SendDataSet` 並以 `DataSet` Transact-SQL 預存程序中的資料填入其中，藉以確認 `uspGetTwoBOMTestData` 方法正常運作。 `uspGetTwoBOMTestData` 會執行 Transact-SQL 預存程序 `uspGetBillOfMaterials` 兩次，以便遞迴地查詢已指定為 `usp_GetTwoBOMTestData` 預存程序參數之兩種產品的用料表。 通常，填入資料集之後，在叫用 `SendDataSet` 來傳遞資料集內的資料做為用戶端的結果集之前，會先修改資料。 為了簡單起見，此範例只傳回資料而不做修改。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://www.microsoft.com/sql-server/sql-server-editions-express)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
@@ -597,6 +594,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

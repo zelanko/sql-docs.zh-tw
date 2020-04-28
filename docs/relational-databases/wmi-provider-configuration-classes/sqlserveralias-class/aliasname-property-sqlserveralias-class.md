@@ -17,10 +17,10 @@ ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ea108a1996facab7549d2bea40e016af39dc29d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659009"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 屬性 (SqlServerAlias 別名)

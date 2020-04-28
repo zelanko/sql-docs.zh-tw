@@ -18,10 +18,10 @@ ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bd79263e09f1b3eccb4a4efff0ed8ecd036fcc9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659305"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 屬性 (ServerSettings 類別)

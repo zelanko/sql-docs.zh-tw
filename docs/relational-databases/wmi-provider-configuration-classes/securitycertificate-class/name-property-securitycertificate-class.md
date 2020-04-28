@@ -18,10 +18,10 @@ ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 48cfb1b071b3cc7a2ef653cc9b1149c64c954d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660357"
 ---
 # <a name="name-property-securitycertificate-class"></a>Name 屬性 (SecurityCertificate 類別)

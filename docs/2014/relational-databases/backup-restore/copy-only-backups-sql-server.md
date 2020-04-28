@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798013"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
-  「*只複本備份*」是與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份順序無關的備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
+  「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
   
  只複製備份的類型如下所示：  
   
@@ -43,11 +43,11 @@ ms.locfileid: "72798013"
 ## <a name="to-create-a-copy-only-backup"></a>若要建立只複製備份  
  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 建立只複製備份。  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 1.  在 [備份資料庫]**** 對話方塊的 [一般]**** 頁面上，選取 [只複製備份]**** 選項。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  基本的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語法如下：  
   
 -   用於只複製完整備份：  
@@ -61,11 +61,11 @@ ms.locfileid: "72798013"
   
      備份記錄*database_name*至*\<* backup_device*>* .。。使用 COPY_ONLY .。。  
   
-###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 使用 `Backup-SqlDatabase` 指令程式搭配 `-CopyOnly` 參數。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
 
 ### <a name="to-create-a-full-or-log-backup"></a>若要建立完整備份或記錄備份
   
