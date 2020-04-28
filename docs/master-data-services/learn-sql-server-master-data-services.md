@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487862"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
@@ -26,8 +26,8 @@ ms.locfileid: "81487862"
   
   
 ## <a name="training"></a>訓練  
-* 要探索[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]在中引入的新功能和功能,請嘗試[自定進度的實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)(需要使用 Microsoft 帳戶登錄)。  
-* 要開發一[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]個解決方案來儲存和管理地理資料的主清單,請使用 Excel[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]和的外接程式,嘗試[自定進度的實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
+* 若要探索引進[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的新特性和功能，請嘗試一個自學[實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（使用您的 Microsoft 帳戶登入）。  
+* 若要使用[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]適用于 Excel 的增益集和[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]來開發用來儲存和管理主要資料清單的方案，請試試一個自學的[實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
   
 ## <a name="videos"></a>影片  
 * 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]版的新功能，請 [**觀看這段影片**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  

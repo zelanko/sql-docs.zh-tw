@@ -1,6 +1,6 @@
 ---
-title: CLR 使用者定義的功能 |微軟文件
-description: SQL Server CLR 集成允許您在任何 .NET 框架程式設計語言中創建使用者定義的標量值、表值和聚合函數。
+title: CLR 使用者定義函數 |Microsoft Docs
+description: SQL Server CLR 整合可讓您在任何 .NET Framework 的程式設計語言中，建立使用者定義的純量值、資料表值和彙總函式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488267"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函數
@@ -41,6 +41,6 @@ ms.locfileid: "81488267"
  描述如何實作及使用使用者定義彙總。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用者定義的函數](../../relational-databases/user-defined-functions/user-defined-functions.md)  
+ [使用者定義函數](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   

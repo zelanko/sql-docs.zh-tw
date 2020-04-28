@@ -1,5 +1,5 @@
 ---
-title: 表格建模(探險作品教程) |微軟文件
+title: 表格式模型化（艾德作品教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487627"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格式模型化 (Adventure Works 教學課程)
@@ -58,7 +58,7 @@ ms.locfileid: "81487627"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW 範例資料庫。 這個範例資料庫包括完成本教學課程所需的資料。 要下載範例資料庫,請參閱[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。  
+-   AdventureWorksDW 範例資料庫。 這個範例資料庫包括完成本教學課程所需的資料。 若要下載範例資料庫，請[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)參閱。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 或更新版本 (與第 11 課中的 [在 Excel 中進行分析] 功能搭配使用)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81487627"
 |課程|預估完成時間|  
 |------------|--------------------------------|  
 |[使用資料列篩選器實作動態安全性](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分鐘|  
-|[為電源檢視報告設定報告屬性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)為電源檢視報告設定報告屬性|30 分鐘|  
+|[設定 Power View 報表的報表屬性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)設定 Power View 報表的報表屬性|30 分鐘|  
   
 ## <a name="next-step"></a>後續步驟  
  若要開始本教學課程，請繼續進行第一課： [第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  

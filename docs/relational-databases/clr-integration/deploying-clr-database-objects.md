@@ -1,6 +1,6 @@
 ---
-title: 部署 CLR 資料庫物件 |微軟文件
-description: 使用 Microsoft Visual Studio,您可以為 SQL Server 開發 CLR 資料庫物件,將其部署到測試伺服器,並將它們分發到生產伺服器。
+title: 部署 CLR 資料庫物件 |Microsoft Docs
+description: 使用 Microsoft Visual Studio，您可以開發 SQL Server 的 CLR 資料庫物件、將其部署至測試伺服器，然後將它們散發至實際伺服器。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 26253e3a19b31dce94249a09dcf7cee71fbffeeb
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488207"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
@@ -36,15 +36,15 @@ ms.locfileid: "81488207"
  請確定已解決所有編譯器錯誤和警告。 然後，您就可以使用 Visual Studio 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫中註冊包含 CLR 常式的組件。  
   
 > [!NOTE]  
->  您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用 TCP/IP 網路通訊協定，才能針對遠端開發、偵錯和開發使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio。 有關在伺服器上啟用 TCP/IP 協定的詳細資訊,請參閱[設定用戶端協定](../../database-engine/configure-windows/configure-client-protocols.md)。  
+>  您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用 TCP/IP 網路通訊協定，才能針對遠端開發、偵錯和開發使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio。 如需在伺服器上啟用 TCP/IP 通訊協定的詳細資訊，請參閱[設定用戶端通訊協定](../../database-engine/configure-windows/configure-client-protocols.md)。  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>使用 Visual Studio 來部署組件  
   
-1.  通過從 **「生成**」功能表中選擇 **「生成**\<專案名稱>生成專案。  
+1.  從 [**建立**] 功能表中選取 [**組建** \<專案名稱>] 來建立專案。  
   
 2.  解決所有建立錯誤和警告，然後再將組件部署至測試伺服器。  
   
-3.  從 **「生成****」功能表中選擇「部署**」 。 然後，系統就會在第一次於 Visual Studio 中建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專案時指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料庫中註冊此組件。  
+3.  從 [**建立**] 功能表中選取 [**部署**]。 然後，系統就會在第一次於 Visual Studio 中建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專案時指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料庫中註冊此組件。  
 
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>使用 Transact-SQL 來部署組件  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81488207"
   
  `vbc /target:library C:\helloworld.vb`  
   
- 這些命令使用 **/target**選項啟動 Visual C++ 或可視化基本編譯器來指定建譯庫 DLL。  
+ 這些命令會使用 **/target**選項來啟動 Visual c # 或 Visual Basic 編譯器，以指定建立程式庫 DLL。  
   
 1.  解決所有建立錯誤和警告，然後再將組件部署至測試伺服器。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81488207"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  然後，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中建立程序、函數、彙總、使用者定義型別或觸發程序。 如果**HelloWorld**程式集在 **"過程"** 類中包含[!INCLUDE[tsql](../../includes/tsql-md.md)]名為**HelloWorld**的方法 ,則可以將以下內容添加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到查詢中,以在 中 創建名為**hello**的過程。  
+1.  然後，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中建立程序、函數、彙總、使用者定義型別或觸發程序。 如果**HelloWorld**元件在 procedure 類別中包含名為**HelloWorld**的方法，則可以[!INCLUDE[tsql](../../includes/tsql-md.md)]將下列新增至查詢，以建立名為**hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的**程式**。  
   
  `CREATE PROCEDURE hello`  
   
@@ -76,10 +76,10 @@ ms.locfileid: "81488207"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- 有關在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中建立不同類型的託管資料庫物件的詳細資訊,請參閱[CLR 使用者定義函數](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)[、CLR 使用者定義聚合](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)[、CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)[、CLR 儲存過程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)和[CLR 觸發器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)。  
+ 如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需在中建立不同類型的 managed 資料庫物件的詳細資訊，請參閱[Clr 使用者定義函數](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)、 [clr 使用者定義匯總](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)、 [Clr 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)、 [clr 預存程式](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)和[clr 觸發](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)程式。  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>將組件部署至實際伺服器  
- 一旦 CLR 資料庫物件已經在測試伺服器上測試並驗證之後，您就可以將它們散發至實際伺服器。 有關除錯託管資料庫物件的詳細資訊,請參閱除錯[CLR 資料庫物件](../../relational-databases/clr-integration/debugging-clr-database-objects.md)。  
+ 一旦 CLR 資料庫物件已經在測試伺服器上測試並驗證之後，您就可以將它們散發至實際伺服器。 如需有關如何對 managed 資料庫物件進行偵錯工具的詳細資訊，請參閱[偵錯工具 CLR 資料庫物件](../../relational-databases/clr-integration/debugging-clr-database-objects.md)。  
   
  Managed 資料庫物件的部署作業與一般資料庫物件 (資料表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 常式等項目) 的部署作業很相似。 您可以使用部署指令碼，將包含 CLR 資料庫物件的組件部署至其他伺服器。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的「產生指令碼」功能來建立部署指令碼。 此外，您也可以手動建立部署指令碼，或先使用「產生指令碼」來建立部署指令碼，然後再手動進行更改。 一旦部署指令碼已經建立完成之後，您就可以在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行此指令碼，以便部署 Managed 資料庫物件。  
   
@@ -87,22 +87,22 @@ ms.locfileid: "81488207"
   
 1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接至已註冊要部署之 Managed 組件或資料庫物件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在**物件資源管理員**中,展開**\<伺服器名稱>** 和**資料庫**樹。 右鍵按一下註冊託管資料庫物件的資料庫,選擇 **「任務**」,然後選擇 **「生成腳本**」。 指令碼精靈隨即開啟。  
+2.  在 [**物件總管**中，展開 [ ** \<伺服器名稱]>** 和 [**資料庫**] 樹狀目錄。 以滑鼠右鍵按一下已註冊受控資料庫物件的資料庫 **，選取 [** 工作]，然後選取 [**產生腳本**]。 指令碼精靈隨即開啟。  
   
-3.  從清單框中選擇資料庫,然後按一下「**下一步**」 。  
+3.  從清單方塊中選取資料庫，然後按 **[下一步]**。  
   
-4.  在 **「選擇文稿選項」** 窗格中,按**下「 下一步**」 或更改選項,然後按下「**下一步**」。  
+4.  在 [**選擇腳本選項**] 窗格中，按 **[下一步]** 或變更選項，然後按 **[下一步]**。  
   
-5.  在**選擇物件類型「** 窗格中,選擇要部署的資料庫物件的類型。 按 [下一步]  。  
+5.  在 [**選擇物件類型**] 窗格中，選擇要部署的資料庫物件類型。 按 [下一步]  。  
   
-6.  對於在**選擇物件類型「** 窗格中選擇的每個物件類型,**將\<顯示 」選擇類型>** 窗格。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選擇一個或多個物件,然後單擊 **「下一步**」。。  
+6.  針對在 [**選擇物件類型**] 窗格中選取的每個物件類型，會顯示** \<[選擇類型]>** ] 窗格。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一或多個物件，然後按 **[下一步]**。  
   
-7.  選擇所有所需的資料庫物件類型後,將啟動輸出**選項**「窗格。 選擇要**歸檔的文稿**並為腳本指定檔案路徑。 選取 [下一步]  。 查看您的選擇,然後單擊 **"完成**"。 此時，部署指令碼就會儲存至指定的檔案路徑。  
+7.  當所有所需的資料庫物件類型都已選取時，[**輸出選項**] 窗格就會出現。 選取 [**編寫腳本至**檔案]，並指定腳本的檔案路徑。 選取 [下一步]  。 檢查您的選擇，然後按一下 **[完成]**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
   
 ## <a name="post-deployment-scripts"></a>部署後指令碼  
  您可以執行部署後指令碼。  
   
- 若要加入部署後指令碼，請在您的 Visual Studio 專案目錄中加入稱為 postdeployscript.sql 的檔案。 例如,在**解決方案資源管理器**中右鍵單擊專案,然後選擇「**添加現有專案**」。 將此檔案加入專案的根目錄中，而非加入 Test Scripts 資料夾中。  
+ 若要加入部署後指令碼，請在您的 Visual Studio 專案目錄中加入稱為 postdeployscript.sql 的檔案。 例如，以滑鼠右鍵按一下**方案總管**中的專案，然後選取 [**加入現有專案**]。 將此檔案加入專案的根目錄中，而非加入 Test Scripts 資料夾中。  
   
  當您按一下 [部署] 時，Visual Studio 就會在專案部署完成之後執行此指令碼。  
   

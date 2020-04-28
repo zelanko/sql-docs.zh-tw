@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087158"
 ---
 # <a name="excel-destination"></a>Excel 目的地
@@ -48,9 +48,9 @@ ms.locfileid: "82087158"
   
      如需如何避免包含單引號的資訊，請參閱 msdn.com 上的此篇部落格文章 [使用 SSIS 封裝中 Excel 資料流程目的地元件將資料轉換至 Excel 時，附加至所有字串的單引號](https://go.microsoft.com/fwlink/?LinkId=400876)(英文)。  
   
--   **正在儲存備忘 (ntext) 資料**。 在 Excel 資料行中成功儲存長於 255 個字元的字串之前，驅動程式必須能將目的地資料行的資料類型辨識為 **備忘** ，而不是 **字串**。 如果目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。 如果目標表是在包設計期間或在運行時創建的,則 CREATE TABLE 語句必須使用 LONGTEXT(或其同義詞之一)作為備忘錄列的數據類型。  
+-   **正在儲存備忘 (ntext) 資料**。 在 Excel 資料行中成功儲存長於 255 個字元的字串之前，驅動程式必須能將目的地資料行的資料類型辨識為 **備忘** ，而不是 **字串**。 如果目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。 如果目的地資料表是在封裝設計期間或在執行時間建立的，則 CREATE TABLE 語句必須使用 LONGTEXT （或其同義字之一）作為備忘資料行的資料類型。  
   
--   **資料型態**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
+-   **資料類型**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
   
     -   數值 - 雙精確度浮點數 (DT_R8)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82087158"
   
     -   布林值 - 布林值 (DT_BOOL)  
   
-    -   日期/時間`datetime`(DT_DATE)  
+    -   日期/時間`datetime` （DT_DATE）  
   
     -   字串 - Unicode 字串，長度 255 (DT_WSTR)  
   

@@ -1,6 +1,6 @@
 ---
-title: 呼叫 CLR 使用者定義的聚合函數 |微軟文件
-description: 在 SQL Server CLR 整合中,使用 Transact-SQL SELECT 呼叫 CLR 使用者定義的聚合,但須遵守適用於系統聚合函數的規則。
+title: 叫用 CLR 使用者定義彙總函式 |Microsoft Docs
+description: 在 SQL Server CLR 整合] 中，請使用 Transact-sql SELECT 來叫用 CLR 使用者自訂匯總，受限於適用于系統彙總函式的規則。
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488407"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 使用者定義彙總 - 叫用函式
@@ -31,13 +31,13 @@ ms.locfileid: "81488407"
   
  適用下列其他規則：  
   
--   當前用戶必須具有使用者定義的聚合的**EXECUTE**許可權。  
+-   目前使用者必須具有使用者定義匯總的「**執行**」許可權。  
   
--   必須使用*schema_name.udagg_name*形式的兩部分名稱調用使用者定義的聚合。  
+-   使用者定義匯總必須使用*schema_name. udagg_name*格式的兩部分名稱來叫用。  
   
--   使用者定義的聚合的參數類型必須匹配或隱式轉換為聚合*input_type,* 如**CREATE 聚合**語句中定義的。  
+-   使用者定義匯總的引數類型必須符合或可以隱含地轉換成匯總的*input_type* ，如**CREATE aggregate**語句中所定義。  
   
--   使用者定義的聚合的返回類型必須與**CREATE 聚合**語句中的*return_type*匹配。  
+-   使用者定義匯總的傳回類型必須符合**CREATE aggregate**語句中的*return_type* 。  
   
 ## <a name="example-1"></a>範例 1  
  以下是使用者定義彙總函式的範例，此函數會串連取自資料表之資料行的一組字串值：  
@@ -197,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 將代碼編譯到**MyAgg.dll**後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],可以 按照如下方式註冊聚合:  
+ 將程式碼編譯為**myagg.dll 之後**之後，您可以在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊匯總，如下所示：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -209,7 +209,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援使用 /clr:pure 編譯器選項編譯的 Visual C++ 資料庫物件 (例如純量值函式) 執行。  
   
- 與大多數聚合一樣,邏輯的大部分位於**累積**方法中。 在這裡,作為參數傳入的字串將追加到**Init**方法中初始化的**StringBuilder**物件。 **Accumulate** 假設這不是第一次調用 **「累積」** 方法,則在追加傳入字串之前,還會將逗號追加到**StringBuilder**中。 在計算任務結束時,調用**終止**方法,該方法將**StringBuilder**作為字串返回。  
+ 如同大部分的匯總，大部分的邏輯都是在**累積**的方法中。 在這裡，當做參數傳遞至**累積**方法的字串會附加至在**Init**方法中初始化的**StringBuilder**物件。 假設這不是第一次呼叫**累積**方法，則在附加傳入的字串之前，也會將逗號附加至**StringBuilder** 。 在計算工作結束時，會呼叫**Terminate**方法，以字串形式傳回**StringBuilder** 。  
   
  例如，請考慮具有下列結構描述的資料表：  
   
@@ -242,7 +242,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>範例 2  
- 下面的範例顯示了在 **「累積」** 方法上具有兩個參數的聚合。  
+ 下列範例顯示在**累積**方法上有兩個參數的匯總。  
   
  [C#]  
   

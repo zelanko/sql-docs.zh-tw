@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087058"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
@@ -52,13 +52,13 @@ ms.locfileid: "82087058"
   
 -   **將易懂資訊加入錯誤輸出**。 除了錯誤輸出所提供的兩個數值識別碼外，您還可以加入描述性的資訊，讓錯誤輸出更容易分析。  
   
-     **新增錯誤的說明**。 使用指令碼元件可以很容易地查閱錯誤描述。 關於詳細資訊,請參閱[增強文稿元件的錯誤輸出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+     **新增錯誤的描述**。 使用指令碼元件可以很容易地查閱錯誤描述。 如需詳細資訊，請參閱[增強腳本元件的錯誤輸出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
-     **新增錯誤欄的名稱**。 在「指令碼」元件中，不容易以錯誤輸出所儲存之資料行識別碼，查閱相對應的資料行名稱，所以需要執行額外的步驟。 資料流程中的每一個資料行識別碼，在該資料流程工作內都是獨一無二的識別碼，並且在設計階段會保存於封裝中。 以下是將資料行名稱加入錯誤輸出的建議方法。 
+     **加入錯誤資料行的名稱**。 在「指令碼」元件中，不容易以錯誤輸出所儲存之資料行識別碼，查閱相對應的資料行名稱，所以需要執行額外的步驟。 資料流程中的每一個資料行識別碼，在該資料流程工作內都是獨一無二的識別碼，並且在設計階段會保存於封裝中。 以下是將資料行名稱加入錯誤輸出的建議方法。 
   
-    1.  **建立欄位名稱的尋找表格**。 建立會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 的個別應用程式，以便反覆查看每個儲存的封裝、封裝中的每個資料流程、資料流程中的每個物件，以及資料流程物件中的每個輸入與輸出。 此應用程式應該保存查閱資料表中的資料行識別碼以及每個資料行的名稱，以及保存父資料流程工作的識別碼與封裝識別碼。  
+    1.  **建立資料行名稱的查閱資料表**。 建立會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 的個別應用程式，以便反覆查看每個儲存的封裝、封裝中的每個資料流程、資料流程中的每個物件，以及資料流程物件中的每個輸入與輸出。 此應用程式應該保存查閱資料表中的資料行識別碼以及每個資料行的名稱，以及保存父資料流程工作的識別碼與封裝識別碼。  
   
-    2.  **將欄位名稱加入輸出**。 將「查閱」轉換加入至錯誤輸出，以便查閱在先前步驟中所建立之查閱資料表中的資料行名稱。 查閱可以使用錯誤輸出中的資料行識別碼、封裝識別碼 (可在系統變數 System::PackageID 中找到)，以及資料流程工作識別碼 (可在系統變數 System::TaskID 中找到)。  
+    2.  **將資料行名稱加入至輸出**。 將「查閱」轉換加入至錯誤輸出，以便查閱在先前步驟中所建立之查閱資料表中的資料行名稱。 查閱可以使用錯誤輸出中的資料行識別碼、封裝識別碼 (可在系統變數 System::PackageID 中找到)，以及資料流程工作識別碼 (可在系統變數 System::TaskID 中找到)。  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>使用作業報表針對封裝執行進行疑難排解  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供標準作業報表，可協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 這些封裝報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別失敗原因。  
@@ -66,7 +66,7 @@ ms.locfileid: "82087058"
  如需詳細資訊，請參閱 [疑難排解封裝執行的報表](troubleshooting-reports-for-package-execution.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>使用 SSISDB 檢視疑難排解封裝執行  
- 系統提供一些您可以查詢的 SSISDB 資料庫檢視，用以監視封裝執行以及其他作業資訊。 有關詳細資訊,請參閱[監察套件執行和其他操作](../performance/monitor-running-packages-and-other-operations.md)。  
+ 系統提供一些您可以查詢的 SSISDB 資料庫檢視，用以監視封裝執行以及其他作業資訊。 如需詳細資訊，請參閱[監視封裝執行和其他作業](../performance/monitor-running-packages-and-other-operations.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>使用記錄功能針對封裝執行進行疑難排解  
  您可以啟用記錄功能，追蹤執行中之封裝所發生的大部分事件。 記錄提供者會擷取指定之事件的相關資訊，以供稍後分析，並使用資料庫資料表、一般檔案、XML 檔案或其他支援的輸出格式儲存這項資訊。  

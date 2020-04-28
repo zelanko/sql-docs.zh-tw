@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487727"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
@@ -48,7 +48,7 @@ ms.locfileid: "81487727"
  此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。  
   
 ## <a name="1-configure-the-environment"></a>1.設定環境  
- 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和以下代碼開啟`AdventureWorks2012`資料庫,並使用語句`CURRENT_USER`[!INCLUDE[tsql](../includes/tsql-md.md)]檢查 dbo 使用者是否顯示為上下文。  
+ 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和下列程式碼來開啟`AdventureWorks2012`資料庫，然後使用`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)]語句來檢查 dbo 使用者是否顯示為內容。  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- 如需 GRANT 陳述式的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)。 如需預存程序的詳細資訊，請參閱[預存程序 &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md)。 有關所有[!INCLUDE[ssDE](../includes/ssde-md.md)]權限的海報,請[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)參閱 。  
+ 如需 GRANT 陳述式的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)。 如需預存程序的詳細資訊，請參閱[預存程序 &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md)。 如需所有[!INCLUDE[ssDE](../includes/ssde-md.md)]許可權的海報，請[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)參閱。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.建立預存程序來存取資料  
  若要在資料庫內切換內容，請使用 EXECUTE AS 陳述式。 EXECUTE AS 則需要 IMPERSONATE 權限。  

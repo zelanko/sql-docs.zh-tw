@@ -1,5 +1,5 @@
 ---
-title: 建立主資料管理員 Web 應用程式
+title: 建立主資料管理員 web 應用程式
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728509"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主要資料管理員 Web 應用程式 (主資料服務)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 web 應用程式（Master Data Services）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -78,7 +78,7 @@ ms.locfileid: "81728509"
   
 -   將此 Web 應用程式關聯至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱 [將 Master Data Services 資料庫與 Web 應用程式產生關聯](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)。  
   
--   或者,如果想要使用傳輸層安全[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)](TLS)(以前稱為安全套接字層 (SSL))加密內容,請將承載 Web 應用程式的網站配置為使用 HTTPS 綁定。 您必須使用 Internet 資訊服務 (IIS) 工具(如 IIS Manager)來設定 Web 伺服器的伺服器證書,並為網站配置 HTTPS 綁定和 TLS 設定。 如需詳細資訊，請參閱 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
+-   （選擇性）如果您想要使用[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]傳輸層安全性（TLS）加密內容（先前稱為安全通訊端層（SSL）），請將裝載 web 應用程式的網站設定為使用 HTTPS 系結。 您必須使用 Internet Information Services （IIS）工具（例如 IIS 管理員）來設定 web 伺服器的伺服器憑證，以及設定 HTTPS 系結和網站的 TLS 設定。 如需詳細資訊，請參閱 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
