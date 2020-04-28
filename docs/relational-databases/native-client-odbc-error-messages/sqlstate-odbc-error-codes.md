@@ -1,5 +1,5 @@
 ---
-title: SQLSTATE (ODBC 錯誤代碼) |微軟文件
+title: SQLSTATE （ODBC 錯誤碼） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c7f3fbdf690989830cff2a41028ee0c1e2c9f37
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291496"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC 錯誤碼)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQLSTATE 會提供警告或錯誤原因的詳細資訊。 對於在偵測到與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回的資料來源中發生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的錯誤, 本機客戶端 ODBC 驅動程式將傳回的本機錯誤編號映射到相應的 SQLSTATE。 如果本機錯誤編號沒有要映射到的 ODBC 錯誤[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代碼, 本機用戶端 ODBC 驅動程式將返回 SQLSTATE 42000("語法錯誤或存取衝突」。 對於驅動程式偵測到的錯誤[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 本機用戶端 ODBC 驅動程式將生成相應的 SQLSTATE。  
+  SQLSTATE 會提供警告或錯誤原因的詳細資訊。 對於偵測到並傳回的資料來源發生的錯誤[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會將傳回的原生錯誤號碼對應至適當的 SQLSTATE。 如果原生錯誤號碼沒有要對應的 ODBC 錯誤碼， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會傳回 SQLSTATE 42000 （「語法錯誤或存取違規」）。 對於驅動程式所偵測到的錯誤， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會產生適當的 SQLSTATE。  
   
  如需有關狀態錯誤碼的詳細資訊，請查看下列主題：  
   

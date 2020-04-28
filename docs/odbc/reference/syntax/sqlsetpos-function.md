@@ -1,5 +1,5 @@
 ---
-title: SQLSetPos 函數 |微軟文件
+title: SQLSetPos 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7a8839f1ae540ac9e5f29e144f7f57fb754e50ff
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287328"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函式
-**一致性**  
- 版本介紹: ODBC 1.0 標準合規性: ODBC  
+**標準**  
+ 引進的版本： ODBC 1.0 標準合規性： ODBC  
   
  **摘要**  
- **SQLSetPos**設置行集中的游標位置,並允許應用程式刷新行集中的數據或更新或刪除結果集中的數據。  
+ **SQLSetPos**會在資料列集中設定游標位置，並允許應用程式重新整理資料列集中的資料，或更新或刪除結果集中的資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,274 +46,274 @@ SQLRETURN SQLSetPos(
 ```  
   
 ## <a name="arguments"></a>引數  
- *語句句柄*  
- [輸入]語句句柄。  
+ *StatementHandle*  
+ 源語句控制碼。  
   
- *行號*  
- [輸入]行在行集中的位置,用於執行使用 *「操作」* 參數指定的操作。 如果*RowNumber*為 0,則該操作將應用於行集中的每一行。  
+ *RowNumber*  
+ 源資料列集的位置，要在其上執行使用*operation*引數所指定的作業。 如果*RowNumber*是0，則作業會套用至資料列集中的每個資料列。  
   
- 有關詳細資訊,請參閱"註釋"。  
+ 如需其他資訊，請參閱「批註」。  
   
- *操作*  
- [輸入]操作執行:  
+ *運算*  
+ 源要執行的作業：  
   
- SQL_POSITIONSQL_REFRESHSQL_UPDATESQL_DELETE  
+ SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  *操作*參數的SQL_ADD值已被棄用為 ODBC *3.x*。 ODBC *3.x*驅動程式需要支援SQL_ADD,以便向後相容。 此功能已取代為對**SQLBulk 操作**的呼叫,並帶有SQL_ADD*操作*。 當 ODBC *3.x*應用程式與 ODBC *2.x*驅動程式配合使用時,驅動程式管理器*Operation*將調用映射到**SQLBulk 操作**,操作操作為*Operation***SQL_ADD,** 操作操作為 SQL_ADD。  
+>  *ODBC 3.x*的*Operation*引數 SQL_ADD 值已被取代。 ODBC *3.x*驅動程式必須支援 SQL_ADD 以提供回溯相容性。 這項功能已由**SQL_ADD 的***操作*所取代。 當 ODBC 3.x*應用程式**與 odbc 2.x*驅動程式搭配使用時，驅動程式管理員會將**SQLBulkOperations**的呼叫對應至具有 SQL_ADD*作業的 SQL_ADD*至**SQLSetPos** 。 *Operation*  
   
- 有關詳細資訊,請參閱"註釋"。  
+ 如需詳細資訊，請參閱「批註」。  
   
  *LockType*  
- [輸入]指定在執行*操作*參數中指定的操作後如何鎖定行。  
+ 源指定在執行*operation*引數中指定的作業之後，如何鎖定資料列。  
   
- SQL_LOCK_NO_CHANGESQL_LOCK_EXCLUSIVESQL_LOCK_UNLOCK  
+ SQL_LOCK_NO_CHANGE SQL_LOCK_EXCLUSIVE SQL_LOCK_UNLOCK  
   
- 有關詳細資訊,請參閱"註釋"。  
+ 如需詳細資訊，請參閱「批註」。  
   
- **返回**  
+ **傳回**  
   
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR或SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLSetPos**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有SQL_HANDLE_STMT的*句柄類型*和*敘述的句**柄*。 下表列出了**SQLSetPos**通常傳回的 SQLSTATE 值,並在此函數的上下文中解釋了每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
+ 當**SQLSetPos**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle**控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出**SQLSetPos**常傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
- 對於可以返回SQL_SUCCESS_WITH_INFO或SQL_ERROR的所有 SQLSTAT(01xxx SQLSTATEs 除外),如果多行操作的一個或多個行發生錯誤(但不是全部)發生錯誤,則返回SQL_SUCCESS_WITH_INFO,如果單行操作發生錯誤,則返回SQL_ERROR。  
+ 對於可以傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除了 01xxx SQLSTATEs）的所有 SQLSTATEs，如果一或多個多資料列作業的資料列發生錯誤，則會傳回 SQL_SUCCESS_WITH_INFO，而如果單一資料列作業發生錯誤，則會傳回 SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
-|01001|游標操作衝突|*操作*參數SQL_DELETE或SQL_UPDATE,並且沒有刪除或更新任何行或多行。 (有關對多行的更新的詳細資訊,請參閱**SQLSetStmtAttr**中的SQL_ATTR_SIMULATE_CURSOR*屬性*的說明。(函數返回SQL_SUCCESS_WITH_INFO。<br /><br /> *操作*參數SQL_DELETE或SQL_UPDATE,並且操作由於樂觀併發而失敗。 (函數返回SQL_SUCCESS_WITH_INFO。|  
-|01004|字串資料右截斷|*SQL_REFRESH操作*參數,為資料類型為SQL_C_CHAR或SQL_C_BINARY的列返回字串或二進位資料,從而導致非空白字元或非 NULL 二進位資料的截斷。|  
-|01S01|行中的錯誤|*RowNumber*參數為 0,在執行使用 *「操作」* 參數指定的操作時,一個或多個行中發生錯誤。<br /><br /> (如果多行操作的一個或多個行發生錯誤(但不是全部),則返回SQL_SUCCESS_WITH_INFO,如果單行操作發生錯誤,則返回SQL_ERROR。<br /><br /> (僅當**SQLATPos**在**SQLExtendedFetch**之後呼叫 SQLSetPos 時,如果驅動程式是 ODBC *2.x*驅動程式且未使用遊標庫,則僅返回此 SQLSTATE。|  
-|01S07|分數截斷|*SQL_REFRESH操作*參數,應用程式緩衝區的數據類型未SQL_C_CHAR或SQL_C_BINARY,返回到一個或多個列的應用程序緩衝區的數據被截斷。 對於數位數據類型,數位的小數部分被截斷。 對於包含時間元件的時間、時間戳和間隔數據類型,時間的小數部分被截斷。<br /><br /> (函數返回SQL_SUCCESS_WITH_INFO。|  
-|07006|受限資料類型屬性衝突|無法將結果集中欄資料值轉換為*TargetType*在調用**SQLBindCol**時指定的數據類型。|  
-|07009|不合法的描述符索引|參數*操作*SQL_REFRESH或SQL_UPDATE,並且對列綁定的列數大於結果集中的列數。|  
-|21S02|衍生表的程度與列清單不符合|參數*操作*是SQL_UPDATE的,沒有列是可升的,因為所有列要麼是未綁定的、唯讀的,要麼是綁定長度/指示器緩衝區中的值SQL_COLUMN_IGNORE。|  
-|22001|字串資料,右截斷|*操作*參數SQL_UPDATE,將字元或二進位值分配給列會導致非空白(字元)或非空字元(二進位元)或位元組的截斷。|  
-|22003|數值超範圍|參數*操作*SQL_UPDATE,並將數值分配給結果集中的列會導致數位的整個部分(而不是小數)被截斷。<br /><br /> 參數*操作*SQL_REFRESH,返回一個或多個綁定列的數值將導致重要數位的損失。|  
-|22007|不合法日期時間格式|參數*操作*SQL_UPDATE,並將日期或時間戳值分配給結果集中的列會導致年份、月份或日欄位超過範圍。<br /><br /> 參數*操作*SQL_REFRESH,返回一個或多個綁定列的日期或時間戳值將導致年份、月份或日欄位超出範圍。|  
-|22008|日期/時間欄位溢出|*操作*參數SQL_UPDATE,並且對發送到結果集中的列的數據執行日期時間算術,導致結果超出欄位允許的值範圍,或根據公曆的約會時間自然規則無效。<br /><br /> *操作*參數SQL_REFRESH,並且對從結果集中檢索的數據執行日期時間算術,導致結果超出欄位允許的值範圍,或根據公曆的約會時間自然規則無效。|  
-|22015|間隔欄位溢出|*操作*參數SQL_UPDATE,將精確數位或間隔 C 類型分配給間隔 SQL 數據類型會導致重要數位丟失。<br /><br /> *行動*論點SQL_UPDATE;當分配給間隔 SQL 類型時,間隔 SQL 類型中沒有 C 類型的值表示形式。<br /><br /> *操作*參數SQL_REFRESH,並將從精確數位或間隔 SQL 類型分配給間隔 C 類型會導致前導欄位中的重要數位遺失。<br /><br /> *操作*參數SQL_ REFRESH;當分配給間隔 C 類型時,間隔 C 類型中沒有 SQL 類型的值表示形式。|  
-|22018|強制轉換規範的不合法字元值|*行動*論點SQL_REFRESH;C 類型是精確或近似的數位、日期時間或間隔數據類型;列的 SQL 類型是字元數據類型;列中的值不是綁定 C 型態的有效文字。<br /><br /> 參數*操作*是SQL_UPDATE;SQL 類型是精確或近似的數位、日期時間或間隔數據類型;C 類型為SQL_C_CHAR;列中的值不是綁定 SQL 類型的有效文本。|  
-|23000|完整性約束衝突|參數*操作*SQL_DELETE或SQL_UPDATE,並且違反了完整性約束。|  
-|24000|指標狀態無效|*語句句柄*處於已執行狀態,但沒有與*語句句柄*關聯的結果集。<br /><br /> (DM)*語句句柄*上打開了一個游標,但**SQLFetch**或**SQLFetchScroll**尚未調用。<br /><br /> 在*語句句柄*上打開一個游標,並且已調用**SQLFetch**或**SQLFetchScroll,** 但游標位於結果集開始之前或結果集結束之後。<br /><br /> 參數*操作*SQL_DELETE、SQL_REFRESH 或SQL_UPDATE,游標位於結果集開始之前或結果集結束之後。|  
-|40001|序列化失敗|由於與另一個事務的資源死鎖,事務已回滾。|  
-|40003|報表完成未知|執行此函數期間,關聯的連接失敗,無法確定事務的狀態。|  
-|42000|語法錯誤或存取衝突|驅動程式無法根據需要鎖定該行,以執行參數*操作*中請求的操作。<br /><br /> 驅動程式無法按參數*LockType*中的請求鎖定該行。|  
-|44000|WITH CHECK OPTION 違規|*操作*參數SQL_UPDATE,更新是在查看的表或從已查看表派生的表上執行的,該表是通過指定 **"使用 CHECK 選項**"創建的,以便受更新影響的一個或多個行不再存在於查看的表中。|  
-|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
-|HY008|已取消作業|非同步處理已開啟*敘述的句柄*。 呼叫該函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**在*語句句柄*上調用 ,然後在*語句句柄*上再次調用該函數。<br /><br /> 呼叫此函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**是從多線程式中的不同線程呼叫*的敘述的句柄*。|  
-|HY010|函式序列錯誤|(DM) 為與*語句句柄*關聯的連接句柄調用非同步執行函數。 調用 SQLSetPos 函數時,此異步函數仍在執行。<br /><br /> (DM) 指定的*語句句柄*未處於執行狀態。 調用該函數時沒有首先調用**SQLExecDirect、SQLExecute**或目錄函**SQLExecute**數。<br /><br /> (DM) 為*語句句柄*調用了非同步執行函數(不是此函數),並且在調用此函數時仍在執行。<br /><br /> (DM) SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**被調用用於**SQLExecute***語句句柄*並返回SQL_NEED_DATA。 **SQLExecDirect** 在發送所有執行時數據參數或列的數據之前,調用了此功能。<br /><br /> (DM) 驅動程式是 ODBC *2.x*驅動程式,在呼叫**SQLFetch**後呼叫**SQLSetPos***進行敘述處理*。|  
-|HY011|無法立即設定屬性|(DM) 驅動程式是 ODBC *2.x*驅動程式;已設置SQL_ATTR_ROW_STATUS_PTR語句屬性;然後**SQLSetPos**在調用**SQLFetch、SQLFetchScroll**或 SQL**SQLFetchScroll****擴展獲取**之前調用。|  
-|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
-|HY090|不合法的字串或緩衝區長度|*SQL_UPDATE操作*參數,資料值為空指標,列長度值不是 0、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NULL_DATA或小於或等於SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *行動*論點SQL_UPDATE;數據值不是空指標;數據值不是空指標。C 數據類型為SQL_C_BINARY或SQL_C_CHAR;並且列長度值小於 0 但不等於SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS或SQL_NULL_DATA,或小於或等於SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指示器緩衝區中的值SQL_DATA_AT_EXEC;SQL 類型要麼是SQL_LONGVARCHAR、SQL_LONGVARBINARY,要麼是長數據源特定的數據類型;**SQLGetInfo**中SQL_NEED_LONG_DATA_LEN資訊類型為"Y"。|  
-|HY092|不合法屬性識別碼|(DM) 為*操作*參數指定的值無效。<br /><br /> (DM) 為*LockType*參數指定的值無效。<br /><br /> *操作*參數SQL_UPDATE或SQL_DELETE,SQL_ATTR_CONCURRENCY語句屬性SQL_ATTR_CONCUR_READ_ONLY。|  
-|HY107|行值範圍外|為參數*RowNumber*指定的值大於行集中的行數。|  
-|HY109|游標位置無效|與*語句句柄*關聯的游標定義為僅轉發,因此游標無法定位在行集中。 請參閱**SQLSetStmtAttr**中SQL_ATTR_CURSOR_TYPE屬性的說明。<br /><br /> *操作*參數SQL_UPDATE、SQL_DELETE或SQL_REFRESH,*並且 RowNumber*參數標識的行已被刪除或未提取。<br /><br /> (DM)*行編號*參數為 0,*操作*參數SQL_POSITION。<br /><br /> **SQLSetPos**是在調用**SQLBulk 操作**後以及調用**SQLFetchScroll**或**SQLFetch**之前調用的。|  
-|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|沒有選擇選擇功能|驅動程式或資料來源不支援*操作*參數或*LockType*參數中請求的操作。|  
-|HYT00|已超過逾時的設定|查詢超時期限在數據源返回結果集之前已過期。 超時期間通過**SQLSetStmtAttr**設置,*屬性*為 SQL_ATTR_QUERY_TIMEOUT。|  
-|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
-|IM001|驅動程式不支援此功能|(DM) 與*語句句柄*關聯的驅動程式不支援該函數。|  
-|IM017|在非同步通知模式下禁用輪詢|每當使用通知模型時,都會禁用輪詢。|  
-|IM018|尚未調用**SQLCompleteAsync**以完成對此句柄的先前異步操作。|如果句柄上的上一個函數調用返回SQL_STILL_EXECUTING,並且啟用了通知模式,則必須在句柄上調用**SQLCompleteAsync**以執行後處理並完成操作。|  
+|01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01001|資料指標操作衝突|作業*引數*已 SQL_DELETE 或 SQL_UPDATE，且未刪除或更新任何資料列或有一個以上的資料列。 （如需有關多個資料列更新的詳細資訊，請參閱**SQLSetStmtAttr**中的 SQL_ATTR_SIMULATE_CURSOR*屬性*的描述）。（函數會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> *Operation*引數已 SQL_DELETE 或 SQL_UPDATE，而作業因為開放式平行存取而失敗。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01004|字串資料右側截斷|*Operation*引數已 SQL_REFRESH，且資料類型為 SQL_C_CHAR 或 SQL_C_BINARY 的資料行傳回的字串或二進位資料，導致截斷非空白字元或非 Null 的二進位資料。|  
+|01S01|資料列發生錯誤|*RowNumber*引數為0，且在執行以*operation*引數指定的作業時，在一或多個資料列中發生錯誤。<br /><br /> （如果一或多個多資料列作業的資料列發生錯誤，則會傳回 SQL_SUCCESS_WITH_INFO，如果單一資料列作業發生錯誤，則會傳回 SQL_ERROR）。<br /><br /> （只有在**SQLExtendedFetch**之後呼叫**SQLSetPos**時，如果*驅動程式是 ODBC 2.x*驅動程式，且未使用資料指標程式庫，才會傳回此 SQLSTATE）。|  
+|01S07|小數截斷|作業*引數*已 SQL_REFRESH、應用程式緩衝區的資料類型未 SQL_C_CHAR 或 SQL_C_BINARY，而且已截斷一或多個資料行的應用程式緩衝區傳回的資料。 若為數值資料類型，則會截斷數位的小數部分。 若為包含時間元件的時間、時間戳記和間隔資料類型，則會截斷時間的小數部分。<br /><br /> （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|07006|限制的資料類型屬性違規|在**SQLBindCol**的呼叫中，無法將結果集中資料行的資料值轉換成*TargetType*所指定的資料類型。|  
+|07009|不正確描述項索引|*引數*作業已 SQL_REFRESH 或 SQL_UPDATE，且資料行已系結的資料行編號大於結果集中的資料行數目。|  
+|21S02|衍生資料表的程度與資料行清單不符|*引數*作業已 SQL_UPDATE，而且沒有任何資料行可更新，因為所有資料行都是未系結、唯讀或系結長度/指標緩衝區中的值已 SQL_COLUMN_IGNORE。|  
+|22001|字串資料，右截斷|*Operation*引數已 SQL_UPDATE，而將字元或二進位值指派給資料行時，導致截斷非空白（字元）或非 null （二進位）字元或位元組。|  
+|22003|數值超出範圍|SQL_UPDATE 自*變數*作業，而將數值指派給結果集中的資料行，會導致整個（而不是小數）部分的數位被截斷。<br /><br /> *引數*作業已 SQL_REFRESH，而傳回一個或多個系結資料行的數值可能會造成有效位數遺失。|  
+|22007|不正確日期時間格式|SQL_UPDATE 自*變數*作業，並將日期或時間戳記值指派給結果集中的資料行，導致 year、month 或 day 欄位超出範圍。<br /><br /> SQL_REFRESH 自*變數*作業，而傳回一或多個系結資料行的日期或時間戳記值，會導致 year、month 或 day 欄位超出範圍。|  
+|22008|日期/時間欄位溢位|*Operation*引數已 SQL_UPDATE，而傳送至結果集中資料行之資料的日期時間算術效能，導致欄位的日期時間欄位（年、月、日、小時、分鐘或第二個欄位）超出允許範圍的值，或根據西曆的日期時間自然規則而無效。<br /><br /> *Operation*引數已 SQL_REFRESH，而從結果集取得之資料的 datetime 算術效能導致欄位的日期時間欄位（年、月、日、小時、分鐘或第二個欄位）超出允許範圍的值，或根據西曆的日期時間自然規則而無效。|  
+|22015|間隔欄位溢位|*Operation*引數已 SQL_UPDATE，而將精確數值或間隔 C 類型指派給 interval SQL 資料類型會造成有效位數遺失。<br /><br /> *Operation*引數已 SQL_UPDATE;指派至間隔 SQL 類型時，不會在 interval SQL 類型中表示 C 類型的值。<br /><br /> *Operation*引數已 SQL_REFRESH，且從精確的數值或間隔 SQL 類型指派到間隔 C 類型，導致前置欄位中的有效位數遺失。<br /><br /> *Operation*引數已 SQL_ REFRESH;指派至間隔 C 類型時，不會在間隔 C 類型中表示 SQL 類型的值。|  
+|22018|轉換規格的字元值無效|*Operation*引數已 SQL_REFRESH;C 類型是精確或近似的數值、日期時間或間隔資料類型;資料行的 SQL 類型是字元資料類型;而資料行中的值不是系結 C 類型的有效常值。<br /><br /> *引數*作業已 SQL_UPDATE;SQL 類型是精確或近似的數值、日期時間或間隔資料類型;C 類型已 SQL_C_CHAR;而資料行中的值不是系結 SQL 類型的有效常值。|  
+|23000|完整性條件約束違規|*引數*作業已 SQL_DELETE 或 SQL_UPDATE，但違反了完整性條件約束。|  
+|24000|指標狀態無效|*StatementHandle*處於已執行狀態，但沒有與*StatementHandle*相關聯的結果集。<br /><br /> （DM）已在*StatementHandle*上開啟資料指標，但尚未呼叫**SQLFetch**或**SQLFetchScroll** 。<br /><br /> 已在*StatementHandle*上開啟資料指標，且已呼叫**SQLFetch**或**SQLFetchScroll** ，但資料指標位於結果集開頭之前或結果集結束之後。<br /><br /> *引數*作業已 SQL_DELETE、SQL_REFRESH 或 SQL_UPDATE，且資料指標位於結果集開頭之前或結果集結束之後。|  
+|40001|序列化失敗|因為另一筆交易發生資源鎖死，所以交易已回復。|  
+|40003|語句完成不明|此函式執行期間相關聯的連接失敗，無法判斷交易的狀態。|  
+|42000|語法錯誤或存取違規|驅動程式無法視需要鎖定資料列，以*執行引數*作業中要求的作業。<br /><br /> 驅動程式無法在引數*LockType*中鎖定要求的資料列。|  
+|44000|WITH CHECK OPTION 違規|*Operation*引數已 SQL_UPDATE，且已在已查看的資料表上執行更新，或從透過指定**WITH CHECK 選項**所建立的已查看資料表衍生資料表，讓該更新所影響的一或多個資料列不會再出現在已查看的資料表中。|  
+|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
+|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
+|HY008|已取消作業|已啟用*StatementHandle*的非同步處理。 已呼叫函式，並在完成執行之前，在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** ，然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式，並在完成執行之前，從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
+|HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫 SQLSetPos 函數時，這個非同步函式仍在執行中。<br /><br /> （DM）指定的*StatementHandle*不是處於執行中狀態。 在未先呼叫**SQLExecDirect**、 **SQLExecute**或目錄函式的情況下呼叫函數。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式（而非這個函式），而且在呼叫這個函數時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。<br /><br /> （DM）*驅動程式是 ODBC 2.x*驅動程式，在呼叫**SQLFetch**之後，會針對*StatementHandle*呼叫**SQLSetPos** 。|  
+|HY011|無法立即設定屬性|（DM）*驅動程式是 ODBC 2.x*驅動程式;已設定 SQL_ATTR_ROW_STATUS_PTR 語句屬性;然後呼叫**SQLSetPos** ，然後呼叫**SQLFetch**、 **SQLFetchScroll**或**SQLExtendedFetch** 。|  
+|HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
+|HY090|不正確字串或緩衝區長度|*Operation*引數已 SQL_UPDATE、資料值為 null 指標，且資料行長度值不是0、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_Null_DATA 或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *Operation*引數已 SQL_UPDATE;資料值不是 null 指標;C 資料類型已 SQL_C_BINARY 或 SQL_C_CHAR;而資料行長度值小於0，但不等於 SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS 或 SQL_Null_DATA，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指標緩衝區中的值已 SQL_DATA_AT_EXEC;SQL 類型是 SQL_LONGVARCHAR、SQL_LONGVARBINARY，或是長資料來源特定的資料類型;而**SQLGetInfo**中的 SQL_NEED_LONG_DATA_LEN 資訊類型是 "Y"。|  
+|HY092|不正確屬性識別碼|（DM）為*Operation*引數指定的值無效。<br /><br /> （DM）為*LockType*引數指定的值無效。<br /><br /> 作業*引數*已 SQL_UPDATE 或 SQL_DELETE，且 SQL_ATTR_CONCURRENCY 語句屬性已 SQL_ATTR_CONCUR_READ_ONLY。|  
+|HY107|資料列值超出範圍|為引數*RowNumber*指定的值大於資料列集中的資料列數目。|  
+|HY109|不正確資料指標位置|與*StatementHandle*相關聯的資料指標已定義為順向，因此資料指標無法放在資料列集內。 請參閱**SQLSetStmtAttr**中的 SQL_ATTR_CURSOR_TYPE 屬性的描述。<br /><br /> *Operation*引數已 SQL_UPDATE、SQL_DELETE 或 SQL_REFRESH，而*RowNumber*引數所識別的資料列已被刪除或尚未提取。<br /><br /> （DM） *RowNumber*引數為0，且*Operation*引數為 SQL_POSITION。<br /><br /> 呼叫**SQLBulkOperations**之後，以及在呼叫**SQLFetchScroll**或**SQLFetch**之前，會呼叫**SQLSetPos** 。|  
+|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|（DM）如需暫停狀態的詳細資訊，請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
+|HYC00|未執行的選擇性功能|驅動程式或資料來源不支援*操作*引數或*LockType*引數中所要求的作業。|  
+|HYT00|已超過逾時的設定|在資料來源傳回結果集之前，查詢超時時間已過期。 您可使用 SQL_ATTR_QUERY_TIMEOUT 的*屬性*，透過**SQLSetStmtAttr**設定超時時間。|  
+|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驅動程式不支援此功能|（DM）與*StatementHandle*相關聯的驅動程式不支援此功能。|  
+|IM017|非同步通知模式中的輪詢已停用|每當使用通知模型時，就會停用輪詢。|  
+|IM018|尚未呼叫**SQLCompleteAsync**來完成這個控制碼上先前的非同步作業。|如果控制碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 而且如果啟用通知模式，則必須在控制碼上呼叫**SQLCompleteAsync** ，才能執行後置處理並完成作業。|  
   
-## <a name="comments"></a>註解  
+## <a name="comments"></a>評價  
   
 > [!CAUTION]
->  有關該語句的資訊,指出**SQLSetPos**可以呼叫,以及它需要做什麼才能與 ODBC *2.x*應用程式相容,請參閱[塊游標、可滾動游標和向後相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
+>  如需語句的詳細資訊，說明可以在中呼叫**SQLSetPos** ，以及它需要如何*處理 ODBC 2.x*應用程式的相容性，請參閱[區塊資料指標、可滾動游標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
   
-## <a name="rownumber-argument"></a>列編號參數  
- *RowNumber*參數指定列集中要執行*操作*參數指定的操作的行數。 如果*RowNumber*為 0,則該操作將應用於行集中的每一行。 *行編號*必須是從 0 到行集中行數的值。  
+## <a name="rownumber-argument"></a>RowNumber 引數  
+ *RowNumber*引數會指定要在資料列集中執行*operation*引數所指定之作業的資料列編號。 如果*RowNumber*是0，則作業會套用至資料列集中的每個資料列。 *RowNumber*必須是從0到資料列集中的資料列數目的值。  
   
 > [!NOTE]  
->  在 C 語言中,陣列基於 0,*行數*參數基於 1。 例如,要更新行集的第五行,應用程式會修改陣列索引4處的行集緩衝區,但指定*行數*為5。  
+>  在 C 語言中，陣列是以0為基礎，而*RowNumber*引數是以1為基礎。 例如，若要更新資料列集的第五個數據列，應用程式會修改位於陣列索引4的資料列集緩衝區，但指定了5的*RowNumber* 。  
   
- 所有操作都將游標放置在*行編號*指定的行上。 以下操作需要游標位置:  
+ 所有作業會將資料指標放在*RowNumber*所指定的資料列上。 下列作業需要資料指標位置：  
   
--   定位更新和刪除語句。  
+-   定位 update 和 delete 語句。  
   
 -   呼叫**SQLGetData**。  
   
--   使用SQL_DELETE、SQL_REFRESH和SQL_UPDATE選項調用**SQLSetPos。**  
+-   使用 SQL_DELETE、SQL_REFRESH 和 SQL_UPDATE 選項來呼叫**SQLSetPos** 。  
   
- 例如,如果對**SQLSetPos**的調用的*RowNumber*為*Operation*2,並且操作為 SQL_DELETE,則游標將定位在行集的第二行上,並刪除該行。 第二行的實現行狀態陣列中的條目(由SQL_ATTR_ROW_STATUS_PTR語句屬性指向)更改為SQL_ROW_DELETED。  
+ 例如，如果*RowNumber*是2，以*SQL_DELETE 的作業*呼叫**SQLSetPos** ，則資料指標會位於資料列集的第二個數據列上，而且該資料列會被刪除。 第二個數據列之 [執行資料列狀態] 陣列中的專案（由 SQL_ATTR_ROW_STATUS_PTR 語句屬性所指向）會變更為 [SQL_ROW_DELETED]。  
   
- 應用程式可以在調用**SQLSetPos**時指定游標位置。 通常,它呼叫**SQLSetPos**與SQL_POSITION或SQL_REFRESH操作,以定位游標之前執行定位的更新或刪除語句或呼叫**SQLGetData**。  
+ 當應用程式呼叫**SQLSetPos**時，可以指定游標位置。 一般來說，它會呼叫具有 SQL_POSITION 或 SQL_REFRESH 作業的**SQLSetPos** ，以在執行定位的 update 或 delete 語句或呼叫**SQLGetData**之前定位游標。  
   
-## <a name="operation-argument"></a>操作參數  
- *操作*參數支援以下操作。 要確定資料來源支援哪些選項,應用程式使用SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1或SQL_STATIC_CURSOR_ATTRIBUTES1資訊類型(取決於游標的類型)調用**SQLGetInfo。**  
+## <a name="operation-argument"></a>Operation 引數  
+ *Operation*引數支援下列作業。 為了判斷資料來源支援哪些選項，應用程式會使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 資訊類型（視游標的類型而定）來呼叫**SQLGetInfo** 。  
   
-|*操作*<br /><br /> 引數|作業|  
+|*運算*<br /><br /> 引數|作業|  
 |------------------------------|---------------|  
-|SQL_POSITION|驅動程式將游標定位在*行數指定的行*上。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 敘述屬性指向的行狀態陣列的內容會忽略SQL_POSITION *。*|  
-|SQL_REFRESH|驅動程式將游標定位在*RowNumber*指定的行上,並在該行的行集緩衝區中刷新數據。 有關驅動程式如何返回行集緩衝區中的數據的詳細資訊,請參閱**SQLBindCol**中按行和按列綁定的說明。<br /><br /> 具有"SQL_REFRESH*操作*的**SQLSetPos**更新當前提取排集中行的狀態和內容。 這包括刷新書籤。 由於緩衝區中的數據將刷新但不重新提取,因此行集中的成員身份是固定的。 這與調用**SQLFetchScroll**執行的刷新不同,該刷新的*取取方向*為 SQL_FETCH_RELATIVE,*行號*等於 0,後者從結果集中重新提取行集,以便在驅動程式和游標支援這些操作時,可以顯示添加的數據並刪除已刪除的數據。<br /><br /> 使用**SQLSetPos**成功刷新不會更改SQL_ROW_DELETED的行狀態。 行集中已刪除的行將繼續標記為已刪除,直到下一次提取。 如果游標支援打包(其中後續**SQLFetch**或**SQLFetchScroll**不會返回已刪除的行),則行將在下一個提取時消失。<br /><br /> 使用**SQLSetPos**執行刷新時,不會顯示添加的行。 此行為不同於**SQLFetchScroll,** 其*提取類型*為 SQL_FETCH_RELATIVE,*行號*等於 0,後者也會刷新當前行集,但如果游標支援這些操作,則將顯示添加的記錄或打包已刪除的記錄。<br /><br /> 使用**SQLSetPos**成功刷新將SQL_ROW_ADDED的行狀態更改為SQL_ROW_SUCCESS(如果存在行狀態陣列)。<br /><br /> 使用**SQLSetPos**成功刷新會將SQL_ROW_UPDATED行狀態更改為行的新狀態(如果存在行狀態陣列)。<br /><br /> 如果行上的**SQLSetPos**操作中發生錯誤,則行狀態設置為SQL_ROW_ERROR(如果存在行狀態陣列)。<br /><br /> 對於使用SQL_CONCUR_ROWVER或SQL_CONCUR_VALUES的SQL_ATTR_CONCURRENCY語句屬性打開的游標,使用**SQLSetPos**刷新可能會更新數據源用於檢測行已更改的樂觀併發值。 如果發生這種情況,每當從伺服器刷新行集緩衝區時,用於確保游標併發的行版本或值都會更新。 對於刷新的每行,將發生這種情況。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 語句屬性指向的行狀態陣列的內容會忽略SQL_REFRESH*操作*。|  
-|SQL_UPDATE|驅動程式將游標定位在*RowNumber*指定的行上,並使用行集緩衝區中的值 **(SQLBindCol**中的*TargetValuePtr*參數)更新基礎數據行。 它從長度/指標緩衝區 **(SQLBindCol**中的*StrLen_or_IndPtr*參數)檢索數據的長度。 如果任何列的長度SQL_COLUMN_IGNORE,則不更新該列。 更新行后,驅動程式將行狀態陣列的相應元素更改為SQL_ROW_UPDATED或SQL_ROW_SUCCESS_WITH_INFO(如果存在行狀態陣列)。<br /><br /> 如果在包含重複列的游標上調用具有SQL_UPDATE*的"操作"* 參數的**SQLSetPos,** 則該行為是驅動程式定義的。 驅動程式可以返回驅動程式定義的 SQLSTATE,可以更新結果集中顯示的第一列,或執行其他驅動程式定義的行為。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 語句屬性指向的行操作陣列可用於指示在當前行集中的行應在批量更新期間忽略。 有關詳細資訊,請參閱此函數引用後面的"狀態和操作陣列"。|  
-|SQL_DELETE|驅動程式將游標定位在*行數指定的行*上,並刪除基礎數據行。 它將行狀態陣列的相應元素更改為SQL_ROW_DELETED。 刪除行後,以下行無效:定位更新和刪除語句、對**SQLGetData**的調用以及對**SQLSetPos** *的*調用,操作設置為除SQL_POSITION以外的任何內容。 對於支援打包的驅動程式,當從數據源檢索新數據時,該行將從游標中刪除。<br /><br /> 行是否保持可見取決於游標類型。 例如,已刪除的行對靜態和鍵集驅動的游標可見,但動態游標不可見。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 語句屬性指向的行操作陣列可用於指示在當前行集中的行應在批量刪除期間忽略。 有關詳細資訊,請參閱此函數引用後面的"狀態和操作陣列"。|  
+|SQL_POSITION|驅動程式會將資料指標置於*RowNumber*所指定的資料列上。<br /><br /> *SQL_POSITION 作業*會忽略 SQL_ATTR_ROW_OPERATION_PTR 語句屬性所指向之資料列狀態陣列的內容。|  
+|SQL_REFRESH|驅動程式會將游標放在*RowNumber*所指定的資料列上，並重新整理該資料列之資料列集緩衝區中的資料。 如需有關驅動程式如何傳回資料列集緩衝區中資料的詳細資訊，請參閱**SQLBindCol**中的資料列取向和資料行取向的描述。<br /><br /> 具有 SQL_REFRESH 作業*的* **SQLSetPos**會更新目前已提取資料列集內的資料列狀態和內容。 這包括重新整理書簽。 由於緩衝區中的資料會重新整理，但不會根據，因此會修正資料列集中的成員資格。 這不同于呼叫**SQLFetchScroll**時所執行的重新整理，其*FetchOrientation*為 SQL_FETCH_RELATIVE，而*RowNumber*等於0，它會從結果集 refetches 資料列集，以便在驅動程式和游標支援這些作業時，顯示已加入的資料並移除已刪除的資料。<br /><br /> 使用**SQLSetPos**成功重新整理不會變更資料列狀態 SQL_ROW_DELETED。 在下一次提取之前，資料列集內已刪除的資料列將會繼續標示為已刪除。 如果資料指標支援封裝（其中後續的**SQLFetch**或**SQLFetchScroll**不會傳回已刪除的資料列），則資料列將會在下一次提取時消失。<br /><br /> 當執行具有**SQLSetPos**的重新整理時，不會顯示已加入的資料列。 此行為不同于**SQLFetchScroll** ， *FetchType*為 SQL_FETCH_RELATIVE，而*RowNumber*等於0，這也會重新整理目前的資料列集，但如果資料指標支援這些作業，則會顯示加入的記錄或封裝刪除的記錄。<br /><br /> 使用**SQLSetPos**成功重新整理會將 SQL_ROW_ADDED 的資料列狀態變更為 SQL_ROW_SUCCESS （如果資料列狀態陣列存在）。<br /><br /> 使用**SQLSetPos**成功重新整理會將 SQL_ROW_UPDATED 的資料列狀態變更為資料列的新狀態（如果資料列狀態陣列存在的話）。<br /><br /> 如果資料列的**SQLSetPos**作業發生錯誤，資料列狀態會設定為 SQL_ROW_ERROR （如果資料列狀態陣列存在）。<br /><br /> 對於以 SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES 的 SQL_ATTR_CONCURRENCY 語句屬性開啟的資料指標， **SQLSetPos**的 refresh 可能會更新資料來源所使用的開放式平行存取值，以偵測資料列已變更。 如果發生這種情況，則每當從伺服器重新整理資料列集緩衝區時，就會更新用來確保資料指標平行存取的資料列版本。 重新整理的每個資料列都會發生這種情況。<br /><br /> *SQL_REFRESH 作業*會忽略 SQL_ATTR_ROW_OPERATION_PTR 語句屬性所指向之資料列狀態陣列的內容。|  
+|SQL_UPDATE|驅動程式會將游標放在*RowNumber*所指定的資料列上，並使用資料列集緩衝區中的值（ **SQLBindCol**中的*TargetValuePtr*引數）來更新資料的基礎資料列。 它會從長度/指標緩衝區（ **SQLBindCol**中的*StrLen_or_IndPtr*引數）抓取資料的長度。 如果 SQL_COLUMN_IGNORE 任何資料行的長度，則不會更新資料行。 更新資料列之後，驅動程式會將資料列狀態陣列的對應元素變更為 SQL_ROW_UPDATED 或 SQL_ROW_SUCCESS_WITH_INFO （如果資料列狀態陣列存在）。<br /><br /> 如果**SQLSetPos**含有重復資料行的資料指標上呼叫 SQL_UPDATE 的*作業引數*，則會以驅動程式定義的行為。 驅動程式可能會傳回驅動程式定義的 SQLSTATE、可以更新結果集中出現的第一個資料行，或執行其他驅動程式定義的行為。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 語句屬性所指向的資料列作業陣列，可以用來表示在大量更新期間應該忽略目前資料列集中的資料列。 如需詳細資訊，請參閱本函數參考後面的「狀態和作業陣列」。|  
+|SQL_DELETE|驅動程式會將游標放在*RowNumber*所指定的資料列上，並刪除基礎資料列。 它會將資料列狀態陣列的對應元素變更為 SQL_ROW_DELETED。 在刪除資料列之後，下列對資料列無效：定位 update 和 delete 語句、呼叫**SQLGetData**，以及呼叫**SQLSetPos**並將作業設定為除了 SQL_POSITION*以外的任何*專案。 對於支援封裝的驅動程式，當從資料來源抓取新資料時，會從資料指標中刪除資料列。<br /><br /> 資料列是否維持可見，取決於資料指標類型。 例如，靜態和索引鍵集導向的資料指標可以看到已刪除的資料列，但動態資料指標看不到。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 語句屬性所指向的資料列作業陣列，可以用來表示在大量刪除期間，應該忽略目前資料列集內的資料列。 如需詳細資訊，請參閱本函數參考後面的「狀態和作業陣列」。|  
   
-## <a name="locktype-argument"></a>鎖類型參數  
- *LockType*參數為應用程式提供了一種控制併發的方法。 在大多數情況下,支援併發級別和事務的數據源將僅支援*LockType*參數的SQL_LOCK_NO_CHANGE值。 *LockType*參數通常僅用於基於文件的支援。  
+## <a name="locktype-argument"></a>LockType 引數  
+ *LockType*引數提供應用程式控制並行的方式。 在大部分情況下，支援並行層級和交易的資料來源只會支援*LockType*引數的 SQL_LOCK_NO_CHANGE 值。 *LockType*引數通常僅用於以檔案為基礎的支援。  
   
- *LockType*參數指定執行**SQLSetPos**後行的鎖狀態。 如果驅動程式無法鎖定行以執行請求的操作或滿足*LockType*參數,它將返回SQL_ERROR和 SQLSTATE 42000(語法錯誤或存取衝突)。  
+ *LockType*引數會指定在執行**SQLSetPos**之後，資料列的鎖定狀態。 如果驅動程式無法鎖定資料列來執行要求的作業，或要滿足*LockType*引數，它會傳回 SQL_ERROR 和 SQLSTATE 42000 （語法錯誤或存取違規）。  
   
- 儘管*LockType*參數是為單個語句指定的,但鎖對連接上的所有語句都授予相同的許可權。 特別是,連接上的一個語句獲取的鎖可以通過同一連接上的不同語句解鎖。  
+ 雖然已針對單一語句指定*LockType*引數，但鎖定會 accords 連接上所有語句的相同許可權。 特別是，在連接上的一個語句所取得的鎖定，可以由相同連接上的不同語句解除鎖定。  
   
- 透過**SQLSetPos**鎖定的行將保持鎖定狀態,直到應用程式為*LockType*設定為SQL_LOCK_UNLOCK的行調用**SQLSetPos,** 或者直到應用程式使用SQL_CLOSE選項呼叫**SQLFreeHandle**或**SQLFreeStmt。** 對於支援事務的驅動程式,當應用程式呼叫**SQLEndTran**提交或回滾連接上的事務時(如果游標在提交或回滾事務時關閉,如**SQLGetInfo**返回SQL_CURSOR_COMMIT_BEHAVIOR和SQL_CURSOR_ROLLBACK_BEHAVIOR資訊類型所示,通過**SQLSetPos**鎖定的行將解鎖。  
+ 透過**SQLSetPos**鎖定的資料列會保持鎖定，直到應用程式針對*LockType*設定為 SQL_LOCK_UNLOCK 的資料列呼叫**SQLSetPos** ，或直到應用程式使用 SQL_CLOSE 選項來呼叫語句或**SQLFreeStmt**的**SQLFreeHandle**為止。 對於支援交易的驅動程式，當應用程式呼叫**SQLEndTran**來認可或回復連接上的交易時（如果資料指標在認可或回復交易時已關閉，如**SQLGetInfo**所傳回的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 資訊類型所指示），透過**SQLSetPos**鎖定的資料列就會解除鎖定。  
   
- *LockType*參數支援以下類型的鎖。 要確定資料源支援哪些鎖,應用程式使用SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1或SQL_STATIC_CURSOR_ATTRIBUTES1資訊類型(取決於游標的類型)調用**SQLGetInfo。**  
+ *LockType*引數支援下列類型的鎖定。 為了判斷資料來源支援哪些鎖定，應用程式會使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 資訊類型（視游標的類型而定）來呼叫**SQLGetInfo** 。  
   
-|*鎖類型*參數|鎖定類型|  
+|*LockType*引數|鎖定類型|  
 |-------------------------|---------------|  
-|SQL_LOCK_NO_CHANGE|驅動程式或資料源可確保該行處於與調用**SQLSetPos**之前相同的鎖定或解鎖狀態。 *LockType*的此值允許不支援顯式行級鎖定的數據源使用當前併發和事務隔離級別所需的任何鎖定。|  
-|SQL_LOCK_EXCLUSIVE|驅動程式或數據源專門鎖定行。 不能使用不同連接或不同應用程式中的語句來獲取行上的任何鎖。|  
-|SQL_LOCK_UNLOCK|驅動程式或數據源解鎖該行。|  
+|SQL_LOCK_NO_CHANGE|驅動程式或資料來源會確保資料列與呼叫**SQLSetPos**之前的鎖定或解除鎖定狀態相同。 這個*LockType*值可讓不支援明確資料列層級鎖定的資料來源使用目前平行存取和交易隔離等級所需的任何鎖定。|  
+|SQL_LOCK_EXCLUSIVE|驅動程式或資料來源會以獨佔方式鎖定資料列。 不同連接或不同應用程式中的語句不能用來取得資料列的任何鎖定。|  
+|SQL_LOCK_UNLOCK|驅動程式或資料來源會解除鎖定資料列。|  
   
- 如果驅動程式支援SQL_LOCK_EXCLUSIVE但不支援SQL_LOCK_UNLOCK,則鎖定的行將保持鎖定狀態,直到發生上一段中描述的函數調用之一。  
+ 如果驅動程式支援 SQL_LOCK_EXCLUSIVE 但不支援 SQL_LOCK_UNLOCK，則已鎖定的資料列將會保持鎖定，直到上一個段落中所述的其中一個函式呼叫發生為止。  
   
- 如果驅動程式支援SQL_LOCK_EXCLUSIVE但不支援SQL_LOCK_UNLOCK,則鎖定的行將保持鎖定狀態,直到應用程式呼叫**SQLFreeHandle**進行語句或**SQLFreeStmt** SQL_CLOSE 選項。 如果驅動程式支援事務並在提交或回捲此事務時關閉游標,則應用程式將呼叫**SQLEndTran**。  
+ 如果驅動程式支援 SQL_LOCK_EXCLUSIVE 但不支援 SQL_LOCK_UNLOCK，則鎖定的資料列將會保持鎖定，直到應用程式使用 SQL_CLOSE 選項呼叫語句或**SQLFreeStmt**的**SQLFreeHandle**為止。 如果驅動程式支援交易，並在認可或回復交易時關閉資料指標，應用程式會呼叫**SQLEndTran**。  
   
- 對於**SQLSetPos**中的更新和刪除操作,應用程式使用*LockType*參數,如下所示:  
+ 針對**SQLSetPos**中的更新和刪除作業，應用程式會使用*LockType*引數，如下所示：  
   
--   為了保證行在檢索後不會更改,應用程式呼叫**SQLSetPos,***操作*設定為*SQL_REFRESH,LockType*設置為SQL_LOCK_EXCLUSIVE。  
+-   若要保證資料列在抓取之後不會變更，應用程式會呼叫**SQLSetPos** ，並將*Operation*設定為 SQL_REFRESH，並將*LockType*設定為 SQL_LOCK_EXCLUSIVE。  
   
--   如果應用程式將*LockType*設定為SQL_LOCK_NO_CHANGE,則驅動程式保證僅當為SQL_ATTR_CONCURRENCY語句屬性指定的應用程式SQL_CONCUR_LOCK時,更新或刪除操作才會成功。  
+-   如果應用程式將*LockType*設定為 SQL_LOCK_NO_CHANGE，則只有當應用程式為 SQL_ATTR_CONCURRENCY 語句屬性指定 SQL_CONCUR_LOCK 時，驅動程式才會保證更新或刪除作業才會成功。  
   
--   如果應用程式為SQL_ATTR_CONCURRENCY語句屬性指定SQL_CONCUR_ROWVER或SQL_CONCUR_VALUES,則驅動程式將比較行版本或值,如果行自應用程式獲取行以來已更改,則拒絕該操作。  
+-   如果應用程式為 SQL_ATTR_CONCURRENCY 語句屬性指定 SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES，則此驅動程式會比較資料列版本或值，並在應用程式提取資料列之後，變更資料列時拒絕作業。  
   
--   如果應用程式為SQL_ATTR_CONCURRENCY語句屬性指定SQL_CONCUR_READ_ONLY,則驅動程式將拒絕任何更新或刪除操作。  
+-   如果應用程式指定 SQL_ATTR_CONCURRENCY 語句屬性的 SQL_CONCUR_READ_ONLY，驅動程式會拒絕任何更新或刪除作業。  
   
- 有關SQL_ATTR_CONCURRENCY語句屬性的詳細資訊,請參閱[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
+ 如需 SQL_ATTR_CONCURRENCY 語句屬性的詳細資訊，請參閱[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
   
-## <a name="status-and-operation-arrays"></a>狀態與操作陣列  
- 呼叫**SQLSetPos**時使用以下狀態和操作陣列:  
+## <a name="status-and-operation-arrays"></a>狀態和運算元組  
+ 呼叫**SQLSetPos**時，會使用下列狀態和作業陣列：  
   
--   行狀態陣列(如 IRD 中的SQL_DESC_ARRAY_STATUS_PTR欄位和SQL_ATTR_ROW_STATUS_ARRAY語句屬性)包含行集中每行數據的狀態值。 調用**SQLFetch、SQLFetchScroll、SQLBulk****操作**或**SQLSetPos**後,驅動程式將設定此陣**SQLFetch**列中的狀態值。 此陣列由SQL_ATTR_ROW_STATUS_PTR語句屬性指向。  
+-   資料列狀態陣列（由 IRD 中的 [SQL_DESC_ARRAY_STATUS_PTR] 欄位所指向，而 [SQL_ATTR_ROW_STATUS_ARRAY] 語句屬性）則包含資料列集中每個資料列的狀態值。 驅動程式會在呼叫**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**之後，設定此陣列中的狀態值。 SQL_ATTR_ROW_STATUS_PTR 語句屬性會指向這個陣列。  
   
--   行操作陣列(如ARD中的SQL_DESC_ARRAY_STATUS_PTR欄位和SQL_ATTR_ROW_OPERATION_ARRAY語句屬性)包含行集中每行的值,指示是忽略還是執行批量操作對**SQLSetPos**的調用。 陣列中的每個元素都設置為SQL_ROW_PROCEED(預設值)或SQL_ROW_IGNORE。 此陣列由SQL_ATTR_ROW_OPERATION_PTR語句屬性指向。  
+-   ARD 和 SQL_ATTR_ROW_OPERATION_ARRAY 語句屬性中的 SQL_DESC_ARRAY_STATUS_PTR 欄位所指向的資料列作業陣列，會包含資料列集中每一個資料列的值，指出是否要忽略或執行大量作業的**SQLSetPos**呼叫。 陣列中的每個元素都會設定為 SQL_ROW_PROCEED （預設值）或 SQL_ROW_IGNORE。 SQL_ATTR_ROW_OPERATION_PTR 語句屬性會指向這個陣列。  
   
- 狀態和操作陣列中的元素數必須等於行集中的行數(由SQL_ATTR_ROW_ARRAY_SIZE語句屬性定義)。  
+ 「狀態」和「作業」陣列中的元素數目必須等於資料列集中的資料列數目（如 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性所定義）。  
   
- 有關行狀態陣列的資訊,請參閱[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)。 有關行操作陣列的資訊,請參閱本節後面的"忽略批量操作中的行"。  
+ 如需資料列狀態陣列的詳細資訊，請參閱[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)。 如需資料列作業陣列的詳細資訊，請參閱本節稍後的「忽略大量作業中的資料列」。  
   
 ## <a name="using-sqlsetpos"></a>使用 SQLSetPos  
- 在應用程式呼叫**SQLSetPos**之前,它必須執行以下步驟序列:  
+ 在應用程式呼叫**SQLSetPos**之前，它必須執行下列步驟順序：  
   
-1.  如果應用程式將呼叫**SQLSetPos,***操作*設定為SQL_UPDATE,請為每個列呼叫**SQLBindCol(** 或**SQLSetDescRec),** 以指定其資料類型,並綁定列的資料和長度的緩衝區。  
+1.  如果應用程式會呼叫**SQLSetPos**並將*Operation*設定為 SQL_UPDATE，請針對每個資料行呼叫**SQLBindCol** （或**SQLSetDescRec**），以指定其資料類型，以及系結資料行的資料和長度的緩衝區。  
   
-2.  如果應用程式將調用**SQLSetPos,***操作*設定為SQL_DELETE或SQL_UPDATE,則調用**SQLColAttribute**以確保要刪除或更新的列是可更新的。  
+2.  如果應用程式會呼叫**SQLSetPos** ，並將*Operation*設定為 SQL_DELETE 或 SQL_UPDATE，請呼叫**SQLColAttribute** ，以確定要刪除或更新的資料行是可更新的。  
   
-3.  呼叫**SQLExecDirect、SQLExecute**或目錄函數以創建結果**SQLExecute**集。  
+3.  呼叫**SQLExecDirect**、 **SQLExecute**或 catalog 函數來建立結果集。  
   
-4.  呼叫**SQLFetch**或**SQLFetchScroll**來檢索資料。  
+4.  呼叫**SQLFetch**或**SQLFetchScroll**以取得資料。  
   
- 有關使用**SQLSetPos**的詳細資訊,請參閱[使用 SQLSetPos 更新資料](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)。  
+ 如需使用**SQLSetPos**的詳細資訊，請參閱使用[SQLSetPos 更新資料](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)。  
   
 ## <a name="deleting-data-using-sqlsetpos"></a>使用 SQLSetPos 刪除資料  
- 要使用**SQLSetPos**刪除資料,應用程式呼叫**SQLSetPos,***其中行號*設定為要刪除的行數,*操作*設置為SQL_DELETE。  
+ 若要使用**SQLSetPos**刪除資料，應用程式會呼叫**SQLSetPos** ，並將*RowNumber*設定為要刪除的資料列數目 *，並將*作業設定為 SQL_DELETE。  
   
- 刪除資料後,驅動程式將相應行的實現行狀態陣列中的值更改為SQL_ROW_DELETED(或SQL_ROW_ERROR)。  
+ 刪除資料之後，驅動程式會將 [執行列狀態] 陣列中的值變更為適當的資料列，以 SQL_ROW_DELETED （或 SQL_ROW_ERROR）。  
   
 ## <a name="updating-data-using-sqlsetpos"></a>使用 SQLSetPos 更新資料  
- 應用程式可以在綁定的數據緩衝區中傳遞列的值,也可以通過對**SQLPutData**的一個或多個調用來傳遞列的值。 其資料隨**SQLPutData**傳遞的欄型稱為*執行時的資料**欄*位 。 它們通常用於發送SQL_LONGVARBINARY和SQL_LONGVARCHAR列的數據,並可以與其他列混合。  
+ 應用程式可以在系結的資料緩衝區中，或對**SQLPutData**的一或多個呼叫，傳遞資料行的值。 資料會以**SQLPutData**傳遞的資料行稱為「*資料執行中」資料**行*。 這些通常用來傳送 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 資料行的資料，而且可以與其他資料行混合使用。  
   
-#### <a name="to-update-data-with-sqlsetpos-an-application"></a>使用 SQLSetPos 更新資料,應用程式:  
+#### <a name="to-update-data-with-sqlsetpos-an-application"></a>若要使用 SQLSetPos （應用程式）更新資料：  
   
-1.  在資料中放置值,長度/指標緩衝區與**SQLBindCol**繫結 :  
+1.  將值放入與**SQLBindCol**系結的資料和長度/指標緩衝區中：  
   
-    -   對於普通列,應用程式將新列值放在*\*TargetValuePtr*緩衝區中,並將該值的長*\** 度放在 StrLen_or_IndPtr 緩衝區中。 如果不應更新該行,應用程式將SQL_ROW_IGNORE放在該行操作陣列的該行元素中。  
+    -   針對一般資料行，應用程式會將新的資料行值放在* \*TargetValuePtr*緩衝區中，並將該值的長度置於* \*StrLen_or_IndPtr*緩衝區中。 如果資料列不應更新，應用程式會將 SQL_ROW_IGNORE 放在資料列作業陣列的該資料列元素中。  
   
-    -   對於執行時的數據列,應用程式在*\*TargetValuePtr*緩衝區中放置應用程式定義的值(如列號)。 該值以後可用於標識列。  
+    -   針對資料執行中的資料行，應用程式會在* \*TargetValuePtr*緩衝區中放置應用程式定義的值，例如欄號。 稍後可以使用此值來識別資料行。  
   
-         應用程式將SQL_LEN_DATA_AT_EXEC(*長度*)宏的結果放在 +*StrLen_or_IndPtr*緩衝區中。 如果列的 SQL 資料類型SQL_LONGVARBINARY、SQL_LONGVARCHAR 或長數據來源特定的資料類型,並且驅動程式返回**SQLGetInfo**中SQL_NEED_LONG_DATA_LEN資訊類型的「Y」,*則長度*是要為參數發送的數據位元;否則,它必須是非負值,並且被忽略。  
+         應用程式會將 SQL_LEN_DATA_AT_EXEC （*長度*）宏的結果放在 **StrLen_or_IndPtr*緩衝區中。 若資料行的 SQL 資料類型為 SQL_LONGVARBINARY、SQL_LONGVARCHAR，或 long 資料來源特定的資料類型，且驅動程式針對**SQLGetInfo**中的 SQL_NEED_LONG_DATA_LEN 資訊類型傳回 "Y"，則*length*是要為參數傳送的資料位元組數目。否則，它必須是非負值的值，而且會被忽略。  
   
-2.  調用**SQLSetPos,***將操作*參數設定為SQL_UPDATE更新數據行。  
+2.  呼叫**SQLSetPos**並將*Operation*引數設定為 SQL_UPDATE 以更新資料列。  
   
-    -   如果沒有執行時的數據列,則該過程已完成。  
+    -   如果沒有執行中的資料行，則程式已完成。  
   
-    -   如果存在任何執行時的數據列,則函數將返回SQL_NEED_DATA並繼續執行步驟 3。  
+    -   如果有任何執行中的資料行，此函數會傳回 SQL_NEED_DATA 並繼續進行步驟3。  
   
-3.  調用**SQLParamData**以檢索要處理的第一個執行數據列的目標*\*值 Ptr*緩衝區的位址。 **SQLParamData**返回SQL_NEED_DATA。 應用程式從*\*TargetValuePtr*緩衝區檢索應用程式定義的值。  
-  
-    > [!NOTE]  
-    >  儘管執行時的數據參數與執行時的數據列類似,但**SQLParamData**返回的值因每個列而異。  
+3.  呼叫**SQLParamData** ，以取得要處理之第一個資料執行中資料行的* \*TargetValuePtr*緩衝區位址。 **SQLParamData**會傳回 SQL_NEED_DATA。 應用程式會從* \*TargetValuePtr*緩衝區捕獲應用程式定義的值。  
   
     > [!NOTE]  
-    >  執行時的資料參數是 SQL 語句中的參數,當使用**SQLExecDirect**或**SQLExecute**執行敘述時,將隨**SQLPutData**一起發送數據。 它們與**SQLBind 參數**綁定,或者通過使用**SQLSetDescRec**設置描述符。 **SQLParamData**傳回的值是 32 位元值,在*參數值Ptr*參數中傳遞給**SQLBind 參數**。  
+    >  雖然資料執行中的參數與資料執行中的資料行類似，但每個**SQLParamData**所傳回的值都不同。  
   
     > [!NOTE]  
-    >  執行時的資料列是行集中的欄 **,當使用** **SQLSetPos**更新行時,將為此發送資料。 它們與**SQLBindCol**綁定。 **SQLParamData**傳回的值是正在處理的 @*TargetValuePtr*緩衝區中的行的位址。  
+    >  資料執行中參數是 SQL 語句中的參數，當使用**SQLExecDirect**或**SQLExecute**執行語句時，資料會與**SQLPutData**一起傳送。 它們會與**SQLBindParameter**系結，或藉由使用**SQLSetDescRec**來設定描述元。 **SQLParamData**傳回的值是在*ParameterValuePtr*引數中傳遞至**SQLBindParameter**的32位值。  
   
-4.  調用**SQLPutData**一次或多次以發送列的數據。 如果在**SQLPutData**中指定的*\*TargetValuePtr*緩衝區中無法返回所有數據值,則需要多個調用。僅當將字元 C 資料發送到具有字元、二進位或資料來源特定資料類型的列或將二進位C資料發送到具有字元、二進位或資料來源特定資料類型的列時,才允許對同一列的**SQLPutData**進行多次調用。  
+    > [!NOTE]  
+    >  資料執行中的資料行是資料列集中的資料行，會在使用**SQLSetPos**更新資料列時，使用**SQLPutData**來傳送資料。 它們會與**SQLBindCol**系結。 **SQLParamData**傳回的值是要處理之 **TargetValuePtr*緩衝區中資料列的位址。  
   
-5.  再次調用**SQLParamData**以發出已為該列發送所有數據的信號。  
+4.  會呼叫**SQLPutData**一次或多次來傳送資料行的資料。 如果無法在**SQLPutData**中指定的* \*TargetValuePtr*緩衝區內傳回所有資料值，則需要多個呼叫。只有在將字元 C 資料傳送至具有字元、二進位或資料來源特定資料類型的資料行，或是將二進位 C 資料傳送至具有字元、二進位或資料來源特定資料類型的資料行時，才允許多個**SQLPutData**的呼叫。  
   
-    -   如果有更多的執行數據列 **,SQLParamData**將返回要處理的下一個執行數據列的SQL_NEED_DATA和目標*ValuePtr*緩衝區的位址。 應用程式重複步驟 4 和 5。  
+5.  再次呼叫**SQLParamData** ，表示資料行已傳送所有資料。  
   
-    -   如果沒有更多的數據執行列,該過程將完成。 如果語句成功執行 **,SQLParamData**將返回SQL_SUCCESS或SQL_SUCCESS_WITH_INFO;如果執行失敗,它將返回SQL_ERROR。 此時 **,SQLParamData**可以返回**SQLSetPos**可以返回的任何 SQLSTATE。  
+    -   如果有更多資料執行中的資料行， **SQLParamData**會傳回 SQL_NEED_DATA 和*TargetValuePtr*緩衝區的位址，以用於下一個要處理的資料執行中資料行。 應用程式會重複步驟4和5。  
   
- 如果數據已更新,驅動程式將相應行的實現行狀態陣列中的值更改為SQL_ROW_UPDATED。  
+    -   如果沒有其他資料執行中的資料行，則程式已完成。 如果成功執行語句，則**SQLParamData**會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO;如果執行失敗，則會傳回 SQL_ERROR。 此時， **SQLParamData**可以傳回**SQLSetPos**所能傳回的任何 SQLSTATE。  
   
- 如果操作被取消或在**SQLParamData**或**SQLPutData**中發生錯誤,則**在 SQLSetPos**返回SQL_NEED_DATA並在為執行時的所有數據發送數據之前,應用程式只能調用 SQLCancel、SQLGetDiagField、SQLGetDiagrec、SQLGet**函數****、SQLParamData**或**SQLPutData**的語句或與語句關聯的連接。 **SQLCancel** **SQLGetDiagField** **SQLGetDiagRec** 如果它調用語句或與 語句關聯的連接的任何其他函數,則函數將返回SQL_ERROR和 SQLSTATE HY010(函數序列錯誤)。  
+ 如果資料已更新，驅動程式會將 [執行列狀態] 陣列中的值變更為適當的資料列，以 SQL_ROW_UPDATED。  
   
- 如果應用程式調用**SQLCancel,** 而驅動程式仍然需要執行時的數據列,則驅動程式將取消該操作。 然後,應用程式可以再次調用**SQLSetPos;** 取消不會影響游標狀態或當前游標位置。  
+ 如果作業已取消，或在**SQLParamData**或**SQLPutData**中發生錯誤，則在**SQLSetPos**傳回 SQL_NEED_DATA 之後，而且在傳送資料執行中的所有資料行之前，應用程式只能針對語句或與語句相關聯的連接呼叫**SQLCancel**、 **SQLGetDiagField**、 **SQLGetDiagRec** **、SQLGetFunctions**、 **SQLParamData**或**SQLPutData** 。 如果它針對語句或與語句相關聯的連接呼叫任何其他函式，此函式會傳回 SQL_ERROR 並 SQLSTATE HY010 （函數序列錯誤）。  
   
- 當與游標關聯的查詢規範的 SELECT 清單包含對同一列的多個引用時,無論生成錯誤還是驅動程式忽略重複的引用並執行請求的操作都是驅動程式定義的。  
+ 如果應用程式在驅動程式仍然需要資料執行中資料行的資料時呼叫**SQLCancel** ，驅動程式會取消作業。 然後，應用程式就可以再次呼叫**SQLSetPos** ;取消不會影響資料指標狀態或目前的資料指標位置。  
   
-## <a name="performing-bulk-operations"></a>執行大量操作  
- 如果*RowNumber*參數為 0,則驅動程式將執行行集中的每一行的 *「操作*」參數中指定的操作,這些行在行操作陣列中的值為 SQL_ROW_PROCEED,該行位於SQL_ATTR_ROW_OPERATION_PTR語句屬性指向的行操作陣列中。 這是 *「**操作*」參數(SQL_DELETE、SQL_REFRESH 或SQL_UPDATE)的有效值,但不是SQL_POSITION。 操作SQL_POSITION和*行號*等於 0*的***SQLSetPos**將傳回 SQLSTATE HY109(無效游標位置)。  
+ 當與資料指標相關聯的查詢規格的選取清單包含相同資料行的多個參考時，是否產生錯誤，或驅動程式忽略重複的參考，並執行所要求的作業是驅動程式定義的。  
   
- 如果發生與整個行集相關的錯誤(如 SQLSTATE HYT00(超時已過期),驅動程式將返回SQL_ERROR和相應的 SQLSTATE。 行集緩衝區的內容未定義,游標位置保持不變。  
+## <a name="performing-bulk-operations"></a>執行大量作業  
+ 如果*RowNumber*引數為0，則驅動程式會針對資料列集中*的每*個數據列，執行作業引數中指定的作業，其欄位是在 SQL_ATTR_ROW_OPERATION_PTR 語句屬性所指向之資料列作業陣列中的 SQL_ROW_PROCEED 值。 這是 SQL_DELETE、SQL_REFRESH 或 SQL_UPDATE 之作業引數的*RowNumber* *引數有效值*，但不會 SQL_POSITION。 **SQLSetPos**具有 SQL_POSITION*的作業*，且*RowNumber*等於0時，會傳回 SQLSTATE HY109 （不正確資料指標位置）。  
   
- 如果發生與單列相關的錯誤,驅動程式:  
+ 如果發生與整個資料列集相關的錯誤，例如 SQLSTATE HYT00 （超時時間已過期），驅動程式會傳回 SQL_ERROR 和適當的 SQLSTATE。 資料列集緩衝區的內容未定義，且資料指標位置不變。  
   
--   將行狀態陣列中SQL_ATTR_ROW_STATUS_PTR語句屬性指向SQL_ROW_ERROR中行的元素。  
+ 如果發生與單一資料列相關的錯誤，驅動程式：  
   
--   為錯誤佇列中的錯誤過帳一個或多個附加 SQLSTATE,並在診斷數據結構中設置SQL_DIAG_ROW_NUMBER欄位。  
+-   針對要 SQL_ROW_ERROR 的 SQL_ATTR_ROW_STATUS_PTR 語句屬性所指向之資料列狀態陣列中的資料列，設定元素。  
   
- 處理錯誤或警告后,如果驅動程式完成行集中其餘行的操作,它將返回SQL_SUCCESS_WITH_INFO。 因此,對於返回錯誤的每行,錯誤佇列包含零個或多個其他 SQLSTATE。 如果驅動程式在處理了錯誤或警告后停止操作,則返回SQL_ERROR。  
+-   針對錯誤佇列中的錯誤張貼一或多個額外的 SQLSTATEs，並在診斷資料結構中設定 [SQL_DIAG_ROW_NUMBER] 欄位。  
   
- 如果驅動程式返回任何警告,如 SQLSTATE 01004(數據截斷),它將返回應用於整個行集或行集中的未知行的警告,然後再返回適用於特定行的錯誤資訊。 它返回特定行的警告以及有關這些行的任何其他錯誤資訊。  
+ 在處理錯誤或警告之後，如果驅動程式針對資料列集內剩餘的資料列完成作業，它會傳回 SQL_SUCCESS_WITH_INFO。 因此，對於每個傳回錯誤的資料列，錯誤佇列會包含零個或多個額外的 SQLSTATEs。 如果驅動程式在處理錯誤或警告之後停止作業，則會傳回 SQL_ERROR。  
   
- 如果*RowNumber*等於 0,*並且操作*SQL_UPDATE、SQL_REFRESH或SQL_DELETE,**則 SQLSetPos**操作的行數由SQL_ATTR_ROWS_FETCHED_PTR語句屬性指出。  
+ 如果驅動程式傳回任何警告，例如 SQLSTATE 01004 （資料已截斷），它會在傳回適用于特定資料列的錯誤資訊之前，傳回套用至整個資料列集的警告，或傳回給資料列集內的未知資料列。 它會傳回特定資料列的警告，以及與這些資料列相關的任何其他錯誤資訊。  
   
- 如果*RowNumber*等於 0,*並且操作*SQL_DELETE、SQL_REFRESH 或SQL_UPDATE,則操作後的當前行與操作前的當前行相同。  
+ 如果*RowNumber*等於0，而*Operation*是 SQL_UPDATE、SQL_REFRESH 或 SQL_DELETE，則 SQL_ATTR_ROWS_FETCHED_PTR 語句屬性會指向**SQLSetPos**操作所在的資料列數目。  
   
-## <a name="ignoring-a-row-in-a-bulk-operation"></a>忽略批次操作中的行號  
- 行操作陣列可用於指示在當前行集中的行應在使用**SQLSetPos**進行批量操作期間忽略。 要指示驅動程式在大量操作期間忽略一個或多個行,應用程式應執行以下步驟:  
+ 如果*RowNumber*等於0，而*operation*是 SQL_DELETE、SQL_REFRESH 或 SQL_UPDATE，則作業之後的目前資料列會與作業之前的目前資料列相同。  
   
-1.  調用**SQLSetStmtAttr**將SQL_ATTR_ROW_OPERATION_PTR語句屬性設置為指向 SQLUSMALLINT 陣列。 此欄位也可以通過調用**SQLSetDescField**來設置 ARD 的SQL_DESC_ARRAY_STATUS_PTR標頭欄位,該欄位要求應用程式獲取描述符句柄。  
+## <a name="ignoring-a-row-in-a-bulk-operation"></a>忽略大量作業中的資料列  
+ 「資料列作業」陣列可以用來表示在使用**SQLSetPos**進行大量作業期間，應該忽略目前資料列集中的資料列。 若要指示驅動程式在大量作業期間忽略一或多個資料列，應用程式應該執行下列步驟：  
   
-2.  將行操作陣列的每個元素設定為兩個值之一:  
+1.  呼叫**SQLSetStmtAttr**來設定 SQL_ATTR_ROW_OPERATION_PTR 語句屬性，以指向 SQLUSMALLINTs 的陣列。 您也可以藉由呼叫**SQLSetDescField**設定 ARD 的 SQL_DESC_ARRAY_STATUS_PTR 標頭欄位來設定此欄位，這需要應用程式取得描述項控制碼。  
   
-    -   SQL_ROW_IGNORE,以指示為批量操作排除該行。  
+2.  將資料列作業陣列的每個元素設定為兩個值的其中一個：  
   
-    -   SQL_ROW_PROCEED,以指示該行包含在批量操作中。 (這是預設值)。  
+    -   SQL_ROW_IGNORE，表示已排除大量作業的資料列。  
   
-3.  調用**SQLSetPos**以執行批量操作。  
+    -   SQL_ROW_PROCEED，表示資料列包含在大量作業中。 (這是預設值)。  
   
- 以下規則適用於列操作陣列:  
+3.  呼叫**SQLSetPos**來執行大量作業。  
   
--   SQL_ROW_IGNORE和SQL_ROW_PROCEED僅影響使用**SQLSetPos**執行SQL_DELETE或SQL_UPDATE*的批次操作*。 它們不會影響對**SQLSetPos***的調用*,操作SQL_REFRESH或SQL_POSITION。  
+ 下列規則適用于資料列作業陣列：  
   
--   預設情況下,指標設定為 null。  
+-   SQL_ROW_IGNORE 和 SQL_ROW_PROCEED 只會影響使用**SQLSetPos**與 SQL_DELETE 或 SQL_UPDATE*作業的大量*作業。 它們不會影響**SQLSetPos** *的呼叫*和 SQL_REFRESH 或 SQL_POSITION 的作業。  
   
--   如果指標為空,則所有行都將更新,就像所有元素都設置為SQL_ROW_PROCEED一樣。  
+-   根據預設，指標會設定為 null。  
   
--   將元素設置為SQL_ROW_PROCEED並不保證該操作將發生在該特定行上。 例如,如果行集中的某個行具有SQL_ROW_ERROR狀態,則無論應用程式是否指定SQL_ROW_PROCEED,驅動程式可能無法更新該行。 應用程式必須始終檢查行狀態陣列以查看操作是否成功。  
+-   如果指標是 null，則所有的資料列都會更新，如同所有元素都已設定為 SQL_ROW_PROCEED。  
   
--   SQL_ROW_PROCEED在標頭檔中定義為 0。 應用程式可以將行操作陣組初始化為 0,以便處理所有行。  
+-   將元素設定為 SQL_ROW_PROCEED 並不保證作業會在該特定資料列上執行。 例如，如果資料列集中的某個資料列具有狀態 SQL_ROW_ERROR，不論應用程式是否 SQL_ROW_PROCEED 指定，驅動程式可能無法更新該資料列。 應用程式必須一律檢查資料列狀態陣列，以查看作業是否成功。  
   
--   如果行操作陣列中的元素編號「n」設定為SQL_ROW_IGNORE,並且調用**SQLSetPos**執行批量更新或刪除操作,則行集中的第 n 行在調用**SQLSetPos**後保持不變。  
+-   在標頭檔中，SQL_ROW_PROCEED 定義為0。 應用程式可以將資料列作業陣列初始化為0，以便處理所有的資料列。  
   
--   應用程式應自動將唯讀列設置為SQL_ROW_IGNORE。  
+-   如果資料列作業陣列中的元素編號 "n" 設定為 SQL_ROW_IGNORE 並呼叫**SQLSetPos**來執行大量更新或刪除作業，則在呼叫**SQLSetPos**之後，資料列集中的第 n 個數據列會維持不變。  
   
-## <a name="ignoring-a-column-in-a-bulk-operation"></a>忽略大量操作中的欄位  
- 為了避免嘗試更新一個或多個唯讀列而生成不必要的處理診斷,應用程式可以將綁定長度/指示器緩衝區中的值設置為SQL_COLUMN_IGNORE。 有關詳細資訊,請參閱[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
+-   應用程式應該會自動將唯讀資料行設定為 SQL_ROW_IGNORE。  
+  
+## <a name="ignoring-a-column-in-a-bulk-operation"></a>忽略大量作業中的資料行  
+ 若要避免嘗試更新為一或多個唯讀資料行所產生的不必要處理診斷，應用程式可以將系結長度/指標緩衝區中的值設定為 SQL_COLUMN_IGNORE。 如需詳細資訊，請參閱[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
   
 ## <a name="code-example"></a>程式碼範例  
- 在下面的示例中,應用程式允許用戶瀏覽 ORDERS 表並更新訂單狀態。 游標由鍵集驅動,行集大小為 20,並使用比較行版本的樂觀併發控件。 提取每個行集后,應用程式將列印它,並允許用戶選擇和更新訂單的狀態。 應用程式使用**SQLSetPos**將游標定位到所選行上,並執行行的位置更新。 (為了清楚起見,省略了錯誤處理。  
+ 在下列範例中，應用程式可讓使用者流覽 ORDERS 資料表並更新訂單狀態。 資料指標是資料列集大小為20的索引鍵集驅動，並使用開放式並行存取控制來比較資料列版本。 提取每個資料列集之後，應用程式會列印它，並允許使用者選取和更新訂單的狀態。 應用程式會使用**SQLSetPos**將游標放在選取的資料列上，並執行資料列的定點更新。 （為了清楚起見，會省略錯誤處理）。  
   
 ```cpp  
 #define ROWS 20  
@@ -363,21 +363,21 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 }  
 ```  
   
- 有關更多範例,請參閱[使用 SQLSetPos 在行集中](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)[定位更新和刪除語句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)以及更新行。  
+ 如需更多範例，請參閱[定位 Update 和 Delete 語句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)和[使用 SQLSetPos 更新資料列集中的資料列](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|將緩衝區繫結到結果集中的欄|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|執行與區塊游標位置無關的批次操作|[SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|解除敘述處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|取得資料塊或捲動瀏覽結果集|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|取得描述符的單欄位|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|取得描述符的多個字段|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|設定描述符的單欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|設定描述符的多個字欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
-|設定敘述屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|將緩衝區系結至結果集內的資料行|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|執行與區塊資料指標位置無關的大量作業|[SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
+|取消語句處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|提取資料區塊或透過結果集進行滾動|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|取得描述項的單一欄位|[SQLGetDescField 函式](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|取得描述項的多個欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|設定描述項的單一欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|設定描述項的多個欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|設定語句屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

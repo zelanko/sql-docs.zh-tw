@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
 ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288942"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys.databases database_scoped_configurations （Transact-sql）
@@ -34,13 +34,13 @@ ms.locfileid: "78288942"
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|設定選項的識別碼。|
-|**name**|**Nvarchar （60）**|設定選項的名稱。 如需可能設定的詳細資訊，請參閱[ALTER DATABASE 範圍設定 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
-|**value**|**sqlvariant**|針對主要複本的這個設定選項所設定的值。|
+|**name**|**nvarchar(60)**|設定選項的名稱。 如需可能設定的詳細資訊，請參閱[ALTER DATABASE 範圍設定 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
+|**值**|**sqlvariant**|針對主要複本的這個設定選項所設定的值。|
 |**value_for_secondary**|**sqlvariant**|次要複本的這個設定選項所設定的值。|
 |**is_value_default**|**bit** |指定值是否設定為預設值。|
 |**dw_compatibility_level**|**int**|資料庫的相容性層級（預覽）。  預設值 = 0 （自動）|
 
-## <a name="Permissions"></a> 權限
+## <a name="permissions"></a><a name="Permissions"></a> 權限
 
 需要 **public** 角色的成員資格。
 

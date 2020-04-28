@@ -1,5 +1,5 @@
 ---
-title: 多實例報表伺服器部署的 URL 預留（SSRS 組態管理員） |微軟文檔
+title: 多重實例報表伺服器部署的 URL 保留專案（SSRS Configuration Manager） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380689"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>多重執行個體報表伺服器部署的 URL 保留項目 (SSRS 組態管理員)
@@ -48,7 +48,7 @@ ms.locfileid: "80380689"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基礎技術對於唯一的名稱有一些規定。 HTTP.SYS 要求它的儲存機制內的所有 URL 都必須是唯一的。 您可以讓通訊埠、主機名稱或虛擬目錄名稱不同，以建立唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求相同處理序內的應用程式識別必須是唯一的。 這項規定會影響虛擬目錄名稱， 它指定您不能在相同的報表伺服器執行個體內重複虛擬目錄名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [配置報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

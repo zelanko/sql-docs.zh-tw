@@ -1,5 +1,5 @@
 ---
-title: 資料增量,檔案串流 (ODBC)
+title: 增量資料，FILESTREAM （ODBC）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281752"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
@@ -23,16 +23,16 @@ ms.locfileid: "81281752"
 
   此範例會示範如何使用 FILESTREAM 功能，以 SQLPutData 和 SQLGetData 累加地傳送和接收資料。  
   
- 有關 FILESTREAM 功能的詳細資訊,請參閱[FILESTREAM 支援&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
+ 如需有關 FILESTREAM 功能的詳細資訊，請參閱[&#40;ODBC&#41;的 Filestream 支援](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>範例  
  編譯並執行此範例之前，請先啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 第一個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 程式碼清單建立此範例使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
+ 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   
  第二個程式碼清單是 C++ 程式碼。 您必須指定伺服器，然後在 C++ 程式碼清單中，將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 請使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 編譯 C++ 程式碼清單。  
   
- 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 代碼清單將刪除此範例使用的資料庫。  
+ 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所使用的資料庫。  
   
 ```sql
 USE master  

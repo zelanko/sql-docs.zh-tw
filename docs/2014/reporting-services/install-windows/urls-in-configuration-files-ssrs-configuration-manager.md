@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48deeb3ba6badb1d01b895467f2a8418bdf37ba9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380709"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>組態檔中的 URL (SSRS 組態管理員)
@@ -28,9 +28,9 @@ ms.locfileid: "80380709"
 #### <a name="urls-for-application-access"></a>供應用程式存取的 URL  
  URL 是用來存取報表伺服器 Web 服務和報表管理員。 若要設定 URL，您必須使用 Reporting Services 組態工具。 此工具會在 HTTP.SYS 中建立每一個應用程式的 URL 保留項目，並將 URL 的項目加入 RSReportServer.config 的 `URLReservations` 區段。  
   
--   要查看`URLReservations`本節中每個元素的說明，請參閱連線書籍中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)。  
+-   若要查看`URLReservations`區段中每個元素的描述，請參閱《線上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]叢書》中的[rsreportserver.config 設定檔](../report-server/rsreportserver-config-configuration-file.md)。  
   
--   有關元素`UrlString`語法的詳細資訊，請參閱[URL 預留語法&#40;SSRS 組態管理員&#41;](url-reservation-syntax-ssrs-configuration-manager.md)。  
+-   如需僅限`UrlString`元素之語法的詳細資訊，請參閱[&#40;SSRS Configuration Manager&#41;的 URL 保留語法](url-reservation-syntax-ssrs-configuration-manager.md)。  
   
 -   如需有關如何設定 URL 以供應用程式存取的指示，請參閱 [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "80380709"
   
  當您設定用於應用程式存取的 URL 時，`UrlRoot` 便會自動指定於 RSReportServer.config 檔案中。 如果您在組態檔中修改這個值，您必須指定報表伺服器 Web 服務的有效 URL 位址，該服務會連接到包含您要傳遞之報表的報表伺服器資料庫。 您只能為單一報表伺服器執行個體指定一個 `UrlRoot`；任何給定之報表伺服器執行個體的 RSReportServer.config 檔案中只能有一個 `UrlRoot` 項目存在。 如果您為報表伺服器 Web 服務保留多個 URL，您必須為 `UrlRoot` 選擇其中一個可用的值。  
   
- 在大部分情況下，您不需要修改 `UrlRoot`。 但是，如果報表伺服器將通過完全限定的 URL 訪問，並且未將使用主機標頭的 URL 配置為完全限定的網站名稱，則必須手動編輯 RSReportServer.config 以將 設置為`UrlRoot`將用於呈現報表的完全限定報表伺服器 URL（例如。 `https://www.adventure-works.com/mywebapp/reportserver`  
+ 在大部分情況下，您不需要修改 `UrlRoot`。 不過，如果報表伺服器將透過完整的 URL 存取，而且您並未設定 URL 來使用完整網站名稱的主機標頭，您就必須手動編輯 Rsreportserver.config，將設定`UrlRoot`為要用來轉譯報表的完整報表伺服器 URL （例如`https://www.adventure-works.com/mywebapp/reportserver`）。  
   
 #### <a name="urls-connecting-report-manager-and-web-parts-to-the-report-server-web-service"></a>將報表管理員和 Web 組件連接到報表伺服器 Web 服務的 URL  
  報表管理員和 Reporting Services 的 SharePoint 2.0 Web 組件是用來連接報表伺服器的 Web 前端元件。 用來連接後端報表伺服器的 URL 包含以下項目：  
@@ -55,11 +55,11 @@ ms.locfileid: "80380709"
   
 |設定|使用量|描述|  
 |-------------|-----------|-----------------|  
-|`ReportServerUrl`|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。 只有當您要設定以下其中一個狀況時，才能設定這個元素：<br /><br /> 報表管理員會提供報表伺服器 Web 服務的 Web 前端存取權，該服務可在不同電腦上執行或是在相同電腦的不同執行個體上執行。<br /><br /> 當您擁有報表伺服器的多個 URL，而且希望報表管理員使用特定的 URL 時。<br /><br /> 您擁有特定報表伺服器 URL，您希望所有報表管理員連接都使用此 URL。<br /><br /> 例如，您可能會啟用網路上所有電腦的報表管理員存取權，但是您需要報表管理員透過本機連接來連接報表伺服器。 在這種情況下，您可以配置為`ReportServerUrl`""。http://localhost/reportserver<br /><br /> <br /><br /> 有關如何實現這些方案的說明，請參閱在連線書籍中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][配置報表管理員&#40;原生模式&#41;。](../report-server/configure-web-portal.md)|這個值會指定報表伺服器 Web 服務的 URL。 報表管理員應用程式會在啟動時讀取這個值。 如果設定了這個值，報表管理員將會連接到此 URL 中指定的報表伺服器。<br /><br /> 根據預設，報表管理員會提供報表伺服器 Web 服務的 Web 前端存取權，該服務會在相同報表伺服器執行個體內當做報表管理員來執行。 但是，如果您要將報表管理員搭配報表伺服器 Web 服務一起使用 (該服務屬於另一個執行個體的一部分，或是會在不同電腦的執行個體中執行)，您就可以設定此 URL 來引導報表管理員連接外部報表伺服器 Web 服務。<br /><br /> 如果您在要連接的報表伺服器上安裝了安全通訊端層 (SSL) 憑證，`ReportServerUrl` 值必須是為該憑證註冊的伺服器名稱。 如果您收到錯誤訊息「基礎連接已關閉: 無法為 SSL/TLS 安全通道建立信任關係」，請將 `ReportServerUrl` 設定為發出 SSL 憑證之伺服器的完整網域名稱。 例如，如果憑證註冊到**HTTPs：\//adventure-works.com.onlinesales，** 報表服務器 URL 將是**HTTPs：\//adventure-works.com.onlinesales/報表服務器**.|  
-|`ReportServerExternalUrl`|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。<br /><br /> 只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才設定這個元素。<br /><br /> 在<>`ReportServerExternalUrl``ReportServerUrl`元素下方添加<>，然後將其設置為完全限定的報表伺服器名稱，該名稱在單獨的瀏覽器視窗中訪問時解析為報表伺服器實例。 不要刪除<>。 `ReportServerUrl`<br /><br /> 下列範例說明語法：<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|這個值是由 SharePoint 2.0 Web 組件使用。<br /><br /> 舊版中曾經建議您設定這個值，以便將「報表產生器」部署在供網際網路存取的報表伺服器上， 這是未經測試的部署狀況。 如果您過去使用這項設定來支援「報表產生器」的網際網路存取，現在應該考慮改用替代的策略。|  
+|`ReportServerUrl`|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。 只有當您要設定以下其中一個狀況時，才能設定這個元素：<br /><br /> 報表管理員會提供報表伺服器 Web 服務的 Web 前端存取權，該服務可在不同電腦上執行或是在相同電腦的不同執行個體上執行。<br /><br /> 當您擁有報表伺服器的多個 URL，而且希望報表管理員使用特定的 URL 時。<br /><br /> 您擁有特定報表伺服器 URL，您希望所有報表管理員連接都使用此 URL。<br /><br /> 例如，您可能會啟用網路上所有電腦的報表管理員存取權，但是您需要報表管理員透過本機連接來連接報表伺服器。 在此情況下，您可能`ReportServerUrl`會將http://localhost/reportserver設定為 ""。<br /><br /> <br /><br /> 如需如何執行這些案例的指示，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[設定 &#40;原生模式&#41;報表管理員](../report-server/configure-web-portal.md)。|這個值會指定報表伺服器 Web 服務的 URL。 報表管理員應用程式會在啟動時讀取這個值。 如果設定了這個值，報表管理員將會連接到此 URL 中指定的報表伺服器。<br /><br /> 根據預設，報表管理員會提供報表伺服器 Web 服務的 Web 前端存取權，該服務會在相同報表伺服器執行個體內當做報表管理員來執行。 但是，如果您要將報表管理員搭配報表伺服器 Web 服務一起使用 (該服務屬於另一個執行個體的一部分，或是會在不同電腦的執行個體中執行)，您就可以設定此 URL 來引導報表管理員連接外部報表伺服器 Web 服務。<br /><br /> 如果您在要連接的報表伺服器上安裝了安全通訊端層 (SSL) 憑證，`ReportServerUrl` 值必須是為該憑證註冊的伺服器名稱。 如果您收到錯誤訊息「基礎連接已關閉: 無法為 SSL/TLS 安全通道建立信任關係」，請將 `ReportServerUrl` 設定為發出 SSL 憑證之伺服器的完整網域名稱。 例如，如果已將此憑證註冊到 **https:\//adventure-works.com.onlinesales**，報表伺服器 URL 即為 **https:\//adventure-works.com.onlinesales/reportserver**。|  
+|`ReportServerExternalUrl`|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。<br /><br /> 只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才設定這個元素。<br /><br /> 將 <`ReportServerExternalUrl`> 加入 <`ReportServerUrl`的> 專案底下，然後將它設定為在另一個瀏覽器視窗中存取時，解析為報表伺服器實例的完整報表伺服器名稱。 請勿刪除 <`ReportServerUrl`>。<br /><br /> 下列範例說明語法：<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|這個值是由 SharePoint 2.0 Web 組件使用。<br /><br /> 舊版中曾經建議您設定這個值，以便將「報表產生器」部署在供網際網路存取的報表伺服器上， 這是未經測試的部署狀況。 如果您過去使用這項設定來支援「報表產生器」的網際網路存取，現在應該考慮改用替代的策略。|  
   
 ## <a name="see-also"></a>另請參閱  
- [配置報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

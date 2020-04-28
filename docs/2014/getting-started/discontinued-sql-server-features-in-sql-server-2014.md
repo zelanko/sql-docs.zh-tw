@@ -11,24 +11,19 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112227"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>在 SQL Server 2014 中停止 SQL Server 的功能
   本主題描述升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後無法再使用的功能。  
   
-## <a name="discontinued-features-in-sssql14"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]
+## <a name="discontinued-features-in-sssql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中沒有已停止的功能。  
   
- 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中沒有已停止的功能。  
-  
-## <a name="discontinued-features-in-sssql11"></a>
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-  
+## <a name="discontinued-features-in-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>不再提供的 Active Directory Helper 服務  
  已移除 Active Directory Helper 服務和相關元件。 下表列出因此一併移除的相關聯元件：  
@@ -40,8 +35,7 @@ ms.locfileid: "79112227"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>SQL Server 2008 R2 中停止的功能  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Reporting Services 中的 64 位元平台支援  
- 從 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 開始，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件不再支援執行 Windows Server 2003 或 Windows Server 2003 R2 的以 Itanium 為基礎的伺服器。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]繼續支援其他 64 位元的作業系統，包括以 Itanium 為基礎系統的 Windows Server 2008 Datacenter 或 Windows Server°2008°R2。 若要從 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 安裝升級為 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]，而此安裝所含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是在以 Itanium 為基礎系統版本 Windows Server 2003 或 Windows Server 2003 R2 上，則必須先升級作業系統。  
+ 從 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 開始，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件不再支援執行 Windows Server 2003 或 Windows Server 2003 R2 的以 Itanium 為基礎的伺服器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]繼續支援其他 64 位元的作業系統，包括以 Itanium 為基礎系統的 Windows Server 2008 Datacenter 或 Windows Server°2008°R2。 若要從 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 安裝升級為 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]，而此安裝所含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是在以 Itanium 為基礎系統版本 Windows Server 2003 或 Windows Server 2003 R2 上，則必須先升級作業系統。  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 中停止的功能  
   
@@ -52,14 +46,13 @@ ms.locfileid: "79112227"
  啟用 Web 助理的 `sp_configure` 選項已經從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中移除了。 我們建議您改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 。  
   
 ### <a name="surface-area-configuration-tool"></a>介面區組態工具  
- 
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 已停止介面區組態工具。 下表將顯示您可以在這個版本中用來設定組態、選項和元件功能的項目。  
+ [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 已停止介面區組態工具。 下表將顯示您可以在這個版本中用來設定組態、選項和元件功能的項目。  
   
 |取代設定和元件功能|如何設定|  
 |-------------------------------------------------|----------------------|  
 |通訊協定、連接和啟動選項|使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員。|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]功能|使用以原則為基礎的管理、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的屬性設定，或 sp_Configure。|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]功能|使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的屬性設定。|  
+|[!INCLUDE[ssDE](../includes/ssde-md.md)] 功能|使用以原則為基礎的管理、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的屬性設定，或 sp_Configure。|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 功能|使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的屬性設定。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - EnableIntegrated Security 屬性|使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的屬性設定。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -「排程事件和報表傳遞」與「Web 服務和 HTTP 存取」|編輯 RSReportServer.config 組態檔。|  
 |命令列選項|這個版本不支援。|  

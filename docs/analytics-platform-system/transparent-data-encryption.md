@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289746"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
@@ -37,7 +37,7 @@ ms.locfileid: "79289746"
   
 ![顯示階層](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>使用透明資料加密  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>使用透明資料加密  
 若要使用 TDE，請遵循下列步驟。 前三個步驟只會在準備 SQL Server PDW 以支援 TDE 時執行一次。  
   
 1.  在 master 資料庫中建立主要金鑰。  
@@ -121,8 +121,8 @@ TDE 憑證必須由資料庫主要金鑰來加密，才能由下列陳述式所�
 |命令或函數|目的|  
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
-|[ALTER DATABASE 加密金鑰](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
-|[卸載資料庫加密金鑰](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|移除用於加密資料庫的金鑰。|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|移除用於加密資料庫的金鑰。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|說明用來啟用 TDE 的 **ALTER DATABASE** 選項。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>目錄檢視和動態管理檢視  
@@ -279,7 +279,7 @@ TDE 的效能影響會因您擁有的資料類型、儲存方式，以及 SQL Se
   
 ## <a name="see-also"></a>另請參閱  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[建立主要金鑰](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics |微軟文件
+title: SQLStatistics |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2aa220cc17ac3e224037aecfda752f3276830dc2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291855"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLStatistics**可以在靜態游標上執行。 嘗試對可上升(鍵集驅動或動態)執行**SQLStatisticsSQL_SUCCESS_WITH_INFO,** 指示游標類型已更改。  
+  **SQLStatistics**可以在靜態資料指標上執行。 嘗試在可更新的（索引鍵集驅動或動態）上執行**SQLStatistics**時，會傳回 SQL_SUCCESS_WITH_INFO 表示資料指標類型已變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 統計函數](https://go.microsoft.com/fwlink/?LinkId=59372)   
+ [SQLStatistics 函式](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

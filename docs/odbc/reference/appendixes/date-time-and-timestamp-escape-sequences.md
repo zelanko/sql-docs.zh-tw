@@ -1,5 +1,5 @@
 ---
-title: 日期、時間和時間戳轉義序列 |微軟文件
+title: 日期、時間和時間戳記逸出序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284340"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日期、時間和時間戳記逸出序列
-ODBC 為日期、時間和時間戳文本定義轉義序列。 這些逸出序列的語法如下:  
+ODBC 會定義日期、時間和時間戳記常值的逸出序列。 這些逸出序列的語法如下：  
   
 ```  
   
@@ -32,7 +32,7 @@ ODBC 為日期、時間和時間戳文本定義轉義序列。 這些逸出序�
 {ts 'value'}  
 ```  
   
- 在 BNF 符號中,語法如下所示:  
+ 在 BNF 標記法中，語法如下所示：  
   
 ```  
   
@@ -53,4 +53,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果資料來源支援日期、時間和時間戳資料類型,則支援日期、時間和時間戳文本轉義序列。 應用程式應呼叫**SQLGetTypeInfo**以確定是否支援這些資料類型。
+ 如果資料來源支援日期、時間和時間戳記資料類型，則支援日期、時間和時間戳記常值 escape 序列。 應用程式應該呼叫**SQLGetTypeInfo**來判斷是否支援這些資料類型。

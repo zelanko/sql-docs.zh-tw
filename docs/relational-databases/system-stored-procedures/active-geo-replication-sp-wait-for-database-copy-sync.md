@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: adee14219a29fef48abdcdcec9d7aac7894c2270
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79198185"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>主動式異地複寫-sp_wait_for_database_copy_sync
@@ -77,6 +77,6 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [異地複寫動態管理檢視（Dmv）和函數 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys. dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
+ [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
   
   

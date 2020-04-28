@@ -18,10 +18,10 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289946"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
@@ -50,7 +50,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |-----------------|---------------|-----------------|  
 |**queue_type**|**Nvarchar （6）**|佇列的類型。 可能的值為**mail**和**status**。|  
 |**length**|**int**|指定佇列中的郵件項目數。|  
-|**狀態**|**Nvarchar （64）**|監視器的狀態。 可能的值為**非**使用中（佇列為非使用中）、已**通知**（佇列已通知接收發生），以及**RECEIVES_OCCURRING** （佇列正在接收）。|  
+|**state**|**Nvarchar （64）**|監視器的狀態。 可能的值為**非**使用中（佇列為非使用中）、已**通知**（佇列已通知接收發生），以及**RECEIVES_OCCURRING** （佇列正在接收）。|  
 |**last_empty_rowset_time**|**從中**|佇列上次空的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
 |**last_activated_time**|**從中**|佇列上次啟動的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
   

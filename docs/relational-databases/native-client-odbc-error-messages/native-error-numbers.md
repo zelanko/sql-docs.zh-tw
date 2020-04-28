@@ -1,5 +1,5 @@
 ---
-title: 本機錯誤編號 |微軟文件
+title: 原生錯誤號碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b5572ee784f47b0444e1d825de1b6dd53db8066
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291602"
 ---
 # <a name="native-error-numbers"></a>原生錯誤號碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  對於資料源中發生的錯誤(返回者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]),本機用戶端ODBC驅動程式返回返回的本機錯誤編號[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 對於驅動程式檢測到的錯誤,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 ODBC 驅動程式傳回本機錯誤數 0。 有關本機錯誤編號清單的詳細資訊,請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的**主**資料庫中**系統**表的錯誤列。  
+  對於發生在資料來源中的錯誤（由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回）， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC 驅動程式會傳回由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回的原生錯誤號碼。 對於驅動程式所偵測到的錯誤[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，NATIVE Client ODBC 驅動程式會傳回原生錯誤號碼0。 如需原生錯誤號碼清單的詳細資訊，請參閱中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **master**資料庫內**sysmessages**系統資料表的 error 資料行。  
   
- 有關狀態錯誤代碼的資訊,請參閱[SQLSTATE &#40;ODBC 錯誤代碼&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)。 對於網路程式庫所傳回的錯誤，自發性錯誤號碼來自於基礎網路軟體。  
+ 如需狀態錯誤碼的詳細資訊，請參閱[SQLSTATE &#40;ODBC 錯誤碼&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)。 對於網路程式庫所傳回的錯誤，自發性錯誤號碼來自於基礎網路軟體。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理錯誤與訊息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

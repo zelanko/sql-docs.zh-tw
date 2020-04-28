@@ -23,10 +23,10 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79111903"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server 移轉小幫手以進行存取（AccessToSQL）
@@ -61,7 +61,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 1.  按兩下 [SSMA] 以存取 [ *n*]，其中*n*是組建編號。  
   
-2.  在 [歡迎] 頁面中按 [下一步] ****。  
+2.  在 [歡迎] 頁面中按 [下一步]****。  
   
     如果您未安裝必要條件，則會出現一則訊息，指出您必須先安裝必要的元件。 請確定您已安裝所有必要條件，然後再次執行安裝程式。  
   
@@ -69,7 +69,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 4.  在 [選擇安裝類型] 頁面上，按一下 [**一般**]。  
   
-5.  按一下 **[安裝]**。  
+5.  按一下 [Install]  。  
   
 預設安裝位置是 C:\Program Files\Microsoft SQL Server 移轉小幫手以進行存取。  
   

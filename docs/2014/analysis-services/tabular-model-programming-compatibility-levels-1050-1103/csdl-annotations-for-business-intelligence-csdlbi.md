@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525449"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 XML 格式中稱為「概念結構定義語言商業智慧註解」(CSDLBI) 的表格式模型定義表示法。  
   
  此主題提供 CSDLBI 的概觀，及其搭配 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型的用法。  
@@ -28,7 +27,7 @@ ms.locfileid: "79525449"
   
  雖然 CSDL 符合實體資料架構標準，但您不需要了解實體關聯性模型，也不需要任何特殊工具來建置表格式模型或以模型為基礎的報表。 您會透過使用用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，或像是 AMO 這類應用程式開發介面) 建立模型，並且將模型部署至伺服器。 用戶端會使用模型定義檔連接至模型，通常該檔案會發佈至可供報表設計師與報表取用者使用的 SharePoint 文件庫。 如需詳細資訊，請參閱下列連結：  
   
--   [&#40;SSAS 表格式&#41;的表格式模型方案](../tabular-model-solutions-ssas-tabular.md)  
+-   [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
 -   [表格式模型方案部署 &#40;SSAS 表格式&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   

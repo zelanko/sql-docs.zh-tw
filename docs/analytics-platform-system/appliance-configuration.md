@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289736"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>分析平臺系統的設備設定檢查清單
@@ -22,7 +22,7 @@ ms.locfileid: "79289736"
 > [!WARNING]  
 > 流量分析平臺系統**Configuration Manager**是執行工具中所提供工作的最佳方式，以及唯一支援的方法。  
   
-## <a name="BeforeTasks"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeTasks"></a>開始之前  
   
 ### <a name="prerequisites"></a>Prerequisites  
   
@@ -44,7 +44,7 @@ ms.locfileid: "79289736"
   
     2.  從 [PDW 控制項] 節點的 [**開始**] 功能表啟動**Configuration Manager** 。 Configuration Manager 的第一個畫面會顯示您的 IHV 所建立的設備拓朴。 這是您的 SQL Server PDW 軟體所識別的硬體節點清單，屬於您的設備。 您應該不需要變更 [設備拓朴] 畫面上的任何設定。  
   
-## <a name="CMTasks"></a>執行 Configuration Manager 工作  
+## <a name="perform-configuration-manager-tasks"></a><a name="CMTasks"></a>執行 Configuration Manager 工作  
 SQL Server PDW**Configuration Manager** （PDWCM）是一種裝置管理工具，SQL Server PDW 系統管理員用來執行設備層級的作業，以及變更設備層級的設定。 例如，使用 PDWCM 來重設密碼、設定時區、變更 IP 位址、設定 SSL 憑證、啟用透過防火牆的遠端存取、啟動或停止設備，以及設定立即檔案初始化。  
   
 使用**Configuration Manager**執行下列設定工作。  
@@ -64,7 +64,7 @@ SQL Server PDW**Configuration Manager** （PDWCM）是一種裝置管理工具�
 |使用 [**許可權**] 對話方塊來審查立即檔案初始化選項|立即檔案初始化是一項 SQL Server 功能，可讓資料檔案作業更快速地執行。 只有在已將 SE_MANAGE_VOLUME_NAME 許可權授與網路服務帳戶時，才會在 SQL Server PDW 上啟用此功能。 根據預設，它是關閉的。<br /><br />如需詳細資訊，請參閱[立即檔案初始化設定 &#40;分析平臺系統&#41;](instant-file-initialization-configuration.md)。|  
 |從備份還原 master 資料庫|刪除目前的**master**資料庫，並將它取代為備份。 如需詳細資訊，請參閱[將 Master 資料庫 &#40;分析平臺系統還原&#41;](restore-the-master-database.md)。|  
   
-## <a name="AddTasks"></a>執行其他設定工作  
+## <a name="perform-additional-configuration-tasks"></a><a name="AddTasks"></a>執行其他設定工作  
 執行**Configuration Manager**工作之後，請執行下列其他設定工作清單。 其中某些工作是選擇性的。  
   
 |組態工作|描述|  

@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ec6125d3c8fe2469f599b3f11c1888383de6e5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290380"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  要存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取 本機用戶端 OLE 資料庫提供程式,消費者必須首先透過調用**CoCreateInstance**方法建立資料來源物件的實例。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 對於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式,類標識符CLSID_SQLNCLI10。 您還可以使用符號SQLNCLI_CLSID,該符號將解析為您引用的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中使用的本機用戶端 OLE DB 提供程式。  
+  若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，取用者必須先呼叫**CoCreateInstance**方法來建立資料來源物件的實例。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，類別識別碼為 CLSID_SQLNCLI10。 您也可以使用符號 SQLNCLI_CLSID，解析為您所參考[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 SQLNCLI 中所使用的 Native Client OLE DB 提供者。  
   
  資料來源物件會公開 **IDBProperties** 介面，取用者可以使用這個介面來提供基本驗證資訊；例如，伺服器名稱、資料庫名稱、使用者識別碼和密碼。 呼叫 **IDBProperties::SetProperties** 方法可設定這些屬性。  
   
@@ -43,7 +43,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- 此對**CoCreateInstance**的呼叫將建立與CLSID_SQLNCLI10關聯的類的單個物件(與將用於創建物件的數據和代碼關聯的 CSLID)。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
+ 這個對**CoCreateInstance**的呼叫會建立與 CLSID_SQLNCLI10 相關聯之類別的單一物件（CSLID 與用來建立物件的資料和程式碼相關聯）。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
   
  以下是初始化與建立資料來源之連接的範例函數。  
   

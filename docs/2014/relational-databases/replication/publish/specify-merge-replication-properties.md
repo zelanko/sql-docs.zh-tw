@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289526"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合併式複寫屬性
@@ -33,21 +33,21 @@ ms.locfileid: "79289526"
 -   如果您在初始化訂閱之後指定發行項僅限下載，則所有收到該發行項的客訂閱都必須重新初始化。 主訂閱則不需要重新初始化。 如需屬性變更效果的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
- 在 [新增發行集精靈] 的 [發行項]**** 頁面，或 [發行項屬性 - **發行項>]**** 對話方塊的 [屬性]\<** 索引標籤上指定發行項僅限下載。 [新增發行集精靈] 與 [發行集屬性 - **發行集>]\<** 對話方塊中都有提供此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../publish/create-a-publication.md)和[檢視及修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
+ 在 [新增發行集精靈] 的 [發行項]**** 頁面，或 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上指定發行項僅限下載。 [新增發行集精靈] 與 [發行集屬性 - \<發行集>]**** 對話方塊中都有提供此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../publish/create-a-publication.md)和[檢視及修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>在發行項頁面上指定發行項僅限下載  
   
--   在「新增發行集精靈」的 **[發行項]** 頁面上選取資料表，然後選取 **[反白的資料表僅限下載]** 。 
+-   在「新增發行集精靈」的 **[發行項]** 頁面上選取資料表，然後選取 **[反白的資料表僅限下載]**。 
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>在發行項屬性 - \<發行項> 對話方塊的屬性索引標籤上指定發行項僅限下載  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - **發行集>]\<** 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]  。    
+1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊中，選取一個資料表，然後按一下 [發行項屬性]  。    
 2.  按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]** 。    
-3.  在 [發行項屬性 - **發行項>]** **對話方塊之 [屬性]** **索引標籤的 [目的地物件]\<** 區段中，指定 [同步處理方向]  的下列其中一個值：    
+3.  在 [發行項屬性 - \<發行項>]**** 對話方塊之 [屬性]**** 索引標籤的 [目的地物件]**** 區段中，指定 [同步處理方向]**** 的下列其中一個值：    
     -   **[下載至訂閱者，禁止訂閱者變更]**    
     -   **[下載至訂閱者，允許訂閱者變更]**  
   
-4.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。    
+4.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。    
 
 ###  <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   
@@ -72,11 +72,11 @@ ms.locfileid: "79289526"
         > [!NOTE]  
         >  如果發行項的來源資料表已在另一個發行集中發行，則兩個發行項的僅限下載行為必須相同。  
  
-## <a name="interactive-conflict-resolution">互動式衝突解決</a>
+## <a name=""></a><a name="interactive-conflict-resolution">互動式衝突解決</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]複寫提供互動式解析程式，可讓您在 Windows 同步處理管理員中[!INCLUDE[msCoName](../../../includes/msconame-md.md)]的視需要同步處理期間手動解決衝突。 在啟用互動式解決方案之後，在同步處理期間會使用「互動解決器」以互動方式解決衝突。 互動解決器可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 使用。 如需詳細資訊，請參閱[使用 Windows Synchronization Manager 同步處理訂閱 &#40;Windows Synchronization Manager&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
     
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   如果是在 Windows Synchronization Manager 之外執行同步處理 (如 SQL Server Management Studio 或複寫監視器中已排程的同步處理或視需要同步處理)，則不需要使用者的介入，就會使用針對發行項指定的預設衝突解決方式來自動解決衝突。 如需詳細資訊，請參閱 [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   
@@ -84,16 +84,16 @@ ms.locfileid: "79289526"
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>為發行項啟用互動式衝突解決  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - **發行集>]\<** 對話方塊中，選取一個資料表。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。    
-2.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]** 。    
-3.  在 [發行項屬性 - **發行項>]\<** 或 [發行項屬性 - **發行項類型>]\<** 頁面上，按一下 [解析程式]  索引標籤。    
-4.  選取 **[允許訂閱者在依要求同步期間，以互動方式解決衝突]** 。    
+1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。    
+2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]**。    
+3.  在 [發行項屬性 - \<發行項>]**** 或 [發行項屬性 - \<發行項類型>]**** 頁面上，按一下 [解析程式]**** 索引標籤。    
+4.  選取 **[允許訂閱者在依要求同步期間，以互動方式解決衝突]**。    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+6.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>若要指定訂閱應使用互動式衝突解決方案  
   
-1.  在 [訂閱屬性 - **訂閱者>: \<訂閱資料庫>]\<** 對話方塊方塊中，將 [以互動方式解決衝突]  選項的值指定為 **True**。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)＞。 
+1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊方塊中，將 [以互動方式解決衝突]**** 選項的值指定為 **True**。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)＞。 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
@@ -122,20 +122,20 @@ ms.locfileid: "79289526"
   
 
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果您在訂閱初始化之後要修改追蹤層級，則這些訂閱必須重新初始化。 如需屬性變更效果的詳細資訊，請參閱[變更發行集與發行項屬性](../publish/change-publication-and-article-properties.md)。    
 -   若使用資料列層級追蹤和資料行層級追蹤，則衝突解決始終在資料列層級執行：優先資料列會覆寫失敗資料列。 合併式複寫還允許您指定在邏輯記錄層級追蹤並解決衝突，但是 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中並未提供這些選項。 如需這些設定複寫預存程序之選項的詳細資訊，請參閱＜ [定義合併資料表發行項之間的邏輯記錄關聯性](../publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [發行項屬性]  對話方塊的 [屬性]  索引標籤上，指定合併發行項的資料列層級追蹤或資料行層級追蹤，[新增發行集精靈] 和 [發行集屬性 - **發行集>]\<** 對話方塊皆提供此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 在 [發行項屬性]**** 對話方塊的 [屬性]**** 索引標籤上，指定合併發行項的資料列層級追蹤或資料行層級追蹤，[新增發行集精靈] 和 [發行集屬性 - \<發行集>]**** 對話方塊皆提供此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="specify-row--or-column-level-tracking"></a>指定資料列層級或資料行層級的追蹤  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - **發行集>]\<** 對話方塊中，選取一個資料表。    
-2.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]** 。   
-3.  在 [發行項屬性 **發行項>]** **對話方塊的 [屬性]\<** 索引標籤上，針對 [追蹤層級]  屬性選取下列其中一個值：[資料列層級追蹤]  或 [資料行層級追蹤]  。    
-4.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表。    
+2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]**。   
+3.  在 [發行項屬性 \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，針對 [追蹤層級]**** 屬性選取下列其中一個值：[資料列層級追蹤]**** 或 [資料行層級追蹤]****。    
+4.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
   
 ###  <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   
@@ -210,10 +210,10 @@ ms.locfileid: "79289526"
 
 
 ## <a name="see-also"></a>另請參閱  
- [使用條件式刪除追蹤優化合併式複寫效能](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [使用條件式刪除追蹤最佳化合併式複寫效能](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
  [偵測和解決邏輯記錄中的衝突](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [定義合併資料表發行項之間的邏輯記錄關聯性](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [偵測及解決合併式複寫衝突](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [使用僅限下載的發行項最佳化合併式複寫效能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
+ [使用僅限下載的發行項優化合併式複寫效能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
  [Define an Article](define-an-article.md)   
  [檢視和修改發行項屬性](view-and-modify-article-properties.md)  

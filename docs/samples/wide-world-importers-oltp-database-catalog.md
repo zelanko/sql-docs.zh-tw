@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112400"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 資料庫目錄
@@ -100,7 +100,7 @@ WideWorldImporters 會使用架構來進行不同的用途，例如儲存資料�
 |BuyingGroups|客戶組織可以是擁有更多購買能力的群組之一部分|
 |CustomerTransactions|與客戶相關的所有財務交易（發票、付款）|
 |SpecialDeals|特殊定價。 這可能包括固定價格、折扣（美元）或折扣百分比。|
-|訂單|客戶訂單的詳細資料|
+|Orders|客戶訂單的詳細資料|
 |OrderLines|客戶訂單的詳細資料行|
 |發票|客戶發票的詳細資料|
 |InvoiceLines|客戶發票的詳細資料行|
@@ -116,7 +116,7 @@ WideWorldImporters 會使用架構來進行不同的用途，例如儲存資料�
 |StockGroups|用於分類存貨專案的群組（例如，novelties、玩具、edible novelties 等等）|
 |StockItemStockGroups|哪些存貨專案是哪些股票群組（多對多）|
 |色彩|內建專案可以（選擇性）擁有色彩|
-|Packagetypes>|可以封裝存貨專案的方式（例如，box、貨箱、托貨、公斤等等）。|
+|PackageTypes|可以封裝存貨專案的方式（例如，box、貨箱、托貨、公斤等等）。|
 |StockItemTransactions|涵蓋所有股票專案所有移動的交易（收據、銷售、勾銷）|
 |VehicleTemperatures|經常記錄的車輛溫度冷卻器|
 |ColdRoomTemperatures|經常記錄的冷室冷卻器溫度|

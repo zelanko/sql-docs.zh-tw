@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525439"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
@@ -29,18 +29,15 @@ ms.locfileid: "79525439"
   
  模型是一種命名空間，其中包含下列主要實體、關聯和屬性：  
   
--   
-  `EntityContainer` 會列出模型中的資料表。  
+-   `EntityContainer` 會列出模型中的資料表。  
   
 -   每個列出的資料表都會將 `EntityContainer` 設為 `EntitySet`。  
   
 -   兩個資料表之間的每個關聯性都會描述成 `AssociationSet`，其中定義關聯性端點和關聯性角色。  
   
--   
-  `EntityType` 元素會針對 BISM 擴充，以便提供有關資料表以及內含資料行的其他詳細資料，包括用於排序和顯示用途的屬性。  
+-   `EntityType` 元素會針對 BISM 擴充，以便提供有關資料表以及內含資料行的其他詳細資料，包括用於排序和顯示用途的屬性。  
   
--   
-  `Measure` 元素會定義可用於模型的計算。 您可以使用新的 `KPI` 元素來加入一組特殊顯示屬性，藉以將量值轉換成 KPI。  
+-   `Measure` 元素會定義可用於模型的計算。 您可以使用新的 `KPI` 元素來加入一組特殊顯示屬性，藉以將量值轉換成 KPI。  
   
 -   檢視方塊沒有個別表示法。 不包含在檢視方塊中的資料行和資料表會以 CSDL 呈現，但是使用 `Hidden` 屬性來標幟。  
   
@@ -61,8 +58,7 @@ ms.locfileid: "79525439"
   
 ```  
   
- 
-  `EntitySet` 不包含資料表中資料行或資料的相關資訊。 資料行及其屬性的詳細描述是在 EntityType 元素中提供。  
+ `EntitySet` 不包含資料表中資料行或資料的相關資訊。 資料行及其屬性的詳細描述是在 EntityType 元素中提供。  
   
  每個實體 (資料表) 的 `EntitySet` 元素都包含一些屬性的集合，這些屬性會定義索引鍵資料行、資料行的資料類型和長度、Null 屬性、排序行為等等。 例如，下列 CSDL 摘錄描述的是 Customer 資料表中的三個資料行。 第一個資料行是模型在內部使用的特殊隱藏資料行。  
   
@@ -112,8 +108,7 @@ ms.locfileid: "79525439"
 ### <a name="name-properties-and-naming-conventions"></a>名稱屬性和命名慣例  
  CSDLBI 結構描述規定每個實體都必須具有唯一名稱以及可當做索引鍵使用的識別碼。 此外，某些實體可以具有用於顯示用途的標題，以及根據實體使用位置而變更的內容名稱。  
   
- 
-  `Documentation` 元素讓報表設計師有機會提供實體的描述，以便協助商務使用者了解資料的意義。 某些實體也允許使用一個或多個 `Annotation` 屬性，這些屬性會提供額外的中繼資料，以供應用程式或用戶端取用。  
+ `Documentation` 元素讓報表設計師有機會提供實體的描述，以便協助商務使用者了解資料的意義。 某些實體也允許使用一個或多個 `Annotation` 屬性，這些屬性會提供額外的中繼資料，以供應用程式或用戶端取用。  
   
  當您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工具中產生模型時，針對物件所建立的名稱就會遵循 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的物件命名和名稱唯一性慣例。 不過，因為 CSDLBI 是以實體資料架構 (EDF) 為基礎 (要求名稱遵守 C# 識別碼的慣例)，所以當伺服器建立模型的 CSDLBI 輸出時，伺服器會接受用於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 結構描述內部的名稱，並且自動建立符合 EDF 需求的新物件名稱。 下表描述的是用以產生新名稱的作業。  
   
@@ -151,6 +146,6 @@ ms.locfileid: "79525439"
  **限制：** 不支援資料格安全性。  
   
 ## <a name="see-also"></a>另請參閱  
- [商業智慧 &#40;CSDLBI&#41;的 CSDL 注釋](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288987"
 ---
 # <a name="start-sql-server-management-studio"></a>啟動 SQL Server Management Studio
@@ -27,14 +27,12 @@ ms.locfileid: "78288987"
 1.  在 [**開始**] 功能表上，依序指向 [**所有程式**] 和 [] [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後按一下 [ **SQL Server Management Studio**]。  
   
     > [!NOTE]  
-    >  預設不會安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果沒有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，請執行安裝程式來安裝它。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 未提供 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express 可從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=14630)免費下載，但其使用者介面與本教學課程中所述的不同。  
+    >  預設不會安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果沒有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，請執行安裝程式來安裝它。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 未提供 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express 可從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=14630)免費下載，但其使用者介面與本教學課程中所述的不同。  
   
 2.  在 [連接到伺服器]**** 對話方塊中，驗證預設值，然後按一下 [連接]****。 若要連接，[**伺服器名稱**] 方塊必須包含已安裝之電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名稱。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果是已命名的實例，[**伺服器名稱**] 方塊也應該包含實例名稱\<，格式為*computer_name*>\\<*instance_name*>。  
   
 ## <a name="management-studio-components"></a>Management Studio 元件  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 在特定資訊類型專用的視窗中呈現資訊。 資料庫資訊是顯示在「物件總管」和文件視窗中。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 在特定資訊類型專用的視窗中呈現資訊。 資料庫資訊是顯示在「物件總管」和文件視窗中。  
   
 -   物件總管是含有伺服器中所有資料庫物件的樹狀檢視。 其中可包括 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的資料庫。 物件總管含有它所連接的所有伺服器的資訊。 當您開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]時，系統會提示您將物件總管連接到上次使用的設定。 您可以在 [已註冊的伺服器] 元件中，按兩下任何伺服器來連接它，但您不需要註冊要連接的伺服器。  
   

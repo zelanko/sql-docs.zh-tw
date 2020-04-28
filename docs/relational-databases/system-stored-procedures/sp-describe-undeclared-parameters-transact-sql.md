@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180123"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -51,7 +51,7 @@ sp_describe_undeclared_parameters
   
  這是一個字串，其中包含已內嵌在*交易 SQL_batch*中的所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果語句中的 Transact-sql 語句或批次不包含參數， \@則不需要 params。 這個參數的預設值是 NULL。  
   
- Datatype  
+ 資料類型  
  參數的資料類型。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -111,7 +111,7 @@ sp_describe_undeclared_parameters
 ## <a name="parameter-selection-algorithm"></a>參數選取演算法  
  針對具有未宣告之參數的查詢，在三個步驟中進行未宣告之參數的資料類型推算。  
   
- **步驟1**  
+ **步驟 1**  
   
  針對具有未宣告之參數的查詢，資料類型推算的第一步是找出資料類型不相依於未宣告的參數之所有子運算式的資料類型。 可判斷下列運算式的類型：  
   
@@ -137,7 +137,7 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
 ```
   
- **步驟2**  
+ **步驟 2**  
   
  針對指定的未宣告\@參數 p，類型推算演算法會尋找包含\@ \@p 且為下列其中一項的最內層運算式 E （p）：  
   
@@ -163,7 +163,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  如果\@p 不包含在步驟2開頭所列的任何運算式中，則類型推算演算法會判斷 e\@（p）是包含\@p 的最大純量運算式，而類型推算演算法不會計算 e （\@\@p）的目標資料類型 TT （p）。 例如，如果查詢為`@p + 2` SELECT，則 E （\@p） = \@p + 2，而且沒有 TT （\@p）。  
   
- **步驟3**  
+ **步驟 3**  
   
  既然已識別 E\@（p）和 TT\@（p），類型推算演算法會以下列兩種方式的\@其中一種來會推算 p 的資料類型：  
   
@@ -206,7 +206,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **sql_variant**  
   
-    -   **stl**  
+    -   **xml**  
   
     -   CLR 系統定義的類型（**hierarchyid**、 **geometry**、 **geography**）  
   
@@ -223,7 +223,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     在此情況下，E\@（p）是 Col_Int \@+ p，TT\@（p）是**Int**。**** 已為\@p 選擇 int，因為它不會產生隱含轉換。 任何其他資料類型選擇會產生至少一個隱含轉換。  
+     在此情況下，E\@（p）是 Col_Int \@+ p，TT\@（p）是**Int**。**int**已為\@p 選擇 int，因為它不會產生隱含轉換。 任何其他資料類型選擇會產生至少一個隱含轉換。  
   
 2.  如果多個資料類型有相同的最小轉換數目，則會使用具有較高優先順序的資料類型。 例如  
   
@@ -231,7 +231,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     在此情況下， **int**和**Smallint**會產生一個轉換。 所有其他的資料類型都會產生一個以上的轉換。 因為**int**的優先順序高於**Smallint**， **** 所以會將 int \@用於 p。 如需資料類型優先順序的詳細資訊，請參閱[&#40;transact-sql&#41;的資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+     在此情況下， **int**和**Smallint**會產生一個轉換。 所有其他的資料類型都會產生一個以上的轉換。 因為**int**的優先順序高於**Smallint**， **int**所以會將 int \@用於 p。 如需資料類型優先順序的詳細資訊，請參閱[&#40;transact-sql&#41;的資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
      只有在依據規則 1 每個候選資格相同的資料類型與具有最高優先順序的資料類型之間發生隱含轉換時，才會套用此規則。 如果沒有隱含轉換，資料類型推算會失敗並出現錯誤。 例如，在查詢`SELECT @p FROM t`中，資料類型推算會失敗，因為 p 的\@任何資料類型都同樣好用。 例如，沒有從**int**到**xml**的隱含轉換。  
   

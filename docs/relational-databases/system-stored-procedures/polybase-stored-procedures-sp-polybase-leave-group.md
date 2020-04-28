@@ -15,10 +15,10 @@ ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3fd28f5a3cecb6da28603ae6f8a88d751081e80c
-ms.sourcegitcommit: df21fd156cc833f107d22413c76991b67f3715c8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80216498"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group （Transact-sql）

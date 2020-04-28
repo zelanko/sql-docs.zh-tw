@@ -1,5 +1,5 @@
 ---
-title: 十進位數字 |微軟文件
+title: 十進位數 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,39 +16,39 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4921a6162b6d711e657f223b5be5783dfa37bca8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285158"
 ---
 # <a name="decimal-digits"></a>小數位數
-十進位和數位資料類型*的小數位數*定義為小數點右側的最大位數或數據的比例。 對於近似的浮點數列或參數,比例未定義,因為小數點右側的數字數不是固定的。 對於包含秒分量的日期時間或間隔數據,十進位數字定義為數據秒元件中小數點右側的數字數。  
+Decimal 和 numeric 資料類型的*十進位*數定義為小數點右邊的最大位數，或資料的刻度。 對於近似的浮點數資料行或參數，小數位數是未定義的，因為小數點右邊的位數不是固定的。 對於包含秒陣列件的 datetime 或 interval 資料，小數位數會定義為數據的秒陣列件中小數點右邊的位數。  
   
- 對於SQL_DECIMAL和SQL_NUMERIC數據類型,最大比例通常與最大精度相同。 但是,某些數據源對最大比例施加了單獨的限制。 要確定資料類型允許的最小和最大比例,應用程式呼叫**SQLGetTypeInfo**。  
+ 對於 SQL_DECIMAL 和 SQL_NUMERIC 資料類型，最大的小數位數通常與最大精確度相同。 不過，某些資料來源會對最大規模施加不同的限制。 若要判斷資料類型所允許的最小和最大刻度，應用程式會呼叫**SQLGetTypeInfo**。  
   
- 為每種簡潔的 SQL 數據類型定義的小數位數顯示在下表中。  
+ 下表顯示每個簡潔 SQL 資料類型所定義的十進位數。  
   
 |SQL 類型|十進位數字|  
 |--------------|--------------------|  
-|所有字元和二進位類型[a]|n/a|  
-|SQL_DECIMAL<br />SQL_NUMERIC|小數點右側的已定義數字數。 例如,定義為數位(10,3)的列比例為 3。 這可以是負數,以支援存儲非常大的數位,而無需使用指數表示法;例如,"12000"可以存儲為"12",其比例為-3。|  
-|SQL_DECIMAL與SQL_NUMERIC以外的所有精確數值類型|0|  
-|所有近似資料類型[a]|n/a|  
-|SQL_TYPE_DATE,並且所有間隔類型,沒有秒分量 [a]|n/a|  
-|除SQL_TYPE_DATE之外的所有日期時間類型以及具有秒元件的所有間隔類型|值的秒部分(分數秒)中小數點右側的數字數。 此數位不能為負數。|  
+|所有字元和二進位類型 [a]|n/a|  
+|SQL_DECIMAL<br />SQL_NUMERIC|小數點右邊定義的位數。 例如，定義為 NUMERIC （10，3）之資料行的小數位數為3。 這可以是負數，而不需要使用指數標記法來支援非常大的數位儲存;例如，"12000" 可以儲存為 "12"，且小數值為-3。|  
+|SQL_DECIMAL 和 SQL_NUMERIC 以外的所有精確數數值型別 [a]|0|  
+|所有近似資料類型 [a]|n/a|  
+|SQL_TYPE_DATE 和所有間隔類型，但不含秒陣列件 [a]|n/a|  
+|除了 SQL_TYPE_DATE 以外的所有 datetime 類型，以及具有秒陣列件的所有間隔類型|在值的秒數部分中，小數點右邊的位數（小數秒）。 這個數位不可以是負數。|  
 |SQL_GUID|n/a|  
   
- [a] 此資料型態會忽略**SQLBind 參數**的*十進位參數*。  
+ [a] 這個資料類型會忽略**SQLBindParameter**的*DecimalDigits*引數。  
   
- 為小數位數返回的值與任何一個描述符欄位中的值不對應。 這些值可以來自SQL_DESC_SCALE或SQL_DESC_PRECISION欄位,具體取決於數據類型,如下表所示。  
+ 針對十進位數傳回的值不會對應到任何一個描述項欄位中的值。 值可以來自 SQL_DESC_SCALE 或 SQL_DESC_PRECISION 欄位，視資料類型而定，如下表所示。  
   
-|SQL 類型|與<br /><br /> 十進位數字|  
+|SQL 類型|對應至的描述項欄位<br /><br /> 十進位數|  
 |--------------|----------------------------------------------------------|  
-|所有字元與二進位型態|n/a|  
-|所有不確切的數值類型|SCALE|  
+|所有字元和二進位類型|n/a|  
+|所有精確的數數值型別|SCALE|  
 |SQL_BIT|n/a|  
-|所有近似數值類型|n/a|  
+|所有近似數數值型別|n/a|  
 |所有日期時間類型|PRECISION|  
-|具有秒元件的所有間隔型態|PRECISION|  
-|所有間隔型態,無秒分量|n/a|
+|包含秒陣列件的所有間隔類型|PRECISION|  
+|沒有秒陣列件的所有間隔類型|n/a|

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
-ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79027950"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "79027950"
 |**system_memory_state_desc**|**nvarchar(256)**|記憶體狀態的描述。 請參閱下表。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
-|條件|值|  
+|狀況|值|  
 |---------------|-----------|  
 |system_high_memory_signal_state = 1<br /><br /> 和<br /><br /> system_low_memory_signal_state = 0|可用的實體記憶體充足|  
 |system_high_memory_signal_state = 0<br /><br /> 和<br /><br /> system_low_memory_signal_state = 1|可用的實體記憶體不足|  
@@ -62,7 +62,7 @@ ms.locfileid: "79027950"
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

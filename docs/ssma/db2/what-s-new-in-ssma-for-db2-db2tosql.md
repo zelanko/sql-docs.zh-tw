@@ -1,5 +1,5 @@
 ---
-title: DB2 (DB2ToSQL) SSMA 中的新增功能 |微軟文件
+title: SSMA for DB2 的新功能（DB2ToSQL） |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,241 +10,241 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
 ms.openlocfilehash: 53a159627750a5ec66b5aa0b3fd6510c647e26a5
-ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80625518"
 ---
-# <a name="whats-new-in-ssma-for-db2-db2tosql"></a>DB2 (DB2ToSQL) SSMA 中的新增功能
+# <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 的新功能（DB2ToSQL）
 
-本文列出了每個版本中 DB2 更改的 SQL 伺服器遷移助手 (SSMA)。
+本文列出每個版本中 DB2 變更的 SQL Server 移轉小幫手（SSMA）。
 
-## <a name="ssma-v88"></a>SSMA v8.8
+## <a name="ssma-v88"></a>SSMA v 8。8
 
-DB2 的 SSMA v8.8 版本包括:
+SSMA for DB2 的 v3.0 版本包括：
 
-* SQL Server 物件同步穩定性改進
-* 評估並轉換期間的 GUI 效能改進
-* 更新映射,`ROWID``varbinary(40)`以方便資料移轉
-* 改進敘述轉換`SELECT ... FROM NEW/OLD TABLE`
-* 程式和職能`ALTER`報表的新轉換
-* 解構配置的新轉換
+* SQL Server 物件同步處理穩定性改善
+* 在評定和轉換期間的 GUI 效能改進
+* 已將從`ROWID`到`varbinary(40)`的對應更新為，以加速資料移轉
+* 改善的`SELECT ... FROM NEW/OLD TABLE`語句轉換
+* 程式和函`ALTER`式之語句的新轉換
+* 解構 for..of 擴張指派的新轉換
 
-## <a name="ssma-v87"></a>SSMA v8.7
+## <a name="ssma-v87"></a>SSMA v 8。7
 
-DB2 的 SSMA v8.7 版本包括全新的 DB2 語法解析器,以及圖形使用者介面中的次要修復和性能改進。
+SSMA for DB2 的 v1.0 版本包括全新的 DB2 語法剖析器，以及圖形化使用者介面中的次要修正和效能改進。
 
-此外,DB2 的 SSMA 現在提供:
+此外，SSMA for DB2 現在提供：
 
-* 在 LUW 上從 DB2 遷移時發現外鍵的修復程式。
-* 改進了語句`SELECT ... FOR UPDATE`的轉換。
-* 改進了`COUNT`MQ 表中函數的轉換。
+* 在 LUW 上從 DB2 進行遷移時，探索外鍵的修正。
+* 已改善語句`SELECT ... FOR UPDATE`的轉換。
+* 已改善 MQ `COUNT`資料表中的函數轉換。
 * 語句的`SAVEPOINT`轉換。
-* 轉換以類比 DB2`NULL`對`ORDER BY`子句中 的值的行為。
-* 分析對關聯結果設置語句的支援。
+* 轉換以模擬子句中`NULL` `ORDER BY`值的 DB2's 行為。
+* 剖析關聯結果集語句的支援。
 
 > [!IMPORTANT]
-> 使用 SSMA v8.5 及更高版本,.NET 4.7.2 是安裝的先決條件。 如果需要安裝此版本,可以[在此處](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載運行時檔。
+> 在 SSMA 的8.5 和更新版本中，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
 
-## <a name="ssma-v86"></a>SSMA v8.6
+## <a name="ssma-v86"></a>SSMA v 8。6
 
-除了一組旨在提高可用性和性能的有針對性的修補程式外,DB2 的 V8.6 版本透過添加允許使用者在轉換後的代碼中省略 SSMA 擴充屬性的設置進行了增強。
+除了為了改善可用性和效能而設計的一組目標修正程式之外，新增可讓使用者在已轉換的程式碼中省略 SSMA 擴充屬性的設定，以增強 SSMA for DB2 的 v 8.6 版本。
 
-要利用此設定,在 DB2 的 SSMA 中,導航到 **「工具** > **專案設定** > **常規** > **轉換**」,然後在**Misc**下,將 **「省略擴展屬性**」設置的值更新為 **"是**"。
+若要利用這項設定，請在 SSMA for DB2 中流覽至 [**工具** > ] [**專案設定** > ]**[一般** > **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**
 
-![省略延伸屬性設定](../db2/media/ssma-omit-extended-properties.png)
+![省略擴充屬性設定](../db2/media/ssma-omit-extended-properties.png)
 
-此外,DB2 的 SSMA 現在提供:
+此外，SSMA for DB2 現在提供：
 
-* 用於轉換使用預設參數值的函數的修復程式。
-* 改進了函數子`PARAMETER`句的解析。
+* 針對使用預設引數值的函式進行轉換的修正。
+* 已改善函式`PARAMETER`的子句剖析。
 * 轉換`LEAVE`語句的能力。
 
 > [!IMPORTANT]
-> 使用 SSMA v8.5 及更高版本,.NET 4.7.2 是安裝的先決條件。 如果需要安裝此版本,可以[在此處](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載運行時檔。
+> 在 SSMA 的8.5 和更新版本中，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
 
-## <a name="ssma-v85"></a>SSMA v8.5
+## <a name="ssma-v85"></a>SSMA v 8。5
 
-支援 Azure Active Directory 身份驗證和對 SQL 伺服器中的 JSON 功能的基本支援,以及一組旨在提高可用性和性能的有針對性的修補程式,增強了 DB2 的 SSMA v8.5 版本。
+SSMA for DB2 的第8.5 版已增強，並支援 SQL server 中的 Azure Active Directory 驗證和 JSON 功能的基本支援，以及一組專為改善可用性和效能而設計的目標修正程式。
 
-此外,DB2 的 SSMA 還通過:
+此外，SSMA for DB2 已透過下列功能增強：
 
-* 支援將轉換添加到`GET DIAGNOSTICS`語句。 `ROW_NUMBER`
-* 與物件名稱開頭未受尊重的空間相關的 Bug 的修復。
-
-> [!IMPORTANT]
-> 使用 SSMA v8.5 時,.NET 4.7.2 是安裝的先決條件。 如果需要安裝此版本,可以[在此處](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載運行時檔。
-
-## <a name="ssma-v84"></a>SSMA v8.4
-
-DB2 的 SSMA v8.4 版本通過有針對性的修補程式進行增強,這些修補程式旨在解決輔助功能問題並修復 SQL Server 2016 和更高版本的最大索引列(允許 32 而不是 16)相關的 Bug。
+* 支援使用`GET DIAGNOSTICS` `ROW_NUMBER`來加入語句的轉換。
+* 修正與物件名稱開頭的空格相關的錯誤。
 
 > [!IMPORTANT]
-> 對於 SSMA 版本 7.4 但 8.4,.NET 4.5.2 是安裝的先決條件。
+> 使用 SSMA v 8.5 時，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
 
-## <a name="ssma-v83"></a>SSMA v8.3
+## <a name="ssma-v84"></a>SSMA v 8。4
 
-DB2 的 SSMA v8.3 版本透過旨在提高品質和轉換指標的有針對性的修補程式進行增強。 此外,此版本的 DB2 的 SSMA 提供了以下修補程式:
+SSMA for DB2 的 v2.0 版本已使用目標修正來增強，其設計目的是為了解決協助工具問題，並修正與最大索引資料行（允許32，而不是16）有關 SQL Server 2016 和更新版本的錯誤。
 
-* 解決輔助功能問題。
-* 添加對`hierarchyid`SQL Server 類型的基本支援。
-* 將 z/OS 查詢中的`RTRIM`/`LTRIM`TRIM 函數用法取代為 。
-* 允許使用者在"標準模式"連接時指定包集合(預設為`NULLID`)。
-* 新增轉換`CREATE TABLE AS SELECT`。
-* 改進全域臨時表的轉換。
-* 解決物件唯一性檢查順序的問題,以便在名稱衝突時將表優先於約束的優先順序。
-* 解決為 z/OS`DATE`載`TIMESTAMP`入 預設 列值的問題。
-* 支援 Unicode 行饋送字`NEL`元( 也稱為 )。
-* 解決缺少`RETURN TO`子句的游標轉換問題。
-* 添加對標籤和`GOTO`的支援。
+> [!IMPORTANT]
+> 透過8.4 的 SSMA 版本7.4，.NET 4.5.2 是必要的安裝。
 
-## <a name="ssma-v82"></a>SSMA v8.2
+## <a name="ssma-v83"></a>SSMA v 8。3
 
-DB2 的 SSMA v8.2 版本得到了增強,用於解決從 SSMA 控制台工具連接到 Azure SQL 資料庫的問題,並在轉換期間在視圖聲明中缺少COUNT_BIG列。 此外,此版本還包括一組旨在提高品質和轉化指標的有針對性的修補程式,以及用於以下的修補程式:
+SSMA for DB2 的 v 8.3 版本已透過專為改善品質和轉換計量而設計的目標修正來增強。 此外，這一版的 SSMA for DB2 提供了下列修正：
 
-* 數據遷移后禁用的非群集索引的問題。
-* 在靜默安裝期間檢測 .NET 框架。
-* 下載新版本時發生的間歇性崩潰。
+* 解決協助工具問題。
+* 在 SQL Server 中新增`hierarchyid`類型的基本支援。
+* 將 z/OS 探索查詢中的 TRIM 函式`RTRIM` / `LTRIM`使用方式取代為。
+* 允許使用者在以「標準模式」（預設為`NULLID`）連接時指定套件集合。
+* 新增的`CREATE TABLE AS SELECT`轉換。
+* 改善全域臨時表的轉換。
+* 解決物件唯一性檢查順序的問題，以根據條件約束來設定資料表的優先順序（如果名稱衝突的話）。
+* 解決在 z/OS 中載入`DATE`和`TIMESTAMP`的預設資料行值時所發生的問題。
+* 支援 Unicode 換行字元（也稱為`NEL`）。
+* 解決具有遺漏`RETURN TO`子句之資料指標轉換的問題。
+* 新增標籤和`GOTO`的支援。
+
+## <a name="ssma-v82"></a>SSMA 8。2
+
+SSMA for DB2 的8.2 版已增強，可解決從 SSMA 主控台工具 Azure SQL Database 連線的問題，並在轉換期間遺漏 views 宣告中的 COUNT_BIG 資料行。 此外，此版本還包含一組目標的修正程式，其設計目的是要改善品質和轉換計量，以及的修正：
+
+* 在資料移轉後停用非叢集索引的問題。
+* 在無訊息安裝期間偵測 .NET Framework。
+* 下載新版本時，會發生間歇性損毀。
 
 > [!NOTE]
-> 自動更新的已知問題可能會導致從 SSMA v8.1 到 v8.2 的更新失敗。 如果您遇到此錯誤,請下載新版本並手動安裝。
+> 自動更新的已知問題可能會導致從 SSMA 8.1 到 v4.0 的更新失敗。 如果您遇到此錯誤，請下載新版本並手動安裝。
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>SSMA 8。1
 
-DB2 的 SSMA v8.1 版本得到增強,可提供旨在提高品質和轉換指標的有針對性的修補程式。
+SSMA for DB2 的8.1 版已增強，可提供專為改善品質和轉換計量而設計的目標修正程式。
 
 > [!NOTE]
-> 自動更新的已知問題可能會導致從 SSMA v8.0 到 v8.1 的更新失敗。 如果您遇到此錯誤,請下載新版本並手動安裝。
+> 自動更新的已知問題可能會導致從 SSMA v4.0 到8.1 版的更新失敗。 如果您遇到此錯誤，請下載新版本並手動安裝。
 
-## <a name="ssma-v80"></a>SSMA v8.0
+## <a name="ssma-v80"></a>SSMA v 8。0
 
-DB2 的 SSMA v8.0 版本得到了增強,可提供旨在提高品質和轉換指標的有針對性的修補程式。 此版本還提供以下新功能:
+SSMA for DB2 的8.0 版已增強，可提供設計來改善品質和轉換計量的目標修正程式。 此版本也提供下列新功能：
 
-* 支援**Azure SQL 資料庫託管實例**作為目標。 現在,您可以建立針對 Azure SQL 資料庫託管實例的新專案:
+* 支援做為目標**Azure SQL Database 受控執行個體**。 您現在可以建立以 Azure SQL Database 受控執行個體為目標的新專案：
 
   ![SQL DB MI 專案](../media/ssma-newproject-sqldbmi.png)
 
-* 轉換後**修復顧問**。 此處瞭解有關它的更多[。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
+* 轉換後的**修正建議程式**。 [在這裡](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)深入瞭解。
 
-* 初步資料庫/架構選擇。
+* 初步的資料庫/架構選擇。
 
-  連接到源時,用戶現在可以選擇感興趣的資料庫/架構。 僅選擇計畫遷移的架構將節省時間連接期間的時間,並提高 SSMA 的整體性能。
+  當連接到來源時，使用者現在可以選取想要的資料庫/架構。 只選取您打算遷移的架構，會在初始連接期間節省時間，並改善整體 SSMA 效能。
 
   ![SSMA 篩選物件](../media/ssma-filter-objects.png)
 
-## <a name="ssma-v710"></a>SSMA v7.10
+## <a name="ssma-v710"></a>SSMA v 7.10
 
-DB2 的 SSMA v7.10 版本包含以下變更:
+SSMA for DB2 的 v 7.10 版本包含下列變更：
 
-* 旨在提供額外安全和隱私保護以滿足全球需求變化的有針對性的修補程式。
-* 用於轉換塊的`BEGIN-END`修復程式。
+* 專為提供額外的安全性和隱私權保護而設計的目標修正，以符合全球需求的變更。
+* `BEGIN-END`區塊轉換的修正。
 
-## <a name="ssma-v79"></a>SSMA v7.9
+## <a name="ssma-v79"></a>SSMA v 7。9
 
-DB2 的 SSMA v7.9 版本包含以下變更:
+SSMA for DB2 的 v 7.9 版本包含下列變更：
 
-* 提高品質和轉化指標的針對性修復。
-* 支援 SSMA 命令列以更改資料類型映射和專案首選項。
-* 支援使用 SQL 伺服器整合服務 (SSIS) 遷移資料。 轉換架構後,可以使用右鍵單擊上下文菜單選項創建 SSIS 包。
-* SSMA 中的 Azure SQL 資料庫連接對話方塊也已更改,以指定完全限定的伺服器名稱。 在 SSMA 的早期版本中,必須在專案設置中顯式提及 Azure SQL 資料庫前綴。
+* 改善品質和轉換計量的目標修正程式。
+* 支援 SSMA 命令列來改變資料類型對應和專案喜好設定。
+* 支援使用 SQL Server Integration Services （SSIS）來遷移資料。 轉換架構之後，您可以使用滑鼠右鍵內容功能表選項來建立 SSIS 封裝。
+* SSMA 中的 [Azure SQL Database 連接] 對話方塊也已更改為指定完整的伺服器名稱。 在舊版的 SSMA 中，必須在專案設定中明確提及 Azure SQL Database 前置詞。
 
-## <a name="ssma-v78"></a>SSMA v7.8
+## <a name="ssma-v78"></a>SSMA 7.8 版
 
-DB2 的 SSMA v7.8 版本包含以下變更:
+SSMA for DB2 的7.8 版本包含下列變更：
 
-* 更改類型對應在*項目設定*中突出顯示。
-* 使用者禁用遙測功能。
+* 變更 [*專案設定*] 中反白顯示的類型對應。
+* 使用者停用遙測的能力。
 
-## <a name="ssma-v77"></a>SSMA v7.7
+## <a name="ssma-v77"></a>SSMA 7。7
 
-DB2 的 SSMA v7.7 版本包含以下變更:
+SSMA for DB2 的7.7 版包含下列變更：
 
-* 提高品質和轉化指標的針對性修復。
-* 根據大眾需求,DB2 的 32 位版本的 SSMA 又回來了。 與以前的實現(在 v7.4 之前)相比,有兩個安裝程式包,但不能並排安裝。 因此,您必須根據擁有的連接元件選擇最合適的版本。 如果可能,最好使用 64 位元版本。
+* 改善品質和轉換計量的目標修正程式。
+* 根據受歡迎的需求，32位版本的 SSMA for DB2 已恢復。 相較于先前的執行（在 v4.0 之前），有兩個安裝程式套件，但無法並存安裝。 因此，您必須根據您擁有的連線元件來選擇最適當的版本。 最好是盡可能使用64位版本。
 
-## <a name="ssma-v76"></a>SSMA v7.6
+## <a name="ssma-v76"></a>SSMA v 7。6
 
-DB2 的 SSMA v7.6 版本透過提高品質和轉換指標的針對性修補程式以及支援 SQL Server 2017(公共預覽)來增強。 Windows 和 Linux 上對 SQL Server 2017 的支援處於公共預覽版,不應用於生產遷移。
+SSMA for DB2 的7.6 版已藉由改善品質和轉換計量，以及支援 SQL Server 2017 （公開預覽）的目標修正來增強。 Windows 和 Linux 上的 SQL Server 2017 支援處於公開預覽狀態，不應用於生產環境遷移。
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA v 7。5
 
-DB2 的 SSMA v7.5 版本通過多項改進進行了增強,以確保殘障人士獲得更大的可訪問性。
+SSMA for DB2 的7.5 版已增強了數項改良功能，可確保殘障人士更能使用。
 
-## <a name="ssma-v74"></a>SSMA v7.4
+## <a name="ssma-v74"></a>SSMA 7。4
 
-DB2 的 SSMA v7.4 版本包含以下變更:
+SSMA for DB2 的7.4 版包含下列變更：
 
-* **查詢超時**選項現在在源和目標架構對象發現期間可用。
+* 在來源和目標的架構物件探索期間，現在可以使用 [**查詢超時**] 選項。
 
-  ![查詢逾時選項](../media/query-timeout_red.png)
+  ![查詢超時選項](../media/query-timeout_red.png)
 
-* 品質和轉化指標已根據客戶反饋通過有針對性的修復得到了改進。
+* 品質和轉換度量已根據客戶的意見反應，以目標修正進行改善。
 
   > [!IMPORTANT]
-  > .NET 4.5.2 是安裝 SSMA v7.4 的先決條件。 此外,從 v7.4 開始,SSMA 的 32 位版本已停產。
+  > .NET 4.5.2 是安裝 SSMA 7.4 的必要條件。 此外，從7.4 版開始，已停止32位版本的 SSMA。
 
-## <a name="ssma-v73"></a>SSMA v7.3
+## <a name="ssma-v73"></a>SSMA 7.3 版
 
-DB2 的 SSMA v7.3 版本包含以下變更:
+SSMA for DB2 的7.3 版包含下列變更：
 
-* 根據客戶反饋有針對性地修復,提高品質和轉化指標。
-* 透過以下項目公開的 SSMA 可擴充性框架:
-  * 將功能匯出到 SQL 伺服器資料工具 (SSDT) 專案。
-    * 現在,您可以將架構腳本從 SSMA 匯出到 SSDT 專案。 您可以使用架構腳本進行其他架構更改並部署資料庫。
+* 改善品質和轉換計量，並根據客戶的意見反應進行目標修正。
+* 透過下列專案公開的 SSMA 擴充性架構：
+  * 將功能匯出至 SQL Server Data Tools （SSDT）專案。
+    * 您現在可以將架構腳本從 SSMA 匯出至 SSDT 專案。 您可以使用架構腳本來進行其他架構變更，並部署您的資料庫。
 
-      ![另存為 SSDT 專案指令](../media/export-schema-scripts_red.png)
-  * SSMA 可使用用於執行自定義轉換的庫。
-    * 現在,您可以建構可以處理 SSMA 以前未處理的自訂語法轉換和轉換的代碼。
-      * 有關如何建構自訂轉換器的說明,可在此部落格文章,[擴充 SQL 伺服器移轉助手的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      * 從這個[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)下載一個轉換的範例專案。
+      ![另存為 SSDT 專案命令](../media/export-schema-scripts_red.png)
+  * 可供 SSMA 用來執行自訂轉換的程式庫。
+    * 您現在可以建立可處理自訂語法轉換的程式碼，以及 SSMA 先前未處理的轉換。
+      * 如需如何建立自訂轉換器的指示，請前往此 blog 文章，[延伸 SQL Server 移轉小幫手的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
+      * 下載範例專案，以便從這[篇 blog 文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)進行轉換。
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>SSMA 7.2 版
 
-DB2 的 SSMA v7.2 版本包含以下變更:
+SSMA for DB2 的7.2 版包含下列變更：
 
-* 根據客戶反饋有針對性地修復,提高品質和轉化指標。
-* 遙測增強功能,以提供更好的數據點,以解決客戶問題並提高 SSMA 的轉化率。
+* 改善品質和轉換計量，並根據客戶的意見反應進行目標修正。
+* 遙測增強功能，可提供更好的資料點來疑難排解客戶問題，並改善 SSMA 的轉換率。
 
-## <a name="ssma-v71"></a>SSMA v7.1
+## <a name="ssma-v71"></a>SSMA 7。1
 
-DB2 的 SSMA v7.1 版本包含以下變更:
+SSMA for DB2 的7.1 版包含下列變更：
 
-* Windows 和 Linux CTP1 上的 SQL Server 2017 現在是支援遷移的目標平臺。 此功能處於技術預覽中,允許架構和數據移動以目標 SQL 伺服器為目標。
-* 支援自動更新,以便一旦 SSMA 可用,立即下載。
-* SSMA 可安裝二進位檔案現在透過 Windows 安裝套件檔 (.msi) 傳遞。
+* Windows 和 Linux CTP1 上的 SQL Server 2017 現在是支援的目標平臺，可進行遷移。 這項功能在 technical preview 中，可讓您以 SQL server 為目標來進行架構和資料移動。
+* 支援自動更新，以在最新版本的 SSMA 可用時立即下載。
+* SSMA 可安裝的二進位檔現在會透過 Windows Installer 套件檔案（.msi）傳遞。
 
 ## <a name="may-2016"></a>2016 年 5 月
 
-2016 年 5 月版本的 DB2 的 SSMA 包含以下變更:
+SSMA for DB2 的2016年5月版本包含下列變更：
 
-* 添加了對 SQL Server 2016 的支援。
-* 將 DB2 記憶體中表和常規表轉換為 SQL Server 記憶體中和 hekaton 功能。
-* 將 DB2 存取控制項轉換為 SQL Server 策略物件(DB2 的行級安全性)。
-* 將 DB2 系統版本化表轉換為 SQL Server 臨時性表。
-* 改進了 DB2 解析器和解析器。
-* 已刪除的安裝程式檢查 .NET 2.0。
-* 從\*Db2 安裝程式中移除了不必要的 .dll。
-* SSMA 主控台`save-project`的`open-project`固定和命令。
-* SSMA 主控台`securepassword`的固定 命令。
-* 修復了初始載入的物件計數。
-* 修復了全域設置中的 Bug。
+* 已新增 SQL Server 2016 的支援。
+* 新增 DB2 記憶體內部和一般資料表的轉換，以 SQL Server 記憶體內部和 hekaton 功能。
+* 已將 DB2 存取控制的轉換新增至 SQL Server 原則物件（適用于 DB2 的資料列層級安全性）。
+* 已將 DB2 系統設定版本的資料表轉換成 SQL Server 時態表。
+* 改良的 DB2 剖析器和解析程式。
+* 已移除 .NET 2.0 的安裝程式檢查。
+* 已從\*Db2 安裝程式移除不必要的 .dll。
+* 已`save-project`修正`open-project` SSMA 主控台的命令。
+* 已`securepassword`修正 SSMA 主控台的命令。
+* 已修正初始載入物件的計數。
+* 已修正全域設定中的 bug。
   
 ## <a name="march-2016"></a>2016 年 3 月
 
-DB2 的 SSMA 預覽版 2016 年 3 月增加了對遷移到 SQL Server 2016 的支援。
+SSMA for DB2 的2016年3月預覽版本將支援遷移至 SQL Server 2016。
 
 ## <a name="january-2016"></a>2016 年 1 月
 
-DB2 的 SSMA 2016 年 1 月維護版本包含以下變更:
+SSMA for DB2 的2016年1月維護版本包含下列變更：
   
-* 增加了對許多標準功能的支援。
-* 修復了 DB2 分析器錯誤。
-* 固定 DB2 v9 zOS 支援 (RFC 5690920)。
-* 修復了轉換過程中未解決的 DB2 標識符錯誤。
-* 將檢視日誌功能表項添加到 SSMA (RFC 5706203)。
-* 添加了遙測。
+* 已新增許多標準函式的支援。
+* 已修正 DB2 剖析器錯誤。
+* 已修正 DB2 v9 zOS 支援（RFC 5690920）。
+* 已修正在轉換期間無法解析的 DB2 未解決識別碼錯誤。
+* 已將 [查看記錄] 功能表項目新增至 SSMA （RFC 5706203）。
+* 已新增遙測。
   
 ## <a name="november-2014"></a>November 2014
 
-2014 年 11 月版本的 DB2 的 SSMA 是初始版本。
+2014年11月版本的 SSMA for DB2 是初始版本。

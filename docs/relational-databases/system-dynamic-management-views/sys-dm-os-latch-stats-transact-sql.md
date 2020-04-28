@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289906"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "79289906"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|latch_class|**Nvarchar （120）**|閂鎖類別的名稱。|  
+|latch_class|**nvarchar(120)**|閂鎖類別的名稱。|  
 |waiting_requests_count|**bigint**|這個類別中的閂鎖等候數。 這個計數器是從開始閂鎖等候時逐量遞增計算。|  
 |wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 此資料行會在閂鎖等候期間每五分鐘更新一次，並在閂鎖等候結束時更新。|  
 |max_wait_time_ms|**bigint**|這是記憶體物件可以等候這個閂鎖的最長時間。 如果這個值超乎尋常地高，可能是發生內部死結。|  
@@ -60,7 +60,7 @@ GO
 > [!NOTE]  
 >  如果重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將無法保存這些統計資料。 所有的資料都是從上次重設統計資料之後，或是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之後開始累加計算。  
   
-## <a name="latches"></a>銷  
+## <a name="latches"></a><a name="latches"></a>銷  
  閂鎖是一種內部輕量的同步處理物件，類似于各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件所使用的鎖定。 閂鎖主要用來同步處理作業（例如緩衝區或檔案存取）中的資料庫頁面。 每一個閂鎖都與一個配置單位有關。 
   
  如果無法立即授與閂鎖要求，就會發生閂鎖等候，因為閂鎖是由另一個處於衝突模式的執行緒所持有。 與鎖定不同的是，閂鎖會在作業之後立即釋出，即使是進行寫入作業也一樣。  

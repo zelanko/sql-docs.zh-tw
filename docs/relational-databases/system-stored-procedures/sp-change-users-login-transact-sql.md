@@ -18,10 +18,10 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448337"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
@@ -50,7 +50,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action= ][*動作*]  
  描述此程序所要執行的動作。 *動作*為**Varchar （10）**。 *動作*可以有下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**Auto_Fix**|將目前資料庫中 sys.database_principals 系統目錄檢視的使用者項目連結到相同名稱的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果沒有相同名稱的登入，則會建立一個。 檢查**Auto_Fix**語句的結果，以確認確實已進行正確的連結。 避免在安全性敏感的情況下使用**Auto_Fix** 。<br /><br /> 當您使用**Auto_Fix**時，如果登入不存在，您必須指定*使用者*和*密碼*; 否則，您必須指定*使用者*，但將忽略*密碼*。 *登*入必須是 Null。 *使用者*必須是目前資料庫中的有效使用者。 不能有其他使用者對應至登入。|  
 |**Report**|列出目前資料庫中未連結至任何登入的使用者和對應的安全性識別碼 (SID)。 *使用者*、*登*入和*密碼*必須是 Null 或未指定。<br /><br /> 若要將報表選項取代為使用系統資料表的查詢，請將**server_prinicpals sys.databases**中的專案與 sys.databases 中的專案進行比較。 **database_principals**。|  
@@ -60,7 +60,7 @@ sp_change_users_login [ @Action = ] 'action'
  這是目前資料庫中的使用者名稱。 *user*是**sysname**，預設值是 Null。  
   
  [ @LoginName= ]「*登*入」  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。 *login*是**sysname**，預設值是 Null。  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。 *login* 是預設值為 NULL 的 **sysname**。  
   
  [ @Password= ]'*password*'  
  這是指派給新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入的密碼，由指定**Auto_Fix**來建立。 如果相符的登入已經存在，則會對應使用者和登入，並忽略*密碼*。 如果符合的登入不存在，sp_change_users_login 會建立新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入，並指派*密碼*做為新登入的密碼。 *password*為**sysname**，而且不得為 Null。  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>C. 自動將使用者對應至登入，視需要建立新的登入  
- 下列範例會顯示如何使用 `Auto_Fix` 將現有使用者對應至相同名稱的登入，或者如果登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不存在的話，就會建立密碼為 `Mary` 的 `B3r12-3x$098f6` 登入 `Mary`。  
+ 下列範例會顯示如何使用 `Auto_Fix` 將現有使用者對應至相同名稱的登入，或者如果登入 `Mary` 不存在的話，就會建立密碼為 `B3r12-3x$098f6` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Mary`。  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,7 +127,7 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

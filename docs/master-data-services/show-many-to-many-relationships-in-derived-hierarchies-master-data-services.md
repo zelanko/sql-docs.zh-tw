@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289886"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>在衍生階層 (Master Data Services) 中顯示多對多關聯性
@@ -72,11 +72,10 @@ ms.locfileid: "79289886"
   
  M2M 層級可能會隱藏起來，就像其他衍生階層層級一樣。  
    
-### <a name="M2MSample"></a>範例模型中的 M2M 關聯性  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> 範例模型中的 M2M 關聯性  
 如需 M2M 關聯性的示範，請檢視 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]隨附之 Customer 範例模型中的 Region Climate 衍生階層。   
   
-如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)**。 
-  ![mds_Number2](../master-data-services/media/mds-number2.png)**預覽** 會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 相關聯。  
+如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**預覽** 會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 相關聯。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -91,7 +90,7 @@ ms.locfileid: "79289886"
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>成員安全性  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> 成員安全性  
  可讓成員重複的階層 (允許成員有一個以上的父系) 不能用來指派成員安全性權限。 例如：  
   
 -   遞迴衍生階層 (RDH)，其未錨點 null 遞迴 (遞迴層級的每個成員皆會出現在 ROOT 與其遞迴父系之下)。  

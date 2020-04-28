@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289516"
 ---
 # <a name="identity-and-access-control-replication"></a>識別和存取控制 (複寫)
@@ -45,7 +45,7 @@ ms.locfileid: "79289516"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式安全性模型](replication-agent-security-model.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [複寫安全性最佳作法](replication-security-best-practices.md)   
  [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)   
  [複寫威脅和弱點緩和措施](threat-and-vulnerability-mitigation-replication.md)   
 

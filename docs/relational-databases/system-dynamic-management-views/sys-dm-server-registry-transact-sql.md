@@ -1,5 +1,5 @@
 ---
-title: 系統dm_server_registry(轉算-SQL) |微軟文件
+title: sys.databases dm_server_registry （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80530820"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "80530820"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|登錄機碼名稱。 可為 Null。|  
-|value_name|**nvarchar(256)**|機碼值名稱。 這是註冊表編輯器**的名稱**列中顯示的專案。 可為 Null。|  
-|value_data|**sql_variant**|索引鍵資料的值。 這是給定條目的註冊錶編輯器的數據**列中顯示的**值。 可為 Null。|  
+|value_name|**nvarchar(256)**|機碼值名稱。 這是 [登錄編輯程式] 的 [**名稱**] 資料行中所顯示的專案。 可為 Null。|  
+|value_data|**sql_variant**|索引鍵資料的值。 這是指定專案之登錄編輯程式的**資料**行中所顯示的值。 可為 Null。|  
   
 ## <a name="security"></a>安全性  
   
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [系統dm_server_services&#40;轉算-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [dm_server_services &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

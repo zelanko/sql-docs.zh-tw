@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289406"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "79289406"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a>優點：交易記錄所支援的作業  
+##  <a name="benefits-operations-supported-by-the-transaction-log"></a><a name="Benefits"></a>優點：交易記錄所支援的作業  
  交易記錄檔支援下列作業：  
   
 -   復原個別的交易。  
@@ -54,7 +54,7 @@ ms.locfileid: "79289406"
   
 -   支援高可用性和災害復原解決方案： [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、資料庫鏡像和記錄傳送。  
   
-##  <a name="Truncation"></a>交易記錄截斷  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a>交易記錄截斷  
  記錄截斷會釋出記錄檔中的空間，以供交易記錄重複使用。 為了避免記錄被填滿，必須截斷記錄。 記錄截斷會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的邏輯交易記錄中，刪除非使用中的虛擬記錄檔，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿配置給其實體記錄檔的所有磁碟空間。  
   
  為了避免這個問題，除非記錄截斷因為某個原因而延遲，否則將在以下事件後自動進行截斷：  
@@ -68,7 +68,7 @@ ms.locfileid: "79289406"
 > [!NOTE]  
 >  記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，您必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [管理交易記錄檔的大小](manage-the-size-of-the-transaction-log-file.md)＞。  
   
-##  <a name="FactorsThatDelayTruncation"></a>可能會延遲記錄截斷的因素  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a>可能會延遲記錄截斷的因素  
  當記錄檔記錄有一段很長的時間維持在使用中狀態時，交易記錄截斷會延遲，而且可能會讓交易記錄填滿。  
   
 > [!IMPORTANT]  
@@ -95,8 +95,8 @@ ms.locfileid: "79289406"
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
 |16|XTP_CHECKPOINT|當資料庫具有記憶體最佳化的檔案群組時，交易記錄檔可能會等到自動 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 檢查點觸發 (當記錄大小每成長 512 MB 時執行) 時，才會截斷記錄。<br /><br /> 注意：若要在 512 MB 大小之前截斷交易記錄，請針對有問題的資料庫手動引發檢查點命令。|  
   
-##  <a name="MinimallyLogged"></a>可以進行最低限度記錄的作業  
- 「最低限度記錄」  包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄復原模式下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a>可以進行最低限度記錄的作業  
+ 「最低限度記錄」** 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄復原模式下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > [!NOTE]  
 >  記憶體最佳化資料表不支援最低限度記錄。  
@@ -106,7 +106,7 @@ ms.locfileid: "79289406"
   
  下列作業 (在完整復原模式下會完整記錄) 在簡單和大量記錄復原模式下會進行最低限度記錄：  
   
--   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 及 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
+-   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)及 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
   
     > [!NOTE]  
     >  啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 BULK INSERT 作業。  
@@ -135,14 +135,14 @@ ms.locfileid: "79289406"
     -   DROP INDEX 新堆積重建 (如果適用)。  
   
         > [!NOTE]  
-        >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql)作業期間的索引頁解除配置一律會完整記錄。  
+        >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 作業期間的索引頁取消配置永遠都是完整記錄。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  `Managing the transaction log`  
   
 -   [管理交易記錄檔的大小](manage-the-size-of-the-transaction-log-file.md)  
   
--   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
  **備份交易記錄 (完整復原模式)**  
   
@@ -154,10 +154,10 @@ ms.locfileid: "79289406"
   
 ## <a name="see-also"></a>另請參閱  
  [控制交易持久性](control-transaction-durability.md)   
- [大量匯入採用最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [大量匯入的最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [SQL Server 資料庫的備份與還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [資料庫檢查點 &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
- [檢視或變更資料庫的屬性](../databases/view-or-change-the-properties-of-a-database.md)   
+ [查看或變更資料庫的屬性](../databases/view-or-change-the-properties-of-a-database.md)   
  [復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  
   
   

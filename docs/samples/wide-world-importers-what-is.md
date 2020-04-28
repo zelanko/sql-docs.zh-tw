@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112388"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>適用于 Microsoft SQL 的 Wide World 匯入範例資料庫

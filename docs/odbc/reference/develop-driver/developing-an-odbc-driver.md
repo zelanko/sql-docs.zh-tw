@@ -1,5 +1,5 @@
 ---
-title: 開發 ODBC 驅動程式 |微軟文件
+title: 開發 ODBC 驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 57b5dc31cc78d105b2d044043c3e2a5e50982ddf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287893"
 ---
 # <a name="developing-an-odbc-driver"></a>開發 ODBC 驅動程式

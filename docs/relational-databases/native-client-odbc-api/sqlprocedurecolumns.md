@@ -1,5 +1,5 @@
 ---
-title: SQL程式列 |微軟文件
+title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b942126a5ad73d5c41f28f60a63d22ef8584f24
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81279991"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLProcessColumns**傳回一行,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]報告所有儲存過程的返回值屬性。  
+  **SQLProcedureColumns**會傳回一個資料列，報告所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程式的傳回值屬性。  
   
- **SQL程式列**傳回SQL_SUCCESS*目錄名稱*、*架構名稱**、ProcName*參數或*列名*參數是否存在值。 當在這些參數中使用無效值時 **,SQLFetch**將返回SQL_NO_DATA。  
+ **SQLProcedureColumns**會傳回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或*ColumnName*參數值是否存在。 當這些參數中使用了不正確值時， **SQLFetch**會傳回 SQL_NO_DATA。  
   
- **SQL程式列**可以在靜態伺服器游標上執行。 嘗試在可上升(動態或鍵集)游標上執行**SQLARK**鍵將返回SQL_SUCCESS_WITH_INFO指示游標類型已更改。  
+ **SQLProcedureColumns**可以在靜態伺服器資料指標上執行。 嘗試在可更新的（動態或索引鍵集）資料指標上執行**SQLProcedureColumns**時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
- 下表列出了結果集傳回的欄,以及如何擴充它們,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以便透過 本機客戶端 ODBC 驅動程式處理**udt**和**xml**資料類型:  
+ 下表列出結果集所傳回的資料行，以及如何透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式擴充以處理**udt**和**xml**資料類型：  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "81279991"
 |SS_XML_SCHEMACOLLECTION_NAME|傳回 XML 結構描述集合的名稱。 如果找不到名稱，則此變數包含空字串。|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns 和資料表值參數  
- SQL程式列以類似於 CLR 使用者定義的類型的方式處理表值參數。 在針對資料表值參數傳回的資料列中，資料行包含下列值：  
+ SQLProcedureColumns 會以類似 CLR 使用者自訂類型的方式來處理資料表值參數。 在針對資料表值參數傳回的資料列中，資料行包含下列值：  
   
 |資料行名稱|描述/值|  
 |-----------------|------------------------|  
@@ -66,18 +66,18 @@ ms.locfileid: "81279991"
   
  依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
- 有關表值參數的詳細資訊,請參閱[&#40;ODBC&#41;的表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需資料表值參數的詳細資訊，請參閱[ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 對增強日期和時間功能的支援  
- 關於日期/時間類型傳回的值,請參考[目錄中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
+ 如需日期/時間類型傳回的值，請參閱[目錄中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 有關更一般的資訊,請參閱[ODBC&#41;&#40;日期和時間改進](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需更多一般資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 對大型 CLR UDT 的支援  
- **SQL程式列**支援大型 CLR 使用者定義類型 (UDT)。 有關詳細資訊,請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLProcedureColumns**支援大型 CLR 使用者定義型別（udt）。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 程式列函數](https://go.microsoft.com/fwlink/?LinkId=59363)   
+ [SQLProcedureColumns 函式](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

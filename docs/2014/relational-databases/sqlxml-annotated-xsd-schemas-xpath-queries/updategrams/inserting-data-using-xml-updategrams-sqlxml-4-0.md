@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112199"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
@@ -79,8 +79,7 @@ ms.locfileid: "79112199"
  當 Updategram 在具有 IDENTITY 類型之資料行的資料表中插入記錄時，就可以使用選擇性的 `updg:at-identity` 屬性來擷取系統指派值。 Updategram 接著可以在後續作業中使用此值。 在執行 Updategram 時，您可以指定 `updg:returnid` 屬性以傳回產生的識別值。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 屬性  
- 
-  `updg:guid` 屬性是選擇性的屬性，會產生全域唯一識別碼。 這個值會保留在所指定之整個** \<同步>** 區塊的範圍內。 您可以在** \<同步處理>** 區塊中的任何位置使用此值。 屬性會呼叫`NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函數來產生唯一識別碼。  
+ `updg:guid` 屬性是選擇性的屬性，會產生全域唯一識別碼。 這個值會保留在所指定之整個** \<同步>** 區塊的範圍內。 您可以在** \<同步處理>** 區塊中的任何位置使用此值。 屬性會呼叫`NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函數來產生唯一識別碼。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合[執行 SQLXML 範例的需求](../../sqlxml/requirements-for-running-sqlxml-examples.md)中所指定的需求。  
@@ -611,11 +610,9 @@ CustOrder(OrderID, EmployeeID, OrderType)
      如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. 將資料插入至 XML 資料類型資料行  
- 
-  `xml` 資料類型是在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入。 您可以在下列前提下，使用 Updategram 來插入及更新以 `xml` 資料類型資料行所儲存的資料：  
+ `xml` 資料類型是在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入。 您可以在下列前提下，使用 Updategram 來插入及更新以 `xml` 資料類型資料行所儲存的資料：  
   
--   
-  `xml` 資料行不可以用來識別現有的資料列， 因此不能包含在 Updategram 的 `updg:before` 區段中。  
+-   `xml` 資料行不可以用來識別現有的資料列， 因此不能包含在 Updategram 的 `updg:before` 區段中。  
   
 -   位於插入至 `xml` 資料行的 XML 片段範圍內的命名空間會受到保存，而其命名空間宣告則會加入至所插入片段的最上層元素。  
   

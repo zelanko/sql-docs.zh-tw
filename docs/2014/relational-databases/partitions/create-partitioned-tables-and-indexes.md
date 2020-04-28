@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289376"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
@@ -62,17 +62,17 @@ ms.locfileid: "79289376"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   分割區函數和配置的範圍只限於它們建立所在的資料庫。 在這個資料庫內，分割區函數是在不同於其他函數的個別命名空間中。  
   
 -   如果分割區函數內的任何資料列含有 Null 值的分割資料行，這些資料列都會配置到最左邊的分割區。 不過，如果將 NULL 指定為界限值且指示 RIGHT，最左邊的分割區會保持空白，而且 NULL 值會放在第二個分割區。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  建立分割區資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。 建立分割區索引，需要建立索引的資料表或檢視的 ALTER 權限。 建立分割區資料表或索引，還需要下列任何一個附加權限：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
@@ -81,14 +81,14 @@ ms.locfileid: "79289376"
   
 -   建立分割區函數和分割區配置之資料庫伺服器的 CONTROL SERVER 或 ALTER ANY DATABASE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  請遵循此程序中的步驟，建立一個或多個檔案群組、對應檔案和資料表。 在下一個程序中建立分割區資料表時，您將會參考這些物件。  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>為分割區資料表建立新的檔案群組  
   
 1.  在物件總管中，以滑鼠右鍵按一下要建立分割區資料表的資料庫，然後選取 [屬性]  。  
   
-2.  在 [資料庫屬性 - *database_name*]  對話方塊的 [選取頁面]  底下，選取 [檔案群組]  。  
+2.  在 [資料庫屬性 - **database_name**]  對話方塊的 [選取頁面]  底下，選取 [檔案群組]  。  
   
 3.  按一下 **[資料列]** 底下的 **[加入]** 。 在新資料列中，輸入檔案群組名稱。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "79289376"
   
                 -   如果您選取 **[天]** ，請輸入執行作業排程的當月日期以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的 15 日執行一次作業排程，請選取 [日]  ，然後在第一個方塊中輸入 "15"，並在第二個方塊中輸入 "2"。 請注意，在第二個方塊中允許的最大數目是 "99"。  
   
-                -   如果您選取 **[於]** ，請選取執行作業排程的當月一週中特定的星期幾，以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的最後一個工作日執行一次作業排程，請選取 [日]  ，然後從第一個清單中選取 [最後一個]  ，並從第二個清單中選取 [工作日]  ，然後在最後一個方塊中輸入 "2"。 您也可以在前兩個清單中選取 [第一個]  、[第二個]  、[第三個]  或 [第四個]  ，以及特定工作日 (例如：星期日或星期三)。 請注意，在最後一個方塊中允許的最大數目是 "99"。  
+                -   如果您選取 **[於]** ，請選取執行作業排程的當月一週中特定的星期幾，以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的最後一個工作日執行一次作業排程，請選取 [日]  ，然後從第一個清單中選取 [最後一個]  ，並從第二個清單中選取 [工作日]  ，然後在最後一個方塊中輸入 "2"。 您也可以在前兩個清單中選取 [第一個]  、[第二個]  、[第三個]  或 [第四個]  ，以及特定工作日 (例如星期日或星期三)。 請注意，在最後一個方塊中允許的最大數目是 "99"。  
   
         2.  在 **[每日頻率]** 底下，指定在執行作業排程當天重複作業排程的頻率：  
   
@@ -258,7 +258,7 @@ ms.locfileid: "79289376"
   
  建立分割區精靈會建立分割區函數和配置，然後將此分割區套用至指定資料表。 若要驗證資料表分割區，在物件總管中以滑鼠右鍵按一下資料表，並選取 [屬性]  。 按一下 **[儲存體]** 頁面。 此頁面會顯示諸如分割區函數和配置名稱以及分割區數目等資訊。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>建立分割區資料表  
   
@@ -382,7 +382,7 @@ ms.locfileid: "79289376"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>若要判斷分割資料表的分割區資料行  
   
-1.  下列查詢會傳回資料表之分割區資料行的名稱。 第 1 課：建立 Windows Azure 儲存體物件`PartitionTable`。  
+1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
     ```  
     SELECT   

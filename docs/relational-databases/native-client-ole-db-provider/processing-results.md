@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35153ef2925e71bef72094ae710ef070b82c947e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290462"
 ---
 # <a name="processing-results"></a>處理結果
@@ -45,7 +45,7 @@ ms.locfileid: "81290462"
  當指定了 DBBINDING 結構之後，就會建立存取子 (**IAccessor::CreateAccessor**)。 存取子是繫結的集合，可用來取得或設定取用者緩衝區內的資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 SQL 伺服器本機客戶端 OLE 資料庫提供程式應用程式](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [OLE DB 的使用說明主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [建立 SQL Server Native Client OLE DB 提供者應用程式](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
+ [OLE DB how to 主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

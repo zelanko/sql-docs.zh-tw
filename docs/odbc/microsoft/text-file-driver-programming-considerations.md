@@ -1,5 +1,5 @@
 ---
-title: 文字檔案驅動程式程式設計注意事項 |微軟文件
+title: 文字檔驅動程式設計考慮 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 72f624f65cadd6d7cbd5eb9d9354c84200733de0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81279838"
 ---
 # <a name="text-file-driver-programming-considerations"></a>文字檔驅動程式的程式設計考量

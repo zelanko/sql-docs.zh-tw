@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112438"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 資料庫目錄
@@ -65,7 +65,7 @@ WideWorldImportersDW 具有下列事實資料表。 此描述包含與 WideWorld
 |銷售|`Sales.Invoices` 和 `Sales.InvoiceLines`|銷售的日期、傳遞日期、一段時間的獲利，以及銷售人員的獲利。|
 |購買|`Purchasing.PurchaseOrderLines`|預期的 vs 實際前置時間|
 |交易|`Sales.CustomerTransactions` 和 `Purchasing.SupplierTransactions`|測量問題日期與最終日期和金額。|
-|引起|`Warehouse.StockTransactions`|一段時間的移動。|
+|移動|`Warehouse.StockTransactions`|一段時間的移動。|
 |庫存持有|`Warehouse.StockItemHoldings`|庫存量與價值。|
 
 ## <a name="stored-procedures"></a>預存程序

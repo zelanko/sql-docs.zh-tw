@@ -11,18 +11,17 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289776"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、設定 MDS 資料庫與網站，以及部署範例模型和資料。 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
+  本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、設定 MDS 資料庫與網站，以及部署範例模型和資料。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
   
 > [!NOTE] 
 > 當您使用現在支援 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 的 Developer 版本時，可以在 Windows 10 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 
@@ -35,12 +34,12 @@ ms.locfileid: "79289776"
 如需協助您了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]之影片和其他訓練資源的連結，請參閱 [了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下載**  
-> -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 。  
+> -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**。  
 > -   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
 > 
 > **無法建立 MDS 網站嗎？**
 > >如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。
-> [無法透過 SQL Server 2016 中的低許可權帳戶建立 MDS 網站](https://aka.ms/mdssupport) 
+> [無法透過 SQL Server 2016 中的低權限帳戶建立 MDS 網站](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 和 Silverlight
 - 當您在 Windows Server 2012 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 時，可能需要設定 Internet Explorer 增強式安全性，以允許 Web 應用程式網站的指令碼。 否則，瀏覽至伺服器電腦上的網站將會失敗。
@@ -53,14 +52,14 @@ ms.locfileid: "79289776"
 
 如果您想要變更 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 安裝，請在預設位置 `<drive>`:\SQLServer_13.0_Full 中找到 setup.exe 檔案。
   
-## <a name="InstallMDS"></a>安裝 Master Data Services  
+## <a name="installing-master-data-services"></a><a name="InstallMDS"></a> 安裝 Master Data Services  
  您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式或命令提示字元來安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。  
   
- **在 Windows [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 R2 電腦上使用安裝程式進行安裝**  
+ **在 Windows Server 2012 R2 電腦上使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  按兩下 Setup.exe，並遵循安裝精靈中的步驟。  
   
-2.  在 [功能選擇][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]** 頁面中，選取 [共用功能]**** 底下的 **。  
+2.  在 [功能選擇]**** 頁面中，選取 [共用功能]**** 底下的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。  
   
      隨即安裝 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]、組件、Windows PowerShell 嵌入式管理單元，以及 Web 應用程式與服務的資料夾和檔案。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "79289776"
   
 3.  完成安裝精靈。  
 
-## <a name="InstallIIS"></a>安裝和設定 IIS
+## <a name="installing-and-configuring-iis"></a><a name="InstallIIS"></a> 安裝和設定 IIS
   
 1.  在 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]中，按一下 **桌面** 工作列上的 **伺服器管理員**圖示。  
   
@@ -88,14 +87,14 @@ ms.locfileid: "79289776"
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. 在 [功能]**** 頁面上，確認已選取下列功能，然後按一下 [下一步]****。 在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 上，[!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] 需要這些功能。
+9. 在 [功能]**** 頁面上，確認已選取下列功能，然後按一下 [下一步]****。 在 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] 上，[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 需要這些功能。
   
     |特性|特性|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. 在左窗格中，按一下 [網頁伺服器角色 (IIS)]****，然後按一下 [角色服務]****。
-11. 在 [角色服務]**** 頁面上，確認已選取下列服務，然後按一下 [下一步]****。 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 上，[!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] 需要這些功能。
+11. 在 [角色服務]**** 頁面上，確認已選取下列服務，然後按一下 [下一步]****。 在 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] 上，[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 需要這些功能。
 
     > [!WARNING]  
     >  請不要安裝 WebDAV 發佈角色服務。 因為，WebDAV 發佈與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]不相容。  
@@ -114,7 +113,7 @@ ms.locfileid: "79289776"
   
  如需安裝前工作的簡短描述與詳細資訊連結，請參閱 [安裝 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)。  
   
-##  <a name="SetUpWeb"></a>設定資料庫和網站  
+##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> 設定資料庫和網站  
  **若要使用來設定資料庫和網站[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
@@ -122,8 +121,7 @@ ms.locfileid: "79289776"
 >  您必須先[安裝 IIS](#InstallIIS)，再啟動 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 組態管理員。 否則，Configuration Manager 會顯示 Internet Information Services 錯誤，並且無法建立 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式。  
 > 
 > **瀏覽器需求**
-> >
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式僅適用於 Internet Explorer (IE) 9 或更新版本。 不支援 IE 8 和更早版本、Microsoft Edge 和 Chrome。    
+> >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式僅適用於 Internet Explorer (IE) 9 或更新版本。 不支援 IE 8 和更早版本、Microsoft Edge 和 Chrome。    
   
 1.  啟動 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]，並按一下左窗格的 [資料庫組態]****。  
   
@@ -163,13 +161,13 @@ ms.locfileid: "79289776"
   
      如需 [建立資料庫精靈]**** 中的設定詳細資訊，請參閱[建立資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)。  
   
-7.  在 ** 的 [資料庫組態]**[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 頁面上，按一下 [選取資料庫]****。  
+7.  在的 [**資料庫**設定] 頁面[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]上，按一下 [**選取資料庫**]。  
   
 8.  按一下 **「連接」**，並選取您在步驟 7 中建立的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，然後按一下 **「確定」**。 
 
     ![mds_2016ConfigManager_SelectDatabaseButton_ConnectToDatabaseDialog](../master-data-services/media/mds-2016configmanager-selectdatabasebutton-connecttodatabasedialog.png)  
   
-     您已完成資料庫的設定程序。 現在，[資料庫組態]**** 頁面即會顯示您為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]已建立的資料庫和目前的資料庫版本連接的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體。  
+     您已完成資料庫的設定程序。 現在，[資料庫組態]**** 頁面即會顯示您為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]已建立的資料庫和目前的資料庫版本連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。  
 
     ![mds_2016ConfigManager_DatabaseConfig_Completed](../master-data-services/media/mds-2016configmanager-databaseconfig-completed.png)   
   
@@ -214,9 +212,8 @@ ms.locfileid: "79289776"
   
  您也可以使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 指定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之相關聯 Web 應用程式與服務的其他設定。 例如，您可以指定載入資料的頻率，或傳送驗證電子郵件的頻率。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
-##  <a name="deploySample"></a>部署範例模型和資料  
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]包含下列三個範例模型套件。   這些範例模型都含有資料。 **範例模型套件的預設位置是%programfiles%\Microsoft SQL Server\140\Master Data Services\samples\packages。**
+##  <a name="deploying-sample-models-and-data"></a><a name="deploySample"></a> 部署範例模型和資料  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]包含下列三個範例模型套件。   這些範例模型都含有資料。 **範例模型套件的預設位置是 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages。**
   
 -   chartofaccounts_en.pkg  
   
@@ -230,7 +227,7 @@ ms.locfileid: "79289776"
   
  如需可支援 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中新功能的資料更新資訊，請參閱 [SQL Server 範例︰模型部署套件 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
- **部署範例模型**  
+ **若要部署範例模型**  
   
 1.  將範例模型套件複製到 *drive*\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration。  
   
@@ -243,7 +240,7 @@ ms.locfileid: "79289776"
 3.  執行下列每一個命令，以將每個範例模型部署至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
     > [!IMPORTANT]  
-    >  在下列範例中，會指定 `MDS1` 服務值。 如果您在設定 ** 網站時選取了 [預設的網站]**[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，請使用這個值 。  請參閱 [設定資料庫和網站](#SetUpWeb) 一節。  
+    >  在下列範例中，會指定 `MDS1` 服務值。 如果您在設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 網站時選取了 [預設的網站]****，請使用這個值 。  請參閱 [設定資料庫和網站](#SetUpWeb) 一節。  
     >   
     >  如果您已建立新的網站或選取了其他現有的網站，請先執行下列命令，以判斷正確的服務值。  
     >   
@@ -255,19 +252,19 @@ ms.locfileid: "79289776"
     > 若要深入了解範例模型的中繼資料資訊，請參閱下列位置中的讀我檔案："c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration"
     >
    
-     **若要部署 chartofaccounts_en .pkg 範例模型**  
+     **若要部署 chartofaccounts_en.pkg 範例模型**  
   
     ```  
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
-     **若要部署 customer_en .pkg 範例模型**  
+     **若要部署 customer_en.pkg 範例模型**  
   
     ```  
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
-     **若要部署 product_en .pkg 範例模型**  
+     **若要部署 product_en.pkg 範例模型**  
   
     ```  
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
@@ -299,6 +296,6 @@ ms.locfileid: "79289776"
  [Master Data Services 資料庫](../master-data-services/master-data-services-database.md)   
  [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)   
  [[資料庫設定] 頁面 &#40;Master Data Services 組態管理員&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Master Data Services &#40;MDS 的新功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ [Master Data Services &#40;MDS&#41; 的新功能](../master-data-services/what-s-new-in-master-data-services-mds.md)  
   
   

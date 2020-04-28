@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8902c5dae5dea31393f658b13cb5c8773291f975
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112239"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML 不會安裝在 SQL Server 中
@@ -23,8 +23,7 @@ ms.locfileid: "79112239"
  如果某個應用程式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行而且需要 SQLXML 4.0，但是電腦並沒有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，您就必須下載並安裝 SQLXML 4.0 SP1。  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>使用 SQLOLEDB 和 SQL Server Native Client OLE DB Provider 的 SQLXML 4.0 SP1 行為以及新的資料類型  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了下列資料類型，而這些是使用 SQLXML 之開發人員可能會想要使用的資料類型：  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了下列資料類型，而這些是使用 SQLXML 之開發人員可能會想要使用的資料類型：  
   
 -   `Date`  
   

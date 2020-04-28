@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217114"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
@@ -36,31 +36,27 @@ SELECT * FROM $System.<schemaRowset>
   
  [查詢語法](#bkmk_syn)  
   
- [工具和許可權](#bkmk_tools)  
+ [工具與權限](#bkmk_tools)  
   
  [DMV 參考](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a>使用 DMV 查詢的優點  
+##  <a name="benefits-of-using-dmv-queries"></a><a name="bkmk_ben"></a>使用 DMV 查詢的優點  
  DMV 查詢所傳回的作業和資源耗用資訊，無法透過其他方式提供。  
   
  DMV 查詢是執行 XML/A Discover 命令的替代方法。 對於大多數系統管理員，撰寫 DMV 查詢比較簡單，因為查詢語法以 SQL 為基礎。 此外，結果集是以表格格式傳回，更易於讀取和複製。  
   
-##  <a name="bkmk_ex"></a>範例和案例  
+##  <a name="examples-and-scenarios"></a><a name="bkmk_ex"></a>範例和案例  
  DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 本節提供最常使用 DMV 查詢的案例範例。 您也可以檢閱＜ [SQL Server 2008 R2 Analysis Services 作業指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ＞，以取得使用 DMV 查詢監視伺服器執行個體的其他見解。  
   
- 
-  `Select * from $System.discover_object_activity` /** 此查詢報告自上次啟動服務後的物件活動。 如需以此 DMV 為基礎的範例查詢，請參閱 [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)。  
+ `Select * from $System.discover_object_activity` /** 此查詢報告自上次啟動服務後的物件活動。 如需以此 DMV 為基礎的範例查詢，請參閱 [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)。  
   
- 
-  `Select * from $System.discover_object_memory_usage` /** 此查詢依物件來報告記憶體耗用量。  
+ `Select * from $System.discover_object_memory_usage` /** 此查詢依物件來報告記憶體耗用量。  
   
- 
-  `Select * from $System.discover_sessions` /** 此查詢報告使用中工作階段，包括工作階段使用者和持續時間。  
+ `Select * from $System.discover_sessions` /** 此查詢報告使用中工作階段，包括工作階段使用者和持續時間。  
   
- 
-  `Select * from $System.discover_locks` /** 此查詢傳回在特定時間點所用鎖定的快照集。  
+ `Select * from $System.discover_locks` /** 此查詢傳回在特定時間點所用鎖定的快照集。  
   
-##  <a name="bkmk_syn"></a>查詢語法  
+##  <a name="query-syntax"></a><a name="bkmk_syn"></a>查詢語法  
  DMV 的查詢引擎是資料採礦剖析器。 DMV 查詢語法以 [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx) 陳述式為基礎。  
   
  雖然 DMV 查詢語法以 SQL SELECT 陳述式為基礎，但不支援 SELECT 陳述式的完整語法。 特別是，JOIN、GROUP BY、LIKE、CAST 和 CONVERT 也不受支援。  
@@ -85,14 +81,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a>工具和許可權  
+##  <a name="tools-and-permissions"></a><a name="bkmk_tools"></a>工具和許可權  
  您必須具有 Analysis Services 執行個體的系統管理員權限，才能查詢 DMV。  
   
  您可以使用任何支援 MDX 或 DMX 查詢的用戶端應用程式，包括 SQL Server Management Studio、Reporting Services 報表或 PerformancePoint 儀表板。  
   
  若要從 Management Studio 執行 DMV 查詢，請連接到您要查詢的執行個體，然後按一下 **[新增查詢]**。 可從 MDX 或 DMX 查詢視窗執行查詢。  
   
-##  <a name="bkmk_ref"></a>DMV 參考  
+##  <a name="dmv-reference"></a><a name="bkmk_ref"></a>DMV 參考  
  並不是所有結構描述資料列集都有 DMV 介面。 若要傳回可透過 DMV 查詢之所有結構描述資料列集的清單，請使用下列查詢。  
   
 ```  
@@ -169,6 +165,6 @@ ORDER BY TABLE_NAME ASC
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [新增 System. Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
- [限制資料列集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函數](https://go.microsoft.com/fwlink/?LinkId=231885)  
+ [限制資料列集和 DMV 的新 SYSTEMRESTRICTEDSCHEMA 函數](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

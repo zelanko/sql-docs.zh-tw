@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217136"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>升級為 SQL Server 2014
@@ -54,7 +54,7 @@ ms.locfileid: "79217136"
 ## <a name="see-also"></a>另請參閱  
  [升級資料庫引擎](upgrade-database-engine.md)   
  [升級 Analysis Services](upgrade-analysis-services.md)   
- [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [升級和遷移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [升級 Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [升級 Master Data Services](upgrade-master-data-services.md)   

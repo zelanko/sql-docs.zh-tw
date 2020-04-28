@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112163"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
@@ -74,7 +74,7 @@ ms.locfileid: "79112163"
 |DQS|連接至 Data Quality Services 伺服器及伺服器上的 Data Quality Services 資料庫。|[DQS 清理連接管理員](dqs-cleansing-connection-manager.md)|  
 |EXCEL|連接到 Excel 活頁簿檔案。|[Excel 連接管理員](excel-connection-manager.md)|  
 |FILE|連接到檔案或資料夾。|[檔案連接管理員](file-connection-manager.md)|  
-|FLATFILE|連接到單一一般檔案中的資料。|[一般檔案連線管理員](flat-file-connection-manager.md)|  
+|FLATFILE|連接到單一一般檔案中的資料。|[一般檔案連接管理員](flat-file-connection-manager.md)|  
 |FTP|連接到 FTP 伺服器。|[FTP 連接管理員](ftp-connection-manager.md)|  
 |HTTP|連接到 Web 伺服器。|[HTTP 連接管理員](http-connection-manager.md)|  
 |MSMQ|連接到訊息佇列。|[MSMQ 連接管理員](msmq-connection-manager.md)|  
@@ -92,16 +92,13 @@ ms.locfileid: "79112163"
  下表列出您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 網站下載的其他連接管理員類型。  
   
 > [!IMPORTANT]  
->  下表所列出的連線管理員只可搭配 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)] 使用。  
+>  下表所列出的連線管理員只可搭配 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]使用。  
   
 |類型|描述|主題|  
 |----------|-----------------|-----------|  
-|ORACLE|連接到 Oracle \<版本資訊> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
-|SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)＞。|  
-|TERADATA|連接到 Teradata \<版本資訊> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|連接到 Oracle \<版本資訊> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)＞。|  
+|TERADATA|連接到 Teradata \<版本資訊> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自訂連接管理員  
  您也可以撰寫自訂連接管理員。 如需詳細資訊，請參閱＜ [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)＞。  
@@ -121,6 +118,6 @@ ms.locfileid: "79112163"
   
 -   blogs.msdn.com 上的技術文章： [擷取及載入 SQL Server Integration Services 中的 SharePoint 資料](https://go.microsoft.com/fwlink/?LinkId=247826)。  
   
--   support.microsoft.com 上的技術文章：[在 SSIS 中使用 Oracle 連線管理員時收到 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 錯誤訊息](https://go.microsoft.com/fwlink/?LinkId=233696)。  
+-   support.microsoft.com 上的技術文章： [在 SSIS 中使用 Oracle 連線管理員時收到 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 錯誤訊息](https://go.microsoft.com/fwlink/?LinkId=233696)。  
   
   

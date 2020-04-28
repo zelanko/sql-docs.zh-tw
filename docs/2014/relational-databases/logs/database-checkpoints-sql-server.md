@@ -27,19 +27,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289396"
 ---
 # <a name="database-checkpoints-sql-server"></a>資料庫檢查點 (SQL Server)
   本主題提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檢查點的概觀。 *「檢查點」* (Checkpoint) 會建立一個已知的恰當起點， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以從這個點開始套用發生非預期的關機或損毀之後，於復原期間包含在記錄檔中的變更。  
   
   
-##  <a name="Overview"></a>檢查點的總覽  
- 基於效能的考量，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會在緩衝區快取的記憶體內修改資料庫頁面，但並不會在每次變更之後都將這些頁面寫入磁碟中。 而是由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期在每一個資料庫上發出檢查點。 
-  *「檢查點」* (Checkpoint) 會將目前記憶體中已修改的頁面 (稱為 *「中途分頁」*(Dirty Page)) 和交易記錄資訊從記憶體寫入磁碟上，也會記錄有關交易記錄的資訊。  
+##  <a name="overview-of-checkpoints"></a><a name="Overview"></a>檢查點的總覽  
+ 基於效能的考量，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會在緩衝區快取的記憶體內修改資料庫頁面，但並不會在每次變更之後都將這些頁面寫入磁碟中。 而是由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期在每一個資料庫上發出檢查點。 *「檢查點」* (Checkpoint) 會將目前記憶體中已修改的頁面 (稱為 *「中途分頁」*(Dirty Page)) 和交易記錄資訊從記憶體寫入磁碟上，也會記錄有關交易記錄的資訊。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援幾種類型的檢查點：自動、間接、手動和內部。 下表彙總檢查點的類型。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "79289396"
   
   
   
-###  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 和 'recovery interval' 選項的互動  
+###  <a name="interaction-of-the-target_recovery_time-and-recovery-interval-options"></a><a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 和 'recovery interval' 選項的互動  
  下表摘要說明伺服器範圍**sp_configure '`recovery interval`'** 設定與資料庫特有的 ALTER database 之間的互動 .。。TARGET_RECOVERY_TIME 設定。  
   
 |target_recovery_time|'recovery interval'|使用的檢查點類型|  
@@ -69,7 +68,7 @@ ms.locfileid: "79289396"
 |0|>0|由使用者定義的 **sp_configurerecovery interval** 選項設定，所指定的目標復原間隔之自動檢查點。|  
 |>0|不適用。|由 TARGET_RECOVERY_TIME 設定決定目標復原時間 (以秒鐘表示) 的間接檢查點。|  
   
-###  <a name="AutomaticChkpt"></a>自動檢查點  
+###  <a name="automatic-checkpoints"></a><a name="AutomaticChkpt"></a>自動檢查點  
  每次記錄檔記錄數目到達[!INCLUDE[ssDE](../../includes/ssde-md.md)]預估它在`recovery interval`伺服器設定選項中指定的時間內可以處理的數目時，就會發生自動檢查點。 在沒有使用者定義之目標復原時間的每個資料庫中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都會產生自動檢查點。 自動檢查點的頻率取決於`recovery interval` advanced server configuration 選項，它會指定給定伺服器實例在系統重新開機期間應該用來復原資料庫的最長時間。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會預估它在復原間隔內可以處理的記錄檔記錄數目上限。 當使用自動檢查點的資料庫到達這個記錄檔數目上限時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會發出資料庫的檢查點。 自動檢查點之間的時間間隔可能會有很大的變化。 具有大量交易工作負載的資料庫所擁有的檢查點會比主要用於唯讀作業的資料庫更頻繁。  
   
  此外，在簡單復原模式下，如果記錄檔已填滿百分之 70，則自動檢查點也會排入佇列。  
@@ -79,7 +78,7 @@ ms.locfileid: "79289396"
  當系統損壞時，復原給定資料庫所需的時間長度大部分取決於重做損壞時已變更之頁面所需的隨機 I/O 數量。 這表示`recovery interval`設定不可靠。 它無法判斷精確的復原持續時間。 此外，當自動檢查點正在進行時，資料的一般 I/O 活動會大幅增加而且無法預測。  
   
   
-####  <a name="PerformanceImpact"></a>復原間隔對復原效能的影響  
+####  <a name="impact-of-recovery-interval-on-recovery-performance"></a><a name="PerformanceImpact"></a>復原間隔對復原效能的影響  
  針對使用簡短交易的線上交易處理（OLTP）系統， `recovery interval`是決定復原時間的主要因素。 不過，此`recovery interval`選項不會影響復原長時間執行之交易所需的時間。 復原具有長時間執行之交易的資料庫，所`recovery interval`花費的時間可能比選項中指定的還要多。 例如，如果長時間執行的交易在伺服器實例停用之前，花了兩個小時來執行更新，則實際的復原所花`recovery interval`的時間會比復原長交易的值長得多。 如需長時間執行的交易對復原時間之影響的詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](the-transaction-log-sql-server.md)。  
   
  一般來說，預設值會提供最佳復原效能。 但是在以下情況下，變更復原間隔可能會提升效能：  
@@ -91,8 +90,8 @@ ms.locfileid: "79289396"
  如果您決定增加 `recovery interval` 設定，我們建議您逐漸少量增加此設定，並評估每次累加對於復原效能的影響。 這種方法很重要，因為`recovery interval`當設定增加時，資料庫復原所花的時間會比完成許多倍。 例如，如果您變更`recovery interval` 10，則完成復原所花的時間會比設定為`recovery interval`零時要長大約10倍。  
   
   
-###  <a name="IndirectChkpt"></a>間接檢查點  
- 間接檢查點是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的新功能，它會提供替代自動檢查點的可設定資料庫層級。 萬一系統損壞，間接檢查點可能會提供比自動檢查點更快而且更可以預測的復原時間。 間接檢查點會提供以下優點：  
+###  <a name="indirect-checkpoints"></a><a name="IndirectChkpt"></a>間接檢查點  
+ 間接檢查點是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中的新功能，它會提供替代自動檢查點的可設定資料庫層級。 萬一系統損壞，間接檢查點可能會提供比自動檢查點更快而且更可以預測的復原時間。 間接檢查點會提供以下優點：  
   
 -   設定間接檢查點的資料庫線上交易式工作負載可能會導致效能降低。 間接檢查點可確定中途分頁的數目，低於特定臨界值，如此即可在目標復原時間內完成資料庫的復原。 復原間隔組態選項會使用異動數目來判斷復原時間，而間接檢查點則是會利用中途分頁數目來判斷復原時間。 在收到大量 DML 作業的資料庫上啟用間接檢查點時，背景寫入器可開始積極排清磁碟的中途緩衝區，以確保執行復原所需的時間，落在資料庫所設的目標復原時間內。 如此會在某些系統上造成額外的 I/O 活動，而若磁碟子系統的運作超過或接近 I/O 臨界值，就會形成效能瓶頸。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "79289396"
  但是，設定間接檢查點的資料庫線上交易式工作負載可能會導致效能降低。 這是因為，間接檢查點使用的背景寫入器有時會讓伺服器執行個體的寫入負載總量增加。  
   
   
-###  <a name="EventsCausingChkpt"></a>內部檢查點  
+###  <a name="internal-checkpoints"></a><a name="EventsCausingChkpt"></a>內部檢查點  
  內部檢查點是由各種伺服器元件產生，可保證磁碟映像符合目前的記錄檔狀態。 產生內部檢查點是為了回應以下事件：  
   
 -   使用 ALTER DATABASE 加入或移除資料庫檔案。  
@@ -119,7 +118,7 @@ ms.locfileid: "79289396"
 -   讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 離線。  
   
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要變更伺服器執行個體的復原間隔**  
   
 -   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
@@ -133,9 +132,9 @@ ms.locfileid: "79289396"
 -   [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)  
   
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
--   [交易記錄實體架構](https://technet.microsoft.com/library/ms179355.aspx)（ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]在書籍線上中）  
+-   [交易記錄檔實體架構](https://technet.microsoft.com/library/ms179355.aspx) (在《 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
   
   
 ## <a name="see-also"></a>另請參閱  

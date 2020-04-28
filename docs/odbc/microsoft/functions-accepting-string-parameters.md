@@ -1,5 +1,5 @@
 ---
-title: 接受字串參數的功能 |微軟文件
+title: 接受字串參數的函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,42 +17,42 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286298"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字串參數的函式
-所有採用字串參數的函數都將轉換為 Unicode。 (將匯出函數的"W"形式。位元組計數將轉換為適用於 ODBC API 的字元計數。 這適用於以下功能:  
+所有接受字串參數的函式都會轉換成 Unicode。 （將會匯出函數的 "W" 形式）。位元組計數會轉換成這些適用 ODBC Api 的字元計數。 這適用于下列函數：  
   
 -   **SQLConnect**  
   
 -   **SQLDriverConnect**  
   
--   **SQLColattributes**  
+-   **SQLColAttributes**  
   
 -   **SQLDescribeCol**  
   
--   **SQLError(** 取代為**SQLGetDiagField)**  
+-   **SQLError** （由**SQLGetDiagField**取代）  
   
 -   **SQLExecDirect**  
   
 -   **SQLGetCursorName**  
   
--   **SQLSetCursor 名稱**  
+-   **SQLSetCursorName**  
   
 -   **SQLGetStmtAttr**  
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (成為**SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** （變成**SQLGetStmtAttr**）  
   
--   **SQLSetStmtOption** (成為**SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** （變成**SQLSetStmtAttr**）  
   
 -   **SQLGetConnectOption**  
   
--   **SQLSet 連線選項**  
+-   **SQLSetConnectOption**  
   
 -   **SQLGetTypeInfo**  
   
@@ -64,6 +64,6 @@ ms.locfileid: "81286298"
   
 -   **SQLSpecialColumns**  
   
--   **設定DSNEx**  
+-   **ConfigDSNEx**  
   
--   **設定DSN**
+-   **ConfigDSN**

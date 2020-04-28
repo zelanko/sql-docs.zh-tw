@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217081"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>設定 Internet Information Services (IIS) 8.0 上 Analysis Services 的 HTTP 存取
@@ -40,19 +40,19 @@ ms.locfileid: "79217081"
   
 -   [概觀](#bkmk_overview)  
   
--   [先決條件](#bkmk_prereq)  
+-   [必要條件](#bkmk_prereq)  
   
--   [將 MSMDPUMP 複製到 Web 服務器上的資料夾](#bkmk_copy)  
+-   [將 MSMDPUMP.dll 複製到 Web 伺服器上的資料夾中](#bkmk_copy)  
   
--   [在 IIS 中建立應用程式集區和虛擬目錄](#bkmk_appPool)  
+-   [在 IIS 中建立應用程式集區與虛擬目錄](#bkmk_appPool)  
   
 -   [設定 IIS 驗證並加入延伸模組](#bkmk_auth)  
   
--   [編輯 MSMDPUMP。要設定目標伺服器的 INI 檔案](#bkmk_edit)  
+-   [編輯 MSMDPUMP.INI 檔案來設定目標伺服器](#bkmk_edit)  
   
--   [測試組態](#bkmk_test)  
+-   [測試您的組態](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a> 概觀  
+##  <a name="overview"></a><a name="bkmk_overview"></a> 概觀  
  MSMDPUMP 是一個 ISAPI 擴充程式，會載入到 IIS 並可重新導向至本機或遠端 Analysis Services 執行個體。 藉由設定此 ISAPI 擴充程式，即可建立 Analysis Services 執行個體的 HTTP 端點。  
   
  您必須為每個 HTTP 端點建立及設定一個虛擬目錄。 每個端點都需要一組自己的 MSMDPUMP 檔案，用於您要連接的每個 Analysis Services 執行個體。 這組檔案中的組態檔會指定用於每個 HTTP 端點的 Analysis Services 執行個體名稱。  
@@ -65,16 +65,16 @@ ms.locfileid: "79217081"
   
  下表列出您針對不同狀況啟用 HTTP 存取時的其他考量。  
   
-|狀況|組態|  
+|狀況|設定|  
 |--------------|-------------------|  
 |相同電腦上的 IIS 和 Analysis Services|這是最簡單的組態，因為它可讓您搭配 NTLM 使用預設組態 (其伺服器名稱為 localhost)、本機 Analysis Services OLE DB 提供者，以及 Windows 整合式安全性。 假設用戶端也位於相同網域，驗證對使用者而言是透明的，您不需要採取其他任何動作。|  
 |不同電腦上的 IIS 和 Analysis Services|針對此拓撲，您必須在 Web 伺服器上安裝 Analysis Services OLE DB 提供者。 您也必須編輯 msmdpump.ini 檔案，以便在遠端電腦上指定 Analysis Services 執行個體的位置。<br /><br /> 此拓撲加入了雙躍點驗證步驟，其中認證必須從用戶端流向 Web 伺服器，然後再流向後端 Analysis Services 伺服器。 如果您要使用 Windows 認證和 NTLM，將會出現錯誤，因為 NTLM 不允許將用戶端認證委派給另一部伺服器。 最常見的方案是搭配安全通訊端層 (SSL) 使用基本驗證，但在存取 MSMDPUMP 虛擬目錄時，這將需要使用者提供使用者名稱和密碼。 更直接的方法可能是啟用 Kerberos 並設定 Analysis Services 限制委派，讓使用者可以用透明的方式存取 Analysis Services。 請參閱 [設定 Analysis Services 進行 Kerberos 限制委派](configure-analysis-services-for-kerberos-constrained-delegation.md) 以取得詳細資訊。<br /><br /> 請考慮要在 Windows 防火牆中解除封鎖哪些通訊埠。 您將需要解除封鎖兩部伺服器上的通訊埠，以便存取 IIS 上的 Web 應用程式，以及遠端伺服器上的 Analysis Services。|  
 |用戶端連接是來自不信任網域或外部網路連接|來自不信任網域的用戶端連接會進一步導入驗證的限制。 根據預設，Analysis Services 使用 Windows 整合式驗證，這種驗證需要使用者與伺服器位於相同網域上。 如果您有從網域外部連接至 IIS 的外部網路使用者，當伺服器設定為使用預設值時，那些使用者會發生連接錯誤。<br /><br /> 因應措施包括，讓外部網路使用者使用網域認證，透過 VPN 連接。 不過，更好的方法可能是在 IIS 網站上啟用基本驗證和 SSL。|  
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
  本文中的指示假設已設定 IIS 且已安裝 Analysis Services。 Windows Server 2012 隨附 IIS 8.x 以做為伺服器角色，您可以在系統上加以啟用。  
   
- **IIS 8.0 中的額外設定**  
+ **在 IIS 8.0 中的額外設定**  
   
  IIS 8.0 的預設組態遺漏要透過 HTTP 存取 Analysis services 所需的元件。 這些元件 (位於 [網頁伺服器 (IIS)]**** 角色的 [安全性]**** 和 [應用程式開發]**** 功能區域) 包括：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "79217081"
   
      ![網頁伺服器角色的 [新增功能] 頁面](../media/ssas-httpaccess-isapicgi.png "網頁伺服器角色的 [新增功能] 頁面")  
   
- **當 IIS 位於遠端伺服器上時**  
+ **當 IIS 是在遠端伺服器上**  
   
  要在 IIS 和 Analysis Services 之間進行遠端連接，您必須在執行 IIS 的 Windows 伺服器上安裝 Analysis Services OLE DB 提供者 (MSOLAP)。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "79217081"
 > [!NOTE]  
 >  請記得解除封鎖 Windows 防火牆中的連接埠，以允許用戶端與 Analysis Services 遠端伺服器的連接。 如需詳細資訊，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a>步驟1：將 MSMDPUMP 檔案複製到 Web 服務器上的資料夾  
+##  <a name="step-1-copy-the-msmdpump-files-to-a-folder-on-the-web-server"></a><a name="bkmk_copy"></a>步驟1：將 MSMDPUMP 檔案複製到 Web 服務器上的資料夾  
  您建立的每個 HTTP 端點都必須有一組自己的 MSMDPUMP 檔案。 在此步驟中，您要將 MSMDPUMP 可執行檔、組態檔以及資源資料夾從 Analysis Services 程式資料夾，複製到您將在執行 IIS 所在電腦的檔案系統上建立的新虛擬目錄資料夾。  
   
  磁碟機必須格式化為 NTFS 檔案系統。 您所建立之資料夾的路徑不得包含任何空格。  
@@ -128,7 +128,7 @@ ms.locfileid: "79217081"
   
     -   \<磁片磁碟機>： \inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a>步驟2：在 IIS 中建立應用程式集區和虛擬目錄  
+##  <a name="step-2-create-an-application-pool-and-virtual-directory-in-iis"></a><a name="bkmk_appPool"></a>步驟2：在 IIS 中建立應用程式集區和虛擬目錄  
  接下來，為幫浦建立應用程式集區和端點。  
   
 #### <a name="create-an-application-pool"></a>建立應用程式集區  
@@ -164,7 +164,7 @@ ms.locfileid: "79217081"
 > [!NOTE]  
 >  舊版的這些指示包含建立虛擬目錄的步驟。 現已不再需要該步驟。  
   
-##  <a name="bkmk_auth"></a>步驟3：設定 IIS 驗證並加入延伸模組  
+##  <a name="step-3-configure-iis-authentication-and-add-the-extension"></a><a name="bkmk_auth"></a> 步驟 3：設定 IIS 驗證並加入延伸模組  
  在此步驟中，您會進一步設定您剛建立的 SSAS 虛擬目錄。 您將會指定驗證方法，然後加入指令碼對應。 經由 HTTP 的 Analysis Services 所支援的驗證方法包括：  
   
 -   Windows 驗證 (Kerberos 或 NTLM)  
@@ -173,13 +173,13 @@ ms.locfileid: "79217081"
   
 -   匿名驗證  
   
- **Windows 驗證**被視為最安全，並利用現有的基礎結構來使用 Active Directory 的網路。 若要有效使用 Windows 驗證，所有瀏覽器、用戶端應用程式及伺服器應用程式都必須支援該驗證。 這是最安全的建議模式，但是它要求 IIS 能夠存取可驗證要求連接之使用者識別的 Windows 網域控制站。  
+ **Windows 驗證** 是被視為最安全，並且會針對使用 Active Directory 的網路運用現有基礎結構。 若要有效使用 Windows 驗證，所有瀏覽器、用戶端應用程式及伺服器應用程式都必須支援該驗證。 這是最安全的建議模式，但是它要求 IIS 能夠存取可驗證要求連接之使用者識別的 Windows 網域控制站。  
   
  對於將 Analysis Services 和 IIS 放置於不同電腦的拓撲，您將需要解決雙躍點問題，這是在需要將使用者識別委派至遠端電腦上的另一項服務時所引發的問題，通常是因啟用 Analysis Services 進行 Kerberos 限制委派所造成。 如需詳細資訊，請參閱 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)。  
   
- 當您有 Windows 身分識別時，會使用**基本驗證**，但使用者連線是來自不信任的網域，禁止使用委派或模擬的連接。 基本驗證可讓您在連接字串上指定使用者識別和密碼。 連接至 Analysis Services 時不會使用目前使用者的安全性內容，而是使用連接字串上的認證。 由於 Analysis Services 僅支援 Windows 驗證，因此任何傳遞至 Analysis Services 的認證都必須是裝載 Analysis Services 所在網域之成員的 Windows 使用者或群組。  
+ **基本驗證** 是在您有 Windows 識別，但使用者連接來自非信任網域，因而禁止使用委派或模擬的連接時使用。 基本驗證可讓您在連接字串上指定使用者識別和密碼。 連接至 Analysis Services 時不會使用目前使用者的安全性內容，而是使用連接字串上的認證。 由於 Analysis Services 僅支援 Windows 驗證，因此任何傳遞至 Analysis Services 的認證都必須是裝載 Analysis Services 所在網域之成員的 Windows 使用者或群組。  
   
- **匿名驗證**通常會在初始測試期間使用，因為它容易設定，可協助您快速驗證 ANALYSIS SERVICES 的 HTTP 連線能力。 只要執行幾個步驟，您就可以指派唯一的使用者帳戶做為識別、授與該帳戶 Analysis Services 中的權限、使用帳戶確認用戶端應用程式中的資料存取，然後在測試完成時停用匿名驗證。  
+ **匿名驗證** 經常在初始測試期間使用，因為它容易設定，可協助您快速驗證 Analysis Services 的 HTTP 連線。 只要執行幾個步驟，您就可以指派唯一的使用者帳戶做為識別、授與該帳戶 Analysis Services 中的權限、使用帳戶確認用戶端應用程式中的資料存取，然後在測試完成時停用匿名驗證。  
   
  如果使用者沒有 Windows 使用者帳戶，您也可以在生產環境中使用匿名驗證，不過請遵循最佳做法鎖定主機系統上的權限，如同此文件中所述： [啟用匿名驗證 (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 務必在虛擬目錄上設定驗證，而不是在父網站上，以便進一步降低帳戶存取層級。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "79217081"
 4.  或者，如果您的用戶端和伺服器應用程式位於不同的網域，請啟用 [基本驗證]****。 此模式會要求使用者輸入使用者名稱和密碼。 使用者名稱和密碼是透過 HTTP 連接，傳送到 IIS。 連接至 MSMDPUMP 時，IIS 將嘗試模擬使用所提供認證的使用者，但是認證不會委派至 Analysis Services。 您必須在連接時傳遞有效的使用者名稱和密碼，如本文件的步驟 6 所述。  
   
     > [!IMPORTANT]  
-    >  請注意，建立傳送密碼之目標系統的任何人都必須有數種方式來保護通訊通道的安全。 IIS 提供一組可協助您保護通道安全的工具。 如需詳細資訊，請參閱 [如何在 IIS 7 上設定 SSL](https://go.microsoft.com/fwlink/?LinkId=207562)(英文)。  
+    >  請注意，建立傳送密碼之目標系統的任何人都必須有數種方式來保護通訊通道的安全。 IIS 提供一組可協助您保護通道安全的工具。 如需詳細資訊，請參閱[如何在 IIS 7 上設定 SSL](https://go.microsoft.com/fwlink/?LinkId=207562)。  
   
 5.  如果您使用 Windows 或基本驗證，請停用 [匿名驗證]****。 啟用匿名驗證時，IIS 將一律優先使用它，即使已啟用其他驗證方法也一樣。  
   
@@ -223,10 +223,10 @@ ms.locfileid: "79217081"
   
      ![確認新增 ISAPI 擴充程式的螢幕擷取畫面](../media/ssas-httpaccess-isapiprompt.png "確認新增 ISAPI 擴充程式的螢幕擷取畫面")  
   
-##  <a name="bkmk_edit"></a>步驟4：編輯 MSMDPUMP。要設定目標伺服器的 INI 檔案  
+##  <a name="step-4-edit-the-msmdpumpini-file-to-set-the-target-server"></a><a name="bkmk_edit"></a> 步驟 4：編輯 MSMDPUMP.INI 檔案來設定目標伺服器  
  MSMDPUMP.INI 檔案會指定 MSMDPUMP.DLL 連接的 Analysis Services 執行個體。 這個執行個體可以位於本機或遠端，以及安裝為預設或具名執行個體。  
   
- 開啟 C:\inetpub\wwwroot\OLAP 資料夾中的 msmdpump.ini 檔，然後查看此檔案的內容。 該元素如下所示：  
+ 開啟 C:\inetpub\wwwroot\OLAP 資料夾中的 msmdpump.ini 檔，然後查看此檔案的內容。 它應該如下所示：  
   
 ```  
 <ConfigurationSettings>  
@@ -258,7 +258,7 @@ ms.locfileid: "79217081"
   
  如需關於設定權限的詳細資訊，請參閱 [物件和作業的存取權授權 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(英文)。  
   
-##  <a name="bkmk_test"></a>步驟6：測試您的設定  
+##  <a name="step-6-test-your-configuration"></a><a name="bkmk_test"></a> 步驟 6：測試您的設定  
  MSMDPUMP 的連接字串語法為 MSMDPUMP.dll 檔案的 URL。  
   
  如果 web 應用程式是在固定通訊埠上接聽，請將埠號碼附加至伺服器名稱或 IP 位址，例如`http://my-web-srv01:8080/OLAP/msmdpump.dll`或。 `http://123.456.789.012:8080/OLAP/msmdpump.dll`  
@@ -267,7 +267,7 @@ ms.locfileid: "79217081"
   
  **使用 SQL Server Management Studio 測試連接**  
   
-1.  在 Management Studio 的 [連接到伺服器] 對話方塊中，選取 [Analysis Services]**** 做為伺服器類型。 在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址：`http://my-web-srv01/OLAP/msmdpump.dll`。  
+1.  在 Management Studio 的 [連接到伺服器] 對話方塊中，選取 [Analysis Services]**** 做為伺服器類型。 在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址： `http://my-web-srv01/OLAP/msmdpump.dll`。  
   
      [物件總管] 會顯示 HTTP 連接：  
   
@@ -279,7 +279,7 @@ ms.locfileid: "79217081"
   
 1.  在 Excel 的 [資料] 索引標籤上的 [取得外部資料] 中，按一下 [從其他來源]****，然後選擇 [從 Analysis Services]**** 以啟動 [資料連線精靈]。  
   
-2.  在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址：`http://my-web-srv01/OLAP/msmdpump.dll`。  
+2.  在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址： `http://my-web-srv01/OLAP/msmdpump.dll`。  
   
 3.  針對 [登入認證]，如果您使用 Windows 整合式安全性或 NTLM 或是匿名使用者，則選擇 [使用 Windows 驗證]****。  
   

@@ -12,10 +12,10 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112416"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>使用 SQL Server 特性和功能

@@ -1,5 +1,5 @@
 ---
-title: 其他存取驅動程式程式設計詳細資訊 |微軟文件
+title: 其他 Access 驅動程式設計詳細資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291088"
 ---
 # <a name="other-access-driver-programming-details"></a>其他 Access 驅動程式的程式設計詳細資料
 > [!NOTE]  
->  本節提供有關 ODBC 函數和其他程式設計詳細資訊的訪問驅動程式特定資訊。 有關函數的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
+>  本節提供有關 ODBC 函式和其他程式設計詳細資料的 Access 驅動程式特定資訊。 如需函式的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
  此章節包含下列主題。  
   

@@ -13,10 +13,10 @@ ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289836"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>在資料庫測試助理中建立分析報表（SQL Server）
@@ -52,7 +52,7 @@ DEA 會使用統計測試來分析您的工作負載，並判斷每個查詢從�
 
 **問：是否可以在產生另一個報表時，建立新的分析報表？**
 
-否。  目前，一次只能產生一份報表，以避免發生衝突。 不過，您可以同時執行一個以上的 capture 和 replay。
+不可以。  目前，一次只能產生一份報表，以避免發生衝突。 不過，您可以同時執行一個以上的 capture 和 replay。
 
 **問：我可以使用命令提示字元產生分析報告嗎？**
 

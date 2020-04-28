@@ -19,17 +19,17 @@ ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8bdf74e6ee774d9a0cc8e3d9128c659b75287511
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79198225"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  針對異地複寫合作關係中的主要和次要資料庫之間的每個複寫連結，各包含一個資料列。 這包括主要和次要資料庫。 如果給定主要資料庫有一個以上的連續複寫連結，此資料表會對每個關聯性包含一個資料列。 會在所有資料庫 (包括邏輯主機) 中建立檢視。 不過，在邏輯主機中查詢此檢視會傳回空集合。  
+  針對異地複寫合作關係中的主要和次要資料庫之間的每個複寫連結，各包含一個資料列。 這包括主要和次要資料庫。 如果給定主要資料庫有一個以上的連續複寫連結，此資料表會對每個關聯性包含一個資料列。 會在所有資料庫 (包括邏輯主機) 中建立檢視。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289696"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與平行處理資料倉儲的 T-sql 許可權
@@ -146,7 +146,7 @@ GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;
 ## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>授與管理登入、使用者和資料庫角色的許可權
 本節說明如何授與許可權來管理登入、資料庫使用者和資料庫角色。  
   
-### <a name="PermsAdminConsole"></a>授與管理登入的許可權  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>授與管理登入的許可權  
 **新增或管理登入**  
   
 下列 SQL 語句會建立名為 KimAbercrombie 的登入，可以使用[CREATE login](../t-sql/statements/create-login-transact-sql.md)語句來建立新的登入，並使用[alter login](../t-sql/statements/alter-login-transact-sql.md)語句來改變現有的登入。  
@@ -204,7 +204,7 @@ GRANT ALTER ANY ROLE TO KimAbercrombie;
   
 ![APS 安全性登入權限](./media/grant-permissions/APS_security_login_perms.png "APS_security_login_perms")  
   
-**使用者權限：**  
+使用者權限：****  
   
 ![APS 安全性使用者權限](./media/grant-permissions/APS_security_user_perms.png "APS_security_user_perms")  
   
@@ -220,7 +220,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>授與監視設備的許可權
 您可以使用管理主控台或 SQL Server PDW 系統檢視來監視 SQL Server PDW 設備。 登入需要伺服器層級的**VIEW SERVER STATE**許可權，才能監視設備。 登入需要**ALTER ANY CONNECTION**許可權，才能使用管理主控台或**KILL**命令來終止連接。 如需使用管理主控台所需許可權的資訊，請參閱[授與使用管理主控台 &#40;SQL Server PDW&#41;的許可權](#grant-permissions-to-use-the-admin-console)。  
   
-### <a name="PermsAdminConsole"></a>使用系統檢視授與監視設備的許可權  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>使用系統檢視授與監視設備的許可權  
 下列 SQL 語句會建立名為`monitor_login`的登入，並將**VIEW SERVER STATE**許可權`monitor_login`授與此登入。  
   
 ```sql  
@@ -246,7 +246,7 @@ GO
 若要建立管理員登入，請參閱[固定伺服器角色](pdw-permissions.md#fixed-server-roles)。  
   
 ## <a name="see-also"></a>另請參閱
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
+[建立登入](../t-sql/statements/create-login-transact-sql.md)  
 [建立使用者](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [載入](load-overview.md)  

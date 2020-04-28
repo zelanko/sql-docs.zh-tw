@@ -18,21 +18,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288558"
 ---
 # <a name="schema-rowset-support-ole-db"></a>結構描述資料列集支援 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供者還[!INCLUDE[tsql](../../../includes/tsql-md.md)]支援在處理 分散式查詢時從連結伺服器返回架構資訊。  
+  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 提供者在處理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分散式查詢時，也支援從連結伺服器傳回架構資訊。  
   
 > [!NOTE]  
 >  雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援同義字，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不會傳回同義字的中繼資料。  
   
- 下表列出了[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]架構列集和本機用戶端 OLE 資料庫提供程式支援的限制列。  
+ 下表列出 Native Client OLE DB 提供者所[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援的架構資料列集和限制資料行。  
   
 |結構描述資料列集|限制資料行|  
 |-------------------|-------------------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "81288558"
  [LINKEDSERVERS 資料列集 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 伺服器本機用戶端&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [使用使用者定義型別](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

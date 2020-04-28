@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525429"
 ---
 # <a name="tabular-model-programming"></a>表格式模型程式設計
@@ -25,11 +25,11 @@ ms.locfileid: "79525429"
  本節提供有關如何以程式設計方式使用表格式模型實體及其屬性的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [商業智慧 &#40;CSDLBI&#41;的 CSDL 注釋](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [了解表格式物件模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [適用于 CSDL 之 BI 批註的技術參考](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
+ [CSDL 之 BI 註解的技術參考](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 介面](imdembeddeddata-interface.md)  
   

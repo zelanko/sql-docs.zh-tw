@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78896808"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
@@ -82,7 +82,7 @@ Data Migration Assistant 的4.3 版提供下列支援：
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v4。0
 
-4.0 版的 Data Migration Assistant 引進了 Azure SQL Database SKU 建議功能，可讓使用者根據從裝載您的電腦上所收集的效能計數器，來識別最小的建議 Azure SQL Database SKU資料庫. 這項功能會提供與定價層、計算層級和最大資料大小的相關建議，以及每個月的預估成本。 它也能讓您將所有資料庫大量布建至 Azure。
+4.0 版的 Data Migration Assistant 引進了 Azure SQL Database SKU 建議功能，可讓使用者根據從裝載您資料庫的電腦所收集的效能計數器，識別最小的建議 Azure SQL Database SKU。 這項功能會提供與定價層、計算層級和最大資料大小的相關建議，以及每個月的預估成本。 它也能讓您將所有資料庫大量布建至 Azure。
 
 > [!NOTE]
 > 此功能目前僅透過命令列介面（CLI）提供。

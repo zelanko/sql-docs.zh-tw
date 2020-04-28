@@ -1,5 +1,5 @@
 ---
-title: 程式 ODBC |微軟文件
+title: 程式 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d16c5353d2a8bd58563753d92cccade2968d09cc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282218"
 ---
 # <a name="procedures-odbc"></a>程序 ODBC
-*過程*是存儲在數據源上的可執行物件。 通常，它是先行編譯的一或多個 SQL 陳述式。  
+程式*是儲存*在資料來源上的可執行物件。 通常，它是先行編譯的一或多個 SQL 陳述式。  
   
  此章節包含下列主題。  
   

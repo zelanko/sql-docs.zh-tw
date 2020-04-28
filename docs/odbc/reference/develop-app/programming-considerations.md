@@ -1,5 +1,5 @@
 ---
-title: 程式設計注意事項 |微軟文件
+title: 程式設計考慮 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282178"
 ---
 # <a name="programming-considerations"></a>程式設計考量
-本節簡要討論了與編寫 ODBC 應用程式和驅動程式相關的許多主題。  
+本節將簡短討論一些與撰寫 ODBC 應用程式和驅動程式相關的主題。  
   
  此章節包含下列主題。  
   
 -   [多執行緒](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [對準](../../../odbc/reference/develop-app/alignment.md)  
+-   [對齊](../../../odbc/reference/develop-app/alignment.md)  
   
 -   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   

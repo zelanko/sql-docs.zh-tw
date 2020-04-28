@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 80cf43e4abc1be19b1a6033174c980aa6d7cd378
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290131"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -51,7 +51,7 @@ HRESULT SetParameterProperties(
   
  在呼叫 **ISSCommandWithParameters::SetParameterProperties** 方法之前，必須先呼叫 **SetParameterInfo** 方法。 呼叫 `SetParameterProperties(0, NULL)` 會清除所有指定的參數屬性，呼叫 `SetParameterInfo(0,NULL,NULL)` 則會清除所有的參數資訊，包括任何可能與參數相關聯的屬性。  
   
- 呼叫**ISSCommand 與參數::設定參數屬性**,以指定類型不DBTYPE_XML的參數的屬性,或DBTYPE_UDT返回DB_E_ERRORSOCCURRED或DB_S_ERRORSOCCURRED,並用DBPROPSTATUS_NOTSET標記 SSPARAMPROPS 中包含的 SSPARAMS 中包含的所有 DBPROP 的*dwStatus*欄位。 系統會周遊 SSPARAMPROPS 中包含的每個 DBPROPSET 的 DBPROP 陣列，以偵測 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 所參考的是哪一個參數。  
+ 呼叫**ISSCommandWithParameters：： SetParameterProperties**以指定不屬於 DBTYPE_XML 或 DBTYPE_UDT 類型之參數的屬性，而會傳回 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED，並將該參數包含在 SSPARAMPROPS 中的所有標示出 dbprop 的*dwStatus*欄位標記為 DBPROPSTATUS_NOTSET。 系統會周遊 SSPARAMPROPS 中包含的每個 DBPROPSET 的 DBPROP 陣列，以偵測 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 所參考的是哪一個參數。  
   
  如果呼叫 **ISSCommandWithParameters::SetParameterProperties** 來指定參數 (尚未使用 **SetParameterInfo** 設定其參數資訊) 的屬性，則提供者會傳回 E_UNEXPECTED 且顯示下列錯誤訊息：  
   

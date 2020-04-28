@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428149"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
@@ -47,7 +47,7 @@ ms.locfileid: "79428149"
 
 
 ### <a name="create-graph-objects"></a>建立繪圖物件
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]擴充功能可讓使用者建立節點或邊緣資料表。 節點和邊緣都可以有相關聯的屬性。 因為節點和邊緣會儲存為數據表，所以在節點或邊緣資料表上支援關係資料表所支援的所有作業。 下列是一個範例：  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]擴充功能可讓使用者建立節點或邊緣資料表。 節點和邊緣都可以有相關聯的屬性。 因為節點和邊緣會儲存為數據表，所以在節點或邊緣資料表上支援關係資料表所支援的所有作業。 範例如下：  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

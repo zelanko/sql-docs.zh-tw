@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112173"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者
@@ -22,22 +22,20 @@ ms.locfileid: "79112173"
   
  資料提供者內含在 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝套件 (spPowerPivot.msi) 中，但是可能需要手動安裝。 在兩種情況下您可能必須在 SharePoint 伺服器上手動安裝用戶端程式庫或資料提供者。  
   
--   **啟用回溯相容性**。 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 活頁簿會在其連接字串中指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 Analysis Services OLE DB 提供者。 如此一來，此提供者版本必須存在電腦上，要求才能成功。  
+-   **啟用回溯相容性**。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 活頁簿會在其連接字串中指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 Analysis Services OLE DB 提供者。 如此一來，此提供者版本必須存在電腦上，要求才能成功。  
   
--   **在專用 Excel Services 實例上啟用資料存取**。 如果您的 SharePoint 伺服器陣列在同樣沒有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的伺服器上包含 Excel Services，則使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安裝套件來安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 版的提供者和其他用戶端連接性元件。  
+-   **在專用 Excel Services 執行個體上啟用資料存取**。 如果您的 SharePoint 伺服器陣列在同樣沒有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的伺服器上包含 Excel Services，則使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安裝套件來安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 版的提供者和其他用戶端連接性元件。  
   
     > [!NOTE]  
     >  這些案例不會互斥。 若您在包含執行 Excel Services 但沒有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體之應用程式伺服器的伺服器陣列上裝載多個活頁簿版本，則需要在每一部 Excel Services 電腦上同時安裝舊版和新版資料提供者。  
   
   
-##  <a name="bkmk_vers"></a>支援 PowerPivot 資料存取的 OLE DB 提供者版本  
+##  <a name="versions-of-the-ole-db-provider-supporting-powerpivot-data-access"></a><a name="bkmk_vers"></a>支援 PowerPivot 資料存取的 OLE DB 提供者版本  
  SharePoint 伺服器陣列可能包含多個 Analysis Services OLE DB 提供者版本，包括不支援 PowerPivot 資料存取的舊版。  
   
  根據預設，SharePoint 2010 會安裝提供者的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。 此版本雖然識別為 MSOLAP.4 (與用於 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]的版本號碼相同)，但是不適用於 PowerPivot 資料存取。 您必須具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的提供者，才能成功連接。  
   
- OLE DB 提供者在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之後的版本中，包含適用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料結構的傳輸和連接支援。 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿會使用這個提供者的新版，向伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器要求查詢處理。 若要取得已更新的版本，可以透過 [SQL Server 功能套件] 頁面下載並安裝。  
+ OLE DB 提供者在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之後的版本中，包含適用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料結構的傳輸和連接支援。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿會使用這個提供者的新版，向伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器要求查詢處理。 若要取得已更新的版本，可以透過 [SQL Server 功能套件] 頁面下載並安裝。  
   
  下表描述有效的版本：  
   
@@ -48,16 +46,15 @@ ms.locfileid: "79112173"
 |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|檔案系統中的 MSOLAP120.dll<br /><br /> 檔案版本詳細資料中的 12.0.20000 或更新版本|用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型之外的資料模型。|  
   
   
-##  <a name="bkmk_why"></a>為何需要安裝 OLE DB 提供者  
+##  <a name="why-you-need-to-install-the-ole-db-provider"></a><a name="bkmk_why"></a>為何需要安裝 OLE DB 提供者  
  下列兩種情況需要在伺服器陣列中的伺服器上手動安裝 OLE DB 提供者。  
   
- **最常見的情況**是當您在伺服器陣列的文件庫[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中儲存舊版和較新版本的活頁簿時。 如果組織的分析師使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，並將活頁簿儲存至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝，則舊版活頁簿將無法運作。 其連接字串會參考較舊版本的提供者，除非您安裝它，否則不會在伺服器上。 同時安裝兩個版本，即可存取在新舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中建立之 PowerPivot 活頁簿的資料。 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝程式不會安裝提供者的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本，因此若要使用舊版活頁簿，您必須手動安裝該版本。  
+ **最常見的情況** 是伺服器陣列的文件庫中同時儲存新舊版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。 如果組織的分析師使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，並將活頁簿儲存至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝，則舊版活頁簿將無法運作。 其連接字串會參考較舊版本的提供者，除非您安裝它，否則不會在伺服器上。 同時安裝兩個版本，即可存取在新舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中建立之 PowerPivot 活頁簿的資料。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝程式不會安裝提供者的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本，因此若要使用舊版活頁簿，您必須手動安裝該版本。  
   
- **第二個案例**是當您的伺服器在執行 Excel Services 的 SharePoint 伺服器陣列中，但[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]卻不是。 在此情況下，執行 Excel Services 的應用程式伺服器必須手動更新，才能使用新版的提供者。 連接至 PowerPivot for SharePoint 執行個體需要此元件。 如果 Excel Services 正在使用舊版的提供者，則連接要求將會失敗。 請注意，必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝套件 (spPowerPivot.msi) 來安裝提供者，以確保安裝支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 所需的所有元件。  
+ **第二個情況** 是您有伺服器在執行 Excel Services 的 SharePoint 伺服器陣列中，而不是在執行 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的伺服器陣列中。 在此情況下，執行 Excel Services 的應用程式伺服器必須手動更新，才能使用新版的提供者。 連接至 PowerPivot for SharePoint 執行個體需要此元件。 如果 Excel Services 正在使用舊版的提供者，則連接要求將會失敗。 請注意，必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝套件 (spPowerPivot.msi) 來安裝提供者，以確保安裝支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 所需的所有元件。  
   
   
-##  <a name="bkmk_sql11"></a>使用 SQL Server 安裝程式，在 Excel Services 伺服器上安裝 SQL Server 2012 OLE DB 提供者  
+##  <a name="install-the-sql-server-2012-ole-db-provider-on-an-excel-services-server-by-using-sql-server-setup"></a><a name="bkmk_sql11"></a>使用 SQL Server 安裝程式，在 Excel Services 伺服器上安裝 SQL Server 2012 OLE DB 提供者  
  使用下列指示，將 OLE DB 提供者和其他用戶端連接性元件加入至未安裝這些元件的 SharePoint 伺服器，例如執行 Excel Services 但未在相同硬體上安裝 PowerPivot for SharePoint 的應用程式伺服器。  
   
  使用以下指示來安裝目前的 Analysis Services OLE DB 提供者，並將 **Microsoft.AnalysisServices.Xmla.dll** 加入至全域組件。  
@@ -109,7 +106,7 @@ ms.locfileid: "79112173"
 5.  在 Windows\assembly 資料夾中，確認已列出 Microsoft.AnalysisServices.Xmla.dll 版本 11.0.0.0。  
   
   
-##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>使用 PowerPivot for SharePoint 安裝套件（Sppowerpivot.msi .msi）來安裝 SQL Server 2012 OLE DB 提供者  
+##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>使用 PowerPivot for SharePoint 安裝套件（Sppowerpivot.msi .msi）來安裝 SQL Server 2012 OLE DB 提供者  
  使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安裝套件 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) **來將**OLE DB 提供者安裝於 Excel Services 伺服器上。  
   
 #### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>從 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。  
@@ -125,9 +122,8 @@ ms.locfileid: "79112173"
 5.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://technet.microsoft.com/library/hh758436.aspx)。  
   
   
-##  <a name="bkmk_kj"></a>安裝 SQL Server 2008 R2 OLE DB 提供者以裝載舊版活頁簿  
- 請依照下列指示安裝 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 MSOLAP.4 提供者，並且登錄 Microsoft.AnalysisServices.ChannelTransport.dll 檔。 ChannelTransport 是 Analysis Services OLE DB 提供者的子元件。 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的提供者會在使用 ChannelTransport 建立連接時讀取登錄。 登錄此檔案是一個後續安裝步驟，只需要針對 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 伺服器上 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 提供者處理的連接執行。  
+##  <a name="install-the-sql-server-2008-r2-ole-db-provider-to-host-earlier-version-workbooks"></a><a name="bkmk_kj"></a>安裝 SQL Server 2008 R2 OLE DB 提供者以裝載舊版活頁簿  
+ 請依照下列指示安裝 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 MSOLAP.4 提供者，並且登錄 Microsoft.AnalysisServices.ChannelTransport.dll 檔。 ChannelTransport 是 Analysis Services OLE DB 提供者的子元件。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的提供者會在使用 ChannelTransport 建立連接時讀取登錄。 登錄此檔案是一個後續安裝步驟，只需要針對 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 伺服器上 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 提供者處理的連接執行。  
   
 #### <a name="step-1-download-and-install-the-client-library"></a>步驟 1：下載和安裝用戶端文件庫  
   
@@ -147,7 +143,7 @@ ms.locfileid: "79112173"
   
 3.  移至此資料夾 C:\Windows\assembly\GAC_MSIL\Microsoft.AnalysisServices.ChannelTransport\10.0.0.0__89845dcd8080cc91  
   
-4.  輸入下列命令：`regasm microsoft.analysisservices.channeltransport.dll`  
+4.  輸入下列命令： `regasm microsoft.analysisservices.channeltransport.dll`  
   
 5.  針對您手動安裝 2008 R2 版提供者的任何電腦重複上述步驟。  
   
@@ -157,7 +153,7 @@ ms.locfileid: "79112173"
   
 2.  此外，您可以檢查檔案版本。  
   
-     移至 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`。 以滑鼠右鍵按一下 **msolap100.dll** ，然後選取 **[屬性]**。 按一下 [詳細資料]****。  
+     移至 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10` 。 以滑鼠右鍵按一下 **msolap100.dll** ，然後選取 **[屬性]**。 按一下 [詳細資料]****。  
   
      檢視檔案版本資訊。 版本應包含10.50。\<buildnumber>。  
   

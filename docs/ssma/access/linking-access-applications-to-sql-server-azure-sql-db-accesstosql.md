@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112070"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>將存取應用程式連結至 SQL Server-Azure SQL DB （AccessToSQL）
@@ -146,7 +146,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>在遷移資料之後遺失超連結功能  
 **原因：** 在遷移資料之後，資料行中的超連結會失去其功能並變成簡單的**Nvarchar （max）** 資料行。  
   
-**解決方式：** 無.  
+**解決方式︰** 無。  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>存取不支援某些 SQL Server 資料類型  
 **原因：** 如果您稍後將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表更新為包含存取不支援的資料類型，就無法在存取中開啟資料表。  

@@ -1,5 +1,5 @@
 ---
-title: 通話儲存 (ODBC) |微軟文件
+title: 呼叫預存程式（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: baa8ad51341311014d841c0e31251b0780828389
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281926"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>執行預存程序 - 呼叫預存程序
@@ -27,7 +27,7 @@ ms.locfileid: "81281926"
   
   當 SQL 陳述式使用 ODBC CALL 逸出子句呼叫預存程序時，Microsoft® SQL Server™ 驅動程式會使用遠端預存程序呼叫 (RPC) 機制將程序傳送到 SQL Server。 RPC 要求會略過 SQL Server 中大部分的陳述式剖析和參數處理，也比使用 Transact-SQL EXECUTE 陳述式來得快。  
   
- 有關展示此功能的範例應用程式,請參閱[處理傳回代碼和輸出參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+ 如需示範這項功能的範例應用程式，請參閱[處理 &#40;ODBC&#41;的傳回碼和輸出參數](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>將程序當做 RPC 執行  
   
@@ -37,7 +37,7 @@ ms.locfileid: "81281926"
     {? = CALL procname (?,?)}  
     ```  
   
-2.  為每個輸入、輸入/輸出與輸出參數以及過程傳回值(如果有)呼叫[SQLBind 參數](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)。  
+2.  針對每個輸入、輸入/輸出和輸出參數，以及程式傳回值（如果有的話），呼叫[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 。  
   
 3.  使用[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)執行語句。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "81281926"
 >  如果應用程式使用 Transact-SQL EXECUTE 語法 (相對於 ODBC CALL 逸出序列) 來提交程序，則 SQL Server ODBC 驅動程式會將程序呼叫當做 SQL 陳述式 (而不是 RPC) 傳遞到 SQL Server。 此外，如果使用 Transact-SQL EXECUTE 陳述式，則不會傳回輸出參數。  
   
 ## <a name="see-also"></a>另請參閱  
-  [批次儲存程序呼叫](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
- [執行預存程序](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
+  [批次處理預存程序呼叫](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [執行預存程式](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [呼叫預存程式](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [程序](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLBulk 操作按書籤更新行 |微軟文件
+title: 使用 SQLBulkOperations 依書簽更新資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283196"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 依書籤更新資料列
-按書籤更新行時 **,SQLBulk操作**使數據源更新表的一行或多行。 行由綁定書簽列中的書籤標識。 行使用每個綁定列的應用程式緩衝區中的數據進行更新(除非列的長度/指標緩衝區中的值SQL_COLUMN_IGNORE)。 未綁定列將不會更新。  
+依書簽更新資料列時， **SQLBulkOperations**會讓資料來源更新資料表的一或多個資料列。 資料列是由系結的書簽資料行中的書簽所識別。 在每個系結資料行的應用程式緩衝區中，會使用資料來更新該資料列（但當資料行的長度/指標緩衝區中的值是 SQL_COLUMN_IGNORE 時除外）。 未系結的資料行將不會更新。  
   
- 要使用**SQLBulk 操作**按書籤更新行,應用程式:  
+ 若要使用**SQLBulkOperations**，以書簽更新資料列，應用程式：  
   
-1.  檢索並緩存要更新的所有行的書籤。 如果有多個書籤和按列綁定,則書簽存儲在陣列中;如果使用多個書籤和按列綁定,則書籤將存儲在陣列中。如果有多個書籤和逐行綁定,則書簽存儲在行結構陣組中。  
+1.  抓取並快取要更新之所有資料列的書簽。 如果使用一個以上的書簽和資料行取向系結，則會將書簽儲存在陣列中;如果使用一個以上的書簽和資料列取向系結，則會將書簽儲存在資料列結構的陣列中。  
   
-2.  將SQL_ATTR_ROW_ARRAY_SIZE語句屬性設置為書籤數,並將包含書籤值的緩衝區或書籤陣列綁定到列 0。  
+2.  將 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性設定為書簽的數目，並將包含書簽值或書簽陣列的緩衝區系結至資料行0。  
   
-3.  將新的數據值放在行集緩衝區中。 有關如何使用**SQLBulk 操作**傳送長資料的資訊,請參閱[長資料和 SQLSetPos 和 SQLBulk 操作](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
+3.  將新的資料值放在資料列集緩衝區中。 如需有關如何使用**SQLBulkOperations**傳送長資料的詳細資訊，請參閱[冗長資料和 SQLSetPos 和 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   
-4.  根據需要設置每列的長度/指示器緩衝區中的值。 這是數據或SQL_NTS的位元組長度,用於綁定到字串緩衝區的列、綁定到二進位緩衝區的列的數據字節長度,以及要設置為NULL的任何列SQL_NULL_DATA。  
+4.  視需要設定每個資料行的長度/指標緩衝區中的值。 這是系結至字串緩衝區的 SQL_NTS 資料行的位元組長度、系結至二進位緩衝區之資料行的位元組長度，以及要設定為 Null 的任何資料行 SQL_Null_DATA。  
   
-5.  設置不更新為SQL_COLUMN_IGNORE列的長度/指示器緩衝區中的值。 儘管應用程式可以跳過此步驟並重新發送現有數據,但這效率低下,並且可能會將值發送到讀取時被截斷的數據源。  
+5.  將這些資料行的長度/指標緩衝區中的值設定為不會更新為 SQL_COLUMN_IGNORE。 雖然應用程式可以略過此步驟並重新傳送現有資料，但這種情況沒有效率，而且會在讀取資料時將值傳送到已截斷的資料來源。  
   
-6.  呼叫**SQLBulk 操作**,*操作*參數設定為SQL_UPDATE_BY_BOOKMARK。  
+6.  呼叫**SQLBulkOperations** ，並將*Operation*引數設定為 SQL_UPDATE_BY_BOOKMARK。  
   
- 對於作為更新發送到數據源的每一行,應用程式緩衝區應具有有效的行數據。 如果通過提取填充應用程式緩衝區,則如果已維護行狀態陣列,並且行的狀態值為SQL_ROW_DELETED、SQL_ROW_ERROR 或SQL_ROW_NOROW,則無效數據可能會無意中發送到數據源。
+ 針對傳送至資料來源做為更新的每個資料列，應用程式緩衝區應該具有有效的資料列資料。 如果應用程式緩衝區已藉由提取填滿，如果已維護資料列狀態陣列，而且資料列的狀態值是 SQL_ROW_DELETED、SQL_ROW_ERROR 或 SQL_ROW_NOROW，則不正確資料可能會不小心傳送至資料來源。

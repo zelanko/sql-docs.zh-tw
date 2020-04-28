@@ -20,10 +20,10 @@ ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79090574"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
@@ -34,8 +34,7 @@ ms.locfileid: "79090574"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業排程的識別碼。|  
+|**schedule_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業排程的識別碼。|  
 |**schedule_uid**|**uniqueidentifier**|作業排程的唯一識別碼。 這個值用來識別分散式作業的排程。|  
 |**originating_server_id**|**int**|作業排程的來源主要伺服器識別碼。|  
 |**name**|**sysname （Nvarchar （128））**|作業排程的使用者自訂名稱。 這個名稱在作業內必須是唯一的。|  
@@ -45,7 +44,7 @@ ms.locfileid: "79090574"
 |**freq_interval**|**int**|執行作業的天數。 取決於**freq_type**的值。 預設值為**0**，表示未使用**freq_interval** 。 如需可能的值及其效果，請參閱下表。|  
 |**freq_subday_type**|**int**|**Freq_subday_interval**的單位。 以下是可能的值及其描述。<br /><br /> <br /><br /> **1** ：在指定的時間<br /><br /> **2** ：秒<br /><br /> **4** ：分鐘<br /><br /> **8** ：小時|  
 |**freq_subday_interval**|**int**|每次執行作業之間所發生的**freq_subday_type**週期數。|  
-|**freq_relative_interval**|**int**|當每個月發生**freq_interval**時，如果**freq_type**為**32** （每月相對）。 可以是下列其中一個值：<br /><br /> **0** = **freq_relative_interval**未使用<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  
+|**freq_relative_interval**|**int**|當每個月發生**freq_interval**時，如果**freq_type**為**32** （每月相對）。 可以是下列值之一：<br /><br /> **0** = **freq_relative_interval**未使用<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  
 |**freq_recurrence_**<br /><br /> **在內**|**int**|作業的排程執行之間的週數或月數。 只有在**freq_type**是**8**、 **16**或**32**時，才會使用**freq_recurrence_factor** 。 如果此資料行包含**0**，則不會使用**freq_recurrence_factor** 。|  
 |**active_start_date**|**int**|可以開始執行作業的日期。 日期格式為 YYYYMMDD。 NULL 表示今天的日期。|  
 |**active_end_date**|**int**|可以停止執行作業的日期。 日期格式為 YYYYMMDD。|  

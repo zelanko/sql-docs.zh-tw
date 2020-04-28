@@ -1,5 +1,5 @@
 ---
-title: 繫結列以區塊游標 |微軟文件
+title: 系結資料行以搭配使用區塊資料指標 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284898"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>繫結資料行以搭配使用區塊資料指標
-由於塊游標返回多行,因此使用它們的應用程序必須將變數陣列綁定到每列,而不是單個變數。 這些陣列統稱為*行集緩衝區*。 以下是繫結兩種樣式:  
+因為區塊資料指標會傳回多個資料列，所以使用它們的應用程式必須將變數陣列系結至每個資料行，而不是單一變數。 這些陣列統稱為資料列*集緩衝區*。 以下是兩種系結樣式：  
   
--   將陣列綁定到每列。 這稱為*按列綁定*,因為每個數據結構(陣列)都包含單個列的數據。  
+-   將陣列系結至每個資料行。 這稱為資料*行*取向的系結，因為每個資料結構（陣列）都包含單一資料行的資料。  
   
--   定義一個結構來保存整個行的數據並綁定這些結構的陣列。 這稱為*行綁定*,因為每個數據結構都包含單個行的數據。  
+-   定義結構來保存整個資料列的資料，並系結這些結構的陣列。 這稱為資料*列*取向的系結，因為每個資料結構都會包含單一資料列的資料。  
   
- 與應用程式將單個變數綁定到列一樣,它調用**SQLBindCol**將陣列綁定到列。 唯一的區別是傳遞的位址是數位位址,而不是單個變數位址。 應用程式設置SQL_BIND_BY_COLUMN語句屬性以指定它是使用按列綁定還是按行綁定。 是按列綁定還是按行綁定,很大程度上是應用程式首選項的問題。 行綁定可能更貼近應用程式的數據佈局,在這種情況下,它將提供更好的性能。  
+ 當應用程式將單一變數系結至資料行時，它會呼叫**SQLBindCol**來將陣列系結至資料行。 唯一的差別在於傳遞的位址是陣列位址，而不是單一變數位址。 應用程式會設定 SQL_BIND_BY_COLUMN 語句屬性，以指定它是否使用資料行取向或資料列取向的系結。 是否要使用資料行取向或資料列取向的系結，主要是考慮應用程式的喜好設定。 資料列取向的系結可能會更密切地對應至應用程式的資料配置，在此情況下，它會提供較佳的效能。  
   
  此章節包含下列主題。  
   
--   [列-威斯綁定](../../../odbc/reference/develop-app/column-wise-binding.md)  
+-   [資料行取向的系結](../../../odbc/reference/develop-app/column-wise-binding.md)  
   
--   [行-威斯綁定](../../../odbc/reference/develop-app/row-wise-binding.md)
+-   [資料列取向的系結](../../../odbc/reference/develop-app/row-wise-binding.md)

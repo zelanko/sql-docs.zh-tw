@@ -1,5 +1,5 @@
 ---
-title: 錯誤消息(可視化福克斯 Pro ODBC 驅動程式) |微軟文件
+title: 錯誤訊息（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,41 +16,41 @@ ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31f894e58da93fe6091dba306f8b765d14bac2cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286398"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>錯誤訊息 (Visual FoxPro ODBC Driver)
-發生錯誤時,Visual FoxPro 驅動程式傳回以下資訊:  
+當錯誤發生時，Visual FoxPro 驅動程式會傳回下列資訊：  
   
--   這個機錯誤編號與錯誤訊息文字  
+-   原生錯誤號碼和錯誤訊息正文  
   
--   SQLSTATE(ODBC 錯誤代碼)與錯誤訊息文字  
+-   SQLSTATE （ODBC 錯誤碼）和錯誤訊息正文  
   
- 您可以通過呼叫[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)來存取此錯誤資訊。  
+ 您可以藉由呼叫[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)來存取此錯誤資訊。  
   
-## <a name="native-errors"></a>本機錯誤  
- 對於資料源中發生的錯誤,Visual FoxPro 驅動程式返回本機錯誤編號和錯誤消息文本。 有關本機錯誤編號的清單,請參閱可視化[FoxPro ODBC 驅動程式本機錯誤訊息](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)。  
+## <a name="native-errors"></a>原生錯誤  
+ 對於資料來源中發生的錯誤，Visual FoxPro 驅動程式會傳回原生錯誤號碼和錯誤訊息正文。 如需原生錯誤號碼的清單，請參閱[Visual FOXPRO ODBC Driver 原生錯誤訊息](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)。  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC 錯誤碼)  
- 對於 Visual FoxPro 驅動程式檢測到和返回的錯誤,驅動程式將返回的本機錯誤編號映射到相應的 SQLSTATE。 如果本機錯誤編號沒有要映射到的 ODBC 錯誤代碼,則 Visual FoxPro 驅動程式將返回 SQLSTATE S1000(一般錯誤)。  
+ 對於 Visual FoxPro 驅動程式偵測到並傳回的錯誤，驅動程式會將傳回的原生錯誤號碼對應至適當的 SQLSTATE。 如果原生錯誤號碼沒有要對應的 ODBC 錯誤碼，Visual FoxPro 驅動程式會傳回 SQLSTATE S1000 （一般錯誤）。  
   
- 有關 Visual FoxPro ODBC 驅動程式產生的 SQLSTATE 值清單,請參閱[ODBC 錯誤代碼](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)。  
+ 如需 Visual FoxPro ODBC 驅動程式針對對應的 Visual FoxPro 錯誤所產生的 SQLSTATE 值清單，請參閱[ODBC 錯誤碼](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)。  
   
 ## <a name="syntax"></a>語法  
- 錯誤訊息具有以下格式:  
+ 錯誤訊息的格式如下：  
   
- **【** *供應商* **】** *ODBC_component* **】** *error_message*  
+ **[** *廠商* **] [** *ODBC_component* **]** *error_message*  
   
- 括號 (* +) 中的前置碼識別下表中定義的錯誤來源。  
+ 以方括弧（[]）括住的前置詞，可識別下表所定義的錯誤來源。  
   
 |資料來源|前置詞|值|  
 |-----------------|------------|-----------|  
-|驅動程式管理員|[供應商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />N/A|  
-|視覺化福斯專業驅動程式|供應商*<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 視覺福克斯專業驅動程式]<br />N/A|  
+|驅動程式管理員|製造商<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />N/A|  
+|Visual FoxPro 驅動程式|製造商<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驅動程式]<br />N/A|  
   
- 例如,如果 Visual FoxPro ODBC 驅動程式找不到檔案員工.dbf,它可能會返回以下錯誤訊息:  
+ 例如，如果 Visual FoxPro ODBC 驅動程式找不到檔案 employee，它可能會傳回下列錯誤訊息：  
   
- [*微軟*]*ODBC 可視化福克斯Pro驅動程式*[檔 '員工.dbf' 不存在"
+ "[*Microsoft*] [*ODBC Visual FoxPro Driver*] 檔案 ' employee .dbf ' 不存在」
