@@ -1,5 +1,5 @@
 ---
-title: 設定區塊大小指令 |微軟文件
+title: 設定區塊命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3eb9fbe9df90f7ddafebc6baa029164a578a6da3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300898"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 命令
-指定如何為備忘錄欄位的儲存分配磁碟空間。  
+指定如何配置磁碟空間給備忘欄位的儲存。  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,8 +30,8 @@ SET BLOCKSIZE TO nBytes
 ```  
   
 ## <a name="arguments"></a>引數  
- *n 位元組*  
- 指定分配備忘錄欄位的磁碟空間的塊大小。 如果*n 位元組*為 0,則以單個字節(1 位元組的塊)分配磁碟空間。 如果*n 位元組*是介於 1 和 32 之間的整數,則磁碟空間以 n*位元組*乘以 512 為單位分配。 如果*n 位元組*大於 32,則以 n*位元組*塊分配磁碟空間。 如果指定塊大小值大於 32,則可以節省大量磁碟空間。  
+ *nBytes*  
+ 指定用來配置備忘欄位之磁碟空間的區塊大小。 如果*nBytes*為0，則會以單一位元組（1個位元組的區塊）配置磁碟空間。 如果*nBytes*是介於1到32之間的整數，則會在*nBytes*位元組的區塊中配置磁碟空間乘以512。 如果*nBytes*大於32，則會在*nBytes*位元組區塊中配置磁碟空間。 如果您指定的區塊大小值大於32，則可以節省大量的磁碟空間。  
   
 ## <a name="remarks"></a>備註  
- SET BLOCKSIZE 的預設值為 64。 要在創建檔後將塊大小重置為其他值,請將其設置為新值,然後使用 COPY 創建新表。 新表具有指定的塊大小。
+ SET 區塊的預設值是64。 若要在建立檔案之後，將區塊大小重設為不同的值，請將它設定為新的值，然後使用 [複製] 來建立新的資料表。 新的資料表具有指定的區塊大小。

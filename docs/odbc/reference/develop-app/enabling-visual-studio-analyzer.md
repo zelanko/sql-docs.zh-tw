@@ -1,5 +1,5 @@
 ---
-title: 啟用視覺化工作室分析器 |微軟文件
+title: 啟用 Visual Studio Analyzer |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,30 +13,30 @@ ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d80d54dc4aeebcc5c32d07a2beebb9ded41bf355
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300448"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>啟用 Visual Studio Analyzer
 > [!IMPORTANT]  
->  從 Windows 8 開始刪除了對可視化工作室分析器的支援(視覺工作室分析器僅包含在舊版本的 Visual Studio 中)。 對於其他故障排除機制,請使用 BID 跟蹤。  
+>  從 Windows 8 開始已移除 Visual Studio Analyzer 的支援（Visual Studio Analyzer 僅包含在舊版的 Visual Studio 中）。 如需替代的疑難排解機制，請使用出價追蹤。  
   
- Microsoft Visual Studio 分析器是一種應用程式分析工具,旨在提供應用程式在所有層和系統中性能的高級觀察。 它側重於元件之間的交互。 可以從 ODBC 管理員的『跟蹤』選項卡啟動和停止可視化工作室分析器。  
+ Microsoft Visual Studio 分析器是一種應用程式分析工具，專門設計來提供應用程式在所有層級和系統上的效能。 它著重在元件之間的互動。 您可以從 [ODBC 管理員] 的 [追蹤] 索引標籤啟動和停止 Visual Studio Analyzer。  
   
- 要檢視 ODBC 產生的任何事件,請按照以下步驟操作:  
+ 若要查看 ODBC 所產生的任何事件，請遵循下列步驟：  
   
 1.  存取 ODBC 資料來源管理員。  
   
-2.  按下 **「追蹤」** 選項卡。  
+2.  按一下 [**追蹤**] 索引標籤。  
   
-3.  按下 **「開始可視化工作室分析器跟蹤**」。  
+3.  按一下 [**啟動 Visual Studio Analyzer 追蹤**]。  
   
 4.  按一下 [確定]  。  
   
- 視覺化工作室分析器事件產生將繼續,直到選擇**停止視覺工作室分析器追蹤**。  
+ Visual Studio Analyzer 事件產生會繼續，直到選取 [**停止 Visual Studio Analyzer 追蹤**] 為止。  
   
- 本節包含以下主題。  
+ 本章節包含下列主題。  
   
 -   [ODBC 驅動程式管理員所產生的事件](../../../odbc/reference/develop-app/events-generated-by-the-odbc-driver-manager.md)

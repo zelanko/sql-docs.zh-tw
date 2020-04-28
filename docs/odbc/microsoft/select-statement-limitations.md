@@ -1,5 +1,5 @@
 ---
-title: 選擇敘述限制 :微軟文件
+title: SELECT 語句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d91e93076a67287cbbd2b64b2ad0d6414a0aea6d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300918"
 ---
 # <a name="select-statement-limitations"></a>SELECT 陳述式限制
-聚合函數列不能與 SELECT 語句中的非聚合列混合。  
+彙總函式資料行不能與 SELECT 語句中的非匯總資料行混合使用。  
   
- 具有 GROUP BY 子句的 SELECT 語句的選擇清單只能具有來自 GROUP BY 子句或集函數的運算式。  
+ 具有 GROUP BY 子句的 SELECT 語句之選取清單，只能有 GROUP BY 子句中的運算式或設定函數。  
   
- 不支援在包含 GROUP BY 子句的 SELECT 語句中使用星號(以選擇所有列)。 必須指定要選擇的列的名稱。  
+ 不支援在包含 GROUP BY 子句的 SELECT 語句中使用星號（以選取所有資料行）。 必須指定要選取之資料行的名稱。  
   
- 不支援在 SELECT 語句中使用垂直條。 如果需要引用包含垂直條的數據值,請使用 SELECT 語句中的參數。  
+ 不支援在 SELECT 語句中使用分隔號。 如果您需要參考包含分隔號的資料值，請在 SELECT 語句中使用參數。  
   
- 在 SELECT 語句中使用列別名時,「as」一詞必須位於別名之前。 例如,"SELECT col1 作為 a 從 b"。 如果沒有"as",語句將返回錯誤。  
+ 在 SELECT 語句中使用資料行別名時，"as" 這個字必須在別名前面。 例如，「SELECT col1 as a from b」。 如果沒有 "as"，語句會傳回錯誤。  
   
- 如果在 SELECT 語句中輸入了不正確的列名稱,則傳回 SQLSTATE 07001 錯誤「錯誤參數數」,而不是 SQLSTATE S0022 錯誤「未找到列」。  
+ 如果在 SELECT 語句中輸入不正確的資料行名稱，則會傳回 SQLSTATE 07001 錯誤「參數數目錯誤」，而不是 SQLSTATE S0022 錯誤「找不到資料行」。  
   
- 使用 Microsoft Excel 驅動程式時,如果將空字串插入到列中,則空字串將轉換為 NULL;如果將空字串插入到列中,則將空字串轉換為 NULL。使用 WHERE 子句中的空字串執行的搜索 SELECT 語句將不會在該列上成功。
+ 使用 Microsoft Excel 驅動程式時，如果將空字串插入至資料行，則會將空字串轉換成 Null;在 WHERE 子句中使用空字串執行的搜尋 SELECT 語句將不會在該資料行上成功。

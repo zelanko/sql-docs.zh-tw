@@ -1,5 +1,5 @@
 ---
-title: ODBC 翻譯器子鍵 :微軟文件
+title: ODBC 轉譯子機碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296218"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 轉譯程式子機碼
-ODBC 翻譯人員子鍵下的值列出了已安裝的譯員。 這些值的格式顯示在下表中。  
+ODBC 轉譯子機碼底下的值會列出已安裝的轉譯者。 下表顯示這些值的格式。  
   
 |名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|*譯者-德茨*|REG_SZ|**安裝**|  
+|*translator-desc*|REG_SZ|**已安裝**|  
   
- *翻譯器-desc*名稱由轉換器開發人員定義。  
+ Translator *-desc*名稱是由 translator developer 所定義。  
   
- 例如,假設使用者已安裝 Microsoft ®代碼頁轉換器和自訂 ASCII 到 EBCDIC 轉換器。 ODBC 翻譯人員子鍵下的值可能如下所示:  
+ 例如，假設使用者已安裝 Microsoft®字碼頁翻譯工具，以及自訂的 ASCII 至 EBCDIC 轉譯程式。 ODBC 轉譯子機碼底下的值可能如下所示：  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

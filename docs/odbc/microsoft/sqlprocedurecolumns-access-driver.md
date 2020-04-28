@@ -1,5 +1,5 @@
 ---
-title: SQL程式列(訪問驅動程式) |微軟文件
+title: SQLProcedureColumns （Access 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: be17776ac6b6879140a7c57bede1b3cb539d97be
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299458"
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns (Access 驅動程式)
 > [!NOTE]  
->  本主題提供特定於訪問驅動程序的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
+>  本主題提供存取驅動程式特定的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
- 應用程式開發人員應查找從結果集末尾開始並向後移動的驅動程式定義的列。  
+ 應用程式開發人員應該從結果集的結尾開始尋找驅動程式定義的資料行，然後繼續回溯。  
   
-|資料行|註解|  
+|資料行|評價|  
 |------------|--------------|  
-|COLUMN_TYPE|SQL_PARAM_INPUT或SQL_RESULT_COL|  
-|序|這是在結果集末尾返回的特定於驅動程式的列。 列的 SQL 類型是整數。|
+|COLUMN_TYPE|SQL_PARAM_INPUT 或 SQL_RESULT_COL|  
+|序列|這是在結果集結尾傳回的驅動程式特定的資料行。 資料行的 SQL 類型是整數。|

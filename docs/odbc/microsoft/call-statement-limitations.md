@@ -1,5 +1,5 @@
 ---
-title: CALL 語句限制 |微軟文件
+title: CALL 語句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 5802891f-27f6-48b3-aeeb-aaef400b318c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5093e73c04e065985827517241366e8ed088cd11
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301449"
 ---
 # <a name="call-statement-limitations"></a>CALL 陳述式限制
-(此限制僅適用於 Microsoft 存取驅動程式。  
+（這項限制僅適用于 Microsoft Access 驅動程式）。  
   
- 表達式不作為調用過程的參數支援。
+ 運算式不支援做為所呼叫程式的參數。

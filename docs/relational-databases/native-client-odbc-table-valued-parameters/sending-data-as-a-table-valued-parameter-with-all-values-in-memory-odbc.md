@@ -1,5 +1,5 @@
 ---
-title: 表值參數,記憶體中的值 (ODBC)
+title: 資料表值參數，記憶體中的值（ODBC）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 042dd929e2000000042618d84dc0195ec57a3e9c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297795"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>使用記憶體中的所有值，將資料當做資料表值參數傳送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 有關展示表值參數的另一個範例,請參閱[使用表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -89,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  參數繫結的第二個階段是建立資料表值參數的資料行。 參數焦點會先設定為資料表值參數的序數。 然後,表值的列通過使用 SQLBind 參數綁定的方式與作為存儲過程的參數(但使用參數編號的列序數)的方式相同。 如果有其他資料表值參數，則會輪流將焦點設定為每個資料表值參數，並繫結其資料行。 最後，參數焦點就會重設為 0。  
+3.  參數繫結的第二個階段是建立資料表值參數的資料行。 參數焦點會先設定為資料表值參數的序數。 然後，使用 SQLBindParameter 來系結資料表值的資料行，其方式與預存程式的參數相同，但具有 ParameterNumber 的資料行序數。 如果有其他資料表值參數，則會輪流將焦點設定為每個資料表值參數，並繫結其資料行。 最後，參數焦點就會重設為 0。  
   
     ```cpp
     // Bind columns for the table-valued parameter (param 2).  

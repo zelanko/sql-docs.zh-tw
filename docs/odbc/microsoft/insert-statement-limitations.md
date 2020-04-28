@@ -1,5 +1,5 @@
 ---
-title: 插入敘述限制 :微軟文件
+title: INSERT 語句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f903f15ec13baa28a789891c1527dc742daa68ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300000"
 ---
 # <a name="insert-statement-limitations"></a>INSERT 陳述式限制
-如果插入的數據太長,無法放入列,則在右側截斷數據,恕不另行通知。  
+插入的資料會在右側截斷，如果太長而無法放入資料行中，則不會發出警告。  
   
- 嘗試插入欄資料類型範圍外的值會導致將 NULL 插入到列中。  
+ 嘗試插入超出資料行資料類型範圍的值，會導致將 Null 插入資料行。  
   
- 當使用 dBASE、Microsoft Excel、悖論或文本驅動程式時,將零長度字串插入列實際上插入 NULL。  
+ 使用 dBASE、Microsoft Excel、Paradox 或 Textdriver 時，將長度為零的字串插入資料行中，實際上會改為插入 Null。  
   
- 使用 Microsoft Excel 驅動程式時,如果將空字串插入到列中,則空字串將轉換為 NULL;如果將空字串插入到列中,則將空字串轉換為 NULL。使用 WHERE 子句中的空字串執行的搜索 SELECT 語句將不會在該列上成功。  
+ 使用 Microsoft Excel 驅動程式時，如果將空字串插入至資料行，則會將空字串轉換成 Null;在 WHERE 子句中使用空字串執行的搜尋 SELECT 語句將不會在該資料行上成功。  
   
- 在以下兩個條件下,悖論驅動程式無法啟動表:  
+ 在兩個情況下，Paradox 驅動程式無法更新資料表：  
   
--   未在表上定義唯一索引時。 對於空表,情況並非如此,即使表上未定義唯一索引,也可以用單個行進行更新。 如果單行插入於沒有唯一索引的空表中,則應用程式無法創建唯一索引或在插入單行后插入其他數據。  
+-   未在資料表上定義唯一索引時。 空白資料表的這種情況並不適用，即使資料表上未定義唯一索引，也可以使用單一資料列更新。 如果在沒有唯一索引的空白資料表中插入單一資料列，應用程式就無法在插入單一資料列之後，建立唯一的索引或插入其他資料。  
   
--   如果未實現 Borland 資料庫引擎,則僅允許在 Paradox 表上讀取和追加語句。  
+-   如果未執行 Borland 資料庫引擎，Paradox 資料表上只允許 read 和 append 語句。  
   
- 使用 Text 驅動程式時,NULL 值由固定長度檔中的空白填充字串表示,但由分隔檔中的空格表示。 例如,在包含三個字段的行中,第二個字段是 NULL 值:  
+ 使用文字驅動程式時，Null 值會由固定長度檔案中以空白填補的字串表示，但在分隔的檔案中不會以空格表示。 例如，在包含三個欄位的下列資料列中，第二個欄位是 Null 值：  
   
 ```  
 "Smith:,, 123  
 ```  
   
- 使用文本驅動程式時,可以使用前導空格填充所有列值。 任何行的長度必須小於或等於65,543位元組。
+ 使用文字驅動程式時，所有的資料行值都可以填補開頭的空格。 任何資料列的長度都必須小於或等於65543個位元組。

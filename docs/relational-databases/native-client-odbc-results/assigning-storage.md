@@ -1,5 +1,5 @@
 ---
-title: 分配存儲 |微軟文件
+title: 指派儲存體 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 067abcfc8aa5bfd781e6656e3ced9f9e1e573e5f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297868"
 ---
 # <a name="assigning-storage"></a>指派儲存體
@@ -34,7 +34,7 @@ ms.locfileid: "81297868"
 
   應用程式可以在執行 SQL 陳述式之前或之後指派結果的儲存體。 如果應用程式先準備或執行 SQL 陳述式，它就可以查詢結果集的相關資訊，然後再指派結果的儲存體。 例如，如果結果集是未知的，應用程式就必須擷取資料行的數目，然後才能指派它們的儲存體。  
   
- 要關聯資料列的儲存,應用程式呼叫[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)並傳遞它:  
+ 為了讓資料行的儲存區產生關聯，應用程式會呼叫[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)並傳遞它：  
   
 -   要轉換資料的目標資料類型。  
   
@@ -52,15 +52,15 @@ ms.locfileid: "81297868"
   
 -   當每個資料行繫結至自己的變數陣列時，就會完成資料行取向繫結。  
   
-     按列方向綁定是透過調用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來指定的,*其屬性*設置為*SQL_ATTR_ROW_BIND_TYPE,ValuePtr*設置為SQL_BIND_BY_COLUMN。 所有陣列的元素數目都必須相同。  
+     藉由呼叫[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)並將*屬性*設定為 SQL_ATTR_ROW_BIND_TYPE，並將*valueptr 是*設定為 SQL_BIND_BY_COLUMN 來指定資料行取向系結。 所有陣列的元素數目都必須相同。  
   
 -   當 SQL 陳述式的所有參數都是以單位的形式繫結至含有參數個別變數的結構陣列時，就會完成資料列取向繫結。  
   
-     按行綁定透過調用**SQLSetStmtAttr**來指定 *,其中屬性*設定為SQL_ATTR_ROW_BIND_TYPE,ValuePtr 設定為包含將接收結果集列的變數的結構的*ValuePtr*大小。  
+     資料列取向系結的指定方式是呼叫**SQLSetStmtAttr** ，並將*屬性*設定為 SQL_ATTR_ROW_BIND_TYPE，並將*valueptr 是*設定為包含將會接收結果集資料行之變數的結構大小。  
   
  應用程式也會將 SQL_ATTR_ROW_ARRAY_SIZE 設定為資料行或資料列陣列中的元素數目，並且設定 SQL_ATTR_ROW_STATUS_PTR 和 SQL_ATTR_ROWS_FETCHED_PTR。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [&#40;ODBC&#41;處理結果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

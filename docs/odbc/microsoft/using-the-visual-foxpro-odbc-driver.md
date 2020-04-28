@@ -1,5 +1,5 @@
 ---
-title: 使用視覺化福克斯Pro ODBC驅動程式 |微軟文件
+title: 使用 Visual FoxPro ODBC 驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2ce3cb5e16aca2587a7dc892763f194f54e085ad
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292548"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>使用 Visual FoxPro ODBC Driver
-在本節中,以下主題討論如何使用 Microsoft ® Visual FoxPro® ODBC 驅動程式:  
+在本節中，下列主題討論如何使用 Microsoft® Visual FoxPro® ODBC 驅動程式：  
   
 -   [新增 Visual FoxPro 資料來源](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  
   
@@ -33,8 +33,8 @@ ms.locfileid: "81292548"
   
 -   [使用連接字串](../../odbc/microsoft/using-connection-strings.md)  
   
--   [將視覺化 FoxPro ODBC 驅動程式與視覺化基本應用程式一起使用](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
+-   [將 Visual FoxPro ODBC 驅動程式與您的 Visual Basic 應用程式搭配使用](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
   
--   [將視覺化 FoxPro ODBC 驅動程式與您的 C 或 C++ 應用程式一起使用](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
+-   [搭配 C 或 c + + 應用程式使用 Visual FoxPro ODBC 驅動程式](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [從 Microsoft Office 存取 Visual FoxPro 資料](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)

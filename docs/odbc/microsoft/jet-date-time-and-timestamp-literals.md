@@ -1,5 +1,5 @@
 ---
-title: Jet:日期、時間和時間戳文本 |微軟文件
+title: Jet：日期、時間和時間戳記常值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 372b7c1dab1ad8ff000fb88729c3b02e05d4a21c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299930"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet：日期、時間和時間戳記常值
-為了達到最大的互通性,應用程式應使用轉義子句語法以 ODBC 規格格式傳遞日期文本:  
+為了達到最大的互通性，應用程式應該使用 escape 子句語法，傳遞 ODBC 標準格式的日期常值：  
   
--   對於日期文字,{d'*值*",其中*值*e 以"yyyy-mm-dd"的形式  
+-   若為日期常值，{d '*value*'}，其中*宣告*e 的格式為 "yyyy-mm-dd"  
   
--   對於時間文字,{t'*值*",其中*值*e 以"hh:mm:ss"的形式  
+-   若為時間常值，{t '*value*'}，其中*宣告*e 的格式為 "hh： mm： ss"  
   
- 對於時間戳文本 [ts '*值*'],其中*值*e 以形式"yyyy-mm-dd hh:mm:ss_.f...]"。
+ 針對時間戳記常值 {ts '*value*'}，其中*宣告*e 的格式為 "yyyy-mm-dd hh： mm： ss [. f ...]"。

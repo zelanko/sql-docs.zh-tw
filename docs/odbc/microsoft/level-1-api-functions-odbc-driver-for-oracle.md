@@ -1,5 +1,5 @@
 ---
-title: 1 級 API 功能(Oracle 的 ODBC 驅動程式) |微軟文件
+title: 層級 1 API 函式（ODBC Driver for Oracle） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,32 +17,32 @@ ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299948"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>層級 1 API 函式 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- 此級別的功能提供核心介面一致性以及其他功能(如事務支援)。  
+ 此層級的函式提供核心介面一致性，以及額外的功能，例如交易支援。  
   
-|API 功能|注意|  
+|API 函式|注意|  
 |------------------|-----------|  
-|**SQLColumns**|為表創建結果集,該表是指定表或表的列清單。 請求 PUBLIC 同義詞的列時,必須設置 SYNONYMCOLUMNS 連接屬性,並將空字串指定為*szTableOwner*參數。 傳回 PUBLIC 同義字的欄時,驅動程式將 TABLE NAME 列設定為空字串。 結果集在每行末尾包含一個附加列"ORDINAL 位置"。 此值是表中列的正位位置。|  
-|**SQLDriverConnect**|連接到現有數據源。 關於詳細資訊,請參考[連接字串格式與屬性](../../odbc/microsoft/connection-string-format-and-attributes.md)。|  
-|**SQLGetConnectOption**|傳回連接選項的當前設置。 此函數部分受支援。 驅動程式支援*fOption*參數的所有值,但不支援*fOption*參數[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)的某些*vParam*值。 有關詳細資訊,請參閱[連線選項](../../odbc/microsoft/connect-options.md)。|  
-|**SQLGetData**|檢索給定結果集的當前記錄中單個字段的值。|  
-|**SQLGetFunctions**|為所有支援的函數返回 TRUE。 由驅動程式管理員實施。|  
-|**SQLGetInfo**|返回有關 Oracle 的 ODBC 驅動程式以及\*與連接句柄*hdbc*關聯的資料來源的資訊,包括 SQLHDBC、SQLUSMALLINT、SQLPOINTER、SQLSMALLINT 和 SQLSMALLINT。|  
-|**SQLGetStmtOption**|返回語句選項的當前設置。 有關詳細資訊,請參閱[敘述選項](../../odbc/microsoft/statement-options.md)。|  
-|**SQLGetTypeInfo**|返回有關數據源支援的數據類型的資訊。 驅動程式返回 SQL 結果集中的資訊。|  
-|**SQLParamData**|與**SQLPutData**結合使用,在語句執行時指定參數數據。|  
-|**SQLPutData**|允許應用程式在語句執行時將參數或列的數據發送到驅動程式。|  
-|**SQLSet 連線選項**|提供對管理連接各個方面的選項的訪問。 此函數部分支援:驅動程式支援*fOption*參數的所有值,但不支援*fOption*參數[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)的某些*vParam*值。 有關詳細資訊,請參閱[連線選項](../../odbc/microsoft/connect-options.md)。|  
-|**SQLSetStmtOption**|設置與語句句柄*hstmt*相關的選項。 有關詳細資訊,請參閱[敘述選項](../../odbc/microsoft/statement-options.md)。|  
-|**SQLSpecialColumns**|檢索唯一標識表中行的最佳列集。|  
-|**SQLStatistics**|檢索有關單個表以及與表關聯的索引或標記名稱的統計資訊清單。 驅動程式將返回結果集。|  
-|**SQLTables**|傳回**SQLTables**敘述中參數指定的表格名稱的清單。 如果未指定參數,則返回存儲在當前數據源中的表名稱。 驅動程式將返回結果集。<br /><br /> 枚舉類型調用將不會接收遠端檢視或本地參數化檢視的結果集條目。 但是,對**SQLTables**的調用具有唯一的表名稱指定器,將查找具有該名稱的此類視圖的匹配項(如果存在);這允許 API 在創建新表之前檢查名稱衝突。<br /><br /> 公共同義詞返回時,值為"TABLE_OWNER。<br /><br /> SYS 或 SYSTEM 擁有的檢視標識為系統檢視。|
+|**SQLColumns**|建立資料表的結果集，這是指定之資料表或資料表的資料行清單。 當您要求公用同義字的資料行時，您必須已設定 SYNONYMCOLUMNS 連接屬性，並指定空字串做為*szTableOwner*引數。 傳回公用同義字的資料行時，驅動程式會將 [資料表名稱] 資料行設定為空字串。 結果集會在每個資料列的結尾包含一個額外的資料行，也就是序數位置。 此值是資料表中資料行的序數位置。|  
+|**SQLDriverConnect**|連接到現有的資料來源。 如需詳細資訊，請參閱[連接字串格式和屬性](../../odbc/microsoft/connection-string-format-and-attributes.md)。|  
+|**SQLGetConnectOption**|傳回連接選項的目前設定。 此函式是部分支援的功能。 此驅動程式支援*fOption*引數的所有值，但不支援*fOption*引數[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)的某些*vParam*值。 如需詳細資訊，請參閱[連接選項](../../odbc/microsoft/connect-options.md)。|  
+|**SQLGetData**|在給定結果集的目前記錄中，抓取單一欄位的值。|  
+|**SQLGetFunctions**|針對所有支援的函式傳回 TRUE。 由驅動程式管理員執行。|  
+|**SQLGetInfo**|傳回信息，包括 SQLHDBC、SQLUSMALLINT、SQLPOINTER、SQLSMALLINT 和 SQLSMALLINT \*，關於 ODBC Driver for Oracle 和與連接控制碼（ *hdbc*）相關聯的資料來源。|  
+|**SQLGetStmtOption**|傳回語句選項的目前設定。 如需詳細資訊，請參閱[語句選項](../../odbc/microsoft/statement-options.md)。|  
+|**SQLGetTypeInfo**|傳回資料來源所支援之資料類型的相關資訊。 驅動程式會傳回 SQL 結果集中的資訊。|  
+|**SQLParamData**|與**SQLPutData**搭配使用，以在語句的執行時間指定參數資料。|  
+|**SQLPutData**|允許應用程式在語句執行時間，將參數或資料行的資料傳送至驅動程式。|  
+|**SQLSetConnectOption**|提供管理連接層面之選項的存取權。 此函式是部分支援的：此驅動程式支援*fOption*引數的所有值，但不支援*fOption*引數的某些*vParam*值[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)。 如需詳細資訊，請參閱[連接選項](../../odbc/microsoft/connect-options.md)。|  
+|**SQLSetStmtOption**|設定與語句控制碼（ *hstmt*）相關的選項。 如需詳細資訊，請參閱[語句選項](../../odbc/microsoft/statement-options.md)。|  
+|**SQLSpecialColumns**|抓取可唯一識別資料表中之資料列的最佳資料行集合。|  
+|**SQLStatistics**|抓取關於單一資料表的統計資料清單，以及與資料表相關聯的索引或標記名稱。 驅動程式會以結果集的形式傳回信息。|  
+|**SQLTables**|傳回**SQLTables**語句中的參數所指定的資料表名稱清單。 如果未指定任何參數，則會傳回儲存在目前資料來源中的資料表名稱。 驅動程式會以結果集的形式傳回信息。<br /><br /> 列舉類型呼叫將不會收到遠端查看或本機參數化視圖的結果集專案。 不過，以唯一資料表名稱規範呼叫**SQLTables**時，將會尋找具有該名稱之這類視圖的相符項（如果有的話）。這可讓 API 在建立新資料表之前，檢查名稱衝突。<br /><br /> 會傳回具有 TABLE_OWNER 值 "" 的公用同義字。<br /><br /> SYS 或 SYSTEM 所擁有的視圖會識別為系統檢視。|

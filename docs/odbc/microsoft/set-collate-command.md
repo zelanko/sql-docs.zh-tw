@@ -1,5 +1,5 @@
 ---
-title: 設定 COLLATE 命令 |微軟文件
+title: 設定 COLLATE 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300888"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
-為後續索引和排序操作中字元欄位指定排序序列。  
+在後續的索引和排序作業中，指定字元欄位的定序序列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,48 +30,48 @@ SET COLLATE TO cSequenceName
 ```  
   
 ## <a name="arguments"></a>引數  
- *c 序列名稱*  
- 指定排序規則序列。 下表描述了可用的排序規則選項。  
+ *cSequenceName*  
+ 指定定序序列。 下表描述可用的定序順序選項。  
   
-|選項。|Language|  
+|選項|Language|  
 |-------------|--------------|  
 |荷蘭文|荷蘭文|  
-|GENERAL|英語、法語、德語、現代西班牙文、葡萄牙文和其他西歐語言|  
-|德語|德國電話簿訂單 (DIN)|  
+|GENERAL|英文、法文、德文、新式西班牙文、葡萄牙文和其他西歐語言|  
+|德語|德文的電話簿訂單（等）|  
 |冰島|冰島文|  
-|機|電腦(早期 FoxPro 版本的預設排序規則序列)|  
-|諾丹|挪威語, 丹麥文|  
+|機器碼|電腦（舊版 FoxPro 版本的預設定序順序）|  
+|NORDAN|挪威文，丹麥文|  
 |西班牙文|傳統西班牙文|  
-|斯威芬|瑞典語, 芬蘭文|  
-|優衣庫|獨特的重量|  
+|SWEFIN|瑞典文、芬蘭文|  
+|UNIQWT|唯一權數|  
   
 > [!NOTE]  
->  指定 SPANISH 選項時 *,ch*是一個字母,在*c*和*d*之間排序,*並在* *l*和*m*之間排序。  
+>  當您指定西班牙文選項時， *ch*是在*c*和*d*之間排序的單一字母，而*ll*會在*l*和*m*之間排序。  
   
- 如果將排序規則序列選項指定為文字字串,請確保在引號中包含這個選項:  
+ 如果您將定序序列選項指定為常值字元字串，請務必將選項括在引號中：  
   
 ```  
 SET COLLATE TO "SWEFIN"  
 ```  
   
- MACHINE 是預設排序規則序列選項,是 Xbase 使用者熟悉的序列。 字元在目前的程式碼頁中顯示時進行排序。  
+ [機器] 是預設定序順序選項，而且是使用者熟悉的序列 Xbase。 字元會依照出現在目前字碼頁中的順序排序。  
   
- 對於美國和西歐用戶來說,GENERAL 可能更可取。 字元在目前的程式碼頁中顯示時進行排序。 在 FoxPro 版本早於 2.5 中,索引可能已使用**上部**( ) 或**LOWER**( ) 函數創建,以將字元欄位轉換為一致大小寫。 在 FoxPro 版本晚於 2.5 中,您可以改為指定 GENERAL 排序規則序列選項並省略**UPPER**( ) 轉換。  
+ 一般適用于美國和西歐的使用者。 字元會依照出現在目前字碼頁中的順序排序。 在2.5 之前的 FoxPro 版本中，可能已經使用**大寫**（）或**LOWER**（）函數來建立索引，以將字元欄位轉換成一致的大小寫。 在2.5 以後的 FoxPro 版本中，您可以改為指定一般定序順序選項，並省略**上限**（）轉換。  
   
- 如果指定「機器」以外的排序規則序列選項,並且如果創建 .idx 檔,則始終創建緊湊的 .idx。  
+ 如果您指定了電腦以外的定序順序選項，而且您建立了 idx 檔案，則一律會建立 compact. idx。  
   
- 使用 SET("COLLATE")傳回目前排序規則序列。  
+ 使用 SET （"COLLATE"）來傳回目前的定序序列。  
   
- 您可以使用[ODBC 視覺化 FoxPro 安裝程式對話框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)或使用與[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)的連接字串中的「Collate 關鍵字」為資料源指定整理序列。 這與發出以下指令相同:  
+ 您可以使用 [ [ODBC Visual FoxPro 安裝程式] 對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)，或在連接字串中使用 Collate 關鍵字搭配[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)，為數據源指定排序次序。 這等同于發出下列命令：  
   
 ```  
 SET COLLATE TO cSequenceName  
 ```  
   
 ## <a name="remarks"></a>備註  
- SET COLLATE 使您能夠為任何受支援的語言訂購包含重音字元的表。 更改 SET COLLATE 的設定不會影響以前打開的索引的整理順序。 Visual FoxPro 可自動維護現有索引,從而靈活地創建許多不同類型的索引,即使對於同一字段也是如此。  
+ [設定自動分頁] 可讓您針對任何支援的語言排序包含重音字元的資料表。 變更 SET COLLATE 的設定並不會影響先前開啟之索引的排序次序。 Visual FoxPro 會自動維護現有的索引，讓您可以彈性地建立許多不同類型的索引，即使是針對相同的欄位也一樣。  
   
- 例如,如果使用 SET COLLATE 設置為「GENERAL」建立索引,並且「設定 COLLATE」設定稍後更改為西班牙文,則索引將保留「常規排序規則」 序列。  
+ 例如，如果建立的索引的設定 COLLATE 設定為 [一般]，而 SET COLLATE 設定稍後變更為 [西班牙文]，則索引會保留一般定序順序。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC Visual FoxPro 設定對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

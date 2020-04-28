@@ -1,5 +1,5 @@
 ---
-title: 單代碼應用程式 |微軟文件
+title: Unicode 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 94bd5211c878904453624adb2acd0fe435ebc812
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298944"
 ---
 # <a name="unicode-applications"></a>Unicode 應用程式
-您可以透過兩種方式之一會應用程式重新編譯為 Unicode 應用程式:  
+您可以使用下列兩種方式之一，將應用程式重新編譯成 Unicode 應用程式：  
   
--   在應用程式中包括 Sqlucode.h 標頭檔中包含的 Unicode **#define。**  
+-   將 Unicode **#define**包含在應用程式的 sqlucode.h 標頭檔中。  
   
--   使用編譯器的 Unicode 選項編譯應用程式。 (對於不同的編譯器,此選項會有所不同。  
+-   使用編譯器的 Unicode 選項編譯應用程式。 （不同的編譯器會有不同的選項）。  
   
- 要將 ANSI 應用程式轉換為 Unicode 應用程式,請編寫應用程式以儲存和傳遞 Unicode 資料。 此外,對支援 SQLPOINTER 參數的函數的調用必須轉換為位元組的使用計數。  
+ 若要將 ANSI 應用程式轉換成 Unicode 應用程式，請撰寫應用程式來儲存和傳遞 Unicode 資料。 此外，支援 SQLPOINTER 引數之函式的呼叫必須轉換成使用位元組計數。  
   
- 將應用程式編譯為 Unicode 應用程式後,如果應用程式呼叫 ODBC API 函數(沒有後綴),驅動程式管理員將應用程式辨識為 Unicode 應用程式,如果基礎驅動程式支援 Unicode,則將函數調用轉換為 Unicode 函數(帶*W*後綴)。 當 ANSI 應用程式在沒有後綴的情況下進行函數調用時,如果基礎驅動程式支援 ANSI,驅動程式管理器會將其轉換為 ANSI。 如果應用程式和驅動程式都支援相同的字元編碼,驅動程式管理器會將呼叫傳遞到驅動程式(ANSI 應用程式的某些例外情況除外)。  
+ 將應用程式編譯為 Unicode 應用程式之後，如果應用程式呼叫 ODBC API 函式（不含尾碼），驅動程式管理員會將應用程式辨識為 Unicode 應用程式，並將函式呼叫轉換成 Unicode 函式（使用*W*後置詞）（如果基礎驅動程式支援 unicode）。 當 ANSI 應用程式不使用後置詞進行函式呼叫時，如果基礎驅動程式支援 ANSI，驅動程式管理員會將它轉換成 ANSI。 如果應用程式和驅動程式都支援相同的字元編碼，驅動程式管理員會將呼叫傳遞至驅動程式（但 ANSI 應用程式有特定例外狀況）。  
   
- 應用程式可以同時調用 Unicode 函數(帶*W*後綴)和 ANSI 函數(帶或沒有*A*後綴)。 Unicode 和 ANSI 函數呼用可以混合。 但是,如果要使用游標庫,則不能混合 Unicode 和 ANSI 函數調用。 游標庫是 Unicode 或 ANSI,而不是混合體。  
+ 應用程式可以同時呼叫 Unicode 函式（使用*W*後置詞）和 ANSI 函數（不論是否*有尾碼）* 。 Unicode 和 ANSI 函式呼叫可以混合。 不過，如果要使用資料指標程式庫，則 Unicode 和 ANSI 函式呼叫無法混合。 資料指標程式庫可以是 Unicode 或 ANSI，而不是混合。  
   
- 可以編寫應用程式,以便它可以編譯為 Unicode 應用程式或 ANSI 應用程式。 在這種情況下,字元數據類型可以聲明為SQL_C_TCHAR。 這是一個宏,用於插入SQL_C_WCHAR如果應用程式編譯為 Unicode 應用程式,或者SQL_C_CHAR(如果應用程式編譯為 ANSI 應用程式)插入。 應用程式程式師必須小心以 SQLPOINTER 作為參數的函數,因為長度參數的大小將更改(對於字串資料類型),具體取決於應用程式是 ANSI 還是 Unicode。  
+ 您可以撰寫應用程式，讓它可以編譯成 Unicode 應用程式或 ANSI 應用程式。 在此情況下，字元資料類型可以宣告為 SQL_C_TCHAR。 這個宏會在應用程式編譯為 Unicode 應用程式時插入 SQL_C_WCHAR，如果編譯為 ANSI 應用程式，則插入 SQL_C_CHAR。 應用程式設計人員必須謹慎使用 SQLPOINTER 做為其引數的函式，因為 length 引數的大小會隨著應用程式是 ANSI 或 Unicode 而變更（針對字串資料類型）。  
   
- 函數可以通過以下三種方式之一調用:作為僅 Unicode 函數調用(帶有*W*後綴)、僅 ANSI 函數調用(帶*A*後綴)或作為沒有後綴的 ODBC 函數調用。 函數的三種形式的參數是相同的。 只有具有 SQLCHAR\*參數或指向字串的 SQLPOINTER 參數的函數才需要 Unicode 和 ANSI 窗體。 對於具有可聲明為字元類型的參數的函數(如**SQLBindCol**或**SQLGetData(** 沒有 Unicode 和 ANSI 窗體),可以將參數聲明為 Unicode 類型、ANSI 類型,或者對於 C 類型參數(SQL_C_TCHAR宏)。 有關詳細資訊,請參閱[Unicode 資料](../../../odbc/reference/develop-app/unicode-data.md)。  
+ 函式可透過下列三種方式的其中一種來呼叫：當做僅限 Unicode 的函式呼叫（含*W*後置字元），做為僅限 ANSI 函式呼叫（*含尾碼）* ，或做為不含後置字元的 ODBC 函式呼叫。 函式的三種形式的引數完全相同。 只有包含 SQLCHAR \*引數的函式或指向字串的 SQLPOINTER 引數，才需要 UNICODE 和 ANSI 格式。 對於具有可宣告為字元類型之引數的函式（例如**SQLBindCol**或**SQLGetData** （不具有 Unicode 和 ANSI 格式），引數可以宣告為 Unicode 類型、ANSI 類型，或在 C 類型引數的情況下，SQL_C_TCHAR 宏。 如需詳細資訊，請參閱[Unicode 資料](../../../odbc/reference/develop-app/unicode-data.md)。  
   
- 即使沒有 Unicode 驅動程式可供它使用,也可以將應用程式編寫為 Unicode 應用程式。 驅動程式管理員將 Unicode 函數和資料類型映射到 ANSI。 可以對 UNIcode 到 ANSI 映射進行一些限制。 Unicode 應用程式使用 Unicode 驅動程式將提供更好的性能,並將消除 Unicode 到 ANSI 映射中固有的限制。
+ 應用程式可以撰寫成 Unicode 應用程式，即使沒有任何 Unicode 驅動程式可供使用也一樣。 驅動程式管理員會將 Unicode 函數和資料類型對應到 ANSI。 可以執行的 Unicode 與 ANSI 對應有一些限制。 Unicode 驅動程式是否存在，以供使用會導致效能更佳，並會移除 Unicode 與 ANSI 對應的固有限制。

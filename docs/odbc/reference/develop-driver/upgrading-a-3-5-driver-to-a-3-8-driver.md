@@ -1,5 +1,5 @@
 ---
-title: 將 3.5 驅動程式升級到 3.8 驅動程式 |微軟文件
+title: 將3.5 驅動程式升級至3.8 驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,68 +11,68 @@ ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294429"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>將 3.5 驅動程式升級至 3.8 驅動程式
-本主題提供了將 ODBC 3.5 驅動程式升級到 ODBC 3.8 驅動程式的指南和注意事項。  
+本主題提供將 ODBC 3.5 驅動程式升級至 ODBC 3.8 驅動程式的指導方針和考慮。  
   
 ##### <a name="version-numbers"></a>版本號碼  
- 以下準則涉及版本號:  
+ 下列指導方針與版本號碼有關：  
   
--   驅動程式應支援SQL_ATTR_ODBC_VERSIONSQL_OV_ODBC3_80,返回SQL_ERRORSQL_OV_ODBC2、SQL_OV_ODBC3和SQL_OV_ODBC3_80以外的值。 如果驅動程式從[SQLSetEnv Attr 函數](../../../odbc/reference/syntax/sqlsetenvattr-function.md)傳回SQL_SUCCESS,則驅動程式管理器的未來版本將假定驅動程式支援 ODBC 合規性級別。  
+-   驅動程式應該支援 SQL_ATTR_ODBC_VERSION 的 SQL_OV_ODBC3_80，並針對 SQL_OV_ODBC2、SQL_OV_ODBC3 和 SQL_OV_ODBC3_80 以外的值傳回 SQL_ERROR。 如果驅動程式從[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)函式傳回 SQL_SUCCESS，驅動程式管理員的未來版本會假設驅動程式支援 ODBC 合規性層級。  
   
--   版本 3.8 驅動程式應傳回 03.80 從**SQLGetInfo**時SQL_DRIVER_ODBC_VER傳遞到*InfoType*。 但是,舊版本的 Microsoft Windows 中包括的舊驅動程式管理器會將驅動程式視為版本 3.5 驅動程式,併發出警告。  
+-   當 SQL_DRIVER_ODBC_VER 傳遞至*InfoType*時，3.8 版驅動程式應該會從**SQLGetInfo**傳回03.80。 不過，舊版 Microsoft Windows 隨附的舊版驅動程式管理員會將驅動程式視為3.5 版的驅動程式，併發出警告。  
   
-     在 Windows 7 中,驅動程式管理器版本為 03.80。 在 Windows 8 中,驅動程式管理器版本透過 SQLGetInfo SQL_DM_VER(*資訊類型*參數)為 03.81。 SQL_ODBC_VER在 Windows 7 和 Windows 8 中報告版本為 03.80。  
+     在 Windows 7 中，驅動程式管理員版本是03.80。 在 Windows 8 中，驅動程式管理員版本是03.81，經由 SQLGetInfo SQL_DM_VER （*InfoType*參數）。 SQL_ODBC_VER 會在 Windows 7 和 Windows 8 中將版本報告為03.80。  
   
-##### <a name="driver-specific-c-data-types"></a>特定於驅動程式的 C 資料型態  
- 當驅動程式適用於版本 3.8 ODBC 應用程式時,它可以具有自定義的 C 數據類型。 (關於詳細資訊,請參考[ODBC 中的 C 資料型態](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。但是,不需要 3.8 驅動程式實現任何特定於驅動程式的 C 類型。 但是,驅動程式仍應執行 C 類型的範圍檢查;驅動程式管理員不會對 3.8 驅動程式執行此操作。 為了便於驅動程式開發,可以以以下格式定義特定於驅動程式的 C 資料類型的值:  
+##### <a name="driver-specific-c-data-types"></a>驅動程式特定的 C 資料類型  
+ 當驅動程式與3.8 版 ODBC 應用程式搭配使用時，可以有自訂的 C 資料類型。 （如需詳細資訊，請參閱[ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)）。不過，3.8 驅動程式不需要執行任何驅動程式特定的 C 類型。 但驅動程式仍應執行 C 類型的範圍檢查;驅動程式管理員不會針對3.8 驅動程式執行此動作。 為了加速驅動程式開發，可以用下列格式定義 driver 特有的 C 資料類型的值：  
   
 ```  
 SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1  
 ```  
   
-##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>特定於驅動程式的資料類型、描述符類型、資訊類型、診斷類型和屬性  
- 在開發新驅動程式時,應對數據類型、描述符類型、資訊類型、診斷類型和屬性使用特定於驅動程式的範圍。 特定於驅動程式的範圍及其基本類型值在[特定於驅動程序的數據類型、描述符類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)中進行了討論。  
+##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>驅動程式特有的資料類型、描述項類型、資訊類型、診斷類型和屬性  
+ 開發新的驅動程式時，您應該使用適用于資料類型、描述項類型、資訊類型、診斷類型和屬性的驅動程式特定範圍。 驅動程式特有的範圍及其基底類型值會在[驅動程式專屬的資料類型、描述項類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)中討論。  
   
 ##### <a name="connection-pooling"></a>連接共用  
- 為了更好地管理連接池,ODBC 3.8 引入了**SQLSetConnectAttr**中的SQL_ATTR_RESET_CONNECTION連接屬性。 SQL_RESET_CONNECTION_YES是此屬性的唯一有效值。 SQL_ATTR_RESET_CONNECTION將在驅動程式管理器將連接放入連接池之前進行設置,從而允許驅動程式將其他連接屬性重置為其預設值。  
+ 為了更有效管理連接共用，ODBC 3.8 引進了**SQLSetConnectAttr**中的 SQL_ATTR_RESET_CONNECTION 連接屬性。 SQL_RESET_CONNECTION_YES 是此屬性唯一有效的值。 SQL_ATTR_RESET_CONNECTION 會在驅動程式管理員將連接放置於連接集區之前設定，讓驅動程式將其他連接屬性重設為預設值。  
   
- 為了避免與伺服器進行不必要的通信,驅動程式可以將連接屬性重置推遲到從池中重用連接后與遠端伺服器的下一次通信。  
+ 若要避免與伺服器進行不必要的通訊，在從集區重複使用連接之後，驅動程式可以延遲連接屬性重設，直到下次與遠端伺服器通訊為止。  
   
- 請注意,SQL_ATTR_RESET_CONNECTION僅用於驅動程式管理器和驅動程序之間的通信。 應用程式不能直接設置此屬性。 所有版本3.8驅動程式都應實現此連接屬性。  
+ 請注意，SQL_ATTR_RESET_CONNECTION 僅用於驅動程式管理員和驅動程式之間的通訊。 應用程式無法直接設定此屬性。 所有版本3.8 驅動程式都應該執行此連接屬性。  
   
-##### <a name="streamed-output-parameters"></a>串流輸出參數  
- ODBC 版本 3.8 引入了流式輸出參數,這是檢索輸出參數的一種更具可擴充性的方法。 (關於詳細資訊,請參考使用[SQLGetData 偵測參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。為了支援此功能,當SQL_GETDATA_EXTENSIONS是**SQLGetInfo**調用中的*InfoType*時,驅動程式應在返回值中設置SQL_GD_OUTPUT_PARAMS。 必須在驅動程式中實現對具有流式輸出參數的 SQL 類型的支援。 驅動程式管理員不會為無效的 SQL 類型生成錯誤。 支援流式輸出參數的 SQL 類型在驅動程式中定義。  
+##### <a name="streamed-output-parameters"></a>資料流程輸出參數  
+ ODBC 3.8 版導入了資料流程輸出參數，這是一種可調整的輸出參數。 （如需詳細資訊，請參閱[使用 SQLGetData 來抓取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)）。若要支援此功能，當 SQL_GETDATA_EXTENSIONS 是**SQLGetInfo**呼叫中的*InfoType*時，驅動程式應該設定傳回值中的 SQL_GD_OUTPUT_PARAMS。 具有資料流程輸出參數的 SQL 類型支援必須在驅動程式中執行。 驅動程式管理員不會針對不正確 SQL 類型產生錯誤。 驅動程式中定義了支援資料流程輸出參數的 SQL 類型。  
   
- 如果應用程式使用**SQLGetData**檢索與**SQLParamData**傳回的參數不一樣的參數,則驅動程式應返回SQL_ERROR。  
+ 如果應用程式使用**SQLGetData**來抓取與**SQLParamData**所傳回之參數不同的參數，驅動程式應該會傳回 SQL_ERROR。  
   
-##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>連接操作的非同步執行(輪詢方法)  
- 驅動程式可以為各種連接操作啟用非同步支援。  
+##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>非同步執行連接作業（輪詢方法）  
+ 驅動程式可以針對各種連接作業啟用非同步支援。  
   
- 從 Windows 7 開始,ODBC 支援輪詢方法(有關詳細資訊,請參閱[異步執行(輪詢方法)。](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md) 不需要版本 3.8 ODBC 驅動程式對連接句柄實現非同步操作。 即使驅動程式未在連接句柄上實現非同步操作,驅動程式仍應實現SQL_ASYNC_DBC_FUNCTIONS *InfoType*並傳回**SQL_ASYNC_DBC_NOT_CAPABLE**。  
+ 從 Windows 7 開始，ODBC 支援輪詢方法（如需詳細資訊，請參閱[非同步執行（輪詢方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 版本 3.8 ODBC 驅動程式不需要在連接控制碼上執行非同步作業。 即使驅動程式不會在連接控制碼上執行非同步作業，驅動程式仍應執行 SQL_ASYNC_DBC_FUNCTIONS *InfoType* ，並傳回**SQL_ASYNC_DBC_NOT_CAPABLE**。  
   
- 啟用非同步連線操作後,連接操作的執行時間是所有重複調用的總時間。 如果上次重複調用發生在總時間超過SQL_ATTR_CONNECTION_TIMEOUT連接屬性設置的值之後,並且操作尚未完成,則驅動程式返回SQL_ERROR,並記錄 SQLState HYT01 和消息"連接超時已過期"。。 如果操作完成,則沒有超時。  
+ 當非同步連接作業啟用時，連接運算的執行時間是所有重複呼叫的總時間。 如果最後一次重複呼叫發生在總時間超過 SQL_ATTR_CONNECTION_TIMEOUT 連接屬性所設定的值，且作業尚未完成，則驅動程式會傳回 SQL_ERROR 並記錄含有 SQLState HYT01 的診斷記錄和訊息「連線超時時間已過期」。 如果作業完成，則不會有任何超時時間。  
   
 ##### <a name="sqlcancelhandle-function"></a>SQLCancelHandle 函式  
- ODBC 3.8 支援[SQLCancelHandle 函數](../../../odbc/reference/syntax/sqlcancelhandle-function.md),用於取消連接和語句操作。 支援**SQLCancelHandle**的驅動程式必須匯出該函數。 如果應用程式在語句句柄上調用**SQLCancel**或**SQLCancelHandle,** 驅動程式不應取消正在進行的任何同步或異步連接功能。 同樣,如果應用程式在連接句柄上調用**SQLCancelHandle,** 驅動程式不應取消正在進行的任何同步或異步語句函數。 此外,如果應用程式在連接句柄上調用**SQLCancelHandle,** 驅動程式不應取消流覽操作 **(SQLBrowse Connect**返回SQL_NEED_DATA)。 在這些情況下,驅動程式應返回 HY010,"功能序列錯誤」。  
+ ODBC 3.8 支援[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)函式，這是用來取消連接和語句作業。 支援**SQLCancelHandle**的驅動程式必須匯出函式。 如果應用程式在語句控制碼上呼叫**SQLCancel**或**SQLCancelHandle** ，則驅動程式不應取消正在進行中的任何同步或非同步連接功能。 同樣地，如果應用程式在連接控制碼上呼叫**SQLCancelHandle** ，驅動程式就不應該取消正在進行中的任何同步或非同步語句函式。 此外，如果應用程式在連接控制碼上呼叫**SQLCancelHandle** ，則驅動程式不應取消流覽作業（**SQLBrowseConnect**會傳回 SQL_NEED_DATA）。 在這些情況下，驅動程式應該會傳回 HY010 「函數順序錯誤」。  
   
- 不必同時支援**SQLCancelHandle**和非同步連接操作。 驅動程式可以支援非同步連接操作,但不能支援**SQLCancelHandle,** 反之亦然。  
+ 不需要同時支援**SQLCancelHandle**和非同步連接作業。 驅動程式可以支援非同步連接作業，但不能**SQLCancelHandle**，反之亦然。  
   
-##### <a name="suspended-connections"></a>暫停連線  
- ODBC 3.8 驅動程式管理員可以將連接置於掛起狀態。 應用程式將調用**SQLDisconnect**以釋放與連接關聯的資源。 在這種情況下,驅動程式應嘗試釋放盡可能多的資源,而不檢查連接的狀態。 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。  
+##### <a name="suspended-connections"></a>暫停的連接  
+ ODBC 3.8 驅動程式管理員可以將連接置於已暫停狀態。 應用程式會呼叫**SQLDisconnect**來釋放與連接相關聯的資源。 在這種情況下，驅動程式應該嘗試釋放盡可能多的資源，而不檢查連接的狀態。 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。  
   
 ##### <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用  
- Windows 8 中的 ODBC 允許驅動程式自定義連接池行為。 有關詳細資訊,請參閱[驅動程式感知連接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。  
+ Windows 8 中的 ODBC 可讓驅動程式自訂連接集區行為。 如需詳細資訊，請參閱可[感知驅動程式的連接](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)共用。  
   
 ##### <a name="asynchronous-execution-notification-method"></a>非同步執行 (通知方法)  
- ODBC 3.8 支援非同步操作的通知方法,可在Windows 8上開始。 有關詳細資訊,請參閱[非同步執行(通知方法)。](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
+ ODBC 3.8 支援非同步作業的通知方法（從 Windows 8 開始提供）。 如需詳細資訊，請參閱[非同步執行（通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [微軟提供的ODBC驅動程式](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
+ [Microsoft 提供的 ODBC 驅動程式](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [ODBC 3.8 的新功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

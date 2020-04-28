@@ -1,5 +1,5 @@
 ---
-title: ODBC 錯誤代碼(可視化福克斯 Pro ODBC 驅動程式) |微軟文件
+title: ODBC 錯誤碼（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a2f6da9d4e4799bb9c40ec1c2716b71f70c53695
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298108"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 錯誤碼 (Visual FoxPro ODBC Driver)
-下表列出了映射到 ODBC 錯誤代碼 SQLSTATE 值的 Visual FoxPro 錯誤代碼。 對應的 SQLSTATE 值來自[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)與[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。 其他 ODBC API 中沒有其他 SQLSTATE 值被映射,因為**SQLExecDirect**和**SQLPrepare**是訪問 Visual FoxPro 引擎的唯一函數。  
+下表列出對應至 ODBC 錯誤碼 SQLSTATE 值的 Visual FoxPro 錯誤碼。 對應的 SQLSTATE 值來自[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)和[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。 其他 ODBC API 不會對應其他 SQLSTATE 值，因為**SQLExecDirect**和**SQLPrepare**是存取 Visual FoxPro 引擎的唯一函數。  
   
- 有關 ODBC 錯誤代碼的詳細資訊,請參閱[附錄 A:ODBC 錯誤代碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md),在*ODBC 程式師參考*中。  
+ 如需 ODBC 錯誤碼的詳細資訊，請參閱《 odbc 程式設計*人員參考*》中的[附錄 A： odbc 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
   
-|SQLSTATE|視覺化 FoxPro 錯誤代碼|  
+|SQLSTATE|Visual FoxPro 錯誤碼|  
 |--------------|------------------------------|  
 |S1001|149<br /><br /> 150<br /><br /> 182<br /><br /> 202<br /><br /> 308|  
 |1004|159|  

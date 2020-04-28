@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption(悖論驅動程式) |微軟文件
+title: SQLSetConnectOption （Paradox 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 06a90a83e2cbf24e6e85a67d961684c230bca924
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301489"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (Paradox Driver)
 > [!NOTE]  
->  本主題提供特定於悖論驅動程序的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
+>  本主題提供 Paradox 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
 |fOption|註解|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設置為SQL_MODE_READ_ONLY或SQL_MODE_READ_WRITE。 但是,如果SQL_ACCESS_MODE設置為SQL_MODE_READ_ONLY,則驅動程式不會阻止更新。|  
-|SQL_AUTOCOMMIT|Paradox 驅動程式僅支援SQL_AUTOCOMMIT設定為 ON(預設狀態),因為它們不支援事務。|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設定為 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，如果 SQL_ACCESS_MODE 設定為 SQL_MODE_READ_ONLY，驅動程式不會阻止更新。|  
+|SQL_AUTOCOMMIT|Paradox 驅動程式只支援設定為 ON （預設狀態） SQL_AUTOCOMMIT，因為它們不支援交易。|  
 |SQL_CURRENT_QUALIFIER|支援。|  
 |SQL_LOGIN_TIMEOUT|不支援。|  
 |SQL_OPT_TRACE|支援。|  

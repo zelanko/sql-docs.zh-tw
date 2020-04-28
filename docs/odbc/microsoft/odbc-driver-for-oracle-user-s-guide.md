@@ -1,5 +1,5 @@
 ---
-title: Oracle 使用者&#39;指南的 ODBC 驅動程式 |微軟文件
+title: ODBC Driver for Oracle User&#39;s 指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293149"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 使用者&#39;指南的 ODBC 驅動程式
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle User&#39;s 指南
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- Oracle使用者指南的 ODBC 驅動程式旨在補充可透過[ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)存取的設定説明。  
+ ODBC Driver for Oracle 使用者指南的目的是要補充可透過[ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)存取的安裝說明。  
   
  此章節包含下列主題。  
   

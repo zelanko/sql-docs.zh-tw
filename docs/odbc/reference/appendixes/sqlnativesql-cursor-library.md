@@ -1,5 +1,5 @@
 ---
-title: SQLNativeSql(游標庫) |微軟文件
+title: SQLNativeSql （資料指標程式庫） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 41f7617530f34d49852ca67db9f47cab94292385
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300568"
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql (資料指標程式庫)
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 本主題討論在遊標庫中使用**SQLNativeSql**函數。 有關**SQLNativeSql**的一般資訊,請參閱[SQLNativeSql 函數](../../../odbc/reference/syntax/sqlnativesql-function.md)。  
+ 本主題討論如何在資料指標程式庫中使用**SQLNativeSql**函數。 如需有關**SQLNativeSql**的一般資訊，請參閱[SQLNativeSql 函數](../../../odbc/reference/syntax/sqlnativesql-function.md)。  
   
- 如果驅動程式支援此功能,游標庫將在驅動程式中調用**SQLNativeSql**並將其傳遞給 SQL 語句。 對於定位更新、定位刪除和**選擇更新**語句,游標庫在將語句傳遞給驅動程式之前修改該語句。  
+ 如果驅動程式支援此函式，則資料指標程式庫會呼叫驅動程式中的**SQLNativeSql** ，並將它傳遞至 SQL 語句。 若為定點更新、定位 delete，然後**選取 update**語句，則資料指標程式庫會先修改語句，再將它傳遞給驅動程式。  
   
 > [!NOTE]  
->  如果游標名稱在**SQLNativeSql**的*InofText*參數中傳遞的定位更新或刪除語句中無效,則游標庫錯誤地返回 SQLSTATE 34000(無效游標名稱)。 **SQLNativeSql**不打算返回語法錯誤,這些錯誤僅在語句準備或執行時返回。
+>  如果在**SQLNativeSql**的*InStatementText*引數中傳遞的定點更新或 delete 語句中的資料指標名稱無效，則資料指標程式庫會錯誤地傳回 SQLSTATE 34000 （不正確資料指標名稱）。 **SQLNativeSql**不是用來傳回語法錯誤，只會在語句準備或執行時傳回。

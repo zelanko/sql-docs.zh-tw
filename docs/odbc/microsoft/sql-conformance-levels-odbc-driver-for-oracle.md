@@ -1,5 +1,5 @@
 ---
-title: SQL 一致性級別(Oracle 的 ODBC 驅動程式) |微軟文件
+title: SQL 一致性層級（ODBC Driver for Oracle） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300678"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 一致性層級 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- Oracle 的 ODBC 驅動程式支援最小 SQL 語法和核心 SQL 語法,還支援以下對 SQL 的 ODBC 延伸:  
+ ODBC Driver for Oracle 支援最低 SQL 文法和 Core SQL 文法，而且也支援下列 SQL ODBC 延伸模組：  
   
--   日期、時間與時間戳資料  
+-   日期、時間和時間戳記資料  
   
--   左和右外部聯結  
+-   左方和右方外部聯結  
   
--   數位函數:  
+-   數值函數：  
   
     |||||  
     |-|-|-|-|  
@@ -39,33 +39,33 @@ ms.locfileid: "81300678"
     |Ceiling|Log10|second|truncate|  
     |Cos|Mod|簽署||  
     |Exp|Pi|sin||  
-    |樓層|Power|sqrt||  
+    |樓層|電源|sqrt||  
   
 -   日期函式：  
   
     |||||  
     |-|-|-|-|  
-    |庫達|週日|月名|second|  
-    |詛咒|Dayofyear|minute|week|  
-    |日名|Hour|就試試|year|  
-    |每月的一天|Month|quarter||  
+    |Curdate|Dayofweek|monthname|second|  
+    |Curtime|Dayofyear|minute|week|  
+    |Dayname|Hour|就試試|year|  
+    |Dayofmonth|Month|quarter||  
   
 -   字串函式：  
   
     |||||  
     |-|-|-|-|  
-    |Ascii|Left|向右|烏瓦凱斯|  
-    |Char|長度|裡特裡姆||  
-    |Concat|Ltrim|音效||  
+    |Ascii|Left|向右|ucase|  
+    |Char|長度|rtrim||  
+    |Concat|Ltrim|soundex||  
     |Lcase|Replace|substring||  
   
--   類型轉換功能:  
+-   類型轉換函式：  
   
     ||  
     |-|  
     |轉換|  
   
--   系統功能:  
+-   系統函數：  
   
     ||  
     |-|  

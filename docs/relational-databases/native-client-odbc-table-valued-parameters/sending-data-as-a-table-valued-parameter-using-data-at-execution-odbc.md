@@ -1,5 +1,5 @@
 ---
-title: 表值參數,資料執行 (ODBC)
+title: 資料表值參數，資料執行中（ODBC）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b07341dbf3beba66ee7ad6e7cc4861142792fa0c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297824"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  這與[「全部記憶體」](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)過程類似,但使用執行時的數據對表值參數。  
+  這類似于「[全部在記憶體中](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)」程式，但會針對資料表值參數使用「資料執行中」。  
   
- 有關展示表值參數的另一個範例,請參閱[使用表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
- 在此示例中,當調用 SQLExecute 或 SQLExecDirect 時,驅動程式返回SQL_NEED_DATA。 然後,應用程式重複調用 SQLParamData,直到驅動程式返回SQL_NEED_DATA以外的值。 驅動程式傳回*參數ValuePtr,* 通知應用程式請求資料的參數。 應用程式呼叫 SQLPutData 以在下一次調用 SQLParamData 之前提供參數資料。 對於表值參數,對 SQLPutData 的調用指示為驅動程式準備的行數(在此示例中,始終為 1)。 將表值的所有行傳遞給驅動程式後,將調用 SQLPutData 以指示 0 行可用。  
+ 在此範例中，當呼叫 SQLExecute 或 SQLExecDirect 時，驅動程式會傳回 SQL_NEED_DATA。 然後，應用程式會重複呼叫 SQLParamData，直到驅動程式傳回 SQL_NEED_DATA 以外的值。 驅動程式會傳回*ParameterValuePtr* ，以通知應用程式要求其資料的參數。 在下一次呼叫 SQLParamData 之前，應用程式會呼叫 SQLPutData 來提供參數資料。 對於資料表值參數，SQLPutData 的呼叫會指出它為驅動程式準備的資料列數目（在此範例中，一律為1）。 當資料表值的所有資料列都已傳遞至驅動程式時，會呼叫 SQLPutData，表示有0個數據列可供使用。  
   
- 您可以在資料表值的資料列內使用資料執行中的值。 SQLParamData 傳回的值會通知應用程式驅動程式所需的值。 與常規參數值一樣,對於字元或二進位表值列值,可以調用 SQLPutData 一次或多次。 這樣可以讓應用程式以片段傳遞很大的值。  
+ 您可以在資料表值的資料列內使用資料執行中的值。 SQLParamData 傳回的值會向代理程式更新驅動程式所需的值。 就像一般參數值一樣，可以針對字元或二進位資料表值資料行值，呼叫 SQLPutData 一次或多次。 這樣可以讓應用程式以片段傳遞很大的值。  
   
- 當為表值調用 SQLPutData 時 *,DataPtr*用於可用的行數(在此示例中,始終為 1)。 *StrLen_or_IndPtr*必須始終為 0。 傳遞表值的所有行後,SQLPutData 調用其*數據Ptr*值為 0。  
+ 針對資料表值呼叫 SQLPutData 時， *DataPtr*會用於可用的資料列數目（在此範例中，一律為1）。 *StrLen_or_IndPtr*必須一律為0。 一旦傳遞了資料表值的所有資料列，就會以0的*DataPtr*值來呼叫 SQLPutData。  
   
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -70,7 +70,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  繫結參數。 *列大小*為 1,這意味著一次最多傳遞一行。  
+2.  繫結參數。 *ColumnSize*是1，表示一次最多會傳遞一個資料列。  
   
     ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -125,14 +125,14 @@ from @Items
     strcpy_s((char *) CustCode ,sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
     ```  
   
-5.  呼叫程序。 SQLExecDirect 將返回SQL_NEED_DATA因為表值參數是執行時的數據參數。  
+5.  呼叫程序。 SQLExecDirect 會傳回 SQL_NEED_DATA，因為資料表值參數是資料執行中的參數。  
   
     ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  提供資料執行中參數資料。 當 SQLParamData 傳回表值參數的*參數 ValuePtr*時,應用程式必須為表值的下一行或行準備列。 然後,應用程式調用 SQLPutData,DataPtr 設置為可用行數(在此範例中為 1),StrLen_or_IndPtr*StrLen_or_IndPtr*設置*DataPtr*為 0。  
+6.  提供資料執行中參數資料。 當 SQLParamData 傳回資料表值參數的*ParameterValuePtr*時，應用程式必須為數據表值的下一個資料列或資料列準備資料行。 然後，應用程式會呼叫 SQLPutData，並將*DataPtr*設為可用的資料列數目（在此範例中為1）， *StrLen_or_IndPtr*設定為0。  
   
     ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
@@ -187,7 +187,7 @@ from @Items
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此示例顯示,您可以使用與 ODBC TVP 一起使用行流(每次呼叫 SQLPutData 一行)與 ODBC TVP 類似使用 BCP.exe 將數據載入到資料庫中的方式。  
+ 這個範例會示範您可以使用 ODBC TVP，針對每個呼叫 SQLPutData 的資料列串流（一個資料列），類似于您可能會使用 BCP 載入資料庫的方式。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   
@@ -375,7 +375,7 @@ EXIT:
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此示例顯示,您可以使用對 SQLPutData 的行流,每次調用多行,與 ODBC TVP 一起使用,類似於使用 BCP.exe 將數據載入到資料庫中的方式。  
+ 這個範例會示範您可以使用 ODBC TVP，每次呼叫 SQLPutData 時，使用資料列串流、多個資料列，類似于您可以如何使用 BCP 將資料載入資料庫中。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   

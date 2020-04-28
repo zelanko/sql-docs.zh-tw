@@ -1,5 +1,5 @@
 ---
-title: 日期時間資料類型轉換 (ODBC) |微軟文件
+title: datetime 資料類型轉換（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba3d21b1f063c5f8a989d6d387538a4d15c8412
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301729"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 資料類型轉換 (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "81301729"
   
 -   date 字串的格式為 'yyyy-mm-dd'  
   
- 字串的轉換在空白和欄位寬度上允許彈性。 有關詳細資訊,請參閱[資料類型支援 ODBC 日期和時間改進](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)的「資料格式:字串和文字」部分。  
+ 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱[資料類型支援 ODBC 日期和時間改善](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)的「資料格式：字串和常值」一節。  
   
  下面是一般轉換規則：  
   
@@ -61,6 +61,6 @@ ms.locfileid: "81301729"
  列出當您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間類型轉換成 C 類型時應該考量的問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間改進&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

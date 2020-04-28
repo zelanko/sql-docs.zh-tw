@@ -20,24 +20,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d8bb984c789f759eb764ad580f971ab71c9fc946
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297622"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這個機客戶端使用字語資料來源的 OLE DB 介面集,用於建立指向資料儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的連結,例如 。 創建提供程式的數據源物件的實例是本機用戶端消費者的第一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任務。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 會針對用於建立資料存放區連結的一組 OLE DB 介面（例如），使用「資料來源」一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詞。 建立提供者之資料來源物件的實例是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 取用者的第一個工作。  
   
- 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 本機用戶端 OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB 提供程式的 CLSID 是 C/C++ GUID CLSID_SQLNCLI10(符號SQLNCLI_CLSID解析為您引用的 sqlncli.h 檔中的正確 progid)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
+ 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的 CLSID 是 C/c + + GUID CLSID_SQLNCLI10 （符號 SQLNCLI_CLSID 會解析成您所參考之 SQLNCLI 檔中的正確 progid）。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端是進程中的伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式物件的實例使用CLSCTX_INPROC_SERVER宏來指示可執行上下文。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 是同進程伺服器。 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供者物件的實例是使用 CLSCTX_INPROC_SERVER 宏所建立，以指出可執行檔內容。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式數據來源物件公開允許使用者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接到現有資料庫的 OLE DB 初始化介面。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料來源物件會公開允許取用者連接到現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫的 OLE DB 初始化介面。  
   
- 透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機客戶端 OLE 資料庫提供程式進行的每個連線會自動設定這些選項:  
+ 透過 Native Client OLE DB 提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]者所建立的每個連接都會自動設定這些選項：  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -51,7 +51,7 @@ ms.locfileid: "81297622"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 本示例使用類識別符宏創建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式數據來源物件,並獲取對其**IDB 初始化介面的**引用。  
+ 這個範例會使用類別識別碼宏來建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者資料來源物件，並取得其**IDBInitialize**介面的參考。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,9 +72,9 @@ else
 }  
 ```  
   
- 成功創建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式數據來源物件的實例後,消費者應用程式可以通過初始化數據源和創建會話來繼續。 OLE DB 工作階段會顯示允許資料存取與操作的介面。  
+ 成功建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料來源物件的實例之後，取用者應用程式就可以透過初始化資料來源並建立會話來繼續。 OLE DB 工作階段會顯示允許資料存取與操作的介面。  
   
- 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式首次連接到 指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例, 作為成功數據來源初始化的一部分。 只要在任何資料來源初始化介面上維持參考，或是在呼叫 **IDBInitialize::Uninitialize** 方法前，都會維持連線。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會在成功初始化資料來源時，使[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]其第一次連接到指定的實例。 只要在任何資料來源初始化介面上維持參考，或是在呼叫 **IDBInitialize::Uninitialize** 方法前，都會維持連線。  
   
 ## <a name="in-this-section"></a>本節內容  
   

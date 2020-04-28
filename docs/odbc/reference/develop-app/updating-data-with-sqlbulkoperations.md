@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLBulk 操作更新數據 |微軟文件
+title: 使用 SQLBulkOperations 更新資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298482"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新資料
-應用程式可以在資料來源的基礎表上執行批次更新、刪除、提取或插入操作,並呼叫**SQLBulk 操作**。 調用**SQLBulk 操作**是建構和執行 SQL 語句的便捷替代方法。 它允許 ODBC 驅動程式支援定位更新,即使資料來源不支援定位 SQL 語句也是如此。 它是通過函數調用實現完整資料庫存取模式的一部分。  
+應用程式可以呼叫**SQLBulkOperations**，在資料來源的基礎資料表上執行大量更新、刪除、提取或插入作業。 呼叫**SQLBulkOperations**是用來建立和執行 SQL 語句的方便替代方式。 即使資料來源不支援定位的 SQL 語句，它也可讓 ODBC 驅動程式支援定點更新。 這是使用函式呼叫來達到完整資料庫存取的範例的一部分。  
   
- **SQLBulk操作**在當前行集中運行,只能在調用**SQLFetch**或**SQLFetchScroll**後使用。 應用程式通過緩存其書籤指定要更新、刪除或刷新的行。 驅動程式從行集緩衝區檢索要更新的行的新數據,或將新數據插入到基礎表中。  
+ **SQLBulkOperations**會在目前的資料列集上運作，而且只能在呼叫**SQLFetch**或**SQLFetchScroll**之後使用。 應用程式會藉由快取其書簽來指定要更新、刪除或重新整理的資料列。 此驅動程式會從資料列集緩衝區，抓取要更新的新資料，或要插入基礎資料表的新資料。  
   
- **SQLBulk操作**要使用的行集大小由調用**SQLSetStmtAttr**設置,*屬性*參數為 SQL_ATTR_ROW_ARRAY_SIZE。 SQLSetPos ( 只有呼叫**SQLFetch**或**SQLFetchScroll**後使用新的行集大小 ) 不同, **SQLBulk 操作**在呼叫**SQLSetStmtAttr**後使用新的行集大小 。 **SQLSetPos**  
+ **SQLBulkOperations**所使用的資料列集大小是由呼叫具有 SQL_ATTR_ROW_ARRAY_SIZE 之*屬性*引數的**SQLSetStmtAttr**所設定。 不同于**SQLSetPos**，只有在呼叫**SQLFetch**或**SQLFetchScroll**之後，才會使用新的資料列集大小， **SQLBulkOperations**會在呼叫**SQLSetStmtAttr**之後，使用新的資料列集大小。  
   
- 由於與關係資料庫的大多數交互都是通過 SQL 完成的,因此**SQLBulk 操作**不受廣泛支援。 但是,驅動程式可以通過構造和執行**更新**、**刪除**或**INSERT**語句來輕鬆類比它。  
+ 由於大部分與關係資料庫的互動都是透過 SQL 來完成，因此不會廣泛支援**SQLBulkOperations** 。 不過，驅動程式可以藉由建立**UPDATE**、 **DELETE**或**INSERT**語句來輕鬆模擬它。  
   
- 要確定**SQLBulk 操作**支援的操作,應用程式使用SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1或SQL_STATIC_CURSOR_ATTRIBUTES1資訊選項(取決於游標的類型)調用**SQLGetInfo。**  
+ 為了判斷**SQLBulkOperation**支援哪些作業，應用程式會使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 資訊選項（視游標的類型而定）來呼叫**SQLGetInfo** 。  
   
  此章節包含下列主題。  
   

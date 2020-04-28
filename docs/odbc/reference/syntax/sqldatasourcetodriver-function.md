@@ -1,5 +1,5 @@
 ---
-title: SQLDataSourceto驅動程式功能 |微軟文件
+title: SQLDataSourceToDriver 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 92df58b76a9a11d0d4ab9821756bff014ecae29a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301188"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 函式
-**SQLDataSourceToDriver**支援 ODBC 驅動程式的翻譯。 啟用 ODBC 的應用程式不調用此功能;應用程式透過**SQLSetConnect Attr**請求轉換。 與**SQLSetConnect Attr**中指定的*ConnectHandle*關聯的驅動程式調用指定的 DLL 以執行從資料來源流向驅動程式的所有資料的轉換。 可以在 ODBC 初始化檔中指定預設轉換 DLL。  
+適用于 ODBC 驅動程式的**SQLDataSourceToDriver** supportstranslations。 此函式不是由具備 ODBC 功能的應用程式所呼叫;應用程式會透過**SQLSetConnectAttr**要求轉譯。 與**SQLSetConnectAttr**中指定的*ConnectionHandle*相關聯的驅動程式會呼叫指定的 DLL，以執行從資料來源流向驅動程式之所有資料的翻譯。 預設的轉譯 DLL 可以在 ODBC 初始化檔中指定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,64 +48,64 @@ BOOL SQLDataSourceToDriver(
   
 ## <a name="arguments"></a>引數  
  *fOption*  
- [輸入]選項值。  
+ 源選項值。  
   
  *fSqlType*  
- [輸入]SQL 資料類型。 此參數告訴驅動程式如何將*rgbValueIn*轉換為應用程式可接受的窗體。 有關有效 SQL 資料類型的清單,請參閱附錄 D:數據類型中的[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)部分。  
+ 源SQL 資料類型。 這個引數會告訴驅動程式如何將*rgbValueIn*轉換成應用程式可接受的表單。 如需有效 SQL 資料類型的清單，請參閱附錄 D：資料類型中的[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節。  
   
- *rgbValuein*  
- [輸入]要翻譯的值。  
+ *rgbValueIn*  
+ 源要轉譯的值。  
   
- *cbValuein*  
- [輸入]*rgbValue 的長度。*  
+ *cbValueIn*  
+ 源*RgbValueIn*的長度。  
   
  *rgbValueOut*  
- 【輸出]翻譯結果。  
+ 輸出轉譯的結果。  
   
 > [!NOTE]  
->  轉換 DLL 不為 null 中止此值。  
+>  轉譯 DLL 不會以 null 終止此值。  
   
  *cbValueOutMax*  
- [輸入]*rgbValueOut 的長度*。  
+ 源*RgbValueOut*的長度。  
   
  *pcbValueOut*  
- 【輸出]可在*rgbValueOut*中返回的位元組總數(不包括null終止位元組)。  
+ 輸出可在*rgbValueOut*中傳回的總位元組數（不包括 null 終止位元組）。  
   
- 對於字元或二進位數據,如果大於或等於*cbValueOutMax,**則 rgbValueOut*中的數據將被截斷為*cbValueOutMax*位元組。  
+ 對於字元或二進位資料，如果這個大於或等於*cbValueOutMax*， *rgbValueOut*中的資料會被截斷為*cbValueOutMax*位元組。  
   
- 對於所有其他數據類型,將忽略*cbValueOutMax*的值,轉換 DLL 假定*rgbValueOut*的大小是使用*fSqlType*指定的 SQL 資料類型的預設 C 數據類型的大小。  
+ 對於所有其他資料類型，會忽略*cbValueOutMax*的值，且轉譯 DLL 會假設*rgbValueOut*的大小是使用*fSqlType*所指定之 SQL 資料類型的預設 C 資料類型大小。  
   
- *pcbValueOut*參數可以是空指標。  
+ *PcbValueOut*引數可以是 null 指標。  
   
- *什洛姆斯格*  
- 【輸出]指向存儲的錯誤消息。 這是一個空字串,除非翻譯失敗。  
+ *szErrorMsg*  
+ 輸出錯誤訊息的儲存體指標。 除非轉譯失敗，否則這是空字串。  
   
  *cbErrorMsgMax*  
- [輸入]*szErrorMsg*的長度。  
+ 源*SzErrorMsg*的長度。  
   
- *多加錯姆斯格*  
- 【輸出]指向可用在*szErrorMsg*返回的位元組總數(不包括空終止位元組)的指標。 如果大於或等於*cbErrorMsg,* 則*szErrorMsg*中的數據被截斷為*cbErrorMsgMax*減去 null 終止字元。 *pcbErrorMsg*參數可以是空指標。  
+ *pcbErrorMsg*  
+ 輸出可在*szErrorMsg*中傳回的位元組總數（不包括 null 終止位元組）的指標。 如果此值大於或等於*cbErrorMsg*， *szErrorMsg*中的資料會被截斷為*cbErrorMsgMax*減去 null 終止字元。 *PcbErrorMsg*引數可以是 null 指標。  
   
 ## <a name="returns"></a>傳回值  
- 如果翻譯成功,則為 TRUE,如果翻譯失敗,則為 FALSE。  
+ 如果轉譯成功，則為 TRUE，如果轉譯失敗則為 FALSE。  
   
-## <a name="comments"></a>註解  
- 驅動程式呼叫**SQLDataSourceToDriver**來轉換從資料來源傳遞到驅動程式的所有資料(結果集資料、表名、行計數、錯誤訊息等)。 翻譯 DLL 可能不會翻譯某些資料,具體取決於資料的類型和翻譯 DLL 的用途;例如,將字元數據從一個代碼頁轉換為另一個代碼頁的 DLL 忽略所有數位和二進位資料。  
+## <a name="comments"></a>評價  
+ 驅動程式會呼叫**SQLDataSourceToDriver**來轉譯從資料來源傳遞至驅動程式的 alldata （結果集資料、資料表名稱、資料列計數、錯誤訊息等等）。 根據資料的類型和轉譯 DLL 的用途，轉譯 DLL 可能無法轉譯某些資料;例如，將某個字碼頁的字元資料轉譯為另一個的 DLL，會忽略所有數值和二進位資料。  
   
- *fOption*的值設定為*vParam*的值,透過使用SQL_ATTR_TRANSLATE_OPTION屬性調用**SQLSetConnectAttr**指定。 它是一個 32 位值,對於給定的翻譯 DLL 具有特定的含義。 例如,它可以指定特定的字元集轉換。  
+ *FOption*的值會設定為使用 SQL_ATTR_TRANSLATE_OPTION 屬性呼叫**SQLSetConnectAttr**所指定的*vParam*值。 它是32位的值，對於給定的轉譯 DLL 具有特定意義。 例如，它可以指定特定的字元集轉譯。  
   
- 如果為*rgbValueIn*和*rgbValueOut*指定了相同的緩衝區,則將就地執行緩衝區中數據的轉換。  
+ 如果為*rgbValueIn*和*rgbValueOut*指定相同的緩衝區，則會就地執行緩衝區中的資料轉譯。  
   
- 雖然*cbValueIn、cbValueOutMax*和*pcbValueOut*是 SDWORD 的類型,但**SQLDataSourceToDriver***cbValueIn*不一定支援巨大的指標。  
+ 雖然*cbValueIn*、 *cbValueOutMax*和*pcbValueOut*的類型為 SDWORD，但**SQLDataSourceToDriver**不一定支援大指標。  
   
- 如果**SQLDataSourceToDriver**返回 FALSE,則可能在轉換過程中發生數據截斷。 如果*pcbValueOut(* 輸出緩衝區中可返回的位元組數)大於*cbValueOutMax(* 輸出緩衝區的長度),則發生截斷。 驅動程序必須確定截斷是否可以接受。 如果未發生截斷 **,SQLDataSourceToDriver**會返回 FALSE,因為出現另一個錯誤。 在這兩種情況下,在*szErrorMsg*中返回特定的錯誤消息。  
+ 如果**SQLDataSourceToDriver**傳回 FALSE，則表示轉譯期間可能發生資料截斷。 如果*pcbValueOut* （可在輸出緩衝區中傳回的位元組數目）大於*cbValueOutMax* （輸出緩衝區的長度），則會發生截斷。 驅動程式必須判斷截斷是否可接受。 如果未發生截斷， **SQLDataSourceToDriver**會因為另一個錯誤而傳回 FALSE。 不論是哪一種情況， *szErrorMsg*中都會傳回特定的錯誤訊息。  
   
- 有關翻譯資料的詳細資訊,請參考[DLL](../../../odbc/reference/develop-app/translation-dlls.md)。  
+ 如需翻譯資料的詳細資訊，請參閱[轉譯 dll](../../../odbc/reference/develop-app/translation-dlls.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|傳送資料來源資料翻譯|[SQLDriverto 資料來源](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
-|傳回連線屬性的設定|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|設定連線屬性|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|將資料傳送至資料來源|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
+|傳回連接屬性的設定|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|設定連接屬性|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

@@ -1,5 +1,5 @@
 ---
-title: 從微軟訪問查詢和更新可視化 FoxPro 數據 |微軟文件
+title: 從 Microsoft Access 查詢和更新 Visual FoxPro 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,29 +18,29 @@ ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f11b49ed099ba29d0e7e013af99a8ad96ca6825c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292868"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>從 Microsoft Access 查詢和更新 Visual FoxPro 資料
-您可以使用「連結表」選項從 Microsoft Access 資料庫查詢和更新儲存在 Visual FoxPro 資料庫中的數據。  
+您可以使用 [連結資料表] 選項，從 Microsoft Access 資料庫查詢和更新儲存在 Visual FoxPro 資料庫中的資料。  
   
-### <a name="to-link-a-visual-foxpro-database-to-a-microsoft-access-database"></a>將 Visual FoxPro 資料庫連結到 Microsoft 存取資料庫  
+### <a name="to-link-a-visual-foxpro-database-to-a-microsoft-access-database"></a>將 Visual FoxPro 資料庫連結至 Microsoft Access 資料庫  
   
-1.  打開 Microsoft 訪問資料庫。  
+1.  開啟 Microsoft Access 資料庫。  
   
-2.  在"表"選項卡中,按一下"新建"。  
+2.  在 [資料表] 索引標籤上，按一下 [新增]。  
   
-3.  在"新建表"對話框中,選擇"連結表"並按兩下"確定"。  
+3.  在 [新增資料表] 對話方塊中，選取 [連結資料表]，然後按一下 [確定]。  
   
-4.  在「連結對話框」 中,在「類型檔案」 清單中選擇 ODBC 資料庫。  
+4.  在 [連結] 對話方塊的 [檔案類型] 清單中，選取 [ODBC 資料庫]。  
   
-5.  在 SQL 資料源對話方塊中,選擇連接到要查詢的 Visual FoxPro 資料的資料源,然後單擊"確定"  
+5.  在 [SQL 資料來源] 對話方塊中，選取連接到您要查詢之 Visual FoxPro 資料的資料來源，然後按一下 [確定]。  
   
-6.  在"鏈接表"對話框中,選擇要查詢和更新的表,然後單擊"確定"。 連結的 Visual FoxPro 表顯示在 Microsoft 訪問資料庫的「表」選項卡中。  
+6.  在 [連結資料表] 對話方塊中，選取您想要查詢和更新的資料表，然後按一下 [確定]。 連結的 Visual FoxPro 資料表會顯示在 Microsoft Access 資料庫的 [資料表] 索引標籤中。  
   
- 您現在可以使用 Microsoft Access 查詢和更新連結的 Visual FoxPro 表中的數據。 對連結數據所做的更改將發送回 Visual FoxPro 資料來源。  
+ 您現在可以使用 Microsoft Access 來查詢和更新連結的 Visual FoxPro 資料表中的資料。 您對連結資料所做的變更會傳送回 Visual FoxPro 資料來源。  
   
- 如果您不希望在 Microsoft 存取中所做的更改影響 Visual FoxPro 資料來源的資料,請參閱[將可視化 FoxPro 資料匯入 Microsoft 存取](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)。
+ 如果您不想要在 Microsoft Access 中進行變更來影響 Visual FoxPro 資料來源上的資料，請參閱將[Visual Foxpro 資料匯入 Microsoft access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)。

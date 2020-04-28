@@ -1,5 +1,5 @@
 ---
-title: 建立連接 |微軟文件
+title: 建立連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298698"
 ---
 # <a name="establishing-a-connection"></a>建立連線
-在分配環境和連接句柄並設置任何連接屬性後,應用程式已準備好連接到數據源或驅動程式。 應用程式可以使用三種不同的功能 **:SQLConnect(** 核心介面一致性級別 **)、SQLDriverConnect(** 核心)和**SQLBrowseConnect(** 級別 1)。 這三者中的每一個都設計為在不同的場景中使用。 在連接之前,應用程式可以確定 SQLDrivers 返回的**ConnectFunctions**關鍵字支援這些函數中的**哪一**個。  
+在配置環境和連接控制碼並設定任何連接屬性之後，應用程式就已準備好連接到資料來源或驅動程式。 應用程式可以使用三種不同的功能來執行這項操作： **SQLConnect** （核心介面一致性層級）、 **SQLDriverConnect** （核心）和**SQLBrowseConnect** （層級1）。 這三個都是設計成在不同的案例中使用。 連接之前，應用程式可以使用**SQLDrivers**所傳回的**ConnectFunctions**關鍵字來判斷支援哪些函式。  
   
 > [!NOTE]  
->  某些驅動程式限制其支援的活動連接數。 應用程式使用SQL_MAX_DRIVER_CONNECTIONS選項調用**SQLGetInfo,** 以確定特定驅動程式支援多少活動連接。  
+>  某些驅動程式會限制其支援的作用中連線數目。 應用程式會使用 SQL_MAX_DRIVER_CONNECTIONS 選項呼叫**SQLGetInfo** ，以判斷特定驅動程式支援的作用中連接數目。  
   
  此章節包含下列主題。  
   

@@ -1,5 +1,5 @@
 ---
-title: 預設子鍵 |微軟文件
+title: 預設子機碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5bfca9c5c81d94e3d337f8d349fbbd4ceb87dbdc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298388"
 ---
 # <a name="default-subkey"></a>預設子機碼
-註冊表可能指定具有預設子鍵的預設數據來源。 此子鍵是數據源規範子鍵的特殊情況,具有與任何其他數據源規範子鍵相同的值。 唯一的區別是,它不被列為 ODBC 數據源子鍵下的值。
+登錄可能會使用預設子機碼來指定預設的資料來源。 這個子機碼是資料來源規格子機碼的特殊案例，而且具有與任何其他資料來源規格子機碼相同的值。 唯一的差別在於，它不會在 [ODBC 資料來源] 子機碼下列為值。

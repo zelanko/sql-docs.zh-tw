@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 26d849cf68bdb64cef35a45b73a329d37d3966b1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300277"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
@@ -59,7 +59,7 @@ ms.locfileid: "81300277"
   
     -   請勿支援會傳回單一結果集以上的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
- 取用者可藉由設定某些資料列集屬性，在資料列集中要求不同的資料指標行為。 如果使用者未設置這些行集屬性中的任何一個或將它們全部設置為其預設值,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式將使用預設結果集實現行集。 如果其中任一屬性設置為預設值以外的值,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式將使用伺服器游標實現行集。  
+ 取用者可藉由設定某些資料列集屬性，在資料列集中要求不同的資料指標行為。 如果取用者未設定其中任何一個資料列集屬性，或將它們全部設為預設值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會使用預設結果集來執行資料列集。 如果其中任何一個屬性設定為預設值以外的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者就會使用伺服器資料指標來執行資料列集。  
   
  下列資料列集屬性會指引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料指標。 某些屬性可以安全地與其他屬性合併在一起。 例如，顯示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 屬性的資料列集將會是一個顯示立即更新行為的書籤資料列集。 其他屬性互斥。 例如，顯示 DBPROP_OTHERINSERT 的資料列集不能包含書籤。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81300277"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 如果參考的資料行上有索引存在，命令文字可以包含 ORDER BY 子句。<br /><br /> 只有當資料列集可以顯示其他工作階段上的命令所插入或其他使用者所插入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料列時，才能在資料列集中使用 DBPROP_IMMOBILEROWS。 嘗試在 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何資料列集上開啟此屬性設定為 VARIANT_FALSE 的資料列集時，將會產生錯誤。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句 (除非由另一個屬性所限制)。|  
   
- 可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IOpenRowset::OpenRowset**方法,在基錶或視圖上輕鬆創建由伺服器游標支援的本機用戶端 OLE DB 提供程式列集。 依據名稱指定資料表或檢視表，在 *rgPropertySets* 參數內傳遞必要的資料列集屬性集。  
+ 伺服器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料指標所支援的 Native Client OLE DB 提供者資料列集，可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IOpenRowset：： OpenRowset**方法，輕鬆地在基表或視圖上建立。 依據名稱指定資料表或檢視表，在 *rgPropertySets* 參數內傳遞必要的資料列集屬性集。  
   
  當取用者要求伺服器資料指標支援資料列集時，建立此資料列集的命令文字會受到限制。 具體而言，命令文字會受限為傳回單一資料列集結果的單一 SELECT 陳述式，或是實作單一 SELECT 陳述式來傳回單一資料列集結果的預存程序。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "81300277"
  請從指定的資料列集屬性集合中，取得上述表格中所列之屬性的子集。 根據每一個資料列集屬性的旗標值，將這些屬性分成兩個子群組：必要 (T、F) 或選擇性 (-)。 對於每一個資料指標模型而言，請從第一個表開始，然後從左到右移動，並將這兩個子群組中的屬性值與該資料行內的對應屬性值相比較。 如果資料指標模型沒有任何項目符合必要屬性，而且不符合選擇性屬性的數目最少，則會選取該資料指標模型。 如果有一個以上的資料指標模型，則會選擇最左邊。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 資料指標區塊大小  
- 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 本機用戶端 OLE DB 提供程式列集時 **,IRowset:GetNextRows**或**IRowset定位:GetRowsAt**方法的行句柄陣列參數中的元素數定義游標塊大小。 此陣列中控制代碼所指示的資料列為資料指標區塊的成員。  
+ 當資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指標支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料列集時， **IRowset：： GetNextRows**或**IRowsetLocate：： GetRowsAt**方法之資料列控制碼陣列參數中的元素數目會定義資料指標區塊大小。 此陣列中控制代碼所指示的資料列為資料指標區塊的成員。  
   
  如果是支援書籤的資料列集，使用 **IRowsetLocate::GetRowsByBookmark** 方法擷取的資料列控制代碼會定義資料指標區塊的成員。  
   

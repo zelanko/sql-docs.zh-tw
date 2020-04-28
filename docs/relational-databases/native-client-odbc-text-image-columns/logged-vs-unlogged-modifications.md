@@ -1,5 +1,5 @@
 ---
-title: 記錄與未記錄的修改 |微軟文件
+title: 已記錄與未記錄的修改 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc7fb913bef4083b045a0c1c010bdedbc43135c5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297651"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>已記錄與未記錄的修改
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]應用程式可以請求本機用戶端ODBC驅動程式不記錄**文本****、ntext**和**圖像**修改。 但是在使用這個選項時，應該要特別小心。 它只應用於**文本****、ntext**或**圖像**數據不重要且資料擁有者願意權衡恢復資料的能力以獲得更高性能的情況。  
+  應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以要求 NATIVE Client ODBC 驅動程式不會記錄**text**、 **Ntext**和**image**修改。 但是在使用這個選項時，應該要特別小心。 只有當**text**、 **Ntext**或**image**資料不重要，而且資料擁有者願意將復原資料的能力視為較高的效能時，才應該使用此功能。  
   
- **文本****、ntext**和**圖像**修改的日誌記錄通過調用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)進行控制,*屬性*參數設置為SQL_SOPT_SS_TEXTPTR_LOGGING,ValuePtr 設置為SQL_TL_ON或SQL_TL_OFF。 *ValuePtr*  
+ **Text**、 **Ntext**和**image**修改的記錄是藉由呼叫[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) ，並將*Attribute*參數設定為 SQL_SOPT_SS_ TEXTPTR_LOGGING，並將*valueptr 是*設定為 SQL_TL_ON 或 SQL_TL_OFF 來控制。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Text 和 Image 資料行](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

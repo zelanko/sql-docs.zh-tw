@@ -1,5 +1,5 @@
 ---
-title: 游標屬性 |微軟文件
+title: 資料指標屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef1b52cfc45099bbfe09683b871f5ef822b36370
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298351"
 ---
 # <a name="cursor-properties"></a>資料指標屬性
@@ -35,6 +35,6 @@ ms.locfileid: "81298351"
 -   [資料指標交易隔離等級](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用游標&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [&#40;ODBC&#41;使用資料指標](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

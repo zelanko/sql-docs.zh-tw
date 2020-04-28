@@ -1,5 +1,5 @@
 ---
-title: ODBC API 參考 |微軟文件
+title: ODBC API 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298932"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 參考
-本節中的主題按字母順序描述每個 ODBC 函數。 每個函數被定義為 C 程式設計語言函數。 描述包括以下內容:  
+本節中的主題會依字母順序描述每個 ODBC 函數。 每個函式都會定義為 C 程式設計語言函式。 描述包括下列各項：  
   
 -   目的  
   
 -   ODBC 版本  
   
--   標準 CLI 符合性層級  
+-   標準 CLI 一致性層級  
   
 -   語法  
   
@@ -35,20 +35,20 @@ ms.locfileid: "81298932"
   
 -   診斷  
   
--   關於使用和實現的評論  
+-   使用方式和執行的相關批註  
   
 -   程式碼範例  
   
--   相關函數的引言  
+-   相關函式的參考  
   
- 標準 CLI 符合性級別可以是以下級別之一:ISO 92、開放組、ODBC 或已棄用。 標記為 ISO 92 符合項的函數也出現在 Open Group 版本 1 中,因為 Open Group 是 ISO 92 的純超級集。 在 ODBC 3 中也會顯示標記為「符合開放組」的函數。*x*,因為 ODBC 3.*x*是開放組版本 1 的純超級集。 標記為符合 ODBC 的函數在這兩個標準中都顯示。 在 ODBC 3 中已棄用標記為棄用的函數。*x*. .  
+ 標準 CLI 一致性層級可以是下列其中一項： ISO 92、Open Group、ODBC 或已被取代。 標記為符合 ISO 92 標準的函式也會出現在開放群組第1版中，因為 Open Group 是 ISO 92 的純粹超集合。 標記為開啟群組相容的函式也會出現在 ODBC 3 中。*x*，因為 ODBC 3。*x*是開放式群組第1版的純粹超集合。 標記為 ODBC 相容的函式會出現在兩個標準中。 標記為已被取代的函式在 ODBC 3 中已經被取代。*x*。  
   
- 診斷資訊的處理在[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數描述中描述。 包含與 SQLSTATE 值關聯的文本是為了提供條件的描述,但不打算規定特定文本。  
+ [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數描述中會說明診斷資訊的處理方式。 已包含與 SQLSTATE 值相關聯的文字，以提供條件的描述，但不適合用來規定特定文字。  
   
 > [!NOTE]  
->  有關 ODBC 函數的特定於驅動程式的資訊,請參閱驅動程式的部分。  
+>  如需有關 ODBC 函式的驅動程式特定資訊，請參閱驅動程式的一節。  
   
- 本節包含以下功能的主題:  
+ 本節包含下列功能的主題：  
   
 -   [SQLAllocConnect 函式](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

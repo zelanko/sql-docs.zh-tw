@@ -1,5 +1,5 @@
 ---
-title: 使用日期與時間型態 :微軟文件
+title: 使用日期和時間類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298278"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和時間類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 有關使用這些類型的的詳細資訊,請參閱 &#40;[ODBC&#41;的日期和時間改進](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+  此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需有關使用這些類型的詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="example"></a>範例  
  您將需要稱為 DateTime 的 ODBC 資料來源。 DateTime 的預設資料庫應該是 tempdb。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，此資料來源必須以 ODBC 驅動程式為基礎。  
@@ -30,11 +30,11 @@ ms.locfileid: "81298278"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第一個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 程式碼清單建立此範例使用的表。  
+ 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的資料表。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
- 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]( ) 代碼清單將刪除此範例使用的表。  
+ 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所使用的資料表。  
   
 ```sql
 use tempdb  

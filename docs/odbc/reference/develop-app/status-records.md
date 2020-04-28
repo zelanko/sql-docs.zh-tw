@@ -1,5 +1,5 @@
 ---
-title: 狀態記錄 |微軟文件
+title: 狀態記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4afef16137404fcdfd3e1d328642f1d314829538
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301369"
 ---
 # <a name="status-records"></a>狀態記錄
-狀態記錄中的欄位包含有關驅動程式管理器、驅動程式或資料源返回的特定錯誤或警告的資訊,包括 SQLSTATE、本機錯誤編號、診斷訊息、列號和行號。 僅當函數返回SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA 或SQL_STILL_EXECUTING時,才能創建狀態記錄。 有關狀態記錄中欄位的完整清單,請參閱[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數說明。  
+狀態記錄中的欄位包含驅動程式管理員、驅動程式或資料來源所傳回之特定錯誤或警告的相關資訊，包括 SQLSTATE、原生錯誤號碼、診斷訊息、資料行編號和資料列編號。 只有在函數傳回 SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA 或 SQL_STILL_EXECUTING 時，才可以建立狀態記錄。 如需狀態記錄中的完整欄位清單，請參閱[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數描述。  
   
  此章節包含下列主題。  
   

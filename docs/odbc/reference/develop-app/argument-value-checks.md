@@ -1,5 +1,5 @@
 ---
-title: 參數值檢查 |微軟文件
+title: 引數值檢查 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6c6e4de16c4a1a80be893acbc7a1993b375f2fee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298818"
 ---
 # <a name="argument-value-checks"></a>引數值檢查
-驅動程式管理員檢查以下類型的參數。 除非另有說明,否則驅動程式管理器將返回SQL_ERROR參數值中的錯誤。  
+驅動程式管理員會檢查下列類型的引數。 除非另有注明，否則驅動程式管理員會針對引數值中的錯誤傳回 SQL_ERROR。  
   
--   環境、連接和語句句柄通常不能為空指標。 驅動程式管理器在找到空句柄時返回SQL_INVALID_HANDLE。  
+-   環境、連接和語句控制碼通常不可以是 null 指標。 驅動程式管理員在找到 null 控制碼時，會傳回 SQL_INVALID_HANDLE。  
   
--   所需的指標參數(如**SQLAllocHandle**中的*Output HandlePtr*和**SQLSetCursorName**中的*CursorName)* 不能為空指標。  
+-   必要的指標引數（例如**SQLAllocHandle**中的*OutputHandlePtr*和**SQLSetCursorName**中的*CursorName* ）不可以是 null 指標。  
   
--   不支援特定於驅動程式的值的選項標誌必須是一個法定值。 例如 **,SQLSetPos**中的*操作*必須SQL_POSITION、SQL_REFRESH、SQL_UPDATE、SQL_DELETE或SQL_ADD。  
+-   不支援驅動程式特定值的選項旗標必須是合法的值。 例如， **SQLSetPos**中的*Operation*必須是 SQL_POSITION、SQL_REFRESH、SQL_UPDATE、SQL_DELETE 或 SQL_ADD。  
   
--   驅動程式支援的 ODBC 版本中必須支援選項標誌。 例如,在調用 ODBC 2.0 驅動程式時,無法SQL_ASYNC_MODE **SQLGetInfo**中的*資訊類型*(在 ODBC 3.0 中引入)。  
+-   驅動程式支援的 ODBC 版本中必須支援選項旗標。 例如，呼叫 ODBC 2.0 驅動程式時，無法 SQL_ASYNC_MODE **SQLGetInfo**中的*INFOTYPE* （在 ODBC 3.0 中引進）。  
   
--   列和參數編號必須大於 0 或大於或等於 0,具體取決於函數。 驅動程式必須基於當前結果集或 SQL 語句檢查這些參數值的上限。  
+-   視函式而定，資料行和參數編號必須大於0或大於或等於0。 驅動程式必須根據目前的結果集或 SQL 語句來檢查這些引數值的上限。  
   
--   長度/指示器參數和數據緩衝區長度參數必須包含適當的值。 例如,在**SQLColumns** *(NameLength3)* 中指定表名長度的參數必須SQL_NTS或大於 0 的值;**SQLDescribeCol**中的*緩衝區長度*必須大於或等於 0。 驅動程式可能還需要檢查這些參數。 例如,它可能會檢查*NameLength3*小於或等於資料源中表名的最大長度。
+-   長度/指標引數和資料緩衝區長度引數必須包含適當的值。 例如，指定**SQLColumns** （*NameLength3*）中資料表名稱長度的引數必須 SQL_NTS 或大於0的值;**SQLDescribeCol**中的*BufferLength*必須大於或等於0。 驅動程式可能也需要檢查這些引數。 例如，它可能會檢查*NameLength3*是否小於或等於資料來源中資料表名稱的最大長度。

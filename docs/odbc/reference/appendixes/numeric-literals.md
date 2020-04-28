@@ -1,5 +1,5 @@
 ---
-title: 數字文字 |微軟文件
+title: 數值常值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 994bbed6ed3454c6213b16faabf5a0de7eeabbf9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299848"
 ---
 # <a name="numeric-literals"></a>數值常值
-當數位資料值儲存在字串中時,將使用數位文本。 對於將數位 SQL 資料轉換為SQL_C_CHAR字串,或將數位 C 資料轉換為SQL_CHAR或SQL_VARCHAR字串,使用數位文本語法指定存儲在目標中的內容。 對於將作為SQL_C_CHAR字串儲存的數位轉換為數位 SQL 資料,或將作為SQL_CHAR字串儲存的數位轉換為數位 C 資料,此語法用於驗證存儲在源中的內容。  
+數值常值是用來儲存在字元字串中的數值資料。 若要將數值 SQL 資料轉換成 SQL_C_CHAR 字串，或將數值 C 資料轉換成 SQL_CHAR 或 SQL_VARCHAR 字串，則會使用數值常值語法來指定要儲存在目標中的內容。 若要將儲存為 SQL_C_CHAR 字串的數值轉換為數值 SQL 資料，或將儲存為 SQL_CHAR 字串的數值轉換成數位 C 資料，則會使用此語法來驗證來源中儲存的內容。  
   
- 數位文本應符合附錄 C 中[「數位文字語法](../../../odbc/reference/appendixes/numeric-literal-syntax.md)」部分中定義的語法:SQL 語法。  
+ 數值常值應符合附錄 C： SQL 文法中的「[數值常值語法](../../../odbc/reference/appendixes/numeric-literal-syntax.md)」一節中所定義的語法。  
   
  此章節包含下列主題。  
   

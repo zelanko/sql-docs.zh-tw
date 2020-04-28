@@ -1,5 +1,5 @@
 ---
-title: 甲骨文程式師的ODBC驅動程式&#39;參考 |微軟文件
+title: ODBC Driver for Oracle 程式設計人員&#39;s 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298118"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Oracle 程式師&#39;參考的 ODBC 驅動程式
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 程式設計人員&#39;s 參考
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 而是使用 Oracle 提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
  本節包含下列主題：  
   
@@ -41,14 +41,14 @@ ms.locfileid: "81298118"
   
 -   [使用索引鍵集驅動資料指標的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [適用於 Oracle 儲存程序的 ODBC 驅動程式](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Oracle 預存程式的 ODBC 驅動程式](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [甲骨文錯誤訊息的 ODBC 驅動程式](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [ODBC Driver for Oracle 錯誤訊息](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [ODBC 符合性層級](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [ODBC 一致性層級](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
--   [API 功能](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
+-   [API 函式](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   
--   [支援資料類型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
+-   [支援的資料類型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [對應資料類型](../../odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md)

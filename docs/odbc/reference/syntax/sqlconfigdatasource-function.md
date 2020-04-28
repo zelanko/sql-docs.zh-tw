@@ -1,5 +1,5 @@
 ---
-title: SQLConfigData源函數 |微軟文件
+title: SQLConfigDataSource 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 90a51193a8f4edbb013527c4dde0625b75131583
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299628"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 函數 (英文)
-**一致性**  
- 版本介紹: ODBC 1.0  
+**標準**  
+ 引進的版本： ODBC 1。0  
   
  **摘要**  
- **SQLConfigDataSource**添加、修改或刪除資料來源。  
+ **SQLConfigDataSource**加入、修改或刪除資料來源。  
   
- **SQLConfigDataSource**的功能也可以與[ODBCCONF 一起訪問。EXE](../../../odbc/odbcconf-exe.md).  
+ 您也可以使用 ODBCCONF 來存取**SQLConfigDataSource**的功能[。EXE](../../../odbc/odbcconf-exe.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,57 +47,57 @@ BOOL SQLConfigDataSource(
 ```  
   
 ## <a name="arguments"></a>引數  
- *hwnd 家長*  
- [輸入]父視窗句柄。 如果句柄為空,則函數將不會顯示任何對話方塊。  
+ *hwndParent*  
+ 源父視窗控制碼。 如果控制碼為 null，函數不會顯示任何對話方塊。  
   
- *f 要求*  
- [輸入]請求的類型。 *fRequest*參數必須包含以下值之一:  
+ *fRequest*  
+ 源要求的類型。 *FRequest*引數必須包含下列其中一個值：  
   
- ODBC_ADD_DSN:添加新的用戶數據源。  
+ ODBC_ADD_DSN：加入新的使用者資料來源。  
   
- ODBC_CONFIG_DSN:配置(修改)現有用戶數據源。  
+ ODBC_CONFIG_DSN：設定（修改）現有的使用者資料來源。  
   
- ODBC_REMOVE_DSN:刪除現有用戶數據源。  
+ ODBC_REMOVE_DSN：移除現有的使用者資料來源。  
   
- ODBC_ADD_SYS_DSN:添加新的系統數據源。  
+ ODBC_ADD_SYS_DSN：加入新的系統資料來源。  
   
- ODBC_CONFIG_SYS_DSN:修改現有系統數據源。  
+ ODBC_CONFIG_SYS_DSN：修改現有的系統資料來源。  
   
- ODBC_REMOVE_SYS_DSN:刪除現有系統數據源。  
+ ODBC_REMOVE_SYS_DSN：移除現有的系統資料來源。  
   
- ODBC_REMOVE_DEFAULT_DSN:從系統資訊中刪除預設數據源規範部分。 (它還從系統資訊中的 Odbcinst.ini 條目中刪除預設驅動程序規範部分。 此*fRequest*執行的功能與棄用的**SQLRemoveDefaultDataSource**函數相同。指定此選項後,對**SQLConfigDataSource**的調用中的所有其他參數應為 NUL;對 SQL 呼叫時,所有其他參數都應為 NUL。如果它們不是 NULL,則將被忽略。  
+ ODBC_REMOVE_DEFAULT_DSN：移除系統資訊中的預設資料來源規格區段。 （它也會移除系統資訊中 Odbcinst 專案的預設驅動程式規格區段。 這個*fRequest*會執行與已被取代的**SQLRemoveDefaultDataSource**函式相同的功能）。當指定這個選項時，呼叫**SQLConfigDataSource**的所有其他參數都應該是 null。如果它們不是 Null，則會忽略它們。  
   
  *lpszDriver*  
- [輸入]向使用者而不是物理驅動程式名稱顯示的驅動程式描述(通常是關聯的 DBMS 的名稱)。  
+ 源驅動程式描述（通常是相關 DBMS 的名稱）會呈現給使用者，而不是實體驅動程式名稱。  
   
- *lpsz屬性*  
- [輸入]以關鍵字-值對形式加倍終止的屬性清單。 有關詳細資訊,請參閱[設定DSN](../../../odbc/reference/syntax/configdsn-function.md)。  
+ *lpszAttributes*  
+ 源成對的雙向 null 終止屬性清單，其格式為關鍵字-值組。 如需詳細資訊，請參閱[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)。  
   
 ## <a name="returns"></a>傳回值  
- 如果成功,則函數返回 TRUE,如果失敗,則返回 FALSE。 如果在調用此函數時系統資訊中不存在條目,則函數將返回 FALSE。  
+ 如果成功，函式會傳回 TRUE，如果失敗，則傳回 FALSE。 如果在呼叫此函式時，系統資訊中沒有任何專案存在，此函數會傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLConfigDataSource**傳回 FALSE 時,可以透過呼叫**SQL 安裝程式錯誤**獲得關聯的*\*pfErrorCode*值。 下表列出了**SQL 安裝程式錯誤**可以返回的*\*pfErrorCode*值,並在此函數的上下文中解釋了每個值。  
+ 當**SQLConfigDataSource**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
   
-|*\*pfError 碼*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生沒有特定安裝程式錯誤的錯誤。|  
-|ODBC_ERROR_INVALID_HWND|無效的視窗句柄|*hwnd 父參數*無效或 NULL。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|不合法的要求型態|*fRequest*參數不是以下參數之一:<br /><br /> ODBC_ADD_DSNODBC_CONFIG_DSN ODBC_REMOVE_DSNODBC_ADD_SYS_DSNODBC_CONFIG_SYS_DSNODBC_REMOVE_SYS_DSNODBC_REMOVE_DEFAULT_DSNODBC_CONFIG_DSN|  
-|ODBC_ERROR_INVALID_NAME|不合法的驅動程式或翻譯者名稱|*lpszDriver*參數無效。 在註冊表中找不到它。|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|無效關鍵字-值對|*lpszAttributes*參數包含語法錯誤。|  
-|ODBC_ERROR_REQUEST_FAILED|*要求*失敗|安裝程式無法執行*fRequest*參數請求的操作。 對**ConfigDSN 的**調用失敗。|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|無法載入驅動程式或轉換器設定庫|無法載入驅動程式設置庫。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足,安裝程式無法執行該功能。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
+|ODBC_ERROR_INVALID_HWND|不正確視窗控制碼|*HwndParent*引數無效或為 Null。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|要求的類型無效|*FRequest*引數不是下列其中一項：<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
+|ODBC_ERROR_INVALID_NAME|驅動程式或 translator 名稱無效|*LpszDriver*引數無效。 在登錄中找不到它。|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|不正確關鍵字-值配對|*LpszAttributes*引數包含語法錯誤。|  
+|ODBC_ERROR_REQUEST_FAILED|*要求*失敗|安裝程式無法執行*fRequest*引數所要求的作業。 呼叫**ConfigDSN**失敗。|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|無法載入驅動程式或 translator 安裝程式程式庫|無法載入驅動程式安裝程式庫。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
   
-## <a name="comments"></a>註解  
- **SQLConfigDataSource**使用*lpszDriver*的值從系統資訊讀取驅動程式的安裝程式 DLL 的完整路徑。 它載入 DLL 並呼叫**ConfigDSN,** 其參數與傳遞給它的相同參數相同。  
+## <a name="comments"></a>評價  
+ **SQLConfigDataSource**會使用*lpszDriver*的值，從系統資訊讀取驅動程式安裝程式 DLL 的完整路徑。 它會載入 DLL，並使用傳遞給它的相同引數呼叫**ConfigDSN** 。  
   
- **如果 SQLConfigDataSource**無法查找或載入安裝程式 DLL 或使用者取消對話框,則返回 FALSE。 否則,它將返回從**ConfigDSN**收到的狀態。  
+ 如果**SQLConfigDataSource**找不到或無法載入安裝程式 DLL，或使用者取消了對話方塊，則會傳回 FALSE。 否則，它會傳回從**ConfigDSN**收到的狀態。  
   
- **SQLConfigDataSource**將系統 DSN *fRequest*映射到使用者 DSN *fRequests(ODBC_ADD_SYS_DSN*到ODBC_ADD_DSN,ODBC_CONFIG_SYS_DSN到ODBC_CONFIG_DSN,ODBC_REMOVE_SYS_DSN到ODBC_REMOVE_DSN)。 為了區分使用者和系統**DSN,SQLConfigDataSource**根據下表設置安裝程式配置模式。 在返回之前 **,SQLConfigDataSource**會將配置模式重置為 BOTHDSN。 **配置DSN(** 由驅動程式實現)應呼叫**SQLWriteDSNToini**和**SQLWritePrivateProfileString**來支援系統 DSN。 有關詳細資訊,請參閱[配置DSN函數](../../../odbc/reference/syntax/configdsn-function.md)。  
+ **SQLConfigDataSource**會將系統 dsn *FRequest*對應到使用者 dsn *fRequest*s （ODBC_ADD_SYS_DSN 以 ODBC_ADD_DSN、ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN，以及 ODBC_REMOVE_SYS_DSN 至 ODBC_REMOVE_DSN）。 為了區分使用者和系統 Dsn， **SQLConfigDataSource**會根據下表來設定安裝程式設定模式。 在傳回之前， **SQLConfigDataSource**會將設定模式重設為 BOTHDSN。 **ConfigDSN** （由驅動程式執行）應該呼叫**SQLWriteDSNToIni**和**SQLWritePrivateProfileString**來支援系統 DSN。 如需詳細資訊，請參閱[ConfigDSN 函數](../../../odbc/reference/syntax/configdsn-function.md)。  
   
-|*f 要求*|設定模式|  
+|*fRequest*|設定模式|  
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  
@@ -110,6 +110,6 @@ BOOL SQLConfigDataSource(
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|新增、修改或移除資料來源|[設定DSN(](../../../odbc/reference/syntax/configdsn-function.md)在設定 DLL 中 )|  
-|從系統資訊中移除資料來源名稱|[SQLRemoveDSNfromini](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
-|新增資料來源名稱|[SQLwriteSntoini](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|加入、修改或移除資料來源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) （在安裝程式 DLL 中）|  
+|從系統資訊移除資料來源名稱|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
+|將資料來源名稱新增至系統資訊|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

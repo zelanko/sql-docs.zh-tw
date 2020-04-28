@@ -1,5 +1,5 @@
 ---
-title: 支援規則、觸發器、預設值和存儲過程 |微軟文件
+title: 支援規則、觸發程式、預設值和預存程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -29,255 +29,255 @@ ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2fcf8e7c80b2712313cba81199489dc7cb06dce0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301135"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、觸發程序、預設值和預存程序支援 (Visual FoxPro ODBC Driver)
-無法使用 Visual FoxPro ODBC 驅動程式創建 Visual FoxPro 規則、觸發器、預設值或儲存過程。 但是,應用程式可能會在插入、更新或刪除存儲在資料庫中的 Visual FoxPro 資料時與現有規則、觸發器、預設值或存儲過程進行交互。  
+您無法使用 Visual FoxPro ODBC Driver 來建立 Visual FoxPro 規則、觸發程式、預設值或預存程式。 不過，您的應用程式可能會在插入、更新或刪除儲存在資料庫中的 Visual FoxPro 資料時，與現有的規則、觸發程式、預設值或預存程式互動。  
   
- 下表列出了 Visual FoxPro ODBC 驅動程式支援的 Visual FoxPro 命令和函數,當命令或函數存在於規則、觸發器、預設值或儲存過程中時。  
+ 下表列出當規則、觸發程式、預設值或預存程式中有命令或函式時，Visual FoxPro ODBC Driver 所支援的 Visual FoxPro 命令和函式。  
   
- 如果應用程式與規則、觸發器、預設值或儲存過程呼叫任何其他 Visual FoxPro 命令或函數的資料進行互動,則驅動程式將生成錯誤。 有關驅動程式不支援的命令和函數清單,請參閱[不支援的 Visual FoxPro 命令和函數](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)清單。  
+ 如果您的應用程式與規則、觸發程式、預設值或預存程式呼叫任何其他 Visual FoxPro 命令或函數的資料互動，驅動程式會產生錯誤。 如需驅動程式不支援的命令和功能清單，請參閱[不支援的 Visual FoxPro 命令和](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)函式。  
   
 > [!TIP]  
->  如果要將條件代碼插入到確定驅動程式呼叫時要執行的命令的規則、觸發器或儲存過程中,可以使用**VERSION( )** 函數。 當驅動程式呼叫時 **,VERSION()** 函數傳回"視覺 FoxPro ODBC 驅動程式*\<版本>"。*  
+>  如果您想要將條件式程式碼插入規則、觸發程式或預存程式，以判斷驅動程式呼叫時要執行的命令，您可以使用**VERSION （）** 函數。 **VERSION （）** 函式會在驅動程式呼叫時傳回「Visual FoxPro ODBC Driver * \<VERSION>*」。  
   
-## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>在規則、觸發器、預設值和儲存過程中支援視覺化 FoxPro 指令和函數  
+## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>規則、觸發程式、預設值和預存程式中支援的 Visual FoxPro 命令和函式  
   
 ||||  
 |-|-|-|  
-|$ 運算子|% 運算子|&命令|  
-|&& 指挥部|• 命令|• 命令|  
+|$ 運算子|% 運算子|& 命令|  
+|&& 命令|* 命令|= 命令|  
   
 ## <a name="a"></a>A  
   
 ||||  
 |-|-|-|  
-|ABS( ) 功能|ACOPY) 功能|新增表指令|  
-|ADATABASES( )|ADBOBJECTS( )|AERROR 功能|  
-|ADEL( ) 功能|AELEMENT) 功能|放大縮小字型功能 放大縮小字型功能|  
-|AFIELDS( ) 功能|AINSS( ) 功能|ALTER TABLE - SQL 命令|  
-|ALIAS) 功能|ALLTRIM( ) 功能|從 ARRAY 指令的附錄|  
-|和管理員|APPEND 命令|APPEND MEMO 指令|  
-|從命令中套用|APPEND 總司令部|ASCANS 功能|  
-|放大縮小字型功能 放大縮小字型功能|ASC( ) 功能|放大縮小字型功能 放大縮小字型功能|  
-|ASIN) 功能|ASORT) 功能|ATAN( ) 功能|  
-|AT( ) 功能|AT_C( ) 功能|ATCLINE( ) 功能|  
-|ATC( ) 功能|ATCC( ) 功能|AUSED) 功能|  
-|ATline( ) 功能|ATN2( ) 功能||  
-|平均命令|ACOS( ) 功能||  
+|ABS （）函數|ACOPY （）函數|新增資料表命令|  
+|ADATABASES （）函數|ADBOBJECTS （）函數|AERROR （）函數|  
+|ADEL （）函數|AELEMENT （）函數|ALEN （）函數|  
+|AFIELDS （）函數|AINS （）函數|ALTER TABLE - SQL 命令|  
+|ALIAS （）函數|ALLTRIM （）函數|從陣列附加命令|  
+|AND 運算子|APPEND 命令|附加備忘命令|  
+|從命令附加|附加一般命令|ASCAN （）函數|  
+|附加程式命令|ASC （）函數|ASUBSCRIPT （）函數|  
+|ASIN （）函數|ASORT （）函數|ATAN （）函數|  
+|AT （）函數|AT_C （）函數|ATCLINE （）函數|  
+|ATC （）函數|ATCC （）函數|AUSED （）函數|  
+|ATLINE （）函數|ATN2 （）函數||  
+|平均命令|ACOS （）函數||  
   
 ## <a name="b"></a>B  
   
 ||||  
 |-|-|-|  
-|BEGIN 交易命令|() 功能|BITNOT( ) 功能|  
-|BITCLEAR( )|BITLSHIFT) 功能|BITSET) 功能|  
-|BITOR( ) 功能|BITRSHIFT) 功能|BLANK 命令|  
-|BITTEST( ) 功能|BITXOR( ) 功能||  
-|BOF( ) 功能|BITand( ) 功能||  
+|BEGIN TRANSACTION 命令|BETWEEN （）函數|BITNOT （）函數|  
+|BITCLEAR （）函數|BITLSHIFT （）函數|BITSET （）函數|  
+|BITOR （）函數|BITRSHIFT （）函數|空白命令|  
+|BITTEST （）函數|BITXOR （）函數||  
+|BOF （）函數|BITAND （）函數||  
   
 ## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
-|計算命令|候選人( ) 功能|CHR( ) 職能|  
-|CDX( ) 功能|天花板( ) 功能|關閉命令|  
-|CHRTRAN( ) 功能|CHRTRANC( ) 功能|複製索引指令|  
-|CMONTH) 功能|繼續命令|複製結構延伸命令|  
-|複製程式指令|複製結構命令|複製到指令|  
-|複製分頁命令|複製到 ARRAY 命令|CPCONVERT) 功能|  
-|COS( ) 功能|COUNT 命令|CTOD( ) 功能|  
-|CPCURRENTS( ) 功能|CPDBF( ) 功能|放大縮小字型功能 放大縮小字型功能|  
-|CTOT( ) 功能|放大縮小字型功能 放大縮小字型功能||  
-|曲線( ) 功能|CDOW( ) 功能||  
+|計算命令|候選（）函數|CHR （）函數|  
+|CDX （）函數|上限（）函數|關閉命令|  
+|CHRTRAN （）函數|CHRTRANC （）函數|複製索引命令|  
+|CMONTH （）函數|繼續命令|複製結構擴充命令|  
+|複製程式命令|複製結構命令|複製到命令|  
+|複製標記命令|複製到陣列命令|CPCONVERT （）函數|  
+|COS （）函數|COUNT 命令|CTOD （）函數|  
+|CPCURRENT （）函數|CPDBF （）函數|CURSORSETPROP （）函數|  
+|CTOT （）函數|CURSORGETPROP （）函數||  
+|CURVAL （）函數|CDOW （）函數||  
   
 ## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
-|日期( ) 功能|日期時間( ) 功能|日( ) 功能|  
-|DBC( ) 功能|DBF( ) 功能|DBGETPROP( )|  
-|DBused( ) 功能|DELETE - SQL 命令|移除命令|  
-|DELETE TAG 命令|刪除( ) 功能|遞減( ) 功能|  
-|差異( ) 功能|維度命令|磁碟空間( ) 功能|  
-|DMY( ) 功能|做案例...ENDCASE 命令|動作命令|  
-|做, 而 ...ENDDO 命令|DOW( ) 功能|DTOC( ) 功能|  
-|DTOR( ) 功能|DTOS( ) 功能|DTOT( ) 功能|  
+|DATE （）函數|DATETIME （）函數|DAY （）函數|  
+|DBC （）函數|DBF （）函數|DBGETPROP （）函數|  
+|DBUSED （）函數|DELETE - SQL 命令|DELETE 命令|  
+|DELETE TAG 命令|DELETED （）函數|遞減（）函數|  
+|差異（）函數|維度命令|磁碟空間（）函數|  
+|DMY （）函數|執行案例 .。。ENDCASE 命令|DO 命令|  
+|執行時間 .。。ENDDO 命令|DOW （）函數|DTOC （）函數|  
+|DTOR （）函數|DTO （）函數|DTOT （）函數|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
-|放大縮小字型功能 放大縮小字型功能|評估( ) 功能|EXIT 命令|  
-|錯誤( ) 功能|EXP( ) 功能||  
-|結束交易命令|EOF( ) 功能||  
+|EMPTY （）函數|評估（）函數|EXIT 命令|  
+|ERROR （）函式|EXP （）函數||  
+|結束交易命令|EOF （）函數||  
   
 ## <a name="f"></a>F  
   
 ||||  
 |-|-|-|  
-|FCOUNT( ) 功能|FDATE) 功能|放大縮小字型功能 放大縮小字型功能|  
-|檔案( ) 功能|過濾器( ) 功能|FLDLIST( ) 功能|  
-|FLOCK( ) 功能|地板( ) 功能|FLUSH 命令|  
-|對於 ...ENDFOR 指令|for( ) 功能|FOUND( ) 功能|  
-|自由表命令|FSIZE( ) 功能|FTIME( ) 功能|  
-|全路徑( ) 功能|職能命令|FV( ) 功能|  
+|FCOUNT （）函數|FDATE （）函數|FIELD （）函數|  
+|FILE （）函數|FILTER （）函數|FLDLIST （）函數|  
+|FLOCK （）函數|FLOOR （）函數|FLUSH 命令|  
+|針對 .。。FOR...ENDFOR 命令|FOR （）函數|找到（）函數|  
+|免費資料表命令|FSIZE （）函數|FTIME （）函數|  
+|FULLPATH （）函數|FUNCTION 命令|FV （）函數|  
   
 ## <a name="g"></a>G  
   
 ||||  
 |-|-|-|  
-|GATHER 指令|放大縮小字型功能 放大縮小字型功能|GO/GOTO 指令|  
-|GETFLDSTATE( )|GOmonth) 功能||  
-|GETCP( ) 功能|GETENV( ) 功能||  
+|收集命令|GETNEXTMODIFIED （）函數|GO/GOTO 命令|  
+|GETFLDSTATE （）函數|GOMONTH （）函數||  
+|GETCP （）函數|GETENV （）函數||  
   
 ## <a name="h"></a>H  
   
 |||  
 |-|-|  
-|標題( ) 功能|小時( ) 功能|  
+|HEADER （）函數|HOUR （）函數|  
   
 ## <a name="i"></a>I  
   
 ||||  
 |-|-|-|  
-|IDXCOLLATE) 功能|如果。。。恩迪夫命令|IIF( ) 功能|  
-|INDBC( ) 功能|INDEX 命令|INlist( ) 功能|  
-|插入 SQL 指令|INT( ) 功能|ISALPHA( ) 功能|  
-|ISBLANK( ) 功能|ISDigitS 功能|是排他性( )|  
-|ISleadBY( )|ISLOWER( ) 功能|ISNULL( ) 功能|  
-|ISREAD) 功能|ISupper( ) 功能||  
+|IDXCOLLATE （）函數|如果 .。。ENDIF 命令|IIF （）函數|  
+|INDBC （）函數|INDEX 命令|INLIST （）函數|  
+|INSERT-SQL 命令|INT （）函數|ISALPHA （）函數|  
+|ISBLANK （）函數|ISDIGIT （）函數|ISEXCLUSIVE （）函數|  
+|ISLEADBYTE （）函數|ISLOWER （）函數|ISNull （）函數|  
+|ISREADONLY （）函數|ISUPPER （）函數||  
   
 ## <a name="k"></a>K  
   
 ||||  
 |-|-|-|  
-|鍵( ) 功能|鍵符合( ) 功能||  
+|KEY （）函數|KEYMATCH （）函數||  
   
 ## <a name="l"></a>L  
   
 ||||  
 |-|-|-|  
-|左( ) 功能|左撇子( ) 功能|(完) 功能|  
-|LENC( ) 功能|喜歡) 功能|鎖定 ) 功能|  
-|本地指令|定位命令|尋找( ) 功能|  
-|紀錄( ) 功能|LOG10( ) 功能|LTRIM( ) 功能|  
-|低() 功能|LPARAMETERS 命令||  
-|放大縮小字型功能 放大縮小字型功能|LEN( ) 功能||  
+|LEFT （）函數|LEFTC （）函數|LIKEC （）函數|  
+|LENC （）函數|LIKE （）函數|LOCK （）函數|  
+|本機命令|尋找命令|LOOKUP （）函數|  
+|LOG （）函數|LOG10 （）函數|LTRIM （）函數|  
+|LOWER （）函數|LPARAMETERS 命令||  
+|LUPDATE （）函數|LEN （）函數||  
   
 ## <a name="m"></a>M  
   
 ||||  
 |-|-|-|  
-|_MLINE系統記憶體變數|最大() 功能|MDX( ) 功能|  
-|MDY( ) 功能|MEMLINES( ) 功能|訊息( ) 功能|  
-|最小值 ) 功能|分鐘( ) 功能|MLINE( ) 功能|  
-|MOD( ) 功能|月( ) 功能|MTONS ) 功能|  
+|_MLINE 系統記憶體變數|MAX （）函數|MDX （）函數|  
+|MDY （）函數|MEMLINES （）函數|MESSAGE （）函數|  
+|MIN （）函數|MINUTE （）函數|MLINE （）函數|  
+|MOD （）函數|MONTH （）函數|MTON （）函數|  
   
 ## <a name="n"></a>N  
   
 ||||  
 |-|-|-|  
-|NDX( ) 功能|放大縮小字型功能 放大縮小字型功能|不是操作員|  
-|註解命令|NTOM( ) 功能|NVL( ) 功能|  
+|NDX （）函數|正規化（）函數|NOT 運算子|  
+|注意命令|NTOM （）函數|NVL （）函數|  
   
 ## <a name="o"></a>O  
   
 ||||  
 |-|-|-|  
-|發生( ) 功能|舊瓦爾( ) 功能|上錯誤命令|  
-|在關鍵命令|開啟( ) 功能|開啟資料庫命令|  
-|或管理員|訂單( ) 功能|作業系統( ) 功能|  
+|發生時間（）函數|OLDVAL （）函數|ON ERROR 命令|  
+|ON KEY 命令|ON （）函數|開啟資料庫命令|  
+|OR 運算子|ORDER （）函數|OS （）函數|  
   
 ## <a name="p"></a>P  
   
 ||||  
 |-|-|-|  
-|PACK 命令|參數( ) 功能|付款( )|  
-|參數命令|初級功能|私人命令|  
-|PI( ) 功能|程式( ) 功能|正( ) 功能|  
-|程式命令|PV( ) 功能||  
-|公開命令|PADL( ) &#124; PADR( ) &#124; PADC ( ) 功能||  
+|PACK 命令|PARAMETERS （）函數|付款（）函數|  
+|PARAMETERS 命令|PRIMARY （）函數|私用命令|  
+|PI （）函數|PROGRAM （）函數|適當的（）函數|  
+|程式命令|PV （）函數||  
+|公用命令|PADL （） &#124; PADR （） &#124; PADC （）函數||  
   
 ## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
-|蘭德( ) 功能|RAT( ) 功能|RATC( ) 功能|  
-|RATLINE( ) 功能|RECALL 命令|(完) 功能|  
-|RECNO( ) 功能|放大縮小字型功能 放大縮小字型功能|區域司令部|  
-|關聯( ) 功能|移除 TABLE 命令|取代命令|  
-|從 ARRAY 命令取代|複製( ) 功能|RETRY 命令|  
-|返回命令|右) 功能|右C( ) 功能|  
-|RLOCK( ) 功能|捲軸|ROUND( ) 功能|  
-|RTOD( ) 功能|RTRIM( ) 功能||  
+|RAND （）函數|RAT （）函數|RATC （）函數|  
+|RATLINE （）函數|重新叫用命令|RECCOUNT （）函數|  
+|RECNO （）函數|RECSIZE （）函數|地區命令|  
+|RELATION （）函數|移除資料表命令|REPLACE 命令|  
+|[從陣列取代] 命令|複寫（）函數|重試命令|  
+|RETURN 命令|RIGHT （）函數|RIGHTC （）函數|  
+|RLOCK （）函數|ROLLBACK 命令|ROUND （）函數|  
+|RTOD （）函數|RTRIM （）函數||  
   
 ## <a name="s"></a>S  
   
 ||||  
 |-|-|-|  
-|掃描。。。ENDSCAN 命令|分散命令|SEC( ) 功能|  
-|放大縮小字型功能 放大縮小字型功能|SEEK 指令|服務( ) 功能|  
-|選擇指令|選擇( ) 功能|SELECT-SQL 指令|  
-|SET BLOCKSIZE 命令|SET CARRY 命令|設定世紀指令|  
-|SET COLLATE 命令|設定資料庫命令|SET 日期命令|  
-|設定預設指令|SET DELETED 命令|SET EXACT 命令|  
-|SET EXCLUSIVE 命令|SET FDOW 命令|SET FIELDS 命令|  
-|設定篩選器指令|設定固定命令|設定全PATH命令|  
-|SET FWEEK 命令|SETHOURS 命令|SET INDEX 命令|  
-|設定鎖定命令|設定多鎖命令|設定近指令|  
-|設定 NOCPTRANS 命令|設定通知命令|SET NULL 命令|  
-|設定最佳化指令|SET ORDER 命令|SET PATH 命令|  
-|設定程式指令|設定關聯指令|設定關聯關閉命令|  
-|SET REPROCESS 命令|SET SKIP 命令|SET UDFPARMS 命令|  
-|SET UNIQUE 命令|SET VOLUME 命令|設定) 功能|  
-|SETFLDSTATE( )|符號 ( ) 功能|SINS ) 功能|  
-|SKIP 命令|SORT 命令|空白( ) 功能|  
-|SQRT( ) 功能|儲存命令|STR( ) 功能|  
-|STRCONV( ) 功能|放大縮小字型功能 放大縮小字型功能|STUFF( ) 功能|  
-|STUFFC( ) 功能|SUBSTR( ) 功能|SUBSTRC( ) 功能|  
-|SUM 命令|SYS(2011)功能||  
+|掃描 .。。ENDSCAN 命令|散佈命令|SEC （）函數|  
+|SECONDS （）函數|搜尋命令|SEEK （）函數|  
+|選取命令|SELECT （）函數|SELECT-SQL 命令|  
+|SET BLOCKSIZE 命令|設定執行命令|設定世紀命令|  
+|SET COLLATE 命令|設定資料庫命令|設定日期命令|  
+|設定預設命令|SET DELETED 命令|SET EXACT 命令|  
+|SET EXCLUSIVE 命令|SET FDOW 命令|設定欄位命令|  
+|設定篩選命令|設定固定的命令|SET FULLPATH 命令|  
+|SET FWEEK 命令|設定時數命令|設定索引命令|  
+|設定鎖定命令|SET MULTILOCKS 命令|設定 NEAR 命令|  
+|SET NOCPTRANS 命令|設定通知命令|SET NULL 命令|  
+|設定 OPTIMIZE 命令|設定順序命令|SET PATH 命令|  
+|SET PROCEDURE 命令|設定關聯命令|設定關聯關閉命令|  
+|SET REPROCESS 命令|設定略過命令|SET UDFPARMS 命令|  
+|SET UNIQUE 命令|設定磁片區命令|SET （）函數|  
+|SETFLDSTATE （）函數|SIGN （）函數|SIN （）函數|  
+|SKIP 命令|SORT 命令|SPACE （）函數|  
+|SQRT （）函數|STORE 命令|STR （）函數|  
+|STRCONV （）函數|STRTRAN （）函數|事物（）函數|  
+|STUFFC （）函數|SUBSTR （）函數|SUBSTRC （）函數|  
+|SUM 命令|SYS （2011）函數||  
   
 ## <a name="t"></a>T  
   
 ||||  
 |-|-|-|  
-|_TALLY系統記憶體變數|_TRIGGERLEVEL系統記憶體變數|標籤計數( )|  
-|更新( ) 功能|標記( ) 功能|目標( ) 功能|  
-|TAGNO( ) 功能|TAN( ) 功能|修剪( ) 功能|  
-|時間( ) 功能|總命令|TXNLEVEL( )|  
-|TTOC( ) 功能|TTOD( ) 功能||  
-|型態( ) 功能|表還原( ) 功能||  
+|_TALLY 系統記憶體變數|_TRIGGERLEVEL 系統記憶體變數|TAGCOUNT （）函數|  
+|TABLEUPDATE （）函數|TAG （）函數|TARGET （）函數|  
+|TAGNO （）函數|TAN （）函數|TRIM （）函數|  
+|TIME （）函數|TOTAL 命令|TXNLEVEL （）函數|  
+|TTOC （）函數|TTOD （）函數||  
+|TYPE （）函數|TABLEREVERT （）函數||  
   
 ## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  
-|唯一功能|UNLOCK 命令|使用指令|  
-|更新命令|上部( ) 功能||  
-|已用 ( ) 功能|UPDATE - SQL 命令||  
+|UNIQUE （）函數|UNLOCK 命令|使用命令|  
+|UPDATE 命令|UPPER （）函數||  
+|USED （）函數|UPDATE - SQL 命令||  
   
 ## <a name="v"></a>V  
   
 ||||  
 |-|-|-|  
-|VAL( ) 功能|版本( ) 功能||  
+|VAL （）函數|VERSION （）函數||  
   
 ## <a name="w"></a>W  
   
 ||||  
 |-|-|-|  
-|週( ) 功能|||  
+|WEEK （）函數|||  
   
 ## <a name="y"></a>Y  
   
 ||||  
 |-|-|-|  
-|年( ) 功能|||  
+|YEAR （）函數|||  
   
 ## <a name="z"></a>Z  
   

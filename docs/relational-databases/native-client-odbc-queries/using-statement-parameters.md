@@ -1,5 +1,5 @@
 ---
-title: 使用敘述參數 |微軟文件
+title: Using 語句參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297892"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
@@ -35,9 +35,9 @@ ms.locfileid: "81297892"
   
 -   增強建構查詢準則時的使用者互動。  
   
--   管理**文本****、ntext**和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**圖像**資料以及 特定於 C 的數據類型。  
+-   管理**text**、 **Ntext**和**image**資料，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的 C 資料類型。  
   
- 例如,**零件**表具有名為 **「零件 ID」、「****描述**」 和 「**價格」的**欄。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
+ 例如， **part**資料表具有名為**PartID**、 **Description**和**Price**的資料行。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [繫結參數](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [&#40;ODBC&#41;執行查詢](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

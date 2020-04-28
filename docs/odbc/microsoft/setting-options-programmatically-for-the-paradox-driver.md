@@ -1,5 +1,5 @@
 ---
-title: 以程式設計方式設定悖論驅動程式的選項 |微軟文件
+title: 以程式設計方式設定 Paradox 驅動程式的選項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d04de1f0de4baca5b3f474ef9fbcf3f886e6906f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300758"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>以程式設計方式設定 Paradox 驅動程式的選項
 
 |選項|描述|方法|  
 |------------|-----------------|------------|  
-|目錄|設置目標目錄。|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的調用中的**DEFAULTDIR**關鍵字。|  
-|整理序列|欄位排序的順序。<br /><br /> 序列可以是 ASCII(預設值)、國際、瑞典-芬蘭文或挪威-丹麥文。|要動態設定此選項,請使用調用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)中的**COLLATINGSEQUENCE**關鍵字。|  
-|描述|數據源中數據的可選說明;例如,「僱用日期、工資歷史記錄和所有員工的當前審核。|要動態設定此選項,請使用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)調用中的 **「描述**」關鍵字。|  
-|獨佔|如果選擇了 **「獨佔」** 框,則資料庫將在獨佔模式下打開,並且一次只能由一個用戶訪問。 在獨佔模式下運行時,性能會增強。|要動態設定此選項,請使用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)調用中的**EXCLUSIVE**關鍵字。|  
-|淨樣式|訪問悖論數據時要使用的網路訪問樣式:"3.x",*x*表示悖論 3。*x*或"4。*x"* 為悖論4。*x*或 5。*x*. . 可以設置為"3"。*x"* 或"4。*x"* 如果版本是悖論4。*x*或 5。*x;* 如果版本是悖論 3。*x*,樣式必須為"3"。*x"。*|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的調用中的**PARADOXNETSTYLE**關鍵字。|  
-|頁面逾時|指定頁面(如果不使用)在刪除之前保留在緩衝區中的時間段(以十分之一秒表示)。 默認值為 600 秒(60 秒)。 此選項適用於使用 ODBC 驅動程式的所有資料來源。<br /><br /> 由於固有的延遲,頁面超時不能為 0。 即使頁面超時選項設置為低於該值,頁面超時也不能小於固有的延遲。|要動態設定此選項,請使用調用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)中的**PAGETIMEOUT**關鍵字。|  
-|唯讀|將資料庫指定為唯讀資料庫。|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的調用中的**READONLY**關鍵字。|  
-|選擇目錄|顯示一個對話框,您可以在其中選擇包含要存取的檔案的目錄。<br /><br /> 定義數據源目錄時,指定最常用的檔案所在的目錄。 ODBC 驅動程式使用此目錄作為預設目錄。 如果經常使用其他檔,則將其複製到此目錄中。 或,您可以在 SELECT 語句中限定具有目錄名稱的檔名:<br /><br /> 從\*C 選擇:[MYDIR_EMP<br /><br /> 或者,您可以使用**SQLSetConnectOption**函數使用SQL_CURRENT_QUALIFIER選項來指定新的預設目錄。|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的調用中的**DEFAULTDIR**關鍵字。|  
-|選擇網路目錄|包含 Paradox 鎖資料庫的目錄的完整路徑,因為它包含Pdoxusrs.net檔(在悖論 4 中)。*x*) 或Paradox.net檔(在悖論 5 中)。*x*)。 如果目錄不包含這些檔之一,則 Paradox 驅動程式將創建一個。 有關這些文件的資訊,請參閱 Paradox 文檔。<br /><br /> 在選擇網路目錄之前,必須在**使用者名**文字框中輸入 Paradox 使用者名。 按下 **「選擇網路目錄**」以選擇網路目錄。|要動態設定此選項,請使用對[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的調用中的**PARADOXNETPATH**關鍵字。|  
-|使用者名稱|悖論使用者名。 這是遇到鎖時向 Paradox 檔的其他用戶顯示的名稱。|要動態設定此選項,請使用調用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)中的**PARADOXUSERNAME**關鍵字。|
+|目錄|設定目標目錄。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**DEFAULTDIR**關鍵字。|  
+|排序次序|排序欄位的順序。<br /><br /> 此順序可以是 ASCII （預設值）、國際、瑞典文-芬蘭文或挪威文-丹麥文。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**COLLATINGSEQUENCE**關鍵字。|  
+|描述|資料來源中資料的選擇性描述;例如，「雇用日期、薪資歷程記錄，以及所有員工的目前評論」。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**DESCRIPTION**關鍵字。|  
+|獨佔|如果選取 [**獨佔**] 方塊，資料庫將會以獨佔模式開啟，而且一次只能由一個使用者存取。 在獨佔模式中執行時，效能會增強。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**EXCLUSIVE**關鍵字。|  
+|Net 樣式|存取 Paradox 資料時要使用的網路存取樣式： "3.*x*" 代表 paradox 3。*x*或 "4。*x*"代表 Paradox 4。*x*或5。*x*。 可以設定為 "3。*x*"或" 4。*x*"（如果版本是 Paradox 4）。*x*或5。*x*;如果版本是 Paradox 3，則為。*x*，樣式必須是 "3。*x*"。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**PARADOXNETSTYLE**關鍵字。|  
+|頁面超時|指定在移除之前，頁面（如果未使用）會保留在緩衝區中的一段時間，以十分之一秒為限。 預設值為600十分之一秒（60秒）。 此選項適用于使用 ODBC 驅動程式的所有資料來源。<br /><br /> 頁面超時不可以是0，因為有固有的延遲。 頁面超時不能小於固有的延遲，即使 page timeout 選項設為低於該值也一樣。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**PAGETIMEOUT**關鍵字。|  
+|唯讀|將資料庫指定為唯讀。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**READONLY**關鍵字。|  
+|選取目錄|顯示對話方塊，您可以在其中選取目錄，其中包含您想要存取的檔案。<br /><br /> 定義資料來源目錄時，請指定最常使用的檔案所在的目錄。 ODBC 驅動程式會使用此目錄做為預設目錄。 如果經常使用檔案，請將其他檔案複製到這個目錄中。 或者，您也可以在 SELECT 語句中，使用目錄名稱來限定檔案名：<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> 或者，您可以使用**SQLSetConnectOption**函數搭配 SQL_CURRENT_QUALIFIER 選項來指定新的預設目錄。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**DEFAULTDIR**關鍵字。|  
+|選取網路目錄|包含 Paradox 鎖定資料庫之目錄的完整路徑，因為它包含 Pdoxusrs.net 檔案（在 Paradox 4 中）。*x*）或 Paradox.net 檔案（在 Paradox 5 中。*x*）。 如果目錄不包含這些檔案的其中一個，則 Paradox 驅動程式會建立一個。 如需這些檔案的詳細資訊，請參閱 Paradox 檔。<br /><br /> 在您可以選取網路目錄之前，您必須在 [**使用者名稱**] 文字方塊中輸入您的 Paradox 使用者名稱。 按一下 [**選取網路目錄**] 以選取網路目錄。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**PARADOXNETPATH**關鍵字。|  
+|使用者名稱|Paradox 的使用者名稱。 這是當遇到鎖定時，會向其他 Paradox 檔案的使用者顯示的名稱。|若要動態設定此選項，請在[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)的呼叫中使用**PARADOXUSERNAME**關鍵字。|

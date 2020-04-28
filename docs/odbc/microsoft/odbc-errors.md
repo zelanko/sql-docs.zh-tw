@@ -1,5 +1,5 @@
 ---
-title: ODBC 錯誤 |微軟文件
+title: ODBC 錯誤 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 06ef8558ce8e4266cdd77736bdceae210658b14b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298088"
 ---
 # <a name="odbc-errors"></a>ODBC 錯誤
-發生錯誤時,Microsoft ODBC 桌面資料庫驅動程式返回本機錯誤編號、SQLSTATE(ODBC 錯誤代碼)和錯誤消息。  
+發生錯誤時，Microsoft ODBC 桌面資料庫驅動程式會傳回原生錯誤號碼、SQLSTATE （ODBC 錯誤碼）和錯誤訊息。  
   
  此章節包含下列主題。  
   

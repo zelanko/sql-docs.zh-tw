@@ -1,5 +1,5 @@
 ---
-title: 設定刪除命令 |微軟文件
+title: 設定已刪除的命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300878"
 ---
 # <a name="set-deleted-command"></a>SET DELETED 命令
-指定是否處理標記為刪除的記錄以及這些記錄是否可用於其他命令。  
+指定是否處理標記為刪除的記錄，以及是否可在其他命令中使用它們。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,16 +31,16 @@ SET DELETED ON | OFF
   
 ## <a name="arguments"></a>引數  
  開啟  
- (驅動程式的預設值;Visual FoxPro 的預設值為 OFF。指定使用作用域對記錄(包括相關表中的記錄)執行的命令忽略標記為要刪除的記錄。  
+ （驅動程式的預設值; Visual FoxPro 的預設值為 OFF）。指定在記錄中操作的命令（包括相關資料表中的記錄），使用範圍忽略標記為刪除的記錄。  
   
  OFF  
- 指定標記為刪除的記錄可以通過使用作用域對記錄(包括相關表中的記錄)操作的命令進行訪問。  
+ 指定標記為刪除的記錄可以透過使用範圍的記錄（包括相關資料表中的記錄）來存取。  
   
 ## <a name="remarks"></a>備註  
- 如果使用 DELETED( ) 測試記錄狀態的查詢,如果表在 DELETED() 上編製索引,則可以使用 Visual FoxPro Rushmore 技術進行優化。  
+ 如果資料表在已刪除（）上編制索引，使用已刪除（）來測試記錄狀態的查詢可以使用 Visual FoxPro Rushmore 技術進行優化。  
   
 > [!IMPORTANT]  
->  如果命令的預設範圍是當前記錄,或者包含單個記錄的範圍,則忽略 SET DELETED。 INDEX 始終忽略"設置刪除"並索引表中的所有記錄。  
+>  如果命令的預設範圍是目前的記錄，或如果您包含單一記錄的範圍，則會忽略 SET DELETED。 索引一律會忽略已刪除的集合，並為數據表中的所有記錄編制索引。  
   
 ## <a name="see-also"></a>另請參閱  
  [DELETE - SQL 命令](../../odbc/microsoft/delete-sql-command.md)

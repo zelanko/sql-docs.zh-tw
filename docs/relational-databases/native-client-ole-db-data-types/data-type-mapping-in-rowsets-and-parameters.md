@@ -23,50 +23,50 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 41e5fceb2e69ab049bc7b82db5f67eb340d35ac9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296986"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  在行集和參數值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中,本機用戶端 OLE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB 提供程式使用以下 OLE DB 定義的資料類型表示資料,這些資料類型在函數**IColumnInfo 中報告:getColumninfo**和**ICommand 與參數::獲取參數資訊**。  
+  在資料列集和參數值中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]者會使用下列 OLE DB 定義的資料類型（在**IColumnsInfo：： GetColumnInfo**和**ICommandWithParameters：： GetParameterInfo**函數中報告的）來代表資料。  
   
 |SQL Server 資料類型|OLE DB 資料類型|  
 |--------------------------|----------------------|  
 |**bigint**|DBTYPE_I8|  
-|**二 進制**|DBTYPE_BYTES|  
+|**binary**|DBTYPE_BYTES|  
 |**bit**|DBTYPE_BOOL|  
 |**char**|DBTYPE_STR|  
 |**datetime**|DBTYPE_DBTIMESTAMP|  
 |**datetime2**|DBTYPE_DBTIME2|  
 |**decimal**|DBTYPE_NUMERIC|  
-|**浮動**|DBTYPE_R8|  
+|**float**|DBTYPE_R8|  
 |**image**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
-|**恩查爾**|DBTYPE_WSTR|  
+|**nchar**|DBTYPE_WSTR|  
 |**ntext**|DBTYPE_WSTR|  
-|**公尺**|DBTYPE_NUMERIC|  
+|**numeric**|DBTYPE_NUMERIC|  
 |**nvarchar**|DBTYPE_WSTR|  
 |**real**|DBTYPE_R4|  
 |**smalldatetime**|DBTYPE_DBTIMESTAMP|  
-|**小林特**|DBTYPE_I2|  
-|**小錢**|DBTYPE_CY|  
+|**smallint**|DBTYPE_I2|  
+|**smallmoney**|DBTYPE_CY|  
 |**sql_variant**|DBTYPE_VARIANT、DBTYPE_SQLVARIANT|  
 |**sysname**|DBTYPE_WSTR|  
-|**文字**|DBTYPE_STR|  
-|**時間 戳**|DBTYPE_BYTES|  
-|**小金特**|DBTYPE_UI1|  
-|**Udt**|DBTYPE_UDT|  
-|**UNIQUEIDENTIFIER**|DBTYPE_GUID|  
+|**text**|DBTYPE_STR|  
+|**timestamp**|DBTYPE_BYTES|  
+|**tinyint**|DBTYPE_UI1|  
+|**UDT**|DBTYPE_UDT|  
+|**uniqueidentifier**|DBTYPE_GUID|  
 |**varbinary**|DBTYPE_BYTES|  
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供者支援消費者請求的數據轉換,如圖所示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援取用者要求的資料轉換，如圖所示。  
   
  **sql_variant** 物件可保存任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的資料，下列類型除外：text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 例如，資料行可以在某些資料列中包含 **smallint** 值，在其他資料列中包含 **float** 值，而在剩餘的資料列中包含 **char**/**nchar** 值。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81296986"
  以 DBTYPE_VARIANT 擷取 **sql_variant** 資料時，會將該資料置於緩衝區的 VARIANT 結構中。 但是 VARIANT 結構中的子類型可能不會對應到定義於 **sql_variant** 資料類型中的子類型。 接下來必須以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料，才能讓所有的子類型相互對應。  
   
 ## <a name="dbtype_sqlvariant-data-type"></a>DBTYPE_SQLVARIANT 資料類型  
- 為了支援**sql_variant**資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 本機用戶端 OLE 資料庫提供程式公開名為DBTYPE_SQLVARIANT的特定於提供程式的數據類型。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，該資料會儲存在提供者特定的 SSVARIANT 結構中。 SSVARIANT 結構包含的所有子類型都符合 **sql_variant** 資料類型的子類型。  
+ 為了支援**SQL_variant**資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開稱為 DBTYPE_SQLVARIANT 的提供者特定資料類型。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，該資料會儲存在提供者特定的 SSVARIANT 結構中。 SSVARIANT 結構包含的所有子類型都符合 **sql_variant** 資料類型的子類型。  
   
  工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 也必須設定為 TRUE。  
   

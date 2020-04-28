@@ -1,5 +1,5 @@
 ---
-title: 釋放語句句柄 |微軟文件
+title: 釋放語句控制碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e954773f85afc434d1e5bd18f7ffb76e28a1438
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297890"
 ---
 # <a name="freeing-a-statement-handle"></a>釋放陳述式控制代碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  重複使用陳述式控制代碼比卸除陳述式控制代碼然後再配置新的陳述式控制代碼更有效率。 針對陳述式控制代碼執行新的 SQL 陳述式之前，應用程式應該確認目前的陳述式設定是否恰當。 這些包括陳述式屬性、參數繫結，以及結果集繫結。 通常,舊 SQL 語句的參數和結果集必須通過使用SQL_RESET_PARAMS和SQL_UNBIND選項調用[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)來取消綁定,然後重新綁定到新的 SQL 語句。  
+  重複使用陳述式控制代碼比卸除陳述式控制代碼然後再配置新的陳述式控制代碼更有效率。 針對陳述式控制代碼執行新的 SQL 陳述式之前，應用程式應該確認目前的陳述式設定是否恰當。 這些包括陳述式屬性、參數繫結，以及結果集繫結。 一般來說，舊 SQL 語句的參數和結果集必須解除系結，方法是使用 SQL_RESET_PARAMS 和 SQL_UNBIND 選項呼叫[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) ，然後重新系結新的 sql 語句。  
   
- 當應用程式完成使用 語句后,它將調用[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)來釋放該語句。 請注意 **,SQLDisconnect**會自動釋放連接上的所有語句。  
+ 當應用程式完成使用語句時，它會呼叫[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)來釋放語句。 請注意， **SQLDisconnect**會自動釋放連接上的所有語句。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [&#40;ODBC&#41;執行查詢](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

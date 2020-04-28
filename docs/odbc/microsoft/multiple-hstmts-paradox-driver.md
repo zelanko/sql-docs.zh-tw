@@ -1,5 +1,5 @@
 ---
-title: 多個 hstmt(悖論驅動程式) |微軟文件
+title: 多個 hstmt （Paradox 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 66aecd94-092d-43d4-9583-74f5e2990eac
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ac381024a6b4b67719cb7c098367f63a6176bad0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298188"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>多個 hstmt (Paradox 驅動程式)
-使用 ODBC 悖論驅動程式時,如果要使用多個*hstmt*在表上執行查詢,則表必須具有唯一索引(Paradox 主鍵)。
+使用 ODBC Paradox 驅動程式時，如果您想要使用一個以上的*hstmt*來執行資料表的查詢，該資料表必須有唯一的索引（Paradox 主鍵）。

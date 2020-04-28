@@ -1,5 +1,5 @@
 ---
-title: 支援的游標模型(視覺福克斯Pro ODBC驅動程式) |微軟文件
+title: 支援的資料指標模型（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301124"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>支援的資料指標模型 (Visual FoxPro ODBC Driver)
-Visual FoxPro ODBC 驅動程式支援*塊*(*行集*) 和*靜態*遊標。 任何符合 1 級 ODBC 合規性的驅動程式都支援靜態游標。 驅動程式不支援動態、鍵集驅動或混合(鍵集和動態)游標。  
+Visual FoxPro ODBC 驅動程式同時支援*區塊（資料列**集*）和*靜態*資料指標。 符合 Level 1 ODBC 合規性的任何驅動程式都支援靜態資料指標。 驅動程式不支援動態、索引鍵集驅動或混合（索引鍵集和動態）資料指標。  
   
- 您的應用程式可以使用SQL_CURSOR_TYPE選項"SQL_CURSOR_FORWARD_ONLY(塊游標)或SQL_CURSOR_STATIC(靜態游標)來調用[SQLSetStmtOption。](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md)  
+ 您的應用程式可以使用 SQL_CURSOR_FORWARD_ONLY 的 SQL_CURSOR_TYPE 選項（區塊游標）或 SQL_CURSOR_STATIC （靜態資料指標）來呼叫[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) 。  
   
 > [!NOTE]  
->  如果使用SQL_CURSOR_FORWARD_ONLY或SQL_CURSOR_STATIC以外的SQL_CURSOR_TYPE選項調用**SQLSetStmtOption,** 則函數返回SQL_SUCCESS_WITH_INFO SQLSTATE 為 01S02(選項值已更改)。 驅動程式將所有不支援的游標模式設置為SQL_CURSOR_STATIC。  
+>  如果您使用 SQL_CURSOR_FORWARD_ONLY 或 SQL_CURSOR_STATIC 以外的 SQL_CURSOR_TYPE 選項來呼叫**SQLSetStmtOption** ，此函式會傳回 SQL_SUCCESS_WITH_INFO，SQLSTATE 為01S02 （選項值已變更）。 驅動程式會將所有不支援的資料指標模式設定為 SQL_CURSOR_STATIC。  
   
- 有關游標類型和**SQLSetStmtOption**的詳細資訊,請參閱[ODBC 程式者的參考](../../odbc/reference/odbc-programmer-s-reference.md)。  
+ 如需資料指標類型和有關**SQLSetStmtOption**的詳細資訊，請參閱 ODBC 程式設計[人員參考](../../odbc/reference/odbc-programmer-s-reference.md)。  
   
 ## <a name="block-cursor"></a>區塊游標  
- 返回的向前滾動、只讀結果集返回給用戶端,客戶端負責維護數據的存儲。  
+ 向用戶端傳回的順向滾動唯讀結果集，負責維護資料的儲存體。  
   
 ## <a name="static-cursor"></a>靜態資料指標  
- 由查詢定義的數據集的快照。 靜態游標不反映其他使用者對基礎數據的即時更改。 游標的記憶體緩衝區由 ODBC 游標庫維護,允許向前和向後滾動。  
+ 查詢所定義之資料集的快照集。 靜態資料指標不會反映其他使用者對基礎資料的即時變更。 資料指標的記憶體緩衝區是由 ODBC 資料指標程式庫所維護，可允許向前和向後滾動。  
   
 ## <a name="rowset"></a>資料列集  
- 存儲在游標中的數據塊,表示從數據源檢索的行。
+ 儲存在資料指標中的資料區塊，代表從資料來源抓取的資料列。

@@ -1,5 +1,5 @@
 ---
-title: SQLGet功能(可視化福克斯Pro ODBC驅動程式) |微軟文件
+title: SQLGetFunctions （Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298608"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 特定於驅動程式的資訊。 有關此功能的一般資訊,請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的相應主題。  
+>  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
- 支援: 完整  
+ 支援：完整  
   
- ODBC API 符合性:1 級  
+ ODBC API 一致性：層級1  
   
- 為所有支援的函數返回 TRUE。  
+ 針對所有支援的函式傳回 TRUE。  
   
- Visual FoxPro ODBC 驅動程式支援所有 ODBC API 核心和 1 級功能。 下表指示驅動程式是否支援特定的 2 級功能。  
+ Visual FoxPro ODBC 驅動程式支援所有 ODBC API 核心和層級1功能。 下表指出驅動程式是否支援特定層級2函式。  
   
 |*函數*|支援|  
 |----------------|---------------|  
@@ -51,4 +51,4 @@ ms.locfileid: "81298608"
 |SQL_API_SQLSETSCROLLOPTIONS|是|  
 |SQL_API_SQLTABLEPRIVILEGES|否|  
   
- 有關詳細資訊,請參閱*ODBC 程式者參考*中的[SQLGet 功能](../../odbc/reference/syntax/sqlgetfunctions-function.md)。
+ 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) 。

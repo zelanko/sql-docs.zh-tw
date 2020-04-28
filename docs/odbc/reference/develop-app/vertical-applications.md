@@ -1,5 +1,5 @@
 ---
-title: 垂直應用 |微軟文件
+title: 垂直應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cc88f38fd1ffe8b2ee0033ad0a2abc4f15fd5cf3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300373"
 ---
 # <a name="vertical-applications"></a>垂直應用程式
-垂直應用程式通常針對單個 DBMS 執行定義良好的任務。 例如,訂單輸入應用程序跟蹤公司中的訂單。 這些類型的應用程式有共同之處是,資料庫架構通常由應用程式開發人員設計,雖然應用程式可能使用許多不同的 DBMS,但它適用於單個客戶的單個 DBMS。  
+垂直應用程式通常會針對單一 DBMS 執行妥善定義的工作。 例如，訂單輸入應用程式會追蹤公司中的訂單。 這些類型的應用程式通常是由應用程式開發人員所設計，而應用程式可能會使用多個不同的 Dbms，它適用于單一客戶的單一 DBMS。  
   
- 由於垂直應用程式通常需要某些功能(如可滾動遊標或事務),因此它們很少支援所有 DBMS。 相反,它們往往在有限的 DBMS 集中高度互通。 通常,垂直應用程式開發人員選擇支援那些代表市場很大一部分並忽略其餘部分的 DBMS。 他們甚至可能選擇支援這些 DBMS 的特定驅動程式,以降低其測試和產品支援成本。  
+ 由於垂直應用程式通常需要特定的功能，例如可滾動的資料指標或交易，因此很少會支援所有 Dbms。 相反地，它們通常會在一組有限的 Dbms 之間具有高互通性。 一般而言，垂直應用程式開發人員會選擇支援那些代表大量市場的 Dbms，並忽略其餘部分。 他們甚至可能會選擇支援這些 Dbms 的特定驅動程式，以降低其測試和產品支援成本。  
   
- 由於垂直應用程式可以支援一組已知的DBMS,因此它們有時包含特定於驅動程式或特定於DBMS的代碼。 但是,最好將此類代碼保持在最低限度,因為它需要額外的時間來維護。
+ 由於垂直應用程式可以支援一組已知的 Dbms，因此有時會包含特定驅動程式或 DBMS 專屬的程式碼。 不過，這類程式碼最好保持最小狀態，因為它需要額外的時間來維護。

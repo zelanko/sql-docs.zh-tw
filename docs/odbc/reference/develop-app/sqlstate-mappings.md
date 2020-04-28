@@ -1,5 +1,5 @@
 ---
-title: SQLSTATE 映射 |微軟文件
+title: SQLSTATE 對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ec58c0e41869529bbba5fd31ad534976923a990d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299738"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 對應
-本主題討論 ODBC *2.x*和 ODBC *3.x*的 SQLSTATE 值。 有關 ODBC *3.x* SQLSTATE 值的詳細資訊,請參閱[附錄 A:ODBC 錯誤代碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
+本主題討論 ODBC *2.x 和 odbc* *3.x 的 SQLSTATE*值。 如*需 ODBC 3.X* SQLSTATE 值的詳細資訊，請參閱[附錄 A： odbc 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
   
- 在 ODBC *3.x*中,將返回 HYxxx SQLSTATEs 而不是 S1xxx,傳回 42Sxx SQLSTATEs 而不是 S00XX。 這樣做是為了符合開放集團和 ISO 標準。 在許多情況下,映射不是一對一的,因為標準重新定義了對多個 SQLSTAT 的解釋。  
+ 在 ODBC *3.x 中，* 會傳回 HYxxx SQLSTATEs 而不是 S1xxx，而會傳回 42Sxx SQLSTATEs，而不是 S00XX。 這是為了配合開放式群組和 ISO 標準而完成。 在許多情況下，對應並不是一對一的，因為標準已重新定義數個 SQLSTATEs 的轉譯。  
   
- 當 ODBC *2.x*應用程式升級到 ODBC *3.x*應用程式時,必須更改應用程式以預期 ODBC *3.x* SQLSTATEs 而不是 ODBC *2.x* SQLSTAT。 下表列出了每個 ODBC *2.x* SQLSTATE 映射到的 ODBC *3.x* SQLSTATEs。  
+ 當*odbc 2.x 應用程式升級*為 odbc 3.x 應用程式時，必須將應用程式變更為*預期 odbc 3.x* SQLSTATEs，而不*是 odbc 2.x* *SQLSTATEs。* 下表列出每個 ODBC 2.x *SQLSTATE 對應的 odbc* *3.x SQLSTATEs。*  
   
- 當SQL_ATTR_ODBC_VERSION環境屬性設置為SQL_OV_ODBC2時,當調用**SQLGetDiagField**或**SQLGetDiagRec**時,驅動程式將發佈 ODBC *2.x* SQLSTATEs 而不是 ODBC *3.x* SQLSTATEs。 可以通過記錄下表第 1 列中對應於第 2 列中的 ODBC *3.x* SQLSTATE 的 ODBC *2.x* SQLSTATE 來確定特定的映射。  
+ 當 [SQL_ATTR_ODBC_VERSION 環境] 屬性設定為 [SQL_OV_ODBC2] 時，當呼叫**SQLGetDiagField**或**SQLGetDiagRec**時，驅動程式會張貼 odbc 2.x SQLSTATEs，而不*是 odbc 3.x* *SQLSTATEs。* 您可以記下*資料表第 1*欄中的 odbc 2.x SQLSTATE （對應至資料行2中的 odbc *3.x SQLSTATE）* 來判斷特定的對應。  
   
-|ODBC *2.x* SQLSTATE|ODBC *3.x* SQLSTATE|註解|  
+|ODBC *2.X* SQLSTATE|ODBC *3.X* SQLSTATE|評價|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -49,20 +49,20 @@ ms.locfileid: "81299738"
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|如果基礎函數是**SQLBindCol、SQLCol****屬性****、SQL 擴展獲取****、SQLFetch、SQLFetchScroll**或**SQLGetData,** 則 ODBC *2.x* SQLSTATE S1002 映射到 ODBC *3.x* SQLSTATE 07009。 **SQLFetchScroll**|  
-|S1003|HY003||  
+|S1002|07009|如果基礎函數是**SQLBindCol**、 **SQLColAttribute**、 **SQLExtendedFetch**、 **SQLFetch**、 **SQLFetchScroll**或**SQLGetData**，odbc *2.x SQLSTATE S1002*就會對應至 odbc 3.x *SQLSTATE 07009* 。|  
+|S1003|HY003 以及||  
 |S1004|HY004||  
 |S1008|HY008||  
-|S1009|HY009|返回以無效使用空指標。|  
-|S1009|HY024|為無效的屬性值返回。|  
-|S1009|HY092|傳回以更新或刪除資料,透過呼叫**SQLSetPos**, 或透過呼叫**SQLBulk 操作**(當併發是唯讀的)添加、更新或刪除資料。|  
-|S1010|HY007 HY010|SQLSTATE S1010 映射到 SQLSTATE HY007,當**SQLDescribeCol**在呼叫**SQLPrepare、SQLExecDirect**或*語句句柄***SQLExecDirect**的目錄函數之前調用時。 否則,SQLSTATE S1010 將映射到 SQLSTATE HY010。|  
+|S1009|HY009|傳回 null 指標的無效用法。|  
+|S1009|HY024|傳回不正確屬性值。|  
+|S1009|HY092|傳回以透過呼叫**SQLSetPos**來更新或刪除資料，或在並行處理為唯讀時，藉由呼叫**SQLBulkOperations**來新增、更新或刪除資料。|  
+|S1010|HY007 HY010|SQLSTATE S1010 會**在呼叫 SQLDescribeCol**、 **SQLPrepare**或*SQLExecDirect*的目錄函數之前呼叫**StatementHandle**時，對應至 SQLSTATE HY007。 否則，SQLSTATE S1010 會對應至 SQLSTATE HY010。|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|如果基礎函數是**SQLBind 參數**或**SQLDescribeParam,** 則 ODBC *3.x* SQLSTATE 07009 映射到 ODBC *2.x* SQLSTATE S1093。|  
+|S1093|07009|如果基礎函數是**SQLBindParameter**或**SQLDescribeParam**，odbc 3.x SQLSTATE 07009 就會對應*至 odbc 2.x* *SQLSTATE S1093* 。|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -82,4 +82,4 @@ ms.locfileid: "81299738"
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC *3.x* SQLSTATE 07008 映射到 ODBC *2.x* SQLSTATE S1000。
+>  ODBC *3.X SQLSTATE 07008*會對應到 odbc 2.X SQLSTATE *S1000* 。

@@ -1,5 +1,5 @@
 ---
-title: SQL描述科爾和 SQLCol 屬性 |微軟文件
+title: SQLDescribeCol 和 SQLColAttribute |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8bd21010908473e4216a02a504b2de25578d5c84
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299758"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 和 SQLColAttribute
-**SQLDescribeCol**和**SQLColAttribute**用於檢索結果集元數據。 這兩個函數之間的區別是**SQLDescribeCol**始終返回相同的五條資訊(列的名稱、數據類型、精度、縮放和空值),而**SQLColAttribute**返回應用程式請求的單個資訊段。 但是 **,SQLColAttribute**可以返回更豐富的元數據選擇,包括列的區分大小、顯示大小、高數據性和可搜索性。  
+**SQLDescribeCol**和**SQLColAttribute**是用來捕獲結果集中繼資料。 這兩個函式的差異在於， **SQLDescribeCol**一律會傳回相同的五項資訊（資料行名稱、資料類型、有效位數、小數位數和 null 屬性），而**SQLColAttribute**會傳回應用程式所要求的單一資訊片段。 不過， **SQLColAttribute**可以傳回更豐富的中繼資料選取範圍，包括資料行的區分大小寫、顯示大小、可更新性和搜尋能力。  
   
- 許多應用程式,尤其是僅顯示數據的應用程式,只需要**SQLDescribeCol**返回的元數據。 對於這些應用程式,使用**SQLDescribeCol**比**SQLColAttribute**更快,因為資訊在單個調用中返回。 其他應用程式(尤其是更新數據的應用程式)需要**SQLColAttribute**傳回的其他元數據,因此可以使用這兩個函數。 此外 **,SQLColAttribute**支援特定於驅動程式的元數據;有關詳細資訊,請參閱[特定於驅動程式的資料類型、描述符類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
+ 許多應用程式（特別是只顯示資料的應用程式）只需要**SQLDescribeCol**所傳回的中繼資料。 對於這些應用程式而言，使用**SQLDescribeCol**比**SQLColAttribute**更快，因為會在單一呼叫中傳回信息。 其他應用程式（特別是更新資料的應用程式）需要**SQLColAttribute**所傳回的其他中繼資料，因此會使用這兩個函數。 此外， **SQLColAttribute**支援驅動程式特定的中繼資料;如需詳細資訊，請參閱[驅動程式特有的資料類型、描述項類型、資訊類型、診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
- 應用程式可以在準備或執行語句后以及關閉結果集上的游標之前隨時檢索結果集元數據。 很少的應用程式在編寫語句后和執行語句之前需要結果集元數據。 如果可能,應用程式應等待檢索元數據,直到執行語句之後,因為某些數據源無法返回已準備的語句的元數據,並且在驅動程式中類比此功能通常是一個緩慢的過程。 例如,驅動程式可以通過將**SELECT**語句的**WHERE**子句替換為子句 WHERE 1 = **2**並執行結果語句來生成零行結果集。  
+ 應用程式可以在準備或執行語句之後，以及在關閉結果集的資料指標之前，隨時取得結果集中繼資料。 非常少的應用程式在準備好和執行語句之後，會需要結果集中繼資料。 可能的話，應用程式應該等到語句執行後才抓取中繼資料，因為有些資料來源無法傳回備妥之語句的中繼資料，而且在驅動程式中模擬這項功能通常是緩慢的進程。 例如，驅動程式可能會產生零資料列的結果集，方法是以子句取代**SELECT**語句的**Where**子句，**其中 1 = 2**並執行產生的語句。  
   
- 從數據源檢索元數據通常成本高昂。 因此,驅動程式應緩存他們從伺服器檢索到的任何元數據,並按住它,只要結果集上的游標處於打開狀態。 此外,應用程式應僅請求他們絕對需要的元數據。
+ 從資料來源抓取中繼資料通常相當耗費資源。 因此，驅動程式應該快取從伺服器抓取的任何中繼資料，只要結果集上的游標開啟，就會保留它。 此外，應用程式應該只要求其絕對需要的中繼資料。
