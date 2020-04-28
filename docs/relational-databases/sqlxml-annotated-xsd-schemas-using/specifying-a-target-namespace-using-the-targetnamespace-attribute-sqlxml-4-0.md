@@ -21,10 +21,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 39469073a8affe82ee5231a71676d7046f712f9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257357"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
@@ -37,7 +37,7 @@ ms.locfileid: "75257357"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 指定目標命名空間  
- 下列 XSD 架構會使用**xsd： targetNamespace**屬性來指定目標命名空間。 此架構也會將**elementFormDefault**和**attributeFormDefault**屬性值設定為 **"不合格"** （這些屬性的預設值）。 這是全域宣告，會影響所有本機專案****（ **** ** ** ** \<** 在架構中的順序>）和屬性（在架構中的 CustomerID、連絡人和訂單）。  
+ 下列 XSD 架構會使用**xsd： targetNamespace**屬性來指定目標命名空間。 此架構也會將**elementFormDefault**和**attributeFormDefault**屬性值設定為 **"不合格"** （這些屬性的預設值）。 這是全域宣告，會影響所有本機專案**ContactName**（ **OrderID** ** ** ** \<** 在架構中的順序>）和屬性（在架構中的 CustomerID、連絡人和訂單）。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

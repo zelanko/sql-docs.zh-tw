@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253058"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "75253058"
     child::Customer  
     ```  
   
-     在下列 XPath 查詢中，`child` 為軸。 
-  `Customer` 為節點測試。  
+     在下列 XPath 查詢中，`child` 為軸。 `Customer` 為節點測試。  
   
 -   **父**  
   
@@ -54,8 +53,7 @@ ms.locfileid: "75253058"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     這與指定 `child::Customer` 相同。 在此 XPath 查詢中，`child` 和 `parent` 為軸。 
-  `Customer` 和 `Order` 為節點測試。  
+     這與指定 `child::Customer` 相同。 在此 XPath 查詢中，`child` 和 `parent` 為軸。 `Customer` 和 `Order` 為節點測試。  
   
 -   **特性**  
   

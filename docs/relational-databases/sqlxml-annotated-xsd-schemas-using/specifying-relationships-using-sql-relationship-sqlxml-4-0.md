@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257343"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定關聯性 (SQLXML 4.0)
@@ -61,13 +61,13 @@ ms.locfileid: "75257343"
  **parent-key**  
  指定父系的父索引鍵。 如果父索引鍵由多個資料行所組成，值就會用資料行之間的空格指定。 在指定給多重資料行索引鍵和其對應之子索引鍵的值之間有位置性對應。  
   
- **子系**  
+ **子**  
  指定子關聯 (資料表)。  
   
  **child-key**  
  在參考父系中之 parent-key 的子系中指定子索引鍵。 如果子索引鍵由多個屬性 (資料行) 所組成，則 child-key 的值就會用屬性或資料行之間的空格指定。 在指定給多重資料行索引鍵和其對應之父索引鍵的值之間有位置性對應。  
   
- **Inverse**  
+ **反轉**  
  在** \<sql： relationship>** 上指定的這個屬性是由 updategram 所使用。 如需詳細資訊，請參閱[在 sql： relationship 上指定 sql：反向屬性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
  **Sql：索引鍵-欄位**注釋必須在包含子專案的元素中指定，此專案具有** \<sql： relationship>** 在元素和子系之間定義，而且未提供父元素中指定之資料表的主鍵。 即使架構未指定** \<sql： relationship>**，您也必須指定**sql：索引鍵欄位**來產生適當的階層。 如需詳細資訊，請參閱[使用 sql：索引鍵-欄位來識別索引鍵資料行](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  

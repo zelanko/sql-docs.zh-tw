@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: e1cd65cc97877ef7e59d44be40f53fc49f4a49ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257013"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>連接至已註冊的伺服器 (SQL Server Management Studio)

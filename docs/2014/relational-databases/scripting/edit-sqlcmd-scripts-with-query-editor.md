@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245175"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查詢編輯器編輯 SQLCMD 指令碼
@@ -57,7 +57,7 @@ ms.locfileid: "75245175"
   
 3.  在 [SQL 編輯器]  工具列的 [可用資料庫]  清單中，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
   
-4.  在查詢編輯器視窗中輸入下列兩項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `!!DIR` **sqlcmd** 陳述式：  
+4.  在查詢編輯器視窗中鍵入下列兩項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `!!DIR` **sqlcmd** 陳述式：  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  

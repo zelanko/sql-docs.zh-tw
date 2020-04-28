@@ -10,10 +10,10 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251591"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
@@ -26,17 +26,17 @@ ms.locfileid: "75251591"
   
  當您匯入定義域時，此定義域的名稱依然與一開始匯出的定義域名稱相同，除非此定義域名稱已經存在 (此時 DQS 會在名稱中附加 "_1")。 如果您匯入的複合定義域所包含的個別定義域與現有定義域同名，這個情況也會成立。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要從 .dqs 檔案匯入定義域，您必須已將一個單一定義域或是一個複合定義域 (包含多個單一定義域) 匯出到 .dqs 檔案。 此 .dqs 檔案只能包含一個定義域。 您也必須已建立及開啟知識庫，才能將定義域匯入其中。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入定義域。  
   
-##  <a name="Import"></a>從 dqs 檔案匯入定義域  
+##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a>從 dqs 檔案匯入定義域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75251591"
   
 6.  確認您匯入的定義域顯示在 **[定義域]** 清單中。 如果您匯入複合定義域，請確認此複合定義域以及其中包含的單一定義域全都位於 **[定義域]** 清單中。  
   
-##  <a name="FollowUp"></a>後續操作：從 dqs 檔案匯入定義域之後  
+##  <a name="follow-up-after-importing-a-domain-from-a-dqs-file"></a><a name="FollowUp"></a> 後續操作：從 .dqs 檔案匯入定義域之後  
  當您從 .dqs 檔案匯入定義域之後，您可以將知識加入至定義域，或是在清理或比對專案中使用定義域 (根據定義域的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)、[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../data-quality-services/create-a-matching-policy.md)、[資料清理](../data-quality-services/data-cleansing.md)或[資料比對](../data-quality-services/data-matching.md)。  
   
   

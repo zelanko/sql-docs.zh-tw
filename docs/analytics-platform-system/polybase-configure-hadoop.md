@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245386"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
@@ -49,7 +49,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
 
 2. 使用[設備 Configuration Manager](launch-the-configuration-manager.md)上的 [服務狀態] 頁面重新開機 ap 區域。
   
-## <a id="pushdown"></a>啟用下推計算  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> 啟用下推計算  
 
 為改善查詢效能，請將計算下推到 Hadoop 叢集︰  
   
@@ -227,7 +227,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
+3. 使用[建立外部資料源](../t-sql/statements/create-external-data-source-transact-sql.md)建立外部資料源。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

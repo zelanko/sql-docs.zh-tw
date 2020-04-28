@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254743"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路徑中指定節點測試 (SQLXML 4.0)
@@ -46,8 +46,7 @@ ms.locfileid: "75254743"
 ## <a name="abbreviated-syntax-for-the-axes"></a>軸的縮寫語法  
  位置路徑的以下縮寫語法有受到支援：  
   
--   
-  `attribute::` 可縮寫成 `@`。  
+-   `attribute::` 可縮寫成 `@`。  
   
      位置路徑 `Customer[@CustomerID="ALFKI"]` 與 `child::Customer[attribute::CustomerID="ALFKI"]` 相同。  
   
@@ -55,7 +54,6 @@ ms.locfileid: "75254743"
   
      因此， **child**是預設軸。 位置路徑 `Customer/Order` 與 `child::Customer/child::Order` 相同。  
   
--   
-  `self::node()` 可以縮寫成一個句號 (.)，而 `parent::node()` 可縮寫成兩個句號 (..)。  
+-   `self::node()` 可以縮寫成一個句號 (.)，而 `parent::node()` 可縮寫成兩個句號 (..)。  
   
   

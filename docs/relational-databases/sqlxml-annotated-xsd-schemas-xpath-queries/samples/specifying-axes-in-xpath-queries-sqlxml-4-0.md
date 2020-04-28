@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252594"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定軸 (SQLXML 4.0)
@@ -43,8 +43,7 @@ ms.locfileid: "75252594"
   
  在查詢中， `child`是`Contact`軸而且是節點測試（如果`Contact`是** \<元素>** 節點，則為 TRUE，因為\<元素> 是與`child`軸相關聯的主要節點類型）。  
   
- 
-  `child` 軸是預設值。 因此，此查詢可以撰寫為：  
+ `child` 軸是預設值。 因此，此查詢可以撰寫為：  
   
 ```  
 /Contact  

@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246587"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
@@ -63,7 +63,7 @@ ms.locfileid: "75246587"
   
      W3C XPath 規格沒有定義任何錯誤條件。 無法選取任何節點的 XPath 查詢會傳回空的節點集。 在 SQLXML 4.0 中，查詢可能會傳回許多錯誤訊息類型。  
   
--   **文件順序**  
+-   **檔順序**  
   
      在 SQLXML 4.0 中，不一定會決定文件順序。 因此，不會實作為使用檔順序的數值述詞和軸（如**下列**所示）。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75246587"
 ## <a name="supported-functionality"></a>支援的功能  
  下表將顯示在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|功能|Item|範例查詢的連結|  
+|功能|項目|範例查詢的連結|  
 |-------------|----------|----------------------------|  
 |軸|**attribute**、 **child**、 **parent**和**self**軸|[在 XPath 查詢中指定軸 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |布林值述詞，包括連續和巢狀述詞||[在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +105,7 @@ ms.locfileid: "75246587"
 ## <a name="unsupported-functionality"></a>不支援的功能  
  下表將顯示沒有在 SQLXML 4.0 中實作之 XPath 語言的功能。  
   
-|功能|Item|  
+|功能|項目|  
 |-------------|----------|  
 |軸|**上****階、上**階**或****自我、下階、後**階**或自我（//）**、後面接著 **-同輩**、 **namespace**、**前面、****上-同輩**|  
 |數值述詞||  
@@ -113,7 +113,7 @@ ms.locfileid: "75246587"
 |節點函數|**上****階、上**階**或****自我、下階、後**階**或自我（//）**、後面接著 **-同輩**、 **namespace**、**前面、****上-同輩**|  
 |字串函數|**string （）**、 **concat （）**、**開頭為（）**、**包含（）**、 **substring-before （）**、 **substring-after （）**、 **substring （**）、**字串長度（**）、正規化 **（）**、**轉譯（）**|  
 |布林函數|**lang （）**|  
-|數值函式|**sum （）**、 **floor （）**、**上限（）**、 **round （）**|  
+|數值函數|**sum （）**、 **floor （）**、**上限（）**、 **round （）**|  
 |Union 運算子|&#124;|  
   
  當您在範本中指定 XPath 查詢時，請注意下列行為：  

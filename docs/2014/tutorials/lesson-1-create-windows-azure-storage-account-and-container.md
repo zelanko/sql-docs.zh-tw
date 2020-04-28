@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253504"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>第 1 課：建立 Azure 儲存體帳戶和容器
   您必須先建立 Azure 儲存體帳戶和 blob 容器以及共用存取簽章，才能開始在 Azure 儲存體中儲存 SQL Server 的資料檔案。 第1課會逐步引導您登入 Azure 管理入口網站、建立儲存體帳戶、blob 容器，以及共用存取簽章。  
   
- 根據預設，只有儲存體帳戶的擁有者可以存取該帳戶內的 Blob、資料表和佇列。 若要能夠在不共用儲存體帳戶存取金鑰的情況下，使用這個新的 SQL Server 增強功能存取這些資源，您需要執行下列操作：  
+ 根據預設，只有儲存體帳戶的擁有者才可以存取該帳戶內的 Blob、資料表和佇列。 若要能夠在不共用儲存體帳戶存取金鑰的情況下，使用這個新的 SQL Server 增強功能存取這些資源，您需要執行下列操作：  
   
 -   將容器的權限設為私用。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75253504"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>建立 Blob 容器  
- 在 Azure 中，容器會提供一組 blob 的群組。 所有 Blob 都必須位於容器中。 儲存體帳戶可以包含不限數目的容器，但是至少必須具有一個容器。 容器可以儲存無限制的 Blob。 如需有關儲存體大小限制的最新資訊，請參閱[如何在 .net 中使用 Azure Blob 儲存體服務](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。  
+ 在 Azure 中，容器會提供一組 blob 的群組。 所有 Blob 都必須位於容器中。 儲存體帳戶可以包含不限數目的容器，但是至少必須具有一個容器。 容器可以儲存不限數目的 Blob。 如需有關儲存體大小限制的最新資訊，請參閱[如何在 .net 中使用 Azure Blob 儲存體服務](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。  
   
  若要在 Azure 中建立容器，請遵循下列步驟：  
   

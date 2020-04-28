@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251421"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
@@ -93,7 +93,7 @@ ms.locfileid: "75251421"
   
     -   尋找 "`@@FILE_NAME@@`"，並以您的範例檔名稱加以取代。  
   
-    -   尋找 "`@@SERVER_NAME@@`"，並以您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱加以取代 (例如，如果 `(local)` 在本機執行，則為 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]")。  
+    -   尋找 "`@@SERVER_NAME@@`"，並以您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱加以取代 (例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在本機執行，則為 "`(local)`")。  
   
     -   尋找 "`@@DATABASE_NAME@@`"，並以資料庫的名稱加以取代 (例如，"`AdventureWorks2012`" 或 "`tempdb`")。  
   

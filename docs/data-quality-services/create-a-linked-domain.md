@@ -12,10 +12,10 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252248"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
@@ -35,17 +35,17 @@ ms.locfileid: "75252248"
   
  範例是包含以下欄位的記錄：客戶名字、客戶姓氏和父親的名字。 假設您將客戶名字和父親的名字對應到「名字」定義域，並讓「名字」定義域和「姓氏」定義域成為「完整名稱」複合定義域的一部分。 問題是父親的名字將會加入至複合定義域，而且不含姓氏。 但是，如果您將兩個名字欄位中的每一個都連結到定義域，並連結這兩個定義域，然後您可以將「客戶名字」定義域加入至「完整名稱」複合定義域，而不將「父親的名字」欄位加入至複合定義域，以免「父親的名字」被加入至複合定義域。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要建立連結的定義域，您必須擁有知識庫以及您想要連結的現有定義域。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立連結的定義域。  
   
-##  <a name="Create"></a>建立連結的定義域  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a>建立連結的定義域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75252248"
   
 7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   
-##  <a name="Map"></a>將兩個欄位對應到連結的定義域  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Map two fields to linked domains  
   
 1.  開啟知識探索活動中的知識庫，並將知識庫對應到資料庫及資料表或檢視表。  
   
@@ -74,10 +74,10 @@ ms.locfileid: "75252248"
   
 4.  在 [建立定義域] 對話方塊中，輸入定義域名稱和描述，然後按一下 [確定]。  
   
-##  <a name="FollowUp"></a>後續操作：建立連結的定義域之後  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a> 後續操作：建立連結的定義域之後  
  在建立連結的定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Behavior"></a>連結的定義域行為  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a> 連結的定義域行為  
  您可以為連結的定義域變更設定，如下所示：  
   
 -   您可以變更連結的定義域的名稱和描述。  

@@ -10,10 +10,10 @@ ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254786"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
@@ -44,11 +44,11 @@ ms.locfileid: "75254786"
   
 5.  在右窗格中，選取 **[DQS_STAGING_DATA]** 資料庫的 **[對應]** 資料行底下的核取方塊，然後在 **[資料庫角色成員資格對象 :DQS_STAGING_DATA]** 窗格中選取下列角色：  
   
-    -   **db_datareader**：從資料表/視圖讀取資料。  
+    -   **db_datareader**：從資料表/檢視讀取資料。  
   
     -   **db_datawriter**：加入、刪除或變更資料表中的資料。  
   
-    -   **db_ddladmin**：建立、修改或刪除資料表/views。  
+    -   **db_ddladmin**：建立、修改或刪除資料表/檢視。  
   
 6.  在 **[登入屬性]** 對話方塊中，按一下 **[確定]** 套用變更。  
   

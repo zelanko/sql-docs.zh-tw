@@ -10,17 +10,16 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251753"
 ---
 # <a name="data-matching"></a>資料比對
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 資料比對程序可讓您減少資料重複，並提高資料來源中的資料精確度。 比對會分析單一資料來源之所有記錄中的重複程度，傳回每一組比較之記錄之間相符的加權機率。 然後您可以決定哪些記錄相符，並針對來源資料採取適當的動作。  
   
  DQS 比對程序的優點如下：  
@@ -41,14 +40,14 @@ ms.locfileid: "75251753"
   
  ![DQS 中的比對程序](../data-quality-services/media/dqs-matchingprocess.gif "DQS 中的比對程序")  
   
-##  <a name="How"></a>如何執行資料比對  
+##  <a name="how-to-perform-data-matching"></a><a name="How"></a> 如何執行資料比對  
  如果是 DQS 中的其他資料品質程序，執行比對的方式是建立知識庫，並使用以下步驟在資料品質專案中執行比對活動：  
   
 1.  在知識庫中建立比對原則  
   
 2.  在屬於資料品質專案之一部分的比對活動中執行刪除重複作業程序。  
   
-###  <a name="Policy"></a>建立比對原則  
+###  <a name="building-a-matching-policy"></a><a name="Policy"></a> 建立比對原則  
  準備知識庫來執行比對的方式，是在知識庫中建立比對原則，以定義 DQS 如何指派比對機率。 比對原則是由一個或多個比對規則所組成，這些規則會在 DQS 評估某一筆記錄與另一筆記錄的相符程度時識別將使用哪些定義域，並指定每一個定義域值在比對評估中所佔的加權比重。 您會在規則中指定定義域值是否必須完全相符或者可以類似，以及相似度的程度。 您也會指定定義域比對是否為必要條件。  
   
  [知識庫管理] 精靈中的比對原則活動會分析取樣資料，方法是套用每一個比對規則，一次比較整個記錄範圍中的兩筆記錄。 符合分數大於指定之最小值的記錄會分組在比對結果的叢集中。 這些比對結果不會加入至知識庫；您可以使用這些結果來微調比對規則。 建立比對原則可以是反覆性的程序，在此程序中您會根據比對結果或分析統計資料來修改比對規則。  
@@ -62,7 +61,7 @@ ms.locfileid: "75251753"
   
  在建立每一個比對規則時，該規則都會儲存在知識庫中。 但是，只有在發行知識庫時，才可以在資料品質專案中使用知識庫。 此外在發行知識庫之前，建立者以外的使用者將無法變更其中的比對規則。  
   
-###  <a name="Project"></a>執行比對專案  
+###  <a name="running-a-matching-project"></a><a name="Project"></a> 執行比對專案  
  DQS 執行資料刪除重複作業的方式，是使用知識庫中所定義的比對原則來比較來源資料中的每一個資料列與每一個其他資料列，並產生資料列相符的機率。 這會在比對類型的資料品質專案中執行。 比對是資料品質專案中的其中一個主要步驟。 最好是在資料清理之後執行比對，好讓要比對的資料沒有錯誤。 在執行比對程序之前，您可以將清理專案的結果匯出到資料表或 .csv 檔案中，然後建立比對專案，您會在比對專案中將清理結果對應到定義域。  
   
  資料比對專案是由電腦輔助的程序與互動式程序所組成。 比對專案會將比對原則中的比對規則套用到要評估的資料來源。 這個程序會評估任何兩個資料列在符合分數中相符的可能性。 只有當記錄的符合機率大於資料監管在比對原則中所設定的值時，才會被視為相符的記錄。  

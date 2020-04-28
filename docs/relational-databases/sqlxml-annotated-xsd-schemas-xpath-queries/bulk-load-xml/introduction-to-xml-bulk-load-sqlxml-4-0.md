@@ -18,13 +18,13 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4116bef21a70e6de699046019fd404798826bf18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246740"
 ---
-# <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大量載入簡介 (SQLXML 4.0)
+# <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大量載入簡介 (SQLXML 4.0) 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料載入至 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   
@@ -42,8 +42,7 @@ ms.locfileid: "75246740"
   
 -   註解 XSD 和 XDR 結構描述。 如需批註式 XSD 架構的詳細資訊，請參閱[批註式 Xsd 架構簡介 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 如需批註式 XDR 架構的詳細資訊，請參閱[SQLXML 4.0&#41;中 &#40;已被取代的批註式 Xdr 架構](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量插入機制，例如 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT 陳述式和 bcp 公用程式。 如需詳細資訊，請參閱[BULK INSERT &#40;transact-sql&#41;](../../../t-sql/statements/bulk-insert-transact-sql.md)和[bcp 公用程式](../../../tools/bcp-utility.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量插入機制，例如 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT 陳述式和 bcp 公用程式。 如需詳細資訊，請參閱[BULK INSERT &#40;transact-sql&#41;](../../../t-sql/statements/bulk-insert-transact-sql.md)和[bcp 公用程式](../../../tools/bcp-utility.md)。  
   
 ## <a name="streaming-of-xml-data"></a>XML 資料的資料流  
  因為來源 XML 文件可能很大，所以不會將整個文件讀入記憶體來進行大量載入處理， 而是由 XML 大量載入以資料流的方式解譯 XML 資料，再加以讀取。 此公用程式讀取資料時會識別資料庫資料表，從 XML 資料來源產生適當的記錄，然後再將記錄傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行插入。  

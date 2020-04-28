@@ -19,10 +19,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75256002"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路徑 (SQLXML 4.0) 中指定選取述詞
@@ -41,8 +41,7 @@ ms.locfileid: "75256002"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 在這個 XPath 查詢中，`child` 和 `attribute` 是軸的名稱。 `Customer``Customer`是節點測試（如果是** \<元素節點>**，則為 TRUE，因為** \<元素>** 是`child`軸的主要節點類型）。 
-  `attribute::CustomerID="ALFKI"` 是述詞。 在述詞中`attribute` ，是軸而且`CustomerID`是節點測試（如果**CustomerID**是內容節點的屬性，則為 TRUE，因為** \<屬性>** 是**屬性**軸的主要節點類型）。  
+ 在這個 XPath 查詢中，`child` 和 `attribute` 是軸的名稱。 `Customer``Customer`是節點測試（如果是** \<元素節點>**，則為 TRUE，因為** \<元素>** 是`child`軸的主要節點類型）。 `attribute::CustomerID="ALFKI"` 是述詞。 在述詞中`attribute` ，是軸而且`CustomerID`是節點測試（如果**CustomerID**是內容節點的屬性，則為 TRUE，因為** \<屬性>** 是**屬性**軸的主要節點類型）。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   
@@ -57,9 +56,7 @@ ms.locfileid: "75256002"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- 在這個 XPath 運算式中，`child` 和 `attribute` 是軸的名稱。 
-  `Customer`、`Order` 和 `SalesOrderID` 是節點測試。 
-  `attribute::OrderID="1"` 是述詞。  
+ 在這個 XPath 運算式中，`child` 和 `attribute` 是軸的名稱。 `Customer`、`Order` 和 `SalesOrderID` 是節點測試。 `attribute::OrderID="1"` 是述詞。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   
@@ -76,8 +73,7 @@ child::Customer[child::ContactName]
   
  這個範例假設** \<連絡人>** 是 XML 檔中** \<Customer>** 元素的子項目，在批註式 XSD 架構中稱為*元素中心對應*。  
   
- 在這個 XPath 運算式中，`child` 是軸的名稱。 `Customer`是節點`Customer`測試（如果是>節點的** \<元素**，則為 TRUE，因為** \<元素>** 是`child`軸的主要節點類型）。 
-  `child::ContactName` 是述詞。 在述詞中`child` ，是軸而且`ContactName`是節點測試（如果`ContactName`是>節點的** \<元素**，則為 TRUE）。  
+ 在這個 XPath 運算式中，`child` 是軸的名稱。 `Customer`是節點`Customer`測試（如果是>節點的** \<元素**，則為 TRUE，因為** \<元素>** 是`child`軸的主要節點類型）。 `child::ContactName` 是述詞。 在述詞中`child` ，是軸而且`ContactName`是節點測試（如果`ContactName`是>節點的** \<元素**，則為 TRUE）。  
   
  此運算式只會傳回具有** \<[連絡人]>** 專案子系之內容節點的** \<客戶>** 專案子系。  
   
@@ -96,8 +92,7 @@ child::Customer[not(child::ContactName)]
   
  這個範例假設** \<連絡人>** 是 XML 檔中** \<Customer>** 元素的子項目，而且資料庫中不需要 [連絡人] 欄位。  
   
- 在此範例中，`child` 為軸。 `Customer`是節點測試（如果`Customer`是> 節點的\<元素，則為 TRUE）。 
-  `not(child::ContactName)` 是述詞。 在述詞中`child` ，是軸而且`ContactName`是節點測試（如果`ContactName`是> 節點的\<元素，則為 TRUE）。  
+ 在此範例中，`child` 為軸。 `Customer`是節點測試（如果`Customer`是> 節點的\<元素，則為 TRUE）。 `not(child::ContactName)` 是述詞。 在述詞中`child` ，是軸而且`ContactName`是節點測試（如果`ContactName`是> 節點的\<元素，則為 TRUE）。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   
@@ -112,8 +107,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- 在此範例中`child` ，是軸而且`Customer`是節點測試（如果`Customer`是> 節點\<的元素，則為 TRUE）。 
-  `attribute::CustomerID` 是述詞。 在述詞中`attribute` ，是軸， `CustomerID`而是述詞（如果`CustomerID`是>節點的** \<屬性**，則為 TRUE）。  
+ 在此範例中`child` ，是軸而且`Customer`是節點測試（如果`Customer`是> 節點\<的元素，則為 TRUE）。 `attribute::CustomerID` 是述詞。 在述詞中`attribute` ，是軸， `CustomerID`而是述詞（如果`CustomerID`是>節點的** \<屬性**，則為 TRUE）。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   
@@ -122,8 +116,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>選取述詞：範例 6  
- 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 支援在述詞中包含交叉乘積的 XPath 查詢，如下列範例所示：  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 支援在述詞中包含交叉乘積的 XPath 查詢，如下列範例所示：  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

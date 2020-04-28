@@ -10,10 +10,10 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258854"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
@@ -22,9 +22,9 @@ ms.locfileid: "75258854"
 
   此主題描述如何備份及還原 DQS 資料庫。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   您必須知道或記得您在 DQS 伺服器安裝期間所提供資料庫主要金鑰的密碼。  
   
@@ -32,15 +32,15 @@ ms.locfileid: "75258854"
   
 -   確定沒有任何使用者登入 DQS 伺服器。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，才能執行備份和還原作業。  
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中終止任何執行中的活動或停止任何執行中的處理序。  
   
-##  <a name="BackupRestore"></a>備份和還原 DQS 資料庫  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>備份和還原 DQS 資料庫  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75258854"
   
     ```  
   
-12. 按 F5 執行陳述式。 檢查 [**結果**] 窗格，確認語句是否已順利執行。  
+12. 按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 DQS 資料庫](../data-quality-services/manage-dqs-databases.md)  

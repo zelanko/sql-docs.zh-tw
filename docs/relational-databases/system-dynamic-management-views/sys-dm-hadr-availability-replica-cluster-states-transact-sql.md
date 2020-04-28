@@ -21,10 +21,10 @@ ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3e2fccaed2b3c001fdcc8a0d7938f0a75a8f10d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246346"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "75246346"
 |**replica_server_name**|**nvarchar(256)**|裝載此複本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |**group_id**|**uniqueidentifier**|可用性群組的唯一識別碼。|  
 |**join_state**|**tinyint**|0 = 未聯結<br /><br /> 1 = 已聯結，獨立<br /><br /> 2 = 已聯結，容錯移轉叢集執行個體|  
-|**join_state_desc**|**Nvarchar （60）**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
+|**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
 ## <a name="security"></a>安全性  
   

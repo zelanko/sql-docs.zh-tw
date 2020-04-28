@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adf6b91b1c83f490ffe6c85fecd374fca7c1a085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253178"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
   您無法從一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式升級或轉換至另一個模式。 例如，您無法將原生模式報表伺服器升級或轉換為 SharePoint 模式。 您無法在兩種模式之間複製報表伺服器資料庫，因為它們使用不同的資料庫結構描述。 您可以將內容從一部報表伺服器移轉至另一部報表伺服器。 您使用的工具取決於為來源和目的地伺服器設定的報表伺服器模式類型。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
-##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 移轉工具  
+##  <a name="reporting-services-migration-tool"></a><a name="bkmk_native_to_sharepoint"></a> Reporting Services 移轉工具  
  此工具支援將內容從原生模式部署移轉至 SharePoint 模式部署。 此工具不支援從 SharePoint 模式移轉至 SharePoint 模式，或是從 SharePoint 模式移轉至原生模式。  
   
  如需詳細資訊，請參閱 [Reporting Services 移轉工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560) \(英文\)。  

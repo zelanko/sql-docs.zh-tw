@@ -10,10 +10,10 @@ ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254814"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
@@ -36,7 +36,7 @@ ms.locfileid: "75254814"
 |將整個知識庫匯入 .dqs 資料檔案中|[從 .dqs 檔案匯入知識庫](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |將 Excel 檔案中的值匯入定義域中|[將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |將 Excel 檔案中的定義域匯入知識庫|[在知識探索中匯入 Excel 檔案中的定義域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|將清理期間蒐集的知識匯入知識庫中|[將清理專案值匯入網域](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|將清理期間蒐集的知識匯入知識庫中|[將清理專案值匯入定義域中](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
   

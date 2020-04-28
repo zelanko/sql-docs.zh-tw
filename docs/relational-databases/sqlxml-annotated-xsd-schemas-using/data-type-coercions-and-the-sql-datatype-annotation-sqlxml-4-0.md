@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257472"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>資料類型轉換和 sql： datatype 注釋（SQLXML 4.0）
@@ -47,7 +47,7 @@ ms.locfileid: "75257472"
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|時間|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |All others|No additional conversion|  
   
 > [!NOTE]  
@@ -58,32 +58,32 @@ ms.locfileid: "75257472"
   
 |SQL Server 資料類型|XSD 資料類型|  
 |--------------------------|-------------------|  
-|**Bigint**|**前提**|  
+|**bigint**|**long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**字串**|  
+|**char**|**string**|  
 |**datetime**|**從中**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
 |**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**字串**|  
-|**ntext**|**字串**|  
-|**nvarchar**|**字串**|  
-|**數值**|**decimal**|  
-|**即時**|**float**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
+|**numeric**|**decimal**|  
+|**real**|**float**|  
 |**smalldatetime**|**從中**|  
 |**smallint**|**short**|  
-|**SMALLMONEY**|**decimal**|  
-|**sql_variant**|**字串**|  
-|**sysname**|**字串**|  
-|**text**|**字串**|  
+|**smallmoney**|**decimal**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
 |**timestamp**|**從中**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**字串**|  
-|**uniqueidentifier**|**字串**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 註解  
  **Sql： datatype**注釋是用來指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型;當下列情況時，必須指定此注釋：  

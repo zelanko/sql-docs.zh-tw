@@ -20,18 +20,17 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253546"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  設定遠端預存程序呼叫傳回參數的值。 此函式已被 **srv_paramsetoutput** 函式取代。  
   
@@ -61,7 +60,7 @@ len
  *n*  
  表示要設定的參數數目。 第一個參數是 1。  
   
- *data*  
+ *資料*  
  這是指向要當做遠端預存程序傳回參數傳回給用戶端之資料值的指標。  
   
  *len*  
@@ -76,14 +75,14 @@ len
   
 |新的資料類型|傳回資料長度|  
 |--------------------|------------------------|  
-|**BITN**|**Null：** _len_ = 0、DATA = IG、RET = 0<br /><br /> **零：** N/A<br /><br /> **>= 255：** N/A<br /><br /> **<255：** N/A|  
-|**BIGVARCHAR**|**Null：** _len_ = 0、DATA = IG、RET = 1<br /><br /> **零：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **>= 255：** _len_ = max8k，資料 = 有效，RET = 0<br /><br /> **<255：** _len_ = <8k，資料 = 有效，RET = 1|  
-|**BIGCHAR**|**Null：** _len_ = 0、DATA = IG、RET = 1<br /><br /> **零：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **>= 255：** _len_ = max8k，資料 = 有效，RET = 0<br /><br /> **<255：** _len_ = <8k，資料 = 有效，RET = 1|  
-|**BIGBINARY**|**Null：** _len_ = 0、DATA = IG、RET = 1<br /><br /> **零：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **>= 255：** _len_ = max8k，資料 = 有效，RET = 0<br /><br /> **<255：** _len_ = <8k，資料 = 有效，RET = 1|  
-|**BIGVARBINARY**|**Null：** _len_ = 0、DATA = IG、RET = 1<br /><br /> **零：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **>= 255：** _len_ = max8k，資料 = 有效，RET = 0<br /><br /> **<255：** _len_ = <8k，資料 = 有效，RET = 1|  
-|NCHAR|**Null：** _len_ = 0、DATA = IG、RET = 1<br /><br /> **零：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **>= 255：** _len_ = max8k，資料 = 有效，RET = 0<br /><br /> **<255：** _len_ = <8k，資料 = 有效，RET = 1|  
-|NVARCHAR|**Null：** _len_ = 0、DATA = IG、RET = 1<br /><br /> **零：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **>= 255：** _len_ = max8k，資料 = 有效，RET = 0<br /><br /> **<255：** _len_ = <8k，資料 = 有效，RET = 1|  
-|**NTEXT**|**Null：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **零：** _len_ = IG、DATA = IG、RET = 0<br /><br /> **>= 255：** _len_ = IG、DATA = IG、RET = 0<br /><br /> 255： _len_ = IG、data = IG、RET = 0 ** \< **|  
+|**BITN**|**NULL：** _len_ = 0、data = IG、RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** N/A<br /><br /> **<255：** N/A|  
+|**BIGVARCHAR**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**BIGCHAR**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**BIGBINARY**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**BIGVARBINARY**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|NCHAR|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|NVARCHAR|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**NTEXT**|**NULL：** _len_ = IG、data = IG、RET = 0<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = IG、data = IG、RET = 0<br /><br /> 255： _len_ = IG、data = IG、RET = 0 ** \< **|  
 |RET = srv_paramset 的傳回值||  
 |IG = 值將會被略過||  
 |valid = 資料的任何有效指標||  
@@ -101,6 +100,6 @@ len
 >  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://www.microsoft.com/msrc?rtc=1)。  
   
 ## <a name="see-also"></a>另請參閱  
- [srv_paramsetoutput &#40;擴充預存程式 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
+ [srv_paramsetoutput &#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

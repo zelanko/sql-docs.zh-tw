@@ -22,18 +22,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245194"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具
   當連接的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行個體與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器在不同的電腦上執行時，就必須設定 Windows 防火牆規則才能啟用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯。  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具同時包含伺服器端和用戶端元件。 伺服器端的偵錯工具元件會隨著 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更新版本中的每個 Database Engine 執行個體一起安裝。 包括用戶端偵錯工具元件的情況：  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具同時包含伺服器端和用戶端元件。 伺服器端的偵錯工具元件會隨著 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更新版本中的每個 Database Engine 執行個體一起安裝。 包括用戶端偵錯工具元件的情況：  
   
 -   當您從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本安裝用戶端工具時。  
   
@@ -151,21 +150,19 @@ ms.locfileid: "75245194"
 ## <a name="requirements-for-starting-the-debugger"></a>啟動偵錯工具的需求  
  啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具的所有嘗試也必須符合下列需求：  
   
-* 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 必須在屬於系統管理員固定伺服器角色成員的 Windows 帳戶底下執行。  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 必須在屬於系統管理員固定伺服器角色成員的 Windows 帳戶底下執行。  
   
 * 您必須使用屬於系統管理員 (sysadmin) 固定伺服器角色成員的 Windows 驗證或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 驗證登入來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢編輯器視窗。  
   
-* 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗必須連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更新版本中的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 當 [查詢編輯器] 視窗連接至處於單一使用者模式下的執行個體時，您就無法執行偵錯工具。
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗必須連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更新版本中的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 當 [查詢編輯器] 視窗連接至處於單一使用者模式下的執行個體時，您就無法執行偵錯工具。
 
 * 伺服器必須透過 RPC 回應用戶端。 執行 SQL Server 服務的帳戶應該要有用戶端的驗證許可權。  
   
 ## <a name="see-also"></a>另請參閱  
- [Transact-SQL 偵錯工具](transact-sql-debugger.md)   
+ [Transact-sql 偵錯工具](transact-sql-debugger.md)   
  [執行 Transact-sql 偵錯工具](run-the-transact-sql-debugger.md)   
  [逐步執行 Transact-sql 程式碼](step-through-transact-sql-code.md)   
- [Transact-SQL 偵錯工具資訊](transact-sql-debugger-information.md)   
+ [Transact-sql 偵錯工具資訊](transact-sql-debugger-information.md)   
  [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

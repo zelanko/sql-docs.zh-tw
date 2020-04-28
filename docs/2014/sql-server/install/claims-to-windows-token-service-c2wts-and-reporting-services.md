@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245616"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
@@ -54,7 +54,7 @@ ms.locfileid: "75245616"
   
      您用於 c2WTS 的帳戶也必須設定為具有通訊協定轉換的限制委派，而且需要委派給所需的服務（例如 SQL Server 引擎、SQL Server Analysis Services）。若要設定委派，您可以使用 [Active Directory 使用者和電腦] 嵌入式管理單元。  
   
-    1.  以滑鼠右鍵按一下各服務帳戶，以開啟屬性對話方塊。 按一下對話方塊中的 [委派]**** 索引標籤。  
+    1.  以滑鼠右鍵按一下各服務帳戶，以開啟屬性對話方塊。 按一下對話方塊中的 [委派]  索引標籤。  
   
         > [!NOTE]  
         >  注意：物件必須指派有 SPN，才會顯示委派索引標籤。 c2WTS 不需要 c2WTS 帳戶的 SPN，但若沒有 SPN，將不會顯示 [**委派**] 索引標籤。 另一種設定限制委派的方法是使用 **ADSIEdit**這類的公用程式。  

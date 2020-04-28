@@ -14,10 +14,10 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255655"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
@@ -31,15 +31,15 @@ ms.locfileid: "75255655"
 
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要使用服務商場的參考資料，您必須擁有有效的服務商場帳號金鑰。 如需有關建立 Marketplace 帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936)（https://go.microsoft.com/fwlink/?LinkId=212936)。 您也可以從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 建立服務商場帳號金鑰，方法是按一下 **首頁畫面中** [管理] **底下的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ，然後按一下 **[參考資料]** 索引標籤底下的 **[建立 DataMarket 帳戶識別碼]** 。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中設定參考資料服務。  
   
-##  <a name="Marketplace"></a>將 DQS 設定為使用 Marketplace 中的參考資料  
+##  <a name="configure-dqs-to-use-reference-data-from-marketplace"></a><a name="Marketplace"></a> 設定 DQS 使用服務商場中的參考資料  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75255655"
   
  您現在已經準備好開始在 DQS 中使用來自服務商場的參考資料服務 (這些服務是針對指定的服務商場帳號金鑰所訂閱)。  
   
-##  <a name="ThirdParty"></a>設定 DQS 使用直接線上協力廠商參考資料提供者的參考資料  
+##  <a name="configure-dqs-to-use-reference-data-from-direct-online-third-party-reference-data-providers"></a><a name="ThirdParty"></a> 設定 DQS 使用直接線上協力廠商參考資料提供者所提供的參考資料  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75255655"
   
  您現在已經準備好開始在 DQS 中使用來自新設定的直接線上協力廠商參考資料服務提供者所提供的參考資料服務。  
   
-##  <a name="FollowUp"></a>後續操作：設定 DQS 使用參考資料之後  
+##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a>後續操作：設定 DQS 使用參考資料之後  
  您現在必須將必要的知識庫定義域對應到您剛才設定的資料提供者所提供的參考資料。 若要如此做，請參閱[將定義域或複合定義域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
   

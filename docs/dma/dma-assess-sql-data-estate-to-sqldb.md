@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253506"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant，評估遷移至 Azure SQL Database 的 SQL Server 資料資產是否就緒
@@ -39,7 +39,7 @@ ms.locfileid: "75253506"
 Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的探索、評估和遷移中繼資料。 您也可以使用專案來追蹤探索到的資產，並協調評估和遷移。
 
 1. 登入 Azure 入口網站，選取 [**所有服務**]，然後搜尋 Azure Migrate。
-2. 在 [服務]**** 下，選取 [Azure Migrate]****。
+2. 在 [服務]  下，選取 [Azure Migrate]  。
 
    ![Azure Migrate-選取服務](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
 
@@ -58,11 +58,11 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
 
     您可以在下列任何地理位置建立 Azure Migrate 專案。
 
-    | **區域**  | **儲存位置區域** |
+    | **地理位置**  | **儲存位置區域** |
     | ------------- | ------------- |
-    | 亞洲 | 東南亞或東亞 |
+    | Asia | 東南亞或東亞 |
     | 歐洲 | 歐洲南部或西歐 |
-    | 英國 | 英國南部或英國西部 |
+    | United Kingdom | 英國南部或英國西部 |
     | 美國 | 美國中部或美國西部2 |
 
     針對專案所指定的地理位置，僅會用於儲存從內部部署虛擬機器收集的中繼資料。 您可以選取任何目標區域以進行實際移轉。
@@ -93,7 +93,7 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
    ![已新增 Azure Migrate 評量工具](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
 1. 使用提供的連結下載 Data Migration Assistant，然後將它安裝在可存取來源 SQL Server 實例的電腦上。
-2. 啟動 Data Migration Assistant。
+2. 啟動 [Data Migration Assistant]。
 
 ### <a name="create-an-assessment"></a>建立評估
 

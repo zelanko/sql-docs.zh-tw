@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 05161b2c9e3266b57841ff4268f4dc64ede90434
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244654"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>變更伺服器的註冊 (SQL Server Management Studio)

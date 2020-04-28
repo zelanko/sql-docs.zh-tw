@@ -13,10 +13,10 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255606"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>設定 DQS 記錄檔的進階設定
@@ -28,17 +28,17 @@ ms.locfileid: "75255606"
 > [!NOTE]  
 >  這些活動無法使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]來執行，而且僅適用於進階使用者。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，才能修改 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定。  
   
 -   您必須在想要修改 DQLog.Client.xml 檔案的電腦上，以 Administrators 群組成員的身分登入，才能設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定。  
   
-##  <a name="DQSServer"></a>設定資料品質伺服器記錄檔設定  
+##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>設定資料品質伺服器記錄檔設定  
  在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中， [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定會以 XML 格式存在 **[ServerLogging]** 資料列的 **[VALUE]** 資料行中。 您可以執行下列 SQL 查詢，以便檢視組態資訊：  
   
 ```  
@@ -95,7 +95,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  按 F5 執行陳述式。 檢查 [**結果**] 窗格，確認語句是否已順利執行。  
+4.  按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
   
 5.  若要將所做的變更套用至 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄組態，您必須執行下列 Transact-SQL 陳述式。 開啟新的 [查詢編輯器] 視窗，並且貼上下列 Transact-SQL 陳述式：  
   
@@ -109,13 +109,12 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  按 F5 執行陳述式。 檢查 [**結果**] 窗格，確認語句是否已順利執行。  
+6.  按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定組態是以動態方式產生並儲存在 DQS_MAIN.Log 檔案中，而該檔案通常位於 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log (如果您安裝了 SQL Server 預設執行個體的話)。 不過，直接在此檔案中進行的變更不會保存，而且 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定會覆寫這些變更。  
+>  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定組態是以動態方式產生並儲存在 DQS_MAIN.Log 檔案中，而該檔案通常位於 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log (如果您安裝了 SQL Server 預設執行個體的話)。 不過，直接在此檔案中進行的變更不會保存，而且 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定會覆寫這些變更。  
   
-##  <a name="DQSClient"></a>設定 Data Quality Client 記錄檔設定  
+##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>設定 Data Quality Client 記錄檔設定  
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]記錄檔設定設定檔（dqlog.client.xml）通常是在 C:\PROGRAM Files\Microsoft SQL server\130\tools\binn\dq\config。中提供。XML 檔案的內容類別似于您稍早針對[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]記錄檔設定所修改的 xml 檔案。 若要設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定：  
   
 1.  以系統管理員的身分執行任何 XML 編輯工具或 [記事本]。  
