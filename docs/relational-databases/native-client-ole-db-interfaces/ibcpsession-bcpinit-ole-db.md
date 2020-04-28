@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f37a23f89ca7fcb2b3e0a60a7f4813891317b3f5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307369"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
@@ -44,7 +44,7 @@ HRESULT BCPInit(
   
  **BCPInit** 方法會檢查資料庫來源或目標資料表的結構，而不會檢查資料檔案的結構。 此方法會根據資料庫資料表、檢視或 SELECT 結果集中的每個資料行，指定資料檔的資料格式值。 這個指定包括每個資料行的資料類型、資料中是否有長度或 null 指標和結束字元位元組字串，以及固定長度資料類型的寬度。 **BCPInit** 方法會設定這些值，如下所示：  
   
--   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 數據類型由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機客戶端標頭檔 (sqlncli.h) 中指定的本機數據類型枚舉。 其值會採用 BCP_TYPE_XXX 的模式。 資料會以其電腦格式表示。 也就是說，來自 integer 資料類型之資料行的資料會根據建立資料檔案之電腦，以四個位元組由大到小或由小到大的順序表示。  
+-   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料類型是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client 標頭檔（sqlncli）中指定的原生資料類型所列舉。 其值會採用 BCP_TYPE_XXX 的模式。 資料會以其電腦格式表示。 也就是說，來自 integer 資料類型之資料行的資料會根據建立資料檔案之電腦，以四個位元組由大到小或由小到大的順序表示。  
   
 -   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製方法 (例如 [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) 會剖析資料列，期望資料在資料檔案中的長度與資料在資料庫資料表、檢視或 SELECT 資料行清單中指定的長度相同。 例如，定義為 `char(13)` 之資料庫資料行的資料，對於檔案中資料的每個資料列，必須以 13 個字元表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
   
@@ -81,7 +81,7 @@ HRESULT BCPInit(
  此方法已成功。  
   
  E_FAIL  
- 對於詳細資訊,請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面進行提供程式特定的錯誤。  
+ 發生提供者特定的錯誤。如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
   
  E_OUTOFMEMORY  
  記憶體不足錯誤  
@@ -90,7 +90,7 @@ HRESULT BCPInit(
  未正確指定一個或多個引數。 例如，指定了無效的檔案名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [IBCP會話&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

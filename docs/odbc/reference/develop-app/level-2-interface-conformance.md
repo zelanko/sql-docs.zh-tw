@@ -1,5 +1,5 @@
 ---
-title: 等級 2 介面一致性 |微軟文件
+title: 層級2介面一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306159"
 ---
 # <a name="level-2-interface-conformance"></a>層級 2 介面一致性
-2 級介面一致性級別包括 1 級介面一致性級別功能以及以下功能:  
+層級2介面一致性層級包含層級1介面一致性層級功能，以及下列功能：  
   
 |||  
 |-|-|  
-|201|使用資料庫表和檢視的三部分名稱。 (有關詳細資訊,請參閱[級別 1 介面一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的由兩部分組成的命名支援功能 101 。|  
-|202|通過調用**SQLDescribeParam**來描述動態參數。|  
-|203|不僅使用輸入參數,還使用輸出和輸入/輸出參數,以及存儲過程的結果值。|  
-|204|通過在列號 0 上調用**SQLDescribeCol**和**SQLColAttribute,** 使用書籤(包括檢索書籤);通過調用 SQLFetchScroll,將*Fetch 方向*參數設置為SQL_FETCH_BOOKMARK;通過調用**SQLFetchScroll,** 即可獲取。並通過調用**SQLBulk 操作**,將*操作*參數設置為SQL_UPDATE_BY_BOOKMARK、SQL_DELETE_BY_BOOKMARK或SQL_FETCH_BY_BOOKMARK,通過書籤操作更新、刪除和提取。|  
-|205|通過調用**SQLColumn 特權****、SQL 外鍵**和**SQLTable 特權**來檢索有關數據字典的高級資訊。|  
-|206|使用 ODBC 函數而不是 SQL 語句執行其他資料庫操作,透過使用 SQL_ADD 呼叫**SQLBulk 操作,** 或者使用SQL_DELETE或SQL_UPDATE**調用 SQLSetPos。** (支援對**SQLSetPos**的呼叫,*將 LockType*參數設定為SQL_LOCK_EXCLUSIVE或SQL_LOCK_UNLOCK不是一致性級別的一部分,而是可選功能。|  
-|207|為指定的單個語句啟用 ODBC 函數的非同步執行。|  
-|208|通過調用**SQL 特別列**獲取表的SQL_ROWVER行標識列。 (有關詳細資訊,請參閱對**SQL 特殊列**的支援,其中*識別符類型*參數設置為 SQL_BEST_ROWID作為[核心介面一致性](../../../odbc/reference/develop-app/core-interface-conformance.md)中的要素 20。|  
-|209|將SQL_ATTR_CONCURRENCY語句屬性設置為SQL_CONCUR_READ_ONLY以外的至少一個值。|  
-|210|超時登錄請求和 SQL 查詢(SQL_ATTR_LOGIN_TIMEOUT和SQL_ATTR_QUERY_TIMEOUT)的能力。|  
-|211|更改默認隔離級別的能力;使用「可序列化」隔離等級執行事務的能力。|
+|201|使用資料庫資料表和 views 的三部分名稱。 （如需詳細資訊，請參閱[層級1介面一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的兩部分命名支援功能101）。|  
+|202|藉由呼叫**SQLDescribeParam**來描述動態參數。|  
+|203|不僅會使用輸入參數，還可以輸出和輸入/輸出參數，以及預存程式的結果值。|  
+|204|藉由在資料行編號0上呼叫**SQLDescribeCol**和**SQLColAttribute** ，來使用書簽，包括抓取書簽。根據書簽來提取，方法是呼叫**SQLFetchScroll**並將*FetchOrientation*引數設為 SQL_FETCH_BOOKMARK;並透過書簽作業來更新、刪除和提取，方法是呼叫**SQLBulkOperations**並將*Operation*引數設定為 SQL_UPDATE_BY_BOOKMARK、SQL_DELETE_BY_BOOKMARK 或 SQL_FETCH_BY_BOOKMARK。|  
+|205|藉由呼叫**SQLColumnPrivileges**、 **SQLForeignKeys**和**SQLTablePrivileges**，來抓取有關資料字典的 advanced 資訊。|  
+|206|使用 ODBC 函式（而非 SQL 語句）來執行額外的資料庫作業，方法是以 SQL_ADD 呼叫**SQLBulkOperations**或使用 SQL_DELETE 或 SQL_UPDATE 的**SQLSetPos** 。 （支援呼叫**SQLSetPos** ，並將*LockType*引數設為 SQL_LOCK_EXCLUSIVE 或 SQL_LOCK_UNLOCK 不是一致性層級的一部分，但是選擇性功能）。|  
+|207|針對指定的個別語句啟用 ODBC 函數的非同步執行。|  
+|208|藉由呼叫**SQLSpecialColumns**，取得資料表的 SQL_ROWVER 資料列識別資料行。 （如需詳細資訊，請參閱支援**SQLSpecialColumns** ，並將*IdentifierType*引數設定為 SQL_BEST_ROWID 做為[核心介面一致性](../../../odbc/reference/develop-app/core-interface-conformance.md)中的功能20）。|  
+|209|將 SQL_ATTR_CONCURRENCY 語句屬性設定為至少一個 SQL_CONCUR_READ_ONLY 以外的值。|  
+|210|能夠準時登入要求和 SQL 查詢（SQL_ATTR_LOGIN_TIMEOUT 和 SQL_ATTR_QUERY_TIMEOUT）。|  
+|211|變更預設隔離等級的能力;能夠執行具有「可序列化」層級隔離的交易。|

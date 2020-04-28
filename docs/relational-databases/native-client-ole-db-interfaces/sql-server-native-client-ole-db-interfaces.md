@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 31fff0767ecbbbf41349b3f0dd431eb440fa7d77
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388520"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) 介面
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供者向[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]希望存取運行的一台或多台電腦上的數據的消費者公開介面。 本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式是符合 OLE DB 版本 2.0 的提供程式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將介面公開給想要在執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一或多部電腦上存取資料的取用者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
   
- 此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式編程引用不記錄所有 OLE DB 介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和方法,只記錄在使用 本機用戶端 OLE DB 提供程式時表現出提供程式特定行為的介面和方法。  
+ 這個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者程式設計參考不會記載所有 OLE DB 介面和方法，只會記載使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，顯示提供者特定行為的介面和方法。  
   
  如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45232)。  
   

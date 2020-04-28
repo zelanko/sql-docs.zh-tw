@@ -1,6 +1,6 @@
 ---
-title: 使用 ADO (SQLXML) 執行更新語法
-description: 瞭解如何建立與 Microsoft SQL Server 實體的連線,並使用 ADO (SQLXML 4.0) 執行 updategram.by。
+title: 使用 ADO 執行 Updategram （SQLXML）
+description: 瞭解如何建立 Microsoft SQL Server 實例的連接，並使用 ADO 執行 updategram.by （SQLXML 4.0）。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388732"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 Updategram (SQLXML 4.0)
@@ -29,15 +29,15 @@ ms.locfileid: "81388732"
   
  在此範例應用程式中：  
   
--   **conn**物件 **(ADODB)。連接**) 建立與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定伺服器 電腦上的正在運行的實例的連接。  
+-   **Conn**物件（**ADODB。連接**）與特定伺服器電腦[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的執行中實例建立連接。  
   
--   **cmd**物件 (**ADODB.Command**) 在已建立的連線上執行.  
+-   **Cmd**物件（**ADODB**）會在已建立的連接上執行。  
   
 -   命令用語會設定為 DBGUID_MSSQLXML。  
   
--   更新圖將複製到命令流 **(strmIn)。**  
+-   Updategram 會複製到命令資料流程（**字串分 text.append**）。  
   
--   命令的輸出流設置為**StrmOut**物件 **(ADODB)。流**) 以接收任何返回的數據。  
+-   命令的輸出資料流程會設定為**StrmOut**物件（**ADODB。資料流程**）接收任何傳回的資料。  
   
 -   最後，系統會擲行命令 (updategram)。  
   
@@ -185,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>傳遞參數  
- 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式中 **,ContactID**和**中間名**值作為參數化輸入傳遞給更新圖。  
+ 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式中， **ContactID**和**MiddleName**值會當做參數化輸入傳遞至 updategram。  
   
 ```vb  
 Private Sub Form_Load()  

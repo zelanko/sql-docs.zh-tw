@@ -1,6 +1,6 @@
 ---
 title: 使用 SQLXML Managed 類別執行 DiffGram
-description: 瞭解如何在 Microsoft .NET 框架環境中執行 DiffGram 檔案,以便使用 SQLXML 託管類將數據更新應用於 SQL Server 表。
+description: 瞭解如何使用 SQLXML Managed 類別，在 Microsoft .NET Framework 環境中執行 DiffGram 檔案，將資料更新套用至 SQL Server 資料表。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 722fe01366c0c86c2c536cd9f1639a91c4b791fa
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388002"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML Managed 類別執行 DiffGram
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此示例演示如何在[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET 框架環境中執行 DiffGram 檔案,以便使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLXML 託管類 (Microsoft.Data.SqlXml) 將數據更新應用於表。  
+  這個範例示範如何在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境中執行 DiffGram 檔案，以使用 Sqlxml Managed 類別（ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft data sqlxml）將資料更新套用到資料表。  
   
  在此範例中，DiffGram 會更新客戶 ALFKI 的客戶資訊 (CompanyName 和 ContactName)。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "81388002"
 </ROOT>  
 ```  
   
- >块之前 包括**\<客戶>** 元素(**差異:id="客戶1")。** ** \<** 數據實例>塊包括具有相同**ID**的相應**\<客戶>** 元素。 ** \< **NewDataSet**\<>中的客戶>** 元素也指定**差異:有更改="已修改"。** ** \< ** 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意,如果未指定**diffgr:hasChanges**屬性,DiffGram 處理邏輯將忽略此元素,並且不執行任何更新。  
+ Before>區塊包含** \<Customer>** 元素（**diffgr： id = "Customer1"**）。 ** \< ** DataInstance>區塊包含具有相同**識別碼**的對應** \<客戶>** 元素。 ** \< **NewDataSet>中的** \<customer>** 元素也會指定**diffgr： hasChanges = "modified"**。 ** \< ** 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果未指定**diffgr： hasChanges**屬性，DiffGram 處理邏輯會忽略這個元素，而且不會執行任何更新。  
   
- 以下是 C# 教程應用程式的代碼,它演示如何使用 SQLXML 託管類執行上述 DiffGram 並更新兩個表(Cust, Ord),您還將在**tempdb**資料庫中創建。  
+ 以下是 c # 教學課程應用程式的程式碼，它會示範如何使用 SQLXML Managed 類別來執行上述 DiffGram，並更新您也會在**tempdb**資料庫中建立的兩個數據表（使用者、Ord）。  
   
 ```  
 using System;  
@@ -131,7 +131,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  在**tempdb**資料庫中創建這些表。  
+3.  在**tempdb**資料庫中建立這些資料表。  
   
     ```  
     CREATE TABLE Cust(  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388708"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查詢設計工具使用者介面
@@ -115,6 +115,6 @@ ms.locfileid: "81388708"
 -   **顯示彙總** (![顯示彙總按鈕](../../analysis-services/media/rsqdicon-showaggregations.gif "顯示彙總按鈕"))
 
 ## <a name="see-also"></a>另請參閱
- [在 MDX 查詢設計器中定義用於報表產生器和 SSRS &#40;的 MDX 查詢設計器中的參數&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)為 DMX &#40;[SSRS 建立共享資料集或嵌入式資料集&#40;報表產生器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)[分析服務連接類型,&#41;](analysis-services-connection-type-for-dmx-ssrs.md)用於[MDX &#40;SSRS&#41;的 RS](analysis-services-connection-type-for-mdx-ssrs.md) [報告設計器設定檔](../report-server/rsreportdesigner-configuration-file.md)分析服務連接類型
+ [在 Analysis Services &#40;報表產生器和 ssrs 的 MDX 查詢設計工具中定義參數，&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [建立共用資料集或內嵌資料集 &#40;報表產生器和 ssrs](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)&#41;Analysis Services[適用于 DMX &#40;ssrs&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [RSREPORTDESIGNER.CONFIG 設定檔](../report-server/rsreportdesigner-configuration-file.md)Analysis Services 連線類型 &#40;[ssrs](analysis-services-connection-type-for-mdx-ssrs.md)&#41;
 
 

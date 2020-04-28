@@ -1,5 +1,5 @@
 ---
-title: 在 MDX 查詢設計器中定義分析服務(報表產生器和 SSRS)中的參數 |微軟文件
+title: 在 Analysis Services 的 MDX 查詢設計工具中定義參數（報表產生器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388538"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數 (報表產生器及 SSRS)
@@ -82,6 +82,6 @@ ms.locfileid: "81388538"
      若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]** 。 [報表資料] 窗格會顯示報表中的所有資料集。
 
 ## <a name="see-also"></a>另請參閱
- [MDX 分析服務連線型態 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)[分析服務 MDX 查詢設計器使用者介面](analysis-services-mdx-query-designer-user-interface.md)
+ [Mdx &#40;SSRS&#41;Analysis Services 連線類型](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services mdx 查詢設計工具使用者介面](analysis-services-mdx-query-designer-user-interface.md)
 
 

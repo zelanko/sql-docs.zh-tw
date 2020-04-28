@@ -1,6 +1,6 @@
 ---
-title: CLR 整合安全性 |微軟文件
-description: SQL 伺服器與 .NET 框架 CLR 安全性的整合管理物件之間的訪問。 對物件執行的安全檢查取決於所涉及的調用。
+title: CLR 整合安全性 |Microsoft Docs
+description: SQL Server 與 .NET Framework CLR 安全性整合，會管理物件之間的存取。 在物件上執行的安全性檢查取決於涉及的呼叫。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487109"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性

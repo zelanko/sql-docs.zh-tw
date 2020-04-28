@@ -1,5 +1,5 @@
 ---
-title: 基於文字查詢設計器使用者介面 ( F)微軟文件
+title: 以文字為基礎的查詢設計工具使用者介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 340040a0806a87d55582356d085ab924e25b6a48
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388672"
 ---
 # <a name="text-based-query-designer-user-interface"></a>以文字為基礎的查詢設計工具使用者介面
@@ -28,7 +28,7 @@ ms.locfileid: "81388672"
 
  以文字為基礎的查詢設計工具會顯示一個工具列及以下兩個窗格：
 
--   **查詢**顯示查詢文本、表名稱或儲存過程名稱。
+-   **查詢**顯示查詢文字、資料表名稱或預存程式名稱。
 
 -   **結果** ：顯示在設計階段執行查詢的結果。
 
@@ -40,7 +40,7 @@ ms.locfileid: "81388672"
 |**[當成文字編輯]**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 並非所有的資料來源類型都支援圖形化查詢設計工具。|
 |[匯入]****|從檔案或報表匯入現有的查詢。 只支援 sql 和 rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|
 |![執行查詢](../analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢，並將結果集顯示在 [結果] 窗格中。|
-|**命令類型**|選取 [Text]****、[StoredProcedure]**** 或 [TableDirect]****。 如果預存程序含有參數，當您按一下工具列上的 [執行]**** 時，便會顯示 [定義查詢參數]**** 對話方塊，您可以依照需要填入值。 請注意,如果存儲過程返回多個結果集,則僅使用第一個結果集來填充數據集。<br /><br /> 對於命令類型的支援會依資料來源類型而有所不同。 例如，只有 OLE DB 和 ODBC 支援 [TableDirect]****。|
+|**命令類型**|選取 [Text]****、[StoredProcedure]**** 或 [TableDirect]****。 如果預存程序含有參數，當您按一下工具列上的 [執行]**** 時，便會顯示 [定義查詢參數]**** 對話方塊，您可以依照需要填入值。 請注意，如果預存程式傳回一個以上的結果集，則只會使用第一個結果集來填入資料集。<br /><br /> 對於命令類型的支援會依資料來源類型而有所不同。 例如，只有 OLE DB 和 ODBC 支援 [TableDirect]****。|
 
 ### <a name="command-type-text"></a>Text 命令類型
  當您建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料集時，報表設計師預設會顯示圖形化查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯]**** 切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。
@@ -61,7 +61,7 @@ ms.locfileid: "81388672"
 SELECT LastName FROM Person.Person;
 ```
 
- 您可以使用 Text 命令類型的任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，包括 `EXEC` 陳述式在內。 以下查詢調用[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]存儲`uspGetEmployeeManagers`過程 ,並返回具有標識號 1 的員工的命令鏈。
+ 您可以使用 Text 命令類型的任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，包括 `EXEC` 陳述式在內。 下列查詢會呼叫[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]預存程式`uspGetEmployeeManagers` ，並傳回識別碼為1之員工的命令鏈。
 
 ```
 EXEC uspGetEmployeeManagers 1;
@@ -87,9 +87,9 @@ uspGetEmployeeManagers;
 
  `Sales.Customer`
 
- 當您輸入表名 Sales.Customer 時,它等效[!INCLUDE[tsql](../includes/tsql-md.md)]於建立`SELECT * FROM Sales.Customer;`敘述 。
+ 當您輸入資料表名稱 Sales. Customer 時，它就相當於建立[!INCLUDE[tsql](../includes/tsql-md.md)]語句。 `SELECT * FROM Sales.Customer;`
 
 ## <a name="see-also"></a>另請參閱
- [報表設計器 SQL 伺服器資料工具中的查詢設計工具&#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)[報表生成器和共享資料集&#40;報表生成器和共享資料集&#40;報表生成器和共享資料集](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [&#41;&#40;sSRS&#41;](report-data/sql-server-connection-type-ssrs.md) OLE DB[連接類型&#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md) [ODBC 連接類型&#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)[報表嵌入資料集和共用資料集&#40;報表產生器和 SSRS](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) RS&#41;[報告設計器配置檔](report-server/rsreportdesigner-configuration-file.md)
+ [報表設計師 SQL Server Data Tools 中的查詢設計工具 &#40;ssrs&#41;](report-data/query-design-tools-ssrs.md) [報表內嵌資料集和共用資料集 &#40;報表產生器和 ssrs](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)&#41;ssrs SQL Server &#40;的連線類型&#41;[ssrs OLE DB](report-data/ole-db-connection-type-ssrs.md) [ODBC 連接](report-data/odbc-connection-type-ssrs.md)類型 &#40;Ssrs [&#41;&#40;](report-data/sql-server-connection-type-ssrs.md) [報表內嵌資料集和共用資料集&#41;&#40;和 ssrs 報表產生器](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [rsreportdesigner.config 設定檔](report-server/rsreportdesigner-configuration-file.md)
 
 

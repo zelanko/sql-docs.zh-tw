@@ -1,5 +1,5 @@
 ---
-title: 呼叫 SQLCloseCursor |微軟文件
+title: 呼叫 SQLCloseCursor |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2feab58de28e39747a1d9c819f9f15426b156151
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306271"
 ---
 # <a name="calling-sqlclosecursor"></a>呼叫 SQLCloseCursor
-由於**SQLCloseCursor**與**SQLFreeStmt**與具有SQL_CLOSE幾乎相同,因此驅動程式管理器不會映射此函數。 可映射替換函數,以便現有的 ODBC *2.x*應用程式可以使用新功能輕鬆移動到 ODBC *3.x。* 通過這樣的移動,此類應用程式可以更輕鬆地開始以模組化方式在條件代碼內部使用新的 ODBC *3.x*功能。 **SQLCloseCursor**不表示任何新功能。 應用程式通過使用SQL_CLOSE從**SQLFreeStmt**移動到**SQLCloseCursor**不會獲得任何優勢。
+由於**SQLCloseCursor**與使用 SQL_CLOSE 的**SQLFreeStmt**幾乎相同，因此驅動程式管理員不會對應此函式。 取代函式會對應，如此*一來，現有的 odbc* *2.x 應用程式*就可以使用新的函式輕鬆地移至 ODBC 3.x。 這種移動可讓這類應用程式以模組化的方式，更輕鬆地開始在條件式程式碼內使用新*的 ODBC 3.x 功能。* **SQLCloseCursor**不代表任何新功能。 藉由使用 SQL_CLOSE 從**SQLFreeStmt**移至**SQLCloseCursor** ，應用程式無法獲得任何好處。

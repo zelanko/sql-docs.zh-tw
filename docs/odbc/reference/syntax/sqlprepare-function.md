@@ -1,5 +1,5 @@
 ---
-title: SQL準備功能 |微軟文件
+title: SQLPrepare 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306879"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 函數
-**一致性**  
- 推出版本: ODBC 1.0 標準合規性: ISO 92  
+**標準**  
+ 引進的版本： ODBC 1.0 標準合規性： ISO 92  
   
  **摘要**  
- **SQLPrepare**準備一個 SQL 字串進行執行。  
+ **SQLPrepare**準備要執行的 SQL 字串。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,90 +44,90 @@ SQLRETURN SQLPrepare(
 ```  
   
 ## <a name="arguments"></a>引數  
- *語句句柄*  
- [輸入]語句句柄。  
+ *StatementHandle*  
+ 源語句控制碼。  
   
- *語句文字*  
- [輸入]SQL 文字字串。  
+ *StatementText*  
+ 源SQL 文字字串。  
   
  *TextLength*  
- [輸入]長度 =*字元語句文字*。  
+ 源**StatementText*的長度（以字元為單位）。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLPrepare**傳回SQL_ERROR或SQL_SUCCESS_WITH_INFO時,可以透過呼叫**SQLGetDiagRec**取得關聯的 SQLSTATE 值,該值具有SQL_HANDLE_STMT的*句柄類型*和*敘述的句**柄*。 下表列出了 SQLPrepare 通常返回的**SQLSTATE**值,並在此函數的上下文中解釋了每個值;符號"(DM)"在驅動程式管理器返回的 SQLStatEs 描述之前。 除非另有說明,否則與每個 SQLSTATE 值關聯的返回代碼將SQL_ERROR。  
+ 當**SQLPrepare**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle**控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出**SQLPrepare**常傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|特定於驅動程式的資訊消息。 (函數返回SQL_SUCCESS_WITH_INFO。|  
-|01S02|選項值已變更|由於實現工作條件,指定的語句屬性無效,因此臨時替換了類似的值。 (可以調用**SQLGetStmtAttr**以確定臨時替換的值是什麼。在游標關閉之前,替換值對*語句處理*有效。 可以更改的語句屬性是:SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPESQL_ATTR_KEYSET_SIZESQL_ATTR_QUERY_TIMEOUTSQL_ATTR_QUERY_TIMEOUT SQL_ATTR_MAX_ROWSSQL_ATTR_KEYSET_SIZESQL_ATTR_MAX_LENGTH SQL_ATTR_SIMULATE_CURSORSQL_ATTR_CONCURRENCY<br /><br /> (函數返回SQL_SUCCESS_WITH_INFO。|  
-|08S01|通訊連結|在函數完成處理之前,驅動程式與驅動程式連接到的數據源之間的通信鏈路失敗。|  
-|21S01|插入值清單與列清單不匹配|\**語句文字*包含一個**INSERT**語句,要插入的值數與派生表的程度不匹配。|  
-|21S02|衍生表的程度與列清單不符合|\**語句文字*包含一個**CREATE VIEW**語句,並且指定的名稱數與查詢規範定義的派生表的程度不同。|  
-|22018|強制轉換規範的不合法字元值|**語句文字*包含包含文本或參數的 SQL 語句,並且該值與關聯的表列的數據類型不相容。|  
-|22019|不合法的字元|參數*語句文本*包含一個**LIKE**謂詞,其中包含**WHERE**子句中的**ESCAPE,** 並且**ESCAPE**之後的轉義字元的長度不等於 1。|  
-|22025|不合法序列|參數*語句文本*在**WHERE**子句中包含 **「LIKE** _模式值_ **ESCAPE** _轉義字元_」,模式值中轉義字元之後的字元既不是"%"也不是"*"。|  
-|24000|指標狀態無效|(DM)*語句處理*上打開一個游標,並且調用**了 SQLFetch**或**SQLFetchScroll。**<br /><br /> *語句句柄*上打開了一個游標,但**SQLFetch**或**SQLFetchScroll**尚未調用。|  
-|34000|指標名稱無效|\**語句文字*包含定位的**DELETE**或定位**的更新**,並且準備語句引用的游標未打開。|  
-|3D000|無效目錄名稱|*語句文字*中指定的目錄名稱無效。|  
-|3F000|不合法的架構名稱|*語句文字*中指定的架構名稱無效。|  
-|42000|語法錯誤或存取衝突|\**語句文字*包含一個不可預備的 SQL 語句或包含語法錯誤。<br /><br /> **語句文本*包含一個聲明,用戶沒有所需的許可權。|  
-|42S01|基本表或檢視已存在|\**語句文字*包含 **"創建表"** 或 **"創建檢視**"語句,指定的表名稱或視圖名稱已存在。|  
-|42S02|找不到基本表或檢視|\**語句文字*包含**DROP TABLE**或**DROP VIEW**語句,並且指定的表名稱或檢視名稱不存在。<br /><br /> \**語句文字*包含**ALTER TABLE**語句,並且指定的表名稱不存在。<br /><br /> \**語句文字*包含一個**CREATE VIEW**語句,查詢規範定義的表名稱或視圖名稱不存在。<br /><br /> \**語句文字*包含一個**CREATE INDEX**語句,並且指定的表名稱不存在。<br /><br /> \**語句文字*包含一個**GRANT**或**REVOKE**語句,並且指定的表名稱或視圖名稱不存在。<br /><br /> \**語句文字*包含**SELECT**語句,並且指定的表名稱或檢視名稱不存在。<br /><br /> \**語句文字*包含**DELETE、INSERT**或**UPDATE**語句,並且指定**INSERT**的表名稱不存在。<br /><br /> \**語句文字*包含一個**CREATE TABLE**語句,並且約束中指定的表(引用正在創建的表以外的表)不存在。|  
-|42S11|索引已存在|\**語句文字*包含一個**CREATE INDEX**語句,並且指定的索引名稱已經存在。|  
-|42S12|找不到索引|\**語句文字*包含**DROP INDEX**語句,並且指定的索引名稱不存在。|  
-|42S21|欄位已存在|\**語句文字*包含**ALTER TABLE**語句 **,ADD**子句中指定的列不是唯一的,或識別基表中的現有列。|  
-|42S22|找不到欄|\**語句文字*包含**CREATE INDEX**語句,列清單中指定的一個或多個列名稱不存在。<br /><br /> \**語句文字*包含**GRANT**或**REVOKE**語句,並且指定的列名稱不存在。<br /><br /> \**語句文字*包含**SELECT、DELETE、****插入**或**更新**語句,並且**SELECT**指定的列名稱不存在。<br /><br /> \**語句文字*包含一個**CREATE TABLE**語句,並且約束中指定的列(引用正在創建的表以外的表)不存在。|  
-|HY000|一般錯誤|發生一個錯誤,其中沒有特定的 SQLSTATE,並且沒有定義特定於實現的 SQLSTATE。 **SQLGetDiagRec**在*\*MessageText*緩衝區中傳回的錯誤訊息描述了錯誤及其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法分配支援執行或完成函數所需的記憶體。|  
-|HY008|已取消作業|非同步處理已開啟*敘述的句柄*。 呼叫該函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**在*語句句柄*上調用 ,然後在*語句句柄*上再次調用該函數。<br /><br /> 呼叫此函數,在完成執行之前 **,SQLCancel**或**SQLCancelHandle**是從多線程式中的不同線程呼叫*的敘述的句柄*。|  
-|HY009|不合法的空白指標|(DM)*語句文字*是一個空指標。|  
-|HY010|函式序列錯誤|(DM) 為與*語句句柄*關聯的連接句柄調用非同步執行函數。 調用**SQLPrepare**函數時,此異步函數仍在執行。<br /><br /> (DM) **SQLExecute、SQLExecDirect**或**SQLMore 結果**被調用語句**SQLExecDirect***句柄*並返回SQL_PARAM_DATA_AVAILABLE。 在檢索所有流參數的數據之前,已調用此函數。<br /><br /> (DM) 為*語句句柄*調用了非同步執行函數(不是此函數),並且在調用此函數時仍在執行。<br /><br /> (DM) SQLExecute、SQLExecDirect、SQLBulk**操作**或**SQLSetPos**被調用用於**SQLExecute***語句句柄*並返回SQL_NEED_DATA。 **SQLExecDirect** 在發送所有執行時數據參數或列的數據之前,調用了此功能。|  
-|HY013|記憶體管理錯誤|無法處理函數調用,因為無法訪問基礎記憶體物件,可能是因為記憶體條件較低。|  
-|HY090|不合法的字串或緩衝區長度|(DM) 參數*文本長度*小於或等於 0,但不等於SQL_NTS。|  
-|HY117|由於未知事務狀態,連接掛起。 只允許斷開連接和唯讀功能。|(DM) 有關掛起狀態的詳細資訊,請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|沒有選擇選擇功能|對於定義的游標類型,併發設置無效。<br /><br /> SQL_ATTR_USE_BOOKMARKS語句屬性設置為SQL_UB_VARIABLE,SQL_ATTR_CURSOR_TYPE語句屬性設置為驅動程式不支援書籤的游標類型。|  
-|HYT00|已超過逾時的設定|超時期限在數據源返回結果集之前已過期。 超時期間通過**sqlSetStmtAttr**SQL_ATTR_QUERY_TIMEOUT設置。|  
-|HYT01|連線逾時已過期|在數據源回應請求之前,連接超時期限已過期。 連接超時週期通過**SQLSetConnectAttr**SQL_ATTR_CONNECTION_TIMEOUT設置。|  
-|IM001|驅動程式不支援此功能|(DM) 與*語句句柄*關聯的驅動程式不支援該函數。|  
-|IM017|在非同步通知模式下禁用輪詢|每當使用通知模型時,都會禁用輪詢。|  
-|IM018|尚未調用**SQLCompleteAsync**以完成對此句柄的先前異步操作。|如果句柄上的上一個函數調用返回SQL_STILL_EXECUTING,並且啟用了通知模式,則必須在句柄上調用**SQLCompleteAsync**以執行後處理並完成操作。|  
+|01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|因為執行中的工作狀況，而指定的語句屬性無效，所以暫時取代了類似的值。 （您可以呼叫**SQLGetStmtAttr**來判斷暫時替代的值是什麼）。替代值對*StatementHandle*有效，直到資料指標關閉為止。 可以變更的語句屬性包括： SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|08S01|通訊連結失敗|在函式完成處理之前，驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
+|21S01|插入值清單與資料行清單不相符|\**StatementText*包含**INSERT**語句，而要插入的值數目不符合衍生資料表的程度。|  
+|21S02|衍生資料表的程度與資料行清單不符|\**StatementText*包含**CREATE VIEW**語句，而指定的名稱數目與查詢規格所定義的衍生資料表的程度並不相同。|  
+|22018|轉換規格的字元值無效|**StatementText*包含包含常值或參數的 SQL 語句，而該值與相關聯資料表資料行的資料類型不相容。|  
+|22019|不正確換用字元|引數*StatementText*包含**LIKE**述詞，**其中 WHERE**子句含有**escape** ，而**escape**後面的逸出字元長度不等於1。|  
+|22025|不正確轉義順序|**WHERE**子句中的引數*StatementText*包含「**LIKE** _模式值_ **escape** _escape 字元_」，而在模式值中的逸出字元後面的字元則不是 "%" 也不是 "_"。|  
+|24000|指標狀態無效|（DM）已在*StatementHandle*上開啟資料指標，且已呼叫**SQLFetch**或**SQLFetchScroll** 。<br /><br /> 已在*StatementHandle*上開啟資料指標，但尚未呼叫**SQLFetch**或**SQLFetchScroll** 。|  
+|34000|指標名稱無效|\**StatementText*包含已定位的**刪除**或定位**更新**，而且正在準備的語句所參考的資料指標並未開啟。|  
+|3D000|不正確目錄名稱|*StatementText*中指定的目錄名稱無效。|  
+|3F000|不正確架構名稱|*StatementText*中指定的架構名稱無效。|  
+|42000|語法錯誤或存取違規|\**StatementText*包含未 preparable 或包含語法錯誤的 SQL 語句。<br /><br /> **StatementText*包含的語句，使用者沒有必要的許可權。|  
+|42S01|基表或視圖已經存在|\**StatementText*包含**CREATE TABLE**或**CREATE VIEW**語句，而且指定的資料表名稱或視圖名稱已經存在。|  
+|42S02|找不到基表或視圖|\**StatementText*包含**Drop TABLE**或**drop VIEW**語句，而且指定的資料表名稱或視圖名稱不存在。<br /><br /> \**StatementText*包含**ALTER table**語句，但指定的資料表名稱不存在。<br /><br /> \**StatementText*包含**CREATE VIEW**語句，且查詢規格所定義的資料表名稱或視圖名稱不存在。<br /><br /> \**StatementText*包含**CREATE INDEX**語句，且指定的資料表名稱不存在。<br /><br /> \**StatementText*包含**GRANT**或**REVOKE**語句，而且指定的資料表名稱或視圖名稱不存在。<br /><br /> \**StatementText*包含**SELECT**語句，但指定的資料表名稱或視圖名稱不存在。<br /><br /> \**StatementText*包含**DELETE**、 **INSERT**或**UPDATE**語句，但指定的資料表名稱不存在。<br /><br /> \**StatementText*包含**CREATE TABLE**語句，而且在條件約束中指定的資料表（參考非所建立的資料表）不存在。|  
+|42S11|索引已存在|\**StatementText*包含**CREATE index**語句，且指定的索引名稱已存在。|  
+|42S12|找不到索引|\**StatementText*包含**DROP INDEX**語句，且指定的索引名稱不存在。|  
+|42S21|資料行已經存在|\**StatementText*包含**ALTER TABLE**語句，而且**ADD**子句中指定的資料行不是唯一的，或者會識別基表中的現有資料行。|  
+|42S22|找不到資料行|\**StatementText*包含**CREATE INDEX**語句，且資料行清單中所指定的一或多個資料行名稱不存在。<br /><br /> \**StatementText*包含**GRANT**或**REVOKE**語句，而且指定的資料行名稱不存在。<br /><br /> \**StatementText*包含**SELECT**、 **DELETE**、 **INSERT**或**UPDATE**語句，但指定的資料行名稱不存在。<br /><br /> \**StatementText*包含**CREATE TABLE**語句，而且在條件約束中指定的資料行（參考非所建立的資料表）不存在。|  
+|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
+|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
+|HY008|已取消作業|已啟用*StatementHandle*的非同步處理。 已呼叫函式，並在完成執行之前，在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** ，然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式，並在完成執行之前，從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
+|HY009|Null 指標的使用不正確|（DM） *StatementText*是 null 指標。|  
+|HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLPrepare**函數時，這個非同步函式仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並 SQL_PARAM_DATA_AVAILABLE 傳回。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式（而非這個函式），而且在呼叫這個函數時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  
+|HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
+|HY090|不正確字串或緩衝區長度|（DM）引數*TextLength*小於或等於0，但不等於 SQL_NTS。|  
+|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|（DM）如需暫停狀態的詳細資訊，請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
+|HYC00|未執行的選擇性功能|針對定義的資料指標類型，並行設定無效。<br /><br /> SQL_ATTR_USE_BOOKMARKS 語句屬性已設定為 SQL_UB_VARIABLE，而 SQL_ATTR_CURSOR_TYPE 語句屬性已設定為驅動程式不支援書簽的資料指標類型。|  
+|HYT00|已超過逾時的設定|在資料來源傳回結果集之前，超時期間已過期。 超時期間是透過**SQLSetStmtAttr**設定，SQL_ATTR_QUERY_TIMEOUT。|  
+|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驅動程式不支援此功能|（DM）與*StatementHandle*相關聯的驅動程式不支援此功能。|  
+|IM017|非同步通知模式中的輪詢已停用|每當使用通知模型時，就會停用輪詢。|  
+|IM018|尚未呼叫**SQLCompleteAsync**來完成這個控制碼上先前的非同步作業。|如果控制碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 而且如果啟用通知模式，則必須在控制碼上呼叫**SQLCompleteAsync** ，才能執行後置處理並完成作業。|  
   
-## <a name="comments"></a>註解  
- 應用程式呼叫**SQLPrepare**將 SQL 語句發送到資料來源進行準備。 有關準備執行的詳細資訊,請參閱[準備執行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)。 應用程式可以在 SQL 語句中包含一個或多個參數標記。 要包含參數標記,應用程式在適當的位置將問號(?) 嵌入到 SQL 字串中。 有關參數的資訊,請參閱[敘述參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
+## <a name="comments"></a>評價  
+ 應用程式會呼叫**SQLPrepare** ，將 SQL 語句傳送到資料來源以進行準備。 如需準備執行的詳細資訊，請參閱備妥的[執行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)。 應用程式可以在 SQL 語句中包含一個或多個參數標記。 為了包含參數標記，應用程式會將問號（？）內嵌在適當位置的 SQL 字串中。 如需參數的詳細資訊，請參閱[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
 > [!NOTE]  
->  如果應用程式使用**SQLPrepare**準備和**SQLExecute**提交**COMMIT**或**ROLLBACK**語句,則在 DBMS 產品之間無法互通。 要提交或回滾事務,請呼叫**SQLEndTran**。  
+>  如果應用程式使用**SQLPrepare**來準備和**SQLExecute**以提交**COMMIT**或**ROLLBACK**語句，則 DBMS 產品之間將無法互通。 若要認可或回復交易，請呼叫**SQLEndTran**。  
   
- 驅動程式可以修改語句以使用數據來源使用的 SQL 形式,然後將其提交到數據源進行準備。 特別是,驅動程式修改用於定義某些功能的 SQL 語法的轉義序列。 (有關 SQL 語句語法的說明,請參閱 ODBC 和附錄 C[中的逸出序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)[:SQL 語法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。對於驅動程式,語句句柄類似於嵌入 SQL 代碼中的語句標識符。 如果數據源支援語句標識符,驅動程式可以將語句標識符和參數值發送到數據源。  
+ 驅動程式可以修改語句，以使用資料來源所使用的 SQL 形式，然後將它提交至資料來源以進行準備。 特別是，驅動程式會修改用來定義特定功能之 SQL 語法的 escape 序列。 （如需 SQL 語句文法的說明，請參閱 ODBC 和[附錄 C： SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)[中的轉義順序](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)）。若是驅動程式，語句控制碼類似于內嵌 SQL 程式碼中的語句識別碼。 如果資料來源支援語句識別碼，驅動程式可以將語句識別碼和參數值傳送至資料來源。  
   
- 準備語句后,應用程式使用語句句柄在以後的函數調用中引用語句。 通過呼叫**SQLExecute**可以重新執行與敘述的點塊關聯的準備語句,直到應用程式使用 SQL_DROP 選項釋放對**SQLFreeStmt**的呼叫語句,或者直到語句句柄用於呼叫**SQLPrepare、SQLExecDirect**或**SQLExecDirect**目錄函數之一 **(SQLColumns、SQLTables**等) **SQLTables** 應用程式準備語句后,可以請求有關結果集格式的資訊。 對於某些實現,在**SQLPrepare**之後調用**SQLDescribeCol**或**SQLDescribeParam**可能不如在**SQLExecute**或**SQLExecDirect**之後調用函數更有效。  
+ 備妥語句之後，應用程式會使用語句控制碼來參考稍後函式呼叫中的語句。 與語句控制碼相關聯的備妥語句可以藉由呼叫**SQLExecute**來重新執行，直到應用程式以 SQL_DROP 選項來釋放語句，或在呼叫**SQLPrepare**、 **SQLExecDirect**或其中一個目錄函式（**SQLColumns**、 **SQLTables**等等）時，才會使用語句控制碼呼叫**SQLFreeStmt** 。 一旦應用程式準備語句，它就可以要求結果集格式的相關資訊。 針對某些實作為，在**SQLPrepare**之後呼叫**SQLDescribeCol**或**SQLDescribeParam** ，可能不如在**SQLExecute**或**SQLExecDirect**之後呼叫函式那麼有效率。  
   
- 當應用程式呼叫**SQLPrepare**時,某些驅動程式無法返回語法錯誤或訪問衝突。 驅動程式可以處理語法錯誤和訪問衝突,只能處理語法錯誤,或者語法錯誤和訪問衝突。 因此,應用程式在調用後續相關函數(如 SQLNumCols、SQLDescribeCol、SQLCol**屬性**和**SQLExecute)** 時必須能夠**SQLNumResultCols****SQLDescribeCol**處理這些條件。  
+ 當應用程式呼叫**SQLPrepare**時，某些驅動程式無法傳回語法錯誤或存取違規。 驅動程式可以處理語法錯誤和存取違規、只有語法錯誤，或不是語法錯誤或存取違規。 因此，應用程式必須能夠在呼叫後續相關的函式（如**SQLNumResultCols**、 **SQLDescribeCol**、 **SQLColAttribute**和**SQLExecute**）時，處理這些條件。  
   
- 根據驅動程式和數據源的功能,在編寫語句(如果所有參數都已綁定)或執行語句(如果所有參數尚未綁定)時,可能會檢查參數資訊(如數據類型)。 為了達到最大互操作性,應用程式應在對同一語句上準備新的 SQL 語句之前取消綁定應用於舊 SQL 語句的所有參數。 這樣可以防止由於舊參數資訊應用於新語句而導致的錯誤。  
+ 視驅動程式和資料來源的功能而定，當語句準備好時（如果所有參數都已系結）或執行時（如果尚未系結所有參數），可能會檢查參數資訊（例如資料類型）。 為了達到最大的互通性，應用程式應該先解除系結所有套用至舊 SQL 語句的參數，再于相同的語句上準備新的 SQL 語句。 這可避免因為舊的參數資訊套用至新的語句而造成的錯誤。  
   
 > [!IMPORTANT]  
->  通過顯式調用**SQLEndTran**或以自動提交模式工作來提交事務,可能會導致數據源刪除連接上所有語句的訪問計劃。 有關詳細資訊,請參閱[SQLGetInfo 中](../../../odbc/reference/syntax/sqlgetinfo-function.md)SQL_CURSOR_COMMIT_BEHAVIOR和SQL_CURSOR_ROLLBACK_BEHAVIOR資訊類型以及[事務對游標和準備敘述的影響](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)。  
+>  藉由明確呼叫**SQLEndTran**或在自動認可模式中工作來認可交易，可能會導致資料來源刪除連接上所有語句的存取計畫。 如需詳細資訊，請參閱 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 資訊類型[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)和[對資料指標和準備語句的交易影響](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)。  
   
 ## <a name="code-example"></a>程式碼範例  
- 請參考[SQLBind 參數](../../../odbc/reference/syntax/sqlbindparameter-function.md) [、SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)與[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ 請參閱[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)、 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)和[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|配置敘述|[SQLAllocHandle 函式](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|將緩衝區繫結到結果集中的欄|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|將緩衝區繫結到參數|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|解除敘述處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|執行提交或回滾操作|[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)|  
+|配置語句控制碼|[SQLAllocHandle 函式](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|將緩衝區系結至結果集內的資料行|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|將緩衝區系結至參數|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|取消語句處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|執行認可或復原作業|[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)|  
 |執行 SQL 語句|[SQLExecDirect 函式](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|執行準備好的 SQL 語句|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|返回受語句影響的行數|[SQLRowCount 函數](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
-|設定游標名稱|[SQLSetCursorName 函式](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
+|執行備妥的 SQL 語句|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|傳回受語句影響的資料列數目|[SQLRowCount 函數](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
+|設定資料指標名稱|[SQLSetCursorName 函式](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388540"
 ---
 # <a name="graphical-query-designer-user-interface"></a>圖形化查詢設計工具使用者介面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同時提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具來建立查詢，以便從關聯式資料庫中擷取資料作為報表設計師中的報表資料集。 使用圖形化查詢設計工具，可透過互動方式建立查詢及檢視 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 資料來源類型的結果。 使用以文字為基礎的查詢設計工具，可指定多個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式、複雜查詢或命令語法以及以運算式為基礎的查詢。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](../text-based-query-designer-user-interface.md)。 有關使用特定資料來源類型的詳細資訊,請參閱將資料[新增到報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)。
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同時提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具來建立查詢，以便從關聯式資料庫中擷取資料作為報表設計師中的報表資料集。 使用圖形化查詢設計工具，可透過互動方式建立查詢及檢視 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 資料來源類型的結果。 使用以文字為基礎的查詢設計工具，可指定多個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式、複雜查詢或命令語法以及以運算式為基礎的查詢。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](../text-based-query-designer-user-interface.md)。 如需有關使用特定資料來源類型的詳細資訊，請參閱[將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)。
 
  。
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>另請參閱
- [報表設計器 SQL 伺服器資料工具中的查詢設計工具&#40;SSRS&#41;](query-design-tools-ssrs.md)[將資料添加到報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md) [SQL 伺服器連接類型&#40;SSRS&#41;](sql-server-connection-type-ssrs.md) OLE DB[連接類型#B SSRS&#41;](ole-db-connection-type-ssrs.md)[將資料加入到報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md) Oracle[連線類型 &#40;SSRS&#41;](oracle-connection-type-ssrs.md) RS[報告設計器設定檔](../report-server/rsreportdesigner-configuration-file.md)[設計查詢和檢視如何操作主題&#40;可視化資料庫工具&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+ [報表設計師 SQL Server Data Tools 中的查詢設計工具 &#40;ssrs&#41;](query-design-tools-ssrs.md) [將資料加入至報表 &#40;報表產生器和 ssrs](report-datasets-ssrs.md)&#41;[SQL Server ssrs &#40;](sql-server-connection-type-ssrs.md) [&#41;連線類型](ole-db-connection-type-ssrs.md)OLE DB ssrs &#40;[將資料加入至報表](report-datasets-ssrs.md)&#41;&#40;和 Ssrs 報表產生器[Oracle](oracle-connection-type-ssrs.md)連線類型&#41;Ssrs &#40;[rsreportdesigner.config 設定檔](../report-server/rsreportdesigner-configuration-file.md)[設計查詢和 Views 如何主題&#41;Visual Database Tools &#40;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
 
 

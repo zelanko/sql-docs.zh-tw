@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388328"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>以文字為基礎的查詢設計工具使用者介面 (報表產生器)
@@ -56,7 +56,7 @@ ms.locfileid: "81388328"
 |結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]****，或是按一下工具列上的 [執行]**** 按鈕。|
 
 #### <a name="example"></a>範例
- 以下查詢`ContactType`返回`Person`架構的**2008**[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫表中的姓氏清單。
+ 下列查詢[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]會從`Person`架構的**2008**資料庫`ContactType`資料表中傳回姓氏清單。
 
 ```
 SELECT Name FROM Person.ContactType
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]****，或是按一下工具列上的 [執行]**** 按鈕。|
 
 #### <a name="example"></a>範例
- 以下查詢呼叫[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**`uspGetWhereUsedProductID`儲存過程 。 當您執行查詢時，必須為產品識別碼參數輸入值。
+ 下列查詢會呼叫[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**預存程式`uspGetWhereUsedProductID`。 當您執行查詢時，必須為產品識別碼參數輸入值。
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  當您選取 [命令類型] [TableDirect]**** 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行]**** 按鈕時，便會傳回該資料表的所有資料行。
 
 #### <a name="example"></a>範例
- 對於數據源類型 OLE DB,以下數據集查詢[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]將返回**2008**資料庫中所有聯繫人類型的結果集。
+ 針對 OLE DB 的資料來源類型，下列資料集查詢會傳回[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**資料庫中所有連絡人類型的結果集。
 
  `Person.ContactType`
 
  當您輸入資料表名稱 Person.ContactType 時，就等於建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式 `SELECT * FROM Person.ContactType`。
 
 ## <a name="see-also"></a>另請參閱
- [關聯設計器使用者介面&#40;報表產生器&#41;](relational-query-designer-user-interface-report-builder.md)[查詢設計器&#40;報表產生器&#41;](../query-designers-report-builder.md)
+ [關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](relational-query-designer-user-interface-report-builder.md) [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)
 
 

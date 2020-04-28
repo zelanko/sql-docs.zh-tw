@@ -1,5 +1,5 @@
 ---
-title: 管理資料來源 :微軟文件
+title: 管理資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,35 +17,35 @@ ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a5069ac9a5babc3071c52d73d5b56b21729a5d8a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307209"
 ---
 # <a name="managing-data-sources"></a>管理資料來源
-從驅動程式的安裝程式安裝 ODBC 驅動程式後,可以為其定義一個或多個數據源。 數據源名稱 (DSN) 應提供數據的唯一描述;例如,*工資或**應付帳款*。 為目前安裝的所有驅動程式定義的使用者和系統數據來源列在**ODBC 資料來源管理員**對話框**的使用者 DSN**或**系統 DSN**選項卡中。 給定目錄中的檔案資料來源列在檔案 DSN 選項卡中;**在「檔案 DSN」** 選項卡中列出該檔資料來源。要顯示的目錄在 **「檔案 DSN」** 選項卡中的「**尋找」** 框中輸入。  
+從驅動程式的安裝程式安裝 ODBC 驅動程式之後，您可以為它定義一或多個資料來源。 資料來源名稱（DSN）應提供資料的唯一描述;例如，*薪資*或*應付的帳戶*。 針對所有目前安裝的驅動程式所定義的使用者和系統資料來源，都會列在 [ **ODBC 資料來源管理員**] 對話方塊的 [**使用者 dsn** ] 或 [**系統 DSN** ] 索引標籤中。 指定目錄中的檔案資料來源會列在 [檔案**DSN** ] 索引標籤中;[檔案**DSN** ] 索引標籤的 [**查詢**] 方塊中會輸入要顯示的目錄。  
   
 > [!NOTE]  
->  要管理在 64 位元平臺下連接到 32 位元驅動程式的數據源,請使用 c:_windows_sysWOW64_odbcad32.exe。 要管理連接到 64 位元驅動程式的數據源,請使用 c:_windows_system32_odbcad32.exe。 在 64 位元 Windows 8 操作系統上的**管理工具**中,有 32 位元和 64 位**元 ODBC 資料來源管理員**對話框的圖示。  
+>  若要管理在64位平臺下連接到32位驅動程式的資料來源，請使用 c:\windows\sysWOW64\odbcad32.exe。 若要管理連接到64位驅動程式的資料來源，請使用 c:\windows\system32\odbcad32.exe。 在64位 Windows 8 作業系統的 [系統**管理工具**] 中，[32 位] 和 [64 位**ODBC 資料來源管理員**] 對話方塊都有圖示。  
   
- 如果使用 64 位元 odbcad32.exe 設定或移除連接到 32 位元驅動程式的 DSN,例如,**驅動程式執行\*Microsoft 存取 (.mdb),** 您將收到以下錯誤訊息:  
+ 如果您使用 64-bit odbcad32.exe 來設定或移除連接到32位驅動程式的 DSN，例如， **driver Do Microsoft Access\*（.mdb）**，您將會收到下列錯誤訊息：  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  
 ```  
   
- 要解決此錯誤,請使用 32 位元 odbcad32.exe 設定或刪除 DSN。  
+ 若要解決此錯誤，請使用 32-bit odbcad32.exe 來設定或移除 DSN。  
   
- 數據來源將特定的ODBC驅動程式與要透過該驅動程式存取的數據關聯。 例如,您可以創建數據源以使用 ODBC dBASE 驅動程式存取硬碟或網路驅動器上特定目錄中的一個或多個 dBASE 檔。 使用 ODBC 資料來源管理員,您可以添加、修改和刪除數據來源,如下表所述。  
+ 資料來源會將特定 ODBC 驅動程式與您要透過該驅動程式存取的資料產生關聯。 例如，您可以建立資料來源來使用 ODBC dBASE 驅動程式，以存取在硬碟或網路磁碟機機上特定目錄中找到的一或多個 dBASE 檔案。 使用 [ODBC 資料來源管理員]，您可以加入、修改和刪除資料來源，如下表所述。  
   
 |動作|描述|  
 |------------|-----------------|  
-|新增資料來源|可以添加多個資料源,每個數據源將驅動程式與要使用該驅動程式訪問的某些數據相關聯。 為每個數據源指定唯一標識該數據源的名稱。 例如,如果為一組包含客戶資訊的 dBASE 檔案創建數據源,則可以將數據源命名為"客戶" 應用程式通常顯示數據源名稱供用戶選擇。<br /><br /> 添加文件數據源與添加使用者或系統數據源略有不同。 有關詳細資訊,請參閱 ODBC 數據來源管理員幫助檔。|  
-|變更資料來源|根據您的要求,您可能會發現有必要重新配置數據源。 您可以通過單擊任何驅動程式設置對話方塊中的 **「設定」** 來重置選項。|  
-|刪除資料來源|選擇資料源後按一下 **「刪除**」。|  
+|新增資料來源|您可以新增多個資料來源，每個都將驅動程式與您想要使用該驅動程式存取的某些資料產生關聯。 為每個資料來源指定可唯一識別該資料來源的名稱。 例如，如果您針對包含客戶資訊的一組 dBASE 檔案建立資料來源，您可以將資料來源命名為「Customers」。 應用程式通常會顯示資料來源名稱，供使用者選擇。<br /><br /> 新增檔案資料來源與加入使用者或系統資料來源有些微不同。 如需詳細資訊，請參閱 ODBC 資料來源管理員說明檔。|  
+|修改資料來源|視您的需求而定，您可能會發現需要重新設定資料來源。 您可以按一下 [在任何驅動程式設定] 對話方塊中的 **[設定]** 來重設選項。|  
+|刪除資料來源|選取資料來源之後，請按一下 [**移除**]。|  
   
- 有關文件資料來源的詳細資訊,請參閱[使用檔案資料來源或](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) [SQLDriverConnect 函數](../../odbc/reference/syntax/sqldriverconnect-function.md)進行連接。  
+ 如需有關檔案資料來源的詳細資訊，請參閱[使用檔案資料來源連接](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)或[SQLDriverConnect 函數](../../odbc/reference/syntax/sqldriverconnect-function.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)

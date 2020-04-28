@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 266109ccef7b6e88777b5a7e2d888d998ac8770d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307447"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用資料表值參數 (OLE DB)
@@ -33,7 +33,7 @@ ms.locfileid: "81307447"
   
 -   顯示 SQLNCLI11 錯誤的錯誤處理。  
   
- 有關表值參數的詳細資訊,請參閱[&#40;SQL Server 本機用戶端&#41;的表值參數](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)。  
+ 如需資料表值參數的詳細資訊，請參閱[資料表值參數 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。  

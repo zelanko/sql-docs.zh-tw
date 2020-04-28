@@ -1,5 +1,5 @@
 ---
-title: 立方體單元(分析服務 - 多維數據) |微軟文件
+title: Cube 儲存格（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,10 +27,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387908"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Cube 資料格 (Analysis Services - 多維度資料)
@@ -49,9 +49,9 @@ ms.locfileid: "81387908"
 -   封裝量值。  
   
 ## <a name="leaf-and-nonleaf-cells"></a>分葉資料格與非分葉資料格  
- Cube 中資料格的值可以使用下列方式之一取得。 在前面的範例中,可以直接從多維資料集的事實表檢索單元格中的值,因為用於識別該儲存格的所有成員都是*葉成員*。 依階層而言，分葉成員沒有子成員，而且通常會參考維度資料表中的單一記錄。 這種細胞被稱為*葉細胞*。  
+ Cube 中資料格的值可以使用下列方式之一取得。 在上述範例中，您可以從 cube 的事實資料表直接抓取資料格中的值，因為用來識別該儲存格的所有成員都是分*葉成員*。 依階層而言，分葉成員沒有子成員，而且通常會參考維度資料表中的單一記錄。 這種資料格稱為分*葉資料格*。  
   
- 但是,也可以使用*非葉成員*來標識單元格。 非分葉成員是擁有一或多個子成員的成員。 在此狀況下，資料格的值通常是從與非分葉成員相關聯之子成員的彙總衍生。 例如，以下成員與維度的交叉點引用由彙總提供數值的資料格：  
+ 不過，也可以使用*非分葉成員*來識別資料格。 非分葉成員是擁有一或多個子成員的成員。 在此狀況下，資料格的值通常是從與非分葉成員相關聯之子成員的彙總衍生。 例如，以下成員與維度的交叉點引用由彙總提供數值的資料格：  
   
 -   Route 維度的 air 成員。  
   
@@ -65,24 +65,24 @@ ms.locfileid: "81387908"
   
  ![下半年成員的第三季和第四季資料格](../../analysis-services/dev-guide/media/as-cubeintro6.gif "下半年成員的第三季和第四季資料格")  
   
- 假設 3rd quarter 和 4th quarter 成員的彙總就是總和，則所指定資料格的值就是 400，而這個值是上圖中所有具有陰影之分葉資料格的總和。 由於儲存格的值派生自其他儲存格的聚合,因此指定的儲存格被視為*非葉單元格*。  
+ 假設 3rd quarter 和 4th quarter 成員的彙總就是總和，則所指定資料格的值就是 400，而這個值是上圖中所有具有陰影之分葉資料格的總和。 因為資料格的值是衍生自其他資料格的匯總，所以指定的儲存格會被視為*非分葉資料格*。  
   
- 針對使用自訂積存的成員和成員群組所衍生的資料格值以及自訂成員，都是以類似的方式處理。 然而，針對導出成員所衍生的資料格值完全是以用來定義導出成員的多維度運算式 (MDX) 運算式為基礎；在某些情況下，可能並未包含任何實際的資料格資料。 有關詳細資訊,請參閱[父子維度中的自訂匯總運算子](../multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)、[定義自訂成員公式](../multidimensional-models/attribute-properties-define-custom-member-formulas.md)和[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)。  
+ 針對使用自訂積存的成員和成員群組所衍生的資料格值以及自訂成員，都是以類似的方式處理。 然而，針對導出成員所衍生的資料格值完全是以用來定義導出成員的多維度運算式 (MDX) 運算式為基礎；在某些情況下，可能並未包含任何實際的資料格資料。 如需詳細資訊，請參閱[父子式維度中的自訂匯總運算子](../multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)、[定義自訂成員公式](../multidimensional-models/attribute-properties-define-custom-member-formulas.md)和[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)。  
   
 ## <a name="empty-cells"></a>空資料格  
- 並非 Cube 中的每個資料格都需要包含值；Cube 中可以有不具任何資料的交集。 因為並非在 Cube 中具有量值之維度屬性的每一個交集在事實資料表中都包含對應的記錄，所以這些交集 (稱為空資料格) 會經常出現在 Cube 中。 多維資料集中的空單元格與多維資料集中儲存格總數的比率通常稱為多維資料集的*稀疏性*。  
+ 並非 Cube 中的每個資料格都需要包含值；Cube 中可以有不具任何資料的交集。 因為並非在 Cube 中具有量值之維度屬性的每一個交集在事實資料表中都包含對應的記錄，所以這些交集 (稱為空資料格) 會經常出現在 Cube 中。 Cube 中的空白資料格與 cube 中的資料格總數的比率，通常稱為 cube 的*稀疏性*。  
   
  例如，下列圖表顯示之 Cube 的結構與本主題中的其他範例類似。 但在本範例中，第三季沒有空運往非洲的貨物，第四季沒有空運往澳洲的貨物。 事實資料表中沒有資料可支援那些維度和量值的交集；因此，那些交集的資料格會是空的。  
   
  ![識別空白資料格的 Cube 圖表](../../analysis-services/dev-guide/media/as-cubeintro7.gif "識別空白資料格的 Cube 圖表")  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中,空單元格是具有特殊特性的單元格。 因為空資料格會扭曲交叉聯結、計數等的結果，所以許多 MDX 函數會針對計算用途提供忽略空資料格的能力。 有關詳細資訊,請參閱[&#40;MDX&#41; 參考的多維表示式](/sql/mdx/multidimensional-expressions-mdx-reference),以及[&#41;&#41;的 MDX &#40;分析服务中的关键概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)。  
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，空的資料格是具有特殊品質的資料格。 因為空資料格會扭曲交叉聯結、計數等的結果，所以許多 MDX 函數會針對計算用途提供忽略空資料格的能力。 如需詳細資訊，請參閱多[維度運算式 &#40;mdx&#41; 參考](/sql/mdx/multidimensional-expressions-mdx-reference)和[mdx &#40;Analysis Services&#41;中的重要概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)。  
   
 ## <a name="security"></a>安全性  
- 資料格資料的存取是在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的角色層級中進行管理，且可使用 MDX 運算式進行細微的控制。 有關詳細資訊,請參閱[授予對維度資料&#40;分析服務&#41;的自定義存取](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md),以及[授予對單元格資料&#40;分析服務&#41;的自定義存取](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)。  
+ 資料格資料的存取是在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的角色層級中進行管理，且可使用 MDX 運算式進行細微的控制。 如需詳細資訊，請參閱[將維度資料的自訂存取權授與 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)，並[將自訂存取權授與 &#40;Analysis Services&#41;的資料格資料](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維資料集儲存&#40;分析服務 - 多維資料&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [Cube 儲存體 &#40;Analysis Services-多維度資料&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [彙總和彙總設計](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

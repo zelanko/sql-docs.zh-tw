@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2c6bc2d66be0b89a62b5b1c678a955891cc06c4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306707"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **ISSAsynchStatus**公開了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對 非同步操作的支援。 這是從核心 OLE DB 介面**IDBAsynchStatus**繼承的可選介面。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
+  **ISSAsynchStatus**會公開對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非同步作業的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**IDBAsynchStatus**。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
   
 |方法|描述|  
 |------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "81306707"
 -   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;OLE DB&#41;的接口](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [介面 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [執行非同步作業](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74380cde599c965b64c0389f51df4dc51b54bdbf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388280"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
@@ -31,18 +31,18 @@ ms.locfileid: "81388280"
 
  **本主題內容：**
 
--   [為特定於報表的資料來源配置儲存的認證(本機模式)](#bkmk_stored_credentials_data_source_native)
+-   [為報表特定的資料來源設定預存認證（原生模式）](#bkmk_stored_credentials_data_source_native)
 
--   [為特定於報表的資料來源配置儲存的認證(SharePoint 模式)](#bkmk_stored_credentials_data_source_sharepoint)
+-   [為報表特定的資料來源設定預存認證（SharePoint 模式）](#bkmk_stored_credentials_data_source_sharepoint)
 
--   [為共享資料來源設定儲存的認證(本機模式)](#bkmk_stored_credentials_shared_data_source_native)
+-   [設定共用資料來源的預存認證（原生模式）](#bkmk_stored_credentials_shared_data_source_native)
 
--   [為共享資料來源設定儲存的認證(共享點模式)](#bkmk_stored_credentials_shared_data_source_sharepoint)
+-   [設定共用資料來源的預存認證（SharePoint 模式）](#bkmk_stored_credentials_shared_data_source_sharepoint)
 
 ##  <a name="security-policy-requirements-for-stored-credentials"></a><a name="bkmk_top"></a> 預存認證的安全性原則需求
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 您必須在報表伺服器上，為預存認證所使用的帳戶設定下列其中一項安全性原則。 建議您為您的環境選取具備需要的最低層級權限的原則。
 
-1.  **允許在本地端登入**。 如需詳細資訊，請參閱 [允許本機登入](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。
+1.  **允許本機登**入。 如需詳細資訊，請參閱 [允許本機登入](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。
 
 2.  **以批次工作登入**。 如需詳細資訊，請參閱 [以批次工作登入](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)。
 
@@ -50,7 +50,7 @@ ms.locfileid: "81388280"
 
 ##  <a name="configure-stored-credentials-for-a-report-specific-data-source-native-mode"></a><a name="bkmk_stored_credentials_data_source_native"></a> 為報表特定的資料來源設定預存認證 (原生模式)
 
-1.  在原生模式報表管理員中，瀏覽至包含報表的資料夾。 點選![表管理員中 ssrs 項目的項目內容內容選單上下文選單](../media/ssrs-report-manager-item-context-menu.png "報表管理員中適用於 SSRS 項目的內容功能表")。
+1.  在原生模式報表管理員中，瀏覽至包含報表的資料夾。 ![針對 ssrs 專案，按一下報表管理員中](../media/ssrs-report-manager-item-context-menu.png "報表管理員中適用於 SSRS 項目的內容功能表")的專案內容功能表內容功能表。
 
 2.  按一下 [管理] **** ，然後按一下 [資料來源] ****。
 
@@ -58,7 +58,7 @@ ms.locfileid: "81388280"
 
 4.  在 [資料來源類型] **** 清單中，選取用來處理資料來源中之資料的資料處理延伸模組。
 
-5.  對於**連接字串**,指定報表伺服器用於連接到資料源的連接字串。 以下範例展示用於連接到資料庫的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]字串:
+5.  針對 [**連接字串**]，請指定報表伺服器用來連接到資料來源的連接字串。 下列範例說明用來連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫的連接字串：
 
     ```
     data source=<servername>;initial catalog=AdventureWorks2012
@@ -68,7 +68,7 @@ ms.locfileid: "81388280"
 
 7.  輸入使用者名稱和密碼。
 
-    -   如果帳戶是 Windows 功能變數使用者帳戶,請在此\<格式 指定它:域\\><\>帳戶 ,然後在**連接到數據源時選擇"用作 Windows 認證"。**
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它： \<網域>\\<帳戶\>，然後選取 **[連接到資料來源時做為 Windows 認證]。**
 
     -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]**。
 
@@ -86,7 +86,7 @@ ms.locfileid: "81388280"
 
 4.  在 [資料來源類型] **** 清單中，選取用來處理資料來源中之資料的資料處理延伸模組。
 
-5.  對於**連接字串**,指定報表伺服器用於連接到資料源的連接字串。 以下範例展示用於連接到資料庫的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]字串:
+5.  針對 [**連接字串**]，請指定報表伺服器用來連接到資料來源的連接字串。 下列範例說明用來連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫的連接字串：
 
     ```
     data source=<servername>;initial catalog=AdventureWorks2012
@@ -94,11 +94,11 @@ ms.locfileid: "81388280"
 
 6.  針對 [認證] **** 選取 [預存認證] ****。
 
-7.  鍵入**使用者名稱與密碼****。**
+7.  輸入**使用者名稱**和**密碼**。
 
-    -   如果帳戶是 Windows 功能變數使用者帳戶,請在此\<格式 指定它:域\\><\>帳戶 ,然後在**連接到數據源時選擇"用作 Windows 認證"。**
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它： \<網域>\\<帳戶\>，然後選取 **[連接到資料來源時做為 Windows 認證]。**
 
-    -   如果使用者名稱和密碼是資料庫認證，請勿選取 [當做 Windows 認證使用] ****。 如果資料庫伺服器支援類比或委派,則可以選擇 **「為此帳戶設置執行上下文**」。
+    -   如果使用者名稱和密碼是資料庫認證，請勿選取 [當做 Windows 認證使用] ****。 如果資料庫伺服器支援模擬或委派，您可以選取 [**設定執行內容到這個帳戶**]。
 
 8.  按一下 [確定]  。
 
@@ -108,13 +108,13 @@ ms.locfileid: "81388280"
 
 1.  在原生模式報表管理員中，瀏覽至共用資料來源項目。 ![共用資料來源圖示](../media/hlp-16datasource.png "共用資料來源圖示")
 
-2.  按下![報表管理器中 ssrs 的上下文選單上下文選單](../media/ssrs-report-manager-item-context-menu.png "報表管理員中適用於 SSRS 項目的內容功能表"),然後按下「**管理**」。
+2.  ![在 [報表管理員] 中按一下 [ssrs 專案](../media/ssrs-report-manager-item-context-menu.png "報表管理員中適用於 SSRS 項目的內容功能表")] 的操作功能表內容功能表，然後按一下 [**管理**]。
 
-3.  在**資料源類型**清單中,指定用於處理數據源資料的數據處理擴展。
+3.  在 [**資料來源類型**] 清單中，指定用來處理資料來源中之資料的資料處理延伸模組。
 
-4.  對於**連接字串**,指定報表伺服器用於連接到資料源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。
+4.  針對 [**連接字串**]，請指定報表伺服器用來連接到資料來源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。
 
-     以下範例展示用於連接到本地[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫的連接字串:
+     下列範例說明用來連接到本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫的連接字串：
 
     ```
     data source=<localservername>; initial catalog=AdventureWorks2012
@@ -122,7 +122,7 @@ ms.locfileid: "81388280"
 
 5.  輸入使用者名稱和密碼。
 
-    -   如果帳戶是 Windows 功能變數使用者帳戶,請在此\<格式 指定它:域\\><\>帳戶 ,然後在**連接到數據源時選擇"用作 Windows 認證"。**
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它： \<網域>\\<帳戶\>，然後選取 **[連接到資料來源時做為 Windows 認證]。**
 
     -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]**。
 
@@ -138,11 +138,11 @@ ms.locfileid: "81388280"
 
 3.  按一下 [編輯資料來源定義] ****。
 
-4.  在**資料源類型**清單中,指定用於處理數據源資料的數據處理擴展。
+4.  在 [**資料來源類型**] 清單中，指定用來處理資料來源中之資料的資料處理延伸模組。
 
-5.  對於**連接字串**,指定報表伺服器用於連接到資料源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。
+5.  針對 [**連接字串**]，請指定報表伺服器用來連接到資料來源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。
 
-     以下範例展示用於連接到本地[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫的連接字串:
+     下列範例說明用來連接到本機[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫的連接字串：
 
     ```
     data source=<localservername>; initial catalog=AdventureWorks2012
@@ -159,6 +159,6 @@ ms.locfileid: "81388280"
      ![搭配 [回到頁首] 連結使用的箭頭圖示](../../2014-toc/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [預存認證的安全性原則需求](#bkmk_top)
 
 ## <a name="see-also"></a>另請參閱
- [為報表資料來源指定認證資訊](../../integration-services/connection-manager/data-sources.md)[為報表&#40;報表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)[創建、刪除或修改共享資料來源 &#40;&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)[資料來源屬性頁&#40;報表管理器&#41;](../data-sources-properties-page-report-manager.md)[新資料源頁&#40;報表管理器&#41;](../new-data-source-page-report-manager.md)
+ [指定報表資料來源的認證和連接資訊](../../integration-services/connection-manager/data-sources.md)[設定報表的資料來源屬性 &#40;報表管理員&#41;](configure-data-source-properties-for-a-report-report-manager.md) [建立、刪除或修改共用資料來源 &#40;報表管理員](../create-delete-or-modify-a-shared-data-source-report-manager.md)&#41;[資料來源屬性頁面 &#40;](../data-sources-properties-page-report-manager.md)報表管理員&#41;[新增資料來源頁面](../new-data-source-page-report-manager.md)&#40;報表管理員&#41;
 
 

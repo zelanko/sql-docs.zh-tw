@@ -11,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e81de975a3f8e2d5549ee968fc7e47bb5e3746c3
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388409"
 ---
 # <a name="utf-16-support-in-sql-server-native-client-110"></a>SQL Server Native Client 11.0 中的 UTF-16 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  在[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中開始,如果在綁定列結果或輸出參數時提供固定長度緩衝區,並且在終止字元之前寫入緩衝區的**wchar**字元是代理項對的高代理項代碼點,並且下一個**wchar**字元是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]低代理程式碼點, 本機用戶端將不會向緩衝區添加高代理代碼點。  
+  從開始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，如果您在系結資料行結果或輸出參數時提供固定長度的緩衝區，而且如果在終止字元之前寫入緩衝區的**wchar**字元是代理組的高代理程式碼點，而且下一個**wchar**字元是低代理程式碼點， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]則 Native Client 不會將高代理程式碼點加入緩衝區。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

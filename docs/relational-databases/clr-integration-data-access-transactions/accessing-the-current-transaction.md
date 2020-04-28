@@ -1,6 +1,6 @@
 ---
-title: 存取目前事務 |微軟文件
-description: 在 SQL Server CLR 整合中,System.事務.事務類的當前屬性允許您存取當前事務。
+title: 存取目前的交易 |Microsoft Docs
+description: 在 SQL Server CLR 整合中，System.object 類別的 Current 屬性可讓您存取目前的交易。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487472"
 ---
 # <a name="accessing-the-current-transaction"></a>存取目前交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如果事務在輸入運行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的通用語言運行時 (CLR) 代碼時處於活動狀態,則事務將透過**System.事務.事務**類公開。 **事務.當前**屬性用於訪問當前事務。 在大部分情況下，您不需要明確存取交易。 對於資料庫連接,ADO.NET在調用**Connect.Open**方法時自動檢查**事務.當前**,並透明地在該事務中登記連接(除非**Enlist**關鍵字在連接字串中設置為 false)。  
+  如果在輸入執行的 common language runtime （CLR） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式碼時，交易處於作用中狀態，則會透過 system.string 類別公開交易 **。** **Transaction. current**屬性是用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 若為資料庫連接，ADO.NET 會在呼叫**connection. Open**方法時自動檢查**transaction** ，並在該交易中明確登記連接（除非連接字串中的**登錄關鍵字設**為 false）。  
   
- 您可能希望在以下情況下直接使用**事務**物件:  
+ 在下列案例中，您可能會想要直接使用**交易**物件：  
   
 -   如果您想要編列不會自動編列的資源，或由於某些原因，無法在初始化期間編列的資源。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "81487472"
 ## <a name="canceling-an-external-transaction"></a>取消外部交易  
  您可以使用下列方式，從 Managed 程序或函數取消外部交易：  
   
--   Managed 程序或函數可以使用輸出參數來傳回值。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]過程可以檢查傳回的值,並酌情執行**ROLLBACK 交易**。  
+-   Managed 程序或函數可以使用輸出參數來傳回值。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]程式可以檢查傳回的值，並在適當的情況下執行**ROLLBACK TRANSACTION**。  
   
--   Managed 程序或函數可以擲回自訂例外狀況。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]過程可以擷取託管過程或函數在 try/catch 塊中引發的異常,並執行**ROLLBACK 交易**。  
+-   Managed 程序或函數可以擲回自訂例外狀況。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]程式可以攔截 try/catch 區塊中的 managed 程式或函數所擲回的例外狀況，並執行**ROLLBACK TRANSACTION**。  
   
--   如果滿足特定條件,託管過程或函數可以通過調用**事務.Rollback**方法取消當前事務。  
+-   Managed 程式或函式可以在符合特定條件時呼叫**transaction**方法，以取消目前的交易。  
   
- 在託管過程或函數中調用它時 **,Ex.Rollback**方法會引發一個異常,其中有一條不明確的錯誤消息,可以包裝在 try/catch 塊中。 此錯誤訊息類似下列內容：  
+ 在 managed 程式或函式內呼叫時， **Transaction**方法會擲回例外狀況並顯示不明確的錯誤訊息，而且可以包裝在 try/catch 區塊中。 此錯誤訊息類似下列內容：  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
@@ -65,7 +65,7 @@ The context transaction which was active before entering user defined routine, t
  這項例外狀況也在預期中，而且您必須在執行引發觸發程序之動作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式前後設有 try/catch 區塊，才能繼續執行。 儘管會擲回兩項例外狀況，交易仍會回復，而且不會認可變更。  
   
 ### <a name="example"></a>範例  
- 下面是使用**事務.Rollback**方法從託管過程回滾的事務的示例。 請注意託管代碼中 **「事務.回滾**」方法周圍的 try/catch 塊。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立組件和 Managed 預存程序。 請注意 **,EXEC uspRollbackFromProc**語句包裝在 try/catch 塊中,以便在託管過程完成執行時引發異常。  
+ 以下是使用**transaction. Rollback**方法從 managed 程式復原交易的範例。 請注意，在 managed 程式碼中，在**Transaction. Rollback**方法前後的 try/catch 區塊。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立組件和 Managed 預存程序。 請注意， **EXEC uspRollbackFromProc**語句會包裝在 try/catch 區塊中，因此攔截到 managed 程式完成執行時所擲回的例外狀況。  
   
 ```csharp  
 using System;  

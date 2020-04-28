@@ -1,5 +1,5 @@
 ---
-title: 保留關鍵字 |微軟文件
+title: 保留關鍵字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307989"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
-以下是 ODBC 函數呼叫所用的保留字。 這些單詞不限制最低 SQL 語法;因此,這些單詞不會限制這些單詞。但是,為了確保與支援核心 SQL 語法的驅動程式相容,應用程式應避免使用這些關鍵字中的任何一個。 #**定義**值SQL_ODBC_KEYWORDS包含這些關鍵字的逗號分隔清單。  
+以下是 ODBC 函數呼叫所用的保留字。 這些單字不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式相容，應用程式應該避免使用任何這些關鍵字。 #**Define**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
   
 |||  
 |-|-|  
@@ -60,7 +60,7 @@ ms.locfileid: "81307989"
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|OR|  
+|COLLATION|或者|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  

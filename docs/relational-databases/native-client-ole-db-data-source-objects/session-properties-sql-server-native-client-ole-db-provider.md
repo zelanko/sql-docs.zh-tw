@@ -1,5 +1,5 @@
 ---
-title: 工作階段屬性 OLE DB
+title: 會話屬性 OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 799d007dea8063486e836f47032fc3177c890168
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388590"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>工作階段屬性 - SQL Server Native Client OLE DB 提供者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端 OLE 資料庫提供程式解釋 OLE DB 會話屬性,如下所示。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會解讀 OLE DB 會話屬性，如下所示。  
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE 資料庫提供程式支援所有自動提交事務隔離等級,但混沌級別DBPROPVAL_TI_CHAOS除外。|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|除了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]混亂層級 DBPROPVAL_TI_CHAOS 以外，Native Client OLE DB 提供者支援所有的自動認可交易隔離等級。|  
 |||
 
- 在特定於提供程式的屬性集中DBPROPSET_SQLSERVERSESSION,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機用戶端 OLE DB 提供程式定義以下附加作業階段屬性。  
+ 在提供者特定的屬性集 DBPROPSET_SQLSERVERSESSION 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義下列額外的會話屬性。  
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  

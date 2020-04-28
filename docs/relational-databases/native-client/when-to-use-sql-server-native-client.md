@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86e27f10e2cb56164b21c1488022df600bb87c59
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387738"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>使用 SQL Server Native Client 的時機
@@ -32,15 +32,15 @@ ms.locfileid: "81387738"
   
  如果您正在開發以 COM 為基礎的應用程式，而且需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所導入的新功能，則應該使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 如果您不需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能，可以繼續使用 Windows Data Access Components (WDAC)。  
   
- 對於現有的 OLE DB 和 ODBC 應用程式而言，主要的問題在於您是否需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能。 如果您有一個不需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新功能的完整應用程式，就可以繼續使用 WDAC。 但是,如果您確實需要訪問這些新功能(如[xml 數據類型](../../t-sql/xml/xml-transact-sql.md)),[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則應使用本機用戶端。  
+ 對於現有的 OLE DB 和 ODBC 應用程式而言，主要的問題在於您是否需要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能。 如果您有一個不需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新功能的完整應用程式，就可以繼續使用 WDAC。 但是，如果您需要存取這些新功能（例如[xml 資料類型](../../t-sql/xml/xml-transact-sql.md)），您應該使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都可使用資料列版本設定來支援讀取認可的交易隔離，但是只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可支援快照集交易隔離  (在程式設計的詞彙中，含有資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  
   
- 有關本機客戶端和 MDAC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間的差異 的資訊,請參閱從[MDAC 將應用程式更新到 SQL 伺服器本機用戶端](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
+ 如需 Native Client 與 MDAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間差異的詳細資訊，請參閱將[應用程式更新為從 MDAC SQL Server Native Client](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 伺服器本機客戶端程式設計](../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC 的「使用方式」主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB 的使用說明主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [SQL Server Native Client 程式設計](../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [ODBC 的使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [OLE DB how to 主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

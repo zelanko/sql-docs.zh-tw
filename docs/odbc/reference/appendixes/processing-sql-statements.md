@@ -1,5 +1,5 @@
 ---
-title: 處理 SQL 語句 |微軟文件
+title: 處理 SQL 語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: eda640f6e810eeccbfa17ea2b6ba7c1b19b28e08
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307999"
 ---
 # <a name="processing-sql-statements"></a>處理 SQL 陳述式
 > [!IMPORTANT]  
->  此功能將在將來版本的 Windows 中刪除。 避免在新的開發工作中使用此功能,並計劃修改當前使用此功能的應用程式。 Microsoft 建議使用驅動程式的游標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- ODBC 游標庫將所有 SQL 語句直接傳遞給驅動程式,但以下情況除外:  
+ ODBC 資料指標程式庫會將所有的 SQL 語句直接傳遞到驅動程式，但下列除外：  
   
--   請找到更新與移除敘述  
+-   定位 update 和 delete 語句  
   
--   **選擇更新**敘述  
+-   **針對 UPDATE 語句選取**  
   
 -   批次 SQL 語句  
   
- 要執行定位更新和刪除語句,並將游標放置在行上以調用該行的**SQLGetData,** 遊標庫將建構標識該行的搜索語句。  
+ 若要執行定位的 update 和 delete 語句，並將資料指標置於資料列上，以呼叫該資料列的**SQLGetData** ，資料指標程式庫會建立可識別該資料列的搜尋語句。  
   
  此章節包含下列主題。  
   

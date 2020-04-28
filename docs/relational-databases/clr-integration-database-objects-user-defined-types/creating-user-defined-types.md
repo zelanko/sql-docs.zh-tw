@@ -1,6 +1,6 @@
 ---
-title: 建立使用者定義型態 ( F)微軟文件
-description: 要創建要在 SQL Server 中安裝的 UDT,請先使用 .NET 框架程式設計語言創建類,該語言符合創建 UDT 的規範。
+title: 建立使用者定義型別 |Microsoft Docs
+description: 若要建立要在 SQL Server 中安裝的 UDT，請先使用 .NET Framework 程式設計語言建立類別，這符合建立 Udt 的規格。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486949"
 ---
 # <a name="creating-user-defined-types"></a>建立使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要建立可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安裝的使用者定義型別 (UDT)，您必須先以其中一種受支援的 .NET Framework 程式語言 (例如 Visual C# 或 Visual Basic)，建立符合建立 UDT 之規格的類別。 然後，您就可以將此類別編譯為可載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的動態連結程式庫 (DLL)。 您也可以使用 Visual Studio 來建立和部署 UDT。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，執行 Common Language Runtime (CLR) 程式碼的功能預設為 OFF。 可以使用**sp_configure**系統儲存程序啟用 CLR,如以下[!INCLUDE[tsql](../../includes/tsql-md.md)]語句所示:  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，執行 Common Language Runtime (CLR) 程式碼的功能預設為 OFF。 您可以使用**sp_configure**系統預存程式來啟用 CLR，如下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句所示：  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -41,9 +41,9 @@ Reconfigure
  示範建立使用者定義型別所涉及的程式碼撰寫技巧。  
   
 ## <a name="example"></a>範例  
- 以下代碼清單定義了點 UDT,這在[編碼用戶定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)中進行了詳細介紹。  
+ 下列程式代碼清單會定義 Point UDT，這在撰寫[使用者定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)別時有詳細的說明。  
   
- 藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 有關安裝這些範例的說明,請參閱[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)。  
+ 藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 如需有關安裝這些範例的指示，請參閱[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)。  
   
  C#  
   

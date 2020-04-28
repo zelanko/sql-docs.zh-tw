@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c7a12ec8f9e2bd49c9aecc1080fe0b5cff854ce
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387962"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase 查詢設計工具使用者介面
@@ -101,6 +101,6 @@ ms.locfileid: "81387962"
 -   **自動執行** (![自動執行查詢](../../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢"))
 
 ## <a name="see-also"></a>另請參閱
- [建立分享資料集或嵌入式資料集&#40;報表產生器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [RS 報告設計器設定檔](../report-server/rsreportdesigner-configuration-file.md)
+ [建立共用資料集或內嵌資料集 &#40;報表產生器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [rsreportdesigner.config 設定檔](../report-server/rsreportdesigner-configuration-file.md)
 
 

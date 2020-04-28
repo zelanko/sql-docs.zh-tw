@@ -1,5 +1,5 @@
 ---
-title: 分析服務開發的客戶體系結構要求 |微軟文件
+title: Analysis Services 開發的用戶端架構需求 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69b2a2c8225c19dfb18a4b41b6fd1adc6aab266
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388026"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開發的用戶端架構需求
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]體繫結構。 計算[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]引擎完全基於伺服器,因此所有查詢都在伺服器上解析。 所以，每一個查詢只需要用戶端和伺服器之間單次往返，使得查詢越來越複雜時可擴充效能。
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援瘦用戶端[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]架構。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算引擎完全以伺服器為基礎，因此會在伺服器上解析所有查詢。 所以，每一個查詢只需要用戶端和伺服器之間單次往返，使得查詢越來越複雜時可擴充效能。
 
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的原生通訊協定是 XML for Analysis (XML/A)。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 為用戶端應用程式提供數個資料存取介面，但所有這些元件均使用 XML for Analysis 與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體進行通訊。
 
@@ -53,7 +53,7 @@ ms.locfileid: "81388026"
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>表格式或 SharePoint 模式下的 Analysis Services
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，伺服器可以在表格式資料庫及發行至 SharePoint 網站之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的 xVelocity 記憶體內部分析引擎 (VertiPaq) 模式下啟動。
 
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是建立及查詢分別使用 SharePoint 或表格式模式之記憶體中資料庫唯一支援的用戶端環境。 使用 Excel[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]和 工具建立的嵌入式 PowerPivot 資料庫包含在 Excel 工作簿中,並保存為 Excel .xlsx 檔的一部分。
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是建立及查詢分別使用 SharePoint 或表格式模式之記憶體中資料庫唯一支援的用戶端環境。 使用 Excel 和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工具所建立的內嵌 PowerPivot 資料庫是包含在 excel 活頁簿中，而且會儲存為 excel .xlsx 檔案的一部分。
 
  不過，如果您將儲存在傳統 Cube 的資料匯入 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿中，活頁簿就可以使用此資料。 如果另一個 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿已發行至 SharePoint 網站，您也可以從該活頁簿匯入資料。
 
@@ -61,18 +61,18 @@ ms.locfileid: "81388026"
 >  當您使用 Cube 做為 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的資料來源時，從 Cube 取得的資料是定義為 MDX 查詢；不過資料是以扁平化快照集方式匯入。 您無法以互動方式使用資料或從 Cube 重新整理資料。
 
 ### <a name="interfaces-for-powerpivot-client"></a>PowerPivot 用戶端的介面
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]通過使用已建立的介面和語言進行分析服務:AMO 和ADOMD.NET以及 MDX 和 XMLA,與工作簿中的 xVelocity 記憶體內分析引擎 (VertiPaq) 儲存引擎進行交互。 在增益集內，透過類似 Excel 的公式語言，即資料分析運算式 (DAX)，來定義量值。 DAX 運算式內嵌於傳送至同處理序伺服器的 XMLA 訊息。
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]使用 Analysis Services 的已建立介面和語言，在活頁簿中與 xVelocity 的記憶體中分析引擎（VertiPaq）儲存引擎互動： AMO 和 ADOMD.NET，以及 MDX 和 XMLA。 在增益集內，透過類似 Excel 的公式語言，即資料分析運算式 (DAX)，來定義量值。 DAX 運算式內嵌於傳送至同處理序伺服器的 XMLA 訊息。
 
 ### <a name="providers"></a>提供者
- 和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Excel 之間的通訊使用 MSOLAP OLEDB 提供程式(版本 11.0)。 在 MSOLAP 提供者內，有四個不同的模組 (或傳輸) 可用於用戶端和伺服器之間傳送訊息。
+ 和 Excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]之間的通訊使用 MSOLAP OLEDB 提供者（版本11.0）。 在 MSOLAP 提供者內，有四個不同的模組 (或傳輸) 可用於用戶端和伺服器之間傳送訊息。
 
- **TCP/IP**用於正常用戶端-伺服器連接。
+ **TCP/IP**用於一般的用戶端-伺服器連接。
 
- **HTTP**用於透過 SSAS 資料泵服務進行 HTTP 連線,或用於調用 SharePoint PowerPivot Web 服務 (WS) 元件。
+ **HTTP**用於透過 SSAS 資料幫浦服務的 HTTP 連接，或呼叫 SharePoint PowerPivot Web 服務（WS）元件。
 
- **INPROC**用於連接到程序內引擎。
+ **INPROC**用來連接到同進程引擎。
 
- **頻道**保留用於與 SharePoint 伺服器場中的 PowerPivot 系統服務通訊。
+ **頻道**保留以與 SharePoint 伺服器陣列中的 PowerPivot 系統服務通訊。
 
 ## <a name="see-also"></a>另請參閱
  [OLAP 引擎伺服器元件](olap-engine-server-components.md)

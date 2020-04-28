@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 607ac55fe426cd086ce31ade33d3e772e7a3d9a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487133"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>權限階層 (Database Engine)
@@ -34,12 +34,12 @@ ms.locfileid: "81487133"
  ![資料庫引擎權限階層的圖表](../../database-engine/media/wj-security-layers.gif "資料庫引擎權限階層的圖表")
 
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表
- 有關 pdf[!INCLUDE[ssDE](../../../includes/ssde-md.md)]格式所有 許可權的海報大小圖表,請[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)參閱。
+ 如需 pdf 格式之所有[!INCLUDE[ssDE](../../../includes/ssde-md.md)]許可權的海報大小圖表，請[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)參閱。
 
 ## <a name="working-with-permissions"></a>使用權限
  您可以透過常見的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 GRANT、DENY 與 REVOKE 來操控權限。 您可以在 [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) 和 [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) 目錄檢視中查看權限的相關資訊。 此外，也支援使用內建函數來查詢權限資訊。
 
 ## <a name="see-also"></a>另請參閱
- [保護 SQL 伺服器](securing-sql-server.md)[許可權&#40;資料庫引擎&#41;](permissions-database-engine.md)[可安全程式](securables.md)[&#40;数据库引擎&#41;](authentication-access/principals-database-engine.md) &#40;[處理-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) REVOKE &#40;[Transact-SQL&#41;DENY &#40;](/sql/t-sql/statements/revoke-transact-sql)處理-&#41;SQL&#41;deny [&#40;&#40;Transact-SQL](/sql/t-sql/statements/deny-transact-sql)&#41;HAS_PERMS_BY_NAME [&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql) fn_builtin_permissions &#40;[Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql)系統[server_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) database_permissions[系統&#40;處理-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)
+ [保護 SQL Server](securing-sql-server.md) [許可權 &#40;資料庫引擎&#41;](permissions-database-engine.md) [安全性實體](securables.md)[主體 &#40;資料庫引擎](authentication-access/principals-database-engine.md)&#41;sql [server 授與 &#40;](/sql/t-sql/statements/grant-transact-sql) transact-sql&#41;[撤銷 &#40;](/sql/t-sql/statements/revoke-transact-sql) transact-sql&#41;[&#40;transact-sql&#41;](/sql/t-sql/statements/deny-transact-sql) [HAS_PERMS_BY_NAME &#40;](/sql/t-sql/functions/has-perms-by-name-transact-sql) transact-sql&#41;[sys.](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) [fn_builtin_permissions &#40;transact-sql](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql)&#41;server_permissions &#40;transact-sql&#41;。 database_permissions &#40;[transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)
 
 

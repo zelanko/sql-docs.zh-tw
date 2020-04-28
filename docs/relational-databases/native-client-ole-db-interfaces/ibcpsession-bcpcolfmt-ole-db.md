@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307412"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -77,7 +77,7 @@ HRESULT BCPColFmt(
  使用者的資料檔案中的欄位索引。  
   
  *eUserDataType*[in]  
- 使用者的資料檔案中欄位的資料類型。 可用的資料型態列在具有BCP_TYPE_XXX[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]格式的 本機客戶端標頭檔 (sqlncli.h) 中,例如BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
+ 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BCP_TYPE_XXX 格式的 Native Client 標頭檔（sqlncli）中，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
   
 -   如果來源資料行不是小數或數值，便會使用預設的有效位數和小數位數。  
   
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  此方法已成功。  
   
  E_FAIL  
- 發生提供程式特定的錯誤,有關詳細資訊,請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤，如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  
@@ -129,7 +129,7 @@ HRESULT BCPColFmt(
  記憶體不足的錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [IBCP會話&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

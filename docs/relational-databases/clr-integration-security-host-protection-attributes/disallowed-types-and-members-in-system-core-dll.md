@@ -1,6 +1,6 @@
 ---
-title: 系統中的禁止類型和成員。微軟文件
-description: SQL Server CLR 程式設計不允許具有主機保護資源枚舉某些值的類型或成員。 本文列出了 System.Core.dll 不允許的值。
+title: 不允許的類型和成員在 System.web 中 |Microsoft Docs
+description: SQL Server CLR 程式設計不允許具有 HostProtectionResource 列舉之值的類型或成員。 本文列出 system.string 不允許的值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e89af3c6f93fb6c8576a6e627eed8e984fb0f0ae
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486845"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll 中不允許的類型和成員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用語言整合 (CLR) 程式設計不允許使用具有**指定****System.Security.security.security.Host 保護資源**(具有**外部行程 Mgmt、****外部線程****、MayLeakOnAbort、****安全基礎結構**、**自影響行程 Mgmnt,****自影響線程**,**共用狀態**,**同步**或**UI)** 的值的類型或成員。 下表列出 System.Core.dll 組件的成員和類型，這些成員和類型的主機保護屬性 (HPA) 值不被允許。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用語言整合（CLR）程式設計不允許使用具有**HostProtectionAttribute**的類型或成員，其指定的**HostProtectionResource**列舉值為**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同步**處理或**UI**。 下表列出 System.Core.dll 組件的成員和類型，這些成員和類型的主機保護屬性 (HPA) 值不被允許。  
   
 > [!NOTE]  
->  此清單是根據支援的組件產生的。 有關詳細資訊,請參閱支援的[.NET 框架庫](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
+>  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱[支援的 .NET Framework 程式庫](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
 |類型或成員|HPA 值|  
 |--------------------|--------------------|  
@@ -130,9 +130,9 @@ ms.locfileid: "81486845"
   
 ## <a name="see-also"></a>另請參閱  
  [主機保護屬性和 CLR 整合程式設計](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [微軟中不允許的類型和成員。](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [在 mscorlib.dll 中禁止的類型與成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [系統中的禁止類型和成員。](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [在 Microsoft 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Mscorlib.dll 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [系統中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
  [在 System.Data.dll 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
   
   

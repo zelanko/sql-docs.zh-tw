@@ -1,5 +1,5 @@
 ---
-title: 微軟存取驅動程式編程注意事項 |微軟文件
+title: Microsoft Access 驅動程式設計考慮 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308049"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access 驅動程式的程式設計考量

@@ -1,5 +1,5 @@
 ---
-title: XQuery 運算子反對 xml 資料類型 |微軟文件
+title: 針對 xml 資料類型的 XQuery 運算子 |Microsoft Docs
 description: 瞭解可用於 xml 資料類型的 XQuery 運算子。
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,10 +18,10 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d5692aa5b46d79c68165fa6f1320034fdb7e03b3
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388306"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
@@ -33,16 +33,16 @@ ms.locfileid: "81388306"
   
 -   用於值比較的運算子 (eq, ne, lt, gt, le, ge)  
   
--   用於一般比較的運算元 (*,!=,>,*,>\< \<= )  
+-   一般比較的運算子（=，！ =， \<，>， \<=，>=）  
   
- 有關這些運算符的詳細資訊,請參閱[比較運算式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
+ 如需這些運算子的詳細資訊，請參閱[&#40;XQuery 的比較運算式&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-general-operators"></a>A. 使用一般運算子  
- 此查詢會說明套用到序列與比較序列的一般運算子使用方式。 查詢從**連絡人**表的 **「附加聯繫人資訊」** 列中檢索每個客戶的電話號碼序列。 然後，將此序列和這兩個電話號碼的序列 ("111-111-1111", "222-2222") 比較。  
+ 此查詢會說明套用到序列與比較序列的一般運算子使用方式。 此查詢會從**Contact**資料表的**AdditionalContactInfo**資料行中，抓取每個客戶的電話號碼序列。 然後，將此序列和這兩個電話號碼的序列 ("111-111-1111", "222-2222") 比較。  
   
- 查詢使用**=** 比較運算符。 **=** 將運算符右側序列中的每個節點與左側序列中的每個節點進行比較。 如果節點符合,則節點比較為**TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
+ 查詢會使用**=** 比較運算子。 **=** 運算子右邊順序中的每個節點會與左側序列中的每個節點進行比較。 如果節點相符，節點的比較就會是**TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -56,7 +56,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- 還有另一種方法可以觀察前一個查詢的工作原理:從 **「附加聯繫人資訊」** 列檢索的每個電話號碼值與兩個電話號碼集進行比較。 如果值位於集合中，則結果中就會傳回該客戶。  
+ 還有另一種方式可以觀察前一個查詢的運作方式：每個從**AdditionalContactInfo**資料行取出的電話電話號碼值都會與兩個電話號碼的集合進行比較。 如果值位於集合中，則結果中就會傳回該客戶。  
   
 ### <a name="b-using-a-numeric-operator"></a>B. 使用數值運算子  
  此查詢中的 + 運算子是值運算子，因為它會套用到單一項目。 例如，值 1 會加入到查詢傳回的配置大小：  
@@ -79,7 +79,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. 使用值運算子  
- 以下查詢檢索圖片大小為「`Picture`小」的產品模型<>元素:  
+ 下列查詢會抓取產品型號`Picture`的 <> 元素，其中的圖片大小為「小型」：  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -92,11 +92,11 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 由於**eq**運算子的兩個操作數都是原子值,因此在查詢中使用值運算符。 可以使用常規比較運算符 ()**=** 編寫相同的查詢。  
+ 因為**eq**運算子的兩個運算元都是不可部分完成的值，所以在查詢中會使用 value 運算子。 您可以使用一般比較運算子（ **=** ）撰寫相同的查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料型態的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [XML 資料&#40;SQL 伺服器&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

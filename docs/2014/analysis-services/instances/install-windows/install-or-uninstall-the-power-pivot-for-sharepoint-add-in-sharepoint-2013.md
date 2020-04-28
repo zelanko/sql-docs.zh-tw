@@ -1,5 +1,5 @@
 ---
-title: 安裝或卸載 SharePoint 外接程式的 PowerPivot(SharePoint 2013) |微軟文件
+title: 安裝或卸載 PowerPivot for SharePoint 增益集（SharePoint 2013） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16174728ac57b0a6380f1780eb550f85e2191d39
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387838"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
@@ -22,9 +22,9 @@ ms.locfileid: "81387838"
 
 -   SharePoint 2010 部署不需要此增益集。
 
--   包含 SharePoint 2013 和 SharePoint 模式之 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的單一伺服器部署不需要此增益集。 當您以 SharePoint 模式安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器時，就會包含此增益集所安裝的元件。 有關使用外接程式的範例部署圖,請參閱[SharePoint 中的 SQL Server BI 功能的部署拓撲](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。
+-   包含 SharePoint 2013 和 SharePoint 模式之 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的單一伺服器部署不需要此增益集。 當您以 SharePoint 模式安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器時，就會包含此增益集所安裝的元件。 如需使用增益集部署範例的圖表，請參閱[SharePoint 中 SQL SERVER BI 功能的部署拓撲](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。
 
- **注意** ：本主題將描述如何安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 方案檔以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具。 安裝後,有關設定工具和附加功能的資訊,請參閱以下主題[,&#40;SharePoint 2013&#41;設定 PowerPivot 和部署解決方案](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)。
+ **注意** ：本主題將描述如何安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 方案檔以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具。 安裝之後，請參閱下列主題，以取得設定工具和其他功能的相關資訊、[設定 PowerPivot 並將方案部署 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)。
 
  如需有關如何下載 **spPowerPivot.msi**的詳細資訊，請參閱 [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft SharePoint®](https://go.microsoft.com/fwlink/?LinkID=324854)。
 
@@ -32,7 +32,7 @@ ms.locfileid: "81387838"
 
 -   [背景](#bkmk_background)
 
--   [在哪裡安裝 spPowerPivot.msi?](#bkmk_where_to_install)
+-   [要在何處安裝 Sppowerpivot.msi？](#bkmk_where_to_install)
 
 -   [需求和必要條件](#bkmk_prereq)
 
@@ -74,7 +74,7 @@ ms.locfileid: "81387838"
 
  **組態工具：** 只有其中一個 SharePoint 伺服器才需要 PowerPivot for SharePoint 2013 組態工具。 不過在多伺服器的伺服器陣列中，建議的最佳作法是在至少兩個伺服器上安裝組態工具，如此一來，即使其中一個伺服器已離線，您也可以存取組態工具。
 
-##  <a name="requirements-and-prerequisites"></a><a name="bkmk_prereq"></a>要求與先決條件
+##  <a name="requirements-and-prerequisites"></a><a name="bkmk_prereq"></a>需求和必要條件
 
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SharePoint Server 2013。
 
@@ -84,10 +84,10 @@ ms.locfileid: "81387838"
 
 -   **權限** ：若要安裝 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]，目前使用者必須是電腦的系統管理員以及 SharePoint 伺服器陣列管理員群組的成員。
 
--   有關[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]要求和先決條件的詳細資訊,請造訪[SharePoint 模式下分析服務伺服器的硬體和軟體要求&#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)。
+-   如需[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]需求和必要條件的詳細資訊，請移至[SharePoint 模式下 Analysis Services Server 的硬體和軟體需求 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)。
 
-##  <a name="to-install-powerpivot-for-sharepoint"></a><a name="bkmk_install"></a>為共享點安裝電源透視
- **spPowerpivot.msi** 安裝程式封裝同時支援圖形化使用者介面和命令列模式。 這兩個安裝方法都需要您使用系統管理員權限執行 .msi。 安裝後,有關設定工具和附加功能的資訊,請參閱以下主題[,&#40;SharePoint 2013&#41;設定 PowerPivot 和部署解決方案](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)。
+##  <a name="to-install-powerpivot-for-sharepoint"></a><a name="bkmk_install"></a>若要安裝 PowerPivot for SharePoint
+ **spPowerpivot.msi** 安裝程式封裝同時支援圖形化使用者介面和命令列模式。 這兩個安裝方法都需要您使用系統管理員權限執行 .msi。 安裝之後，請參閱下列主題，以取得設定工具和其他功能的相關資訊、[設定 PowerPivot 並將方案部署 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)。
 
 ### <a name="user-interface-installation"></a>使用者介面安裝
  若要以圖形化使用者介面安裝 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] ，請完成下列步驟：
@@ -109,21 +109,21 @@ ms.locfileid: "81387838"
 
  `Msiexec.exe /i SpPowerPivot.msi`.
 
- 若要建立安裝記錄檔，請使用標準 MsiExec 記錄參數。 下面的範例使用「v」詳細記錄記錄開關建立日誌檔「Install_Log.txt」。
+ 若要建立安裝記錄檔，請使用標準 MsiExec 記錄參數。 下列範例會使用 "v" 詳細資訊記錄參數來建立記錄檔 "Install_Log .txt"。
 
 ```cmd
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 ```
 
 ### <a name="quiet-command-line-installation-for-scripting"></a>指令碼的無訊息命令列安裝
- 您可以將 **/q**或 **/quiet**開關用於「安靜」安裝,不會顯示任何對話框或警告。 如果您想要將增益集的安裝撰寫為指令碼，無訊息安裝相當實用。
+ 您可以使用 **/q**或 **/quiet**參數，進行不會顯示任何對話方塊或警告的「無訊息」安裝。 如果您想要將增益集的安裝撰寫為指令碼，無訊息安裝相當實用。
 
 > [!IMPORTANT]
 >  如果您使用 **/q** 參數進行無訊息命令列安裝，將不會顯示使用者授權合約。 不論安裝方式為何，使用此軟體皆受到授權合約的限制，同時您有責任遵從授權合約的規定。
 
-#### <a name="to-perform-a-quiet-installation"></a>執行安靜的安裝
+#### <a name="to-perform-a-quiet-installation"></a>執行無訊息安裝
 
-1.  開啟**具有管理員許可權**的命令提示。
+1.  **以系統管理員許可權**開啟命令提示字元。
 
 2.  執行以下命令：
 
@@ -148,7 +148,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 |SQL_AMO|AMO 提供者|
 |SQLAS_SP_Common|適用於 SharePoint 2013 的 Analysis Services 一般元件|
 
-##  <a name="deploy-the-sharepoint-solution-files-with-the-powerpivot-for-sharepoint-2013-configuration-tool"></a><a name="bkmk_deploy_solution"></a>使用 PowerPivot 部署 SharePoint 解決方案檔,用於 SharePoint 2013 設定工具
+##  <a name="deploy-the-sharepoint-solution-files-with-the-powerpivot-for-sharepoint-2013-configuration-tool"></a><a name="bkmk_deploy_solution"></a>使用 PowerPivot for SharePoint 2013 設定工具部署 SharePoint 方案檔
  spPowerPivot.msi 複製到硬碟的其中三個檔案是 SharePoint 方案檔。 其中一個方案檔的範圍是 Web 應用程式層級，其他檔案的範圍則是伺服器陣列層級。 檔案如下：
 
 -   `PowerPivotFarmSolution.wsp`
@@ -165,11 +165,11 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 
 ### <a name="to-start-the-configuration-tool"></a>啟動設定工具 
 
- 從 Windows 開始螢幕類型「電源」 與「應用程式搜尋結果」 中,按**一下 PowerPivot 的 SharePoint 2013 設定**。 請注意，搜尋結果可能包含兩個連結，因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會分別為 SharePoint 2010 和 SharePoint 2013 安裝不同的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具。 務必確定啟動 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具。
+ 從 Windows [開始] 畫面輸入 "power"，然後在應用程式搜尋結果中，按一下 [ **PowerPivot for SharePoint 2013**設定]。 請注意，搜尋結果可能包含兩個連結，因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會分別為 SharePoint 2010 和 SharePoint 2013 安裝不同的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具。 務必確定啟動 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具。
 
- ![兩個電源軸設定工具](../../media/as-powerpivot-configtools-bothicons.gif "兩個電源軸設定工具")
+ ![兩個 powerpivot 設定工具](../../media/as-powerpivot-configtools-bothicons.gif "兩個 powerpivot 設定工具")
 
- **或**
+ **Or**
 
 1.  移至 **[開始]**、 **[所有程式]**。
 
@@ -181,7 +181,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 
  如需有關組態工具的詳細資訊，請參閱＜ [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)＞。
 
-##  <a name="uninstall-or-repair-the-add-in"></a><a name="bkmk_remove_addin"></a>卸載或修復外接程式
+##  <a name="uninstall-or-repair-the-add-in"></a><a name="bkmk_remove_addin"></a>卸載或修復增益集
 
 > [!CAUTION]
 >  如果您解除安裝 **spPowerPivot.msi** ，會解除安裝資料提供者和組態工具。 解除安裝資料提供者會使伺服器無法連接到 PowerPivot。
@@ -200,7 +200,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
     msiexec.exe /f spPowerPivot.msi
     ```
 
- OR
+ 或者
 
 -   若要解除安裝，請執行下列命令：
 

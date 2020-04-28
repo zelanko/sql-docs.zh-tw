@@ -1,6 +1,6 @@
 ---
-title: 對常規和上下文連接的限制 |微軟文件
-description: 本文介紹了與通過上下文和常規連接在 Microsoft SQL Server 進程中運行的代碼相關的限制。
+title: 一般和內容連接的限制 |Microsoft Docs
+description: 本文描述透過內容和一般連接在 Microsoft SQL Server 程式中執行之程式碼的相關限制。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485270"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>內容連線和一般連線 - 限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題討論與通過上下文和常規連接在[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]流程中執行的代碼相關的限制。  
+  本主題討論透過內容和一般連接在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]進程中執行之程式碼的相關限制。  
   
 ## <a name="restrictions-on-context-connections"></a>內容連接的限制  
  開發應用程式時，請考慮下列適用於內容連接的限制：  
@@ -31,26 +31,26 @@ ms.locfileid: "81485270"
   
 -   內容連接不支援 Multiple Active Result Sets (MARS)。  
   
--   **SqlBulkCopy**類在上下文連接中不工作。  
+-   **SqlBulkCopy**類別不會在內容連接中運作。  
   
 -   不支援在內容連接中更新批次。  
   
--   **Sql通知請求**不能與針對上下文連接執行的命令一起使用。  
+-   **SqlNotificationRequest**不能與針對內容連接執行的命令搭配使用。  
   
--   不支援取消針對內容連接執行的命令。 **SqlCommand.Cancel**方法會靜默忽略請求。  
+-   不支援取消針對內容連接執行的命令。 **SqlCommand. Cancel**方法會以無訊息方式忽略要求。  
   
 -   當您使用 "context connection=true" 時，無法使用其他連接字串關鍵字。  
   
--   如果**SqlConnect**的連接字串為「上下文連接_true」,[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]則**SqlConnect.DataSource**屬性傳回 null,而不是 實例的名稱。  
+-   如果**sqlconnection**的連接字串為 "coNtext connection = true"，而不是實例的名稱，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlconnection**屬性會傳回 null。  
   
--   設置**SqlCommand.CommandTimeout**屬性對上下文連接執行命令時不起作用。  
+-   在針對內容連接執行命令時，設定**CommandTimeout**屬性沒有作用。  
   
 ## <a name="restrictions-on-regular-connections"></a>一般連接的限制  
  開發應用程式時，請考慮下列適用於一般連接的限制：  
   
--   不支援針對內部伺服器執行非同步命令。 在命令的連接字串中包括"async_true",然後執行命令,會導致**系統。** 此訊息會顯示：「在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序內部執行時，不支援非同步處理」。  
+-   不支援針對內部伺服器執行非同步命令。 在命令的連接字串中包含 "async = true"，然後執行命令，會導致擲回**NotSupportedException** 。 此訊息會顯示：「在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序內部執行時，不支援非同步處理」。  
   
--   不支援**Sql 依賴**物件。  
+-   不支援**SqlDependency**物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [內容連接](../../../relational-databases/clr-integration/data-access/context-connection.md)  

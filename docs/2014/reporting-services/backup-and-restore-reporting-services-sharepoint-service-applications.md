@@ -1,5 +1,5 @@
 ---
-title: 備份和修復報告服務 共享點服務應用程式 |微軟文件
+title: 備份和還原 Reporting Services SharePoint 服務應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59e0de9e8ee6882b19939ef116ef4ac8023782ed
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487547"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
@@ -24,7 +24,7 @@ ms.locfileid: "81487547"
   
 -   [備份服務應用程式](#bkmk_backup)  
   
--   [回復服務應用程式](#bkmk_restore)  
+-   [還原服務應用程式](#bkmk_restore)  
   
 ##  <a name="before-you-begin"></a><a name="bkmk_BeforeYouBegin"></a> 開始之前  
   
@@ -75,9 +75,9 @@ ms.locfileid: "81487547"
 ### <a name="verify-execution-account-and-database-authentication"></a>驗證執行帳戶和資料庫驗證  
  **執行帳戶** ：若要驗證您的服務應用程式是否使用執行帳戶：  
   
-1.  在 SharePoint 管理中心中,單擊 **「在應用程式管理**組中**管理服務應用程式**」。  
+1.  在 SharePoint 管理中心內，按一下 [**應用程式管理**] 群組中的 [**管理服務應用程式**]。  
   
-2.  按一下服務應用程式的名稱,然後單擊 SharePoint 功能區中的 **「管理**」。  
+2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 [**管理**]。  
   
 3.  按一下 **[執行帳戶]**。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "81487547"
   
  **資料庫驗證** ：若要確認您的服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
   
-1.  在 SharePoint 管理中心中,單擊 **「在應用程式管理**組中**管理服務應用程式**」。  
+1.  在 SharePoint 管理中心內，按一下 [**應用程式管理**] 群組中的 [**管理服務應用程式**]。  
   
 2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "81487547"
   
 4.  如果設定了 Windows 驗證，則您必須知道認證，才能在還原之後設定服務應用程式。 如果不知道正確的認證，請不要進行備份和還原程序。  
   
-##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>回復服務應用程式  
+##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>還原服務應用程式  
  依序完成下列步驟：  
   
 1.  還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。  
@@ -130,9 +130,9 @@ ms.locfileid: "81487547"
 ### <a name="configure-the-execution-account-and-database-authentication"></a>設定執行帳戶和資料庫驗證  
  **執行帳戶** ：如果您的服務應用程式使用執行帳戶，請完成下列步驟設定該帳戶：  
   
-1.  在 SharePoint 管理中心中,單擊 **「在應用程式管理**組中**管理服務應用程式**」。  
+1.  在 SharePoint 管理中心內，按一下 [**應用程式管理**] 群組中的 [**管理服務應用程式**]。  
   
-2.  按一下服務應用程式的名稱,然後單擊 SharePoint 功能區中的 **「管理**」。  
+2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 [**管理**]。  
   
 3.  按一下 **[執行帳戶]**。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "81487547"
   
  **資料庫驗證** ：如果您的服務應用程式使用 Windows 驗證進行資料庫驗證，請完成下列步驟：  
   
-1.  在 SharePoint 管理中心中,單擊 **「在應用程式管理**組中**管理服務應用程式**」。  
+1.  在 [SharePoint 管理中心] 中，按一下 [管理**應用程式管理**群組中的**服務應用程式**]。  
   
 2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
@@ -152,6 +152,6 @@ ms.locfileid: "81487547"
   
 5.  輸入帳戶和密碼。 選取 **[當做 Windows 認證使用]** (如果適用)。  
   
-6.  單擊 **"確定"**  
+6.  按一下 [確定]  。  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 操作 UDT 資料 |微軟文件
-description: 本文介紹如何在 SQL Server 資料庫的 UDT 列中插入、選擇和更新數據。
+title: 操作 UDT 資料 |Microsoft Docs
+description: 本文描述如何在 SQL Server 資料庫的 UDT 資料行中插入、選取和更新資料。
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -30,10 +30,10 @@ ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486899"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>使用使用者定義型別 - 操作 UDT 資料
@@ -41,7 +41,7 @@ ms.locfileid: "81486899"
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 在修改使用者定義型別 (UDT) 資料行中的資料時，不會提供 INSERT、UPDATE 或 DELETE 陳述式的特定語法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函數可用來將原生資料類型轉換為 UDT 類型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>將資料插入 UDT 資料行  
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]語句將三行範例資料插入**到「點」** 表中。 **點**數據類型由 X 和 Y 整數值組成,這些值作為 UDT 的屬性公開。 您必須使用 CAST 或 CONVERT 函數將逗號分隔 X 和 Y 值轉換為**點**類型。 前兩個語句使用 CONVERT 函數將字串值轉換為**Point**類型,第三個語句使用 CAST 函數:  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會將三個範例資料列插入至**Points**資料表。 **Point**資料類型是由會公開為 UDT 屬性的 X 和 Y 整數值所組成。 您必須使用 CAST 或 CONVERT 函數，將以逗號分隔的 X 和 Y 值轉換為**Point**類型。 前兩個語句使用 CONVERT 函式，將字串值轉換為**Point**類型，而第三個語句則使用 CAST 函數：  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -56,7 +56,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 要查看以可讀格式顯示的輸出,請調用**Point** UDT 的**ToString**方法,該方法將值轉換為其字串表示形式。  
+ 若要查看以可讀取格式顯示的輸出，請呼叫**Point** UDT 的**ToString**方法，將值轉換為其字串表示。  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -83,7 +83,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **點**UDT 公開其 X 和 Y 座標作為屬性,然後您可以單獨選擇這些屬性。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式分別選取 X 及 Y 座標：  
+ **Point** UDT 會將其 X 和 Y 座標公開為屬性，然後您就可以個別選取。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式分別選取 X 及 Y 座標：  
   
 ```sql  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -101,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>使用變數  
- 使用變數時，可利用 DECLARE 陳述式將變數指派給 UDT 類型。 以下文句使用[!INCLUDE[tsql](../../includes/tsql-md.md)]SET 語句分配值,並透過在變數上調用 UDT 的**ToString**方法來顯示結果:  
+ 使用變數時，可利用 DECLARE 陳述式將變數指派給 UDT 類型。 下列語句會使用[!INCLUDE[tsql](../../includes/tsql-md.md)] SET 語句指派值，並藉由在變數上呼叫 UDT 的**ToString**方法來顯示結果：  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -130,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  使用 SELECT 與 SET 進行變數指派的差異在於，SELECT 可讓您在一個 SELECT 陳述式中指派多個變數，而 SET 語法要求每個變數指派都具有自己的 SET 陳述式。  
   
 ## <a name="comparing-data"></a>比較資料  
- 如果在定義類時將**IsByteOrdered**屬性設置為**true,** 則可以使用比較運算符比較 UDT 中的值。 有關詳細資訊,請參閱[建立使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)。  
+ 如果您在定義類別時，將**IsByteOrdered**屬性設定為**true** ，則可以使用比較運算子來比較 UDT 中的值。 如需詳細資訊，請參閱[建立使用者定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)別。  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Points   
@@ -138,7 +138,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- 如果值本身是可比的,則可以比較 UDT 的內部值,而不考慮**IsByteOrdered**設置。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式選取 X 大於 Y 的資料列：  
+ 如果值本身是可比較的，您可以比較 UDT 的內部值，不論**IsByteOrdered**設定為何。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式選取 X 大於 Y 的資料列：  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -157,9 +157,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>叫用 UDT 方法  
- 您也可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中叫用 UDT 中定義的方法。 **點**類別包含三種方法:**距離**,**距離**與**距離距離 XY。** 有關定義這三種方法的代碼清單,請參閱[編寫使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
+ 您也可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中叫用 UDT 中定義的方法。 **Point**類別包含三個方法：**距離**、 **DistanceFrom**和**DistanceFromXY**。 如需定義這三種方法的程式代碼清單，請參閱[編碼使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]語句調用**PointValue.距離**方法:  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會呼叫**PointValue**方法：  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -168,7 +168,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 結果顯示在 **「距離**」欄中:  
+ 結果會顯示在 [**距離**] 資料行中：  
   
 ```  
 ID X  Y  Distance  
@@ -178,7 +178,7 @@ ID X  Y  Distance
  3  1 99 99.0050503762308  
 ```  
   
- **"距離'** 方法採用**點**資料類型的參數,並顯示從指定點到點值的距離:  
+ **DistanceFrom**方法會接受**Point**資料類型的引數，並顯示從指定點到 PointValue 的距離：  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -186,7 +186,7 @@ SELECT ID, PointValue.ToString() AS Pnt,
 FROM dbo.Points;  
 ```  
   
- 結果顯示表中每行的 **「距離」** 方法的結果:  
+ 結果會針對資料表中的每個資料列顯示**DistanceFrom**方法的結果：  
   
 ```  
 ID Pnt DistanceFromPoint  
@@ -196,7 +196,7 @@ ID Pnt DistanceFromPoint
  3 1,9                90  
 ```  
   
- **距離從XY方法**將點單獨作為參數:  
+ **DistanceFromXY**方法會將點個別視為引數：  
   
 ```sql  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -204,7 +204,7 @@ PointValue.DistanceFromXY(1, 99) AS DistanceFromXY
 FROM dbo.Points  
 ```  
   
- 結果集與 **「距離」** 方法相同。  
+ 結果集與**DistanceFrom**方法相同。  
   
 ## <a name="updating-data-in-a-udt-column"></a>更新 UDT 資料行中的資料  
  若要更新 UDT 資料行中的資料，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE 陳述式。 您還可以使用 UDT 的方法，以更新物件的狀態。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會更新資料表中的單一資料列：  
@@ -223,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- 如果 UDT 已定義位元組排**true**序設定[!INCLUDE[tsql](../../includes/tsql-md.md)]為 true , 則可以在 WHERE 子句中評估 UDT 列。  
+ 如果 UDT 已定義為將 byte 順序設定為**true**， [!INCLUDE[tsql](../../includes/tsql-md.md)]就可以在 WHERE 子句中評估 udt 資料行。  
   
 ```sql  
 UPDATE dbo.Points  
