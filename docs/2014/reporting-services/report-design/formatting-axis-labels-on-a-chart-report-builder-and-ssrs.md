@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 446c45c22e664f1dae981e8219c3289aeadb783f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176778"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "78176778"
 ## <a name="types-of-axes"></a>軸的類型
  圖表有兩種主要的軸：值軸和類別目錄軸。
 
- ![圖表的類別目錄軸與值軸](../media/rsaxes-categorical-vs-value.gif "圖表類別與數值座標軸")
+ ![圖表的類別目錄軸與值軸](../media/rsaxes-categorical-vs-value.gif "圖表的類別目錄軸與值軸")
 
  當您將欄位從資料集拖曳到圖表介面上時，圖表會決定這個欄位是屬於類別目錄軸或值軸。
 

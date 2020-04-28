@@ -15,21 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176197"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
   如 [腳本元件的程式碼撰寫和偵錯工具] （.）中所述。/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，腳本元件專案包含三個專案專案：
 
-1.  
-  `ScriptMain` 項目，其中包含您用來撰寫程式碼的 `ScriptMain` 類別。 
-  `ScriptMain` 類別繼承自 `UserComponent` 類別。
+1.  `ScriptMain` 項目，其中包含您用來撰寫程式碼的 `ScriptMain` 類別。 `ScriptMain` 類別繼承自 `UserComponent` 類別。
 
-2.  包含 `ComponentWrapper` 類別的 `UserComponent` 項目，該類別是 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 的執行個體 (其中包含您將用來處理資料以及與封裝互動的方法和屬性)。 
-  `ComponentWrapper` 項目也包含 `Connections` 和 `Variables` 集合類別。
+2.  包含 `ComponentWrapper` 類別的 `UserComponent` 項目，該類別是 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 的執行個體 (其中包含您將用來處理資料以及與封裝互動的方法和屬性)。 `ComponentWrapper` 項目也包含 `Connections` 和 `Variables` 集合類別。
 
 3.  包含類別的 `BufferWrapper` 項目，該類別繼承自每一個輸入和輸出的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 及每一個資料行的具類型屬性。
 
@@ -125,8 +122,7 @@ public override void PreExecute()
 -   取得下一個輸入資料列的 `NextRow` 函數，以及判斷上一個資料緩衝區是否已經處理的 `EndOfRowset` 函數。 當您使用 `UserComponent` 基底類別內所實作的輸入處理方法時，通常不需要這些函數。 下一節會提供有關 `UserComponent` 基底類別的詳細資訊。
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 專案項目提供的內容
- ComponentWrapper 專案項目包含了衍生自 `UserComponent` 的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 類別。 接著您撰寫自訂程式碼所使用的 `ScriptMain` 類別就會衍生自 `UserComponent`。 
-  `UserComponent` 類別包含以下的方法：
+ ComponentWrapper 專案項目包含了衍生自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 的 `UserComponent` 類別。 接著您撰寫自訂程式碼所使用的 `ScriptMain` 類別就會衍生自 `UserComponent`。 `UserComponent` 類別包含以下的方法：
 
 -   已覆寫的 `ProcessInput` 方法實作。 這是資料流程引擎在執行階段的 `PreExecute` 方法之後所呼叫的方法，而且它可呼叫多次。 `ProcessInput`將處理交給** \<inputbuffer>_ProcessInput**方法。 然後 `ProcessInput` 方法會檢查輸入緩衝區的結尾，如果到達了緩衝區結尾，會呼叫可覆寫的 `FinishOutputs` 方法和私用 `MarkOutputsAsFinished` 方法。 然後 `MarkOutputsAsFinished` 方法會在最後一個輸出緩衝區上呼叫 `SetEndOfRowset`。
 
@@ -143,8 +139,7 @@ public override void PreExecute()
 
 -   如果您必須在關閉輸出以前先對輸出做某些事，請覆寫 `FinishOutputs`。
 
- 
-  `ProcessInput` 方法可確保這些方法會在適當的時間呼叫。
+ `ProcessInput` 方法可確保這些方法會在適當的時間呼叫。
 
 ### <a name="processing-outputs"></a>處理輸出
  設定為來源或轉換的指令碼元件有一個或多個輸出。
@@ -161,12 +156,9 @@ public override void PreExecute()
 -   可讓資料流程引擎知道不會預期其他資料緩衝區的 `SetEndOfRowset` 方法。 也有一個 `EndOfRowset` 函數可判斷目前的緩衝區是否為最後一個資料緩衝區。 當您使用 `UserComponent` 基底類別內所實作的輸入處理方法時，通常不需要這些函數。
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 專案項目提供的內容
- ComponentWrapper 專案項目包含了衍生自 `UserComponent` 的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 類別。 接著您撰寫自訂程式碼所使用的 `ScriptMain` 類別就會衍生自 `UserComponent`。 
-  `UserComponent` 類別包含以下的方法：
+ ComponentWrapper 專案項目包含了衍生自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 的 `UserComponent` 類別。 接著您撰寫自訂程式碼所使用的 `ScriptMain` 類別就會衍生自 `UserComponent`。 `UserComponent` 類別包含以下的方法：
 
--   已覆寫的 `PrimeOutput` 方法實作。 資料流程引擎會在執行階段的 `ProcessInput` 之前呼叫這個方法，而且只會呼叫一次。 
-  `PrimeOutput` 會將處理交給 `CreateNewOutputRows` 方法。 然後，如果此元件是來源 (也就是此元件沒有輸入)，`PrimeOutput` 會呼叫可覆寫的 `FinishOutputs` 方法和私用 `MarkOutputsAsFinished` 方法。 
-  `MarkOutputsAsFinished` 方法會在最後一個輸出緩衝區上呼叫 `SetEndOfRowset`。
+-   已覆寫的 `PrimeOutput` 方法實作。 資料流程引擎會在執行階段的 `ProcessInput` 之前呼叫這個方法，而且只會呼叫一次。 `PrimeOutput` 會將處理交給 `CreateNewOutputRows` 方法。 然後，如果此元件是來源 (也就是此元件沒有輸入)，`PrimeOutput` 會呼叫可覆寫的 `FinishOutputs` 方法和私用 `MarkOutputsAsFinished` 方法。 `MarkOutputsAsFinished` 方法會在最後一個輸出緩衝區上呼叫 `SetEndOfRowset`。
 
 -   可覆寫的 `CreateNewOutputRows` 方法實作。 預設的實作是空的。 這是您通常會覆寫，以撰寫自訂資料處理程式碼的方法。
 
@@ -177,8 +169,7 @@ public override void PreExecute()
 
 -   如果您必須在關閉輸出以前先對輸出做某些事，請覆寫 `FinishOutputs`。
 
- 
-  `PrimeOutput` 方法可確保這些方法會在適當的時間呼叫。
+ `PrimeOutput` 方法可確保這些方法會在適當的時間呼叫。
 
 ## <a name="postexecute-method"></a>PostExecute 方法
  每當您的處理必須只能在處理資料列之後執行一次時，請覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> 基底類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 例如在來源中，您可能會想要關閉已經用來將資料載入資料流程中的 `System.Data.SqlClient.SqlDataReader`。

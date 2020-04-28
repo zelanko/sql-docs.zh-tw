@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 843c5e8cbb857271d4cbd07288e24bfbd98019e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176618"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
@@ -41,7 +41,7 @@ ms.locfileid: "78176618"
 3.  在您的程式碼中，使用連接`DtsClient.DtsConnection`字串建立類型的物件，其中包含**dtexec**執行封裝所需的命令列參數。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。 然後使用此連接字串開啟連接。 您也可以使用 **dtexecui** 公用程式，以視覺化方式建立所需的連接字串。
 
     > [!NOTE]
-    >  範例程式碼透過使用 `/FILE <path and filename>` 語法示範從檔案系統載入封裝。 不過，您也可以使用 `/SQL <package name>` 語法從 MSDB 資料庫載入封裝，或是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 語法從 `/DTS \<folder name>\<package name>` 封裝存放區載入。
+    >  範例程式碼透過使用 `/FILE <path and filename>` 語法示範從檔案系統載入封裝。 不過，您也可以使用 `/SQL <package name>` 語法從 MSDB 資料庫載入封裝，或是使用 `/DTS \<folder name>\<package name>` 語法從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝存放區載入。
 
 4.  建立類型為 `DtsClient.DtsCommand` 的物件，以使用先前建立的 `DtsConnection` 並將其 `CommandText` 屬性設定為封裝中的 DataReader 目的地名稱。 然後呼叫命令物件的 `ExecuteReader` 方法，將封裝結果載入新的 DataReader。
 

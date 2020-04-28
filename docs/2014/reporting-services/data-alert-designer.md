@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 47640a086ab85d0cb150bef66881684e2a9a774a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177018"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
@@ -44,11 +44,11 @@ ms.locfileid: "78177018"
 > [!NOTE]
 >  由於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能只有在您安裝 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時才可使用，因此要建立其警示的報表必須儲存、部署或上傳到 SharePoint 文件庫。
 > 
->  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱[指定報表資料來源的認證和連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。
+>  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。
 
  若要開啟 [資料警示設計工具]，請在報表工具列上按一下 [動作]**** 功能表上的 [新資料警示]**** 選項。 如果您看不見 [新資料警示]**** 選項，表示報表未設定為使用預存認證。 您可以藉由從 SharePoint 文件庫更新報表資料來源的方式更新認證類型。
 
-##  <a name="AlertDesigner"></a>資料警示設計工具使用者介面
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> 資料警示設計工具使用者介面
  [資料警示設計工具] 分成下列幾個區域。 選取報表資料摘要的區域、將規則加入條件中以建立簡單或複雜條件的區域等。 下圖顯示 [資料警示設計工具] 中的區域。
 
  ![警示設計工具使用者介面中的區域](media/rs-alertdesigner.gif "警示設計工具使用者介面中的區域")
@@ -61,8 +61,7 @@ ms.locfileid: "78177018"
 
  如果報表已參數化，而您未在報表資料摘要中看見預期的資料和資料行，請使用適當的參數值重新執行報表。 資料行和值必須出現在報表內，才會包含在資料摘要中。
 
- 根據報表的配置而定，可能不容易了解報表擁有的資料摘要數目，或者哪一個資料摘要中包括哪些資料。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Atom 轉譯延伸模組會產生您搭配警示使用的資料摘要。 Atom 轉譯延伸模組會將報表資料提供為扁平化資料列集，也就是採用所有資料行擁有相同資料列數的表格格式提供。 這些資料列集就是資料摘要的內容。 由於報表配置時常相當複雜，且包含多個對等或巢狀資料區，因此需要多個資料摘要才能提供所有報表資料。 如需如何從報表產生資料摘要的詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)，並參閱[從報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。
+ 根據報表的配置而定，可能不容易了解報表擁有的資料摘要數目，或者哪一個資料摘要中包括哪些資料。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Atom 轉譯延伸模組會產生您搭配警示使用的資料摘要。 Atom 轉譯延伸模組會將報表資料提供為扁平化資料列集，也就是採用所有資料行擁有相同資料列數的表格格式提供。 這些資料列集就是資料摘要的內容。 由於報表配置時常相當複雜，且包含多個對等或巢狀資料區，因此需要多個資料摘要才能提供所有報表資料。 如需如何從報表產生資料摘要的詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)，並參閱[從報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。
 
  當您選擇資料摘要時，摘要中的資料會在 [資料警示設計工具] 的 [警示資料] 窗格中，顯示為具有資料列和資料行的資料表。 來自報表所使用資料來源或報表本身所指定資料行名稱和資料摘要的中繼資料，會填入您在資料條件中用來定義規則的欄位清單。 資料摘要還會提供中繼資料，像是限制值的資料表資料行之資料類型，以及您建立規則時在欄位中使用的比較運算子。
 
@@ -82,7 +81,7 @@ ms.locfileid: "78177018"
 
  規則可包含零個、一個或多個子句。 多項規則會藉由 AND 邏輯運算子結合。 如果資料行為字串資料類型，則規則可以包含藉由 OR 運算子組合的多個子句。 以下說明僅使用一個子句的基本規則，使用 AND 運算子組合的多項規則，以及擁有一個或多個 OR 子句的多項規則。
 
- **簡單規則**
+ **簡單的規則**
 
 -   Net sales **大於** 100000
 
@@ -90,41 +89,41 @@ ms.locfileid: "78177018"
 
 -   Company Name **不是** Contoso
 
- **由 AND 運算子組合的規則**
+ **藉由 AND 運算子組合的規則**
 
 -   Sales **大於** 1500.00
 
-     **和**銷售單位**小於**500
+     **且** Units Sold **小於** 500
 
      Return date **早於** 1/1/2010
 
 -   Sales **大於或等於** 1500.00
 
-     **和**傳回日期**在1/1/2010 之後**
+     **且** Return date **晚於** 1/1/2010
 
-     **和**銷售**的單位大於**500
+     **且** Units Sold **大於** 500
 
 -   Promotion name **包含** Spring
 
      **且** Units Sold **大於** 500
 
-     **和**傳回**為**0
+     **且** Returns **是**  0
 
  **使用 OR 子句的規則**
 
 -   Last Name **是** Blythe
 
-     **或** Petulescu
+     **或**  Petulescu
 
-     **或** 馬明
+     **或**  Martin
 
 -   Return date **晚於** 1/1/2010
 
-     **和**銷售領域**為**中央
+     **且** Sales Territory **是**  Central
 
-     **或** 中南部
+     **或**  South
 
-     **或** 向
+     **或**  North
 
  根據欄位的資料類型而定，[資料警示設計工具] 會提供不同的比較。 [資料警示設計工具] 會為要比較其值之欄位的資料類型提供專屬的比較。 以下列出不同的資料類型可使用的比較。 規則中不支援 `Boolean` 資料類型。
 
@@ -165,13 +164,13 @@ ms.locfileid: "78177018"
 ### <a name="email-settings"></a>電子郵件設定
  您可在 [收件者]**** 選項中指定要接收資料警示訊息電子郵件之收件者的電子郵件地址。 多個電子郵件是以分號分隔，與 Microsoft Office Outlook 電子郵件中的方式相同。 您也可以指定通訊群組做為收件者，如此可讓管理收件者清單的工作更容易且更有效率。 如果建立警示定義時，SharePoint 可以判斷您的電子郵件地址，則您的電子郵件地址會自動加入收件者清單，否則您就必須明確將自己加入為收件者。
 
- 預設的電子郵件主旨為 [**警示名稱> 的資料警示]\<**。 您可以依需要變更主旨。
+ 預設的電子郵件主旨為 [\<警示名稱> 的資料警示]****。 您可以依需要變更主旨。
 
  您也可以在 [描述]**** 選項中提供要包含在資料警示訊息中的描述。 包含描述 (尤其是擁有類似的資料警示時) 有助於迅速區分和了解警示訊息。 除了在報表資料滿足指定的規則時傳送的警示訊息之外，警示訊息還會在發生錯誤時傳送至所有收件者。 如需相關資訊，請參閱 [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md)。
 
  如需如何產生電子郵件的詳細資訊，請參閱 [Reporting Services 資料警示](../ssms/agent/alerts.md)。
 
-##  <a name="CreateAlert"></a>建立資料警示定義
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> 建立資料警示定義
  如果您擁有「SharePoint 檢視項目」和「建立提醒」權限，只要報表使用預存認證或不使用認證，您就可以為任何可以檢視的報表建立資料警示定義。 您會從 SharePoint 文件庫執行報表。 您可在 [資料警示設計工具] 中使用的資料是來自該報表。 如果報表已參數化，您可能需要使用不同的參數值來執行報表，以確保您想要的資料會出現在報表中。 報表開啟之後，在報表工具列上按一下 [動作]**** 功能表上的 [新資料警示]**** 選項，開啟 [資料警示設計工具]。 下圖說明如何開啟 [資料警示設計工具]。
 
  ![從 SharePoint 文件庫開啟警示設計工具](media/rs-openalertdesigneriw.gif "從 SharePoint 文件庫開啟警示設計工具")
@@ -179,7 +178,7 @@ ms.locfileid: "78177018"
  如需詳細資訊，請參閱 [在資料警示設計工具中建立資料警示](create-a-data-alert-in-data-alert-designer.md)。
 
 
-##  <a name="SaveAlert"></a>儲存資料警示定義
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> 儲存資料警示定義
  [資料警示設計工具] 會顯示將儲存資料警示定義的目標網站 URL。 資料警示定義會固定儲存到報表所在的網站。
 
 > [!NOTE]
@@ -188,17 +187,17 @@ ms.locfileid: "78177018"
  警示定義儲存之前，會先進行驗證。 您必須先更正所有錯誤，才能成功儲存警示定義。 如需詳細資訊，請參閱 [在資料警示設計工具中建立資料警示](create-a-data-alert-in-data-alert-designer.md)。
 
 
-##  <a name="EditAlert"></a>編輯資料警示定義
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> 編輯資料警示定義
  儲存資料警示定義之後，您就可以在 [資料警示設計工具] 中再次開啟該警示定義並進行編輯。 您可以加入、變更或刪除規則和子句，以及變更排程和電子郵件設定。 如果警示使用的報表資料摘要已變更，而且不再提供警示規則參考的欄位，或是欄位的資料類型或其他中繼資料已變更，則警示定義就不再有效，您必須修正它，才能再次儲存。 如果您想要使用不同的資料摘要，則必須建立新的警示定義。
 
  若要編輯資料警示定義，請在 [資料警示管理員] 中以滑鼠右鍵按一下該資料警示定義，然後按一下 [編輯]****。 下圖說明 [資料警示管理員] 中資料警示的內容功能表。
 
- ![按一下編輯，開啟資料警示設計工具](media/rs-alertmanageriwopendesigner.gif "按一下編輯，開啟資料警示設計工具")
+ ![按一下 [編輯] 來開啟資料警示設計工具](media/rs-alertmanageriwopendesigner.gif "按一下 [編輯] 來開啟資料警示設計工具")
 
  如需詳細資訊，請參閱 [在警示設計工具中編輯資料警示](edit-a-data-alert-in-alert-designer.md)。
 
 
-##  <a name="HowTo"></a> 相關工作
+##  <a name="related-tasks"></a><a name="HowTo"></a> 相關工作
  本節列出如何建立和編輯警示的程序。
 
 -   [在警示設計工具中編輯資料警示](edit-a-data-alert-in-alert-designer.md)

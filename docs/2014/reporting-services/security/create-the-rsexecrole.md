@@ -13,16 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e3717bb9af98c9f3231115a7bad4cc8639998d1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177099"
 ---
 # <a name="create-the-rsexecrole"></a>建立 RSExecRole
-  
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用稱為 `RSExecRole` 之預先定義的資料庫角色，授與報表伺服器對於報表伺服器資料庫的權限。 
-  `RSExecRole` 角色會自動與報表伺服器資料庫一起建立。 您絕對不能修改它或是將其他使用者指派給這個角色，這是一般的規則。 不過，當您將報表伺服器資料庫移至新的或不同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的時，必須在 Master 和 MSDB 系統資料庫中重新建立該角色。
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用稱為 `RSExecRole` 之預先定義的資料庫角色，授與報表伺服器對於報表伺服器資料庫的權限。 `RSExecRole` 角色會自動與報表伺服器資料庫一起建立。 您絕對不能修改它或是將其他使用者指派給這個角色，這是一般的規則。 不過，當您將報表伺服器資料庫移至新的或不同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的時，必須在 Master 和 MSDB 系統資料庫中重新建立該角色。
 
  使用下列指示執行下列步驟：
 
@@ -66,7 +64,7 @@ ms.locfileid: "78177099"
 
 8.  在 [**角色名稱**] `RSExecRole`中，輸入。
 
-9. 在 [**擁有**者] 中輸入**DBO**。
+9. 在 **[擁有者]** 中輸入 **DBO**。
 
 10. 按一下 **[安全性實體]**。
 
@@ -94,10 +92,9 @@ ms.locfileid: "78177099"
 
 19. 在 **[Execute]** 資料列中，按一下 **[授與]** 資料行內的核取方塊，然後按一下 **[確定]**。
 
-20. 針對每個剩餘的預存程序重複此步驟。 
-  `RSExecRole` 必須針對所有三個預存程序授與「執行」權限。
+20. 針對每個剩餘的預存程序重複此步驟。 `RSExecRole` 必須針對所有三個預存程序授與「執行」權限。
 
- ![資料庫角色屬性頁面](../media/rsexecroledbproperties.gif "資料庫角色屬性頁面")
+ ![[資料庫角色屬性] 頁面](../media/rsexecroledbproperties.gif "[資料庫角色屬性] 頁面")
 
 ## <a name="create-rsexecrole-in-msdb"></a>在 MSDB 資料庫中建立 RSExecRole
  Reporting Services 會使用適用於 SQL Server Agent 服務的預存程序，並從系統資料表擷取作業資訊來支援排程作業。 下列步驟說明如何將這些程序的 Execute 權限及資料表的 Select 權限授與給 RSExecRole。
@@ -120,8 +117,7 @@ ms.locfileid: "78177099"
 
 8.  按一下 **[安全性實體]**。
 
-9. 按一下 [新增]  。 
-  **[加入物件]** 對話方塊隨即出現。 預設會選取 **[指定物件]** 選項。
+9. 按一下 **[新增]** 。 **[加入物件]** 對話方塊隨即出現。 預設會選取 **[指定物件]** 選項。
 
 10. 按一下 [確定]  。
 
@@ -131,7 +127,7 @@ ms.locfileid: "78177099"
 
 13. 按一下 [確定]  。
 
-14. 按一下 **[瀏覽]** 。
+14. 按一下 [瀏覽]****。
 
 15. 向下捲動項目的清單，並選取以下項目：
 
@@ -163,8 +159,7 @@ ms.locfileid: "78177099"
 
 19. 針對每個剩餘的預存程序重複此步驟。 必須針對所有的十個預存程序為 RSExecRole 授與 Execute 權限。
 
-20. 在 [安全性實體] 索引標籤上，再次按一下 **[加入]** 。 
-  **[加入物件]** 對話方塊隨即出現。 預設會選取 **[指定物件]** 選項。
+20. 在 [安全性實體] 索引標籤上，再次按一下 **[加入]** 。 **[加入物件]** 對話方塊隨即出現。 預設會選取 **[指定物件]** 選項。
 
 21. 按一下 [確定]  。
 
@@ -174,7 +169,7 @@ ms.locfileid: "78177099"
 
 24. 按一下 [確定]  。
 
-25. 按一下 **[瀏覽]** 。
+25. 按一下 [瀏覽]****。
 
 26. 向下捲動項目的清單，並選取以下項目：
 
@@ -212,7 +207,7 @@ ms.locfileid: "78177099"
 
 5.  輸入 Database Engine 的伺服器名稱。 如果您將報表伺服器資料庫附加到具名執行個體，您應該使用以下格式鍵入此執行個體名稱：\<伺服器名稱>\\<執行個體名稱\>。
 
-6.  按一下 **[測試連接]** 。
+6.  按一下 **[測試連接]**。
 
 7.  按 [下一步]  。
 
@@ -222,7 +217,7 @@ ms.locfileid: "78177099"
 
 10. 按一下 **[加密金鑰]**。
 
-11. 按一下 [還原]****。
+11. 按一下 [**還原**]。
 
 12. 選取具有對稱金鑰之備份副本 (用來解密預存認證) 及報表伺服器資料庫中之連接資訊的強式檔案 (.snk)。
 

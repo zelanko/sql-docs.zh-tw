@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177288"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>工作 14：將執行 SQL 工作加入到控制流程，為 MDS 執行預存程序
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>工作 14：將執行 SQL 工作新增至控制流程，為 MDS 執行預存程序
   將資料載入 MDS 的暫存資料表之後，您會執行與該資料表有關的預存程序，將暫存中的資料載入 MDS 資料庫中的適當資料表。 這個預存程序具有您必須傳遞的兩個必要參數：LogFlag 和 VersionName。 LogFlag 會指定暫存處理序期間所記錄的交易，而 VersionName 則代表模型的版本。 如需詳細資訊，請參閱[分段預存](https://msdn.microsoft.com/library/hh231028.aspx)程式主題。
 
  在這項工作中，您會將「執行 SQL 工作」加入至控制流程來叫用預存程序，以便將暫存資料載入至適當的 MDS 資料表。
@@ -71,6 +71,6 @@ ms.locfileid: "78177288"
 15. 按一下 **[確定]** 以關閉 [**執行 SQL 編輯器**] 對話方塊。
 
 ## <a name="next-step"></a>後續步驟
- [工作 15：建立和執行 SSIS 專案](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
+ [工作 15：建置及執行 SSIS 專案](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
 
 

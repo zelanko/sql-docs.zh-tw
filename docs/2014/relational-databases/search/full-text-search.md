@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176838"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
@@ -27,12 +27,12 @@ ms.locfileid: "78176838"
 > [!NOTE]
 >  全文檢索搜尋是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的選擇性元件。 如需詳細資訊，請參閱[Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)。
 
-##  <a name="benefits"></a>我可以使用全文檢索搜尋來做什麼？
- 全文檢索搜尋適用于各種商務案例，例如電子商務-搜尋網站上的專案;法律公司-在法律資料存放庫中搜尋案例記錄;或人力資源部門-比對工作描述與預存繼續。 不論商務案例為何，全文檢索搜尋的基本管理和開發工作都是相同的。 不過，在給定的商務案例中，可能會調整全文檢索索引和查詢來符合商務目標。 例如，對於電子商務而言，發揮最佳效能可能會比排序結果等級、重新叫用精確度 (全文檢索查詢實際傳回的現有相符項目數) 或支援多國語言更重要。 對於律師事務所而言，傳回每個可能的叫用 (資訊的 *「重新叫用總數」*(Total Recall)) 可能是最重要的考量。
+##  <a name="what-can-i-do-with-full-text-search"></a><a name="benefits"></a>我可以使用全文檢索搜尋來做什麼？
+ 全文檢索搜尋適用于各種商務案例，例如電子商務-搜尋網站上的專案;法律公司-在法律資料存放庫中搜尋案例記錄;或人力資源部門-比對工作描述與預存繼續。 不論商務案例為何，全文檢索搜尋的基本管理和開發工作都是相同的。 不過，在給定的商務案例中，可能會調整全文檢索索引和查詢來符合商務目標。 例如，對於電子商務而言，發揮最佳效能可能會比排序結果等級、重新叫用精確度 (全文檢索查詢實際傳回的現有相符項目數) 或支援多國語言更重要。 對於律師事務所而言，傳回每個可能的叫用 (資訊的 *「重新叫用總數」* (Total Recall)) 可能是最重要的考量。
 
  [本主題內容](#top)
 
-###  <a name="queries"></a>全文檢索搜尋查詢
+###  <a name="full-text-search-queries"></a><a name="queries"></a>全文檢索搜尋查詢
  將資料行加入至全文檢索索引之後，使用者和應用程式即可針對資料行中的文字執行全文檢索查詢。 這些查詢可以搜尋下列任何項目：
 
 -   一或多個特定的單字或片語 (*「不可分割的詞彙」*(Simple Term))
@@ -74,16 +74,15 @@ ms.locfileid: "78176838"
 
  [本主題內容](#top)
 
-###  <a name="like"></a>比較 LIKE 與全文檢索搜尋
- 相對於全文檢索搜尋， [LIKE](/sql/t-sql/language-elements/like-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]述詞僅適用于字元模式。 您也無法使用 LIKE 述詞來查詢格式化的二進位資料。 此外，針對大量非結構化文字資料執行 LIKE 查詢的速度會比針對相同資料執行對等全文檢索查詢的速度要慢很多。 對於數百萬列的資料，使用 LIKE 查詢時可能要好幾分鐘才能傳回搜尋結果，但是使用全文檢索查詢時可能只要幾秒鐘的時間 (視傳回的資料列數目而定)。
+###  <a name="comparing-like-to-full-text-search"></a><a name="like"></a>比較 LIKE 與全文檢索搜尋
+ 相較於全文檢索搜尋， [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 述詞只能針對字元模式運作。 您也無法使用 LIKE 述詞來查詢格式化的二進位資料。 此外，針對大量非結構化文字資料執行 LIKE 查詢的速度會比針對相同資料執行對等全文檢索查詢的速度要慢很多。 對於數百萬列的資料，使用 LIKE 查詢時可能要好幾分鐘才能傳回搜尋結果，但是使用全文檢索查詢時可能只要幾秒鐘的時間 (視傳回的資料列數目而定)。
 
  [本主題內容](#top)
 
-##  <a name="architecture"></a>全文檢索搜尋的元件和架構
+##  <a name="components-and-architecture-of-full-text-search"></a><a name="architecture"></a>全文檢索搜尋的元件和架構
  全文檢索搜尋架構是由下列處理序所組成：
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序 (sqlservr.exe)。
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序 (sqlservr.exe)。
 
 -   篩選背景程式主機處理序 (fdhost.exe)。
 
@@ -95,9 +94,8 @@ ms.locfileid: "78176838"
 
  [本主題內容](#top)
 
-###  <a name="sqlprocess"></a>SQL Server 進程
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序會使用全文檢索搜尋的下列元件：
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a>SQL Server 進程
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序會使用全文檢索搜尋的下列元件：
 
 -   **使用者資料表。** 這些資料表包含要進行全文檢索索引的資料。
 
@@ -109,8 +107,7 @@ ms.locfileid: "78176838"
 
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查詢處理器。** 查詢處理器會編譯並執行 SQL 查詢。 如果某個 SQL 查詢包含全文檢索搜尋查詢，該查詢就會在編譯和執行期間傳送至全文檢索引擎。 系統會針對全文檢索索引比對查詢結果。
 
--   **全文檢索引擎。** 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的全文檢索引擎現在已經與查詢處理器完全整合了。 全文檢索引擎會編譯並執行全文檢索查詢。 在查詢執行期間，全文檢索引擎可能會收到來自同義字和停用字詞表的輸入。
+-   **全文檢索引擎。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的全文檢索引擎現在已經與查詢處理器完全整合了。 全文檢索引擎會編譯並執行全文檢索查詢。 在查詢執行期間，全文檢索引擎可能會收到來自同義字和停用字詞表的輸入。
 
 -   **索引寫入器 (索引子)。** 索引寫入器會建立用來儲存索引 Token 的結構。
 
@@ -118,7 +115,7 @@ ms.locfileid: "78176838"
 
  [本主題內容](#top)
 
-###  <a name="fdhostprocess"></a>篩選背景程式主機進程
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a>篩選背景程式主機進程
  篩選背景程式主機是全文檢索引擎所啟動的處理序。 它會執行下列全文檢索搜尋元件，而這些元件會負責存取、篩選和斷詞處理資料表的資料，以及斷詞處理和詞幹分析查詢輸入。
 
  篩選背景程式主機的元件如下所示：
@@ -131,10 +128,10 @@ ms.locfileid: "78176838"
 
  [本主題內容](#top)
 
-##  <a name="processing"></a>全文檢索搜尋處理
+##  <a name="full-text-search-processing"></a><a name="processing"></a>全文檢索搜尋處理
  全文檢索搜尋是由全文檢索引擎所提供。 此全文檢索引擎扮演兩個角色：索引支援和查詢支援。
 
-###  <a name="indexing"></a>全文檢索索引進程
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a>全文檢索索引進程
  全文檢索擴展 (也就是搜耙) 起始時，全文檢索引擎會將大批的資料發送至記憶體中，並通知篩選背景程式主機。 此主機會針對資料進行篩選並斷詞，並且將轉換的資料轉換成反向字詞清單。 然後，全文檢索搜尋會從這些字詞清單中提取轉換的資料、處理資料以便移除停用字詞，並且將批次的字詞清單保存在一或多個反向索引中。
 
  為`varbinary(max)`或`image`資料行中儲存的資料編制索引時，會執行**IFilter**介面的篩選準則會根據該資料的指定檔案格式（例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] Word）來解壓縮文字。 在某些情況下，篩選元件需要將`varbinary(max)`、或`image`資料寫出至 filterdata 資料夾，而不是推送至記憶體中。
@@ -147,38 +144,35 @@ ms.locfileid: "78176838"
 
  [本主題內容](#top)
 
-###  <a name="querying"></a>全文檢索查詢進程
+###  <a name="full-text-querying-process"></a><a name="querying"></a>全文檢索查詢進程
  查詢處理器會將查詢的全文檢索部分傳遞至全文檢索引擎，以便進行處理。 全文檢索引擎會執行斷詞並選擇性地執行同義字展開、詞幹分析和停用字詞 (非搜尋字) 處理。 然後，查詢的全文檢索部分會以 SQL 運算子的形式表示，主要表示成資料流資料表值函式 (STVF)。 在查詢執行期間，這些 STVF 會存取反向索引來擷取正確的結果。 接著，這些結果會在此時傳回用戶端，或在傳回用戶端之前進一步處理。
 
  [本主題內容](#top)
 
-##  <a name="components"></a>全文檢索搜尋中的語言元件和語言支援
- 全文檢索搜尋幾乎支援 50 種不同的語言，例如英文、西班牙文、中文、日文、阿拉伯文、孟加拉文和印度文。 如需支援之全文檢索語言的完整清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。 全文檢索索引所包含的每個資料行都與 Microsoft Windows 地區設定識別碼 (LCID) 相關聯，而這個識別碼就等於全文檢索搜尋所支援的語言。 例如，LCID 1033 等於美式英文，而 LCID 2057 等於英式英文。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 針對每個支援的全文檢索語言提供了一些語言元件，可支援索引和查詢使用該語言所儲存的全文檢索資料。
+##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>全文檢索搜尋中的語言元件和語言支援
+ 全文檢索搜尋幾乎支援 50 種不同的語言，例如英文、西班牙文、中文、日文、阿拉伯文、孟加拉文和印度文。 如需支援之全文檢索語言的完整清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。 全文檢索索引所包含的每個資料行都與 Microsoft Windows 地區設定識別碼 (LCID) 相關聯，而這個識別碼就等於全文檢索搜尋所支援的語言。 例如，LCID 1033 等於美式英文，而 LCID 2057 等於英式英文。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 針對每個支援的全文檢索語言提供了一些語言元件，可支援索引和查詢使用該語言所儲存的全文檢索資料。
 
  語言特有的元件包含下列：
 
 -   **斷詞工具和字幹分析器。** 斷詞工具會根據給定語言的語彙規則來尋找文字分界 (*「斷詞」*(Word Breaking))。 每個斷詞工具都與針對相同語言進行動詞變化的字幹分析器相關聯。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md)。
 
--   **字詞.** 提供包含基本停用字詞 (也稱為非搜尋字) 集合的系統停用字詞表。 
-  *「停用字詞」* (Stopword) 是指無助於搜尋而且全文檢索查詢會忽略的單字。 以英文地區設定為例，"a"、"and"、"is" 和 "the" 都會被視為停用字詞。 一般而言，您必須設定一個或多個同義字檔案和停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。
+-   **停用字詞表。** 提供包含基本停用字詞 (也稱為非搜尋字) 集合的系統停用字詞表。 *「停用字詞」* (Stopword) 是指無助於搜尋而且全文檢索查詢會忽略的單字。 以英文地區設定為例，"a"、"and"、"is" 和 "the" 都會被視為停用字詞。 一般而言，您必須設定一個或多個同義字檔案和停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。
 
--   **同義字檔案。** 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也會針對每個全文檢索語言安裝同義字檔案，以及全域同義字檔案。 已安裝的同義字 (Thesaurus) 檔案基本上是空白的，但是您可以編輯它們，以便定義特定語言或商務狀況的同義字 (Synonym)。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](configure-and-manage-thesaurus-files-for-full-text-search.md)。
+-   **同義字檔案。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也會針對每個全文檢索語言安裝同義字檔案，以及全域同義字檔案。 已安裝的同義字 (Thesaurus) 檔案基本上是空白的，但是您可以編輯它們，以便定義特定語言或商務狀況的同義字 (Synonym)。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](configure-and-manage-thesaurus-files-for-full-text-search.md)。
 
--   **篩選器（Ifilter）。**  在 `varbinary(max)`、`image` 或 `xml` 資料類型資料行中，索引文件需要執行額外處理的篩選。 此篩選必須是文件類型 (.doc、.pdf、.xls 和 .xml 等等) 特有的。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)。
+-   **篩選 (iFilters)。**  在 `varbinary(max)`、`image` 或 `xml` 資料類型資料行中，索引文件需要執行額外處理的篩選。 此篩選必須是文件類型 (.doc、.pdf、.xls 和 .xml 等等) 特有的。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)。
 
  斷詞工具 (和字幹分析器) 與篩選會在篩選背景程式主機處理序 (fdhost.exe) 中執行。
 
  [本主題內容](#top)
 
-##  <a name="reltasks"></a> 相關工作
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作
 
 -   [全文檢索搜尋使用者入門](get-started-with-full-text-search.md)
 
 -   撰寫全文檢索查詢
 
-    -   [使用全文檢索搜尋查詢](query-with-full-text-search.md)
+    -   [使用全文檢索搜尋進行查詢](query-with-full-text-search.md)
 
     -   [使用 NEAR 搜尋靠近另一個單字的字詞](search-for-words-close-to-another-word-with-near.md)
 
@@ -218,7 +212,7 @@ ms.locfileid: "78176838"
 
     -   [將搜索所使用的斷詞工具還原為舊版](revert-the-word-breakers-used-by-search-to-the-previous-version.md)
 
-    -   [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)
+    -   [變更用於美式英文與英式英文的斷詞工具](change-the-word-breaker-used-for-us-english-and-uk-english.md)
 
     -   [使用自訂字典自訂斷詞工具行為](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)
 
@@ -236,7 +230,7 @@ ms.locfileid: "78176838"
 
  [本主題內容](#top)
 
-##  <a name="relcontent"></a> 相關內容
+##  <a name="related-content"></a><a name="relcontent"></a> 相關內容
 
 -   [全文檢索搜尋 DDL、函數、預存程序與檢視](../views/views.md)
 

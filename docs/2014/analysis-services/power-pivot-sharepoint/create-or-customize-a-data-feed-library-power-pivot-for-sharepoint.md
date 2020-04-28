@@ -14,14 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175637"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>建立或自訂資料摘要庫 (PowerPivot for SharePoint)
-  
   *「資料摘要庫」* (Data Feed Library) 是一種特殊用途的 SharePoint 文件庫，可讓您註冊與共用 Atom 資料服務文件 (.atomsvc)。 這些文件會提供 XML 資料摘要給支援 Atom 資料摘要格式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或其他用戶端應用程式。 資料摘要庫與其他 SharePoint 文件庫不同，因為它讓您能夠：
 
 -   建立或編輯 *「資料服務文件」*(Data service document)，用來指定特定摘要的 HTTP 連接。
@@ -38,15 +37,14 @@ ms.locfileid: "78175637"
 
  [建立新的資料摘要庫](#createlib)
 
- [將資料摘要內容類型新增至任何程式庫](#addtolib)
+ [將資料摘要庫內容類型加入至任何文件庫](#addtolib)
 
-##  <a name="prereq"></a> 必要條件
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合必須針對您要建立其資料摘要庫的網站啟用。 如果無法使用資料摘要庫範本類型，最可能的原因是不符合這項先決條件。 如需詳細資訊，請參閱為[管理中心的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。
+##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合必須針對您要建立其資料摘要庫的網站啟用。 如果無法使用資料摘要庫範本類型，最可能的原因是不符合這項先決條件。 如需詳細資訊，請參閱為[管理中心的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。
 
  您必須是網站擁有者，才能建立該文件庫。
 
-##  <a name="createlib"></a>建立新的資料摘要庫
+##  <a name="create-a-new-data-feed-library"></a><a name="createlib"></a>建立新的資料摘要庫
  建立資料摘要庫是為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿啟用資料摘要的第一個步驟。 資料摘要庫會提供資料服務文件的應用程式和管理頁面，因此您必須先將此摘要庫準備就緒，才能建立新文件。
 
  資料摘要庫的根據是內建範本與預先設定的 *「資料服務文件內容類型」* (Data service document content type)，此類型定義資料服務文件的屬性和行為。
@@ -59,13 +57,13 @@ ms.locfileid: "78175637"
 
 4.  輸入名稱、描述、啟動及版本喜好設定。 加入描述性資訊，以協助使用者將這個文件庫識別為資料服務文件的儲存位置。
 
-5.  按一下 **[建立]**。
+5.  按一下頁面底部的 [新增]  。
 
  資料摘要庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。
 
  建立文件庫之後，您可以使用它來建立資料服務文件。 如需詳細資訊，請參閱[使用資料摘要 &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。
 
-##  <a name="addtolib"></a>將資料摘要內容類型新增至任何程式庫
+##  <a name="add-the-data-feed-content-type-to-any-library"></a><a name="addtolib"></a>將資料摘要內容類型新增至任何程式庫
  如果您不要建立專用的資料摘要庫，但仍要從 SharePoint 網站建立及管理資料服務文件，則可以手動方式為要用來共用資料服務文件 (.atomsvc) 檔案的任何文件庫，加入並設定資料服務文件內容類型。
 
  您必須至少有「管理清單」權限，才能加入並設定內容類型。 此權限內建在「設計」權限等級以上 (含)。
@@ -78,7 +76,7 @@ ms.locfileid: "78175637"
 
 2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]**。
 
-3.  按一下 [設定]****。
+3.  按一下 [設定]  。
 
 4.  按一下 **[文件庫設定]**。
 

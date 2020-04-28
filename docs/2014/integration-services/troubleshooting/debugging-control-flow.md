@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176598"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
@@ -97,7 +97,7 @@ ms.locfileid: "78176598"
 
  下圖顯示 [進度]  索引標籤。
 
- ![SSIS 設計師的 [進度] 索引標籤](../media/mw-dtsflow04.gif "SSIS 設計師的進度索引標籤")
+ ![SSIS 設計師的 [進度] 索引標籤](../media/mw-dtsflow04.gif "SSIS 設計師的 [進度] 索引標籤")
 
 ## <a name="debug-windows"></a>偵錯視窗
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 包含許多視窗，您可將其用於處理中斷點及偵錯包含中斷點的封裝。 若要了解每個視窗的詳細資訊，請開啟該視窗並按 F1，以顯示視窗的 [說明]。
@@ -113,6 +113,6 @@ ms.locfileid: "78176598"
 |立即|用於偵錯及評估運算式並列印變數值。|
 
 ## <a name="see-also"></a>另請參閱
- [套件開發的疑難排解工具](troubleshooting-tools-for-package-development.md)
+ [疑難排解封裝開發的工具](troubleshooting-tools-for-package-development.md)
 
 

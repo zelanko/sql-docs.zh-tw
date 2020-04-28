@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175943"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
@@ -83,9 +83,8 @@ ms.locfileid: "78175943"
 
  背景執行緒會使用合併原則評估所有已關閉的 CFP，然後起始一項或多項對合格 CFP 的合併要求。 這些合併要求將由離線檢查點執行緒來處理。 系統會定期評估合併原則，以及在檢查點關閉時進行評估。
 
-### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]合併原則
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 實作以下合併原則：
+### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 合併原則
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 實作以下合併原則：
 
 -   在考量到已刪除的資料列之後，如果可以合併兩個或多個連續的 CFP，使其產生的資料列數能夠納入 1 個理想大小的 CFP，就會排程進行合併。 CFP 的理想大小會以下列方式決定：
 

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177348"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
@@ -49,9 +49,9 @@ ms.locfileid: "78177348"
 
 -   **Distributed Replay 管理工具**：主控台應用程式， `DReplay.exe`用來與 Distributed Replay controller 通訊。 您可以使用管理工具來控制分散式重新執行。
 
--   **Distributed Replay Controller**：執行 Windows 服務且名為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller 的電腦。 Distributed Replay Controller 可協調 Distributed Replay Client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。
+-   **Distributed Replay Controller**：執行 Windows 服務 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller) 的電腦。 Distributed Replay Controller 可協調 Distributed Replay Client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。
 
--   **Distributed Replay Client**：一或多部執行 Windows 服務且名為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Client 的 (實體或虛擬) 電腦。 Distributed Replay Client 會共同運作以模擬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的工作負載。 每個 Distributed Replay 環境中可以有一個或多個用戶端。
+-   **Distributed Replay Client**：一部或多部執行 Windows 服務 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Client) 的電腦 (實體或虛擬)。 Distributed Replay Client 會共同運作以模擬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的工作負載。 每個 Distributed Replay 環境中可以有一個或多個用戶端。
 
 -   **目標伺服器**：Distributed Replay Client 可用來重新執行追蹤資料的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 我們建議您將目標伺服器放置於測試環境中。
 

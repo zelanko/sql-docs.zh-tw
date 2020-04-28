@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175414"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>將記錄傳送升級至 SQL Server 2014 (Transact-SQL)
@@ -26,10 +26,10 @@ ms.locfileid: "78175414"
 >  [中所導入的＜](../../relational-databases/backup-restore/backup-compression-sql-server.md) 備份壓縮 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]＞。 升級的記錄傳送組態會使用 **備份壓縮預設** 伺服器層級組態選項，來控制備份壓縮是否會用於交易記錄備份檔案。 可以針對每一個記錄傳送組態來指定記錄備份的備份壓縮行為。 如需詳細資訊，請參閱[設定記錄傳送 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)。
 
 
-##  <a name="ProtectData"></a>在升級之前保護您的資料
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> 在升級之前保護資料
  我們建議的最佳做法是在升級記錄傳送之前先保護資料。
 
- **保護您的資料**
+ **保護資料**
 
 1.  在每一個主要資料庫上執行完整資料庫備份。
 
@@ -37,12 +37,12 @@ ms.locfileid: "78175414"
 
 2.  在每一個主要資料庫上執行 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) 命令。
 
-##  <a name="UpgradeMonitor"></a>升級監視伺服器實例
+##  <a name="upgrading-the-monitor-server-instance"></a><a name="UpgradeMonitor"></a>升級監視伺服器實例
  可以隨時升級監視伺服器執行個體 (如果有的話)。
 
  在升級監視伺服器時，記錄傳送組態會持續有效，但是監視器上的資料表中不會記錄它的狀態。 當升級監視伺服器時，將不會觸發任何已經設定的警示。 在升級之後，您可以執行 [sp_refresh_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql) 系統預存程序來更新監視資料表內的資訊。
 
-##  <a name="UpgradeSingleSecondary"></a>升級具有單一次要伺服器的記錄傳送設定
+##  <a name="upgrading-log-shipping-configurations-with-a-single-secondary-server"></a><a name="UpgradeSingleSecondary"></a>升級具有單一次要伺服器的記錄傳送設定
  本章節所述的升級程序假設組態是由主要伺服器以及只有一部次要伺服器所組成。 這個組態會在下圖中表示，其中顯示主要伺服器執行個體 A 及單一次要伺服器執行個體 B。
 
  ![一台次要伺服器，但是沒有監視伺服器](../media/ls-2-wayconfig-nomonitor.gif "一台次要伺服器，但是沒有監視伺服器")
@@ -50,7 +50,7 @@ ms.locfileid: "78175414"
  如需有關升級多部次要伺服器的詳細資訊，請參閱本主題稍後的＜ [升級多個次要伺服器執行個體](#MultipleSecondaries)＞。
  
 
-###  <a name="UpgradeSecondary"></a>升級次要伺服器實例
+###  <a name="upgrading-the-secondary-server-instance"></a><a name="UpgradeSecondary"></a>升級次要伺服器實例
  升級程序牽涉到先將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版記錄傳送組態的次要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，然後再升級主要伺服器執行個體。 一定要先升級次要伺服器執行個體。 如果在升級次要伺服器之前先升級主要伺服器，則記錄傳送將會失敗，因為在更新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上所建立的備份將無法在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上還原。
 
  記錄傳送會在整個升級過程中繼續，因為升級的次要伺服器會繼續從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版主要伺服器還原記錄備份。 升級次要伺服器執行個體的程序部分取決於記錄傳送組態是否會處理多部次要伺服器。 如需詳細資訊，請參閱本主題稍後的＜ [升級多個次要伺服器執行個體](#MultipleSecondaries)＞。
@@ -65,7 +65,7 @@ ms.locfileid: "78175414"
 > [!IMPORTANT]
 >  需要升級的資料庫不支援 RESTORE WITH STANDBY 選項。 如果已升級的次要資料庫已經使用 RESTORE WITH STANDBY 加以設定，升級之後無法再還原交易記錄。 若要繼續進行該次要資料庫上的記錄傳送，您需要在該部待命伺服器上再次設定記錄傳送。 如需待命選項的詳細資訊，請參閱[&#40;transact-sql&#41;還原引數](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。
 
-###  <a name="UpgradePrimary"></a>升級主伺服器實例
+###  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> 升級主要伺服器執行個體
  在規劃升級時，有一個極重要的考量就是無法使用資料庫的時間量。 最簡單的升級案例牽涉到當您升級主要伺服器時所無法使用的資料庫 (底下的案例 1)。
 
  您可以將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版主要伺服器容錯移轉到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 次要伺服器，然後再升級原始主要伺服器，藉此讓資料庫的可用性提升到最高，但這是一個需要耗費較多成本的複雜升級程序 (底下的案例 2)。 容錯移轉案例有兩種變化。 您可以切換回原始主要伺服器，並保留原始記錄傳送組態。 另外，您也可以在升級原始主要伺服器之前先移除原始記錄傳送組態，之後再使用新的主要伺服器建立新的組態。 本章節描述這兩種案例。
@@ -74,7 +74,7 @@ ms.locfileid: "78175414"
 >  在升級主要伺服器執行個體之前，請務必先升級次要伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [升級次要伺服器執行個體](#UpgradeSecondary)＞。
 
 
-####  <a name="Scenario1"></a>案例1：升級不具容錯移轉的主伺服器實例
+####  <a name="scenario-1-upgrade-primary-server-instance-without-failover"></a><a name="Scenario1"></a>案例1：升級不具容錯移轉的主伺服器實例
  這是比較簡單的案例，因為它的停機時間比使用容錯移轉來得長。 只會升級主要伺服器執行個體，而在這個升級作業期間將無法使用資料庫。
 
  升級伺服器之後，資料庫就會自動回到線上，以便進行升級。 在升級資料庫之後，記錄傳送作業就會繼續。
@@ -88,7 +88,7 @@ ms.locfileid: "78175414"
 >  如果您打算讓次要伺服器執行個體當做新的主要伺服器執行個體，您需要移除記錄傳送組態。 當原始主要伺服器執行個體升級之後，需要重新設定從新的主要伺服器到新的次要伺服器的記錄傳送。 如需詳細資訊，請參閱[SQL Server&#41;移除記錄傳送 &#40;](remove-log-shipping-sql-server.md)。
 
 
-#####  <a name="Procedure1"></a>程式1：執行受控制的容錯移轉至次要伺服器
+#####  <a name="procedure-1-perform-a-controlled-failover-to-the-secondary-server"></a><a name="Procedure1"></a>程式1：執行受控制的容錯移轉至次要伺服器
  以受到控制的方式容錯移轉到次要伺服器：
 
 1.  在使用 NORECOVERY 指定的主資料庫上，手動執行交易記錄檔的[尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。 這個記錄備份會擷取任何尚未備份的記錄檔記錄，並讓資料庫離線。 請注意，當資料庫離線時，記錄傳送備份作業將會失敗。
@@ -130,17 +130,17 @@ ms.locfileid: "78175414"
 
     5.  請注意，當資料庫在線上時，次要資料庫的交易記錄並不會填滿。 若要避免交易記錄被填滿，您可能需要加以備份。 如果是這種情況，我們建議您將它備份到共用位置 ( *「備份共用」*(Backup Share))，讓備份可在其他伺服器執行個體上用來還原。
 
-#####  <a name="Procedure2"></a>程式2：將原始的主伺服器實例升級為[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#####  <a name="procedure-2-upgrade-the-original-primary-server-instance-to-sscurrent"></a><a name="Procedure2"></a>程式2：將原始的主伺服器實例升級為[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
  在您將原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫仍然會在離線狀態而且採用格式。
 
-#####  <a name="Procedure3"></a>程式3：在上設定記錄傳送[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#####  <a name="procedure-3-set-up-log-shipping-on-sscurrent"></a><a name="Procedure3"></a>程式3：在上設定記錄傳送[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
  升級程序的其餘步驟取決於是否仍設定記錄傳送而定，如下所示：
 
 -   如果您已保留 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版記錄傳送組態，請切換回原始的主要伺服器執行個體。 如需詳細資訊，請參閱本主題稍後的＜ [切換回原始的主要伺服器執行個體](#SwitchToOrigPrimary)＞。
 
 -   如果您在容錯移轉之前移除此記錄傳送組態，請建立新的記錄傳送組態，其中原始的次要伺服器執行個體為新的主要伺服器執行個體。 如需詳細資訊，請參閱本主題稍後的＜ [將舊的次要伺服器執行個體保留為新的主要伺服器執行個體](#KeepOldSecondaryAsNewPrimary)＞。
 
-######  <a name="SwitchToOrigPrimary"></a>切換回原始的主伺服器實例
+######  <a name="to-switch-back-to-the-original-primary-server-instance"></a><a name="SwitchToOrigPrimary"></a>切換回原始的主伺服器實例
 
 1.  在暫時的主要伺服器 (伺服器 B) 上，使用 WITH NORECOVERY 來備份記錄的結尾，以便建立結尾記錄備份並讓資料庫離線。 結尾記錄備份命名為 `Switchback_AW_20080315.trn`。例如：
 
@@ -159,7 +159,7 @@ ms.locfileid: "78175414"
 
  當資料庫變成線上狀態之後，原始的記錄傳送組態將會繼續。
 
-######  <a name="KeepOldSecondaryAsNewPrimary"></a>將舊的次要伺服器實例保留為新的主伺服器實例
+######  <a name="to-keep-the-old-secondary-server-instance-as-the-new-primary-server-instance"></a><a name="KeepOldSecondaryAsNewPrimary"></a>將舊的次要伺服器實例保留為新的主伺服器實例
  將舊的次要伺服器執行個體 B 當做主要伺服器使用，並將舊的主要伺服器執行個體 A 當做新的次要伺服器使用，以建立新的記錄傳送組態，如下所示：
 
 > [!IMPORTANT]
@@ -181,9 +181,9 @@ ms.locfileid: "78175414"
 5.  將用戶端從原始主要伺服器 (伺服器 A) 重新導向線上次要伺服器 (伺服器 B) 來容錯移轉資料庫。
 
     > [!IMPORTANT]
-    >  當您容錯移轉到新的主要資料庫時，應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
+    >  當您容錯移轉到新的主要資料庫時，應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱[在另一個伺服器實例上提供資料庫時管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
 
-##  <a name="MultipleSecondaries"></a>升級多個次要伺服器實例
+##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>升級多個次要伺服器實例
  這個組態會在下圖中表示，其中顯示主要伺服器執行個體 A 及兩個次要伺服器執行個體 B 和 C。
 
  ![兩台次要伺服器，但是沒有監視伺服器](../media/ls-3-wayconfig-nomonitor.gif "兩台次要伺服器，但是沒有監視伺服器")
@@ -216,7 +216,7 @@ ms.locfileid: "78175414"
 
 9. 使用 WITH RECOVERY 將交易記錄從暫時的主要伺服器 (伺服器 B) 還原到原始的主要資料庫。
 
-##  <a name="Redeploying"></a>重新部署記錄傳送
+##  <a name="redeploying-log-shipping"></a><a name="Redeploying"></a>重新部署記錄傳送
  如果不想使用上述任一個程序來移轉您的記錄傳送組態，則也可以重新部署記錄傳送，方法是利用主要資料庫的完整備份與還原來重新初始化次要資料庫。 如果您的資料庫較小，或是升級程序期間不需要高可用性，這個方法可能會比較適用。
 
  如需啟用記錄傳送的詳細資訊，請參閱[設定記錄傳送 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)。

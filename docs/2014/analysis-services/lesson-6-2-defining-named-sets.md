@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175264"
 ---
 # <a name="defining-named-sets"></a>定義命名集
@@ -26,7 +26,7 @@ ms.locfileid: "78175264"
 
 ## <a name="defining-a-core-products-named-set"></a>定義核心產品命名集
 
-1.  針對 ** 教學課程 Cube，切換到 [Cube 設計師] 的 [計算]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後在工具列按一下 [表單檢視]****。
+1.  針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [計算]**** 索引標籤，然後在工具列按一下 [表單檢視]****。
 
 2.  按一下 [指令碼組合管理]**** 窗格中的 [總銷售與所有產品的比率]****，然後在 [計算]**** 索引標籤的工具列上，按一下 [新增命名集]****。
 
@@ -39,7 +39,7 @@ ms.locfileid: "78175264"
 4.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，依`Members`序展開 [**產品**]、[**類別**]、[] 和 [**所有產品**]。
 
     > [!NOTE]
-    >  如果您無法在 [計算工具]**** 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]****。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。
+    >  如果您無法在 [計算工具]**** 窗格檢視任何中繼資料，請在工具列上按一下 [重新連接]****。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。
 
 5.  將 [自行車]**** 拖曳到 [運算式]**** 方塊。
 
@@ -77,7 +77,7 @@ ms.locfileid: "78175264"
 
 9. 在屬性視窗中，將屬性`DiscretizationMethod`變更為 [**自動**]，然後將`DiscretizationBucketCount`屬性變更`5`為。 如需詳細資訊，請參閱[群組屬性成員 &#40;離散化&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)。
 
-10. 在 ** 的 [建立]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。
+10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
 11. 順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [計算]**** 索引標籤之工具列上的 [重新連接]****。
 
@@ -107,7 +107,7 @@ ms.locfileid: "78175264"
 
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>利用新的命名集來瀏覽 Cube
 
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
 2.  當部署順利完成時，請依序按一下 [瀏覽器]**** 索引標籤和 [重新連接]****。
 
@@ -132,7 +132,7 @@ ms.locfileid: "78175264"
      ![包含兩個命名集的篩選窗格](../../2014/tutorials/media/l6-named-set-05.gif "包含兩個命名集的篩選窗格")
 
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作
- [第7課：定義 &#40;Kpi 的關鍵效能指標&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [第 7 課：定義關鍵效能指標 &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>另請參閱
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)[建立命名集](multidimensional-models/create-named-sets.md)

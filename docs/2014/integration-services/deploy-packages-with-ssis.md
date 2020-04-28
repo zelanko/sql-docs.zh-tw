@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176448"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教學課程：部署封裝
@@ -66,13 +66,13 @@ ms.locfileid: "78176448"
 
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
--   您必須具有在 AdventureWorks 中建立和卸除資料表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中執行封裝的權限。
+-   您必須具有在 AdventureWorks 中建立和卸除資料表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中執行封裝的權限。
 
 -   您必須具有 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系統資料庫中 sysssispackages 資料表的 [讀取] 和 [寫入] 許可權。
 
  如果您計畫將封裝部署到建立部署配套時所使用的同一部電腦，則該部電腦必須同時符合來源電腦和目的地電腦的需求。
 
- **完成本教學課程的估計時間：** 2 小時
+ **完成這個教學課程的估計時間：** 2 小時
 
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程
  [第1課：準備建立部署](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)配套在這一課，您將建立新[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的專案，並將封裝和其他必要檔案加入至專案，以準備部署 ETL 解決方案。

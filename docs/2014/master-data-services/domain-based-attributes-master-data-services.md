@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db0e312fabc039de2554f00b7e9f33a7a76ec584
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176057"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>網域屬性 (Master Data Services)
@@ -41,14 +41,14 @@ ms.locfileid: "78176057"
 
 |工作描述|主題|
 |----------------------|-----------|
-|從現有實體來源中建立新的網域屬性。|[建立以網域為基礎的屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
+|從現有實體來源中建立新的網域屬性。|[建立網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
 |建立新實體。|[建立實體 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|
 
 ## <a name="related-content"></a>相關內容
 
 -   [衍生階層 &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md)
 
--   [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)
+-   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)
 
 -   [實體 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)
 

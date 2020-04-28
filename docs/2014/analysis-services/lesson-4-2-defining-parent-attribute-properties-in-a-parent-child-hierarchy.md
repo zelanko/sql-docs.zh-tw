@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175327"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定義父子式階層中父屬性 (Attribute) 的屬性 (Property)
@@ -63,7 +63,7 @@ ms.locfileid: "78175327"
 
 ## <a name="modifying-parent-attribute-properties-in-the-employee-dimension"></a>修改員工維度中父屬性 (Attribute) 的屬性 (Property)
 
-1.  切換至 [ **Employee** ] 維度的 [維度設計師]。
+1.  針對 [Employee (員工)]**** 維度，切換至維度設計師。
 
 2.  按一下 [維度結構]**** 索引標籤，然後在 [屬性]**** 窗格中選取 [Employees (員工)]**** 屬性階層。
 
@@ -89,7 +89,7 @@ ms.locfileid: "78175327"
 
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>瀏覽含有已修改屬性的 Employee 維度
 
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
 2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 Cube 設計師，然後按一下 [瀏覽器]**** 索引標籤之工具列上的 [重新連接]****。
 

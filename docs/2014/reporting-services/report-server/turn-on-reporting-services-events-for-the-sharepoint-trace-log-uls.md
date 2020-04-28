@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e1e2d9cf44435ad61d81ae1f63e4e616c5e673c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177198"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -36,7 +36,7 @@ ms.locfileid: "78177198"
 
 -   [追蹤記錄位置](#bkmk_trace)
 
-##  <a name="bkmk_general"></a> 一般 ULS 記錄建議
+##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> 一般 ULS 記錄建議
  下表將針對監視 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境，列出建議的事件類別目錄和層級。 記錄事件時，每個項目都會包含記錄事件的時間、處理序名稱，以及執行緒識別碼。
 
 |類別|層級|描述|
@@ -47,7 +47,7 @@ ms.locfileid: "78177198"
 |拓撲|「詳細資訊」|記錄目前的使用者資訊。|
 |Web 組件|「詳細資訊」|記錄涉及報表檢視器 Web 組件之存取權的事件。|
 
-##  <a name="bkmk_turnon"></a> 開啟和關閉 Reporting Services 類別目錄中的 Reporting Services 事件
+##  <a name="to-turn-on-and-off-reporting-services-events-in-the-reporting-services-category"></a><a name="bkmk_turnon"></a> 開啟和關閉 Reporting Services 類別目錄中的 Reporting Services 事件
 
 1.  在 SharePoint 管理中心內
 
@@ -66,7 +66,7 @@ ms.locfileid: "78177198"
 > [!NOTE]
 >  **不支援** [回報至追蹤記錄的最低緊急事件] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]選項。 已忽略此選項。
 
-##  <a name="bkmk_recommended"></a> 建議組態
+##  <a name="recommended-configuration"></a><a name="bkmk_recommended"></a> 建議組態
  建議您使用下列記錄選項做為標準組態：
 
 -   **HTTP 重新導向程式**
@@ -81,16 +81,16 @@ ms.locfileid: "78177198"
 Get-SPDiagnosticConfig
 ```
 
-##  <a name="bkmk_readentries"></a> 讀取記錄項目
+##  <a name="reading-the-logs-entries"></a><a name="bkmk_readentries"></a> 讀取記錄項目
  記錄中的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目會以下列方式格式化。
 
 1.  **產品：SQL Server Reporting Services**
 
-2.  **類別：** 與伺服器相關的事件，其名稱開頭會有 "Report Server" 字元。 例如 "Report Server Alerting Runtime"，這些事件會記錄到報表伺服器記錄檔。
+2.  **類別目錄：** 與伺服器相關的事件其名稱開頭會有 "Report Server" 字元。 例如 "Report Server Alerting Runtime"，這些事件會記錄到報表伺服器記錄檔。
 
-3.  **類別：** 與 Web 前端元件相關或從中進行通訊的事件不會包含 "Report Server"。 例如 "Service Application Proxy"、"Report Server Alerting Runtime"。 WFE 項目會包含 CorrelationID，但伺服器項目不會包含。
+3.  **類別目錄：** 與 Web 前端元件相關或從中進行通訊的事件不會包含 "Report Server"。 例如 "Service Application Proxy"、"Report Server Alerting Runtime"。 WFE 項目會包含 CorrelationID，但伺服器項目不會包含。
 
-##  <a name="bkmk_list"></a> SQL Server Reporting Services 事件清單
+##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> SQL Server Reporting Services 事件清單
  下表為 SQL Server Reporting Services 類別目錄中事件的清單：
 
 |區域名稱|描述或範例項目|
@@ -125,7 +125,7 @@ Get-SPDiagnosticConfig
 |報表伺服器提供者||
 |報表伺服器轉譯||
 |報表伺服器報表預覽||
-|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：評估<br /><br /> MediumEvaluation 複本：剩下 180 天|
+|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：評估版<br /><br /> MediumEvaluation 複本：剩下 180 天|
 |報表伺服器執行工作||
 |報表伺服器執行要求||
 |報表伺服器排程||
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |服務應用程式 Proxy||
 |共用服務|範例項目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting 對內容資料庫的存取。<br /><br /> ReportingWebServiceApplication 的 MediumProvisioning 執行個體<br /><br /> ReportingWebServiceApplication 的 MediumProcessing 服務帳戶變更<br /><br /> MediumSetting 資料庫權限。|
 
-##  <a name="bkmk_powershell"></a> 利用 PowerShell 檢視記錄檔
+##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> 利用 PowerShell 檢視記錄檔
  ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容")您可以使用 PowerShell 從 ULS 記錄檔傳回 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 相關事件的清單。 從 SharePoint 2010 管理命令介面鍵入下列命令，從包含 "**sql server reporting services**" 的 ULS 記錄檔 UESQL11SPOINT-20110606-1530.log 傳回已篩選資料列清單：
 
 ```powershell
@@ -149,6 +149,6 @@ Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
 
  如需有關如何使用 PowerShell 來檢視記錄資料的詳細資訊，請參閱 [檢視診斷記錄 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)
 
-##  <a name="bkmk_trace"></a>追蹤記錄檔位置
+##  <a name="trace-log-location"></a><a name="bkmk_trace"></a>追蹤記錄檔位置
  追蹤記錄檔通常位於 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 資料夾中，但是您可以從 SharePoint 管理中心的 **[診斷記錄]** 頁面中驗證或變更此路徑。
 

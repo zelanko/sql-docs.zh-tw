@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41679439c7c687cc4574a56369c535f019c77e13
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176926"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 課：修改報表資料來源屬性
-  在這一課，您將使用報表管理員來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。 在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+  在這一課，您將使用報表管理員來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;** 教學課程中建立的 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。 在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。
 
  您也會將資料集和報表修改成使用參數來依據 `[Order]` 篩選報表，讓訂閱能夠針對特定訂單和轉譯格式輸出不同的報表執行個體。
 
@@ -26,13 +26,13 @@ ms.locfileid: "78176926"
 
 -   [若要修改資料來源屬性](#bkmk_modify_datasource)
 
--   [修改 AdventureWorksDataset](#bkmk_modify_dataset)
+-   [若要修改 AdventureWorksDataset](#bkmk_modify_dataset)
 
 -   [若要加入報表參數並重新發行報表](#bkmk_add_reportparameter)
 
 -   [若要重新部署報表](#bkmk_redeploy)
 
-##  <a name="bkmk_modify_datasource"></a>若要修改資料來源屬性
+##  <a name="to-modify-the-data-source-properties"></a><a name="bkmk_modify_datasource"></a>若要修改資料來源屬性
 
 1.  以系統管理員許可權啟動[報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) ，例如，以滑鼠右鍵按一下 Internet Explorer 的圖示，然後按一下 [以**系統管理員身分執行**]。
 
@@ -42,7 +42,7 @@ ms.locfileid: "78176926"
 
 3.  按一下 [資料來源]**** 索引標籤。
 
-4.  針對 [**連線類型**]，選取 [ **Microsoft SQL Server**]。
+4.  針對 **[連接類型]**，選取 **[Microsoft SQL Server]**。
 
 5.  自訂資料來源連接字串將如下所示，而且它會假設範例資料庫位於本機資料庫伺服器上：
 
@@ -62,7 +62,7 @@ ms.locfileid: "78176926"
 
 11. 檢視報表以確認報表是以您指定的認證來執行。 若要查看報表，請按一下 [**視圖**] 索引標籤。請注意，一旦報表開啟之後，您必須選取員工名稱，然後按一下 [**查看報表**] 按鈕來查看報表。
 
-##  <a name="bkmk_modify_dataset"></a>修改 AdventureWorksDataset
+##  <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>修改 AdventureWorksDataset
 
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中開啟 Sales Orders 報表。
 
@@ -87,9 +87,9 @@ ms.locfileid: "78176926"
     HAVING (ppc.Name = 'Clothing')
     ```
 
-4.  按一下 [確定]****。
+4.  按一下 [檔案] &gt; [新增] &gt; [專案] 
 
-##  <a name="bkmk_add_reportparameter"></a>若要加入報表參數並重新發行報表
+##  <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>若要加入報表參數並重新發行報表
 
 1.  在 [**報表資料**] 窗格中，按一下 [**新增**]，然後按一下 [**參數 ...** ]
 
@@ -113,11 +113,11 @@ ms.locfileid: "78176926"
 
          ![具有可見參數區域的報表檢視器](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "具有可見參數區域的報表檢視器")
 
-8.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關資料表教學課程中所使用之專案屬性的詳細資訊，請參閱第[6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)中的「將報表發行至報表伺服器（選擇性）」一節。
+8.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需用於資料表教學課程的專案屬性詳細資訊，請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 的＜將報表發行至報表伺服器 (選擇性)＞一節。
 
-##  <a name="bkmk_redeploy"></a>重新部署報表
+##  <a name="to-re-deploy-the-report"></a><a name="bkmk_redeploy"></a>重新部署報表
 
-1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關資料表教學課程中所使用之專案屬性的詳細資訊，請參閱第[6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)中的「將報表發行至報表伺服器（選擇性）」一節。
+1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需用於資料表教學課程的專案屬性詳細資訊，請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 的＜將報表發行至報表伺服器 (選擇性)＞一節。
 
 2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]**。
 

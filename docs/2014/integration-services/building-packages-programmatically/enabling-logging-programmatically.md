@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176548"
 ---
 # <a name="enabling-logging-programmatically"></a>以程式設計的方式啟用記錄
@@ -51,8 +51,7 @@ ms.locfileid: "78176548"
 |Windows 事件記錄檔|記錄到本機電腦上「應用程式」記錄中的標準 Windows 事件記錄檔。|不需要組態。|
 |XML 檔案|將事件記錄檔項目寫入 XML 格式化的檔案。 此提供者的預設副檔名為 .xml。|檔案連接管理員的名稱。|
 
- 透過設定容器的 `EventFilterKind` 與 `EventFilter` 屬性，會將事件包括在事件記錄檔中或排除在外。 
-  `EventFilterKind` 結構包含兩個值：`ExclusionFilter` 與 `InclusionFilter`，它們指出加入 `EventFilter` 的事件是否包括在事件記錄檔中。 接著會指派含有是篩選主旨之事件名稱的字串陣列給 `EventFilter` 屬性。
+ 透過設定容器的 `EventFilterKind` 與 `EventFilter` 屬性，會將事件包括在事件記錄檔中或排除在外。 `EventFilterKind` 結構包含兩個值：`ExclusionFilter` 與 `InclusionFilter`，它們指出加入 `EventFilter` 的事件是否包括在事件記錄檔中。 接著會指派含有是篩選主旨之事件名稱的字串陣列給 `EventFilter` 屬性。
 
  下列程式碼允許在封裝上記錄、將文字檔的記錄提供者加入 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合，並指定將事件清單包括在記錄輸出中。
 

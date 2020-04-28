@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175427"
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
@@ -25,7 +25,7 @@ ms.locfileid: "78175427"
 
  資料與索引頁面都會從磁碟讀入緩衝集區，而修改的頁面 (也稱為中途分頁) 則會重新寫入磁碟。 伺服器和資料庫檢查點的記憶體壓力會導致緩衝區快取中使用頻繁 (使用中) 的中途分頁從快取收回並寫入機械磁碟，然後再重新讀入快取中。 這些 I/O 作業通常是很小的隨機讀取和寫入 (4 到 16 KB 的資料順序)。 小型隨機 I/O 模式會產生頻繁的搜尋、競爭機械磁碟臂、增加 I/O 延遲，並降低系統的彙總 I/O 輸送量。
 
- 解決這些 I/O 瓶頸的一般方法是加入更多 DRAM，或者加入高效能的 SAS 主軸。 雖然這些選項很有用，但是有很大的缺點：DRAM 比資料存放磁碟更為昂貴，且增加主軸會增加硬體採購的資本支出，且也會因為增加用電量和元件故障機率而增加營運成本。
+ 解決這些 I/O 瓶頸的一般方法是加入更多 DRAM，或者加入高效能的 SAS 主軸。 雖然這些選項很有用，但是有很大的缺點：DRAM 比資料存放磁碟更為昂貴，而且增加主軸會增加硬體採購的資本支出，而且也會因為增加用電量和元件故障機率而增加營運成本。
 
  緩衝集區擴充功能可透過非動態儲存 (通常是 SSD) 延伸緩衝集區快取。 因為有了這個延伸模組，緩衝集區可以容納更大的資料庫工作集，強制將 RAM 與 SSD 之間的 I/O 分頁。 這樣可有效地將機械磁碟中的小型隨機 I/O 卸載到 SSD。 由於 SSD 的延遲較低而且隨機 I/O 效能更好，所以緩衝集區擴充會大幅提高 I/O 輸送量。
 
@@ -73,9 +73,9 @@ ms.locfileid: "78175427"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>傳回有關緩衝集區擴充的資訊
  您可以使用下列動態管理檢視顯示緩衝集區擴充的組態，並傳回有關擴充中資料頁的資訊。
 
--   [dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  SQL Server 中的緩衝區管理員物件有提供效能計數器，以便追蹤緩衝集區擴充檔案中的資料頁面。 如需詳細資訊，請參閱＜ [緩衝集區擴充效能計數器](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)＞。
 
@@ -95,7 +95,7 @@ ms.locfileid: "78175427"
 |**工作描述**|**主題**|
 |啟用及設定緩衝集區擴充|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |修改緩衝集區擴充組態|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|檢視緩衝集區擴充組態|[dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|監視緩衝集區擴充|[dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [效能計數器](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|檢視緩衝集區擴充組態|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|監視緩衝集區擴充|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [效能計數器](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

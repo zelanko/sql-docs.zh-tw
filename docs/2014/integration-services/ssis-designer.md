@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176107"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
@@ -82,12 +82,12 @@ ms.locfileid: "78176107"
 ### <a name="event-handlers-tab"></a>事件處理常式索引標籤
  您可以在 [**事件處理常式**] 索引標籤的設計介面上，建立封裝中的事件。在 [**事件處理常式**] 索引標籤上，選取您要為其建立事件處理常式的封裝或封裝物件，然後選取要與事件處理常式建立關聯的事件。 事件處理常式具有控制流程和選擇性的資料流程。
 
- 如需詳細資訊，請參閱 [Add an Event Handler to a Package](../../2014/integration-services/add-an-event-handler-to-a-package.md) (將事件處理常式加入封裝中)。
+ 如需詳細資訊，請參閱 [Add an Event Handler to a Package](../../2014/integration-services/add-an-event-handler-to-a-package.md)(將事件處理常式加入封裝中)。
 
 ### <a name="package-explorer-tab"></a>封裝總管索引標籤
  封裝可能相當複雜，其中包括許多工作、連接管理員、變數和其他元素等。 封裝總管檢視可讓您查看封裝元素的完整清單。
 
- 如需詳細資訊，請參閱 [View Package Objects](view-package-objects.md) (檢視封裝物件)。
+ 如需詳細資訊，請參閱 [View Package Objects](view-package-objects.md)(檢視封裝物件)。
 
 #### <a name="progressexecution-result-tab"></a>進度/執行結果索引標籤
  當封裝正在執行時，[進度]**** 索引標籤會顯示封裝的執行進度。 在完成執行封裝後，執行結果會在 [執行結果]**** 索引標籤上保持可用。
@@ -96,8 +96,7 @@ ms.locfileid: "78176107"
 >  若要啟用或停用 **[進度]** 索引標籤上的訊息顯示，請在 **[SSIS]** 功能表上切換 **[偵錯進度報表]** 選項。
 
 ##### <a name="connection-managers-area"></a>連接管理員區域
- 您可以在 [連線管理員]**** 區域中，加入及修改封裝所使用的連線管理員。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含可以連接到各種不同的資料來源 (例如文字檔、OLE DB 資料庫及 .NET 提供者) 的連線管理員。
+ 您可以在 [連線管理員]**** 區域中，加入及修改封裝所使用的連線管理員。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含可以連接到各種不同的資料來源 (例如文字檔、OLE DB 資料庫及 .NET 提供者) 的連線管理員。
 
  如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](../../2014/integration-services/create-connection-managers.md)。
 

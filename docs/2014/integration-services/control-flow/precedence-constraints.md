@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc23747a13ee2e5b126b7e57ba7121878d05643d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176468"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
@@ -29,13 +29,13 @@ ms.locfileid: "78176468"
 
  優先順序條件約束會連結兩個可執行檔：優先順序可執行檔和受條件約束的可執行檔。 優先順序可執行檔在條件約束可執行檔之前執行，且優先順序可執行檔的執行結果可以決定條件約束可執行檔是否執行。 下圖顯示了由優先順序條件約束連結的兩個可執行檔。
 
- ![以優先順序條件約束連線的可執行檔](../media/ssis-pcsimple.gif "以優先順序條件約束連接的可執行檔")
+ ![以優先順序條件約束連線的可執行檔](../media/ssis-pcsimple.gif "以優先順序條件約束連線的可執行檔")
 
  在線性控制流程 (即沒有分支的控制流程) 中，優先順序條件約束單獨管理工作執行的順序。 在控制流程分支中， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎決定直接跟隨在分支後面的工作和容器之執行順序。 執行階段引擎也決定控制流程中未連接的工作流程之執行順序。
 
  除僅封裝單一工作的工作主機容器之外， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的巢狀容器架構會啟用所有容器，用以包含每個都具有其各自控制流程的其他容器。 「For 迴圈」容器、「Foreach 迴圈」容器和「時序」容器可以包含多個工作和其他容器，而工作和其他容器進而可以包含多個工作和容器。 例如，具有「指令碼」工作和「時序」容器的封裝具有連結「指令碼」工作和「時序」容器的優先順序條件約束。 「時序」容器包括三個「指令碼」工作，且其優先順序條件約束會將這三個「指令碼」工作連結至一個控制流程。 下圖顯示具有兩個巢狀層級之封裝中的優先順序條件約束。
 
- ![套件中的優先順序條件約束](../media/mw-dts-12.gif "封裝中的優先順序條件約束")
+ ![套件中的優先順序條件約束](../media/mw-dts-12.gif "套件中的優先順序條件約束")
 
  因為封裝位於 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 容器架構的最上層，所以優先順序條件約束無法連結多個封裝；但是，您可以將「執行封裝」工作加入封裝，然後間接地將其他封裝連結至控制流程。
 
@@ -79,7 +79,7 @@ ms.locfileid: "78176468"
 ## <a name="configuration-of-the-precedence-constraint"></a>優先順序條件約束的組態
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。
 
- 如需可在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中設定之屬性的詳細資訊，請參閱[優先順序條件約束編輯器](../precedence-constraint-editor.md)。
+ 如需可在 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中設定之屬性的詳細資訊，請參閱 [優先順序條件約束編輯器](../precedence-constraint-editor.md)。
 
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>。
 
@@ -88,7 +88,7 @@ ms.locfileid: "78176468"
 
 -   [設定優先順序條件約束的屬性](../set-the-properties-of-a-precedence-constraint.md)
 
--   [使用快速鍵功能表來設定優先順序條件約束的值](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)
+-   [使用捷徑功能表來設定優先順序條件約束的值](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)
 
 -   [使用預設的優先順序條件約束來連接工作和容器](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)
 

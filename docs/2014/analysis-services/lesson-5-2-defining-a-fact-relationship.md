@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175277"
 ---
 # <a name="defining-a-fact-relationship"></a>定義事實關聯性
@@ -37,13 +37,13 @@ ms.locfileid: "78175277"
 
 ## <a name="defining-the-internet-sales-orders-fact-dimension"></a>定義網際網路銷售訂單事實維度
 
-1.  在方案總管中，以滑鼠右鍵按一下 [**維度**]，然後按一下 [**新增維度**]。
+1.  在方案總管**** 中，以滑鼠右鍵按一下 [維度]****，然後按一下 [新增維度]。
 
 2.  在 [歡迎使用維度精靈]**** 頁面上，按一下 [下一步]****。
 
 3.  在 [選取建立方法]**** 頁面上，確認已選取 [使用現有的資料表]**** 選項，然後按一下 [下一步]****。
 
-4.  在 [指定來源資訊]**** 頁面上，確認已選取 [Adventure Works DW 2012]**** 資料來源檢視。
+4.  在 [指定來源資訊]**** 頁面上，確認已選取 **Adventure Works DW 2012** 資料來源檢視。
 
 5.  在 [主資料表]**** 清單中，選取 [InternetSales]****。
 
@@ -101,7 +101,7 @@ ms.locfileid: "78175277"
 
 1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****，將所做的變更部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體及處理資料庫。
 
-2.  順利完成部署之後，針對 ** 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]**** 按鈕。
+2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]**** 按鈕。
 
 3.  從 [資料] 窗格中清除所有量值和階層，然後將 [網際網路銷售 - 銷售量]**** 量值加入 [資料] 窗格的資料區域。
 

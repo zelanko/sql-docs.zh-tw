@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176568"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
@@ -32,8 +32,8 @@ ms.locfileid: "78176568"
 |-----------------------|-----------------|
 |設計介面|顯示其他介面元素。 若要加入元素，請以滑鼠右鍵按一下設計介面。|
 |![拓撲中的第一個節點](media/p2pwizard-firstnode.gif "拓撲中的第一個節點")|拓撲中的原始節點。 系統會使用原始節點的發行集資料庫副本來初始化新的節點。|
-|![我們有完整資訊](media/p2pwizard-complete.gif "我們擁有完整資訊的節點")或更新版本的節點，複寫具有完整的資訊。 若要指定組態選項，請以滑鼠右鍵按一下節點。|
-|![我們沒有完整資訊的節點](media/p2pwizard-incomplete.gif "我們沒有完整資訊的節點")|複寫具有不完整資訊的節點。 若要指定組態選項，請以滑鼠右鍵按一下節點。 由於下列其中一項原因，所以複寫具有不完整的資訊：<br /><br /> 節點正在執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體 (無法儲存精靈所需的所有中繼資料)。<br /><br /> 節點正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新版本，但是複寫無法從節點中擷取訂閱資訊。 若要疑難排解這個情況：<br />-請確定節點上的資料庫在線上，而且您可以使用與連接到該節點的散發代理程式相同的認證來連接它。<br />-確定連接到節點的記錄讀取器代理程式和所有散發代理程式都在執行中。<br />-請確定 [重新整理超時] 已設定為 [夠高]，以收集所有拓撲資訊。 若要設定逾時，請以滑鼠右鍵按一下設計介面，然後按一下 **[設定重新整理逾時]**。|
+|![我們有完整資訊](media/p2pwizard-complete.gif "我們擁有其完整資訊的節點")或更新版本的節點，複寫具有完整的資訊。 若要指定組態選項，請以滑鼠右鍵按一下節點。|
+|![我們沒有其完整資訊的節點](media/p2pwizard-incomplete.gif "我們沒有其完整資訊的節點")|複寫具有不完整資訊的節點。 若要指定組態選項，請以滑鼠右鍵按一下節點。 由於下列其中一項原因，所以複寫具有不完整的資訊：<br /><br /> 節點正在執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體 (無法儲存精靈所需的所有中繼資料)。<br /><br /> 節點正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新版本，但是複寫無法從節點中擷取訂閱資訊。 若要疑難排解這個情況：<br />-請確定節點上的資料庫在線上，而且您可以使用與連接到該節點的散發代理程式相同的認證來連接它。<br />-確定連接到節點的記錄讀取器代理程式和所有散發代理程式都在執行中。<br />-請確定 [重新整理超時] 已設定為 [夠高]，以收集所有拓撲資訊。 若要設定逾時，請以滑鼠右鍵按一下設計介面，然後按一下 **[設定重新整理逾時]**。|
 |含有箭頭的灰線|兩個節點之間的連接。 若要加入連接，請以滑鼠右鍵按一下您想要連接的其中一個節點。 若要移除連接，請以滑鼠右鍵按一下該連接。<br /><br /> 如果此線條只有單一箭頭，就表示複寫具有其中一個節點的不完整資訊。|
 
 ### <a name="options-for-the-design-surface"></a>設計介面的選項

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176495"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,7 +25,7 @@ ms.locfileid: "78176495"
 
  下列螢幕擷取畫面顯示 [XML 工作編輯器]  ，內含具有豐富錯誤輸出之 XML 驗證所需的設定。
 
- ![[XML 工作編輯器] 中的 XML 工作屬性](../media/xmltaskproperties.jpg "XML 工作編輯器中的 XML 工作屬性")
+ ![[XML 工作編輯器] 中的 XML 工作屬性](../media/xmltaskproperties.jpg "[XML 工作編輯器] 中的 XML 工作屬性")
 
  在提供 `ValidationDetails` 屬性前，XML 工作所執行的 XML 驗證只會傳回結果為 True 或 False，而不會有錯誤的相關資訊及其位置。 現在，當您將 `ValidationDetails` 設定為 True 時，輸出檔案即涵蓋每項錯誤的詳細資訊，包括行號及位置。 您可以使用此資訊來了解、尋找及修正 XML 文件中的錯誤。
 
@@ -116,7 +116,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
 
  以下是先前文字所示之第二個範例查詢的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的結果。
 
- ![在 Management Studio 中使用查詢將 XML 錯誤分組](../media/queryforxmlerrors.jpg "在 Management Studio 中將 XML 錯誤分組的查詢")
+ ![在 Management Studio 中使用查詢將 XML 錯誤分組](../media/queryforxmlerrors.jpg "在 Management Studio 中使用查詢將 XML 錯誤分組")
 
 ## <a name="see-also"></a>另請參閱
  [Xml](xml-task.md)工作[xml 工作編輯器 &#40;一般頁面&#41;](../xml-task-editor-general-page.md)

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175337"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自動分組屬性成員
@@ -60,7 +60,7 @@ ms.locfileid: "78175337"
 
 4.  在 [屬性]**** 窗格中，選取 [病假時數]****。
 
-5.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [叢集]，並**** 將 [DiscretizationBucketCount `5`] 屬性的值**變更為。**
+5.  在 [屬性視窗中，將 [ **DiscretizationMethod** ] 屬性的值變更為 [叢集]，並**DiscretizationBucketCount**將 [DiscretizationBucketCount `5`] 屬性的值**變更為。**
 
 6.  在 [屬性]**** 窗格中，選取 [假期時數]****。
 
@@ -68,7 +68,7 @@ ms.locfileid: "78175337"
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>瀏覽已修改的屬性階層
 
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
 2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [瀏覽器]**** 索引標籤上的 [重新連接]****。
 
@@ -106,7 +106,7 @@ ms.locfileid: "78175337"
 
 2.  在 [屬性] 視窗中，將 [DiscretizationBucketCount]**** 屬性的值變更為 [10]****。
 
-3.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 功能表上，按一下 [部署 Analysis Services 教學課程]****。
+3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
 4.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 Cube 設計師。
 
@@ -124,6 +124,6 @@ ms.locfileid: "78175337"
  [隱藏及停用屬性階層](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
 
 ## <a name="see-also"></a>另請參閱
- [群組屬性成員 &#40;離散化&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ [群組屬性成員 &#40;分隔&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
 

@@ -18,53 +18,50 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d2d2e9caae1a9837b91679033be1eafc763f266
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175607"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。
 
  每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式大不相同。 最重要的差異是，只有多維度方案才`IOProcess`會使用執行緒集區。 因此，本主題中描述的 `PerNumaNode` 屬性，對表格式執行個體沒有意義。
 
  本主題包含下列幾節：
 
--   [Analysis Services 中的執行緒管理](#bkmk_threadarch)
+-   [Analysis Services 的執行緒管理](#bkmk_threadarch)
 
 -   [執行緒集區屬性參考](#bkmk_propref)
 
 -   [將 GroupAffinity 設定為將相似化為執行緒至處理器群組中的處理器](#bkmk_groupaffinity)
 
--   [將 PerNumaNode 設定為將相似化為 IO 執行緒到 NUMA 節點中的處理器](#bkmk_pernumanode)
+-   [設定 PerNumaNode 將 IO 執行緒相似化為 NUMA 節點中的處理器](#bkmk_pernumanode)
 
 -   [判斷目前的執行緒集區設定](#bkmk_currentsettings)
 
 -   [相依或相關屬性](#bkmk_related)
 
--   [關於 MSMDSRV.EXE。.INI](#bkmk_msmdrsrvini)
+-   [關於 MSMDSRV.INI](#bkmk_msmdrsrvini)
 
 > [!NOTE]
 >  NUMA 系統上的表格式部署超出本主題的範圍。 雖然表格式方案可以在 NUMA 系統上成功部署，但是表格式模型使用之記憶體中資料庫技術的效能特性在高度向上延展的架構上成效有限。 如需詳細資訊，請參閱 [Analysis Services Case Study: Using Tabular Models in Large-scale Commercial Solutions](https://msdn.microsoft.com/library/dn751533.aspx) (Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型) 和 [Hardware Sizing a Tabular Solution](https://go.microsoft.com/fwlink/?LinkId=330359)(調整表格式解決方案的硬體)。
 
-##  <a name="bkmk_threadarch"></a>Analysis Services 中的執行緒管理
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多執行緒處理，透過增加平行執行的工作數，利用可用的 CPU 資源。 儲存引擎是多執行緒。 在儲存引擎內執行的多執行緒作業範例包含平行處理物件、處理發送至儲存引擎的個別查詢，或傳回查詢所要求的資料值。 公式引擎由於其評估之計算的序列本質，是單一執行緒。 每個查詢主要會在單一執行緒上執行，並要求 (且通常需要等候) 儲存引擎傳回資料。 查詢執行緒的執行時間較長，並且僅在完成整個查詢之後釋出。
+##  <a name="thread-management-in-analysis-services"></a><a name="bkmk_threadarch"></a>Analysis Services 中的執行緒管理
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多執行緒處理，透過增加平行執行的工作數，利用可用的 CPU 資源。 儲存引擎是多執行緒。 在儲存引擎內執行的多執行緒作業範例包含平行處理物件、處理發送至儲存引擎的個別查詢，或傳回查詢所要求的資料值。 公式引擎由於其評估之計算的序列本質，是單一執行緒。 每個查詢主要會在單一執行緒上執行，並要求 (且通常需要等候) 儲存引擎傳回資料。 查詢執行緒的執行時間較長，並且僅在完成整個查詢之後釋出。
 
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本上， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設會使用所有可用的邏輯處理器，最多可在執行更高版本 Windows 和 SQL Server 的系統上有 640 個處理器。 在啟動時，會將 msmdsrv.exe 處理序指派給特定處理器群組，但是經過一段時間後，便可在任何處理器群組中的任何邏輯處理器上排程執行緒。
 
  使用大量處理器的一個副作用是當查詢和處理負載擴展到大量處理器，且對共用資料結構的競爭增加時，效能有時可能會降低。 在使用 NUMA 架構的高階系統上，特別容易發生這個問題，但在相同硬體上執行多個資料密集應用程式的非 NUMA 系統上，也可能發生這個問題。
 
- 若要減少此問題，您可以設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作業類型與一組特定的邏輯處理器之間的相似性。 
-  `GroupAffinity` 屬性可讓您建立自訂相似性遮罩，指定哪個系統資源用於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所管理的每一個執行緒集區類型。
+ 若要減少此問題，您可以設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作業類型與一組特定的邏輯處理器之間的相似性。 `GroupAffinity` 屬性可讓您建立自訂相似性遮罩，指定哪個系統資源用於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所管理的每一個執行緒集區類型。
 
  您可以在用於各種 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工作負載的五個執行緒集區之一設定自訂相似性：
 
--   「**簡單剖析**」是簡短要求的剖析集區。 大小符合單一網路訊息的要求視為簡短要求。
+-   **簡短剖析**  是適用於簡短要求的剖析集區。 大小符合單一網路訊息的要求視為簡短要求。
 
--   「**長時間剖析**」是一種剖析集區，適用于不符合單一網路訊息的所有其他要求。
+-   **完整剖析**  是適用於大小不符合單一網路訊息之其他所有要求的剖析集區。
 
     > [!NOTE]
     >  您可以使用任何剖析集區中的執行緒來執行查詢。 快速執行的查詢 (例如快速探索或取消要求) 有時會立即執行，而不會排入查詢執行緒集區的佇列中。
@@ -85,7 +82,7 @@ ms.locfileid: "78175607"
 
  根據預設，執行緒集區大小取決於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，並以核心數目為依據。 您可以在伺服器啟動之後檢查 msmdsrv.log 檔案，以觀察選取的預設值。 當您練習微調效能時，您可以選擇增加執行緒集區及其他屬性的大小，以提升查詢或處理效能。
 
-##  <a name="bkmk_propref"></a>執行緒集區屬性參考
+##  <a name="thread-pool-property-reference"></a><a name="bkmk_propref"></a>執行緒集區屬性參考
  本節描述每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之 msmdsrv.ini 檔案中的執行緒集區屬性。 這些屬性的子集也會出現在 SQL Server Management Studio 中。
 
  屬性是依照字母順序列出。
@@ -122,17 +119,15 @@ ms.locfileid: "78175607"
 |`Query` \ `PriorityRatio`|int|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|2|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|
 |`Query`  \ `StackSizeKB`|int|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|
 
-##  <a name="bkmk_groupaffinity"></a>將 GroupAffinity 設定為將相似化為執行緒至處理器群組中的處理器
- 
-  `GroupAffinity` 是為了進階微調而提供。 您可以使用 `GroupAffinity` 屬性設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行緒集區和特定處理器之間的相似性；但是對於大多數安裝，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以使用所有可用的邏輯處理器時，執行效果最好。 因此，預設不會指定群組相似性。
+##  <a name="set-groupaffinity-to-affinitize-threads-to-processors-in-a-processor-group"></a><a name="bkmk_groupaffinity"></a> 設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器
+ `GroupAffinity` 是為了進階微調而提供。 您可以使用 `GroupAffinity` 屬性設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行緒集區和特定處理器之間的相似性；但是對於大多數安裝，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以使用所有可用的邏輯處理器時，執行效果最好。 因此，預設不會指定群組相似性。
 
  如果效能測試指出需要 CPU 最佳化，您可以考慮較高層級的方法，例如使用 Windows Server 資源管理員設定邏輯處理器和伺服器處理序之間的相似性。 這種方式與定義個別執行緒集區的自訂相似性相比，可更容易進行實作與管理。
 
  如果這個方法不夠完善，您可以定義執行緒集區的自訂相似性，達成更大的精確度。 大型多核心系統 (NUMA 或非 NUMA) 會因為執行緒集區分佈於太廣泛的處理器範圍而導致降低效能，因此在這些系統上比較可能建議自訂相似性設定。 雖然您可以在有少於 64 個邏輯處理器的系統上設定 `GroupAffinity`，但是成效極低，甚至可能會降低效能。
 
 > [!NOTE]
->  
-  `GroupAffinity` 是由限制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所使用之核心數目的版本所限制。 在啟動時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用版本資訊和 `GroupAffinity` 屬性，來計算 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理之所有 5 個執行緒集區的相似性遮罩。 Standard Edition 最多可以使用 16 個核心。 如果您在具有超過 16 個核心的大型多核心系統上安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只會使用其中 16 個。 如果升級舊版的企業執行個體，您最多可以使用 20 個核心。 如需有關版本和授權的詳細資訊，請參閱 [SQL Server 2012 授權概觀](https://go.microsoft.com/fwlink/?LinkId=246061)。
+>  `GroupAffinity` 是由限制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所使用之核心數目的版本所限制。 在啟動時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用版本資訊和 `GroupAffinity` 屬性，來計算 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理之所有 5 個執行緒集區的相似性遮罩。 Standard Edition 最多可以使用 16 個核心。 如果您在具有超過 16 個核心的大型多核心系統上安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只會使用其中 16 個。 如果升級舊版的企業執行個體，您最多可以使用 20 個核心。 如需有關版本和授權的詳細資訊，請參閱 [SQL Server 2012 授權概觀](https://go.microsoft.com/fwlink/?LinkId=246061)。
 
 ### <a name="syntax"></a>語法
  此值為每個處理器群組的十六進位值，代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置執行緒給指定執行緒集區時，會先嘗試使用的邏輯處理器。
@@ -150,7 +145,7 @@ ms.locfileid: "78175607"
 ### <a name="steps-for-computing-the-processor-affinity-mask"></a>計算處理器相似性遮罩的步驟
  您可以在`GroupAffinity` msmdsrv.exe 或伺服器屬性頁的 SQL Server Management Studio 中設定。
 
-1.  **判斷處理器和處理器群組的數目**
+1.  **判斷處理器和處理器群組數目**
 
      您可以 [從 winsysinternals 下載 Coreinfo 公用程式](https://technet.microsoft.com/sysinternals/cc835722.aspx)。
 
@@ -168,7 +163,7 @@ ms.locfileid: "78175607"
 
      `1111 0010`
 
-4.  **將二進位數轉換成十六進位值**
+4.  **將二進位數字轉換成十六進位值**
 
      使用計算機或轉換工具將二進位數字轉換成對應的十六進位值。 在此範例中， `1111 0010` 會轉換成 `0xF2`。
 
@@ -179,7 +174,7 @@ ms.locfileid: "78175607"
 > [!IMPORTANT]
 >  設定`GroupAffinity`是包含多個步驟的手動工作。 計算`GroupAffinity`時，請仔細檢查您的計算。 雖然 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在整個遮罩無效時傳回錯誤，但有效和無效設定的組合也會導致 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 忽略屬性。 例如，如果位元遮罩包含額外的值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會忽略這項設定，並使用系統上的所有處理器， 當發生這個動作時並不會出現任何錯誤或警告來提醒您，但是您可以檢查 msmdsrv.log 檔案來了解實際上是如何設定相似性。
 
-##  <a name="bkmk_pernumanode"></a>將 PerNumaNode 設定為將相似化為 IO 執行緒到 NUMA 節點中的處理器
+##  <a name="set-pernumanode-to-affinitize-io-threads-to-processors-in-a-numa-node"></a><a name="bkmk_pernumanode"></a>將 PerNumaNode 設定為將相似化為 IO 執行緒到 NUMA 節點中的處理器
  針對多維度 Analysis Services 實例，您可以`PerNumaNode`在`IOProcess`執行緒集區上設定，以進一步優化執行緒排程和執行。 雖然`GroupAffinity`會識別指定執行緒集區所使用的邏輯處理器集合， `PerNumaNode`但藉由指定是否要建立多個執行緒集區，進一步相似化為至允許的邏輯處理器的某個子集，會有更進一步的步驟。
 
 > [!NOTE]
@@ -193,19 +188,19 @@ ms.locfileid: "78175607"
 ### <a name="choosing-a-value"></a>選擇值
  您也可以覆寫預設值，使用另一個有效值。
 
- **設定 PerNumaNode = 0**
+ **設定 PerNumaNode=0**
 
  系統會忽略 NUMA 節點。 只有一個 IOProcess 執行緒集區，而且該執行緒集區中的所有執行緒都會相似化到所有邏輯處理器。 根據預設 (PerNumaNode=-1)，如果電腦的 NUMA 節點少於 4 個，這是作用的設定值。
 
  ![Numa、處理器和執行緒集區的對應](../media/ssas-threadpool-numaex0.PNG "Numa、處理器和執行緒集區的對應")
 
- **設定 PerNumaNode = 1**
+ **設定 PerNumaNode=1**
 
  系統會針對每個 NUMA 節點建立 IOProcess 執行緒集區。 使用個別的執行緒集區可改善對本機資源的協調存取，例如 NUMA 節點的本機快取。
 
  ![Numa、處理器和執行緒集區的對應](../media/ssas-threadpool-numaex1.PNG "Numa、處理器和執行緒集區的對應")
 
- **設定 PerNumaNode = 2**
+ **設定 PerNumaNode=2**
 
  這個設定適用於執行大量 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工作負載的極高階系統。 此屬性會在其最細微的層級設定 IOProcess 執行緒集區相似性，並在邏輯處理器層級建立及關聯個別的執行緒集區。
 
@@ -215,7 +210,7 @@ ms.locfileid: "78175607"
 
  在此相似性層級，排程器一律會先嘗試使用偏好的 NUMA 節點中的理想邏輯處理器。 如果邏輯處理器無法使用，排程器會選擇相同節點或相同處理器群組 (如果沒有其他執行緒可用) 中的其他處理器。 如需詳細資訊和範例，請參閱 [Analysis Services 2012 Configuration settings (Wordpress Blog)](https://go.microsoft.com/fwlink/?LinkId=330387)(Analysis Services 2012 組態設定 (Wordpress 部落格))。
 
-###  <a name="bkmk_workdistrib"></a>IOProcess 執行緒之間的工作散發
+###  <a name="work-distribution-among-ioprocess-threads"></a><a name="bkmk_workdistrib"></a> IOProcess 執行緒中的工作分配
  當您考慮是否要設定`PerNumaNode`屬性時，知道如何`IOProcess`使用執行緒，可以協助您做出更明智的決策。
 
  回想一下`IOProcess` ，用於與多維度引擎中之儲存引擎查詢相關聯的 IO 作業。
@@ -239,20 +234,17 @@ ms.locfileid: "78175607"
 
  如需有關工作架構的詳細資訊，請參閱《 [SQL Server 2008 Analysis Services 效能指南](https://www.microsoft.com/download/details.aspx?id=17303)》的第 2.2 節。
 
-##  <a name="bkmk_related"></a>相依或相關屬性
+##  <a name="dependent-or-related-properties"></a><a name="bkmk_related"></a>相依或相關屬性
  如[Analysis Services 操作指南](https://msdn.microsoft.com/library/hh226085.aspx)的2.4 一節中所述，如果您增加處理執行緒集區，您應該確定`CoordinatorExecutionMode`設定和`CoordinatorQueryMaxThreads`設定都具有可讓您充分利用增加的執行緒集區大小的值。
 
  Analysis Services 使用協調器執行緒收集完成處理或查詢要求所需的資料。 此協調器會先針對必須處理的每個分割區分別佇列一項作業。 根據分割區中必須掃描的區段總數，每項作業會接著繼續將更多作業排入佇列。
 
- 
-  `CoordinatorExecutionMode` 的預設值為 -4，表示每個核心最多 4 個平行作業，限制儲存引擎中 Subcube 要求可平行執行的協調者作業總數。
+ `CoordinatorExecutionMode` 的預設值為 -4，表示每個核心最多 4 個平行作業，限制儲存引擎中 Subcube 要求可平行執行的協調者作業總數。
 
- 
-  `CoordinatorQueryMaxThreads` 的預設值為 16，限制每個資料分割可平行執行的區段作業數目。
+ `CoordinatorQueryMaxThreads` 的預設值為 16，限制每個資料分割可平行執行的區段作業數目。
 
-##  <a name="bkmk_currentsettings"></a>判斷目前的執行緒集區設定
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在啟動每項服務時，將目前的執行緒集區設定輸出至 msmdsrv.log 檔案，這些設定包含最小和最大執行緒、處理器相似性遮罩及並行。
+##  <a name="determine-current-thread-pool-settings"></a><a name="bkmk_currentsettings"></a>判斷目前的執行緒集區設定
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在啟動每項服務時，將目前的執行緒集區設定輸出至 msmdsrv.log 檔案，這些設定包含最小和最大執行緒、處理器相似性遮罩及並行。
 
  下列範例是記錄檔摘錄，在啟用超執行緒的 4 核心系統上，顯示 Query 執行緒集區的預設值 (MinThread=0、MaxThread=0、Concurrency=2)。 相似性遮罩為 0xFF，表示 8 個邏輯處理器。 請注意，遮罩前面會附加前置零。 您可以忽略前置零。
 
@@ -272,13 +264,12 @@ ms.locfileid: "78175607"
 
  請注意，在具有多個處理器群組的系統上，每個群組會產生個別的相似性遮罩，並以逗號分隔清單來表示。
 
-##  <a name="bkmk_msmdrsrvini"></a>關於 MSMDSRV.EXE。.INI
+##  <a name="about-msmdsrvini"></a><a name="bkmk_msmdrsrvini"></a>關於 MSMDSRV.EXE。.INI
  msmdsrv.ini 檔案包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的組態設定，因此會影響在該執行個體上執行的所有資料庫。 使用伺服器組態屬性不能只最佳化一個資料庫的效能而排除所有其他資料庫。 不過，您可以安裝多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，並將每個執行個體設定為使用一些屬性，好讓資料庫受益於共用類似的特性或工作負載。
 
  所有伺服器組態屬性都會包含在 msmdsrv.ini 檔案中。 可能需要修改的屬性子集也會出現在 SSMS 等管理工具中。
 
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之表格式執行個體和多維度執行個體的 msmdsrv.ini 內容相同， 但某些設定僅適用於一個模式。 屬性參考文件中會註明這些依據伺服器模式的行為差異。
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之表格式執行個體和多維度執行個體的 msmdsrv.ini 內容相同， 但某些設定僅適用於一個模式。 屬性參考文件中會註明這些依據伺服器模式的行為差異。
 
 > [!NOTE]
 >  如需有關如何設定屬性的指示，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。

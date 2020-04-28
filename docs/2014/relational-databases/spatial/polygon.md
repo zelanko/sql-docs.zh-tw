@@ -13,23 +13,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: d03ce811c860b976d891dd096ec8e0a7d5507d3a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176628"
 ---
 # <a name="polygon"></a>Polygon
-  
   `Polygon` 是儲存為一連串點的二維度介面，這些點可定義一個外部週框環形以及零個或多個內部環形。
 
 ## <a name="polygon-instances"></a>Polygon 執行個體
- 
-  `Polygon` 執行個體可以從環形組成 (此環形至少有三個相異點)。 
-  `Polygon` 執行個體也可以是空的。
+ `Polygon` 執行個體可以從環形組成 (此環形至少有三個相異點)。 `Polygon` 執行個體也可以是空的。
 
- 
-  `Polygon` 的外部和任何內部環形定義了它的界限。 此環形內的空間定義了 `Polygon` 的內部。
+ `Polygon` 的外部和任何內部環形定義了它的界限。 此環形內的空間定義了 `Polygon` 的內部。
 
  下圖顯示 `Polygon` 執行個體的範例。
 
@@ -54,11 +50,9 @@ ms.locfileid: "78176628"
 
 -   系統必須接受 `LineString` 執行個體。
 
--   
-  `LineString` 執行個體至少必須具有四個點。
+-   `LineString` 執行個體至少必須具有四個點。
 
--   
-  `LineString` 執行個體的開始和結束點必須相同。
+-   `LineString` 執行個體的開始和結束點必須相同。
 
  下列範例會顯示已接受的 `Polygon` 執行個體。
 
@@ -86,8 +80,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```
 
 ### <a name="valid-instances"></a>有效的執行個體
- 
-  `Polygon` 的內部環形可以在單一正切點上接觸其本身及彼此接觸，但是如果 `Polygon` 的內部環形相交，此執行個體就會無效。
+ `Polygon` 的內部環形可以在單一正切點上接觸其本身及彼此接觸，但是如果 `Polygon` 的內部環形相交，此執行個體就會無效。
 
  下列範例會顯示有效的 `Polygon` 執行個體。
 

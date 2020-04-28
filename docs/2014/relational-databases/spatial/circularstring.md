@@ -11,14 +11,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176718"
 ---
 # <a name="circularstring"></a>CircularString
-  
   `CircularString` 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。
 
 > [!IMPORTANT]
@@ -38,8 +37,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
 ```
 
- 
-  `@g3` 顯示 `CircularString` 執行個體可被系統接受但卻無效。 系統無法接受下列 CircularString 執行個體宣告。 這個宣告會擲回 `System.FormatException`。
+ `@g3` 顯示 `CircularString` 執行個體可被系統接受但卻無效。 系統無法接受下列 CircularString 執行個體宣告。 這個宣告會擲回 `System.FormatException`。
 
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
@@ -68,9 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
 ```
 
- 
-  `CircularString` 執行個體至少必須包含兩個圓弧線段，才能定義完整的圓形。 
-  `CircularString` 執行個體無法使用單一圓弧線段 (例如 (1 1, 3 1, 1 1)) 來定義完整的圓形。 您可以使用 (1 1, 2 2, 3 1, 2 0, 1 1) 來定義圓形。
+ `CircularString` 執行個體至少必須包含兩個圓弧線段，才能定義完整的圓形。 `CircularString` 執行個體無法使用單一圓弧線段 (例如 (1 1, 3 1, 1 1)) 來定義完整的圓形。 您可以使用 (1 1, 2 2, 3 1, 2 0, 1 1) 來定義圓形。
 
  下列範例會顯示無效的 CircularString 執行個體。
 
@@ -162,6 +158,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ```
 
 ## <a name="see-also"></a>另請參閱
- [空間資料類型總覽](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;geography 資料型別&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;geometry 資料型別&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;Geometry](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)資料型別&#41;[STIsValid &#40;geography 資料型別&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [STLength &#40;geometry 資料型別&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;Geometry 資料型](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)別&#41;[STEndpoint &#40;geometry 資料](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)型別&#41;STPointN &#40;geometry[資料](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)類型&#41;STNumPoints [&#40;geometry 資料類型](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)&#41;STIsRing [&#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [STIsClosed &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [STPointOnSurface &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
+ [空間資料類型總覽](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) [STIsValid &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [STLength &#40;Geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [STEndpoint &#40;geometry 資料類型](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [&#41;STPointN &#40;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) geometry 資料類型[&#41;STNumPoints &#40;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) [geometry 資料](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)型[別&#41;STIsRing](linestring.md) &#40;[geometry&#41;geometry](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)資料類型[&#40;STIsClosed](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)
 
 

@@ -15,10 +15,10 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177388"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>建立網域屬性 (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "78177388"
 
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。
 
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。
 
 -   屬性值的來源實體必須存在。 例如，若要根據色彩實體建立網域屬性，您必須先建立色彩實體。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。
 
@@ -55,11 +55,11 @@ ms.locfileid: "78177388"
 
 -   **建立者**：建立屬性的使用者名稱。
 
--   **于**：建立屬性的日期和時間。
+-   **時間**：建立屬性的日期與時間。
 
 -   **更新者**：上次更新屬性的使用者名稱。
 
--   **于**：上次更新屬性的日期和時間。
+-   **時間**：上次更新屬性的日期與時間。
 
 ### <a name="to-create-a-domain-based-attribute"></a>若要建立網域屬性
 
@@ -79,7 +79,7 @@ ms.locfileid: "78177388"
 
     -   如果是集合的屬性，請選取 [成員類型] **** 清單方塊的 [集合] **** 。
 
-6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應當做屬性名稱使用的單字清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)
+6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應該當做屬性名稱使用的字詞清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)。
 
 7.  (選擇性) 輸入顯示名稱，然後在 [描述]**** 方塊中輸入描述。
 
@@ -89,7 +89,7 @@ ms.locfileid: "78177388"
 
 10. 從 [網域實體]**** 清單中，選擇要用來擴展屬性值的實體。 
 
-11. **選擇性，適用于分葉成員的網域屬性。** 選取篩選父屬性，以用來限制允許的網域屬性值。
+11. **(選擇性) 適用於分葉成員的網域屬性。** 選取篩選父屬性，以用來限制允許的網域屬性值。
 
      篩選父屬性必須是相同實體中分葉成員的另一個網域屬性。 衍生的階層必須具有一個層級，且該層級定義兩個屬性之網域實體間的父子式關聯性。
 

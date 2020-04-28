@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175907"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
@@ -23,14 +23,14 @@ ms.locfileid: "78175907"
  本主題將涵蓋監視您的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 記憶體使用量。
 
 
-##  <a name="bkmk_CreateDB"></a>建立含有記憶體優化資料表的範例資料庫
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a> 建立含有記憶體最佳化資料表的範例資料庫
  如果您的資料庫已包含記憶體最佳化資料表，則可略過本節。
 
  下列步驟將建立有三個記憶體最佳化資料表的資料庫，方便您在本主題其餘部分中使用。 在此範例中，我們將資料庫對應至資源集區，以便控制記憶體最佳化資料表可以取用的記憶體。
 
 1.  啟動 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。
 
-2.  按一下 **[新增查詢]**。
+2.  按一下 **[新增查詢]** 。
 
 3.  將此程式碼貼入新查詢視窗，並執行每一個區段。
 
@@ -113,8 +113,7 @@ ms.locfileid: "78175907"
 ##  <a name="monitoring-memory-usage"></a>監視記憶體使用狀況
 
 ###  <a name="using-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用物件總管存取這些報表，如 [此處](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用物件總管存取這些報表，如 [此處](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。
 
 #### <a name="consumption-at-the-database-level"></a>資料庫層級的耗用量
  您可以監視資料庫層級的記憶體使用量，如下所述。
@@ -123,7 +122,7 @@ ms.locfileid: "78175907"
 
 2.  在 [物件總管] 中，以滑鼠右鍵按一下要產生報表的資料庫。
 
-3.  在操作功能表中選取 [**報告** -> ] [**標準** -> ] [報表] [**依記憶體優化物件的記憶體使用量**]
+3.  在操作功能表中，依序選取 [報表]   -> [標準報表]   -> [記憶體最佳化物件的記憶體使用量] 
 
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")
 
@@ -143,7 +142,7 @@ SELECT object_name(object_id) AS Name
    FROM sys.dm_db_xtp_table_memory_stats
 ```
 
- **取樣輸出**
+ **範例輸出**
 
 ```
 Name       object_id   memory_allocated_for_table_kb memory_used_by_table_kb memory_allocated_for_indexes_kb memory_used_by_indexes_kb
@@ -171,7 +170,7 @@ SELECT memory_consumer_desc
    FROM sys.dm_xtp_system_memory_consumers
 ```
 
- **取樣輸出**
+ **範例輸出**
 
 ```
 memory_consumer_ desc allocated_bytes_kb   used_bytes_kb        allocation_count
@@ -211,7 +210,7 @@ SELECT memory_object_address
    FROM sys.dm_os_memory_objects WHERE type LIKE '%xtp%'
 ```
 
- **取樣輸出**
+ **範例輸出**
 
 ```
 memory_object_address pages_ in_bytes bytes_used type
@@ -233,8 +232,7 @@ memory_object_address pages_ in_bytes bytes_used type
 
  如需詳細資訊，請參閱[sys.databases dm_os_memory_objects （transact-sql）](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)。
 
-#### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體
+#### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體
  管理配置給 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎和記憶體最佳化物件之記憶體的方式，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中其他任何記憶體取用者的管理方式相同。 MEMORYCLERK_XTP 類型的 Clerk 會考量所有配置給 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎的記憶體。 使用下列查詢可找出 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎所使用的所有記憶體。
 
 ```sql
@@ -248,7 +246,7 @@ SELECT type
 
  此範例輸出顯示，在配置的總記憶體中，18 MB 為系統層級記憶體耗用量，1358 MB 則配置給資料庫識別碼 5。 由於此資料庫對應至專用資源集區，因此該記憶體會佔用資源集區。
 
- **取樣輸出**
+ **範例輸出**
 
 ```
 type                 name       memory_node_id pages_MB

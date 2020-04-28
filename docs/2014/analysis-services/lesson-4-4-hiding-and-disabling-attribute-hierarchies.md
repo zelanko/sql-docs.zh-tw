@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175317"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>隱藏及停用屬性階層
   根據預設，系統會在維度中建立每個屬性的屬性階層，而且每個階層都可用來建立事實資料的維度。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。
 
- 
-  **AttributeHierarchyEnabled** 屬性的值決定是否建立屬性階層。 如果這個屬性設為 **False**，則不建立屬性階層，且屬性不得做為使用者階層中的一個層級；屬性階層只得以成員屬性的身分存在。 不過，已停用的屬性階層仍然可以用來排序另一個屬性的成員。 如果 **AttributeHierarchyEnabled** 屬性的值設為 **True**，則 **AttributeHierarchyVisible** 屬性的值將決定是否不論屬性階層在使用者自訂階層中的用法為何皆會顯示。
+ **AttributeHierarchyEnabled** 屬性的值決定是否建立屬性階層。 如果這個屬性設為 **False**，則不建立屬性階層，且屬性不得做為使用者階層中的一個層級；屬性階層只得以成員屬性的身分存在。 不過，已停用的屬性階層仍然可以用來排序另一個屬性的成員。 如果 **AttributeHierarchyEnabled** 屬性的值設為 **True**，則 **AttributeHierarchyVisible** 屬性的值將決定是否不論屬性階層在使用者自訂階層中的用法為何皆會顯示。
 
  啟用屬性階層之後，您可以指定下列另外 3 個屬性的值：
 
@@ -32,7 +31,7 @@ ms.locfileid: "78175317"
     > [!NOTE]
     >  如果某個屬性的 **IsAggregatable** 屬性設為 false，其就只能當做使用者定義階層的根使用，而且必須指定預設的成員 (否則， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 引擎將會為您選擇一個成員)。
 
--   **Attributehierarchyordered]**
+-   **AttributeHierarchyOrdered**
 
      依預設， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在處理期間會排序已啟用屬性階層的成員，然後按 **OrderBy** 屬性的值來儲存成員，例如按名稱或索引鍵。 如果您不在乎排序，可將這個屬性的值設為 **False**，來增加處理效能。
 
@@ -50,9 +49,9 @@ ms.locfileid: "78175317"
 
 2.  確認下列屬性階層有出現在 [階層]**** 清單中：
 
-    -   **基本費率**
+    -   **底薪**
 
-    -   **出生日期**
+    -   **Birth Date**
 
     -   **登入識別碼**
 
@@ -62,9 +61,9 @@ ms.locfileid: "78175317"
 
 3.  切換至 [維度結構]**** 索引標籤，然後在 [屬性]**** 窗格中選擇下列屬性。 您可以在按住 CTRL 鍵的同時，按一下每個量值，藉以選取多個量值：
 
-    -   **基本費率**
+    -   **底薪**
 
-    -   **出生日期**
+    -   **Birth Date**
 
     -   **登入識別碼**
 
@@ -94,13 +93,13 @@ ms.locfileid: "78175317"
 
     -   **全名**
 
-    -   **郵遞區號**
+    -   **Postal Code**
 
 3.  切換到 [維度結構]**** 索引標籤，然後使用 CTRL 鍵同時選取多個屬性，來選取 [屬性]**** 窗格中的下列屬性：
 
     -   **全名**
 
-    -   **郵遞區號**
+    -   **Postal Code**
 
 4.  在 [屬性] 視窗中，針對已選取的屬性，將 **AttributeHierarchyVisible** 屬性的值設為 **False** 。
 

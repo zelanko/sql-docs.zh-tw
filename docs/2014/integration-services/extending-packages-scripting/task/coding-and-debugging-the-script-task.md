@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176170"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
@@ -47,11 +47,9 @@ ms.locfileid: "78176170"
  當您建立或修改包含在指令碼工作中的指令碼時，VSTA 會開啟空的新專案或是重新開啟現有的專案。 這個 VSTA 專案的建立不會影響專案的部署，因為專案是儲存在封裝檔案中；指令碼工作不會建立其他檔案。
 
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>指令碼工作專案中的專案項目和類別
- 依預設，顯示在 VSTA [專案總管] 視窗中的指令碼工作專案包含單一項目：`ScriptMain`。 
-  `ScriptMain` 項目則包含單一類別，同樣名為 `ScriptMain`。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。
+ 依預設，顯示在 VSTA [專案總管] 視窗中的指令碼工作專案包含單一項目：`ScriptMain`。 `ScriptMain` 項目則包含單一類別，同樣名為 `ScriptMain`。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。
 
--   針對程式[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]設計語言設定腳本工作時， `ScriptMain`類別具有公用副程式。 `Main` 
-  `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。
+-   針對程式[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]設計語言設定腳本工作時， `ScriptMain`類別具有公用副程式。 `Main` `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。
 
      依預設，在新指令碼的 `Main` 副程式中的唯一程式碼是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 `Dts.TaskResult` [從腳本工作傳回結果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中會討論屬性。
 
@@ -59,8 +57,7 @@ ms.locfileid: "78176170"
 
      依預設，`Main` 方法包括此行：`Dts.TaskResult = (int)ScriptResults.Success`。 這行會通知執行階段，工作的作業已成功。
 
- 
-  `ScriptMain` 項目可以包含 `ScriptMain` 類別以外的類別。 類別僅可供其所在的指令碼工作使用。
+ `ScriptMain` 項目可以包含 `ScriptMain` 類別以外的類別。 類別僅可供其所在的指令碼工作使用。
 
  依預設，`ScriptMain` 專案項目包含下列自動產生的程式碼。 程式碼範本也會提供指令碼工作的概觀，以及有關如何擷取與操作 SSIS 物件 (例如變數、事件與連接) 的其他資訊。
 

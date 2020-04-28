@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1236a9cdffc4dd06764da1f2988df80d568798c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175647"
 ---
 # <a name="delete-powerpivot-gallery"></a>刪除 PowerPivot 圖庫
@@ -29,7 +29,7 @@ ms.locfileid: "78175647"
 
 1.  按一下 [設定] [ ![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")]，然後按一下 [**網站設定**]。
 
-2.  按一下 **[站台設定]**。
+2.  按一下 **[站台設定]** 。
 
 3.  在 [網站管理] 之下，按一下 [網站文件庫與清單]****。
 
@@ -39,9 +39,9 @@ ms.locfileid: "78175647"
 
 ### <a name="delete-powerpivot-gallery-sharepoint-2010"></a>刪除 PowerPivot 圖庫 SharePoint 2010
 
-1.  按一下 **[網站動作]**。
+1.  按一下 **[網站動作]** 。
 
-2.  按一下 **[站台設定]**。
+2.  按一下 **[站台設定]** 。
 
 3.  在 [網站管理] 之下，按一下 [網站文件庫和清單]****。
 

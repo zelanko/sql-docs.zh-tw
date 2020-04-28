@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176528"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
@@ -36,7 +36,7 @@ ms.locfileid: "78176528"
 
  一旦管理員已經在資料庫上啟用異動資料擷取，您就可以建立執行累加式變更資料載入的封裝。 下圖顯示建立可從單一資料表執行累加式載入這種封裝的步驟：
 
- ![異動資料擷取套件建立步驟](../media/cdc-package-creation.gif "異動資料擷取封裝建立步驟")
+ ![異動資料擷取套件建立步驟](../media/cdc-package-creation.gif "異動資料擷取套件建立步驟")
 
  如上圖所示，建立可執行累加式變更資料載入的封裝包含下列步驟：
 
@@ -44,27 +44,27 @@ ms.locfileid: "78176528"
 
 -   針對您要擷取的來源資料，計算變更間隔的開始和結束 `datetime` 值。
 
-     若要計算這些值，請搭配 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 函數使用「執行 SQL」工作或 `datetime` 運算式。 然後您可以用封裝變數儲存這些端點，以便稍後在封裝中使用。
+     若要計算這些值，請搭配 `datetime` 函數使用「執行 SQL」工作或 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 運算式。 然後您可以用封裝變數儲存這些端點，以便稍後在封裝中使用。
 
-     **如需詳細資訊：**  [指定變更資料的間隔](specify-an-interval-of-change-data.md)
+     **如需詳細資訊，請參閱**  [指定變更資料的間隔](specify-an-interval-of-change-data.md)
 
 -   判斷所選間隔的變更資料是否就緒。 由於非同步的擷取程序可能還沒有達到所選的端點，因此這是必要的步驟。
 
      若要判斷資料是否就緒，如果必要，開始使用「For 迴圈」容器延遲執行，直到所選間隔的變更資料就緒為止。 在迴圈容器內部，使用「執行 SQL」工作查詢由異動資料擷取所維護的時間對應資料表。 然後，使用呼叫 `Thread.Sleep` 方法的「指令碼」工作，或搭配 `WAITFOR` 陳述式使用另一個「執行 SQL」工作，暫時延遲封裝的執行 (如有必要)。 或者，使用其他「指令碼」工作記錄錯誤條件或逾時。
 
-     **如需詳細資訊：**  [判斷變更資料是否就緒](determine-whether-the-change-data-is-ready.md)
+     **如需詳細資訊，請參閱**  [判斷變更資料是否就緒](determine-whether-the-change-data-is-ready.md)
 
 -   準備將用於查詢變更資料的查詢字串。
 
      使用「指令碼」工作或「執行 SQL」工作來組合將用於查詢變更的 SQL 陳述式。
 
-     **如需詳細資訊：**  [準備查詢變更資料](prepare-to-query-for-the-change-data.md)
+     **如需詳細資訊，請參閱**  [準備查詢變更資料](prepare-to-query-for-the-change-data.md)
 
  **步驟2：設定變更資料的查詢**建立將查詢資料的資料表值函數。
 
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開發及儲存查詢。
 
- **如需詳細資訊**，請[取出並瞭解變更資料](retrieve-and-understand-the-change-data.md)  
+ **如需詳細資訊，請參閱**  [擷取與了解變更資料](retrieve-and-understand-the-change-data.md)
 
  **步驟3：設計資料流程**在封裝的資料流程中，必須定義下列工作：
 
@@ -72,30 +72,29 @@ ms.locfileid: "78176528"
 
      若要擷取資料，使用來源元件來查詢所選間隔內之變更的變更資料表。 此來源會呼叫您必須在先前已經建立的 Transact-SQL 資料表值函數。
 
-     **如需詳細資訊**，請[取出並瞭解變更資料](retrieve-and-understand-the-change-data.md)  
+     **如需詳細資訊，請參閱**  [擷取與了解變更資料](retrieve-and-understand-the-change-data.md)
 
 -   將變更分割為要處理的插入、更新與刪除。
 
      若要分割變更，使用「條件式分割」轉換，將插入、更新與刪除導引到不同的輸出以便進行適當的處理。
 
-     **如需詳細資訊：**  [處理插入、更新和刪除](process-inserts-updates-and-deletes.md)
+     **如需詳細資訊，請參閱**  [處理插入、更新與刪除](process-inserts-updates-and-deletes.md)
 
 -   將插入、刪除與更新套用到目的地。
 
      若要將變更套用到目的地，請使用目的地元件，將插入套用到目的地。 同時，搭配參數化的 UPDATE 和 DELETE 陳述式使用「OLE DB 命令」轉換，將更新與刪除套用到目的地。 您也可以使用目的地元件來套用更新與刪除，以便將資料列儲存到暫存資料表中。 接著，使用「執行 SQL」工作，根據暫存資料表的目的地，執行大量更新與大量刪除作業。
 
-     **如需詳細資訊：**  [將變更套用至目的地](apply-the-changes-to-the-destination.md)
+     **如需詳細資訊，請參閱**  [將變更套用到目的地](apply-the-changes-to-the-destination.md)
 
 ### <a name="change-data-from-multiple-tables"></a>多個資料表的資料變更
  在上圖與上述步驟中所述的程序包含來自單一資料表的累加式載入。 當您必須從多個資料表執行累加式載入時，整個程序都相同。 不過，必須變更封裝的設計以配合多個資料表的處理。 如需如何建立可從多個資料表執行累加式載入之封裝的詳細資訊，請參閱 [執行多個資料表的累加式載入](perform-an-incremental-load-of-multiple-tables.md)。
 
 ## <a name="samples-of-change-data-capture-packages"></a>異動資料擷取封裝的範例
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供兩個範例，示範如何在封裝中使用異動資料擷取。 如需詳細資訊，請參閱下列主題：
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供兩個範例，示範如何在封裝中使用異動資料擷取。 如需詳細資訊，請參閱下列主題：
 
--   [針對指定的間隔封裝範例 Readme_Change 資料捕獲](https://go.microsoft.com/fwlink/?LinkId=133507)
+-   [讀我檔案_指定之間隔的異動資料擷取封裝範例](https://go.microsoft.com/fwlink/?LinkId=133507)
 
--   [上次要求封裝範例後的 Readme_Change 資料捕獲](https://go.microsoft.com/fwlink/?LinkId=133508)
+-   [讀我檔案_自上次要求後的異動資料擷取封裝範例](https://go.microsoft.com/fwlink/?LinkId=133508)
 
 ## <a name="related-tasks"></a>相關工作
 

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb12bd6499796ff7f2cfb09ccd4c176914c8117
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175797"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>在維度設計師中檢視屬性
@@ -28,9 +28,9 @@ ms.locfileid: "78175797"
 
 |顯示屬性於|描述|
 |------------------------|-----------------|
-|**清單**|以清單格式顯示屬性。<br /><br /> 以滑鼠右鍵按一下某個屬性，即可將屬性從清單中刪除、將屬性重新命名，或者變更屬性的使用方式。<br /><br /> 使用此檢視建立階層。 屬性 (Attribute) 資訊和成員屬性 (Property) 是看不到的。|
+|**名單**|以清單格式顯示屬性。<br /><br /> 以滑鼠右鍵按一下某個屬性，即可將屬性從清單中刪除、將屬性重新命名，或者變更屬性的使用方式。<br /><br /> 使用此檢視建立階層。 屬性 (Attribute) 資訊和成員屬性 (Property) 是看不到的。|
 |**路徑**|以樹狀格式顯示屬性，且維度是樹狀中的最上層節點。 使用此檢視，即可檢視和建立成員屬性。 也您可以使用此檢視來建立階層。 執行下列動作，即可展開屬性來檢視其屬性關聯性，或是建立新的屬性關聯性：<br /><br /> 按一下維度、屬性 (Attribute) 或成員屬性 (Property)，即可在 [屬性]**** (Property) 視窗中檢視其屬性 (Property)。<br /><br /> 以滑鼠右鍵按一下屬性 (Attribute) 或成員屬性 (Property)，即可從清單刪除屬性、將屬性重新命名，或者變更屬性的使用方式。|
-|**格**|以方格格式顯示屬性。 按一下方格中的任一個資料列，即可檢視該屬性 (Attribute) 的屬性 (Property)。  使用此檢視來建立和設定屬性。 方格會顯示下列資料行：<br /><br /> **名稱**：顯示**name**屬性的值。 輸入其他名稱即可變更設定。<br /><br /> **使用**方式：指定這是否為一般、金鑰、父系或 AccountType 屬性。 按一下此資料行中的值，即可選取其他設定。<br /><br /> **類型**：指定屬性的商業智慧類別目錄。 按一下此資料格，即可選取其他設定。<br /><br /> 索引**鍵資料行**：顯示內容上**KeyColumn**屬性的 OLE DB 資料類型。 無法變更此資料行。<br /><br /> **名稱資料行**：指出屬性（attribute）上的**NameColumn**屬性（property）設定是否與**KeyColumn**屬性（property）設定的資料行相同。 無法變更此資料行。|
+|**Grid**|以方格格式顯示屬性。 按一下方格中的任一個資料列，即可檢視該屬性 (Attribute) 的屬性 (Property)。  使用此檢視來建立和設定屬性。 方格會顯示下列資料行：<br /><br /> **名稱**：顯示**name**屬性的值。 輸入其他名稱即可變更設定。<br /><br /> **使用**方式：指定這是否為一般、金鑰、父系或 AccountType 屬性。 按一下此資料行中的值，即可選取其他設定。<br /><br /> **類型**：指定屬性的商業智慧類別目錄。 按一下此資料格，即可選取其他設定。<br /><br /> 索引**鍵資料行**：顯示內容上**KeyColumn**屬性的 OLE DB 資料類型。 無法變更此資料行。<br /><br /> **名稱資料行**：指出屬性（attribute）上的**NameColumn**屬性（property）設定是否與**KeyColumn**屬性（property）設定的資料行相同。 無法變更此資料行。|
 
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，下表裡顯示的圖示會根據屬性的使用方式標示屬性。
 

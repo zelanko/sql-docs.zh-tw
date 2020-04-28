@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175801"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>採礦模型檢視器 (資料採礦模型設計師)
@@ -27,11 +27,11 @@ ms.locfileid: "78175801"
  如需如何使用每個檢視器的逐步解說，請參閱 [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)。
 
 ## <a name="common-options"></a>一般選項
- 重新整理**檢視器內容**在檢視器中重載此採礦模型。
+ **重新整理檢視器內容** 在檢視器中重新載入採礦模型。
 
- **採礦模型**選擇目前的「採礦結構」中所包含的「採礦模型」來進行查看。 採礦模型將會先在其關聯的自訂檢視器中開啟。
+ **採礦模型** 選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型將會先在其關聯的自訂檢視器中開啟。
 
- **檢視器**選擇要用來流覽所選取之採礦模型的檢視器。 這份清單包含為每[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]個採礦模型提供的檢視器[!INCLUDE[msCoName](../includes/msconame-md.md)] 、挖掘內容檢視器，以及任何外掛程式檢視器。
+ **檢視器** 選擇用來瀏覽選取之採礦模型的檢視器。 這份清單包含為每[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]個採礦模型提供的檢視器[!INCLUDE[msCoName](../includes/msconame-md.md)] 、挖掘內容檢視器，以及任何外掛程式檢視器。
 
  下圖顯示相同模型的自訂檢視器和一般檢視器。
 

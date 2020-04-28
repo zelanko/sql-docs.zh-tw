@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3908c39fc6deba57bf8f0e277918e5b8167f4a77
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177184"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 記錄檔和來源
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器和報表伺服器環境可支援各種記錄目的地，以記錄有關伺服器作業與狀態的資訊。 記錄有兩個基本的類別目錄，也就是執行記錄和追蹤記錄。 執行記錄包含有關報表執行統計資料、稽核、效能診斷與最佳化的資訊。 追蹤記錄是有關錯誤訊息與一般診斷的資訊。
 
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式 | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式
@@ -40,7 +39,7 @@ ms.locfileid: "78177184"
 |[報表伺服器 HTTP 記錄](report-server-http-log.md)|HTTP 記錄檔包含報表伺服器 Web 服務和報表管理員所處理之所有 HTTP 要求與回應的記錄。|
 |[Windows 應用程式記錄檔](windows-application-log.md)|Microsoft Windows 應用程式記錄包含有關報表伺服器事件的資訊。|
 |Windows 效能記錄|Windows 效能記錄包含報表伺服器的效能資料。 您可以建立效能記錄，然後選擇計數器來決定要收集的資料。 如需詳細資訊，請參閱 [監視報表伺服器效能](monitoring-report-server-performance.md)。|
-|設定記錄檔|記錄檔也是在安裝期間建立。 如果安裝失敗，或雖然成功但出現警告或其他訊息，您可以檢查記錄檔來排除問題。 如需詳細資訊，請參閱[查看和讀取 SQL Server 安裝程式記錄](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)檔。|
+|設定記錄檔|記錄檔也是在安裝期間建立。 如果安裝失敗，或雖然成功但出現警告或其他訊息，您可以檢查記錄檔來排除問題。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。|
 |IIS 記錄|由 Microsoft Internet Information Services (IIS) 建立的記錄檔 如需詳細資訊，請參閱 [如何在 Internet Information Services (IIS) 中啟用記錄](https://support.microsoft.com/kb/313437)。|
 |影片|觀看示範如何使用 Microsoft Power Query 檢視 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 記錄檔的短片。<br /><br /> ![檢視有關 Power Query 和 SSRS 記錄檔的影片](../media/generic-video-thumbnail.png "檢視有關 Power Query 和 SSRS 記錄檔的影片")|
 

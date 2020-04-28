@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 089b99663753a9e9424e991ca5245c73ea577e49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175757"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>編輯或刪除分割區 (Analysis Services - 多維度)
-  若要修改 Cube 資料分割，可以在 ** 中使用 Cube 設計師的 [資料分割]**[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 索引標籤。 [資料分割]**** 索引標籤會列出 Cube 中所有量值群組的資料分割。 它也會列出已啟用回寫功能的回寫分割區。
+  若要修改 Cube 資料分割，可以在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中使用 Cube 設計師的 [資料分割]**** 索引標籤。 [資料分割]**** 索引標籤會列出 Cube 中所有量值群組的資料分割。 它也會列出已啟用回寫功能的回寫分割區。
 
  若要編輯任何量值群組的資料分割，請在 [資料分割] 索引卷**標上展開**量值群組。量值群組的資料分割會依照資料表格式的序數來列出，並具有下表所列的資料行。
 

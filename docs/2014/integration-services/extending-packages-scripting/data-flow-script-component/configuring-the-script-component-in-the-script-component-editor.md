@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176207"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在指令碼元件編輯器中設定指令碼元件
@@ -77,11 +77,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  雖然您無法在指令碼元件中將輸出直接設定為錯誤輸出，以自動處理錯誤資料列，不過可以建立其他輸出與使用指令碼，適時地將資料列導向此輸出，以重新產生錯誤輸出的功能。 如需詳細資訊，請參閱[模擬指令碼元件的錯誤輸出](../../data-flow/transformations/script-component.md)。
 
 #### <a name="exclusiongroup-and-synchronousinputid-properties-of-outputs"></a>輸出的 ExclusionGroup 與 SynchronousInputID 屬性
- 
-  `ExclusionGroup` 屬性只有在具有同步輸出的轉換中才有非零值，在這裡程式碼會執行篩選或分支，並將每個資料列導向具有相同非零 `ExclusionGroup` 值的其中一個輸出。 例如，轉換可以將資料列導向至預設輸出或是錯誤輸出。 當您為此狀況建立其他輸出時，請確定將 `SynchronousInputID` 屬性值設定為整數，以符合元件輸入的 `ID`。
+ `ExclusionGroup` 屬性只有在具有同步輸出的轉換中才有非零值，在這裡程式碼會執行篩選或分支，並將每個資料列導向具有相同非零 `ExclusionGroup` 值的其中一個輸出。 例如，轉換可以將資料列導向至預設輸出或是錯誤輸出。 當您為此狀況建立其他輸出時，請確定將 `SynchronousInputID` 屬性值設定為整數，以符合元件輸入的 `ID`。
 
- 
-  `SynchronousInputID` 屬性只有在具有同步輸出的轉換中才有非零值。 如果此屬性的值是零，即表示輸出是非同步的。 若是同步輸出，亦即將資料列傳遞到選取的輸出或是沒有加入任何新資料列的輸出，則這個屬性應該會包含元件輸入的 `ID`。
+ `SynchronousInputID` 屬性只有在具有同步輸出的轉換中才有非零值。 如果此屬性的值是零，即表示輸出是非同步的。 若是同步輸出，亦即將資料列傳遞到選取的輸出或是沒有加入任何新資料列的輸出，則這個屬性應該會包含元件輸入的 `ID`。
 
 > [!NOTE]
 >  當 [**腳本轉換編輯器**] 建立第一個輸出時，編輯器會`SynchronousInputID`將輸出的屬性設定為`ID`元件輸入的。 然而，當編輯器建立後續的輸出時，編輯器會將這些輸出的 `SynchronousInputID` 屬性設定為零。
@@ -102,8 +100,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  在 [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] 和更新的版本中，所有指令碼都是先行編譯。 在舊版中，您可以藉由工作的 `Precompile` 屬性，指定指令碼是否已經先行編譯。
 
 #### <a name="validateexternalmetadata-property"></a>ValidateExternalMetadata 屬性
- 
-  `ValidateExternalMetadata` 屬性的布林值可指定元件要在設計階段針對外部資料來源執行驗證，還是將驗證延後到執行階段執行。 依預設，此屬性的值是 `True`，也就是，外部中繼資料是在設計階段與執行階段進行驗證。 當外部資料來源在設計階段無法使用時，您可能會想要將此屬性的值設定為 `False`：例如，當封裝只在執行階段下載來源或建立目的地時。
+ `ValidateExternalMetadata` 屬性的布林值可指定元件要在設計階段針對外部資料來源執行驗證，還是將驗證延後到執行階段執行。 依預設，此屬性的值是 `True`，也就是，外部中繼資料是在設計階段與執行階段進行驗證。 當外部資料來源在設計階段無法使用時，您可能會想要將此屬性的值設定為 `False`：例如，當封裝只在執行階段下載來源或建立目的地時。
 
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 與 ReadWriteVariables 屬性
  您可以輸入現有變數的逗號分隔清單做為這些屬性的值，使得變數可在指令碼元件程式碼中以唯讀或讀取/寫入的方式來存取。 在程式碼中，變數是透過自動產生的基底類別之 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 屬性來存取。 如需詳細資訊，請參閱[在指令碼元件中使用變數](using-variables-in-the-script-component.md)。
@@ -120,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>指令碼轉換編輯器的連接管理員頁面
  在 [指令碼轉換編輯器]  的 [連線管理員]  頁面上，您可以新增和移除要在自訂指令碼中使用的連線管理員。 一般而言，您需要在建立來源或是目的地元件時，參考連接管理員。
 
- 在將會根據此中繼資料產生的程式碼專案中，`ComponentWrapper` 專案項目包含 `Connections` 集合類別，這個類別對於每個選取的連接管理員，都有具類型的存取子屬性。 每個具類型的存取子屬性都有做為連接管理員的相同名稱，並且會傳回連接管理員參考做為 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> 的執行個體。 例如，如果您已在編輯器的 [連線管理員]  頁面中新增名為 `MyADONETConnection` 的連線管理員，就可以使用下列程式碼，取得指令碼中連線管理員的參考：
+ 在將會根據此中繼資料產生的程式碼專案中，`ComponentWrapper` 專案項目包含 `Connections` 集合類別，這個類別對於每個選取的連接管理員，都有具類型的存取子屬性。 每個具類型的存取子屬性都有做為連接管理員的相同名稱，並且會傳回連接管理員參考做為 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> 的執行個體。 例如，如果您已在編輯器的 [連線管理員]`MyADONETConnection`**頁面中新增名為** 的連線管理員，就可以使用下列程式碼，取得指令碼中連線管理員的參考：
 
 ```vb
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _

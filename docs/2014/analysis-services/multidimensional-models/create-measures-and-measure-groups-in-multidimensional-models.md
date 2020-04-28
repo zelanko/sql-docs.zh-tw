@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175767"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多維度模型中建立量值和量值群組
-  
-  *「量值」* (measure) 是數值資料值的彙總，包括總和、計數、最小值、最大值、平均值或您建立的自訂 MDX 運算式。 
-  *「量值群組」* (measure group) 是包含一個或多個量值的容器。 所有量值都存在量值群組中，即使只有一個量值。 Cube 必須具有至少一個量值與量值群組。
+  *「量值」* (measure) 是數值資料值的彙總，包括總和、計數、最小值、最大值、平均值或您建立的自訂 MDX 運算式。 *「量值群組」* (measure group) 是包含一個或多個量值的容器。 所有量值都存在量值群組中，即使只有一個量值。 Cube 必須具有至少一個量值與量值群組。
 
  這個主題包括下列各節：
 
@@ -30,11 +28,11 @@ ms.locfileid: "78175767"
 
 -   [量值的元件](#bkmk_comps)
 
--   [模型化事實和事實資料表上的量值和量值群組](#bkmk_modeling)
+-   [模型化代表事實和事實資料表的量值與量值群組](#bkmk_modeling)
 
--   [量值群組的資料細微性](#bkmk_grain)
+-   [量值群組的資料粒度](#bkmk_grain)
 
-##  <a name="bkmk_create"></a>建立量值的方法
+##  <a name="approaches-for-creating-measures"></a><a name="bkmk_create"></a>建立量值的方法
  量值可以是 Cube 的靜態項目，於設計階段建立，而且無論何時存取 Cube，都會一直存在。 您也可以使用多維度運算式 (MDX)，將量值定義為 *「導出成員」* (calculated member)，以根據 Cube 中的其他量值，提供量值的導出值。 導出成員可以限定在工作階段或使用者。
 
  若要建立量值或量值群組，可使用其中一種方法：
@@ -46,7 +44,7 @@ ms.locfileid: "78175767"
 |「導出成員」|因為您可以控制導出成員的建立時機及方式，所以導出成員可為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 增加彈性及分析功能。 有時候您可能只是暫時需要量值，在使用者工作階段或調查期間的 Management Studio 階段中使用。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [計算] 索引標籤，以建立新的導出成員。<br /><br /> 當基礎為 MDX 運算式中的量值時，請選擇此方法。 如需詳細資訊，請參閱下列主題︰[Building Measures in MDX](mdx/mdx-building-measures.md) (在 MDX 中建立量值)、[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)、[Calculations in Multidimensional Models](calculations-in-multidimensional-models.md) (多維度模型中的計算) 和 [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md) (MDX 指令碼基礎觀念 (Analysis Services))。|
 |MDX 或 XMLA|在 SQL Server Management Studio 中，您可以執行 MDX 或 XMLA 來更改資料庫，以加入新的導出量值。 這種方法可在解決方案部署到伺服器之後，於特定的資料測試時使用。 請參閱 [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md)。|
 
-##  <a name="bkmk_comps"></a>量值的元件
+##  <a name="components-of-a-measure"></a><a name="bkmk_comps"></a>量值的元件
  量值是具有屬性的物件。 除了名稱，量值還必須具備彙總類型和來源資料行，或是用於載入包含資料之量值的運算式。 您可以藉由設定屬性來修改量值定義。
 
 |||
@@ -55,7 +53,7 @@ ms.locfileid: "78175767"
 |**累積**|依預設，會沿著每個維度來加總量值。 然而，`AggregateFunction` 屬性可讓您修改這個行為。 如需清單，請參閱＜ [Use Aggregate Functions](use-aggregate-functions.md) ＞。|
 |**屬性**|如需其他屬性說明，請參閱＜ [Configure Measure Properties](configure-measure-properties.md) ＞。|
 
-##  <a name="bkmk_modeling"></a>模型化事實和事實資料表上的量值和量值群組
+##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>模型化事實和事實資料表上的量值和量值群組
  執行精靈之前，請務必先了解量值定義背後的模型化原則。
 
  量值和量值群組是代表外部資料倉儲中之事實和事實資料表的多維度物件。 在大多數情況下，量值和量值群組會以資料來源檢視中的物件為基礎，而這些物件會依序從基礎資料倉儲建立。
@@ -77,7 +75,7 @@ ms.locfileid: "78175767"
 > [!NOTE]
 >  並非所有量值都是直接衍生自事實資料表的資料行所儲存的值。 例如，Adventure Works 範例 Cube 之 **Sales Quota** 量值群組中所定義的 **Sales Person Count** 量值，實際上會以 **FactSalesQuota** 事實資料表之 **EmployeeKey** 資料行中的唯一值 (或相異計數) 為基礎。
 
-##  <a name="bkmk_grain"></a>量值群組的資料細微性
+##  <a name="granularity-of-a-measure-group"></a><a name="bkmk_grain"></a>量值群組的資料細微性
  量值群組的資料粒度與事實資料表所支援的詳細資料層級相關聯。 資料粒度必須透過維度的外部索引鍵關聯性進行設定。
 
  例如 **FactSalesQuota** 事實資料表具有 **DimEmployee** 資料表的外部索引鍵關聯性，而 **FactSalesQuota** 資料表中的每筆記錄都會關聯到一位員工；如此情況下，當從「員工」維度檢視此量值群組的資料粒度時，所見內容皆為個別員工的層級。

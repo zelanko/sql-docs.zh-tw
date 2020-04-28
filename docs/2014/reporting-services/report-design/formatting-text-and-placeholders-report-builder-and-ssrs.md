@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c7b827440609bc2de5b75fbeedbf441fa2a9d63
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176788"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>格式化文字和預留位置 (報表產生器及 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "78176788"
 
  在此圖中，文字方塊本身有框線，而且所有文字都位於相同的文字方塊中，但文字則有各種不同的格式。
 
- 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。
+ 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]

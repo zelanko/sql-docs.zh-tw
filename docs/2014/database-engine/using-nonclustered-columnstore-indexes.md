@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175347"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非叢集資料行存放區索引
@@ -30,12 +30,12 @@ ms.locfileid: "78175347"
 
 -   [變更非叢集資料行存放區索引中的資料](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>建立非叢集資料行存放區索引
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>建立非叢集資料行存放區索引
  若要將資料載入非叢集資料行存放區索引，請先將資料載入至儲存為堆積或叢集索引的傳統 rowstore 資料表，然後使用 Create 資料行存放區[索引 &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)來建立資料行存放區索引。
 
  ![將資料載入資料行存放區索引](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "將資料載入資料行存放區索引")
 
-##  <a name="change"></a>變更非叢集資料行存放區索引中的資料
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>變更非叢集資料行存放區索引中的資料
  一旦您在資料表上建立非叢集資料行存放區索引，就無法直接修改該資料表中的資料。 使用 INSERT、UPDATE、DELETE 或 MERGE 的查詢將會失敗，並傳回錯誤訊息。 若要加入或修改資料表中的資料，您可以執行下列其中一項操作：
 
 -   停用資料行存放區索引。 然後您就可以更新資料表中的資料。 如果您停用資料行存放區索引，您可以在完成更新資料時重建資料行存放區索引。 例如：

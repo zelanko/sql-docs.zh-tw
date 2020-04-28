@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce29f56d7877712dd99553968b364b1c33471c2b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177321"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>取消選項 (Distributed Replay 管理工具)
@@ -22,7 +22,7 @@ ms.locfileid: "78177321"
 
  **cancel** 選項會取消目前正在控制器上執行的作業。
 
- ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示")如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。
+ ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。
 
 ## <a name="syntax"></a>語法
 
@@ -38,12 +38,10 @@ dreplay cancel [-mcontroller] [-q]
 
  **-q**無訊息模式。 不會提示確認。
 
- 
-  **-q** 參數是選用的。
+ **-q** 參數是選用的。
 
 ## <a name="examples"></a>範例
- 在下列範例中，會以無訊息模式提交取消要求。 
-  `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。
+ 在下列範例中，會以無訊息模式提交取消要求。 `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。
 
 ```
 dreplay cancel -m localhost -q

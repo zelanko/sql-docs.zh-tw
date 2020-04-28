@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176129"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
@@ -43,13 +43,13 @@ ms.locfileid: "78176129"
 
  下圖顯示一個具有「For 迴圈」容器的簡單封裝，該容器包含一個「執行 SQL」工作。
 
- ![套件、For 迴圈、工作主機和執行 SQL 工作](media/mw-dts-eventhandlerpkg.gif "封裝、For 迴圈、工作主機和執行 SQL 工作")
+ ![套件、For 迴圈、工作主機和執行 SQL 工作](media/mw-dts-eventhandlerpkg.gif "套件、For 迴圈、工作主機和執行 SQL 工作")
 
  針對其 `OnError` 事件，僅封裝具有事件處理常式。 如果在「執行 SQL」工作執行時發生錯誤，則會執行封裝的 `OnError` 事件處理常式。 下圖顯示引發封裝執行 `OnError` 事件處理常式的呼叫順序。
 
  ![事件處理常式流程](media/mw-dts-eventhandlers.gif "事件處理常式流程")
 
- 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之 [封裝總管]  索引標籤上的 [事件處理常式]  資料夾中，查看事件處理常式集合的成員。
+ 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在  **設計師之 [封裝總管]** **索引標籤上的 [事件處理常式]** [!INCLUDE[ssIS](../includes/ssis-md.md)] 資料夾中，查看事件處理常式集合的成員。
 
  您可以利用下列方式設定事件處理常式容器：
 
@@ -73,7 +73,7 @@ ms.locfileid: "78176129"
 
 |事件處理常式|事件|
 |-------------------|-----------|
-|`OnError`|`OnError`事件的事件處理常式。 當發生錯誤時，可執行檔會引發此事件。|
+|`OnError`|`OnError` 事件的事件處理常式。 當發生錯誤時，可執行檔會引發此事件。|
 |**OnExecStatusChanged**|**OnExecStatusChanged** 事件的事件處理常式。 當可執行檔的執行狀態變更時，它會引發此事件。|
 |**OnInformation**|**OnInformation** 事件的事件處理常式。 在驗證和執行可執行檔以報告資訊期間，會引發此事件。 此事件僅傳遞資訊，而不傳遞錯誤或警告。|
 |**OnPostExecute**|**OnPostExecute** 事件的事件處理常式。 可執行檔完成執行後，它會立即引發此事件。|
@@ -87,7 +87,7 @@ ms.locfileid: "78176129"
 |**OnWarning**|**OnWarning** 事件的事件處理常式。 當發生警告時，可執行檔會引發此事件。|
 
 ## <a name="configuration-of-an-event-handler"></a>設定事件處理常式
- 您可以在  **的 [屬性]** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗中，或以程式設計方式設定屬性。
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]**** 視窗中，或以程式設計方式設定屬性。
 
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)。
 

@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175923"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -39,12 +39,10 @@ ms.locfileid: "78175923"
 
 -   [相關工作和主題](#related)
 
-##  <a name="basics"></a> 基本概念
- 
-  *columnstore index* 是使用單欄式資料格式 (稱為「資料行存放區」) 來儲存、擷取及管理資料的一項技術。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同時支援叢集和非叢集資料行存放區索引。 此兩者所用記憶體中的資料行存放區技術相同，但在用途和支援的功能上有所差異。
+##  <a name="basics"></a><a name="basics"></a>操作
+ *columnstore index* 是使用單欄式資料格式 (稱為「資料行存放區」) 來儲存、擷取及管理資料的一項技術。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同時支援叢集和非叢集資料行存放區索引。 此兩者所用記憶體中的資料行存放區技術相同，但在用途和支援的功能上有所差異。
 
-###  <a name="benefits"></a> 優點
+###  <a name="benefits"></a><a name="benefits"></a>各種
  資料行存放區索引可在大部分對大型資料集執行分析的唯讀查詢中順利運作。 這一類通常是資料倉儲工作負載所使用的查詢。 資料行存放區索引對於使用完整資料表掃描的查詢可帶來極高的效能增益，但若查詢是要查找資料搜尋特定的值則不適用。
 
  資料行存放區索引的優點：
@@ -64,7 +62,7 @@ ms.locfileid: "78175923"
 
 ||
 |-|
-|**適用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]至[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
+|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
 
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，叢集資料行存放區索引：
 
@@ -84,7 +82,7 @@ ms.locfileid: "78175923"
 
 ||
 |-|
-|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
+|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|
 
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，非叢集資料行存放區索引：
 
@@ -100,11 +98,10 @@ ms.locfileid: "78175923"
 
 -   不會實際以排序順序儲存資料行。 而是儲存資料以改善壓縮和效能。 建立資料行存放區索引之前不需要預先排序資料，但可改善資料行存放區壓縮。
 
-###  <a name="Concepts"></a>重要概念和詞彙
+###  <a name="key-concepts-and-terms"></a><a name="Concepts"></a>重要概念和詞彙
  以下是與資料行存放區索引相關聯的主要詞彙和概念。
 
- 資料行存放區索引資料行存放區*索引*是一項技術，可使用單欄式資料格式（稱為「資料行存放區」）來儲存、抓取和管理 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同時支援叢集和非叢集資料行存放區索引。 此兩者所用記憶體中的資料行存放區技術相同，但在用途和支援的功能上有所差異。
+ 資料行存放區索引資料行存放區*索引*是一項技術，可使用單欄式資料格式（稱為「資料行存放區」）來儲存、抓取和管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同時支援叢集和非叢集資料行存放區索引。 此兩者所用記憶體中的資料行存放區技術相同，但在用途和支援的功能上有所差異。
 
  資料行存放*區是以*邏輯方式組織成具有資料列和資料行的資料表，並實際儲存成資料行取向的資料格式。
 
@@ -142,9 +139,9 @@ ms.locfileid: "78175923"
 
  差異存放區一旦達到資料列數目上限，就會隨即關閉。 Tuple 移動處理序將檢查是否有資料列群組已關閉。 只要一發現已關閉的資料列群組，處理序便會予以壓縮並儲存至資料行存放區。
 
-##  <a name="dataload"></a>載入資料
+##  <a name="loading-data"></a><a name="dataload"></a>載入資料
 
-###  <a name="dataload_nci"></a>將資料載入非叢集資料行存放區索引
+###  <a name="loading-data-into-a-nonclustered-columnstore-index"></a><a name="dataload_nci"></a>將資料載入非叢集資料行存放區索引
  若要將資料載入非叢集資料行存放區索引，請先將資料載入至儲存為堆積或叢集索引的傳統 rowstore 資料表，然後再建立具有 Create 資料行存放區索引[&#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)的非叢集資料行存放區索引。
 
  ![將資料載入資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "將資料載入資料行存放區索引")
@@ -153,8 +150,8 @@ ms.locfileid: "78175923"
 
  如需詳細資訊，請參閱＜ [Using Nonclustered Columnstore Indexes](indexes.md)＞。
 
-###  <a name="dataload_cci"></a>將資料載入叢集資料行存放區索引
- ![載入叢集資料行存放區索引中](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "載入叢集資料行存放區索引中")
+###  <a name="loading-data-into-a-clustered-columnstore-index"></a><a name="dataload_cci"></a>將資料載入叢集資料行存放區索引
+ ![載入叢集資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "載入叢集資料行存放區索引")
 
  如圖中所示，若要將資料載入叢集資料行存放區索引中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：
 
@@ -178,7 +175,7 @@ ms.locfileid: "78175923"
 
  如需有關差異存放區各項工作和程序的詳細資訊，請參閱＜ [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)＞。
 
-##  <a name="performance"></a>效能秘訣
+##  <a name="performance-tips"></a><a name="performance"></a>效能秘訣
 
 ### <a name="plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>規劃足夠的記憶體以平行建立資料行存放區索引
  除非記憶體受到限制，資料行存放區索引的建立預設都是平行作業。 平行建立索引比循序建立索引需要更多的記憶體。 在記憶體很寬裕的情況下，建立資料行存放區索引花費的時間大約是根據相同的資料行建構 B 型樹狀目錄的 1.5 倍。
@@ -187,12 +184,12 @@ ms.locfileid: "78175923"
 
  如果資料表的資料列數目超過一百萬個，但是 SQL Server 無法取得足夠的記憶體授權可使用 MAXDOP 建立索引，SQL Server 則會視需要自動降低 MAXDOP 以符合所提供的記憶體授權。  在某些情況下若記憶體受到限制，DOP 就必須降至 1 才能建立索引。
 
-##  <a name="related"></a>相關工作與主題
+##  <a name="related-tasks-and-topics"></a><a name="related"></a>相關工作與主題
 
 ### <a name="nonclustered-columnstore-indexes"></a>非叢集資料行存放區索引
  如需相關的一般工作，請參閱＜ [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)＞。
 
--   [建立資料行存放區索引 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)
+-   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)
 
 -   [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql) with REBUILD。
 
@@ -220,12 +217,12 @@ ms.locfileid: "78175923"
 
 -   [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)
 
--   [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)
+-   [sys.partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)
 
--   [column_store_segments &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)
+-   [sys.column_store_segments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)
 
--   [column_store_dictionaries &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)
+-   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)
 
--   [column_store_row_groups &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)
+-   [sys.column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)
 
 

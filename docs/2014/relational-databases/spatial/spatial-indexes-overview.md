@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176658"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
@@ -24,9 +24,9 @@ ms.locfileid: "78176658"
 > [!IMPORTANT]
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入的空間功能 (包括影響空間索引的功能) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
 
-##  <a name="about"></a> 關於空間索引
+##  <a name="about-spatial-indexes"></a><a name="about"></a> 關於空間索引
 
-###  <a name="decompose"></a> 將索引空間分解為方格階層
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> 將索引空間分解為方格階層
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空間索引是使用 B 型樹狀結構所建立，這表示這些索引必須代表 B 型樹狀結構線性順序中的 2 維度空間資料。 因此，將資料讀入空間索引之前， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會實作空間的階層式統一分解。 索引建立程序會將空間 *「分解」* (Decompose) 成四層的 *「方格階層」* (Grid Hierarchy)。 這些層級稱為 *「層級 1」* (Level 1) (最上層)、 *「層級 2」* (Level 2)、 *「層級 3」* (Level 3) 和 *「層級 4」* (Level 4)。
 
  每一個後續的層級都會進一步分解其上的層級，因此，每一個上層資料格都包含了下一層上的完整方格。 在給定的層級上，所有的方格沿著兩個座標軸會有相同的資料格數目 (例如 4x4 或 8x8)，而資料格都是同一大小。
@@ -60,7 +60,7 @@ ms.locfileid: "78176658"
 > [!NOTE]
 >  當資料庫相容性層級設定為 100 以下時，空間索引的方格密度會顯示在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目錄檢視的 level_1_grid、level_2_grid、level_3_grid 和 level_4_grid 資料行中。 `GEOMETRY_AUTO_GRID`配置選項不會填入這些資料/ `GEOGRAPHY_AUTO_GRID`行。 當使用自動方格選項時`NULL` ，spatial_index_tessellations 目錄檢視具有這些資料行的值。
 
-###  <a name="tessellation"></a>鑲嵌式
+###  <a name="tessellation"></a><a name="tessellation"></a>鑲嵌式
  將索引空間分解成方格階層之後，空間索引會從空間資料行讀取資料 (逐列讀取)。 在讀取空間物件 (或執行個體) 的資料之後，空間索引會針對該物件執行 *「鑲嵌程序」* (Tessellation Process)。 鑲嵌程序會將此物件納入方格階層中，方式是將此物件與它所接觸的一組方格資料格 (*「接觸的資料格」*(touched cell)) 產生關聯。 從方格階層的層級 1 開始，鑲嵌程序就會跨越此層級繼續進行 *「廣度優先」* (Breadth First)。 此程序可能繼續到所有的四個層級 (一次一個層級)。
 
  鑲嵌程序的輸出是一組接觸的資料格，這些資料格會記錄在物件的空間索引內。 藉由參考這些記錄的資料格，空間索引就可以在同時儲存於索引內的空間資料行中，在相對於其他物件的空間內找出此物件。
@@ -110,7 +110,7 @@ ms.locfileid: "78176658"
 
  ![最深的資料格最佳化](../../database-engine/media/spndx-opt-deepest-cell.gif "最深的資料格最佳化")
 
-###  <a name="schemes"></a>鑲嵌式配置
+###  <a name="tessellation-schemes"></a><a name="schemes"></a>鑲嵌式配置
  空間索引的行為部分取決於它的 *「鑲嵌式配置」*(Tessellation Scheme)。 鑲嵌式配置是資料類型所特有。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空間索引支援兩個鑲嵌式配置：
 
 -   *幾何方格鑲嵌*式，這是`geometry`資料類型的配置。
@@ -121,7 +121,7 @@ ms.locfileid: "78176658"
 >  空間索引的 **tessellation_scheme** 設定可以在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目錄檢視中看到。
 
 #### <a name="geometry-grid-tessellation-scheme"></a>幾何方格鑲嵌式配置
- GEOMETRY_AUTO_GRID 鑲嵌是 `geometry` 和更新版本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型的預設鑲嵌式配置。  GEOMETRY_GRID 鑲嵌是唯一適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 geometry 資料類型的鑲嵌式配置。 本章節討論與處理空間索引相關之幾何方格鑲嵌的層面：支援的方法及週框方塊。
+ GEOMETRY_AUTO_GRID 鑲嵌是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本之 `geometry` 資料類型的預設鑲嵌式配置。  GEOMETRY_GRID 鑲嵌是唯一適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 geometry 資料類型的鑲嵌式配置。 本章節討論與處理空間索引相關之幾何方格鑲嵌的層面：支援的方法及週框方塊。
 
 > [!NOTE]
 >  您可以使用[CREATE 空間索引](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]語句的 using （GEOMETRY_AUTO_GRID/GEOMETRY_GRID）子句來明確指定這個鑲嵌式配置。
@@ -129,13 +129,13 @@ ms.locfileid: "78176658"
 ##### <a name="the-bounding-box"></a>週框方塊
  幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 周框方塊是由四個座標（ `(` _x-min_**、**_y-min_ `)`和`(` _x max_**、**_y-max_`)`）所定義，它們會儲存為空間索引的屬性。 這些座標表示以下項目：
 
--   [ *x-分鐘*] 是周框方塊左下角的 x 座標。
+-   *x-min* 是週框方塊左下角的 X 座標。
 
--   *y-min*是左下角的 y 座標。
+-   *y-min* 是左下角的 Y 座標。
 
--   *x-max*是右上角的 x 座標。
+-   *x-max* 是右上角的 X 座標。
 
--   *y-max*是右上角的 y 座標。
+-   *y-max* 是右上角的 Y 座標。
 
 > [!NOTE]
 >  這些座標是由[CREATE 空間索引](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]語句的 BOUNDING_BOX 子句所指定。
@@ -146,7 +146,7 @@ ms.locfileid: "78176658"
 
  下圖顯示由周框方塊的`(` _x-min_**、**_y-min_ `)`和`(` _x max_**、**_y-max_ `)`座標所定義的點。 方格階層的最上層會顯示為 4x4 方格。 為了說明起見，較低的層級會予以忽略。 週框方塊外面的空間是由零 (0) 所指示。 請注意，物件 'A' 有一部分延伸到方塊外面，而物件 'B' 則完全位於資料格 0 的方塊內。
 
- ![顯示座標和資料格0的周框方塊。](../../database-engine/media/spndx-bb-4x4-objects.gif "顯示座標和資料格 0 的週框方塊。")
+ ![顯示座標和資料格 0 的週框方塊。](../../database-engine/media/spndx-bb-4x4-objects.gif "顯示座標和資料格 0 的週框方塊。")
 
  週框方塊會對應到應用程式空間資料的某個部分。 不論索引的週框方塊是否完整包含空間資料行內所儲存的資料，或是只包含一部分，這都取決於應用程式。 只有在完全位於週框方塊內之物件上的運算才會從空間索引獲益。 因此，若要從 `geometry` 資料行上的空間索引獲得最大的好處，您便需要指定包含所有或大多數物件的週框方塊。
 
@@ -160,8 +160,7 @@ ms.locfileid: "78176658"
 >  您可以使用[CREATE 空間索引](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]語句的 using （GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID）子句來明確指定這個鑲嵌式配置。
 
 ##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>將測量空間投射到平面上
- 
-  `geography` 執行個體 (物件) 上的計算會將包含物件的空間視為測量的橢圓體。 若要分解此空間，地理位置方格鑲嵌式配置會將橢圓體的表面分成上半球和下半球，然後執行下列步驟：
+ `geography` 執行個體 (物件) 上的計算會將包含物件的空間視為測量的橢圓體。 若要分解此空間，地理位置方格鑲嵌式配置會將橢圓體的表面分成上半球和下半球，然後執行下列步驟：
 
 1.  將每一個半球投射到四邊形金字塔的 Facet。
 
@@ -177,49 +176,49 @@ ms.locfileid: "78176658"
 
  ![層級 1 地理方格](../../database-engine/media/spndx-geodetic-level1grid.gif "層級 1 地理方格")
 
-##  <a name="methods"></a>空間索引支援的方法
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a>空間索引支援的方法
 
-###  <a name="geometry"></a>空間索引支援的 Geometry 方法
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>空間索引支援的 Geometry 方法
  在某些條件下，空間索引可支援下列集合導向的幾何方法：STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches() 和 STWithin()。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 或 JOIN ON 子句中使用，而且必須在下列一般形式的述詞內發生：
 
- *geometry1*。*method_name*（*geometry2*）*comparison_operator * * valid_number*
+ *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*
 
  若要傳回非 null 結果， *geometry1* 和 *geometry2* 必須有相同的 [空間參考識別碼 (SRID)](../spatial/spatial-reference-identifiers-srids.md)。 否則，此方法會傳回 NULL。
 
  空間索引支援下列述詞形式：
 
--   *geometry1*。[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *geometry1*。[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)（*geometry2*） <*號碼*
 
--   *geometry1*。[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)（*geometry2*） <=*數位*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *number*
 
--   *geometry1*。[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1*。[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *（geometry2） = 1*
+-   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
 
--   *geometry1*。[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *geometry1*。[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)（*geometry2*） = 1
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1
 
-###  <a name="geography"></a>空間索引支援的地理方法
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>空間索引支援的地理方法
  在某些條件下，空間索引可支援下列集合導向的地理位置方法：STIntersects()、STEquals() 和 STDistance()。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 子句中使用，而且必須在下列一般形式的述詞內發生：
 
- *geography1*。*method_name*（*geography2*）*comparison_operator * * valid_number*
+ *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*
 
  若要傳回非 null 結果， *geography1* 和 *geography2* 必須有相同的 [空間參考識別碼 (SRID)](../spatial/spatial-reference-identifiers-srids.md)。 否則，此方法會傳回 NULL。
 
  空間索引支援下列述詞形式：
 
--   *geography1*。[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)（*geography2*） = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1
 
--   *geography1*。[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)（*geography2*） = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1
 
 -   *geography1*。[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)（*geography2*） <*號碼*
 
--   *geography1*。[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)（*geography2*） <=*數位*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*
 
 ### <a name="queries-that-use-spatial-indexes"></a>使用空間索引的查詢
  空間索引只有在 `WHERE` 子句中包含索引空間運算子的查詢中才受到支援。 例如，類似以下的語法：

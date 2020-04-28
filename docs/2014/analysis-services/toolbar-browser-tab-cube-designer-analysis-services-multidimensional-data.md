@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175577"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -24,11 +24,11 @@ ms.locfileid: "78175577"
 
 |按鈕|描述|
 |------------|-----------------|
-|**當做文字編輯**|這種資料來源類型不啟用|
-|**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|
+|**[當成文字編輯]**|這種資料來源類型不啟用|
+|[匯入]****|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|
 |![變更為 MDX 查詢檢視](media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|
 |![重新整理結果資料](media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|
-|![加入導出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|
+|![新增導出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|
 |![切換以顯示空資料格](media/rsqdicon-showemptycells.gif "切換以顯示空資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|
 |![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|
 |![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|
@@ -41,25 +41,25 @@ ms.locfileid: "78175577"
 
  一般而言，[設計模式]**** 與 [查詢模式]**** 的工具列按鈕相同。 不過，系統未針對 [查詢模式] 啟用下列按鈕：
 
--   **當做文字編輯**
+-   **[當成文字編輯]**
 
--   **加入匯出成員**（![加入匯出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員")）
+-   **新增導出成員** (![新增導出成員](media/rsqdicon-addcalculatedmember.gif "加入導出成員"))
 
--   **顯示空白資料格**（![切換以顯示空的資料格](media/rsqdicon-showemptycells.gif "切換以顯示空資料格")）
+-   **顯示空資料格** (![切換以顯示空資料格](media/rsqdicon-showemptycells.gif "切換以顯示空資料格"))
 
--   **自動執行**（![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")）
+-   **自動執行** (![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢"))
 
--   **顯示**匯總（![顯示匯總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕")）
+-   **顯示彙總** (![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕"))
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 |選項|描述|
 |------------|-----------------|
 |**處理程序**|按一下以顯示 **[處理]** 對話方塊，並處理 Cube。 如需 [處理]**** 對話方塊的詳細資訊，請參閱[處理對話方塊 &#40;Analysis Services - 多維度資料&#41;](process-dialog-box-analysis-services-multidimensional-data.md)。|
 |**變更使用者**|按一下以顯示 [**安全性內容**] 對話方塊，並變更 [**瀏覽器**] 索引標籤上所使用的使用者和角色。如需 [**安全性內容**] 對話方塊的詳細資訊，請參閱[安全性內容對話方塊 &#40;Analysis Services 多維度資料&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)。|
-|**地**|如果 [瀏覽器]**** 索引標籤的工作階段因連接遺失或逾時而中斷連接，按一下即可將 [計算][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]** 索引標籤重新連接到 ** 執行個體和包含 Cube 的資料庫。|
-|**[重新整理]**|按一下即可重新整理 [中繼資料]**** 和 [報表]**** 窗格。|
-|**昇冪**|按一下即可依 [語言]**** 中所指定語言的遞增順序，來排序 [報表]**** 窗格中選取之資料列的同層級。<br /><br /> **注意**只有在已選取 [**報表**] 窗格中的資料格時，才會啟用此選項。|
+|**重新連接**|如果 [瀏覽器]**** 索引標籤的工作階段因連接遺失或逾時而中斷連接，按一下即可將 [計算]**** 索引標籤重新連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和包含 Cube 的資料庫。|
+|**重新整理**|按一下即可重新整理 [中繼資料]**** 和 [報表]**** 窗格。|
+|**昇冪**|按一下即可依 [語言]**** 中所指定語言的遞增順序，來排序 [報表]**** 窗格中選取之資料列的同層級。<br /><br /> **注意**：只有選取 [報表]**** 窗格中的資料格時，才會啟用此選項。|
 |**遞減排序**|按一下即可依 [語言]**** 中所指定語言的遞減順序，來排序 [報表]**** 窗格中選取之資料列的同層級。<br /><br /> 注意：只有在已選取 [**報表**] 窗格中的資料格時，才會啟用此選項。|
 |**自動篩選**|按一下即可自動篩選 [結果]**** 窗格中的結果。|
 |**只顯示最上層/最下層**|選取一個值或百分比，以根據選取的量值，在 [報表]**** 窗格中只顯示最上層或最下層的資料格數目或資料格的百分比。<br /><br /> 如需這個選項的詳細資訊，請參閱 [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)、[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)、[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) 和 [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)。|

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175287"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定義多對多關聯性
@@ -91,7 +91,7 @@ ms.locfileid: "78175287"
 
 ## <a name="defining-the-many-to-many-dimension"></a>定義多對多維度
 
-1.  在方案總管中，以滑鼠右鍵按一下 [**維度**]，然後按一下 [**新增維度**]。
+1.  在方案總管**** 中，以滑鼠右鍵按一下 [維度]****，然後按一下 [新增維度]。
 
 2.  在 [歡迎使用維度精靈]**** 頁面上，按一下 [下一步]****。
 
@@ -153,7 +153,7 @@ ms.locfileid: "78175287"
 
 1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
-2.  順利完成部署之後，針對 ** 教學課程 Cube，切換到 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]****。
+2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]****。
 
 3.  將 [網際網路銷售 - 銷售量]**** 量值新增至 [資料] 窗格的資料區域。
 

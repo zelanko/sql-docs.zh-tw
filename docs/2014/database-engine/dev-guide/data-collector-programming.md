@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 889158e04cbadb63c712ead73a61a7002ea61eae
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175367"
 ---
 # <a name="data-collector-programming"></a>資料收集器程式設計
-  
   <xref:Microsoft.SqlServer.Management.Collector> 中的資料收集器 API 可透過物件模型，以程式設計的方式控制所有的組態作業。 此外，許多使用 API 的資料收集作業都會實作為安裝在伺服器上的預存程序。
 
  下圖顯示資料收集器物件模型的重要元素。

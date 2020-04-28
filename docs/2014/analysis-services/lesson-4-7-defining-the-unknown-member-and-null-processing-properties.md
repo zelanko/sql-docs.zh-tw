@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175307"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>定義未知的成員和 Null 處理屬性
@@ -63,7 +63,7 @@ ms.locfileid: "78175307"
 
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>定義雪花資料表中的屬性和產品類別目錄使用者定義階層
 
-1.  請針對 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 資料來源檢視，開啟 [資料來源檢視設計工具]，選取 [圖表組合管理]**** 窗格中的 [轉售商銷售]****，然後按一下 ** 的 [資料來源檢視]**** 功能表中的 [加入/移除物件]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。
+1.  請針對 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 資料來源檢視，開啟 [資料來源檢視設計工具]，選取 [圖表組合管理]**** 窗格中的 [轉售商銷售]****，然後按一下 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [資料來源檢視]**** 功能表中的 [加入/移除物件]****。
 
      此時會開啟 [加入/移除資料表]**** 對話方塊。
 
@@ -77,7 +77,7 @@ ms.locfileid: "78175307"
 
 4.  按一下 [確定]  。
 
-5.  在 ** 的 [格式]**[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 功能表中，指向 [自動配置]****，然後按一下 [圖表]****。
+5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [格式]**** 功能表中，指向 [自動配置]****，然後按一下 [圖表]****。
 
      請注意，[DimProductSubcategory (dbo)]**** 資料表和 [DimProductCategory (dbo)]**** 資料表彼此連結，並且透過 [Product]**** 資料表連結到 [ResellerSales]**** 資料表。
 
@@ -135,7 +135,7 @@ ms.locfileid: "78175307"
 
 1.  在 [產品]**** 維度的 [維度設計師] 中，按一下 [維度結構]**** 索引標籤，然後在 [屬性]**** 窗格中選取 [產品]****。
 
-2.  在 [**屬性**] 視窗中，將 [ **UnknownMember** ] 屬性變更為 [**可見**]，然後**** 將 [UnknownMemberName `Assembly Components`] 屬性的值變更為。
+2.  在 [**屬性**] 視窗中，將 [ **UnknownMember** ] 屬性變更為 [**可見**]，然後**UnknownMemberName**將 [UnknownMemberName `Assembly Components`] 屬性的值變更為。
 
      將 [UnknownMember]**** 屬性變更為 [可見]**** 或 [隱藏]**** 會啟用維度的 [UnknownMember]**** 屬性。
 
@@ -178,6 +178,6 @@ ms.locfileid: "78175307"
      ![顯示組件元件的產品名稱層級](../../2014/tutorials/media/l4-assemblycomponents-1.gif "顯示組件元件的產品名稱層級")
 
 ## <a name="next-lesson"></a>下一課
- [第 5 課：在維度和量值群組之間定義關聯性](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
+ [第5課：定義維度和量值群組之間的關聯性](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
 
 

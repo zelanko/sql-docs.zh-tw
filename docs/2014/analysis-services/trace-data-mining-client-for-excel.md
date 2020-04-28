@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175567"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>追蹤 (適用於 Excel 的資料採礦用戶端)
@@ -29,7 +29,7 @@ ms.locfileid: "78175567"
 
  **追蹤**只會監視目前的連接，而且不會儲存 [**追蹤**] 對話方塊的內容。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
  [追蹤] 窗格會列出從 Excel 用戶端傳送到伺服器的所有語句。
 
  根據要求的動作，陳述式可能是 DMX 資料操作或資料定義陳述式、Analysis Services 預存程序的呼叫，或 XML/A 封包。

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dec6f4898f46246b31e0808d0ff0997dd4c0913c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176768"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176768"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="DefiningMinMax"></a> 定義標尺上的最小值、最大值與間隔
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> 定義標尺上的最小值、最大值與間隔
  量測計通常用於顯示 KPI (以 0 到 100 的百分比表示)，因此，這些就是量測計上最小值與最大值屬性的預設值。 不過，這些值可能無法代表您嘗試顯示之值的標尺。 因為沒有內建的邏輯可以決定 KPI 資料欄位所代表的意義，因此量測計不會自動計算最小值與最大值。 如果您的 KPI 資料欄位不是介於 0 和 100 之間的值，您必須明確地設定最小值與最大值屬性的值，才能將內容提供給要顯示在量測計上的一個值。
 
  在標尺上有主要刻度和次要刻度。 此外，標尺上的標籤通常與主要刻度相關聯。 例如，標尺的主要刻度可能是 0、20、40、60、80 和 100。 這些標籤應該對應至這些刻度。 標籤值之間的差距稱為標尺間隔。 在此範例中，標尺間隔設定為 20。 您可以在 **[星形標尺屬性]** 或 **[線性標尺屬性]** 對話方塊中，設定 [間隔] 屬性。
@@ -53,14 +53,14 @@ ms.locfileid: "78176768"
  間隔位移會決定顯示第一個標籤前要略過的單位數。 出現在標尺上的所有後續主要刻度和標籤都會使用指定的間隔。 標籤或刻度間隔的值為 0 時，與將間隔重設為 [自動] 相同。
 
 
-##  <a name="ReducingCollisions"></a> 減少標籤與乘數的衝突
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> 減少標籤與乘數的衝突
  如果您的值包含許多數字位數，可能會開始妨礙量測計的讀取。 您可以使用標尺乘數增加或減少值的標尺。 指定標尺倍增器時，標尺上的每個原始值都會乘以乘數，才會顯示在標尺上。 若要減少值的標尺，您必須指定一個小數位數。 例如，如果您的標尺是從 0 到 10000，但是您想要在量測計上顯示 0 到 10 的數字，您可以使用乘數值 0.001。
 
 > [!NOTE]
 >  使用乘數不會乘以量測計所使用之彙總欄位的實際值。 只有在定義最小值、最大值與間隔之後，才會乘以顯示在量測計上之標籤的值。 使用乘數時，請考慮保留自動計算間隔的功能。
 
 
-##  <a name="SpecifyingScaleBar"></a> 指定星形標尺上的標尺列寬度、半徑與角度
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> 指定星形標尺上的標尺列寬度、半徑與角度
  使用 **[星形標尺屬性]** 對話方塊的 **[配置]** 頁面來設定標尺的標尺列寬度、標尺半徑、開始角度和掃掠角度。 您可以使用這些屬性來自訂標尺的大小和格式。 例如，如果您將標尺標籤放置在標尺之外，您將需要調整標尺半徑的大小，讓標籤容納在量測計之內。
 
 > [!NOTE]
@@ -77,7 +77,7 @@ ms.locfileid: "78176768"
  掃掠角度是標尺將會在圓形中掃掠的度數，介於 0 和 360 之間。 掃掠角度為 360 度時，會產生完整圓形的標尺。 這在您想要設計類似時鐘的量測計時相當實用。
 
 
-##  <a name="PositioningLabels"></a> 將標籤放置在線性或星形標尺上
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> 將標籤放置在線性或星形標尺上
  有兩個屬性可以決定標籤的位置： 標籤位置屬性會指定標籤顯示在標尺列的內部、外部，還是跨標尺列顯示。 距離屬性會設定標籤到標尺的距離，從標尺列開始。 如果您要將標籤放置在標尺列的內部，請指定負數。 例如，如果您的標籤在標尺的外部，而且您已經將標尺的距離設定為 10，標籤將會顯示在通常放置標籤之位置外部的 10 個單位，其中 1 個單位為：
 
 -   星形量測計之量測計直徑的 1%，或
@@ -85,6 +85,6 @@ ms.locfileid: "78176768"
 -   線性量測計之量測計高度或寬度最小值的 1%。
 
 ## <a name="see-also"></a>另請參閱
- 格式化量測計[上的範圍 &#40;報表產生器及 ssrs&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)格式化量測計[上的指標 &#40;報表產生器和 Ssrs&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)將[軸標籤格式化為日期或貨幣](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md) [](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md) &#40;報表產生器和 SSRS&#41;量測計[&#40;報表產生器和 ssrs&#41;](gauges-report-builder-and-ssrs.md)
+ 格式化量測計[上的範圍 &#40;報表產生器及 ssrs&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)格式化量測計[上的指標 &#40;報表產生器和 Ssrs&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)將[軸標籤格式化為日期或貨幣](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md) [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md) &#40;報表產生器和 SSRS&#41;量測計[&#40;報表產生器和 ssrs&#41;](gauges-report-builder-and-ssrs.md)
 
 

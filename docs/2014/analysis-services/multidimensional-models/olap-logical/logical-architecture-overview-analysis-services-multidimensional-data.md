@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175717"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
@@ -26,8 +26,7 @@ ms.locfileid: "78175717"
  本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需其他模式的詳細資訊，請參閱[表格式模型 &#40;Ssas 表格式&#41;](../../tabular-models/tabular-models-ssas.md)和[比較 &#40;SSAS&#41;的表格式和多維度方案](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)。
 
 ## <a name="basic-architecture"></a>基本架構
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]實例會命名為 "\<ServerName>\\<InstanceName\>"。 下圖顯示物件之間[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]所有提及的關聯性。
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]實例會命名為 "\<ServerName>\\<InstanceName\>"。 下圖顯示物件之間[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]所有提及的關聯性。
 
  ![執行中 AMO 物件的關聯性](../../dev-guide/media/amo-runningobjects.gif "執行中 AMO 物件的關聯性")
 
@@ -44,8 +43,7 @@ ms.locfileid: "78175717"
  Cube 物件每個資料庫物件都包含一個或多個 cube 物件。 Cube 是由其量值和維度所定義。 Cube 中的量值和維度是衍生自 Cube 所依據之資料來源檢視中的資料表和檢視，或是從量值和維度定義所產生。
 
 ## <a name="object-inheritance"></a>物件繼承
- ASSL 物件模型包含許多重複元素群組。 例如，元素群組「`Dimensions`包含`Hierarchies`」會定義元素的維度階層。 
-  `Cubes` 和 `MeasureGroups` 都包含元素群組「`Dimensions` 包含 `Hierarchies`」。
+ ASSL 物件模型包含許多重複元素群組。 例如，元素群組「`Dimensions`包含`Hierarchies`」會定義元素的維度階層。 `Cubes` 和 `MeasureGroups` 都包含元素群組「`Dimensions` 包含 `Hierarchies`」。
 
  除非明確被覆寫，否則元素會從更高的層級繼承這些重複元素群組的詳細資料。 例如，`Translations` 對於 `CubeDimension` 與 `Translations` 對於它的上階項目 `Cube` 是相同的作用。
 
@@ -77,7 +75,7 @@ ms.locfileid: "78175717"
 
  除了使用單一維度來彙總量值之外，也可使用不同維度的成員組合來彙總量值。 這可讓商務使用者同時使用多個維度來評估量值。 例如，如果商務使用者想要分析每季從 Eastern Hemisphere 和 Western Hemisphere 的空運進口，則商務使用者可對 Cube 發出查詢，以擷取下列資料集。
 
-||||Packages|||最後一頁|||
+||||package|||Last|||
 |-|-|-|--------------|-|-|----------|-|-|
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|
 |All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|
@@ -95,12 +93,12 @@ ms.locfileid: "78175717"
 
 |量值或屬性 (層級)|成員|來源資料表|來源資料行|範例資料行值|
 |------------------------------------|-------------|------------------|-------------------|-------------------------|
-|封裝量值|不適用|ImportsFactTable|Packages|12|
-|最新的量值|不適用|ImportsFactTable|最後一頁|May-03-99|
+|封裝量值|不適用|ImportsFactTable|package|12|
+|最新的量值|不適用|ImportsFactTable|Last|May-03-99|
 |Route 維度中的 Route 類別層級|nonground,ground|RouteDimensionTable|Route_Category|Nonground|
 |Route 維度的 Route 屬性|air,sea,road,rail|RouteDimensionTable|路由|Sea|
 |Source 維度的 Hemisphere 屬性|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
-|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N.  America,S.  美洲|SourceDimensionTable|Continent|歐洲|
+|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N.  America,S.  America|SourceDimensionTable|Continent|歐洲|
 |Time 維度的 Half 屬性|1st half,2nd half|TimeDimensionTable|Half|2nd half|
 |Time 維度的 Quarter 屬性|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|
 
@@ -108,7 +106,7 @@ ms.locfileid: "78175717"
 
 |||||||
 |-|-|-|-|-|-|
-|Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Packages|最後一頁|
+|Import_ReceiptKey|RouteKey|SourceKey|TimeKey|package|Last|
 |3516987|1|6|1|15|Jan-10-99|
 |3554790|1|6|1|40|Jan-19-99|
 |3572673|1|6|1|34|Jan-27-99|

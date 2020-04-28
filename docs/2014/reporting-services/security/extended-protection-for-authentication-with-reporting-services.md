@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89aae3981d88c25104a29a6abfe81f09bb04de53
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177077"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
@@ -31,7 +31,7 @@ ms.locfileid: "78177077"
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]支援並強制執行已在作業系統中啟用的擴充保護。 如果作業系統不支援擴充保護，或者尚未啟用作業系統中的功能， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 擴充保護功能將會無法驗證。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 擴充保護也需要 SSL 憑證。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)
 
 > [!IMPORTANT]
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 預設為不會啟用 [擴充保護]。 修改 `rsreportserver.config` 組態檔或使用 WMI API 更新組態檔，即可啟用該功能。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]未提供可修改或查看擴充保護設定的使用者介面。 如需詳細資訊，請參閱本主題中的 [組態設定](#ConfigurationSettings) 一節。
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 預設為不會啟用 [擴充保護]。 修改 `rsreportserver.config` 組態檔或使用 WMI API 更新組態檔，即可啟用該功能。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 未提供可修改或檢視擴充保護設定的使用者介面。 如需詳細資訊，請參閱本主題中的 [組態設定](#ConfigurationSettings) 一節。
 
  因為擴充保護設定變更或進行之設定錯誤所造成的常見問題，不會以明顯的錯誤訊息或對話方塊視窗公開。 與擴充保護組態和相容性相關的問題會導致驗證失敗，並將錯誤記錄在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 追蹤記錄中。
 
@@ -49,13 +49,11 @@ ms.locfileid: "78177077"
 
 -   將設定新增至`rsreportserver.config`設定檔時，預設行為是讓[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]擴充保護功能關閉，而且您必須啟用此功能，如本主題中所述。 如需詳細資訊，請參閱本主題中的 [組態設定](#ConfigurationSettings) 一節。
 
--   
-  `RSWindowsExtendedProtectionLevel` 設定的預設值為 `Off`。
+-   `RSWindowsExtendedProtectionLevel` 設定的預設值為 `Off`。
 
--   
-  `RSWindowsExtendedProtectionScenario` 設定的預設值為 `Proxy`。
+-   `RSWindowsExtendedProtectionScenario` 設定的預設值為 `Proxy`。
 
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Upgrade Advisor 不會驗證作業系統或目前安裝的[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]是否已啟用擴充保護支援。
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor 不會驗證作業系統或目前安裝的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 是否已啟用擴充保護支援。
 
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Reporting Services 擴充保護不涵蓋的功能
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 擴充保護功能不支援下列功能區與案例：
@@ -83,12 +81,10 @@ ms.locfileid: "78177077"
 |狀況|案例圖表|如何保護安全|
 |--------------|----------------------|-------------------|
 |HTTP 通訊。 報表伺服器將會強制執行用戶端到報表伺服器的服務繫結。|![RS_ExtendedProtection_Indirect](../media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy|沒有 SSL 通道，因此無法強制執行通道繫結。<br /><br /> 將 `RSWindowsExtendedProtectionLevel` 設定為 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設定為 `Any`。<br /><br /> 請注意，您必須將報表伺服器設定為知道 proxy 伺服器的名稱，以確保正確地強制執行服務系結。|
-|HTTP 通訊。<br /><br /> 報表伺服器將會強制執行用戶端到 Proxy 的通道繫結與用戶端到報表伺服器的服務繫結。|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy|SSL 通道到 Proxy 的連線可以使用，因此可以強制執行 Proxy 的通道繫結。<br /><br /> 也可以強制執行服務繫結。<br /><br /> 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的保留 URL，或在 Windows 登錄項目 `BackConnectionHostNames` 中設定 Proxy 名稱。<br /><br /> 
-  `RSWindowsExtendedProtectionLevel` 到 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設定為 `Proxy`。|
-|透過安全 Proxy 進行的間接 HTTPS 通訊。 報表伺服器將會強制執行用戶端到 Proxy 的通道繫結與用戶端到報表伺服器的服務繫結。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy|SSL 通道到 Proxy 的連線可以使用，因此可以強制執行 Proxy 的通道繫結。<br /><br /> 也可以強制執行服務繫結。<br /><br /> 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的保留 URL，或在 Windows 登錄項目 `BackConnectionHostNames` 中設定 Proxy 名稱。<br /><br /> 
-  `RSWindowsExtendedProtectionLevel` 到 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設定為 `Proxy`。|
+|HTTP 通訊。<br /><br /> 報表伺服器將會強制執行用戶端到 Proxy 的通道繫結與用戶端到報表伺服器的服務繫結。|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy|SSL 通道到 Proxy 的連線可以使用，因此可以強制執行 Proxy 的通道繫結。<br /><br /> 也可以強制執行服務繫結。<br /><br /> 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的保留 URL，或在 Windows 登錄項目 `BackConnectionHostNames` 中設定 Proxy 名稱。<br /><br /> `RSWindowsExtendedProtectionLevel` 到 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設定為 `Proxy`。|
+|透過安全 Proxy 進行的間接 HTTPS 通訊。 報表伺服器將會強制執行用戶端到 Proxy 的通道繫結與用戶端到報表伺服器的服務繫結。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy|SSL 通道到 Proxy 的連線可以使用，因此可以強制執行 Proxy 的通道繫結。<br /><br /> 也可以強制執行服務繫結。<br /><br /> 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的保留 URL，或在 Windows 登錄項目 `BackConnectionHostNames` 中設定 Proxy 名稱。<br /><br /> `RSWindowsExtendedProtectionLevel` 到 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設定為 `Proxy`。|
 
-### <a name="gateway"></a>gateway
+### <a name="gateway"></a>閘道
  此案例描述連接至執行 SSL 並驗證使用者之裝置或軟體的用戶端應用程式。 接著，裝置或軟體會模擬使用者內容或不同的使用者內容，之後才對報表伺服器發出要求。
 
 |狀況|案例圖表|如何保護安全|
@@ -111,16 +107,15 @@ ms.locfileid: "78177077"
 
  當組態設定的驗證失敗時，報表伺服器上會停用驗證類型 `RSWindowsNTLM`、`RSWindowsKerberos` 和 `RSWindowsNegotiate`。
 
-###  <a name="ConfigurationSettings"></a>Reporting services 擴充保護的設定
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Reporting Services 擴充保護的組態設定
  下表提供的資訊有關 `rsreportserver.config` 中顯示之擴充保護的組態設定。
 
 |設定|描述|
 |-------------|-----------------|
-|`RSWindowsExtendedProtectionLevel`|指定擴充保護的強制執行程度。 有效值是 `Off`、`Allow` 和 `Require`。<br /><br /> 預設值是 `Off`。<br /><br /> 值為 `Off` 時，不會指定通道繫結或服務繫結驗證。<br /><br /> 值為 `Allow` 時，則支援擴充保護但並不需要它。 Allow 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 您可以設定 `RsWindowsExtendedProtectionScenario` 來決定強制執行保護的方式。<br /><br /> 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> 值`Require`會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> 對於在不支援擴充保護之作業系統上執行的應用程式，將**不**允許進行驗證。|
-|`RsWindowsExtendedProtectionScenario`|指定什麼擴充保護的形式要經過驗證：通道繫結、服務繫結，或兩者。 有效值是 `Any`、`Proxy` 和 `Direct`。<br /><br /> 預設值是 `Proxy`。<br /><br /> 值`Any`會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> 值`Proxy`會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> 值`Direct`會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意：如果`RsWindowsExtendedProtectionLevel`設定為`OFF`，則會忽略此設定。|
+|`RSWindowsExtendedProtectionLevel`|指定擴充保護的強制執行程度。 有效值是 `Off`、`Allow` 和 `Require`。<br /><br /> 預設值是 `Off`。<br /><br /> 值為 `Off` 時，不會指定通道繫結或服務繫結驗證。<br /><br /> 值為 `Allow` 時，則支援擴充保護但並不需要它。 Allow 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 您可以設定 `RsWindowsExtendedProtectionScenario` 來決定強制執行保護的方式。<br /><br /> 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br />  這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> 對於在不支援擴充保護之作業系統上執行的應用程式，將**不**允許進行驗證。|
+|`RsWindowsExtendedProtectionScenario`|指定要驗證的擴充保護形式：通道繫結、服務繫結或兩者。 有效值是 `Any`、`Proxy` 和 `Direct`。<br /><br /> 預設值是 `Proxy`。<br /><br />  這個值會指定：<br /><br /> \- Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> \- 服務繫結會強制執行。<br /><br />  這個值會指定：<br /><br /> \- Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> \- 服務繫結會強制執行。<br /><br />  這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> \- 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意：如果`RsWindowsExtendedProtectionLevel`設定為`OFF`，則會忽略此設定。|
 
- 
-  `rsreportserver.config` 組態檔中的範例項目：
+ `rsreportserver.config` 組態檔中的範例項目：
 
 ```
 <Authentication>
@@ -130,8 +125,7 @@ ms.locfileid: "78177077"
 ```
 
 ## <a name="service-binding-and-included-spns"></a>服務繫結與隨附的 SPN
- 服務繫結使用服務主要名稱或 SPN 驗證預期的驗證 Token 目的地。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用現有的 URL 保留資訊建立視為有效之 SPN 的清單。 使用 URL 保留資訊同時驗證保留的 SPN 和 URL 可讓系統管理員從單一位置同時進行管理。
+ 服務繫結使用服務主要名稱或 SPN 驗證預期的驗證 Token 目的地。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用現有的 URL 保留資訊建立視為有效之 SPN 的清單。 使用 URL 保留資訊同時驗證保留的 SPN 和 URL 可讓系統管理員從單一位置同時進行管理。
 
  當報表伺服器啟動時、擴充保護的組態設定變更時，或應用程式定義域循環使用時，會更新有效 SPN 的清單。
 

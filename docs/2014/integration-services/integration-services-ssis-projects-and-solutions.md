@@ -17,17 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176169"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) 專案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 以用於開發 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。
 
- 當您將封裝部署到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫或[!INCLUDE[ssIS](../includes/ssis-md.md)]封裝存放區時，您會[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用此服務來管理封裝。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務只可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中使用。 如需服務的詳細資訊，請參閱 [Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)。 如需套件部署的詳細資訊，請參閱[&#40;SSIS&#41;的套件部署](packages/legacy-package-deployment-ssis.md)。
+ 當您將封裝部署到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫或[!INCLUDE[ssIS](../includes/ssis-md.md)]封裝存放區時，您會[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用此服務來管理封裝。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務只可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中使用。 如需服務的詳細資訊，請參閱 [Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)。 如需套件部署的詳細資訊，請參閱[&#40;SSIS&#41;的套件部署](packages/legacy-package-deployment-ssis.md)。
 
  當您將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器時，則是在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用 Transact-SQL 檢視和預存程序來管理專案。 如需專案部署的詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)。 如需 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 伺服器](catalog/integration-services-ssis-server-and-catalog.md)。
 
@@ -49,8 +48,8 @@ ms.locfileid: "78176169"
 
 |資料夾|描述|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]登記|包含封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../2014/integration-services/integration-services-ssis-packages.md)。|
-|其他資訊|包含封裝檔案之外的檔案。|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|包含封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../2014/integration-services/integration-services-ssis-packages.md)。|
+|其他|包含封裝檔案之外的檔案。|
 
 ### <a name="files-in-integration-services-projects"></a>Integration Services 專案中的檔案
  當您將新的或現有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案加入方案時， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會建立副檔名為 .dtproj、.dtproj.user 和 .database 的專案檔案。
@@ -75,7 +74,7 @@ ms.locfileid: "78176169"
  雖然 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會在您新建專案時自動建立解決方案，但是您也可以建立空白的解決方案，並在稍後加入專案。
 
 > [!NOTE]
->  依預設，當您在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案時，此解決方案不會顯示在 [專案總管]**** 窗格中。 若要變更這個預設行為，請按一下 [工具]**** 功能表上的 [選項]****。 在 [選項]**** 對話方塊中，展開 [專案和方案]****，然後按一下 [一般]****。 在 [一般]**** 頁面上，選取 [永遠顯示方案]****。
+>  依預設，當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，此解決方案不會顯示在 [專案總管]**** 窗格中。 若要變更這個預設行為，請按一下 [工具]**** 功能表上的 [選項]****。 在 [選項]**** 對話方塊中，展開 [專案和方案]****，然後按一下 [一般]****。 在 [一般]**** 頁面上，選取 [永遠顯示方案]****。
 
 ## <a name="related-tasks"></a>相關工作
  [在方案中加入或移除 Integration Services 專案](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)

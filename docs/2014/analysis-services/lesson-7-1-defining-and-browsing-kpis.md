@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175247"
 ---
 # <a name="defining-and-browsing-kpis"></a>定義和瀏覽 KPI
@@ -134,13 +134,13 @@ ms.locfileid: "78175247"
 
 ## <a name="browsing-the-cube-by-using-the-reseller-revenue-kpi"></a>使用轉售商收入 KPI 來瀏覽 Cube
 
-1.  在 ** 的 [建立]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]****。
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立]**** 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]****。
 
 2.  當您順利完成部署時，請在 [KPI]**** 索引標籤的工具列上，按一下 [瀏覽器檢視]**** 按鈕，然後按一下 [重新連接]****。
 
      狀態和趨勢量測計會根據每個維度的預設成員值，顯示在轉售商銷售的 [KPI 瀏覽器]**** 窗格中，連同該值和目標的值一起。 每個維度的預設成員是 [所有層級] 的 [所有成員]，因為您尚未定義任何維度的其他成員，做為預設成員。
 
-3.  在 [篩選] 窗格中，從 [維度]**** 清單中選取 [銷售領域]****、從 [階層]**** 清單中選取 [銷售領域]****、從 [運算子]**** 清單中選取 [等於]****、從 [篩選運算式]**** 清單中選取 [北美]**** 核取方塊，然後按一下 [確定]****。
+3.  在 [篩選] 窗格中，從 [維度]**** 清單中選取 [銷售領域]****、從 [階層]**** 清單中選取 [銷售領域]****、從 [運算子]**** 清單中選取 [等於]****、從 [篩選運算式]**** 清單中選取 [北美洲]**** 核取方塊，然後按一下 [確定]****。
 
 4.  在 [篩選]**** 窗格的下一個資料列中，從 [維度]**** 清單中選取 [日期]****、從 [階層]**** 清單中選取 [日曆日期]****、從 [運算子]**** 清單中選取 [等於]****、從 [篩選運算式]**** 清單中選取 [Q3 CY 2007]**** 核取方塊，然後按一下 [確定]****。
 
@@ -261,13 +261,13 @@ ms.locfileid: "78175247"
 
 2.  當您順利完成部署時，請在 [KPI]**** 索引標籤的工具列上按一下 [重新連接]****，然後按一下 [瀏覽器檢視]****。
 
-     Kpi 隨即出現，並顯示**Q3 CY 2007**和北美洲 sales 領域的 KPI 值。 **** `Product Gross Profit Margin`
+     Kpi 隨即出現，並顯示**Q3 CY 2007**和北美洲 sales 領域的 KPI 值。 **North America** `Product Gross Profit Margin`
 
 3.  在 [篩選]**** 窗格中，從 [維度]**** 清單中選取 [產品]****、從 [階層]**** 清單中選取 [類別目錄]****、從 [運算子]**** 清單中選取 [等於]****，並從 [篩選運算式]**** 清單中選取 [自行車]****，然後按一下 [確定]****。
 
      北美地區轉售商 Q3 CY 2007 自行車銷售的毛利率隨即出現。
 
 ## <a name="next-lesson"></a>下一課
- [第 8 課：定義動作](lesson-8-defining-actions.md)
+ [第8課：定義動作](lesson-8-defining-actions.md)
 
 

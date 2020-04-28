@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175970"
 ---
 # <a name="data-collection"></a>資料收集
@@ -36,8 +36,7 @@ ms.locfileid: "78175970"
 ## <a name="data-collector-concepts"></a>資料收集器概念
  資料收集器與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]整合在一起，而且會廣泛地使用這兩者。 因此，在您使用資料收集器之前，應該要先了解與這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件有關的某些概念。
 
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可用來排定和執行收集作業。 您應該了解以下概念：
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可用來排定和執行收集作業。 您應該了解以下概念：
 
 -   工作 (Job)
 
@@ -51,21 +50,18 @@ ms.locfileid: "78175970"
 
  如需詳細資訊，請參閱[自動化管理工作 &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md)。
 
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 可用來執行從個別資料提供者收集資料的套件。 您應該要熟悉下列的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 可用來執行從個別資料提供者收集資料的套件。 您應該要熟悉下列的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]包裹
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件
 
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝組態
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝組態
 
  如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)。
 
 ## <a name="data-collector-terminology"></a>資料收集器術語
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]以支援資料收集之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中的實例為目標。 如需有關支援版本的詳細資訊，請參閱[SQL Server 2014 版本所支援功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)的「管理能力」一節。
 
- 
-  *「目標根」* (Target Root) 會定義目標階層中的子樹。 在這些由目標根定義之子樹上套用篩選後所產生之目標的群組，就是 *「目標集」* (Target Set)。 目標根可以是資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體或電腦執行個體。
+ *「目標根」* (Target Root) 會定義目標階層中的子樹。 在這些由目標根定義之子樹上套用篩選後所產生之目標的群組，就是 *「目標集」* (Target Set)。 目標根可以是資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體或電腦執行個體。
 
  目標型別目標的類型，具有特定特性和行為。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體目標的特性與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫目標的特性不同。
 

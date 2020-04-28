@@ -18,10 +18,10 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180110"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
@@ -52,7 +52,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定資料庫角色的名稱|  
-|**權限**|**Nvarchar （70）**|與**DbFixedRole**相關聯的許可權|  
+|[權限]****|**Nvarchar （70）**|與**DbFixedRole**相關聯的許可權|  
   
 ## <a name="remarks"></a>備註  
  若要顯示固定資料庫角色的清單，請執行**sp_helpdbfixedrole**。 下表顯示固定資料庫角色。  
@@ -86,7 +86,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff5f6464a14b520a35493b96b47b4a1c5a82481
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175507"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用參考資料 (外部) 知識清理資料
@@ -24,7 +24,7 @@ ms.locfileid: "78175507"
 
 -   建議的更正
 
--   信賴
+-   信賴度
 
 -   有關對應定義域的其他資訊。 參考資料也可以使用其他資料來標準化、剖析或充實來源。 這項資訊是在回應的其他欄位中提供。
 
@@ -41,15 +41,15 @@ ms.locfileid: "78175507"
 
 ## <a name="before-you-begin"></a>開始之前
 
-###  <a name="Prerequisites"></a> 必要條件
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件
  您必須已經將 DQS 知識庫中已對應且必要的定義域對應至適當的參考資料服務。 此外，知識庫必須包含您想要清理之資料類型的相關知識。 例如，如果您想要清理包含美國地址的來源資料，就必須將定義域對應至提供「高品質」美國地址資料的參考資料服務提供者。 如需詳細資訊，請參閱[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。
 
-###  <a name="Security"></a> Security
+###  <a name="security"></a><a name="Security"></a> Security
 
-####  <a name="Permissions"></a> 權限
+####  <a name="permissions"></a><a name="Permissions"></a> 權限
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能執行資料清理。
 
-##  <a name="Cleanse"></a>使用參考資料知識清理您的資料
+##  <a name="cleanse-your-data-using-reference-data-knowledge"></a><a name="Cleanse"></a> 使用參考資料知識清理您的資料
  我們將繼續使用在上一個主題中所對應的網域、[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)，以及 Azure Marketplace 中的 Melissa 資料服務的相同範例。 現在，我們將會使用相同的定義域來清理一些美國地址樣本。 清理資料的步驟一如[使用 DQS &#40;內部&#41; 知識清理資料](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中所述。 不過，我們會在此程序中視需要吸引您的注意。
 
 1.  建立資料品質專案，然後選取 **[清理]** 活動。 請參閱 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。

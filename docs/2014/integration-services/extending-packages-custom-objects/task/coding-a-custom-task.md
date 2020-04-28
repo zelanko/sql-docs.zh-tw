@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0cc4026c8eae44ab8dacff62a72cfa66470c07fb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176278"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
@@ -36,9 +36,7 @@ ms.locfileid: "78176278"
  您可以在自訂程式碼中使用 `Validate` 方法來實作驗證。 執行階段引擎會透過呼叫在工作上的 `Validate` 方法來驗證工作。 工作開發人員的責任就是要定義可判斷工作成功或失敗的驗證準則，並通知執行階段引擎此驗證的結果。
 
 #### <a name="task-abstract-base-class"></a>工作抽象基底類別
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基底類別提供的 `Validate` 方法，可由工作覆寫以定義其驗證準則。 
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會自動在封裝設計期間呼叫 `Validate` 方法多次，並在警告或錯誤發生時，提供視覺提示給使用者，以協助識別工作組態中的問題。 工作透過從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉傳回值，以及透過引發警告和錯誤事件，來提供驗證結果。 這些事件包含對 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中的使用者顯示的資訊。
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基底類別提供的 `Validate` 方法，可由工作覆寫以定義其驗證準則。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師會自動在封裝設計期間呼叫 `Validate` 方法多次，並在警告或錯誤發生時，提供視覺提示給使用者，以協助識別工作組態中的問題。 工作透過從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉傳回值，以及透過引發警告和錯誤事件，來提供驗證結果。 這些事件包含對 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中的使用者顯示的資訊。
 
  以下是一些驗證範例：
 
@@ -54,17 +52,15 @@ ms.locfileid: "78176278"
 
  在判斷要驗證的項目時，需要考量的另一個層面是效能。 例如，工作的輸入可能是透過低頻寬網路或高流量網路的連接。 如果您決定驗證該資源是否可用，驗證可能需要花費數秒的處理時間。 另一項驗證可能會造成需要大量地往返於伺服器之間，而且驗證常式可能會變慢。 雖然有許多屬性和設定都可加以驗證，但這不表示您該驗證所有項目。
 
--   在執行工作之前，`Validate` 也會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 方法中的程式碼，而且如果驗證失敗，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會取消執行。
+-   在執行工作之前，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 也會呼叫 `Validate` 方法中的程式碼，而且如果驗證失敗，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會取消執行。
 
 #### <a name="user-interface-considerations-during-validation"></a>在驗證期間的使用者介面考量
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面以做為 `Validate` 方法的參數。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面包含工作向執行階段引擎引發事件所呼叫的方法。 當警告或是錯誤狀況在驗證期間發生時，會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 這兩個警告方法都需要相同的參數，包含錯誤碼、來源元件、描述、說明檔以及說明內容資訊。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用此資訊在設計介面上顯示視覺提示。 設計師提供的視覺提示包括出現在設計師介面上工作旁邊的驚嘆號圖示。 此視覺提示提醒使用者工作需要其他組態，執行才可以繼續。
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面以做為 `Validate` 方法的參數。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面包含工作向執行階段引擎引發事件所呼叫的方法。 當警告或是錯誤狀況在驗證期間發生時，會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 這兩個警告方法都需要相同的參數，包含錯誤碼、來源元件、描述、說明檔以及說明內容資訊。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用此資訊在設計介面上顯示視覺提示。 設計師提供的視覺提示包括出現在設計師介面上工作旁邊的驚嘆號圖示。 此視覺提示提醒使用者工作需要其他組態，執行才可以繼續。
 
  驚嘆號圖示也會顯示包含錯誤訊息的工具提示。 工作會在事件的描述參數中提供錯誤訊息。 錯誤訊息也會顯示在  **的 [工作清單]** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 窗格中，這個窗格為使用者提供檢視所有驗證錯誤的集中位置。
 
 #### <a name="validation-example"></a>驗證範例
- 下列程式碼範例顯示使用 `UserName` 屬性的工作。 已指定此屬性為成功驗證所需。 如果未設定此屬性，工作會公佈錯誤，並從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 列舉傳回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 
-  `Validate` 方法會包裝在 Try/Catch 區塊中，而且會在發生例外狀況時失敗。
+ 下列程式碼範例顯示使用 `UserName` 屬性的工作。 已指定此屬性為成功驗證所需。 如果未設定此屬性，工作會公佈錯誤，並從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 列舉傳回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 `Validate` 方法會包裝在 Try/Catch 區塊中，而且會在發生例外狀況時失敗。
 
 ```csharp
 using System;
@@ -183,7 +179,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 也提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 屬性，可用以提供有關執行結果的其他資訊。 例如，如果工作從資料表刪除資料列，做為其 `Execute` 方法的一部分，它可能會傳回刪除的資料列數，以做為 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 屬性的值。 此外，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A> 屬性。 此屬性可讓使用者將從工作傳回的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 對應至工作可看到的任何變數。 然後，指定的變數可以用來建立工作間的優先順序條件約束。
 
 ### <a name="execution-example"></a>執行範例
- 下列程式碼範例會示範 `Execute` 方法的實作，並顯示覆寫的 `ExecutionValue` 屬性。 工作會刪除工作的 `fileName` 屬性所指定的檔案。 如果檔案不存在，或者 `fileName` 屬性是空字串，工作會公佈警告。 工作會傳回 `Boolean` 屬性中的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 值，以指出是否已刪除檔案。
+ 下列程式碼範例會示範 `Execute` 方法的實作，並顯示覆寫的 `ExecutionValue` 屬性。 工作會刪除工作的 `fileName` 屬性所指定的檔案。 如果檔案不存在，或者 `fileName` 屬性是空字串，工作會公佈警告。 工作會傳回 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 屬性中的 `Boolean` 值，以指出是否已刪除檔案。
 
 ```csharp
 using System;

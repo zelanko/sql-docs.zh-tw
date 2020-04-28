@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175864"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
@@ -27,14 +27,14 @@ ms.locfileid: "78175864"
 > [!IMPORTANT]
 >  目前是預覽功能。 若要使用查詢存放區，您必須同意並了解運作查詢存放區受到授權合約預覽條款 (例如，Enterprise 合約、Microsoft Azure 合約或 Microsoft 線上訂用帳戶合約) 的限制，以及任何適用的 [Microsoft Azure Preview 增補使用條款](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)。
 
-##  <a name="Enabling"></a>啟用查詢存放區
+##  <a name="enabling-the-query-store"></a><a name="Enabling"></a> 啟用查詢存放區
  新的資料庫預設不會啟用查詢存放區。
 
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面
 
-1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] ****。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)
+1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)
 
-2.  在 [資料庫屬性] **** 對話方塊中，選取 [查詢存放區] **** 頁面。
+2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。
 
 3.  在 [啟用] **** 方塊中，選取 [True] ****。
 
@@ -53,7 +53,7 @@ ms.locfileid: "78175864"
 
 
 
-##  <a name="About"></a> 查詢存放區中的資訊
+##  <a name="information-in-the-query-store"></a><a name="About"></a> 查詢存放區中的資訊
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中任何特定查詢的執行計劃通常會在一段時間後，因為統計資料的變更、結構描述變更、建立/刪除索引等數種不同原因而有所演變。儲存快取的查詢計劃之程序快取，只會儲存最新的執行計劃。 計劃也會因為記憶體不足的壓力，而從計劃快取中收回。 因此，因為執行計劃變更所造成的查詢效能低下，可能相形重要，而且可能需要許多時間才可解決。
 
  因為查詢存放區會為每項查詢保留多個執行計劃，其可強制套用原則以指示查詢處理器要為查詢使用特定的執行計劃。 這也稱為強制執行計劃。 查詢存放區中的強制執行計劃，透過類似於 [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) 查詢提示的機制加以提供，但它不需要在使用者應用程式中進行任何變更。 強制執行計劃可以解決在非常短的期間內，因計劃變更所導致的查詢效能低下。
@@ -98,7 +98,7 @@ JOIN sys.query_store_query_text AS Txt
 
 
 
-##  <a name="Options"></a>設定選項
+##  <a name="configuration-options"></a><a name="Options"></a> 組態選項
  OPERATION_MODE 可以 READ_WRITE 或 READ_ONLY。
 
  CLEANUP_POLICY 設定 STALE_QUERY_THRESHOLD_DAYS 引數，以指定要在查詢存放區中保留資料的天數。
@@ -115,51 +115,51 @@ JOIN sys.query_store_query_text AS Txt
 
  
 
-##  <a name="Related"></a>相關的視圖、函數和程式
+##  <a name="related-views-functions-and-procedures"></a><a name="Related"></a> 相關檢視、函數與程序
  透過 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序，即可檢視及管理查詢存放區。
 
--   [fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
+-   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
 
 ### <a name="query-store-catalog-views"></a>查詢存放區目錄檢視
  共有七個目錄檢視可提供有關查詢存放區的資訊。
 
--   [database_query_store_options &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
+-   [sys.database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
 
--   [query_coNtext_settings &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
+-   [sys.query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
 
--   [query_store_plan &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
+-   [sys.query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
 
--   [query_store_query &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
+-   [sys.query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
 
--   [query_store_query_text &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
+-   [sys.query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
 
--   [query_store_runtime_stats &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
+-   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
 
--   [query_store_runtime_stats_interval &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
+-   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
 
 ### <a name="query-store-stored-procedures"></a>查詢存放區預存程序
  共有六個預存程序可設定查詢存放區。
 
--   [sp_query_store_flush_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)
+-   [sp_query_store_flush_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)
 
--   [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
+-   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
 
--   [sp_query_store_force_plan &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
+-   [sp_query_store_force_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
 
--   [sp_query_store_unforce_plan &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
+-   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
 
--   [sp_query_store_remove_plan &#40;Transct-sql-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
+-   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
 
--   [sp_query_store_remove_query &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
+-   [sp_query_store_remove_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
 
 
 
-##  <a name="Scenarios"></a>金鑰使用案例
+##  <a name="key-usage-scenarios"></a><a name="Scenarios"></a> 主要使用方式案例
 
-###  <a name="OptionMgmt"></a>選項管理
+###  <a name="option-management"></a><a name="OptionMgmt"></a> 選項管理
  本節提供管理查詢存放區功能本身的一些指導方針。
 
- **查詢存放區目前作用中嗎？**
+ **查詢存放區目前為作用中？**
 
  查詢存放區會將其資料儲存在使用者資料庫中，這也就是為什麼它有大小的限制 (以 `MAX_STORAGE_SIZE_MB` 設定)。 若查詢存放區中的資料達到上限，查詢存放區會自動從讀寫狀態變更為唯讀，並會停止收集新的資料。
 
@@ -237,7 +237,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
  或者，您也可能只想要清除特定查詢資料，因為它對於查詢最佳化和計劃分析來說較不相關，但也佔用一樣的空間。
 
- **刪除特定查詢**這會刪除只執行一次且超過24小時的查詢。
+ **刪除臨機操作查詢** 如此做會刪除只執行一次且超過 24 小時的查詢。
 
 ```
 DECLARE @id int
@@ -278,7 +278,7 @@ DEALLOCATE adhoc_queries_cursor;
 
 
 
-###  <a name="Peformance"></a>效能的審核和疑難排解
+###  <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> 效能稽核及疑難排解
  因為查詢存放區會透過執行查詢來保留編譯記錄與執行階段計量，所以可以很輕易回答許多有關您工作負載的不同問題。
 
  **最近*n*個在資料庫上執行的查詢。**
@@ -493,12 +493,12 @@ OPTION (MERGE JOIN);
 
 
 
-###  <a name="Stability"></a>維護查詢效能穩定性
+###  <a name="maintaining-query-performance-stability"></a><a name="Stability"></a>維護查詢效能穩定性
  若是執行多次的查詢，您可會注意到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用不同的計劃，而產生了不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意的時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。
 
  也可以為具有參數 (自動設定參數或手動設定參數) 的查詢，找出不一致的查詢效能。 您可以在不同的計劃間，找出適合所有或大部分參數值的良好且快速之計劃，並強制執行該計劃，為更多使用者案例留下可預測的效能。
 
- **強制執行查詢的計畫（套用強制原則）。** 若要為特定的查詢強制執行一項計劃，則每次查詢執行時，就會強制以該計劃執行。
+ **為查詢強制執行計劃 (套用強制原則)。** 若要為特定的查詢強制執行一項計劃，則每次查詢執行時，就會強制以該計劃執行。
 
 ```
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;

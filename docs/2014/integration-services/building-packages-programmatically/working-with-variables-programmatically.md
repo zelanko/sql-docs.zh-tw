@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176538"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
@@ -158,7 +158,7 @@ End Module
  請注意，在**系統**命名空間中限定範圍的所有變數，都可供套件使用。 如需詳細資訊，請參閱 [系統變數](../system-variables.md)。
 
 ## <a name="namespaces"></a>命名空間
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssIS](../../includes/ssis-md.md)]）提供兩個變數所在的[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]預設命名空間;**使用者**和**系統**命名空間。 根據預設，開發人員建立的任何自訂變數都會新增至**使用者**命名空間。 系統變數位於**系統**命名空間中。 您可以建立**使用者**命名空間之外的其他命名空間，以儲存自訂變數，而且可以變更**使用者**命名空間的名稱，但是無法在**系統**命名空間中新增或修改變數，也無法將系統變數指派給不同的命名空間。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供存在兩個變數的預設命名空間：**使用者**與**系統**命名空間。 根據預設，開發人員建立的任何自訂變數都會新增至**使用者**命名空間。 系統變數位於**系統**命名空間中。 您可以建立**使用者**命名空間之外的其他命名空間，以儲存自訂變數，而且可以變更**使用者**命名空間的名稱，但是無法在**系統**命名空間中新增或修改變數，也無法將系統變數指派給不同的命名空間。
 
  可使用的系統變數會因容器類型而異。 如需可用於套件、容器、工作和事件處理常式的系統變數清單，請參閱[系統變數](../system-variables.md)。
 

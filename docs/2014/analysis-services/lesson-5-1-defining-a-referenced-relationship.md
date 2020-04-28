@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175297"
 ---
 # <a name="defining-a-referenced-relationship"></a>定義參考關聯性
-  本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商]**** 維度 (稱為「參考維度」****)，將 [地理位置]** 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。
+  本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商]**** 維度 (稱為「參考維度」**)，將 [地理位置]**** 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。
 
 ## <a name="dimensioning-reseller-sales-by-geography"></a>按地理位置建立轉售商銷售的維度
 
@@ -112,7 +112,7 @@ ms.locfileid: "78175297"
 
 1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。
 
-2.  順利完成部署之後，針對 ** 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]**** 按鈕。
+2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**** 索引標籤，然後按一下 [重新連接]**** 按鈕。
 
 3.  在 [中繼資料] 窗格`Reseller Geography`中，展開，以滑鼠右鍵按一下 [**地理**位置]，然後按一下 [**加入至資料欄區域**]。
 

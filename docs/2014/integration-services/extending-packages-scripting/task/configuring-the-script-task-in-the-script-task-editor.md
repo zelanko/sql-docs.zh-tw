@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7060990b409773abd4f574e46dd0671c71f1374f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176147"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在指令碼工作編輯器設定指令碼工作
@@ -41,13 +41,12 @@ ms.locfileid: "78176147"
  若要為指令碼工作和指令碼元件設定預設指令碼語言，請使用 [選項]  對話方塊之 [一般]  頁面上的 **ScriptLanguage** 屬性。 如需相關資訊，請參閱 [General Page](../../general-page-of-integration-services-designers-options.md)。
 
 ### <a name="entrypoint-property"></a>EntryPoint 屬性
- 
-  `EntryPoint` 屬性會將 VSTA 專案中 `ScriptMain` 執行階段所呼叫的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 類別方法指定為指令碼工作程式碼的進入點。 `ScriptMain`類別是腳本範本所產生的預設類別。
+ `EntryPoint` 屬性會將 VSTA 專案中 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段所呼叫的 `ScriptMain` 類別方法指定為指令碼工作程式碼的進入點。 `ScriptMain`類別是腳本範本所產生的預設類別。
 
  如果您在 VSTA 專案內變更此方法的名稱，您就必須變更 `EntryPoint` 屬性的值。
 
 ### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 與 ReadWriteVariables 屬性
- 您可以輸入現有變數的逗號分隔清單做為這些屬性的值，使得變數可在指令碼工作程式碼中以唯讀或讀取/寫入的方式來存取。 您可以透過 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 物件的 `Dts` 屬性在程式碼中存取這兩種類型的變數。 如需詳細資訊，請參閱 [在指令碼工作中使用變數](../../extending-packages-scripting/task/using-variables-in-the-script-task.md)。
+ 您可以輸入現有變數的逗號分隔清單做為這些屬性的值，使得變數可在指令碼工作程式碼中以唯讀或讀取/寫入的方式來存取。 您可以透過 `Dts` 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性在程式碼中存取這兩種類型的變數。 如需詳細資訊，請參閱 [在指令碼工作中使用變數](../../extending-packages-scripting/task/using-variables-in-the-script-task.md)。
 
 > [!NOTE]
 >  變數名稱會區分大小寫。

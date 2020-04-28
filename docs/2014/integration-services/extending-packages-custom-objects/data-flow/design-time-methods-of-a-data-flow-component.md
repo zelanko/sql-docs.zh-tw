@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a2f9cf4d404f4ef577e446d0c4284ef7024742
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176392"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>資料流程元件的設計階段方法
@@ -64,10 +64,9 @@ End Sub
  在呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 方法時，元件開發人員應該將自訂屬性 (<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>) 加入元件。 自訂屬性沒有資料類型屬性。 自訂屬性的資料類型是由您指派至其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.Value%2A> 屬性的值資料類型所設定。 不過，在您將初始值指派到自訂屬性之後，您無法以不同的資料類型指派值。
 
 > [!NOTE]
->  
-  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 介面對於 `Object` 類型的屬性值之支援有限。 您可以儲存為自訂屬性值的唯一物件是簡單類型的陣列，例如字串或是整數。
+>  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 介面對於 `Object` 類型的屬性值之支援有限。 您可以儲存為自訂屬性值的唯一物件是簡單類型的陣列，例如字串或是整數。
 
- 您可以將自訂屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 屬性值設定成 `CPET_NOTIFY` 列舉的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType>，藉此指出自訂屬性支援屬性運算式，如下列範例所示。 您不必加入任何程式碼以處理或是驗證使用者所輸入的屬性運算式。 您可以為屬性設定預設值、驗證其值，以及正常地讀取和使用其值。
+ 您可以將自訂屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 屬性值設定成 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 列舉的 `CPET_NOTIFY`，藉此指出自訂屬性支援屬性運算式，如下列範例所示。 您不必加入任何程式碼以處理或是驗證使用者所輸入的屬性運算式。 您可以為屬性設定預設值、驗證其值，以及正常地讀取和使用其值。
 
 ```csharp
 IDTSCustomProperty100 myCustomProperty;

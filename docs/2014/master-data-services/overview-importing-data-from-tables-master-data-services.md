@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175982"
 ---
 # <a name="data-import-master-data-services"></a>資料匯入 (Master Data Services)
@@ -43,8 +43,7 @@ ms.locfileid: "78175982"
      您可以使用暫存的預存程序或 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 來載入資料。
 
 > [!NOTE]
->  
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]已淘汰對 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序提供支援。
+>  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]已淘汰對 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序提供支援。
 
 ## <a name="deactivating-and-deleting-members"></a>停用及刪除成員
  停用表示可以重新啟用該成員。 如果重新啟用成員，即會還原成員在階層和集合中的屬性及成員資格。 之前的所有交易會完整無缺。 系統管理員可以在主要資料的 [版本管理] **** 功能區域中，看到停用的交易。
@@ -68,14 +67,13 @@ ms.locfileid: "78175982"
 -   合併成員做為分葉或合併成員的同層級。
 
 ## <a name="staging-tables-and-stored-procedures"></a>暫存資料表與預存程序
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫包含下列幾種可以填入您資料的暫存資料表類型。
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫包含下列幾種可以填入您資料的暫存資料表類型。
 
--   [分葉成員臨時表 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
+-   [分葉成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [合併成員臨時表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [合併成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
--   [關聯性臨時表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
+-   [關聯性暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
  模型中的每個實體，都有一個暫存資料表。 資料表名稱表示對應的實體以及像是分葉成員的實體類型。 下圖顯示貨幣、客戶及產品實體的暫存資料表。
 
@@ -83,8 +81,7 @@ ms.locfileid: "78175982"
 
  建立實體時會指定資料表的名稱，且無法變更。 如果暫存資料表名稱包含 _1 或其他數字，則表示在建立實體時，該名稱的其他資料表已存在。
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含下列幾種類型的暫存預存程序。
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含下列幾種類型的暫存預存程序。
 
 -   stg.udp_\<名稱>_Leaf
 

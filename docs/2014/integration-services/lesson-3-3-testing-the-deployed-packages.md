@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176131"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>步驟 3：測試部署的封裝
@@ -22,8 +22,7 @@ ms.locfileid: "78176131"
 
  在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程中，則是使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][偵錯] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]功能表上的 **[開始偵錯]** 選項，在 **(** 的開發環境) 中執行封裝。 這時將會以不同的方式執行封裝。
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了幾項工具，您可以用來在測試和實際執行環境中執行封裝，這些工具為：命令提示字元公用程式 `dtexec` 和「執行封裝公用程式」。 「執行封裝公用程式」是以 `dtexec` 為基礎所建立的圖形化工具。 這兩項工具都會立即執行封裝。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 還提供了 SQL Server Agent 的子系統，這套子系統是特別設計的，它會將封裝執行排程為 SQL Server Agent 作業中的一個步驟。
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了幾項工具，您可以用來在測試和實際執行環境中執行封裝，這些工具為：命令提示字元公用程式 `dtexec` 和「執行封裝公用程式」。 「執行封裝公用程式」是以 `dtexec` 為基礎所建立的圖形化工具。 這兩項工具都會立即執行封裝。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 還提供了 SQL Server Agent 的子系統，這套子系統是特別設計的，它會將封裝執行排程為 SQL Server Agent 作業中的一個步驟。
 
  您將會使用「執行封裝公用程式」來執行部署的封裝。 封裝將會直接使用，因此，您不必更新對話方塊中任何頁面上的資訊。 您將會從 [一般] 頁面開始執行封裝，這也就是「執行封裝公用程式」的第一個頁面。 如果需要，可以按一下其他頁面，以查看頁面中所包含的各封裝資訊。
 

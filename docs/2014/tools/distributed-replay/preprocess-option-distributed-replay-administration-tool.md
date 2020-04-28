@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177338"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>前置處理選項 (Distributed Replay 管理工具)
@@ -22,7 +22,7 @@ ms.locfileid: "78177338"
 
  **preprocess** 選項會起始前置處理階段。 在這個階段中，控制器會準備輸入追蹤資料，以便對目標伺服器重新執行。
 
- ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示")如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。
+ ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。
 
 ## <a name="syntax"></a>語法
 
@@ -37,16 +37,14 @@ ms.locfileid: "78177338"
 
  如果未指定 **-m** 參數，則會使用本機電腦。
 
- **-i** *input_trace_file*指定控制器上輸入追蹤檔案的完整路徑，例如`D:\Mytrace.trc`。 
-  **-i** 是必要參數。
+ **-i** *input_trace_file*指定控制器上輸入追蹤檔案的完整路徑，例如`D:\Mytrace.trc`。 **-i** 是必要參數。
 
  如果相同的目錄中存在換用檔案，系統就會自動載入並使用它們。 這些檔案必須遵循檔案換用命名慣例，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`... `Mytrace_n.trc`。
 
 > [!NOTE]
 >  如果您要在控制器以外的電腦上使用管理工具，就必須將輸入追蹤檔案複製到控制器，以便針對此參數使用本機路徑。
 
- **-d** *controller_working_dir*會指定要儲存中繼檔案的控制器上的目錄。 
-  **-d** 是必要參數。
+ **-d** *controller_working_dir*會指定要儲存中繼檔案的控制器上的目錄。 **-d** 是必要參數。
 
  下列為適用需求：
 
@@ -69,9 +67,7 @@ ms.locfileid: "78177338"
  如果未指定 **-f** ，則預設間隔為 30 秒。
 
 ## <a name="examples"></a>範例
- 在此範例中，前置處理階段是使用所有預設設定來起始。 
-  `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。 
-  *input_trace_file* 參數會指定輸入追蹤資料的位置 `c:\mytrace.trc`。 因為沒有涉及任何追蹤檔案篩選，所以必須指定 **-c** 參數。
+ 在此範例中，前置處理階段是使用所有預設設定來起始。 `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。 *input_trace_file* 參數會指定輸入追蹤資料的位置 `c:\mytrace.trc`。 因為沒有涉及任何追蹤檔案篩選，所以必須指定 **-c** 參數。
 
 ```
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir

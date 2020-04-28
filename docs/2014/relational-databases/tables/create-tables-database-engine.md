@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 261aab8b0e8a5d80aed143d6b29e952243742917
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176811"
 ---
 # <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
@@ -37,18 +37,18 @@ ms.locfileid: "78176811"
 
      [Transact-SQL](#TsqlProcedure)
 
-##  <a name="BeforeYouBegin"></a> 開始之前
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
-###  <a name="Security"></a> Security
+###  <a name="security"></a><a name="Security"></a> Security
 
-####  <a name="Permissions"></a> 權限
+####  <a name="permissions"></a><a name="Permissions"></a> 權限
  需要資料庫的 CREATE TABLE 權限以及用以建立資料表之結構描述的 ALTER 權限。
 
  如果將 CREATE TABLE 陳述式中的任何資料行定義成 CLR 使用者定義型別，就需要類型的擁有權或它的 REFERENCES 權限。
 
  如果 CREATE TABLE 陳述式中的任何資料行有相關聯的 XML 結構描述集合，就需要 XML 結構描述集合的擁有權或它的 REFERENCES 權限。
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 #### <a name="to-create-a-table-with-table-designer"></a>若要使用資料表設計工具建立資料表
 
@@ -78,13 +78,13 @@ ms.locfileid: "78176811"
 
      如需有關結構描述的詳細資訊，請參閱＜ [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)＞。
 
-9. 從 [檔案 **] 功能表中，選擇 [** **儲存***資料表名稱*]。
+9. 從 [檔案]**** 功能表中，選擇 [儲存 <資料表名稱>]**** **。
 
 10. 在 **[選擇名稱]** 對話方塊中，輸入資料表的名稱，然後按一下 **[確定]**。
 
 11. 若要檢視新的資料表，在 **[物件總管]**，展開 **[資料表]** 節點並按 **F5** 重新整理物件清單。 新的資料表就會在資料表清單中顯示。
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 #### <a name="to-create-a-table-in-the-query-editor"></a>若要在查詢編輯器中建立資料表
 

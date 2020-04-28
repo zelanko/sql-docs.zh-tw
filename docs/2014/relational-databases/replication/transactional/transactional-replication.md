@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65f498318c29f6e3dc7189bd8f1c5d852cc1a2d0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176706"
 ---
 # <a name="transactional-replication"></a>異動複寫
@@ -33,7 +33,7 @@ ms.locfileid: "78176706"
 
  依預設，交易式發行集的訂閱者應當成唯讀處理，因為變更並不會傳播回發行者。 不過，異動複寫的確有提供選項讓訂閱者更新。
 
-##  <a name="HowWorks"></a> 異動複寫的運作方式
+##  <a name="how-transactional-replication-works"></a><a name="HowWorks"></a> 異動複寫的運作方式
  異動複寫是由「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照集代理程式」、「記錄讀取器代理程式」及「散發代理程式」實作。 「快照集代理程式」會準備快照集檔案，內含結構描述及已發行資料表與資料庫物件的資料、將檔案儲存在快照集資料夾內，然後將同步作業記錄至散發者的散發資料庫中。
 
  「記錄讀取器代理程式」會監視針對異動複寫設定的各資料庫交易記錄檔，並將標示為複寫的交易從交易記錄檔複製到充當可靠的儲存及轉送佇列之散發資料庫中。 「散發代理程式」會將快照集資料夾中的初始快照集檔案，以及存放在散發資料庫資料表中的交易複製到訂閱者。
@@ -44,7 +44,7 @@ ms.locfileid: "78176706"
 
  ![異動複寫元件和資料流程](../media/trnsact.gif "異動複寫元件和資料流程")
 
-##  <a name="Dataset"></a> 初始資料集
+##  <a name="initial-dataset"></a><a name="Dataset"></a> 初始資料集
  新的異動複寫訂閱者所包含的資料表，必須與發行者端的資料表具有相同的結構描述與資料，才能從發行者端接收累加的變更。 初始資料集通常為由「快照集代理程式」建立，並由「散發代理程式」散發和套用的快照集。 初始資料集也可透過備份或其他方式 (如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services) 來提供。
 
  當快照集散發並套用至訂閱者時，只有等待初始快照集的訂閱者會受到影響。 該發行集的其他訂閱者 (已初始化的訂閱者) 則不會受影響。
@@ -52,19 +52,19 @@ ms.locfileid: "78176706"
 ## <a name="concurrent-snapshot-processing"></a>並行快照集處理(Concurrent Snapshot Processing)
  快照式複寫將共用鎖定放置於快照集產生期間，作為部份複寫發行的所有資料表中。 這可避免在發行資料表中進行更新。 並行快照集處理 (異動複寫的預設行為) 在整個快照集產生期間不會設定共用鎖定，這讓使用者可在複寫建立初始快照集檔案期間繼續工作而不受中斷。
 
-##  <a name="SnapshotAgent"></a> 快照集代理程式
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 快照集代理程式
  「快照集代理程式」在異動複寫中實作初始快照集的程序，與在快照式複寫中使用的程序相同 (上述並行快照集處理的部份除外)。
 
  快照集檔案產生之後，您可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Explorer 在快照集資料夾中檢視它們。
 
-##  <a name="LogReaderAgent"></a> 修改資料與記錄讀取器代理程式
+##  <a name="modifying-data-and-the-log-reader-agent"></a><a name="LogReaderAgent"></a> 修改資料與記錄讀取器代理程式
  「記錄讀取器代理程式」在散發者端執行；它通常會連續執行，但也可根據您建立的排程執行。 「記錄讀取器代理程式」執行時，會先讀取發行集的交易記錄檔 (與一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine 作業時，交易追蹤和復原使用的資料庫記錄相同)，然後識別任何 INSERT、UPDATE 及 DELETE 陳述式，或對已標示為複寫之交易資料所作的其他修改。 接下來，此代理程式會將這些交易按批次複製到散發者端的散發資料庫中。 「記錄讀取器代理程式」使用內部預存程序 **sp_replcmds** 從記錄檔中取得標示為要複寫的下一組命令。 之後散發資料庫即成為儲存及轉送的佇列，變更會從這裡被送至訂閱者端。 只有經過認可的交易才會被送至散發資料庫。
 
  在整個批次的交易順利地寫入散發資料庫之後，就表示它已經通過認可了。 在每一批次的命令均通過散發者認可之後，「記錄讀取器代理程式」便會呼叫 **sp_repldone** ，以標示最後一次複寫完成之處。 最後，代理程式會標示出交易記錄檔中有哪些資料列已經備妥可以清除。 仍在等待複寫的資料列不會被清除。
 
  交易命令在傳播到所有訂閱者之前或達到最長散發保留期限之前，會儲存於散發資料庫中。 訂閱者接收交易的順序，與這些交易套用在發行者端時的順序相同。
 
-##  <a name="DistributionAgent"></a> 散發代理程式
+##  <a name="distribution-agent"></a><a name="DistributionAgent"></a> 散發代理程式
  若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 該代理程式會將交易從散發資料庫移至訂閱者。 如果訂閱標示為驗證，則「散發代理程式」還會檢查發行者端和訂閱者端的資料是否相符。
 
 ## <a name="publication-types"></a>發行集類型

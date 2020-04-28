@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23184e77efbe41eae3d4de434a30ff8f3a4847ff
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177028"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>設定報表的一般屬性 (報表管理員)
@@ -28,7 +28,7 @@ ms.locfileid: "78177028"
 
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽到您要設定一般屬性的報表，並開啟該報表。
 
-3.  按一下 [屬性]  索引標籤。
+3.  按一下 [內容]**** 索引標籤。
 
      或者，如果 [**內容**] 頁面是在詳細資料檢視中，請按一下 [屬性頁] 圖示：
 

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176288"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
@@ -80,14 +80,11 @@ ms.locfileid: "78176288"
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。
 
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼
- 當您在建立和設定目的地元件之後開啟 VSTA IDE 時，可編輯的 `ScriptMain` 類別會出現在程式碼編輯器中，並具有 `ProcessInputRow` 方法的虛設常式。 
-  `ScriptMain` 類別是您將撰寫自訂程式碼的地方，而 `ProcessInputRow` 則是目的地元件中最重要的方法。
+ 當您在建立和設定目的地元件之後開啟 VSTA IDE 時，可編輯的 `ScriptMain` 類別會出現在程式碼編輯器中，並具有 `ProcessInputRow` 方法的虛設常式。 `ScriptMain` 類別是您將撰寫自訂程式碼的地方，而 `ProcessInputRow` 則是目的地元件中最重要的方法。
 
- 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案專案。 
-  `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
+ 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案專案。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
 
- 在執行階段，資料流程引擎會叫用 `ProcessInput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 
-  `ProcessInput` 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 `ProcessInputRow` 方法。
+ 在執行階段，資料流程引擎會叫用 `ProcessInput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `ProcessInput` 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 `ProcessInputRow` 方法。
 
 ### <a name="writing-your-custom-code"></a>撰寫您的自訂程式碼
  為了完成建立自訂目的地元件，您可能會想要以 `ScriptMain` 類別中提供的下列方法來撰寫指令碼。
@@ -113,7 +110,7 @@ ms.locfileid: "78176288"
 
 1.  建立一個 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員，以使用 `SqlClient` 提供者連接到 `AdventureWorks` 資料庫。
 
-2.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫中執行下列 `AdventureWorks` 命令，以便建立目的地資料表：
+2.  在 `AdventureWorks` 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以便建立目的地資料表：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

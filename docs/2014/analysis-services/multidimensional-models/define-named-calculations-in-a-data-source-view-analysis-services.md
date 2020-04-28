@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 435ef9a3b64b6a2b39a898bb0db0afaa5c79f828
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175743"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名計算 (Analysis Services)
@@ -66,7 +66,7 @@ FROM
      ![圖表工作空間的螢幕擷取畫面，以滑鼠右鍵按一下功能表](../media/ssas-olapdsv-diagram.gif "圖表工作空間的螢幕擷取畫面，以滑鼠右鍵按一下功能表")
 
     > [!NOTE]
-    >  若要找出資料表或視圖，您可以按一下 [**資料來源視圖**] 功能表，或以滑鼠右鍵按一下 [**資料表]** 或 [**圖表**] 窗格的開放區域，即可使用 [**尋找資料表**] 選項。
+    >  若要尋找資料表或檢視表，您可以按一下 [資料來源檢視]**** 功能表，或是以滑鼠右鍵按一下 [資料表]**** 或 [圖表]**** 窗格的開放區域，即可使用 [尋找資料表]**** 選項。
 
 4.  在 [建立具名計算]**** 對話方塊中，執行下列步驟：
 
@@ -84,6 +84,6 @@ FROM
  當您嘗試刪除具名計算時，會出現一個提示，此提示會列出將會因為此刪除動作而變成無效之專案或資料庫中定義的物件清單。 仔細檢閱清單，再刪除計算。
 
 ## <a name="see-also"></a>另請參閱
- [在資料來源視圖中定義已命名的查詢 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)
+ [在資料來源檢視中定義具名查詢 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)
 
 

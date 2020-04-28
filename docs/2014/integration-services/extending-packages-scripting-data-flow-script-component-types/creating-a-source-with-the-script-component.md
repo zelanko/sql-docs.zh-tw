@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176268"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
@@ -85,19 +85,15 @@ ms.locfileid: "78176268"
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼
  當您在建立和設定來源元件之後開啟 VSTA IDE，可編輯的 `ScriptMain` 類別會出現在程式碼編輯器中。 您在 `ScriptMain` 類別中撰寫自訂程式碼。
 
- 
-  `ScriptMain` 類別包括 `CreateNewOutputRows` 方法的 Stub。 
-  `CreateNewOutputRows` 是來源元件中最重要的方法。
+ `ScriptMain` 類別包括 `CreateNewOutputRows` 方法的 Stub。 `CreateNewOutputRows` 是來源元件中最重要的方法。
 
- 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案專案。 
-  `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
+ 如果您在 VSTA 中開啟 [**專案管理器**] 視窗，您可以看到腳本元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案專案。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。
 
- 在執行階段，資料流程引擎會叫用 `PrimeOutput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 
-  `PrimeOutput` 方法會依序呼叫下列方法：
+ 在執行階段，資料流程引擎會叫用 `PrimeOutput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `PrimeOutput` 方法會依序呼叫下列方法：
 
 1.  您在 `CreateNewOutputRows` 中覆寫以便從資料來源將資料列加入輸出緩衝區的 `ScriptMain` 方法，一開始會是空的。
 
-2.  `FinishOutputs`方法，預設為空白。 在 `ScriptMain` 中覆寫此方法以執行完成輸出所需的處理。
+2.   方法預設是空的。 在 `ScriptMain` 中覆寫此方法以執行完成輸出所需的處理。
 
 3.  私用 `MarkOutputsAsFinished` 方法 (呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 方法) 用以指出輸出已完成的資料流程引擎。 在自己的程式碼中不必明確地呼叫 `SetEndOfRowset`。
 
@@ -106,7 +102,7 @@ ms.locfileid: "78176268"
 
 1.  覆寫 `AcquireConnections` 方法以連接至外部資料來源。 從連接管理員擷取連接物件，或是必要的連接資訊。
 
-2.  如果您可以同時載入所有的來源資料，請覆寫 `PreExecute` 方法以載入資料。 例如，您可以針對連至 `SqlCommand` 資料庫的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接，執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並同時將所有的來源資料載入 `SqlDataReader`。 如果您必須一次載入一個資料列的來源資料 (例如，在讀取文字檔時)，可以在 `CreateNewOutputRows` 中循環使用資料列時載入資料。
+2.  如果您可以同時載入所有的來源資料，請覆寫 `PreExecute` 方法以載入資料。 例如，您可以針對連至 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接，執行 `SqlCommand`，並同時將所有的來源資料載入 `SqlDataReader`。 如果您必須一次載入一個資料列的來源資料 (例如，在讀取文字檔時)，可以在 `CreateNewOutputRows` 中循環使用資料列時載入資料。
 
 3.  使用覆寫的 `CreateNewOutputRows` 方法將新資料列加入空的輸出緩衝區，並將新輸出資料列中的每個資料行填入值。 使用每個輸出緩衝區的 `AddRow` 方法，加入空的新資料列，然後設定每個資料行的值。 通常您會複製從外部來源載入的資料行值。
 

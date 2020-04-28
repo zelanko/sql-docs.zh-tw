@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176223"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
@@ -49,20 +49,15 @@ ms.locfileid: "78176223"
  指令碼元件的優點在於可以產生基礎結構程式碼，所以能夠減少所必須撰寫的程式碼量。 這項功能的前提是，輸入和輸出及其資料行和屬性都是固定的，而且已預先知道。 因此，對元件中繼資料所進行的任何後續變更，都可能會造成已撰寫的程式碼無效。 這會在封裝執行期間造成編譯錯誤。
 
 #### <a name="project-items-and-classes-in-the-script-component-project"></a>指令碼元件專案中的專案項目和類別
- 當您切換到程式碼設計模式時，VSTA IDE 就會開啟並顯示 `ScriptMain` 專案項目。 
-  `ScriptMain` 專案項目包含可編輯的 `ScriptMain` 類別，這可充當指令碼的進入點，也就是撰寫程式碼的位置。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。
+ 當您切換到程式碼設計模式時，VSTA IDE 就會開啟並顯示 `ScriptMain` 專案項目。 `ScriptMain` 專案項目包含可編輯的 `ScriptMain` 類別，這可充當指令碼的進入點，也就是撰寫程式碼的位置。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。
 
  指令碼專案包含兩個額外的、自動產生的唯讀專案項目：
 
--   
-  `ComponentWrapper` 專案項目包含三個類別：
+-   `ComponentWrapper` 專案項目包含三個類別：
 
-    -   
-  `UserComponent` 類別，這個類別繼承自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>，且包含用於處理資料並與封裝互動的方法和屬性。 
-  `ScriptMain` 類別繼承自 `UserComponent` 類別。
+    -   `UserComponent` 類別，這個類別繼承自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>，且包含用於處理資料並與封裝互動的方法和屬性。 `ScriptMain` 類別繼承自 `UserComponent` 類別。
 
-    -   
-  `Connections` 集合類別，這個類別包含 [指令碼轉換編輯器] 的 [連接管理員] 頁面上所選取連接的參考。
+    -   `Connections` 集合類別，這個類別包含 [指令碼轉換編輯器] 的 [連接管理員] 頁面上所選取連接的參考。
 
     -   `Variables`集合類別，其中包含在 [**腳本轉換編輯器**] 的`ReadOnlyVariable` [ `ReadWriteVariables` **腳本**] 頁面上，和屬性中所輸入之變數的參考。
 
@@ -173,12 +168,10 @@ public class ScriptMain : UserComponent
 
 |封裝功能|存取方法|
 |---------------------|-------------------|
-|變數|使用 `Variables` 專案項目的 `ComponentWrapper` 集合類別中的具名和類型存取子屬性，這些屬性是透過 `Variables` 類別的 `ScriptMain` 屬性而公開。<br /><br /> 
-  `PreExecute` 方法只能存取唯讀變數。 
-  `PostExecute` 方法可以存取唯讀和讀/寫變數。|
+|變數|使用 `Variables` 專案項目的 `ComponentWrapper` 集合類別中的具名和類型存取子屬性，這些屬性是透過 `Variables` 類別的 `ScriptMain` 屬性而公開。<br /><br /> `PreExecute` 方法只能存取唯讀變數。 `PostExecute` 方法可以存取唯讀和讀/寫變數。|
 |連接|使用 `Connections` 專案項目的 `ComponentWrapper` 集合類別中的具名和類型存取子屬性，這些屬性是透過 `Connections` 類別的 `ScriptMain` 屬性而公開。|
 |事件|使用<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> `ScriptMain`類別的屬性和<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>介面的**\<引發 X>** 方法，引發事件。|
-|記錄|使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 類別的 `ScriptMain` 方法來執行記錄。|
+|記錄|使用 `ScriptMain` 類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法來執行記錄。|
 
 ## <a name="debugging-the-script-component"></a>偵錯指令碼元件
  若要偵錯指令碼元件中的程式碼，請在程式碼中設定至少一個中斷點，然後關閉 VSTA IDE，以便在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中執行封裝。 當封裝執行進入指令碼元件時，VSTA IDE 會在唯讀模式下重新開啟並顯示您的程式碼。 在執行到達中斷點之後，您可以檢查變數值並逐步完成其餘的程式碼。
@@ -193,7 +186,7 @@ public class ScriptMain : UserComponent
 
 -   使用`MessageBox.Show` **system.web**命名空間中的方法中斷執行，並顯示強制回應訊息。 (請在完成偵錯程序之後移除此程式碼)。
 
--   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出]  視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出]  視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師的 [進度]  索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../data-flow/transformations/script-component.md)。
+-   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出]  視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出]  視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在  **設計師的 [進度]** [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../data-flow/transformations/script-component.md)。
 
 -   將事件或使用者定義的訊息記錄到啟用的記錄提供者。 如需詳細資訊，請參閱[在指令碼元件中記錄](logging-in-the-script-component.md)。
 

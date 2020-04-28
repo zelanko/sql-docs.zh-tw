@@ -19,14 +19,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176758"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
-  *透明資料加密*（TDE）會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]加密[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]和資料檔案，又稱為待用資料加密。 您可以採取數個預防措施來協助保護資料庫，例如設定安全系統、加密機密資產，以及建置圍繞資料庫伺服器的防火牆。 不過，在實體媒體 (例如磁碟機或備份磁帶) 遭竊的案例中，惡意人士可能會直接還原或附加資料庫，然後瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。
+  *透明資料加密* (TDE) 會加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 資料檔案，一般稱之為靜止的加密資料。 您可以採取數個預防措施來協助保護資料庫，例如設定安全系統、加密機密資產，以及建置圍繞資料庫伺服器的防火牆。 不過，在實體媒體 (例如磁碟機或備份磁帶) 遭竊的案例中，惡意人士可能會直接還原或附加資料庫，然後瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。
 
  TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 加密會使用資料庫加密金鑰 (DEK)，此金鑰會儲存在資料庫開機記錄中，以在復原期間提供可用性。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 master 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。 TDE 會保護休眠的資料，也就是資料檔和記錄檔。 它提供了與各個不同業界內建立的許多法令、規章和指導方針相符的能力， 如此可讓軟體開發人員使用 AES 和 3DES 加密演算法加密資料，而不需要變更現有的應用程式。
 
@@ -58,7 +58,7 @@ ms.locfileid: "78176758"
 
  下圖顯示 TDE 加密的架構。 在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 時，只有資料庫層級項目 (資料庫加密金鑰) 和 ALTER DATABASE 部分是使用者可設定的。
 
- ![顯示主題中所描述的階層。](../../../database-engine/media/tde-architecture.gif "在主題中顯示所描述的階層。")
+ ![顯示主題中所描述的階層。](../../../database-engine/media/tde-architecture.gif "顯示主題中所描述的階層。")
 
 ## <a name="using-transparent-data-encryption"></a>使用透明資料加密
  若要使用 TDE，請遵循下列步驟。

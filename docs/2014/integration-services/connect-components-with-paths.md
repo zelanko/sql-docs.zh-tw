@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176483"
 ---
 # <a name="connect-components-with-paths"></a>以路徑連接元件
@@ -26,7 +26,7 @@ ms.locfileid: "78176483"
 
  下圖顯示的範例資料流程中，包含一個來源元件、兩個轉換、一個目的地元件，以及連接元件的路徑。
 
- ![資料流程](media/mw-dts-08.gif "資料流")
+ ![](media/mw-dts-08.gif "設計師中")
 
  在連接兩個元件之後，您可以在 **[資料流程路徑編輯器]** 中，檢視經由路徑移動的資料之中繼資料，以及路徑的屬性。 如需詳細資訊，請參閱 [Integration Services Paths](data-flow/integration-services-paths.md)。
 

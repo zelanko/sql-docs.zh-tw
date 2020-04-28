@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f25c32fe16fbd49d978cd15e4cec356d229b5369
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175395"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
@@ -53,7 +53,7 @@ ms.locfileid: "78175395"
  資料庫的容錯移轉時間取決於鏡像伺服器向前恢復重做佇列中記錄的速度，而這主要又是由系統硬體與目前工作負載所決定。 主體資料庫有可能會變得很忙碌，使主體伺服器以比向前恢復記錄檔更快的速度，將記錄檔轉送到鏡像伺服器。 在此情況下，當鏡像伺服器向前恢復重做佇列中的記錄時，容錯移轉可能花費很多時間。 若要了解重做佇列的目前大小，請使用資料庫鏡像效能物件中的 **Redo Queue** 計數器。 如需詳細資訊，請參閱 [SQL Server 的 Database Mirroring 物件](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。
 
 ### <a name="estimating-the-failover-redo-rate"></a>預估容錯移轉重做速率
- 您可以使用生產資料庫的測試複本來測量向前復原記錄檔記錄所需的時間量（「*重做速率*」）。
+ 您可利用生產資料庫的測試複本，測量向前復原記錄檔記錄所需的時間量 (「重做速率」**)。
 
  預估容錯移轉期間之向前恢復時間的方法，取決於重做階段期間鏡像伺服器所使用的執行緒數目。 執行緒的數目取決下列：
 

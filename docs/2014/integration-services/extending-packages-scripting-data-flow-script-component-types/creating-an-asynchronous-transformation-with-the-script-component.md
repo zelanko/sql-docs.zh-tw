@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176248"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用指令碼元件建立非同步轉換
@@ -82,14 +82,13 @@ ms.locfileid: "78176248"
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。
 
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼
- 當您在建立和設定轉換元件之後開啟 VSTA IDE 時，可編輯`ScriptMain`的類別會出現在程式碼編輯器中，並具有 ProcessInputRow 和 CreateNewOutputRows 方法的 stub。 ScriptMain 類別是您將撰寫自訂程式碼的地方，而 ProcessInputRow 則是轉換元件中最重要的方法。 
-  `CreateNewOutputRows` 方法通常比較常在來源元件中使用，這就像非同步轉換，因為兩個元件都必須建立自己的輸出資料列。
+ 當您在建立和設定轉換元件之後開啟 VSTA IDE 時，可編輯`ScriptMain`的類別會出現在程式碼編輯器中，並具有 ProcessInputRow 和 CreateNewOutputRows 方法的 stub。 ScriptMain 類別是您將撰寫自訂程式碼的地方，而 ProcessInputRow 則是轉換元件中最重要的方法。 `CreateNewOutputRows` 方法通常比較常在來源元件中使用，這就像非同步轉換，因為兩個元件都必須建立自己的輸出資料列。
 
  如果您開啟 [VSTA**專案瀏覽器**] 視窗，您可以看到腳本元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案專案。 ScriptMain 類別繼承自`ComponentWrapper`專案專案中的 UserComponent 類別。
 
  在執行時間，資料流程引擎會呼叫`UserComponent`類別中的 PrimeOutput 方法，它會覆寫<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>父類別的方法。 PrimeOutput 方法接著會呼叫 CreateNewOutputRows 方法。
 
- 接下來，資料流程引擎會叫用 UserComponent 類別中的 ProcessInput 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 ProcessInput 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 ProcessInputRow 方法。
+ 接下來，資料流程引擎會叫用 UserComponent 類別中的 ProcessInput 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 ProcessInput 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 ProcessInputRow 方法。
 
 ### <a name="writing-your-custom-code"></a>撰寫您的自訂程式碼
  若要完成自訂非同步轉換元件的建立，您必須使用覆寫的 ProcessInputRow 方法來處理輸入緩衝區之每個資料列中的資料。 因為輸出與輸入不同步，所以您必須將資料列明確寫入輸出中。
@@ -123,9 +122,9 @@ ms.locfileid: "78176248"
 
 5.  重新命名輸入、輸出和新的輸出資料行，為它們提供更具描述性的名稱。 此範例使用 **MyAddressInput** 作為輸入的名稱、使用 **MyAddressOutput** 和 **MySummaryOutput** 作為輸出，並使用 **MyRedmondCount** 作為第二個輸出的輸出資料行。
 
-6.  在 [指令碼]**** 頁面上，按一下 [編輯指令碼]****，然後輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]****。
+6.  在 [指令碼]**** 頁面上，按一下 [編輯指令碼]****，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]****。
 
-7.  針對第一個輸出建立及設定需要 **AddressID** 和 **City** 資料行的目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將轉換的第一個輸出 **MyAddressOutput** 連線至目的地元件。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks** 資料庫中執行下列 ** 命令，以建立目的地資料表：
+7.  針對第一個輸出建立及設定需要 **AddressID** 和 **City** 資料行的目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將轉換的第一個輸出 **MyAddressOutput** 連線至目的地元件。 您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175705"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>在資料來源檢視中重新整理結構描述 (Analysis Services)
@@ -28,11 +28,11 @@ ms.locfileid: "78175705"
 
  這個主題包括下列各節：
 
- [重新整理中支援的變更](#bkmk_changlist)
+ [重新整理所支援的變更](#bkmk_changlist)
 
- [重新整理 SQL Server Data Tools 中的 DSV](#bkmk_DSVrefresh)
+ [在 SQL Server Data Tools 中重新整理 DSV](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>重新整理中支援的變更
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>重新整理中支援的變更
  DSV 重新整理可以包含下列任何一項動作：
 
 -   刪除資料表、資料行及關聯性
@@ -43,7 +43,7 @@ ms.locfileid: "78175705"
 
  重新整理永遠不會將新資料表加入至 DSV。 如果您想加入新資料表，則必須手動加入。 如需詳細資訊，請參閱 [在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)的 [方案總管] 中執行 [資料來源檢視精靈]。
 
-##  <a name="bkmk_DSVrefresh"></a>重新整理 SQL Server Data Tools 中的 DSV
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>重新整理 SQL Server Data Tools 中的 DSV
  若要重新整理 DSV，請從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下 DSV，然後按一下 [重新整理資料來源檢視] 按鈕，或從 [資料來源檢視] 功能表中選擇 [重新整理]****。
 
  在重新整理期間， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會查詢所有基礎關聯式資料來源，以判斷 DSV 中所包含的資料表/檢視表是否已有變更。 如果可以對所有基礎資料來源建立連接，而且已經有變更，您將會在 [重新整理資料來源檢視]**** 對話方塊中看到這些變更。

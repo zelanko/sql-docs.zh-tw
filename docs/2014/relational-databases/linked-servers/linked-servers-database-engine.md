@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e50cd7bc491109c1aa7a1941d04330141e907941
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175897"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
@@ -49,8 +49,7 @@ ms.locfileid: "78175897"
  Native Client OLE DB 提供者（PROGID： SQLNCLI11）是的官方 OLE DB 提供者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 > [!NOTE]
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢是專為處理任何實作必要 OLE DB 介面的 OLE DB 提供者而設計； 不過， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只有針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB 提供者以及某些其他提供者測試過。
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢是專為處理任何實作必要 OLE DB 介面的 OLE DB 提供者而設計； 不過， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只有針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB 提供者以及某些其他提供者測試過。
 
 ## <a name="linked-server-details"></a>連結伺服器詳細資料
  下圖說明連結伺服器組態的基本設定。
@@ -85,17 +84,17 @@ ms.locfileid: "78175897"
 >  連結的伺服器可以定義為指回 (回送，Loopback) 到定義它們的伺服器上。 回送伺服器最適合用於測試針對單一伺服器網路使用分散式查詢的應用程式。 回送連結的伺服器主要用於測試，而且不支援許多作業，例如分散式交易。
 
 ## <a name="related-tasks"></a>相關工作
- [建立連結的伺服器 &#40;SQL Server 資料庫引擎&#41;](create-linked-servers-sql-server-database-engine.md)
+ [建立連結的伺服器 &#40;SQL Server Database Engine&#41;](create-linked-servers-sql-server-database-engine.md)
 
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)
 
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)
 
- [sp_dropserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)
+ [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)
 
 ## <a name="related-content"></a>相關內容
- [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
+ [sys.servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
 
- [sp_linkedservers &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)
+ [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)
 
 

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31a24acb49abf4965e18443ef4c46ffd9a16f15c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176515"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
@@ -27,7 +27,7 @@ ms.locfileid: "78176515"
 
      ![SSIS-AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "SSIS-AzureSubscriptionManager")
 
-2.  在 [Azure 訂用帳戶識別碼]**** 輸入可唯一識別 Azure 訂用帳戶的 Azure 訂用帳戶識別碼。  可以在 [設定][](https://manage.windowsazure.com) 頁面下的 **Azure 管理入口網站**找到此值：
+2.  在 [Azure 訂用帳戶識別碼]**** 輸入可唯一識別 Azure 訂用帳戶的 Azure 訂用帳戶識別碼。  可以在 [設定]**** 頁面下的 [Azure 管理入口網站](https://manage.windowsazure.com)找到此值：
 
      ![SSIS-AzureSettings-SubscriptionID](../media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")
 
@@ -39,6 +39,6 @@ ms.locfileid: "78176515"
 
 5.  按一下 [**測試連接**] 來測試連接。
 
-6.  按一下 **[確定]** ，關閉對話方塊。
+6.  按一下 [確定]**** 關閉對話方塊。
 
 
