@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122445"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @LoginNamePattern = ] 'login'`這是登入名稱。 *login*是**sysname**，預設值是 Null。 如果有指定，*登*入就必須存在。 如果未指定 login，則會傳回所有*登*入的相關資訊。  
+`[ @LoginNamePattern = ] 'login'`這是登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 如果有指定，*登*入就必須存在。 如果未指定 login，則會傳回所有*登*入的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

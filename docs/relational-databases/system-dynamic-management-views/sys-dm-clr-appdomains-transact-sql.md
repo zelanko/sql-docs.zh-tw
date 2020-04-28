@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138405"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
@@ -42,14 +42,14 @@ ms.locfileid: "68138405"
 |**creation_time**|**datetime**|**AppDomain**的建立時間。 因為已快取並重複使用**appdomain**來提升效能，所以**creation_time**不一定是執行程式碼的時間。|  
 |**db_id**|**int**|建立此**AppDomain**所在的資料庫識別碼。 儲存在兩個不同資料庫中的程式碼無法共用一個**AppDomain**。|  
 |**user_id**|**int**|其物件可在此**AppDomain**中執行之使用者的識別碼。|  
-|**狀態**|**nvarchar(128)**|**AppDomain**目前狀態的描述項。 任一 AppDomain 在從建立到刪除的期間，都可以有不同的狀態。 請參閱本主題的＜備註＞一節，以取得詳細資訊。|  
+|**state**|**nvarchar(128)**|**AppDomain**目前狀態的描述項。 任一 AppDomain 在從建立到刪除的期間，都可以有不同的狀態。 請參閱本主題的＜備註＞一節，以取得詳細資訊。|  
 |**strong_refcount**|**int**|這個**AppDomain**的強式參考數目。 這會反映使用此**AppDomain**的目前執行中批次數目。 請注意，執行此視圖將會建立**強式 refcount**;即使目前沒有正在執行的程式碼， **strong_refcount**的值會是1。|  
 |**weak_refcount**|**int**|此**AppDomain**的弱式參考數目。 這表示要快取**AppDomain**內的多少個物件。 當您執行 managed 資料庫物件時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會將它快取到**AppDomain**內，以供日後重複使用。 這樣可以提高執行效能。|  
-|**低廉**|**int**|**AppDomain**的成本。 成本愈高，就越可能在記憶體不足的壓力下卸載此**AppDomain** 。 成本通常取決於重新建立此**AppDomain**所需的記憶體數量。|  
-|**value**|**int**|**AppDomain**的值。 值越低，就越可能在記憶體不足的壓力下卸載此**AppDomain** 。 值通常取決於使用此**AppDomain**的連接或批次數目。|  
-|**total_processor_time_ms**|**Bigint**|自處理序啟動以來，在目前應用程式定義域中執行之所有執行緒所用的處理器總時間 (以毫秒為單位)。 這相當於**MonitoringTotalProcessorTime**。|  
-|**total_allocated_memory_kb**|**Bigint**|自應用程式定義域建立以來，它所進行的所有記憶體配置總大小 (以 KB 為單位)，不減去已回收的記憶體。 這相當於**MonitoringTotalAllocatedMemorySize**。|  
-|**survived_memory_kb**|**Bigint**|在上次完整區塊回收中存活下來且已知為目前應用程式定義域所參考的 KB 數。 這相當於**MonitoringSurvivedMemorySize**。|  
+|**cost**|**int**|**AppDomain**的成本。 成本愈高，就越可能在記憶體不足的壓力下卸載此**AppDomain** 。 成本通常取決於重新建立此**AppDomain**所需的記憶體數量。|  
+|**值**|**int**|**AppDomain**的值。 值越低，就越可能在記憶體不足的壓力下卸載此**AppDomain** 。 值通常取決於使用此**AppDomain**的連接或批次數目。|  
+|**total_processor_time_ms**|**bigint**|自處理序啟動以來，在目前應用程式定義域中執行之所有執行緒所用的處理器總時間 (以毫秒為單位)。 這相當於**MonitoringTotalProcessorTime**。|  
+|**total_allocated_memory_kb**|**bigint**|自應用程式定義域建立以來，它所進行的所有記憶體配置總大小 (以 KB 為單位)，不減去已回收的記憶體。 這相當於**MonitoringTotalAllocatedMemorySize**。|  
+|**survived_memory_kb**|**bigint**|在上次完整區塊回收中存活下來且已知為目前應用程式定義域所參考的 KB 數。 這相當於**MonitoringSurvivedMemorySize**。|  
   
 ## <a name="remarks"></a>備註  
  Dm_clr_appdomains 之間有一對一關聯性 **。 appdomain_address**和**dm_clr_loaded_assemblies appdomain_address**。  

@@ -16,10 +16,10 @@ ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122397"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)

@@ -16,10 +16,10 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104516"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
@@ -54,40 +54,40 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 |屬性|值|描述|  
 |--------------|------------|-----------------|  
-|**allow_interactive_resolver**|**真正**|啟用發行項的互動式解析程式。|  
+|**allow_interactive_resolver**|**true**|啟用發行項的互動式解析程式。|  
 ||**false**|停用發行項的互動式解析程式。|  
 |**article_resolver**||自訂的發行項解析程式。 只適用於資料表發行項。|  
 |**check_permissions** （點陣圖）|**0x00**|不檢查資料表層級權限。|  
 ||**0x10**|在發行者端套用訂閱者所建立的 INSERT 陳述式之前，先在發行者端檢查資料表層級權限。|  
 ||**0x20**|在發行者端套用訂閱者所建立的 UPDATE 陳述式之前，先檢查發行者端的資料表層級權限。|  
 ||**0x40**|在發行者端套用訂閱者所建立的 DELETE 陳述式之前，先檢查發行者端的資料表層級權限。|  
-|**column_tracking**|**真正**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意：發行具有超過246個數據行的資料表時，不能使用資料行層級追蹤。|  
+|**column_tracking**|**true**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意：發行具有超過246個數據行的資料表時，不能使用資料行層級追蹤。|  
 ||**false**|關閉資料行層級追蹤，將衝突偵測保留在資料列層級。 只適用於資料表發行項。|  
-|**compensate_for_errors**|**真正**|在同步處理期間，當發生錯誤時，執行補償動作。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+|**compensate_for_errors**|**true**|在同步處理期間，當發生錯誤時，執行補償動作。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 ||**false**|不執行補償動作，這是預設行為。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> ** \* \*重要\*事項**雖然受影響資料列中的資料可能會在您解決任何錯誤時出現不一致的情況，但是您可以套用變更並將資料聚合。 如果發行項的來源資料表已經在另一個發行集中發行，則這兩篇文章的*compensate_for_errors*值都必須相同。|  
 |**creation_script**||在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
-|**delete_tracking**|**真正**|複寫 DELETE 陳述式，這是預設行為。|  
+|**delete_tracking**|**true**|複寫 DELETE 陳述式，這是預設行為。|  
 ||**false**|不複寫 DELETE 陳述式。<br /><br /> ** \* \*重要\*事項**將**delete_tracking**設定為**false**會導致無法聚合，而且已刪除的資料列必須手動移除。|  
 |**描述**||發行項的描述項目。|  
 |**destination_owner**||訂閱資料庫中物件的擁有者名稱（如果不是**dbo**）。|  
 |**identity_range**||當發行項的**identityrangemanagementoption**設為**auto** ，或**auto_identity_range**設定為**true**時，指定指派新識別值時所要使用之範圍大小的**Bigint** 。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**identityrangemanagementoption**|**手動**|停用自動識別範圍的管理。 利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動識別範圍的處理。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 ||**無**|停用所有識別範圍的管理。|  
-|**logical_record_level_conflict_detection**|**真正**|如果在邏輯記錄的任何位置進行變更，便會偵測到衝突。 要求**logical_record_level_conflict_resolution**必須設定為**true**。|  
+|**logical_record_level_conflict_detection**|**true**|如果在邏輯記錄的任何位置進行變更，便會偵測到衝突。 要求**logical_record_level_conflict_resolution**必須設定為**true**。|  
 ||**false**|預設的衝突偵測會依照**column_tracking**所指定的方式來使用。|  
-|**logical_record_level_conflict_resolution**|**真正**|用整個優先邏輯記錄來覆寫遺失的邏輯記錄。|  
+|**logical_record_level_conflict_resolution**|**true**|用整個優先邏輯記錄來覆寫遺失的邏輯記錄。|  
 ||**false**|優先資料列不限於邏輯記錄。|  
 |**partition_options**|**0**|發行項的篩選是靜態的，或不產生每個資料分割的唯一資料子集，也就是「重疊」的資料分割。|  
 ||**1**|資料分割重疊，在訂閱者端進行的 DML 更新並不會變更資料列所屬的資料分割。|  
 ||**2**|發行項的篩選會產生非重疊的資料分割，但多個訂閱者可以接收相同的資料分割。|  
-||**第**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意：如果您針對**partition_options**指定**3**的值，則該發行項中的每個資料分割都只能有單一訂用帳戶。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
+||**3**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意：如果您針對**partition_options**指定**3**的值，則該發行項中的每個資料分割都只能有單一訂用帳戶。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
 |**pre_creation_command**|**無**|如果訂閱者端已有資料表，就不會採取任何動作。|  
 ||**delete**|根據子集篩選中的 WHERE 子句來發出一項刪除。|  
 ||**下拉式**|在重新建立資料表之前，先卸除資料表。|  
 ||**各**|截斷目的地資料表。|  
 |**processing_order**||**int** ，指出合併式發行集中之發行項的處理順序。|  
 |**pub_identity_range**||當發行項的**identityrangemanagementoption**設為**auto**或**auto_identity_range**設定為**True****時，指定**配置給訂閱者的範圍大小（如果發行項具有伺服器訂閱）。 這個識別範圍保留供重新發行訂閱者配置給自己的訂閱者。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
-|**published_in_tran_pub**|**真正**|發行項也在交易式發行集中發行。|  
+|**published_in_tran_pub**|**true**|發行項也在交易式發行集中發行。|  
 ||**false**|發行項也不在交易式發行集中發行。|  
 |**resolver_info**||這用來指定自訂解析程式所需要的其他資訊。 部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 解析程式需要用於當做解析程式輸入的資料行。 **resolver_info**是**Nvarchar （255）**，預設值是 Null。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
 |**schema_option** （點陣圖）||如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
@@ -122,7 +122,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x40000000**|複寫權限。|  
 ||**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
 ||**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。 請參閱相關的選項**0x800000000**。|  
-||**0x200000000**|將中導[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x200000000**|將中導[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 ||**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
 ||**0x1000000000**|將 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]訂閱者。|  
@@ -131,9 +131,9 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。|  
 ||**0x10000000000**|複寫**geography**和**geometry**類型之資料行上的索引。|  
 ||NULL|系統會自動產生發行項的有效結構描述選項。|  
-|**狀態**|**主動**|發行資料表的初始處理指令碼在執行中。|  
+|**status**|**作用中**|發行資料表的初始處理指令碼在執行中。|  
 ||**unsynced**|在下次執行快照集代理程式時，執行發行資料表的初始處理指令碼。|  
-|**stream_blob_columns**|**真正**|當複寫二進位大型物件資料行時，使用資料流最佳化。 不過，特定合併式複寫功能，如邏輯記錄，仍能夠防止使用資料流最佳化。 啟用 FILESTREAM 時， *stream_blob_columns*設定為 true。 這可讓 FILESTREAM 資料的複寫能以最理想的方式執行，並減少記憶體使用量。 若要強制 FILESTREAM 資料表發行項不使用 blob 資料流程，請將*stream_blob_columns*設定為 false。<br /><br /> ** \* \*重要\*事項**啟用這個記憶體優化可能會在同步處理期間損害合併代理程式的效能。 只有在複寫包含數 MB 資料的資料行時，才應該使用這個選項。|  
+|**stream_blob_columns**|**true**|當複寫二進位大型物件資料行時，使用資料流最佳化。 不過，特定合併式複寫功能，如邏輯記錄，仍能夠防止使用資料流最佳化。 啟用 FILESTREAM 時， *stream_blob_columns*設定為 true。 這可讓 FILESTREAM 資料的複寫能以最理想的方式執行，並減少記憶體使用量。 若要強制 FILESTREAM 資料表發行項不使用 blob 資料流程，請將*stream_blob_columns*設定為 false。<br /><br /> ** \* \*重要\*事項**啟用這個記憶體優化可能會在同步處理期間損害合併代理程式的效能。 只有在複寫包含數 MB 資料的資料行時，才應該使用這個選項。|  
 ||**false**|當複寫二進位大型物件資料行時，不使用最佳化。|  
 |**subscriber_upload_options**|**0**|客訂閱在訂閱者端進行的更新沒有任何限制；變更會上傳到發行者。 變更這個屬性可能需要重新初始化現有的訂閱者。|  
 ||**1**|允許客訂閱在訂閱者端進行變更；但它們不會上傳到發行者。|  
@@ -227,7 +227,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**和**0x2000**|  
 |**indexed view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
 |**proc schema only**|**0x01**和**0x2000**|  
-|**目錄**|所有選項。|  
+|**table**|所有選項。|  
 |**view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
   
 ## <a name="example"></a>範例  

@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133782"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68133782"
     
 ||||  
 |-|-|-|  
-|**資料行名稱**|**型別**|**說明**|  
+|**資料行名稱**|**類型**|**說明**|  
 |lcid|int|語言的 Microsoft Windows 地區設定識別碼 (LCID)。|  
 |NAME|sysname|這是 sys.syslanguages 中的別名值[&#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)對應至**lcid**的值，或是數值 lcid 的字串表示。|  
   

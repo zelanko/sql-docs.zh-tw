@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105305"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,7 +27,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>引數  
- *「*  
+ *開始*  
  (選擇性) 數值運算式，設定每次搜尋的開始位置。 如果省略此值，則會在第一個字元位置開始搜尋。 如果 start 是 null，則函數傳回值未定義。  
   
  *searched_string*  
@@ -36,7 +36,7 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  搜尋目標的字串運算式。  
   
- *何*  
+ *比較*  
  (選擇性) 整數值。 一律會忽略這個引數。 其定義是為了與其他語言中的其他**Instr**函數相容。  
   
 ## <a name="return-value"></a>傳回值  
@@ -44,7 +44,7 @@ InStr([start, ]searched_string, search_string[, compare])
   
  此外， **InStr**函數會根據條件傳回下表所列的值：  
   
-|條件|傳回值|  
+|狀況|傳回值|  
 |---------------|------------------|  
 |String1 為零長度|零 (0)|  
 |String1 為 Null|未定義|  

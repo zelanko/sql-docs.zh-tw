@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139923"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -62,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique= ]'*is_unique*'  
  這是要傳回資訊的索引類型。 *is_unique*是**bit**，預設值是 Null，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |1|傳回唯一索引的相關資訊。|  
 |0|傳回不是唯一索引的相關資訊。|  
@@ -81,12 +81,10 @@ sp_indexes [ @table_server = ] 'table_server'
 |TYPE|**smallint**|索引的類型：<br /><br /> 0 = 資料表的統計資料<br /><br /> 1 = 叢集<br /><br /> 2 = 雜湊<br /><br /> 3 = 其他|  
 |ORDINAL_POSITION|**int**|資料行在索引中的序數位置。 索引中的第一個資料行是 1。 這個資料行一律會傳回值。|  
 |COLUMN_NAME|**sysname**|這是傳回的 TABLE_NAME 的各個資料行之對應資料行名稱。|  
-|ASC_OR_DESC|**varchar**|這是定序所用的順序：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律傳回 A。|  
+|ASC_OR_DESC|**varchar**|這是定序所用的順序：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律傳回 A。|  
 |CARDINALITY|**int**|這是資料表中的資料列數，或索引中的唯一值數目。|  
 |PAGES|**int**|這是用來儲存索引或資料表的頁數。|  
-|FILTER_CONDITION|**Nvarchar （** 4000 **）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
+|FILTER_CONDITION|**Nvarchar （** 4000 **）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
 ## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  

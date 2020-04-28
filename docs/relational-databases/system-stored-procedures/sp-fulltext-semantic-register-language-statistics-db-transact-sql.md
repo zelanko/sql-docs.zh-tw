@@ -18,10 +18,10 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124206"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
@@ -41,7 +41,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db
 GO  
 ```  
   
-##  <a name="Arguments"></a> 引數  
+##  <a name="arguments"></a><a name="Arguments"></a>參量  
  [ @dbname = ]'*database_name*'  
  這是要在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中註冊的語義語言統計資料庫名稱。 資料庫必須已附加。 *database_name*是**sysname**，而且不可以是 Null。  
   

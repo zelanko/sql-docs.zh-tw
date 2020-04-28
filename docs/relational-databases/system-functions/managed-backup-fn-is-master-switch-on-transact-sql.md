@@ -21,10 +21,10 @@ ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 044cdc1b334732a0730cd2c223d5690e4089a0cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140639"
 ---
 # <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup. fn_is_master_switch_on （Transact-sql）
@@ -43,11 +43,11 @@ ms.locfileid: "68140639"
 managed_backup.fn_is_master_switch_on ()  
 ```  
   
-##  <a name="Arguments"></a> 引數  
+##  <a name="arguments"></a><a name="Arguments"></a>參量  
  None  
   
 ## <a name="return-type"></a>傳回類型  
- **一些**  
+ **BIT**  
   
  1 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 作用中，0 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 已暫停。  
   
@@ -57,6 +57,6 @@ managed_backup.fn_is_master_switch_on ()
  需要函數的 SELECT 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server 受管理的備份至 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

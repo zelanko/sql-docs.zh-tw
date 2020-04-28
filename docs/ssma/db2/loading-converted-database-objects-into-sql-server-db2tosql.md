@@ -10,10 +10,10 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7af5566094c9cc4c40ba2aa33f27e79bae1c7445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141030"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>將已轉換的資料庫物件載入 SQL Server （DB2ToSQL）

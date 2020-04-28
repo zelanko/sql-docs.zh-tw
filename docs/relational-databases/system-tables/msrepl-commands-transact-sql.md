@@ -18,10 +18,10 @@ ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127425"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68127425"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
-|**xact_seqno**|**Varbinary （16）**|交易序號。|  
+|**xact_seqno**|**varbinary(16)**|交易序號。|  
 |**type**|**int**|命令類型。|  
 |**article_id**|**int**|發行項的識別碼。|  
 |**originator_id**|**int**|發起者的識別碼。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68127425"
 |**partial_command**|**bit**|指出這是否為部分命令。|  
 |**命令**|**Varbinary （1024）**|命令值。|  
 |**hashkey**|**int**|僅供內部使用。|  
-|**originator_lsn**|**Varbinary （16）**|識別原始發行集中，該命令的 LSN。 用於點對點異動複寫中。|  
+|**originator_lsn**|**varbinary(16)**|識別原始發行集中，該命令的 LSN。 用於點對點異動複寫中。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

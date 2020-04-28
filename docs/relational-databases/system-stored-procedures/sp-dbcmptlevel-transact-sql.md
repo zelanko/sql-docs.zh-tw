@@ -18,10 +18,10 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108213"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
@@ -63,7 +63,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>結果集  
  如果未指定任何參數，或未指定*name*參數， **sp_dbcmptlevel**會傳回錯誤。  
   
- 如果指定了*name* ， ** 而沒有版本[!INCLUDE[ssDE](../../includes/ssde-md.md)] ，會傳回訊息，顯示指定之資料庫的目前相容性層級。  
+ 如果指定了*name* ， *version*而沒有版本[!INCLUDE[ssDE](../../includes/ssde-md.md)] ，會傳回訊息，顯示指定之資料庫的目前相容性層級。  
   
 ## <a name="remarks"></a>備註  
  如需相容性層級的說明，請參閱[ALTER Database 相容性層級 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
@@ -73,8 +73,8 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [&#40;Transact-sql&#41;的保留關鍵字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [保留關鍵字 &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

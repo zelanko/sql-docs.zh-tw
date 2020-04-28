@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106306"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 資料操作 - CALL
@@ -51,6 +51,6 @@ CALL SP_Name
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx&#41;&#40;mdx 資料動作陳述式](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [使用預存程式 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
+ [使用預存程序 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

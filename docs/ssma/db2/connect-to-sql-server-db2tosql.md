@@ -10,16 +10,16 @@ ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141081"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>連接到 SQL Server （DB2ToSQL）
 使用 [**連接到 SQL Server** ] 對話方塊，即可連接到您想[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要遷移到的實例。 若要存取 [**連接到 SQL Server** ] 對話方塊，請**在 [檔案] 功能表上**，按一下 [**連接到 SQL Server]**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **伺服器名稱**  
 輸入或選取要連接的 SQL Server 實例。 根據預設，會顯示您最近連線到的實例。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68141081"
   
 -   如果您要連接到另一部電腦上的已命名實例，請輸入電腦名稱稱、反斜線和實例名稱，例如*MyServer*\\*MyInstance*。  
   
-**伺服器埠**  
+**伺服器通訊埠**  
 如果您的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例未設定為接受預設通訊埠（1433）上的連接，請輸入埠號碼。 否則，請將此值保留空白。  
   
 **Database**  

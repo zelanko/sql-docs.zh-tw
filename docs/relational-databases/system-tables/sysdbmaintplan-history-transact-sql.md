@@ -18,10 +18,10 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130447"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68130447"
 |**plan_name**|**sysname**|資料庫維護計畫名稱。|  
 |**database_name**|**sysname**|資料庫維護計畫之相關資料庫的名稱。|  
 |**server_name**|**sysname**|系統名稱。|  
-|**操作**|**nvarchar(128)**|資料庫維護計畫所執行的活動 (如備份交易記錄等)。|  
+|**activity**|**nvarchar(128)**|資料庫維護計畫所執行的活動 (如備份交易記錄等)。|  
 |**均**|**bit**|**0** = 成功**1** = 失敗|  
 |**end_time**|**datetime**|動作完成的時間。|  
-|**期限**|**int**|完成資料庫維護計畫動作所需要的時間長度。|  
+|**duration**|**int**|完成資料庫維護計畫動作所需要的時間長度。|  
 |**start_time**|**datetime**|動作開始的時間。|  
 |**error_number**|**int**|失敗時所報告的錯誤號碼。|  
-|**消息**|**nvarchar(512)**|**Sqlmaint**所產生的訊息。|  
+|**message**|**nvarchar(512)**|**Sqlmaint**所產生的訊息。|  
   
   

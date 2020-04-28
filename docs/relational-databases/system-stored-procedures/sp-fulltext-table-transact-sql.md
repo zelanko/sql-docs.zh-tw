@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124140"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -93,9 +93,7 @@ sp_fulltext_table
 ## <a name="examples"></a>範例  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. 啟用資料表的全文檢索索引  
- 下列範例會針對 `Document` 資料庫的 `AdventureWorks` 資料表建立全文檢索索引中繼資料。 
-  `Cat_Desc` 是一個全文檢索目錄。 
-  `PK_Document_DocumentID` 是 `Document` 的唯一單一資料行索引。  
+ 下列範例會針對 `Document` 資料庫的 `AdventureWorks` 資料表建立全文檢索索引中繼資料。 `Cat_Desc` 是一個全文檢索目錄。 `PK_Document_DocumentID` 是 `Document` 的唯一單一資料行索引。  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,12 +128,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋預存程式](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

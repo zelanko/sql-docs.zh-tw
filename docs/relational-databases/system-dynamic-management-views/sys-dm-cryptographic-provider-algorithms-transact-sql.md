@@ -19,10 +19,10 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121005"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
@@ -48,7 +48,7 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|演算法的識別碼。|  
-|algorithm_tag|**Nvarchar （60）**|演算法的識別標記。|  
+|algorithm_tag|**nvarchar(60)**|演算法的識別標記。|  
 |key_type|**nvarchar(128)**|顯示金鑰類型。 傳回 ASYMMETRIC KEY 或 SYMMETRIC KEY。|  
 |key_length|**int**|指出金鑰長度 (以位元為單位)。|  
   

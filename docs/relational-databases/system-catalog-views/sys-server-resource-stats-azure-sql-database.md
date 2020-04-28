@@ -20,16 +20,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133066"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats （Azure SQL Database）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-傳回 Azure SQL 受控執行個體的 CPU 使用量、IO 和儲存體資料。 每五分鐘會收集和彙總資料一次。 每隔15秒報告就會有一個資料列。 傳回的資料包括 CPU 使用量、儲存體大小、IO 使用率和受控實例 SKU。 歷程記錄資料大約會保留 14 天。
+傳回 Azure SQL 受控執行個體的 CPU 使用量、IO 和儲存體資料。 於五分鐘間隔內收集及彙總資料。 每隔15秒報告就會有一個資料列。 傳回的資料包括 CPU 使用量、儲存體大小、IO 使用率和受控實例 SKU。 歷程記錄資料大約會保留 14 天。
 
 根據與資料庫相關聯的 Azure SQL 受控實例版本而定，[ **server_resource_stats** ] 視圖會有不同的定義。 請考慮這些差異，以及升級到新伺服器版本時應用程式所需的任何修改。
  
@@ -40,7 +40,7 @@ ms.locfileid: "68133066"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|表示十五秒報告間隔開始的 UTC 時間|  
 |end_time|**datetime**|表示十五秒報告間隔結束的 UTC 時間|
-|resource_type|NVarchar （128）|提供計量的資源類型|
+|resource_type|Nvarchar(128)|提供計量的資源類型|
 |resource_name|nvarchar(128)|資源名稱。|
 |sku|nvarchar(128)|受控執行個體實例的服務層級。 以下是可能的值： <br><ul><li>一般用途</li></ul><ul><li>業務關鍵</li></ul>|
 |hardware_generation|nvarchar(128)|硬體世代識別碼：例如 Gen 4 或 Gen 5|

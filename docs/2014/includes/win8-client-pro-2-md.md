@@ -1,1 +1,1 @@
-Windows 8 專業版
+Windows 8 Pro

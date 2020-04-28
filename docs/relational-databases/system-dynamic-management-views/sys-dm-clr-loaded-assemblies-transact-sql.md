@@ -19,10 +19,10 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138662"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)

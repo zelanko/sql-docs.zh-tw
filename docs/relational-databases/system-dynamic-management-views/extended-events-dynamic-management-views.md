@@ -15,10 +15,10 @@ ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fb0b49bc25b8c5ac73224a41198d50b6e8099ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130856"
 ---
 # <a name="extended-events-dynamic-management-views"></a>擴充的事件動態管理檢視

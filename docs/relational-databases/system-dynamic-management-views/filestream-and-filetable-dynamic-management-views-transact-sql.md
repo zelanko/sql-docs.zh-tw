@@ -14,10 +14,10 @@ ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bbe626428e0b7ffcf8c3fe4153c8b7c4938a4246
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130804"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Filestream 及 FileTable 動態管理檢視 (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68130804"
  顯示 FileTable 資料目前開啟的非交易式檔案控制代碼。  
 
 ## <a name="see-also"></a>另請參閱
-[檔案資料流](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Filestream 和 FileTable 系統預存程序 (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

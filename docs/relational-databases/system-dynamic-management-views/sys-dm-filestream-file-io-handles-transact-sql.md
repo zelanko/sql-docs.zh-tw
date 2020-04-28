@@ -19,10 +19,10 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103303"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68103303"
 |**handle_id**|**int**|顯示驅動程式指派給此控制代碼的唯一識別碼。 不可為 Null。|  
 |**creation_client_thread_id**|**varbinary(8)**|從用來建立此控制代碼的 REQ_PRE_CREATE I/O 要求顯示欄位。 可為 Null。|  
 |**creation_client_process_id**|**varbinary(8)**|從用來建立此控制代碼的 REQ_PRE_CREATE I/O 要求顯示欄位。 可為 Null。|  
-|**filestream_transaction_id**|**Varbinary （128）**|顯示與給定控制代碼相關聯之交易的識別碼。 這是**get_filestream_transaction_coNtext**函數所傳回的值。 使用此欄位來聯結至 [ **sys.databases] dm_filestream_file_io_requests**視圖。 可為 Null。|  
-|**access_type**|**Nvarchar （60）**|不可為 Null。|  
+|**filestream_transaction_id**|**varbinary(128)**|顯示與給定控制代碼相關聯之交易的識別碼。 這是**get_filestream_transaction_coNtext**函數所傳回的值。 使用此欄位來聯結至 [ **sys.databases] dm_filestream_file_io_requests**視圖。 可為 Null。|  
+|**access_type**|**nvarchar(60)**|不可為 Null。|  
 |**logical_path**|**nvarchar(256)**|顯示此控制代碼開啟之檔案的邏輯路徑名稱。 這是所傳回的相同路徑名稱 **。** **Varbinary**（**Max**） filestream 的 PathName 方法。 可為 Null。|  
 |**physical_path**|**nvarchar(256)**|顯示檔案的實際 NTFS 路徑名稱。 這是所傳回的相同路徑名稱 **。** **Varbinary**（**Max**） filestream 的 .physicalpathname 方法。 它是透過追蹤旗標 5556 啟用。 可為 Null。|  
   

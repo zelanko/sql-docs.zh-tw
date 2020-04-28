@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124343"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -58,7 +58,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 |值|描述|  
 |-----------|-----------------|  
-|**載入**|將*qualified_table_name*的*column_name*加入至資料表的非使用中全文檢索索引。 這個動作會啟用全文檢索索引的資料行。|  
+|**add**|將*qualified_table_name*的*column_name*加入至資料表的非使用中全文檢索索引。 這個動作會啟用全文檢索索引的資料行。|  
 |**下拉式**|從資料表的非使用中全文檢索索引中移除*qualified_table_name*的*column_name* 。|  
   
 `[ @language = ] 'language_term'`這是儲存在資料行中之資料的語言。 如需所包含的語言清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
@@ -118,7 +118,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_columns_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋預存程式](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

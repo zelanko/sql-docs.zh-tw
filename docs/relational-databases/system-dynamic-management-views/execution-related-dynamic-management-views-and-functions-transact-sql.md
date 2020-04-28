@@ -15,10 +15,10 @@ ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130827"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>執行相關的動態管理檢視和函數 (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "68130827"
 >  系統會識別**dm_exec_query_transformation_stats**動態管理檢視，僅供參考之用。 不支援。 我們無法保證未來的相容性。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

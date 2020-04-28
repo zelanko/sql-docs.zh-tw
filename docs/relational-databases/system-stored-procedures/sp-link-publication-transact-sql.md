@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139902"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
@@ -63,7 +63,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意：此帳戶也必須存在於具有足夠許可權的發行者端。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
 |**2**|使用以**sp_link_publication**建立的現有使用者定義連結伺服器登入。|  
   
-`[ @login = ] 'login'`這是登入。 *login*是**sysname**，預設值是 Null。 當*security_mode*為**0**時，必須指定這個參數。  
+`[ @login = ] 'login'`這是登入。 *login* 是預設值為 NULL 的 **sysname**。 當*security_mode*為**0**時，必須指定這個參數。  
   
 `[ @password = ] 'password'`這是密碼。 *password*是**sysname**，預設值是 Null。 當*security_mode*為**0**時，必須指定這個參數。  
   

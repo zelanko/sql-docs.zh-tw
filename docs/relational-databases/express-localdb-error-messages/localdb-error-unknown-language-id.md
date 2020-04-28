@@ -10,10 +10,10 @@ ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93d770fde71fe51b06bfe8fc95b87d023765eb5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127034"
 ---
 # <a name="localdb_error_unknown_language_id"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID

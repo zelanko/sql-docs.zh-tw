@@ -19,16 +19,16 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117909"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
 
 將備份裝置加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
@@ -52,8 +52,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 |值|描述|  
 |-----------|-----------------|  
 |**硬碟**|做為備份裝置的硬碟檔。|  
-|**錄影帶**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**錄影帶**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
   
 `[ @logicalname = ] 'logical_name'`這是 BACKUP 和 RESTORE 語句中所使用之備份裝置的邏輯名稱。 *logical_name*是**sysname**，沒有預設值，而且不能是 Null。  
   
@@ -81,8 +80,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  擁有權和權限問題可能會干擾磁碟或檔案備份裝置的使用。 請確定用來啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 Windows 帳戶已取得適當的檔案權限。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援利用 Windows 支援的磁帶裝置來進行磁帶備份。 如需有關 Windows 所支援之磁帶裝置的詳細資訊，請參閱 Windows 的硬體相容性清單。 若要檢視電腦中所能使用的磁帶裝置，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援利用 Windows 支援的磁帶裝置來進行磁帶備份。 如需有關 Windows 所支援之磁帶裝置的詳細資訊，請參閱 Windows 的硬體相容性清單。 若要檢視電腦中所能使用的磁帶裝置，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  請只用磁帶機製造商所建議的特定磁帶機專用磁帶。 如果您使用數位錄音機 (DAT)，請使用電腦等級的 DAT 磁帶 (數位資料儲存媒體 (DDS))。  
   
@@ -143,11 +141,11 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [定義磁帶機的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [定義磁片檔案的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [定義磁帶磁片磁碟機的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [backup_devices &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

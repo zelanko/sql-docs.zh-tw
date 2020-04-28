@@ -18,10 +18,10 @@ ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0ba22c75e36cc927fbd923af25aad48b3d02801
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119245"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)

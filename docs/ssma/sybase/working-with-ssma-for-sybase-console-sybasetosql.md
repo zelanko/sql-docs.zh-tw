@@ -10,10 +10,10 @@ ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68112867"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68112867"
   
 |||  
 |-|-|  
-|**一些**|**說明**|  
+|**主題**|**說明**|  
 |[SSMA for Sybase 主控台的消費者入門 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|說明執行主控台應用程式的步驟。|  
 |[SSMA 主控台中的命令列選項 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|說明用來操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令檔 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|說明如何建立腳本檔案。|  

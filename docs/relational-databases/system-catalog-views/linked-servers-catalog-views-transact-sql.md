@@ -16,10 +16,10 @@ ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03d7058e0e378e3848fe51a2df56886cbb51bcd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127875"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>連結伺服器目錄檢視 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68127875"
 |[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

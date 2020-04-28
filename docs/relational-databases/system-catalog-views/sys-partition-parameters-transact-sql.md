@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32fe257f14c1e085a43b4150ee933888a83d5d14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125335"
 ---
 # <a name="syspartition_parameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68125335"
 |**system_type_id**|**tinyint**|參數系統類型的識別碼。 對應至**sys.databases**目錄檢視的**system_type_id**資料行。|  
 |**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是參數的有效位數；否則，便是 0。|  
-|**尺度**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
+|**scale**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是參數的定序名稱；否則，便是 NULL。|  
 |**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 對於系統資料類型， **user_type_id** = **system_type_id**。|  
   
@@ -48,8 +48,8 @@ ms.locfileid: "68125335"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的資料分割函數目錄檢視](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [partition_functions &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [partition_range_values &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)  
+ [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)  
   
   

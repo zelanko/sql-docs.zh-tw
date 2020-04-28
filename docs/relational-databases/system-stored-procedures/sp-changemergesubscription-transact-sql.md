@@ -16,10 +16,10 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124874"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
@@ -68,7 +68,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_password**||提供之訂閱者登入的增強式密碼。|  
 |**sync_type**|**自動**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
 ||**無**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
-|**use_interactive_resolver**|**真正**|可讓您以互動方式來解決接受互動式解決之所有發行項的衝突。|  
+|**use_interactive_resolver**|**true**|可讓您以互動方式來解決接受互動式解決之所有發行項的衝突。|  
 ||**false**|衝突是利用預設解析程式或自訂解析程式加以自動解析。|  
 |NULL (預設值)|NULL (預設值)||  
   

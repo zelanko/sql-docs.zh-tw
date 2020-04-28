@@ -18,10 +18,10 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122540"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
@@ -59,7 +59,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**file_in_group**|**sysname**|檔案群組中該檔案的邏輯名稱。|  
 |**fileid**|**smallint**|數值檔案識別碼。|  
 |**名稱**|**Nchar （260）**|檔案的實體名稱 (包含目錄路徑在內)。|  
-|**容量**|**Nvarchar （15）**|檔案大小 (以 KB 為單位)。|  
+|**size**|**Nvarchar （15）**|檔案大小 (以 KB 為單位)。|  
 |**maxsize**|**Nvarchar （15）**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**growth**|**Nvarchar （15）**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
   
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. 傳回檔案群組中所有的檔案  
- 下列範例會傳回 `PRIMARY` 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 檔案群組中之所有檔案的相關資訊。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫的 `PRIMARY` 檔案群組中之所有檔案的相關資訊。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -94,7 +94,7 @@ GO
  [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

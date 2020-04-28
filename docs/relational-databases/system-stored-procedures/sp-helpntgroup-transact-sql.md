@@ -18,10 +18,10 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc4a42307ccb11923460bb9c01c5cf7bdd8f8df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133681"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)

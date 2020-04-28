@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108936"
 ---
 # <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
@@ -38,13 +38,13 @@ ms.locfileid: "68108936"
 |**principal_id**|**int**|擁有金鑰的資料庫主體識別碼。|  
 |**symmetric_key_id**|**int**|金鑰的識別碼。 在資料庫中，這是唯一的。|  
 |**key_length**|**int**|金鑰的長度 (以位元為單位)。|  
-|**key_algorithm**|**char （2）**|金鑰使用的演算法：<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM 金鑰|  
-|**algorithm_desc**|**Nvarchar （60）**|金鑰使用之演算法的描述：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (僅限 Extensible Key Management 演算法)|  
+|**key_algorithm**|**char(2)**|金鑰使用的演算法：<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM 金鑰|  
+|**algorithm_desc**|**nvarchar(60)**|金鑰使用之演算法的描述：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (僅限 Extensible Key Management 演算法)|  
 |**create_date**|**datetime**|建立金鑰的日期。|  
 |**modify_date**|**datetime**|修改金鑰的日期。|  
 |**key_guid**|**uniqueidentifier**|與金鑰相關聯的全域唯一識別碼 (GUID)。 它會為保存的金鑰自動產生。 暫時金鑰的 GUID 衍生自使用者提供的複雜密碼。|  
 |**key_thumbprint**|**sql_variant**|金鑰的 SHA-1 雜湊。 此雜湊是全域唯一的。 如果是非 Extensible Key Management 金鑰，這個值將會是 NULL。|  
-|**provider_type**|**Nvarchar （120）**|密碼編譯提供者的類型：<br /><br /> CRYPTOGRAPHIC PROVIDER = Extensible Key Management 金鑰<br /><br /> NULL = 非 Extensible Key Management 金鑰|  
+|**provider_type**|**nvarchar(120)**|密碼編譯提供者的類型：<br /><br /> CRYPTOGRAPHIC PROVIDER = Extensible Key Management 金鑰<br /><br /> NULL = 非 Extensible Key Management 金鑰|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|密碼編譯提供者的 GUID。 如果是非 Extensible Key Management 金鑰，這個值將會是 NULL。|  
 |**cryptographic_provider_algid**|**sql_variant**|密碼編譯提供者的演算法識別碼。 如果是非 Extensible Key Management 金鑰，這個值將會是 NULL。|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68108936"
  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
   
  **釐清有關 DES 演算法的資訊：**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68108936"
 -   以 ALGORITHM = TRIPLE_DES 建立的對稱金鑰使用具有 128 位元金鑰的 TRIPLE DES。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   

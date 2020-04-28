@@ -19,10 +19,10 @@ ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122916"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -39,8 +39,8 @@ ms.locfileid: "68122916"
 |**name**|**sysname**|檔案群組的名稱。|  
 |**filegroup_id**|**int**|檔案群組的識別碼，它在資料庫中是唯一的。 對應至**sys.databases**中的**data_space_id** 。|  
 |**filegroup_guid**|**uniqueidentifier**|檔案群組的全域唯一識別碼。 可以是 NULL。|  
-|**type**|**char （2）**|這是內容類型，它有下列幾種：<br /><br /> FG = "Rows" 檔案群組<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔案群組|  
-|**type_desc**|**Nvarchar （60）**|這是函數類型的描述，它有下列幾種：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
+|**type**|**char(2)**|這是內容類型，它有下列幾種：<br /><br /> FG = "Rows" 檔案群組<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔案群組|  
+|**type_desc**|**nvarchar(60)**|這是函數類型的描述，它有下列幾種：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
 |**is_default**|**bit**|在 CREATE TABLE 或 CREATE INDEX 中未指定檔案群組時，所使用的預設檔案群組。|  
 |**is_readonly**|**bit**|1 = 檔案群組是唯讀的。|  
 |**log_filegroup_guid**|**uniqueidentifier**|可以是 NULL。|  
@@ -56,10 +56,10 @@ ms.locfileid: "68122916"
   
 ## <a name="see-also"></a>另請參閱  
  [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124999"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68124999"
 |**create_date**|**datetime**|建立稽核的 UTC 日期。|  
 |**modify_date**|**datetime**|上次修改稽核的 UTC 日期。|  
 |**principal_id**|**int**|對伺服器註冊之稽核擁有者的識別碼。|  
-|**type**|**char （2）**|稽核類型：<br /><br /> SL-NT 安全性事件記錄檔<br /><br /> AL-NT 應用程式事件記錄檔<br /><br /> FL-檔案系統上的檔案|  
-|**type_desc**|**Nvarchar （60）**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
+|**type**|**char(2)**|稽核類型：<br /><br /> SL-NT 安全性事件記錄檔<br /><br /> AL-NT 應用程式事件記錄檔<br /><br /> FL-檔案系統上的檔案|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
 |**on_failure**|**tinyint**|寫入動作項目失敗：<br /><br /> 0-繼續<br /><br /> 1-關閉伺服器實例<br /><br /> 2-失敗作業|  
-|**on_failure_desc**|**Nvarchar （60）**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
+|**on_failure_desc**|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已停用<br /><br /> 1 - 已啟用|  
 |**queue_delay**|**int**|寫入磁碟前等候的最大時間值 (以毫秒計)。 如果為 0，則表示稽核將會保證寫入，然後事件才可以繼續。|  
 |**推斷**|**Nvarchar （3000）**|套用至事件的述詞運算式。|  
@@ -59,7 +59,7 @@ ms.locfileid: "68124999"
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT 規格 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
@@ -71,7 +71,7 @@ ms.locfileid: "68124999"
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [dm_audit_class_type_map &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [建立伺服器稽核與伺服器稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

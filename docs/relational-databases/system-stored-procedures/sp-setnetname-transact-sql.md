@@ -18,10 +18,10 @@ ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104403"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引數  
- ** ** @server = '** server **'**  
- 這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 在**sys.databases**中，只有一個資料列必須已經存在，才能使用此*伺服器*。 *伺服器*是**sysname**，沒有預設值。  
+ *server* ** @server = '** server **'**  
+ 這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 在**sys.databases**中，只有一個資料列必須已經存在，才能使用此*伺服器*。 *server* 是 **sysname**，沒有預設值。  
   
- ** ** @netname = '** network_name **'**  
+ *network_name* ** @netname = '** network_name **'**  
  這是遠端預存程序呼叫的目標電腦網路名稱。 *network_name*是**sysname**，沒有預設值。  
   
  這個名稱必須符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 電腦名稱，且這個名稱可以包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼不允許使用的字元。  
@@ -89,7 +89,7 @@ EXEC Win_1.master.dbo.sp_who;
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

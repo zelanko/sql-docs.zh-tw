@@ -16,10 +16,10 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137645"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -74,11 +74,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_pull|**int**|判斷是否可以針對給定發行集建立提取訂閱。 **0**表示不允許提取訂閱。|  
 |allow_anonymous|**int**|判斷是否可以針對給定發行集建立匿名訂閱。 **0**表示不允許匿名訂閱。|  
 |centralized_conflicts|**int**|判斷是否將衝突記錄儲存在給定的發行者上：<br /><br /> **0** = 衝突記錄會同時儲存在發行者端和造成衝突的訂閱者端。<br /><br /> **1** = 所有衝突記錄都會儲存在發行者端。|  
-|優先順序|**float （8）**|回送訂閱的優先權。|  
+|priority|**float （8）**|回送訂閱的優先權。|  
 |snapshot_ready|**tinyint**|指示這個發行集的快照集是否已備妥：<br /><br /> **0** = 快照集已備妥可供使用。<br /><br /> **1** = 快照集尚未備妥可供使用。|  
 |publication_type|**int**|發行集的類型：<br /><br /> **0** = 快照集。<br /><br /> **1** = 交易式。<br /><br /> **2** = Merge。|  
 |pubid|**uniqueidentifier**|這個發行集的唯一識別碼。|  
-|snapshot_jobid|**binary （16）**|快照集代理程式的作業識別碼。 若要在[sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)系統資料表中取得快照集作業的專案，您必須將此十六進位值轉換為**uniqueidentifier**。|  
+|snapshot_jobid|**binary(16)**|快照集代理程式的作業識別碼。 若要在[sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)系統資料表中取得快照集作業的專案，您必須將此十六進位值轉換為**uniqueidentifier**。|  
 |enabled_for_internet|**int**|判斷是否啟用發行集的網際網路功能。 如果是**1**，則發行集的同步處理檔案會放`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`在目錄中。 使用者必須建立檔案傳輸通訊協定 (FTP) 目錄。 如果為**0**，則表示發行集未啟用網際網路存取。|  
 |dynamic_filter|**int**|指示是否要使用參數化資料列篩選器。 **0**表示不使用參數化資料列篩選器。|  
 |has_subscription|**bit**|指示發行集是否有任何訂閱。 **0**表示目前沒有此發行集的訂閱。|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|指定是否已啟用複製訂閱這個發行集之訂閱資料庫的能力。 值為**0**表示不允許複製。|  
 |allow_synctoalternate|**int**|指定是否允許替代的同步處理夥伴與這個發行者同步。 值為**0**表示不允許同步處理夥伴。|  
 |validate_subscriber_info|**Nvarchar （500）**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。 它可以協助您確認每項合併的資訊分割都一致。|  
-|backward_comp_level|**int**|資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> ****  =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> ****  =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|指定發行集資訊是否發行到 Active Directory。 值為**0**表示 Active Directory 無法使用發行集資訊。<br /><br /> 這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 Active Directory 中。|  
 |max_concurrent_merge|**int**|並行合併處理序的數目。 如果為**0**，則表示在任何指定時間執行的並行合併進程數目沒有限制。|  
 |max_concurrent_dynamic_snapshots|**int**|可以針對合併式發行集來執行的最大並行已篩選資料快照集工作階段數目。 如果是**0**，在任何指定時間，可以同時針對發行集執行的並行已篩選資料快照集會話數目上限不受限制。|  
@@ -108,7 +108,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_web_synchronization|**bit**|判斷是否啟用發行集的 Web 同步處理。 值為**1**表示已啟用 Web 同步處理。|  
 |web_synchronization_url|**Nvarchar （500）**|Web 同步處理所用的網際網路 URL。|  
 |allow_partition_realignment|**bit**|判斷當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。 值為**1**表示刪除會傳送至訂閱者。  如需詳細資訊，請參閱[sp_addmergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。|  
-|retention_period_unit|**tinyint**|定義保留時所使用的單位。 此屬性可為下列其中一個值：<br /><br /> **0** = 日<br /><br /> **1** = 週<br /><br /> **2** = 月<br /><br /> **3** = 年|  
+|retention_period_unit|**tinyint**|定義保留時所使用的單位。 這個值可以是下列其中一個值：<br /><br /> **0** = 日<br /><br /> **1** = 週<br /><br /> **2** = 月<br /><br /> **3** = 年|  
 |has_downloadonly_articles|**bit**|指出是否有任何屬於發行集的發行項是只限下載的發行項。 值為**1**表示有僅限下載的發行項。|  
 |decentralized_conflicts|**int**|指出是否將衝突記錄儲存在造成衝突的訂閱者端。 值為**0**表示衝突記錄不會儲存在訂閱者端。 1 的值表示衝突記錄會儲存在訂閱者端。|  
 |generation_leveling_threshold|**int**|指定某個層代中包含的變更數目。 層代是指傳遞給發行者或訂閱者的變更集合|  

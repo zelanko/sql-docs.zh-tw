@@ -18,10 +18,10 @@ ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45065f7cde525d65997df2c97c972d684cadd90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139816"
 ---
 # <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-SQL)
@@ -37,13 +37,11 @@ ms.locfileid: "68139816"
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
-|**type**|**tinyint**|訂閱者類型：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。<br /><br /> **1** = ODBC 資料來源。|  
-|**登入**|**sysname**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 如果利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證模式來加入訂閱者，便以加密格式來儲存。|  
-|**許可權**|**Nvarchar （524）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。 如果利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證模式來加入訂閱者，便以加密格式來儲存。|  
+|**type**|**tinyint**|訂閱者類型：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。<br /><br /> **1** = ODBC 資料來源。|  
+|**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 如果利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證模式來加入訂閱者，便以加密格式來儲存。|  
+|**password**|**Nvarchar （524）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。 如果利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證模式來加入訂閱者，便以加密格式來儲存。|  
 |**描述**|**nvarchar(255)**|訂閱者的描述。|  
-|**security_mode**|**int**|實作的安全性模式：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。<br /><br /> ****  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
+|**security_mode**|**int**|實作的安全性模式：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

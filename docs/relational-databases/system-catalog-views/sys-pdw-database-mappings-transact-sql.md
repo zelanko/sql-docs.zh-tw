@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 46474439474f8a38ba016b16e323b0cb92afe39e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139937"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys.databases pdw_database_mappings （Transact-sql）
@@ -29,7 +29,7 @@ ms.locfileid: "68139937"
 |physical_name|**Nvarchar （36）**|計算節點上資料庫的機構名稱。<br /><br /> **physical_name**和**database_id**形成此視圖的索引鍵。||  
 |database_id|**int**|資料庫的物件識別碼。 請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name**和**database_id**形成此視圖的索引鍵。||  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會將 pdw_database_mappings sys.databases 聯結至其他系統資料表，以顯示資料庫的對應方式。  
   
 ```  
@@ -43,7 +43,7 @@ ORDER BY DB.database_id, Phys.pdw_node_id;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [pdw_index_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
  [pdw_table_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
  [pdw_nodes_pdw_physical_databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  

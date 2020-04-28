@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108567"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  僅適用于 UPDATE、DELETE、REFRESH 或 LOCK *optype*值。  
   
- *目錄*  
+ *table*  
  當資料指標定義牽涉到聯結或不明確的資料行名稱由*value*參數傳回時，用來識別*optype*適用之資料表的資料表名稱。 如果未指定特定的資料表，預設值為 FROM 子句內的第一個資料表。 *table*是需要字串輸入值的選擇性參數。 此字串可以指定為任何字元或 UNICODE 資料類型。 *資料表*可以是多部分資料表名稱。  
   
- *value*  
+ *值*  
  用來插入或更新值。 *值*字串參數僅適用于 UPDATE 和 INSERT *optype*值。 此字串可以指定為任何字元或 UNICODE 資料類型。  
   
 > [!NOTE]  

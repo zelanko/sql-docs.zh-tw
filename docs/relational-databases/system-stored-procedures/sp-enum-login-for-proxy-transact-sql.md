@@ -18,10 +18,10 @@ ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124676"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
@@ -58,7 +58,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**proxy_name**|**sysname**|Proxy 的名稱。|  
 |**name**|**sysname**|關聯的安全性主體名稱。|  
-|**旗幟**|**int**|安全性主體的類型。<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入<br /><br /> **1** = 固定系統角色<br /><br /> **2** = **msdb**中的資料庫角色|  
+|**flags**|**int**|安全性主體的類型。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入<br /><br /> **1** = 固定系統角色<br /><br /> **2** = **msdb**中的資料庫角色|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>備註  

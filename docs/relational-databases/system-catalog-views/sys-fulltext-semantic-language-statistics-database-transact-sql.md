@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133785"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68133785"
   
 ||||  
 |-|-|-|  
-|**資料行名稱**|**型別**|**說明**|  
+|**資料行名稱**|**類型**|**說明**|  
 |**database_id**|**int**|資料庫的識別碼，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內是唯一的。|  
 |**register_date**|**datetime**|註冊資料庫用於語意處理的日期。|  
 |**registered_by**|**int**|註冊資料庫用於語意處理的伺服器主體識別碼。|  
-|**版本**|**nvarchar(128)**|語義語言統計資料庫特定的最新版本資訊。|  
+|**version**|**nvarchar(128)**|語義語言統計資料庫特定的最新版本資訊。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)。  

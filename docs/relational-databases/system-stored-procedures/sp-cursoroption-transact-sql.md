@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108450"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -42,7 +42,7 @@ sp_cursoroption cursor, code, value
  *cursor*  
  這是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所產生並由 sp_cursoropen 預存程式所傳回的*控制碼*值。 資料*指標*需要**int**輸入值才能執行。  
   
- *錯誤碼*  
+ *code*  
  用來保證資料指標的各種因數一定會傳回值。 程式*代碼*需要下列其中一個**int**輸入值：  
   
 |值|名稱|描述|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|並行控制選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
 |0x0006|ROWCOUNT|目前結果集中的資料列數目。<br /><br /> 注意：如果正在使用非同步擴展，資料列計數可能會因為 sp_cursoropen 傳回的值而變更。 如果未知的資料列數目，則會傳回值-1。|  
   
- *value*  
+ *值*  
  指定程式*代碼*所傳回的值。 *value*是必要的參數，它會呼叫0x0001、0x0002 或0x0003 程式*代碼*輸入值。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ sp_cursoroption cursor, code, value
 |0x0004 或 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>另請參閱  
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

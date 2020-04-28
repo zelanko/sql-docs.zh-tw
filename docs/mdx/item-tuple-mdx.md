@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105226"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tuple) (MDX)
@@ -41,7 +41,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *String_Expression2*  
  一般是以字串表示之 Tuple 的有效字串運算式。  
   
- *指數*  
+ *索引*  
  有效的數值運算式，依所要傳回的集合中的位置來指定特定的 Tuple。  
   
 ## <a name="remarks"></a>備註  
@@ -78,6 +78,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

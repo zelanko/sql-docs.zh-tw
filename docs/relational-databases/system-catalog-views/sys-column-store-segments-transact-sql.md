@@ -20,10 +20,10 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139996"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
@@ -33,22 +33,22 @@ ms.locfileid: "68139996"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**Bigint**|指出資料分割識別碼。 在資料庫中，這是唯一的。|  
-|**hobt_id**|**Bigint**|具有此資料行存放區索引之資料表的堆積或 B 型樹狀目錄索引 (hobt) 的識別碼。|  
+|**partition_id**|**bigint**|指出資料分割識別碼。 在資料庫中，這是唯一的。|  
+|**hobt_id**|**bigint**|具有此資料行存放區索引之資料表的堆積或 B 型樹狀目錄索引 (hobt) 的識別碼。|  
 |**column_id**|**int**|資料行存放區資料行的識別碼。|  
 |**segment_id**|**int**|資料列群組的識別碼。 為了回溯相容性，即使這是資料列群組識別碼，仍會繼續呼叫資料行名稱 segment_id。 您可以使用\<hobt_id、partition_id、column_id> <segment_id> 來唯一識別區段。|  
-|**版本**|**int**|資料行區段格式的版本。|  
+|**version**|**int**|資料行區段格式的版本。|  
 |**encoding_type**|**int**|用於該區段的編碼類型：<br /><br /> 1 = VALUE_BASED-不含字典的非字串/二進位（與一些內部變數非常類似4）<br /><br /> 2 = VALUE_HASH_BASED-字典中具有通用值的非字串/二進位資料行<br /><br /> 3 = 具有字典中通用值的 STRING_HASH_BASED 字串/二進位資料行<br /><br /> 4 = STORE_BY_VALUE_BASED-不含字典的非字串/二進位<br /><br /> 5 = 不含字典的 STRING_STORE_BY_VALUE_BASED 字串/二進位檔<br /><br /> 所有編碼會盡可能利用位封裝和執行長度編碼。|  
 |**row_count**|**int**|資料列群組中的列數。|  
 |**has_nulls**|**int**|如果資料行區段具有 Null 值，則為 1。|  
-|**base_id**|**Bigint**|如果正在使用編碼類型1，則為基底值識別碼。  如果未使用編碼類型1，base_id 會設定為-1。|  
+|**base_id**|**bigint**|如果正在使用編碼類型1，則為基底值識別碼。  如果未使用編碼類型1，base_id 會設定為-1。|  
 |**magnitude**|**float**|如果正在使用編碼類型1，則為大小。  如果未使用編碼類型1，則會將量值設定為-1。|  
 |**primary_dictionary_id**|**int**|值為0表示全域字典。 值為-1 表示沒有為此資料行建立全域字典。|  
 |**secondary_dictionary_id**|**int**|非零值指向目前區段中這個資料行的本機字典（也就是資料列群組）。 值為-1 表示沒有此區段的本機字典。|  
-|**min_data_id**|**Bigint**|資料行區段中的最小資料識別碼。|  
-|**max_data_id**|**Bigint**|資料行區段中的最大資料識別碼。|  
-|**null_value**|**Bigint**|用來表示 Null 的值。|  
-|**on_disk_size**|**Bigint**|區段大小 (以位元組為單位)。|  
+|**min_data_id**|**bigint**|資料行區段中的最小資料識別碼。|  
+|**max_data_id**|**bigint**|資料行區段中的最大資料識別碼。|  
+|**null_value**|**bigint**|用來表示 Null 的值。|  
+|**on_disk_size**|**bigint**|區段大小 (以位元組為單位)。|  
   
 ## <a name="remarks"></a>備註  
  下列查詢會傳回資料行存放區索引之區段的相關資訊。  
@@ -73,13 +73,13 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)    
- [column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
+ [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   
 

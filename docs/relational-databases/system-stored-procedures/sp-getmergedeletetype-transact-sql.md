@@ -16,10 +16,10 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 478d483da545a6b149a0fb2b03c41f106a73da60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123981"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
@@ -46,7 +46,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 |值|描述|  
 |-----------|-----------------|  
 |**1**|使用者刪除|  
-|**第**|部分刪除|  
+|**5**|部分刪除|  
 |**6**|系統刪除|  
   
 ## <a name="remarks"></a>備註  

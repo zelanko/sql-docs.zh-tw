@@ -20,10 +20,10 @@ ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133007"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68133007"
 |**name**|**sysname**|觸發程序的名稱。|  
 |**object_id**|**int**|物件的識別碼。|  
 |**parent_class**|**tinyint**|父系的類別。 它一律是：<br /><br /> 100 = 伺服器|  
-|**parent_class_desc**|**Nvarchar （60）**|父類別的描述。 它一律是：<br /><br /> SERVER。|  
+|**parent_class_desc**|**nvarchar(60)**|父類別的描述。 它一律是：<br /><br /> SERVER。|  
 |**parent_id**|**int**|SERVER 上的觸發程序，一律為 0。|  
-|**type**|**char （2）**|物件類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
-|**type_desc**|**Nvarchar （60）**|物件類型類別的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**type**|**char(2)**|物件類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
+|**type_desc**|**nvarchar(60)**|物件類型類別的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|建立觸發程序的日期。|  
 |**modify_date**|**datetime**|上次利用 ALTER 陳述式來修改觸發程序的日期。|  
 |**is_ms_shipped**|**bit**|利用內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件來代表使用者所建立的觸發程序。|  

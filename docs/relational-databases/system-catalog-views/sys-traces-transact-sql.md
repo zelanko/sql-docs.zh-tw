@@ -20,10 +20,10 @@ ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126681"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
@@ -34,15 +34,14 @@ ms.locfileid: "68126681"
  如需所支援追蹤事件的完整清單，請參閱[SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|追蹤識別碼。|  
-|**狀態**|**int**|追蹤狀態：<br /><br /> 0 = 已停止<br /><br /> 1 = 正在執行|  
-|**路徑名**|**nvarchar(260)**|追蹤檔的路徑。 當追蹤是資料列集追蹤時，這個值是 Null。|  
-|**max_size**|**Bigint**|最大追蹤檔大小限制 (以 MB 為單位)。 當追蹤是資料列集追蹤時，這個值是 Null。|  
+|**id**|**int**|追蹤識別碼。|  
+|**status**|**int**|追蹤狀態：<br /><br /> 0 = 已停止<br /><br /> 1 = 正在執行|  
+|**path**|**nvarchar(260)**|追蹤檔的路徑。 當追蹤是資料列集追蹤時，這個值是 Null。|  
+|**max_size**|**bigint**|最大追蹤檔大小限制 (以 MB 為單位)。 當追蹤是資料列集追蹤時，這個值是 Null。|  
 |**stop_time**|**datetime**|停止執行追蹤的時間。|  
 |**max_files**|**int**|輪用檔案數量上限數目。 如果未設定最大數目，這個值就是 Null。|  
 |**is_rowset**|**bit**|1 = 資料列集追蹤。|  
@@ -51,11 +50,11 @@ ms.locfileid: "68126681"
 |**is_default**|**bit**|1 = 預設追蹤。|  
 |**buffer_count**|**int**|追蹤所用的記憶體中緩衝區數目。|  
 |**buffer_size**|**int**|每個緩衝區的大小 (KB)。|  
-|**file_position**|**Bigint**|上一個追蹤檔位置。 當追蹤是資料列集追蹤時，這個值是 Null。|  
+|**file_position**|**bigint**|上一個追蹤檔位置。 當追蹤是資料列集追蹤時，這個值是 Null。|  
 |**reader_spid**|**int**|資料列集追蹤讀取器工作階段識別碼。 當追蹤是檔案追蹤時，這個值是 Null。|  
 |**start_time**|**datetime**|追蹤開始時間。|  
 |**last_event_time**|**datetime**|上一事件的引發時間。|  
-|**event_count**|**Bigint**|發生的事件總數。|  
+|**event_count**|**bigint**|發生的事件總數。|  
 |**dropped_event_count**|**int**|卸除的事件總數。|  
   
 ## <a name="permissions"></a>權限  

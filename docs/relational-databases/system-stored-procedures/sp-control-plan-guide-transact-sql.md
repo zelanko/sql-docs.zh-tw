@@ -18,10 +18,10 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108766"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
@@ -76,7 +76,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  停用已停用的計畫指南，或啟用已啟用的計畫指南，都沒有作用，執行時也不會發生錯誤。  
   
- 並非所有版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都可使用計劃指南。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不過，您可以在**** 任何版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，使用 drop 或 drop ALL 選項來執行 sp_control_plan_guide。  
+ 並非所有版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都可使用計劃指南。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不過，您可以在**sp_control_plan_guide**任何版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，使用 drop 或 drop ALL 選項來執行 sp_control_plan_guide。  
   
 ## <a name="permissions"></a>權限  
  若要在 object 類型的計劃指南（已建立指定** @type = '** OBJECT **'** ）上執行**sp_control_plan_guide** ，需要計劃指南所參考之物件的 ALTER 許可權。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
@@ -135,9 +135,9 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [plan_guides &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [計畫指南](../../relational-databases/performance/plan-guides.md)  
+ [計劃指南](../../relational-databases/performance/plan-guides.md)  
   
   

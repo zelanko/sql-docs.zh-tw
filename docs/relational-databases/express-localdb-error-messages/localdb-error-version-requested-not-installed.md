@@ -10,10 +10,10 @@ ms.assetid: 12adc059-ad8e-4bc9-9693-79cc3e7eaff0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a85e9253eab47e445943e2d0a49972bd86f4b1b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127011"
 ---
 # <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED

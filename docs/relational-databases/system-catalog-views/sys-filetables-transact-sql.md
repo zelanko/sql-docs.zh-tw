@@ -20,10 +20,10 @@ ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133996"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68133996"
 |-----------------|---------------|-----------------|  
 |**object_id**||物件識別碼。 在資料庫中，這是唯一的。<br /><br /> 如需詳細資訊，請[&#40;transact-sql&#41;的 sys.databases ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_enabled**|**bit**|1 = FileTable 處於「已啟用」狀態。|  
-|**directory_name**|**Varchar （255）**|FileTable 的根目錄名稱。|  
+|**directory_name**|**varchar(255)**|FileTable 的根目錄名稱。|  
 |**filename_collation_id**||這是針對 FileTable 定義的定序識別碼。|  
 |**filename_collation_name**||這是針對 FileTable 定義的定序名稱。|  
   

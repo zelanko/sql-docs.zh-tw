@@ -20,10 +20,10 @@ ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e3eaa1bdfa45e0c3e0b0412b8852e134c43c3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124986"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68124986"
 |**name**|**sysname**|伺服器事件通知名稱。 這個名稱是跨越所有伺服器層級事件通知而為唯一的。|  
 |**object_id**|**int**|物件識別碼。 在**master**資料庫中是唯一的。|  
 |**parent_class**|**tinyint**|父系的類別。 它一律是 100 = 伺服器。|  
-|**parent_class_desc**|**Nvarchar （60）**|父類別的描述。 它一律是 SERVER。|  
+|**parent_class_desc**|**nvarchar(60)**|父類別的描述。 它一律是 SERVER。|  
 |**parent_id**|**int**|它一律是 0。|  
 |**create_date**|**datetime**|建立日期。|  
 |**modify_date**|**datetime**|上次利用 ALTER 陳述式來修改物件的日期。|  

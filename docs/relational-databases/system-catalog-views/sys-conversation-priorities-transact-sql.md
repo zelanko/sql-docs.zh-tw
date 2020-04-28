@@ -22,10 +22,10 @@ ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109474"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68109474"
 |service_contract_id|**int**|為此交談優先權指定之合約的識別碼。 這可以在 sys.service_contracts 中的 service_contract_id 資料行上繫結。 NULLABLE。|  
 |local_service_id|**int**|針對此交談優先權指定為本機服務之服務的識別碼。 此資料行可以在 sys.services 中的 service_contract_id 資料行上繫結。 NULLABLE。|  
 |remote_service_name|**nvarchar(256)**|針對此交談優先權指定為遠端服務之服務的名稱。 NULLABLE。|  
-|優先順序|**tinyint**|此交談優先權中所指定的優先權等級。 不是 NULLABLE。|  
+|priority|**tinyint**|此交談優先權中所指定的優先權等級。 不是 NULLABLE。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -65,9 +65,9 @@ ORDER BY priority_name, contract_name,
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys. services &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
  [service_contracts &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  
   

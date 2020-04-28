@@ -19,10 +19,10 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124915"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
@@ -34,8 +34,8 @@ ms.locfileid: "68124915"
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|集合類型的 GUID。 不可為 Null。|  
 |**name**|**sysname**|集合類型的名稱。 不可為 Null。|  
-|**parameter_schema**|**stl**|XML 結構描述，其中描述指定之收集器類型的組態內容。 這個 XML 結構描述是用來驗證與特定收集項執行個體相關聯的實際 XML 組態。 可為 Null。|  
-|**parameter_formatter**|**stl**|判斷用來轉換 XML 的範本，以便能夠在收集組屬性頁中使用。 可為 Null。|  
+|**parameter_schema**|**xml**|XML 結構描述，其中描述指定之收集器類型的組態內容。 這個 XML 結構描述是用來驗證與特定收集項執行個體相關聯的實際 XML 組態。 可為 Null。|  
+|**parameter_formatter**|**xml**|判斷用來轉換 XML 的範本，以便能夠在收集組屬性頁中使用。 可為 Null。|  
 |**collection_package_id**|**uniqueidentifer**|收集封裝的 GUID。 不可為 Null。|  
 |**collection_package_path**|**nvarchar(4000)**|提供收集封裝的路徑。 可為 Null。|  
 |**collection_package_name**|**sysname**|收集封裝的名稱。 不可為 Null。|  
@@ -58,7 +58,7 @@ ms.locfileid: "68124915"
 |已更正**upload_package_path**資料行的資料類型，並已更新描述以指出此值可為 null。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的資料收集器視圖](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)  
   

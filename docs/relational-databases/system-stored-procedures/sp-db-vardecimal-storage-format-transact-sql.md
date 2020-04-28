@@ -23,10 +23,10 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108218"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
@@ -51,8 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  這是即將變更儲存格式之資料庫的名稱。 *database_name*是**sysname**，沒有預設值。 如果省略資料庫名稱，就會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有資料庫的 Vardecimal 儲存格式狀態。  
   
  [ @vardecimal_storage_format= ]{' 在 ' | ' 上OFF '}  
- 指定是否啟用 Vardecimal 儲存格式。 
-  @vardecimal_storage_format 可以是 ON 或 OFF。 參數為**Varchar （3）**，沒有預設值。 如果提供了資料庫名稱，但省略 @vardecimal_storage_format，就會傳回指定之資料庫的目前設定。 這個引數對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本沒有任何作用。  
+ 指定是否啟用 Vardecimal 儲存格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 參數為**Varchar （3）**，沒有預設值。 如果提供了資料庫名稱，但省略 @vardecimal_storage_format，就會傳回指定之資料庫的目前設定。 這個引數對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本沒有任何作用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -71,8 +70,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 -   資料庫已啟用鏡像。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本不支援 Vardecimal 儲存格式。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本不支援 Vardecimal 儲存格式。  
   
  若要將 Vardecimal 儲存格式狀態變更為 OFF，資料庫就必須設定為簡單復原模式。 當資料庫設定為簡單復原模式時，就會中斷記錄鏈結。 在您將 Vardecimal 儲存格式狀態設定為 OFF 之後，請執行完整資料庫備份。  
   

@@ -20,10 +20,10 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106539"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  由於系統預設會建立清除和擷取作業，因此只有在作業已經明確卸除而且必須重新建立時，這個預存程序才是必要項目。  
   
- 作業的名稱是**cdc。**_ \_資料庫名稱\>清除或\< _ **cdc。** ** \_ **** _ \_資料庫名稱\>capture，其中<database_name>是目前\<_ 資料庫的名稱。** \_ ** 如果已經存在相同名稱的作業，名稱會附加一個句點（**.**），後面接著一個唯一識別碼，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ 作業的名稱是**cdc。**_ \_資料庫名稱\>清除或\< _ **cdc。** ** \_ ***<database_name>* _ \_資料庫名稱\>capture，其中<database_name>是目前\<_ 資料庫的名稱。** \_ ** 如果已經存在相同名稱的作業，名稱會附加一個句點（**.**），後面接著一個唯一識別碼，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  若要查看清除或 capture 作業的目前設定，請使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要變更作業的設定，請使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   

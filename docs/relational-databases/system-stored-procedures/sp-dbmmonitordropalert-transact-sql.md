@@ -19,10 +19,10 @@ ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4776e043505c787e74c9cecf766325d189c4f702
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108119"
 ---
 # <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
@@ -67,7 +67,7 @@ sp_dbmmonitordropalert database_name
  None  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會發出 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的保留期限設定。  

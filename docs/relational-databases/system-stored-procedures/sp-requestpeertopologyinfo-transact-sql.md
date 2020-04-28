@@ -16,10 +16,10 @@ ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d137706da49f666ce66abea52249796a0094c7e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129656"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
@@ -54,7 +54,7 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
  需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [點對點異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

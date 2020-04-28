@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124831"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68124831"
 
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上的已知遠端和連結伺服器清單中移除伺服器。  
   
- ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>引數  
  *伺服器*  
- 這是要移除的伺服器。 *伺服器*是**sysname**，沒有預設值。 *伺服器*必須存在。  
+ 這是要移除的伺服器。 *server* 是 **sysname**，沒有預設值。 *伺服器*必須存在。  
   
  *droplogins*  
  表示如果指定**droplogins** ，則也必須移除*伺服器*相關的遠端和連結伺服器登入。 **`@droplogins`** 是**char （10）**，預設值是 Null。  
@@ -58,7 +58,7 @@ sp_dropserver [ @server = ] 'server'
  需要伺服器的 ALTER ANY LINKED SERVER 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從 `ACCOUNTS` 本機執行個體移除遠端伺服器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和所有相關聯的遠端登入。  
+ 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體移除遠端伺服器 `ACCOUNTS` 和所有相關聯的遠端登入。  
   
 ```  
 sp_dropserver 'ACCOUNTS', 'droplogins';  

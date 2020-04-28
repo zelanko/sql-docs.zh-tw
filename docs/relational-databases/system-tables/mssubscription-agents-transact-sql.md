@@ -18,10 +18,10 @@ ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139790"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68139790"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|資料列的識別碼。|  
+|**id**|**int**|資料列的識別碼。|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
@@ -43,9 +43,9 @@ ms.locfileid: "68139790"
 |**login_time**|**datetime**|目前在執行或剛執行的散發代理程式連接的日期和時間。|  
 |**allow_subscription_copy**|**bit**|指定是否允許複製訂閱資料庫的能力。|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**attach_version**|**binary （16）**|代表附加訂閱版本的唯一識別碼。|  
-|**last_sync_status**|**int**|目前在執行或剛執行的散發代理程式的最後執行狀態。 狀態可以是：<br /><br /> **1** = 已啟動。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
-|**last_sync_summary**|**sysname**|目前在執行或剛執行的散發代理程式的最後訊息。 狀態可以是：<br /><br /> **開頭.**<br /><br /> **均.**<br /><br /> **進行中]。**<br /><br /> **忙.**<br /><br /> **再.**<br /><br /> **無法.**|  
+|**attach_version**|**binary(16)**|代表附加訂閱版本的唯一識別碼。|  
+|**last_sync_status**|**int**|目前在執行或剛執行的散發代理程式的最後執行狀態。 狀態可能是：<br /><br /> **1** = 已啟動。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
+|**last_sync_summary**|**sysname**|目前在執行或剛執行的散發代理程式的最後訊息。 狀態可能是：<br /><br /> **開頭.**<br /><br /> **均.**<br /><br /> **進行中]。**<br /><br /> **忙.**<br /><br /> **再.**<br /><br /> **無法.**|  
 |**last_sync_time**|**datetime**|更新*last_sync_summary*和*last_sync_status*資料行的日期和時間。 作為 SQL Server Agent 服務作業來執行的提取或匿名散發代理程式不會更新這些資料行。 在這個狀況下，記錄資訊會記錄到作業記錄資料表中。|  
 |**queue_server**|**sysname**|僅供內部使用。|  
   

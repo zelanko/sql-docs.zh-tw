@@ -10,10 +10,10 @@ ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cebad908d9177c7dd432c56f8dfa3c15c4e95f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127016"
 ---
 # <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION

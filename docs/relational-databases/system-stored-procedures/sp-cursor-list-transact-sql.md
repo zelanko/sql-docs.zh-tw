@@ -18,10 +18,10 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108583"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
@@ -47,7 +47,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope= ]*cursor_scope*  
  指定要報告的資料指標層級。 *cursor_scope*為**int**，沒有預設值，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |1|報告所有本機資料指標。|  
 |2|報告所有全域資料指標。|  
@@ -67,7 +67,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，如果資料指標是藉由將資料指標變數設定為數據指標來建立， **cursor_name**會傳回資料指標變數的名稱。  在舊版中，這個輸出資料行會傳回系統產生的名稱。|  
 |cursor_scope|**smallint**|1 = LOCAL <br /><br /> 2 = GLOBAL|  
 |status|**smallint**|與 CURSOR_STATUS 系統函數所報告相同的值：<br /><br /> 1 = 資料指標名稱或變數所參考的資料指標是開啟的。 如果資料指標是不區分、靜態或索引鍵集，它至少會有一個資料列。 如果資料指標是動態的，結果集就會有零或多個資料列。<br /><br /> 0 = 資料指標名稱或變數所參考的資料指標是開啟的，但沒有資料列。 動態資料指標永不傳回這個值。<br /><br /> -1 = 資料指標名稱或變數所參考的資料指標是關閉的。<br /><br /> -2 = 只適用於資料指標變數。 沒有指派給變數的資料指標。 可能是 OUTPUT 參數將資料指標指派給變數，但傳回之前，預存程序便關閉了資料指標。<br /><br /> -3 = 含指定名稱的資料指標或資料指標變數不存在，或資料指標變數還沒有配置資料指標。|  
-|model|**smallint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
+|模型|**smallint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
 |並行|**smallint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**smallint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**smallint**|0 = 已關閉<br /><br /> 1 = 開啟|  
@@ -81,8 +81,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="remarks"></a>備註  
  sp_cursor_list 會產生一份連接所開啟的目前伺服器資料指標清單，且會描述每個資料指標的全域屬性，如資料指標是否可以捲動及更新。 sp_cursor_list 所列出的資料指標包括：  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標。  
   
 -   ODBC 應用程式所開啟的 API 伺服器資料指標，之後會被稱為 SQLSetCursorName，用來指定資料指標名稱。  
   

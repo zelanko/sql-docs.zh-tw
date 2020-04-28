@@ -18,10 +18,10 @@ ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139781"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-SQL)

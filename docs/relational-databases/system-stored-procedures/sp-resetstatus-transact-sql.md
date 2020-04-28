@@ -18,10 +18,10 @@ ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a9f4346116e94957cce16307d70c69a13942b5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129626"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
@@ -64,7 +64,7 @@ EXEC sp_resetstatus 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

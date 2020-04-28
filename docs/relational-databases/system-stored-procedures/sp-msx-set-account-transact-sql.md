@@ -18,10 +18,10 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 22372412f9c3f905b8978741b556724ca880568c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108023"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
@@ -50,8 +50,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  無。  
   
 ## <a name="remarks"></a>備註  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會利用認證來儲存目標伺服器用來登入主要伺服器的使用者名稱和密碼資訊。 這個程序會設定這部目標伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來登入主要伺服器的認證。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會利用認證來儲存目標伺服器用來登入主要伺服器的使用者名稱和密碼資訊。 這個程序會設定這部目標伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來登入主要伺服器的認證。  
   
  指定的認證必須是現有的認證。 如需建立認證的詳細資訊，請參閱[CREATE credential &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)。  
   
@@ -71,7 +70,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [&#40;Transact-sql&#41;建立認證](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_get_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

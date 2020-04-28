@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133030"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68133030"
 ## <a name="permissions"></a>權限  
  登入可以查看自己的伺服器角色成員資格，而且可以查看固定伺服器角色成員的 principal_id。 若要查看所有伺服器角色成員資格，需要**伺服器角色許可權的 VIEW DEFINITION**或**securityadmin**固定伺服器角色中的成員資格。  
   
- 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回角色及其成員的名稱和識別碼。  
@@ -58,7 +58,7 @@ JOIN sys.server_principals AS member
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

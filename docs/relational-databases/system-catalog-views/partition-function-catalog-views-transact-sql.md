@@ -16,10 +16,10 @@ ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 210a636943fca647539a840dbc394f4c91e6f28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127594"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>資料分割函數目錄檢視 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68127594"
 |[sys.partition_parameters](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116726"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68116726"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**< 繼承的資料行>**||從[sys.databases](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)繼承資料行。|  
-|**移植**|int|端點正在接聽的通訊埠編號。 不可為 Null。|  
+|**連接埠**|int|端點正在接聽的通訊埠編號。 不可為 Null。|  
 |**is_dynamic_port**|bit|1 = 通訊埠編號是以動態方式指派。<br /><br /> 不可為 Null。|  
 |**ip_address**|**Nvarchar （45）**|由 LISTENER_IP 子句指定的接聽程式 IP 位址。 可為 Null。|  
   
@@ -59,7 +59,7 @@ LEFT JOIN sys.dm_exec_connections AS dec
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

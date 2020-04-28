@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138332"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 (類型對應) (MySQLToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68138332"
   
 -   使用 [預設專案設定] 對話方塊，即可設定所有專案的設定選項。 若要存取型別對應設定，請在 [工具] 功能表上，選取 [預設專案設定]，從 [**遷移目標版本**] 下拉式下選取需要查看其設定的 [遷移專案類型]/changed，然後按一下左窗格中的 [類型對應]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ##### <a name="source-type"></a>來源類型  
 這是 MySQL 資料類型，必須對應到目標資料庫資料類型。  
@@ -140,8 +140,8 @@ ms.locfileid: "68138332"
 |real|float [53]|  
 |real [*.。255] [\*.。大約|數值 [*] [\*]|  
 |serial|BIGINT|  
-|smallint|smallint|  
-|Smallint [*.。255]|smallint|  
+|SMALLINT|SMALLINT|  
+|Smallint [*.。255]|SMALLINT|  
 |text|nvarchar(max)|  
 |文字 [0 ..1]|Nvarchar [1]|  
 |文字 [2.. 4000]|Nvarchar [*]|  
@@ -149,8 +149,8 @@ ms.locfileid: "68138332"
 |time|time|  
 |timestamp|Datetime|  
 |tinyblob|Varbinary [255]|  
-|tinyint|smallint|  
-|Tinyint [*.。255]|smallint|  
+|TINYINT|SMALLINT|  
+|Tinyint [*.。255]|SMALLINT|  
 |tinytext|Nvarchar [255]|  
 |不帶正負號的 Bigint|BIGINT|  
 |不帶正負號的 Bigint [*.。255]|BIGINT|  
@@ -182,17 +182,17 @@ ms.locfileid: "68138332"
 |不帶正負號的 real [*.。255 [[\*.。大約|數值 [*] [\*]|  
 |不帶正負號的 Smallint|int|  
 |不帶正負號的 Smallint [*.。255]|int|  
-|不帶正負號的 Tinyint|tinyint|  
-|不帶正負號的 Tinyint [*.。255]|tinyint|  
+|不帶正負號的 Tinyint|TINYINT|  
+|不帶正負號的 Tinyint [*.。255]|TINYINT|  
 |Varbinary [0 ..1]|Varbinary [1]|  
 |Varbinary [2. 8000]|Varbinary [*]|  
 |Varbinary [8001 ... *]|varbinary(max)|  
 |Varchar [0 ..1]|Nvarchar [1]|  
 |Varchar [2.. 4000]|Nvarchar [*]|  
 |Varchar [4001.. *]|nvarchar(max)|  
-|年|smallint|  
-|year [2 ... 2]|smallint|  
-|year [4.. 4]|smallint|  
+|year|SMALLINT|  
+|year [2 ... 2]|SMALLINT|  
+|year [4.. 4]|SMALLINT|  
   
 ##### <a name="add"></a>加  
 按一下即可將資料類型加入至 [對應] 清單。  

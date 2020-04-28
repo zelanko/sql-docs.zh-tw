@@ -16,10 +16,10 @@ ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb556a464077092cacd7107a8c2b4b124c6db707
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124433"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)

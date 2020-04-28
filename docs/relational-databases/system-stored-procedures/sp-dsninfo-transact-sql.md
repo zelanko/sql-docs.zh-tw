@@ -16,10 +16,10 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124712"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`這是要傳回的資訊類型。 如果未指定*info_type* ，或指定了 Null，則會傳回所有資訊類型。 *info_type*是**Varchar （128）**，預設值是 Null，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**DBMS_NAME**|指定資料來源供應商名稱。|  
 |**DBMS_VERSION**|指定資料來源版本。|  
@@ -58,10 +58,10 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`這是資料來源類型。 *dso_type*是**int**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|**1** （預設值）|ODBC 資料來源|  
-|**第**|OLE DB 資料來源|  
+|**1** (預設值)|ODBC 資料來源|  
+|**3**|OLE DB 資料來源|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  

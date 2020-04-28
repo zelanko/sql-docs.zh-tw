@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133845"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68133845"
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|支援之文件類型的副檔名。<br /><br /> 此值可用來識別將在**Varbinary （max）** 或**image**類型之資料行的全文檢索索引期間使用的篩選。|  
 |**class_id**|**uniqueidentifier**|支援副檔名之 IFilter 類別的 GUID。|  
-|**路徑名**|**nvarchar(260)**|通往 IFilter DLL 的路徑。 只有**serveradmin**固定伺服器角色的成員才看得到該路徑。|  
-|**版本**|**sysname**|IFilter DLL 的版本。|  
+|**path**|**nvarchar(260)**|通往 IFilter DLL 的路徑。 只有**serveradmin**固定伺服器角色的成員才看得到該路徑。|  
+|**version**|**sysname**|IFilter DLL 的版本。|  
 |**manufacturer**|**sysname**|IFilter 製造廠的名稱。<br /><br /> 注意：僅支援隨附製造商[!INCLUDE[msCoName](../../includes/msconame-md.md)]的檔。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
 ## <a name="permissions"></a>權限  

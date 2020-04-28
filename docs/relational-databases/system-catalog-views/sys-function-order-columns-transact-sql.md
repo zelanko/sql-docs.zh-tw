@@ -20,10 +20,10 @@ ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122751"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)

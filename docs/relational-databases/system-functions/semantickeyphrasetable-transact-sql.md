@@ -18,10 +18,10 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140565"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
@@ -44,8 +44,8 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="Arguments"></a> 引數  
- **目錄**  
+##  <a name="arguments"></a><a name="Arguments"></a>參量  
+ **table**  
  這是已啟用全文檢索和語意索引之資料表的名稱。  
   
  這個名稱可以是一到四個部分名稱，但不允許遠端伺服器名稱。  
@@ -72,7 +72,7 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|從中擷取及索引目前主要片語之資料行的識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**document_key**|**\***<br /><br /> 此索引鍵與來源資料表中的唯一索引鍵類型相同。|要從中索引目前主要片語之文件或資料列的唯一索引鍵值。|  
 |**keyphrase**|**NVARCHAR**|在 column_id 所指定之資料行中所找到，關聯至 document_key 指定之文件的主要片語。|  
-|**成績**|**即時**|此主要片語與索引資料行的相同文件中所有其他主要片語之間關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
+|**成績**|**real**|此主要片語與索引資料行的相同文件中所有其他主要片語之間關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如需詳細資訊，請參閱[使用語義搜尋在檔中尋找主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  
@@ -91,7 +91,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>範例  
   
-###  <a name="HowToTopPhrases"></a>範例1：在特定檔中尋找前幾個主要片語  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>範例1：在特定檔中尋找前幾個主要片語  
  下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表 Document 資料行 @DocumentId 變數所指定的文件中，擷取前 10 個主要片語。 @DocumentId 變數是指來自全文檢索索引之索引鍵資料行的值。 **SEMANTICKEYPHRASETABLE** 函數會使用索引搜尋有效率地擷取這些結果，而不會使用資料表掃描。 此範例假設已針對全文檢索與語意索引配置資料行。  
   
 ```sql  
@@ -106,7 +106,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>範例2：尋找包含特定關鍵字組的前幾份檔  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>範例2：尋找包含特定關鍵字組的前幾份檔  
  下列範例會從 AdventureWorks 範例資料庫 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。 此範例假設已針對全文檢索與語意索引配置資料行。  
   
 ```sql  

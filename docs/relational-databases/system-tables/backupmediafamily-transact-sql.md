@@ -19,10 +19,10 @@ ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ea3fd7937447ba3ed0f3ad89965301dead772cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122876"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
@@ -49,10 +49,10 @@ ms.locfileid: "68122876"
   
 ## <a name="see-also"></a>另請參閱  
  [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

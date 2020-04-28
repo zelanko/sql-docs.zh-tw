@@ -19,10 +19,10 @@ ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130544"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68130544"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|這個頁面所套用的資料庫識別碼。|  
 |**file_id**|**int**|資料庫內的檔案識別碼。|  
-|**page_id**|**Bigint**|可疑頁面的識別碼。 每個頁面都有一個頁面識別碼，它是一個 32 位元的值，用來識別頁面在資料庫中的位置。 **Page_id**是 8 KB 頁面的資料檔案位移。 每個頁面識別碼在檔案內都是唯一的。|  
+|**page_id**|**bigint**|可疑頁面的識別碼。 每個頁面都有一個頁面識別碼，它是一個 32 位元的值，用來識別頁面在資料庫中的位置。 **Page_id**是 8 KB 頁面的資料檔案位移。 每個頁面識別碼在檔案內都是唯一的。|  
 |**event_type**|**int**|這是錯誤的類型，它有下列幾種：<br /><br /> 1 = 導致可疑頁面 (例如，磁碟錯誤) 的 823 錯誤，或總和檢查碼錯誤或頁面損毀 (例如，頁面識別碼不正確) 以外的 824 錯誤。<br /><br /> 2 = 總和檢查碼錯誤。<br /><br /> 3 = 頁面損毀。<br /><br /> 4 = 已還原 (在頁面標示為不正確之後還原頁面)。<br /><br /> 5 = 已修復 (DBCC 已修復頁面)。<br /><br /> 7 = 已由 DBCC 取消配置。|  
 |**error_count**|**int**|錯誤的發生次數。|  
 |**last_update_date**|**datetime**|上次更新的日期和時間戳記。|  
@@ -45,7 +45,7 @@ ms.locfileid: "68130544"
  任何可以存取 **msdb** 的人員，均能讀取 **suspect_pages** 資料表中的資料。 針對 suspect_pages 資料表擁有 UPDATE 權限的任何人都可以更新其記錄。 **msdb** 上 **db_owner** 固定資料庫角色的成員或 **系統管理員** 固定伺服器角色的成員皆可插入、更新及刪除記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [還原頁面 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
+ [SQL Server&#41;還原頁面 &#40;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [資料庫可疑資料頁面事件類別](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [&#40;Transact-sql&#41;的系統資料表](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

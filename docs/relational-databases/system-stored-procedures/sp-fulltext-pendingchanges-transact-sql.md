@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124220"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
@@ -47,15 +47,15 @@ sp_fulltext_pendingchanges table_id
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**索引鍵**|*|這是來自指定資料表的全文檢索索引鍵值。|  
-|**DocId**|**Bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
+|**關鍵**|*|這是來自指定資料表的全文檢索索引鍵值。|  
+|**DocId**|**bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
 |**狀態**|**int**|0 = 資料列會從全文檢索索引中移除。<br /><br /> 1 = 資料列會被編製成全文檢索索引。<br /><br /> 2 = 資料列是最新的。<br /><br /> -1 = 資料列是處於過渡 (批次，但未認可) 狀態，或是錯誤狀態。|  
 |**DocState**|**tinyint**|這是內部文件識別碼 (DocId) 對應狀態資料行的原始傾印。|  
   
  <sup>* 資料類型 Key，與基底資料表中全文檢索索引鍵資料行的資料類型一樣。</sup>  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="remarks"></a>備註  
  如果沒有任何變更可以處理，就會傳回空的資料列集。  

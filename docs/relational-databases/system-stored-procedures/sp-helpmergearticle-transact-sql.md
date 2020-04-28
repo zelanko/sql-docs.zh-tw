@@ -16,10 +16,10 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122338"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
@@ -40,24 +40,24 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是要取得資訊的發行集名稱。 *發行*集是**sysname**，預設值是**%**，它會傳回目前資料庫中所有發行集所包含之所有合併發行項的相關資訊。  
   
-`[ @article = ] 'article'`這是要傳回信息的發行項名稱。 發行項**** **%** 是 sysname，預設值是，它會傳回給定發行集中所有合併發行項的相關資訊。 **  
+`[ @article = ] 'article'`這是要傳回信息的發行項名稱。 發行項**sysname** **%** 是 sysname，預設值是，它會傳回給定發行集中所有合併發行項的相關資訊。 *article*  
   
 ## <a name="result-set"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|發行項識別碼。|  
+|**id**|**int**|發行項識別碼。|  
 |**name**|**sysname**|發行項的名稱。|  
 |**source_owner**|**sysname**|來源物件擁有者的名稱。|  
 |**source_object**|**sysname**|新增發行項的來源物件名稱。|  
 |**sync_object_owner**|**sysname**|定義已發行的發行項之檢視的擁有者名稱。|  
 |**sync_object**|**sysname**|用來建立資料分割初始資料之自訂物件的名稱。|  
 |**描述**|**nvarchar(255)**|發行項的描述。|  
-|**狀態**|**tinyint**|發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 非使用中<br /><br /> **2** = 使用中<br /><br /> **5** = 資料定義語言（DDL）作業暫止<br /><br /> **6** = 使用新產生之快照集的 DDL 作業<br /><br /> 注意：重新初始化發行項時， **5**和**6**的值會變更為**2**。|  
+|**status**|**tinyint**|發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 非使用中<br /><br /> **2** = 使用中<br /><br /> **5** = 資料定義語言（DDL）作業暫止<br /><br /> **6** = 使用新產生之快照集的 DDL 作業<br /><br /> 注意：重新初始化發行項時， **5**和**6**的值會變更為**2**。|  
 |**creation_script**|**nvarchar(255)**|在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
 |**conflict_table**|**Nvarchar （270）**|儲存插入或更新衝突的資料表名稱。|  
 |**article_resolver**|**nvarchar(255)**|自訂的發行項解析程式。|  
-|**subset_filterclause**|**Nvarchar （1000）**|指定水平篩選的 WHERE 子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|指定水平篩選的 WHERE 子句。|  
 |**pre_creation_command**|**tinyint**|預先建立方法，它可以是下列項目之一：<br /><br /> **0** = 無<br /><br /> **1** = drop<br /><br /> **2** = 刪除<br /><br /> **3** = 截斷|  
 |**schema_option**|**binary （8）**|發行項的結構描述產生選項點陣圖。 如需這個點陣圖選項的詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)或[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
 |**type**|**smallint**|發行項的類型，它可以是下列項目之一：<br /><br /> **10** = 資料表<br /><br /> **32** = 預存程式<br /><br /> **64** = view 或 indexed view<br /><br /> **128** = 使用者定義函數<br /><br /> **160** = 僅限同義字架構|  
@@ -66,8 +66,8 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**vertical_partition**|**bit**|如果發行項是垂直分割，則為，其中**1**表示發行項是垂直分割，而**0**表示不是。|  
 |**destination_owner**|**sysname**|目的地物件的擁有者。 只適用於合併預存程序、檢視和使用者自訂函數 (UDF) 結構描述發行項。|  
 |**identity_support**|**int**|如果已啟用自動識別範圍處理，則為，其中**1**已啟用，而**0**已停用。|  
-|**pub_identity_range**|**Bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
-|**identity_range**|**Bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
+|**pub_identity_range**|**bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
+|**identity_range**|**bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**閾值**|**int**|執行[!INCLUDE[ssEW](../../includes/ssew-md.md)]或舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者所使用的百分比值。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**verify_resolver_signature**|**int**|如果在合併式複寫中使用解析程式之前先驗證數位簽章，則為，其中**0**表示不會驗證簽章，而**1**表示會驗證簽章，以查看它是否來自信任的來源。|  
 |**destination_object**|**sysname**|目的地物件的名稱。 只適用於合併預存程序、檢視和 UDF 結構描述發行項。|  

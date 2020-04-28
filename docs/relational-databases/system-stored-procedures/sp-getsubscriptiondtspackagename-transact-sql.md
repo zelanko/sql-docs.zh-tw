@@ -16,10 +16,10 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8b8f0a91715a2af0cb794965e2de6ad520cabd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123926"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)

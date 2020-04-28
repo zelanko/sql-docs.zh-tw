@@ -18,10 +18,10 @@ ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106374"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "68106374"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
-|**即席**|**tinyint**|識別必要的補償動作。|  
-|**代數**|**Bigint**|必須進行補償動作的產生值。|  
+|**action**|**tinyint**|識別必要的補償動作。|  
+|**代數**|**bigint**|必須進行補償動作的產生值。|  
 |**變更**|**int**|僅供內部使用。|  
   
 ## <a name="see-also"></a>另請參閱  

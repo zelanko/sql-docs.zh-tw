@@ -18,10 +18,10 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106326"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)

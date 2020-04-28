@@ -18,10 +18,10 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124075"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
@@ -113,7 +113,7 @@ SELECT @my_parameters;
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的快速修復工程、Service Pack 和版本升級之間，sp_get_query_template 輸出中的參數順序和命名可能會不同。 升級也可能造成針對相同查詢參數化不同組的常數常值，在兩個輸出參數的結果中，可能會套用不同的間距。  
   
 ## <a name="see-also"></a>另請參閱  
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [使用計畫指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

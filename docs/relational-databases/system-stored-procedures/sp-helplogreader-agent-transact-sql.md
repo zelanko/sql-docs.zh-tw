@@ -16,10 +16,10 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122441"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
@@ -43,9 +43,9 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|代理程式的識別碼。|  
+|**id**|**int**|代理程式的識別碼。|  
 |**name**|**Nvarchar （100）**|代理程式的名稱。|  
-|**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證。|  
+|**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證。|  
 |**publisher_login**|**sysname**|當連接到發行者時所用的登入。|  
 |**publisher_password**|**Nvarchar （524）**|** \* \* \* \* \* \* \* \* \* **基於安全性理由，一律會傳回的值。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
@@ -62,7 +62,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
  只有在發行者端的**系統管理員（sysadmin** ）固定伺服器角色成員，或是發行集資料庫之**db_owner**固定資料庫角色的成員，才能夠執行**sp_helplogreader_agent**。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [查看及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_addlogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_changelogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
   

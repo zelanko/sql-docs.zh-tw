@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68136543"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>變更追蹤目錄 Views-sys. change_tracking_databases
@@ -38,7 +38,7 @@ ms.locfileid: "68136543"
 |database_id|**int**|資料庫的識別碼。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內，這是唯一的。|  
 |is_auto_cleanup_on|**bit**|指出在經過指定的保留週期後，是否要自動清除變更追蹤資料：<br /><br /> 0 = Off<br /><br /> 1 = On|  
 |retention_period|**int**|如果正在使用自動清除，保留週期會指定變更追蹤資料保留在資料庫中的時間。|  
-|retention_period_units_desc|**Nvarchar （60）**|指定保留週期的描述：<br /><br /> 分鐘<br /><br /> 小時<br /><br /> 星期幾|  
+|retention_period_units_desc|**nvarchar(60)**|指定保留週期的描述：<br /><br /> 分鐘<br /><br /> 小時<br /><br /> Days|  
 |retention_period_units|**tinyint**|保留週期之時間的單位：<br /><br /> 1 = 分鐘<br /><br /> 2 = 小時<br /><br /> 3 = 日|  
   
 ## <a name="permissions"></a>權限  

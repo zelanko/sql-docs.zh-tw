@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125794"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
@@ -43,9 +43,9 @@ Expression1 XOR Expression2
   
 |*Expression1*|*Expression2*|傳回值|  
 |-------------------|-------------------|------------------|  
-|**真正**|**真正**|**false**|  
-|**真正**|**false**|**真正**|  
-|**false**|**真正**|**真正**|  
+|**true**|**true**|**false**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
 |**false**|**false**|**false**|  
   
 ## <a name="see-also"></a>另請參閱  

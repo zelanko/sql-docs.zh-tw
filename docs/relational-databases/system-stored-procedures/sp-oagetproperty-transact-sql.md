@@ -18,10 +18,10 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107884"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -58,7 +58,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  如果指定了*propertyvalue* ，但屬性並未傳回值，則會發生錯誤。 如果屬性傳回含有多於二個維度的陣列，就會發生錯誤。  
   
- *index*  
+ *指數*  
  這是一個索引參數。 如果指定， *index*必須是適當資料類型的值。  
   
  部份屬性有參數。 這些屬性稱為索引屬性，參數稱為索引參數。 一個屬性可以有多個索引參數。  

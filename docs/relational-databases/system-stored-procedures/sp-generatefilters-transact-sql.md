@@ -16,10 +16,10 @@ ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 410bdf157cc4194191649e6a6e6ab6d92ea033b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124154"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
@@ -49,7 +49,7 @@ sp_generatefilters [ @publication =] 'publication'
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_generatefilters**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

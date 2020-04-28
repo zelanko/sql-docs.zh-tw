@@ -20,22 +20,20 @@ ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c9685b9733c1d13b79ef2a19ee2f19bbe3130426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106667"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  依類別目錄來分組類似的事件類別。 **Trace_categories**目錄檢視中的每個資料列都會識別在伺服器上唯一的類別。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些類別目錄不會改變。  
+  依類別目錄來分組類似的事件類別。 **Trace_categories**目錄檢視中的每個資料列都會識別在伺服器上唯一的類別。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些類別目錄不會改變。  
   
  如需所支援追蹤事件的完整清單，請參閱[SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
-> **重大!** 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
+> **重要！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

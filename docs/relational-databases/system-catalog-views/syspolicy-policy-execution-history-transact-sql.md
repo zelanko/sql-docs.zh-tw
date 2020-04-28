@@ -18,10 +18,10 @@ ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121107"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68121107"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|history_id|**Bigint**|這筆記錄的識別碼。 每一筆記錄都會指示一個原則，以及此原則之前起始的一個時間。|  
+|history_id|**bigint**|這筆記錄的識別碼。 每一筆記錄都會指示一個原則，以及此原則之前起始的一個時間。|  
 |policy_id|**int**|原則的識別碼。|  
 |start_date|**datetime**|此原則之前嘗試執行的日期和時間。|  
 |end_date|**datetime**|此原則完成執行的時間。|  
-|結果|**bit**|此原則為成功或失敗。 0 = 失敗，1 = 成功。|  
+|result|**bit**|此原則為成功或失敗。 0 = 失敗，1 = 成功。|  
 |exception_message|**nvarchar(max)**|由發生的例外狀況所產生的訊息。|  
 |exception|**nvarchar(max)**|發生之例外狀況的描述。|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68121107"
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [以原則為基礎的管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [使用以原則為基礎的管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

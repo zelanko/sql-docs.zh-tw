@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9e55274d1e6dfa34a3cfb92317bb4f205cfdd964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109567"
 ---
 # <a name="syscomputed_columns-transact-sql"></a>sys.computed_columns (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68109567"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<繼承的資料行>**||[ **Sys.databases] computed_columns**視圖會傳回 [ **sys.databases** ] 視圖中的所有資料行。 另外亦將傳回以下所述的其他資料行。 如需**sys. computed_columns** view 繼承自**sys.databases**之資料行的描述，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。 在 [ **computed_columns** ] 視圖中， **is_computed**資料行的值一律會設定為1。|  
-|**清晰**|**nvarchar(max)**|定義這個計算資料行的 SQL 文字。|  
+|**definition**|**nvarchar(max)**|定義這個計算資料行的 SQL 文字。|  
 |**uses_database_collation**|**bit**|1 = 資料行定義須依據資料庫的預設定序進行正確評估；否則為 0。 這種相依性可以防止資料庫預設定序變更。|  
 |**is_persisted**|**bit**|計算資料行是保存計算資料行。|  
   

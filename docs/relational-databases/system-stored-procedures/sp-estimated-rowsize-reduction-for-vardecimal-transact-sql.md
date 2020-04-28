@@ -22,10 +22,10 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124505"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
@@ -34,8 +34,7 @@ ms.locfileid: "68124505"
   預估資料列平均大小的縮減 (如果資料表上已啟用 Vardecimal 儲存格式的話)。 您可以使用這個數字來預估資料表大小的整體縮減。 由於統計資料取樣是用來計算資料列大小的平均縮減，所以請將它當做預估就好。 在少數情況下，當您啟用 Vardecimal 儲存格式之後，資料列大小可能會增加。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 ROW 和 PAGE 壓縮。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 如需有關資料表和索引大小的壓縮效果，請參閱[sp_estimate_data_compression_savings &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 ROW 和 PAGE 壓縮。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 如需有關資料表和索引大小的壓縮效果，請參閱[sp_estimate_data_compression_savings &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,6 +82,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_db_vardecimal_storage_format &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
- [sp_tableoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
+ [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

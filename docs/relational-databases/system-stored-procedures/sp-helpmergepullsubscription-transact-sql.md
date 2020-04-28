@@ -16,10 +16,10 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137706"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
@@ -52,28 +52,28 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**Nvarchar （1000）**|訂用帳戶的名稱。|  
+|**subscription_name**|**nvarchar(1000)**|訂閱的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**預訂**|**sysname**|訂閱者的名稱。|  
 |**subscription_db**|**sysname**|訂閱資料庫的名稱。|  
-|**狀態**|**int**|訂閱狀態：<br /><br /> **0** = 非使用中的訂用帳戶<br /><br /> **1** = 使用中的訂用帳戶<br /><br /> **2** = 已刪除的訂用帳戶<br /><br /> **3** = 卸離訂閱<br /><br /> **4** = 附加的訂用帳戶<br /><br /> **5** = 訂用帳戶已標示為要重新初始化，使用上傳<br /><br /> **6** = 附加訂閱失敗<br /><br /> **7** = 從備份還原的訂用帳戶|  
+|**status**|**int**|訂閱狀態：<br /><br /> **0** = 非使用中的訂用帳戶<br /><br /> **1** = 使用中的訂用帳戶<br /><br /> **2** = 已刪除的訂用帳戶<br /><br /> **3** = 卸離訂閱<br /><br /> **4** = 附加的訂用帳戶<br /><br /> **5** = 訂用帳戶已標示為要重新初始化，使用上傳<br /><br /> **6** = 附加訂閱失敗<br /><br /> **7** = 從備份還原的訂用帳戶|  
 |**subscriber_type**|**int**|訂閱者的類型：<br /><br /> **1** = 全域<br /><br /> **2** = 本機<br /><br /> **3** = 匿名|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 推播<br /><br /> **1** = 提取<br /><br /> **2** = 匿名|  
 |**優先順序**|**float （8）**|訂閱優先權。 此值必須小於**100.00**。|  
 |**sync_type**|**tinyint**|訂閱同步處理類型：<br /><br /> **1** = 自動<br /><br /> **2** = 不使用快照集。|  
 |**描述**|**nvarchar(255)**|這項提取訂閱的簡要描述。|  
-|**merge_jobid**|**binary （16）**|合併代理程式的作業識別碼。|  
+|**merge_jobid**|**binary(16)**|合併代理程式的作業識別碼。|  
 |**enabled_for_syncmgr**|**int**|是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager 同步處理訂閱。|  
 |**last_updated**|**Nvarchar （26）**|合併代理程式上次成功進行訂閱同步處理的時間。|  
 |**publisher_login**|**sysname**|發行者的登入名稱。|  
 |**publisher_password**|**sysname**|發行者密碼。|  
-|**publisher_security_mode**|**int**|指定發行者的安全性模式。<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**publisher_security_mode**|**int**|指定發行者的安全性模式。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|散發者的登入名稱。|  
 |**distributor_password**|**sysname**|散發者密碼。|  
-|**distributor_security_mode**|**int**|指定散發者的安全性模式。<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**distributor_security_mode**|**int**|指定散發者的安全性模式。<br /><br /> **0**  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
 |**ftp_address**|**sysname**|使用這個項目的目的，只是為了與舊版相容。 這是散發者的檔案傳輸通訊協定 (FTP) 服務的網路位址。|  
 |**ftp_port**|**int**|使用這個項目的目的，只是為了與舊版相容。 這是散發者的 FTP 服務通訊埠編號。|  
 |**ftp_login**|**sysname**|使用這個項目的目的，只是為了與舊版相容。 這是用於連接到 FTP 服務的使用者名稱。|  
@@ -94,7 +94,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**Nvarchar （524）**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**int**|當連接到主控 Web 同步處理的 Web 伺服器時，使用驗證模式。 值為**1**表示 Windows 驗證，值為**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
-|**名稱**|**nvarchar(128)**|指定在參數化資料列篩選的 WHERE 子句中使用這個函數時， [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)的多載值。|  
+|**hostname**|**nvarchar(128)**|指定在參數化資料列篩選的 WHERE 子句中使用這個函數時， [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)的多載值。|  
 |**job_login**|**nvarchar(512)**|這是用來執行合併代理程式的 Windows 帳戶，傳回的格式為*domain*\\*username*。|  
 |**job_password**|**sysname**|基於安全性理由，一律會傳回**\*\*\*\*\*\*\*\*"\***" 的值。|  
   

@@ -19,10 +19,10 @@ ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108156"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
@@ -61,7 +61,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  如果您在設定資料庫鏡像之前執行**sp_dbmmonitoraddmonitoring** ，監視作業將會執行，但不會更新儲存資料庫鏡像監視器記錄的狀態資料表。  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例使用 `3` 分鐘的更新週期開始進行監視。  

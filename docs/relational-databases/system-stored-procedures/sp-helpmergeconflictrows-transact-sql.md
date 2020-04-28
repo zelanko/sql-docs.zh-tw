@@ -16,10 +16,10 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137766"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
@@ -56,7 +56,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**Varchar （255）**|衝突的來源。|  
+|**origin_datasource**|**varchar(255)**|衝突的來源。|  
 |**conflict_type**|**int**|衝突類型的代碼：<br /><br /> **1** = 更新衝突：在資料列層級偵測到衝突。<br /><br /> **2** = 資料行更新衝突：在資料行層級偵測到衝突。<br /><br /> **3** = 更新刪除 wins 衝突：刪除在衝突中獲勝。<br /><br /> **4** = 更新 Wins 刪除衝突：遺失衝突的已刪除 rowguid 會記錄在此資料表中。<br /><br /> **5** = 上傳插入失敗：訂閱者的插入無法套用於發行者端。<br /><br /> **6** = 下載插入失敗：無法在訂閱者端套用從發行者進行的插入。<br /><br /> **7** = 上傳刪除失敗：訂閱者端的刪除無法上傳到發行者。<br /><br /> **8** = 下載刪除失敗：「發行者」端的刪除無法下載到「訂閱者」。<br /><br /> **9** = 上傳更新失敗：訂閱者端的更新無法套用於發行者端。<br /><br /> **10** = 下載更新失敗：「發行者」端的更新無法套用至「訂閱者」。<br /><br /> **12** = 邏輯記錄更新 Wins 刪除：此資料表會記錄遺失衝突的已刪除邏輯記錄。<br /><br /> **13** = 邏輯記錄衝突插入更新：插入邏輯記錄與更新發生衝突。<br /><br /> **14** = 邏輯記錄刪除 Wins 更新衝突：失去衝突的已更新邏輯記錄會記錄在此資料表中。|  
 |**reason_code**|**int**|可為內容相關的錯誤碼。|  
 |**reason_text**|**Varchar （720）**|可為內容相關的錯誤描述。|  

@@ -18,10 +18,10 @@ ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116774"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
@@ -49,13 +49,13 @@ xp_enumgroups [ 'domain_name' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**小組**|**sysname**|Windows 群組的名稱|  
+|**群組**|**sysname**|Windows 群組的名稱|  
 |**加以**|**sysname**|Windows 提供的 Windows 群組描述|  
   
 ## <a name="remarks"></a>備註  
  如果*domain_name*是實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行所在之 Windows 電腦的名稱，或未指定功能變數名稱， **xp_enumgroups**會從執行的電腦列舉本機群組[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- **** 當的實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在 Windows 98 上執行時，無法使用 xp_enumgroups。  
+ **xp_enumgroups**當的實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在 Windows 98 上執行時，無法使用 xp_enumgroups。  
   
 ## <a name="permissions"></a>權限  
  需要**master**資料庫中**db_owner**固定資料庫角色的成員資格，或**系統管理員（sysadmin** ）固定伺服器角色的成員資格。  
@@ -70,7 +70,7 @@ EXEC xp_enumgroups 'sales';
 ## <a name="see-also"></a>另請參閱  
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql 的一般擴充預存程式&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_loginconfig &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [xp_logininfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  

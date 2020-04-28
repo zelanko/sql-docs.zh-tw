@@ -18,10 +18,10 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108298"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)

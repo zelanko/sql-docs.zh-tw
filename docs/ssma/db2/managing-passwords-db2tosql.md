@@ -10,10 +10,10 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141017"
 ---
 # <a name="managing-passwords-db2tosql"></a>管理密碼（DB2ToSQL）

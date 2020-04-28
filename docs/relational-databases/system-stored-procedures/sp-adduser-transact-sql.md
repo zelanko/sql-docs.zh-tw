@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117896"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
@@ -79,14 +79,14 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-adding-a-database-user"></a>A. 加入資料庫使用者  
- 下列範例會利用現有的 `Vidur` 登入 `Recruiting`，將資料庫使用者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加入目前資料庫現有的 `Vidur` 角色中。  
+ 下列範例會利用現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Vidur`，將資料庫使用者 `Recruiting` 加入目前資料庫現有的 `Vidur` 角色中。  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. 以相同的登入識別碼，加入資料庫使用者  
- 下列範例會針對 `Arvind` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將使用者 `Arvind` 加入目前資料庫中。 此使用者屬於預設的**public**角色。  
+ 下列範例會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Arvind`，將使用者 `Arvind` 加入目前資料庫中。 此使用者屬於預設的**public**角色。  
   
 ```  
 EXEC sp_adduser 'Arvind';  

@@ -10,10 +10,10 @@ ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a99cc9b4eaa1ca45d1d72d3cf3fbab6e6b3571e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141043"
 ---
 # <a name="legal-notice-db2tosql"></a>法律注意事項（DB2toSQL）

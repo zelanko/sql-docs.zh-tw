@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119325"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
@@ -53,16 +53,14 @@ ms.locfileid: "68119325"
 |**描述**|**nvarchar(255)**|備份組的描述。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行備份作業的使用者名稱。 可以是 NULL。|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主要版本號碼。 可以是 NULL。|  
-|**software_minor_version**|**tinyint**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次要版本號碼。 可以是 NULL。|  
-|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組建編號。 可以是 NULL。|  
+|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次要版本號碼。 可以是 NULL。|  
+|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組建編號。 可以是 NULL。|  
 |**time_zone**|**smallint**|本機時間 (備份作業所在位置) 和國際標準時間 (UTC) 的時差，間隔是 15 分鐘。 值可以是 -48 至 +48，頭尾包括在內。 127 值表示未知。 例如，-20 是美東標準時間 (EST) 或 UTC 之後 5 小時。 可以是 NULL。|  
-|**mtf_minor_version**|**tinyint**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 次要版本號碼。 可以是 NULL。|  
-|**first_lsn**|**數值（25，0）**|備份組中第一個或最舊記錄檔記錄的記錄序號。 可以是 NULL。|  
-|**last_lsn**|**數值（25，0）**|備份組之後下一個記錄檔記錄的記錄序號。 可以是 NULL。|  
-|**checkpoint_lsn**|**數值（25，0）**|必須啟動重做的記錄之記錄序號。 可以是 NULL。|  
-|**database_backup_lsn**|**數值（25，0）**|最近的完整資料庫備份之記錄序號。 可以是 NULL。<br /><br /> **database_backup_lsn**是備份啟動時所觸發的「檢查點起點」。 如果備份是在資料庫閒置且未設定複寫的情況下執行，則此 LSN 會與**first_lsn**一致。|  
+|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 次要版本號碼。 可以是 NULL。|  
+|**first_lsn**|**numeric(25,0)**|備份組中第一個或最舊記錄檔記錄的記錄序號。 可以是 NULL。|  
+|**last_lsn**|**numeric(25,0)**|備份組之後下一個記錄檔記錄的記錄序號。 可以是 NULL。|  
+|**checkpoint_lsn**|**numeric(25,0)**|必須啟動重做的記錄之記錄序號。 可以是 NULL。|  
+|**database_backup_lsn**|**numeric(25,0)**|最近的完整資料庫備份之記錄序號。 可以是 NULL。<br /><br /> **database_backup_lsn**是備份啟動時所觸發的「檢查點起點」。 如果備份是在資料庫閒置且未設定複寫的情況下執行，則此 LSN 會與**first_lsn**一致。|  
 |**database_creation_date**|**datetime**|最初建立資料庫的日期和時間。 可以是 NULL。|  
 |**backup_start_date**|**datetime**|備份作業開始的日期和時間。 可以是 NULL。|  
 |**backup_finish_date**|**datetime**|備份作業完成的日期和時間。 可以是 NULL。|  
@@ -71,16 +69,16 @@ ms.locfileid: "68119325"
 |**code_page**|**smallint**|執行備份作業的伺服器字碼頁。 可以是 NULL。 如需字碼頁的詳細資訊，請參閱定[序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**compatibility_level**|**tinyint**|這是資料庫的相容性層級設定， 可為以下項目：<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 可以是 NULL。<br /><br /> 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  
 |**database_version**|**int**|資料庫版本號碼。 可以是 NULL。|  
-|**backup_size**|**數值（20，0）**|備份組的大小 (以位元組為單位)。 可以是 NULL。 若為 VSS 備份，backup_size 是估計值。|  
+|**backup_size**|**numeric(20,0)**|備份組的大小 (以位元組為單位)。 可以是 NULL。 若為 VSS 備份，backup_size 是估計值。|  
 |**database_name**|**nvarchar(128)**|執行備份所涉及的資料庫名稱。 可以是 NULL。|  
 |**server_name**|**nvarchar(128)**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業的伺服器名稱。 可以是 NULL。|  
 |**machine_name**|**nvarchar(128)**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱。 可以是 NULL。|  
-|**旗幟**|**int**|在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **flags**資料行已被取代，而且正由下列位資料行取代：<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> 可以是 NULL。<br /><br /> 在較早 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的備份組中，旗標位元的狀況如下：<br />1 = 備份包含記錄最少的資料。 <br />2 = 使用 WITH SNAPSHOT。 <br />4 = 當備份時，資料庫是唯讀的。<br />8 = 當備份時，資料庫在單一使用者模式中。|  
+|**flags**|**int**|在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **flags**資料行已被取代，而且正由下列位資料行取代：<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> 可以是 NULL。<br /><br /> 在較早 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的備份組中，旗標位元的狀況如下：<br />1 = 備份包含記錄最少的資料。 <br />2 = 使用 WITH SNAPSHOT。 <br />4 = 當備份時，資料庫是唯讀的。<br />8 = 當備份時，資料庫在單一使用者模式中。|  
 |**unicode_locale**|**int**|Unicode 地區設定。 可以是 NULL。|  
 |**unicode_compare_style**|**int**|Unicode 比較樣式。 可以是 NULL。|  
 |**collation_name**|**nvarchar(128)**|定序名稱。 可以是 NULL。|  
 |**Is_password_protected**|**bit**|備份組<br /><br /> 是否有密碼保護：<br /><br /> 0 = 無保護<br /><br /> 1 = 保護|  
-|**recovery_model**|**Nvarchar （60）**|資料庫的復原模式：<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> 簡單|  
+|**recovery_model**|**nvarchar(60)**|資料庫的復原模式：<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> 簡單|  
 |**has_bulk_logged_data**|**bit**|1 = 備份包含大量記錄資料。|  
 |**is_snapshot**|**bit**|1 = 備份是利用 SNAPSHOT 選項所取得。|  
 |**is_readonly**|**bit**|1 = 當備份時，資料庫是唯讀的。|  
@@ -93,15 +91,15 @@ ms.locfileid: "68119325"
 |**is_copy_only**|**bit**|1 = 僅限複製的備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|起始復原分岔的識別碼。 這對應于 RESTORE HEADERONLY 的**FirstRecoveryForkID** 。<br /><br /> 若為資料備份， **first_recovery_fork_guid**等於**last_recovery_fork_guid**。|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|結尾復原分岔的識別碼。 這對應于 RESTORE HEADERONLY 的**RecoveryForkID** 。<br /><br /> 若為資料備份， **first_recovery_fork_guid**等於**last_recovery_fork_guid**。|  
-|**fork_point_lsn**|**數值（25，0）**|如果**first_recovery_fork_guid**不等於**last_recovery_fork_guid**，這就是分叉點的記錄序號。 否則，這個值是 NULL。|  
+|**fork_point_lsn**|**numeric(25,0)**|如果**first_recovery_fork_guid**不等於**last_recovery_fork_guid**，這就是分叉點的記錄序號。 否則，這個值是 NULL。|  
 |**database_guid**|**uniqueidentifier**|資料庫的唯一識別碼。 這對應于 RESTORE HEADERONLY 的**BindingID** 。 當還原資料庫時，會指派一個新值。|  
 |**family_guid**|**uniqueidentifier**|建立時原始資料庫的唯一識別碼。 當還原資料庫時，即使還原成不同的名稱，這個值也會維持不變。|  
-|**differential_base_lsn**|**數值（25，0）**|差異備份的基底 LSN。 以單一為基礎的差異備份;Lsn 大於或等於**differential_base_lsn**的變更會包含在差異備份中。<br /><br /> 若為 multibased 差異，此值為 Null，而且基底 LSN 必須在檔案層級決定（請參閱[backupfile &#40;transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)）。<br /><br /> 如果是非差異備份類型，這個值永遠是 NULL。|  
+|**differential_base_lsn**|**numeric(25,0)**|差異備份的基底 LSN。 以單一為基礎的差異備份;Lsn 大於或等於**differential_base_lsn**的變更會包含在差異備份中。<br /><br /> 若為 multibased 差異，此值為 Null，而且基底 LSN 必須在檔案層級決定（請參閱[backupfile &#40;transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)）。<br /><br /> 如果是非差異備份類型，這個值永遠是 NULL。|  
 |**differential_base_guid**|**uniqueidentifier**|如果是單一基底差異備份，這個值就是差異基底的唯一識別碼。<br /><br /> 如果是多重基底差異備份，這個值就是 NULL，差異基底必須取決於檔案層級。<br /><br /> 如果是非差異備份類型，這個值就是 NULL。|  
 |**compressed_backup_size**|**數值（20，0）**|儲存於磁碟上之備份的總位元組數。<br /><br /> 若要計算壓縮比率，請使用**compressed_backup_size**和**backup_size**。<br /><br /> 在**msdb**升級期間，這個值會設定為 Null。 這表示非壓縮的備份。|  
-|**key_algorithm**|**Nvarchar （32）**|用於加密備份的加密演算法。 NO_Encryption 值表示備份未加密。|  
-|**encryptor_thumbprint**|**Varbinary （20）**|加密程式指模，可用來尋找資料庫中的憑證或非對稱金鑰。 在備份未加密的情況下，這個值是 NULL。|  
-|**encryptor_type**|**Nvarchar （32）**|使用的加密程式類型：憑證或非對稱金鑰。 . 在備份未加密的情況下，這個值是 NULL。|  
+|**key_algorithm**|**nvarchar(32)**|用於加密備份的加密演算法。 NO_Encryption 值表示備份未加密。|  
+|**encryptor_thumbprint**|**varbinary(20)**|加密程式指模，可用來尋找資料庫中的憑證或非對稱金鑰。 在備份未加密的情況下，這個值是 NULL。|  
+|**encryptor_type**|**nvarchar(32)**|使用的加密程式類型：憑證或非對稱金鑰。 . 在備份未加密的情況下，這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
  RESTORE VERIFYONLY FROM *backup_device* with LOADHISTORY 會填入**backupmediaset**資料表的資料行，其中包含來自媒體集標頭的適當值。  
@@ -110,14 +108,14 @@ ms.locfileid: "68119325"
   
 ## <a name="see-also"></a>另請參閱  
  [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [備份和還原期間可能發生的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [媒體集、媒體家族和備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-sql&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

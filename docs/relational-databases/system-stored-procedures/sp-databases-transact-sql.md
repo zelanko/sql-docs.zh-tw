@@ -18,10 +18,10 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108329"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
@@ -45,9 +45,9 @@ sp_databases
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|資料庫名稱。 在中[!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個資料行代表儲存在**sys.databases**目錄檢視中的資料庫名稱。|  
+|**DATABASE_NAME**|**sysname**|資料庫的名稱。 在中[!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個資料行代表儲存在**sys.databases**目錄檢視中的資料庫名稱。|  
 |**DATABASE_SIZE**|**int**|資料庫的大小 (以 KB 為單位)。|  
-|**標記**|**Varchar （254）**|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個欄位一律會傳回 NULL。|  
+|**備註**|**Varchar （254）**|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個欄位一律會傳回 NULL。|  
   
 ## <a name="remarks"></a>備註  
  傳回的資料庫名稱可用來作為 USE 陳述式中的參數，以變更目前資料庫的內容。  
@@ -67,7 +67,7 @@ EXEC sp_databases;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact-sql&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

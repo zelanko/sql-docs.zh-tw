@@ -18,10 +18,10 @@ ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee1a0cc83b55fc265ae2bb490fd9d5e11fd73f22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129617"
 ---
 # <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68129617"
 |**dbms_name**|**nvarchar(128)**|這是 DBMS 的名稱。 以下是可能的值及其描述。<br /><br /> **MSSQLSERVER**：目的地是 SQL Server 資料庫。<br />**Oracle**：目的地是 oracle 資料庫。<br />**DB2**：目的地是 IBM DB2 資料庫。<br />**Sybase**：目的地是 SYBASE 資料庫。|  
 |**sql_type**|**nvarchar(128)**|這是 SQL Server 資料類型。|  
 |**dest_type**|**nvarchar(128)**|這是非 SQL Server 資料類型的名稱。|  
-|**dest_prec**|**Bigint**|這是非 SQL Server 資料類型的有效位數。|  
+|**dest_prec**|**bigint**|這是非 SQL Server 資料類型的有效位數。|  
 |**dest_create_params**|**int**|僅供內部使用。|  
 |**dest_nullable**|**bit**|這是指非 SQL Server 資料類型是否支援 NULL 值。|  
   

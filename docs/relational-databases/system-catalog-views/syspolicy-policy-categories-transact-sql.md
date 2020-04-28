@@ -18,10 +18,10 @@ ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: af9086ba9de7d9c61bcedecd4331e7e0e77d6489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121115"
 ---
 # <a name="syspolicy_policy_categories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68121115"
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [以原則為基礎的管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [使用以原則為基礎的管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141073"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>連接到 DB2 資料庫（DB2ToSQL）

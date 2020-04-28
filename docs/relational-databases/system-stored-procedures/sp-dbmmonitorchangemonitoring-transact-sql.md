@@ -19,10 +19,10 @@ ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108116"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
@@ -48,7 +48,7 @@ sp_dbmmonitorchangemonitoring parameter
   
  資料庫鏡射狀態資料表更新之間的分鐘數。 預設間隔是 1 分鐘。  
   
- *value*  
+ *值*  
  為正在變更之參數指定新值。  
   
 |參數|值描述|  
@@ -62,7 +62,7 @@ sp_dbmmonitorchangemonitoring parameter
  None  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例將更新週期變更為 5 分鐘。  

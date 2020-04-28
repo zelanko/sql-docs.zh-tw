@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123815"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -49,16 +49,16 @@ sp_grant_proxy_to_subsystem
   
 |值|描述|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX 腳本<br /><br /> ** \* \*重要\*事項**在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 中移除 ActiveX 腳本子系統。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
-|**第**|作業系統（**CmdExec**）|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script<br /><br /> ** \* \*重要\*事項**在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 中移除 ActiveX 腳本子系統。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**3**|作業系統 (**CmdExec**)|  
 |**4**|複寫快照集代理程式|  
-|**第**|複寫記錄讀取器代理程式|  
+|**5**|複寫記錄讀取器代理程式|  
 |**6**|複寫散發代理程式|  
-|**utf-7**|Replication Merge Agent|  
+|**7**|Replication Merge Agent|  
 |**8**|複寫佇列讀取器代理程式|  
 |**9**|Analysis Services 查詢|  
-|**十大**|Analysis Services 命令|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝執行|  
+|**10**|Analysis Services 命令|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行|  
 |**12**|PowerShell 指令碼|  
 | &nbsp; | &nbsp; |
   
@@ -67,15 +67,15 @@ sp_grant_proxy_to_subsystem
 |值|描述|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX Script|  
-|**CmdExec**|作業系統（**CmdExec**）|  
+|**CmdExec**|作業系統 (**CmdExec**)|  
 |**快照式**|複寫快照集代理程式|  
-|**讀取**|複寫記錄讀取器代理程式|  
+|**LogReader**|複寫記錄讀取器代理程式|  
 |**散發**|複寫散發代理程式|  
-|**合併式**|Replication Merge Agent|  
+|**Merge**|Replication Merge Agent|  
 |**QueueReader**|複寫佇列讀取器代理程式|  
 |**ANALYSISQUERY**|Analysis Services 查詢|  
 |**ANALYSISCOMMAND**|Analysis Services 命令|  
-|**Dt**|SSIS 套件執行|  
+|**Dt**|SSIS 封裝執行|  
 |**PowerShell**|PowerShell 指令碼|  
 | &nbsp; | &nbsp; |
   

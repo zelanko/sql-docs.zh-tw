@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104396"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_coNtext （Transact-sql）
@@ -76,10 +76,10 @@ EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID &#40;Transact-sql&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;Transact-sql&#41;](../../t-sql/functions/session-context-transact-sql.md)   
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
+ [CONTEXT_INFO &#40;Transact-sql&#41;](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

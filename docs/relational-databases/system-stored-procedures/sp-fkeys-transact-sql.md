@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124395"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
@@ -84,10 +84,8 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |KEY_SEQ|**smallint**|資料行在多重資料行主索引鍵中的序號。 這個欄位一律會傳回值。|  
 |UPDATE_RULE|**smallint**|當 SQL 作業是更新時，外部索引鍵所套用的動作。  可能的值：<br /> 0=外部索引鍵的 CASCADE 變更。<br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br />   2 = 設定 null <br /> 3 = 設定預設值 |  
 |DELETE_RULE|**smallint**|當 SQL 作業是刪除時，外部索引鍵所套用的動作。 可能的值：<br /> 0=外部索引鍵的 CASCADE 變更。<br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br />   2 = 設定 null <br /> 3 = 設定預設值 |  
-|FK_NAME|**sysname**|外部索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 FOREIGN KEY 條件約束名稱。|  
-|PK_NAME|**sysname**|主索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 PRIMARY KEY 條件約束名稱。|  
+|FK_NAME|**sysname**|外部索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 FOREIGN KEY 條件約束名稱。|  
+|PK_NAME|**sysname**|主索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 PRIMARY KEY 條件約束名稱。|  
   
  傳回的結果依  FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME 和 KEY_SEQ 來排序。  
   
@@ -115,7 +113,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 不會傳回任何資料[!INCLUDE[ssDW](../../includes/ssdw-md.md)]列，因為不支援外鍵。  
   
 ```sql  
@@ -124,7 +122,7 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的目錄預存程式](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   

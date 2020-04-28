@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133091"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68133091"
 |**principal_id**|**int**|主體的識別碼。 在伺服器中，這是唯一的。|  
 |**sid**|**Varbinary （85）**|主體的 SID (安全性識別碼)。 如果是 Windows 主體，則與 Windows SID 相符。|  
 |**type**|**char （1）**|主體類型：<br /><br /> S = SQL 登入<br /><br /> U = Windows 登入<br /><br /> G = Windows 群組<br /><br /> R = 伺服器角色<br /><br /> C = 對應至憑證的登入<br /><br /> K = 對應至非對稱金鑰的登入|  
-|**type_desc**|**Nvarchar （60）**|主體類型的描述：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type_desc**|**nvarchar(60)**|主體類型的描述：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 登入已停用。|  
 |**create_date**|**datetime**|建立主體的時間。|  
 |**modify_date**|**datetime**|上次修改主體定義的時間。|  
@@ -69,8 +69,8 @@ JOIN sys.server_permissions AS pe
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [主體 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

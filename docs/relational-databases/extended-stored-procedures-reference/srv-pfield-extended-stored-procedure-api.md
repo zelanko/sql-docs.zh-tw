@@ -20,18 +20,17 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68131584"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳回資料庫連接的相關資訊。  
   
@@ -72,15 +71,11 @@ len
 |SRV_NETWORK_CONNECTION|傳遞到用於目前 *srvproc* 連線之網路程式庫 DLL 的連接字串。|  
 |SRV_PIPEHANDLE|包含連接用戶端之管道控制碼的字串，如果用戶端連接到不使用具名管道的網路，則為 NULL。 若要搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用此控制碼當做有效的管道控制碼，請將此字串轉換為整數。|  
 |SRV_RMTSERVER|用戶端處理序所登入的伺服器。 如果登入來自用戶端，此值為空字串。|  
-|SRV_ROWSENT|
-  *srvproc* 已經針對目前結果集所傳送的資料列數目。|  
-|SRV_SPID|
-  *srvproc* 的伺服器執行緒識別碼。 對於擴充預存程序，此值與 **sys.sysprocesses** 的 **kpid** 資料行相同，而且可以隨時變更。|  
+|SRV_ROWSENT|*srvproc* 已經針對目前結果集所傳送的資料列數目。|  
+|SRV_SPID|*srvproc* 的伺服器執行緒識別碼。 對於擴充預存程序，此值與 **sys.sysprocesses** 的 **kpid** 資料行相同，而且可以隨時變更。|  
 |SRV_SPROC_CODEPAGE|伺服器用於解譯多位元組資料的字碼頁。|  
-|SRV_STATUS|
-  *srvproc* 的目前狀態：執行中或已關閉|  
-|SRV_TYPE|
-  *srvproc* 的連線類型。 如果傳回伺服器，*srvproc* 來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如果傳回用戶端，*srvproc* 來自 DB 程式庫或 ODBC 用戶端。|  
+|SRV_STATUS|*srvproc* 的目前狀態：執行中或已關閉|  
+|SRV_TYPE|*srvproc* 的連線類型。 如果傳回伺服器，*srvproc* 來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如果傳回用戶端，*srvproc* 來自 DB 程式庫或 ODBC 用戶端。|  
 |SRV_USER|連接的使用者名稱。|  
 |||  
   

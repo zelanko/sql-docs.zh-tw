@@ -18,10 +18,10 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106348"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68106348"
 |**agent_id**|**int**|合併代理程式的識別碼。|  
 |**start_time**|**datetime**|作業開始執行的時間。|  
 |**end_time**|**datetime**|作業執行完成的時間。|  
-|**期限**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
+|**duration**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
 |**delivery_time**|**int**|套用變更批次所花的秒數。|  
 |**upload_time**|**int**|將變更上傳到發行者所花的秒數。|  
 |**download_time**|**int**|將變更下載到訂閱者所花的秒數。|  

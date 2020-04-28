@@ -18,10 +18,10 @@ ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129584"
 ---
 # <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)

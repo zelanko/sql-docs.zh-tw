@@ -16,10 +16,10 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124122"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
@@ -40,7 +40,7 @@ sp_get_distributor
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**已安裝**|**int**|**0** = 否;**1** = 是|  
+|**客戶**|**int**|**0** = 否;**1** = 是|  
 |**散發伺服器**|**sysname**|散發者伺服器的名稱|  
 |**已安裝散發資料庫**|**int**|**0** = 否;**1** = 是|  
 |**is distribution publisher**|**int**|**0** = 否;**1** = 是|  
@@ -53,8 +53,8 @@ sp_get_distributor
  任何使用者都可以執行**sp_get_distributor**。 當這個預存程式是由散發資料庫上的**db_owner**或**replmonitor**固定資料庫角色的成員執行時，或是至少一個已發行資料庫上**db_owner**固定資料庫角色的成員，就會傳回非 Null 的結果集。 當這個預存程式是由至少一個已發行資料庫之發行集存取清單（PAL）中的使用者執行時，也會傳回非 Null 結果集，而非 SQL Server 發行者的散發資料庫 PAL 也可以執行**sp_get_distributor**。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [散發者與發行者資訊指令碼](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
+ [設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [散發者和發行者資訊腳本](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

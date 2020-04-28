@@ -10,10 +10,10 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141086"
 ---
 # <a name="connect-to-db2-db2tosql"></a>連接到 DB2 （DB2ToSQL）
@@ -21,11 +21,11 @@ ms.locfileid: "68141086"
   
 若要存取此對話方塊，請在 **[檔案**] 功能表上，選取 [連線**到 DB2]**。 如果您先前已連線，此命令會**重新連接到 DB2**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **提供者**  
 為您的 DB2 資料庫連接選取資料存取提供者。 可用的提供者為 DB2 用戶端提供者和 OLE DB 提供者。 預設值為 DB2 用戶端提供者。  
   
-**模式**  
+**Mode**  
 選取 [標準]、[TNSNAME] 或 [連接字串] 模式。  
   
 -   在標準模式中，您可以輸入或選取提供者、伺服器名稱、伺服器埠、DB2 SID、使用者名稱和密碼的值。  
@@ -42,7 +42,7 @@ ms.locfileid: "68141086"
 **伺服器名稱**  
 輸入 [DB2 伺服器名稱]。 預設的伺服器名稱與電腦名稱稱相同。 這是標準模式選項。  
   
-**伺服器埠**  
+**伺服器通訊埠**  
 如果您使用1521以外的通訊埠編號（預設值）來連接到 DB2，請輸入埠號碼。 這是標準模式選項。  
   
 **Connect 識別碼**  
@@ -59,7 +59,7 @@ ms.locfileid: "68141086"
 輸入 SSMA 將用來連接到 DB2 資料庫的使用者名稱。  
   
 **密碼**  
-輸入使用者名稱的密碼。  
+請輸入使用者名稱的密碼。  
   
 **連接字串**  
 > [!IMPORTANT]  

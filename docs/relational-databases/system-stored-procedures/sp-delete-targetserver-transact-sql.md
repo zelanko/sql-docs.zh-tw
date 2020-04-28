@@ -18,10 +18,10 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68111996"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)

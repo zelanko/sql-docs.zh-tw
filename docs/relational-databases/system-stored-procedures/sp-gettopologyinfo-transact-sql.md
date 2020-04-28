@@ -16,10 +16,10 @@ ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 901ad9739966327102ceda6c7d26815daa867888
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123915"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
@@ -53,7 +53,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
  需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [點對點異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137753"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -55,9 +55,9 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |**source_object**|**Nvarchar （386）**|刪除衝突的來源物件。|  
 |**rowguid**|**uniqueidentifier**|刪除衝突的資料列識別碼。|  
 |**conflict_type**|**int**|表示衝突類型的代碼：<br /><br /> **1** = UpdateConflict：在資料列層級偵測到衝突。<br /><br /> **2** = ColumnUpdateConflict：在資料行層級偵測到衝突。<br /><br /> **3** = UpdateDeleteWinsConflict：刪除在衝突中獲勝。<br /><br /> **4** = UpdateWinsDeleteConflict：失去衝突的已刪除 rowguid 會記錄在此資料表中。<br /><br /> **5** = UploadInsertFailed：訂閱者的插入無法套用在發行者端。<br /><br /> **6** = DownloadInsertFailed：無法在訂閱者端套用從發行者進行的插入。<br /><br /> **7** = UploadDeleteFailed：在訂閱者端刪除無法上傳到發行者。<br /><br /> **8** = DownloadDeleteFailed：在發行者端的刪除無法下載到訂閱者。<br /><br /> **9** = UploadUpdateFailed：訂閱者端的更新無法套用在發行者端。<br /><br /> **10** = DownloadUpdateFailed：「發行者」端的更新無法套用到「訂閱者」。|  
-|**reason_code**|**Int**|可為內容相關的錯誤碼。|  
+|**reason_code**|**整數**|可為內容相關的錯誤碼。|  
 |**reason_text**|**Varchar （720）**|可為內容相關的錯誤描述。|  
-|**origin_datasource**|**Varchar （255）**|衝突的來源。|  
+|**origin_datasource**|**varchar(255)**|衝突的來源。|  
 |**pubid**|**uniqueidentifier**|發行集識別碼。|  
 |**MSrepl_create_time**|**datetime**|加入衝突資訊的時間。|  
   
