@@ -18,10 +18,10 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096069"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`這是要傳回之資料表的類型。 *table_type*是**sysname**，預設值是 Null，而且可以有下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**鋸齒**|別名的名稱。|  
 |**GLOBAL TEMPORARY**|全系統所能使用之暫存資料表的名稱。|  
@@ -62,8 +62,8 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**SYNONYM**|同義字的名稱。|  
 |**系統資料表**|系統資料表的名稱。|  
 |**系統檢視**|系統檢視表的名稱。|  
-|**TABLE**|使用者資料表的名稱。|  
-|**VIEW**|檢視表的名稱。|  
+|**目錄**|使用者資料表的名稱。|  
+|**視圖**|檢視表的名稱。|  
   
 `[ @fUsePattern = ] 'fUsePattern'`判斷 **_**、 **%**、 **[** 和 **]** 字元是否會被視為萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*是**bit**，預設值是1。  
   
@@ -78,8 +78,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|資料表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。 這個欄位一律會傳回值。|  
 |**TABLE_TYPE**|**Varchar （32）**|資料表、系統資料表或檢視表。|  
-|**標記**|**Varchar （254）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**備註**|**Varchar （254）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
   
 ## <a name="remarks"></a>備註  
  **sp_tables_ex**是藉由查詢對應至*table_server*之 OLE DB 提供者之**IDBSchemaRowset**介面的資料表資料列集來執行。 *Table_name*、 *table_schema*、 *table_catalog*和資料行參數會傳遞至這個介面，以限制傳回的資料*列*。  

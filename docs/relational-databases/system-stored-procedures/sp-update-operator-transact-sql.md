@@ -18,10 +18,10 @@ ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084845"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
@@ -94,7 +94,7 @@ sp_update_operator
 |**1**|星期日|  
 |**2**|星期一|  
 |**4**|Tuesday|  
-|**8**|Wednesday|  
+|**8**|星期三|  
 |**1600**|Thursday|  
 |**32**|星期五|  
 |**64**|星期六|  

@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074154"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>功能表命令和其他快速鍵（DB2ToSQL）
@@ -54,7 +54,7 @@ ms.locfileid: "68074154"
 |尋找上一個。|ALT + E + F + P 或 CTRL + SHIFT + F3|  
 |尋找下一個|ALT + E + F + N 或 CTRL + F3|  
   
-## <a name="view-menu-commands"></a>View menu 命令  
+## <a name="view-menu-commands"></a>檢視功能表命令  
 若要存取 [流覽] 功能表，使用的鍵盤快速鍵為 ALT + V。下表描述用來存取 [視圖] 功能表下之功能表項目的鍵盤快速鍵。  
   
 |若要這樣做|出版|  
@@ -87,7 +87,7 @@ ms.locfileid: "68074154"
 |顯示 [專案設定] 對話方塊。|ALT + T + P|  
 |顯示 [預設專案設定] 對話方塊。|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>[說明] 功能表命令  
+## <a name="help-menu-commands"></a>說明功能表命令  
 若要存取 [說明] 功能表，使用的鍵盤快速鍵為 ALT + H。下表描述用來存取 [說明] 功能表下之功能表項目的鍵盤快速鍵。  
   
 |若要這樣做|出版|  

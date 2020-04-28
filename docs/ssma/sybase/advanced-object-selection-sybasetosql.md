@@ -10,10 +10,10 @@ ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3745a7599f986073d1b759b46fe33dd741d62b09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083547"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>進階物件選取項目 (SybaseToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68083547"
   
 使用此對話方塊之前，您可能會想要強制 SSMA 藉由轉換架構或儲存專案來載入所有中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **檢查所有專案**  
 在 [所有專案] 旁邊加入核取記號。 這些專案會立即在 [中繼資料瀏覽器] 中選取。  
   

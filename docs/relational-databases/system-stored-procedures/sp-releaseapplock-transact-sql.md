@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075635"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
@@ -47,10 +47,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**Nvarchar （255）** ，沒有預設值。 *resource_name*是以二進位進行比較，因此不論目前資料庫的定序設定為何，都會區分大小寫。  
   
  [ @LockOwner= ]'*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner*是**Nvarchar （32）**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
   
  [ @DbPrincipal= ]'*database_principal*'  
- 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函式的呼叫者必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能夠成功呼叫函式。 預設值是 public。  
+ 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫端必須是*database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函式。 預設值是 public。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  \>= 0 （成功），或 < 0 （失敗）  
@@ -83,6 +83,6 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [APPLOCK_MODE &#40;Transact-sql&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-sql&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

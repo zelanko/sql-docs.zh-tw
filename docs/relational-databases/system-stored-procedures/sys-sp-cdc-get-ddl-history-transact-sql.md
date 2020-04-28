@@ -22,10 +22,10 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083729"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
@@ -58,7 +58,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |capture_instance|**sysname**|擷取執行個體的名稱。|  
 |required_column_update|**bit**|指出 DDL 變更要求更改變更資料表中的資料行，以便反映對來源資料行所做的資料類型變更。|  
 |ddl_command|**nvarchar(max)**|套用至來源資料表的 DDL 陳述式。|  
-|ddl_lsn|**binary （10）**|與 DDL 變更相關聯的記錄序號 (LSN)。|  
+|ddl_lsn|**binary(10)**|與 DDL 變更相關聯的記錄序號 (LSN)。|  
 |ddl_time|**datetime**|與 DDL 變更相關聯的時間。|  
   
 ## <a name="remarks"></a>備註  

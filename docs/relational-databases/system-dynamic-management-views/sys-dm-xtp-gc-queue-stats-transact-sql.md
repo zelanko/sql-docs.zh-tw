@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090204"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68090204"
 |資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|佇列的唯一識別碼。|  
-|total_enqueues|**Bigint**|自從伺服器啟動之後加入這個佇列中的記憶體回收工作項目的總數。|  
-|total_dequeues|**Bigint**|自從伺服器啟動之後從這個佇列清除的記憶體回收工作項目的總數。|  
-|current_queue_depth|**Bigint**|目前存在這個佇列中的記憶體回收工作項目的數目。 這個項目可能代表有一個或多個要進行記憶體回收的項目。|  
-|maximum_queue_depth|**Bigint**|這個佇列已經看到的最大深度。|  
-|last_service_ticks|**Bigint**|佇列上次接受服務時的 CPU 刻度。|  
+|total_enqueues|**bigint**|自從伺服器啟動之後加入這個佇列中的記憶體回收工作項目的總數。|  
+|total_dequeues|**bigint**|自從伺服器啟動之後從這個佇列清除的記憶體回收工作項目的總數。|  
+|current_queue_depth|**bigint**|目前存在這個佇列中的記憶體回收工作項目的數目。 這個項目可能代表有一個或多個要進行記憶體回收的項目。|  
+|maximum_queue_depth|**bigint**|這個佇列已經看到的最大深度。|  
+|last_service_ticks|**bigint**|佇列上次接受服務時的 CPU 刻度。|  
   
 ## <a name="permissions"></a>權限  
  需要 VIEW SERVER STATE 權限。  
@@ -66,6 +66,6 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

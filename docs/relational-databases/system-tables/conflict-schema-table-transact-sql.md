@@ -18,10 +18,10 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084774"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_&lt;架構&gt;_&lt;資料表&gt; （transact-sql）
@@ -39,8 +39,8 @@ ms.locfileid: "68084774"
 |__$conflict_type|**int**|衝突的類型，它可以是下列其中一個值：<br /><br /> 1：更新失敗，因為另一項更新變更了本機資料列，或是已經刪除再重新插入此資料列。<br /><br /> 2：更新失敗，因為本機資料列已被刪除。<br /><br /> 3：刪除失敗，因為另一項更新變更了本機資料列，或是已經刪除再重新插入此資料列。<br /><br /> 4：刪除失敗，因為本機資料列已被刪除。<br /><br /> 5：插入失敗，因為本機資料列已經插入，或是已經插入後再更新。|  
 |__$is_winner|**bit**|指出此資料表中的資料列是否為衝突的贏家，這表示它已套用到本機節點。|  
 |__$pre_version|**Varbinary （32）**|引發衝突變更的資料庫版本。|  
-|__$reason_code|**int**|此衝突的解決程式碼。 可以是下列其中一個值：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 如需詳細資訊，請參閱 **__ $ reason_text**。|  
-|__$reason_text|**Nvarchar （720）**|此衝突的解決方法。 可以是下列其中一個值：<br /><br /> 已解決 (1)<br /><br /> 未解決 (2)<br /><br /> 未知 (0)|  
+|__$reason_code|**int**|此衝突的解決程式碼。 可以是下列值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 如需詳細資訊，請參閱 **__ $ reason_text**。|  
+|__$reason_text|**Nvarchar （720）**|此衝突的解決方法。 可以是下列值之一：<br /><br /> 已解決 (1)<br /><br /> 未解決 (2)<br /><br /> 未知 (0)|  
 |__$update_bitmap|**Varbinary （** *n* **）**。 大小會根據內容而有所不同。|指出當發生更新與更新之間的衝突時，已更新哪一個資料行的點陣圖。|  
 |__$inserted_date|**datetime**|衝突資料列插入此資料表的日期和時間。|  
 |__$row_id|**timestamp**|與產生衝突之資料列有關聯的資料列版本。|  

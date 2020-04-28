@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084679"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68084679"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|警示識別碼。|  
+|**id**|**int**|警示識別碼。|  
 |**name**|**sysname**|警示名稱。|  
 |**event_source**|**Nvarchar （100）**|事件來源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**event_category_id**|**int**|保留供未來使用。|  
 |**event_id**|**int**|保留供未來使用。|  
 |**message_id**|**int**|觸發此警示之**sysmessages**訊息的使用者定義訊息識別碼或參考。|  
-|**低於**|**int**|觸發這個警示的嚴重性。|  
+|**severity**|**int**|觸發這個警示的嚴重性。|  
 |**後**|**tinyint**|警示的狀態：<br /><br /> **0** = 已停用。<br /><br /> **1** = 已啟用。|  
 |**delay_between_responses**|**int**|這個警示各次通知之間的等待期間 (以秒為單位)。|  
 |**last_occurrence_date**|**int**|警示的前一次出現 (日期)。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68084679"
 |**count_reset_time**|**int**|當日時間計數將重設為**0**。|  
 |**job_id**|**uniqueidentifier**|發生這個警示時所執行的作業識別碼。|  
 |**has_notification**|**int**|發生警示時收到電子郵件通知的操作員數目。|  
-|**旗幟**|**int**|已保留。|  
+|**flags**|**int**|已保留。|  
 |**performance_condition**|**nvarchar(512)**|已保留。|  
 |**category_id**|**int**|已保留。|  
   

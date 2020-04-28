@@ -18,10 +18,10 @@ ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c9668c234728dc34952a7095889fe6ba5cfd06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084698"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
@@ -39,9 +39,9 @@ ms.locfileid: "68084698"
 |**maxtrans**|**int**|每個掃描循環中要處理的交易數目上限。<br /><br /> **maxtrans**只對 capture 作業有效。|  
 |**maxscans**|**int**|要執行以便從記錄中擷取所有資料列的掃描循環數目上限。<br /><br /> **maxscans**只對 capture 作業有效。|  
 |**系列**|**bit**|旗標，指出擷取作業是連續執行 (1)，還是僅執行一次 (0)。 如需詳細資訊，請參閱[sp_cdc_add_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> 「**連續**」只對「捕獲」作業有效。|  
-|**pollinginterval**|**Bigint**|記錄掃描循環之間的秒數。<br /><br /> **pollinginterval**只對 capture 作業有效。|  
-|**保存**|**Bigint**|變更資料列要保留在變更資料表中的分鐘數。<br /><br /> **保留**僅適用于清除作業。|  
-|**閾值**|**Bigint**|可以使用單一清除陳述式來刪除的最大刪除項目數。|  
+|**pollinginterval**|**bigint**|記錄掃描循環之間的秒數。<br /><br /> **pollinginterval**只對 capture 作業有效。|  
+|**保存**|**bigint**|變更資料列要保留在變更資料表中的分鐘數。<br /><br /> **保留**僅適用于清除作業。|  
+|**閾值**|**bigint**|可以使用單一清除陳述式來刪除的最大刪除項目數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_cdc_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   

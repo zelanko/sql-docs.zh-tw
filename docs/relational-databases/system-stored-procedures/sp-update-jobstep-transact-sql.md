@@ -18,10 +18,10 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084882"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
@@ -83,7 +83,7 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|成功而結束。|  
 |**2**|失敗而結束。|  
-|**第**|移至下一步驟。|  
+|**3**|移至下一步驟。|  
 |**4**|移至步驟*success_step_id。*|  
   
 `[ @on_success_step_id = ] success_step_id`如果步驟成功且*success_action*為**4**時，此作業中要執行之步驟的識別碼。 *success_step_id*是**int**，預設值是 Null。  
@@ -94,7 +94,7 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|成功而結束。|  
 |**2**|失敗而結束。|  
-|**第**|移至下一步驟。|  
+|**3**|移至下一步驟。|  
 |**4**|移至步驟*fail_step_id * *。*|  
   
 `[ @on_fail_step_id = ] fail_step_id`如果步驟失敗且*fail_action*為**4**時，此作業中要執行之步驟的識別碼。 *fail_step_id*是**int**，預設值是 Null。  
@@ -121,7 +121,7 @@ sp_update_jobstep
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** （預設值）|覆寫輸出檔。|  
+|**0** (預設)|覆寫輸出檔。|  
 |**2**|附加至輸出檔。|  
 |**4**|將 Transact-SQL 作業步驟輸出寫入步驟記錄。|  
 |**8**|將記錄寫入資料表 (覆寫現有的記錄)。|  
@@ -140,7 +140,7 @@ sp_update_jobstep
  更新作業步驟會累加作業版本號碼。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+ 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   

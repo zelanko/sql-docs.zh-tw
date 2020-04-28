@@ -19,10 +19,10 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061926"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查詢通知-sys. dm_qn_subscriptions
@@ -32,13 +32,13 @@ ms.locfileid: "68061926"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|訂閱的識別碼。|  
+|**id**|**int**|訂閱的識別碼。|  
 |**database_id**|**int**|執行通知查詢的資料庫識別碼。 這個資料庫會儲存與這項訂閱有關的資訊。|  
 |**sid**|**Varbinary （85）**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
 |**object_id**|**int**|儲存訂閱參數相關資訊的內部資料表識別碼。|  
-|**已**|**datetime**|建立訂閱的日期和時間。|  
-|**限制**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意：實際引發時間可能大於指定的超時時間。不過，如果在指定的超時時間之後（但在引發訂閱之前）發生使訂閱失效的變更， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]就會確保在進行變更時引發。|  
-|**狀態**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
+|**created**|**datetime**|建立訂閱的日期和時間。|  
+|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意：實際引發時間可能大於指定的超時時間。不過，如果在指定的超時時間之後（但在引發訂閱之前）發生使訂閱失效的變更， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]就會確保在進行變更時引發。|  
+|**status**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [查詢通知相關的動態管理檢視 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

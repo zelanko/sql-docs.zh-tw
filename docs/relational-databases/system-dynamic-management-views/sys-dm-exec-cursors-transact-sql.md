@@ -19,10 +19,10 @@ ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097846"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
@@ -50,11 +50,11 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|保留這個資料指標的工作階段識別碼。|  
 |**cursor_id**|**int**|資料指標物件的識別碼。|  
 |**name**|**nvarchar(256)**|由使用者自訂的資料指標名稱。|  
-|**屬性**|**nvarchar(256)**|指定資料指標的屬性。 下列屬性的值會串連來形成這個資料行的值：<br />宣告介面<br />資料指標類型 <br />資料指標並行<br />資料指標範圍<br />資料指標巢狀層級<br /><br /> 例如，在此資料行中傳回的值可能是 "TSQL &#124; Dynamic &#124; 開放式 &#124; Global （0）"。|  
-|**sql_handle**|**Varbinary （64）**|宣告資料指標的批次文字控制代碼。|  
+|**properties**|**nvarchar(256)**|指定資料指標的屬性。 下列屬性的值會串連來形成這個資料行的值：<br />宣告介面<br />資料指標類型 <br />資料指標並行<br />資料指標範圍<br />資料指標巢狀層級<br /><br /> 例如，在此資料行中傳回的值可能是 "TSQL &#124; Dynamic &#124; 開放式 &#124; Global （0）"。|  
+|**sql_handle**|**varbinary(64)**|宣告資料指標的批次文字控制代碼。|  
 |**statement_start_offset**|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即從該處開始。 可以與**sql_handle**、 **statement_end_offset**和[sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動態管理函數一起使用，以取得要求的目前執行語句。|  
 |**statement_end_offset**|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即在該處結束。 可以與**sql_handle**、 **statement_start_offset**和**sys. dm_exec_sql_text**動態管理函數一起使用，以取得要求的目前執行語句。|  
-|**plan_generation_num**|**Bigint**|可用來在重新編譯之後區分計畫執行個體的序號。|  
+|**plan_generation_num**|**bigint**|可用來在重新編譯之後區分計畫執行個體的序號。|  
 |**creation_time**|**datetime**|建立這個資料指標的時間戳記。|  
 |**is_open**|**bit**|指定資料指標是否開啟。|  
 |**is_async_population**|**bit**|指定背景執行緒是否仍非同步擴展 KEYSET 或 STATIC 資料指標。|  
@@ -63,10 +63,10 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_size**|**int**|傳回有關提取緩衝區大小的資訊。<br /><br /> 1 = Transact-SQL 資料指標。 這可設為 API 資料指標的較高值。|  
 |**fetch_buffer_start**|**int**|如果是 FAST_FORWARD 和 DYNAMIC 資料指標，如果該資料指標未開啟，或是位於第一個資料列前面，它會傳回 0。 否則，它會傳回 -1。<br /><br /> 如果是 STATIC 和 KEYSET 資料指標，如果該資料指標未開啟，它會傳回 0，如果資料指標位於最後一個資料列後面，它會傳回 -1。<br /><br /> 否則，它會傳回其所在位置的資料列號碼。|  
 |**ansi_position**|**int**|提取緩衝區內的資料指標位置。|  
-|**worker_time**|**Bigint**|執行這個資料指標之工作者所花的時間 (以百萬分之一秒為單位)。|  
-|**顯示**|**Bigint**|資料指標執行的讀取次數。|  
-|**寫入**|**Bigint**|資料指標執行的寫入次數。|  
-|**dormant_duration**|**Bigint**|自從這個資料指標上的最後一個查詢 (開啟或提取) 啟動以來的毫秒數。|  
+|**worker_time**|**bigint**|執行這個資料指標之工作者所花的時間 (以百萬分之一秒為單位)。|  
+|**reads**|**bigint**|資料指標執行的讀取次數。|  
+|**writes**|**bigint**|資料指標執行的寫入次數。|  
+|**dormant_duration**|**bigint**|自從這個資料指標上的最後一個查詢 (開啟或提取) 啟動以來的毫秒數。|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
@@ -74,17 +74,17 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>備註  
  下表提供有關資料指標宣告介面的資訊，並包括屬性資料行的可能值。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |API|資料指標是使用其中一個資料存取 API (ODBC, OLEDB) 宣告。|  
 |TSQL|資料指標是使用 Transact-SQL DECLARE CURSOR 語法宣告。|  
   
  下表提供有關資料指標類型的資訊，並包括屬性資料行的可能值。  
   
-|類型|描述|  
+|類型|說明|  
 |----------|-----------------|  
 |索引鍵集|資料指標宣告為索引鍵集。|  
-|Dynamic|資料指標宣告為動態。|  
+|動態|資料指標宣告為動態。|  
 |快照式|資料指標宣告為快照集或靜態。|  
 |Fast_Forward|資料指標宣告為向前快轉。|  
   
@@ -117,7 +117,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   

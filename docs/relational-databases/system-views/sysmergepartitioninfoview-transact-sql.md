@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094819"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68094819"
 |**pubid**|**uniqueidentifier**|目前發行項所屬發行集的識別碼。|  
 |**昵稱**|**int**|發行項識別的暱稱對應。|  
 |**column_tracking**|**int**|指出是否實作發行項的資料行追蹤。|  
-|**狀態**|**tinyint**|指出發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 未同步-發行資料表的初始處理腳本會在下一次執行快照集代理程式時執行。<br /><br /> **2** = 主動-已執行發行資料表的初始處理腳本。|  
+|**status**|**tinyint**|指出發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 未同步-發行資料表的初始處理腳本會在下一次執行快照集代理程式時執行。<br /><br /> **2** = 主動-已執行發行資料表的初始處理腳本。|  
 |**conflict_table**|**sysname**|包含目前發行項的衝突記錄之本機資料表的名稱。 提供這份資料表只供參考，自訂衝突解決常式可以修改或刪除它的內容，管理員也可以直接修改或刪除它的內容。|  
 |**creation_script**|**nvarchar(255)**|這個發行項的建立指令碼。|  
 |**conflict_script**|**nvarchar(255)**|這個發行項的衝突指令碼。|  
@@ -57,16 +57,16 @@ ms.locfileid: "68094819"
 |**destination_object**|**sysname**|在訂閱者端建立之資料表的名稱。|  
 |**destination_owner**|**sysname**|目的地物件的擁有者名稱。|  
 |**resolver_clsid**|**nvarchar(50)**|自訂衝突解析程式的識別碼。 如果是商務邏輯處理常式，這個值便是 NULL。|  
-|**subset_filterclause**|**Nvarchar （1000）**|這個發行項的篩選子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|這個發行項的篩選子句。|  
 |**missing_col_count**|**int**|發行項所遺漏的已發行資料行數目。|  
-|**missing_cols**|**Varbinary （128）**|描述發行項所遺漏之資料行的點陣圖。|  
-|**excluded_cols**|**Varbinary （128）**|發行項所排除之資料行的點陣圖。|  
+|**missing_cols**|**varbinary(128)**|描述發行項所遺漏之資料行的點陣圖。|  
+|**excluded_cols**|**varbinary(128)**|發行項所排除之資料行的點陣圖。|  
 |**excluded_col_count**|**int**|發行項所排除的資料行數目。|  
-|**資料行**|**Varbinary （128）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**Varbinary （128）**|描述發行項所刪除之資料行的點陣圖。|  
+|**資料行**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|描述發行項所刪除之資料行的點陣圖。|  
 |**resolver_info**|**nvarchar(255)**|自訂衝突解析程式所需要之其他資訊的儲存體。|  
 |**view_sel_proc**|**Nvarchar （290）**|合併代理程式用來初始擴展動態篩選發行集的發行項以及列舉任何篩選發行集中已變更之資料列的預存程序名稱。|  
-|**gen_cur**|**Bigint**|產生發行項基底資料表的本機變更數目。|  
+|**gen_cur**|**bigint**|產生發行項基底資料表的本機變更數目。|  
 |**vertical_partition**|**int**|指定是否啟用資料表發行項的資料行篩選。 **0**表示沒有垂直篩選，而且會發行所有資料行。|  
 |**identity_support**|**int**|指定是否啟用自動識別範圍處理。 **1**表示已啟用識別範圍處理， **0**表示不支援識別範圍。|  
 |**before_image_objid**|**int**|追蹤資料表物件識別碼。 當啟用了發行集的資料分割變更最佳化時，追蹤資料表包含特定索引鍵資料行值。|  
@@ -80,13 +80,13 @@ ms.locfileid: "68094819"
 |**upload_options**|**tinyint**|定義是否能在訂閱者端進行變更或從訂閱者上傳變更，它可以是下列值之一。<br /><br /> **0** = 在訂閱者端進行的更新沒有任何限制;所有變更都會上傳到發行者。<br /><br /> **1** = 允許在訂閱者端進行變更，但不會上傳至發行者。<br /><br /> **2** = 在訂閱者端不允許變更。|  
 |**published_in_tran_pub**|**bit**|指出合併式發行集中的發行項也在交易式發行集中發行。<br /><br /> **0** = 發行項未在交易式發行項中發行。<br /><br /> **1** = 發行項也在交易式發行項中發行。|  
 |**輕巧**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**Nchar （32）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|在更新之前，資料表的檢視之識別碼。|  
 |**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不復寫刪除。<br /><br /> **1** = 已複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當*delete_tracking*的值為**0**時，必須在發行者端手動移除在訂閱者端刪除的資料列，而且必須在訂閱者端手動移除在發行者端刪除的資料列。<br /><br /> 注意： **0**值會導致非聚合。|  
 |**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作已停用。<br /><br /> **1** = 無法在訂閱者或發行者端套用的變更，一律會導致補償動作復原這些變更，這是合併式複寫的預設行為。<br /><br /> 注意： **0**值會導致非聚合。|  
-|**pub_range**|**Bigint**|發行者識別範圍大小。|  
-|**格或**|**Bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
+|**pub_range**|**bigint**|發行者識別範圍大小。|  
+|**格或**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
 |**閾值**|**int**|識別範圍臨界值百分比。|  
 |**stream_blob_columns**|**bit**|指出是否使用二進位大型物件資料行的資料流最佳化。 **1**表示嘗試優化。|  
 |**preserve_rowguidcol**|**bit**|指出複寫是否使用現有的 rowguid 資料行。 值為**1**表示使用現有的 ROWGUIDCOL 資料行。 **0**表示複寫已加入 ROWGUIDCOL 資料行。|  

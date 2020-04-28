@@ -18,10 +18,10 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096017"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
@@ -57,8 +57,8 @@ sp_trace_generateevent [ @eventid = ] event_id
 |-----------------|-----------------|  
 |**0**|沒有錯誤。|  
 |**1**|未知的錯誤。|  
-|**第**|指定的事件無效。 事件可能不存在，也可能是不適合預存程序。|  
-|**十三**|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|**3**|指定的事件無效。 事件可能不存在，也可能是不適合預存程序。|  
+|**十三**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
   
 ## <a name="remarks"></a>備註  
  **sp_trace_generateevent**會執行**xp_trace_\* **擴充預存程式先前執行的許多動作。 使用**sp_trace_generateevent** ，而不是**xp_trace_generate_event**。  

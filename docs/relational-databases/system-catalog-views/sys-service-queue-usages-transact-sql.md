@@ -20,10 +20,10 @@ ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8b1cd1c1688922404b882069d9e100504dfbcb14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078710"
 ---
 # <a name="sysservice_queue_usages-transact-sql"></a>sys.service_queue_usages (Transact-SQL)

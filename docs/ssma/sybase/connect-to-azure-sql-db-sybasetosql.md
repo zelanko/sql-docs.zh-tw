@@ -10,10 +10,10 @@ ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083476"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>連線到 Azure SQL DB (SybaseToSQL)
@@ -21,7 +21,7 @@ ms.locfileid: "68083476"
   
 若要存取此對話方塊，請在 **[檔案**] 功能表上，選取 [連線**到 Azure SQL DB]**。 如果您先前已連線，此命令會**重新連接到 AZURE SQL DB。**  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **伺服器名稱**  
   
 選取或輸入用來連接到 Azure SQL DB 的伺服器名稱。  
@@ -39,9 +39,9 @@ ms.locfileid: "68083476"
   
 **密碼**  
   
-輸入使用者名稱的密碼。  
+請輸入使用者名稱的密碼。  
   
-**加密**  
+**Encrypt**  
   
 SSMA 建議 Azure SQL DB 的加密連接。  
   

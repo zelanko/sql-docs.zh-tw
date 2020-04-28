@@ -17,10 +17,10 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051504"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>設定轉換和遷移選項（AccessToSQL）
@@ -31,13 +31,13 @@ SSMA 有四組設定設定和四種模式來進行這些設定：預設值、開
   
 這些設定會在本檔的「使用者介面參考」一節中說明。 如需有關設定以及如何在每個模式中套用設定的詳細資訊，請參閱下列主題：  
   
--   [專案設定（轉換）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [專案設定 (轉換)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [專案設定（遷移）](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [專案設定 (移轉)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
 -   [專案設定 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [專案設定（類型對應）](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [專案設定 (類型對應)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
   
 -   [專案設定（SQL Azure）](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   

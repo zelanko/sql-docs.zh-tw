@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060206"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68060206"
 |**mailitem_id**|**int**|包含附加檔案之郵件項目的識別碼。|  
 |**名稱**|**Nvarchar （520）**|附加檔案的檔案名稱。 當**attach_query_result**為1且**query_attachment_filename**為 Null 時，Database Mail 會建立任意檔案名。|  
 |**filesize**|**int**|附加檔案的大小 (以位元組為單位)。|  
-|**attachment**|**varbinary(max)**|附件的內容。|  
+|**附件**|**varbinary(max)**|附加檔案的內容。|  
 |**last_mod_date**|**datetime**|資料列上次修改的日期和時間。|  
 |**last_mod_user**|**sysname**|上次修改資料列的使用者。|  
   

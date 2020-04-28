@@ -20,10 +20,10 @@ ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0318322442aae5a72b25b2eb011e03a82fe84525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066767"
 ---
 # <a name="syssp_cdc_drop_job-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)

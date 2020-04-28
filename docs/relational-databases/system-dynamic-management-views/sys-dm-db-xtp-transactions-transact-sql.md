@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc5f12e50c1e7a7d639acdbf9a244406ce9366c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097930"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "68097930"
     
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|xtp_transaction_id|**Bigint**|XTP 異動管理員中這項交易的內部識別碼。|  
-|transaction_id|**Bigint**|交易識別碼。 在其他交易相關 DMV 中透過交易識別碼聯結，例如 sys.dm_tran_active_transactions。<br /><br /> 0 代表僅限 XTP 交易，例如，原生編譯的預存程序啟動的交易。|  
+|xtp_transaction_id|**bigint**|XTP 異動管理員中這項交易的內部識別碼。|  
+|transaction_id|**bigint**|交易識別碼。 在其他交易相關 DMV 中透過交易識別碼聯結，例如 sys.dm_tran_active_transactions。<br /><br /> 0 代表僅限 XTP 交易，例如，原生編譯的預存程序啟動的交易。|  
 |session_id|**smallint**|執行此交易之工作階段的工作階段識別碼。 與 sys.dm_exec_sessions 聯結。|  
-|begin_tsn|**Bigint**|交易的開始交易序號。|  
-|end_tsn|**Bigint**|交易的結束交易序號。|  
-|state|**int**|交易的狀態：<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
+|begin_tsn|**bigint**|交易的開始交易序號。|  
+|end_tsn|**bigint**|交易的結束交易序號。|  
+|State|**int**|交易的狀態：<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|交易狀態的描述。|  
-|結果|**int**|此交易的結果。 以下是可能的值。<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
+|result|**int**|此交易的結果。 以下是可能的值。<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
 |result_desc|**nvarchar**|此交易的結果。 以下是可能的值。<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|僅供內部使用|  
 |is_speculative|**bit**|僅供內部使用|  
@@ -56,7 +56,7 @@ ms.locfileid: "68097930"
 |write_set_row_count|**int**|僅供內部使用|  
 |scan_set_count|**int**|僅供內部使用|  
 |savepoint_garbage_count|**int**|僅供內部使用|  
-|log_bytes_required|**Bigint**|僅供內部使用|  
+|log_bytes_required|**bigint**|僅供內部使用|  
 |count_of_allocations|**int**|僅供內部使用|  
 |allocated_bytes|**int**|僅供內部使用|  
 |reserved_bytes|**int**|僅供內部使用|  
@@ -78,6 +78,6 @@ ms.locfileid: "68097930"
  需要伺服器的 VIEW DATABASE STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

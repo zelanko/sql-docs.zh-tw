@@ -21,10 +21,10 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056526"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
@@ -50,7 +50,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>引數  
 `[ @plan_id = ] 'plan\_id'`指定維護計畫識別碼。 *plan_id*是**uniqueidentifier**。  
   
-`[ @db_name = ] 'database\_name'`指定要從維護計畫中刪除的資料庫名稱。 *database_name*是**sysname**。  
+`[ @db_name = ] 'database\_name'`指定要從維護計畫中刪除的資料庫名稱。 *database_name* 為 **sysname**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

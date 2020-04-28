@@ -21,10 +21,10 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102379"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "68102379"
 | 資料行名稱  | 資料類型  | 描述 |
 | :------ |:----------| :-----|
 |object_id  |**int**|       使用者資料表識別碼。 為支援使用者資料表而存在的內部記憶體最佳化資料表 (例如 Hk/資料行存放區組合時的非資料列儲存或刪除的資料列) 與其父系有相同的 object_id。 |
-|xtp_object_id  |**Bigint**|    對應至內部記憶體最佳化資料表的記憶體內部 OLTP 物件識別碼，可用於支援使用者資料表。 它是資料庫內唯一且可因物件的存留期而變更。 
+|xtp_object_id  |**bigint**|    對應至內部記憶體最佳化資料表的記憶體內部 OLTP 物件識別碼，可用於支援使用者資料表。 它是資料庫內唯一且可因物件的存留期而變更。 
 |type|  **int** |   內部資料表的類型。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **Nvarchar （60）**|   類型的描述<br/><br/>DELETED_ROWS_TABLE -> 追蹤資料行存放區索引之已刪除資料列的內部資料表<br/>USER_TABLE -> 包含同資料列使用者資料的資料表<br/>DICTIONARIES_TABLE -> 資料行存放區索引字典<br/>SEGMENTS_TABLE -> 資料行存放區索引的壓縮區段<br/>ROW_GROUPS_INFO_TABLE -> 資料行存放區索引之壓縮資料列群組的相關中繼資料<br/>INTERNAL OFF-ROW DATA TABLE -> 用來儲存非資料列資料行的內部資料表。 在此情況下，minor_id 會反映 column_id。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 磁碟式記錄資料表的熱結尾。 記錄中插入的資料列會先插入此內部記憶體最佳化資料表。 有一項背景工作會以非同步方式，將此內部資料表的資料列移至磁碟式記錄資料表。 |
+|type_desc| **nvarchar(60)**|   類型的描述<br/><br/>DELETED_ROWS_TABLE -> 追蹤資料行存放區索引之已刪除資料列的內部資料表<br/>USER_TABLE -> 包含同資料列使用者資料的資料表<br/>DICTIONARIES_TABLE -> 資料行存放區索引字典<br/>SEGMENTS_TABLE -> 資料行存放區索引的壓縮區段<br/>ROW_GROUPS_INFO_TABLE -> 資料行存放區索引之壓縮資料列群組的相關中繼資料<br/>INTERNAL OFF-ROW DATA TABLE -> 用來儲存非資料列資料行的內部資料表。 在此情況下，minor_id 會反映 column_id。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 磁碟式記錄資料表的熱結尾。 記錄中插入的資料列會先插入此內部記憶體最佳化資料表。 有一項背景工作會以非同步方式，將此內部資料表的資料列移至磁碟式記錄資料表。 |
 |minor_id|  **int**|    0 表示使用者或內部資料表<br/><br/>非 0 表示 off-row 儲存的資料行識別碼。 sys.columns 中有 column_id 的結合。<br/><br/>每個 off-row 儲存的資料行在此系統檢視中都有對應的資料列。|
 
 ## <a name="permissions"></a>權限  

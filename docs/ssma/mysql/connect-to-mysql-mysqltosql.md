@@ -10,10 +10,10 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103236"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
@@ -21,12 +21,12 @@ ms.locfileid: "68103236"
   
 若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 MySQL]**。 如果您先前已連線，此命令會**重新連接到 MySQL**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **提供者**  
   
 可用的 MySQL 提供者為 MySQL ODBC 5.1 驅動程式（受信任）。  
   
-**模式**  
+**Mode**  
   
 預設模式為 [標準] 模式。 在標準模式中，您可以輸入或選取 MySQL、伺服器名稱、伺服器埠、使用者名稱和密碼的值。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68103236"
   
 輸入 MySQL 伺服器名稱。 這是標準模式選項。  
   
-**伺服器埠**  
+**伺服器通訊埠**  
   
 輸入伺服器埠。 預設的伺服器埠是3306。 這是標準模式選項。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68103236"
   
 **密碼**  
   
-輸入使用者名稱的密碼。  
+請輸入使用者名稱的密碼。  
   
 **SSL**  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098547"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 資料定義 - CREATE ACTION
@@ -82,7 +82,7 @@ FOR
   
 |動作類型|描述|  
 |-----------------|-----------------|  
-|**連結**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意：如果此動作的開頭不是`https://`或`https://`，瀏覽器將無法使用此動作，除非**SafetyOptions**設為**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
+|**URL**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意：如果此動作的開頭不是`https://`或`https://`，瀏覽器將無法使用此動作，除非**SafetyOptions**設為**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
 |**HTML**|傳回的動作字串是 HTML 指令碼。 應將此字串儲存至檔案，而且應使用網際網路瀏覽器來轉譯此檔案。 在此情況下，可能會將整個指令碼視為已產生 HTML 的一部分執行。|  
 |**句**|傳回的動作字串是一種語句，必須藉由將 command 物件的**ICommand：： SetText**方法設定為字串，並呼叫**ICommand：： Execute**方法來執行。 如果未能成功執行此命令，會傳回錯誤。|  
 |**集中**|傳回的動作字串是 MDX 語句，必須藉由將 command 物件的**ICommand：： SetText**方法設定為字串，並呼叫**ICommand：： Execute**方法來執行。 要求的介面識別碼（IID）應為**IDataset**。 如果已建立資料集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料集。|  

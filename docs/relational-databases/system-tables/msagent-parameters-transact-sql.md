@@ -18,10 +18,10 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095698"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68095698"
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|**MSagent_profiles**資料表中的設定檔識別碼。|  
 |**parameter_name**|**sysname**|參數名稱。|  
-|**value**|**nvarchar(255)**|參數的值。|  
+|**值**|**nvarchar(255)**|參數的值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

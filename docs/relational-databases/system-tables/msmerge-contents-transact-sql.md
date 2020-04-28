@@ -18,10 +18,10 @@ ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089939"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
@@ -33,14 +33,14 @@ ms.locfileid: "68089939"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
-|**代數**|**Bigint**|**Tablenick**和**rowguid**所識別的資料列產生。|  
-|**partchangegen**|**Bigint**|可能變更了資料列是否屬於篩選發行集的最後一項資料變更之相關聯層代 (Generation)。|  
+|**代數**|**bigint**|**Tablenick**和**rowguid**所識別的資料列產生。|  
+|**partchangegen**|**bigint**|可能變更了資料列是否屬於篩選發行集的最後一項資料變更之相關聯層代 (Generation)。|  
 |**衍生**|**Varbinary （501）**|用來維護這個資料列之變更記錄的訂閱者暱稱、版本號碼組。|  
 |**colvl**|**Varbinary （7489）**|資料行版本資訊。|  
 |**筆**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|識別邏輯記錄中每個對應子資料列在**MSmerge_contents** （藉由**rowguid**）中的最上層父資料列。|  
 |**logical_record_lineage**|**Varbinary （501）**|用來維護邏輯記錄中最上層父資料列之變更記錄的訂閱者暱稱、版本號碼組。 邏輯記錄中所有子資料列的這個值都是 NULL。|  
-|**logical_relation_change_gen**|**Bigint**|造成在邏輯記錄中重新對齊的最後一項變更之相關聯層代 (Generation) 值，現有的資料列會移入或移出邏輯記錄。|  
+|**logical_relation_change_gen**|**bigint**|造成在邏輯記錄中重新對齊的最後一項變更之相關聯層代 (Generation) 值，現有的資料列會移入或移出邏輯記錄。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

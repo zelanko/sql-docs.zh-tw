@@ -12,10 +12,10 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fe9e05f0078f0d1a9d3ab5ea6e2763ac28207085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091795"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>使用範例主控台指令碼檔 (SybaseToSQL)
@@ -73,19 +73,19 @@ ms.locfileid: "68091795"
 -   **ConversionAndDataMigrationSample .xml：**  
      這個範例可讓使用者執行端對端遷移，使其無法轉換為資料移轉。 如下所示，需要變更的必要屬性值清單如下：  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `map-schema`  
   
     源資料庫與目標架構的架構對應。  
   
-    **Attribute**  
+    **特性**  
   
     -   `source-schema:`指定需要轉換的源資料庫。  
   
     -   `sql-server-schema`：指定要遷移至的目標資料庫  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `convert-schema`  
   
@@ -93,11 +93,11 @@ ms.locfileid: "68091795"
   
     -   如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`convert-schema`主控台指令檔的範例4所示。  
   
-    **Attribute**  
+    **特性**  
   
     `object-name`：指定需要轉換的源資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `synchronize-target`  
   
@@ -105,11 +105,11 @@ ms.locfileid: "68091795"
   
     -   如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`synchronize-target`主控台指令檔的範例3所示。  
   
-    **Attribute**  
+    **特性**  
   
     `object-name:`指定需要建立的 sql server 資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`  
   
-    **命令名稱**  
+    **命令名稱：**  
   
     `migrate-data`  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68091795"
   
     -   如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`migrate-data`主控台指令檔的範例2中所示。  
   
-    **Attribute**  
+    **特性**  
   
     `object-name:`指定需要遷移的源資料庫/資料表名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`  
   

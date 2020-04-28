@@ -18,10 +18,10 @@ ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079219"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68079219"
 |**object_id**|**int**|與來源資料表擷取執行個體相關聯之變更資料表的識別碼。|  
 |**required_column_update**|**bit**|指出擷取資料行的資料類型已在來源資料表中修改。 這項修改會更改變更資料表中的資料行。|  
 |**ddl_command**|**nvarchar(max)**|套用至來源資料表的 DDL 陳述式。|  
-|**ddl_lsn**|**binary （10）**|與 DDL 修改之認可相關聯的記錄序號 (LSN)。|  
+|**ddl_lsn**|**binary(10)**|與 DDL 修改之認可相關聯的記錄序號 (LSN)。|  
 |**ddl_time**|**datetime**|對來源資料表進行 DDL 變更的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

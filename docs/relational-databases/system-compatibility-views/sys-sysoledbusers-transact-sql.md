@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076528"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -41,12 +41,12 @@ ms.locfileid: "68076528"
 |**rmtsrvid**|**smallint**|伺服器的安全性識別碼 (SID)。|  
 |**rmtloginame**|**Nvarchar （** 128 **）**|**Loginsid**對應至連結**rmtservid**的遠端登入名稱。|  
 |**rmtpassword**|**Nvarchar （** 128 **）**|傳回 NULL。|  
-|**loginsid**|**Varbinary （** 85 **）**|所要對應的本機登入 SID。|  
-|**狀態**|**smallint**|如果是 1，則對應應該使用使用者的認證。|  
+|**loginsid**|**varbinary(** 85 **)**|所要對應的本機登入 SID。|  
+|**status**|**smallint**|如果是 1，則對應應該使用使用者的認證。|  
 |**changedate**|**datetime**|上次變更對應資訊的日期。|  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

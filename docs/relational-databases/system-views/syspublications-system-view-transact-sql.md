@@ -18,10 +18,10 @@ ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094773"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (系統檢視) (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "68094773"
 |**name**|**sysname**|與發行集相關聯的唯一名稱。|  
 |**pubid**|**int**|提供發行集唯一識別碼的識別欄位。|  
 |**repl_freq**|**tinyint**|複寫頻率：<br /><br /> **0** = 以交易為基礎（交易式）。<br /><br /> **1** = 已排程的資料表重新整理（快照集）。|  
-|**狀態**|**tinyint**|發行集狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 使用中。|  
+|**status**|**tinyint**|發行集狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 使用中。|  
 |**sync_method**|**tinyint**|同步處理方法：<br /><br /> **0** = 原生大量複製程式公用程式（BCP）。<br /><br /> **1** = 字元 BCP。<br /><br /> **3** = 並行，這表示會使用原生 BCP，但在快照集期間，不會鎖定資料表。<br /><br /> **4** = Concurrent_c，這表示會使用字元 BCP，但在快照集期間，不會鎖定資料表。|  
-|**snapshot_jobid**|**binary （16）**|識別已排程要產生初始快照集的代理程式作業。|  
+|**snapshot_jobid**|**binary(16)**|識別已排程要產生初始快照集的代理程式作業。|  
 |**independent_agent**|**bit**|指定這個發行集是否有獨立的散發代理程式。<br /><br /> **0** = 發行集使用共用的散發代理程式，而且每個發行者資料庫/訂閱者資料庫配對都有單一的共用代理程式。<br /><br /> **1** = 此發行集有一個獨立的散發代理程式。|  
 |**immediate_sync**|**bit**|指出每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案， **1**表示每次執行代理程式時都會建立它們。|  
 |**enabled_for_internet**|**bit**|指出發行集的同步處理檔案是否透過檔案傳輸協定（FTP）和其他服務公開到網際網路，其中**1**表示可以從網際網路存取。|  
@@ -66,18 +66,18 @@ ms.locfileid: "68094773"
 |**conflict_policy**|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 發行者在衝突中獲勝。<br /><br /> **2** = 訂閱者在衝突中獲勝。<br /><br /> **3** = 重新初始化訂閱。|  
 |**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** =. msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列來儲存交易。<br /><br /> **2** = .sql，用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息佇列已被取代，不再受到支援。|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼 (GUID) 指定發行集發行在 Active Directory 中，GUID 是對應的 Active Directory 發行集物件 objectGUID。 如果是 NULL，發行集就不會發行在 Active Directory 中。<br /><br /> 注意：不再支援發行至 Active Directory。|  
-|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> ****  = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> ****  = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。|  
+|**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90**  = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100**  = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。|  
 |**allow_initialize_from_backup**|**bit**|指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 **1**表示可以從備份初始化訂閱，而**0**表示它們不能。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。|  
 |**min_autonosync_lsn**|**二進位（1）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|指出是否支援發行集的結構描述複寫。<br /><br /> **1** = 複寫在發行者端執行的 DDL 語句。<br /><br /> **0** = 表示不復寫 DDL 語句。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
-|**選項**|**int**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用點對點複寫。<br /><br /> **0x2** -僅發行對等複寫的本機變更。<br /><br /> **0x4** -針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者啟用。<br /><br /> **0x8** -啟用點對點衝突偵測。|  
+|**options**|**int**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用點對點複寫。<br /><br /> **0x2** -僅發行對等複寫的本機變更。<br /><br /> **0x4** -針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者啟用。<br /><br /> **0x8** -啟用點對點衝突偵測。|  
 |**originator_id**|**smallint**|針對衝突偵測的目的，識別點對點複寫拓撲中的每個節點。 如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

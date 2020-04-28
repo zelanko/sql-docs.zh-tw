@@ -10,10 +10,10 @@ ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 22825425e7f3eb18994e37efa996fcd784a257f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084545"
 ---
 # <a name="project-settings-gui-db2tosql"></a>專案設定（GUI）（DB2ToSQL）
@@ -25,7 +25,7 @@ GUI 專案設定可讓您設定資料在 [**資料**] 索引標籤上的顯示�
   
 -   使用 [**預設專案設定**] 對話方塊，即可設定所有專案的使用者介面選項。 若要存取 GUI 設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，從 [**遷移目標版本**] 下拉式下選取 [需要查看或變更設定] 的 [遷移專案類型]，然後按一下左窗格底部的 [ **GUI** ]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源的最大資料列數目**  
 設定所選來源資料表的 [**資料**] 索引標籤上顯示的資料列數目。  
   

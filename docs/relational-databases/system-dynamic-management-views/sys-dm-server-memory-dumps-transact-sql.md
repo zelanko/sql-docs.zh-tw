@@ -19,10 +19,10 @@ ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090805"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68090805"
 |-----------------|---------------|-----------------|  
 |**名稱**|**nvarchar(256)**|記憶體傾印檔的路徑和名稱。 不可為 null。|  
 |**creation_time**|**datetimeoffset(7)**|建立檔案的日期與時間。 不可為 null。|  
-|**size_in_bytes**|**Bigint**|檔案大小 (以位元組為單位)。 可為 Null。|  
+|**size_in_bytes**|**bigint**|檔案大小 (以位元組為單位)。 可為 Null。|  
   
 ## <a name="general-remarks"></a>一般備註  
  傾印類型可以是迷你傾印、所有執行緒傾印或完整傾印。 檔案的副檔名為 .mdmp。  

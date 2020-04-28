@@ -10,10 +10,10 @@ ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a53c3005aca2e599d8ceb0b973a58bcf2ca5e14c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060133"
 ---
 # <a name="refresh-from-database-db2tosql"></a>從資料庫重新整理（DB2ToSQL）
@@ -31,7 +31,7 @@ ms.locfileid: "68060133"
   
 若要存取 [**從資料庫**重新整理] 對話方塊，請以滑鼠右鍵按一下 DB2 Metadata Explorer 中的物件，然後按一下 [**從資料庫**重新整理]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **Collapse （-）**  
 折迭所有物件群組以隱藏個別物件。  
   

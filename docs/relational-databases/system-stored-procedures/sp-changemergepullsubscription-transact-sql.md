@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090855"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||使用這個項目的目的，只是為了與舊版相容。 這是用於連接到 FTP 服務的使用者名稱。|  
 |**ftp_password**||使用這個項目的目的，只是為了與舊版相容。 這是用來連接到 FTP 服務的使用者密碼。|  
 |**ftp_port**||使用這個項目的目的，只是為了與舊版相容。 這是散發者的 FTP 服務通訊埠編號。|  
-|**名稱**||指定在聯結篩選的 WHERE 子句或邏輯記錄關聯性中使用這個函數時的 HOST_NAME() 值。|  
+|**hostname**||指定在聯結篩選的 WHERE 子句或邏輯記錄關聯性中使用這個函數時的 HOST_NAME() 值。|  
 |**internet_login**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
 |**internet_password**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**1**|當連接到主控 Web 同步處理的 Web 伺服器時，使用 Windows 驗證。|  
@@ -82,11 +82,11 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**2**|同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將發行者定義為遠端伺服器或連結的伺服器。|  
 |**sync_type**|**自動**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
 ||**無**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
-|**use_ftp**|**真正**|利用 FTP 而不是一般通訊協定來擷取快照集。|  
+|**use_ftp**|**true**|利用 FTP 而不是一般通訊協定來擷取快照集。|  
 ||**false**|利用一般通訊協定來擷取快照集。|  
-|**use_web_sync**|**真正**|訂閱可以透過 HTTP 來同步處理。|  
+|**use_web_sync**|**true**|訂閱可以透過 HTTP 來同步處理。|  
 ||**false**|訂閱不能透過 HTTP 來同步處理。|  
-|**use_interactive_resolver**|**真正**|在協調期間，使用互動式解析程式。|  
+|**use_interactive_resolver**|**true**|在協調期間，使用互動式解析程式。|  
 ||**false**|不使用互動式解析程式。|  
 |**working_directory**||當指定利用 FTP 來傳送快照集檔案的選項時，傳送快照集檔案之目錄的完整路徑。|  
 |NULL (預設值)||傳回*屬性*的支援值清單。|  
@@ -105,7 +105,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changemergepullsubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看和修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   

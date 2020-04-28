@@ -20,10 +20,10 @@ ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f2f4b8ea0184d063a6423f27fdf2cf9c450a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078653"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "68078653"
 |bounding_box_xmax|**float （53）**|周框方塊右上角的 X 座標，其中一個： Null = 不適用於給定的鑲嵌式配置（例如 GEOGRAPHY_GRID） *n* = 如果 tessellation_scheme GEOMETRY_GRID，則為 x-max 座標值|  
 |bounding_box_ymax|**float （53）**|周框方塊右上角的 Y 座標，其中一個： Null = 不適用於給定的鑲嵌式配置（例如 GEOGRAPHY_GRID） *n* = 如果 tessellation_scheme GEOMETRY_GRID，則為 y-max 座標值|  
 |level_1_grid|**smallint**|上層方格的方格密度。 如果 tessellation_scheme 是 GEOMETRY_GRID 或 GEOGRAPHY_GRID，下列其中一個值： 16 = 4 x 4 方格（低） 64 = 8 x 8 方格（中） 256 = 16 x 16 方格（高） Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
-|level_1_grid_desc|**Nvarchar （60）**|最上層方格的方格密度，其中一個： LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
+|level_1_grid_desc|**nvarchar(60)**|最上層方格的方格密度，其中一個： LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
 |level_2_grid|**smallint**|第二層方格的方格密度。 如果 tessellation_scheme 是 GEOMETRY_GRID 或 GEOGRAPHY_GRID，下列其中一個值： 16 = 4 x 4 方格（低） 64 = 8 x 8 方格（中） 256 = 16 x 16 方格（高） Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
-|level_2_grid_desc|**Nvarchar （60）**|第二層方格的方格密度，其中一個： LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
+|level_2_grid_desc|**nvarchar(60)**|第二層方格的方格密度，其中一個： LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
 |level_3_grid|**smallint**|第三層方格的方格密度。   如果 tessellation_scheme 是 GEOMETRY_GRID 或 GEOGRAPHY_GRID，下列其中一個值： 16 = 4 x 4 方格（低） 64 = 8 x 8 方格（中） 256 = 16 x 16 方格（高） Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
-|level_3_grid_desc|**Nvarchar （60）**|第三層方格的方格密度，以下其中一個： LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
+|level_3_grid_desc|**nvarchar(60)**|第三層方格的方格密度，以下其中一個： LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
 |level_4_grid|**smallint**|第四層方格的方格密度。 如果 tessellation_scheme 是 GEOMETRY_GRID 或 GEOGRAPHY_GRID，下列其中一個值： 16 = 4 x 4 方格（低） 64 = 8 x 8 方格（中） 256 = 16 x 16 方格（高） Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
-|level_4_grid_desc|**Nvarchar （60）**|第四層方格的方格密度，以下其中一個： < LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
+|level_4_grid_desc|**nvarchar(60)**|第四層方格的方格密度，以下其中一個： < LOW MEDIUM HIGH Null = 不適用於給定的空間索引類型或鑲嵌式配置。  使用新的 SQL Server 11 鑲嵌時，則傳回 NULL。|  
 |cells_per_object|**int**|每個空間物件的資料格數目，其中一個： If tessellation_scheme 是 GEOMETRY_GRID 或 GEOGRAPHY_GRID， *n* = 每個物件的資料格數目 Null = 不適用於給定的空間索引類型或鑲嵌式配置|  
   
 ## <a name="permissions"></a>權限  
@@ -59,10 +59,10 @@ ms.locfileid: "68078653"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [空間索引總覽](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [spatial_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   

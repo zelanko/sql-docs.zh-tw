@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68065389"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
@@ -55,9 +55,7 @@ StructureColumn('structure column name')
  在目前內容（行% {line/}，資料行% {column/}）的 '% {structure/} ' 父採礦結構中，找不到 '% {結構-資料行名稱/} ' 採礦結構資料行。  
   
 ## <a name="examples"></a>範例  
- 我們將會針對這些範例使用以下採礦結構。 請注意，此採礦結構包含兩個巢狀資料表資料行 `Products` 和 `Hobbies`。 
-  `Hobbies` 資料行中的巢狀資料表具有單一資料行，該資料行會當做巢狀資料表的索引鍵。 
-  `Products` 資料行中的巢狀資料表是一個複雜巢狀資料表，它具有索引鍵資料行及用於輸入的其他資料行。 下列範例說明如何設計資料採礦結構來包含許多不同的資料行 (雖然模型可能不會使用每一個資料行)。 雖然某些資料行在模型層級上對於模式的一般化可能沒有什麼幫助，但是對於鑽研可能會很有幫助。  
+ 我們將會針對這些範例使用以下採礦結構。 請注意，此採礦結構包含兩個巢狀資料表資料行 `Products` 和 `Hobbies`。 `Hobbies` 資料行中的巢狀資料表具有單一資料行，該資料行會當做巢狀資料表的索引鍵。 `Products` 資料行中的巢狀資料表是一個複雜巢狀資料表，它具有索引鍵資料行及用於輸入的其他資料行。 下列範例說明如何設計資料採礦結構來包含許多不同的資料行 (雖然模型可能不會使用每一個資料行)。 雖然某些資料行在模型層級上對於模式的一般化可能沒有什麼幫助，但是對於鑽研可能會很有幫助。  
   
 ```  
 CREATE MINING STRUCTURE [MyStructure]   

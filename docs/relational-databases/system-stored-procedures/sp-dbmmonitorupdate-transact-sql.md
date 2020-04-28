@@ -19,10 +19,10 @@ ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061266"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
@@ -31,8 +31,7 @@ ms.locfileid: "68061266"
   針對每個鏡像資料庫插入新資料表資料列以更新資料庫鏡像監視狀態資料表，並截斷比目前保留期限舊的資料列。 預設的保留期限為 7 天 (168 小時)。 更新資料表時， **sp_dbmmonitorupdate**會評估效能計量。  
   
 > [!NOTE]  
->  
-  **sp_dbmmonitorupdate** 初次執行時，會建立 資料庫鏡像狀態 資料表，並在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。  
+>  **sp_dbmmonitorupdate** 初次執行時，會建立 資料庫鏡像狀態 資料表，並在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +62,7 @@ sp_dbmmonitorupdate [ database_name ]
  更新資料庫的鏡像狀態時， **sp_dbmmonitorupdate**會檢查已指定警告臨界值之任何鏡像效能度量的最新值。 如果該值超過臨界值，此程序就會在事件記錄檔中新增參考事件。 所有速率都是上一次更新後的平均值。 如需詳細資訊，請參閱 [使用鏡像效能標準的警告臨界值與警示 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ## <a name="permissions"></a>權限  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例只更新 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的鏡像狀態。  

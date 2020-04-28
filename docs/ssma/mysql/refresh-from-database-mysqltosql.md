@@ -10,10 +10,10 @@ ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066699"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>從資料庫重新整理 (MySQLToSQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68066699"
   
 若要存取 [**從資料庫**重新整理] 對話方塊，請以滑鼠右鍵按一下 MySQL 中繼資料瀏覽器中的物件，然後按一下 [**從資料庫**重新整理]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**Collapse （-）**|折迭所有物件群組以隱藏個別物件。|  
 |**展開（+）**|展開 [所有物件群組] 以顯示個別物件。|  
 |**隱藏/顯示相等的物件**|如果 MySQL 資料庫和 SSMA 中的物件中繼資料相同，則會隱藏清單中的物件。|  

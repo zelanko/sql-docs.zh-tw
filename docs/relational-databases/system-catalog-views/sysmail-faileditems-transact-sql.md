@@ -18,10 +18,10 @@ ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060208"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
@@ -39,9 +39,9 @@ ms.locfileid: "68060208"
 |**copy_recipients**|**varchar(max)**|訊息副本收件者的電子郵件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|名稱未顯示於訊息標頭之訊息副本收件者的電子郵件地址。|  
 |**主題**|**Nvarchar （510）**|訊息的主旨。|  
-|**人體**|**varchar(max)**|訊息內文。|  
+|**body**|**varchar(max)**|訊息的主體。|  
 |**body_format**|**Varchar （20）**|訊息的主體格式。 可能的值是 TEXT 和 HTML。|  
-|**重要性**|**Varchar （6）**|訊息的**重要性**參數。|  
+|**importance**|**Varchar （6）**|訊息的**重要性**參數。|  
 |**重音**|**Varchar （12）**|訊息的**敏感度**參數。|  
 |**file_attachments**|**varchar(max)**|附加至電子郵件訊息中的檔案名稱清單，用分號分隔各檔案名稱。|  
 |**Attachment_encoding**|**Varchar （20）**|郵件附加檔案的類型。|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098519"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 資料定義 - ALTER CUBE
@@ -91,7 +91,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  提供新維度成員之父系名稱的有效字串運算式，若維度成員是建立於根節點，便無法提供。  
   
- *基*  
+ *MemberName*  
  提供成員名稱的有效字串運算式。  
   
  *Key_Value*  
@@ -139,7 +139,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  為所移動的維度成員，提供新父系名稱的有效字串運算式。  
   
- *基*  
+ *MemberName*  
  提供成員名稱的有效字串運算式。  
   
  Unsigned_*整數*  
@@ -151,7 +151,7 @@ CELL CALCULATION Calculation_Name
  UPDATE DIMENSION MEMBER 子句讓您能修改成員屬性，以及與成員相關聯的自訂成員公式。  
   
 ### <a name="arguments"></a>引數  
- *基*  
+ *MemberName*  
  提供成員名稱的有效字串運算式。  
   
  *MDX_Expression*  

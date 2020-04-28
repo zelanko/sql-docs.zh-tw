@@ -18,10 +18,10 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066815"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
@@ -71,8 +71,7 @@ sp_help_log_shipping_secondary_database
 |**disconnect_users**|如果設為 1，當執行還原作業時，會從次要資料庫中斷使用者的連接。 預設值 = 0。|  
 |**block_size**|用來做為備份裝置區塊大小的大小 (以位元組為單位)。|  
 |**buffer_count**|備份或還原作業所用的緩衝區總數。|  
-|**max_transfer_size**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向備份裝置發出的最大輸入或輸出要求大小 (以位元組為單位)。|  
+|**max_transfer_size**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向備份裝置發出的最大輸入或輸出要求大小 (以位元組為單位)。|  
 |**restore_threshold**|在產生警示之前，還原作業之間所能經歷的時間 (以分鐘為單位)。|  
 |**threshold_alert**|當超出還原臨界值時所產生的警示。|  
 |**threshold_alert_enabled**|決定是否啟用還原臨界值警示。<br /><br /> 1 = 已啟用。<br /><br /> 0 = 已停用。|  

@@ -20,10 +20,10 @@ ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078668"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
@@ -42,18 +42,18 @@ ms.locfileid: "68078668"
 |**default_database**|**sysname**|DATABASE = 選項中所給定的預設資料庫名稱。<br /><br /> 指定 NULL = DEFAULT。|  
 |**default_namespace**|**Nvarchar （384）**|NAMESPACE = 選項中所指定的預設命名空間， `https://tempuri.org`如果改為指定 default，則為。|  
 |**default_result_schema**|**tinyint**|SCHEMA = 選項的預設值。<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
-|**default_result_schema_desc**|**Nvarchar （60）**|SCHEMA = 選項的預設值描述。<br /><br /> 無<br /><br /> 標準|  
+|**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = 選項的預設值描述。<br /><br /> 無<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|已指定 0 = CHARACTER_SET = SQL 選項。<br /><br /> 已指定 1 = CHARACTER_SET = XML 選項。|  
 |**is_session_enabled**|**bit**|已指定 0 = SESSION = DISABLE 選項。<br /><br /> 已指定 1 = SESSION = ENABLED 選項。|  
 |**session_timeout**|**int**|在 SESSION_TIMEOUT = 選項中指定的值。|  
-|**login_type**|**Nvarchar （60）**|這個端點所接受的驗證種類。<br /><br /> WINDOWS<br /><br /> MIXED|  
+|**login_type**|**nvarchar(60)**|這個端點所接受的驗證種類。<br /><br /> WINDOWS<br /><br /> MIXED|  
 |**header_limit**|**int**|SOAP 標頭所能接受的最大值。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [端點目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

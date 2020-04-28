@@ -18,10 +18,10 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054983"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
@@ -69,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|作業停止執行的時間。|  
 |**next_scheduled_run_date**|**datetime**|排程下次執行作業的時間。|  
 |**job_history_id**|**int**|作業記錄資料表中之作業記錄的識別碼。|  
-|**消息**|**nvarchar(1024)**|上次執行作業期間所產生的訊息。|  
+|**message**|**nvarchar(1024)**|上次執行作業期間所產生的訊息。|  
 |**run_status**|**int**|上次執行作業所傳回的狀態：<br /><br /> **0** = 錯誤失敗<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 狀態不明|  
 |**operator_id_emailed**|**int**|作業完成時，收到電子郵件通知的操作員識別碼。|  
 |**operator_id_netsent**|**int**|作業完成時，透過**net send**通知的操作員識別碼。|  

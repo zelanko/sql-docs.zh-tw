@@ -18,10 +18,10 @@ ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 362735d33f835c7b66e4f0994fd5c4ff6f084f15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102187"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68102187"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|識別提供預先計算的資料分割之唯一識別碼的資料行。|  
 |**publication_number**|**smallint**|發行集編號，儲存在**sysmergepublications**中。|  
-|**maxgen_whenadded**|**Bigint**|在將資料列插入這份資料表時，發行者端已知的最高層代 (Generation)。|  
+|**maxgen_whenadded**|**bigint**|在將資料列插入這份資料表時，發行者端已知的最高層代 (Generation)。|  
 |**using_partition_groups**|**bit**|指出資料分割是否屬於使用預先計算的資料分割之發行集，它可以是下列值之一：<br /><br /> **0** = 發行集不使用預先計算的資料分割。<br /><br /> **1** = 發行集使用預先計算的資料分割<br /><br /> 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
 |**HOST_NAME_FN**|**nvarchar(128)**|在使用參數化資料列篩選器來產生資料分割時所提供的值。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。|  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070858"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>資料採礦延伸模組 (DMX) 陳述式
@@ -60,7 +60,7 @@ ms.locfileid: "68070858"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)|資料定義語言 (DDL) 的一部份。 用於定義新的採礦模型 (包括培訓)，或從資料庫卸除現有的採礦模型。|  
+|[資料採礦延伸模組 &#40;DMX&#41; 資料定義陳述式](../dmx/dmx-statements-data-definition.md)|資料定義語言 (DDL) 的一部份。 用於定義新的採礦模型 (包括培訓)，或從資料庫卸除現有的採礦模型。|  
 |[資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)|資料操作語言 (DML) 的一部份。 用於處理現有的採礦模型，包括瀏覽模型或建立預測。|  
   
 ## <a name="see-also"></a>另請參閱  

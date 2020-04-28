@@ -12,10 +12,10 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103016"
 ---
 # <a name="generating-reports-mysqltosql"></a>產生報表 (MySQLToSQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68103016"
     > [!IMPORTANT]  
     > 輸出報告與評量報告不同。 前者是已執行命令的效能報告，後者則是以程式設計方式取用的 XML 報表。  
   
-    適用于輸出報告的命令選項（從 Sl）。 否。 2-4），請參閱[執行 SSMA 主控台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)一節。  
+    適用于輸出報告的命令選項（從 Sl）。 不可以。 2-4），請參閱[執行 SSMA 主控台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)一節。  
   
 2.  使用報表詳細資訊設定，指出您想要在輸出報告中的詳細程度：  
   

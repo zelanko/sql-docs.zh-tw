@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097800"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.databases dm_exec_distributed_requests （Transact-sql）
@@ -38,7 +38,7 @@ ms.locfileid: "68097800"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**Varbinary （64）**|此視圖的索引鍵。 與要求相關聯的唯一數值識別碼。|在系統的所有要求中都是唯一的。|  
+|sql_handle|**varbinary(64)**|此視圖的索引鍵。 與要求相關聯的唯一數值識別碼。|在系統的所有要求中都是唯一的。|  
 |execution_id|**Nvarchar （32**|與執行此查詢的會話相關聯的唯一數值識別碼。||  
 |status|**Nvarchar （32**|要求的目前狀態。|「擱置」、「授權」、「AcquireSystemResources」、「正在初始化」、「計畫」、「正在剖析」、「AquireResources」、「執行中」、「取消中」、「完成」、「失敗」、「已取消」。|  
 |error_id|**Nvarchar （36）**|與要求相關聯之錯誤的唯一識別碼（如果有的話）。|如果未發生錯誤，則設為 Null。|  
@@ -48,7 +48,7 @@ ms.locfileid: "68097800"
   
 ## <a name="see-also"></a>另請參閱  
  [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7ad2fd6c51f5b5463e4e4c10745b2ff245bd691d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083667"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.databases sp_rda_reconcile_columns （Transact-sql）

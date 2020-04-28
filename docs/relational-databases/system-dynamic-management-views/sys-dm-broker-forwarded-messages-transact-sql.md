@@ -19,10 +19,10 @@ ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87f471a91aad067dd1662f243cdbafd73d335979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099149"
 ---
 # <a name="sysdm_broker_forwarded_messages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099149"
 |**from_service_name**|**nvarchar(512)**|這則訊息的來源服務名稱。 NULLABLE。|  
 |**from_broker_instance**|**nvarchar(512)**|主控這則訊息之來源服務的 Broker 識別碼。 NULLABLE。|  
 |**adjacent_broker_address**|**nvarchar(512)**|這則訊息所送往的網路位址。 NULLABLE。|  
-|**message_sequence_number**|**Bigint**|對話方塊中訊息的序號。 NULLABLE。|  
+|**message_sequence_number**|**bigint**|對話方塊中訊息的序號。 NULLABLE。|  
 |**message_fragment_number**|**int**|如果將對話訊息片段化，這即是這則傳輸訊息包含的片段號碼。 NULLABLE。|  
 |**hops_remaining**|**tinyint**|在到達最後目的地之前可重新傳輸訊息的次數。 每次轉送訊息時，這個數字就會減 1。 NULLABLE。|  
 |**time_to_live**|**int**|訊息保持作用中的最長時間。 當這個值到達 0 時，即捨棄訊息。 NULLABLE。|  
@@ -51,8 +51,8 @@ ms.locfileid: "68099149"
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Service Broker 相關的動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

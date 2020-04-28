@@ -18,10 +18,10 @@ ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079085"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68079085"
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**object_name**|**sysname**|物件的名稱。|  
-|**object_type**|**char （2）**|物件類型：<br /><br /> **u** = 資料表。<br /><br /> **t** = 觸發程式。<br /><br /> **p** = 預存程式。|  
+|**object_type**|**char(2)**|物件類型：<br /><br /> **u** = 資料表。<br /><br /> **t** = 觸發程式。<br /><br /> **p** = 預存程式。|  
 |**篇**|**sysname**|物件之相關發行項的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

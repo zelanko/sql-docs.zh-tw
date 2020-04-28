@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051566"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
@@ -38,23 +38,22 @@ ms.locfileid: "68051566"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|識別一組遺漏的索引。 這個識別碼在伺服器中是唯一的。<br /><br /> 其他資料行提供有關群組中被視為遺漏之索引的所有查詢資訊。<br /><br /> 一個索引群組僅能包含一個索引。|  
-|**unique_compiles**|**Bigint**|由於此遺漏索引群組而獲益之編譯與重新編譯的次數。 許多不同查詢的編譯和重新編譯都可以構成這個資料行的值。|  
-|**user_seeks**|**Bigint**|群組中建議索引適用之使用者查詢所造成的搜尋次數。|  
-|**user_scans**|**Bigint**|群組中建議索引適用之使用者查詢所造成的掃描次數。|  
+|**unique_compiles**|**bigint**|由於此遺漏索引群組而獲益之編譯與重新編譯的次數。 許多不同查詢的編譯和重新編譯都可以構成這個資料行的值。|  
+|**user_seeks**|**bigint**|群組中建議索引適用之使用者查詢所造成的搜尋次數。|  
+|**user_scans**|**bigint**|群組中建議索引適用之使用者查詢所造成的掃描次數。|  
 |**last_user_seek**|**datetime**|群組中建議索引適用之使用者查詢所造成的上次搜尋日期和時間。|  
 |**last_user_scan**|**datetime**|群組中建議索引適用之使用者查詢所造成的上次掃描日期和時間。|  
 |**avg_total_user_cost**|**float**|可依據群組中的索引降低之使用者查詢的平均成本。|  
 |**avg_user_impact**|**float**|實作此遺漏索引群組時，使用者查詢可能獲得的平均效益百分比。 這個值表示如果實作此遺漏索引群組，平均查詢成本將會依此百分比降低。|  
-|**system_seeks**|**Bigint**|群組中建議索引適用之系統查詢 (例如 Auto Stats 查詢) 所造成的搜尋次數。 如需詳細資訊，請參閱[Auto Stats 事件類別](../../relational-databases/event-classes/auto-stats-event-class.md)。|  
-|**system_scans**|**Bigint**|群組中建議索引適用之系統查詢所造成的掃描次數。|  
+|**system_seeks**|**bigint**|群組中建議索引適用之系統查詢 (例如 Auto Stats 查詢) 所造成的搜尋次數。 如需詳細資訊，請參閱[Auto Stats 事件類別](../../relational-databases/event-classes/auto-stats-event-class.md)。|  
+|**system_scans**|**bigint**|群組中建議索引適用之系統查詢所造成的掃描次數。|  
 |**last_system_seek**|**datetime**|群組中建議索引適用之系統查詢所造成的上次系統搜尋日期和時間。|  
 |**last_system_scan**|**datetime**|群組中建議索引適用之系統查詢所造成的上次系統掃描日期和時間。|  
 |**avg_total_system_cost**|**float**|可依據群組中的索引降低之系統查詢的平均成本。|  
 |**avg_system_impact**|**float**|實作此遺漏索引群組時，系統查詢可能獲得的平均效益百分比。 這個值表示如果實作此遺漏索引群組，平均查詢成本將會依此百分比降低。|  
   
 ## <a name="remarks"></a>備註  
- 
-  **sys.dm_db_missing_index_group_stats** 傳回的資訊會在每次執行查詢時更新，而非每次編譯或重新編譯查詢時更新。 使用狀況統計資料不會一直保存，只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留使用狀況統計資料，應該定期製作遺漏索引資訊的備份副本。  
+ **sys.dm_db_missing_index_group_stats** 傳回的資訊會在每次執行查詢時更新，而非每次編譯或重新編譯查詢時更新。 使用狀況統計資料不會一直保存，只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留使用狀況統計資料，應該定期製作遺漏索引資訊的備份副本。  
 
   >[!NOTE]
   >此 DMV 的結果集限制為600個數據列。 每個資料列都包含一個遺漏的索引。 如果您有超過600的遺漏索引，您應該處理現有的遺漏索引，以便您可以查看較新的索引。
@@ -66,7 +65,7 @@ ms.locfileid: "68051566"
  下列範例說明如何使用 **sys.dm_db_missing_index_group_stats** 動態管理檢視。  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. 尋找改善使用者查詢之預期效果最高的 10 個遺漏索引  
- 下列查詢會決定哪 10 個遺漏的索引會為使用者查詢產生最高的預期累積改進 (採用遞減順序)。  
+ 下列查詢決定哪 10 個遺漏查詢對使用者查詢產生的預期累計改善效果最高 (以遞減順序排列)。  
   
 ```  
 SELECT TOP 10 *  

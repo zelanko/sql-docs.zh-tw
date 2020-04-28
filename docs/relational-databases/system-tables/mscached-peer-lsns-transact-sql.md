@@ -18,10 +18,10 @@ ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078148"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68078148"
 |**originator_db**|**sysname**|原始發行集資料庫的名稱。|  
 |**originator_publication_id**|**int**|識別原始發行集。|  
 |**originator_db_version**|**int**|識別來源資料庫的版本號碼。|  
-|**originator_lsn**|**Varbinary （16）**|原始交易的 LSN。|  
+|**originator_lsn**|**varbinary(16)**|原始交易的 LSN。|  
   
 ## <a name="remarks"></a>備註  
  LSN 值只會在插入之後立即使用，它們在系統中並沒有長久的意義。  

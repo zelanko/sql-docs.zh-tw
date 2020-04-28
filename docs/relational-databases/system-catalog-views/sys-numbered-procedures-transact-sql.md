@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d0fa4c5ef671d643f85fa2a1a2d0caa62d00d86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102306"
 ---
 # <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68102306"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|預存程序的物件識別碼。|  
 |**procedure_number**|**smallint**|這個程序在物件內的編號，大於或等於 2。|  
-|**清晰**|**nvarchar(max)**|定義這個程序的 SQL Server 文字。<br /><br /> NULL = 已加密。|  
+|**definition**|**nvarchar(max)**|定義這個程序的 SQL Server 文字。<br /><br /> NULL = 已加密。|  
   
 > [!NOTE]  
 >  編號程序並不支援 XML 和 CLR 參數。  

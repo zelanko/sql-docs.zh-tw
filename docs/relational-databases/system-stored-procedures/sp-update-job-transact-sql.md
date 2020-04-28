@@ -18,10 +18,10 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084889"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
@@ -81,7 +81,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**0**|永不|  
 |**1**|成功時|  
 |**2**|失敗時|  
-|**第**|一律|  
+|**3**|一律|  
   
 `[ @notify_level_email = ] email_level`指定在此作業完成時傳送電子郵件的時間。 *email_level*為**int**。*email_level*使用與*eventlog_level*相同的值。  
   
@@ -108,7 +108,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  **sp_update_job**只會變更提供參數值的設定。 如果省略某個參數，就會保留目前的設定。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+ 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   

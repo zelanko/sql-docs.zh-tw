@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070349"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
@@ -72,18 +72,18 @@ sp_columns [ @table_name = ] object
 |**DATA_TYPE**|**smallint**|ODBC 資料類型的整數碼。 如果這是無法對應於 ODBC 類型的資料類型，它就是 NULL。 原生資料類型名稱會在**TYPE_NAME**資料行中傳回。|  
 |**TYPE_NAME**|**sysname**|代表資料類型的字串。 基礎 DBMS 提供這個資料類型名稱。|  
 |**精密**|**int**|有效位數的數目。 **PRECISION**資料行的傳回值以基底10為底數。|  
-|**長**|**int**|資料的傳輸大小。<sup>1</sup>|  
+|**LENGTH**|**int**|資料的傳輸大小。<sup>1</sup>|  
 |**尺度**|**smallint**|小數點右側的位數。|  
 |**RADIX**|**smallint**|數值資料類型的基底。|  
 |**Null**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
-|**標記**|**Varchar （254）**|這個欄位一律會傳回 NULL。|  
+|**備註**|**Varchar （254）**|這個欄位一律會傳回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 除了**datetime**和 SQL-92 **interval**資料類型之外，此資料行與**DATA_TYPE**資料行相同。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**和 SQL-92 **interval**資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|字元或整數資料類型資料行的最大長度 (以位元組為單位)。 其他所有資料類型的這個資料行都會傳回 NULL。|  
 |**ORDINAL_POSITION**|**int**|資料行在物件中的序數位置。 物件中的第一個資料行是 1。 這個資料行一律會傳回值。|  
 |**IS_NullABLE**|**Varchar （254）**|物件中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 為此資料行傳回的值與**可為 null**資料行傳回的值不同。|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程式所使用的資料類型。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
+|**SS_DATA_TYPE**|**tinyint**|擴充預存程序所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
   
  <sup>1</sup>如需詳細資訊，請參閱 Microsoft ODBC 檔集。  
   
@@ -103,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回指定之資料表的資料行資訊。  
   
 ```  

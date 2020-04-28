@@ -10,10 +10,10 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103238"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
@@ -21,7 +21,7 @@ ms.locfileid: "68103238"
   
 若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 SQL Azure]**。 如果您先前已連線，此命令會**重新連接到 SQL Azure。**  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **伺服器名稱**  
   
 選取或輸入用來連接到 SQL Azure 的伺服器名稱。  
@@ -39,9 +39,9 @@ ms.locfileid: "68103238"
   
 **密碼**  
   
-輸入使用者名稱的密碼。  
+請輸入使用者名稱的密碼。  
   
-**加密**  
+**Encrypt**  
   
 SSMA 建議 SQL Azure 的加密連接。  
   

@@ -12,10 +12,10 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086820"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安裝 SSMA for MySQL 用戶端 (MySqlToSql)
@@ -61,7 +61,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 1.  按兩下 [適用于 MySQL *n*的 SSMA]。安裝 .exe，其中*n*是組建編號。  
   
-2.  在 [歡迎] 頁面中按 [下一步] ****。  
+2.  在 [歡迎] 頁面中按 [下一步]****。  
   
     如果您沒有安裝必要條件，則會出現一則訊息，指出您必須先安裝必要的元件。 再次執行安裝程式之前，請確定您已安裝所有必要條件。  
   
@@ -69,7 +69,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移
   
 4.  在 [選擇安裝類型] 頁面上，按一下 [**一般**]。  
   
-5.  按一下 **[安裝]**。  
+5.  按一下 [Install]  。  
   
 > [!IMPORTANT]  
 > 1.  安裝新版本之前，請先卸載所有舊版的 SSMA for MySQL。  

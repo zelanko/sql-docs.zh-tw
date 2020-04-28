@@ -19,10 +19,10 @@ ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099206"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
@@ -32,9 +32,9 @@ ms.locfileid: "68099206"
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char （2）**|所稽核之實體的類別類型。 對應至寫入到 audit 記錄檔的 class_type，並由**get_audit_file （）** 函數傳回。 不可為 Null。|  
-|**class_type_desc**|**Nvarchar （120）**|可稽核的實體名稱。 不可為 Null。|  
-|**securable_class_desc**|**Nvarchar （120）**|對應到正在稽核之 class_type 的安全性實體物件。 如果 class_type 未對應到安全性實體物件，則為 NULL。 可以與 sys.dm_audit_actions 中的 class_desc 產生關聯。|  
+|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應至寫入到 audit 記錄檔的 class_type，並由**get_audit_file （）** 函數傳回。 不可為 Null。|  
+|**class_type_desc**|**nvarchar(120)**|可稽核的實體名稱。 不可為 Null。|  
+|**securable_class_desc**|**nvarchar(120)**|對應到正在稽核之 class_type 的安全性實體物件。 如果 class_type 未對應到安全性實體物件，則為 NULL。 可以與 sys.dm_audit_actions 中的 class_desc 產生關聯。|  
   
 ## <a name="permissions"></a>權限  
  主體必須具有**SELECT**許可權。 根據預設值，這會授與給 Public。  
@@ -46,7 +46,7 @@ ms.locfileid: "68099206"
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT 規格 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   

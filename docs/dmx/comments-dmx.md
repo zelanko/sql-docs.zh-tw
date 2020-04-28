@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68071047"
 ---
 # <a name="comments-dmx"></a>註解 (DMX)
@@ -24,19 +24,15 @@ ms.locfileid: "68071047"
   
  下列是撰寫註解的基本指導方針：  
   
--   您可以在註解中使用任何英數字元或符號。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會忽略註解中的所有字元。  
+-   您可以在註解中使用任何英數字元或符號。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會忽略註解中的所有字元。  
   
 -   陳述式或指令碼中的註解並無長度上限。 一個註解可以由一或多行組成。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列註解字元類型：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列註解字元類型：  
   
--   **（雙正斜線）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者在單獨一行撰寫註解。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將雙斜線開始到該行結束的所有內容評估為註解的一部分。 若要建立多行註解，請在註解的每一行開頭使用雙斜線。 如需有關此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41;的雙斜線](../dmx/double-slash-comment-dmx.md)。  
+-   **（雙正斜線）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者在單獨一行撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將雙斜線開始到該行結束的所有內容評估為註解的一部分。 若要建立多行註解，請在註解的每一行開頭使用雙斜線。 如需有關此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41;的雙斜線](../dmx/double-slash-comment-dmx.md)。  
   
--   **--（雙連字號）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者在單獨一行撰寫註解。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將雙連字號開始到該行結束的所有內容評估為註解的一部分。 若要建立多行註解，請在註解的每一行開頭使用雙連字號。 如需有關此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41; 摘要](../dmx/comment-dmx-summary.md)。  
+-   **--（雙連字號）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者在單獨一行撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將雙連字號開始到該行結束的所有內容評估為註解的一部分。 若要建立多行註解，請在註解的每一行開頭使用雙連字號。 如需有關此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41; 摘要](../dmx/comment-dmx-summary.md)。  
   
 -   **/\*...\*/（斜線-星號字元配對）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者單獨一行撰寫註解，甚至在可執行程式碼中撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]會將開啟的批註配對（/*）中的所有內容評估為批註\*中的關閉批註配對（/）。 若要建立多行批註，請使用開啟的批註字元配對（/\*）啟動批註，並以關閉批註字元配對（\*/）結束批註。 任一行註解中不應包含其他任何註解字元。 如需此批註字元的詳細資訊，請參閱[&#40;批註&#41; &#40;DMX&#41;的斜線](../dmx/slash-star-comment-dmx.md)。  
   

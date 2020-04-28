@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060549"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -46,20 +46,20 @@ ms.locfileid: "68060549"
 |**system_type_id**|**Tinyint NOT Null**|順序物件之資料類型的系統類型識別碼。|  
 |**user_type_id**|**int NOT NULL**|如使用者所定義，順序物件的資料類型識別碼。|  
 |**有效位數**|**Tinyint NOT Null**|資料類型的最大有效位數。|  
-|**尺度**|**Tinyint NOT Null**|資料類型的最大小數位數。 小數位數會與有效位數一起傳回，提供使用者完整的中繼資料。 順序物件的小數位數永遠是 0，因為只允許整數類型。|  
+|**scale**|**Tinyint NOT Null**|資料類型的最大小數位數。 小數位數會與有效位數一起傳回，提供使用者完整的中繼資料。 順序物件的小數位數永遠是 0，因為只允許整數類型。|  
 |**current_value**|**SQL_variant NOT Null**|最後一個強制值。 也就是從執行**sp_sequence_get_range**程式的下一個 value FOR 函數或最後一個值的最近執行傳回的值。 如果從未使用順序，則會傳回 START WITH 值。|  
 |**is_exhausted**|**位 NOT Null**|0 表示可從順序產生多個值。 1 表示順序物件已經達到 MAXVALUE 參數，而且順序未設定為 CYCLE。 NEXT VALUE FOR 函數會傳回錯誤，直到使用 ALTER SEQUENCE 重新啟動順序為止。|  
 |**last_used_value**|**SQL_variant Null**|傳回[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)函數所產生的最後一個值。 適用于 SQL Server 2017 和更新版本。|  
   
 ## <a name="permissions"></a>權限  
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本中，目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本中，目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [&#40;Transact-sql&#41;的下一個值](../../t-sql/functions/next-value-for-transact-sql.md)   
  [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

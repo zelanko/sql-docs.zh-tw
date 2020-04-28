@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096036"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -82,8 +82,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  如果同時指定*stop_time*和*max_file_size* ，而且未指定 TRACE_FILE_ROLLOVER，則當到達指定的停止時間或檔案大小上限時，追蹤就會在上方。 如果指定*stop_time*、 *max_file_size*和 TRACE_FILE_ROLLOVER，追蹤就會在指定的停止時間停止，假設追蹤不會填滿磁片磁碟機。  
   
-`[ @filecount = ] 'max_rollover_files'`指定要使用相同的基底檔案名來維護的最大數目或追蹤檔案。 *max_rollover_files*為**int**，大於1。 只有在指定了 TRACE_FILE_ROLLOVER 選項時，這個參數才有效。 當指定*max_rollover_files*時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在開啟新的追蹤檔案之前，會先刪除最舊的追蹤檔，以嘗試維護不超過*max_rollover_files*的追蹤檔案。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在基礎檔案名稱上附加數字來追蹤這些追蹤檔的存在時間。  
+`[ @filecount = ] 'max_rollover_files'`指定要使用相同的基底檔案名來維護的最大數目或追蹤檔案。 *max_rollover_files*為**int**，大於1。 只有在指定了 TRACE_FILE_ROLLOVER 選項時，這個參數才有效。 當指定*max_rollover_files*時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在開啟新的追蹤檔案之前，會先刪除最舊的追蹤檔，以嘗試維護不超過*max_rollover_files*的追蹤檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在基礎檔案名稱上附加數字來追蹤這些追蹤檔的存在時間。  
   
  例如，當*trace_file*參數指定為 "c:\mytrace" 時，名稱為 "c：\ mytrace_123. .trc" 的檔案會比名稱為 "c：\ mytrace_124. .trc" 的檔案舊。 如果*max_rollover_files*設定為2，則 SQL Server 會先刪除檔案 "c：\ mytrace_123. .trc"，再建立追蹤檔案 "c：\ mytrace_125. .trc"。  
   
@@ -98,7 +97,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |1|未知的錯誤。|  
 |10|無效的選項。 當指定的選項不相容時，便傳回這個代碼。|  
 |12|未建立檔案。|  
-|13|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|13|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
 |14|無效停止時間。 當指定的停止時間已發生過時，便傳回這個代碼。|  
 |15|無效的參數。 當使用者提供不相容的參數時，便傳回這個代碼。|  
   
@@ -136,7 +135,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Batch starting**  
   
-    -   **Exception**  
+    -   **例外狀況**  
   
     -   **加**  
   
@@ -150,8 +149,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   
   

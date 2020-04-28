@@ -21,10 +21,10 @@ ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067766"
 ---
 # <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup. fn_backup_instance_config （Transact-sql）
@@ -43,7 +43,7 @@ ms.locfileid: "68067766"
 managed_backup.fn_backup_db_config ()  
 ```  
   
-##  <a name="Arguments"></a> 引數  
+##  <a name="arguments"></a><a name="Arguments"></a>參量  
  None  
   
 ## <a name="table-returned"></a>傳回的資料表  

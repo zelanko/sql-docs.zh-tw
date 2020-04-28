@@ -10,10 +10,10 @@ ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072471"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>使用 SSMA 專案 (SybaseToSQL)
@@ -56,7 +56,7 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
   
 1.  在 [檔案]**** 功能表上，選取 [新增專案]****。  
   
-    此時會出現 [新增專案]**** 對話方塊。  
+    [新增專案]  對話方塊隨即出現。  
   
 2.  在 [**名稱**] 方塊中，輸入專案的名稱。  
   
@@ -64,11 +64,11 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
   
 4.  在 [**遷移至**] 下拉式選，選取用於遷移的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目標版本。 可用的選項如下︰  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -96,7 +96,7 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
   
         儲存中繼資料可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請不要選取任何核取方塊。  
   
-    2.  按一下 [儲存]**** 按鈕。  
+    2.  按一下 [儲存]  按鈕。  
   
         SSMA 會剖析 Sybase ASE 架構，並將中繼資料儲存至專案檔。  
   

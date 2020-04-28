@@ -13,10 +13,10 @@ ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: be1530bdec1c1523a873dc93b1d70e6e72c880ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103017"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>建立變數值檔案 (MySQLToSQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68103017"
   
 **範例：**  
   
-**範例1：**  
+**範例 1：**  
   
 ```xml  
 <!--Sample of variable value file commands-->  

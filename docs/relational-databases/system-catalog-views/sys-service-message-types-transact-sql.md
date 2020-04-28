@@ -20,10 +20,10 @@ ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078743"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
@@ -36,8 +36,8 @@ ms.locfileid: "68078743"
 |**name**|**sysname**|訊息類型的名稱，它在資料庫中是唯一的。 不是 NULLABLE。|  
 |**message_type_id**|**int**|訊息類型的識別碼，它在資料庫中是唯一的。 不是 NULLABLE。|  
 |**principal_id**|**int**|擁有這個訊息類型的資料庫主體識別碼。 NULLABLE。|  
-|**驗證**|**char （2）**|在傳送這種類型的訊息之前，已由 Broker 完成的驗證。 不是 NULLABLE。 值為下列其中之一：<br /><br /> N = 無<br /><br /> X = XML<br /><br /> E = 空的|  
-|**validation_desc**|**Nvarchar （60）**|在傳送這種類型的訊息之前，已由 Broker 完成的驗證描述。 NULLABLE。 值為下列其中之一：<br /><br /> 無<br /><br /> XML<br /><br /> EMPTY|  
+|**驗證**|**char(2)**|在傳送這種類型的訊息之前，已由 Broker 完成的驗證。 不是 NULLABLE。 值為下列其中之一：<br /><br /> N = 無<br /><br /> X = XML<br /><br /> E = 空的|  
+|**validation_desc**|**nvarchar(60)**|在傳送這種類型的訊息之前，已由 Broker 完成的驗證描述。 NULLABLE。 值為下列其中之一：<br /><br /> 無<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|如果是使用 XML 結構描述來進行驗證，則使用該結構描述集合的識別碼。<br /><br /> 否則為 NULL。|  
   
 ## <a name="permissions"></a>權限  

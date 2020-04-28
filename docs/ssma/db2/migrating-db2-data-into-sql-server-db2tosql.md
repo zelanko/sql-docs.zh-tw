@@ -10,10 +10,10 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074098"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉至 SQL Server （DB2ToSQL）
@@ -55,7 +55,7 @@ ms.locfileid: "68074098"
   
 **遷移資料**  
   
-1.  請確認下列事項：  
+1.  驗證下列項目：  
   
     -   DB2 提供者會安裝在執行 SSMA 的電腦上。  
   

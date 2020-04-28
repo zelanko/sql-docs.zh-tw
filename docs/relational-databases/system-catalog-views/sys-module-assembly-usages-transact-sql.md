@@ -20,10 +20,10 @@ ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bd525cc13b3716bf8173dcdd9350fdb9b2412c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102424"
 ---
 # <a name="sysmodule_assembly_usages-transact-sql"></a>sys.module_assembly_usages (Transact-SQL)

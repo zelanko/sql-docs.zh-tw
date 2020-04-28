@@ -21,10 +21,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079322"
 ---
 # <a name="sysedge_constraints-transact-sql"></a>sys.databases edge_constraints （Transact-sql）
@@ -38,7 +38,7 @@ ms.locfileid: "68079322"
 |**is_disabled**|**bit**|1 = 邊緣條件約束是 disbled。<br /><br /> 0 = 已啟用邊緣條件約束。|  
 |**is_not_trusted**|**bit**|1 = 邊緣條件約束尚未被系統驗證。<br /><br /> 0 = Edge 條件約束已由系統驗證。|  
 |**delete_referential_action**|**tinyint**|在此邊緣條件約束上定義的參考動作。<br /><br />0 = 沒有動作。|  
-|**delete_referential_action_desc**|**Nvarchar （60）**|在此邊緣條件約束上定義之參考動作的描述。<br /><br />NO_ACTION|  
+|**delete_referential_action_desc**|**nvarchar(60)**|在此邊緣條件約束上定義之參考動作的描述。<br /><br />NO_ACTION|  
 |**is_system_named**|**bit**|1 = 邊緣條件約束名稱由系統產生。<br /><br />0 = 邊緣條件約束名稱是由使用者提供。|  
   
 ## <a name="permissions"></a>權限  
@@ -46,7 +46,7 @@ ms.locfileid: "68079322"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053071"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
@@ -78,7 +78,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果是設定指向資料指標的資料指標變數來建立資料指標，cursor_name 就會傳回資料指標變數的名稱。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個輸出資料行會傳回系統產生的名稱。|  
 |cursor_scope|**tinyint**|1 = LOCAL <br /><br /> 2 = GLOBAL|  
 |status|**int**|與 CURSOR_STATUS 系統函數所報告相同的值：<br /><br /> 1 = 資料指標名稱或變數所參考的資料指標是開啟的。 如果資料指標是不區分、靜態或索引鍵集，它至少會有一個資料列。 如果資料指標是動態的，結果集就會有零或多個資料列。<br /><br /> 0 = 資料指標名稱或變數所參考的資料指標是開啟的，但沒有資料列。 動態資料指標永不傳回這個值。<br /><br /> -1 = 資料指標名稱或變數所參考的資料指標是關閉的。<br /><br /> -2 = 只適用於資料指標變數。 沒有指派給變數的資料指標。 可能是 OUTPUT 參數將資料指標指派給變數，但傳回之前，預存程序便關閉了資料指標。<br /><br /> -3 = 含指定名稱的資料指標或資料指標變數不存在，或資料指標變數還沒有配置資料指標。|  
-|model|**tinyint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
+|模型|**tinyint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
 |並行|**tinyint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**tinyint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**tinyint**|0 = 已關閉<br /><br /> 1 = 開啟|  
@@ -92,8 +92,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ## <a name="remarks"></a>備註  
  sp_describe_cursor 描述伺服器資料指標的全域屬性，如捲動和更新的能力。 請利用 sp_describe_cursor_columns 來取得資料指標所傳回之結果集的屬性描述。 請利用 sp_describe_cursor_tables 來取得資料指標所參考之基底資料表的報表。 若要取得連接上可見的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標的報表，請使用 sp_cursor_list。  
   
- DECLARE CURSOR 陳述式可以要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法利用 DECLARE CURSOR 所包含之 SELECT 陳述式來支援的資料指標類型。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會隱含地將資料指標轉換成它能夠利用 SELECT 陳述式來支援的類型。 如果 DECLARE CURSOR 陳述式中指定 TYPE_WARNING，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳送一則已轉換完成的參考訊息給應用程式。 然後可以呼叫 sp_describe_cursor 來判斷已實作為資料指標的類型。  
+ DECLARE CURSOR 陳述式可以要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法利用 DECLARE CURSOR 所包含之 SELECT 陳述式來支援的資料指標類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會隱含地將資料指標轉換成它能夠利用 SELECT 陳述式來支援的類型。 如果 DECLARE CURSOR 陳述式中指定 TYPE_WARNING，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳送一則已轉換完成的參考訊息給應用程式。 然後可以呼叫 sp_describe_cursor 來判斷已實作為資料指標的類型。  
   
 ## <a name="permissions"></a>權限  
  需要 public 角色中的成員資格。  
@@ -138,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料指標](../../relational-databases/cursors.md)   
+ [連筆](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-sql&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-sql&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [sp_describe_cursor_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  

@@ -20,10 +20,10 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090264"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68090264"
 |description|**Nvarchar （3072）**|封裝的描述。 descriptionis 由封裝作者所設定，而且不可為 null。|  
 |capabilities|**int**|描述這個封裝之功能的點陣圖。 可為 Null。|  
 |capabilities_desc|**nvarchar(256)**|此封裝所有可能之功能的清單。 可為 Null。|  
-|module_guid|**Nvarchar （60）**|公開此封裝之模組的 GUID。 不可為 Null。|  
+|module_guid|**nvarchar(60)**|公開此封裝之模組的 GUID。 不可為 Null。|  
 |module_address|**varbinary(8)**|載入包含封裝之模組的基底位址。 單一模組可能會公開數個封裝。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  

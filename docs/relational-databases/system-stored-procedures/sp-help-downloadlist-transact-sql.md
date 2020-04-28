@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055187"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -55,17 +55,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`指定之作業的有效操作。 *operation*是**Varchar （64）**，預設值是 Null，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**包裝箱**|要求目標伺服器脫離主要**SQLServerAgent**服務的伺服器操作。|  
 |**DELETE**|移除整項作業的作業動作。|  
-|**INSERT**|插入整項作業或重新整理現有作業的作業動作。 適當的話，這個動作包括所有作業步驟和排程。|  
+|**插入**|插入整項作業或重新整理現有作業的作業動作。 適當的話，這個動作包括所有作業步驟和排程。|  
 |**RE-ENLIST**|使目標伺服器將編列資訊 (包括輪詢間隔和時區) 重新傳送到多伺服器網域的伺服器作業。 目標伺服器也會 redownloads **MSXOperator**詳細資料。|  
 |**SET-POLL**|設定目標伺服器輪詢多伺服器網域的間隔 (以秒為單位) 之伺服器作業。 如果指定，*值*會被視為所需的間隔值，而且可以是從**10**到**28800**的值。|  
 |**「**|要求開始執行作業的作業動作。|  
 |**停止**|要求停止執行作業的作業動作。|  
 |**SYNC-TIME**|使目標伺服器將它的系統時鐘和多伺服器網域同步化的伺服器作業。 由於這項作業成本很高，因此，請盡量不要太常執行這項作業。|  
-|**UPDATE**|作業只會更新作業的**sysjobs**資訊，而不是作業步驟或排程。 **Sp_update_job**會自動呼叫。|  
+|**更新**|作業只會更新作業的**sysjobs**資訊，而不是作業步驟或排程。 **Sp_update_job**會自動呼叫。|  
   
 `[ @object_type = ] 'object_type'`指定之作業的物件類型。 *object_type*是**Varchar （64）**，預設值是 Null。 *object_type*可以是 [作業] 或 [伺服器]。 如需有效*object_type*值的詳細資訊，請參閱[sp_add_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
   
@@ -87,15 +87,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|指示的唯一整數識別碼。|  
-|**source_server**|**Nvarchar （30）**|指示的來源伺服器電腦名稱。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，這一律是主伺服器（MSX）的電腦名稱稱。|  
+|**source_server**|**nvarchar(30)**|指示的來源伺服器電腦名稱。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，這一律是主伺服器（MSX）的電腦名稱稱。|  
 |**operation_code**|**nvarchar(4000)**|指示的作業碼。|  
 |**object_name**|**sysname**|指示所影響的物件。|  
 |**object_id**|**uniqueidentifier**|受指令影響的物件識別碼（工作物件的**job_id** ，或伺服器物件的0x00），或**operation_code**特定的資料值。|  
-|**target_server**|**Nvarchar （30）**|將下載這個指示的目標伺服器。|  
+|**target_server**|**nvarchar(30)**|將下載這個指示的目標伺服器。|  
 |**error_message**|**nvarchar(1024)**|當目標伺服器在處理這個指示發生問題時，所發出的錯誤訊息 (如果有的話)。<br /><br /> 注意：任何錯誤訊息都會封鎖目標伺服器所有進一步的下載。|  
 |**date_posted**|**datetime**|將指示公佈到資料表中的日期。|  
 |**date_downloaded**|**datetime**|目標伺服器下載指示的日期。|  
-|**狀態**|**tinyint**|作業的狀態：<br /><br /> **0** = 尚未下載<br /><br /> **1** = 已成功下載。|  
+|**status**|**tinyint**|作業的狀態：<br /><br /> **0** = 尚未下載<br /><br /> **1** = 已成功下載。|  
   
 ## <a name="permissions"></a>權限  
  執行此程式的許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  

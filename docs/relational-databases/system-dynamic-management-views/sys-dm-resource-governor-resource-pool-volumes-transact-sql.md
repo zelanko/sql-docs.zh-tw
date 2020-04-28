@@ -20,10 +20,10 @@ ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 801997509242bae7af2d2ae438dfdb952be9e1fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090808"
 ---
 # <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys.databases dm_resource_governor_resource_pool_volumes （Transact-sql）
@@ -40,24 +40,24 @@ ms.locfileid: "68090808"
 |read_io_issued_total|**int**|重設資源管理員統計資料之後發出的讀取 IO 總數。 不可為 Null。|  
 |read_ios_completed_total|**int**|重設資源管理員統計資料之後完成的讀取 IO 總數。 不可為 Null。|  
 |read_ios_throttled_total|**int**|重設資源管理員統計資料之後節流的讀取 IO 總數。 不可為 Null。|  
-|read_bytes_total|**Bigint**|重設資源管理員統計資料之後讀取的總位元組數。 不可為 Null。|  
-|read_io_stall_total_ms|**Bigint**|讀取 IO 從抵達到完成的總時間 (以毫秒為單位)。 不可為 Null。|  
-|read_io_stall_queued_ms|**Bigint**|讀取 IO 從抵達到發行的總時間 (以毫秒為單位)。 這是 IO 資源管理導入的延遲。 不可為 Null。|  
+|read_bytes_total|**bigint**|重設資源管理員統計資料之後讀取的總位元組數。 不可為 Null。|  
+|read_io_stall_total_ms|**bigint**|讀取 IO 從抵達到完成的總時間 (以毫秒為單位)。 不可為 Null。|  
+|read_io_stall_queued_ms|**bigint**|讀取 IO 從抵達到發行的總時間 (以毫秒為單位)。 這是 IO 資源管理導入的延遲。 不可為 Null。|  
 |write_io_queued_total|**int**|重設資源管理員統計資料之後加入佇列的寫入 IO 總數。 不可為 Null。|  
 |write_io_issued_total|**int**|重設資源管理員統計資料之後發出的寫入 IO 總數。 不可為 Null。|  
 |write_io_completed_total|**int**|重設資源管理員統計資料之後完成的寫入 IO 總數。 不可為 Null|  
 |write_io_throttled_total|**int**|重設資源管理員統計資料之後節流的寫入 IO 總數。 不可為 Null|  
-|write_bytes_total|**Bigint**|重設資源管理員統計資料之後寫入的總位元組數。 不可為 Null。|  
-|write_io_stall_total_ms|**Bigint**|寫入 IO 從發出到完成的總時間 (以毫秒為單位)。 不可為 Null。|  
-|write_io_stall_queued_ms|**Bigint**|寫入 IO 從抵達到發行的總時間 (以毫秒為單位)。 這是 IO 資源管理導入的延遲。 不可為 Null。|  
+|write_bytes_total|**bigint**|重設資源管理員統計資料之後寫入的總位元組數。 不可為 Null。|  
+|write_io_stall_total_ms|**bigint**|寫入 IO 從發出到完成的總時間 (以毫秒為單位)。 不可為 Null。|  
+|write_io_stall_queued_ms|**bigint**|寫入 IO 從抵達到發行的總時間 (以毫秒為單位)。 這是 IO 資源管理導入的延遲。 不可為 Null。|  
 |io_issue_violations_total|**int**|IO 發出違規總數。 也就是說，在 IO 發出率低於保留率時的次數。 不可為 Null。|  
-|io_issue_delay_total_ms|**Bigint**|排程發出 IO 到實際發出 IO 的總時間 (以毫秒為單位)。 不可為 Null。|  
+|io_issue_delay_total_ms|**bigint**|排程發出 IO 到實際發出 IO 的總時間 (以毫秒為單位)。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  
  需要 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

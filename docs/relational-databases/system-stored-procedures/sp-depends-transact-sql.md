@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053109"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -70,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |**name**|**Nvarchar （257** **）**|相依性存在的項目名稱。|  
 |**type**|**Nvarchar （16）**|項目的類型。|  
 |**已**|**Nvarchar （7）**|是否更新項目。|  
-|**處於**|**Nvarchar （8）**|是否在 SELECT 陳述式中使用這個項目。|  
+|**處於**|**nvarchar(8)**|是否在 SELECT 陳述式中使用這個項目。|  
 |**排**|**sysname**|存在相依性的資料行或參數。|  
   
  下列結果集會顯示相依于* \<物件>* 的物件。  
@@ -86,7 +86,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-listing-dependencies-on-a-table"></a>A. 列出對於資料表的相依性  
- 下列範例會列出相依於 `Sales.Customer` 資料庫中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的資料庫物件。 指定了結構描述名稱和資料表名稱。  
+ 下列範例會列出相依於 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Sales.Customer` 資料表的資料庫物件。 指定了結構描述名稱和資料表名稱。  
   
 ```  
 USE AdventureWorks2012;  
@@ -105,7 +105,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

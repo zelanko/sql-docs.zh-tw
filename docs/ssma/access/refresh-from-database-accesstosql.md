@@ -10,10 +10,10 @@ ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051528"
 ---
 # <a name="refresh-from-database-accesstosql"></a>從資料庫重新整理（AccessToSQL）

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090869"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
@@ -35,11 +35,11 @@ ms.locfileid: "68090869"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|wait_type|**Nvarchar （60）**|等候類型的名稱。 如需詳細資訊，請參閱這個主題稍後的＜[等候的類型](#WaitTypes)＞。|  
-|waiting_tasks_count|**Bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
-|wait_time_ms|**Bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
-|max_wait_time_ms|**Bigint**|這個等候類型的等候時間上限。|  
-|signal_wait_time_ms|**Bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
+|wait_type|**nvarchar(60)**|等候類型的名稱。 如需詳細資訊，請參閱這個主題稍後的＜[等候的類型](#WaitTypes)＞。|  
+|waiting_tasks_count|**bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
+|wait_time_ms|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
+|max_wait_time_ms|**bigint**|這個等候類型的等候時間上限。|  
+|signal_wait_time_ms|**bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68090869"
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW DATABASE STATE 權限。  
   
-##  <a name="WaitTypes"></a>等候的類型  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>等候的類型  
  資源等候  
  當工作者要求存取無法使用的資源時 (因為該資源正被另一個工作者使用中，因此還不能使用)，會發生資源等候的情形。 鎖定、閂鎖、網路和磁碟 I/O 等候，都是資源等候的範例。 鎖定和閂鎖等候是對同步處理物件的等候。  
   
@@ -152,10 +152,9 @@ ms.locfileid: "68090869"
 |EC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EE_PMOLOCK|在陳述式執行期間同步處理某些類型的記憶體配置時發生。|  
 |EE_SPECPROC_MAP_INIT|在同步處理內部程序雜湊表的建立時發生。 這個等候只可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體開始之後初次存取雜湊表時發生。|  
-|ENABLE_VERSIONING|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在宣告資料庫可以轉移到允許快照集隔離的狀態之前，等候這個資料庫中所有的更新交易完成時發生。 這個狀態是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 ALTER DATABASE 陳述式啟用快照集隔離時所使用。|  
+|ENABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在宣告資料庫可以轉移到允許快照集隔離的狀態之前，等候這個資料庫中所有的更新交易完成時發生。 這個狀態是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 ALTER DATABASE 陳述式啟用快照集隔離時所使用。|  
 |ERROR_REPORTING_MANAGER|在同步處理多個並行錯誤記錄檔的初始化時發生。|  
-|EXCHANGE|在平行查詢期間同步處理查詢處理器交換重複時發生。|  
+|EXCHANGE |在平行查詢期間同步處理查詢處理器交換重複時發生。|  
 |EXECSYNC |平行查詢期間在與交換重複無關之區域的查詢處理器中進行同步處理時發生。 這類區域的範例包括點陣圖、大型二進位物件 (LOB) 和多工緩衝處理重複。 LOB 可能會經常使用這個等候狀態。|  
 |EXECUTION_PIPE_EVENT_INTERNAL|在透過連接內容傳送的批次執行產生者與取用者部分之間同步處理期間發生。|  
 |FAILPOINT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -225,8 +224,7 @@ ms.locfileid: "68090869"
 |MSQL_DQ |在工作等候分散式查詢作業完成時發生。 這種等候類型可用來偵測潛在的 Multiple Active Result Set (MARS) 應用程式死結。 等候會隨著分散式查詢呼叫的完成而結束。|  
 |MSQL_XACT_MGR_MUTEX |當工作在等候取得工作階段交易管理員的擁有權，以執行工作階段層級交易作業時發生。|  
 |MSQL_XACT_MUTEX|在同步處理交易使用量時發生。 要求必須先取得 Mutex，才能使用交易。|  
-|MSQL_XP |當工作在等候擴充預存程序結束時發生。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用這個等候狀態來偵測可能發生的 MARS 應用程式死結。 這個等候會隨著擴充預存程序呼叫的結束而停止。|  
+|MSQL_XP |當工作在等候擴充預存程序結束時發生。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用這個等候狀態來偵測可能發生的 MARS 應用程式死結。 這個等候會隨著擴充預存程序呼叫的結束而停止。|  
 |MSSEARCH|在使用全文檢索搜尋呼叫時發生。 這個等候會隨著全文檢索作業的完成而結束。 這並不表示發生競爭情況，而是指出全文檢索作業的持續時間。|  
 |NET_WAITFOR_PACKET|當連接在網路讀取期間等候網路封包時發生。|  
 |OLEDB|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider 時發生。 這個等候類型不用於同步處理， 而會指出呼叫 OLE DB 提供者的持續時間。|  
@@ -326,8 +324,7 @@ ms.locfileid: "68090869"
 |SOS_SCHEDULER_YIELD|在工作主動產生排程器以供其他工作執行時發生。 在這段等候期間，該工作將等候系統更新其配量。|  
 |SOS_SMALL_PAGE_ALLOC|在配置和釋放某些記憶體物件所管理的記憶體期間發生。|  
 |SOS_STACKSTORE_INIT_MUTEX|在同步處理內部存放區初始化時發生。|  
-|SOS_SYNC_TASK_ENQUEUE_EVENT|在以同步的方式啟動工作時發生。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中大部分的工作都是以非同步方式啟動，使用這種方式時，將工作要求放在工作佇列上之後，控制權便會立即交還給啟動器。|  
+|SOS_SYNC_TASK_ENQUEUE_EVENT|在以同步的方式啟動工作時發生。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中大部分的工作都是以非同步方式啟動，使用這種方式時，將工作要求放在工作佇列上之後，控制權便會立即交還給啟動器。|  
 |SOS_VIRTUALMEMORY_LOW|在記憶體配置等候資源管理員釋放虛擬記憶體時發生。|  
 |SOSHOST_EVENT|在主控的元件 (例如 CLR) 等候 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件同步處理物件時發生。|  
 |SOSHOST_INTERNAL|在同步處理主控元件 (例如 CLR) 使用的記憶體管理員回撥時發生。|  

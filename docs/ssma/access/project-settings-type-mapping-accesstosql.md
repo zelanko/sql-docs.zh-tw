@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066663"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定（類型對應）（AccessToSQL）
@@ -32,11 +32,11 @@ ms.locfileid: "68066663"
   
 -   使用 [**預設專案設定**] 對話方塊，即可設定所有專案的設定選項。 若要存取型別對應設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，從 [**遷移目標版本**] 下拉式下選取需要查看其設定的 [遷移專案類型]/changed，然後按一下左窗格中的 [**類型對應**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源類型**  
 要對應的存取資料類型。  
   
-**目標類型**  
+**目標型別**  
 所指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存取資料類型的目標或 SQL Azure 資料類型。  
   
 下表顯示來源和目標資料類型之間的預設對應。  
@@ -45,18 +45,18 @@ ms.locfileid: "68066663"
 |--------------------|------------------------|  
 |**binary [\*.。\*]**|**Varbinary [\*]**|  
 |**boolean**|**bit**|  
-|**節**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**符號**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**前提**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**備忘**|**nvarchar(max)**|  
 |**備忘**-適用于存取97|**varchar(max)**|  
-|**單機**|**即時**|  
+|**single**|**real**|  
 |**文字 [\*.。\*]**|**Nvarchar [\*]**|  
 |**文字 [\*.。] \* ** -用於存取97|**Varchar [\*]**|  
   

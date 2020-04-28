@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067957"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys.databases query_store_query （Transact-sql）
@@ -35,35 +35,35 @@ ms.locfileid: "68067957"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**query_id**|**Bigint**|主索引鍵。|  
-|**query_text_id**|**Bigint**|外鍵。 Query_store_query_text 的聯結[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**coNtext_settings_id**|**Bigint**|外鍵。 [Query_coNtext_settings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)的聯結。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**object_id**|**Bigint**|查詢所屬之資料庫物件的識別碼（預存程式、觸發程式、CLR UDF/UDAgg 等等）。 如果查詢不是當做資料庫物件（臨機操作查詢）的一部分來執行，則為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**batch_sql_handle**|**Varbinary （64）**|查詢所屬之語句批次的識別碼。 只有在查詢參考臨時表或資料表變數時，才會填入。<br/>**注意：** Azure SQL 資料倉儲一律會傳回*Null*。|  
+|**query_id**|**bigint**|主索引鍵。|  
+|**query_text_id**|**bigint**|外鍵。 Query_store_query_text 的聯結[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**coNtext_settings_id**|**bigint**|外鍵。 [Query_coNtext_settings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)的聯結。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
+|**object_id**|**bigint**|查詢所屬之資料庫物件的識別碼（預存程式、觸發程式、CLR UDF/UDAgg 等等）。 如果查詢不是當做資料庫物件（臨機操作查詢）的一部分來執行，則為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
+|**batch_sql_handle**|**varbinary(64)**|查詢所屬之語句批次的識別碼。 只有在查詢參考臨時表或資料表變數時，才會填入。<br/>**注意：** Azure SQL 資料倉儲一律會傳回*Null*。|  
 |**query_hash**|**binary （8）**|個別查詢的 MD5 雜湊，以邏輯查詢樹狀結構為基礎。 包含優化工具提示。|  
 |**is_internal_query**|**bit**|查詢是在內部產生。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**query_parameterization_type**|**tinyint**|參數化的種類：<br /><br /> 0 - 無<br /><br /> 1-使用者<br /><br /> 2-簡單<br /><br /> 3-強制<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**query_parameterization_type_desc**|**Nvarchar （60）**|參數化型別的文字描述。<br/>**注意：** Azure SQL 資料倉儲一律會傳回*None*。|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|參數化型別的文字描述。<br/>**注意：** Azure SQL 資料倉儲一律會傳回*None*。|  
 |**initial_compile_start_time**|**datetimeoffset**|編譯開始時間。|  
 |**last_compile_start_time**|**datetimeoffset**|編譯開始時間。|  
 |**last_execution_time**|**datetimeoffset**|上次執行時間指的是查詢/計畫的最後結束時間。|  
-|**last_compile_batch_sql_handle**|**Varbinary （64）**|上次使用查詢之 SQL 批次的控制碼。 可以提供它做為 sys 的輸入[。 dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)取得批次的全文檢索。<br/>**注意：** Azure SQL 資料倉儲一律會傳回*Null*。|  
-|**last_compile_batch_offset_start**|**Bigint**|可以提供給 sys.databases 的資訊，以及 last_compile_batch_sql_handle 的 dm_exec_sql_text。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_compile_batch_offset_end**|**Bigint**|可以提供給 sys.databases 的資訊，以及 last_compile_batch_sql_handle 的 dm_exec_sql_text。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**count_compiles**|**Bigint**|編譯統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回一（1）。|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|上次使用查詢之 SQL 批次的控制碼。 可以提供它做為 sys 的輸入[。 dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)取得批次的全文檢索。<br/>**注意：** Azure SQL 資料倉儲一律會傳回*Null*。|  
+|**last_compile_batch_offset_start**|**bigint**|可以提供給 sys.databases 的資訊，以及 last_compile_batch_sql_handle 的 dm_exec_sql_text。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_compile_batch_offset_end**|**bigint**|可以提供給 sys.databases 的資訊，以及 last_compile_batch_sql_handle 的 dm_exec_sql_text。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
+|**count_compiles**|**bigint**|編譯統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回一（1）。|  
 |**avg_compile_duration**|**float**|編譯統計資料（以毫秒為單位）。|  
-|**last_compile_duration**|**Bigint**|編譯統計資料（以毫秒為單位）。|  
+|**last_compile_duration**|**bigint**|編譯統計資料（以毫秒為單位）。|  
 |**avg_bind_duration**|**float**|以毫秒為單位的系結統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**last_bind_duration**|**Bigint**|系結統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
+|**last_bind_duration**|**bigint**|系結統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**avg_bind_cpu_time**|**float**|系結統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**last_bind_cpu_time**|**Bigint**|系結統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
+|**last_bind_cpu_time**|**bigint**|系結統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**avg_optimize_duration**|**float**|優化統計資料（以毫秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_optimize_duration**|**Bigint**|優化統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_optimize_duration**|**bigint**|優化統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_optimize_cpu_time**|**float**|優化統計資料（以毫秒為單位）。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_optimize_cpu_time**|**Bigint**|優化統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_optimize_cpu_time**|**bigint**|優化統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**avg_compile_memory_kb**|**float**|編譯記憶體統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**last_compile_memory_kb**|**Bigint**|編譯記憶體統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
-|**max_compile_memory_kb**|**Bigint**|編譯記憶體統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**last_compile_memory_kb**|**bigint**|編譯記憶體統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
+|**max_compile_memory_kb**|**bigint**|編譯記憶體統計資料。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
 |**is_clouddb_internal_query**|**bit**|在內部部署[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中一律為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|
   
 ## <a name="permissions"></a>權限  
@@ -74,12 +74,12 @@ ms.locfileid: "68067957"
  [query_coNtext_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查詢存放區預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

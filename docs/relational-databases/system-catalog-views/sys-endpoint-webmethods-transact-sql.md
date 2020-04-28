@@ -22,10 +22,10 @@ ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 14e3534671cc36d8c2cac46f627d158056f985e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079247"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
@@ -42,15 +42,15 @@ ms.locfileid: "68079247"
 |method_alias|**Nvarchar （64）**|方法的別名。<br /><br /> 注意： [!INCLUDE[tsql](../../includes/tsql-md.md)]識別碼允許在 WSDL 方法名稱中不合法的字元。<br /><br /> 這個別名用來將端點之 WSDL 描述所顯示的名稱，對應至當叫用 webmethod 時所呼叫的實際基礎 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可執行物件。|  
 |object_name|**Nvarchar （776）**|根據 NAME = 選項的指定，重新導向 webmethod 所至的物件名稱。 名稱部分是以句點（.）分隔，並使用方括弧分隔`[``]`。<br /><br /> 根據 WSDL 選項的指定，物件名稱必須是三部分名稱。|  
 |result_schema|**tinyint**|決定哪一個 (如果有的話) XSD 會隨同回應被傳回的選項。<br /><br /> 0 = 無<br /><br /> 1 = 標準<br /><br /> 2 = 預設值|  
-|result_schema_desc|**Nvarchar （60）**|決定哪一個 (如果有的話) XSD 會隨同回應被傳回的選項描述。<br /><br /> 無<br /><br /> 標準<br /><br /> DEFAULT|  
+|result_schema_desc|**nvarchar(60)**|決定哪一個 (如果有的話) XSD 會隨同回應被傳回的選項描述。<br /><br /> 無<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|決定回應中的結果如何格式化的選項。<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  
-|result_format_desc|**Nvarchar （60）**|決定回應中的結果如何格式化的選項描述。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> 無|  
+|result_format_desc|**nvarchar(60)**|決定回應中的結果如何格式化的選項描述。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> 無|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [端點目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

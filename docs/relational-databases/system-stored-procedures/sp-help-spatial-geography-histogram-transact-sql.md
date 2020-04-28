@@ -18,10 +18,10 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085196"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
@@ -56,8 +56,8 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|代表每一個資料格的唯一識別碼，從 1 開始計數。|  
-|**格值**|**地理位置**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
-|**row_count**|**Bigint**|指出觸及或包含資料格之空間物件的數目。|  
+|**格值**|**geography**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
+|**row_count**|**bigint**|指出觸及或包含資料格之空間物件的數目。|  
   
 ## <a name="permissions"></a>權限  
  使用者必須是**public**角色的成員。 需要在伺服器和物件上具有 READ ACCESS 權限。  
@@ -71,7 +71,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  **Geography**類型的周框方塊是整個地球。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在**** `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫的資料表上呼叫 sp_help_spatial_geography_histogram。  
+ 下列範例會在**sp_help_spatial_geography_histogram** `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫的資料表上呼叫 sp_help_spatial_geography_histogram。  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

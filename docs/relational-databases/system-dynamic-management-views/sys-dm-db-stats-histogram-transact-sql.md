@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096247"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
@@ -43,10 +43,10 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>引數  
  *object_id*  
- 這是目前資料庫中，要求其中一個統計資料屬性之物件的識別碼。 *object_id*為**int**。  
+ 這是目前資料庫中，要求其中一個統計資料屬性之物件的識別碼。 *@object_id* 是 **int**。  
   
  *stats_id*  
- 這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id*為**int**。  
+ 這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id* 是 **int**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -56,10 +56,10 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |stats_id |**int**|統計資料物件的識別碼。 這在資料表或索引檢視表中是唯一的。 如需詳細資訊，請參閱 [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
 |step_number |**int** |長條圖中的步驟數目。 |
 |range_high_key |**sql_variant** |長條圖步驟的上限資料行值。 此資料行值也稱為索引鍵值。|
-|range_rows |**即時** |資料行值在長條圖步驟內的預估資料列數，不包括上限。 |
-|equal_rows |**即時** |資料行值等於長條圖步驟之上限的預估資料列數。 |
-|distinct_range_rows |**Bigint** |在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。 |
-|average_range_rows |**即時** |在長條圖步驟內具有重復資料行值的平均資料列數，不包括上限`RANGE_ROWS / DISTINCT_RANGE_ROWS` （ `DISTINCT_RANGE_ROWS > 0`適用于）。 |
+|range_rows |**real** |資料行值在長條圖步驟內的預估資料列數，不包括上限。 |
+|equal_rows |**real** |資料行值等於長條圖步驟之上限的預估資料列數。 |
+|distinct_range_rows |**bigint** |在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。 |
+|average_range_rows |**real** |在長條圖步驟內具有重復資料行值的平均資料列數，不包括上限`RANGE_ROWS / DISTINCT_RANGE_ROWS` （ `DISTINCT_RANGE_ROWS > 0`適用于）。 |
   
  ## <a name="remarks"></a>備註  
  
@@ -81,8 +81,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   粗線代表上限值 (*range_high_key*) 以及其所發生的次數 (*equal_rows*)  
   
--   
-  *range_high_key* 左邊的實線區域代表資料行值範圍，以及每一個資料行值發生的平均次數 (*average_range_rows*)。 第一個長條圖步驟的 *average_range_rows* 一定是 0。  
+-   *range_high_key* 左邊的實線區域代表資料行值範圍，以及每一個資料行值發生的平均次數 (*average_range_rows*)。 第一個長條圖步驟的 *average_range_rows* 一定是 0。  
   
 -   虛線代表用來預估範圍內相異值總數的取樣值（*distinct_range_rows*），以及範圍內的值總數（*range_rows*）。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。  
   

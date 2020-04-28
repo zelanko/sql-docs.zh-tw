@@ -18,10 +18,10 @@ ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088517"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68088517"
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|識別設定臨界值的發行集。|  
 |**metric_id**|**int**|識別[MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md)系統資料表中所定義之受監視的複寫效能標準。|  
-|**value**|**sql_variant**|被監視之標準的臨界值。|  
+|**值**|**sql_variant**|被監視之標準的臨界值。|  
 |**shouldalert**|**bit**|值為**1**時，表示當計量超出定義的閾值時，應該產生警示。|  
 |**isenabled**|**bit**|值為**1**表示已針對此複寫效能標準啟用監視。|  
   

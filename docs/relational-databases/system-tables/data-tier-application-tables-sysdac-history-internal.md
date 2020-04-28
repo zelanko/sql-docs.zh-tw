@@ -18,10 +18,10 @@ ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084757"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>資料層應用程式資料表 - sysdac_history_internal
@@ -37,14 +37,14 @@ ms.locfileid: "68084757"
 |**action_type**|**tinyint**|動作類型的識別碼：<br /><br /> **0** = 部署<br /><br /> **1** = 建立<br /><br /> **2** = 重新命名<br /><br /> **3** = 卸離<br /><br /> **4** = 刪除|  
 |**action_type_name**|**Varchar （19）**|動作類型的名稱：<br /><br /> **將**<br /><br /> **建立**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|受到動作影響之物件類型的識別碼：<br /><br /> **0** = dacpac<br /><br /> **1** = 登入<br /><br /> **2** = 資料庫|  
-|**dac_object_type_name**|**Varchar （8）**|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 實例<br /><br /> **登入**<br /><br /> **database**|  
+|**dac_object_type_name**|**Varchar （8）**|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 實例<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|識別動作目前狀態的代碼：<br /><br /> **0** = 暫止<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
 |**action_status_name**|**Varchar （11）**|動作的目前狀態：<br /><br /> **正在**<br /><br /> **success**<br /><br /> **無法**|  
 |**必要**|**bit**|在回復 DAC 作業時，由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用。|  
 |**dac_object_name_pretran**|**sysname**|認可包含動作之交易前的物件名稱。 僅用於資料庫與登入。|  
 |**dac_object_name_posttran**|**sysname**|認可包含動作之交易後的物件名稱。 僅用於資料庫與登入。|  
 |**sqlscript**|**nvarchar(max)**|在資料庫或登入上實作動作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|  
-|**作用**|**varbinary(max)**|儲存在二進位編碼字串中的 DAC 封裝定義。|  
+|**payload**|**varbinary(max)**|儲存在二進位編碼字串中的 DAC 封裝定義。|  
 |**註解**|**varchar(max)**|記錄 DAC 升級中接受潛在資料流失之使用者的登入。|  
 |**error_string**|**nvarchar(max)**|動作發生錯誤時所產生的錯誤訊息。|  
 |**created_by**|**sysname**|啟動建立此項目之動作的登入。|  

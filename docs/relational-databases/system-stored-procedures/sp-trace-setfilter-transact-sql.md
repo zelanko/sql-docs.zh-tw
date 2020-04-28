@@ -18,10 +18,10 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095943"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
@@ -59,11 +59,11 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**0**|= (等於)|  
 |**1**|<>  （不等於）|  
 |**2**|> (大於)|  
-|**第**|< (小於)|  
+|**3**|< (小於)|  
 |**4**|>= （大於或等於）|  
-|**第**|<= （小於或等於）|  
+|**5**|<= （小於或等於）|  
 |**6**|LIKE|  
-|**utf-7**|不相似|  
+|**7**|不相似|  
   
 `[ @value = ] value`指定要篩選的值。 *值*的資料類型必須符合要篩選之資料行的資料類型。 例如，如果篩選準則設定在屬於**int**資料類型的物件識別碼資料行上，則*值*必須是**int**。如果*value*是**Nvarchar**或**Varbinary**，它的最大長度可以是8000。  
   
@@ -88,7 +88,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |6|指定的比較運算子無效。|  
 |7|指定的邏輯運算子無效。|  
 |9|指定的追蹤控制代碼無效。|  
-|13|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|13|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
 |16|函數對於這項追蹤無效。|  
   
 ## <a name="remarks"></a>備註  
@@ -102,9 +102,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
  使用者必須有 ALTER TRACE 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在「追蹤 `1`」上設定三個篩選。 
-  `N'SQLT%'` 和 `N'MS%'` 篩選會利用 "`AppName`" 比較運算子來處理一個資料行 (`10`，值是 `LIKE`)。 
-  `N'joe'` 這個篩選利用 "`UserName`" 比較運算子來處理另一個資料行 (`11`，值是 `EQUAL`)。  
+ 下列範例會在「追蹤 `1`」上設定三個篩選。 `N'SQLT%'` 和 `N'MS%'` 篩選會利用 "`AppName`" 比較運算子來處理一個資料行 (`10`，值是 `LIKE`)。 `N'joe'` 這個篩選利用 "`UserName`" 比較運算子來處理另一個資料行 (`11`，值是 `EQUAL`)。  
   
 ```  
 sp_trace_setfilter  1, 10, 0, 6, N'SQLT%';  
@@ -113,8 +111,8 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   
   

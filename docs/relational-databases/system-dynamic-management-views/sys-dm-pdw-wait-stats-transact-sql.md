@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088725"
 ---
 # <a name="sysdm_pdw_wait_stats-transact-sql"></a>sys.databases dm_pdw_wait_stats （Transact-sql）
@@ -28,11 +28,11 @@ ms.locfileid: "68088725"
 |-----------------|---------------|-----------------|-----------|  
 |**pdw_node_id**|**int**|此專案所參考之節點的識別碼。||  
 |**wait_name**|**nvarchar(255)**|等候類型的名稱。||  
-|**max_wait_time**|**Bigint**|此等候類型的等候時間上限。||  
-|**request_count**|**Bigint**|此等候類型未處理的等候次數。||  
-|**signal_time**|**Bigint**|從等候執行緒接獲訊號到開始執行的時間。||  
-|**completed_count**|**Bigint**|自從上次伺服器重新開機後，此類型已完成的等候總次數。||  
-|**wait_time**|**Bigint**|Millisecons 中此等候類型的總等候時間。 包含 signal_time。||  
+|**max_wait_time**|**bigint**|此等候類型的等候時間上限。||  
+|**request_count**|**bigint**|此等候類型未處理的等候次數。||  
+|**signal_time**|**bigint**|從等候執行緒接獲訊號到開始執行的時間。||  
+|**completed_count**|**bigint**|自從上次伺服器重新開機後，此類型已完成的等候總次數。||  
+|**wait_time**|**bigint**|Millisecons 中此等候類型的總等候時間。 包含 signal_time。||  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   

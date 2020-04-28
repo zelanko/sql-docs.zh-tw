@@ -10,10 +10,10 @@ ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01aa8586e97677ed8d1071ec4dc2cb65a6aa0436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086195"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle 主控台（DB2ToSQL）
@@ -25,7 +25,7 @@ ms.locfileid: "68086195"
   
 |||  
 |-|-|  
-|**一些**|**說明**|  
+|**主題**|**說明**|  
 |[消費者入門與 DB2 主控台的 SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|說明執行主控台應用程式的步驟。|  
 |[SSMA 主控台中的命令列選項 &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|說明用來操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令檔 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)|說明如何建立腳本檔案。|  

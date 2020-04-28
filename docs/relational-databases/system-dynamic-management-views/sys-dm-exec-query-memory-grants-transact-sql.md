@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097702"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
@@ -45,24 +45,24 @@ ms.locfileid: "68097702"
 |**dop**|**smallint**|此查詢之平行處理原則的程度。|  
 |**request_time**|**datetime**|此查詢要求記憶體授權的日期和時間。|  
 |**grant_time**|**datetime**|授與記憶體給此查詢的日期和時間。 如果尚未授與記憶體，則為 NULL。|  
-|**requested_memory_kb**|**Bigint**|要求的記憶體總數 (以 KB 為單位)。|  
-|**granted_memory_kb**|**Bigint**|實際授與的記憶體總數 (以 KB 為單位)。 如果尚未授與記憶體，則可能為 NULL。 就一般情況而言，此值應該與 **requested_memory_kb** 相同。 對於索引建立，除了一開始授與的記憶體之外，伺服器還可以視需求額外授與記憶體。|  
-|**required_memory_kb**|**Bigint**|執行此查詢所需的記憶體下限 (以 KB 為單位)。 **requested_memory_kb**與此數量相同或更大。|  
-|**used_memory_kb**|**Bigint**|目前使用的實體記憶體 (以 KB 為單位)。|  
-|**max_used_memory_kb**|**Bigint**|到目前為止使用的最大實體記憶體 (以 KB 為單位)。|  
+|**requested_memory_kb**|**bigint**|要求的記憶體總數 (以 KB 為單位)。|  
+|**granted_memory_kb**|**bigint**|實際授與的記憶體總數 (以 KB 為單位)。 如果尚未授與記憶體，則可能為 NULL。 就一般情況而言，此值應該與 **requested_memory_kb** 相同。 對於索引建立，除了一開始授與的記憶體之外，伺服器還可以視需求額外授與記憶體。|  
+|**required_memory_kb**|**bigint**|執行此查詢所需的記憶體下限 (以 KB 為單位)。 **requested_memory_kb**與此數量相同或更大。|  
+|**used_memory_kb**|**bigint**|目前使用的實體記憶體 (以 KB 為單位)。|  
+|**max_used_memory_kb**|**bigint**|到目前為止使用的最大實體記憶體 (以 KB 為單位)。|  
 |**query_cost**|**float**|估計的查詢成本。|  
 |**timeout_sec**|**int**|此查詢放棄記憶體授權要求之前的逾時秒數。|  
 |**resource_semaphore_id**|**smallint**|此查詢正在等候之資源信號的非唯一識別碼。<br /><br /> **注意：** 在之前的版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此識別碼是唯一的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。 這項變更可以影響疑難排解的查詢執行。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
 |**queue_id**|**smallint**|此查詢等候記憶體授權時所在的等候中佇列識別碼。 如果已經授與記憶體，則為 NULL。|  
 |**wait_order**|**int**|在指定的 **queue_id** 內等候中查詢的順序。 如果其他查詢取得記憶體授權或超時，則會針對指定的查詢變更此值。如果已經授與記憶體，則為 Null。|  
 |**is_next_candidate**|**bit**|下一個記憶體授權的候選。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已經授與記憶體。|  
-|**wait_time_ms**|**Bigint**|等候時間 (以毫秒為單位)。 如果已經授與記憶體，則為 NULL。|  
-|**plan_handle**|**Varbinary （64）**|此查詢計畫的識別碼。 使用 **sys.dm_exec_query_plan** 來擷取實際的 XML 計畫。|  
-|**sql_handle**|**Varbinary （64）**|此查詢的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字識別碼。 使用 **sys.dm_exec_sql_text** 取得實際的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字。|  
+|**wait_time_ms**|**bigint**|等候時間 (以毫秒為單位)。 如果已經授與記憶體，則為 NULL。|  
+|**plan_handle**|**varbinary(64)**|此查詢計畫的識別碼。 使用 **sys.dm_exec_query_plan** 來擷取實際的 XML 計畫。|  
+|**sql_handle**|**varbinary(64)**|此查詢的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字識別碼。 使用 **sys.dm_exec_sql_text** 取得實際的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字。|  
 |**group_id**|**int**|這個查詢執行所在工作負載群組的識別碼。|  
 |**pool_id**|**int**|這個工作負載群組所屬資源集區的識別碼。|  
 |**is_small**|**tinyint**|設定為 1 時，表示此授與使用小型資源信號。 設定為 0 時，表示使用一般信號。|  
-|**ideal_memory_kb**|**Bigint**|授與的記憶體大小 (以 KB 為單位)，可將所有東西配置到實體記憶體。 這是以基數估計值為基礎。|  
+|**ideal_memory_kb**|**bigint**|授與的記憶體大小 (以 KB 為單位)，可將所有東西配置到實體記憶體。 這是以基數估計值為基礎。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>權限  
@@ -84,7 +84,7 @@ ms.locfileid: "68097702"
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup>在此案例中，等候類型通常是 RESOURCE_SEMAPHORE。 如需詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 
+    <sup>1</sup> 在此情況下，等候類型通常是 RESOURCE_SEMAPHORE。 如需詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 
   
 -   使用 sys.databases 來搜尋記憶體授與的查詢快取[dm_exec_cached_plans &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)和[Dm_exec_query_plan sys.databases &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
@@ -117,6 +117,6 @@ ms.locfileid: "68097702"
 ## <a name="see-also"></a>另請參閱  
  [dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [dm_os_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

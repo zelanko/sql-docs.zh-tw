@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070338"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -74,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|小數點右側的位數。|  
 |**NUM_PREC_RADIX**|**smallint**|這是數值資料類型的基礎。|  
 |**Null**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
-|**標記**|**Varchar （** 254 **）**|這個欄位一律會傳回 NULL。|  
+|**備註**|**Varchar （** 254 **）**|這個欄位一律會傳回 NULL。|  
 |**COLUMN_DEF**|**Varchar （** 254 **）**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 除了**datetime**和 SQL-92 **interval**資料類型之外，此資料行與**DATA_TYPE**資料行相同。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**和 SQL-92 **interval**資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
@@ -97,7 +97,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
  **sp_columns_ex**會遵循分隔識別碼的需求。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 `JobTitle` 連結伺服器 `HumanResources.Employee` 資料庫中之 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表 `Seattle1` 資料行的資料類型。  
+ 下列範例會傳回 `JobTitle` 連結伺服器 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中之 `HumanResources.Employee` 資料表 `Seattle1` 資料行的資料類型。  
   
 ```  
 EXEC sp_columns_ex 'Seattle1',   

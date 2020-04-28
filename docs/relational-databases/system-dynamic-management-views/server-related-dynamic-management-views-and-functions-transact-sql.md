@@ -12,10 +12,10 @@ ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e9b99934a3d931810e29d821ba0124334bac2c12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061899"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>伺服器相關的動態管理檢視與函數 (Transact-SQL)

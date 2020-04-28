@@ -18,10 +18,10 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085117"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
@@ -69,7 +69,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|代表每一個資料格的唯一識別碼，從 1 開始計算。|  
 |**格值**|**幾何**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
-|**row_count**|**Bigint**|指出觸及或包含資料格之空間物件的數目。|  
+|**row_count**|**bigint**|指出觸及或包含資料格之空間物件的數目。|  
   
 ## <a name="permissions"></a>權限  
  使用者必須是**public**角色的成員。 需要在伺服器和物件上具有 READ ACCESS 權限。  

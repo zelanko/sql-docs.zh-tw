@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096055"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
@@ -74,8 +74,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|資料表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。 這個欄位一律會傳回值。|  
 |**TABLE_TYPE**|**Varchar （32）**|資料表、系統資料表或檢視表。|  
-|**標記**|**Varchar （254）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**備註**|**Varchar （254）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
   
 ## <a name="remarks"></a>備註  
  為取得最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準 SQL 模式比對 (% 和 _ 萬用字元)。  
@@ -97,7 +96,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. 傳回指定結構描述中之資料表的相關資訊  
- 下列範例會傳回屬於 `Person` 資料庫中的[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 結構描述之資料表的相關資訊。  
+ 下列範例會傳回屬於 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的`Person` 結構描述之資料表的相關資訊。  
   
 ```  
 USE AdventureWorks2012;  
@@ -108,7 +107,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. 傳回目前環境中所能查詢之物件的清單  
  下列範例會傳回目前環境中所能查詢之物件的清單。  

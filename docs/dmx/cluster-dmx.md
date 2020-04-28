@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68071084"
 ---
 # <a name="cluster-dmx"></a>群集 (DMX)
@@ -36,7 +36,7 @@ Cluster()
  叢集**函數會**傳回純量值的叢集名稱。 不過，如果您使用此函數做為另一個函式的引數，則必須將\<它視為叢集資料行參考>。  
   
 ## <a name="remarks"></a>備註  
- 叢集**也可以當做**PredictHistogram 函數的`<`叢集資料行`>`參考使用**** 。  
+ 叢集**也可以當做**PredictHistogram 函數的`<`叢集資料行`>`參考使用**PredictHistogram** 。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用具有[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)和叢集函式的單一查詢，從 TM 叢集處理模型的每個叢集傳回個別案例的距離，以及在每個叢集中存在個別案例的機率。  

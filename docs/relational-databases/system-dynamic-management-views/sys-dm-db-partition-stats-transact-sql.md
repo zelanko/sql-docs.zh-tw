@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096279"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
@@ -37,25 +37,25 @@ ms.locfileid: "68096279"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**Bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與 [ **sys.databases** ] 目錄檢視中**partition_id**的值相同，但 Azure SQL 資料倉儲除外。|  
+|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與 [ **sys.databases** ] 目錄檢視中**partition_id**的值相同，但 Azure SQL 資料倉儲除外。|  
 |**object_id**|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
 |**index_id**|**int**|資料分割所屬之堆積或索引的識別碼。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引。<br /><br /> > 1 = 非叢集索引|  
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
-|**in_row_data_page_count**|**Bigint**|這個資料分割中用來儲存同資料列資料的頁數。 如果資料分割屬於堆積，這個值是堆積中的資料頁數。 如果資料分割屬於索引，這個值是分葉層級中的頁數。 （[B] 樹狀目錄中的非分葉頁面不會包含在計數中）。任一情況下都不會包含 IAM （索引配置對應）分頁。 xVelocity 記憶體最佳化的資料行存放區索引之 Always 0。|  
-|**in_row_used_page_count**|**Bigint**|這個資料分割中用來儲存和管理同資料列資料的總頁數。 這個計數包括非分葉 B 型樹狀目錄頁數、IAM 頁數，以及 **in_row_data_page_count** 資料行中包括的所有頁數。 永遠是 0，表示資料行存放區索引。|  
-|**in_row_reserved_page_count**|**Bigint**|這個資料分割中為儲存和管理同資料列資料所保留的總頁數，不管這些頁面是否正在使用中。 永遠是 0，表示資料行存放區索引。|  
-|**lob_used_page_count**|**Bigint**|資料分割中用來儲存和管理 out-of-row **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 資料行的頁數。 IAM 頁數包括在內。<br /><br /> 資料分割中用來儲存和管理資料行存放區索引的 LOB 總數。|  
-|**lob_reserved_page_count**|**Bigint**|資料分割中為儲存和管理 out-of-row **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 保留在資料分割中儲存和管理資料行存放區索引的 LOB 總數。|  
-|**row_overflow_used_page_count**|**Bigint**|資料分割中用來儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行的頁數。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
-|**row_overflow_reserved_page_count**|**Bigint**|資料分割中為儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
-|**used_page_count**|**Bigint**|資料分割的總使用頁數。 計算為**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  
-|**reserved_page_count**|**Bigint**|資料分割的總保留頁數。 計算為**in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**。|  
-|**row_count**|**Bigint**|此資料分割中大約的資料列數目。|  
+|**in_row_data_page_count**|**bigint**|這個資料分割中用來儲存同資料列資料的頁數。 如果資料分割屬於堆積，這個值是堆積中的資料頁數。 如果資料分割屬於索引，這個值是分葉層級中的頁數。 （[B] 樹狀目錄中的非分葉頁面不會包含在計數中）。任一情況下都不會包含 IAM （索引配置對應）分頁。 xVelocity 記憶體最佳化的資料行存放區索引之 Always 0。|  
+|**in_row_used_page_count**|**bigint**|這個資料分割中用來儲存和管理同資料列資料的總頁數。 這個計數包括非分葉 B 型樹狀目錄頁數、IAM 頁數，以及 **in_row_data_page_count** 資料行中包括的所有頁數。 永遠是 0，表示資料行存放區索引。|  
+|**in_row_reserved_page_count**|**bigint**|這個資料分割中為儲存和管理同資料列資料所保留的總頁數，不管這些頁面是否正在使用中。 永遠是 0，表示資料行存放區索引。|  
+|**lob_used_page_count**|**bigint**|資料分割中用來儲存和管理 out-of-row **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 資料行的頁數。 IAM 頁數包括在內。<br /><br /> 資料分割中用來儲存和管理資料行存放區索引的 LOB 總數。|  
+|**lob_reserved_page_count**|**bigint**|資料分割中為儲存和管理 out-of-row **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 保留在資料分割中儲存和管理資料行存放區索引的 LOB 總數。|  
+|**row_overflow_used_page_count**|**bigint**|資料分割中用來儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行的頁數。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
+|**row_overflow_reserved_page_count**|**bigint**|資料分割中為儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
+|**used_page_count**|**bigint**|資料分割的總使用頁數。 計算為**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  
+|**reserved_page_count**|**bigint**|資料分割的總保留頁數。 計算為**in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**。|  
+|**row_count**|**bigint**|此資料分割中大約的資料列數目。|  
 |**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
 |**distribution_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
   
 ## <a name="remarks"></a>備註  
- **dm_db_partition_stats**會顯示用來儲存和管理同資料列資料 LOB 資料的空間相關資訊，以及資料庫中所有分割區的資料列溢位資料。 每個資料分割顯示一個資料列。  
+ **sys.dm_db_partition_stats** 顯示資料庫中所有資料分割用來儲存和管理同資料列資料、LOB 資料和資料列溢位資料的空間相關資訊。 每個資料分割顯示一個資料列。  
   
  在各個不同的系統資料表中，輸出所依據的計數快取於記憶體中或儲存在磁碟中。  
   
@@ -105,7 +105,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

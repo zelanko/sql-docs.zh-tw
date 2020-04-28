@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067827"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68067827"
 |**begin_lsn**|**Nvarchar （64）**|交易之開始記錄的記錄序號 (LSN)。|  
 |**commit_lsn**|**Nvarchar （64）**|交易之認可記錄的 LSN。|  
 |**dbid**|**smallint**|資料庫識別碼。|  
-|**rows**|**int**|交易內的複寫命令識別碼。|  
+|**行間**|**int**|交易內的複寫命令識別碼。|  
 |**xdesid**|**Nvarchar （64）**|交易識別碼。|  
 |**artcache_table_address**|**varbinary(8)**|上次用於這項交易之快取發行項資料表結構的記憶體中位址。|  
 |**伺服器**|**Nvarchar （514）**|伺服器名稱。|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067827"
  只對目前載入發行項快取中的複寫資料庫物件或針對異動資料擷取啟用的資料表傳回這項資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [複寫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

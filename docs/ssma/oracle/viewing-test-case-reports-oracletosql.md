@@ -10,10 +10,10 @@ ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086794"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>檢視測試案例報表 (OracleToSQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68086794"
 **必要條件錯誤**  
 顯示**必要條件步驟**中發生的任何錯誤。 通常會略過。  
   
-**初始**  
+**初始化**  
 將執行狀態顯示為**成功**或**失敗**。  
   
 **測試物件結果**  

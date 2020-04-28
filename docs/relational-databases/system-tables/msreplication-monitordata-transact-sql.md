@@ -18,10 +18,10 @@ ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079146"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68079146"
 |**agent_id**|**int**|複寫代理程式的識別碼。|  
 |**agent_name**|**sysname**|複寫代理程式作業的名稱。|  
 |**job_id**|**uniqueidentifier**|複寫代理程式作業的 GUID。|  
-|**狀態**|**int**|複寫代理程式的狀態，它可以是下列其中一個值：<br /><br /> **1** = 已啟動<br /><br /> **2** = 成功<br /><br /> **3** = 進行中<br /><br /> **4** = 閒置<br /><br /> **5** = 重試<br /><br /> **6** = 失敗|  
+|**status**|**int**|複寫代理程式的狀態，它可以是下列其中一個值：<br /><br /> **1** = 已啟動<br /><br /> **2** = 成功<br /><br /> **3** = 進行中<br /><br /> **4** = 閒置<br /><br /> **5** = 重試<br /><br /> **6** = 失敗|  
 |**isagentrunningnow**|**bit**|指出代理程式作業目前是否正在執行的旗標，其中**1**值表示作業正在執行。|  
 |**warning**|**int**|訂閱所產生的臨界值警告，它可能是一或多個這些值的邏輯 OR 結果。<br /><br /> **1** = 到期-交易式發行集的訂閱已超出保留期限，超過允許的閾值，以保留期限的百分比表示。<br /><br /> **2** = 延遲-將交易式發行者的資料複寫到訂閱者所花費的時間超過臨界值（以秒為單位）。<br /><br /> **4** = mergeexpiration-合併式發行集的訂閱已超出保留期限，超過允許的臨界值，以保留期限的百分比表示。 8 = mergefastrunduration - 利用快速網路連接來完成合併訂閱的同步處理所花的時間超出臨界值 (以秒為單位)。<br /><br /> **16** = mergeslowrunduration-完成合併訂閱同步處理所花費的時間超過慢速或撥號網路連接的閾值（以秒為單位）。<br /><br /> **32** = mergefastrunspeed 利用-合併訂閱同步處理期間的資料列傳遞速率無法以快速網路連接維持閾值速率（以每秒資料列數為單位）。<br /><br /> **64** = mergeslowrunspeed-合併訂閱同步處理期間的資料列傳遞速率無法以速度較慢或撥號網路連接的速率，以每秒資料列數來維持閾值。|  
 |**last_distsync**|**datetime**|上次執行散發代理程式的日期和時間。|  

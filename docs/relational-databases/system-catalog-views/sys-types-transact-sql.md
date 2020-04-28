@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095575"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68095575"
 |**principal_id**|**int**|個別擁有者的識別碼 (如果與結構描述擁有者不同的話)。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定替代的擁有者。<br /><br /> NULL (如果沒有替代的個別擁有者)。|  
 |**max_length**|**smallint**|類型的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**。<br /><br /> 若為**文字**資料行， **max_length**值會是16。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是類型的最大有效位數；否則，便是 0。|  
-|**尺度**|**tinyint**|如果是以數值為基礎，便是類型的最大小數位數；否則，便是 0。|  
+|**scale**|**tinyint**|如果是以數值為基礎，便是類型的最大小數位數；否則，便是 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是類型的定序名稱；否則，便是 NULL。|  
 |**is_nullable**|**bit**|類型可為 Null。|  
 |**is_user_defined**|**bit**|1 = 使用者定義型別。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68095575"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [純量類型目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   

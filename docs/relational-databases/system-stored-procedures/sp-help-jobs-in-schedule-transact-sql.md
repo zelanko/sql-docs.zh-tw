@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054904"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
@@ -54,12 +54,12 @@ sp_help_jobs_in_schedule
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作業的唯一識別碼。|  
-|**originating_server**|**Nvarchar （30）**|作業的來源伺服器名稱。|  
+|**originating_server**|**nvarchar(30)**|作業的來源伺服器名稱。|  
 |**name**|**sysname**|作業的名稱。|  
 |**後**|**tinyint**|指出是否啟用作業，以便執行。|  
 |**描述**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
-|**category**|**sysname**|作業類別目錄。|  
+|**類別**|**sysname**|作業類別目錄。|  
 |**主人**|**sysname**|作業擁有者。|  
 |**notify_level_eventlog**|**int**|這是一個位元遮罩，指出在哪些情況之下，應該將通知事件記錄在 Microsoft Windows 應用程式記錄檔中。 它可以是下列值之一：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每次作業完成時（不論作業結果為何）|  
 |**notify_level_email**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送通知電子郵件。 可能的值與**notify_level_eventlog**相同。|  
@@ -71,7 +71,7 @@ sp_help_jobs_in_schedule
 |**delete_level**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時刪除作業。 可能的值與**notify_level_eventlog**相同。|  
 |**date_created**|**datetime**|作業的建立日期。|  
 |**date_modified**|**datetime**|上次修改作業的日期。|  
-|**version_number**|**int**|作業的版本 (會在作業每次修改時自動更新)。|  
+|**version_number**|**int**|作業的版本 (每次修改作業時，都會自動更新)。|  
 |**last_run_date**|**int**|上次開始執行作業的日期。|  
 |**last_run_time**|**int**|上次開始執行作業的時間。|  
 |**last_run_outcome**|**int**|上次執行作業的輸出：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
@@ -90,7 +90,7 @@ sp_help_jobs_in_schedule
  這個程序會列出附加至指定排程之作業的相關資訊。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+ 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   

@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ab0d59026bd172cb1e3fd51a92c3e5bb8b83b2e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090367"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL Database)
@@ -28,9 +28,9 @@ ms.locfileid: "68090367"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 不可為 Null。|  
-|event_name|**Nvarchar （60）**|動作繫結之事件的名稱。 不可為 Null。|  
+|event_name|**nvarchar(60)**|動作繫結之事件的名稱。 不可為 Null。|  
 |event_package_guid|**uniqueidentifier**|包含此事件之封裝的 GUID。 不可為 Null。|  
-|event_predicate|**Nvarchar （2048）**|套用至事件之述詞樹狀結構的 XML 表示。 可為 Null。|  
+|event_predicate|**nvarchar(2048)**|套用至事件之述詞樹狀結構的 XML 表示。 可為 Null。|  
   
 ## <a name="permissions"></a>權限  
  需要 VIEW DATABASE STATE 權限。  

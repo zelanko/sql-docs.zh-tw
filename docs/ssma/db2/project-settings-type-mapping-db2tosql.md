@@ -10,10 +10,10 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060166"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>專案設定（類型對應）（DB2ToSQL）
@@ -27,13 +27,13 @@ ms.locfileid: "68060166"
   
 若要指定目前物件或物件類別的設定，請使用主要 SSMA 視窗中的 [**類型對應**] 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 下表顯示 [**類型對應**] 索引標籤選項：  
   
 **來源類型**  
 對應的 DB2 資料類型。  
   
-**目標類型**  
+**目標型別**  
 指定之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 資料類型的目標資料類型。  
   
 如需 DB2 型別對應的預設 SSMA，請參閱下一節中的表格。  
@@ -94,8 +94,8 @@ ms.locfileid: "68060166"
 |raw|varbinary(max)|  
 |real|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
-|signtype|smallint|  
-|smallint|smallint|  
+|signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |字串|varchar(max)|  
 |timestamp|datetime2|  
 |具有當地時區的時間戳記|datetimeoffset|  
@@ -164,7 +164,7 @@ ms.locfileid: "68060166"
 |原始 [\*.。\*]|Varbinary [\*]|  
 |real|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
-|smallint|smallint|  
+|SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |具有當地時區的時間戳記|datetimeoffset|  
 |具有當地時區的時間戳記\*[.。\*]|datetimeoffset [\*]|  
@@ -246,8 +246,8 @@ ms.locfileid: "68060166"
 |原始 [8001 ...\*]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |字串 [\*.。8000]|Varchar [\*]|  
 |string [8001 ...\*]|varchar(max)|  
 |timestamp|datetime2|  

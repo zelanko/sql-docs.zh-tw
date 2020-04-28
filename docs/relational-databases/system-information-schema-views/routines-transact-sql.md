@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078517"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68078517"
 |SPECIFIC_NAME|**Nvarchar （** 128 **）**|目錄的特定名稱。 這個名稱與 ROUTINE_NAME 相同。|  
 |ROUTINE_CATALOG|**Nvarchar （** 128 **）**|函數的目錄名稱。|  
 |ROUTINE_SCHEMA|**Nvarchar （** 128 **）**|包含這個函數的結構描述名稱。<br /><br /> ** \* \*重要\*事項**請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|ROUTINE_NAME|**Nvarchar （** 128 **）**|函式的名稱。|  
+|ROUTINE_NAME|**Nvarchar （** 128 **）**|函數的名稱。|  
 |ROUTINE_TYPE|**Nvarchar （** 20 **）**|傳回 PROCEDURE (預存程序) 和 FUNCTION (函數)。|  
 |MODULE_CATALOG|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
 |MODULE_SCHEMA|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
@@ -72,10 +72,9 @@ ms.locfileid: "68078517"
 |SCOPE_CATALOG|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
 |SCOPE_SCHEMA|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
 |SCOPE_NAME|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
-|MAXIMUM_CARDINALITY|**Bigint**|NULL。 保留供未來使用。|  
+|MAXIMUM_CARDINALITY|**bigint**|NULL。 保留供未來使用。|  
 |DTD_IDENTIFIER|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
-|ROUTINE_BODY|**Nvarchar （** 30 **）**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數傳回 SQL，外部寫入的函數傳回 EXTERNAL。<br /><br /> 函數一律是 SQL。|  
+|ROUTINE_BODY|**Nvarchar （** 30 **）**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數傳回 SQL，外部寫入的函數傳回 EXTERNAL。<br /><br /> 函數一律是 SQL。|  
 |ROUTINE_DEFINITION|**Nvarchar （** 4000 **）**|如果函數或預存程序未加密，則傳回函數或預存程序之定義文字的前 4000 個字元。 否則，便傳回 NULL。<br /><br /> 若要確保您取得完整定義，請查詢[sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視中的[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函數或定義資料行。|  
 |EXTERNAL_NAME|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
 |EXTERNAL_LANGUAGE|**Nvarchar （** 30 **）**|NULL。 保留供未來使用。|  

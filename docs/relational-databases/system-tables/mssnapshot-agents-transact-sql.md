@@ -18,10 +18,10 @@ ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079959"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
@@ -31,18 +31,18 @@ ms.locfileid: "68079959"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|快照集代理程式的識別碼。|  
+|**id**|**int**|快照集代理程式的識別碼。|  
 |**name**|**Nvarchar （100）**|快照集代理程式的名稱。|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**publication_type**|**int**|發行集類型：<br /><br /> **0** = 交易式。<br /><br /> **1** = 快照集。<br /><br /> **2** = Merge。|  
 |**local_job**|**bit**|指出本機散發者是否有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|  
-|**job_id**|**binary （16）**|作業識別碼。|  
+|**job_id**|**binary(16)**|作業識別碼。|  
 |**profile_id**|**int**|[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中的設定識別碼。|  
 |**dynamic_filter_login**|**sysname**|在定義資料分割的參數化篩選中，用來評估[SUSER_SNAME &#40;transact-sql&#41;](../../t-sql/functions/suser-sname-transact-sql.md)函數的值。 這個資料行供資料分割快照集使用。|  
 |**dynamic_filter_hostname**|**sysname**|在定義資料分割的參數化篩選中，用來評估[HOST_NAME &#40;transact-sql&#41;](../../t-sql/functions/host-name-transact-sql.md)函數的值。 這個資料行供資料分割快照集使用。|  
-|**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> ****  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ****  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
+|**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1**  =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**publisher_login**|**sysname**|連接到發行者時所用的登入。|  
 |**publisher_password**|**Nvarchar （524）**|連接到發行者時，所用之密碼的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  

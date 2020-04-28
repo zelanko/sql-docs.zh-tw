@@ -10,10 +10,10 @@ ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060089"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>移除 SSMA for DB2 元件（DB2ToSQL）
@@ -24,7 +24,7 @@ ms.locfileid: "68060089"
   
 **卸載 SSMA**  
   
-1.  在 [控制台] 中，開啟 ****[新增或移除程式]。  
+1.  在 [控制台] 中，開啟 [新增或移除程式]。  
   
 2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)]選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [移轉小幫手 for DB2**]，然後按一下 [**移除**]。  
   

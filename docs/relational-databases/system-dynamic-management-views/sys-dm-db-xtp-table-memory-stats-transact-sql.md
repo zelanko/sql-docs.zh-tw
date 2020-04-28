@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097946"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
@@ -38,10 +38,10 @@ ms.locfileid: "68097946"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|資料表的物件識別碼。 NULL 表示記憶體中 OLTP 系統資料表。|  
-|memory_allocated_for_table_kb|**Bigint**|配置給這個資料表的記憶體。|  
-|memory_used_by_table_kb|**Bigint**|資料表使用的記憶體，包括資料列版本。|  
-|memory_allocated_for_indexes_kb|**Bigint**|配置給這個資料表之索引的記憶體。|  
-|memory_used_by_indexes_kb|**Bigint**|這個資料表之索引所耗用的記憶體。|  
+|memory_allocated_for_table_kb|**bigint**|配置給這個資料表的記憶體。|  
+|memory_used_by_table_kb|**bigint**|資料表使用的記憶體，包括資料列版本。|  
+|memory_allocated_for_indexes_kb|**bigint**|配置給這個資料表之索引的記憶體。|  
+|memory_used_by_indexes_kb|**bigint**|這個資料表之索引所耗用的記憶體。|  
   
 ## <a name="permissions"></a>權限  
  如果您具有目前資料庫的 VIEW DATABASE STATE 權限，則會傳回所有資料列。 否則，就會傳回空白資料列集。  
@@ -213,6 +213,6 @@ used_memory_mb       target_memory_mb
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

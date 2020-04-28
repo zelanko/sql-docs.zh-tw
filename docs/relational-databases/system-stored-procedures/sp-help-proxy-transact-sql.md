@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085282"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
@@ -51,7 +51,7 @@ sp_help_proxy
   
  下表列出每個子系統的值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX Script|  
 |CmdExec|作業系統 (CmdExec)|  
@@ -62,7 +62,7 @@ sp_help_proxy
 |QueueReader|複寫佇列讀取器代理程式|  
 |ANALYSISQUERY|Analysis Services 命令|  
 |ANALYSISCOMMAND|Analysis Services 查詢|  
-|Dts|SSIS 套件執行|  
+|Dts|SSIS 封裝執行|  
 |PowerShell|PowerShell 指令碼|  
   
 `[ @name = ] 'name'`要列出 proxy 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱。 名稱是**Nvarchar （256）**，預設值是 Null。 當指定*name*時，也必須指定*subsystem_name* 。  
@@ -89,7 +89,7 @@ sp_help_proxy
  若要判斷登入可用於指定子系統的 proxy，請指定*name*和*subsystem_name*。 當提供這些引數時， **sp_help_proxy**會列出指定的登入可能會存取的 proxy，以及可用於指定子系統的 proxy。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
+ 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
   
  如需**SQLAgentOperatorRole**的詳細資訊，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   

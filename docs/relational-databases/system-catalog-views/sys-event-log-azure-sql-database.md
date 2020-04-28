@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061380"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
@@ -36,24 +36,23 @@ ms.locfileid: "68061380"
 > [!CAUTION]  
 > 針對具有大量資料庫或大量登入的安裝，sys 中的活動 event_log 可能會造成效能的限制、高 CPU 使用量，而且可能會導致登入失敗。 Event_log 的查詢可能會導致此問題。 Microsoft 正致力於解決此問題。 同時，若要降低此問題的影響，請限制 sys.databases 的查詢 event_log。 NewRelic SQL Server 外掛程式的使用者應流覽[Microsoft Azure SQL Database 外掛程式微調 & 效能調整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)，以取得其他設定資訊。  
   
- 
-  `sys.event_log` 檢視包含以下資料行。  
+ `sys.event_log` 檢視包含以下資料行。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|資料庫名稱。 如果連接失敗且使用者未指定資料庫名稱，則這個資料行會是空白。|  
+|**database_name**|**sysname**|資料庫的名稱。 如果連接失敗且使用者未指定資料庫名稱，則這個資料行會是空白。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 對於彙總的事件，這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 對於匯總的事件， **End_time**一定會比相同資料列中對應的**start_time**來得晚5分鐘。 對於未匯總的事件， **start_time**和**end_time**等於事件的實際 UTC 日期和時間。|  
 |**event_category**|**Nvarchar （64）**|產生這個事件的高階元件。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**event_type**|**Nvarchar （64）**|事件的類型。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**event_subtype**|**int**|所發生事件的子類型。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**event_subtype_desc**|**Nvarchar （64）**|事件子類型的描述。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
-|**低於**|**int**|錯誤的嚴重性。 可能的值為：<br /><br /> 0 = 資訊<br />1 = 警告<br />2 = 錯誤|  
+|**severity**|**int**|錯誤的嚴重性。 可能的值包括：<br /><br /> 0 = 資訊<br />1 = 警告<br />2 = 錯誤|  
 |**event_count**|**int**|在指定的時間間隔內，這個事件針對指定的資料庫所發生的次數（**start_time**和**end_time**）。|  
 |**描述**|**nvarchar(max)**|事件的詳細描述。<br /><br /> 如需可能值的清單，請參閱[事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**additional_data**|**XML**|*注意： Azure SQL Database V12 的此值一律為 Null。請參閱[範例](#Deadlock)一節，以瞭解如何取得 V12 的鎖死事件。*<br /><br /> 對於**鎖死**事件，此資料行包含鎖死圖形。 對於其他事件類型，這個資料行為 NULL。 |  
   
-##  <a name="EventTypes"></a>事件種類
+##  <a name="event-types"></a><a name="EventTypes"></a>事件種類
 
  這個視圖中每個資料列所記錄的事件都是以類別目錄（**event_category**）、事件種類（**event_type**）和子類型（**event_subtype**）來識別。 下表列出這個檢視中所收集事件的類型。  
   
@@ -62,11 +61,11 @@ ms.locfileid: "68061380"
 > [!NOTE]  
 > 這個檢視不包括所有可能發生的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫事件，只包括這裡列出的事件。 其他類別目錄、事件類型和子類型會在未來的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本中加入。  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**低於**|**描述**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**描述**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**技術**|**connection_successful**|0|**connection_successful**|0|已成功連接資料庫。|  
 |**技術**|**connection_failed**|0|**invalid_login_name**|2|登入名稱在這個版本的 SQL Server 中無效。|  
-|**技術**|**connection_failed**|1|**windows_auth_not_supported**|2|Windows 登入在這個版本的 SQL Server 中不受支援。|  
+|**技術**|**connection_failed**|1|**windows_auth_not_supported**|2|這個版本的 SQL Server 不支援 Windows 登入。|  
 |**技術**|**connection_failed**|2|**attach_db_not_supported**|2|使用者要求附加不支援的資料庫檔案。|  
 |**技術**|**connection_failed**|3|**change_password_not_supported**|2|不支援使用者要求變更使用者登入的密碼。|  
 |**技術**|**connection_failed**|4|**login_failed_for_user**|2|使用者登入失敗。|  
@@ -78,11 +77,11 @@ ms.locfileid: "68061380"
 |**技術**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
 |**技術**|**connection_terminated**|1|**—**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
 |**技術**|**調節**|*\<原因代碼>*|**reason_code**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： * \<原因代碼>*。 如需詳細資訊，請參閱[引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
-|**技術**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易時間。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**技術**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為它取得太多鎖定。 嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**技術**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，以減少使用暫存資料表空間。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**技術**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**技術**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**技術**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**技術**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**技術**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**技術**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**技術**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱[資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**搜尋引擎優化**|**死**|0|**死**|2|發生死結。|  
   
 ## <a name="permissions"></a>權限
@@ -100,7 +99,7 @@ ms.locfileid: "68061380"
   
  例如，如果使用者因為登入名稱無效，而在連接到 Database1 資料庫時於 2012 年 2 月 5 日 11:00 到 11:05 (UTC) 之間失敗七次，這項資訊會在這個檢視的單一資料列中提供：  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**低於**|**event_count**|**描述**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**描述**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   

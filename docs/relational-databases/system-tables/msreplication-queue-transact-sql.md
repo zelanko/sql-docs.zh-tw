@@ -18,10 +18,10 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68080010"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68080010"
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
 |**tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  
-|**data**|**Varbinary （8000）**|儲存佇列命令相關資訊的壓縮位元組資料流。|  
+|**資料**|**varbinary(8000)**|儲存佇列命令相關資訊的壓縮位元組資料流。|  
 |**datalen**|**int**|資料長度 (以位元組為單位)。|  
 |**commandtype**|**int**|目前置於佇列中的命令類型：<br /><br /> 1 = 交易中的使用者命令。<br /><br /> 2 = 訂閱同步處理命令。|  
 |**insertdate**|**datetime**|插入的日期。|  
-|**orderkey**|**Bigint**|單純遞增的識別欄位。|  
+|**orderkey**|**bigint**|單純遞增的識別欄位。|  
 |**cmdstate**|**bit**|命令狀態：<br /><br /> 0 = 完成。<br /><br /> 1 = 部份。|  
   
 ## <a name="see-also"></a>另請參閱  

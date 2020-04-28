@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085081"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -51,12 +51,12 @@ sp_help_targetserver
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|伺服器識別碼。|  
-|**server_name**|**Nvarchar （30）**|伺服器名稱。|  
-|**位置**|**nvarchar(200)**|指定伺服器的位置。|  
+|**server_name**|**nvarchar(30)**|伺服器名稱。|  
+|**location**|**nvarchar(200)**|指定伺服器的位置。|  
 |**time_zone_adjustment**|**int**|相對於格林威治標準時間 (GMT) 的時區調整 (以小時為單位)。|  
 |**enlist_date**|**datetime**|指定伺服器的編列日期。|  
 |**last_poll_date**|**datetime**|前次輪詢伺服器來尋找作業的日期。|  
-|**狀態**|**int**|指定伺服器的狀態。|  
+|**status**|**int**|指定伺服器的狀態。|  
 |**unread_instructions**|**int**|伺服器是否有未讀的指示。 如果所有資料列都已下載，則此資料行為**0**。|  
 |**local_time**|**datetime**|目標伺服器的本機日期和時間，以前次輪詢主要伺服器之後的目標伺服器本機時間為基礎。|  
 |**enlisted_by_nt_user**|**Nvarchar （100）**|編列了目標伺服器的 Microsoft Windows 使用者。|  

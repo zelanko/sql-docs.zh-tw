@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089150"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys.databases dm_pdw_sql_requests （Transact-sql）
@@ -26,16 +26,16 @@ ms.locfileid: "68089150"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**Nvarchar （32）**|此 SQL 查詢散發所屬之查詢的唯一識別碼。<br /><br /> request_id、step_index 和 distribution_id 會形成此視圖的索引鍵。|請參閱[dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
+|request_id|**nvarchar(32)**|此 SQL 查詢散發所屬之查詢的唯一識別碼。<br /><br /> request_id、step_index 和 distribution_id 會形成此視圖的索引鍵。|請參閱[dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
 |step_index|**int**|此散發所屬之查詢步驟的索引。<br /><br /> request_id、step_index 和 distribution_id 會形成此視圖的索引鍵。|請參閱[dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 step_index。|  
 |pdw_node_id|**int**|執行此查詢散發所在節點的唯一識別碼。|請參閱[dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中的 node_id。|  
 |distribution_id|**int**|執行此查詢散發之散發的唯一識別碼。<br /><br /> request_id、step_index 和 distribution_id 會形成此視圖的索引鍵。|請參閱[pdw_distributions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)中的 distribution_id。 針對在節點範圍（而不是散發範圍）執行的要求，設定為-1。|  
-|status|**Nvarchar （32）**|查詢散發的目前狀態。|暫止，執行中，失敗，已取消，完成，已中止，CancelSubmitted|  
+|status|**nvarchar(32)**|查詢散發的目前狀態。|暫止，執行中，失敗，已取消，完成，已中止，CancelSubmitted|  
 |error_id|**Nvarchar （36）**|與此查詢散發相關聯之錯誤的唯一識別碼（如果有的話）。|請參閱[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)中的 error_id。 如果未發生錯誤，則設為 Null。|  
 |start_time|**datetime**|查詢散發開始執行的時間。|小於或等於目前的時間，且大於或等於此查詢散發所屬之查詢步驟的 start_time|  
 |end_time|**datetime**|此查詢散發完成執行、已取消或失敗的時間。|大於或等於開始時間，如果查詢散發正在進行中或已排入佇列，則設為 Null。|  
 |total_elapsed_time|**int**|代表查詢散發的執行時間（以毫秒為單位）。|大於或等於0。 等於 [已完成]、[失敗] 或 [已取消] 查詢散發的 start_time 和 end_time 差異。<br /><br /> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 會繼續成為最大值。 此狀況會產生「已超過最大值」的警告。<br /><br /> 最大值（以毫秒為單位）相當於24.8 天。|  
-|row_count|**Bigint**|此查詢散發變更或讀取的資料列數目。|-1 適用于不會變更或傳回資料的作業，例如 CREATE TABLE 和 DROP TABLE。|  
+|row_count|**bigint**|此查詢散發變更或讀取的資料列數目。|-1 適用于不會變更或傳回資料的作業，例如 CREATE TABLE 和 DROP TABLE。|  
 |spid|**int**|執行查詢散發之 SQL Server 實例上的會話識別碼。||  
 |命令|**nvarchar(4000)**|此查詢散發的完整命令文字。|任何有效的查詢或要求字串。|  
   

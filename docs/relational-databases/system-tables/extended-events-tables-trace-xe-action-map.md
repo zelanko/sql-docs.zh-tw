@@ -19,10 +19,10 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056270"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>擴充事件資料表 - trace_xe_action_map
@@ -34,8 +34,8 @@ ms.locfileid: "68056270"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|對應之 SQL 追蹤資料行的識別碼。|  
-|package_name|**Nvarchar （60）**|對應動作所在之擴充事件封裝的名稱。|  
-|xe_action_name|**Nvarchar （60）**|對應至 SQL 追蹤資料行之擴充事件動作的名稱。|  
+|package_name|**nvarchar(60)**|對應動作所在之擴充事件封裝的名稱。|  
+|xe_action_name|**nvarchar(60)**|對應至 SQL 追蹤資料行之擴充事件動作的名稱。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用下列查詢來識別相當於 SQL 追蹤資料行的擴充事件動作：  

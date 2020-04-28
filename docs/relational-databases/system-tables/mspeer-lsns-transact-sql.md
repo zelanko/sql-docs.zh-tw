@@ -18,10 +18,10 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085767"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68085767"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|識別點對點 LSN。|  
+|**id**|**int**|識別點對點 LSN。|  
 |**last_updated**|**datetime**|上次進行資料列更新的**日期時間**。|  
 |**始發**|**sysname**|交易的來源發行者名稱。|  
 |**originator_db**|**sysname**|交易的來源資料庫名稱。|  

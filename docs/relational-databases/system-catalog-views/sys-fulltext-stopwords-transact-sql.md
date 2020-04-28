@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070456"
 ---
 # <a name="sysfulltext_stopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
@@ -37,8 +37,7 @@ ms.locfileid: "68070456"
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**stoplist_id**|**int**|
-  **stopword** 所屬之停用字詞表的識別碼。 此識別碼在資料庫中是唯一的。|  
+|**stoplist_id**|**int**|**stopword** 所屬之停用字詞表的識別碼。 此識別碼在資料庫中是唯一的。|  
 |**停用字詞**|**Nvarchar （64）**|要針對停用字詞比對進行考量的詞彙。|  
 |**語言**|**sysname**|這是[sys.](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)中的別名值，fulltext_languages 對應到地區設定識別碼（**LCID**）的值，或是數值 LCID 的字串表示。|  
 |**language_id**|**int**|用於斷詞的 LCID。|  
@@ -47,7 +46,7 @@ ms.locfileid: "68070456"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   

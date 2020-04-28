@@ -21,10 +21,10 @@ ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053442"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
@@ -37,18 +37,18 @@ ms.locfileid: "68053442"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**號**|**int**|索引所屬的資料表識別碼。|  
-|**狀態**|**int**|系統狀態資訊。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**頭**|**二進位（6）**|指向第一個頁面或根頁面的指標。<br /><br /> 當**indid** = 0 時未使用。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
+|**id**|**int**|索引所屬的資料表識別碼。|  
+|**status**|**int**|系統狀態資訊。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**頭**|**binary(6)**|指向第一個頁面或根頁面的指標。<br /><br /> 當**indid** = 0 時未使用。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
 |**indid**|**smallint**|索引的識別碼：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> >1 = 非叢集索引|  
-|**路徑**|**二進位（6）**|對於**indid** >= 1， **root**是根頁面的指標。<br /><br /> 當**indid** = 0 時未使用。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
+|**root**|**binary(6)**|對於**indid** >= 1， **root**是根頁面的指標。<br /><br /> 當**indid** = 0 時未使用。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
 |**minlen**|**smallint**|資料列的大小下限。|  
 |**keycnt**|**smallint**|索引鍵數目。|  
 |**groupid**|**smallint**|建立物件的檔案群組識別碼。<br /><br /> Null = 索引會在**indid** > 1 時進行分割。<br /><br /> Null = 當**indid**為0或1時，資料表會進行分割。|  
 |**dpages**|**int**|對於**indid** = 0 或**indid** = 1， **dpages**是所使用的資料頁計數。<br /><br /> 針對**indid** > 1， **dpages**是使用的索引頁計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**留**|**int**|若為**indid** = 0 或**indid** = 1， **reserved**就是配置給所有索引和資料表資料的頁面計數。<br /><br /> 對於**indid** > 1， **reserved**是針對索引所配置的頁面計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**作為**|**int**|針對**indid** = 0 或**indid** = 1，**使用**的是所有索引和資料表資料所使用的總頁數。<br /><br /> 針對**indid** > 1，**使用**的是用於索引的頁面計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
-|**rowcnt**|**Bigint**|以**indid** = 0 和**indid** = 1 為基礎的資料層級資料列計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。|  
+|**rowcnt**|**bigint**|以**indid** = 0 和**indid** = 1 為基礎的資料層級資料列計數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。|  
 |**rowmodctr**|**int**|計算前次更新資料表的統計資料之後，插入、刪除或更新資料列的總數。<br /><br /> 0 = 當**indid** > 1 時，索引會進行分割。<br /><br /> 0 = 當**indid**為0或1時，資料表會進行分割。<br /><br /> 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中， **rowmodctr**與舊版不完全相容。 如需詳細資訊，請參閱＜備註＞。|  
 |**reserved3**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved4**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -57,15 +57,15 @@ ms.locfileid: "68053442"
 |**OrigFillFactor**|**tinyint**|當建立索引時，所用的原始填滿因數值。 這個值並沒有維護；不過，如果您必須重建索引，且忘了所用的填滿因數值，它可能很有用。|  
 |**StatVersion**|**tinyint**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved2**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**FirstIAM**|**二進位（6）**|NULL = 索引進行分割。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**FirstIAM**|**binary(6)**|NULL = 索引進行分割。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**impid**|**smallint**|索引實作旗標。<br /><br /> 傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|用來約束所考量的索引鎖定資料粒度。 例如，若要將鎖定成本降到最低，您可以將基本上是唯讀的參考表設為只執行資料表層級的鎖定。|  
 |**pgmodctr**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**快速鍵**|**Varbinary （816）**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示索引鍵資料行，請使用[sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
+|**快速鍵**|**varbinary(816)**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示索引鍵資料行，請使用[sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
 |**name**|**sysname**|索引或統計資料的名稱。 當**indid** = 0 時，會傳回 Null。 請修改您的應用程式來查閱 NULL 堆積名稱。|  
 |**statblob**|**image**|統計資料二進位大型物件 (BLOB)。<br /><br /> 傳回 NULL。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**rows**|**int**|以**indid** = 0 和**indid** = 1 為基礎的資料層級資料列計數，且值會針對**indid** >1 重複。|  
+|**行間**|**int**|以**indid** = 0 和**indid** = 1 為基礎的資料層級資料列計數，且值會針對**indid** >1 重複。|  
   
 ## <a name="remarks"></a>備註  
  不應使用定義為已保留的資料行。  
@@ -76,7 +76,7 @@ ms.locfileid: "68053442"
   
  如果您使用**rowmodctr**中的值來判斷何時要更新統計資料，請考慮下列解決方案：  
   
--   不做任何動作。 新的**rowmodctr**值經常會協助您判斷何時要更新統計資料，因為此行為相當接近舊版的結果。  
+-   不執行任何動作。 新的**rowmodctr**值經常會協助您判斷何時要更新統計資料，因為此行為相當接近舊版的結果。  
   
 -   不使用 AUTO_UPDATE_STATISTICS。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68053442"
 -   利用應用程式層級的資訊來判斷更新統計資料的時間。 例如，每次**識別**資料行的最大值變更超過10000，或每次執行大量插入作業時。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

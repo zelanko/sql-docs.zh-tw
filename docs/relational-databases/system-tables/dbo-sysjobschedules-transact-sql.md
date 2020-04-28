@@ -20,10 +20,10 @@ ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a7f2dfc6196bfba6c274eb45a45745159447cc39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061186"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)

@@ -20,10 +20,10 @@ ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090227"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68090227"
 |column_name|**nvarchar(256)**|組態值的名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。 不可為 Null。|  
 |column_value|**Nvarchar （3072）**|資料行的設定值。 可為 Null。|  
-|object_type|**Nvarchar （60）**|物件的型別。 不可為 Null。 object_type 是下列其中一個：<br /><br /> event<br /><br /> 目標|  
+|object_type|**nvarchar(60)**|物件的型別。 不可為 Null。 object_type 是下列其中一個：<br /><br /> event<br /><br /> 目標|  
 |object_name|**nvarchar(256)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
   

@@ -10,10 +10,10 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086167"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用範例主控台指令檔（DB2ToSQL）
@@ -52,7 +52,7 @@ ms.locfileid: "68086167"
   
     如需產生報表的詳細資訊，請參閱[&#40;DB2ToSQL&#41;產生報表](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-    **紀錄**  
+    **注意：**  
   
     請確定將變數值檔案命令列引數傳遞至主控台應用程式，並以使用者指定的值更新 VariableValueFileSample。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68086167"
   
 5.  **ConversionAndDataMigrationSample .xml：** 這個範例可讓使用者執行端對端遷移，使其無法轉換為資料移轉。 如下所示，需要變更的必要屬性值清單如下：  
   
-    |命令名稱|描述|屬性|  
+    |命令名稱：|描述|屬性|  
     |----------------|---------------|-------------|  
     |`map-schema`|源資料庫與目標架構的架構對應。|`source-schema:`指定需要轉換的源資料庫。<br /><br />`sql-server-schema`：指定要遷移至的目標資料庫|  
     |`convert-schema`|執行從來源到目標架構的架構轉換。<br /><br />如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`convert-schema`主控台指令檔的範例4所示。|`object-name`：指定需要轉換的源資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`|  

@@ -37,10 +37,10 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068949"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>存取清查架構（AccessToSQL）
@@ -55,7 +55,7 @@ ms.locfileid: "68068949"
 |**DatabaseName**|**nvarchar(4000)**|Access 資料庫的名稱。|  
 |**ExportTime**|**datetime**|SSMA 建立此中繼資料的日期和時間。|  
 |**FilePath**|**nvarchar(4000)**|Access 資料庫的完整路徑和檔案名。|  
-|**FileSize**|**Bigint**|Access 資料庫的大小（以 KB 為單位）。|  
+|**FileSize**|**bigint**|Access 資料庫的大小（以 KB 為單位）。|  
 |**FileOwner**|**nvarchar(4000)**|指定為 Access 資料庫擁有者的 Windows 帳戶。|  
 |**DateCreated**|**datetime**|建立 Access 資料庫的日期和時間。|  
 |**DateModified**|**datetime**|上次修改 Access 資料庫的日期和時間。|  
@@ -96,7 +96,7 @@ ms.locfileid: "68068949"
 |**IsNullable**|**bit**|指定資料行是否可以包含 null 值。 如果值為1，則資料行可以包含 null 值。 如果值為0，則資料行不能包含 null 值。 請注意，驗證規則也可以用來防止 null 值。|  
 |**DataType**|**nvarchar(4000)**|資料行的存取資料類型，例如**Text**或**Long**。|  
 |**IsAutoIncrement**|**bit**|指定資料行是否自動遞增整數值。 如果值為1，則整數會自動遞增。|  
-|**Ordinal**|**smallint**|資料表中的資料行順序，從零開始。|  
+|**序數**|**smallint**|資料表中的資料行順序，從零開始。|  
 |**DefaultValue**|**nvarchar(4000)**|資料行的預設值。|  
 |**有效性**|**nvarchar(4000)**|用來驗證資料行中加入或更新之資料的規則。|  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68068949"
 |**IsPK**|**bit**|指定索引是否自動建立為定義主鍵的一部分。|  
 |**IsClustered**|**bit**|指定索引是否已叢集化。 叢集索引會重新排序資料的實體儲存體。 一個資料表只能有一個叢集索引。|  
   
-## <a name="foreign-keys"></a>外鍵  
+## <a name="foreign-keys"></a>外部索引鍵  
 外鍵中繼資料會匯出至**SSMA_Access_InventoryForeignKeys**資料表。 此資料表包含下列資料行：  
   
 |資料行名稱|資料類型|描述|  

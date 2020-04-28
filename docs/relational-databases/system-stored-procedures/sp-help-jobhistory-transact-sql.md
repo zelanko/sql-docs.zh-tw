@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054935"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -78,11 +78,11 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |值|描述|  
 |-----------|-----------------|  
 |**0**|Failed|  
-|**1**|Succeeded|  
+|**1**|成功|  
 |**2**|重試 (僅限步驟)|  
-|**第**|已取消|  
+|**3**|已取消|  
 |**4**|進行中訊息|  
-|**第**|Unknown|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries`作業應該重試執行的最小次數。 *minimum_retries*是**int**，預設值是 Null。  
   
@@ -107,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|步驟名稱 (作業記錄的這個項目是 NULL)。|  
 |**sql_message_id**|**int**|這是執行命令時，[!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟所遇到的最新 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤號碼。|  
 |**sql_severity**|**int**|這是執行命令時，[!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟所遇到的最高 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤嚴重性。|  
-|**消息**|**nvarchar(1024)**|作業或步驟歷程記錄訊息。|  
+|**message**|**nvarchar(1024)**|作業或步驟記錄訊息。|  
 |**run_status**|**int**|作業或步驟的結果。|  
 |**run_date**|**int**|作業或步驟開始執行的日期。|  
 |**run_time**|**int**|作業或步驟開始執行的時間。|  
@@ -116,13 +116,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**Nvarchar （20）**|這項作業的相關網路訊息所送往的操作員 (步驟記錄的這個項目是 NULL)。|  
 |**operator_paged**|**Nvarchar （20）**|這項作業的相關呼叫所送往的操作員 (步驟記錄的這個項目是 NULL)。|  
 |**retries_attempted**|**int**|步驟重試的次數 (作業記錄的這個項目一律是 0)。|  
-|**伺服器**|**Nvarchar （30）**|執行步驟或作業的伺服器。 一律為（**local**）。|  
+|**伺服器**|**nvarchar(30)**|執行步驟或作業的伺服器。 一律為（**local**）。|  
   
 ## <a name="remarks"></a>備註  
  **sp_help_jobhistory**會傳回具有指定之排程工作歷程記錄的報表。 如果未指定任何參數，報表會包含所有已排程作業的記錄。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+ 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   

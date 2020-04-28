@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074808"
 ---
 # <a name="identifiers-dmx"></a>識別碼 (DMX)
@@ -28,7 +28,7 @@ ms.locfileid: "68074808"
   
  物件識別碼是在您定義物件時建立的。 然後您使用識別碼參考物件。 識別碼必須小於或等於 100 個字元。  
   
-##  <a name="RegularIdentifiers"></a>一般識別碼  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>一般識別碼  
  DMX 中的一般識別碼符合 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的識別碼格式規則。 DMX 中的一般識別碼不需要分隔符號。 下列是使用一般、非分隔識別碼之 DMX 陳述式的範例：  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  在 DMX 陳述式中使用不符合這些規則的任何識別碼時，必須以方括號分隔這些識別碼。  
   
-##  <a name="DelimitedIdentifiers"></a>分隔識別碼  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>分隔識別碼  
  分隔識別碼以方括號 ([ ]) 括住。  下列是包含符合這些規則之分隔識別碼的 DMX 陳述式範例。  
   
 ```  

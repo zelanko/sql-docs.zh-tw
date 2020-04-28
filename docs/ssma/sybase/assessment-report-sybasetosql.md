@@ -10,10 +10,10 @@ ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083497"
 ---
 # <a name="assessment-report-sybasetosql"></a>評定報告 (SybaseToSQL)
@@ -21,7 +21,7 @@ ms.locfileid: "68083497"
   
 若要存取評量報告，請選取要在來源中繼資料瀏覽器中轉換的物件、以滑鼠右鍵按一下 [**資料庫**]，然後選取 [**建立報表**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **轉換統計資料**  
 依語句類型顯示轉換統計資料。 只有在左窗格中選取 [群組] 物件（例如 [架構] 或 [沒有程式碼的物件]）時，才會顯示這個窗格。  
   

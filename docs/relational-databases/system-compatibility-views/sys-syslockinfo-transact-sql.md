@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053346"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -40,9 +40,9 @@ ms.locfileid: "68053346"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**Nchar （32）**|鎖定資源的文字描述。 包含鎖定資源的一部份。|  
-|**rsc_bin**|**binary （16）**|二進位鎖定資源。 包含內含於鎖定管理員的實際鎖定資源。 此資料行包含在瞭解用於產生其專屬格式化鎖定資源的鎖定資源格式，以及在**syslockinfo**上執行自我聯結的工具。|  
-|**rsc_valblk**|**binary （16）**|鎖定值區塊。 某些資源類型可能會將其他資料併入某鎖定資源中，而該鎖定資源並非由鎖定管理員雜湊以決定特定鎖定資源的擁有權。 例如，頁面鎖定不是由特定物件識別碼擁有。 適用於鎖定擴大和其他用途。 不過，頁面鎖定的物件識別碼可以併入鎖定值區塊中。|  
+|**rsc_text**|**nchar(32)**|鎖定資源的文字描述。 包含鎖定資源的一部份。|  
+|**rsc_bin**|**binary(16)**|二進位鎖定資源。 包含內含於鎖定管理員的實際鎖定資源。 此資料行包含在瞭解用於產生其專屬格式化鎖定資源的鎖定資源格式，以及在**syslockinfo**上執行自我聯結的工具。|  
+|**rsc_valblk**|**binary(16)**|鎖定值區塊。 某些資源類型可能會將其他資料併入某鎖定資源中，而該鎖定資源並非由鎖定管理員雜湊以決定特定鎖定資源的擁有權。 例如，頁面鎖定不是由特定物件識別碼擁有。 適用於鎖定擴大和其他用途。 不過，頁面鎖定的物件識別碼可以併入鎖定值區塊中。|  
 |**rsc_dbid**|**smallint**|資源所關聯的資料庫識別碼。|  
 |**rsc_indid**|**smallint**|資源所關聯的索引識別碼 (如果適用的話)。|  
 |**rsc_objid**|**int**|資源所關聯的物件識別碼 (如果適用的話)。|  
@@ -56,7 +56,7 @@ ms.locfileid: "68053346"
 |**req_spid**|**int**|要求[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]鎖定之會話的內部處理序識別碼。|  
 |**req_ecid**|**int**|執行內容識別碼 (ECID)。 用來指出平行作業中的哪個執行緒擁有特定鎖定。|  
 |**req_ownertype**|**smallint**|關聯於鎖定的物件類型。<br /><br /> 1 = 交易<br /><br /> 2 = 資料指標<br /><br /> 3 = 工作階段<br /><br /> 4 = ExSession<br /><br /> 請注意，3 和 4 分別代表特殊版本的工作階段鎖定、追蹤資料庫和檔案群組鎖定。|  
-|**req_transactionID**|**Bigint**|**Syslockinfo**和 profiler 事件中使用的唯一交易識別碼|  
+|**req_transactionID**|**bigint**|**Syslockinfo**和 profiler 事件中使用的唯一交易識別碼|  
 |**req_transactionUOW**|**uniqueidentifier**|識別 DTC 交易的工作單位識別碼 (UOW)。 如果是非 MS DTC 交易，UOW 設為 0。|  
   
 ## <a name="permissions"></a>權限  
@@ -64,6 +64,6 @@ ms.locfileid: "68053346"
   
 ## <a name="see-also"></a>另請參閱  
  [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

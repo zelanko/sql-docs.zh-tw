@@ -20,10 +20,10 @@ ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102339"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
@@ -41,13 +41,13 @@ ms.locfileid: "68102339"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|這個參數所屬物件的識別碼。|  
 |**procedure_number**|**smallint**|這個程序在物件內的編號，大於或等於 2。|  
-|**name**|**sysname**|參數名稱。 在**procedure_number**內是唯一的。|  
+|**name**|**sysname**|參數的名稱。 在**procedure_number**內是唯一的。|  
 |**parameter_id**|**int**|參數的識別碼。 在**procedure_number**內是唯一的。|  
 |**system_type_id**|**tinyint**|參數系統類型的識別碼。|  
 |**user_type_id**|**int**|參數的類型識別碼 (如使用者所定義)。|  
 |**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行的資料類型是 varchar(max)、nvarchar(max) 或 varbinary(max)。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是參數的有效位數；否則，便是 0。|  
-|**尺度**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
+|**scale**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
 |**is_output**|**bit**|1 = 參數是輸出 (或傳回)；否則，便是 0。|  
 |**is_cursor_ref**|**bit**|1 = 參數是一個資料指標參考參數。|  
   

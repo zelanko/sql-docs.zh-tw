@@ -21,10 +21,10 @@ ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053474"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
@@ -39,16 +39,16 @@ ms.locfileid: "68053474"
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|每個資料庫的唯一檔案識別碼。|  
 |**groupid**|**smallint**|檔案群組識別碼。|  
-|**容量**|**int**|檔案大小 (以 8KB 頁面為單位)。|  
+|**size**|**int**|檔案大小 (以 8KB 頁面為單位)。|  
 |**maxsize**|**int**|最大檔案大小 (以 8 KB 頁面為單位)。<br /><br /> 0 = 不成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意：使用無限制記錄檔大小進行升級的資料庫，會報告-1，表示記錄檔的大小上限。|  
 |**growth**|**int**|資料庫的成長大小。 可以是頁面的數目或檔案大小的百分比，視**狀態**的值而定。<br /><br /> 0 = 不成長。|  
-|**狀態**|**int**|**成長**值的狀態位（以 mb 或 kb 為單位）。<br /><br /> 0x2 = 磁碟檔。<br /><br /> 0x40 = 記錄檔。<br /><br /> 0x100000 = 成長。 這個值是一個百分比，不是頁數。|  
+|**status**|**int**|**成長**值的狀態位（以 mb 或 kb 為單位）。<br /><br /> 0x2 = 磁碟檔。<br /><br /> 0x40 = 記錄檔。<br /><br /> 0x100000 = 成長。 這個值是一個百分比，不是頁數。|  
 |**效能**|**int**|已保留。|  
 |**name**|**sysname**|檔案的邏輯名稱。|  
 |**名稱**|**nvarchar(260)**|實體裝置的名稱。 其中包括檔案的完整路徑。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

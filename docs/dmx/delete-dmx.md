@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070759"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
@@ -29,10 +29,10 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 ```  
   
 ## <a name="arguments"></a>引數  
- *model*  
+ *模型*  
  模型識別碼。  
   
- *表示*  
+ *structure*  
  結構識別碼。  
   
 ## <a name="remarks"></a>備註  
@@ -58,6 +58,6 @@ DELETE FROM NB_Sample.CONTENT
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
