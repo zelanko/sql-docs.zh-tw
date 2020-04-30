@@ -1,7 +1,7 @@
 ---
 title: Linux 和 macOS 上的 ODBC Driver for SQL Server 版本資訊
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090502"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153269"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上 Microsoft ODBC Driver for SQL Server 的版本資訊
 
@@ -36,6 +36,13 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2，2020 年 4 月 (僅限 Alpine Linux)
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| 已修正錯誤 (Bug)。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1752-march-2020"></a>17.5.2，2020 年 3 月
 
 | 新增功能 | 詳細資料 |
@@ -49,7 +56,7 @@ GeneMi.  2019/04/03.
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
-| SQL_COPT_SS_SPID 連線屬性，無需往返伺服器即可擷取 SPID | 請參閱 [DSN 和連接字串屬性和關鍵字](../dsn-connection-string-attribute.md)。 |
+| SQL_COPT_SS_SPID 連線屬性，無需往返伺服器即可擷取 SPID | 請參閱 [DSN 與連接字串屬性和關鍵字](../dsn-connection-string-attribute.md)。 |
 | 支援透過 Debian 和 Ubuntu 上的 `debconf` 來指示接受 EULA | 請參閱[安裝驅動程式](./installing-the-microsoft-odbc-driver-for-sql-server.md)。 |
 | 支援新的散發套件。 | &bull; &nbsp; &nbsp; Alpine Linux (3.10、3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
@@ -140,11 +147,11 @@ Azure SQL 受控執行個體的支援。
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 新增在與 Microsoft SQL Server 2016 一起使用時對 Always Encrypted 及 Azure Active Directory 的支援。
 
-**支援新的散發套件**：在 macOS 上的 ODBC Driver 第一個版本支援 OS X 10.11 和 macOS 10.12。 Ubuntu 16.10 現在也已連同 Red Hat 6、7 和 SUSE 12 受到支援。 每個平台都有平台相關的套件 (RPM 或 DEB)，以便簡化安裝和設定。 如需詳細資訊，請參閱 [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 與 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驅動程式安裝指示。
+**支援新的散發套件**：macOS 上的第一個 ODBC Driver 版本支援 OS X 10.11 和 macOS 10.12。 Ubuntu 16.10 現在也已連同 Red Hat 6、7 和 SUSE 12 受到支援。 每個平台都有平台相關的套件 (RPM 或 DEB)，以便簡化安裝和設定。 如需詳細資訊，請參閱 [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 與 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驅動程式安裝指示。
 
-**unixODBC Driver Manager 2.3.1 支援變更**：ODBC 驅動程式不再依賴 unixODBC 驅動程式管理員的自訂封裝 (RedHat 6 上除外)，並改為依賴散發套件管理員，從散發套件存放庫解析 UnixODBC 相依性。
+**unixODBC Driver Manager 2.3.1 支援變更**：ODBC 驅動程式不再依賴 unixODBC Driver Manager 的自訂封裝 (RedHat 6 上除外)，並改為依賴散發套件管理員，從散發套件存放庫解析 UnixODBC 相依性。
 
-**BCP API 支援**：Linux 和 macOS 的 ODBC 驅動程式現在支援使用 [BCP API 函式 (**bcp_init** 等等)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
+**BCP API 支援**：Linux 和 macOS 的 ODBC 驅動程式現在支援使用 [BCP API 函式 (**bcp_init** 等)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)。
 
 ## <a name="130-for-ssnoversion-on-linux"></a>Linux 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 13.0
 
@@ -154,11 +161,11 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)
 
 Ubuntu 現在已連同 Red Hat 和 SUSE 受到支援。 每個平台都有平台相關的套件 (RPM 或 DEB)，以便簡化安裝和設定。  如需安裝指示，請參閱[安裝驅動程式](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 
-**unixODBC Driver Manager 2.3.1 支援**：除了較新的驅動程式管理員，也有一個套件用來安裝此相依性，以便簡化安裝和設定。  
+**unixODBC Driver Manager 2.3.1 支援**：除了較新的驅動程式管理員，也有一個套件可用來安裝此相依性，以簡化安裝和設定。  
 
-**透明網路 IP 解析**：透明網路 IP 解析是現有多重子網路容錯移轉功能的修訂，它會影響當主機名稱的第一個解析 IP 無回應且有多個 IP 與主機名稱相關聯時，驅動程式的連接順序。
+**透明網路 IP 解析**：透明網路 IP 解析是現有多重子網路容錯移轉功能的修訂，它會在主機名稱第一個解析的 IP 無回應且有多個 IP 與主機名稱相關聯時，影響驅動程式的連線順序。
 
-**TLS 1.2 支援**：Linux 上的 Microsoft ODBC Driver 13.0 for SQL Server 現在在使用與 SQL Server 之間的安全通訊時，支援 TLS1.2。
+**TLS 1.2 支援**：Linux 上的 Microsoft ODBC Driver 13.0 for SQL Server 現在會在使用與 SQL Server 的安全通訊時支援 TLS 1.2。
 
 ## <a name="11-for-ssnoversion-on-linux"></a>Linux 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 11
 
@@ -166,6 +173,6 @@ ODBC Driver on SUSE Linux (預覽) 支援 64 位元 SUSE Linux Enterprise 11 Ser
 
 Linux 上的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需詳細資訊，請參閱 [Linux 上 ODBC Driver 對於高可用性、災害復原的支援](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
-ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱 [如何：使用 ODBC 連接到 Azure SQL Database](https://msdn.microsoft.com/library/hh974312.aspx)。  
+ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱[如何：使用 ODBC 連線到 Azure SQL Database](https://msdn.microsoft.com/library/hh974312.aspx)。  
 
 `-l` 選項 (登入逾時) 已新增至 `bcp`。 如需詳細資訊，請參閱[使用 **bcp** 連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。

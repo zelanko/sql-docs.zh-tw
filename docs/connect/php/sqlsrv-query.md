@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_query | Microsoft Docs
+title: sqlsrv_query
+description: sqlsrv_query 函式會提供使用最少程式碼來執行查詢的方法，並可用來執行參數化查詢。
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8c3912c33280738c8bebc012686490d7c55926
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928555"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728403"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +40,9 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 #### <a name="parameters"></a>參數  
 *$conn*：與備妥的陳述式相關聯的連接資源。  
   
-*$tsql*：與已備妥陳述式相對應的 Transact-SQL 運算式。  
+*$tsql*：與備妥的陳述式相對應的 Transact-SQL 運算式。  
   
-*$params* [選用]：與參數化查詢中之參數對應的值**陣列**。 陣列的每個元素可以是下列其中一項：
+*$params* [OPTIONAL]：對應至參數化查詢中參數的值**陣列**。 陣列的每個元素可以是下列其中一項：
   
 -   常值。  
   
@@ -58,11 +59,11 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |元素|描述|  
     |-----------|---------------|  
     |*$value*|常值、PHP 變數或 PHP by-reference 變數。|  
-    |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用來指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
     |*$phpType*[OPTIONAL]|**SQLSRV_PHPTYPE_\*** 常數，指定傳回值的 PHP 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
     |*$sqlType*[OPTIONAL]|**SQLSRV_SQLTYPE_\*** 常數，指定輸入值的 SQL Server 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
   
-*$options* [選用]：設定查詢屬性的關聯陣列。 它與 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) 也支援的索引鍵清單相同。
+*$options* [選擇性]：設定查詢屬性的關聯陣列。 它與 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) 也支援的索引鍵清單相同。
   
 ## <a name="return-value"></a>傳回值  
 陳述式資源。 如果無法建立且 (或) 無法執行陳述式，將會傳回 **false**。  
@@ -70,7 +71,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="remarks"></a>備註  
 **sqlsrv_query** 函式非常適用於一次性查詢，且應作為執行查詢的預設選擇 (除非情況特殊)。 此函數提供簡便的方法，可用最少量的程式碼來執行查詢。 **sqlsrv_query** 函式可執行陳述式準備和陳述式執行，而且可用來執行參數化查詢。  
   
-如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>範例  
 在下列範例中，會將單一資料列插入 AdventureWorks 資料庫的 *Sales.SalesOrderDetail* 資料表中。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
@@ -243,11 +244,11 @@ Second field:  test_data
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
 
-[如何：執行參數化查詢](../../connect/php/how-to-perform-parameterized-queries.md)  
+[操作說明：執行參數化查詢](../../connect/php/how-to-perform-parameterized-queries.md)  
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
 
-[如何：以資料流形式傳送資料](../../connect/php/how-to-send-data-as-a-stream.md)  
+[操作說明：以資料流形式傳送資料](../../connect/php/how-to-send-data-as-a-stream.md)  
 
 [使用方向參數](../../connect/php/using-directional-parameters.md)  
 

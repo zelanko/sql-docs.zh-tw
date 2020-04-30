@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256924"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087348"
 ---
 # <a name="execution-plans"></a>執行計劃
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 為了能夠執行查詢，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 必須分析陳述式來判斷存取必要資料最有效率的方式。 這項分析會由稱為「查詢最佳化工具」的元件處理。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計劃或執行計畫。   
 
@@ -45,9 +45,9 @@ ms.locfileid: "78256924"
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有三個選項可顯示執行計畫：        
-> -  ***[預估的執行計畫](../../relational-databases/performance/display-the-estimated-execution-plan.md)***，這是已編譯的計畫，而且是由查詢最佳化工具根據預估所產生。        
-> -  ***[實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)***，這與已編譯的計畫相同，再加上其[執行內容](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 這包括執行完成之後可用的實際執行階段資訊，例如執行警告；在較新版的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中則是執行的經過時間與所使用的 CPU 時間。        
-> -  ***[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)***：這與編譯過的計畫相同，加上其執行內容。 這包括執行過程中的執行階段資訊，會每秒更新一次。 舉例來說，執行階段資訊包括流經運算子的實際資料列數。       
+> -  ***[估計執行計畫](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** 是已編譯的計畫，且是由查詢最佳化工具根據估計所產生。 這是儲存在計畫快取中的查詢計劃。        
+> -  ***[實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)*** 是已編譯的計畫再加上其[執行內容](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 其會在**查詢執行完成之後**提供使用。 這包括實際的執行階段資訊 (例如執行警告)，在較新版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中則是執行期間所使用的耗用時間與 CPU 時間。         
+> -  ***[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)*** 是已編譯的計畫加上其執行內容。 其可供**執行中的查詢執行**使用，且會每秒更新一次。 這包括如流經[運算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的資料列實際數目、經過的時間，以及估計的查詢進度等執行階段資訊。
 
 > [!TIP]
 > 如需查詢處理與查詢執行計畫的詳細資訊，請參閱《查詢處理架構指南》的[最佳化 SELECT 陳述式](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)與[執行計畫快取與重複使用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)小節。

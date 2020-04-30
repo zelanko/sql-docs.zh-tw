@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982219"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107982"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "73982219"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -303,37 +303,43 @@ OUTPUT 子句
   
 ### <a name="best-practices-for-bulk-importing-data"></a>大量匯入資料的最佳做法  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>使用 INSERT INTO...SELECT 搭配最低限度記錄來大量匯入資料  
- 您可以搭配使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 最低限度記錄，有效率地將大量資料列從某份資料表 (例如暫存表格) 傳送至另一份資料表。 最低限度記錄可以改善此陳述式的效能並且降低交易期間作業填滿可用交易記錄空間的可能性。  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>使用 INSERT INTO...SELECT 以最低限度記錄和平行處理原則來大量匯入資料 
+您可以搭配使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 最低限度記錄，有效率地將大量資料列從某份資料表 (例如暫存表格) 傳送至另一份資料表。 最低限度記錄可以改善此陳述式的效能並且降低交易期間作業填滿可用交易記錄空間的可能性。  
   
- 此陳述式的最低限度記錄具有下列需求：  
-  
+此陳述式的最低限度記錄具有下列需求：  
 -   資料庫的復原模式設為簡單或大量記錄。  
-  
 -   目標資料表是空白或非空白的堆積。  
-  
 -   目標資料表未用於複寫。  
-  
--   針對目標資料表指定了 TABLOCK 提示。  
+-   已針對目標資料表指定 `TABLOCK` 提示。  
   
 由於 MERGE 陳述式中的插入動作而插入堆積的資料列也可以採用最低限度記錄。  
   
- 與 BULK INSERT 陳述式 (持有較不嚴格的大量更新鎖定) 不同之處在於，具 TABLOCK 提示的 INSERT INTO...SELECT 對資料表持有獨佔 (X) 鎖定。 這代表您無法使用平行插入作業插入資料列。  
+與 `BULK INSERT` 陳述式 (其持有較不嚴格的大量更新 (BU) 鎖定) 不同，具 `TABLOCK` 提示的 `INSERT INTO … SELECT` 對資料表持有獨佔 (X) 鎖定。 這代表您無法使用同時執行的多個插入作業來插入資料列。 
+
+不過，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和資料庫相容性層級 130 開始，`INSERT INTO … SELECT` 陳述式可以在插入堆積或叢集資料行存放區索引 (CCI) 時，以平行方式執行。 使用 `TABLOCK` 提示時，可以平行插入。  
+
+上述陳述式的平行處理原則有下列需求，其類似於最低限度記錄的需求：  
+-   目標資料表是空白或非空白的堆積。  
+-   目標資料表具有叢集資料行存放區索引 (CCI)，但沒有非叢集索引。  
+-   目標資料表沒有 IDENTITY_INSERT 設定為 OFF 的識別欄位。  
+-   已針對目標資料表指定 `TABLOCK` 提示。
+
+在滿足最低限度記錄和平行插入需求的案例中，這兩個改進功能將會共同運作，以確保資料載入作業的最大輸送量。
+
+> [!NOTE]
+> 針對本機暫存資料表 (以 # 前置詞識別) 和全域暫存資料表 (以 ## 前置詞識別) 所進行的插入，也可以透過使用 TABLOCK 提示來啟用平行處理原則。
   
-#### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>利用 OPENROWSET 和 BULK 來大量匯入資料  
+#### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>使用 OPENROWSET 和 BULK 來大量匯入資料  
  OPENROWSET 函數可接受下列資料表提示，這些提示會針對大量載入最佳化提供 INSERT 陳述式：  
   
--   TABLOCK 提示可以將插入作業的記錄數目減至最小。 資料庫的復原模式必須設定為簡單或大量記錄，而且目標資料表不得用於複寫。 如需詳細資訊，請參閱[在大量匯入中採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   `TABLOCK` 提示可以將插入作業的記錄數目最小化。 資料庫的復原模式必須設定為簡單或大量記錄，而且目標資料表不得用於複寫。 如需詳細資訊，請參閱[在大量匯入中採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   `TABLOCK` 提示可以啟用平行插入作業。 目標資料表是沒有非叢集索引的堆積或叢集資料行存放區索引 (CCI)，且目標資料表不能有已指定的識別欄位。  
+-   `IGNORE_CONSTRAINTS` 提示可以暫時停用 FOREIGN KEY 和 CHECK 條件約束檢查。  
+-   `IGNORE_TRIGGERS` 提示可以暫時停用觸發程序執行。  
+-   `KEEPDEFAULTS` 提示允許在資料記錄缺少資料行的值時，改為插入資料表資料行的預設值 (若有的話)，而不是插入 NULL。  
+-   `KEEPIDENTITY` 提示允許將已匯入資料檔中的識別值用於目標資料表的識別欄位。  
   
--   IGNORE_CONSTRAINTS 提示可以暫時停用 FOREIGN KEY 和 CHECK 條件約束檢查。  
-  
--   IGNORE_TRIGGERS 提示可以暫時停用觸發程序執行。  
-  
--   KEEPDEFAULTS 提示允許在資料記錄缺少資料行的值時，當資料表資料行有預設值便插入這個預設值，而不是 NULL。  
-  
--   KEEPIDENTITY 提示允許將匯入之資料檔中的識別值用於目標資料表的識別欄位。  
-  
-這些最佳化類似於 BULK INSERT 命令所能使用的最佳化。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+這些最佳化類似於 `BULK INSERT` 命令所提供的最佳化。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 ## <a name="data-types"></a>資料類型  
  當您插入資料列時，請考量以下資料類型行為：  
@@ -352,7 +358,7 @@ OUTPUT 子句
   
 -   將 Null 值插入 **text** 或 **image** 資料行時，並不會建立有效的文字指標，也不會預先配置 8 KB 文字頁面。  
   
--   若是以 **uniqueidentifier** 資料類型建立的資料行，其會儲存特殊格式的 16 位元組二進位值。 不同於識別欄位，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會自動為 **uniqueidentifier** 資料類型的資料行產生值。 在插入作業期間，**uniqueidentifier** 資料行可以使用 *uniqueidentifier* 資料類型的變數以及 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* 格式的字串常數 (36 個字元，包括連字號；其中 **x** 是 0-9 或 a-f 範圍內的十六進位數字)。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 即為 **uniqueidentifier** 變數或資料行的有效值。 請使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函式來取得全域唯一識別碼 (GUID)。  
+-   若是以 **uniqueidentifier** 資料類型建立的資料行，其會儲存特殊格式的 16 位元組二進位值。 不同於識別欄位，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會自動為 **uniqueidentifier** 資料類型的資料行產生值。 在插入作業期間，**uniqueidentifier** 資料行可以使用 **uniqueidentifier** 資料類型的變數以及 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* 格式的字串常數 (36 個字元，包括連字號；其中 *x* 是 0-9 或 a-f 範圍內的十六進位數字)。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 即為 **uniqueidentifier** 變數或資料行的有效值。 請使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函式來取得全域唯一識別碼 (GUID)。  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>將值插入使用者定義型別資料行  
  您可以利用下列方式，在使用者定義型別資料行中插入值：  
@@ -385,7 +391,7 @@ OUTPUT 子句
  當 INSERT 陳述式在運算式評估期間發生算術錯誤 (溢位、除以零或範圍錯誤) 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會依照 SET ARITHABORT 設為 ON 的方式來處理這些錯誤。 此時，批次會停止運作，而且系統會傳回錯誤訊息。 在運算式評估期間，當 SET ARITHABORT 和 SET ANSI_WARNINGS 是 OFF 時，如果 INSERT、DELETE 或 UPDATE 陳述式發現算術錯誤、溢位、除以零或範圍錯誤，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會插入或更新 NULL 值。 如果目標資料行不可設為 Null，插入或更新動作就會失敗而且使用者會收到錯誤。  
   
 ## <a name="interoperability"></a>互通性  
- 定義資料表或檢視表之 INSERT 動作的 INSTEAD OF 觸發程序時，系統會執行觸發程序，而不是 INSERT 陳述式。 如需 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 當 `INSTEAD OF` 觸發程序定義於針對資料表或檢視的 INSERT 動作時，系統會執行觸發程序，而不是 INSERT 陳述式。 如需 `INSTEAD OF` 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  當您將值插入遠端資料表時，如果並未完整指定所有資料行的所有值，您必須識別要插入指定值的資料行。  
@@ -407,9 +413,9 @@ OUTPUT 子句
 ### <a name="permissions"></a>權限  
  需要目標資料表的 INSERT 權限。  
   
- INSERT 權限預設會授與 **sysadmin** 固定伺服器角色、**db_owner** 和 **db_datawriter** 固定資料庫角色的成員，以及資料表擁有者。 **sysadmin**、**db_owner** 和 **db_securityadmin** 角色的成員，以及資料表擁有者，可以將權限轉讓給其他使用者。  
+ INSERT 權限預設會設定給 `sysadmin` 固定伺服器角色的成員、`db_owner` 和 `db_datawriter` 固定資料庫角色的成員，以及資料表擁有者。 `sysadmin`、`db_owner` 和 `db_securityadmin` 角色的成員及資料表擁有者可將權限移轉給其他使用者。  
   
- 若要搭配使用 OPENROWSET 函式與 BULK 選項來執行 INSERT，您必須是 **sysadmin** 固定伺服器角色或 **bulkadmin** 固定伺服器角色的成員。  
+ 若要搭配 OPENROWSET 函式 BULK 選項來執行 INSERT，您必須是 `sysadmin` 或 `bulkadmin` 固定伺服器角色的成員。  
   
 ##  <a name="examples"></a><a name="InsertExamples"></a> 範例  
   
@@ -428,7 +434,7 @@ OUTPUT 子句
  本節的範例會使用所需的最少語法來示範 INSERT 陳述式的基本功能。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入單一資料列  
- 下列範例會在 `Production.UnitMeasure` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。   
+ 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。   
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -436,7 +442,7 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. 插入多個資料列  
- 下列範例會在單一 INSERT 陳述式中使用[資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)，將三個資料列插入至 `Production.UnitMeasure` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 由於提供了所有資料行的值，而且依照資料表中資料行的相同順序來列出它們，因此，不需要在資料行清單中指定資料行名稱。  
+ 下列範例會在單一 INSERT 陳述式中使用[資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)，將三個資料列插入至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表。 由於提供了所有資料行的值，而且依照資料表中資料行的相同順序來列出它們，因此，不需要在資料行清單中指定資料行名稱。  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -445,7 +451,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. 插入與資料表資料行順序不同的資料  
- 下列範例會利用資料行清單來明確指定插入每個資料行的值。 `Production.UnitMeasure` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的資料行順序是 `UnitMeasureCode`、`Name`、`ModifiedDate`，但在 *column_list* 中不會依照該順序列出這些資料行。  
+ 下列範例會利用資料行清單來明確指定插入每個資料行的值。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Production.UnitMeasure` 資料表的資料行順序是 `UnitMeasureCode`、`Name`、`ModifiedDate`，但在 *column_list* 中不會依照該順序列出這些資料行。  
   
 ```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -517,7 +523,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. 將資料插入使用者定義型別的資料行  
@@ -535,7 +540,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. 使用 SELECT 和 EXECUTE 選項插入其他資料表的資料  
  下列範例會示範如何使用 INSERT...SELECT 或 INSERT...EXECUTE 將一個資料表中的資料插入另一個資料表。 每個方法都是以多資料表的 SELECT 陳述式為基礎，而該 SELECT 陳述式在資料行清單中包括一個運算式及一個常值。  
   
- 第一個 INSERT 陳述式會使用 SELECT 陳述式，以從 `Employee` 資料庫的來源資料表 (`SalesPerson`、`Person` 和 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]) 衍生資料，並將結果集儲存在 `EmployeeSales` 資料表中。 第二個 INSERT 陳述式會使用 EXECUTE 子句來呼叫包含 SELECT 陳述式的預存程序，而第三個 INSERT 陳述式會使用 EXECUTE 子句將 SELECT 陳述式當做常值字串來參考。  
+ 第一個 INSERT 陳述式會使用 SELECT 陳述式，以從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的來源資料表 (`Employee`、`SalesPerson` 和 `Person`) 衍生資料，並將結果集儲存在 `EmployeeSales` 資料表中。 第二個 INSERT 陳述式會使用 EXECUTE 子句來呼叫包含 SELECT 陳述式的預存程序，而第三個 INSERT 陳述式會使用 EXECUTE 子句將 SELECT 陳述式當做常值字串來參考。  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -588,7 +593,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. 使用 WITH 通用資料表運算式定義插入的資料  
- 下列範例會在 `NewEmployee` 資料庫中建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 通用資料表運算式 (`EmployeeTemp`) 會定義一個或多個資料表中要插入 `NewEmployee` 資料表的資料列。 INSERT 陳述式會在通用資料表運算式中參考此資料行。  
+ 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立 `NewEmployee` 資料表。 通用資料表運算式 (`EmployeeTemp`) 會定義一個或多個資料表中要插入 `NewEmployee` 資料表的資料列。 INSERT 陳述式會在通用資料表運算式中參考此資料行。  
   
 ```sql
 CREATE TABLE HumanResources.NewEmployee  
@@ -631,7 +636,7 @@ GO
 ```  
   
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. 使用 TOP 限制從來源資料表中插入的資料  
- 下列範例會建立 `EmployeeSales` 資料表，而且會將 `HumanResources.Employee` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的前 5 名隨機員工的姓名和今年到目前的銷售資料插入其中。 INSERT 陳述式會選擇 `SELECT` 陳述式所傳回的任 5 個資料列。 OUTPUT 子句會顯示插入到 `EmployeeSales` 資料表的資料列。 請注意，SELECT 陳述式中的 ORDER BY 子句不會用來判斷前 5 名員工。  
+ 下列範例會建立 `EmployeeSales` 資料表，而且會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `HumanResources.Employee` 資料表的前 5 名隨機員工的姓名和今年到目前的銷售資料插入其中。 INSERT 陳述式會選擇 `SELECT` 陳述式所傳回的任 5 個資料列。 OUTPUT 子句會顯示插入到 `EmployeeSales` 資料表的資料列。 請注意，SELECT 陳述式中的 ORDER BY 子句不會用來判斷前 5 名員工。  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -941,7 +946,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. 插入從 OUTPUT 子句傳回的資料  
- 下列範例將擷取從 MERGE 陳述式的 OUTPUT 子句中傳回的資料，並將該資料插入另一個資料表中。 MERGE 陳述式會根據在 `Quantity` 資料庫中 `ProductInventory` 資料表內處理的順序，每天更新 `SalesOrderDetail` 資料表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行。 它也會刪除產品存貨降到 0 的資料列。 此範例會擷取已刪除的資料列，並將其插入另一個資料表 `ZeroInventory`，該資料表會追蹤沒有存貨的產品。  
+ 下列範例將擷取從 MERGE 陳述式的 OUTPUT 子句中傳回的資料，並將該資料插入另一個資料表中。 MERGE 陳述式會根據在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Quantity` 資料表內處理的順序，每天更新 `ProductInventory` 資料表的 `SalesOrderDetail` 資料行。 它也會刪除產品存貨降到 0 的資料列。 此範例會擷取已刪除的資料列，並將其插入另一個資料表 `ZeroInventory`，該資料表會追蹤沒有存貨的產品。  
   
 ```sql
 --Create ZeroInventory table.  

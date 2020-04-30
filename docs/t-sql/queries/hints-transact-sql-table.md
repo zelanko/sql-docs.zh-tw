@@ -1,7 +1,7 @@
 ---
 title: 資料表提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,20 +36,20 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981767"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087513"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  資料表提示會在資料操作語言 (DML) 陳述式持續時間覆寫查詢最佳化工具的預設行為，其方式是指定鎖定方法、一個或多個索引、查詢處理作業 (例如資料表掃描或索引搜尋) 或是其他選項。 資料表提示會在 DML 陳述式的 FROM 子句中指定，並只會影響該子句中參考的資料表或檢視表。  
+  資料表提示會在資料操作語言 (DML) 陳述式持續時間覆寫查詢最佳化工具的預設行為，其方式是指定鎖定方法、一或多個索引、查詢處理作業 (例如資料表掃描或索引搜尋) 或是其他選項。 資料表提示會在 DML 陳述式的 FROM 子句中指定，並只會影響該子句中參考的資料表或檢視表。  
   
 > [!CAUTION]  
->  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此，我們建議資深的開發人員和資料庫管理員只將提示當做最後的解決辦法。  
+>  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此我們建議只有資深的開發人員和資料庫管理員才應該使用提示，並將其當作最後的解決辦法。  
   
  **適用範圍：**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73981767"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ WITH **(** \<> **)** [ [ **,** ]...*n* ]
 > [!IMPORTANT]  
 > 省略 WITH 關鍵字是一項已被取代的功能：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-不論是否有 WITH 關鍵字，都允許使用下列資料表提示：NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT 和 NOEXPAND。 在沒有 WITH 關鍵字的情況下指定這些資料表提示時，應該單獨指定這些提示。 例如：  
+不論是否有 `WITH` 關鍵字，都允許使用下列資料表提示：`NOLOCK`、`READUNCOMMITTED`、`UPDLOCK`、`REPEATABLEREAD`、`SERIALIZABLE`、`READCOMMITTED`、`TABLOCK`、`TABLOCKX`、`PAGLOCK`、`ROWLOCK`、`NOWAIT`、`READPAST`、`XLOCK`、`SNAPSHOT` 和 `NOEXPAND`。 在沒有 WITH 關鍵字的情況下指定這些資料表提示時，應該單獨指定這些提示。 例如：  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ NOLOCK
 > 如果是 UPDATE 或 DELETE 陳述式：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 一旦發現資料表的鎖定時，便立刻傳回訊息。 NOWAIT 相當於針對特定資料表指定 SET LOCK_TIMEOUT 0。 同時包含 TABLOCK 提示時，NOWAIT 提示無效。 如果在使用 TABLOCK 提示時要終止查詢而不等候，請改為在查詢前面加上 `SETLOCK_TIMEOUT 0;`。  
+指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 一旦發現資料表的鎖定時，便立刻傳回訊息。 NOWAIT 相當於針對特定資料表指定 `SET LOCK_TIMEOUT 0`。 同時包含 TABLOCK 提示時，NOWAIT 提示無效。 如果在使用 TABLOCK 提示時要終止查詢而不等候，請改為在查詢前面加上 `SETLOCK_TIMEOUT 0;`。  
   
 PAGLOCK  
 在通常會採用資料列或索引鍵的個別鎖定，或通常會採用單一資料表鎖定的情況下，頁面會鎖定。 依預設，會使用作業所適用的鎖定模式。 如果是在以 SNAPSHOT 隔離等級操作的交易中指定時，不會採用頁面鎖定，除非 PAGLOCK 是與其他需要鎖定的資料表提示相結合，例如 UPDLOCK 和 HOLDLOCK。  
@@ -339,7 +339,7 @@ SPATIAL_WINDOW_MAX_CELLS = *integer*
 TABLOCK  
 指定在資料表層級套用取得的鎖定。 取得的鎖定類型取決於執行的陳述式。 例如，SELECT 陳述式可能會取得共用鎖定。 指定 TABLOCK 可以將共用鎖定套用至整份資料表，而不會在資料列或頁面層級進行套用。 如果同時指定了 HOLDLOCK，就會將資料表鎖定保留到交易結束為止。  
   
-當您使用 INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> 陳述式將資料匯入堆積時，可以指定目標資料表的 TABLOCK 提示來啟用陳述式的最佳化記錄和鎖定。 此外，資料庫的復原模式必須設定為簡單或大量記錄。 如需詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
+當您使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 陳述式將資料匯入堆積時，可以透過為目標資料表指定 TABLOCK 提示來針對陳述式啟用最低限度記錄和最佳化鎖定。 此外，資料庫的復原模式必須設定為簡單或大量記錄。 TABLOCK 提示也可啟用平行插入至堆積或叢集資料行存放區索引。 如需詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
   
 當搭配 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 大量資料列集提供者使用，以將資料匯入資料表時，TABLOCK 會使多個用戶端能夠以最佳化的記錄和鎖定，同時將資料載入目標資料表中。 如需詳細資訊，請參閱[在大量匯入中採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   

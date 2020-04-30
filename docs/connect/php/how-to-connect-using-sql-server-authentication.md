@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 SQL Server 驗證進行連接 | Microsoft Docs
+title: 如何：使用 SQL Server 驗證進行連線
+description: 了解使用「SQL Server 驗證」來連線到資料庫時的重要考量。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916444"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728323"
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
+# <a name="how-to-connect-using-sql-server-authentication"></a>如何：使用 SQL Server 驗證進行連線
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支援在您連接到 SQL Server 時使用 SQL Server 驗證。  
   
-在無法使用 Windows 驗證時，才應該使用 SQL Server 驗證。 如需使用 Windows 驗證進行連接的相關資訊，請參閱 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)。  
+在無法使用 Windows 驗證時，才應該使用 SQL Server 驗證。 如需有關使用「Windows 驗證」進行連線的資訊，請參閱[如何：使用 Windows 驗證進行連線](../../connect/php/how-to-connect-using-windows-authentication.md)。  
   
 當您使用 SQL Server 驗證連接到 SQL Server 時，必須考量以下幾點：  
   
@@ -130,7 +131,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[操作說明：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
@@ -138,9 +139,9 @@ sqlsrv_close( $conn);
 
 [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[如何：建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
+[操作說明：建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[如何：建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[操作說明：建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [管理使用者、角色和登入](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

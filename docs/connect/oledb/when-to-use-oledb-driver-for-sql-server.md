@@ -1,6 +1,6 @@
 ---
-title: 使用 OLE DB Driver for SQL Server 的時機 | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 的時機
+title: 使用 OLE DB Driver 的時機
+description: 了解何時應使用 OLE DB Driver for SQL Server，以及使其與其他驅動程式有所區別的概要資料存取概念。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f3ec9e3eee38b5ba6f2c0140a1f6eb316941a02
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015195"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727962"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>使用 OLE DB Driver for SQL Server 的時機
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68015195"
  如需 OLE DB Driver for SQL Server 和 MDAC 之間差異的相關資訊，請參閱[將應用程式從 MDAC 更新為 OLE DB Driver for SQL Server](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
- [OLE DB 的使用說明主題](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
+ [OLE DB 的使用說明主題](ole-db-how-to/ole-db-how-to-topics.md)  
   
   

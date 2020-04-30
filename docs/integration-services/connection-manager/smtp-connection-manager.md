@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298483"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087428"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 連接管理員
 
@@ -46,7 +46,7 @@ ms.locfileid: "71298483"
     > [!IMPORTANT]  
     >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
   
--   指定在傳送電子郵件訊息時，是否使用「安全通訊端層 (SSL)」加密通訊。  
+-   指定在傳送電子郵件訊息時，是否要使用「傳輸層安全性」(TLS) (先前稱為「安全通訊端層」(SSL)) 來加密通訊。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
@@ -79,5 +79,5 @@ ms.locfileid: "71298483"
 >  使用 Microsoft Exchange 當做 SMTP 伺服器時，您可能需要將 **[使用 Windows 驗證]** 設定為 **True**。 Exchange 伺服器可以設定成不允許未驗證的 SMTP 連接。  
   
  **啟用安全通訊端層 (SSL)**  
- 選擇在傳送電子郵件訊息時以安全通訊端層 (SSL) 將通訊加密。  
+ 選取此選項可在傳送電子郵件訊息時，使用 TLS/SSL 來加密通訊。  
   

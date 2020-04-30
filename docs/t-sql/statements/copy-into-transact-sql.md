@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (預覽)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。
-ms.date: 12/13/2019
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631962"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153231"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-本文說明如何在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。 COPY 陳述式提供最大的彈性，可將高輸送量資料擷取到 SQL 資料倉儲中。
+本文說明如何在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。 COPY 陳述式提供最大的彈性，可將高輸送量資料擷取到 SQL 資料倉儲中。 將 COPY 用於下列功能：
+
+- 使用具有較低權限的使用者來載入，而不需要對資料倉儲設定嚴格的 CONTROL 權限
+- 執行單一 T-SQL 陳述式，而不需要建立任何額外的資料庫物件
+- 適當地剖析並載入 CSV 檔案，其中**分隔符號** (字串、欄位、資料列) **會在字串分隔資料行中** **逸出**
+- 在不使用共用存取簽章 (SAS) 公開儲存體帳戶金鑰的情況下，指定更精細的權限模型
+- 針對 ERRORFILE 位置 (REJECTED_ROW_LOCATION) 使用不同的儲存體帳戶
+- 自訂每個目標資料行的預設值，並指定要載入特定目標資料行的來源資料欄位
+- 指定 CSV 檔案的自訂資料列結束字元
+- 利用 CSV 檔案的 SQL Server 日期格式
+- 在儲存體位置路徑中指定萬用字元和多個檔案
 
 > [!NOTE]  
 > COPY 陳述式目前處於公開預覽階段。
@@ -208,21 +218,20 @@ WITH
 - .deflate - **DefaultCodec** (僅限 Parquet 和 ORC)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* 會套用至 CSV，並指定將在 CSV 檔案中當作引號字元 (字串分隔符號) 使用的單一字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 RFC 4180 標準中所定義。 FIELDQUOTE 的 UTF-8 不支援擴充的 ASCII 字元。
+*FIELDQUOTE* 會套用至 CSV，並指定將在 CSV 檔案中當作引號字元 (字串分隔符號) 使用的單一字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 RFC 4180 標準中所定義。 FIELDQUOTE 的 UTF-8 不支援擴充的 ASCII 字元和多位元組字元。
 
 > [!NOTE]  
 > FIELDQUOTE 字元會在有雙 FIELDQUOTE (分隔符號) 存在的字串資料行中逸出。 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* 僅適用於 CSV。 指定將在 CSV 檔案中使用的欄位結束字元。 您可以使用十六進位標記法來指定欄位結束字元。 欄位結束字元可以是多個字元。 預設的欄位結束字元為 (,)。
-如需詳細資訊，請參閱[指定欄位與資料列結束字元 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)。
+*FIELDTERMINATOR* 僅適用於 CSV。 指定將在 CSV 檔案中使用的欄位結束字元。 您可以使用十六進位標記法來指定欄位結束字元。 欄位結束字元可以是多個字元。 預設的欄位結束字元為 (,)。 FIELDTERMINATOR 的 UTF-8 不支援擴充的 ASCII 字元和多位元組字元。
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* 僅適用於 CSV。 指定將在 CSV 檔案中使用的資料列結束字元。 您可以使用十六進位標記法來指定資料列結束字元。 資料列結束字元可以是多個字元。 根據預設，資料列結束字元為 \r\n。 
 
 指定 \n (新行) 時，COPY 命令會加上 \r 字元前置詞，而導致 \r\n。 若只要指定 \n 字元，請使用十六進位標記法 (0x0A)。 使用十六進位指定多字元資料列結束字元時，請不要在每個字元之間指定 0x。
 
-如需有關指定資料列結束字元的其他指引，請參閱下列[文件](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)。
+ROW TERMINATOR 的 UTF-8 不支援擴充的 ASCII 字元和多位元組字元。
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* 會套用至 CSV，並指定在 COPY 命令的所有檔案中第一次讀取的資料列編號。 值會從 1 開始，也就是預設值。 如果將值設定為二，則在載入資料時，會略過每個檔案中的第一個資料列 (標題列)。 如果資料列存在資料列結束字元，就會略過。
@@ -361,10 +370,10 @@ WITH (
 ## <a name="faq"></a>常見問題集
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>相較於 PolyBase，COPY 命令的效能為何？
-在此功能公開推出時，COPY 命令會有更好的效能。 為了在公開預覽期間獲得最佳的載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。 使用 INSERT SELECT 時，目前的 COPY 在校能方面與 PolyBase 一樣重要。 
+COPY 命令是否會有更好的效能，需取決於您的工作負載。 為了在公開預覽期間獲得最佳的載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。 在預覽期間與我們的小組分享您的效能結果！ 如何：使用資料來源檢視精靈來定義資料來源檢視 (Analysis Services)sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>COPY 命令載入 CSV 檔案的檔案分割指導方針為何？
-下表列出檔案數目的指導方針。 一旦達到建議的檔案數目，檔案越大，您的效能就會越好。 
+下表列出檔案數目的指導方針。 一旦達到建議的檔案數目，檔案越大，您的效能就會越好。 如需簡單的檔案分割體驗，請參閱下列[文件](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474) \(英文\)。 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

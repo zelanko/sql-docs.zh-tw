@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad9f7204073590927cdbecdf237038311bb686d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627958"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138284"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -287,11 +287,11 @@ LOB_COMPACTION = OFF
   
 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的資料行存放區索引，REORGANIZE 會線上執行以下額外的重組最佳化：  
   
--   當 10% 或更多資料列已經以邏輯方式刪除時，會實際將資料列從資料列群組移除。 已刪除的位元組會在實體媒體上回收。 例如，如果在包含 1 百萬個資料列的壓縮資料列群組中刪除 10 萬個資料列，SQL Server 將會移除刪除的資料列，並重新壓縮包含 90 萬個資料列的資料列群組。 將刪除的資料列移除可以節省儲存空間。  
+-   當 10% 或更多資料列已經以邏輯方式刪除時，會實際將資料列從資料列群組移除。 已刪除的位元組會在實體媒體上回收。 例如，如果在包含 1 百萬個資料列的壓縮資料列群組中刪除 10 萬個資料列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會移除刪除的資料列，並重新壓縮包含 90 萬個資料列的資料列群組。 將刪除的資料列移除可以節省儲存空間。  
   
--   可合併一或多個壓縮的資料列群組，將每個資料列群組的資料列數目最多提高至 1,024,576 個資料列的數目上限。 例如，如果您大量匯入 5 個批次的 102,400 個資料列，就會有 5 個壓縮的資料列群組。 如果執行 REORGANIZE，這些資料列群組將會合併成 1 個包含 512,000 個資料列的壓縮資料列群組。 這是假設沒有任何目錄大小或記憶體限制的情況。  
+-   可合併一或多個壓縮的資料列群組，將每個資料列群組的資料列數目最多提高至 1,048,576 個資料列的上限。 例如，如果您大量匯入 5 個批次的 102,400 個資料列，就會有 5 個壓縮的資料列群組。 如果執行 REORGANIZE，這些資料列群組將會合併成 1 個包含 512,000 個資料列的壓縮資料列群組。 這是假設沒有任何目錄大小或記憶體限制的情況。  
   
--   對於已透過邏輯方式刪除 10% 或更多資料列的資料列群組，SQL Server 將會嘗試把這個資料列群組和一或多個資料列群組合併。 例如，資料列群組 1 壓縮了 500,000 個資料列，而資料列群組 21 則壓縮了達到數目上限的 1,048,576 個資料列。  資料列群組 21 中刪除了 60% 的資料列，剩下 409,830 個資料列。 SQL Server 會合併這兩個資料列群組，以壓縮一個包含 909,830 個資料列的新資料列群組。  
+-   對於已透過邏輯方式刪除 10% 或更多資料列的資料列群組，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會嘗試把這個資料列群組與一或多個資料列群組合併。 例如，資料列群組 1 壓縮了 500,000 個資料列，而資料列群組 21 則壓縮了達到數目上限的 1,048,576 個資料列。 資料列群組 21 中刪除了 60% 的資料列，剩下 409,830 個資料列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會優先合併這兩個資料列群組，以壓縮成一個包含 909,830 個資料列的新資料列群組。  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  適用資於料行存放區索引。 

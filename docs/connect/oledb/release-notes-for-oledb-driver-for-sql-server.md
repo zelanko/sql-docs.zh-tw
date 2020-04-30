@@ -1,5 +1,6 @@
 ---
-title: 版本資訊 (OLE DB Driver for SQL Server)
+title: OLE DB Driver 的版本資訊
+description: 此版本資訊文章描述每個 Microsoft OLE DB Driver for SQL Server 版本中的變更。
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 2c50ae262516fab757d4de7c254af79f0184ea84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80345439"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727969"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
 

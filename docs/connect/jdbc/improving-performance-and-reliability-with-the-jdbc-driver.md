@@ -1,5 +1,6 @@
 ---
-title: 改善 JDBC 驅動程式的效能與可靠性 | Microsoft Docs
+title: 改善 JDBC 驅動程式的效能與可靠性
+description: 了解使用 Microsoft JDBC Driver for SQL Server 時，可改善應用程式效能和可靠性的各種技術。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b82c2758dbc796ec29dd7304ee821a1a018af0a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920741"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728479"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>改善 JDBC 驅動程式的效能與可靠性
 

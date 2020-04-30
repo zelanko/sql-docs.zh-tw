@@ -1,5 +1,6 @@
 ---
-title: 為用戶端設定加密 | Microsoft Docs
+title: 為用戶端設定加密
+description: 了解用戶端加密與憑證信任，以使用 Microsoft JDBC Driver for SQL Server 來確保用戶端安全性。
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0327a4321b141f0433cd9c6c9554c5a48f7381fb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7265bfb8666d99b8676b4bd4ec221b0a55f47a07
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922483"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728491"
 ---
 # <a name="configuring-the-client-for-encryption"></a>為用戶端設定加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- 在這個情況下，在此 JVM 上執行的任何應用程式都會使用這些設定做為預設值。 若要覆寫應用程式中的預設值，您應該在連接字串或 **SQLServerDataSource** 類別的適當 setter 方法中，設定 **trustStore** 和 [trustStorePassword](../../connect/jdbc/reference/sqlserverdatasource-class.md) 連接屬性。  
+ 在這個情況下，在此 JVM 上執行的任何應用程式都會使用這些設定做為預設值。 若要覆寫應用程式中的預設值，您應該在連接字串或 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別的適當 setter 方法中，設定 **trustStore** 和 **trustStorePassword** 連接屬性。  
   
  此外，您可以設定與管理預設的信任存放區檔案，例如 "\<java-home>/lib/security/jssecacerts" 和 "\<java-home>/lib/security/cacerts"。 若要這樣做，請使用與 JRE (Java Runtime Environment) 一起安裝的 JAVA "keytool" 公用程式。 如需有關 "keytool" 公用程式的詳細資訊，請參閱 Sun Microsystems 網站上的 keytool 文件。  
   
@@ -65,7 +66,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
  此範例使用名稱為 "caCert.cer" 的檔案當做憑證檔案。 您必須從伺服器取得此憑證檔案。 下列步驟說明如何將伺服器憑證匯出到檔案：  
   
-1.  按一下 [開始]、[執行]，然後輸入 MMC (MMC 是 Microsoft Management Console 的縮寫字)。  
+1.  按一下 [開始]、[執行]，然後輸入 MMC  (MMC 是 Microsoft Management Console 的縮寫字)。  
   
 2.  在 MMC 中，開啟 [憑證]。  
   

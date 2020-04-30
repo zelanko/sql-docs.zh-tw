@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53ea3f9eb2704de6c6c2c1ba5237ba96aa10c011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433825"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087388"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
 
@@ -241,9 +241,9 @@ ms.locfileid: "79433825"
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|"%1" 的登入嘗試失敗。 當提供的登入憑證不正確時，就會發生這個錯誤。 請驗證登入認證。|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|無法解析 URL %1 中指定的伺服器名稱。|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|Proxy 驗證失敗。 當未提供登入認證或認證不正確時，就會發生這個錯誤。|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|從伺服器取得的 SSL 憑證回應無效。 無法處理要求。|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|從伺服器取得的 TLS/SSL 憑證回應無效。 無法處理要求。|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|要求已逾時。當指定的逾時值太短時，或無法建立與伺服器或 Proxy 的連接時，就會發生這個錯誤。 請確定伺服器和 Proxy URL 都正確。|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|遺漏用戶端憑證。 當伺服器需要 SSL 用戶端憑證，但使用者提供無效的憑證或未提供憑證時，就會發生這個錯誤。 必須為這個連接設定用戶端憑證。|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|遺漏用戶端憑證。 當伺服器需要 TLS/SSL 用戶端憑證，但使用者提供無效的憑證或未提供憑證時，就會發生這個錯誤。 必須為這個連接設定用戶端憑證。|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|指定的伺服器 URL %1 有重新導向，但重新導向要求失敗。|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|伺服器驗證失敗。 當未提供登入認證或認證不正確時，就會發生這個錯誤。|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|無法處理要求。 請稍後再試一次。|  

@@ -32,14 +32,14 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 944db91150b932676c9caa1e291ac4f963328580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217123"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138136"
 ---
-# <a name="resolve-index-fragmentation-using-by-reorganizing-or-rebuilding-indexes"></a>藉由重新組織或重建索引來解決索引片段使用
+# <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>藉由重新組織或重建索引來解決索引片段
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -50,8 +50,8 @@ ms.locfileid: "80217123"
 什麼是索引片段，以及應該關注的理由：
 
 - 當索引的索引內邏輯順序頁面 (根據索引的索引鍵值) 與索引頁面中實體順序不相符時，就會存在片段。
-- 只要對基礎資料進行插入、更新或刪除作業，資料庫引擎就會自動修改索引。 例如，在資料表中新增資料列，可能會造成資料列存放區索引中的現有頁面分割，以騰出空間來插入新的索引鍵值。 過一段時間後，這些修改就可能使索引中的資訊變成散佈於資料庫中 (片段)。 當根據索引鍵值的邏輯順序頁面，與資料檔中的實體順序不相符時，就會有片段產生。
-- 嚴重片段的索引可能會降低查詢效能，因為需要額外 IO 來找出索引指向的資料。 愈多 IO 會導致應用程式回應速度愈緩慢，尤其是涉及掃描作業時。
+- 只要對基礎資料進行插入、更新或刪除作業，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 就會自動修改索引。 例如，在資料表中新增資料列，可能會造成資料列存放區索引中的現有頁面分割，以騰出空間來插入新的索引鍵值。 過一段時間後，這些修改就可能使索引中的資訊變成散佈於資料庫中 (片段)。 當根據索引鍵值的邏輯順序頁面，與資料檔中的實體順序不相符時，就會有片段產生。
+- 嚴重片段的索引可能會降低查詢效能，因為需要額外的 I/O 來找出索引指向的資料。 愈多 I/O 會導致應用程式回應速度愈緩慢，尤其是涉及掃描作業時。
 
 ## <a name="detecting-the-amount-of-fragmentation"></a>偵測片段數量
 
@@ -215,12 +215,12 @@ object_id   TableName                   index_id    IndexName                   
 
 重新組織索引所用的系統資源最少，且為線上作業。 這表示不會保留長期封鎖的資料表鎖定，而且在 `ALTER INDEX REORGANIZE` 交易期間，可以繼續查詢或更新基礎資料表。
 
-- 針對[資料列存放區索引](clustered-and-nonclustered-indexes-described.md)，資料庫引擎會實際重新排序分葉層級的頁面，使這些頁面符合分葉節點的邏輯順序 (由左至右)，以重新組織資料表與檢視表其叢集與非叢集索引的分葉層級。 重新組織也會根據索引的填滿因數值來壓縮索引頁面。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。 如需語法範例，請參閱[範例：資料列存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
+- 針對[資料列存放區索引](clustered-and-nonclustered-indexes-described.md)，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會實際重新排序分葉層級的頁面，使這些頁面符合分葉節點的邏輯順序 (由左至右)，以重組資料表與檢視表上叢集與非叢集索引的分葉層級。 重新組織也會根據索引的填滿因數值來壓縮索引頁面。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。 如需語法範例，請參閱[範例：資料列存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
 - 使用[資料行存放區索引](columnstore-indexes-overview.md)時，在一段時間內插入、更新及刪除資料之後，差異存放區最後可能會有多個小型資料列群組。 重新組織資料行存放區索引會強制將所有資料列群組存放至資料行存放區，然後將資料列群組合併成具有較多資料列的較少資料列群組。 重新組織作業也會移除已從資料行存放區刪除的資料列。 重新組織一開始會需要額外的 CPU 資源來壓縮資料，這可能會拖慢整體系統效能。 不過，在壓縮完資料後，查詢效能就會改善。 如需語法範例，請參閱[範例：資料行存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
 
 ### <a name="rebuild-an-index"></a>重建索引
 
-重建索引會卸除和重新建立索引。 視索引和資料庫引擎版本的類型而定，重建作業可在線上或離線執行。 如需 T-SQL 語法，請參閱 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
+重建索引會卸除和重新建立索引。 視索引類型和 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本而定，重建作業可能可以在線上或離線完成。 如需 T-SQL 語法，請參閱 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - 針對[資料列存放區](clustered-and-nonclustered-indexes-described.md)索引，重建會移除片段，根據所指定或現有的填滿因數設定壓縮頁面來收回磁碟空間，然後重新排序連續頁面中的索引資料列。 指定 `ALL` 時，會在單一交易中卸除資料表的所有索引，然後加以重建。 不需要事先卸除外部索引鍵條件約束。 當重建含有 128 個或更多範圍的索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面，也會延遲其關聯鎖定，直到認可交易之後。 如需語法範例，請參閱[範例：資料列存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
 - 針對[資料行存放區](columnstore-indexes-overview.md)索引，重建會移除片段，將所有資料列移至資料行存放區，然後透過將已從資料表上以邏輯方式刪除的資料列實體刪除來回收磁碟空間。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，通常無須重建資料行存放區索引，這是因為 `REORGANIZE` 會在背景以線上作業方式執行必要的重建作業。 如需語法範例，請參閱[範例：資料行存放區重新組織](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
@@ -342,13 +342,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!IMPORTANT]
 > 如果索引所在的檔案群組離線或設為唯讀，便無法重新組織或重建索引。 當指定了 ALL 關鍵字，且有一個或多個索引在離線或唯讀檔案群組中，陳述式會失敗。
 >
-> 發生索引重建時，實體媒體必須具有足夠空間來儲存兩份索引複本。 重建完成時，資料庫引擎會刪除原始索引。
+> 發生索引重建時，實體媒體必須具有足夠空間來儲存兩份索引複本。 重建完成時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會刪除原始索引。
 
 當搭配 `ALTER INDEX` 陳述式指定 `ALL` 時，會重新組織資料表上的叢集與非叢集關聯式索引和 XML 索引。
 
 ## <a name="considerations-specific-to-rebuilding-a-columnstore-index"></a>重建資料行存放區索引的特定考量
 
-重建資料行存放區索引時，資料庫引擎會從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。 資料庫引擎會透過實際刪除已經以邏輯方式從資料表刪除的資料列，以重組資料行存放區。 已刪除的位元組會在磁碟上回收。
+重建資料行存放區索引時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會透過實際刪除已經以邏輯方式從資料表刪除的資料列，以重組資料行存放區。 已刪除的位元組會在磁碟上回收。
 
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>重建分割區，而非整個資料表
 
@@ -365,11 +365,11 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>重新組織資料行存放區索引的特定考量
 
-重新組織資料行存放區索引時，資料庫引擎會以壓縮資料列群組的方式，將每個 CLOSED 差異資料列群組壓縮至資料行存放區中。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始且在 Azure SQL Database 中，`REORGANIZE` 命令會在線上執行下列額外的重組最佳化：
+重新組織資料行存放區索引時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會以壓縮資料列群組的方式，將每個 CLOSED 差異資料列群組壓縮至資料行存放區中。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始且在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，`REORGANIZE` 命令會在線上執行以下額外的重組最佳化：
 
-- 當 10% 或更多資料列已經以邏輯方式刪除時，會實際將資料列從資料列群組移除。 已刪除的位元組會在實體媒體上回收。 例如，如果在包含 1 百萬個資料列的壓縮資料列群組中刪除 10 萬個資料列，SQL Server 將會移除刪除的資料列，並重新壓縮包含 90 萬個資料列的資料列群組。 將刪除的資料列移除可以節省儲存空間。
-- 可合併一或多個壓縮的資料列群組，將每個資料列群組的資料列數目最多提高至 1,024,576 個資料列的數目上限。 例如，如果您大量匯入 5 個批次的 102,400 個資料列，就會有 5 個壓縮的資料列群組。 如果執行 REORGANIZE，這些資料列群組將會合併成 1 個包含 512,000 個資料列的壓縮資料列群組。 這是假設沒有任何目錄大小或記憶體限制的情況。
-- 對於已透過邏輯方式刪除 10% 或更多資料列的資料列群組，資料庫引擎會嘗試把這個資料列群組與一或多個資料列群組合併。 例如，資料列群組 1 壓縮了 500,000 個資料列，而資料列群組 21 則壓縮了達到數目上限的 1,048,576 個資料列。 資料列群組 21 中刪除了 60% 的資料列，剩下 409,830 個資料列。 資料庫引擎會優先合併這兩個資料列群組，以壓縮成一個包含 909,830 個資料列的新資料列群組。
+- 當 10% 或更多資料列已經以邏輯方式刪除時，會實際將資料列從資料列群組移除。 已刪除的位元組會在實體媒體上回收。 例如，如果在包含 1 百萬個資料列的壓縮資料列群組中刪除 10 萬個資料列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會移除刪除的資料列，並重新壓縮包含 90 萬個資料列的資料列群組。 將刪除的資料列移除可以節省儲存空間。
+- 可合併一或多個壓縮的資料列群組，將每個資料列群組的資料列數目最多提高至 1,048,576 個資料列的上限。 例如，如果您大量匯入 5 個批次的 102,400 個資料列，就會有 5 個壓縮的資料列群組。 如果執行 REORGANIZE，這些資料列群組將會合併成 1 個包含 512,000 個資料列的壓縮資料列群組。 這是假設沒有任何目錄大小或記憶體限制的情況。
+- 對於已透過邏輯方式刪除 10% 或更多資料列的資料列群組，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會嘗試把這個資料列群組與一或多個資料列群組合併。 例如，資料列群組 1 壓縮了 500,000 個資料列，而資料列群組 21 則壓縮了達到數目上限的 1,048,576 個資料列。 資料列群組 21 中刪除了 60% 的資料列，剩下 409,830 個資料列。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會優先合併這兩個資料列群組，以壓縮成一個包含 909,830 個資料列的新資料列群組。
 
 執行資料負載後，您在差異存放區中可能有多個小型的資料列群組。 您可使用 `ALTER INDEX REORGANIZE` 強制將所有資料列群組存放至資料行存放區，然後再將資料列群組合併成較少資料列的資料列群組。 重新組織作業也會移除已從資料行存放區刪除的資料列。
 
@@ -401,8 +401,8 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>使用索引重建從硬體故障中復原
 
-在舊版 SQL Server 中，有時候您可重建資料列存放區非叢集索引，以更正硬體故障所造成的任何不一致情況。
-從 SQL Server 2008 開始，您仍可能透過離線重建非叢集索引來修復索引和叢集索引之間的這類不一致情況。 不過，您無法利用線上重建索引的方式來修復非叢集索引不一致情況，因為線上重建機制會以現有非叢集索引作為重建基礎，並因而保存不一致的情況。 離線時重建索引可能會導致強制掃描叢集索引 (或堆積)，因而移除不一致的情況。 請卸除並重新建立非叢集索引，確保會從叢集索引進行重建。 如果要從不一致的情況中復原，在舊版中，我們建議的方法是從備份中還原受影響的資料，不過，您現在可以利用離線重建非叢集索引的方式來修復索引不一致的情況。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。
+在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有時候您可以重建資料列存放區非叢集索引，來更正硬體故障所造成的任何不一致情況。
+從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 開始，您仍可能透過離線重建非叢集索引，來修復索引和叢集索引之間的這類不一致情況。 不過，您無法利用線上重建索引的方式來修復非叢集索引不一致情況，因為線上重建機制會以現有非叢集索引作為重建基礎，並因而保存不一致的情況。 離線時重建索引可能會導致強制掃描叢集索引 (或堆積)，因而移除不一致的情況。 請卸除並重新建立非叢集索引，確保會從叢集索引進行重建。 如果要從不一致的情況中復原，在舊版中，我們建議的方法是從備份中還原受影響的資料，不過，您現在可以利用離線重建非叢集索引的方式來修復索引不一致的情況。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。
 
 ## <a name="see-also"></a>另請參閱
 

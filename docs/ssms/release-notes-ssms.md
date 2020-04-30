@@ -12,12 +12,12 @@ ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 7abe0347e01ffa922b95b86c71bd3afef7d140ae
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 4379b5aea85bdc3eeeca96d6be690a3fb3c89bcb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873104"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086810"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -63,64 +63,64 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | Analysis Services | 分析工具：已新增 Analysis Services 追蹤定義 15.1 的支援。 |
 | 資料分類 | 在 VA 掃描結果檢視中加入一個按鈕，以便透過前往 [資料分類] 窗格來補救資料分類規則。 |
 | 資料分類 | 已新增資料分類中對敏感度等級的支援。 |
-| 超大規模資料庫 | 已新增 SQL Azure HyperScale 的 [匯入資料層應用程式] \(.bacpac\) 支援。 |
+| 超大規模資料庫 | 已新增 SQL Azure HyperScale 的 [匯入資料層應用程式]  \(.bacpac\) 支援。 |
 | Integration Services | 支援從 MI 代理程式作業中的檔案系統執行 SSIS 套件。 |
 | Integration Services | 對於設定已啟用 Azure 的 DTExec 在 Azure-SSIS Integration Runtime 上叫用 SSIS 套件執行，進行了使用者友善的改善。
 | Integration Services | 支援連線 Azure-SSIS Integration Runtime，以及管理或執行套件存放區中的 SSIS 套件。
 | Integration Services | 支援將內部部署 SSIS 代理程式作業移轉至 ADF 管線和觸發程式。
 | Integration Services | 改善從 SSIS DB 匯出 SSIS 專案的使用者體驗。 相較於 SSIS 專案中已載入和已升級套件的舊匯出，與版本無關的新匯出將不會載入和升級 SSIS 專案中的套件。 相反地，除了將保護等級變更為 EncryptSensitiveWithUserKey 之外，其會將套件保留在專案中，如同在 SSIS DB 中一樣。 |
 | SMO/指令碼 | 新的 DwMaterializedViewDistribution 屬性已新增至 View 物件。 |
-| SMO/指令碼 | 已移除 [功能限制] 的支援 (此預覽功能已從 SQL Azure 和內部部署 SQL 移除)。 |
-| SMO/指令碼 | 已將 [筆記本] 新增為 [產生指令碼] 精靈的目的地。 |
-| SMO/指令碼 | 已新增「SQL 隨需」的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name 和 engineEdition 欄位現在可以包含一般逗號分隔清單 (平台：\[*Windows*、*Linux*\])，而不只是規則運算式 (平台：*\/Windows\|Linux\/*)
+| SMO/指令碼 | 已移除 [功能限制]  的支援 (此預覽功能已從 SQL Azure 和內部部署 SQL 移除)。 |
+| SMO/指令碼 | 已將 [筆記本]  新增為 [產生指令碼] 精靈的目的地。 |
+| SMO/指令碼 | 已新增「SQL 隨需」  的支援。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name 和 engineEdition 欄位現在可以包含一般逗號分隔清單 (平台  ：\[*Windows*、*Linux*\])，而不只是規則運算式 (平台  ： *\/Windows\|Linux\/* )
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 13 個評定規則。 如需詳細資訊，請移至 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))。 |
 
 ### <a name="bug-fixes-in-185"></a>18.5 中的錯誤 (Bug) 修正
 
 | 新項目 | 詳細資料 |
 |----------|---------|
-| Accessibility | SSIS ADF / 新增排程：已修正 [新增排程] 精靈下，朗讀程式的掃描模式中，焦點順序不合邏輯的問題。 |
+| Accessibility | SSIS ADF / 新增排程：已修正 [新增排程]  精靈下，朗讀程式的掃描模式中，焦點順序不合邏輯的問題。 |
 | Accessibility | 延展資料庫精靈：已修正當提供資料表的相關資訊時，螢幕助讀程式不會通知查詢資料表名稱的問題。 |
 | Analysis Services | 使用 AAD 連線在 AS 中編寫指令碼時，修正快取的連線。 |
 | 永遠開啟 | 已修正新增至 Always On AG 的第一個資料庫未正確聯結的問題。
 | 永遠開啟 | 已修正當連線到巨量資料叢集端點時，嘗試顯示儀表板時會顯示錯誤的問題。 |
 | 稽核 | 已修正當儲存體帳戶的根資料夾中有一個資料夾具有空白名稱時，[稽核記錄合併] 視窗當機的問題。 |
 | 稽核 | 已修正當容器的根目錄中有太多項目時，[稽核記錄合併] 視窗不會顯示所有伺服器的問題。 |
-| 資料釐清 | 已修正針對具有大量資料表的資料庫，[資料分類] 精靈無法開啟的問題。 |
-| 資料釐清 | 我們現在會針對驗證程序中的每個標籤/infoType 和 GUID 結構強制執行不同的 GUID。 |
-| 資料釐清 | 移除 SqlServer2019 中的分類程序。 |
-| 資料釐清 | 更正先前的驗證測試 (加入順位、移除不合法的屬性 *InformationTypes*)，並為前兩點新增新的驗證測試。 |
-| 資料釐清 | 現在，[已分類的資料行] 資料表上方的按鈕可以最小化 [建議] 面板。 |
+| 資料分類 | 已修正針對具有大量資料表的資料庫，[資料分類]  精靈無法開啟的問題。 |
+| 資料分類 | 我們現在會針對驗證程序中的每個標籤/infoType 和 GUID 結構強制執行不同的 GUID。 |
+| 資料分類 | 移除 SqlServer2019 中的分類程序。 |
+| 資料分類 | 更正先前的驗證測試 (加入順位、移除不合法的屬性 *InformationTypes*)，並為前兩點新增新的驗證測試。 |
+| 資料分類 | 現在，[已分類的資料行] 資料表上方的按鈕可以最小化 [建議] 面板。 |
 | 一般 SSMS | 更新 MSODBC 和 MSOLEDB 驅動程式的版本。 |
 | 一般 SSMS | 已解決 SSMS 中至少有兩個常見來源停止回應和當機。 |
-| 一般 SSMS | 已解決在選取 [瀏覽] 按鈕時，[還原] 對話方塊停止回應的情況。 |
-| 一般 SSMS | 已修正 SQL On Demand 的「新增資料庫 GUI」。 |
-| 一般 SSMS | 已修正 SQL On Demand 的 [新增外部資料表...] 和 [新增外部資料來源...] 範本。 |
+| 一般 SSMS | 已解決在選取 [瀏覽] 按鈕時，[還原]  對話方塊停止回應的情況。 |
+| 一般 SSMS | 已修正 SQL On Demand 的「新增資料庫 GUI」  。 |
+| 一般 SSMS | 已修正 SQL On Demand 的 [新增外部資料表...]  和 [新增外部資料來源...]  範本。 |
 | 一般 SSMS | 已修正資料庫屬性、連線屬性、隱藏報表，以及 SQL On Demand 的重新命名。 |
 | 一般 SSMS | Always Encrypted：已修正在選取新的已啟用記憶體保護區金鑰時，金鑰名稱下拉式清單變為唯讀的問題。 |
-| 一般 SSMS | 已清除 [資料庫屬性選項] 格線，其中顯示兩個「其他類別」。 |
+| 一般 SSMS | 已清除 [資料庫屬性選項]  格線，其中顯示兩個「其他類別」  。 |
 | 一般 SSMS | 已修正捲軸從「資料庫屬性選項」格線中間開始的問題。 |
 | 一般 SSMS | 已修正在連線至 Analysis Services 伺服器時，開啟 .sql 檔案時導致 SSMS 損毀的問題。 |
 | 一般 SSMS | 連線對話方塊：已修正取消選取 [記住密碼] 無法運作的問題。 |
 | 一般 SSMS | 已修正與伺服器/使用者相關聯的認證一律會被記憶的問題。 請參閱 [UserVoice 37875172](https://feedback.azure.com/forums/908035/suggestions/37875172) \(英文\)。 |
-| 一般 SSMS | 已修正偶爾不會正確重新整理 [編輯器] 視窗的問題。 這是藉由停用 [工具] > [選項] > [環境] 中的硬體加速來達成。 請參閱 [UserVoice 37474042](https://feedback.azure.com/forums/908035/suggestions/37474042) \(英文\)。 |
+| 一般 SSMS | 已修正偶爾不會正確重新整理 [編輯器] 視窗的問題。 這是藉由停用 [工具] > [選項] > [環境]  中的硬體加速來達成。 請參閱 [UserVoice 37474042](https://feedback.azure.com/forums/908035/suggestions/37474042) \(英文\)。 |
 | 一般 SSMS | 已修正 Azure Active Directory 驗證無法透過 Proxy 運作的問題。 |
-| 高 DPI/調整 | 已修正「索引屬性」上的控制項可能錯誤地轉譯 (按鈕重疊格線) 的問題。 請參閱 [UserVoice 36030424](https://feedback.azure.com/forums/908035/suggestions/36030424) \(英文\)。 |
-| 高 DPI/調整 | 已修正 [資料庫屬性] 對話方塊中可能會在 4K 監視器上顯示裁剪的控制項的多個問題。 |
+| 高 DPI/調整 | 已修正「索引屬性」  上的控制項可能錯誤地轉譯 (按鈕重疊格線) 的問題。 請參閱 [UserVoice 36030424](https://feedback.azure.com/forums/908035/suggestions/36030424) \(英文\)。 |
+| 高 DPI/調整 | 已修正 [資料庫屬性]  對話方塊中可能會在 4K 監視器上顯示裁剪的控制項的多個問題。 |
 | 高 DPI/調整 | 已修正 4K 顯示上的已修正發行集和訂閱精靈。 |
 | 高 DPI/調整 | [新的伺服器稽核規格] 頁面上的次要修正。 |
 | 高 DPI/調整 | 已修正高可用性精靈上的 4K 顯示問題。 |
 | 高 DPI/調整 | 已修正當顯示縮放比例為 125% 時，使用者無法在 Xevent [新增工作階段] 視窗中新增目標，以及在 Xevent 工作階段精靈中設定工作階段事件篩選器的問題。 |
-| 高 DPI/調整 | 修正將比例縮放到 100% 以上時，[備份資料庫到 URL] UI 上的控制項無法顯示的問題。 |
+| 高 DPI/調整 | 修正將比例縮放到 100% 以上時，[備份資料庫到 URL]  UI 上的控制項無法顯示的問題。 |
 |匯入一般檔案 | 已更新一般檔案匯入精靈，以允許選取全部允許 Null 資料行。 請參閱 [UserVoice 38027137](https://feedback.azure.com/forums/908035/suggestions/38027137) \(英文\)。 |
 | 物件總管 | 已修正在 [連線] 對話方塊中使用連接字串連線時，物件總管可能會顯示不正確的資訊的問題。 |
 | 物件總管 | 已修正在擴充具有數千個資料表 (20k+) 之資料庫時，OE 展開資料表之速度緩慢的問題。 |
-| 查詢存放區 UI | 已修正 TRC 報表將執行計數 (針對「等候時間」計量) 計算為每個單獨等待類別的執行計數之和，這是不正確的。 但是針對查詢的單一執行，其會針對查詢所等候的每個等候類別註冊。 因此，如果 TRC 只是將其在等候類別中加總，其將使執行計數膨脹。 實際上，這應該是 wait_category 的最大值。 |
+| 查詢存放區 UI | 已修正 TRC 報表將執行計數 (針對「等候時間」  計量) 計算為每個單獨等待類別的執行計數之和，這是不正確的。 但是針對查詢的單一執行，其會針對查詢所等候的每個等候類別註冊。 因此，如果 TRC 只是將其在等候類別中加總，其將使執行計數膨脹。 實際上，這應該是 wait_category 的最大值。 |
 | 查詢存放區 UI | 已修正 TRC 詳細資料檢視會在頂端 x 篩選結果集時傳回不正確的資料。 這是因為查詢會使用多個通用資料表運算式，然後將其聯結在一起，以建立最終的結果集。 如果將頂端 x 推送至 CTE，有時可能篩選掉必要的資料列。 這有時會使結果集不具決定性。 修正方法是不要將頂端 x 子句推送至 CTE。 |
 | 查詢存放區 UI | 已修正兩者中的計劃摘要 - 格線或圖表檢視需要最後一次查詢執行等候時間。 缺少此資料行將中斷查詢。 此變更集會將此資料行新增至等候統計資料 CTE。 |
-| 執行程序表 | 已改善 SSMS 如何針對具有多個執行的運算子顯示估計的資料列計數：(1) 將 SSMS 中的 [估計的資料列數目] 修改為 [所有執行估計的資料列數目]；(2) 新增屬性 [每次執行估計的資料列數目]；(3) 將屬性 [實際資料列數目] 修改為 [所有執行的實際資料列數目]。 |
-| SQL Agent | 已修正嘗試編輯 SQL 代理程式作業步驟可能導致 SSMS UI 凍結的問題。 SSMS 現在允許檢視 ([檢視] 按鈕) 其名稱已 Token 化的 output_file (至少針對 SQL Agent 所支援，在執行階段未確定的簡單巨集/權杖)。 此外，當使用者沒有檔案的存取權時 (就 SQL 權限而言)，SSMS 也不會停用 [檢視] 按鈕。 請參閱 [UserVoice 39063124](https://feedback.azure.com/forums/908035/suggestions/39063124) \(英文\)。 |
+| 執行程序表 | 已改善 SSMS 如何針對具有多個執行的運算子顯示估計的資料列計數：(1) 將 SSMS 中的 [估計的資料列數目]  修改為 [所有執行估計的資料列數目]；(2) 新增屬性 [每次執行估計的資料列數目]  ；(3) 將屬性 [實際資料列數目]  修改為 [所有執行的實際資料列數目]  。 |
+| SQL Agent | 已修正嘗試編輯 SQL 代理程式作業步驟可能導致 SSMS UI 凍結的問題。 SSMS 現在允許檢視 ([檢視]  按鈕) 其名稱已 Token 化的 output_file (至少針對 SQL Agent 所支援，在執行階段未確定的簡單巨集/權杖)。 此外，當使用者沒有檔案的存取權時 (就 SQL 權限而言)，SSMS 也不會停用 [檢視] 按鈕。 請參閱 [UserVoice 39063124](https://feedback.azure.com/forums/908035/suggestions/39063124) \(英文\)。 |
 | SQL Agent | 已修正 [作業步驟] 頁面上的索引標籤順序。 |
 | SQL Agent | 已調換 [作業步驟] 頁面上 [下一步] 和 [上一步] 按鈕的位置，以邏輯順序加以放置。 |
 | SQL Agent | 已調整 [作業排程] 視窗，以不裁剪 UI。 |
@@ -128,7 +128,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | 移除明確的 sqlvariant 強制轉換 (SqlOnDemand 不合法的 T-SQL 語法)，可修正 SqlOnDemand 的指令碼。 |
 | SMO/指令碼 | 已修正略過 SQL Azure 索引上 FILLFACTOR 的問題。 |
 | SMO/指令碼 | 已修正與指令碼外部物件有關的問題。 |
-| SMO/指令碼 | 已修正 [產生指令碼] 不允許為針對 SQL DB 的 [擴充屬性] 選擇指令碼選項的問題。 此外，也已修正這類擴充屬性的指令碼。 |
+| SMO/指令碼 | 已修正 [產生指令碼]  不允許為針對 SQL DB 的 [擴充屬性] 選擇指令碼選項的問題。 此外，也已修正這類擴充屬性的指令碼。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 規則中有錯誤的說明連結。 |
 | XEvent UI | 已修正格線中的項目在游標暫留時選取的問題。 請參閱 [UserVoice 38262124](https://feedback.azure.com/forums/908035/suggestions/38262124) \(英文\) 和 [UserVoice 37873921](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921) \(英文\)。 |
 
@@ -173,11 +173,11 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 新項目 | 詳細資料 |
 |----------|---------|
 | 資料分類 | 已新增資料分類的自訂資訊保護原則支援。 |
-| 查詢存放區 | 已新增對話方塊屬性中的「每個查詢的計劃上限」值。 |
+| 查詢存放區 | 已新增對話方塊屬性中的「每個查詢的計劃上限」  值。 |
 | 查詢存放區 | 已新增新自訂擷取原則的支援。 |
-| 查詢存放區 | 在 [查詢存放區] 的 [資料庫屬性] 選項中，新增了 [等候統計資料擷取模式]。 |
+| 查詢存放區 | 在 [查詢存放區]  的 [資料庫屬性]  選項中，新增了 [等候統計資料擷取模式]  。 |
 | SMO/指令碼 | 支援 SQL DW 中具體化檢視的指令碼。 |
-| SMO/指令碼 | 已新增「SQL 隨需」的支援。 |
+| SMO/指令碼 | 已新增「SQL 隨需」  的支援。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評定規則 (請參閱 GitHub 上的詳細資料)。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |
@@ -193,17 +193,17 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |----------|---------|
 | Analysis Services | 已修正多維度資料庫 DAX 指令碼編輯器未在 IntelliSense 中顯示資料表的問題。 |
 | Analysis Services | 使用 DAX 剖析器轉換成引擎字串。 這適用於國際分隔符號、十進位和空白字元。 |
-| Always Encrypted | 已修正問題：「宣告驗證」不會「區分大小寫」。 |
+| Always Encrypted | 已修正問題：「宣告驗證」  不會「區分大小寫」  。 |
 | Always Encrypted | 已修正問題：錯誤/警告報告未正常運作。 |
 | 複製資料庫精靈 | 已修正轉譯此對話方塊時的各種截斷和版面配置問題。 |
 | 一般 SSMS | 已修正長期未決的問題：同時指定 SQL 檔案時，SSMS 未遵循命令列中傳遞的連線資訊。 |
 | 一般 SSMS | 已修正在嘗試顯示「複寫篩選器」物件上的安全性實體時，SSMS 中的損毀。 |
 | 一般 SSMS | 藉由讓 SSMS 查看其認證的快取，以減輕移除 -P 命令列選項的風險：如果找到了所需的認證，則會將其用於建立連接。 |
-| 匯入一般檔案 | 已修正「匯入一般檔案」功能未正確處理文字限定詞的問題。 |
+| 匯入一般檔案 | 已修正「匯入一般檔案」  功能未正確處理文字限定詞的問題。 |
 | 物件總管 | 已修正卸除 [物件總管] 中 Azure SQL Database 時顯示不正確訊息的問題。 |
-| 查詢結果 | 正在修正 SSMS 18.3.1 中的問題：格線有點細，每個資料行最長字串的結尾都會顯示 *...*。 |
+| 查詢結果 | 正在修正 SSMS 18.3.1 中的問題：格線有點細，每個資料行最長字串的結尾都會顯示 *...* 。 |
 | 複寫工具 | 已修正問題：嘗試編輯 SQL Agent 作業時，發生應用程式擲回錯誤 (「無法載入檔案或組件...」)。 |
-| SMO/指令碼 | 已修正「指令碼資料表為...」時的問題 定序為 Japanese_BIN2 的 SQL DW 無法運作。|
+| SMO/指令碼 | 已修正「指令碼資料表為...」時的問題  定序為 Japanese_BIN2 的 SQL DW 無法運作。|
 | SMO/指令碼 | 已修正 ScriptAlter() 最後在伺服器上執行陳述式的問題。|
 | SQL Agent | 已修正問題：代理程式運算子 UI 在 UI 中變更時不會更新運算子名稱，也不會被寫入指令碼。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647)。|
 
@@ -211,7 +211,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 - 從電腦 A 上所執行 SSMS 建立的資料庫圖表無法從電腦 B 進行修改 (SSMS 當機)。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
-- 在多個查詢視窗間進行切換時的重繪問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是在 [工具] > [選項] 下停用硬體加速。
+- 在多個查詢視窗間進行切換時的重繪問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是在 [工具] > [選項]  下停用硬體加速。
 
 您可以參考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 以取得其他已知問題．並提供意見反應給產品小組。
 
@@ -231,7 +231,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 | 新項目 | 詳細資料 |
 |----------|---------|
-| 資料分類 | 將資料分類資訊新增到資料行屬性 UI (SSMS UI 中不會公開 [資訊類型]、[資訊類型識別碼]、[敏感度標籤] 和 [敏感度標籤識別碼])。 |
+| 資料分類 | 將資料分類資訊新增到資料行屬性 UI (SSMS UI 中不會公開 [資訊類型]  、[資訊類型識別碼]  、[敏感度標籤]  和 [敏感度標籤識別碼]  )。 |
 | IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，*ALTER SERVER CONFIGURATION*) 的支援。 |
 | Integration Services | 新增新的選項功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，此項目會在 Azure-SSIS Integration Runtime 上叫用執行 SSIS 套件，以作為 ADF 管線中的執行 SSIS 套件活動。 |
 | SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
@@ -251,16 +251,16 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 一般 SSMS | 修正在 XEvent 檢視器中使用排序功能會造成 SSMS 當機的問題。 |
 | 一般 SSMS | 修正 SSMS 還原資料庫可能會無限期停止回應的長期問題。 </br></br> 請參閱 UserVoice 項目以取得詳細資料： </br> [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/) (還原資料庫 - 選取備份裝置載入緩慢)。  </br> [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/) (SSMS 2016 在資料庫還原對話方塊中非常緩慢)。 </br> [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/) (還原資料庫相當緩慢)。  </br> [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/) (從裝置還原資料庫在按一下 "..." 時停止回應)。  |
 | 一般 SSMS | 修正將所有登入之預設語言顯示為阿拉伯文的問題。 </br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363) (SSMS 18.2 預設語言顯示 Bug)。 |
-| 一般 SSMS | 藉由將其設為可調整大小來修正難以查看 [查詢選項] 對話方塊 (使用者以滑鼠右鍵按一下 T-SQL 編輯器視窗時) 的問題。|
-| 一般 SSMS | 結果方格/檔案 (於 SSMS 18.2 中引進) 中可見的 [完成時間] 訊息現在可以在 [工具] > [選項] > [查詢執行] > [SQL Server] > [進階] > [顯示完成時間] 中進行設定。 |
-| 一般 SSMS | 在 [連線] 對話方塊中，分別將 [Active Directory - 密碼] 和 [Active Directory - 整合] 替換成 [Azure Active Directory - 密碼] 和 [Azure Active Directory - 整合]。 |
+| 一般 SSMS | 藉由將其設為可調整大小來修正難以查看 [查詢選項]  對話方塊 (使用者以滑鼠右鍵按一下 T-SQL 編輯器視窗時) 的問題。|
+| 一般 SSMS | 結果方格/檔案 (於 SSMS 18.2 中引進) 中可見的 [完成時間]  訊息現在可以在 [工具] > [選項] > [查詢執行] > [SQL Server] > [進階] > [顯示完成時間] 中進行設定。 |
+| 一般 SSMS | 在 [連線] 對話方塊中，分別將 [Active Directory - 密碼]  和 [Active Directory - 整合]  替換成 [Azure Active Directory - 密碼]  和 [Azure Active Directory - 整合]  。 |
 | 一般 SSMS | 修正位於具有負值 UTC 時差的時區時，讓使用者無法使用 SSMS 來在 Azure SQL Database 受控執行個體上設定稽核的問題。 |
 | 一般 SSMS | 修正 XEvent UI 中，暫留在方格上會選取資料列的問題。 </br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124) (SSMS 延伸事件 UI 在暫留時會選取動作)。 |
 | 匯入一般檔案 | 已修正問題：讓使用者選擇簡易或豐富的資料類型偵測時，「匯入一般檔案」不會匯入所有資料。</br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989) (SSMS 匯入一般檔案無法匯入所有資料)。 |
 | Integration Services | 為 SSIS 作業報表新增新的作業類型 *StartNonCatalogExecution*。|
 | Integration Services | 已修正 Azure 啟用的 `DTExec` 公用程式所產生 Azure Data Factory 管線中問題，以使用正確的參數類型。 (明確用於 18.3.1) |
 | SMO/指令碼 | 修正造成 SMO 使用 **SMO.Server.SetDefaultInitFields(true)** 擷取屬性時擲回錯誤的問題。|
-| 查詢存放區 UI | 已修正在 [追蹤查詢] 檢視中選取 [執行計數] 計量時，Y 軸無法調整大小的問題。 |
+| 查詢存放區 UI | 已修正在 [追蹤查詢]  檢視中選取 [執行計數]  計量時，Y 軸無法調整大小的問題。 |
 | 弱點評量 | 停用 Azure SQL DB 的清除和核准基準。|
 
 #### <a name="known-issues-1831"></a>已知問題 (18.3.1)
@@ -291,7 +291,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | IntelliSense/編輯器 | 新增資料分類的支援。 |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | 新增 Intellisense 支援。 |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | 可在能協助改善對索引進行高並行插入之輸送量的資料庫引擎內，開啟最佳化。 此選項適用於可能出現最後一頁插入競爭的索引，通常是具有循序鍵 (例如識別資料行、序列或日期/時間資料行) 的索引。 如需詳細資料，請參閱 [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)。 |
-| 查詢執行或結果 | 在訊息中新增了「完成時間」，用來追蹤指定的查詢何時完成其執行。 |
+| 查詢執行或結果 | 在訊息中新增了「完成時間」  ，用來追蹤指定的查詢何時完成其執行。 |
 | 查詢執行或結果 | 允許顯示更多的資料 (結果為文字) 並將其儲存在資料格 (結果為方格) 中。 SSMS 現在兩者允許最多 2M 個字元 (分別自 256 K 和 64 K 起)。 這也解決了使用者無法從方格資料格抓取超過 43680 個字元的問題。 |
 | 執行程序表 | 啟用[內嵌純量 UDF 功能](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqludfs) 時，在 QueryPlan 中新增了新屬性。 |
 | SMO | 已新增 *SQL 評定 API* 的支援。 如需詳細資訊，請參閱 [SQL 評定 API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview)。 |
@@ -305,29 +305,29 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 永遠開啟 | 修正 SSMS 在嘗試刪除可用性群組 (AG) 時擲回錯誤的問題 |
 | 永遠開啟 | 已修正當使用讀取級別 AG (叢集類型=NONE) 時，SSMS 在複本設定為同步時呈現錯誤容錯移轉精靈的問題。 現在，SSMS 會為 Force_Failover_Allow_Data_Loss 選項提供精靈，這是唯一允許叢集類型 NONE 可用性的選項 |
 | 永遠開啟 | 修正精靈將所允許同步處理數目限制為三個的問題 |
-| 資料分類 | 修正當嘗試在資料庫上以 CompatLevel 小於 150 的設定檢視資料分類報表時，SSMS 擲回「索引 (以零為基底) 必須大於或等於零」錯誤的問題。 |
+| 資料分類 | 修正當嘗試在資料庫上以 CompatLevel 小於 150 的設定檢視資料分類報表時，SSMS 擲回「索引 (以零為基底) 必須大於或等於零」  錯誤的問題。 |
 | 一般 SSMS | 修正使用者無法透過滑鼠滾輪水平捲動 [結果] 窗格的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34145641)。 |
-| 一般 SSMS | 更新「活動監視器」以忽略良性等候類型 SQLTRACE_WAIT_ENTRIES |
-| 一般 SSMS | 已修正未保存某些色彩選項「([文字編輯器] > [編輯器] 索引標籤和狀態列)」的問題。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37924165)
-| 一般 SSMS | 在 [連線] 對話方塊中，以「具 MFA 支援的 Azure Active Directory - 通用」取代「具 MFA 的 Azure Active Directory - 通用」 (功能相同，但希望這比較不會令人混淆)。 |
+| 一般 SSMS | 更新「活動監視器」  以忽略良性等候類型 SQLTRACE_WAIT_ENTRIES |
+| 一般 SSMS | 已修正未保存某些色彩選項「([文字編輯器] > [編輯器] 索引標籤和狀態列)」  的問題。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37924165)
+| 一般 SSMS | 在 [連線] 對話方塊中，以「具 MFA 支援的 Azure Active Directory - 通用」  取代「具 MFA 的 Azure Active Directory - 通用」  (功能相同，但希望這比較不會令人混淆)。 |
 | 一般 SSMS | 已更新在建立 Azure SQL Database 時，SSMS 使用正確的預設值。 |
-| 一般 SSMS | 已修正問題：當伺服器為 [SQL Linux 容器](../linux/quickstart-install-connect-docker.md)時，使用者無法從[註冊伺服器](register-servers/register-servers.md)中的節點「啟動 PowerShell」。 |
-| 匯入一般檔案 | 已修正問題：從 SSMS 18.0 升級至 18.1 之後，「匯入一般檔案」無法運作。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37912636) |
-| 匯入一般檔案 | 修正「[匯入一般檔案精靈] 回報 .csv 檔案有重複或不正確的資料行」，且標頭具有 Unicode 字元的問題。 |
-| 物件總管 | 已修正當連線到 SQL Express 時，部分功能表項目 (例如，SQL Server [匯入和匯出精靈]) 遺失或停用的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37500016)。 |
+| 一般 SSMS | 已修正問題：當伺服器為 [SQL Linux 容器](../linux/quickstart-install-connect-docker.md)時，使用者無法從[註冊伺服器](register-servers/register-servers.md)中的節點「啟動 PowerShell」  。 |
+| 匯入一般檔案 | 已修正問題：從 SSMS 18.0 升級至 18.1 之後，「匯入一般檔案」  無法運作。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37912636) |
+| 匯入一般檔案 | 修正「[匯入一般檔案精靈] 回報 .csv 檔案有重複或不正確的資料行」  ，且標頭具有 Unicode 字元的問題。 |
+| 物件總管 | 已修正當連線到 SQL Express 時，部分功能表項目 (例如，SQL Server [匯入和匯出精靈]  ) 遺失或停用的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37500016)。 |
 | 物件總管 | 已修正當物件從 [物件總管] 拖曳至編輯器時，造成 SSMS 損毀的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37887988)。 |
 | 物件總管 | 修正重新命名資料庫導致 [物件總管] 顯示不正確資料庫名稱的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37638472)。 |
-| 物件總管 | 已修正一個長時間未解決的問題，即嘗試在 [物件總管] 中針對資料庫展開「資料表」節點，而該資料庫設定為使用 Windows 不再支援的定序時，就會觸發錯誤 (且使用者無法展開其資料表)。 這類定序的範例是 Korean_Wansung_Unicode_CI_AS。 |
-| [註冊伺服器](register-servers/register-servers.md) | 已修正當已註冊伺服器使用「Active Directory - 整合式」或「具 MFA 支援的 Azure Active Directory - 通用」時，嘗試對多部伺服器 (在已註冊伺服器中的「群組」底下) 發出查詢的作業，可能因 SSMS 無法連線而無法正常運作的問題。 |
-| [註冊伺服器](register-servers/register-servers.md) | 修正當已註冊伺服器使用「Active Directory - 密碼」或「SQL 驗證」，且使用者選擇不要記住密碼時，嘗試對多部伺服器 (在已註冊伺服器中的「群組」底下) 發出查詢的作業，可能會造成 SSMS 損毀的問題。 |
-| 報表 | 修正「磁碟使用量」報表中當資料檔案具有大量範圍時，報表會失敗的問題。 |
+| 物件總管 | 已修正一個長時間未解決的問題，即嘗試在 [物件總管] 中針對資料庫展開「資料表」  節點，而該資料庫設定為使用 Windows 不再支援的定序時，就會觸發錯誤 (且使用者無法展開其資料表)。 這類定序的範例是 Korean_Wansung_Unicode_CI_AS。 |
+| [註冊伺服器](register-servers/register-servers.md) | 已修正當已註冊伺服器使用「Active Directory - 整合式」  或「具 MFA 支援的 Azure Active Directory - 通用」  時，嘗試對多部伺服器 (在已註冊伺服器中的「群組」  底下) 發出查詢的作業，可能因 SSMS 無法連線而無法正常運作的問題。 |
+| [註冊伺服器](register-servers/register-servers.md) | 修正當已註冊伺服器使用「Active Directory - 密碼」  或「SQL 驗證」  ，且使用者選擇不要記住密碼時，嘗試對多部伺服器 (在已註冊伺服器中的「群組」  底下) 發出查詢的作業，可能會造成 SSMS 損毀的問題。 |
+| 報表 | 修正「磁碟使用量」  報表中當資料檔案具有大量範圍時，報表會失敗的問題。 |
 | 複寫工具 | 已修正問題：複寫監視器無法使用 AG 中發行者 DB 和 AG 的散發者 (SSMS 17.x 之前已修正此問題) |
 | SQL Agent | 已修正新增、插入、編輯或移除作業步驟，導致焦點重設為第一個資料列，而不是使用中資料列的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892)。 |
 | SMO/指令碼 | 已修正問題：*CREATE OR ALTER* 不會針對具有擴充屬性的物件撰寫指令碼。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)。 |
 | SMO/指令碼 | 修正 SSMS 無法正確編寫 CREATE EXTERNAL LIBRARY 指令碼的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089)。 |
-| SMO/指令碼 | 修正嘗試對具有數千個資料表之資料庫執行「產生指令碼」的問題 (導致進度對話方塊似乎停滯)。 |
-| SMO/指令碼 | 已修正 SQL 2019 上「外部資料表」指令碼無法正常運作的問題。 |
-| SMO/指令碼 | 已修正 SQL 2019 上「外部資料來源」指令碼無法正常運作的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080)。 |
+| SMO/指令碼 | 修正嘗試對具有數千個資料表之資料庫執行「產生指令碼」  的問題 (導致進度對話方塊似乎停滯)。 |
+| SMO/指令碼 | 已修正 SQL 2019 上「外部資料表」  指令碼無法正常運作的問題。 |
+| SMO/指令碼 | 已修正 SQL 2019 上「外部資料來源」  指令碼無法正常運作的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080)。 |
 | SMO/指令碼 | 已修正當目標為 Azure SQL DB 時，不會撰寫資料行上「擴充屬性」的問題。 如需詳細資料，請參閱 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)。 |
 | SMO/指令碼 | 最後一頁插入：SMO - 新增屬性 *Index.IsOptimizedForSequentialKey* |
 |**SSMS 安裝程式**| **減輕 SSMS 安裝程式不正確地封鎖 SSMS 安裝，使其無法回報不相符語言的問題。在某些異常情況下，這可能會是個問題，例如中止的安裝程式或錯誤解除安裝舊版 SSMS。如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37483594/)。** |
@@ -337,7 +337,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 - 從電腦 A 上執行的 SSMS 所建立資料庫圖表無法從電腦 B 進行修改 (它會造成 SSMS 損毀)。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
-- 在多個查詢視窗間進行切換時的重繪問題。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是停用 [工具] > [選項] 下方的硬體加速。
+- 在多個查詢視窗間進行切換時的重繪問題。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是停用 [工具]   > [選項]  下方的硬體加速。
 
 - 您從方格、文字或檔案中顯示的 SSMS 結果所看到資料大小具有限制。
 
@@ -363,47 +363,47 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | :-------| :------|
 | 資料庫圖表 | [將資料庫圖表新增回 SSMS](https://feedback.azure.com/forums/908035/suggestions/37507828)。
 | SSBDIAGNOSE.EXE |SQL Server 診斷 (命令列工具) 已新增回 SSMS 套件。|
-| Integration Services (SSIS) | 支援在 Azure 中，排程位於 Azure 或檔案系統中 SSIS 目錄裡的 SSIS 套件。 有三種啟動新增排程對話方塊的項目：[新增排程...] 功能表項目 (以滑鼠右鍵按一下 Azure 中 SSIS 目錄內的 SSIS 套件時顯示)、位於 [工具] 功能表項目下方 [移轉到 Azure] 功能表項目下的 [排程 Azure 中的 SSIS 套件]，以及以滑鼠右鍵按一下 Azure SQL Database 受控執行個體 SQL Server 代理程式下方的 Jobs 資料夾時所顯示的「排程 Azure 中的 SSIS」。|
+| Integration Services (SSIS) | 支援在 Azure 中，排程位於 Azure 或檔案系統中 SSIS 目錄裡的 SSIS 套件。 有三種啟動新增排程對話方塊的項目：[新增排程...]  功能表項目 (以滑鼠右鍵按一下 Azure 中 SSIS 目錄內的 SSIS 套件時顯示)、位於 [工具]  功能表項目下方 [移轉到 Azure]  功能表項目下的 [排程 Azure 中的 SSIS 套件]  ，以及以滑鼠右鍵按一下 Azure SQL Database 受控執行個體 SQL Server 代理程式下方的 Jobs 資料夾時所顯示的「排程 Azure 中的 SSIS」。|
 
 #### <a name="bug-fixes-in-181"></a>18.1 中的錯誤修正
 
 | 新項目 | 詳細資料 |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Accessibility | 改善代理程式作業 UI 的協助工具。 |'
-| Accessibility | 已改善 Stretch 監視器頁面上的協助工具，除了新增 [自動重新整理] 按鈕的可存取名稱，也新增智慧型可存取名稱，可協助使用者知道其所在按鈕和按鈕的作用。 |
+| Accessibility | 已改善 Stretch 監視器頁面上的協助工具，除了新增 [自動重新整理]  按鈕的可存取名稱，也新增智慧型可存取名稱，可協助使用者知道其所在按鈕和按鈕的作用。 |
 | ADS 整合| 嘗試使用 ADS 已註冊的伺服器時，可能發生的 SSMS 當機問題已修正。|
 | 資料庫設計工具 | 新增 Latin1_General_100_BIN2_UTF8 集合的支援 (適用於 SQL Server 2019 CTP3.0) |
 | 資料分類 | 防止將敏感度標籤新增至記錄資料表中的資料行，不支援該行為。 |
 | 資料分類 | 已解決未正確處理相容性層級 (伺服器與資料庫) 的問題。 |
 | 資料庫設計工具 | 新增 Latin1_General_100_BIN2_UTF8 集合的支援 (適用於 SQL2019 CTP3.0)。 |
 | 一般 SSMS | 已修正下列問題：索引中的虛擬資料行指令碼不正確。 |
-| 一般 SSMS | 已修正下列問題：在 [登入屬性] 頁面中按一下 [新增認證] 按鈕可能會擲回 Null 參考例外狀況。 |
+| 一般 SSMS | 已修正下列問題：在 [登入屬性] 頁面中按一下 [新增認證]  按鈕可能會擲回 Null 參考例外狀況。 |
 | 一般 SSMS | 已修正索引屬性頁面中的貨幣資料行大小顯示。 |
-| 一般 SSMS | 已修正下列問題：SSMS 不接受 SQL 編輯器視窗 [工具/選項] 中的 [IntelliSense] 設定。 |
+| 一般 SSMS | 已修正下列問題：SSMS 不接受 SQL 編輯器視窗 [工具/選項]  中的 [IntelliSense] 設定。 |
 | 一般 SSMS | 已修正 SSMS 不接受 [說明] 設定 (線上與離線) 的問題。 |
 | 高 DPI | 修正未支援查詢選項中，錯誤對話方塊的控制項配置。 |
-| 高 DPI | 修正某些當地語系化版本的 SSMS 上，[新增可用性群組] 頁面中的控制項配置。 |
-| 高 DPI | 修正 [新增作業排程] 頁面的配置。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37632094)。 |
+| 高 DPI | 修正某些當地語系化版本的 SSMS 上，[新增可用性群組]  頁面中的控制項配置。 |
+| 高 DPI | 修正 [新增作業排程]  頁面的配置。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37632094)。 |
 | 匯入一般檔案 | 已修正資料列可能會在匯入期間遺失的問題。|
 | IntelliSense/編輯器 | 降低 IntelliSense 前往 Azure SQL Database 的 SMO 查詢流量。 |
 | IntelliSense/編輯器 | 鍵入 T-SQL 建立使用者時，所顯示工具提示中的文法錯誤已修正。 此外，也修正了錯誤訊息，釐清使用者與登入。 |
 | 記錄檢視器 | 已修正即使按兩下 [物件總管] 上較舊的封存符號，SSMS 也一律會開啟目前伺服器 (或代理程式) 記錄的問題：。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37633648)。 |
 | SSMS 安裝程式 | 已修正下列問題：安裝程式記錄檔路徑包含空格時，造成 SSMS 安裝程式失敗。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110)。 |
 | SSMS 安裝程式 | 已修正下列問題：SSMS 在顯示啟動顯示畫面之後立即結束。 </br> 如需詳細資料，請參閱下列網站：[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37502512)、[SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start) (SSMS 拒絕啟動)，以及 [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up) (資料庫管理員)。 |
-| 物件總管 | 提高當連線到 Linux 上的 SQL 時，啟用 [啟動 PowerShell] 的限制。 |
+| 物件總管 | 提高當連線到 Linux 上的 SQL 時，啟用 [啟動 PowerShell]  的限制。 |
 | 物件總管 | 已修正下列問題：嘗試展開 [PolyBase/向外延展群組] 節點時 (連線到計算節點時)，造成 SSMS 當機。 |
-| 物件總管 | 已修正下列問題：即使在停用指定的索引之後，[已停用] 功能表項目仍維持啟用狀態。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37735375)。 |
+| 物件總管 | 已修正下列問題：即使在停用指定的索引之後，[已停用]  功能表項目仍維持啟用狀態。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37735375)。 |
 | 報表 | 修正報表以顯示 GrantedQueryMemory 值 (單位為 KB) (SQL 效能儀表板報表)。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37167289)。 |
 | 報表 | 改善 Always-On 案例中記錄區塊的追蹤。 |
 | 執行程序表 | 在執行程序表結構描述中，新增執行程序表項目 *SpillOccurred*。 |
 | 執行程序表 | 在執行程序表結構描述中，新增遠端讀取 (*ActualPageServerReads*、*ActualPageServerReadAheads*、*ActualLobPageServerReads*、*ActualLobPageServerReadAheads*)。 |
 | SMO/指令碼 | 避免在為非圖形資料表編寫指令碼期間查詢邊緣條件約束。 |
-| SMO/指令碼 | 移除使用 [資料分類] 為資料行編寫指令碼時，對敏感度分類的條件約束。 |
+| SMO/指令碼 | 移除使用 [資料分類]  為資料行編寫指令碼時，對敏感度分類的條件約束。 |
 | SMO/指令碼 | 已修正產生資料時，在圖形資料表上「產生指令碼」失敗的問題：。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466)。 |
 | SMO/指令碼 | 已修正 EnumObjects() 方法針對同義字未擷取結構描述名稱的問題。 |
 | SMO/指令碼 | 已修正下列問題：UIConnectionInfo.LoadFromStream() 中無法讀取 *AdvancedOptions* 區段 (未指定密碼時)。 |
 | SQL Agent | 已修正下列問題：使用 [作業屬性] 視窗時，造成 SSMS 當機。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37164244)。 |
-| SQL Agent | 已修正下列問題：[作業步驟屬性] 上的 [檢視] 按鈕不一定會啟用，妨礙到檢視指定作業步驟的輸出。 |
+| SQL Agent | 已修正下列問題：[作業步驟屬性]  上的 [檢視] 按鈕不一定會啟用，妨礙到檢視指定作業步驟的輸出。 |
 | XEvent UI | 在 XEvent 清單中新增 [套件] 資料行來釐清同名的事件。 |
 | XEvent UI | 在 XEventUI 中，新增遺漏的「外部程式庫」類別類型對應。 |
 
@@ -411,7 +411,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 - 當將資料表物件從 [物件總管] 拖曳到 [查詢編輯器] 中時，使用者可能會見到錯誤。 我們已經知道此問題，並計劃於下一版中修正。
 
-- 關閉 SSMS 18.1 之後，不會保留 [選項]-> [文字編輯器]-> [編輯器] 索引標籤及狀態列 -> [狀態列配置和色彩] 下的 [群組連線] 與 [單一伺服器連線] 色彩選項。 當您重新開啟 SSMS 之後，[狀態列配置和色彩] 選項會還原成預設值 (白色)。
+- 關閉 SSMS 18.1 之後，不會保留 [選項]-> [文字編輯器]-> [編輯器] 索引標籤及狀態列 -> [狀態列配置和色彩] 下的 [群組連線]  與 [單一伺服器連線]  色彩選項。 當您重新開啟 SSMS 之後，[狀態列配置和色彩] 選項會還原成預設值 (白色)。
 
 - 您從方格、文字或檔案中顯示的 SSMS 結果所看到資料大小具有限制。
 
@@ -431,7 +431,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 | 新項目| 詳細資料|
 | :-------| :------|
-|SQL Server 2019 支援|SSMS 18.0 是第一個完整「感知」SQL Server 2019 (compatLevel 150) 的版本。|
+|SQL Server 2019 支援|SSMS 18.0 是第一個完整「感知」  SQL Server 2019 (compatLevel 150) 的版本。|
 |SQL Server 2019 支援|支援 SQL Server 2019 中的 "BATCH_STARTED_GROUP" 和 "BATCH_COMPLETED_GROUP"，以及 SQL 受控執行個體。|
 |SQL Server 2019 支援|SMO：新增 UDF 內嵌支援。|
 |SQL Server 2019 支援|GraphDB：在 Graph TC 序列的執行程序表中新增旗標。|
@@ -441,7 +441,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |SSMS 是以 Visual Studio 2017 Isolated Shell 為基礎|新 Shell (SSMS 是以 Visual Studio 2017 15.9.11 為基礎) 會解除鎖定所有修復 SSMS 和 Visual Studio 的協助工具修正程式，包括最新的安全性問題修正。|
 |SSMS 協助工具改善| 為了解決所有工具 (SSMS、DTA 和分析工具) 中的協助工具問題，我們進行了大量的工作|
 |SSMS 現在可以安裝在自訂資料夾中| 您可以從命令列 (適用於自動安裝) 和安裝程式 UI 存取這個選項。 從命令列，將這個額外的引數傳遞給 SSMS-Setup-ENU.exe： SSMSInstallRoot=C:\MySSMS18  根據預設，新的 SSMS 安裝位置是：%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe。  這並不表示 SSMS 是多重執行個體。|
-|SSMS 允許以不同於作業系統語言的語言進行安裝|已解除封鎖混合語言安裝。 例如，您可以在法文版 Windows 上安裝 SSMS 德文版。 如果作業系統語言與 SSMS 語言不相符，則使用者必須在 [工具] > [選項] > [國際設定] 下變更語言，否則 SSMS 會顯示英文的 UI。|
+|SSMS 允許以不同於作業系統語言的語言進行安裝|已解除封鎖混合語言安裝。 例如，您可以在法文版 Windows 上安裝 SSMS 德文版。 如果作業系統語言與 SSMS 語言不相符，則使用者必須在 [工具]   > [選項]   > [國際設定]  下變更語言，否則 SSMS 會顯示英文的 UI。|
 |SSMS 不再與 SQL 引擎共用元件|我們做了很多努力來避免與 SQL 引擎共用元件時，通常會導致某一方覆寫另一方所安裝檔案的服務性問題。|
 |SSMS 需要 NetFx 4.7.2 或更新版本|我們將最低需求從 NetFx4.6.1 升級至 NetFx4.7.2：這可讓我們善用新架構所公開的新功能。|
 |移轉 SSMS 設定的能力| 第一次啟動 SSMS 18 時，系統會提示使用者移轉 17.x 設定。 使用者設定檔案現在會儲存為純文字的 XML 檔案，因而提升可攜性並可能允許編輯。|
@@ -453,7 +453,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |一般 SSMS|在 SSMS 中公開檔案群組的 AUTOGROW_ALL_FILES 設定選項。|
 |一般 SSMS|從 SSMS GUI 移除具風險的 [輕量型共用] 和 [優先權提升] 選項。 如需詳細資料，請參閱[優先權提升詳細資料 - 及不建議使用的原因](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/) \(英文\)。
 |一般 SSMS|用來建立檔案的新功能表和按鍵繫結關係：**CTRL+ALT+N**。 **CTRL+N** 會繼續建立新的查詢。|
-|一般 SSMS|[新增防火牆規則] 對話方塊現在可讓使用者指定規則名稱，而不是代替使用者自動產生。|
+|一般 SSMS|[新增防火牆規則]  對話方塊現在可讓使用者指定規則名稱，而不是代替使用者自動產生。|
 |一般 SSMS|專為 v140+ T-SQL 改善了編輯器中的 IntelliSense。|
 |一般 SSMS|在 [定序] 對話方塊上新增 SSMS UI 的 UTF-8 支援。|
 |一般 SSMS|針對連線對話方塊的 MRU 密碼，切換到「Windows 認證管理員」。 這可解決長久以來密碼的持續性不完全可靠的問題。|
@@ -482,8 +482,8 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |Integration Services (SSIS)|新增支援，允許客戶對 Azure Government 雲端中 Azure-SSIS IR 上的 SSIS 套件進行排程。|
 |Integration Services (SSIS)|當您透過 SSMS 使用 Azure SQL 受控執行個體的 SQL Agent 時，您可以在 SSIS 代理程式作業步驟中設定參數和連線管理員。|
 |Integration Services (SSIS)|連線到 Azure SQL DB/受控執行個體時，您可以使用 *default* 作為初始資料庫來連線至該執行個體。|
-|Integration Services (SSIS)|在 [Integration Services 目錄] 節點下新增項目 [在 Azure Data Factory 中嘗試 SSIS]，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。
-|Integration Services (SSIS)|在 [目錄建立精靈] 中新增 [建立 SSIS IR] 按鈕，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。|
+|Integration Services (SSIS)|在 [Integration Services 目錄] 節點下新增項目 [在 Azure Data Factory 中嘗試 SSIS]  ，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。
+|Integration Services (SSIS)|在 [目錄建立精靈] 中新增 [建立 SSIS IR]  按鈕，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。|
 |Integration Services (SSIS)|ISDeploymentWizard 現在支援 SQL 驗證、Azure Active Directory 整合式驗證，以及命令列模式下的 Azure Active Directory 密碼驗證。|
 |Integration Services (SSIS)|[部署精靈] 現在支援建立並部署到 Azure Data Factory SSIS Integration Runtime。|
 |物件指令碼|為物件編寫指令碼時，新增功能表項目 [CREATE 或 ALTER]。|
@@ -576,7 +576,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |一般檔案匯入精靈|已修正下列問題：[匯入一般檔案精靈] 的雙引號處理方式不正確 (逸出)。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035/suggestions/32897998](https://feedback.azure.com/forums/908035/suggestions/32897998)。 |
 |一般檔案匯入精靈|修正與浮點類型處理方式不正確 (在對浮點使用不同分隔符號的地區設定上) 相關的問題。|
 |一般檔案匯入精靈|修正值為 0 或 1 時，與匯入位元相關的問題。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535)。 |
-|一般檔案匯入精靈|已修正「浮點數」資料類型輸入為 *Null* 的問題。|
+|一般檔案匯入精靈|已修正「浮點數」  資料類型輸入為 *Null* 的問題。|
 |一般檔案匯入精靈|已修正下列問題：匯入精靈無法處理負小數值。|
 |一般檔案匯入精靈|已修正下列問題：精靈無法從單一資料行 CSV 檔案匯入。|
 |一般檔案匯入精靈|已修正問題：當資料表存在時，「一般檔案匯入」不允許變更目標資料表。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 |
@@ -593,7 +593,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |物件總管|修正嘗試在 OE 中展開 [管理] 節點時，SSMS 可能會擲回「物件無法從 DBNull 轉換為其他類型」例外狀況 (設定錯誤的 DataCollector) 的問題。|
 |物件總管|已修正下列問題：OE 在叫用「編輯前 N 個...」之前未逸出引號，造成設計工具混淆。|
 |物件總管|修正 [匯入資料層應用程式精靈] 無法從 Azure 儲存體樹狀結構啟動的問題。|
-|物件總管|已修正下列問題：「Database Mail 設定」中沒有保存 SSL 核取方塊狀態。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)。 |
+|物件總管|已修正下列問題：「Database Mail 組態」中沒有保存 TLS/SSL 核取方塊狀態。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)。 |
 |物件總管|修正 SSMS 在嘗試使用 is_auto_update_stats_async_on 還原資料庫時，現有連線關閉選項呈現灰色的問題。|
 |物件總管|已修正以滑鼠右鍵按一下 OE 節點 (例如「資料表」，並想要執行動作，例如移至 [篩選] > [篩選設定] 來篩選資料表，篩選設定表單可能會出現在 SSMS 目前使用中畫面以外的其他畫面上) 的問題。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106)。 |
 |物件總管|修正當嘗試重新命名物件時，DELETE 鍵在 OE 中無法運作的長時間待處理問題。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510)、[https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) 和其他重複主題。|
@@ -646,8 +646,8 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |SSMS 編輯器|修正 IntelliSense 在使用 "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)" 時發出警告的問題。|
 |SSMS 編輯器|已修正有數個系統檢視和資料表值函式未正確以色彩標示的問題。|
 |SSMS 編輯器|修正按一下編輯器索引標籤時，可能造成索引標籤關閉而不是取得焦點的問題。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035/suggestions/37291114](https://feedback.azure.com/forums/908035/suggestions/37291114)。 |
-|SSMS 選項|已修正下列問題：[工具] > [選項] > [SQL Server 物件總管] > [命令] 頁面未正確調整大小。|
-|SSMS 選項|根據預設，SSMS 現在停用 XMLA 編輯器中的 DTD 自動下載功能 -- 根據預設，XMLA 指令碼編輯器 (使用 XML 語言服務) 現在會防止自動下載潛在惡意 XMLA 檔案的 DTD。 這可藉由在 [工具] > [選項] > [環境] > [文字編輯器] > [XML] > [其他] 中關閉 [自動下載 DTD 和結構描述] 設定進行控制。|
+|SSMS 選項|已修正下列問題：[工具]   > [選項]   > [SQL Server 物件總管]   > [命令]  頁面未正確調整大小。|
+|SSMS 選項|根據預設，SSMS 現在停用 XMLA 編輯器中的 DTD 自動下載功能 -- 根據預設，XMLA 指令碼編輯器 (使用 XML 語言服務) 現在會防止自動下載潛在惡意 XMLA 檔案的 DTD。 這可藉由在 [工具]   > [選項]   > [環境]   > [文字編輯器]   > [XML]   > [其他]  中關閉 [自動下載 DTD 和結構描述] 設定進行控制。|
 |SSMS 選項|將 **CTRL+D** 還原為舊版 SSMS 中所使用的快速鍵。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035/suggestions/35544754](https://feedback.azure.com/forums/908035/suggestions/35544754)。 |
 |資料表設計工具|修正「編輯 200 個資料列」的當機問題。|
 |資料表設計工具|已修正問題：設計工具在連線至 Azure SQL Database 時，允許新增資料表。|
@@ -713,7 +713,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 如果您的 SSMS 安裝遇到問題，而且無法經由標準的解除並重新安裝來解決，您可以先嘗試[修復](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell。 若修復 Visual Studio 2015 IsoShell 未解決問題，下列幾個步驟可以修正許多非特定的問題：
 
-1. 以您解除安裝任何應用程式的相同方式，解除安裝 SSMS (視您的 Windows 版本，請使用 [應用程式與功能]、[程式與功能])。
+1. 以您解除安裝任何應用程式的相同方式，解除安裝 SSMS (視您的 Windows 版本，請使用 [應用程式與功能]  、[程式與功能]  )。
 
 2. **從提升權限的命令提示字元**解除安裝 Visual Studio 2015 IsoShell：
 
@@ -757,7 +757,7 @@ SSMS 18.5 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 * 使用 Always Encrypted 進行加密時，未正確處理加密後來自重新整理模組的錯誤。
 
-* 「開啟最近使用的項目」功能表未顯示最近儲存的檔案。 [Connect 識別碼 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+* 「開啟最近使用的項目」  功能表未顯示最近儲存的檔案。 [Connect 識別碼 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
 * SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 [Connect 識別碼 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
 

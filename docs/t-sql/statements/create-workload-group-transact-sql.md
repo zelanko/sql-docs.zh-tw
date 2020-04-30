@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568061"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087461"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "77568061"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
@@ -203,7 +203,7 @@ GO
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
@@ -275,7 +275,7 @@ WITH
 
 `min_percentage_resource`、`cap_percentage_resource`、`request_min_resource_grant_percent` 和 `request_max_resource_grant_percent` 參數具有在目前服務層級內容及其他工作負載群組組態中調整的有效值。
 
-每個服務層級支援的並行與使用資源類定義每個查詢的資源授與時相同，因此，request_min_resource_grant_percent 的支援值取決於執行個體所設定的服務層級。 在最低服務層級 DW100c，每個要求需要最少 25% 的資源。 在 DW100c，已設定之工作負載群組的有效 request_min_resource_grant_percent 可以是 25% 以上。 請參閱下表，以取得如何衍生有效值的進一步詳細資料。
+`request_min_resource_grant_percent` 參數具有有效值，因為視服務層級而定，每個查詢都會有所需的最少資源。  例如，在最低服務層級 DW100c，每個要求都需要最少 25% 的資源。  如果工作負載群組設定為 3% 的 `request_min_resource_grant_percent` 和 `request_max_resource_grant_percent`，則當執行個體啟動時，這兩個參數的有效值會調整為 25%。  如果執行個體擴大為 DW1000c，則兩個參數的設定值和有效值為 3%，因為 3% 是該服務層級所支援的最小值。  如果執行個體的擴大至高於 DW1000c，則這兩個參數的設定值和有效值都會保持為 3%。  請參閱下表，以取得不同服務層級之有效值的詳細資料。
 
 |服務等級|REQUEST_MIN_RESOURCE_GRANT_PERCENT 的最低有效值|並行查詢數目上限|
 |---|---|---|
@@ -297,9 +297,9 @@ WITH
 |DW30000c|0.75%|128|
 ||||
 
-同樣地，request_min_resource_grant_percent、min_percentage_resource 必須大於或等於有效的 request_min_resource_grant_percent。 `min_percentage_resource` 設定為小於有效 `min_percentage_resource` 的工作負載群組，其值在執行階段會調整為零。 發生這種情況時，針對 `min_percentage_resource` 設定的資源可在所有工作負載群組間共用。 例如，`min_percentage_resource` 為 10% 且在 DW1000c 上執行的工作負載群組 `wgAdHoc`，會有 10% 的有效 `min_percentage_resource` (3.25% 是 DW1000c 所支援的最小值)。 `wgAdhoc` 在 DW100c 上的有效 min_percentage_resource 為 0%。 針對 `wgAdhoc` 設定的 10% 會在所有工作負載群組之間共用。
+`min_percentage_resource` 參數必須大於或等於有效 `request_min_resource_grant_percent`。 `min_percentage_resource` 設定為小於有效 `min_percentage_resource` 的工作負載群組，其值在執行階段會調整為零。 發生這種情況時，針對 `min_percentage_resource` 設定的資源可在所有工作負載群組間共用。 例如，`min_percentage_resource` 為 10% 且在 DW1000c 上執行的工作負載群組 `wgAdHoc`，會有 10% 的有效 `min_percentage_resource` (3% 是 DW1000c 所支援的最小值)。 `wgAdhoc` 在 DW100c 上的有效 min_percentage_resource 為 0%。 針對 `wgAdhoc` 設定的 10% 會在所有工作負載群組之間共用。
 
-`cap_percentage_resource` 也具有有效值。 如果工作負載群組 `wgAdhoc` 設定為 100% 的 `cap_percentage_resource`，而另一個工作負載群組 `wgDashboards` 是以 25% 的 `min_percentage_resource` 所建立，則 `wgAdhoc` 的有效 `cap_percentage_resource` 會變成 75%。
+`cap_percentage_resource` 參數也具有有效值。 如果工作負載群組 `wgAdhoc` 設定為 100% 的 `cap_percentage_resource`，而另一個工作負載群組 `wgDashboards` 是以 25% 的 `min_percentage_resource` 所建立，則 `wgAdhoc` 的有效 `cap_percentage_resource` 會變成 75%。
 
 若要了解工作負載群組的執行階段值，最簡單的方式就是查詢系統檢視 [sys.databases dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)。
 

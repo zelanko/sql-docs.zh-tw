@@ -1,7 +1,7 @@
 ---
 title: 查詢處理架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510199"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107999"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -894,13 +894,13 @@ WHERE ProductID = 63;
 * 應用程式可以控制何時建立及重複使用執行計畫。
 * 準備/執行模型可以移至其他資料庫使用，包括舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> 參數探測
-「參數探測」是指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在編譯或重新編譯期間「探查」目前的參數值，然後將它傳遞給查詢最佳化工具，以便可用來產生可能更有效率之查詢執行計畫的程序。
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> 參數敏感度
+參數敏感度 (也稱為「參數探測」) 指的是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在編譯或重新編譯期間「探查」目前的參數值，然後將其傳遞給查詢最佳化工具，以便用來產生可能更有效率之查詢執行計畫的程序。
 
 在編譯或重新編譯期間會探查下列批次類型的參數值：
 
 -  預存程序
--  透過 sp_executesql 提交的查詢 
+-  透過 `sp_executesql` 提交的查詢 
 -  準備查詢
 
 如需如何針對錯誤參數探測問題進行疑難排解的詳細資訊，請參閱[針對含參數敏感查詢執行計畫問題的查詢進行疑難排解](/azure/sql-database/sql-database-monitor-tune-overview)。
@@ -929,15 +929,39 @@ WHERE ProductID = 63;
 -   **遞迴查詢**        
     如需遞迴的詳細資訊，請參閱[定義和使用遞迴通用資料表運算式的方針](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的遞迴](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
 
--   **資料表值函式 (TVFs)**         
-    如需 TVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+-   **多重陳述式資料表值函式 (MSTVF)**         
+    如需 MSTVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
     
 -   **TOP 關鍵字**        
     如需詳細資訊，請參閱 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
 
+查詢執行計畫可能會在 **QueryPlan** 元素中包含 **NonParallelPlanReason** 屬性，其會描述未使用平行處理原則的原因。  適用於此屬性的值包括：
+
+|NonParallelPlanReason 值|描述|
+|----|----|
+|MaxDOPSetToOne|平行處理原則的最大程度設定為 1。|
+|EstimatedDOPIsOne|平行處理原則的估計程度設定為 1。|
+|NoParallelWithRemoteQuery|平行處理原則不支援遠端查詢。|
+|NoParallelDynamicCursor|平行計畫不支援動態資料指標。|
+|NoParallelFastForwardCursor|平行計畫不支援向前快轉資料指標。|
+|NoParallelCursorFetchByBookmark|平行計畫不支援依書籤擷取的資料指標。|
+|NoParallelCreateIndexInNonEnterpriseEdition|平行索引建立不支援非 Enterprise 版本。|
+|NoParallelPlansInDesktopOrExpressEdition|平行計畫不支援 Desktop 和 Express 版本。|
+|NonParallelizableIntrinsicFunction|查詢正在參考不可平行的內建函式。|
+|CLRUserDefinedFunctionRequiresDataAccess|平行處理原則不支援需要資料存取的 CLR UDF。|
+|TSQLUserDefinedFunctionsNotParallelizable|查詢正在參考不可平行的 T-SQL 使用者定義函式。|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|資料表變數交易不支援平行巢狀交易。|
+|DMLQueryReturnsOutputToClient|DML 查詢將輸出傳回用戶端且不可平行。|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|針對單一線上索引組建之不支援的序列和平行計畫混合。|
+|CouldNotGenerateValidParallelPlan|驗證平行計畫已失敗，正在容錯回復至序列。|
+|NoParallelForMemoryOptimizedTables|平行處理原則不支援參考的記憶體內部 OLTP 資料表。|
+|NoParallelForDmlOnMemoryOptimizedTable|平行處理原則不支援記憶體內部 OLTP 資料表上的 DML。|
+|NoParallelForNativelyCompiledModule|平行處理原則不支援參考的原生編譯模組。|
+|NoRangesResumableCreate|針對可繼續之 Create 作業的範圍產生失敗。|
+
 插入交換運算子之後，結果便是平行查詢執行計畫。 平行查詢執行計畫可以使用一個以上的背景工作執行緒。 非平行 (序列) 查詢使用的序列執行計畫，在執行時只會使用一個背景工作執行緒。 平行查詢實際所使用的背景工作執行緒數目，是在查詢計畫執行初始化時，由計畫的複雜度與平行處理原則的程度決定。 
 
-平行處理原則的程度 (DOP) 決定所要使用的的 CPU 數目上限，而不是所要使用的背景工作執行緒數。 DOP 限制的設定以[工作](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)為準。 它不是根據[要求](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可能會繁衍指派至[排程器](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)的多個工作。 當有不同工作同時執行時，將能在任何指定的查詢執行點，同時執行多於 MAXDOP 所指定的處理器數量。 如需詳細資訊，請參閱[執行緒與工作架構指南](../relational-databases/thread-and-task-architecture-guide.md)。
+平行處理原則的程度 (DOP) 決定所要使用的的 CPU 數目上限，而不是所要使用的背景工作執行緒數。 DOP 限制的設定以[工作](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)為準。 它不是根據[要求](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可能會繁衍指派至[排程器](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)的多個工作。 當有不同工作同時執行時，將能在任何指定的查詢執行點，同時使用多於 MAXDOP 所指定的處理器數量。 如需詳細資訊，請參閱[執行緒與工作架構指南](../relational-databases/thread-and-task-architecture-guide.md)。
 
 如果下列任何條件為真，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具不使用平行執行計畫進行查詢：
 
@@ -963,7 +987,13 @@ WHERE ProductID = 63;
  
 執行時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會判定先前描述的目前系統工作負載及組態資訊是否允許平行執行。 如果保證可以平行執行，則 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會判定最佳的背景工作執行緒數目，並將平行計畫的執行分散到那些背景工作執行緒上。 當查詢或索引作業開始在多個背景工作執行緒上執行，以進行平行執行時，則在完成作業之前，都會使用相同數目的背景工作執行緒。 每次從計畫快取擷取執行計畫時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 都會重新檢查最佳的背景工作執行緒決策數目。 例如，執行查詢可能會使用到序列計畫，稍後執行同一個查詢會導致平行計畫使用三個背景工作執行緒，而第三次執行查詢的結果則是平行計畫使用四個背景工作執行緒。
 
-在平行查詢執行計畫中，會循序執行插入、更新及刪除運算子。 然而，UPDATE 或 DELETE 陳述式的 WHERE 子句，或 INSERT 陳述式的 SELECT 部份，可能會以平行方式執行。 真正的資料變更隨即會循序套用到資料庫。
+平行查詢執行計畫中的 Update 和 Delete 運算子都會以循序方式執行，但是 UPDATE 或 DELETE 陳述式的 WHERE 子句則能以平行方式執行。 真正的資料變更隨即會循序套用到資料庫。
+
+直到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 為止，Insert 運算子也會以循序方式執行。 不過，INSERT 陳述式的 SELECT 部分則能以平行方式執行。 真正的資料變更隨即會循序套用到資料庫。 
+
+從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和資料庫相容性層級 110 開始，`SELECT … INTO` 陳述式能以平行方式執行。 其他形式之 Insert 運算子的運作方式，會與針對 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 所述的方式相同。
+
+從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 和資料庫相容性層級 130 開始，`INSERT … SELECT` 陳述式可以在插入堆積或叢集資料行存放區索引 (CCI) 且使用 TABLOCK 提示時，以平行方式執行。 針對本機暫存資料表 (以 # 前置詞識別) 和全域暫存資料表 (以 ## 前置詞識別) 所進行的插入，也可以透過使用 TABLOCK 提示來啟用平行處理原則。 如需詳細資訊，請參閱 [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)。
 
 靜態和索引鍵集衍生的資料指標可以利用平行執行計畫來擴展。 但是，動態資料指標的行為僅能由序列執行來提供。 而最佳化工具所產生的查詢序列執行計畫，一定是動態資料指標的一部份。
 

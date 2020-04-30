@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215477"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087328"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -87,7 +87,7 @@ ms.locfileid: "80215477"
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | 已將 Notebooks 中的 [附加至連線] 下拉式清單變更為僅列出目前使用中的連線 | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| 已新增 bigdatacluster.ignoreSslVerification 設定以允許在連線至 BDC 時忽略 SSL 驗證錯誤 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| 已新增 bigdatacluster.ignoreSslVerification 設定以允許在連線至 BDC 時忽略 TLS/SSL 驗證錯誤 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | 允許針對離線查詢編輯器變更預設語言類別 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | 巨量資料叢集/SQL 2019 功能的 GA 狀態 | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1) \(英文\)。 |
@@ -495,7 +495,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 - 修正[問題 #1836](https://github.com/Microsoft/azuredatastudio/issues/1836) \(英文\)：.sql 檔案不會與 SQL Operations Studio 產生關聯。
 - 修正[問題 #1850](https://github.com/Microsoft/azuredatastudio/issues/1850) \(英文\)：輸入 N'' 會自動校正為 N'''。
 - 修正[問題 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985) \(英文\)：從查詢結果方格中進行的複製少了 1 欄。
-- 修正[問題 #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998) \(英文\)：將 VS Code 版本新增至 [關於] 對話方塊。
+- 修正[問題 #1998](https://github.com/Microsoft/azuredatastudio/pull/1998) \(英文\)：將 VS Code 版本新增至 [關於] 對話方塊。
 - 修正[問題 #2042](https://github.com/Microsoft/azuredatastudio/pull/2042) \(英文\)：代理人員：已啟用按鈕，可從 sql 檔案匯入查詢。
 - 修正[問題 #2091](https://github.com/Microsoft/azuredatastudio/issues/2091) \(英文\)：無法使用 Ctrl+C 快速鍵來從結果窗格進行複製。
 - 修正[問題 #2099](https://github.com/Microsoft/azuredatastudio/pull/2099) \(英文\)：已新增更多 saveAsCsv 選項。

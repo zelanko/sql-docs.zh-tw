@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257513"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087485"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +103,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > 在 TCP/IP 連接的情況下，由於 TCP 通訊埠包含於 SPN 中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須啟用 TCP 通訊協定，使用者才能使用 Kerberos 驗證進行連接。 
 
 ##  <a name="automatic-spn-registration"></a><a name="Auto"></a> 自動 SPN 註冊  
- 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/*FQDN>\<* :*tcpport>\<* 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 *tcpport>\<* 值來區分執行個體)。  
+ 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>  :\<tcpport>  格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 \<tcpport>  值來區分執行個體)。  
   
- 如果是支援 Kerberos 的其他連接，SPN 會針對具名執行個體來以 MSSQLSvc/*FQDN>\<* /*執行個體名稱>\<* 格式註冊。 用來註冊預設執行個體的格式為 MSSQLSvc/*FQDN>\<* 。  
+ 如果是支援 Kerberos 的其他連接，SPN 會針對具名執行個體來以 MSSQLSvc/\<FQDN>  /\<執行個體名稱>  格式註冊。 用來註冊預設執行個體的格式為 MSSQLSvc/\<FQDN>  。  
   
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   
@@ -142,9 +142,9 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
   
 服務帳戶可以當做 SPN 使用， 它們是透過 Kerberos 驗證的連接屬性所指定，而且會使用以下的格式：  
   
--   適用於網域使用者帳戶的 **username@domain** 或 **domain\username**  
+-   **username\@domain** 或 **domain\username** (適用於網域使用者帳戶)  
   
--   適用於電腦網域帳戶 (如本機系統或 NETWORK SERVICES) 的 **machine$@domain** 或 **host\FQDN**。  
+-   **machine$\@domain** 或 **host\FQDN** (適用於電腦網域帳戶，例如 Local System 或 NETWORK SERVICES)。  
   
 若要判斷連接的驗證方法，請執行下列查詢。  
   
