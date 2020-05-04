@@ -4,17 +4,17 @@ description: 本教學課程說明如何建立和執行 SQL Server 筆記本。
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray, alayu
-ms.topic: tutorial
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 03/30/2020
-ms.openlocfilehash: 80b44b0cd69a3982be87e1fd0d000a6d6393a7c7
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 70136c114fe1d4e9421400eff5f171a70289098c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531491"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178689"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>建立並執行 SQL Server 筆記本
 
