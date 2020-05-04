@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075503"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220693"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075503"
  設定觸發程序的條件時，可以適當地利用 inserted 與 deleted 資料表設定引發觸發條件的動作。 雖然參考 deleted 資料表來測試 INSERT 陳述式或是參考 inserted 資料表測試 DELETE 陳述式時，並不會有任何錯誤發生，但在這種情形下，觸發程序測試資料表內將不會有任何資料列產生。  
   
 > [!NOTE]  
->  若觸發程序動作依據被修改的資料列數目來決定啟動與否時，則可利用對多資料列資料修改 (依據 SELECT 陳述式的 INSERT、DELETE 或 UPDATE) 的測試 (如 @@ROWCOUNT 的檢查)，以決定執行何者動作。  
+>  若觸發程序動作依據被修改的資料列數目來決定啟動與否時，則可利用對多資料列資料修改 (依據 SELECT 陳述式的 INSERT、DELETE 或 UPDATE) 的測試 (如 @@ROWCOUNT 的檢查)，以決定執行何者動作。 如需詳細資訊，請參閱 [建立 DML 觸發程序以處理多重資料列](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AFTER 觸發程序的已插入或已刪除的資料表中，不允許 **text**、 **ntext**，或 **image** 資料行參考。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 大型資料的慣用儲存體應使用 **varchar(max)** 、 **nvarchar(max)** ，以及 **varbinary(max)** 資料類型。 AFTER 和 INSTEAD OF 兩個觸發程序都支援已插入及已刪除資料表中的 **varchar(max)** 、 **nvarchar(max)** ，和 **varbinary(max)** 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075503"
   
  由於 CHECK 條件約束只能參考定義了資料行層級或資料表層級條件約束的資料行，任何跨資料表的條件約束 (這裡是商務規則) 都必須定義成觸發程序。  
   
- 下列範例會建立一個 DML 觸發程序。 當試圖在 `PurchaseOrderHeader` 資料表中插入新的採購單時，這個觸發程序會檢查確認供應商的信用等級良好。 若要取得對應至剛插入之採購單的供應商信用等級，您必須參考 `Vendor` 資料表，而此資料表也必須與 inserted 資料表聯結。 如果信用等級太低，將會顯示訊息，且不會執行插入動作。 請注意此範例不允許進行多資料列資料修改。 如需詳細資訊，請參閱 [建立 DML 觸發程序以處理多重資料列](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
+ 下列範例會建立一個 DML 觸發程序。 當試圖在 `PurchaseOrderHeader` 資料表中插入新的採購單時，這個觸發程序會檢查確認供應商的信用等級良好。 若要取得對應至剛插入之採購單的供應商信用等級，您必須參考 `Vendor` 資料表，而此資料表也必須與 inserted 資料表聯結。 如果信用等級太低，將會顯示訊息，且不會執行插入動作。
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

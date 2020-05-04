@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 80ba3c4d3eb177b3e547e9d235fa796e2b9818cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71f52b8312518cf669751d50dcc857c3d892bd98
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820936"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588074"
 ---
 # <a name="azdata-bdc-endpoint"></a>azdata bdc endpoint
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下列文章提供 `bdc endpoint` 工具中 `azdata` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下列文章提供 `azdata` 工具中 `bdc endpoint` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -28,24 +28,39 @@ ms.locfileid: "74820936"
 [azdata bdc endpoint list](#azdata-bdc-endpoint-list) | 列出巨量資料叢集的端點。
 ## <a name="azdata-bdc-endpoint-list"></a>azdata bdc endpoint list
 列出巨量資料叢集的端點。
+
 ```bash
 azdata bdc endpoint list [--endpoint-name -e] 
-       ```
-### Optional Parameters
+```
+
+### <a name="optional-parameters"></a>選擇性參數
+
 #### `--endpoint-name -e`
-Big data cluster endpoint name.
-### Global Arguments
+
+巨量資料叢集端點名稱。
+
+### <a name="global-arguments"></a>全域引數
+
 #### `--debug`
-Increase logging verbosity to show all debug logs.
+
+增加記錄詳細資訊，以顯示所有偵錯記錄。
+
 #### `--help -h`
-Show this help message and exit.
+
+顯示此說明訊息並結束。
+
 #### `--output -o`
-Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+
+輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
+
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+
 #### `--verbose`
-Increase logging verbosity. Use --debug for full debug logs.
 
-## Next steps
+增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+## <a name="next-steps"></a>後續步驟
+
+如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需如何安裝 `azdata` 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](deploy-install-azdata.md)。

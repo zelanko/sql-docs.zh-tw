@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (預覽)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。
-ms.date: 04/24/2020
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153231"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619651"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -140,24 +140,32 @@ WITH
 
 使用 AAD 或公用儲存體帳戶進行驗證時，不需要指定 CREDENTIAL。 
 
-- 使用共用存取簽章 (SAS) 進行驗證*IDENTITY：值為「共用存取簽章」的常數*
-  *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*可提供您儲存體帳戶中資源的委派存取。*
-  所需最小權限：READ 和 LIST
-
+- 使用共用存取簽章 (SAS) 進行驗證
+  
+  - *IDENTITY：值為「共用存取簽章」的常數*
+  - *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*可提供您儲存體帳戶中資源的委派存取。*
+  -  所需最小權限：READ 和 LIST
+  
 - 使用[*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
 
-  *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>* 
-  *SECRET：AAD 應用程式服務主體金鑰*所需的最小 RBAC 角色：儲存體 Blob 資料參與者、儲存體 Blob 資料參與者、儲存體 Blob 資料擁有者或儲存體 Blob 資料讀者
+  - *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET：AAD 應用程式服務主體金鑰*
+  -  所需的最小 RBAC 角色：儲存體 Blob 資料參與者、儲存體 Blob 資料參與者、儲存體 Blob 資料擁有者或儲存體 Blob 資料讀者
 
-  > [!NOTE]  
-  > 使用 OAuth 2.0 權杖端點 **V1**
-
-- 使用儲存體帳戶金鑰進行驗證*IDENTITY：值為「儲存體帳戶金鑰」的常數*
-  *SECRET：儲存體帳戶金鑰*
+- 使用儲存體帳戶金鑰進行驗證
   
-- 使用[受控識別](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet 服務端點) 進行驗證*IDENTITY：值為「受控識別」的常數*所需的最小 RBAC 角色：適用於 AAD 註冊 SQL Database 伺服器的儲存體 Blob 資料參與者、儲存體 Blob 資料擁有者或儲存體 Blob 資料讀者 
+  - *IDENTITY：值為「儲存體帳戶金鑰」的常數*
+  - *SECRET：儲存體帳戶金鑰*
   
-- 使用 AAD 使用者進行驗證*不需要 CREDENTIAL*所需的最小 RBAC 角色：適用於 AAD 使用者的儲存體 Blob 資料參與者、儲存體 Blob 資料擁有者或儲存體 Blob 資料讀者
+- 使用[受控識別](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet 服務端點) 進行驗證
+  
+  - *IDENTITY：值為「受控識別」的常數*
+  - 所需的最小 RBAC 角色：適用於 AAD 註冊 SQL Database 伺服器的儲存體 Blob 資料參與者或儲存體 Blob 資料擁有者
+  
+- 使用 AAD 使用者進行驗證
+  
+  - *不需要 CREDENTIAL*
+  - 所需的最小 RBAC 角色：適用於 AAD 使用者的儲存體 Blob 資料參與者或儲存體 Blob 資料擁有者
 
 *ERRORFILE = 目錄位置*</br>
 *ERRORFILE* 僅適用於 CSV。 指定 COPY 陳述式內，已拒絕資料列和相應錯誤檔案應寫入的目錄。 您可以指定儲存體帳戶的完整路徑，或指定相對於容器的路徑。 如果指定的路徑不存在，則會代表您建立一個路徑。 會建立名稱為 "_rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 
