@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227507"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588086"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
 
@@ -64,7 +64,7 @@ ms.locfileid: "75227507"
 
 在下一個頁面上，選取您想要建立外部檢視的資料表。 當您選取父資料庫時，也會包含子資料表。 選取資料表之後，對應資料表會出現在右側。 您可以在這裡進行類型變更。 您也可以變更所選取外部資料表本身的名稱。
 
-![外部資料來源認證](media/data-virtualization/data-table-mapping.png)
+![外部資料來源認證](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >若要變更對應檢視，請按兩下另一個選取的資料表。

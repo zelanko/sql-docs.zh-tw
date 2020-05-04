@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7da0d231300afd550f7f3e4c4d491a5109c57f00
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636219"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719413"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   這是在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中使用的述詞，可在包含字元型資料類型的全文檢索索引資料行上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋。 這個述詞會搜尋意義與搜尋條件的文字符合但用字不完全相同的值。 使用 FREETEXT 時，全文檢索查詢引擎會在內部對 *freetext_string* 執行下列動作、為每個詞彙指派加權，然後找出相符項目：  
   

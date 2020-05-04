@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: df6819f9beaa78232227e0fadd3e7c7a2e56c801
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bef2c016492636e0005701cf07e16d6fb8c338ca
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634742"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262164"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -596,7 +596,7 @@ RESTORE LOG AdventureWorks2012
   FROM AdventureWorksBackups
     WITH FILE = 4,
     RECOVERY,
-    STOPATMARK = 'UPDATE Product list prices';
+    STOPATMARK = ListPriceUpdate;
 ```
 
 [&#91;範例頂端&#93;](#examples)

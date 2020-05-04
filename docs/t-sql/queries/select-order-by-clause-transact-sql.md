@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1718d71412f92b32e3a68c54e3070c10fdec8a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8f8edfa82e611fe10ba3645f16370e7d4b54542a
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634204"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262087"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
@@ -392,20 +392,19 @@ ORDER BY DepartmentID
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. 為 OFFSET 和 FETCH 值指定變數  
- 下列範例會宣告變數 `@StartingRowNumber` 和 `@FetchRows`，並在 OFFSET 和 FETCH 子句中指定這些變數。  
+ 下列範例會宣告變數 `@RowsToSkip` 和 `@FetchRows`，並在 OFFSET 和 FETCH 子句中指定這些變數。  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
+DECLARE @RowsToSkip tinyint = 2
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. 為 OFFSET 和 FETCH 值指定運算式  

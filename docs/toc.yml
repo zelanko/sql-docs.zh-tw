@@ -145,7 +145,7 @@
             - name: HDFS 資料
               items:
                 - name: 將 CSV 資料虛擬化
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: 查詢 HDFS 資料
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS 階層處理
@@ -6641,7 +6641,7 @@
                   items:
                     - name: 還原和復原
                       href: relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: Backup
+                    - name: 'Backup '
                       href: relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
                     - name: Checkpoint
                       href: relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
@@ -6759,7 +6759,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: 修改配置
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: 管理資料分割精靈 F1 說明
+            - name: 管理磁碟分割精靈
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: 計畫指南
           href: relational-databases/performance/plan-guides.md
@@ -15842,7 +15842,7 @@
                   href: t-sql/functions/session-context-transact-sql.md
                 - name: SESSION_ID
                   href: t-sql/functions/session-id-transact-sql.md
-                - name: XACT_STATE
+                - name: 'XACT_STATE '
                   href: t-sql/functions/xact-state-transact-sql.md
             - name: 系統統計
               href: t-sql/functions/system-statistical-functions-transact-sql.md

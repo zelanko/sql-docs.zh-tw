@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 373499b03384d44baa5a96cf49527aaf45063c5c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625817"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262097"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -170,8 +170,7 @@ FROM <backup_device>
   
 ```  
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks-FullBackup.bak'   
-WITH NOUNLOAD;  
+FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  
 ```  
   
