@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983041"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588104"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,46 +42,54 @@ ms.locfileid: "73983041"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (sysadmin) 角色的成員可以使用 DAC 進行連接。  
   
- DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在執行個體名稱前面加上 **admin:** 來連線，其格式為 **sqlcmd -S admin:<*執行個體名稱*>** 。 您也可以連線到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]admin:**執行個體名稱\<  >，以便從**  查詢編輯器起始 DAC。  
-  
+ DAC 的存取與支援是使用特殊管理員參數 (`-A`)，以透過 `sqlcmd` 命令提示字元公用程式來執行。 如需使用 `sqlcmd` 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在前面加上 `admin:` 來連線到執行個體名稱，其格式為 `sqlcmd -S admin:<*instance_name*>`。 您也可以藉由連線到 `admin:\<*instance_name*>`，以便從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器起始 DAC。
+
+> [!Note]  
+> 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立 DAC
+> - 中斷與相關 SQL Server 執行個體的所有連線，包括 [物件總管] 和所有開啟的查詢視窗。
+> - 從功能表中選取 [檔案]   > [新增]   > [資料庫引擎查詢] 
+> - 在 [伺服器名稱] 欄位的連線對話方塊中，如果使用預設執行個體，請輸入 `admin:<server_name>`；如果使用具名執行個體，則輸入 `admin:<server_name>\<instance_name>`。
+
 ## <a name="restrictions"></a>限制  
  由於 DAC 僅在少數的情況下才會為了診斷伺服器問題而建立，因此這項連接有某些限制：  
   
--   若要保證有足夠的資源可供連接使用，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體只能有一個 DAC。 若已有作用中的 DAC 連接存在，則所有透過 DAC 建立連接的新要求都會遭到拒絕，並產生錯誤 17810。  
+- 若要保證有足夠的資源可供連接使用，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體只能有一個 DAC。 若已有作用中的 DAC 連接存在，則所有透過 DAC 建立連接的新要求都會遭到拒絕，並產生錯誤 17810。  
   
--   為了節省資源，除非以追蹤旗標 7806 啟動，否則 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不會接聽 DAC 通訊埠。  
+- 為了節省資源，除非以追蹤旗標 7806 啟動，否則 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不會接聽 DAC 通訊埠。  
   
--   DAC 最初會嘗試連接到與登入相關聯的預設資料庫。 連接成功後，您就可以連接到 master 資料庫。 如果預設資料庫離線或是無法使用，連接將會傳回錯誤 4060。 但是，若您使用下列命令來覆寫預設資料庫以連接到 master 資料庫，連接就會成功：  
+- DAC 最初會嘗試連接到與登入相關聯的預設資料庫。 連接成功後，您就可以連接到 master 資料庫。 如果預設資料庫離線或是無法使用，連接將會傳回錯誤 4060。 但是，若您使用下列命令來覆寫預設資料庫以連接到 master 資料庫，連接就會成功：  
+
+   ```powershell
+   sqlcmd -A -d master 
+   ```
+
+   建議您使用 DAC 連接到 master 資料庫，因為只要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就一定可以使用 master。  
   
-     **sqlcmd -A -d master**  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 禁止以 DAC 執行平行查詢或命令。 例如，若您以 DAC 執行下列其中一項陳述式，就會產生錯誤 3637：  
   
-     建議您使用 DAC 連接到 master 資料庫，因為只要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就一定可以使用 master。  
+  - `RESTORE...`
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 禁止以 DAC 執行平行查詢或命令。 例如，若您以 DAC 執行下列其中一項陳述式，就會產生錯誤 3637：  
+  - `BACKUP...`
+
+- 只有某些限定的資源必定可透過 DAC 來使用。 請勿使用 DAC 來執行需耗用大量資源的查詢 (例如， 大型資料表上的複雜聯結) 或可能會封鎖的查詢。 如此可防止 DAC 在現有的伺服器問題外衍生出其他問題。 為了避免潛在的封鎖情況，若您必須執行可能會封鎖的查詢，請盡可能在快照隔離等級下執行查詢；否則，請將交易隔離等級設為 READ UNCOMMITTED，並將 LOCK_TIMEOUT 值設為 2000 毫秒之類的短數值。 如此可防止 DAC 工作階段產生封鎖的情形。 但依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所處的狀態，DAC 工作階段也可能會遭到閂鎖封鎖。 您可以使用 CTRL-C 來結束 DAC 工作階段，但不一定能成功。 在這種情況下，重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能是唯一的選擇。  
   
-    -   RESTORE  
-  
-    -   備份  
-  
--   只有某些限定的資源必定可透過 DAC 來使用。 請勿使用 DAC 來執行需耗用大量資源的查詢 (例如， 大型資料表上的複雜聯結) 或可能會封鎖的查詢。 如此可防止 DAC 在現有的伺服器問題外衍生出其他問題。 為了避免潛在的封鎖情況，若您必須執行可能會封鎖的查詢，請盡可能在快照隔離等級下執行查詢；否則，請將交易隔離等級設為 READ UNCOMMITTED，並將 LOCK_TIMEOUT 值設為 2000 毫秒之類的短數值。 如此可防止 DAC 工作階段產生封鎖的情形。 但依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所處的狀態，DAC 工作階段也可能會遭到閂鎖封鎖。 您可以使用 CTRL-C 來結束 DAC 工作階段，但不一定能成功。 在這種情況下，重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能是唯一的選擇。  
-  
--   為了保證 DAC 連接與疑難排解能順利進行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保留有限的資源來處理 DAC 所執行的命令。 通常，這些資源僅足夠用來執行簡單的診斷與疑難排解功能，如下表所示。  
+- 為了保證 DAC 連接與疑難排解能順利進行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保留有限的資源來處理 DAC 所執行的命令。 通常，這些資源僅足夠用來執行簡單的診斷與疑難排解功能，如下表所示。  
   
  雖然，理論上您可以在 DAC 上執行任何不需要以平行方式執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，但我們還是強烈建議您將使用方式限定在下列診斷與疑難排解命令：  
   
--   基本診斷的查詢動態管理檢視，例如 [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 可了解封鎖狀態、[sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 可檢查快取的健全狀態，而 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 和 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 可了解作用中的工作階段與要求。 請避免使用會耗用大量資源 (例如 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) 會掃描完整版本存放區而產生大量 I/O) 或使用複雜聯結的動態管理檢視。 如需效能含意的資訊，請參閱特定 [動態管理檢視](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的文件集。  
+- 基本診斷的查詢動態管理檢視，例如 [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 可了解封鎖狀態、[sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 可檢查快取的健全狀態，而 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 和 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 可了解作用中的工作階段與要求。 請避免使用會耗用大量資源 (例如 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) 會掃描完整版本存放區而產生大量 I/O) 或使用複雜聯結的動態管理檢視。 如需效能含意的資訊，請參閱特定 [動態管理檢視](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的文件集。  
   
--   查詢目錄檢視。  
+- 查詢目錄檢視。  
   
--   基本 DBCC 命令，例如 [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) 及 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 請勿執行需要大量資源的命令，例如 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 或 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
+- 基本 DBCC 命令，例如 [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) 及 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 請勿執行需要大量資源的命令，例如 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 或 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
+- [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
   
-    -   藉由查詢 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`，來確認是否已確實清除 SPID。 若未傳回資料列，表示已清除工作階段。  
+    - 藉由查詢 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`，來確認是否已確實清除 SPID。 若未傳回資料列，表示已清除工作階段。  
   
-    -   若工作階段仍然存在，請執行 `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`查詢，以確認此工作階段上是否有指定的工作。 若您在工作階段上看到工作，很可能表示工作階段正在清除中。 請注意，此作業可能會耗費大量時間，而且可能完全無法成功。  
+    - 若工作階段仍然存在，請執行 `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`查詢，以確認此工作階段上是否有指定的工作。 若您在工作階段上看到工作，很可能表示工作階段正在清除中。 請注意，此作業可能會耗費大量時間，而且可能完全無法成功。  
   
-    -   若在與此工作階段相關聯的 sys.dm_os_tasks 中沒有工作存在，但工作階段在執行 KILL 命令後仍處於 sys.dm_exec_sessions 中，則表示您沒有可用的工作者。 請選取目前正在執行的其中一個工作 (列示於 sys.dm_os_tasks 檢視表中而含有 `sessions_id <> NULL`的工作)，然後清除與此工作相關聯的工作階段以釋放工作者。 請注意，終止單一工作階段可能不夠：您可能必須清除多個工作階段。  
+    - 若在與此工作階段相關聯的 sys.dm_os_tasks 中沒有工作存在，但工作階段在執行 KILL 命令後仍處於 sys.dm_exec_sessions 中，則表示您沒有可用的工作者。 請選取目前正在執行的其中一個工作 (列示於 sys.dm_os_tasks 檢視表中而含有 `sessions_id <> NULL`的工作)，然後清除與此工作相關聯的工作階段以釋放工作者。 請注意，終止單一工作階段可能不夠：您可能必須清除多個工作階段。  
   
 ## <a name="dac-port"></a>DAC 通訊埠  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之後有可用或動態指派的 TCP 通訊埠，會在 TCP 通訊埠 1434 上接聽 DAC。 [錯誤記錄檔](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)包含 DAC 接聽時所使用的通訊埠號碼。 依預設，DAC 接聽程式只接受本機通訊埠上的連接。 如需可啟動遠端管理連接的程式碼範例，請參閱 [remote admin connections 伺服器組態選項](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)。  

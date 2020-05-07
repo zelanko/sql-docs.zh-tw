@@ -1,5 +1,6 @@
 ---
 title: 備份裝置 (媒體內容頁面) | Microsoft Docs
+description: 使用 [備份裝置] 對話方塊來檢視備份資訊。 這個資訊描述裝置、媒體、媒體集，以及備份組。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90d6fdb147e6f7b40a9e8072a5c2836bd4e40bcd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987769"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220503"
 ---
 # <a name="backup-device-media-contents-page"></a>備份裝置 (媒體內容頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +60,14 @@ ms.locfileid: "67987769"
 |頁首|值|  
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
-|**型別**|已備份的物件：資料庫、檔案或 *空白>\<* (適用於交易記錄)。|  
-|**元件**|執行的備份類型：完整、差異或交易記錄。|  
+|**型別**|備份的物件：[資料庫]、[檔案] 或 [\<空白>]  (適用於交易記錄)。|  
+|**元件**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
 |**Database**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  
 |**日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
 |**大小**|備份組的大小 (以位元組為單位)。|  
-|**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
+|**使用者名稱**|執行備份作業的使用者名稱。|  
 |**到期**|備份組過期的日期和時間。|  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  

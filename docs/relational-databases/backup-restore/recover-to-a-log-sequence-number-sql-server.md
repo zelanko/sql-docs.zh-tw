@@ -1,5 +1,6 @@
 ---
 title: 復原到記錄序號 (SQL Server) | Microsoft Docs
+description: 在 SQL Server 中，您可使用記錄序號 (LSN) 來復原到特定時間點。 這項功能適用於工具廠商。
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7b5233b44610ce5d2ad15d5a7aceda207f077dc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916040"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180889"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>復原到記錄序號 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

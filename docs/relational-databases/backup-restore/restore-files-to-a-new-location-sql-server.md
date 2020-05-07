@@ -1,5 +1,6 @@
 ---
 title: 將檔案還原到新位置 (SQL Server) | Microsoft 文件
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中將檔案還原到新位置。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d3d3ddc6d14414344e847249cb337e9f6a0d5c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aadc5cd4d2eeb1e16c554a60b6fe862d7a8536fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041526"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180713"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>將檔案還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,15 +91,15 @@ ms.locfileid: "68041526"
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]** 、 **[記錄檔]** 或 **[檔案資料流資料]** 。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
-    |**型別**|執行的備份類型： **[完整]** 、 **[差異]** 或 **[交易記錄]** 。|  
+    |**檔案類型**|指定備份中的資料類型：[資料]  、[記錄]  或 [Filestream 資料]  。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
+    |**型別**|執行的備份類型：[完整]  、[差異]  或 [交易記錄]  。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
     |**Database**|備份作業中所含的資料庫名稱。|  
     |**開始日期**|備份作業開始時的日期和時間，會出現在用戶端的地區設定中。|  
     |**完成日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
     |**大小**|備份組的大小 (以位元組為單位)。|  
-    |**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
+    |**使用者名稱**|執行備份作業的使用者名稱。|  
   
 6.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 頁面。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "68041526"
     |資料行標頭|值|  
     |-----------------|------------|  
     |**原始檔案名稱**|來源備份檔案的完整路徑。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]** 、 **[記錄檔]** 或 **[檔案資料流資料]** 。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
+    |**檔案類型**|指定備份中的資料類型：[資料]  、[記錄]  或 [Filestream 資料]  。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
     |**還原成**|還原資料庫檔案的完整路徑。 若要指定新的還原檔案，請按一下文字方塊並編輯建議的路徑與檔案名稱。 變更 **[還原成]** 資料行中的路徑或檔案名稱相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中的 MOVE 選項。|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  

@@ -1,5 +1,6 @@
 ---
 title: 還原資料庫 (選項頁面) | Microsoft 文件
+description: 在 SQL Server 中還原資料庫時，使用 [還原資料庫] 對話方塊的 [選項] 頁面，即可修改還原作業的行為與結果。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c806be6b0fa54431243c3062ac12d1d1229c037
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041559"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180749"
 ---
 # <a name="restore-database-options-page"></a>還原資料庫 (選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

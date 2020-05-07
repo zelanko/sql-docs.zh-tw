@@ -1,5 +1,6 @@
 ---
 title: 裝置內容 (SQL Server) | Microsoft Docs
+description: 在 SQL Server 中，使用 [裝置內容] 對話方塊來檢視描述裝置、媒體、媒體集，以及備份組的備份資訊。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68068496"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179181"
 ---
 # <a name="device-contents-sql-server"></a>裝置內容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +58,14 @@ ms.locfileid: "68068496"
 |頁首|值|  
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
-|**型別**|執行的備份類型：完整、差異或交易記錄。|  
-|**元件**|備份的元件：資料庫、檔案或 *\<空白>* (針對交易記錄)。|  
+|**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
+|**元件**|備份的元件：[資料庫]、[檔案] 或 [\<空白>]  (適用於交易記錄)。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
 |**Database**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  
 |**日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
 |**大小**|備份組的大小 (以位元組為單位)。|  
-|**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
+|**使用者名稱**|執行備份作業的使用者名稱。|  
 |**到期**|備份組過期的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  

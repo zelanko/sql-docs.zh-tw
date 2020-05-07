@@ -1,5 +1,6 @@
 ---
 title: 延遲交易 (SQL Server) | Microsoft 文件
+description: 如果復原所需的資料已離線，SQL Server Enterprise 就會發生延遲交易。 了解如何將交易移出延遲狀態。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90dc61256f973ce8a16d50b547c0fca41b242465
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075979"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179252"
 ---
 # <a name="deferred-transactions-sql-server"></a>延遲交易 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68075979"
 |動作|解決方法 (如果發生 I/O 問題，或所需的資料離線)|  
 |------------|-----------------------------------------------------------------------|  
 |伺服器啟動|延遲交易|  
-|{1}還原{2}|延遲交易|  
+|還原|延遲交易|  
 |連結|附加動作失敗|  
 |自動重新啟動|延遲交易|  
 |建立資料庫或資料庫快照集|建立動作失敗|  
@@ -85,7 +86,7 @@ ms.locfileid: "68075979"
   
          如需緊急模式的詳細資訊，請參閱 [資料庫狀態](../../relational-databases/databases/database-states.md)。  
   
-    -   接著，在下列其中一個 DBCC 陳述式內使用 DBCC REPAIR_ALLOW_DATA_LOSS 選項以修復資料庫： [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
+    -   接著，在下列其中一個 DBCC 陳述式內使用 DBCC REPAIR_ALLOW_DATA_LOSS 選項以修復資料庫：[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) 或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
          當 DBCC 發現錯誤的頁面時，它會取消配置該頁面，並修復任何相關的錯誤。 此方式可以讓資料庫以實體上一致的狀態回到線上。 不過，很可能遺失其他資料，因此除非不得已，盡量不要使用這個方式。  
   

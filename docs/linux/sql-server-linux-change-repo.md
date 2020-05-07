@@ -3,17 +3,17 @@ title: 為 SQL Server 2017 和 2019 設定 Linux 存放庫
 description: 檢查並設定 Linux 上 SQL Server 2019 和 SQL Server 2017 的來源存放庫。 來源存放庫會影響安裝和升級期間所套用的 SQL Server 版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301699"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262048"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定用於安裝和升級 Linux 上 SQL Server 的存放庫
 
@@ -181,7 +181,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 >
 > 從 SQL Server 2017 CU20 開始支援 RHEL 8。
 >
-> 如果您使用的是 RHEL 7 或 RHEL 8，請確定路徑符合 `/rhel/7` 或 `/rhel/8`。
+> 如果您使用的是 RHEL 7 或 RHEL 8，請確定路徑符合 `/rhel/7` 或 `/rhel/8`。 我們的套件與 RHEL 次要版本無關。 這表示如果您使用 RHEL 7.6，就必須使用路徑 `/rhel/7` 來設定存放庫。
 
 | Repository | 版本 | Command |
 |---|---|---|

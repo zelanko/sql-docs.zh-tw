@@ -1,5 +1,6 @@
 ---
 title: 設定備份壓縮 (SQL Server) | Microsoft Docs
+description: 本文描述如何在 SQL Server 中建立單一備份或排程一系列例行備份時覆寫此伺服器層級預設值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73f1d6c4d65a9e581611ef439c79c41eb691e4c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9ba9a26022c194316089bf13eb4c1d6811b76c4
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076117"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220461"
 ---
 # <a name="configure-backup-compression-sql-server"></a>設定備份壓縮 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

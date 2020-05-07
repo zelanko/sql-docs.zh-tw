@@ -1,6 +1,6 @@
 ---
-title: 管理 SQL Server 筆記本
-description: 了解如何管理 Azure Data Studio 中的筆記本。 這包括開啟筆記本、進行儲存，以及變更您的巨量資料叢集連線。
+title: 如何管理筆記本
+description: 了解如何管理 Azure Data Studio 中的筆記本。 這包括開啟筆記本、進行儲存，以及變更 SQL 連線或 Python 核心。
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531591"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178695"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的筆記本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何使用 SQL Server，在 Azure Data Studio 中開啟和儲存筆記本檔案。 也會示範如何變更 SQL Server 連線。
+本文說明如何在 Azure Data Studio 中開啟和儲存筆記本檔案。 同時也示範如何變更 SQL Server 連線或 Python 核心。
 
 ## <a name="open-a-notebook"></a>開啟筆記本
 
@@ -57,9 +57,9 @@ ms.locfileid: "80531591"
 > - 從 [檔案] 功能表的 [儲存檔案]  、[另存新檔...]  和 [儲存所有檔案]  命令。
 > - 在命令選擇區中輸入 **File:Save** 命令。
 
-## <a name="change-the-connection"></a>變更連線
+## <a name="change-the-sql-connection"></a>變更 SQL 連線
 
-若要變更筆記本的連線：
+若要變更筆記本的 SQL 連線：
 
 1. 選取筆記本工具列中的 [附加至]  功能表，然後選取 [變更連線]  。
 
@@ -69,6 +69,31 @@ ms.locfileid: "80531591"
 
    ![從 [附加至] 功能表選取伺服器](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>變更 Python 核心
+
+第一次開啟 Azure Data Studio 時，隨即會顯示 [為筆記本設定 Python]  頁面。 您可選取下列其中一項：
+
+- [新增 Python 安裝]  ，以安裝適用於 Azure Data Studio 的新 Python 複本，或
+- [使用現有的 Python 安裝]  ，以指定現有 Python 安裝的路徑來供 Azure Data Studio 使用
+
+若要查看使用中 Python 核心的位置和版本，請建立程式碼資料格，並執行下列 Python 命令：
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+變更為不同的 Python 安裝：
+
+1. 從 [檔案]  功能表選取 [喜好設定]  ，然後選取 [設定]  。
+1. 捲動至 [延伸模組]  底下的 [筆記本組態]  。
+1. 在 [使用現有的 Python]  底下，取消核取 [筆記本所使用現有 Python安裝的本機路徑] 選項。
+1. 重新啟動 Azure Data Studio。
+
+當顯示 [Configure Python for Notebooks] \(為筆記本設定 Python\)  頁面時，您可選擇建立新的 Python 安裝，或指定現有安裝的路徑。
+
 ## <a name="next-steps"></a>後續步驟
 
-如需 Azure Data Studio 中筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 中使用筆記本](notebooks-guidance.md)。
+如需 Azure Data Studio 中 SQL 筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 中使用筆記本](notebooks-guidance.md)。

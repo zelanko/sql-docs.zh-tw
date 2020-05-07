@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8fde97db271ccd0307d0af75ea0c7d4aacad9703
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 75b459554382b3bc7f73d6b3554a5ba10bf5294a
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634796"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598734"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,10 +69,10 @@ HOLDLOCK
 READTEXT 權限預設為授與有指定資料表之 SELECT 權限的使用者。 當傳送 SELECT 權限時，可以傳送權限。  
   
 ## <a name="examples"></a>範例  
-下列範例會讀取 `pr_info` 資料表中 `pub_info` 資料行的第 2 到第 26 個字元。  
+下列範例會讀取 `pub_info` 資料表中 `pr_info` 資料行的第 2 到第 26 個字元。  
   
 > [!NOTE]  
->  若要執行這個範例，您必須安裝 **pubs** 範例資料庫。  
+>  若要執行這個範例，則必須安裝 [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) 範例資料庫。  
   
 ```  
 USE pubs;  

@@ -1,5 +1,6 @@
 ---
 title: 備份資料庫 (備份選項頁面) | Microsoft Docs
+description: 在 SQL Server 中，使用 [備份資料庫] 對話方塊的 [備份選項] 頁面，即可檢視或修改資料庫備份、壓縮和加密的選項。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2d9b831b3350c6a895c86868180a1134f871c8d5
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940970"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220623"
 ---
 # <a name="back-up-database-backup-options-page"></a>備份資料庫 (備份選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67940970"
 >  您可以定義資料庫維護計畫來建立資料庫備份。 如需詳細資訊，請參閱[維護計劃](../../relational-databases/maintenance-plans/maintenance-plans.md)和[使用維護計畫精靈](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼][!INCLUDE[tsql](../../includes/tsql-md.md)][ 按鈕，然後選取指令碼的目的地，以產生相對應的 ](../../t-sql/statements/backup-transact-sql.md)**BACKUP** 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼]  按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
   
 ## <a name="options"></a>選項。  
   

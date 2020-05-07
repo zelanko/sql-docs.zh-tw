@@ -1,5 +1,6 @@
 ---
 title: 線上還原：唯讀檔案 (簡單復原模式)
+description: 此範例會針對使用簡單復原模式搭配多個檔案群組其資料庫來顯示唯讀檔案在 SQL Server 中的線上還原。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4a3f311cc870331db030b5caf7191c9b6f91a28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b032e7737a837ee6b453340fbd52bcbee072e65f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243721"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179114"
 ---
-# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>範例：線上還原唯讀檔案 (簡單復原模式)
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>範例：線上還原讀取/寫入檔案 (簡單復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在簡單復原模式下，包含唯讀檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 在簡單復原模式下，如果有檔案成為唯讀後保留的備份檔案，就可以線上還原唯讀檔案。  
@@ -52,7 +53,7 @@ WITH RECOVERY
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: 刪除備份裝置 (SQL Server) | Microsoft 文件
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中刪除備份裝置。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be32e40cdba72ebd544758b395cb125deb05297b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e76faf07201a74e8183b46a9b298627de705b94
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075909"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179231"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>刪除備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

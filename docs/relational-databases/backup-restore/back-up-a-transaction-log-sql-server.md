@@ -1,5 +1,6 @@
 ---
 title: 備份交易記錄 | Microsoft Docs
+description: 本文描述如何使用 SQL Server Management Studio、Transact-SQL 或 PowerShell 以在 SQL Server 中備份交易記錄。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b40463d35a7d6468e93b2a32b44dffb1aefed182
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708729"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220637"
 ---
 # <a name="back-up-a-transaction-log"></a>備份交易記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "71708729"
 ## <a name="before-you-begin"></a>開始之前
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
-在明確或`BACKUP`隱含[的交易中，並不允許使用 ](../../t-sql/statements/set-implicit-transactions-transact-sql.md) 陳述式。 明確交易是明確定義交易的啟動與結束的一種交易。
+在明確或[隱含](../../t-sql/statements/set-implicit-transactions-transact-sql.md)的交易中，並不允許使用 `BACKUP` 陳述式。 明確交易是明確定義交易的啟動與結束的一種交易。
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   

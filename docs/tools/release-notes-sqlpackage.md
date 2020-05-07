@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386187"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262134"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>18.5 sqlpackage
+
+|平台|下載|發行日期|版本|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2128142)|2020 年 4 月 28 日|18.5|15.0.4769.1|
+|macOS .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2128145)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+|Linux .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2128144)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+|Windows .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2128143)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+
+### <a name="features"></a>特性
+| 功能 | 詳細資料 |
+| :------ | :------ |
+| 部署 | SQL Server 2008 及更新版本、Azure SQL Database 和 Azure SQL 資料倉儲現在支援資料敏感度分類 |
+| 部署 | 新增資料表條件約束的 Azure SQL 資料倉儲支援 |
+| 部署 | 新增已排序叢集資料行存放區索引的 Azure SQL 資料倉儲支援 |
+| 部署 | 新增外部資料來源 (適用於 Oracle、Teradata、MongoDB/CosmosDB、ODBC、巨量資料叢集) 的支援，以及 SQL Server 2019 巨量資料叢集的外部資料表 |
+| 部署 | 新增 SQL Database Edge 執行個體作為支援的版本 |
+| 部署 | 支援格式為 '\<伺服器>.\<DNS 區域>.database.windows.net' 的受控執行個體 |
+| 部署 | 新增 Azure SQL 資料倉儲中複製命令的支援 |
+| 部署 | 新增發佈期間的部署選項 'IgnoreTablePartitionOptions'，以避免當 Azure SQL 資料倉儲資料表上的資料分割函數變更時重新建立資料表 |
+| .NET Core | 新增 .NET Core 版本 sqlpackage 中 Microsoft.Data.SqlClient 的支援 |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>修正
+| 修正 | 詳細資料 |
+| :-- | :------ |
+| 部署 | 修正資料庫的發佈 dacpac，其中包含曾擲回「物件參考未設定為物件執行個體」錯誤的外部使用者。 |
+| 部署 | 修正將 JSON 路徑剖析為運算式 |
+| 部署 | 修正產生 AlterAnyDatabaseScopedConfiguration 和 AlterAnySensitivityClassification 權限的 GRANT 陳述式 |
+| 部署 | 修正無法辨識的外部指令碼權限 |
+| 部署 | 修正內嵌屬性 - 屬性的隱含新增不應顯示差異，但明確提及應透過指令碼顯示 |
+| 部署 | 已解決變更具體化視圖 (MV) 所參考資料表會導致產生 Azure SQL 資料倉儲 MV 不支援的 Alter View 陳述式 |
+| 部署 | 修正在將資料行新增至具有 Azure SQL 資料倉儲資料的資料表時，發佈失敗的問題 |
+| 部署 | 修正當變更 Azure SQL 資料倉儲的發佈資料行類型 (資料遺失案例) 時，更新指令碼應將資料移至新的資料表 |
+| ScriptDom | 修正 ScriptDom Bug，此 Bug 導致其無法辨識在內嵌索引後面定義的內嵌條件約束 |
+| ScriptDom | 修正 ScriptDom SYSTEM_TIME 在批次陳述式中遺漏右括弧 |
+| Always Encrypted | 修正 sqlpackage 重新連線且暫存資料表已消失時無法卸除 #tmpErrors 資料表，因為暫存資料表會在連線停止時消失 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
 
 |平台|下載|發行日期|版本|Build

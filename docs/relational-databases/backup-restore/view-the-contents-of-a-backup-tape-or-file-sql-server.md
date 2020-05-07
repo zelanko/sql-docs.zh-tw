@@ -1,5 +1,6 @@
 ---
 title: 檢視備份內容 (檔案或磁帶)
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中檢視備份磁帶或檔案的內容。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0a84dc069bbd6472434b79a0f3d7bf5fe1e1e220
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7746754fbc9261b5c2ddca736f2ec0c73e8645fd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255656"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179491"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>檢視備份磁帶或檔案的內容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "75255656"
   
 #### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>檢視備份磁帶或檔案的內容  
   
-1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
+1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   

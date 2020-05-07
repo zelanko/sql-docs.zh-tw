@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e9b3bc3862b39d1332416ed33fdfcea85b7f6ac
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254826"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262044"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 |加密所選資料庫資料行中的現有資料|是|是|否|
 
 > [!NOTE]
-> 在 [ 中引進的](always-encrypted-enclaves.md)具有安全記憶體保護區的 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，支援使用 Trasact-SQL 來加密現有的資料。 此外，也不需要將資料移到資料之外，就能進行密碼編譯作業。
+> 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中所引進[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 支援使用 Transact-SQL 來加密現有資料。 此外，也不需要將資料移到資料之外，就能進行密碼編譯作業。
 
 > [!NOTE]
 > 執行金鑰佈建或資料加密工具時，請務必在裝載資料庫之電腦以外的電腦且安全的環境中進行。 否則，敏感性資料或金鑰可能會洩漏到伺服器環境中，而縮減使用 [永遠加密] 的優點。  
@@ -148,7 +148,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
   
 -   在使用隨機加密進行加密的資料行上的查詢，無法在任何這些資料行上執行作業。 不支援建立使用隨機加密進行加密之資料行的索引。  
  > [!NOTE] 
- > 在 [ 中引進的](always-encrypted-enclaves.md)具有安全記憶體保護區的 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，可以藉由啟用模式比對、比較運算子，以及使用隨機加密來對資料行編製索引，來解決上述限制。
+ > 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中引進的[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)，可以藉由啟用模式比對、比較運算子，以及使用隨機加密來對資料行編製索引，來解決上述限制。
 
 -   資料行加密金鑰最多可以有兩個不同的加密值，每個都使用不同的資料行主要金鑰進行加密。 這有助於資料行主要金鑰輪替。  
   

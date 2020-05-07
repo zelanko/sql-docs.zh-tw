@@ -1,5 +1,6 @@
 ---
 title: 分次還原：完整復原模式
+description: 此範例說明如何使用完整復原模式，從結尾記錄備份開始，在 SQL Server 中分次還原資料庫。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 83ddabdc1e67036ca191d6f4c9e6013037b21738
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a84e0a0d50de36d5aa9e98a36f3ff250d77aedfe
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243665"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179029"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例：分次還原資料庫 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

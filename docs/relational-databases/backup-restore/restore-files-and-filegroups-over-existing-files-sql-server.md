@@ -1,5 +1,6 @@
 ---
 title: 以覆蓋現有檔案的方式還原檔案 (與檔案群組)
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中以覆蓋現有檔案的方式還原檔案和檔案群組。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a237383f2bc36aa3e3dd1b74174e5fbdd455920a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b5d477202b26c06ed2507ebd87dc908ad4a845c7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241867"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180732"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>以覆蓋現有檔案的方式還原檔案與檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,15 +92,15 @@ ms.locfileid: "75241867"
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]** 、 **[記錄檔]** 或 **[檔案資料流資料]** 。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
-    |**型別**|執行的備份類型： **[完整]** 、 **[差異]** 或 **[交易記錄]** 。|  
+    |**檔案類型**|指定備份中的資料類型：[資料]  、[記錄]  或 [Filestream 資料]  。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
+    |**型別**|執行的備份類型：[完整]  、[差異]  或 [交易記錄]  。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
     |**Database**|備份作業中所含的資料庫名稱。|  
     |**開始日期**|備份作業開始時的日期和時間，會出現在用戶端的地區設定中。|  
     |**完成日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
     |**大小**|備份組的大小 (以位元組為單位)。|  
-    |**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
+    |**使用者名稱**|執行備份作業的使用者名稱。|  
   
 6.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 頁面。  
   

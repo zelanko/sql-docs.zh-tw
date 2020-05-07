@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296900"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588164"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
 
@@ -128,7 +128,7 @@ ms.locfileid: "71296900"
   
 4.  將 **StorePath** 元素的值，變更為在上一個步驟的共用磁碟上所建立之 **Packages** 資料夾的完整路徑。  
   
-5.  將登錄中的 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 值，更新為共用磁碟上之服務組態檔的完整路徑和檔案名稱。  
+5.  在每個節點上，將 [登錄] 中的 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 值，更新為共用磁碟上服務組態檔的完整路徑和檔案名稱。  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>將 Integration Services 服務連線  
   

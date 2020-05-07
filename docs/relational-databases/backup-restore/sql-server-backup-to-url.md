@@ -1,5 +1,6 @@
 ---
 title: SQL Server 備份至 URL | Microsoft Docs
+description: 了解 SQL Server 使用 Microsoft Azure Blob 儲存體作為備份目的地所需的概念、需求及元件。
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087368"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180444"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

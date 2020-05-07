@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 98aea4830dcbf299e4f8e54e893f60e55d7e3520
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 4cf63cf0f1939a47a95ef0c66934ebd910f2201a
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086827"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643324"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -101,7 +101,7 @@ ms.locfileid: "82086827"
 |**1802**|在資料庫附加或卸離作業期間停用 ACL 變更與模擬存取驗證。 當附加資料庫並遇到存取權限錯誤 (例如錯誤 5120) 時，這可能很有用。<br /><br />**範圍**：只限全域| 
 |**2301**|啟用進階決策支援最佳化。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON) |
 |**2312**|將查詢最佳化工具基數估計模型設為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本，根據資料庫的相容性層級。<br /><br />**注意：** 如果資料庫相容性層級低於 120，則啟用追蹤旗標 2312 會使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (120) 的基數估計模型。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2801413) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'FORCE_DEFAULT_CARDINALITY_ESTIMATION' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)| 
-|**2335**|使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假設在查詢最佳化期間，有固定的記憶體數量可供使用。 它不會限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授與執行查詢的記憶體。 資料快取、查詢執行和其他取用者仍可使用為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定的記憶體。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2413549) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
+|**2335**|會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查詢最佳化期間假設有固定的記憶體數量可供使用，其適用於[最大伺服器記憶體伺服器設定](../../database-engine/configure-windows/server-memory-server-configuration-options.md)設得太高並導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為特定查詢產生低效率計劃的情況。 它不會限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授與執行查詢的記憶體。 資料快取、查詢執行和其他取用者仍可使用為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定的記憶體。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**2340**|使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在計劃產生時不使用排序作業 (批次排序) 以取得最佳化巢狀迴圈聯結。 根據預設，當查詢最佳化工具推斷出可能不需要排序時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用最佳化的巢狀迴圈聯結 (而不是完整掃描或具有明確排序的巢狀迴圈聯結)，但基數或成本預估仍有可能不正確。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2009160) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'DISABLE_OPTIMIZED_NESTED_LOOP' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**2371**|將固定更新統計資料閾值變更為線性更新統計資料閾值。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2754171) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始及根據[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 (或更高)，此行為由引擎控制，追蹤旗標 2371 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**2389**|針對遞增值啟用自動產生的快速統計資料 (長條圖修正)。 如果設定追蹤旗標 2389，且前置統計資料資料行標示為遞增，則在查詢編譯時將調整用來預估基數的長條圖。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2801413) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**注意：** 此追蹤旗標不適用於 CE 120 版或更新版本。 請改用追蹤旗標 4139。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|

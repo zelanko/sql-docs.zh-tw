@@ -1,5 +1,6 @@
 ---
 title: 使用 SSMS 還原資料庫備份 | Microsoft 文件
+description: 本文說明如何使用 SQL Server Management Studio 還原完整 SQL Server 資料庫備份。
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a76b91e9f5fd1cab9512cd42f05ce949ccf4d68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70278772"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180827"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

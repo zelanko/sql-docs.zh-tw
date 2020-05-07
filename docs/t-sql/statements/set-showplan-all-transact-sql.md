@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634277"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220363"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="remarks"></a>備註  
  SET SHOWPLAN_ALL 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 當 SET SHOWPLAN_ALL 是 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在未執行陳述式的情況下，傳回每個陳述式的執行資訊，且不會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 在這個選項設為 ON 之後，會傳回所有後續 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的相關資訊，直到這個選項設為 OFF 為止。 例如，如果執行 CREATE TABLE 陳述式時，SET SHOWPLAN_ALL 是 ON，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從包含這份相同資料表的後續 SELECT 陳述式傳回錯誤訊息，通知使用者指定的資料表並不存在。 因此，後來參考這份資料表都會失敗。 當 SET SHOWPLAN_ALL 是 OFF 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在未產生報表的情況下，執行這些陳述式。  
+ 當 `SET SHOWPLAN_ALL` 為 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在未執行陳述式的情況下，傳回每個陳述式的執行資訊，且不會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 在這個選項設為 ON 之後，會傳回所有後續 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的相關資訊，直到這個選項設為 OFF 為止。 例如，如果執行 CREATE TABLE 陳述式時，`SET SHOWPLAN_ALL` 為 ON，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從包含這份相同資料表的後續 SELECT 陳述式傳回錯誤訊息，通知使用者指定的資料表並不存在。 因此，後來參考這份資料表都會失敗。 當 SET SHOWPLAN_ALL 是 OFF 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在未產生報表的情況下，執行這些陳述式。  
   
- SET SHOWPLAN_ALL 的用途是供為了處理其輸出而撰寫的應用程式使用。 請利用 SET SHOWPLAN_TEXT 來傳回 Microsoft Win32 命令提示字元應用程式 (如 **osql** 公用程式) 之可讀取的輸出。  
+ `SET SHOWPLAN_ALL` 旨在供為了處理其輸出而撰寫的應用程式使用。 請利用 SET SHOWPLAN_TEXT 來傳回 Microsoft Win32 命令提示字元應用程式 (如 **osql** 公用程式) 之可讀取的輸出。  
   
  在預存程序中，無法指定 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL；它們必須是批次中僅有的陳述式。  
   
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|這個運算子所處理之資料列的估計平均資料列大小 (以位元組為單位)。|  
 |**TotalSubtreeCost**|這項運算和所有子運算的估計 (累加) 成本*。|  
 |**OutputList**|包含目前作業所保護之資料行的清單 (以逗號分隔)。|  
-|**警告**|包含目前作業的相關警告訊息清單 (以逗號分隔)。 警告訊息可能包括含有一份資料行清單的 "NO STATS:()" 字串。 這則警告訊息表示查詢最佳化工具嘗試根據這個資料行的統計資料來做決策，但找不到任何統計資料。 目前，查詢最佳化工具必須進行猜測，結果可能會選取無效的查詢計畫。 如需如何建立或更新資料行統計資料 (可協助查詢最佳化工具選擇更有效的查詢計劃) 的詳細資訊，請參閱 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)。 這個資料行可能選擇性地包括 "MISSING JOIN PREDICATE" 字串，表示正在聯結 (包含資料表)，但沒有聯結述詞。 意外卸除聯結述詞可能使查詢的執行時間遠遠超出預期，並傳回巨大的結果集。 如果出現這個警告，請確認是有意使聯結述詞不存在。|  
-|**型別**|節點類型。 對每項查詢的父節點而言，這都是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式類型 (如 SELECT、INSERT、EXECUTE 等等)。 對於代表執行計畫的子節點而言，類型是 PLAN_ROW。|  
+|**:::no-loc text="Warnings":::**|包含目前作業的相關警告訊息清單 (以逗號分隔)。 警告訊息可能包括含有一份資料行清單的 "NO STATS:()" 字串。 這則警告訊息表示查詢最佳化工具嘗試根據這個資料行的統計資料來做決策，但找不到任何統計資料。 目前，查詢最佳化工具必須進行猜測，結果可能會選取無效的查詢計畫。 如需如何建立或更新資料行統計資料 (可協助查詢最佳化工具選擇更有效的查詢計劃) 的詳細資訊，請參閱 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)。 這個資料行可能選擇性地包括 "MISSING JOIN PREDICATE" 字串，表示正在聯結 (包含資料表)，但沒有聯結述詞。 意外卸除聯結述詞可能使查詢的執行時間遠遠超出預期，並傳回巨大的結果集。 如果出現這個警告，請確認是有意使聯結述詞不存在。|  
+|**:::no-loc text="Type":::**|節點類型。 對每項查詢的父節點而言，這都是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式類型 (如 SELECT、INSERT、EXECUTE 等等)。 對於代表執行計畫的子節點而言，類型是 PLAN_ROW。|  
 |**Parallel**|**0** = 運算子並未並行執行。<br /><br /> **1** = 運算子正在並行執行。|  
 |**EstimateExecutions**|執行目前查詢時，將執行這個運算子的估計次數。|  
 |||

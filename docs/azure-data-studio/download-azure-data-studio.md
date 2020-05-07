@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
-ms.date: 3/18/2020
+ms.date: 4/30/2020
 ms.reviewer: maghan, sstein
-ms.openlocfilehash: 30b3e23ef7fb4f9266e2ca3498f29ce79904a484
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a195fbfcedb7b53fbc81aed8ba561386126374
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216457"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619681"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -27,9 +27,9 @@ ms.locfileid: "80216457"
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2121609)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2121612)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2121511)|2020 年 3 月 18 日|1.16.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2121611)|2020 年 3 月 18 日|1.16.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2121610)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2121613)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2121510)|2020 年 3 月 18 日|1.16.0|
+| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2127556)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2127555)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2127476) | 2020 年 4 月 30 日 | 1.17.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2127554) | 2020 年 4 月 30 日 | 1.17.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553) | 2020 年 4 月 30 日| 1.17.1 |
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -37,36 +37,36 @@ ms.locfileid: "80216457"
 
 此版本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含標準的 Windows 安裝程式體驗，以及 .zip 檔案。
 
-建議使用「使用者安裝程式」  ，因為不需要系統管理員權限，從而簡化安裝和升級。 使用者安裝程式位於使用者的 Local AppData (LOCALAPPDATA) 資料夾底下，因此不需要系統管理員權限。 使用者安裝程式也提供更流暢的背景更新體驗。 如需詳細資訊，請參閱 [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows) (適用於 Windows 的使用者安裝程式)。
+建議使用「使用者安裝程式」  ，因為其不需要系統管理員權限即可簡化安裝和升級。 使用者安裝程式位於使用者的 Local AppData (LOCALAPPDATA) 資料夾底下，因此不需要系統管理員權限。 使用者安裝程式也提供更流暢的背景更新體驗。 如需詳細資訊，請參閱 [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows) (適用於 Windows 的使用者安裝程式)。
 
 **使用者安裝程式** (建議)
 
-1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「使用者」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2121609) \(英文\)。
+1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「使用者」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2127556) \(英文\)。
 2. 啟動 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 應用程式。
 
 **系統安裝程式**
 
-1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「系統」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2121612) \(英文\)。
+1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「系統」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2127555) \(英文\)。
 2. 啟動 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 應用程式。
 
 **壓縮檔**
 
-1. 下載[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2121511)。
+1. 下載[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2127476)。
 2. 瀏覽至下載的檔案並解壓縮。
-3. `\azuredatastudio-windows\azuredatastudio.exe`執行
+3. `\azuredatastudio-windows\azuredatastudio.exe`執行 
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
-1. 下載[適用於 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2121611)。
+1. 下載[適用於 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2127554)。
 2. 若要展開壓縮檔的內容，請按兩下檔案。
 3. 若要在「啟動控制板」  中提供 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，請將 *Azure Data Studio.app* 拖曳至 [應用程式]  資料夾。
 
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure Data Studio
 
 1. 使用其中一種安裝程式或 tar.gz 封存，下載適用於 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2121610)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2121613)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2121510)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553)
 1. 若要將檔案解壓縮並啟動 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，請開啟新的終端視窗並鍵入下列命令：
 
    **Debian 安裝：**
@@ -126,7 +126,7 @@ ms.locfileid: "80216457"
 
 ## <a name="uninstall-azure-data-studio"></a>解除安裝 Azure Data Studio
 
-如果您使用 Windows 安裝程式安裝 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，請以移除其他 Windows 應用程式相同的方式解除安裝。
+如果使用 Windows 安裝程式安裝 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，請以移除其他 Windows 應用程式相同的方式來解除安裝。
 
 如果您使用 .zip 或其他封存安裝 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，則只需刪除這些檔案即可。
 

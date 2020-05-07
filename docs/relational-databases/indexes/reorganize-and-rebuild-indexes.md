@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138136"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220713"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>藉由重新組織或重建索引來解決索引片段
 
@@ -57,6 +57,9 @@ ms.locfileid: "82138136"
 
 決定要使用哪一個索引重組方法，第一步是分析索引以決定片段的程度。 您會以不同方式來偵測資料列存放區索引和資料行存放區索引的片段。
 
+> [!NOTE]
+> 在刪除大量資料之後，檢閱索引或堆積片段尤其重要。 針對堆積，如果經常更新，則可能也需要檢閱片段以避免激增的轉送記錄。 如需堆積的詳細資訊，請參閱[堆積 (無叢集索引的資料表)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)。 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>偵測資料列存放區索引的片段
 
 透過使用 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)，即可在特定索引中、在資料表或索引檢視表上的所有索引、在資料庫中所有索引或在所有資料庫的所有索引中偵測片段。 對於資料分割索引而言， **sys.dm_db_index_physical_stats** 也為每個資料分割提供片段資訊。
@@ -73,18 +76,22 @@ ms.locfileid: "82138136"
 
 |**avg_fragmentation_in_percent** 值|修正的陳述式|
 |-----------------------------------------------|--------------------------|
-|> 5% 且 < = 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5% 且 < = 30% <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> 重建索引可於線上或離線執行。 重新組織索引則一律在線上執行。 若要達到與重新組織選項相似的可用性，您應該在線上重建索引。 如需詳細資訊，請參閱 [INDEX](#rebuild-an-index) 和[線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)。
+<sup>1</sup> 這些值提供概略的方針，其可供判斷應該在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之間切換的時間點。 不過，實際的值可能隨各種狀況而異。 請務必嘗試不同的值，以判斷適合您環境的最佳臨界值。      
 
-這些值提供概略的方針，讓您可判斷應該在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之間切換的時間點。 不過，實際的值可能隨各種狀況而異。 請務必嘗試不同的值，以判斷適合您環境的最佳臨界值。 例如，如果指定的索引主要用於掃描作業，則移除片段可以改善這些作業的效能。 對於主要用於搜尋作業的索引而言，效能優勢較不明顯。 同樣地，移除堆積中的片段 (沒有叢集索引的資料表) 對於非叢集索引掃描作業特別有用，但對查閱作業則幾乎沒有作用。
+> [!TIP] 
+> 例如，如果指定的索引主要用於掃描作業，則移除片段可以改善這些作業的效能。 對於主要用於搜尋作業的索引而言，效能優勢可能較不明顯。    
+同樣地，移除堆積中的片段 (沒有叢集索引的資料表) 對於非叢集索引掃描作業特別有用，但對查閱作業則幾乎沒有作用。
 
-您不需要重組片段百分比低於 5% 的索引，因為由重新組織或重建索引產生的 CPU 成本，遠超過移除如此少量片段所獲得的好處。 此外，重建或重新組織小型資料列存放區索引通常不會實際減少片段。 小型索引的頁面有時候會儲存在混合範圍上， 混合範圍最多可由八個物件所共用，所以當重新組織或重建索引之後，小型索引中的片段可能不會減少。 另請參閱[重建資料列存放區索引的特定考量](#considerations-specific-to-rebuilding-rowstore-indexes)。
+<sup>2</sup> 重建索引可於線上或離線執行。 重新組織索引則一律在線上執行。 若要達到與重新組織選項相似的可用性，您應該在線上重建索引。 如需詳細資訊，請參閱 [INDEX](#rebuild-an-index) 和[線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)。
+
+您不需要重組片段百分比低於 5% 的索引，因為由重新組織或重建索引產生的 CPU 成本，遠超過移除如此少量片段所獲得的好處。 此外，重建或重新組織小型資料列存放區索引通常不會實際減少片段。 最高到 (包括) [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用混合範圍來配置空間。 因此，小型索引的頁面有時候會儲存在混合範圍上。 混合範圍最多可由八個物件所共用，所以當重新組織或重建索引之後，小型索引中的片段可能不會減少。 另請參閱[重建資料列存放區索引的特定考量](#considerations-specific-to-rebuilding-rowstore-indexes)。 如需範圍的詳細資訊，請參閱[分頁與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md#extents)。
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>偵測資料行存放區索引的片段
 
-透過使用 [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)，您可判斷已刪除資料列的百分比，其為資料行索引內資料列群組中片段的良好量值。 使用此資訊來計算特定索引、資料表上所有索引、資料庫中所有索引，或是所有資料庫中所有索引的片段。
+透過使用 [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)，您可判斷已刪除資料列的百分比，其為資料行索引內資料列群組中片段的合理量值。 使用此資訊來計算特定索引、資料表上所有索引、資料庫中所有索引，或是所有資料庫中所有索引的片段。
 
 由 **sys.dm_db_column_store_row_group_physical_stats** 所傳回的結果集包含下列資料行：
 

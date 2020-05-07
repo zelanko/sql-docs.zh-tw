@@ -1,5 +1,6 @@
 ---
 title: 備份資料庫 (媒體選項頁面) | Microsoft Docs
+description: 在 SQL Server 中，使用 [備份資料庫] 對話方塊中的 [媒體選項] 即可檢視/修改媒體選項，包括覆寫媒體、可靠性和交易記錄。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eff34ba4721f036aceca6c6617177881017744e1
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155554"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220593"
 ---
 # <a name="back-up-database-media-options-page"></a>備份資料庫 (媒體選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

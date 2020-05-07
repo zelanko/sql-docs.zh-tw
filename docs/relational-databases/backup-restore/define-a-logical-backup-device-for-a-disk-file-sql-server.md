@@ -1,5 +1,6 @@
 ---
 title: 定義邏輯備份裝置 - 磁碟
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中定義磁碟檔案的邏輯備份裝置。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6f628da66345668768aae1fe2de29596082ae6fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 198ba38cf63b5fc6a92750050cd6680fd9d3bfb9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255941"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179240"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>定義磁碟檔案的邏輯備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

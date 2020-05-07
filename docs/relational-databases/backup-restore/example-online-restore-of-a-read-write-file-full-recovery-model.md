@@ -1,5 +1,6 @@
 ---
 title: 線上還原：讀寫檔案 (完整復原模式)
+description: 此範例會針對使用完整復原模式搭配多個檔案群組其資料庫來顯示讀寫檔案在 SQL Server 中的線上還原。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c01161349b33bc151fac3c7faadf77ac14f9302
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bdc416bef5fe1273c29bb52c8526661c3af4d8a9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243685"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179115"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>範例：線上還原讀取/寫入檔案 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

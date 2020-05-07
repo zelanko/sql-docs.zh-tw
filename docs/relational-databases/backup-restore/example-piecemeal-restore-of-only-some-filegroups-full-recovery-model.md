@@ -1,5 +1,6 @@
 ---
 title: 分次還原：部分檔案群組 (完整復原模式)
+description: 此範例說明如何使用完整復原模式，在 SQL Server 中只分次還原資料庫的某些檔案群組。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3794c2453bdd541aa9bdbabe5c5d79c20a243f31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac0e660d6be8a942b6eb1df7ee937f64be983caa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243708"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179105"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>範例：僅限於部份檔案群組的分次還原 (完整復原模式)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>範例：僅對部分檔案群組分次還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
@@ -93,7 +94,7 @@ ms.locfileid: "75243708"
   
 -   [範例：分次還原資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

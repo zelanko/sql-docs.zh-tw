@@ -1,5 +1,6 @@
 ---
 title: 設定備份的到期日 (SQL Server) | Microsoft 文件
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中設定備份的到期日。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 91cc33a4f9cec62dd88f153bd02339d561918130
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cde526310e2ccb79e64d3b2c3268f79f9b9d0aec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041430"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180592"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>設定備份的到期日 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68041430"
   
 #### <a name="to-set-the-expiration-date-on-a-backup"></a>若要在備份上設定到期日  
   
-1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
+1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   

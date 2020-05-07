@@ -1,5 +1,6 @@
 ---
 title: 鏡像備份媒體集 (SQL Server) | Microsoft Docs
+description: SQL Server 支援鏡像媒體集，藉由降低備份裝置功能不正常的影響，進而提高備份可靠性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5489a69aa7d1e44eb02605226fd80e3f4a9b298
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033736"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180951"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>鏡像備份媒體集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: 移除無用的檔案群組 (SQL Server) | Microsoft Docs
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中移除無用的檔案群組。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4314dbd1ab80fe8a26a1c6fa2b2429b68c6645fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 229cdab61cfc574896422848c9790e5e3d75b2c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908894"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180893"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>移除無用的檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "72908894"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 (**注意：** 這個範例假設檔案和檔案群組都已經存在。 若要建立這些物件，請參閱 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 主題中的範例 B。)第一個範例會使用 `test1dat3` 陳述式搭配 `test1dat4` 子句，從無用的檔案群組中移除 `ALTER DATABASE` 和 `REMOVE FILE` 檔案。 第二個範例會使用 `Test1FG1`子句，移除無用的檔案群組 `REMOVE FILEGROUP` 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 **注意：** 此範例假設檔案和檔案群組都已經存在。 若要建立這些物件，請參閱 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主題中的範例 B。)第一個範例會使用 `test1dat3` 陳述式搭配 `test1dat4` 子句，從無用的檔案群組中移除 `ALTER DATABASE` 和 `REMOVE FILE` 檔案。 第二個範例會使用 `Test1FG1`子句，移除無用的檔案群組 `REMOVE FILEGROUP` 。  
   
 ```sql  
 USE master;  

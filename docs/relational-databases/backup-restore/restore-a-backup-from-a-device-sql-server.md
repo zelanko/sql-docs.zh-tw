@@ -1,5 +1,6 @@
 ---
 title: 從裝置還原備份 (SQL Server) | Microsoft 文件
+description: 本文描述如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中從裝置還原備份。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bd2512c66c072c047ec8aec1bfa4cc353864d463
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b99f82e4642346bc30f57f38d4d940cb83773de0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908852"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180844"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>從裝置還原備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "72908852"
   
 #### <a name="to-restore-a-backup-from-a-device"></a>若要從裝置還原備份  
   
-1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
+1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634128"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181090"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 在目標資料表上指定一或多個索引的名稱或識別碼，以用於與來源資料表執行隱含聯結。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 \<output_clause>  
-針對 *target_table* 中每個更新、插入或刪除的資料列傳回一個資料列 (不依特定順序)。 您可以在輸出子句中指定 **$action**。 **$action** 是一個 **nvarchar(10)** 類型的資料行，會為每個資料列傳回下列其中一個值：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。 如需有關此子句引數的詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
+針對 *target_table* 中每個更新、插入或刪除的資料列傳回一個資料列 (不依特定順序)。 您可以在輸出子句中指定 **$action**。 **$action** 是一個 **nvarchar(10)** 類型的資料行，會為每個資料列傳回下列其中一個值：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。 如需此子句的引數和行為詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 指定利用最佳化工具提示來自訂 Database Engine 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  

@@ -1,5 +1,6 @@
 ---
 title: 線上還原：唯讀檔案 (完整復原模式)
+description: 這個範例會針對使用完整復原模式搭配多個檔案群組其資料庫來顯示唯讀檔案在 SQL Server 中的線上還原。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 545a3cfe319732ca7cb0f9d5a51b1e172072e636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27845cc5995f6c9572672a1457669fb87a68dbf4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227971"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179132"
 ---
-# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>範例：線上還原唯讀檔案 (完整復原模式)
+# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>範例：線上還原讀取/寫入檔案 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
@@ -56,7 +57,7 @@ WITH RECOVERY
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   

@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 348a4984f7616bb58faa1d6182bc27ae974dde82
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633187"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169356"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -131,7 +131,7 @@ DELETE
  指定目標資料表允許使用的一個或多個資料表提示。 WITH 關鍵字和括號都是必要的。 不允許使用 NOLOCK 和 READUNCOMMITTED。 如需資料表提示的詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
- 在 DELETE 作業中，傳回已刪除的資料列或以它們為基礎的運算式。 任何目標是檢視或遠端資料表的 DML 陳述式都不支援 OUTPUT 子句。 如需詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
+ 在 DELETE 作業中，傳回已刪除的資料列或以它們為基礎的運算式。 任何目標是檢視或遠端資料表的 DML 陳述式都不支援 OUTPUT 子句。 如需此子句引數和行為的詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
   
  FROM *table_source*  
  指定其他 FROM 子句。 DELETE 的這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 延伸模組可讓您指定 \<table_source> 中的資料，以及從第一個 FROM 子句的資料表中刪除對應的資料列。  

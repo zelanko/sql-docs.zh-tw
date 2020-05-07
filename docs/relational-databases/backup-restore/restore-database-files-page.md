@@ -1,5 +1,6 @@
 ---
 title: 還原資料庫 (檔案頁面) | Microsoft 文件
+description: 在 SQL Server 中還原資料庫時，使用 [還原資料庫] 對話方塊的 [檔案] 頁面，以管理資料庫中要還原的特定檔案。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944825"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180760"
 ---
 # <a name="restore-database-files-page"></a>還原資料庫 (檔案頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

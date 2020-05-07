@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
             - name: Active Directory DNS
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+            - name: Active Directory 登入失敗
+              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: HDFS 系統管理員權限
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 參考

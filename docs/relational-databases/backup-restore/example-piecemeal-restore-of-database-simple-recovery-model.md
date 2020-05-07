@@ -1,5 +1,6 @@
 ---
 title: 分次還原：簡單復原模式
+description: 此範例說明如何使用簡單復原模式，將資料庫 SQL Server 分次還原至新電腦。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9834b14a-4e56-4654-b190-c2a38624b6b4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb7b7b757225d708382635b7a4bc33580ef7a6fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a49f76a0f15d5324d6451f65758d4f1069c094b4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243655"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179056"
 ---
 # <a name="example-piecemeal-restore-of-database-simple-recovery-model"></a>範例：分次還原資料庫 (簡單復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

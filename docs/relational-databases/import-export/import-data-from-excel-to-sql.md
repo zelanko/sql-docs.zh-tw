@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ef9afc7492e371562cbdba8c84af84f5b8bd9f51
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980573"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643353"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
 
@@ -37,7 +37,7 @@ ms.locfileid: "80980573"
 | [Azure Data Factory](#adf)                         |                                                   |
 | &nbsp; | &nbsp; |
 
-如果您想要從 Excel 活頁簿匯入多個工作表，您通常必須針對每個工作表執行每個工具一次。
+如果想要從 Excel 活頁簿匯入多個工作表，則通常必須針對每個工作表執行一次這些工具的任何一個。
 
 針對複雜工具和服務 (例如 SSIS 或 Azure Data Factory) 的完整描述不在此清單的涵蓋範圍內。 若要深入了解您感興趣的解決方案，請遵循提供的連結。
 

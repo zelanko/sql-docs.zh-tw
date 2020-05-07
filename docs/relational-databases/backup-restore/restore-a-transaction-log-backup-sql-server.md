@@ -1,5 +1,6 @@
 ---
 title: 還原交易記錄備份 (SQL Server) | Microsoft 文件
+description: 本文描述如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中還原交易記錄備份。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75efe2deeb76083ffcb8fdc2cfedb3951dfd6e3c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111183"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180774"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

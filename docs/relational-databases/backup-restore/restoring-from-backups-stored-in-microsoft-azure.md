@@ -1,5 +1,6 @@
 ---
 title: 從儲存在 Microsoft Azure 的備份還原 | Microsoft 文件
+description: 了解使用儲存在 Azure Blob 儲存體中備份來還原 SQL Server 資料庫時的考量。
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cda4fd3fa0bbb66e95d61ec87ff66dee809e2962
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1947ce2821bf02b09ea1a3a49f3d83c2613c357
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155446"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180674"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>從儲存在 Microsoft Azure 的備份還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "70155446"
   
  若要減少還原時間，建議您使用壓縮的備份。  如果備份大小超過 25 GB，請使用 [AzCopy 公用程式](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下載到本機磁碟機，然後執行還原。 如需其他備份最佳做法與建議，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
- 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔會置於記錄檔目錄中，並使用下列格式命名：BackupToUrl-\<執行個體>-\<資料庫名稱>-action-\<PID>.log。 此記錄檔包含對 Azure 儲存體之每個來回行程的相關資訊 (包括時間點)，有助於診斷問題。  
+ 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔位於記錄目錄中，且使用下列格式命名：BackupToUrl-\<執行個體名稱>-\<資料庫名稱>-action-\<PID>.log。 此記錄檔包含對 Azure 儲存體之每個來回行程的相關資訊 (包括時間點)，有助於診斷問題。  
   
 ### <a name="topics-on-performing-restore-operations"></a>關於執行還原作業的主題  
   

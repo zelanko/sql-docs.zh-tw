@@ -5,16 +5,16 @@ description: SQL Server 巨量資料叢集允許 Spark 和 HDFS 解決方案。 
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 630f81c921d99634cfb4b8824dc0d46c3680c85f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77283473"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220143"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop
 
@@ -41,6 +41,10 @@ ms.locfileid: "77283473"
 - Hive： https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy： https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Apache Knox 閘道： https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+除了這些組態之外，我們還提供設定 Spark 作業是否可在存放集區中執行的功能。 
+
+`includeSpark` 這個布林值位於 `spec.resources.storage-0.spec.settings.spark` 的 `bdc.json` 組態檔中。
 
 ## <a name="unsupported-configurations"></a>不支援的組態
 

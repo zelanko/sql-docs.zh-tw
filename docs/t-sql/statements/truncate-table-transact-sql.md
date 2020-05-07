@@ -25,12 +25,12 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fea00776176f66f53ec8f20d2420980ba5c0b06
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635447"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643369"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,10 +71,10 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  *table_name*  
  這是要截斷之資料表，或要從中移除所有資料列之資料表的名稱。 *table_name* 必須是常值。 *table_name* 不得為 **OBJECT_ID()** 函數或變數。  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- 指定要截斷的資料分割，或要移除所有資料列的部分。 如果未分割此資料表，**WITH PARTITIONS** 引數將會產生錯誤。 如果未提供 **WITH PARTITIONS** 子句，將會截斷整個資料表。  
+ 指定要截斷的資料分割，或要移除所有資料列的部分。 如果未分割此資料表，此 `WITH PARTITIONS` 引數將會產生錯誤。 如果 `WITH PARTITIONS` 未提供子句，則將會截斷整個資料表。  
   
  您可以使用下列方式來指定 *\<partition_number_expression>* ： 
   
@@ -89,32 +89,39 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  若要截斷資料分割資料表，必須將資料表與索引對齊 (已在同一個資料分割函數上加以分割)。  
   
 ## <a name="remarks"></a>備註  
- 相較於 DELETE 陳述式，TRUNCATE TABLE 的優點如下：  
+ 相較於 DELETE 陳述式，`TRUNCATE TABLE` 的優點如下：  
   
 -   使用的交易記錄空間較少。  
   
-     DELETE 陳述式每次會移除一個資料列，在交易記錄中，每個刪除的資料列都會記錄一個項目。 TRUNCATE TABLE 會取消配置用來儲存資料表資料的資料頁，以移除資料，而且交易記錄只會記錄頁面的取消配置。  
+     DELETE 陳述式每次會移除一個資料列，在交易記錄中，每個刪除的資料列都會記錄一個項目。 `TRUNCATE TABLE` 會取消配置用來儲存資料表資料的資料頁以移除資料，且交易記錄只會記錄頁面的取消配置。  
   
 -   通常會使用較少鎖定。  
   
-     當利用資料列鎖定來執行 DELETE 陳述式時，會鎖定資料表中的每個資料列，以便進行刪除。 TRUNCATE TABLE 一律會鎖定資料表 (包括結構描述 (SCH-M) 鎖定) 和頁面，但不會鎖定每個資料列。  
+     當利用資料列鎖定來執行 DELETE 陳述式時，會鎖定資料表中的每個資料列，以便進行刪除。 `TRUNCATE TABLE` 一律會鎖定資料表 (包括結構描述 (SCH-M) 鎖定) 和頁面，但不會鎖定每個資料列。  
   
 -   零頁面會保留在資料表中，沒有例外。  
   
      在執行 DELETE 陳述式之後，資料表仍可以包含空白頁。 例如，當沒有至少一項獨佔 (LCK_M_X) 資料表鎖定時，無法取消配置堆積中的空白頁。 如果刪除作業並未使用資料表鎖定，資料表 (堆積) 會包含許多空白頁。 對於索引，刪除作業可能會留下空白頁，不過，背景清除處理序很快就會取消配置這些頁面。  
   
- TRUNCATE TABLE 會移除資料表中的所有資料列，但會保留資料表結構及其資料行、條件約束、索引等。 若要移除資料表的資料之外，還要移除資料表定義，請使用 DROP TABLE 陳述式。  
+ `TRUNCATE TABLE` 會移除資料表中的所有資料列，但會保留資料表結構及其資料行、條件約束、索引等。 若要移除資料表的資料之外還要移除資料表定義，請使用 `DROP TABLE` 陳述式。  
   
  如果資料表包含識別資料行，該資料行的計數器就會重設為針對該資料行定義的初始值。 如果未定義任何初始值，就會使用預設值 1。 若要保留識別計數器，請改用 DELETE。  
+ 
+ > [!NOTE]
+ > `TRUNCATE TABLE` 作業是可以復原的。
   
 ## <a name="restrictions"></a>限制  
- 下列狀況的資料表不能使用 TRUNCATE TABLE：  
+ 您無法在下列資料表上使用 `TRUNCATE TABLE`：  
   
--   FOREIGN KEY 條件約束所參考的資料表。 (您可以截斷具有外部索引鍵 (參考其本身) 的資料表)。  
+-   FOREIGN KEY 條件約束所參考的資料表。 您可截斷具有外部索引鍵 (參考其本身) 的資料表。 
   
 -   參與索引檢視表的資料表。  
   
 -   利用異動複寫或合併式複寫來發行的資料表。  
+
+-   是系統版本設定的時態表。
+
+-   由 EDGE 條件約束所參考。  
   
  如果資料表含有一個或多個這些特性，請改用 DELETE 陳述式。  
   
@@ -122,15 +129,15 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  在 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[sspdw](../../includes/sspdw-md.md)]中：
 
-- EXPLAIN 陳述式內不允許 TRUNCATE TABLE。
+- EXPLAIN 陳述式內不允許 `TRUNCATE TABLE`。
 
-- TRUNCATE TABLE 無法在交易內執行。
+- `TRUNCATE TABLE` 無法在交易內執行。
   
 ## <a name="truncating-large-tables"></a>截斷大型資料表  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠卸除或截斷含有超出 128 個範圍的資料表，而不需在卸除所需的所有範圍內保留同時鎖定。  
   
 ## <a name="permissions"></a>權限  
- *table_name* 上所需的最小權限是 ALTER。 TRUNCATE TABLE 權限預設會授與資料表擁有者、系統管理員 (sysadmin) 固定伺服器角色成員，以及 db_owner 和 db_ddladmin 固定資料庫角色的成員，這些權限不能轉讓。 不過，您可以將 TRUNCATE TABLE 陳述式納入模組 (如預存程序) 中，再利用 EXECUTE AS 子句，將適當的權限授與模組。  
+ *table_name* 上所需的最小權限是 `ALTER`。 `TRUNCATE TABLE` 權限預設會授與資料表擁有者、`sysadmin` 固定伺服器角色成員，以及 `db_owner` 和 `db_ddladmin` 固定資料庫角色的成員，這些權限不能轉讓。 不過，您可將 `TRUNCATE TABLE` 陳述式納入模組 (如預存程序) 中，並使用 `EXECUTE AS` 子句將適當的權限授與模組。  
   
 ## <a name="examples"></a>範例  
   

@@ -5,19 +5,19 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/06/2018
-ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487057"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719277"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
 本主題提供將下列其中一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式部署的支援版本移轉到新 SQL Server Reporting Services 執行個體的逐步指示：  
   
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -147,9 +147,11 @@ ms.locfileid: "81487057"
   
  按一下下列其中一個連結，即可檢視有關如何安裝新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體的指示：  
   
-* [從安裝精靈 &#40;安裝程式&#41; 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [從 [安裝精靈] 安裝 SQL Server Reporting Services 2016 和較舊版本 &#40;安裝程式&#41; ](install-reporting-services-native-mode-report-server.md) 
   
-* [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+* [從命令提示字元安裝 SQL Server Reporting Services 2016 和較舊版本](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+
+* [安裝 SQL Server Reporting Services 2017 和更新版本](install-reporting-services.md)
 
 ## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> 移動報表伺服器資料庫
 

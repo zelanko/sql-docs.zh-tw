@@ -30,26 +30,26 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982180"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262154"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的物件與計數器，可供「系統監視器」用來對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦監視其中的活動。 物件可以是任何一種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定或 Windows 處理序。 每個物件都包含一個或多個計數器，可決定欲監視之物件的不同層面。 例如， **SQL Server Locks** 物件包含了稱為 **Number of Deadlocks/sec** 與 **Lock Timeouts/sec**的計數器。  
   
- 若給定類型的多個資源存在於電腦內，一些物件將擁有多個執行個體。 例如，若系統擁有多個處理器， **Processor** 物件類型將擁有多個執行個體。 **Databases** 物件類型對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫都擁有一個執行個體。 有些物件類型 (例如 **Memory Manager** 物件) 則只有一個執行個體。 若物件擁有多個執行個體，您可增加計數器來追蹤每個執行個體的統計資料，在許多狀況下，則可同時追蹤所有的執行個體。 預設執行個體的計數器會以 **SQLServer:** _物件名稱>\<_ 格式顯示。 具名執行個體的計數器會以 **MSSQL$** _執行個體名稱>\<_ **:** _計數器名稱>\<_ 或 **SQLAgent$** _執行個體名稱>\<_ **:** _計數器名稱>\<_ 格式顯示。  
+ 若給定類型的多個資源存在於電腦內，一些物件將擁有多個執行個體。 例如，若系統擁有多個處理器， **Processor** 物件類型將擁有多個執行個體。 **Databases** 物件類型對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫都擁有一個執行個體。 有些物件類型 (例如 **Memory Manager** 物件) 則只有一個執行個體。 若物件擁有多個執行個體，您可增加計數器來追蹤每個執行個體的統計資料，在許多狀況下，則可同時追蹤所有的執行個體。 預設執行個體的計數器會以 **SQLServer:** \<物件名稱>  格式顯示。 具名執行個體的計數器會以 **MSSQL$** \<執行個體名稱>  **:** \<計數器名稱>  或 **SQLAgent$** \<執行個體名稱>  **:** \<計數器名稱>  格式顯示。  
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能計數器值是使用 Windows 效能計數器 (WPC) 引擎所產生。 某些計數器值不會直接由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 計算。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會為 WPC 引擎提供基底值，該引擎會執行所需的計算 (例如百分比)。 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動態管理檢視會提供具有由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所產生原始值的所有計數器。 `cntr_type` 資料行會指出計數器的類型。 WPC 引擎處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器值的方式取決於此類型。 如需效能計數器類型的詳細資訊，請參閱 [WMI 文件](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)。
   
  您可以在圖表中新增或移除計數器，並儲存圖表設定，藉以指定要在「系統監視器」啟動時監視的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件和計數器。  
   
  您可以設定「系統監視器」來顯示任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器的統計資料。 此外，您也可以設定任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器的臨界值，並在計數器超過臨界值時產生警示。 如需設定警示的詳細資訊，請參閱 [建立 SQL Server 資料庫警示](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)。  
-  
-> [!TIP]  
->  您也可以查詢 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動態管理檢視，來傳回效能計數器的值。  
+    
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，才會顯示統計資料。 若您停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，統計資料的顯示將會中斷，然後自動繼續。 另外請注意，就算並未執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，「系統監視器」嵌入式管理單元中仍會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器。 在叢集執行個體上，效能計數器只能夠在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的節點上運作。  
@@ -118,14 +118,14 @@ ms.locfileid: "73982180"
 |[SQLServer:Memory Broker Clerks](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|與記憶體 Broker Clerk 相關的統計資料。|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用狀況的相關資訊，例如目前配置的鎖定結構總數。|  
 |[SQLServer:Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|提供用來儲存物件 (例如預存程序、觸發程序和查詢計畫) 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快取的相關資訊。|  
-|[SQLServer：查詢存放區](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|提供查詢存放區的相關資訊。|  
-|[SQLServer: Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|提供有關資源管理員資源集區統計資料的資訊。|  
+|[SQLServer:Query Store](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|提供查詢存放區的相關資訊。|  
+|[SQLServer:Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|提供有關資源管理員資源集區統計資料的資訊。|  
 |[SQLServer:SQL Errors](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的相關資訊。|  
 |[SQLServer:SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢方面的相關資訊，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所接收之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]陳述式的批次數。|  
 |[SQLServer:Transactions](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用中交易相關資訊，例如交易總數與快照集交易的數量。|  
 |[SQLServer:User Settable](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|執行自訂監視。 每個計數器皆可為自訂的預存程序，或任何可傳回監視數值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|  
-|[SQLServer：等待統計資料](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|提供等候的相關資訊。|  
-|[SQLServer: Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|提供有關資源管理員工作負載群組統計資料的資訊。|  
+|[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|提供等候的相關資訊。|  
+|[SQLServer:Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|提供有關資源管理員工作負載群組統計資料的資訊。|  
   
 ##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> SQL Server 複寫效能物件  
  下表列出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫提供的效能物件：  

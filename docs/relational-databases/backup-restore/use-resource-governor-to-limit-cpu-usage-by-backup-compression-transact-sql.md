@@ -1,5 +1,6 @@
 ---
 title: 限制 CPU 負載：使用 Resource Governor 進行備份壓縮
+description: 您可將 SQL Server 使用者的工作階段對應至 Resource Governor 工作負載群組來將其分類，以限制使用壓縮來進行備份的 CPU 使用率。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65f3000cdc56079d2e55040e4844ce5578998e9e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245406"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180409"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: 定義邏輯備份裝置 - 磁帶
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中定義磁帶機的邏輯備份裝置。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e06b51b8c6c63d67645b493bdf4ca5bac3ab985
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 305a76053adcb075ae719f09f31291bfd7daa143
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257996"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179220"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>定義磁帶機的邏輯備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "75257996"
   
 #### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>定義磁帶機的邏輯備份裝置  
   
-1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
+1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 [伺服器物件]  ，然後以滑鼠右鍵按一下 [備份裝置]  。  
   

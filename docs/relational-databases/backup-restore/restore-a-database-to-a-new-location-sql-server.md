@@ -1,5 +1,6 @@
 ---
 title: 將資料庫還原到新位置 (SQL Server) | Microsoft 文件
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，將 SQL Server 資料庫還原到新位置並重新命名資料庫。
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3681d52768cbd35fe0189739646c2752e5fb4d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72989556"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180811"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
