@@ -10051,6 +10051,8 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: 資源
   items:
+    - name: 離線 SQL Server 文件
+      href: sql-server/sql-server-offline-documentation.md
     - name: 學習
       items:
         - name: 教育性資源
@@ -10101,13 +10103,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 部署
           href: sql-server/partner-dev-sql-server.md
-    - name: 離線 SQL Server 文件
-      href: sql-server/sql-server-offline-documentation.md
 - name: 參考
   items:
-    - name: 封存的內容 (SQL 2005 - 2012) >
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: 資料庫範例
       items:
         - name: 範例概觀

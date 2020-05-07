@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138284"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588228"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,10 +257,13 @@ PARTITION
  REORGANIZE **資料列存放區**索引  
  對於資料列存放區索引，REORGANIZE 會指定重新組織索引分葉層級。 REORGANIZE 作業：  
   
--   一律在線上執行。 這表示不會保留長期封鎖的資料表鎖定，而且在 ALTER INDEX REORGANIZE 交易期間，可以繼續查詢或更新基礎資料表。  
--   不允許停用的索引使用  
--   在 ALLOW_PAGE_LOCKS 設為「關閉」時，不允許使用  
--   在交易中執行且回復交易時不會回復。  
+-   一律在線上執行。 這表示不會保留長期封鎖的資料表鎖定，而且在 ALTER INDEX REORGANIZE 交易期間，可以繼續查詢或更新基礎資料表。
+-   不允許使用停用的索引。
+-   在 ALLOW_PAGE_LOCKS 設為 OFF 時，不允許使用。
+-   在交易中執行且回復交易時不會回復。
+
+> [!NOTE]
+> 當 ALTER INDEX REORGANIZE 使用明確交易 (例如，BEGIN TRAN ...COMMIT/ROLLBACK內的 ALTER INDEX)，而非預設的隱含交易模式時，REORGANIZE 的鎖定行為會變得更加嚴格，可能因此導致封鎖。 如需隱含交易的詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)。
 
 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。 
 

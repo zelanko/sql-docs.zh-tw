@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117181"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719291"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>使用 SQL Server 機器學習中的 sp_rxPredict 進行即時評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "81117181"
 
 ## <a name="how-real-time-scoring-works"></a>即時評分的運作方式
 
-以 RevoScaleR 或 MicrosoftML 函式 (例如 [ (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)) 為基礎的特定模型類型可支援即時評分。 其根據提供給機器學習模型 (採用特殊二進位格式) 的使用者輸入，使用原生 C++ 程式庫來產生分數。
+以 RevoScaleR 或 MicrosoftML 函式 (例如 [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 和 [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)) 為基礎的特定模型類型可支援即時評分。 其根據提供給機器學習模型 (採用特殊二進位格式) 的使用者輸入，使用原生 C++ 程式庫來產生分數。
 
 由於定型的模型可以用於評分，而且不需要呼叫外部語言執行階段，因此可減少使用多個程序的額外負荷。 這可為生產評分案例支援更快速的預測效能。 由於資料永遠不會離開 SQL Server，因此您可以在新資料表上產生及插入結果，而不需要在 R 與 SQL 之間進行任何資料轉譯。
 

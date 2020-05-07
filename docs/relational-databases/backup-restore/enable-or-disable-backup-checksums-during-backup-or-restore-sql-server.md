@@ -1,5 +1,6 @@
 ---
 title: 啟用 | 停用備份總和檢查碼
+description: 本文說明如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中啟用或停用資料庫的備份總和檢查碼。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.description: Enable or disable backup checksums during backup or restore of SQL Server databases.
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d77bb53a304c1606a17686dd3d3a8125580ddfd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3552fc8ccc44522d7bd2a520d5b9ad646ee586d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257983"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179197"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在備份或還原期間啟用或停用備份總和檢查碼 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: 停止系統設定版本時態表上的系統版本設定功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165450"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220386"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止系統建立版本時態表上的系統版本設定功能
 
@@ -39,6 +39,7 @@ ms.locfileid: "74165450"
 - 若您設定 **SYSTEM_VERSIONING = OFF** 但沒有捨棄 **SYSTEM_TIME** 週期，系統將就會繼續為每個插入和更新作業更新週期資料行。 目前資料表上的刪除作業都是永久性的。
 - 捨棄 **SYSTEM_TIME** 週期即會完全移除週期資料行。
 - 在設定 **SYSTEM_VERSIONING = OFF**時，所有具足夠權限的使用者都可以修改結構描述和歷程記錄資料表的內容，甚至可以永久刪除歷程記錄資料表。
+- 如果有其他利用 SCHEMABINDING (其使用時態查詢延伸模組，例如參考 **SYSTEM_TIME**) 建立的物件，則無法設定 **SYSTEM_VERSIONING = OFF**。 如果設定 **SYSTEM_VERSIONING = OFF**，則這項限制可防止這些物件失敗。
 
 ### <a name="permanently-remove-system_versioning"></a>永久移除 SYSTEM_VERSIONING
 

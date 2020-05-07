@@ -24,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6ac35c702783ca5b80367c6f41af9c4c450e0be7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5973b74accac8b35932edf54b51b83ec6a235aae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997963"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178559"
 ---
 # <a name="manage-the-database-engine-services"></a>管理 Database Engine Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在作業系統上作為服務執行。 服務是在系統背景中執行的應用程式類型， 通常可以提供核心作業系統功能，例如 Web 服務、事件記錄或檔案服務。 服務不需在電腦桌面上顯示使用者介面，即可直接執行。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 和數種其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，都會以服務的形式來執行。 這些服務通常在啟動作業系統時就會跟著啟動， 這需視安裝期間的指定項目而定；有些服務預設不會啟動。 本節描述各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的管理方式。 開始登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體之前，您必須知道如何啟動、停止、暫停、繼續和重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 登入之後，您可以執行諸如管理伺服器或查詢資料庫的工作。  
   
 ## <a name="using-the-sql-server-service"></a>使用 SQL Server 服務  
- 啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體時，您也會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務之後，使用者即可與伺服器建立新的連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可在本機或從遠端以服務的形式來啟動和停止。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務是預設執行個體，則稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)；如果是具名執行個體，則稱為 MSSQL$*執行個體名稱>\<* 。  
+ 啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體時，您也會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務之後，使用者即可與伺服器建立新的連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可在本機或從遠端以服務的形式來啟動和停止。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務是預設執行個體，則稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)；若為具名執行個體，則稱為 MSSQL$ *\<instancename\>* 。  
   
 ## <a name="using-sql-server-configuration-manager"></a>使用 SQL Server 組態管理員  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員可讓您停止、啟動或暫停各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  

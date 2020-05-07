@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531091"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178129"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>開始使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>開始使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 部署
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文提供如何部署 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md) 的概觀。
+本文提供如何部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的概觀。 本文將說明概念，並提供可供了解部署案例的架構。 您特定的部署步驟會依您針對用戶端和伺服器所選擇的平台而有所不同。 如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的簡介，請參閱 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
-如需了解其他部署案例，請參閱：
+如需了解其他 SQL Server 部署案例，請參閱：
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Docker 容器](../linux/sql-server-linux-configure-docker.md)
 
-本文除會說明其概念之外，還會提供架構，方便您了解本節中的其他部署文章。 您特定的部署步驟會依您針對用戶端和伺服器所選擇的平台而有所不同。
-
-> [!TIP]
-> 若要快速部署 Kubernetes 與巨量資料叢集環境，以協助您提升其功能，請使用[指令碼區段](#scripts)中指出的任一項範例指令碼。 在部署之後若要管理叢集，可使用下一區段中的[用戶端工具](#tools)。
+## <a name="quick-introduction"></a>快速簡介 
 
 觀看這段 9 分鐘的影片，以取得如何部署巨量資料叢集的概觀：
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> 若要快速部署 Kubernetes 與巨量資料叢集環境，以協助您提升其功能，請使用[指令碼區段](#scripts)中指出的任一項範例指令碼。 在部署之後若要管理叢集，可使用下一區段中的[用戶端工具](#tools)。
 
 
 ## <a name="client-tools"></a><a id="tools"></a> 用戶端工具

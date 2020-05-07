@@ -10,36 +10,39 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
-ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487257"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719524"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  本主題概述 SQL Server Reporting Services 的升級與移轉選項。 升級 SQL Server Reporting Services 部署的一般方式有兩種：  
+  本主題概述 SQL Server Reporting Services 的升級與移轉選項。 以下是升級 SQL Server Reporting Services 部署的一般方式：  
  
--   **升級：** 您可以在目前安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱本文件稍後的＜原生至 SharePoint 移轉＞一節。  
+- **從  Reporting Services 2016 和較舊版本升級至  Reporting Services 2016 和較舊版本：** 您可以在目前安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱本文件中稍後的[SharePoint 模式升級和移轉狀況](#bkmk_sharePoint_scenarios)一節。  
+
+- **從  Reporting Services 2016 和較舊版本升級至  Reporting Services 2017 和更新版本**，與舊版中的升級案例不同。 升級*至* Reporting Services 2016 和較舊版本時，可遵循使用 SQL Server 安裝媒體的就地升級程序。 *從* Reporting Services 2016 和較舊版本升級*至* Reporting Services 2017 和更新版本時，將無法遵循相同的步驟，因為新的 Reporting Services 安裝是獨立產品。 其不再是 SQL Server 安裝媒體的一部分。 
+
+    若要從 Reporting Services 2016 和較舊版升級至 Reporting Services 2017 和更新版本，請遵循[移轉 Reporting Services 安裝 (原生模式)](migrate-a-reporting-services-installation-native-mode.md) 一文，並以 Reporting Services 2017 或更新版本作為目的地執行個體。 
+
+- **從  Reporting Services 2017 升級至未來版本**同樣是就地升級案例，因為產品安裝 GUID 相同。 請執行 SQLServerReportingServices.exe 安裝檔案，在目前安裝 Reporting Services 的伺服器上開始進行就地升級。
   
--   **移轉**：您要安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
+- **移轉**：您要安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
+
 
 > [!NOTE]
-> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
+> SQL Server 2016 之後不提供 Reporting Services 與 SharePoint 的整合。
    
 ##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> 升級的已知問題和最佳作法  
  如需可支援版本與可升級版本的詳細清單，請參閱＜ [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。  
   
 > [!TIP]  
->  如需有關 SQL Server 問題的最新資訊，請參閱下列主題：  
->   
->  -   [SQL Server 2016 版本資訊](https://go.microsoft.com/fwlink/?LinkID=398124)。  
+>  如需有關 SQL Server 問題的最新資訊，請參閱 [SQL Server 2016 版本資訊](https://go.microsoft.com/fwlink/?LinkID=398124)。  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> 並排安裝  

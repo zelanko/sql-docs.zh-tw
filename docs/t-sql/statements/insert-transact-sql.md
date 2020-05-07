@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107982"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181093"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 OUTPUT 子句  
  在插入作業中，傳回插入的資料列。 這些結果可以傳回給處理應用程式或插入資料表或資料表變數，以便進一步處理。  
   
- [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)不支援 DML 陳述式 (其參考本機資料分割檢視、分散式資料分割檢視或遠端資料表)，以及包含 *execute_statement* 的 INSERT 陳述式。 OUTPUT INTO 子句不支援含有 \<dml_table_source> 子句的 INSERT 陳述式 。 
+ OUTPUT 子句不支援 DML 陳述式 (其參考本機資料分割檢視、分散式資料分割檢視或遠端資料表)，或包含 *execute_statement* 的 INSERT 陳述式。 OUTPUT INTO 子句不支援含有 \<dml_table_source> 子句的 INSERT 陳述式 。 如需此子句的引數和行為詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。
   
  VALUES  
  導入要插入的資料值清單。 *column_list* (如果有指定) 或資料表中的每個資料行，都必須有一個資料值。 這份值清單必須括在括號中。  
