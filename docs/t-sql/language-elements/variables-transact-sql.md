@@ -180,7 +180,7 @@ GO
 ```
 
 ## <a name="see-also"></a>另請參閱  
- [宣告@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+ [DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
  [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
