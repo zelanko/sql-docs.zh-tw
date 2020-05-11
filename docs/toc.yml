@@ -1710,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: 停用 INSERT 與 UPDATE 的條件約束
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: UNIQUE 條件約束
+        - name: 唯一條件約束及檢查條件約束
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: 建立
