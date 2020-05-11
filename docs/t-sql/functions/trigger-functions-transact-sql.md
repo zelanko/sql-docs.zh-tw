@@ -10,14 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eeb1d9072874b24cf73c93eb3113417c66ee4f0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 6daa9763b7f5008be3a64ee7a7d999c6a97dd8cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68098817"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826773"
 ---
 # <a name="trigger-functions-transact-sql"></a>觸發程序函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

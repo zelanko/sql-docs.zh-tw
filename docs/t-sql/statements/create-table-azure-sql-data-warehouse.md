@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ee2a1e797fb601cafe748225c8a50e376d37f904
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 238faaa60406436a4d3ab4278df491da78ecc529
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002747"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921948"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -35,7 +35,7 @@ ms.locfileid: "81002747"
 
 ## <a name="syntax"></a>語法
   
-```
+```syntaxsql
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -52,8 +52,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <column_constraint>::=
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
-        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 
 <table_option> ::=

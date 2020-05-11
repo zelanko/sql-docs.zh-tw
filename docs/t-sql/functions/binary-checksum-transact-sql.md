@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f80354990a4540df111cb06d80d660336686e332
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c45b16175d69abcc486540d44e4e3c9097e0dcef
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632073"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823325"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

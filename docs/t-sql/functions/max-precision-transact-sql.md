@@ -19,14 +19,14 @@ helpviewer_keywords:
 - '@@MAX_PRECISION function'
 - data types [SQL Server], precision
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 696b0a010a8267e42cd55bc123081add60090840
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 158ee073a0aed0d069f538732679aabcb1a19da0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130321"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832985"
 ---
 # <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7e445d123ca23564dfbd7a922a3bed5657d91760
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 8910f8cd38d1336a5da5c91e386d7458164b3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625689"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826918"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

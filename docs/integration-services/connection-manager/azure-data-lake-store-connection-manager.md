@@ -3,8 +3,6 @@ title: Azure Data Lake Store 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +11,13 @@ f1_keywords:
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 095865071b3a9ddfcba15635d9e3d857b2dbee20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 985c582b6b04f03a77686d6ad3697a565100ead0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67904788"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762699"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
 

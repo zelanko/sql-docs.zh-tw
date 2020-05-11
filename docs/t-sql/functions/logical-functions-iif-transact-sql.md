@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IIF function
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 33f63b558f4cbddcfc692ef3a59fcb8ccad29641
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 09363732ab6c0be956c9c1a36ae06a7d251e8433
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635009"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822950"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>邏輯函式 - IIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

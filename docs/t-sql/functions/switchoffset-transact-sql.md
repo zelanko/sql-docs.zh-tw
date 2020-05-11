@@ -21,15 +21,15 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce69487c1550314dc7cfe3641333728fd07155e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2f693ac2bd8ffbed7ee5076dcf887973fb6c5212
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117556"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828568"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

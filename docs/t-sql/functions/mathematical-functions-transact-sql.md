@@ -14,14 +14,14 @@ helpviewer_keywords:
 - mathematical functions [SQL Server]
 - functions [SQL Server], mathematical
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 328a6e21d32bf5c0eaa029fcb0cf6586533cac19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 28cee5f6b7b1f3ea16ac490a24b10417d0d5f83d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249779"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822498"
 ---
 # <a name="mathematical-functions-transact-sql"></a>數學函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

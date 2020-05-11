@@ -19,14 +19,14 @@ helpviewer_keywords:
 - status information [SQL Server], idle time
 - idle time [SQL Server]
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 272af8e89dfdf313e24017edd615401bc2a35362
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c6fd4c765b460267a2ffb5fc75855d7c6685b433
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68097460"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826855"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

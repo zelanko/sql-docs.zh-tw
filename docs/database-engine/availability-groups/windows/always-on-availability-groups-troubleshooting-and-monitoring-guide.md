@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822041"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922429"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>可用性群組的監視及疑難排解
  本指南將協助您開始監視 Always On 可用性群組，並且對可用性群組中的某些常見的問題進行疑難排解。 本指南將提供在其他位置已發佈的有用資訊的原始內容和登陸頁面。 雖然本指南無法完整討論在可用性群組大範圍中發生的所有問題，但是可以為您指出根本原因分析和問題解決的正確方向。 
@@ -64,15 +64,15 @@ ms.locfileid: "74822041"
 |-----------|-----------------|  
 |[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)|描述可用性群組的資料同步處理程序、流量控制閘道，以及監視可用性群組時的實用計量，同時也顯示如何收集 RTO 和 RPO 計量。|  
 |[監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|提供監視可用性群組的工具資訊。|  
-|[Always On 健康情況模型，第 1 部分：健康情況模型架構](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx) \(英文\)|提供 Always On 健康情況模型的概觀。|  
-|[Always On 健康情況模型，第 2 部分：擴充健康情況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) \(英文\)|示範如何自訂 Always On 健康情況模型及自訂 Always On 儀表板來顯示額外的資訊。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 1 部分：基本 Cmdlet 概觀](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) \(英文\)|針對可用來監視可用性群組健康情況的 Always On PowerShell Cmdlet，提供其基本概觀。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 2 部分：進階 Cmdlet 使用](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) \(英文\)|提供 Always On PowerShell Cmdlet 的進階使用方式資訊，以監視可用性群組健康情況。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 3 部分：一個簡單的監視應用程式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) \(英文\)|示範如何使用應用程式自動監視可用性群組。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 4 部分：與 SQL Server Agent 整合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) \(英文\)|提供如何與 SQL Server Agent 整合可用性群組監視，以及如何設定發生問題時通知適當對象的資訊。|  
+|[Always On 健康情況模型，第 1 部分：健康情況模型架構](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture) \(英文\)|提供 Always On 健康情況模型的概觀。|  
+|[Always On 健康情況模型，第 2 部分：擴充健康情況模型](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) \(英文\)|示範如何自訂 Always On 健康情況模型及自訂 Always On 儀表板來顯示額外的資訊。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 1 部分：基本 Cmdlet 概觀](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview) \(英文\)|針對可用來監視可用性群組健康情況的 Always On PowerShell Cmdlet，提供其基本概觀。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 2 部分：進階 Cmdlet 使用](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage) \(英文\)|提供 Always On PowerShell Cmdlet 的進階使用方式資訊，以監視可用性群組健康情況。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 3 部分：一個簡單的監視應用程式](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application) \(英文\)|示範如何使用應用程式自動監視可用性群組。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 4 部分：與 SQL Server Agent 整合](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent) \(英文\)|提供如何與 SQL Server Agent 整合可用性群組監視，以及如何設定發生問題時通知適當對象的資訊。|  
 
 ## <a name="next-steps"></a>後續步驟  
- [SQL Server Always On 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)   
+ [SQL Server Always On 團隊部落格](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
  [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
   
