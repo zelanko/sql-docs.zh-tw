@@ -2,7 +2,7 @@
 title: Microsoft ADO.NET
 description: Microsoft ADO.NET for SQL Server 是 .NET 語言的核心資料存取技術。 使用 Microsoft.Data.SqlClient 命名空間來存取 SQL Server。
 ms.custom: ''
-ms.date: 09/30/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c89c1c5073e86121e4fbadc3a2901057c0a361a4
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 95a53493949b7c024328a7e94870f509f7e7bd99
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922226"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -31,7 +31,7 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 Microsoft.Data.SqlC
 * [步驟 4：使用 ADO.NET 復原連線到 SQL](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## <a name="documentation"></a>文件  
-* [ADO.NET 概觀](https://msdn.microsoft.com/library/e80y5yhx.aspx) \(部分機器翻譯\)
+* [ADO.NET 概觀](/dotnet/framework/data/adonet/) \(部分機器翻譯\)
 * [開始使用 SqlClient 驅動程式](get-started-sqlclient-driver.md)  
 * [SqlClient 驅動程式概觀](overview-sqlclient-driver.md)  
 * [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)
@@ -41,7 +41,7 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 Microsoft.Data.SqlC
 * [ADO.NET 資料集論壇](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>其他範例  
-* [ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx) (ADO.NET 程式碼範例)  
+* [ADO.NET Code Examples](/dotnet/framework/data/adonet/ado-net-code-examples) (ADO.NET 程式碼範例)  
 * [在 Windows 上開始使用 .NET Framework](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) \(英文\)
 * [在 macOS 上開始使用 .NET Core](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/) \(英文\)
 * [在 Ubuntu 上開始使用 .NET Core](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/) \(英文\)

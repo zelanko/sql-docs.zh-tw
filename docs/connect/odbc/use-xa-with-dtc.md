@@ -2,7 +2,7 @@
 title: 搭配使用 XA 與 Microsoft ODBC 驅動程式
 description: Microsoft ODBC Driver for SQL Server 支援在 Windows、Linux 和 macOS 上使用分散式交易協調器 (DTC) 進行 XA 交易。
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635547"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886325"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 交易
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635547"
 
 ## <a name="overview"></a>概觀
 
-Microsoft ODBC Driver for SQL Server 從 17.3 版開始支援在 Windows、Linux 和 macOS 上使用分散式交易協調器 (DTC) 進行 XA 交易。 驅動程式端的 XA 實作可讓用戶端應用程式將序列作業 (例如啟動、認可、復原交易分支等) 傳送至交易管理員 (TM)。 然後，TM 將會根據這些作業，與 Resource Manager (RM) 進行通訊。 如需有關 XA 規格和適用於 DTC 的 Microsoft 實作 (MS DTC) 的詳細資訊，請參閱[運作方式：SQL Server DTC (MSDTC 和 XA 交易)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/) \(英文\)。
+Microsoft ODBC Driver for SQL Server 從 17.3 版開始支援在 Windows、Linux 和 macOS 上使用分散式交易協調器 (DTC) 進行 XA 交易。 驅動程式端的 XA 實作可讓用戶端應用程式將序列作業 (例如啟動、認可、復原交易分支等) 傳送至交易管理員 (TM)。 然後，TM 將會根據這些作業，與 Resource Manager (RM) 進行通訊。 如需有關 XA 規格和適用於 DTC 的 Microsoft 實作 (MS DTC) 的詳細資訊，請參閱[運作方式：SQL Server DTC (MSDTC 和 XA 交易)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions) \(英文\)。
 
 
 
