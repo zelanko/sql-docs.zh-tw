@@ -18,15 +18,15 @@ helpviewer_keywords:
 - base-10 logarithms
 - logarithm of expression
 ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c84d73c0ee48b75c8f31dda4dc87ecfbac5913f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 277a29cf91151e606fa79f4d27494dda3aa29859
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68059877"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822750"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

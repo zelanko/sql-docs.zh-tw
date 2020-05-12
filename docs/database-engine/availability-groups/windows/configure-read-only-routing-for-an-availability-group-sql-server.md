@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c702fe57db00fea0c74fa65255063f657ed0197
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286682"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925242"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的唯讀路由
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "79286682"
   
          在 MODIFY REPLICA 子句中，ALLOW_CONNECTIONS 是選擇性的 (如果複本已經設定為允許唯讀連接的話)。  
   
-         如需詳細資訊，請參閱 [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)(計算 AlwaysOn 的 read_only_routing_url)。  
+         如需詳細資訊，請參閱 [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)(計算 AlwaysOn 的 read_only_routing_url)。  
   
     -   若要設定主要角色的唯讀路由，請在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 選項，如下所示：  
   
@@ -168,7 +168,7 @@ GO
   
          其中， *url* 是路由至複本進行唯讀連接時要使用的連接性完整網域名稱 (FQDN) 和通訊埠。 例如：`-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
-         如需詳細資訊，請參閱 [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)(計算 AlwaysOn 的 read_only_routing_url)。  
+         如需詳細資訊，請參閱 [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)(計算 AlwaysOn 的 read_only_routing_url)。  
   
     -   若要設定主要角色的連接存取，請指定 **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ]，其中 *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。 例如：`-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
@@ -248,7 +248,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 **部落格：**  
   
--    [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
+-    [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)  
   
 -    [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

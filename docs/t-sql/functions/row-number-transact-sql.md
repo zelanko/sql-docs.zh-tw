@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c6fb1aa518973e73fd31eef18a51ce81bd95a81
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 82942f913b3d34ef519a3352880a039311db68e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828656"
 ---
 # <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

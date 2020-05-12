@@ -18,15 +18,15 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45dabba61fc6fdedf002c10d33218b3b29c4212a
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: a464e9178e804e2b6fb5704ee7c3e7772bd9312d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823284"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

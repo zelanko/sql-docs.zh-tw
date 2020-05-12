@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287722"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925164"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
 
@@ -359,7 +359,7 @@ ms.locfileid: "79287722"
   
     ```  
   
-     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  
+     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
 
 ## <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
   使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性定義如何加密敏感性資料，如何保留作業和專案版本設定資料，以及何時驗證作業逾時。SSISDB 目錄是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
@@ -582,7 +582,7 @@ ms.locfileid: "79287722"
 ###  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
 針對 SSISDB 資料庫啟用 Always On 支援之前，請先執行下列必要條件步驟。  
   
-1.  設定 Windows 容錯移轉叢集。 如需相關指示，請參閱 [安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 部落格文章。 在所有叢集節點上安裝功能和工具。  
+1.  設定 Windows 容錯移轉叢集。 如需相關指示，請參閱 [安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) 部落格文章。 在所有叢集節點上安裝功能和工具。  
   
 2.  在叢集的每個節點上，安裝含有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
@@ -668,4 +668,4 @@ ms.locfileid: "79287722"
   
 -   blogs.msdn.com 上的部落格文章： [SSIS 目錄存取控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
   
--   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  
+-   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  

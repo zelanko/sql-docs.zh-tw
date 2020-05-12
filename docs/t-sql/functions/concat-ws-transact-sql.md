@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT_WS function
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af7ce381b1a0fdef6db197e8e764d137cf641b7c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3f2865bfbe4e2629e93ba5e142c9fd46139670f6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635397"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82804834"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]

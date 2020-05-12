@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CONVERT function
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: 25ad0382942300663df7aaf729357d157c8c107f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 41931f94fdd887c453fefb490fe721de1b3605cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632731"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832802"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

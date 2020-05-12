@@ -4,8 +4,6 @@ description: SQL Server Integration Services (SSIS) 套件可以使用 Azure Dat
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +12,13 @@ f1_keywords:
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: c2ae186aa7d7fe9ee4ef7da26ed0f5e667b8e2d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: fa388a47c6a7cfd4ecae15ea145ff358eb88232c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67904814"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765619"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 連線管理員
 

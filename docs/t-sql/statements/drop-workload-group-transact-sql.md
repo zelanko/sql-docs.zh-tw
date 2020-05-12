@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f50ecd1b6cb74367512822b0257094aa3e3d5b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d2bbbee44b7b50e5d25bda3b4d10c6123db6497b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636396"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001153"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -30,78 +30,40 @@ ms.locfileid: "81636396"
 
 在下列資料列中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+|---|---|---|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
 
 &nbsp;
 
 ## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL Database 受控執行個體
 
-卸除現有使用者定義的資源管理員工作負載群組。
-
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
-
-## <a name="syntax"></a>語法
-
-```syntaxsql
-DROP WORKLOAD GROUP group_name
-[;]
-```
-
-## <a name="arguments"></a>引數
-
-*group_name* 是現有使用者定義之工作負載群組的名稱。
-
-## <a name="remarks"></a>備註
-
-在資源管理員的內部或預設群組上，不允許使用 DROP WORKLOAD GROUP 陳述式。
-
-當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。
-
-如果工作負載群組包含使用中工作階段，當呼叫 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式以套用變更時，卸除工作負載群組或將工作負載群組移到不同的資源集區將會失敗。 若要避免這個問題，您可以採取下列其中一個動作：
-
-- 等到受影響之群組的所有工作階段已經中斷連接後，重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。
-
-- 在受影響的群組中，使用 KILL 命令明確地停止工作階段，然後重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。
-
-- 重新啟動伺服器。 重新啟動程序完成後，將不會建立已經刪除的群組，而且已經移動的群組將會使用新的資源集區指派。
-
-- 在您已經發出 DROP WORKLOAD GROUP 陳述式但決定您不要明確地停止工作階段以套用變更的實例中，您可以使用您發出 DROP 陳述式前的相同名稱重新建立群組，然後將該群組移到原始的資源集區。 若要套用變更，請執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。
-
-## <a name="permissions"></a>權限
-
-需要 CONTROL SERVER 權限。
-
-## <a name="examples"></a>範例
-
-下列範例會卸除名稱為 `adhoc` 的工作負載群組。
-
-```
-DROP WORKLOAD GROUP adhoc;
-GO
-ALTER RESOURCE GOVERNOR RECONFIGURE;
-GO
-```
-
-## <a name="see-also"></a>另請參閱
-
-- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)
-- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)  
-- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)
-- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)
-- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
-- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+||||
+|---|---|---|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+
+&nbsp;
+
+##  <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL Database 受控執行個體
+
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
+
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />受控執行個體](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+||||
+|---|---|---|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />受控執行個體](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_** &nbsp;|
+||||
 
 &nbsp;
 
@@ -109,11 +71,11 @@ GO
 
 卸除工作負載群組。  一旦陳述式完成，設定就會生效。
 
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 DROP WORKLOAD GROUP group_name  
 ```
 

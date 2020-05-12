@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aaeef70fe81699d0cbb00ba3d7e5a6dfcf1b6aa7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c410726c23e9d2652e35f3566b877ff9e422179a
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241725"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922333"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>設定對 Always On 可用性群組中次要複本的唯讀存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -204,25 +204,25 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
--   [Always On:Value Proposition of Readable Secondary](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx) (Always On：可讀取次要的價值主張)  
+-   [Always On:Value Proposition of Readable Secondary](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary) (Always On：可讀取次要的價值主張)  
   
--   [Always On:Why there are two options to enable a secondary replica for read workload?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx) (Always On：為何有兩個選項可針對讀取工作負載啟用次要複本？)  
+-   [Always On:Why there are two options to enable a secondary replica for read workload?](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload) (Always On：為何有兩個選項可針對讀取工作負載啟用次要複本？)  
   
--   [Always On:Setting up Readable Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx) (Always On：設定可讀取的次要複本)  
+-   [Always On:Setting up Readable Secondary Replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica) (Always On：設定可讀取的次要複本)  
   
--   [Always On:I just enabled Readable Secondary but my query is blocked?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx) (Always On：我剛剛啟用可讀取次要，但我的查詢被封鎖？)  
+-   [Always On:I just enabled Readable Secondary but my query is blocked?](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked) (Always On：我剛剛啟用可讀取次要，但我的查詢被封鎖？)  
   
--   [Always On:Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx) (Always On：在可讀取次要、唯讀資料庫和資料庫快照集上提供最新的統計資料)  
+-   [Always On:Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot) (Always On：在可讀取次要、唯讀資料庫和資料庫快照集上提供最新的統計資料)  
   
--   [Always On:Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx) (Always On：唯讀資料庫、資料庫快照集和次要複本上的統計資料挑戰)  
+-   [Always On:Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica) (Always On：唯讀資料庫、資料庫快照集和次要複本上的統計資料挑戰)  
   
--   [Always On:Impact on the primary workload when you run reporting workload on the secondary replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx) (Always On：在次要複本上執行報告工作負載時，對主要工作負載的影響)  
+-   [Always On:Impact on the primary workload when you run reporting workload on the secondary replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica) (Always On：在次要複本上執行報告工作負載時，對主要工作負載的影響)  
   
--   [Always On:Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx) (Always On：可讀取次要上報告工作負載對應至快照集隔離的影響)  
+-   [Always On:Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation) (Always On：可讀取次要上報告工作負載對應至快照集隔離的影響)  
   
--   [Always On:Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx) (Always On：在次要複本上執行報告工作負載時，將 REDO 執行緒封鎖降至最低)  
+-   [Always On:Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica) (Always On：在次要複本上執行報告工作負載時，將 REDO 執行緒封鎖降至最低)  
   
--   [Always On:Readable Secondary and data latency](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx) (Always On：可讀取次要和資料延遲)  
+-   [Always On:Readable Secondary and data latency](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency) (Always On：可讀取次要和資料延遲)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
