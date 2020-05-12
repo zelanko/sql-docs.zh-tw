@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2bcb7e2af7646059f6cb7ee38a4f136f1a62ae2b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487987"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924792"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -32,7 +32,7 @@ ms.locfileid: "81487987"
 若要使用 AlwaysOn for SSIS 目錄在 Scale Out Master 端設定高可用性，請執行下列動作：
 
 ## <a name="1-prerequisites"></a>1.Prerequisites
-設定 Windows 容錯移轉叢集。 如需相關指示，請參閱[安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)部落格文章。 在所有叢集節點上安裝功能和工具。
+設定 Windows 容錯移轉叢集。 如需相關指示，請參閱[安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733)部落格文章。 在所有叢集節點上安裝功能和工具。
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2.在主要節點上安裝 Scale Out Master
 在 Scale Out Master 的主要節點上，安裝 SQL Server Database Engine Services、Integration Services 和 Scale Out Master。 
