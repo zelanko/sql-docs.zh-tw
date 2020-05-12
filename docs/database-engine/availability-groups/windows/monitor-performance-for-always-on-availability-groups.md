@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014686"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922358"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ ms.locfileid: "68014686"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>監視 RTO 和 RPO  
- 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似下列文章中提供的 GUI 教學課程：[Always On 健康情況模型，第 2 部分：Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Always On 健全狀況模型第 2 部分：擴充健全狀況模型)。  
+ 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似下列文章中提供的 GUI 教學課程：[Always On 健康情況模型，第 2 部分：Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Always On 健全狀況模型第 2 部分：擴充健全狀況模型)。  
   
  [預估容錯移轉時間 (RTO)](#estimating-failover-time-rto) 和[預估潛在資料遺失 (RPO)](#estimating-potential-data-loss-rpo) 中容錯移轉時間和潛在資料遺失的元素，會提供為原則管理 Facet **資料庫複本狀態**中便利的效能計量 (請參閱[檢閱 SQL Server 物件的原則式管理 Facet](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md))。 您可以依排程監視這兩個計量，並在計量分別超過您的 RTO 和 RPO 時收到警示。  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - system functions [SQL Server]
 - functions [SQL Server], system
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7c7c2f167924c6a733b459e95d8320e762bfe44a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: f0ea71a48ffe6652edb9d2bf0265a906c1d15202
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117531"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824155"
 ---
 # <a name="system-functions-transact-sql"></a>系統函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

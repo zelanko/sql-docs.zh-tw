@@ -2,7 +2,7 @@
 title: 設定連線屬性
 description: 適用於 Microsoft JDBC Driver for SQL Server 的連接字串屬性可以透過各種方式來指定。
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fadc79d2d44cbd835fafbf4ecd68247122577c66
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 0fcc9c86bc71846fd43cd1c606b55116c2171ca4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487077"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922326"
 ---
 # <a name="setting-the-connection-properties"></a>設定連線屬性
 
@@ -71,9 +71,9 @@ ms.locfileid: "81487077"
 | INSTANCENAME<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 要連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 如果未指定，將會連接到預設執行個體。 如果已指定 instanceName 與通訊埠，請參閱通訊埠的注意事項。<br/><br/> 如果您在 **Server** 連線屬性中指定虛擬網路名稱，則不能使用 **instanceName** 連線屬性。 請參閱 [JDBC Driver 對於高可用性、災害復原的支援](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)，以取得詳細資訊。 |
 | integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | 設定為 "true" 以指出 Windows 作業系統上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 Windows 認證。 若為 "true"，JDBC 驅動程式會搜尋本機電腦認證快取，以取得使用者登入電腦或網路時所提供的認證。<br/><br/> 設定為 "true" (搭配 **authenticationscheme=JavaKerberos**)，以指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 認證。 如需有關 Kerberos 驗證的詳細資訊，請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) \(機器翻譯\)。 <br/><br/> 設定為 "true" (搭配 **authenticationscheme=NTLM**)，以指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 NTLM 認證。 <br/><br/> 若為 "false"，必須提供使用者名稱及密碼。 |
 | jaasConfigurationName<br/><br/>String<br/><br/>SQLJDBCDriver | 從 Microsoft JDBC Driver 6.2 for SQL Server 開始，每個 SQL Server 連線都可以有自己的 JAAS 登入設定檔來建立 Kerberos 連線。 可以透過此屬性傳遞登入設定檔的名稱。 <br/> 根據預設，驅動程式會針對 IBM JVM 將屬性設定為 `useDefaultCcache = true`，針對其他 JVM 則設定為 `useTicketCache = true`。 |
-| keyStoreAuthentication<br/><br/>String<br/><br/>null | 從 Microsoft JDBC Driver 6.0 for SQL Server 開始，此屬性會識別哪一個金鑰存放區可順暢地設定 Always Encrypted 連線，並決定用於對金鑰存放區進行驗證的驗證機制。 Microsoft JDBC Driver 6.0 for SQL Server 支援使用此屬性順暢地設定 Java 金鑰存放區，若要這樣做，您必須設定 "**keyStoreAuthentication=JavaKeyStorePassword**"。 請注意，若要使用此屬性，您也必須設定 Java 金鑰存放區的 **keyStoreLocation** 與 **keyStoreSecret** 屬性。 <br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
-| keyStoreLocation<br/><br/>String<br/><br/>null | 當設定為 **keyStoreAuthentication=JavaKeyStorePassword** 時，**keyStoreLocation** 屬性會識別 Java 金鑰儲存區檔案的路徑，該檔案儲存要與 Always Encrypted 資料搭配使用的資料行主要金鑰。 請注意，路徑必須包含金鑰儲存區檔案名稱。<br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
-| keyStoreSecret<br/><br/>String<br/><br/>null | 當設定為 **keyStoreAuthentication=JavaKeyStorePassword** 時，**keyStoreSecret** 屬性會識別用於金鑰儲存區和金鑰的密碼。 請注意，若要使用 Java 金鑰儲存區，則金鑰儲存區和金鑰密碼必須相同。<br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
+| keyStoreAuthentication<br/><br/>String<br/><br/>null | 從 Microsoft JDBC Driver 6.0 for SQL Server 開始，此屬性會識別哪一個金鑰存放區可順暢地設定 Always Encrypted 連線，並決定用於對金鑰存放區進行驗證的驗證機制。 Microsoft JDBC Driver 6.0 for SQL Server 支援使用此屬性順暢地設定 Java 金鑰存放區，若要這樣做，您必須設定 "**keyStoreAuthentication=JavaKeyStorePassword**"。 請注意，若要使用此屬性，您也必須設定 Java 金鑰存放區的 **keyStoreLocation** 與 **keyStoreSecret** 屬性。 <br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md)。 |
+| keyStoreLocation<br/><br/>String<br/><br/>null | 當設定為 **keyStoreAuthentication=JavaKeyStorePassword** 時，**keyStoreLocation** 屬性會識別 Java 金鑰儲存區檔案的路徑，該檔案儲存要與 Always Encrypted 資料搭配使用的資料行主要金鑰。 請注意，路徑必須包含金鑰儲存區檔案名稱。<br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md)。 |
+| keyStoreSecret<br/><br/>String<br/><br/>null | 當設定為 **keyStoreAuthentication=JavaKeyStorePassword** 時，**keyStoreSecret** 屬性會識別用於金鑰儲存區和金鑰的密碼。 請注意，若要使用 Java 金鑰儲存區，則金鑰儲存區和金鑰密碼必須相同。<br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md)。 |
 | lastUpdateCount<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | "true" 值只會從傳至伺服器的 SQL 陳述式傳回上次更新計數，而且它可以用在單一 SELECT、INSERT 或 DELETE 陳述式，以忽略伺服器觸發程序所導致的其他更新計數。 將此屬性設為 "false" 會導致傳回所有更新計數，包括伺服器觸發程序所傳回的更新計數。<br/><br/> **注意：** 此屬性只有在與 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法搭配使用時才適用。 所有其他 execute 方法都會傳回所有結果並更新計數。 這個屬性只會影響伺服器觸發程序所傳回的更新計數。 它不會影響結果集或觸發程序執行期間產生的錯誤。 |
 | lockTimeout<br/><br/>int<br/><br/>-1 | 等候資料庫報告鎖定逾時的毫秒數。預設的行為是無限期等待。 如果已指定，則此值為連接上所有陳述式的預設值。 請注意，**Statement.setQueryTimeout()** 可用來設定特定陳述式的逾時。 此值可以為 0，表示不等待。 |
 | loginTimeout<br/><br/>int<br/>[0..65535]<br/><br/>15 | 驅動程式應等待失敗連接逾時的秒數。 值為零表示此逾時為預設系統逾時，預設指定為 15 秒。 非零值為驅動程式應等待失敗連接之逾時的秒數。<br/><br/> 如果您在 **Server** 連線屬性中指定虛擬網路名稱，您應該指定三分鐘或更長的逾時值，好讓容錯移轉連線有充足的時間可以順利完成。 請參閱 [JDBC 驅動程式對於高可用性、災害復原的支援](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)，以取得詳細資訊。 |

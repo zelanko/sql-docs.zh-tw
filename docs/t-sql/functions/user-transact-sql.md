@@ -20,15 +20,15 @@ helpviewer_keywords:
 - names [SQL Server], database users
 - database usernames [SQL Server]
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21ae6663e264b84987b50ea48ffc91f06c9f2052
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844315"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832070"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
