@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b122ee434979bb25c9a1fb0fa1c67887f5cb3eba
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72260166"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826595"
 ---
 # <a name="point-geography-data-type"></a>Point (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,21 +39,21 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>引數  
  *Lat*  
- 這是 **float** 運算式，代表所要產生之 **Point** 的 X 座標。  
+ 這是 **float** 運算式，代表所要產生之 **Point** 的 Y 座標。  
   
  *Long*  
- 這是 **float** 運算式，代表所要產生之 **Point** 的 Y 座標。 如需有關有效緯度和經度值的詳細資訊，請參閱 [Point](../../relational-databases/spatial/point.md)。  
+ 這是 **float** 運算式，代表所要產生之 **Point** 的 X 座標。 如需有關有效緯度和經度值的詳細資訊，請參閱 [Point](../../relational-databases/spatial/point.md)。  
   
  *SRID*  
  這是 **int** 運算式，代表要傳回之**地理**執行個體的[空間參考識別碼](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)。  
+  
+> [!NOTE]  
+>  引數的點 (geography 資料類型) 的方法有相較於 WKT 為反轉的座標。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
  CLR 傳回型別：**SqlGeography**  
-  
-> [!NOTE]  
->  引數的點 (geography 資料類型) 的方法有相較於 WKT 為反轉的座標。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `Point()` 建立 `geography` 例項。  
@@ -66,5 +66,3 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>另請參閱  
  [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  

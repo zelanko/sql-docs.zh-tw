@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012414"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816412"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 
@@ -526,12 +526,12 @@ hist AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
      FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
-    WHERE  (rs.first_execution_time >= @history_start_time
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
+    WHERE (rs.first_execution_time >= @history_start_time
                AND rs.last_execution_time < @history_end_time)
         OR (rs.first_execution_time <= @history_start_time
                AND rs.last_execution_time > @history_start_time)
@@ -543,11 +543,11 @@ recent AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
     FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
     WHERE  (rs.first_execution_time >= @recent_start_time
                AND rs.last_execution_time < @recent_end_time)
         OR (rs.first_execution_time <= @recent_start_time
@@ -557,25 +557,25 @@ recent AS
     GROUP BY p.query_id
 )
 SELECT
-    results.query_id query_id,
-    results.query_text query_text,
-    results.additional_duration_workload additional_duration_workload,
-    results.total_duration_recent total_duration_recent,
-    results.total_duration_hist total_duration_hist,
-    ISNULL(results.count_executions_recent, 0) count_executions_recent,
-    ISNULL(results.count_executions_hist, 0) count_executions_hist
+    results.query_id AS query_id,
+    results.query_text AS query_text,
+    results.additional_duration_workload AS additional_duration_workload,
+    results.total_duration_recent AS total_duration_recent,
+    results.total_duration_hist AS total_duration_hist,
+    ISNULL(results.count_executions_recent, 0) AS count_executions_recent,
+    ISNULL(results.count_executions_hist, 0) AS count_executions_hist
 FROM
 (
     SELECT
-        hist.query_id query_id,
-        qt.query_sql_text query_text,
+        hist.query_id AS query_id,
+        qt.query_sql_text AS query_text,
         ROUND(CONVERT(float, recent.total_duration/
                    recent.count_executions-hist.total_duration/hist.count_executions)
                *(recent.count_executions), 2) AS additional_duration_workload,
-        ROUND(recent.total_duration, 2) total_duration_recent,
-        ROUND(hist.total_duration, 2) total_duration_hist,
-        recent.count_executions count_executions_recent,
-        hist.count_executions count_executions_hist
+        ROUND(recent.total_duration, 2) AS total_duration_recent,
+        ROUND(hist.total_duration, 2) AS total_duration_hist,
+        recent.count_executions AS count_executions_recent,
+        hist.count_executions AS count_executions_hist
     FROM hist
         JOIN recent
             ON hist.query_id = recent.query_id

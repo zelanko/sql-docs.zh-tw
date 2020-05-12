@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244377"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925275"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>產生 Always On 可用性群組的 CLUSTER.LOG 並進行分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244377"
 ## <a name="generate-cluster-log"></a>產生叢集記錄檔  
  您可以透過兩種方式產生叢集記錄檔：  
   
-1.  在命令提示字元使用 `cluster /log /g` 命令。 此命令會產生叢集記錄檔到每個 WSFC 節點上的 \windows\cluster\reports 目錄。 這個方法的優點是，您可以使用 `/level` 選項來指定所產生記錄檔的詳細資訊層級。 缺點是您不能指定所產生叢集記錄檔的目的地目錄。 如需詳細資訊，請參閱[如何在 Windows Server 2008 容錯移轉叢集中建立 cluster.log](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) \(英文\)。  
+1.  在命令提示字元使用 `cluster /log /g` 命令。 此命令會產生叢集記錄檔到每個 WSFC 節點上的 \windows\cluster\reports 目錄。 這個方法的優點是，您可以使用 `/level` 選項來指定所產生記錄檔的詳細資訊層級。 缺點是您不能指定所產生叢集記錄檔的目的地目錄。 如需詳細資訊，請參閱[如何在 Windows Server 2008 容錯移轉叢集中建立 cluster.log](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283) \(英文\)。  
   
 2.  使用 [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) \(英文\) PowerShell Cmdlet。 這個方法的優點是您可以將產生自所有節點的叢集記錄檔，集中到執行 Cmdlet 節點上的單一目的地目錄。 缺點是，您無法指定所產生記錄檔的詳細資訊層級。  
   
