@@ -16,14 +16,14 @@ helpviewer_keywords:
 - NEWSEQUENTIALID function
 - GUIDs [SQL Server]
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 6daa11e30654beed9d4ad4c4d316b075a812b324
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914936"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828682"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

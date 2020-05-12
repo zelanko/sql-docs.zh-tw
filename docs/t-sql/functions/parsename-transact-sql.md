@@ -19,15 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], names
 - part of object names [SQL Server]
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b36e31e163999a6af70b498fef9d65c2ce0ae55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71c741c677c83d9d0ba64e8d250442bb059c711d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843623"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832952"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

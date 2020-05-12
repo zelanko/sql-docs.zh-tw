@@ -17,15 +17,15 @@ helpviewer_keywords:
 - repeated spaces
 - SPACE function
 ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cca2bded1868bfb8d57cc8d68c50ec80afeeb28c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6931afcbb57208f984fecdc1ff685059b54956a6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635645"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82803579"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

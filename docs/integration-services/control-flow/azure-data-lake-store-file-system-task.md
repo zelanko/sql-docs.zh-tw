@@ -3,8 +3,6 @@ title: Azure Data Lake Store 檔案系統工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +10,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: f5cd88953a9f33fa4ba44784d30333487a8d832b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947342"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763639"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作
 

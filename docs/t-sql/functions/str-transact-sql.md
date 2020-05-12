@@ -18,15 +18,15 @@ helpviewer_keywords:
 - character data [SQL Server]
 - STR function
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df044b50175c6f07747f4627d21d0f088e3f5e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: acfc7bb09599f5cd027e64b7e41a56ef6001d1b2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635622"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823680"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
