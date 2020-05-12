@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system statistical functions [SQL Server]
 - functions [SQL Server], statistical
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c55a051866ae346d5f83c898dc8292833d6d0679
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: bc142e8df0c4e55b1cbd78ca0fa8b7dcb2923d34
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832152"
 ---
 # <a name="system-statistical-functions-transact-sql"></a>系統統計函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

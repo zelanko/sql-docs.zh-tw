@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 84d76508ad50de0b76266ce936f752065b989105
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 26a2307594e694d88cd10e03e8bf49b8f5ff06bc
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664369"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872745"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -251,9 +251,8 @@ Python 和 R 的安裝選項：
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.7* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.7*
-sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
+sudo zypper install mssql-mlservices-mlm-py
+sudo zypper install mssql-mlservices-mlm-r
 ```
 
 ### <a name="minimum-installation"></a>最小安裝 
@@ -269,9 +268,8 @@ sudo zypper install mssql-mlservices-mlm-r-9.4.7*
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python extensions
-# Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.7*
-sudo zypper install mssql-mlservices-packages-r-9.4.7*
+sudo zypper install mssql-mlservices-packages-py
+sudo zypper install mssql-mlservices-packages-r
 ```
 
 ## <a name="post-install-config-required"></a>安裝後設定 (必要)
