@@ -2,7 +2,7 @@
 title: 搭配使用 Always Encrypted 與 JDBC 驅動程式
 description: 了解如何在您的 Java 應用程式中搭配使用 Always Encrypted 和 JDBC Driver for SQL Server 來加密伺服器上的敏感性資料。
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37250a846a7dbf712a61731c3ee996b1312d3b8c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634862"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886351"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 此頁面提供有關如何使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 與 Microsoft JDBC Driver 6.0 (或更高版本) for SQL Server 來開發 Java 應用程式的相關資訊。
@@ -58,7 +59,8 @@ Microsoft JDBC Driver for SQL Server 隨附下列內建的資料行主要金鑰�
 下列各節將會更加詳細地描述這些金鑰儲存區提供者。 您只需要實作單一金鑰儲存區提供者以使用 Always Encrypted。
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 金鑰保存庫提供者
-Azure Key Vault 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 針對在 Azure Key Vault 中儲存金鑰的應用程式，Microsoft JDBC Driver for SQL Server 包含內建提供者 SQLServerColumnEncryptionAzureKeyVaultProvider。 此提供者的名稱為 AZURE_KEY_VAULT。 若要使用 Azure Key Vault 存放區提供者，應用程式開發人員必須在 Azure Key Vault 中建立存放區和金鑰，然後在 Azure Active Directory 中建立應用程式註冊。 必須在針對搭配 Always Encrypted 使用所建立的金鑰保存庫的已定義存取原則中，為註冊的應用程式授與 [取得]、[解密]、[加密]、[將金鑰解除包裝]、[包裝金鑰] 及 [驗證] 權限。 如需如何設定金鑰保存庫及建立資料行主要金鑰的詳細資訊，請參閱 [Azure Key Vault - 逐步執行](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) \(英文\) 及[在 Azure 金鑰保存庫中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
+
+Azure Key Vault 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 針對在 Azure Key Vault 中儲存金鑰的應用程式，Microsoft JDBC Driver for SQL Server 包含內建提供者 SQLServerColumnEncryptionAzureKeyVaultProvider。 此提供者的名稱為 AZURE_KEY_VAULT。 若要使用 Azure Key Vault 存放區提供者，應用程式開發人員必須在 Azure Key Vault 中建立存放區和金鑰，然後在 Azure Active Directory 中建立應用程式註冊。 必須在針對搭配 Always Encrypted 使用所建立的金鑰保存庫的已定義存取原則中，為註冊的應用程式授與 [取得]、[解密]、[加密]、[將金鑰解除包裝]、[包裝金鑰] 及 [驗證] 權限。 如需如何設定金鑰保存庫及建立資料行主要金鑰的詳細資訊，請參閱 [Azure Key Vault - 逐步執行](/archive/blogs/kv/azure-key-vault-step-by-step) \(英文\) 及[在 Azure 金鑰保存庫中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
 
 使用 Azure Key Vault 提供者時，JDBC 驅動程式會根據信任的端點清單來驗證資料行主要金鑰路徑。 從驅動程式 8.2.2 版開始，這份清單即為可設定的：在應用程式的工作目錄中建立 "mssql-jdbc.properties" 檔案，將 `AKVTrustedEndpoints` 屬性設為以分號分隔的清單。 如果值以分號開頭，則會延伸預設清單；否則會取代預設清單。
 

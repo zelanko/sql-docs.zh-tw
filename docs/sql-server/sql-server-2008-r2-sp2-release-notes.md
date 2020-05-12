@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2008 R2 SP2 版本資訊 | Microsoft Docs
+description: 這份版本資訊文件將描述有關您安裝或疑難排解 Microsoft SQL Server 2008 R2 Service Pack 2 之前應該閱讀的已知問題。
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 9625b8f37d69a8360859c8fd17a207b696234b9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb817c9983e3bf4a7dd4e1d148dd5a26b18a8738
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79112361"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999413"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "79112361"
 |無 64 位元版本的 SQL Server 2008 R2 Management Studio 安裝|安裝 SQL Server 2008 R2 Management Studio，包括 SP2|SQLManagementStudio_x64_ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791) ，可供免費安裝 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 如果 SQAGTRES.dll 已由其他處理序鎖定，安裝程式可能發生失敗  
-**問題**：SQL Server 安裝程式作業可能會失敗並出現以下錯誤： `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 起因是 C:\Windows\system32\SQAGTRES.DLL 已由另一個處理序鎖定，而安裝程式無法加以更新。  
+**問題**：SQL Server 安裝程式作業可能會失敗並出現以下錯誤：`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.`根本原因是 C:\Windows\system32\SQAGTRES.DLL 已由另一個處理序鎖定，使安裝程式無法加以更新。  
   
 **因應措施**：暫時將 C:\Windows\system32\SQAGTRES.DLL 重新命名，例如 C:\Windows\system32\SQAGTRES_old.DLL，然後選取安裝程式錯誤訊息上的 [重試] 選項。 如此，安裝程式就能繼續執行。 重新開機之後，您可以刪除暫存檔 C:\Windows\system32\SQAGTRES_old.DLL。  
   

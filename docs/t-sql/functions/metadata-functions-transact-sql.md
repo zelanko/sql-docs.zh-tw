@@ -13,14 +13,14 @@ helpviewer_keywords:
 - metadata [SQL Server], functions
 - functions [SQL Server], metadata
 ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dde95a91f78c8e22bb6452421e41b10750f5c5fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: db78fd96b6a20a81591373a791fd0fd101444e11
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130281"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832967"
 ---
 # <a name="metadata-functions-transact-sql"></a>中繼資料函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
