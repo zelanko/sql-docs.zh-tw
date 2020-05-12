@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903795"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924828"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性
 
@@ -26,7 +26,7 @@ ms.locfileid: "77903795"
 若要使用 SQL Server 容錯移轉叢集執行個體在 Scale Out Master 端設定高可用性，請執行下列動作：
 
 ## <a name="1-prerequisites"></a>1.Prerequisites
-設定 Windows 容錯移轉叢集。 如需相關指示，請參閱[安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)部落格文章。 在所有叢集節點上安裝功能和工具。
+設定 Windows 容錯移轉叢集。 如需相關指示，請參閱[安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733)部落格文章。 在所有叢集節點上安裝功能和工具。
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2.安裝 SQL Server 容錯移轉叢集
 安裝 SQL Server 容錯移轉叢集。 如需指示，請參閱 [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 安裝期間，在 [特徵選取] 頁面上選取 [資料庫引擎服務]。 記錄 SQL Server 網路名稱供未來的設定使用。

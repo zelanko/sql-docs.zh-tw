@@ -1,8 +1,8 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: Microsoft OLE DB Driver for SQL Server
 description: Microsoft OLE DB Driver for SQL Server 提供透過標準 OLE DB API 連線至 SQL Server 和 Azure SQL Database 的能力。
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 52877846ab573b146c148dab681cd45aec0a083c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7f66fc300dce4e3b9fac9a2476c4703fd5be5c88
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488508"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886345"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ OLE DB Driver for SQL Server 是用於 OLE DB 的獨立資料存取應用程式�
 有三個不同世代的 Microsoft OLE DB Provider for SQL Server。
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1.Microsoft OLE DB Provider for SQL Server (SQLOLEDB)
-[Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) 仍隨附於 [Windows Data Access Component](https://msdn.microsoft.com/library/ms692897.aspx) \(英文\)。 它已不再受到維護，因此，不建議使用此驅動程式來進行新開發。
+[Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) 仍隨附於 [Windows Data Access Component](/previous-versions/windows/desktop/ms692897(v=vs.85)) \(英文\)。 它已不再受到維護，因此，不建議使用此驅動程式來進行新開發。
 
 ### <a name="2-sql-server-native-client-snac"></a>2.SQL Server Native Client (SNAC)
 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，[SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) 包含 OLE DB 提供者介面 (SQLNCLI)，其為透過 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 隨附於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 OLE DB 提供者。
 
-[已在 2011 年宣布取代](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) \(英文\) 它，因此，不建議使用此驅動程式來進行新開發。 如需 SNAC 生命週期與可用下載的詳細資訊，請參閱 [SNAC 生命週期的說明](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/) \(英文\)。
+[已在 2011 年宣布取代](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) \(英文\) 它，因此，不建議使用此驅動程式來進行新開發。 如需 SNAC 生命週期與可用下載的詳細資訊，請參閱 [SNAC 生命週期的說明](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained) \(英文\)。
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3.Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)
-OLE DB 已[取消取代](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) \(英文\) 並於 2018 年發行。
+OLE DB 已[取消取代](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) \(英文\) 並於 2018 年發行。
 
 新的 OLE DB 提供者稱為 Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)。 從現在開始，新的提供者將使用最新的伺服器功能來更新。
 

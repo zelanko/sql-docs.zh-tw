@@ -1,7 +1,8 @@
 ---
-title: ODBC Linux 和 macOS 的常見問題集 (FAQ) | Microsoft Docs
+title: ODBC Linux 和 macOS 的常見問題集 (FAQ)
+description: 尋找 Linux 和 macOS 的 Microsoft ODBC Driver for SQL Server 常見問題解答。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b266913d6e8e1a073c8831880ddcd4938b2b9dc9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 700c89b520cdaa33a60f1adabe69c669388bcccb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921922"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886451"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 和 macOS 的常見問題集 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -39,7 +40,7 @@ UTF-8 用於 SQL_CHAR 資料，UTF-16 則用於 SQL_WCHAR 資料。 視系統地
 
 **是否有 ODBC 範例可讓我下載並與驅動程式一起執行，以試驗或評估驅動程式？**
 
-如需範例，請參閱 [使用 ODBC Driver on Linux 的現有 MSDN C++ ODBC 範例](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 。 這也適用於 macOS ODBC 驅動程式。 
+如需範例，請參閱 [使用 ODBC Driver on Linux 的現有 MSDN C++ ODBC 範例](/archive/blogs/sqlblog/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver) 。 這也適用於 macOS ODBC 驅動程式。
 
 **Linux 或 macOS 上的 ODBC 驅動程式是開放原始碼嗎？**
 

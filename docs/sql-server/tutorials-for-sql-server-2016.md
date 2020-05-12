@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
-ms.openlocfilehash: fde2b4aa622d420795422dd614ad313106dd586e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488347"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000638"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
