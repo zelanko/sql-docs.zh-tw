@@ -17,14 +17,14 @@ helpviewer_keywords:
 - remote servers [SQL Server], logins
 - '@@REMSERVER function'
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0bc401b25b2822b7322c856ed3b2de0e670656b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: fa8c4f46b623d0893354fe07618a8d190950422b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944507"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823755"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

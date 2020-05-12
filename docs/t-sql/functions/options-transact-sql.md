@@ -17,14 +17,14 @@ helpviewer_keywords:
 - '@@OPTIONS function'
 - current SET options
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: a3bf355fafebc3f59ce6d69f4a68f1fe47229ec6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982466"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82803950"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1083b1905500f329de93beb43ea22047a1e498f3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: d8a2f9871cbf547e465ef82049f23fcad9988d64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635003"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822885"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>邏輯函式 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

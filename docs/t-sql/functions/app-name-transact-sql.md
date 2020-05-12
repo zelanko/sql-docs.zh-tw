@@ -19,14 +19,14 @@ helpviewer_keywords:
 - current session application names
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 3e467202bd40ce208b45d3040d675ca17f5412c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843435"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832239"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

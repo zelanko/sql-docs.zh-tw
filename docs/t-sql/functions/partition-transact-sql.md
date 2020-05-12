@@ -16,14 +16,14 @@ helpviewer_keywords:
 - $PARTITION function
 - partitions [SQL Server], numbers
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c8795fddb719debb147a0733cc5cfb831662058e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914379"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832958"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

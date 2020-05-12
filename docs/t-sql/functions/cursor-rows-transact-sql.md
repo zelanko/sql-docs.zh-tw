@@ -18,14 +18,14 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 45d35cae3106bbcc55ff44a66f0c66648f7952fa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026267"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823906"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

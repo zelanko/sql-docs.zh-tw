@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e20a18a405bc0bf2bf8fe94926d5bf4a6cb30ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91d278d564ab6647ad1a585c0641dcc17a8dd8f8
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448419"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987441"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -900,7 +900,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### <a name="copy-a-database"></a>複製資料庫
 
-```stntaxsql
+```syntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
