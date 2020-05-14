@@ -1,5 +1,6 @@
 ---
 title: 索引的 Column 元素 (DTA)
+description: 在 DTA 公用程式中，索引其 Column 元素會針對使用者所指定組態來指定要建立索引的資料行。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307882"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831624"
 ---
 # <a name="column-element-for-index-dta"></a>索引的 Column 元素 (DTA)
 
@@ -42,7 +43,7 @@ ms.locfileid: "75307882"
   
 ## <a name="element-attributes"></a>元素屬性  
   
- **Type**：選擇性。 指定索引資料行類型。 請利用 **string** 資料類型和下列其中一個允許的值，來指定這個屬性：  
+ **類型**：選擇性。 指定索引資料行類型。 請利用 **string** 資料類型和下列其中一個允許的值，來指定這個屬性：  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "75307882"
   
      如需內含資料行的詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
- **SortOrder**︰選擇性。 指定資料行的排序順序。 請依照下列方式，利用 **string** 資料類型來指定「遞增」  或「遞減」  排列順序：  
+ **SortOrder**：選擇性。 指定資料行的排序順序。 請依照下列方式，利用 **string** 資料類型來指定「遞增」  或「遞減」  排列順序：  
   
 ```  
 <Column SortOrder="Ascending">  

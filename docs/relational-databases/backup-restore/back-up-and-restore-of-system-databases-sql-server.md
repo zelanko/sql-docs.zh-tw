@@ -1,5 +1,6 @@
 ---
 title: 備份與還原：系統資料庫
+description: SQL Server 會維護運作伺服器執行個體所需的系統資料庫。 在每次重大更新之後，皆必須備份數個系統資料庫。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 45bfedfe24493221570ccc1bc07202f0b4ed8b1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d16e3159f3881df1a904e9d3a6c39bc04667ce9d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247473"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826488"
 ---
 # <a name="backuprestoresystemdatabases-sql-server"></a>備份與還原：系統資料庫 (SQL Server)
 
@@ -34,9 +35,9 @@ ms.locfileid: "75247473"
 |系統資料庫|描述|需要備份嗎？|復原模式|註解|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[master](../../relational-databases/databases/master-database.md)|記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統之所有系統層級資訊的資料庫。|是|Simple|請視需要經常備份 **master** ，充分地保護資料以滿足您業務的需求。 建議安排定期備份，您可在進行大規模更新之後，以額外的備份來補充。|  
-|[model](../../relational-databases/databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。|是|可由使用者設定*|只在有業務上有需要時才備份 **model** ；例如，在自訂資料庫選項之後立即備份。<br /><br /> **最佳作法** ：我們建議您在必要時僅建立 **model**的完整資料庫備份。 因為 **model** 很小，而且少有變更，所以不需要備份記錄。|  
+|[model](../../relational-databases/databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。|是|可由使用者設定*|只在有業務上有需要時才備份 **model** ；例如，在自訂資料庫選項之後立即備份。<br /><br /> **最佳做法：** 我們建議您在必要時僅建立 **model** 的完整資料庫備份。 因為 **model** 很小，而且少有變更，所以不需要備份記錄。|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用於排程警示和作業以及用於記錄操作員的資料庫。 **msdb** 也包含歷程記錄資料表，例如備份和還原歷程記錄資料表。|是|簡單 (預設值)|每當 **msdb** 更新時就加以備份。|  
-|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|唯讀資料庫，其中包含下者隨附之所有系統物件的複本： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|否|-|**Resource** 資料庫位於 mssqlsystemresource.mdf 檔案中，這個檔案中只包含程式碼。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法備份 **Resource** 資料庫。<br /><br /> 注意：您可以將 mssqlsystemresource.mdf 檔視為二進位 (.exe) 檔案而非資料庫檔案，藉以針對該檔案執行以檔案或磁碟為基礎的備份。 但是您無法在這些備份上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原。 還原 mssqlsystemresource.mdf 的備份副本只能手動完成，而且您必須小心不要使用過期或可能不安全的 **Resource** 資料庫來覆寫目前的資料庫。|  
+|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|唯讀資料庫，其中包含下者隨附之所有系統物件的複本： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|否|-|**Resource** 資料庫位於 mssqlsystemresource.mdf 檔案中，這個檔案中只包含程式碼。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法備份 **Resource** 資料庫。<br /><br /> 注意:您可以將 mssqlsystemresource.mdf 檔視為二進位 (.exe) 檔案而非資料庫檔案，藉以針對該檔案執行以檔案或磁碟為基礎的備份。 但是您無法在這些備份上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原。 還原 mssqlsystemresource.mdf 的備份副本只能手動完成，而且您必須小心不要使用過期或可能不安全的 **Resource** 資料庫來覆寫目前的資料庫。|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|用以保存暫存或中繼結果集的工作空間。 每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟動時，就會重新建立此資料庫。 當伺服器執行個體關閉時， **tempdb** 中的任何資料都會被永久刪除。|否|Simple|您不能備份 **tempdb** 系統資料庫。|  
 |[設定散發](../../relational-databases/replication/configure-distribution.md)|唯有將伺服器設定為複寫散發者時才會存在的資料庫。 這個資料庫會儲存各種複寫的中繼資料和記錄資料，以及異動複寫的交易。|是|Simple|如需有關何時備份 **distribution** 資料庫的詳細資訊，請參閱 [備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。|  
   

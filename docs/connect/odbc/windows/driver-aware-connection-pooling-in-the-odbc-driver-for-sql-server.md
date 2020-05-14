@@ -1,7 +1,8 @@
 ---
-title: ODBC Driver for SQL Server 中可感知驅動程式的連線共用 | Microsoft Docs
+title: ODBC Driver 中可感知驅動程式的連接共用
+description: 了解 Windows 版 Microsoft ODBC Driver for SQL Server 中可感知驅動程式連接共用的增強功能。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928303"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922079"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中可感知驅動程式的連接共用
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[可感知驅動程式的連線共用](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主題描述 Windows 版 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的「可感知驅動程式的連線共用」有哪些增強功能：  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[可感知驅動程式的連線共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。 本主題描述 Windows 版 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的「可感知驅動程式的連線共用」有哪些增強功能：  
   
 -   無論連線屬性為何，使用 `SQLDriverConnect` 的連線都會進入與使用 `SQLConnect` 的連線不同的個別集區。
 - 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證和可感知驅動程式的連線共用時，驅動程式並不會使用目前執行緒的 Windows 使用者安全性內容，來區隔集區中的連線。 也就是說，如果連線對於具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的 Windows 模擬案例使用了相同的參數，並且使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證認證連線到後端，則不同的 Windows 使用者將可能使用相同的連線集區。 在使用 Windows 驗證和可感知驅動程式的連接共用時，驅動程式會使用目前 Windows 使用者的安全性內容來區隔集區中的連接。 也就是說，在 Windows 模擬案例中，即使連接使用相同的參數，不同的 Windows 使用者也不會共用連接。

@@ -1,5 +1,6 @@
 ---
 title: 伺服器的 Database 元素 (DTA)
+description: 在 DTA 公用程式中，伺服器的 Database 元素會指定所要微調的特定伺服器上資料庫。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 832cdff550f29bc498ea1cdcbc24fb88b0172729
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d416f6f57d70674a8f9a7b484f7da9c87b18342c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306612"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831586"
 ---
 # <a name="database-element-for-server-dta"></a>伺服器的 Database 元素 (DTA)
 

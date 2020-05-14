@@ -1,7 +1,8 @@
 ---
-title: Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原 | Microsoft Docs
+title: Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原
+description: 了解適用於 Linux 和 macOS 的 Microsoft ODBC 驅動程式如何支援 AlwaysOn 可用性群組。
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922185"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原的支援
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux 和 macOS 的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]的相關資訊，請參閱：  
   
--   [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [建立及設定可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [建立及設定可用性群組 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果在 Linux 或 macOS 上，ODBC 應用程式連線到可用性群組中發生容錯移轉的資料庫，則原始連線會中斷，而且應用程式必須在容錯移轉後開啟新連線，才能繼續工作。
 

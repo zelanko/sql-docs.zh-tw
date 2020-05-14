@@ -1,5 +1,6 @@
 ---
 title: FeatureSet 元素 (DTA)
+description: 在 DTA 公用程式中，FeatureSet 元素會包含在分析期間 Database Engine Tuning Advisor 所使用的實體設計結構。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 72aad15cdd024cf1ee0bc3ea5ed1bc2eb7a42917
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b14578483eca7160cc810ff6bb7e2f04c0638c0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826494"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
 

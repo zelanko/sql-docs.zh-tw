@@ -1,6 +1,6 @@
 ---
 title: 避免衝突 - FILESTREAM 資料庫選項 | Microsoft Docs
-description: 避免與 FILESTREAM 應用程式中的資料庫作業相衝突
+description: 讀取或寫入 FILESTREAM Blob 資料的應用程式可能會發生 Transact-SQL 陳述式衝突錯誤。 了解如何避免這些類型的衝突。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b347a140c07436553945555e52d212e4751fcc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255585"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000155"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免與 FILESTREAM 應用程式中的資料庫作業相衝突
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

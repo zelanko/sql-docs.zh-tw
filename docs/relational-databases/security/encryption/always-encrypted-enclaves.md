@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558023"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999417"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
 - 在使用隨機加密進行加密的資料行上使用模式比對 (LIKE) 和比較運作子。
     > [!NOTE]
     > 目前針對使用 binary2 排序次序 (BIN2 定序) 來定序的字元字串資料行支援以上作業。 使用非 BIN2 定序的字元字串資料行，可使用隨機加密和啟用記憶體保護區的資料行加密金鑰來進行加密。 不過，針對這類資料行所啟用的唯一新功能就是就地加密。
-- 使用隨機加密在資料行上建立非叢集索引。
+- 使用隨機加密在資料行上建立非叢集索引和統計資料。
 
 [功能詳細資料](always-encrypted-database-engine.md#feature-details)所列出之 Always Encrypted 的所有其他限制，也適用於具有安全記憶體保護區的 Always Encrypted。
 

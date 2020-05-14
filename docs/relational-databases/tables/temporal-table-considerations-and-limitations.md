@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487447"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784484"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 
@@ -51,7 +51,7 @@ ms.locfileid: "81487447"
 
   - **Always On：** 完全支援
   - **異動資料擷取與變更資料追蹤：** 僅在目前資料表上獲得支援
-  - **快照集與交易複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 'AS OF' 查詢)。 當散發代理程式啟動時，其會開啟在散發代理程式停止之前皆保持開啟的交易。 由於此行為的緣故，SysStartTime 與 SysEndTime 會填入散發代理程式開始進行第一筆交易的開始時間。 因此，最好是依排程執行散發代理程式，而不是依預設持續加以執行。 不支援使用多位訂閱者，因為這可能會由於本機系統時鐘而導致不一致的時態性資料。
+  - **快照集與交易複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 'AS OF' 查詢)。 當散發代理程式啟動時，其會開啟在散發代理程式停止之前皆保持開啟的交易。 由於此行為，SysStartTime 與 SysEndTime 會填入散發代理程式開始進行第一筆交易的開始時間。 因此，如果 SysStartTime 和 SysEndTime 填入與目前系統時間接近的時間對於應用程式或組織來說很重要，則最好是依排程執行散發代理程式，而非依預設行為持續地執行散發代理程式。 不支援使用多位訂閱者，因為這可能會由於本機系統時鐘而導致不一致的時態性資料。
   - **合併式複寫：** 不支援時態表
 
 - 一般查詢只會影響目前資料表中的資料。 若要查詢歷程記錄資料表中的資料，您必須使用時態查詢。 我們會在本文件後面的＜查詢時態資料＞一節中加以詳述。

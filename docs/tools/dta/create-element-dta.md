@@ -1,5 +1,6 @@
 ---
 title: Create 元素 (DTA)
+description: 在 DTA 公用程式中，Create 元素會包含使用者所指定組態中索引、統計資料或堆積結構的資訊。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c12803dc07617012a6da22b130c2cd954a82c04e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b2bc795c50d835e60e61d48527ac59bfa6dfcbb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307992"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831610"
 ---
 # <a name="create-element-dta"></a>Create 元素 (DTA)
 

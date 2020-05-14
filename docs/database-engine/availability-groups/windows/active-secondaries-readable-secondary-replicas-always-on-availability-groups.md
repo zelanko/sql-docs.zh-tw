@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822399"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784634"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>將唯讀工作負載卸載至 Always On 可用性群組的次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822399"
   
 -   若檔案包含了次要複本所需要的準刪除記錄，則主要複本上對於包含以磁碟為基礎資料表之檔案的 DBCC SHRINKFILE 作業可能會失敗。  
   
--   從 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]開始，即使主要複本由於使用者動作或失敗而離線，可讀取的次要複本依然可以維持在線上。 但是，唯讀路由在此情況下無法運作，因為可用性群組接聽程式也離線。 用戶端必須直接連接到唯讀工作負載的唯讀次要複本。  
+-   從 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 開始，即使主要複本由於使用者動作或失敗而離線，可讀取的次要複本仍會維持在上線狀態，例如因使用者命令或失敗而暫停同步處理，或由於 WSFC 離線而導致複本正在解析狀態。 但是，唯讀路由在此情況下無法運作，因為可用性群組接聽程式也離線。 用戶端必須直接連接到唯讀工作負載的唯讀次要複本。  
   
 > [!NOTE]  
 >  對裝載可讀取之次要複本的伺服器執行個體上查詢 [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動態管理檢視時，可能會發生 REDO 封鎖問題。 這是因為此動態管理檢視會取得指定使用者資料表或檢視表的 IS 鎖定，並因此而封鎖了對該使用者資料表或檢視表之 X 鎖定的 REDO 執行緒要求。  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

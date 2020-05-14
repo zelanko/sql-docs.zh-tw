@@ -1,5 +1,6 @@
 ---
 title: dta 公用程式
+description: DTA 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本，可供在應用程式和指令碼中使用功能。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -21,12 +22,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a72ad8b0cfe32fa7d89238f68e6ae504f1f3167a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258279"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831527"
 ---
 # <a name="dta-utility"></a>dta 公用程式
 

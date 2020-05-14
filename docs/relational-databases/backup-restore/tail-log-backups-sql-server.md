@@ -1,5 +1,6 @@
 ---
 title: 結尾記錄備份 (SQL Server) | Microsoft Docs
+description: 在 SQL Server 中，結尾記錄備份會擷取任何尚未備份的記錄檔記錄，以避免資料遺失，並保持記錄鏈結完整。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 22fda4d5e11b562ea3162ed14766ed085977200e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b719e284c56a1b2a83c4be2dd6db14fa431cc242
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510039"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829778"
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

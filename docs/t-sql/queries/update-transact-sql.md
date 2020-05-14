@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169366"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872772"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>鎖定行為  
- UPDATE 陳述式永遠都會取得它所修改之資料表的獨佔 (X) 鎖定，並保留該鎖定直到交易完成為止。 使用獨佔鎖定時，任何其他交易都無法修改資料。 您可以指定資料表提示，透過指定其他鎖定方法來覆寫 UPDATE 陳述式持續時間的這個預設行為，但是，我們建議僅將提示做為由資深開發人員及資料庫管理員採取的最後手段。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+ UPDATE 陳述式會取得所修改資料列的獨佔 (X) 鎖定，並保留這些鎖定直到交易完成為止。 視 UPDATE 陳述式的查詢計劃、正在修改的資料列數目以及交易隔離等級而定，可能會在「頁面」層級或「資料表」層級取得鎖定，而不是在「資料列」層級。 為避免較高層級的鎖定，請考慮將影響數千或更多資料列的 UPDATE 陳述式分成數批，並確保索引支援任何聯結和篩選條件。 如需 SQL Server 鎖定機制的詳細資料，請參閱[資料庫引擎鎖定](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)一文。  
   
 ## <a name="logging-behavior"></a>記錄行為  
  記錄 UPDATE 陳述式；不過，使用 **\.WRITE** 子句來進行大數值資料類型的部分更新，只會有最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  

@@ -1,6 +1,6 @@
 ---
 title: 空間資料類型概觀 | Microsoft Docs
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb9acb0aa03184f038c2dda9be10b36e6ca32ee
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048517"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784673"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ geometry 類型的圓弧線段定義於 XY 笛卡兒座標平面上 (忽略 Z �
 ### <a name="orientation-of-spatial-data"></a>空間資料的方向  
 在平面系統中，多邊形的環形方向不是重要的因素。 例如，((0, 0), (10, 0), (0, 20), (0, 0)) 描述的多邊形與 ((0, 0), (0, 20), (10, 0), (0, 0)) 描述的多邊形相同。 OGC 的 SQL 簡單特徵規格並未指示環形順序，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未強制使用環形順序。  
 
-在橢圓體系統中，多邊形如果沒有方向的話，將沒有任何意義或是會模稜兩可。 例如，包圍赤道的環形是要描述北半球還是南半球？ 如果我們使用 **geography** 資料類型來儲存空間執行個體，就必須指定此環形的方向，並正確描述此執行個體的位置。 在橢圓體系統中，多邊形的內部是由左側規則定義。  
+在橢圓體系統中，多邊形如果沒有方向的話，將沒有任何意義或是會模稜兩可。 例如，包圍赤道的環形是要描述北半球還是南半球？ 如果我們使用 **geography** 資料類型來儲存空間執行個體，就必須指定此環形的方向，並正確描述此執行個體的位置。 在橢圓體系統中，多邊形的內部是由「左手定則」所定義：如果您想像自己沿著 geography 多邊形的環形、並遵循點所列出的順序行走，則左邊區域會視為多邊形的內部，右邊區域則為多邊形的外部。
 
 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，當相容性層級為 100 以下時， **geography** 資料類型就具有下列限制：  
 -   每一個 **geography** 執行個體都必須納入單一半球。 大於半球的空間物件將無法儲存。  

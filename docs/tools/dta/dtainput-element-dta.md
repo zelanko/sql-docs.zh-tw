@@ -1,5 +1,6 @@
 ---
 title: DTAInput 元素 (DTA)
+description: 在 DTA 公用程式中，DTAInput 元素會包含 Database Engine Tuning Advisor 的 XML 輸入定義。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6801f3d8ce45ba41d24d1062ad9979e80e76b38a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11c91d2b85d04c06012329c2a49d23d68ab1edd4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307711"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831516"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 元素 (DTA)
 

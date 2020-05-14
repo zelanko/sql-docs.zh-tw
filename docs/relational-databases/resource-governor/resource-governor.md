@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912049"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849836"
 ---
 # <a name="resource-governor"></a>資源管理員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 Resource Governor 可讓您指定內送應用程式要求所能使用的 CPU、實體 IO 和記憶體數量限制。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor 是一項功能，其可用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 Resource Governor 可供指定內送應用程式要求所能使用的 CPU、實體 I/O 和記憶體數量限制。  
   
 ## <a name="benefits-of-resource-governor"></a>資源管理員的優點  
  資源管理員可讓您藉由指定內送要求的資源耗用量限制來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和資源。 在「資源管理員」環境中，工作負載是一組大小類似的查詢或要求，可以也應該將其視為單一實體。 這不是一項規定，但是當工作負載的資源使用模式越一致時，您就可以從「資源管理員」得到更多的好處。 可以即時重新設定資源限制，對正在執行的工作負載造成最低的影響。  
   
- 在相同伺服器上有多個相異工作負載的環境中，資源管理員可讓您區分這些工作負載，並根據您指定的限制在要求的情況下配置共用資源。 這些資源是 CPU、實體 IO 和記憶體。  
+ 在相同伺服器上有多個相異工作負載的環境中，資源管理員可讓您區分這些工作負載，並根據您指定的限制在要求的情況下配置共用資源。 這些資源是 CPU、實體 I/O 和記憶體。  
   
  使用資源管理員，您可以：  
   
@@ -34,22 +34,22 @@ ms.locfileid: "67912049"
   
 -   為多工作負載和多使用者環境中的工作負載租用戶提供可預測的效能及支援 SLA。  
   
--   針對 DBCC CHECKDB 等會使 IO 子系統飽和以及對其他工作負載產生負面影響的作業，隔離並限制失控查詢或對 IO 資源進行節流。  
+-   針對 DBCC CHECKDB 等會使 I/O 子系統飽和以及對其他工作負載產生負面影響的作業，隔離並限制失控查詢或對 I/O 資源進行節流。  
   
 -   針對資源使用量交易糾紛，加入細部鎖定資源追蹤，並且為伺服器資源的取用者提供預測帳單。  
   
 ## <a name="resource-governor-constraints"></a>資源管理員條件約束  
  這一版的資源管理員有以下條件約束：  
   
--   資源管理受限於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 「資源管理員」無法用於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+-   資源管理受限於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 Resource Governor 無法用於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
--   在 SQL Server 執行個體之間，沒有任何工作負載監視或工作負載管理。  
+-   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，沒有任何工作負載監視或工作負載管理。  
   
--   資源管理員可以管理 OLTP 工作負載，但是這些類型的查詢 (通常持續時間會很短) 在 CPU 上的時間不一定都夠長而足以套用頻寬控制。 這樣可能會扭曲針對 CPU 使用量百分比傳回的統計資料。  
+-   資源管理員可以管理 OLTP 工作負載，但是這些類型的查詢 (通常持續時間會很短) 在 CPU 上的時間不一定都夠長而足以套用頻寬控制。 這樣可能會扭曲針對 CPU 使用率百分比傳回的統計資料。  
   
--   管理實體 IO 的能力只適用於使用者作業，而非系統工作。 系統工作包含交易記錄的寫入作業及延遲寫入器 IO 作業。 由於大部分寫入作業通常是由系統工作來執行，因此資源管理員主要適用於使用者讀取作業。  
+-   管理實體 I/O 的能力只適用於使用者作業，而非系統工作。 系統工作包含交易記錄的寫入作業及延遲寫入器 I/O 作業。 由於大部分寫入作業通常是由系統工作來執行，因此 Resource Governor 主要適用於使用者讀取作業。  
   
--   您無法設定內部資源集區的 IO 臨界值。  
+-   您無法設定內部資源集區的 I/O 閾值。  
   
 ## <a name="resource-concepts"></a>資源概念  
  下列三個概念是了解和使用資源管理員的基礎：  

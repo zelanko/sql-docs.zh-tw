@@ -1,5 +1,6 @@
 ---
 title: Index 元素 (DTA)
+description: 在 DTA 公用程式中，Index 元素包含要針對使用者所指定組態建立或卸除的索引資訊。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df13c50363723ca9351b6e73cf5db59bc6a183d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307700"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831565"
 ---
 # <a name="index-element-dta"></a>Index 元素 (DTA)
 

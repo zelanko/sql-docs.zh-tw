@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a0385b96c861ae65cae70b332d0117eff97501
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 320dfc27d5582fd46d4ea7d8189e2a6ce4922144
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631832"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925202"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |如果將 *msg_id* 傳遞給 RAISERROR，則識別碼必須定義在 sys.messages 中。|*error_number* 參數不需要定義在 sys.messages 中。|  
 |*msg_str* 參數可以包含 **printf** 格式化樣式。|*message* 參數不接受 **printf** 樣式格式。|  
-|*severity* 參數指定例外狀況的嚴重性。|沒有任何 *severity* 參數。 例外狀況嚴重性永遠設為 16。|  
+|*severity* 參數指定例外狀況的嚴重性。|沒有任何 *severity* 參數。 當使用 THROW 起始例外狀況時，嚴重性一律設為 16。 不過，使用 THROW 重新擲回現有的例外狀況時，嚴重性會設定為該例外狀況的嚴重性層級。|  
   
 ## <a name="examples"></a>範例  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2014 版本資訊 | Microsoft Docs
+description: 建議在安裝或對 Microsoft SQL Server 2014 (12.x) 版本進行疑難排解之前，先閱讀這份版本資訊文件所描述的已知問題。
 ms.custom: ''
 ms.date: 03/15/2018
 ms.prod: sql
@@ -7,15 +8,15 @@ ms.technology: install
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70155692"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001138"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

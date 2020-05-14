@@ -1,6 +1,7 @@
 ---
 title: 設定 Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: 本文描述在使用 SQL Server 其 Distributed Replay 功能之前應先考量的產品需求。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307039"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999378"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75307039"
   
 -   [重新執行組態檔](#ReplayConfig)  
   
-##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> 控制器組態檔：DReplayController.config  
+##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> 控制器設定檔：DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務啟動時，會從控制器組態檔 `DReplayController.config`載入記錄層次。 這個檔案位於您安裝 Distributed Replay Controller 服務的資料夾中：  
   
  **\<控制器安裝路徑>\DReplayController.config**  
@@ -51,7 +52,7 @@ ms.locfileid: "75307039"
 </Options>  
 ```  
   
-##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> 用戶端組態檔：DReplayClient.config  
+##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> 用戶端設定檔：DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務啟動時，會從用戶端組態檔 ( `DReplayClient.config`) 載入組態設定。 這個檔案位於每個用戶端上您安裝 Distributed Replay Client 服務的資料夾中：  
   
  **\<用戶端安裝路徑>\DReplayClient.config**  
@@ -78,7 +79,7 @@ ms.locfileid: "75307039"
 </Options>  
 ```  
   
-##  <a name="preprocess-configuration-file-dreplayexepreprocessconfig"></a><a name="PreprocessConfig"></a> 前置處理組態檔：DReplay.exe.preprocess.config  
+##  <a name="preprocess-configuration-file-dreplayexepreprocessconfig"></a><a name="PreprocessConfig"></a> 前置處理設定檔：DReplay.exe.preprocess.config  
  當您使用管理工具來起始前置處理階段時，管理工具就會從前置處理組態檔 `DReplay.exe.preprocess.config`載入前置處理設定。  
   
  您可以使用預設組態檔，也可以使用管理工具的 **-c** 參數來指定已修改前置處理組態檔的位置。 如需使用管理工具之前置處理選項的詳細資訊，請參閱[前置處理選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)。  
@@ -107,7 +108,7 @@ ms.locfileid: "75307039"
 </Options>  
 ```  
   
-##  <a name="replay-configuration-file-dreplayexereplayconfig"></a><a name="ReplayConfig"></a> 重新執行組態檔：DReplay.exe.replay.config  
+##  <a name="replay-configuration-file-dreplayexereplayconfig"></a><a name="ReplayConfig"></a> 重新執行設定檔：DReplay.exe.replay.config  
  當您使用管理工具來起始事件重新執行階段時，管理工具就會從重新執行組態檔 `DReplay.exe.replay.config`載入重新執行設定。  
   
  您可以使用預設組態檔，也可以使用管理工具的 **-c** 參數來指定已修改重新執行組態檔的位置。 如需使用管理工具之重新執行選項的詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
@@ -185,7 +186,7 @@ ms.locfileid: "75307039"
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay 論壇](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 - 第 2 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 1 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [使用 Distributed Replay 對您的 SQL Server 進行負載測試 - 第 2 部分](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
+ [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 1 部分](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
   
   

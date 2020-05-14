@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325454"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872794"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
@@ -31,7 +31,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 |需求|安裝方式|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |若是 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 以外的所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，則安裝程式需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile。 如果尚未安裝這個項目，則 SQL Server 安裝程式會自動進行安裝。 安裝需要重新開機。 您可以先安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，再執行安裝程式，以避免重新開機。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |若是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外的所有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本，則安裝程式需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile。 如果尚未安裝這個項目，則 SQL Server 安裝程式會自動進行安裝。 安裝需要重新開機。 您可以先安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，再執行安裝程式，以避免重新開機。|  
 |Windows Installer 4.5|隨附於 Server Core 安裝。|  
 |Windows PowerShell|隨附於 Server Core 安裝。|  
 |Java Runtime |若要使用 PolyBase，您需要安裝適當的 Java Runtime。 如需詳細資訊，請參閱 [PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。|
@@ -287,13 +287,9 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用 TCP/IP  
  您可以針對 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，透過 Windows PowerShell 啟用 TCP/IP 通訊協定。 請遵循下列步驟：  
   
-1.  在伺服器上，啟動 [工作管理員]。  
+1.  在 PowerShell 中：Import-Module SQLPS。  
   
-2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
-  
-3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中輸入 **sqlps.exe**，然後按一下 [確定]  。 隨即開啟 [ **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Powershell][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 視窗。  
-  
-4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
+2.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

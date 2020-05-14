@@ -1,5 +1,6 @@
 ---
 title: DropOnlyMode 元素 (DTA)
+description: 在 DTA 公用程式中，DropOnlyMode 元素會指定 Database Engine Tuning Advisor 只應考慮卸除現有的索引、索引檢視或資料分割。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305595"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831543"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
 
@@ -43,7 +44,7 @@ ms.locfileid: "75305595"
   
  **預設值**  
   
- **出現次數**︰選擇性。 每個 **TuningOptions** 元素只能使用這個元素一次。 如果在 **TuningOptions** 元素中指定了下列元素，就不能使用這個元素：  
+ **發生次數**：選擇性。 每個 **TuningOptions** 元素只能使用這個元素一次。 如果在 **TuningOptions** 元素中指定了下列元素，就不能使用這個元素：  
   
 -   [FeatureSet 元素 &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   

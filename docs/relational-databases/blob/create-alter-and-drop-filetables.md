@@ -1,5 +1,6 @@
 ---
 title: 建立、改變及卸除 FileTable | Microsoft Docs
+description: 在 SQL Server 中，Filetable 功能會使用目錄結構來儲存檔案。 了解如何建立新的 FileTable，或改變或卸除現有的 FileTable。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76922894"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000089"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "76922894"
   
 ###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 如何：建立 FileTable  
  **使用 Transact-SQL 建立 FileTable**  
- 您可以使用 [AS FileTable](../../t-sql/statements/create-table-transact-sql.md) 選項來呼叫 **CREATE TABLE &#40;Transact-SQL&#41;** 陳述式，藉以建立 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 您可以針對新的 FileTable 指定下列設定：  
+ 您可以使用 **AS FileTable** 選項來呼叫 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 陳述式，藉以建立 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 您可以針對新的 FileTable 指定下列設定：  
   
 1.  **FILETABLE_DIRECTORY**。 指定目錄，以做為 FileTable 中儲存之所有檔案和目錄的根目錄。 在資料庫的所有 FileTable 目錄名稱之間，此名稱必須是唯一的。 不論目前的定序設定為何，唯一性的比較都不區分大小寫。  
   

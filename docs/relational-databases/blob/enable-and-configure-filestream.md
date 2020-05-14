@@ -1,5 +1,6 @@
 ---
 title: 啟用及設定 FILESTREAM | Microsoft Docs
+description: 若要使用 FILESTREAM，請先在 SQL Server 資料庫引擎執行個體上啟用 FILESTREAM。 了解如何使用 SQL Server 組態管理員來啟用 FILESTREAM。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16bf62cd9f0ce54f3a6d72fc4651410dde26c0da
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908764"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000088"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
 

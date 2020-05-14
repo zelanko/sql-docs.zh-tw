@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809722"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987202"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具 (預覽)
 
@@ -115,7 +115,7 @@ SSIS 部署工作將會建立資料夾與子資料夾 (如果不存在)。
 - Active Directory - 密碼
 - Active Directory - 整合式
 
-但是，是否支援特定的驗證類型取決於目的地伺服器類型和代理程式類型。 詳細資料支援矩陣會列在下表中。
+但是，是否支援特定驗證類型取決於目的地伺服器類型和代理程式類型。 詳細資料支援矩陣會列在下表中。
 
 | |Microsoft 裝載的代理程式|自我裝載的代理程式|
 |---------|---------|---------|
@@ -344,6 +344,14 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |sensitive|環境變數的值是否具敏感性。|有效輸入包括： <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-100"></a>1\.0.0 版
+
+發行日期：2020 年 5 月 8 日
+
+- 正式發行 (GA) 版本。
+- 已在代理程式上新增 .NET Framework 最低版本的限制。 目前的最低版本是 .NET Framework 4.6.2。
+- SSIS 組建工作和 SSIS 部署工作的精簡描述。
 
 ### <a name="version-020-preview"></a>0\.2.0 版預覽
 

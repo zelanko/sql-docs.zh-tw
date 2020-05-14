@@ -1,6 +1,6 @@
 ---
 title: FILESTREAM 相容性 | Microsoft Docs
-description: FILESTREAM 與其他 SQL Server 功能的相容性
+description: FILESTREAM 會將資料儲存在檔案系統中。 請參閱搭配各種 SQL Server 功能使用 FILESTREAM 時，要牢記的指導方針、限制和祕訣。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c47e7af592383bee13399c2220fee25fa8ed2c2
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245401"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999783"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
 

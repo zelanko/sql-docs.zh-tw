@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 版本資訊 | Microsoft Docs
+description: 本文描述 SQL Server 2017 的限制和問題，並提供相關資訊的連結。
 ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b59588853342b298ebe4ffa8effb59e371c9df6a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665403"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001114"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

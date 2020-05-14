@@ -1,5 +1,6 @@
 ---
 title: 組態的 Database 元素 (DTA)
+description: 在 DTA 公用程式中，組態的 Database 元素會指定所要評估組態的資料庫。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: cb444b56c70d70fda8578459b83939ebcbcf3645
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d36151f58ad6b60162ff2984035f10c0ce4e09a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306690"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831600"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
 

@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487106"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746331"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
@@ -24,7 +24,7 @@ ms.locfileid: "81487106"
 此文章說明如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，將新的 R 套件安裝到 SQL Server 機器學習服務或 SQL Server R Services 的執行個體上。 您安裝的套件可用於使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 陳述式在資料庫中執行的 R 指令碼。
 
 > [!NOTE]
-> 標準 R `install.packages` 命令不建議用於在 SQL Server 上新增 R 套件。 請依照此文章所述改為使用 **sqlmlutils**。
+> 本文所述的 **sqlmlutils** 套件是用來將 R 套件新增至 SQL Server 2019 或更新版本。 SQL Server 2017 及舊版請參閱[使用 R 工具安裝套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -51,7 +51,7 @@ ms.locfileid: "81487106"
 
 若用戶端電腦可以存取網際網路，您可以在線上下載並安裝 **sqlmlutils** 與其相依套件。
 
-1. 從 **將最新的**sqlmlutils https://github.com/Microsoft/sqlmlutils/tree/master/R/dist ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
+1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 將最新的 **sqlmlutils** ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
 
 1. 開啟 [命令提示字元]  並執行下列命令，以安裝 **sqlmlutils** 與 **RODBCext** 套件。 取代為您下載之 **sqlmlutils** ZIP 檔案的完整路徑 (此範例假設該檔案位於您的 [文件] 資料夾中)。 會在線上找到 **RODBCext** 套件並安裝。
 
@@ -108,7 +108,7 @@ ms.locfileid: "81487106"
     , @script = N'print(R.version)'
    ```
 
-1. 從  [ 下載最新的 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist sqlmlutils](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) ZIP 檔案 (不要解壓縮該檔案)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 從 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) 下載最新的 **sqlmlutils** ZIP 檔案 (不要解壓縮該檔案)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
 1. 將整個 **RODBCext** 存放庫資料夾 (`c:\downloads\rodbcext`) 與 **sqlmlutils** ZIP 檔案 (`c:\downloads\sqlmlutils_0.7.1.zip`) 複製到用戶端電腦。 例如，將它們複製到用戶端電腦上的 `c:\temp\packages` 資料夾。
 
@@ -148,7 +148,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ### <a name="add-the-package-offline"></a>離線新增套件
 
 若用戶端電腦沒有網際網路連線，您可以透過可以存取網際網路的電腦，使用**miniCRAN** 來下載 **glue** 套件。 接著，將該套件複製到用戶端電腦，以便離線安裝套件。
-如需有關安裝 [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 的詳細資訊，請參閱**安裝 miniCRAN**。
+如需有關安裝 **miniCRAN** 的詳細資訊，請參閱[安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
 
 在可以存取網際網路的電腦上：
 

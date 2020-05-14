@@ -1,7 +1,8 @@
 ---
-title: 存取擴充事件記錄檔中的診斷資訊 | Microsoft Docs
+title: 存取擴充事件記錄檔中的診斷資訊
+description: 了解如何從 Microsoft JDBC Driver for SQL Server 中，在與事件相關的伺服器上存取擴充事件。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f8086c0ccb161bb94e1b878736b55ee306fe4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920351"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922255"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄檔中的診斷資訊
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中，已經更新追蹤 ([追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md))，讓您能夠更輕易地將用戶端事件與伺服器連線通道緩衝區中的診斷資訊 (例如連線失敗) 以及擴充事件記錄檔中的應用程式效能資訊相互關聯。 如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx)。  
+  在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中，已經更新追蹤 ([追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md))，讓您能夠更輕易地將用戶端事件與伺服器連線通道緩衝區中的診斷資訊 (例如連線失敗) 以及擴充事件記錄檔中的應用程式效能資訊相互關聯。 如需讀取擴充事件記錄檔的資訊，請參閱[擴充事件](../../relational-databases/extended-events/extended-events.md)。  
   
 ## <a name="details"></a>詳細資料  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會針對連線作業傳送用戶端連線識別碼。 如果連線失敗，您可以存取連線通道緩衝區 ([使用連線通道緩衝區在 SQL Server 2008 中進行連線的疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752))、尋找 **ClientConnectionID** 欄位，並且取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 (如果在傳送登入前封包之前連線失敗，則不會產生用戶端連線識別碼。)用戶端連接識別碼是 16 位元組的 GUID。 如果在擴充事件工作階段中將 **client_connection_id** 動作新增至事件，您也可在擴充事件目標輸出中找到用戶端連線識別碼。 如果您需要進一步的用戶端驅動程式診斷協助，則可以啟用追蹤，並重新執行連線命令，以觀察追蹤中的 **ClientConnectionID** 欄位。  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會針對連線作業傳送用戶端連線識別碼。 如果連線失敗，您可以存取連線通道緩衝區 ([使用連線通道緩衝區在 SQL Server 2008 中進行連線的疑難排解](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer))、尋找 **ClientConnectionID** 欄位，並且取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 (如果在傳送登入前封包之前連線失敗，則不會產生用戶端連線識別碼。)用戶端連接識別碼是 16 位元組的 GUID。 如果在擴充事件工作階段中將 **client_connection_id** 動作新增至事件，您也可在擴充事件目標輸出中找到用戶端連線識別碼。 如果您需要進一步的用戶端驅動程式診斷協助，則可以啟用追蹤，並重新執行連線命令，以觀察追蹤中的 **ClientConnectionID** 欄位。  
   
  您可以使用 [ISQLServerConnection 介面](../../connect/jdbc/reference/isqlserverconnection-interface.md)，以程式設計方式取得用戶端連線識別碼。 連接識別碼也會出現在任何與連接有關的例外狀況中。  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+[診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

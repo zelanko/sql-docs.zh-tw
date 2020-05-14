@@ -1,5 +1,6 @@
 ---
 title: 還原頁面 (SQL Server) | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中還原頁面。 還原損毀的頁面，而無需還原整個資料庫。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908832"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823673"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "72908832"
   
     -   交易記錄  
   
-    -   配置頁面—全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
+    -   配置頁面：全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
   
     -   所有資料檔案的頁面 0 (檔案啟動頁面)  
   
@@ -90,7 +91,7 @@ ms.locfileid: "72908832"
      所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都支援在資料庫離線時還原頁面。 在離線頁面還原中，還原受損的頁面時資料庫是離線狀態。 在還原順序結束後，資料庫會恢復上線。  
   
      線上頁面還原  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支援線上頁面還原，但是當資料庫目前離線時，該版本會使用離線還原。 {1}在大部分情況下，損毀的頁面可以在資料庫保持上線時還原，包括正進行還原頁面的檔案群組在內。{2} 即使有一個或多個次要檔案群組離線，只要主要檔案群組還在線上，通常就會在線上執行頁面還原。 但是，偶爾損毀的頁面可能需要進行離線還原。 例如，一些重要頁面損毀可能會讓資料庫無法啟動。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支援線上頁面還原，但是當資料庫目前離線時，該版本會使用離線還原。 在大部分情況下，損毀的頁面可以在資料庫保持上線時還原，包括正進行還原頁面的檔案群組在內。 即使有一個或多個次要檔案群組離線，只要主要檔案群組還在線上，通常就會在線上執行頁面還原。 但是，偶爾損毀的頁面可能需要進行離線還原。 例如，一些重要頁面損毀可能會讓資料庫無法啟動。  
   
     > [!WARNING]  
     >  若受損的頁面正在儲存重要資料庫中繼資料，則在嘗試線上頁面還原時，中繼資料的必要更新可能會失敗。 在此情況下，您可以執行離線頁面還原，但是您必須先建立 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) (使用 RESTORE WITH NORECOVERY 來備份交易記錄)。  
@@ -118,7 +119,7 @@ ms.locfileid: "72908832"
 3.  以滑鼠右鍵按一下資料庫，指向 [工作]  ，再指向 [還原]  ，然後按一下 [頁面]  ，這樣會開啟 [還原頁面]  對話方塊。  
   
      **Restore**  
-     此區段與 **還原資料庫 (一般頁面)** 上的 [[還原至]](../../relational-databases/backup-restore/restore-database-general-page.md)執行相同功能。  
+     此區段與 [還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **[還原至]** 執行相同功能。  
   
      **Database**  
      指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
@@ -135,8 +136,8 @@ ms.locfileid: "72908832"
     |頁首|值|  
     |------------|------------|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份元件：**資料庫**、**檔案**或 **\<空白>** (針對交易記錄)。|  
-    |**型別**|執行的備份類型： **[完整]** 、 **[差異]** 或 **[交易記錄]** 。|  
+    |**元件**|備份的元件：[資料庫]  、[檔案]  或 [\<空白>]  (適用於交易記錄)。|  
+    |**型別**|執行的備份類型：[完整]  、[差異]  或 [交易記錄]  。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
     |**Database**|備份作業中所含的資料庫名稱。|  
     |**位置**|備份組在磁碟區中的位置。|  
@@ -147,7 +148,7 @@ ms.locfileid: "72908832"
     |**開始日期**|備份作業開始時的日期和時間，會出現在用戶端的地區設定中。|  
     |**完成日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
     |**大小**|備份組的大小 (以位元組為單位)。|  
-    |**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
+    |**使用者名稱**|執行備份作業的使用者名稱。|  
     |**到期**|備份組過期的日期和時間。|  
   
       按一下 [驗證] 來檢查執行頁面還原作業所需之備份檔案的完整性。  
@@ -166,7 +167,7 @@ ms.locfileid: "72908832"
 7.   若要還原頁面方格中所列的頁面，請按一下 [確定]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
- {1}若要在 RESTORE DATABASE 陳述式中指定頁面，您需要包含該頁面之檔案的檔案識別碼和頁面的頁面識別碼。{2} {1}所需語法如下：{2}  
+ 若要在 RESTORE DATABASE 陳述式中指定頁面，您需要包含該頁面之檔案的檔案識別碼和頁面的頁面識別碼。 所需語法如下：  
   
  `RESTORE DATABASE <database_name>`  
   
@@ -186,11 +187,11 @@ ms.locfileid: "72908832"
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |錯誤記錄檔|[檢視 SQL Server 錯誤記錄檔 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |{1}事件追蹤{2}|[監視及回應事件](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |事件追蹤|[監視及回應事件](../../ssms/agent/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
-    |{1}WMI 提供者{2}|[伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
+    |WMI 提供者|[伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
-2.  {1}使用包含該頁面之完整資料庫、檔案或檔案群組備份，開始進行分頁還原。{2} 在 RESTORE DATABASE 陳述式中，使用 PAGE 子句來列出要還原之所有分頁的頁面識別碼。  
+2.  使用包含該頁面之完整資料庫、檔案或檔案群組備份，開始進行分頁還原。 在 RESTORE DATABASE 陳述式中，使用 PAGE 子句來列出要還原之所有分頁的頁面識別碼。  
   
 3.  套用最新差異  
   
@@ -198,7 +199,7 @@ ms.locfileid: "72908832"
   
 5.  為包含還原頁面之最後一個 LSN 的資料庫建立新的記錄備份，亦即上次進行離線分頁還原的時點。 最後一個 LSN (設定為順序中的第一個還原的一部分) 是重做目標 LSN。 針對包含頁面的檔案進行線上向前復原可在重做目標 LSN 停止。 若要了解檔案目前的重做目標 LSN，請參閱 **sys.master_files** 的 **redo_target_lsn** 資料行。 如需詳細資訊，請參閱 [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)。  
   
-6.  {1}還原新的記錄備份。{2} 套用此新的記錄備份後，就可完成分頁還原，頁面現在可以使用。  
+6.  還原新的記錄備份。 套用此新的記錄備份後，就可完成分頁還原，頁面現在可以使用。  
   
     > [!NOTE]  
     >  這個順序與檔案還原順序類似。 事實上，分頁還原和檔案還原都可以做為相同順序的一部分來執行。  
