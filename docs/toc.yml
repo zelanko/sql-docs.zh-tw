@@ -3,7 +3,7 @@
 - name: 文件瀏覽提示
   href: sql-server/sql-docs-navigation-guide.md
 - name: 舊版 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: 概觀
   items:
     - name: 新功能
@@ -6647,7 +6647,7 @@
                   items:
                     - name: 還原和復原
                       href: relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: 'Backup '
+                    - name: Backup
                       href: relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
                     - name: Checkpoint
                       href: relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
@@ -15845,7 +15845,7 @@
                   href: t-sql/functions/session-context-transact-sql.md
                 - name: SESSION_ID
                   href: t-sql/functions/session-id-transact-sql.md
-                - name: 'XACT_STATE '
+                - name: XACT_STATE
                   href: t-sql/functions/xact-state-transact-sql.md
             - name: 系統統計
               href: t-sql/functions/system-statistical-functions-transact-sql.md
