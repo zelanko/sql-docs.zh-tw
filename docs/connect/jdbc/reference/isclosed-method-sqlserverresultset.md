@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 1eaefb2873e0a9cfd12ebdd289b2a7005ef0e3d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fa1f768e79da36ce681b4096c64e5d46e21f5461
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928668"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67977738"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>isClosed 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

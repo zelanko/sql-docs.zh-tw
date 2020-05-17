@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fac9026b149380b024fa8b0ff4c98a906320d743
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634271"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67941661"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81634271"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
@@ -61,8 +61,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |**StmtText**|對於每個類型不是 PLAN_ROW 的資料列，這個資料行都包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。 對於類型是 PLAN_ROW 的資料列，這個資料行包含作業的說明。 這個資料行包含實體運算子，也可能選擇性地包含邏輯運算子。 這個資料行後面可能接著取決於實體運算子的說明。 如需實體運算子的詳細資訊，請參閱 **SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 中[引數](../../t-sql/statements/set-showplan-all-transact-sql.md)資料行的詳細資訊。|  
-|||
-
+  
  如需在顯示計畫輸出中所能見到之實體和邏輯運算子的詳細資訊，請參閱[執行程序表邏輯及實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
 ## <a name="permissions"></a>權限  
@@ -81,7 +80,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  這是使用索引的查詢：  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -110,7 +109,7 @@ StmtText
   
  這是不使用索引的查詢：  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

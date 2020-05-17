@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 85a7b4b32c0c66e5825dc2728a5783c028410d45
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921522"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67982856"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

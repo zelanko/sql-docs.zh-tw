@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f20350e79c4d02bee6191511ed834cb349ab9b79
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634957"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67894793"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "81634957"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 ISO Syntax  
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR   
      FOR select_statement   

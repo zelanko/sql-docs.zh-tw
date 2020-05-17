@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 39bebccfc01d379a2c3839fcd7f8fd8824aa18e4
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531108"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77173612"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>針對 SQL Server 巨量資料叢集部署設定 Azure Kubernetes Service
 
@@ -28,7 +28,7 @@ AKS 可讓使用者輕鬆地建立、設定及管理已預先設定 Kubernetes �
 此文章說明使用 Azure CLI 在 AKS 上部署 Kubernetes 的步驟。 如果您沒有 Azure 訂用帳戶，請在開始前先建立免費帳戶。
 
 > [!TIP]
-> 您也可以透過單一步驟編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](notebooks-deploy.md)中執行此動作。
+> 您也可以透過單一步驟編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](deploy-notebooks.md)中執行此動作。
 
 ## <a name="prerequisites"></a>Prerequisites
 

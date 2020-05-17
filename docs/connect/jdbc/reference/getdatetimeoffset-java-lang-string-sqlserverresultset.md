@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e585927c-0dee-43fd-b71e-c9f1701790bd
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: d23de92c75e09e51e8f1f4fbfb3318877646ec1e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a929b5869e58f4f1207b14474302fdb247251850
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918092"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67983861"
 ---
 # <a name="getdatetimeoffsetjavalangstring-sqlserverresultset"></a>getDateTimeOffset(java.lang.string) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 0dbecd7bd953c43980b307e6737ea1390511fa1a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925774"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67973976"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

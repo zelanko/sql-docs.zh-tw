@@ -4,6 +4,8 @@ description: 您可以利用 Data Lake Analytics 工作，將 U-SQL 作業提交
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
+ms.prod_service: integration-services
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -11,13 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.reviewer: maghan
-ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763656"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67947350"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 工作
 
@@ -52,7 +53,6 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
 |**DirectInput**|透過內嵌編輯器指定 U-SQL 指令碼。 選取此值會顯示動態選項 **USQLStatement**。|  
 |**FileConnection**|指定本機的.usql 檔案，其中包含 U-SQL 指令碼。 選取此選項會顯示動態選項 **FileConnection**。|  
 |**變數**|指定 SSIS 變數，其中包含 U-SQL 指令碼。 選取此值會顯示動態選項 [SourceVariable]  。|
-| &nbsp; | &nbsp; |
 
 **SourceType 動態選項：** 指定 U-SQL 查詢的指令碼內容。 
 
@@ -61,7 +61,6 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
 |**SourceType = DirectInput**|直接在選項方塊輸入要提交的 U-SQL 查詢，或選取瀏覽按鈕 (...)，在 [輸入 U-SQL 查詢]  對話方塊中輸入 U-SQL 查詢。|  
 |**SourceType = FileConnection**|選取現有的檔案連線管理員，或選取 [<新增連線>]  以建立新的檔案連線。 如需相關資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
 |**SourceType = Variable**|選取現有的變數，或選取 [\<新增變數...>]  以建立新的變數。 如需相關資訊，請參閱[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
-| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>作業設定
@@ -79,7 +78,6 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
   |-----------|-----------------|
   |True|工作結果是以 U-SQL 作業的執行結果為基礎。 作業成功 > 工作成功。 作業失敗 > 工作失敗。 工作成功或失敗 > 工作完成。|
   |False|工作結果是以 U-SQL 作業的提交與準備結果為基礎。 作業提交成功，而且通過準備階段 > 工作成功。 作業提交失敗或作業在準備階段失敗 > 工作失敗。 工作成功或失敗 > 工作完成。|
-  | &nbsp; | &nbsp; |
 
 - **TimeOut：** 指定作業執行的逾時時間 (秒)。 如果作業逾時，則會取消，並標示為失敗。 如果將 **Synchronous** 設定為 false，即無法使用此屬性。
 
@@ -127,7 +125,6 @@ OUTPUT @rs1
 |-------------|--------------|
 |User: Variable1|\@in|
 |User: Variable2|\@out| 
-| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>運算式頁面設定
 

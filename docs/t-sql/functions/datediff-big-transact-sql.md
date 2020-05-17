@@ -18,14 +18,14 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0e1135aa79978279137a0259e37389e80c835ef6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823843"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68329297"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

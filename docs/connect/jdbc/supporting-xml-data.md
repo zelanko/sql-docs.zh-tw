@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: a53a7a1fed1ff801a313bb0382c0dc7fd59e6b44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 799b22cfac669846c606456f1911e27353a9ba9f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909264"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69027708"
 ---
 # <a name="supporting-xml-data"></a>支援 XML 資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

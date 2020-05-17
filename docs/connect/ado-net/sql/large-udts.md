@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 06abbc88d80dffba14a48d82561dd4db1a2eb68e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924330"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896699"
 ---
 # <a name="large-udts"></a>大型 UDT
 

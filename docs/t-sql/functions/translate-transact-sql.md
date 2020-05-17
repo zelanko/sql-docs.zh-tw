@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2020
+ms.date: 02/01/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - TRANSLATE function
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e842a6e22cfed1dba3cff7bf66a681b10ea618
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 374e9c1ba9bd93900e8a6677984f5e0e63a7c454
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826750"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77173591"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "82826750"
 
 ## <a name="syntax"></a>語法
 
-```syntaxsql
+```sql
 TRANSLATE ( inputString, characters, translations)
 ```
 
@@ -69,7 +69,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-```text
+```plain_text
 2*(3+4)/(7-2)
 ```
 

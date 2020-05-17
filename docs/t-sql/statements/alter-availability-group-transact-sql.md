@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ff2094e1452c17fa33d2d909f9b4796b4eddc706
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925372"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "70874525"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "82925372"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```SQL  
   
 ALTER AVAILABILITY GROUP group_name   
   {  
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |層級|失敗狀況|  
 |-----------|-----------------------|  
-|1|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works: SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)(運作方式：SQL Server AlwaysOn 租用逾時)。|  
+|1|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)(運作方式：SQL Server AlwaysOn 租用逾時)。|  
 |2|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體未連接到叢集，而且已超出使用者指定之可用性群組的 HEALTH_CHECK_TIMEOUT 臨界值。<br /><br /> 可用性複本處於失敗狀態。|  
 |3|指定應該在嚴重 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤發生時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。<br /><br /> 此為預設行為。|  
 |4|指定應該在發生中度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部資源集區中持續的記憶體不足狀況。|  
@@ -369,7 +369,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  針對具名執行個體，您可以查詢 **sys.dm_tcp_listener_states** 動態管理檢視的 **port** 和 [type_desc](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 資料行來取得連接埠號碼。 伺服器執行個體會使用 Transact-SQL 接聽程式 (**type_desc='TSQL'** )。  
   
- 如需計算可用性複本之唯讀路由 URL 的詳細資訊，請參閱[計算 Always On 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
+ 如需計算可用性複本之唯讀路由 URL 的詳細資訊，請參閱[計算 Always On 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)。  
   
 > [!NOTE]  
 >  若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，則應該將 Transact-SQL 接聽程式設定為使用特定通訊埠。 如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 5eeb315489684af4a59b5d2983dee32a466e7c32
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632431"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68116525"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "81632431"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```sql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   

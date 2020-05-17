@@ -22,12 +22,12 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bccc7152a13000d667a5f980847eb251c08d1182
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626765"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "78937659"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "81626765"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER SCHEMA schema_name   
@@ -51,7 +51,7 @@ ALTER SCHEMA schema_name
     }  
 ```  
   
-```syntaxsql
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   

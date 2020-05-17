@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 962da02de824f164464a9dbc81c0a3ed54283738
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: e0a76052ccf05927ebd598e2baa37fbf0229bf54
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905324"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67981390"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>getNString 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

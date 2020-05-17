@@ -17,14 +17,14 @@ helpviewer_keywords:
 - status information [SQL Server], FETCH
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: b8fb20416fb1a36d19c719b568f0d8bc651c3a1a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824223"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68071560"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

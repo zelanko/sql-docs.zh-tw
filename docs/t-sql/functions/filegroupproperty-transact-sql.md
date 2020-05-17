@@ -18,14 +18,14 @@ helpviewer_keywords:
 - viewing filegroup properties
 - displaying filegroup properties
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0337e122083e71a6e10a418b3924ec506217e01e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804458"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68071433"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

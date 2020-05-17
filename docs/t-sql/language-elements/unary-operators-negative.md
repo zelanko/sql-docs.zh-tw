@@ -19,12 +19,12 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44e5450e485eaae9f68322169bcfddf4aebb24c9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 992d0b8d0a2b3781af732aaa83983882a9938112
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635977"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68072139"
 ---
 # <a name="unary-operators---negative"></a>一元運算子 - 負
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "81635977"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 - numeric_expression  
 ```  
   

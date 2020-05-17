@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfe321ff400e5ed44406921e9409097c4e127fef
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636002"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75884000"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "81636002"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```syntaxsql
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  

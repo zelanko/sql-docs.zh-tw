@@ -20,15 +20,15 @@ helpviewer_keywords:
 - LTRIM function
 - blank characters [SQL Server]
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea8d802e1d8434ead93a0bf637281565fabafc3c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f3e52b291c9a91e1135d41ab6843ef97f53d17d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822618"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68130379"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "82822618"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 LTRIM ( character_expression )  
 ```  
   

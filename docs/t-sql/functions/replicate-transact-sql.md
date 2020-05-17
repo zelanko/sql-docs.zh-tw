@@ -17,15 +17,15 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9668bea1b876b650f835b00ed2df2c22ae7213ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823695"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67944483"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "82823695"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 REPLICATE ( string_expression ,integer_expression )   
 ```  
   

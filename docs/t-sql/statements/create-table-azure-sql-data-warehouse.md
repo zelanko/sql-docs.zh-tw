@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 238faaa60406436a4d3ab4278df491da78ecc529
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921948"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73729871"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -35,7 +35,7 @@ ms.locfileid: "82921948"
 
 ## <a name="syntax"></a>語法
   
-```syntaxsql
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -47,15 +47,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
-    [ <column_constraint> ]
-
-<column_constraint>::=
-    {
-        DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
-        | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
-    }
-
+    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
+  
 <table_option> ::=
     {
        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 

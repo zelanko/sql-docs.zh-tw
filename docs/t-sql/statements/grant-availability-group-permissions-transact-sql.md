@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 137380e1137434b03999665a2256d8ec9351b685
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633757"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75246170"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "81633757"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  

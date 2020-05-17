@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8247b0fe0e17ae717fddd89ff4a608481e0777ad
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633982"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71326100"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "81633982"
 
 ## <a name="syntax"></a>語法
 
-```syntaxsql
+```
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]

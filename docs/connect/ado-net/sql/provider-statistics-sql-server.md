@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9a736eedf98d5e654f34423af8893cecda5a106f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925484"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896600"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
 

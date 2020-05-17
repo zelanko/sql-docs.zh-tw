@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 14b55815be8aebaecd539fcc2c73675ef9b42534
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922185"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67955126"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
 

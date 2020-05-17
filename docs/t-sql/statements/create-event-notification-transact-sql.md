@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4724a5f91b3832ba6c2f9a95986259f5f75394c8
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632154"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67902806"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "81632154"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
   
 CREATE EVENT NOTIFICATION event_notification_name   
 ON { SERVER | DATABASE | QUEUE queue_name }   

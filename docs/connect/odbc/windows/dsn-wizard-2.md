@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: David-Engel
+author: MightyPen
 ms.author: v-jizho2
-ms.openlocfilehash: e2e6b323428b1ad8ae188ea65bf10382651d3d71
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928250"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "70152571"
 ---
 # <a name="data-source-wizard-screen-2"></a>資料來源精靈螢幕 2
 

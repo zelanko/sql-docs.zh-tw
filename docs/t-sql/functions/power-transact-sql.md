@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - POWER function
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbfa74560a19368be648b1854245fae545fb15ab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ec722f337e24bd08b3b41ffe7d7e8e1539e2ff58
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803691"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67914324"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

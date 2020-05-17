@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6ab832627f04825b5cdddc2939108fb427801bc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928902"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78897029"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的大量複製作業
 

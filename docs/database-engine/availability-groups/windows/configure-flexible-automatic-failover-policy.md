@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 39922c57380772a30a18e27861398397fd77793f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925276"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74056678"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定彈性的自動容錯移轉原則
 
@@ -69,7 +69,7 @@ ms.locfileid: "82925276"
   
 |層級|失敗狀況|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|PowerShell 值|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|一個|伺服器關閉時。 指定在發生下列任何狀況時起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works:SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268) (運作方式：SQL Server Always On 租用逾時)。<br /><br /> <br /><br /> 這是最低限制層級。|1|**OnServerDown**|  
+|一個|伺服器關閉時。 指定在發生下列任何狀況時起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx) (運作方式：SQL Server Always On 租用逾時)。<br /><br /> <br /><br /> 這是最低限制層級。|1|**OnServerDown**|  
 |兩個|伺服器沒有回應時。 指定在發生下列任何狀況時起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體未連接到叢集，而且已超出使用者指定之可用性群組的健全狀況檢查逾時臨界值。<br /><br /> 可用性複本處於失敗狀態。|2|**OnServerUnresponsive**|  
 |三|發生嚴重伺服器錯誤時。 指定在發生嚴重 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。<br /><br /> 這是預設層級。|3|**OnCriticalServerError**|  
 |四|發生一般伺服器錯誤時。 指定在發生一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部資源集區持續發生記憶體不足的狀況。|4|**OnModerateServerError**|  
@@ -172,7 +172,7 @@ ms.locfileid: "82925276"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
--   [How It Works:SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268) (運作方式：SQL Server Always On 租用逾時)  
+-   [How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx) (運作方式：SQL Server Always On 租用逾時)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

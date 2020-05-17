@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: f9ec0453bc56c0918d4959ec68924eca6e573dc2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921828"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67980321"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

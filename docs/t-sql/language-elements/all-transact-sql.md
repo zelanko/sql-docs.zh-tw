@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6588a01cee99bfea505fa1552b4eb4982e448baf
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632710"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67927389"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "81632710"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
   
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  

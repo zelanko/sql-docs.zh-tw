@@ -12,12 +12,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 86bdd7d12b662850a86621220cbe25a3160358c2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635927"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68088967"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "81635927"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   

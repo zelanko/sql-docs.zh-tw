@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 384e312ca4deb3266da403e796ea93e504c6ab1a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664992"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68001726"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   **xml** 資料類型和 [FOR XML 查詢中的 TYPE 指示詞](../../relational-databases/xml/type-directive-in-for-xml-queries.md) 可讓 FOR XML 查詢傳回的 XML 在伺服器以及用戶端上進行處理。  
   
 ## <a name="processing-with-xml-type-variables"></a>處理 xml 類型變數  

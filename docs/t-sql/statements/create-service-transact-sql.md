@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf5ed8370550f3c66baa46a7f3c2634a9141ae38
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633918"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "70745393"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81633918"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  

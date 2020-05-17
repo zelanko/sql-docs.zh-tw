@@ -17,15 +17,15 @@ helpviewer_keywords:
 - values [SQL Server], maximum
 - maximum values [SQL Server]
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e84f2d48253dbfa29e7d9c3153cb4a8878ea2c87
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c6a0c3acfaafd2e079901f52d1dd925a604a4c23
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822439"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68130295"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

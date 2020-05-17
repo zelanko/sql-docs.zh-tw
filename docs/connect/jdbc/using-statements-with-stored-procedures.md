@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 2c5cec3ba96a9ce4b96ae3b4dd92299e361902b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923963"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69025858"
 ---
 # <a name="using-statements-with-stored-procedures"></a>搭配預存程序使用陳述式
 

@@ -25,12 +25,12 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf6628847410f9ba5f02e7c4240ca86259d6b5f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfd14c6cd0147d9e4c163a4802f060ecc4374754
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630520"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68121815"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81630520"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   

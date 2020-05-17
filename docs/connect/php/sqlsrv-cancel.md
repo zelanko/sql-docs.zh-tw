@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sqlsrv_cancel
 - API Reference, sqlsrv_cancel
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: ba3f66bd8150d8917dcfb7af18f86b695cb96f3f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: f109a264d394a47164966e602b264f0fcd337e12
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920097"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67935849"
 ---
 # <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

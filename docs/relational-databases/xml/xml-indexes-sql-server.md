@@ -33,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6aeeb9e0fdadda5635888fe2a88e0ea84b6ede12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664888"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68096910"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   可以在 **xml** 資料類型資料行上建立 XML 索引。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
   
 -   在您的工作負載中，經常會查詢 XML 資料行。 必須將資料修改期間的 XML 索引維護成本納入考量。  

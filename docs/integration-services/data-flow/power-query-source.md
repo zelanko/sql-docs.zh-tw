@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087418"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75501913"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
 
@@ -70,7 +70,7 @@ ms.locfileid: "82087418"
 
 ![PQ 來源 [連線管理員編輯器] 種類](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-在這些來源 (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) 中，有一些需要額外安裝可從 [Power Query 必要條件](/power-bi/desktop-data-source-prerequisites) \(機器翻譯\) 一文取得的 ADO.NET 驅動程式。 您可以使用自訂安裝介面，在 Azure-SSIS IR 上安裝它們，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
+在這些來源 (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) 中，有一些需要額外安裝可從 [Power Query 必要條件](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) \(機器翻譯\) 一文取得的 ADO.NET 驅動程式。 您可以使用自訂安裝介面，在 Azure-SSIS IR 上安裝它們，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
 
 對於**資料來源路徑**，您可以輸入不需驗證資訊，即可組成連接字串的資料來源特有屬性。 例如，適用於 **SQL** 資料來源的路徑格式為 `<Server>;<Database>`。 您可以選取 [編輯]  按鈕，以將值指派給組成路徑的資料來源特有屬性。
 

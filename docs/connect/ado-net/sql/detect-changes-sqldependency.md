@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 391def8939cf730bbef9206764cfe8a5170088a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90b11516e9fa8ed993792bfec2a77757249b696d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928845"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896982"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 偵測變更
 

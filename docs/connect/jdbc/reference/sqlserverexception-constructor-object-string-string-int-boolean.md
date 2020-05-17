@@ -11,14 +11,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: fc2706f903178404f775b559cfb5f5cff00125d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902724"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67971143"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 建構函式 (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

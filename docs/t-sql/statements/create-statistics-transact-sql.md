@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8240965a5cc057e3c22e8a721a05542aca17db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632118"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73982572"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "81632118"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create statistics on an external table  
@@ -88,7 +88,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ PAGECOUNT = numeric_contant ] 
 ```  
   
-```syntaxsql
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 0dfcd615b0021c16fa159d51ebc0b0c76e36973e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918064"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69028192"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>尋找其他 JDBC 驅動程式資訊
 

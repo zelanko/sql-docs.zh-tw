@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0feb5ecfa771033f6ba9b0ca92b60dca5e1aa040
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634671"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67897993"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "81634671"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
   
 SET STATISTICS TIME { ON | OFF }  
 ```  
@@ -62,7 +62,7 @@ SET STATISTICS TIME { ON | OFF }
 ## <a name="examples"></a>範例  
  這個範例會顯示伺服器的執行、剖析和編譯階段。  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS TIME ON;  

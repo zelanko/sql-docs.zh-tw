@@ -19,15 +19,15 @@ helpviewer_keywords:
 - TRY...CATCH [SQL Server]
 - CATCH block
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed8ec241416e3420848c4be98d6321c357d511be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e38e57bf64d20dcc4e16a8d7b31c372d877c038f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823833"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67904389"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -24,12 +24,12 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 224b553abb62a45e47cf9a53e5f3be984ed0e5bf
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b7e0a949e132f01ce82e46a6e8b4c1d761c1a52a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634654"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68100047"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "81634654"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 SET TEXTSIZE { number }   
 ```  
   

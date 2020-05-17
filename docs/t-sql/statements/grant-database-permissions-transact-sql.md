@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c150b7ef2aa07da9bc9ba36b663bc3eb644102a9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633760"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79288192"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81633760"
 
 ## <a name="syntax"></a>語法
 
-```syntaxsql
+```
 
 GRANT <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bf826a833238db33e313c401e4ff60c201a98ed3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632884"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67948226"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "81632884"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
   
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  

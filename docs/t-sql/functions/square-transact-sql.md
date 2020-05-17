@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2dd252ac706f3009722fb9220763da94e373c76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ef602ecc617f9811b5c40abd1e512a6109fc8ec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803379"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74249793"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

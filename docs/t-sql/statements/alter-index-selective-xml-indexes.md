@@ -12,12 +12,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23617c6179216e9d932fea5f5b239dc17652df01
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628211"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68071359"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選擇性 XML 索引)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "81628211"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  

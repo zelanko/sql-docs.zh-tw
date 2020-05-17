@@ -21,12 +21,12 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8a574b00a92348bb968f5e031329523b21bf079
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a574e3f7348c4641665b067193c54604145386c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634226"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "76315608"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81634226"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 [ HAVING <search condition> ]  
 ```  
   

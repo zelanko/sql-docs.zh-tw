@@ -22,14 +22,14 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 427e67a10b8d368402595546eb2d81e6802aa4f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823804"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68071453"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

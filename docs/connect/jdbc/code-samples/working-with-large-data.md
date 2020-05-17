@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: a94761b9c85e4d3aa1d88a21efdce51a0f46e6f7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 425beac7bcae36170ff378b59d36da05838df645
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922551"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69028247"
 ---
 # <a name="working-with-large-data"></a>使用大型資料
 

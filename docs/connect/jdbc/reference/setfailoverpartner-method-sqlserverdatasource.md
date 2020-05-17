@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 58604614f5f5025e0e0982f7d191868e3baf23e0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 1d152001d1b0eb4ad47936d04ba6c74b8ae7f6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922333"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67974277"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>setFailoverPartner 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

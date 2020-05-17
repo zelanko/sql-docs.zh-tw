@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2648f8efbae6cc6665ea3ab984b27012a2a1ebc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e587639f5323ea76c975e3a8c35d647a7eb3d891
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920422"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896976"
 ---
 # <a name="enabling-query-notifications"></a>啟用查詢通知
 

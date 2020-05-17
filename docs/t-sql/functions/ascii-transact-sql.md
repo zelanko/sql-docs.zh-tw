@@ -18,15 +18,15 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a1592bc05e67d61c8b745a62d6e3cc7489383eb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804949"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74119184"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "82804949"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```sql
 ASCII ( character_expression )  
 ```  
   

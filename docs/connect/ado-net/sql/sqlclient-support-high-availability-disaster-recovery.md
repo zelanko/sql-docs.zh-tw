@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 841e5e1caf4594c519b44e5813688761838247b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918751"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896281"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 對高可用性、災害復原的支援
 

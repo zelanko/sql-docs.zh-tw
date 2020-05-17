@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bbe3a4d13aeafe7afeed9263d3a6c2d187a4b32
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634617"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74901879"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "81634617"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
@@ -121,7 +121,7 @@ column_name AS computed_column_expression
      [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
-```syntaxsql
+```  
 -- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> [ ,... n ] }  

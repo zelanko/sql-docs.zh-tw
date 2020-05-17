@@ -17,14 +17,14 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 4bb400a4a34644391f4748c51a83ce78d58685a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823280"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68105009"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

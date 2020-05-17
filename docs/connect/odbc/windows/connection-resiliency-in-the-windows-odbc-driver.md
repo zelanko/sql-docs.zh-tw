@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 2c04c0f1573fe3353c7cc65e614b784822e578ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928321"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "68008429"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

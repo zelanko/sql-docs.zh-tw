@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1553e736115eb75769f80d9f5001aecb0e855792
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1029d9a0121b23963ccfc12582bd9d9cc7fd6cd6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925454"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896592"
 ---
 # <a name="single-bulk-copy-operations"></a>單一大量複製作業
 

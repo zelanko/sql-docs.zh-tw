@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c683f6a8c6555b9e2ba5d5fc120953e2573154b4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635724"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68086108"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81635724"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
   
 WAITFOR   
 {  

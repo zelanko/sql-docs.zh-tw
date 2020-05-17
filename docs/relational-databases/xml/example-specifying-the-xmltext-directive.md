@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d6fb7538de11db0d5a37c44330bd2b0251d9031b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662965"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68006682"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此範例說明如何在使用 EXPLICIT 模式的 **陳述式中，使用** XMLTEXT `SELECT` 指示詞將溢位資料行中的資料定址。  
   
  假設有 `Person` 資料表。 此資料表有一個 `Overflow` 資料行，可用來儲存 XML 文件的未消耗部分。  

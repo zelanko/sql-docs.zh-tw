@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a6b47b776c55abd86ce10617a5773c5f8397bb6
-ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
+ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80625567"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79112277"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
 
@@ -113,9 +113,9 @@ ms.locfileid: "80625567"
   
 |類型|描述|主題|  
 |----------|-----------------|-----------|  
-|ORACLE|連線到 Oracle \<版本資訊\> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
+|ORACLE|連線到 Oracle \<版本資訊\> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)＞。|  
-|TERADATA|連線到 Teradata \<版本資訊\> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
+|TERADATA|連線到 Teradata \<版本資訊\> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自訂連接管理員  
  您也可以撰寫自訂連接管理員。 如需詳細資訊，請參閱＜ [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)＞。  

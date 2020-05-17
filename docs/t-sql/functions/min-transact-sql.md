@@ -17,15 +17,15 @@ helpviewer_keywords:
 - minimum values [SQL Server]
 - values [SQL Server], minimum
 ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebdb67cb942413d94837822061877bd7fe7eadd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68f9d07a2129424a59890f50b884b4fe5f4f70e3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828724"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68130237"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

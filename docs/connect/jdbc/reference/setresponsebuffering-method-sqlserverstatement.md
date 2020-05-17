@@ -13,14 +13,14 @@ apilocation:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: f3a6765bf5665704293233293982edfc1e746ce5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927443"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67973115"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>setResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

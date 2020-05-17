@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 084ccf5a965935df727d46dceac5a249a66b4ff3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633336"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73064696"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "81633336"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
    [ FROM <asym_key_source> ]  

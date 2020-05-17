@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b844c3d3700c056d2e57e9decf442c6e14878cde
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633620"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68050676"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 系統物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "81633620"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
   
 GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  

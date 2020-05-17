@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 29a4bf2c728cc1b59e88ff0ce70ece6a19917e34
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633498"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68040459"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "81633498"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```sql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
-ms.author: pelopes
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d6baea43ef2432ce9d5c54ea15441ca014cee41
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823863"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73844511"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

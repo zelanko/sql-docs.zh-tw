@@ -24,12 +24,12 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b01a5f818a29402e4008b95236bb43fb816aa5e2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632460"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71816840"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "81632460"
 
 ## <a name="syntax"></a>語法
 
-```syntaxsql
+```
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```

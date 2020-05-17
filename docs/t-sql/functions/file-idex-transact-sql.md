@@ -20,14 +20,14 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e44198f33bb837d7199a86643a60fbf59e84f0f6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827002"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68071498"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

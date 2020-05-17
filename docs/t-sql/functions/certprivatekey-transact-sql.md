@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7a8bf334be11a219dccf84f6732fb94254034403
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832192"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "65948823"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "82832192"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```sql
 CERTPRIVATEKEY   
     (  
           cert_ID   

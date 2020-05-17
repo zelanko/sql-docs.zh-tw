@@ -25,12 +25,12 @@ helpviewer_keywords:
 - data classification
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: e3b5ba45e03a27f8b07f854cd94f515daefa5dec
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631960"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73882402"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "81631960"
 
 ## <a name="syntax"></a>語法  
 
-```syntaxsql
+```
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
     WITH ( <sensitivity_option> [, ...n ] )     

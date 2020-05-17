@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 31425e7744adc45666ace772b33e46fa23980c07
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631784"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73981999"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "81631784"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```  
 [ CONSTRAINT constraint_name ]   
 {   
     [ NULL | NOT NULL ]   

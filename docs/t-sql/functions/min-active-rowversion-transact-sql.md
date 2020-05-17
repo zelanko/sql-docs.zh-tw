@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MIN_ACTIVE_ROWVERSION function [Transact-SQL]
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68da6bcee188ebbe7d4457804e905369467bb5b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 8fcd041edda3e8575e3dfc05615d2e23f6da20fd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832995"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68130266"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

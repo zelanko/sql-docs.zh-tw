@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f2106b9dbf9beedaf8d753496c36f1a668f853a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633545"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74056347"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81633545"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
