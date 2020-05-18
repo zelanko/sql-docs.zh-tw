@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 06/20/2018
-ms.openlocfilehash: ed2292c2f2a5fe067b5602ffcf46d52ca93c2f08
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 6490dd15619c315288be6a094ceb26e68c0179d1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262023"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151533"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -59,7 +59,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
    ```bash
    $ mkdir sqlpackage
-   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
+   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip -d ~/sqlpackage 
    $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    $ source ~/.bash_profile
    $ sqlpackage
@@ -71,7 +71,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 2. 若要將檔案解壓縮並啟動 sqlpackage，請開啟新的終端機視窗並輸入下列命令：
 
    ```bash
-   cd ~
+   $ cd ~
    $ mkdir sqlpackage
    $ unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
    $ echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc

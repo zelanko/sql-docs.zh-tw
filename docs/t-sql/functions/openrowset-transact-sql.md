@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9851df7630dd74a02a55c686a207576cbe99ba96
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804309"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151198"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -529,6 +529,31 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
+存取儲存體帳戶的另一種方式是透過[受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)。 若要執行這項操作，請遵循[步驟 1 到 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps)，將 SQL Database 設定為可透過受控識別存取儲存體，之後即可實作如下所示的程式碼範例
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+INSERT INTO achievements with (TABLOCK) (id, description)
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
+```
 ### <a name="additional-examples"></a>其他範例
 
 如需示範如何使用 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 的其他範例，請參閱下列主題：

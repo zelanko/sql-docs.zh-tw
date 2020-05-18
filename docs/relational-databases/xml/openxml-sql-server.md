@@ -1,10 +1,10 @@
 ---
 title: OPENXML (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: jroth
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3719463499049d860d0aab234f7917a1f8bc052d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665247"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269433"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "80665247"
   
  `<Customers>` 下列範例將 XML 文件分成兩部分的方法是使用兩個 `Customers` 陳述式，將其 `<Orders>` 元素儲存在 `Orders` 資料表中，以及將其 `INSERT` 元素儲存在  資料表中。 `SELECT` 此範例同時也顯示帶有 `OPENXML` 的 `CustomerID` 陳述式，從 XML 文件中擷取 `OrderDate` 和 。 `sp_xml_removedocument`在此程序中的最一個步驟是呼叫 。 這是為了釋放已配置的記憶體，該記憶體是用來包含在剖析階段期間所建立的內部 XML 樹狀表示法。  
   
-```  
+```sql
 -- Create tables for later population using OPENXML.  
 CREATE TABLE Customers (CustomerID varchar(20) primary key,  
                 ContactName varchar(20),   
                 CompanyName varchar(20));  
 GO  
-CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime;)  
+CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime);
 GO  
 DECLARE @docHandle int;  
 DECLARE @xmlDocument nvarchar(max); -- or xml type  
@@ -90,7 +90,8 @@ SELECT *
 FROM OPENXML(@docHandle, N'//Orders')   
   WITH Orders;  
 -- Using OPENXML in a SELECT statement.  
-SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders') WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);  
+SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders')
+  WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);
 -- Remove the internal representation of the XML document.  
 EXEC sp_xml_removedocument @docHandle;   
 ```  
@@ -149,7 +150,8 @@ EXEC sp_xml_removedocument @docHandle;
 |**datatype**|**nvarchar(max)**|是元素或屬性資料列的實際資料類型，否則為 NULL。 資料類型是從內嵌 DTD 或內嵌結構描述推斷。|  
 |**prev**|**bigint**|這是前一個同層級元素的 XML 識別碼。 如果沒有直接的前一個同層級，則為 NULL。|  
 |**text**|**ntext**|包含文字格式的屬性值或元素內容。 若邊緣資料表項目不需要值，則為 NULL。|  
-  
+||||
+
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>使用 WITH 子句指定現有的資料表  
  您可以使用 WITH 子句來指定現有資料表的名稱。 若要這麼做，只需指定現有的資料表名稱，而此資料表的結構描述可讓 OPENXML 用來產生資料列集。  
   

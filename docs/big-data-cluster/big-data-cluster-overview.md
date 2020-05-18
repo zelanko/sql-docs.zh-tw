@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77903763"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152010"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -117,7 +117,7 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 存放集區包含由 Linux 上的 SQL Server、Spark 和 HDFS 組成的存放集區 Pod。 SQL Server 巨量資料叢集中的所有存放裝置節點都是 HDFS 叢集成員。
 
 > [!TIP]
-> 如需深入了解叢集架構和安裝，請參閱[工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) \(英文\)。
+> 如需深入了解叢集架構和安裝，請參閱[工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/microsoft/sqlworkshops-bdc) \(英文\)。
 
 ## <a name="next-steps"></a>後續步驟
 
