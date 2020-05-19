@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8862cc58889c4446c23e994a9c8e0f6a54a50d38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963870"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751962"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 屬性 (RDS)
 表示要求超時前等待的毫秒數。  

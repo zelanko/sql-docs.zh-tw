@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Handler property [ADO], VC++ example
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15bbdd0b1e3627453a3ea10a4ea6207f446988f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16e94fad7c5dfc85fcde7d835363e800ab5d3f46
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964066"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751980"
 ---
 # <a name="handler-property-example-vc"></a>Handler 屬性範例 (VC++)
 > [!IMPORTANT]

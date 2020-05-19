@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16a1a97f08ff15e1b19573f35e81a1e10d5c7331
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1759596c515b3bb41d1f52a5e8b0577314495bb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963850"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751807"
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 介面 (RDS)
 公開[InvokeService （RDS）](../../../ado/reference/rds-api/invokeservice-rds.md)方法，用來在物件的支援版本上傳回所要求介面的指標。  

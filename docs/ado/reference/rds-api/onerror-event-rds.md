@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - onError event [ADO]
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c0e398b80af037763dce479a9fe3a26956b0e3b0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963849"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751544"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 每當作業期間發生錯誤時，就會呼叫**onError**事件。  
@@ -37,7 +37,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  表示錯誤狀態碼的整數。  
   
- *說明*  
+ *描述*  
  表示錯誤描述的**字串**。  
   
  *來源*  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ead0a42c0c5239a0f3bb4cafecb584788e06832
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963867"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751911"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 在物件的支援版本上，傳回所要求介面的指標。  

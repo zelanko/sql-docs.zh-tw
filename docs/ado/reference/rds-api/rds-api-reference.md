@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS API reference [ADO]
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14df0a3e29068b671f9320e90fac624b2aabbddc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5caa1944cbc9246fed50d60557ea376082c0c78
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963785"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751462"
 ---
 # <a name="rds-api-reference"></a>RDS API 參考
 > [!IMPORTANT]

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RDS samples [ADO], VBScript
 - VBScript RDS examples [ADO]
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 29ec0c1f409e0e92cb7d7afed66aa01dfb5a4f74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963799"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751411"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript 中的 RDS 程式碼範例
 > [!IMPORTANT]

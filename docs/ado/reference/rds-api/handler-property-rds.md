@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963998"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751942"
 ---
 # <a name="handler-property-rds"></a>Handler 屬性 (RDS)
 指示伺服器端自訂程式（處理常式）的名稱，這個程式會擴充[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)的功能，以及*處理常式*所使用的任何參數。  
@@ -40,7 +40,7 @@ DataControl.Handler = String
  代表 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
  *字串*  
- 包含處理常式名稱和任何參數的**字串**值，全都以逗號分隔（ `"handlerName,parm1,parm2,...,parm`例如*N*`"`）。  
+ 包含處理常式名稱和任何參數的**字串**值，全都以逗號分隔（例如 `"handlerName,parm1,parm2,...,parm` *N* `"` ）。  
   
 ## <a name="remarks"></a>備註  
  這個屬性支援[自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)，這是需要將[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**的功能。  
