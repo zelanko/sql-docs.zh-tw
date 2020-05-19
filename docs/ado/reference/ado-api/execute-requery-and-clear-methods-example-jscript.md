@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f4ceafffc9d6b87428ae3da58a2f824bb7ed3c34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4c5ca02f8f3ca6b8b525bdc3fb7875c3f1638640
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918827"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754962"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute、Requery 和 Clear 方法範例（JScript）
 這個範例會示範從[Command](../../../ado/reference/ado-api/command-object-ado.md)物件和[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件執行時的**Execute**方法。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來抓取[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的目前資料，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法則會清除[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合的內容。 （**錯誤**集合是透過[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性的**Connection**物件來存取）。將檔案命名為**ExecuteJS。**  

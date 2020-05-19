@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - MaxRecords property [ADO]
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5acd8997af6993a49ac4cbcca6e3b4c8bd26acfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b9e4beaaa4b38a26089d1136d1b32090ea12231f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932239"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754373"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords 屬性 (ADO)
 指出從查詢傳回記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)的最大記錄數目。  

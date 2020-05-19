@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - put_OLEDBCommand method [ADO]
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f04e021e656646361114d5be33b5ab6a63b1b9ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917418"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754320"
 ---
 # <a name="put_oledbcommand-method"></a>put_OLEDBCommand 方法
 這個方法不會執行任何作業，而且一律會傳回 S_OK。  

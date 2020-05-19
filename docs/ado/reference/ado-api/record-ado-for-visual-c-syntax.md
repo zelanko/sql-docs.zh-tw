@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Record collection [ADO], ADO for Visual C++ syntax
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df62de2c5c51680047270d320ecc7c461bc47c53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6899059b58ef755e8561bdf26973e7ef7b0d6253
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931430"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754227"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>Record (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

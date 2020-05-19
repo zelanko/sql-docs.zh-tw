@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7f4b28a7d63654441d8a66730e729483596b3a8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918274"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754574"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 將現有檔案的內容載入[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)。  

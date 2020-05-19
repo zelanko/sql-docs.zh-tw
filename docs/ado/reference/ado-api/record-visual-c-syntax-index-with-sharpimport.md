@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Record collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f39e5802e08fd47f5442cd7d394b6589ce56c597
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 243a18e261997bab3491d05f1b65b46020606da5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917349"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754021"
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>Record （使用 #import Visual C++ 語法索引）
 ## <a name="methods"></a>方法  

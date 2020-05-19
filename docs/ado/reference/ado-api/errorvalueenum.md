@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932878"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755224"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 執行階段錯誤的類型。  

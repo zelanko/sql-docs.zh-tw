@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LineSeparator property [ADO]
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9248dcabb4c52ceceb6e4876b034480415e77963
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918278"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754812"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator 屬性 (ADO)
 表示要在文字[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件中當做行分隔符號使用的二進位字元。  

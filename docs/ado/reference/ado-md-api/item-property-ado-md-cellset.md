@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e35cf86a91be42a2a39a38642e34e747d7d13fe7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949629"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753918"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 屬性 (ADO MD Cellset)
 使用其座標，從資料格[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)抓取儲存格。  

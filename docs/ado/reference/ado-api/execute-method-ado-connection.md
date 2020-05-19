@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932896"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755099"
 ---
 # <a name="execute-method-ado-connection"></a>Execute 方法 (ADO Connection)
 執行指定的查詢、SQL 語句、預存程式或提供者特定的文字。  
@@ -39,7 +39,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>參數  
  *CommandText*  
- **字串**值，其中包含要執行的 SQL 語句、預存程式、URL 或提供者特定的文字。 **（選擇性**）只有在提供者為 SQL 感知時，才可以使用資料表名稱。 例如，如果使用「Customers」資料表名稱，ADO 就會自動加上標準 SQL Select 語法來形成，並將「SELECT * FROM Customers」當做[!INCLUDE[tsql](../../../includes/tsql-md.md)]語句傳遞給提供者。  
+ **字串**值，其中包含要執行的 SQL 語句、預存程式、URL 或提供者特定的文字。 **（選擇性**）只有在提供者為 SQL 感知時，才可以使用資料表名稱。 例如，如果使用「Customers」資料表名稱，ADO 就會自動加上標準 SQL Select 語法來形成，並將「SELECT * FROM Customers」當做語句傳遞 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 給提供者。  
   
  *RecordsAffected*  
  選擇性。 **長**變數，提供者會傳回作業所影響的記錄數目。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917364"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754051"
 ---
 # <a name="record-object-ado"></a>Record 物件 (ADO)
 表示來自[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或資料提供者的資料列，或由半結構化資料提供者（例如檔案或目錄）所傳回的物件。  
@@ -59,7 +59,7 @@ ms.locfileid: "67917364"
   
 -   以[State](../../../ado/reference/ado-api/state-property-ado.md)屬性指出**記錄**的目前狀態。  
   
--   使用[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)屬性來表示**記錄** - 的類型，*簡單*、*集合*或*結構化檔*。  
+-   使用 RecordType 屬性來**表示記錄**的類型  -  *，簡單*、*集合*或*結構化檔*。 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
 -   使用[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法停止執行非同步作業。  
   

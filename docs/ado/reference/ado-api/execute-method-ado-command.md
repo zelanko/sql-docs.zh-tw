@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f595938fba37e2529f95b763d18dd91731c0b39
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918854"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755111"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法 (ADO 命令)
 執行[Command 物件](../../../ado/reference/ado-api/command-object-ado.md)的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性中所指定的查詢、SQL 語句或預存程式。  
@@ -58,7 +58,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  當**CommandType**為**adCmdStoredProc**、 **adCmdTable**或**adCmdTableDirect**時，如果使用者指定**CommandStream**的值，**執行**就會引發錯誤。  
   
- 如果查詢具有參數，則會使用**命令**物件之參數的目前值，除非您使用隨**執行**呼叫傳遞的參數值來覆寫它們。 呼叫**Execute**方法時，您可以省略某些參數的新值，以覆寫參數的子集。 您指定參數的順序，與方法傳遞它們的順序相同。 例如，如果有四個（或更多）參數，而您只想要傳遞第一個和第四個參數的新值， `Array(var1,,,var4)`則會傳遞做為*參數*引數。  
+ 如果查詢具有參數，則會使用**命令**物件之參數的目前值，除非您使用隨**執行**呼叫傳遞的參數值來覆寫它們。 呼叫**Execute**方法時，您可以省略某些參數的新值，以覆寫參數的子集。 您指定參數的順序，與方法傳遞它們的順序相同。 例如，如果有四個（或更多）參數，而您只想要傳遞第一個和第四個參數的新值，則會傳遞 `Array(var1,,,var4)` 做為*參數*引數。  
   
 > [!NOTE]
 >  在*parameters*引數中傳遞時，輸出參數不會傳回正確的值。  

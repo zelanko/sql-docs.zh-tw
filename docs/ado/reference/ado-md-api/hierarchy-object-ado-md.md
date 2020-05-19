@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949699"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753963"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 物件 (ADO MD)
 表示[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)成員可以匯總或「匯總」的一種方式。 維度可以沿著一或多個階層匯總。  
@@ -38,13 +38,13 @@ ms.locfileid: "67949699"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會根據提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|名稱|描述|  
+|Name|說明|  
 |----------|-----------------|  
 |AllMember|階層中匯總最高層級的成員。|  
 |CatalogName|這個 cube 所屬的目錄名稱。|  
 |CubeName|Cube 的名稱。|  
 |DefaultMember|這個階層之預設成員的唯一名稱。|  
-|描述|階層的有意義描述。|  
+|說明|階層的有意義描述。|  
 |DimensionType|此階層所屬的維度類型。|  
 |DimensionUniqueName|維度的明確名稱。|  
 |HierarchyCaption|與階層關聯的標籤或標題。|  
