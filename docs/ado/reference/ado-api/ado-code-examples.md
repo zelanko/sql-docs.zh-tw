@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO code examples
 - ADO, code examples
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3671bb7ffcb1d51f6bb7582d8cce50e5e28e330a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921117"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749366"
 ---
 # <a name="ado-code-examples"></a>ADO 程式碼範例
 使用下列程式碼範例，瞭解如何使用 ADO 物件、方法、屬性和事件。  

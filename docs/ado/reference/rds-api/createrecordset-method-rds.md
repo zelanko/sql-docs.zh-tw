@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964519"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748845"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空的、中斷連接的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -40,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>參數  
- *Object*  
+ *目標*  
  代表[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
  *ColumnsInfos*  
@@ -65,28 +65,28 @@ object.CreateRecordset(ColumnInfos)
   
  針對某些變數資料類型，類型可以強制轉型為替代欄位中所記下的類型。 在建立並填入**記錄集**之前，您將不會看到替換。 然後，您可以視需要檢查實際的資料類型。  
   
-|長度|持續性|Number|Substitution|  
+|長度|持續性|數字|Substitution|  
 |------------|--------------|------------|------------------|  
-|已修正|**adTinyInt**|16||  
-|已修正|**adSmallInt**|2||  
-|已修正|**adInteger**|3||  
-|已修正|**adBigInt**|20||  
-|已修正|**adUnsignedTinyInt**|17||  
-|已修正|**adUnsignedSmallInt**|18||  
-|已修正|**adUnsignedInt**|19||  
-|已修正|**adUnsignedBigInt**|21||  
-|已修正|**adSingle**|4||  
-|已修正|**adDouble**|5||  
-|已修正|**adCurrency**|6||  
-|已修正|**adDecimal**|14||  
-|已修正|**adNumeric**|131||  
-|已修正|**adBoolean**|11||  
-|已修正|**adError**|10||  
-|已修正|**adGuid**|72||  
-|已修正|**adDate**|7||  
-|已修正|**adDBDate**|133||  
-|已修正|**adDBTime**|134||  
-|已修正|**adDBTimestamp**|135|7|  
+|固定式|**adTinyInt**|16||  
+|固定式|**adSmallInt**|2||  
+|固定式|**adInteger**|3||  
+|固定式|**adBigInt**|20||  
+|固定式|**adUnsignedTinyInt**|17||  
+|固定式|**adUnsignedSmallInt**|18||  
+|固定式|**adUnsignedInt**|19||  
+|固定式|**adUnsignedBigInt**|21||  
+|固定式|**adSingle**|4||  
+|固定式|**adDouble**|5||  
+|固定式|**adCurrency**|6||  
+|固定式|**adDecimal**|14||  
+|固定式|**adNumeric**|131||  
+|固定式|**adBoolean**|11||  
+|固定式|**adError**|10||  
+|固定式|**adGuid**|72||  
+|固定式|**adDate**|7||  
+|固定式|**adDBDate**|133||  
+|固定式|**adDBTime**|134||  
+|固定式|**adDBTimestamp**|135|7|  
 |變數|**adBSTR**|8|130|  
 |變數|**adChar**|129|200|  
 |變數|**adVarChar**|200||  

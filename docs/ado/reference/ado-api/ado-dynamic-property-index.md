@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921086"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749222"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動態屬性索引
 資料提供者、服務提供者和服務元件可以將動態屬性加入至未處理之[連接](../../../ado/reference/ado-api/connection-object-ado.md)和[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的**屬性**集合。 當這些物件開啟時，指定的提供者也可以插入其他屬性。 其中一些屬性會列在 [ [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)] 區段中。 [[附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)] 區段中的特定提供者底下會列出更多。  
@@ -56,7 +56,7 @@ ms.locfileid: "67921086"
 |最大資料列大小|DBPROP_MAXROWSIZE|  
 |最大資料列大小包含 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |SELECT 中的資料表上限|DBPROP_MAXTABLESINSELECT|  
-|[模式]|DBPROP_INIT_MODE|  
+|模式|DBPROP_INIT_MODE|  
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|  
 |多個結果|DBPROP_MULTIPLERESULTS|  
 |多個儲存物件|DBPROP_MULTIPLESTORAGEOBJECTS|  

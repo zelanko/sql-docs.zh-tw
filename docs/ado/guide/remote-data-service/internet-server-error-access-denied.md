@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - access denied error in RDS [ADO]
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adbfc4e56c49447d88fb354d1e67c2c5e3e30b71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 93761afa168d8b6b2cd06cf5e1360d54fa5177c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922628"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749492"
 ---
 # <a name="internet-server-error-access-denied"></a>網際網路伺服器錯誤：拒絕存取
 如果您收到此錯誤，通常表示 Microsoft Internet Information Services （IIS）傳回下列狀態：  

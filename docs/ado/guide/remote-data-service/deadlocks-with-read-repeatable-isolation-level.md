@@ -11,14 +11,14 @@ helpviewer_keywords:
 - deadlocks in RDS [ADO]
 - read repeatable in RDS [ADO]
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8e4e59606f3b68fbd9ce272db8ea8a50ab53e88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 31c90281860473d43e0a6bde4d1dd9e64e39bb3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922710"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749640"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>讀取可重複的隔離等級發生死結
 如果自訂商務物件使用可重複讀取的隔離等級來存取 SQL Server，而且在相同交易中傳送查詢和更新的兩個用戶端同時呼叫商務物件，則可能會發生鎖死。 遠端資料服務的設計目的是要讓其中一個處理常式釋放鎖死，但該用戶端的更新將會失敗。  

@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919997"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748994"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 方法範例 (VBScript)
 這個範例會使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的複本，然後讓使用者獨立放置每個複本的記錄指標。  
   
  在 Active Server Page （ASP）中使用下列範例。 這個範例會使用與 Microsoft Access 一起散發的**Northwind**資料庫。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，並將其儲存為 CloneVBS。 您可以在任何用戶端瀏覽器中查看結果。  
   
- 若要執行此範例，請將`RsCustomerList.Source = "Customers"`這`RsCustomerList.Source = "Products"`一行變更為，以計算較大的資料表。  
+ 若要執行此範例，請將這一行變更 `RsCustomerList.Source = "Customers"` `RsCustomerList.Source = "Products"` 為，以計算較大的資料表。  
   
 ```  
 <!-- BeginCloneVBS -->  

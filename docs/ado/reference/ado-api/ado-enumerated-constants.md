@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a2b02498905b73f321d7585b5c91adfbfd1b4b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 00b33a9fa92dd6ec86cbac5a939fe593725bc091
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921025"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749220"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 列舉常數
 為了協助進行調試，ADO 列舉會列出每個常數的值。 不過，這個值純粹是諮詢，而且可能會從 ADO 的某個版本變更為另一個。 您的程式碼應該只取決於每個列舉常數的名稱，而不是實際的值。  

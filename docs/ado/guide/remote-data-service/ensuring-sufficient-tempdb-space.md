@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - TempDB space in RDS [ADO]
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922651"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749579"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>確認 TempDB 有足夠空間
 如果在處理需要在 Microsoft SQL Server 6.5 上處理空間的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件時發生錯誤，您可能需要增加 TempDB 的大小。 （有些查詢需要暫時的處理空間; 例如，具有 ORDER BY 子句的查詢需要**記錄集**，這需要一些暫存空間）。  
