@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963344"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750723"
 ---
 # <a name="sql-property"></a>SQL 屬性
 指出用來抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的查詢字串。  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  代表 RDS 的物件變數 **。DataControl**物件。  
   
 ## <a name="remarks"></a>備註  
- 一般而言，這是 SQL 語句（使用資料庫伺服器的方言），例如`"Select * from NewTitles"`。 若要確保正確地比對和更新記錄，可更新的查詢必須包含長二進位欄位或計算欄位以外的欄位。  
+ 一般而言，這是 SQL 語句（使用資料庫伺服器的方言），例如 `"Select * from NewTitles"` 。 若要確保正確地比對和更新記錄，可更新的查詢必須包含長二進位欄位或計算欄位以外的欄位。  
   
  如果自訂伺服器端商務物件會抓取用戶端的資料，則**SQL**屬性是選擇性的。  
   

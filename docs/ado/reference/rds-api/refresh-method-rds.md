@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e9fa606aab5d42a7b56171ca3720742d4d119a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963503"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751055"
 ---
 # <a name="refresh-method-rds"></a>Refresh 方法 (RDS)
 重新查詢[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性中所指定的資料來源，並更新查詢結果。  

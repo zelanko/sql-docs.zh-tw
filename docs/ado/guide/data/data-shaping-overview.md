@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6258c44d267462cea097c5553c9814b10d3787f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925626"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750282"
 ---
 # <a name="data-shaping-overview"></a>資料成形概觀
 *資料成形*表示在查詢中建立兩個或多個邏輯實體之間的階層式關聯性。 階層可以在一個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的記錄與另一個記錄**集**的一或多筆記錄（也稱為「章節」）之間的父子關聯性中看到。 在父子式關聯性中，父**記錄集**包含子**記錄集**。 這類階層式關聯性的範例為客戶和訂單。 針對資料庫中的每個客戶，可能會有零個或多個訂單。 階層式關聯性可以是遞迴的，這表示孫記錄可以嵌套在子記錄中。 就原則而言，階層式記錄可以嵌套到任何深度。 在實務上，ADO 會將遞迴限制為最多512個**記錄集**。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923728"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750211"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保存資料
 上述章節討論了如何使用 ADO 來取得資料來源中的資料、如何在資料中四處移動，甚至如何編輯資料。 當然，如果您的應用程式目標是允許使用者變更資料，您就必須瞭解如何儲存這些變更。 您可以使用**Save**方法將**記錄集**變更保存至檔案，也可以使用**Update**或**UpdateBatch**方法將變更傳送回資料來源以進行儲存。  
@@ -34,6 +34,6 @@ ms.locfileid: "67923728"
   
  此章節包含下列主題。  
   
--   [更新資料](../../../ado/guide/data/updating-data.md)  
+-   [正在更新資料](../../../ado/guide/data/updating-data.md)  
   
 -   [保存資料](../../../ado/guide/data/persisting-data.md)

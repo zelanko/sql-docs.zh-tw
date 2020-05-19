@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5bd3b72e897b8ae12441c7cf28d1995eb45318d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26f3ca9220ea41db43b9f98a12429dcb5874bba4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923696"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750228"
 ---
 # <a name="updating-data"></a>更新資料
 更新行為和功能主要取決於更新模式（鎖定類型）、資料指標類型和資料指標位置。  

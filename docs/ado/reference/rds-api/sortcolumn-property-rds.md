@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 83975a46087f75d58be304c543f6e6a45b6db7e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963398"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750841"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 屬性 (RDS)
 指出要排序記錄的資料行。  
@@ -43,7 +43,7 @@ DataControl.SortColumn = String
 ## <a name="remarks"></a>備註  
  **SortColumn**、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)屬性提供用戶端快取的排序和篩選功能。 排序功能會依據一個資料行的值來排序記錄。 篩選功能會根據尋找準則顯示記錄的子集，而完整的[記錄集會](../../../ado/reference/ado-api/recordset-object-ado.md)保留在快取中。 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)方法會執行準則，並以可更新的**記錄集**取代目前的**記錄集**。  
   
- 若要排序**記錄集**，您必須先儲存任何暫止的變更。 如果您使用**RDS。DataControl**，您可以使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法。 例如，如果您的**RDS。DataControl**的名稱為 ADC1，您的程式`ADC1.SubmitChanges`代碼會是。 如果您使用的是 ADO**記錄集**，則可以使用其[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 使用**UpdateBatch**是使用[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)方法所建立之**記錄集**物件的建議方法。 例如，您的程式碼可以`myRS.UpdateBatch`是`ADC1.Recordset.UpdateBatch`或。  
+ 若要排序**記錄集**，您必須先儲存任何暫止的變更。 如果您使用**RDS。DataControl**，您可以使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法。 例如，如果您的**RDS。DataControl**的名稱為 ADC1，您的程式碼會是 `ADC1.SubmitChanges` 。 如果您使用的是 ADO**記錄集**，則可以使用其[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 使用**UpdateBatch**是使用[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)方法所建立之**記錄集**物件的建議方法。 例如，您的程式碼可以是 `myRS.UpdateBatch` 或 `ADC1.Recordset.UpdateBatch` 。  
   
 ## <a name="applies-to"></a>套用至  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

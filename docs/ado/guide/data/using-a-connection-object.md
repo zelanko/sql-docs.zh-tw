@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ba23a9584e94df817e55b710ddadb073313e865b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750199"
 ---
 # <a name="using-a-connection-object"></a>使用 Connection 物件
 開啟**連接**物件之前，您必須定義有關資料來源和連線類型的特定資訊。 這大部分的資訊都是由**connection**物件上[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的*ConnectionString*參數所持有，或是由**connection**物件上的[connectionstring 屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)所保留。 連接字串是由以分號分隔的引數/值組清單所組成，其中的值以單引號括住。 例如：  

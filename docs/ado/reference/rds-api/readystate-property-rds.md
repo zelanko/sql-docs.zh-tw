@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5e1eb89c0e4c7dcbef736d2968a4ffd97a37b93
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963589"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751212"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 屬性 (RDS)
 指出[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件將資料抓取到其[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件時的進度。  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 09785fde3531d50f33064415ddc769eb07f0fec2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963221"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750522"
 ---
 # <a name="url-property-rds"></a>URL 屬性 (RDS)
 表示包含相對或絕對 URL 的字串。  

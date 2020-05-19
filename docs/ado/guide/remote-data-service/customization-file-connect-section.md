@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922800"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749974"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案 Connect 區段
 處理常式的預設行為是拒絕所有連接。 [**連接]** 區段會指定該行為的例外狀況。 例如，如果所有的**connect**區段都不存在或是空的，則預設不會進行任何連接。  
@@ -60,7 +60,7 @@ connectionString
 |**存取**|表示這是存取專案的常值字串。|  
 |**_accessRight_**|下列其中一個存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入資料來源。|  
   
- 如果您想要允許任何連接（實際上是停用預設的處理常式行為），請將 [**連接預設值]** 區段中`Access=ReadWrite`的存取專案設定為，並刪除或批註其他任何 **[連接**_識別碼_] 區段。  
+ 如果您想要允許任何連接（實際上是停用預設的處理常式行為），請將 [**連接預設值]** 區段中的存取專案設定為 `Access=ReadWrite` ，並刪除或批註其他任何 **[連接**_識別碼_] 區段。  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂檔案記錄區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

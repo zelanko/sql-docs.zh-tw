@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 30b5a463c2180a4cc39ac1a0d2333b8b75d02bab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963599"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751110"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 和 SourceRecordset 屬性範例 (VBScript)
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "67963599"
   
  下列範例示範如何在執行時間設定[RDSServer 的 DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)預設商務物件的必要參數。  
   
- 若要測試此範例，請將\<此程式碼剪下並貼\<到本文>，並在一般 HTML 檔案中/Body> 標記，並將其命名為**RecordsetVBS. asp**。 ASP 腳本會識別您的伺服器。  
+ 若要測試此範例，請將此程式碼剪下並貼到本文>，並 \< \< 在一般 HTML 檔案中/Body> 標記，並將其命名為**RecordsetVBS. asp**。 ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginRecordSetVBS -->  

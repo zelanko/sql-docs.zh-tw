@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922789"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749872"
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL 區段
 **Sql**區段可以包含取代用戶端命令字串的新 sql 字串。 如果區段中沒有 SQL 字串，將會忽略區段。  
@@ -28,7 +28,7 @@ ms.locfileid: "67922789"
   
  新的 SQL 字串可能已*參數化*。 也就是**sql**區段 sql 字串（由 '？ ' 字元指定）中的參數，可以由用戶端命令字串中的*識別碼*（以括弧括住的逗號分隔清單所指定）中的對應引數取代。 [識別碼] 和 [引數] 清單的行為與函式呼叫類似。  
   
- 例如，假設用戶端`"CustomerByID(4)"`命令字串是，sql 區段標頭是`[SQL CustomerByID]`，而新的 Sql 區段字串是`"SELECT * FROM Customers WHERE CustomerID = ?".`處理常式將會產生`"SELECT * FROM Customers WHERE CustomerID = 4"`並使用該字串來查詢資料來源。  
+ 例如，假設用戶端命令字串是 `"CustomerByID(4)"` ，sql 區段標頭是 `[SQL CustomerByID]` ，而新的 sql 區段字串是 `"SELECT * FROM Customers WHERE CustomerID = ?".` 處理常式將會產生 `"SELECT * FROM Customers WHERE CustomerID = 4"` 並使用該字串來查詢資料來源。  
   
  如果新的 SQL 語句是 null 字串（""），則會忽略區段。  
   
