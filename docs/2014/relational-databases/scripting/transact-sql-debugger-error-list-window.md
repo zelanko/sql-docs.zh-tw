@@ -12,15 +12,15 @@ helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c88fb6beda0bef5a9e3d1980c1ffa78ed4944b70
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243094"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718405"
 ---
 # <a name="error-list-window-management-studio"></a>錯誤清單視窗 (Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [錯誤清單]  會顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中有哪些 IntelliSense 程式碼產生的語法和語意錯誤。  

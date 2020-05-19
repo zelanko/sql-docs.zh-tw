@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067657"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706378"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**會使用可分類為三種連接資訊層級的關鍵字。 下表針對每個關鍵字指出是否傳回有效值清單以及關鍵字是否為選擇性。  
@@ -28,8 +28,8 @@ ms.locfileid: "63067657"
   
 |關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|不適用|否|**SQLDataSources**所傳回之資料來源的名稱。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
-|DRIVER|不適用|否|Microsoft？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式名稱是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] {native client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
+|DSN|N/A|否|**SQLDataSources**所傳回之資料來源的名稱。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
+|DRIVER|N/A|否|Microsoft？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式名稱是 { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
   
 ## <a name="level-2"></a>層級 2  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63067657"
 |SQL_COPT_SS_BROWSE_CACHE_DATA|當 SQL_COPT_SS_BROWSE_CACHE_DATA 屬性是設定為 SQL_CACHE_DATA_YES 時，您可以在緩衝區長度不足以容納結果時，以片段的方式提取資料。 這個長度是在 SQLBrowseConnect 的 BufferLength 引數中指定。<br /><br /> 當有更多資料可用時，會傳回 SQL_NEED_DATA。 當沒有其他要擷取的資料時，會傳回 SQL_SUCCESS。<br /><br /> 預設為 SQL_CACHE_DATA_NO。|  
   
 ## <a name="sqlbrowseconnect-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQLBrowseConnect 支援  
- 如需使用**SQLBrowseConnect**連線到[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]叢集的詳細資訊，請參閱[高可用性和嚴重損壞修復 SQL Server Native Client 支援](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 如需使用**SQLBrowseConnect**連線到叢集的詳細資訊 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，請參閱[高可用性和嚴重損壞修復 SQL Server Native Client 支援](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLBrowseConnect 支援  
  開啟連接時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會將 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 設定為開啟連接所使用的驗證方法。  

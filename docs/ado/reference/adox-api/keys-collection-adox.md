@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965854"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746545"
 ---
 # <a name="keys-collection-adox"></a>Keys 集合 (ADOX)
 包含[資料表](../../../ado/reference/adox-api/table-object-adox.md)的所有索引[鍵](../../../ado/reference/adox-api/key-object-adox.md)物件。  

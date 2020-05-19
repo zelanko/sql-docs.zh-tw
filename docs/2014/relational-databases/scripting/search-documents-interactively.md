@@ -11,15 +11,15 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05fac94c8673aed046455fc57eac223bd7853d40
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243285"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718738"
 ---
 # <a name="search-documents-interactively"></a>以互動方式搜尋文件
   您可以利用 [尋找和取代]  對話方塊，搜尋一或多個開啟的檔案或視窗，並逐一搜尋相符的項目。 這項技術可讓您在環繞相符項目的文字內容中，檢閱每項個別的搜尋相符項目。 您也可以選擇執行大量尋找作業，或利用 [尋找和取代]  對話方塊，以報表格式檢閱搜尋相符項目。  

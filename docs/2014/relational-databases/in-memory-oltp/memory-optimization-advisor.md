@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157997"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719073"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
   交易效能報告工具 (請參閱＜ [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)＞) 會通知您，匯出使用記憶體中 OLTP 時資料庫中哪些資料表有加分效果。 識別您要匯出使用記憶體中 OLTP 的資料表之後，即可使用 Memory Optimization Advisor，協助您將以磁碟為基礎的資料庫資料表移轉到記憶體中 OLTP。  
@@ -84,7 +84,7 @@ ms.locfileid: "63157997"
 > [!WARNING]  
 >  只有在您了解非持久性資料表的相關資料遺失風險時，才可選取此選項。  
   
- 按 **[下一步]**，繼續進行。  
+ 按一下 [下一步] 以繼續。  
   
 ### <a name="review-primary-key-conversion"></a>檢閱主索引鍵轉換  
  下一個畫面是 **[檢閱主索引鍵轉換]**。 記憶體最佳化 Advisor 會偵測資料表中是否有一個或多個主索引鍵，並根據主索引鍵的中繼資料填入資料行的清單。 否則，如果您想要移轉至持久性記憶體最佳化資料表，就必須建立主索引鍵。  

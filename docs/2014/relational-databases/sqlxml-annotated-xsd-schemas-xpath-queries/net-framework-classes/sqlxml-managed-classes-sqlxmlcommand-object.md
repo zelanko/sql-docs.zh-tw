@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010740"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717951"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 物件 (SQLXML Managed 類別)
   這是 SqlXmlCommand 物件的構造函式：  
@@ -44,7 +44,7 @@ ms.locfileid: "66010740"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 其中`cnString`是用來識別伺服器、資料庫和登入資訊的 ADO 或 OLEDB 連接字串，例如`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`。  
+ 其中 `cnString` 是用來識別伺服器、資料庫和登入資訊的 ADO 或 OLEDB 連接字串，例如 `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` 。  
   
  在連接字串中，`Provider` 必須為 SQLOLEDB 而 `Data Provider` 不應包含在連接字串中。  
   
@@ -86,7 +86,7 @@ public SqlXmlCommand(string cnString)
  XSL 檔案的名稱與目錄路徑。 指定的路徑可以是相對或絕對路徑。 如果路徑是相對的，則會使用 [基底路徑] 中所指定的基底路徑來解析相對路徑。 如果未指定基底路徑，相對路徑會相對於目前的目錄。 如需實用範例，請參閱[&#40;SQLXML Managed 類別套用 XSL 轉換&#41;](applying-an-xsl-transformation-sqlxml-managed-classes.md)。  
   
  基底路徑  
- 基底路徑 (目錄路徑)。 這個屬性可用於解析指定給 XSL 檔案的相對路徑（藉由使用 XslPath 屬性）、對應架構檔案（藉由使用 SchemaPath 屬性），或 XML 範本中的外部架構參考（使用`mapping-schema`屬性指定）。  
+ 基底路徑 (目錄路徑)。 這個屬性可用於解析指定給 XSL 檔案的相對路徑（藉由使用 XslPath 屬性）、對應架構檔案（藉由使用 SchemaPath 屬性），或 XML 範本中的外部架構參考（使用 `mapping-schema` 屬性指定）。  
   
  OutputEncoding  
  指定命令執行時所傳回之資料流的編碼。 此屬性對於要求所傳回之資料流的特定編碼相當實用。 一些常用的編碼為 UTF-8、ANSI 和 Unicode。 UTF-8 是預設編碼。  

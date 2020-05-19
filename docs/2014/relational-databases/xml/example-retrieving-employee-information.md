@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e4cafd4d9f9ec1579eacc2eca2f1381cec13ae6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287843"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716862"
 ---
 # <a name="example-retrieving-employee-information"></a>範例：擷取員工資訊
   此範例會擷取每個員工的員工識別碼及員工名稱。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，employeeID 可以從 Employee 資料表中的 BusinessEntityID 資料行取得。 員工名稱可以從 Person 資料表取得。 BusinessEntityID 資料行可用於聯結資料表。  

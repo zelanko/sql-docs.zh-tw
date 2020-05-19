@@ -19,15 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15fe0d424ac1f5a83fb842a2b9ab2f9416fedd55
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772274"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706895"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供關於 SQL Server 2014 的回函
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 感謝您撥冗協助我們改良 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產品和文件集。 您可以提供有關產品功能和使用者介面的建議與錯誤報告、提交文件集回函，以及選擇將錯誤報告和使用方式資料自動傳送給 [!INCLUDE[msCoName](../includes/msconame-md.md)] 進行分析。 這三個回函選項分述如下。  

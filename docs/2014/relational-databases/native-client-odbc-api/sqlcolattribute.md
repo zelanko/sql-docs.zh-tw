@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067662"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706342"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  您可以使用`SQLColAttribute` ，針對已備妥或已執行的 ODBC 語句，抓取結果集資料行的屬性。 在`SQLColAttribute`備妥的語句上呼叫會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]導致往返。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會在執行語句時接收結果集資料行資料，因此`SQLColAttribute` ，在**SQLExecute**或**SQLExecDirect**完成時呼叫之後，不會牽涉到伺服器往返。  
+  您可以使用 `SQLColAttribute` ，針對已備妥或已執行的 ODBC 語句，抓取結果集資料行的屬性。 `SQLColAttribute`在備妥的語句上呼叫會導致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在執行語句時接收結果集資料行資料，因此，在 `SQLColAttribute` **SQLExecute**或**SQLExecDirect**完成時呼叫之後，不會牽涉到伺服器往返。  
   
 > [!NOTE]  
 >  ODBC 資料行識別碼屬性並非在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結果集上都有提供。  
@@ -39,9 +39,9 @@ ms.locfileid: "63067662"
 |SQL_DESC_TABLE_NAME|可用於擷取自產生伺服器資料指標之陳述式的結果集，或包含 FOR BROWSE 子句之已執行 SELECT 陳述式。|  
 |SQL_DESC_UNNAMED|除非資料行是運算式的結果，而且該運算式在執行時不包含標籤指派，否則為結果集中所有資料行的 SQL_NAMED。 當 SQL_DESC_UNNAMED 傳回 SQL_UNNAMED 時，資料行的所有 ODBC 資料行識別碼屬性都包含零長度字串。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會使用 SET SET FMTONLY 語句，以在針對`SQLColAttribute`已備妥但未執行的語句呼叫時減少伺服器額外負荷。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會使用 SET SET FMTONLY 語句，以在 `SQLColAttribute` 針對已備妥但未執行的語句呼叫時減少伺服器額外負荷。  
   
- 對於大數數值型別， `SQLColAttribute`會傳回下列值：  
+ 對於大數數值型別， `SQLColAttribute` 會傳回下列值：  
   
 |欄位識別碼|變更的描述|  
 |----------------------|---------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "63067662"
   
  對於所有版本，當已備妥的 SQL 陳述式批次產生多個結果集時，只有第一個結果集會報告資料行屬性。  
   
- 下列資料行屬性是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式所公開的延伸模組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會傳回*NumericAttrPtr*參數中的所有值。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
+ 下列資料行屬性是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式所公開的延伸模組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會傳回*NumericAttrPtr*參數中的所有值。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
   
 |欄位識別碼|傳回的值|  
 |----------------------|--------------------|  
@@ -102,7 +102,7 @@ ms.locfileid: "63067662"
  `SQLColAttribute` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>疏鬆資料行的 SQLColAttribute 支援  
- SQLColAttribute 會查詢新的執行資料列描述項（IRD）欄位（SQL_CA_SS_IS_COLUMN_SET），以判斷資料`column_set`行是否為數據行。  
+ SQLColAttribute 會查詢新的執行資料列描述項（IRD）欄位（SQL_CA_SS_IS_COLUMN_SET），以判斷資料行是否為數據行 `column_set` 。  
   
  如需詳細資訊，請參閱[&#40;ODBC&#41;的稀疏資料行支援](../native-client/odbc/sparse-columns-support-odbc.md)。  
   

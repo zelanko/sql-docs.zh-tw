@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638162"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717230"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
   以下是具有名稱的資料列集資料行，以區分大小寫的方式對應至產生之 XML 的特定條件：  
@@ -33,7 +33,7 @@ ms.locfileid: "62638162"
 -   一個資料行具有不同的名稱。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>資料行名稱以 \@ 符號開頭  
- 如果資料行名稱是以 @ 符號\@開頭，而且不包含斜線（/），則會建立具有對應資料行值 <`row`> 元素的屬性。 例如，以下查詢會傳回兩個資料行 (\@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會加入對應的 <`row`> 元素中，並會將 ProductModelID 值指派給該元素。  
+ 如果資料行名稱是以 @ 符號開頭， \@ 而且不包含斜線（/），則 `row` 會建立具有對應資料行值 <> 元素的屬性。 例如，以下查詢會傳回兩個資料行 (\@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會加入對應的 <`row`> 元素中，並會將 ProductModelID 值指派給該元素。  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>資料行名稱不是以 \@ 符號開頭  
- 如果資料行名稱不是以 @ 符號開頭（\@），就不是其中一個 XPath 節點測試，而且不包含斜線（/），而是資料列元素之子專案的 XML 專案，<`row`> 預設為建立。  
+ 如果資料行名稱不是以 @ 符號開頭（ \@ ），就不是其中一個 XPath 節點測試，而且不包含斜線（/），而是資料列元素之子專案的 XML 專案，<`row`> 預設為建立。  
   
  下列查詢指定資料行名稱，也就是結果。 因此，<`result`> 子元素會加入 <`row`> 元素。  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭。因此，會將屬性**EmpID**新增至 <`row`> 元素。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 <`row`> 元素底下將有 <`EmpName`> 子元素，而且 <`EmpName`> 子元素將有 <`First`>、<`Middle`> 及 <`Last`> 子元素。  
+ 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 ' \@ ' 開頭。因此，會將屬性**EmpID**新增至 <`row`> 元素。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 <`row`> 元素底下將有 <`EmpName`> 子元素，而且 <`EmpName`> 子元素將有 <`First`>、<`Middle`> 及 <`Last`> 子元素。  
   
 ```  
 <row EmpID="1">  

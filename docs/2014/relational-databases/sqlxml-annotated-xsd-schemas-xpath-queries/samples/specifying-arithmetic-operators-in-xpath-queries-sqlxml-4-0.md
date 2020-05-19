@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], arithmetic operators
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012470"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717855"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定算術運算子 (SQLXML 4.0)
   下列範例示範如何在 XPath 查詢中指定算術運算子。 此範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -28,13 +28,13 @@ ms.locfileid: "66012470"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算術運算子  
- 這個 XPath 查詢會傳回符合指定之述詞的** \<OrderDetail>** 元素：  
+ 這個 XPath 查詢會傳回符合指定之述詞的** \< OrderDetail>** 元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查詢中， `child`是`OrderDetail`軸而且是節點測試（如果**OrderDetail**是** \<元素節點>**，則為 TRUE，因為>節點的** \<元素**是`child`軸的主要節點）。 對於所有** \<OrderDetail>** 元素節點，會套用述詞中的測試，而且只會傳回滿足條件的節點。  
+ 在查詢中， `child` 是軸而且 `OrderDetail` 是節點測試（如果**OrderDetail**是** \< 元素節點>**，則為 TRUE，因為>節點的** \< 元素**是軸的主要節點 `child` ）。 對於所有** \< OrderDetail>** 元素節點，會套用述詞中的測試，而且只會傳回滿足條件的節點。  
   
 > [!NOTE]  
 >  XPath 中的數字為雙精確度浮點數，而且在範例中比較浮點數會造成四捨五入。  

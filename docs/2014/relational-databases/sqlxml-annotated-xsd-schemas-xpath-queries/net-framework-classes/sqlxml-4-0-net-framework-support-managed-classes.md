@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLXML Managed Classes
 - SQLXML, Managed Classes
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 677d769f54dab338e65b171bed50b6abb69e356a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df7a5601ce5c99b8679b4002979c1b58ffc15ca0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010790"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717963"
 ---
 # <a name="sqlxml-managed-classes"></a>SQLXML Managed 類別
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed 類別會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內部公開 SQLXML 4.0 的功能。 您可以利用 SQLXML Managed 類別撰寫 C# 應用程式來存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中的 XML 資料、將資料帶到 .NET Framework 環境、處理資料，以及將更新傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 做為 DiffGram 來套用更新。 使用 SQLXML Managed 類別，將更新套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫時，您必須使用對應的結構描述。 如需實用範例，請參閱[存取 .Net 環境中的 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  

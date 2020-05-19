@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922469"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747749"
 ---
 # <a name="rds-programming-model-with-objects"></a>具有物件的 RDS 程式設計模型
 RDS 的目標是要透過像是 IIS 的媒介來取得及更新資料來源。 程式設計模型會指定完成此目標所需的活動順序。 物件模型會指定其方法和屬性會影響程式設計模型的物件。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920662"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746913"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 將物件附加至集合。 如果集合是[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，則可以建立新的[Field](../../../ado/reference/ado-api/field-object.md)物件，然後再將它附加至集合。  
@@ -40,7 +40,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *欄位*  
  **Fields**集合。  
   
- *目標*  
+ *物件*  
  物件變數，表示要附加的物件。  
   
  *名稱*  

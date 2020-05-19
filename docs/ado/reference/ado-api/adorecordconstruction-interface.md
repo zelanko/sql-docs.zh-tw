@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920802"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747181"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
 **ADORecordConstruction**介面是用來從 C/c + + 應用程式中的 OLE DB **Row**物件，來建立 ADO**記錄**物件。  
@@ -41,7 +41,7 @@ ms.locfileid: "67920802"
  無。  
   
 ## <a name="remarks"></a>備註  
- 假設有一個**Row** OLE DB 的資料`pRow`列物件（），即 ADO **Record**物件（`adoR`）的結構，其數量為下列三個基本作業：  
+ 假設有一個 OLE DB 的資料**列**物件（ `pRow` ），即 ADO **Record**物件（ `adoR` ）的結構，其數量為下列三個基本作業：  
   
 1.  建立 ADO**記錄**物件：  
   

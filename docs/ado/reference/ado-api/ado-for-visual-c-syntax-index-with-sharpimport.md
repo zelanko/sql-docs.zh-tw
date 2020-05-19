@@ -15,19 +15,19 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920968"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747272"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>使用 #import Visual C++ 語法索引的 ADO
 這個索引是以 Microsoft Visual C++ 和 **#import**指示詞為基礎之 ADO 語言參考的交互參考。  
   
- 此特定索引的衍生方式是使用 **#import**指示詞，針對 ADO 編譯器，然後重新格式化所產生\*的 tlh 檔案。 只會保留方法、屬性和事件的相關資訊。 針對每個屬性宣告的替代語法是由對應的 "`__declspec(property...)`" 指示詞所列出。  
+ 此特定索引的衍生方式是使用 **#import**指示詞，針對 ADO 編譯器，然後重新格式化所 \* 產生的 tlh 檔案。 只會保留方法、屬性和事件的相關資訊。 針對每個屬性宣告的替代語法是由對應的 "" 指示詞所列出 `__declspec(property...)` 。  
   
  強烈建議您閱讀[VISUAL C++ ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)以取得詳細資訊。  
   

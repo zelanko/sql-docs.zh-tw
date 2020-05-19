@@ -16,14 +16,14 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6873b964adfcfc5bffed5d093bed48f4fbd29a20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 87cae622b8c25a37bb5d2de833ca98e044f36351
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965866"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746623"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VB)
 下列程式碼示範如何在兩個現有的資料表（名為**Customers**和**Orders**）之間建立新的外鍵關聯性。  

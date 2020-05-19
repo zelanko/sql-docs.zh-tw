@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9202a3125b35075e9fe4311a4ebe81103cf6b937
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242935"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718140"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
   提供一組視覺化工具，以搭配 XML 結構描述、ADO.NET 資料集以及 XML 文件使用。 XML 設計工具支援全球資訊網協會 (WC3) 定義的 XML 結構描述定義 (XSD) 語言。 設計師不支援 DTD (文件類型定義) 或其他 XML 結構描述語言，例如 XDR (XML-Data Reduced)。  
@@ -95,7 +95,7 @@ ms.locfileid: "75242935"
 -   自 XML 文件產生 XML 結構描述  
   
 ## <a name="xml-view"></a>XML 檢視  
- XML 檢視提供編輯器來編輯原始 XML，並提供 IntelliSense 和色彩編碼。 在處理具有相關聯之結構描述的 .xsd 檔案與 .xml 檔案時，可以使用陳述式完成。 輸入\<以起始標記，您會看到在該位置有效的元素清單。 鍵入元素名稱並按下空格鍵之後，將會出現該元素所支援的屬性清單。  
+ XML 檢視提供編輯器來編輯原始 XML，並提供 IntelliSense 和色彩編碼。 在處理具有相關聯之結構描述的 .xsd 檔案與 .xml 檔案時，可以使用陳述式完成。 輸入 \< 以起始標記，您會看到在該位置有效的元素清單。 鍵入元素名稱並按下空格鍵之後，將會出現該元素所支援的屬性清單。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。 在 XML 編輯器中，若要存取選項，請在 **[編輯]** 功能表上，按一下 **[IntelliSense]** 。  

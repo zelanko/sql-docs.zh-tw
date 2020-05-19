@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CreateParameter method [ADO], Visual Basic example
 - Append method [ADO], Visual Basic example
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60ea4653fac6bd2fada500d562420b1ff705d4d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72964e1c3c44b389d8aabee9b794fb3dc5e1fd36
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920712"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746975"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 和 CreateParameter 方法範例 (VB)
 這個範例會使用[Append](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來執行具有輸入參數的預存程式。  

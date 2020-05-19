@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014786"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717511"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 執行 Updategram (SQLXML 4.0)
   本主題提供 usingOLE DB 的工作範例，以執行 updategram。  
@@ -58,7 +58,7 @@ ms.locfileid: "66014786"
 </Schema>  
 ```  
   
- 此查詢會傳回所有的員工元素。 使用預設對應時， ** \<Person. Contact>** 元素會對應到 AdventureWorks 資料庫中的 person. contact 資料表。  
+ 此查詢會傳回所有的員工元素。 使用預設對應時， ** \< Person. Contact>** 元素會對應到 AdventureWorks 資料庫中的 person. contact 資料表。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>將 XML 設定為命令並且將結果擷取為 XML 文件  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 範本包含了 SQL 查詢。 查詢需要其參數的值（@Title）。 如果沒有傳遞任何參數值，則會使用預設值 ("Mr.")。  
+ 範本包含了 SQL 查詢。 查詢需要其參數的值（ @Title ）。 如果沒有傳遞任何參數值，則會使用預設值 ("Mr.")。  
   
  將參數值傳遞給範本時，必須同時指定參數名稱和值。  
   

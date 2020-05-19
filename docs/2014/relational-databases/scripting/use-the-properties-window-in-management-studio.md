@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - complex properties [SQL Server Management Studio]
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9c5b4f6b7c54b7bde76d61dc55b1b10f805dd87
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242965"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718188"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>在 Management Studio 中使用屬性視窗
   [屬性] 視窗描述 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的項目狀態，如連接或執行程序表運算子，以及資料庫物件的詳細資訊，如資料表、檢視表及設計師。  

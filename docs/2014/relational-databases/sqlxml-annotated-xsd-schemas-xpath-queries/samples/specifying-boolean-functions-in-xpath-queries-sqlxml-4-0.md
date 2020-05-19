@@ -13,15 +13,15 @@ helpviewer_keywords:
 - true function
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012389"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717802"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林函數 (SQLXML 4.0)
   下列範例顯示如何在 XPath 查詢中指定布林函數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "66012389"
 ## <a name="examples"></a>範例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布林函數  
- 此查詢會傳回內容節點中沒有** \<Order>** 子項目的所有** \<客戶>** 子項目：  
+ 此查詢會傳回內容節點中沒有** \< Order>** 子項目的所有** \< 客戶>** 子項目：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +77,7 @@ ms.locfileid: "66012389"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布林函數  
- 此查詢會傳回內容節點的所有** \<Customer>** 專案子系，而不會有** \<Order>** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
+ 此查詢會傳回內容節點的所有** \< Customer>** 專案子系，而不會有** \< Order>** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
   
 ```  
 /child::Customer[child::Order=false()]  

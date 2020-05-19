@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80402574"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706939"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>SQL Server 2014 工具和增益集元件的文件集
     
@@ -24,7 +24,7 @@ ms.locfileid: "80402574"
   
 |||  
 |-|-|  
-|**工具**|**說明**|  
+|**工具**|**描述**|  
 |[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|組態管理員這個工具是用來管理與 SQL Server 相關聯的服務、設定 SQL Server 所使用的網路通訊協定，以及管理 SQL Server 用戶端電腦的網路連接組態。|  
 |[SQL Server 2014 升級建議程式](../sql-server/install/sql-server-2014-upgrade-advisor.md)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Upgrade Advisor 會分析已安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件的組態，然後產生問題的報表，其中列出您必須解決才能確保升級成功的問題。|  
 |[適用於 Office 2013 的 SQL Server 資料採礦增益集](https://go.microsoft.com/fwlink/?LinkId=299178)|適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用 Excel 中的資料建立用於預測、建議或探索的分析模型。|  

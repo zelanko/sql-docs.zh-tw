@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38280abdedfc78f747a84acf62c38759e8f5d3de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071466"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719062"
 ---
 # <a name="migrating-triggers"></a>移轉觸發程序
   本主題討論 DDL 和 DML 觸發程序以及記憶體最佳化的資料表。  
@@ -34,7 +34,7 @@ ms.locfileid: "63071466"
   
  視觸發程序事件 (FOR/AFTER 或 INSTEAD OF) 而定，您也許可將觸發程序的內容納入到對該資料表執行 INSERT、UPDATE 或 DELETE 的適當預存程序。 例如，在移轉 AFTER INSERT 觸發程序時，您可以將此觸發程序的內容納入到適當的 INSERT 陳述式後面，藉此更改執行插入作業的預存程序。  
   
- 您可以使用解譯的預存程序或原生編譯預存程序。 解譯的預存程序中大多數的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構皆可對記憶體最佳化的資料表執行。 不過，原生編譯預存程序僅支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構的子集。 如需記憶體[!INCLUDE[tsql](../../includes/tsql-md.md)]優化資料表支援的詳細資訊，請參閱[使用已解讀的 Transact-sql 存取記憶體優化資料表](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。 如需原[!INCLUDE[tsql](../../includes/tsql-md.md)]生編譯預存程式中支援的詳細資訊，請參閱[記憶體內部 OLTP 不支援的 transact-sql 結構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
+ 您可以使用解譯的預存程序或原生編譯預存程序。 解譯的預存程序中大多數的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構皆可對記憶體最佳化的資料表執行。 不過，原生編譯預存程序僅支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構的子集。 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 記憶體優化資料表支援的詳細資訊，請參閱[使用已解讀的 Transact-sql 存取記憶體優化資料表](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。 如需原生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 編譯預存程式中支援的詳細資訊，請參閱[記憶體內部 OLTP 不支援的 transact-sql 結構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
  以下是針對記憶體最佳化的資料表模擬 DML 觸發程序行為的簡單範例。  
   

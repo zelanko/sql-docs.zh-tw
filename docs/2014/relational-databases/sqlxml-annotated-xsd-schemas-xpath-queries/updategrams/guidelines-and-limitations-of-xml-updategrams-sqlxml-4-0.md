@@ -9,28 +9,28 @@ ms.topic: reference
 helpviewer_keywords:
 - updategrams [SQLXML], about updategrams
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 953fc5b7c203faa8fa6a9820993a3d0fd7a7de40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c525b22c68313fb47bd7db4fc5e547735435839
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014833"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717493"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML Updategram 的指導方針和限制 (SQLXML 4.0)
   使用 XML Updategram 時，請記住下列事項：  
   
--   如果您使用 updategram 進行插入作業，且** \<在>之前**和** \<>區塊之後**，則** \<可以省略 before>** 區塊。 相反地，在刪除作業時，可以省略** \<after>** 區塊。  
+-   如果您使用 updategram 進行插入作業，且** \< 在>之前**和** \<>區塊之後**，則可以省略** \< before>** 區塊。 相反地，在刪除作業時，可以省略** \< after>** 區塊。  
   
--   ** \<** 如果您使用具有多個** \<>** 的 updategram，以及** \<** 在同步處理 **>\<** 標記中的>區塊之後，必須在** \<>和>組之前，** 指定>區塊** \<>之前** ** \<和之後**的。  
+-   如果您使用具有多個** \<>** 的 updategram ** \< ** ，以及在同步處理** \<>** 標記中的>區塊** \< 之後**，必須在>和>組之前，指定>區塊** \< ** ** \<>之前**和之後的。 ** \< **  
   
 -   Updategram 中的更新會套用到 XML 結構描述所提供的 XML 檢視。 因此，若要讓預設的對應成功，您必須在 Updategram 中指定結構描述檔案名稱，或者，如果沒有提供檔案名稱，元素和屬性名稱必須符合資料庫中的資料表和資料行名稱。  
   
 -   SQLXML 4.0 要求 Updategram 中的所有資料行值都必須在提供的結構描述 (XDR 或 XSD) 中明確對應，才能構成其子元素的 XML 檢視。 此行為與舊版 SQLXML 不同，如果這意味著 `sql:relationship` 註解中外部索引鍵的一部分，則允許在結構描述中不對應資料行的值  (請注意，此變更不會影響主索引鍵值傳播到子元素，如果沒有針對子元素明確指定任何值，仍然會發生在 SQLXML 4.0 上。  
   
--   如果您使用 updategram 來修改二進位資料行中的資料（ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `image`例如[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型），您必須提供對應架構，其中必須指定資料類型（例如， `sql:datatype="image"`）和 XML 資料類型（例如， `dt:type="binhex"`或`dt:type="binbase64`）。 二進位資料行的資料必須在 Updategram 中指定；Updategram 會忽略在對應結構描述中指定的 `sql:url-encode` 註解。  
+-   如果您使用 updategram 來修改二進位資料行中的資料（例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `image` 資料類型），您必須提供對應架構，其中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必須指定資料類型（例如， `sql:datatype="image"` ）和 XML 資料類型（例如， `dt:type="binhex"` 或 `dt:type="binbase64` ）。 二進位資料行的資料必須在 Updategram 中指定；Updategram 會忽略在對應結構描述中指定的 `sql:url-encode` 註解。  
   
 -   當您要撰寫 XSD 結構描述時，如果您針對 `sql:relation` 或 `sql:field` 註解指定的值包含特殊字元，如空白字元 (例如，在 "Order Details" 資料表名稱中)，則必須以方括號括住這個值 (例如，"[Order Details]")。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66014833"
   
 -   在更新期間，Updategram 不允許將 `image` 類型資料當做參數傳遞。  
   
--   使用 updategram 時，不應該在中`text/ntext` ** \<>** 使用二進位大型物件（BLOB）型別（例如和影像），因為這會包含這些型別，以便在並行控制中使用。 這可能會因為 BLOB 類型的比較限制而造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的問題。 例如，WHERE 子句中的 LIKE 關鍵字用於 `text` 資料類型之資料行間的比較，不過，如果 BLOB 類型中，資料大小大於 8K，則比較將會失敗。  
+-   使用 updategram 時，不應該在中>使用二進位大型物件（BLOB）型別（例如 `text/ntext` 和影像），因為這會包含這些型別，以便在並行控制中使用。 ** \< ** 這可能會因為 BLOB 類型的比較限制而造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的問題。 例如，WHERE 子句中的 LIKE 關鍵字用於 `text` 資料類型之資料行間的比較，不過，如果 BLOB 類型中，資料大小大於 8K，則比較將會失敗。  
   
--   `ntext` 資料中的特殊字元可能會因為 BLOB 類型的比較限制而造成 SQLXML 4.0 的問題。 例如，在`ntext`類型的資料行並行檢查中使用 updategram 時，使用 "[Serializable]" 的** \<before>** 區塊時，將會失敗，並出現下列 SQLOLEDB 錯誤描述：  
+-   `ntext` 資料中的特殊字元可能會因為 BLOB 類型的比較限制而造成 SQLXML 4.0 的問題。 例如，在類型的資料行並行檢查中使用 updategram 時，使用 "[Serializable]" 的** \< before>** 區塊時，將會 `ntext` 失敗，並出現下列 SQLOLEDB 錯誤描述：  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

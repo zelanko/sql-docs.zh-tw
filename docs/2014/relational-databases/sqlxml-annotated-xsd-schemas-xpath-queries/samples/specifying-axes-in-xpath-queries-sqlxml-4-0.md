@@ -15,15 +15,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8adf10727478344216da05ea982a466daa0eba63
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010721"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717823"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定軸 (SQLXML 4.0)
   下列範例顯示如何在 XPath 查詢中指定軸。  
@@ -33,13 +33,13 @@ ms.locfileid: "66010721"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. 擷取內容節點的子元素  
- 下列 XPath 查詢會選取內容節點的所有** \<連絡人>** 子項目：  
+ 下列 XPath 查詢會選取內容節點的所有** \< 連絡人>** 子項目：  
   
 ```  
 /child::Contact  
 ```  
   
- 在查詢中， `child`是`Contact`軸而且是節點測試（如果`Contact`是** \<元素>** 節點，則為 TRUE，因為\<元素> 是與`child`軸相關聯的主要節點類型）。  
+ 在查詢中， `child` 是軸而且 `Contact` 是節點測試（如果 `Contact` 是** \< 元素>** 節點，則為 TRUE，因為 \< 元素> 是與軸相關聯的主要節點類型 `child` ）。  
   
  `child` 軸是預設值。 因此，此查詢可以撰寫為：  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010721"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. 擷取內容節點的孫系  
- 下列 XPath 查詢會選取內容節點之** \<Customer>** 元素子系的所有** \<Order>** 專案子系：  
+ 下列 XPath 查詢會選取內容節點之** \< Customer>** 元素子系的所有** \< Order>** 專案子系：  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- 在查詢中， `child`是`Customer`軸，而和`Order`是節點測試（如果 Customer 和 Order 是** \<元素>** 節點，則這些節點測試為 TRUE，因為** \<元素>** 節點是`child`軸的主要節點）。 針對每個符合** \<客戶>** 的節點，會將符合** \<訂單>** 的節點新增至結果。 只有** \<Order>** 會在結果集中傳回。  
+ 在查詢中， `child` 是軸， `Customer` 而和 `Order` 是節點測試（如果 Customer 和 Order 是** \< 元素>** 節點，則這些節點測試為 TRUE，因為** \< 元素>** 節點是軸的主要節點 `child` ）。 針對每個符合** \< 客戶>** 的節點，會將符合** \< 訂單>** 的節點新增至結果。 只有** \< Order>** 會在結果集中傳回。  
   
  `child` 軸是預設值。 因此，此查詢可以指定為：  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010721"
 </ROOT>  
 ```  
   
- 如果 XPath 查詢指定為`Customer/Order/OrderDetail`，則每個符合** \<Customer**的節點>查詢都會導覽至其** \<Order>** 元素。 針對每個符合** \<順序>** 的節點，查詢會將** \<OrderDetail>** 的節點新增至結果。 只有** \<OrderDetail>** 會在結果集中傳回。  
+ 如果 XPath 查詢指定為 `Customer/Order/OrderDetail` ，則每個符合 Customer 的節點** \<>** 查詢都會導覽至其** \< Order>** 元素。 針對每個符合** \< 順序>** 的節點，查詢會將** \< OrderDetail>** 的節點新增至結果。 只有** \< OrderDetail>** 會在結果集中傳回。  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. 使用 . 指定父軸  
- 下列查詢會以具有**CustomerID**屬性值1的父系** \<Customer>** 元素， ** \<來抓取所有 Order>** 元素。 查詢會使用述`child`詞中的軸來尋找** \<Order>** 元素的父系。  
+ 下列查詢會以具有**CustomerID**屬性值1的父系** \< Customer>** 元素，來抓取所有** \< Order>** 元素。 查詢會使用 `child` 述詞中的軸來尋找** \< Order>** 元素的父系。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,7 +181,7 @@ ms.locfileid: "66010721"
 ```  
   
 > [!NOTE]  
->  XPath 查詢`/Order[../@CustomerID="1"]`會傳回錯誤，因為沒有** \<Order>** 的父系。 雖然對應架構中可能有包含** \<Order>** 的元素，但 XPath 並不會從任何一個開始。因此， ** \<Order>** 會視為檔中的最上層元素類型。  
+>  XPath 查詢 `/Order[../@CustomerID="1"]` 會傳回錯誤，因為沒有** \< Order>** 的父系。 雖然對應架構中可能有包含** \< Order>** 的元素，但 XPath 並未從任何一個開始，因此， ** \< Order>** 會視為檔中的最上層元素類型。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010721"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. 指定屬性軸  
- 下列 XPath 查詢會選取 [ **CustomerID** ] 屬性值為1的所有** \<客戶>** 內容節點的子項目：  
+ 下列 XPath 查詢會選取 [ **CustomerID** ] 屬性值為1的所有** \< 客戶>** 內容節點的子項目：  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 在述詞`attribute::CustomerID`中`attribute` ，是軸而且`CustomerID`是節點測試（如果`CustomerID`是屬性，節點測試為 TRUE，因為** \<屬性>** 節點是`attribute`軸的主要節點）。  
+ 在述詞中 `attribute::CustomerID` ， `attribute` 是軸而且 `CustomerID` 是節點測試（如果 `CustomerID` 是屬性，節點測試為 TRUE，因為** \< 屬性>** 節點是軸的主要節點 `attribute` ）。  
   
  您可以指定 `attribute` 軸的快速鍵 (@)，而且因為 `child` 是預設軸，因此可從查詢省略：  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2046229ded8ec429d12c54939d7432e478aaf3ba
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010548"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717632"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 的核心安全性考量
   下面是使用 SQLXML 進行資料存取的安全性指導方針。  

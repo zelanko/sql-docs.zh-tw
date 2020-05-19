@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], JScript example
 - CursorLocation property [ADO], JScript example
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1b946d98214047203147fb5c0bbba0e01ea09b7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921790"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747541"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 屬性範例（JScript）
 這個範例會示範[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)屬性如何追蹤迴圈的進度，以列舉[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有記錄。 它會使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性來啟用**AbsolutePosition**屬性，方法是將資料指標設定為用戶端資料指標。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AbsolutePositionJS。**  

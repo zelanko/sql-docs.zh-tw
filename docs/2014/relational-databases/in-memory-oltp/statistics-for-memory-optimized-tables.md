@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a15c617c2be877c19d447d615261a6d38eae9eb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155802"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718951"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
   查詢最佳化工具會使用有關資料行的統計資料來建立可改善查詢效能的查詢計劃。 統計資料是從資料庫中的資料表收集，並且儲存在資料庫中繼資料內。  
@@ -26,11 +26,11 @@ ms.locfileid: "63155802"
   
  根據預設，記憶體最佳化資料表上的統計資料不會更新。 您需要手動更新這些統計資料。 針對個別資料行、索引或資料表，請使用[UPDATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql) 。 使用[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)來更新資料庫中所有使用者和內部資料表的統計資料。  
   
- 當您使用[CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)時，您必須指定`NORECOMPUTE`來停用記憶體優化資料表的自動統計資料更新。 對於以磁片為基礎的資料表，只有在上次[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)之後修改資料表時， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)才會更新統計資料。 對於記憶體優化資料表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)一律會產生更新的統計資料。 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是記憶體優化資料表的理想選項;否則，您必須知道哪些資料表有重大變更，才能個別更新統計資料。  
+ 當您使用[CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)時，您必須指定 `NORECOMPUTE` 來停用記憶體優化資料表的自動統計資料更新。 對於以磁片為基礎的資料表，只有在上次[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)之後修改資料表時， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)才會更新統計資料。 對於記憶體優化資料表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)一律會產生更新的統計資料。 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是記憶體優化資料表的理想選項;否則，您必須知道哪些資料表有重大變更，才能個別更新統計資料。  
   
  可以藉由取樣資料或執行完整掃描來產生統計資料。 取樣的統計資料只會使用資料表資料的取樣來估計資料分佈情形。 完整掃描的統計資料會掃描整個資料表來判斷資料分佈情形。 完整掃描的統計資料通常更正確，但要花較多的時間來計算。 取樣的統計資料收集速度較快。  
   
- 以磁碟為基礎的資料表預設為使用取樣的統計資料。 記憶體最佳化資料表只支援完整掃描統計資料。 使用[CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新統計資料](/sql/t-sql/statements/update-statistics-transact-sql)時，您必須指定記憶體優化資料表的`FULLSCAN`選項。  
+ 以磁碟為基礎的資料表預設為使用取樣的統計資料。 記憶體最佳化資料表只支援完整掃描統計資料。 使用[CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新統計資料](/sql/t-sql/statements/update-statistics-transact-sql)時，您必須指定 `FULLSCAN` 記憶體優化資料表的選項。  
   
  記憶體最佳化資料表上統計資料的額外考量：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63155802"
   
  若要更新統計資料：  
   
--   用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來建立具有[更新統計](../maintenance-plans/update-statistics-task-maintenance-plan.md)資料[工作的維護計畫](../maintenance-plans/create-a-maintenance-plan.md)  
+-   用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立具有[更新統計](../maintenance-plans/update-statistics-task-maintenance-plan.md)資料[工作的維護計畫](../maintenance-plans/create-a-maintenance-plan.md)  
   
 -   或是透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼更新統計資料，如下列所討論。  
   
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體優化資料表](memory-optimized-tables.md)  
+ [記憶體最佳化資料表](memory-optimized-tables.md)  
   
   

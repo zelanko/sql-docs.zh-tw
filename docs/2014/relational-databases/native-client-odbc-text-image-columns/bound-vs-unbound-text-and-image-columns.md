@@ -17,18 +17,18 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf8ac0cf868394d9aa8063220939feee69ac2f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 306abff20146ec5004b515578f5c71b8cb574bba
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62626581"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718865"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>繫結與未繫結的 Text 和 Image 資料行
-  使用伺服器資料指標時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式已優化，而不會在執行**SQLFetch**時傳送未系結之**text**、 **Ntext**或**image**資料行的資料。 在應用程式發出資料行的[SQLGetData](../native-client-odbc-api/sqlgetdata.md)之前，不會實際從伺服器抓取**text**、 **Ntext**或**image**資料。  
+  使用伺服器資料指標時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式已優化，而不會在執行**SQLFetch**時傳送未系結之**text**、 **Ntext**或**image**資料行的資料。 在應用程式發出資料行的[SQLGetData](../native-client-odbc-api/sqlgetdata.md)之前，不會實際從伺服器抓取**text**、 **Ntext**或**image**資料。  
   
  許多應用程式都可以撰寫，如此一來，使用者只要在資料指標中上下滾動，就不會顯示任何**文字**、 **Ntext**或**影像**資料。 當使用者選取資料列以取得更多詳細資料時，應用程式就可以呼叫**SQLGetData**來捕獲**text**、 **Ntext**或**image**資料。 這會防止針對使用者未選取的任何資料列傳輸**text**、 **Ntext**或**image**資料，因此可防止傳輸非常大量的資料。  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0da08a0c51c8d4d89329bbe9c36cacd7979c1e71
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921837"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747542"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 屬性 (ADO)
 指出目前記錄所在的頁面。  

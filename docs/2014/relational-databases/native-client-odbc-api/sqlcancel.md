@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLCancel function
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54ec9ddb143e97aa61a47ebbf0d2094281e59964
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067835"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706368"
 ---
 # <a name="sqlcancel"></a>SQLCancel
-  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)主題指出，在 ODBC 2.x 中，如果應用程式在語句上`SQLCancel`未進行任何處理時呼叫， `SQLCancel`與`SQLFreeStmt` `SQL_CLOSE`選項的效果相同。此行為僅針對完整性而定義，而應用程式`SQLFreeStmt`應該`SQLCloseCursor`呼叫或來關閉資料指標。 不過，即使您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 應用程式將 ODBC API 版本設定為 3.5.x 或更新版本，`SQLCancel` 函數仍將使用 ODBC 2.x 行為。  
+  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)主題指出，在 ODBC 2.x 中，如果應用程式在 `SQLCancel` 未于語句上進行處理時呼叫，其效果與 `SQLCancel` `SQLFreeStmt` 選項相同 `SQL_CLOSE` ; 此行為只會針對完整性而定義，而應用程式應該呼叫 `SQLFreeStmt` 或 `SQLCloseCursor` 來關閉資料指標。 不過，即使您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 應用程式將 ODBC API 版本設定為 3.5.x 或更新版本，`SQLCancel` 函數仍將使用 ODBC 2.x 行為。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   

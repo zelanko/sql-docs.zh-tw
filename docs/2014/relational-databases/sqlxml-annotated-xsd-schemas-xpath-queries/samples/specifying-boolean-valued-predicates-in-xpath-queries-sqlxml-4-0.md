@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Boolean-valued predicates
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2ddbcecdc42033ad9ae54732eee9eb3d2205cee
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012456"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717779"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
   下列範例顯示如何在 XPath 查詢中指定布林值述詞。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -89,13 +89,13 @@ ms.locfileid: "66012456"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回所有** \<客戶>** 內容節點的子專案，**此屬性的**值為277，而**TerritoryID**屬性的值為3：  
+ 下列查詢顯示使用連續述詞。 此查詢會傳回所有** \< 客戶>** 內容節點的子專案，**此屬性的**值為277，而**TerritoryID**屬性的值為3：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 查詢會傳回滿足述詞中所指定條件的** \<客戶>** 元素。  
+ 查詢會傳回滿足述詞中所指定條件的** \< 客戶>** 元素。  
   
  您可以指定 `attribute` 軸的快速鍵 (@)，而且因為 `child` 軸是預設值，因此可從查詢省略：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66012456"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回內容節點的所有** \<客戶>** 子專案，其中包含** \<** 至少具有一個** \<order>** 元素（具有**SalesPersonID**屬性值為2）的 order>子項目。  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回內容節點的所有** \< 客戶>** 子專案，其中包含至少具有一個** \< Order>** 元素（具有**SalesPersonID**屬性值為2）的** \< order>** 子項目。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -166,7 +166,7 @@ ms.locfileid: "66012456"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回具有** \<Order>** 專案子系之內容節點的** \<Customer>** 子項目節點。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢會傳回具有** \< Order>** 專案子系之內容節點的** \< Customer>** 子項目節點。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  

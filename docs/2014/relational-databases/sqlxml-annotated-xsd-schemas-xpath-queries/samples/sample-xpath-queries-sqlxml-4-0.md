@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 260102f14919708836131e263c7ad687441ed987
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010704"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717873"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>範例 XPath 查詢 (SQLXML 4.0)
   本章節將提供 SQLXML 4.0 之 XPath 查詢的範例。 為了提供說明，這些範例 XPath 查詢都指定於使用 ADO 所執行的範本中。 因此，您必須使用本節所提供的對應結構描述檔案 SampleSchema1.xml。 將這個檔案儲存在您存放範本的目錄中。  

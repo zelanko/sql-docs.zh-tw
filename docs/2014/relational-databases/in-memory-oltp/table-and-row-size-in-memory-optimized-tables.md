@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688895"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718792"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
   記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 在記憶體最佳化的資料表中，資料列的長度不得超過 8,060 個位元組。 了解記憶體最佳化的資料表大小將有助於您了解電腦是否有足夠的記憶體。  
@@ -70,14 +70,14 @@ ms.locfileid: "72688895"
   
  下表描述資料列主體大小的計算，指定為 [實際資料列主體大小] = SUM([淺層類型的大小]) + 2 + 2 * [深層類型資料行數目]。  
   
-|區段|大小|評價|  
+|區段|大小|註解|  
 |-------------|----------|--------------|  
 |淺層類型資料行|SUM([淺層類型的大小])<br /><br /> **個別類型的大小如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 數值（有效位數 <= 18） &#124; 8<br /><br /> Time &#124; 8<br /><br /> 數值（精確度>18） &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |淺層資料行填補|可能的值包括：<br /><br /> 如果有深層類型資料行且淺層資料行的資料大小總計為奇數，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |深層類型資料行的位移陣列|可能的值包括：<br /><br /> 如果沒有深層類型資料行則為 0<br /><br /> 否則為 2 + 2 * [深層類型資料行數目]|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |NULL 陣列|[可為 null 的資料行數目] / 8，無條件進位到完整的位元組。|陣列中每個可為 null 的資料行都有一個位元。 這個位元會無條件進位到完整的位元組。|  
 |NULL 陣列填補|可能的值包括：<br /><br /> 如果有深層類型資料行且 NULL 陣列的大小為奇數個位元組，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
-|填補|如果沒有深層類型資料行：0<br /><br /> 如果有深層類型資料行，則會根據淺層資料行所需的最大對齊加入 0-7 個位元組填補。 每個淺層資料行的對齊都需等於其大小 (如上面所記載)，除了 GUID 資料行需要 1 個位元組 (非 16) 的對齊，而數值資料行一律需要 8 個位元組 (絕不是 16) 的對齊。 所有淺層資料行之間都會使用最大對齊需求，並且加入 0-7 個位元組填補，使得目前為止的大小總計 (不包括深層類型資料行) 為所需對齊的倍數。|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
+|邊框間距|如果沒有深層類型資料行：0<br /><br /> 如果有深層類型資料行，則會根據淺層資料行所需的最大對齊加入 0-7 個位元組填補。 每個淺層資料行的對齊都需等於其大小 (如上面所記載)，除了 GUID 資料行需要 1 個位元組 (非 16) 的對齊，而數值資料行一律需要 8 個位元組 (絕不是 16) 的對齊。 所有淺層資料行之間都會使用最大對齊需求，並且加入 0-7 個位元組填補，使得目前為止的大小總計 (不包括深層類型資料行) 為所需對齊的倍數。|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |固定長度的深層類型資料行|SUM([固定長度的深層類型資料行大小])<br /><br /> 每個資料行的大小如下所示：<br /><br /> i 代表 char(i) 和 binary(i)。<br /><br /> 2 * i 代表 nchar(i)|固定長度的深層類型資料行為 char(i)、nchar(i) 或 binary(i) 類型的資料行。|  
 |可變長度的深層類型資料行 [計算的大小]|SUM([可變長度的深層類型資料行計算的大小])<br /><br /> 每個資料行計算的大小如下所示：<br /><br /> i 代表 varchar(i) 和 varbinary(i)<br /><br /> 2 * i 代表 nvarchar(i)|這個資料列只會套用至 [計算的資料列主體大小]。<br /><br /> 可變長度的深層類型資料行為 varchar(i)、nvarchar(i) 或 varbinary(i) 類型的資料行。 計算的大小是由資料行的最大長度 (i) 所決定。|  
 |可變長度的深層類型資料行 [實際大小]|SUM([可變長度的深層類型資料行的實際大小])<br /><br /> 每個資料行的實際大小如下所示：<br /><br /> n (n 是儲存在資料行中的字元數) 代表 varchar(i)。<br /><br /> 2 * n (n 是儲存在資料行中的字元數) 代表 nvarchar(i)。<br /><br /> n (n 是儲存在資料行中的位元組數) 代表 varbinary(i)。|這個資料列只會套用至 [實際資料列主體大小]。<br /><br /> 實際大小是由儲存在資料列的資料行中的資料所決定。|  
@@ -117,14 +117,14 @@ ms.locfileid: "72688895"
   
  對於大於 200 的時間，資料表包含下列資料列：  
   
-|名稱|City|  
+|Name|City|  
 |----------|----------|  
 |John|北京|  
 |Jane|Prague|  
   
  不過，開始時間為 100 的任何使用中交易都會看到下列版本的資料表：  
   
-|名稱|City|  
+|Name|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -188,7 +188,7 @@ GO
   
 -   NULL 陣列填補 = 1，因為 NULL 陣列大小為奇數，而且有深層類型資料行。  
   
--   填補  
+-   邊框間距  
   
     -   8 是最大對齊需求。  
   
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體優化資料表](memory-optimized-tables.md)  
+ [記憶體最佳化資料表](memory-optimized-tables.md)  
   
   

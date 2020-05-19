@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920922"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747261"
 ---
 # <a name="ado-methods"></a>ADO 方法
 
@@ -31,7 +31,7 @@ ms.locfileid: "67920922"
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止的非同步方法呼叫。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消暫止的批次更新。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|在呼叫**Update**方法之前，取消對**記錄集**物件的目前或新資料列或**記錄**物件的**Fields**集合所做的任何變更。|  
-|[明確](../../../ado/reference/ado-api/clear-method-ado.md)|從**Errors**集合中移除所有**錯誤**物件。|  
+|[清除](../../../ado/reference/ado-api/clear-method-ado.md)|從**Errors**集合中移除所有**錯誤**物件。|  
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|從現有的**記錄集**物件建立重複的**記錄集**物件。 （選擇性）指定複製為唯讀。|  
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|關閉開啟的物件和任何相依物件。|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|比較兩個書簽，並傳回其相對值的指示。|  

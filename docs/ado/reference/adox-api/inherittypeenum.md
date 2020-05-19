@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - InheritTypeEnum enumeration [ADOX]
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f420d7d49ad24188f5210001af1209427478f3f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965958"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746674"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 指定物件如何繼承使用[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)所設定的許可權。  

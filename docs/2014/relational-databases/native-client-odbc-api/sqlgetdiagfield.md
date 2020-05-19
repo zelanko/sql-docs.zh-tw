@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657701"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706021"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會針對`SQLGetDiagField`指定下列額外的診斷欄位。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會針對指定下列額外的診斷欄位 `SQLGetDiagField` 。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
   
 |診斷記錄欄位|描述|  
 |------------------------------|-----------------|  

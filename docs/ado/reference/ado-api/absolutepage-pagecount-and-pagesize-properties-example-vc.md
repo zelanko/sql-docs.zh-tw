@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], VC++ example
 - PageSize property [ADO], VC++ example
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46b0b7c4eab855c33366550c981df8f03e9e1819
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747573"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount 和 PageSize 屬性範例（VC + +）
 這個範例會使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)和[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)屬性來顯示***Employee***資料表中的名稱和雇用日期，一次有五筆記錄。  

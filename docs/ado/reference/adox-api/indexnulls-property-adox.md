@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - IndexNulls property [ADOX]
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0834560d90fe8dc5d8a5130f024bac7b3bc3517
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966009"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746833"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls 屬性 (ADOX)
 指出索引欄位中具有 null 值的記錄是否有索引項目。  

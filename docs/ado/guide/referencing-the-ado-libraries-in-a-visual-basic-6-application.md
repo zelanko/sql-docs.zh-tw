@@ -14,14 +14,14 @@ helpviewer_keywords:
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 766707f8903f72da8b1735def4ed4433c4468d90
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923054"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747882"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>在 Visual Basic 6 應用程式中參考 ADO 程式庫
 若要將 ADO 程式庫匯入 Microsoft Visual Basic 6 應用程式，您必須在 Visual Basic 專案中設定參考。  

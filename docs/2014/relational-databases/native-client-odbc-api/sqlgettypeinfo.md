@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetTypeInfo function
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4237ebcc22318fdd6a93af09a79d7f8e2bea8989
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046683"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705997"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會在的結果集中報告額外的資料行`SQLGetTypeInfo`USERTYPE。 USERTYPE 會報告 DB-Library 資料類型定義，而且對於將現有 DB-Library 應用程式移植至 ODBC 的開發人員很有用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在的結果集中報告額外的資料行 USERTYPE `SQLGetTypeInfo` 。 USERTYPE 會報告 DB-Library 資料類型定義，而且對於將現有 DB-Library 應用程式移植至 ODBC 的開發人員很有用。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將識別視為屬性，而 ODBC 則會將它視為資料類型。 若要解決這種`SQLGetTypeInfo`不相符的情形，會傳回資料類型： **intidentity**、 **Smallintidentity**、 **Tinyintidentity**、 **decimalidentity**和**numericidentity**。 [ `SQLGetTypeInfo`結果集] 資料行 AUTO_UNIQUE_VALUE 報告這些資料類型的 TRUE 值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將識別視為屬性，而 ODBC 則會將它視為資料類型。 若要解決這種不相符的情形，會傳回 `SQLGetTypeInfo` 資料類型： **intidentity**、 **Smallintidentity**、 **Tinyintidentity**、 **decimalidentity**和**numericidentity**。 [ `SQLGetTypeInfo` 結果集] 資料行 AUTO_UNIQUE_VALUE 報告這些資料類型的 TRUE 值。  
   
  若為**Varchar**、 **Nvarchar**和**Varbinary**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會繼續針對 COLUMN_SIZE 值分別報告8000、4000和8000，即使它實際上不受限制。 這為了確保回溯相容性。  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155724"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718808"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>原生編譯的預存程序中支援的建構
   本主題包含原生編譯預存程式支援的功能清單（[CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)）：  
@@ -66,7 +66,7 @@ ms.locfileid: "63155724"
 ##  <a name="supported-operators"></a><a name="so"></a>支援的運算子  
  下列為支援的運算子。  
   
--   條件（IF，WHILE）中支援[transact-sql&#41;&#40;的比較運算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)（例如，>、 \<、>= 和 <=）。  
+-   條件（IF，WHILE）中支援[transact-sql&#41;&#40;的比較運算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)（例如，>、 \< 、>= 和 <=）。  
   
 -   一元運算子 (+、-)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155724"
   
 -   篩選器述詞 IS [NOT] NULL  
   
--   從\<記憶體優化資料表>  
+-   從 \< 記憶體優化資料表>  
   
 -   支援[GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) ，以及彙總函式 AVG、COUNT、COUNT_BIG、MIN、MAX 和 SUM。 nvarchar、char、varchar、varchar、varbinary 和 binary 類型不支援 MIN 和 MAX。 如果 ORDER BY 清單中的運算式逐字出現在 GROUP BY 清單中，則[order By 子句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)就會受到[Group by &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql)的支援。 例如，支援 GROUP BY a + b ORDER BY a + b，但不支援 GROUP BY a, b ORDER BY a + b。  
   

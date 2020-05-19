@@ -13,18 +13,18 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c01abd0eb56be4b8037aa9e03465c00a169c9967
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014872"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717518"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 刪除資料 (SQLXML 4.0)
-  當記錄實例出現在 [ ** \<before>** ] 區塊中，且** \<>區塊後**沒有對應的記錄時，updategram 表示刪除作業。 在此情況下，updategram 會從資料庫中刪除** \<之前的>** 區塊中的記錄。  
+  當記錄實例出現在 [ ** \< before>** ] 區塊中，且** \<>區塊後**沒有對應的記錄時，updategram 表示刪除作業。 在此情況下，updategram 會從資料庫中刪除** \< 之前的>** 區塊中的記錄。  
   
  下列是刪除作業的 Updategram 格式：  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66014872"
 </ROOT>  
 ```  
   
- 如果 updategram 只執行刪除作業，您可以省略** \<after>** 標記。 如果您未指定選擇性`mapping-schema`的屬性，updategram 中指定的** \<ElementName>** 會對應到資料庫資料表，而子項目或屬性則會對應到資料表中的資料行。  
+ 如果 updategram 只執行刪除作業，您可以省略** \< after>** 標記。 如果您未指定選擇性的 `mapping-schema` 屬性，updategram 中指定的** \< ElementName>** 會對應到資料庫資料表，而子項目或屬性則會對應到資料表中的資料行。  
   
- 如果在 updategram 中指定的元素符合資料表中的多個資料列，或不符合任何資料列，則 updategram 會傳回錯誤，並取消整個** \<同步處理>** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
+ 如果在 updategram 中指定的元素符合資料表中的多個資料列，或不符合任何資料列，則 updategram 會傳回錯誤，並取消整個** \< 同步處理>** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
   
 ## <a name="examples"></a>範例  
  本章節中的範例會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應架構之 updategram 的更多範例，請參閱[在 Updategram 中指定批註式對應架構 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "66014872"
   
  在這些範例中，Updategram 不會指定對應結構描述。 因此 Updategram 會使用預設對應，其中元素的名稱會對應到資料表名稱，而屬性或子元素則會對應到資料行。  
   
- 第一個 updategram 是以屬性為中心，並會在 [ ** \<前>** ] 區塊中識別兩個移位（晚上和夜間）。 因為** \<after>** 區塊中沒有對應的記錄，所以這是刪除作業。  
+ 第一個 updategram 是以屬性為中心，並會在 [ ** \< 前>** ] 區塊中識別兩個移位（晚上和夜間）。 因為** \< after>** 區塊中沒有對應的記錄，所以這是刪除作業。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

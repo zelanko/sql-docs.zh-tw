@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921881"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747607"
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式
 如果您是想要使用預設 RDS 支援的 IIS 伺服器系統管理員，但對使用者要求和存取權限有更大的控制，您可能會想要撰寫自己的處理常式。  
@@ -31,7 +31,7 @@ ms.locfileid: "67921881"
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 介面  
  這個介面有兩種方法： **GetRecordset**和**Reconnect**。 這兩種方法都需要將[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
   
- 這兩種方法都會採用出現在 "**Handler =**" 關鍵字中第一個逗號後面的引數。 例如， `"Handler=progid,arg1,arg2;"`會傳遞的引數字串`"arg1,arg2"`，而且`"Handler=progid"`會傳遞 null 引數。  
+ 這兩種方法都會採用出現在 "**Handler =**" 關鍵字中第一個逗號後面的引數。 例如， `"Handler=progid,arg1,arg2;"` 會傳遞的引數字串 `"arg1,arg2"` ，而且 `"Handler=progid"` 會傳遞 null 引數。  
   
 ## <a name="getrecordset-method"></a>GetRecordset 方法  
  這個方法會查詢資料來源，並使用所提供的引數建立新的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **記錄集**必須以**adLockBatchOptimistic**開啟，而且不得以非同步方式開啟。  

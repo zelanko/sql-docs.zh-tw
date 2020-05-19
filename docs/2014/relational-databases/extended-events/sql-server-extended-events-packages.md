@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638754"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719172"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
   封裝是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充事件物件的容器。 有三種擴充事件封裝，包括以下項目：  
@@ -42,11 +42,11 @@ ms.locfileid: "62638754"
   
 -   動作  
   
--   型別  
+-   類型  
   
 -   述詞  
   
--   地圖  
+-   地圖服務  
   
  不同封裝中的物件可以混合在事件工作階段中。 如需詳細資訊，請參閱 [SQL Server 擴充的事件工作階段](sql-server-extended-events-sessions.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62638754"
 |詞彙|定義|  
 |----------|----------------|  
 |管理|管理事件所針對的主要目標是使用者、管理員和支援人員。 在管理通道中找到的事件會指出問題，並列出定義完善的方案，供管理員做為採取動作之依據。 管理事件的一個範例就是應用程式無法連接到印表機。 這些事件不是會完善記載下來，就是有與其相關的訊息來告訴讀者該做什麼事情來修正問題。|  
-|運作|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
+|作業|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
 |分析|分析事件的發行量很大， 這些事件會描述程式作業，而且通常用於效能調查。|  
 |偵錯|偵錯事件只能由開發人員使用，以便診斷問題進行偵錯。<br /><br /> 注意： Debug 通道中的事件會傳回內部執行特定的狀態資料。 事件所傳回的結構描述和資料在 SQL Server 的未來版本中可能會改變或變得無效。 因此，偵錯通道中的事件在 SQL Server 的未來版本中可能會改變或被移除，恕不另行通知。|  
   
@@ -134,7 +134,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  如果稍早的述詞檢查失敗，可能就無法評估有副作用的述詞。  
   
-### <a name="types"></a>型別  
+### <a name="types"></a>類型  
  由於資料是串連在一起的位元組集合，所以需要此位元組集合的長度和特性，以便能夠解譯資料。 這項資訊會封裝在類型物件中。 下列是針對封裝物件所提供的類型：  
   
 -   event  
@@ -147,11 +147,11 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   型別  
+-   類型  
   
  如需詳細資訊，請參閱 [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)。  
   
-### <a name="maps"></a>地圖  
+### <a name="maps"></a>地圖服務  
  對應表會將內部值對應到字串，如此可讓使用者得知該值所表示的意義。 使用者不只能夠取得數值，也可以取得有意義的內部值描述。 下列查詢將示範如何取得對應值。  
   
 ```  

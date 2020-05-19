@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3a2bbebc947d0c245e00c39fca2d4e69fbb5666
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657711"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706038"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-  本主題討論[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特有的 SQLGetDescRec 功能。  
+  本主題討論 Native Client 特有的 SQLGetDescRec 功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec 和資料表值參數  
  SQLGetDescRec 可以用來取得資料表值參數和資料表值參數資料行的屬性值。 SQLGetDescRec 的*RecNumber*參數對應至 SQLBindParameter 的*ParameterNumber*參數。  

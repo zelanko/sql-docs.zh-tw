@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920798"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747090"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
 **ADORecordsetConstruction**介面是用來從 C/c + + 應用程式中的 OLE DB 資料列**集**物件，來建立 ADO**記錄集**物件。  
@@ -42,7 +42,7 @@ ms.locfileid: "67920798"
  無。  
   
 ## <a name="remarks"></a>備註  
- 假設有一個**Rowset** OLE DB 的資料`pRowset`列集物件（），將 ADO**記錄集**物件（`adoRs`）的結構為下列三個基本作業：  
+ 假設有一個 OLE DB 的資料列**集**物件（ `pRowset` ），將 ADO**記錄集**物件（）的結構 `adoRs` 為下列三個基本作業：  
   
 1.  建立 ADO**記錄集**物件：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67920798"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  呼叫`IADORecordsetConstruction::put_Rowset`屬性方法，以在 ADO `Rowset` `Recordset`物件上設定 OLE DB 物件：  
+3.  呼叫 `IADORecordsetConstruction::put_Rowset` 屬性方法，以 `Rowset` 在 ADO 物件上設定 OLE DB 物件 `Recordset` ：  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -67,7 +67,7 @@ ms.locfileid: "67920798"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 結果`adoRs`物件現在代表**從 OLE DB 資料列集物件**所建立的 ADO**記錄集**物件。  
+ 結果 `adoRs` 物件現在代表從 OLE DB 資料**列集**物件所建立的 ADO**記錄集**物件。  
   
  您也可以從 OLE DB**章節**或**RowPosition**物件中，建立 ADO**記錄集**物件。  
   

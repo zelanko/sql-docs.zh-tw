@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158167"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719111"
 ---
 # <a name="implementing-an-outer-join"></a>實作外部聯結
   原生編譯的預存程序不支援外部聯結。 下列範例示範如何在原生編譯的預存程序中實作左方外部聯結功能。  
   
  此範例使用一個資料表變數來模擬聯結左側的資料指標，並使用另一個資料表變數來建構單一結果集，由於需要建立額外的資料列複本，因此僅適用於處理有限數目的資料列。  
   
- T1_type 類型的@outer變數（）可用來逐一查看 t1 中的資料列，並使用 while 迴圈來模擬資料指標。 然後會@result使用 t1t2_join_type 類型的變數來建立結果集。  
+ @outerT1_type 類型的變數（）可用來逐一查看 t1 中的資料列，並使用 while 迴圈來模擬資料指標。 @result然後會使用 t1t2_join_type 類型的變數來建立結果集。  
   
  您應該測試這個因應措施的執行效果，以確定其在您的應用程式中如預期般執行。  
   

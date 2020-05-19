@@ -11,15 +11,15 @@ helpviewer_keywords:
 - annotated XSD schemas, samples
 - annotated XSD schemas, queries
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0464b11906d08b22c100efa6d142b16fb8fa679
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6672b97524537a51ac8e082a283a203157d01a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010733"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717926"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 範例的範例註解式 XSD 結構描述 (SQLXML 4.0)
   本章節的範例 XPath 查詢會參考對應結構描述。 此對應結構描述是註解式 XML 結構描述 (XSD) 檔案。 如需對應架構的詳細資訊，請參閱[批註式 XSD 架構簡介 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。  

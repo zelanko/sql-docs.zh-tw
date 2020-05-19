@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SqlXmlParameter object
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9c167c4aa94802c7ae80d405c286460015186fb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010763"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717932"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 物件 (SQLXML Managed 類別)
   SqlXmlParameter 物件支援下列屬性：  
   
- 名稱  
+ Name  
  參數名稱。 可以將參數傳遞給命令。 呼叫 SqlXmlCommand 物件的 CreateParameter 方法會建立參數物件。  
   
  值  

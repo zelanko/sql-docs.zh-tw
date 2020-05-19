@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataControl object [ADO], members
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf2f7602d1435b4a4075c437ba7f403b93aeed5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b6dc53cd0449576fceb81556e3ae16edc0a85ff7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964400"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746129"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]

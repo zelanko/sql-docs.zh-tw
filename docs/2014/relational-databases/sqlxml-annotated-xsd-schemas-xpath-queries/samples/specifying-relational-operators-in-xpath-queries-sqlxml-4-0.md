@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath operators [SQLXML]
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb2026f0e6720f98f2a2af96da6058e1ce06ba61
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012443"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717743"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
   下列範例示範如何在 XPath 查詢中指定關係運算子。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -28,13 +28,13 @@ ms.locfileid: "66012443"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定關係運算子  
- 這個 XPath 查詢會傳回** \<Customer>** 元素的子項目，其中**CustomerID**屬性值為 "1"，而任何子** \<Order>** 元素包含具有值大於3之**OrderQty**屬性的** \<OrderDetail>** 子系：  
+ 這個 XPath 查詢會傳回** \< Customer>** 元素的子項目，其中**CustomerID**屬性值為 "1"，而任何子** \< Order>** 元素包含具有值大於3之**OrderQty**屬性的** \< OrderDetail>** 子系：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 括弧中指定的述詞會篩選** \<Customer>** 元素。 只會傳回至少有一個** \<OrderDetail>** 孫代具有大於3的 OrderQty 屬性值的** \<客戶>** 元素。  
+ 括弧中指定的述詞會篩選** \< Customer>** 元素。 只會傳回至少有一個** \< OrderDetail>** 孫代具有大於3的 OrderQty 屬性值的** \< 客戶>** 元素。  
   
  `child` 軸是預設值。 因此，此查詢可以指定為：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66012443"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查詢中指定關係運算子並使用布林函數來比較結果  
- 此查詢會傳回**SalesPersonID**屬性值小於270之內容節點的所有** \<Order>** 元素子系：  
+ 此查詢會傳回**SalesPersonID**屬性值小於270之內容節點的所有** \< Order>** 元素子系：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -92,7 +92,7 @@ ms.locfileid: "66012443"
 ```  
   
 > [!NOTE]  
->  在範本中指定此查詢時，< 字元必須是實體編碼，因為 < 字元在 XML 檔中具有特殊意義。 在範本中，使用`<`來指定 < 字元。  
+>  在範本中指定此查詢時，< 字元必須是實體編碼，因為 < 字元在 XML 檔中具有特殊意義。 在範本中，使用 `<` 來指定 < 字元。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   

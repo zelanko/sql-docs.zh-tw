@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ExecuteToStream method
 - SQL queries [SQLXML]
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f8e16ff3651b9ce23fafe99137b4905eb3961ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07de51d3a5880b6b0d4ab6561fcf333a99387598
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014936"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718068"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>執行 SQL 查詢 (SQLXML Managed 類別)
   此範例示範：  

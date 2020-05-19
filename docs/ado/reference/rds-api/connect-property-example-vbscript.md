@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964581"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746267"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 屬性範例 (VBScript)
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "67964581"
   
  下列範例顯示如何在 VBScript 程式碼中，于執行時間設定**Connect**屬性。  
   
- 若要測試此範例，請剪下本文> 的\<程式碼， \<並在一般 HTML 檔案中/Body> 標記，並將其命名為**ConnectVBS。** ASP 腳本會識別您的伺服器。  
+ 若要測試此範例，請剪下本文> 的程式碼，並 \< \< 在一般 HTML 檔案中/Body> 標記，並將其命名為**ConnectVBS。** ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginConnectVBS -->  

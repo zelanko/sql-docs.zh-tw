@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3196b985b7bb788744f48b1fb64f64b5f6fe099b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637728"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716893"
 ---
 # <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行
   下列查詢包含 `xml` 類型的資料行。 此查詢會從 `xml` 類型之 `Instructions` 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  

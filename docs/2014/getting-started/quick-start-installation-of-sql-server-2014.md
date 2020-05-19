@@ -11,15 +11,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683619"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706881"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 快速入門安裝
     
@@ -42,37 +42,37 @@ ms.locfileid: "74683619"
   
 -   連接元件  
   
- 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要在中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]提供的版本和元件之間做出最佳選擇，請參閱[SQL Server 2014 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
+ 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要在中提供的版本和元件之間做出最佳選擇 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ，請參閱[SQL Server 2014 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有 32 位元和 64 位元兩種版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式支援下列安裝選項：  
   
 -   **安裝精靈**  
   
-     如需使用安裝精靈來安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的程式資訊，請參閱安裝[嚮導中的 Install SQL Server 2014 &#40;安裝&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 。  
+     如需使用安裝精靈來安裝的程式資訊，請參閱安裝[嚮導中的 Install SQL Server 2014 &#40;安裝&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 -   **命令提示字元**  
   
      請參閱[從命令提示字元安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) ，以取得執行自動安裝的範例語法和安裝參數。  
   
--   **設定檔**  
+-   **組態檔**  
   
      請參閱[使用設定檔安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) ，以取得透過設定檔執行安裝程式的範例語法和安裝參數。  
   
 -   **Sysprep.inf**  
   
-     如需使用 SysPrep 安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的程式資訊，請參閱[使用 sysprep 安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-using-sysprep.md) 。  
+     如需使用 SysPrep 安裝的程式資訊，請參閱[使用 Sysprep 安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-using-sysprep.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 -   **Server Core 安裝**  
   
-     如需有關在 Windows Server Core 上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的程式資訊，請參閱[在 Server core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md) 。  
+     如需有關在 Windows Server Core 上安裝的程式資訊，請參閱[在 Server core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 -   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] BI 功能安裝**  
   
-     如需安裝屬於 Microsoft BI 平臺之功能的資訊，請參閱[安裝 SQL Server 2014 BI 功能](../sql-server/install/install-sql-server-business-intelligence-features.md) [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，其中包括[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，以及用來建立或處理分析資料的數個用戶端應用程式。  
+     如需安裝屬於 Microsoft BI 平臺之功能的資訊，請參閱[安裝 SQL Server 2014 BI 功能](../sql-server/install/install-sql-server-business-intelligence-features.md)，其中包括 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ，以及用來建立或處理分析資料的數個用戶端應用程式。  
   
 -   **容錯移轉叢集安裝**  
   
-     如需有關在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]容錯移轉叢集上安裝的程式資訊，請參閱[SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。  
+     如需有關在容錯移轉叢集上安裝的程式資訊，請參閱[SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  根據預設， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要針對非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](https://go.microsoft.com/fwlink/?LinkId=87843)。 如需查閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]範例資料庫及範例程式碼的支援資訊，請參閱＜ [資料庫及範例概觀](https://go.microsoft.com/fwlink/?LinkId=110391)＞。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74683619"
   
 ## <a name="related-tasks"></a>相關工作  
   
-###  <a name="planning-a-ssnoversion-installation"></a><a name="BKMK_BeforeYouInstall"></a>規劃[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝  
+###  <a name="planning-a-ssnoversion-installation"></a><a name="BKMK_BeforeYouInstall"></a>規劃 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝  
  在安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之前，您必須檢閱硬體和軟體需求、網路和網際網路考量，以及安全考量，才能安裝並執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[規劃 SQL Server 安裝](../../2014/sql-server/install/planning-a-sql-server-installation.md)和下列主題：  
   
 |工作描述|主題|  
