@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML security in ADO
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa0e9e2df1e8ba3f44b10e662d25e536ac7962f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab98aaf7bb2a0f4887df5a1c2276fe0df8862972
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923352"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748219"
 ---
 # <a name="xml-security-considerations"></a>XML 安全性考量
 在「記錄集」物件上的 ADO Save 和 Open 方法不會被視為在 Internet Explorer 中執行的安全作業。 因此，如果這些方法用於在瀏覽器中裝載的應用程式或控制項中執行的腳本，則瀏覽器的安全性設定將會影響其行為。  

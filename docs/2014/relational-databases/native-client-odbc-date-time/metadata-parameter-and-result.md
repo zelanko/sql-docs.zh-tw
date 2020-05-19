@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032327"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705437"
 ---
 # <a name="parameter-and-result-metadata"></a>參數和結果中繼資料
   本主題將描述在日期和時間資料類型之實作參數描述項 (IPD) 與實作資料列描述項 (IRD) 欄位中傳回的資訊。  
@@ -40,7 +40,7 @@ ms.locfileid: "63032327"
 |SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime` (在 IRD 中)、`datetime2` (在 IPD 中)|`datetime` (在 IRD 中)、`datetime2` (在 IPD 中)|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|不適用|不適用|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|不適用|  
+|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
   
  有時候，數值範圍會存在不連續的情況。 例如，8,10..16 中便遺漏了 9。 這是當小數有效位數大於零時增加的小數點所導致。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63032327"
   
  當 SQL_CA_SS_SERVER_TYPE 由 SQLSetDescField 的呼叫設定時，其值必須是 SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME 或 SQL_SS_TYPE_DATETIME。 否則，系統就會傳回 SQL_ERROR 並且使用 SQLState HY092 和訊息「屬性/選項識別碼無效」來記錄診斷記錄。  
   
- 相依於 `datetime` 和 `smalldatetime` 所支援但 `datetime2` 不支援之功能的應用程式可以使用 SQL_CA_SS_SERVER_TYPE 屬性。 `datetime2`例如，需要使用`dateadd`和**datediif**函數，而`datetime`和`smalldatetime`也允許算術運算子。 大部分應用程式都不需要使用這個屬性，而且應該避免使用這個屬性。  
+ 相依於 `datetime` 和 `smalldatetime` 所支援但 `datetime2` 不支援之功能的應用程式可以使用 SQL_CA_SS_SERVER_TYPE 屬性。 例如， `datetime2` 需要使用 `dateadd` 和**datediif**函數，而 `datetime` 和 `smalldatetime` 也允許算術運算子。 大部分應用程式都不需要使用這個屬性，而且應該避免使用這個屬性。  
   
 ## <a name="information-returned-in-ird-fields"></a>在 IRD 欄位中傳回的資訊  
  下列資訊會在 IRD 欄位中傳回：  

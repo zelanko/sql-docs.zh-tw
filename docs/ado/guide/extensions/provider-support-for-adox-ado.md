@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX provider support [ADO]
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b07f4563d54254310c08c8c132d0729b8ccdc6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b9e0fa4184a9d86efcda9c2d67870df5f98ed664
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923211"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748162"
 ---
 # <a name="provider-support-for-adox-ado"></a>ADOX (ADO) 的提供者支援
 根據您的 OLE DB 資料提供者而定，不支援 ADOX 的某些功能。 [Microsoft Jet 的 OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)完全支援 ADOX。 適用于 SQL Server、 [microsoft OLE DB provider FOR ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)或[Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)的[microsoft OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)不支援的功能會列在下表中。 任何其他 Microsoft OLE DB 提供者都不支援 ADOX。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ODBC cursors, rowset size
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9facf44afde40c69523c67997f294c4a5fa620c8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207162"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705567"
 ---
 # <a name="cursor-rowset-size"></a>資料指標資料列集大小
   ODBC 資料指標不限制為一次只能提取一個資料列。 他們可以在每次呼叫**SQLFetch**或[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)時，抓取多個資料列。 與 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之類的用戶端/伺服器資料庫搭配使用時，一次擷取數個資料列會更有效率。 提取所傳回的資料列數目稱為資料列集大小，並使用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)的 SQL_ATTR_ROW_ARRAY_SIZE 來指定。  
@@ -45,7 +45,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)也可以用來從區塊資料指標取出資料行資料。 由於**SQLGetData**會一次處理一個資料列，因此在呼叫**SQLGetData**之前，必須先呼叫**SQLSetPos** ，將資料列集中的特定資料列設定為目前的資料列。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會使用資料列集來提供優化，以快速取得整個結果集。 若要使用此優化，請在呼叫**SQLExecDirect**或**SQLExecute**時，將資料指標屬性設定為其預設值（順向、唯讀、資料列集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會設定預設的結果集。 若要在不捲動的情況下將結果傳送到用戶端時，這種做法比伺服器資料指標有效率。 在執行陳述式之後，請增加資料列集大小，並使用資料行取向或資料列取向的繫結。 這可[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]讓您使用預設結果集，將結果資料列有效率地傳送給客戶[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]端，而 Native client ODBC 驅動程式會從用戶端上的網路緩衝區持續提取資料列。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會使用資料列集來提供優化，以快速取得整個結果集。 若要使用此優化，請在呼叫**SQLExecDirect**或**SQLExecute**時，將資料指標屬性設定為其預設值（順向、唯讀、資料列集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會設定預設的結果集。 若要在不捲動的情況下將結果傳送到用戶端時，這種做法比伺服器資料指標有效率。 在執行陳述式之後，請增加資料列集大小，並使用資料行取向或資料列取向的繫結。 這可讓您 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用預設結果集，將結果資料列有效率地傳送給用戶端，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE client ODBC 驅動程式會從用戶端上的網路緩衝區持續提取資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料指標屬性](cursor-properties.md)  

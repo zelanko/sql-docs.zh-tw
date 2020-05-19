@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923346"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748204"
 ---
 # <a name="xslt-transformations"></a>XSLT 轉換
 XSLT 可以套用至產生的 XML，以將它轉換成另一種格式。 瞭解 ADO 中的 XML 格式有助於開發 XSLT 範本，以便將它轉換成更容易使用的表單。  

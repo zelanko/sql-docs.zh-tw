@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923266"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748180"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基本概念
 Microsoft®適用于資料定義語言和安全性的 ActiveX®資料物件延伸模組（ADOX）是 ADO 物件和程式設計模型的延伸。 ADOX 包含用於建立和修改架構的物件，以及安全性。 因為它是以物件為基礎的架構操作方法，所以您可以撰寫程式碼來處理各種資料來源，而不論其原生語法有何差異。  

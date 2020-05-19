@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66a4fe9d231ea4d2a2231bdde65267a9cd47e4af
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711463"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705585"
 ---
 # <a name="cursor-properties"></a>資料指標屬性
   資料指標的整體特性是藉由設定 ODBC 樣式的資料指標類型或 SQL-92/ISO 資料指標行為所決定。 下列主題將說明其他影響資料指標行為的陳述式和連接屬性。  

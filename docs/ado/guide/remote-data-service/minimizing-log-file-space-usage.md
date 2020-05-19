@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922559"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747873"
 ---
 # <a name="minimizing-log-file-space-usage"></a>將記錄檔空間使用量降到最低
 如果 SQL Server 資料庫上有大量的活動，記錄檔可能會快速填滿（因而導致伺服器停止）。 您可以將記錄檔設定為**在檢查點截斷**，以大幅擴充資料庫的記錄檔生命週期。  

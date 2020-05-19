@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Procedures collection [ADOX], members
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76b345a61754b491e74a8f8962c0e8e8f06d68f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f9bd7b39187e20b30e56a95a30b114e2eced1b68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965410"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748628"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Procedures 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

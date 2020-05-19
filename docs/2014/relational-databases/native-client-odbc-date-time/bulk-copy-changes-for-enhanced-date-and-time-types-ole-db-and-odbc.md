@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207101"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705535"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增強型日期和時間類型的大量複製變更 (OLE DB 和 ODBC)
   本主題描述可支援大量複製功能的日期/時間增強功能。 本主題中的資訊同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 和 ODBC。  
@@ -31,7 +31,7 @@ ms.locfileid: "63207101"
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |日期|SQLDATE|de|  
-|時間|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63207101"
 ## <a name="character-data-files"></a>字元資料類型  
  在字元資料檔中，日期和時間值會以 odbc[日期和時間改善的資料類型支援](data-type-support-for-odbc-date-and-time-improvements.md)的「資料格式：字串和常值」一節中所述的方式表示，或是 OLE DB 的[OLE DB 日期和時間改善的資料類型支援](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
- 在原生資料檔中，四個新類型的日期和時間值會表示為其 TDS 標記法，其小數位數為7（因為這[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是所支援的最大值，而且 bcp 資料檔案不會儲存這些資料行的小數位數）。 現有`datetime`和`smalldatetime`類型的儲存或其表格式資料流程（TDS）標記法沒有變更。  
+ 在原生資料檔中，四個新類型的日期和時間值會表示為其 TDS 標記法，其小數位數為7（因為這是所支援的最大值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而且 bcp 資料檔案不會儲存這些資料行的小數位數）。 現有 `datetime` 和類型的儲存 `smalldatetime` 或其表格式資料流程（TDS）標記法沒有變更。  
   
  對於 OLE DB，不同儲存類型的儲存大小如下所示：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63207101"
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|時間|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -107,15 +107,15 @@ ms.locfileid: "63207101"
 |目標 --><br /><br /> 從|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |日期|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|時間|不適用|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|不適用|不適用|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|不適用|不適用|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|不適用|不適用|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|不適用|不適用|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/A|N/A|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/A|N/A|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/A|N/A|  
   
 #### <a name="key-to-symbols"></a>符號的索引鍵  
   
@@ -134,7 +134,7 @@ ms.locfileid: "63207101"
 |10|如果在從用戶端轉換為伺服器時發生資料遺失的截斷，就會發佈錯誤 (OLE DB)，或產生包含 SQLSTATE 22008 以及「日期時間欄位溢位」訊息的 ODBC 診斷記錄。 如果此值落在伺服器使用之 UTC 範圍所代表的範圍外，也可能發生這個錯誤。 如果在從伺服器轉換為用戶端時發生秒或小數秒的截斷，只會有一個警告。|  
 |11|如果截斷時發生資料損失，則會產生診斷記錄。<br /><br /> 在伺服器轉換為用戶端時，這是一個警告 (ODBC SQLSTATE S1000)。<br /><br /> 在用戶端轉換為伺服器時，這是一個錯誤 (ODBC SQLSTATE 22001)。|  
 |12|秒數會設定為零，而小數秒會遭到捨棄。 不可能發生截斷錯誤。|  
-|不適用|系統會維持現有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和舊有的行為。|  
+|N/A|系統會維持現有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和舊有的行為。|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC&#41;&#40;的日期和時間改善](date-and-time-improvements-odbc.md)   

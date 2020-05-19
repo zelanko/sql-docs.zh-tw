@@ -13,14 +13,14 @@ helpviewer_keywords:
 - searching data [ADO]
 - navigating data [ADO]
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 66079842d950e108a3cdc4e6ad52ad1feff6ab2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924789"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748446"
 ---
 # <a name="navigating-through-data"></a>巡覽資料
 **記錄集**支援各種方法和屬性，以流覽結果資料集。 我們會透過範例**記錄集**物件的幾個案例來檢查這項功能。  
@@ -31,7 +31,7 @@ ms.locfileid: "67924789"
   
 -   [更多可以在資料錄集中移動的方法](../../../ado/guide/data/more-ways-to-move-in-a-recordset.md)  
   
--   [使用書籤](../../../ado/guide/data/using-bookmarks.md)  
+-   [使用書簽](../../../ado/guide/data/using-bookmarks.md)  
   
 -   [使用頁面](../../../ado/guide/data/using-pages.md)  
   

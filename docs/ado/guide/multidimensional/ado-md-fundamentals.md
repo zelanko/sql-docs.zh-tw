@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, fundamentals
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e19b1e816a75e3e4ccbaef62c4a583e036cda9f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923207"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748125"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 基本概念
 Microsoft® ActiveX® Data Objects （多維度）（ADO MD）可讓您輕鬆存取來自 Microsoft Visual Basic®，Microsoft Visual C++®等語言的多維度資料。 ADO MD 擴充 Microsoft ActiveX® Data Objects （ADO）以包含多維度資料（例如[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)和資料[格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件）特定的物件。 有了 ADO MD，您就可以流覽多維度架構、查詢 cube，以及取得結果。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - result sets [ODBC], default
 - ODBC applications, cursors
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d7101cf4775e5280c22cc27ecae009410d231d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe9ecf81abe12da2db3e7183fd517e01947c2942
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511683"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705637"
 ---
 # <a name="using-sql-server-default-result-sets"></a>使用 QL Server 預設結果集
   預設的 ODBC 資料指標屬性為：  
@@ -33,7 +33,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_CONCURRENCY, SQL_CONCUR_READ_ONLY, SQL_IS_INTEGER
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);  
 ```  
   
- 每當這些屬性設定為預設值時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式就會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用預設的結果集。 預設結果集可用於任何受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的 SQL 陳述式，而且是將整個結果集傳送到用戶端的最有效率的方法。  
+ 每當這些屬性設定為預設值時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式就會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設的結果集。 預設結果集可用於任何受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的 SQL 陳述式，而且是將整個結果集傳送到用戶端的最有效率的方法。  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進了 multiple active result sets （MARS）的支援;應用程式現在每個連接都可以有一個以上的使用中預設結果集。 預設不會啟用 MARS。  
   

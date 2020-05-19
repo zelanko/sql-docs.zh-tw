@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923136"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747998"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 資料*格集*是針對多維度資料進行查詢的結果。 它是由一組軸組成，通常不能超過四個軸，通常只有兩個或三個。 「*軸*」是一或多個維度中的成員集合，可用來尋找或篩選 cube 中的特定值。  
@@ -40,7 +40,7 @@ ms.locfileid: "67923136"
   
 -   量值-Sales、PercentChange、BudgetedSales  
   
--   Products  
+-   產品  
   
  下列的儲存格代表所有產品的1991銷售額：  
   
