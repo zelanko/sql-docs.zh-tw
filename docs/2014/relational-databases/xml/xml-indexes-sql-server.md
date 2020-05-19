@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631365"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702279"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   XML 索引可建立在 `xml` 資料類型資料行上。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  查詢處理器會使用主要 XML 索引來進行包含 [xml 資料類型方法](/sql/t-sql/xml/xml-data-type-methods) 的查詢，並從主要索引本身傳回純量值或 XML 子樹。 (這個索引會儲存重新建構 XML 執行個體的所有必要資訊)。  
   
- 例如，下列查詢會傳回儲存在`CatalogDescription``xml` `ProductModel`資料表之類型資料行中的摘要資訊。 此查詢只會針對目錄描述也儲存 <`Summary`> 描述的產品型號傳回其 <`Features`> 資訊。  
+ 例如，下列查詢會傳回儲存在資料表之類型資料行中的摘要資訊 `CatalogDescription``xml` `ProductModel` 。 此查詢只會針對目錄描述也儲存 <`Summary`> 描述的產品型號傳回其 <`Features`> 資訊。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   在 `/book[@* = "someValue"]` 中，查詢會尋找某些屬性中包含值 `book` 的 <`"someValue"`> 元素。  
   
- 下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE`子句會指定一個篩選準則，以尋找`AdditionalContactInfo``xml`類型資料行中的值。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
+ 下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE`子句會指定一個篩選準則，以尋找類型資料行中的值 `AdditionalContactInfo``xml` 。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  在此情況下，雖然已得知 <`number`> 的搜尋值，但它有可能以 <`telephoneNumber`> 元素的子系出現在 XML 執行個體中的任何位置。 此類的查詢可從以特定值為基礎的索引查閱獲益。  
   
 ### <a name="property-secondary-index"></a>PROPERTY 次要索引  
- 從個別 XML 執行個體擷取一或多個值的查詢可從 PROPERTY 索引獲益。 當您使用`xml`類型的**value （）** 方法，以及已知物件的主鍵值時，就會發生這種情況。  
+ 從個別 XML 執行個體擷取一或多個值的查詢可從 PROPERTY 索引獲益。 當您使用類型的**value （）** 方法 `xml` ，以及已知物件的主鍵值時，就會發生這種情況。  
   
  PROPERTY 索引是建立在主要 XML 索引的資料行 (PK、Path 以及節點值) 上，在主要 XML 索引中 PK 是基底資料表的主索引鍵。  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 除了本主題稍後所述的差異之外，在`xml`類型資料行上建立 XML 索引與在非`xml`類型資料行上建立索引類似。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
+ 除了本主題稍後所述的差異之外，在類型資料行上建立 XML 索引 `xml` 與在非類型資料行上建立索引類似 `xml` 。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

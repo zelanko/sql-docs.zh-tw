@@ -14,15 +14,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], annotations
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5eecc52bb683f19582a539992b0668d3fe6e175
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59940c88f72ed46da3e4b81ce3fabe3bb73ec4b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014522"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702945"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的註解式 XSD 結構描述
   本章節提供在 SQLXML 4.0 中使用註解式 XSD 結構描述的相關資訊。 在舊版的 SQLXML 中，XML-Data Reduced (XDR) 結構描述有提供類似的功能。 本章節也提供用於舊版應用程式的 XDR 資訊。  

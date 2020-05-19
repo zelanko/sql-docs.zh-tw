@@ -12,34 +12,34 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4ff55980c7ca4cae45d568f03fef32ba1ea5155
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012669"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703104"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路徑中指定節點測試 (SQLXML 4.0)
-  節點測試會指定位置步驟所選取的節點類型。 每個軸 (`child`、`parent`、`attribute` 或 `self`) 都有一個主要節點類型。 若為`attribute`軸，主要節點類型為** \<屬性>**。 針對`parent`、 `child`和`self`座標軸，主要節點類型為** \<element>**。  
+  節點測試會指定位置步驟所選取的節點類型。 每個軸 (`child`、`parent`、`attribute` 或 `self`) 都有一個主要節點類型。 若為 `attribute` 軸，主要節點類型為** \< 屬性>**。 針對 `parent` 、 `child` 和 `self` 座標軸，主要節點類型為** \< element>**。  
   
 > [!NOTE]  
 >  不支援萬用字元節點測試 * (例如 `child::*`)。  
   
 ## <a name="node-test-example-1"></a>節點測試：範例1  
- 位置路徑`child::Customer`會選取** \<** 內容節點的客戶>元素子系。  
+ 位置路徑會 `child::Customer` 選取內容節點的** \< 客戶>** 元素子系。  
   
- 在此範例中，`child` 為軸，而 `Customer` 為節點測試。 `child`軸的主要節點類型是** \<元素>**。 因此，如果** \<客戶>** 節點是>節點的** \<元素**，節點測試就會是 TRUE。 如果內容節點沒有** \<客戶>** 子系，則會傳回空的節點集。  
+ 在此範例中，`child` 為軸，而 `Customer` 為節點測試。 軸的主要節點類型 `child` 是** \< 元素>**。 因此，如果** \< 客戶>** 節點是>節點的** \< 元素**，節點測試就會是 TRUE。 如果內容節點沒有** \< 客戶>** 子系，則會傳回空的節點集。  
   
 ## <a name="node-test-example-2"></a>節點測試：範例 2  
- 位置路徑`attribute::CustomerID`會選取內容節點的**CustomerID**屬性。  
+ 位置路徑會 `attribute::CustomerID` 選取內容節點的**CustomerID**屬性。  
   
- 在此範例中，`attribute` 為軸，而 `CustomerID` 為節點測試。 `attribute`軸的主要節點類型是** \<>的屬性**。 因此，如果**CustomerID**是>節點的** \<屬性**，節點測試就會是 TRUE。 如果內容節點沒有**CustomerID**，則會傳回空的節點集。  
+ 在此範例中，`attribute` 為軸，而 `CustomerID` 為節點測試。 軸的主要節點類型 `attribute` 是>的** \< 屬性**。 因此，如果**CustomerID**是>節點的** \< 屬性**，節點測試就會是 TRUE。 如果內容節點沒有**CustomerID**，則會傳回空的節點集。  
   
 > [!NOTE]  
->  在此 XPath 的執行中，如果位置步驟參考>的** \<元素**，或未在架構中宣告的** \<屬性>** 類型，則會產生錯誤。 這與 MSXML 中的 XPath 實作不同，該實作會傳回空的節點集。  
+>  在此 XPath 的執行中，如果位置步驟參考>的** \< 元素**，或未在架構中宣告的** \< 屬性>** 類型，則會產生錯誤。 這與 MSXML 中的 XPath 實作不同，該實作會傳回空的節點集。  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>軸的縮寫語法  
  位置路徑的以下縮寫語法有受到支援：  

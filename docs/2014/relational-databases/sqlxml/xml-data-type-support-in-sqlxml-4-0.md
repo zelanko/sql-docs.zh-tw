@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012170"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702807"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
-  從開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援使用資料類型的`xml` XML 類型資料。 本主題提供有關 SQLXML 4.0 如何識別 `xml` 資料類型之執行個體與實作其支援的資訊。  
+  從開始 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用資料類型的 XML 類型資料 `xml` 。 本主題提供有關 SQLXML 4.0 如何識別 `xml` 資料類型之執行個體與實作其支援的資訊。  
   
 ## <a name="working-with-xml-data-types"></a>使用 xml 資料類型  
  為了解如何使用實作 `xml` 資料類型資料行之 SQL 資料表的詳細資訊，提供下列範例：  
@@ -34,7 +34,7 @@ ms.locfileid: "66012170"
   
 ## <a name="guidelines-and-limitations"></a>指導方針與限制  
   
--   xsd：任何>都無法對應至包含`xml`資料類型的資料行。 ** \< ** 在 SQLXML 中針對此案例的支援會透過 `sql:overflow-field` 註解提供。 另一個因應措施為，對應 `xml` 資料類型欄位做為 `xsd:anyType` 的元素。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
+-   ** \< xsd：任何>** 都無法對應至包含 `xml` 資料類型的資料行。 在 SQLXML 中針對此案例的支援會透過 `sql:overflow-field` 註解提供。 另一個因應措施為，對應 `xml` 資料類型欄位做為 `xsd:anyType` 的元素。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
   
 -   不支援 `xml` 資料類型資料行內容中的 XPath 查詢。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66012170"
   
 -   SQLXML 4.0 會依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 DTD 有限支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許在 `xml` 資料類型資料中使用內部 DTD，這可用於提供預設值，並將實體參考取代為其展開的內容。 SQLXML 會將 XML 資料以「現況」傳遞 (包括內部 DTD) 到伺服器。 您可以使用協力廠商工具將 DTD 轉換成 XML 結構描述 (XSD) 文件，並將包含內嵌 XML 結構描述的資料載入到資料庫中。  
   
--   根據的行為，SQLXML 4.0 不會保留 XML 宣告處理指示（例如） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，系統會將 XML 宣告視為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 剖析器的指示詞，而且在資料轉換為 `xml` 資料類型之後，會遺失其屬性 (version、encoding 和 standalone)。 XML 資料會當做 UCS-2 儲存在內部。 系統會保留 XML 執行個體中的其他所有處理指示；這些指示可用於 `xml` 資料行，而且可由 SQLXML 支援。  
+-   根據的行為，SQLXML 4.0 不會保留 XML 宣告處理指示（例如） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 但是，系統會將 XML 宣告視為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 剖析器的指示詞，而且在資料轉換為 `xml` 資料類型之後，會遺失其屬性 (version、encoding 和 standalone)。 XML 資料會當做 UCS-2 儲存在內部。 系統會保留 XML 執行個體中的其他所有處理指示；這些指示可用於 `xml` 資料行，而且可由 SQLXML 支援。  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  

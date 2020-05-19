@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193035"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702265"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
-  如[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)主題中所述，SQL Server 透過`xml`資料類型提供 xml 資料的原生儲存。 您可以選擇透過 XML 架構集合，將 XSD 架構與變數`xml`或類型的資料行產生關聯。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
+  如[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)主題中所述，SQL Server 透過資料類型提供 xml 資料的原生儲存 `xml` 。 您可以選擇透過 XML 架構集合，將 XSD 架構與變數或類型的資料行 `xml` 產生關聯。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
   
 -   驗證 XML 執行個體  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63193035"
   
  查詢處理引擎也會使用結構描述來檢查類型，以及將查詢和資料修改最佳化。  
   
- 此外，SQL Server 會使用相關聯的 XML 架構集合（在具類型`xml`的情況下）來驗證 XML 實例。 如果 XML 執行個體符合結構描述，資料庫就會允許執行個體以其類型資訊儲存在系統中。 否則，資料庫會拒絕該執行個體。  
+ 此外，SQL Server 會使用相關聯的 XML 架構集合（在具類型的情況下） `xml` 來驗證 XML 實例。 如果 XML 執行個體符合結構描述，資料庫就會允許執行個體以其類型資訊儲存在系統中。 否則，資料庫會拒絕該執行個體。  
   
  您可以使用內建函數 XML_SCHEMA_NAMESPACE 來擷取儲存在資料庫中的結構描述集合。 如需詳細資訊，請參閱 [檢視儲存的 XML 結構描述集合](../xml/view-a-stored-xml-schema-collection.md)。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "63193035"
   
 -   卸除 XML 結構描述集合  
   
--   使用 XML 架構集合來輸入`xml`類型資料行、變數和參數，或在資料表或資料行條件約束中使用它  
+-   使用 XML 架構集合來輸入 `xml` 類型資料行、變數和參數，或在資料表或資料行條件約束中使用它  
   
  SQL Server 安全性模型允許在每個物件上都可以有 CONTROL 權限。 此權限的被授與者可取得物件上的所有其他權限。 物件的擁有者也擁有該物件的所有權限。  
   
@@ -161,13 +161,13 @@ ms.locfileid: "63193035"
 ##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> 取得有關 XML 結構描述和結構描述集合的資訊  
  XML 結構描述集合會列舉在目錄檢視 sys.xml_schema_collections 中。 XML 結構描述集合 "sys" 是由系統定義的。 其包含預先定義的命名空間，您不需要明確地將其載入，即可用在所有使用者自訂的 XML 結構描述集合中。 此清單包含 xml、xs、xsi、fn 及 xdt 的命名空間。 另外二個目錄檢視為 sys.xml_schema_namespaces：列舉出每個 XML 結構描述集合中的所有命名空間；以及 sys.xml_components：列舉出每個 XML 結構描述中的所有 XML 結構描述元件。  
   
- 內建函數**XML_SCHEMA_NAMESPACE** *schemaName，xmlschemacollectionname namespace-uri，NAMESPACE-uri*會產生`xml`資料類型實例。。 此執行個體包含 XML 結構描述集合中所包含之結構描述的 XML 結構描述片段 (預先定義的 XML 結構描述除外)。  
+ 內建函數**XML_SCHEMA_NAMESPACE** *schemaName，xmlschemacollectionname namespace-uri，NAMESPACE-uri*會產生 `xml` 資料類型實例。。 此執行個體包含 XML 結構描述集合中所包含之結構描述的 XML 結構描述片段 (預先定義的 XML 結構描述除外)。  
   
  您可以用下列方法來列舉 XML 結構描述集合的內容：  
   
 -   在 XML 結構描述集合的適當目錄檢視上撰寫 Transact-SQL 查詢。  
   
--   使用內建函數 **XML_SCHEMA_NAMESPACE()** 。 您可以將`xml`資料類型方法套用在此函數的輸出上。 但是您不能修改基礎 XML 結構描述。  
+-   使用內建函數 **XML_SCHEMA_NAMESPACE()** 。 您可以將 `xml` 資料類型方法套用在此函數的輸出上。 但是您不能修改基礎 XML 結構描述。  
   
  如下列範例所示。  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 藉由將目標命名空間指定為`xml` **XML_SCHEMA_NAMESPACE （）** 的第三個引數，可以將集合中的個別 XML 架構當做資料類型實例來取得。 下列範例會顯示這一點。  
+ 藉 `xml` 由將目標命名空間指定為**XML_SCHEMA_NAMESPACE （）** 的第三個引數，可以將集合中的個別 XML 架構當做資料類型實例來取得。 下列範例會顯示這一點。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例：從 XML 結構描述集合輸出指定的結構描述  
  下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "<https://www.microsoft.com/books>" 的 XML 結構描述。  

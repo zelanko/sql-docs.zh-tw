@@ -12,15 +12,15 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd8f6c01a27b0ab973c84ddb0fe10fefa7a608f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012323"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702887"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>用戶端 XML 格式 (SQLXML 4.0)
   本主題提供有關用戶端 XML 格式的資訊。 用戶端格式指的是 XML 在中間層的格式。  
@@ -28,7 +28,7 @@ ms.locfileid: "66012323"
 > [!NOTE]  
 >  本主題提供在用戶端上使用 FOR XML 子句的其他資訊，並假設您已經熟悉 FOR XML 子句。 如需 FOR XML 的詳細資訊，請參閱[使用 FOR xml 來建立 xml](../../xml/for-xml-sql-server.md)。  
   
- **重要事項**若要以新`xml`的資料類型使用用戶端的 FOR XML 功能，用戶端應該一律[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 Native client （SQLNCLI11）資料提供者，而非 SQLOLEDB 提供者。 SQLNCLI11 是最新版的 SQL Server 提供者，而且完全了解 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的資料類型。 包含 SQLOLEDB 提供者之用戶端 FOR XML 的行為會將 `xml` 資料類型視為字串。  
+ **重要事項**若要以新的資料類型使用用戶端的 FOR XML 功能 `xml` ，用戶端應該一律使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT （SQLNCLI11）資料提供者，而非 SQLOLEDB 提供者。 SQLNCLI11 是最新版的 SQL Server 提供者，而且完全了解 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的資料類型。 包含 SQLOLEDB 提供者之用戶端 FOR XML 的行為會將 `xml` 資料類型視為字串。  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>格式化用戶端上的 XML 文件  
  當用戶端應用程式執行下列查詢時：  
@@ -117,7 +117,7 @@ AS
      您可以將 SQLXML Managed 類別的這個屬性設定為 true，藉以指定用戶端功能。  
   
 ## <a name="enhanced-xml-template-support"></a>增強的 XML 範本支援  
- 從開始[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 XML 範本已透過加入**用戶端-xml**屬性來增強。 如果此屬性設定為 true，XML 會在用戶端上格式化。 請注意，此範本屬性的功能與 SQLXMLOLEDB 提供者特定的 ClientSideXML 屬性相同。  
+ 從開始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，中的 XML 範本已透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加入**用戶端-xml**屬性來增強。 如果此屬性設定為 true，XML 會在用戶端上格式化。 請注意，此範本屬性的功能與 SQLXMLOLEDB 提供者特定的 ClientSideXML 屬性相同。  
   
 > [!NOTE]  
 >  如果您在使用 SQLXMLOLEDB 提供者的 ADO 應用程式中執行 XML 範本，並同時在範本和提供者 ClientSideXML 屬性中指定**用戶端 xml**屬性，則會優先使用範本中指定的值。  

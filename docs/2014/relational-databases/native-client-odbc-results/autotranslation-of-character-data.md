@@ -19,42 +19,42 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200218"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699674"
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
-  字元資料（例如使用 SQL_C_CHAR 所宣告的 ANSI 字元變數，或使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CHAR**、 **Varchar**或**text**資料類型儲存在中的資料）只能代表有限的字元數。 每個字元使用一個位元組儲存的字元資料僅能代表 256 個字元。 儲存在 SQL_C_CHAR 變數中的值會使用用戶端電腦的 ANSI 字碼頁 (ACP) 解譯。 在伺服器上使用**char**、 **Varchar**或**text**資料類型所儲存的值，會使用伺服器的 ACP 進行評估。  
+  字元資料（例如使用 SQL_C_CHAR 所宣告的 ANSI 字元變數，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**CHAR**、 **Varchar**或**text**資料類型儲存在中的資料）只能代表有限的字元數。 每個字元使用一個位元組儲存的字元資料僅能代表 256 個字元。 儲存在 SQL_C_CHAR 變數中的值會使用用戶端電腦的 ANSI 字碼頁 (ACP) 解譯。 在伺服器上使用**char**、 **Varchar**或**text**資料類型所儲存的值，會使用伺服器的 ACP 進行評估。  
   
  如果伺服器和用戶端都有相同的 ACP，就不會有任何問題解讀儲存在 SQL_C_CHAR、 **CHAR**、 **Varchar**或**text**物件中的值。 如果伺服器和用戶端有不同的 Acp，SQL_C_CHAR 則如果在**CHAR**、 **Varchar**或**text**資料行、變數或參數中使用用戶端的資料，則可能會在伺服器上將其轉譯為不同的字元。 例如，包含0xA5 值的字元位元組會解讀為字元？ 在使用字碼頁437的電腦上，會在執行字碼頁1252的電腦上，將其轉譯為日元符號（？）。  
   
  Unicode 資料的每個字元會使用兩個位元組儲存。 Unicode 規格包含所有擴充字元，因此所有電腦都會以相同方式解譯所有 Unicode 字元。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式的 AutoTranslate 功能會嘗試將在具有不同字碼頁的用戶端與伺服器之間移動字元資料的問題降到最低。 AutoTranslate 可以在[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)的連接字串、 [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)的設定字串或使用 ODBC 管理員的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式的資料來源中設定。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式的 AutoTranslate 功能會嘗試將在具有不同字碼頁的用戶端與伺服器之間移動字元資料的問題降到最低。 AutoTranslate 可以在[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)的連接字串、 [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)的設定字串或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 ODBC 管理員的 Native Client ODBC 驅動程式的資料來源中設定。  
   
- 當 AutoTranslate 設定為 "no" 時，在用戶端上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_C_CHAR 變數與資料庫中的**CHAR**、 **Varchar**或**text**資料行、變數或參數之間移動的資料，不會進行任何轉換。 如果資料包含擴充字元，而且用戶端電腦和伺服器電腦的字碼頁不同，則位元模式在兩部電腦上的解譯方式可能會不同。 如果兩部電腦的字碼頁相同，資料將會以相同的方式解譯。  
+ 當 AutoTranslate 設定為 "no" 時，在用戶端上的 SQL_C_CHAR 變數與資料庫中的**CHAR**、 **Varchar**或**text**資料行、變數或參數之間移動的資料，不會進行任何轉換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果資料包含擴充字元，而且用戶端電腦和伺服器電腦的字碼頁不同，則位元模式在兩部電腦上的解譯方式可能會不同。 如果兩部電腦的字碼頁相同，資料將會以相同的方式解譯。  
   
- 當 AutoTranslate 設定為 "yes" 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會使用 Unicode 來轉換在用戶端上 SQL_C_CHAR 變數與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的**CHAR**、 **Varchar**或**text**資料行、變數或參數之間移動的資料：  
+ 當 AutoTranslate 設定為 "yes" 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式會使用 Unicode 來轉換在用戶端上 SQL_C_CHAR 變數與資料庫中的**CHAR**、 **Varchar**或**text**資料行、變數或參數之間移動的資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
--   當資料從用戶端上的 SQL_C_CHAR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]變數傳送至資料庫中的**CHAR**、 **Varchar**或**text**資料行、變數或參數時，ODBC 驅動程式會先使用用戶端的 ACP，從 SQL_C_CHAR 轉換成 Unicode，然後使用伺服器的 ACP，從 unicode 還原成字元。  
+-   當資料從用戶端上的 SQL_C_CHAR 變數傳送至資料庫中的**CHAR**、 **Varchar**或**text**資料行、變數或參數時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，ODBC 驅動程式會先使用用戶端的 ACP，從 SQL_C_CHAR 轉換成 Unicode，然後使用伺服器的 ACP，從 unicode 還原成字元。  
   
--   將資料從**char**、 **Varchar**或**text**資料行、變數或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的參數傳送到用戶端上的 SQL_C_CHAR 變數時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE client ODBC 驅動程式會先使用伺服器的 ACP，從字元轉換成 Unicode，然後再從 Unicode 還原為使用用戶端 ACP 的 SQL_C_CHAR。  
+-   將資料從**char**、 **Varchar**或**text**資料行、變數或資料庫中的參數傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到用戶端上的 SQL_C_CHAR 變數時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client ODBC 驅動程式會先使用伺服器的 ACP，從字元轉換成 Unicode，然後再從 Unicode 還原為使用用戶端 ACP 的 SQL_C_CHAR。  
   
- 因為這些轉換都是由用戶端上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行的 NATIVE Client ODBC 驅動程式所完成，所以伺服器 ACP 必須是安裝在用戶端電腦上的其中一個字碼頁。  
+ 因為這些轉換都是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端上執行的 Native CLIENT ODBC 驅動程式所完成，所以伺服器 ACP 必須是安裝在用戶端電腦上的其中一個字碼頁。  
   
  透過 Unicode 進行字元轉換可確保正確轉換同時存在兩個字碼頁上的所有字元。 但是，如果字元存在於其中一個字碼頁，但不存在於另一個字碼頁，則無法在目標字碼頁中表示字元。 例如，字碼頁1252具有註冊商標符號（？），而字碼頁437則不會。  
   
  AutoTranslate 設定在進行下列轉換時沒有作用：  
   
--   在字元 SQL_C_CHAR 用戶端變數與 Unicode **Nchar**、 **Nvarchar**或**Ntext**資料行、變數或資料庫中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]參數之間移動資料。  
+-   在字元 SQL_C_CHAR 用戶端變數與 Unicode **Nchar**、 **Nvarchar**或**Ntext**資料行、變數或資料庫中的參數之間移動資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
--   在 Unicode SQL_C_WCHAR 用戶端變數， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以及資料庫中的字元**char**、 **Varchar**或**text**資料行、變數或參數之間移動資料。  
+-   在 Unicode SQL_C_WCHAR 用戶端變數，以及資料庫中的字元**char**、 **Varchar**或**text**資料行、變數或參數之間移動資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  從字元移到 Unicode 時，永遠必須轉換資料。  
   

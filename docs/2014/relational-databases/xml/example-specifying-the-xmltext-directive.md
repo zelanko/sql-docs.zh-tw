@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b76d727657530cfd872b04535f9413f86ff32b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67597551"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702768"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
   此範例說明如何在使用 EXPLICIT 模式的 `SELECT` 陳述式中，使用 `XMLTEXT` 指示詞將溢位資料行中的資料定址。  
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  如果以 *指示詞指定*AttributeName`xmltext`，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為*AttributeName*指定的名稱會成為子項目的名稱。  
   
- 在此查詢中， *AttributeName*（ `overflow` <>）會與`xmltext`指示詞一起指定：  
+ 在此查詢中， *AttributeName*（<`overflow`>）會與指示詞一起指定 `xmltext` ：  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

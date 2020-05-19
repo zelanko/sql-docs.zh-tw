@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193270"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702423"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>搭配 FOR XML 使用 AUTO 模式
   如同 [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)中所述，AUTO 模式會將查詢結果當作巢狀 XML 元素傳回。 這對於從查詢結果產生出來的 XML 外觀，並未提供很大的控制權。 如果您想要產生簡單的階層，AUTO 模式查詢會很有用。 不過， [搭配 FOR XML 使用 EXPLICIT 模式](use-explicit-mode-with-for-xml.md) 和 [搭配 FOR XML 使用 PATH 模式](use-path-mode-with-for-xml.md) 提供更多控制權和彈性來從查詢結果決定 XML 的形狀。  

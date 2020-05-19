@@ -11,32 +11,32 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046623"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702206"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 和更新版本） SQL_LONGVARCHAR （`text`）、SQL_WLONGVARCHAR （`ntext`）或 SQL_LONGVARBINARY （`image`）資料行時，適用下列限制：  
+  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 和更新版本） SQL_LONGVARCHAR （ `text` ）、SQL_WLONGVARCHAR （ `ntext` ）或 SQL_LONGVARBINARY （）資料行時，適用下列限制 `image` ：  
   
 -   參考的參數可以是 INSERT 語句中的*insert_value* 。  
   
 -   參考的參數可以是 UPDATE 語句的 SET 子句中的*運算式*。  
   
- 在使用6.5 或更早版本時，取消將區塊中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供給執行之伺服器的 SQLPutData 呼叫順序，會造成資料行值的部分更新。 呼叫`text`SQLCancel `ntext`時所`image`參考的、或資料行設定為中繼預留位置值。  
+ 在使用6.5 或更早版本時，取消將區塊中的資料提供給執行之伺服器的 SQLPutData 呼叫順序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會造成資料行值的部分更新。 `text` `ntext` 呼叫 SQLCancel 時所參考的、或資料 `image` 行設定為中繼預留位置值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更早版本。  
   
 ## <a name="diagnostics"></a>診斷  
- 有一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 SQLPutData 的原生用戶端特定 SQLSTATE：  
+ 有一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適用于 SQLPutData 的原生用戶端特定 SQLSTATE：  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|說明|  
 |--------------|-----------|-----------------|  
 |22026|字串資料，長度不符|如果應用程式已指定要傳送的資料長度（以位元組為單位），例如，使用 SQL_LEN_DATA_AT_EXEC （*n*），其中*n*大於0，則應用程式透過 SQLPutData 所提供的位元組總數必須符合指定的長度。|  
   

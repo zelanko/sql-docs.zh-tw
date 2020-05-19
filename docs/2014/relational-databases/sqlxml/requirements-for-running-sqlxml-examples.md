@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLXML, samples
 - examples [SQLXML], requirements
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 712b1a78f3b2892bdb889f1262fd545c2fc6b5e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87df27b5f087800928eb841b2903bdb6c4f4d9ce
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251293"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702858"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>執行 SQLXML 範例的需求
   [SQLXML 4.0 程式設計](sqlxml-4-0-programming-concepts.md)一節提供許多範例。 本主題會列出從這些範例建立工作範例的需求。  

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - FOR XML clause, formatting
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e20c9c4b415ad5dabc53baad813126a81afcae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012214"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702867"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>伺服器端 XML 格式 (SQLXML 4.0)
   本主題提供在伺服器端上，從針對 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫執行之查詢產生的資料列集格式化 XML 文件的相關資訊。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，您可以將 XML 文件儲存到資料庫資料表中，以及從資料庫資料表中擷取 XML 文件。 若要擷取 XML 文件，請在 SELECT 查詢中使用 FOR XML 查詢延伸模組。  
   
- 例如，假設用戶端應用程式對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行的命令是由下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢所組成：  
+ 例如，假設用戶端應用程式對執行的命令是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 由下列查詢所組成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ：  
   
 ```  
 SELECT FirstName, LastName  

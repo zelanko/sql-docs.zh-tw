@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200372"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700400"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 的使用說明主題
-  若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 驅動程式，您必須能夠建立 odbc 資料來源，並確定伺服器具有正確的目錄預存程式版本。 若要撰寫使用 SQL Server 之 ODBC 應用程式的程式碼，您必須知道如何配置 ODBC 控制代碼、設定屬性、連接至 SQL Server 執行個體、執行查詢以及處理結果。  
+  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 驅動程式，您必須能夠建立 odbc 資料來源，並確定伺服器具有正確的目錄預存程式版本。 若要撰寫使用 SQL Server 之 ODBC 應用程式的程式碼，您必須知道如何配置 ODBC 控制代碼、設定屬性、連接至 SQL Server 執行個體、執行查詢以及處理結果。  
   
 ## <a name="in-this-section"></a>本節內容  
   

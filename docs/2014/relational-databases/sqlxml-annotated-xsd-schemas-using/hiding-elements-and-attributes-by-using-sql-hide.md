@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d057af7202a5076f299371fb2b0b2ec170087f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013830"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703568"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 來隱藏元素和屬性
   針對 XSD 結構描述執行 XPath 查詢時，產生的 XML 文件會具有在結構描述中指定的元素和屬性。 您可以使用 `sql:hide` 註解來指定某些元素和屬性要在結構描述中隱藏。 當查詢的選取準則需要結構描述中的特定元素或屬性，但是您不想要在產生的 XML 文件中傳回這些項目時，這樣做就很有用。  
@@ -40,9 +40,9 @@ ms.locfileid: "66013830"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 針對屬性指定 sql:hide  
- 此範例中的 XSD 架構是由** \<Person. Contact>** 元素，其中包含**ContactID**、 **FirstName**和**LastName**屬性。  
+ 此範例中的 XSD 架構是由** \< Person. Contact>** 元素，其中包含**ContactID**、 **FirstName**和**LastName**屬性。  
   
- Person. Contact>元素屬於複雜類型，因此會對應至相同名稱的資料表（預設對應）。 ** \< ** Person. Contact>元素的所有屬性都屬於簡單類型，而且會對應至 AdventureWorks 資料庫 Contacttable 中具有相同名稱的資料行。 ** \< ** 在架構中，批註`sql:hide`是在**ContactID**屬性上指定的。 針對此架構指定 XPath 查詢時，XML 檔中不會傳回**ContactID** 。  
+ ** \< Person. Contact>** 元素屬於複雜類型，因此會對應至相同名稱的資料表（預設對應）。 ** \< Person. Contact>** 元素的所有屬性都屬於簡單類型，而且會對應至 AdventureWorks 資料庫 Contacttable 中具有相同名稱的資料行。 在架構中， `sql:hide` 批註是在**ContactID**屬性上指定的。 針對此架構指定 XPath 查詢時，XML 檔中不會傳回**ContactID** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -89,7 +89,7 @@ ms.locfileid: "66013830"
 </ROOT>  
 ```  
   
- 針對某個元素指定 `sql:hide` 時，此元素及其屬性或子元素就不會顯示在產生的 XML 文件中。 以下是在** \<OD>** 元素上`sql:hide`指定的另一個 XSD 架構：  
+ 針對某個元素指定 `sql:hide` 時，此元素及其屬性或子元素就不會顯示在產生的 XML 文件中。 以下是在 `sql:hide` ** \< OD>** 元素上指定的另一個 XSD 架構：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +144,7 @@ ms.locfileid: "66013830"
 </xsd:schema>  
 ```  
   
- 針對此架構指定 XPath 查詢`/Customers[@CID="1"]`時，所產生的 XML 檔不會包含** \<OD>** 元素和其子系，如下列部分結果所示：  
+ `/Customers[@CID="1"]`針對此架構指定 XPath 查詢時，所產生的 XML 檔不會包含** \< OD>** 元素和其子系，如下列部分結果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193281"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702439"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)可讓您藉由指定 type 指示詞，選擇性地要求以資料類型的形式`xml`傳回 for xml 查詢的結果。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、將結果指派給`xml`類型變數，或撰寫[Nested FOR XML 查詢](use-nested-for-xml-queries.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)可讓您藉由指定 type 指示詞，選擇性地要求以資料類型的形式傳回 for xml 查詢的結果 `xml` 。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、將結果指派給 `xml` 類型變數，或撰寫[NESTED FOR XML 查詢](use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 XML 資料類型的執行個體資料至用戶端，做為不同伺服器建構的結果，例如使用 TYPE 指示詞的 FOR XML 查詢，或使用 `xml` 資料類型從 SQL 資料表資料行和輸出參數傳回 XML 執行個體資料。 在用戶端應用程式中，ADO.NET 提供者要求以二進位編碼從伺服器傳送此 XML 資料類型資訊。 然而，如果您使用沒有 TYPE 指示詞的 FOR XML，XML 資料會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。 請注意，不含 TYPE 指示詞的最上層 FOR XML 無法與資料指標一起使用。  
@@ -50,7 +50,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>將 FOR XML 查詢結果指派給 xml 類型變數  
- 在以下範例中，FOR XML 結果會指派給一個 `xml` 類型變數 `@x`。 查詢會從`BusinessEntityID`的`FirstName` `LastName` `AdditionalContactInfo`資料行抓取連絡人資訊，例如、、和其他電話號碼。 `xml``TYPE` 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 `xml` 類型傳回並將其指派給變數。  
+ 在以下範例中，FOR XML 結果會指派給一個 `xml` 類型變數 `@x`。 查詢會從的資料行抓取連絡人資訊，例如 `BusinessEntityID` 、 `FirstName` 、 `LastName` 和其他電話號碼 `AdditionalContactInfo` `xml``TYPE` 。 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 `xml` 類型傳回並將其指派給變數。  
   
 ```  
 USE AdventureWorks2012;  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241212"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702526"
 ---
 # <a name="retrieve-and-query-xml-data"></a>擷取及查詢 XML 資料
   本主題說明查詢 XML 資料必須指定的查詢選項。 也會描述當 XML 執行個體儲存於資料庫中時，未保留的 XML 執行個體部分。  
@@ -40,7 +40,7 @@ FROM T1
   
  結果為 `<doc/>`。  
   
- 將 XML 資料儲存於 `xml` 資料類型執行個體內時，不會保留 XML 宣告 (例如 `<?xml version='1.0'?>`)。 這是原廠設定。 XML 宣告（）及其屬性（版本/編碼/獨立）在資料轉換成類型`xml`之後會遺失。 XML 宣告會被視為 XML 剖析器的指示詞。 XML 資料會當做 ucs-2 儲存於內部。 XML 執行個體中的所有其他 PI 都會保留下來。  
+ 將 XML 資料儲存於 `xml` 資料類型執行個體內時，不會保留 XML 宣告 (例如 `<?xml version='1.0'?>`)。 這是原廠設定。 XML 宣告（）及其屬性（版本/編碼/獨立）在資料轉換成類型之後會遺失 `xml` 。 XML 宣告會被視為 XML 剖析器的指示詞。 XML 資料會當做 ucs-2 儲存於內部。 XML 執行個體中的所有其他 PI 都會保留下來。  
   
   
 ### <a name="order-of-attributes"></a>屬性順序  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> 設定必要查詢選項  
- 使用`xml`資料`xml`類型方法查詢類型資料行或變數時，必須設定下列選項，如下所示。  
+ `xml`使用資料類型方法查詢類型資料行或變數時 `xml` ，必須設定下列選項，如下所示。  
   
 |SET 選項|必要值|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|開啟|  
   
- 如果未將選項設定為如所示，則查詢和`xml`修改資料類型方法將會失敗。  
+ 如果未將選項設定為如所示，則查詢和修改 `xml` 資料類型方法將會失敗。  
   
   
 ## <a name="see-also"></a>另請參閱  

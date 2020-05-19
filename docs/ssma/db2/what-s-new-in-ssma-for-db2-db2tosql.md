@@ -3,22 +3,32 @@ title: SSMA for DB2 的新功能（DB2ToSQL） |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 53a159627750a5ec66b5aa0b3fd6510c647e26a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625518"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220085"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 的新功能（DB2ToSQL）
 
 本文列出每個版本中 DB2 變更的 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v89"></a>SSMA v 8。9
+
+SSMA for DB2 的 v 8.9 版本包含下列變更：
+
+* 修正函 `TIMESTAMPDIFF` 式的轉換
+* 修正資料分割索引存在時的索引探索
+* 修正在另一個架構中定義主要索引時的外鍵探索
+* 改善符合內建函數名稱之資料行的轉換
+* 修正專案名稱中特殊字元的問題
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
 
@@ -26,9 +36,9 @@ SSMA for DB2 的 v3.0 版本包括：
 
 * SQL Server 物件同步處理穩定性改善
 * 在評定和轉換期間的 GUI 效能改進
-* 已將從`ROWID`到`varbinary(40)`的對應更新為，以加速資料移轉
-* 改善的`SELECT ... FROM NEW/OLD TABLE`語句轉換
-* 程式和函`ALTER`式之語句的新轉換
+* 已將從到的對應更新為 `ROWID` `varbinary(40)` ，以加速資料移轉
+* 改善的 `SELECT ... FROM NEW/OLD TABLE` 語句轉換
+* 程式和函式之語句的新轉換 `ALTER`
 * 解構 for..of 擴張指派的新轉換
 
 ## <a name="ssma-v87"></a>SSMA v 8。7
@@ -38,10 +48,10 @@ SSMA for DB2 的 v1.0 版本包括全新的 DB2 語法剖析器，以及圖形�
 此外，SSMA for DB2 現在提供：
 
 * 在 LUW 上從 DB2 進行遷移時，探索外鍵的修正。
-* 已改善語句`SELECT ... FOR UPDATE`的轉換。
-* 已改善 MQ `COUNT`資料表中的函數轉換。
-* 語句的`SAVEPOINT`轉換。
-* 轉換以模擬子句中`NULL` `ORDER BY`值的 DB2's 行為。
+* 已改善語句的轉換 `SELECT ... FOR UPDATE` 。
+* 已改善 `COUNT` MQ 資料表中的函數轉換。
+* 語句的轉換 `SAVEPOINT` 。
+* 轉換以模擬 `NULL` 子句中值的 DB2's 行為 `ORDER BY` 。
 * 剖析關聯結果集語句的支援。
 
 > [!IMPORTANT]
@@ -51,15 +61,15 @@ SSMA for DB2 的 v1.0 版本包括全新的 DB2 語法剖析器，以及圖形�
 
 除了為了改善可用性和效能而設計的一組目標修正程式之外，新增可讓使用者在已轉換的程式碼中省略 SSMA 擴充屬性的設定，以增強 SSMA for DB2 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA for DB2 中流覽至 [**工具** > ] [**專案設定** > ]**[一般** > **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**
+若要利用這項設定，請在 SSMA for DB2 中流覽至 [**工具]**  >  [**專案設定**]  >  **[一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**
 
 ![省略擴充屬性設定](../db2/media/ssma-omit-extended-properties.png)
 
 此外，SSMA for DB2 現在提供：
 
 * 針對使用預設引數值的函式進行轉換的修正。
-* 已改善函式`PARAMETER`的子句剖析。
-* 轉換`LEAVE`語句的能力。
+* 已改善函式的 `PARAMETER` 子句剖析。
+* 轉換語句的能力 `LEAVE` 。
 
 > [!IMPORTANT]
 > 在 SSMA 的8.5 和更新版本中，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
@@ -70,7 +80,7 @@ SSMA for DB2 的第8.5 版已增強，並支援 SQL server 中的 Azure Active D
 
 此外，SSMA for DB2 已透過下列功能增強：
 
-* 支援使用`GET DIAGNOSTICS` `ROW_NUMBER`來加入語句的轉換。
+* 支援使用來加入 `GET DIAGNOSTICS` 語句的轉換 `ROW_NUMBER` 。
 * 修正與物件名稱開頭的空格相關的錯誤。
 
 > [!IMPORTANT]
@@ -88,16 +98,16 @@ SSMA for DB2 的 v2.0 版本已使用目標修正來增強，其設計目的是�
 SSMA for DB2 的 v 8.3 版本已透過專為改善品質和轉換計量而設計的目標修正來增強。 此外，這一版的 SSMA for DB2 提供了下列修正：
 
 * 解決協助工具問題。
-* 在 SQL Server 中新增`hierarchyid`類型的基本支援。
-* 將 z/OS 探索查詢中的 TRIM 函式`RTRIM` / `LTRIM`使用方式取代為。
-* 允許使用者在以「標準模式」（預設為`NULLID`）連接時指定套件集合。
-* 新增的`CREATE TABLE AS SELECT`轉換。
+* `hierarchyid`在 SQL Server 中新增類型的基本支援。
+* 將 z/OS 探索查詢中的 TRIM 函式使用方式取代為 `RTRIM` / `LTRIM` 。
+* 允許使用者在以「標準模式」（預設為）連接時指定套件集合 `NULLID` 。
+* 新增的轉換 `CREATE TABLE AS SELECT` 。
 * 改善全域臨時表的轉換。
 * 解決物件唯一性檢查順序的問題，以根據條件約束來設定資料表的優先順序（如果名稱衝突的話）。
-* 解決在 z/OS 中載入`DATE`和`TIMESTAMP`的預設資料行值時所發生的問題。
-* 支援 Unicode 換行字元（也稱為`NEL`）。
-* 解決具有遺漏`RETURN TO`子句之資料指標轉換的問題。
-* 新增標籤和`GOTO`的支援。
+* 解決在 `DATE` `TIMESTAMP` z/OS 中載入和的預設資料行值時所發生的問題。
+* 支援 Unicode 換行字元（也稱為 `NEL` ）。
+* 解決具有遺漏子句之資料指標轉換的問題 `RETURN TO` 。
+* 新增標籤和的支援 `GOTO` 。
 
 ## <a name="ssma-v82"></a>SSMA 8。2
 
@@ -138,7 +148,7 @@ SSMA for DB2 的8.0 版已增強，可提供設計來改善品質和轉換計量
 SSMA for DB2 的 v 7.10 版本包含下列變更：
 
 * 專為提供額外的安全性和隱私權保護而設計的目標修正，以符合全球需求的變更。
-* `BEGIN-END`區塊轉換的修正。
+* 區塊轉換的修正 `BEGIN-END` 。
 
 ## <a name="ssma-v79"></a>SSMA v 7。9
 
@@ -224,9 +234,9 @@ SSMA for DB2 的2016年5月版本包含下列變更：
 * 已將 DB2 系統設定版本的資料表轉換成 SQL Server 時態表。
 * 改良的 DB2 剖析器和解析程式。
 * 已移除 .NET 2.0 的安裝程式檢查。
-* 已從\*Db2 安裝程式移除不必要的 .dll。
-* 已`save-project`修正`open-project` SSMA 主控台的命令。
-* 已`securepassword`修正 SSMA 主控台的命令。
+* 已 \* 從 Db2 安裝程式移除不必要的 .dll。
+* 已 `save-project` 修正 `open-project` SSMA 主控台的命令。
+* 已修正 `securepassword` SSMA 主控台的命令。
 * 已修正初始載入物件的計數。
 * 已修正全域設定中的 bug。
   

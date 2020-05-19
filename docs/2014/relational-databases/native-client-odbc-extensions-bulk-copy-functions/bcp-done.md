@@ -15,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - bcp_done function
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca26e8e8f3bdb17afe9908b99bfe5cf09ff3b563
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689081"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701977"
 ---
 # <a name="bcp_done"></a>bcp_done
-  結束從程式變數進行大量複製， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以[bcp_sendrow](bcp-sendrow.md)執行。  
+  結束從程式變數進行大量複製，以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](bcp-sendrow.md)執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ hdbc
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  在最後一次呼叫[bcp_batch](bcp-batch.md)之後永久儲存的資料列數，如果發生錯誤，則為-1。  
   
 ## <a name="remarks"></a>備註  

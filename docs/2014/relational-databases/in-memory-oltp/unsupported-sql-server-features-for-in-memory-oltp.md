@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157240"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702219"
 ---
 # <a name="supported-sql-server-features"></a>支援的 SQL Server 功能
   本主題會討論在使用記憶體最佳化的物件時，所支援或不支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
@@ -105,7 +105,7 @@ ms.locfileid: "63157240"
   
  有一些例外狀況，不支援跨資料庫的交易。 下表描述支援的案例和對應的限制。 (另請參閱 [跨資料庫查詢](cross-database-queries.md))。  
   
-|資料庫|允許|描述|  
+|資料庫|允許|說明|  
 |---------------|-------------|-----------------|  
 |使用者資料庫、模型和 msdb|否|不支援跨資料庫的查詢和交易。<br /><br /> 存取記憶體最佳化的資料表或原生編譯的預存程序的查詢和交易都無法存取其他資料庫，但是系統資料庫 master (用於唯讀存取) 和 tempdb 例外。|  
 |資源資料庫和 tempdb|是|跨資料庫交易並沒有限制，除了單一使用者資料庫以外，只能使用資源資料庫和 tempdb。|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d1f6540a8be6cc45af4d396daf10ca0d1a7d88
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287363"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702705"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用巢狀 AUTO 模式查詢產生同層級
   以下範例示範如何使用巢狀 AUTO 模式查詢產生同層級。 其他產生這類 XML 的唯一方式是使用 EXPLICIT 模式。 但是，這可能會相當繁雜。  
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   查詢 `SalesOrder` 子句中指定的資料列集 `FROM`。 結果是具有一或多個 <`SalesOrder`> 元素的 XML。  
   
--   指定 `AUTO` 模式和 `TYPE` 指示詞。 `AUTO`模式會將查詢結果轉換為 XML，而`TYPE`指示詞會以`xml`類型傳回結果。  
+-   指定 `AUTO` 模式和 `TYPE` 指示詞。 `AUTO`模式會將查詢結果轉換為 XML，而指示詞會 `TYPE` 以類型傳回結果 `xml` 。  
   
 -   包括以逗號分隔的兩個巢狀 `SELECT` 陳述式。 第一個巢狀 `SELECT` 陳述式會擷取銷售訂單資訊、標頭及詳細資料，而第二個巢狀 `SELECT` 陳述式會擷取銷售人員資訊。  
   

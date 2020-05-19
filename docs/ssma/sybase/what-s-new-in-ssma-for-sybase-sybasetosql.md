@@ -3,22 +3,29 @@ title: SSMA for SAP ASE 的新功能（SybaseToSQL） |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 7f23c7e1c676b4ade42b43cf963e0fa6956f93c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625590"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220673"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 的新功能（SybaseToSQL）
 
 本文列出每個版本中 SAP ASE （先前稱為 SSMA for Sybase）變更的 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v89"></a>SSMA v 8。9
+
+SSMA for SAP ASE 的8.9 版本包含下列變更：
+
+* 改善日期和時間格式轉換
+* 修正物件的 SQL 定義中遺漏字元的問題
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
 
@@ -39,7 +46,7 @@ SSMA for SAP ASE 的 v1.0 版本具有圖形化使用者介面中的次要修正
 
 除了針對改善可用性和效能而設計的一組目標修正程式之外，新增可讓使用者在轉換後的程式碼中省略 SSMA 擴充屬性的設定，以增強 SSMA for SAP ASE 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA for SAP ASE 中流覽至 [**工具** > ] [**專案設定** > ]**[一般** > **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**
+若要利用這項設定，請在 SSMA for SAP ASE 中流覽至 [**工具]**  >  [**專案設定**]  >  **[一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**
 
 ![省略擴充屬性設定](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -67,7 +74,7 @@ SSMA for SAP ASE 的 v2.0 版本已透過專為處理協助工具問題而設計
 SSMA for SAP ASE 的 v 8.3 版本已透過專為改善品質和轉換計量而設計的目標修正來增強。 此外，這一版的 SSMA for SAP ASE 提供了下列修正：
 
 * 解決協助工具問題
-* 在 SQL Server 中新增`hierarchyid`類型的基本支援
+* `hierarchyid`在 SQL Server 中新增類型的基本支援
 
 ## <a name="ssma-v82"></a>SSMA 8。2
 
@@ -142,7 +149,7 @@ SSMA for SAP ASE 的7.6 版包含下列變更：
 SSMA for SAP ASE 的7.5 版（先前稱為 Sybase 的 SSMA）包含下列變更：
 
 * 有數項改良功能可確保更方便殘障人士使用。
-* 語法的`CREATE OR REPLACE`支援。
+* 語法的支援 `CREATE OR REPLACE` 。
 
 ## <a name="ssma-v74"></a>SSMA 7。4
 
@@ -193,8 +200,8 @@ SSMA for Sybase 的7.1 版包含下列變更：
 * 已新增 SQL Server 2016 的支援。
 * 已移除 .NET 2.0 的安裝程式檢查。
 * 已將延伸模組套件相依性從 .NET 3.5 更新為 .NET 4.0。
-* 已`save-project`修正`open-project` SSMA 主控台的命令。
-* 已`securepassword`修正 SSMA 主控台的命令。
+* 已 `save-project` 修正 `open-project` SSMA 主控台的命令。
+* 已修正 `securepassword` SSMA 主控台的命令。
 * 已修正初始載入物件的計數。
 * 已修正全域設定中的 bug。
 
@@ -236,7 +243,7 @@ SSMA for Sybase 的2016年1月維護版本包含下列變更：
 2012年1月版的 SSMA for Sybase 包含下列變更：
 
 * 已新增復原觸發程式轉換的支援。
-* 已針對在相同`@@ROWCOUNT` `SET`的`@@ERROR`語句中轉換和提供修正。
+* 已針對在 `@@ROWCOUNT` `@@ERROR` 相同的語句中轉換和提供修正 `SET` 。
 
 ## <a name="july-2011"></a>2011 年 7 月
 
@@ -246,16 +253,16 @@ SSMA for Sybase 的2016年1月維護版本包含下列變更：
 
 2011年4月版的 SSMA for Sybase 包含下列變更：
 
-* 合併「Sybase 的 SSMA」產品，其支援[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)]和 Azure SQL。
-* 已新增連接和遷移至[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]的支援。
+* 合併「Sybase 的 SSMA」產品，其支援 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] 、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] 和 Azure SQL。
+* 已新增連接和遷移至的支援 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * 已新增可將 Sybase 資料庫轉換和遷移至 Azure SQL 的新功能。
 * 加強的用戶端資料移轉引擎，支援資料的平行遷移。
 * 使用簡單和大量記錄復原模式來改善資料移轉效能。
 * 新增了將區分大小寫的 Sybase 資料庫適當轉換和遷移至區分大小寫 SQL Server 的功能。
 * 已將 Sybase ASE 非 ANSI 聯結語句轉換的支援新增至 SQL Server ANSI 聯結語句，並已擴充至 DELETE 和 UPDATE 語句。
 * 針對使用 Sybase ASE ODBC 提供者和 Sybase ASE ADO.NET 提供者連接到 Sybase ASE 伺服器，提供其他連線選項。
-* 已移除名`SysDB`為的個別資料庫上的相依性，其中包含 Sybase 模擬函式（安裝為延伸模組套件的一部分）。
-* 已新增在叢集上[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]安裝 SSMA For Sybase 延伸模組套件的能力。
+* 已移除名為的個別資料庫上的相依性 `SysDB` ，其中包含 Sybase 模擬函式（安裝為延伸模組套件的一部分）。
+* 已新增在叢集上安裝 SSMA for Sybase 延伸模組套件的能力 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
 * 已新增舊版 SSMA （v4.0 和4.2 版）所建立之專案的回溯相容性。
 * 已新增安裝 SSMA for Sybase v 5.0 產品（SxS）與舊版 SSMA （v4.0 和4.2 版）的功能。
 
@@ -278,11 +285,11 @@ SSMA for Sybase 的2016年1月維護版本包含下列變更：
 * 已在物件轉換中新增改良功能：
   * 已修訂聯結轉換。
   * 不含/group by 子句的匯總和非匯總。
-  * `IDENTITY`具有`SELECT INTO`語句的函式。
+  * 具有語句的函式 `IDENTITY` `SELECT INTO` 。
   * 僅限資料鎖定的叢集條件約束和索引。
-  * 建立的`SELECT INTO`臨時表。
+  * 建立的臨時表 `SELECT INTO` 。
   * 臨時表的條件約束/索引。
-  * 支援[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]新的日期時間類型。
+  * [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]支援新的日期時間類型。
   * Sybase 15.0 連線性和資料類型支援。
 
 ## <a name="may-2007"></a>5月2007
@@ -301,15 +308,15 @@ SSMA for Sybase 的2016年1月維護版本包含下列變更：
   * 您可以選擇在編輯器視窗中顯示行號。
   * 您可以設定 SSMA，以提示取代重複的物件，或一律或永遠不在架構轉換期間取代重複的物件。
 * 已新增可讓您設定 SSMA 如何處理下列情況的新轉換選項：
-  * 包含`CAST`二進位`CONVERT`字串的或語句。
+  * `CAST` `CONVERT` 包含二進位字串的或語句。
   * 檢查相等運算式中的 null 值。
   * Proxy 資料表。
-  * 的`RAISERROR`使用者訊息錯誤號碼。
+  * 的使用者訊息錯誤號碼 `RAISERROR` 。
   * `UPDATE`包含無法解析之識別碼的語句。
-* 新增了新的遷移選項，讓您指定 SSMA 應如何處理[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]日期範圍外的日期。
+* 新增了新的遷移選項，讓您指定 SSMA 應如何處理日期範圍外的日期 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
 * 已在 [ **sql** ] 索引標籤上新增**格式化的 SQL**設定，其會格式化程式碼以改善可讀性。
 * 錯誤修正，包括：
-  * SSMA 現在會`LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE`將`TABLOCK`或`TABLOCKX`提示加入資料表的後續`SELECT`查詢，藉以轉換語句。
+  * SSMA 現在會將 `LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` `TABLOCK` 或 `TABLOCKX` 提示加入資料表的後續查詢，藉以轉換語句 `SELECT` 。
   * 現在在字元運算式中使用二進位類型時，會新增必要的轉換。
   * 記憶體和效能改進。
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067620"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702087"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>從 DB-Library 轉換成 ODBC 大量複製
-  將 DB-LIBRARY 大量複製程式轉換成 ODBC 很簡單，因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式所支援的大量複製函數與 db-library 大量複製函數類似，但有下列例外狀況：  
+  將 DB-LIBRARY 大量複製程式轉換成 ODBC 很簡單，因為 Native Client ODBC 驅動程式所支援的大量複製函數與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 大量複製函數類似，但有下列例外狀況：  
   
 -   DB-Library 應用程式會將指向 DBPROCESS 結構的指標當做大量複製函數的第一個參數傳遞。 在 ODBC 應用程式中，DBPROCESS 指標會由 ODBC 連接控制代碼所取代。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63067620"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式不支援 db-library 訊息和錯誤處理常式;您必須呼叫**SQLGetDiagRec** ，以取得 ODBC 大量複製函數所引發的錯誤和訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式不支援 db-library 訊息和錯誤處理常式; 您必須呼叫**SQLGetDiagRec** ，以取得 ODBC 大量複製函數所引發的錯誤和訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
   
 -   針對 DB-LIBRARY [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*參數所指定的值，與 ODBC **bcp_bind**_cbData_參數的轉譯方式不同。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63067620"
   
      在 DB-LIBRARY 中， *varlen*值-1 表示正在提供可變長度的資料，而在 ODBC *cbData*中會將它解讀為表示只提供 Null 值。 將任何-1 的 DB-LIBRARY *varlen*規格變更為 SQL_VARLEN_DATA，並將任何0的*varlen*規格變更為 SQL_Null_DATA。  
   
--   DB-LIBRARY **bcp\_colfmt**_\_file collen_和 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData*與上面所述的**bcp_bind**_varlen_和*cbData*參數有相同的問題。 將任何-1 的 DB-LIBRARY *file_collen*規格變更為 SQL_VARLEN_DATA，並將任何*file_collen*規格0變更為 SQL_Null_DATA。  
+-   DB-LIBRARY **bcp \_ colfmt**_file \_ collen_和 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*CbUserData*與上面所述的**bcp_bind**_varlen_和*cbData*參數有相同的問題。 將任何-1 的 DB-LIBRARY *file_collen*規格變更為 SQL_VARLEN_DATA，並將任何*file_collen*規格0變更為 SQL_Null_DATA。  
   
 -   ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函數的*iValue*參數是 void 指標。 在 DB-LIBRARY 中， *iValue*是整數。 將 ODBC *iValue*的值轉換為 void *。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63067620"
   
     -   以 DB-LIBRARY **dbconvert**函數支援的任何格式的**datetime**和**Smalldatetime**字元字串。  
   
-    -   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端網路公用程式的 [db-library**選項**] 索引標籤上核取 [**使用國際設定**] 方塊時，db-library 大量複製函數也會接受針對用戶端電腦登錄的地區設定所定義之地區日期格式的日期。  
+    -   在用戶端網路公用程式的 [DB-LIBRARY**選項**] 索引標籤上核取 [**使用國際設定**] 方塊時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，db-library 大量複製函數也會接受針對用戶端電腦登錄的地區設定所定義之地區日期格式的日期。  
   
      DB-LIBRARY 大量複製函數不接受 ODBC **datetime**和**Smalldatetime**格式。  
   

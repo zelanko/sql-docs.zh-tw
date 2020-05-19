@@ -20,22 +20,22 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174037"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702575"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字，可透過類似資料表或檢視表的記憶體中 XML 文件，提供資料列集。 OPENXML 允許對 XML 資料的存取像是關聯式資料列集一樣。 其做法是，提供 XML 文件內部表示法的資料列集檢視。 資料列集的記錄可以儲存在資料庫的資料表中。
 
  OPENXML 可用於 SELECT 及 SELECT INTO 陳述式，其中出現的資料列集提供者、檢視或 OPENROWSET 都可做為來源。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)。
 
- 若要使用 OPENXML 針對 XML 檔撰寫查詢，您必須先呼叫`sp_xml_preparedocument`。 這樣會剖析 XML 文件，並將控制代碼傳回至準備要使用的已剖析文件。 剖析過的文件就是 XML 文件中，各種節點的文件物件模型 (DOM) 樹狀表示法。 接著文件控制代碼會傳遞至 OPENXML。 然後 OPENXML 會依據傳給它的參數，提供該文件的資料列集檢視。
+ 若要使用 OPENXML 針對 XML 檔撰寫查詢，您必須先呼叫 `sp_xml_preparedocument` 。 這樣會剖析 XML 文件，並將控制代碼傳回至準備要使用的已剖析文件。 剖析過的文件就是 XML 文件中，各種節點的文件物件模型 (DOM) 樹狀表示法。 接著文件控制代碼會傳遞至 OPENXML。 然後 OPENXML 會依據傳給它的參數，提供該文件的資料列集檢視。
 
 > [!NOTE]
 >  `sp_xml_preparedocument`會使用 SQL 更新版本的 MSXML 剖析器（Msxmlsql.dll）。 這個版本的 MSXML 剖析器的設計目的，是要支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並維持與 MSXML 2.6 舊版的相容性。
@@ -110,7 +110,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   資料列集資料行與 XML 節點之間的對應
 
 ### <a name="xml-document-handle-idoc"></a>XML 文件控制代碼 (idoc)
- `sp_xml_preparedocument`預存程式會傳回檔案控制代碼。
+ 預存程式會傳回檔案控制代碼 `sp_xml_preparedocument` 。
 
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>用來識別欲處理之節點的 XPath 運算式 (rowpattern)
   指定為 rowpattern的 XPath 運算式識別 XML 文件中的節點集。  每個由 rowpattern 識別的節點，都會對應到由 OPENXML 所產生之資料列集中的單一資料列。

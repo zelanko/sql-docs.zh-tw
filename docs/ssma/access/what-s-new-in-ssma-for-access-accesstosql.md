@@ -3,22 +3,29 @@ title: SSMA for Access 的新功能（AccessToSQL） |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 2fd3da31e6a635a65f3d2a2f75320dd0586159d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625576"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220253"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access 的新功能（AccessToSQL）
 
 本文列出每個版本中的存取變更 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v89"></a>SSMA v 8。9
+
+SSMA for Access 的 v 8.9 版本包含下列變更：
+
+* 改善自我參考查詢的轉換
+* 修正專案名稱中特殊字元的問題
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
 
@@ -30,7 +37,7 @@ SSMA for Access 的 v 8.8 版本包括：
 
 ## <a name="ssma-v87"></a>SSMA v 8。7
 
-SSMA for Access 的8.7 版本已改善查詢中函式`IIF`的轉換，以及圖形化使用者介面中的次要修正和效能改進。
+SSMA for Access 的8.7 版本已改善查詢中函式的轉換 `IIF` ，以及圖形化使用者介面中的次要修正和效能改進。
 
 > [!IMPORTANT]
 > 在 SSMA 的8.5 和更新版本中，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
@@ -39,7 +46,7 @@ SSMA for Access 的8.7 版本已改善查詢中函式`IIF`的轉換，以及圖�
 
 除了為了改善可用性和效能而設計的一組目標修正程式之外，也新增了可讓使用者在轉換後的程式碼中省略 SSMA 擴充屬性的設定，以增強 SSMA for Access 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA 中，流覽至 [**工具** > ] [**專案設定** > ]**[一般** > **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
+若要利用這項設定，請在 SSMA 中，流覽至 [**工具**  >  ] [**專案設定**]  >  **[一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
 
 ![省略擴充屬性設定](../access/media/ssma-omit-extended-properties.png)
 
@@ -50,7 +57,7 @@ SSMA for Access 的8.7 版本已改善查詢中函式`IIF`的轉換，以及圖�
 
 SSMA for Access 的第8.5 版已增強，並支援 SQL server 中的 Azure Active Directory 驗證和 JSON 功能的基本支援，以及一組專為改善可用性和效能而設計的目標修正程式。
 
-此外，SSMA for Access 現在支援轉換多個標準函式（`ISNULL`、 `IIF`等）。
+此外，SSMA for Access 現在支援轉換多個標準函式（ `ISNULL` 、 `IIF` 等）。
 
 > [!IMPORTANT]
 > 使用 SSMA v 8.5 時，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
@@ -67,7 +74,7 @@ SSMA for Access 的 v2.0 版本增強了目標修正程式，其設計目的是�
 SSMA for Access 的 v 8.3 版本已透過專為改善品質和轉換計量而設計的目標修正來增強。 此外，這一版的 SSMA for Access 會提供下列修正：
 
 * 解決協助工具問題。
-* 在 SQL Server 中新增`hierarchyid`類型的基本支援。
+* `hierarchyid`在 SQL Server 中新增類型的基本支援。
 
 ## <a name="ssma-v82"></a>SSMA 8。2
 
@@ -181,8 +188,8 @@ SSMA for Access 的2016年5月發行版本包含下列變更：
 
 * 已新增 SQL Server 2016 的正式支援。
 * 已移除 .NET 2.0 的安裝程式檢查。
-* 已`save-project`修正`open-project` SSMA 主控台的命令。
-* 已`securepassword`修正 SSMA 主控台的命令。
+* 已 `save-project` 修正 `open-project` SSMA 主控台的命令。
+* 已修正 `securepassword` SSMA 主控台的命令。
 * 已修正初始載入物件的計數。
 * 已修正用於存取的 UI 索引標籤的資料表資料載入。
 * 已修正全域設定中的 bug。
@@ -238,8 +245,8 @@ SSMA for Access 的2012年1月版本包含下列變更：
 
 2011年4月發行的 SSMA for Access 包含下列變更：
 
-* 已新增可供存取的「SSMA for Access」的單一[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]安裝[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]， [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]其支援、和 Azure SQL。
-* 已新增連接到[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]的能力。
+* 已新增可供存取的「SSMA for Access」的單一安裝，其支援 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] 、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 和 Azure SQL。
+* 已新增連接到的能力 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * 已新增 SSMA，以取得回溯相容性的 Access 主控台版本支援。 您可以開啟先前版本所建立的專案，以 SSMA 5.0 版。
 * 新增了將 SSMA v 5.0 產品與舊版 SSMA 產品並存安裝的能力（SxS）。
 
@@ -251,7 +258,7 @@ SSMA for Access 的2012年1月版本包含下列變更：
 * 已將安全連線新增至 SQL Server 和 Azure SQL。
 * 已新增存取2010資料庫的支援。
 * 已新增新的 SSMA 主控台應用程式來執行命令列。
-* 已新增 SQL Server `DateTime2`資料類型的支援。
+* 已新增 SQL Server `DateTime2` 資料類型的支援。
 
 ## <a name="june-2008"></a>2008年6月
 
@@ -270,10 +277,10 @@ SSMA for Access 的2007年5月發行版本包含下列變更：
 
 2006年11月發行的 SSMA for Access 包含下列變更：
 
-* 新增了新的資料庫移轉嚮導，引導您將單一資料庫從的存取權遷移到[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]。
-* 新增了新的轉換、載入和遷移命令，以轉換 Access 資料庫、將轉換的物件[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]載入，並在一個[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]步驟中將資料移轉至全部。
+* 新增了新的資料庫移轉嚮導，引導您將單一資料庫從的存取權遷移到 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
+* 新增了新的轉換、載入和遷移命令，以轉換 Access 資料庫、將轉換的物件載入 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ，並 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 在一個步驟中將資料移轉至全部。
 * 改良的查詢遷移。 查詢遷移現在會將更多的 SELECT 查詢轉換成 views。 如需詳細資訊，請參閱[轉換 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。
-* 已在 [ [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **資料表**] 索引標籤上新增編輯資料表和索引屬性的功能。
+* 已在 [資料表] 索引標籤上新增編輯資料表和索引屬性的功能 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Table** 。
 * 已新增通用設定：
   * 您可以選擇在編輯器視窗中顯示行號。
   * 您可以設定 SSMA，以提示取代重複的物件，或一律或永遠不在架構轉換期間取代重複的物件。

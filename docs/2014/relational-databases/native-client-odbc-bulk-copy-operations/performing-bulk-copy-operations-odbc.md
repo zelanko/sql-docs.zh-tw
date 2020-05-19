@@ -13,15 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server Native Client]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1937f3b81a920312aa1f1a4b804352b9674043dc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200812"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702078"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>執行大量複製作業 (ODBC)
   ODBC 標準不直接支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量複製作業。 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更新版本的值行個體時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量複製作業的 DB-Library 函數。 此驅動程式專屬的延伸模組提供一個簡單的升級路徑給使用大量複製函數的現有 DB-Library 應用程式。 特定的大量複製支援位於下列檔案中：  
@@ -39,7 +39,7 @@ ms.locfileid: "63200812"
      在執行時間必須存在。 sqlncli11.dll 是透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式散發。  
   
 > [!NOTE]  
->  ODBC **SQLBulkOperations**函數與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製函數沒有任何關聯性。 應用程式必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專用的大量複製函數才能執行大量複製作業。  
+>  ODBC **SQLBulkOperations**函數與大量複製函數沒有任何關聯性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 應用程式必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專用的大量複製函數才能執行大量複製作業。  
   
 ## <a name="minimally-logging-bulk-copies"></a>最低限度記錄的大量複製  
  利用完整復原模式，大量載入所執行的所有資料列插入作業都會完整記錄在交易記錄檔中。 對於大型資料載入，這可能會導致交易記錄檔迅速填滿。 在某些情況下，可以用最低限度記錄。 最低限度記錄會降低大量載入作業填滿記錄檔空間的可能性，而且也比完整記錄更有效率。  

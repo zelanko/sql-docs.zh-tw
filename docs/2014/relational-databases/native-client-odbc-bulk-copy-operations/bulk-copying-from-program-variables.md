@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206837"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702118"
 ---
 # <a name="bulk-copying-from-program-variables"></a>從程式變數中大量複製
   您可以直接從程式變數大量複製。 在配置變數來保存資料列的資料及呼叫 [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 開始大量複製之後，請針對每一個資料行呼叫 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，以指定要與此資料行產生關聯之程式變數的位置與格式。 然後針對每一個包含資料的變數，呼叫 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 將一個資料列傳送給伺服器。 重複填入變數及呼叫 **bcp_sendrow** 的程序，直到所有資料列都已傳送給伺服器為止，然後呼叫 [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 來指定此作業已完成。  
@@ -104,7 +104,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支援間隔資料類型。 但是，應用程式可以將間隔逸出序列當做字元字串儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元資料行中。 應用程式可以讀取它們供日後使用，但是它們不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用。  
   
- 大量複製函數可用來將資料快速載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 (該資料是從 ODBC 資料來源讀取)。 只搭配資料變數使用 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) 可將結果集的資料行繫結至程式變數，然後使用 **bcp_bind** 可將相同程式變數繫結至大量複製作業。 呼叫[SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**會接著從 ODBC 資料來源將資料列提取到程式變數中，而呼叫[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)會從程式變數大量複製資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 大量複製函數可用來將資料快速載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 (該資料是從 ODBC 資料來源讀取)。 只搭配資料變數使用 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) 可將結果集的資料行繫結至程式變數，然後使用 **bcp_bind** 可將相同程式變數繫結至大量複製作業。 呼叫[SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**會接著從 ODBC 資料來源將資料列提取到程式變數中，而呼叫[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)會從程式變數大量複製資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  每當應用程式需要變更原本在**bcp_bind** _pData_參數中指定之資料變數的位址時，都可以使用[bcp_colptr](../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)函數。 每當應用程式需要變更原本在 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) cbData **參數中指定的資料長度時，可以隨時使用**_bcp_collen_ 函數。  
   

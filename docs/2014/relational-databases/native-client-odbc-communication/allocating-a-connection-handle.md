@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying passwords
 - SQLAllocHandle function
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62864994"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702074"
 ---
 # <a name="allocating-a-connection-handle"></a>配置連接控制代碼
   在應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼。 這是藉由呼叫**SQLAllocHandle**並將*HandleType*參數設定為 SQL_HANDLE_DBC，並將*InputHandle*指向已初始化的環境控制碼來完成。  
@@ -36,7 +36,7 @@ ms.locfileid: "62864994"
   
  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版或更新版本執行的應用程式，有時可以藉由重設表格式資料流 (TDS) 網路封包大小來改善其效能。 預設封包大小是 4 KB，設定於伺服器。 4 KB 到 8 KB 的封包大小一般可提供最佳效能。 如果測試顯示應用程式使用其他封包大小時效能較佳，則可以重設封包大小。 ODBC 應用程式可以藉由使用 SQL_ATTR_PACKET_SIZE 選項呼叫**SQLSetConnectAttr**來進行連接。 有些應用程式在使用較大封包大小時效能較佳，但一般而言，封包大小大於 8 KB 時所能改進的效能微乎其微。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式具有一些擴充連接屬性，可讓應用程式用來增加其功能。 這其中有些屬性所控制的選項，可在資料來源中指定並用來覆寫資料來源中所設的任何選項。 例如，如果應用程式使用引號識別碼，則可以將驅動程式特定的屬性 SQL_COPT_SS_QUOTED_IDENT 設為 SQL_QI_ON，以確保一定可以設定此選項，不論資料來源中的設定為何。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式具有一些擴充連接屬性，可讓應用程式用來增加其功能。 這其中有些屬性所控制的選項，可在資料來源中指定並用來覆寫資料來源中所設的任何選項。 例如，如果應用程式使用引號識別碼，則可以將驅動程式特定的屬性 SQL_COPT_SS_QUOTED_IDENT 設為 SQL_QI_ON，以確保一定可以設定此選項，不論資料來源中的設定為何。  
   
 ## <a name="see-also"></a>另請參閱  
  [與 SQL Server &#40;ODBC&#41;通訊](communicating-with-sql-server-odbc.md)  

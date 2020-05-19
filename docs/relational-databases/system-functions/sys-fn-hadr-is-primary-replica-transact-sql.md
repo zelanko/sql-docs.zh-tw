@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68811410"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262124"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  '*dbname*'  
  這是資料庫的名稱。 *dbname*的類型為 sysname。  
   
-## <a name="returns"></a>傳回值  
- 如果目前執行個體上的資料庫為主要複本，則傳回 1。 否則傳回 0。  
+## <a name="returns"></a>傳回  
+ 傳回資料類型**bool**：如果目前實例上的資料庫為主要複本，則傳回1，否則傳回0。  
   
 ## <a name="remarks"></a>備註  
  使用這個函數可方便地判斷本機執行個體是否裝載指定可用性資料庫的主要複本。 範例程式碼可能如下所示。  

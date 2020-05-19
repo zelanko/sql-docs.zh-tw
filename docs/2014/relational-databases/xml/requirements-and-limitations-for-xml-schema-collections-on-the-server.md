@@ -21,15 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efee2d8c9dea38beda1ba3398230dce8d1163d77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241254"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702529"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>伺服器上 XML 結構描述集合的需求與限制
   XML 結構描述定義語言 (XSD) 驗證對於使用 `xml` 資料類型的 SQL 資料行具有某些相關限制。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
@@ -47,7 +47,7 @@ ms.locfileid: "63241254"
 |將成員加入現有替代群組|您無法在 XML 結構描述集合中將成員加入現有的替代群組。 在 XML 結構描述中的替代群組是限制成標頭元素，而且所有其成員元素都必須定義在相同的 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式中。|  
 |標準格式與模式限制|值的標準表示法不能違反其類型的模式限制。 如需詳細資訊，請參閱 [標準格式與模式限制](canonical-forms-and-pattern-restrictions.md)。|  
 |列舉 Facet|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援類型含有模式 Facet 或列舉違反這些 Facet 的 XML 結構描述。|  
-|Facet 長度|**Length**、 **minLength**和**maxLength** facet 會儲存為`long`類型。 此類型是 32 位元的類型。 因此，這些值的可接受值範圍為 2<sup>^</sup>31。|  
+|Facet 長度|**Length**、 **minLength**和**maxLength** facet 會儲存為 `long` 類型。 此類型是 32 位元的類型。 因此，這些值的可接受值範圍為 2 <sup>^</sup> 31。|  
 |ID 屬性|每個 XML 結構描述元件都可擁有識別碼屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 **ID\< 類型的** **xsd:attribute>** 宣告強制唯一性，但不會儲存這些值。 唯一性的強制範圍是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式。|  
 |ID 類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**類型的元素。 結構描述不能宣告此類型的元素，或者宣告由限制此類型或從此類型衍生的元素。|  
 |區域命名空間|您必須為 **\<xsd:any>** 項目明確指定本機命名空間。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕使用空字串 ("") 作為命名空間屬性值的結構描述。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會要求明確使用 "##local"，將不完整的元素或屬性指示成萬用字元的執行個體。|  

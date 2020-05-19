@@ -18,15 +18,15 @@ helpviewer_keywords:
 - binding result sets [SQL Server Native Client]
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca5ab2c7c3b92f30701fd51ddef95eccff4842fd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200037"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699706"
 ---
 # <a name="assigning-storage"></a>指派儲存體
   應用程式可以在執行 SQL 陳述式之前或之後指派結果的儲存體。 如果應用程式先準備或執行 SQL 陳述式，它就可以查詢結果集的相關資訊，然後再指派結果的儲存體。 例如，如果結果集是未知的，應用程式就必須擷取資料行的數目，然後才能指派它們的儲存體。  

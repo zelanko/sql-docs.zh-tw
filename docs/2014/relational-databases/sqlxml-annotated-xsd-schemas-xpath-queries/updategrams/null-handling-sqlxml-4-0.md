@@ -12,18 +12,18 @@ helpviewer_keywords:
 - nullvalue attribute
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 11f7ca96ca65ae23202b84030140e0eaef945de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d21c1a215b05896838c4127c9a35f8add334f713
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014692"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703045"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 處理 (SQLXML 4.0)
-  XML 語法表示 NULL 不存在  （例如，如果屬性或專案值為 Null，則 XML 檔中不存在該屬性或元素）。在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 中， `updg:nullvalue`屬性可為元素或屬性值指定 Null。  
+  XML 語法表示 NULL 不存在  （例如，如果屬性或專案值為 Null，則 XML 檔中不存在該屬性或元素）。在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 中， `updg:nullvalue` 屬性可為元素或屬性值指定 Null。  
   
  例如，下列 updategram 可確保**ContactID**為64之連絡人的**標題**值為 Null，然後將**標題**值更新為「Mr」。 。  
   

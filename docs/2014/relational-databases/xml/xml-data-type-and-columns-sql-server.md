@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193061"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702237"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
-  本主題討論中`xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的優點和限制，並協助您選擇儲存 XML 資料的方式。  
+  本主題討論中資料類型的優點和限制 `xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並協助您選擇儲存 XML 資料的方式。  
   
 ## <a name="relational-or-xml-data-model"></a>關聯式或 XML 資料模型  
  如果您的資料使用已知的結構描述來高度結構化，則關聯式模型對資料儲存來說可能是最好的方式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供必要的功能以及您可能需要的工具。 另一方面，如果結構是半結構化或是無結構，或是情況不明，您就必須考慮將這類資料模型化。  
@@ -61,7 +61,7 @@ ms.locfileid: "63193061"
   
      以內部表示法來儲存資料，以保存資料的 XML 內容。 這個內部表示法包括有關內含項目階層、文件順序，以及元素和屬性值的資訊。 特別是會保存 XML 資料的 InfoSet 內容。 如需 InfoSet 的詳細資訊，請前往 [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 內容可能會與文字版 XML 不同，因為沒有保留下列資訊：不重要的空格、屬性的順序、命名空間前置詞及 XML 宣告。  
   
-     針對具`xml`類型的資料類型`xml` ，系結至 XML 架構的資料類型，後架構驗證資訊集（PSVI）會將類型資訊加入至資訊集，並以內部標記法編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) 的「W3C XML 結構描述」規格。  
+     針對具類型的 `xml` 資料類型，系結 `xml` 至 XML 架構的資料類型，後架構驗證資訊集（PSVI）會將類型資訊加入至資訊集，並以內部標記法編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) 的「W3C XML 結構描述」規格。  
   
 -   XML 與關聯式儲存之間的對應  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63193061"
   
      會儲存相同的資料副本。 針對特殊目的應用程式 (如：法律文件)，這是很有用的。 大部份的應用程式都不需要完全相同的副本，且可以滿足於 XML 內容 (InfoSet 精確度)。  
   
- 一般而言，您可能必須組合使用這些方法。 例如，您想要將 XML 資料儲存在 `xml` 資料類型資料行中，並將其屬性升級為關聯式資料行。 或者，您可能會想要使用對應技術來將非遞迴部分儲存在非 XML `xml`資料行中，而且只會將遞迴部分儲存在資料類型資料行中。  
+ 一般而言，您可能必須組合使用這些方法。 例如，您想要將 XML 資料儲存在 `xml` 資料類型資料行中，並將其屬性升級為關聯式資料行。 或者，您可能會想要使用對應技術來將非遞迴部分儲存在非 XML 資料行中，而且只會將遞迴部分儲存在 `xml` 資料類型資料行中。  
   
 ### <a name="choice-of-xml-technology"></a>XML 技術的選項  
  XML 技術的選項有原生 XML 和 XML 檢視，通常需視下列因素而定：  
@@ -123,7 +123,7 @@ ms.locfileid: "63193061"
   
  若要查詢，請在執行階段將資料轉換成 `xml` 資料類型，並對其執行 Xquery。 執行階段的轉換作業可能會很耗費資源，尤其是當文件很大時。 若您經常查詢，您可以另外將文件儲存在 `xml` 資料類型資料行中，當您從 `[n]varchar(max)` 資料行傳回完全相同的文件副本時，再加以檢索。  
   
- XML 資料行可能是以 `[n]varchar(max)` 資料行為基礎的計算資料行。 不過，您無法在計算的 XML 資料行上建立 XML 索引，也無法在或`[n]varchar(max)` `varbinary(max)`資料行上建立 xml 索引。  
+ XML 資料行可能是以 `[n]varchar(max)` 資料行為基礎的計算資料行。 不過，您無法在計算的 XML 資料行上建立 XML 索引，也無法在或資料行上建立 XML 索引 `[n]varchar(max)` `varbinary(max)` 。  
   
 ### <a name="xml-view-technology"></a>XML 檢視技術  
  在您的 XML 結構描述與資料庫中的資料表之間定義對應，即可建立永續性資料的「XML 檢視」。 藉由 XML 檢視，可使用 XML 大量載入功能來擴展基礎資料表。 您可以使用 XPath 1.0 版來查詢 XML 檢視；該查詢會在資料表上轉換成 SQL 查詢。 同樣地，更新內容也會傳播至那些資料表。  
@@ -146,7 +146,7 @@ ms.locfileid: "63193061"
  舉例來說，假設您要將現有的關聯式資料 (例如：客戶、訂單及線性項目) 處理成 XML。 在關聯式資料上使用 AXSD，以定義 XML 檢視。 XML 檢視可讓您將 XML 資料大量載入至資料表中，並使用 XML 檢視來查詢及更新關聯式資料。 如果您必須在不干擾 SQL 應用程式工作的情況下，與其他應用程式交換含有 XML 標記的資料，這種模型會很有用。  
   
 ### <a name="hybrid-model"></a>混合模型  
- 關聯式和`xml`資料類型資料行的組合通常適用于資料模型化。 XML 資料中有些值可以儲存在關聯式資料行中，其餘的值 (或是整個 XML 值) 則可儲存在 XML 資料行中。 這樣可能會產生較佳的效能，因為對於以關聯式資料行及鎖定特性來建立的索引，您會有比較大的控制權。  
+ 關聯式和資料類型資料行的組合通常 `xml` 適用于資料模型化。 XML 資料中有些值可以儲存在關聯式資料行中，其餘的值 (或是整個 XML 值) 則可儲存在 XML 資料行中。 這樣可能會產生較佳的效能，因為對於以關聯式資料行及鎖定特性來建立的索引，您會有比較大的控制權。  
   
  至於要將哪些值儲存在關聯式資料行中，則需視您的工作負載而定。 例如，若您是依據路徑運算式 /Customer/@CustId 來擷取所有的 XML 值，則將 **CustId** 屬性值升級至關聯式資料行中並加以檢索，可能會產生較快的查詢效能。 另一方面，如果 XML 資料是廣泛且毫不多餘地分解在關聯式資料行中，則重組的成本可能會很大。  
   

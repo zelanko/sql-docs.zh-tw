@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59eafff14c6a0cc7752817a31648b64bd5edc907
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679968"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702453"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
-  W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，對此指示詞的支援可能會耗用很高的效能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而且也需要重新`xml`驗證與重新定義的架構相關聯之資料類型的所有實例。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
+  W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，對此指示詞的支援可能會耗用很高的效能，而且也需要重新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證 `xml` 與重新定義的架構相關聯之資料類型的所有實例。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
   
  若要更新結構描述或是其元件，您可以改為執行下列動作：  
   

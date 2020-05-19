@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120248"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262140"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys.databases fn_hadr_backup_is_preferred_replica （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  '*dbname*'  
  這是要備份的資料庫名稱。 *dbname*的類型為 sysname。  
   
-## <a name="returns"></a>傳回值  
- 如果目前執行個體上的資料庫為慣用複本，則傳回 1， 否則傳回 0。  
+## <a name="returns"></a>傳回  
+ 如果目前實例上的資料庫是在慣用複本上，則傳回資料類型**bool**：1，否則為0。  
   
 ## <a name="remarks"></a>備註  
  在備份指令碼中使用這個函數，以判斷目前的資料庫是否在備份所慣用的複本上。 您可以在每一個可用性複本上執行指令碼。 每一個作業都會查看相同的資料，以判斷應該執行哪一個作業，如此一來，只有其中一個排程作業會實際進行到備份階段。 範例程式碼可能如下所示。  

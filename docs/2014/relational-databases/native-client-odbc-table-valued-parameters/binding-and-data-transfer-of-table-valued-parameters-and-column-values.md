@@ -9,22 +9,22 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5aa061f51d63085cc55e59aca7d7e4d69e1a2e27
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199959"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698733"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>資料表值參數和資料行值的繫結與資料傳送
   資料表值參數與其他參數一樣，必須先繫結，然後才能傳遞至伺服器。 應用程式系結資料表值參數的方式，與系結其他參數的方法相同：使用 SQLBindParameter 或對 SQLSetDescField 或 SQLSetDescRec 的對等呼叫。 資料表值參數的伺服器資料類型是 SQL_SS_TABLE。 C 類型可以指定為 SQL_C_DEFAULT 或 SQL_C_BINARY。  
   
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本中，只支援輸入資料表值參數。 因此，如果您嘗試將 SQL_DESC_PARAMETER_TYPE 設定為 SQL_PARAM_INPUT 以外的值，將會傳回含有 SQLSTATE = HY105 和「無效的參數類型」訊息的 SQL_ERROR。  
   
- 您可以使用屬性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，將預設值指派給整個資料表值參數資料行。 不過，您無法使用 SQLBindParameter 的*StrLen_or_IndPtr*中的 SQL_DEFAULT_PARAM，將個別的資料表值參數資料行值指派給預設值。 使用*StrLen_or_IndPtr* with SQLBindParameter 中的 SQL_DEFAULT_PARAM，就無法將資料表值參數設為預設值。 如果未遵循這些規則，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR。 將會產生含有 SQLSTATE = 07S01 的診斷記錄，以及「參數\<p> 的預設參數使用不正確」訊息，其中\<p> 是查詢語句中 TVP 的序數。  
+ 您可以使用屬性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，將預設值指派給整個資料表值參數資料行。 不過，您無法使用 SQLBindParameter 的*StrLen_or_IndPtr*中的 SQL_DEFAULT_PARAM，將個別的資料表值參數資料行值指派給預設值。 使用*StrLen_or_IndPtr* with SQLBindParameter 中的 SQL_DEFAULT_PARAM，就無法將資料表值參數設為預設值。 如果未遵循這些規則，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR。 將會產生含有 SQLSTATE = 07S01 的診斷記錄，以及「參數 p> 的預設參數使用不正確」訊息 \< ，其中 \< p> 是查詢語句中 TVP 的序數。  
   
  繫結資料表值參數之後，應用程式必須接著繫結每個資料表值參數資料行。 若要這樣做，應用程式會先呼叫 SQLSetStmtAttr，將 SQL_SOPT_SS_PARAM_FOCUS 設定為數據表值參數的序數。 然後，應用程式會呼叫下列常式來系結資料表值參數的資料行： SQLBindParameter、SQLSetDescRec 和 SQLSetDescField。 將 SQL_SOPT_SS_PARAM_FOCUS 設定為0，會還原一般作用中的 SQLBindParameter、SQLSetDescRec 和 SQLSetDescField，以便在一般的頂層參數上運作。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63199959"
   
 3.  呼叫 SQLSetStmtAttr，將 SQL_SOPT_SS_PARAM_FOCUS 設定為0。 這必須在呼叫 SQLExecute 或 SQLExecDirect 之前完成。 否則，系統將傳回 SQL_ERROR，並產生包含 SQLSTATE=HY024 和「屬性值 SQL_SOPT_SS_PARAM_FOCUS 無效 (在執行時間必須為零)」訊息的診斷記錄。  
   
-4.  將*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 設定為不含資料列的資料表值參數 SQL_DEFAULT_PARAM，或如果資料表值參數有資料列，則會在下一次呼叫 SQLExecute 或 SQLExecDirect 時傳送的資料列數目。 *StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 無法設定為數據表值參數的 SQL_Null_DATA，因為資料表值參數不可為 null （雖然資料表值參數組成資料行可為 null）。 如果這個值設定為不正確值，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR，而且會產生包含 SQLSTATE = HY090 和訊息「參數\<p> 的字串或緩衝區長度無效」的診斷記錄，其中 p 是參數編號。  
+4.  將*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 設定為不含資料列的資料表值參數 SQL_DEFAULT_PARAM，或如果資料表值參數有資料列，則會在下一次呼叫 SQLExecute 或 SQLExecDirect 時傳送的資料列數目。 *StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 無法設定為數據表值參數的 SQL_Null_DATA，因為資料表值參數不可為 null （雖然資料表值參數組成資料行可為 null）。 如果這個值設定為不正確值，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR，而且會產生包含 SQLSTATE = HY090 和訊息「參數 p> 的字串或緩衝區長度無效」的診斷記錄 \< ，其中 p 是參數編號。  
   
 5.  呼叫 SQLExecute 或 SQLExecDirect。  
   

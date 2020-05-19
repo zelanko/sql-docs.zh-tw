@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689069"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701947"
 ---
 # <a name="bcp_init"></a>bcp_init
   初始化大量複製作業。  
@@ -71,11 +71,11 @@ eDirection
  *eDirection*  
  這是複製的方向，DB_IN 或 DB_OUT。 DB_IN 表示從程式變數或使用者檔案複製到資料表。 DB_OUT 表示從資料庫資料表複製到使用者檔案。 您必須利用 DB_OUT 指定使用者檔案名稱。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 呼叫任何其他大量複製函數之前，請先呼叫**bcp_init** 。 **bcp_init**會針對工作站和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間的資料大量複製，執行必要的初始化。  
+ 呼叫任何其他大量複製函數之前，請先呼叫**bcp_init** 。 **bcp_init**會針對工作站和之間的資料大量複製，執行必要的初始化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  必須提供已啟用 ODBC 連接控制碼的**bcp_init**函式，以便搭配大量複製函數使用。 若要啟用控制碼，請在已配置但未連接的連接控制碼上，使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)搭配 SQL_COPT_SS_BCP 設定為 SQL_BCP_ON。 嘗試在已連接的控制代碼上指派屬性會導致錯誤。  
   
@@ -89,7 +89,7 @@ eDirection
   
 -   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料檔案對於資料庫資料表中的每個資料行都必須有資料。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複製時，來自資料庫資料表、檢視或 SELECT 結果集中所有資料行的資料都會複製到資料檔案中。  
   
--   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複製時， **bcp_exec**會根據資料庫資料表中資料行的序數位置來放置資料。  
+-   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從複製時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **bcp_exec**會根據資料庫資料表中資料行的序數位置來放置資料。  
   
 -   如果資料庫資料類型的長度是可變的（例如**Varbinary （22）**），或如果資料庫資料行可以包含 null 值，資料檔案中的資料就會以長度/null 指標作為前置詞。 指標的寬度會根據資料類型和大量複製的版本而改變。  
   
@@ -97,7 +97,7 @@ eDirection
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱大量匯入和[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)[中最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
- 如果沒有使用任何資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定記憶體中每個資料行之為的格式和位置，然後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](bcp-sendrow.md)將資料列複製到。  
+ 如果沒有使用任何資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定記憶體中每個資料行之為的格式和位置，然後使用 bcp_sendrow 將資料列複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](bcp-sendrow.md)  
   
 ## <a name="example"></a>範例  
  此範例顯示如何利用格式檔案使用 ODBC bcp_init 函數。  

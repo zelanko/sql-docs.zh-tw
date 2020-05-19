@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0f84dae66bee63d1e7646a6b4e7018d4f071390
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013045"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703185"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML Managed 類別執行 DiffGram
-  這個範例示範如何在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境中執行 DiffGram 檔案，以使用 Sqlxml Managed 類別（ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft data sqlxml）將資料更新套用到資料表。  
+  這個範例示範如何在 .NET Framework 環境中執行 DiffGram 檔案 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ，以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Sqlxml Managed 類別（Microsoft data sqlxml）將資料更新套用到資料表。  
   
  在此範例中，DiffGram 會更新客戶 ALFKI 的客戶資訊 (CompanyName 和 ContactName)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66013045"
 </ROOT>  
 ```  
   
- Before>區塊包含** \<Customer>** 元素（**diffgr： id = "Customer1"**）。 ** \< ** DataInstance>區塊包含具有相同**識別碼**的對應** \<客戶>** 元素。 ** \< **NewDataSet>中的** \<customer>** 元素也會指定**diffgr： hasChanges = "modified"**。 ** \< ** 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果未指定**diffgr： hasChanges**屬性，DiffGram 處理邏輯會忽略這個元素，而且不會執行任何更新。  
+ ** \< Before>** 區塊包含** \< Customer>** 元素（**diffgr： id = "Customer1"**）。 ** \< DataInstance>** 區塊包含具有相同**識別碼**的對應** \< 客戶>** 元素。** \< NewDataSet>** 中的** \< customer>** 元素也會指定**diffgr： hasChanges = "modified"**。 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果未指定**diffgr： hasChanges**屬性，DiffGram 處理邏輯會忽略這個元素，而且不會執行任何更新。  
   
  以下是 c # 教學課程應用程式的程式碼，它會示範如何使用 SQLXML Managed 類別來執行上述 DiffGram，並更新您也會在**tempdb**資料庫中建立的兩個數據表（使用者、Ord）。  
   

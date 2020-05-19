@@ -9,15 +9,15 @@ ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94d8388819d8d60c7b9b00881b9f05ef7d890a2e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493808"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693915"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 的開發人員參考資料
 

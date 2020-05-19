@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199985"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698859"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>資料表值參數的 ODBC SQL 類型
   資料表值參數的支援是由新的 ODBC SQL 類型，也就是 SQL_SS_TABLE 所提供。  
@@ -31,7 +31,7 @@ ms.locfileid: "63199985"
   
  如果在呼叫 SQLGetData 時 SQL_SS_TABLE *TargetType*參數，SQL_ERROR 會傳回，而且會產生含有 SQLSTATE = hy003 以及，「不正確應用程式緩衝區類型」的診斷記錄。  
   
- 資料表值參數資料行無法當做 SQL_SS_TABLE 類型繫結。 如果`SQLBindParameter`使用設定為 SQL_SS_TABLE 的*ParameterType*來呼叫，則會傳回 SQL_ERROR，並產生含有 SQLSTATE = HY004，「不正確 SQL 資料類型」的診斷記錄。 SQLSetDescField 和 SQLSetDescRec 也會發生這種情況。  
+ 資料表值參數資料行無法當做 SQL_SS_TABLE 類型繫結。 如果 `SQLBindParameter` 使用設定為 SQL_SS_TABLE 的*ParameterType*來呼叫，則會傳回 SQL_ERROR，並產生含有 SQLSTATE = HY004，「不正確 SQL 資料類型」的診斷記錄。 SQLSetDescField 和 SQLSetDescRec 也會發生這種情況。  
   
  資料表值參數資料行值與參數和結果資料行的資料轉換選項相同。  
   

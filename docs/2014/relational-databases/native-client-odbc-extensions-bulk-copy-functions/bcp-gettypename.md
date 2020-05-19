@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689022"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701945"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   傳回指定之 BCP 類型 Token 的 SQL 類型名稱。  
@@ -49,7 +49,7 @@ fIsMaxType
  *欄位*  
  指出要求的 Token 是否為最大值類型。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  包含對應到 BCP 類型之 SQL 類型名稱的字串。 如果指定無效的 BCP 類型，則傳回空字串。  
   
 ## <a name="remarks"></a>備註  
@@ -78,7 +78,7 @@ fIsMaxType
 |`SQLBINARY`|否|**二**|  
 |`SQLBIGVARBINARY`|否|**Varbinary**|  
 |`SQLVARBINARY`|否|**Varbinary**|  
-|`SQLIMAGE`|之前或之後|**影像**|  
+|`SQLIMAGE`|之前或之後|**映像**|  
 |`SQLINTN`|之前或之後|**int-null**|  
 |`SQLDATETIMN`|之前或之後|**datetime-null**|  
 |`SQLMONEYN`|之前或之後|**money-null**|  

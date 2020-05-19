@@ -15,15 +15,15 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursors, positioned updates
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb6ed6d38d4294884092ae5c038b5e83d23c6b97
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200530"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702010"
 ---
 # <a name="positioned-updates-odbc"></a>定位更新 (ODBC)
   ODBC 支援兩個方法於資料指標上執行定位更新：  

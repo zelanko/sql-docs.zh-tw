@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240267"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695683"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   在程式變數與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行之間建立繫結。  
@@ -75,7 +75,7 @@ DBORDINALidxServerCol);
  使用者的資料檔案中的欄位索引。  
   
  *eUserDataType*[in]  
- 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BCP_TYPE_XXX 格式的 Native Client 標頭檔（sqlncli）中，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當`eUserDataType`引數 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，從和到檔案的大量複製作業：  
+ 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有 BCP_TYPE_XXX 格式的 Native Client 標頭檔（sqlncli）中，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當 `eUserDataType` 引數 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，從和到檔案的大量複製作業：  
   
 -   如果來源資料行不是小數或數值，便會使用預設的有效位數和小數位數。  
   
@@ -87,13 +87,13 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  使用者檔案中此欄位之資料的最大長度 (以位元組為單位)，不包括任何長度指標或結束字元的長度。  
   
- 將`cbUserData`設定為 BCP_LENGTH_Null 表示資料檔案欄位中的所有值都是，或應設定為 Null。 將`cbUserData`設定為 BCP_LENGTH_VARIABLE 表示系統應該決定每個欄位的資料長度。 對於某些欄位而言，這可能表示長度/null 指標會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複本之資料前產生，或者表示該指標應該會在複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料中出現。  
+ 將設定 `cbUserData` 為 BCP_LENGTH_Null 表示資料檔案欄位中的所有值都是，或應設定為 Null。 將設定 `cbUserData` 為 BCP_LENGTH_VARIABLE 表示系統應該決定每個欄位的資料長度。 對於某些欄位而言，這可能表示長度/null 指標會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複本之資料前產生，或者表示該指標應該會在複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料中出現。  
   
- 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是字元和二進位資料類型`cbUserData` ，可以是 BCP_LENGTH_VARIABLE、BCP_LENGTH_Null、0或某個正數值。 如果`cbUserData` BCP_LENGTH_VARIABLE，則系統會使用長度指標（如果有的話）或結束字元順序來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果`cbUserData` BCP_LENGTH_VARIABLE，則資料類型為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元或二進位類型，如果長度指標和結束字元順序都未指定，系統就會傳回錯誤訊息。  
+ 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是字元和二進位資料類型， `cbUserData` 可以是 BCP_LENGTH_VARIABLE、BCP_LENGTH_Null、0或某個正數值。 如果 `cbUserData` BCP_LENGTH_VARIABLE，則系統會使用長度指標（如果有的話）或結束字元順序來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果 `cbUserData` BCP_LENGTH_VARIABLE，則資料類型為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元或二進位類型，如果長度指標和結束字元順序都未指定，系統就會傳回錯誤訊息。  
   
- 如果`cbUserData`為0或正值，則系統會使用`cbUserData`做為資料長度的最大值。 不過，如果除了正數`cbUserData`，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方法來決定資料長度。  
+ 如果 `cbUserData` 為0或正值，則系統會使用 `cbUserData` 做為資料長度的最大值。 不過，如果除了正數 `cbUserData` ，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方法來決定資料長度。  
   
- `cbUserData`值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則正`cbUserData`參數值代表每個字元的大小（以位元組為單位）。  
+ `cbUserData`值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則正 `cbUserData` 參數值代表每個字元的大小（以位元組為單位）。  
   
  *pbUserDataTerm*[size_is][in]  
  用於此欄位的結束字元順序。 此參數主要用於字元資料類型，因為其他所有類型都屬固定長度；如果是二進位資料，則需要一個長度指標，才能正確記錄出現的位元組數目。  

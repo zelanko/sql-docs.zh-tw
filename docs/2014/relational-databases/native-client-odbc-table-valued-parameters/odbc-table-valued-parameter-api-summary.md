@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, API support for table-valued parameters
 - table-valued parameters (ODBC), API support
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c4606fcc4bad9355753b11557a0a4be7706688a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a1e23399f91eace993f77dfc9a1ce7032bad222
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199863"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698632"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC 資料表值參數 API 摘要
   本主題列出加強支援資料表值參數的 ODBC 函數。  

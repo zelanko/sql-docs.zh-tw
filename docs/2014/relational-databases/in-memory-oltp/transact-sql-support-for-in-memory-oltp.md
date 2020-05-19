@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156221"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702216"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 Transact-SQL 支援
   您可以使用任何 Transact-SQL 查詢或 DML 陳述式 (SELECT、INSERT、UPDATE 或 DELETE)、特定陳述式及 SQL 模組 (例如預存程序、資料表值函數、純量函數、觸發程序和檢視表) 來存取記憶體最佳化的資料表。 如需詳細資訊，請參閱[使用已解讀的 Transact-sql 存取記憶體優化資料表](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。  
@@ -24,17 +24,17 @@ ms.locfileid: "63156221"
   
  建立與修改資料庫物件 (DDL 陳述式) 前，需修改下列陳述式：  
   
--   [ALTER Database File 和 Filegroup 選項 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) （請參閱`MEMORY_OPTIMIZED_DATA`）  
+-   [ALTER Database File 和 Filegroup 選項 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) （請參閱 `MEMORY_OPTIMIZED_DATA` ）  
   
--   [建立資料庫 &#40;SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) （請參閱`MEMORY_OPTIMIZED_DATA`）  
+-   [建立資料庫 &#40;SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) （請參閱 `MEMORY_OPTIMIZED_DATA` ）  
   
--   [CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql) `NATIVE_COMPILATION`（請參閱`SCHEMABINDING`、 `EXECUTE AS`、和） `BEGIN ATOMIC`  
+-   [CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql) （請參閱 `NATIVE_COMPILATION` 、、 `SCHEMABINDING` `EXECUTE AS` 和 `BEGIN ATOMIC` ）  
   
--   [CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql) （請`MEMORY_OPTIMIZED`參閱、 `DURABILITY` `BUCKET_COUNT` `INDEX`、、和） `HASH`  
+-   [CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql) （請參閱、、、 `MEMORY_OPTIMIZED` `DURABILITY` `BUCKET_COUNT` `INDEX` 和 `HASH` ）  
   
--   [CREATE TYPE &#40;transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql) `MEMORY_OPTIMIZED`（請參閱`BUCKET_COUNT`、 `INDEX`、和） `HASH`  
+-   [CREATE TYPE &#40;transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql) （請參閱 `MEMORY_OPTIMIZED` 、、 `BUCKET_COUNT` `INDEX` 和 `HASH` ）  
   
--   [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql) （請參閱） `NULL`  |  `NOT NULL`  
+-   [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql) （請參閱 `NULL`  |  `NOT NULL` ）  
   
  記憶體最佳化資料表支援 `PRIMARY KEY` 和 `NOT NULL` 條件約束。 如需執行不受支援之條件約束的詳細資訊，請參閱[遷移 Check 和 Foreign Key 條件約束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。  
   

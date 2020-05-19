@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f85df61f612cb91d39b15e6c91e2fb8495c2347
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753640"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701934"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
   此範例會示範如何使用大量複製函數，透過 `bcp_bind` 和 `bcp_sendrow` 從程式變數大量複製資料到 SQL Server  (為了簡化這個範例會移除錯誤檢查程式碼)。  
@@ -53,7 +53,7 @@ ms.locfileid: "62753640"
   
 8.  傳送所有資料列之後，請呼叫[bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成作業。  
   
- 您可以藉由呼叫[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)，在大量複製作業期間改變程式變數的位置和長度。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)來設定各種大量複製選項。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) ，將`text`區段`ntext`中的`image` 、和資料傳送至伺服器。  
+ 您可以藉由呼叫[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)，在大量複製作業期間改變程式變數的位置和長度。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)來設定各種大量複製選項。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) ，將 `text` `ntext` `image` 區段中的、和資料傳送至伺服器。  
   
 ## <a name="example"></a>範例  
  IA64 不支援此範例。  

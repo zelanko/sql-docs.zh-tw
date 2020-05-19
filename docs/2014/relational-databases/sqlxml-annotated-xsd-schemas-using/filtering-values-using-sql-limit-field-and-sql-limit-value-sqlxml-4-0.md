@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013812"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703586"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)
   您可以根據特定的限制值來限制從資料庫查詢傳回的資料列。 `sql:limit-field` 和 `sql:limit-value` 註解用於識別包含限制值的資料庫資料行，以及指定篩選所傳回之資料所使用的特定限制值。  
@@ -170,7 +170,7 @@ ms.locfileid: "66013812"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 這是對應的架構，其中訂單詳細資料上的 **「訂單」屬性會**對應到 orders 關聯中的「訂單」資料行。 針對此屬性傳回的值僅限於值為 2.0000000 e-001 （0.2）， `sql:limit-field`並使用和`sql:limit-value`注釋指定的**折扣**屬性。  
+ 這是對應的架構，其中訂單詳細資料上的 **「訂單」屬性會**對應到 orders 關聯中的「訂單」資料行。 針對此屬性傳回的值僅限於值為 2.0000000 e-001 （0.2），並使用和注釋指定的**折扣**屬性 `sql:limit-field` `sql:limit-value` 。  
   
  這是結構描述：  
   

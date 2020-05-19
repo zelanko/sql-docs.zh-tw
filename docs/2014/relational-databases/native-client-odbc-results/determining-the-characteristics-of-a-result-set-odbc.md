@@ -15,20 +15,20 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b93a0386c921a863e310e99164d654c7d84e357b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200210"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699335"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>決定結果集的特性 (ODBC)
   中繼資料是描述其他資料的資料。 例如，結果集中繼資料會描述結果集的特性，例如，結果集中的資料行數目、這些資料行的資料類型、其名稱、有效位數，以及 Null 屬性。  
   
- ODBC 會透過其目錄 API 函數提供中繼資料給應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會將許多 ODBC API 目錄函數實作為對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目錄程式的呼叫。  
+ ODBC 會透過其目錄 API 函數提供中繼資料給應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將許多 ODBC API 目錄函數實作為對應目錄程式的呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  應用程式需要大部分結果集作業的中繼資料。 例如，應用程式會使用資料行的資料類型來決定要繫結到該資料行的變數種類。 它會使用字元資料行的位元組長度來決定從該資料行顯示資料必須擁有的空格數目。 應用程式決定資料行之中繼資料的方式取決於應用程式的類型。  
   

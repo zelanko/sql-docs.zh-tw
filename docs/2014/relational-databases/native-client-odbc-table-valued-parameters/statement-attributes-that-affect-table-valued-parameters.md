@@ -10,20 +10,20 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor header field
 - table-valued parameters (ODBC), statement attribute
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9edfe0286492602025a2b63b116e35084626fab
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62626213"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698105"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>影響資料表值參數的陳述式屬性
   下表將說明描述項欄位中的屬性。  
   
-|屬性名稱|類型|描述|  
+|屬性名稱|類型|說明|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|如需 SQL_SS_PARAM_FOCUS 的詳細資訊，請參閱[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|如需 SQL_SS_NAME_SCOPE 的詳細資訊，請參閱[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  

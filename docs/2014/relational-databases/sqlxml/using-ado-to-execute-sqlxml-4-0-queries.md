@@ -13,15 +13,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c513c643ebae58c0670abd18e3da1736eabfdd3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251421"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702856"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
   在舊版的 SQLXML 中，可使用 SQLXML IIS 虛擬目錄和 SQLXML ISAPI 篩選來支援以 HTTP 為基礎的查詢執行。 在 SQLXML 4.0 中已經移除這些元件，因為自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始引進的原生 XML Web 服務提供了類似且重疊的功能。  
@@ -119,9 +119,9 @@ ms.locfileid: "75251421"
     3.  在目前已安裝的程式清單中，確認 [ **Microsoft SQL Server Native Client** ] 出現在清單中。  
   
         > [!NOTE]  
-        >  如果您需要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果您需要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
   
-2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果您需要驗證 MDAC 版本資訊，您可以使用 MDAC Component 檢查工具，這是從 Microsoft 網站免費下載提供[https://www.microsoft.com/](https://www.microsoft.com/)。 如需詳細資訊，請在 Microsoft 網站上搜尋「MDAC 元件檢查程式」。  
+2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果您需要驗證 MDAC 版本資訊，您可以使用 MDAC Component 檢查工具，這是從 Microsoft 網站免費下載提供 [https://www.microsoft.com/](https://www.microsoft.com/) 。 如需詳細資訊，請在 Microsoft 網站上搜尋「MDAC 元件檢查程式」。  
   
 3.  執行指令碼。  
   

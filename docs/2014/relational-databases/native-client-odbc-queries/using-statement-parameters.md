@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa2f1121be229c3679237542bc8cf3384ba425b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200241"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699871"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
   參數是 SQL 陳述式內的變數，可讓 ODBC 應用程式進行以下作業：  
@@ -32,7 +32,7 @@ ms.locfileid: "63200241"
   
 -   增強建構查詢準則時的使用者互動。  
   
--   管理**text**、 **Ntext**和**image**資料，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的 C 資料類型。  
+-   管理**text**、 **Ntext**和**image**資料，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的 C 資料類型。  
   
  例如， **part**資料表具有名為**PartID**、 **Description**和**Price**的資料行。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
   

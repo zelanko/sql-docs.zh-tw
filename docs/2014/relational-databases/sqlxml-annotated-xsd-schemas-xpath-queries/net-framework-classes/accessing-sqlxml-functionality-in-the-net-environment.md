@@ -12,20 +12,20 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], accessing SQLXML functionality
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a73b983b98e0474f443f3fbcf71b88ad692ac961
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012570"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703057"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>存取 .NET 環境中的 SQLXML 功能
   此範例顯示：  
   
--   如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Sqlxml Managed 類別（Microsoft 資料 sqlxml）在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境中存取 Microsoft。  
+-   如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Sqlxml Managed 類別（Microsoft 資料 sqlxml） [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 .NET Framework 環境中存取 Microsoft [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 -   在 .NET Framework 環境中產生的 DiffGrams 如何將資料更新套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   

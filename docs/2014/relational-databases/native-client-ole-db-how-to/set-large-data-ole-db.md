@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63218666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696193"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
   此範例會示範如何設定 BLOB 資料、建立資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值。 IA64 不支援此範例。  
@@ -33,7 +33,7 @@ ms.locfileid: "63218666"
   
 #### <a name="to-set-blob-data"></a>設定 BLOB 資料  
   
-1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的**dwFlag**元素設定為 STGM_READ，並將 iid 元素設定為`IID_ISequentialStream` （要公開的介面）。  
+1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的**dwFlag**元素設定為 STGM_READ，並將 iid 元素設定為 `IID_ISequentialStream` （要公開的介面）。  
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
