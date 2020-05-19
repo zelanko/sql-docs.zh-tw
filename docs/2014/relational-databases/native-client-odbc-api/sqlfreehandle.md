@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLFreeHandle function
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 197d3e1d36f8513821cec9630cade8f52681a43d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9345a02d446d8a4b7b82e9652444a08f68641f87
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154668"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706074"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
   在手動認可模式中，使用開啟的交易在語句控制碼上呼叫**SQLFreeHandle** ，會導致資料庫的暫止變更回復。 在語句控制碼上呼叫**SQLFreeHandle**一律會關閉任何開啟的資料指標，並捨棄暫止的結果，釋放與語句控制碼相關聯的所有資源。  

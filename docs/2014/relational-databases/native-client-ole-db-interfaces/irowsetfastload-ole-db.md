@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - IRowsetFastLoad interface
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209818"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707347"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
-  `IRowsetFastLoad`介面會公開以記憶體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為基礎之大量複製作業的支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者會使用介面，快速地將資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]加入現有的資料表。  
+  `IRowsetFastLoad`介面會公開以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體為基礎之大量複製作業的支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者會使用介面，快速地將資料加入現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
   
  如果您針對工作階段將 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE，您無法讀取之後從該工作階段傳回之資料列集中的資料。 當 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE 時，在工作階段上建立的所有資料列集都屬於 IRowsetFastLoad 類型。 IRowsetFastLoad 資料列集不支援資料列集擷取功能，因此無法從這些資料列集讀取資料。  
   

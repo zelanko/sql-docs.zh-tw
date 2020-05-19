@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783235"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706560"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
   不支援執行記憶體最佳化資料表上的 ALTER 作業。 這些作業包括變更 bucket_count、加入或移除索引，以及加入或移除資料行等等。 本主題提供如何更新記憶體最佳化之資料表的指導方針。  
@@ -63,13 +63,13 @@ ms.locfileid: "72783235"
     select @permissions  
     ```  
   
-4.  建立資料表的副本，並且從原始資料表將資料複製到資料表副本。 您可以使用下列[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>來建立複本。  
+4.  建立資料表的副本，並且從原始資料表將資料複製到資料表副本。 您可以使用下列1來建立複本 [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup> </sup>。  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     如果有足夠的可用記憶體， `T_copy`可以是記憶體優化資料表，讓資料複製更快。<sup>2</sup>  
+     如果有足夠的可用記憶體，可以 `T_copy` 是記憶體優化資料表，讓資料複製更快。<sup>2</sup>  
   
 5.  卸除參考原始資料表的結構描述繫結物件。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783235"
   
 10. 在 `T` 上啟動工作負載。  
   
- <sup>1</sup>請注意`T_copy` ，在此範例中，會保存到磁片。 如果有 `T` 的備份可用，`T_copy` 可以是暫存或非持久資料表。  
+ <sup>1</sup>請注意， `T_copy` 在此範例中，會保存到磁片。 如果有 `T` 的備份可用，`T_copy` 可以是暫存或非持久資料表。  
   
- <sup>2</sup>必須有足夠的記憶體可`T_copy`供。 記憶體不會在 `DROP TABLE` 上立即釋放。 如果 `T_copy` 為記憶體最佳化，則必須有足夠的記憶體可供兩個額外的 `T` 副本使用。 如果 `T_copy` 是以磁碟為基礎的資料表，就只需要足夠的記憶體以進行額外一次 `T` 複製，因為卸除舊版 `T` 之後，需讓記憶體回收行程趕上進度。  
+ <sup>2</sup>必須有足夠的記憶體可供 `T_copy` 。 記憶體不會在 `DROP TABLE` 上立即釋放。 如果 `T_copy` 為記憶體最佳化，則必須有足夠的記憶體可供兩個額外的 `T` 副本使用。 如果 `T_copy` 是以磁碟為基礎的資料表，就只需要足夠的記憶體以進行額外一次 `T` 複製，因為卸除舊版 `T` 之後，需讓記憶體回收行程趕上進度。  
   
 ## <a name="changing-schema-powershell"></a>變更結構描述 (PowerShell)  
  下列 PowerShell 指令碼會藉由撰寫資料庫和相關權限的指令碼，以準備並產生結構描述變更。  
@@ -223,7 +223,7 @@ Write-Host ""
   
  下列 PowerShell 指令碼會執行前述範例中所撰寫的結構描述變更指令碼。 此指令碼會採用資料表做為引數，並執行為該資料表與相關預存程序產生的結構描述變更指令碼。  
   
- 使用方式： execute_schema_change. ps1 *server_name * *`schema_name`db_name table_name*  
+ 使用方式： execute_schema_change. ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體優化資料表](memory-optimized-tables.md)  
+ [記憶體最佳化資料表](memory-optimized-tables.md)  

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088510"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706858"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server 回溯相容性
-  「回溯相容性」一節中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主題描述版本之間[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]行為上的變更。  
+  「回溯相容性」一節中的主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本之間行為上的變更 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  本主題範圍所包含的功能包括資料可程式性、介面區組態工具、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務和其他大幅的功能變更。  
   

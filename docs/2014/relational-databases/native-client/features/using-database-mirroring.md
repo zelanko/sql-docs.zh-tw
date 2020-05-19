@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f45aebe59892704e49a2a6d1cd45e5af4ae471
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225333"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707200"
 ---
 # <a name="using-database-mirroring"></a>使用資料庫鏡像
     
@@ -58,14 +58,14 @@ ms.locfileid: "63225333"
 >  此外，伺服器名稱不區分大小寫，但是資料庫名稱會區分大小寫。 因此，您應該確認您在 DSN 和連接字串中使用相同的大小寫。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者透過連接和連接字串屬性支援資料庫鏡像。 SSPROP_INIT_FAILOVERPARTNER 屬性已加入到 DBPROPSET_SQLSERVERDBINIT 屬性集，而 `FailoverPartner` 關鍵字是 DBPROP_INIT_PROVIDERSTRING 的新連接字串屬性。 如需詳細資訊，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者透過連接和連接字串屬性支援資料庫鏡像。 SSPROP_INIT_FAILOVERPARTNER 屬性已加入到 DBPROPSET_SQLSERVERDBINIT 屬性集，而 `FailoverPartner` 關鍵字是 DBPROP_INIT_PROVIDERSTRING 的新連接字串屬性。 如需詳細資訊，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- 只要載入提供者，就會維持容錯移轉快取，直到呼叫**CoUninitialize** ，或只要應用程式擁有 Native Client OLE DB 提供者（例如資料來源物件）所[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理之某些物件的參考即可。  
+ 只要載入提供者，就會維持容錯移轉快取，直到呼叫**CoUninitialize** ，或只要應用程式擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者（例如資料來源物件）所管理之某些物件的參考即可。  
   
- 如需[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者資料庫鏡像支援的詳細資訊，請參閱[初始化和授權屬性](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者資料庫鏡像支援的詳細資訊，請參閱[初始化和授權屬性](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式透過連接和連接字串屬性支援資料庫鏡像。 具體而言，已加入 SQL_COPT_SS_FAILOVER_PARTNER 屬性以搭配[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)函數使用;和`Failover_Partner`關鍵字已加入為新的連接字串屬性。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式透過連接和連接字串屬性支援資料庫鏡像。 具體而言，已加入 SQL_COPT_SS_FAILOVER_PARTNER 屬性以搭配[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)函數使用;和 `Failover_Partner` 關鍵字已加入為新的連接字串屬性。  
   
  只要應用程式至少有配置一個環境控制代碼，就可以維持容錯移轉快取。 相反地，取消配置最後一個環境控制代碼時，容錯移轉快取就會遺失。  
   

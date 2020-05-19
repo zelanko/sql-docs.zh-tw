@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072366"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706541"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
-  中[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的交易效能收集器可協助您評估記憶體內部 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  
+  中的交易效能收集器 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 可協助您評估記憶體內部 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  
   
  本主題將討論如何執行以下工作：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63072366"
     > [!IMPORTANT]  
     >  資料庫系統的效能取決於各種不同的因素，並不是所有因素都可由交易效能收集器來觀察和測量。 因此，交易效能分析報表不保證實際的效能增益將會符合預測 (如果進行了任何預測)。  
   
- 當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]時，當您選取 [**管理工具-基本**] 或 [**管理工具-Advanced** ] 時，就會安裝交易效能收集器和產生交易效能分析報表的功能。  
+ 當您安裝時，當您選取 [**管理工具-基本**] 或 [**管理工具-Advanced** ] 時，就會安裝交易效能收集器和產生交易效能分析報表的功能 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 。  
   
 ## <a name="best-practices"></a>最佳做法  
  建議的工作流程如以下流程圖所示。 黃色節點代表選用程序：  
@@ -63,7 +63,7 @@ ms.locfileid: "63072366"
   
  交易效能收集器每隔 15 分鐘擷取一次資料。 為了取得實用的結果，請執行交易效能收集器至少一個小時。 為了取得最佳結果，請讓交易效能收集器有充裕的執行時間，以擷取主要案例所需的資料。 唯有在您完成資料的收集之後，再產生交易效能分析報表。  
   
- 將交易效能收集器設定為在生產環境的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行，並收集開發 (測試) 環境中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的資料，以確保負擔最低。 如需如何將資料儲存在遠端[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上的管理資料倉儲資料庫中的詳細資訊，請參閱在[遠端 SQL Server 實例上設定資料收集](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)。  
+ 將交易效能收集器設定為在生產環境的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行，並收集開發 (測試) 環境中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的資料，以確保負擔最低。 如需如何將資料儲存在遠端實例上的管理資料倉儲資料庫中的詳細資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請參閱在[遠端 SQL Server 實例上設定資料收集](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)。  
   
 ## <a name="performance-impacts"></a>效能影響  
  交易效能收集器是由兩個資料收集組所組成：  
@@ -102,7 +102,7 @@ ms.locfileid: "63072366"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>在本機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上設定資料收集  
  資料收集需要啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent。 您只需要在伺服器上設定一個資料收集器。  
   
- 您可以在 SQL Server 2012 或更新版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上設定資料收集器。  
+ 您可以在 SQL Server 2012 或更新版本的上設定資料收集器 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  若要設定資料收集，以便上傳至相同執行個體上的管理資料倉儲資料庫：  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63072366"
   
 6.  驗證選取項目。 按 [**上一步**] 修改設定。 完成時按一下 **[完成]** 。  
   
-###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>設定遠端[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上的資料收集  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>設定遠端實例上的資料收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  您必須在收集資料所在的執行個體上啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 才能進行資料收集。  
   
- 您可以在 SQL Server 2012 或更新版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上設定資料收集器。  
+ 您可以在 SQL Server 2012 或更新版本的上設定資料收集器 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 如需如何建立認證的相關資訊，請參閱[如何：建立認證（SQL Server Management Studio）](../security/authentication-access/create-a-credential.md) 。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "63072366"
   
 6.  在標示 [**選取您要啟用的資料收集器集合**] 的方塊中，選取 [**交易效能收集組**]。  
   
-7.  選取 [**使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式 proxy 進行遠端上傳**]。  
+7.  選取 [**使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式 proxy 進行遠端上傳**]。  
   
 8.  完成時按 **[下一步]**。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63072366"
   
     3.  按一下 [**新增**]，然後選取 [ **Msdb**角色]。  
   
-    4.  選取`dc_proxy`並按一下 **[確定]**。 然後再按一下 [確定]****。  
+    4.  選取 `dc_proxy` 並按一下 **[確定]**。 然後再按一下 [確定]****。  
   
      選取正確的 proxy 之後，按 **[下一步]**。  
   

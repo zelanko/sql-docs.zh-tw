@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2521810771713833a10f7e01f1e83480c3050369
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137059"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706764"
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
   您可以使用下列工具來建立及管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件工作階段：  
@@ -38,7 +38,7 @@ ms.locfileid: "63137059"
 ## <a name="ddl-statements"></a>DDL 陳述式  
  使用下列 DDL 陳述式，以建立、變更和卸除「擴充事件」工作階段。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)|建立「擴充事件」工作階段物件，此物件可識別事件的來源、事件工作階段目標及事件工作階段參數。|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)|啟動或停止事件工作階段，或是變更事件工作階段組態。|  
@@ -47,7 +47,7 @@ ms.locfileid: "63137059"
 ## <a name="catalog-views"></a>目錄檢視  
  使用下列目錄檢視，以取得當您建立事件工作階段時所建立的中繼資料。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)|列出所有事件工作階段定義。|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql)|針對事件工作階段之每個事件的每個動作傳回資料列。|  
@@ -61,7 +61,7 @@ ms.locfileid: "63137059"
 > [!NOTE]  
 >  這些檢視要等到工作階段啟動之後，才會包含工作階段資料。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql)|傳回有關工作階段發送器集區的資訊。|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)|針對事件封裝所公開的每個物件，各傳回一個資料列。|  
@@ -77,7 +77,7 @@ ms.locfileid: "63137059"
 ## <a name="system-tables"></a>系統資料表  
  使用下列系統資料表，取得有關 SQL 追蹤事件類別與資料行之「擴充事件」對等項目的資訊。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|針對對應至 SQL 追蹤事件類別的每個「擴充事件」事件包含一個資料列。|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|針對對應到 SQL 追蹤資料行識別碼的每個擴充事件動作包含一個資料列。|  

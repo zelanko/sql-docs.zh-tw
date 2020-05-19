@@ -14,18 +14,18 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 013a8e8ab09b192a2ff7a04a9d7ddc5be1395636
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206768"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82710742"
 ---
 # <a name="batches-of-statements"></a>陳述式的批次
-  語句的批次包含兩個或多個語句，以分號（;)，並內建于傳遞至**SQLExecDirect**或[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)的單一字串。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 例如：  
+  語句的批次 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 包含兩個或多個語句，以分號（;)，並內建于傳遞至**SQLExecDirect**或[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)的單一字串。 例如：  
   
 ```  
 SQLExecDirect(hstmt,   

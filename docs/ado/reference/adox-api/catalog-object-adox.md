@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f13533ce9d14a650e409507e646eb536bad14e4d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967050"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763939"
 ---
 # <a name="catalog-object-adox"></a>Catalog 物件 (ADOX)
 包含描述資料來源之架構目錄的集合（[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)、[視圖](../../../ado/reference/adox-api/views-collection-adox.md)、[使用者](../../../ado/reference/adox-api/users-collection-adox.md)、[群組](../../../ado/reference/adox-api/groups-collection-adox.md)和[程式](../../../ado/reference/adox-api/procedures-collection-adox.md)）。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f0ba7f39d3c95fe992d6603707b2a67d6726b7e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637606"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717114"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
   這個主題描述如何產生 XML 執行個體。  
@@ -40,7 +40,7 @@ ms.locfileid: "62637606"
 -   使用大量載入。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>類型轉換字串和二進位執行個體  
- 您可以藉由轉換（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CAST）或將字串轉換（轉換）為`xml`資料類型，將任何字串資料類型（例如 [**n**] [**var**] `xml` **char**、 **[n] text**、 **Varbinary**及**image**）剖析成資料類型。 將會檢查不具類型的 XML 以確認它的格式正確。 如果有與`xml`類型相關聯的架構，也會執行驗證。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](compare-typed-xml-to-untyped-xml.md)。  
+ 您可以藉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由轉換（CAST）或將字串轉換（轉換）為資料類型，將任何字串資料類型（例如 [**n**] [**var**]**char**、 **[n] text**、 **Varbinary**及**image**）剖析成 `xml` 資料類型 `xml` 。 將會檢查不具類型的 XML 以確認它的格式正確。 如果有與類型相關聯的架構 `xml` ，也會執行驗證。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](compare-typed-xml-to-untyped-xml.md)。  
   
  XML 文件可以使用不同的編碼 (例如，UTF-8、UTF-16、windows-1252) 加以編碼。 以下是字串與二進位來源類型如何與 XML 文件編碼互動以及剖析器作用方式的規則。  
   
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
  如果未使用 *style* 參數或是將其值設為 0，在轉換 xml DT 執行個體時，將不會保留不重要的空白。 如需如何使用 CONVERT 運算子以及將字串資料轉換成 xmlDT 執行個體時其 *style* 參數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
 ### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例：將字串值轉換成具類型的 xml 並將它指派給資料行  
- 下列範例會將包含 XML 片段的字串變數轉換成`xml`資料類型，然後將它儲存在`xml`類型資料行中：  
+ 下列範例會將包含 XML 片段的字串變數轉換成 `xml` 資料類型，然後將它儲存在類型資料 `xml` 行中：  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -103,13 +103,13 @@ DECLARE  @s varchar(100)
 SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'   
 ```  
   
- 下列插入作業會將字串隱含地轉換為`xml`類型：  
+ 下列插入作業會將字串隱含地轉換為 `xml` 類型：  
   
 ```  
 INSERT INTO T VALUES (3, @s)   
 ```  
   
- 您可以明確地將字串轉換為`xml`類型（）：  
+ 您可以明確地將字串轉換為類型（） `xml` ：  
   
 ```  
 INSERT INTO T VALUES (3, cast (@s as xml))  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例：將字串轉換成具類型的 xml 並將它指派給變數  
- 在下列範例中，會將字串轉換成`xml`類型，並將其指派給`xml`資料類型的變數：  
+ 在下列範例中，會將字串轉換成 `xml` 類型，並將其指派給 `xml` 資料類型的變數：  
   
 ```  
 declare @x xml  
@@ -144,9 +144,9 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- SELECT 語句會傳回文字 XML 片段，然後在指派至`xml`資料類型變數期間進行剖析。  
+ SELECT 語句會傳回文字 XML 片段，然後在指派至 `xml` 資料類型變數期間進行剖析。  
   
- 您也可以在 FOR XML 子句中使用[type](type-directive-in-for-xml-queries.md)指示詞，以直接傳回 for xml 查詢結果作為`xml`類型：  
+ 您也可以在 FOR XML 子句中使用[type](type-directive-in-for-xml-queries.md)指示詞，以直接傳回 for xml 查詢結果作為 `xml` 類型：  
   
 ```  
 Declare @xmlDoc xml  
@@ -163,7 +163,7 @@ SELECT @xmlDoc
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
 ```  
   
- 在下列範例中，FOR XML `xml`查詢的具類型結果會插入至`xml`類型資料行：  
+ 在下列範例中， `xml` FOR XML 查詢的具類型結果會插入至類型資料 `xml` 行：  
   
 ```  
 CREATE TABLE T1 (c1 int, c2 xml)  
@@ -183,7 +183,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `xml` 資料類型執行個體傳回用戶端，作為不同伺服器建構的結果 (例如使用 TYPE 指示詞的 FOR XML 查詢)，或者使用 `xml` 資料類型從 SQL 資料行、變數和輸出參數傳回 XML。 在用戶端應用程式的程式碼中，ADO.NET 提供者會要求從伺服器以二進位編碼傳送這項 `xml` 資料類型資訊。 但若您使用的 FOR XML 不含 TYPE 指示詞，XML 資料就會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。  
   
 ## <a name="using-constant-assignments"></a>使用常數指派  
- 在預期`xml`資料類型的實例時，可以使用字串常數。 這與使用 CAST 將字串隱含轉換成 XML 是相同的。 例如：  
+ 在預期資料類型的實例時，可以使用字串常數 `xml` 。 這與使用 CAST 將字串隱含轉換成 XML 是相同的。 例如：  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -192,9 +192,9 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- 先前的範例會將字串隱含地轉換`xml`成資料類型，並將它`xml`指派給類型變數。  
+ 先前的範例會將字串隱含地轉換成 `xml` 資料類型，並將它指派給 `xml` 類型變數。  
   
- 下列範例會將常數位串插入`xml`型別資料行：  
+ 下列範例會將常數位串插入型別資料 `xml` 行：  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -205,7 +205,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  對於具類型的 XML，將會針對指定的結構描述驗證 XML。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](compare-typed-xml-to-untyped-xml.md)。  
   
 ## <a name="using-bulk-load"></a>使用大量載入  
- 增強的 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) 功能，可讓您在資料庫中大量載入 XML 文件。 您可以從檔案將 XML 實例大量載入資料庫`xml`中的類型資料行。 如需實用範例，請參閱[大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 如需有關載入 XML 文件的詳細資訊，請參閱 [載入 XML 資料](load-xml-data.md)。  
+ 增強的 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) 功能，可讓您在資料庫中大量載入 XML 文件。 您可以從檔案將 XML 實例大量載入 `xml` 資料庫中的類型資料行。 如需實用範例，請參閱[大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 如需有關載入 XML 文件的詳細資訊，請參閱 [載入 XML 資料](load-xml-data.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

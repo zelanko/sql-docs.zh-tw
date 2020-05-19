@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112227"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706974"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>在 SQL Server 2014 中停止 SQL Server 的功能
   本主題描述升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後無法再使用的功能。  
@@ -40,7 +40,7 @@ ms.locfileid: "79112227"
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 中停止的功能  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>已停止 SQL Server Express 安裝中的 SQL-DMO  
- 已經從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中移除適用於 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 的 SQL-DMO。 我們建議您盡快修改目前仍使用這項功能的應用程式。 如果您必須支援 SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express，請從[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 下載中心](https://www.microsoft.com/download/)的 Feature pack 安裝回溯相容性元件。 請在新的開發工作中使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)。  
+ 已經從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中移除適用於 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 的 SQL-DMO。 我們建議您盡快修改目前仍使用這項功能的應用程式。 如果您必須支援 SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express，請從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 下載中心](https://www.microsoft.com/download/)的 Feature Pack 安裝回溯相容性元件。 請在新的開發工作中使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)。  
   
 ### <a name="discontinued-option-for-web-assistant"></a>已停止用於 Web 助理的選項  
  啟用 Web 助理的 `sp_configure` 選項已經從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中移除了。 我們建議您改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 。  
@@ -78,7 +78,7 @@ ms.locfileid: "79112227"
   
  <sup>1</sup>這些參數只有在安裝時才有效。  
   
- <sup>2</sup>從[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]開始，指定/Action = EditionUpgrade，在不使用原始安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]媒體的情況下，隨時將現有的版本升級至不同的版本。 如需有關支援之版本與版別升級的詳細資訊，請參閱＜ [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。  
+ <sup>2</sup>從開始 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ，指定/Action = EditionUpgrade，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不使用原始安裝媒體的情況下，隨時將現有的版本升級至不同的版本。 如需有關支援之版本與版別升級的詳細資訊，請參閱＜ [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。  
   
  如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   

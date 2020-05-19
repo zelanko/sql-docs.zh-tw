@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5eadf89cb6516dcc437b727843cb861b7c04a9c1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205847"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707147"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>尋找其他 SQL Server Native Client 資訊
   如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 以及其他類型之資料存取程式設計的詳細資訊，請參閱下列線上資源：  
@@ -34,7 +34,7 @@ ms.locfileid: "63205847"
   
  Window DAC SDK 包含 ActiveX Data Objects (ADO)、OLE DB 和開放式資料庫連接 (Open Database Connectivity，ODBC) 的文件集。  
   
- 您可以藉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由搜尋[Microsoft 支援服務](https://support.microsoft.com)來尋找 Native Client 的其他資訊。  
+ 您可以藉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由搜尋[Microsoft 支援服務](https://support.microsoft.com)來尋找 Native Client 的其他資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](sql-server-native-client-programming.md)  

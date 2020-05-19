@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112249"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706573"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  
@@ -222,7 +222,7 @@ END
   
  原生編譯預存程序的引動過程描述如下：  
   
-1.  使用者發出`EXEC` *usp_myproc*語句。  
+1.  使用者發出 `EXEC` *usp_myproc*語句。  
   
 2.  剖析器會擷取名稱和預存程序參數。  
   
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會維護記憶體最佳化資料表的資料行層級統計資料。 此外，它也會維護資料表的實際資料列計數。 但和磁碟資料表不同，記憶體最佳化資料表的統計資料不會自動更新。 因此，統計資料在資料表中進行過重大變更之後，需要手動更新。 如需詳細資訊，請參閱 [記憶體最佳化資料表的統計資料](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體優化資料表](memory-optimized-tables.md)  
+ [記憶體最佳化資料表](memory-optimized-tables.md)  
   
   

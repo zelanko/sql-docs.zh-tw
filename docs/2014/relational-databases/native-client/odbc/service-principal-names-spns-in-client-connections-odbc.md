@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f9639b6fa4bd99b8f4ac17803b5b20789d43efd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144400"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707057"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>用戶端連接 (ODBC) 中的服務主要名稱 (SPN)
   本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 ODBC 屬性和函數。 如需有關用戶端應用程式中 Spn 的詳細資訊，請參閱[用戶端連線中的服務主體名稱 &#40;spn&#41; 支援](../features/service-principal-name-spn-support-in-client-connections.md)和[取得相互 Kerberos 驗證](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md)。  

@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193303"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706056"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**是用來在不系結資料行值的情況下，抓取結果集資料。 可以在相同資料行上連續呼叫**SQLGetData** ，以從具有**text**、 **Ntext**或**image**資料類型的資料行中取出大量資料。  
   
- 不會要求應用程式繫結變數來擷取結果集資料。 您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**，從 Native Client ODBC 驅動程式中取出任何資料行的資料。  
+ 不會要求應用程式繫結變數來擷取結果集資料。 您可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**SQLGetData**，從 Native Client ODBC 驅動程式中取出任何資料行的資料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式不支援使用**SQLGetData**以隨機的資料行順序來取得資料。 所有使用**SQLGetData**處理的未系結資料行，都必須具有比結果集中系結資料行更高的資料行序數。 應用程式必須處理從最低未繫結序數資料行值到最高值的資料。 嘗試從編號序數較低的資料行擷取資料將會產生錯誤。 如果應用程式使用伺服器資料指標來報告結果集資料列，則應用程式可以提取目前的資料列，然後再提取資料行的值。 如果語句是在預設的唯讀、順向資料指標上執行，您必須重新執行語句來備份**SQLGetData**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式不支援使用**SQLGetData**以隨機的資料行順序來取得資料。 所有使用**SQLGetData**處理的未系結資料行，都必須具有比結果集中系結資料行更高的資料行序數。 應用程式必須處理從最低未繫結序數資料行值到最高值的資料。 嘗試從編號序數較低的資料行擷取資料將會產生錯誤。 如果應用程式使用伺服器資料指標來報告結果集資料列，則應用程式可以提取目前的資料列，然後再提取資料行的值。 如果語句是在預設的唯讀、順向資料指標上執行，您必須重新執行語句來備份**SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會使用**SQLGetData**，正確地報告**text**、 **Ntext**和**image**資料的長度。 應用程式可以充分利用*StrLen_or_IndPtr*參數 return 來快速取出長資料。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會使用**SQLGetData**，正確地報告**text**、 **Ntext**和**image**資料的長度。 應用程式可以充分利用*StrLen_or_IndPtr*參數 return 來快速取出長資料。  
   
 > [!NOTE]  
 >  對於大數數值型別， *StrLen_or_IndPtr*將會在資料截斷的情況下傳回 SQL_NO_TOTAL。  

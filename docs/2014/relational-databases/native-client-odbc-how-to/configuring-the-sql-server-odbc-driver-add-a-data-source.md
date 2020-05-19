@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bfaa4ba101a31f6834595e2b2241a7ea6e15b36
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126072"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82714001"
 ---
 # <a name="add-a-data-source-odbc"></a>加入資料來源 (ODBC)
   您可以使用 ODBC 管理員，以程式設計方式（藉由使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)）或藉由建立檔案來加入資料來源。  

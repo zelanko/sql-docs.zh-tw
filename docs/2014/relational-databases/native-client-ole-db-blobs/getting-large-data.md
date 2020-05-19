@@ -12,18 +12,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bd6af4f85fb8a39f2206bf6c3b9f3099a4af0b2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195233"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708564"
 ---
 # <a name="getting-large-data"></a>取得大型資料
-  一般而言，取用者應該隔離的程式碼會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從處理不透過**ISequentialStream**介面指標參考之資料的其他程式碼，建立原生用戶端 OLE DB 提供者儲存物件。  
+  一般而言，取用者應該隔離的程式碼會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從處理不透過**ISequentialStream**介面指標參考之資料的其他程式碼，建立原生用戶端 OLE DB 提供者儲存物件。  
   
  本主題會參考可供下列函數使用的功能：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63195233"
   
  如果 DBPROP_ACCESSORDER 屬性（在資料列集屬性群組中）設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的其中一個值，取用者應該只在呼叫**GetNextRows**方法時提取單一資料列，因為 BLOB 資料不會經過緩衝處理。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取得大型資料，直到取用者要求這麼做為止。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者不會從取得大型資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到取用者要求這麼做為止。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
   
 ## <a name="example"></a>範例  
  此範例會從單一資料行擷取大型資料值：  

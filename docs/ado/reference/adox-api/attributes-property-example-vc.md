@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 794fcee913b41d98c0703244df86eb90efe3f740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b1d3da3d5228345f6f6ae995718b641ecaead89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918825"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763979"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes 屬性範例 (VC++)
 這個範例示範資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)屬性。 將它設定為**adColNullable** ，可讓使用者將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)[欄位](../../../ado/reference/ado-api/field-object.md)的值設定為空字串。 在此情況下，使用者可以區分不知道資料的記錄，以及資料不適用的記錄。  

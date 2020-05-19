@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c76aef87e8d9ed968552b7a46e496472dfaf32a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157944"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706504"
 ---
 # <a name="implementing-a-case-statement"></a>實作 CASE 陳述式
   原生編譯的預存程序不支援 Case 陳述式。 下列範例示範在原生編譯的預存程序中實作 Case 陳述式功能的方法。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - objects [ADOX]
 - ADOX, objects
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2969927d6221f45bff027b97f6e6468ab63baa86
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928507"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764109"
 ---
 # <a name="adox-objects"></a>ADOX 物件
 ## <a name="adox-object-summary"></a>ADOX 物件摘要  
@@ -27,11 +27,11 @@ ms.locfileid: "67928507"
 |------------|-----------------|  
 |[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)|包含描述資料來源之架構目錄的集合。|  
 |[資料行](../../../ado/reference/adox-api/column-object-adox.md)|表示資料表、索引或索引鍵中的資料行。|  
-|[群組](../../../ado/reference/adox-api/group-object-adox.md)|代表在安全資料庫中具有存取權限的群組帳戶。|  
+|[小組](../../../ado/reference/adox-api/group-object-adox.md)|代表在安全資料庫中具有存取權限的群組帳戶。|  
 |[索引](../../../ado/reference/adox-api/index-object-adox.md)|表示資料庫資料表中的索引。|  
 |[關鍵](../../../ado/reference/adox-api/key-object-adox.md)|表示資料庫資料表中的主要、外或唯一索引鍵欄位。|  
 |[步](../../../ado/reference/adox-api/procedure-object-adox.md)|表示預存程式。|  
-|[目錄](../../../ado/reference/adox-api/table-object-adox.md)|表示資料庫資料表，包括資料行、索引和索引鍵。|  
+|[資料表](../../../ado/reference/adox-api/table-object-adox.md)|表示資料庫資料表，包括資料行、索引和索引鍵。|  
 |[使用者](../../../ado/reference/adox-api/user-object-adox.md)|代表在受保護資料庫中具有存取權限的使用者帳戶。|  
 |[檢視](../../../ado/reference/adox-api/view-object-adox.md)|表示一組已篩選的記錄或虛擬資料表。|  
   

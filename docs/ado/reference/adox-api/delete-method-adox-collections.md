@@ -28,14 +28,14 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c3e398a48875f365dbe2fdc0b6540302d70f1da9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966439"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763899"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法 (ADOX Collections)
 從集合中移除物件。  

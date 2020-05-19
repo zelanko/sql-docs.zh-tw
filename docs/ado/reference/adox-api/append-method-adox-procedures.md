@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967288"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764069"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法 (ADOX Procedures)
 將新的[Procedure](../../../ado/reference/adox-api/procedure-object-adox.md)物件加入至[程式](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  

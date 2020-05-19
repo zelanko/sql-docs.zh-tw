@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLExecute function
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ad659cfb929ac5a489b069db0b6a5f2b8abdae7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac50a5abd1f7e87017c6f0c559887b1796032328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067494"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706129"
 ---
 # <a name="sqlexecute"></a>SQLExecute
   如果 SQL_SOPT_SS_PARAM_FOCUS 的語句屬性未設定為0，則 SQLExecute 會傳回 SQL_ERROR 並產生含有 SQLSTATE = HY024 的診斷記錄，以及訊息「不正確屬性值，SQL_SOPT_SS_PARAM_FOCUS （在執行時間必須為零）」。 如需 SQL_SOPT_SS_PARAM_FOCUS 的詳細資訊，請參閱[SQLSetStmtAttr](sqlsetstmtattr.md)。  

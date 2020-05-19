@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6996f3a0a3ad9f2ffa727a6cbd7b48d3fbf32777
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967308"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764059"
 ---
 # <a name="append-method-adox-indexes"></a>Append 方法 (ADOX Indexes)
 將新的[索引](../../../ado/reference/adox-api/index-object-adox.md)物件加入至[索引](../../../ado/reference/adox-api/indexes-collection-adox.md)集合。  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Indexes Append method [ADOX], VC++ example
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d9c8cf7e99c05b7213d3731e6aecb97fc46d203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 77624629aeb68381729f891f74f57a980f71a589
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929491"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763869"
 ---
 # <a name="indexes-append-method-example-vc"></a>Indexes Append 方法範例 (VC++)
 下列程式碼示範如何建立新的索引。 索引位於資料表中的兩個數據行上。  

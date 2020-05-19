@@ -12,15 +12,15 @@ helpviewer_keywords:
 - product specifications [SQL Server]
 - configuration options [SQL Server], product specifications
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 418827b496cc7e35f11b893ee2c50b96571c419d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772287"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706876"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 產品規格
   下表中的主題會提供這個版本的產品規格詳細資料：  
@@ -42,7 +42,7 @@ ms.technology:
 This HTML comment can be erased, if you like.
 -->
 
- [SQL Server 版本的計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [依 SQL Server 版本的計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
  每一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本所支援的最大處理器數目。  
   
  [SQL Server 2014 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)  

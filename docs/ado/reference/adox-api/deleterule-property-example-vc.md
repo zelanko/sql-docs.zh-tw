@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6dc6d3284018aecd247baad6e66aaa332b721459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb8100365b064ef5403788ec072595f7b3f8e86e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76911092"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763909"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 屬性範例 (VC++)
 這個範例會示範[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件的[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)屬性。 此程式碼會附加新的[資料表](../../../ado/reference/adox-api/table-object-adox.md)，然後定義新的主要金鑰，並將**DeleteRule**設定為**adRICascade**。  

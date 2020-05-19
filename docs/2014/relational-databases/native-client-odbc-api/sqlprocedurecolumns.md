@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046710"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705876"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns`傳回一個資料列，報告所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程式的傳回值屬性。  
+  `SQLProcedureColumns`傳回一個資料列，報告所有預存程式的傳回值屬性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  `SQLProcedureColumns`傳回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或*ColumnName*參數值是否存在。 當這些參數中使用了不正確值時， **SQLFetch**會傳回 SQL_NO_DATA。  
   
  `SQLProcedureColumns` 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 `SQLProcedureColumns` 時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
- 下表列出結果集所傳回的資料行，以及如何透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式擴充以處理**udt**和**xml**資料類型：  
+ 下表列出結果集所傳回的資料行，以及如何透過 Native Client ODBC 驅動程式擴充以處理**udt**和**xml**資料類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  

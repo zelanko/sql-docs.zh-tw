@@ -16,39 +16,39 @@ helpviewer_keywords:
 - SQLNCLI, asynchronous operations
 - SQL Server Native Client, asynchronous operations
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05c636b29b57e898aa3579fc104cc8b044489fc0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246152"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707258"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許應用程式執行非同步資料庫作業。 非同步處理可讓方法立即執行，而不會在呼叫的執行緒上封鎖。 這樣可允許多執行緒的許多功能與彈性，而不需要開發人員明確建立執行緒或處理同步。 當初始化資料庫連接或初始化執行命令的結果時，應用程式會要求非同步處理。  
   
 ## <a name="opening-and-closing-a-database-connection"></a>開啟及關閉資料庫連接  
- 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，設計為以非同步方式初始化資料來源物件的應用程式，可以在呼叫**IDBInitialize：： initialize**之前，在 DBPROP_INIT_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位。 設定此屬性時，如果作業已經立即完成，提供者會使用 S_OK 立即從 **Initialize** 的呼叫傳回；如果初始化是以非同步方式繼續，則會使用 DB_S_ASYNCHRONOUS 從此呼叫傳回。 應用程式可以在資料來源物件上查詢**IDBAsynchStatus**或[ISSAsynchStatus](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)介面，然後呼叫**IDBAsynchStatus：： GetStatus**或[ISSAsynchStatus：： WaitForAsynchCompletion](../../native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)來取得初始化的狀態。  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，設計為以非同步方式初始化資料來源物件的應用程式，可以在呼叫**IDBInitialize：： initialize**之前，在 DBPROP_INIT_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位。 設定此屬性時，如果作業已經立即完成，提供者會使用 S_OK 立即從 **Initialize** 的呼叫傳回；如果初始化是以非同步方式繼續，則會使用 DB_S_ASYNCHRONOUS 從此呼叫傳回。 應用程式可以在資料來源物件上查詢**IDBAsynchStatus**或[ISSAsynchStatus](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)介面，然後呼叫**IDBAsynchStatus：： GetStatus**或[ISSAsynchStatus：： WaitForAsynchCompletion](../../native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)來取得初始化的狀態。  
   
  此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 **ISSAsynchStatus** 介面的提供者必須使用 VARIANT_TRUE 的值實作此屬性。  
   
  呼叫 **IDBAsynchStatus::Abort** 或 [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) 可以取消非同步的 **Initialize** 呼叫。 取用者必須明確地要求非同步資料來源初始化。 否則，要等到資料來源物件完全初始化之後，**IDBInitialize::Initialize** 才會傳回。  
   
 > [!NOTE]  
->  用於連接共用的資料來源物件無法在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中呼叫**ISSAsynchStatus**介面。 **ISSAsynchStatus** 介面不會針對集區資料來源物件公開。  
+>  用於連接共用的資料來源物件無法在**ISSAsynchStatus** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中呼叫 ISSAsynchStatus 介面。 **ISSAsynchStatus** 介面不會針對集區資料來源物件公開。  
 >   
 >  如果應用程式明確地強制使用資料指標引擎，**IOpenRowset::OpenRowset** 和 **IMultipleResults::GetResult** 將不支援非同步處理。  
 >   
->  此外，遠端 proxy/stub dll （在 MDAC 2.8 中）無法呼叫 Native Client **ISSAsynchStatus**中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 ISSAsynchStatus 介面。 **ISSAsynchStatus** 介面不會透過遠端公開。  
+>  此外，遠端 proxy/stub dll （在 MDAC 2.8 中）無法呼叫 Native Client 中的**ISSAsynchStatus**介面 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 **ISSAsynchStatus** 介面不會透過遠端公開。  
 >   
 >  服務元件不支援 **ISSAsynchStatus**。  
   
 ## <a name="execution-and-rowset-initialization"></a>執行和資料列集初始化  
  設計為非同步開啟執行命令結果的應用程式可以在 DBPROP_ROWSET_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位元。 呼叫 **IDBInitialize::Initialize**、**ICommand::Execute**、**IOpenRowset::OpenRowset** 或 **IMultipleResults::GetResult** 之前設定此位元時，必須將 *riid* 引數設定為 IID_IDBAsynchStatus、IID_ISSAsynchStatus 或 IID_Iunknown。  
   
- 如果資料列集初始化立即完成，此方法會使用 S_OK 立即傳回；如果資料列集在 *ppRowset* 設定為資料列集上要求的介面時，繼續以非同步方式初始化，則會使用 DB_S_ASYNCHRONOUS 傳回此方法。 針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，此介面只能是**IDBAsynchStatus**或**ISSAsynchStatus**。 在資料列集完全初始化之前，此介面的行為如同處於已暫停狀態，而且針對 **IID_IDBAsynchStatus** 或 **IID_ISSAsynchStatus** 之外的介面呼叫 **QueryInterface** 可能會傳回 E_NOINTERFACE。 除非取用者明確地要求非同步處理，否則資料列集會以同步的方式進行初始化。 如果 **IDBAsynchStaus::GetStatus** 或 **ISSAsynchStatus::WaitForAsynchCompletion** 傳回時，指出非同步作業已完成，則可使用所有要求的介面。 這不一定表示資料列集已完全擴展，但是該資料列集是完整的，而且完全可以運作。  
+ 如果資料列集初始化立即完成，此方法會使用 S_OK 立即傳回；如果資料列集在 *ppRowset* 設定為資料列集上要求的介面時，繼續以非同步方式初始化，則會使用 DB_S_ASYNCHRONOUS 傳回此方法。 針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，此介面只能是**IDBAsynchStatus**或**ISSAsynchStatus**。 在資料列集完全初始化之前，此介面的行為如同處於已暫停狀態，而且針對 **IID_IDBAsynchStatus** 或 **IID_ISSAsynchStatus** 之外的介面呼叫 **QueryInterface** 可能會傳回 E_NOINTERFACE。 除非取用者明確地要求非同步處理，否則資料列集會以同步的方式進行初始化。 如果 **IDBAsynchStaus::GetStatus** 或 **ISSAsynchStatus::WaitForAsynchCompletion** 傳回時，指出非同步作業已完成，則可使用所有要求的介面。 這不一定表示資料列集已完全擴展，但是該資料列集是完整的，而且完全可以運作。  
   
  如果執行的命令並未傳回資料列集，它仍然會使用支援 **IDBAsynchStatus** 的物件立即傳回。  
   

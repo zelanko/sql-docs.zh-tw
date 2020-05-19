@@ -13,15 +13,15 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cf37fbc1b5402e825d38b5f19326484d7b1afd12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c358973ad93360d7b9cd54efa0e70d9114bbc7de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519355"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706783"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>判斷哪些查詢持有鎖定
   資料庫管理員經常需要識別阻礙資料庫效能的鎖定來源。  

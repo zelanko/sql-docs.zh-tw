@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLFetch function
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba1b1bf96bfbee4d3625417706aad738a49fcf4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015800"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706111"
 ---
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch 支援增強的日期和時間功能。  

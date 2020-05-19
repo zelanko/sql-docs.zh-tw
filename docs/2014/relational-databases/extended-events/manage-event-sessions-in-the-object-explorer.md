@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705516"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706642"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
   本主題將討論您可以在 **[物件總管]** 中採取以影響「擴充事件」的動作：  
@@ -36,7 +36,7 @@ ms.locfileid: "62705516"
  如需有關建立「擴充事件」工作階段的詳細資訊，請參閱＜ [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md)＞。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>啟動或停止擴充事件工作階段  
- 您`ALTER EVENT SESSION`可以使用語句，或使用**物件總管**的 [**擴充事件**] 節點，透過**查詢編輯器**啟動或停止「擴充事件」會話。  
+ 您可以使用**Query Editor** `ALTER EVENT SESSION` 語句，或使用**物件總管**的 [**擴充事件**] 節點，透過查詢編輯器啟動或停止「擴充事件」會話。  
   
  當您停止事件工作階段時，此工作階段不再列為 sys.dm_xe_sessions 動態管理檢視 (DMV) 中的使用中工作階段。 但是，工作階段定義會保持不變，而且您可以重新啟動工作階段。 若要完全移除工作階段定義，您必須刪除工作階段。  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  展開 **[範本]** 下拉式方塊。  
   
-5.  按一下 [檔案** \<來源 ...] >開啟**並流覽您要匯入的會話（XML 檔案）。  
+5.  按一下 [檔案** \< 來源 ...] >開啟**並流覽您要匯入的會話（XML 檔案）。  
   
  此工作階段會顯示在 **[工作階段]** 節點底下。 根據預設，工作階段不會啟動。  
   
@@ -128,7 +128,7 @@ STATE = STOP
  當您刪除事件工作階段時，便會移除所有組態資訊，而且工作階段定義不會再出現在 sys.server_event_sessions 目錄檢視中。  
   
 > [!NOTE]  
->  system_health 和 AlwaysOn_health 包含在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];請勿將它們刪除。 system_health 預設為啟用 (如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md))。 AlwaysOn_health 預設為關閉。 這些工作階段會收集可用於診斷效能問題的資料。  
+>  system_health 和 AlwaysOn_health 包含在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 請勿將它們刪除。 system_health 預設為啟用 (如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md))。 AlwaysOn_health 預設為關閉。 這些工作階段會收集可用於診斷效能問題的資料。  
   
  若要刪除「擴充事件」工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   

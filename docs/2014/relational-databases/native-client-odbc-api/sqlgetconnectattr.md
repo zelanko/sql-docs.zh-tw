@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128669"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706080"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可供使用`SQLGetConnectAttr`，而函數則用來報告其目前的設定。 在建立連接或使用[SQLSetConnectAttr](sqlsetconnectattr.md)設定屬性之前，不保證會針對這些屬性回報的值。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可供使用 `SQLGetConnectAttr` ，而函數則用來報告其目前的設定。 在建立連接或使用[SQLSetConnectAttr](sqlsetconnectattr.md)設定屬性之前，不保證會針對這些屬性回報的值。  
   
- 本主題將列出唯讀屬性。 如需有關其他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式特定連接屬性的詳細資訊，請參閱[SQLSetConnectAttr](sqlsetconnectattr.md)。  
+ 本主題將列出唯讀屬性。 如需有關其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式特定連接屬性的詳細資訊，請參閱[SQLSetConnectAttr](sqlsetconnectattr.md)。  
   
 ## <a name="sql_copt_ss_connection_dead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  SQL_COPT_SS_CONNECTION_DEAD 屬性會將連接的狀態報告給伺服器。 此驅動程式會查詢網路，以得知目前連接狀態。  
@@ -54,7 +54,7 @@ ms.locfileid: "63128669"
 |SQL_SUCCESS|此連接已成功。 輸出緩衝區中將可以找到用戶端連接識別碼。|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 `SQLGetConnectAttr`如果未啟用效能記錄，將會傳回 Null。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 每`SQLGetConnectAttr`次需要重新整理效能統計資料時呼叫。  
+ SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 `SQLGetConnectAttr`如果未啟用效能記錄，將會傳回 Null。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 `SQLGetConnectAttr`每次需要重新整理效能統計資料時呼叫。  
   
 |值|描述|  
 |-----------|-----------------|  

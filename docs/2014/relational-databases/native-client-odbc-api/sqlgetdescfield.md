@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657777"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706042"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式只會針對「執行資料列描述元」（IRD）公開驅動程式特定的描述項欄位。 在 IRD 內， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會透過驅動程式特有的資料行屬性來參考描述項欄位。 如需可用驅動程式專屬描述項欄位的完整清單的詳細資訊，請參閱[SQLColAttribute](sqlcolattribute.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式只會針對「執行資料列描述元」（IRD）公開驅動程式特定的描述項欄位。 在 IRD 內， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會透過驅動程式特有的資料行屬性來參考描述項欄位。 如需可用驅動程式專屬描述項欄位的完整清單的詳細資訊，請參閱[SQLColAttribute](sqlcolattribute.md)。  
   
  包含資料行識別項字串的描述項欄位常是零長度的字串。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的描述項欄位值都是唯讀的。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "62657777"
   
  如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
- 從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，如果您的`SQL_C_SS_TIME2` `SQL_C_BINARY`應用程式`time`使用 ODBC 3.8，SQLGetDescField 可以傳回（適用于類型）或`SQL_C_SS_TIMESTAMPOFFSET` （適用于`datetimeoffset`）而不是。  
+ 從開始 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ， `SQL_C_SS_TIME2` `time` `SQL_C_SS_TIMESTAMPOFFSET` `datetimeoffset` `SQL_C_BINARY` 如果您的應用程式使用 ODBC 3.8，SQLGetDescField 可以傳回（適用于類型）或（適用于）而不是。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLGetDescField 支援  
  `SQLGetDescField` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>疏鬆資料行的 SQLGetDescField 支援  
- SQLGetDescField 可以用來查詢新的 IRD 欄位 SQL_CA_SS_IS_COLUMN_SET 來判斷資料行是否為`column_set`資料行。  
+ SQLGetDescField 可以用來查詢新的 IRD 欄位 SQL_CA_SS_IS_COLUMN_SET 來判斷資料行是否為數據行 `column_set` 。  
   
  如需詳細資訊，請參閱[&#40;ODBC&#41;的稀疏資料行支援](../native-client/odbc/sparse-columns-support-odbc.md)。  
   

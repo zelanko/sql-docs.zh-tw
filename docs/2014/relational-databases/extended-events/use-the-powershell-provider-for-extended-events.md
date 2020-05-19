@@ -11,38 +11,38 @@ helpviewer_keywords:
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782911"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706593"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件。 XEvent 子資料夾位於 SQLSERVER 磁碟機底下。 您可以使用下列其中一種方法來存取這個資料夾：  
   
--   在命令提示字元中輸入 `sqlps`，然後按下 ENTER。 輸入 `cd xevent`，然後按 ENTER 鍵。 從該處，您可以使用**cd**和`dir`命令（或**設定位置**和**get-childitem** Cmdlet）來流覽至伺服器名稱和實例名稱。  
+-   在命令提示字元中輸入 `sqlps`，然後按下 ENTER。 輸入 `cd xevent`，然後按 ENTER 鍵。 從該處，您可以使用**cd**和 `dir` 命令（或**設定位置**和**get-childitem** Cmdlet）來流覽至伺服器名稱和實例名稱。  
   
 -   在物件總管中，展開執行個體名稱、展開 [管理]****、以滑鼠右鍵按一下 [擴充事件]****，然後按一下 [啟動 PowerShell]****。 這樣就會在下列路徑中啟動 PowerShell：  
   
-     PS SQLSERVER： \ XEvent\\*ServerName*\\*實例*名稱>  
+     PS SQLSERVER： \ XEvent \\ *ServerName* \\ *實例*名稱>  
   
     > [!NOTE]  
     >  您可以從 [擴充事件]**** 底下的任何節點啟動 PowerShell。 例如，您可以用滑鼠右鍵按一下 [工作階段]****，然後按一下 [啟動 PowerShell]****。 這樣就會在下一個層級 (Sessions 資料夾) 啟動 PowerShell。  
   
- 您可以瀏覽 XEvent 資料夾樹狀目錄來檢視現有的擴充事件工作階段及其相關聯的事件、目標和述詞。 例如，從 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*> 路徑，如果您輸入`cd sessions`，請按 enter，輸入`dir`，然後按 enter 鍵，即可看到儲存在該實例上的會話清單。 您也可以檢視工作階段是否正在執行 (如果有，執行的時間長度)，以及工作階段是否設定為在執行個體啟動時啟動。  
+ 您可以瀏覽 XEvent 資料夾樹狀目錄來檢視現有的擴充事件工作階段及其相關聯的事件、目標和述詞。 例如，從 PS SQLSERVER： \ XEvent \\ *ServerName* \\ *InstanceName*> 路徑，如果您輸入，請 `cd sessions` 按 enter，輸入 `dir` ，然後按 enter 鍵，即可看到儲存在該實例上的會話清單。 您也可以檢視工作階段是否正在執行 (如果有，執行的時間長度)，以及工作階段是否設定為在執行個體啟動時啟動。  
   
- 若要檢視與工作階段相關聯的事件、其述詞和目標，您可以將目錄變更為工作階段名稱，然後檢視 events 或 targets 資料夾。 例如，若要查看與預設系統健全狀況會話相關聯的事件及其述詞，請從 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*\Sessions> 路徑，輸入`cd system_health\events,`按 enter 鍵，輸入`dir`，然後按 enter。  
+ 若要檢視與工作階段相關聯的事件、其述詞和目標，您可以將目錄變更為工作階段名稱，然後檢視 events 或 targets 資料夾。 例如，若要查看與預設系統健全狀況會話相關聯的事件及其述詞，請從 PS SQLSERVER： \ XEvent \\ *ServerName* \\ *InstanceName*\Sessions> 路徑，輸入 `cd system_health\events,` 按 enter 鍵，輸入 `dir` ，然後按 enter。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者是一項功能強大的工具，可讓您用來建立、改變和管理擴充事件工作階段。 下列章節將提供使用 PowerShell 指令碼搭配擴充事件的一些基本範例。  
   
 ## <a name="examples"></a>範例  
  在下列範例中，請注意：  
   
--   腳本必須從 PS SQLSERVER：\\> 提示字元中執行（可在命令提示`sqlps`字元中輸入）。  
+-   腳本必須從 PS SQLSERVER： \\> 提示字元中執行（可 `sqlps` 在命令提示字元中輸入）。  
   
 -   這些指令碼會使用預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   

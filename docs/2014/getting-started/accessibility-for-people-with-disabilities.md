@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683591"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707027"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>行動不便人士的協助工具
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 致力於提供每一個人都能夠方便使用的產品與服務。 本主題提供有關下列功能、產品及服務的資訊，讓行動不便人士更容易使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 家族的產品。  
@@ -79,10 +79,10 @@ ms.locfileid: "74683591"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的文件集可在線上取得。 如需詳細資訊，請參閱[使用產品檔進行 SQL Server](../2014-toc/index.yml)。  
   
 ## <a name="obtaining-documentation-for-additional-msconame-products"></a>取得其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品的文件集  
- 您可以從[!INCLUDE[msCoName](../includes/msconame-md.md)] [Microsoft 協助工具網站](https://go.microsoft.com/fwlink/?LinkID=67164)取得產品的可存取檔。  
+ 您可以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 從[Microsoft 協助工具網站](https://go.microsoft.com/fwlink/?LinkID=67164)取得產品的可存取檔。  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- 您可以從針對[!INCLUDE[msCoName](../includes/msconame-md.md)]盲人 & Dyslexic，Inc. 的錄製取得其他發行集。這些檔會散發給已註冊的、audiocassettes 或磁片上散發服務的合格成員。 該集合包含 80,000 種以上的標題，包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 出版的書籍。 如需有關 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集與 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 書籍之適用性和可用性的資訊，請洽：  
+ 您可以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 從針對盲人 & Dyslexic，inc. 的錄製取得其他發行集。這些檔會散發給已註冊的、audiocassettes 或磁片上散發服務的合格成員。 該集合包含 80,000 種以上的標題，包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 出版的書籍。 如需有關 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集與 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 書籍之適用性和可用性的資訊，請洽：  
   
  & Dyslexic，Inc. 20 Roszel 公路普林斯頓，NJ 08540 的盲人記錄  
   
@@ -97,8 +97,8 @@ ms.locfileid: "74683591"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>聽力喪失或聽力障礙人士客戶服務  
  聽力喪失或聽力障礙人士可以透過文字電話 (TTY/TDD) 服務，取得完整的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品及客戶服務。  
   
-### <a name="customer-service"></a>客戶服務  
- 您可以透過撥[!INCLUDE[msCoName](../includes/msconame-md.md)]打電話（800）892-5234，在上午6:30 的電話上聯絡銷售資訊中心 Sales Information Center。 服務時間為週一至週五，例假日除外。  
+### <a name="customer-service"></a>Customer Service  
+ 您可以透過 [!INCLUDE[msCoName](../includes/msconame-md.md)] 撥打電話（800）892-5234，在上午6:30 的電話上聯絡銷售資訊中心 Sales Information Center。 服務時間為週一至週五，例假日除外。  
   
 ### <a name="technical-help"></a>技術協助  
  如需在美國境內取得技術協助，您可以在早上 6 點到下午 6 點 (美國西岸時間) 之間撥 (800) 892-5234，以文字電話連絡「[!INCLUDE[msCoName](../includes/msconame-md.md)] 和 06:00:00 執行報表， 服務時間為週一至週五，例假日除外。 在加拿大請撥 (905) 568-9641，服務時間為上午 8 點 到下午 8 點 (東部時間)，週一至週五，例假日除外。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援服務依使用服務時各地區的價格、條款及條件而異。  

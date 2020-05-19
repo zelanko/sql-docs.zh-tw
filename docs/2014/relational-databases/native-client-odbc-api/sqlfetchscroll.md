@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLFetchScroll function
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4a5094f8bac1e3972b4d0b2daa7a0da9fa3629
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154681"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706136"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
-  **SQLFetchScroll**會將一個資料列集傳回給應用程式。 資料列集的大小是使用[SQLSetStmtAttr](sqlsetstmtattr.md)設定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式支援所有定義的提取指示（例如，SQL_FETCH_RELATIVE），但有下列限制：  
+  **SQLFetchScroll**會將一個資料列集傳回給應用程式。 資料列集的大小是使用[SQLSetStmtAttr](sqlsetstmtattr.md)設定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式支援所有定義的提取指示（例如，SQL_FETCH_RELATIVE），但有下列限制：  
   
 -   如果有針對陳述式而定義順向資料指標，則需要 SQL_FETCH_NEXT，而且以任何其他格式嘗試提取會導致錯誤傳回。  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 378fecc379febf3daa6e17ebb2ccad748c40989f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d951722b341d073364efd699021215cb99001613
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967135"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763969"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 屬性範例 (VB)
 這個範例示範資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)屬性。 將它設定為**adColNullable** ，可讓使用者將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)[欄位](../../../ado/reference/ado-api/field-object.md)的值設定為空字串。 在此情況下，使用者可以區分不知道資料的記錄，以及資料不適用的記錄。  

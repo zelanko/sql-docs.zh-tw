@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8448e133891d375a97010c15d2079335e473c6f1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637758"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717059"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
   此主題描述如何建立主要和次要 XML 索引。  
@@ -44,7 +44,7 @@ ms.locfileid: "62637758"
   
 -   主要 XML 索引名稱的限制與檢視名稱的限制相同。  
   
- 您無法在 view 的`xml`類型資料行、具有`xml`類型資料行的`xml` **資料表**值變數或類型變數上建立 XML 索引。  
+ 您無法在 `xml` view 的類型資料行、具有類型資料行的**資料表**值變數 `xml` 或類型變數上建立 XML 索引 `xml` 。  
   
 -   若要使用 ALTER TABLE ALTER COLUMN 選項，將 `xml` 類型資料行從不具類型變更為具類型的 XML (反之亦然)，則在資料行上就不應存在任何 XML 索引。 如果 XML 索引確實存在，必須在嘗試變更資料行類型前先卸除它。  
   

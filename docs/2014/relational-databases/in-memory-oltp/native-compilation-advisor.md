@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1aeb6b4cb356cbb2d965ce449e36b2c5cd484ccc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072744"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706468"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
   交易效能報告工具（請參閱[判斷是否應將資料表或預存程式移植到記憶體內部 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）會通知您，如果您的資料庫中有哪些已轉譯的預存程式會在移植使用原生編譯時受益。 識別您要匯出使用原生編譯的預存程序之後，即可使用原生編譯 Advisor 協助您將解譯的預存程序移轉到原生編譯。 如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](natively-compiled-stored-procedures.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "63072744"
  如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用原生編譯 Advisor 的逐步解說  
- 在 [物件總管]**** 中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]****。 隨即顯示 [預存程序原生編譯 Advisor]**** 的歡迎頁面。 按 **[下一步]**，繼續進行。  
+ 在 [物件總管]**** 中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]****。 隨即顯示 [預存程序原生編譯 Advisor]**** 的歡迎頁面。 按一下 [下一步] 以繼續。  
   
 ### <a name="stored-procedure-validation"></a>預存程序驗證  
  此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步]**** 查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步]**** 查看詳細資料。  

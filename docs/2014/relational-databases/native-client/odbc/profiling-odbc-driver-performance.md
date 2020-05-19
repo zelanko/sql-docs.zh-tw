@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143580"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707068"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以分析兩種類型的效能資料：  
@@ -68,7 +68,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   網路  
   
--   時間  
+-   Time  
   
  在下表中，SQLPERF 資料結構內的欄位描述也會套用到效能記錄檔中記錄的統計資料。  
   
@@ -81,7 +81,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|SQL_PERF_START 之後的 INSERT、DELETE 或 UPDATE 陳述式數目。|  
 |SQLSelects|在 SQL_PERF_START 之後處理的 SELECT 陳述式數目。|  
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
-|異動|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
+|交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
 |SQLPrepares|SQL_PERF_START 之後的[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)調用數目。|  
 |ExecDirects|SQL_PERF_START 之後的**SQLExecDirect**呼叫數目。|  
 |SQLExecutes|SQL_PERF_START 之後的**SQLExecute**呼叫數目。|  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Property object [ADOX], members
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d17bb9ac5e443606b54f2f9c606083397e4f0583
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930359"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764089"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX Property 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  

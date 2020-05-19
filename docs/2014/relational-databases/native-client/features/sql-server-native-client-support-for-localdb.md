@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503bae580d2bacffbd143a1b4530f83b7c81a269
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225479"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707219"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 對 LocalDB 的支援
   從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 開始，將會提供稱為 LocalDB 的輕量版 SQL Server。 本主題將討論如何連接到 LocalDB 執行個體中的資料庫。  
@@ -31,7 +31,7 @@ ms.locfileid: "63225479"
   
 -   使用 `sqllocaldb.exe i` 來探索預設執行個體的名稱。  
   
--   使用 `AttachDBFilename` 連接字串關鍵字來指定伺服器應該附加的資料庫檔案。 使用`AttachDBFilename`時，如果您未以**資料庫**連接字串關鍵字來指定資料庫的名稱，當應用程式關閉時，資料庫將會從 LocalDB 實例中移除。  
+-   使用 `AttachDBFilename` 連接字串關鍵字來指定伺服器應該附加的資料庫檔案。 使用時 `AttachDBFilename` ，如果您未以**資料庫**連接字串關鍵字來指定資料庫的名稱，當應用程式關閉時，資料庫將會從 LocalDB 實例中移除。  
   
 -   在連接字串中指定 LocalDB 執行個體：  
   

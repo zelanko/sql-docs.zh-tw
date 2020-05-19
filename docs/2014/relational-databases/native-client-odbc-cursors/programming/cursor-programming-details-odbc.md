@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC cursors, programming
 - cursors [ODBC], programming
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baf606baa029024369a00e44293873ecc7b33d1b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207264"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705635"
 ---
 # <a name="cursor-programming-details-odbc"></a>資料指標程式設計詳細內容 (ODBC)
   選擇正確的資料指標類型可以改善應用程式效能。 在某些情況下，當您執行所要求之資料指標類型不支援的 SQL 陳述式時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能會隱含轉換資料指標類型。  

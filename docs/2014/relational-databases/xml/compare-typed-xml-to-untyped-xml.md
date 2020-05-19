@@ -22,18 +22,18 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637616"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717201"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
-  您可以建立 `xml` 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 `xml` 類型的變數、參數和資料行建立關聯。 在此情況下， `xml`資料類型實例稱為「具*類型*」。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  
+  您可以建立 `xml` 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 `xml` 類型的變數、參數和資料行建立關聯。 在此情況下， `xml` 資料類型實例稱為「具*類型*」。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正確的 XML 和 xml 資料類型  
  `xml` 資料類型會實作 ISO 標準 `xml` 資料類型。 因此，它可以在不具類型的 XML 資料行中儲存格式良好的 XML 1.0 版文件，也可以儲存含有文字節點和任意數量之最上層元素的所謂 XML 內容片段。 系統會確認資料的格式良好、不需要將資料行繫結到 XML 結構描述，並拒絕在某種程度上格式不良的資料。 對於不具類型的 XML 變數和參數而言，也是如此。  
@@ -52,7 +52,7 @@ ms.locfileid: "62637616"
   
 -   您有結構描述，但您不想讓伺服器驗證資料。 當應用程式在將資料儲存於伺服器之前執行用戶端驗證時，或是根據結構描述暫時儲存無效的 XML 資料時，或是在伺服器上使用不受支援的結構描述元件時，有時會有這種情形。  
   
- 在下列`xml`情況下，請使用具類型的資料類型：  
+ `xml`在下列情況下，請使用具類型的資料類型：  
   
 -   您有 XML 資料的結構描述，而且想要讓伺服器根據該 XML 結構描述來驗證 XML 資料。  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62637616"
  具類型的 XML 資料行、參數及變數可儲存 XML 文件或內容。 但是您必須在宣告時，用旗標來指定您是要儲存文件還是內容。 此外，您也必須提供 XML 結構描述的集合。 如果每個 XML 執行個體都只有一個最上層元素，請指定 DOCUMENT。 否則，請使用 CONTENT。 查詢編譯器會在查詢編譯期間，於類型檢查中使用 DOCUMENT 旗標，以推斷單一最上層元素。  
   
 ## <a name="creating-typed-xml"></a>建立具類型的 XML  
- 在您可以建立具`xml`類型的變數、參數或資料行之前，您必須先使用[CREATE xml Schema collection &#40;transact-sql&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)來註冊 XML 架構集合。 然後，您可以將 XML 結構描述集合與 `xml` 資料類型的變數、參數或資料行產生關聯。  
+ 在您可以建立具類型的 `xml` 變數、參數或資料行之前，您必須先使用[CREATE XML schema Collection &#40;transact-sql&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)來註冊 XML 架構集合。 然後，您可以將 XML 結構描述集合與 `xml` 資料類型的變數、參數或資料行產生關聯。  
   
  在下列範例中，會使用兩段式命名慣例來指定 XML 結構描述集合名稱。 第一個部分是結構描述名稱，而第二個部分是 XML 結構描述集合名稱。  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>範例：將結構描述集合與 xml 類型變數產生關聯  
- 下列範例會建立`xml`類型變數，並將架構集合與它產生關聯。 範例中指定的結構描述集合已經匯入 **AdventureWorks** 資料庫。  
+ 下列範例 `xml` 會建立類型變數，並將架構集合與它產生關聯。 範例中指定的結構描述集合已經匯入 **AdventureWorks** 資料庫。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
