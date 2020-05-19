@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014390"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703226"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 提供者簡介 (SQLXML 4.0)
   SQLXMLOLEDB 提供者是一種 OLE DB 提供者，可透過 ActiveX Data Objects (ADO) 來公開 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 功能。 但是，此提供者只能在 ADO 的「寫入到輸出資料流」模式中執行命令。 SQLXMLOLEDB 提供者不是資料列集提供者。 當您執行命令時，您必須指定 adExecuteStream 旗標，它會指示 ADO 使用您所指定的輸出資料流程。  
@@ -37,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>SQLXMLOLEDB 提供者特有的屬性  
  SQLXMLOLEDB 提供者會公開以下提供者特有的連接屬性。  
   
-|Connection<br /><br /> 屬性|預設<br /><br /> (如果有的話)|描述|  
+|Connection<br /><br /> 屬性|預設<br /><br /> (如果有的話)|說明|  
 |-----------------------------|----------------------------|-----------------|  
 |資料提供者||提供 OLE DB 提供者的 PROGID，SQLXMLOLEDB 會透過它來執行命令。 從 SQLXML 4.0 和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，這個提供者就會包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中；因此，這個屬性值受限為 "SQLNCLI11"。 如需詳細資訊，請參閱 [SQL Server Native Client 程式設計](../../native-client/sql-server-native-client-programming.md)。|  
   
  SQLXMLOLEDB 提供者會公開以下提供者特有的命令屬性。  
   
-|命令<br /><br /> 屬性|預設<br /><br /> (如果有的話)|描述|  
+|命令<br /><br /> 屬性|預設<br /><br /> (如果有的話)|說明|  
 |--------------------------|----------------------------|-----------------|  
 |基底路徑|""|指定基底檔案路徑。 基底檔案路徑是用來指定 XML 樣式表語言 (XSL) 或對應結構描述檔案的位置。 基底檔案路徑也用來解析 xsl 或對應架構屬性中已指定之 XSL 或對應架構檔案的相對路徑。<br /><br /> 如需使用此屬性的範例，請參閱[&#40;SQLXMLOLEDB 提供者&#41;執行 XPath 查詢](executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|如果您希望將資料列集轉換成 XML 的程序發生在用戶端而不是伺服器上，請將這個屬性設定為 True。 如果您想要將效能負載移到中介層，這個作法會很實用。<br /><br /> 如需使用此屬性的範例，請參閱[&#40;SQLXMLOLEDB 提供者執行 Sql 查詢&#41;](executing-sql-queries-sqlxmloledb-provider.md)或[執行包含 SQL 查詢 &#40;SQLXMLOLEDB 提供者&#41;的範本](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)。|  
@@ -56,7 +56,7 @@ oTestCommand.Execute , , adExecuteStream
   
  下表包含 ss 資料流程旗標屬性值的描述。  
   
-|屬性值|描述|  
+|屬性值|說明|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|對應結構描述或 XSL 不接受 URL。|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|針對對應結構描述或 XSL 指定的路徑必須相對於範本本身的基底路徑。|  

@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa708c4b439e3a556ea7dac345cc04f32c59e2d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013074"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703235"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
   XPath 查詢可以包含命名空間。 如果結構描述元素會限定命名空間 (亦即，如果它們包含目標命名空間)，針對此結構描述進行的 XPath 查詢就必須指定此命名空間。  
   
  由於 SQLXML 4.0 不支援使用萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析此前置詞，請使用 namespace 屬性來指定命名空間系結。  
   
- 在下列範例中，XPath 查詢會使用萬用字元（\*）和本機名稱（）和命名空間 uri （） xpath 函數來指定命名空間。 這個 XPath 查詢會傳回本機名稱為 `Contact` 而且命名空間 URI 為 `urn:myschema:Contacts` 的所有元素。  
+ 在下列範例中，XPath 查詢會使用萬用字元（ \* ）和本機名稱（）和命名空間 uri （） xpath 函數來指定命名空間。 這個 XPath 查詢會傳回本機名稱為 `Contact` 而且命名空間 URI 為 `urn:myschema:Contacts` 的所有元素。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

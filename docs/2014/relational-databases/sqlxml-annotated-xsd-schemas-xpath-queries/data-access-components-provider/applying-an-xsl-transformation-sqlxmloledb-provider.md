@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 39c36831838ef222b4c98befded8af55045a86ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013164"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703275"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>套用 XSL 轉換 (SQLXMLOLEDB 提供者)
   在此範例 ADO 應用程式中，會執行 SQL 查詢，而且會將 XSL 轉換套用到結果中。 將 ClientSideXML 屬性設定為 True 會強制處理用戶端上的資料列集。 命令用語設定為 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因為 SQL 查詢是在範本中指定，而且此用語必須在執行範本時指定。 Xsl 屬性會指定要用來套用轉換的 XSL 檔案。 [基底路徑] 屬性的值是用來搜尋 XSL 檔案。 如果您在 [xsl] 屬性的值中指定路徑，則路徑會相對於 [基底路徑] 屬性中指定的路徑。  

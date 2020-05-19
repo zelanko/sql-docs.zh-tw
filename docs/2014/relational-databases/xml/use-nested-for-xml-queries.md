@@ -11,18 +11,18 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6abc209e200be39fe79209d89cfb6f3a492e0e6a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232410"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702375"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
-  `xml`資料類型和[for xml 查詢中的 type](type-directive-in-for-xml-queries.md)指示詞可讓 for XML 查詢傳回的 xml 在伺服器以及用戶端上進行處理。  
+  `xml`資料類型和[for xml 查詢中的 type](type-directive-in-for-xml-queries.md)指示詞可讓 for xml 查詢傳回的 xml 在伺服器以及用戶端上進行處理。  
   
 ## <a name="processing-with-xml-type-variables"></a>處理 xml 類型變數  
  您可以將 FOR XML 查詢結果指派給 `xml` 類型變數，或是使用 XQuery 以查詢結果，然後將該結果指派給 `xml` 類型變數以進行其他處理。  

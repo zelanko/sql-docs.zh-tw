@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688847"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701922"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   將長的變動長度資料類型值的一部分傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -55,23 +55,23 @@ pData
  *pData*  
  這是要傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之支援的長型、變動長度資料區塊的指標。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 此函式可與[bcp_bind](bcp-bind.md)和[bcp_sendrow](bcp-sendrow.md)搭配使用，以將長的可變長度資料值複製到數個較社區塊中的 SQL Server。 **bcp_moretext**可以與具有下列 SQL Server 資料類型的資料行搭配使用： `text`、 `ntext`、 `image`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、使用者定義型別（UDT）和 XML。 **bcp_moretext**不支援資料轉換，所提供的資料必須符合目標資料行的資料類型。  
+ 此函式可與[bcp_bind](bcp-bind.md)和[bcp_sendrow](bcp-sendrow.md)搭配使用，以將長的可變長度資料值複製到數個較社區塊中的 SQL Server。 **bcp_moretext**可以與具有下列 SQL Server 資料類型的資料行搭配使用： `text` 、 `ntext` 、 `image` 、 `varchar(max)` 、 `nvarchar(max)` 、 `varbinary(max)` 、使用者定義型別（UDT）和 XML。 **bcp_moretext**不支援資料轉換，所提供的資料必須符合目標資料行的資料類型。  
   
- 如果針對**bcp_moretext**支援的資料類型，以非 null 的*pData*參數來呼叫**bcp_bind** ， `bcp_sendrow`就會傳送整個資料值，而不論長度為何。 不過，如果**bcp_bind**針對支援的資料類型具有 Null *pData*參數，則在成功傳回後，可以使用**bcp_moretext**來立即複製資料， `bcp_sendrow`表示已處理任何具有資料的已系結資料行。  
+ 如果針對**bcp_moretext**支援的資料類型，以非 Null 的*pData*參數來呼叫**bcp_bind** ，就會傳送 `bcp_sendrow` 整個資料值，而不論長度為何。 不過，如果**bcp_bind**針對支援的資料類型具有 Null *pData*參數，則在成功傳回後，可以使用**bcp_moretext**來立即複製資料， `bcp_sendrow` 表示已處理任何具有資料的已系結資料行。  
   
  如果您使用**bcp_moretext**在資料列中傳送一個支援的資料類型資料行，您也必須使用它來傳送資料列中所有其他支援的資料類型資料行。 不能略過任何資料行。 支援的資料類型為 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果此資料行分別為 varchar(max)、nvarchar(max) 或 varbinary(max)，則 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也會列入這個類別目錄。  
   
- 呼叫**bcp_bind**或[bcp_collen](bcp-collen.md)會設定要複製到 SQL Server 資料行之所有資料部分的總長度。 嘗試傳送 SQL Server 超過呼叫中所指定的位元組數， **bcp_bind**或`bcp_collen`產生錯誤。 例如，在用`bcp_collen`來將 SQL Server `text`資料行的可用資料長度設定為4500的應用程式中，呼叫**bcp_moretext**五次，並在每次呼叫中指出資料緩衝區長度為1000個位元組時，就會發生此錯誤。  
+ 呼叫**bcp_bind**或[bcp_collen](bcp-collen.md)會設定要複製到 SQL Server 資料行之所有資料部分的總長度。 嘗試傳送 SQL Server 超過呼叫中所指定的位元組數， **bcp_bind**或 `bcp_collen` 產生錯誤。 例如，在用 `bcp_collen` 來將 SQL Server 資料行的可用資料長度設定為4500的應用程式中， `text` 呼叫**bcp_moretext**五次，並在每次呼叫中指出資料緩衝區長度為1000個位元組時，就會發生此錯誤。  
   
  如果複製的資料列包含一個以上的長時間可變長度資料行， **bcp_moretext**首先會將其資料傳送到最低的序數編號資料行，後面接著下一個最低的序數編號資料行，依此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
   
- 當`var(max)`使用 bcp_sendrow 和 bcp_moretext 將值傳送至伺服器時，不需要呼叫 bcp_collen 來設定資料行長度。 相反地，針對這些類型，值會藉由呼叫長度為零的 bcp_sendrow 來終止。  
+ 當 `var(max)` 使用 bcp_sendrow 和 bcp_moretext 將值傳送至伺服器時，不需要呼叫 bcp_collen 來設定資料行長度。 相反地，針對這些類型，值會藉由呼叫長度為零的 bcp_sendrow 來終止。  
   
- 應用程式通常會`bcp_sendrow`在迴圈內呼叫並**bcp_moretext** ，以傳送多個資料列。 以下概述如何針對包含兩個`text`資料行的資料表執行這項操作：  
+ 應用程式通常會 `bcp_sendrow` 在迴圈內呼叫並**bcp_moretext** ，以傳送多個資料列。 以下概述如何針對包含兩個數據行的資料表執行這項 `text` 操作：  
   
 ```  
 while (there are still rows to send)  
@@ -91,7 +91,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>範例  
- 這個範例示範如何使用**bcp_moretext**搭配**bcp_bind**和`bcp_sendrow`：  
+ 這個範例示範如何使用**bcp_moretext**搭配**bcp_bind**和 `bcp_sendrow` ：  
   
 ```  
 // Variables like henv not specified.  

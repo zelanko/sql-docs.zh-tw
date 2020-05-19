@@ -28,15 +28,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013287"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703342"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型是由 sqlxmlbulkload.sqlxmlbulkload.4.0 物件所組成。 這個物件支援下列方法和屬性。  
@@ -118,7 +118,7 @@ ms.locfileid: "66013287"
  SchemaGen  
  指定是否要在執行大量載入作業前，建立所需的資料表。 這是布林屬性。 如果此屬性設定為 TRUE，會建立對應結構描述中所識別的資料表 (資料庫必須存在)。 如果一或多個資料表已經存在於資料庫中，SGDropTables 屬性會決定是否要卸載並重新建立這些預先存在的資料表。  
   
- SchemaGen 屬性的預設值為 FALSE。 SchemaGen 不會在新建立的資料表上建立 PRIMARY KEY 條件約束。 不過，如果可以在對應架構中找到相符`sql:relationship`的和`sql:key-fields`批註，而且索引鍵欄位是由單一資料行組成，則 SchemaGen 會在資料庫中建立 FOREIGN KEY 條件約束。  
+ SchemaGen 屬性的預設值為 FALSE。 SchemaGen 不會在新建立的資料表上建立 PRIMARY KEY 條件約束。 不過，如果可以在對應架構中找到相符 `sql:relationship` 的和 `sql:key-fields` 批註，而且索引鍵欄位是由單一資料行組成，則 SchemaGen 會在資料庫中建立 FOREIGN KEY 條件約束。  
   
  請注意，如果您將 SchemaGen 屬性設定為 TRUE，XML 大量載入會執行下列動作：  
   
@@ -132,18 +132,18 @@ ms.locfileid: "66013287"
  預設值為 FALSE。  
   
  SGUseID  
- 指定在建立資料表時，對應結構描述中識別為 `id` 類型的屬性是否可用於建立 PRIMARY KEY 條件約束。 當 SchemaGen 屬性設定為 TRUE 時，請使用這個屬性。 如果 SGUseID 為 TRUE，SchemaGen 公用程式會使用指定為主鍵`dt:type="id"`資料行的屬性，並在建立資料表時加入適當的 primary key 條件約束。  
+ 指定在建立資料表時，對應結構描述中識別為 `id` 類型的屬性是否可用於建立 PRIMARY KEY 條件約束。 當 SchemaGen 屬性設定為 TRUE 時，請使用這個屬性。 如果 SGUseID 為 TRUE，SchemaGen 公用程式會使用 `dt:type="id"` 指定為主鍵資料行的屬性，並在建立資料表時加入適當的 PRIMARY key 條件約束。  
   
  預設值為 FALSE。  
   
  TempFilePath  
- 針對交易的大量載入，指定 XML 大量載入建立暫存檔案所在的檔案路徑  （只有當 Transaction 屬性設定為 TRUE 時，這個屬性才有用）。您必須確定用於 XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大量載入的帳戶具有這個路徑的存取權。 如果未設定此屬性，XML 大量載入會將暫存檔案儲存在 TEMP 環境變數中所指定的位置。  
+ 針對交易的大量載入，指定 XML 大量載入建立暫存檔案所在的檔案路徑  （只有當 Transaction 屬性設定為 TRUE 時，這個屬性才有用）。您必須確定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用於 XML 大量載入的帳戶具有這個路徑的存取權。 如果未設定此屬性，XML 大量載入會將暫存檔案儲存在 TEMP 環境變數中所指定的位置。  
   
  交易  
  指定大量載入是否應該當做交易完成，在此情況下，保證會在大量載入失敗時回復。 這是布林屬性。 如果屬性設定為 TRUE，大量載入會在交易內容中發生。 只有當 Transaction 設定為 TRUE 時，TempFilePath 屬性才有用。  
   
 > [!NOTE]  
->  如果您要將二進位資料（例如，[bin]、[bin]、[base64 XML] 資料類型）載入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]至二進位、影像資料類型），交易屬性必須設定為 [FALSE]。  
+>  如果您要將二進位資料（例如，[bin]、[bin]、[base64 XML] 資料類型）載入至二進位、影像 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型），交易屬性必須設定為 [FALSE]。  
   
  預設值為 FALSE。  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232438"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702325"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
   此主描述在您的應用程式中使用 `xml` 資料類型時，可用的選項有哪些。 此主題包括有關下列項目的資訊：  
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 處理 xml 類型資料行的 XML  
- 若要使用 ADO.NET 和`xml`來處理資料類型資料行中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] XML，您可以使用`SqlCommand`類別的標準行為。 例如，使用 `xml` 擷取 `SqlDataReader` 資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 `xml` 資料類型的內容處理為 XML，您就必須先將內容指定為 `XmlReader` 類型。  
+ 若要 `xml` 使用 ADO.NET 和來處理資料類型資料行中的 XML， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 您可以使用類別的標準行為 `SqlCommand` 。 例如，使用 `xml` 擷取 `SqlDataReader` 資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 `xml` 資料類型的內容處理為 XML，您就必須先將內容指定為 `XmlReader` 類型。  
   
  如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件中的＜資料讀取器中的 XML 資料行值＞。  
   

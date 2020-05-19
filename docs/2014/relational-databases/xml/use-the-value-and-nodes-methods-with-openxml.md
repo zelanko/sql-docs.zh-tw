@@ -11,20 +11,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 527e646f956e60b2c8495a738a85595baac383f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193239"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702336"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>在 OPENXML 中使用 value () 和 nodes () 方法
-  您可以在**SELECT**子句中的資料類型`xml`上使用多重**value （）** 方法，以產生已解壓縮值的資料列集。 **nodes()** 方法會針對可用於額外查詢的每個選定節點，各產生一個內部參考。 在產生資料列集時，如果所產生的資料列集會有數個資料行，且用來產生資料列集的路徑運算式很複雜時，合併 **nodes()** 和 **value()** 方法會比較有效率。  
+  您可以在 SELECT 子句中的資料類型上使用多重**value （）** 方法 `xml` ，以產生已解壓縮值的資料列集。 **SELECT** **nodes()** 方法會針對可用於額外查詢的每個選定節點，各產生一個內部參考。 在產生資料列集時，如果所產生的資料列集會有數個資料行，且用來產生資料列集的路徑運算式很複雜時，合併 **nodes()** 和 **value()** 方法會比較有效率。  
   
- Node **（）** 方法會產生特殊`xml`資料類型的實例，其中每個都將其內容設定為不同的選取節點。 這種 XML 執行個體可支援 **query()** 、**value()** 、**nodes()** 和 **exist()** 方法，並可用於 **count(\*)** 彙總。 所有其他用法都會導致錯誤。  
+ Node **（）** 方法會產生特殊 `xml` 資料類型的實例，其中每個都將其內容設定為不同的選取節點。 這種 XML 執行個體可支援 **query()** 、**value()** 、**nodes()** 和 **exist()** 方法，並可用於 **count(\*)** 彙總。 所有其他用法都會導致錯誤。  
   
 ## <a name="example-using-nodes"></a>範例：使用 nodes()  
  假設您要擷取作者的姓名，而名字部份不是 "David"。 此外，您還想要將此資訊擷取成包含二個資料行 (FirstName 及 LastName) 的資料列集。 您可以使用 **nodes()** 和 **value()** 方法來完成此作業，如下所示：  
